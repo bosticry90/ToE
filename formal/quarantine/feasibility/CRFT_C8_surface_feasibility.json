@@ -1,0 +1,27 @@
+{
+  "canonical_front_doors": [],
+  "found": false,
+  "prerequisite": "No canonical non-archive CRFT turbulence diagnostic front door found. Prerequisite: intentionally introduce a CRFT turbulence diagnostics front door (non-archive) with typed inputs + deterministic outputs and then generate bounded tickets.",
+  "related_non_crft_surfaces": [
+    {
+      "path": "formal/python/toe/observables/ovucff03_band_energy_distribution_audit.py",
+      "reason": "keyword_match",
+      "sha256": "85e68da46922c72d8ec2044a5c2d892f023952bbce7acfc21a420edf49fd0e6c"
+    },
+    {
+      "path": "formal/python/toe/observables/ovucff04_spectral_evolution_audit.py",
+      "reason": "keyword_match",
+      "sha256": "fd5ec7425c56de908801709e392364d1c452c53be2c74ecd2c33cd4fde7411a4"
+    },
+    {
+      "path": "formal/python/toe/observables/ovucff05_temporal_band_modulation_audit.py",
+      "reason": "keyword_match",
+      "sha256": "120b954e0f163bd2a6a6e9cccf1353d9daa97f47d8219d9902a22e829f6d55f2"
+    }
+  ],
+  "schema_version": 1,
+  "surface": {
+    "label": "CRFT turbulence diagnostics",
+    "token": "C8"
+  }
+}

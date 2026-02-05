@@ -62,6 +62,34 @@ Candidate inventory (non-archive canonical front doors):
   - scanner: `formal/python/tools/crft_surface_feasibility_scan.py` (token `C8`)
   - artifact: `formal/quarantine/feasibility/CRFT_C8_surface_feasibility.json` (`found=false`)
 
+## D2 feasibility classification (mapping contract)
+
+Deterministic artifact references:
+- `formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json` (`sha256=36acfd78dafef189877cffa35156abc47d73dd8b80fad3fe1e892ae52f07d7a0`)
+- `formal/quarantine/feasibility/CRFT_C8_surface_feasibility.json` (`sha256=81dc9cd60549861906b02b420c82c0225c794302f40d8d5c6aedf714578236a1`)
+
+| candidate | form | found | adapter_possible | blocked_reason | evidence_paths | status |
+| --- | --- | --- | --- | --- | --- | --- |
+| C6 (control only) | Form A + Form B | true | true | none | `formal/python/crft/cp_nlse_2d.py`; `formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json` | complete_control |
+| C7 / MT-01a | real metric arrays only (not Form A/B) | false | false | GRID_EXISTS_BUT_REAL_ONLY_NO_PHASE_ACTION | `formal/python/crft/acoustic_metric.py`; `formal/python/tests/test_no_duplicate_acoustic_metric_surface.py`; `formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json` | blocked |
+| UCFF | 1D report (`k -> omega2`) only (not Form A/B) | false | false | NO_GRID_SURFACE_EXISTS | `formal/python/toe/ucff/core_front_door.py`; `formal/docs/ucff_core_front_door_contract.md`; `formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json` | blocked |
+| C8 | no canonical non-archive front door found | false | false | UNAVAILABLE_TYPED_FRONT_DOOR | `formal/python/tools/crft_surface_feasibility_scan.py`; `formal/quarantine/feasibility/CRFT_C8_surface_feasibility.json` | blocked |
+
+Scanner-native blocker mapping:
+- C7 / MT-01a: `BLOCKED_NO_SPATIAL_GRID_SURFACE`
+- UCFF: `BLOCKED_NO_SPATIAL_GRID_SURFACE`
+- C8: no canonical front door (`found=false`, prerequisite in artifact)
+
+## D3 recommendation
+
+Non-C6 feasible candidates found: `0`.
+
+Implementation-ticket rule outcome:
+- Do not mint an implementation adapter ticket in this cycle.
+
+Next design move:
+- Continue blocker-first diversification on missing phase-action/grid-surface capabilities before opening implementation scope.
+
 ## Deliverables
 
 1. Pinned candidate inventory for non-C6 canonical families.
