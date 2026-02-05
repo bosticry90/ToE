@@ -104,3 +104,72 @@ If no grid surface exists and creating one would be equivalent to adding a new c
 - Fully evidence-bound to the pinned feasibility artifact.
 - No runtime bridge logic changes.
 - Outputs a deterministic next-ticket recommendation.
+
+## D2 execution log (2026-02-05)
+
+Queries run (repo root):
+- `rg -n "C7\b|MT-01a|MT01a|UCFF\b|canonical surface|surface adapter|grid surface|spatial grid" formal`
+- `rg -n "Grid2D|Grid|Nx=|Ny=|Lx=|Ly=|dx|dy|ndarray|np\.ndarray|dtype=complex|complex\]" formal/python`
+- `rg -n "\bphi\b|rhs_|operator|laplacian|gradient|current|energy|norm" formal/python`
+- `rg -n "canonical.*(C7|MT-01a|UCFF)|surface.*(C7|MT-01a|UCFF)" formal/python`
+- `rg -n "registry|family|surface_id|canonical_id|report_id.*CANONICAL|feasibility" formal/python/tools`
+
+Targeted absence checks:
+- `rg -n "Grid2D|grid_n|theta|local_phase_shear_alpha|\bphi\b|rhs|complex" formal/python/crft/acoustic_metric.py` -> `NO_HITS_C7_MAPPING_TOKENS`
+- `rg -n "Grid2D|grid_n|theta|local_phase_shear_alpha|\bphi\b|rhs|complex" formal/python/toe/ucff/core_front_door.py` -> `NO_HITS_UCFF_MAPPING_TOKENS`
+
+## D2 evidence -- C7 / MT-01a (grid surface discovery)
+
+adapter_possible: false
+blocked_reason: NO_GRID_SURFACE_EXISTS
+scanner_reason_code: BLOCKED_NO_SPATIAL_GRID_SURFACE
+
+Pinned evidence:
+- file: `formal/python/crft/acoustic_metric.py`
+- symbols:
+  - `AcousticMetric2D`
+  - `compute_acoustic_metric_1d(rho, u, g_eff)`
+  - `compute_acoustic_metric_2d(rho, u_x, u_y, g_eff)`
+  - `metric_determinant_2d(metric)`
+- output shape: deterministic metric-component arrays (`g_tt`, `g_tx`, `g_ty`, `g_xx`, `g_yy`, `c_s2`) from pre-supplied hydrodynamic arrays; no Form A complex field and no Form B operator/RHS interface.
+- mapping-token absence query returned no hits for `Grid2D`, `grid_n`, `theta`, `local_phase_shear_alpha`, `phi`, `rhs`, `complex`.
+- canonical-front-door uniqueness lock:
+  - `formal/python/tests/test_no_duplicate_acoustic_metric_surface.py` (single MT-01a Python surface at `formal/python/crft/acoustic_metric.py`)
+
+Conclusion:
+- No hidden non-archive C7 grid-surface producer was found that satisfies Form A/Form B mapping requirements.
+
+## D2 evidence -- UCFF (grid surface discovery)
+
+adapter_possible: false
+blocked_reason: NO_GRID_SURFACE_EXISTS
+scanner_reason_code: BLOCKED_NO_SPATIAL_GRID_SURFACE
+
+Pinned evidence:
+- UCFF Python surface inventory:
+  - `formal/python/toe/ucff/__init__.py`
+  - `formal/python/toe/ucff/core_front_door.py`
+- file: `formal/python/toe/ucff/core_front_door.py`
+- symbols:
+  - `UcffCoreInput` (`k: List[float]`)
+  - `ucff_dispersion_omega2_numeric(k, params)`
+  - `ucff_core_report(inp)` -> report with `k: List[float]`, `omega2: List[float]`
+- contract doc:
+  - `formal/docs/ucff_core_front_door_contract.md` (1D `k` list in, `omega2` list out; deterministic report surface)
+- mapping-token absence query returned no hits for `Grid2D`, `grid_n`, `theta`, `local_phase_shear_alpha`, `phi`, `rhs`, `complex`.
+
+Conclusion:
+- No hidden non-archive UCFF grid field or operator surface was found that can be wrapped into Form A/Form B for phase/current/pair bridge mapping.
+
+## D2 outcome summary
+
+| candidate | adapter_possible | blocked_reason | scanner_reason_code |
+| --- | --- | --- | --- |
+| C7 / MT-01a | false | NO_GRID_SURFACE_EXISTS | BLOCKED_NO_SPATIAL_GRID_SURFACE |
+| UCFF | false | NO_GRID_SURFACE_EXISTS | BLOCKED_NO_SPATIAL_GRID_SURFACE |
+
+## Deterministic next-ticket recommendation
+
+All D2 candidates are blocked (`adapter_possible=false` for C7/MT-01a and UCFF). Do not mint an implementation adapter ticket.
+
+Mint a follow-on design ticket for alternative diversification target discovery, scoped to canonical families that are already grid-shaped under existing non-archive front doors.
