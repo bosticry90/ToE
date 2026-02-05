@@ -37,13 +37,25 @@ If any criterion fails, mark `found=false` and pin a deterministic block reason.
 3. Record each result in the pinned results table below.
 4. Recommend one next implementation ticket only when at least one non-C6 candidate is `found=true`.
 
-## Pinned results table (to fill with artifacts)
+## Scan execution evidence (2026-02-05)
+
+- Scanner used: `.\py.ps1 -m formal.python.tools.bridge_toyg_canonical_feasibility_scan`
+- Output artifact:
+  - `formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json`
+- Determinism check:
+  - scanner rerun wrote identical bytes (`sha256=36acfd78dafef189877cffa35156abc47d73dd8b80fad3fe1e892ae52f07d7a0`)
+
+## Pinned results table
 
 | candidate_surface | found | blocked_reason | evidence_artifact_path | artifact_sha256 | status |
 | --- | --- | --- | --- | --- | --- |
-| C6 (anchor/control) | true | none | formal/quarantine/feasibility/BRIDGE_TOYG_CANONICAL_feasibility.json | pinned-existing | complete |
-| C7 / MT-01a | pending | pending | pending | pending | design-scan-open |
-| UCFF candidate set | pending | pending | pending | pending | design-scan-open |
+| C6 (anchor/control) | true | none | formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json | 36acfd78dafef189877cffa35156abc47d73dd8b80fad3fe1e892ae52f07d7a0 | complete |
+| C7 / MT-01a | false | NO_OBSERVABLE_MAPPING_PHASE_CURRENT_PAIR | formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json | 36acfd78dafef189877cffa35156abc47d73dd8b80fad3fe1e892ae52f07d7a0 | blocked |
+| UCFF candidate set | false | NO_OBSERVABLE_MAPPING_PHASE_CURRENT_PAIR | formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json | 36acfd78dafef189877cffa35156abc47d73dd8b80fad3fe1e892ae52f07d7a0 | blocked |
+
+Scanner-native reason-code mapping (same artifact):
+- C7 / MT-01a -> `reason_code=BLOCKED_NO_SPATIAL_GRID_SURFACE`, `found=false`
+- UCFF -> `reason_code=BLOCKED_NO_SPATIAL_GRID_SURFACE`, `found=false`
 
 ## Deliverables
 
@@ -59,3 +71,10 @@ If any criterion fails, mark `found=false` and pin a deterministic block reason.
 2. Each candidate has deterministic `found` state and pinned reason.
 3. No runtime bridge computation files are changed.
 4. Next-ticket recommendation is explicit and evidence-bound.
+
+## Recommendation (post-scan)
+
+No non-C6 candidate is feasible yet (`found=true` only for C6). Do not mint an implementation ticket.
+
+Next design-only target:
+- Draft a follow-on ticket for dominant block reason `NO_OBSERVABLE_MAPPING_PHASE_CURRENT_PAIR`, scoped to mapping requirements for C7/UCFF without runtime bridge changes.
