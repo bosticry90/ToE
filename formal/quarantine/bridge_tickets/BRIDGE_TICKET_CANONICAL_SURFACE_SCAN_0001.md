@@ -51,7 +51,9 @@ If any criterion fails, mark `found=false` and pin a deterministic block reason.
 | --- | --- | --- | --- | --- | --- |
 | C6 (anchor/control) | true | none | formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json | 36acfd78dafef189877cffa35156abc47d73dd8b80fad3fe1e892ae52f07d7a0 | complete |
 | C7 / MT-01a | false | NO_OBSERVABLE_MAPPING_PHASE_CURRENT_PAIR | formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json | 36acfd78dafef189877cffa35156abc47d73dd8b80fad3fe1e892ae52f07d7a0 | blocked |
-| UCFF candidate set | false | NO_OBSERVABLE_MAPPING_PHASE_CURRENT_PAIR | formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json | 36acfd78dafef189877cffa35156abc47d73dd8b80fad3fe1e892ae52f07d7a0 | blocked |
+| UCFF | false | NO_OBSERVABLE_MAPPING_PHASE_CURRENT_PAIR | formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json | 36acfd78dafef189877cffa35156abc47d73dd8b80fad3fe1e892ae52f07d7a0 | blocked |
+
+Table policy: exactly one row per scanned candidate (no pending placeholders after scan execution).
 
 Scanner-native reason-code mapping (same artifact):
 - C7 / MT-01a -> `reason_code=BLOCKED_NO_SPATIAL_GRID_SURFACE`, `found=false`
