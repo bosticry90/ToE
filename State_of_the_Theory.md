@@ -70,6 +70,18 @@ Bridge Program - v5_T2 closure restored via Lane L1 (phase stabilization) (2026-
   - Focused suite: `.\py.ps1 -m pytest formal/python/tests -k "bridge or state_theory_dag"` -> `143 passed, 410 deselected`
 - Next: canonical-surface diversification feasibility scan (design-only first; preserve current lock/admissibility discipline).
 
+Canonical diversification comparator-class checkpoint (2026-02-05): Design cycle accepted/frozen under blocker resolution family `R5` (UCFF classified as non-grid canonical; comparator taxonomy expanded with a UCFF-first dispersion lane; no implementation ticket minted in this cycle). C7/MT-01a remains explicitly deferred in this lane; C8 remains secondary blocker only (bounded/report-only; no status upgrade).
+- Primary blocker acceptance evidence:
+  - `formal/quarantine/bridge_tickets/BRIDGE_TICKET_CANONICAL_SURFACE_BLOCKER_0002_phase_action_grid_surface.md`
+  - `formal/quarantine/bridge_tickets/BRIDGE_TICKET_CANONICAL_SURFACE_DIVERSIFY_0002_grid_shaped_target_discovery.md`
+- Comparator-class design freeze:
+  - `formal/quarantine/bridge_tickets/BRIDGE_TICKET_COMPARATOR_CLASS_0001_dispersion_lane_ucff.md`
+  - Branch checkpoint: `design/canonical-surface-scan` @ `eff4e2d`
+- Pinned feasibility artifacts:
+  - `formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json` (`sha256=36acfd78dafef189877cffa35156abc47d73dd8b80fad3fe1e892ae52f07d7a0`)
+  - `formal/quarantine/feasibility/CRFT_C8_surface_feasibility.json` (`sha256=81dc9cd60549861906b02b420c82c0225c794302f40d8d5c6aedf714578236a1`)
+- Scheduling note: implementation is explicitly deferred; future work may mint `BRIDGE_TICKET_COMPARATOR_CLASS_IMPL_0001_dispersion_lane_ucff` only after explicit authorization.
+
 Bridge attempts (bounded; falsifiable; structural-only)
 - BRIDGE_TICKET_0001 (C6↔UCFF dispersion square): formal/quarantine/bridge_tickets/BRIDGE_TICKET_0001_c6_ucff_dispersion_square.md
 	Evidence: formal/python/tests/test_bridge_c6_ucff_dispersion_square.py
