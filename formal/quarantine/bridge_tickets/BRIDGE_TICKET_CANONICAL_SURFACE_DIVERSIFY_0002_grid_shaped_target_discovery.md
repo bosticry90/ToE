@@ -35,6 +35,33 @@ Candidate must satisfy all:
 3. Produce a pinned comparison table (`found=true/false`, blocker reason, artifact path, sha256).
 4. Recommend exactly one next implementation ticket if any candidate is feasible.
 
+## D1 inventory evidence (2026-02-05)
+
+Queries executed (repo root):
+- `rg -n "Grid2D\.from_box|class Grid2D|from_box\(Nx=" formal/python`
+- `rg -n "ndarray\[complex\]|dtype=.*complex|np\.complex|rhs_.*_2d|operator|laplacian|hamiltonian" formal/python`
+- `rg -n "core_front_door|FrontDoor|Input\)|Report\)|report_id|contract\.md|typed" formal/python formal/docs`
+- `rg -n "\bC[0-9]+\b|canonical|surface_id|canonical_id|MT-" formal/python formal/docs`
+
+Candidate inventory (non-archive canonical front doors):
+- C6 control surface:
+  - file: `formal/python/crft/cp_nlse_2d.py`
+  - symbols: `Grid2D`, `CPParams2D`, `rhs_cp_nlse_2d`, `simulate_cp_nlse_2d`
+  - signal: explicit grid class + complex field/RHS surface (Form A/Form B baseline control)
+- C7 / MT-01a surface:
+  - file: `formal/python/crft/acoustic_metric.py`
+  - symbols: `AcousticMetric1D`, `AcousticMetric2D`, `compute_acoustic_metric_2d`, `metric_determinant_2d`
+  - signal: deterministic typed arrays from hydrodynamic inputs; no explicit complex field/RHS interface
+  - canonical uniqueness lock: `formal/python/tests/test_no_duplicate_acoustic_metric_surface.py`
+- UCFF surface:
+  - file: `formal/python/toe/ucff/core_front_door.py`
+  - symbols: `UcffCoreInput`, `ucff_dispersion_omega2_numeric`, `ucff_core_report`, `dumps_ucff_core_report`
+  - signal: deterministic typed 1D `k -> omega2` report surface
+  - contract: `formal/docs/ucff_core_front_door_contract.md`
+- C8 feasibility-only surface token:
+  - scanner: `formal/python/tools/crft_surface_feasibility_scan.py` (token `C8`)
+  - artifact: `formal/quarantine/feasibility/CRFT_C8_surface_feasibility.json` (`found=false`)
+
 ## Deliverables
 
 1. Pinned candidate inventory for non-C6 canonical families.
