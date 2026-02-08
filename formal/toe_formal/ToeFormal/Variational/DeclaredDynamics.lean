@@ -31,7 +31,7 @@ def declaredDynamics : Field -> Field :=
   rfl
 
 /-- Declared evolution satisfies the operator-driven flow law for declared dynamics. -/
-theorem declared_dynamics_flow_law :
+def declared_dynamics_flow_law :
     FlowLaw Field declaredDynamics declaredEvolution := by
   simpa [declaredDynamics] using declared_evolution_flow_law
 
@@ -48,5 +48,6 @@ theorem declared_invariant_conserved
     Conserved declaredEvolution declaredInvariant := by
   simpa [declaredInvariant] using noether_conserved_for_declared_evolution hInv
 
+end
 end Variational
 end ToeFormal

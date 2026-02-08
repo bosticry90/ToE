@@ -30,7 +30,7 @@ def SemigroupWithGenerator.evolution {F : Type} [Sub F] {Op : F -> F}
   Evolution.ofSemigroup G.semigroup
 
 /-- Flow-law projection from the strengthened generator law. -/
-theorem SemigroupWithGenerator.flow_law {F : Type} [Sub F] {Op : F -> F}
+def SemigroupWithGenerator.flow_law {F : Type} [Sub F] {Op : F -> F}
     (G : SemigroupWithGenerator F Op) :
     FlowLaw F Op (SemigroupWithGenerator.evolution G) := by
   simpa [SemigroupWithGenerator.evolution] using G.generator.flow_law
@@ -47,5 +47,6 @@ theorem SemigroupWithGenerator.evolution_step_update
         = G.semigroup.flow t ψ + Op (G.semigroup.flow t ψ) := by
   simpa using (GeneratorStepLaw.evolution_step_update G.generator.step_law)
 
+end
 end Variational
 end ToeFormal

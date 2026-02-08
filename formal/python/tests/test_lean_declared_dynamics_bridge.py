@@ -16,7 +16,7 @@ def test_declared_dynamics_module_has_canonical_symbols():
     required_tokens = [
         "def declaredDynamics",
         "def declaredInvariant",
-        "theorem declared_dynamics_flow_law",
+        "declared_dynamics_flow_law",
         "theorem declared_invariant_conserved",
     ]
     for token in required_tokens:

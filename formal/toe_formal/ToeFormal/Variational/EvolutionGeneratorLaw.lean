@@ -27,7 +27,7 @@ def StepGenerator (F : Type) [Sub F] (S : FlowSemigroup F) (step : ℝ) : F -> F
 Discrete generator law: the operator is defined by a fixed nonzero flow step
 (`Op ψ = flow(step, ψ) - ψ`).
 -/
-structure GeneratorStepLaw (F : Type) [Sub F] (Op : F -> F) (S : FlowSemigroup F) : Prop where
+structure GeneratorStepLaw (F : Type) [Sub F] (Op : F -> F) (S : FlowSemigroup F) : Type where
   step : ℝ
   step_ne_zero : step ≠ 0
   law : ∀ ψ : F, Op ψ = StepGenerator F S step ψ
@@ -36,11 +36,14 @@ structure GeneratorStepLaw (F : Type) [Sub F] (Op : F -> F) (S : FlowSemigroup F
 theorem GeneratorStepLaw.flow_step_eq_add
     {F : Type} [AddGroup F] {Op : F -> F} {S : FlowSemigroup F}
     (h : GeneratorStepLaw F Op S) :
-    ∀ ψ : F, S.flow h.step ψ = ψ + Op ψ := by
+    ∀ ψ : F, S.flow h.step ψ = Op ψ + ψ := by
   intro ψ
   have hs : S.flow h.step ψ - ψ = Op ψ := by
     simpa [StepGenerator] using (h.law ψ).symm
-  exact (sub_eq_iff_eq_add').mp hs
+  have hs' : S.flow h.step ψ = Op ψ + ψ := by
+    have htmp := congrArg (fun x => x + ψ) hs
+    simpa [sub_eq_add_neg, add_assoc, add_left_comm, add_comm] using htmp
+  exact hs'
 
 /--
 Discrete evolution update along the semigroup:
@@ -53,18 +56,19 @@ theorem GeneratorStepLaw.evolution_step_update
       S.flow (t + h.step) ψ = S.flow t ψ + Op (S.flow t ψ) := by
   intro ψ t
   calc
-    S.flow (t + h.step) ψ = S.flow (h.step + t) ψ := by simpa [add_comm]
+    S.flow (t + h.step) ψ = S.flow (h.step + t) ψ := by simp [add_comm]
     _ = S.flow h.step (S.flow t ψ) := by simpa using S.flow_add h.step t ψ
     _ = S.flow t ψ + Op (S.flow t ψ) := by
-      simpa using (h.flow_step_eq_add (S.flow t ψ))
+      simpa [add_comm, add_left_comm, add_assoc] using (h.flow_step_eq_add (S.flow t ψ))
 
 /--
 Strong generator law: combines the discrete generator contract with the existing flow-law
 contract for the semigroup evolution.
 -/
-structure GeneratorLawStrong (F : Type) [Sub F] (Op : F -> F) (S : FlowSemigroup F) : Prop where
+structure GeneratorLawStrong (F : Type) [Sub F] (Op : F -> F) (S : FlowSemigroup F) : Type where
   step_law : GeneratorStepLaw F Op S
   flow_law : GeneratorLaw Op S
 
+end
 end Variational
 end ToeFormal

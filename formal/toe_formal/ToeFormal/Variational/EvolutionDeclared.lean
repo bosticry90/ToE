@@ -24,7 +24,7 @@ noncomputable section
 set_option autoImplicit false
 
 /-- Expose the flow-law contract (bookkeeping lemma). -/
-theorem declared_evolution_flow_law :
+def declared_evolution_flow_law :
     FlowLaw Field EL_toe declaredEvolution :=
   by
     simpa [declaredEvolution] using
@@ -38,7 +38,7 @@ theorem declared_evolution_step_update :
     ∀ (ψ : Field) (t : ℝ),
       declaredEvolution.flow (t + declaredSemigroupWithGenerator.generator.step_law.step) ψ
         = declaredEvolution.flow t ψ + EL_toe (declaredEvolution.flow t ψ) := by
-  simpa [declaredEvolution] using
+  simpa only [declaredEvolution, SemigroupWithGenerator.evolution, Evolution.ofSemigroup] using
     (SemigroupWithGenerator.evolution_step_update declaredSemigroupWithGenerator)
 
 /--
@@ -52,5 +52,6 @@ theorem noether_conserved_for_declared_evolution
   have _hlaw := declared_evolution_flow_law
   exact declared_noether_conservation hInv
 
+end
 end Variational
 end ToeFormal
