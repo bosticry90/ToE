@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 from formal.python.tools.ptc_nlse_v1_run import (
@@ -11,6 +12,39 @@ from formal.python.tools.ptc_nlse_v1_run import (
 
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
+_TOL_PROFILE_ENV = "TOE_NUMERIC_TOLERANCE_PROFILE"
+_TOL_PROFILES: dict[str, dict[str, float]] = {
+    # Tight lane for pinned single-environment reproducibility.
+    "pinned": {
+        "omega_error": 1e-10,
+        "omega_drift": 1e-10,
+        "norm_abs": 1e-12,
+        "sym_phase": 1e-12,
+        "sym_constancy": 1e-12,
+        "sample_match": 1e-12,
+        "diss_delta_match": 1e-10,
+    },
+    # Looser lane for portable multi-environment execution (FFT/platform variance).
+    "portable": {
+        "omega_error": 1e-8,
+        "omega_drift": 1e-8,
+        "norm_abs": 1e-10,
+        "sym_phase": 1e-10,
+        "sym_constancy": 1e-10,
+        "sample_match": 1e-10,
+        "diss_delta_match": 1e-8,
+    },
+}
+
+
+def _tol(name: str) -> float:
+    profile = os.environ.get(_TOL_PROFILE_ENV, "pinned").strip().lower()
+    if profile not in _TOL_PROFILES:
+        raise AssertionError(
+            f"Unknown {_TOL_PROFILE_ENV} value: {profile!r}. "
+            f"Allowed: {sorted(_TOL_PROFILES.keys())}"
+        )
+    return float(_TOL_PROFILES[profile][name])
 
 
 def _base_case(case_id: str) -> dict:
@@ -61,14 +95,14 @@ def test_setb_ct01_plane_wave_dispersion_survives_resolution_stress():
     assert rep_coarse["derived"]["rac_energy_class"] == "conservative"
 
     # The conservative plane-wave dispersion identity should remain numerically closed.
-    assert abs(float(rep_base["output"]["omega_error"])) < 1e-10
-    assert abs(float(rep_refined["output"]["omega_error"])) < 1e-10
-    assert abs(float(rep_coarse["output"]["omega_error"])) < 1e-10
+    assert abs(float(rep_base["output"]["omega_error"])) < _tol("omega_error")
+    assert abs(float(rep_refined["output"]["omega_error"])) < _tol("omega_error")
+    assert abs(float(rep_coarse["output"]["omega_error"])) < _tol("omega_error")
 
     # Stress variants should not drift off the pinned conservative frequency surface.
     omega0 = float(rep_base["output"]["omega_hat"])
-    assert abs(float(rep_refined["output"]["omega_hat"]) - omega0) < 1e-10
-    assert abs(float(rep_coarse["output"]["omega_hat"]) - omega0) < 1e-10
+    assert abs(float(rep_refined["output"]["omega_hat"]) - omega0) < _tol("omega_drift")
+    assert abs(float(rep_coarse["output"]["omega_hat"]) - omega0) < _tol("omega_drift")
 
 
 def test_setb_sym01_phase_path_invariance_on_report_and_hooks():
@@ -90,16 +124,16 @@ def test_setb_sym01_phase_path_invariance_on_report_and_hooks():
     omega_hats = [float(r["output"]["omega_hat"]) for r in reports]
     norm_deltas = [float(r["output"]["norm_delta"]) for r in reports]
 
-    assert max(omega_hats) - min(omega_hats) < 1e-10
-    assert max(abs(x) for x in norm_deltas) < 1e-12
+    assert max(omega_hats) - min(omega_hats) < _tol("omega_drift")
+    assert max(abs(x) for x in norm_deltas) < _tol("norm_abs")
 
     sym_phase = [float(h["hooks"]["sym01_phase_residual"]) for h in hooks]
     sym_conj = [float(h["hooks"]["sym01_conjugation_residual"]) for h in hooks]
     par_res = [float(h["hooks"]["par01_parity_residual"]) for h in hooks]
 
-    assert max(sym_phase) < 1e-12
-    assert max(sym_conj) - min(sym_conj) < 1e-12
-    assert max(par_res) - min(par_res) < 1e-12
+    assert max(sym_phase) < _tol("sym_phase")
+    assert max(sym_conj) - min(sym_conj) < _tol("sym_constancy")
+    assert max(par_res) - min(par_res) < _tol("sym_constancy")
 
 
 def test_setb_caus01_dissipative_time_order_stress_monotone_and_sampling_consistent():
@@ -137,10 +171,14 @@ def test_setb_caus01_dissipative_time_order_stress_monotone_and_sampling_consist
     assert len(dense_norm) == 2 * len(base_norm) - 1
 
     for idx, val in enumerate(base_energy):
-        assert abs(dense_energy[2 * idx] - val) < 1e-12
+        assert abs(dense_energy[2 * idx] - val) < _tol("sample_match")
     for idx, val in enumerate(base_norm):
-        assert abs(dense_norm[2 * idx] - val) < 1e-12
+        assert abs(dense_norm[2 * idx] - val) < _tol("sample_match")
 
     # Refinement should preserve the aggregate dissipative effect at fixed end time.
-    assert abs(float(rep_refined["output"]["energy_delta"]) - float(rep_base["output"]["energy_delta"])) < 1e-10
-    assert abs(float(rep_refined["output"]["norm_delta"]) - float(rep_base["output"]["norm_delta"])) < 1e-10
+    assert abs(float(rep_refined["output"]["energy_delta"]) - float(rep_base["output"]["energy_delta"])) < _tol(
+        "diss_delta_match"
+    )
+    assert abs(float(rep_refined["output"]["norm_delta"]) - float(rep_base["output"]["norm_delta"])) < _tol(
+        "diss_delta_match"
+    )
