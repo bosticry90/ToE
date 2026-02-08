@@ -1,0 +1,60 @@
+{
+  "artifact_sha256": "17f5731c7dbf514f299312c61840c0fda9a55e993be8f97041fe589048339e8d",
+  "evidence": {
+    "pytest_nodes": [
+      "formal/python/tests/test_bridge_program_frontier_targets_determinism.py::test_bridge_program_frontier_targets_is_deterministic",
+      "formal/python/tests/test_bridge_program_frontier_targets_semantics.py::test_bridge_program_frontier_targets_track_historical_frontier_reasons",
+      "formal/python/tests/test_bridge_program_frontier_targets_pointers_exist.py::test_bridge_program_frontier_targets_artifact_pointers_exist"
+    ]
+  },
+  "recommended_next_ticket": "BRIDGE_TICKET_PROGRAM_COMPLETE",
+  "report_id": "BRIDGE_PROGRAM_FRONTIER_TARGETS",
+  "schema_version": 1,
+  "source_artifacts": {
+    "mismatch_reason_summary": {
+      "path": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_MISMATCH_REASON_SUMMARY.json",
+      "sha256": "66b97a118037e4dcceb3668324d7de4d986e1949c36e61b78a4d157d2de966b5"
+    },
+    "mismatch_report": {
+      "path": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_MISMATCH_REPORT.json",
+      "sha256": "a4063c0597b4fbb9da8fffc194f6bab35a05bdedb8f40b03bcc12821ec609299"
+    }
+  },
+  "summary": {
+    "frontier_complete": true,
+    "n_mismatch_total": 0,
+    "open_targets_count": 0,
+    "reason_code_counts": {},
+    "resolved_targets_count": 2,
+    "target_reason_codes": [
+      "mismatch_toyh_current_only",
+      "mismatch_toyh_pair_vs_toyg_bridge"
+    ]
+  },
+  "targets": [
+    {
+      "candidate_probe_ids": [],
+      "count": 0,
+      "reason_code": "mismatch_toyh_current_only",
+      "resolved_by_count": 1,
+      "selected": [],
+      "selected_probe_ids": [],
+      "selection_policy": "min_failure_score_then_probe_id",
+      "status": "resolved",
+      "ticket": "BRIDGE_TICKET_TOYH_0004",
+      "top_k": 1
+    },
+    {
+      "candidate_probe_ids": [],
+      "count": 0,
+      "reason_code": "mismatch_toyh_pair_vs_toyg_bridge",
+      "resolved_by_count": 4,
+      "selected": [],
+      "selected_probe_ids": [],
+      "selection_policy": "min_failure_score_then_probe_id",
+      "status": "resolved",
+      "ticket": "BRIDGE_TICKET_TOYHG_0001",
+      "top_k": 1
+    }
+  ]
+}
