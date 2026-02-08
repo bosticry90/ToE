@@ -432,15 +432,17 @@ Layer: Governance
 Item: At least one unique falsifier/prediction path
 Status: In progress (at least one explicit FAIL-mode lane now recorded; additional lanes encouraged)
 Owner ticket/module: State_of_the_Theory.md
-Evidence path: State_of_the_Theory.md; formal/python/tests/test_phaseB_dispersion_preservation_expanded.py; formal/python/tests/test_phaseB_solver_omega_shift.py; formal/python/tests/test_sym01_phase_violation_lane.py; formal/python/tests/test_bc01_boundary_mismatch_lane.py; formal/python/tests/test_tr01_par01_symmetry_violation_lane.py; formal/python/tests/test_en01_energy_monotonicity_lane.py; formal/python/tests/test_st01_soliton_shape_preservation_lane.py; formal/python/tests/test_tg01_trapped_ground_state_lane.py; formal/python/tests/test_st01_soliton_resolution_convergence_lane.py; formal/output/PTC_NLSE_V1_HOOKS.json; formal/output/PTC_NLSE_V1_HOOKS_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_REPORT_SOLITON.json; formal/output/PTC_NLSE_V1_REPORT_SOLITON_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_HOOKS_SOLITON.json; formal/output/PTC_NLSE_V1_HOOKS_SOLITON_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_REPORT_TRAP.json; formal/output/PTC_NLSE_V1_REPORT_TRAP_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_HOOKS_TRAP.json; formal/output/PTC_NLSE_V1_HOOKS_TRAP_DISSIPATIVE.json; formal/python/toe/comparators/cv01_bec_bragg_v0.py; formal/python/tests/test_cv01_bec_bragg_v0_front_door.py; formal/python/tests/test_cv01_bec_bragg_v0_surface_contract_freeze.py; formal/python/tests/test_cv01_v1_discriminative_design_gate_doc.py; formal/docs/cv01_bec_bragg_v0_front_door_contract.md; formal/docs/cv01_v1_discriminative_design_gate.md; formal/docs/first_empirical_comparator_domain_bec_bragg.md; formal/python/tests/test_first_empirical_comparator_domain_selection.py; formal/python/toe/comparators/cv01_bec_bragg_v1.py; formal/python/tests/test_cv01_bec_bragg_v1_front_door.py; formal/python/tests/test_cv01_bec_bragg_v1_surface_contract_freeze.py; formal/python/tests/test_cv01_numeric_tolerance_policy_doc.py; formal/docs/cv01_bec_bragg_v1_front_door_contract.md; formal/docs/cv01_numeric_tolerance_policy.md
+Evidence path: State_of_the_Theory.md; formal/python/tests/test_phaseB_dispersion_preservation_expanded.py; formal/python/tests/test_phaseB_solver_omega_shift.py; formal/python/tests/test_sym01_phase_violation_lane.py; formal/python/tests/test_bc01_boundary_mismatch_lane.py; formal/python/tests/test_tr01_par01_symmetry_violation_lane.py; formal/python/tests/test_en01_energy_monotonicity_lane.py; formal/python/tests/test_st01_soliton_shape_preservation_lane.py; formal/python/tests/test_tg01_trapped_ground_state_lane.py; formal/python/tests/test_st01_soliton_resolution_convergence_lane.py; formal/output/PTC_NLSE_V1_HOOKS.json; formal/output/PTC_NLSE_V1_HOOKS_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_REPORT_SOLITON.json; formal/output/PTC_NLSE_V1_REPORT_SOLITON_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_HOOKS_SOLITON.json; formal/output/PTC_NLSE_V1_HOOKS_SOLITON_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_REPORT_TRAP.json; formal/output/PTC_NLSE_V1_REPORT_TRAP_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_HOOKS_TRAP.json; formal/output/PTC_NLSE_V1_HOOKS_TRAP_DISSIPATIVE.json; formal/python/toe/comparators/cv01_bec_bragg_v0.py; formal/python/tests/test_cv01_bec_bragg_v0_front_door.py; formal/python/tests/test_cv01_bec_bragg_v0_surface_contract_freeze.py; formal/python/tests/test_cv01_v1_discriminative_design_gate_doc.py; formal/docs/cv01_bec_bragg_v0_front_door_contract.md; formal/docs/cv01_v1_discriminative_design_gate.md; formal/docs/first_empirical_comparator_domain_bec_bragg.md; formal/python/tests/test_first_empirical_comparator_domain_selection.py; formal/python/toe/comparators/cv01_bec_bragg_v1.py; formal/python/tests/test_cv01_bec_bragg_v1_front_door.py; formal/python/tests/test_cv01_bec_bragg_v1_surface_contract_freeze.py; formal/python/tests/test_cv01_numeric_tolerance_policy_doc.py; formal/docs/cv01_bec_bragg_v1_front_door_contract.md; formal/docs/cv01_numeric_tolerance_policy.md; formal/python/toe/observables/ovcvbr01_cv01_v1_pruning_bridge_record.py; formal/python/toe/observables/cv01_v1_pruning_reason_policy.json; formal/python/tests/test_ov_cv_br01_cv01_v1_pruning_bridge_lock.py; formal/python/tests/test_ov_cv_br01_cv01_v1_elimination_attribution.py; formal/python/tests/test_cv01_v1_pruning_reason_policy.py; formal/markdown/locks/observables/OV-CV-BR-01_cv01_v1_pruning_bridge.md; formal/markdown/locks/observables/OV-CV-BR-01_cv01_v1_pruning_bridge_NEG_CONTROL.md; formal/docs/second_empirical_comparator_domain_bec_bragg_b1.md; formal/python/tests/test_second_empirical_comparator_domain_selection.py; formal/python/toe/comparators/cv02_bec_bragg_b1_v0.py; formal/python/tests/test_cv02_bec_bragg_b1_v0_front_door.py; formal/python/tests/test_cv02_bec_bragg_b1_v0_surface_contract_freeze.py
 Exit criteria: At least one lane with a real FAIL mode (not only unknown), or a pinned justification for why unknown is acceptable in that lane.
-Notes: CT-01 probe/dispersion and solver-level ω-shift lanes are front-door-backed on pinned PTC cases (including conservative baseline, dissipative break case, and conservative amplitude/coupling/k variants). SYM01/PAR01/BC01 are now front-door-backed via deterministic B1 hooks artifacts (phase/pass + conjugation/fail, parity/pass + advection/fail, periodic-vs-Dirichlet boundary residuals). TR01 is report-backed via `time_reversal_error`; EN01 is report-backed via regime-specific `energy_delta` behavior. ST01 is front-door-backed via pinned bright-soliton cases and report shape metrics (`shape_residual`, `shape_peak_delta`, `shape_peak_ratio`) and now includes an n64 -> n128 resolution/convergence lane as a numerical adequacy check. TG01 is front-door-backed via pinned harmonic-trap ground-state cases and report trap metrics (`trap_shape_residual`, `trap_peak_ratio`, `trap_m2_delta`). OV-CV-01 is now dual-lane on typed DR-01 artifacts: v0 integrity-only front-door records, and v1 discriminative-candidate records with non-tautological cross-artifact speed residual (`abs(c_s-c0)`), profile-scoped tolerances, and deterministic negative controls.
-Falsifier/comparator families: dispersion/probe (CT01), solver consequence (ω-shift), symmetry (SYM01, PAR01, TR01), boundary handling (BC01), conservation/monotonicity (EN01), soliton structure/shape preservation plus resolution/convergence adequacy (ST01), trapped ground-state structure/shape stability under harmonic confinement (TG01), and BEC-Bragg comparator lanes (OV-CV-01 v0 integrity + v1 discriminative-candidate).
+Notes: CT-01 probe/dispersion and solver-level ω-shift lanes are front-door-backed on pinned PTC cases (including conservative baseline, dissipative break case, and conservative amplitude/coupling/k variants). SYM01/PAR01/BC01 are now front-door-backed via deterministic B1 hooks artifacts (phase/pass + conjugation/fail, parity/pass + advection/fail, periodic-vs-Dirichlet boundary residuals). TR01 is report-backed via `time_reversal_error`; EN01 is report-backed via regime-specific `energy_delta` behavior. ST01 is front-door-backed via pinned bright-soliton cases and report shape metrics (`shape_residual`, `shape_peak_delta`, `shape_peak_ratio`) and now includes an n64 -> n128 resolution/convergence lane as a numerical adequacy check. TG01 is front-door-backed via pinned harmonic-trap ground-state cases and report trap metrics (`trap_shape_residual`, `trap_peak_ratio`, `trap_m2_delta`). OV-CV-01 is now dual-lane on typed DR-01 artifacts: v0 integrity-only front-door records, and v1 discriminative-candidate records with non-tautological cross-artifact speed residual (`abs(c_s-c0)`), profile-scoped tolerances, and deterministic negative controls. OV-CV-BR-01 adds explicit CV01 reason-code to pruning-atom mapping with deterministic lock records (canonical + negative-control) and attribution tests. OV-CV-02 pins a second comparator domain lane (`DRBR-DOMAIN-02`) with integrity-only front-door checks and deterministic blocked/negative-control behavior.
+Falsifier/comparator families: dispersion/probe (CT01), solver consequence (ω-shift), symmetry (SYM01, PAR01, TR01), boundary handling (BC01), conservation/monotonicity (EN01), soliton structure/shape preservation plus resolution/convergence adequacy (ST01), trapped ground-state structure/shape stability under harmonic confinement (TG01), BEC-Bragg comparator lanes (OV-CV-01 v0 integrity + v1 discriminative-candidate), explicit CV01-to-pruning bridge lane (OV-CV-BR-01), and second-domain comparator lane (OV-CV-02).
 EN01 regime note: the FAIL case corresponds to a dissipative regime, not a universal “wrongness” claim; conservative vs. dissipative admissibility is now tracked as a named regime class.
 ST01 regime note: PASS corresponds to conservative-regime shape stability under the pinned v1 soliton run; FAIL corresponds to dissipative damping with measurable shape degradation.
 ST01 resolution note: the n64 -> n128 convergence lane is a pinned numerical adequacy check on the benchmark surface, not a universal physical claim.
 TG01 regime note: PASS corresponds to conservative trapped-state shape stability under pinned harmonic confinement; FAIL corresponds to dissipative damping with measurable trap-shape degradation.
 OV-CV-01 role note: v0 remains integrity-only (`comparator_role=integrity_only`); v1 is a discriminative-candidate lane (`comparator_role=discriminative_candidate`) with cross-artifact residual checks under declared pinned/portable tolerance profiles and no external truth-claim upgrade.
+OV-CV-BR-01 coupling note: BR pruning does not consume CV01 implicitly; coupling is explicit via policy mapping (`cv01_v1_pruning_reason_policy.json`) and lock-tested bridge records only.
+OV-CV-02 scope note: Domain-02 lane is pinned as integrity-only (`DRBR-DOMAIN-02`) and does not upgrade external truth posture.
 
 GapID: PTC-NLSE-V1
 Layer: Physics Execution
@@ -2974,6 +2976,65 @@ Notes: CV01 v0 remains frozen as a pipeline-integrity comparator. CV01 v1 is imp
 External anchor: BEC Bragg low-k dispersion domain (Steinhauer 2001 family)
 
 External evidence: formal/external_evidence/bec_bragg_steinhauer_2001/0111438v1.pdf
+
+
+ID: OV-CV-BR-01
+
+Name: OV-CV-BR-01 CV01 v1 -> pruning bridge (explicit reason-atom mapping)
+
+Category: Observable
+
+Short description: Deterministic bridge lane that maps CV01 v1 reason codes to pruning reason atoms via a versioned policy artifact and emits a summary-only eliminative record with attribution fields.
+
+Status: Locked
+
+Evidence: formal/python/toe/observables/ovcvbr01_cv01_v1_pruning_bridge_record.py; formal/python/toe/observables/cv01_v1_pruning_reason_policy.json; formal/python/tests/test_ov_cv_br01_cv01_v1_pruning_bridge_lock.py; formal/python/tests/test_ov_cv_br01_cv01_v1_elimination_attribution.py; formal/python/tests/test_cv01_v1_pruning_reason_policy.py; formal/markdown/locks/observables/OV-CV-BR-01_cv01_v1_pruning_bridge.md; formal/markdown/locks/observables/OV-CV-BR-01_cv01_v1_pruning_bridge_NEG_CONTROL.md
+
+Scope / limits: Summary-only / eliminative-only bookkeeping; explicit policy mapping only; no implicit coupling with BR-only pruning lanes; no numeric interpretation; no external truth claim.
+
+Dependencies: OV-CV-01, OV-DR-BR-01, CT-01, SYM-01, CAUS-01
+
+Notes: Canonical lock currently yields zero CV01-attributed eliminations under domain-01; negative-control lock proves deterministic attributed elimination with survivor guard preserved.
+
+
+
+ID: DRBR-DOMAIN-02
+
+Name: DRBR-DOMAIN-02 second empirical comparator domain pin (BEC Bragg B1)
+
+Category: Governance
+
+Short description: Pinned second comparator domain record for BEC Bragg secondary-source artifacts (B1 lane), including canonical artifact paths and non-claim posture.
+
+Status: Locked
+
+Evidence: formal/docs/second_empirical_comparator_domain_bec_bragg_b1.md; formal/python/tests/test_second_empirical_comparator_domain_selection.py
+
+Scope / limits: Domain pin only; no truth upgrade; no automatic pruning activation.
+
+Dependencies: DR-01
+
+Notes: Domain-02 is explicitly pinned but remains constrained by front-door comparator contracts and blocked-on-missing-input behavior.
+
+
+
+ID: OV-CV-02
+
+Name: OV-CV-02 BEC-Bragg B1 comparator v0 (front-door deterministic record)
+
+Category: Observable
+
+Short description: Deterministic comparator record on DRBR-DOMAIN-02 artifacts with integrity-only semantics, blocked-on-missing-input behavior, schema freeze tests, and deterministic negative control coverage.
+
+Status: Locked
+
+Evidence: formal/python/toe/comparators/cv02_bec_bragg_b1_v0.py; formal/python/tests/test_cv02_bec_bragg_b1_v0_front_door.py; formal/python/tests/test_cv02_bec_bragg_b1_v0_surface_contract_freeze.py; formal/python/tests/test_second_empirical_comparator_domain_selection.py; formal/docs/second_empirical_comparator_domain_bec_bragg_b1.md
+
+Scope / limits: Integrity-only comparator surface (`comparator_role=integrity_only`); deterministic record only; typed artifacts only; blocked when pinned domain artifacts are missing; no external truth claim.
+
+Dependencies: DRBR-DOMAIN-02, DR-01, BR-01
+
+Notes: This lane is domain-expansion governance and integrity instrumentation only; it does not assert cross-domain equivalence or physics truth.
 
 
 ID: OV-DR-BR-00
