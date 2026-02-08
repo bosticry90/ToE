@@ -134,3 +134,17 @@ def test_cv01_v1_blocks_when_domain_artifacts_missing(tmp_path: Path):
     assert rec.status["blocked"] is True
     assert rec.status["reasons"] == ["missing_domain_artifacts"]
     assert rec.rows == []
+    cross = dict(rec.cross_artifact)
+    assert cross["check_id"] == "linear_vs_curved_speed_residual"
+    assert cross["reason_codes"] == ["cv01_fail_cross_artifact_missing_inputs"]
+    assert set(cross.keys()) == {
+        "check_id",
+        "input_fingerprints",
+        "input_data_fingerprints",
+        "speed_linear",
+        "speed_curved",
+        "speed_residual",
+        "tolerance",
+        "passed",
+        "reason_codes",
+    }

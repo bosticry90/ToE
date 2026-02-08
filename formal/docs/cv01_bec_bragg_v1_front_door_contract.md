@@ -56,6 +56,7 @@ Role: `discriminative_candidate`
 - `cv01_v1_cross_artifact_speed_consistent`
 - `cv01_fail_linear_vs_curved_speed_inconsistent`
 - `cv01_fail_cross_artifact_nonpositive_speed`
+- `cv01_fail_cross_artifact_missing_inputs`
 
 ## Scope limits
 

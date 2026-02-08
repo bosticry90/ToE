@@ -246,8 +246,20 @@ def cv01_bec_bragg_v1_record(
             rows=[],
             cross_artifact={
                 "check_id": "linear_vs_curved_speed_residual",
+                "input_fingerprints": {
+                    "linear": "",
+                    "curved": "",
+                },
+                "input_data_fingerprints": {
+                    "linear": None,
+                    "curved": None,
+                },
+                "speed_linear": None,
+                "speed_curved": None,
+                "speed_residual": None,
+                "tolerance": float(tolerances["cross_artifact_speed"]),
                 "passed": False,
-                "reason_codes": ["missing_domain_artifacts"],
+                "reason_codes": ["cv01_fail_cross_artifact_missing_inputs"],
             },
             summary={
                 "rows": {"pass": 0, "fail": 0},

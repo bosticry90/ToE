@@ -52,6 +52,7 @@ ALLOWED_REASON_CODES = {
     "cv01_v1_cross_artifact_speed_consistent",
     "cv01_fail_linear_vs_curved_speed_inconsistent",
     "cv01_fail_cross_artifact_nonpositive_speed",
+    "cv01_fail_cross_artifact_missing_inputs",
 }
 
 
@@ -99,3 +100,18 @@ def test_cv01_v1_scope_limits_include_discriminative_candidate():
     assert "deterministic_record_only" in limits
     assert "discriminative_candidate" in limits
     assert "no_external_truth_claim" in limits
+
+
+def test_cv01_v1_blocked_cross_artifact_shape_still_matches_contract(tmp_path):
+    rec = cv01_bec_bragg_v1_record(
+        date="2026-02-08",
+        tolerance_profile="pinned",
+        artifact_dir=tmp_path / "missing",
+    )
+    assert rec.status["blocked"] is True
+
+    cross = dict(rec.cross_artifact)
+    assert set(cross.keys()) == CROSS_KEYS
+    assert cross["check_id"] == "linear_vs_curved_speed_residual"
+    reasons = list(cross["reason_codes"])
+    assert reasons == ["cv01_fail_cross_artifact_missing_inputs"]
