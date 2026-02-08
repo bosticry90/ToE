@@ -427,6 +427,27 @@ Guardrails (non-negotiable):
 
 
 
+GapID: COMP-PRED-FALS
+Layer: Governance
+Item: At least one unique falsifier/prediction path
+Status: In progress (at least one explicit FAIL-mode lane now recorded; additional lanes encouraged)
+Owner ticket/module: State_of_the_Theory.md
+Evidence path: State_of_the_Theory.md; formal/python/tests/test_phaseB_dispersion_preservation_expanded.py; formal/python/tests/test_phaseB_solver_omega_shift.py; formal/python/tests/test_sym01_phase_violation_lane.py; formal/python/tests/test_bc01_boundary_mismatch_lane.py; formal/python/tests/test_tr01_par01_symmetry_violation_lane.py; formal/python/tests/test_en01_energy_monotonicity_lane.py; formal/python/tests/test_st01_soliton_shape_preservation_lane.py; formal/output/PTC_NLSE_V1_HOOKS.json; formal/output/PTC_NLSE_V1_HOOKS_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_REPORT_SOLITON.json; formal/output/PTC_NLSE_V1_REPORT_SOLITON_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_HOOKS_SOLITON.json; formal/output/PTC_NLSE_V1_HOOKS_SOLITON_DISSIPATIVE.json
+Exit criteria: At least one lane with a real FAIL mode (not only unknown), or a pinned justification for why unknown is acceptable in that lane.
+Notes: CT-01 probe/dispersion and solver-level ω-shift lanes are front-door-backed on pinned PTC cases (including conservative baseline, dissipative break case, and conservative amplitude/coupling/k variants). SYM01/PAR01/BC01 are now front-door-backed via deterministic B1 hooks artifacts (phase/pass + conjugation/fail, parity/pass + advection/fail, periodic-vs-Dirichlet boundary residuals). TR01 is report-backed via `time_reversal_error`; EN01 is report-backed via regime-specific `energy_delta` behavior. ST01 is front-door-backed via pinned bright-soliton cases and report shape metrics (`shape_residual`, `shape_peak_delta`, `shape_peak_ratio`).
+Falsifier families: dispersion/probe (CT01), solver consequence (ω-shift), symmetry (SYM01, PAR01, TR01), boundary handling (BC01), conservation/monotonicity (EN01), and soliton structure/shape preservation (ST01).
+EN01 regime note: the FAIL case corresponds to a dissipative regime, not a universal “wrongness” claim; conservative vs. dissipative admissibility is now tracked as a named regime class.
+ST01 regime note: PASS corresponds to conservative-regime shape stability under the pinned v1 soliton run; FAIL corresponds to dissipative damping with measurable shape degradation.
+
+GapID: PTC-NLSE-V1
+Layer: Physics Execution
+Item: NLSE-like Physics Target Contract v1 front door
+Status: Implemented (deterministic front door + pinned manifest + locked conservative/dissipative outputs; now includes plane-wave + bright-soliton benchmark locks with ST01 lane)
+Owner ticket/module: formal/python/tools/ptc_nlse_v1_run.py
+Evidence path: formal/quarantine/physics_target/PTC_NLSE_V1_MANIFEST.json; formal/python/tools/ptc_nlse_v1_run.py; formal/output/PTC_NLSE_V1_REPORT.json; formal/output/PTC_NLSE_V1_REPORT_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_HOOKS.json; formal/output/PTC_NLSE_V1_HOOKS_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_REPORT_SOLITON.json; formal/output/PTC_NLSE_V1_REPORT_SOLITON_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_HOOKS_SOLITON.json; formal/output/PTC_NLSE_V1_HOOKS_SOLITON_DISSIPATIVE.json; formal/python/tests/test_ptc_nlse_v1_front_door_determinism.py; formal/python/tests/test_st01_soliton_shape_preservation_lane.py
+Exit criteria: Deterministic report generation under pinned inputs; regime-specific energy behavior (conservative ~ invariant, dissipative monotone) validated via tests.
+Notes: v1 surface is 1D periodic NLSE-like dynamics with cubic nonlinearity and optional damping; intended as the first executable physics target contract (not a proof of physical correctness). Report outputs include `time_reversal_error` in addition to dispersion/energy/norm/phase diagnostics. Policy B1 hooks are emitted as separate deterministic artifacts (`PTC_NLSE_V1_HOOKS*.json`) for SYM01/PAR01/BC01 so report schema remains stable while falsifier lanes stay front-door-driven. Manifest now includes plane-wave contract cases and bright-soliton benchmark cases; soliton IC is keyed by case_id substring ('soliton') and reports shape metrics (`shape_residual`, `shape_peak_delta`, `shape_peak_ratio`).
+
 Planned Structural Validations (Unexecuted)
 
 - Reduction target: FN core dynamics → NLS/GPE under limits (λ→0, β→0, ρ→ρ₀)
