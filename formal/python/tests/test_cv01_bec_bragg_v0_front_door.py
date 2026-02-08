@@ -30,6 +30,7 @@ def test_cv01_record_is_deterministic_and_schema_stable():
     assert rec1.schema == "OV-CV-01_bec_bragg_v0_comparator/v1"
     assert rec1.observable_id == "OV-CV-01"
     assert rec1.domain_id == "DRBR-DOMAIN-01"
+    assert rec1.comparator_role == "integrity_only"
 
     assert rec1.to_jsonable() == rec2.to_jsonable()
     assert rec1.fingerprint() == rec2.fingerprint()
@@ -48,6 +49,7 @@ def test_cv01_rows_have_pass_fail_and_reason_codes():
     counts = dict(rec.summary["counts"])
     assert int(counts["pass"]) + int(counts["fail"]) == len(rec.rows)
     assert int(counts["pass"]) >= 1
+    assert "integrity_only" in list(rec.scope_limits)
 
 
 def test_cv01_front_door_requires_typed_fit_objects():
@@ -64,6 +66,22 @@ def test_cv01_front_door_requires_typed_fit_objects():
     except TypeError:
         raised_curved = True
     assert raised_curved
+
+
+def test_cv01_negative_control_nonpositive_declared_cs_fails_with_reason_code():
+    neg = DR01Fit1D(
+        u=0.0,
+        c_s=-1.0,
+        tag="cv01-neg-control",
+        source_kind="synthetic",
+        source_ref="pytest",
+        fit_method_tag="negative-control",
+        sample_kw=((1.0, -1.0), (2.0, -2.0), (3.0, -3.0)),
+    )
+    row = cv01_compare_linear_fit(neg)
+    assert bool(row["passed"]) is False
+    reasons = list(row["reason_codes"])
+    assert "cv01_fail_nonpositive_declared_cs" in reasons
 
 
 def test_cv01_lock_render_contains_record_and_fingerprint():

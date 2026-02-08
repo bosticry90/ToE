@@ -112,6 +112,7 @@ def cv01_compare_linear_fit(
     *,
     tol_metric_identity: float = 1e-12,
     tol_unit_gxx: float = 1e-12,
+    tol_declared_speed: float = 1e-12,
 ) -> dict[str, Any]:
     if not isinstance(dr01_fit, DR01Fit1D):
         raise TypeError("cv01_compare_linear_fit requires DR01Fit1D input")
@@ -122,6 +123,18 @@ def cv01_compare_linear_fit(
         tol_metric_identity=tol_metric_identity,
         tol_unit_gxx=tol_unit_gxx,
     )
+    metric_c_s_abs = float(metric.c_s2) ** 0.5
+    declared_c_s = float(dr01_fit.c_s)
+    speed_residual = abs(metric_c_s_abs - declared_c_s)
+    if declared_c_s <= 0.0:
+        passed = False
+        reasons.append("cv01_fail_nonpositive_declared_cs")
+    elif speed_residual > float(tol_declared_speed):
+        passed = False
+        reasons.append("cv01_fail_declared_vs_metric_cs_mismatch")
+    diagnostics["declared_c_s"] = declared_c_s
+    diagnostics["metric_c_s_abs"] = metric_c_s_abs
+    diagnostics["speed_residual"] = float(speed_residual)
     return {
         "artifact_id": "DR01_LINEAR",
         "source": str(metric.source),
@@ -144,6 +157,7 @@ def cv01_compare_curved_fit(
     *,
     tol_metric_identity: float = 1e-12,
     tol_unit_gxx: float = 1e-12,
+    tol_declared_speed: float = 1e-12,
 ) -> dict[str, Any]:
     if not isinstance(dr01_fit_curved, DR01FitCurved1D):
         raise TypeError("cv01_compare_curved_fit requires DR01FitCurved1D input")
@@ -154,6 +168,18 @@ def cv01_compare_curved_fit(
         tol_metric_identity=tol_metric_identity,
         tol_unit_gxx=tol_unit_gxx,
     )
+    metric_c_s_abs = float(metric.c_s2) ** 0.5
+    declared_c0 = float(dr01_fit_curved.c0)
+    speed_residual = abs(metric_c_s_abs - declared_c0)
+    if declared_c0 <= 0.0:
+        passed = False
+        reasons.append("cv01_fail_nonpositive_declared_c0")
+    elif speed_residual > float(tol_declared_speed):
+        passed = False
+        reasons.append("cv01_fail_declared_vs_metric_c0_mismatch")
+    diagnostics["declared_c0"] = declared_c0
+    diagnostics["metric_c_s_abs"] = metric_c_s_abs
+    diagnostics["speed_residual"] = float(speed_residual)
     return {
         "artifact_id": "DR01_CURVED",
         "source": str(metric.source),
@@ -177,6 +203,7 @@ class CV01BecBraggV0Record:
     date: str
     observable_id: str
     domain_id: str
+    comparator_role: str
     status: dict[str, Any]
     inputs: dict[str, Any]
     rows: list[dict[str, Any]]
@@ -189,6 +216,7 @@ class CV01BecBraggV0Record:
             "date": str(self.date),
             "observable_id": str(self.observable_id),
             "domain_id": str(self.domain_id),
+            "comparator_role": str(self.comparator_role),
             "status": dict(self.status),
             "inputs": dict(self.inputs),
             "rows": list(self.rows),
@@ -211,6 +239,7 @@ def cv01_bec_bragg_v0_record(
     artifact_dir: Path | None = None,
     tol_metric_identity: float = 1e-12,
     tol_unit_gxx: float = 1e-12,
+    tol_declared_speed: float = 1e-12,
 ) -> CV01BecBraggV0Record:
     repo_root = _find_repo_root(Path(__file__))
     data_dir = (artifact_dir or _default_artifact_dir(repo_root)).resolve()
@@ -225,6 +254,7 @@ def cv01_bec_bragg_v0_record(
             date=str(date),
             observable_id="OV-CV-01",
             domain_id="DRBR-DOMAIN-01",
+            comparator_role="integrity_only",
             status={
                 "blocked": True,
                 "reasons": ["missing_domain_artifacts"],
@@ -248,11 +278,13 @@ def cv01_bec_bragg_v0_record(
         fit_linear,
         tol_metric_identity=tol_metric_identity,
         tol_unit_gxx=tol_unit_gxx,
+        tol_declared_speed=tol_declared_speed,
     )
     row_curved = cv01_compare_curved_fit(
         fit_curved,
         tol_metric_identity=tol_metric_identity,
         tol_unit_gxx=tol_unit_gxx,
+        tol_declared_speed=tol_declared_speed,
     )
 
     rows = [row_linear, row_curved]
@@ -264,12 +296,14 @@ def cv01_bec_bragg_v0_record(
         date=str(date),
         observable_id="OV-CV-01",
         domain_id="DRBR-DOMAIN-01",
+        comparator_role="integrity_only",
         status={
             "blocked": False,
             "reasons": [],
             "tolerances": {
                 "metric_identity": float(tol_metric_identity),
                 "unit_gxx": float(tol_unit_gxx),
+                "declared_speed_match": float(tol_declared_speed),
             },
         },
         inputs={
@@ -288,6 +322,7 @@ def cv01_bec_bragg_v0_record(
             "front_door_only",
             "typed_artifacts_only",
             "deterministic_record_only",
+            "integrity_only",
             "no_external_truth_claim",
         ],
     )
@@ -311,4 +346,3 @@ def render_cv01_lock_markdown(record: CV01BecBraggV0Record) -> str:
         "```\n\n"
         f"Record fingerprint: `{fp}`\n"
     )
-
