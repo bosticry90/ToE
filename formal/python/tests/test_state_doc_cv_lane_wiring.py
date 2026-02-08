@@ -51,6 +51,11 @@ def _first_field(block: str, field: str) -> str | None:
     return None
 
 
+def _field_count(block: str, field: str) -> int:
+    prefix = f"{field}:"
+    return sum(1 for line in block.splitlines() if line.startswith(prefix))
+
+
 def test_state_doc_has_cv_and_domain_blocks_with_evidence():
     text = STATE_PATH.read_text(encoding="utf-8")
 
@@ -60,6 +65,7 @@ def test_state_doc_has_cv_and_domain_blocks_with_evidence():
         evidence = _first_field(block, "Evidence") or ""
         assert evidence, f"Expected non-empty Evidence field in {block_id}"
         assert "formal/" in evidence.replace("\\", "/"), f"Expected path-like evidence pointer in {block_id}"
+        assert _field_count(block, "Dependencies") == 1, f"Expected exactly one Dependencies line in {block_id}"
 
     bridge_block = _extract_block(text, block_id="OV-CV-BR-01")
     bridge_evidence = _first_field(bridge_block, "Evidence") or ""
@@ -74,6 +80,7 @@ def test_state_doc_has_cv_and_domain_blocks_with_evidence():
 def test_comp_pred_fals_evidence_mentions_cv_bridge_and_domain02_lanes():
     text = STATE_PATH.read_text(encoding="utf-8")
     block = _extract_gap_block(text, gap_id="COMP-PRED-FALS")
+    assert _field_count(block, "Evidence path") == 1, "Expected exactly one Evidence path line in COMP-PRED-FALS"
 
     evidence = _first_field(block, "Evidence path") or ""
     required_tokens = [
