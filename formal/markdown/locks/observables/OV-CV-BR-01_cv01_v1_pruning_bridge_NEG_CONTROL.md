@@ -1,0 +1,153 @@
+# OV-CV-BR-01 - CV01 v1 -> pruning bridge (summary-only)
+
+Scope / limits
+- Summary-only / eliminative-only bookkeeping
+- Explicit CV01 reason-code to reason-atom mapping only
+- No implicit coupling with BR-only pruning lanes
+- No numeric interpretation and no external truth claim
+
+Record (computed)
+
+```json
+{
+  "active_reason_atoms": [
+    "cv01_cross_artifact_inconsistent"
+  ],
+  "active_reason_codes": [
+    "cv01_fail_linear_vs_curved_speed_inconsistent"
+  ],
+  "date": "2026-02-08",
+  "fingerprint": "4b02fe11b4bf89534edfebec4b7c30fe8e85868f11d2151c662a8d98a8b24f0c",
+  "inputs": {
+    "OV-CV-01_v1": {
+      "artifact_dir": "C:\\Users\\psboy\\Documents\\ToE\\formal\\external_evidence\\cv01_v1_negative_control_fixture",
+      "record_fingerprint": "aa31b6da6921514d5cd5d2a3cdd069bf6df7cb6c5d83138cc3d3d088e2b943aa",
+      "schema": "OV-CV-01_bec_bragg_v1_comparator/v1",
+      "status_blocked": false
+    },
+    "OV-DR-BR-01": {
+      "record_fingerprint": "4a232ac724414240b397dcd39844de2481e892f456c5f29e0b00b9921aef4beb",
+      "schema": "OV-DR-BR-01_candidate_pruning_table/v1",
+      "status_blocked": true
+    },
+    "policy": {
+      "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\observables\\cv01_v1_pruning_reason_policy.json",
+      "present": true,
+      "raw_sha256": "5ff4baf646434c387bfe4a559c1605a46c18c856e6cf2978c9a9b552245f2190",
+      "schema": "OVCV01_v1_pruning_reason_policy/v1",
+      "version": 1
+    }
+  },
+  "mapping_policy": {
+    "eliminative_atoms": [
+      "cv01_cross_artifact_inconsistent",
+      "cv01_invalid_speed_sign"
+    ],
+    "reason_code_to_atom": {
+      "cv01_fail_cross_artifact_missing_inputs": "cv01_missing_inputs_blocked",
+      "cv01_fail_cross_artifact_nonpositive_speed": "cv01_invalid_speed_sign",
+      "cv01_fail_linear_vs_curved_speed_inconsistent": "cv01_cross_artifact_inconsistent"
+    },
+    "schema": "OVCV01_v1_pruning_reason_policy/v1",
+    "version": 1
+  },
+  "observable_id": "OV-CV-BR-01",
+  "rows": [
+    {
+      "base_survives_br01_constraints": "true",
+      "candidate_id": "BR01_metric_from_DR01_fit_constant_density",
+      "cv01_attributed_elimination": true,
+      "cv01_reason_atoms_considered": [
+        "cv01_cross_artifact_inconsistent"
+      ],
+      "cv01_reason_atoms_triggered": [
+        "cv01_cross_artifact_inconsistent"
+      ],
+      "reason_codes": [
+        "declared_br05_structure_satisfied",
+        "eliminated_by_cv01_reason_atom:cv01_cross_artifact_inconsistent"
+      ],
+      "survives_cv01_bridge_constraints": "false"
+    },
+    {
+      "base_survives_br01_constraints": "unknown",
+      "candidate_id": "BR01_metric_from_DR01_fit_rest_frame_u0",
+      "cv01_attributed_elimination": false,
+      "cv01_reason_atoms_considered": [],
+      "cv01_reason_atoms_triggered": [],
+      "reason_codes": [
+        "no_formal_br05_prediction_declared"
+      ],
+      "survives_cv01_bridge_constraints": "unknown"
+    },
+    {
+      "base_survives_br01_constraints": "true",
+      "candidate_id": "BR01_metric_from_DR01_fit_unit_density",
+      "cv01_attributed_elimination": false,
+      "cv01_reason_atoms_considered": [],
+      "cv01_reason_atoms_triggered": [],
+      "reason_codes": [
+        "declared_br05_structure_satisfied"
+      ],
+      "survives_cv01_bridge_constraints": "true"
+    },
+    {
+      "base_survives_br01_constraints": "false",
+      "candidate_id": "BR01_metric_from_DR01_fit_unit_density_structural_fail",
+      "cv01_attributed_elimination": false,
+      "cv01_reason_atoms_considered": [
+        "cv01_invalid_speed_sign"
+      ],
+      "cv01_reason_atoms_triggered": [],
+      "reason_codes": [
+        "missing_required_br05_fields",
+        "missing_fields:condition_A:__REQUIRED_FIELD_THAT_DOES_NOT_EXIST__,condition_B:__REQUIRED_FIELD_THAT_DOES_NOT_EXIST__",
+        "retained_base_pruning_elimination"
+      ],
+      "survives_cv01_bridge_constraints": "false"
+    }
+  ],
+  "schema": "OV-CV-BR-01_cv01_v1_pruning_bridge/v1",
+  "scope_limits": [
+    "summary_only",
+    "eliminative_only",
+    "explicit_cv01_reason_atom_mapping",
+    "no_implicit_coupling",
+    "no_new_claims",
+    "survivor_guard_required"
+  ],
+  "status": {
+    "blocked": true,
+    "cv01_tolerance_profile": "pinned",
+    "reasons": [
+      "base_pruning_status_blocked"
+    ]
+  },
+  "summary": {
+    "candidates": {
+      "false": [
+        "BR01_metric_from_DR01_fit_constant_density",
+        "BR01_metric_from_DR01_fit_unit_density_structural_fail"
+      ],
+      "true": [
+        "BR01_metric_from_DR01_fit_unit_density"
+      ],
+      "unknown": [
+        "BR01_metric_from_DR01_fit_rest_frame_u0"
+      ]
+    },
+    "counts": {
+      "false": 2,
+      "true": 1,
+      "unknown": 1
+    },
+    "cv01_attributed_elimination_count": 1,
+    "cv01_attributed_eliminations": [
+      "BR01_metric_from_DR01_fit_constant_density"
+    ],
+    "survivor_guard": true
+  }
+}
+```
+
+Record fingerprint: `4b02fe11b4bf89534edfebec4b7c30fe8e85868f11d2151c662a8d98a8b24f0c`
