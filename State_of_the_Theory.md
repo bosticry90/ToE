@@ -444,6 +444,15 @@ OV-CV-01 role note: v0 remains integrity-only (`comparator_role=integrity_only`)
 OV-CV-BR-01 coupling note: BR pruning does not consume CV01 implicitly; coupling is explicit via policy mapping (`cv01_v1_pruning_reason_policy.json`) and lock-tested bridge records only.
 OV-CV-02 scope note: Domain-02 lane is pinned as integrity-only (`DRBR-DOMAIN-02`) and does not upgrade external truth posture.
 
+GapID: COMP-EVOL-LINK
+Layer: Lean
+Item: Evolution linkage for Noether conservation
+Status: Discharged (non-tautological fixed-step operator-generated flow via `StepGenerator`/`GeneratorStepLaw`; build-verified; structural-only)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/SemigroupEvolution.lean; formal/toe_formal/ToeFormal/Variational/EvolutionFlowLaw.lean; formal/toe_formal/ToeFormal/Variational/EvolutionGeneratorLaw.lean; formal/toe_formal/ToeFormal/Variational/SemigroupWithGenerator.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean; formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean; formal/toe_formal/ToeFormal/Variational/DeclaredDynamics.lean
+Evidence path: formal/toe_formal/ToeFormal/Variational/SemigroupEvolution.lean; formal/toe_formal/ToeFormal/Variational/EvolutionFlowLaw.lean; formal/toe_formal/ToeFormal/Variational/EvolutionGeneratorLaw.lean; formal/toe_formal/ToeFormal/Variational/SemigroupWithGenerator.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean; formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean; formal/toe_formal/ToeFormal/Variational/DeclaredDynamics.lean; formal/python/tests/test_lean_evolution_generator_linkage.py; formal/python/tests/test_lean_declared_dynamics_bridge.py; formal/python/tests/test_lean_variational_core_build_guard.py
+Exit criteria: Satisfied on 2026-02-08 by replacing generator-at-0 assumptions with fixed-step generator laws and routing declared Noether conservation along the same declared evolution surface (structural-only).
+Notes: `FlowLaw`/`GeneratorLaw` linkage contracts are now data-carrying (`Type`) surfaces; flow-law witnesses are exported as definitions and covered by a deterministic Lean compile guard test.
+
 GapID: PTC-NLSE-V1
 Layer: Physics Execution
 Item: NLSE-like Physics Target Contract v1 front door
