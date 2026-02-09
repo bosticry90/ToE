@@ -1,0 +1,25 @@
+{
+  "config_tag": "cv03_candidate_ucff_core_v1",
+  "fingerprint": "55e573f4af347af6f64c608296fd57620f156db576a6e09ebf36f7e4ffdc866c",
+  "k": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "omega2": [
+    0.0,
+    0.0009765625,
+    0.015625,
+    0.25,
+    4.0
+  ],
+  "params": {
+    "beta": 0.0,
+    "g": 0.0,
+    "lam": 0.0,
+    "rho0": 1.0
+  },
+  "schema": "UCFF/core_front_door_report/v1"
+}
