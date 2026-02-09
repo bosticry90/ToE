@@ -1,0 +1,35 @@
+{
+  "schema": "OV-BR-SND-03_explicit_bragg_sound_pairing_tuples/v4",
+  "mapping_tuples": [
+    {
+      "tuple_id": "ovbr_snd03_pair_20260129_01",
+      "bragg_key": "br04a_conditionA",
+      "sound_key": "snd02_single",
+      "pair_type": "cross_source_hypothesis",
+      "rationale": "Explicit cross-source pairing hypothesis for low-k bookkeeping (Bragg conditionA ↔ Andrews 1997 sound speed). Enables gated numeric check without asserting physical identity beyond pinned unit conversion + explicit tuple declaration.",
+      "source_locators": {
+        "bragg": {
+          "lock_path": "formal/markdown/locks/observables/OV-BR-04A_bragg_lowk_slope_conditionA.md"
+        },
+        "sound": {
+          "lock_path": "formal/markdown/locks/observables/OV-SND-02_sound_speed_from_propagation.md"
+        }
+      }
+    },
+    {
+      "tuple_id": "ovbr_snd03_pair_20260201_01",
+      "bragg_key": "br04b_conditionB",
+      "sound_key": "snd02b_seriesB",
+      "pair_type": "cross_source_hypothesis",
+      "rationale": "Second explicit cross-source pairing hypothesis for low-k bookkeeping (Bragg conditionB ↔ Andrews 1997 sound speed, seriesB extraction). Intended to exercise multi-row justified reporting while preserving fail-closed suppression for all unmapped cross-pairs.",
+      "source_locators": {
+        "bragg": {
+          "lock_path": "formal/markdown/locks/observables/OV-BR-04B_bragg_lowk_slope_conditionB.md"
+        },
+        "sound": {
+          "lock_path": "formal/markdown/locks/observables/OV-SND-02B_sound_speed_from_propagation_seriesB.md"
+        }
+      }
+    }
+  ]
+}

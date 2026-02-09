@@ -1,0 +1,176 @@
+**Unified Roadmap for Viability Advancement**
+
+STATUS: ACTIVE (needs periodic revision)
+
+Non-negotiable guardrails (workflow + science preservation):
+
+- Roadmap text does not create locks.
+- Roadmap text does not enable gates or alter admissibility pruning.
+- Interpretive mappings are Spec-backed and must not influence FN pruning or enforcement logic.
+- All milestones are status-scoped planning targets; no epistemic upgrades occur by writing them.
+- No empirical validation performed.
+
+Tooling maturity update (current reality):
+
+- State_of_the_Theory.md is authoritative; IDs, dependencies, and evidence paths are enforced.
+- Bridges use front-door APIs with candidate tables + import bans.
+- Empirical artifacts exist (typed, fingerprinted fit objects) and are the only allowed bridge inputs.
+- Behavioral locks (roundtrip/probe-relative) are treated as guardrails, not global proofs.
+
+Recommended framing (discriminative science loops):
+
+Loop template:
+1) Define/collect a minimal empirical artifact (e.g., DR-01 fit artifact with data_fingerprint)
+2) Push it through a bridge (e.g., BR-01 metric output)
+3) Predict an observable signature under candidate family Y
+4) Compare to data/anchor Z (or internal invariance locks)
+5) Prune/eliminate candidates (FN pruning) and record the surviving set + evidence
+
+---
+
+### I. Roadmap to Advance Each Layer
+
+#### 1. Formal Field Architecture
+
+**Goal:** Ensure derivability, reduction, and consistency of field equations.
+
+* **Milestone 1:** Prove that CRFT/CCFT equations reduce to the NLS/GPE in the limit: ( \lambda, \beta \rightarrow 0 ), ( \rho \rightarrow \rho_0 ).
+* **Milestone 2:** Define conditions under which CE-NWE approximates the linear wave equation.
+* **Milestone 3:** Introduce and verify conserved Noether quantities from the Lagrangians.
+
+#### 2. Constraint + Verification Stack
+
+**Goal:** Strengthen gatekeeping between symbolic structure, behavior, and formal validation.
+
+* **Milestone 1:** Add Lean predicates:
+
+  * `PlaneWaveEigen(Op2D) : Prop`
+  * `DispersionCompatible(Op2D) : Prop`
+* **Milestone 2:** Prove lemma: If ( Op = Op_1 + Op_2 ), then ( \omega_{Op} = \omega_{Op_1} + \omega_{Op_2} ), hence constraint survival implies additive closure.
+* **Milestone 3:** Write Python tests for phase, translation, and rotation invariance (pass/fail/undecided regime).
+
+  * Add Observability / representation-invariance audit (OV-OBS-01): ensure observable outputs do not depend on unobservable metadata (provenance strings, tags).
+  * Add Graph/Fourier mode consistency audit (OV-FG-01): cross-check continuum Fourier reasoning vs discrete (graph/lattice) spectral modes.
+  * Add many-body trend audit scaffold (OV-MB-01): orthogonality catastrophe overlap trend under local perturbation (toy model only).
+  * Add phase-transition window detector (OV-PT-01): detect hexatic-style two-step transition signature on supplied order-parameter curves.
+  * Add quantum geometry audit scaffold (OV-QC-01): Berry curvature / Chern number primitive for simplified lattice models.
+
+* **Milestone 4:** Express “candidate pruning” explicitly:
+
+  * Build candidate tables for each criterion/bridge.
+  * Add one lock per candidate family that can eliminate a family under a stated regime.
+
+#### 3. Interpretability + Mapping
+
+**Goal:** Build a minimal symbolic-to-empirical dictionary.
+
+* **Milestone 1:** Record a non-binding mapping registry (MAP-01).
+
+  - Status: Spec-backed
+  - Enforced by pipeline: No
+  - Role: Interpretive aid only (must not affect admissibility or pruning)
+* **Milestone 2:** Map bright/dark solitons to bound state analogs; extract effective mass or decay length.
+* **Milestone 3:** Define testable surrogate observable: e.g., decay time ( \tau ) of a vortex pair in coherence gradient flow.
+
+
+Speculative intake quarantine (documentation-only; no core integration)
+
+- Brain–ZPF resonance and vacuum-resonance force-unification proposals remain Hypothesis unless/until distinct, testable predictions are provisioned.
+- Any exploratory code in these directions must remain togglable, non-core, and must not alter locks/gates or candidate pruning.
+
+#### 4. Computational Behavior
+
+**Goal:** Validate model stability and behavior under numerical simulation.
+
+* **Milestone 1:** Run simulations of CE-NWE and CP-NLSE for soliton and vortex solutions across grid sizes.
+* **Milestone 2:** Measure conservation (mass, energy) under time evolution.
+* **Milestone 3:** Stress test: perturb initial wavepacket and track response for different ( \lambda, \beta ).
+
+#### 5. Empirical Interface
+
+**Goal:** Anchor symbolic predictions to testable regimes.
+
+* **Milestone 1:** Identify analogous systems (BEC, optical solitons, fluid vortices).
+* **Milestone 2:** Generate synthetic observables (dispersion curves, decay profiles) for comparison.
+  Use artifacts and bridges end-to-end:
+
+  * DR-01 fit artifact → BR-01 metric output → downstream prediction
+  * Store provenance + data_fingerprint so the chain is reproducible.
+* **Milestone 3:** Propose exactly one proxy falsifiable claim (EMP-01), explicitly labeled:
+
+  EMP-01 (Proxy Claim)
+  Status: Hypothesis
+  Claim: Under fixed lambda_coh, dark soliton decay time tau is bounded for rho0 in [a,b].
+  Evidence: Synthetic simulation only
+  Notes: No empirical validation performed.
+
+
+---
+
+### II. MAP-01 — Symbolic → Empirical Dictionary (Non-binding)
+
+ID: MAP-01
+Status: Spec-backed
+Role: Interpretive aid only
+Enforced by pipeline: No
+Notes: Must not feed into FN pruning or admissibility gating.
+
+Registry (tentative mappings):
+
+- rho: energy density OR probability amplitude proxy (context-dependent)
+- theta: phase (fluid/quantum analog; non-binding)
+- v := d_x theta: velocity-field analog (non-binding)
+- c_eff: effective sound speed proxy (acoustic analog)
+- lambda_coh: coherence stiffness / penalty scale (no external anchor yet)
+- bright soliton: localized bound-state analog (interpretive only)
+- vortex pair / dark soliton: defect or excitation analog (interpretive only)
+
+---
+
+### III. Lean Test Battery for Core Derivations
+
+#### Module: OperatorSignature.lean
+
+```lean
+def Field2D := ... -- abstract 2D field
+structure Op2D := (Op : Field2D \u2192 Field2D)
+
+predicate PlaneWaveEigen (O : Op2D) : Prop :=
+\u2200 k, \u2203 \mu, O (e^{ikx}) = \mu(k) * e^{ikx}
+
+predicate DispersionCompatible (O : Op2D) : Prop :=
+\u2200 k, \mu(k) = k^2 + \lambda k^4 + \beta k^6  -- example
+
+lemma add_preserves_dispersion:
+\u2200 O1 O2 : Op2D,
+  PlaneWaveEigen O1 \u2227 PlaneWaveEigen O2 \u2227 DispersionCompatible O1 \u2227 DispersionCompatible O2 \u2192
+  DispersionCompatible (O1 + O2)
+```
+
+#### Module: ConservationLaws.lean
+
+```lean
+def Energy(\phi : Field2D) : \u2115 := ...
+def Mass(\phi : Field2D) : \u2115 := ...
+
+lemma energy_conserved:
+\u2200 \phi_t : Field2D, evolves_under_CP_NLSE \phi_t \u2192 Energy(\phi_t) = const
+
+lemma mass_conserved:
+\u2200 \phi_t : Field2D, evolves_under_CP_NLSE \phi_t \u2192 Mass(\phi_t) = const
+```
+
+#### Module: CoherencePenalty.lean
+
+```lean
+def CoherencePenalty(\rho : Field2D) := \u222b (\rho - \rho_0)^2 dx
+
+lemma zero_penalty_when_uniform:
+\u2200 \rho, (\rho = \rho_0) \u2192 CoherencePenalty(\rho) = 0
+```
+
+---
+
+This roadmap delivers a coherent path to rigorously test, validate, and begin bridging symbolic structures with observable, testable predictions, using only your verified field content and formal workflow structure.
+
+Let me know which module or milestone you’d like scaffolded or translated into active code first.

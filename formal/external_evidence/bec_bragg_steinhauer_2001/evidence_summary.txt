@@ -1,0 +1,31 @@
+EVIDENCE PACKET SUMMARY
+
+BASE_DIR: formal\external_evidence\bec_bragg_steinhauer_2001
+μ/h = 1.91 kHz (caption, no free parameters)
+
+CONFIGURATION
+Sigma model: digitization
+
+GOODNESS OF FIT
+N = 12
+χ² = 142
+χ²_red = 11.8
+
+OUTLIERS
+Flagged points = 0
+
+SOUND-SPEED CHECK (LOW-k)
+Model relation: c_s = sqrt(μ/m)
+c_s(μ) = 0.00296133 m/s
+Fit window: k <= 3.2 μm⁻¹ (used 8 points)
+c_s,fit = 0.00218712 m/s
+Percent difference = -26.1 %
+Observable: low-k slope 
+dω/dk
+dω/dk extracted directly from Bragg resonance data.
+
+WARNINGS
+None.
+
+NOTE
+χ² is not physically meaningful until true experimental uncertainties replace placeholders; it is reported here only as a consistency diagnostic under a provisional digitization-based σ model.

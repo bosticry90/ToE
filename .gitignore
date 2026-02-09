@@ -3,3 +3,5 @@ __pycache__/
 *.pyc
 .pytest_cache/
 formal/quarantine/**/artifact_sha256_*.txt
+formal/aristotle_scratch/
+scratch/quarantine/20260118/archive/

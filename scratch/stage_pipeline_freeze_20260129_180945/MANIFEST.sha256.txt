@@ -1,0 +1,7 @@
+# Staging bundle: pipeline freeze 20260129_180945
+# Repo root: C:\Users\psboy\Documents\ToE
+# Files:
+117009ab37f3f26ec19b73801200d5b4b716fa210818295f2b2ad8c00ae425b4  formal\tooling_snapshots\repo_snapshot_20260129_180945_BASELINE_pipeline.jsonl
+35a9b0f6545de7101fe6b257ed6ebb6ae09048553c7ad308efec79c25bfa7acb  formal\tooling_snapshots\LATEST_BASELINE_PIPELINE.txt
+35a9b0f6545de7101fe6b257ed6ebb6ae09048553c7ad308efec79c25bfa7acb  formal\tooling_snapshots\LATEST_BASELINE.txt
+f2a682094e7a242e9c36c0dd2c417b10899d0f72c99488514899812bae51a584  formal\tooling_snapshots\BASELINE_pipeline_CURRENT.txt

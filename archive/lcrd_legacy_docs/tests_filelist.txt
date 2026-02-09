@@ -1,0 +1,8 @@
+# Legacy LCRD v2 core suite file list (UTF-8)
+# This file is informational; pytest should ignore it.
+
+tests/cg_t1_dispersion_test.py
+tests/cg_t2_amplitude_scan.py
+tests/cg_t10_v2_mode_coupling.py
+tests/cg_t11_v2_kA_drift.py
+tests/run_lcrd_v2_core_suite.py

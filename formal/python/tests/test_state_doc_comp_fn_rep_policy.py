@@ -72,3 +72,4 @@ def test_comp_fn_rep_policy_is_wired_and_evidenced():
         break
 
     assert matched, "No COMP-FN-REP block matched the expected Rep64 policy/evidence wiring."
+    assert len(blocks) == 1, "Expected exactly one COMP-FN-REP block; remove duplicates."

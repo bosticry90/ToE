@@ -1,0 +1,43 @@
+{
+  "dataset": {
+    "columns": [
+      {
+        "dtype": "string",
+        "name": "condition_id",
+        "unit": "(label)"
+      },
+      {
+        "dtype": "float",
+        "name": "n0_cm3",
+        "unit": "cm^-3"
+      }
+    ],
+    "csv_relpath": "formal/external_evidence/bec_sound_andrews_1997/ovsnd03_density_digitization/central_density.csv",
+    "csv_sha256": "c551da87d6e944f28970194678beb712ac4167edbf041d65cfa1b8c67532a6a6",
+    "metadata_relpath": "formal/external_evidence/bec_sound_andrews_1997/ovsnd03_density_digitization/central_density.metadata.json",
+    "row_count": 1
+  },
+  "date": "2026-01-24",
+  "digitization_id": "OV-SND-03N",
+  "observable_id": "OV-SND-03N",
+  "record_fingerprint": "d5222e1b706c3c8455e3c0e04f23e14473a04ab2dcff64ba13f266270f8eae7a",
+  "schema": "OV-SND-03_digitized_density_metadata/v1",
+  "scope_limits": [
+    "anchor_numeric_only",
+    "single_condition_only",
+    "no_fitting",
+    "no_imputation",
+    "no_continuity_claim",
+    "no_cross_regime_averaging",
+    "non_decisive_by_design"
+  ],
+  "source": {
+    "arxiv_pdf_relpath": "formal/external_evidence/bec_sound_andrews_1997/9711224v1.pdf",
+    "arxiv_pdf_sha256": "d38a5d54cca6b4b7a4a71647c20d24bf72b434eca2e1ed943df62f981f3a7cc6",
+    "citation": "Kavoulakis & Pethick (1997), arXiv:9711224v1 \u2014 Sound Propagation in Elongated Bose-Einstein Condensed Clouds",
+    "extraction_method": "pdfplumber_text_regex",
+    "matched_text": "1014 cm -3",
+    "notes": "PDF text extraction collapses the typeset 10^14 to '1014' in this snapshot; the parser interprets '1014 cm-3' as 1e14 cm^-3.",
+    "page_number": 4
+  }
+}

@@ -1,0 +1,99 @@
+{
+  "artifact_sha256": "46b6485c9556f1bb3a182ee5a0805ef338d65c6b800656e6a3f934b2ca433c53",
+  "items": [
+    {
+      "evidence": {
+        "pytest_nodes": [
+          "formal/python/tests/test_bridge_toyg_c6_phase_winding_perturbation_stability.py::test_bridge_toyg_c6_phase_winding_perturbation_stability",
+          "formal/python/tests/test_bridge_toyg_c6_phase_winding_negative_controls.py::test_bridge_toyg_c6_phase_winding_negative_control_quantization_failure",
+          "formal/python/tests/test_bridge_toyg_c6_phase_winding_resolution_scan.py::test_bridge_toyg_c6_phase_winding_resolution_scan"
+        ]
+      },
+      "inputs": {
+        "loop_length": 6.28318530718,
+        "probes": [
+          {
+            "grid_n": 11,
+            "probe_id": "interior_quantized_n1",
+            "winding_target": 1.0
+          },
+          {
+            "grid_n": 11,
+            "probe_id": "edge_near_quantized_n1_plus",
+            "winding_target": 1.0475
+          },
+          {
+            "grid_n": 11,
+            "probe_id": "just_outside_quantized_n1_plus",
+            "winding_target": 1.0625
+          },
+          {
+            "grid_n": 7,
+            "probe_id": "unwrap_guard_fail_high_winding",
+            "winding_target": 3.5
+          }
+        ],
+        "tol_winding": 0.05,
+        "unwrap_margin": 1e-06
+      },
+      "samples": [
+        {
+          "admissible": true,
+          "grid_n": 11,
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "nearest_int": 1,
+          "probe_id": "interior_quantized_n1",
+          "raw_winding": 1.0,
+          "reason_code": "pass_quantized_winding_1",
+          "winding_target": 1.0
+        },
+        {
+          "admissible": true,
+          "grid_n": 11,
+          "integer_distance": 0.0475,
+          "max_abs_delta": 0.598330600843,
+          "nearest_int": 1,
+          "probe_id": "edge_near_quantized_n1_plus",
+          "raw_winding": 1.0475,
+          "reason_code": "pass_quantized_winding_1",
+          "winding_target": 1.0475
+        },
+        {
+          "admissible": false,
+          "grid_n": 11,
+          "integer_distance": 0.0625,
+          "max_abs_delta": 0.606898580807,
+          "nearest_int": 1,
+          "probe_id": "just_outside_quantized_n1_plus",
+          "raw_winding": 1.0625,
+          "reason_code": "fail_not_integer_close",
+          "winding_target": 1.0625
+        },
+        {
+          "admissible": false,
+          "grid_n": 7,
+          "integer_distance": 0.5,
+          "max_abs_delta": 3.14159265359,
+          "nearest_int": -2,
+          "probe_id": "unwrap_guard_fail_high_winding",
+          "raw_winding": -1.5,
+          "reason_code": "fail_unwrap_discontinuity_guard",
+          "winding_target": 3.5
+        }
+      ],
+      "scan_id": "c6_phase_winding_quantization_boundary_scan_v1",
+      "summary": {
+        "fail_reason_counts": {
+          "fail_not_integer_close": 1,
+          "fail_unwrap_discontinuity_guard": 1
+        },
+        "n_fail": 2,
+        "n_pass": 2,
+        "n_samples": 4
+      },
+      "ticket_id": "BRIDGE_TICKET_TOYG_0001"
+    }
+  ],
+  "schema_version": 1
+}

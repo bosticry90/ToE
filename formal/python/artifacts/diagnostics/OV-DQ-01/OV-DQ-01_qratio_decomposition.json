@@ -1,0 +1,675 @@
+{
+  "fingerprint": "5f522669e6ce80ae8cb1297d63a9ab12dd487fbbcff13760dbf3df4c6a18101a",
+  "notes": "Diagnostic-only decomposition of q_ratio = R_max_curved/R_max_linear for OV-04x and OV-03x, including pairwise residual structure and per-window max-pairwise residual contributions. No policy change; no physics claim.",
+  "ov03x": {
+    "curved": {
+      "decomposition": {
+        "dominance_share": 0.25891167430003864,
+        "dominant_window_by_max_pairwise_r": {
+          "idx": 1,
+          "max_pairwise_r": 0.6107718647646012,
+          "share_of_sum_max_pairwise_r": 0.25891167430003864,
+          "tag": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved"
+        },
+        "n_windows": 4,
+        "pairwise_r": [
+          {
+            "i": 0,
+            "j": 1,
+            "r": 0.06762799684516534,
+            "tag_i": "DR01_Ernst2009_Fig2a_kmax_7p79806_curved",
+            "tag_j": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved"
+          },
+          {
+            "i": 0,
+            "j": 2,
+            "r": 0.5825398725847826,
+            "tag_i": "DR01_Ernst2009_Fig2a_kmax_7p79806_curved",
+            "tag_j": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved"
+          },
+          {
+            "i": 0,
+            "j": 3,
+            "r": 0.062069871241492755,
+            "tag_i": "DR01_Ernst2009_Fig2a_kmax_7p79806_curved",
+            "tag_j": "DR05_Ernst2009_Fig2a_kmax_7p55491_curved"
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "r": 0.6107718647646012,
+            "tag_i": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved",
+            "tag_j": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved"
+          },
+          {
+            "i": 1,
+            "j": 3,
+            "r": 0.1255002070301586,
+            "tag_i": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved",
+            "tag_j": "DR05_Ernst2009_Fig2a_kmax_7p55491_curved"
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "r": 0.5549134049379678,
+            "tag_i": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved",
+            "tag_j": "DR05_Ernst2009_Fig2a_kmax_7p55491_curved"
+          }
+        ],
+        "r_max_pair": {
+          "i": 1,
+          "j": 2,
+          "r": 0.6107718647646012,
+          "tag_i": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved",
+          "tag_j": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved"
+        },
+        "sum_window_max_pairwise_r": 2.358997007051953,
+        "top_pairs_by_r": [
+          {
+            "i": 1,
+            "j": 2,
+            "r": 0.6107718647646012,
+            "tag_i": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved",
+            "tag_j": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved"
+          },
+          {
+            "i": 0,
+            "j": 2,
+            "r": 0.5825398725847826,
+            "tag_i": "DR01_Ernst2009_Fig2a_kmax_7p79806_curved",
+            "tag_j": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved"
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "r": 0.5549134049379678,
+            "tag_i": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved",
+            "tag_j": "DR05_Ernst2009_Fig2a_kmax_7p55491_curved"
+          },
+          {
+            "i": 1,
+            "j": 3,
+            "r": 0.1255002070301586,
+            "tag_i": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved",
+            "tag_j": "DR05_Ernst2009_Fig2a_kmax_7p55491_curved"
+          },
+          {
+            "i": 0,
+            "j": 1,
+            "r": 0.06762799684516534,
+            "tag_i": "DR01_Ernst2009_Fig2a_kmax_7p79806_curved",
+            "tag_j": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved"
+          }
+        ],
+        "window_contributions": [
+          {
+            "idx": 0,
+            "max_pairwise_r": 0.5825398725847826,
+            "share_of_sum_max_pairwise_r": 0.24694387947222737,
+            "tag": "DR01_Ernst2009_Fig2a_kmax_7p79806_curved"
+          },
+          {
+            "idx": 1,
+            "max_pairwise_r": 0.6107718647646012,
+            "share_of_sum_max_pairwise_r": 0.25891167430003864,
+            "tag": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved"
+          },
+          {
+            "idx": 2,
+            "max_pairwise_r": 0.6107718647646012,
+            "share_of_sum_max_pairwise_r": 0.25891167430003864,
+            "tag": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved"
+          },
+          {
+            "idx": 3,
+            "max_pairwise_r": 0.5549134049379678,
+            "share_of_sum_max_pairwise_r": 0.2352327719276953,
+            "tag": "DR05_Ernst2009_Fig2a_kmax_7p55491_curved"
+          }
+        ]
+      },
+      "windows": [
+        {
+          "data_fingerprint": "46fa0869d138b29ff073b3c52382bbcc516595ada5e02499e54872453bf65138",
+          "dr_fingerprint": "DR01_Ernst2009_Fig2a_kmax_7p79806_curved|u=0|c0=0.001949857004818731|beta=-1.98688890556482e-17|source_kind=csv|source_ref=Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 7.79806 um^-1; omega=2*pi*f (f in kHz)|fit_method=Fig2a curved omega/k = c0 + beta*k^2 on k<= 7.79806 um^-1; u fixed to 0|data_fingerprint=46fa0869d138b29ff073b3c52382bbcc516595ada5e02499e54872453bf65138|fit_quality_fingerprint=f733a109bd3d63aec52c900ece10b4b07c1b2598214d3ab6f91eae5c7362e5c8",
+          "idx": 0,
+          "metric_fingerprint": "649cba6555f058fbb4927796bad464a7ec5c8c98f3eeee4ba9a3ee16950ebca5",
+          "obs_value": 1.1405827017722014e-06,
+          "tag": "DR01_Ernst2009_Fig2a_kmax_7p79806_curved"
+        },
+        {
+          "data_fingerprint": "567f8ce81c4ca99a35e653881db4601985c1c64e55392866b8c19e3ffca82b10",
+          "dr_fingerprint": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved|u=0|c0=0.00201933396850786|beta=-2.260377536744091e-17|source_kind=csv|source_ref=Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 7.30071 um^-1; omega=2*pi*f (f in kHz)|fit_method=Fig2a curved omega/k = c0 + beta*k^2 on k<= 7.30071 um^-1; u fixed to 0|data_fingerprint=567f8ce81c4ca99a35e653881db4601985c1c64e55392866b8c19e3ffca82b10|fit_quality_fingerprint=c61d3dc84459132fc7ef64ed45b5046319f41d9de49180f61da2a3510045884f",
+          "idx": 1,
+          "metric_fingerprint": "24d6a7e89a23b854d337af0d0ca78607e6d31c7e0de049d191c4c6cac2cb018e",
+          "obs_value": 1.2233129029109105e-06,
+          "tag": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved"
+        },
+        {
+          "data_fingerprint": "9e4a0ccb356f43b3fc73dcc847a1af2e49553016e5297ba82d87b50c9c0c66c9",
+          "dr_fingerprint": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved|u=0|c0=0.001259825120151492|beta=1.695746088993177e-17|source_kind=csv|source_ref=Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 5.49635 um^-1; omega=2*pi*f (f in kHz)|fit_method=Fig2a curved omega/k = c0 + beta*k^2 on k<= 5.49635 um^-1; u fixed to 0|data_fingerprint=9e4a0ccb356f43b3fc73dcc847a1af2e49553016e5297ba82d87b50c9c0c66c9|fit_quality_fingerprint=414cef1436fb4205def68e32d535d41d5c7f68a9cab1a841038331f2ae448848",
+          "idx": 2,
+          "metric_fingerprint": "9158036f70b71bf51b24be1c75a8fb340cce3d90fe360baaae6fd80f763b8332",
+          "obs_value": 4.761478000094161e-07,
+          "tag": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved"
+        },
+        {
+          "data_fingerprint": "f134b5209e24ae507b13c1d9685a713e49b09ffaac095cc10630fe1be1b4cf8b",
+          "dr_fingerprint": "DR05_Ernst2009_Fig2a_kmax_7p55491_curved|u=0|c0=0.00188837397455494|beta=-1.77445787720965e-17|source_kind=csv|source_ref=Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 7.55491 um^-1; omega=2*pi*f (f in kHz)|fit_method=Fig2a curved omega/k = c0 + beta*k^2 on k<= 7.55491 um^-1; u fixed to 0|data_fingerprint=f134b5209e24ae507b13c1d9685a713e49b09ffaac095cc10630fe1be1b4cf8b|fit_quality_fingerprint=db090da7da988d0b4a6e093ae392ce29765ff8354d9fc1d0b1af128ec818e8a2",
+          "idx": 3,
+          "metric_fingerprint": "3d74e5b8f4a875bbe43c66b1f1aa715048c6feec5e248c244a0abd90a4a90ec8",
+          "obs_value": 1.0697868803329269e-06,
+          "tag": "DR05_Ernst2009_Fig2a_kmax_7p55491_curved"
+        }
+      ]
+    },
+    "flags": {
+      "qratio_outlier_window_dominates_curved": false
+    },
+    "linear": {
+      "decomposition": {
+        "dominance_share": 0.26007331437178566,
+        "dominant_window_by_max_pairwise_r": {
+          "idx": 0,
+          "max_pairwise_r": 0.596373024009025,
+          "share_of_sum_max_pairwise_r": 0.26007331437178566,
+          "tag": "DR01_Ernst2009_Fig2a_kmax_7p79806"
+        },
+        "n_windows": 4,
+        "pairwise_r": [
+          {
+            "i": 0,
+            "j": 1,
+            "r": 0.09315707119551579,
+            "tag_i": "DR01_Ernst2009_Fig2a_kmax_7p79806",
+            "tag_j": "DR03_Ernst2009_Fig2a_kmax_7p30071"
+          },
+          {
+            "i": 0,
+            "j": 2,
+            "r": 0.596373024009025,
+            "tag_i": "DR01_Ernst2009_Fig2a_kmax_7p79806",
+            "tag_j": "DR04d_Ernst2009_Fig2a_kmax_5p49635"
+          },
+          {
+            "i": 0,
+            "j": 3,
+            "r": 0.1120490050697072,
+            "tag_i": "DR01_Ernst2009_Fig2a_kmax_7p79806",
+            "tag_j": "DR05_Ernst2009_Fig2a_kmax_7p55491"
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "r": 0.5549097168094066,
+            "tag_i": "DR03_Ernst2009_Fig2a_kmax_7p30071",
+            "tag_j": "DR04d_Ernst2009_Fig2a_kmax_5p49635"
+          },
+          {
+            "i": 1,
+            "j": 3,
+            "r": 0.02083264176641611,
+            "tag_i": "DR03_Ernst2009_Fig2a_kmax_7p30071",
+            "tag_j": "DR05_Ernst2009_Fig2a_kmax_7p55491"
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "r": 0.5454400318311923,
+            "tag_i": "DR04d_Ernst2009_Fig2a_kmax_5p49635",
+            "tag_j": "DR05_Ernst2009_Fig2a_kmax_7p55491"
+          }
+        ],
+        "r_max_pair": {
+          "i": 0,
+          "j": 2,
+          "r": 0.596373024009025,
+          "tag_i": "DR01_Ernst2009_Fig2a_kmax_7p79806",
+          "tag_j": "DR04d_Ernst2009_Fig2a_kmax_5p49635"
+        },
+        "sum_window_max_pairwise_r": 2.293095796658649,
+        "top_pairs_by_r": [
+          {
+            "i": 0,
+            "j": 2,
+            "r": 0.596373024009025,
+            "tag_i": "DR01_Ernst2009_Fig2a_kmax_7p79806",
+            "tag_j": "DR04d_Ernst2009_Fig2a_kmax_5p49635"
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "r": 0.5549097168094066,
+            "tag_i": "DR03_Ernst2009_Fig2a_kmax_7p30071",
+            "tag_j": "DR04d_Ernst2009_Fig2a_kmax_5p49635"
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "r": 0.5454400318311923,
+            "tag_i": "DR04d_Ernst2009_Fig2a_kmax_5p49635",
+            "tag_j": "DR05_Ernst2009_Fig2a_kmax_7p55491"
+          },
+          {
+            "i": 0,
+            "j": 3,
+            "r": 0.1120490050697072,
+            "tag_i": "DR01_Ernst2009_Fig2a_kmax_7p79806",
+            "tag_j": "DR05_Ernst2009_Fig2a_kmax_7p55491"
+          },
+          {
+            "i": 0,
+            "j": 1,
+            "r": 0.09315707119551579,
+            "tag_i": "DR01_Ernst2009_Fig2a_kmax_7p79806",
+            "tag_j": "DR03_Ernst2009_Fig2a_kmax_7p30071"
+          }
+        ],
+        "window_contributions": [
+          {
+            "idx": 0,
+            "max_pairwise_r": 0.596373024009025,
+            "share_of_sum_max_pairwise_r": 0.26007331437178566,
+            "tag": "DR01_Ernst2009_Fig2a_kmax_7p79806"
+          },
+          {
+            "idx": 1,
+            "max_pairwise_r": 0.5549097168094066,
+            "share_of_sum_max_pairwise_r": 0.24199151104719882,
+            "tag": "DR03_Ernst2009_Fig2a_kmax_7p30071"
+          },
+          {
+            "idx": 2,
+            "max_pairwise_r": 0.596373024009025,
+            "share_of_sum_max_pairwise_r": 0.26007331437178566,
+            "tag": "DR04d_Ernst2009_Fig2a_kmax_5p49635"
+          },
+          {
+            "idx": 3,
+            "max_pairwise_r": 0.5454400318311923,
+            "share_of_sum_max_pairwise_r": 0.23786186020922992,
+            "tag": "DR05_Ernst2009_Fig2a_kmax_7p55491"
+          }
+        ]
+      },
+      "windows": [
+        {
+          "data_fingerprint": "46fa0869d138b29ff073b3c52382bbcc516595ada5e02499e54872453bf65138",
+          "dr_fingerprint": "DR01_Ernst2009_Fig2a_kmax_7p79806|u=0|c_s=0.001041918188327281|source_kind=csv|source_ref=Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 7.79806 um^-1; omega=2*pi*f (f in kHz)|fit_method=Fig2a window k<= 7.79806 um^-1; u fixed to 0|data_fingerprint=46fa0869d138b29ff073b3c52382bbcc516595ada5e02499e54872453bf65138",
+          "idx": 0,
+          "metric_fingerprint": "1a6d8764723b2a85ca6e6fca33c3c7b865b02cbbaf6fefd6339b229556274ab7",
+          "obs_value": 3.2567805335016106e-07,
+          "tag": "DR01_Ernst2009_Fig2a_kmax_7p79806"
+        },
+        {
+          "data_fingerprint": "567f8ce81c4ca99a35e653881db4601985c1c64e55392866b8c19e3ffca82b10",
+          "dr_fingerprint": "DR03_Ernst2009_Fig2a_kmax_7p30071|u=0|c_s=0.001094126618583597|source_kind=csv|source_ref=Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 7.30071 um^-1; omega=2*pi*f (f in kHz)|fit_method=Fig2a window k<= 7.30071 um^-1; u fixed to 0|data_fingerprint=567f8ce81c4ca99a35e653881db4601985c1c64e55392866b8c19e3ffca82b10",
+          "idx": 1,
+          "metric_fingerprint": "e8a6df5a06a9f0043468f9519ef3748985aad866a12f23a15fe99b88442ddbbb",
+          "obs_value": 3.591339172479531e-07,
+          "tag": "DR03_Ernst2009_Fig2a_kmax_7p30071"
+        },
+        {
+          "data_fingerprint": "9e4a0ccb356f43b3fc73dcc847a1af2e49553016e5297ba82d87b50c9c0c66c9",
+          "dr_fingerprint": "DR04d_Ernst2009_Fig2a_kmax_5p49635|u=0|c_s=0.001639998788833766|source_kind=csv|source_ref=Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 5.49635 um^-1; omega=2*pi*f (f in kHz)|fit_method=Fig2a window k<= 5.49635 um^-1; u fixed to 0|data_fingerprint=9e4a0ccb356f43b3fc73dcc847a1af2e49553016e5297ba82d87b50c9c0c66c9",
+          "idx": 2,
+          "metric_fingerprint": "9f6ec848d31f2f90f5bed6b8b61867952e87127cfb905c98876849e61c3c8699",
+          "obs_value": 8.068788082128661e-07,
+          "tag": "DR04d_Ernst2009_Fig2a_kmax_5p49635"
+        },
+        {
+          "data_fingerprint": "f134b5209e24ae507b13c1d9685a713e49b09ffaac095cc10630fe1be1b4cf8b",
+          "dr_fingerprint": "DR05_Ernst2009_Fig2a_kmax_7p55491|u=0|c_s=0.00110570461000716|source_kind=csv|source_ref=Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 7.55491 um^-1; omega=2*pi*f (f in kHz)|fit_method=Fig2a window k<= 7.55491 um^-1; u fixed to 0|data_fingerprint=f134b5209e24ae507b13c1d9685a713e49b09ffaac095cc10630fe1be1b4cf8b",
+          "idx": 3,
+          "metric_fingerprint": "a889a892d5d5242a493f7bb06b03ed3e88612fa90be3875a7a629fb6cf2cc326",
+          "obs_value": 3.667748053773259e-07,
+          "tag": "DR05_Ernst2009_Fig2a_kmax_7p55491"
+        }
+      ]
+    },
+    "observable_id": "OV-03x",
+    "q_ratio_recomputed": 1.0241440175459013,
+    "r_max_curved_recomputed": 0.6107718647646012,
+    "r_max_linear_recomputed": 0.596373024009025,
+    "robustness_lock_relpath": "formal/markdown/locks/observables/OV-03x_fit_family_robustness_B1_dataset.md",
+    "robustness_q_ratio_locked": 1.0241440175459013,
+    "robustness_q_threshold_locked": 0.9,
+    "robustness_report_fingerprint": "78f15afb7ee964f0efb8e43b5525fa3dea2fa8fa10f5c9a6b65f46a7e8cf7c7b"
+  },
+  "ov04x": {
+    "curved": {
+      "decomposition": {
+        "dominance_share": 0.283485649530675,
+        "dominant_window_by_max_pairwise_r": {
+          "idx": 0,
+          "max_pairwise_r": 0.7172088910074628,
+          "share_of_sum_max_pairwise_r": 0.283485649530675,
+          "tag": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved"
+        },
+        "n_windows": 4,
+        "pairwise_r": [
+          {
+            "i": 0,
+            "j": 1,
+            "r": 0.4262870457681778,
+            "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved",
+            "tag_j": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23_curved"
+          },
+          {
+            "i": 0,
+            "j": 2,
+            "r": 0.7172088910074628,
+            "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved",
+            "tag_j": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23_curved"
+          },
+          {
+            "i": 0,
+            "j": 3,
+            "r": 0.5884615737412641,
+            "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved",
+            "tag_j": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23_curved"
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "r": 0.5070860664612623,
+            "tag_i": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23_curved",
+            "tag_j": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23_curved"
+          },
+          {
+            "i": 1,
+            "j": 3,
+            "r": 0.2826753810888431,
+            "tag_i": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23_curved",
+            "tag_j": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23_curved"
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "r": 0.31284397531630415,
+            "tag_i": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23_curved",
+            "tag_j": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23_curved"
+          }
+        ],
+        "r_max_pair": {
+          "i": 0,
+          "j": 2,
+          "r": 0.7172088910074628,
+          "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved",
+          "tag_j": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23_curved"
+        },
+        "sum_window_max_pairwise_r": 2.529965422217452,
+        "top_pairs_by_r": [
+          {
+            "i": 0,
+            "j": 2,
+            "r": 0.7172088910074628,
+            "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved",
+            "tag_j": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23_curved"
+          },
+          {
+            "i": 0,
+            "j": 3,
+            "r": 0.5884615737412641,
+            "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved",
+            "tag_j": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23_curved"
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "r": 0.5070860664612623,
+            "tag_i": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23_curved",
+            "tag_j": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23_curved"
+          },
+          {
+            "i": 0,
+            "j": 1,
+            "r": 0.4262870457681778,
+            "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved",
+            "tag_j": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23_curved"
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "r": 0.31284397531630415,
+            "tag_i": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23_curved",
+            "tag_j": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23_curved"
+          }
+        ],
+        "window_contributions": [
+          {
+            "idx": 0,
+            "max_pairwise_r": 0.7172088910074628,
+            "share_of_sum_max_pairwise_r": 0.283485649530675,
+            "tag": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved"
+          },
+          {
+            "idx": 1,
+            "max_pairwise_r": 0.5070860664612623,
+            "share_of_sum_max_pairwise_r": 0.20043201460706683,
+            "tag": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23_curved"
+          },
+          {
+            "idx": 2,
+            "max_pairwise_r": 0.7172088910074628,
+            "share_of_sum_max_pairwise_r": 0.283485649530675,
+            "tag": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23_curved"
+          },
+          {
+            "idx": 3,
+            "max_pairwise_r": 0.5884615737412641,
+            "share_of_sum_max_pairwise_r": 0.23259668633158317,
+            "tag": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23_curved"
+          }
+        ]
+      },
+      "windows": [
+        {
+          "data_fingerprint": "7ef4974de39290dd4b11b5b1341cd628318d772c2898e2ada21084619aff65aa",
+          "dr_fingerprint": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved|u=0|c0=0.0001055415867360566|beta=-1.635632733254177e-17|source_kind=csv|source_ref=Shammass et al. (2012) arXiv:1207.3440v2; Fig. 2 (filled circles series only); C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv; low-k window k<= 3.33842 um^-1; fit through origin; omega=2*pi*f; date 2026-01-23|fit_method=low-k curved omega/k = c0 + beta*k^2; u fixed to 0|data_fingerprint=7ef4974de39290dd4b11b5b1341cd628318d772c2898e2ada21084619aff65aa|fit_quality_fingerprint=b556219d7010f703e9981a53a5d88fb9ccba077109f91636f08c4a93a7fc6535",
+          "idx": 0,
+          "metric_fingerprint": "e863a1c7f60b38454f19bb793045f7f1c2b9005533e15e65a9b34881b7abb87e",
+          "obs_value": 3.34170795922937e-09,
+          "tag": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved"
+        },
+        {
+          "data_fingerprint": "3776b46445dc6fae00f7bbf8186727060135a2c8b78d83405a8f372afd7c2f8a",
+          "dr_fingerprint": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23_curved|u=0|c0=0.0001393401555668269|beta=-5.507634269137029e-17|source_kind=csv|source_ref=Shammass et al. (2012) arXiv:1207.3440v2; Fig. 2 (filled circles series only); C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv; low-k window k<= 2.1 um^-1; fit through origin; omega=2*pi*f; date 2026-01-23|fit_method=low-k curved omega/k = c0 + beta*k^2; u fixed to 0|data_fingerprint=3776b46445dc6fae00f7bbf8186727060135a2c8b78d83405a8f372afd7c2f8a|fit_quality_fingerprint=9c5ae973c8b0b9239298133496d51a40f35cb6653ecc9ef59f187fc09ea03ed1",
+          "idx": 1,
+          "metric_fingerprint": "4c739dc44ca40fe77badff1523b72dcc2a190636d72d5e6c7fcd2af35e0065a2",
+          "obs_value": 5.824703686016255e-09,
+          "tag": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23_curved"
+        },
+        {
+          "data_fingerprint": "21d5bfba8763eb449a37a724a1f51d5aebd198d390126e9ac12284f6b863c693",
+          "dr_fingerprint": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23_curved|u=0|c0=0.0001984681144332602|beta=-2.101044879531753e-16|source_kind=csv|source_ref=Shammass et al. (2012) arXiv:1207.3440v2; Fig. 2 (filled circles series only); C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv; low-k window k<= 1.16752 um^-1; fit through origin; omega=2*pi*f; date 2026-01-23|fit_method=low-k curved omega/k = c0 + beta*k^2; u fixed to 0|data_fingerprint=21d5bfba8763eb449a37a724a1f51d5aebd198d390126e9ac12284f6b863c693|fit_quality_fingerprint=d4da809436db984090517ee9448b68ad80ca346200652e7de04d89cb61aa0683",
+          "idx": 2,
+          "metric_fingerprint": "4a1ac600587fcf7bbde18fb60ec7e59c917343f86e103cab88a1cc598a33e665",
+          "obs_value": 1.1816877734008095e-08,
+          "tag": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23_curved"
+        },
+        {
+          "data_fingerprint": "c7726c8611ae01fbf38aeef1f2e79cb518bc4f02e15ad86188ab552fefbe65ee",
+          "dr_fingerprint": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23_curved|u=0|c0=0.0001645198947227385|beta=-1.053237337619835e-16|source_kind=csv|source_ref=Shammass et al. (2012) arXiv:1207.3440v2; Fig. 2 (filled circles series only); C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv; low-k window k<= 1.8 um^-1; fit through origin; omega=2*pi*f; date 2026-01-23|fit_method=low-k curved omega/k = c0 + beta*k^2; u fixed to 0|data_fingerprint=c7726c8611ae01fbf38aeef1f2e79cb518bc4f02e15ad86188ab552fefbe65ee|fit_quality_fingerprint=4500b5fbec0cf6efbb431b7190286a8cc6e334c64ef61b24e4c727b2bee9297a",
+          "idx": 3,
+          "metric_fingerprint": "5498beeaf647ffee40d0e86a6cdb33a8611fb6f43daf046aa69f735e0a3359c2",
+          "obs_value": 8.120038727874283e-09,
+          "tag": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23_curved"
+        }
+      ]
+    },
+    "flags": {
+      "qratio_outlier_window_dominates_curved": false
+    },
+    "linear": {
+      "decomposition": {
+        "dominance_share": 0.27284159512652256,
+        "dominant_window_by_max_pairwise_r": {
+          "idx": 0,
+          "max_pairwise_r": 0.8898129911523203,
+          "share_of_sum_max_pairwise_r": 0.27284159512652256,
+          "tag": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23"
+        },
+        "n_windows": 4,
+        "pairwise_r": [
+          {
+            "i": 0,
+            "j": 1,
+            "r": 0.5616834647161406,
+            "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23",
+            "tag_j": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23"
+          },
+          {
+            "i": 0,
+            "j": 2,
+            "r": 0.8898129911523203,
+            "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23",
+            "tag_j": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23"
+          },
+          {
+            "i": 0,
+            "j": 3,
+            "r": 0.7330414216658587,
+            "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23",
+            "tag_j": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23"
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "r": 0.7486131597195592,
+            "tag_i": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23",
+            "tag_j": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23"
+          },
+          {
+            "i": 1,
+            "j": 3,
+            "r": 0.39094568229953847,
+            "tag_i": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23",
+            "tag_j": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23"
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "r": 0.5872505407570641,
+            "tag_i": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23",
+            "tag_j": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23"
+          }
+        ],
+        "r_max_pair": {
+          "i": 0,
+          "j": 2,
+          "r": 0.8898129911523203,
+          "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23",
+          "tag_j": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23"
+        },
+        "sum_window_max_pairwise_r": 3.2612805636900584,
+        "top_pairs_by_r": [
+          {
+            "i": 0,
+            "j": 2,
+            "r": 0.8898129911523203,
+            "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23",
+            "tag_j": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23"
+          },
+          {
+            "i": 1,
+            "j": 2,
+            "r": 0.7486131597195592,
+            "tag_i": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23",
+            "tag_j": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23"
+          },
+          {
+            "i": 0,
+            "j": 3,
+            "r": 0.7330414216658587,
+            "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23",
+            "tag_j": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23"
+          },
+          {
+            "i": 2,
+            "j": 3,
+            "r": 0.5872505407570641,
+            "tag_i": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23",
+            "tag_j": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23"
+          },
+          {
+            "i": 0,
+            "j": 1,
+            "r": 0.5616834647161406,
+            "tag_i": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23",
+            "tag_j": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23"
+          }
+        ],
+        "window_contributions": [
+          {
+            "idx": 0,
+            "max_pairwise_r": 0.8898129911523203,
+            "share_of_sum_max_pairwise_r": 0.27284159512652256,
+            "tag": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23"
+          },
+          {
+            "idx": 1,
+            "max_pairwise_r": 0.7486131597195592,
+            "share_of_sum_max_pairwise_r": 0.2295457704726029,
+            "tag": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23"
+          },
+          {
+            "idx": 2,
+            "max_pairwise_r": 0.8898129911523203,
+            "share_of_sum_max_pairwise_r": 0.27284159512652256,
+            "tag": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23"
+          },
+          {
+            "idx": 3,
+            "max_pairwise_r": 0.7330414216658587,
+            "share_of_sum_max_pairwise_r": 0.22477103927435194,
+            "tag": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23"
+          }
+        ]
+      },
+      "windows": [
+        {
+          "data_fingerprint": "7ef4974de39290dd4b11b5b1341cd628318d772c2898e2ada21084619aff65aa",
+          "dr_fingerprint": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23|u=0|c_s=2.977387247876347e-06|source_kind=csv|source_ref=Shammass et al. (2012) arXiv:1207.3440v2; Fig. 2 (filled circles series only); C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv; low-k window k<= 3.33842 um^-1; fit through origin; omega=2*pi*f; date 2026-01-23|fit_method=low-k through-origin omega~=c_s*k on k<= 3.33842 um^-1; u fixed to 0|data_fingerprint=7ef4974de39290dd4b11b5b1341cd628318d772c2898e2ada21084619aff65aa",
+          "idx": 0,
+          "metric_fingerprint": "1bbc07401850c7945044286655f7c86384b3c6125cb9926e0a0b9f3e50d25201",
+          "obs_value": 2.6594504471450065e-12,
+          "tag": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23"
+        },
+        {
+          "data_fingerprint": "3776b46445dc6fae00f7bbf8186727060135a2c8b78d83405a8f372afd7c2f8a",
+          "dr_fingerprint": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23|u=0|c_s=4.49719166105103e-06|source_kind=csv|source_ref=Shammass et al. (2012) arXiv:1207.3440v2; Fig. 2 (filled circles series only); C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv; low-k window k<= 2.1 um^-1; fit through origin; omega=2*pi*f; date 2026-01-23|fit_method=low-k through-origin omega~=c_s*k on k<= 2.1 um^-1; u fixed to 0|data_fingerprint=3776b46445dc6fae00f7bbf8186727060135a2c8b78d83405a8f372afd7c2f8a",
+          "idx": 1,
+          "metric_fingerprint": "14440514554997a31016063874306e5df3fb30bada108372c895736972eb140f",
+          "obs_value": 6.0674198508680775e-12,
+          "tag": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23"
+        },
+        {
+          "data_fingerprint": "21d5bfba8763eb449a37a724a1f51d5aebd198d390126e9ac12284f6b863c693",
+          "dr_fingerprint": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23|u=0|c_s=8.969539093205069e-06|source_kind=csv|source_ref=Shammass et al. (2012) arXiv:1207.3440v2; Fig. 2 (filled circles series only); C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv; low-k window k<= 1.16752 um^-1; fit through origin; omega=2*pi*f; date 2026-01-23|fit_method=low-k through-origin omega~=c_s*k on k<= 1.16752 um^-1; u fixed to 0|data_fingerprint=21d5bfba8763eb449a37a724a1f51d5aebd198d390126e9ac12284f6b863c693",
+          "idx": 2,
+          "metric_fingerprint": "ab9ec11127ad081512c7be0d0e708d0e6140541c77b6bb1fad621c8016ceb36f",
+          "obs_value": 2.4135789463360202e-11,
+          "tag": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23"
+        },
+        {
+          "data_fingerprint": "c7726c8611ae01fbf38aeef1f2e79cb518bc4f02e15ad86188ab552fefbe65ee",
+          "dr_fingerprint": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23|u=0|c_s=5.762532443698481e-06|source_kind=csv|source_ref=Shammass et al. (2012) arXiv:1207.3440v2; Fig. 2 (filled circles series only); C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv; low-k window k<= 1.8 um^-1; fit through origin; omega=2*pi*f; date 2026-01-23|fit_method=low-k through-origin omega~=c_s*k on k<= 1.8 um^-1; u fixed to 0|data_fingerprint=c7726c8611ae01fbf38aeef1f2e79cb518bc4f02e15ad86188ab552fefbe65ee",
+          "idx": 3,
+          "metric_fingerprint": "d241ba93a54ba1ba351c9cb34ecd9743e8315786473fd7e4919d85205867276b",
+          "obs_value": 9.962034049403275e-12,
+          "tag": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23"
+        }
+      ]
+    },
+    "observable_id": "OV-04x",
+    "q_ratio_recomputed": 0.8060220497327952,
+    "r_max_curved_recomputed": 0.7172088910074628,
+    "r_max_linear_recomputed": 0.8898129911523203,
+    "robustness_lock_relpath": "formal/markdown/locks/observables/OV-04x_fit_family_robustness_DS02_lowk.md",
+    "robustness_q_ratio_locked": 0.8060220497327952,
+    "robustness_q_threshold_locked": 0.9,
+    "robustness_report_fingerprint": "f562944bc70ff2f892d571cb70627aa2e749dc6ef18dd031358eb17e54930915"
+  },
+  "schema": "OV-DQ-01_qratio_decomposition/v1"
+}

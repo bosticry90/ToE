@@ -1,0 +1,210 @@
+{
+  "b1_c0_scale_m_per_s": 0.0019498570048187306,
+  "best_candidate": {
+    "assumptions": {
+      "f_scale_to_hz": 1.0,
+      "k_scale_to_m_inv": 1000000.0,
+      "omega_extra_scale": 6.283185307179586
+    },
+    "label": "k:k_um_inv_to_m_inv; f:omega_over_2pi_column_as_Hz; omega:double_2pi_probe",
+    "log10_distance_to_b1_c0_median": 1.7371140560053273,
+    "y_omega_over_k_m_per_s": {
+      "iqr": 0.00010922039468385519,
+      "max": 0.007172467398651165,
+      "median": 3.571812945723835e-05,
+      "min": 1.0832886269340723e-06,
+      "n": 21.0
+    }
+  },
+  "candidates": [
+    {
+      "assumptions": {
+        "f_scale_to_hz": 1.0,
+        "k_scale_to_m_inv": 1000000.0,
+        "omega_extra_scale": 1.0
+      },
+      "label": "k:k_um_inv_to_m_inv; f:omega_over_2pi_column_as_Hz; omega:omega_equals_2pi_f",
+      "log10_distance_to_b1_c0_median": 2.5352939243634425,
+      "y_omega_over_k_m_per_s": {
+        "iqr": 1.738296570038332e-05,
+        "max": 0.0011415336406608008,
+        "median": 5.68471686111572e-06,
+        "min": 1.724107397717897e-07,
+        "n": 21.0
+      }
+    },
+    {
+      "assumptions": {
+        "f_scale_to_hz": 1.0,
+        "k_scale_to_m_inv": 1000000.0,
+        "omega_extra_scale": 6.283185307179586
+      },
+      "label": "k:k_um_inv_to_m_inv; f:omega_over_2pi_column_as_Hz; omega:double_2pi_probe",
+      "log10_distance_to_b1_c0_median": 1.7371140560053273,
+      "y_omega_over_k_m_per_s": {
+        "iqr": 0.00010922039468385519,
+        "max": 0.007172467398651165,
+        "median": 3.571812945723835e-05,
+        "min": 1.0832886269340723e-06,
+        "n": 21.0
+      }
+    },
+    {
+      "assumptions": {
+        "f_scale_to_hz": 1000.0,
+        "k_scale_to_m_inv": 1000000.0,
+        "omega_extra_scale": 1.0
+      },
+      "label": "k:k_um_inv_to_m_inv; f:omega_over_2pi_column_as_kHz; omega:omega_equals_2pi_f",
+      "log10_distance_to_b1_c0_median": 0.46470607563655764,
+      "y_omega_over_k_m_per_s": {
+        "iqr": 0.01738296570038332,
+        "max": 1.1415336406608008,
+        "median": 0.005684716861115721,
+        "min": 0.00017241073977178968,
+        "n": 21.0
+      }
+    },
+    {
+      "assumptions": {
+        "f_scale_to_hz": 1000.0,
+        "k_scale_to_m_inv": 1000000.0,
+        "omega_extra_scale": 6.283185307179586
+      },
+      "label": "k:k_um_inv_to_m_inv; f:omega_over_2pi_column_as_kHz; omega:double_2pi_probe",
+      "log10_distance_to_b1_c0_median": 1.2628859439946727,
+      "y_omega_over_k_m_per_s": {
+        "iqr": 0.10922039468385518,
+        "max": 7.172467398651166,
+        "median": 0.03571812945723835,
+        "min": 0.001083288626934072,
+        "n": 21.0
+      }
+    },
+    {
+      "assumptions": {
+        "f_scale_to_hz": 1.0,
+        "k_scale_to_m_inv": 1.0,
+        "omega_extra_scale": 1.0
+      },
+      "label": "k:k_already_m_inv; f:omega_over_2pi_column_as_Hz; omega:omega_equals_2pi_f",
+      "log10_distance_to_b1_c0_median": 3.4647060756365575,
+      "y_omega_over_k_m_per_s": {
+        "iqr": 17.38296570038332,
+        "max": 1141.5336406608008,
+        "median": 5.68471686111572,
+        "min": 0.17241073977178972,
+        "n": 21.0
+      }
+    },
+    {
+      "assumptions": {
+        "f_scale_to_hz": 1.0,
+        "k_scale_to_m_inv": 1.0,
+        "omega_extra_scale": 6.283185307179586
+      },
+      "label": "k:k_already_m_inv; f:omega_over_2pi_column_as_Hz; omega:double_2pi_probe",
+      "log10_distance_to_b1_c0_median": 4.2628859439946725,
+      "y_omega_over_k_m_per_s": {
+        "iqr": 109.22039468385519,
+        "max": 7172.467398651165,
+        "median": 35.718129457238355,
+        "min": 1.0832886269340722,
+        "n": 21.0
+      }
+    },
+    {
+      "assumptions": {
+        "f_scale_to_hz": 1000.0,
+        "k_scale_to_m_inv": 1.0,
+        "omega_extra_scale": 1.0
+      },
+      "label": "k:k_already_m_inv; f:omega_over_2pi_column_as_kHz; omega:omega_equals_2pi_f",
+      "log10_distance_to_b1_c0_median": 6.464706075636558,
+      "y_omega_over_k_m_per_s": {
+        "iqr": 17382.96570038332,
+        "max": 1141533.6406608007,
+        "median": 5684.71686111572,
+        "min": 172.4107397717897,
+        "n": 21.0
+      }
+    },
+    {
+      "assumptions": {
+        "f_scale_to_hz": 1000.0,
+        "k_scale_to_m_inv": 1.0,
+        "omega_extra_scale": 6.283185307179586
+      },
+      "label": "k:k_already_m_inv; f:omega_over_2pi_column_as_kHz; omega:double_2pi_probe",
+      "log10_distance_to_b1_c0_median": 7.2628859439946725,
+      "y_omega_over_k_m_per_s": {
+        "iqr": 109220.3946838552,
+        "max": 7172467.398651166,
+        "median": 35718.129457238356,
+        "min": 1083.2886269340722,
+        "n": 21.0
+      }
+    }
+  ],
+  "columns": [
+    "source",
+    "figure",
+    "k_um_inv",
+    "omega_over_2pi_kHz",
+    "sigma_k_um_inv",
+    "sigma_omega_over_2pi_kHz",
+    "notes"
+  ],
+  "dr01_kmax_um_inv": 3.33842,
+  "ds02_csv_relpath": "formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv",
+  "fingerprint": "296cb88a938fdaa80aea79e6871afd99217ef208dec7768923190eec3b355d68",
+  "n_rows": 25,
+  "notes": "Diagnostic-only invariant check: evaluates candidate unit assumptions for DS-02 and compares implied omega/k scale to the B1 curved-fit c0 scale already present in frozen artifacts. The DS-02 omega_over_2pi column is interpreted as Hz per provenance; a kHz hypothesis is evaluated for auditability only. No policy changes; no physics claim.",
+  "sample_rows": [
+    {
+      "figure": "Fig. 2",
+      "k_um_inv": 0.00635103926097,
+      "notes": "digitized from PNG; filled circles only; error bars not digitized",
+      "omega_over_2pi_kHz": 1.15386139595,
+      "source": "Shammass2012_arXiv1207.3440v2_Fig2_filled_circles"
+    },
+    {
+      "figure": "Fig. 2",
+      "k_um_inv": 0.0693418013857,
+      "notes": "digitized from PNG; filled circles only; error bars not digitized",
+      "omega_over_2pi_kHz": 0.171793728637,
+      "source": "Shammass2012_arXiv1207.3440v2_Fig2_filled_circles"
+    },
+    {
+      "figure": "Fig. 2",
+      "k_um_inv": 0.115263489397,
+      "notes": "digitized from PNG; filled circles only; error bars not digitized",
+      "omega_over_2pi_kHz": 1.81341084239,
+      "source": "Shammass2012_arXiv1207.3440v2_Fig2_filled_circles"
+    },
+    {
+      "figure": "Fig. 2",
+      "k_um_inv": 0.277193995381,
+      "notes": "digitized from PNG; filled circles only; error bars not digitized",
+      "omega_over_2pi_kHz": 1.04473175806,
+      "source": "Shammass2012_arXiv1207.3440v2_Fig2_filled_circles"
+    },
+    {
+      "figure": "Fig. 2",
+      "k_um_inv": 0.351695360067,
+      "notes": "digitized from PNG; filled circles only; error bars not digitized",
+      "omega_over_2pi_kHz": 1.44604570641,
+      "source": "Shammass2012_arXiv1207.3440v2_Fig2_filled_circles"
+    }
+  ],
+  "schema": "OV-DQ-01_DS02_units_invariant/v1",
+  "suspicion_flags": [
+    "k_units_mismatch_suspected",
+    "double_2pi_suspected"
+  ],
+  "verdict": {
+    "passes": true,
+    "reason_codes": [],
+    "rule": "hz_interpretation_best_candidate_within_factor_1000_of_b1_c0_scale"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "BRFN01_prediction_declarations/v1",
+  "version": 1,
+  "candidates": {
+    "fn01_make_P_cubic_artifact": {
+      "prediction": {
+        "kind": "fn01_metric_residual_fields_required",
+        "required_fields": [
+          "g_tt_02",
+          "g_tt_03",
+          "R_metric",
+          "Score"
+        ]
+      }
+    },
+    "fn01_make_P_cubic_structural_fail_artifact": {
+      "prediction": {
+        "kind": "fn01_metric_residual_fields_required",
+        "required_fields": [
+          "g_tt_02",
+          "g_tt_03",
+          "R_metric",
+          "Score",
+          "__impossible_field__"
+        ]
+      }
+    }
+  }
+}

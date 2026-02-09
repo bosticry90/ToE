@@ -1,0 +1,58 @@
+{
+  "gates": {
+    "CAUS01": {
+      "enabled": false,
+      "lean_relpath": "formal/toe_formal/ToeFormal/Gates/CAUS01.lean",
+      "lean_sha256": "196f7126dda7efd84739e9ad406b804088dd6e3d8a2edb9e836a1e3437f5d76b",
+      "tracked": {
+        "formal/toe_formal/ToeFormal/Constraints/CAUS01_CausalityCore.lean": "1b6889ab40bb8445d8d5f87cd14af423002f23dca0138f15c7bd44424b61dc79",
+        "formal/toe_formal/ToeFormal/Constraints/CAUS01_CausalityGate.lean": "ae10cd1228b9787db1e531fc4ce0c0f6811cbc6fdbe00b4bdf1fed2f9d74afe3"
+      }
+    },
+    "CT01": {
+      "enabled": false,
+      "lean_relpath": "formal/toe_formal/ToeFormal/Gates/CT01.lean",
+      "lean_sha256": "59d57924b5516614bdfcaa26cc49f408c758c8f541527a94e71998273af5080b",
+      "tracked": {
+        "formal/toe_formal/ToeFormal/Constraints/CT01_Abstract.lean": "7df75666c4ca31bf7152567235d3bac6b12801a8054b81a38850703e0c9a4e27",
+        "formal/toe_formal/ToeFormal/Constraints/CT01_CPNLSE2D_Instance.lean": "d9f2f1dd6f0eacf018500ddcdd5e8826d3fddecb6de71a1e6daa18e8a8216416",
+        "formal/toe_formal/ToeFormal/Constraints/CT01_ImportCheck.lean": "2e9f363812a61e10d6880c85b082869f7d8d90803277aef59c229d4ceae97bae",
+        "formal/toe_formal/ToeFormal/Constraints/CT01_ImportCheck_aristotle.lean": "42bdf4c6d8955578315434ff79bb7209d5d9f63e9bf85729440843177fc77b03",
+        "formal/toe_formal/ToeFormal/Constraints/CT01_LinearizationAt0.lean": "3ed3f21d1dc0d59cc90e8a47893bd77b83bb53d8daf37d64c2fe76bb9825bd41",
+        "formal/toe_formal/ToeFormal/Constraints/CT01_LinearizationInterface.lean": "4818ec0cad5d2924906d9e73497f4f482eb22d7c2eb2ecf59055a1765b40e1cd",
+        "formal/toe_formal/ToeFormal/Constraints/CT01_LinearizationInterfaceProbe.lean": "a9102f490f1e861e0ad3133af730498486288ab9d47fead4b3fc6781308eea3f",
+        "formal/toe_formal/ToeFormal/Constraints/CT01_Target.lean": "2367fa3793466d60465702eb8d1773d8653b31d3120522f6f0e6d4a9307bbff8",
+        "formal/toe_formal/ToeFormal/Constraints/CT01_Target_aristotle.lean": "e60a3a26998a3ef5e43c724b5d2a20484ac6338b0e42bfcad237727fc491785c"
+      }
+    },
+    "SYM01": {
+      "enabled": false,
+      "lean_relpath": "formal/toe_formal/ToeFormal/Gates/SYM01.lean",
+      "lean_sha256": "9469766ada9015372e9a54c566983a45bceea98aa2d7c23be701c853c6d5ceac",
+      "tracked": {
+        "formal/toe_formal/ToeFormal/Constraints/SYM01_PhaseInvariant.lean": "de63ef5e76ef1798057ef1fbe12df6cad75c60efefda56aa3054982af4dd39cd"
+      }
+    }
+  },
+  "origin": {
+    "path": "formal/toe_formal/ToeFormal/Constraints/AD00_AdmissibilityManifest.lean",
+    "sha256": "edf580e4e8bb15b1a9b375afc8603ad03dcc852488969d61ed3add2a693e3e65",
+    "type": "lean_literal"
+  },
+  "root": "formal/toe_formal/ToeFormal/Constraints",
+  "tracked": {
+    "formal/toe_formal/ToeFormal/Constraints/CAUS01_CausalityCore.lean": "1b6889ab40bb8445d8d5f87cd14af423002f23dca0138f15c7bd44424b61dc79",
+    "formal/toe_formal/ToeFormal/Constraints/CAUS01_CausalityGate.lean": "ae10cd1228b9787db1e531fc4ce0c0f6811cbc6fdbe00b4bdf1fed2f9d74afe3",
+    "formal/toe_formal/ToeFormal/Constraints/CT01_Abstract.lean": "7df75666c4ca31bf7152567235d3bac6b12801a8054b81a38850703e0c9a4e27",
+    "formal/toe_formal/ToeFormal/Constraints/CT01_CPNLSE2D_Instance.lean": "d9f2f1dd6f0eacf018500ddcdd5e8826d3fddecb6de71a1e6daa18e8a8216416",
+    "formal/toe_formal/ToeFormal/Constraints/CT01_ImportCheck.lean": "2e9f363812a61e10d6880c85b082869f7d8d90803277aef59c229d4ceae97bae",
+    "formal/toe_formal/ToeFormal/Constraints/CT01_ImportCheck_aristotle.lean": "42bdf4c6d8955578315434ff79bb7209d5d9f63e9bf85729440843177fc77b03",
+    "formal/toe_formal/ToeFormal/Constraints/CT01_LinearizationAt0.lean": "3ed3f21d1dc0d59cc90e8a47893bd77b83bb53d8daf37d64c2fe76bb9825bd41",
+    "formal/toe_formal/ToeFormal/Constraints/CT01_LinearizationInterface.lean": "4818ec0cad5d2924906d9e73497f4f482eb22d7c2eb2ecf59055a1765b40e1cd",
+    "formal/toe_formal/ToeFormal/Constraints/CT01_LinearizationInterfaceProbe.lean": "a9102f490f1e861e0ad3133af730498486288ab9d47fead4b3fc6781308eea3f",
+    "formal/toe_formal/ToeFormal/Constraints/CT01_Target.lean": "2367fa3793466d60465702eb8d1773d8653b31d3120522f6f0e6d4a9307bbff8",
+    "formal/toe_formal/ToeFormal/Constraints/CT01_Target_aristotle.lean": "e60a3a26998a3ef5e43c724b5d2a20484ac6338b0e42bfcad237727fc491785c",
+    "formal/toe_formal/ToeFormal/Constraints/SYM01_PhaseInvariant.lean": "de63ef5e76ef1798057ef1fbe12df6cad75c60efefda56aa3054982af4dd39cd"
+  },
+  "version": 1
+}

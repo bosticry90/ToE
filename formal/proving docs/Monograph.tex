@@ -1,0 +1,77 @@
+\documentclass[11pt]{article}
+
+%========================
+% Packages
+%========================
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{setspace}
+\onehalfspacing
+
+\usepackage{microtype}
+\usepackage{amsmath,amssymb,mathtools,bm}
+\usepackage{physics}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{color}
+\usepackage{titlesec}
+\usepackage{tocloft}
+
+\usepackage[hidelinks]{hyperref}
+% Ensure literal Unicode Greek letters are mapped correctly
+\DeclareUnicodeCharacter{03C6}{\ensuremath{\phi}} % φ
+\DeclareUnicodeCharacter{03C7}{\ensuremath{\chi}} % χ
+
+
+%========================
+% Title info
+%========================
+\title{Classical Coherence Field Theory (CCFT):\\
+A Unified Classical Multiscale Nonlinear Field Framework Derived from LSDA Microphysics}
+\author{Independent Researcher}
+\date{}
+
+%========================
+% Document
+%========================
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+% Front matter: abstract, disclaimer, summary, roadmap
+\include{Monograph_frontmatter}
+
+% Part I — Conceptual Foundations
+\include{Monograph_part1}
+
+% Part II — Mathematical Structure and Derivations
+\include{Monograph_part2}
+
+% Part III — Functional Principles
+\include{Monograph_part3}
+
+% Part IV — Numerical Implementation
+\include{Monograph_part4}
+
+% Part V — Validation and Verification
+\include{Monograph_part5}
+
+% Part VI — Physical Interpretation and Applications
+\include{Monograph_part6}
+
+% Part VII — Pathways Toward Unification
+\include{Monograph_part7}
+
+% Appendices
+\appendix
+\include{Monograph_appendix}
+
+\end{document}

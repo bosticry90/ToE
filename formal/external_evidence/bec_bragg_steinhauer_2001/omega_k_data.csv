@@ -1,0 +1,14 @@
+source,figure,k_um_inv,omega_over_2pi_kHz,sigma_k_um_inv,sigma_omega_over_2pi_kHz,notes,
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,0.418478436359624,0.169818287468785,0.05,0.1,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,0.703804544020029,0.216519034027698,0.05,0.1,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,1.06521790397193,0.291746712053885,0.05,0.1,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,1.40760836241824,0.410116411329795,0.05,0.1,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,1.75000027210818,0.606010954616589,0.05,0.1,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,2.09239218179812,0.760527233115469,0.05,0.1,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,2.45380409050639,0.816457374209716,0.05,0.1,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,2.77717454993436,1.0019226165982,0.05,0.1,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,3.13858790988627,1.14014515108428,0.05,0.1,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,4.18478363797442,1.68620283704256,0.05,0.1,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,6.80978295770397,3.62496066100449,0.05,0.11,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,10.3478264024443,7.31639679358717,0.05,0.22,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1
+Steinhauer_et_al_2001_cond-mat_0111438,Fig3a,14.5896751168264,13.3679827061856,0.05,0.4,redigitized_from_arxiv_fig3a; sigma_model=max(0.03*f,0.10) kHz; k_sigma=0.05 um^-1

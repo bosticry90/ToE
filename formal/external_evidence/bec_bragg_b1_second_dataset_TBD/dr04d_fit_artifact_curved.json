@@ -1,0 +1,46 @@
+{
+  "beta": 1.6957460889931774e-17,
+  "br01_metric_1d": {
+    "c_s2": 1.5871593333647203e-06,
+    "g_tt": -1.5871593333647203e-06,
+    "g_tx": -0.0,
+    "g_xx": 1.0
+  },
+  "c0": 0.0012598251201514916,
+  "data_fingerprint": "9e4a0ccb356f43b3fc73dcc847a1af2e49553016e5297ba82d87b50c9c0c66c9",
+  "fit_method_tag": "Fig2a curved omega/k = c0 + beta*k^2 on k<= 5.49635 um^-1; u fixed to 0",
+  "fit_quality": {
+    "beta_stderr_s_per_m2": 2.2503472939531186e-18,
+    "c0_stderr_m_per_s": 4.783315093238544e-05,
+    "n_points": 5,
+    "r2_y_space": 0.9498189733474756,
+    "rmse_omega_over_k_m_per_s": 2.6341626358363123e-05
+  },
+  "fit_quality_fingerprint": "414cef1436fb4205def68e32d535d41d5c7f68a9cab1a841038331f2ae448848",
+  "sample_kw": [
+    [
+      3338420.0,
+      4803.042777996677
+    ],
+    [
+      3885800.0,
+      6039.605062376155
+    ],
+    [
+      4433080.0,
+      6970.942770903463
+    ],
+    [
+      4965680.0,
+      8179.890455857889
+    ],
+    [
+      5496350.0,
+      9866.360224157961
+    ]
+  ],
+  "source_kind": "csv",
+  "source_ref": "Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 5.49635 um^-1; omega=2*pi*f (f in kHz)",
+  "tag": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved",
+  "u": 0.0
+}

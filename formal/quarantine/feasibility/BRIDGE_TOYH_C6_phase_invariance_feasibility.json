@@ -1,0 +1,22 @@
+{
+  "bridge_id": "BRIDGE_TICKET_TOYH_0001",
+  "canonical_surface": {
+    "path": "formal/python/crft/cp_nlse_2d.py",
+    "sha256": "3cf60dceb1b6d064138dab120486c9e6371b2d5db76f21210b219917ea9d548b"
+  },
+  "checks": {
+    "energy_rel_diff": 0.0,
+    "invariant_fields": [
+      "norm_2d",
+      "energy_2d",
+      "rhs_equivariance"
+    ],
+    "norm_rel_diff": 0.0,
+    "phase_theta": 1.0471975511965976,
+    "rhs_equiv_rel_err": 6.98865772727467e-15,
+    "tolerance": 1e-10
+  },
+  "found": true,
+  "prerequisite": "",
+  "schema_version": 1
+}

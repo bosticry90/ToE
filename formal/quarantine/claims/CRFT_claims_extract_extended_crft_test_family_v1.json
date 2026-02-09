@@ -1,0 +1,735 @@
+{
+  "candidate_equations": [
+    "CLM-0025",
+    "CLM-0026",
+    "CLM-0027",
+    "CLM-0029",
+    "CLM-0030",
+    "CLM-0031",
+    "CLM-0032",
+    "CLM-0039",
+    "CLM-0040",
+    "CLM-0042",
+    "CLM-0043",
+    "CLM-0051",
+    "CLM-0053",
+    "CLM-0054",
+    "CLM-0055",
+    "CLM-0056",
+    "CLM-0068",
+    "CLM-0069",
+    "CLM-0070",
+    "CLM-0071",
+    "CLM-0072",
+    "CLM-0073",
+    "CLM-0081",
+    "CLM-0082",
+    "CLM-0083",
+    "CLM-0092",
+    "CLM-0093",
+    "CLM-0096",
+    "CLM-0097",
+    "CLM-0098"
+  ],
+  "claims": [
+    {
+      "id": "CLM-0001",
+      "kind": "note",
+      "section": "(preamble)",
+      "text": "The following documents are authoritative:"
+    },
+    {
+      "id": "CLM-0002",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "equation_inventory_finalv7.md"
+    },
+    {
+      "id": "CLM-0003",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "state_of_the_theoryv7.md"
+    },
+    {
+      "id": "CLM-0004",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "crft_reconstruction_v2.md"
+    },
+    {
+      "id": "CLM-0005",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "CRFT_Test_Family_v1.md (C1–C4)"
+    },
+    {
+      "id": "CLM-0006",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "ν_eff mapping from LSDA long-run ν-lock tests"
+    },
+    {
+      "id": "CLM-0007",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "All LSDA T1–T10 microphysics"
+    },
+    {
+      "id": "CLM-0008",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "C1 — linear dispersion (PASS)"
+    },
+    {
+      "id": "CLM-0009",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "C2 — invariant preservation (PASS)"
+    },
+    {
+      "id": "CLM-0010",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "C3 — soliton propagation stability (PASS)"
+    },
+    {
+      "id": "CLM-0011",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "C4 — coherence functional invariance (PASS)"
+    },
+    {
+      "id": "CLM-0012",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "C5 — multi-field hydrodynamic consistency"
+    },
+    {
+      "id": "CLM-0013",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "C6 — 2D CP–NLSE invariants and dispersion"
+    },
+    {
+      "id": "CLM-0014",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "C7 — metric diagnostics from CRFT data"
+    },
+    {
+      "id": "CLM-0015",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "C8 — turbulence taxonomy diagnostics"
+    },
+    {
+      "id": "CLM-0016",
+      "kind": "definition",
+      "section": "(preamble)",
+      "text": "C9 — φ–χ coupled-field stability"
+    },
+    {
+      "id": "CLM-0017",
+      "kind": "note",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "Purpose:"
+    },
+    {
+      "id": "CLM-0018",
+      "kind": "note",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "Verify that the CRFT first-order CP–NLSE branch reproduces the"
+    },
+    {
+      "id": "CLM-0019",
+      "kind": "note",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "Fields:"
+    },
+    {
+      "id": "CLM-0020",
+      "kind": "definition",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "φ(x,t) — CP–NLSE field already validated in C1–C4"
+    },
+    {
+      "id": "CLM-0021",
+      "kind": "definition",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "ρ(x,t)  = |φ|²"
+    },
+    {
+      "id": "CLM-0022",
+      "kind": "definition",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "θ(x,t)  = unwrapped arg(φ)"
+    },
+    {
+      "id": "CLM-0023",
+      "kind": "definition",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "u(x,t)  = ∂x θ"
+    },
+    {
+      "id": "CLM-0024",
+      "kind": "note",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "CRFT continuum equations (authoritative from state_of_the_theoryv7):"
+    },
+    {
+      "id": "CLM-0025",
+      "kind": "equation",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "ρ_t = −∂x(ρ u)"
+    },
+    {
+      "id": "CLM-0026",
+      "kind": "equation",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "θ_t = −u θ_x − g_eff ρ"
+    },
+    {
+      "id": "CLM-0027",
+      "kind": "equation",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "u_t = −∂x(½u²) − ∂x(g_eff ρ)"
+    },
+    {
+      "id": "CLM-0028",
+      "kind": "note",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "with:"
+    },
+    {
+      "id": "CLM-0029",
+      "kind": "equation",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "rho0 = 1.0"
+    },
+    {
+      "id": "CLM-0030",
+      "kind": "equation",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "g_eff = 9.8696"
+    },
+    {
+      "id": "CLM-0031",
+      "kind": "equation",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "lam = 0"
+    },
+    {
+      "id": "CLM-0032",
+      "kind": "equation",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "beta = 0"
+    },
+    {
+      "id": "CLM-0033",
+      "kind": "parameter",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "ν_eff ≈ 0.46 ν_code"
+    },
+    {
+      "id": "CLM-0034",
+      "kind": "definition",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "Use 1D CRFT grid identical to C1–C4."
+    },
+    {
+      "id": "CLM-0035",
+      "kind": "definition",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "Initialize φ = √rho0 [1 + ε cos(kx)] with ε ≪ 1."
+    },
+    {
+      "id": "CLM-0036",
+      "kind": "definition",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "Integrate using validated CP–NLSE RHS and RK4 solver."
+    },
+    {
+      "id": "CLM-0037",
+      "kind": "note",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "Diagnostics:"
+    },
+    {
+      "id": "CLM-0038",
+      "kind": "definition",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "Compute residuals R_ρ and R_u:"
+    },
+    {
+      "id": "CLM-0039",
+      "kind": "equation",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "R_ρ = ρ_t + ∂x(ρ u)"
+    },
+    {
+      "id": "CLM-0040",
+      "kind": "equation",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "R_u = u_t + ∂x(½u²) + ∂x(g_eff ρ)"
+    },
+    {
+      "id": "CLM-0041",
+      "kind": "definition",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "Define normalized errors:"
+    },
+    {
+      "id": "CLM-0042",
+      "kind": "equation",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "E_ρ = max_x |R_ρ| / max_x |ρ_t|"
+    },
+    {
+      "id": "CLM-0043",
+      "kind": "equation",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "E_u = max_x |R_u| / max_x |u_t|"
+    },
+    {
+      "id": "CLM-0044",
+      "kind": "note",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "Pass criteria (spec):"
+    },
+    {
+      "id": "CLM-0045",
+      "kind": "definition",
+      "section": "C5 — Multi-Field Hydrodynamic Reconstruction (1D)",
+      "text": "E_ρ, E_u ≪ 1 (target 1e–2 or better depending on resolution)"
+    },
+    {
+      "id": "CLM-0046",
+      "kind": "note",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "Purpose:"
+    },
+    {
+      "id": "CLM-0047",
+      "kind": "note",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "Extend CRFT to 2D and verify:"
+    },
+    {
+      "id": "CLM-0048",
+      "kind": "definition",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "2D norm preservation"
+    },
+    {
+      "id": "CLM-0049",
+      "kind": "definition",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "2D dispersion relation consistent with the discrete 2D Laplacian"
+    },
+    {
+      "id": "CLM-0050",
+      "kind": "note",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "2D CP–NLSE prototype (consistent with equation_inventory_finalv7):"
+    },
+    {
+      "id": "CLM-0051",
+      "kind": "equation",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "φ_t = −i [ ½ ∇²φ − g_eff (|φ|² − rho0) φ ]"
+    },
+    {
+      "id": "CLM-0052",
+      "kind": "note",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "with:"
+    },
+    {
+      "id": "CLM-0053",
+      "kind": "equation",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "∇² = ∂xx + ∂yy"
+    },
+    {
+      "id": "CLM-0054",
+      "kind": "equation",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "rho0 = 1.0"
+    },
+    {
+      "id": "CLM-0055",
+      "kind": "equation",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "g_eff = 9.8696"
+    },
+    {
+      "id": "CLM-0056",
+      "kind": "equation",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "N_2D(t) = ∫∫ |φ|² dx dy"
+    },
+    {
+      "id": "CLM-0057",
+      "kind": "definition",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "Periodic 2D box"
+    },
+    {
+      "id": "CLM-0058",
+      "kind": "definition",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "Plane wave or localized Gaussian initial condition"
+    },
+    {
+      "id": "CLM-0059",
+      "kind": "definition",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "Track N_2D(t) drift"
+    },
+    {
+      "id": "CLM-0060",
+      "kind": "definition",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "Extract ω_num from time-series at a fixed grid point"
+    },
+    {
+      "id": "CLM-0061",
+      "kind": "definition",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "Compare with ω_th implied by ∇² discretization"
+    },
+    {
+      "id": "CLM-0062",
+      "kind": "note",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "Pass criteria (spec):"
+    },
+    {
+      "id": "CLM-0063",
+      "kind": "definition",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "drift_N ≪ 1 (target ≤ 1e−3)"
+    },
+    {
+      "id": "CLM-0064",
+      "kind": "definition",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "text": "|ω_num − ω_th| / |ω_th| < O(1e−1) for early 2D prototypes"
+    },
+    {
+      "id": "CLM-0065",
+      "kind": "note",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "Purpose:"
+    },
+    {
+      "id": "CLM-0066",
+      "kind": "note",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "Define a purely diagnostic, non-physical metric derived from"
+    },
+    {
+      "id": "CLM-0067",
+      "kind": "note",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "CRFT hydrodynamic fields, consistent with CRFT internal geometry."
+    },
+    {
+      "id": "CLM-0068",
+      "kind": "equation",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "c_s² = g_eff ρ"
+    },
+    {
+      "id": "CLM-0069",
+      "kind": "equation",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "g_tt = −(c_s² − |u|²)"
+    },
+    {
+      "id": "CLM-0070",
+      "kind": "equation",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "g_tx = −u_x"
+    },
+    {
+      "id": "CLM-0071",
+      "kind": "equation",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "g_ty = −u_y"
+    },
+    {
+      "id": "CLM-0072",
+      "kind": "equation",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "g_xx = 1"
+    },
+    {
+      "id": "CLM-0073",
+      "kind": "equation",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "g_yy = 1"
+    },
+    {
+      "id": "CLM-0074",
+      "kind": "note",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "Diagnostics:"
+    },
+    {
+      "id": "CLM-0075",
+      "kind": "definition",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "Verify fields finite"
+    },
+    {
+      "id": "CLM-0076",
+      "kind": "definition",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "Check g_tt < 0 consistent with |u| < c_s"
+    },
+    {
+      "id": "CLM-0077",
+      "kind": "definition",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "Check det(g) < 0 (Lorentz-type signature diagnostic)"
+    },
+    {
+      "id": "CLM-0078",
+      "kind": "note",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "Pass criteria (spec):"
+    },
+    {
+      "id": "CLM-0079",
+      "kind": "definition",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "text": "All diagnostic inequalities satisfied pointwise"
+    },
+    {
+      "id": "CLM-0080",
+      "kind": "note",
+      "section": "C8 — Turbulence Taxonomy Diagnostics",
+      "text": "Purpose:"
+    },
+    {
+      "id": "CLM-0081",
+      "kind": "equation",
+      "section": "C8 — Turbulence Taxonomy Diagnostics",
+      "text": "Eφ(k) = |φ̂(k)|²"
+    },
+    {
+      "id": "CLM-0082",
+      "kind": "equation",
+      "section": "C8 — Turbulence Taxonomy Diagnostics",
+      "text": "Eρ(k) = |ρ̂(k)|²"
+    },
+    {
+      "id": "CLM-0083",
+      "kind": "equation",
+      "section": "C8 — Turbulence Taxonomy Diagnostics",
+      "text": "Eu(k) = |û(k)|²"
+    },
+    {
+      "id": "CLM-0084",
+      "kind": "definition",
+      "section": "C8 — Turbulence Taxonomy Diagnostics",
+      "text": "Track energy content across (k_low, k_mid, k_high)"
+    },
+    {
+      "id": "CLM-0085",
+      "kind": "definition",
+      "section": "C8 — Turbulence Taxonomy Diagnostics",
+      "text": "Thresholded detection of localized high-ρ or high-|φ| packets"
+    },
+    {
+      "id": "CLM-0086",
+      "kind": "definition",
+      "section": "C8 — Turbulence Taxonomy Diagnostics",
+      "text": "Count, width, and lifetimes"
+    },
+    {
+      "id": "CLM-0087",
+      "kind": "definition",
+      "section": "C8 — Turbulence Taxonomy Diagnostics",
+      "text": "Identify simple linear waves"
+    },
+    {
+      "id": "CLM-0088",
+      "kind": "definition",
+      "section": "C8 — Turbulence Taxonomy Diagnostics",
+      "text": "Weak turbulence"
+    },
+    {
+      "id": "CLM-0089",
+      "kind": "definition",
+      "section": "C8 — Turbulence Taxonomy Diagnostics",
+      "text": "Coherent turbulence (high PCI, low–mid SCI balance)"
+    },
+    {
+      "id": "CLM-0090",
+      "kind": "note",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "Purpose:"
+    },
+    {
+      "id": "CLM-0091",
+      "kind": "note",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "Coupled system (consistent with Extended_CRFT_v1):"
+    },
+    {
+      "id": "CLM-0092",
+      "kind": "equation",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "φ_t = R_φ(φ) + i γ χ"
+    },
+    {
+      "id": "CLM-0093",
+      "kind": "equation",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "χ_t = −i ω_χ χ + i γ φ"
+    },
+    {
+      "id": "CLM-0094",
+      "kind": "note",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "Diagnostics:"
+    },
+    {
+      "id": "CLM-0095",
+      "kind": "definition",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "Track:"
+    },
+    {
+      "id": "CLM-0096",
+      "kind": "equation",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "N_φ(t) = ∫ |φ|² dV"
+    },
+    {
+      "id": "CLM-0097",
+      "kind": "equation",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "N_χ(t) = ∫ |χ|² dV"
+    },
+    {
+      "id": "CLM-0098",
+      "kind": "equation",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "E_tot(t) = N_φ + N_χ"
+    },
+    {
+      "id": "CLM-0099",
+      "kind": "definition",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "Compare γ = 0 baseline with γ small"
+    },
+    {
+      "id": "CLM-0100",
+      "kind": "note",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "Pass criteria (spec):"
+    },
+    {
+      "id": "CLM-0101",
+      "kind": "definition",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "N_φ, N_χ, E_tot remain bounded"
+    },
+    {
+      "id": "CLM-0102",
+      "kind": "definition",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "Deviations scale smoothly with γ"
+    },
+    {
+      "id": "CLM-0103",
+      "kind": "definition",
+      "section": "C9 — φ–χ Coupling Stability",
+      "text": "No runaway growth for small γ"
+    }
+  ],
+  "schema_version": 1,
+  "source": {
+    "path": "archive/docs/Extended_CRFT_Test_Family_v1.md",
+    "sha256": "cb15ad1c994333381e3fec0cb2c3b0374ffaa85af732442d46c4d428b69f0860"
+  },
+  "validation_shortlist": [
+    {
+      "claim_id": "CLM-0051",
+      "exit_condition": "C6 dispersion regression passes; norm drift meets spec on pinned grid/time step.",
+      "plan": [
+        "Map PDE sign/phase convention to rhs_cp_nlse_2d().",
+        "Use existing dispersion regression (C6) as the primary executable check.",
+        "Add/confirm a pinned-input norm drift check for N_2D(t) on a periodic grid."
+      ],
+      "target_surface": "formal/python/crft/cp_nlse_2d.py"
+    },
+    {
+      "claim_id": "CLM-0059",
+      "exit_condition": "Referenced pytest evidence passes under pinned conditions.",
+      "plan": [
+        "Bind the criterion to bounded pytest evidence (norm drift + dispersion/eigenfunction checks).",
+        "Keep inputs deterministic and runtime small."
+      ],
+      "target_surface": "formal/python/crft/cp_nlse_2d.py"
+    },
+    {
+      "claim_id": "CLM-0060",
+      "exit_condition": "Referenced pytest evidence passes under pinned conditions.",
+      "plan": [
+        "Bind the criterion to bounded pytest evidence (norm drift + dispersion/eigenfunction checks).",
+        "Keep inputs deterministic and runtime small."
+      ],
+      "target_surface": "formal/python/crft/cp_nlse_2d.py"
+    },
+    {
+      "claim_id": "CLM-0068",
+      "exit_condition": "MT-01a lock regression passes; diagnostic inequalities are verified for pinned inputs.",
+      "plan": [
+        "Map (rho, u, g_eff) inputs to MT-01a front door.",
+        "Verify g_tt < 0 and det(g) < 0 inequalities pointwise on pinned fields.",
+        "Lean on the existing MT-01a lock regression for stability/compatibility."
+      ],
+      "target_surface": "formal/python/crft/acoustic_metric.py"
+    },
+    {
+      "claim_id": "CLM-0069",
+      "exit_condition": "MT-01a lock regression passes; defining equations are consistent with the canonical implementation.",
+      "plan": [
+        "Validate that MT-01a front door implements this defining equation.",
+        "Verify signature/inequality diagnostics on deterministic pinned inputs."
+      ],
+      "target_surface": "formal/python/crft/acoustic_metric.py"
+    },
+    {
+      "claim_id": "CLM-0070",
+      "exit_condition": "MT-01a lock regression passes; defining equations are consistent with the canonical implementation.",
+      "plan": [
+        "Validate that MT-01a front door implements this defining equation.",
+        "Verify signature/inequality diagnostics on deterministic pinned inputs."
+      ],
+      "target_surface": "formal/python/crft/acoustic_metric.py"
+    },
+    {
+      "claim_id": "CLM-0071",
+      "exit_condition": "MT-01a lock regression passes; defining equations are consistent with the canonical implementation.",
+      "plan": [
+        "Validate that MT-01a front door implements this defining equation.",
+        "Verify signature/inequality diagnostics on deterministic pinned inputs."
+      ],
+      "target_surface": "formal/python/crft/acoustic_metric.py"
+    },
+    {
+      "claim_id": "CLM-0072",
+      "exit_condition": "MT-01a lock regression passes; defining equations are consistent with the canonical implementation.",
+      "plan": [
+        "Validate that MT-01a front door implements this defining equation.",
+        "Verify signature/inequality diagnostics on deterministic pinned inputs."
+      ],
+      "target_surface": "formal/python/crft/acoustic_metric.py"
+    }
+  ]
+}

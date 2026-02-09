@@ -1,0 +1,80 @@
+{
+  "block_reasons": [],
+  "bridge_id": "BRIDGE_TICKET_TOYHG_0001",
+  "canonical_surface": {
+    "path": "formal/python/crft/cp_nlse_2d.py",
+    "sha256": "3cf60dceb1b6d064138dab120486c9e6371b2d5db76f21210b219917ea9d548b"
+  },
+  "checks": {
+    "has_grid_type": true,
+    "has_pinned_resolution_set": true,
+    "primary_probe_present": true,
+    "secondary_probe_present": true,
+    "selected_target_present": true,
+    "selected_target_resolved_by_pair_channel_count": 1,
+    "target_has_expected_joint_pattern": true,
+    "target_reason_count": 0
+  },
+  "evidence": {
+    "pytest_nodes": [
+      "formal/python/tests/test_bridge_toyhg_c6_pair_compatibility_feasibility_determinism.py::test_bridge_toyhg_c6_pair_compatibility_feasibility_is_deterministic",
+      "formal/python/tests/test_bridge_toyhg_c6_pair_compatibility_feasibility_pointers_exist.py::test_bridge_toyhg_c6_pair_compatibility_feasibility_artifact_pointers_exist"
+    ]
+  },
+  "found": true,
+  "implementable": true,
+  "mode": "design_only_preimplementation",
+  "pinned_plan": {
+    "grid_sizes": [
+      7,
+      9,
+      11
+    ],
+    "joint_status_signatures": {
+      "admissible": [
+        "P-P-P",
+        "F-F-F"
+      ],
+      "inadmissible": [
+        "P-F-P",
+        "F-F-P",
+        "P-P-F"
+      ]
+    },
+    "pair_consistency_rule": "all_three_channels_must_match",
+    "primary_probe_ids": [
+      "stress_c6_amplitude_scale"
+    ],
+    "secondary_probe_ids": [
+      "baseline_all_pass"
+    ],
+    "tolerances": {
+      "pair_signed_margin_pass": 0.0
+    }
+  },
+  "schema_version": 1,
+  "selected_target_reason_code": "mismatch_toyh_pair_vs_toyg_bridge",
+  "source_artifacts": {
+    "mismatch_report": {
+      "path": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_MISMATCH_REPORT.json",
+      "sha256": "e251bf08f0f2fce7e1d54406ba104a6e97364dbf6c5c8aa07726832f33ba5197"
+    },
+    "mismatch_summary": {
+      "path": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_MISMATCH_REASON_SUMMARY.json",
+      "sha256": "c9f72eacee7c0df3f131c833054eb2ae228a5e396615444fe1b3e1b7618b02c5"
+    },
+    "orthogonality_report": {
+      "path": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_REPORT.json",
+      "sha256": "45a67efbf9822aad5d8ce5be329bf4dd1cb1c4e2f6cbe61b18c278c007b6a61f"
+    }
+  },
+  "target_region": {
+    "count": 0,
+    "probe_ids": [
+      "stress_c6_amplitude_scale"
+    ],
+    "reason_code": "mismatch_toyh_pair_vs_toyg_bridge",
+    "reason_code_counts": {},
+    "resolved_by_pair_channel_count": 1
+  }
+}

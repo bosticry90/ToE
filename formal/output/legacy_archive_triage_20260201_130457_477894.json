@@ -1,0 +1,1625 @@
+{
+  "files": [
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Action Plan for Developing a Theory of Everything (ToE) from the CCFT Framework.md",
+      "sha256": "a52aa8c4e4dcb46c24b0fca2ec7ae3ea36deb0c29f9f7e2bd895a9b498e1de73",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 6952
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/crft_reconstruction_v1.md",
+      "sha256": "bb85a82b8598434e5e74e46ab4c11145e94ae70b8917fc6772095edfdbbde258",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 9093
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/crft_reconstruction_v2.md",
+      "sha256": "e46cdb774898b7a94a080887ef42810b3fbaf263c154922dd3e5d04277435ba0",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 7168
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/CRFT_Test_Family_v1.md",
+      "sha256": "6e2989479506c28f6a911d911d0aeb7a4da36fb82f42bc5ff9a79e0327157c81",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 3066
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/dev_notes/Powershell CMDs.txt",
+      "sha256": "f2d5b3f31ceae8eaeca0c4c5c01d1e44ccb8454af9e41a88671d09ec8d8dcca4",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 13958
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/equation_inventory.md",
+      "sha256": "16faff54a0cf5a80d7f551df36b8961d02102f60ab514515abfb7dcd77ddd273",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 53506
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/equation_inventory_final.md",
+      "sha256": "bcad431894bd4ed661c82f1a33b222c558c7ca0036c761c8918af2292d8ac34f",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 10071
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/equation_inventory_finalv2.md",
+      "sha256": "2666f0203d9f19bb1bb071a99beb8963d0709d1a48c2f02131d4355404627744",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 4902
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/equation_inventory_finalv3.md",
+      "sha256": "abd8a6859f0fb8b884aab726ad527d3c5e997565832a34ece70083cd7f4ef56e",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 12955
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/equation_inventory_finalv4.md",
+      "sha256": "56517d7edde80dd1ad67176fb5db6aa74d557a84c7e1e3edeec12674ef3c7f05",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 5577
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/equation_inventory_finalv5.md",
+      "sha256": "925b5ec5893aaf7679ac1d08c163cfa2aee81f0ebced39212efed3ad484e222d",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 3530
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/equation_inventory_finalv6.md",
+      "sha256": "dd945858f61c6b0be4d70ca0aa29aae66e4d1a4049e9459f405bec469a17bdff",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 18222
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/equation_inventory_finalv7.md",
+      "sha256": "571684b45eee1e1b4a45705c36fa5db00d765a0aa0bef5bc02c01f2844d55d5f",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 27364
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/equation_inventory_finalv8.md",
+      "sha256": "63296c9811c17b49e225e73aba0c744f3a3be2fa792f5c295cfc4c6e3ca83bca",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 14813
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Extended_CRFT_Test_Family_v1.md",
+      "sha256": "cb15ad1c994333381e3fec0cb2c3b0374ffaa85af732442d46c4d428b69f0860",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 5979
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Extended_CRFT_v1.md",
+      "sha256": "847742b90e42e91ca9b317b187481a7b9fbe66664cb11b08796c57518875876e",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 7741
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/LCRD_Reconstruction_v3.md",
+      "sha256": "499c87ff53d271d7c1f914722fe2fe66cf7935a432bcc698144f0d8b0602ad6c",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 14165
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/locks/LOCK_CP_NLSE_2D_DISPERSION.md",
+      "sha256": "93a182c90e326e26ea1542a3f6cfe449d500f37cbb964c60439bbf63a2f93626",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 6942
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/locks/LOCK_FOUNDATION_FIRST_ORDER.md",
+      "sha256": "4f62b83fd4fd400f043c08efdfa6a0b052029ea446e35b4318d2e348ce2e22be",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 483
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/locks/LOCK_FOUNDATION_FIRST_ORDER_DISPERSION.md",
+      "sha256": "1f98cbd7e8b501e76c40064785adb7d8e1199bcc02cf1fe1ab8ac43ad2da9ec6",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 2251
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/locks/LOCK_GEOM_C10_C11_ACOUSTIC_METRIC.md",
+      "sha256": "fdf6e510aa1ceb242e03f27ac3e18db01ed7d527ae1d2ac22b599b3a554bada8",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 6695
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/locks/LOCK_LCRD_V3_ROTOR_CURVATURE.md",
+      "sha256": "2349078a1f438cf76deafd48c647e2afa3ccaddc5fa0a87885c4ba865e285852",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 7205
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/locks/LOCK_LSDA_T1_T10.md",
+      "sha256": "e059faf5999cf835113811ea6bcf5fca41f0e935f7c02215abe813c29f1e9f60",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 15061
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/locks/LOCK_NEURO_SYMBOLIC.md",
+      "sha256": "9ea32be5d08ebe14e4d4fd34ed6f3588d5931493652b07e6065e08ac1e71947c",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 132
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/locks/LOCK_PHI_CHI_1D_EXTENDED_CRFT.md",
+      "sha256": "1d66ac7cb9d1df90d4607c4abdf8a4b742d5ef0485a3bf7100ef99ae81c12c87",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 5614
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/locks/LOCK_SECOND_ORDER_NUMERICS.md",
+      "sha256": "8a01486fbd3c6f3b4b60bea9c921e102e6fa828d07749ae8c09a8ecaa5106177",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 9281
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/locks/LOCK_SECOND_ORDER_TIME_DOMAIN.md",
+      "sha256": "694032c068a5fb02291be191a420ed9e286c645178b122deb139bfb5f6a66403",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 12206
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/locks/LOCK_TURB_C12_C13_TURBULENCE_DIAGNOSTICS.md",
+      "sha256": "a009713f234aeed3033e633eaa9f0292365b9c5d0c0e80c07a6928b5030c3a9f",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 9380
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Monograph/CCFT Monograph.md",
+      "sha256": "2c5065ebaf2729e2fb0840b54917e6d6b8f6efcfce9d88f80b03a60ef5433ff7",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 32206
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Monograph/Monograph Development Framework for the Classical Coherence Field Theory (CCFT).md",
+      "sha256": "16cf858999e996d2a2235a22ecf19e325e1087c88cfe81a2e96a7e6642c57c7f",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 3264
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Monograph/Part 0 - Front Matter.md",
+      "sha256": "6c17d46f2e1a677ff6be5c5ff74a379215fb7779da61dc37f631e6aa814143e8",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 9306
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Monograph/Part I - Conceptual Foundations.md",
+      "sha256": "28cb21207b4944c4e211a6287562fbf87ff112f220c15de05141c54cf3d08614",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 6429
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Monograph/Part II - Mathematical Structure and Derivations.md",
+      "sha256": "4eedeaa4eae381c6e595cb527545347ba76af4e4ed7409f3a4b2d9fe163cb22d",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 17351
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Monograph/Part III - Functional Principles.md",
+      "sha256": "e6832143739ea624416b0a4223001a7e3bcc049640668ce8938184e7807573ee",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 11905
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Monograph/Part IV - Numerical Implementation.md",
+      "sha256": "075ec513dd7af59631ac8e101b19a46f5a9ea65ccf40ae45ef4ecc0e150ef5e1",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 19663
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Monograph/Part V - Validation and Verification.md",
+      "sha256": "656d72b9ee215155725ba8ff1ee10980a17b8dfeb018a24857b36151109cb8bc",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 9194
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Monograph/Part VI - Physical Interpretation and Applications.md",
+      "sha256": "37835169fdce94965bd1662b80f6d46af8d0ab60ed4c0bbd127351c485fa2c6e",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 15356
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Monograph/Part VII - Pathways Toward Unification.md",
+      "sha256": "6c70021fc741d372b826798c0d3292d9c18e4769f365b9268c3bb065c5cd0665",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 12509
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/Monograph/Part VIII - Appendices.md",
+      "sha256": "5e0a0b7ea870579c8f8a841eca1b9b2b3791ad4921b64cafbfd4b04baf39a30b",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 11475
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/README.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "docs",
+      "relpath": "archive/docs/state_of_the_theory_ARCHIVE.md",
+      "sha256": "abb5c2582b0928642ec7edb6c8ca3ee1cfddb4ce9177ae7d4ddaa1a4d6131cf1",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": true,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 3656
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/state_of_the_theoryv2.md",
+      "sha256": "3a7dd2bba3c34aa896861bef11ec51ab2e25b2a73942269a36b5e4df1a8e34d8",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 4031
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/state_of_the_theoryv3.md",
+      "sha256": "55cc523eda295e8af3127c7161e3621ce8cc2775eda526a7d638dd0ed3979912",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 11489
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/state_of_the_theoryv4.md",
+      "sha256": "9c91328d6999516174fdb54030fc4e783d93e4ff52fb1969c5aaaad87292535a",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 8813
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "docs",
+      "relpath": "archive/docs/state_of_the_theoryv5.md",
+      "sha256": "fb7552577058a5e5d060d1ec52745c8281e555eb8e4711d89cddffdd1fa05de4",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": true,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 33659
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/state_of_the_theoryv6.md",
+      "sha256": "4a630afeb628251fa4a88972cf74d08bb1ab1053a20eab4ed640977f5ed6b555",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 11296
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/state_of_the_theoryv7.md",
+      "sha256": "d84003f5c08a539e7e5d361c022b0ba9f1c22cff8f228ae1f165faab33a17df2",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 14856
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/docs/state_of_the_theoryv8.md",
+      "sha256": "bb622ddee4483aed6293a05f5e3f70f2cf379c3ac269d27164b618163cd8e30c",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 10027
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/cpu/README.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/derivations/variation_coherence.md",
+      "sha256": "d881194692c4ba61a5000305843490b71c4dff1d7e01a740c1b459339e4352a2",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 878
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/dev_notes/action plan.txt",
+      "sha256": "a14ae89da66f056c06e238efdf648e366f50b76106e7414057396c6f27062159",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 16336
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/dev_notes/equation_inventory_master.md",
+      "sha256": "dfa63b39b748d64b48e7abf0860ac44e121b00a29c1c7b2dbcaa0c8bd862fe9b",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": true
+      },
+      "size_bytes": 2001
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/dev_notes/equation_inventory_working.md",
+      "sha256": "a25904a510af1f1cf58d0abcf15daf9bf125e0bffd556432fbbdd0693dd90733",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 10512
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/dev_notes/state_of_the_theory_master.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/dev_notes/test_inventory_master.md",
+      "sha256": "eaa28848b950bbe9f652dd19238ca0f9586571380197912e6b5033f171b95774",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": true,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 89146
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/GLOSSARY_PHASE0.md",
+      "sha256": "dcf507e1a16ae95b9ef00a7787a7a38cbbcd8203170947ca523d209a96929098",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 1076
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/PHASE0_DECLARATION.md",
+      "sha256": "07e34d71d11bfa96fdde23f2bfaa9ab27f89bb8a03993aaa6f5151931bc2f7a2",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 473
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/PHASE1_GRAMMAR.md",
+      "sha256": "a695c4468c9ee7683e2f998d4fe919e160f6eee880acabbbf8fa9a869b8a6734",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 2376
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/PHASE1B_SHAPES.md",
+      "sha256": "6a0401addf1ce2b4e004c091e6298d1c78b01ea9d846f6684448d4b2b380a7f0",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 1194
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/PHASE2_OBJECTIVES.md",
+      "sha256": "689e14a8db2e9f14b7539634042edd176ad7599248ca618bb129dbec6e219a23",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 1221
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/PHASE2_PLAN.md",
+      "sha256": "c253d66dad98142b4331416d3d4042d123b602c3be3e85cc711e1f9a07ed89b2",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 26
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/PHASE3_OBJECTIVES.md",
+      "sha256": "1cf2182c52dc13616b8cc7b20919e98207ef894d845a78367232eaf567bd0556",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 957
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/README.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/spec_phase0_freeze.md",
+      "sha256": "dd9e993ce776c519fca81bb0944e68d4ac2c241fd72566f55234f446827ceb43",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 2023
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/docs/state_of_the_theory_ARCHIVE.md",
+      "sha256": "b49c89cb16bfebe9d4ab6504e602c875778d9ab2187d990130a678af4e42f345",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 618
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/equations/README.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/equations/ucff_first_order.md",
+      "sha256": "95069c8c74a008e4e76dff6ee259ad4f5778a1a96c1a7c2732e9733b55bd9f5c",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 1606
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/gpu/README.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/field_theory/README.md",
+      "sha256": "a363a00ecb07f5ee9c737979584bf54b8323244cb9594130503af53410942bc1",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 335
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "tests",
+      "relpath": "archive/field_theory/tests/README.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "python",
+      "relpath": "archive/fundamental_theory/crft/diagnostics/acoustic_metric.py",
+      "sha256": "fd208901068211ab046e1689068cdbcf249b17123c9027c99282d31017cd29dc",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 5620
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/fundamental_theory/derivations/README.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/fundamental_theory/gpu/README.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/fundamental_theory/invariants/README.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/fundamental_theory/models/README.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/fundamental_theory/README.md",
+      "sha256": "1e234f80637b2eaa09f53d0d9079a9c1b19198048f313936232f9847b2687aa1",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 1238
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "tests",
+      "relpath": "archive/fundamental_theory/tests/README.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_candidate_algebra_01_discrete_mapping.md",
+      "sha256": "2f7d11b71d1c8646f84376cd302e15c3cf4b50b8632973f7066bcb3dde1d91ee",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": true,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 14289
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_candidate_algebra_01_dispersion_calibration.md",
+      "sha256": "1207135a2ca783015730f25016894f38662fbcb6cd0aece4779c158bf0be495e",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": true,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 6802
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_candidate_algebra_01_dispersion_matching_derivation.md",
+      "sha256": "fe7f7c46e67748e826c656cd469609c302c7b4cc119c898bba54bf14786740bc",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": true,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 19096
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_candidate_algebra_01_dynamics.md",
+      "sha256": "7c9105b2547a274f28c7cc6b0a9284b63bd5b4572e27207ba8df1de834f1d0b8",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 6235
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_candidate_algebra_01_local_rotor_density.md",
+      "sha256": "f31210aac41573a44bfce1c182c7f9be34e1a89ff2e56bc5fc0ea1aa4f31f99a",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 14115
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_candidate_algebra_01_numerics.md",
+      "sha256": "f4db1aa658a40fb0f5c69b47fbbc3177c57460be1f46798549ba08ad85aaaa18",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 5748
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_candidate_algebra_02_dynamics.md",
+      "sha256": "6d79371b93b562c50aefdda367f360faf0f4592dbba96b2921ed25657146cc2f",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 6973
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_candidate_algebra_02_local_spinor_density.md",
+      "sha256": "b161e82cf979e4dbfec96b04aca62bb8f644acca20c90d78959f7009dc101d2b",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 14318
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_candidate_algebra_02_numerics.md",
+      "sha256": "f435512ec13709701a9ef87d73369079aa6a2a614163afd56e9d5fcbf40cdde0",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 5575
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_step3_composition_algebra.md",
+      "sha256": "0e457add01946fba828b7e42a680f8cfc6832acaf6d2a00db68ea4583dedcdb9",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 11341
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_step4_coarse_graining_harness.md",
+      "sha256": "0ef4709c893a7ace029ef28e533d8d2380561396f8ab1c4f314fc571acc7f5a5",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 17228
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_step5_lcrd_simulation_engine.md",
+      "sha256": "9fe6f5e7abc303dc2d9704d20a9f161b515d759685aff9f1c3594329ac058c5c",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 1986
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_step5_status.md",
+      "sha256": "a454879bc0442b8efcf57485fceef11e2b0c136cdc3c35043fc0a04a1c15db95",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 6524
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_step6_nonlinear_multiscale_calibration.md",
+      "sha256": "425b11dabc0bb0399c52c4b2369c2455ad7574f5f13142b31b80c1de1282da0b",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 3400
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_step7_lcrd_v2_design.md",
+      "sha256": "e7e12e2abc43966b03c2b02815d215b8f51a7c82980c912675caaf88f9d21489",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": true,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 10391
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_step7_lcrd_v2_dynamics.md",
+      "sha256": "d5c1ee0a38847642904d0fab1bc799a0a1e83461ec108bee99a548167aa8dc75",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": true,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 10691
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_step7_lcrd_v2_test_plan.md",
+      "sha256": "486b2a3ba6505434b9e08e15b159660b21043c225b18f661591ef98ae678be80",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": true,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 8606
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/ft_step7_lcrd_v2_test_runner.md",
+      "sha256": "d272f1151b545565a22cd827f988795614562db209bf5481dd23e178a9943206",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": true,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 11879
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "tests",
+      "relpath": "archive/lcrd_legacy_docs/pytest_legacy.ini",
+      "sha256": "6b96edc8e52d22d998fe42673d7b81b55dcef726d8ed93c84a36f26215a0d7d7",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 648
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/lcrd_legacy_docs/tests_filelist.txt",
+      "sha256": "db3a73daaf6b768ecf6cf07da687fcc4bc58777d9475a7d1e2e7ce36a1c47800",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 264
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "config",
+      "relpath": "archive/legacy_configs/ucff_phase0.toml",
+      "sha256": "deefa93de913ab848f2fbeaf3b0014f2ce2c4de02295d22c6ef2b50ef6625cc9",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 613
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/mei/blocks/00_frontmatter.md",
+      "sha256": "794b97f64e9ae94f83edb4ce7910ec3acb52b1d32faf9e8132e2920ff3539b5c",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 280
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/mei/blocks/01_scope.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/mei/blocks/12_closure.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/mei/README.md",
+      "sha256": "cf0438eab54330efce97ff0db2e1469a372f39f33d50bd22d4215654e5fcbedb",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": true
+      },
+      "size_bytes": 931
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/mei/spec/assumptions.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "reference_only",
+      "kind": "docs",
+      "relpath": "archive/mei/spec/units.md",
+      "sha256": null,
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 0
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "tests",
+      "relpath": "archive/tests/test_ucff_core_roundtrip.py",
+      "sha256": "c1d1fcc3d35cde24f8b75acaebc19c32c27eb744f9e667a73bda15b81f846659",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 5025
+    },
+    {
+      "bucket": "candidate_revalidate",
+      "kind": "tests",
+      "relpath": "archive/tests/test_ucff_core_symbolic.py",
+      "sha256": "0d5c45284a0e7f0534dcb5819f14579097cdffd5b0f77fb8522d333c879b9761",
+      "signals": {
+        "has_inventory_id_field": false,
+        "has_status_field": false,
+        "mentions_empirical_anchor": false,
+        "mentions_external_evidence": false,
+        "mentions_gate": false,
+        "mentions_lock": false
+      },
+      "size_bytes": 2948
+    }
+  ],
+  "fingerprint": "7a83622165476d9e2fec5a9c79f6c589ef1ff74a1e04d1688dc3fa8751bc0018",
+  "generated_at": "2026-02-01T13:04:57",
+  "inputs": {
+    "max_hash_bytes": 2000000,
+    "max_text_bytes": 200000,
+    "roots": [
+      "archive/docs",
+      "archive/field_theory",
+      "archive/fundamental_theory",
+      "archive/lcrd_legacy_docs",
+      "archive/legacy_configs",
+      "archive/mei",
+      "archive/tests"
+    ]
+  },
+  "repo_root": "C:/Users/psboy/Documents/ToE",
+  "schema": "OV-LG-ARCHIVE-TRIAGE/v1",
+  "summary": {
+    "bucket_counts": {
+      "candidate_revalidate": 16,
+      "reference_only": 90
+    },
+    "file_count": 106,
+    "kind_counts": {
+      "config": 1,
+      "docs": 99,
+      "python": 1,
+      "tests": 5
+    },
+    "total_bytes": 864339
+  }
+}

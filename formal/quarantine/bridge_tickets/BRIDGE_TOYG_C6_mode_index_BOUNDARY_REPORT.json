@@ -1,0 +1,100 @@
+{
+  "artifact_sha256": "95eb47de718b0e8dd1bc68b5949b5c07861210a83a59582df4d6eeec79cf8435",
+  "items": [
+    {
+      "evidence": {
+        "pytest_nodes": [
+          "formal/python/tests/test_bridge_toyg_c6_mode_index_quantization_perturbation_stability.py::test_bridge_toyg_c6_mode_index_quantization_perturbation_stability",
+          "formal/python/tests/test_bridge_toyg_c6_mode_index_quantization_negative_controls.py::test_bridge_toyg_c6_mode_index_quantization_negative_control_integer_closeness_failure",
+          "formal/python/tests/test_bridge_toyg_c6_mode_index_quantization_resolution_scan.py::test_bridge_toyg_c6_mode_index_quantization_resolution_scan"
+        ]
+      },
+      "inputs": {
+        "loop_length": 6.28318530718,
+        "min_peak_fraction": 0.7,
+        "probes": [
+          {
+            "grid_n": 11,
+            "mode_target": 1.0,
+            "probe_id": "interior_quantized_n1"
+          },
+          {
+            "grid_n": 11,
+            "mode_target": 1.095,
+            "probe_id": "edge_near_quantized_n1_plus"
+          },
+          {
+            "grid_n": 11,
+            "mode_target": 1.125,
+            "probe_id": "just_outside_quantized_n1_plus"
+          },
+          {
+            "grid_n": 7,
+            "mode_target": 3.5,
+            "probe_id": "low_spectral_coherence_half_integer"
+          }
+        ],
+        "tol_mode": 0.1
+      },
+      "samples": [
+        {
+          "admissible": true,
+          "grid_n": 11,
+          "integer_distance": 0.0,
+          "mode_target": 1.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1,
+          "probe_id": "interior_quantized_n1",
+          "reason_code": "pass_mode_index_1"
+        },
+        {
+          "admissible": true,
+          "grid_n": 11,
+          "integer_distance": 0.095,
+          "mode_target": 1.095,
+          "nearest_int": 1,
+          "peak_fraction": 0.970897545143,
+          "peak_index_signed": 1,
+          "probe_id": "edge_near_quantized_n1_plus",
+          "reason_code": "pass_mode_index_1"
+        },
+        {
+          "admissible": false,
+          "grid_n": 11,
+          "integer_distance": 0.125,
+          "mode_target": 1.125,
+          "nearest_int": 1,
+          "peak_fraction": 0.950044740592,
+          "peak_index_signed": 1,
+          "probe_id": "just_outside_quantized_n1_plus",
+          "reason_code": "fail_not_integer_close"
+        },
+        {
+          "admissible": false,
+          "grid_n": 7,
+          "integer_distance": 0.5,
+          "mode_target": 3.5,
+          "nearest_int": 4,
+          "peak_fraction": 0.412156517512,
+          "peak_index_signed": 3,
+          "probe_id": "low_spectral_coherence_half_integer",
+          "reason_code": "fail_peak_fraction_low"
+        }
+      ],
+      "scan_id": "c6_mode_index_quantization_boundary_scan_v1",
+      "summary": {
+        "fail_reason_counts": {
+          "fail_mode_index_mismatch": 0,
+          "fail_not_integer_close": 1,
+          "fail_peak_fraction_low": 1
+        },
+        "n_fail": 2,
+        "n_pass": 2,
+        "n_samples": 4
+      },
+      "ticket_id": "BRIDGE_TICKET_TOYG_0002"
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,121 @@
+{
+  "artifact_sha256": "95819f03521cc92a7be5dfdc412c25cfec0ca9fb6e7e7635c621e214076cc8e6",
+  "items": [
+    {
+      "evidence": {
+        "pytest_nodes": [
+          "formal/python/tests/test_bridge_toyhg_c6_pair_compatibility_determinism.py::test_bridge_toyhg_c6_pair_compatibility_deterministic",
+          "formal/python/tests/test_bridge_toyhg_c6_pair_compatibility_negative_controls.py::test_bridge_toyhg_c6_pair_compatibility_negative_control_phase_current_vs_toyg",
+          "formal/python/tests/test_bridge_toyhg_c6_pair_compatibility_negative_controls.py::test_bridge_toyhg_c6_pair_compatibility_negative_control_current_only",
+          "formal/python/tests/test_bridge_toyhg_c6_pair_compatibility_resolution_scan.py::test_bridge_toyhg_c6_pair_compatibility_resolution_signature_map"
+        ]
+      },
+      "inputs": {
+        "joint_rule": "all_three_channels_must_match",
+        "probes": [
+          {
+            "probe_id": "baseline_all_pass",
+            "toyg_bridge_pass": true,
+            "toyh_current_bridge_pass": true,
+            "toyh_phase_bridge_pass": true
+          },
+          {
+            "probe_id": "stress_c6_amplitude_scale_pair",
+            "toyg_bridge_pass": true,
+            "toyh_current_bridge_pass": false,
+            "toyh_phase_bridge_pass": false
+          },
+          {
+            "probe_id": "stress_toyh_current_only_pair",
+            "toyg_bridge_pass": true,
+            "toyh_current_bridge_pass": false,
+            "toyh_phase_bridge_pass": true
+          },
+          {
+            "probe_id": "stress_toyg_only_pair",
+            "toyg_bridge_pass": false,
+            "toyh_current_bridge_pass": true,
+            "toyh_phase_bridge_pass": true
+          },
+          {
+            "probe_id": "all_fail_consistent",
+            "toyg_bridge_pass": false,
+            "toyh_current_bridge_pass": false,
+            "toyh_phase_bridge_pass": false
+          }
+        ]
+      },
+      "samples": [
+        {
+          "admissible": true,
+          "localization_note": "none",
+          "probe_id": "baseline_all_pass",
+          "reason_code": "PASS_PAIR_COMPATIBLE",
+          "signature": "P-P-P",
+          "signed_margin": 0.1,
+          "toyg_bridge_pass": true,
+          "toyh_current_bridge_pass": true,
+          "toyh_phase_bridge_pass": true
+        },
+        {
+          "admissible": false,
+          "localization_note": "toyg_bridge_channel",
+          "probe_id": "stress_c6_amplitude_scale_pair",
+          "reason_code": "FAIL_PAIR_TOYG_MISMATCH",
+          "signature": "F-F-P",
+          "signed_margin": -0.1,
+          "toyg_bridge_pass": true,
+          "toyh_current_bridge_pass": false,
+          "toyh_phase_bridge_pass": false
+        },
+        {
+          "admissible": false,
+          "localization_note": "toyh_current_channel",
+          "probe_id": "stress_toyh_current_only_pair",
+          "reason_code": "FAIL_PAIR_CURRENT_MISMATCH",
+          "signature": "P-F-P",
+          "signed_margin": -0.1,
+          "toyg_bridge_pass": true,
+          "toyh_current_bridge_pass": false,
+          "toyh_phase_bridge_pass": true
+        },
+        {
+          "admissible": false,
+          "localization_note": "toyg_bridge_channel",
+          "probe_id": "stress_toyg_only_pair",
+          "reason_code": "FAIL_PAIR_TOYG_MISMATCH",
+          "signature": "P-P-F",
+          "signed_margin": -0.1,
+          "toyg_bridge_pass": false,
+          "toyh_current_bridge_pass": true,
+          "toyh_phase_bridge_pass": true
+        },
+        {
+          "admissible": true,
+          "localization_note": "none",
+          "probe_id": "all_fail_consistent",
+          "reason_code": "PASS_PAIR_COMPATIBLE",
+          "signature": "F-F-F",
+          "signed_margin": 0.1,
+          "toyg_bridge_pass": false,
+          "toyh_current_bridge_pass": false,
+          "toyh_phase_bridge_pass": false
+        }
+      ],
+      "scan_id": "c6_pair_compatibility_boundary_scan_v1",
+      "summary": {
+        "fail_reason_counts": {
+          "FAIL_PAIR_CURRENT_MISMATCH": 1,
+          "FAIL_PAIR_MIXED": 0,
+          "FAIL_PAIR_PHASE_MISMATCH": 0,
+          "FAIL_PAIR_TOYG_MISMATCH": 2
+        },
+        "n_fail": 3,
+        "n_pass": 2,
+        "n_samples": 5
+      },
+      "ticket_id": "BRIDGE_TICKET_TOYHG_0001"
+    }
+  ],
+  "schema_version": 1
+}

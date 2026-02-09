@@ -1,0 +1,121 @@
+{
+  "artifact_sha256": "20e5a16db5a3442d5fbae55a380e737b69941e5fcbe3ee5cc14768cbcdf5fff8",
+  "items": [
+    {
+      "evidence": {
+        "pytest_nodes": [
+          "formal/python/tests/test_bridge_toyh_c6_phase_anchor_determinism.py::test_bridge_toyh_c6_phase_anchor_resolves_small_theta_control_case",
+          "formal/python/tests/test_bridge_toyh_c6_phase_anchor_negative_controls.py::test_bridge_toyh_c6_phase_anchor_negative_control_amplitude_scaling",
+          "formal/python/tests/test_bridge_toyh_c6_phase_anchor_negative_controls.py::test_bridge_toyh_c6_phase_anchor_negative_control_wrong_operator_sign",
+          "formal/python/tests/test_bridge_toyh_c6_phase_anchor_resolution_scan.py::test_bridge_toyh_c6_phase_anchor_resolution_scan"
+        ]
+      },
+      "inputs": {
+        "min_anchor_magnitude": 1e-08,
+        "phase_anchor_tolerance": 1e-07,
+        "probes": [
+          {
+            "amplitude_scale": 1.0,
+            "anchor_sign": 1.0,
+            "grid_n": 11,
+            "probe_id": "baseline_theta_pi_over_3_n11",
+            "theta": 1.0471975512
+          },
+          {
+            "amplitude_scale": 1.0,
+            "anchor_sign": 1.0,
+            "grid_n": 11,
+            "probe_id": "tiny_theta_control_n11",
+            "theta": 1e-06
+          },
+          {
+            "amplitude_scale": 1.1,
+            "anchor_sign": 1.0,
+            "grid_n": 11,
+            "probe_id": "amplitude_scale_fail_n11",
+            "theta": 1.0471975512
+          },
+          {
+            "amplitude_scale": 1.0,
+            "anchor_sign": -1.0,
+            "grid_n": 11,
+            "probe_id": "wrong_anchor_operator_fail_n11",
+            "theta": 1.0471975512
+          }
+        ],
+        "tolerance": 1e-10
+      },
+      "samples": [
+        {
+          "admissible": true,
+          "amplitude_scale": 1.0,
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "anchor_sign": 1.0,
+          "energy_rel": 1.79982577539e-16,
+          "grid_n": 11,
+          "norm_rel": 0.0,
+          "probe_id": "baseline_theta_pi_over_3_n11",
+          "reason_code": "PASS_PHASE_ANCHOR",
+          "rhs_rel": 5.53597490018e-15,
+          "theta": 1.0471975512
+        },
+        {
+          "admissible": true,
+          "amplitude_scale": 1.0,
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "anchor_sign": 1.0,
+          "energy_rel": 3.59965155078e-16,
+          "grid_n": 11,
+          "norm_rel": 0.0,
+          "probe_id": "tiny_theta_control_n11",
+          "reason_code": "PASS_PHASE_ANCHOR",
+          "rhs_rel": 5.50392404956e-15,
+          "theta": 1e-06
+        },
+        {
+          "admissible": false,
+          "amplitude_scale": 1.1,
+          "anchor_magnitude_ratio": 1.1,
+          "anchor_phase_error": 0.0,
+          "anchor_sign": 1.0,
+          "energy_rel": 0.64524936,
+          "grid_n": 11,
+          "norm_rel": 0.21,
+          "probe_id": "amplitude_scale_fail_n11",
+          "reason_code": "FAIL_PHASE_INVARIANCE_TOL",
+          "rhs_rel": 4.6597552,
+          "theta": 1.0471975512
+        },
+        {
+          "admissible": false,
+          "amplitude_scale": 1.0,
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 3.14159265359,
+          "anchor_sign": -1.0,
+          "energy_rel": 1.79982577539e-16,
+          "grid_n": 11,
+          "norm_rel": 0.0,
+          "probe_id": "wrong_anchor_operator_fail_n11",
+          "reason_code": "FAIL_ANCHOR_PHASE_MISMATCH",
+          "rhs_rel": 5.53597490018e-15,
+          "theta": 1.0471975512
+        }
+      ],
+      "scan_id": "c6_phase_anchor_boundary_scan_v1",
+      "summary": {
+        "fail_reason_counts": {
+          "FAIL_ANCHOR_MAGNITUDE_MIN": 0,
+          "FAIL_ANCHOR_PHASE_MISMATCH": 1,
+          "FAIL_PHASE_INVARIANCE_TOL": 1
+        },
+        "n_fail": 2,
+        "n_pass": 2,
+        "n_samples": 4
+      },
+      "ticket_id": "BRIDGE_TICKET_TOYH_0003"
+    }
+  ],
+  "schema_version": 1
+}

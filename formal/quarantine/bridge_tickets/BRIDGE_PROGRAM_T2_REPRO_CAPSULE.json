@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "capsule_id": "BRIDGE_PROGRAM_T2_REPRO_CAPSULE",
+  "status": "design_only",
+  "source_artifacts": {
+    "baseline_report": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_REPORT.json",
+    "v5_t2_report": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_REPORT_v5_T2.json",
+    "v5_t2_mismatch_report": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_MISMATCH_REPORT_v5_T2.json",
+    "v5_t2_reason_summary": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_MISMATCH_REASON_SUMMARY_v5_T2.json",
+    "tolerance_delta_manifest": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_TOLERANCE_TIGHTENING_DELTA_MANIFEST.json"
+  },
+  "tolerance_profile_selected_v5": "v5_t2",
+  "effective_tolerances_v5": {
+    "toyh_tolerance": 1e-15,
+    "phase_anchor_tolerance": 2e-08,
+    "current_anchor_tolerance": 2e-08,
+    "current_anchor_min_response": 1.25e-08
+  },
+  "mismatch_frontier": {
+    "reason_code": "mismatch_phase_and_pair",
+    "n_mismatch": 13,
+    "reason_code_counts": {
+      "mismatch_phase_and_pair": 13
+    }
+  },
+  "all_flipped_probe_ids_from_baseline": [
+    "baseline_all_pass",
+    "stress_toyh_phase_control",
+    "stress_toyh_current_control",
+    "stress_toyh_current_control_alpha_0p125",
+    "stress_toyh_current_control_alpha_0p500",
+    "stress_toyh_current_control_alpha_1p000",
+    "stress_toyh_theta_set_pi_over_6",
+    "stress_toyh_theta_set_pi_over_2",
+    "stress_toyh_theta_set_2pi_over_3",
+    "stress_toyh_grid_size_n13",
+    "stress_toyh_grid_size_n15",
+    "stress_toyg_integer",
+    "stress_toyg_unwrap"
+  ],
+  "flipped_probe_partition_counts": {
+    "phase_only_fail": 0,
+    "pair_only_fail": 0,
+    "both_fail": 13
+  },
+  "minimal_reproduction_probes": [
+    {
+      "probe_id": "baseline_all_pass",
+      "baseline_signature": "P-P-P",
+      "v5_t2_signature": "F-P-F",
+      "inputs": {
+        "theta": 1.0471975512,
+        "grid_n": 11,
+        "amplitude_scale": 1.0,
+        "local_phase_shear_alpha": 0.5
+      },
+      "v5_t2_reason_codes": {
+        "toyh_phase": "FAIL_PHASE_INVARIANCE_TOL",
+        "toyh_phase_anchor": "FAIL_PHASE_INVARIANCE_TOL",
+        "toyh_phase_bridge": "FAIL__p0_a0__FAIL_PHASE_INVARIANCE_TOL__FAIL_PHASE_INVARIANCE_TOL",
+        "toyh_current": "PASS",
+        "toyh_current_anchor": "PASS_CURRENT_ANCHOR",
+        "toyh_current_bridge": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR",
+        "toyg_bridge": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive",
+        "toyhg_pair_bridge": "FAIL_PAIR_PHASE_MISMATCH"
+      }
+    },
+    {
+      "probe_id": "stress_toyh_phase_control",
+      "baseline_signature": "P-P-P",
+      "v5_t2_signature": "F-P-F",
+      "inputs": {
+        "theta": 1e-06,
+        "grid_n": 11,
+        "amplitude_scale": 1.0,
+        "local_phase_shear_alpha": 0.5
+      },
+      "v5_t2_reason_codes": {
+        "toyh_phase": "FAIL_PHASE_INVARIANCE_TOL",
+        "toyh_phase_anchor": "FAIL_PHASE_INVARIANCE_TOL",
+        "toyh_phase_bridge": "FAIL__p0_a0__FAIL_PHASE_INVARIANCE_TOL__FAIL_PHASE_INVARIANCE_TOL",
+        "toyh_current": "PASS",
+        "toyh_current_anchor": "PASS_CURRENT_ANCHOR",
+        "toyh_current_bridge": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR",
+        "toyg_bridge": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive",
+        "toyhg_pair_bridge": "FAIL_PAIR_PHASE_MISMATCH"
+      }
+    },
+    {
+      "probe_id": "stress_toyh_current_control",
+      "baseline_signature": "P-P-P",
+      "v5_t2_signature": "F-P-F",
+      "inputs": {
+        "theta": 1.0471975512,
+        "grid_n": 11,
+        "amplitude_scale": 1.0,
+        "local_phase_shear_alpha": 1e-06
+      },
+      "v5_t2_reason_codes": {
+        "toyh_phase": "FAIL_PHASE_INVARIANCE_TOL",
+        "toyh_phase_anchor": "FAIL_PHASE_INVARIANCE_TOL",
+        "toyh_phase_bridge": "FAIL__p0_a0__FAIL_PHASE_INVARIANCE_TOL__FAIL_PHASE_INVARIANCE_TOL",
+        "toyh_current": "FAIL_CURRENT_CHANNEL_CONTROL_MIN",
+        "toyh_current_anchor": "PASS_CURRENT_ANCHOR",
+        "toyh_current_bridge": "PASS__c0_A__FAIL_CURRENT_CHANNEL_CONTROL_MIN__PASS_CURRENT_ANCHOR",
+        "toyg_bridge": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive",
+        "toyhg_pair_bridge": "FAIL_PAIR_PHASE_MISMATCH"
+      }
+    },
+    {
+      "probe_id": "stress_toyh_grid_size_n15",
+      "baseline_signature": "P-P-P",
+      "v5_t2_signature": "F-P-F",
+      "inputs": {
+        "theta": 1.0471975512,
+        "grid_n": 15,
+        "amplitude_scale": 1.0,
+        "local_phase_shear_alpha": 0.5
+      },
+      "v5_t2_reason_codes": {
+        "toyh_phase": "FAIL_PHASE_INVARIANCE_TOL",
+        "toyh_phase_anchor": "FAIL_PHASE_INVARIANCE_TOL",
+        "toyh_phase_bridge": "FAIL__p0_a0__FAIL_PHASE_INVARIANCE_TOL__FAIL_PHASE_INVARIANCE_TOL",
+        "toyh_current": "PASS",
+        "toyh_current_anchor": "PASS_CURRENT_ANCHOR",
+        "toyh_current_bridge": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR",
+        "toyg_bridge": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive",
+        "toyhg_pair_bridge": "FAIL_PAIR_PHASE_MISMATCH"
+      }
+    }
+  ],
+  "design_hypothesis": {
+    "candidate_root_classification": "single_root_phase_tolerance_brittleness",
+    "evidence": [
+      "All 13 flipped probes are both-fail, with no phase-only or pair-only bucket.",
+      "Toy-H phase and Toy-H phase-anchor lanes fail on FAIL_PHASE_INVARIANCE_TOL for all sampled flips.",
+      "Pair lane failure is uniform FAIL_PAIR_PHASE_MISMATCH while current bridge and Toy-G bridge remain pass-capable."
+    ],
+    "non_implication_clause": "Design-only hypothesis; executable causality gate required before implementation."
+  }
+}

@@ -1,0 +1,98 @@
+STATUS: ARCHIVED (reference-only)
+
+Superseded by: New Workflow Constitution.txt
+
+Workflow Constitution
+
+1️⃣ Markdown = Intent Authority
+
+What Markdown is allowed to say:
+Definitions (conceptual)
+Claims (tagged as conjecture / hypothesis / locked)
+Interpretations
+Motivation
+Scope and limits
+
+What Markdown is not allowed to do:
+Assert correctness
+Claim necessity
+Imply proof
+Blur empirical vs formal
+
+Markdown never proves. It only intends.
+
+2️⃣ Python = Behavioral Authority
+
+What Python is allowed to say:
+“This equation behaves this way under these conditions”
+“Numerical error < ε”
+“Stability observed”
+“Dispersion matches predicted slope”
+
+What Python is not allowed to say:
+“Therefore this must be true”
+“Therefore the structure is correct”
+
+Python answers:
+“Does the model do what the theory expects?”
+
+3️⃣ Lean = Structural Authority
+
+What Lean is allowed to say:
+Definitions are unambiguous
+Identities are exact
+Reductions are valid
+Dependencies are explicit
+No hidden assumptions exist
+
+What Lean is not allowed to say:
+“This models reality”
+“This is physically correct”
+
+Lean answers:
+“If we accept these definitions, nothing contradicts itself.”
+
+4️⃣ Aristotle = Translator, not judge
+
+Aristotle:
+Never introduces new claims
+Never upgrades confidence
+Never replaces reasoning
+
+It only:
+Moves intent → structure
+Moves verified behavior → formal lemma
+Eliminates syntactic friction
+
+Constraint Admission Rule (CAR-01)
+
+Rule (binding):
+No new constraint, criterion, or admissibility rule may enter the theory unless it has all three layers:
+
+Minimal baseline
+
+A narrowly scoped regime with a sharp, testable signature
+
+Explicit scope limits (e.g., linearized, probe-relative, small-amplitude)
+
+Formal gate (Lean)
+
+Structural definition of what is preserved vs broken
+
+Explicit dependencies and axioms
+
+No behavioral or physical claims
+
+Behavioral consequence (Python)
+
+A predicted, directionally specific effect when the gate is violated
+
+A null effect when the gate is satisfied (within stated limits)
+
+Enforcement mechanism:
+
+Markdown proposals that lack any one layer are invalid by default.
+
+Lean modules may not be introduced without a corresponding inventory entry.
+
+Python evidence may not upgrade status; it only satisfies the “consequence” leg.

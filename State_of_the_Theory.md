@@ -4,7 +4,7 @@ Project: ToE
 
 Purpose: Epistemic inventory and stabilization
 
-Last updated: 2026-02-05
+Last updated: 2026-02-08
 
 
 
@@ -15,7 +15,7 @@ WORKSPACE STATUS (CANONICAL META)
 
 ToE workspace: ACTIVE — discriminative science phase (candidate pruning under gates/locks)
 
-Current loop focus: DR-01 -> BR-01 -> CV01 (external anchor: OV-BR-03N source.pdf; audit: OV-SEL-BR-01; pruning deliverable: OV-DR-BR-01; comparator deliverable: OV-CV-01)
+Current loop focus: DR-01 → BR-01 (external anchor: OV-BR-03N source.pdf; audit: OV-SEL-BR-01; pruning deliverable: OV-DR-BR-01)
 
 Closeout checkpoint (2026-02-04): Canonical DR-01 → BR-01 verification passed under the default admissibility manifest (blocked-by-default posture preserved). OV-DR-BR-01 invariants verified: schema=OV-DR-BR-01_candidate_pruning_table/v1; observable_id=OV-DR-BR-01; summary.counts={true:2,false:1,unknown:1}; status.blocked=true.
 
@@ -81,6 +81,48 @@ Canonical diversification comparator-class checkpoint (2026-02-05): Design cycle
   - `formal/quarantine/feasibility/BRIDGE_CANONICAL_SURFACE_SCAN_0001_TOYG_FEASIBILITY.json` (`sha256=36acfd78dafef189877cffa35156abc47d73dd8b80fad3fe1e892ae52f07d7a0`)
   - `formal/quarantine/feasibility/CRFT_C8_surface_feasibility.json` (`sha256=81dc9cd60549861906b02b420c82c0225c794302f40d8d5c6aedf714578236a1`)
 - Scheduling note (historical): implementation was deferred at design freeze time. Superseded by 2026-02-08 authorization/lift for COMP-03 (UCFF lane only).
+
+Conceptual completeness integration checkpoint (2026-02-06): Adopted a governance-safe pause on comparator expansion and new-domain additions pending the variational backbone + Noether structural spine; added a staged roadmap in Planned Viability Milestones; no locks/gates changed (bounded/report-only).
+
+State-of-the-Theory DAG enforcement checkpoint (2026-02-06): Ran dependency DAG enforcement (unknown IDs + cycles). Result: PASS (no missing IDs; no cycles). Evidence: `formal/python/tests/test_state_theory_dag.py` (pytest).
+
+Variational backbone scaffold checkpoint (2026-02-06): Added Lean-only action scaffold + Euler-Lagrange proof skeleton (structural only; no PDE/physics claims). Evidence: `formal/toe_formal/ToeFormal/Variational/ActionScaffold.lean`; `formal/toe_formal/ToeFormal/Variational/EulerLagrange.lean`.
+
+Action-specific EL checkpoint (2026-02-06): Added a declared action scaffold + action-specific EL lemma (structural only; no dynamics match claim). Evidence: `formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean`.
+
+Noether scaffold checkpoint (2026-02-06): Added abstract Noether invariants lemma scaffold (structural only; no action-specific derivation). Evidence: `formal/toe_formal/ToeFormal/Variational/Noether.lean`.
+
+Action-specific Noether checkpoint (2026-02-06): Added a declared action + symmetry + conserved-quantity instantiation (structural only; no dynamics match claim). Evidence: `formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean`.
+
+Linkage layer checkpoint (2026-02-06): Added FN-01 linkage and SYM-01 linkage lemmas (structural only; assumption-bounded). Evidence: `formal/toe_formal/ToeFormal/Variational/LinkToFN01.lean`; `formal/toe_formal/ToeFormal/Variational/LinkToSYM01.lean`.
+
+SYM-01 action invariance checkpoint (2026-02-06): Added termwise invariance -> action invariance lemma and instantiated declared action invariance under the canonical SYM-01 phase action (structural only; termwise invariance proved via point-sample norm ingredients). Evidence: `formal/toe_formal/ToeFormal/Variational/ActionInvariance.lean`; `formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean`.
+
+Action-ingredient invariance checkpoint (2026-02-06): Replaced phase-blind placeholders with point-sample norm definitions for kinetic/dispersion/coherence and proved termwise invariance under the canonical phase action (structural only). Evidence: `formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean`.
+
+First-variation representation checkpoint (2026-02-06): Added pairing + representation predicate for the declared first variation and a uniqueness-based identification lemma (structural only; assumption-bounded). Evidence: `formal/toe_formal/ToeFormal/Variational/FirstVariationDeclared.lean`.
+
+First-variation uniqueness checkpoint (2026-02-06): Replaced a raw representation-uniqueness axiom with nondegenerate-pairing + variation-surjectivity assumptions (structural only; assumption-bounded). Evidence: `formal/toe_formal/ToeFormal/Variational/FirstVariationUniqueness.lean`; `formal/toe_formal/ToeFormal/Variational/FirstVariationDeclared.lean`.
+
+Variation-surjectivity discharge checkpoint (2026-02-06): Proved variation surjectivity via constant variations; uniqueness now depends only on nondegenerate pairing (structural-only; assumption-bounded). Evidence: `formal/toe_formal/ToeFormal/Variational/FirstVariationUniqueness.lean`; `formal/toe_formal/ToeFormal/Variational/FirstVariationDeclared.lean`.
+
+Pairing-contract localization checkpoint (2026-02-06): Replaced a free-floating nondegeneracy axiom with a named pairing contract object; nondegeneracy is now an explicit field on the contract (structural-only; assumption-bounded). Evidence: `formal/toe_formal/ToeFormal/Variational/PairingContract.lean`; `formal/toe_formal/ToeFormal/Variational/FirstVariationDeclared.lean`.
+
+Concrete grid pairing checkpoint (2026-02-06): Added a finite-grid field model, a concrete ℝ-valued pairing, and a nondegeneracy proof; provided a `PairingContract` instance for the grid model (structural-only; mathematical proof on finite grid). Evidence: `formal/toe_formal/ToeFormal/Variational/DiscreteField.lean`; `formal/toe_formal/ToeFormal/Variational/PairingConcreteGrid.lean`.
+
+FN-side linkage discharge checkpoint (2026-02-06): Derived EL operator identification with the promoted FN-01 survivor `P_cubic` under explicit first-variation representation assumptions (structural-only; assumption-bounded, not analytic). Evidence: `formal/toe_formal/ToeFormal/Variational/FirstVariationDeclared.lean`; `formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Pcubic.lean`.
+
+Evolution linkage closure checkpoint (2026-02-08): Canonical declared-dynamics routing is now build-verified through a discrete step-generator linkage (`StepGenerator` + `GeneratorStepLaw`) and declared Noether routing on the same evolution surface (structural-only; assumption-bounded). Evidence: `formal/toe_formal/ToeFormal/Variational/EvolutionGeneratorLaw.lean`; `formal/toe_formal/ToeFormal/Variational/SemigroupWithGenerator.lean`; `formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean`; `formal/toe_formal/ToeFormal/Variational/DeclaredDynamics.lean`; `formal/python/tests/test_lean_evolution_generator_linkage.py`; `formal/python/tests/test_lean_declared_dynamics_bridge.py`; `formal/python/tests/test_lean_variational_core_build_guard.py`.
+
+Evolution flow-law checkpoint (2026-02-06): Added explicit flow-law contract (abstract time-derivative + compatibility with operator) and wired declared evolution to the strong interface (structural-only; assumption-bounded). Evidence: `formal/toe_formal/ToeFormal/Variational/EvolutionFlowLaw.lean`; `formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean`.
+
+Semigroup evolution checkpoint (2026-02-06): Added flow semigroup wrapper and made declared evolution definitional from a declared semigroup; generator law now the only remaining linkage assumption (structural-only). Evidence: `formal/toe_formal/ToeFormal/Variational/SemigroupEvolution.lean`; `formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean`; `formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean`.
+
+Generator-law canonicalization checkpoint (2026-02-08): Main linkage path no longer depends on derivative-at-0 placeholders; `GeneratorLawStrong` now bundles a fixed-step generator law with flow-law routing only (structural-only; assumption-bounded). Evidence: `formal/toe_formal/ToeFormal/Variational/EvolutionGeneratorLaw.lean`; `formal/toe_formal/ToeFormal/Variational/SemigroupWithGenerator.lean`; `formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean`.
+
+Unified generator-contract checkpoint (2026-02-06): Packaged the flow semigroup and strengthened generator law into a single `SemigroupWithGenerator` contract and rewired declared evolution to depend on that unified object (structural-only; assumption-bounded). Evidence: `formal/toe_formal/ToeFormal/Variational/SemigroupWithGenerator.lean`; `formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean`; `formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean`.
+
+Completeness register checkpoint (2026-02-06): Added Completeness Register + comparator-expansion block rule + falsifiability pressure metric (bookkeeping only; no enforcement/locks).
 
 Bridge attempts (bounded; falsifiable; structural-only)
 - BRIDGE_TICKET_0001 (C6↔UCFF dispersion square): formal/quarantine/bridge_tickets/BRIDGE_TICKET_0001_c6_ucff_dispersion_square.md
@@ -427,6 +469,202 @@ Guardrails (non-negotiable):
 
 
 
+Conceptual / Technical Completeness Integration Plan (Roadmap; governance-safe)
+
+- Phase 1 — Variational backbone (highest priority)
+	Status: Implemented (structural-only; action-specific EL lemma exists; dynamics match pending)
+	Actions: define minimal action functional (schematic: kinetic + dispersion operator + coherence penalty); Lean-only Euler-Lagrange derivation (generic form only; no claim of CP-NLSE/CE-NWE match yet); add FN-01 inventory note "has variational parent" (Structural/Lean only, after dynamics match).
+	Evidence (scaffold): formal/toe_formal/ToeFormal/Variational/ActionScaffold.lean; formal/toe_formal/ToeFormal/Variational/EulerLagrange.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean
+	Planned evidence: Action-specific derivation lemmas tying EL to declared dynamics.
+	Notes: No behavioral upgrade; no empirical claims.
+
+- Phase 2 — Symmetry closure (global phase / translation / rotation)
+	Status: Implemented (2026-02-05) via SYM-01 symmetry gate suite
+	Evidence: formal/toe_formal/ToeFormal/Constraints/SYM01_PhaseInvariant.lean; formal/python/tests/test_sym01_symmetry_gates.py; formal/markdown/locks/constraints/SYM-01_symmetry_gates.md
+	Notes: Semantic/probe-relative; no Noether/conservation claims.
+
+- Phase 3 — Noether invariants (structural only)
+	Status: Implemented (structural-only; action-specific Noether lemma exists; dynamics match pending)
+	Actions: derive conserved quantities from the Phase 1 action (mass/energy analogs) and export Lean lemmas.
+	Evidence (scaffold): formal/toe_formal/ToeFormal/Variational/Noether.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean
+	Planned evidence: Action-specific derivation + invariant export lemmas.
+	Notes: Structural coherence only; conservation != empirical validation.
+
+- Phase 4 — Observability / representation hygiene
+	Status: Implemented (OV-OBS-01, OV-FG-01)
+	Evidence: formal/python/artifacts/diagnostics/OV-OBS-01/metadata_invariance.json; formal/python/toe/observables/ovobs01_observability_metadata_invariance.py; formal/python/tools/ovobs01_metadata_invariance.py; formal/python/artifacts/diagnostics/OV-FG-01/ring_graph_fourier_mode_audit.json; formal/python/toe/observables/ovfg01_graph_fourier_mode_audit.py; formal/python/tools/ovfg01_graph_fourier_mode_audit.py
+	Notes: Behavioral audits only; no promotion.
+
+- Phase 5 — Comparator expansion (after Phases 1-4)
+	Status: Partially enabled (COMP-03 UCFF lane authorized post COMP-01/COMP-02; broader expansion remains gated)
+	Actions: keep UCFF dispersion comparator lane locked and deterministic; revisit canonical surface diversification; consider new domains only after explicit policy lift.
+	Notes: Comparator expansion is no longer globally blocked, but authorization remains scoped and governance-recorded.
+
+
+
+COMPLETENESS REGISTER (BOOKKEEPING ONLY)
+
+GapID: COMP-01
+Layer: Lean
+Item: Variational parent for FN-01 (action + EL derivation)
+Status: Implemented (structural-only; action-specific EL lemma exists)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/ActionScaffold.lean; formal/toe_formal/ToeFormal/Variational/EulerLagrange.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean
+Evidence path: formal/toe_formal/ToeFormal/Variational/ActionScaffold.lean; formal/toe_formal/ToeFormal/Variational/EulerLagrange.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean
+Exit criteria: Action-specific EL lemma exists for the declared action scaffold (structural-only; no dynamics match claim).
+
+GapID: COMP-02
+Layer: Lean
+Item: Noether invariants from declared action
+Status: Implemented (structural-only; action-specific Noether lemma exists)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/Noether.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean
+Evidence path: formal/toe_formal/ToeFormal/Variational/Noether.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean
+Exit criteria: At least one conserved-quantity lemma instantiated for the declared action + symmetry (structural-only).
+
+GapID: COMP-03
+Layer: Design / Python
+Item: UCFF dispersion comparator lane implementation
+Status: Implemented (authorized post COMP-01 + COMP-02; deterministic front-door comparator lane, structural-only)
+Owner ticket/module: formal/quarantine/bridge_tickets/BRIDGE_TICKET_COMPARATOR_CLASS_0001_dispersion_lane_ucff.md; formal/python/toe/comparators/cv03_ucff_dispersion_v1.py
+Evidence path: formal/quarantine/bridge_tickets/BRIDGE_TICKET_COMPARATOR_CLASS_0001_dispersion_lane_ucff.md; formal/python/toe/comparators/cv03_ucff_dispersion_v1.py; formal/python/tests/test_cv03_ucff_dispersion_v1_front_door.py; formal/python/tests/test_cv03_ucff_dispersion_v1_surface_contract_freeze.py; formal/docs/cv03_ucff_dispersion_v1_front_door_contract.md; formal/external_evidence/ucff_dispersion_comparator_domain_01/cv03_reference_ucff_core_report.json; formal/external_evidence/ucff_dispersion_comparator_domain_01/cv03_candidate_ucff_core_report.json
+Exit criteria: Satisfied on 2026-02-08 by explicit authorization after COMP-01 + COMP-02 closure, with deterministic comparator record generation, frozen surface-contract tests, and pinned negative controls.
+Notes: Lane implements design-taxonomy reason codes (`FAIL_DISPERSION_SHAPE_MISMATCH`, `FAIL_DISPERSION_SIGN`, `FAIL_DISPERSION_MONOTONICITY`, `FAIL_K_GRID_ORDER`, `FAIL_K_GRID_ALIGNMENT`, `FAIL_DISPERSION_NONDETERMINISTIC`) and remains no-truth-upgrade.
+
+GapID: COMP-04
+Layer: Python
+Item: Observability audits (OV-OBS-01, OV-FG-01)
+Status: Implemented
+Owner ticket/module: formal/python/toe/observables/ovobs01_observability_metadata_invariance.py; formal/python/toe/observables/ovfg01_graph_fourier_mode_audit.py
+Evidence path: formal/python/artifacts/diagnostics/OV-OBS-01/metadata_invariance.json; formal/python/artifacts/diagnostics/OV-FG-01/ring_graph_fourier_mode_audit.json
+Exit criteria: Keep artifacts pinned; changes require explicit approval.
+
+GapID: COMP-05
+Layer: Governance
+Item: Comparator-expansion block rule
+Status: Lifted (2026-02-08; scoped to COMP-03 UCFF lane; broader expansion still policy-gated)
+Scope: COMP-03/OV-CV-03 (UCFF dispersion comparator lane) only.
+Owner ticket/module: State_of_the_Theory.md; formal/docs/ucff_comparator_expansion_design_gate.md
+Evidence path: State_of_the_Theory.md; formal/docs/ucff_comparator_expansion_design_gate.md; formal/python/tests/test_state_doc_comp03_comp05_transition.py
+Exit criteria: Satisfied after COMP-01 + COMP-02 exit criteria were met; lift remains explicit and scoped.
+Notes: This lift does not create blanket comparator authorization; new lanes still require explicit governance entries and evidence.
+
+
+GapID: COMP-06
+Layer: Lean
+Item: Linkage layer (DeclaredAction <-> FN-01 / SYM-01)
+Status: Implemented (structural-only; linkage lemmas + action-invariance instantiation)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/LinkToFN01.lean; formal/toe_formal/ToeFormal/Variational/LinkToSYM01.lean; formal/toe_formal/ToeFormal/Variational/ActionInvariance.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean
+Evidence path: formal/toe_formal/ToeFormal/Variational/LinkToFN01.lean; formal/toe_formal/ToeFormal/Variational/LinkToSYM01.lean; formal/toe_formal/ToeFormal/Variational/ActionInvariance.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean
+Exit criteria: At least one lemma importing FN-01 and one lemma importing SYM-01 that routes to the declared action / Noether scaffolds (structural-only), plus an action-invariance instantiation with proved termwise invariance for declared ingredients.
+
+
+GapID: COMP-07
+Layer: Lean
+Item: FN-side linkage discharge (EL_matches_FN01_form for P_cubic)
+Status: Implemented (structural-only; assumption-bounded derivation)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/FirstVariationDeclared.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Pcubic.lean
+Evidence path: formal/toe_formal/ToeFormal/Variational/FirstVariationDeclared.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Pcubic.lean
+Exit criteria: EL_matches_FN01_form proven for the promoted survivor P_cubic via first-variation representation assumptions (structural-only; non-analytic).
+
+GapID: COMP-FN-DERIVE
+Layer: Lean
+Item: EL derived from first variation (non-tautological)
+Status: In progress (surjectivity discharged; pairing contract localized; nondegeneracy proven for grid model; Rep32-first uniqueness uses the Rep32 pairing contract; Field2DRep uniqueness is now routed through the explicit quotient pairing contract; Field2D nondegeneracy remains assumed only in the legacy Field2D lane)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/PairingContract.lean; formal/toe_formal/ToeFormal/Variational/FirstVariationUniqueness.lean; formal/toe_formal/ToeFormal/Variational/FirstVariationDeclared.lean; formal/toe_formal/ToeFormal/Variational/DiscreteField.lean; formal/toe_formal/ToeFormal/Variational/PairingConcreteGrid.lean; formal/toe_formal/ToeFormal/Variational/FirstVariationRepDefFieldRep.lean; formal/toe_formal/ToeFormal/Variational/FirstVariationUniquenessFieldRep.lean; formal/toe_formal/ToeFormal/Variational/FirstVariationDeclaredFieldRep.lean; formal/toe_formal/ToeFormal/Variational/FieldRepresentationPairingContract.lean
+Evidence path: formal/toe_formal/ToeFormal/Variational/PairingContract.lean; formal/toe_formal/ToeFormal/Variational/FirstVariationUniqueness.lean; formal/toe_formal/ToeFormal/Variational/FirstVariationDeclared.lean; formal/toe_formal/ToeFormal/Variational/DiscreteField.lean; formal/toe_formal/ToeFormal/Variational/PairingConcreteGrid.lean; formal/toe_formal/ToeFormal/Variational/FirstVariationRepDefFieldRep.lean; formal/toe_formal/ToeFormal/Variational/FirstVariationUniquenessFieldRep.lean; formal/toe_formal/ToeFormal/Variational/FirstVariationDeclaredFieldRep.lean; formal/toe_formal/ToeFormal/Variational/FieldRepresentationPairingContract.lean
+Exit criteria: Replace nondegenerate-pairing + surjectivity assumptions with a non-tautological derivation of EL_toe from the declared first variation.
+Rep32 sublane (DERIVE-Q32): formal/toe_formal/ToeFormal/Variational/FirstVariationDeclaredRep32.lean replays the representation-uniqueness scaffold on `Field2DRep32` using the proved Rep32 pairing contract (still structural placeholders for EL/firstVariation).
+Field2DRep quotient lane: formal/toe_formal/ToeFormal/Variational/FirstVariationDeclaredFieldRep.lean replays the representation-uniqueness scaffold on `Field2DRep` using `pairingContractFieldRep` (no Field2D pairing assumption).
+Rep32 definition lane: formal/toe_formal/ToeFormal/Variational/FirstVariationRep32Def.lean defines `firstVariationRep32` by pairing with `P_rep32` and proves `P_represents_rep32`.
+Rep32 action scaffold: formal/toe_formal/ToeFormal/Variational/ActionRep32Def.lean defines `actionRep32` and supplies `EL_represents_rep32` via the scaffold (no longer an axiom).
+Rep32 action→variation boundary: formal/toe_formal/ToeFormal/Variational/ActionToFirstVariationBridgeRep32.lean defines the formal operator as a fixed-step finite-difference quotient (`rep32Step`, currently 1), keeps linearity laws as explicit axioms, and proves `zero_action`; the bridge predicate remains analytic lane (not yet discharged).
+Rep32 formal operator is parameterized by ε with an explicit nonzero guard (`formalFirstVariationRep32At ε hε`); the fixed-step operator is the pinned specialization. The bridge predicate is likewise parameterized (`ActionVariationBridgeRep32At ε hε`) with the fixed-step bridge as its specialization.
+Rep32 conditional discharge: `ActionRep32FiniteDifferenceRepresentsEL (ε, hε)` provides an assumption-scoped route to `ActionVariationBridgeRep32At ε hε`.
+Rep32 conditional discharge (decomposed): `ActionRep32FiniteDifferenceRepresentsP (ε, hε)`, `ActionRep32ELMatchesP`, and `ActionRep32PairingRespectsELP` split the ε-bridge assumption into independently-retirable parts; `ActionRep32FiniteDifferenceRepresentsEL_of_parts` assembles them.
+Regularity Admissibility Condition (RAC): Physical admissibility requires explicit growth-control conditions sufficient to guarantee regularity in nonuniform settings. RAC is a declared selection principle (not a theorem) and governs when analytic bridges may be discharged.
+RAC energy-regime hook (Lean): `ToeFormal/Gates/RAC.lean` defines `RAC_EnergyClass` with `{conservative, dissipative}` as a documentation-level classifier for admissibility regimes (no axioms).
+Rep32 cubic lane (RAC-scoped): `ActionRep32CubicLane.lean` packages `Rep32CubicLaneAssumptions` (including `ε ≠ 0`, `actionRep32.action = actionRep32Cubic g`, `P_rep32 = P_cubic_rep32_def g`, and `RAC_Rep32_Cubic g`) and provides the default wrapper `Rep32_cubic_lane_declared_g`, yielding `ActionVariationBridgeRep32At ε hε` and `EL_toe_rep32 = P_cubic_rep32_def declared_g_rep32`.
+Field2D representation quotient contract: `FieldRepresentationPairingContract.lean` derives nondegeneracy on `Field2DRep` using the Rep delta-coverage axioms (`Rep_hits_delta_one/I`) and provides `pairingContractFieldRep` as the explicit quotient-policy pairing contract (structural-only; no `Rep_injective`); consumed by `FirstVariationDeclaredFieldRep.lean`.
+Legacy Field2D FN linkage: `FirstVariationDeclared.lean` + `DischargeELMatchesFN01Pcubic.lean` still assume Field2D pairing nondegeneracy (legacy lane; not on the critical path after the Field2DRep reroute).
+Dependency sweep (2026-02-08): no non-legacy modules on the critical path import `FirstVariationDeclared.lean`; quotient-lane modules (`FirstVariationDeclaredFieldRep.lean`) are the default for EL/uniqueness on the main path.
+Default front door (2026-02-08): `FirstVariationDeclaredFrontDoor.lean` re-exports the quotient-lane EL/uniqueness symbols; a front-door enforcement test prevents new imports of `FirstVariationDeclared.lean` outside the legacy allowlist.
+Legacy FN/EL import guard (2026-02-08): `test_lean_legacy_imports_blocked.py` blocks new imports of `DischargeELMatchesFN01Pcubic.lean` outside the explicit legacy allowlist.
+Rep32 FN linkage stub: formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep32Pcubic.lean pins `P_rep32` to a Rep32 cubic candidate and derives `EL_toe_rep32 = P_cubic_rep32 declared_g_rep32` (structural-only).
+Rep32 FN linkage alignment: `P_cubic_rep32` is now definitionally `P_cubic_rep32_def` from the Rep32 action lane, eliminating the “two cubics” ambiguity.
+
+Replacement Plan: PairingContract for Field2D
+Goal: Replace assumed `pairingContract : PairingContract Field2D` with a proved contract derived from a representation to a finite grid.
+Required artifacts (Lean):
+- `Rep : Field2D → FieldGrid nx ny` (representation map)
+- `pairingField2D` defined by pullback: `pairingField2D x v := gridPairing (Rep x) (Rep v)`
+- Proof obligations: `Rep_injective` (or explicit quotient/equality choice) and nondegeneracy of pullback pairing (follows from `Rep_injective` + `gridPairing_nondegenerate`).
+Implementation stub (2026-02-07):
+- formal/toe_formal/ToeFormal/Variational/FieldRepresentation.lean defines `repNx = 32`, `repNy = 32`, `Rep`, `pairingField2D`, and the explicit quotient policy (`RepEq` / `Field2DRep`).
+Sample slice (2026-02-07):
+- formal/toe_formal/ToeFormal/Variational/FieldRepresentationSample.lean defines `Field2DSample`, `RepSample`, and delta-coverage on the sample slice via explicit point-sampling; adds delta-probe compatibility axioms for `Rep` and derives `Rep_hits_delta_one/I` for the global `Rep` on the embedded slice.
+Field2DRep derivation (2026-02-08):
+- formal/toe_formal/ToeFormal/Variational/FirstVariationDeclaredFieldRep.lean replays the representation-uniqueness scaffold on `Field2DRep` using `pairingContractFieldRep` (critical path now in the quotient lane; no Field2D pairing assumption required).
+- Build check: `.\build.ps1 ToeFormal.Variational.FirstVariationDeclaredFieldRep` (green on 2026-02-08).
+Rep32 lane (2026-02-07):
+- formal/toe_formal/ToeFormal/Variational/FieldRepresentationRep32.lean defines `Rep32` by pinned evaluation, the Rep32 quotient policy (`Field2DRep32`, `pairingRep32`), and delta-coverage theorems without compatibility axioms.
+Governance gates (repo-level):
+- `nx, ny` must be pinned and audited (no silent grid-size drift).
+- `Rep` must be path-pinned to the same discretization used in downstream numerics (if/when added).
+- Until `Rep_injective` is proven, `Field2D` pairing nondegeneracy remains assumed in the legacy Field2D lane; the FN derivation now routes pairing nondegeneracy through the quotient-policy contract on `Field2DRep`.
+
+GapID: COMP-FN-REP-GRID
+Layer: Lean
+Item: Field2D → grid representation and injectivity/quotient decision
+Status: In progress (Rep stub + quotient policy recorded; quotient pairing contract proved and consumed; injectivity proof pending)
+Note: Primary discharge path is quotient-based nondegeneracy on `Field2DRep` using `pairingContractFieldRep`; the quotient lane is now consumed in `FirstVariationDeclaredFieldRep.lean`. Abstract `Rep` remains available as a future interface. `Field2D` nondegeneracy remains assumed only in the legacy Field2D lane until injectivity is proven.
+Owner ticket/module: State_of_the_Theory.md
+Evidence path: State_of_the_Theory.md; formal/toe_formal/ToeFormal/Variational/FieldRepresentation.lean
+Exit criteria: Provide a pinned `Rep : Field2D → FieldGrid nx ny` with audited grid sizes and either (a) a proof of `Rep_injective` or (b) an explicit quotient/equality policy that makes nondegeneracy well-defined.
+
+GapID: COMP-EVOL-LINK
+Layer: Lean
+Item: Evolution linkage for Noether conservation
+Status: Discharged (non-tautological fixed-step operator-generated flow via `StepGenerator`/`GeneratorStepLaw`; build-verified; structural-only)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/SemigroupEvolution.lean; formal/toe_formal/ToeFormal/Variational/EvolutionFlowLaw.lean; formal/toe_formal/ToeFormal/Variational/EvolutionGeneratorLaw.lean; formal/toe_formal/ToeFormal/Variational/SemigroupWithGenerator.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean; formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean; formal/toe_formal/ToeFormal/Variational/DeclaredDynamics.lean
+Evidence path: formal/toe_formal/ToeFormal/Variational/SemigroupEvolution.lean; formal/toe_formal/ToeFormal/Variational/EvolutionFlowLaw.lean; formal/toe_formal/ToeFormal/Variational/EvolutionGeneratorLaw.lean; formal/toe_formal/ToeFormal/Variational/SemigroupWithGenerator.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean; formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean; formal/toe_formal/ToeFormal/Variational/DeclaredDynamics.lean; formal/python/tests/test_lean_evolution_generator_linkage.py; formal/python/tests/test_lean_declared_dynamics_bridge.py; formal/python/tests/test_lean_variational_core_build_guard.py
+Exit criteria: Satisfied on 2026-02-08 by replacing generator-at-0 assumptions with fixed-step generator laws and routing declared Noether conservation along the same declared evolution surface (structural-only).
+Notes: `FlowLaw`/`GeneratorLaw` linkage contracts are now data-carrying (`Type`) surfaces; flow-law witnesses are exported as definitions and covered by a deterministic Lean compile guard test.
+
+GapID: COMP-FN-REP32-LINK
+Layer: Lean
+Item: FN-01 Rep32 cubic lane discharge path (tracked + build-verified)
+Status: Implemented (tracked modules + deterministic Lean build guard; structural-only)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/ActionRep32CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep32Pcubic.lean
+Evidence path: formal/toe_formal/ToeFormal/Variational/ActionRep32CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep32Pcubic.lean; formal/python/tests/test_lean_fn01_rep32_build_guard.py; formal/python/tests/test_fn01_candidate_api_enforced.py
+Exit criteria: Rep32 cubic lane and FN-01 Rep32 discharge modules are versioned and compile via deterministic build guard, with FN-01 candidate API front-door import policy enforced.
+Notes: Build guard compiles `ToeFormal.Variational.ActionRep32CubicLane` and `ToeFormal.Variational.DischargeELMatchesFN01Rep32Pcubic`; no analytic/physics truth-claim upgrade.
+
+GapID: COMP-FN-REP32-64-EQUIV
+Layer: Lean / Governance
+Item: Rep32<->Rep64 equivalence target for comparator interpretability
+Status: Implemented (structural equivalence artifact + build guard + policy-gated cross-rep comparator claim)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/FNRep32Rep64Equivalence.lean; formal/python/tests/test_lean_fn_rep32_rep64_equivalence_build_guard.py; formal/python/toe/comparators/comparator_rep_interpretability_manifest.json; formal/python/tests/test_comparator_rep_policy_gate.py
+Evidence path: formal/toe_formal/ToeFormal/Variational/FNRep32Rep64Equivalence.lean; formal/python/tests/test_lean_fn_rep32_rep64_equivalence_build_guard.py; formal/python/toe/comparators/comparator_rep_interpretability_manifest.json; formal/python/tests/test_comparator_rep_policy_gate.py
+Exit criteria: At least one comparator lane is promoted to `cross_rep_equivalent` only with `FN_REP_EQ_POLICY_V1` and an explicit Lean proof pointer; equivalence artifact is build-verified.
+Notes: `cv03_ucff_dispersion_v1` is now `cross_rep_equivalent` under `FN_REP_EQ_POLICY_V1` with proof artifact `FNRep32Rep64Equivalence.lean`; interpretation remains structural-only and does not upgrade external truth posture.
+
+GapID: COMP-FN-REP-NONALIAS-EQUIV-01
+Layer: Lean / Governance
+Item: Non-alias cross-representation equivalence target 01 (Rep32 -> quotient lane)
+Status: In progress (skeleton + build guard; proof pending)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean; formal/python/tests/test_lean_fn_rep_nonalias_equivalence01_build_guard.py
+Evidence path: formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean; formal/python/tests/test_lean_fn_rep_nonalias_equivalence01_build_guard.py; formal/python/tests/test_state_doc_comp_fn_rep_nonalias_equivalence01.py
+Exit criteria: Define explicit non-identity transport maps between rep lanes and discharge a comparator-surface invariance lemma without relying on definitional equality; keep build guard green.
+Notes: Comparator promotion remains blocked until a non-alias invariance proof is discharged; current artifact is structural-only and uses placeholder transport/invariance declarations; policy anchor `eligibleForCrossRep` (factor-through `.val`) in formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean with witnesses `comparatorSurfaceNonAlias_eligible` (eligible) and `diagnosticNonAlias_not_eligible` (tag-sensitive, not eligible).
+
+GapID: COMP-FN-REP
+Layer: Lean / Governance
+Item: FN representation equivalence/quotient policy + additional representation lane
+Status: In progress (policy token pinned; comparator/rep gate enforced; Rep64 lane build-verified; injectivity/equivalence proofs pending)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/FNRepresentationEquivalencePolicy.lean; formal/toe_formal/ToeFormal/Variational/ActionRep64CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep64Pcubic.lean; formal/python/toe/constraints/fn_rep_equivalence_policy.json; formal/python/toe/comparators/comparator_rep_interpretability_manifest.json
+Evidence path: formal/toe_formal/ToeFormal/Variational/FNRepresentationEquivalencePolicy.lean; formal/toe_formal/ToeFormal/Variational/ActionRep64CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep64Pcubic.lean; formal/python/tests/test_lean_fn01_rep64_build_guard.py; formal/python/tests/test_comparator_rep_policy_gate.py; formal/python/toe/constraints/fn_rep_equivalence_policy.json; formal/python/toe/comparators/comparator_rep_interpretability_manifest.json
+Exit criteria: Explicit equivalence/quotient contract is pinned, at least one non-Rep32 FN lane is tracked + build-guarded, and comparator lanes cannot assert cross-representation interpretability without the pinned policy token.
+Notes: Comparator claims default to `within_rep_only`; cross-rep equivalence claims require `FN_REP_EQ_POLICY_V1`, an explicit manifest token, and a Lean proof pointer (see `COMP-FN-REP32-64-EQUIV` for the first promoted lane).
+
 GapID: COMP-PRED-FALS
 Layer: Governance
 Item: At least one unique falsifier/prediction path
@@ -440,55 +678,64 @@ EN01 regime note: the FAIL case corresponds to a dissipative regime, not a unive
 ST01 regime note: PASS corresponds to conservative-regime shape stability under the pinned v1 soliton run; FAIL corresponds to dissipative damping with measurable shape degradation.
 ST01 resolution note: the n64 -> n128 convergence lane is a pinned numerical adequacy check on the benchmark surface, not a universal physical claim.
 TG01 regime note: PASS corresponds to conservative trapped-state shape stability under pinned harmonic confinement; FAIL corresponds to dissipative damping with measurable trap-shape degradation.
-OV-CV-01 role note: v0 remains integrity-only (`comparator_role=integrity_only`); v1 is a discriminative-candidate lane (`comparator_role=discriminative_candidate`) with cross-artifact residual checks under declared pinned/portable tolerance profiles and no external truth-claim upgrade.
+OV-CV-01 role note: v0 remains `integrity_only`; v1 is `discriminative_candidate` with a non-tautological cross-artifact residual (`abs(c_s-c0)`) under `TOE_CV01_TOLERANCE_PROFILE`.
 OV-CV-BR-01 coupling note: BR pruning does not consume CV01 implicitly; coupling is explicit via policy mapping (`cv01_v1_pruning_reason_policy.json`) and lock-tested bridge records only.
 OV-CV-02 scope note: Domain-02 lane is pinned as integrity-only (`DRBR-DOMAIN-02`) and does not upgrade external truth posture.
 OV-CV-03 scope note: UCFF lane is `discriminative_candidate` with deterministic front-door comparison on pinned UCFF report artifacts and failure taxonomy for grid alignment/order, sign, monotonicity, shape mismatch, and fingerprint determinism checks; no external truth-claim upgrade.
 
-GapID: COMP-03
-Layer: Design / Python
-Item: UCFF dispersion comparator lane implementation
-Status: Implemented (authorized post COMP-01 + COMP-02; deterministic front-door comparator lane, structural-only)
-Owner ticket/module: formal/quarantine/bridge_tickets/BRIDGE_TICKET_COMPARATOR_CLASS_0001_dispersion_lane_ucff.md; formal/python/toe/comparators/cv03_ucff_dispersion_v1.py
-Evidence path: formal/quarantine/bridge_tickets/BRIDGE_TICKET_COMPARATOR_CLASS_0001_dispersion_lane_ucff.md; formal/python/toe/comparators/cv03_ucff_dispersion_v1.py; formal/python/tests/test_cv03_ucff_dispersion_v1_front_door.py; formal/python/tests/test_cv03_ucff_dispersion_v1_surface_contract_freeze.py; formal/docs/cv03_ucff_dispersion_v1_front_door_contract.md; formal/external_evidence/ucff_dispersion_comparator_domain_01/cv03_reference_ucff_core_report.json; formal/external_evidence/ucff_dispersion_comparator_domain_01/cv03_candidate_ucff_core_report.json
-Exit criteria: Satisfied on 2026-02-08 by explicit authorization after COMP-01 + COMP-02 closure, with deterministic comparator record generation, frozen surface-contract tests, and pinned negative controls.
-Notes: Lane implements design-taxonomy reason codes (`FAIL_DISPERSION_SHAPE_MISMATCH`, `FAIL_DISPERSION_SIGN`, `FAIL_DISPERSION_MONOTONICITY`, `FAIL_K_GRID_ORDER`, `FAIL_K_GRID_ALIGNMENT`, `FAIL_DISPERSION_NONDETERMINISTIC`) and remains no-truth-upgrade.
-
-GapID: COMP-05
+GapID: TOE-TARGET-SPEC
 Layer: Governance
-Item: Comparator-expansion block rule
-Status: Lifted (2026-02-08; scoped to COMP-03 UCFF lane; broader expansion still policy-gated)
-Scope: COMP-03/OV-CV-03 (UCFF dispersion comparator lane) only.
-Owner ticket/module: State_of_the_Theory.md; formal/docs/ucff_comparator_expansion_design_gate.md
-Evidence path: State_of_the_Theory.md; formal/docs/ucff_comparator_expansion_design_gate.md; formal/python/tests/test_state_doc_comp03_comp05_transition.py
-Exit criteria: Satisfied after COMP-01 + COMP-02 exit criteria were met; lift remains explicit and scoped.
-Notes: This lift does not create blanket comparator authorization; new lanes still require explicit governance entries and evidence.
+Item: ToE target checklist (governed spec)
+Status: Implemented (spec doc + doc-gate)
+Owner ticket/module: formal/docs/toe_target_spec_v1.md
+Evidence path: formal/docs/toe_target_spec_v1.md; formal/python/tests/test_toe_target_spec_doc.py
+Exit criteria: Spec ID and target checklist are pinned; progress ladder stages are explicit.
+Notes: This is a governance artifact only; it does not assert physics truth or confer any epistemic status.
 
-GapID: COMP-EVOL-LINK
-Layer: Lean
-Item: Evolution linkage for Noether conservation
-Status: Discharged (non-tautological fixed-step operator-generated flow via `StepGenerator`/`GeneratorStepLaw`; build-verified; structural-only)
-Owner ticket/module: formal/toe_formal/ToeFormal/Variational/SemigroupEvolution.lean; formal/toe_formal/ToeFormal/Variational/EvolutionFlowLaw.lean; formal/toe_formal/ToeFormal/Variational/EvolutionGeneratorLaw.lean; formal/toe_formal/ToeFormal/Variational/SemigroupWithGenerator.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean; formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean; formal/toe_formal/ToeFormal/Variational/DeclaredDynamics.lean
-Evidence path: formal/toe_formal/ToeFormal/Variational/SemigroupEvolution.lean; formal/toe_formal/ToeFormal/Variational/EvolutionFlowLaw.lean; formal/toe_formal/ToeFormal/Variational/EvolutionGeneratorLaw.lean; formal/toe_formal/ToeFormal/Variational/SemigroupWithGenerator.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean; formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean; formal/toe_formal/ToeFormal/Variational/DeclaredDynamics.lean; formal/python/tests/test_lean_evolution_generator_linkage.py; formal/python/tests/test_lean_declared_dynamics_bridge.py; formal/python/tests/test_lean_variational_core_build_guard.py
-Exit criteria: Satisfied on 2026-02-08 by replacing generator-at-0 assumptions with fixed-step generator laws and routing declared Noether conservation along the same declared evolution surface (structural-only).
-Notes: `FlowLaw`/`GeneratorLaw` linkage contracts are now data-carrying (`Type`) surfaces; flow-law witnesses are exported as definitions and covered by a deterministic Lean compile guard test.
-GapID: COMP-FN-REP32-LINK
-Layer: Lean
-Item: FN-01 Rep32 cubic lane discharge path (tracked + build-verified)
-Status: Implemented (tracked modules + deterministic Lean build guard; structural-only)
-Owner ticket/module: formal/toe_formal/ToeFormal/Variational/ActionRep32CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep32Pcubic.lean
-Evidence path: formal/toe_formal/ToeFormal/Variational/ActionRep32CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep32Pcubic.lean; formal/python/tests/test_lean_fn01_rep32_build_guard.py; formal/python/tests/test_fn01_candidate_api_enforced.py
-Exit criteria: Rep32 cubic lane and FN-01 Rep32 discharge modules are versioned and compile via deterministic build guard, with FN-01 candidate API front-door import policy enforced.
-Notes: Build guard compiles `ToeFormal.Variational.ActionRep32CubicLane` and `ToeFormal.Variational.DischargeELMatchesFN01Rep32Pcubic`; no analytic/physics truth-claim upgrade.
+GapID: COMP-REL-DISP-01
+Layer: Governance
+Item: Relativistic limit dispersion comparator lane (scaffold)
+Status: In progress (design-only scaffold; no comparator implementation yet)
+Owner ticket/module: formal/docs/relativistic_limit_dispersion_lane_spec.md
+Evidence path: formal/docs/relativistic_limit_dispersion_lane_spec.md; formal/python/tests/test_relativistic_limit_dispersion_lane_doc.py
+Exit criteria: Comparator module + deterministic front door exist; invariant channels are representation-eligible; tests lock the front-door contract.
+Notes: Lane is blocked from promotion until non-alias equivalence is discharged; representation-eligible channels must factor through `.val`.
 
-GapID: COMP-FN-REP
-Layer: Lean / Governance
-Item: FN representation equivalence/quotient policy + additional representation lane
-Status: In progress (policy token pinned; comparator/rep gate enforced; Rep64 lane build-verified; injectivity/equivalence proofs pending)
-Owner ticket/module: formal/toe_formal/ToeFormal/Variational/FNRepresentationEquivalencePolicy.lean; formal/toe_formal/ToeFormal/Variational/ActionRep64CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep64Pcubic.lean; formal/python/toe/constraints/fn_rep_equivalence_policy.json; formal/python/toe/comparators/comparator_rep_interpretability_manifest.json
-Evidence path: formal/toe_formal/ToeFormal/Variational/FNRepresentationEquivalencePolicy.lean; formal/toe_formal/ToeFormal/Variational/ActionRep64CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep64Pcubic.lean; formal/python/tests/test_lean_fn01_rep64_build_guard.py; formal/python/tests/test_comparator_rep_policy_gate.py; formal/python/toe/constraints/fn_rep_equivalence_policy.json; formal/python/toe/comparators/comparator_rep_interpretability_manifest.json
-Exit criteria: Explicit equivalence/quotient contract is pinned, at least one non-Rep32 FN lane is tracked + build-guarded, and comparator lanes cannot assert cross-representation interpretability without the pinned policy token.
-Notes: Current comparator claims are `within_rep_only`; cross-rep equivalence claims require `FN_REP_EQ_POLICY_V1` and an explicit manifest token.
+GapID: COMP-NR-NLSE-01
+Layer: Governance
+Item: Nonrelativistic limit NLSE comparator lane (scaffold)
+Status: In progress (design-only scaffold; no comparator implementation yet)
+Owner ticket/module: formal/docs/nonrelativistic_limit_nlse_lane_spec.md
+Evidence path: formal/docs/nonrelativistic_limit_nlse_lane_spec.md; formal/python/tests/test_nonrelativistic_limit_nlse_lane_doc.py
+Exit criteria: Comparator module + deterministic front door exist; invariant channels are representation-eligible; tests lock the front-door contract.
+Notes: Lane is blocked from promotion until non-alias equivalence is discharged; representation-eligible channels must factor through `.val`.
+
+GapID: COMP-RL-01
+Layer: Governance
+Item: Relativistic limit dispersion comparator lane v0
+Status: Implemented (front door record + negative controls + surface freeze)
+Owner ticket/module: formal/python/toe/comparators/rl01_relativistic_dispersion_v0.py
+Evidence path: formal/python/toe/comparators/rl01_relativistic_dispersion_v0.py; formal/python/tools/rl01_relativistic_dispersion_front_door.py; formal/external_evidence/relativistic_dispersion_domain_01/rl01_reference_report.json; formal/external_evidence/relativistic_dispersion_domain_01/rl01_candidate_report.json; formal/python/tests/test_rl01_relativistic_dispersion_v0_front_door.py; formal/python/tests/test_rl01_relativistic_dispersion_v0_surface_contract_freeze.py; formal/python/tests/test_rl01_relativistic_dispersion_v0_pinned_artifacts.py; formal/python/tests/test_rl01_relativistic_dispersion_v0_lock.py; formal/markdown/locks/observables/OV-RL-01_relativistic_dispersion_v0.md; formal/docs/rl01_relativistic_dispersion_v0_front_door_contract.md; formal/python/toe/comparators/comparator_rep_interpretability_manifest.json
+Exit criteria: Deterministic record + blocked-on-missing; reason-coded negative controls; surface contract freeze tests enforced.
+Notes: `OV-RL-01` is `discriminative_candidate` and `within_rep_only`; cross-rep promotion is blocked pending non-alias eligibility proofs.
+
+GapID: COMP-RL-02
+Layer: Governance
+Item: Nonrelativistic limit NLSE comparator lane v0
+Status: Implemented (front door record + negative controls + surface freeze)
+Owner ticket/module: formal/python/toe/comparators/rl02_nonrelativistic_nlse_v0.py
+Evidence path: formal/python/toe/comparators/rl02_nonrelativistic_nlse_v0.py; formal/python/tools/rl02_nonrelativistic_nlse_front_door.py; formal/external_evidence/rl02_nonrelativistic_limit_nlse_domain_01/rl02_reference_report.json; formal/external_evidence/rl02_nonrelativistic_limit_nlse_domain_01/rl02_candidate_report.json; formal/python/tests/test_rl02_nonrelativistic_nlse_v0_front_door.py; formal/python/tests/test_rl02_nonrelativistic_nlse_v0_surface_contract_freeze.py; formal/python/tests/test_rl02_nonrelativistic_nlse_v0_pinned_artifacts.py; formal/python/tests/test_rl02_nonrelativistic_nlse_v0_lock.py; formal/markdown/locks/observables/OV-RL-02_nonrelativistic_nlse_v0.md; formal/docs/rl02_nonrelativistic_nlse_v0_front_door_contract.md; formal/python/toe/comparators/comparator_rep_interpretability_manifest.json
+Exit criteria: Deterministic record + blocked-on-missing; reason-coded negative controls; surface contract freeze tests enforced.
+Notes: `OV-RL-02` is `discriminative_candidate` and `within_rep_only`; cross-rep promotion is blocked pending non-alias eligibility proofs; governance suite green on 2026-02-09.
+
+GapID: COMP-RL-03
+Layer: Governance
+Item: Weak-field Poisson limit lane v0 (scaffold)
+Status: In progress (spec + doc-gate; no comparator implementation yet)
+Owner ticket/module: formal/quarantine/physics_target/RL03_weak_field_poisson_v0_SPEC.md
+Evidence path: formal/quarantine/physics_target/RL03_weak_field_poisson_v0_SPEC.md; formal/python/tests/test_weak_field_poisson_lane_doc.py
+Exit criteria: Comparator module + deterministic front door exist; invariant channels are representation-eligible; tests lock the front-door contract.
+Notes: This lane asserts a bounded Poisson-type correspondence only; no GR/EFE or external gravity claim.
 
 GapID: PTC-NLSE-V1
 Layer: Physics Execution
@@ -497,7 +744,15 @@ Status: Implemented (deterministic front door + pinned manifest + locked conserv
 Owner ticket/module: formal/python/tools/ptc_nlse_v1_run.py
 Evidence path: formal/quarantine/physics_target/PTC_NLSE_V1_MANIFEST.json; formal/python/tools/ptc_nlse_v1_run.py; formal/output/PTC_NLSE_V1_REPORT.json; formal/output/PTC_NLSE_V1_REPORT_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_HOOKS.json; formal/output/PTC_NLSE_V1_HOOKS_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_REPORT_SOLITON.json; formal/output/PTC_NLSE_V1_REPORT_SOLITON_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_HOOKS_SOLITON.json; formal/output/PTC_NLSE_V1_HOOKS_SOLITON_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_REPORT_TRAP.json; formal/output/PTC_NLSE_V1_REPORT_TRAP_DISSIPATIVE.json; formal/output/PTC_NLSE_V1_HOOKS_TRAP.json; formal/output/PTC_NLSE_V1_HOOKS_TRAP_DISSIPATIVE.json; formal/python/tests/test_ptc_nlse_v1_front_door_determinism.py; formal/python/tests/test_st01_soliton_shape_preservation_lane.py; formal/python/tests/test_st01_soliton_resolution_convergence_lane.py; formal/python/tests/test_tg01_trapped_ground_state_lane.py
 Exit criteria: Deterministic report generation under pinned inputs; regime-specific energy behavior (conservative ~ invariant, dissipative monotone) validated via tests.
-Notes: v1 surface is 1D periodic NLSE-like dynamics with cubic nonlinearity and optional damping; intended as the first executable physics target contract (not a proof of physical correctness). Report outputs include `time_reversal_error` in addition to dispersion/energy/norm/phase diagnostics. Policy B1 hooks are emitted as separate deterministic artifacts (`PTC_NLSE_V1_HOOKS*.json`) for SYM01/PAR01/BC01 so report schema remains stable while falsifier lanes stay front-door-driven. Manifest now includes plane-wave contract cases, bright-soliton benchmark cases, and harmonic-trap ground-state benchmark cases; soliton IC is keyed by case_id substring ('soliton') and reports shape metrics (`shape_residual`, `shape_peak_delta`, `shape_peak_ratio`). Trap cases are keyed by `V_kind="harmonic"` and report trap metrics (`trap_shape_residual`, `trap_peak_ratio`, `trap_m2_delta`). ST01 now includes a pinned n64 vs n128 resolution/convergence check as a numerical adequacy lane.
+Notes: v1 surface is 1D periodic NLSE-like dynamics with cubic nonlinearity and optional damping; intended as the first executable physics target contract (not a proof of physical correctness). Report outputs include `time_reversal_error` in addition to dispersion/energy/norm/phase diagnostics. Policy B1 hooks are emitted as separate deterministic artifacts (`PTC_NLSE_V1_HOOKS*.json`) for SYM01/PAR01/BC01 so report schema remains stable while falsifier lanes stay front-door-driven. Manifest now includes plane-wave contract cases, bright-soliton benchmark cases, and harmonic-trap ground-state benchmark cases; soliton IC is keyed by case_id substring ('soliton') and reports shape metrics (`shape_residual`, `shape_peak_delta`, `shape_peak_ratio`). Trap cases are keyed by `V_kind=\"harmonic\"` and report trap metrics (`trap_shape_residual`, `trap_peak_ratio`, `trap_m2_delta`). ST01 now includes a pinned n64 vs n128 resolution/convergence check as a numerical adequacy lane.
+
+
+
+FALSIFIABILITY PRESSURE (BOOKKEEPING ONLY)
+
+Pressure metric: For each pruning/audit table with `unknown` outcomes, track `unknown_count`. `unknown_count` must not increase across versions without a written justification entry in this file. (Bookkeeping only; no enforcement/lock.)
+
+
 
 Planned Structural Validations (Unexecuted)
 
@@ -509,6 +764,7 @@ Planned Structural Validations (Unexecuted)
 - Noether quantities from declared Lagrangian forms
 	Status: Hypothesis
 	Planned evidence: Lean derivation + invariant export lemma(s) (unwritten)
+	Notes: Abstract + action-specific Noether scaffolds exist (Variational/Noether.lean; Variational/DeclaredAction.lean); declared-Lagrangian derivation still pending.
 
 
 
@@ -522,18 +778,6 @@ Planned Constraint + Verification Extensions (Unexecuted)
 - Invariance regression battery expansion (phase/translation/rotation)
 	Status: Hypothesis
 	Role: Behavioral (Python) evidence only; no structural promotion implied.
-
-- Observability / representation-invariance audit (OV-OBS-01)
-	Status: Hypothesis
-	Role: Behavioral (Python) hygiene guardrail: observable outputs must be invariant under metadata-only perturbations.
-	Evidence: formal/python/toe/observables/ovobs01_observability_metadata_invariance.py; formal/python/tests/test_ovobs01_metadata_invariance.py
-	Notes: Operationalizes “wavefunction/state unknowability” as an engineering constraint (no dependence on unobservable provenance strings).
-
-- Graph/Fourier mode consistency audit (OV-FG-01)
-	Status: Hypothesis
-	Role: Behavioral (Python) internal consistency scaffold (continuum Fourier reasoning vs discrete graph Laplacian modes).
-	Evidence: formal/python/toe/observables/ovfg01_graph_fourier_mode_audit.py; formal/python/tests/test_ovfg01_graph_fourier_mode_audit.py
-	Notes: Not an external anchor; used to surface hidden continuum-limit assumptions.
 
 - Many-body orthogonality catastrophe trend audit (OV-MB-01)
 	Status: Hypothesis
@@ -2991,13 +3235,33 @@ Short description: Deterministic eliminative bookkeeping table for the DR-01 →
 
 Status: Locked
 
-Evidence: formal/python/toe/observables/ovdrbr01_candidate_pruning_table_record.py; formal/python/tests/test_ov_dr_br01_candidate_pruning_table_lock.py; formal/markdown/locks/observables/OV-DR-BR-01_candidate_pruning_table.md; formal/python/toe/observables/ovdrbr01_lane_profile.py; formal/python/tests/test_ov_dr_br01_elimination_without_override_lane.py
+Evidence: formal/python/toe/observables/ovdrbr01_candidate_pruning_table_record.py; formal/python/tests/test_ov_dr_br01_candidate_pruning_table_lock.py; formal/markdown/locks/observables/OV-DR-BR-01_candidate_pruning_table.md
 
 Scope / limits: Summary-only / eliminative-only; unknown is not fail; no numeric interpretation; no new claims; blocked-by-default if OV-BR-05 or OV-DR-BR-00 lock missing; may be BLOCKED by admissibility manifest (CT01/SYM01/CAUS01).
 
 Dependencies: OV-BR-05, OV-DR-BR-00, CT-01, SYM-01, CAUS-01
 
-Notes: Candidate ID surface is structural: BR01_* function names extracted from formal/python/toe/bridges/br01_candidates.py. Current pruning outcome (2026-01-25): BR01_metric_from_DR01_fit_unit_density survives_br01_constraints=true (declared_br05_structure_satisfied) per OV-DR-BR-01 lock. Canonical closeout verification (2026-02-04): summary.counts={true:2,false:1,unknown:1}; true=[BR01_metric_from_DR01_fit_constant_density, BR01_metric_from_DR01_fit_unit_density]; false=[BR01_metric_from_DR01_fit_unit_density_structural_fail]; unknown=[BR01_metric_from_DR01_fit_rest_frame_u0]; status.blocked=true under formal/markdown locks/gates/admissibility_manifest.json. A2 hardening checkpoint (2026-02-08): canonical non-override lane is manifest-parsed via OVDRBR01LaneProfile, with eliminator existence, controlled reason-code atoms, and survivor guard lock-enforced.
+Notes: Candidate ID surface is structural: BR01_* function names extracted from formal/python/toe/bridges/br01_candidates.py. Current pruning outcome (2026-01-25): BR01_metric_from_DR01_fit_unit_density survives_br01_constraints=true (declared_br05_structure_satisfied) per OV-DR-BR-01 lock. Canonical closeout verification (2026-02-04): summary.counts={true:2,false:1,unknown:1}; true=[BR01_metric_from_DR01_fit_constant_density, BR01_metric_from_DR01_fit_unit_density]; false=[BR01_metric_from_DR01_fit_unit_density_structural_fail]; unknown=[BR01_metric_from_DR01_fit_rest_frame_u0]; status.blocked=true under formal/markdown locks/gates/admissibility_manifest.json.
+
+
+
+ID: OV-DR-BR-00
+
+Name: OV-DR-BR-00 BR-01 prediction declarations (structural)
+
+Category: Observable
+
+Short description: Schema-validated, hash-tracked declaration surface that records the formally declared BR-05-based prediction structure (if any) for each canonical BR-01 candidate ID. Used as a governance input to OV-DR-BR-01; produces eliminations only via declared prediction vs locked OV-BR-05 values (no inference).
+
+Status: Locked
+
+Evidence: formal/python/toe/observables/ovdrbr00_br01_prediction_declarations_record.py; formal/python/tests/test_ov_dr_br00_br01_prediction_declarations_lock.py; formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations.md; formal/python/toe/bridges/br01_prediction_declarations.json
+
+Scope / limits: Structural-only; no physics claim; blocked-by-default if the declaration source file is missing; may be BLOCKED by admissibility manifest (CT01/SYM01/CAUS01).
+
+Dependencies: CT-01, SYM-01, CAUS-01
+
+Notes: The declaration source file is treated as governance input and is hash-tracked in the record inputs.
 
 
 
@@ -3026,21 +3290,18 @@ Name: OV-CV-01 BEC-Bragg comparator lanes (v0 integrity + v1 discriminative cand
 
 Category: Observable
 
-Short description: Deterministic comparator record for pinned domain DRBR-DOMAIN-01 that consumes typed/fingerprinted DR-01 linear+curved artifacts through BR-01 front-door mappings and emits pass/fail rows with explicit reason codes.
+Short description: Deterministic comparator records on pinned DRBR-DOMAIN-01 artifacts. v0 is an integrity-only lane; v1 is a separate schema lane with non-tautological cross-artifact residual checks and profile-scoped tolerances.
 
 Status: Locked
 
-Evidence: formal/python/toe/comparators/cv01_bec_bragg_v0.py; formal/python/tests/test_cv01_bec_bragg_v0_front_door.py; formal/python/tests/test_cv01_bec_bragg_v0_surface_contract_freeze.py; formal/python/tests/test_cv01_v1_discriminative_design_gate_doc.py; formal/docs/cv01_bec_bragg_v0_front_door_contract.md; formal/docs/cv01_v1_discriminative_design_gate.md; formal/docs/first_empirical_comparator_domain_bec_bragg.md; formal/python/tests/test_first_empirical_comparator_domain_selection.py; formal/python/toe/comparators/cv01_bec_bragg_v1.py; formal/python/tests/test_cv01_bec_bragg_v1_front_door.py; formal/python/tests/test_cv01_bec_bragg_v1_surface_contract_freeze.py; formal/python/tests/test_cv01_numeric_tolerance_policy_doc.py; formal/docs/cv01_bec_bragg_v1_front_door_contract.md; formal/docs/cv01_numeric_tolerance_policy.md
+Evidence: formal/python/toe/comparators/cv01_bec_bragg_v0.py; formal/python/tests/test_cv01_bec_bragg_v0_front_door.py; formal/python/tests/test_cv01_bec_bragg_v0_surface_contract_freeze.py; formal/docs/cv01_bec_bragg_v0_front_door_contract.md; formal/python/toe/comparators/cv01_bec_bragg_v1.py; formal/python/tests/test_cv01_bec_bragg_v1_front_door.py; formal/python/tests/test_cv01_bec_bragg_v1_surface_contract_freeze.py; formal/python/tests/test_cv01_numeric_tolerance_policy_doc.py; formal/docs/cv01_bec_bragg_v1_front_door_contract.md; formal/docs/cv01_numeric_tolerance_policy.md
 
-Scope / limits: Dual-lane comparator surface: v0 integrity-only (`comparator_role=integrity_only`) and v1 discriminative-candidate (`comparator_role=discriminative_candidate`) with cross-artifact residual `abs(c_s-c0)` under `TOE_CV01_TOLERANCE_PROFILE` (`pinned`/`portable`); deterministic records only; typed artifacts only; no external truth claim; blocked when pinned domain artifacts are missing; may be BLOCKED by admissibility manifest (CT01/SYM01/CAUS01).
+Scope / limits: Dual-lane comparator surface: v0 `integrity_only` and v1 `discriminative_candidate`; deterministic records only; typed artifacts only; blocked when pinned domain artifacts are missing; no external truth claim.
 
-Dependencies: DR-01, BR-01, OV-DR-BR-01, DRBR-DOMAIN-01, CT-01, SYM-01, CAUS-01
+Dependencies: DR-01, BR-01, OV-DR-BR-01, CT-01, SYM-01, CAUS-01
 
-Notes: CV01 v0 remains frozen as a pipeline-integrity comparator. CV01 v1 is implemented as a separate schema surface with non-tautological cross-artifact speed residual checks, deterministic cross/curved negative controls, and contract-complete blocked-output shape; tolerance policy is explicitly governed by `formal/docs/cv01_numeric_tolerance_policy.md` (`TOE_CV01_TOLERANCE_PROFILE`). Domain pin source is `formal/docs/first_empirical_comparator_domain_bec_bragg.md` with canonical artifacts `formal/external_evidence/bec_bragg_steinhauer_2001/dr01_fit_artifact.json` and `formal/external_evidence/bec_bragg_steinhauer_2001/dr01_fit_artifact_curved.json`.
+Notes: v1 keeps blocked-path contract shape complete (including `cross_artifact` keys and reason-code family) and records `tolerance_profile` for reproducibility.
 
-External anchor: BEC Bragg low-k dispersion domain (Steinhauer 2001 family)
-
-External evidence: formal/external_evidence/bec_bragg_steinhauer_2001/0111438v1.pdf
 
 
 ID: OV-CV-BR-01
@@ -3102,23 +3363,44 @@ Dependencies: DRBR-DOMAIN-02, DR-01, BR-01
 Notes: This lane is domain-expansion governance and integrity instrumentation only; it does not assert cross-domain equivalence or physics truth.
 
 
-ID: OV-DR-BR-00
 
-Name: OV-DR-BR-00 BR-01 prediction declarations (structural)
+ID: DRBR-DOMAIN-UCFF-01
 
-Category: Observable
+Name: DRBR-DOMAIN-UCFF-01 UCFF dispersion comparator domain pin
 
-Short description: Schema-validated, hash-tracked declaration surface that records the formally declared BR-05-based prediction structure (if any) for each canonical BR-01 candidate ID. Used as a governance input to OV-DR-BR-01; produces eliminations only via declared prediction vs locked OV-BR-05 values (no inference).
+Category: Governance
+
+Short description: Pinned UCFF comparator-domain record for deterministic non-grid dispersion surface comparison, using typed/fingerprinted UCFF core report artifacts on a shared k-grid.
 
 Status: Locked
 
-Evidence: formal/python/toe/observables/ovdrbr00_br01_prediction_declarations_record.py; formal/python/tests/test_ov_dr_br00_br01_prediction_declarations_lock.py; formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations.md; formal/python/toe/bridges/br01_prediction_declarations.json
+Evidence: formal/quarantine/bridge_tickets/BRIDGE_TICKET_COMPARATOR_CLASS_0001_dispersion_lane_ucff.md; formal/external_evidence/ucff_dispersion_comparator_domain_01/cv03_reference_ucff_core_report.json; formal/external_evidence/ucff_dispersion_comparator_domain_01/cv03_candidate_ucff_core_report.json; formal/python/tests/test_cv03_ucff_dispersion_v1_front_door.py
 
-Scope / limits: Structural-only; no physics claim; blocked-by-default if the declaration source file is missing; may be BLOCKED by admissibility manifest (CT01/SYM01/CAUS01).
+Scope / limits: Domain pin only; structural comparator scope only; no external truth-claim upgrade; no implicit coupling to pruning lanes.
 
-Dependencies: CT-01, SYM-01, CAUS-01
+Dependencies: OP-01
 
-Notes: The declaration source file is treated as governance input and is hash-tracked in the record inputs.
+Notes: The domain is explicitly non-grid and constrained to UCFF core front-door report surfaces (`UCFF/core_front_door_report/v1`) with deterministic fingerprint verification.
+
+
+
+ID: OV-CV-03
+
+Name: OV-CV-03 UCFF dispersion comparator v1 (front-door deterministic lane)
+
+Category: Observable
+
+Short description: Deterministic comparator lane that compares pinned UCFF dispersion report artifacts on a shared k-grid and emits reason-coded pass/fail outcomes for alignment/order, sign, monotonicity, shape mismatch, and fingerprint determinism.
+
+Status: Locked
+
+Evidence: formal/python/toe/comparators/cv03_ucff_dispersion_v1.py; formal/python/tests/test_cv03_ucff_dispersion_v1_front_door.py; formal/python/tests/test_cv03_ucff_dispersion_v1_surface_contract_freeze.py; formal/docs/cv03_ucff_dispersion_v1_front_door_contract.md; formal/external_evidence/ucff_dispersion_comparator_domain_01/cv03_reference_ucff_core_report.json; formal/external_evidence/ucff_dispersion_comparator_domain_01/cv03_candidate_ucff_core_report.json
+
+Scope / limits: Discriminative-candidate comparator surface only; deterministic record only; typed/fingerprinted UCFF artifacts only; blocked on missing artifacts; no external truth claim.
+
+Dependencies: DRBR-DOMAIN-UCFF-01, CT-01, SYM-01, CAUS-01
+
+Notes: Negative controls are pinned for k-permutation (order/alignment fail), parameter sign-flip (sign fail), shape perturbation (shape mismatch fail), and fingerprint tamper (nondeterministic fail). This lane is explicit comparator expansion under COMP-03 authorization and remains governance-scoped.
 
 
 
@@ -4988,23 +5270,19 @@ These are not failures.
 
 
 
-Example entries:
-
-
-
 Item ID: FN-01
 
-Missing layer: Lean
+Missing layer: Variational parent tied to FN-01 dynamics (Lean)
 
-Comment: No variational derivation
+Comment: EL_matches_FN01_form is discharged for P_cubic under first-variation representation assumptions, but no non-tautological derivation ties EL_toe to the action or CP-NLSE/CE-NWE dynamics; uniqueness still depends on nondegenerate-pairing + surjectivity assumptions.
 
 
 
-Item ID: BR-01
+Item ID: EQ-02
 
-Missing layer: Python
+Missing layer: Noether invariants tied to SYM-01 / evolution (Lean)
 
-Comment: No numerical stress test
+Comment: Action invariance is proved using point-sample norm ingredients, but no proof ties invariance to concrete dynamics or the declared evolution operator.
 
 
 
@@ -5066,7 +5344,7 @@ Status downgrades are allowed without justification. Upgrades are not.
 
 NEXT REQUIRED ACTION
 
-State-of-the-Theory dependency DAG enforcement (unknown IDs + cycles), then resume ToE development.
+Replace nondegenerate-pairing + variation-surjectivity assumptions with a non-tautological derivation of EL_toe (structural-only), then replace evolution linkage assumptions with a non-tautological operator-generated flow definition.
 
 Comparator-expansion block rule (policy): historical baseline retained. Since 2026-02-08, COMP-05 is lifted in scoped form for COMP-03 (UCFF lane only); broader comparator expansion remains policy-gated by explicit governance authorization.
 

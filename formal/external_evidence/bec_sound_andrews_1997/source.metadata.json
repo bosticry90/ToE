@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "bytes": 164076,
+      "relpath": "formal/external_evidence/bec_sound_andrews_1997/9711224v1.pdf",
+      "sha256": "d38a5d54cca6b4b7a4a71647c20d24bf72b434eca2e1ed943df62f981f3a7cc6"
+    },
+    {
+      "bytes": 167919,
+      "relpath": "formal/external_evidence/bec_sound_andrews_1997/fig2_region_page4_z4.png",
+      "sha256": "7b617abbed1be16adb0e47be2c7b15e79637ee83d263ccc2e2b77a44fd052c19"
+    },
+    {
+      "bytes": 841442,
+      "relpath": "formal/external_evidence/bec_sound_andrews_1997/page4_z4.png",
+      "sha256": "0adb09bbc96a4c0338c60299285a83905e37a2a566cbd82c40d2ff38733ad105"
+    }
+  ],
+  "schema": "external_evidence_metadata/v1"
+}

@@ -1,0 +1,36 @@
+{
+  "determinism": {
+    "dtype": "complex128",
+    "json": "sort_keys,separators=(',',':'),ensure_ascii=True",
+    "rng": "none"
+  },
+  "fingerprint": "ecebbf605270603f8fefd9139e5daea734fccfc79b23f5b59d7b54c7e0dc16c8",
+  "hooks": {
+    "bc01_boundary_residual": 0.0626657068658,
+    "bc01_dirichlet_constant_residual": 1.0,
+    "bc01_periodic_constant_residual": 0.0,
+    "par01_advection_break_residual": 0.19184902236,
+    "par01_parity_residual": 1.74526436214e-15,
+    "sym01_conjugation_residual": 0.322962853969,
+    "sym01_phase_residual": 7.1197723149e-19
+  },
+  "input_fingerprint": "a4042c0fed5e8135aac5c719e417579e0f469885a96ac67a4b41191524a091f3",
+  "inputs": {
+    "A_im": 0.0,
+    "A_re": 0.1,
+    "L": 6.283185307179586,
+    "V0": 0.0,
+    "case_id": "conservative_plane_wave",
+    "dimension": "1d",
+    "dt": 0.001,
+    "g": 1.0,
+    "gamma": 0.0,
+    "k": 2.0,
+    "n": 32,
+    "phase": 0.3,
+    "regime": "conservative",
+    "sample_every": 20,
+    "steps": 200
+  },
+  "schema": "PTC/NLSE_v1_hooks/v1"
+}

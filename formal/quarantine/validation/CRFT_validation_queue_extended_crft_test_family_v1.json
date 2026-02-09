@@ -1,0 +1,219 @@
+{
+  "artifact_sha256": "de1697caa5ae703799338c871bb8bda12f865826d084529939c6f6be3a02a227",
+  "items": [
+    {
+      "claim_family": "C6_CP_NLSE_2D",
+      "claim_id": "CLM-0051",
+      "evidence": {
+        "canonical_surface_refs": [
+          "CP-NLSE-2D"
+        ],
+        "pytest_nodes": [
+          "formal/python/crft/tests/test_c6_cp_nlse_2d_norm_drift.py::test_c6_cp_nlse_2d_norm_drift_is_small_for_plane_wave",
+          "formal/python/crft/tests/test_c6_cp_nlse_2d_dispersion_eigenfunction.py::test_c6_cp_nlse_2d_plane_wave_is_rhs_eigenfunction_when_linear"
+        ]
+      },
+      "evidence_strength": "bounded_multi",
+      "exit_condition": "C6 dispersion regression passes; norm drift meets spec on pinned grid/time step.",
+      "kind": "equation",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "status": "pending",
+      "target_surface": "formal/python/crft/cp_nlse_2d.py",
+      "tasks": [
+        "Map PDE sign/phase convention to rhs_cp_nlse_2d().",
+        "Use existing dispersion regression (C6) as the primary executable check.",
+        "Add/confirm a pinned-input norm drift check for N_2D(t) on a periodic grid."
+      ],
+      "text": "φ_t = −i [ ½ ∇²φ − g_eff (|φ|² − rho0) φ ]"
+    },
+    {
+      "claim_family": "C6_CP_NLSE_2D",
+      "claim_id": "CLM-0059",
+      "evidence": {
+        "canonical_surface_refs": [
+          "CP-NLSE-2D"
+        ],
+        "pytest_nodes": [
+          "formal/python/crft/tests/test_c6_cp_nlse_2d_norm_drift.py::test_c6_cp_nlse_2d_norm_drift_is_small_for_plane_wave",
+          "formal/python/crft/tests/test_c6_cp_nlse_2d_dispersion_eigenfunction.py::test_c6_cp_nlse_2d_plane_wave_is_rhs_eigenfunction_when_linear"
+        ]
+      },
+      "evidence_strength": "bounded_multi",
+      "exit_condition": "Referenced pytest evidence passes under pinned conditions.",
+      "kind": "definition",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "status": "pending",
+      "target_surface": "formal/python/crft/cp_nlse_2d.py",
+      "tasks": [
+        "Bind the criterion to bounded pytest evidence (norm drift + dispersion/eigenfunction checks).",
+        "Keep inputs deterministic and runtime small."
+      ],
+      "text": "Track N_2D(t) drift"
+    },
+    {
+      "claim_family": "C6_CP_NLSE_2D",
+      "claim_id": "CLM-0060",
+      "evidence": {
+        "canonical_surface_refs": [
+          "CP-NLSE-2D"
+        ],
+        "pytest_nodes": [
+          "formal/python/crft/tests/test_c6_cp_nlse_2d_norm_drift.py::test_c6_cp_nlse_2d_norm_drift_is_small_for_plane_wave",
+          "formal/python/crft/tests/test_c6_cp_nlse_2d_dispersion_eigenfunction.py::test_c6_cp_nlse_2d_plane_wave_is_rhs_eigenfunction_when_linear"
+        ]
+      },
+      "evidence_strength": "bounded_multi",
+      "exit_condition": "Referenced pytest evidence passes under pinned conditions.",
+      "kind": "definition",
+      "section": "C6 — 2D CP–NLSE Invariants and Dispersion",
+      "status": "pending",
+      "target_surface": "formal/python/crft/cp_nlse_2d.py",
+      "tasks": [
+        "Bind the criterion to bounded pytest evidence (norm drift + dispersion/eigenfunction checks).",
+        "Keep inputs deterministic and runtime small."
+      ],
+      "text": "Extract ω_num from time-series at a fixed grid point"
+    },
+    {
+      "claim_family": "C7_MT_01A",
+      "claim_id": "CLM-0068",
+      "evidence": {
+        "canonical_surface_refs": [
+          "MT-01a"
+        ],
+        "pytest_nodes": [
+          "formal/python/tests/test_c7_acoustic_metric_inequalities.py::test_c7_acoustic_metric_1d_has_timelike_gtt_and_negative_det_when_subsonic",
+          "formal/python/tests/test_c7_acoustic_metric_inequalities.py::test_c7_acoustic_metric_2d_has_timelike_gtt_and_negative_det_when_subsonic",
+          "formal/python/tests/test_c7_acoustic_metric_perturbation_stability.py::test_c7_acoustic_metric_sign_invariants_stable_under_small_perturbations_2d",
+          "formal/python/tests/test_mt01_acoustic_metric_lock.py::test_mt01_acoustic_metric_1d_lock_identities",
+          "formal/python/tests/test_mt01_acoustic_metric_lock.py::test_mt01_acoustic_metric_2d_lock_identities_and_det_reduction"
+        ]
+      },
+      "evidence_strength": "bounded_multi",
+      "exit_condition": "MT-01a lock regression passes; diagnostic inequalities are verified for pinned inputs.",
+      "kind": "equation",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "status": "pending",
+      "target_surface": "formal/python/crft/acoustic_metric.py",
+      "tasks": [
+        "Map (rho, u, g_eff) inputs to MT-01a front door.",
+        "Verify g_tt < 0 and det(g) < 0 inequalities pointwise on pinned fields.",
+        "Lean on the existing MT-01a lock regression for stability/compatibility."
+      ],
+      "text": "c_s² = g_eff ρ"
+    },
+    {
+      "claim_family": "C7_MT_01A",
+      "claim_id": "CLM-0069",
+      "evidence": {
+        "canonical_surface_refs": [
+          "MT-01a"
+        ],
+        "pytest_nodes": [
+          "formal/python/tests/test_c7_acoustic_metric_inequalities.py::test_c7_acoustic_metric_1d_has_timelike_gtt_and_negative_det_when_subsonic",
+          "formal/python/tests/test_c7_acoustic_metric_inequalities.py::test_c7_acoustic_metric_2d_has_timelike_gtt_and_negative_det_when_subsonic",
+          "formal/python/tests/test_c7_acoustic_metric_perturbation_stability.py::test_c7_acoustic_metric_sign_invariants_stable_under_small_perturbations_2d",
+          "formal/python/tests/test_mt01_acoustic_metric_lock.py::test_mt01_acoustic_metric_1d_lock_identities",
+          "formal/python/tests/test_mt01_acoustic_metric_lock.py::test_mt01_acoustic_metric_2d_lock_identities_and_det_reduction"
+        ]
+      },
+      "evidence_strength": "bounded_multi",
+      "exit_condition": "MT-01a lock regression passes; defining equations are consistent with the canonical implementation.",
+      "kind": "equation",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "status": "pending",
+      "target_surface": "formal/python/crft/acoustic_metric.py",
+      "tasks": [
+        "Validate that MT-01a front door implements this defining equation.",
+        "Verify signature/inequality diagnostics on deterministic pinned inputs."
+      ],
+      "text": "g_tt = −(c_s² − |u|²)"
+    },
+    {
+      "claim_family": "C7_MT_01A",
+      "claim_id": "CLM-0070",
+      "evidence": {
+        "canonical_surface_refs": [
+          "MT-01a"
+        ],
+        "pytest_nodes": [
+          "formal/python/tests/test_c7_acoustic_metric_inequalities.py::test_c7_acoustic_metric_1d_has_timelike_gtt_and_negative_det_when_subsonic",
+          "formal/python/tests/test_c7_acoustic_metric_inequalities.py::test_c7_acoustic_metric_2d_has_timelike_gtt_and_negative_det_when_subsonic",
+          "formal/python/tests/test_c7_acoustic_metric_perturbation_stability.py::test_c7_acoustic_metric_sign_invariants_stable_under_small_perturbations_2d",
+          "formal/python/tests/test_mt01_acoustic_metric_lock.py::test_mt01_acoustic_metric_1d_lock_identities",
+          "formal/python/tests/test_mt01_acoustic_metric_lock.py::test_mt01_acoustic_metric_2d_lock_identities_and_det_reduction"
+        ]
+      },
+      "evidence_strength": "bounded_multi",
+      "exit_condition": "MT-01a lock regression passes; defining equations are consistent with the canonical implementation.",
+      "kind": "equation",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "status": "pending",
+      "target_surface": "formal/python/crft/acoustic_metric.py",
+      "tasks": [
+        "Validate that MT-01a front door implements this defining equation.",
+        "Verify signature/inequality diagnostics on deterministic pinned inputs."
+      ],
+      "text": "g_tx = −u_x"
+    },
+    {
+      "claim_family": "C7_MT_01A",
+      "claim_id": "CLM-0071",
+      "evidence": {
+        "canonical_surface_refs": [
+          "MT-01a"
+        ],
+        "pytest_nodes": [
+          "formal/python/tests/test_c7_acoustic_metric_inequalities.py::test_c7_acoustic_metric_1d_has_timelike_gtt_and_negative_det_when_subsonic",
+          "formal/python/tests/test_c7_acoustic_metric_inequalities.py::test_c7_acoustic_metric_2d_has_timelike_gtt_and_negative_det_when_subsonic",
+          "formal/python/tests/test_c7_acoustic_metric_perturbation_stability.py::test_c7_acoustic_metric_sign_invariants_stable_under_small_perturbations_2d",
+          "formal/python/tests/test_mt01_acoustic_metric_lock.py::test_mt01_acoustic_metric_1d_lock_identities",
+          "formal/python/tests/test_mt01_acoustic_metric_lock.py::test_mt01_acoustic_metric_2d_lock_identities_and_det_reduction"
+        ]
+      },
+      "evidence_strength": "bounded_multi",
+      "exit_condition": "MT-01a lock regression passes; defining equations are consistent with the canonical implementation.",
+      "kind": "equation",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "status": "pending",
+      "target_surface": "formal/python/crft/acoustic_metric.py",
+      "tasks": [
+        "Validate that MT-01a front door implements this defining equation.",
+        "Verify signature/inequality diagnostics on deterministic pinned inputs."
+      ],
+      "text": "g_ty = −u_y"
+    },
+    {
+      "claim_family": "C7_MT_01A",
+      "claim_id": "CLM-0072",
+      "evidence": {
+        "canonical_surface_refs": [
+          "MT-01a"
+        ],
+        "pytest_nodes": [
+          "formal/python/tests/test_c7_acoustic_metric_inequalities.py::test_c7_acoustic_metric_1d_has_timelike_gtt_and_negative_det_when_subsonic",
+          "formal/python/tests/test_c7_acoustic_metric_inequalities.py::test_c7_acoustic_metric_2d_has_timelike_gtt_and_negative_det_when_subsonic",
+          "formal/python/tests/test_c7_acoustic_metric_perturbation_stability.py::test_c7_acoustic_metric_sign_invariants_stable_under_small_perturbations_2d",
+          "formal/python/tests/test_mt01_acoustic_metric_lock.py::test_mt01_acoustic_metric_1d_lock_identities",
+          "formal/python/tests/test_mt01_acoustic_metric_lock.py::test_mt01_acoustic_metric_2d_lock_identities_and_det_reduction"
+        ]
+      },
+      "evidence_strength": "bounded_multi",
+      "exit_condition": "MT-01a lock regression passes; defining equations are consistent with the canonical implementation.",
+      "kind": "equation",
+      "section": "C7 — Acoustic Metric Diagnostics",
+      "status": "pending",
+      "target_surface": "formal/python/crft/acoustic_metric.py",
+      "tasks": [
+        "Validate that MT-01a front door implements this defining equation.",
+        "Verify signature/inequality diagnostics on deterministic pinned inputs."
+      ],
+      "text": "g_xx = 1"
+    }
+  ],
+  "schema_version": 3,
+  "source": {
+    "path": "formal/quarantine/claims/CRFT_claims_extract_extended_crft_test_family_v1.json",
+    "sha256": "5ba61e4fed9276731dadaca359c42f0f68c55145a5fafce1d515a7fce6fb5f4e"
+  }
+}

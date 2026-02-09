@@ -1,0 +1,34 @@
+{
+  "fingerprint": "3f3930f7eb092b151b4d7fc9e973a0d655da96f21f7fbd90c127aad7af2af732",
+  "notes": "Deterministic UCFF dispersion jitter-structure demo only; not external evidence and not a physics claim. Records symbolic term-presence checks and a bounded numeric non-negativity scan over a chosen k-window.",
+  "report": {
+    "config_tag": "OV-UCFF-01_jitter_structure_v1",
+    "fingerprint": "b5fb76dced6dde5248172fdb4bb0b2bc7c78697339aa05b58cb51eee10631259",
+    "jitter_frac": 0.02,
+    "k_max": 6.0,
+    "min_omega2_over_grid_baseline": 0.0,
+    "min_omega2_over_grid_min_across_jitters": 0.0,
+    "n_jitters": 64,
+    "n_k": 241,
+    "n_stable": 64,
+    "n_unstable": 0,
+    "params_baseline": {
+      "beta": 0.01,
+      "g": 1.0,
+      "lam": 0.1,
+      "rho0": 1.0
+    },
+    "schema": "OV-UCFF-01/jitter_structure_report/v1",
+    "seed": 12345,
+    "symbolic_structure": {
+      "first_order_has_k2": true,
+      "first_order_has_k4": true,
+      "first_order_has_k6": false,
+      "lagrangian_contains_coherence_density_term": false,
+      "second_order_has_k2": true,
+      "second_order_has_k4": true,
+      "second_order_has_k6": true
+    }
+  },
+  "schema": "OV-UCFF-01/jitter_structure_artifact/v1"
+}

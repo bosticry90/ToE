@@ -1,0 +1,49 @@
+STATUS: ARCHIVED (implemented)
+
+Implemented via DAG enforcement, front-door bridges, and artifact provenance checks.
+Kept for governance justification and historical context.
+
+---
+
+Practical action plan (commit-sized, no new tools)
+Commit 1 — Add circularity detection
+
+Add formal/python/tests/test_state_theory_dag.py:
+
+parse inventory IDs + dependencies
+
+fail on cycles, missing IDs, missing evidence paths
+
+Commit 2 — Add Definition Change Record enforcement
+
+Add formal/markdown/dcr/README.md and enforce:
+
+any change under ToeFormal/**/Definitions or EQ-* requires a DCR entry
+
+Commit 3 — Add “conditionality labeling” enforcement
+
+Add a simple grep-based Python test:
+
+if a Lean file imports PlaneWaveOperatorAxioms, require theorem names contain _conditional or have explicit axiom hypotheses
+
+Commit 4 — Lock Aristotle usage (if you keep it)
+
+Create formal/toe_formal/ToeFormal/Prove/ as the only Aristotle-facing directory.
+
+Policy: no new defs/axioms there; only sorry filling.
+
+The key mitigation for circular fixes
+
+Your system becomes stable when you make it easier to fail fast than to patch:
+
+Definition changes must be declared (DCR).
+
+Inventory must match artifacts.
+
+DAG must remain acyclic.
+
+Axioms must remain quarantined.
+
+Python fixes must be test-driven (red → green).
+
+If you want, paste one recent example of a “circular fix loop” (what broke, what you changed, what broke next). I will classify it into one of the 5 root causes above and map it to the specific gate that would have prevented it.

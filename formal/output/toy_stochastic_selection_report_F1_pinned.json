@@ -1,0 +1,73 @@
+{
+  "admissibility": {
+    "admissible": true,
+    "bound_abs": 1.0,
+    "reasons": [],
+    "violations": []
+  },
+  "candidate_id": "F1_noise_plus_pullback",
+  "diagnostics": {
+    "first_violation_step": null,
+    "reason_code": "OK",
+    "violation_count": 0
+  },
+  "fingerprint": "6284ecdaf4fd584e4448a122914be504f28d189a7bd0fba565c27711c26e1be3",
+  "input_fingerprint": "2cc05a3d58e1cfd3195f2f667ba671a7edf82c293c45c2686a248f6c250fba77",
+  "inputs": {
+    "dt": 0.2,
+    "initial_state": 0.7,
+    "initial_state_fingerprint": "5e4339da7cebb21c4c15253a44a439f6409a7e47952b0a4065dfda4e64e74a69",
+    "seed": 122,
+    "steps": 9
+  },
+  "output": {
+    "admissible_sequence": [
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true,
+      true
+    ],
+    "noise_sequence": [
+      0.958800658501,
+      -0.97321926395,
+      -0.226356751877,
+      -0.245840625393,
+      0.938878853244,
+      0.507008795266,
+      -0.194719597361,
+      -0.33802650412,
+      -0.0463919271514
+    ],
+    "state_sequence": [
+      0.7,
+      0.91764019755,
+      0.53391039861,
+      0.412612333186,
+      0.29759891225,
+      0.549502676998,
+      0.646655047878,
+      0.523573663882,
+      0.369808346258,
+      0.318909933486
+    ]
+  },
+  "params": {
+    "abs_bound": 1.0,
+    "pullback_strength": 0.5,
+    "sigma": 0.3,
+    "target": 0.0
+  },
+  "schema": "TOY/stochastic_selection_report/v1",
+  "schema_version": "v1",
+  "scope_limits": [
+    "structure_only; no physics claim",
+    "bounded evidence only; consequence engine"
+  ],
+  "tool_version": "v1"
+}

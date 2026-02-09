@@ -1,0 +1,80 @@
+{
+  "derived": {
+    "grid": {
+      "L": 20.0,
+      "dx": 0.15625,
+      "n": 128
+    },
+    "initial_condition": "sech_soliton",
+    "kgrid_sample": [
+      0.0,
+      0.314159265359,
+      0.628318530718
+    ],
+    "rac_energy_class": "conservative"
+  },
+  "determinism": {
+    "dtype": "complex128",
+    "json": "sort_keys,separators=(',',':'),ensure_ascii=True",
+    "rng": "none"
+  },
+  "fingerprint": "9cd50f7384b284c94cfb5355ca373859d467df6afd952bf463de0e2fc3690560",
+  "input_fingerprint": "32657e5a3306b2be1b1ff425805c8dd0c9430b82affd5666061c5dea3116f92d",
+  "inputs": {
+    "A_im": 0.0,
+    "A_re": 1.0,
+    "L": 20.0,
+    "V0": 0.0,
+    "case_id": "conservative_bright_soliton",
+    "dimension": "1d",
+    "dt": 0.001,
+    "g": -1.0,
+    "gamma": 0.0,
+    "k": 0.0,
+    "n": 128,
+    "phase": 0.0,
+    "regime": "conservative",
+    "sample_every": 20,
+    "steps": 200
+  },
+  "output": {
+    "energy_delta": -4.71844785466e-15,
+    "energy_trace": [
+      -0.333333337041,
+      -0.333333337041,
+      -0.333333337041,
+      -0.333333337041,
+      -0.333333337041,
+      -0.333333337041,
+      -0.333333337041,
+      -0.333333337041,
+      -0.333333337041,
+      -0.333333337041,
+      -0.333333337041
+    ],
+    "norm_delta": 7.37188088351e-14,
+    "norm_trace": [
+      1.99999999169,
+      1.99999999169,
+      1.99999999169,
+      1.99999999169,
+      1.99999999169,
+      1.99999999169,
+      1.99999999169,
+      1.99999999169,
+      1.99999999169,
+      1.99999999169,
+      1.99999999169
+    ],
+    "omega_error": 0.499971082609,
+    "omega_expected": -1.0,
+    "omega_hat": -0.500028917391,
+    "phase_invariance_error": 0.0,
+    "shape_peak_delta": -3.63676501136e-08,
+    "shape_peak_ratio": 0.999999963632,
+    "shape_residual": 1.47941586469e-05,
+    "t_end": 0.2,
+    "time_reversal_error": 4.31808293389e-16
+  },
+  "schema": "PTC/NLSE_v1_report/v1"
+}

@@ -1,0 +1,80 @@
+{
+  "derived": {
+    "grid": {
+      "L": 20.0,
+      "dx": 0.15625,
+      "n": 128
+    },
+    "initial_condition": "sech_soliton",
+    "kgrid_sample": [
+      0.0,
+      0.314159265359,
+      0.628318530718
+    ],
+    "rac_energy_class": "dissipative"
+  },
+  "determinism": {
+    "dtype": "complex128",
+    "json": "sort_keys,separators=(',',':'),ensure_ascii=True",
+    "rng": "none"
+  },
+  "fingerprint": "30954747c240c42cd652f185b72a16be03bd282e41a8c9fb35e9ae1ac1ac38f5",
+  "input_fingerprint": "c5df09b50ea06ba07035f9b1b6aafeb561ec862c9b11898cedd3457df954ed94",
+  "inputs": {
+    "A_im": 0.0,
+    "A_re": 1.0,
+    "L": 20.0,
+    "V0": 0.0,
+    "case_id": "dissipative_bright_soliton",
+    "dimension": "1d",
+    "dt": 0.001,
+    "g": -1.0,
+    "gamma": 1.0,
+    "k": 0.0,
+    "n": 128,
+    "phase": 0.0,
+    "regime": "dissipative",
+    "sample_every": 20,
+    "steps": 200
+  },
+  "output": {
+    "energy_delta": 0.257148209974,
+    "energy_trace": [
+      -0.333333337041,
+      -0.295147769623,
+      -0.26039063495,
+      -0.228779465753,
+      -0.20005444839,
+      -0.173976579236,
+      -0.150325978431,
+      -0.128900346692,
+      -0.109513552281,
+      -0.0919943364834,
+      -0.0761851270678
+    ],
+    "norm_delta": -0.659359905189,
+    "norm_trace": [
+      1.99999999169,
+      1.92157887032,
+      1.8462326851,
+      1.77384086606,
+      1.70428757085,
+      1.63746149935,
+      1.57325571559,
+      1.51156747663,
+      1.45229806811,
+      1.39535264634,
+      1.3406400865
+    ],
+    "omega_error": 0.588762577071,
+    "omega_expected": -1.0,
+    "omega_hat": -0.411237422929,
+    "phase_invariance_error": 0.0,
+    "shape_peak_delta": -0.183078345762,
+    "shape_peak_ratio": 0.816921654238,
+    "shape_residual": 0.256360465973,
+    "t_end": 0.2,
+    "time_reversal_error": 0.00282842834452
+  },
+  "schema": "PTC/NLSE_v1_report/v1"
+}

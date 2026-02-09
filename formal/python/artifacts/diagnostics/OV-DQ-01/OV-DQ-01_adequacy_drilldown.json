@@ -1,0 +1,860 @@
+{
+  "adequacy_policy": "DQ-01_v1",
+  "fingerprint": "a7f2a7e5fe601437aae6947896e44a3c19a30043e882c9e045b4f822daeb4268",
+  "notes": "Window-level DQ-01 adequacy drilldown (metrics vs thresholds + ratios). Bookkeeping only; no policy mutation; no physics claim.",
+  "ov03x": {
+    "curved_adequacy_aggregation": "all_windows",
+    "curved_adequacy_summary": {
+      "adequacy_aggregation": "all_windows",
+      "fail_tags": [],
+      "n_fail": 0,
+      "n_pass": 4,
+      "n_windows": 4
+    },
+    "observable_id": "OV-03x",
+    "robustness_report_fingerprint": "78f15afb7ee964f0efb8e43b5525fa3dea2fa8fa10f5c9a6b65f46a7e8cf7c7b",
+    "suspicion_flags": [],
+    "windows": [
+      {
+        "data_fingerprint": "46fa0869d138b29ff073b3c52382bbcc516595ada5e02499e54872453bf65138",
+        "dominant_by_ratio": null,
+        "dq01": {
+          "fingerprint": "4af8b1c33d3306dd73ab74a7b0552e7ddb79659f1dc1c959ed6000404cb77fd2",
+          "input_fingerprint": "DR01_Ernst2009_Fig2a_kmax_7p79806_curved|u=0|c0=0.001949857004818731|beta=-1.98688890556482e-17|source_kind=csv|source_ref=Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 7.79806 um^-1; omega=2*pi*f (f in kHz)|fit_method=Fig2a curved omega/k = c0 + beta*k^2 on k<= 7.79806 um^-1; u fixed to 0|data_fingerprint=46fa0869d138b29ff073b3c52382bbcc516595ada5e02499e54872453bf65138|fit_quality_fingerprint=f733a109bd3d63aec52c900ece10b4b07c1b2598214d3ab6f91eae5c7362e5c8",
+          "passes": true,
+          "reason_codes": []
+        },
+        "first_tripped_metric": null,
+        "metric_blocks": [
+          {
+            "delta": 11.0,
+            "name": "n_points",
+            "ratio": 3.2,
+            "sense": "min",
+            "threshold": 5.0,
+            "tripped": false,
+            "value": 16.0,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -2.8048606844375775e-05,
+            "name": "rmse_omega_over_k_m_per_s",
+            "ratio": 0.9298784828890606,
+            "sense": "max",
+            "threshold": 0.0004,
+            "tripped": false,
+            "value": 0.00037195139315562424,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -1.969659661971466e-05,
+            "name": "c0_stderr_m_per_s",
+            "ratio": 0.9343446779342844,
+            "sense": "max",
+            "threshold": 0.0003,
+            "tripped": false,
+            "value": 0.0002803034033802853,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": 1.0285887672491483,
+            "name": "beta_snr",
+            "ratio": 1.5142943836245741,
+            "sense": "min",
+            "threshold": 2.0,
+            "tripped": false,
+            "value": 3.0285887672491483,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": null,
+            "name": "beta_identifiable",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": null,
+            "name": "beta_used_for_inference",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          }
+        ],
+        "metrics": {
+          "beta_identifiable": {
+            "value": true
+          },
+          "beta_snr": {
+            "delta": 1.0285887672491483,
+            "min": 2.0,
+            "ratio": 1.5142943836245741,
+            "value": 3.0285887672491483
+          },
+          "c0_stderr_m_per_s": {
+            "delta": -1.969659661971466e-05,
+            "max": 0.0003,
+            "ratio": 0.9343446779342844,
+            "value": 0.0002803034033802853
+          },
+          "n_points": {
+            "delta": 11.0,
+            "min": 5.0,
+            "ratio": 3.2,
+            "value": 16.0
+          },
+          "rmse_omega_over_k_m_per_s": {
+            "delta": -2.8048606844375775e-05,
+            "max": 0.0004,
+            "ratio": 0.9298784828890606,
+            "value": 0.00037195139315562424
+          }
+        },
+        "tag": "DR01_Ernst2009_Fig2a_kmax_7p79806_curved"
+      },
+      {
+        "data_fingerprint": "567f8ce81c4ca99a35e653881db4601985c1c64e55392866b8c19e3ffca82b10",
+        "dominant_by_ratio": null,
+        "dq01": {
+          "fingerprint": "fd294b0a5314d66e5df845ed105038ff3763e99dd17192d4f44ee80314505b2e",
+          "input_fingerprint": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved|u=0|c0=0.00201933396850786|beta=-2.260377536744091e-17|source_kind=csv|source_ref=Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 7.30071 um^-1; omega=2*pi*f (f in kHz)|fit_method=Fig2a curved omega/k = c0 + beta*k^2 on k<= 7.30071 um^-1; u fixed to 0|data_fingerprint=567f8ce81c4ca99a35e653881db4601985c1c64e55392866b8c19e3ffca82b10|fit_quality_fingerprint=c61d3dc84459132fc7ef64ed45b5046319f41d9de49180f61da2a3510045884f",
+          "passes": true,
+          "reason_codes": []
+        },
+        "first_tripped_metric": null,
+        "metric_blocks": [
+          {
+            "delta": 8.0,
+            "name": "n_points",
+            "ratio": 2.6,
+            "sense": "min",
+            "threshold": 5.0,
+            "tripped": false,
+            "value": 13.0,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -6.217858564037726e-05,
+            "name": "rmse_omega_over_k_m_per_s",
+            "ratio": 0.8445535358990569,
+            "sense": "max",
+            "threshold": 0.0004,
+            "tripped": false,
+            "value": 0.00033782141435962276,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -1.465854177968239e-05,
+            "name": "c0_stderr_m_per_s",
+            "ratio": 0.9511381940677254,
+            "sense": "max",
+            "threshold": 0.0003,
+            "tripped": false,
+            "value": 0.0002853414582203176,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": 1.0288361496083667,
+            "name": "beta_snr",
+            "ratio": 1.5144180748041833,
+            "sense": "min",
+            "threshold": 2.0,
+            "tripped": false,
+            "value": 3.0288361496083667,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": null,
+            "name": "beta_identifiable",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": null,
+            "name": "beta_used_for_inference",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          }
+        ],
+        "metrics": {
+          "beta_identifiable": {
+            "value": true
+          },
+          "beta_snr": {
+            "delta": 1.0288361496083667,
+            "min": 2.0,
+            "ratio": 1.5144180748041833,
+            "value": 3.0288361496083667
+          },
+          "c0_stderr_m_per_s": {
+            "delta": -1.465854177968239e-05,
+            "max": 0.0003,
+            "ratio": 0.9511381940677254,
+            "value": 0.0002853414582203176
+          },
+          "n_points": {
+            "delta": 8.0,
+            "min": 5.0,
+            "ratio": 2.6,
+            "value": 13.0
+          },
+          "rmse_omega_over_k_m_per_s": {
+            "delta": -6.217858564037726e-05,
+            "max": 0.0004,
+            "ratio": 0.8445535358990569,
+            "value": 0.00033782141435962276
+          }
+        },
+        "tag": "DR03_Ernst2009_Fig2a_kmax_7p30071_curved"
+      },
+      {
+        "data_fingerprint": "9e4a0ccb356f43b3fc73dcc847a1af2e49553016e5297ba82d87b50c9c0c66c9",
+        "dominant_by_ratio": null,
+        "dq01": {
+          "fingerprint": "c14684f501ed1a9169edddf5b3c73a5b363cd7a46fbd65d8918ed34176302aaf",
+          "input_fingerprint": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved|u=0|c0=0.001259825120151492|beta=1.695746088993177e-17|source_kind=csv|source_ref=Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 5.49635 um^-1; omega=2*pi*f (f in kHz)|fit_method=Fig2a curved omega/k = c0 + beta*k^2 on k<= 5.49635 um^-1; u fixed to 0|data_fingerprint=9e4a0ccb356f43b3fc73dcc847a1af2e49553016e5297ba82d87b50c9c0c66c9|fit_quality_fingerprint=414cef1436fb4205def68e32d535d41d5c7f68a9cab1a841038331f2ae448848",
+          "passes": true,
+          "reason_codes": []
+        },
+        "first_tripped_metric": null,
+        "metric_blocks": [
+          {
+            "delta": 0.0,
+            "name": "n_points",
+            "ratio": 1.0,
+            "sense": "min",
+            "threshold": 5.0,
+            "tripped": false,
+            "value": 5.0,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.0003736583736416369,
+            "name": "rmse_omega_over_k_m_per_s",
+            "ratio": 0.06585406589590781,
+            "sense": "max",
+            "threshold": 0.0004,
+            "tripped": false,
+            "value": 2.6341626358363123e-05,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.0002521668490676145,
+            "name": "c0_stderr_m_per_s",
+            "ratio": 0.15944383644128482,
+            "sense": "max",
+            "threshold": 0.0003,
+            "tripped": false,
+            "value": 4.783315093238544e-05,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": 5.535486160513075,
+            "name": "beta_snr",
+            "ratio": 3.7677430802565377,
+            "sense": "min",
+            "threshold": 2.0,
+            "tripped": false,
+            "value": 7.535486160513075,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": null,
+            "name": "beta_identifiable",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": null,
+            "name": "beta_used_for_inference",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          }
+        ],
+        "metrics": {
+          "beta_identifiable": {
+            "value": true
+          },
+          "beta_snr": {
+            "delta": 5.535486160513075,
+            "min": 2.0,
+            "ratio": 3.7677430802565377,
+            "value": 7.535486160513075
+          },
+          "c0_stderr_m_per_s": {
+            "delta": -0.0002521668490676145,
+            "max": 0.0003,
+            "ratio": 0.15944383644128482,
+            "value": 4.783315093238544e-05
+          },
+          "n_points": {
+            "delta": 0.0,
+            "min": 5.0,
+            "ratio": 1.0,
+            "value": 5.0
+          },
+          "rmse_omega_over_k_m_per_s": {
+            "delta": -0.0003736583736416369,
+            "max": 0.0004,
+            "ratio": 0.06585406589590781,
+            "value": 2.6341626358363123e-05
+          }
+        },
+        "tag": "DR04d_Ernst2009_Fig2a_kmax_5p49635_curved"
+      },
+      {
+        "data_fingerprint": "f134b5209e24ae507b13c1d9685a713e49b09ffaac095cc10630fe1be1b4cf8b",
+        "dominant_by_ratio": null,
+        "dq01": {
+          "fingerprint": "b322e50d2e920ec8d9e90dc8882f59859331c0f20e0353d78d37a5812b0a138b",
+          "input_fingerprint": "DR05_Ernst2009_Fig2a_kmax_7p55491_curved|u=0|c0=0.00188837397455494|beta=-1.77445787720965e-17|source_kind=csv|source_ref=Ernst et al. (2009) arXiv:0908.4242v1; Fig2a; C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_b1_second_dataset_TBD/omega_k_data.csv; window k<= 7.55491 um^-1; omega=2*pi*f (f in kHz)|fit_method=Fig2a curved omega/k = c0 + beta*k^2 on k<= 7.55491 um^-1; u fixed to 0|data_fingerprint=f134b5209e24ae507b13c1d9685a713e49b09ffaac095cc10630fe1be1b4cf8b|fit_quality_fingerprint=db090da7da988d0b4a6e093ae392ce29765ff8354d9fc1d0b1af128ec818e8a2",
+          "passes": true,
+          "reason_codes": []
+        },
+        "first_tripped_metric": null,
+        "metric_blocks": [
+          {
+            "delta": 10.0,
+            "name": "n_points",
+            "ratio": 3.0,
+            "sense": "min",
+            "threshold": 5.0,
+            "tripped": false,
+            "value": 15.0,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -2.5928782001228136e-05,
+            "name": "rmse_omega_over_k_m_per_s",
+            "ratio": 0.9351780449969297,
+            "sense": "max",
+            "threshold": 0.0004,
+            "tripped": false,
+            "value": 0.0003740712179987719,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -7.499081165500431e-06,
+            "name": "c0_stderr_m_per_s",
+            "ratio": 0.9750030627816653,
+            "sense": "max",
+            "threshold": 0.0003,
+            "tripped": false,
+            "value": 0.00029250091883449954,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": 0.5018100551471205,
+            "name": "beta_snr",
+            "ratio": 1.2509050275735603,
+            "sense": "min",
+            "threshold": 2.0,
+            "tripped": false,
+            "value": 2.5018100551471205,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": null,
+            "name": "beta_identifiable",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": null,
+            "name": "beta_used_for_inference",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          }
+        ],
+        "metrics": {
+          "beta_identifiable": {
+            "value": true
+          },
+          "beta_snr": {
+            "delta": 0.5018100551471205,
+            "min": 2.0,
+            "ratio": 1.2509050275735603,
+            "value": 2.5018100551471205
+          },
+          "c0_stderr_m_per_s": {
+            "delta": -7.499081165500431e-06,
+            "max": 0.0003,
+            "ratio": 0.9750030627816653,
+            "value": 0.00029250091883449954
+          },
+          "n_points": {
+            "delta": 10.0,
+            "min": 5.0,
+            "ratio": 3.0,
+            "value": 15.0
+          },
+          "rmse_omega_over_k_m_per_s": {
+            "delta": -2.5928782001228136e-05,
+            "max": 0.0004,
+            "ratio": 0.9351780449969297,
+            "value": 0.0003740712179987719
+          }
+        },
+        "tag": "DR05_Ernst2009_Fig2a_kmax_7p55491_curved"
+      }
+    ]
+  },
+  "ov04x": {
+    "curved_adequacy_aggregation": "all_windows",
+    "curved_adequacy_summary": {
+      "adequacy_aggregation": "all_windows",
+      "fail_tags": [],
+      "n_fail": 0,
+      "n_pass": 4,
+      "n_windows": 4
+    },
+    "observable_id": "OV-04x",
+    "robustness_report_fingerprint": "f562944bc70ff2f892d571cb70627aa2e749dc6ef18dd031358eb17e54930915",
+    "suspicion_flags": [],
+    "windows": [
+      {
+        "data_fingerprint": "7ef4974de39290dd4b11b5b1341cd628318d772c2898e2ada21084619aff65aa",
+        "dominant_by_ratio": "beta_snr",
+        "dq01": {
+          "fingerprint": "fe31716097bcf122f24c02d4e932e398f9394bb51dad3834a1cef489bfcb9233",
+          "input_fingerprint": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved|u=0|c0=0.0001055415867360566|beta=-1.635632733254177e-17|source_kind=csv|source_ref=Shammass et al. (2012) arXiv:1207.3440v2; Fig. 2 (filled circles series only); C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv; low-k window k<= 3.33842 um^-1; fit through origin; omega=2*pi*f; date 2026-01-23|fit_method=low-k curved omega/k = c0 + beta*k^2; u fixed to 0|data_fingerprint=7ef4974de39290dd4b11b5b1341cd628318d772c2898e2ada21084619aff65aa|fit_quality_fingerprint=b556219d7010f703e9981a53a5d88fb9ccba077109f91636f08c4a93a7fc6535",
+          "passes": true,
+          "reason_codes": []
+        },
+        "first_tripped_metric": null,
+        "metric_blocks": [
+          {
+            "delta": 16.0,
+            "name": "n_points",
+            "ratio": 4.2,
+            "sense": "min",
+            "threshold": 5.0,
+            "tripped": false,
+            "value": 21.0,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.00016401081552065274,
+            "name": "rmse_omega_over_k_m_per_s",
+            "ratio": 0.5899729611983682,
+            "sense": "max",
+            "threshold": 0.0004,
+            "tripped": false,
+            "value": 0.00023598918447934728,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.0002315586101109782,
+            "name": "c0_stderr_m_per_s",
+            "ratio": 0.2281379662967392,
+            "sense": "max",
+            "threshold": 0.0003,
+            "tripped": false,
+            "value": 6.844138988902175e-05,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -1.0832213642838833,
+            "name": "beta_snr",
+            "ratio": 0.45838931785805836,
+            "sense": "min",
+            "threshold": 2.0,
+            "tripped": true,
+            "value": 0.9167786357161167,
+            "violation_ratio": 2.181551709522282
+          },
+          {
+            "delta": null,
+            "name": "beta_identifiable",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": null,
+            "name": "beta_used_for_inference",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          }
+        ],
+        "metrics": {
+          "beta_identifiable": {
+            "value": true
+          },
+          "beta_snr": {
+            "delta": -1.0832213642838833,
+            "min": 2.0,
+            "ratio": 0.45838931785805836,
+            "value": 0.9167786357161167
+          },
+          "c0_stderr_m_per_s": {
+            "delta": -0.0002315586101109782,
+            "max": 0.0003,
+            "ratio": 0.2281379662967392,
+            "value": 6.844138988902175e-05
+          },
+          "n_points": {
+            "delta": 16.0,
+            "min": 5.0,
+            "ratio": 4.2,
+            "value": 21.0
+          },
+          "rmse_omega_over_k_m_per_s": {
+            "delta": -0.00016401081552065274,
+            "max": 0.0004,
+            "ratio": 0.5899729611983682,
+            "value": 0.00023598918447934728
+          }
+        },
+        "tag": "DR01_DS02_Fig2_filled_circles_kmax_3p33842_2026-01-23_curved"
+      },
+      {
+        "data_fingerprint": "3776b46445dc6fae00f7bbf8186727060135a2c8b78d83405a8f372afd7c2f8a",
+        "dominant_by_ratio": "beta_snr",
+        "dq01": {
+          "fingerprint": "6fd42868d4b56372fa6a61c042b9aca98d03388db4bc51a66f791506510aadba",
+          "input_fingerprint": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23_curved|u=0|c0=0.0001393401555668269|beta=-5.507634269137029e-17|source_kind=csv|source_ref=Shammass et al. (2012) arXiv:1207.3440v2; Fig. 2 (filled circles series only); C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv; low-k window k<= 2.1 um^-1; fit through origin; omega=2*pi*f; date 2026-01-23|fit_method=low-k curved omega/k = c0 + beta*k^2; u fixed to 0|data_fingerprint=3776b46445dc6fae00f7bbf8186727060135a2c8b78d83405a8f372afd7c2f8a|fit_quality_fingerprint=9c5ae973c8b0b9239298133496d51a40f35cb6653ecc9ef59f187fc09ea03ed1",
+          "passes": true,
+          "reason_codes": []
+        },
+        "first_tripped_metric": null,
+        "metric_blocks": [
+          {
+            "delta": 12.0,
+            "name": "n_points",
+            "ratio": 3.4,
+            "sense": "min",
+            "threshold": 5.0,
+            "tripped": false,
+            "value": 17.0,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.00014274827704928997,
+            "name": "rmse_omega_over_k_m_per_s",
+            "ratio": 0.6431293073767751,
+            "sense": "max",
+            "threshold": 0.0004,
+            "tripped": false,
+            "value": 0.00025725172295071005,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.0002126250086875704,
+            "name": "c0_stderr_m_per_s",
+            "ratio": 0.2912499710414319,
+            "sense": "max",
+            "threshold": 0.0003,
+            "tripped": false,
+            "value": 8.737499131242957e-05,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.9973486173258226,
+            "name": "beta_snr",
+            "ratio": 0.5013256913370887,
+            "sense": "min",
+            "threshold": 2.0,
+            "tripped": true,
+            "value": 1.0026513826741774,
+            "violation_ratio": 1.9947112571328514
+          },
+          {
+            "delta": null,
+            "name": "beta_identifiable",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": null,
+            "name": "beta_used_for_inference",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          }
+        ],
+        "metrics": {
+          "beta_identifiable": {
+            "value": true
+          },
+          "beta_snr": {
+            "delta": -0.9973486173258226,
+            "min": 2.0,
+            "ratio": 0.5013256913370887,
+            "value": 1.0026513826741774
+          },
+          "c0_stderr_m_per_s": {
+            "delta": -0.0002126250086875704,
+            "max": 0.0003,
+            "ratio": 0.2912499710414319,
+            "value": 8.737499131242957e-05
+          },
+          "n_points": {
+            "delta": 12.0,
+            "min": 5.0,
+            "ratio": 3.4,
+            "value": 17.0
+          },
+          "rmse_omega_over_k_m_per_s": {
+            "delta": -0.00014274827704928997,
+            "max": 0.0004,
+            "ratio": 0.6431293073767751,
+            "value": 0.00025725172295071005
+          }
+        },
+        "tag": "DR03_DS02_Fig2_filled_circles_kmax_2p1_2026-01-23_curved"
+      },
+      {
+        "data_fingerprint": "21d5bfba8763eb449a37a724a1f51d5aebd198d390126e9ac12284f6b863c693",
+        "dominant_by_ratio": "beta_snr",
+        "dq01": {
+          "fingerprint": "d8d8ce54864488b9dda544df24c64f2dfa9814dd70864bc21f3f638b5d6d0f36",
+          "input_fingerprint": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23_curved|u=0|c0=0.0001984681144332602|beta=-2.101044879531753e-16|source_kind=csv|source_ref=Shammass et al. (2012) arXiv:1207.3440v2; Fig. 2 (filled circles series only); C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv; low-k window k<= 1.16752 um^-1; fit through origin; omega=2*pi*f; date 2026-01-23|fit_method=low-k curved omega/k = c0 + beta*k^2; u fixed to 0|data_fingerprint=21d5bfba8763eb449a37a724a1f51d5aebd198d390126e9ac12284f6b863c693|fit_quality_fingerprint=d4da809436db984090517ee9448b68ad80ca346200652e7de04d89cb61aa0683",
+          "passes": true,
+          "reason_codes": []
+        },
+        "first_tripped_metric": null,
+        "metric_blocks": [
+          {
+            "delta": 8.0,
+            "name": "n_points",
+            "ratio": 2.6,
+            "sense": "min",
+            "threshold": 5.0,
+            "tripped": false,
+            "value": 13.0,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.00011575926105339722,
+            "name": "rmse_omega_over_k_m_per_s",
+            "ratio": 0.710601847366507,
+            "sense": "max",
+            "threshold": 0.0004,
+            "tripped": false,
+            "value": 0.0002842407389466028,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.00018088733970770724,
+            "name": "c0_stderr_m_per_s",
+            "ratio": 0.39704220097430915,
+            "sense": "max",
+            "threshold": 0.0003,
+            "tripped": false,
+            "value": 0.00011911266029229273,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.8951223279513929,
+            "name": "beta_snr",
+            "ratio": 0.5524388360243035,
+            "sense": "min",
+            "threshold": 2.0,
+            "tripped": true,
+            "value": 1.104877672048607,
+            "violation_ratio": 1.8101551425975542
+          },
+          {
+            "delta": null,
+            "name": "beta_identifiable",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": null,
+            "name": "beta_used_for_inference",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          }
+        ],
+        "metrics": {
+          "beta_identifiable": {
+            "value": true
+          },
+          "beta_snr": {
+            "delta": -0.8951223279513929,
+            "min": 2.0,
+            "ratio": 0.5524388360243035,
+            "value": 1.104877672048607
+          },
+          "c0_stderr_m_per_s": {
+            "delta": -0.00018088733970770724,
+            "max": 0.0003,
+            "ratio": 0.39704220097430915,
+            "value": 0.00011911266029229273
+          },
+          "n_points": {
+            "delta": 8.0,
+            "min": 5.0,
+            "ratio": 2.6,
+            "value": 13.0
+          },
+          "rmse_omega_over_k_m_per_s": {
+            "delta": -0.00011575926105339722,
+            "max": 0.0004,
+            "ratio": 0.710601847366507,
+            "value": 0.0002842407389466028
+          }
+        },
+        "tag": "DR04d_DS02_Fig2_filled_circles_kmax_1p167515_2026-01-23_curved"
+      },
+      {
+        "data_fingerprint": "c7726c8611ae01fbf38aeef1f2e79cb518bc4f02e15ad86188ab552fefbe65ee",
+        "dominant_by_ratio": "beta_snr",
+        "dq01": {
+          "fingerprint": "9e2e25d2d440f6ceb837366cab3424423753d37c35c9ad22cf73a1d091ac49cc",
+          "input_fingerprint": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23_curved|u=0|c0=0.0001645198947227385|beta=-1.053237337619835e-16|source_kind=csv|source_ref=Shammass et al. (2012) arXiv:1207.3440v2; Fig. 2 (filled circles series only); C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv; low-k window k<= 1.8 um^-1; fit through origin; omega=2*pi*f; date 2026-01-23|fit_method=low-k curved omega/k = c0 + beta*k^2; u fixed to 0|data_fingerprint=c7726c8611ae01fbf38aeef1f2e79cb518bc4f02e15ad86188ab552fefbe65ee|fit_quality_fingerprint=4500b5fbec0cf6efbb431b7190286a8cc6e334c64ef61b24e4c727b2bee9297a",
+          "passes": true,
+          "reason_codes": []
+        },
+        "first_tripped_metric": null,
+        "metric_blocks": [
+          {
+            "delta": 10.0,
+            "name": "n_points",
+            "ratio": 3.0,
+            "sense": "min",
+            "threshold": 5.0,
+            "tripped": false,
+            "value": 15.0,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.00013012217846469526,
+            "name": "rmse_omega_over_k_m_per_s",
+            "ratio": 0.6746945538382618,
+            "sense": "max",
+            "threshold": 0.0004,
+            "tripped": false,
+            "value": 0.00026987782153530476,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.00019904166440812791,
+            "name": "c0_stderr_m_per_s",
+            "ratio": 0.33652778530624017,
+            "sense": "max",
+            "threshold": 0.0003,
+            "tripped": false,
+            "value": 0.00010095833559187205,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": -0.9447525772319305,
+            "name": "beta_snr",
+            "ratio": 0.5276237113840347,
+            "sense": "min",
+            "threshold": 2.0,
+            "tripped": true,
+            "value": 1.0552474227680695,
+            "violation_ratio": 1.8952901062328162
+          },
+          {
+            "delta": null,
+            "name": "beta_identifiable",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          },
+          {
+            "delta": null,
+            "name": "beta_used_for_inference",
+            "ratio": null,
+            "sense": "bool",
+            "threshold": true,
+            "tripped": false,
+            "value": true,
+            "violation_ratio": 1.0
+          }
+        ],
+        "metrics": {
+          "beta_identifiable": {
+            "value": true
+          },
+          "beta_snr": {
+            "delta": -0.9447525772319305,
+            "min": 2.0,
+            "ratio": 0.5276237113840347,
+            "value": 1.0552474227680695
+          },
+          "c0_stderr_m_per_s": {
+            "delta": -0.00019904166440812791,
+            "max": 0.0003,
+            "ratio": 0.33652778530624017,
+            "value": 0.00010095833559187205
+          },
+          "n_points": {
+            "delta": 10.0,
+            "min": 5.0,
+            "ratio": 3.0,
+            "value": 15.0
+          },
+          "rmse_omega_over_k_m_per_s": {
+            "delta": -0.00013012217846469526,
+            "max": 0.0004,
+            "ratio": 0.6746945538382618,
+            "value": 0.00026987782153530476
+          }
+        },
+        "tag": "DR05_DS02_Fig2_filled_circles_kmax_1p8_2026-01-23_curved"
+      }
+    ]
+  },
+  "schema": "OV-DQ-01_adequacy_drilldown/v1"
+}

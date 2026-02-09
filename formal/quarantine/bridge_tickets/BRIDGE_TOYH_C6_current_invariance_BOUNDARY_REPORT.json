@@ -1,0 +1,152 @@
+{
+  "artifact_sha256": "6fdfe5d5cae750e745a0aeabe00e5e1270bac6a89d2ccc30d65bf67c692dc4bf",
+  "items": [
+    {
+      "evidence": {
+        "pytest_nodes": [
+          "formal/python/tests/test_bridge_toyh_c6_current_invariance.py::test_bridge_toyh_c6_current_invariance_invariant_observables",
+          "formal/python/tests/test_bridge_toyh_c6_current_invariance.py::test_bridge_toyh_c6_current_invariance_negative_control_local_phase_shear",
+          "formal/python/tests/test_bridge_toyh_c6_current_invariance.py::test_bridge_toyh_c6_current_invariance_resolution_scan"
+        ]
+      },
+      "inputs": {
+        "control_min": 0.001,
+        "grid_sizes": [
+          7,
+          9,
+          11
+        ],
+        "local_phase_shear_alpha": 0.5,
+        "thetas": [
+          0.0,
+          0.523598775598,
+          1.0471975512,
+          1.57079632679
+        ],
+        "tolerance": 1e-10
+      },
+      "samples": [
+        {
+          "current_l2_rel": 0.0,
+          "grid_n": 7,
+          "invariance_ok": true,
+          "local_control_ok": true,
+          "local_phase_shear_rel": 1.37370815096,
+          "reason_code": "PASS_CURRENT_INVARIANCE",
+          "theta": 0.0
+        },
+        {
+          "current_l2_rel": 0.0,
+          "grid_n": 9,
+          "invariance_ok": true,
+          "local_control_ok": true,
+          "local_phase_shear_rel": 1.52207905524,
+          "reason_code": "PASS_CURRENT_INVARIANCE",
+          "theta": 0.0
+        },
+        {
+          "current_l2_rel": 0.0,
+          "grid_n": 11,
+          "invariance_ok": true,
+          "local_control_ok": true,
+          "local_phase_shear_rel": 1.61050375394,
+          "reason_code": "PASS_CURRENT_INVARIANCE",
+          "theta": 0.0
+        },
+        {
+          "current_l2_rel": 1.79982577539e-16,
+          "grid_n": 7,
+          "invariance_ok": true,
+          "local_control_ok": true,
+          "local_phase_shear_rel": 1.37370815096,
+          "reason_code": "PASS_CURRENT_INVARIANCE",
+          "theta": 0.523598775598
+        },
+        {
+          "current_l2_rel": 5.39947732618e-16,
+          "grid_n": 9,
+          "invariance_ok": true,
+          "local_control_ok": true,
+          "local_phase_shear_rel": 1.52207905524,
+          "reason_code": "PASS_CURRENT_INVARIANCE",
+          "theta": 0.523598775598
+        },
+        {
+          "current_l2_rel": 0.0,
+          "grid_n": 11,
+          "invariance_ok": true,
+          "local_control_ok": true,
+          "local_phase_shear_rel": 1.61050375394,
+          "reason_code": "PASS_CURRENT_INVARIANCE",
+          "theta": 0.523598775598
+        },
+        {
+          "current_l2_rel": 1.79982577539e-16,
+          "grid_n": 7,
+          "invariance_ok": true,
+          "local_control_ok": true,
+          "local_phase_shear_rel": 1.37370815096,
+          "reason_code": "PASS_CURRENT_INVARIANCE",
+          "theta": 1.0471975512
+        },
+        {
+          "current_l2_rel": 3.59965155078e-16,
+          "grid_n": 9,
+          "invariance_ok": true,
+          "local_control_ok": true,
+          "local_phase_shear_rel": 1.52207905524,
+          "reason_code": "PASS_CURRENT_INVARIANCE",
+          "theta": 1.0471975512
+        },
+        {
+          "current_l2_rel": 1.79982577539e-16,
+          "grid_n": 11,
+          "invariance_ok": true,
+          "local_control_ok": true,
+          "local_phase_shear_rel": 1.61050375394,
+          "reason_code": "PASS_CURRENT_INVARIANCE",
+          "theta": 1.0471975512
+        },
+        {
+          "current_l2_rel": 0.0,
+          "grid_n": 7,
+          "invariance_ok": true,
+          "local_control_ok": true,
+          "local_phase_shear_rel": 1.37370815096,
+          "reason_code": "PASS_CURRENT_INVARIANCE",
+          "theta": 1.57079632679
+        },
+        {
+          "current_l2_rel": 3.59965155078e-16,
+          "grid_n": 9,
+          "invariance_ok": true,
+          "local_control_ok": true,
+          "local_phase_shear_rel": 1.52207905524,
+          "reason_code": "PASS_CURRENT_INVARIANCE",
+          "theta": 1.57079632679
+        },
+        {
+          "current_l2_rel": 0.0,
+          "grid_n": 11,
+          "invariance_ok": true,
+          "local_control_ok": true,
+          "local_phase_shear_rel": 1.61050375394,
+          "reason_code": "PASS_CURRENT_INVARIANCE",
+          "theta": 1.57079632679
+        }
+      ],
+      "scan_id": "c6_current_invariance_boundary_scan_v1",
+      "summary": {
+        "fail_reason_counts": {
+          "FAIL_CURRENT_INVARIANCE_TOL": 0,
+          "FAIL_LOCAL_PHASE_SHEAR_CONTROL_NOT_TRIGGERED": 0
+        },
+        "n_fail": 0,
+        "n_pass": 12,
+        "n_samples": 12
+      },
+      "ticket_id": "BRIDGE_TICKET_TOYH_0002"
+    }
+  ],
+  "schema_version": 1
+}

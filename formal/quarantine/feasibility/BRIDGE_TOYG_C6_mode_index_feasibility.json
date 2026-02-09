@@ -1,0 +1,56 @@
+{
+  "bridge_id": "BRIDGE_TICKET_TOYG_0002",
+  "canonical_surface": {
+    "path": "formal/python/crft/cp_nlse_2d.py",
+    "sha256": "3cf60dceb1b6d064138dab120486c9e6371b2d5db76f21210b219917ea9d548b"
+  },
+  "checks": {
+    "has_fft_tooling": true,
+    "has_grid_type": true,
+    "mode_index_demo": {
+      "mode_index_peak": 3,
+      "mode_index_target": 3,
+      "n": 32,
+      "stable": true
+    },
+    "mode_index_demo_deterministic": true,
+    "selected_target_present": true,
+    "selected_target_resolved_by_mode_count": 1
+  },
+  "evidence": {
+    "pytest_nodes": [
+      "formal/python/tests/test_bridge_toyg_c6_mode_index_feasibility_determinism.py::test_bridge_toyg_c6_mode_index_feasibility_is_deterministic",
+      "formal/python/tests/test_bridge_toyg_c6_mode_index_feasibility_artifact_pointers_exist.py::test_bridge_toyg_c6_mode_index_feasibility_artifact_pointers_exist"
+    ]
+  },
+  "found": true,
+  "mode": "design_only_preimplementation",
+  "observable_plan": {
+    "definition": "dominant FFT mode-index on pinned periodic loop from C6 complex field specimen",
+    "observable_id": "TOYG_C6_mode_index_quantization_v1",
+    "scope_limits": [
+      "design_only",
+      "no_bridge_implementation_in_this_ticket",
+      "no_physics_claim"
+    ]
+  },
+  "orthogonality_expectation": {
+    "expected_effect": "reduce mismatch_toyg_winding_only mass attributable to fail_not_integer_close without collapsing program-level nonredundancy.",
+    "success_rule": "program nonredundant remains true AND targeted mismatch region decreases under pinned probes."
+  },
+  "prerequisite": "",
+  "program_mismatch_source": {
+    "path": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_MISMATCH_REPORT.json",
+    "sha256": "af9c4666db7ea0b6e587ebc37fcd8bf9d444565f8a02898d7f78ad3ba07b4638"
+  },
+  "schema_version": 1,
+  "selected_target_reason_code": "fail_not_integer_close",
+  "targeted_mismatch_region": {
+    "reason_code_counts": {
+      "mismatch_current_and_pair": 1
+    },
+    "resolved_by_mode_count": 1,
+    "source_report": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_MISMATCH_REPORT.json",
+    "toyg_winding_reason_code_counts": {}
+  }
+}

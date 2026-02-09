@@ -1,0 +1,195 @@
+STATUS: ACTIVE / AUTHORITATIVE
+
+New Workflow Constitution (Lean-First)
+
+This is the sole active constitution for this repository.
+Supersedes: archive/Workflow_Constitution_v1.txt
+
+1️⃣ Lean = Primary Authority (Structure + Intent)
+
+Lean files may contain three layers:
+
+A. Structural Authority (binding)
+
+Definitions
+
+Axioms (explicitly labeled)
+
+Lemmas
+
+Theorems
+
+Dependency graph
+
+This layer defines:
+
+What exists and what follows from it
+
+B. Intent Authority (non-binding, internal)
+
+Lean docstrings (/- … -/) may state:
+
+Motivation
+
+Design intent
+
+Scope restrictions
+
+Why a definition exists
+
+These:
+
+do not assert truth
+
+do not upgrade status
+
+cannot cause circular validation
+
+They are comments, not claims.
+
+C. Gate Definitions (structural only)
+
+Constraints (CT-01, SYM-01, CAUS-01):
+
+are predicates
+
+have no physical meaning
+
+only say “admissible / not admissible”
+
+Lean answers:
+
+“If you accept these definitions, the exclusions are logically sound.”
+
+
+2️⃣ Empirical Artifacts = Typed, Fingerprinted Inputs
+
+Empirical Artifacts are typed, provenance-carrying objects (e.g., DR-01 fit artifacts)
+that serve as the only allowed inputs to bridge layers.
+
+Rules (binding):
+
+- No bridge may consume raw data files, raw numpy arrays, or untyped tuples as its primary input.
+- Fit artifacts must be provenance-stamped (source kind/ref + fit method tag) and carry a
+	content-based fingerprint (e.g., a hash of a canonical (k, ω) sample).
+- Library bridge code must not read files implicitly; any file IO / hashing happens at artifact
+	creation time (scripts/tools), not inside bridge modules.
+
+
+3️⃣ Bridges = Front-Door Only (Constitutional)
+
+Any bridge criterion must expose exactly one canonical callable (“front door”).
+
+Rules (binding):
+
+- Downstream consumers import only the front door.
+- All candidate implementations live in private/internal modules, are tabled explicitly,
+	are regression-tested (locks), and are import-banned downstream.
+- Candidate tables are completeness-checked (no missing, no stale entries).
+
+4️⃣ Python = Consequence Engine
+
+Python is never discovery-first.
+
+Allowed:
+
+“If this gate fails, X grows / shifts / destabilizes”
+
+“If satisfied, effect is null within ε”
+
+Disallowed:
+
+“Therefore this structure is correct”
+
+Python answers:
+
+“Does violating the structure cause the predicted effect?”
+
+5️⃣ Markdown = Optional Externalization Layer
+
+Markdown becomes:
+
+explanatory
+
+narrative
+
+human-readable
+
+Markdown cannot:
+
+define admissibility
+
+gate Lean
+
+introduce constraints
+
+Markdown is now:
+
+A rendered view of Lean + Python, not a peer authority.
+
+This removes circularity.
+
+6️⃣ Aristotle = One-Way Adapter
+
+Aristotle may:
+
+translate Lean intent comments into clearer Lean structure
+
+convert Python invariants into lemmas
+
+eliminate boilerplate
+
+Aristotle may never:
+
+introduce constraints
+
+modify inventory status
+
+justify correctness
+
+
+Progress Without Completion (Explicit)
+
+Reductions, Noether derivations, and empirical anchoring may be partial, scoped, or probe-relative
+without blocking progress.
+
+Allowed (if scope is explicit):
+
+- Probe-relative theorems and locks
+- Structural wrappers that preserve dependency discipline
+- Behavioral evidence that tightens a lock without claiming global validity
+
+Disallowed:
+
+- Silent scope creep (changing what a result claims without changing its stated scope)
+- Upgrading status based on behavioral tests alone
+
+Where We Are Right Now (Clear State)
+
+Locked / Stable
+
+CT-01 (dispersion preservation gate)
+
+SYM-01 (symmetry pruning)
+
+CAUS-01 (structural causality admissibility)
+
+Plane-wave operator scaffold
+
+Probe-relative dispersion logic
+
+Resolved
+
+DR-02 anchoring confusion (correctly separated claim vs evidence)
+
+Archive vs canonical evidence ambiguity
+
+Structural vs behavioral overclaiming
+
+Not Blocked
+
+No foundational contradictions
+
+No failed gates
+
+No refuted claims

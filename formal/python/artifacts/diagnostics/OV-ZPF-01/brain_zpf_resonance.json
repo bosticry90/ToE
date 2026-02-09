@@ -1,0 +1,115 @@
+{
+  "fingerprint": "390eb03628433dad4c7bee59f5771fce596347c3e6426580d11bbdea9b094cd5",
+  "inputs": {
+    "eeg_bands": [
+      {
+        "f_high_hz": 30.0,
+        "f_low_hz": 13.0,
+        "name": "beta"
+      },
+      {
+        "f_high_hz": 80.0,
+        "f_low_hz": 30.0,
+        "name": "gamma"
+      }
+    ],
+    "min_mode_overlap_fraction": 0.05,
+    "temperature_K": 295.0,
+    "zpf_mode_bands": [
+      {
+        "f_high_hz": 22.0,
+        "f_low_hz": 18.0,
+        "name": "zpf_mode_beta_candidate"
+      },
+      {
+        "f_high_hz": 42.0,
+        "f_low_hz": 38.0,
+        "name": "zpf_mode_gamma_candidate"
+      }
+    ]
+  },
+  "notes": "Synthetic overlap demo only; not external evidence, not an anchoring claim, and not a physical feasibility determination.",
+  "report": {
+    "config_tag": "OV-ZPF-01_brain_zpf_resonance_v1",
+    "eeg_bands": [
+      {
+        "f_high_hz": 30.0,
+        "f_low_hz": 13.0,
+        "name": "beta"
+      },
+      {
+        "f_high_hz": 80.0,
+        "f_low_hz": 30.0,
+        "name": "gamma"
+      }
+    ],
+    "fingerprint": "1c1a3bdf0e512afb8817077712394c194bd36df5b2da47501024bc27c63bb7d3",
+    "min_mode_overlap_fraction": 0.05,
+    "mode_best_matches": {
+      "zpf_mode_beta_candidate": "beta",
+      "zpf_mode_gamma_candidate": "gamma"
+    },
+    "mode_has_any_overlap": {
+      "zpf_mode_beta_candidate": true,
+      "zpf_mode_gamma_candidate": true
+    },
+    "overlaps": [
+      {
+        "a": "zpf_mode_beta_candidate",
+        "b": "beta",
+        "frac_of_a": 1.0,
+        "frac_of_b": 0.23529411764705882,
+        "jaccard": 0.23529411764705882,
+        "overlap_high_hz": 22.0,
+        "overlap_low_hz": 18.0,
+        "overlap_width_hz": 4.0
+      },
+      {
+        "a": "zpf_mode_beta_candidate",
+        "b": "gamma",
+        "frac_of_a": 0.0,
+        "frac_of_b": 0.0,
+        "jaccard": 0.0,
+        "overlap_high_hz": 0.0,
+        "overlap_low_hz": 0.0,
+        "overlap_width_hz": 0.0
+      },
+      {
+        "a": "zpf_mode_gamma_candidate",
+        "b": "beta",
+        "frac_of_a": 0.0,
+        "frac_of_b": 0.0,
+        "jaccard": 0.0,
+        "overlap_high_hz": 0.0,
+        "overlap_low_hz": 0.0,
+        "overlap_width_hz": 0.0
+      },
+      {
+        "a": "zpf_mode_gamma_candidate",
+        "b": "gamma",
+        "frac_of_a": 1.0,
+        "frac_of_b": 0.08,
+        "jaccard": 0.08,
+        "overlap_high_hz": 42.0,
+        "overlap_low_hz": 38.0,
+        "overlap_width_hz": 4.0
+      }
+    ],
+    "schema": "OV-ZPF-01/brain_zpf_resonance_report/v1",
+    "temperature_K": 295.0,
+    "thermal_frequency_scale_hz": 6146802641381.635,
+    "zpf_mode_bands": [
+      {
+        "f_high_hz": 22.0,
+        "f_low_hz": 18.0,
+        "name": "zpf_mode_beta_candidate"
+      },
+      {
+        "f_high_hz": 42.0,
+        "f_low_hz": 38.0,
+        "name": "zpf_mode_gamma_candidate"
+      }
+    ]
+  },
+  "schema": "OV-ZPF-01/brain_zpf_resonance_artifact/v1"
+}

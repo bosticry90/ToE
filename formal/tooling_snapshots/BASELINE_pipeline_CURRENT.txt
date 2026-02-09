@@ -1,0 +1,4 @@
+>> Baseline snapshot (pipeline; current = baseline)
+>> Created: 2026-01-29 18:12:37
+>> Snapshot: formal/tooling_snapshots/repo_snapshot_20260129_180945_BASELINE_pipeline.jsonl
+>> Notes: excludes evidence payload dirs (formal/external_evidence/**, formal/external/**, supporting research and evidence/**).

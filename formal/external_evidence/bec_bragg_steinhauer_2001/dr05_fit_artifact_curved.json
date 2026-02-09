@@ -1,0 +1,46 @@
+{
+  "br01_metric_1d": {
+    "c_s2": 4.522010521029471e-06,
+    "g_tt": -4.522010521029471e-06,
+    "g_tx": -0.0,
+    "g_xx": 1.0
+  },
+  "c0": 0.002126501944750926,
+  "beta": -6.168762109148344e-17,
+  "fit_quality": {
+    "n_points": 5,
+    "rmse_omega_over_k_m_per_s": 0.00028791840665289654,
+    "c0_stderr_m_per_s": 0.0002736485159346645,
+    "beta_stderr_s_per_m2": 1.5868946466088918e-16,
+    "r2_y_space": 0.04795522932371277
+  },
+  "fit_quality_fingerprint": "6dca51e7264fb7fa3847faab8645ccd6ea0933e70ea0c94649be5e420fd42b68",
+  "data_fingerprint": "4625f1556255e06a1c16408ee1c820da25d846f3ab53f91e446a975d505397b8",
+  "fit_method_tag": "low-k curved omega/k = c0 + beta*k^2 on k<= 1.8 um^-1; u fixed to 0",
+  "sample_kw": [
+    [
+      418478.43635962403,
+      1066.999768714269
+    ],
+    [
+      703804.544020029,
+      1360.429213327549
+    ],
+    [
+      1065217.90397193,
+      1833.0986545949238
+    ],
+    [
+      1407608.3624182402,
+      2576.8374099005873
+    ],
+    [
+      1750000.27210818,
+      3807.6791260368273
+    ]
+  ],
+  "source_kind": "csv",
+  "source_ref": "Steinhauer PRL 88, 120407 (2002), Fig 3a; digitized from arXiv 0111438v1; formal/external_evidence/bec_bragg_steinhauer_2001/omega_k_data.csv; low-k window k<= 1.8 um^-1; fit through origin; omega=2*pi*f; date 2026-01-17; curved omega/k=c0+beta*k^2; date 2026-01-18",
+  "tag": "DR05_Steinhauer_Fig3a_lowk_curved_kmax_1p8_2026-01-18",
+  "u": 0.0
+}

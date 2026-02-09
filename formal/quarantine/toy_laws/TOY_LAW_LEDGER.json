@@ -1,0 +1,253 @@
+{
+  "fingerprint": "dfad5d3b1f60e4265492dbc6401bb79813bd6f8d55f672d5ba5dd624a9a696db",
+  "items": [
+    {
+      "evidence": {
+        "evidence_strength": "bounded_multi",
+        "pytest_nodes": [
+          "formal/python/tests/test_toy_viability_flow_front_door_determinism.py::test_toy_viability_flow_front_door_is_deterministic",
+          "formal/python/tests/test_toy_viability_flow_boundary_localization.py::test_toy_viability_flow_boundary_localization_identity_grad",
+          "formal/python/tests/test_toy_viability_flow_negative_controls.py::test_toy_viability_flow_negative_control_wrong_sign",
+          "formal/python/tests/test_toy_viability_flow_negative_controls.py::test_toy_viability_flow_negative_control_parameter_tamper",
+          "formal/python/tests/test_toy_viability_flow_resolution_scan.py::test_toy_viability_flow_resolution_scan_multistep_converges"
+        ]
+      },
+      "front_door": {
+        "report_output_path": "formal/output/toy_viability_gradient_step_report.json",
+        "report_schema": "TOY/viability_gradient_step_report/v1",
+        "tool_module": "formal.python.tools.toy_viability_flow_front_door"
+      },
+      "scope_limits": [
+        "structure_only; no physics claim",
+        "bounded evidence only; consequence engine"
+      ],
+      "toy_law_id": "TOY-A1-viability-gradient-step"
+    },
+    {
+      "evidence": {
+        "evidence_strength": "bounded_multi",
+        "pytest_nodes": [
+          "formal/python/tests/test_toy_coherence_transport_front_door_determinism.py::test_toy_coherence_transport_front_door_is_deterministic",
+          "formal/python/tests/test_toy_coherence_transport_boundary_localization.py::test_toy_coherence_transport_boundary_localization",
+          "formal/python/tests/test_toy_coherence_transport_negative_controls.py::test_toy_coherence_transport_negative_control_wrong_sign",
+          "formal/python/tests/test_toy_coherence_transport_negative_controls.py::test_toy_coherence_transport_negative_control_bad_params",
+          "formal/python/tests/test_toy_coherence_transport_resolution_scan.py::test_toy_coherence_transport_resolution_scan"
+        ]
+      },
+      "front_door": {
+        "report_output_path": "formal/output/toy_coherence_transport_report.json",
+        "report_schema": "TOY/coherence_transport_report/v1",
+        "tool_module": "formal.python.tools.toy_coherence_transport_front_door"
+      },
+      "scope_limits": [
+        "structure_only; no physics claim",
+        "bounded evidence only; consequence engine"
+      ],
+      "toy_law_id": "TOY-B1-coherence-transport"
+    },
+    {
+      "evidence": {
+        "evidence_strength": "bounded_multi",
+        "pytest_nodes": [
+          "formal/python/tests/test_toy_coherence_transport_b2_determinism.py::test_toy_coherence_transport_b2_is_deterministic",
+          "formal/python/tests/test_toy_coherence_transport_b2_boundary_localization.py::test_toy_coherence_transport_b2_boundary_localization",
+          "formal/python/tests/test_toy_coherence_transport_b2_negative_controls.py::test_toy_coherence_transport_b2_negative_control_wrong_sign",
+          "formal/python/tests/test_toy_coherence_transport_b2_negative_controls.py::test_toy_coherence_transport_b2_negative_control_bad_params",
+          "formal/python/tests/test_toy_coherence_transport_b2_resolution_scan.py::test_toy_coherence_transport_b2_resolution_scan"
+        ]
+      },
+      "front_door": {
+        "report_output_path": "formal/output/toy_coherence_transport_report.json",
+        "report_schema": "TOY/coherence_transport_report/v1",
+        "tool_module": "formal.python.tools.toy_coherence_transport_front_door"
+      },
+      "scope_limits": [
+        "structure_only; no physics claim",
+        "bounded evidence only; consequence engine"
+      ],
+      "toy_law_id": "TOY-B2-coherence-transport-proxy"
+    },
+    {
+      "evidence": {
+        "evidence_strength": "bounded_multi",
+        "pytest_nodes": [
+          "formal/python/tests/test_toy_metric_closure_front_door_determinism.py::test_toy_metric_closure_front_door_is_deterministic",
+          "formal/python/tests/test_toy_metric_closure_boundary_localization.py::test_toy_metric_closure_boundary_localization",
+          "formal/python/tests/test_toy_metric_closure_negative_controls.py::test_toy_metric_closure_negative_control_operator_sanity",
+          "formal/python/tests/test_toy_metric_closure_negative_controls.py::test_toy_metric_closure_negative_control_bad_params",
+          "formal/python/tests/test_toy_metric_closure_resolution_scan.py::test_toy_metric_closure_resolution_scan"
+        ]
+      },
+      "front_door": {
+        "report_output_path": "formal/output/toy_metric_closure_report.json",
+        "report_schema": "TOY/metric_closure_report/v1",
+        "tool_module": "formal.python.tools.toy_metric_closure_front_door"
+      },
+      "scope_limits": [
+        "structure_only; no physics claim",
+        "bounded evidence only; consequence engine"
+      ],
+      "toy_law_id": "TOY-C1-metric-closure"
+    },
+    {
+      "evidence": {
+        "evidence_strength": "bounded_multi",
+        "pytest_nodes": [
+          "formal/python/tests/test_toy_metric_closure_c2_determinism.py::test_toy_metric_closure_c2_is_deterministic",
+          "formal/python/tests/test_toy_metric_closure_c2_boundary_localization.py::test_toy_metric_closure_c2_boundary_localization",
+          "formal/python/tests/test_toy_metric_closure_c2_negative_controls.py::test_toy_metric_closure_c2_negative_control_operator_sanity",
+          "formal/python/tests/test_toy_metric_closure_c2_negative_controls.py::test_toy_metric_closure_c2_negative_control_bad_params",
+          "formal/python/tests/test_toy_metric_closure_c2_negative_controls.py::test_toy_metric_closure_c2_negative_control_bad_state_floor",
+          "formal/python/tests/test_toy_metric_closure_c2_resolution_scan.py::test_toy_metric_closure_c2_resolution_scan"
+        ]
+      },
+      "front_door": {
+        "report_output_path": "formal/output/toy_metric_closure_report.json",
+        "report_schema": "TOY/metric_closure_report/v1",
+        "tool_module": "formal.python.tools.toy_metric_closure_front_door"
+      },
+      "scope_limits": [
+        "structure_only; no physics claim",
+        "bounded evidence only; consequence engine"
+      ],
+      "toy_law_id": "TOY-C2-metric-closure-curvature-proxy"
+    },
+    {
+      "evidence": {
+        "evidence_strength": "bounded_multi",
+        "pytest_nodes": [
+          "formal/python/tests/test_toy_regime_switching_front_door_determinism.py::test_toy_regime_switching_front_door_is_deterministic",
+          "formal/python/tests/test_toy_regime_switching_boundary_localization.py::test_toy_regime_switching_boundary_localization",
+          "formal/python/tests/test_toy_regime_switching_negative_controls.py::test_toy_regime_switching_negative_control_inverted_selector",
+          "formal/python/tests/test_toy_regime_switching_negative_controls.py::test_toy_regime_switching_negative_control_bad_params_no_switch",
+          "formal/python/tests/test_toy_regime_switching_resolution_scan.py::test_toy_regime_switching_resolution_scan",
+          "formal/python/tests/test_toy_regime_switching_hysteresis_protocol.py::test_toy_regime_switching_hysteresis_protocol",
+          "formal/python/tests/test_toy_regime_switching_hysteresis_protocol.py::test_toy_regime_switching_hysteresis_negative_control_swapped_thresholds",
+          "formal/python/tests/test_toy_regime_switching_hysteresis_protocol.py::test_toy_regime_switching_hysteresis_negative_control_no_gap",
+          "formal/python/tests/test_toy_regime_switching_hysteresis_robustness_guard.py::test_toy_regime_switching_hysteresis_robustness_guard"
+        ]
+      },
+      "front_door": {
+        "report_output_path": "formal/output/toy_regime_switching_report.json",
+        "report_schema": "TOY/regime_switching_report/v1",
+        "tool_module": "formal.python.tools.toy_regime_switching_front_door"
+      },
+      "scope_limits": [
+        "structure_only; no physics claim",
+        "bounded evidence only; consequence engine"
+      ],
+      "toy_law_id": "TOY-D1-regime-switching"
+    },
+    {
+      "evidence": {
+        "evidence_strength": "bounded_multi",
+        "pytest_nodes": [
+          "formal/python/tests/test_toy_scale_flow_front_door_determinism.py::test_toy_scale_flow_front_door_is_deterministic",
+          "formal/python/tests/test_toy_scale_flow_boundary_localization.py::test_toy_scale_flow_boundary_localization",
+          "formal/python/tests/test_toy_scale_flow_negative_controls.py::test_toy_scale_flow_negative_control_operator_sanity",
+          "formal/python/tests/test_toy_scale_flow_negative_controls.py::test_toy_scale_flow_negative_control_bad_params",
+          "formal/python/tests/test_toy_scale_flow_resolution_scan.py::test_toy_scale_flow_resolution_scan"
+        ]
+      },
+      "front_door": {
+        "report_output_path": "formal/output/toy_scale_flow_report.json",
+        "report_schema": "TOY/scale_flow_report/v1",
+        "tool_module": "formal.python.tools.toy_scale_flow_front_door"
+      },
+      "scope_limits": [
+        "structure_only; no physics claim",
+        "bounded evidence only; consequence engine"
+      ],
+      "toy_law_id": "TOY-E1-scale-flow"
+    },
+    {
+      "evidence": {
+        "evidence_strength": "bounded_multi",
+        "pytest_nodes": [
+          "formal/python/tests/test_toy_stochastic_selection_front_door_determinism.py::test_toy_stochastic_selection_front_door_is_deterministic",
+          "formal/python/tests/test_toy_stochastic_selection_boundary_localization.py::test_toy_stochastic_selection_boundary_localization",
+          "formal/python/tests/test_toy_stochastic_selection_negative_controls.py::test_toy_stochastic_selection_negative_control_operator_sanity",
+          "formal/python/tests/test_toy_stochastic_selection_negative_controls.py::test_toy_stochastic_selection_negative_control_noise_disabled",
+          "formal/python/tests/test_toy_stochastic_selection_resolution_scan.py::test_toy_stochastic_selection_resolution_scan"
+        ]
+      },
+      "front_door": {
+        "report_output_path": "formal/output/toy_stochastic_selection_report.json",
+        "report_schema": "TOY/stochastic_selection_report/v1",
+        "tool_module": "formal.python.tools.toy_stochastic_selection_front_door"
+      },
+      "scope_limits": [
+        "structure_only; no physics claim",
+        "bounded evidence only; consequence engine"
+      ],
+      "toy_law_id": "TOY-F1-stochastic-selection"
+    },
+    {
+      "evidence": {
+        "evidence_strength": "bounded_multi",
+        "pytest_nodes": [
+          "formal/python/tests/test_toy_topological_invariants_front_door_determinism.py::test_toy_topological_invariants_front_door_is_deterministic",
+          "formal/python/tests/test_toy_topological_invariants_perturbation_stability.py::test_toy_topological_invariants_perturbation_stability",
+          "formal/python/tests/test_toy_topological_invariants_negative_controls.py::test_toy_topological_invariants_negative_control_wrong_detector",
+          "formal/python/tests/test_toy_topological_invariants_negative_controls.py::test_toy_topological_invariants_negative_control_wrong_update",
+          "formal/python/tests/test_toy_topological_invariants_resolution_scan.py::test_toy_topological_invariants_resolution_scan"
+        ]
+      },
+      "front_door": {
+        "report_output_path": "formal/output/toy_topological_invariants_report.json",
+        "report_schema": "TOY/topological_invariants_report/v1",
+        "tool_module": "formal.python.tools.toy_topological_invariants_front_door"
+      },
+      "scope_limits": [
+        "structure_only; no physics claim",
+        "bounded evidence only; consequence engine"
+      ],
+      "toy_law_id": "TOY-G1-topological-invariants"
+    },
+    {
+      "evidence": {
+        "evidence_strength": "bounded_multi",
+        "pytest_nodes": [
+          "formal/python/tests/test_toy_gauge_redundancy_front_door_determinism.py::test_toy_gauge_redundancy_front_door_is_deterministic",
+          "formal/python/tests/test_toy_gauge_redundancy_invariance.py::test_toy_gauge_redundancy_invariance",
+          "formal/python/tests/test_toy_gauge_redundancy_negative_controls.py::test_toy_gauge_redundancy_negative_control_wrong_transform",
+          "formal/python/tests/test_toy_gauge_redundancy_negative_controls.py::test_toy_gauge_redundancy_negative_control_noninvariant_observable",
+          "formal/python/tests/test_toy_gauge_redundancy_resolution_scan.py::test_toy_gauge_redundancy_resolution_scan"
+        ]
+      },
+      "front_door": {
+        "report_output_path": "formal/output/toy_gauge_redundancy_report.json",
+        "report_schema": "TOY/gauge_redundancy_report/v1",
+        "tool_module": "formal.python.tools.toy_gauge_redundancy_front_door"
+      },
+      "scope_limits": [
+        "structure_only; no physics claim",
+        "bounded evidence only; consequence engine"
+      ],
+      "toy_law_id": "TOY-H1-gauge-redundancy"
+    },
+    {
+      "evidence": {
+        "evidence_strength": "bounded_multi",
+        "pytest_nodes": [
+          "formal/python/tests/test_toy_gauge_redundancy_h2_determinism.py::test_toy_gauge_redundancy_h2_is_deterministic",
+          "formal/python/tests/test_toy_gauge_redundancy_h2_invariance.py::test_toy_gauge_redundancy_h2_invariance_local_gauge",
+          "formal/python/tests/test_toy_gauge_redundancy_h2_negative_controls.py::test_toy_gauge_redundancy_h2_negative_control_wrong_transform",
+          "formal/python/tests/test_toy_gauge_redundancy_h2_negative_controls.py::test_toy_gauge_redundancy_h2_negative_control_noninvariant_observable",
+          "formal/python/tests/test_toy_gauge_redundancy_h2_resolution_scan.py::test_toy_gauge_redundancy_h2_resolution_scan"
+        ]
+      },
+      "front_door": {
+        "report_output_path": "formal/output/toy_gauge_redundancy_report.json",
+        "report_schema": "TOY/gauge_redundancy_report/v1",
+        "tool_module": "formal.python.tools.toy_gauge_redundancy_front_door"
+      },
+      "scope_limits": [
+        "structure_only; no physics claim",
+        "bounded evidence only; consequence engine"
+      ],
+      "toy_law_id": "TOY-H2-gauge-redundancy-local"
+    }
+  ],
+  "schema": "TOY/toy_law_ledger/v1"
+}

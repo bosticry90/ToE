@@ -1,0 +1,66 @@
+{
+  "artifact_sha256": "360b616a4ff244043718bb8995c403d57082a0b36638418aae1429dd9036e03c",
+  "evidence": {
+    "pytest_nodes": [
+      "formal/python/tests/test_bridge_program_orthogonality_mismatch_semantics.py::test_bridge_program_orthogonality_mismatch_report_contains_only_signature_disagreements",
+      "formal/python/tests/test_bridge_program_orthogonality_mismatch_semantics.py::test_bridge_program_orthogonality_mismatch_signed_margins_are_structured",
+      "formal/python/tests/test_bridge_program_orthogonality_robustness_guard.py::test_bridge_program_orthogonality_nonredundancy_robustness_guard"
+    ]
+  },
+  "items": [],
+  "report_id": "BRIDGE_PROGRAM_ORTHOGONALITY_MISMATCH_REPORT",
+  "schema_version": 1,
+  "source_report": {
+    "artifact_sha256": "b3aed33c82e30c92a8933256522c294a45871df3c18b11af307f0960eb93f37c",
+    "report_id": "BRIDGE_PROGRAM_ORTHOGONALITY_REPORT",
+    "summary": {
+      "n_probes": 17,
+      "nonredundant": true,
+      "note": "nonredundant=true iff raw Toy-G bridge outcome disagrees with each Toy-H bridge channel on at least one pinned probe.",
+      "pairwise_disagreement_counts": {
+        "current_vs_toyg_bridge": 4,
+        "phase_vs_current": 0,
+        "phase_vs_toyg_bridge": 4
+      },
+      "pairwise_disagreement_counts_frontier": {
+        "current_vs_pair_bridge": 0,
+        "phase_vs_current": 0,
+        "phase_vs_pair_bridge": 0
+      },
+      "signature_counts": {
+        "F-F-F": 4,
+        "F-F-P": 0,
+        "F-P-F": 0,
+        "F-P-P": 0,
+        "P-F-F": 0,
+        "P-F-P": 0,
+        "P-P-F": 0,
+        "P-P-P": 13
+      },
+      "signature_counts_raw": {
+        "F-F-F": 0,
+        "F-F-P": 4,
+        "F-P-F": 0,
+        "F-P-P": 0,
+        "P-F-F": 0,
+        "P-F-P": 0,
+        "P-P-F": 0,
+        "P-P-P": 13
+      },
+      "targeted_resolution": {
+        "n_current_control_fail_resolved_by_current_anchor": 1,
+        "n_pair_vs_bridge_resolved_by_pair_channel": 4,
+        "n_phase_control_fail_resolved_by_phase_anchor": 1,
+        "n_winding_not_integer_close_resolved_by_mode": 1,
+        "n_winding_unwrap_guard_resolved_by_unwrap": 1,
+        "note": "Counts probes where winding fail_not_integer_close is resolved by mode, winding fail_unwrap_discontinuity_guard with mode failure is resolved by unwrap channel, and Toy-H phase/current control failures are resolved by anchor channels, and the Toy-H-pair-vs-Toy-G mismatch is resolved by the pair-compatibility channel."
+      }
+    }
+  },
+  "summary": {
+    "n_mismatch": 0,
+    "note": "Contains only probes where channel pass/fail outcomes disagree.",
+    "reason_code_counts": {}
+  },
+  "tolerance_profile_selected_v5": "baseline"
+}

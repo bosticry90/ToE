@@ -1,0 +1,9 @@
+diff --git a/State_of_the_Theory.md b/State_of_the_Theory.md
+--- a/State_of_the_Theory.md
++++ b/State_of_the_Theory.md
+@@ -20,2 +20,4 @@
+ Closeout checkpoint (2026-02-04): Canonical DR-01 → BR-01 verification passed under the default admissibility manifest (blocked-by-default posture preserved). OV-DR-BR-01 invariants verified: schema=OV-DR-BR-01_candidate_pruning_table/v1; observable_id=OV-DR-BR-01; summary.counts={true:2,false:1,unknown:1}; status.blocked=true.
+ 
++Comparator checkpoint (2026-02-08): Added deterministic OV-CV-01 front-door comparator records over pinned DRBR-DOMAIN-01 artifacts with typed-input enforcement, explicit reason codes, integrity-only scope limits, and blocked-on-missing-input behavior (bounded/report-only; no status upgrade).
++
+ Bridge extension checkpoint (2026-02-04): Added a second orthogonal Toy-H ↔ C6 bridge constraint (current invariance) with pinned feasibility artifact, pinned boundary report, bridge-ledger inclusion, and bridge-admissibility-manifest inclusion (bounded/report-only; no status upgrade).

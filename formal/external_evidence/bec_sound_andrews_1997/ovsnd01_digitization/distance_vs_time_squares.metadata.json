@@ -1,0 +1,58 @@
+{
+  "dataset": {
+    "columns": [
+      {
+        "dtype": "float",
+        "name": "time_ms",
+        "unit": "ms"
+      },
+      {
+        "dtype": "float",
+        "name": "distance_um",
+        "unit": "um"
+      }
+    ],
+    "csv_relpath": "formal/external_evidence/bec_sound_andrews_1997/ovsnd01_digitization/distance_vs_time_squares.csv",
+    "csv_sha256": "2b1b2c77b106e474ffd80b48e977fb6ff6b988036e2e75fdabc82e93a8391021",
+    "metadata_relpath": "formal/external_evidence/bec_sound_andrews_1997/ovsnd01_digitization/distance_vs_time_squares.metadata.json",
+    "row_count": 11
+  },
+  "date": "2026-01-24",
+  "digitization_id": "OV-SND-01N",
+  "observable_id": "OV-SND-01",
+  "record_fingerprint": "adfb63b0dbd71622df7670196f3646e0ec053eacd271b66079762a9122ce3530",
+  "schema": "OV-SND-01_digitized_dataset_metadata/v1",
+  "scope_limits": [
+    "anchor_numeric_only",
+    "no_fitting",
+    "no_parameter_inference",
+    "no_continuity_claim",
+    "no_cross_regime_averaging",
+    "non_decisive_by_design"
+  ],
+  "source": {
+    "arxiv_pdf_relpath": "formal/external_evidence/bec_sound_andrews_1997/9711224v1.pdf",
+    "arxiv_pdf_sha256": "d38a5d54cca6b4b7a4a71647c20d24bf72b434eca2e1ed943df62f981f3a7cc6",
+    "axis_ranges": {
+      "x": {
+        "max": 80.0,
+        "min": 0.0,
+        "name": "Time",
+        "unit": "ms"
+      },
+      "y": {
+        "max": 200.0,
+        "min": 0.0,
+        "name": "Distance",
+        "unit": "um"
+      }
+    },
+    "citation": "Kavoulakis & Pethick (1997), arXiv:9711224v1 \u2014 Sound Propagation in Elongated Bose-Einstein Condensed Clouds",
+    "digitization_method": "deterministic_marker_extraction_from_pinned_png",
+    "digitization_png_relpath": "formal/external_evidence/bec_sound_andrews_1997/fig2_region_page4_z4.png",
+    "digitization_png_sha256": "7b617abbed1be16adb0e47be2c7b15e79637ee83d263ccc2e2b77a44fd052c19",
+    "figure": "Fig. 2",
+    "notes": "Digitizes squares (low-amplitude pulses) only; no fitting performed; slope is interpretable as speed but not inferred here.",
+    "series": "squares_low_amplitude"
+  }
+}

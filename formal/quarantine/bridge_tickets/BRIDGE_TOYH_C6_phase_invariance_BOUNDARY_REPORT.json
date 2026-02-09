@@ -1,0 +1,175 @@
+{
+  "artifact_sha256": "c8525047496dc17f9abf39d54d9278c3c2e74e91d0b765d1777dd6c236bb03e7",
+  "items": [
+    {
+      "evidence": {
+        "pytest_nodes": [
+          "formal/python/tests/test_bridge_toyh_c6_phase_invariance.py::test_bridge_toyh_c6_phase_invariance_invariant_observables",
+          "formal/python/tests/test_bridge_toyh_c6_phase_invariance.py::test_bridge_toyh_c6_phase_invariance_negative_control_phase_sensitive_observable",
+          "formal/python/tests/test_bridge_toyh_c6_phase_invariance.py::test_bridge_toyh_c6_phase_invariance_resolution_scan"
+        ]
+      },
+      "inputs": {
+        "grid_sizes": [
+          7,
+          9,
+          11
+        ],
+        "phase_sensitive_min": 0.001,
+        "thetas": [
+          0.0,
+          0.523598775598,
+          1.0471975512,
+          1.57079632679
+        ],
+        "tolerance": 1e-10
+      },
+      "samples": [
+        {
+          "energy_rel": 0.0,
+          "grid_n": 7,
+          "invariance_ok": true,
+          "norm_rel": 0.0,
+          "phase_sensitive_delta": 0.0,
+          "phase_sensitive_ok": true,
+          "reason_code": "PASS_INVARIANCE",
+          "rhs_rel": 0.0,
+          "theta": 0.0
+        },
+        {
+          "energy_rel": 0.0,
+          "grid_n": 9,
+          "invariance_ok": true,
+          "norm_rel": 0.0,
+          "phase_sensitive_delta": 0.0,
+          "phase_sensitive_ok": true,
+          "reason_code": "PASS_INVARIANCE",
+          "rhs_rel": 0.0,
+          "theta": 0.0
+        },
+        {
+          "energy_rel": 0.0,
+          "grid_n": 11,
+          "invariance_ok": true,
+          "norm_rel": 0.0,
+          "phase_sensitive_delta": 0.0,
+          "phase_sensitive_ok": true,
+          "reason_code": "PASS_INVARIANCE",
+          "rhs_rel": 0.0,
+          "theta": 0.0
+        },
+        {
+          "energy_rel": 3.59965155078e-16,
+          "grid_n": 7,
+          "invariance_ok": true,
+          "norm_rel": 0.0,
+          "phase_sensitive_delta": 0.133974596216,
+          "phase_sensitive_ok": true,
+          "reason_code": "PASS_INVARIANCE",
+          "rhs_rel": 2.74893342568e-15,
+          "theta": 0.523598775598
+        },
+        {
+          "energy_rel": 7.19930310157e-16,
+          "grid_n": 9,
+          "invariance_ok": true,
+          "norm_rel": 0.0,
+          "phase_sensitive_delta": 0.133974596216,
+          "phase_sensitive_ok": true,
+          "reason_code": "PASS_INVARIANCE",
+          "rhs_rel": 5.23626034645e-15,
+          "theta": 0.523598775598
+        },
+        {
+          "energy_rel": 0.0,
+          "grid_n": 11,
+          "invariance_ok": true,
+          "norm_rel": 0.0,
+          "phase_sensitive_delta": 0.133974596216,
+          "phase_sensitive_ok": true,
+          "reason_code": "PASS_INVARIANCE",
+          "rhs_rel": 5.19617897657e-15,
+          "theta": 0.523598775598
+        },
+        {
+          "energy_rel": 3.59965155078e-16,
+          "grid_n": 7,
+          "invariance_ok": true,
+          "norm_rel": 0.0,
+          "phase_sensitive_delta": 0.5,
+          "phase_sensitive_ok": true,
+          "reason_code": "PASS_INVARIANCE",
+          "rhs_rel": 3.92181017065e-15,
+          "theta": 1.0471975512
+        },
+        {
+          "energy_rel": 7.19930310157e-16,
+          "grid_n": 9,
+          "invariance_ok": true,
+          "norm_rel": 0.0,
+          "phase_sensitive_delta": 0.5,
+          "phase_sensitive_ok": true,
+          "reason_code": "PASS_INVARIANCE",
+          "rhs_rel": 4.97778324795e-15,
+          "theta": 1.0471975512
+        },
+        {
+          "energy_rel": 1.79982577539e-16,
+          "grid_n": 11,
+          "invariance_ok": true,
+          "norm_rel": 0.0,
+          "phase_sensitive_delta": 0.5,
+          "phase_sensitive_ok": true,
+          "reason_code": "PASS_INVARIANCE",
+          "rhs_rel": 5.53597490018e-15,
+          "theta": 1.0471975512
+        },
+        {
+          "energy_rel": 1.79982577539e-16,
+          "grid_n": 7,
+          "invariance_ok": true,
+          "norm_rel": 0.0,
+          "phase_sensitive_delta": 1.0,
+          "phase_sensitive_ok": true,
+          "reason_code": "PASS_INVARIANCE",
+          "rhs_rel": 3.54981262512e-16,
+          "theta": 1.57079632679
+        },
+        {
+          "energy_rel": 3.59965155078e-16,
+          "grid_n": 9,
+          "invariance_ok": true,
+          "norm_rel": 0.0,
+          "phase_sensitive_delta": 1.0,
+          "phase_sensitive_ok": true,
+          "reason_code": "PASS_INVARIANCE",
+          "rhs_rel": 3.10166315133e-15,
+          "theta": 1.57079632679
+        },
+        {
+          "energy_rel": 0.0,
+          "grid_n": 11,
+          "invariance_ok": true,
+          "norm_rel": 0.0,
+          "phase_sensitive_delta": 1.0,
+          "phase_sensitive_ok": true,
+          "reason_code": "PASS_INVARIANCE",
+          "rhs_rel": 4.00495451542e-15,
+          "theta": 1.57079632679
+        }
+      ],
+      "scan_id": "c6_phase_invariance_boundary_scan_v1",
+      "summary": {
+        "fail_reason_counts": {
+          "FAIL_INVARIANCE_TOL": 0,
+          "FAIL_PHASE_SENSITIVE_CONTROL_NOT_TRIGGERED": 0
+        },
+        "n_fail": 0,
+        "n_pass": 12,
+        "n_samples": 12
+      },
+      "ticket_id": "BRIDGE_TICKET_TOYH_0001"
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,45 @@
+{
+  "V": 1.0,
+  "config_tag": "OV-MB-01_orthogonality_trend_v1",
+  "filling": 0.25,
+  "fingerprint": "b29cc3427d69903e0d40f3a7841676f55d8137459e852066897d750ef702c44b",
+  "points": [
+    {
+      "L": 8,
+      "n_occ": 2,
+      "overlap": 0.4451943255909468
+    },
+    {
+      "L": 12,
+      "n_occ": 3,
+      "overlap": 0.972319736973577
+    },
+    {
+      "L": 16,
+      "n_occ": 4,
+      "overlap": 0.8290113114183377
+    },
+    {
+      "L": 20,
+      "n_occ": 5,
+      "overlap": 0.9632996679344408
+    },
+    {
+      "L": 24,
+      "n_occ": 6,
+      "overlap": 0.8124888619264813
+    },
+    {
+      "L": 28,
+      "n_occ": 7,
+      "overlap": 0.9571776381238892
+    },
+    {
+      "L": 32,
+      "n_occ": 8,
+      "overlap": 0.9510294773881564
+    }
+  ],
+  "schema": "OV-MB-01/orthogonality_trend_report/v1",
+  "t": 1.0
+}

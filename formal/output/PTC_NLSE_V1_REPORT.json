@@ -1,0 +1,76 @@
+{
+  "derived": {
+    "grid": {
+      "L": 6.28318530718,
+      "dx": 0.196349540849,
+      "n": 32
+    },
+    "kgrid_sample": [
+      0.0,
+      1.0,
+      2.0
+    ],
+    "rac_energy_class": "conservative"
+  },
+  "determinism": {
+    "dtype": "complex128",
+    "json": "sort_keys,separators=(',',':'),ensure_ascii=True",
+    "rng": "none"
+  },
+  "fingerprint": "4a032b082305630fd8105770a5d300fb573d7182a8d83d1ded9cc27c3008d81a",
+  "input_fingerprint": "a4042c0fed5e8135aac5c719e417579e0f469885a96ac67a4b41191524a091f3",
+  "inputs": {
+    "A_im": 0.0,
+    "A_re": 0.1,
+    "L": 6.283185307179586,
+    "V0": 0.0,
+    "case_id": "conservative_plane_wave",
+    "dimension": "1d",
+    "dt": 0.001,
+    "g": 1.0,
+    "gamma": 0.0,
+    "k": 2.0,
+    "n": 32,
+    "phase": 0.3,
+    "regime": "conservative",
+    "sample_every": 20,
+    "steps": 200
+  },
+  "output": {
+    "energy_delta": -4.71844785466e-16,
+    "energy_trace": [
+      0.125977865409,
+      0.125977865409,
+      0.125977865409,
+      0.125977865409,
+      0.125977865409,
+      0.125977865409,
+      0.125977865409,
+      0.125977865409,
+      0.125977865409,
+      0.125977865409,
+      0.125977865409
+    ],
+    "norm_delta": -2.35922392733e-16,
+    "norm_trace": [
+      0.0628318530718,
+      0.0628318530718,
+      0.0628318530718,
+      0.0628318530718,
+      0.0628318530718,
+      0.0628318530718,
+      0.0628318530718,
+      0.0628318530718,
+      0.0628318530718,
+      0.0628318530718,
+      0.0628318530718
+    ],
+    "omega_error": 0.0,
+    "omega_expected": 2.01,
+    "omega_hat": 2.01,
+    "phase_invariance_error": 2.77555756156e-17,
+    "t_end": 0.2,
+    "time_reversal_error": 3.31157188483e-17
+  },
+  "schema": "PTC/NLSE_v1_report/v1"
+}

@@ -1,0 +1,140 @@
+{
+  "candidate_id": "H2_local_phase_gauge",
+  "diagnostics": {
+    "epsilon": 1e-09,
+    "gauge_transform_kind": "local_phase_rotate",
+    "max_delta_magnitude": 5.55111512313e-17,
+    "theta": 0.4,
+    "theta_step": 0.21
+  },
+  "fingerprint": "3e8a3a5aae038e377b4fb21273e94ffc673bd0846bf1f53068fcaffceb2f652f",
+  "input_fingerprint": "4ac55a0740e17af987e55421806be7243b4c5678217597f04afa725dbd4ca506",
+  "inputs": {
+    "candidate_id": "H2_local_phase_gauge",
+    "fingerprints": {
+      "params": "51e919110c8a0ffef4e4c452a192711789b609a8833cc39ccc7e790edc098073",
+      "state": "3f490b7564294e9987c39f874755e64fc878ba4a7f122d554f6c26518d8cab76"
+    },
+    "params": {
+      "dt": 0.1,
+      "epsilon": 1e-09,
+      "gauge_kind": "local_phase_rotate",
+      "steps": 3,
+      "theta": 0.4,
+      "theta_step": 0.21
+    },
+    "state": {
+      "grid": [
+        [
+          1.0,
+          0.2
+        ],
+        [
+          2.0,
+          -0.3
+        ],
+        [
+          0.5,
+          0.4
+        ],
+        [
+          0.1,
+          -0.2
+        ]
+      ]
+    }
+  },
+  "output": {
+    "observables": {
+      "delta_magnitudes": [
+        0.0,
+        0.0,
+        5.55111512313e-17,
+        2.77555756156e-17
+      ],
+      "delta_sum_magnitude": 0.0,
+      "magnitudes_after": [
+        0.743437045082,
+        1.47431125954,
+        0.466787756909,
+        0.16300935556
+      ],
+      "magnitudes_gauge_after": [
+        0.743437045082,
+        1.47431125954,
+        0.466787756909,
+        0.16300935556
+      ],
+      "sum_magnitude_after": 2.84754541709,
+      "sum_magnitude_gauge_after": 2.84754541709
+    },
+    "state_after": [
+      [
+        0.729,
+        0.1458
+      ],
+      [
+        1.458,
+        -0.2187
+      ],
+      [
+        0.3645,
+        0.2916
+      ],
+      [
+        0.0729,
+        -0.1458
+      ]
+    ],
+    "state_before": [
+      [
+        1.0,
+        0.2
+      ],
+      [
+        2.0,
+        -0.3
+      ],
+      [
+        0.5,
+        0.4
+      ],
+      [
+        0.1,
+        -0.2
+      ]
+    ],
+    "state_gauge_after": [
+      [
+        0.61467627032,
+        0.418176664469
+      ],
+      [
+        1.32033292354,
+        0.655983735324
+      ],
+      [
+        0.035467506108,
+        0.465438358981
+      ],
+      [
+        0.162524486422,
+        -0.0125634912848
+      ]
+    ]
+  },
+  "params": {
+    "dt": 0.1,
+    "epsilon": 1e-09,
+    "gauge_kind": "local_phase_rotate",
+    "steps": 3,
+    "theta": 0.4,
+    "theta_step": 0.21
+  },
+  "schema": "TOY/gauge_redundancy_report/v1",
+  "scope_limits": [
+    "structure_only; no physics claim",
+    "bounded evidence only; consequence engine"
+  ],
+  "tool_version": "v1"
+}

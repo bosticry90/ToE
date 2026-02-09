@@ -1,0 +1,73 @@
+{
+  "candidate_id": "G1_sign_change",
+  "fingerprint": "4da2a18b81a463edc70e4b90345108155b0bbb44b04131b94d49436598b6e7e7",
+  "input_fingerprint": "4efede485d19f8fc10287255be6f2f019392943407946ea58def832702a131d1",
+  "inputs": {
+    "candidate_id": "G1_sign_change",
+    "fingerprints": {
+      "params": "088cac5e4e26a3ab002db2f382a79db55b8bd3c3a29c90e39ffaea57e6abb792",
+      "state": "b035b897f73d06f8ff546599ee582accbce06744d5a382424518f9e2889c02e2"
+    },
+    "params": {
+      "detector_id": "sign_change",
+      "step_size": 0.2,
+      "threshold": 0.0
+    },
+    "state": {
+      "grid": [
+        1.0,
+        -1.0,
+        1.0,
+        -1.0,
+        1.0
+      ]
+    }
+  },
+  "output": {
+    "defects_after": {
+      "count": 4,
+      "detector_id": "sign_change",
+      "locations": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "defects_before": {
+      "count": 4,
+      "detector_id": "sign_change",
+      "locations": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    "state_after": [
+      0.8,
+      -0.8,
+      0.8,
+      -0.8,
+      0.8
+    ],
+    "state_before": [
+      1.0,
+      -1.0,
+      1.0,
+      -1.0,
+      1.0
+    ]
+  },
+  "params": {
+    "detector_id": "sign_change",
+    "step_size": 0.2,
+    "threshold": 0.0
+  },
+  "schema": "TOY/topological_invariants_report/v1",
+  "scope_limits": [
+    "structure_only; no physics claim",
+    "bounded evidence only; consequence engine"
+  ],
+  "tool_version": "v1"
+}

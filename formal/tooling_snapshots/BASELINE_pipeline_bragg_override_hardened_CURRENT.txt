@@ -1,0 +1,5 @@
+Baseline snapshot (current = baseline)
+Created: 2026-01-29 17:28:06
+Snapshot: formal/tooling_snapshots/repo_snapshot_20260129_172514_BASELINE_pipeline_bragg_override_hardened.jsonl
+Context doc: formal/tooling_snapshots/review_bragg_override_hardening_20260129.md
+Notes: Pipeline baseline excludes evidence payload dirs (formal/external_evidence/**, formal/external/**, supporting research and evidence/**).

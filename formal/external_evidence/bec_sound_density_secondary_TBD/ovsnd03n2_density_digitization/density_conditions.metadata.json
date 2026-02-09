@@ -1,0 +1,70 @@
+{
+  "dataset": {
+    "csv_relpath": "formal/external_evidence/bec_sound_density_secondary_TBD/ovsnd03n2_density_digitization/density_conditions.csv",
+    "csv_sha256": "0ba69ce88ecf7814813e243b6fcefffb19e4aa58ee74f81627b1e461dbceb025",
+    "row_count": 2
+  },
+  "date": "2026-01-24",
+  "extraction": {
+    "constants": {
+      "a_m": 2.75e-09,
+      "g_J_m3": 1.006725731612276e-50,
+      "m_kg": 3.8175410021560553e-26,
+      "species": "Na-23"
+    },
+    "figure": {
+      "axis_x": 115,
+      "axis_y": 207,
+      "split_y": 230,
+      "y_for_val_mu_over_kb_uK": {
+        "0.0": 201.5,
+        "0.5": 149.5,
+        "1.0": 93.5,
+        "1.5": 38.5
+      }
+    },
+    "method": "png_connected_components_digitization",
+    "mu_points": [
+      {
+        "mu_over_kb_uK": 0.4120654396728016,
+        "px": 391,
+        "py": 157,
+        "raw_blob": {
+          "area": 72,
+          "h": 18,
+          "w": 10
+        }
+      },
+      {
+        "mu_over_kb_uK": 0.3668140961620774,
+        "px": 406,
+        "py": 162,
+        "raw_blob": {
+          "area": 86,
+          "h": 14,
+          "w": 11
+        }
+      }
+    ],
+    "notes": "Digitizes low-\u03bc filled-circle series only (0.05<=\u03bc/kB<=0.6 \u03bcK).",
+    "png_relpath": "C:/Users/psboy/Documents/ToE/formal/external_evidence/bec_sound_density_secondary_TBD/Screenshot 2026-01-24 153305.png",
+    "png_sha256": "8f290f285bd721f69f222a51935691492927ca998596cff545ec87709f4b2df0"
+  },
+  "observable_id": "OV-SND-03N2",
+  "record_fingerprint": "1b79934c23c803991487f9be9989ba880d3ee412779bd4049d07d66a4edd7dd5",
+  "schema": "OV-SND-03N2_density_conditions_metadata/v1",
+  "scope_limits": [
+    "bookkeeping_only",
+    "no_physics_claim",
+    "no_condition_identity_assumption",
+    "no_imputation",
+    "no_continuity_claim",
+    "non_decisive_by_design"
+  ],
+  "source": {
+    "secondary_pdf_relpath": "formal/external_evidence/bec_sound_density_secondary_TBD/source.pdf",
+    "secondary_pdf_sha256": "f16b43d97bf3ed51ff9d51043677a2960145f46797c48e0a11c562048de568c7",
+    "secondary_png_relpath": "formal/external_evidence/bec_sound_density_secondary_TBD/Screenshot 2026-01-24 153305.png",
+    "secondary_png_sha256": "8f290f285bd721f69f222a51935691492927ca998596cff545ec87709f4b2df0"
+  }
+}

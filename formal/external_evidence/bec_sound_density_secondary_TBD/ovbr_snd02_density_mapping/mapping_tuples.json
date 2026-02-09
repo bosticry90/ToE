@@ -1,0 +1,57 @@
+{
+  "schema": "OV-BR-SND-02_explicit_cross_source_density_mapping_tuples/v4",
+  "date": "2026-01-24",
+  "tuple_schema": {
+    "required": [
+      "propagation_condition_key",
+      "density_condition_key",
+      "source_locators"
+    ],
+    "optional": [
+      "pair_type",
+      "rationale",
+      "notes"
+    ]
+  },
+  "mapping_tuples": [
+    {
+      "propagation_condition_key": "snd02_single",
+      "density_condition_key": "central",
+      "pair_type": "same_source",
+      "source_locators": {
+        "propagation": {
+          "speed_lock_path": "formal/markdown/locks/observables/OV-SND-02_sound_speed_from_propagation.md",
+          "digitized_points_lock_path": "formal/markdown/locks/observables/OV-SND-01_sound_propagation_distance_time_digitized.md",
+          "propagation_condition_note": "Declared as the default/single OV-SND-02 condition (Andrews Fig.2 squares seriesA)."
+        },
+        "density": {
+          "density_lock_path": "formal/markdown/locks/observables/OV-SND-03_central_density_digitized.md",
+          "density_csv_relpath": "formal/external_evidence/bec_sound_andrews_1997/ovsnd03_density_digitization/central_density.csv",
+          "density_condition_note": "Declared as the Andrews central density anchor condition_id=central."
+        }
+      },
+      "rationale": "Declared pairing for OV-SND-04 constancy bookkeeping; not a claim of same experimental run beyond pinned Andrews source context.",
+      "notes": "Same-source pairing (Andrews 1997)."
+    },
+    {
+      "propagation_condition_key": "snd02b_seriesB",
+      "density_condition_key": "sk98_mu_digitized_01",
+      "pair_type": "cross_source_hypothesis",
+      "source_locators": {
+        "propagation": {
+          "speed_lock_path": "formal/markdown/locks/observables/OV-SND-02B_sound_speed_from_propagation_seriesB.md",
+          "digitized_points_lock_path": "formal/markdown/locks/observables/OV-SND-01N2_sound_propagation_distance_time_digitized.md",
+          "propagation_condition_note": "Declared as OV-SND-02B derived from OV-SND-01N2 seriesB (largest-x-gap split)."
+        },
+        "density": {
+          "density_lock_path": "formal/markdown/locks/observables/OV-SND-03N2_secondary_density_conditions_digitized.md",
+          "density_csv_relpath": "formal/external_evidence/bec_sound_density_secondary_TBD/ovsnd03n2_density_digitization/density_conditions.csv",
+          "density_condition_note": "Cross-source pairing hypothesis using OV-SND-03N2 rows_preview density_condition_key=sk98_mu_digitized_01."
+        }
+      },
+      "rationale": "Declared cross-source pairing hypothesis for OV-SND-04; conditional-on-mapping only; no implied condition identity unless separately evidenced.",
+      "notes": "Cross-source tuple (Andrews speed condition ↔ Stamper-Kurn 1998 density digitization key)."
+    }
+  ],
+  "notes": "Explicit mapping tuples used by OV-SND-04. Each tuple must be one-to-one and include audit-friendly source_locators. Empty means no mapping asserted."
+}

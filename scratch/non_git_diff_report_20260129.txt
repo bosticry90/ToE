@@ -1,0 +1,43 @@
+Non-Git diff report (generated 2026-01-29 16:29:35)
+Workspace root: C:\Users\psboy\Documents\ToE
+Backup baseline: C:\Users\psboy\Documents\ToE\backup\canonical_backup_20260118
+
+OVERRIDE lock presence (current vs backup)
+  Current *_OVERRIDE.md count: 15
+  Present in backup: 0
+  Missing in backup (treated as NEW relative to baseline): 15
+    NEW: formal/markdown/locks/observables/OV-BR-02_regime_bridge_record_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-BR-03N_bragg_dispersion_k_omega_digitized_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-BR-04a_bragg_lowk_slope_conditionA_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-BR-04b_bragg_lowk_slope_conditionB_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-BR-05_bragg_lowk_slope_summary_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-BR-FN-00_fn01_metric_residual_prediction_declarations_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-BR-FN-01_fn01_metric_residual_pruning_table_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-BR-SND-03_cross_lane_lowk_consistency_audit_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-DR-BR-00_br01_prediction_declarations_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-DR-BR-01_candidate_pruning_table_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-FN-02_weighted_residual_audit_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-FN-WT-00_fn01_weight_policy_declarations_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-FN-WT-01_fn01_weight_policy_pruning_table_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-FN-WT-02_selected_weight_policy_OVERRIDE.md
+    NEW: formal/markdown/locks/observables/OV-SEL-BR-01_bragg_lowk_slope_audit_OVERRIDE.md
+
+Code/tests diffs vs backup snapshot
+
+=== formal/python/toe/observables/ovfnwt00_fn01_weight_policy_declarations_record.py ===
+STATUS: NEW (not in backup)
+
+=== formal/python/toe/observables/ovfnwt01_fn01_weight_policy_pruning_table_record.py ===
+STATUS: NEW (not in backup)
+
+=== formal/python/toe/observables/ovbr04a_bragg_lowk_slope_conditionA_record.py ===
+STATUS: NEW (not in backup)
+
+=== formal/python/tests/test_ov_fn_wt00_wildcard_semantics.py ===
+STATUS: NEW (not in backup)
+
+=== formal/python/tests/test_ov_br04a_results_primary_contract.py ===
+STATUS: NEW (not in backup)
+
+=== formal/python/tests/test_regen_canonical_locks_bragg_only_override_smoke.py ===
+STATUS: NEW (not in backup)

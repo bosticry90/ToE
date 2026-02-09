@@ -1,0 +1,86 @@
+{
+  "block_reasons": [],
+  "bridge_id": "BRIDGE_TICKET_TOYH_0003",
+  "canonical_surface": {
+    "path": "formal/python/crft/cp_nlse_2d.py",
+    "sha256": "3cf60dceb1b6d064138dab120486c9e6371b2d5db76f21210b219917ea9d548b"
+  },
+  "checks": {
+    "has_grid_type": true,
+    "has_pinned_resolution_set": true,
+    "has_pinned_tolerance_bundle": true,
+    "has_rhs_tooling": true,
+    "primary_probe_present": true,
+    "secondary_probe_present": true,
+    "selected_target_present": true,
+    "selected_target_resolved_by_phase_anchor_count": 1,
+    "target_has_phase_control_fail_reason": true,
+    "target_reason_count": 0
+  },
+  "evidence": {
+    "pytest_nodes": [
+      "formal/python/tests/test_bridge_toyh_c6_phase_anchor_feasibility_determinism.py::test_bridge_toyh_c6_phase_anchor_feasibility_is_deterministic",
+      "formal/python/tests/test_bridge_toyh_c6_phase_anchor_feasibility_pointers_exist.py::test_bridge_toyh_c6_phase_anchor_feasibility_artifact_pointers_exist"
+    ]
+  },
+  "found": true,
+  "implementable": true,
+  "mode": "design_only_preimplementation",
+  "pinned_plan": {
+    "amplitude_scales": {
+      "admissible": [
+        1.0
+      ],
+      "inadmissible": [
+        1.1
+      ]
+    },
+    "grid_sizes": [
+      7,
+      9,
+      11
+    ],
+    "primary_probe_ids": [
+      "stress_toyh_phase_control"
+    ],
+    "secondary_probe_ids": [
+      "baseline_all_pass"
+    ],
+    "theta_values": [
+      1e-06,
+      1.0471975511965976
+    ],
+    "tolerances": {
+      "phase_anchor_tolerance": 1e-07,
+      "phase_channel_control_min": 0.001,
+      "toyh_tolerance": 1e-10
+    }
+  },
+  "schema_version": 1,
+  "selected_target_reason_code": "mismatch_toyh_phase_only",
+  "source_artifacts": {
+    "mismatch_report": {
+      "path": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_MISMATCH_REPORT.json",
+      "sha256": "af9c4666db7ea0b6e587ebc37fcd8bf9d444565f8a02898d7f78ad3ba07b4638"
+    },
+    "mismatch_summary": {
+      "path": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_MISMATCH_REASON_SUMMARY.json",
+      "sha256": "b0c14f94139c577684a4f1c917e7672269bde1398d049ab342a51d94347a90a0"
+    },
+    "orthogonality_report": {
+      "path": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_REPORT.json",
+      "sha256": "53973cb165d7216eaadc407a839e205ecb162d7513bd89ffa49b875bdb78feac"
+    }
+  },
+  "target_region": {
+    "count": 0,
+    "probe_ids": [
+      "stress_toyh_phase_control"
+    ],
+    "reason_code": "mismatch_toyh_phase_only",
+    "reason_code_counts": {
+      "mismatch_current_and_pair": 1
+    },
+    "resolved_by_phase_anchor_count": 1
+  }
+}

@@ -1,0 +1,133 @@
+STATUS: PARTIALLY RETIRED (reference-only)
+
+Executed up to: FN-01 / MT-01 / BR-01 guardrail pipeline (front doors, candidate tables, locks, DAG enforcement, fit artifacts).
+Remainder: migrate/interpret as ideas for Viability Roadmap.txt (the active scientific roadmap).
+
+Do not treat this file as “what to do next”; treat it as historical context / execution log.
+
+---
+
+Practical action plan (commit-sized) for Option 1
+A. Baseline (Markdown lock)
+
+Create: formal/markdown/locks/constraints/SYM-01_symmetry_gates.md containing:
+
+Definitions (probe-relative where needed) for:
+
+Global phase invariance: ψ ↦ e^{iθ} ψ
+
+Translation invariance: (x,y,t) ↦ (x+a, y+b, t+c)
+
+Rotation invariance (2D): (x,y) ↦ R(x,y)
+
+“Gate → PASS/FAIL/UNDECIDED” classification rules for deformation terms/operators.
+
+B. Gate (Lean, structural)
+
+Add minimal interfaces in Lean:
+
+A predicate like PhaseInvariant (P : Field2D → Field2D) expressed as:
+
+P (e^{iθ}•ψ) = e^{iθ}•P ψ (or your project’s scalar action)
+
+Similar for translation/rotation, but probe-relative versions are acceptable if you keep it explicit (e.g., invariance on planeWave probes).
+
+C. Consequence (Python behavioral)
+
+Add tests:
+
+For each candidate deformation representative, check invariance numerically under:
+
+phase rotations,
+
+spatial shifts,
+
+rotations (where implementable on grid / spectral representation),
+
+and record expected failure modes.
+
+D. Inventory wiring (State_of_the_Theory.md)
+
+Add new inventory item(s), e.g.:
+
+SY-01 (Constraint / Criterion): “Symmetry gate suite (phase/translation/rotation)”
+
+Evidence: pointers to the new markdown lock + Python tests + Lean modules.
+
+---
+
+## Final state after execution (what changes, what does not)
+
+**What changes**
+
+* Constraint admission is now rule-bound, not discretionary
+* CT-01 becomes the reference implementation
+* Coherence is demoted from concept to testable deformation class
+
+**What does not change**
+
+* No status upgrades
+* No ontological claims
+* No expansion of physical interpretation
+
+---
+
+If you want the **next step**, the cleanest option is to:
+
+* draft the **CAR-01 text verbatim** for insertion into the Workflow Constitution, or
+* scaffold the **FN-01 deformation table** (pass / fail / undecided) in canonical inventory format.
+
+Say which one to execute.
+
+------
+------
+
+### Step 3 — Formalize “Constraint invariance” and “If you add X, Y breaks”
+
+You want statements of the form:
+
+* **Constraint invariance**: If `Op` satisfies invariance `I` and constraint `C`, then any extension `Op' = Op + Extra` preserves `C` **only if** `Extra` satisfies some necessary condition.
+* **Breakage theorem**: If `Extra` violates that condition, you can prove a contradiction with `C`.
+
+These become Lean theorems that match your new direction precisely.
+
+### Step 4 — Define “Minimality” as a formal selection principle
+
+A workable Lean notion:
+
+* Define a set/class of admissible operators `𝒪` satisfying invariances and closure constraints.
+* Define a partial order “adds structure” (e.g., extra terms, extra axioms, extra dependencies).
+* Prove:
+
+  * **Minimal element** exists (or provide constructive candidate).
+  * Any strictly richer operator violates at least one invariance unless forced by an explicit new assumption.
+
+This directly encodes: “Extra structure dies unless forced.”
+
+### Step 5 — Mirror each Lean constraint with a Python behavioral test
+
+For each invariance/constraint you formalize:
+
+* Python test: generate random plane-wave parameters and numeric operators (finite-difference stencils, pseudo-spectral operators) and verify the constraint approximately.
+* This keeps Lean and Python aligned without conflating authority. 
+
+---
+
+## Immediate next commit-sized task (small, high-leverage)
+
+1. Add `OperatorSignature.lean` defining:
+
+* `Field2D`
+* a structure `Op2D` with one field `Op : Field2D → Field2D`
+* a predicate `PlaneWaveEigen (Op2D) : Prop` stating eigen-closure on `planeWave`
+* a predicate `DispersionCompatible (Op2D) : Prop` that recovers your coefficient equality form
+
+2. Prove one “selection principle” lemma:
+
+* If `Op` is plane-wave-eigen with eigenvalue `μ(k)`, and you add an `Extra` that is plane-wave-eigen with eigenvalue `ν(k)`, then the new eigenvalue is `μ(k)+ν(k)` (or whatever your combination rule is), hence any constraint on `μ` is violated unless `ν` satisfies the constraint.
+
+That single lemma is the first formal instance of:
+
+> “If you add X, Y breaks.”
+
+If you want, paste your current invariances/constraints in plain language (bullet list), and I will translate them into Lean predicates with the smallest viable set of axioms (no analytic claims) consistent with your workflow rules. 

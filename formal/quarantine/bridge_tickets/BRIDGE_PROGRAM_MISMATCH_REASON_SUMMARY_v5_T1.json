@@ -1,0 +1,58 @@
+{
+  "artifact_sha256": "f75bef95714a9cd7b97f978f1914e0f35fb4a81af44fad43e64a87777c62ecbb",
+  "channel_reason_counts": {
+    "toyg_bridge": {},
+    "toyg_mode": {},
+    "toyg_unwrap": {},
+    "toyg_winding": {},
+    "toyh_current": {},
+    "toyh_current_anchor": {},
+    "toyh_current_bridge": {},
+    "toyh_phase": {},
+    "toyh_phase_anchor": {},
+    "toyh_phase_bridge": {},
+    "toyhg_pair_bridge": {}
+  },
+  "ranked_targets": [],
+  "ranking_policy": {
+    "primary": "descending_reason_count",
+    "reason_priority_map": {
+      "mismatch_current_and_pair": 5,
+      "mismatch_phase_and_pair": 4,
+      "mismatch_toyh_current_only": 2,
+      "mismatch_toyh_pair_only": 3,
+      "mismatch_toyh_phase_only": 1,
+      "mismatch_toyhg_pair_only": 0
+    },
+    "tie_break_1": "reason_priority_map",
+    "tie_break_2": "lexicographic_reason_code"
+  },
+  "recommended_next_target": {
+    "count": 0,
+    "reason_code": "none",
+    "suggested_design_ticket": "BRIDGE_TICKET_PROGRAM_COMPLETE"
+  },
+  "report_id": "BRIDGE_PROGRAM_MISMATCH_REASON_SUMMARY",
+  "schema_version": 1,
+  "source_artifacts": {
+    "mismatch_report": {
+      "path": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_MISMATCH_REPORT_v5_T1.json",
+      "sha256": "ea0a5e49e2928dea3648b8b8527d44254dfde476e7f911470e232497f5e6ebb1"
+    },
+    "orthogonality_report": {
+      "path": "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_REPORT_v5_T1.json",
+      "sha256": "a9e9bc4d4a954d84e5211507ecf83189439377501ee0fa7dabf9d756146ac8ce"
+    }
+  },
+  "summary": {
+    "n_mismatch": 0,
+    "reason_code_counts": {},
+    "targeted_resolution": {
+      "n_current_control_fail_resolved_by_current_anchor": 1,
+      "n_pair_vs_bridge_resolved_by_pair_channel": 4,
+      "n_phase_control_fail_resolved_by_phase_anchor": 1,
+      "n_winding_not_integer_close_resolved_by_mode": 1,
+      "n_winding_unwrap_guard_resolved_by_unwrap": 1
+    }
+  }
+}

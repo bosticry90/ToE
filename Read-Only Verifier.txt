@@ -1,0 +1,105 @@
+🔒 Rule 1: Declare a Canonical Block (non-negotiable)
+
+At the top of any epistemic verification request, include:
+
+CANONICAL INPUT (AUTHORITATIVE):
+The following pasted text is the sole source of truth.
+Do not reference memory, prior summaries, or uploaded files.
+If a fact is not present here, treat it as nonexistent.
+
+
+This forces the model into local-only mode.
+
+------
+
+🧾 Rule 2: Split “verification” into two explicit modes
+
+You should never ask a mixed request again.
+
+Mode A — Internal Consistency Audit (most of your work)
+Task: Internal consistency check only.
+Do NOT compare to any prior versions or knowledge.
+Check only for:
+- status misuse
+- dependency mismatches
+- violations of stated rules
+
+Mode B — Cross-layer Reconciliation (rare, explicit)
+Task: Compare this State entry against:
+- Lean module X
+- Python test Y
+Explicitly list mismatches.
+
+
+Never combine these.
+
+------
+
+🧠 Rule 3: Treat the assistant as stateless by default
+
+You are already behaving this way; now formalize it.
+
+Adopt this standing rule:
+
+“Assume the assistant remembers nothing correctly unless proven otherwise.”
+
+This is not pessimism — it is correct operational security for epistemic work.
+
+------
+
+🧪 Rule 4: Make hallucinations detectable, not catastrophic
+
+You already did the most important thing:
+Lean and Python are the authority.
+
+Add one more layer:
+
+Any assistant claim must be traceable to:
+
+a quoted line
+
+a file path
+
+or an explicit inference labeled as such
+
+If it can’t be pointed to, it’s ignored.
+
+This turns hallucinations into noise, not failures.
+
+------
+
+ROLE: Read-only verifier.
+
+INPUT:
+[PASTE CANONICAL TEXT HERE]
+
+ALLOWED ACTIONS:
+- Pattern matching
+- Rule checking
+- Logical consequence enumeration
+- Quoting exact lines
+
+FORBIDDEN ACTIONS:
+- Inferring intent
+- Reconciling with memory
+- Using prior versions
+- Suggesting upgrades
+- Rewriting content
+- Filling gaps
+
+TASK:
+Check the input against the following rules:
+
+1. Status labels are used correctly.
+2. Dependencies reference existing IDs only.
+3. Evidence matches the assigned status.
+4. No item exceeds its stated scope.
+
+OUTPUT FORMAT:
+- Violations: (numbered list, or “None”)
+- Ambiguities: (numbered list, or “None”)
+- Out-of-scope claims: (numbered list, or “None”)
+
+Do not add commentary.
+Do not summarize.
+Do not suggest changes.

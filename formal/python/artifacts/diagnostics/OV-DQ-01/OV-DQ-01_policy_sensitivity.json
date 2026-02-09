@@ -1,0 +1,249 @@
+{
+  "fingerprint": "df99ac9b86229135f2876be1a56d7abf0c730afe714ecee12d86fb9b7b50d871",
+  "notes": "Diagnostic-only policy sensitivity summary for the OV-01g family-selection logic under a q_threshold grid. Does not change DQ-01_v1 thresholds or canonical q_threshold; records what would happen under alternate q_threshold values.",
+  "ov01g": {
+    "curved_adequacy_passes_locked": true,
+    "external_evidence_relpath": "formal/external_evidence/bec_bragg_steinhauer_2001",
+    "grid": [
+      {
+        "blocking_reasons": [],
+        "q_threshold": 0.85,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 0.9,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 0.95,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 1.0,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 1.05,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 1.1,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 1.15,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      }
+    ],
+    "observable_id": "OV-01g",
+    "prefer_curved_locked": true,
+    "q_ratio_locked": 0.49694528420421813,
+    "q_threshold_locked": 0.9,
+    "robustness_report_fingerprint": "e623da03ade00b2be16c6fe3a6ef04a6d7743969ddda7e080b65be7c7459c011",
+    "robustness_source": "external_evidence_frozen_fit_artifacts"
+  },
+  "ov02x": {
+    "baseline_prefer_curved_locked": true,
+    "external_evidence_relpath": "formal/external_evidence/bec_bragg_steinhauer_2001",
+    "grid": [
+      {
+        "all_scenarios_match_baseline": true,
+        "baseline_prefer_curved": true,
+        "blocking_reasons": [],
+        "q_threshold": 0.85,
+        "report_fingerprint": "8fecec620e9da7b168598b20fbc555b053cf1f12fc56b5b131ba210790105103",
+        "robustness_failed": false
+      },
+      {
+        "all_scenarios_match_baseline": true,
+        "baseline_prefer_curved": true,
+        "blocking_reasons": [],
+        "q_threshold": 0.9,
+        "report_fingerprint": "cf84ad95aa67d81701c716f80309250ea0265beb3cfff4a962d2388391f614cc",
+        "robustness_failed": false
+      },
+      {
+        "all_scenarios_match_baseline": true,
+        "baseline_prefer_curved": true,
+        "blocking_reasons": [],
+        "q_threshold": 0.95,
+        "report_fingerprint": "f3cf4beda6f21a320819b898685e70786b8bdfbcbaa2f02b5de9ead3fcc7ef72",
+        "robustness_failed": false
+      },
+      {
+        "all_scenarios_match_baseline": true,
+        "baseline_prefer_curved": true,
+        "blocking_reasons": [],
+        "q_threshold": 1.0,
+        "report_fingerprint": "1362294bd03c284d6dd68bb89124ba229fb88edeca0089f8b3996dd3a0ea854c",
+        "robustness_failed": false
+      },
+      {
+        "all_scenarios_match_baseline": true,
+        "baseline_prefer_curved": true,
+        "blocking_reasons": [],
+        "q_threshold": 1.05,
+        "report_fingerprint": "f165fb2d01fae46656eed377b3b6ac6f097d7f3a057453c3880146b04a0b1662",
+        "robustness_failed": false
+      },
+      {
+        "all_scenarios_match_baseline": true,
+        "baseline_prefer_curved": true,
+        "blocking_reasons": [],
+        "q_threshold": 1.1,
+        "report_fingerprint": "ed5eb1d40070dc688c8646f1320aa25dbce2d1b5a5905bffcf9395e6227b34d4",
+        "robustness_failed": false
+      },
+      {
+        "all_scenarios_match_baseline": true,
+        "baseline_prefer_curved": true,
+        "blocking_reasons": [],
+        "q_threshold": 1.15,
+        "report_fingerprint": "4e7a3c814ec66a1f506c8f9e7055a372bb705c62cd7200bda054b54a7aec2be8",
+        "robustness_failed": false
+      }
+    ],
+    "locked_report_fingerprint": "cf84ad95aa67d81701c716f80309250ea0265beb3cfff4a962d2388391f614cc",
+    "observable_id": "OV-02x",
+    "q_threshold_locked": 0.9,
+    "robustness_failed_locked": false,
+    "robustness_source": "metamorphic_gate_recomputed"
+  },
+  "ov03x": {
+    "curved_adequacy_passes_locked": true,
+    "grid": [
+      {
+        "blocking_reasons": [
+          "q_ratio_above_threshold"
+        ],
+        "q_threshold": 0.85,
+        "robustness_failed": true,
+        "would_prefer_curved": false
+      },
+      {
+        "blocking_reasons": [
+          "q_ratio_above_threshold"
+        ],
+        "q_threshold": 0.9,
+        "robustness_failed": true,
+        "would_prefer_curved": false
+      },
+      {
+        "blocking_reasons": [
+          "q_ratio_above_threshold"
+        ],
+        "q_threshold": 0.95,
+        "robustness_failed": true,
+        "would_prefer_curved": false
+      },
+      {
+        "blocking_reasons": [
+          "q_ratio_above_threshold"
+        ],
+        "q_threshold": 1.0,
+        "robustness_failed": true,
+        "would_prefer_curved": false
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 1.05,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 1.1,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 1.15,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      }
+    ],
+    "observable_id": "OV-03x",
+    "prefer_curved_locked": false,
+    "q_ratio_locked": 1.0241440175459013,
+    "q_threshold_locked": 0.9,
+    "robustness_lock_relpath": "formal/markdown/locks/observables/OV-03x_fit_family_robustness_B1_dataset.md",
+    "robustness_report_fingerprint": "78f15afb7ee964f0efb8e43b5525fa3dea2fa8fa10f5c9a6b65f46a7e8cf7c7b"
+  },
+  "ov04x": {
+    "curved_adequacy_passes_locked": true,
+    "grid": [
+      {
+        "blocking_reasons": [],
+        "q_threshold": 0.85,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 0.9,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 0.95,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 1.0,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 1.05,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 1.1,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      },
+      {
+        "blocking_reasons": [],
+        "q_threshold": 1.15,
+        "robustness_failed": false,
+        "would_prefer_curved": true
+      }
+    ],
+    "observable_id": "OV-04x",
+    "prefer_curved_locked": true,
+    "q_ratio_locked": 0.8060220497327952,
+    "q_threshold_locked": 0.9,
+    "robustness_lock_relpath": "formal/markdown/locks/observables/OV-04x_fit_family_robustness_DS02_lowk.md",
+    "robustness_report_fingerprint": "f562944bc70ff2f892d571cb70627aa2e749dc6ef18dd031358eb17e54930915"
+  },
+  "q_threshold_grid": [
+    0.85,
+    0.9,
+    0.95,
+    1.0,
+    1.05,
+    1.1,
+    1.15
+  ],
+  "schema": "OV-DQ-01_policy_sensitivity/v2"
+}

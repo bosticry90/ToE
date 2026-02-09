@@ -1,0 +1,1986 @@
+{
+  "artifact_sha256": "4ad776ab48696771173f85ca2b48f2962f1b94a3a5dfa8896cb540b51d30c473",
+  "bridge_program": "Toy-H_Toy-G_C6",
+  "evidence": {
+    "pytest_nodes": [
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_expected_probe_signatures",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_nonredundancy_summary",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_mode_index_resolves_targeted_winding_mismatch",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_unwrap_resolves_targeted_bridge_only_mismatch",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_phase_anchor_resolves_targeted_phase_control_mismatch",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_current_anchor_resolves_targeted_current_control_mismatch",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_pair_channel_resolves_targeted_pair_vs_bridge_mismatch",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_amplitude_expansion_negative_controls",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_current_control_expansion_presence",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_current_control_expansion_negative_controls",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_theta_set_expansion_presence",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_theta_set_expansion_negative_controls",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_grid_size_expansion_presence",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_grid_size_expansion_negative_controls",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_v5_tolerance_profile_application",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_v5_t1_negative_controls_preserve_reason_codes",
+      "formal/python/tests/test_bridge_program_orthogonality_semantics.py::test_bridge_program_orthogonality_v5_t2_expected_breaks_are_tolerance_driven",
+      "formal/python/tests/test_bridge_toyh_phase_stabilization_unit.py::test_bridge_toyh_phase_stabilization_residual_is_stable_near_zero",
+      "formal/python/tests/test_bridge_program_v5_t2_phase_stabilized_lane_l1.py::test_bridge_program_v5_t2_phase_stabilized_restores_repro_capsule",
+      "formal/python/tests/test_bridge_program_v5_t2_phase_stabilized_lane_l1.py::test_bridge_program_v5_t2_frontier_lock_after_l1",
+      "formal/python/tests/test_bridge_program_v5_t2_phase_stabilized_lane_l1.py::test_bridge_program_v5_t2_negative_controls_preserved_phase_wrong_sign",
+      "formal/python/tests/test_bridge_program_v5_t2_phase_stabilized_lane_l1.py::test_bridge_program_v5_t2_negative_controls_preserved_grid_amplitude_scale",
+      "formal/python/tests/test_bridge_program_orthogonality_robustness_guard.py::test_bridge_program_orthogonality_nonredundancy_robustness_guard"
+    ]
+  },
+  "items": [
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "none",
+      "mode_target": 1.0,
+      "probe_id": "baseline_all_pass",
+      "probe_kind": "baseline",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 1.79982577539e-16,
+          "local_phase_shear_rel": 1.61050375394
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 1.79982577539e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 1.79982577539e-16,
+          "invariance_residual": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "phase_field_residual": 1.11022302463e-16,
+          "phase_sensitive_delta": 0.5,
+          "rhs_phase_residual": 1.11022302463e-16,
+          "rhs_rel": 1.11022302463e-16,
+          "rhs_rel_legacy": 5.53597490018e-15
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "rhs_rel": 1.11022302463e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__P_A__PASS__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "none",
+      "mode_target": 1.0,
+      "probe_id": "stress_toyh_phase_control",
+      "probe_kind": "toyh_phase_control_stress",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 1e-06,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 5.39947732618e-16,
+          "local_phase_shear_rel": 1.61050375394
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 5.39947732618e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 3.59965155078e-16,
+          "invariance_residual": 3.59965155078e-16,
+          "norm_rel": 0.0,
+          "phase_field_residual": 1.11765266882e-16,
+          "phase_sensitive_delta": 5.00044450291e-13,
+          "rhs_phase_residual": 1.14963415235e-16,
+          "rhs_rel": 1.14963415235e-16,
+          "rhs_rel_legacy": 5.50392404956e-15
+        },
+        "pass": false,
+        "reason_code": "FAIL_PHASE_CHANNEL_CONTROL_MIN"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 3.59965155078e-16,
+          "norm_rel": 0.0,
+          "rhs_rel": 1.14963415235e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__p0_A__FAIL_PHASE_CHANNEL_CONTROL_MIN__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 1e-06,
+      "localization_note": "none",
+      "mode_target": 1.0,
+      "probe_id": "stress_toyh_current_control",
+      "probe_kind": "toyh_current_control_stress",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 1.79982577539e-16,
+          "local_phase_shear_rel": 8.22268403746e-12
+        },
+        "pass": false,
+        "reason_code": "FAIL_CURRENT_CHANNEL_CONTROL_MIN"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 5.05763372806e-18,
+          "anchor_response": 1.00000000001e-06,
+          "current_l2_rel": 1.79982577539e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__c0_A__FAIL_CURRENT_CHANNEL_CONTROL_MIN__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 1.79982577539e-16,
+          "invariance_residual": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "phase_field_residual": 1.11022302463e-16,
+          "phase_sensitive_delta": 0.5,
+          "rhs_phase_residual": 1.11022302463e-16,
+          "rhs_rel": 1.11022302463e-16,
+          "rhs_rel_legacy": 5.53597490018e-15
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "rhs_rel": 1.11022302463e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__P_A__PASS__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.125,
+      "localization_note": "none",
+      "mode_target": 1.0,
+      "probe_id": "stress_toyh_current_control_alpha_0p125",
+      "probe_kind": "toyh_current_control_stress_expansion_v2",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 1.79982577539e-16,
+          "local_phase_shear_rel": 0.180075866106
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.125,
+          "current_l2_rel": 1.79982577539e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 1.79982577539e-16,
+          "invariance_residual": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "phase_field_residual": 1.11022302463e-16,
+          "phase_sensitive_delta": 0.5,
+          "rhs_phase_residual": 1.11022302463e-16,
+          "rhs_rel": 1.11022302463e-16,
+          "rhs_rel_legacy": 5.53597490018e-15
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "rhs_rel": 1.11022302463e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__P_A__PASS__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "none",
+      "mode_target": 1.0,
+      "probe_id": "stress_toyh_current_control_alpha_0p500",
+      "probe_kind": "toyh_current_control_stress_expansion_v2",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 1.79982577539e-16,
+          "local_phase_shear_rel": 1.61050375394
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 1.79982577539e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 1.79982577539e-16,
+          "invariance_residual": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "phase_field_residual": 1.11022302463e-16,
+          "phase_sensitive_delta": 0.5,
+          "rhs_phase_residual": 1.11022302463e-16,
+          "rhs_rel": 1.11022302463e-16,
+          "rhs_rel_legacy": 5.53597490018e-15
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "rhs_rel": 1.11022302463e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__P_A__PASS__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 1.0,
+      "localization_note": "none",
+      "mode_target": 1.0,
+      "probe_id": "stress_toyh_current_control_alpha_1p000",
+      "probe_kind": "toyh_current_control_stress_expansion_v2",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 1.79982577539e-16,
+          "local_phase_shear_rel": 3.0
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 1.0,
+          "current_l2_rel": 1.79982577539e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 1.79982577539e-16,
+          "invariance_residual": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "phase_field_residual": 1.11022302463e-16,
+          "phase_sensitive_delta": 0.5,
+          "rhs_phase_residual": 1.11022302463e-16,
+          "rhs_rel": 1.11022302463e-16,
+          "rhs_rel_legacy": 5.53597490018e-15
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "rhs_rel": 1.11022302463e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__P_A__PASS__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "none",
+      "mode_target": 1.0,
+      "probe_id": "stress_toyh_theta_set_pi_over_6",
+      "probe_kind": "theta_set_stress_expansion_v3",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 0.523598775598,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 0.0,
+          "local_phase_shear_rel": 1.61050375394
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 0.0
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 0.0,
+          "invariance_residual": 1.11022302463e-16,
+          "norm_rel": 0.0,
+          "phase_field_residual": 1.11022302463e-16,
+          "phase_sensitive_delta": 0.133974596216,
+          "rhs_phase_residual": 5.55111512313e-17,
+          "rhs_rel": 5.55111512313e-17,
+          "rhs_rel_legacy": 5.19617897657e-15
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 0.0,
+          "norm_rel": 0.0,
+          "rhs_rel": 5.55111512313e-17
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__P_A__PASS__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "none",
+      "mode_target": 1.0,
+      "probe_id": "stress_toyh_theta_set_pi_over_2",
+      "probe_kind": "theta_set_stress_expansion_v3",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 1.57079632679,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 0.0,
+          "local_phase_shear_rel": 1.61050375394
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 0.0
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 0.0,
+          "invariance_residual": 3.37061492642e-17,
+          "norm_rel": 0.0,
+          "phase_field_residual": 3.37061492642e-17,
+          "phase_sensitive_delta": 1.0,
+          "rhs_phase_residual": 2.82009111255e-17,
+          "rhs_rel": 2.82009111255e-17,
+          "rhs_rel_legacy": 4.00495451542e-15
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 0.0,
+          "norm_rel": 0.0,
+          "rhs_rel": 2.82009111255e-17
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__P_A__PASS__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "none",
+      "mode_target": 1.0,
+      "probe_id": "stress_toyh_theta_set_2pi_over_3",
+      "probe_kind": "theta_set_stress_expansion_v3",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 2.09439510239,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 5.39947732618e-16,
+          "local_phase_shear_rel": 1.61050375394
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 5.39947732618e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 5.39947732618e-16,
+          "invariance_residual": 5.39947732618e-16,
+          "norm_rel": 0.0,
+          "phase_field_residual": 1.11022302463e-16,
+          "phase_sensitive_delta": 1.5,
+          "rhs_phase_residual": 1.66533453694e-16,
+          "rhs_rel": 1.66533453694e-16,
+          "rhs_rel_legacy": 4.02307972354e-15
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 5.39947732618e-16,
+          "norm_rel": 0.0,
+          "rhs_rel": 1.66533453694e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__P_A__PASS__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 13,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "none",
+      "mode_target": 1.0,
+      "probe_id": "stress_toyh_grid_size_n13",
+      "probe_kind": "grid_size_stress_expansion_v4",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 5.55111512313e-17,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.14018491737e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "max_abs_delta": 0.483321946706,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 3.59965155078e-16,
+          "local_phase_shear_rel": 1.67020228303
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 3.59965155078e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 3.59965155078e-16,
+          "invariance_residual": 3.59965155078e-16,
+          "norm_rel": 0.0,
+          "phase_field_residual": 1.57009245868e-16,
+          "phase_sensitive_delta": 0.5,
+          "rhs_phase_residual": 1.57009245868e-16,
+          "rhs_rel": 1.57009245868e-16,
+          "rhs_rel_legacy": 7.41073419955e-15
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 3.59965155078e-16,
+          "norm_rel": 0.0,
+          "rhs_rel": 1.57009245868e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__P_A__PASS__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 15,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "none",
+      "mode_target": 1.0,
+      "probe_id": "stress_toyh_grid_size_n15",
+      "probe_kind": "grid_size_stress_expansion_v4",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 1.11022302463e-16,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.60364683094e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 1.11022302463e-16,
+          "max_abs_delta": 0.418879020479,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 0.0,
+          "local_phase_shear_rel": 1.71355408757
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 5.55111512313e-17,
+          "anchor_response": 0.5,
+          "current_l2_rel": 0.0
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 1.79982577539e-16,
+          "invariance_residual": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "phase_field_residual": 1.11022302463e-16,
+          "phase_sensitive_delta": 0.5,
+          "rhs_phase_residual": 1.57009245868e-16,
+          "rhs_rel": 1.57009245868e-16,
+          "rhs_rel_legacy": 7.34689208639e-15
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "rhs_rel": 1.57009245868e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__P_A__PASS__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "none",
+      "mode_target": 1.0625,
+      "probe_id": "stress_toyg_integer",
+      "probe_kind": "toyg_integer_stress",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__w0_M_u0__fail_not_integer_close__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0625,
+          "nearest_int": 1,
+          "peak_fraction": 0.987319686577,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 4.35682975705e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 0.0625,
+          "max_abs_delta": 0.606898580807,
+          "raw_winding": 1.0625
+        },
+        "pass": false,
+        "reason_code": "fail_not_integer_close"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 1.79982577539e-16,
+          "local_phase_shear_rel": 1.61050375394
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 1.79982577539e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 1.79982577539e-16,
+          "invariance_residual": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "phase_field_residual": 1.11022302463e-16,
+          "phase_sensitive_delta": 0.5,
+          "rhs_phase_residual": 1.11022302463e-16,
+          "rhs_rel": 1.11022302463e-16,
+          "rhs_rel_legacy": 5.53597490018e-15
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 1.79982577539e-16,
+          "norm_rel": 0.0,
+          "rhs_rel": 1.11022302463e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__P_A__PASS__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 1.0625,
+      "winding_target": 1.0625
+    },
+    {
+      "amplitude_scale": 1.0,
+      "failing_channels": [],
+      "grid_n": 7,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "none",
+      "mode_target": 3.5,
+      "probe_id": "stress_toyg_unwrap",
+      "probe_kind": "toyg_unwrap_stress",
+      "signature": "P-P-P",
+      "signature_raw": "P-P-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__w0_m0_U__fail_unwrap_discontinuity_guard__fail_peak_fraction_low__pass_unwrap_stable_boundary"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.5,
+          "nearest_int": 4,
+          "peak_fraction": 0.412156517512,
+          "peak_index_signed": 3
+        },
+        "pass": false,
+        "reason_code": "fail_peak_fraction_low"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 1.0,
+          "step_std": 0.0
+        },
+        "pass": true,
+        "reason_code": "pass_unwrap_stable_boundary"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 0.5,
+          "max_abs_delta": 3.14159265359,
+          "raw_winding": -1.5
+        },
+        "pass": false,
+        "reason_code": "fail_unwrap_discontinuity_guard"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 1.79982577539e-16,
+          "local_phase_shear_rel": 1.37370815096
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 1.79982577539e-16
+        },
+        "pass": true,
+        "reason_code": "PASS_CURRENT_ANCHOR"
+      },
+      "toyh_current_bridge": {
+        "pass": true,
+        "reason_code": "PASS__C_A__PASS__PASS_CURRENT_ANCHOR"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 3.59965155078e-16,
+          "invariance_residual": 3.59965155078e-16,
+          "norm_rel": 0.0,
+          "phase_field_residual": 1.11022302463e-16,
+          "phase_sensitive_delta": 0.5,
+          "rhs_phase_residual": 0.0,
+          "rhs_rel": 0.0,
+          "rhs_rel_legacy": 3.92181017065e-15
+        },
+        "pass": true,
+        "reason_code": "PASS"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.0,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 3.59965155078e-16,
+          "norm_rel": 0.0,
+          "rhs_rel": 0.0
+        },
+        "pass": true,
+        "reason_code": "PASS_PHASE_ANCHOR"
+      },
+      "toyh_phase_bridge": {
+        "pass": true,
+        "reason_code": "PASS__P_A__PASS__PASS_PHASE_ANCHOR"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 0,
+          "n_pass_channels": 3,
+          "signature": "P-P-P",
+          "signed_margin": 0.1
+        },
+        "pass": true,
+        "reason_code": "PASS_PAIR_COMPATIBLE"
+      },
+      "unwrap_target": 3.5,
+      "winding_target": 3.5
+    },
+    {
+      "amplitude_scale": 1.1,
+      "failing_channels": [
+        "toyh_phase_bridge",
+        "toyh_current_bridge",
+        "toyhg_pair_bridge"
+      ],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "mixed",
+      "mode_target": 1.0,
+      "probe_id": "stress_c6_amplitude_scale",
+      "probe_kind": "c6_side_stress",
+      "signature": "F-F-F",
+      "signature_raw": "F-F-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 0.4641,
+          "local_phase_shear_rel": 1.61050375394
+        },
+        "pass": false,
+        "reason_code": "FAIL_CURRENT_INVARIANCE_TOL"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 0.4641
+        },
+        "pass": false,
+        "reason_code": "FAIL_CURRENT_INVARIANCE_TOL"
+      },
+      "toyh_current_bridge": {
+        "pass": false,
+        "reason_code": "FAIL__c0_a0__FAIL_CURRENT_INVARIANCE_TOL__FAIL_CURRENT_INVARIANCE_TOL"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 0.64524936,
+          "invariance_residual": 0.64524936,
+          "norm_rel": 0.21,
+          "phase_field_residual": 0.0,
+          "phase_sensitive_delta": 0.45,
+          "rhs_phase_residual": 1.11022302463e-16,
+          "rhs_rel": 1.11022302463e-16,
+          "rhs_rel_legacy": 4.6597552
+        },
+        "pass": false,
+        "reason_code": "FAIL_PHASE_INVARIANCE_TOL"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.1,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 0.64524936,
+          "norm_rel": 0.21,
+          "rhs_rel": 1.11022302463e-16
+        },
+        "pass": false,
+        "reason_code": "FAIL_PHASE_INVARIANCE_TOL"
+      },
+      "toyh_phase_bridge": {
+        "pass": false,
+        "reason_code": "FAIL__p0_a0__FAIL_PHASE_INVARIANCE_TOL__FAIL_PHASE_INVARIANCE_TOL"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 2,
+          "n_pass_channels": 1,
+          "signature": "F-F-P",
+          "signed_margin": -0.1
+        },
+        "pass": false,
+        "reason_code": "FAIL_PAIR_TOYG_MISMATCH"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.02,
+      "failing_channels": [
+        "toyh_phase_bridge",
+        "toyh_current_bridge",
+        "toyhg_pair_bridge"
+      ],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "mixed",
+      "mode_target": 1.0,
+      "probe_id": "stress_c6_amplitude_scale_1p02",
+      "probe_kind": "c6_side_stress_amplitude_expansion_v1",
+      "signature": "F-F-F",
+      "signature_raw": "F-F-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 0.08243216,
+          "local_phase_shear_rel": 1.61050375394
+        },
+        "pass": false,
+        "reason_code": "FAIL_CURRENT_INVARIANCE_TOL"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 0.08243216
+        },
+        "pass": false,
+        "reason_code": "FAIL_CURRENT_INVARIANCE_TOL"
+      },
+      "toyh_current_bridge": {
+        "pass": false,
+        "reason_code": "FAIL__c0_a0__FAIL_CURRENT_INVARIANCE_TOL__FAIL_CURRENT_INVARIANCE_TOL"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 0.056508766336,
+          "invariance_residual": 0.056508766336,
+          "norm_rel": 0.0404,
+          "phase_field_residual": 0.0,
+          "phase_sensitive_delta": 0.49,
+          "rhs_phase_residual": 0.0,
+          "rhs_rel": 0.0,
+          "rhs_rel_legacy": 0.8334129536
+        },
+        "pass": false,
+        "reason_code": "FAIL_PHASE_INVARIANCE_TOL"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.02,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 0.056508766336,
+          "norm_rel": 0.0404,
+          "rhs_rel": 0.0
+        },
+        "pass": false,
+        "reason_code": "FAIL_PHASE_INVARIANCE_TOL"
+      },
+      "toyh_phase_bridge": {
+        "pass": false,
+        "reason_code": "FAIL__p0_a0__FAIL_PHASE_INVARIANCE_TOL__FAIL_PHASE_INVARIANCE_TOL"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 2,
+          "n_pass_channels": 1,
+          "signature": "F-F-P",
+          "signed_margin": -0.1
+        },
+        "pass": false,
+        "reason_code": "FAIL_PAIR_TOYG_MISMATCH"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.05,
+      "failing_channels": [
+        "toyh_phase_bridge",
+        "toyh_current_bridge",
+        "toyhg_pair_bridge"
+      ],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "mixed",
+      "mode_target": 1.0,
+      "probe_id": "stress_c6_amplitude_scale_1p05",
+      "probe_kind": "c6_side_stress_amplitude_expansion_v1",
+      "signature": "F-F-F",
+      "signature_raw": "F-F-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 0.21550625,
+          "local_phase_shear_rel": 1.61050375394
+        },
+        "pass": false,
+        "reason_code": "FAIL_CURRENT_INVARIANCE_TOL"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 0.21550625
+        },
+        "pass": false,
+        "reason_code": "FAIL_CURRENT_INVARIANCE_TOL"
+      },
+      "toyh_current_bridge": {
+        "pass": false,
+        "reason_code": "FAIL__c0_a0__FAIL_CURRENT_INVARIANCE_TOL__FAIL_CURRENT_INVARIANCE_TOL"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 0.206192485,
+          "invariance_residual": 0.206192485,
+          "norm_rel": 0.1025,
+          "phase_field_residual": 1.11022302463e-16,
+          "phase_sensitive_delta": 0.475,
+          "rhs_phase_residual": 0.0,
+          "rhs_rel": 0.0,
+          "rhs_rel_legacy": 2.1744314
+        },
+        "pass": false,
+        "reason_code": "FAIL_PHASE_INVARIANCE_TOL"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.05,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 0.206192485,
+          "norm_rel": 0.1025,
+          "rhs_rel": 0.0
+        },
+        "pass": false,
+        "reason_code": "FAIL_PHASE_INVARIANCE_TOL"
+      },
+      "toyh_phase_bridge": {
+        "pass": false,
+        "reason_code": "FAIL__p0_a0__FAIL_PHASE_INVARIANCE_TOL__FAIL_PHASE_INVARIANCE_TOL"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 2,
+          "n_pass_channels": 1,
+          "signature": "F-F-P",
+          "signed_margin": -0.1
+        },
+        "pass": false,
+        "reason_code": "FAIL_PAIR_TOYG_MISMATCH"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    },
+    {
+      "amplitude_scale": 1.2,
+      "failing_channels": [
+        "toyh_phase_bridge",
+        "toyh_current_bridge",
+        "toyhg_pair_bridge"
+      ],
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "mixed",
+      "mode_target": 1.0,
+      "probe_id": "stress_c6_amplitude_scale_1p20",
+      "probe_kind": "c6_side_stress_amplitude_expansion_v1",
+      "signature": "F-F-F",
+      "signature_raw": "F-F-P",
+      "theta": 1.0471975512,
+      "toyg_bridge": {
+        "pass": true,
+        "reason_code": "PASS__W_M_u0__pass_quantized_winding_1__pass_mode_index_1__fail_not_boundary_sensitive"
+      },
+      "toyg_mode": {
+        "metrics": {
+          "integer_distance": 0.0,
+          "nearest_int": 1,
+          "peak_fraction": 1.0,
+          "peak_index_signed": 1
+        },
+        "pass": true,
+        "reason_code": "pass_mode_index_1"
+      },
+      "toyg_unwrap": {
+        "metrics": {
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "step_std": 3.17919492138e-16
+        },
+        "pass": false,
+        "reason_code": "fail_not_boundary_sensitive"
+      },
+      "toyg_winding": {
+        "metrics": {
+          "integer_distance": 2.22044604925e-16,
+          "max_abs_delta": 0.571198664289,
+          "raw_winding": 1.0
+        },
+        "pass": true,
+        "reason_code": "pass_quantized_winding_1"
+      },
+      "toyh_current": {
+        "metrics": {
+          "current_l2_rel": 1.0736,
+          "local_phase_shear_rel": 1.61050375394
+        },
+        "pass": false,
+        "reason_code": "FAIL_CURRENT_INVARIANCE_TOL"
+      },
+      "toyh_current_anchor": {
+        "metrics": {
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "current_l2_rel": 1.0736
+        },
+        "pass": false,
+        "reason_code": "FAIL_CURRENT_INVARIANCE_TOL"
+      },
+      "toyh_current_bridge": {
+        "pass": false,
+        "reason_code": "FAIL__c0_a0__FAIL_CURRENT_INVARIANCE_TOL__FAIL_CURRENT_INVARIANCE_TOL"
+      },
+      "toyh_phase": {
+        "metrics": {
+          "energy_rel": 2.35075456,
+          "invariance_residual": 2.35075456,
+          "norm_rel": 0.44,
+          "phase_field_residual": 2.22044604925e-16,
+          "phase_sensitive_delta": 0.4,
+          "rhs_phase_residual": 0.0,
+          "rhs_rel": 0.0,
+          "rhs_rel_legacy": 10.6222976
+        },
+        "pass": false,
+        "reason_code": "FAIL_PHASE_INVARIANCE_TOL"
+      },
+      "toyh_phase_anchor": {
+        "metrics": {
+          "anchor_magnitude_ratio": 1.2,
+          "anchor_phase_error": 0.0,
+          "energy_rel": 2.35075456,
+          "norm_rel": 0.44,
+          "rhs_rel": 0.0
+        },
+        "pass": false,
+        "reason_code": "FAIL_PHASE_INVARIANCE_TOL"
+      },
+      "toyh_phase_bridge": {
+        "pass": false,
+        "reason_code": "FAIL__p0_a0__FAIL_PHASE_INVARIANCE_TOL__FAIL_PHASE_INVARIANCE_TOL"
+      },
+      "toyhg_pair_bridge": {
+        "metrics": {
+          "n_fail_channels": 2,
+          "n_pass_channels": 1,
+          "signature": "F-F-P",
+          "signed_margin": -0.1
+        },
+        "pass": false,
+        "reason_code": "FAIL_PAIR_TOYG_MISMATCH"
+      },
+      "unwrap_target": 1.0,
+      "winding_target": 1.0
+    }
+  ],
+  "report_id": "BRIDGE_PROGRAM_ORTHOGONALITY_REPORT",
+  "schema_version": 1,
+  "shared_probe_set": {
+    "amplitude_scales_frontier_expansion_v1": [
+      1.02,
+      1.05,
+      1.1,
+      1.2
+    ],
+    "current_anchor_min_response": 1.25e-08,
+    "current_anchor_tolerance": 2e-08,
+    "current_channel_control_min": 0.001,
+    "current_control_alphas_frontier_expansion_v2": [
+      0.125,
+      0.5,
+      1.0
+    ],
+    "current_control_negative_anchor_sign_frontier_expansion_v2": -1.0,
+    "effective_tolerances_v5": {
+      "current_anchor_min_response": 1.25e-08,
+      "current_anchor_tolerance": 2e-08,
+      "phase_anchor_tolerance": 2e-08,
+      "toyh_tolerance": 1e-15
+    },
+    "grid_size_negative_amplitude_scale_frontier_expansion_v4": 1.1,
+    "grid_sizes": [
+      7,
+      9,
+      11
+    ],
+    "grid_sizes_frontier_expansion_v4": [
+      13,
+      15
+    ],
+    "phase_anchor_tolerance": 2e-08,
+    "phase_channel_control_min": 0.001,
+    "phase_stabilization_lane_l1_enabled": true,
+    "theta_negative_anchor_sign_frontier_expansion_v3": -1.0,
+    "theta_values_frontier_expansion_v3": [
+      0.5235987755982988,
+      1.5707963267948966,
+      2.0943951023931953
+    ],
+    "tolerance_profile_frontier_expansion_v5": {
+      "baseline": {
+        "current_anchor_min_response": 1e-08,
+        "current_anchor_tolerance": 1e-07,
+        "phase_anchor_tolerance": 1e-07,
+        "toyh_tolerance": 1e-10
+      },
+      "v5_t1": {
+        "current_anchor_min_response": 1.1e-08,
+        "current_anchor_tolerance": 5e-08,
+        "phase_anchor_tolerance": 5e-08,
+        "toyh_tolerance": 5e-11
+      },
+      "v5_t2": {
+        "current_anchor_min_response": 1.25e-08,
+        "current_anchor_tolerance": 2e-08,
+        "phase_anchor_tolerance": 2e-08,
+        "toyh_tolerance": 1e-15
+      }
+    },
+    "tolerance_profile_selected_v5": "v5_t2",
+    "toyg_loop_length": 6.283185307179586,
+    "toyg_min_near_pi_fraction": 0.8,
+    "toyg_peak_fraction_min": 0.7,
+    "toyg_pi_edge_eps": 0.15,
+    "toyg_tol_mode": 0.1,
+    "toyg_tol_unwrap_step_mean": 0.05,
+    "toyg_tol_unwrap_step_std": 0.05,
+    "toyg_tol_winding": 0.05,
+    "toyg_unwrap_margin": 1e-06,
+    "toyh_tolerance": 1e-15
+  },
+  "summary": {
+    "n_probes": 17,
+    "nonredundant": true,
+    "note": "nonredundant=true iff raw Toy-G bridge outcome disagrees with each Toy-H bridge channel on at least one pinned probe.",
+    "pairwise_disagreement_counts": {
+      "current_vs_toyg_bridge": 4,
+      "phase_vs_current": 0,
+      "phase_vs_toyg_bridge": 4
+    },
+    "pairwise_disagreement_counts_frontier": {
+      "current_vs_pair_bridge": 0,
+      "phase_vs_current": 0,
+      "phase_vs_pair_bridge": 0
+    },
+    "signature_counts": {
+      "F-F-F": 4,
+      "F-F-P": 0,
+      "F-P-F": 0,
+      "F-P-P": 0,
+      "P-F-F": 0,
+      "P-F-P": 0,
+      "P-P-F": 0,
+      "P-P-P": 13
+    },
+    "signature_counts_raw": {
+      "F-F-F": 0,
+      "F-F-P": 4,
+      "F-P-F": 0,
+      "F-P-P": 0,
+      "P-F-F": 0,
+      "P-F-P": 0,
+      "P-P-F": 0,
+      "P-P-P": 13
+    },
+    "targeted_resolution": {
+      "n_current_control_fail_resolved_by_current_anchor": 1,
+      "n_pair_vs_bridge_resolved_by_pair_channel": 4,
+      "n_phase_control_fail_resolved_by_phase_anchor": 1,
+      "n_winding_not_integer_close_resolved_by_mode": 1,
+      "n_winding_unwrap_guard_resolved_by_unwrap": 1,
+      "note": "Counts probes where winding fail_not_integer_close is resolved by mode, winding fail_unwrap_discontinuity_guard with mode failure is resolved by unwrap channel, and Toy-H phase/current control failures are resolved by anchor channels, and the Toy-H-pair-vs-Toy-G mismatch is resolved by the pair-compatibility channel."
+    }
+  }
+}

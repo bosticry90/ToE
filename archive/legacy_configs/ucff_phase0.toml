@@ -1,0 +1,24 @@
+[domain]
+L = 20.0
+bc = "periodic"
+grid_points = 256
+
+[units]
+mode = "physical"      # options: physical | natural
+hbar = 1.0             # used only if mode="physical" for explicit factors in code gen
+m = 1.0                # mass scale m=1 in physical-mode dimensions
+
+[regularization]
+eps = 1.0e-6
+
+[coherence]
+lambda = 0.5           # units in primary scheme: [λ] = L^4 T^-2; dimensionless in natural units
+form = "amplitude-gradient"  # fixed for Phase-1
+
+[potential]
+type = "generic"       # placeholder; keep symbolic U(ρ)
+rho0 = 1.0
+
+[declarations]
+baseline = "complex-1D"
+crosscheck = "real-symplectic"

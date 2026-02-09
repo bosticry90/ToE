@@ -1,0 +1,79 @@
+{
+  "artifact_sha256": "1b8f44d4b19ae663e4516bcb672a08dcd606cc50d07c6c6116e0597b8824e6b3",
+  "blocked_targets": [
+    "C7",
+    "UCFF"
+  ],
+  "bridge_family": "BRIDGE_TOYG_CANONICAL_FEASIBILITY",
+  "evidence": {
+    "pytest_nodes": [
+      "formal/python/tests/test_bridge_toyg_canonical_feasibility_scan_determinism.py::test_bridge_toyg_canonical_feasibility_scan_is_deterministic",
+      "formal/python/tests/test_bridge_toyg_canonical_feasibility_artifact_pointers_exist.py::test_bridge_toyg_canonical_feasibility_artifact_pointers_exist"
+    ]
+  },
+  "found": true,
+  "found_targets": [
+    "C6"
+  ],
+  "prerequisite": "",
+  "schema_version": 1,
+  "targets": [
+    {
+      "canonical_surface": {
+        "path": "formal/python/crft/cp_nlse_2d.py",
+        "sha256": "3cf60dceb1b6d064138dab120486c9e6371b2d5db76f21210b219917ea9d548b"
+      },
+      "capabilities": {
+        "deterministic_front_door_behavior": true,
+        "phase_like_observable_surface": true,
+        "spatial_grid_surface": true,
+        "typed_input_output": true
+      },
+      "found": true,
+      "label": "CRFT CP-NLSE 2D",
+      "prerequisite": "",
+      "reason_code": "FOUND_MINIMAL_TOYG_COMPATIBLE_SURFACE",
+      "target_id": "C6"
+    },
+    {
+      "canonical_surface": {
+        "path": "formal/python/crft/acoustic_metric.py",
+        "sha256": "bf15db5109834fa6753e30aa8664ddfbcec00da0bed3136ba88a0de5dbc9ce49"
+      },
+      "capabilities": {
+        "deterministic_front_door_behavior": true,
+        "phase_like_observable_surface": false,
+        "spatial_grid_surface": false,
+        "typed_input_output": true
+      },
+      "found": false,
+      "label": "CRFT acoustic metric (MT-01a)",
+      "prerequisite": "Surface lacks explicit spatial-grid field support required for Toy-G invariant probes (need typed grid/field front-door inputs).",
+      "reason_code": "BLOCKED_NO_SPATIAL_GRID_SURFACE",
+      "target_id": "C7"
+    },
+    {
+      "canonical_surface": {
+        "path": "formal/python/toe/ucff/core_front_door.py",
+        "sha256": "c2816386a8842b07fa7d2ac8c7195b7bee3762eb0c47659769bdbea24b5ce40e"
+      },
+      "capabilities": {
+        "deterministic_front_door_behavior": true,
+        "phase_like_observable_surface": false,
+        "spatial_grid_surface": false,
+        "typed_input_output": true
+      },
+      "found": false,
+      "label": "UCFF core front door",
+      "prerequisite": "Surface lacks explicit spatial-grid field support required for Toy-G invariant probes (need typed grid/field front-door inputs).",
+      "reason_code": "BLOCKED_NO_SPATIAL_GRID_SURFACE",
+      "target_id": "UCFF"
+    }
+  ],
+  "targets_scanned": [
+    "C6",
+    "C7",
+    "UCFF"
+  ],
+  "toy_family": "TOY-G"
+}

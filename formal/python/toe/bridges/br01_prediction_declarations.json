@@ -1,0 +1,62 @@
+{
+  "schema": "BR01_prediction_declarations/v1",
+  "version": 1,
+  "notes": [
+    "Structural-only declaration surface for BR-01 candidate predictions.",
+    "This file is governance input: edits must be reflected via regenerated canonical locks."
+  ],
+  "candidates": {
+    "BR01_metric_from_DR01_fit_unit_density": {
+      "prediction": {
+        "kind": "br05_structure_required",
+        "required_condition_keys": [
+          "condition_A",
+          "condition_B"
+        ],
+        "required_fields": [
+          "c_mm_per_s",
+          "se_mm_per_s"
+        ],
+        "notes": [
+          "Minimal structural declaration only: candidate is considered comparable if OV-BR-05 provides the declared condition keys and fields.",
+          "No numeric constraints are declared here."
+        ]
+      }
+    },
+    "BR01_metric_from_DR01_fit_constant_density": {
+      "prediction": {
+        "kind": "br05_structure_required",
+        "required_condition_keys": [
+          "condition_A",
+          "condition_B"
+        ],
+        "required_fields": [
+          "c_mm_per_s",
+          "se_mm_per_s"
+        ],
+        "notes": [
+          "Structural-only declaration: constant-density gauge candidate.",
+          "No numeric constraints are declared here."
+        ]
+      }
+    },
+    "BR01_metric_from_DR01_fit_unit_density_structural_fail": {
+      "prediction": {
+        "kind": "br05_structure_required",
+        "required_condition_keys": [
+          "condition_A",
+          "condition_B"
+        ],
+        "required_fields": [
+          "c_mm_per_s",
+          "se_mm_per_s",
+          "__REQUIRED_FIELD_THAT_DOES_NOT_EXIST__"
+        ],
+        "notes": [
+          "Intentionally failing structural declaration: includes an impossible required field key.",
+          "This is a discriminative proof-of-pruning only (structural-only; no numeric constraints)."
+        ]
+      }
+    }
+  }
+}

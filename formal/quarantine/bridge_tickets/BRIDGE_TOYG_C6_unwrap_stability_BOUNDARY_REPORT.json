@@ -1,0 +1,106 @@
+{
+  "artifact_sha256": "ec94a33b1e74dc18366711a31e1b21ca19f0da018d3d7da5fe9bb6717357c982",
+  "items": [
+    {
+      "evidence": {
+        "pytest_nodes": [
+          "formal/python/tests/test_bridge_toyg_c6_unwrap_stability_perturbation_stability.py::test_bridge_toyg_c6_unwrap_stability_perturbation_stability",
+          "formal/python/tests/test_bridge_toyg_c6_unwrap_stability_negative_controls.py::test_bridge_toyg_c6_unwrap_stability_negative_control_not_boundary_sensitive",
+          "formal/python/tests/test_bridge_toyg_c6_unwrap_stability_resolution_scan.py::test_bridge_toyg_c6_unwrap_stability_resolution_scan"
+        ]
+      },
+      "inputs": {
+        "loop_length": 6.28318530718,
+        "min_near_pi_fraction": 0.8,
+        "pi_edge_eps": 0.15,
+        "probes": [
+          {
+            "grid_n": 7,
+            "phase_shear_eps": 0.0,
+            "probe_id": "interior_unwrap_target_n7",
+            "unwrap_target": 3.5
+          },
+          {
+            "grid_n": 7,
+            "phase_shear_eps": 0.01,
+            "probe_id": "edge_near_unwrap_target_n7",
+            "unwrap_target": 3.5
+          },
+          {
+            "grid_n": 7,
+            "phase_shear_eps": 0.0,
+            "probe_id": "just_outside_unwrap_target_n7",
+            "unwrap_target": 3.0
+          },
+          {
+            "grid_n": 7,
+            "phase_shear_eps": 0.1,
+            "probe_id": "high_shear_unstable_n7",
+            "unwrap_target": 3.5
+          }
+        ],
+        "tol_step_mean": 0.05,
+        "tol_step_std": 0.05
+      },
+      "samples": [
+        {
+          "admissible": true,
+          "grid_n": 7,
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 1.0,
+          "phase_shear_eps": 0.0,
+          "probe_id": "interior_unwrap_target_n7",
+          "reason_code": "pass_unwrap_stable_boundary",
+          "step_std": 0.0,
+          "unwrap_target": 3.5
+        },
+        {
+          "admissible": true,
+          "grid_n": 7,
+          "mean_abs_step_error": 0.010086849444,
+          "near_pi_fraction": 1.0,
+          "phase_shear_eps": 0.01,
+          "probe_id": "edge_near_unwrap_target_n7",
+          "reason_code": "pass_unwrap_stable_boundary",
+          "step_std": 0.00500414861449,
+          "unwrap_target": 3.5
+        },
+        {
+          "admissible": false,
+          "grid_n": 7,
+          "mean_abs_step_error": 0.0,
+          "near_pi_fraction": 0.0,
+          "phase_shear_eps": 0.0,
+          "probe_id": "just_outside_unwrap_target_n7",
+          "reason_code": "fail_not_boundary_sensitive",
+          "step_std": 3.62597321469e-16,
+          "unwrap_target": 3.0
+        },
+        {
+          "admissible": false,
+          "grid_n": 7,
+          "mean_abs_step_error": 0.10086849444,
+          "near_pi_fraction": 0.833333333333,
+          "phase_shear_eps": 0.1,
+          "probe_id": "high_shear_unstable_n7",
+          "reason_code": "fail_unwrap_step_variance_high",
+          "step_std": 0.0500414861449,
+          "unwrap_target": 3.5
+        }
+      ],
+      "scan_id": "c6_unwrap_stability_boundary_scan_v1",
+      "summary": {
+        "fail_reason_counts": {
+          "fail_not_boundary_sensitive": 1,
+          "fail_unwrap_step_mean_mismatch": 0,
+          "fail_unwrap_step_variance_high": 1
+        },
+        "n_fail": 2,
+        "n_pass": 2,
+        "n_samples": 4
+      },
+      "ticket_id": "BRIDGE_TICKET_TOYG_0003"
+    }
+  ],
+  "schema_version": 1
+}

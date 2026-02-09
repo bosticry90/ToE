@@ -1,0 +1,70 @@
+# OV-BM-02N — Digitized benchmark: linewidth vs peak density (computed)
+
+Scope / limits
+- Benchmark-only numeric ingestion; no physics validation claim
+- No fitting; no regime averaging; no continuity claim; no cross-observable inference
+
+Record (computed)
+
+```json
+{
+  "dataset": {
+    "columns": [
+      {
+        "dtype": "float",
+        "name": "peak_density_1e14_cm3",
+        "unit": "1e14 cm^-3"
+      },
+      {
+        "dtype": "float",
+        "name": "width_khz",
+        "unit": "kHz"
+      }
+    ],
+    "csv_relpath": "formal/external_evidence/bec_bragg_stenger_1999/ovbm02_digitization/linewidth_vs_peak_density_triangles.csv",
+    "csv_sha256": "5e65ee0d81e96ecbe3389db01e25c658e1e66f7e88062c8ed391d032733c7f76",
+    "metadata_relpath": "formal/external_evidence/bec_bragg_stenger_1999/ovbm02_digitization/linewidth_vs_peak_density_triangles.metadata.json",
+    "row_count": 8
+  },
+  "date": "2026-01-24",
+  "digitization_id": "OV-BM-02N",
+  "fingerprint": "1521fc3190d43b74d09e68616618e6987afec354570a65fe997fc90cd238432c",
+  "observable_id": "OV-BM-02",
+  "schema": "OV-BM-02_linewidth_quadrature_composition_digitized/v1",
+  "scope_limits": [
+    "benchmark_only_numeric",
+    "no_curve_fitting",
+    "no_regime_averaging",
+    "no_continuity_claim",
+    "no_cross_observable_inference",
+    "non_decisive_by_design"
+  ],
+  "source": {
+    "arxiv_pdf_relpath": "formal/external_evidence/bec_bragg_stenger_1999/9901109v1.pdf",
+    "arxiv_pdf_sha256": "69b8698846a142cb7a404aaf6e8b8d24698e5cbfc06bc16f96f70b09074d5c51",
+    "axis_ranges": {
+      "x": {
+        "max": 5.0,
+        "min": 0.0,
+        "name": "Peak Density",
+        "unit": "1e14 cm^-3"
+      },
+      "y": {
+        "max": 4.0,
+        "min": 0.0,
+        "name": "Width",
+        "unit": "kHz"
+      }
+    },
+    "citation": "Stenger et al. (1999) \u2014 Bragg spectroscopy of a Bose\u2013Einstein condensate",
+    "digitization_method": "deterministic_marker_extraction_from_pinned_png",
+    "figure": "Fig. 3 (panel b)",
+    "notes": "Smallest acceptable target under BM-DIG-01; digitizes one experimental series only; values are approximate and intended for pipeline determinism checks only.",
+    "render_png_relpath": "formal/external_evidence/bec_bragg_stenger_1999/Fig3_page4_z4.png",
+    "render_png_sha256": "67c45cc2fc3a52ecceae28114cd7e603f599c196d71dc47b5daa5107f1f4a685",
+    "series": "triangles_only"
+  }
+}
+```
+
+Record fingerprint: `1521fc3190d43b74d09e68616618e6987afec354570a65fe997fc90cd238432c`

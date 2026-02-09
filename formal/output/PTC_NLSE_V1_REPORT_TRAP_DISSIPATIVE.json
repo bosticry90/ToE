@@ -1,0 +1,89 @@
+{
+  "derived": {
+    "grid": {
+      "L": 20.0,
+      "dx": 0.15625,
+      "n": 128
+    },
+    "initial_condition": "harmonic_ground_state_like",
+    "kgrid_sample": [
+      0.0,
+      0.314159265359,
+      0.628318530718
+    ],
+    "potential": {
+      "V0": 0.0,
+      "V_center": 10.0,
+      "V_trap_omega": 0.3,
+      "kind": "harmonic"
+    },
+    "rac_energy_class": "dissipative"
+  },
+  "determinism": {
+    "dtype": "complex128",
+    "json": "sort_keys,separators=(',',':'),ensure_ascii=True",
+    "rng": "none"
+  },
+  "fingerprint": "7ec49f400793465a1c0f6d5ccdd11576c2122b2205ace3d6c0dcc14d9f543322",
+  "input_fingerprint": "82283d849e85e04ec942f40ad083239d1cd92760c8caf4c2e4b77408e8581d19",
+  "inputs": {
+    "A_im": 0.0,
+    "A_re": 0.35,
+    "L": 20.0,
+    "V0": 0.0,
+    "V_center": 10.0,
+    "V_kind": "harmonic",
+    "V_trap_omega": 0.3,
+    "case_id": "dissipative_trapped_ground_state",
+    "dimension": "1d",
+    "dt": 0.001,
+    "g": 0.0,
+    "gamma": 1.0,
+    "k": 0.0,
+    "n": 128,
+    "phase": 0.0,
+    "regime": "dissipative",
+    "sample_every": 20,
+    "steps": 200
+  },
+  "output": {
+    "energy_delta": -0.0196035262074,
+    "energy_trace": [
+      0.059462293572,
+      0.0571307436917,
+      0.0548906151899,
+      0.0527383233831,
+      0.0506704241451,
+      0.0486836083959,
+      0.0467746968066,
+      0.0449406347114,
+      0.0431784872195,
+      0.0414854345191,
+      0.0398587673646
+    ],
+    "norm_delta": -0.130690174716,
+    "norm_trace": [
+      0.39641529048,
+      0.380871624612,
+      0.3659374346,
+      0.351588822554,
+      0.337802827634,
+      0.324557389306,
+      0.311831312044,
+      0.299604231409,
+      0.287856581463,
+      0.276569563461,
+      0.265725115764
+    ],
+    "omega_error": 0.149999819165,
+    "omega_expected": 0.0,
+    "omega_hat": 0.149999819165,
+    "phase_invariance_error": 0.0,
+    "t_end": 0.2,
+    "time_reversal_error": 0.00125923059464,
+    "trap_m2_delta": 1.35109035071e-10,
+    "trap_peak_ratio": 0.818730753091,
+    "trap_shape_residual": 0.114129871774
+  },
+  "schema": "PTC/NLSE_v1_report/v1"
+}

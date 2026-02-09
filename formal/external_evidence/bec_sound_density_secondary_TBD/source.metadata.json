@@ -1,0 +1,35 @@
+{
+  "items": [
+    {
+      "bytes": 857401,
+      "relpath": "formal/external_evidence/bec_sound_density_secondary_TBD/page_renders/page1_z4.png",
+      "sha256": "e84c4656c842d2949feff69cfb2ecc14f9c3a53f0f0ff877e0aa0af05cee6a9b"
+    },
+    {
+      "bytes": 959428,
+      "relpath": "formal/external_evidence/bec_sound_density_secondary_TBD/page_renders/page2_z4.png",
+      "sha256": "75c0eb56b14b63443c22ec838aa712c6b5dd96e322c9634a6b46ea629849fc03"
+    },
+    {
+      "bytes": 975937,
+      "relpath": "formal/external_evidence/bec_sound_density_secondary_TBD/page_renders/page3_z4.png",
+      "sha256": "0fde81341f596160f46bf839c69c6b014ddfa5c83c44ed733efaacea7b58df49"
+    },
+    {
+      "bytes": 668647,
+      "relpath": "formal/external_evidence/bec_sound_density_secondary_TBD/page_renders/page4_z4.png",
+      "sha256": "74198b016fb34da4ade04b6a25769ae2b8baa2f19c89be9a7a027baf3e936f53"
+    },
+    {
+      "bytes": 358606,
+      "relpath": "formal/external_evidence/bec_sound_density_secondary_TBD/page_renders/page5_z4.png",
+      "sha256": "38eaeb22e9331917aa48d1a3e4c1a2f8fc5555fe608a471fd459e1d040b6526a"
+    },
+    {
+      "bytes": 166588,
+      "relpath": "formal/external_evidence/bec_sound_density_secondary_TBD/source.pdf",
+      "sha256": "f16b43d97bf3ed51ff9d51043677a2960145f46797c48e0a11c562048de568c7"
+    }
+  ],
+  "schema": "external_evidence_metadata/v1"
+}

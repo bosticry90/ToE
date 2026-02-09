@@ -1,0 +1,349 @@
+# formal/aristotle/claim_registry.yaml
+schema:
+  name: "Aristotle Claim Registry"
+  version: "1.0"
+  authority:
+    governance: "Aristotle"
+    proofs: "Lean4"
+    numerics_validation: "Python tests"
+    drafting_explanation: "GPT"
+  status_levels:
+    - CONJECTURE          # allowed, but must be labeled non-authoritative
+    - ASSUMPTION          # explicit modeling choice; must be declared + justified
+    - OPERATIONAL         # validated by tests (not a proof)
+    - PROVEN              # Lean theorem(s) exists and compiles
+    - LOCKED              # proven/validated and placed under a lock discipline
+  global_rules:
+    - rule_id: "GR-001"
+      text: "No claim may be referenced as PROVEN unless linked to a Lean theorem identifier that compiles under lake build."
+    - rule_id: "GR-002"
+      text: "No numerical behavior claim may be referenced as validated unless linked to a test id and test runner command."
+    - rule_id: "GR-003"
+      text: "Assumptions must be typed and scoped; non-uniqueness must be explicit (D4)."
+    - rule_id: "GR-004"
+      text: "Locks must specify scope, file coverage, and the exact verification commands used."
+
+domains:
+  D1_Noether_Invariants:
+    scope: "Symmetries, conserved quantities, Noether-style statements, invariants registry."
+    allowed_claim_types: ["DEFINITION", "LEMMA", "THEOREM", "COROLLARY", "ASSUMPTION"]
+  D2_Linearization_Dispersion:
+    scope: "Linearization, Fourier symbols, dispersion relations, small-perturbation results."
+    allowed_claim_types: ["DEFINITION", "LEMMA", "THEOREM", "ASSUMPTION", "OPERATIONAL"]
+  D3_Reduction_Maps:
+    scope: "Limit/reduction maps between parent models and derived models, bridging theorems."
+    allowed_claim_types: ["DEFINITION", "LEMMA", "THEOREM", "ASSUMPTION"]
+  D4_Parameter_Map_NonUniqueness:
+    scope: "Parameter mappings, identifications, calibration; non-uniqueness explicitly recorded."
+    allowed_claim_types: ["ASSUMPTION", "LEMMA", "OPERATIONAL"]
+
+locks_index:
+  # Link to actual lock docs in-repo (or referenced filenames) once integrated
+  - lock_id: "LOCK-NEURO-SYMBOLIC"
+    artifact: "LOCK_NEURO_SYMBOLIC.md"
+    covers: ["lake_build", "pytest"]
+    verification:
+      - "lake build <targets>"
+      - "pytest -q"
+    notes: "Baseline neuro-symbolic lock."
+
+files:
+  # One entry per Lean file
+  - file_id: "F-000"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/UCFF/FirstOrder.lean"
+    path_old: "/mnt/data/FirstOrder.lean"
+    domain: "D3_Reduction_Maps"
+    module_name: "ToeFormal.UCFF.FirstOrder"
+    role: "Core definitions/lemmas for first-order UCFF layer."
+    status_target: "PROVEN"
+    claims:
+      - claim_id: "C-F-000-001"
+        type: "DEFINITION"
+        statement: "<What is defined?>"
+        exported_identifiers: ["<Lean identifiers>"]
+        status: "PROVEN"
+        evidence:
+          lean_theorems: ["<theorem names if any>"]
+          build_targets: ["ToeFormal.UCFF.FirstOrder"]
+      - claim_id: "C-F-000-002"
+        type: "THEOREM"
+        statement: "<Theorem statement in natural language>"
+        lean_statement_ref: "<Lean theorem identifier>"
+        status: "PROVEN"
+        evidence:
+          lean_theorems: ["<Lean theorem identifier>"]
+          build_targets: ["ToeFormal.UCFF.FirstOrder"]
+    proof_obligations:
+      - obligation_id: "PO-F-000-001"
+        description: "All theorem identifiers listed in claims compile under lake build."
+        required: true
+        verification:
+          tool: "Lean4"
+          command: "lake build ToeFormal.UCFF.FirstOrder"
+    assumptions:
+      - assumption_id: "A-F-000-001"
+        type: "MODELING_CHOICE"
+        statement: "<Explicit assumption; if none, leave empty list>"
+        scope: "<file/module scope>"
+        non_uniqueness: false
+    tests_and_locks:
+      build:
+        - "lake build ToeFormal.UCFF.FirstOrder"
+      tests: []
+      locks:
+        - "LOCK-NEURO-SYMBOLIC"
+    dependencies:
+      imports: ["<import modules>"]
+      depends_on_files: ["<other file_ids>"]
+    change_control:
+      risk: "MEDIUM"
+      allowed_changes_before_lock: ["imports", "namespaces", "docstrings"]
+      forbidden_without_version_bump: ["definitions", "theorem statements"]
+files:
+
+  - file_id: "F-001"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/UCFF/FirstOrder.lean"
+    path_old: "/mnt/data/FirstOrder.lean"
+    domain: "D3_Reduction_Maps"
+    module_name: "<TBD>"
+    role: "<TBD>"
+    status_target: "PROVEN"
+    claims: []
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks:
+      build: ["lake build <target>"]
+      tests: []
+      locks: ["LOCK-NEURO-SYMBOLIC"]
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "MEDIUM", allowed_changes_before_lock: ["imports","namespaces"], forbidden_without_version_bump: ["definitions","theorem statements"] }
+
+  - file_id: "F-002"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/UCFF/FirstOrderDispersion.lean"
+    path_old: "/mnt/data/FirstOrderDispersion.lean"
+    domain: "D2_Linearization_Dispersion"
+    module_name: "<TBD>"
+    role: "<TBD>"
+    status_target: "PROVEN"
+    claims: []
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks: { build: ["lake build <target>"], tests: [], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "HIGH", allowed_changes_before_lock: ["imports","namespaces"], forbidden_without_version_bump: ["dispersion theorem statements","Fourier symbol definitions"] }
+
+  - file_id: "F-003"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/UCFF/SecondOrderNumerics.lean"
+    path_old: "/mnt/data/SecondOrderNumerics.lean"
+    domain: "D2_Linearization_Dispersion"
+    module_name: "<TBD>"
+    role: "<TBD>"
+    status_target: "PROVEN"
+    claims: []
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks: { build: ["lake build <target>"], tests: ["pytest -q <if applicable>"], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "MEDIUM", allowed_changes_before_lock: ["imports","namespaces"], forbidden_without_version_bump: ["numerics scheme definitions"] }
+
+  - file_id: "F-004"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/UCFF/SecondOrderTimeDomain.lean"
+    path_old: "/mnt/data/SecondOrderTimeDomain.lean"
+    domain: "D3_Reduction_Maps"
+    module_name: "<TBD>"
+    role: "<TBD>"
+    status_target: "PROVEN"
+    claims: []
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks: { build: ["lake build <target>"], tests: [], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "HIGH", allowed_changes_before_lock: ["imports","namespaces"], forbidden_without_version_bump: ["reduction map theorems","time-domain operator definitions"] }
+
+  - file_id: "F-005"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/LSDA/T1T10.lean"
+    path_old: "/mnt/data/T1T10.lean"
+    domain: "D4_Parameter_Map_NonUniqueness"
+    module_name: "<TBD>"
+    role: "<TBD>"
+    status_target: "LOCKED"
+    claims: []
+    proof_obligations: []
+    assumptions:
+      - assumption_id: "A-F-005-001"
+        type: "NON_UNIQUE_PARAMETER_MAP"
+        statement: "<Parameter mapping choices, explicitly non-unique>"
+        scope: "module"
+        non_uniqueness: true
+    tests_and_locks: { build: ["lake build <target>"], tests: ["pytest -q <if applicable>"], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "MEDIUM", allowed_changes_before_lock: ["imports","namespaces","assumption annotations"], forbidden_without_version_bump: ["parameter map choices"] }
+
+  - file_id: "F-006"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/LCRD/V3/RotorCurvature.lean"
+    path_old: "/mnt/data/RotorCurvature.lean"
+    domain: "D1_Noether_Invariants"
+    module_name: "<TBD>"
+    role: "<TBD>"
+    status_target: "PROVEN"
+    claims: []
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks: { build: ["lake build <target>"], tests: [], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "HIGH", allowed_changes_before_lock: ["imports","namespaces"], forbidden_without_version_bump: ["curvature definitions","invariant statements"] }
+
+  - file_id: "F-007"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/CRFT/Diagnostics/Turbulence.lean"
+    path_old: "/mnt/data/Turbulence.lean"
+    domain: "D4_Parameter_Map_NonUniqueness"
+    module_name: "<TBD>"
+    role: "Diagnostics formalization/claims (avoid overclaiming physical correctness)."
+    status_target: "OPERATIONAL"
+    claims: []
+    proof_obligations: []
+    assumptions:
+      - assumption_id: "A-F-007-001"
+        type: "SCOPE_LIMITATION"
+        statement: "This module does not assert physical turbulence correctness beyond explicitly computed quantities."
+        scope: "module"
+        non_uniqueness: true
+    tests_and_locks: { build: ["lake build <target>"], tests: ["pytest -q <diagnostics tests>"], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "LOW", allowed_changes_before_lock: ["imports","namespaces","docstrings"], forbidden_without_version_bump: ["definitions of computed diagnostics"] }
+
+  - file_id: "F-008"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/CRFT/Geom/AcousticMetric.lean"
+    path_old: "/mnt/data/AcousticMetric.lean"
+    domain: "D3_Reduction_Maps"
+    module_name: "<TBD>"
+    role: "<TBD>"
+    status_target: "PROVEN"
+    claims: []
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks: { build: ["lake build <target>"], tests: [], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "HIGH", allowed_changes_before_lock: ["imports","namespaces"], forbidden_without_version_bump: ["metric definitions","bridge lemmas"] }
+
+  - file_id: "F-009"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/CRFT/PhiChi1DExtended.lean"
+    path_old: "/mnt/data/PhiChi1DExtended.lean"
+    domain: "D3_Reduction_Maps"
+    module_name: "<TBD>"
+    role: "<TBD>"
+    status_target: "PROVEN"
+    claims: []
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks: { build: ["lake build <target>"], tests: [], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "MEDIUM", allowed_changes_before_lock: ["imports","namespaces"], forbidden_without_version_bump: ["field equations","interaction terms"] }
+
+  - file_id: "F-010"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/CPNLSE2D/Dispersion.lean"
+    path_old: "/mnt/data/Dispersion.lean"
+    domain: "D2_Linearization_Dispersion"
+    module_name: "<TBD>"
+    role: "<TBD>"
+    status_target: "PROVEN"
+    claims: []
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks: { build: ["lake build <target>"], tests: [], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "HIGH", allowed_changes_before_lock: ["imports","namespaces"], forbidden_without_version_bump: ["dispersion relation statements"] }
+
+  - file_id: "F-011"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/Derivation/Bridges/B1_P1_to_UCFF_FirstOrderDispersion.lean"
+    path_old: "/mnt/data/B1_P1_to_UCFF_FirstOrderDispersion.lean"
+    domain: "D3_Reduction_Maps"
+    module_name: "<TBD>"
+    role: "Bridge: Parent P1 → UCFF FirstOrderDispersion lock."
+    status_target: "LOCKED"
+    claims: []
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks: { build: ["lake build <target>"], tests: [], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: ["F-001","F-002","F-012"] }
+    change_control: { risk: "VERY_HIGH", allowed_changes_before_lock: ["imports","namespaces"], forbidden_without_version_bump: ["bridge theorem statements","mapping definitions"] }
+
+  - file_id: "F-012"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean"
+    path_old: "/mnt/data/P1_NLS_EFT.lean"
+    domain: "D3_Reduction_Maps"
+    module_name: "<TBD>"
+    role: "Parent model P1: NLS/EFT form."
+    status_target: "PROVEN"
+    claims: []
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks: { build: ["lake build <target>"], tests: [], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "HIGH", allowed_changes_before_lock: ["imports","namespaces"], forbidden_without_version_bump: ["parent PDE definitions"] }
+
+  - file_id: "F-013"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean"
+    path_old: "/mnt/data/P2_Wave_EFT.lean"
+    domain: "D3_Reduction_Maps"
+    module_name: "<TBD>"
+    role: "Parent model P2: Wave/EFT form."
+    status_target: "PROVEN"
+    claims: []
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks: { build: ["lake build <target>"], tests: [], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "HIGH", allowed_changes_before_lock: ["imports","namespaces"], forbidden_without_version_bump: ["parent PDE definitions"] }
+
+  - file_id: "F-014"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/Math/FourierSymbols.lean"
+    path_old: "/mnt/data/FourierSymbols.lean"
+    domain: "D2_Linearization_Dispersion"
+    module_name: "<TBD>"
+    role: "Fourier symbol machinery used in dispersion proofs."
+    status_target: "PROVEN"
+    claims: []
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks: { build: ["lake build <target>"], tests: [], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "HIGH", allowed_changes_before_lock: ["imports","namespaces"], forbidden_without_version_bump: ["symbol definitions","transform identities"] }
+
+  - file_id: "F-015"
+    path_new: "<NEW_REPO_PATH>/ToeFormal/README.lean"
+    path_old: "/mnt/data/README.lean"
+    domain: "D4_Parameter_Map_NonUniqueness"
+    module_name: "<TBD>"
+    role: "Human-facing overview (non-authoritative narrative; should reference registry IDs only)."
+    status_target: "OPERATIONAL"
+    claims:
+      - claim_id: "C-F-015-001"
+        type: "SCOPE_LIMITATION"
+        statement: "README contains no PROVEN claims unless linked to registry claim_ids with PROVEN/LOCKED status."
+        status: "ASSUMPTION"
+        evidence: {}
+    proof_obligations: []
+    assumptions: []
+    tests_and_locks: { build: [], tests: [], locks: ["LOCK-NEURO-SYMBOLIC"] }
+    dependencies: { imports: [], depends_on_files: [] }
+    change_control: { risk: "LOW", allowed_changes_before_lock: ["text"], forbidden_without_version_bump: [] }
+
+compilation_gates:
+| Gate Order | file_id | Uploaded file                             | Intended module / build target                                    | Domain | Depends on   | Build Target (command)                                                       | Lock/Test Anchor                                                          |
+| ---------: | ------- | ----------------------------------------- | ----------------------------------------------------------------- | ------ | ------------ | ---------------------------------------------------------------------------- | ------------------------------------------------------------------------- |
+|         10 | F-014   | `FourierSymbols.lean`                     | `ToeFormal.Derivation.Conventions.FourierSymbols`                 | D2     | (none)       | `lake build ToeFormal.Derivation.Conventions.FourierSymbols`                 | Convention sheet (no lock change)                                         |
+|         20 | F-012   | `P1_NLS_EFT.lean`                         | `ToeFormal.Derivation.Parents.P1_NLS_EFT`                         | D3     | F-014        | `lake build ToeFormal.Derivation.Parents.P1_NLS_EFT`                         | Parent P1 skeleton                                                        |
+|         20 | F-013   | `P2_Wave_EFT.lean`                        | `ToeFormal.Derivation.Parents.P2_Wave_EFT`                        | D3     | F-014        | `lake build ToeFormal.Derivation.Parents.P2_Wave_EFT`                        | Parent P2 skeleton                                                        |
+|         30 | F-002   | `FirstOrderDispersion.lean`               | `ToeFormal.UCFF.FirstOrderDispersion`                             | D2     | (none)       | `lake build ToeFormal.UCFF.FirstOrderDispersion`                             | (header not shown here; treat as UCFF lock mirror)                        |
+|         40 | F-011   | `B1_P1_to_UCFF_FirstOrderDispersion.lean` | `ToeFormal.Derivation.Bridges.B1_P1_to_UCFF_FirstOrderDispersion` | D3     | F-012, F-002 | `lake build ToeFormal.Derivation.Bridges.B1_P1_to_UCFF_FirstOrderDispersion` | Bridge B1 (P1 → UCFF FirstOrderDispersion)                                |
+|         50 | F-001   | `FirstOrder.lean`                         | `ToeFormal.UCFF.FirstOrder`                                       | D3     | (none)       | `lake build ToeFormal.UCFF.FirstOrder`                                       | (treat as UCFF core)                                                      |
+|         60 | F-004   | `SecondOrderTimeDomain.lean`              | `ToeFormal.UCFF.SecondOrderTimeDomain`                            | D3     | (none)       | `lake build ToeFormal.UCFF.SecondOrderTimeDomain`                            | `LOCK_SECOND_ORDER_TIME_DOMAIN.md`                                        |
+|         60 | F-003   | `SecondOrderNumerics.lean`                | `ToeFormal.UCFF.SecondOrderNumerics`                              | D2     | (none)       | `lake build ToeFormal.UCFF.SecondOrderNumerics`                              | (numerics mirror; tests likely in Python layer)                           |
+|         70 | F-010   | `Dispersion.lean`                         | `ToeFormal.CPNLSE2D.Dispersion`                                   | D2     | (none)       | `lake build ToeFormal.CPNLSE2D.Dispersion`                                   | `LOCK_CP_NLSE_2D_DISPERSION.md` (+ python tests referenced)               |
+|         80 | F-008   | `AcousticMetric.lean`                     | `ToeFormal.CRFT.Geom.AcousticMetric`                              | D3     | (none)       | `lake build ToeFormal.CRFT.Geom.AcousticMetric`                              | `LOCK_GEOM_C10_C11_ACOUSTIC_METRIC.md` (+ python tests referenced)        |
+|         80 | F-007   | `Turbulence.lean`                         | `ToeFormal.CRFT.Diagnostics.Turbulence`                           | D4     | (none)       | `lake build ToeFormal.CRFT.Diagnostics.Turbulence`                           | `LOCK_TURB_C12_C13_TURBULENCE_DIAGNOSTICS.md` (+ python tests referenced) |
+|         80 | F-009   | `PhiChi1DExtended.lean`                   | `ToeFormal.CRFT.PhiChi1DExtended`                                 | D3     | (none)       | `lake build ToeFormal.CRFT.PhiChi1DExtended`                                 | `LOCK_PHI_CHI_1D_EXTENDED_CRFT.md` (+ python test referenced)             |
+|         90 | F-006   | `RotorCurvature.lean`                     | `ToeFormal.LCRD.V3.RotorCurvature`                                | D1     | (none)       | `lake build ToeFormal.LCRD.V3.RotorCurvature`                                | `LOCK_LCRD_V3_ROTOR_CURVATURE.md`                                         |
+|         95 | F-005   | `T1T10.lean`                              | `ToeFormal.LSDA.T1T10`                                            | D4     | (none)       | `lake build ToeFormal.LSDA.T1T10`                                            | (treat as parameter-map/non-unique zone)                                  |
+|         99 | F-015   | `README.lean`                             | `ToeFormal.Derivation.Bridges.README` *(see note)*                | D4     | (none)       | `lake build ToeFormal.Derivation.Bridges.README` *(or exclude from build)*   | Narrative-only governance constraints                                     |

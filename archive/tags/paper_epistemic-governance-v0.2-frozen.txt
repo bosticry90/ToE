@@ -1,0 +1,23 @@
+Paper freeze tag (operational)
+
+Tag name (proposed): paper/epistemic-governance-v0.2-frozen
+Date: 2026-01-25
+
+Note: This workspace is not a git repository, so a real VCS tag/branch cannot be created here.
+This file serves as a repo-internal, unambiguous citation anchor for the frozen paper + enforcement artifacts.
+
+SHA256 (content digests)
+
+- formal/docs/epistemic_governance_methodology_paper_draft.md
+  93AAC025733AE0DAAFA9A0A4B438AE2ABC44F183602993F02DB74420BE84C590
+
+- formal/markdown locks/gates/admissibility_manifest.json
+  3109F04BA146FF5AF86AA1F2D9C9A00E87C1F9F0BF8EB1BE1F9490BFEE9A32D2
+
+- formal/markdown/locks/observables/OV-BR-SND-03_cross_lane_lowk_consistency_audit.md
+  D7168CC2BC0426C5F3CD1A349DA12E48458CCBD9D924DD1025750F9F90549EB9
+
+PDF snapshot (optional)
+
+- pandoc is not available in this environment.
+- If you want a reviewer PDF: open the markdown in VS Code and use a Markdown PDF export extension, or print-to-PDF from a browser preview.

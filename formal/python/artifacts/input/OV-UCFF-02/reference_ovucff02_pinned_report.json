@@ -1,0 +1,25 @@
+{
+  "fingerprint": "72a413bd320382356e776451775612ba5e9d3e0b53be683afc2e4c87104c7e10",
+  "notes": "Internal numeric baseline for OV-UCFF-02 pinned input (no legacy baseline located). Bookkeeping only; not external evidence.",
+  "reference_report": {
+    "baseline_frame_energy_l2_mean": 16.953172645652568,
+    "config_tag": "OV-UCFF-02_framewise_variation_v1",
+    "cross_matrix_fro_delta_max": 0.5649473186923372,
+    "cross_matrix_fro_delta_mean": 0.5649473186923372,
+    "delta_energy_l2_max": 7.1652503384357535,
+    "delta_energy_l2_mean": 7.1652503384357535,
+    "delta_energy_l2_norm_max": 0.4478281461522067,
+    "delta_energy_l2_norm_mean": 0.4478281461522067,
+    "eps": 1e-12,
+    "fingerprint": "8ab4b6aba2f437d04bfead3cd4d44dce73c9c2b57ffb2177c5bba90649afeef9",
+    "n_bins": 256,
+    "n_frames": 2,
+    "schema": "OV-UCFF-02/framewise_variation_report/v1"
+  },
+  "schema": "OV-UCFF-02/reference_report/v1",
+  "source": {
+    "path": "C:/Users/psboy/Documents/ToE/formal/python/artifacts/input/OV-UCFF-02/legacy_phase51_coherence_drift_pair_density.json",
+    "schema": "OV-UCFF-02/pinned_input_density_pair/v1",
+    "sha256_canonical_json": "f027e7879b492af00a99d0ee343228fe598b9b48bac18ed68df91e9e1a8f58ec"
+  }
+}

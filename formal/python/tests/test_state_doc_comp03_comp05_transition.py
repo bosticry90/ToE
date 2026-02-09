@@ -17,17 +17,19 @@ REPO_ROOT = find_repo_root(Path(__file__))
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 
 
-def _extract_gap_block(text: str, *, gap_id: str) -> str:
+def _extract_gap_blocks(text: str, *, gap_id: str) -> list[str]:
     marker_re = re.compile(rf"^GapID:\s*{re.escape(gap_id)}\s*$", flags=re.MULTILINE)
-    m = marker_re.search(text)
-    if m is None:
+    blocks: list[str] = []
+    for m in marker_re.finditer(text):
+        start = m.start()
+        nxt = re.search(r"^GapID:\s*\S+\s*$", text[m.end() :], flags=re.MULTILINE)
+        if nxt is None:
+            blocks.append(text[start:])
+        else:
+            blocks.append(text[start : m.end() + nxt.start()])
+    if not blocks:
         raise AssertionError(f"Could not find exact gap marker for GapID: {gap_id!r}")
-    start = m.start()
-
-    nxt = re.search(r"^GapID:\s*\S+\s*$", text[m.end() :], flags=re.MULTILINE)
-    if nxt is None:
-        return text[start:]
-    return text[start : m.end() + nxt.start()]
+    return blocks
 
 
 def _first_field(block: str, field: str) -> str | None:
@@ -41,8 +43,12 @@ def _first_field(block: str, field: str) -> str | None:
 def test_comp03_is_implemented_and_comp05_is_lifted():
     text = STATE_PATH.read_text(encoding="utf-8")
 
-    comp03 = _extract_gap_block(text, gap_id="COMP-03")
-    comp05 = _extract_gap_block(text, gap_id="COMP-05")
+    comp03_blocks = _extract_gap_blocks(text, gap_id="COMP-03")
+    comp05_blocks = _extract_gap_blocks(text, gap_id="COMP-05")
+    assert len(comp03_blocks) == 1, "Expected exactly one COMP-03 block; remove duplicates."
+    assert len(comp05_blocks) == 1, "Expected exactly one COMP-05 block; remove duplicates."
+    comp03 = comp03_blocks[0]
+    comp05 = comp05_blocks[0]
 
     status03 = _first_field(comp03, "Status") or ""
     assert "Implemented" in status03
@@ -67,7 +73,9 @@ def test_comp03_is_implemented_and_comp05_is_lifted():
 
 def test_comp_pred_fals_mentions_cv03_ucff_lane():
     text = STATE_PATH.read_text(encoding="utf-8")
-    block = _extract_gap_block(text, gap_id="COMP-PRED-FALS")
+    blocks = _extract_gap_blocks(text, gap_id="COMP-PRED-FALS")
+    assert len(blocks) == 1, "Expected exactly one COMP-PRED-FALS block; remove duplicates."
+    block = blocks[0]
     evidence = _first_field(block, "Evidence path") or ""
     required_tokens = [
         "formal/python/toe/comparators/cv03_ucff_dispersion_v1.py",

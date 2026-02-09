@@ -1,0 +1,9 @@
+{
+  "chern_number": -1,
+  "config_tag": "OV-QC-01_chern_qiwuzhang_v1",
+  "fingerprint": "94b4e034523726aa91718ca509b000b077b18651dec5d99ba6c384de16f1e30c",
+  "grid_n": 25,
+  "m": -1.0,
+  "model": "qiwuzhang",
+  "schema": "OV-QC-01/chern_report/v1"
+}

@@ -1,0 +1,1 @@
+Freeze pipeline baseline (bragg override hardening)\n\nFiles:\n- formal/tooling_snapshots/repo_snapshot_20260129_180945_BASELINE_pipeline.jsonl\n- formal/tooling_snapshots/LATEST_BASELINE_PIPELINE.txt\n- formal/tooling_snapshots/LATEST_BASELINE.txt\n- formal/tooling_snapshots/BASELINE_pipeline_CURRENT.txt\n

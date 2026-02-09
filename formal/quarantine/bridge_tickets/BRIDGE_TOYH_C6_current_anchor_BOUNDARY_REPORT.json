@@ -1,0 +1,143 @@
+{
+  "artifact_sha256": "73b501d38ed5ed149dcfd2deb30c2a74f0c28fde58971500db577c910e9872b4",
+  "items": [
+    {
+      "evidence": {
+        "pytest_nodes": [
+          "formal/python/tests/test_bridge_toyh_c6_current_anchor_determinism.py::test_bridge_toyh_c6_current_anchor_resolves_small_alpha_control_case",
+          "formal/python/tests/test_bridge_toyh_c6_current_anchor_negative_controls.py::test_bridge_toyh_c6_current_anchor_negative_control_zero_alpha_response_min",
+          "formal/python/tests/test_bridge_toyh_c6_current_anchor_negative_controls.py::test_bridge_toyh_c6_current_anchor_negative_control_amplitude_scaling",
+          "formal/python/tests/test_bridge_toyh_c6_current_anchor_negative_controls.py::test_bridge_toyh_c6_current_anchor_negative_control_wrong_operator_sign",
+          "formal/python/tests/test_bridge_toyh_c6_current_anchor_resolution_scan.py::test_bridge_toyh_c6_current_anchor_resolution_scan"
+        ]
+      },
+      "inputs": {
+        "current_anchor_tolerance": 1e-07,
+        "min_anchor_response": 1e-08,
+        "probes": [
+          {
+            "amplitude_scale": 1.0,
+            "anchor_sign": 1.0,
+            "grid_n": 11,
+            "local_phase_shear_alpha": 0.5,
+            "probe_id": "baseline_theta_pi_over_3_alpha_0_5_n11",
+            "theta": 1.0471975512
+          },
+          {
+            "amplitude_scale": 1.0,
+            "anchor_sign": 1.0,
+            "grid_n": 11,
+            "local_phase_shear_alpha": 1e-06,
+            "probe_id": "small_alpha_control_n11",
+            "theta": 1.0471975512
+          },
+          {
+            "amplitude_scale": 1.0,
+            "anchor_sign": 1.0,
+            "grid_n": 11,
+            "local_phase_shear_alpha": 0.0,
+            "probe_id": "zero_alpha_response_fail_n11",
+            "theta": 1.0471975512
+          },
+          {
+            "amplitude_scale": 1.1,
+            "anchor_sign": 1.0,
+            "grid_n": 11,
+            "local_phase_shear_alpha": 0.5,
+            "probe_id": "amplitude_scale_fail_n11",
+            "theta": 1.0471975512
+          },
+          {
+            "amplitude_scale": 1.0,
+            "anchor_sign": -1.0,
+            "grid_n": 11,
+            "local_phase_shear_alpha": 1e-06,
+            "probe_id": "wrong_anchor_operator_fail_n11",
+            "theta": 1.0471975512
+          }
+        ],
+        "tolerance": 1e-10
+      },
+      "samples": [
+        {
+          "admissible": true,
+          "amplitude_scale": 1.0,
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "anchor_sign": 1.0,
+          "current_l2_rel": 1.79982577539e-16,
+          "grid_n": 11,
+          "local_phase_shear_alpha": 0.5,
+          "probe_id": "baseline_theta_pi_over_3_alpha_0_5_n11",
+          "reason_code": "PASS_CURRENT_ANCHOR",
+          "theta": 1.0471975512
+        },
+        {
+          "admissible": true,
+          "amplitude_scale": 1.0,
+          "anchor_error": 5.05763372806e-18,
+          "anchor_response": 1.00000000001e-06,
+          "anchor_sign": 1.0,
+          "current_l2_rel": 1.79982577539e-16,
+          "grid_n": 11,
+          "local_phase_shear_alpha": 1e-06,
+          "probe_id": "small_alpha_control_n11",
+          "reason_code": "PASS_CURRENT_ANCHOR",
+          "theta": 1.0471975512
+        },
+        {
+          "admissible": false,
+          "amplitude_scale": 1.0,
+          "anchor_error": 0.0,
+          "anchor_response": 0.0,
+          "anchor_sign": 1.0,
+          "current_l2_rel": 1.79982577539e-16,
+          "grid_n": 11,
+          "local_phase_shear_alpha": 0.0,
+          "probe_id": "zero_alpha_response_fail_n11",
+          "reason_code": "FAIL_CURRENT_ANCHOR_RESPONSE_MIN",
+          "theta": 1.0471975512
+        },
+        {
+          "admissible": false,
+          "amplitude_scale": 1.1,
+          "anchor_error": 0.0,
+          "anchor_response": 0.5,
+          "anchor_sign": 1.0,
+          "current_l2_rel": 0.4641,
+          "grid_n": 11,
+          "local_phase_shear_alpha": 0.5,
+          "probe_id": "amplitude_scale_fail_n11",
+          "reason_code": "FAIL_CURRENT_INVARIANCE_TOL",
+          "theta": 1.0471975512
+        },
+        {
+          "admissible": false,
+          "amplitude_scale": 1.0,
+          "anchor_error": 2.00000000001e-06,
+          "anchor_response": 1.00000000001e-06,
+          "anchor_sign": -1.0,
+          "current_l2_rel": 1.79982577539e-16,
+          "grid_n": 11,
+          "local_phase_shear_alpha": 1e-06,
+          "probe_id": "wrong_anchor_operator_fail_n11",
+          "reason_code": "FAIL_CURRENT_ANCHOR_MISMATCH",
+          "theta": 1.0471975512
+        }
+      ],
+      "scan_id": "c6_current_anchor_boundary_scan_v1",
+      "summary": {
+        "fail_reason_counts": {
+          "FAIL_CURRENT_ANCHOR_MISMATCH": 1,
+          "FAIL_CURRENT_ANCHOR_RESPONSE_MIN": 1,
+          "FAIL_CURRENT_INVARIANCE_TOL": 1
+        },
+        "n_fail": 3,
+        "n_pass": 2,
+        "n_samples": 5
+      },
+      "ticket_id": "BRIDGE_TICKET_TOYH_0004"
+    }
+  ],
+  "schema_version": 1
+}

@@ -1,0 +1,219 @@
+{
+  "artifact_sha256": "3492155529ad52f22902168835f708ec405a1f490f0fd7b9bfa59fc2bae165af",
+  "items": [
+    {
+      "derived": {
+        "ia_hi": 1.7161409795,
+        "ia_lo": 1.04048036076,
+        "ib_hi": 1.13305474354,
+        "ib_lo": 0.812807926148,
+        "inter_hi": 1.13305474354,
+        "inter_lo": 1.04048036076,
+        "k_grid": [
+          0.0,
+          0.001,
+          0.002,
+          0.005,
+          0.01
+        ],
+        "slope_tol_rel": 0.001,
+        "width": 0.0925743827797
+      },
+      "evidence": {
+        "pytest_nodes": [
+          "formal/python/tests/test_bridge_br05_ucff_lowk_slope_boundary_scan.py::test_bridge_br05_ucff_lowk_slope_boundary_scan"
+        ]
+      },
+      "inputs": {
+        "contracts": [
+          "formal/docs/ucff_core_front_door_contract.md"
+        ],
+        "locks": [
+          "formal/markdown/locks/observables/OV-BR-05_bragg_lowk_slope_summary_OVERRIDE.md"
+        ]
+      },
+      "samples": [
+        {
+          "abs_error": 9.81706175618e-06,
+          "c": 1.04233184841,
+          "in_condition_A_1sigma": true,
+          "in_condition_B_1sigma": true,
+          "in_intersection_1sigma": true,
+          "label": "inside_frac_0.02",
+          "passed": true,
+          "reason_code": "PASS",
+          "slope_ucff": 1.04234166547
+        },
+        {
+          "abs_error": 9.62054144327e-06,
+          "c": 1.06362395645,
+          "in_condition_A_1sigma": true,
+          "in_condition_B_1sigma": true,
+          "in_intersection_1sigma": true,
+          "label": "inside_frac_0.25",
+          "passed": true,
+          "reason_code": "PASS",
+          "slope_ucff": 1.06363357699
+        },
+        {
+          "abs_error": 9.4156663093e-06,
+          "c": 1.08676755215,
+          "in_condition_A_1sigma": true,
+          "in_condition_B_1sigma": true,
+          "in_intersection_1sigma": true,
+          "label": "inside_frac_0.5",
+          "passed": true,
+          "reason_code": "PASS",
+          "slope_ucff": 1.08677696781
+        },
+        {
+          "abs_error": 9.21933506071e-06,
+          "c": 1.10991114784,
+          "in_condition_A_1sigma": true,
+          "in_condition_B_1sigma": true,
+          "in_intersection_1sigma": true,
+          "label": "inside_frac_0.75",
+          "passed": true,
+          "reason_code": "PASS",
+          "slope_ucff": 1.10992036718
+        },
+        {
+          "abs_error": 9.04580547667e-06,
+          "c": 1.13120325588,
+          "in_condition_A_1sigma": true,
+          "in_condition_B_1sigma": true,
+          "in_intersection_1sigma": true,
+          "label": "inside_frac_0.98",
+          "passed": true,
+          "reason_code": "PASS",
+          "slope_ucff": 1.13121230169
+        },
+        {
+          "abs_error": 9.85206168447e-06,
+          "c": 1.0386288731,
+          "in_condition_A_1sigma": false,
+          "in_condition_B_1sigma": true,
+          "in_intersection_1sigma": false,
+          "label": "outside_near_frac_-0.02",
+          "passed": false,
+          "reason_code": "FAIL_BRAGG_OVERLAP_WINDOW",
+          "slope_ucff": 1.03863872516
+        },
+        {
+          "abs_error": 9.01629107042e-06,
+          "c": 1.13490623119,
+          "in_condition_A_1sigma": true,
+          "in_condition_B_1sigma": false,
+          "in_intersection_1sigma": false,
+          "label": "outside_near_frac_1.02",
+          "passed": false,
+          "reason_code": "FAIL_BRAGG_OVERLAP_WINDOW",
+          "slope_ucff": 1.13491524748
+        },
+        {
+          "abs_error": 1.02923967591e-05,
+          "c": 0.994193169367,
+          "in_condition_A_1sigma": false,
+          "in_condition_B_1sigma": true,
+          "in_intersection_1sigma": false,
+          "label": "outside_far_frac_-0.5",
+          "passed": false,
+          "reason_code": "FAIL_BRAGG_OVERLAP_WINDOW",
+          "slope_ucff": 0.994203461764
+        },
+        {
+          "abs_error": 8.67657472248e-06,
+          "c": 1.17934193493,
+          "in_condition_A_1sigma": true,
+          "in_condition_B_1sigma": false,
+          "in_intersection_1sigma": false,
+          "label": "outside_far_frac_1.5",
+          "passed": false,
+          "reason_code": "FAIL_BRAGG_OVERLAP_WINDOW",
+          "slope_ucff": 1.1793506115
+        }
+      ],
+      "scan_id": "slope_boundary_scan_v1",
+      "summary": {
+        "fail_reason_counts": {
+          "FAIL_BRAGG_OVERLAP_WINDOW": 4,
+          "FAIL_UCFF_SLOPE_REPRO": 0
+        },
+        "n_fail": 4,
+        "n_pass": 5,
+        "n_samples": 9
+      },
+      "ticket_id": "BRIDGE_TICKET_0002"
+    },
+    {
+      "derived": {
+        "convexity_eps": 1e-12,
+        "k_max": 1.0,
+        "negative_control_min_threshold": 1e-08,
+        "ucff_params": {
+          "beta": 0.125,
+          "g": 2.0,
+          "lam": 0.25,
+          "rho0": 1.0
+        }
+      },
+      "evidence": {
+        "pytest_nodes": [
+          "formal/python/tests/test_bridge_br05_ucff_lowk_curvature_grid_density_scan.py::test_bridge_br05_ucff_lowk_curvature_grid_density_scan"
+        ]
+      },
+      "grids": [
+        {
+          "convex_ok": true,
+          "k_max": 1.0,
+          "min_diff2": 0.279235839844,
+          "min_diff2_wrong": -0.547302246094,
+          "n": 5,
+          "negative_control_fails": true,
+          "passed": true,
+          "reason_code": "PASS"
+        },
+        {
+          "convex_ok": true,
+          "k_max": 1.0,
+          "min_diff2": 0.116678455075,
+          "min_diff2_wrong": -0.27987289952,
+          "n": 7,
+          "negative_control_fails": true,
+          "passed": true,
+          "reason_code": "PASS"
+        },
+        {
+          "convex_ok": true,
+          "k_max": 1.0,
+          "min_diff2": 0.0642385482788,
+          "min_diff2_wrong": -0.169569969177,
+          "n": 9,
+          "negative_control_fails": true,
+          "passed": true,
+          "reason_code": "PASS"
+        }
+      ],
+      "inputs": {
+        "contracts": [
+          "formal/docs/ucff_core_front_door_contract.md"
+        ],
+        "locks": [
+          "formal/markdown/locks/observables/OV-BR-04a_bragg_lowk_slope_conditionA_OVERRIDE.md",
+          "formal/markdown/locks/observables/OV-BR-04b_bragg_lowk_slope_conditionB_OVERRIDE.md"
+        ]
+      },
+      "scan_id": "curvature_grid_density_scan_v1",
+      "summary": {
+        "fail_reason_counts": {
+          "FAIL_CONVEXITY": 0,
+          "FAIL_NEGATIVE_CONTROL_NOT_TRIGGERING": 0
+        },
+        "n_grids": 3,
+        "n_pass": 3
+      },
+      "ticket_id": "BRIDGE_TICKET_0004"
+    }
+  ],
+  "schema_version": 1
+}

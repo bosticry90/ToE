@@ -1,0 +1,209 @@
+{
+  "artifact_sha256": "79f44ccf3a41a8a64ffa016d3d3ec2d3db8ce7e9568bf0c3b569d944e9a36a42",
+  "evidence": {
+    "pytest_nodes": [
+      "formal/python/tests/test_bridge_program_tolerance_tightening_delta_manifest_generate_determinism.py::test_bridge_program_tolerance_tightening_delta_manifest_is_deterministic",
+      "formal/python/tests/test_bridge_program_tolerance_tightening_delta_manifest_semantics.py::test_bridge_program_tolerance_tightening_delta_manifest_v5_t1_closure",
+      "formal/python/tests/test_bridge_program_tolerance_tightening_delta_manifest_semantics.py::test_bridge_program_tolerance_tightening_delta_manifest_v5_t2_expected_break"
+    ]
+  },
+  "expected_break_controls": {
+    "v5_t1_closure_expected": {
+      "n_mismatch": 0,
+      "passes": true,
+      "reason_code_counts": {},
+      "recommended_next_target": {
+        "count": 0,
+        "reason_code": "none",
+        "suggested_design_ticket": "BRIDGE_TICKET_PROGRAM_COMPLETE"
+      }
+    },
+    "v5_t2_expected_break": {
+      "allowed_tolerance_failure_reason_codes": [
+        "FAIL_CURRENT_INVARIANCE_TOL",
+        "FAIL_PHASE_INVARIANCE_TOL"
+      ],
+      "baseline_signature": "P-P-P",
+      "flipped_probe_ids": [],
+      "n_formerly_pass_probes_flipped": 0,
+      "passes": false,
+      "pinned_probe_id": "baseline_all_pass",
+      "v5_t2_reason_codes": [
+        "PASS",
+        "PASS_CURRENT_ANCHOR",
+        "PASS_PHASE_ANCHOR"
+      ],
+      "v5_t2_signature": "P-P-P"
+    }
+  },
+  "profiles": {
+    "baseline": {
+      "effective_tolerances_v5": {
+        "current_anchor_min_response": 1e-08,
+        "current_anchor_tolerance": 1e-07,
+        "phase_anchor_tolerance": 1e-07,
+        "toyh_tolerance": 1e-10
+      },
+      "mismatch_artifact_sha256": "360b616a4ff244043718bb8995c403d57082a0b36638418aae1429dd9036e03c",
+      "n_mismatch": 0,
+      "n_probes": 17,
+      "orthogonality_artifact_sha256": "b3aed33c82e30c92a8933256522c294a45871df3c18b11af307f0960eb93f37c",
+      "reason_code_counts": {},
+      "recommended_next_target": {
+        "count": 0,
+        "reason_code": "none",
+        "suggested_design_ticket": "BRIDGE_TICKET_PROGRAM_COMPLETE"
+      },
+      "signature_counts": {
+        "F-F-F": 4,
+        "F-F-P": 0,
+        "F-P-F": 0,
+        "F-P-P": 0,
+        "P-F-F": 0,
+        "P-F-P": 0,
+        "P-P-F": 0,
+        "P-P-P": 13
+      }
+    },
+    "v5_t1": {
+      "effective_tolerances_v5": {
+        "current_anchor_min_response": 1.1e-08,
+        "current_anchor_tolerance": 5e-08,
+        "phase_anchor_tolerance": 5e-08,
+        "toyh_tolerance": 5e-11
+      },
+      "mismatch_artifact_sha256": "79774db11306a975e6d54eafb80173d42c007d9e8b03e43c36a425d96b661d7e",
+      "n_mismatch": 0,
+      "n_probes": 17,
+      "orthogonality_artifact_sha256": "6bbc932b26da945d7145feff4267e09a14b3c48a9913ec025cfab63cbeee297d",
+      "reason_code_counts": {},
+      "recommended_next_target": {
+        "count": 0,
+        "reason_code": "none",
+        "suggested_design_ticket": "BRIDGE_TICKET_PROGRAM_COMPLETE"
+      },
+      "signature_counts": {
+        "F-F-F": 4,
+        "F-F-P": 0,
+        "F-P-F": 0,
+        "F-P-P": 0,
+        "P-F-F": 0,
+        "P-F-P": 0,
+        "P-P-F": 0,
+        "P-P-P": 13
+      }
+    },
+    "v5_t2": {
+      "effective_tolerances_v5": {
+        "current_anchor_min_response": 1.25e-08,
+        "current_anchor_tolerance": 2e-08,
+        "phase_anchor_tolerance": 2e-08,
+        "toyh_tolerance": 1e-15
+      },
+      "mismatch_artifact_sha256": "15edb9283a7075c5ba8c0b44314d9ca9ca3299d6d6f1bdee26279d92abbd8d08",
+      "n_mismatch": 0,
+      "n_probes": 17,
+      "orthogonality_artifact_sha256": "4ad776ab48696771173f85ca2b48f2962f1b94a3a5dfa8896cb540b51d30c473",
+      "reason_code_counts": {},
+      "recommended_next_target": {
+        "count": 0,
+        "reason_code": "none",
+        "suggested_design_ticket": "BRIDGE_TICKET_PROGRAM_COMPLETE"
+      },
+      "signature_counts": {
+        "F-F-F": 4,
+        "F-F-P": 0,
+        "F-P-F": 0,
+        "F-P-P": 0,
+        "P-F-F": 0,
+        "P-F-P": 0,
+        "P-P-F": 0,
+        "P-P-P": 13
+      }
+    }
+  },
+  "report_id": "BRIDGE_PROGRAM_TOLERANCE_TIGHTENING_DELTA_MANIFEST",
+  "schema_version": 1,
+  "signature_transitions": {
+    "baseline_to_v5_t1": {
+      "n_signature_transitions": 0,
+      "transitioned_probes": []
+    },
+    "baseline_to_v5_t2": {
+      "n_signature_transitions": 0,
+      "transitioned_probes": []
+    },
+    "v5_t1_to_v5_t2": {
+      "n_signature_transitions": 0,
+      "transitioned_probes": []
+    }
+  },
+  "tightening_delta": {
+    "baseline_to_v5_t1": {
+      "current_anchor_min_response": {
+        "from": 1e-08,
+        "ratio_to_from": 1.0999999999999999,
+        "to": 1.1e-08
+      },
+      "current_anchor_tolerance": {
+        "from": 1e-07,
+        "ratio_to_from": 0.5,
+        "to": 5e-08
+      },
+      "phase_anchor_tolerance": {
+        "from": 1e-07,
+        "ratio_to_from": 0.5,
+        "to": 5e-08
+      },
+      "toyh_tolerance": {
+        "from": 1e-10,
+        "ratio_to_from": 0.5,
+        "to": 5e-11
+      }
+    },
+    "baseline_to_v5_t2": {
+      "current_anchor_min_response": {
+        "from": 1e-08,
+        "ratio_to_from": 1.25,
+        "to": 1.25e-08
+      },
+      "current_anchor_tolerance": {
+        "from": 1e-07,
+        "ratio_to_from": 0.2,
+        "to": 2e-08
+      },
+      "phase_anchor_tolerance": {
+        "from": 1e-07,
+        "ratio_to_from": 0.2,
+        "to": 2e-08
+      },
+      "toyh_tolerance": {
+        "from": 1e-10,
+        "ratio_to_from": 1e-05,
+        "to": 1e-15
+      }
+    },
+    "v5_t1_to_v5_t2": {
+      "current_anchor_min_response": {
+        "from": 1.1e-08,
+        "ratio_to_from": 1.1363636363636365,
+        "to": 1.25e-08
+      },
+      "current_anchor_tolerance": {
+        "from": 5e-08,
+        "ratio_to_from": 0.4,
+        "to": 2e-08
+      },
+      "phase_anchor_tolerance": {
+        "from": 5e-08,
+        "ratio_to_from": 0.4,
+        "to": 2e-08
+      },
+      "toyh_tolerance": {
+        "from": 5e-11,
+        "ratio_to_from": 2e-05,
+        "to": 1e-15
+      }
+    }
+  }
+}

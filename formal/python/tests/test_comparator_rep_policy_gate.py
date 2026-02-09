@@ -14,6 +14,15 @@ def _load_json(path: Path) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def _lean_module_from_path(artifact_path: str) -> str:
+    path = Path(artifact_path).with_suffix("")
+    parts = list(path.parts)
+    if "ToeFormal" in parts:
+        start = parts.index("ToeFormal")
+        parts = parts[start:]
+    return ".".join(parts)
+
+
 def _tracked_comparator_modules() -> set[str]:
     # Comparator lanes are cv*.py modules in the canonical comparators front door.
     return {p.name for p in COMPARATORS_DIR.glob("cv*_*.py")}
@@ -35,7 +44,7 @@ def test_cross_rep_claims_require_pinned_policy_token():
     manifest = _load_json(MANIFEST_PATH)
     policy = _load_json(POLICY_PATH)
 
-    assert manifest.get("schema") == "Toe/comparator_rep_interpretability_manifest/v1"
+    assert manifest.get("schema") == "Toe/comparator_rep_interpretability_manifest/v2"
     assert policy.get("schema") == "Toe/fn_rep_equivalence_policy/v1"
 
     policy_token = policy.get("policy_token")
@@ -47,7 +56,45 @@ def test_cross_rep_claims_require_pinned_policy_token():
         claim = row.get("rep_interpretability_claim")
         assert claim in allowed_claims, f"{cid}: invalid claim kind {claim!r}"
         claim_token = row.get("policy_token")
+        proof_artifact = str(row.get("proof_artifact", "")).strip()
+        proof_build_guard_test = str(row.get("proof_build_guard_test", "")).strip()
         if claim == "cross_rep_equivalent":
             assert claim_token == policy_token, (
                 f"{cid}: cross-rep claim requires policy_token={policy_token!r}"
+            )
+            assert proof_artifact, f"{cid}: cross-rep claim must declare proof_artifact"
+            proof_path = (REPO_ROOT / proof_artifact).resolve()
+            assert proof_path.exists(), f"{cid}: proof_artifact not found: {proof_artifact}"
+            assert proof_path.suffix == ".lean", (
+                f"{cid}: proof_artifact must reference a Lean module (.lean), got: {proof_artifact}"
+            )
+
+            assert proof_build_guard_test, (
+                f"{cid}: cross-rep claim must declare proof_build_guard_test (a pytest build-guard module)"
+            )
+            guard_path = (REPO_ROOT / proof_build_guard_test).resolve()
+            assert guard_path.exists(), (
+                f"{cid}: proof_build_guard_test not found: {proof_build_guard_test}"
+            )
+            assert guard_path.suffix == ".py", (
+                f"{cid}: proof_build_guard_test must reference a python test module (.py), got: {proof_build_guard_test}"
+            )
+            assert guard_path.name.startswith("test_"), (
+                f"{cid}: proof_build_guard_test should be a pytest test module (must start with 'test_'), got: {proof_build_guard_test}"
+            )
+            tests_root = (REPO_ROOT / "formal" / "python" / "tests").resolve()
+            assert tests_root in guard_path.parents, (
+                f"{cid}: proof_build_guard_test must live under formal/python/tests (got: {proof_build_guard_test})"
+            )
+            lean_module = _lean_module_from_path(proof_artifact)
+            guard_text = guard_path.read_text(encoding="utf-8")
+            assert lean_module in guard_text, (
+                f"{cid}: proof_build_guard_test must reference Lean module {lean_module!r}"
+            )
+        else:
+            assert not proof_artifact, (
+                f"{cid}: within_rep_only must not declare proof_artifact (found {proof_artifact!r})"
+            )
+            assert not proof_build_guard_test, (
+                f"{cid}: within_rep_only must not declare proof_build_guard_test (found {proof_build_guard_test!r})"
             )

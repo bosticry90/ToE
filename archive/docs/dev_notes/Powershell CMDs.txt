@@ -1,0 +1,390 @@
+cd "C:\Users\psboy\Documents\ToE"
+.\.venv\Scripts\activate
+
+cd .\fundamental_theory
+
+pytest -q -c archive/lcrd_legacy_docs/pytest_legacy.ini
+powershell -ExecutionPolicy Bypass -File archive/lcrd_legacy_docs/run_legacy.ps1
+
+python -m crft.tests.crft_c1_dispersion
+python -m crft.tests.crft_c2_invariants
+python -m crft.tests.crft_c3_soliton
+python -m crft.tests.crft_c4_coherence
+python -m crft.tests.crft_c5_multifield_consistency
+python -m crft.tests.crft_c6_cp_nlse_2d_dispersion
+python -m crft.tests.crft_c7_acoustic_metric_diagnostics
+python -m crft.tests.crft_c8_spectral_sanity
+python -m crft.tests.crft_c9_phi_chi_stability
+
+pytest -q crft/tests/extended_crft_c5_to_c9.py
+pytest -q lcrd/tests/lcrd_t1_to_t10.py
+pytest -q crft/tests/crft_geom_c10_c11.py
+pytest -q crft/tests/crft_turb_c12_c13.py
+
+NEW TASK: Generate a full replacement for Monograph_frontmatter.tex.
+
+NEW TASK (OVERRIDES ALL PREVIOUS CONTEXT): [Your request]
+
+DO NOT ANALYZE PREVIOUS OUTPUT.
+DO NOT COMPARE.
+DO NOT CONTINUE ANY PRIOR DOCUMENT.
+GENERATE NEW STANDALONE CONTENT ONLY.
+
+Ensure plain-text, explicit and explanatory information content, no shorthand notes, no meta-feedback, no references to previous versions other than informational continuity, no hallucinations of any kind, and no information loss.
+Let me know what files you need to examine to determine fixes.
+Please evaluate the attached to diagnose the issue(s).
+Cross-reference to ensure no information loss or hallucinations.
+Please evaluate and provide a full file replacement for every file that needs to be fixed. If files are needed for upload to examine, let me know.
+
+---
+
+Here is a concrete prioritization plan for manual inspection + re-testing, using the actual repository structure and filelists you provided.
+
+I will:
+
+1. Give a high-level priority order (what to do first, second, third).
+2. Within each priority level, specify which files or groups of files to inspect and re-run.
+3. End with a short actionable checklist you can literally walk down in PowerShell / VS Code.
+
+I am basing this on your full `toe_filelist`, `field_theory_filelist`, `fundamental_theory_filelist`, `numerics_filelist`, `outputs_filelist`, and `tests_filelist`.
+
+---
+
+## 1. Global priority order
+
+In terms of impact on your theory and monograph, the logical order is:
+
+1. **Priority 0: Repository-wide smoke / meta tests**
+   Make sure the global test harness and meta-tests (coherence core, consistency, dimensions, identities, units) still work.
+
+2. **Priority 1: Canonical CRFT/CP–NLSE/UCFF equation tests (tests/ + equation modules)**
+   All tests that validate the canonical equations used in the monograph + master equation inventory.
+
+3. **Priority 2: Extended subsystems that are in the monograph core narrative**
+
+   * φ–χ extension
+   * LCRD / rotor–curvature
+   * Acoustic metric / hydro metric
+   * GPE limits and higher-order branches
+
+4. **Priority 3: High-level phenomenology and stability landscape**
+   Multisoliton, turbulence, coherence phase diagrams, long-time robustness.
+
+5. **Priority 4: Auxiliary / exploratory / meta-only infrastructure**
+   Predictions, tensor/TT, random graph, noise channels, output bundling, legacy “Phase8 noclaims” etc.
+
+6. **Priority 5: Outputs and figures**
+   Confirm which outputs are still representative after re-tests vs which figures are legacy only. 
+
+---
+
+## 2. Priority 0 – Repository-wide harness and meta-tests
+
+These are the tests that must work before anything else; if they fail, other results are suspect. 
+
+**Inspect + re-run first:**
+
+1. `tests/conftest.py`
+
+   * Check fixtures, global tolerances, and any repo-wide environment assumptions.
+
+2. Foundational meta-tests:
+
+   * `test_coherence_core.py`
+   * `test_consistency.py`
+   * `test_dims.py`
+   * `test_identities.py`
+   * `test_units_schema.py`
+   * `test_meta_axioms.py`
+
+3. Top-level numerics sanity:
+
+   * `test_entropy_scaling.py`
+   * `test_lr_velocity.py`
+   * `test_kl_map_smoke.py`
+   * `test_kl_scaling.py`
+
+These collectively confirm: core definitions, dimensions, algebraic identities, units, and basic numerics are all coherent with your current master docs.
+
+---
+
+## 3. Priority 1 – Canonical CRFT / CP–NLSE / UCFF tests
+
+These directly back the main CCFT / CRFT equations and UCFF machinery that the monograph rests on. 
+
+### 1A. Phase 2–3 foundational PDE structure
+
+Inspect + re-run:
+
+* `test_phase2_continuity.py`
+* `test_phase2_dispersion.py`
+* `test_phase2_el_residual.py`
+* `test_phase3_conservation.py`
+* `test_phase3_dimensional.py`
+* `test_phase3_positivity.py`
+* `test_phase3_symplectic_equiv.py`
+
+These validate: continuity, dispersion, Euler–Lagrange residuals, conservation laws, positivity, and symplectic equivalence.
+
+### 1B. Phase 5–6 core soliton and scattering
+
+Inspect + re-run:
+
+* `test_phase5_soliton.py`
+* `test_phase6_scattering.py`
+
+These are the canonical soliton / scattering demonstrations for CRFT.
+
+### 1C. Phase 10 high-rigor numerics + proofs
+
+These are your strongest equation validators and should be checked early:
+
+* `test_phase10_coercivity.py`
+* `test_phase10_continuity_numerics.py`
+* `test_phase10_dispersion_numerics.py`
+* `test_phase10_kz.py`
+* `test_phase10_manufactured.py`
+* `test_phase10_manufactured_numerics.py`
+* `test_phase10_noether.py`
+* `test_phase10_numerics_nls.py`
+* `test_phase10_numerics_robustness.py`
+* `test_phase10_proofs.py`
+
+### 1D. UCFF core
+
+These tie directly to your UCFF narrative:
+
+* `test_ucff_core_roundtrip.py`
+* `test_ucff_core_symbolic.py`
+
+Ensure they match the current `ucff_core` and any related equation files in `fundamental_theory` / `field_theory`.
+
+---
+
+## 4. Priority 2 – Extended subsystems in the main theory (φ–χ, LCRD, metrics, GPE)
+
+These are crucial because the monograph now presents CRFT + LSDA + LCRD as a coherent stack.
+
+### 2A. φ–χ extension and backreaction
+
+Inspect + re-run:
+
+* `test_phase15_coupled_phi_chi.py`
+* `test_phase18_backreaction.py`
+* `test_phase33_coherence_response.py`
+
+These must be consistent with your φ–χ equations and any LSDA-linked terms.
+
+### 2B. GPE / hydrodynamic / higher-order CE
+
+Inspect + re-run:
+
+* `test_phase11_c_sound.py`
+* `test_phase11_ucff_numerics.py`
+* `test_phase11_xi_soliton.py`
+* `test_phase12_harmonic_trap.py`
+* `test_phase12_hydro.py`
+* `test_phase13_bogoliubov.py`
+* `test_phase13_second_order_*.py` (CN vs split, dispersive, MI, numerics, symbolic)
+* `test_phase13_ucff_second_order.py`
+* `test_phase31a_gpe_hydro_limit.py`
+* `test_phase31_gpe_limit.py`
+
+These ensure the CE–NWE / GPE limits and higher-order structures are correct.
+
+### 2C. Hydrodynamic + metric / acoustic geometry
+
+Inspect + re-run:
+
+* `test_phase21_hydrodynamics.py`
+* `test_phase25_hydro_metric.py`
+* `test_phase29_acoustic_metric_numerics.py`
+* `test_phase34_hydro_metric_numeric.py`
+* `test_phase35_hydro_symbolics.py`
+
+These tests validate the acoustic metric and hydro metric formulations, which are explicitly referenced in your monograph.
+
+### 2D. Geometry + LCRD hooks
+
+While LCRD has its own code, these tests provide the geometry bridge:
+
+* `test_phase17_geometry.py`
+* `test_phase19_einstein_geometry.py`
+* `test_phase42_coherence_stress_energy.py`
+* `test_phase43_hydro_jacobians.py`
+
+These should be in sync with `LCRD_Reconstruction_v3.md` and Extended CRFT docs.
+
+---
+
+## 5. Priority 3 – Long-time robustness, stability, and phenomenology
+
+These are important for your “this theory is numerically stable and physically reasonable” claims, but depend on earlier layers being correct.
+
+Inspect + re-run:
+
+* `test_phase32_longtime_robustness.py`
+* `test_phase40_soliton_stability_scan.py`
+* `test_phase41_multiscale_soliton_fine.py`
+* `test_phase44_soliton_interactions.py`
+* `test_phase45_two_soliton_phase_locked.py`
+* `test_phase46_coherent_turbulence_1d.py`
+* `test_phase47_coherence_phenomenology_core.py`
+* `test_phase48_coherence_phase_diagram.py`
+* `test_phase50_coherence_metrics.py`
+* `test_phase51_coherence_drift_metrics.py`
+* `test_phase52_coherence_stability_functions.py`
+* `test_phase53_static_field_classification.py`
+* `test_phase55_coherence_soliton_interactions.py`
+* `test_phase56_invariant_scan.py`
+* `test_phase57_multisoliton_coherence_clusters.py`
+* `test_phase58_master_coherence_stability.py`
+
+These underpin your turbulence, phase diagram, and stability narratives.
+
+---
+
+## 6. Priority 4 – Auxiliary / meta / peripheral tests
+
+These are useful but not core to the main monograph claims; inspect and re-run later.
+
+### 4A. CLI / orchestration / bundling
+
+* `test_phase15_cli.py`
+* `test_lp_orchestration.py`
+* `test_phase54_output_bundling.py`
+* `test_phase60_output_bundling.py`
+
+### 4B. Predictions, noise, random graphs, tensor
+
+* `test_predictions_core.py`
+* `test_noise_channels.py`
+* `test_noise_scan.py`
+* `test_random_graph_area.py`
+* `test_tensor_coherence.py`
+* `test_tensor_entropy.py`
+* `test_tensor_optional.py`
+* `test_lr_velocity.py` (already in Priority 0 but also relates to numerics)
+
+### 4C. Legacy / scaffolding / meta-validation
+
+These are candidates for deprecation or “low priority re-run,” but you may still want to quickly check they don’t fail catastrophically:
+
+* `test_phase1_grammar.py`
+* `test_phase1b_shapes.py`
+* `test_phase7_failfast.py`
+* `test_phase8_noclaims.py`
+* `test_phase9_validation_protocol.py`
+
+---
+
+## 7. Priority for non-test Python files (equations, simulators, numerics)
+
+For manual *inspection for belonging* (not just re-testing), you should pass through your code directories in this order:
+
+1. **Equations that define canonical theory**
+
+   * `equations/ucff_core.py` and other `equations/*.py` that are directly invoked by the phase10/UCFF tests and that appear in `equation_inventory_finalv8.md` and `state_of_the_theoryv8.md`.
+   * Goal: ensure every equation in the monograph is sourced from these files and matches the current tests.
+
+2. **Core simulators / numerics for CRFT and LCRD**
+
+   * `simulators/` under `fundamental_theory` and `field_theory` (e.g., CRFT, CP–NLSE, LCRD, CE–NWE integrators).
+   * Cross-check: each simulator should be referenced by at least one test in `tests/`.
+
+3. **Numerics infrastructure** (from `numerics_filelist.txt`)
+
+   * FFT wrappers, grid/resource management, time steppers, etc.
+   * Confirm they are only used via validated paths and not via old, pre-LCRD variants.
+
+4. **Legacy / scratch / experiment scripts**
+
+   * Any `.py` that never appears in imports or tests can be flagged for: archive, delete, or “experimental only.”
+
+Because the non-test file lists are large, the practical method is:
+
+* Start from tests (above).
+* For each high-priority test, note its imports (`equations.*`, `simulators.*`, `numerics.*`).
+* Inspect those imported modules for:
+
+  * Consistency with the equation inventory.
+  * Redundant or dead code branches.
+  * Old parameter names (pre-LCRD or pre-LSDA).
+
+---
+
+## 8. Priority 5 – Outputs and figures
+
+Last, revisit the `outputs/` tree. 
+
+For each output:
+
+1. Check the corresponding test(s) still pass.
+2. Decide whether the figure or data file is:
+
+   * Still representative (keep, maybe regenerate at higher resolution or with updated captions).
+   * Obsolete (archive to `legacy_outputs/` or delete).
+
+Particularly important outputs:
+
+* `phase12_hydro.json`, `tensor_coherence_timeseries.tsv`, `uefm_tt_prototype.tsv`
+* `referee_invariance.tsv`, `referee_lightcone.tsv`
+* `figs/curvature_vs_coherence.png`, `figs/superfluid_map.png`
+* Soliton/turbulence: `phase5_soliton.png`, `phase6_coherence_energy.png`, `phase46_coherent_turbulence_1d`-linked plots, etc.
+
+---
+
+## 9. Practical step-by-step checklist
+
+You can work through this in several evenings without losing the thread:
+
+1. **Global smoke check**
+
+   * Run: `pytest tests/test_coherence_core.py tests/test_consistency.py tests/test_dims.py tests/test_identities.py tests/test_units_schema.py`
+   * Fix any import / symbol issues first.
+
+2. **Run all Phase 2–3 and Phase 10 tests**
+
+   * After each failure, inspect:
+
+     * The corresponding equation module(s).
+     * Any simulator or numerics it uses.
+
+3. **Run UCFF tests and GPE/CE tests (Phase 11–13, 31)**
+
+   * Align them with the UCFF and CE–NWE sections of the monograph and equation inventory.
+
+4. **Run φ–χ, geometry, metric, and LCRD-linked tests**
+
+   * Check consistency with `LCRD_Reconstruction_v3.md`, `Extended_CRFT_v1.md`, and the LCRD sections of the monograph.
+
+5. **Run long-time robustness and phenomenology tests (Phase 32, 40–48, 50–58)**
+
+   * Use these to confirm the narrative about stability and emergent behavior.
+
+6. **Sweep auxiliary/meta tests**
+
+   * Verify they either pass or are explicitly documented as deprecated / experimental.
+
+7. **Code inspection loop**
+
+   * For each high-priority test group above:
+
+     * Open the imported modules in `equations/`, `simulators/`, `numerics/`.
+     * Confirm:
+
+       * No unused or pre-LCRD parameters.
+       * Equations match those in `equation_inventory_finalv8.md`.
+       * Comments and docstrings reflect the current theory.
+
+8. **Outputs sweep**
+
+   * For each important figure or data file, confirm:
+
+     * Which test produced it.
+     * That the test still passes.
+     * Mark the output as “canonical”, “to regenerate”, or “legacy”.
+
+If you want, next step I can:
+
+* Derive from this a **Markdown or DOCX “Re-validation Log Template”** you can fill as you go (test name → status → notes → linked equation sections), so the whole re-test pass becomes auditable and directly linkable to the monograph.

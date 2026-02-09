@@ -1,0 +1,10 @@
+{
+  "dx": 0.5,
+  "eigenvalue_expected": 1.3482431015796381,
+  "eigenvalue_observed": 1.3482431015796383,
+  "fingerprint": "8b918620e4972729721f5805caa45a9bcc4b44d310e9a2f6caa19ca44e6422a2",
+  "mode_m": 3,
+  "mode_purity_l2_error": 5.229207860282493e-15,
+  "n": 32,
+  "schema": "OV-FG-01/graph_fourier_mode_audit_report/v1"
+}

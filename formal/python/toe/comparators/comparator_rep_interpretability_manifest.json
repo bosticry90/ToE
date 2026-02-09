@@ -1,5 +1,5 @@
 {
-  "schema": "Toe/comparator_rep_interpretability_manifest/v1",
+  "schema": "Toe/comparator_rep_interpretability_manifest/v2",
   "policy_token_required_for_cross_rep": "FN_REP_EQ_POLICY_V1",
   "comparators": {
     "cv01_bec_bragg_v0": {
@@ -16,6 +16,17 @@
     },
     "cv03_ucff_dispersion_v1": {
       "module": "formal/python/toe/comparators/cv03_ucff_dispersion_v1.py",
+      "rep_interpretability_claim": "cross_rep_equivalent",
+      "policy_token": "FN_REP_EQ_POLICY_V1",
+      "proof_artifact": "formal/toe_formal/ToeFormal/Variational/FNRep32Rep64Equivalence.lean",
+      "proof_build_guard_test": "formal/python/tests/test_lean_fn_rep32_rep64_equivalence_build_guard.py"
+    },
+    "rl01_relativistic_dispersion_v0": {
+      "module": "formal/python/toe/comparators/rl01_relativistic_dispersion_v0.py",
+      "rep_interpretability_claim": "within_rep_only"
+    },
+    "rl02_nonrelativistic_nlse_v0": {
+      "module": "formal/python/toe/comparators/rl02_nonrelativistic_nlse_v0.py",
       "rep_interpretability_claim": "within_rep_only"
     }
   }

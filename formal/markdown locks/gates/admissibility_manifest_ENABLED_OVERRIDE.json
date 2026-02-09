@@ -1,0 +1,22 @@
+{
+  "version": 5,
+  "note": "Override manifest for full BR-03 → BR-04A/B → BR-05 → DR-BR-00 → DR-BR-01 → FN chain. Admits all required upstream observables for override discrimination. Updated 2026-01-28.",
+  "gates": {
+    "CT01": {"enabled": true},
+    "SYM01": {"enabled": true},
+    "CAUS01": {"enabled": true},
+    "OV-BR-03": {"enabled": true},
+    "OV-BR-03N": {"enabled": true},
+    "OV-BR-04A": {"enabled": true},
+    "OV-BR-04B": {"enabled": true},
+    "OV-BR-05": {"enabled": true},
+    "OV-DR-BR-00": {"enabled": true},
+    "OV-DR-BR-01": {"enabled": true},
+    "OV-BR-FN-00": {"enabled": true},
+    "OV-BR-FN-01": {"enabled": true},
+    "OV-FN-WT-00": {"enabled": true},
+    "OV-FN-WT-01": {"enabled": true},
+    "OV-FN-WT-02": {"enabled": true},
+    "OV-FN-02": {"enabled": true}
+  }
+}

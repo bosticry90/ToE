@@ -1,0 +1,18 @@
+{
+  "schema": "FNWT01_weight_policy_declarations/v1",
+  "version": 1,
+  "candidates": {
+    "fnwt01_policy_loose": {
+      "br_candidate_id": "BR01_metric_from_DR01_fit_unit_density",
+      "fn_candidate_id": "fn01_make_P_cubic_artifact",
+      "w_fn": 1.0,
+      "max_score": 0.08
+    },
+    "fnwt01_policy_strict": {
+      "br_candidate_id": "BR01_metric_from_DR01_fit_unit_density_structural_fail",
+      "fn_candidate_id": "fn01_make_P_cubic_artifact",
+      "w_fn": 1.0,
+      "max_score": 0.05
+    }
+  }
+}

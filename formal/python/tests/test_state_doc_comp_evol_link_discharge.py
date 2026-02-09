@@ -17,17 +17,19 @@ REPO_ROOT = find_repo_root(Path(__file__))
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 
 
-def _extract_gap_block(text: str, *, gap_id: str) -> str:
+def _extract_gap_blocks(text: str, *, gap_id: str) -> list[str]:
     marker_re = re.compile(rf"^GapID:\s*{re.escape(gap_id)}\s*$", flags=re.MULTILINE)
-    m = marker_re.search(text)
-    if m is None:
+    blocks: list[str] = []
+    for m in marker_re.finditer(text):
+        start = m.start()
+        nxt = re.search(r"^GapID:\s*\S+\s*$", text[m.end() :], flags=re.MULTILINE)
+        if nxt is None:
+            blocks.append(text[start:])
+        else:
+            blocks.append(text[start : m.end() + nxt.start()])
+    if not blocks:
         raise AssertionError(f"Could not find exact gap marker for GapID: {gap_id!r}")
-    start = m.start()
-
-    nxt = re.search(r"^GapID:\s*\S+\s*$", text[m.end() :], flags=re.MULTILINE)
-    if nxt is None:
-        return text[start:]
-    return text[start : m.end() + nxt.start()]
+    return blocks
 
 
 def _first_field(block: str, field: str) -> str | None:
@@ -40,7 +42,9 @@ def _first_field(block: str, field: str) -> str | None:
 
 def test_comp_evol_link_is_marked_discharged_and_build_verified():
     text = STATE_PATH.read_text(encoding="utf-8")
-    block = _extract_gap_block(text, gap_id="COMP-EVOL-LINK")
+    blocks = _extract_gap_blocks(text, gap_id="COMP-EVOL-LINK")
+    assert len(blocks) == 1, "Expected exactly one COMP-EVOL-LINK block; remove duplicates."
+    block = blocks[0]
 
     status = _first_field(block, "Status") or ""
     assert "Discharged" in status

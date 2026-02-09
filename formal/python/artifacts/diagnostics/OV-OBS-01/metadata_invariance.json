@@ -1,0 +1,17 @@
+{
+  "config_tag": "OV-OBS-01_metadata_invariance_v1",
+  "dr_fingerprint_a": "DR02_Steinhauer_Fig3a_lowk_linearization_2026-01-17|u=0|c_s=0.002188942097252748|source_kind=csv|source_ref=Steinhauer PRL 88, 120407 (2002), Fig 3a; digitized from arXiv 0111438v1; formal/external_evidence/bec_bragg_steinhauer_2001/omega_k_data.csv; low-k window k<= 3.2 um^-1; fit through origin; omega=2*pi*f; date 2026-01-17|fit_method=low-k through-origin omega~=c_s*k on k<= 3.2 um^-1; u fixed to 0|data_fingerprint=80c14686bbf4006939d1cdd9128ec4c7d6dffa90688c0b3463a6ff530e7ec5af",
+  "dr_fingerprint_b": "DR02_Steinhauer_Fig3a_lowk_linearization_2026-01-17/OV-OBS-01|u=0|c_s=0.002188942097252748|source_kind=csv|source_ref=OV-OBS-01 metadata perturbation|fit_method=low-k through-origin omega~=c_s*k on k<= 3.2 um^-1; u fixed to 0|data_fingerprint=80c14686bbf4006939d1cdd9128ec4c7d6dffa90688c0b3463a6ff530e7ec5af",
+  "fingerprint": "bdad033f455c7042ebf254c8d9cec70528ab92ed2d3b7d0da9cc3f56882effbc",
+  "fn_fingerprint_a": "4a2a65bab30ec10217200642e9084716d1d02f50373a32ccc7da55fc292b1845",
+  "fn_fingerprint_b": "bfc6682fa3200460feeb6e57147bdda5c9a49770f760e41be69bf065f65667de",
+  "obs_value_a": 1.916587002050103e-06,
+  "obs_value_b": 1.916587002050103e-06,
+  "ok_obs_value_equal": true,
+  "ok_residual_equal": true,
+  "report_a_fingerprint": "3327fe13862f87c5a46a29d3658fce3b9cccce2f085269d660a143b58a847c23",
+  "report_b_fingerprint": "776da3ea6388c9458a720f86765caf81dcfc6d0a22ba604d9d025f640b049dc7",
+  "residual_a": 1.916587002050103e-06,
+  "residual_b": 1.916587002050103e-06,
+  "schema": "OV-OBS-01/metadata_invariance_report/v1"
+}

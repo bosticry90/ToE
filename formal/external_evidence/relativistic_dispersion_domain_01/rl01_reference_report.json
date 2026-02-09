@@ -1,0 +1,24 @@
+{
+  "config_tag": "rl01-ref-pinned",
+  "fingerprint": "8bfe00e17bff224cf46a374cf53c901e02397f1230ecb633388f018f49491cdd",
+  "k": [
+    0.0,
+    0.25,
+    0.5,
+    1.0,
+    2.0
+  ],
+  "omega2": [
+    1.0,
+    1.0625,
+    1.25,
+    2.0,
+    5.0
+  ],
+  "params": {
+    "c": 1.0,
+    "m": 1.0
+  },
+  "regime_tag": "rl01-lowk",
+  "schema": "RL/dispersion_front_door_report/v1"
+}

@@ -1,0 +1,182 @@
+\documentclass[10pt]{article}
+
+% Manuscript source (CiSE-targeted; methods/governance).
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{enumitem}
+\usepackage{graphicx}
+
+\hypersetup{
+  colorlinks=true,
+  linkcolor=black,
+  urlcolor=black,
+  citecolor=black
+}
+
+\setlist[itemize]{leftmargin=*,noitemsep,topsep=2pt}
+
+\title{A Failure-Resistant Scientific Comparison Pipeline}
+
+\author{Ryan Bostic\\Independent Researcher}
+
+\date{2026-01-25}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Scientific computing pipelines frequently compute comparisons by default whenever numerical data are available, even when the epistemic prerequisites for comparison are ambiguous or absent. This practice risks silently converting uncertainty into inferred claims under automation.
+
+We present a failure-resistant comparison pipeline architecture in which admissibility is treated as an explicit governance concern rather than an implicit assumption. Comparisons are executed only when authorized by a declared admissibility configuration; when authorization is absent, the pipeline deterministically emits a structured ``blocked'' outcome rather than a partial or inferred result.
+
+The system separates intent declaration from enforcement, uses generated manifests to bind governance decisions to execution, and records both computed and blocked outcomes as canonical, auditable artifacts. Importantly, numerical proximity is never treated as evidence of admissible pairing.
+
+We contribute a failure-resistant governance and execution pattern for scientific comparison pipelines: comparisons run only when explicitly authorized, and otherwise the system deterministically produces an auditable blocked outcome.
+\end{abstract}
+
+\vspace{0.5em}
+\noindent\textbf{Keywords:} scientific computing; reproducible workflows; epistemic governance; computational auditability; admissibility; policy-as-code; scientific software systems; failure-resistant pipelines
+
+\section{Introduction}
+
+A methodology and epistemic-governance pattern for scientific computing pipelines:
+
+\textbf{If a comparison is not explicitly admissible, the correct output is a structured refusal (``blocked''), not an inferred claim.}
+
+This paper is about \emph{how} comparisons are governed and executed responsibly.
+
+This manuscript specifies a governance and execution pattern for scientific comparison pipelines. It is evaluated by enforceable behavior under automation (authorized comparison vs blocked outcome), and it reports no new empirical results.
+
+Contribution: a deterministic pipeline architecture that can output an auditable ``no'' (blocked) outcome---by design---when admissibility prerequisites are absent.
+
+\section{Positioning relative to prior work}
+
+This work sits adjacent to, but is distinct from, several existing lines of practice and research, including reproducible scientific workflows, data provenance systems, policy-as-code frameworks, and computational audit trails.
+
+Reproducible pipelines typically emphasize determinism of execution and repeatability of results \cite{sandve2013ten,stodden2016enhancing}. Scientific workflow systems and workflow engines operationalize repeatable, automated execution in practice \cite{diTommaso2017nextflow,koester2012snakemake}. Provenance systems focus on tracking data lineage and transformations \cite{moreau2013prov}. Policy-as-code approaches encode operational constraints that govern system behavior \cite{opa}. This pipeline incorporates elements of all three, but addresses a narrower and often under-specified question: \textbf{how a scientific system should behave when a comparison is not epistemically authorized}.
+
+Rather than attempting to improve comparison metrics, infer equivalence, or resolve interpretive uncertainty, the system described here enforces a conservative governance posture: absent explicit admissibility, the system must refuse to compare and must record that refusal deterministically. The contribution is therefore not a new analytical method, but a failure-resistant execution pattern that \textbf{preserves epistemic boundaries even under automation}.
+
+\section{Approach overview}
+
+Many analysis pipelines will compute \emph{something} as soon as numbers exist, even if the justification for comparing them is weak or missing.
+
+This pipeline enforces the opposite posture:
+
+\begin{itemize}
+  \item Comparisons are computed \textbf{only} when they are explicitly authorized by an admissibility configuration.
+  \item If authorization is absent, the pipeline emits a \textbf{blocked} outcome with explicit blockers.
+  \item ``Numeric closeness'' is never treated as a substitute for admissibility.
+\end{itemize}
+
+Governance invariant: unauthorized comparisons deterministically yield a blocked outcome with zero comparison rows.
+
+Terminology (used consistently below): a \emph{lane} is a data/analysis channel; a \emph{gate} is an admissibility prerequisite; a \emph{manifest} is the executable enforcement configuration generated from declared intent; a \emph{lock} is a canonical, machine-generated audit artifact recording either a computed result or a blocked outcome.
+
+\section{Pipeline architecture}
+
+\subsection{Architecture at a glance}
+
+\begin{figure}[t]
+\centering
+\setlength{\unitlength}{1mm}
+\begin{picture}(170,26)
+  % Boxes
+  \put(0,12){\framebox(40,12){\small\shortstack{Intent\\(Lean-authored)}}}
+  \put(44,12){\framebox(40,12){\small\shortstack{Enforcement\\Manifest (JSON)}}}
+  \put(88,12){\framebox(40,12){\small\shortstack{Execution\\(Python)}}}
+  \put(132,12){\framebox(38,12){\small\shortstack{Canonical\\Locks}}}
+
+  % Arrows
+  \put(40,18){\vector(1,0){4}}
+  \put(84,18){\vector(1,0){4}}
+  \put(128,18){\vector(1,0){4}}
+
+  % One-line role hints (vector text, no repo semantics)
+  \put(0,2){\makebox(170,0)[l]{\small Intent declares gates and defaults. Manifest is validated at runtime. Execution computes only if authorized; otherwise it blocks. Locks record outcomes plus fingerprints.}}
+\end{picture}
+\caption{Failure-resistant comparison pipeline: intent declaration, enforcement, execution, and auditable outcomes.}
+\label{fig:architecture}
+\end{figure}
+
+Key property: the manifest is an enforcement artifact, not a policy surface.
+
+Enforcement binding: at execution time, comparison jobs consult the manifest to determine whether a computation is authorized and record the decision (authorized vs blocked) in a canonical lock, alongside a content fingerprint for auditability.
+
+At execution time, the pipeline validates the manifest prior to any comparison computation and deterministically aborts the comparison path if required admissibility conditions are not satisfied.
+
+Here, ``validate'' means structural and consistency validation (schema and referenced fingerprints), not a cryptographic security guarantee.
+
+Lean\textquotesingle s role: Lean is used as a declarative intent authoring mechanism for admissibility configuration.
+
+Why Lean: it provides a declarative, type-checked surface for intent that is amenable to structured review and deterministic downstream manifest generation.
+
+Admissibility predicates are left venue- and domain-independent; the contribution is the enforcement pattern (``do not compare unless authorized''), not the semantics of any particular gate.
+
+Blocked outcomes are recorded as canonical locks. Each blocked lock records a comparison identifier, the gating conditions evaluated, explicit blockers (failed gates), zero comparison rows, and a content fingerprint for auditability. This structure distinguishes refusal from missing data and supports deterministic reproduction of the refusal behavior.
+
+\subsection{Evidence artifacts (what you can inspect)}
+
+The artifacts below are machine-generated audit records and configuration surfaces produced by the pipeline; they are cited to demonstrate inspectability, not to require repository familiarity.
+
+Examples:
+
+\begin{itemize}
+  \item A machine-generated audit record documenting a blocked cross-lane comparison.
+  \item A generated admissibility enforcement manifest (JSON) that binds declared intent to execution.
+  \item A manifest updater tool that regenerates the enforcement manifest from declared intent.
+  \item An explicit pairing-evidence mapping surface (mapping tuples); it may be empty without forcing a comparison.
+\end{itemize}
+
+\section{Governance outcomes}
+
+Under this governance model, the system either computes an authorized comparison or emits a structured blocked outcome with explicit blockers.
+
+\section{Reproducibility statement (reproduces the refusal)}
+
+Goal: deterministically reproduce the \textbf{blocked} outcome (not compute a cross-lane score).
+
+Reproduction procedure (conceptual):
+
+\begin{enumerate}
+  \item Update the admissibility enforcement manifest from declared intent.
+  \item Regenerate the canonical audit locks.
+  \item Verify the invariant that unauthorized comparisons remain blocked and emit zero rows.
+\end{enumerate}
+
+Repository-specific commands are provided in supplementary material.
+
+Expected result:
+
+\begin{itemize}
+  \item A representative audit record remains blocked and emits zero rows.
+\end{itemize}
+
+\section{Supplementary material}
+
+Supplementary materials provide runnable code and canonical audit artifacts to support inspection and deterministic reproduction.
+
+\section{Technical specification (supplementary appendix)}
+
+\textbf{Appendix A (Supplementary; frozen):} detailed governance specification, claim registry, and constrained case study outline.
+
+Appendix A is provided for deeper inspection; the journal narrative is intended to be self-sufficient for first-pass evaluation.
+
+\section{Scope and limits}
+
+This manuscript specifies governance behavior under automation rather than introducing domain results: admissibility predicates remain intentionally abstract; the pipeline records both computed and blocked outcomes as canonical locks; and unauthorized comparisons remain blocked (zero-row) rather than being inferred from numerical proximity.
+
+\section{Conclusion}
+
+This paper contributes a conservative, failure-resistant execution pattern for scientific comparison pipelines: comparisons are computed only when explicitly authorized, and otherwise the pipeline deterministically produces an auditable refusal. The emphasis is on governance behavior under automation, not on analytical novelty or domain claims.
+
+\bibliographystyle{IEEEtran}
+\bibliography{refs}
+
+\end{document}

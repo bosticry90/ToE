@@ -1,0 +1,80 @@
+{
+  "items": [
+    {
+      "bytes": 267151,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page10_z4.png",
+      "sha256": "03bcbdd5330d65c446caecc72966b4e47d860c2b25774215ffde70fc9e484167"
+    },
+    {
+      "bytes": 330393,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page11_z4.png",
+      "sha256": "e0d024fed7701745e8bce8afb25a6c64d28dba148a79eebbed024924c079fb41"
+    },
+    {
+      "bytes": 248198,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page12_z4.png",
+      "sha256": "0fb189539dedac658930527f2672afe18999d8521f7fcb05d811c0805d68c87e"
+    },
+    {
+      "bytes": 334588,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page13_z4.png",
+      "sha256": "86c23cc3a616e14e0f4ae2aed885924e9f08701bb8e5f3181b8702d65bba2e08"
+    },
+    {
+      "bytes": 328090,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page14_z4.png",
+      "sha256": "221c0778e738397e7e388d4b30c916febffd55fe59af8d9e639bbe9cb4132c87"
+    },
+    {
+      "bytes": 356421,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page1_z4.png",
+      "sha256": "0dbeb4436af75abfbbb1030cc9a7073365cd6ce59ba6e0982f7de76e4cae993a"
+    },
+    {
+      "bytes": 300298,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page2_z4.png",
+      "sha256": "448da470226ea999acdcf5df680a89767a45fc3d29696578222e38f31ac5e6af"
+    },
+    {
+      "bytes": 489579,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page3_z4.png",
+      "sha256": "be4d4a51504e6b1116566faed7aafe35001ef57bdb47235ed03dac9ec7776ff5"
+    },
+    {
+      "bytes": 280577,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page4_z4.png",
+      "sha256": "060bfd39485a2a1aff7fea8efd5c78598406d561136c795e15e16d59ac1d292b"
+    },
+    {
+      "bytes": 302259,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page5_z4.png",
+      "sha256": "f7dc19664d31464784db16bb4a5b3229a666cd099961137036ef04b701303fef"
+    },
+    {
+      "bytes": 314440,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page6_z4.png",
+      "sha256": "54f38f343e3e3bb329fdaf539ed9e0ea2ed0dc87667b4afc981263f6845002ed"
+    },
+    {
+      "bytes": 314362,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page7_z4.png",
+      "sha256": "091195fce66cbf218222ab5d79b6f31ea7a44377b677e7302ac465dac47622b6"
+    },
+    {
+      "bytes": 347918,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page8_z4.png",
+      "sha256": "3c3c0d2fd6718c619c32fded91f59ad7417a1d7ad21b00dffab870808aae3587"
+    },
+    {
+      "bytes": 312698,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/page_renders/page9_z4.png",
+      "sha256": "3fa2f242eb99cd2664bddf9c8c6ff0290b73bb995f3056b48d30cd860447cd55"
+    },
+    {
+      "bytes": 456741,
+      "relpath": "formal/external_evidence/bec_bragg_shammass_2012/source.pdf",
+      "sha256": "ef5416e243b0863dada51b68483b72edf83e3b3870bf417b9215b236ea61207c"
+    }
+  ],
+  "schema": "external_evidence_metadata/v1"
+}

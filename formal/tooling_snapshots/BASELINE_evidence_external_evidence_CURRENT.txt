@@ -1,0 +1,5 @@
+Baseline snapshot (current = baseline)
+Created: 2026-01-29 17:28:06
+Snapshot: formal/tooling_snapshots/repo_snapshot_20260129_172514_BASELINE_evidence_external_evidence.jsonl
+Context doc: formal/tooling_snapshots/review_bragg_override_hardening_20260129.md
+Notes: Evidence-only baseline over formal/external_evidence/**.

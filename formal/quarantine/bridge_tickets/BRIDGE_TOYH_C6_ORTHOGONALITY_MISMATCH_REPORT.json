@@ -1,0 +1,87 @@
+{
+  "artifact_sha256": "5a8b202d3daee23478d2f84c848def5ae0d921420cd40ede9f8a3d18b4c784a8",
+  "evidence": {
+    "pytest_nodes": [
+      "formal/python/tests/test_bridge_toyh_c6_orthogonality_mismatch_semantics.py::test_bridge_toyh_c6_orthogonality_mismatch_report_contains_only_disagreements",
+      "formal/python/tests/test_bridge_toyh_c6_orthogonality_mismatch_semantics.py::test_bridge_toyh_c6_orthogonality_mismatch_report_has_signed_margins_and_reason_codes",
+      "formal/python/tests/test_bridge_toyh_c6_orthogonality_robustness_guard.py::test_bridge_toyh_c6_orthogonality_nonredundancy_robustness_guard"
+    ]
+  },
+  "items": [
+    {
+      "amplitude_scale": 1.0,
+      "current_control_margin": 1.60950375394,
+      "current_invariance_margin": 9.99994600523e-11,
+      "current_reason_code": "PASS",
+      "failure_reason_code": "phase_threshold_margin_small",
+      "grid_n": 11,
+      "local_phase_shear_alpha": 0.5,
+      "localization_note": "toyh_observable_construction",
+      "near_boundary": true,
+      "pair_status": "fail_pass",
+      "phase_control_margin": -0.0009999999995,
+      "phase_invariance_margin": 9.9994496076e-11,
+      "phase_reason_code": "FAIL_PHASE_CHANNEL_CONTROL_MIN",
+      "probe_id": "stress_phase_control_small_theta_n11",
+      "probe_kind": "phase_control_stress",
+      "signed_margin": -0.0009999999995,
+      "theta": 1e-06
+    },
+    {
+      "amplitude_scale": 1.0,
+      "current_control_margin": -0.000999999991777,
+      "current_invariance_margin": 9.99998200174e-11,
+      "current_reason_code": "FAIL_CURRENT_CHANNEL_CONTROL_MIN",
+      "failure_reason_code": "current_threshold_margin_small",
+      "grid_n": 11,
+      "local_phase_shear_alpha": 1e-06,
+      "localization_note": "toyh_observable_construction",
+      "near_boundary": true,
+      "pair_status": "pass_fail",
+      "phase_control_margin": 0.499,
+      "phase_invariance_margin": 9.99944640251e-11,
+      "phase_reason_code": "PASS",
+      "probe_id": "stress_current_control_small_alpha_n11",
+      "probe_kind": "current_control_stress",
+      "signed_margin": -0.000999999991777,
+      "theta": 1.0471975512
+    }
+  ],
+  "report_id": "BRIDGE_TOYH_C6_ORTHOGONALITY_MISMATCH_REPORT",
+  "schema_version": 1,
+  "source_report": {
+    "artifact_sha256": "258b6a83f16e1edcb05c0ce016b59778415407f79c776a62b5b16a5601ee8cae",
+    "nonredundant": true,
+    "report_id": "BRIDGE_TOYH_C6_ORTHOGONALITY_REPORT",
+    "summary_counts": {
+      "fail_fail": 1,
+      "fail_pass": 1,
+      "pass_fail": 1,
+      "pass_pass": 12
+    }
+  },
+  "summary": {
+    "failure_reason_counts": {
+      "current_threshold_margin_small": 1,
+      "phase_threshold_margin_small": 1
+    },
+    "localization_counts": {
+      "c6_side_constraint": 0,
+      "mixed": 0,
+      "none": 0,
+      "toyh_observable_construction": 2
+    },
+    "n_mismatch": 2,
+    "note": "Mismatch report includes pass_fail and fail_pass probes only.",
+    "pair_counts": {
+      "fail_pass": 1,
+      "pass_fail": 1
+    }
+  },
+  "thresholds": {
+    "current_channel_control_min": 0.001,
+    "near_boundary_eps": 0.001,
+    "phase_channel_control_min": 0.001,
+    "tolerance": 1e-10
+  }
+}

@@ -1,0 +1,6 @@
+diff --git a/State_of_the_Theory.md b/State_of_the_Theory.md
+--- a/State_of_the_Theory.md
++++ b/State_of_the_Theory.md
+@@ -18,1 +18,1 @@
+-Current loop focus: DR-01 -> BR-01 -> CV01 (external anchor: OV-BR-03N source.pdf; audit: OV-SEL-BR-01; pruning deliverable: OV-DR-BR-01; comparator deliverable: OV-CV-01)
++Current loop focus: DR-01 → BR-01 → CV01 (external anchor: OV-BR-03N source.pdf; audit: OV-SEL-BR-01; pruning deliverable: OV-DR-BR-01; comparator deliverable: OV-CV-01)

@@ -1,0 +1,13 @@
+diff --git a/scratch/staged_state.md b/scratch/staged_state_fixed.md
+index c109a5a..a779dcf 100644
+--- a/scratch/staged_state.md
++++ b/scratch/staged_state_fixed.md
+@@ -2969,7 +2969,7 @@ Evidence: formal/python/toe/comparators/cv01_bec_bragg_v0.py; formal/python/test
+ 
+ Scope / limits: Dual-lane comparator surface: v0 integrity-only (`comparator_role=integrity_only`) and v1 discriminative-candidate (`comparator_role=discriminative_candidate`) with cross-artifact residual `abs(c_s-c0)` under `TOE_CV01_TOLERANCE_PROFILE` (`pinned`/`portable`); deterministic records only; typed artifacts only; no external truth claim; blocked when pinned domain artifacts are missing; may be BLOCKED by admissibility manifest (CT01/SYM01/CAUS01).
+ 
+-Dependencies: DR-01, BR-01, OV-DR-BR-01, CT-01, SYM-01, CAUS-01
++Dependencies: DR-01, BR-01, OV-DR-BR-01, DRBR-DOMAIN-01, CT-01, SYM-01, CAUS-01
+ 
+ Notes: CV01 v0 remains frozen as a pipeline-integrity comparator. CV01 v1 is implemented as a separate schema surface with non-tautological cross-artifact speed residual checks, deterministic cross/curved negative controls, and contract-complete blocked-output shape; tolerance policy is explicitly governed by `formal/docs/cv01_numeric_tolerance_policy.md` (`TOE_CV01_TOLERANCE_PROFILE`). Domain pin source is `formal/docs/first_empirical_comparator_domain_bec_bragg.md` with canonical artifacts `formal/external_evidence/bec_bragg_steinhauer_2001/dr01_fit_artifact.json` and `formal/external_evidence/bec_bragg_steinhauer_2001/dr01_fit_artifact_curved.json`.
+ 

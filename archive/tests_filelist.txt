@@ -1,0 +1,137 @@
+Below is the full, structured classification for **tests_filelist.txt**, as requested.
+
+---
+
+# 1) Purpose and Scope
+
+This file appears to be a **human-readable indexing / classification document** for your project’s test suite — not a runnable test module. It is intended to:
+
+- Provide an organized mapping of tests → what they validate.
+- Help prevent hallucinations by making test coverage explicit.
+- Support your “equation inventory / state of the theory” workflow.
+- Serve as a master reference for what is validated vs. planned vs. speculative.
+
+It is not meant to be imported, executed, or collected by pytest.
+
+---
+
+# 2) High-Level Categories
+
+## A) Core Physics / Field Theory Validation
+These tests validate foundational physical relationships, invariants, and equivalence checks in the core field theory.
+
+### A1) Canonical EOM / UCFF / CP–NLSE
+- `tests/test_ucff_core_roundtrip.py`
+- `tests/test_ucff_core_symbolic.py`
+- `tests/test_phase11_ucff_numerics.py`
+- `tests/test_phase13_ucff_second_order.py`
+- `tests/test_phase31_gpe_limit.py`
+- `tests/test_phase31a_gpe_hydro_limit.py`
+
+### A2) Continuity / Conservation / Noether
+- `tests/test_phase2_continuity.py`
+- `tests/test_phase3_conservation.py`
+- `tests/test_phase10_noether.py`
+- `tests/test_phase23_noether.py`
+
+### A3) Dispersion / Manufactured Solutions / Numerics
+- `tests/test_phase2_dispersion.py`
+- `tests/test_phase10_dispersion_numerics.py`
+- `tests/test_phase10_manufactured.py`
+- `tests/test_phase10_manufactured_numerics.py`
+- `tests/test_phase13_second_order_numerics.py`
+- `tests/test_phase13_second_order_symbolic.py`
+
+---
+
+## B) Coherence Functional & Drift Metrics
+These tests validate the coherence functional, drift metrics, bundling, and stability scanning.
+
+### B1) Coherence Core + Metrics
+- `tests/test_coherence_core.py`
+- `tests/test_phase22_coherence.py`
+- `tests/test_phase50_coherence_metrics.py`
+- `tests/test_phase51_coherence_drift_metrics.py`
+- `tests/test_phase52_coherence_stability_functionals.py`
+- `tests/test_phase58_master_coherence_stability.py`
+
+### B2) Output Bundling / Drift Zero / Diagnostics
+- `tests/test_phase54_output_bundling.py`
+- `tests/test_phase60_output_bundling.py`
+
+### B3) Coherence Response & Phenomenology
+- `tests/test_phase33_coherence_response.py`
+- `tests/test_phase47_coherence_phenomenology_maps.py`
+- `tests/test_phase48_coherence_phase_diagram.py`
+- `tests/test_phase55_coherence_soliton_interaction_map.py`
+
+---
+
+## C) Solitons, Vortices, and Interactions
+These tests validate soliton solution structure, stability, collisions, vortex classification, etc.
+
+### C1) Soliton Core
+- `tests/test_phase5_soliton.py`
+- `tests/test_phase11_xi_soliton.py`
+- `tests/test_phase24_dark_soliton_coherence.py`
+- `tests/test_phase26_bright_soliton_coherence.py`
+- `tests/test_phase27_vortex_coherence.py`
+
+### C2) Stability & Interaction Maps
+- `tests/test_phase40_soliton_stability_scan.py`
+- `tests/test_phase44_soliton_interactions.py`
+- `tests/test_phase45_two_soliton_phase_locked.py`
+- `tests/test_phase57_multisoliton_coherence_convergence.py`
+
+---
+
+## D) Geometry / Hydrodynamics / Acoustic Metrics
+These tests validate geometry lifts, hydrodynamic maps, acoustic metric, jacobians, etc.
+
+- `tests/test_phase12_hydro.py`
+- `tests/test_phase21_hydrodynamics.py`
+- `tests/test_phase25_hydro_metric.py`
+- `tests/test_phase29_acoustic_metric_numerics.py`
+- `tests/test_phase34_hydro_metric_numeric.py`
+- `tests/test_phase35_hydro_symbolics.py`
+- `tests/test_phase43_hydro_jacobians.py`
+
+---
+
+## E) Robustness / Stress / Invariance
+These tests ensure the system behaves consistently under perturbations, noise, parameter sweeps, and adversarial cases.
+
+- `tests/test_adversarial_invariance.py`
+- `tests/test_phase10_numerics_robustness.py`
+- `tests/test_phase32_longtime_robustness.py`
+- `tests/test_phase56_invariant_scan.py`
+- `tests/test_noise_channels.py`
+- `tests/test_noise_scan.py`
+
+---
+
+## F) LSDA / Fundamental Theory Suites
+These are the “long suite” system-level validation tests.
+
+- `fundamental_theory/tests/test_lsda_t5_long_time_drift.py`
+- `fundamental_theory/tests/test_lsda_t6_dt_convergence.py`
+- `fundamental_theory/tests/test_lsda_t7_nonlinear_long_time_drift.py`
+- `fundamental_theory/tests/test_lsda_t8_gpu_cpu_consistency.py`
+- `fundamental_theory/tests/test_lsda_t9_param_stress.py`
+- `fundamental_theory/tests/test_lsda_t10_spectral_structure.py`
+
+---
+
+## G) Misc / Structural / Tooling
+- `tests/test_phase1_grammar.py`
+- `tests/test_phase15_cli.py`
+- `tests/test_units_schema.py`
+
+---
+
+# 3) Notes
+
+1. This file is documentation, not a test.
+2. If pytest is collecting it, it should be ignored or excluded, but converting it to UTF-8 prevents collection-time decoding failures when tools read it as text.
+
+---
