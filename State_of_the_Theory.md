@@ -5050,6 +5050,8 @@ NEXT REQUIRED ACTION
 
 State-of-the-Theory dependency DAG enforcement (unknown IDs + cycles), then resume ToE development.
 
+Comparator-expansion block rule (policy): historical baseline retained. Since 2026-02-08, COMP-05 is lifted in scoped form for COMP-03 (UCFF lane only); broader comparator expansion remains policy-gated by explicit governance authorization.
+
 
 
 
