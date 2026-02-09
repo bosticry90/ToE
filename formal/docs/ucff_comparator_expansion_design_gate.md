@@ -3,7 +3,7 @@
 Purpose: define the minimum comparator design contract now, while implementation
 remains blocked until foundational phases are closed.
 
-Status: design-only; no implementation claim, no status upgrade.
+Status: design-gate baseline retained; comparator-expansion block lifted for the COMP-03 UCFF lane on 2026-02-08 after COMP-01 + COMP-02 closure. Broader comparator expansion remains policy-gated.
 
 ## Block Rule
 
@@ -33,3 +33,9 @@ No new comparator implementation is admissible unless all are true:
   - deterministic lock generation,
   - explicit comparability declarations,
   - pruning-table compatibility checks.
+
+## Lift Record
+
+- Lift event: 2026-02-08
+- Authorized implementation scope: COMP-03 UCFF dispersion comparator lane only
+- Preconditions satisfied: COMP-01 + COMP-02 exit criteria
