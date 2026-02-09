@@ -472,6 +472,14 @@ Owner ticket/module: formal/toe_formal/ToeFormal/Variational/SemigroupEvolution.
 Evidence path: formal/toe_formal/ToeFormal/Variational/SemigroupEvolution.lean; formal/toe_formal/ToeFormal/Variational/EvolutionFlowLaw.lean; formal/toe_formal/ToeFormal/Variational/EvolutionGeneratorLaw.lean; formal/toe_formal/ToeFormal/Variational/SemigroupWithGenerator.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean; formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean; formal/toe_formal/ToeFormal/Variational/DeclaredDynamics.lean; formal/python/tests/test_lean_evolution_generator_linkage.py; formal/python/tests/test_lean_declared_dynamics_bridge.py; formal/python/tests/test_lean_variational_core_build_guard.py
 Exit criteria: Satisfied on 2026-02-08 by replacing generator-at-0 assumptions with fixed-step generator laws and routing declared Noether conservation along the same declared evolution surface (structural-only).
 Notes: `FlowLaw`/`GeneratorLaw` linkage contracts are now data-carrying (`Type`) surfaces; flow-law witnesses are exported as definitions and covered by a deterministic Lean compile guard test.
+GapID: COMP-FN-REP32-LINK
+Layer: Lean
+Item: FN-01 Rep32 cubic lane discharge path (tracked + build-verified)
+Status: Implemented (tracked modules + deterministic Lean build guard; structural-only)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/ActionRep32CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep32Pcubic.lean
+Evidence path: formal/toe_formal/ToeFormal/Variational/ActionRep32CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep32Pcubic.lean; formal/python/tests/test_lean_fn01_rep32_build_guard.py; formal/python/tests/test_fn01_candidate_api_enforced.py
+Exit criteria: Rep32 cubic lane and FN-01 Rep32 discharge modules are versioned and compile via deterministic build guard, with FN-01 candidate API front-door import policy enforced.
+Notes: Build guard compiles `ToeFormal.Variational.ActionRep32CubicLane` and `ToeFormal.Variational.DischargeELMatchesFN01Rep32Pcubic`; no analytic/physics truth-claim upgrade.
 
 GapID: PTC-NLSE-V1
 Layer: Physics Execution
