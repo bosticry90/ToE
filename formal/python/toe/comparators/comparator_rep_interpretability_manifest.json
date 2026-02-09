@@ -1,0 +1,22 @@
+{
+  "schema": "Toe/comparator_rep_interpretability_manifest/v1",
+  "policy_token_required_for_cross_rep": "FN_REP_EQ_POLICY_V1",
+  "comparators": {
+    "cv01_bec_bragg_v0": {
+      "module": "formal/python/toe/comparators/cv01_bec_bragg_v0.py",
+      "rep_interpretability_claim": "within_rep_only"
+    },
+    "cv01_bec_bragg_v1": {
+      "module": "formal/python/toe/comparators/cv01_bec_bragg_v1.py",
+      "rep_interpretability_claim": "within_rep_only"
+    },
+    "cv02_bec_bragg_b1_v0": {
+      "module": "formal/python/toe/comparators/cv02_bec_bragg_b1_v0.py",
+      "rep_interpretability_claim": "within_rep_only"
+    },
+    "cv03_ucff_dispersion_v1": {
+      "module": "formal/python/toe/comparators/cv03_ucff_dispersion_v1.py",
+      "rep_interpretability_claim": "within_rep_only"
+    }
+  }
+}

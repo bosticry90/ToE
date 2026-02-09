@@ -1,0 +1,21 @@
+{
+  "schema": "Toe/fn_rep_equivalence_policy/v1",
+  "policy_token": "FN_REP_EQ_POLICY_V1",
+  "representation_relation": {
+    "kind": "quotient",
+    "equivalent_if": [
+      "same declared quotient representative class under pinned map",
+      "global phase redundancy on channels declared phase-invariant"
+    ]
+  },
+  "comparator_policy": {
+    "invariant_channels": [
+      "phase-invariant observables",
+      "quotient-class-preserving diagnostics"
+    ],
+    "discriminative_channels": [
+      "non-equivalence-class-changing residuals",
+      "declared non-invariant diagnostics"
+    ]
+  }
+}

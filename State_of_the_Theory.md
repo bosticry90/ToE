@@ -481,6 +481,15 @@ Evidence path: formal/toe_formal/ToeFormal/Variational/ActionRep32CubicLane.lean
 Exit criteria: Rep32 cubic lane and FN-01 Rep32 discharge modules are versioned and compile via deterministic build guard, with FN-01 candidate API front-door import policy enforced.
 Notes: Build guard compiles `ToeFormal.Variational.ActionRep32CubicLane` and `ToeFormal.Variational.DischargeELMatchesFN01Rep32Pcubic`; no analytic/physics truth-claim upgrade.
 
+GapID: COMP-FN-REP
+Layer: Lean / Governance
+Item: FN representation equivalence/quotient policy + additional representation lane
+Status: In progress (policy token pinned; comparator/rep gate enforced; Rep64 lane build-verified; injectivity/equivalence proofs pending)
+Owner ticket/module: formal/toe_formal/ToeFormal/Variational/FNRepresentationEquivalencePolicy.lean; formal/toe_formal/ToeFormal/Variational/ActionRep64CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep64Pcubic.lean; formal/python/toe/constraints/fn_rep_equivalence_policy.json; formal/python/toe/comparators/comparator_rep_interpretability_manifest.json
+Evidence path: formal/toe_formal/ToeFormal/Variational/FNRepresentationEquivalencePolicy.lean; formal/toe_formal/ToeFormal/Variational/ActionRep64CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep64Pcubic.lean; formal/python/tests/test_lean_fn01_rep64_build_guard.py; formal/python/tests/test_comparator_rep_policy_gate.py; formal/python/toe/constraints/fn_rep_equivalence_policy.json; formal/python/toe/comparators/comparator_rep_interpretability_manifest.json
+Exit criteria: Explicit equivalence/quotient contract is pinned, at least one non-Rep32 FN lane is tracked + build-guarded, and comparator lanes cannot assert cross-representation interpretability without the pinned policy token.
+Notes: Current comparator claims are `within_rep_only`; cross-rep equivalence claims require `FN_REP_EQ_POLICY_V1` and an explicit manifest token.
+
 GapID: PTC-NLSE-V1
 Layer: Physics Execution
 Item: NLSE-like Physics Target Contract v1 front door
