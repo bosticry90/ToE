@@ -39,3 +39,4 @@ No new comparator implementation is admissible unless all are true:
 - Lift event: 2026-02-08
 - Authorized implementation scope: COMP-03 UCFF dispersion comparator lane only
 - Preconditions satisfied: COMP-01 + COMP-02 exit criteria
+- Interpretation record: COMP-05 lift is scoped authorization only (not blanket comparator expansion); state policy clarification committed at `7f43e91`.

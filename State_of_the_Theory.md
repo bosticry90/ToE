@@ -458,6 +458,7 @@ GapID: COMP-05
 Layer: Governance
 Item: Comparator-expansion block rule
 Status: Lifted (2026-02-08; scoped to COMP-03 UCFF lane; broader expansion still policy-gated)
+Scope: COMP-03/OV-CV-03 (UCFF dispersion comparator lane) only.
 Owner ticket/module: State_of_the_Theory.md; formal/docs/ucff_comparator_expansion_design_gate.md
 Evidence path: State_of_the_Theory.md; formal/docs/ucff_comparator_expansion_design_gate.md; formal/python/tests/test_state_doc_comp03_comp05_transition.py
 Exit criteria: Satisfied after COMP-01 + COMP-02 exit criteria were met; lift remains explicit and scoped.

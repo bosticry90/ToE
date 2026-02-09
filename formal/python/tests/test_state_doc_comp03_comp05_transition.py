@@ -60,6 +60,9 @@ def test_comp03_is_implemented_and_comp05_is_lifted():
     status05 = _first_field(comp05, "Status") or ""
     assert "Lifted" in status05
     assert "Active" not in status05
+    scope05 = _first_field(comp05, "Scope") or ""
+    assert "COMP-03/OV-CV-03" in scope05
+    assert "UCFF" in scope05
 
 
 def test_comp_pred_fals_mentions_cv03_ucff_lane():
