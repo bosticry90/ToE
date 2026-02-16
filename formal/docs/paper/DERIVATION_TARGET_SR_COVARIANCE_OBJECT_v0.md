@@ -376,6 +376,20 @@ Cycle-024 theorem-surface frozen-watch reopen-policy lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-025 theorem-surface derivation-promotion gate lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-25-THEOREM-DERIVATION-PROMOTION-GATE-v0`
+- derivation-promotion gate token:
+   - `SR_COVARIANCE_THEOREM_DERIVATION_PROMOTION_GATE_v0: CYCLE25_CRITERIA_LOCKED_NONCLAIM`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE25_v0: THEOREM_DERIVATION_PROMOTION_GATE_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE25_ARTIFACT_v0: sr_covariance_theorem_derivation_promotion_gate_cycle25_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_theorem_derivation_promotion_gate_cycle25_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.

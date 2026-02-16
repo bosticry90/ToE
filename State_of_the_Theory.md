@@ -411,6 +411,12 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE24_v0: THEOREM_FROZEN_WATCH_REOPEN_POLICY_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE24_ARTIFACT_v0: sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0`
 	- artifact: `formal/output/sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0.json`
+- SR cycle-25 theorem-surface derivation-promotion gate lock is pinned:
+	- `TARGET-SR-COV-MICRO-25-THEOREM-DERIVATION-PROMOTION-GATE-v0`
+	- `SR_COVARIANCE_THEOREM_DERIVATION_PROMOTION_GATE_v0: CYCLE25_CRITERIA_LOCKED_NONCLAIM`
+	- `SR_COVARIANCE_PROGRESS_CYCLE25_v0: THEOREM_DERIVATION_PROMOTION_GATE_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE25_ARTIFACT_v0: sr_covariance_theorem_derivation_promotion_gate_cycle25_v0`
+	- artifact: `formal/output/sr_covariance_theorem_derivation_promotion_gate_cycle25_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,

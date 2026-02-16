@@ -238,6 +238,18 @@ Cycle-024 synchronization lock:
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0.json`
 
+Cycle-025 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-25-THEOREM-DERIVATION-PROMOTION-GATE-v0`
+- derivation-promotion gate token:
+  - `SR_COVARIANCE_THEOREM_DERIVATION_PROMOTION_GATE_v0: CYCLE25_CRITERIA_LOCKED_NONCLAIM`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE25_v0: THEOREM_DERIVATION_PROMOTION_GATE_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE25_ARTIFACT_v0: sr_covariance_theorem_derivation_promotion_gate_cycle25_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_derivation_promotion_gate_cycle25_v0.json`
+
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.
 - assumptions and bounded domain limits remain explicit.
