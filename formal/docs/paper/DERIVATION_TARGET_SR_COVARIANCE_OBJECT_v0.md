@@ -139,6 +139,19 @@ Cycle-007 kickoff micro-targets (now pinned):
     - gate posture:
        - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-008 kickoff micro-targets (now pinned):
+1. `TARGET-SR-COV-MICRO-08-KEYB-POLICY-SIGNOFF-BUNDLE-v0`
+    - scope:
+       - planning-only key-B policy signoff bundle lock for SR covariance kickoff stack.
+    - cycle token:
+       - `SR_COVARIANCE_PROGRESS_CYCLE8_v0: KEYB_POLICY_SIGNOFF_BUNDLE_TOKEN_PINNED`
+    - artifact token:
+       - `SR_COVARIANCE_CYCLE8_ARTIFACT_v0: sr_covariance_keyb_policy_signoff_bundle_cycle8_v0`
+    - artifact pointer:
+       - `formal/output/sr_covariance_keyb_policy_signoff_bundle_cycle8_v0.json`
+    - gate posture:
+       - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
