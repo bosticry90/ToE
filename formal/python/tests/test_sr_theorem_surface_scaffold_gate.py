@@ -54,6 +54,13 @@ def test_sr_theorem_surface_target_pins_required_tokens() -> None:
         "SR_COVARIANCE_PROGRESS_CYCLE14_v0: THEOREM_ASSUMPTION_MINIMIZATION_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_assumption_minimization_cycle14_v0",
         "formal/output/sr_covariance_theorem_assumption_minimization_cycle14_v0.json",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_SCAFFOLD_v0: TEMPLATE_PINNED",
+        "SR_COVARIANCE_THEOREM_NEGCTRL_SCAFFOLD_v0: TEMPLATE_PINNED",
+        "TARGET-SR-COV-MICRO-15-THEOREM-ROBUSTNESS-NEGCTRL-SCAFFOLD-v0",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_v0: CYCLE15_SCAFFOLD_LOCKED",
+        "SR_COVARIANCE_PROGRESS_CYCLE15_v0: THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0",
+        "formal/output/sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0.json",
     ]
 
     missing = [token for token in required_tokens if token not in text]
@@ -74,6 +81,12 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "SR_COVARIANCE_THEOREM_ASSUMPTIONS_v0_min1",
         "SR_COVARIANCE_PROGRESS_CYCLE14_v0: THEOREM_ASSUMPTION_MINIMIZATION_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_assumption_minimization_cycle14_v0",
+        "TARGET-SR-COV-MICRO-15-THEOREM-ROBUSTNESS-NEGCTRL-SCAFFOLD-v0",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_SCAFFOLD_v0: TEMPLATE_PINNED",
+        "SR_COVARIANCE_THEOREM_NEGCTRL_SCAFFOLD_v0: TEMPLATE_PINNED",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_v0: CYCLE15_SCAFFOLD_LOCKED",
+        "SR_COVARIANCE_PROGRESS_CYCLE15_v0: THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0",
     ]
     for token in state_tokens:
         assert token in state_text, f"Missing SR theorem-surface token in state: {token}"
@@ -85,6 +98,8 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "formal/docs/paper/ASSUMPTION_REGISTRY_v1.md",
         "SR_COVARIANCE_THEOREM_ASSUMPTION_MINIMIZATION_v0: CYCLE14_MIN1_LOCKED",
         "formal/output/sr_covariance_theorem_assumption_minimization_cycle14_v0.json",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_v0: CYCLE15_SCAFFOLD_LOCKED",
+        "formal/output/sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0.json",
         "Not a full SR dynamics derivation claim and not an inevitability claim.",
     ]
     for token in results_tokens:

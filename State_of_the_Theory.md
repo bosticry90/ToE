@@ -339,6 +339,14 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE14_v0: THEOREM_ASSUMPTION_MINIMIZATION_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_assumption_minimization_cycle14_v0`
 	- artifact: `formal/output/sr_covariance_theorem_assumption_minimization_cycle14_v0.json`
+- SR cycle-15 theorem-surface robustness/negative-control scaffold lock is pinned:
+	- `TARGET-SR-COV-MICRO-15-THEOREM-ROBUSTNESS-NEGCTRL-SCAFFOLD-v0`
+	- `SR_COVARIANCE_THEOREM_ROBUSTNESS_SCAFFOLD_v0: TEMPLATE_PINNED`
+	- `SR_COVARIANCE_THEOREM_NEGCTRL_SCAFFOLD_v0: TEMPLATE_PINNED`
+	- `SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_v0: CYCLE15_SCAFFOLD_LOCKED`
+	- `SR_COVARIANCE_PROGRESS_CYCLE15_v0: THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0`
+	- artifact: `formal/output/sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,

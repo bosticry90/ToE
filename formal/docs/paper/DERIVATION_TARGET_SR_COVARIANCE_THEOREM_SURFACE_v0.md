@@ -47,6 +47,14 @@ Assumption-minimization lock (cycle-014):
 - ledger progress token:
   - `SR_COVARIANCE_THEOREM_ASSUMPTION_LEDGER_PROGRESS_v0: BUNDLE_MIN1_POPULATED`
 
+Robustness/negative-control scaffold lock (cycle-015):
+- robustness scaffold token:
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_SCAFFOLD_v0: TEMPLATE_PINNED`
+- negative-control scaffold token:
+  - `SR_COVARIANCE_THEOREM_NEGCTRL_SCAFFOLD_v0: TEMPLATE_PINNED`
+- combined scaffold token:
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_v0: CYCLE15_SCAFFOLD_LOCKED`
+
 Cycle-013 synchronization lock:
 - micro-target token:
   - `TARGET-SR-COV-MICRO-13-THEOREM-SURFACE-SCAFFOLD-v0`
@@ -68,6 +76,18 @@ Cycle-014 synchronization lock:
   - `SR_COVARIANCE_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_assumption_minimization_cycle14_v0`
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_assumption_minimization_cycle14_v0.json`
+
+Cycle-015 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-15-THEOREM-ROBUSTNESS-NEGCTRL-SCAFFOLD-v0`
+- scaffold lock token:
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_v0: CYCLE15_SCAFFOLD_LOCKED`
+- progress token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE15_v0: THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0.json`
 
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.

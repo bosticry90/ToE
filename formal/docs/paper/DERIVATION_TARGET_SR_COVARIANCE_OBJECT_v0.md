@@ -236,6 +236,20 @@ Cycle-014 theorem-surface assumptions-minimization lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-015 theorem-surface robustness/negative-control scaffold lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-15-THEOREM-ROBUSTNESS-NEGCTRL-SCAFFOLD-v0`
+- scaffold token:
+   - `SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_v0: CYCLE15_SCAFFOLD_LOCKED`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE15_v0: THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
