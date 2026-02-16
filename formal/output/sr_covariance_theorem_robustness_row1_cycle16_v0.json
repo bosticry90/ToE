@@ -1,0 +1,21 @@
+{
+  "artifact_id": "sr_covariance_theorem_robustness_row1_cycle16_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "subtarget_id": "TARGET-SR-COV-THEOREM-SURFACE-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-016",
+  "status": "LOCKED_SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW1_CYCLE16_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "micro_target": "TARGET-SR-COV-MICRO-16-THEOREM-ROBUSTNESS-ROW1-v0",
+  "robustness_row_token": "SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_01_v0: PERTURB_INTERVAL_SCALE_SMALL_PINNED",
+  "robustness_progress_token": "SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ROW_01_POPULATED",
+  "witness_tokens": [
+    "SR_COVARIANCE_PROGRESS_CYCLE16_v0: THEOREM_ROBUSTNESS_ROW1_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE16_ARTIFACT_v0: sr_covariance_theorem_robustness_row1_cycle16_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_theorem_robustness_row1_cycle16_v0"
+  }
+}

@@ -55,6 +55,12 @@ Robustness/negative-control scaffold lock (cycle-015):
 - combined scaffold token:
   - `SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_v0: CYCLE15_SCAFFOLD_LOCKED`
 
+First robustness row lock (cycle-016):
+- robustness row token:
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_01_v0: PERTURB_INTERVAL_SCALE_SMALL_PINNED`
+- robustness progress token:
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ROW_01_POPULATED`
+
 Cycle-013 synchronization lock:
 - micro-target token:
   - `TARGET-SR-COV-MICRO-13-THEOREM-SURFACE-SCAFFOLD-v0`
@@ -88,6 +94,18 @@ Cycle-015 synchronization lock:
   - `SR_COVARIANCE_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0`
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0.json`
+
+Cycle-016 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-16-THEOREM-ROBUSTNESS-ROW1-v0`
+- robustness row token:
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_01_v0: PERTURB_INTERVAL_SCALE_SMALL_PINNED`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE16_v0: THEOREM_ROBUSTNESS_ROW1_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE16_ARTIFACT_v0: sr_covariance_theorem_robustness_row1_cycle16_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_robustness_row1_cycle16_v0.json`
 
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.

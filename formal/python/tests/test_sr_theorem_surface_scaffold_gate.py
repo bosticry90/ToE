@@ -61,6 +61,12 @@ def test_sr_theorem_surface_target_pins_required_tokens() -> None:
         "SR_COVARIANCE_PROGRESS_CYCLE15_v0: THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0",
         "formal/output/sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0.json",
+        "TARGET-SR-COV-MICRO-16-THEOREM-ROBUSTNESS-ROW1-v0",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_01_v0: PERTURB_INTERVAL_SCALE_SMALL_PINNED",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ROW_01_POPULATED",
+        "SR_COVARIANCE_PROGRESS_CYCLE16_v0: THEOREM_ROBUSTNESS_ROW1_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE16_ARTIFACT_v0: sr_covariance_theorem_robustness_row1_cycle16_v0",
+        "formal/output/sr_covariance_theorem_robustness_row1_cycle16_v0.json",
     ]
 
     missing = [token for token in required_tokens if token not in text]
@@ -87,6 +93,11 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_v0: CYCLE15_SCAFFOLD_LOCKED",
         "SR_COVARIANCE_PROGRESS_CYCLE15_v0: THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0",
+        "TARGET-SR-COV-MICRO-16-THEOREM-ROBUSTNESS-ROW1-v0",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_01_v0: PERTURB_INTERVAL_SCALE_SMALL_PINNED",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ROW_01_POPULATED",
+        "SR_COVARIANCE_PROGRESS_CYCLE16_v0: THEOREM_ROBUSTNESS_ROW1_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE16_ARTIFACT_v0: sr_covariance_theorem_robustness_row1_cycle16_v0",
     ]
     for token in state_tokens:
         assert token in state_text, f"Missing SR theorem-surface token in state: {token}"
@@ -100,6 +111,8 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "formal/output/sr_covariance_theorem_assumption_minimization_cycle14_v0.json",
         "SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_v0: CYCLE15_SCAFFOLD_LOCKED",
         "formal/output/sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0.json",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_01_v0: PERTURB_INTERVAL_SCALE_SMALL_PINNED",
+        "formal/output/sr_covariance_theorem_robustness_row1_cycle16_v0.json",
         "Not a full SR dynamics derivation claim and not an inevitability claim.",
     ]
     for token in results_tokens:

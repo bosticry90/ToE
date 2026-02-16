@@ -72,6 +72,9 @@ SR_CYCLE15_ARTIFACT_PATH = (
     / "output"
     / "sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0.json"
 )
+SR_CYCLE16_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "sr_covariance_theorem_robustness_row1_cycle16_v0.json"
+)
 
 
 def _read(path: Path) -> str:
@@ -326,6 +329,23 @@ def test_sr_cycle15_kickoff_tokens_are_pinned_in_target_and_state() -> None:
     for token in required_tokens:
         assert token in target_text, f"Missing SR cycle-15 token in target: {token}"
         assert token in state_text, f"Missing SR cycle-15 token in state: {token}"
+
+
+def test_sr_cycle16_kickoff_tokens_are_pinned_in_target_and_state() -> None:
+    target_text = _read(SR_TARGET_PATH)
+    state_text = _read(STATE_PATH)
+
+    required_tokens = [
+        "TARGET-SR-COV-MICRO-16-THEOREM-ROBUSTNESS-ROW1-v0",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_01_v0: PERTURB_INTERVAL_SCALE_SMALL_PINNED",
+        "SR_COVARIANCE_PROGRESS_CYCLE16_v0: THEOREM_ROBUSTNESS_ROW1_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE16_ARTIFACT_v0: sr_covariance_theorem_robustness_row1_cycle16_v0",
+        "formal/output/sr_covariance_theorem_robustness_row1_cycle16_v0.json",
+    ]
+
+    for token in required_tokens:
+        assert token in target_text, f"Missing SR cycle-16 token in target: {token}"
+        assert token in state_text, f"Missing SR cycle-16 token in state: {token}"
 
 
 def test_sr_cycle1_artifact_schema_and_scope_are_locked() -> None:
@@ -876,3 +896,36 @@ def test_sr_cycle15_artifact_schema_and_scope_are_locked() -> None:
         determinism.get("content_fingerprint")
         == "sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0"
     )
+
+
+def test_sr_cycle16_artifact_schema_and_scope_are_locked() -> None:
+    payload = json.loads(_read(SR_CYCLE16_ARTIFACT_PATH))
+
+    assert payload.get("artifact_id") == "sr_covariance_theorem_robustness_row1_cycle16_v0"
+    assert payload.get("target_id") == "TARGET-SR-COV-PLAN"
+    assert payload.get("subtarget_id") == "TARGET-SR-COV-THEOREM-SURFACE-PLAN"
+    assert payload.get("pillar") == "PILLAR-SR"
+    assert payload.get("cycle") == "CYCLE-016"
+    assert payload.get("status") == "LOCKED_SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW1_CYCLE16_PINNED"
+    assert payload.get("scope") == "planning_only_non_claim_v0"
+    assert payload.get("micro_target") == "TARGET-SR-COV-MICRO-16-THEOREM-ROBUSTNESS-ROW1-v0"
+    assert (
+        payload.get("robustness_row_token")
+        == "SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_01_v0: PERTURB_INTERVAL_SCALE_SMALL_PINNED"
+    )
+    assert (
+        payload.get("robustness_progress_token")
+        == "SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ROW_01_POPULATED"
+    )
+
+    witness_tokens = payload.get("witness_tokens")
+    assert isinstance(witness_tokens, list) and witness_tokens, (
+        "witness_tokens must be a non-empty list in SR cycle-16 artifact."
+    )
+    assert "SR_COVARIANCE_PROGRESS_CYCLE16_v0: THEOREM_ROBUSTNESS_ROW1_TOKEN_PINNED" in witness_tokens
+
+    determinism = payload.get("determinism")
+    assert isinstance(determinism, dict), "determinism block is required."
+    assert determinism.get("schema_version") == "v0"
+    assert determinism.get("fingerprint_method") == "literal-json-lock"
+    assert determinism.get("content_fingerprint") == "sr_covariance_theorem_robustness_row1_cycle16_v0"
