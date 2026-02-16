@@ -264,6 +264,20 @@ Cycle-016 theorem-surface first robustness-row lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-017 theorem-surface first negative-control row lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-17-THEOREM-NEGCTRL-ROW1-v0`
+- negative-control row token:
+   - `SR_COVARIANCE_THEOREM_NEGCTRL_ROW_01_v0: BROKEN_INTERVAL_INVARIANCE_ASSUMPTION_PINNED`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE17_v0: THEOREM_NEGCTRL_ROW1_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE17_ARTIFACT_v0: sr_covariance_theorem_negctrl_row1_cycle17_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_theorem_negctrl_row1_cycle17_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
