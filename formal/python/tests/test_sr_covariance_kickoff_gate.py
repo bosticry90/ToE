@@ -183,6 +183,12 @@ SR_CYCLE37_ARTIFACT_PATH = (
     / "output"
     / "sr_covariance_canonical_equivalence_theorem_surface_lock_cycle37_v0.json"
 )
+SR_CYCLE38_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "sr_covariance_canonical_equivalence_theorem_object_linkage_lock_cycle38_v0.json"
+)
 
 
 def _read(path: Path) -> str:
@@ -864,6 +870,31 @@ def test_sr_cycle37_kickoff_tokens_are_pinned_in_target_and_state() -> None:
     for token in required_tokens:
         assert token in target_text, f"Missing SR cycle-37 token in target: {token}"
         assert token in state_text, f"Missing SR cycle-37 token in state: {token}"
+
+
+def test_sr_cycle38_kickoff_tokens_are_pinned_in_target_and_state() -> None:
+    target_text = _read(SR_TARGET_PATH)
+    state_text = _read(STATE_PATH)
+
+    required_tokens = [
+        "TARGET-SR-COV-MICRO-38-CANONICAL-EQUIVALENCE-THEOREM-OBJECT-LINKAGE-LOCK-v0",
+        "SR_COVARIANCE_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_LOCK_v0: CYCLE38_PHASE2_THEOREM_OBJECT_LINKAGE_PINNED_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM",
+        "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+        "formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean",
+        "SR_COVARIANCE_PROGRESS_CYCLE38_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE38_ARTIFACT_v0: sr_covariance_canonical_equivalence_theorem_object_linkage_lock_cycle38_v0",
+        "formal/output/sr_covariance_canonical_equivalence_theorem_object_linkage_lock_cycle38_v0.json",
+    ]
+
+    for token in required_tokens:
+        assert token in target_text, f"Missing SR cycle-38 token in target: {token}"
+        assert token in state_text, f"Missing SR cycle-38 token in state: {token}"
 
 
 def test_sr_cycle1_artifact_schema_and_scope_are_locked() -> None:
@@ -2404,4 +2435,72 @@ def test_sr_cycle37_artifact_schema_and_scope_are_locked() -> None:
     assert (
         determinism.get("content_fingerprint")
         == "sr_covariance_canonical_equivalence_theorem_surface_lock_cycle37_v0"
+    )
+
+
+def test_sr_cycle38_artifact_schema_and_scope_are_locked() -> None:
+    payload = json.loads(_read(SR_CYCLE38_ARTIFACT_PATH))
+
+    assert payload.get("artifact_id") == "sr_covariance_canonical_equivalence_theorem_object_linkage_lock_cycle38_v0"
+    assert payload.get("target_id") == "TARGET-SR-COV-PLAN"
+    assert payload.get("subtarget_id") == "TARGET-SR-COV-THEOREM-SURFACE-PLAN"
+    assert payload.get("derivation_gate_target_id") == "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN"
+    assert payload.get("enforcement_roadmap_target_id") == "TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN"
+    assert payload.get("pillar") == "PILLAR-SR"
+    assert payload.get("cycle") == "CYCLE-038"
+    assert payload.get("status") == "LOCKED_SR_COVARIANCE_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_LOCK_CYCLE38_PINNED"
+    assert payload.get("scope") == "planning_only_non_claim_v0"
+    assert (
+        payload.get("micro_target")
+        == "TARGET-SR-COV-MICRO-38-CANONICAL-EQUIVALENCE-THEOREM-OBJECT-LINKAGE-LOCK-v0"
+    )
+    assert (
+        payload.get("canonical_equivalence_theorem_object_linkage_lock_token")
+        == "SR_COVARIANCE_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_LOCK_v0: CYCLE38_PHASE2_THEOREM_OBJECT_LINKAGE_PINNED_NONCLAIM"
+    )
+    assert (
+        payload.get("phase1_completion_status_token")
+        == "SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM"
+    )
+    assert (
+        payload.get("phase2_entry_status_token")
+        == "SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM"
+    )
+    assert (
+        payload.get("phase2_canonical_equivalence_surface_status_token")
+        == "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM"
+    )
+    assert (
+        payload.get("phase2_canonical_equivalence_theorem_surface_status_token")
+        == "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM"
+    )
+    assert (
+        payload.get("phase2_canonical_equivalence_theorem_object_linkage_status_token")
+        == "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM"
+    )
+    assert (
+        payload.get("phase1_row_lock_progress_token")
+        == "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM"
+    )
+    assert (
+        payload.get("lean_module")
+        == "formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean"
+    )
+
+    witness_tokens = payload.get("witness_tokens")
+    assert isinstance(witness_tokens, list) and witness_tokens, (
+        "witness_tokens must be a non-empty list in SR cycle-38 artifact."
+    )
+    assert (
+        "SR_COVARIANCE_PROGRESS_CYCLE38_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_LOCK_TOKEN_PINNED"
+        in witness_tokens
+    )
+
+    determinism = payload.get("determinism")
+    assert isinstance(determinism, dict), "determinism block is required."
+    assert determinism.get("schema_version") == "v0"
+    assert determinism.get("fingerprint_method") == "literal-json-lock"
+    assert (
+        determinism.get("content_fingerprint")
+        == "sr_covariance_canonical_equivalence_theorem_object_linkage_lock_cycle38_v0"
     )

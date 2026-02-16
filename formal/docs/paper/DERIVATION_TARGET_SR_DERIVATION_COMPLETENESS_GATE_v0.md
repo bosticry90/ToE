@@ -283,6 +283,33 @@ Non-claim boundary:
 - artifact pointer:
   - `formal/output/sr_covariance_canonical_equivalence_theorem_surface_lock_cycle37_v0.json`
 
+## Cycle-038 Phase-II Canonical-Equivalence Theorem-Object Linkage Lock
+
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-38-CANONICAL-EQUIVALENCE-THEOREM-OBJECT-LINKAGE-LOCK-v0`
+- gate token:
+  - `SR_COVARIANCE_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_LOCK_v0: CYCLE38_PHASE2_THEOREM_OBJECT_LINKAGE_PINNED_NONCLAIM`
+- phase-I completion status token:
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+- phase-II entry status token:
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+- phase-II canonical-equivalence surface status token:
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-II canonical-equivalence theorem-surface status token:
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-II canonical-equivalence theorem-object linkage status token:
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-I row-lock progress token:
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+- roadmap pointer:
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+- progress token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE38_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_LOCK_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE38_ARTIFACT_v0: sr_covariance_canonical_equivalence_theorem_object_linkage_lock_cycle38_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_canonical_equivalence_theorem_object_linkage_lock_cycle38_v0.json`
+
 Status:
 - `SCAFFOLD_PINNED_v0_NONCLAIM`
 - discharge status remains `OPEN` until theorem objects and closure gates are explicitly discharged.
