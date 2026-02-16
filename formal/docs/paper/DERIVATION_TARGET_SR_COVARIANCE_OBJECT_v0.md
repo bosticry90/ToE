@@ -407,6 +407,20 @@ Cycle-026 SR derivation-completeness gate scaffold lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-027 theorem-object implementation gate lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-27-THEOREM-OBJECT-IMPLEMENTATION-GATE-v0`
+- theorem-object implementation gate token:
+   - `SR_COVARIANCE_THEOREM_OBJECT_IMPLEMENTATION_GATE_v0: CYCLE27_BASE_OBJECT_SET_PINNED_NONCLAIM`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE27_v0: THEOREM_OBJECT_IMPLEMENTATION_GATE_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE27_ARTIFACT_v0: sr_covariance_theorem_object_implementation_gate_cycle27_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_theorem_object_implementation_gate_cycle27_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.

@@ -128,6 +128,11 @@ def test_sr_theorem_surface_target_pins_required_tokens() -> None:
         "SR_COVARIANCE_PROGRESS_CYCLE26_v0: DERIVATION_COMPLETENESS_GATE_SCAFFOLD_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE26_ARTIFACT_v0: sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0",
         "formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json",
+        "TARGET-SR-COV-MICRO-27-THEOREM-OBJECT-IMPLEMENTATION-GATE-v0",
+        "SR_COVARIANCE_THEOREM_OBJECT_IMPLEMENTATION_GATE_v0: CYCLE27_BASE_OBJECT_SET_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE27_v0: THEOREM_OBJECT_IMPLEMENTATION_GATE_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE27_ARTIFACT_v0: sr_covariance_theorem_object_implementation_gate_cycle27_v0",
+        "formal/output/sr_covariance_theorem_object_implementation_gate_cycle27_v0.json",
     ]
 
     missing = [token for token in required_tokens if token not in text]
@@ -210,6 +215,10 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "SR_DERIVATION_COMPLETENESS_GATE_v0: CYCLE26_SCAFFOLD_PINNED_NONCLAIM",
         "SR_COVARIANCE_PROGRESS_CYCLE26_v0: DERIVATION_COMPLETENESS_GATE_SCAFFOLD_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE26_ARTIFACT_v0: sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0",
+        "TARGET-SR-COV-MICRO-27-THEOREM-OBJECT-IMPLEMENTATION-GATE-v0",
+        "SR_COVARIANCE_THEOREM_OBJECT_IMPLEMENTATION_GATE_v0: CYCLE27_BASE_OBJECT_SET_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE27_v0: THEOREM_OBJECT_IMPLEMENTATION_GATE_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE27_ARTIFACT_v0: sr_covariance_theorem_object_implementation_gate_cycle27_v0",
     ]
     for token in state_tokens:
         assert token in state_text, f"Missing SR theorem-surface token in state: {token}"
@@ -246,6 +255,8 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "SR_DERIVATION_COMPLETENESS_GATE_v0: CYCLE26_SCAFFOLD_PINNED_NONCLAIM",
         "formal/docs/paper/DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md",
         "formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json",
+        "SR_COVARIANCE_THEOREM_OBJECT_IMPLEMENTATION_GATE_v0: CYCLE27_BASE_OBJECT_SET_PINNED_NONCLAIM",
+        "formal/output/sr_covariance_theorem_object_implementation_gate_cycle27_v0.json",
         "Not a full SR dynamics derivation claim and not an inevitability claim.",
     ]
     for token in results_tokens:

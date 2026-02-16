@@ -266,6 +266,18 @@ Cycle-026 synchronization lock:
 - artifact pointer:
   - `formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json`
 
+Cycle-027 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-27-THEOREM-OBJECT-IMPLEMENTATION-GATE-v0`
+- theorem-object implementation gate token:
+  - `SR_COVARIANCE_THEOREM_OBJECT_IMPLEMENTATION_GATE_v0: CYCLE27_BASE_OBJECT_SET_PINNED_NONCLAIM`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE27_v0: THEOREM_OBJECT_IMPLEMENTATION_GATE_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE27_ARTIFACT_v0: sr_covariance_theorem_object_implementation_gate_cycle27_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_object_implementation_gate_cycle27_v0.json`
+
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.
 - assumptions and bounded domain limits remain explicit.

@@ -425,6 +425,12 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE26_v0: DERIVATION_COMPLETENESS_GATE_SCAFFOLD_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE26_ARTIFACT_v0: sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0`
 	- artifact: `formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json`
+- SR cycle-27 theorem-object implementation gate lock is pinned:
+	- `TARGET-SR-COV-MICRO-27-THEOREM-OBJECT-IMPLEMENTATION-GATE-v0`
+	- `SR_COVARIANCE_THEOREM_OBJECT_IMPLEMENTATION_GATE_v0: CYCLE27_BASE_OBJECT_SET_PINNED_NONCLAIM`
+	- `SR_COVARIANCE_PROGRESS_CYCLE27_v0: THEOREM_OBJECT_IMPLEMENTATION_GATE_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE27_ARTIFACT_v0: sr_covariance_theorem_object_implementation_gate_cycle27_v0`
+	- artifact: `formal/output/sr_covariance_theorem_object_implementation_gate_cycle27_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,

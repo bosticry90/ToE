@@ -65,6 +65,19 @@ Non-claim boundary:
 - artifact pointer:
   - `formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json`
 
+## Cycle-027 Theorem-Object Implementation Gate Lock
+
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-27-THEOREM-OBJECT-IMPLEMENTATION-GATE-v0`
+- gate token:
+  - `SR_COVARIANCE_THEOREM_OBJECT_IMPLEMENTATION_GATE_v0: CYCLE27_BASE_OBJECT_SET_PINNED_NONCLAIM`
+- progress token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE27_v0: THEOREM_OBJECT_IMPLEMENTATION_GATE_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE27_ARTIFACT_v0: sr_covariance_theorem_object_implementation_gate_cycle27_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_object_implementation_gate_cycle27_v0.json`
+
 Status:
 - `SCAFFOLD_PINNED_v0_NONCLAIM`
 - discharge status remains `OPEN` until theorem objects and closure gates are explicitly discharged.
