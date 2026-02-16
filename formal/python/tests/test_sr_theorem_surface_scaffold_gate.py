@@ -133,6 +133,12 @@ def test_sr_theorem_surface_target_pins_required_tokens() -> None:
         "SR_COVARIANCE_PROGRESS_CYCLE27_v0: THEOREM_OBJECT_IMPLEMENTATION_GATE_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE27_ARTIFACT_v0: sr_covariance_theorem_object_implementation_gate_cycle27_v0",
         "formal/output/sr_covariance_theorem_object_implementation_gate_cycle27_v0.json",
+        "TARGET-SR-COV-MICRO-28-THEOREM-OBJECT-DISCHARGE-STUB-v0",
+        "SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_STUB_v0: CYCLE28_BASE_THEOREM_SIGNATURES_PINNED_NONCLAIM",
+        "formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean",
+        "SR_COVARIANCE_PROGRESS_CYCLE28_v0: THEOREM_OBJECT_DISCHARGE_STUB_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE28_ARTIFACT_v0: sr_covariance_theorem_object_discharge_stub_cycle28_v0",
+        "formal/output/sr_covariance_theorem_object_discharge_stub_cycle28_v0.json",
     ]
 
     missing = [token for token in required_tokens if token not in text]
@@ -219,6 +225,11 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "SR_COVARIANCE_THEOREM_OBJECT_IMPLEMENTATION_GATE_v0: CYCLE27_BASE_OBJECT_SET_PINNED_NONCLAIM",
         "SR_COVARIANCE_PROGRESS_CYCLE27_v0: THEOREM_OBJECT_IMPLEMENTATION_GATE_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE27_ARTIFACT_v0: sr_covariance_theorem_object_implementation_gate_cycle27_v0",
+        "TARGET-SR-COV-MICRO-28-THEOREM-OBJECT-DISCHARGE-STUB-v0",
+        "SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_STUB_v0: CYCLE28_BASE_THEOREM_SIGNATURES_PINNED_NONCLAIM",
+        "formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean",
+        "SR_COVARIANCE_PROGRESS_CYCLE28_v0: THEOREM_OBJECT_DISCHARGE_STUB_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE28_ARTIFACT_v0: sr_covariance_theorem_object_discharge_stub_cycle28_v0",
     ]
     for token in state_tokens:
         assert token in state_text, f"Missing SR theorem-surface token in state: {token}"
@@ -257,6 +268,9 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json",
         "SR_COVARIANCE_THEOREM_OBJECT_IMPLEMENTATION_GATE_v0: CYCLE27_BASE_OBJECT_SET_PINNED_NONCLAIM",
         "formal/output/sr_covariance_theorem_object_implementation_gate_cycle27_v0.json",
+        "SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_STUB_v0: CYCLE28_BASE_THEOREM_SIGNATURES_PINNED_NONCLAIM",
+        "formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean",
+        "formal/output/sr_covariance_theorem_object_discharge_stub_cycle28_v0.json",
         "Not a full SR dynamics derivation claim and not an inevitability claim.",
     ]
     for token in results_tokens:

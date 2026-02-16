@@ -78,6 +78,21 @@ Non-claim boundary:
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_object_implementation_gate_cycle27_v0.json`
 
+## Cycle-028 Theorem-Object Discharge Stub Lock
+
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-28-THEOREM-OBJECT-DISCHARGE-STUB-v0`
+- gate token:
+  - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_STUB_v0: CYCLE28_BASE_THEOREM_SIGNATURES_PINNED_NONCLAIM`
+- lean module pointer:
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+- progress token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE28_v0: THEOREM_OBJECT_DISCHARGE_STUB_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE28_ARTIFACT_v0: sr_covariance_theorem_object_discharge_stub_cycle28_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_object_discharge_stub_cycle28_v0.json`
+
 Status:
 - `SCAFFOLD_PINNED_v0_NONCLAIM`
 - discharge status remains `OPEN` until theorem objects and closure gates are explicitly discharged.

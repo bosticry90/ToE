@@ -431,6 +431,13 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE27_v0: THEOREM_OBJECT_IMPLEMENTATION_GATE_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE27_ARTIFACT_v0: sr_covariance_theorem_object_implementation_gate_cycle27_v0`
 	- artifact: `formal/output/sr_covariance_theorem_object_implementation_gate_cycle27_v0.json`
+- SR cycle-28 theorem-object discharge stub lock is pinned:
+	- `TARGET-SR-COV-MICRO-28-THEOREM-OBJECT-DISCHARGE-STUB-v0`
+	- `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_STUB_v0: CYCLE28_BASE_THEOREM_SIGNATURES_PINNED_NONCLAIM`
+	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+	- `SR_COVARIANCE_PROGRESS_CYCLE28_v0: THEOREM_OBJECT_DISCHARGE_STUB_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE28_ARTIFACT_v0: sr_covariance_theorem_object_discharge_stub_cycle28_v0`
+	- artifact: `formal/output/sr_covariance_theorem_object_discharge_stub_cycle28_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,
