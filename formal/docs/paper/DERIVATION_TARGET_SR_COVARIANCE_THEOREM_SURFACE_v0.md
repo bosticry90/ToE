@@ -67,6 +67,12 @@ First negative-control row lock (cycle-017):
 - negative-control progress token:
   - `SR_COVARIANCE_THEOREM_NEGCTRL_PROGRESS_v0: ROW_01_POPULATED`
 
+Second robustness row lock (cycle-018):
+- robustness row token:
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_02_v0: PERTURB_VELOCITY_COMPOSITION_SMALL_PINNED`
+- robustness progress token:
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ROW_02_POPULATED`
+
 Cycle-013 synchronization lock:
 - micro-target token:
   - `TARGET-SR-COV-MICRO-13-THEOREM-SURFACE-SCAFFOLD-v0`
@@ -124,6 +130,18 @@ Cycle-017 synchronization lock:
   - `SR_COVARIANCE_CYCLE17_ARTIFACT_v0: sr_covariance_theorem_negctrl_row1_cycle17_v0`
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_negctrl_row1_cycle17_v0.json`
+
+Cycle-018 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-18-THEOREM-ROBUSTNESS-ROW2-v0`
+- robustness row token:
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_02_v0: PERTURB_VELOCITY_COMPOSITION_SMALL_PINNED`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE18_v0: THEOREM_ROBUSTNESS_ROW2_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE18_ARTIFACT_v0: sr_covariance_theorem_robustness_row2_cycle18_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_robustness_row2_cycle18_v0.json`
 
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.

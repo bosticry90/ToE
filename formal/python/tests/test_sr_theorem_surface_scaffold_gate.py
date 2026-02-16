@@ -73,6 +73,12 @@ def test_sr_theorem_surface_target_pins_required_tokens() -> None:
         "SR_COVARIANCE_PROGRESS_CYCLE17_v0: THEOREM_NEGCTRL_ROW1_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE17_ARTIFACT_v0: sr_covariance_theorem_negctrl_row1_cycle17_v0",
         "formal/output/sr_covariance_theorem_negctrl_row1_cycle17_v0.json",
+        "TARGET-SR-COV-MICRO-18-THEOREM-ROBUSTNESS-ROW2-v0",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_02_v0: PERTURB_VELOCITY_COMPOSITION_SMALL_PINNED",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ROW_02_POPULATED",
+        "SR_COVARIANCE_PROGRESS_CYCLE18_v0: THEOREM_ROBUSTNESS_ROW2_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE18_ARTIFACT_v0: sr_covariance_theorem_robustness_row2_cycle18_v0",
+        "formal/output/sr_covariance_theorem_robustness_row2_cycle18_v0.json",
     ]
 
     missing = [token for token in required_tokens if token not in text]
@@ -109,6 +115,11 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "SR_COVARIANCE_THEOREM_NEGCTRL_PROGRESS_v0: ROW_01_POPULATED",
         "SR_COVARIANCE_PROGRESS_CYCLE17_v0: THEOREM_NEGCTRL_ROW1_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE17_ARTIFACT_v0: sr_covariance_theorem_negctrl_row1_cycle17_v0",
+        "TARGET-SR-COV-MICRO-18-THEOREM-ROBUSTNESS-ROW2-v0",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_02_v0: PERTURB_VELOCITY_COMPOSITION_SMALL_PINNED",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ROW_02_POPULATED",
+        "SR_COVARIANCE_PROGRESS_CYCLE18_v0: THEOREM_ROBUSTNESS_ROW2_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE18_ARTIFACT_v0: sr_covariance_theorem_robustness_row2_cycle18_v0",
     ]
     for token in state_tokens:
         assert token in state_text, f"Missing SR theorem-surface token in state: {token}"
@@ -126,6 +137,8 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "formal/output/sr_covariance_theorem_robustness_row1_cycle16_v0.json",
         "SR_COVARIANCE_THEOREM_NEGCTRL_ROW_01_v0: BROKEN_INTERVAL_INVARIANCE_ASSUMPTION_PINNED",
         "formal/output/sr_covariance_theorem_negctrl_row1_cycle17_v0.json",
+        "SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_02_v0: PERTURB_VELOCITY_COMPOSITION_SMALL_PINNED",
+        "formal/output/sr_covariance_theorem_robustness_row2_cycle18_v0.json",
         "Not a full SR dynamics derivation claim and not an inevitability claim.",
     ]
     for token in results_tokens:
