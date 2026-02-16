@@ -87,6 +87,19 @@ Cycle-003 kickoff micro-targets (now pinned):
     - gate posture:
        - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-004 kickoff micro-targets (now pinned):
+1. `TARGET-SR-COV-MICRO-04-VELOCITY-COMPOSITION-PLACEHOLDER-v0`
+    - scope:
+       - planning-only placeholder for typed velocity-composition/kinematics contract surface.
+    - cycle token:
+       - `SR_COVARIANCE_PROGRESS_CYCLE4_v0: VELOCITY_COMPOSITION_PLACEHOLDER_TOKEN_PINNED`
+    - artifact token:
+       - `SR_COVARIANCE_CYCLE4_ARTIFACT_v0: sr_covariance_velocity_composition_placeholder_cycle4_v0`
+    - artifact pointer:
+       - `formal/output/sr_covariance_velocity_composition_placeholder_cycle4_v0.json`
+    - gate posture:
+       - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.

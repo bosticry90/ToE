@@ -27,6 +27,9 @@ SR_CYCLE2_ARTIFACT_PATH = (
 SR_CYCLE3_ARTIFACT_PATH = (
     REPO_ROOT / "formal" / "output" / "sr_covariance_lorentz_interval_placeholder_cycle3_v0.json"
 )
+SR_CYCLE4_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "sr_covariance_velocity_composition_placeholder_cycle4_v0.json"
+)
 
 
 def _read(path: Path) -> str:
@@ -80,6 +83,22 @@ def test_sr_cycle3_kickoff_tokens_are_pinned_in_target_and_state() -> None:
     for token in required_tokens:
         assert token in target_text, f"Missing SR cycle-3 token in target: {token}"
         assert token in state_text, f"Missing SR cycle-3 token in state: {token}"
+
+
+def test_sr_cycle4_kickoff_tokens_are_pinned_in_target_and_state() -> None:
+    target_text = _read(SR_TARGET_PATH)
+    state_text = _read(STATE_PATH)
+
+    required_tokens = [
+        "TARGET-SR-COV-MICRO-04-VELOCITY-COMPOSITION-PLACEHOLDER-v0",
+        "SR_COVARIANCE_PROGRESS_CYCLE4_v0: VELOCITY_COMPOSITION_PLACEHOLDER_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE4_ARTIFACT_v0: sr_covariance_velocity_composition_placeholder_cycle4_v0",
+        "formal/output/sr_covariance_velocity_composition_placeholder_cycle4_v0.json",
+    ]
+
+    for token in required_tokens:
+        assert token in target_text, f"Missing SR cycle-4 token in target: {token}"
+        assert token in state_text, f"Missing SR cycle-4 token in state: {token}"
 
 
 def test_sr_cycle1_artifact_schema_and_scope_are_locked() -> None:
@@ -151,4 +170,30 @@ def test_sr_cycle3_artifact_schema_and_scope_are_locked() -> None:
     assert (
         determinism.get("content_fingerprint")
         == "sr_covariance_lorentz_interval_placeholder_cycle3_v0"
+    )
+
+
+def test_sr_cycle4_artifact_schema_and_scope_are_locked() -> None:
+    payload = json.loads(_read(SR_CYCLE4_ARTIFACT_PATH))
+
+    assert payload.get("artifact_id") == "sr_covariance_velocity_composition_placeholder_cycle4_v0"
+    assert payload.get("target_id") == "TARGET-SR-COV-PLAN"
+    assert payload.get("pillar") == "PILLAR-SR"
+    assert payload.get("cycle") == "CYCLE-004"
+    assert payload.get("micro_target") == "TARGET-SR-COV-MICRO-04-VELOCITY-COMPOSITION-PLACEHOLDER-v0"
+    assert payload.get("status") == "LOCKED_VELOCITY_COMPOSITION_PLACEHOLDER_PINNED"
+    assert payload.get("scope") == "planning_only_non_claim_v0"
+
+    witness_tokens = payload.get("witness_tokens")
+    assert isinstance(witness_tokens, list) and witness_tokens, (
+        "witness_tokens must be a non-empty list in SR cycle-4 artifact."
+    )
+
+    determinism = payload.get("determinism")
+    assert isinstance(determinism, dict), "determinism block is required."
+    assert determinism.get("schema_version") == "v0"
+    assert determinism.get("fingerprint_method") == "literal-json-lock"
+    assert (
+        determinism.get("content_fingerprint")
+        == "sr_covariance_velocity_composition_placeholder_cycle4_v0"
     )
