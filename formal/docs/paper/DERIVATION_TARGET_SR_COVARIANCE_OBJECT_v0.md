@@ -194,6 +194,20 @@ Cycle-011 adjudication posture transition (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-012 post-adjudication contract-freeze lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-12-POST-ADJUDICATION-CONTRACT-FREEZE-v0`
+- contract-freeze token:
+   - `SR_COVARIANCE_CONTRACT_FREEZE_v0: CYCLE12_POST_ADJUDICATION_CONTRACT_LOCKED`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE12_v0: POST_ADJUDICATION_CONTRACT_FREEZE_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE12_ARTIFACT_v0: sr_covariance_post_adjudication_contract_freeze_cycle12_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_post_adjudication_contract_freeze_cycle12_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.

@@ -51,6 +51,12 @@ SR_CYCLE10_ARTIFACT_PATH = (
 SR_CYCLE11_ARTIFACT_PATH = (
     REPO_ROOT / "formal" / "output" / "sr_covariance_adjudication_posture_cycle11_v0.json"
 )
+SR_CYCLE12_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "sr_covariance_post_adjudication_contract_freeze_cycle12_v0.json"
+)
 
 
 def _read(path: Path) -> str:
@@ -237,6 +243,23 @@ def test_sr_cycle11_kickoff_tokens_are_pinned_in_target_and_state() -> None:
     for token in required_tokens:
         assert token in target_text, f"Missing SR cycle-11 token in target: {token}"
         assert token in state_text, f"Missing SR cycle-11 token in state: {token}"
+
+
+def test_sr_cycle12_kickoff_tokens_are_pinned_in_target_and_state() -> None:
+    target_text = _read(SR_TARGET_PATH)
+    state_text = _read(STATE_PATH)
+
+    required_tokens = [
+        "TARGET-SR-COV-MICRO-12-POST-ADJUDICATION-CONTRACT-FREEZE-v0",
+        "SR_COVARIANCE_CONTRACT_FREEZE_v0: CYCLE12_POST_ADJUDICATION_CONTRACT_LOCKED",
+        "SR_COVARIANCE_PROGRESS_CYCLE12_v0: POST_ADJUDICATION_CONTRACT_FREEZE_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE12_ARTIFACT_v0: sr_covariance_post_adjudication_contract_freeze_cycle12_v0",
+        "formal/output/sr_covariance_post_adjudication_contract_freeze_cycle12_v0.json",
+    ]
+
+    for token in required_tokens:
+        assert token in target_text, f"Missing SR cycle-12 token in target: {token}"
+        assert token in state_text, f"Missing SR cycle-12 token in state: {token}"
 
 
 def test_sr_cycle1_artifact_schema_and_scope_are_locked() -> None:
@@ -614,4 +637,47 @@ def test_sr_cycle11_artifact_schema_and_scope_are_locked() -> None:
     assert (
         determinism.get("content_fingerprint")
         == "sr_covariance_adjudication_posture_cycle11_v0"
+    )
+
+
+def test_sr_cycle12_artifact_schema_and_scope_are_locked() -> None:
+    payload = json.loads(_read(SR_CYCLE12_ARTIFACT_PATH))
+
+    assert (
+        payload.get("artifact_id")
+        == "sr_covariance_post_adjudication_contract_freeze_cycle12_v0"
+    )
+    assert payload.get("target_id") == "TARGET-SR-COV-PLAN"
+    assert payload.get("pillar") == "PILLAR-SR"
+    assert payload.get("cycle") == "CYCLE-012"
+    assert (
+        payload.get("status")
+        == "LOCKED_SR_COVARIANCE_POST_ADJUDICATION_CONTRACT_FREEZE_CYCLE12_PINNED"
+    )
+    assert payload.get("scope") == "planning_only_non_claim_v0"
+    assert (
+        payload.get("micro_target")
+        == "TARGET-SR-COV-MICRO-12-POST-ADJUDICATION-CONTRACT-FREEZE-v0"
+    )
+    assert (
+        payload.get("contract_freeze_token")
+        == "SR_COVARIANCE_CONTRACT_FREEZE_v0: CYCLE12_POST_ADJUDICATION_CONTRACT_LOCKED"
+    )
+
+    witness_tokens = payload.get("witness_tokens")
+    assert isinstance(witness_tokens, list) and witness_tokens, (
+        "witness_tokens must be a non-empty list in SR cycle-12 artifact."
+    )
+    assert (
+        "SR_COVARIANCE_PROGRESS_CYCLE12_v0: POST_ADJUDICATION_CONTRACT_FREEZE_TOKEN_PINNED"
+        in witness_tokens
+    )
+
+    determinism = payload.get("determinism")
+    assert isinstance(determinism, dict), "determinism block is required."
+    assert determinism.get("schema_version") == "v0"
+    assert determinism.get("fingerprint_method") == "literal-json-lock"
+    assert (
+        determinism.get("content_fingerprint")
+        == "sr_covariance_post_adjudication_contract_freeze_cycle12_v0"
     )

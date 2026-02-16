@@ -1,0 +1,19 @@
+{
+  "artifact_id": "sr_covariance_post_adjudication_contract_freeze_cycle12_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-012",
+  "status": "LOCKED_SR_COVARIANCE_POST_ADJUDICATION_CONTRACT_FREEZE_CYCLE12_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "micro_target": "TARGET-SR-COV-MICRO-12-POST-ADJUDICATION-CONTRACT-FREEZE-v0",
+  "contract_freeze_token": "SR_COVARIANCE_CONTRACT_FREEZE_v0: CYCLE12_POST_ADJUDICATION_CONTRACT_LOCKED",
+  "witness_tokens": [
+    "SR_COVARIANCE_PROGRESS_CYCLE12_v0: POST_ADJUDICATION_CONTRACT_FREEZE_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE12_ARTIFACT_v0: sr_covariance_post_adjudication_contract_freeze_cycle12_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_post_adjudication_contract_freeze_cycle12_v0"
+  }
+}
