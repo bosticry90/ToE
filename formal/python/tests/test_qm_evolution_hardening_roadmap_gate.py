@@ -318,8 +318,8 @@ def test_qm_evolution_canonical_theorem_and_handoff_focus_are_pinned() -> None:
         assert token in object_target_text, f"Missing QM object target token: {token}"
 
     for token in [
-        "NEXT_PILLAR_FOCUS_v0: PILLAR-QM",
-        "NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-QM-EVOL-PLAN",
+        "NEXT_PILLAR_FOCUS_v0: PILLAR-SR",
+        "NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-SR-COV-PLAN",
     ]:
         assert token in state_text, f"Missing next-pillar focus token in state: {token}"
 

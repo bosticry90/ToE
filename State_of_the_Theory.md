@@ -249,13 +249,13 @@ Post-GR01 handoff checkpoint (2026-02-16):
 - Frozen-watch governance posture is explicit:
 	- `GR01_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
 - Next pillar focus is explicit and assumption-minimization-first:
-	- `NEXT_PILLAR_FOCUS_v0: PILLAR-QM`
-	- `NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-QM-EVOL-PLAN`
-	- pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EVOLUTION_OBJECT_v0.md`
+	- `NEXT_PILLAR_FOCUS_v0: PILLAR-SR`
+	- `NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-SR-COV-PLAN`
+	- pointer: `formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md`
 - Selection rationale (governance):
-	- `TOE-QM-THM-01` already exists as `T-CONDITIONAL` contract surface,
-	- evolution lane has a pinned Lean theorem token and explicit non-claim boundaries,
-	- symmetry and measurement lanes remain plan-frozen follow-ons.
+	- GR01 + continuum + strong-field-program + QM full-derivation closures are synchronized,
+	- first unlock cohort permits SR/EM after GR checklist closure under roadmap order intent,
+	- SR covariance lane is selected as the single active next-pillar entry point.
 
 QM evolution hardening scaffold checkpoint (2026-02-16):
 - Canonical hardening target is now pinned:

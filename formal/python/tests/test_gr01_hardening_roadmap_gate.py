@@ -1024,25 +1024,25 @@ def test_gr01_phase3_and_phase4_artifact_schema_is_consistent() -> None:
         )
 
 
-def test_gr01_next_pillar_focus_is_explicit_and_points_to_qm() -> None:
+def test_gr01_next_pillar_focus_is_explicit_and_points_to_sr() -> None:
     state_text = _read(STATE_PATH)
     focus_value = _extract_state_token(state_text, "NEXT_PILLAR_FOCUS_v0")
     lane_value = _extract_state_token(state_text, "NEXT_PILLAR_PRIMARY_LANE_v0")
 
-    assert focus_value == "PILLAR-QM", (
-        "Next pillar focus drift: NEXT_PILLAR_FOCUS_v0 must remain PILLAR-QM."
+    assert focus_value == "PILLAR-SR", (
+        "Next pillar focus drift: NEXT_PILLAR_FOCUS_v0 must remain PILLAR-SR."
     )
-    assert lane_value == "TARGET-QM-EVOL-PLAN", (
-        "Next pillar lane drift: NEXT_PILLAR_PRIMARY_LANE_v0 must remain TARGET-QM-EVOL-PLAN."
+    assert lane_value == "TARGET-SR-COV-PLAN", (
+        "Next pillar lane drift: NEXT_PILLAR_PRIMARY_LANE_v0 must remain TARGET-SR-COV-PLAN."
     )
 
-    qm_target_text = _read(
-        REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_QM_EVOLUTION_OBJECT_v0.md"
+    sr_target_text = _read(
+        REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md"
     )
-    required_qm_tokens = [
-        "PILLAR-QM",
-        "TARGET-QM-EVOL-PLAN",
-        "qm_evolution_under_contract_assumptions",
+    required_sr_tokens = [
+        "DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0",
+        "TARGET-SR-COV-PLAN",
+        "covariance/kinematics closure posture",
     ]
-    missing = [tok for tok in required_qm_tokens if tok not in qm_target_text]
-    assert not missing, "QM evolution target token drift: " + ", ".join(missing)
+    missing = [tok for tok in required_sr_tokens if tok not in sr_target_text]
+    assert not missing, "SR covariance target token drift: " + ", ".join(missing)

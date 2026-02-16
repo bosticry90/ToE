@@ -57,7 +57,8 @@ Derivation completeness gate semantics (publication-grade tier):
 
 No-deviation sequencing rule:
 - At most one pillar may be `ACTIVE` at a time.
-- During v0, `PILLAR-GR` is the only allowed `ACTIVE` pillar.
+- During v0, `PILLAR-GR` is the only allowed `ACTIVE` pillar until
+  full-derivation + governance closure surfaces are discharged.
 - A pillar may become `ACTIVE` only when all prerequisite target IDs are `CLOSED`.
 - No pillar may be marked `CLOSED` without its required artifact set and closure criteria tokens.
 - Post-GR01 unlock queue (frozen order intent):
@@ -138,13 +139,13 @@ Completed unblock milestone:
   - `gr01_conservation_compatibility_from_poisson_residual_v0`
   - `gr01_conservation_compatibility_from_bridge_promotion_chain_v0`
   - `CONS01_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
-- Full-derivation escalation lane remains explicitly open:
+- Full-derivation escalation lane is discharged for bounded/discrete v0 scope:
   - target artifact:
     `formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md`
   - adjudication token:
-    `FULL_DERIVATION_ADJUDICATION: NOT_YET_DISCHARGED_v0`
-  - blocker row:
-    `TOE-GR-FULL-01: B-BLOCKED`
+    `FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DISCRETE`
+  - synchronized result row:
+    `TOE-GR-FULL-01: T-PROVED`
 
 Matrix-closure promotion gate is allowed for GR v0 because all required blocker
 rows above are non-`B-*`; pillar-matrix status promotion remains a separate
@@ -154,10 +155,10 @@ governance decision.
 
 | Pillar ID | Status | Target IDs | Target Artifacts | Prerequisites | Minimum publishable closure criteria |
 |---|---|---|---|---|---|
-| `PILLAR-GR` | `ACTIVE` | `TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-GR01-3D-03-PLAN;TARGET-GR01-3D-03-ATTEMPT-PACKAGE-PLAN;TARGET-GR01-3D-03-CLOSURE-PACKAGE-PLAN;TARGET-GR01-ACTION-RAC-RETIREMENT-ALIGNMENT-PLAN;TARGET-GR01-ACTION-TO-OPERATOR-DISCRETE-DERIVATION_v0;TARGET-GR01-DERIV-COMPLETENESS-GATE-PLAN` | `formal/docs/paper/DERIVATION_TARGET_GR01_DERIVATION_GRADE_CHECKLIST_v0.md;formal/docs/paper/DERIVATION_TARGET_GR01_3D_MAINSTREAM_CLASS_v0.md;formal/docs/paper/DERIVATION_TARGET_GR01_3D_03_DISCHARGE_ATTEMPT_PACKAGE_v0.md;formal/docs/paper/DERIVATION_TARGET_GR01_3D_03_CLOSURE_PACKAGE_v0.md;formal/docs/paper/DERIVATION_TARGET_GR01_ACTION_RAC_RETIREMENT_ALIGNMENT_v0.md;formal/docs/paper/DERIVATION_TARGET_GR01_ACTION_TO_OPERATOR_DISCRETE_DERIVATION_v0.md;formal/docs/paper/DERIVATION_COMPLETENESS_GATE_v0.md` | `NONE` | Derivation-grade GR01 analytic discharge package closure including improved 3D mapping milestone `TOE-GR-3D-02`, mainstream-class 3D gate milestone `TOE-GR-3D-03` (`TARGET-GR01-3D-03-PLAN`), bounded discharge-attempt package target `TARGET-GR01-3D-03-ATTEMPT-PACKAGE-PLAN` (`DERIVATION_TARGET_GR01_3D_03_DISCHARGE_ATTEMPT_PACKAGE_v0.md`), closure-focused 3D gate package target `TARGET-GR01-3D-03-CLOSURE-PACKAGE-PLAN` (`DERIVATION_TARGET_GR01_3D_03_CLOSURE_PACKAGE_v0.md`), Track B bounded point-source sub-target `TARGET-GR01-3D-POINT-SOURCE-PLAN` (`formal/docs/paper/DERIVATION_TARGET_GR01_3D_POINT_SOURCE_CLASS_v0.md`), minimal conservation compatibility surface `TOE-GR-CONS-01`, explicit action/RAC `conditional-publish endpoint` posture in `TOE_GR01_ACTION_RAC_STANCE_v0.md`, action/RAC retirement-alignment target `TARGET-GR01-ACTION-RAC-RETIREMENT-ALIGNMENT-PLAN` (`DERIVATION_TARGET_GR01_ACTION_RAC_RETIREMENT_ALIGNMENT_v0.md`), upstream depth micro-target `TARGET-GR01-ACTION-TO-OPERATOR-DISCRETE-DERIVATION_v0` (`DERIVATION_TARGET_GR01_ACTION_TO_OPERATOR_DISCRETE_DERIVATION_v0.md`), and publication-grade derivation completeness gate token (already `CLOSED` for v0 discrete-only scope) via `TARGET-GR01-DERIV-COMPLETENESS-GATE-PLAN` (`DERIVATION_COMPLETENESS_GATE_v0.md`). |
+| `PILLAR-GR` | `CLOSED` | `TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-GR01-3D-03-PLAN;TARGET-GR01-3D-03-ATTEMPT-PACKAGE-PLAN;TARGET-GR01-3D-03-CLOSURE-PACKAGE-PLAN;TARGET-GR01-ACTION-RAC-RETIREMENT-ALIGNMENT-PLAN;TARGET-GR01-ACTION-TO-OPERATOR-DISCRETE-DERIVATION_v0;TARGET-GR01-DERIV-COMPLETENESS-GATE-PLAN` | `formal/docs/paper/DERIVATION_TARGET_GR01_DERIVATION_GRADE_CHECKLIST_v0.md;formal/docs/paper/DERIVATION_TARGET_GR01_3D_MAINSTREAM_CLASS_v0.md;formal/docs/paper/DERIVATION_TARGET_GR01_3D_03_DISCHARGE_ATTEMPT_PACKAGE_v0.md;formal/docs/paper/DERIVATION_TARGET_GR01_3D_03_CLOSURE_PACKAGE_v0.md;formal/docs/paper/DERIVATION_TARGET_GR01_ACTION_RAC_RETIREMENT_ALIGNMENT_v0.md;formal/docs/paper/DERIVATION_TARGET_GR01_ACTION_TO_OPERATOR_DISCRETE_DERIVATION_v0.md;formal/docs/paper/DERIVATION_COMPLETENESS_GATE_v0.md` | `NONE` | Derivation-grade GR01 analytic discharge package closure including improved 3D mapping milestone `TOE-GR-3D-02`, mainstream-class 3D gate milestone `TOE-GR-3D-03` (`TARGET-GR01-3D-03-PLAN`), bounded discharge-attempt package target `TARGET-GR01-3D-03-ATTEMPT-PACKAGE-PLAN` (`DERIVATION_TARGET_GR01_3D_03_DISCHARGE_ATTEMPT_PACKAGE_v0.md`), closure-focused 3D gate package target `TARGET-GR01-3D-03-CLOSURE-PACKAGE-PLAN` (`DERIVATION_TARGET_GR01_3D_03_CLOSURE_PACKAGE_v0.md`), Track B bounded point-source sub-target `TARGET-GR01-3D-POINT-SOURCE-PLAN` (`formal/docs/paper/DERIVATION_TARGET_GR01_3D_POINT_SOURCE_CLASS_v0.md`), minimal conservation compatibility surface `TOE-GR-CONS-01`, explicit action/RAC `conditional-publish endpoint` posture in `TOE_GR01_ACTION_RAC_STANCE_v0.md`, action/RAC retirement-alignment target `TARGET-GR01-ACTION-RAC-RETIREMENT-ALIGNMENT-PLAN` (`DERIVATION_TARGET_GR01_ACTION_RAC_RETIREMENT_ALIGNMENT_v0.md`), upstream depth micro-target `TARGET-GR01-ACTION-TO-OPERATOR-DISCRETE-DERIVATION_v0` (`DERIVATION_TARGET_GR01_ACTION_TO_OPERATOR_DISCRETE_DERIVATION_v0.md`), and publication-grade derivation completeness gate token (already `CLOSED` for v0 discrete-only scope) via `TARGET-GR01-DERIV-COMPLETENESS-GATE-PLAN` (`DERIVATION_COMPLETENESS_GATE_v0.md`). |
 | `PILLAR-QM` | `LOCKED` | `TARGET-QM-EVOL-PLAN;TARGET-QM-MEAS-PLAN;TARGET-QM-SYMM-PLAN` | `formal/docs/paper/DERIVATION_TARGET_QM_EVOLUTION_OBJECT_v0.md;formal/docs/paper/DERIVATION_TARGET_QM_MEASUREMENT_SEMANTICS_v0.md;formal/docs/paper/DERIVATION_TARGET_QM_SYMMETRY_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN` | Explicit quantum-limit recovery with typed assumptions and non-claim boundaries preserved. |
 | `PILLAR-EM` | `LOCKED` | `TARGET-EM-U1-PLAN` | `formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN` | U(1)/Maxwell-object recovery target with gauge posture, domain limits, and falsifiable interfaces. |
-| `PILLAR-SR` | `LOCKED` | `TARGET-SR-COV-PLAN` | `formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN` | Covariance/kinematics target with explicit Lorentz posture and bounded assumptions. |
+| `PILLAR-SR` | `ACTIVE` | `TARGET-SR-COV-PLAN` | `formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN` | Covariance/kinematics target with explicit Lorentz posture and bounded assumptions. |
 | `PILLAR-QFT` | `LOCKED` | `TARGET-QFT-GAUGE-PLAN;TARGET-QFT-EVOL-PLAN` | `formal/docs/paper/DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0.md;formal/docs/paper/DERIVATION_TARGET_QFT_EVOLUTION_OBJECT_v0.md` | `TARGET-EM-U1-PLAN;TARGET-SR-COV-PLAN` | Gauge and field-evolution contract targets with explicit quantization posture and no over-claim. |
 | `PILLAR-STAT` | `LOCKED` | `TARGET-TH-ENTROPY-PLAN` | `formal/docs/paper/DERIVATION_TARGET_THERMO_ENTROPY_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN` | Entropy-balance/thermodynamic closure target with explicit regime and non-equilibrium assumptions. |
 | `PILLAR-COSMO` | `LOCKED` | `TARGET-COSMO-BG-PLAN` | `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-SR-COV-PLAN` | Background-cosmology target with explicit metric/expansion assumptions and falsifiable hooks. |
@@ -173,13 +174,15 @@ governance decision.
 
 ## Enforcement Hooks
 
-- Canonical test: `formal/python/tests/test_physics_roadmap_enforcement.py`
+- Canonical tests:
+  - `formal/python/tests/test_pillar_dual_layer_gate_template.py`
+  - `formal/python/tests/test_gr01_dual_closure_and_blockers.py`
 - Physics-first outline pointer: `formal/docs/paper/PHYSICS_PAPER_OUTLINE_v0.md`
 - Required governance suite (minimum):
-  - `formal/python/tests/test_paper_ready_physics_gate.py`
-  - `formal/python/tests/test_paper_results_table_pointers.py`
-  - `formal/python/tests/test_paper_draft_required_sections.py`
-  - `formal/python/tests/test_paper_semantic_drift_bans.py`
+  - `formal/python/tests/test_gr01_full_derivation_status_sync.py`
+  - `formal/python/tests/test_gr01_hardening_roadmap_gate.py`
+  - `formal/python/tests/test_qm_evolution_hardening_roadmap_gate.py`
+  - `formal/python/tests/test_qm_gr_regime_expansion_gate.py`
 
 ## Freeze Policy
 
