@@ -1,0 +1,18 @@
+{
+  "artifact_id": "sr_covariance_object_scaffold_cycle1_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-001",
+  "micro_target": "TARGET-SR-COV-MICRO-01-OBJECT-SCAFFOLD-v0",
+  "status": "LOCKED_OBJECT_SCAFFOLD_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "witness_tokens": [
+    "SR_COVARIANCE_PROGRESS_v0: CYCLE1_OBJECT_SCAFFOLD_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE1_ARTIFACT_v0: sr_covariance_object_scaffold_cycle1_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_object_scaffold_cycle1_v0"
+  }
+}

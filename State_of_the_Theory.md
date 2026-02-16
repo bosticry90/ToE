@@ -257,6 +257,17 @@ Post-GR01 handoff checkpoint (2026-02-16):
 	- first unlock cohort permits SR/EM after GR checklist closure under roadmap order intent,
 	- SR covariance lane is selected as the single active next-pillar entry point.
 
+SR covariance kickoff checkpoint (2026-02-16):
+- SR cycle-1 object-scaffold kickoff is pinned:
+	- `TARGET-SR-COV-MICRO-01-OBJECT-SCAFFOLD-v0`
+	- `SR_COVARIANCE_PROGRESS_v0: CYCLE1_OBJECT_SCAFFOLD_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE1_ARTIFACT_v0: sr_covariance_object_scaffold_cycle1_v0`
+	- artifact: `formal/output/sr_covariance_object_scaffold_cycle1_v0.json`
+- Scope boundary remains explicit:
+	- planning-only/non-claim posture,
+	- no theorem/evidence claim promotion,
+	- no comparator-lane authorization.
+
 QM evolution hardening scaffold checkpoint (2026-02-16):
 - Canonical hardening target is now pinned:
 	- `formal/docs/paper/DERIVATION_TARGET_QM_EVOLUTION_HARDENING_v0.md`

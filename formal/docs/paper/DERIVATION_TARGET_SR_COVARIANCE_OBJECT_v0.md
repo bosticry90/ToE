@@ -48,6 +48,19 @@ Closure definition:
 - explicit statement of covariance posture and domain limits.
 - paper/state/results pointers are synchronized.
 
+Cycle-001 kickoff micro-targets (now pinned):
+1. `TARGET-SR-COV-MICRO-01-OBJECT-SCAFFOLD-v0`
+    - scope:
+       - planning-only typed-object scaffold for SR covariance lane entry.
+    - cycle token:
+       - `SR_COVARIANCE_PROGRESS_v0: CYCLE1_OBJECT_SCAFFOLD_TOKEN_PINNED`
+    - artifact token:
+       - `SR_COVARIANCE_CYCLE1_ARTIFACT_v0: sr_covariance_object_scaffold_cycle1_v0`
+    - artifact pointer:
+       - `formal/output/sr_covariance_object_scaffold_cycle1_v0.json`
+    - gate posture:
+       - non-claim wording remains explicit and no claim promotion is authorized.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
