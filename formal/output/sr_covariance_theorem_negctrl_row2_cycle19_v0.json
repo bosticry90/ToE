@@ -1,0 +1,21 @@
+{
+  "artifact_id": "sr_covariance_theorem_negctrl_row2_cycle19_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "subtarget_id": "TARGET-SR-COV-THEOREM-SURFACE-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-019",
+  "status": "LOCKED_SR_COVARIANCE_THEOREM_NEGCTRL_ROW2_CYCLE19_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "micro_target": "TARGET-SR-COV-MICRO-19-THEOREM-NEGCTRL-ROW2-v0",
+  "negctrl_row_token": "SR_COVARIANCE_THEOREM_NEGCTRL_ROW_02_v0: BROKEN_VELOCITY_COMPOSITION_CLOSURE_ASSUMPTION_PINNED",
+  "negctrl_progress_token": "SR_COVARIANCE_THEOREM_NEGCTRL_PROGRESS_v0: ROW_02_POPULATED",
+  "witness_tokens": [
+    "SR_COVARIANCE_PROGRESS_CYCLE19_v0: THEOREM_NEGCTRL_ROW2_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE19_ARTIFACT_v0: sr_covariance_theorem_negctrl_row2_cycle19_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_theorem_negctrl_row2_cycle19_v0"
+  }
+}

@@ -368,6 +368,13 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE18_v0: THEOREM_ROBUSTNESS_ROW2_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE18_ARTIFACT_v0: sr_covariance_theorem_robustness_row2_cycle18_v0`
 	- artifact: `formal/output/sr_covariance_theorem_robustness_row2_cycle18_v0.json`
+- SR cycle-19 theorem-surface second negative-control row lock is pinned:
+	- `TARGET-SR-COV-MICRO-19-THEOREM-NEGCTRL-ROW2-v0`
+	- `SR_COVARIANCE_THEOREM_NEGCTRL_ROW_02_v0: BROKEN_VELOCITY_COMPOSITION_CLOSURE_ASSUMPTION_PINNED`
+	- `SR_COVARIANCE_THEOREM_NEGCTRL_PROGRESS_v0: ROW_02_POPULATED`
+	- `SR_COVARIANCE_PROGRESS_CYCLE19_v0: THEOREM_NEGCTRL_ROW2_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE19_ARTIFACT_v0: sr_covariance_theorem_negctrl_row2_cycle19_v0`
+	- artifact: `formal/output/sr_covariance_theorem_negctrl_row2_cycle19_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,
