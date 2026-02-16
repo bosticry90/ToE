@@ -331,6 +331,14 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE13_v0: THEOREM_SURFACE_SCAFFOLD_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE13_ARTIFACT_v0: sr_covariance_theorem_surface_scaffold_cycle13_v0`
 	- artifact: `formal/output/sr_covariance_theorem_surface_scaffold_cycle13_v0.json`
+- SR cycle-14 theorem-surface assumptions-minimization lock is pinned:
+	- `TARGET-SR-COV-MICRO-14-THEOREM-ASSUMPTION-MINIMIZATION-v0`
+	- `SR_COVARIANCE_THEOREM_ASSUMPTION_MINIMIZATION_v0: CYCLE14_MIN1_LOCKED`
+	- `SR_COVARIANCE_THEOREM_ASSUMPTIONS_v0_min1`
+	- `SR_COVARIANCE_THEOREM_RECLASSIFICATION_v0_MIN1: hInertialFrameTimeHomogeneity_POLICY_TO_MATH_via_sr_interval_invariance_surface_definition`
+	- `SR_COVARIANCE_PROGRESS_CYCLE14_v0: THEOREM_ASSUMPTION_MINIMIZATION_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_assumption_minimization_cycle14_v0`
+	- artifact: `formal/output/sr_covariance_theorem_assumption_minimization_cycle14_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,

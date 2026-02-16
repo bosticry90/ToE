@@ -222,6 +222,20 @@ Cycle-013 theorem-surface scaffold lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-014 theorem-surface assumptions-minimization lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-14-THEOREM-ASSUMPTION-MINIMIZATION-v0`
+- theorem-surface minimization token:
+   - `SR_COVARIANCE_THEOREM_ASSUMPTION_MINIMIZATION_v0: CYCLE14_MIN1_LOCKED`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE14_v0: THEOREM_ASSUMPTION_MINIMIZATION_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_assumption_minimization_cycle14_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_theorem_assumption_minimization_cycle14_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.

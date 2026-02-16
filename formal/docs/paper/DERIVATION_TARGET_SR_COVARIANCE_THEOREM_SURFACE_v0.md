@@ -37,6 +37,16 @@ Canonical theorem-surface scaffold rows:
 4. falsifiability token:
    - `SR_COVARIANCE_FALSIFIABILITY_HOOK_v0: EXPLICIT_INVALIDATION_CONDITION_DECLARED`
 
+Assumption-minimization lock (cycle-014):
+- baseline bundle token:
+  - `SR_COVARIANCE_THEOREM_ASSUMPTIONS_v0`
+- minimized bundle token:
+  - `SR_COVARIANCE_THEOREM_ASSUMPTIONS_v0_min1`
+- reclassification token:
+  - `SR_COVARIANCE_THEOREM_RECLASSIFICATION_v0_MIN1: hInertialFrameTimeHomogeneity_POLICY_TO_MATH_via_sr_interval_invariance_surface_definition`
+- ledger progress token:
+  - `SR_COVARIANCE_THEOREM_ASSUMPTION_LEDGER_PROGRESS_v0: BUNDLE_MIN1_POPULATED`
+
 Cycle-013 synchronization lock:
 - micro-target token:
   - `TARGET-SR-COV-MICRO-13-THEOREM-SURFACE-SCAFFOLD-v0`
@@ -46,6 +56,18 @@ Cycle-013 synchronization lock:
   - `SR_COVARIANCE_CYCLE13_ARTIFACT_v0: sr_covariance_theorem_surface_scaffold_cycle13_v0`
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_surface_scaffold_cycle13_v0.json`
+
+Cycle-014 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-14-THEOREM-ASSUMPTION-MINIMIZATION-v0`
+- minimization token:
+  - `SR_COVARIANCE_THEOREM_ASSUMPTION_MINIMIZATION_v0: CYCLE14_MIN1_LOCKED`
+- progress token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE14_v0: THEOREM_ASSUMPTION_MINIMIZATION_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_assumption_minimization_cycle14_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_assumption_minimization_cycle14_v0.json`
 
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.

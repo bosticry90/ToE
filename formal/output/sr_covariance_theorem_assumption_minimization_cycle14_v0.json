@@ -1,0 +1,22 @@
+{
+  "artifact_id": "sr_covariance_theorem_assumption_minimization_cycle14_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "subtarget_id": "TARGET-SR-COV-THEOREM-SURFACE-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-014",
+  "status": "LOCKED_SR_COVARIANCE_THEOREM_ASSUMPTION_MINIMIZATION_CYCLE14_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "micro_target": "TARGET-SR-COV-MICRO-14-THEOREM-ASSUMPTION-MINIMIZATION-v0",
+  "minimized_bundle_token": "SR_COVARIANCE_THEOREM_ASSUMPTIONS_v0_min1",
+  "reclassification_token": "SR_COVARIANCE_THEOREM_RECLASSIFICATION_v0_MIN1: hInertialFrameTimeHomogeneity_POLICY_TO_MATH_via_sr_interval_invariance_surface_definition",
+  "witness_tokens": [
+    "SR_COVARIANCE_THEOREM_ASSUMPTION_MINIMIZATION_v0: CYCLE14_MIN1_LOCKED",
+    "SR_COVARIANCE_PROGRESS_CYCLE14_v0: THEOREM_ASSUMPTION_MINIMIZATION_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_assumption_minimization_cycle14_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_theorem_assumption_minimization_cycle14_v0"
+  }
+}
