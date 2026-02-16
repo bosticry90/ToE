@@ -42,6 +42,9 @@ SR_CYCLE7_ARTIFACT_PATH = (
 SR_CYCLE8_ARTIFACT_PATH = (
     REPO_ROOT / "formal" / "output" / "sr_covariance_keyb_policy_signoff_bundle_cycle8_v0.json"
 )
+SR_CYCLE9_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "sr_covariance_final_predischarge_package_cycle9_v0.json"
+)
 
 
 def _read(path: Path) -> str:
@@ -175,6 +178,22 @@ def test_sr_cycle8_kickoff_tokens_are_pinned_in_target_and_state() -> None:
     for token in required_tokens:
         assert token in target_text, f"Missing SR cycle-8 token in target: {token}"
         assert token in state_text, f"Missing SR cycle-8 token in state: {token}"
+
+
+def test_sr_cycle9_kickoff_tokens_are_pinned_in_target_and_state() -> None:
+    target_text = _read(SR_TARGET_PATH)
+    state_text = _read(STATE_PATH)
+
+    required_tokens = [
+        "TARGET-SR-COV-MICRO-09-FINAL-PREDISCHARGE-PACKAGE-v0",
+        "SR_COVARIANCE_PROGRESS_CYCLE9_v0: FINAL_PREDISCHARGE_PACKAGE_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE9_ARTIFACT_v0: sr_covariance_final_predischarge_package_cycle9_v0",
+        "formal/output/sr_covariance_final_predischarge_package_cycle9_v0.json",
+    ]
+
+    for token in required_tokens:
+        assert token in target_text, f"Missing SR cycle-9 token in target: {token}"
+        assert token in state_text, f"Missing SR cycle-9 token in state: {token}"
 
 
 def test_sr_cycle1_artifact_schema_and_scope_are_locked() -> None:
@@ -434,4 +453,47 @@ def test_sr_cycle8_artifact_schema_and_scope_are_locked() -> None:
     assert (
         determinism.get("content_fingerprint")
         == "sr_covariance_keyb_policy_signoff_bundle_cycle8_v0"
+    )
+
+
+def test_sr_cycle9_artifact_schema_and_scope_are_locked() -> None:
+    payload = json.loads(_read(SR_CYCLE9_ARTIFACT_PATH))
+
+    assert payload.get("artifact_id") == "sr_covariance_final_predischarge_package_cycle9_v0"
+    assert payload.get("target_id") == "TARGET-SR-COV-PLAN"
+    assert payload.get("pillar") == "PILLAR-SR"
+    assert payload.get("cycle") == "CYCLE-009"
+    assert payload.get("micro_target") == "TARGET-SR-COV-MICRO-09-FINAL-PREDISCHARGE-PACKAGE-v0"
+    assert payload.get("status") == "LOCKED_FINAL_PREDISCHARGE_PACKAGE_PINNED"
+    assert payload.get("scope") == "planning_only_non_claim_v0"
+
+    covered_cycles = payload.get("covered_cycles")
+    assert covered_cycles == [
+        "CYCLE-001",
+        "CYCLE-002",
+        "CYCLE-003",
+        "CYCLE-004",
+        "CYCLE-005",
+        "CYCLE-006",
+        "CYCLE-007",
+        "CYCLE-008",
+        "CYCLE-009",
+    ]
+
+    witness_tokens = payload.get("witness_tokens")
+    assert isinstance(witness_tokens, list) and witness_tokens, (
+        "witness_tokens must be a non-empty list in SR cycle-9 artifact."
+    )
+    assert (
+        "SR_COVARIANCE_PROGRESS_CYCLE9_v0: FINAL_PREDISCHARGE_PACKAGE_TOKEN_PINNED"
+        in witness_tokens
+    )
+
+    determinism = payload.get("determinism")
+    assert isinstance(determinism, dict), "determinism block is required."
+    assert determinism.get("schema_version") == "v0"
+    assert determinism.get("fingerprint_method") == "literal-json-lock"
+    assert (
+        determinism.get("content_fingerprint")
+        == "sr_covariance_final_predischarge_package_cycle9_v0"
     )

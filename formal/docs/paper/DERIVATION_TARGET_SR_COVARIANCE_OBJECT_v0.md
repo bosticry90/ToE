@@ -152,6 +152,19 @@ Cycle-008 kickoff micro-targets (now pinned):
     - gate posture:
        - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-009 kickoff micro-targets (now pinned):
+1. `TARGET-SR-COV-MICRO-09-FINAL-PREDISCHARGE-PACKAGE-v0`
+    - scope:
+       - planning-only final pre-discharge package lock for SR covariance kickoff stack.
+    - cycle token:
+       - `SR_COVARIANCE_PROGRESS_CYCLE9_v0: FINAL_PREDISCHARGE_PACKAGE_TOKEN_PINNED`
+    - artifact token:
+       - `SR_COVARIANCE_CYCLE9_ARTIFACT_v0: sr_covariance_final_predischarge_package_cycle9_v0`
+    - artifact pointer:
+       - `formal/output/sr_covariance_final_predischarge_package_cycle9_v0.json`
+    - gate posture:
+       - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.

@@ -298,6 +298,11 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE8_v0: KEYB_POLICY_SIGNOFF_BUNDLE_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE8_ARTIFACT_v0: sr_covariance_keyb_policy_signoff_bundle_cycle8_v0`
 	- artifact: `formal/output/sr_covariance_keyb_policy_signoff_bundle_cycle8_v0.json`
+- SR cycle-9 final pre-discharge package lock is pinned:
+	- `TARGET-SR-COV-MICRO-09-FINAL-PREDISCHARGE-PACKAGE-v0`
+	- `SR_COVARIANCE_PROGRESS_CYCLE9_v0: FINAL_PREDISCHARGE_PACKAGE_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE9_ARTIFACT_v0: sr_covariance_final_predischarge_package_cycle9_v0`
+	- artifact: `formal/output/sr_covariance_final_predischarge_package_cycle9_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,
