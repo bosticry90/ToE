@@ -223,6 +223,25 @@ theorem sr_cycle36_phase2_canonical_equivalence_surface_entry_lock_token_binding
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM" := by
   repeat' constructor <;> rfl
 
+def srCovarianceCanonicalEquivalenceTheoremSurfaceLockTokenV0 : String :=
+  "SR_COVARIANCE_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_LOCK_v0: CYCLE37_PHASE2_THEOREM_SURFACE_PINNED_NONCLAIM"
+
+def srFullDerivationPhase2CanonicalEquivalenceTheoremSurfaceStatusTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM"
+
+theorem sr_cycle37_phase2_canonical_equivalence_theorem_surface_lock_token_binding_stub_token_v0 :
+    srCovarianceCanonicalEquivalenceTheoremSurfaceLockTokenV0 =
+      "SR_COVARIANCE_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_LOCK_v0: CYCLE37_PHASE2_THEOREM_SURFACE_PINNED_NONCLAIM" ∧
+    srFullDerivationPhase1CompletionStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM" ∧
+    srFullDerivationPhase2EntryStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM" ∧
+    srFullDerivationPhase2CanonicalEquivalenceSurfaceStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM" ∧
+    srFullDerivationPhase2CanonicalEquivalenceTheoremSurfaceStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM" := by
+  repeat' constructor <;> rfl
+
 end
 end SR
 end ToeFormal
