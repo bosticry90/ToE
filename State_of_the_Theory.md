@@ -303,6 +303,17 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE9_v0: FINAL_PREDISCHARGE_PACKAGE_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE9_ARTIFACT_v0: sr_covariance_final_predischarge_package_cycle9_v0`
 	- artifact: `formal/output/sr_covariance_final_predischarge_package_cycle9_v0.json`
+- SR cycle-10 integrated discharge-criteria lock is pinned:
+	- `SR_COVARIANCE_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+	- criteria rows:
+		- `SR_COVARIANCE_CRITERIA_ROW_01_v0: OBJECT_SCAFFOLD_PINNED`
+		- `SR_COVARIANCE_CRITERIA_ROW_02_v0: CONTRACT_SURFACE_PINNED`
+		- `SR_COVARIANCE_CRITERIA_ROW_03_v0: LORENTZ_INTERVAL_PLACEHOLDER_PINNED`
+		- `SR_COVARIANCE_CRITERIA_ROW_04_v0: VELOCITY_COMPOSITION_PLACEHOLDER_PINNED`
+		- `SR_COVARIANCE_CRITERIA_ROW_05_v0: STATE_GATE_SYNC_PINNED`
+	- `SR_COVARIANCE_PROGRESS_CYCLE10_v0: DISCHARGE_CRITERIA_LOCK_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE10_ARTIFACT_v0: sr_covariance_discharge_criteria_cycle10_v0`
+	- artifact: `formal/output/sr_covariance_discharge_criteria_cycle10_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,

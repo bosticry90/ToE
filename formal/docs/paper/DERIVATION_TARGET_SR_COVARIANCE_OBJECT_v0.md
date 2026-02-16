@@ -165,6 +165,23 @@ Cycle-009 kickoff micro-targets (now pinned):
     - gate posture:
        - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-010 integrated discharge-criteria lock (now pinned):
+- `SR_COVARIANCE_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+- criteria rows:
+   - `SR_COVARIANCE_CRITERIA_ROW_01_v0: OBJECT_SCAFFOLD_PINNED`
+   - `SR_COVARIANCE_CRITERIA_ROW_02_v0: CONTRACT_SURFACE_PINNED`
+   - `SR_COVARIANCE_CRITERIA_ROW_03_v0: LORENTZ_INTERVAL_PLACEHOLDER_PINNED`
+   - `SR_COVARIANCE_CRITERIA_ROW_04_v0: VELOCITY_COMPOSITION_PLACEHOLDER_PINNED`
+   - `SR_COVARIANCE_CRITERIA_ROW_05_v0: STATE_GATE_SYNC_PINNED`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE10_v0: DISCHARGE_CRITERIA_LOCK_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE10_ARTIFACT_v0: sr_covariance_discharge_criteria_cycle10_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_discharge_criteria_cycle10_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.

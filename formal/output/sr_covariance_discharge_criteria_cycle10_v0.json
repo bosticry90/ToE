@@ -1,0 +1,25 @@
+{
+  "artifact_id": "sr_covariance_discharge_criteria_cycle10_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-010",
+  "status": "LOCKED_SR_COVARIANCE_CRITERIA_CYCLE10_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "discharge_criteria_token": "SR_COVARIANCE_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED",
+  "criteria_rows": [
+    "SR_COVARIANCE_CRITERIA_ROW_01_v0: OBJECT_SCAFFOLD_PINNED",
+    "SR_COVARIANCE_CRITERIA_ROW_02_v0: CONTRACT_SURFACE_PINNED",
+    "SR_COVARIANCE_CRITERIA_ROW_03_v0: LORENTZ_INTERVAL_PLACEHOLDER_PINNED",
+    "SR_COVARIANCE_CRITERIA_ROW_04_v0: VELOCITY_COMPOSITION_PLACEHOLDER_PINNED",
+    "SR_COVARIANCE_CRITERIA_ROW_05_v0: STATE_GATE_SYNC_PINNED"
+  ],
+  "witness_tokens": [
+    "SR_COVARIANCE_PROGRESS_CYCLE10_v0: DISCHARGE_CRITERIA_LOCK_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE10_ARTIFACT_v0: sr_covariance_discharge_criteria_cycle10_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_discharge_criteria_cycle10_v0"
+  }
+}
