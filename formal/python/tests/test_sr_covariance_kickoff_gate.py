@@ -21,6 +21,9 @@ SR_TARGET_PATH = (
 SR_CYCLE1_ARTIFACT_PATH = (
     REPO_ROOT / "formal" / "output" / "sr_covariance_object_scaffold_cycle1_v0.json"
 )
+SR_CYCLE2_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "sr_covariance_contract_surface_cycle2_v0.json"
+)
 
 
 def _read(path: Path) -> str:
@@ -44,6 +47,22 @@ def test_sr_cycle1_kickoff_tokens_are_pinned_in_target_and_state() -> None:
         assert token in state_text, f"Missing SR kickoff token in state: {token}"
 
 
+def test_sr_cycle2_kickoff_tokens_are_pinned_in_target_and_state() -> None:
+    target_text = _read(SR_TARGET_PATH)
+    state_text = _read(STATE_PATH)
+
+    required_tokens = [
+        "TARGET-SR-COV-MICRO-02-CONTRACT-SURFACE-v0",
+        "SR_COVARIANCE_PROGRESS_CYCLE2_v0: CONTRACT_SURFACE_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE2_ARTIFACT_v0: sr_covariance_contract_surface_cycle2_v0",
+        "formal/output/sr_covariance_contract_surface_cycle2_v0.json",
+    ]
+
+    for token in required_tokens:
+        assert token in target_text, f"Missing SR cycle-2 token in target: {token}"
+        assert token in state_text, f"Missing SR cycle-2 token in state: {token}"
+
+
 def test_sr_cycle1_artifact_schema_and_scope_are_locked() -> None:
     payload = json.loads(_read(SR_CYCLE1_ARTIFACT_PATH))
 
@@ -65,3 +84,26 @@ def test_sr_cycle1_artifact_schema_and_scope_are_locked() -> None:
     assert determinism.get("schema_version") == "v0"
     assert determinism.get("fingerprint_method") == "literal-json-lock"
     assert determinism.get("content_fingerprint") == "sr_covariance_object_scaffold_cycle1_v0"
+
+
+def test_sr_cycle2_artifact_schema_and_scope_are_locked() -> None:
+    payload = json.loads(_read(SR_CYCLE2_ARTIFACT_PATH))
+
+    assert payload.get("artifact_id") == "sr_covariance_contract_surface_cycle2_v0"
+    assert payload.get("target_id") == "TARGET-SR-COV-PLAN"
+    assert payload.get("pillar") == "PILLAR-SR"
+    assert payload.get("cycle") == "CYCLE-002"
+    assert payload.get("micro_target") == "TARGET-SR-COV-MICRO-02-CONTRACT-SURFACE-v0"
+    assert payload.get("status") == "LOCKED_CONTRACT_SURFACE_PINNED"
+    assert payload.get("scope") == "planning_only_non_claim_v0"
+
+    witness_tokens = payload.get("witness_tokens")
+    assert isinstance(witness_tokens, list) and witness_tokens, (
+        "witness_tokens must be a non-empty list in SR cycle-2 artifact."
+    )
+
+    determinism = payload.get("determinism")
+    assert isinstance(determinism, dict), "determinism block is required."
+    assert determinism.get("schema_version") == "v0"
+    assert determinism.get("fingerprint_method") == "literal-json-lock"
+    assert determinism.get("content_fingerprint") == "sr_covariance_contract_surface_cycle2_v0"

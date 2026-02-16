@@ -263,6 +263,11 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_v0: CYCLE1_OBJECT_SCAFFOLD_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE1_ARTIFACT_v0: sr_covariance_object_scaffold_cycle1_v0`
 	- artifact: `formal/output/sr_covariance_object_scaffold_cycle1_v0.json`
+- SR cycle-2 contract-surface kickoff is pinned:
+	- `TARGET-SR-COV-MICRO-02-CONTRACT-SURFACE-v0`
+	- `SR_COVARIANCE_PROGRESS_CYCLE2_v0: CONTRACT_SURFACE_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE2_ARTIFACT_v0: sr_covariance_contract_surface_cycle2_v0`
+	- artifact: `formal/output/sr_covariance_contract_surface_cycle2_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,

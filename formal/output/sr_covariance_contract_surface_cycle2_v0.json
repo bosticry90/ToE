@@ -1,0 +1,18 @@
+{
+  "artifact_id": "sr_covariance_contract_surface_cycle2_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-002",
+  "micro_target": "TARGET-SR-COV-MICRO-02-CONTRACT-SURFACE-v0",
+  "status": "LOCKED_CONTRACT_SURFACE_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "witness_tokens": [
+    "SR_COVARIANCE_PROGRESS_CYCLE2_v0: CONTRACT_SURFACE_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE2_ARTIFACT_v0: sr_covariance_contract_surface_cycle2_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_contract_surface_cycle2_v0"
+  }
+}

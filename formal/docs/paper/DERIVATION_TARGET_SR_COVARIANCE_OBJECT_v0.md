@@ -61,6 +61,19 @@ Cycle-001 kickoff micro-targets (now pinned):
     - gate posture:
        - non-claim wording remains explicit and no claim promotion is authorized.
 
+Cycle-002 kickoff micro-targets (now pinned):
+1. `TARGET-SR-COV-MICRO-02-CONTRACT-SURFACE-v0`
+    - scope:
+       - planning-only covariance contract-surface specification scaffold.
+    - cycle token:
+       - `SR_COVARIANCE_PROGRESS_CYCLE2_v0: CONTRACT_SURFACE_TOKEN_PINNED`
+    - artifact token:
+       - `SR_COVARIANCE_CYCLE2_ARTIFACT_v0: sr_covariance_contract_surface_cycle2_v0`
+    - artifact pointer:
+       - `formal/output/sr_covariance_contract_surface_cycle2_v0.json`
+    - gate posture:
+       - non-claim wording remains explicit and no theorem/evidence promotion is authorized.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
