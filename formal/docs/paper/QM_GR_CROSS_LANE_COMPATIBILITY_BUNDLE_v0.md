@@ -8,6 +8,7 @@ Classification:
 
 Cycle token:
 - `QM_GR_CROSS_LANE_PROGRESS_v0: CYCLE1_COMPATIBILITY_BUNDLE_PINNED`
+- `QM_GR_CROSS_LANE_PROGRESS_CYCLE2_v0: CYCLE2_COMPATIBILITY_BUNDLE_PINNED`
 
 Integrated discharge-criteria token:
 - `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
@@ -49,6 +50,12 @@ Cycle-1 artifact token:
 
 Cycle-1 artifact pointer:
 - `formal/output/qm_gr_cross_lane_compatibility_cycle1_v0.json`
+
+Cycle-2 artifact token:
+- `qm_gr_cross_lane_compatibility_cycle2_v0`
+
+Cycle-2 artifact pointer:
+- `formal/output/qm_gr_cross_lane_compatibility_cycle2_v0.json`
 
 Scope boundary:
 - checkpoint synchronization bundle only.

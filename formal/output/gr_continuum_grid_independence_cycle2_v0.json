@@ -1,0 +1,28 @@
+{
+  "record_id": "GR_CONTINUUM_LIMIT_BRIDGE_CYCLE2_v0",
+  "artifact_id": "gr_continuum_grid_independence_cycle2_v0",
+  "scope": "bounded_discrete_to_continuum_bridge_v0",
+  "encodings": [
+    "cartesian_fd_v0",
+    "radial_shell_v0",
+    "staggered_fd_v0"
+  ],
+  "residual_norm_by_encoding": {
+    "cartesian_fd_v0": 0.0066,
+    "radial_shell_v0": 0.0064,
+    "staggered_fd_v0": 0.0065
+  },
+  "independence_summary": "within_v0_grid_independence_tolerance",
+  "tolerance": 0.0003,
+  "boundary_posture": "bounded_domain_explicit",
+  "witness_tokens": [
+    "TARGET-GR-CONTINUUM-MICRO-02-GRID-INDEPENDENCE-SANITY-v0",
+    "gr_continuum_refinement_trend_cycle1_v0"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_GR_CONTINUUM_CYCLE2"
+}

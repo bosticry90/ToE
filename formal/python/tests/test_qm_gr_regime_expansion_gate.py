@@ -47,11 +47,20 @@ QM_FULL_DERIVATION_LEAN_SCAFFOLD_PATH = (
 GR_CONTINUUM_CYCLE1_ARTIFACT_PATH = (
     REPO_ROOT / "formal" / "output" / "gr_continuum_refinement_trend_cycle1_v0.json"
 )
+GR_CONTINUUM_CYCLE2_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "gr_continuum_grid_independence_cycle2_v0.json"
+)
 GR_STRONG_FIELD_CYCLE1_ARTIFACT_PATH = (
     REPO_ROOT / "formal" / "output" / "gr_strong_field_regime_predicate_cycle1_v0.json"
 )
+GR_STRONG_FIELD_CYCLE2_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "gr_strong_field_nonlinear_closure_cycle2_v0.json"
+)
 QM_GR_CROSS_LANE_CYCLE1_ARTIFACT_PATH = (
     REPO_ROOT / "formal" / "output" / "qm_gr_cross_lane_compatibility_cycle1_v0.json"
+)
+QM_GR_CROSS_LANE_CYCLE2_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "qm_gr_cross_lane_compatibility_cycle2_v0.json"
 )
 QM_FULL_DERIVATION_CRITERIA_CYCLE10_ARTIFACT_PATH = (
     REPO_ROOT / "formal" / "output" / "qm_full_derivation_discharge_criteria_cycle10_v0.json"
@@ -193,6 +202,7 @@ def test_gr_continuum_target_is_pinned_with_required_boundaries() -> None:
         "TARGET-GR-CONTINUUM-LIMIT-BRIDGE-v0",
         "GR_CONTINUUM_LIMIT_ADJUDICATION: NOT_YET_DISCHARGED_v0",
         "GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED",
+        "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0: GRID_INDEPENDENCE_SANITY_TOKEN_PINNED",
         "GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED",
         "GR_CONTINUUM_LIMIT_CRITERIA_ROW_01_v0: REFINEMENT_TREND_MONOTONIC_PINNED",
         "GR_CONTINUUM_LIMIT_CRITERIA_ROW_02_v0: DISCRETE_TO_CONTINUUM_MAP_SURFACE_PINNED",
@@ -204,6 +214,9 @@ def test_gr_continuum_target_is_pinned_with_required_boundaries() -> None:
         "TARGET-GR-CONTINUUM-MICRO-01-REFINEMENT-TREND-v0",
         "gr_continuum_refinement_trend_cycle1_v0",
         "formal/output/gr_continuum_refinement_trend_cycle1_v0.json",
+        "TARGET-GR-CONTINUUM-MICRO-02-GRID-INDEPENDENCE-SANITY-v0",
+        "gr_continuum_grid_independence_cycle2_v0",
+        "formal/output/gr_continuum_grid_independence_cycle2_v0.json",
         "no claim of completed continuum-limit theorem",
         "no infinite-domain uniqueness claim",
         "Refinement consistency track",
@@ -220,6 +233,7 @@ def test_gr_strong_field_target_is_pinned_with_required_boundaries() -> None:
         "TARGET-GR-STRONG-FIELD-REGIME-v0",
         "GR_STRONG_FIELD_ADJUDICATION: NOT_YET_DISCHARGED_v0",
         "GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED",
+        "GR_STRONG_FIELD_PROGRESS_CYCLE2_v0: NONLINEAR_CLOSURE_SCAFFOLD_TOKEN_PINNED",
         "GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED",
         "GR_STRONG_FIELD_REGIME_CRITERIA_ROW_01_v0: REGIME_PREDICATE_SURFACE_PINNED",
         "GR_STRONG_FIELD_REGIME_CRITERIA_ROW_02_v0: NONLINEAR_CLOSURE_SURFACE_PINNED",
@@ -231,6 +245,9 @@ def test_gr_strong_field_target_is_pinned_with_required_boundaries() -> None:
         "TARGET-GR-STRONG-FIELD-MICRO-01-REGIME-PREDICATE-v0",
         "gr_strong_field_regime_predicate_cycle1_v0",
         "formal/output/gr_strong_field_regime_predicate_cycle1_v0.json",
+        "TARGET-GR-STRONG-FIELD-MICRO-02-NONLINEAR-CLOSURE-SCAFFOLD-v0",
+        "gr_strong_field_nonlinear_closure_cycle2_v0",
+        "formal/output/gr_strong_field_nonlinear_closure_cycle2_v0.json",
         "no claim of completed full-Einstein strong-field recovery",
         "no black-hole uniqueness theorem claim",
         "Strong-field regime object track",
@@ -291,6 +308,7 @@ def test_expansion_targets_are_synchronized_in_state() -> None:
         "QM_ANTI_CIRCULARITY_GUARD_v0",
         "GR_CONTINUUM_LIMIT_ADJUDICATION",
         "GR_CONTINUUM_LIMIT_PROGRESS_v0",
+        "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0",
         "GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_v0",
         "GR_CONTINUUM_LIMIT_CRITERIA_ROW_01_v0: REFINEMENT_TREND_MONOTONIC_PINNED",
         "GR_CONTINUUM_LIMIT_CRITERIA_ROW_02_v0: DISCRETE_TO_CONTINUUM_MAP_SURFACE_PINNED",
@@ -301,6 +319,7 @@ def test_expansion_targets_are_synchronized_in_state() -> None:
         "formal/output/gr_continuum_discharge_criteria_cycle10_v0.json",
         "GR_STRONG_FIELD_ADJUDICATION",
         "GR_STRONG_FIELD_PROGRESS_v0",
+        "GR_STRONG_FIELD_PROGRESS_CYCLE2_v0",
         "GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_v0",
         "GR_STRONG_FIELD_REGIME_CRITERIA_ROW_01_v0: REGIME_PREDICATE_SURFACE_PINNED",
         "GR_STRONG_FIELD_REGIME_CRITERIA_ROW_02_v0: NONLINEAR_CLOSURE_SURFACE_PINNED",
@@ -310,6 +329,7 @@ def test_expansion_targets_are_synchronized_in_state() -> None:
         "GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0",
         "formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json",
         "QM_GR_CROSS_LANE_PROGRESS_v0",
+        "QM_GR_CROSS_LANE_PROGRESS_CYCLE2_v0",
         "QM_GR_INTEGRATED_DISCHARGE_CRITERIA_v0",
         "QM_GR_INTEGRATED_CRITERIA_ROW_01_v0: LANE_CHECKPOINT_COMPATIBILITY_PINNED",
         "QM_GR_INTEGRATED_CRITERIA_ROW_02_v0: EXPLICIT_NON_CLAIM_POSTURE_PINNED",
@@ -429,6 +449,10 @@ def test_expansion_targets_are_synchronized_in_state() -> None:
     )
     state_cont = _extract_token_value(state_text, "GR_CONTINUUM_LIMIT_ADJUDICATION")
     state_cont_progress = _extract_token_value(state_text, "GR_CONTINUUM_LIMIT_PROGRESS_v0")
+    state_cont_progress_cycle2 = _extract_token_value(
+        state_text,
+        "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0",
+    )
     state_cont_discharge_criteria = _extract_token_value(
         state_text,
         "GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_v0",
@@ -443,6 +467,10 @@ def test_expansion_targets_are_synchronized_in_state() -> None:
     )
     state_strong = _extract_token_value(state_text, "GR_STRONG_FIELD_ADJUDICATION")
     state_strong_progress = _extract_token_value(state_text, "GR_STRONG_FIELD_PROGRESS_v0")
+    state_strong_progress_cycle2 = _extract_token_value(
+        state_text,
+        "GR_STRONG_FIELD_PROGRESS_CYCLE2_v0",
+    )
     state_strong_discharge_criteria = _extract_token_value(
         state_text,
         "GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_v0",
@@ -458,6 +486,10 @@ def test_expansion_targets_are_synchronized_in_state() -> None:
     state_cross_lane_progress = _extract_token_value(
         state_text,
         "QM_GR_CROSS_LANE_PROGRESS_v0",
+    )
+    state_cross_lane_progress_cycle2 = _extract_token_value(
+        state_text,
+        "QM_GR_CROSS_LANE_PROGRESS_CYCLE2_v0",
     )
     state_cross_lane_discharge_criteria = _extract_token_value(
         state_text,
@@ -586,6 +618,10 @@ def test_expansion_targets_are_synchronized_in_state() -> None:
         cont_target_text,
         "GR_CONTINUUM_LIMIT_PROGRESS_v0",
     )
+    target_cont_progress_cycle2 = _extract_token_value(
+        cont_target_text,
+        "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0",
+    )
     target_cont_discharge_criteria = _extract_token_value(
         cont_target_text,
         "GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_v0",
@@ -603,6 +639,10 @@ def test_expansion_targets_are_synchronized_in_state() -> None:
         strong_target_text,
         "GR_STRONG_FIELD_PROGRESS_v0",
     )
+    target_strong_progress_cycle2 = _extract_token_value(
+        strong_target_text,
+        "GR_STRONG_FIELD_PROGRESS_CYCLE2_v0",
+    )
     target_strong_discharge_criteria = _extract_token_value(
         strong_target_text,
         "GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_v0",
@@ -618,6 +658,10 @@ def test_expansion_targets_are_synchronized_in_state() -> None:
     target_cross_lane_progress = _extract_token_value(
         cross_lane_bundle_text,
         "QM_GR_CROSS_LANE_PROGRESS_v0",
+    )
+    target_cross_lane_progress_cycle2 = _extract_token_value(
+        cross_lane_bundle_text,
+        "QM_GR_CROSS_LANE_PROGRESS_CYCLE2_v0",
     )
     target_cross_lane_discharge_criteria = _extract_token_value(
         cross_lane_bundle_text,
@@ -749,6 +793,10 @@ def test_expansion_targets_are_synchronized_in_state() -> None:
         "Continuum progress token drift: "
         f"state={state_cont_progress}, target={target_cont_progress}"
     )
+    assert state_cont_progress_cycle2 == target_cont_progress_cycle2, (
+        "Continuum cycle2 progress token drift: "
+        f"state={state_cont_progress_cycle2}, target={target_cont_progress_cycle2}"
+    )
     assert state_cont_discharge_criteria == target_cont_discharge_criteria, (
         "Continuum discharge-criteria token drift: "
         f"state={state_cont_discharge_criteria}, target={target_cont_discharge_criteria}"
@@ -768,6 +816,10 @@ def test_expansion_targets_are_synchronized_in_state() -> None:
         "Strong-field progress token drift: "
         f"state={state_strong_progress}, target={target_strong_progress}"
     )
+    assert state_strong_progress_cycle2 == target_strong_progress_cycle2, (
+        "Strong-field cycle2 progress token drift: "
+        f"state={state_strong_progress_cycle2}, target={target_strong_progress_cycle2}"
+    )
     assert state_strong_discharge_criteria == target_strong_discharge_criteria, (
         "Strong-field discharge-criteria token drift: "
         f"state={state_strong_discharge_criteria}, target={target_strong_discharge_criteria}"
@@ -784,6 +836,10 @@ def test_expansion_targets_are_synchronized_in_state() -> None:
     assert state_cross_lane_progress == target_cross_lane_progress, (
         "Cross-lane progress token drift: "
         f"state={state_cross_lane_progress}, target={target_cross_lane_progress}"
+    )
+    assert state_cross_lane_progress_cycle2 == target_cross_lane_progress_cycle2, (
+        "Cross-lane cycle2 progress token drift: "
+        f"state={state_cross_lane_progress_cycle2}, target={target_cross_lane_progress_cycle2}"
     )
     assert state_cross_lane_discharge_criteria == target_cross_lane_discharge_criteria, (
         "Cross-lane discharge-criteria token drift: "
@@ -842,6 +898,50 @@ def test_gr_strong_field_cycle1_regime_artifact_is_pinned_and_well_formed() -> N
     assert determinism.get("fingerprint_method") == "literal-json-lock"
 
 
+def test_gr_continuum_cycle2_grid_independence_artifact_is_pinned_and_well_formed() -> None:
+    payload = json.loads(_read(GR_CONTINUUM_CYCLE2_ARTIFACT_PATH))
+
+    assert payload.get("record_id") == "GR_CONTINUUM_LIMIT_BRIDGE_CYCLE2_v0"
+    assert payload.get("artifact_id") == "gr_continuum_grid_independence_cycle2_v0"
+    assert payload.get("scope") == "bounded_discrete_to_continuum_bridge_v0"
+
+    encodings = payload.get("encodings")
+    assert isinstance(encodings, list) and len(encodings) >= 3
+
+    residuals = payload.get("residual_norm_by_encoding")
+    assert isinstance(residuals, dict) and len(residuals) >= 3
+    tolerance = float(payload.get("tolerance"))
+    values = [float(v) for v in residuals.values()]
+    assert max(values) - min(values) <= tolerance
+
+    assert payload.get("independence_summary") == "within_v0_grid_independence_tolerance"
+    determinism = payload.get("determinism")
+    assert isinstance(determinism, dict)
+    assert determinism.get("schema_version") == "v0"
+    assert determinism.get("fingerprint_method") == "literal-json-lock"
+
+
+def test_gr_strong_field_cycle2_nonlinear_closure_artifact_is_pinned_and_well_formed() -> None:
+    payload = json.loads(_read(GR_STRONG_FIELD_CYCLE2_ARTIFACT_PATH))
+
+    assert payload.get("record_id") == "GR_STRONG_FIELD_REGIME_CYCLE2_v0"
+    assert payload.get("artifact_id") == "gr_strong_field_nonlinear_closure_cycle2_v0"
+    assert payload.get("scope") == "bounded_strong_field_program_v0"
+    assert payload.get("closure_surface_id") == "GR_STRONG_FIELD_NONLINEAR_CLOSURE_SURFACE_v0"
+
+    residual_family = payload.get("residual_family")
+    assert isinstance(residual_family, list) and len(residual_family) >= 2
+    assumptions = payload.get("assumptions")
+    assert isinstance(assumptions, dict)
+    assert assumptions.get("weak_field_compatibility_hook") == "preserved"
+
+    assert payload.get("closure_posture") == "scaffold_pinned_not_yet_discharged"
+    determinism = payload.get("determinism")
+    assert isinstance(determinism, dict)
+    assert determinism.get("schema_version") == "v0"
+    assert determinism.get("fingerprint_method") == "literal-json-lock"
+
+
 def test_qm_gr_cross_lane_cycle1_bundle_artifact_is_pinned_and_well_formed() -> None:
     bundle_text = _read(QM_GR_CROSS_LANE_BUNDLE_PATH)
     payload = json.loads(_read(QM_GR_CROSS_LANE_CYCLE1_ARTIFACT_PATH))
@@ -849,6 +949,7 @@ def test_qm_gr_cross_lane_cycle1_bundle_artifact_is_pinned_and_well_formed() -> 
     for token in [
         "QM_GR_CROSS_LANE_COMPATIBILITY_BUNDLE_v0",
         "QM_GR_CROSS_LANE_PROGRESS_v0: CYCLE1_COMPATIBILITY_BUNDLE_PINNED",
+        "QM_GR_CROSS_LANE_PROGRESS_CYCLE2_v0: CYCLE2_COMPATIBILITY_BUNDLE_PINNED",
         "QM_GR_INTEGRATED_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED",
         "QM_GR_INTEGRATED_CRITERIA_ROW_01_v0: LANE_CHECKPOINT_COMPATIBILITY_PINNED",
         "QM_GR_INTEGRATED_CRITERIA_ROW_02_v0: EXPLICIT_NON_CLAIM_POSTURE_PINNED",
@@ -860,6 +961,7 @@ def test_qm_gr_cross_lane_cycle1_bundle_artifact_is_pinned_and_well_formed() -> 
         "GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED",
         "GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED",
         "qm_gr_cross_lane_compatibility_cycle1_v0",
+        "qm_gr_cross_lane_compatibility_cycle2_v0",
     ]:
         assert token in bundle_text, f"Missing cross-lane bundle token: {token}"
 
@@ -880,6 +982,32 @@ def test_qm_gr_cross_lane_cycle1_bundle_artifact_is_pinned_and_well_formed() -> 
     )
 
     assert payload.get("compatibility_status") == "synchronized_cycle1"
+    determinism = payload.get("determinism")
+    assert isinstance(determinism, dict)
+    assert determinism.get("schema_version") == "v0"
+    assert determinism.get("fingerprint_method") == "literal-json-lock"
+
+
+def test_qm_gr_cross_lane_cycle2_bundle_artifact_is_pinned_and_well_formed() -> None:
+    payload = json.loads(_read(QM_GR_CROSS_LANE_CYCLE2_ARTIFACT_PATH))
+
+    assert payload.get("record_id") == "QM_GR_CROSS_LANE_COMPATIBILITY_CYCLE2_v0"
+    assert payload.get("artifact_id") == "qm_gr_cross_lane_compatibility_cycle2_v0"
+    assert payload.get("scope") == "cross_lane_checkpoint_sync_v0"
+
+    lane_checkpoints = payload.get("lane_checkpoints")
+    assert isinstance(lane_checkpoints, dict)
+    assert lane_checkpoints.get("qm_full_derivation") == (
+        "QM_FULL_DERIVATION_PROGRESS_CYCLE14_v0: TWO_KEY_RELEASE_DISCHARGE_COMPLETED"
+    )
+    assert lane_checkpoints.get("gr_continuum") == (
+        "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0: GRID_INDEPENDENCE_SANITY_TOKEN_PINNED"
+    )
+    assert lane_checkpoints.get("gr_strong_field") == (
+        "GR_STRONG_FIELD_PROGRESS_CYCLE2_v0: NONLINEAR_CLOSURE_SCAFFOLD_TOKEN_PINNED"
+    )
+
+    assert payload.get("compatibility_status") == "synchronized_cycle2"
     determinism = payload.get("determinism")
     assert isinstance(determinism, dict)
     assert determinism.get("schema_version") == "v0"

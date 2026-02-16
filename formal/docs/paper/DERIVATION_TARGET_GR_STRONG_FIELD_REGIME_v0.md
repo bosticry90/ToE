@@ -18,6 +18,7 @@ Adjudication token:
 
 Progress token:
 - `GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED`
+- `GR_STRONG_FIELD_PROGRESS_CYCLE2_v0: NONLINEAR_CLOSURE_SCAFFOLD_TOKEN_PINNED`
 
 Discharge-criteria token:
 - `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
@@ -74,6 +75,16 @@ Cycle-001 micro-targets (now pinned):
 - scope:
   - lock first strong-field regime predicate surface with explicit boundedness,
     curvature-intensity, and domain-regularity assumptions.
+
+Cycle-002 micro-targets (now pinned):
+1. `TARGET-GR-STRONG-FIELD-MICRO-02-NONLINEAR-CLOSURE-SCAFFOLD-v0`
+- artifact token:
+  - `gr_strong_field_nonlinear_closure_cycle2_v0`
+- artifact pointer:
+  - `formal/output/gr_strong_field_nonlinear_closure_cycle2_v0.json`
+- scope:
+  - lock first nonlinear-closure scaffold record with explicit residual-family,
+    boundedness assumptions, and compatibility hooks to weak-field surfaces.
 
 Canonical pointers:
 - `formal/docs/paper/DERIVATION_TARGET_GR_GEOMETRY_OBJECT_v0.md`

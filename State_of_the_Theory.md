@@ -394,6 +394,7 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
 	- `formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md`
 	- `GR_CONTINUUM_LIMIT_ADJUDICATION: NOT_YET_DISCHARGED_v0`
 	- `GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED`
+	- `GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0: GRID_INDEPENDENCE_SANITY_TOKEN_PINNED`
 	- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
 	- criteria rows:
 		- `GR_CONTINUUM_LIMIT_CRITERIA_ROW_01_v0: REFINEMENT_TREND_MONOTONIC_PINNED`
@@ -407,10 +408,14 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
 	- micro-target: `TARGET-GR-CONTINUUM-MICRO-01-REFINEMENT-TREND-v0`
 	- artifact token: `gr_continuum_refinement_trend_cycle1_v0`
 	- artifact: `formal/output/gr_continuum_refinement_trend_cycle1_v0.json`
+	- micro-target: `TARGET-GR-CONTINUUM-MICRO-02-GRID-INDEPENDENCE-SANITY-v0`
+	- artifact token: `gr_continuum_grid_independence_cycle2_v0`
+	- artifact: `formal/output/gr_continuum_grid_independence_cycle2_v0.json`
 - GR strong-field regime target is now pinned:
 	- `formal/docs/paper/DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0.md`
 	- `GR_STRONG_FIELD_ADJUDICATION: NOT_YET_DISCHARGED_v0`
 	- `GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED`
+	- `GR_STRONG_FIELD_PROGRESS_CYCLE2_v0: NONLINEAR_CLOSURE_SCAFFOLD_TOKEN_PINNED`
 	- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
 	- criteria rows:
 		- `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_01_v0: REGIME_PREDICATE_SURFACE_PINNED`
@@ -424,12 +429,16 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
 	- micro-target: `TARGET-GR-STRONG-FIELD-MICRO-01-REGIME-PREDICATE-v0`
 	- artifact token: `gr_strong_field_regime_predicate_cycle1_v0`
 	- artifact: `formal/output/gr_strong_field_regime_predicate_cycle1_v0.json`
+	- micro-target: `TARGET-GR-STRONG-FIELD-MICRO-02-NONLINEAR-CLOSURE-SCAFFOLD-v0`
+	- artifact token: `gr_strong_field_nonlinear_closure_cycle2_v0`
+	- artifact: `formal/output/gr_strong_field_nonlinear_closure_cycle2_v0.json`
 - Expansion enforcement gate is pinned:
 	- `formal/python/tests/test_qm_gr_regime_expansion_gate.py`
 
 QM-GR cross-lane compatibility checkpoint (2026-02-16):
 - cycle token:
 	- `QM_GR_CROSS_LANE_PROGRESS_v0: CYCLE1_COMPATIBILITY_BUNDLE_PINNED`
+	- `QM_GR_CROSS_LANE_PROGRESS_CYCLE2_v0: CYCLE2_COMPATIBILITY_BUNDLE_PINNED`
 	- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
 	- criteria rows:
 		- `QM_GR_INTEGRATED_CRITERIA_ROW_01_v0: LANE_CHECKPOINT_COMPATIBILITY_PINNED`
@@ -443,6 +452,8 @@ QM-GR cross-lane compatibility checkpoint (2026-02-16):
 	- `formal/docs/paper/QM_GR_CROSS_LANE_COMPATIBILITY_BUNDLE_v0.md`
 	- artifact token: `qm_gr_cross_lane_compatibility_cycle1_v0`
 	- artifact: `formal/output/qm_gr_cross_lane_compatibility_cycle1_v0.json`
+	- artifact token: `qm_gr_cross_lane_compatibility_cycle2_v0`
+	- artifact: `formal/output/qm_gr_cross_lane_compatibility_cycle2_v0.json`
 
 
 

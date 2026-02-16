@@ -18,6 +18,7 @@ Adjudication token:
 
 Progress token:
 - `GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED`
+- `GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0: GRID_INDEPENDENCE_SANITY_TOKEN_PINNED`
 
 Discharge-criteria token:
 - `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
@@ -74,6 +75,16 @@ Cycle-001 micro-targets (now pinned):
 - scope:
   - lock first deterministic refinement-trend record over bounded grids
     (`32/64/128`) and require monotonic non-increasing residual behavior.
+
+Cycle-002 micro-targets (now pinned):
+1. `TARGET-GR-CONTINUUM-MICRO-02-GRID-INDEPENDENCE-SANITY-v0`
+- artifact token:
+  - `gr_continuum_grid_independence_cycle2_v0`
+- artifact pointer:
+  - `formal/output/gr_continuum_grid_independence_cycle2_v0.json`
+- scope:
+  - lock first deterministic grid-independence sanity record across
+    non-isomorphic bounded encodings while preserving bounded-domain assumptions.
 
 Canonical pointers:
 - `formal/toe_formal/ToeFormal/Variational/GR01Mainstream3DSpherical.lean`

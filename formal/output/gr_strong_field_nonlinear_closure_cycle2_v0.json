@@ -1,0 +1,26 @@
+{
+  "record_id": "GR_STRONG_FIELD_REGIME_CYCLE2_v0",
+  "artifact_id": "gr_strong_field_nonlinear_closure_cycle2_v0",
+  "scope": "bounded_strong_field_program_v0",
+  "closure_surface_id": "GR_STRONG_FIELD_NONLINEAR_CLOSURE_SURFACE_v0",
+  "residual_family": [
+    "nonlinear_curvature_residual",
+    "nonlinear_source_coupling_residual"
+  ],
+  "assumptions": {
+    "bounded_curvature_intensity": "required",
+    "bounded_domain_regularization": "required",
+    "weak_field_compatibility_hook": "preserved"
+  },
+  "closure_posture": "scaffold_pinned_not_yet_discharged",
+  "witness_tokens": [
+    "TARGET-GR-STRONG-FIELD-MICRO-02-NONLINEAR-CLOSURE-SCAFFOLD-v0",
+    "gr_strong_field_regime_predicate_cycle1_v0"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_GR_STRONG_FIELD_CYCLE2"
+}
