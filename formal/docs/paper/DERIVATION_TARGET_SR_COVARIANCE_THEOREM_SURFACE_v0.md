@@ -214,6 +214,18 @@ Cycle-022 synchronization lock:
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_adjudication_transition_cycle22_v0.json`
 
+Cycle-023 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-23-THEOREM-PACKAGE-FREEZE-v0`
+- package-freeze token:
+  - `SR_COVARIANCE_THEOREM_PACKAGE_FREEZE_v0: CYCLE23_FROZEN_CONTENTS_PINNED`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE23_v0: THEOREM_PACKAGE_FREEZE_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE23_ARTIFACT_v0: sr_covariance_theorem_package_freeze_cycle23_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_package_freeze_cycle23_v0.json`
+
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.
 - assumptions and bounded domain limits remain explicit.

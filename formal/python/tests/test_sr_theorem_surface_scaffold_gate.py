@@ -106,6 +106,11 @@ def test_sr_theorem_surface_target_pins_required_tokens() -> None:
         "SR_COVARIANCE_PROGRESS_CYCLE22_v0: THEOREM_ADJUDICATION_TRANSITION_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE22_ARTIFACT_v0: sr_covariance_theorem_adjudication_transition_cycle22_v0",
         "formal/output/sr_covariance_theorem_adjudication_transition_cycle22_v0.json",
+        "TARGET-SR-COV-MICRO-23-THEOREM-PACKAGE-FREEZE-v0",
+        "SR_COVARIANCE_THEOREM_PACKAGE_FREEZE_v0: CYCLE23_FROZEN_CONTENTS_PINNED",
+        "SR_COVARIANCE_PROGRESS_CYCLE23_v0: THEOREM_PACKAGE_FREEZE_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE23_ARTIFACT_v0: sr_covariance_theorem_package_freeze_cycle23_v0",
+        "formal/output/sr_covariance_theorem_package_freeze_cycle23_v0.json",
     ]
 
     missing = [token for token in required_tokens if token not in text]
@@ -170,6 +175,10 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "SR_COVARIANCE_THEOREM_SURFACE_ADJUDICATION_v0: DISCHARGED_v0_PREDISCHARGE_CRITERIA_LOCKED_NONCLAIM",
         "SR_COVARIANCE_PROGRESS_CYCLE22_v0: THEOREM_ADJUDICATION_TRANSITION_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE22_ARTIFACT_v0: sr_covariance_theorem_adjudication_transition_cycle22_v0",
+        "TARGET-SR-COV-MICRO-23-THEOREM-PACKAGE-FREEZE-v0",
+        "SR_COVARIANCE_THEOREM_PACKAGE_FREEZE_v0: CYCLE23_FROZEN_CONTENTS_PINNED",
+        "SR_COVARIANCE_PROGRESS_CYCLE23_v0: THEOREM_PACKAGE_FREEZE_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE23_ARTIFACT_v0: sr_covariance_theorem_package_freeze_cycle23_v0",
     ]
     for token in state_tokens:
         assert token in state_text, f"Missing SR theorem-surface token in state: {token}"
@@ -197,6 +206,8 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "formal/output/sr_covariance_theorem_predischarge_criteria_cycle21_v0.json",
         "SR_COVARIANCE_THEOREM_SURFACE_ADJUDICATION_v0: DISCHARGED_v0_PREDISCHARGE_CRITERIA_LOCKED_NONCLAIM",
         "formal/output/sr_covariance_theorem_adjudication_transition_cycle22_v0.json",
+        "SR_COVARIANCE_THEOREM_PACKAGE_FREEZE_v0: CYCLE23_FROZEN_CONTENTS_PINNED",
+        "formal/output/sr_covariance_theorem_package_freeze_cycle23_v0.json",
         "Not a full SR dynamics derivation claim and not an inevitability claim.",
     ]
     for token in results_tokens:

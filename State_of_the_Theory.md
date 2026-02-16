@@ -399,6 +399,12 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE22_v0: THEOREM_ADJUDICATION_TRANSITION_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE22_ARTIFACT_v0: sr_covariance_theorem_adjudication_transition_cycle22_v0`
 	- artifact: `formal/output/sr_covariance_theorem_adjudication_transition_cycle22_v0.json`
+- SR cycle-23 theorem-surface package-freeze lock is pinned:
+	- `TARGET-SR-COV-MICRO-23-THEOREM-PACKAGE-FREEZE-v0`
+	- `SR_COVARIANCE_THEOREM_PACKAGE_FREEZE_v0: CYCLE23_FROZEN_CONTENTS_PINNED`
+	- `SR_COVARIANCE_PROGRESS_CYCLE23_v0: THEOREM_PACKAGE_FREEZE_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE23_ARTIFACT_v0: sr_covariance_theorem_package_freeze_cycle23_v0`
+	- artifact: `formal/output/sr_covariance_theorem_package_freeze_cycle23_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,

@@ -348,6 +348,20 @@ Cycle-022 theorem-surface adjudication-transition lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-023 theorem-surface package-freeze lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-23-THEOREM-PACKAGE-FREEZE-v0`
+- package-freeze token:
+   - `SR_COVARIANCE_THEOREM_PACKAGE_FREEZE_v0: CYCLE23_FROZEN_CONTENTS_PINNED`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE23_v0: THEOREM_PACKAGE_FREEZE_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE23_ARTIFACT_v0: sr_covariance_theorem_package_freeze_cycle23_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_theorem_package_freeze_cycle23_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
