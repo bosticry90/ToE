@@ -1,0 +1,40 @@
+{
+  "dataset_id": "Steinhauer2001_Fig3a_Digitized_v1",
+  "title": "Digitized excitation spectrum points from Fig. 3(a)",
+  "citation": "Steinhauer et al., cond-mat/0111438, Fig. 3(a)",
+  "digitization_origin": "Imported from in-repo packet formal/external_evidence/bec_bragg_steinhauer_2001/omega_k_data.csv",
+  "source_type": "published_digitized_curve",
+  "observable_id": "omega_over_2pi_kHz_vs_k_um_inv",
+  "csv_relpath": "formal/external_evidence/ct06_external_anchor_dispersion_domain_01/dispersion_anchor_steinhauer_fig3a_omega_k.csv",
+  "columns": [
+    {
+      "name": "k_um_inv",
+      "unit": "um^-1",
+      "dtype": "float"
+    },
+    {
+      "name": "omega_over_2pi_kHz",
+      "unit": "kHz",
+      "dtype": "float"
+    },
+    {
+      "name": "sigma_omega_over_2pi_kHz",
+      "unit": "kHz",
+      "dtype": "float"
+    }
+  ],
+  "pinned_preprocessing": [
+    "drop_non_finite_rows",
+    "sort_by_k_um_inv_ascending",
+    "no_unit_conversion",
+    "no_resampling"
+  ],
+  "transformations_performed": [
+    "column subset only: k_um_inv, omega_over_2pi_kHz, sigma_omega_over_2pi_kHz",
+    "no numeric value edits"
+  ],
+  "notes": [
+    "External-anchor lane only; no claim beyond pinned assumptions.",
+    "CSV values are held in-repo for deterministic governance replay."
+  ]
+}

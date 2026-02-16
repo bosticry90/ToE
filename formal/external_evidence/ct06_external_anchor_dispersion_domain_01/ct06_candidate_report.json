@@ -1,0 +1,44 @@
+{
+  "boundary": "digitized_dispersion_curve",
+  "cases": [
+    {
+      "alpha_kHz2_um4": 0.003279769977220575,
+      "c_s2_kHz2_um2": 0.14211244565541276,
+      "case_id": "POSITIVE",
+      "kind": "positive_control",
+      "max_abs_error_kHz": 0.1831786371161921,
+      "model_tag": "bogoliubov_proxy_fit",
+      "n_points": 13,
+      "reduced_chi2": 1.4374778508971995,
+      "rmse_kHz": 0.11123142658613483
+    },
+    {
+      "alpha_kHz2_um4": 0.0016398849886102875,
+      "c_s2_kHz2_um2": 0.14211244565541276,
+      "case_id": "NEGATIVE",
+      "kind": "negative_control_model_break",
+      "max_abs_error_kHz": 3.1429610871508125,
+      "model_tag": "bogoliubov_proxy_alpha_scaled",
+      "n_points": 13,
+      "reduced_chi2": 11.952007749007816,
+      "rmse_kHz": 0.9749376535328318
+    }
+  ],
+  "config_tag": "ct06_external_anchor_dispersion_v0",
+  "domain_tag": "ct06_external_anchor_dispersion_domain_01",
+  "fingerprint": "313e51532491ae89723f0f907cacb06d2b795ad66d27108e09566b4a761c6d26",
+  "params": {
+    "alpha_scale_negative": 0.5,
+    "dataset_csv_relpath": "formal/external_evidence/ct06_external_anchor_dispersion_domain_01/dispersion_anchor_steinhauer_fig3a_omega_k.csv",
+    "dataset_csv_sha256": "632783dc0f530e5e6ecec0872955781429da9a02a36680f1ceaba6960e866b6c",
+    "dataset_id": "Steinhauer2001_Fig3a_Digitized_v1",
+    "eps_max_abs_error_kHz": 0.5,
+    "eps_reduced_chi2": 4.0,
+    "eps_rmse_kHz": 0.25,
+    "fit_model": "omega2=c_s2*k^2+alpha*k^4",
+    "observable_id": "omega_over_2pi_kHz_vs_k_um_inv",
+    "preprocessing_tag": "finite_filter_plus_k_sort_no_unit_conversion"
+  },
+  "regime_tag": "CT06_External_Anchor_Dispersion",
+  "schema": "CT-06/external_anchor_dispersion_front_door_report/v1"
+}

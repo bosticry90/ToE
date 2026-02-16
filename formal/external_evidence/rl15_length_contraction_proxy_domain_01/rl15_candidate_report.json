@@ -1,0 +1,38 @@
+{
+  "boundary": "length_contraction_1d",
+  "cases": [
+    {
+      "L": 1.6,
+      "L0": 2.0,
+      "beta": 0.6,
+      "case_id": "positive_control",
+      "contraction_ratio": 0.8,
+      "contraction_residual": 0.0,
+      "gamma": 1.25,
+      "kind": "positive_control"
+    },
+    {
+      "L": 2.0,
+      "L0": 2.0,
+      "beta": 0.6,
+      "case_id": "negative_control",
+      "contraction_ratio": 1.0,
+      "contraction_residual": 0.19999999999999996,
+      "gamma": 1.25,
+      "kind": "negative_control"
+    }
+  ],
+  "config_tag": "rl15_length_contraction_proxy_v0",
+  "domain_tag": "rl15_length_contraction_proxy_domain_01",
+  "fingerprint": "ad2d6d67feef936fe2ec1b69f1e63d1eecbb6d03d136d6d355fd2319a8538f47",
+  "params": {
+    "L0": 2.0,
+    "beta": 0.6,
+    "c": 1.0,
+    "eps_break": 0.001,
+    "eps_contraction": 1e-08,
+    "gamma": 1.25
+  },
+  "regime_tag": "RL15_Length_Contraction_Proxy",
+  "schema": "RL/length_contraction_front_door_report/v1"
+}

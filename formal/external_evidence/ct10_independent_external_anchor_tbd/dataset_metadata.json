@@ -1,0 +1,16 @@
+{
+  "schema": "CT-10/independent_external_anchor_dataset_metadata/v1",
+  "dataset_id": "CT10_CAND_AIR_ACOUSTICS_TOF_v1",
+  "source_family_id": "air_acoustics_impulse_response_open_dataset_v1",
+  "observable_surface_id": "air_time_of_flight_distance_time",
+  "dataset_relpath": "formal/external_evidence/ct10_independent_external_anchor_tbd/candidate_observable_sample.csv",
+  "source_lineage_independence_statement": "Independent source family from CT-06/07/08 and CT-09; no reused source rows.",
+  "preprocessing_lineage_independence_statement": "No shared preprocessing lineage with CT-06/07/08 or CT-09; deterministic candidate-only preprocessing.",
+  "is_bec_derived": false,
+  "raw_source_fingerprint": "sha256:d50dda8facfad0a987d32bb0af01c55da2d5a552fdf31008023c7ef0b0e24693",
+  "derived_dataset_fingerprint": "sha256:09c297935d98950badc269c75b94f9da7f155cd793a9ae8c45c5ec9a269fe9bd",
+  "notes": [
+    "Candidate intake packet for CT-10 selection-filter evaluation only.",
+    "No comparator claims are permitted from this metadata."
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "boundary": "relativity_of_simultaneity_1d",
+  "cases": [
+    {
+      "beta": 0.6,
+      "case_id": "positive_control",
+      "delta_t": 0.2,
+      "delta_t_prime": -0.875,
+      "delta_x": 1.5,
+      "gamma": 1.25,
+      "kind": "positive_control",
+      "simultaneity_residual": 0.0
+    },
+    {
+      "beta": 0.6,
+      "case_id": "negative_control",
+      "delta_t": 0.2,
+      "delta_t_prime": 0.2,
+      "delta_x": 1.5,
+      "gamma": 1.25,
+      "kind": "negative_control",
+      "simultaneity_residual": 1.075
+    }
+  ],
+  "config_tag": "rl16_relativity_of_simultaneity_proxy_v0",
+  "domain_tag": "rl16_relativity_of_simultaneity_proxy_domain_01",
+  "fingerprint": "5df02b85708c2a8dff9299100cfec79b62aaa44e548f1906de8d1a40b77dd2c8",
+  "params": {
+    "beta": 0.6,
+    "c": 1.0,
+    "delta_t": 0.2,
+    "delta_x": 1.5,
+    "eps_break": 0.001,
+    "eps_simultaneity": 1e-08,
+    "gamma": 1.25
+  },
+  "regime_tag": "RL16_Relativity_Of_Simultaneity_Proxy",
+  "schema": "RL/relativity_of_simultaneity_front_door_report/v1"
+}

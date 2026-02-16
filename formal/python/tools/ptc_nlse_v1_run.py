@@ -59,8 +59,24 @@ def _canonical_json(payload: object) -> str:
     return json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True)
 
 
+def _canonicalize_for_fingerprint(payload: object) -> object:
+    if isinstance(payload, dict):
+        return {str(k): _canonicalize_for_fingerprint(v) for k, v in payload.items()}
+    if isinstance(payload, list):
+        return [_canonicalize_for_fingerprint(v) for v in payload]
+    if isinstance(payload, tuple):
+        return tuple(_canonicalize_for_fingerprint(v) for v in payload)
+    if isinstance(payload, float):
+        if not isfinite(payload):
+            return payload
+        # Keep lock fingerprints stable across tiny platform-level FP drift.
+        return float(f"{float(payload):.11g}")
+    return payload
+
+
 def _sha256_json(payload: object) -> str:
-    return hashlib.sha256(_canonical_json(payload).encode("utf-8")).hexdigest()
+    canonical_payload = _canonicalize_for_fingerprint(payload)
+    return hashlib.sha256(_canonical_json(canonical_payload).encode("utf-8")).hexdigest()
 
 
 def _q(x: float, *, sig: int = 12) -> float:

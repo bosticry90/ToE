@@ -1,0 +1,28 @@
+{
+  "dataset_id": "Steinhauer2001_Fig3a_Digitized_v1_highk_slice_v0",
+  "origin_dataset_id": "Steinhauer2001_Fig3a_Digitized_v1",
+  "digitization_origin": "formal/external_evidence/bec_bragg_steinhauer_2001/omega_k_data.csv",
+  "source_type": "published_digitized_curve_highk_slice",
+  "observable_id": "omega_over_2pi_kHz_vs_k_um_inv",
+  "slice_rule": {
+    "mode": "high_k_quantile",
+    "k_quantile": 0.5,
+    "predicate": "k_um_inv >= k_min_um_inv"
+  },
+  "required_columns": [
+    "k_um_inv",
+    "omega_over_2pi_kHz",
+    "sigma_omega_over_2pi_kHz"
+  ],
+  "transformations_performed": [
+    "drop_non_finite_rows",
+    "sort_by_k_um_inv_ascending",
+    "filter k_um_inv >= quantile(k_um_inv, 0.5)"
+  ],
+  "no_numeric_value_edits": true,
+  "notes": [
+    "CT-08 is explicitly non-independent from CT-06.",
+    "This lane is a deterministic high-k slice robustness check only."
+  ]
+}
+

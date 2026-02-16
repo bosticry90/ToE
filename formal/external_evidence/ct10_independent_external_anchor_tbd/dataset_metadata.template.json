@@ -1,0 +1,15 @@
+{
+  "schema": "CT-10/independent_external_anchor_dataset_metadata/template_v0",
+  "dataset_id": "TBD",
+  "source_family_id": "TBD",
+  "observable_surface_id": "TBD",
+  "source_lineage_independence_statement": "TBD",
+  "preprocessing_lineage_independence_statement": "TBD",
+  "is_bec_derived": false,
+  "raw_source_fingerprint": "TBD",
+  "derived_dataset_fingerprint": "TBD",
+  "notes": [
+    "Planning scaffold only.",
+    "No comparator claims are permitted from template metadata."
+  ]
+}

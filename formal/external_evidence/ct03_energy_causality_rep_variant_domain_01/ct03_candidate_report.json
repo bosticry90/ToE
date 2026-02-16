@@ -1,0 +1,48 @@
+{
+  "boundary": "periodic",
+  "cases": [
+    {
+      "case_id": "POSITIVE",
+      "cfl": 0.1,
+      "dt": 0.004363323129985824,
+      "gamma": 0.0,
+      "kind": "positive_control",
+      "max_rel_drift": 4.7588920176543055e-06,
+      "rel_drift": 1.969471803103946e-06,
+      "rel_drop": 1.969471803103946e-06,
+      "steps": 2000
+    },
+    {
+      "case_id": "NEGATIVE",
+      "cfl": 1.05,
+      "dt": 0.04581489286485115,
+      "gamma": 0.05,
+      "kind": "negative_control",
+      "max_rel_drift": 0.1293981025596069,
+      "rel_drift": 0.1293981025596069,
+      "rel_drop": 0.1293981025596069,
+      "steps": 50
+    }
+  ],
+  "config_tag": "ct03_energy_causality_rep_variant_v0",
+  "domain_tag": "ct03_energy_causality_rep_variant_domain_01",
+  "fingerprint": "fb5ea8570f7698876619f68e73911d2a8df2a0c3704e4017b3a1d65cb9925eec",
+  "params": {
+    "c_wave": 1.0,
+    "cfl_max": 1.0,
+    "dt_neg": 0.04581489286485115,
+    "dt_pos": 0.004363323129985824,
+    "dx": 0.04363323129985824,
+    "energy_representation": "forward_diff",
+    "eps_break": 0.001,
+    "eps_drift": 0.005,
+    "eps_drop": 0.1,
+    "gamma_negative": 0.05,
+    "length": 6.283185307179586,
+    "nx": 144.0,
+    "steps_neg": 50.0,
+    "steps_pos": 2000.0
+  },
+  "regime_tag": "CT03_Energy_Causality_Rep_Variant",
+  "schema": "CT-03/energy_causality_rep_variant_front_door_report/v1"
+}

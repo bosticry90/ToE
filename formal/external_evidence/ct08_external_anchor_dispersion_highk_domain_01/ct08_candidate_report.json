@@ -1,0 +1,50 @@
+{
+  "boundary": "digitized_dispersion_highk_slice",
+  "cases": [
+    {
+      "alpha_kHz2_um4": 0.003278502426357671,
+      "alpha_scale": 1.0,
+      "c_s2_kHz2_um2": 0.1423655101110897,
+      "case_id": "POSITIVE",
+      "kind": "positive_control",
+      "max_abs_error_kHz": 0.18425970657582025,
+      "model_tag": "bogoliubov_proxy_fit_highk_slice",
+      "n_points": 7,
+      "reduced_chi2": 2.3117260525332464,
+      "rmse_kHz": 0.12998203147630327
+    },
+    {
+      "alpha_kHz2_um4": 0.0016392512131788355,
+      "alpha_scale": 0.5,
+      "c_s2_kHz2_um2": 0.1423655101110897,
+      "case_id": "NEGATIVE",
+      "kind": "negative_control_model_break",
+      "max_abs_error_kHz": 3.1417312687688597,
+      "model_tag": "bogoliubov_proxy_alpha_scaled_highk_slice",
+      "n_points": 7,
+      "reduced_chi2": 25.49778652239275,
+      "rmse_kHz": 1.3258537121896636
+    }
+  ],
+  "config_tag": "ct08_external_anchor_dispersion_highk_slice_v0",
+  "domain_tag": "ct08_external_anchor_dispersion_highk_domain_01",
+  "fingerprint": "8f7b34fa5128fc3a57831c41b3ee16e5bd6faf0afedf951ebfd365c8c378ebbe",
+  "params": {
+    "alpha_scale_negative": 0.5,
+    "eps_max_abs_error_kHz": 0.5,
+    "eps_reduced_chi2": 4.0,
+    "eps_rmse_kHz": 0.25,
+    "fit_model": "omega2=c_s2*k^2+alpha*k^4",
+    "k_min_um_inv": 2.45380409050639,
+    "k_quantile": 0.5,
+    "n_slice_points": 7,
+    "non_independent_of_ct06": true,
+    "observable_id": "omega_over_2pi_kHz_vs_k_um_inv",
+    "origin_dataset_csv_relpath": "formal/external_evidence/bec_bragg_steinhauer_2001/omega_k_data.csv",
+    "origin_dataset_csv_sha256": "30284e51178ec4257ca3faa1f8842294ab3ea782b6785d8774426271a48f6574",
+    "origin_dataset_id": "Steinhauer2001_Fig3a_Digitized_v1",
+    "preprocessing_tag": "finite_filter_plus_k_sort_plus_highk_quantile_slice"
+  },
+  "regime_tag": "CT08_External_Anchor_Dispersion_HighK_Slice",
+  "schema": "CT-08/external_anchor_dispersion_highk_front_door_report/v1"
+}

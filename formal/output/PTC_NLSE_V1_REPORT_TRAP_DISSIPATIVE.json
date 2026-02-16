@@ -24,7 +24,7 @@
     "json": "sort_keys,separators=(',',':'),ensure_ascii=True",
     "rng": "none"
   },
-  "fingerprint": "7ec49f400793465a1c0f6d5ccdd11576c2122b2205ace3d6c0dcc14d9f543322",
+  "fingerprint": "181fc5ac02b275efeb88b91fc37e5c4af5c9fb9268dc82f77dbb944f82a00903",
   "input_fingerprint": "82283d849e85e04ec942f40ad083239d1cd92760c8caf4c2e4b77408e8581d19",
   "inputs": {
     "A_im": 0.0,
@@ -81,7 +81,7 @@
     "phase_invariance_error": 0.0,
     "t_end": 0.2,
     "time_reversal_error": 0.00125923059464,
-    "trap_m2_delta": 1.35109035071e-10,
+    "trap_m2_delta": 1.3510659258e-10,
     "trap_peak_ratio": 0.818730753091,
     "trap_shape_residual": 0.114129871774
   },

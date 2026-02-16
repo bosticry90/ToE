@@ -24,7 +24,7 @@
     "json": "sort_keys,separators=(',',':'),ensure_ascii=True",
     "rng": "none"
   },
-  "fingerprint": "dd1b4cadf4a60e9e097ca797c05038840e3744b09a7aeb297422243d43c5ae5c",
+  "fingerprint": "b72db97eedc4a9dc2f20b8f686098efcc3ac78a59cba4215587bee22e8a77785",
   "input_fingerprint": "d40ce9f2b3984e2b0dfdccc183763fa890338ca0604878b63fcb6c307546dfc8",
   "inputs": {
     "A_im": 0.0,

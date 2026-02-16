@@ -18,7 +18,7 @@
     "json": "sort_keys,separators=(',',':'),ensure_ascii=True",
     "rng": "none"
   },
-  "fingerprint": "9cd50f7384b284c94cfb5355ca373859d467df6afd952bf463de0e2fc3690560",
+  "fingerprint": "7d37cae835dfb38d50a116267b2bacd7372bce6e2a3bbe36c7e38b46828964d2",
   "input_fingerprint": "32657e5a3306b2be1b1ff425805c8dd0c9430b82affd5666061c5dea3116f92d",
   "inputs": {
     "A_im": 0.0,
@@ -38,7 +38,7 @@
     "steps": 200
   },
   "output": {
-    "energy_delta": -4.71844785466e-15,
+    "energy_delta": -4.66293670343e-15,
     "energy_trace": [
       -0.333333337041,
       -0.333333337041,
@@ -52,7 +52,7 @@
       -0.333333337041,
       -0.333333337041
     ],
-    "norm_delta": 7.37188088351e-14,
+    "norm_delta": 7.32747196253e-14,
     "norm_trace": [
       1.99999999169,
       1.99999999169,
@@ -69,12 +69,12 @@
     "omega_error": 0.499971082609,
     "omega_expected": -1.0,
     "omega_hat": -0.500028917391,
-    "phase_invariance_error": 0.0,
-    "shape_peak_delta": -3.63676501136e-08,
+    "phase_invariance_error": 5.55111512313e-17,
+    "shape_peak_delta": -3.63676503357e-08,
     "shape_peak_ratio": 0.999999963632,
-    "shape_residual": 1.47941586469e-05,
+    "shape_residual": 1.47941586472e-05,
     "t_end": 0.2,
-    "time_reversal_error": 4.31808293389e-16
+    "time_reversal_error": 4.57754885025e-16
   },
   "schema": "PTC/NLSE_v1_report/v1"
 }

@@ -1,0 +1,38 @@
+{
+  "boundary": "time_dilation_1d",
+  "cases": [
+    {
+      "beta": 0.6,
+      "case_id": "positive_control",
+      "delta_t": 2.0,
+      "delta_tau": 1.6,
+      "dilation_ratio": 0.8,
+      "dilation_residual": 0.0,
+      "gamma": 1.25,
+      "kind": "positive_control"
+    },
+    {
+      "beta": 0.6,
+      "case_id": "negative_control",
+      "delta_t": 2.0,
+      "delta_tau": 2.0,
+      "dilation_ratio": 1.0,
+      "dilation_residual": 0.19999999999999996,
+      "gamma": 1.25,
+      "kind": "negative_control"
+    }
+  ],
+  "config_tag": "rl14_time_dilation_proxy_v0",
+  "domain_tag": "rl14_time_dilation_proxy_domain_01",
+  "fingerprint": "a08688eae83adde8eb78d2e3c207287a440e490f7f671886021229caf7a46ac8",
+  "params": {
+    "beta": 0.6,
+    "c": 1.0,
+    "delta_t": 2.0,
+    "eps_break": 0.001,
+    "eps_dilation": 1e-08,
+    "gamma": 1.25
+  },
+  "regime_tag": "RL14_Time_Dilation_Proxy",
+  "schema": "RL/time_dilation_front_door_report/v1"
+}

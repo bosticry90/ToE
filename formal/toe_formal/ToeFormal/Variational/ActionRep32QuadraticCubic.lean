@@ -472,6 +472,23 @@ def ActionRep32CubicLinearMatchesP (g : ℂ) : Prop :=
   ∀ (δ : FieldRep32 -> FieldRep32) (ψ : FieldRep32),
     cubicLinearTerm g δ ψ = pairingRep32' (P_cubic_rep32_def g ψ) (δ ψ)
 
+/--
+Exact first-order deviation term for the cubic finite-difference expansion.
+This isolates the purely algebraic gap between the finite-difference
+first-order term and direct pairing with `P_cubic_rep32_def`.
+-/
+def cubicLinearDeviation
+    (g : ℂ) (δ : FieldRep32 -> FieldRep32) (ψ : FieldRep32) : ℝ :=
+  cubicLinearTerm g δ ψ - pairingRep32' (P_cubic_rep32_def g ψ) (δ ψ)
+
+/-- Exact total finite-difference deviation at step `ε` for the cubic lane. -/
+def cubicTotalDeviationAtStep
+    (g : ℂ) (ε : ℝ) (δ : FieldRep32 -> FieldRep32) (ψ : FieldRep32) : ℝ :=
+  cubicLinearDeviation g δ ψ +
+    ε * cubicRemainder₂ g δ ψ +
+    ε^2 * cubicRemainder₃ g δ ψ +
+    ε^3 * cubicRemainder₄ g δ ψ
+
 theorem differenceQuotientRep32_cubic_expand
     (g : ℂ) (δ : FieldRep32 -> FieldRep32) (ψ : FieldRep32)
     (ε : ℝ) (hε : ε ≠ 0) :
@@ -530,6 +547,36 @@ theorem differenceQuotientRep32_cubic_expand
           ]
           ring
 
+theorem differenceQuotientRep32_cubic_deviation_expand
+    (g : ℂ) (δ : FieldRep32 -> FieldRep32) (ψ : FieldRep32)
+    (ε : ℝ) (hε : ε ≠ 0) :
+    differenceQuotientRep32 (actionRep32Cubic g) δ ψ ε -
+      pairingRep32' (P_cubic_rep32_def g ψ) (δ ψ) =
+      cubicLinearDeviation g δ ψ +
+        ε * cubicRemainder₂ g δ ψ +
+        ε^2 * cubicRemainder₃ g δ ψ +
+        ε^3 * cubicRemainder₄ g δ ψ := by
+  have hexp :=
+    differenceQuotientRep32_cubic_expand
+      (g := g) (δ := δ) (ψ := ψ) (ε := ε) hε
+  calc
+    differenceQuotientRep32 (actionRep32Cubic g) δ ψ ε -
+        pairingRep32' (P_cubic_rep32_def g ψ) (δ ψ)
+        =
+        (cubicLinearTerm g δ ψ +
+            ε * cubicRemainder₂ g δ ψ +
+            ε^2 * cubicRemainder₃ g δ ψ +
+            ε^3 * cubicRemainder₄ g δ ψ) -
+          pairingRep32' (P_cubic_rep32_def g ψ) (δ ψ) := by
+            simpa [hexp]
+    _ =
+        cubicLinearDeviation g δ ψ +
+          ε * cubicRemainder₂ g δ ψ +
+          ε^2 * cubicRemainder₃ g δ ψ +
+          ε^3 * cubicRemainder₄ g δ ψ := by
+            dsimp [cubicLinearDeviation]
+            ring
+
 def ActionRep32CubicNoSecondOrder (g : ℂ) : Prop :=
   ∀ (δ : FieldRep32 -> FieldRep32) (ψ : FieldRep32),
     cubicRemainder₂ g δ ψ = 0
@@ -541,6 +588,22 @@ def ActionRep32CubicNoThirdOrder (g : ℂ) : Prop :=
 def ActionRep32CubicNoFourthOrder (g : ℂ) : Prop :=
   ∀ (δ : FieldRep32 -> FieldRep32) (ψ : FieldRep32),
     cubicRemainder₄ g δ ψ = 0
+
+theorem ActionRep32CubicTotalDeviationZeroAtStep_of_components
+    (g : ℂ) (ε : ℝ)
+    (h1 : ActionRep32CubicLinearMatchesP g)
+    (h2 : ActionRep32CubicNoSecondOrder g)
+    (h3 : ActionRep32CubicNoThirdOrder g)
+    (h4 : ActionRep32CubicNoFourthOrder g) :
+    ∀ (δ : FieldRep32 -> FieldRep32) (ψ : FieldRep32),
+      cubicTotalDeviationAtStep g ε δ ψ = 0 := by
+  intro δ ψ
+  have h1' := h1 δ ψ
+  have h2' := h2 δ ψ
+  have h3' := h3 δ ψ
+  have h4' := h4 δ ψ
+  dsimp [cubicTotalDeviationAtStep, cubicLinearDeviation]
+  simp [h1', h2', h3', h4']
 
 theorem ActionRep32FiniteDifferenceRepresentsP_of_cubic
     (g : ℂ)
@@ -574,6 +637,96 @@ theorem ActionRep32FiniteDifferenceRepresentsP_of_cubic
             simp [h1', h2', h3', h4']
     _ = pairingRep32' (P_rep32 ψ) (δ ψ) := by
             simp [hP]
+
+/--
+Exact algebraic deviation identity for the cubic action lane.
+
+This theorem removes the need to assume `ActionRep32FiniteDifferenceRepresentsP`
+up-front when performing algebraic analysis: it exposes the complete error
+surface (linear deviation + higher-order remainders) directly.
+-/
+theorem ActionRep32FiniteDifferenceDeviationFromP_of_cubic
+    (g : ℂ)
+    (hAction : actionRep32.action = actionRep32Cubic g)
+    (hP : P_rep32 = P_cubic_rep32_def g)
+    (ε : ℝ) (hε : ε ≠ 0) :
+    ∀ (δ : FieldRep32 -> FieldRep32) (ψ : FieldRep32),
+      formalFirstVariationRep32OpAt ε actionRep32.action δ ψ -
+        pairingRep32' (P_rep32 ψ) (δ ψ) =
+          cubicLinearDeviation g δ ψ +
+            ε * cubicRemainder₂ g δ ψ +
+            ε^2 * cubicRemainder₃ g δ ψ +
+            ε^3 * cubicRemainder₄ g δ ψ := by
+  intro δ ψ
+  have hdev :=
+    differenceQuotientRep32_cubic_deviation_expand
+      (g := g) (δ := δ) (ψ := ψ) (ε := ε) hε
+  calc
+    formalFirstVariationRep32OpAt ε actionRep32.action δ ψ -
+        pairingRep32' (P_rep32 ψ) (δ ψ)
+        =
+        differenceQuotientRep32 (actionRep32Cubic g) δ ψ ε -
+          pairingRep32' (P_cubic_rep32_def g ψ) (δ ψ) := by
+            simp [formalFirstVariationRep32OpAt, hAction, hP]
+    _ =
+        cubicLinearDeviation g δ ψ +
+          ε * cubicRemainder₂ g δ ψ +
+          ε^2 * cubicRemainder₃ g δ ψ +
+          ε^3 * cubicRemainder₄ g δ ψ := by
+            simpa using hdev
+
+theorem ActionRep32FiniteDifferenceDeviationFromP_of_cubic_totalDeviationAtStep
+    (g : ℂ)
+    (hAction : actionRep32.action = actionRep32Cubic g)
+    (hP : P_rep32 = P_cubic_rep32_def g)
+    (ε : ℝ) (hε : ε ≠ 0) :
+    ∀ (δ : FieldRep32 -> FieldRep32) (ψ : FieldRep32),
+      formalFirstVariationRep32OpAt ε actionRep32.action δ ψ -
+        pairingRep32' (P_rep32 ψ) (δ ψ) =
+          cubicTotalDeviationAtStep g ε δ ψ := by
+  intro δ ψ
+  simpa [cubicTotalDeviationAtStep] using
+    ActionRep32FiniteDifferenceDeviationFromP_of_cubic
+      g
+      hAction
+      hP
+      ε
+      hε
+      δ
+      ψ
+
+/-- Algebraic closure assumption at fixed step: total cubic deviation vanishes pointwise. -/
+def ActionRep32CubicTotalDeviationZeroAtStep (g : ℂ) (ε : ℝ) : Prop :=
+  ∀ (δ : FieldRep32 -> FieldRep32) (ψ : FieldRep32),
+    cubicTotalDeviationAtStep g ε δ ψ = 0
+
+theorem ActionRep32FiniteDifferenceRepresentsP_of_cubic_totalDeviationZeroAtStep
+    (g : ℂ)
+    (hAction : actionRep32.action = actionRep32Cubic g)
+    (hP : P_rep32 = P_cubic_rep32_def g)
+    (ε : ℝ) (hε : ε ≠ 0)
+    (hDevZero : ActionRep32CubicTotalDeviationZeroAtStep g ε) :
+    ActionRep32FiniteDifferenceRepresentsP ε hε := by
+  intro δ ψ
+  have hDev :
+      formalFirstVariationRep32OpAt ε actionRep32.action δ ψ -
+        pairingRep32' (P_rep32 ψ) (δ ψ) =
+          cubicTotalDeviationAtStep g ε δ ψ := by
+    exact
+      ActionRep32FiniteDifferenceDeviationFromP_of_cubic_totalDeviationAtStep
+        g
+        hAction
+        hP
+        ε
+        hε
+        δ
+        ψ
+  have hDevZeroAt : cubicTotalDeviationAtStep g ε δ ψ = 0 := hDevZero δ ψ
+  have hSubZero :
+      formalFirstVariationRep32OpAt ε actionRep32.action δ ψ -
+        pairingRep32' (P_rep32 ψ) (δ ψ) = 0 := by
+    simpa [hDevZeroAt] using hDev
+  exact sub_eq_zero.mp hSubZero
 
 end
 

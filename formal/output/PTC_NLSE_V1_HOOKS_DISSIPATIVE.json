@@ -4,7 +4,7 @@
     "json": "sort_keys,separators=(',',':'),ensure_ascii=True",
     "rng": "none"
   },
-  "fingerprint": "cdbc6d14da4c250e714bae7b2181029a05e0ee515e52f4cfae94bf140e729fb4",
+  "fingerprint": "f7b42134ee8e49e640dae77dced1e8707de940e58213529501a62b15f65669fc",
   "hooks": {
     "bc01_boundary_residual": 0.0626657068658,
     "bc01_dirichlet_constant_residual": 1.0,
@@ -14,7 +14,7 @@
     "sym01_conjugation_residual": 0.310299299332,
     "sym01_phase_residual": 6.69908105315e-19
   },
-  "input_fingerprint": "32632c8ec1dff1f252c689dab2e2c4c3638389ccaf21153fc6f42599f514305a",
+  "input_fingerprint": "b253882889e0b2b4289401b25f5583c07e74ca75f988c4d7df75d3ae1d2849d4",
   "inputs": {
     "A_im": 0.0,
     "A_re": 0.1,

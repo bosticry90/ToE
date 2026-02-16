@@ -1,0 +1,9 @@
+{
+  "schema": "CT-09/independent_external_anchor_dataset_metadata/template_v0",
+  "status": "planning_scaffold_only",
+  "dataset_id": "TBD",
+  "independence_from_ct06_ct07_ct08": "required_true_before_activation",
+  "source_citation": "TBD",
+  "units": {},
+  "fingerprint_sha256": "TBD"
+}

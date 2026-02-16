@@ -1,0 +1,45 @@
+{
+  "boundary": "digitized_distance_time_curve",
+  "cases": [
+    {
+      "c_um_per_ms": 0.48225601845841276,
+      "case_id": "POSITIVE",
+      "intercept_um": 45.677025560591936,
+      "kind": "positive_control",
+      "max_abs_error_um": 48.557720149926055,
+      "model_tag": "linear_speed_fit",
+      "n_points": 11,
+      "reduced_chi2": 2.6127876776572343,
+      "rmse_um": 29.241992904921144
+    },
+    {
+      "c_um_per_ms": 0.24112800922920638,
+      "case_id": "NEGATIVE",
+      "intercept_um": 45.677025560591936,
+      "kind": "negative_control_model_break",
+      "max_abs_error_um": 53.798140969169644,
+      "model_tag": "linear_speed_scaled",
+      "n_points": 11,
+      "reduced_chi2": 2.932775195103008,
+      "rmse_um": 30.98091891114862
+    }
+  ],
+  "config_tag": "ct09_independent_external_anchor_sound_speed_v0",
+  "domain_tag": "ct09_independent_sound_speed_domain_01",
+  "fingerprint": "d42f594ec6ded12102a74c49b6f2e93c3da554d93863eb59ef0d5552eac747c9",
+  "params": {
+    "c_scale_negative": 0.5,
+    "dataset_csv_relpath": "formal/external_evidence/ct09_independent_sound_speed_domain_01/distance_vs_time_um_ms.csv",
+    "dataset_csv_sha256": "2b1b2c77b106e474ffd80b48e977fb6ff6b988036e2e75fdabc82e93a8391021",
+    "dataset_id": "Andrews1997_Fig2_DistanceTime_Digitized_v1",
+    "eps_max_abs_error_um": 50.0,
+    "eps_reduced_chi2": 2.8,
+    "eps_rmse_um": 30.0,
+    "fit_model": "distance_um=c*time_ms+intercept_um",
+    "observable_id": "distance_um_vs_time_ms",
+    "preprocessing_tag": "finite_filter_plus_time_sort_no_unit_conversion",
+    "sigma_distance_um": 20.0
+  },
+  "regime_tag": "CT09_Independent_External_Anchor_Sound_Speed",
+  "schema": "CT-09/independent_external_anchor_sound_speed_front_door_report/v1"
+}

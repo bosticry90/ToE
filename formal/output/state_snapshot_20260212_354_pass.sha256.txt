@@ -1,0 +1,2 @@
+sha256: 8d99dbbf7f4ef1d3bb474408168d30503499dc0bdf3944088455555d9c0e8108
+file: formal/output/state_snapshot_20260212_354_pass.md

@@ -4,7 +4,147 @@ Project: ToE
 
 Purpose: Epistemic inventory and stabilization
 
-Last updated: 2026-02-08
+Last updated: 2026-02-15
+
+GR01 governance-alignment checkpoint (2026-02-15):
+- Selected closure endpoint remains explicit:
+  - `conditional-publish endpoint`.
+- Deferred retirement blockers remain explicit and intentionally open:
+  - `BLK-01`
+  - `BLK-02`
+- Action/RAC alignment adjudication token:
+  - `ALIGNMENT_ADJUDICATION: DISCHARGED_CONDITIONAL_PUBLISH_v0`
+- Default-quotient lock pointers (synchronized support set):
+  - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_hAction_provenance_v0.md`
+  - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_hRAC_obligation_bundle_v0.md`
+  - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_bridge_discharge_object_v0.md`
+
+GR01 conservation-closure sync checkpoint (2026-02-15):
+- Conservation compatibility promotion is now synchronized:
+  - `TOE-GR-CONS-01: T-CONDITIONAL`
+  - `CONS01_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
+- Required GR closure rows are non-blocking:
+  - `TOE-GR-DER-01: T-CONDITIONAL`
+  - `TOE-GR-DER-02: T-CONDITIONAL`
+  - `TOE-GR-CONS-01: T-CONDITIONAL`
+- Dual-layer gates are synchronized to current governance state:
+  - `PILLAR-GR_PHYSICS_STATUS: CLOSED_v0_DISCRETE_CONDITIONAL`
+  - `PILLAR-GR_GOVERNANCE_STATUS: CLOSED_v0_REQUIRED_ROWS_CLEARED`
+  - `PROCEED_GATE_GR: ALLOWED_v0_PHYSICS_CLOSED`
+  - `MATRIX_CLOSURE_GATE_GR: ALLOWED_v0_GOVERNANCE_CLOSED`
+- Explicit scope boundary remains unchanged:
+  - no continuum-limit promotion,
+  - no uniqueness / infinite-domain inversion promotion,
+  - no theorem-complete Noether conservation-family claim.
+- Promotion evidence pointers:
+  - `formal/toe_formal/ToeFormal/GR/ConservationContract.lean`
+  - `formal/docs/paper/TOE_GR01_CONSERVATION_COMPATIBILITY_v0.md`
+  - `formal/docs/paper/ASSUMPTION_REGISTRY_v1.md`
+  - `formal/output/gr01_cons01_unblock_cycle8_20260215.md`
+
+GR01 full-derivation discharge checkpoint (2026-02-15):
+- Full-derivation discharge is now pinned:
+	- `TOE-GR-FULL-01: T-PROVED`
+	- `FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DISCRETE`
+- Blocking objects are explicit and auditable:
+  - default action route is theorem-bound (`actionRep32_action_default_binding`)
+    but not yet a full action-calculus EL-to-residual derivation surface,
+  - scaffold-level Rep32/EL defaults (`FirstVariationRep32Def.lean`,
+    `DischargeELMatchesFN01Rep32Pcubic.lean` equality pin),
+  - bridge-assumption semantics route (`WeakFieldPoissonLimit.lean`,
+    `GR01BridgePromotion.lean`).
+	- assumption-object dependency on `ELImpliesDiscretePoissonResidual` is now
+		replaced on the bridge theorem surface by
+		`gr01_el_implies_discrete_poisson_residual_from_bridge_promotion`, while
+		explicit bridge semantics assumptions remain in force.
+	- operator-residual transport theorem route is now explicit
+		(`ELImpliesOperatorResidualTransport`,
+		`gr01_operator_residual_transport_from_bound_bridge_assumptions`,
+		`gr01_el_implies_discrete_poisson_residual_from_operator_transport`,
+		`TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_operator_transport_minimal_of_hP`),
+		and action-layer weak-field closure now threads this witness route
+		(`actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_operator_transport_witness_v0`),
+		but deriving this transport route from action alone (without bridge
+		semantics assumptions) remains open.
+- Current progress token is pinned:
+  - `differenceQuotientRep32_cubic_deviation_expand`
+  - `ActionRep32FiniteDifferenceDeviationFromP_of_cubic`
+  - `ActionRep32CubicTotalDeviationZeroAtStep`
+  - `ActionRep32CubicTotalDeviationZeroAtStep_of_components`
+  - `ActionRep32CubicDeviationZeroAtStep_of_RAC`
+  - `ActionRep32FiniteDifferenceRepresentsP_of_cubic_totalDeviationZeroAtStep`
+  - `ActionRep32FiniteDifferenceRepresentsP_cubic_of_deviationZeroAtStep`
+  - `ActionVariationBridgeRep32At_cubic_of_deviationZeroAtStep`
+  - `actionRep32_variation_bridge_sequence_from_algebraic_deviation_v0`
+  - `actionRep32_variation_bridge_sequence_from_algebraic_deviation_default_binding_v0`
+  - `actionRep32_produces_operator_equation_discrete_of_bridge_witness_constructor_from_algebraic_deviation_v0`
+  - `actionRep32_variation_deviation_sequence_discrete_v0`
+  - `actionRep32_variation_deviation_sequence_discrete_default_binding_v0`
+  - `formal/toe_formal/ToeFormal/Variational/ActionRep32QuadraticCubic.lean`
+  - `formal/toe_formal/ToeFormal/Variational/GR01ActionToOperatorDiscrete.lean`
+  - `P_cubic_rep32_core`
+  - `declared_g_rep32_default`
+  - `formal/toe_formal/ToeFormal/Variational/Rep32CubicOperatorCore.lean`
+  - `EL_toe_rep32_equals_Pcubic_under_default_quotient_assumptions_of_hP`
+  - `actionRep32_action_default_binding`
+  - `Rep32_cubic_lane_default_binding` (threads theorem-based
+    `P_rep32_def` + `actionRep32_action_default_binding`)
+  - `EL_toe_eq_Pcubic_rep32_of_hP`
+  - `P_rep32_def` (theorem-based default binding)
+  - `formal/toe_formal/ToeFormal/Variational/ActionRep32CubicLane.lean`
+  - `formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep32Pcubic.lean`
+  - `gr01_discrete_residual_from_bridge_promotion_chain_minimal_of_hP`
+  - `gr01_discrete_residual_from_bridge_promotion_chain_of_hP`
+  - `gr01_discrete_residual_from_bridge_promotion_chain_default_binding_of_hP`
+	- `gr01_el_implies_discrete_poisson_residual_from_bridge_promotion`
+	- `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_bridge_minimal_of_hP`
+	- `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_bridge_of_hP`
+	- `TOE_GR01_weak_field_poisson_limit_under_default_binding_assumptions_derived_from_bridge_of_hP`
+	- `ELImpliesOperatorResidualTransport`
+	- `gr01_el_implies_discrete_poisson_residual_from_operator_transport`
+	- `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_operator_transport_minimal_of_hP`
+	- `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_operator_transport_of_hP`
+	- `TOE_GR01_weak_field_poisson_limit_under_default_binding_assumptions_derived_from_operator_transport_of_hP`
+	- `actionRep32_operator_residual_transport_from_radial_evaluator_interface_v0`
+	- `actionRep32_operator_residual_under_bound_from_radial_evaluator_interface_v0`
+	- `actionRep32_operator_residual_transport_of_bridge_witness_constructor_v0`
+	- `actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_operator_transport_witness_v0`
+	- `actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_bridge_witness_constructor_v0`
+  - `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_minimal_of_hP`
+  - `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_of_hP`
+  - `TOE_GR01_weak_field_poisson_limit_under_default_binding_assumptions_of_hP`
+  - `gr01_der01_scaffold_bundle_under_promoted_assumptions_of_hP`
+  - `gr01_end_to_end_chain_bundle_under_promoted_assumptions_of_hP`
+  - `gr01_end_to_end_poisson_equation_under_promoted_assumptions_of_hP`
+  - `formal/toe_formal/ToeFormal/Variational/GR01BridgePromotion.lean`
+  - `formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean`
+  - `formal/toe_formal/ToeFormal/Variational/GR01DerivationScaffoldPromotion.lean`
+  - `formal/toe_formal/ToeFormal/Variational/GR01EndToEndClosure.lean`
+- Bridge-promotion wrappers are now compatibility shells that route through the
+  minimal theorem-bound `hP` transport route.
+- Canonical target + gate pointers:
+  - `formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md`
+  - `formal/python/tests/test_gr01_full_derivation_discharge_gate.py`
+
+GR01 wrapper-policy invariants checkpoint (2026-02-15):
+- Compatibility weak-field wrapper family is now reduced-premise and
+	marker-retired:
+	- explicit uniform-bound witness threading is required (`hWeakFieldUniformBound`),
+	- legacy explicit wrapper-signature parameters are retired
+		(`hAction`, `hP`, `hProjectionMapWellFormed`,
+		`hWeakFieldTruncationSound`).
+- Canonical weak-field/transport blocks are anti-drift guarded against
+	compatibility route regression:
+	- compatibility quotient/bridge weak-field wrapper call patterns are
+		forbidden in canonical theorem bodies.
+- Gate enforcement is now dual-layer:
+	- theorem-specific assertions remain pinned,
+	- compact data-driven policy table assertions are active for canonical vs
+		compatibility wrapper families.
+- Focused validation status (current cycle):
+	- `formal/python/tests/test_gr01_full_derivation_discharge_gate.py`
+	- `formal/python/tests/test_pillar_inevitability_playbook.py`
+	- result: `9 passed`.
 
 
 

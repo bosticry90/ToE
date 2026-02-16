@@ -24,9 +24,9 @@ structure ActionRep32Scaffold where
   EL : FieldRep32 -> FieldRep32
   represents_EL : RepresentsRep32 EL
 
-/-- Rep32 action scaffold instance (structural placeholder). -/
+/-- Rep32 action scaffold instance (structural, explicit nonzero action surface). -/
 def actionRep32 : ActionRep32Scaffold :=
-  { action := fun _ => 0
+  { action := fun ψ => pairingRep32' (P_rep32 ψ) ψ
     EL := P_rep32
     represents_EL := P_represents_rep32 }
 

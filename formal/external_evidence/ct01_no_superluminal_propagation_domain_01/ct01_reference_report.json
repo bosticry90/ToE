@@ -1,0 +1,46 @@
+{
+  "boundary": "periodic",
+  "cases": [
+    {
+      "c_cone": 1.0,
+      "case_id": "positive_control",
+      "crossed": true,
+      "delta_x": 1.0,
+      "kind": "positive_control",
+      "t_cross": 1.0,
+      "update_mode": "baseline",
+      "v_emp": 1.0
+    },
+    {
+      "c_cone": 1.0,
+      "case_id": "negative_control",
+      "crossed": true,
+      "delta_x": 1.0,
+      "kind": "negative_control",
+      "t_cross": 0.1,
+      "update_mode": "teleport_step",
+      "v_emp": 10.0
+    }
+  ],
+  "config_tag": "ct01_no_superluminal_propagation_v0",
+  "domain_tag": "ct01_no_superluminal_propagation_domain_01",
+  "fingerprint": "fdbd883242cc4ed53009bd39ed951032463170b10215a88968772b63bf47fcb8",
+  "params": {
+    "amplitude": 1.0,
+    "c_cone": 1.0,
+    "c_wave": 1.0,
+    "delta_x": 1.0,
+    "dt": 0.1,
+    "eps_break": 0.001,
+    "eps_ct01": 1e-08,
+    "length": 6.283185307179586,
+    "nt": 32.0,
+    "nx": 128.0,
+    "sigma": 0.2,
+    "support_radius": 0.7433844377699677,
+    "u_threshold": 0.001,
+    "x0": 1.5707963267948966
+  },
+  "regime_tag": "CT01_No_Superluminal_Propagation",
+  "schema": "CT-01/no_superluminal_propagation_front_door_report/v1"
+}

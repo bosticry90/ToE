@@ -1,0 +1,38 @@
+{
+  "cases": [
+    {
+      "case_id": "POSITIVE",
+      "contraction_factor_per_step": 0.8,
+      "distance_in": 1.4402735527588588,
+      "distance_out": 0.7374200590125358,
+      "empirical_lipschitz": 0.5120000000000001,
+      "kind": "positive_control",
+      "steps": 3,
+      "update_mode": "linear_scale_contractive"
+    },
+    {
+      "case_id": "NEGATIVE",
+      "contraction_factor_per_step": 1.05,
+      "distance_in": 1.4402735527588588,
+      "distance_out": 1.667296671512474,
+      "empirical_lipschitz": 1.157625,
+      "kind": "negative_control",
+      "steps": 3,
+      "update_mode": "linear_scale_break"
+    }
+  ],
+  "config_tag": "cx01_update_contractivity_v0",
+  "domain_tag": "cx01_update_contractivity_domain_01",
+  "fingerprint": "a6c54c8462cc2859fde4d9ff019313e6a17aa2117273a5f437009f0bc1b62416",
+  "norm_name": "l2",
+  "params": {
+    "eps_break": 0.001,
+    "eps_contractivity": 1e-08,
+    "k_break": 1.05,
+    "k_contract": 0.8,
+    "state_dim": 3.0,
+    "steps": 3.0
+  },
+  "regime_tag": "CX01_Update_Contractivity",
+  "schema": "CX-01/update_contractivity_front_door_report/v1"
+}

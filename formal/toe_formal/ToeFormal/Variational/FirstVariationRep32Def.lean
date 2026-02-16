@@ -11,6 +11,7 @@ Scope:
 
 import Mathlib
 import ToeFormal.Variational.FirstVariationDeclaredRep
+import ToeFormal.Variational.Rep32CubicOperatorCore
 
 namespace ToeFormal
 namespace Variational
@@ -25,8 +26,9 @@ abbrev FieldRep32 : Type := Field2DRep32
 def pairingRep32' : FieldRep32 -> FieldRep32 -> ℝ :=
   pairingContractRep.pairing
 
-/-- Declared comparison operator on the Rep32 quotient (structural placeholder). -/
-axiom P_rep32 : FieldRep32 -> FieldRep32
+/-- Default comparison operator on the Rep32 quotient (explicit v0 scaffold). -/
+def P_rep32 : FieldRep32 -> FieldRep32 :=
+  P_cubic_rep32_core declared_g_rep32_default
 
 /-- Declared first-variation functional on the Rep32 quotient (definition). -/
 def firstVariationRep32 (δ : FieldRep32 -> FieldRep32) (ψ : FieldRep32) : ℝ :=

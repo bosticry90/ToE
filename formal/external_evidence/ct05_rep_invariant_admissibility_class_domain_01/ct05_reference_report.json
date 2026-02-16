@@ -1,0 +1,51 @@
+{
+  "boundary": "rep_invariant_gate",
+  "cases": [
+    {
+      "admissible_ref": true,
+      "admissible_rep": true,
+      "bound_ok_ref": true,
+      "bound_ok_rep": true,
+      "bound_residual": 0.0005918495924121875,
+      "case_id": "POSITIVE",
+      "kind": "positive_control",
+      "rep_delta": 0.0
+    },
+    {
+      "admissible_ref": true,
+      "admissible_rep": true,
+      "bound_ok_ref": true,
+      "bound_ok_rep": true,
+      "bound_residual": 0.010591849592412187,
+      "case_id": "NEG_REP_BREAK",
+      "kind": "negative_control_rep_break",
+      "rep_delta": 0.01
+    },
+    {
+      "admissible_ref": false,
+      "admissible_rep": false,
+      "bound_ok_ref": true,
+      "bound_ok_rep": true,
+      "bound_residual": 0.0005918495924121875,
+      "case_id": "NEG_ADMISSIBILITY",
+      "kind": "negative_control_admissibility",
+      "rep_delta": 0.0
+    }
+  ],
+  "config_tag": "ct05_rep_invariant_admissibility_class_v0",
+  "domain_tag": "ct05_rep_invariant_admissibility_class_domain_01",
+  "fingerprint": "1627f182c1f114c1ad35430a372fc19d4f6b1eb2c39fbbbd7d6bc7daa2db8311",
+  "params": {
+    "ct02_domain_tag": "ct02_energy_causality_update_bounds_domain_01",
+    "ct02_report_fingerprint": "cce0c8ba63c53901bc68ea94e7c98b0d2ab29da4b2f53962221823392422e122",
+    "ct03_domain_tag": "ct03_energy_causality_rep_variant_domain_01",
+    "ct03_report_fingerprint": "fb5ea8570f7698876619f68e73911d2a8df2a0c3704e4017b3a1d65cb9925eec",
+    "eps_bound_residual": 0.001,
+    "eps_rep_invariant": 1e-10,
+    "rep_break_delta": 0.01,
+    "rl11_domain_tag": "rl11-causality-signal-cone-domain-01",
+    "rl11_report_fingerprint": "c9c81fb9e9ce8ac989b3404acddd575fede8dba80126ceff94b35ef5a992809b"
+  },
+  "regime_tag": "CT05_Rep_Invariant_Admissibility_Class",
+  "schema": "CT-05/rep_invariant_admissibility_class_front_door_report/v1"
+}

@@ -1,0 +1,17 @@
+{
+  "schema": "CT-09/independent_external_anchor_dataset_metadata/v1",
+  "dataset_id": "Andrews1997_Fig2_DistanceTime_Digitized_v1",
+  "dataset_csv_relpath": "formal/external_evidence/ct09_independent_sound_speed_domain_01/distance_vs_time_um_ms.csv",
+  "dataset_csv_sha256": "2b1b2c77b106e474ffd80b48e977fb6ff6b988036e2e75fdabc82e93a8391021",
+  "source_family_relpath": "formal/external_evidence/bec_sound_andrews_1997",
+  "independence": {
+    "independent_of_ct06_ct07_ct08": true,
+    "ct06_family_root_dataset_id": "Steinhauer2001_Fig3a_Digitized_v1",
+    "independence_basis": "different source family and different observable surface (distance-time vs Bragg dispersion)"
+  },
+  "units": {
+    "time_ms": "ms",
+    "distance_um": "um"
+  },
+  "preprocessing_tag": "finite_filter_plus_time_sort_no_unit_conversion"
+}

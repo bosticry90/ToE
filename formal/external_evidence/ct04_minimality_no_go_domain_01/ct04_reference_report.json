@@ -1,0 +1,43 @@
+{
+  "boundary": "periodic",
+  "cases": [
+    {
+      "case_id": "POSITIVE",
+      "cfl": 0.1,
+      "constraint_mode": "cfl_bound",
+      "dt": 0.004908738521234052,
+      "kind": "positive_control",
+      "max_rel_drift": 0.0005966084844298418,
+      "rel_drift": 8.696004559631644e-05,
+      "steps": 2000
+    },
+    {
+      "case_id": "NEGATIVE",
+      "cfl": 1.05,
+      "constraint_mode": "cfl_removed",
+      "dt": 0.05154175447295754,
+      "kind": "negative_control",
+      "max_rel_drift": 4.544471913419606e-05,
+      "rel_drift": 4.544471913419606e-05,
+      "steps": 20
+    }
+  ],
+  "config_tag": "ct04_minimality_no_go_v0",
+  "domain_tag": "ct04_minimality_no_go_domain_01",
+  "fingerprint": "d46a2ebab12f209e75807a137a01a87afe09004cca02d6b3d4308cf6b09a1a91",
+  "params": {
+    "c_wave": 1.0,
+    "cfl_max": 1.0,
+    "dt_neg": 0.05154175447295754,
+    "dt_pos": 0.004908738521234052,
+    "dx": 0.04908738521234052,
+    "eps_break": 0.001,
+    "eps_drift": 0.005,
+    "length": 6.283185307179586,
+    "nx": 128.0,
+    "steps_neg": 20.0,
+    "steps_pos": 2000.0
+  },
+  "regime_tag": "CT04_Minimality_No_Go",
+  "schema": "CT-04/minimality_no_go_front_door_report/v1"
+}

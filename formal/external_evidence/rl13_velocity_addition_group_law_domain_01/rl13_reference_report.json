@@ -1,0 +1,35 @@
+{
+  "boundary": "velocity_addition_1d",
+  "cases": [
+    {
+      "addition_residual": 0.0,
+      "beta_comp": 0.6249999999999999,
+      "beta_expected": 0.6249999999999999,
+      "beta_u": 0.3,
+      "beta_v": 0.4,
+      "case_id": "positive_control",
+      "kind": "positive_control"
+    },
+    {
+      "addition_residual": 0.07500000000000007,
+      "beta_comp": 0.7,
+      "beta_expected": 0.6249999999999999,
+      "beta_u": 0.3,
+      "beta_v": 0.4,
+      "case_id": "negative_control",
+      "kind": "negative_control"
+    }
+  ],
+  "config_tag": "rl13_velocity_addition_group_law_v0",
+  "domain_tag": "rl13_velocity_addition_group_law_domain_01",
+  "fingerprint": "874f61800c32580ae1d54155c974a0d50cc3955d6df3841610a4b5c578900bba",
+  "params": {
+    "beta_u": 0.3,
+    "beta_v": 0.4,
+    "c": 1.0,
+    "eps_addition": 1e-08,
+    "eps_break": 0.001
+  },
+  "regime_tag": "RL13_Velocity_Addition_Group_Law",
+  "schema": "RL/velocity_addition_front_door_report/v1"
+}

@@ -24,8 +24,12 @@ def _lean_module_from_path(artifact_path: str) -> str:
 
 
 def _tracked_comparator_modules() -> set[str]:
-    # Comparator lanes are cv*.py modules in the canonical comparators front door.
-    return {p.name for p in COMPARATORS_DIR.glob("cv*_*.py")}
+    # Canonical comparator surface on this branch includes cv* lanes plus
+    # the two baseline RL comparators (rl01/rl02).
+    modules = {p.name for p in COMPARATORS_DIR.glob("cv*_*.py")}
+    modules |= {p.name for p in COMPARATORS_DIR.glob("rl01_*.py")}
+    modules |= {p.name for p in COMPARATORS_DIR.glob("rl02_*.py")}
+    return modules
 
 
 def test_comparator_manifest_covers_all_comparator_modules():

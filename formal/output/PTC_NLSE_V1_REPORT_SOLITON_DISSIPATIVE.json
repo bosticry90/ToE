@@ -18,7 +18,7 @@
     "json": "sort_keys,separators=(',',':'),ensure_ascii=True",
     "rng": "none"
   },
-  "fingerprint": "30954747c240c42cd652f185b72a16be03bd282e41a8c9fb35e9ae1ac1ac38f5",
+  "fingerprint": "1ee010a8cdfb14140dcec0c4a58a6d751d80008cb8dbbf1f6ccdab284e21bd18",
   "input_fingerprint": "c5df09b50ea06ba07035f9b1b6aafeb561ec862c9b11898cedd3457df954ed94",
   "inputs": {
     "A_im": 0.0,
@@ -49,10 +49,10 @@
       -0.150325978431,
       -0.128900346692,
       -0.109513552281,
-      -0.0919943364834,
+      -0.0919943364835,
       -0.0761851270678
     ],
-    "norm_delta": -0.659359905189,
+    "norm_delta": -0.659359905188,
     "norm_trace": [
       1.99999999169,
       1.92157887032,
@@ -60,7 +60,7 @@
       1.77384086606,
       1.70428757085,
       1.63746149935,
-      1.57325571559,
+      1.5732557156,
       1.51156747663,
       1.45229806811,
       1.39535264634,
@@ -69,7 +69,7 @@
     "omega_error": 0.588762577071,
     "omega_expected": -1.0,
     "omega_hat": -0.411237422929,
-    "phase_invariance_error": 0.0,
+    "phase_invariance_error": 5.55111512313e-17,
     "shape_peak_delta": -0.183078345762,
     "shape_peak_ratio": 0.816921654238,
     "shape_residual": 0.256360465973,
