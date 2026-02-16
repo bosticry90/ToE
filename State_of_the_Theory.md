@@ -393,6 +393,12 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE21_v0: THEOREM_PREDISCHARGE_CRITERIA_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE21_ARTIFACT_v0: sr_covariance_theorem_predischarge_criteria_cycle21_v0`
 	- artifact: `formal/output/sr_covariance_theorem_predischarge_criteria_cycle21_v0.json`
+- SR cycle-22 theorem-surface adjudication-transition lock is pinned:
+	- `TARGET-SR-COV-MICRO-22-THEOREM-ADJUDICATION-TRANSITION-v0`
+	- `SR_COVARIANCE_THEOREM_SURFACE_ADJUDICATION_v0: DISCHARGED_v0_PREDISCHARGE_CRITERIA_LOCKED_NONCLAIM`
+	- `SR_COVARIANCE_PROGRESS_CYCLE22_v0: THEOREM_ADJUDICATION_TRANSITION_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE22_ARTIFACT_v0: sr_covariance_theorem_adjudication_transition_cycle22_v0`
+	- artifact: `formal/output/sr_covariance_theorem_adjudication_transition_cycle22_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,

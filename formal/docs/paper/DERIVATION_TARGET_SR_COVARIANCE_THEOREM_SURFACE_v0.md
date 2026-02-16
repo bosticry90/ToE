@@ -202,6 +202,18 @@ Cycle-021 synchronization lock:
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_predischarge_criteria_cycle21_v0.json`
 
+Cycle-022 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-22-THEOREM-ADJUDICATION-TRANSITION-v0`
+- adjudication token:
+  - `SR_COVARIANCE_THEOREM_SURFACE_ADJUDICATION_v0: DISCHARGED_v0_PREDISCHARGE_CRITERIA_LOCKED_NONCLAIM`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE22_v0: THEOREM_ADJUDICATION_TRANSITION_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE22_ARTIFACT_v0: sr_covariance_theorem_adjudication_transition_cycle22_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_adjudication_transition_cycle22_v0.json`
+
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.
 - assumptions and bounded domain limits remain explicit.

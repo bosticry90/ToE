@@ -334,6 +334,20 @@ Cycle-021 theorem-surface pre-discharge criteria lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-022 theorem-surface adjudication-transition lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-22-THEOREM-ADJUDICATION-TRANSITION-v0`
+- adjudication token:
+   - `SR_COVARIANCE_THEOREM_SURFACE_ADJUDICATION_v0: DISCHARGED_v0_PREDISCHARGE_CRITERIA_LOCKED_NONCLAIM`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE22_v0: THEOREM_ADJUDICATION_TRANSITION_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE22_ARTIFACT_v0: sr_covariance_theorem_adjudication_transition_cycle22_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_theorem_adjudication_transition_cycle22_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
