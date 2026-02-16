@@ -600,6 +600,32 @@ Cycle-035 theorem-object discharge phase-I completion transition (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-036 phase-II canonical-equivalence surface entry lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-36-CANONICAL-EQUIVALENCE-SURFACE-ENTRY-LOCK-v0`
+- phase-II canonical-equivalence surface entry lock token:
+   - `SR_COVARIANCE_CANONICAL_EQUIVALENCE_SURFACE_ENTRY_LOCK_v0: CYCLE36_PHASE2_ENTRY_SURFACE_PINNED_NONCLAIM`
+- phase-I completion status token:
+   - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+- phase-II entry status token:
+   - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+- phase-II canonical-equivalence surface status token:
+   - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-I row-lock progress token:
+   - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+- roadmap pointer:
+   - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+- lean module pointer:
+   - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE36_v0: PHASE2_CANONICAL_EQUIVALENCE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE36_ARTIFACT_v0: sr_covariance_canonical_equivalence_surface_entry_lock_cycle36_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_canonical_equivalence_surface_entry_lock_cycle36_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.

@@ -427,6 +427,28 @@ Cycle-035 synchronization lock:
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_object_discharge_phase1_completion_transition_cycle35_v0.json`
 
+Cycle-036 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-36-CANONICAL-EQUIVALENCE-SURFACE-ENTRY-LOCK-v0`
+- phase-II canonical-equivalence surface entry lock token:
+  - `SR_COVARIANCE_CANONICAL_EQUIVALENCE_SURFACE_ENTRY_LOCK_v0: CYCLE36_PHASE2_ENTRY_SURFACE_PINNED_NONCLAIM`
+- phase-I completion status token:
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+- phase-II entry status token:
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+- phase-II canonical-equivalence surface status token:
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-I row-lock progress token:
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+- roadmap pointer:
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE36_v0: PHASE2_CANONICAL_EQUIVALENCE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE36_ARTIFACT_v0: sr_covariance_canonical_equivalence_surface_entry_lock_cycle36_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_canonical_equivalence_surface_entry_lock_cycle36_v0.json`
+
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.
 - assumptions and bounded domain limits remain explicit.
