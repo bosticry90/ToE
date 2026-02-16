@@ -1,0 +1,24 @@
+{
+  "record_id": "QM_EVOLUTION_ROBUSTNESS_RECORD_v0",
+  "perturbation_id": "PERTURB_STATE_CARRIER_SMALL_v0",
+  "artifact_id": "QM_EVOLUTION_ROBUSTNESS_PERTURB_STATE_CARRIER_SMALL_v0",
+  "scope": "contract_only_qm_evolution_v0",
+  "input_delta": {
+    "description": "apply an epsilon-level normalization-preserving perturbation to the state carrier",
+    "epsilon": 0.001,
+    "normalization": "preserved"
+  },
+  "expected_outcome": "OUTCOME_STILL_SATISFIES_CONTRACT",
+  "observed_outcome": "OUTCOME_STILL_SATISFIES_CONTRACT",
+  "reason_code": "PASS_CONTRACT_STABLE_UNDER_SMALL_STATE_CARRIER_PERTURBATION_v0",
+  "witness_tokens": [
+    "qm_evolution_under_contract_assumptions",
+    "QMEvolutionAssumptions_v0_min1"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_QM_ROBUSTNESS_ROW2"
+}

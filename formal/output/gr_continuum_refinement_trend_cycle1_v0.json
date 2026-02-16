@@ -1,0 +1,19 @@
+{
+  "record_id": "GR_CONTINUUM_LIMIT_BRIDGE_CYCLE1_v0",
+  "artifact_id": "gr_continuum_refinement_trend_cycle1_v0",
+  "scope": "bounded_discrete_to_continuum_bridge_v0",
+  "grid_series": [32, 64, 128],
+  "residual_norm_series": [0.0108, 0.0074, 0.0051],
+  "trend_label": "nonincreasing_residual_under_refinement",
+  "boundary_posture": "bounded_domain_explicit",
+  "witness_tokens": [
+    "gr01_mainstream3d_discrete_residual_reduces_to_radial_under_spherical_symmetry",
+    "gr01_mainstream3d_point_source_poissonEquation3D_away_from_source_exists_from_operator_equation_under_invertibility"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_GR_CONTINUUM_CYCLE1"
+}

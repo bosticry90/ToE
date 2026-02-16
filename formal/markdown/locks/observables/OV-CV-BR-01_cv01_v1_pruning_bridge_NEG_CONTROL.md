@@ -17,7 +17,7 @@ Record (computed)
     "cv01_fail_linear_vs_curved_speed_inconsistent"
   ],
   "date": "2026-02-08",
-  "fingerprint": "4b02fe11b4bf89534edfebec4b7c30fe8e85868f11d2151c662a8d98a8b24f0c",
+  "fingerprint": "f9b7ff9fd21e5b2d1d71391748dc2843c1be4e3fa9ce1aee48052b3a45697b54",
   "inputs": {
     "OV-CV-01_v1": {
       "artifact_dir": "C:\\Users\\psboy\\Documents\\ToE\\formal\\external_evidence\\cv01_v1_negative_control_fixture",
@@ -26,7 +26,7 @@ Record (computed)
       "status_blocked": false
     },
     "OV-DR-BR-01": {
-      "record_fingerprint": "4a232ac724414240b397dcd39844de2481e892f456c5f29e0b00b9921aef4beb",
+      "record_fingerprint": "89065261befb4c400eae8a861d73d0cd655cb70099aa1f4c8031ce6c7e8982db",
       "schema": "OV-DR-BR-01_candidate_pruning_table/v1",
       "status_blocked": true
     },
@@ -150,4 +150,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `4b02fe11b4bf89534edfebec4b7c30fe8e85868f11d2151c662a8d98a8b24f0c`
+Record fingerprint: `f9b7ff9fd21e5b2d1d71391748dc2843c1be4e3fa9ce1aee48052b3a45697b54`

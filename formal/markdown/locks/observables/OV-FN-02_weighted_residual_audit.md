@@ -23,7 +23,7 @@ Record (computed)
     "within_threshold": true
   },
   "date": "2026-01-25",
-  "fingerprint": "67fa4dfd3467d99e2195e83616d9c6aaed5deae3cd492df6a74e0e8481c7312f",
+  "fingerprint": "0b95a26ab3327c7fa7f312a9d4b4b59c01294f673dd6f51855cb25e3dcba36dd",
   "inputs": {
     "FN-01_cross_fit_metric_residual_DR02_DR03": {
       "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\functionals\\FN-01_cross_fit_metric_residual_DR02_DR03.md",
@@ -32,10 +32,10 @@ Record (computed)
       "sha256": "b79f3ed5f2a1e290535d1b7736ff22a8a37c26e7d77c29de13ed616485eea2db"
     },
     "OV-FN-WT-02": {
-      "locked_fingerprint": "85046d29824491c5c41a696bdd87eba7ef47e8b058100530b3bece5582b2fe17",
+      "locked_fingerprint": "07108d0610f0108d6600436d958904dc33171fb15df87c0d41f58251e3505710",
       "path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\markdown\\locks\\observables\\OV-FN-WT-02_selected_weight_policy.md",
       "present": true,
-      "record_fingerprint": "85046d29824491c5c41a696bdd87eba7ef47e8b058100530b3bece5582b2fe17",
+      "record_fingerprint": "07108d0610f0108d6600436d958904dc33171fb15df87c0d41f58251e3505710",
       "schema": "OV-FN-WT-02_selected_weight_policy/v1"
     }
   },
@@ -50,7 +50,7 @@ Record (computed)
   "status": {
     "admissibility_manifest": {
       "path": "formal/markdown locks/gates/admissibility_manifest.json",
-      "sha256": "99a290146c803db75d94be40c656db8f00afb59fd60d4d76b9640e8a3cbbc750",
+      "sha256": "284e1894ea9df1330bfd48c206b76af6e595a872996f2d5fed97b07cd3f0cce3",
       "version": 1
     },
     "blocked": true,
@@ -69,4 +69,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `67fa4dfd3467d99e2195e83616d9c6aaed5deae3cd492df6a74e0e8481c7312f`
+Record fingerprint: `0b95a26ab3327c7fa7f312a9d4b4b59c01294f673dd6f51855cb25e3dcba36dd`

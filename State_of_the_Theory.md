@@ -146,6 +146,304 @@ GR01 wrapper-policy invariants checkpoint (2026-02-15):
 	- `formal/python/tests/test_pillar_inevitability_playbook.py`
 	- result: `9 passed`.
 
+GR01 hardening roadmap checkpoint (2026-02-16):
+- Canonical hardening target is now pinned:
+	- `formal/docs/paper/DERIVATION_TARGET_GR01_HARDENING_v0.md`
+- Hardening adjudication token is explicit and synchronized to blocked status:
+	- `GR01_HARDENING_ADJUDICATION: DISCHARGED_v0_DISCRETE_HARDENED`
+- Hardening enforcement gate is pinned:
+	- `formal/python/tests/test_gr01_hardening_roadmap_gate.py`
+- Phase II assumption-ledger artifacts are now pinned:
+	- `formal/toe_formal/ToeFormal/Variational/GR01AssumptionLedger.lean`
+	- `formal/markdown/locks/policy/GR01_ASSUMPTION_LEDGER_v0.md`
+- Canonical assumption bundle token is explicit:
+	- `GR01Assumptions_v0`
+- First Phase II minimization is landed and pinned:
+	- `GR01_RECLASSIFICATION_v0_MIN1: hP_POLICY_TO_MATH_via_P_rep32_def`
+	- minimized bundle token: `GR01Assumptions_v0_min1`
+- Second Phase II minimization is landed and pinned:
+	- `GR01_RECLASSIFICATION_v0_MIN2: hHigherOrderTermsNegligible_POLICY_TO_MATH_via_FirstOrderRemainderSuppressed`
+	- minimized bundle token: `GR01Assumptions_v0_min2`
+- Third Phase II minimization is landed and pinned:
+	- `GR01_RECLASSIFICATION_v0_MIN3: hAction_POLICY_TO_MATH_via_default_binding_route`
+	- minimized bundle token: `GR01Assumptions_v0_min3`
+- Phase III scaffolding templates are now pinned:
+	- `formal/markdown/locks/policy/GR01_ROBUSTNESS_RECORD_v0.md`
+	- `formal/markdown/locks/policy/GR01_NEGATIVE_CONTROL_RECORD_v0.md`
+	- `GR01_ROBUSTNESS_STATUS_v0: TEMPLATE_PINNED`
+	- `GR01_NEGATIVE_CONTROL_STATUS_v0: TEMPLATE_PINNED`
+- Phase III first populated robustness row is now pinned:
+	- `PERTURB_RHO_SMALL_v0`
+	- `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_RHO_SMALL_POPULATED`
+	- artifact: `formal/output/gr01_robustness_perturb_rho_small_v0.json`
+- Phase III second populated robustness row is now pinned:
+	- `PERTURB_PHI_SMALL_v0`
+	- `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_PHI_SMALL_POPULATED`
+	- artifact: `formal/output/gr01_robustness_perturb_phi_small_v0.json`
+- Phase III third populated robustness row is now pinned:
+	- `PERTURB_DISCRETIZATION_PARAMS_v0`
+	- `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_DISCRETIZATION_PARAMS_POPULATED`
+	- artifact: `formal/output/gr01_robustness_perturb_discretization_params_v0.json`
+- Phase III fourth populated robustness row is now pinned:
+	- `PERTURB_BOUNDARY_HANDLING_v0`
+	- `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_BOUNDARY_HANDLING_POPULATED`
+	- artifact: `formal/output/gr01_robustness_perturb_boundary_handling_v0.json`
+- Phase III fifth populated robustness row is now pinned:
+	- `PERTURB_PROJECTION_CONDITIONS_v0`
+	- `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_PROJECTION_CONDITIONS_POPULATED`
+	- artifact: `formal/output/gr01_robustness_perturb_projection_conditions_v0.json`
+- Phase III perturbation-family completion token is pinned:
+	- `GR01_ROBUSTNESS_PROGRESS_v0: ALL_REQUIRED_PERTURBATION_ROWS_POPULATED`
+- Phase III first populated negative-control row is now pinned:
+	- `NEGCTRL_WRONG_KAPPA_SIGN_v0`
+	- `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_WRONG_KAPPA_SIGN_POPULATED`
+	- artifact: `formal/output/gr01_negative_control_wrong_kappa_sign_v0.json`
+- Phase III second populated negative-control row is now pinned:
+	- `NEGCTRL_BROKEN_SCALING_HIERARCHY_v0`
+	- `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_BROKEN_SCALING_HIERARCHY_POPULATED`
+	- artifact: `formal/output/gr01_negative_control_broken_scaling_hierarchy_v0.json`
+- Phase III third populated negative-control row is now pinned:
+	- `NEGCTRL_BROKEN_WEAK_FIELD_BOUND_v0`
+	- `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_BROKEN_WEAK_FIELD_BOUND_POPULATED`
+	- artifact: `formal/output/gr01_negative_control_broken_weak_field_bound_v0.json`
+- Phase III fourth populated negative-control row is now pinned:
+	- `NEGCTRL_BROKEN_SYMMETRY_OBLIGATION_v0`
+	- `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_BROKEN_SYMMETRY_OBLIGATION_POPULATED`
+	- artifact: `formal/output/gr01_negative_control_broken_symmetry_obligation_v0.json`
+- Phase III fifth populated negative-control row is now pinned:
+	- `NEGCTRL_INCOMPATIBLE_CARRIERS_v0`
+	- `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_INCOMPATIBLE_CARRIERS_POPULATED`
+	- artifact: `formal/output/gr01_negative_control_incompatible_carriers_v0.json`
+- Phase III negative-control-family completion token is pinned:
+	- `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ALL_REQUIRED_NEGATIVE_ROWS_POPULATED`
+- Phase IV resolution-trend template is now pinned:
+	- `formal/markdown/locks/policy/GR01_RESOLUTION_TREND_RECORD_v0.md`
+	- `GR01_RESOLUTION_TREND_STATUS_v0: TEMPLATE_PINNED`
+- Phase IV first populated resolution row is now pinned:
+	- `RESOLUTION_32_v0`
+	- `GR01_RESOLUTION_TREND_PROGRESS_v0: ROW_RESOLUTION_32_POPULATED`
+	- artifact: `formal/output/gr01_resolution_trend_32_v0.json`
+- Phase IV second populated resolution row is now pinned:
+	- `RESOLUTION_64_v0`
+	- `GR01_RESOLUTION_TREND_PROGRESS_v0: ROW_RESOLUTION_64_POPULATED`
+	- artifact: `formal/output/gr01_resolution_trend_64_v0.json`
+- Phase IV third populated resolution row is now pinned:
+	- `RESOLUTION_128_v0`
+	- `GR01_RESOLUTION_TREND_PROGRESS_v0: ROW_RESOLUTION_128_POPULATED`
+	- artifact: `formal/output/gr01_resolution_trend_128_v0.json`
+- Phase IV resolution-family completion token is pinned:
+	- `GR01_RESOLUTION_TREND_PROGRESS_v0: ALL_REQUIRED_RESOLUTION_ROWS_POPULATED`
+- Phase V pillar package freeze artifacts are now pinned:
+	- `formal/markdown/locks/policy/GR01_PILLAR_PACKAGE_v0.md`
+	- `formal/docs/paper/TOE_GR01_PILLAR_SUMMARY_v0.md`
+	- `formal/docs/paper/TOE_GR01_CANONICAL_CHAIN_MAP_v0.md`
+	- `GR01_PILLAR_PACKAGE_STATUS_v0: FROZEN_CONTENTS_PINNED`
+- Priority order is pinned as enforcement sequence:
+	- Phase I canonicalization/quarantine
+	- Phase II assumption ledger/minimization
+	- Phase III robustness/negative controls
+	- Phase IV resolution trend (optional)
+	- Phase V pillar package freeze
+
+Post-GR01 handoff checkpoint (2026-02-16):
+- Frozen-watch governance posture is explicit:
+	- `GR01_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
+- Next pillar focus is explicit and assumption-minimization-first:
+	- `NEXT_PILLAR_FOCUS_v0: PILLAR-QM`
+	- `NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-QM-EVOL-PLAN`
+	- pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EVOLUTION_OBJECT_v0.md`
+- Selection rationale (governance):
+	- `TOE-QM-THM-01` already exists as `T-CONDITIONAL` contract surface,
+	- evolution lane has a pinned Lean theorem token and explicit non-claim boundaries,
+	- symmetry and measurement lanes remain plan-frozen follow-ons.
+
+QM evolution hardening scaffold checkpoint (2026-02-16):
+- Canonical hardening target is now pinned:
+	- `formal/docs/paper/DERIVATION_TARGET_QM_EVOLUTION_HARDENING_v0.md`
+- Hardening adjudication token is explicit and synchronized to scaffold status:
+	- `QM_EVOLUTION_HARDENING_ADJUDICATION: DISCHARGED_v0_CONTRACT_HARDENED`
+- Phase template lock artifacts are pinned:
+	- `formal/markdown/locks/policy/QM_EVOLUTION_ASSUMPTION_LEDGER_v0.md`
+	- `formal/markdown/locks/policy/QM_EVOLUTION_ROBUSTNESS_RECORD_v0.md`
+	- `formal/markdown/locks/policy/QM_EVOLUTION_NEGATIVE_CONTROL_RECORD_v0.md`
+	- `formal/markdown/locks/policy/QM_EVOLUTION_RESOLUTION_TREND_RECORD_v0.md`
+	- `formal/markdown/locks/policy/QM_EVOLUTION_PILLAR_PACKAGE_v0.md`
+- Package freeze and reopen posture are explicit:
+	- `QM_EVOLUTION_PILLAR_PACKAGE_STATUS_v0: FROZEN_CONTENTS_PINNED`
+	- `QM_EVOLUTION_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
+- Enforcement gate is pinned:
+	- `formal/python/tests/test_qm_evolution_hardening_roadmap_gate.py`
+- Phase II assumption minimization is now populated:
+	- `formal/toe_formal/ToeFormal/QM/QMEvolutionAssumptionLedger.lean`
+	- `QMEvolutionAssumptions_v0`
+	- `QMEvolutionAssumptions_v0_min1`
+	- `QM_EVOLUTION_RECLASSIFICATION_v0_MIN1: hStepTotalPolicy_POLICY_TO_MATH_via_qm_step_total_of_definition`
+	- `QM_EVOLUTION_ASSUMPTION_LEDGER_PROGRESS_v0: BUNDLE_POPULATED`
+	- `QM_EVOLUTION_ASSUMPTION_LEDGER_PROGRESS_v0: BUNDLE_MIN1_POPULATED`
+- Phase III first populated robustness row is pinned:
+	- `PERTURB_TIME_PARAMETER_SMALL_v0`
+	- `QM_EVOLUTION_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_TIME_PARAMETER_SMALL_POPULATED`
+	- artifact: `formal/output/qm_evolution_robustness_perturb_time_parameter_small_v0.json`
+- Phase III second populated robustness row is pinned:
+	- `PERTURB_STATE_CARRIER_SMALL_v0`
+	- `QM_EVOLUTION_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_STATE_CARRIER_SMALL_POPULATED`
+	- artifact: `formal/output/qm_evolution_robustness_perturb_state_carrier_small_v0.json`
+- Phase III third populated robustness row is pinned:
+	- `PERTURB_OPERATOR_STEP_SMALL_v0`
+	- `QM_EVOLUTION_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_OPERATOR_STEP_SMALL_POPULATED`
+	- artifact: `formal/output/qm_evolution_robustness_perturb_operator_step_small_v0.json`
+- Phase III perturbation-family completion token is pinned:
+	- `QM_EVOLUTION_ROBUSTNESS_PROGRESS_v0: ALL_REQUIRED_PERTURBATION_ROWS_POPULATED`
+- Phase III first populated negative-control row is pinned:
+	- `NEGCTRL_INVALID_EVOLUTION_CONTEXT_v0`
+	- `QM_EVOLUTION_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_INVALID_EVOLUTION_CONTEXT_POPULATED`
+	- artifact: `formal/output/qm_evolution_negative_control_invalid_context_v0.json`
+- Phase III second populated negative-control row is pinned:
+	- `NEGCTRL_BROKEN_STEP_CONTRACT_v0`
+	- `QM_EVOLUTION_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_BROKEN_STEP_CONTRACT_POPULATED`
+	- artifact: `formal/output/qm_evolution_negative_control_broken_step_contract_v0.json`
+- Phase III third populated negative-control row is pinned:
+	- `NEGCTRL_INCOMPATIBLE_STATE_CARRIER_v0`
+	- `QM_EVOLUTION_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_INCOMPATIBLE_STATE_CARRIER_POPULATED`
+	- artifact: `formal/output/qm_evolution_negative_control_incompatible_state_carrier_v0.json`
+- Phase III negative-control-family completion token is pinned:
+	- `QM_EVOLUTION_NEGATIVE_CONTROL_PROGRESS_v0: ALL_REQUIRED_NEGATIVE_ROWS_POPULATED`
+- Phase IV first populated resolution row is pinned:
+	- `QM_RESOLUTION_32_v0`
+	- `QM_EVOLUTION_RESOLUTION_TREND_PROGRESS_v0: ROW_QM_RESOLUTION_32_POPULATED`
+	- artifact: `formal/output/qm_evolution_resolution_trend_32_v0.json`
+- Phase IV second populated resolution row is pinned:
+	- `QM_RESOLUTION_64_v0`
+	- `QM_EVOLUTION_RESOLUTION_TREND_PROGRESS_v0: ROW_QM_RESOLUTION_64_POPULATED`
+	- artifact: `formal/output/qm_evolution_resolution_trend_64_v0.json`
+- Phase IV third populated resolution row is pinned:
+	- `QM_RESOLUTION_128_v0`
+	- `QM_EVOLUTION_RESOLUTION_TREND_PROGRESS_v0: ROW_QM_RESOLUTION_128_POPULATED`
+	- artifact: `formal/output/qm_evolution_resolution_trend_128_v0.json`
+- Phase IV resolution-family completion token is pinned:
+	- `QM_EVOLUTION_RESOLUTION_TREND_PROGRESS_v0: ALL_REQUIRED_RESOLUTION_ROWS_POPULATED`
+- Phase V pillar package freeze artifacts are pinned:
+	- `formal/docs/paper/TOE_QM_EVOLUTION_PILLAR_SUMMARY_v0.md`
+	- `formal/docs/paper/TOE_QM_EVOLUTION_CANONICAL_CHAIN_MAP_v0.md`
+	- `formal/markdown/locks/policy/QM_EVOLUTION_PILLAR_PACKAGE_v0.md`
+	- `QM_EVOLUTION_PILLAR_PACKAGE_PROGRESS_v0: REQUIRED_CONTENTS_PINNED`
+
+QM full-derivation + GR extension checkpoint (2026-02-16):
+- QM full-derivation target is now pinned (derivation-grade path defined):
+	- `formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md`
+	- `QM_FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DERIVATION_GRADE`
+	- `QM_FULL_DERIVATION_PROGRESS_v0: CYCLE1_CONTRACT_BRIDGE_TOKEN_PINNED`
+	- micro-target: `TARGET-QM-FULL-MICRO-01-CONTRACT-BRIDGE-v0`
+	- theorem token: `qm_full_derivation_cycle1_contract_bridge_token_v0`
+	- scaffold: `formal/toe_formal/ToeFormal/QM/QMFullDerivationScaffold.lean`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE2_v0: UNITARY_CONSISTENCY_TOKEN_PINNED`
+	- micro-target: `TARGET-QM-FULL-MICRO-02-UNITARY-CONSISTENCY-v0`
+	- theorem token: `qm_full_derivation_cycle2_unitary_consistency_token_v0`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE3_v0: ANTI_CIRCULARITY_GUARD_TOKEN_PINNED`
+	- micro-target: `TARGET-QM-FULL-MICRO-03-ANTI-CIRCULARITY-GUARD-v0`
+	- theorem token: `qm_full_derivation_cycle3_no_direct_schrodinger_insertion_guard_v0`
+	- `QM_ANTI_CIRCULARITY_GUARD_v0: NO_DIRECT_SCHRODINGER_INSERTION`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE4_v0: COMPOSITION_BUNDLE_TOKEN_PINNED`
+	- micro-target: `TARGET-QM-FULL-MICRO-04-COMPOSITION-BUNDLE-v0`
+	- theorem token: `qm_full_derivation_cycle4_composition_bundle_token_v0`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE5_v0: ASSUMPTION_MINIMIZATION_TOKEN_PINNED`
+	- micro-target: `TARGET-QM-FULL-MICRO-05-ASSUMPTION-MINIMIZATION-v0`
+	- theorem token: `qm_full_derivation_cycle5_policy_to_math_reclassification_token_v0`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE6_v0: EXIT_CRITERIA_COVERAGE_TOKEN_PINNED`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE7_v0: UNITARY_EXIT_ROW_PROMOTION_TOKEN_PINNED`
+	- theorem token: `qm_full_derivation_cycle6_unitary_exit_row_closure_token_v0`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE8_v0: DERIVATION_EXIT_ROW_PROMOTION_TOKEN_PINNED`
+	- theorem token: `qm_full_derivation_cycle7_derivation_exit_row_closure_token_v0`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE9_v0: ANTICIRCULARITY_EXIT_ROW_PROMOTION_TOKEN_PINNED`
+	- theorem token: `qm_full_derivation_cycle8_anticircularity_exit_row_closure_token_v0`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE10_v0: ASSUMPTION_MINIMIZATION_EXIT_ROW_PROMOTION_TOKEN_PINNED`
+	- theorem token: `qm_full_derivation_cycle9_assumption_minimization_exit_row_closure_token_v0`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE11_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE12_v0: DISCHARGE_TRANSITION_BUNDLE_TOKEN_PINNED`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE13_v0: KEYB_POLICY_SIGNOFF_SURFACE_TOKEN_PINNED`
+	- `QM_FULL_DERIVATION_PROGRESS_CYCLE14_v0: TWO_KEY_RELEASE_DISCHARGE_COMPLETED`
+	- `QM_FULL_DERIVATION_RECLASSIFICATION_v0_MIN1: hStepTotalPolicy_POLICY_TO_MATH_via_qm_step_total_of_definition`
+	- `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+	- criteria rows:
+		- `QM_FULL_DERIVATION_CRITERIA_ROW_01_v0: EVOLUTION_LAW_DERIVATION_CHAIN_PINNED`
+		- `QM_FULL_DERIVATION_EXIT_ROW_01_STATUS_v0: DISCHARGED_v0_DERIVATION_GRADE`
+		- `QM_FULL_DERIVATION_CRITERIA_ROW_02_v0: UNITARY_CONSISTENCY_CHAIN_PINNED`
+		- `QM_FULL_DERIVATION_EXIT_ROW_02_STATUS_v0: DISCHARGED_v0_DERIVATION_GRADE`
+		- `QM_FULL_DERIVATION_CRITERIA_ROW_03_v0: ANTI_CIRCULARITY_GUARD_PINNED`
+		- `QM_FULL_DERIVATION_EXIT_ROW_04_STATUS_v0: DISCHARGED_v0_DERIVATION_GRADE`
+		- `QM_FULL_DERIVATION_CRITERIA_ROW_04_v0: ASSUMPTION_MINIMIZATION_PINNED`
+		- `QM_FULL_DERIVATION_EXIT_ROW_03_STATUS_v0: DISCHARGED_v0_DERIVATION_GRADE`
+		- `QM_FULL_DERIVATION_CRITERIA_ROW_05_v0: STATE_GATE_SYNC_PINNED`
+	- criteria evidence artifact:
+		- `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_full_derivation_discharge_criteria_cycle10_v0`
+		- `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 3925b71a53f85580e0fc22f48404cae71565b27926629b60aa3f702fe7b41ff1`
+		- `formal/output/qm_full_derivation_discharge_criteria_cycle10_v0.json`
+	- exit-criteria coverage artifact:
+		- `QM_FULL_DERIVATION_EXIT_CRITERIA_COVERAGE_ARTIFACT_v0: qm_full_derivation_exit_criteria_coverage_cycle14_v0`
+		- `formal/output/qm_full_derivation_exit_criteria_coverage_cycle14_v0.json`
+	- pre-discharge gate artifact:
+		- `QM_FULL_DERIVATION_PREDISCHARGE_GATE_ARTIFACT_v0: qm_full_derivation_predischarge_gate_cycle19_v0`
+		- `formal/output/qm_full_derivation_predischarge_gate_cycle19_v0.json`
+	- discharge-transition bundle artifact:
+		- `QM_FULL_DERIVATION_DISCHARGE_TRANSITION_BUNDLE_ARTIFACT_v0: qm_full_derivation_discharge_transition_bundle_cycle20_v0`
+		- `formal/output/qm_full_derivation_discharge_transition_bundle_cycle20_v0.json`
+	- key-B policy-signoff artifact:
+		- `QM_FULL_DERIVATION_KEYB_POLICY_SIGNOFF_ARTIFACT_v0: qm_full_derivation_keyb_policy_signoff_cycle21_v0`
+		- `formal/output/qm_full_derivation_keyb_policy_signoff_cycle21_v0.json`
+- GR continuum-limit bridge target is now pinned:
+	- `formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md`
+	- `GR_CONTINUUM_LIMIT_ADJUDICATION: NOT_YET_DISCHARGED_v0`
+	- `GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED`
+	- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+	- criteria rows:
+		- `GR_CONTINUUM_LIMIT_CRITERIA_ROW_01_v0: REFINEMENT_TREND_MONOTONIC_PINNED`
+		- `GR_CONTINUUM_LIMIT_CRITERIA_ROW_02_v0: DISCRETE_TO_CONTINUUM_MAP_SURFACE_PINNED`
+		- `GR_CONTINUUM_LIMIT_CRITERIA_ROW_03_v0: BOUNDARY_ASSUMPTION_TRANSPARENCY_PINNED`
+		- `GR_CONTINUUM_LIMIT_CRITERIA_ROW_04_v0: STATE_GATE_SYNC_PINNED`
+	- criteria evidence artifact:
+		- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_continuum_discharge_criteria_cycle10_v0`
+		- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: babb6d8bbe262c7b17f494e0105eabc777f18479ef7e416570d303be448b7fb2`
+		- `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`
+	- micro-target: `TARGET-GR-CONTINUUM-MICRO-01-REFINEMENT-TREND-v0`
+	- artifact token: `gr_continuum_refinement_trend_cycle1_v0`
+	- artifact: `formal/output/gr_continuum_refinement_trend_cycle1_v0.json`
+- GR strong-field regime target is now pinned:
+	- `formal/docs/paper/DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0.md`
+	- `GR_STRONG_FIELD_ADJUDICATION: NOT_YET_DISCHARGED_v0`
+	- `GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED`
+	- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+	- criteria rows:
+		- `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_01_v0: REGIME_PREDICATE_SURFACE_PINNED`
+		- `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_02_v0: NONLINEAR_CLOSURE_SURFACE_PINNED`
+		- `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_03_v0: REGULARITY_DOMAIN_BOUNDARY_PINNED`
+		- `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_04_v0: STATE_GATE_SYNC_PINNED`
+	- criteria evidence artifact:
+		- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_strong_field_discharge_criteria_cycle10_v0`
+		- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 73b7a0a49096ee00decfe6e2bb6ee1359b24855686fd872d082f817fb2fb1cb0`
+		- `formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json`
+	- micro-target: `TARGET-GR-STRONG-FIELD-MICRO-01-REGIME-PREDICATE-v0`
+	- artifact token: `gr_strong_field_regime_predicate_cycle1_v0`
+	- artifact: `formal/output/gr_strong_field_regime_predicate_cycle1_v0.json`
+- Expansion enforcement gate is pinned:
+	- `formal/python/tests/test_qm_gr_regime_expansion_gate.py`
+
+QM-GR cross-lane compatibility checkpoint (2026-02-16):
+- cycle token:
+	- `QM_GR_CROSS_LANE_PROGRESS_v0: CYCLE1_COMPATIBILITY_BUNDLE_PINNED`
+	- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+	- criteria rows:
+		- `QM_GR_INTEGRATED_CRITERIA_ROW_01_v0: LANE_CHECKPOINT_COMPATIBILITY_PINNED`
+		- `QM_GR_INTEGRATED_CRITERIA_ROW_02_v0: EXPLICIT_NON_CLAIM_POSTURE_PINNED`
+		- `QM_GR_INTEGRATED_CRITERIA_ROW_03_v0: STATE_GATE_SYNC_PINNED`
+	- criteria evidence artifact:
+		- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_gr_integrated_discharge_criteria_cycle10_v0`
+		- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 81bb6e329bee0d97a486a5063d6d8f657f01a7808e29bff1945c72edc322ced0`
+		- `formal/output/qm_gr_integrated_discharge_criteria_cycle10_v0.json`
+- compatibility bundle artifact:
+	- `formal/docs/paper/QM_GR_CROSS_LANE_COMPATIBILITY_BUNDLE_v0.md`
+	- artifact token: `qm_gr_cross_lane_compatibility_cycle1_v0`
+	- artifact: `formal/output/qm_gr_cross_lane_compatibility_cycle1_v0.json`
+
 
 
 

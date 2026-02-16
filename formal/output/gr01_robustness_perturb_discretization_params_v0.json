@@ -1,0 +1,25 @@
+{
+  "record_id": "GR01_ROBUSTNESS_RECORD_v0",
+  "perturbation_id": "PERTURB_DISCRETIZATION_PARAMS_v0",
+  "artifact_id": "GR01_ROBUSTNESS_PERTURB_DISCRETIZATION_PARAMS_v0",
+  "scope": "bounded_discrete_weak_field_v0",
+  "input_delta": {
+    "description": "Apply a small discretization-parameter perturbation in the finite-difference lane while preserving weak-field and bounded assumptions.",
+    "epsilon_multiplier": 1.01,
+    "fd_step_policy": "default_binding_perturbed_small",
+    "regime_guard": "unchanged"
+  },
+  "expected_outcome": "OUTCOME_STILL_DERIVES_POISSON_RESIDUAL",
+  "observed_outcome": "OUTCOME_STILL_DERIVES_POISSON_RESIDUAL",
+  "reason_code": "PASS_RESIDUAL_STABLE_UNDER_SMALL_DISCRETIZATION_PERTURBATION_v0",
+  "witness_tokens": [
+    "gr01_discrete_residual_from_bridge_promotion_chain_default_binding",
+    "gr01_poisson_equation_of_GR01Assumptions_v0_min3"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_BASELINE_ROW3"
+}

@@ -10,7 +10,7 @@ Record (computed)
 ```json
 {
   "date": "2026-01-25",
-  "fingerprint": "bcd8661f9fafef7c901fa830f6a1eb0012ca64de4dc0267d0eb9144eb4f0c9d6",
+  "fingerprint": "5caad193d0c857b5537258776d8fcdf3db1d610695522eeaa96aa881a79354c4",
   "inputs": {},
   "observable_id": "OV-BR-05",
   "rows": [
@@ -43,7 +43,7 @@ Record (computed)
     "debug": {
       "manifest_input_path": null,
       "manifest_resolved_path": "formal/markdown locks/gates/admissibility_manifest.json",
-      "manifest_sha256": "99a290146c803db75d94be40c656db8f00afb59fd60d4d76b9640e8a3cbbc750",
+      "manifest_sha256": "284e1894ea9df1330bfd48c206b76af6e595a872996f2d5fed97b07cd3f0cce3",
       "manifest_version": 1
     },
     "reasons": [
@@ -60,4 +60,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `bcd8661f9fafef7c901fa830f6a1eb0012ca64de4dc0267d0eb9144eb4f0c9d6`
+Record fingerprint: `5caad193d0c857b5537258776d8fcdf3db1d610695522eeaa96aa881a79354c4`

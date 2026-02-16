@@ -1,0 +1,43 @@
+{
+  "record_id": "GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_CYCLE10_v0",
+  "artifact_id": "gr_continuum_discharge_criteria_cycle10_v0",
+  "scope": "gr_continuum_limit_discharge_criteria_v0",
+  "criteria_rows": [
+    {
+      "row_id": "GR_CONTINUUM_LIMIT_CRITERIA_ROW_01_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "gr_continuum_refinement_trend_cycle1_v0"
+      ]
+    },
+    {
+      "row_id": "GR_CONTINUUM_LIMIT_CRITERIA_ROW_02_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "TARGET-GR-CONTINUUM-MICRO-01-REFINEMENT-TREND-v0"
+      ]
+    },
+    {
+      "row_id": "GR_CONTINUUM_LIMIT_CRITERIA_ROW_03_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "no infinite-domain uniqueness claim"
+      ]
+    },
+    {
+      "row_id": "GR_CONTINUUM_LIMIT_CRITERIA_ROW_04_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "formal/python/tests/test_qm_gr_regime_expansion_gate.py",
+        "State_of_the_Theory.md"
+      ]
+    }
+  ],
+  "adjudication_posture": "NOT_YET_DISCHARGED_v0",
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_GR_CONTINUUM_CRITERIA_CYCLE10"
+}

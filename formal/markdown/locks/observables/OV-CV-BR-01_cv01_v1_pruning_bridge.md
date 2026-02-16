@@ -15,7 +15,7 @@ Record (computed)
     "cv01_v1_cross_artifact_speed_consistent"
   ],
   "date": "2026-02-08",
-  "fingerprint": "8e3fefbf96dd0499b3ee1edc0200d99f63014b69e715b7838371eff6710b0a4f",
+  "fingerprint": "55fda51ed3f5ef7af784fbab9221a27ff52c362b2235e99affc27eef5752dbc3",
   "inputs": {
     "OV-CV-01_v1": {
       "artifact_dir": "C:\\Users\\psboy\\Documents\\ToE\\formal\\external_evidence\\bec_bragg_steinhauer_2001",
@@ -24,7 +24,7 @@ Record (computed)
       "status_blocked": false
     },
     "OV-DR-BR-01": {
-      "record_fingerprint": "4a232ac724414240b397dcd39844de2481e892f456c5f29e0b00b9921aef4beb",
+      "record_fingerprint": "89065261befb4c400eae8a861d73d0cd655cb70099aa1f4c8031ce6c7e8982db",
       "schema": "OV-DR-BR-01_candidate_pruning_table/v1",
       "status_blocked": true
     },
@@ -143,4 +143,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `8e3fefbf96dd0499b3ee1edc0200d99f63014b69e715b7838371eff6710b0a4f`
+Record fingerprint: `55fda51ed3f5ef7af784fbab9221a27ff52c362b2235e99affc27eef5752dbc3`

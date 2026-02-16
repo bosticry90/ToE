@@ -1,0 +1,27 @@
+{
+  "record_id": "GR01_NEGATIVE_CONTROL_RECORD_v0",
+  "negative_id": "NEGCTRL_BROKEN_WEAK_FIELD_BOUND_v0",
+  "artifact_id": "GR01_NEGCTRL_BROKEN_WEAK_FIELD_BOUND_v0",
+  "scope": "bounded_discrete_weak_field_v0",
+  "injected_violation": {
+    "description": "Break weak-field uniform bound assumptions while preserving other contracts.",
+    "weak_field_uniform_bound": "violated",
+    "bound_violation_magnitude": 0.05,
+    "regime_guard": "unchanged"
+  },
+  "expected_outcome": "OUTCOME_FAILS_INFORMATIVE",
+  "observed_outcome": "OUTCOME_FAILS_INFORMATIVE",
+  "expected_failure_token": "WeakFieldUniformBound",
+  "observed_failure_token": "WeakFieldUniformBound",
+  "reason_code": "FAIL_BROKEN_WEAK_FIELD_BOUND_BREAKS_REGIME_PREDICATE_ROUTE_v0",
+  "witness_tokens": [
+    "gr01_regime_predicate_under_uniform_bound",
+    "gr01_poisson_equation_of_GR01Assumptions_v0_min3"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_NEGCTRL_ROW3"
+}

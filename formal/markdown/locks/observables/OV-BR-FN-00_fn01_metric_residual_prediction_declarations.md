@@ -10,7 +10,7 @@ Record (computed)
 ```json
 {
   "date": "2026-01-25",
-  "fingerprint": "6fc25577eddeb03962f2de161d51d6fa7a420e57a1bfb96bfa4b6ecdf0ecb410",
+  "fingerprint": "56d64623fb579a5a5fe30f75fc96dc726680caec96a38d775247274d8f6775c9",
   "inputs": {
     "candidate_source": {
       "extraction_rule": "collect FunctionDef names matching prefix+suffix; sorted lexicographically",
@@ -72,7 +72,7 @@ Record (computed)
   "status": {
     "admissibility_manifest": {
       "path": "formal/markdown locks/gates/admissibility_manifest.json",
-      "sha256": "99a290146c803db75d94be40c656db8f00afb59fd60d4d76b9640e8a3cbbc750",
+      "sha256": "284e1894ea9df1330bfd48c206b76af6e595a872996f2d5fed97b07cd3f0cce3",
       "version": 1
     },
     "blocked": true,
@@ -90,4 +90,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `6fc25577eddeb03962f2de161d51d6fa7a420e57a1bfb96bfa4b6ecdf0ecb410`
+Record fingerprint: `56d64623fb579a5a5fe30f75fc96dc726680caec96a38d775247274d8f6775c9`

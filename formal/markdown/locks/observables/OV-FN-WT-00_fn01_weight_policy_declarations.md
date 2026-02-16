@@ -14,7 +14,7 @@ Record (computed)
 ```json
 {
   "date": "2026-01-25",
-  "fingerprint": "434249e7a1ed02d1b6a662664e5ec7cc282fcfe806282166d72b13d3a67129a6",
+  "fingerprint": "cd98159ae2f8487475c8e5b43b9f0cb6ff7e9219b22c5bdb1fdee59dfab44af4",
   "inputs": {
     "declarations": {
       "expected_path": "C:\\Users\\psboy\\Documents\\ToE\\formal\\python\\toe\\bridges\\fnwt01_weight_policy_declarations.json",
@@ -59,7 +59,7 @@ Record (computed)
   "status": {
     "admissibility_manifest": {
       "path": "formal/markdown locks/gates/admissibility_manifest.json",
-      "sha256": "99a290146c803db75d94be40c656db8f00afb59fd60d4d76b9640e8a3cbbc750",
+      "sha256": "284e1894ea9df1330bfd48c206b76af6e595a872996f2d5fed97b07cd3f0cce3",
       "version": 1
     },
     "blocked": true,
@@ -77,4 +77,4 @@ Record (computed)
 }
 ```
 
-Record fingerprint: `434249e7a1ed02d1b6a662664e5ec7cc282fcfe806282166d72b13d3a67129a6`
+Record fingerprint: `cd98159ae2f8487475c8e5b43b9f0cb6ff7e9219b22c5bdb1fdee59dfab44af4`

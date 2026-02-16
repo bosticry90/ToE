@@ -1,0 +1,66 @@
+{
+  "record_id": "QM_FULL_DERIVATION_EXIT_CRITERIA_COVERAGE_CYCLE14_v0",
+  "artifact_id": "qm_full_derivation_exit_criteria_coverage_cycle14_v0",
+  "scope": "qm_full_derivation_exit_criteria_coverage_v0",
+  "adjudication_posture": "DISCHARGED_v0_DERIVATION_GRADE",
+  "coverage_rows": [
+    {
+      "row_id": "QM_FULL_DERIVATION_EXIT_ROW_01_v0",
+      "criterion": "explicit derivation theorem token(s) are pinned",
+      "status": "DISCHARGED_v0_DERIVATION_GRADE",
+      "evidence_tokens": [
+        "qm_full_derivation_cycle1_contract_bridge_token_v0",
+        "qm_full_derivation_cycle4_composition_bundle_token_v0",
+        "qm_full_derivation_cycle7_derivation_exit_row_closure_token_v0"
+      ],
+      "remaining_gap": "none"
+    },
+    {
+      "row_id": "QM_FULL_DERIVATION_EXIT_ROW_02_v0",
+      "criterion": "unitary-consistency theorem token(s) are pinned",
+      "status": "DISCHARGED_v0_DERIVATION_GRADE",
+      "evidence_tokens": [
+        "qm_full_derivation_cycle2_unitary_consistency_token_v0",
+        "qm_full_derivation_cycle6_unitary_exit_row_closure_token_v0"
+      ],
+      "remaining_gap": "none"
+    },
+    {
+      "row_id": "QM_FULL_DERIVATION_EXIT_ROW_03_v0",
+      "criterion": "assumptions are registry-linked and minimized",
+      "status": "DISCHARGED_v0_DERIVATION_GRADE",
+      "evidence_tokens": [
+        "qm_full_derivation_cycle5_policy_to_math_reclassification_token_v0",
+        "QM_FULL_DERIVATION_RECLASSIFICATION_v0_MIN1: hStepTotalPolicy_POLICY_TO_MATH_via_qm_step_total_of_definition",
+        "qm_full_derivation_cycle9_assumption_minimization_exit_row_closure_token_v0"
+      ],
+      "remaining_gap": "none"
+    },
+    {
+      "row_id": "QM_FULL_DERIVATION_EXIT_ROW_04_v0",
+      "criterion": "gate tests assert anti-circularity and no hidden assumptions",
+      "status": "DISCHARGED_v0_DERIVATION_GRADE",
+      "evidence_tokens": [
+        "QM_ANTI_CIRCULARITY_GUARD_v0: NO_DIRECT_SCHRODINGER_INSERTION",
+        "formal/python/tests/test_qm_gr_regime_expansion_gate.py",
+        "qm_full_derivation_cycle8_anticircularity_exit_row_closure_token_v0"
+      ],
+      "remaining_gap": "none"
+    },
+    {
+      "row_id": "QM_FULL_DERIVATION_EXIT_ROW_05_v0",
+      "criterion": "adjudication synchronized to DISCHARGED_v0_DERIVATION_GRADE",
+      "status": "DISCHARGED_v0_DERIVATION_GRADE",
+      "evidence_tokens": [
+        "QM_FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DERIVATION_GRADE"
+      ],
+      "remaining_gap": "none"
+    }
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_QM_FULL_DERIVATION_EXIT_COVERAGE_CYCLE14"
+}

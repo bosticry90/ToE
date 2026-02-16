@@ -1,0 +1,39 @@
+{
+  "record_id": "QM_GR_INTEGRATED_DISCHARGE_CRITERIA_CYCLE10_v0",
+  "artifact_id": "qm_gr_integrated_discharge_criteria_cycle10_v0",
+  "scope": "qm_gr_integrated_discharge_criteria_v0",
+  "criteria_rows": [
+    {
+      "row_id": "QM_GR_INTEGRATED_CRITERIA_ROW_01_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "QM_FULL_DERIVATION_PROGRESS_CYCLE5_v0: ASSUMPTION_MINIMIZATION_TOKEN_PINNED",
+        "GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED",
+        "GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED"
+      ]
+    },
+    {
+      "row_id": "QM_GR_INTEGRATED_CRITERIA_ROW_02_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "no unification theorem claim",
+        "no continuum/full-GR recovery claim"
+      ]
+    },
+    {
+      "row_id": "QM_GR_INTEGRATED_CRITERIA_ROW_03_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "formal/python/tests/test_qm_gr_regime_expansion_gate.py",
+        "State_of_the_Theory.md"
+      ]
+    }
+  ],
+  "adjudication_posture": "NOT_YET_DISCHARGED_v0",
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_QM_GR_INTEGRATED_CRITERIA_CYCLE10"
+}

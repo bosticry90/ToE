@@ -1,0 +1,43 @@
+{
+  "record_id": "GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_CYCLE10_v0",
+  "artifact_id": "gr_strong_field_discharge_criteria_cycle10_v0",
+  "scope": "gr_strong_field_regime_discharge_criteria_v0",
+  "criteria_rows": [
+    {
+      "row_id": "GR_STRONG_FIELD_REGIME_CRITERIA_ROW_01_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "gr_strong_field_regime_predicate_cycle1_v0"
+      ]
+    },
+    {
+      "row_id": "GR_STRONG_FIELD_REGIME_CRITERIA_ROW_02_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "Nonlinear closure track"
+      ]
+    },
+    {
+      "row_id": "GR_STRONG_FIELD_REGIME_CRITERIA_ROW_03_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "no black-hole uniqueness theorem claim"
+      ]
+    },
+    {
+      "row_id": "GR_STRONG_FIELD_REGIME_CRITERIA_ROW_04_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "formal/python/tests/test_qm_gr_regime_expansion_gate.py",
+        "State_of_the_Theory.md"
+      ]
+    }
+  ],
+  "adjudication_posture": "NOT_YET_DISCHARGED_v0",
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_GR_STRONG_FIELD_CRITERIA_CYCLE10"
+}

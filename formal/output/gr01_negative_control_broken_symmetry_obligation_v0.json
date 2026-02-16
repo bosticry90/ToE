@@ -1,0 +1,28 @@
+{
+  "record_id": "GR01_NEGATIVE_CONTROL_RECORD_v0",
+  "negative_id": "NEGCTRL_BROKEN_SYMMETRY_OBLIGATION_v0",
+  "artifact_id": "GR01_NEGCTRL_BROKEN_SYMMETRY_OBLIGATION_v0",
+  "scope": "bounded_discrete_weak_field_v0",
+  "injected_violation": {
+    "description": "Break projection-map symmetry/well-formedness obligations while preserving other assumptions.",
+    "projection_map_well_formed": "violated",
+    "carrier_witness_consistency": "violated",
+    "regime_guard": "unchanged"
+  },
+  "expected_outcome": "OUTCOME_FAILS_INFORMATIVE",
+  "observed_outcome": "OUTCOME_FAILS_INFORMATIVE",
+  "expected_failure_token": "ProjectionMapWellFormed",
+  "observed_failure_token": "ProjectionMapWellFormed",
+  "reason_code": "FAIL_BROKEN_SYMMETRY_OBLIGATION_BREAKS_PROJECTION_WELL_FORMED_ROUTE_v0",
+  "witness_tokens": [
+    "gr01_projection_map_well_formed_under_regime_predicate",
+    "gr01_projection_map_well_formed",
+    "gr01_poisson_equation_of_GR01Assumptions_v0_min3"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_NEGCTRL_ROW4"
+}

@@ -1,0 +1,52 @@
+{
+  "record_id": "QM_FULL_DERIVATION_DISCHARGE_CRITERIA_CYCLE10_v0",
+  "artifact_id": "qm_full_derivation_discharge_criteria_cycle10_v0",
+  "scope": "qm_full_derivation_discharge_criteria_v0",
+  "criteria_rows": [
+    {
+      "row_id": "QM_FULL_DERIVATION_CRITERIA_ROW_01_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "qm_full_derivation_cycle1_contract_bridge_token_v0",
+        "qm_full_derivation_cycle4_composition_bundle_token_v0"
+      ]
+    },
+    {
+      "row_id": "QM_FULL_DERIVATION_CRITERIA_ROW_02_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "qm_full_derivation_cycle2_unitary_consistency_token_v0"
+      ]
+    },
+    {
+      "row_id": "QM_FULL_DERIVATION_CRITERIA_ROW_03_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "QM_ANTI_CIRCULARITY_GUARD_v0: NO_DIRECT_SCHRODINGER_INSERTION"
+      ]
+    },
+    {
+      "row_id": "QM_FULL_DERIVATION_CRITERIA_ROW_04_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "qm_full_derivation_cycle5_policy_to_math_reclassification_token_v0",
+        "QM_FULL_DERIVATION_RECLASSIFICATION_v0_MIN1: hStepTotalPolicy_POLICY_TO_MATH_via_qm_step_total_of_definition"
+      ]
+    },
+    {
+      "row_id": "QM_FULL_DERIVATION_CRITERIA_ROW_05_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "formal/python/tests/test_qm_gr_regime_expansion_gate.py",
+        "State_of_the_Theory.md"
+      ]
+    }
+  ],
+  "adjudication_posture": "NOT_YET_DISCHARGED_v0",
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_QM_FULL_DERIVATION_CRITERIA_CYCLE10"
+}

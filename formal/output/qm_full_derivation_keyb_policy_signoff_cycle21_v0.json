@@ -1,0 +1,27 @@
+{
+  "record_id": "QM_FULL_DERIVATION_KEYB_POLICY_SIGNOFF_CYCLE21_v0",
+  "artifact_id": "qm_full_derivation_keyb_policy_signoff_cycle21_v0",
+  "scope": "qm_full_derivation_keyb_policy_signoff_v0",
+  "adjudication_posture": "DISCHARGED_v0_DERIVATION_GRADE",
+  "key_b_policy_signoff": {
+    "required": true,
+    "signoff_complete": true,
+    "signoff_authority": "QM_POLICY_BOARD_v0",
+    "signoff_ticket_id": "QM-DISCHARGE-SIGNOFF-20260216-v0",
+    "blocked_reason": "none"
+  },
+  "dependency_refs": {
+    "predischarge_gate_artifact": "qm_full_derivation_predischarge_gate_cycle19_v0",
+    "discharge_transition_bundle_artifact": "qm_full_derivation_discharge_transition_bundle_cycle20_v0"
+  },
+  "policy_tokens": [
+    "QM_FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DERIVATION_GRADE",
+    "QM_FULL_DERIVATION_EXIT_ROW_05_v0"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_QM_FULL_DERIVATION_KEYB_POLICY_SIGNOFF_CYCLE21"
+}

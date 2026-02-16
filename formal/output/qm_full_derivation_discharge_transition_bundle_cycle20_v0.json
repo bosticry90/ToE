@@ -1,0 +1,27 @@
+{
+  "record_id": "QM_FULL_DERIVATION_DISCHARGE_TRANSITION_BUNDLE_CYCLE20_v0",
+  "artifact_id": "qm_full_derivation_discharge_transition_bundle_cycle20_v0",
+  "scope": "qm_full_derivation_discharge_transition_bundle_v0",
+  "adjudication_posture": "DISCHARGED_v0_DERIVATION_GRADE",
+  "release_condition": {
+    "key_a_predischarge_gate_complete": true,
+    "key_b_discharge_policy_signoff_complete": true,
+    "two_key_release_satisfied": true,
+    "blocked_reason": "none"
+  },
+  "input_bundle_refs": {
+    "predischarge_gate_artifact": "qm_full_derivation_predischarge_gate_cycle19_v0",
+    "exit_criteria_coverage_artifact": "qm_full_derivation_exit_criteria_coverage_cycle14_v0",
+    "key_b_policy_signoff_artifact": "qm_full_derivation_keyb_policy_signoff_cycle21_v0"
+  },
+  "policy_tokens": [
+    "QM_FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DERIVATION_GRADE",
+    "QM_FULL_DERIVATION_EXIT_ROW_05_v0"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_QM_FULL_DERIVATION_DISCHARGE_TRANSITION_BUNDLE_CYCLE20"
+}

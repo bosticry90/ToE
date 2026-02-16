@@ -1,0 +1,21 @@
+{
+  "record_id": "GR01_RESOLUTION_TREND_RECORD_v0",
+  "resolution_id": "RESOLUTION_128_v0",
+  "artifact_id": "GR01_RESOLUTION_TREND_128_v0",
+  "scope": "bounded_discrete_weak_field_v0",
+  "grid_size": 128,
+  "residual_norm": 0.0062,
+  "convergence_trend": "improving_vs_64_v0",
+  "kappa_calibration_stability": "stable_within_v0_tolerance",
+  "limit_break_annotation": "none_observed_at_128",
+  "witness_tokens": [
+    "gr01_poisson_equation_of_GR01Assumptions_v0_min3",
+    "gr01_discrete_residual_from_bridge_promotion_chain_default_binding"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_RESOLUTION_ROW3"
+}

@@ -1,0 +1,28 @@
+{
+  "record_id": "GR01_NEGATIVE_CONTROL_RECORD_v0",
+  "negative_id": "NEGCTRL_BROKEN_SCALING_HIERARCHY_v0",
+  "artifact_id": "GR01_NEGCTRL_BROKEN_SCALING_HIERARCHY_v0",
+  "scope": "bounded_discrete_weak_field_v0",
+  "injected_violation": {
+    "description": "Break weak-field scaling hierarchy dominance inequalities while preserving other assumptions.",
+    "phi_scale_dominance": "violated",
+    "rho_scale_dominance": "violated",
+    "regime_guard": "unchanged"
+  },
+  "expected_outcome": "OUTCOME_FAILS_INFORMATIVE",
+  "observed_outcome": "OUTCOME_FAILS_INFORMATIVE",
+  "expected_failure_token": "WeakFieldScalingHierarchy",
+  "observed_failure_token": "WeakFieldScalingHierarchy",
+  "reason_code": "FAIL_BROKEN_SCALING_HIERARCHY_BREAKS_TRUNCATION_ROUTE_v0",
+  "witness_tokens": [
+    "gr01_scaling_hierarchy_under_regime_predicate",
+    "gr01_first_order_truncation_sound",
+    "gr01_poisson_equation_of_GR01Assumptions_v0_min3"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_NEGCTRL_ROW2"
+}

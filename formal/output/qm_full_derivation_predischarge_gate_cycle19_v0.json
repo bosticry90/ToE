@@ -1,0 +1,35 @@
+{
+  "record_id": "QM_FULL_DERIVATION_PREDISCHARGE_GATE_CYCLE19_v0",
+  "artifact_id": "qm_full_derivation_predischarge_gate_cycle19_v0",
+  "scope": "qm_full_derivation_predischarge_gate_bundle_v0",
+  "adjudication_posture": "DISCHARGED_v0_DERIVATION_GRADE",
+  "pre_discharge_gate": {
+    "rows_1_to_4_closure_witness_complete": true,
+    "row_5_adjudication_block_enforced": false,
+    "ready_for_discharge_flip": true,
+    "blocked_reason": "none"
+  },
+  "closure_status_snapshot": {
+    "QM_FULL_DERIVATION_EXIT_ROW_01_v0": "DISCHARGED_v0_DERIVATION_GRADE",
+    "QM_FULL_DERIVATION_EXIT_ROW_02_v0": "DISCHARGED_v0_DERIVATION_GRADE",
+    "QM_FULL_DERIVATION_EXIT_ROW_03_v0": "DISCHARGED_v0_DERIVATION_GRADE",
+    "QM_FULL_DERIVATION_EXIT_ROW_04_v0": "DISCHARGED_v0_DERIVATION_GRADE",
+    "QM_FULL_DERIVATION_EXIT_ROW_05_v0": "DISCHARGED_v0_DERIVATION_GRADE"
+  },
+  "witness_tokens": [
+    "qm_full_derivation_cycle7_derivation_exit_row_closure_token_v0",
+    "qm_full_derivation_cycle6_unitary_exit_row_closure_token_v0",
+    "qm_full_derivation_cycle9_assumption_minimization_exit_row_closure_token_v0",
+    "qm_full_derivation_cycle8_anticircularity_exit_row_closure_token_v0"
+  ],
+  "policy_tokens": [
+    "QM_FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DERIVATION_GRADE",
+    "QM_FULL_DERIVATION_EXIT_ROW_05_v0"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_QM_FULL_DERIVATION_PREDISCHARGE_GATE_CYCLE19"
+}

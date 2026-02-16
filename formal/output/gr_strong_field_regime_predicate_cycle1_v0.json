@@ -1,0 +1,22 @@
+{
+  "record_id": "GR_STRONG_FIELD_REGIME_CYCLE1_v0",
+  "artifact_id": "gr_strong_field_regime_predicate_cycle1_v0",
+  "scope": "bounded_strong_field_program_v0",
+  "regime_predicate_id": "GR_STRONG_FIELD_REGIME_PREDICATE_v0",
+  "assumptions": {
+    "curvature_intensity": "high_but_bounded",
+    "domain_regularization": "explicit_bounded_domain",
+    "singularity_posture": "excluded_in_v0_cycle1"
+  },
+  "compatibility_posture": "weak_field_bridge_preserved",
+  "witness_tokens": [
+    "TARGET-GR-STRONG-FIELD-MICRO-01-REGIME-PREDICATE-v0",
+    "gr_strong_field_regime_predicate_cycle1_v0"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_GR_STRONG_FIELD_CYCLE1"
+}

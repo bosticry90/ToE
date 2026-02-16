@@ -1,0 +1,26 @@
+{
+  "record_id": "QM_EVOLUTION_NEGATIVE_CONTROL_RECORD_v0",
+  "negative_id": "NEGCTRL_INCOMPATIBLE_STATE_CARRIER_v0",
+  "artifact_id": "QM_EVOLUTION_NEGCTRL_INCOMPATIBLE_STATE_CARRIER_v0",
+  "scope": "contract_only_qm_evolution_v0",
+  "injected_violation": {
+    "description": "inject incompatible state carrier witness that violates typed state relation",
+    "mismatch_mode": "state_carrier_type_mismatch",
+    "carrier": "incompatible"
+  },
+  "expected_outcome": "OUTCOME_FAILS_INFORMATIVE",
+  "observed_outcome": "OUTCOME_FAILS_INFORMATIVE",
+  "expected_failure_token": "QMState",
+  "observed_failure_token": "QMState",
+  "reason_code": "FAIL_INCOMPATIBLE_STATE_CARRIER_DETECTED_v0",
+  "witness_tokens": [
+    "qm_evolution_under_contract_assumptions",
+    "QMEvolutionAssumptions_v0_min1"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_QM_NEGCTRL_ROW3"
+}

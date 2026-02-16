@@ -1,0 +1,26 @@
+{
+  "record_id": "QM_EVOLUTION_NEGATIVE_CONTROL_RECORD_v0",
+  "negative_id": "NEGCTRL_INVALID_EVOLUTION_CONTEXT_v0",
+  "artifact_id": "QM_EVOLUTION_NEGCTRL_INVALID_EVOLUTION_CONTEXT_v0",
+  "scope": "contract_only_qm_evolution_v0",
+  "injected_violation": {
+    "description": "construct an evolution context with mismatched time/state wiring",
+    "mismatch_mode": "time_state_wiring_mismatch",
+    "carrier": "inconsistent"
+  },
+  "expected_outcome": "OUTCOME_FAILS_INFORMATIVE",
+  "observed_outcome": "OUTCOME_FAILS_INFORMATIVE",
+  "expected_failure_token": "EvolutionContext",
+  "observed_failure_token": "EvolutionContext",
+  "reason_code": "FAIL_INVALID_EVOLUTION_CONTEXT_DETECTED_v0",
+  "witness_tokens": [
+    "qm_evolution_under_contract_assumptions",
+    "QMEvolutionAssumptions_v0_min1"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_QM_NEGCTRL_ROW2"
+}

@@ -156,14 +156,14 @@ structure ProjectionMapWellFormed
 structure WeakFieldTruncationSound
     (hWeakFieldAnsatz : WeakFieldAnsatz)
     (hSmallPerturbationExpansion : SmallPerturbationExpansion) : Prop where
-  first_order_regime : True
-  higher_order_remainder_bounded : True
+  first_order_regime : hSmallPerturbationExpansion.truncationOrder = 1
+  higher_order_remainder_bounded : |hWeakFieldAnsatz.η| ≤ 1
 
 theorem weakFieldTruncationSound_default_v0
     (hWeakFieldAnsatz : WeakFieldAnsatz)
     (hSmallPerturbationExpansion : SmallPerturbationExpansion) :
     WeakFieldTruncationSound hWeakFieldAnsatz hSmallPerturbationExpansion :=
-  ⟨trivial, trivial⟩
+  ⟨hSmallPerturbationExpansion.h_truncationOrder, hWeakFieldAnsatz.h_eta_small⟩
 
 structure ELImpliesDiscretePoissonResidual
     (hPotentialIdentification : PotentialIdentification)

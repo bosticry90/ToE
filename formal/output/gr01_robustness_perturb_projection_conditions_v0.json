@@ -1,0 +1,26 @@
+{
+  "record_id": "GR01_ROBUSTNESS_RECORD_v0",
+  "perturbation_id": "PERTURB_PROJECTION_CONDITIONS_v0",
+  "artifact_id": "GR01_ROBUSTNESS_PERTURB_PROJECTION_CONDITIONS_v0",
+  "scope": "bounded_discrete_weak_field_v0",
+  "input_delta": {
+    "description": "Apply a small perturbation to projection-map condition witnesses while preserving well-formedness constraints.",
+    "carrier_alignment_tolerance": 0.01,
+    "projection_condition_variant": "well_formed_small_shift",
+    "regime_guard": "unchanged"
+  },
+  "expected_outcome": "OUTCOME_STILL_DERIVES_POISSON_RESIDUAL",
+  "observed_outcome": "OUTCOME_STILL_DERIVES_POISSON_RESIDUAL",
+  "reason_code": "PASS_RESIDUAL_STABLE_UNDER_SMALL_PROJECTION_CONDITION_PERTURBATION_v0",
+  "witness_tokens": [
+    "gr01_projection_map_well_formed",
+    "gr01_discrete_residual_from_bridge_promotion_chain_default_binding",
+    "gr01_poisson_equation_of_GR01Assumptions_v0_min3"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_BASELINE_ROW5"
+}
