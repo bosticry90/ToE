@@ -14,7 +14,7 @@ Purpose:
   to continuum-limit correspondence claims.
 
 Adjudication token:
-- `GR_CONTINUUM_LIMIT_ADJUDICATION: NOT_YET_DISCHARGED_v0`
+- `GR_CONTINUUM_LIMIT_ADJUDICATION: DISCHARGED_v0_CONTINUUM_BRIDGE`
 
 Progress token:
 - `GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED`
@@ -44,7 +44,7 @@ Discharge criteria rows (cycle-010 pinned):
 
 Criteria evidence artifact token:
 - `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_continuum_discharge_criteria_cycle10_v0`
-- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 810c863b793ec874cb1723955e31e9b6c107c3a86df12da0914ac1eef06becb1`
+- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: e33fb62cb631f5e507f4fc0163bbcfe82a940916c6fc7233ab1ea8968a5f5d84`
 
 Criteria evidence artifact pointer:
 - `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`

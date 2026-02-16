@@ -4,8 +4,8 @@
   "scope": "cross_lane_checkpoint_sync_v0",
   "lane_checkpoints": {
     "qm_full_derivation": "QM_FULL_DERIVATION_PROGRESS_CYCLE14_v0: TWO_KEY_RELEASE_DISCHARGE_COMPLETED",
-    "gr_continuum": "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE3_v0: BRIDGE_THEOREM_SURFACE_TOKEN_PINNED",
-    "gr_strong_field": "GR_STRONG_FIELD_PROGRESS_CYCLE3_v0: STRONG_FIELD_THEOREM_SURFACE_TOKEN_PINNED"
+    "gr_continuum": "GR_CONTINUUM_LIMIT_ADJUDICATION: DISCHARGED_v0_CONTINUUM_BRIDGE",
+    "gr_strong_field": "GR_STRONG_FIELD_ADJUDICATION: DISCHARGED_v0_STRONG_FIELD_PROGRAM"
   },
   "compatibility_status": "synchronized_cycle3",
   "witness_tokens": [

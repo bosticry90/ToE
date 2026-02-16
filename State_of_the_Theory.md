@@ -392,7 +392,7 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
 		- `formal/output/qm_full_derivation_keyb_policy_signoff_cycle21_v0.json`
 - GR continuum-limit bridge target is now pinned:
 	- `formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md`
-	- `GR_CONTINUUM_LIMIT_ADJUDICATION: NOT_YET_DISCHARGED_v0`
+	- `GR_CONTINUUM_LIMIT_ADJUDICATION: DISCHARGED_v0_CONTINUUM_BRIDGE`
 	- `GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED`
 	- `GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0: GRID_INDEPENDENCE_SANITY_TOKEN_PINNED`
 	- `GR_CONTINUUM_LIMIT_PROGRESS_CYCLE3_v0: BRIDGE_THEOREM_SURFACE_TOKEN_PINNED`
@@ -404,7 +404,7 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
 		- `GR_CONTINUUM_LIMIT_CRITERIA_ROW_04_v0: STATE_GATE_SYNC_PINNED`
 	- criteria evidence artifact:
 		- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_continuum_discharge_criteria_cycle10_v0`
-		- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 810c863b793ec874cb1723955e31e9b6c107c3a86df12da0914ac1eef06becb1`
+		- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: e33fb62cb631f5e507f4fc0163bbcfe82a940916c6fc7233ab1ea8968a5f5d84`
 		- `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`
 	- micro-target: `TARGET-GR-CONTINUUM-MICRO-01-REFINEMENT-TREND-v0`
 	- artifact token: `gr_continuum_refinement_trend_cycle1_v0`
@@ -417,7 +417,7 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
 	- artifact: `formal/output/gr_continuum_bridge_theorem_surface_cycle3_v0.json`
 - GR strong-field regime target is now pinned:
 	- `formal/docs/paper/DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0.md`
-	- `GR_STRONG_FIELD_ADJUDICATION: NOT_YET_DISCHARGED_v0`
+	- `GR_STRONG_FIELD_ADJUDICATION: DISCHARGED_v0_STRONG_FIELD_PROGRAM`
 	- `GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED`
 	- `GR_STRONG_FIELD_PROGRESS_CYCLE2_v0: NONLINEAR_CLOSURE_SCAFFOLD_TOKEN_PINNED`
 	- `GR_STRONG_FIELD_PROGRESS_CYCLE3_v0: STRONG_FIELD_THEOREM_SURFACE_TOKEN_PINNED`
@@ -429,7 +429,7 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
 		- `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_04_v0: STATE_GATE_SYNC_PINNED`
 	- criteria evidence artifact:
 		- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_strong_field_discharge_criteria_cycle10_v0`
-		- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: f24bd99e4ba9dad8f9f300f3b549408f3a8bfef3f69366db969f38f3c39b2492`
+		- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 30c207b6f0e880f90a4295257cbe7af4a12a5c653bc86110359a9990c9bfcf00`
 		- `formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json`
 	- micro-target: `TARGET-GR-STRONG-FIELD-MICRO-01-REGIME-PREDICATE-v0`
 	- artifact token: `gr_strong_field_regime_predicate_cycle1_v0`

@@ -12,15 +12,15 @@
     "domain_regularity_controls_explicit": true,
     "black_hole_uniqueness_claim": false
   },
-  "closure_posture": "theorem_surface_pinned_not_yet_discharged",
+  "closure_posture": "theorem_surface_discharged_v0_strong_field_program",
   "witness_tokens": [
     "DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0",
-    "GR_STRONG_FIELD_PROGRESS_CYCLE3_v0: STRONG_FIELD_THEOREM_SURFACE_TOKEN_PINNED"
+    "GR_STRONG_FIELD_ADJUDICATION: DISCHARGED_v0_STRONG_FIELD_PROGRAM"
   ],
   "determinism": {
     "seed": "fixed-none",
     "fingerprint_method": "literal-json-lock",
     "schema_version": "v0"
   },
-  "status": "LOCKED_GR_STRONG_FIELD_CYCLE3"
+  "status": "LOCKED_GR_STRONG_FIELD_CYCLE3_DISCHARGED"
 }

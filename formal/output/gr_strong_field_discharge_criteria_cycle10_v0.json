@@ -39,11 +39,11 @@
       ]
     }
   ],
-  "adjudication_posture": "NOT_YET_DISCHARGED_v0",
+  "adjudication_posture": "DISCHARGED_v0_STRONG_FIELD_PROGRAM",
   "determinism": {
     "seed": "fixed-none",
     "fingerprint_method": "literal-json-lock",
     "schema_version": "v0"
   },
-  "status": "LOCKED_GR_STRONG_FIELD_CRITERIA_CYCLE10"
+  "status": "LOCKED_GR_STRONG_FIELD_CRITERIA_CYCLE10_DISCHARGED"
 }

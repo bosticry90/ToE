@@ -14,7 +14,7 @@ Purpose:
   closure toward strong-field regime objects.
 
 Adjudication token:
-- `GR_STRONG_FIELD_ADJUDICATION: NOT_YET_DISCHARGED_v0`
+- `GR_STRONG_FIELD_ADJUDICATION: DISCHARGED_v0_STRONG_FIELD_PROGRAM`
 
 Progress token:
 - `GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED`
@@ -44,7 +44,7 @@ Discharge criteria rows (cycle-010 pinned):
 
 Criteria evidence artifact token:
 - `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_strong_field_discharge_criteria_cycle10_v0`
-- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: f24bd99e4ba9dad8f9f300f3b549408f3a8bfef3f69366db969f38f3c39b2492`
+- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 30c207b6f0e880f90a4295257cbe7af4a12a5c653bc86110359a9990c9bfcf00`
 
 Criteria evidence artifact pointer:
 - `formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json`

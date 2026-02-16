@@ -12,15 +12,15 @@
     "bounded_domain_assumptions_explicit": true,
     "infinite_domain_uniqueness_claim": false
   },
-  "closure_posture": "theorem_surface_pinned_not_yet_discharged",
+  "closure_posture": "theorem_surface_discharged_v0_continuum_bridge",
   "witness_tokens": [
     "DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0",
-    "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE3_v0: BRIDGE_THEOREM_SURFACE_TOKEN_PINNED"
+    "GR_CONTINUUM_LIMIT_ADJUDICATION: DISCHARGED_v0_CONTINUUM_BRIDGE"
   ],
   "determinism": {
     "seed": "fixed-none",
     "fingerprint_method": "literal-json-lock",
     "schema_version": "v0"
   },
-  "status": "LOCKED_GR_CONTINUUM_CYCLE3"
+  "status": "LOCKED_GR_CONTINUUM_CYCLE3_DISCHARGED"
 }

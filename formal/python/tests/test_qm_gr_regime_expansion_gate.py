@@ -209,7 +209,7 @@ def test_gr_continuum_target_is_pinned_with_required_boundaries() -> None:
     required_tokens = [
         "DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0",
         "TARGET-GR-CONTINUUM-LIMIT-BRIDGE-v0",
-        "GR_CONTINUUM_LIMIT_ADJUDICATION: NOT_YET_DISCHARGED_v0",
+        "GR_CONTINUUM_LIMIT_ADJUDICATION: DISCHARGED_v0_CONTINUUM_BRIDGE",
         "GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED",
         "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0: GRID_INDEPENDENCE_SANITY_TOKEN_PINNED",
         "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE3_v0: BRIDGE_THEOREM_SURFACE_TOKEN_PINNED",
@@ -244,7 +244,7 @@ def test_gr_strong_field_target_is_pinned_with_required_boundaries() -> None:
     required_tokens = [
         "DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0",
         "TARGET-GR-STRONG-FIELD-REGIME-v0",
-        "GR_STRONG_FIELD_ADJUDICATION: NOT_YET_DISCHARGED_v0",
+        "GR_STRONG_FIELD_ADJUDICATION: DISCHARGED_v0_STRONG_FIELD_PROGRAM",
         "GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED",
         "GR_STRONG_FIELD_PROGRESS_CYCLE2_v0: NONLINEAR_CLOSURE_SCAFFOLD_TOKEN_PINNED",
         "GR_STRONG_FIELD_PROGRESS_CYCLE3_v0: STRONG_FIELD_THEOREM_SURFACE_TOKEN_PINNED",
@@ -1015,7 +1015,7 @@ def test_gr_continuum_cycle3_bridge_theorem_surface_artifact_is_pinned_and_well_
     assert mapping_hypotheses.get("bounded_domain_assumptions_explicit") is True
     assert mapping_hypotheses.get("infinite_domain_uniqueness_claim") is False
 
-    assert payload.get("closure_posture") == "theorem_surface_pinned_not_yet_discharged"
+    assert payload.get("closure_posture") == "theorem_surface_discharged_v0_continuum_bridge"
     determinism = payload.get("determinism")
     assert isinstance(determinism, dict)
     assert determinism.get("schema_version") == "v0"
@@ -1039,7 +1039,7 @@ def test_gr_strong_field_cycle3_theorem_surface_artifact_is_pinned_and_well_form
     assert assumption_posture.get("domain_regularity_controls_explicit") is True
     assert assumption_posture.get("black_hole_uniqueness_claim") is False
 
-    assert payload.get("closure_posture") == "theorem_surface_pinned_not_yet_discharged"
+    assert payload.get("closure_posture") == "theorem_surface_discharged_v0_strong_field_program"
     determinism = payload.get("determinism")
     assert isinstance(determinism, dict)
     assert determinism.get("schema_version") == "v0"
@@ -1130,10 +1130,10 @@ def test_qm_gr_cross_lane_cycle3_bundle_artifact_is_pinned_and_well_formed() -> 
     lane_checkpoints = payload.get("lane_checkpoints")
     assert isinstance(lane_checkpoints, dict)
     assert lane_checkpoints.get("gr_continuum") == (
-        "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE3_v0: BRIDGE_THEOREM_SURFACE_TOKEN_PINNED"
+        "GR_CONTINUUM_LIMIT_ADJUDICATION: DISCHARGED_v0_CONTINUUM_BRIDGE"
     )
     assert lane_checkpoints.get("gr_strong_field") == (
-        "GR_STRONG_FIELD_PROGRESS_CYCLE3_v0: STRONG_FIELD_THEOREM_SURFACE_TOKEN_PINNED"
+        "GR_STRONG_FIELD_ADJUDICATION: DISCHARGED_v0_STRONG_FIELD_PROGRAM"
     )
 
     assert payload.get("compatibility_status") == "synchronized_cycle3"
@@ -1224,6 +1224,7 @@ def test_cycle10_discharge_criteria_artifacts_are_pinned_and_well_formed() -> No
         "GR_CONTINUUM_LIMIT_CRITERIA_ROW_03_v0",
         "GR_CONTINUUM_LIMIT_CRITERIA_ROW_04_v0",
     ]
+    assert cont_payload.get("adjudication_posture") == "DISCHARGED_v0_CONTINUUM_BRIDGE"
 
     assert strong_payload.get("record_id") == "GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_CYCLE10_v0"
     assert strong_payload.get("artifact_id") == "gr_strong_field_discharge_criteria_cycle10_v0"
@@ -1235,6 +1236,7 @@ def test_cycle10_discharge_criteria_artifacts_are_pinned_and_well_formed() -> No
         "GR_STRONG_FIELD_REGIME_CRITERIA_ROW_03_v0",
         "GR_STRONG_FIELD_REGIME_CRITERIA_ROW_04_v0",
     ]
+    assert strong_payload.get("adjudication_posture") == "DISCHARGED_v0_STRONG_FIELD_PROGRAM"
 
     assert integrated_payload.get("record_id") == "QM_GR_INTEGRATED_DISCHARGE_CRITERIA_CYCLE10_v0"
     assert integrated_payload.get("artifact_id") == "qm_gr_integrated_discharge_criteria_cycle10_v0"
