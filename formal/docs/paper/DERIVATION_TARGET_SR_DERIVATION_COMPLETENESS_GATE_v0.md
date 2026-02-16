@@ -116,6 +116,28 @@ Non-claim boundary:
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_object_phase_exit_binding_cycle29_v0.json`
 
+## Cycle-030 Theorem-Object Discharge Progression Lock
+
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-30-THEOREM-OBJECT-DISCHARGE-PROGRESSION-v0`
+- gate token:
+  - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_PROGRESSION_v0: CYCLE30_PHASE1_DISCHARGE_PROGRESS_PINNED_NONCLAIM`
+- phase-I discharge row tokens:
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_01_v0: LORENTZ_TRANSFORM_OBJECT_SURFACE_PROGRESS_PINNED`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_02_v0: INTERVAL_INVARIANCE_SURFACE_PROGRESS_PINNED`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_03_v0: VELOCITY_COMPOSITION_SURFACE_PROGRESS_PINNED`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_v0: COVARIANCE_CONTRACT_SURFACE_PROGRESS_PINNED`
+- phase-I discharge progress token:
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_PROGRESS_v0: ROWS_01_04_POPULATED_NONCLAIM`
+- roadmap pointer:
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+- progress token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE30_v0: THEOREM_OBJECT_DISCHARGE_PROGRESSION_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE30_ARTIFACT_v0: sr_covariance_theorem_object_discharge_progression_cycle30_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_object_discharge_progression_cycle30_v0.json`
+
 Status:
 - `SCAFFOLD_PINNED_v0_NONCLAIM`
 - discharge status remains `OPEN` until theorem objects and closure gates are explicitly discharged.

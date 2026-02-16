@@ -108,6 +108,34 @@ theorem sr_cycle29_phase_exit_token_binding_stub_token_v0 :
       "SR_FULL_DERIVATION_PHASE7_EXIT_v0: PACKAGE_FREEZE_REOPEN_POLICY_BOUND_NONCLAIM" := by
   repeat' constructor <;> rfl
 
+def srFullDerivationPhase1DischargeRow01TokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_01_v0: LORENTZ_TRANSFORM_OBJECT_SURFACE_PROGRESS_PINNED"
+
+def srFullDerivationPhase1DischargeRow02TokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_02_v0: INTERVAL_INVARIANCE_SURFACE_PROGRESS_PINNED"
+
+def srFullDerivationPhase1DischargeRow03TokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_03_v0: VELOCITY_COMPOSITION_SURFACE_PROGRESS_PINNED"
+
+def srFullDerivationPhase1DischargeRow04TokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_v0: COVARIANCE_CONTRACT_SURFACE_PROGRESS_PINNED"
+
+def srFullDerivationPhase1DischargeProgressTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE1_DISCHARGE_PROGRESS_v0: ROWS_01_04_POPULATED_NONCLAIM"
+
+theorem sr_cycle30_phase1_discharge_progression_token_binding_stub_token_v0 :
+    srFullDerivationPhase1DischargeRow01TokenV0 =
+      "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_01_v0: LORENTZ_TRANSFORM_OBJECT_SURFACE_PROGRESS_PINNED" ∧
+    srFullDerivationPhase1DischargeRow02TokenV0 =
+      "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_02_v0: INTERVAL_INVARIANCE_SURFACE_PROGRESS_PINNED" ∧
+    srFullDerivationPhase1DischargeRow03TokenV0 =
+      "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_03_v0: VELOCITY_COMPOSITION_SURFACE_PROGRESS_PINNED" ∧
+    srFullDerivationPhase1DischargeRow04TokenV0 =
+      "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_v0: COVARIANCE_CONTRACT_SURFACE_PROGRESS_PINNED" ∧
+    srFullDerivationPhase1DischargeProgressTokenV0 =
+      "SR_FULL_DERIVATION_PHASE1_DISCHARGE_PROGRESS_v0: ROWS_01_04_POPULATED_NONCLAIM" := by
+  repeat' constructor <;> rfl
+
 end
 end SR
 end ToeFormal
