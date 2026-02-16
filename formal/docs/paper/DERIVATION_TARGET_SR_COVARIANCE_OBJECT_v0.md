@@ -510,6 +510,28 @@ Cycle-031 theorem-object discharge row-01 lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-032 theorem-object discharge row-02 lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-32-THEOREM-OBJECT-DISCHARGE-ROW02-LOCK-v0`
+- theorem-object discharge row-02 lock token:
+   - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW02_LOCK_v0: CYCLE32_PHASE1_ROW02_DISCHARGE_PINNED_NONCLAIM`
+- phase-I row-02 discharge status token:
+   - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_02_STATUS_v0: INTERVAL_INVARIANCE_SURFACE_DISCHARGE_PINNED_NONCLAIM`
+- phase-I row-lock progress token:
+   - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_DISCHARGE_PINNED_NONCLAIM`
+- roadmap pointer:
+   - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+- lean module pointer:
+   - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE32_v0: THEOREM_OBJECT_DISCHARGE_ROW02_LOCK_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE32_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row02_lock_cycle32_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_theorem_object_discharge_row02_lock_cycle32_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
