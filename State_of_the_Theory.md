@@ -288,6 +288,11 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE6_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE6_ARTIFACT_v0: sr_covariance_predischarge_gate_bundle_cycle6_v0`
 	- artifact: `formal/output/sr_covariance_predischarge_gate_bundle_cycle6_v0.json`
+- SR cycle-7 discharge-transition bundle lock is pinned:
+	- `TARGET-SR-COV-MICRO-07-DISCHARGE-TRANSITION-BUNDLE-v0`
+	- `SR_COVARIANCE_PROGRESS_CYCLE7_v0: DISCHARGE_TRANSITION_BUNDLE_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE7_ARTIFACT_v0: sr_covariance_discharge_transition_bundle_cycle7_v0`
+	- artifact: `formal/output/sr_covariance_discharge_transition_bundle_cycle7_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,
