@@ -162,6 +162,19 @@ theorem sr_cycle32_phase1_row02_discharge_lock_token_binding_stub_token_v0 :
       "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_DISCHARGE_PINNED_NONCLAIM" := by
   repeat' constructor <;> rfl
 
+def srFullDerivationPhase1DischargeRow03StatusTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_03_STATUS_v0: VELOCITY_COMPOSITION_SURFACE_DISCHARGE_PINNED_NONCLAIM"
+
+def srFullDerivationPhase1DischargeRowLockProgressRow03TokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_DISCHARGE_PINNED_NONCLAIM"
+
+theorem sr_cycle33_phase1_row03_discharge_lock_token_binding_stub_token_v0 :
+    srFullDerivationPhase1DischargeRow03StatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_03_STATUS_v0: VELOCITY_COMPOSITION_SURFACE_DISCHARGE_PINNED_NONCLAIM" ∧
+    srFullDerivationPhase1DischargeRowLockProgressRow03TokenV0 =
+      "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_DISCHARGE_PINNED_NONCLAIM" := by
+  repeat' constructor <;> rfl
+
 end
 end SR
 end ToeFormal
