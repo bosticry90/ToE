@@ -314,6 +314,11 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE10_v0: DISCHARGE_CRITERIA_LOCK_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE10_ARTIFACT_v0: sr_covariance_discharge_criteria_cycle10_v0`
 	- artifact: `formal/output/sr_covariance_discharge_criteria_cycle10_v0.json`
+- SR cycle-11 adjudication posture transition is pinned:
+	- `SR_COVARIANCE_ADJUDICATION_v0: DISCHARGED_v0_PLANNING_CRITERIA_LOCKED_NONCLAIM`
+	- `SR_COVARIANCE_PROGRESS_CYCLE11_v0: ADJUDICATION_POSTURE_LOCK_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE11_ARTIFACT_v0: sr_covariance_adjudication_posture_cycle11_v0`
+	- artifact: `formal/output/sr_covariance_adjudication_posture_cycle11_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,

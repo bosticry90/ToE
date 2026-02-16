@@ -182,6 +182,18 @@ Cycle-010 integrated discharge-criteria lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-011 adjudication posture transition (now pinned):
+- adjudication token:
+   - `SR_COVARIANCE_ADJUDICATION_v0: DISCHARGED_v0_PLANNING_CRITERIA_LOCKED_NONCLAIM`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE11_v0: ADJUDICATION_POSTURE_LOCK_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE11_ARTIFACT_v0: sr_covariance_adjudication_posture_cycle11_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_adjudication_posture_cycle11_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.

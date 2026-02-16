@@ -1,0 +1,18 @@
+{
+  "artifact_id": "sr_covariance_adjudication_posture_cycle11_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-011",
+  "status": "LOCKED_SR_COVARIANCE_ADJUDICATION_POSTURE_CYCLE11_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "adjudication_token": "SR_COVARIANCE_ADJUDICATION_v0: DISCHARGED_v0_PLANNING_CRITERIA_LOCKED_NONCLAIM",
+  "witness_tokens": [
+    "SR_COVARIANCE_PROGRESS_CYCLE11_v0: ADJUDICATION_POSTURE_LOCK_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE11_ARTIFACT_v0: sr_covariance_adjudication_posture_cycle11_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_adjudication_posture_cycle11_v0"
+  }
+}
