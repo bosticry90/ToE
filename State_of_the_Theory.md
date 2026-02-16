@@ -257,6 +257,16 @@ Post-GR01 handoff checkpoint (2026-02-16):
 	- first unlock cohort permits SR/EM after GR checklist closure under roadmap order intent,
 	- SR covariance lane is selected as the single active next-pillar entry point.
 
+SR full-derivation enforcement roadmap checkpoint (2026-02-16):
+- Authoritative no-deviation roadmap is pinned:
+	- `TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN`
+	- pointer: `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+	- `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
+	- `SR_FULL_DERIVATION_ENFORCEMENT_MODE_v0: AUTHORITATIVE_NO_DEVIATION`
+	- `SR_FULL_DERIVATION_ENFORCEMENT_PHASE_ORDER_v0: PHASE1_OBJECTS>PHASE2_EQUIV>PHASE3_ASSUMPTIONS>PHASE4_ROBUST_NEGCTRL>PHASE5_DERIVATION_GATE>PHASE6_INEVITABILITY>PHASE7_FREEZE`
+- Enforcement hook is pinned:
+	- `formal/python/tests/test_sr_full_derivation_enforcement_roadmap_gate.py`
+
 SR covariance kickoff checkpoint (2026-02-16):
 - SR cycle-1 object-scaffold kickoff is pinned:
 	- `TARGET-SR-COV-MICRO-01-OBJECT-SCAFFOLD-v0`
