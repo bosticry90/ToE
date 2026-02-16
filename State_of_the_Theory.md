@@ -278,6 +278,11 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE4_v0: VELOCITY_COMPOSITION_PLACEHOLDER_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE4_ARTIFACT_v0: sr_covariance_velocity_composition_placeholder_cycle4_v0`
 	- artifact: `formal/output/sr_covariance_velocity_composition_placeholder_cycle4_v0.json`
+- SR cycle-5 integrated kickoff-bundle lock is pinned:
+	- `TARGET-SR-COV-MICRO-05-INTEGRATED-KICKOFF-BUNDLE-v0`
+	- `SR_COVARIANCE_PROGRESS_CYCLE5_v0: INTEGRATED_KICKOFF_BUNDLE_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE5_ARTIFACT_v0: sr_covariance_integrated_kickoff_bundle_cycle5_v0`
+	- artifact: `formal/output/sr_covariance_integrated_kickoff_bundle_cycle5_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,

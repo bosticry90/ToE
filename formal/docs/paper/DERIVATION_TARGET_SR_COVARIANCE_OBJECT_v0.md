@@ -100,6 +100,19 @@ Cycle-004 kickoff micro-targets (now pinned):
     - gate posture:
        - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-005 kickoff micro-targets (now pinned):
+1. `TARGET-SR-COV-MICRO-05-INTEGRATED-KICKOFF-BUNDLE-v0`
+    - scope:
+       - planning-only integrated bundle lock across cycle-001 .. cycle-005 kickoff surfaces.
+    - cycle token:
+       - `SR_COVARIANCE_PROGRESS_CYCLE5_v0: INTEGRATED_KICKOFF_BUNDLE_TOKEN_PINNED`
+    - artifact token:
+       - `SR_COVARIANCE_CYCLE5_ARTIFACT_v0: sr_covariance_integrated_kickoff_bundle_cycle5_v0`
+    - artifact pointer:
+       - `formal/output/sr_covariance_integrated_kickoff_bundle_cycle5_v0.json`
+    - gate posture:
+       - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
