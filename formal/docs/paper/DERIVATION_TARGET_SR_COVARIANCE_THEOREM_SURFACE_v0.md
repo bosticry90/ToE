@@ -79,6 +79,14 @@ Second negative-control row lock (cycle-019):
 - negative-control progress token:
   - `SR_COVARIANCE_THEOREM_NEGCTRL_PROGRESS_v0: ROW_02_POPULATED`
 
+Robustness/negative-control family completion lock (cycle-020):
+- robustness completion token:
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ALL_REQUIRED_ROWS_POPULATED`
+- negative-control completion token:
+  - `SR_COVARIANCE_THEOREM_NEGCTRL_PROGRESS_v0: ALL_REQUIRED_ROWS_POPULATED`
+- family completion token:
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_FAMILY_COMPLETION_v0: CYCLE20_LOCKED`
+
 Cycle-013 synchronization lock:
 - micro-target token:
   - `TARGET-SR-COV-MICRO-13-THEOREM-SURFACE-SCAFFOLD-v0`
@@ -160,6 +168,18 @@ Cycle-019 synchronization lock:
   - `SR_COVARIANCE_CYCLE19_ARTIFACT_v0: sr_covariance_theorem_negctrl_row2_cycle19_v0`
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_negctrl_row2_cycle19_v0.json`
+
+Cycle-020 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-20-THEOREM-ROBUSTNESS-NEGCTRL-FAMILY-COMPLETE-v0`
+- family completion token:
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_FAMILY_COMPLETION_v0: CYCLE20_LOCKED`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE20_v0: THEOREM_ROBUSTNESS_NEGCTRL_FAMILY_COMPLETION_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE20_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_family_completion_cycle20_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_robustness_negctrl_family_completion_cycle20_v0.json`
 
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.
