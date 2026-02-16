@@ -1,0 +1,26 @@
+{
+  "record_id": "GR_STRONG_FIELD_REGIME_CYCLE3_v0",
+  "artifact_id": "gr_strong_field_theorem_surface_cycle3_v0",
+  "scope": "bounded_strong_field_program_v0",
+  "theorem_surface_tokens": [
+    "TARGET-GR-STRONG-FIELD-MICRO-03-THEOREM-SURFACE-v0",
+    "gr_strong_field_regime_predicate_cycle1_v0",
+    "gr_strong_field_nonlinear_closure_cycle2_v0"
+  ],
+  "assumption_posture": {
+    "nonlinear_closure_assumptions_registry_linked": true,
+    "domain_regularity_controls_explicit": true,
+    "black_hole_uniqueness_claim": false
+  },
+  "closure_posture": "theorem_surface_pinned_not_yet_discharged",
+  "witness_tokens": [
+    "DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0",
+    "GR_STRONG_FIELD_PROGRESS_CYCLE3_v0: STRONG_FIELD_THEOREM_SURFACE_TOKEN_PINNED"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_GR_STRONG_FIELD_CYCLE3"
+}

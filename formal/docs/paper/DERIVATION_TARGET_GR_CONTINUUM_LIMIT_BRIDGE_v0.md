@@ -19,6 +19,7 @@ Adjudication token:
 Progress token:
 - `GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED`
 - `GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0: GRID_INDEPENDENCE_SANITY_TOKEN_PINNED`
+- `GR_CONTINUUM_LIMIT_PROGRESS_CYCLE3_v0: BRIDGE_THEOREM_SURFACE_TOKEN_PINNED`
 
 Discharge-criteria token:
 - `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
@@ -43,7 +44,7 @@ Discharge criteria rows (cycle-010 pinned):
 
 Criteria evidence artifact token:
 - `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_continuum_discharge_criteria_cycle10_v0`
-- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: babb6d8bbe262c7b17f494e0105eabc777f18479ef7e416570d303be448b7fb2`
+- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 810c863b793ec874cb1723955e31e9b6c107c3a86df12da0914ac1eef06becb1`
 
 Criteria evidence artifact pointer:
 - `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`
@@ -85,6 +86,16 @@ Cycle-002 micro-targets (now pinned):
 - scope:
   - lock first deterministic grid-independence sanity record across
     non-isomorphic bounded encodings while preserving bounded-domain assumptions.
+
+Cycle-003 micro-targets (now pinned):
+1. `TARGET-GR-CONTINUUM-MICRO-03-BRIDGE-THEOREM-SURFACE-v0`
+- artifact token:
+  - `gr_continuum_bridge_theorem_surface_cycle3_v0`
+- artifact pointer:
+  - `formal/output/gr_continuum_bridge_theorem_surface_cycle3_v0.json`
+- scope:
+  - lock first continuum-bridge theorem-surface registry with explicit
+    bounded-domain assumptions, mapping hypotheses, and discharge-route hooks.
 
 Canonical pointers:
 - `formal/toe_formal/ToeFormal/Variational/GR01Mainstream3DSpherical.lean`

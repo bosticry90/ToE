@@ -19,6 +19,7 @@ Adjudication token:
 Progress token:
 - `GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED`
 - `GR_STRONG_FIELD_PROGRESS_CYCLE2_v0: NONLINEAR_CLOSURE_SCAFFOLD_TOKEN_PINNED`
+- `GR_STRONG_FIELD_PROGRESS_CYCLE3_v0: STRONG_FIELD_THEOREM_SURFACE_TOKEN_PINNED`
 
 Discharge-criteria token:
 - `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
@@ -43,7 +44,7 @@ Discharge criteria rows (cycle-010 pinned):
 
 Criteria evidence artifact token:
 - `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_strong_field_discharge_criteria_cycle10_v0`
-- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 73b7a0a49096ee00decfe6e2bb6ee1359b24855686fd872d082f817fb2fb1cb0`
+- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: f24bd99e4ba9dad8f9f300f3b549408f3a8bfef3f69366db969f38f3c39b2492`
 
 Criteria evidence artifact pointer:
 - `formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json`
@@ -85,6 +86,16 @@ Cycle-002 micro-targets (now pinned):
 - scope:
   - lock first nonlinear-closure scaffold record with explicit residual-family,
     boundedness assumptions, and compatibility hooks to weak-field surfaces.
+
+Cycle-003 micro-targets (now pinned):
+1. `TARGET-GR-STRONG-FIELD-MICRO-03-THEOREM-SURFACE-v0`
+- artifact token:
+  - `gr_strong_field_theorem_surface_cycle3_v0`
+- artifact pointer:
+  - `formal/output/gr_strong_field_theorem_surface_cycle3_v0.json`
+- scope:
+  - lock first strong-field theorem-surface registry with explicit nonlinear
+    closure assumptions, regularity-domain controls, and weak-field compatibility hooks.
 
 Canonical pointers:
 - `formal/docs/paper/DERIVATION_TARGET_GR_GEOMETRY_OBJECT_v0.md`

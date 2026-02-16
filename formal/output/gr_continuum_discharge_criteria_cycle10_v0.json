@@ -7,14 +7,20 @@
       "row_id": "GR_CONTINUUM_LIMIT_CRITERIA_ROW_01_v0",
       "status": "PINNED",
       "evidence_tokens": [
-        "gr_continuum_refinement_trend_cycle1_v0"
+        "gr_continuum_refinement_trend_cycle1_v0",
+        "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0: GRID_INDEPENDENCE_SANITY_TOKEN_PINNED",
+        "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE3_v0: BRIDGE_THEOREM_SURFACE_TOKEN_PINNED"
       ]
     },
     {
       "row_id": "GR_CONTINUUM_LIMIT_CRITERIA_ROW_02_v0",
       "status": "PINNED",
       "evidence_tokens": [
-        "TARGET-GR-CONTINUUM-MICRO-01-REFINEMENT-TREND-v0"
+        "TARGET-GR-CONTINUUM-MICRO-01-REFINEMENT-TREND-v0",
+        "TARGET-GR-CONTINUUM-MICRO-02-GRID-INDEPENDENCE-SANITY-v0",
+        "TARGET-GR-CONTINUUM-MICRO-03-BRIDGE-THEOREM-SURFACE-v0",
+        "gr_continuum_grid_independence_cycle2_v0",
+        "gr_continuum_bridge_theorem_surface_cycle3_v0"
       ]
     },
     {

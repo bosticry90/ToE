@@ -9,6 +9,7 @@ Classification:
 Cycle token:
 - `QM_GR_CROSS_LANE_PROGRESS_v0: CYCLE1_COMPATIBILITY_BUNDLE_PINNED`
 - `QM_GR_CROSS_LANE_PROGRESS_CYCLE2_v0: CYCLE2_COMPATIBILITY_BUNDLE_PINNED`
+- `QM_GR_CROSS_LANE_PROGRESS_CYCLE3_v0: CYCLE3_COMPATIBILITY_BUNDLE_PINNED`
 
 Integrated discharge-criteria token:
 - `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
@@ -32,7 +33,7 @@ Integrated discharge criteria rows (cycle-010 pinned):
 
 Integrated criteria evidence artifact token:
 - `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_gr_integrated_discharge_criteria_cycle10_v0`
-- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 81bb6e329bee0d97a486a5063d6d8f657f01a7808e29bff1945c72edc322ced0`
+- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 51363f7dea1beef11cfd4f0f3f309fc2bdf241d870da0f0ffbfdd4864188afb4`
 
 Integrated criteria evidence artifact pointer:
 - `formal/output/qm_gr_integrated_discharge_criteria_cycle10_v0.json`
@@ -56,6 +57,12 @@ Cycle-2 artifact token:
 
 Cycle-2 artifact pointer:
 - `formal/output/qm_gr_cross_lane_compatibility_cycle2_v0.json`
+
+Cycle-3 artifact token:
+- `qm_gr_cross_lane_compatibility_cycle3_v0`
+
+Cycle-3 artifact pointer:
+- `formal/output/qm_gr_cross_lane_compatibility_cycle3_v0.json`
 
 Scope boundary:
 - checkpoint synchronization bundle only.

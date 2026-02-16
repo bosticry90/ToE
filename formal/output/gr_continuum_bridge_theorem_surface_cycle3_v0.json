@@ -1,0 +1,26 @@
+{
+  "record_id": "GR_CONTINUUM_LIMIT_BRIDGE_CYCLE3_v0",
+  "artifact_id": "gr_continuum_bridge_theorem_surface_cycle3_v0",
+  "scope": "bounded_discrete_to_continuum_bridge_v0",
+  "theorem_surface_tokens": [
+    "TARGET-GR-CONTINUUM-MICRO-03-BRIDGE-THEOREM-SURFACE-v0",
+    "gr_continuum_refinement_trend_cycle1_v0",
+    "gr_continuum_grid_independence_cycle2_v0"
+  ],
+  "mapping_hypotheses": {
+    "discrete_to_continuum_map_explicit": true,
+    "bounded_domain_assumptions_explicit": true,
+    "infinite_domain_uniqueness_claim": false
+  },
+  "closure_posture": "theorem_surface_pinned_not_yet_discharged",
+  "witness_tokens": [
+    "DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0",
+    "GR_CONTINUUM_LIMIT_PROGRESS_CYCLE3_v0: BRIDGE_THEOREM_SURFACE_TOKEN_PINNED"
+  ],
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_GR_CONTINUUM_CYCLE3"
+}

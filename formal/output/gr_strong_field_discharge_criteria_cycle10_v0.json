@@ -7,14 +7,20 @@
       "row_id": "GR_STRONG_FIELD_REGIME_CRITERIA_ROW_01_v0",
       "status": "PINNED",
       "evidence_tokens": [
-        "gr_strong_field_regime_predicate_cycle1_v0"
+        "gr_strong_field_regime_predicate_cycle1_v0",
+        "GR_STRONG_FIELD_PROGRESS_CYCLE2_v0: NONLINEAR_CLOSURE_SCAFFOLD_TOKEN_PINNED",
+        "GR_STRONG_FIELD_PROGRESS_CYCLE3_v0: STRONG_FIELD_THEOREM_SURFACE_TOKEN_PINNED"
       ]
     },
     {
       "row_id": "GR_STRONG_FIELD_REGIME_CRITERIA_ROW_02_v0",
       "status": "PINNED",
       "evidence_tokens": [
-        "Nonlinear closure track"
+        "Nonlinear closure track",
+        "TARGET-GR-STRONG-FIELD-MICRO-02-NONLINEAR-CLOSURE-SCAFFOLD-v0",
+        "TARGET-GR-STRONG-FIELD-MICRO-03-THEOREM-SURFACE-v0",
+        "gr_strong_field_nonlinear_closure_cycle2_v0",
+        "gr_strong_field_theorem_surface_cycle3_v0"
       ]
     },
     {

@@ -395,6 +395,7 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
 	- `GR_CONTINUUM_LIMIT_ADJUDICATION: NOT_YET_DISCHARGED_v0`
 	- `GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED`
 	- `GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0: GRID_INDEPENDENCE_SANITY_TOKEN_PINNED`
+	- `GR_CONTINUUM_LIMIT_PROGRESS_CYCLE3_v0: BRIDGE_THEOREM_SURFACE_TOKEN_PINNED`
 	- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
 	- criteria rows:
 		- `GR_CONTINUUM_LIMIT_CRITERIA_ROW_01_v0: REFINEMENT_TREND_MONOTONIC_PINNED`
@@ -403,7 +404,7 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
 		- `GR_CONTINUUM_LIMIT_CRITERIA_ROW_04_v0: STATE_GATE_SYNC_PINNED`
 	- criteria evidence artifact:
 		- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_continuum_discharge_criteria_cycle10_v0`
-		- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: babb6d8bbe262c7b17f494e0105eabc777f18479ef7e416570d303be448b7fb2`
+		- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 810c863b793ec874cb1723955e31e9b6c107c3a86df12da0914ac1eef06becb1`
 		- `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`
 	- micro-target: `TARGET-GR-CONTINUUM-MICRO-01-REFINEMENT-TREND-v0`
 	- artifact token: `gr_continuum_refinement_trend_cycle1_v0`
@@ -411,11 +412,15 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
 	- micro-target: `TARGET-GR-CONTINUUM-MICRO-02-GRID-INDEPENDENCE-SANITY-v0`
 	- artifact token: `gr_continuum_grid_independence_cycle2_v0`
 	- artifact: `formal/output/gr_continuum_grid_independence_cycle2_v0.json`
+	- micro-target: `TARGET-GR-CONTINUUM-MICRO-03-BRIDGE-THEOREM-SURFACE-v0`
+	- artifact token: `gr_continuum_bridge_theorem_surface_cycle3_v0`
+	- artifact: `formal/output/gr_continuum_bridge_theorem_surface_cycle3_v0.json`
 - GR strong-field regime target is now pinned:
 	- `formal/docs/paper/DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0.md`
 	- `GR_STRONG_FIELD_ADJUDICATION: NOT_YET_DISCHARGED_v0`
 	- `GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED`
 	- `GR_STRONG_FIELD_PROGRESS_CYCLE2_v0: NONLINEAR_CLOSURE_SCAFFOLD_TOKEN_PINNED`
+	- `GR_STRONG_FIELD_PROGRESS_CYCLE3_v0: STRONG_FIELD_THEOREM_SURFACE_TOKEN_PINNED`
 	- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
 	- criteria rows:
 		- `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_01_v0: REGIME_PREDICATE_SURFACE_PINNED`
@@ -424,7 +429,7 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
 		- `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_04_v0: STATE_GATE_SYNC_PINNED`
 	- criteria evidence artifact:
 		- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_strong_field_discharge_criteria_cycle10_v0`
-		- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 73b7a0a49096ee00decfe6e2bb6ee1359b24855686fd872d082f817fb2fb1cb0`
+		- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: f24bd99e4ba9dad8f9f300f3b549408f3a8bfef3f69366db969f38f3c39b2492`
 		- `formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json`
 	- micro-target: `TARGET-GR-STRONG-FIELD-MICRO-01-REGIME-PREDICATE-v0`
 	- artifact token: `gr_strong_field_regime_predicate_cycle1_v0`
@@ -432,6 +437,9 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
 	- micro-target: `TARGET-GR-STRONG-FIELD-MICRO-02-NONLINEAR-CLOSURE-SCAFFOLD-v0`
 	- artifact token: `gr_strong_field_nonlinear_closure_cycle2_v0`
 	- artifact: `formal/output/gr_strong_field_nonlinear_closure_cycle2_v0.json`
+	- micro-target: `TARGET-GR-STRONG-FIELD-MICRO-03-THEOREM-SURFACE-v0`
+	- artifact token: `gr_strong_field_theorem_surface_cycle3_v0`
+	- artifact: `formal/output/gr_strong_field_theorem_surface_cycle3_v0.json`
 - Expansion enforcement gate is pinned:
 	- `formal/python/tests/test_qm_gr_regime_expansion_gate.py`
 
@@ -439,6 +447,7 @@ QM-GR cross-lane compatibility checkpoint (2026-02-16):
 - cycle token:
 	- `QM_GR_CROSS_LANE_PROGRESS_v0: CYCLE1_COMPATIBILITY_BUNDLE_PINNED`
 	- `QM_GR_CROSS_LANE_PROGRESS_CYCLE2_v0: CYCLE2_COMPATIBILITY_BUNDLE_PINNED`
+	- `QM_GR_CROSS_LANE_PROGRESS_CYCLE3_v0: CYCLE3_COMPATIBILITY_BUNDLE_PINNED`
 	- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
 	- criteria rows:
 		- `QM_GR_INTEGRATED_CRITERIA_ROW_01_v0: LANE_CHECKPOINT_COMPATIBILITY_PINNED`
@@ -446,7 +455,7 @@ QM-GR cross-lane compatibility checkpoint (2026-02-16):
 		- `QM_GR_INTEGRATED_CRITERIA_ROW_03_v0: STATE_GATE_SYNC_PINNED`
 	- criteria evidence artifact:
 		- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_gr_integrated_discharge_criteria_cycle10_v0`
-		- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 81bb6e329bee0d97a486a5063d6d8f657f01a7808e29bff1945c72edc322ced0`
+		- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 51363f7dea1beef11cfd4f0f3f309fc2bdf241d870da0f0ffbfdd4864188afb4`
 		- `formal/output/qm_gr_integrated_discharge_criteria_cycle10_v0.json`
 - compatibility bundle artifact:
 	- `formal/docs/paper/QM_GR_CROSS_LANE_COMPATIBILITY_BUNDLE_v0.md`
@@ -454,6 +463,8 @@ QM-GR cross-lane compatibility checkpoint (2026-02-16):
 	- artifact: `formal/output/qm_gr_cross_lane_compatibility_cycle1_v0.json`
 	- artifact token: `qm_gr_cross_lane_compatibility_cycle2_v0`
 	- artifact: `formal/output/qm_gr_cross_lane_compatibility_cycle2_v0.json`
+	- artifact token: `qm_gr_cross_lane_compatibility_cycle3_v0`
+	- artifact: `formal/output/qm_gr_cross_lane_compatibility_cycle3_v0.json`
 
 
 
