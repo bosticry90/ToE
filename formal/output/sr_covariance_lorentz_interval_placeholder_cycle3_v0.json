@@ -1,0 +1,18 @@
+{
+  "artifact_id": "sr_covariance_lorentz_interval_placeholder_cycle3_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-003",
+  "micro_target": "TARGET-SR-COV-MICRO-03-LORENTZ-INTERVAL-PLACEHOLDER-v0",
+  "status": "LOCKED_LORENTZ_INTERVAL_PLACEHOLDER_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "witness_tokens": [
+    "SR_COVARIANCE_PROGRESS_CYCLE3_v0: LORENTZ_INTERVAL_PLACEHOLDER_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE3_ARTIFACT_v0: sr_covariance_lorentz_interval_placeholder_cycle3_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_lorentz_interval_placeholder_cycle3_v0"
+  }
+}

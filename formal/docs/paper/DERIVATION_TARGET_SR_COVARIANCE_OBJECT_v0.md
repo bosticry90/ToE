@@ -74,6 +74,19 @@ Cycle-002 kickoff micro-targets (now pinned):
     - gate posture:
        - non-claim wording remains explicit and no theorem/evidence promotion is authorized.
 
+Cycle-003 kickoff micro-targets (now pinned):
+1. `TARGET-SR-COV-MICRO-03-LORENTZ-INTERVAL-PLACEHOLDER-v0`
+    - scope:
+       - planning-only placeholder for typed Lorentz + invariant-interval contract surface.
+    - cycle token:
+       - `SR_COVARIANCE_PROGRESS_CYCLE3_v0: LORENTZ_INTERVAL_PLACEHOLDER_TOKEN_PINNED`
+    - artifact token:
+       - `SR_COVARIANCE_CYCLE3_ARTIFACT_v0: sr_covariance_lorentz_interval_placeholder_cycle3_v0`
+    - artifact pointer:
+       - `formal/output/sr_covariance_lorentz_interval_placeholder_cycle3_v0.json`
+    - gate posture:
+       - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
