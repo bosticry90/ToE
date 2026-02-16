@@ -325,6 +325,12 @@ SR covariance kickoff checkpoint (2026-02-16):
 	- `SR_COVARIANCE_PROGRESS_CYCLE12_v0: POST_ADJUDICATION_CONTRACT_FREEZE_TOKEN_PINNED`
 	- `SR_COVARIANCE_CYCLE12_ARTIFACT_v0: sr_covariance_post_adjudication_contract_freeze_cycle12_v0`
 	- artifact: `formal/output/sr_covariance_post_adjudication_contract_freeze_cycle12_v0.json`
+- SR cycle-13 theorem-surface scaffold lock is pinned:
+	- `TARGET-SR-COV-MICRO-13-THEOREM-SURFACE-SCAFFOLD-v0`
+	- theorem-surface target: `formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_THEOREM_SURFACE_v0.md`
+	- `SR_COVARIANCE_PROGRESS_CYCLE13_v0: THEOREM_SURFACE_SCAFFOLD_TOKEN_PINNED`
+	- `SR_COVARIANCE_CYCLE13_ARTIFACT_v0: sr_covariance_theorem_surface_scaffold_cycle13_v0`
+	- artifact: `formal/output/sr_covariance_theorem_surface_scaffold_cycle13_v0.json`
 - Scope boundary remains explicit:
 	- planning-only/non-claim posture,
 	- no theorem/evidence claim promotion,

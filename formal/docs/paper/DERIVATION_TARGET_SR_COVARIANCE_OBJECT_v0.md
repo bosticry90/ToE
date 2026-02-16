@@ -208,6 +208,20 @@ Cycle-012 post-adjudication contract-freeze lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-013 theorem-surface scaffold lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-13-THEOREM-SURFACE-SCAFFOLD-v0`
+- theorem-surface target pointer:
+   - `formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_THEOREM_SURFACE_v0.md`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE13_v0: THEOREM_SURFACE_SCAFFOLD_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE13_ARTIFACT_v0: sr_covariance_theorem_surface_scaffold_cycle13_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_theorem_surface_scaffold_cycle13_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
