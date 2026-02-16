@@ -185,6 +185,27 @@ Non-claim boundary:
 - posture:
   - planning-only/non-claim and no promotion of full-derivation/discharge/inevitability wording.
 
+## Cycle-034 phase-I theorem-object discharge row-04 lock
+
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-34-THEOREM-OBJECT-DISCHARGE-ROW04-LOCK-v0`
+- row-04 lock gate token:
+  - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW04_LOCK_v0: CYCLE34_PHASE1_ROW04_DISCHARGE_PINNED_NONCLAIM`
+- phase-I row-04 discharge status token:
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_STATUS_v0: COVARIANCE_CONTRACT_SURFACE_DISCHARGE_PINNED_NONCLAIM`
+- phase-I row-lock progress token:
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+- lean module pointer:
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE34_v0: THEOREM_OBJECT_DISCHARGE_ROW04_LOCK_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE34_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0.json`
+- posture:
+  - planning-only/non-claim and no promotion of full-derivation/discharge/inevitability wording.
+
 ## Promotion gates
 
 - `TOE-SR-THM-01` remains non-promotable beyond scaffold conditional posture until Phases I–V are discharged.

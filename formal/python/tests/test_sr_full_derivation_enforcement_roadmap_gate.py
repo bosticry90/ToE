@@ -92,6 +92,14 @@ def test_sr_enforcement_roadmap_exists_and_pins_authoritative_tokens() -> None:
         "SR_COVARIANCE_PROGRESS_CYCLE33_v0: THEOREM_OBJECT_DISCHARGE_ROW03_LOCK_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE33_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row03_lock_cycle33_v0",
         "formal/output/sr_covariance_theorem_object_discharge_row03_lock_cycle33_v0.json",
+        "Cycle-034 phase-I theorem-object discharge row-04 lock",
+        "TARGET-SR-COV-MICRO-34-THEOREM-OBJECT-DISCHARGE-ROW04-LOCK-v0",
+        "SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW04_LOCK_v0: CYCLE34_PHASE1_ROW04_DISCHARGE_PINNED_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_STATUS_v0: COVARIANCE_CONTRACT_SURFACE_DISCHARGE_PINNED_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE34_v0: THEOREM_OBJECT_DISCHARGE_ROW04_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE34_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0",
+        "formal/output/sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0.json",
         "MATH|DEF|POLICY|SCOPE",
         "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN",
         "TOE-SR-THM-01",
@@ -151,6 +159,12 @@ def test_sr_enforcement_roadmap_is_synced_with_state_and_physics_roadmap() -> No
         "SR_COVARIANCE_PROGRESS_CYCLE33_v0: THEOREM_OBJECT_DISCHARGE_ROW03_LOCK_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE33_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row03_lock_cycle33_v0",
         "formal/output/sr_covariance_theorem_object_discharge_row03_lock_cycle33_v0.json",
+        "SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW04_LOCK_v0: CYCLE34_PHASE1_ROW04_DISCHARGE_PINNED_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_STATUS_v0: COVARIANCE_CONTRACT_SURFACE_DISCHARGE_PINNED_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE34_v0: THEOREM_OBJECT_DISCHARGE_ROW04_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE34_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0",
+        "formal/output/sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0.json",
     ]
     for token in required_state_tokens:
         assert token in state_text, f"Missing SR enforcement token in state: {token}"

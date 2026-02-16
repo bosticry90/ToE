@@ -195,6 +195,25 @@ Non-claim boundary:
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_object_discharge_row03_lock_cycle33_v0.json`
 
+## Cycle-034 Theorem-Object Discharge Row-04 Lock
+
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-34-THEOREM-OBJECT-DISCHARGE-ROW04-LOCK-v0`
+- gate token:
+  - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW04_LOCK_v0: CYCLE34_PHASE1_ROW04_DISCHARGE_PINNED_NONCLAIM`
+- phase-I row-04 discharge status token:
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_STATUS_v0: COVARIANCE_CONTRACT_SURFACE_DISCHARGE_PINNED_NONCLAIM`
+- phase-I row-lock progress token:
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+- roadmap pointer:
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+- progress token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE34_v0: THEOREM_OBJECT_DISCHARGE_ROW04_LOCK_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE34_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0.json`
+
 Status:
 - `SCAFFOLD_PINNED_v0_NONCLAIM`
 - discharge status remains `OPEN` until theorem objects and closure gates are explicitly discharged.
