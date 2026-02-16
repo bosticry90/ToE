@@ -188,6 +188,24 @@ theorem sr_cycle34_phase1_row04_discharge_lock_token_binding_stub_token_v0 :
       "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM" := by
   repeat' constructor <;> rfl
 
+def srCovarianceTheoremObjectDischargePhase1CompletionTokenV0 : String :=
+  "SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_PHASE1_COMPLETION_v0: CYCLE35_PHASE1_ROWS_01_04_DISCHARGED_NONCLAIM"
+
+def srFullDerivationPhase1CompletionStatusTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM"
+
+def srFullDerivationPhase2EntryStatusTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM"
+
+theorem sr_cycle35_phase1_completion_transition_token_binding_stub_token_v0 :
+    srCovarianceTheoremObjectDischargePhase1CompletionTokenV0 =
+      "SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_PHASE1_COMPLETION_v0: CYCLE35_PHASE1_ROWS_01_04_DISCHARGED_NONCLAIM" ∧
+    srFullDerivationPhase1CompletionStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM" ∧
+    srFullDerivationPhase2EntryStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM" := by
+  repeat' constructor <;> rfl
+
 end
 end SR
 end ToeFormal

@@ -206,6 +206,29 @@ Non-claim boundary:
 - posture:
   - planning-only/non-claim and no promotion of full-derivation/discharge/inevitability wording.
 
+## Cycle-035 phase-I theorem-object discharge completion transition lock
+
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-35-THEOREM-OBJECT-DISCHARGE-PHASE1-COMPLETE-TRANSITION-v0`
+- phase-I completion gate token:
+  - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_PHASE1_COMPLETION_v0: CYCLE35_PHASE1_ROWS_01_04_DISCHARGED_NONCLAIM`
+- phase-I completion status token:
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+- phase-II entry status token:
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+- phase-I row-lock progress token:
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+- lean module pointer:
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE35_v0: THEOREM_OBJECT_DISCHARGE_PHASE1_COMPLETION_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE35_ARTIFACT_v0: sr_covariance_theorem_object_discharge_phase1_completion_transition_cycle35_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_object_discharge_phase1_completion_transition_cycle35_v0.json`
+- posture:
+  - planning-only/non-claim and no promotion of full-derivation/discharge/inevitability wording.
+
 ## Promotion gates
 
 - `TOE-SR-THM-01` remains non-promotable beyond scaffold conditional posture until Phases I–V are discharged.
