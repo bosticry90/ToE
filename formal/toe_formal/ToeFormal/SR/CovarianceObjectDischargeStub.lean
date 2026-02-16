@@ -70,6 +70,44 @@ theorem sr_cycle28_covariance_contract_stub_token_v0
     exact hInv e
   · exact sr_cycle28_velocity_composition_stub_token_v0 velocityCompose
 
+def srFullDerivationPhase1ExitTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE1_EXIT_v0: OBJECT_THEOREM_SURFACES_BOUND_NONCLAIM"
+
+def srFullDerivationPhase2ExitTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE2_EXIT_v0: CANONICAL_EQUIVALENCE_SURFACE_BOUND_NONCLAIM"
+
+def srFullDerivationPhase3ExitTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE3_EXIT_v0: ASSUMPTION_MINIMIZATION_DISCHARGE_BOUND_NONCLAIM"
+
+def srFullDerivationPhase4ExitTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE4_EXIT_v0: ROBUSTNESS_NEGCTRL_DISCHARGE_BOUND_NONCLAIM"
+
+def srFullDerivationPhase5ExitTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE5_EXIT_v0: DERIVATION_COMPLETENESS_GATE_DISCHARGE_BOUND_NONCLAIM"
+
+def srFullDerivationPhase6ExitTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE6_EXIT_v0: INEVITABILITY_GATE_DISCHARGE_BOUND_NONCLAIM"
+
+def srFullDerivationPhase7ExitTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE7_EXIT_v0: PACKAGE_FREEZE_REOPEN_POLICY_BOUND_NONCLAIM"
+
+theorem sr_cycle29_phase_exit_token_binding_stub_token_v0 :
+    srFullDerivationPhase1ExitTokenV0 =
+      "SR_FULL_DERIVATION_PHASE1_EXIT_v0: OBJECT_THEOREM_SURFACES_BOUND_NONCLAIM" ∧
+    srFullDerivationPhase2ExitTokenV0 =
+      "SR_FULL_DERIVATION_PHASE2_EXIT_v0: CANONICAL_EQUIVALENCE_SURFACE_BOUND_NONCLAIM" ∧
+    srFullDerivationPhase3ExitTokenV0 =
+      "SR_FULL_DERIVATION_PHASE3_EXIT_v0: ASSUMPTION_MINIMIZATION_DISCHARGE_BOUND_NONCLAIM" ∧
+    srFullDerivationPhase4ExitTokenV0 =
+      "SR_FULL_DERIVATION_PHASE4_EXIT_v0: ROBUSTNESS_NEGCTRL_DISCHARGE_BOUND_NONCLAIM" ∧
+    srFullDerivationPhase5ExitTokenV0 =
+      "SR_FULL_DERIVATION_PHASE5_EXIT_v0: DERIVATION_COMPLETENESS_GATE_DISCHARGE_BOUND_NONCLAIM" ∧
+    srFullDerivationPhase6ExitTokenV0 =
+      "SR_FULL_DERIVATION_PHASE6_EXIT_v0: INEVITABILITY_GATE_DISCHARGE_BOUND_NONCLAIM" ∧
+    srFullDerivationPhase7ExitTokenV0 =
+      "SR_FULL_DERIVATION_PHASE7_EXIT_v0: PACKAGE_FREEZE_REOPEN_POLICY_BOUND_NONCLAIM" := by
+  repeat' constructor <;> rfl
+
 end
 end SR
 end ToeFormal

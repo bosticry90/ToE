@@ -139,6 +139,19 @@ def test_sr_theorem_surface_target_pins_required_tokens() -> None:
         "SR_COVARIANCE_PROGRESS_CYCLE28_v0: THEOREM_OBJECT_DISCHARGE_STUB_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE28_ARTIFACT_v0: sr_covariance_theorem_object_discharge_stub_cycle28_v0",
         "formal/output/sr_covariance_theorem_object_discharge_stub_cycle28_v0.json",
+        "TARGET-SR-COV-MICRO-29-THEOREM-OBJECT-PHASE-EXIT-BINDING-v0",
+        "SR_COVARIANCE_THEOREM_OBJECT_PHASE_EXIT_BINDING_v0: CYCLE29_PHASE_EXIT_TOKENS_PINNED_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE1_EXIT_v0: OBJECT_THEOREM_SURFACES_BOUND_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE2_EXIT_v0: CANONICAL_EQUIVALENCE_SURFACE_BOUND_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE3_EXIT_v0: ASSUMPTION_MINIMIZATION_DISCHARGE_BOUND_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE4_EXIT_v0: ROBUSTNESS_NEGCTRL_DISCHARGE_BOUND_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE5_EXIT_v0: DERIVATION_COMPLETENESS_GATE_DISCHARGE_BOUND_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE6_EXIT_v0: INEVITABILITY_GATE_DISCHARGE_BOUND_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE7_EXIT_v0: PACKAGE_FREEZE_REOPEN_POLICY_BOUND_NONCLAIM",
+        "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+        "SR_COVARIANCE_PROGRESS_CYCLE29_v0: THEOREM_OBJECT_PHASE_EXIT_BINDING_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE29_ARTIFACT_v0: sr_covariance_theorem_object_phase_exit_binding_cycle29_v0",
+        "formal/output/sr_covariance_theorem_object_phase_exit_binding_cycle29_v0.json",
     ]
 
     missing = [token for token in required_tokens if token not in text]
@@ -230,6 +243,19 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean",
         "SR_COVARIANCE_PROGRESS_CYCLE28_v0: THEOREM_OBJECT_DISCHARGE_STUB_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE28_ARTIFACT_v0: sr_covariance_theorem_object_discharge_stub_cycle28_v0",
+        "TARGET-SR-COV-MICRO-29-THEOREM-OBJECT-PHASE-EXIT-BINDING-v0",
+        "SR_COVARIANCE_THEOREM_OBJECT_PHASE_EXIT_BINDING_v0: CYCLE29_PHASE_EXIT_TOKENS_PINNED_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE1_EXIT_v0: OBJECT_THEOREM_SURFACES_BOUND_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE2_EXIT_v0: CANONICAL_EQUIVALENCE_SURFACE_BOUND_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE3_EXIT_v0: ASSUMPTION_MINIMIZATION_DISCHARGE_BOUND_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE4_EXIT_v0: ROBUSTNESS_NEGCTRL_DISCHARGE_BOUND_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE5_EXIT_v0: DERIVATION_COMPLETENESS_GATE_DISCHARGE_BOUND_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE6_EXIT_v0: INEVITABILITY_GATE_DISCHARGE_BOUND_NONCLAIM",
+        "SR_FULL_DERIVATION_PHASE7_EXIT_v0: PACKAGE_FREEZE_REOPEN_POLICY_BOUND_NONCLAIM",
+        "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+        "SR_COVARIANCE_PROGRESS_CYCLE29_v0: THEOREM_OBJECT_PHASE_EXIT_BINDING_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE29_ARTIFACT_v0: sr_covariance_theorem_object_phase_exit_binding_cycle29_v0",
+        "formal/output/sr_covariance_theorem_object_phase_exit_binding_cycle29_v0.json",
     ]
     for token in state_tokens:
         assert token in state_text, f"Missing SR theorem-surface token in state: {token}"
@@ -271,6 +297,8 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_STUB_v0: CYCLE28_BASE_THEOREM_SIGNATURES_PINNED_NONCLAIM",
         "formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean",
         "formal/output/sr_covariance_theorem_object_discharge_stub_cycle28_v0.json",
+        "SR_COVARIANCE_THEOREM_OBJECT_PHASE_EXIT_BINDING_v0: CYCLE29_PHASE_EXIT_TOKENS_PINNED_NONCLAIM",
+        "formal/output/sr_covariance_theorem_object_phase_exit_binding_cycle29_v0.json",
         "Not a full SR dynamics derivation claim and not an inevitability claim.",
     ]
     for token in results_tokens:
