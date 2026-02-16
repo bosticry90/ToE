@@ -1,0 +1,20 @@
+{
+  "artifact_id": "sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "subtarget_id": "TARGET-SR-COV-THEOREM-SURFACE-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-024",
+  "status": "LOCKED_SR_COVARIANCE_THEOREM_FROZEN_WATCH_REOPEN_POLICY_CYCLE24_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "micro_target": "TARGET-SR-COV-MICRO-24-THEOREM-FROZEN-WATCH-REOPEN-POLICY-v0",
+  "reopen_policy_token": "SR_COVARIANCE_THEOREM_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION",
+  "witness_tokens": [
+    "SR_COVARIANCE_PROGRESS_CYCLE24_v0: THEOREM_FROZEN_WATCH_REOPEN_POLICY_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE24_ARTIFACT_v0: sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0"
+  }
+}

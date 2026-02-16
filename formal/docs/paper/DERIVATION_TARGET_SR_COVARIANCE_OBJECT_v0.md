@@ -362,6 +362,20 @@ Cycle-023 theorem-surface package-freeze lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-024 theorem-surface frozen-watch reopen-policy lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-24-THEOREM-FROZEN-WATCH-REOPEN-POLICY-v0`
+- reopen-policy token:
+   - `SR_COVARIANCE_THEOREM_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE24_v0: THEOREM_FROZEN_WATCH_REOPEN_POLICY_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE24_ARTIFACT_v0: sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.

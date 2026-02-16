@@ -226,6 +226,18 @@ Cycle-023 synchronization lock:
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_package_freeze_cycle23_v0.json`
 
+Cycle-024 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-24-THEOREM-FROZEN-WATCH-REOPEN-POLICY-v0`
+- reopen-policy token:
+  - `SR_COVARIANCE_THEOREM_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE24_v0: THEOREM_FROZEN_WATCH_REOPEN_POLICY_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE24_ARTIFACT_v0: sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0.json`
+
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.
 - assumptions and bounded domain limits remain explicit.
