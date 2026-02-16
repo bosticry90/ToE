@@ -320,6 +320,20 @@ Cycle-020 theorem-surface robustness/negative-control family-completion lock (no
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-021 theorem-surface pre-discharge criteria lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-21-THEOREM-PREDISCHARGE-CRITERIA-v0`
+- criteria token:
+   - `SR_COVARIANCE_THEOREM_PREDISCHARGE_CRITERIA_v0: CYCLE21_ROW_LEVEL_CRITERIA_PINNED`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE21_v0: THEOREM_PREDISCHARGE_CRITERIA_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE21_ARTIFACT_v0: sr_covariance_theorem_predischarge_criteria_cycle21_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_theorem_predischarge_criteria_cycle21_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.

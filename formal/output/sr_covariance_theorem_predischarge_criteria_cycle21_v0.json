@@ -1,0 +1,26 @@
+{
+  "artifact_id": "sr_covariance_theorem_predischarge_criteria_cycle21_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "subtarget_id": "TARGET-SR-COV-THEOREM-SURFACE-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-021",
+  "status": "LOCKED_SR_COVARIANCE_THEOREM_PREDISCHARGE_CRITERIA_CYCLE21_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "micro_target": "TARGET-SR-COV-MICRO-21-THEOREM-PREDISCHARGE-CRITERIA-v0",
+  "predischarge_criteria_token": "SR_COVARIANCE_THEOREM_PREDISCHARGE_CRITERIA_v0: CYCLE21_ROW_LEVEL_CRITERIA_PINNED",
+  "criteria_rows": [
+    "SR_COVARIANCE_THEOREM_CRITERIA_ROW_01_v0: ASSUMPTION_MINIMIZATION_LOCKED",
+    "SR_COVARIANCE_THEOREM_CRITERIA_ROW_02_v0: ROBUSTNESS_ROWS_LOCKED",
+    "SR_COVARIANCE_THEOREM_CRITERIA_ROW_03_v0: NEGCTRL_ROWS_LOCKED",
+    "SR_COVARIANCE_THEOREM_CRITERIA_ROW_04_v0: RESULTS_SYNC_LOCKED"
+  ],
+  "witness_tokens": [
+    "SR_COVARIANCE_PROGRESS_CYCLE21_v0: THEOREM_PREDISCHARGE_CRITERIA_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE21_ARTIFACT_v0: sr_covariance_theorem_predischarge_criteria_cycle21_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_theorem_predischarge_criteria_cycle21_v0"
+  }
+}

@@ -87,6 +87,15 @@ Robustness/negative-control family completion lock (cycle-020):
 - family completion token:
   - `SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_FAMILY_COMPLETION_v0: CYCLE20_LOCKED`
 
+Pre-discharge criteria lock (cycle-021):
+- criteria token:
+  - `SR_COVARIANCE_THEOREM_PREDISCHARGE_CRITERIA_v0: CYCLE21_ROW_LEVEL_CRITERIA_PINNED`
+- criteria rows:
+  - `SR_COVARIANCE_THEOREM_CRITERIA_ROW_01_v0: ASSUMPTION_MINIMIZATION_LOCKED`
+  - `SR_COVARIANCE_THEOREM_CRITERIA_ROW_02_v0: ROBUSTNESS_ROWS_LOCKED`
+  - `SR_COVARIANCE_THEOREM_CRITERIA_ROW_03_v0: NEGCTRL_ROWS_LOCKED`
+  - `SR_COVARIANCE_THEOREM_CRITERIA_ROW_04_v0: RESULTS_SYNC_LOCKED`
+
 Cycle-013 synchronization lock:
 - micro-target token:
   - `TARGET-SR-COV-MICRO-13-THEOREM-SURFACE-SCAFFOLD-v0`
@@ -180,6 +189,18 @@ Cycle-020 synchronization lock:
   - `SR_COVARIANCE_CYCLE20_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_family_completion_cycle20_v0`
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_robustness_negctrl_family_completion_cycle20_v0.json`
+
+Cycle-021 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-21-THEOREM-PREDISCHARGE-CRITERIA-v0`
+- criteria token:
+  - `SR_COVARIANCE_THEOREM_PREDISCHARGE_CRITERIA_v0: CYCLE21_ROW_LEVEL_CRITERIA_PINNED`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE21_v0: THEOREM_PREDISCHARGE_CRITERIA_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE21_ARTIFACT_v0: sr_covariance_theorem_predischarge_criteria_cycle21_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_theorem_predischarge_criteria_cycle21_v0.json`
 
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.
