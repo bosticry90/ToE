@@ -250,6 +250,22 @@ Cycle-025 synchronization lock:
 - artifact pointer:
   - `formal/output/sr_covariance_theorem_derivation_promotion_gate_cycle25_v0.json`
 
+Cycle-026 synchronization lock:
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-26-DERIVATION-COMPLETENESS-GATE-SCAFFOLD-v0`
+- derivation-completeness target token:
+  - `TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN`
+- derivation-completeness target pointer:
+  - `formal/docs/paper/DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md`
+- derivation-completeness gate token:
+  - `SR_DERIVATION_COMPLETENESS_GATE_v0: CYCLE26_SCAFFOLD_PINNED_NONCLAIM`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE26_v0: DERIVATION_COMPLETENESS_GATE_SCAFFOLD_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE26_ARTIFACT_v0: sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json`
+
 Closure definition for this sub-target:
 - theorem-surface tokens are synchronized across target/state/results.
 - assumptions and bounded domain limits remain explicit.

@@ -111,6 +111,12 @@ SR_CYCLE25_ARTIFACT_PATH = (
     / "output"
     / "sr_covariance_theorem_derivation_promotion_gate_cycle25_v0.json"
 )
+SR_CYCLE26_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json"
+)
 
 
 def _read(path: Path) -> str:
@@ -535,6 +541,25 @@ def test_sr_cycle25_kickoff_tokens_are_pinned_in_target_and_state() -> None:
     for token in required_tokens:
         assert token in target_text, f"Missing SR cycle-25 token in target: {token}"
         assert token in state_text, f"Missing SR cycle-25 token in state: {token}"
+
+
+def test_sr_cycle26_kickoff_tokens_are_pinned_in_target_and_state() -> None:
+    target_text = _read(SR_TARGET_PATH)
+    state_text = _read(STATE_PATH)
+
+    required_tokens = [
+        "TARGET-SR-COV-MICRO-26-DERIVATION-COMPLETENESS-GATE-SCAFFOLD-v0",
+        "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN",
+        "formal/docs/paper/DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md",
+        "SR_DERIVATION_COMPLETENESS_GATE_v0: CYCLE26_SCAFFOLD_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE26_v0: DERIVATION_COMPLETENESS_GATE_SCAFFOLD_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE26_ARTIFACT_v0: sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0",
+        "formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json",
+    ]
+
+    for token in required_tokens:
+        assert token in target_text, f"Missing SR cycle-26 token in target: {token}"
+        assert token in state_text, f"Missing SR cycle-26 token in state: {token}"
 
 
 def test_sr_cycle1_artifact_schema_and_scope_are_locked() -> None:
@@ -1460,4 +1485,43 @@ def test_sr_cycle25_artifact_schema_and_scope_are_locked() -> None:
     assert (
         determinism.get("content_fingerprint")
         == "sr_covariance_theorem_derivation_promotion_gate_cycle25_v0"
+    )
+
+
+def test_sr_cycle26_artifact_schema_and_scope_are_locked() -> None:
+    payload = json.loads(_read(SR_CYCLE26_ARTIFACT_PATH))
+
+    assert payload.get("artifact_id") == "sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0"
+    assert payload.get("target_id") == "TARGET-SR-COV-PLAN"
+    assert payload.get("subtarget_id") == "TARGET-SR-COV-THEOREM-SURFACE-PLAN"
+    assert payload.get("derivation_gate_target_id") == "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN"
+    assert payload.get("pillar") == "PILLAR-SR"
+    assert payload.get("cycle") == "CYCLE-026"
+    assert payload.get("status") == "LOCKED_SR_DERIVATION_COMPLETENESS_GATE_SCAFFOLD_CYCLE26_PINNED"
+    assert payload.get("scope") == "planning_only_non_claim_v0"
+    assert (
+        payload.get("micro_target")
+        == "TARGET-SR-COV-MICRO-26-DERIVATION-COMPLETENESS-GATE-SCAFFOLD-v0"
+    )
+    assert (
+        payload.get("derivation_completeness_gate_token")
+        == "SR_DERIVATION_COMPLETENESS_GATE_v0: CYCLE26_SCAFFOLD_PINNED_NONCLAIM"
+    )
+
+    witness_tokens = payload.get("witness_tokens")
+    assert isinstance(witness_tokens, list) and witness_tokens, (
+        "witness_tokens must be a non-empty list in SR cycle-26 artifact."
+    )
+    assert (
+        "SR_COVARIANCE_PROGRESS_CYCLE26_v0: DERIVATION_COMPLETENESS_GATE_SCAFFOLD_TOKEN_PINNED"
+        in witness_tokens
+    )
+
+    determinism = payload.get("determinism")
+    assert isinstance(determinism, dict), "determinism block is required."
+    assert determinism.get("schema_version") == "v0"
+    assert determinism.get("fingerprint_method") == "literal-json-lock"
+    assert (
+        determinism.get("content_fingerprint")
+        == "sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0"
     )

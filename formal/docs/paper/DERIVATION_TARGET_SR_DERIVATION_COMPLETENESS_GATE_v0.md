@@ -1,0 +1,70 @@
+# Derivation Target: SR Derivation Completeness Gate v0
+
+Spec ID:
+- `DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0`
+
+Target ID:
+- `TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN`
+
+Parent target:
+- `TARGET-SR-COV-PLAN`
+
+Classification:
+- `P-POLICY`
+
+Purpose:
+- Define publication-grade SR derivation completeness criteria scaffold under bounded v0 scope.
+- Prevent theorem-surface token closure from being interpreted as full SR derivation discharge.
+- Pin a reusable SR gate structure for later derivation-grade promotion attempts.
+
+Non-claim boundary:
+- planning-only artifact.
+- non-claim control surface.
+- no full SR dynamics derivation claim.
+- no inevitability claim.
+- no external truth claim.
+
+## Gate Layers (Scaffold v0)
+
+1. Derivation chain completeness
+- explicit transform construction object.
+- explicit invariant-interval preservation theorem object.
+- explicit velocity-composition closure object.
+- explicit covariance contract object.
+
+2. Canonical equivalence surface
+- explicit mapping to canonical SR covariance/kinematics form under bounded assumptions.
+- theorem-level surface required; narrative-only alignment is insufficient.
+
+3. Assumption minimization and classification
+- each assumption classified as mathematical necessity, physical postulate, or technical regularity.
+- removable assumptions either discharged or retained with explicit rationale.
+
+4. Robustness and negative-control completeness
+- robustness rows and negative-control rows are complete and synchronized.
+- explicit failure hooks remain auditable at theorem-surface scope.
+
+## Mandatory Failure Triggers (Future Discharge)
+
+`TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN` is not dischargeable if any required derivation-chain object is missing:
+- missing interval-invariance preservation object.
+- missing velocity-composition closure object.
+- missing explicit bounded-domain assumptions.
+- missing canonical equivalence theorem surface.
+
+## Cycle-026 Scaffold Lock
+
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-26-DERIVATION-COMPLETENESS-GATE-SCAFFOLD-v0`
+- gate token:
+  - `SR_DERIVATION_COMPLETENESS_GATE_v0: CYCLE26_SCAFFOLD_PINNED_NONCLAIM`
+- progress token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE26_v0: DERIVATION_COMPLETENESS_GATE_SCAFFOLD_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE26_ARTIFACT_v0: sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json`
+
+Status:
+- `SCAFFOLD_PINNED_v0_NONCLAIM`
+- discharge status remains `OPEN` until theorem objects and closure gates are explicitly discharged.

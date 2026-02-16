@@ -121,6 +121,13 @@ def test_sr_theorem_surface_target_pins_required_tokens() -> None:
         "SR_COVARIANCE_PROGRESS_CYCLE25_v0: THEOREM_DERIVATION_PROMOTION_GATE_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE25_ARTIFACT_v0: sr_covariance_theorem_derivation_promotion_gate_cycle25_v0",
         "formal/output/sr_covariance_theorem_derivation_promotion_gate_cycle25_v0.json",
+        "TARGET-SR-COV-MICRO-26-DERIVATION-COMPLETENESS-GATE-SCAFFOLD-v0",
+        "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN",
+        "formal/docs/paper/DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md",
+        "SR_DERIVATION_COMPLETENESS_GATE_v0: CYCLE26_SCAFFOLD_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE26_v0: DERIVATION_COMPLETENESS_GATE_SCAFFOLD_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE26_ARTIFACT_v0: sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0",
+        "formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json",
     ]
 
     missing = [token for token in required_tokens if token not in text]
@@ -197,6 +204,12 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "SR_COVARIANCE_THEOREM_DERIVATION_PROMOTION_GATE_v0: CYCLE25_CRITERIA_LOCKED_NONCLAIM",
         "SR_COVARIANCE_PROGRESS_CYCLE25_v0: THEOREM_DERIVATION_PROMOTION_GATE_TOKEN_PINNED",
         "SR_COVARIANCE_CYCLE25_ARTIFACT_v0: sr_covariance_theorem_derivation_promotion_gate_cycle25_v0",
+        "TARGET-SR-COV-MICRO-26-DERIVATION-COMPLETENESS-GATE-SCAFFOLD-v0",
+        "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN",
+        "formal/docs/paper/DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md",
+        "SR_DERIVATION_COMPLETENESS_GATE_v0: CYCLE26_SCAFFOLD_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE26_v0: DERIVATION_COMPLETENESS_GATE_SCAFFOLD_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE26_ARTIFACT_v0: sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0",
     ]
     for token in state_tokens:
         assert token in state_text, f"Missing SR theorem-surface token in state: {token}"
@@ -230,6 +243,9 @@ def test_sr_theorem_surface_tokens_are_synced_in_state_and_results() -> None:
         "formal/output/sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0.json",
         "SR_COVARIANCE_THEOREM_DERIVATION_PROMOTION_GATE_v0: CYCLE25_CRITERIA_LOCKED_NONCLAIM",
         "formal/output/sr_covariance_theorem_derivation_promotion_gate_cycle25_v0.json",
+        "SR_DERIVATION_COMPLETENESS_GATE_v0: CYCLE26_SCAFFOLD_PINNED_NONCLAIM",
+        "formal/docs/paper/DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md",
+        "formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json",
         "Not a full SR dynamics derivation claim and not an inevitability claim.",
     ]
     for token in results_tokens:
@@ -240,8 +256,8 @@ def test_sr_roadmap_active_row_includes_theorem_surface_target() -> None:
     roadmap_text = _read(ROADMAP_PATH)
 
     required_tokens = [
-        "| `PILLAR-SR` | `ACTIVE` | `TARGET-SR-COV-PLAN;TARGET-SR-COV-THEOREM-SURFACE-PLAN`",
-        "formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md;formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_THEOREM_SURFACE_v0.md",
+        "| `PILLAR-SR` | `ACTIVE` | `TARGET-SR-COV-PLAN;TARGET-SR-COV-THEOREM-SURFACE-PLAN;TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN`",
+        "formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md;formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_THEOREM_SURFACE_v0.md;formal/docs/paper/DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md",
     ]
 
     for token in required_tokens:

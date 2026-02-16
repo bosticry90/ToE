@@ -390,6 +390,23 @@ Cycle-025 theorem-surface derivation-promotion gate lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-026 SR derivation-completeness gate scaffold lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-26-DERIVATION-COMPLETENESS-GATE-SCAFFOLD-v0`
+- derivation-completeness gate target:
+   - `TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN`
+   - pointer: `formal/docs/paper/DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md`
+- derivation-completeness gate token:
+   - `SR_DERIVATION_COMPLETENESS_GATE_v0: CYCLE26_SCAFFOLD_PINNED_NONCLAIM`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE26_v0: DERIVATION_COMPLETENESS_GATE_SCAFFOLD_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE26_ARTIFACT_v0: sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
