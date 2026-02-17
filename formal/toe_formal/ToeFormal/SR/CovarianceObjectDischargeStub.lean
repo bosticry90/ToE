@@ -281,6 +281,12 @@ def srCovarianceCanonicalEquivalencePackageFreezeLockTokenV0 : String :=
 def srFullDerivationPhase2CanonicalEquivalencePackageFreezeStatusTokenV0 : String :=
   "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM"
 
+def srCovarianceAssumptionMinimizationDischargeSurfaceEntryLockTokenV0 : String :=
+  "SR_COVARIANCE_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE42_PHASE3_ENTRY_SURFACE_PINNED_NONCLAIM"
+
+def srFullDerivationPhase3AssumptionMinimizationDischargeSurfaceStatusTokenV0 : String :=
+  "SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM"
+
 theorem sr_cycle39_phase2_canonical_equivalence_predischarge_criteria_lock_token_binding_stub_token_v0 :
     srCovarianceCanonicalEquivalencePredischargeCriteriaLockTokenV0 =
       "SR_COVARIANCE_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_LOCK_v0: CYCLE39_PHASE2_PREDISCHARGE_CRITERIA_PINNED_NONCLAIM" ∧
@@ -336,6 +342,29 @@ theorem sr_cycle41_phase2_canonical_equivalence_package_freeze_lock_token_bindin
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase2CanonicalEquivalencePackageFreezeStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM" := by
+  repeat' constructor <;> rfl
+
+theorem sr_cycle42_phase3_assumption_minimization_discharge_surface_entry_lock_token_binding_stub_token_v0 :
+    srCovarianceAssumptionMinimizationDischargeSurfaceEntryLockTokenV0 =
+      "SR_COVARIANCE_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE42_PHASE3_ENTRY_SURFACE_PINNED_NONCLAIM" ∧
+    srFullDerivationPhase1CompletionStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM" ∧
+    srFullDerivationPhase2EntryStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM" ∧
+    srFullDerivationPhase2CanonicalEquivalenceSurfaceStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM" ∧
+    srFullDerivationPhase2CanonicalEquivalenceTheoremSurfaceStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM" ∧
+    srFullDerivationPhase2CanonicalEquivalenceTheoremObjectLinkageStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM" ∧
+    srFullDerivationPhase2CanonicalEquivalencePredischargeCriteriaStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM" ∧
+    srFullDerivationPhase2CanonicalEquivalenceAdjudicationTransitionStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM" ∧
+    srFullDerivationPhase2CanonicalEquivalencePackageFreezeStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM" ∧
+    srFullDerivationPhase3AssumptionMinimizationDischargeSurfaceStatusTokenV0 =
+      "SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM" := by
   repeat' constructor <;> rfl
 
 end

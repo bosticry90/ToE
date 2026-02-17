@@ -786,6 +786,44 @@ Cycle-041 phase-II canonical-equivalence package-freeze lock (now pinned):
 - gate posture:
    - remains planning-only/non-claim and does not promote theorem/evidence status.
 
+Cycle-042 phase-III assumption-minimization discharge surface-entry lock (now pinned):
+- micro-target:
+   - `TARGET-SR-COV-MICRO-42-ASSUMPTION-MINIMIZATION-DISCHARGE-SURFACE-ENTRY-LOCK-v0`
+- phase-III assumption-minimization discharge surface-entry lock token:
+   - `SR_COVARIANCE_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE42_PHASE3_ENTRY_SURFACE_PINNED_NONCLAIM`
+- phase-I completion status token:
+   - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+- phase-II entry status token:
+   - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+- phase-II canonical-equivalence surface status token:
+   - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-II canonical-equivalence theorem-surface status token:
+   - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-II canonical-equivalence theorem-object linkage status token:
+   - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-II canonical-equivalence pre-discharge criteria status token:
+   - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
+- phase-II canonical-equivalence adjudication-transition status token:
+   - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
+- phase-II canonical-equivalence package-freeze status token:
+   - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-III assumption-minimization discharge surface status token:
+   - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-I row-lock progress token:
+   - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+- roadmap pointer:
+   - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+- lean module pointer:
+   - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+- cycle token:
+   - `SR_COVARIANCE_PROGRESS_CYCLE42_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
+- artifact token:
+   - `SR_COVARIANCE_CYCLE42_ARTIFACT_v0: sr_covariance_assumption_minimization_discharge_surface_entry_lock_cycle42_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_assumption_minimization_discharge_surface_entry_lock_cycle42_v0.json`
+- gate posture:
+   - remains planning-only/non-claim and does not promote theorem/evidence status.
+
 Non-claim boundary reinforcement:
 - no claim of full special-relativistic dynamics completion.
 - no claim of GR recovery from this target.
