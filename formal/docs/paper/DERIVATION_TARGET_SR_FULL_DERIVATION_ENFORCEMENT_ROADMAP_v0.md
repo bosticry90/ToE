@@ -374,6 +374,41 @@ Non-claim boundary:
 - posture:
   - planning-only/non-claim and no promotion of full-derivation/discharge/inevitability wording.
 
+## Cycle-041 phase-II canonical-equivalence package-freeze lock
+
+- micro-target token:
+  - `TARGET-SR-COV-MICRO-41-CANONICAL-EQUIVALENCE-PACKAGE-FREEZE-LOCK-v0`
+- phase-II canonical-equivalence package-freeze lock token:
+  - `SR_COVARIANCE_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_LOCK_v0: CYCLE41_PHASE2_PACKAGE_FREEZE_PINNED_NONCLAIM`
+- phase-I completion status token:
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+- phase-II entry status token:
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+- phase-II canonical-equivalence surface status token:
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-II canonical-equivalence theorem-surface status token:
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-II canonical-equivalence theorem-object linkage status token:
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-II canonical-equivalence pre-discharge criteria status token:
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
+- phase-II canonical-equivalence adjudication-transition status token:
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
+- phase-II canonical-equivalence package-freeze status token:
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
+- phase-I row-lock progress token:
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+- lean module pointer:
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+- cycle token:
+  - `SR_COVARIANCE_PROGRESS_CYCLE41_v0: PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_LOCK_TOKEN_PINNED`
+- artifact token:
+  - `SR_COVARIANCE_CYCLE41_ARTIFACT_v0: sr_covariance_canonical_equivalence_package_freeze_lock_cycle41_v0`
+- artifact pointer:
+  - `formal/output/sr_covariance_canonical_equivalence_package_freeze_lock_cycle41_v0.json`
+- posture:
+  - planning-only/non-claim and no promotion of full-derivation/discharge/inevitability wording.
+
 ## Promotion gates
 
 - `TOE-SR-THM-01` remains non-promotable beyond scaffold conditional posture until Phases I–V are discharged.
