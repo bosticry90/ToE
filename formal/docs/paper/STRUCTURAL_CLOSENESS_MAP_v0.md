@@ -43,7 +43,7 @@ Legend:
 | `PILLAR-SR` | limit recoveries | `E-REPRO` | `TOE-SR-01` | `formal/docs/rl12_lorentz_poincare_invariance_proxy_lane_spec.md` | Keep as bounded proxy until derivation target is frozen. |
 | `PILLAR-SR` | measurement/data anchoring | `ABSENT` | `TOE-SR-01` | `formal/docs/paper/TOE_CLAIM_SURFACE_v0.md` | No independent SR anchoring protocol declared. |
 | `PILLAR-QM` | state | `P-POLICY` | `TOE-QM-01` | `formal/docs/paper/TOE_CLAIM_SURFACE_v0.md` | Keep QM theorem target explicit but not claimed. |
-| `PILLAR-QM` | evolution rule | `T-CONDITIONAL` | `TOE-QM-THM-01` | `formal/toe_formal/ToeFormal/QM/EvolutionContract.lean` | Contract theorem exists under explicit assumptions; derivational recovery remains out of scope. |
+| `PILLAR-QM` | evolution rule | `T-PROVED` | `TOE-QM-THM-01` | `formal/toe_formal/ToeFormal/QM/EvolutionContract.lean` + `formal/toe_formal/ToeFormal/QM/QMFullDerivationScaffold.lean` + `formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md` | Evolution theorem chain is discharged at bounded derivation-grade scope under explicit assumptions and anti-circularity controls. |
 | `PILLAR-QM` | evolution rule (planning-pointer) | `P-POLICY` | `TARGET-QM-EVOL-PLAN` | `formal/docs/paper/DERIVATION_TARGET_QM_EVOLUTION_OBJECT_v0.md` | Frozen planning artifact retained for scope boundaries after theorem promotion checkpoint. |
 | `PILLAR-QM` | action / variational object | `P-POLICY` | `TOE-QM-01` | `formal/docs/paper/THEORY_SPEC_v1.md` | Promote only when QM theorem-surface assumptions are frozen. |
 | `PILLAR-QM` | symmetry machinery | `P-POLICY` | `TOE-QM-01` | `formal/docs/paper/TOE_CLAIM_SURFACE_v0.md` | No theorem-grade QM symmetry discharge yet. |

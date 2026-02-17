@@ -1,0 +1,26 @@
+{
+  "artifact_id": "sr_covariance_phase7_governance_claim_promotion_execution_lock_cycle72_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "subtarget_id": "TARGET-SR-COV-THEOREM-SURFACE-PLAN",
+  "derivation_gate_target_id": "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN",
+  "enforcement_roadmap_target_id": "TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-072",
+  "micro_target": "TARGET-SR-COV-MICRO-72-PHASE7-GOVERNANCE-CLAIM-PROMOTION-EXECUTION-LOCK-v0",
+  "status": "LOCKED_SR_COVARIANCE_PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_LOCK_CYCLE72_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "phase7_governance_claim_promotion_execution_lock_token": "SR_COVARIANCE_PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_LOCK_v0: CYCLE72_PHASE7_PROMOTION_EXECUTION_PINNED_NONCLAIM",
+  "phase7_governance_claim_promotion_execution_status_token": "SR_FULL_DERIVATION_PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_STATUS_v0: CLAIM_PROMOTION_EXECUTION_SCAFFOLD_PINNED_NONCLAIM",
+  "witness_tokens": [
+    "TARGET-SR-COV-MICRO-72-PHASE7-GOVERNANCE-CLAIM-PROMOTION-EXECUTION-LOCK-v0",
+    "SR_COVARIANCE_PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_LOCK_v0: CYCLE72_PHASE7_PROMOTION_EXECUTION_PINNED_NONCLAIM",
+    "SR_FULL_DERIVATION_PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_STATUS_v0: CLAIM_PROMOTION_EXECUTION_SCAFFOLD_PINNED_NONCLAIM",
+    "SR_COVARIANCE_PROGRESS_CYCLE72_v0: PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_LOCK_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE72_ARTIFACT_v0: sr_covariance_phase7_governance_claim_promotion_execution_lock_cycle72_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_phase7_governance_claim_promotion_execution_lock_cycle72_v0"
+  }
+}

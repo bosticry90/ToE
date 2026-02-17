@@ -1,0 +1,26 @@
+{
+  "artifact_id": "sr_covariance_phase1_discharge_grade_theorem_replacement_closure_lock_cycle68_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "subtarget_id": "TARGET-SR-COV-THEOREM-SURFACE-PLAN",
+  "derivation_gate_target_id": "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN",
+  "enforcement_roadmap_target_id": "TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-068",
+  "micro_target": "TARGET-SR-COV-MICRO-68-PHASE1-DISCHARGE-GRADE-THEOREM-REPLACEMENT-CLOSURE-LOCK-v0",
+  "status": "LOCKED_SR_COVARIANCE_PHASE1_DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_LOCK_CYCLE68_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "phase1_discharge_grade_theorem_replacement_closure_lock_token": "SR_COVARIANCE_PHASE1_DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_LOCK_v0: CYCLE68_PHASE1_REPLACEMENT_CLOSURE_PINNED_NONCLAIM",
+  "phase1_discharge_grade_replacement_closure_status_token": "SR_FULL_DERIVATION_PHASE1_DISCHARGE_GRADE_REPLACEMENT_CLOSURE_STATUS_v0: DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_SCAFFOLD_PINNED_NONCLAIM",
+  "witness_tokens": [
+    "TARGET-SR-COV-MICRO-68-PHASE1-DISCHARGE-GRADE-THEOREM-REPLACEMENT-CLOSURE-LOCK-v0",
+    "SR_COVARIANCE_PHASE1_DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_LOCK_v0: CYCLE68_PHASE1_REPLACEMENT_CLOSURE_PINNED_NONCLAIM",
+    "SR_FULL_DERIVATION_PHASE1_DISCHARGE_GRADE_REPLACEMENT_CLOSURE_STATUS_v0: DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_SCAFFOLD_PINNED_NONCLAIM",
+    "SR_COVARIANCE_PROGRESS_CYCLE68_v0: PHASE1_DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_LOCK_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE68_ARTIFACT_v0: sr_covariance_phase1_discharge_grade_theorem_replacement_closure_lock_cycle68_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_phase1_discharge_grade_theorem_replacement_closure_lock_cycle68_v0"
+  }
+}

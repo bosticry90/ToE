@@ -1,0 +1,26 @@
+{
+  "artifact_id": "sr_covariance_phase5_derivation_completeness_failure_trigger_discharge_lock_cycle70_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "subtarget_id": "TARGET-SR-COV-THEOREM-SURFACE-PLAN",
+  "derivation_gate_target_id": "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN",
+  "enforcement_roadmap_target_id": "TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-070",
+  "micro_target": "TARGET-SR-COV-MICRO-70-PHASE5-DERIVATION-COMPLETENESS-FAILURE-TRIGGER-DISCHARGE-LOCK-v0",
+  "status": "LOCKED_SR_DERIVATION_COMPLETENESS_FAILURE_TRIGGER_DISCHARGE_LOCK_CYCLE70_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "phase5_failure_trigger_discharge_lock_token": "SR_DERIVATION_COMPLETENESS_FAILURE_TRIGGER_DISCHARGE_LOCK_v0: CYCLE70_PHASE5_FAILURE_TRIGGER_DISCHARGE_PINNED_NONCLAIM",
+  "phase5_failure_trigger_discharge_status_token": "SR_FULL_DERIVATION_PHASE5_FAILURE_TRIGGER_DISCHARGE_STATUS_v0: MANDATORY_FAILURE_TRIGGER_SET_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM",
+  "witness_tokens": [
+    "TARGET-SR-COV-MICRO-70-PHASE5-DERIVATION-COMPLETENESS-FAILURE-TRIGGER-DISCHARGE-LOCK-v0",
+    "SR_DERIVATION_COMPLETENESS_FAILURE_TRIGGER_DISCHARGE_LOCK_v0: CYCLE70_PHASE5_FAILURE_TRIGGER_DISCHARGE_PINNED_NONCLAIM",
+    "SR_FULL_DERIVATION_PHASE5_FAILURE_TRIGGER_DISCHARGE_STATUS_v0: MANDATORY_FAILURE_TRIGGER_SET_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM",
+    "SR_COVARIANCE_PROGRESS_CYCLE70_v0: PHASE5_FAILURE_TRIGGER_DISCHARGE_LOCK_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE70_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_failure_trigger_discharge_lock_cycle70_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_phase5_derivation_completeness_failure_trigger_discharge_lock_cycle70_v0"
+  }
+}

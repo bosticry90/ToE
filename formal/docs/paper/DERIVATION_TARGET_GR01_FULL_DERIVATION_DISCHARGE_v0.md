@@ -14,9 +14,44 @@ Purpose:
 Adjudication token:
 - `FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DISCRETE`
 
+Inevitability adjudication token:
+- `FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
+
+Inevitability obligation linkage (must remain synchronized with gate target):
+- theorem tokens:
+  - `gr01_inevitability_necessity_under_minimized_assumptions_v0`
+  - `gr01_inevitability_counterfactual_breaks_without_required_assumption_v0`
+  - `gr01_inevitability_structural_classification_of_constructive_route_v0`
+  - `gr01_inevitability_discharge_ready_bundle_v0`
+  - `gr01_inevitability_route_bundle_without_bridge_shortcuts_v0`
+- minimized-assumption anchor token:
+  - `GR01InevitabilityMinimizedAssumptions_v0`
+- named-route assumption tokens:
+  - `GR01InevitabilityCanonicalActionNativeRoute_v0`
+  - `GR01InevitabilityNoBridgeShortcutRoute_v0`
+  - `GR01InevitabilityBoundedWeakFieldClosureRoute_v0`
+- no-shortcut elimination-chain tokens:
+  - `GR01NoBridgeShortcutEliminationLemmaChain_v0`
+  - `GR01BridgeWitnessConstructorRouteUsed_v0`
+  - `GR01BridgeTransportConstructorRouteUsed_v0`
+  - `GR01BridgeTransportFromRadialEvaluatorRouteUsed_v0`
+- closure-surface token:
+  - `GR01InevitabilityBoundedClosureSurface_v0`
+- signature-binding token:
+  - `(hMin : GR01InevitabilityMinimizedAssumptions_v0)`
+- counterfactual break token:
+  - `¬GR01InevitabilityBoundedClosureSurface_v0`
+- per-assumption break theorem tokens:
+  - `gr01_inevitability_counterfactual_breaks_without_canonical_action_native_route_assumption_v0`
+  - `gr01_inevitability_counterfactual_breaks_without_no_bridge_shortcut_assumption_v0`
+  - `gr01_inevitability_counterfactual_breaks_without_bounded_weak_field_closure_assumption_v0`
+- structural classification anchor token:
+  - `GR01InevitabilityConstructiveRouteClassification_v0`
+
 Scope:
 - Bounded/discrete weak-field v0 only.
 - No continuum-limit, uniqueness, or infinite-domain inversion claims.
+- Bounded inevitability is discharged at theorem-body bounded scope under explicit dependency and anti-shortcut constraints.
 
 ## Current status
 
@@ -32,7 +67,7 @@ anti-circular governance.
 ## Blocker inventory (explicit)
 
 1. Default action route is now theorem-bound to the cubic lane, but still not
-   an action-derived EL discharge:
+  an action-derived EL discharge:
 - `formal/toe_formal/ToeFormal/Variational/ActionRep32Def.lean`
 - `formal/toe_formal/ToeFormal/Variational/ActionRep32CubicLane.lean`
 - blocker condition: constructive binding token
@@ -47,7 +82,7 @@ anti-circular governance.
   - `def P_rep32 : FieldRep32 -> FieldRep32 := P_cubic_rep32_core declared_g_rep32_default`
 
 3. Default-cubic identification uses a default-binding theorem pin, not yet
-   an action-derived discharge:
+  an action-derived discharge:
 - `formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep32Pcubic.lean`
 - blocker tokens:
   - `theorem P_rep32_def : P_rep32 = P_cubic_rep32 declared_g_rep32`

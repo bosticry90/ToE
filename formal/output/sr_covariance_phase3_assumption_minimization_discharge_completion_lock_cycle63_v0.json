@@ -1,0 +1,26 @@
+{
+  "artifact_id": "sr_covariance_phase3_assumption_minimization_discharge_completion_lock_cycle63_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "subtarget_id": "TARGET-SR-COV-THEOREM-SURFACE-PLAN",
+  "derivation_gate_target_id": "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN",
+  "enforcement_roadmap_target_id": "TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-063",
+  "micro_target": "TARGET-SR-COV-MICRO-63-PHASE3-ASSUMPTION-MINIMIZATION-DISCHARGE-COMPLETION-LOCK-v0",
+  "status": "LOCKED_SR_COVARIANCE_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_COMPLETION_LOCK_CYCLE63_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "phase3_assumption_minimization_discharge_completion_lock_token": "SR_COVARIANCE_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_COMPLETION_LOCK_v0: CYCLE63_PHASE3_ASSUMPTION_MINIMIZATION_COMPLETION_PINNED_NONCLAIM",
+  "phase3_assumption_minimization_completion_status_token": "SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_COMPLETION_STATUS_v0: DISCHARGE_RATIONALE_SCAFFOLD_PINNED_NONCLAIM",
+  "witness_tokens": [
+    "TARGET-SR-COV-MICRO-63-PHASE3-ASSUMPTION-MINIMIZATION-DISCHARGE-COMPLETION-LOCK-v0",
+    "SR_COVARIANCE_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_COMPLETION_LOCK_v0: CYCLE63_PHASE3_ASSUMPTION_MINIMIZATION_COMPLETION_PINNED_NONCLAIM",
+    "SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_COMPLETION_STATUS_v0: DISCHARGE_RATIONALE_SCAFFOLD_PINNED_NONCLAIM",
+    "SR_COVARIANCE_PROGRESS_CYCLE63_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE63_ARTIFACT_v0: sr_covariance_phase3_assumption_minimization_discharge_completion_lock_cycle63_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_phase3_assumption_minimization_discharge_completion_lock_cycle63_v0"
+  }
+}

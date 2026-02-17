@@ -1,0 +1,26 @@
+{
+  "artifact_id": "sr_covariance_phase4_robustness_negctrl_discharge_theorem_surface_lock_cycle51_v0",
+  "target_id": "TARGET-SR-COV-PLAN",
+  "subtarget_id": "TARGET-SR-COV-THEOREM-SURFACE-PLAN",
+  "derivation_gate_target_id": "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN",
+  "enforcement_roadmap_target_id": "TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN",
+  "pillar": "PILLAR-SR",
+  "cycle": "CYCLE-051",
+  "micro_target": "TARGET-SR-COV-MICRO-51-PHASE4-ROBUSTNESS-NEGCTRL-DISCHARGE-THEOREM-SURFACE-LOCK-v0",
+  "status": "LOCKED_SR_COVARIANCE_PHASE4_DISCHARGE_THEOREM_SURFACE_LOCK_CYCLE51_PINNED",
+  "scope": "planning_only_non_claim_v0",
+  "phase4_discharge_theorem_surface_lock_token": "SR_COVARIANCE_PHASE4_ROBUSTNESS_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE51_PHASE4_THEOREM_SURFACE_PINNED_NONCLAIM",
+  "phase4_discharge_theorem_surface_status_token": "SR_FULL_DERIVATION_PHASE4_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+  "witness_tokens": [
+    "TARGET-SR-COV-MICRO-51-PHASE4-ROBUSTNESS-NEGCTRL-DISCHARGE-THEOREM-SURFACE-LOCK-v0",
+    "SR_COVARIANCE_PHASE4_ROBUSTNESS_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE51_PHASE4_THEOREM_SURFACE_PINNED_NONCLAIM",
+    "SR_FULL_DERIVATION_PHASE4_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+    "SR_COVARIANCE_PROGRESS_CYCLE51_v0: PHASE4_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED",
+    "SR_COVARIANCE_CYCLE51_ARTIFACT_v0: sr_covariance_phase4_robustness_negctrl_discharge_theorem_surface_lock_cycle51_v0"
+  ],
+  "determinism": {
+    "schema_version": "v0",
+    "fingerprint_method": "literal-json-lock",
+    "content_fingerprint": "sr_covariance_phase4_robustness_negctrl_discharge_theorem_surface_lock_cycle51_v0"
+  }
+}

@@ -3228,3 +3228,199 @@ def test_sr_cycle44_to_cycle48_artifact_schema_and_scope_are_locked() -> None:
         assert determinism.get("schema_version") == "v0"
         assert determinism.get("fingerprint_method") == "literal-json-lock"
         assert determinism.get("content_fingerprint") == artifact_id
+
+
+def test_sr_cycle49_to_cycle74_kickoff_tokens_are_pinned_in_target_and_state() -> None:
+    target_text = _read(SR_TARGET_PATH)
+    state_text = _read(STATE_PATH)
+
+    required_tokens = [
+        "TARGET-SR-COV-MICRO-49-PHASE3-COMPLETION-TRANSITION-LOCK-v0",
+        "SR_COVARIANCE_PHASE3_DISCHARGE_COMPLETION_LOCK_v0: CYCLE49_PHASE3_COMPLETION_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE49_v0: PHASE3_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE49_ARTIFACT_v0: sr_covariance_phase3_discharge_completion_lock_cycle49_v0",
+        "formal/output/sr_covariance_phase3_discharge_completion_lock_cycle49_v0.json",
+        "TARGET-SR-COV-MICRO-50-PHASE4-ROBUSTNESS-NEGCTRL-DISCHARGE-SURFACE-ENTRY-LOCK-v0",
+        "SR_COVARIANCE_PHASE4_ROBUSTNESS_NEGCTRL_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE50_PHASE4_ENTRY_SURFACE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE50_v0: PHASE4_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE50_ARTIFACT_v0: sr_covariance_phase4_robustness_negctrl_discharge_surface_entry_lock_cycle50_v0",
+        "formal/output/sr_covariance_phase4_robustness_negctrl_discharge_surface_entry_lock_cycle50_v0.json",
+        "TARGET-SR-COV-MICRO-51-PHASE4-ROBUSTNESS-NEGCTRL-DISCHARGE-THEOREM-SURFACE-LOCK-v0",
+        "SR_COVARIANCE_PHASE4_ROBUSTNESS_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE51_PHASE4_THEOREM_SURFACE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE51_v0: PHASE4_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE51_ARTIFACT_v0: sr_covariance_phase4_robustness_negctrl_discharge_theorem_surface_lock_cycle51_v0",
+        "formal/output/sr_covariance_phase4_robustness_negctrl_discharge_theorem_surface_lock_cycle51_v0.json",
+        "TARGET-SR-COV-MICRO-52-PHASE4-ROBUSTNESS-NEGCTRL-DISCHARGE-PACKAGE-FREEZE-LOCK-v0",
+        "SR_COVARIANCE_PHASE4_ROBUSTNESS_NEGCTRL_DISCHARGE_PACKAGE_FREEZE_LOCK_v0: CYCLE52_PHASE4_PACKAGE_FREEZE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE52_v0: PHASE4_DISCHARGE_PACKAGE_FREEZE_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE52_ARTIFACT_v0: sr_covariance_phase4_robustness_negctrl_discharge_package_freeze_lock_cycle52_v0",
+        "formal/output/sr_covariance_phase4_robustness_negctrl_discharge_package_freeze_lock_cycle52_v0.json",
+        "TARGET-SR-COV-MICRO-53-PHASE4-COMPLETION-TRANSITION-LOCK-v0",
+        "SR_COVARIANCE_PHASE4_DISCHARGE_COMPLETION_LOCK_v0: CYCLE53_PHASE4_COMPLETION_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE53_v0: PHASE4_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE53_ARTIFACT_v0: sr_covariance_phase4_discharge_completion_transition_lock_cycle53_v0",
+        "formal/output/sr_covariance_phase4_discharge_completion_transition_lock_cycle53_v0.json",
+        "TARGET-SR-COV-MICRO-54-PHASE5-DERIVATION-COMPLETENESS-DISCHARGE-SURFACE-ENTRY-LOCK-v0",
+        "SR_COVARIANCE_PHASE5_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE54_PHASE5_ENTRY_SURFACE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE54_v0: PHASE5_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE54_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_discharge_surface_entry_lock_cycle54_v0",
+        "formal/output/sr_covariance_phase5_derivation_completeness_discharge_surface_entry_lock_cycle54_v0.json",
+        "TARGET-SR-COV-MICRO-55-PHASE5-DERIVATION-COMPLETENESS-DISCHARGE-THEOREM-SURFACE-LOCK-v0",
+        "SR_COVARIANCE_PHASE5_DERIVATION_COMPLETENESS_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE55_PHASE5_THEOREM_SURFACE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE55_v0: PHASE5_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE55_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_discharge_theorem_surface_lock_cycle55_v0",
+        "formal/output/sr_covariance_phase5_derivation_completeness_discharge_theorem_surface_lock_cycle55_v0.json",
+        "TARGET-SR-COV-MICRO-56-PHASE5-COMPLETION-TRANSITION-LOCK-v0",
+        "SR_COVARIANCE_PHASE5_DISCHARGE_COMPLETION_LOCK_v0: CYCLE56_PHASE5_COMPLETION_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE56_v0: PHASE5_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE56_ARTIFACT_v0: sr_covariance_phase5_discharge_completion_transition_lock_cycle56_v0",
+        "formal/output/sr_covariance_phase5_discharge_completion_transition_lock_cycle56_v0.json",
+        "TARGET-SR-COV-MICRO-57-PHASE6-INEVITABILITY-NECESSITY-THEOREM-SURFACE-LOCK-v0",
+        "SR_COVARIANCE_PHASE6_INEVITABILITY_NECESSITY_THEOREM_SURFACE_LOCK_v0: CYCLE57_PHASE6_NECESSITY_SURFACE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE57_v0: PHASE6_NECESSITY_THEOREM_SURFACE_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE57_ARTIFACT_v0: sr_covariance_phase6_inevitability_necessity_theorem_surface_lock_cycle57_v0",
+        "formal/output/sr_covariance_phase6_inevitability_necessity_theorem_surface_lock_cycle57_v0.json",
+        "TARGET-SR-COV-MICRO-58-PHASE6-INEVITABILITY-COUNTERFACTUAL-NEGCTRL-THEOREM-SURFACE-LOCK-v0",
+        "SR_COVARIANCE_PHASE6_INEVITABILITY_COUNTERFACTUAL_NEGCTRL_THEOREM_SURFACE_LOCK_v0: CYCLE58_PHASE6_COUNTERFACTUAL_NEGCTRL_SURFACE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE58_v0: PHASE6_COUNTERFACTUAL_NEGCTRL_THEOREM_SURFACE_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE58_ARTIFACT_v0: sr_covariance_phase6_inevitability_counterfactual_negctrl_theorem_surface_lock_cycle58_v0",
+        "formal/output/sr_covariance_phase6_inevitability_counterfactual_negctrl_theorem_surface_lock_cycle58_v0.json",
+        "TARGET-SR-COV-MICRO-59-PHASE6-COMPLETION-TRANSITION-LOCK-v0",
+        "SR_COVARIANCE_PHASE6_DISCHARGE_COMPLETION_LOCK_v0: CYCLE59_PHASE6_COMPLETION_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE59_v0: PHASE6_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE59_ARTIFACT_v0: sr_covariance_phase6_discharge_completion_transition_lock_cycle59_v0",
+        "formal/output/sr_covariance_phase6_discharge_completion_transition_lock_cycle59_v0.json",
+        "TARGET-SR-COV-MICRO-60-PHASE7-PACKAGE-FREEZE-REOPEN-POLICY-LOCK-v0",
+        "SR_COVARIANCE_PHASE7_PACKAGE_FREEZE_REOPEN_POLICY_LOCK_v0: CYCLE60_PHASE7_FREEZE_REOPEN_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE60_v0: PHASE7_FREEZE_REOPEN_POLICY_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE60_ARTIFACT_v0: sr_covariance_phase7_package_freeze_reopen_policy_lock_cycle60_v0",
+        "formal/output/sr_covariance_phase7_package_freeze_reopen_policy_lock_cycle60_v0.json",
+        "TARGET-SR-COV-MICRO-61-PHASE1-DISCHARGE-GRADE-THEOREM-OBJECT-REPLACEMENT-LOCK-v0",
+        "SR_COVARIANCE_PHASE1_DISCHARGE_GRADE_THEOREM_OBJECTS_LOCK_v0: CYCLE61_PHASE1_DISCHARGE_GRADE_OBJECTS_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE61_v0: PHASE1_DISCHARGE_GRADE_THEOREM_OBJECT_REPLACEMENT_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE61_ARTIFACT_v0: sr_covariance_phase1_discharge_grade_theorem_object_replacement_lock_cycle61_v0",
+        "formal/output/sr_covariance_phase1_discharge_grade_theorem_object_replacement_lock_cycle61_v0.json",
+        "TARGET-SR-COV-MICRO-62-PHASE2-CANONICAL-EQUIVALENCE-THEOREM-DISCHARGE-LOCK-v0",
+        "SR_COVARIANCE_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_DISCHARGE_LOCK_v0: CYCLE62_PHASE2_EQUIVALENCE_DISCHARGE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE62_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_DISCHARGE_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE62_ARTIFACT_v0: sr_covariance_phase2_canonical_equivalence_theorem_discharge_lock_cycle62_v0",
+        "formal/output/sr_covariance_phase2_canonical_equivalence_theorem_discharge_lock_cycle62_v0.json",
+        "TARGET-SR-COV-MICRO-63-PHASE3-ASSUMPTION-MINIMIZATION-DISCHARGE-COMPLETION-LOCK-v0",
+        "SR_COVARIANCE_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_COMPLETION_LOCK_v0: CYCLE63_PHASE3_ASSUMPTION_MINIMIZATION_COMPLETION_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE63_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE63_ARTIFACT_v0: sr_covariance_phase3_assumption_minimization_discharge_completion_lock_cycle63_v0",
+        "formal/output/sr_covariance_phase3_assumption_minimization_discharge_completion_lock_cycle63_v0.json",
+        "TARGET-SR-COV-MICRO-64-PHASE4-THEOREM-LINKED-ROBUSTNESS-NEGCTRL-DISCHARGE-COMPLETION-LOCK-v0",
+        "SR_COVARIANCE_PHASE4_THEOREM_LINKED_ROBUSTNESS_NEGCTRL_DISCHARGE_COMPLETION_LOCK_v0: CYCLE64_PHASE4_THEOREM_LINKED_ROBUSTNESS_NEGCTRL_COMPLETION_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE64_v0: PHASE4_THEOREM_LINKED_ROBUSTNESS_NEGCTRL_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE64_ARTIFACT_v0: sr_covariance_phase4_theorem_linked_robustness_negctrl_discharge_completion_lock_cycle64_v0",
+        "formal/output/sr_covariance_phase4_theorem_linked_robustness_negctrl_discharge_completion_lock_cycle64_v0.json",
+        "TARGET-SR-COV-MICRO-65-PHASE5-DERIVATION-COMPLETENESS-GATE-CLOSURE-LOCK-v0",
+        "SR_DERIVATION_COMPLETENESS_GATE_CLOSURE_LOCK_v0: CYCLE65_PHASE5_GATE_CLOSURE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE65_v0: PHASE5_DERIVATION_COMPLETENESS_GATE_CLOSURE_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE65_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_gate_closure_lock_cycle65_v0",
+        "formal/output/sr_covariance_phase5_derivation_completeness_gate_closure_lock_cycle65_v0.json",
+        "TARGET-SR-COV-MICRO-66-PHASE6-INEVITABILITY-NECESSITY-COUNTERFACTUAL-DISCHARGE-COMPLETION-LOCK-v0",
+        "SR_COVARIANCE_PHASE6_INEVITABILITY_NECESSITY_COUNTERFACTUAL_DISCHARGE_COMPLETION_LOCK_v0: CYCLE66_PHASE6_NECESSITY_COUNTERFACTUAL_COMPLETION_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE66_v0: PHASE6_INEVITABILITY_NECESSITY_COUNTERFACTUAL_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE66_ARTIFACT_v0: sr_covariance_phase6_inevitability_necessity_counterfactual_discharge_completion_lock_cycle66_v0",
+        "formal/output/sr_covariance_phase6_inevitability_necessity_counterfactual_discharge_completion_lock_cycle66_v0.json",
+        "TARGET-SR-COV-MICRO-67-PHASE7-GOVERNANCE-PROMOTION-READINESS-LOCK-v0",
+        "SR_COVARIANCE_PHASE7_GOVERNANCE_PROMOTION_READINESS_LOCK_v0: CYCLE67_PHASE7_PROMOTION_READINESS_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE67_v0: PHASE7_GOVERNANCE_PROMOTION_READINESS_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE67_ARTIFACT_v0: sr_covariance_phase7_governance_promotion_readiness_lock_cycle67_v0",
+        "formal/output/sr_covariance_phase7_governance_promotion_readiness_lock_cycle67_v0.json",
+        "TARGET-SR-COV-MICRO-68-PHASE1-DISCHARGE-GRADE-THEOREM-REPLACEMENT-CLOSURE-LOCK-v0",
+        "SR_COVARIANCE_PHASE1_DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_LOCK_v0: CYCLE68_PHASE1_REPLACEMENT_CLOSURE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE68_v0: PHASE1_DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE68_ARTIFACT_v0: sr_covariance_phase1_discharge_grade_theorem_replacement_closure_lock_cycle68_v0",
+        "formal/output/sr_covariance_phase1_discharge_grade_theorem_replacement_closure_lock_cycle68_v0.json",
+        "TARGET-SR-COV-MICRO-69-PHASE2-CANONICAL-EQUIVALENCE-THEOREM-DISCHARGE-COMPLETION-LOCK-v0",
+        "SR_COVARIANCE_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_DISCHARGE_COMPLETION_LOCK_v0: CYCLE69_PHASE2_EQUIVALENCE_DISCHARGE_COMPLETION_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE69_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE69_ARTIFACT_v0: sr_covariance_phase2_canonical_equivalence_theorem_discharge_completion_lock_cycle69_v0",
+        "formal/output/sr_covariance_phase2_canonical_equivalence_theorem_discharge_completion_lock_cycle69_v0.json",
+        "TARGET-SR-COV-MICRO-70-PHASE5-DERIVATION-COMPLETENESS-FAILURE-TRIGGER-DISCHARGE-LOCK-v0",
+        "SR_DERIVATION_COMPLETENESS_FAILURE_TRIGGER_DISCHARGE_LOCK_v0: CYCLE70_PHASE5_FAILURE_TRIGGER_DISCHARGE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE70_v0: PHASE5_FAILURE_TRIGGER_DISCHARGE_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE70_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_failure_trigger_discharge_lock_cycle70_v0",
+        "formal/output/sr_covariance_phase5_derivation_completeness_failure_trigger_discharge_lock_cycle70_v0.json",
+        "TARGET-SR-COV-MICRO-71-PHASE6-INEVITABILITY-THEOREM-DISCHARGE-CLOSURE-LOCK-v0",
+        "SR_COVARIANCE_PHASE6_INEVITABILITY_THEOREM_DISCHARGE_CLOSURE_LOCK_v0: CYCLE71_PHASE6_INEVITABILITY_THEOREM_CLOSURE_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE71_v0: PHASE6_INEVITABILITY_THEOREM_DISCHARGE_CLOSURE_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE71_ARTIFACT_v0: sr_covariance_phase6_inevitability_theorem_discharge_closure_lock_cycle71_v0",
+        "formal/output/sr_covariance_phase6_inevitability_theorem_discharge_closure_lock_cycle71_v0.json",
+        "TARGET-SR-COV-MICRO-72-PHASE7-GOVERNANCE-CLAIM-PROMOTION-EXECUTION-LOCK-v0",
+        "SR_COVARIANCE_PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_LOCK_v0: CYCLE72_PHASE7_PROMOTION_EXECUTION_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE72_v0: PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE72_ARTIFACT_v0: sr_covariance_phase7_governance_claim_promotion_execution_lock_cycle72_v0",
+        "formal/output/sr_covariance_phase7_governance_claim_promotion_execution_lock_cycle72_v0.json",
+        "TARGET-SR-COV-MICRO-73-PHASE5-PHASE6-THEOREM-DISCHARGE-ADJUDICATION-TRANSITION-LOCK-v0",
+        "SR_COVARIANCE_PHASE5_PHASE6_THEOREM_DISCHARGE_ADJUDICATION_LOCK_v0: CYCLE73_PHASE5_PHASE6_ADJUDICATION_PINNED_NONCLAIM",
+        "SR_COVARIANCE_PROGRESS_CYCLE73_v0: PHASE5_PHASE6_THEOREM_DISCHARGE_ADJUDICATION_TRANSITION_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE73_ARTIFACT_v0: sr_covariance_phase5_phase6_theorem_discharge_adjudication_transition_lock_cycle73_v0",
+        "formal/output/sr_covariance_phase5_phase6_theorem_discharge_adjudication_transition_lock_cycle73_v0.json",
+        "TARGET-SR-COV-MICRO-74-CLAIM-LABEL-AND-PILLAR-CLOSURE-TRANSITION-LOCK-v0",
+        "SR_COVARIANCE_CLAIM_LABEL_AND_PILLAR_CLOSURE_TRANSITION_LOCK_v0: CYCLE74_RESULTS_MATRIX_CLOSURE_PINNED",
+        "SR_COVARIANCE_PROGRESS_CYCLE74_v0: CLAIM_LABEL_AND_PILLAR_CLOSURE_TRANSITION_LOCK_TOKEN_PINNED",
+        "SR_COVARIANCE_CYCLE74_ARTIFACT_v0: sr_covariance_claim_label_and_pillar_closure_transition_lock_cycle74_v0",
+        "formal/output/sr_covariance_claim_label_and_pillar_closure_transition_lock_cycle74_v0.json",
+    ]
+
+    missing_target = [tok for tok in required_tokens if tok not in target_text]
+    missing_state = [tok for tok in required_tokens if tok not in state_text]
+    assert not missing_target, "Missing cycle49-74 token(s) in SR target: " + ", ".join(missing_target)
+    assert not missing_state, "Missing cycle49-74 token(s) in State of the Theory: " + ", ".join(missing_state)
+
+
+def test_sr_cycle49_to_cycle74_artifact_schema_and_scope_are_locked() -> None:
+    artifact_cases = [
+        ("sr_covariance_phase3_discharge_completion_lock_cycle49_v0.json", "sr_covariance_phase3_discharge_completion_lock_cycle49_v0", "CYCLE-049"),
+        ("sr_covariance_phase4_robustness_negctrl_discharge_surface_entry_lock_cycle50_v0.json", "sr_covariance_phase4_robustness_negctrl_discharge_surface_entry_lock_cycle50_v0", "CYCLE-050"),
+        ("sr_covariance_phase4_robustness_negctrl_discharge_theorem_surface_lock_cycle51_v0.json", "sr_covariance_phase4_robustness_negctrl_discharge_theorem_surface_lock_cycle51_v0", "CYCLE-051"),
+        ("sr_covariance_phase4_robustness_negctrl_discharge_package_freeze_lock_cycle52_v0.json", "sr_covariance_phase4_robustness_negctrl_discharge_package_freeze_lock_cycle52_v0", "CYCLE-052"),
+        ("sr_covariance_phase4_discharge_completion_transition_lock_cycle53_v0.json", "sr_covariance_phase4_discharge_completion_transition_lock_cycle53_v0", "CYCLE-053"),
+        ("sr_covariance_phase5_derivation_completeness_discharge_surface_entry_lock_cycle54_v0.json", "sr_covariance_phase5_derivation_completeness_discharge_surface_entry_lock_cycle54_v0", "CYCLE-054"),
+        ("sr_covariance_phase5_derivation_completeness_discharge_theorem_surface_lock_cycle55_v0.json", "sr_covariance_phase5_derivation_completeness_discharge_theorem_surface_lock_cycle55_v0", "CYCLE-055"),
+        ("sr_covariance_phase5_discharge_completion_transition_lock_cycle56_v0.json", "sr_covariance_phase5_discharge_completion_transition_lock_cycle56_v0", "CYCLE-056"),
+        ("sr_covariance_phase6_inevitability_necessity_theorem_surface_lock_cycle57_v0.json", "sr_covariance_phase6_inevitability_necessity_theorem_surface_lock_cycle57_v0", "CYCLE-057"),
+        ("sr_covariance_phase6_inevitability_counterfactual_negctrl_theorem_surface_lock_cycle58_v0.json", "sr_covariance_phase6_inevitability_counterfactual_negctrl_theorem_surface_lock_cycle58_v0", "CYCLE-058"),
+        ("sr_covariance_phase6_discharge_completion_transition_lock_cycle59_v0.json", "sr_covariance_phase6_discharge_completion_transition_lock_cycle59_v0", "CYCLE-059"),
+        ("sr_covariance_phase7_package_freeze_reopen_policy_lock_cycle60_v0.json", "sr_covariance_phase7_package_freeze_reopen_policy_lock_cycle60_v0", "CYCLE-060"),
+        ("sr_covariance_phase1_discharge_grade_theorem_object_replacement_lock_cycle61_v0.json", "sr_covariance_phase1_discharge_grade_theorem_object_replacement_lock_cycle61_v0", "CYCLE-061"),
+        ("sr_covariance_phase2_canonical_equivalence_theorem_discharge_lock_cycle62_v0.json", "sr_covariance_phase2_canonical_equivalence_theorem_discharge_lock_cycle62_v0", "CYCLE-062"),
+        ("sr_covariance_phase3_assumption_minimization_discharge_completion_lock_cycle63_v0.json", "sr_covariance_phase3_assumption_minimization_discharge_completion_lock_cycle63_v0", "CYCLE-063"),
+        ("sr_covariance_phase4_theorem_linked_robustness_negctrl_discharge_completion_lock_cycle64_v0.json", "sr_covariance_phase4_theorem_linked_robustness_negctrl_discharge_completion_lock_cycle64_v0", "CYCLE-064"),
+        ("sr_covariance_phase5_derivation_completeness_gate_closure_lock_cycle65_v0.json", "sr_covariance_phase5_derivation_completeness_gate_closure_lock_cycle65_v0", "CYCLE-065"),
+        ("sr_covariance_phase6_inevitability_necessity_counterfactual_discharge_completion_lock_cycle66_v0.json", "sr_covariance_phase6_inevitability_necessity_counterfactual_discharge_completion_lock_cycle66_v0", "CYCLE-066"),
+        ("sr_covariance_phase7_governance_promotion_readiness_lock_cycle67_v0.json", "sr_covariance_phase7_governance_promotion_readiness_lock_cycle67_v0", "CYCLE-067"),
+        ("sr_covariance_phase1_discharge_grade_theorem_replacement_closure_lock_cycle68_v0.json", "sr_covariance_phase1_discharge_grade_theorem_replacement_closure_lock_cycle68_v0", "CYCLE-068"),
+        ("sr_covariance_phase2_canonical_equivalence_theorem_discharge_completion_lock_cycle69_v0.json", "sr_covariance_phase2_canonical_equivalence_theorem_discharge_completion_lock_cycle69_v0", "CYCLE-069"),
+        ("sr_covariance_phase5_derivation_completeness_failure_trigger_discharge_lock_cycle70_v0.json", "sr_covariance_phase5_derivation_completeness_failure_trigger_discharge_lock_cycle70_v0", "CYCLE-070"),
+        ("sr_covariance_phase6_inevitability_theorem_discharge_closure_lock_cycle71_v0.json", "sr_covariance_phase6_inevitability_theorem_discharge_closure_lock_cycle71_v0", "CYCLE-071"),
+        ("sr_covariance_phase7_governance_claim_promotion_execution_lock_cycle72_v0.json", "sr_covariance_phase7_governance_claim_promotion_execution_lock_cycle72_v0", "CYCLE-072"),
+        ("sr_covariance_phase5_phase6_theorem_discharge_adjudication_transition_lock_cycle73_v0.json", "sr_covariance_phase5_phase6_theorem_discharge_adjudication_transition_lock_cycle73_v0", "CYCLE-073"),
+        ("sr_covariance_claim_label_and_pillar_closure_transition_lock_cycle74_v0.json", "sr_covariance_claim_label_and_pillar_closure_transition_lock_cycle74_v0", "CYCLE-074"),
+    ]
+
+    for filename, artifact_id, cycle in artifact_cases:
+        artifact_path = REPO_ROOT / "formal" / "output" / filename
+        payload = json.loads(_read(artifact_path))
+
+        assert payload.get("artifact_id") == artifact_id
+        assert payload.get("target_id") == "TARGET-SR-COV-PLAN"
+        assert payload.get("subtarget_id") == "TARGET-SR-COV-THEOREM-SURFACE-PLAN"
+        assert payload.get("derivation_gate_target_id") == "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN"
+        assert payload.get("enforcement_roadmap_target_id") == "TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN"
+        assert payload.get("pillar") == "PILLAR-SR"
+        assert payload.get("cycle") == cycle
+        assert payload.get("scope") == "planning_only_non_claim_v0"
+
+        witness_tokens = payload.get("witness_tokens")
+        assert isinstance(witness_tokens, list) and witness_tokens
+
+        determinism = payload.get("determinism")
+        assert isinstance(determinism, dict)
+        assert determinism.get("schema_version") == "v0"
+        assert determinism.get("fingerprint_method") == "literal-json-lock"
+        assert determinism.get("content_fingerprint") == artifact_id

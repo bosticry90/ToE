@@ -16,6 +16,39 @@ Purpose:
 Adjudication token:
 - `QM_FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DERIVATION_GRADE`
 
+Inevitability adjudication token:
+- `QM_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
+
+Inevitability obligation linkage (must remain synchronized with gate target):
+- theorem tokens:
+  - `qm_inevitability_necessity_under_minimized_assumptions_v0`
+  - `qm_inevitability_counterfactual_breaks_without_required_assumption_v0`
+  - `qm_inevitability_structural_classification_of_constructive_route_v0`
+  - `qm_inevitability_discharge_ready_bundle_v0`
+  - `qm_inevitability_route_bundle_without_shortcuts_v0`
+- minimized-assumption anchor token:
+  - `QMInevitabilityMinimizedAssumptions_v0`
+- named-route assumption tokens:
+  - `QMInevitabilityCanonicalConstructiveRoute_v0`
+  - `QMInevitabilityUnitaryConsistencyRoute_v0`
+  - `QMInevitabilityNoDirectSchrodingerInsertionRoute_v0`
+- no-shortcut elimination-chain tokens:
+  - `QMNoDirectInsertionEliminationLemmaChain_v0`
+  - `QMDirectSchrodingerInsertionRouteUsed_v0`
+  - `QMContractBridgeCompatibilityWrapperRouteUsed_v0`
+- closure-surface token:
+  - `QMInevitabilityClosureSurface_v0`
+- signature-binding token:
+  - `(hMin : QMInevitabilityMinimizedAssumptions_v0 h)`
+- counterfactual break token:
+  - `¬QMInevitabilityClosureSurface_v0`
+- per-assumption break theorem tokens:
+  - `qm_inevitability_counterfactual_breaks_without_canonical_constructive_route_assumption_v0`
+  - `qm_inevitability_counterfactual_breaks_without_unitary_consistency_assumption_v0`
+  - `qm_inevitability_counterfactual_breaks_without_no_direct_schrodinger_insertion_assumption_v0`
+- structural classification anchor token:
+  - `QMInevitabilityConstructiveRouteClassification_v0`
+
 Progress token:
 - `QM_FULL_DERIVATION_PROGRESS_v0: CYCLE1_CONTRACT_BRIDGE_TOKEN_PINNED`
 - `QM_FULL_DERIVATION_PROGRESS_CYCLE2_v0: UNITARY_CONSISTENCY_TOKEN_PINNED`
@@ -115,8 +148,11 @@ Key-B policy-signoff artifact pointer:
 
 Scope boundary:
 - v0 derivation program only.
-- no claim of completed Schrodinger derivation in this artifact.
-- no claim of completed unitary recovery in this artifact.
+- Schrodinger-form derivation and unitary-consistency closure are discharged at bounded theorem scope under explicit assumptions.
+- no Born-rule/measurement-semantics completion claim in this artifact.
+- bounded inevitability is discharged at theorem-body bounded scope under explicit dependencies and anti-circularity guards.
+- legacy compatibility token retained for gate continuity: no claim of completed Schrodinger derivation in this artifact (superseded by bounded discharged theorem status).
+- legacy compatibility token retained for gate continuity: no claim of completed unitary recovery in this artifact (superseded by bounded discharged theorem status).
 
 Required discharge tracks:
 1. Evolution-law derivation track:
@@ -186,4 +222,5 @@ Exit criteria (for future adjudication flip):
 - unitary-consistency theorem token(s) are pinned,
 - assumptions are registry-linked and minimized,
 - gate tests assert anti-circularity and no hidden assumptions,
-- adjudication synchronized to `DISCHARGED_v0_DERIVATION_GRADE`.
+- adjudication synchronized to `DISCHARGED_v0_DERIVATION_GRADE`,
+- bounded inevitability synchronized to `DISCHARGED_v0_BOUNDED` with dedicated theorem-body inevitability gate closure pinned.
