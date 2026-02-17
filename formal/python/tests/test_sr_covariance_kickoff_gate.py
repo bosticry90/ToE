@@ -219,6 +219,36 @@ SR_CYCLE43_ARTIFACT_PATH = (
     / "output"
     / "sr_covariance_assumption_minimization_discharge_theorem_surface_lock_cycle43_v0.json"
 )
+SR_CYCLE44_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "sr_covariance_assumption_robustness_discharge_surface_entry_lock_cycle44_v0.json"
+)
+SR_CYCLE45_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "sr_covariance_assumption_robustness_discharge_theorem_surface_lock_cycle45_v0.json"
+)
+SR_CYCLE46_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "sr_covariance_assumption_negctrl_discharge_surface_entry_lock_cycle46_v0.json"
+)
+SR_CYCLE47_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "sr_covariance_assumption_negctrl_discharge_theorem_surface_lock_cycle47_v0.json"
+)
+SR_CYCLE48_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "sr_covariance_assumption_minimization_discharge_package_freeze_lock_cycle48_v0.json"
+)
 
 
 def _read(path: Path) -> str:
@@ -1065,6 +1095,59 @@ def test_sr_cycle43_kickoff_tokens_are_pinned_in_target_and_state() -> None:
     for token in required_tokens:
         assert token in target_text, f"Missing SR cycle-43 token in target: {token}"
         assert token in state_text, f"Missing SR cycle-43 token in state: {token}"
+
+
+def test_sr_cycle44_to_cycle48_kickoff_tokens_are_pinned_in_target_and_state() -> None:
+    target_text = _read(SR_TARGET_PATH)
+    state_text = _read(STATE_PATH)
+
+    cycle_token_sets = {
+        "44": [
+            "TARGET-SR-COV-MICRO-44-ROBUSTNESS-DISCHARGE-SURFACE-ENTRY-LOCK-v0",
+            "SR_COVARIANCE_ASSUMPTION_ROBUSTNESS_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE44_PHASE3_ROBUSTNESS_ENTRY_SURFACE_PINNED_NONCLAIM",
+            "SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+            "SR_COVARIANCE_PROGRESS_CYCLE44_v0: PHASE3_ROBUSTNESS_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED",
+            "SR_COVARIANCE_CYCLE44_ARTIFACT_v0: sr_covariance_assumption_robustness_discharge_surface_entry_lock_cycle44_v0",
+            "formal/output/sr_covariance_assumption_robustness_discharge_surface_entry_lock_cycle44_v0.json",
+        ],
+        "45": [
+            "TARGET-SR-COV-MICRO-45-ROBUSTNESS-DISCHARGE-THEOREM-SURFACE-LOCK-v0",
+            "SR_COVARIANCE_ASSUMPTION_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE45_PHASE3_ROBUSTNESS_THEOREM_SURFACE_PINNED_NONCLAIM",
+            "SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+            "SR_COVARIANCE_PROGRESS_CYCLE45_v0: PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED",
+            "SR_COVARIANCE_CYCLE45_ARTIFACT_v0: sr_covariance_assumption_robustness_discharge_theorem_surface_lock_cycle45_v0",
+            "formal/output/sr_covariance_assumption_robustness_discharge_theorem_surface_lock_cycle45_v0.json",
+        ],
+        "46": [
+            "TARGET-SR-COV-MICRO-46-NEGCTRL-DISCHARGE-SURFACE-ENTRY-LOCK-v0",
+            "SR_COVARIANCE_ASSUMPTION_NEGCTRL_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE46_PHASE3_NEGCTRL_ENTRY_SURFACE_PINNED_NONCLAIM",
+            "SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+            "SR_COVARIANCE_PROGRESS_CYCLE46_v0: PHASE3_NEGCTRL_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED",
+            "SR_COVARIANCE_CYCLE46_ARTIFACT_v0: sr_covariance_assumption_negctrl_discharge_surface_entry_lock_cycle46_v0",
+            "formal/output/sr_covariance_assumption_negctrl_discharge_surface_entry_lock_cycle46_v0.json",
+        ],
+        "47": [
+            "TARGET-SR-COV-MICRO-47-NEGCTRL-DISCHARGE-THEOREM-SURFACE-LOCK-v0",
+            "SR_COVARIANCE_ASSUMPTION_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE47_PHASE3_NEGCTRL_THEOREM_SURFACE_PINNED_NONCLAIM",
+            "SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+            "SR_COVARIANCE_PROGRESS_CYCLE47_v0: PHASE3_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED",
+            "SR_COVARIANCE_CYCLE47_ARTIFACT_v0: sr_covariance_assumption_negctrl_discharge_theorem_surface_lock_cycle47_v0",
+            "formal/output/sr_covariance_assumption_negctrl_discharge_theorem_surface_lock_cycle47_v0.json",
+        ],
+        "48": [
+            "TARGET-SR-COV-MICRO-48-ASSUMPTION-MINIMIZATION-DISCHARGE-PACKAGE-FREEZE-LOCK-v0",
+            "SR_COVARIANCE_ASSUMPTION_MINIMIZATION_DISCHARGE_PACKAGE_FREEZE_LOCK_v0: CYCLE48_PHASE3_PACKAGE_FREEZE_PINNED_NONCLAIM",
+            "SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM",
+            "SR_COVARIANCE_PROGRESS_CYCLE48_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_PACKAGE_FREEZE_LOCK_TOKEN_PINNED",
+            "SR_COVARIANCE_CYCLE48_ARTIFACT_v0: sr_covariance_assumption_minimization_discharge_package_freeze_lock_cycle48_v0",
+            "formal/output/sr_covariance_assumption_minimization_discharge_package_freeze_lock_cycle48_v0.json",
+        ],
+    }
+
+    for cycle, tokens in cycle_token_sets.items():
+        for token in tokens:
+            assert token in target_text, f"Missing SR cycle-{cycle} token in target: {token}"
+            assert token in state_text, f"Missing SR cycle-{cycle} token in state: {token}"
 
 
 def test_sr_cycle1_artifact_schema_and_scope_are_locked() -> None:
@@ -3074,3 +3157,74 @@ def test_sr_cycle43_artifact_schema_and_scope_are_locked() -> None:
         determinism.get("content_fingerprint")
         == "sr_covariance_assumption_minimization_discharge_theorem_surface_lock_cycle43_v0"
     )
+
+
+def test_sr_cycle44_to_cycle48_artifact_schema_and_scope_are_locked() -> None:
+    artifact_cases = [
+        (
+            SR_CYCLE44_ARTIFACT_PATH,
+            "sr_covariance_assumption_robustness_discharge_surface_entry_lock_cycle44_v0",
+            "CYCLE-044",
+            "TARGET-SR-COV-MICRO-44-ROBUSTNESS-DISCHARGE-SURFACE-ENTRY-LOCK-v0",
+            "SR_COVARIANCE_ASSUMPTION_ROBUSTNESS_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE44_PHASE3_ROBUSTNESS_ENTRY_SURFACE_PINNED_NONCLAIM",
+            "SR_COVARIANCE_PROGRESS_CYCLE44_v0: PHASE3_ROBUSTNESS_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED",
+        ),
+        (
+            SR_CYCLE45_ARTIFACT_PATH,
+            "sr_covariance_assumption_robustness_discharge_theorem_surface_lock_cycle45_v0",
+            "CYCLE-045",
+            "TARGET-SR-COV-MICRO-45-ROBUSTNESS-DISCHARGE-THEOREM-SURFACE-LOCK-v0",
+            "SR_COVARIANCE_ASSUMPTION_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE45_PHASE3_ROBUSTNESS_THEOREM_SURFACE_PINNED_NONCLAIM",
+            "SR_COVARIANCE_PROGRESS_CYCLE45_v0: PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED",
+        ),
+        (
+            SR_CYCLE46_ARTIFACT_PATH,
+            "sr_covariance_assumption_negctrl_discharge_surface_entry_lock_cycle46_v0",
+            "CYCLE-046",
+            "TARGET-SR-COV-MICRO-46-NEGCTRL-DISCHARGE-SURFACE-ENTRY-LOCK-v0",
+            "SR_COVARIANCE_ASSUMPTION_NEGCTRL_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE46_PHASE3_NEGCTRL_ENTRY_SURFACE_PINNED_NONCLAIM",
+            "SR_COVARIANCE_PROGRESS_CYCLE46_v0: PHASE3_NEGCTRL_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED",
+        ),
+        (
+            SR_CYCLE47_ARTIFACT_PATH,
+            "sr_covariance_assumption_negctrl_discharge_theorem_surface_lock_cycle47_v0",
+            "CYCLE-047",
+            "TARGET-SR-COV-MICRO-47-NEGCTRL-DISCHARGE-THEOREM-SURFACE-LOCK-v0",
+            "SR_COVARIANCE_ASSUMPTION_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE47_PHASE3_NEGCTRL_THEOREM_SURFACE_PINNED_NONCLAIM",
+            "SR_COVARIANCE_PROGRESS_CYCLE47_v0: PHASE3_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED",
+        ),
+        (
+            SR_CYCLE48_ARTIFACT_PATH,
+            "sr_covariance_assumption_minimization_discharge_package_freeze_lock_cycle48_v0",
+            "CYCLE-048",
+            "TARGET-SR-COV-MICRO-48-ASSUMPTION-MINIMIZATION-DISCHARGE-PACKAGE-FREEZE-LOCK-v0",
+            "SR_COVARIANCE_ASSUMPTION_MINIMIZATION_DISCHARGE_PACKAGE_FREEZE_LOCK_v0: CYCLE48_PHASE3_PACKAGE_FREEZE_PINNED_NONCLAIM",
+            "SR_COVARIANCE_PROGRESS_CYCLE48_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_PACKAGE_FREEZE_LOCK_TOKEN_PINNED",
+        ),
+    ]
+
+    for artifact_path, artifact_id, cycle, micro_target, gate_token, progress_token in artifact_cases:
+        payload = json.loads(_read(artifact_path))
+
+        assert payload.get("artifact_id") == artifact_id
+        assert payload.get("target_id") == "TARGET-SR-COV-PLAN"
+        assert payload.get("subtarget_id") == "TARGET-SR-COV-THEOREM-SURFACE-PLAN"
+        assert payload.get("derivation_gate_target_id") == "TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN"
+        assert payload.get("enforcement_roadmap_target_id") == "TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN"
+        assert payload.get("pillar") == "PILLAR-SR"
+        assert payload.get("cycle") == cycle
+        assert payload.get("micro_target") == micro_target
+        assert payload.get("scope") == "planning_only_non_claim_v0"
+
+        witness_tokens = payload.get("witness_tokens")
+        assert isinstance(witness_tokens, list) and witness_tokens, (
+            f"witness_tokens must be a non-empty list in SR {cycle} artifact."
+        )
+        assert gate_token in witness_tokens
+        assert progress_token in witness_tokens
+
+        determinism = payload.get("determinism")
+        assert isinstance(determinism, dict), "determinism block is required."
+        assert determinism.get("schema_version") == "v0"
+        assert determinism.get("fingerprint_method") == "literal-json-lock"
+        assert determinism.get("content_fingerprint") == artifact_id
