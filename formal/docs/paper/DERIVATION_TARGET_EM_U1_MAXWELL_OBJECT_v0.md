@@ -10,9 +10,108 @@ Classification:
 - `P-POLICY`
 
 Purpose:
-- Freeze one planning-only EM target for U(1)/Maxwell-structure recovery posture.
+- Start the EM pillar under the frozen architecture contract.
 - Keep assumptions explicit and bounded while preventing scope drift.
-- Define the first nontrivial EM object set to unlock immediately after GR01 derivation-grade closure.
+- Define the first nontrivial EM object set and kickoff sequence under governance-enforced phase discipline.
+
+Adjudication token:
+- `EM_U1_MAXWELL_ADJUDICATION: NOT_YET_DISCHARGED`
+
+## Architecture phase coverage (v1)
+
+- `TARGET_DEFINITION`
+- `ASSUMPTION_FREEZE`
+- `CANONICAL_ROUTE`
+- `ANTI_SHORTCUT`
+- `COUNTERFACTUAL`
+- `INDEPENDENT_NECESSITY`
+- `HARDENING`
+- `BOUNDED_SCOPE`
+- `DRIFT_GATES`
+- `ADJUDICATION_SYNC`
+
+## TARGET section
+
+- Canonical EM kickoff target remains:
+  - `TARGET-EM-U1-PLAN`
+- Scope is a bounded U(1)/Maxwell object lane with explicit theorem-surface dependencies.
+
+## ASSUMPTION FREEZE section
+
+- Canonical assumption classes are explicit:
+  - `MATH|DEF|POLICY|SCOPE`
+- Initial bounded assumption bundle token:
+  - `EMU1Assumptions_v0`
+- Required core assumptions:
+  - typed gauge-potential carrier (`A_mu`) and field-strength construction (`F_munu`),
+  - typed source/current carrier (`J_mu`) with continuity assumptions,
+  - bounded-domain and non-radiative simplification boundaries are explicit where used.
+
+## CANONICAL ROUTE section
+
+- Canonical route is object-first and theorem-surface driven:
+  - `A_mu` object -> `F_munu` construction -> source coupling -> bounded Maxwell-form contract.
+- Canonical route must remain explicit and assumption-threaded.
+- Compatibility wrappers are allowed only as non-authoritative shells.
+
+## ANTI_SHORTCUT section
+
+- Forbidden shortcut classes:
+  - direct insertion of Maxwell equations without declared object construction chain,
+  - implicit gauge-fixing assumptions not represented in the assumption bundle,
+  - hidden source/current closure assumptions.
+- Required anti-shortcut control token:
+  - `EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED`
+
+## COUNTERFACTUAL ROUTE section
+
+- Counterfactual row requirements are explicit:
+  - removing the gauge-contract assumptions breaks closure of the bounded theorem-surface target,
+  - removing continuity assumptions breaks source-coupled closure obligations.
+- Counterfactual scaffold token:
+  - `EM_U1_COUNTERFACTUAL_SCaffold_v0: REQUIRED_ASSUMPTION_REMOVAL_BREAKS_CLOSURE`
+
+## INDEPENDENT NECESSITY ROUTE section
+
+- Structural classification requirement:
+  - `EM_U1_INDEPENDENT_NECESSITY_CLASS_v0: OBJECT_CONSTRUCTIVE_ROUTE`
+- Independent-necessity route must be theorem-linked and non-circular.
+
+## HARDENING section
+
+- Hardening must include:
+  - robustness row templates,
+  - negative-control row templates,
+  - explicit failure-informative criteria on bounded theorem surfaces.
+- Hardening scaffold token:
+  - `EM_U1_HARDENING_SCAFFOLD_v0: ROBUSTNESS_NEGCTRL_TEMPLATES_PINNED`
+
+## BOUNDED SCOPE section
+
+- non-claim boundary is explicit and binding for this artifact.
+- bounded U(1)/Maxwell object scope only.
+- no non-Abelian gauge completion claim.
+- no Standard Model completion claim.
+- no external truth claim.
+
+## DRIFT_GATES section
+
+- Required drift gates:
+  - architecture phase contract must remain exact,
+  - assumption class set must remain explicit and bounded,
+  - adjudication/token/status drift must remain lock-governed.
+- Reopen trigger:
+  - route mutation, hidden assumptions, or scope expansion without governance update.
+
+## ADJUDICATION_SYNC section
+
+- Canonical adjudication token (planning state):
+  - `EM_U1_MAXWELL_ADJUDICATION: NOT_YET_DISCHARGED`
+- Promotion to discharge requires synchronized update across:
+  - target doc,
+  - `State_of_the_Theory.md`,
+  - `RESULTS_TABLE_v0.md`,
+  - gate tests/artifacts.
 
 Non-claim boundary:
 - planning-only artifact.
@@ -39,6 +138,33 @@ Canonical EM object checklist (v0 planning):
    - explicit theorem-shaped invariance contract under U(1) gauge action.
 5. Falsifiability hook:
    - explicit statement of what would invalidate this EM posture in scoped assumptions.
+
+Cycle-001 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-01-OBJECT-SCAFFOLD-v0`
+   - scope:
+     - planning-only typed-object scaffold for EM pillar activation under architecture-v1.
+   - cycle token:
+     - `EM_U1_PROGRESS_v0: CYCLE1_OBJECT_SCAFFOLD_TOKEN_PINNED`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
+Cycle-002 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-02-GAUGE-CONTRACT-SURFACE-v0`
+   - scope:
+     - planning-only gauge-contract theorem-surface scaffold under explicit assumptions.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE2_v0: GAUGE_CONTRACT_SURFACE_TOKEN_PINNED`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
+Cycle-003 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-03-PREDISCHARGE-GATE-BUNDLE-v0`
+   - scope:
+     - planning-only pre-discharge gate bundle for EM bounded object lane.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE3_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
 
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.

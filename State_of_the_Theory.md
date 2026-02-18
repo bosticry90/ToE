@@ -37,6 +37,23 @@ Governance architecture-freeze checkpoint (2026-02-18):
 - Enforcement posture:
   - governance drift now fails CI unless explicitly versioned and synchronized.
 
+EM pillar architecture kickoff checkpoint (2026-02-18):
+- EM target is now architecture-v1 structured and phase-synchronized:
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md`
+  - `EM_U1_MAXWELL_ADJUDICATION: NOT_YET_DISCHARGED`
+  - `EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED`
+- EM kickoff micro-target tokens are pinned:
+  - `EM_U1_PROGRESS_v0: CYCLE1_OBJECT_SCAFFOLD_TOKEN_PINNED`
+  - `EM_U1_PROGRESS_CYCLE2_v0: GAUGE_CONTRACT_SURFACE_TOKEN_PINNED`
+  - `EM_U1_PROGRESS_CYCLE3_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED`
+- EM pillar lane activation is explicit in roadmap:
+  - `formal/docs/paper/PHYSICS_ROADMAP_v0.md`
+  - `PILLAR-EM` status: `ACTIVE`
+- Scope posture remains bounded and non-claim:
+  - no non-Abelian completion claim,
+  - no Standard Model completion claim,
+  - no external truth claim.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.
