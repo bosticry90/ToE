@@ -145,6 +145,10 @@ Cycle-001 kickoff micro-targets (now pinned):
      - planning-only typed-object scaffold for EM pillar activation under architecture-v1.
    - cycle token:
      - `EM_U1_PROGRESS_v0: CYCLE1_OBJECT_SCAFFOLD_TOKEN_PINNED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_01_OBJECT_SCAFFOLD_v0.md`
+   - lean scaffold pointer:
+     - `formal/toe_formal/ToeFormal/EM/U1/ObjectScaffold.lean`
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 

@@ -54,6 +54,21 @@ EM pillar architecture kickoff checkpoint (2026-02-18):
   - no Standard Model completion claim,
   - no external truth claim.
 
+EM Cycle-001 object scaffold checkpoint (2026-02-18):
+- Cycle-001 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-01-OBJECT-SCAFFOLD-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_01_OBJECT_SCAFFOLD_v0.md`
+- Typed object scaffold module is pinned:
+  - `formal/toe_formal/ToeFormal/EM/U1/ObjectScaffold.lean`
+  - object surfaces: `A_mu`, `F_munu`, `J_mu`, and continuity assumption surface.
+- Cycle-001 progress/adjudication tokens are pinned:
+  - `EM_U1_PROGRESS_v0: CYCLE1_OBJECT_SCAFFOLD_TOKEN_PINNED`
+  - `EM_U1_MICRO01_OBJECT_SCAFFOLD_ADJUDICATION: NOT_YET_DISCHARGED`
+- Cycle-001 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro01_template_and_tokens.py`
+- Scope boundary remains strict:
+  - object/contract scaffold only, bounded and non-claim, no dynamics-layer closure attempt in Cycle-001.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.
