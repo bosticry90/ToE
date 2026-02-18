@@ -33,6 +33,8 @@ Non-claim boundary:
 | `ASM-QM-EVOL-STR-01` | `STRUCTURAL` | `T-CONDITIONAL` | `qm_evolution_under_contract_assumptions` | Typed evolution context `EvolutionContext Time State` is explicit in theorem signature. | `formal/toe_formal/ToeFormal/QM/EvolutionContract.lean` |
 | `ASM-QM-EVOL-STR-02` | `STRUCTURAL` | `T-CONDITIONAL` | `qm_evolution_under_contract_assumptions` | Explicit time binder `t : Time` and typed states `QMState State` are explicit theorem inputs. | `formal/toe_formal/ToeFormal/QM/EvolutionContract.lean` |
 | `ASM-QM-EVOL-APP-01` | `APPROXIMATION` | `P-POLICY` | `TOE-QM-01` | Contract theorem remains non-derivational (no Schrodinger derivation claim, no unitary recovery claim). | `formal/docs/paper/DERIVATION_TARGET_QM_EVOLUTION_OBJECT_v0.md` |
+| `ASM-EM-U1-STR-01` | `STRUCTURAL` | `T-CONDITIONAL` | `em_u1_field_strength_invariance_under_contract_assumptions_v0` | Differential bundle uses explicit partial-vector additivity over componentwise sums in the Cycle-002 theorem route. | `formal/toe_formal/ToeFormal/EM/U1/ObjectScaffold.lean` |
+| `ASM-EM-U1-SYM-01` | `SYMMETRY` | `T-CONDITIONAL` | `em_u1_field_strength_invariance_under_contract_assumptions_v0` | Gauge-scalar second-partial commutativity is explicit for cancellation in the Cycle-002 invariance theorem route. | `formal/toe_formal/ToeFormal/EM/U1/ObjectScaffold.lean` |
 | `ASM-GR01-STR-01` | `STRUCTURAL` | `T-CONDITIONAL` | `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions` | Discrete/operator transport lemma `OperatorToDiscreteResidual` is theorem-level bookkeeping support. | `formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean` |
 | `ASM-GR01-REG-01` | `REGIME` | `T-CONDITIONAL` | `gr01_regime_predicate_under_uniform_bound` | Weak-field regime is theorem-conditional via explicit bound predicate (`WeakFieldRegimePredicate`). | `formal/toe_formal/ToeFormal/Variational/GR01BridgePromotion.lean` |
 | `ASM-GR01-REG-02` | `REGIME` | `P-POLICY` | `gr01_discrete_residual_from_bridge_promotion_chain` | Uniform weak-field bound for potential/source is explicit in bridge-promotion theorem assumptions. | `formal/toe_formal/ToeFormal/Variational/GR01BridgePromotion.lean` |
@@ -90,6 +92,9 @@ End-to-end closure target pointer:
   - `ASM-QM-EVOL-STR-01`
   - `ASM-QM-EVOL-STR-02`
   - `ASM-QM-EVOL-APP-01`
+- `em_u1_field_strength_invariance_under_contract_assumptions_v0`:
+  - `ASM-EM-U1-STR-01`
+  - `ASM-EM-U1-SYM-01`
 - `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions`:
   - `ASM-GR01-STR-01`
   - `ASM-GR01-REG-01`

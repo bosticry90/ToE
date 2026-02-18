@@ -116,6 +116,18 @@ def emU1GaugeContractDerivationTokenV0 : String :=
 def emU1PredischargeGateBundleTokenV0 : String :=
   "EM_U1_PROGRESS_CYCLE3_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED"
 
+def emU1ObjectRouteArtifactUniquenessGateTokenV0 : String :=
+  "EM_U1_OBJECT_ROUTE_ARTIFACT_UNIQUENESS_GATE_v0: SINGLE_AUTHORITATIVE_ARTIFACT_SET_REQUIRED"
+
+def emU1RoadmapRowUniquenessGateTokenV0 : String :=
+  "EM_U1_ROADMAP_ROW_UNIQUENESS_GATE_v0: SINGLE_ACTIVE_ROW_REQUIRED"
+
+def emU1AssumptionRegistrySyncGateTokenV0 : String :=
+  "EM_U1_ASSUMPTION_REGISTRY_SYNC_GATE_v0: DIFFERENTIAL_BUNDLE_IDS_REQUIRED"
+
+def emU1MaxwellFormAuthorizationGateTokenV0 : String :=
+  "EM_U1_MAXWELL_FORM_AUTHORIZATION_GATE_v0: LOCKED_UNTIL_CYCLE3_ADJUDICATION_FLIP"
+
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
 
@@ -137,6 +149,19 @@ theorem em_u1_cycle002_token_binding_stub_v0 :
       "EM_U1_GAUGE_CONTRACT_ASSUMPTION_SURFACE_v0: COMMUTATIVITY_LINEARITY_PINNED" ∧
     emU1GaugeContractDerivationTokenV0 =
       "EM_U1_GAUGE_CONTRACT_DERIVATION_TOKEN_v0: FIELD_STRENGTH_INVARIANCE_FROM_DIFFERENTIAL_BUNDLE_ASSUMPTIONS" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle003_token_binding_stub_v0 :
+    emU1PredischargeGateBundleTokenV0 =
+      "EM_U1_PROGRESS_CYCLE3_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED" ∧
+    emU1ObjectRouteArtifactUniquenessGateTokenV0 =
+      "EM_U1_OBJECT_ROUTE_ARTIFACT_UNIQUENESS_GATE_v0: SINGLE_AUTHORITATIVE_ARTIFACT_SET_REQUIRED" ∧
+    emU1RoadmapRowUniquenessGateTokenV0 =
+      "EM_U1_ROADMAP_ROW_UNIQUENESS_GATE_v0: SINGLE_ACTIVE_ROW_REQUIRED" ∧
+    emU1AssumptionRegistrySyncGateTokenV0 =
+      "EM_U1_ASSUMPTION_REGISTRY_SYNC_GATE_v0: DIFFERENTIAL_BUNDLE_IDS_REQUIRED" ∧
+    emU1MaxwellFormAuthorizationGateTokenV0 =
+      "EM_U1_MAXWELL_FORM_AUTHORIZATION_GATE_v0: LOCKED_UNTIL_CYCLE3_ADJUDICATION_FLIP" := by
   repeat' constructor <;> rfl
 
 end U1

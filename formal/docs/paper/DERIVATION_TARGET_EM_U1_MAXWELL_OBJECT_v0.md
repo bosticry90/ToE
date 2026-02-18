@@ -175,6 +175,23 @@ Cycle-003 kickoff micro-targets (now pinned):
      - planning-only pre-discharge gate bundle for EM bounded object lane.
    - cycle token:
      - `EM_U1_PROGRESS_CYCLE3_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED`
+   - adjudication token:
+     - `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: NOT_YET_DISCHARGED`
+   - object-route uniqueness gate token:
+     - `EM_U1_OBJECT_ROUTE_ARTIFACT_UNIQUENESS_GATE_v0: SINGLE_AUTHORITATIVE_ARTIFACT_SET_REQUIRED`
+   - roadmap-row uniqueness gate token:
+     - `EM_U1_ROADMAP_ROW_UNIQUENESS_GATE_v0: SINGLE_ACTIVE_ROW_REQUIRED`
+   - assumption-registry sync gate token:
+     - `EM_U1_ASSUMPTION_REGISTRY_SYNC_GATE_v0: DIFFERENTIAL_BUNDLE_IDS_REQUIRED`
+   - Maxwell-form authorization gate token:
+     - `EM_U1_MAXWELL_FORM_AUTHORIZATION_GATE_v0: LOCKED_UNTIL_CYCLE3_ADJUDICATION_FLIP`
+   - required assumption registry IDs:
+     - `ASM-EM-U1-STR-01`
+     - `ASM-EM-U1-SYM-01`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_03_PREDISCHARGE_GATE_BUNDLE_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro03_predischarge_gate_bundle.py`
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 

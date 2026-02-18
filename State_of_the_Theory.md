@@ -85,6 +85,25 @@ EM Cycle-002 gauge-contract theorem-surface checkpoint (2026-02-18):
 - Scope boundary remains strict:
   - theorem-surface scaffold only, bounded and non-claim, no Maxwell-equation-form dynamics closure in Cycle-002.
 
+EM Cycle-003 pre-discharge gate-bundle checkpoint (2026-02-18):
+- Cycle-003 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-03-PREDISCHARGE-GATE-BUNDLE-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_03_PREDISCHARGE_GATE_BUNDLE_v0.md`
+- Cycle-003 gate tokens are explicit:
+  - `EM_U1_OBJECT_ROUTE_ARTIFACT_UNIQUENESS_GATE_v0: SINGLE_AUTHORITATIVE_ARTIFACT_SET_REQUIRED`
+  - `EM_U1_ROADMAP_ROW_UNIQUENESS_GATE_v0: SINGLE_ACTIVE_ROW_REQUIRED`
+  - `EM_U1_ASSUMPTION_REGISTRY_SYNC_GATE_v0: DIFFERENTIAL_BUNDLE_IDS_REQUIRED`
+  - `EM_U1_MAXWELL_FORM_AUTHORIZATION_GATE_v0: LOCKED_UNTIL_CYCLE3_ADJUDICATION_FLIP`
+  - `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: NOT_YET_DISCHARGED`
+- Differential-bundle assumptions are now registry-bound:
+  - `ASM-EM-U1-STR-01`
+  - `ASM-EM-U1-SYM-01`
+  - pointer: `formal/docs/paper/ASSUMPTION_REGISTRY_v1.md`
+- Cycle-003 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro03_predischarge_gate_bundle.py`
+- Scope boundary remains strict:
+  - pre-discharge governance gates only, bounded and non-claim, no Maxwell-equation-form dynamics attempt authorized before adjudication flip.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.
