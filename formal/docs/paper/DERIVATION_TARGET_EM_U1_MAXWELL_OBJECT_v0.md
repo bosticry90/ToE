@@ -158,6 +158,14 @@ Cycle-002 kickoff micro-targets (now pinned):
      - planning-only gauge-contract theorem-surface scaffold under explicit assumptions.
    - cycle token:
      - `EM_U1_PROGRESS_CYCLE2_v0: GAUGE_CONTRACT_SURFACE_TOKEN_PINNED`
+   - assumption-surface token:
+     - `EM_U1_GAUGE_CONTRACT_ASSUMPTION_SURFACE_v0: COMMUTATIVITY_LINEARITY_PINNED`
+   - derivation token:
+     - `EM_U1_GAUGE_CONTRACT_DERIVATION_TOKEN_v0: FIELD_STRENGTH_INVARIANCE_FROM_DIFFERENTIAL_BUNDLE_ASSUMPTIONS`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_02_GAUGE_CONTRACT_SURFACE_v0.md`
+   - lean scaffold pointer:
+     - `formal/toe_formal/ToeFormal/EM/U1/ObjectScaffold.lean`
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 

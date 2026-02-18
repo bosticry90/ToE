@@ -38,6 +38,16 @@ structure DifferentialBundle where
   partialVector : (SpaceTimeIndex → ℝ) → SpaceTimeIndex → SpaceTimeIndex → ℝ
   partialScalar : (SpaceTimeIndex → ℝ) → SpaceTimeIndex → ℝ
 
+structure DifferentialBundleGaugeAssumptions (d : DifferentialBundle) where
+  partialVector_add :
+    ∀ (u v : SpaceTimeIndex → ℝ) (μ ν : SpaceTimeIndex),
+      d.partialVector (fun ρ => u ρ + v ρ) μ ν =
+        d.partialVector u μ ν + d.partialVector v μ ν
+  scalar_second_partial_comm :
+    ∀ (χ : SpaceTimeIndex → ℝ) (μ ν : SpaceTimeIndex),
+      d.partialVector (fun ρ => d.partialScalar χ ρ) μ ν =
+        d.partialVector (fun ρ => d.partialScalar χ ρ) ν μ
+
 def gaugeTransform
     (d : DifferentialBundle)
     (A : GaugePotential)
@@ -66,15 +76,42 @@ theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
     (A : GaugePotential)
     (χ : GaugeScalar)
-    (hGaugeInvariant : gaugeInvarianceContractSurface d A χ) :
-    gaugeInvarianceContractSurface d A χ :=
-  hGaugeInvariant
+    (hDiff : DifferentialBundleGaugeAssumptions d) :
+    gaugeInvarianceContractSurface d A χ := by
+  intro μ ν
+  let dχ : SpaceTimeIndex → ℝ := fun ρ => d.partialScalar χ.value ρ
+  have hμν := hDiff.partialVector_add A.component dχ μ ν
+  have hνμ := hDiff.partialVector_add A.component dχ ν μ
+  have hcomm := hDiff.scalar_second_partial_comm χ.value μ ν
+  have hμν' :
+      d.partialVector (fun ρ => A.component ρ + d.partialScalar χ.value ρ) μ ν =
+        d.partialVector A.component μ ν +
+          d.partialVector (fun ρ => d.partialScalar χ.value ρ) μ ν := by
+    simpa [dχ] using hμν
+  have hνμ' :
+      d.partialVector (fun ρ => A.component ρ + d.partialScalar χ.value ρ) ν μ =
+        d.partialVector A.component ν μ +
+          d.partialVector (fun ρ => d.partialScalar χ.value ρ) ν μ := by
+    simpa [dχ] using hνμ
+  have hcomm' :
+      d.partialVector (fun ρ => d.partialScalar χ.value ρ) μ ν =
+        d.partialVector (fun ρ => d.partialScalar χ.value ρ) ν μ := by
+    simpa using hcomm
+  dsimp [fieldStrengthOfPotential, gaugeTransform]
+  rw [hμν', hνμ', hcomm']
+  ring
 
 def emU1ObjectScaffoldTokenV0 : String :=
   "EM_U1_PROGRESS_v0: CYCLE1_OBJECT_SCAFFOLD_TOKEN_PINNED"
 
 def emU1GaugeContractSurfaceTokenV0 : String :=
   "EM_U1_PROGRESS_CYCLE2_v0: GAUGE_CONTRACT_SURFACE_TOKEN_PINNED"
+
+def emU1GaugeContractAssumptionSurfaceTokenV0 : String :=
+  "EM_U1_GAUGE_CONTRACT_ASSUMPTION_SURFACE_v0: COMMUTATIVITY_LINEARITY_PINNED"
+
+def emU1GaugeContractDerivationTokenV0 : String :=
+  "EM_U1_GAUGE_CONTRACT_DERIVATION_TOKEN_v0: FIELD_STRENGTH_INVARIANCE_FROM_DIFFERENTIAL_BUNDLE_ASSUMPTIONS"
 
 def emU1PredischargeGateBundleTokenV0 : String :=
   "EM_U1_PROGRESS_CYCLE3_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED"
@@ -91,6 +128,15 @@ theorem em_u1_cycle001_token_binding_stub_v0 :
       "EM_U1_PROGRESS_CYCLE3_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED" ∧
     emU1NoShortcutGuardTokenV0 =
       "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle002_token_binding_stub_v0 :
+    emU1GaugeContractSurfaceTokenV0 =
+      "EM_U1_PROGRESS_CYCLE2_v0: GAUGE_CONTRACT_SURFACE_TOKEN_PINNED" ∧
+    emU1GaugeContractAssumptionSurfaceTokenV0 =
+      "EM_U1_GAUGE_CONTRACT_ASSUMPTION_SURFACE_v0: COMMUTATIVITY_LINEARITY_PINNED" ∧
+    emU1GaugeContractDerivationTokenV0 =
+      "EM_U1_GAUGE_CONTRACT_DERIVATION_TOKEN_v0: FIELD_STRENGTH_INVARIANCE_FROM_DIFFERENTIAL_BUNDLE_ASSUMPTIONS" := by
   repeat' constructor <;> rfl
 
 end U1

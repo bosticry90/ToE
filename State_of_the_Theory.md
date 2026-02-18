@@ -69,6 +69,22 @@ EM Cycle-001 object scaffold checkpoint (2026-02-18):
 - Scope boundary remains strict:
   - object/contract scaffold only, bounded and non-claim, no dynamics-layer closure attempt in Cycle-001.
 
+EM Cycle-002 gauge-contract theorem-surface checkpoint (2026-02-18):
+- Cycle-002 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-02-GAUGE-CONTRACT-SURFACE-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_02_GAUGE_CONTRACT_SURFACE_v0.md`
+- Differential-bundle assumption surface is explicit:
+  - `EM_U1_GAUGE_CONTRACT_ASSUMPTION_SURFACE_v0: COMMUTATIVITY_LINEARITY_PINNED`
+- Gauge-contract derivation token is pinned:
+  - `EM_U1_GAUGE_CONTRACT_DERIVATION_TOKEN_v0: FIELD_STRENGTH_INVARIANCE_FROM_DIFFERENTIAL_BUNDLE_ASSUMPTIONS`
+- Lean theorem surface is upgraded from tautology to assumption-derived closure:
+  - `em_u1_field_strength_invariance_under_contract_assumptions_v0`
+  - pointer: `formal/toe_formal/ToeFormal/EM/U1/ObjectScaffold.lean`
+- Cycle-002 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro02_gauge_contract_surface.py`
+- Scope boundary remains strict:
+  - theorem-surface scaffold only, bounded and non-claim, no Maxwell-equation-form dynamics closure in Cycle-002.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.
