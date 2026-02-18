@@ -128,6 +128,15 @@ def emU1AssumptionRegistrySyncGateTokenV0 : String :=
 def emU1MaxwellFormAuthorizationGateTokenV0 : String :=
   "EM_U1_MAXWELL_FORM_AUTHORIZATION_GATE_v0: LOCKED_UNTIL_CYCLE3_ADJUDICATION_FLIP"
 
+def emU1MaxwellFormAttemptPackageTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE4_v0: MAXWELL_FORM_ATTEMPT_PACKAGE_TOKEN_PINNED"
+
+def emU1MaxwellFormShapeGateTokenV0 : String :=
+  "EM_U1_MAXWELL_FORM_SHAPE_GATE_v0: AUTHORIZED_PRESENCE_ONLY"
+
+def emU1MaxwellFormLocalizationGateTokenV0 : String :=
+  "EM_U1_MAXWELL_FORM_LOCALIZATION_GATE_v0: CYCLE4_ARTIFACT_ONLY"
+
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
 
@@ -162,6 +171,15 @@ theorem em_u1_cycle003_token_binding_stub_v0 :
       "EM_U1_ASSUMPTION_REGISTRY_SYNC_GATE_v0: DIFFERENTIAL_BUNDLE_IDS_REQUIRED" ∧
     emU1MaxwellFormAuthorizationGateTokenV0 =
       "EM_U1_MAXWELL_FORM_AUTHORIZATION_GATE_v0: LOCKED_UNTIL_CYCLE3_ADJUDICATION_FLIP" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle004_token_binding_stub_v0 :
+    emU1MaxwellFormAttemptPackageTokenV0 =
+      "EM_U1_PROGRESS_CYCLE4_v0: MAXWELL_FORM_ATTEMPT_PACKAGE_TOKEN_PINNED" ∧
+    emU1MaxwellFormShapeGateTokenV0 =
+      "EM_U1_MAXWELL_FORM_SHAPE_GATE_v0: AUTHORIZED_PRESENCE_ONLY" ∧
+    emU1MaxwellFormLocalizationGateTokenV0 =
+      "EM_U1_MAXWELL_FORM_LOCALIZATION_GATE_v0: CYCLE4_ARTIFACT_ONLY" := by
   repeat' constructor <;> rfl
 
 end U1

@@ -94,7 +94,7 @@ EM Cycle-003 pre-discharge gate-bundle checkpoint (2026-02-18):
   - `EM_U1_ROADMAP_ROW_UNIQUENESS_GATE_v0: SINGLE_ACTIVE_ROW_REQUIRED`
   - `EM_U1_ASSUMPTION_REGISTRY_SYNC_GATE_v0: DIFFERENTIAL_BUNDLE_IDS_REQUIRED`
   - `EM_U1_MAXWELL_FORM_AUTHORIZATION_GATE_v0: LOCKED_UNTIL_CYCLE3_ADJUDICATION_FLIP`
-  - `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: NOT_YET_DISCHARGED`
+  - `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
 - Differential-bundle assumptions are now registry-bound:
   - `ASM-EM-U1-STR-01`
   - `ASM-EM-U1-SYM-01`
@@ -102,7 +102,23 @@ EM Cycle-003 pre-discharge gate-bundle checkpoint (2026-02-18):
 - Cycle-003 gate test is pinned:
   - `formal/python/tests/test_em_u1_micro03_predischarge_gate_bundle.py`
 - Scope boundary remains strict:
-  - pre-discharge governance gates only, bounded and non-claim, no Maxwell-equation-form dynamics attempt authorized before adjudication flip.
+  - pre-discharge governance gates only, bounded and non-claim, with Maxwell-form authorization now explicitly discharged conditional.
+
+EM Cycle-004 Maxwell-form attempt package checkpoint (2026-02-18):
+- Cycle-004 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-04-MAXWELL-FORM-ATTEMPT-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_04_MAXWELL_FORM_ATTEMPT_PACKAGE_v0.md`
+- Maxwell-form shape/localization tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE4_v0: MAXWELL_FORM_ATTEMPT_PACKAGE_TOKEN_PINNED`
+  - `EM_U1_MAXWELL_FORM_SHAPE_GATE_v0: AUTHORIZED_PRESENCE_ONLY`
+  - `EM_U1_MAXWELL_FORM_LOCALIZATION_GATE_v0: CYCLE4_ARTIFACT_ONLY`
+  - `EM_U1_MICRO04_MAXWELL_FORM_ATTEMPT_ADJUDICATION: NOT_YET_DISCHARGED`
+- Authorization prerequisite is explicit:
+  - `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
+- Cycle-004 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro04_maxwell_form_attempt_shape.py`
+- Scope boundary remains strict:
+  - Maxwell-form shape package only, bounded and non-claim, no theorem/dynamics closure promotion.
 
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:

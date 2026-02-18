@@ -12,10 +12,11 @@ Classification:
 Purpose:
 - Freeze Cycle-003 pre-discharge gate policy before any Maxwell-form attempt.
 - Enforce uniqueness of object-route artifacts and authoritative roadmap rowing.
-- Require explicit assumption-registry linkage for differential-bundle assumptions and keep Maxwell-form expressions locked until adjudication flip.
+- Require explicit assumption-registry linkage for differential-bundle assumptions and enforce Maxwell-form lock semantics through an explicit adjudication flip boundary.
+- Counterfactual controls remain explicit as a required part of this gate bundle.
 
 Adjudication token:
-- `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: NOT_YET_DISCHARGED`
+- `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
 
 ## Architecture phase coverage (v1)
 
@@ -35,8 +36,8 @@ Adjudication token:
 - Deliver a planning-only pre-discharge gate bundle for EM Cycle-003.
 - Scope boundary is explicit and binding from this section onward:
   - bounded/non-claim governance control only.
-- Gate objective:
-  - no Maxwell-form attempt is permitted until Cycle-003 adjudication state is explicitly flipped.
+- Gate objective (completed in this cycle):
+  - Maxwell-form attempt authorization is now gated to explicit Cycle-003 adjudication flip state.
 
 ## ASSUMPTION FREEZE section
 
@@ -66,8 +67,8 @@ Adjudication token:
   - `EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED`
 - Maxwell-form authorization gate token:
   - `EM_U1_MAXWELL_FORM_AUTHORIZATION_GATE_v0: LOCKED_UNTIL_CYCLE3_ADJUDICATION_FLIP`
-- Forbidden shortcut:
-  - introducing Maxwell-equation-form expressions while Cycle-003 adjudication is `NOT_YET_DISCHARGED`.
+- Authorization boundary:
+  - introducing Maxwell-equation-form expressions is only allowed after Cycle-003 adjudication is discharged.
 
 ## COUNTERFACTUAL ROUTE section
 
@@ -115,7 +116,7 @@ Adjudication token:
 - Cycle-003 progress token:
   - `EM_U1_PROGRESS_CYCLE3_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED`
 - Cycle-003 adjudication token:
-  - `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: NOT_YET_DISCHARGED`
+  - `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
 
 Deliverable pointers:
 - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md`

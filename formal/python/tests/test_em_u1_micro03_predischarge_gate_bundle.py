@@ -56,6 +56,15 @@ def _em_roadmap_row_cells(roadmap_text: str) -> list[str]:
     return cells
 
 
+def _extract_cycle3_adjudication_value(text: str) -> str:
+    m = re.search(
+        r"EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION:\s*`?([A-Za-z0-9_<>\-_]+)`?",
+        text,
+    )
+    assert m is not None, "Cycle-003 adjudication token is missing."
+    return m.group(1)
+
+
 def test_em_cycle003_artifacts_exist() -> None:
     assert EM_TARGET_PATH.exists(), "Missing EM U1 target document."
     assert EM_MICRO03_PATH.exists(), "Missing EM U1 Cycle-003 pre-discharge gate-bundle document."
@@ -69,7 +78,7 @@ def test_em_micro03_contains_required_predischarge_gate_tokens() -> None:
     required_tokens = [
         "DERIVATION_TARGET_EM_U1_MICRO_03_PREDISCHARGE_GATE_BUNDLE_v0",
         "TARGET-EM-U1-MICRO-03-PREDISCHARGE-GATE-BUNDLE-v0",
-        "EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: NOT_YET_DISCHARGED",
+        "EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION:",
         "EM_U1_PROGRESS_CYCLE3_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED",
         "EM_U1_OBJECT_ROUTE_ARTIFACT_UNIQUENESS_GATE_v0: SINGLE_AUTHORITATIVE_ARTIFACT_SET_REQUIRED",
         "EM_U1_ROADMAP_ROW_UNIQUENESS_GATE_v0: SINGLE_ACTIVE_ROW_REQUIRED",
@@ -81,6 +90,10 @@ def test_em_micro03_contains_required_predischarge_gate_tokens() -> None:
     ]
     missing = [token for token in required_tokens if token not in text]
     assert not missing, "EM Cycle-003 micro document is missing required token(s): " + ", ".join(missing)
+    adjudication_value = _extract_cycle3_adjudication_value(text)
+    assert adjudication_value in {"NOT_YET_DISCHARGED", "DISCHARGED_CONDITIONAL_v0"}, (
+        "Cycle-003 adjudication value is outside allowed transition values: " + adjudication_value
+    )
 
 
 def test_em_target_references_cycle003_artifact_and_gate_tokens() -> None:
@@ -88,7 +101,7 @@ def test_em_target_references_cycle003_artifact_and_gate_tokens() -> None:
     required_tokens = [
         "TARGET-EM-U1-MICRO-03-PREDISCHARGE-GATE-BUNDLE-v0",
         "EM_U1_PROGRESS_CYCLE3_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED",
-        "EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: NOT_YET_DISCHARGED",
+        "EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION:",
         "EM_U1_OBJECT_ROUTE_ARTIFACT_UNIQUENESS_GATE_v0: SINGLE_AUTHORITATIVE_ARTIFACT_SET_REQUIRED",
         "EM_U1_ROADMAP_ROW_UNIQUENESS_GATE_v0: SINGLE_ACTIVE_ROW_REQUIRED",
         "EM_U1_ASSUMPTION_REGISTRY_SYNC_GATE_v0: DIFFERENTIAL_BUNDLE_IDS_REQUIRED",
@@ -100,6 +113,10 @@ def test_em_target_references_cycle003_artifact_and_gate_tokens() -> None:
     ]
     missing = [token for token in required_tokens if token not in text]
     assert not missing, "EM target document is missing required Cycle-003 token(s): " + ", ".join(missing)
+    adjudication_value = _extract_cycle3_adjudication_value(text)
+    assert adjudication_value in {"NOT_YET_DISCHARGED", "DISCHARGED_CONDITIONAL_v0"}, (
+        "EM target Cycle-003 adjudication value is outside allowed transition values: " + adjudication_value
+    )
 
 
 def test_em_roadmap_row_and_artifact_lists_are_unique_and_authoritative() -> None:
@@ -152,12 +169,7 @@ def test_em_differential_bundle_assumptions_are_registry_explicit() -> None:
 
 def test_maxwell_form_expressions_remain_locked_before_cycle003_adjudication_flip() -> None:
     micro03_text = _read(EM_MICRO03_PATH)
-    m = re.search(
-        r"EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION:\s*`?([A-Za-z0-9_<>\-_]+)`?",
-        micro03_text,
-    )
-    assert m is not None, "Cycle-003 adjudication token is missing from the micro target document."
-    adjudication_value = m.group(1)
+    adjudication_value = _extract_cycle3_adjudication_value(micro03_text)
 
     if adjudication_value.startswith("DISCHARGED"):
         return

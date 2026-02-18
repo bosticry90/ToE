@@ -176,7 +176,7 @@ Cycle-003 kickoff micro-targets (now pinned):
    - cycle token:
      - `EM_U1_PROGRESS_CYCLE3_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED`
    - adjudication token:
-     - `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: NOT_YET_DISCHARGED`
+     - `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
    - object-route uniqueness gate token:
      - `EM_U1_OBJECT_ROUTE_ARTIFACT_UNIQUENESS_GATE_v0: SINGLE_AUTHORITATIVE_ARTIFACT_SET_REQUIRED`
    - roadmap-row uniqueness gate token:
@@ -192,6 +192,27 @@ Cycle-003 kickoff micro-targets (now pinned):
      - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_03_PREDISCHARGE_GATE_BUNDLE_v0.md`
    - gate test pointer:
      - `formal/python/tests/test_em_u1_micro03_predischarge_gate_bundle.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
+Cycle-004 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-04-MAXWELL-FORM-ATTEMPT-v0`
+   - scope:
+     - planning-only bounded Maxwell-form attempt package under explicit authorization.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE4_v0: MAXWELL_FORM_ATTEMPT_PACKAGE_TOKEN_PINNED`
+   - shape gate token:
+     - `EM_U1_MAXWELL_FORM_SHAPE_GATE_v0: AUTHORIZED_PRESENCE_ONLY`
+   - localization gate token:
+     - `EM_U1_MAXWELL_FORM_LOCALIZATION_GATE_v0: CYCLE4_ARTIFACT_ONLY`
+   - cycle adjudication token:
+     - `EM_U1_MICRO04_MAXWELL_FORM_ATTEMPT_ADJUDICATION: NOT_YET_DISCHARGED`
+   - required authorization prerequisite:
+     - `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_04_MAXWELL_FORM_ATTEMPT_PACKAGE_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro04_maxwell_form_attempt_shape.py`
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
