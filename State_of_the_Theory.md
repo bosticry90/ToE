@@ -6,6 +6,33 @@ Purpose: Epistemic inventory and stabilization
 
 Last updated: 2026-02-18
 
+Governance architecture-freeze checkpoint (2026-02-18):
+- Architecture schema is pinned and enforced:
+  - `ARCHITECTURE_SCHEMA_v1.json`
+  - frozen phase set:
+    - `TARGET_DEFINITION`
+    - `ASSUMPTION_FREEZE`
+    - `CANONICAL_ROUTE`
+    - `ANTI_SHORTCUT`
+    - `COUNTERFACTUAL`
+    - `INDEPENDENT_NECESSITY`
+    - `HARDENING`
+    - `BOUNDED_SCOPE`
+    - `DRIFT_GATES`
+    - `ADJUDICATION_SYNC`
+- Governance version lock is pinned:
+  - `GOVERNANCE_VERSION_v1.lock`
+- New machine-enforced governance tests are pinned:
+  - `formal/python/tests/test_architecture_schema_enforcement.py`
+  - `formal/python/tests/test_pillar_structure_integrity.py`
+  - `formal/python/tests/test_token_proliferation_guard.py`
+  - `formal/python/tests/test_governance_surface_growth_guard.py`
+  - `formal/python/tests/test_no_unbounded_claims.py`
+  - `formal/python/tests/test_new_pillar_must_pass_template.py`
+  - `formal/python/tests/test_governance_version_bump_required.py`
+- Enforcement posture:
+  - governance drift now fails CI unless explicitly versioned and synchronized.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.
@@ -44,31 +71,31 @@ GR01 conservation-closure sync checkpoint (2026-02-15):
 
 GR01 full-derivation discharge checkpoint (2026-02-15):
 - Full-derivation discharge is now pinned:
-	- `TOE-GR-FULL-01: T-PROVED`
-	- `FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DISCRETE`
-	- `FULL_DERIVATION_INEVITABILITY_STATUS_v0: DISCHARGED_v0_BOUNDED_ON_GR_THEOREM_SURFACE_V0`
-	- `FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
+  - `TOE-GR-FULL-01: T-PROVED`
+  - `FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DISCRETE`
+  - `FULL_DERIVATION_INEVITABILITY_STATUS_v0: DISCHARGED_v0_BOUNDED_ON_GR_THEOREM_SURFACE_V0`
+  - `FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
 - Open upgrade objects are explicit and auditable (non-blocking to the discharged bounded target):
-	- these remain future upgrades and do not block `TOE-GR-FULL-01: T-PROVED`,
+  - these remain future upgrades and do not block `TOE-GR-FULL-01: T-PROVED`,
   - default action route is theorem-bound (`actionRep32_action_default_binding`)
     but not yet a full action-calculus EL-to-residual derivation surface,
   - scaffold-level Rep32/EL defaults (`FirstVariationRep32Def.lean`,
     `DischargeELMatchesFN01Rep32Pcubic.lean` equality pin),
   - bridge-assumption semantics route (`WeakFieldPoissonLimit.lean`,
     `GR01BridgePromotion.lean`).
-	- assumption-object dependency on `ELImpliesDiscretePoissonResidual` is now
-		replaced on the bridge theorem surface by
-		`gr01_el_implies_discrete_poisson_residual_from_bridge_promotion`, while
-		explicit bridge semantics assumptions remain in force.
-	- operator-residual transport theorem route is now explicit
-		(`ELImpliesOperatorResidualTransport`,
-		`gr01_operator_residual_transport_from_bound_bridge_assumptions`,
-		`gr01_el_implies_discrete_poisson_residual_from_operator_transport`,
-		`TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_operator_transport_minimal_of_hP`),
-		and action-layer weak-field closure now threads this witness route
-		(`actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_operator_transport_witness_v0`),
-		but deriving this transport route from action alone (without bridge
-		semantics assumptions) remains open.
+  - assumption-object dependency on `ELImpliesDiscretePoissonResidual` is now
+    replaced on the bridge theorem surface by
+    `gr01_el_implies_discrete_poisson_residual_from_bridge_promotion`, while
+    explicit bridge semantics assumptions remain in force.
+  - operator-residual transport theorem route is now explicit
+    (`ELImpliesOperatorResidualTransport`,
+    `gr01_operator_residual_transport_from_bound_bridge_assumptions`,
+    `gr01_el_implies_discrete_poisson_residual_from_operator_transport`,
+    `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_operator_transport_minimal_of_hP`),
+    and action-layer weak-field closure now threads this witness route
+    (`actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_operator_transport_witness_v0`),
+    but deriving this transport route from action alone (without bridge
+    semantics assumptions) remains open.
 - Current progress token is pinned:
   - `differenceQuotientRep32_cubic_deviation_expand`
   - `ActionRep32FiniteDifferenceDeviationFromP_of_cubic`
@@ -99,20 +126,20 @@ GR01 full-derivation discharge checkpoint (2026-02-15):
   - `gr01_discrete_residual_from_bridge_promotion_chain_minimal_of_hP`
   - `gr01_discrete_residual_from_bridge_promotion_chain_of_hP`
   - `gr01_discrete_residual_from_bridge_promotion_chain_default_binding_of_hP`
-	- `gr01_el_implies_discrete_poisson_residual_from_bridge_promotion`
-	- `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_bridge_minimal_of_hP`
-	- `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_bridge_of_hP`
-	- `TOE_GR01_weak_field_poisson_limit_under_default_binding_assumptions_derived_from_bridge_of_hP`
-	- `ELImpliesOperatorResidualTransport`
-	- `gr01_el_implies_discrete_poisson_residual_from_operator_transport`
-	- `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_operator_transport_minimal_of_hP`
-	- `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_operator_transport_of_hP`
-	- `TOE_GR01_weak_field_poisson_limit_under_default_binding_assumptions_derived_from_operator_transport_of_hP`
-	- `actionRep32_operator_residual_transport_from_radial_evaluator_interface_v0`
-	- `actionRep32_operator_residual_under_bound_from_radial_evaluator_interface_v0`
-	- `actionRep32_operator_residual_transport_of_bridge_witness_constructor_v0`
-	- `actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_operator_transport_witness_v0`
-	- `actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_bridge_witness_constructor_v0`
+  - `gr01_el_implies_discrete_poisson_residual_from_bridge_promotion`
+  - `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_bridge_minimal_of_hP`
+  - `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_bridge_of_hP`
+  - `TOE_GR01_weak_field_poisson_limit_under_default_binding_assumptions_derived_from_bridge_of_hP`
+  - `ELImpliesOperatorResidualTransport`
+  - `gr01_el_implies_discrete_poisson_residual_from_operator_transport`
+  - `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_operator_transport_minimal_of_hP`
+  - `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_derived_from_operator_transport_of_hP`
+  - `TOE_GR01_weak_field_poisson_limit_under_default_binding_assumptions_derived_from_operator_transport_of_hP`
+  - `actionRep32_operator_residual_transport_from_radial_evaluator_interface_v0`
+  - `actionRep32_operator_residual_under_bound_from_radial_evaluator_interface_v0`
+  - `actionRep32_operator_residual_transport_of_bridge_witness_constructor_v0`
+  - `actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_operator_transport_witness_v0`
+  - `actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_bridge_witness_constructor_v0`
   - `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_minimal_of_hP`
   - `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions_of_hP`
   - `TOE_GR01_weak_field_poisson_limit_under_default_binding_assumptions_of_hP`
@@ -131,1069 +158,1069 @@ GR01 full-derivation discharge checkpoint (2026-02-15):
 
 GR01 wrapper-policy invariants checkpoint (2026-02-15):
 - Compatibility weak-field wrapper family is now reduced-premise and
-	marker-retired:
-	- explicit uniform-bound witness threading is required (`hWeakFieldUniformBound`),
-	- legacy explicit wrapper-signature parameters are retired
-		(`hAction`, `hP`, `hProjectionMapWellFormed`,
-		`hWeakFieldTruncationSound`).
+  marker-retired:
+  - explicit uniform-bound witness threading is required (`hWeakFieldUniformBound`),
+  - legacy explicit wrapper-signature parameters are retired
+    (`hAction`, `hP`, `hProjectionMapWellFormed`,
+    `hWeakFieldTruncationSound`).
 - Canonical weak-field/transport blocks are anti-drift guarded against
-	compatibility route regression:
-	- compatibility quotient/bridge weak-field wrapper call patterns are
-		forbidden in canonical theorem bodies.
+  compatibility route regression:
+  - compatibility quotient/bridge weak-field wrapper call patterns are
+    forbidden in canonical theorem bodies.
 - Gate enforcement is now dual-layer:
-	- theorem-specific assertions remain pinned,
-	- compact data-driven policy table assertions are active for canonical vs
-		compatibility wrapper families.
+  - theorem-specific assertions remain pinned,
+  - compact data-driven policy table assertions are active for canonical vs
+    compatibility wrapper families.
 - Focused validation status (current cycle):
-	- `formal/python/tests/test_gr01_full_derivation_discharge_gate.py`
-	- `formal/python/tests/test_pillar_inevitability_playbook.py`
-	- result: `9 passed`.
+  - `formal/python/tests/test_gr01_full_derivation_discharge_gate.py`
+  - `formal/python/tests/test_pillar_inevitability_playbook.py`
+  - result: `9 passed`.
 
 GR01 hardening roadmap checkpoint (2026-02-16):
 - Canonical hardening target is now pinned:
-	- `formal/docs/paper/DERIVATION_TARGET_GR01_HARDENING_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_GR01_HARDENING_v0.md`
 - Hardening adjudication token is explicit and synchronized to blocked status:
-	- `GR01_HARDENING_ADJUDICATION: DISCHARGED_v0_DISCRETE_HARDENED`
+  - `GR01_HARDENING_ADJUDICATION: DISCHARGED_v0_DISCRETE_HARDENED`
 - Hardening enforcement gate is pinned:
-	- `formal/python/tests/test_gr01_hardening_roadmap_gate.py`
+  - `formal/python/tests/test_gr01_hardening_roadmap_gate.py`
 - Phase II assumption-ledger artifacts are now pinned:
-	- `formal/toe_formal/ToeFormal/Variational/GR01AssumptionLedger.lean`
-	- `formal/markdown/locks/policy/GR01_ASSUMPTION_LEDGER_v0.md`
+  - `formal/toe_formal/ToeFormal/Variational/GR01AssumptionLedger.lean`
+  - `formal/markdown/locks/policy/GR01_ASSUMPTION_LEDGER_v0.md`
 - Canonical assumption bundle token is explicit:
-	- `GR01Assumptions_v0`
+  - `GR01Assumptions_v0`
 - First Phase II minimization is landed and pinned:
-	- `GR01_RECLASSIFICATION_v0_MIN1: hP_POLICY_TO_MATH_via_P_rep32_def`
-	- minimized bundle token: `GR01Assumptions_v0_min1`
+  - `GR01_RECLASSIFICATION_v0_MIN1: hP_POLICY_TO_MATH_via_P_rep32_def`
+  - minimized bundle token: `GR01Assumptions_v0_min1`
 - Second Phase II minimization is landed and pinned:
-	- `GR01_RECLASSIFICATION_v0_MIN2: hHigherOrderTermsNegligible_POLICY_TO_MATH_via_FirstOrderRemainderSuppressed`
-	- minimized bundle token: `GR01Assumptions_v0_min2`
+  - `GR01_RECLASSIFICATION_v0_MIN2: hHigherOrderTermsNegligible_POLICY_TO_MATH_via_FirstOrderRemainderSuppressed`
+  - minimized bundle token: `GR01Assumptions_v0_min2`
 - Third Phase II minimization is landed and pinned:
-	- `GR01_RECLASSIFICATION_v0_MIN3: hAction_POLICY_TO_MATH_via_default_binding_route`
-	- minimized bundle token: `GR01Assumptions_v0_min3`
+  - `GR01_RECLASSIFICATION_v0_MIN3: hAction_POLICY_TO_MATH_via_default_binding_route`
+  - minimized bundle token: `GR01Assumptions_v0_min3`
 - Phase III scaffolding templates are now pinned:
-	- `formal/markdown/locks/policy/GR01_ROBUSTNESS_RECORD_v0.md`
-	- `formal/markdown/locks/policy/GR01_NEGATIVE_CONTROL_RECORD_v0.md`
-	- `GR01_ROBUSTNESS_STATUS_v0: TEMPLATE_PINNED`
-	- `GR01_NEGATIVE_CONTROL_STATUS_v0: TEMPLATE_PINNED`
+  - `formal/markdown/locks/policy/GR01_ROBUSTNESS_RECORD_v0.md`
+  - `formal/markdown/locks/policy/GR01_NEGATIVE_CONTROL_RECORD_v0.md`
+  - `GR01_ROBUSTNESS_STATUS_v0: TEMPLATE_PINNED`
+  - `GR01_NEGATIVE_CONTROL_STATUS_v0: TEMPLATE_PINNED`
 - Phase III first populated robustness row is now pinned:
-	- `PERTURB_RHO_SMALL_v0`
-	- `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_RHO_SMALL_POPULATED`
-	- artifact: `formal/output/gr01_robustness_perturb_rho_small_v0.json`
+  - `PERTURB_RHO_SMALL_v0`
+  - `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_RHO_SMALL_POPULATED`
+  - artifact: `formal/output/gr01_robustness_perturb_rho_small_v0.json`
 - Phase III second populated robustness row is now pinned:
-	- `PERTURB_PHI_SMALL_v0`
-	- `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_PHI_SMALL_POPULATED`
-	- artifact: `formal/output/gr01_robustness_perturb_phi_small_v0.json`
+  - `PERTURB_PHI_SMALL_v0`
+  - `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_PHI_SMALL_POPULATED`
+  - artifact: `formal/output/gr01_robustness_perturb_phi_small_v0.json`
 - Phase III third populated robustness row is now pinned:
-	- `PERTURB_DISCRETIZATION_PARAMS_v0`
-	- `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_DISCRETIZATION_PARAMS_POPULATED`
-	- artifact: `formal/output/gr01_robustness_perturb_discretization_params_v0.json`
+  - `PERTURB_DISCRETIZATION_PARAMS_v0`
+  - `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_DISCRETIZATION_PARAMS_POPULATED`
+  - artifact: `formal/output/gr01_robustness_perturb_discretization_params_v0.json`
 - Phase III fourth populated robustness row is now pinned:
-	- `PERTURB_BOUNDARY_HANDLING_v0`
-	- `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_BOUNDARY_HANDLING_POPULATED`
-	- artifact: `formal/output/gr01_robustness_perturb_boundary_handling_v0.json`
+  - `PERTURB_BOUNDARY_HANDLING_v0`
+  - `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_BOUNDARY_HANDLING_POPULATED`
+  - artifact: `formal/output/gr01_robustness_perturb_boundary_handling_v0.json`
 - Phase III fifth populated robustness row is now pinned:
-	- `PERTURB_PROJECTION_CONDITIONS_v0`
-	- `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_PROJECTION_CONDITIONS_POPULATED`
-	- artifact: `formal/output/gr01_robustness_perturb_projection_conditions_v0.json`
+  - `PERTURB_PROJECTION_CONDITIONS_v0`
+  - `GR01_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_PROJECTION_CONDITIONS_POPULATED`
+  - artifact: `formal/output/gr01_robustness_perturb_projection_conditions_v0.json`
 - Phase III perturbation-family completion token is pinned:
-	- `GR01_ROBUSTNESS_PROGRESS_v0: ALL_REQUIRED_PERTURBATION_ROWS_POPULATED`
+  - `GR01_ROBUSTNESS_PROGRESS_v0: ALL_REQUIRED_PERTURBATION_ROWS_POPULATED`
 - Phase III first populated negative-control row is now pinned:
-	- `NEGCTRL_WRONG_KAPPA_SIGN_v0`
-	- `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_WRONG_KAPPA_SIGN_POPULATED`
-	- artifact: `formal/output/gr01_negative_control_wrong_kappa_sign_v0.json`
+  - `NEGCTRL_WRONG_KAPPA_SIGN_v0`
+  - `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_WRONG_KAPPA_SIGN_POPULATED`
+  - artifact: `formal/output/gr01_negative_control_wrong_kappa_sign_v0.json`
 - Phase III second populated negative-control row is now pinned:
-	- `NEGCTRL_BROKEN_SCALING_HIERARCHY_v0`
-	- `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_BROKEN_SCALING_HIERARCHY_POPULATED`
-	- artifact: `formal/output/gr01_negative_control_broken_scaling_hierarchy_v0.json`
+  - `NEGCTRL_BROKEN_SCALING_HIERARCHY_v0`
+  - `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_BROKEN_SCALING_HIERARCHY_POPULATED`
+  - artifact: `formal/output/gr01_negative_control_broken_scaling_hierarchy_v0.json`
 - Phase III third populated negative-control row is now pinned:
-	- `NEGCTRL_BROKEN_WEAK_FIELD_BOUND_v0`
-	- `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_BROKEN_WEAK_FIELD_BOUND_POPULATED`
-	- artifact: `formal/output/gr01_negative_control_broken_weak_field_bound_v0.json`
+  - `NEGCTRL_BROKEN_WEAK_FIELD_BOUND_v0`
+  - `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_BROKEN_WEAK_FIELD_BOUND_POPULATED`
+  - artifact: `formal/output/gr01_negative_control_broken_weak_field_bound_v0.json`
 - Phase III fourth populated negative-control row is now pinned:
-	- `NEGCTRL_BROKEN_SYMMETRY_OBLIGATION_v0`
-	- `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_BROKEN_SYMMETRY_OBLIGATION_POPULATED`
-	- artifact: `formal/output/gr01_negative_control_broken_symmetry_obligation_v0.json`
+  - `NEGCTRL_BROKEN_SYMMETRY_OBLIGATION_v0`
+  - `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_BROKEN_SYMMETRY_OBLIGATION_POPULATED`
+  - artifact: `formal/output/gr01_negative_control_broken_symmetry_obligation_v0.json`
 - Phase III fifth populated negative-control row is now pinned:
-	- `NEGCTRL_INCOMPATIBLE_CARRIERS_v0`
-	- `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_INCOMPATIBLE_CARRIERS_POPULATED`
-	- artifact: `formal/output/gr01_negative_control_incompatible_carriers_v0.json`
+  - `NEGCTRL_INCOMPATIBLE_CARRIERS_v0`
+  - `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_INCOMPATIBLE_CARRIERS_POPULATED`
+  - artifact: `formal/output/gr01_negative_control_incompatible_carriers_v0.json`
 - Phase III negative-control-family completion token is pinned:
-	- `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ALL_REQUIRED_NEGATIVE_ROWS_POPULATED`
+  - `GR01_NEGATIVE_CONTROL_PROGRESS_v0: ALL_REQUIRED_NEGATIVE_ROWS_POPULATED`
 - Phase IV resolution-trend template is now pinned:
-	- `formal/markdown/locks/policy/GR01_RESOLUTION_TREND_RECORD_v0.md`
-	- `GR01_RESOLUTION_TREND_STATUS_v0: TEMPLATE_PINNED`
+  - `formal/markdown/locks/policy/GR01_RESOLUTION_TREND_RECORD_v0.md`
+  - `GR01_RESOLUTION_TREND_STATUS_v0: TEMPLATE_PINNED`
 - Phase IV first populated resolution row is now pinned:
-	- `RESOLUTION_32_v0`
-	- `GR01_RESOLUTION_TREND_PROGRESS_v0: ROW_RESOLUTION_32_POPULATED`
-	- artifact: `formal/output/gr01_resolution_trend_32_v0.json`
+  - `RESOLUTION_32_v0`
+  - `GR01_RESOLUTION_TREND_PROGRESS_v0: ROW_RESOLUTION_32_POPULATED`
+  - artifact: `formal/output/gr01_resolution_trend_32_v0.json`
 - Phase IV second populated resolution row is now pinned:
-	- `RESOLUTION_64_v0`
-	- `GR01_RESOLUTION_TREND_PROGRESS_v0: ROW_RESOLUTION_64_POPULATED`
-	- artifact: `formal/output/gr01_resolution_trend_64_v0.json`
+  - `RESOLUTION_64_v0`
+  - `GR01_RESOLUTION_TREND_PROGRESS_v0: ROW_RESOLUTION_64_POPULATED`
+  - artifact: `formal/output/gr01_resolution_trend_64_v0.json`
 - Phase IV third populated resolution row is now pinned:
-	- `RESOLUTION_128_v0`
-	- `GR01_RESOLUTION_TREND_PROGRESS_v0: ROW_RESOLUTION_128_POPULATED`
-	- artifact: `formal/output/gr01_resolution_trend_128_v0.json`
+  - `RESOLUTION_128_v0`
+  - `GR01_RESOLUTION_TREND_PROGRESS_v0: ROW_RESOLUTION_128_POPULATED`
+  - artifact: `formal/output/gr01_resolution_trend_128_v0.json`
 - Phase IV resolution-family completion token is pinned:
-	- `GR01_RESOLUTION_TREND_PROGRESS_v0: ALL_REQUIRED_RESOLUTION_ROWS_POPULATED`
+  - `GR01_RESOLUTION_TREND_PROGRESS_v0: ALL_REQUIRED_RESOLUTION_ROWS_POPULATED`
 - Phase V pillar package freeze artifacts are now pinned:
-	- `formal/markdown/locks/policy/GR01_PILLAR_PACKAGE_v0.md`
-	- `formal/docs/paper/TOE_GR01_PILLAR_SUMMARY_v0.md`
-	- `formal/docs/paper/TOE_GR01_CANONICAL_CHAIN_MAP_v0.md`
-	- `GR01_PILLAR_PACKAGE_STATUS_v0: FROZEN_CONTENTS_PINNED`
+  - `formal/markdown/locks/policy/GR01_PILLAR_PACKAGE_v0.md`
+  - `formal/docs/paper/TOE_GR01_PILLAR_SUMMARY_v0.md`
+  - `formal/docs/paper/TOE_GR01_CANONICAL_CHAIN_MAP_v0.md`
+  - `GR01_PILLAR_PACKAGE_STATUS_v0: FROZEN_CONTENTS_PINNED`
 - Priority order is pinned as enforcement sequence:
-	- Phase I canonicalization/quarantine
-	- Phase II assumption ledger/minimization
-	- Phase III robustness/negative controls
-	- Phase IV resolution trend (optional)
-	- Phase V pillar package freeze
+  - Phase I canonicalization/quarantine
+  - Phase II assumption ledger/minimization
+  - Phase III robustness/negative controls
+  - Phase IV resolution trend (optional)
+  - Phase V pillar package freeze
 
 Post-GR01 handoff checkpoint (2026-02-16):
 - Frozen-watch governance posture is explicit:
-	- `GR01_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
+  - `GR01_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
 - Next pillar focus is explicit and assumption-minimization-first:
-	- `NEXT_PILLAR_FOCUS_v0: PILLAR-SR`
-	- `NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-SR-COV-PLAN`
-	- pointer: `formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md`
+  - `NEXT_PILLAR_FOCUS_v0: PILLAR-SR`
+  - `NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-SR-COV-PLAN`
+  - pointer: `formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md`
 - Selection rationale (governance):
-	- GR01 + continuum + strong-field-program + QM full-derivation closures are synchronized,
-	- first unlock cohort permits SR/EM after GR checklist closure under roadmap order intent,
-	- SR covariance lane is selected as the single active next-pillar entry point.
+  - GR01 + continuum + strong-field-program + QM full-derivation closures are synchronized,
+  - first unlock cohort permits SR/EM after GR checklist closure under roadmap order intent,
+  - SR covariance lane is selected as the single active next-pillar entry point.
 
 SR full-derivation enforcement roadmap checkpoint (2026-02-16):
 - Authoritative no-deviation roadmap is pinned:
-	- `TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN`
-	- pointer: `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
-	- `SR_FULL_DERIVATION_ENFORCEMENT_MODE_v0: AUTHORITATIVE_NO_DEVIATION`
-	- `SR_FULL_DERIVATION_ENFORCEMENT_PHASE_ORDER_v0: PHASE1_OBJECTS>PHASE2_EQUIV>PHASE3_ASSUMPTIONS>PHASE4_ROBUST_NEGCTRL>PHASE5_DERIVATION_GATE>PHASE6_INEVITABILITY>PHASE7_FREEZE`
+  - `TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN`
+  - pointer: `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
+  - `SR_FULL_DERIVATION_ENFORCEMENT_MODE_v0: AUTHORITATIVE_NO_DEVIATION`
+  - `SR_FULL_DERIVATION_ENFORCEMENT_PHASE_ORDER_v0: PHASE1_OBJECTS>PHASE2_EQUIV>PHASE3_ASSUMPTIONS>PHASE4_ROBUST_NEGCTRL>PHASE5_DERIVATION_GATE>PHASE6_INEVITABILITY>PHASE7_FREEZE`
 - Enforcement hook is pinned:
-	- `formal/python/tests/test_sr_full_derivation_enforcement_roadmap_gate.py`
+  - `formal/python/tests/test_sr_full_derivation_enforcement_roadmap_gate.py`
 
 SR covariance kickoff checkpoint (2026-02-16):
 - SR cycle-1 object-scaffold kickoff is pinned:
-	- `TARGET-SR-COV-MICRO-01-OBJECT-SCAFFOLD-v0`
-	- `SR_COVARIANCE_PROGRESS_v0: CYCLE1_OBJECT_SCAFFOLD_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE1_ARTIFACT_v0: sr_covariance_object_scaffold_cycle1_v0`
-	- artifact: `formal/output/sr_covariance_object_scaffold_cycle1_v0.json`
+  - `TARGET-SR-COV-MICRO-01-OBJECT-SCAFFOLD-v0`
+  - `SR_COVARIANCE_PROGRESS_v0: CYCLE1_OBJECT_SCAFFOLD_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE1_ARTIFACT_v0: sr_covariance_object_scaffold_cycle1_v0`
+  - artifact: `formal/output/sr_covariance_object_scaffold_cycle1_v0.json`
 - SR cycle-2 contract-surface kickoff is pinned:
-	- `TARGET-SR-COV-MICRO-02-CONTRACT-SURFACE-v0`
-	- `SR_COVARIANCE_PROGRESS_CYCLE2_v0: CONTRACT_SURFACE_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE2_ARTIFACT_v0: sr_covariance_contract_surface_cycle2_v0`
-	- artifact: `formal/output/sr_covariance_contract_surface_cycle2_v0.json`
+  - `TARGET-SR-COV-MICRO-02-CONTRACT-SURFACE-v0`
+  - `SR_COVARIANCE_PROGRESS_CYCLE2_v0: CONTRACT_SURFACE_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE2_ARTIFACT_v0: sr_covariance_contract_surface_cycle2_v0`
+  - artifact: `formal/output/sr_covariance_contract_surface_cycle2_v0.json`
 - SR cycle-3 Lorentz/interval placeholder kickoff is pinned:
-	- `TARGET-SR-COV-MICRO-03-LORENTZ-INTERVAL-PLACEHOLDER-v0`
-	- `SR_COVARIANCE_PROGRESS_CYCLE3_v0: LORENTZ_INTERVAL_PLACEHOLDER_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE3_ARTIFACT_v0: sr_covariance_lorentz_interval_placeholder_cycle3_v0`
-	- artifact: `formal/output/sr_covariance_lorentz_interval_placeholder_cycle3_v0.json`
+  - `TARGET-SR-COV-MICRO-03-LORENTZ-INTERVAL-PLACEHOLDER-v0`
+  - `SR_COVARIANCE_PROGRESS_CYCLE3_v0: LORENTZ_INTERVAL_PLACEHOLDER_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE3_ARTIFACT_v0: sr_covariance_lorentz_interval_placeholder_cycle3_v0`
+  - artifact: `formal/output/sr_covariance_lorentz_interval_placeholder_cycle3_v0.json`
 - SR cycle-4 velocity-composition placeholder kickoff is pinned:
-	- `TARGET-SR-COV-MICRO-04-VELOCITY-COMPOSITION-PLACEHOLDER-v0`
-	- `SR_COVARIANCE_PROGRESS_CYCLE4_v0: VELOCITY_COMPOSITION_PLACEHOLDER_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE4_ARTIFACT_v0: sr_covariance_velocity_composition_placeholder_cycle4_v0`
-	- artifact: `formal/output/sr_covariance_velocity_composition_placeholder_cycle4_v0.json`
+  - `TARGET-SR-COV-MICRO-04-VELOCITY-COMPOSITION-PLACEHOLDER-v0`
+  - `SR_COVARIANCE_PROGRESS_CYCLE4_v0: VELOCITY_COMPOSITION_PLACEHOLDER_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE4_ARTIFACT_v0: sr_covariance_velocity_composition_placeholder_cycle4_v0`
+  - artifact: `formal/output/sr_covariance_velocity_composition_placeholder_cycle4_v0.json`
 - SR cycle-5 integrated kickoff-bundle lock is pinned:
-	- `TARGET-SR-COV-MICRO-05-INTEGRATED-KICKOFF-BUNDLE-v0`
-	- `SR_COVARIANCE_PROGRESS_CYCLE5_v0: INTEGRATED_KICKOFF_BUNDLE_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE5_ARTIFACT_v0: sr_covariance_integrated_kickoff_bundle_cycle5_v0`
-	- artifact: `formal/output/sr_covariance_integrated_kickoff_bundle_cycle5_v0.json`
+  - `TARGET-SR-COV-MICRO-05-INTEGRATED-KICKOFF-BUNDLE-v0`
+  - `SR_COVARIANCE_PROGRESS_CYCLE5_v0: INTEGRATED_KICKOFF_BUNDLE_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE5_ARTIFACT_v0: sr_covariance_integrated_kickoff_bundle_cycle5_v0`
+  - artifact: `formal/output/sr_covariance_integrated_kickoff_bundle_cycle5_v0.json`
 - SR cycle-6 pre-discharge gate-bundle lock is pinned:
-	- `TARGET-SR-COV-MICRO-06-PREDISCHARGE-GATE-BUNDLE-v0`
-	- `SR_COVARIANCE_PROGRESS_CYCLE6_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE6_ARTIFACT_v0: sr_covariance_predischarge_gate_bundle_cycle6_v0`
-	- artifact: `formal/output/sr_covariance_predischarge_gate_bundle_cycle6_v0.json`
+  - `TARGET-SR-COV-MICRO-06-PREDISCHARGE-GATE-BUNDLE-v0`
+  - `SR_COVARIANCE_PROGRESS_CYCLE6_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE6_ARTIFACT_v0: sr_covariance_predischarge_gate_bundle_cycle6_v0`
+  - artifact: `formal/output/sr_covariance_predischarge_gate_bundle_cycle6_v0.json`
 - SR cycle-7 discharge-transition bundle lock is pinned:
-	- `TARGET-SR-COV-MICRO-07-DISCHARGE-TRANSITION-BUNDLE-v0`
-	- `SR_COVARIANCE_PROGRESS_CYCLE7_v0: DISCHARGE_TRANSITION_BUNDLE_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE7_ARTIFACT_v0: sr_covariance_discharge_transition_bundle_cycle7_v0`
-	- artifact: `formal/output/sr_covariance_discharge_transition_bundle_cycle7_v0.json`
+  - `TARGET-SR-COV-MICRO-07-DISCHARGE-TRANSITION-BUNDLE-v0`
+  - `SR_COVARIANCE_PROGRESS_CYCLE7_v0: DISCHARGE_TRANSITION_BUNDLE_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE7_ARTIFACT_v0: sr_covariance_discharge_transition_bundle_cycle7_v0`
+  - artifact: `formal/output/sr_covariance_discharge_transition_bundle_cycle7_v0.json`
 - SR cycle-8 key-policy signoff bundle lock is pinned:
-	- `TARGET-SR-COV-MICRO-08-KEYB-POLICY-SIGNOFF-BUNDLE-v0`
-	- `SR_COVARIANCE_PROGRESS_CYCLE8_v0: KEYB_POLICY_SIGNOFF_BUNDLE_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE8_ARTIFACT_v0: sr_covariance_keyb_policy_signoff_bundle_cycle8_v0`
-	- artifact: `formal/output/sr_covariance_keyb_policy_signoff_bundle_cycle8_v0.json`
+  - `TARGET-SR-COV-MICRO-08-KEYB-POLICY-SIGNOFF-BUNDLE-v0`
+  - `SR_COVARIANCE_PROGRESS_CYCLE8_v0: KEYB_POLICY_SIGNOFF_BUNDLE_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE8_ARTIFACT_v0: sr_covariance_keyb_policy_signoff_bundle_cycle8_v0`
+  - artifact: `formal/output/sr_covariance_keyb_policy_signoff_bundle_cycle8_v0.json`
 - SR cycle-9 final pre-discharge package lock is pinned:
-	- `TARGET-SR-COV-MICRO-09-FINAL-PREDISCHARGE-PACKAGE-v0`
-	- `SR_COVARIANCE_PROGRESS_CYCLE9_v0: FINAL_PREDISCHARGE_PACKAGE_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE9_ARTIFACT_v0: sr_covariance_final_predischarge_package_cycle9_v0`
-	- artifact: `formal/output/sr_covariance_final_predischarge_package_cycle9_v0.json`
+  - `TARGET-SR-COV-MICRO-09-FINAL-PREDISCHARGE-PACKAGE-v0`
+  - `SR_COVARIANCE_PROGRESS_CYCLE9_v0: FINAL_PREDISCHARGE_PACKAGE_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE9_ARTIFACT_v0: sr_covariance_final_predischarge_package_cycle9_v0`
+  - artifact: `formal/output/sr_covariance_final_predischarge_package_cycle9_v0.json`
 - SR cycle-10 integrated discharge-criteria lock is pinned:
-	- `SR_COVARIANCE_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
-	- criteria rows:
-		- `SR_COVARIANCE_CRITERIA_ROW_01_v0: OBJECT_SCAFFOLD_PINNED`
-		- `SR_COVARIANCE_CRITERIA_ROW_02_v0: CONTRACT_SURFACE_PINNED`
-		- `SR_COVARIANCE_CRITERIA_ROW_03_v0: LORENTZ_INTERVAL_PLACEHOLDER_PINNED`
-		- `SR_COVARIANCE_CRITERIA_ROW_04_v0: VELOCITY_COMPOSITION_PLACEHOLDER_PINNED`
-		- `SR_COVARIANCE_CRITERIA_ROW_05_v0: STATE_GATE_SYNC_PINNED`
-	- `SR_COVARIANCE_PROGRESS_CYCLE10_v0: DISCHARGE_CRITERIA_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE10_ARTIFACT_v0: sr_covariance_discharge_criteria_cycle10_v0`
-	- artifact: `formal/output/sr_covariance_discharge_criteria_cycle10_v0.json`
+  - `SR_COVARIANCE_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+  - criteria rows:
+    - `SR_COVARIANCE_CRITERIA_ROW_01_v0: OBJECT_SCAFFOLD_PINNED`
+    - `SR_COVARIANCE_CRITERIA_ROW_02_v0: CONTRACT_SURFACE_PINNED`
+    - `SR_COVARIANCE_CRITERIA_ROW_03_v0: LORENTZ_INTERVAL_PLACEHOLDER_PINNED`
+    - `SR_COVARIANCE_CRITERIA_ROW_04_v0: VELOCITY_COMPOSITION_PLACEHOLDER_PINNED`
+    - `SR_COVARIANCE_CRITERIA_ROW_05_v0: STATE_GATE_SYNC_PINNED`
+  - `SR_COVARIANCE_PROGRESS_CYCLE10_v0: DISCHARGE_CRITERIA_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE10_ARTIFACT_v0: sr_covariance_discharge_criteria_cycle10_v0`
+  - artifact: `formal/output/sr_covariance_discharge_criteria_cycle10_v0.json`
 - SR cycle-11 adjudication posture transition is pinned:
-	- `SR_COVARIANCE_ADJUDICATION_v0: DISCHARGED_v0_PLANNING_CRITERIA_LOCKED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE11_v0: ADJUDICATION_POSTURE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE11_ARTIFACT_v0: sr_covariance_adjudication_posture_cycle11_v0`
-	- artifact: `formal/output/sr_covariance_adjudication_posture_cycle11_v0.json`
+  - `SR_COVARIANCE_ADJUDICATION_v0: DISCHARGED_v0_PLANNING_CRITERIA_LOCKED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE11_v0: ADJUDICATION_POSTURE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE11_ARTIFACT_v0: sr_covariance_adjudication_posture_cycle11_v0`
+  - artifact: `formal/output/sr_covariance_adjudication_posture_cycle11_v0.json`
 - SR cycle-12 post-adjudication contract-freeze lock is pinned:
-	- `TARGET-SR-COV-MICRO-12-POST-ADJUDICATION-CONTRACT-FREEZE-v0`
-	- `SR_COVARIANCE_CONTRACT_FREEZE_v0: CYCLE12_POST_ADJUDICATION_CONTRACT_LOCKED`
-	- `SR_COVARIANCE_PROGRESS_CYCLE12_v0: POST_ADJUDICATION_CONTRACT_FREEZE_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE12_ARTIFACT_v0: sr_covariance_post_adjudication_contract_freeze_cycle12_v0`
-	- artifact: `formal/output/sr_covariance_post_adjudication_contract_freeze_cycle12_v0.json`
+  - `TARGET-SR-COV-MICRO-12-POST-ADJUDICATION-CONTRACT-FREEZE-v0`
+  - `SR_COVARIANCE_CONTRACT_FREEZE_v0: CYCLE12_POST_ADJUDICATION_CONTRACT_LOCKED`
+  - `SR_COVARIANCE_PROGRESS_CYCLE12_v0: POST_ADJUDICATION_CONTRACT_FREEZE_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE12_ARTIFACT_v0: sr_covariance_post_adjudication_contract_freeze_cycle12_v0`
+  - artifact: `formal/output/sr_covariance_post_adjudication_contract_freeze_cycle12_v0.json`
 - SR cycle-13 theorem-surface scaffold lock is pinned:
-	- `TARGET-SR-COV-MICRO-13-THEOREM-SURFACE-SCAFFOLD-v0`
-	- theorem-surface target: `formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_THEOREM_SURFACE_v0.md`
-	- `SR_COVARIANCE_PROGRESS_CYCLE13_v0: THEOREM_SURFACE_SCAFFOLD_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE13_ARTIFACT_v0: sr_covariance_theorem_surface_scaffold_cycle13_v0`
-	- artifact: `formal/output/sr_covariance_theorem_surface_scaffold_cycle13_v0.json`
+  - `TARGET-SR-COV-MICRO-13-THEOREM-SURFACE-SCAFFOLD-v0`
+  - theorem-surface target: `formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_THEOREM_SURFACE_v0.md`
+  - `SR_COVARIANCE_PROGRESS_CYCLE13_v0: THEOREM_SURFACE_SCAFFOLD_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE13_ARTIFACT_v0: sr_covariance_theorem_surface_scaffold_cycle13_v0`
+  - artifact: `formal/output/sr_covariance_theorem_surface_scaffold_cycle13_v0.json`
 - SR cycle-14 theorem-surface assumptions-minimization lock is pinned:
-	- `TARGET-SR-COV-MICRO-14-THEOREM-ASSUMPTION-MINIMIZATION-v0`
-	- `SR_COVARIANCE_THEOREM_ASSUMPTION_MINIMIZATION_v0: CYCLE14_MIN1_LOCKED`
-	- `SR_COVARIANCE_THEOREM_ASSUMPTIONS_v0_min1`
-	- `SR_COVARIANCE_THEOREM_RECLASSIFICATION_v0_MIN1: hInertialFrameTimeHomogeneity_POLICY_TO_MATH_via_sr_interval_invariance_surface_definition`
-	- `SR_COVARIANCE_PROGRESS_CYCLE14_v0: THEOREM_ASSUMPTION_MINIMIZATION_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_assumption_minimization_cycle14_v0`
-	- artifact: `formal/output/sr_covariance_theorem_assumption_minimization_cycle14_v0.json`
+  - `TARGET-SR-COV-MICRO-14-THEOREM-ASSUMPTION-MINIMIZATION-v0`
+  - `SR_COVARIANCE_THEOREM_ASSUMPTION_MINIMIZATION_v0: CYCLE14_MIN1_LOCKED`
+  - `SR_COVARIANCE_THEOREM_ASSUMPTIONS_v0_min1`
+  - `SR_COVARIANCE_THEOREM_RECLASSIFICATION_v0_MIN1: hInertialFrameTimeHomogeneity_POLICY_TO_MATH_via_sr_interval_invariance_surface_definition`
+  - `SR_COVARIANCE_PROGRESS_CYCLE14_v0: THEOREM_ASSUMPTION_MINIMIZATION_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_assumption_minimization_cycle14_v0`
+  - artifact: `formal/output/sr_covariance_theorem_assumption_minimization_cycle14_v0.json`
 - SR cycle-15 theorem-surface robustness/negative-control scaffold lock is pinned:
-	- `TARGET-SR-COV-MICRO-15-THEOREM-ROBUSTNESS-NEGCTRL-SCAFFOLD-v0`
-	- `SR_COVARIANCE_THEOREM_ROBUSTNESS_SCAFFOLD_v0: TEMPLATE_PINNED`
-	- `SR_COVARIANCE_THEOREM_NEGCTRL_SCAFFOLD_v0: TEMPLATE_PINNED`
-	- `SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_v0: CYCLE15_SCAFFOLD_LOCKED`
-	- `SR_COVARIANCE_PROGRESS_CYCLE15_v0: THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0`
-	- artifact: `formal/output/sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0.json`
+  - `TARGET-SR-COV-MICRO-15-THEOREM-ROBUSTNESS-NEGCTRL-SCAFFOLD-v0`
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_SCAFFOLD_v0: TEMPLATE_PINNED`
+  - `SR_COVARIANCE_THEOREM_NEGCTRL_SCAFFOLD_v0: TEMPLATE_PINNED`
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_v0: CYCLE15_SCAFFOLD_LOCKED`
+  - `SR_COVARIANCE_PROGRESS_CYCLE15_v0: THEOREM_ROBUSTNESS_NEGCTRL_SCAFFOLD_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0`
+  - artifact: `formal/output/sr_covariance_theorem_robustness_negctrl_scaffold_cycle15_v0.json`
 - SR cycle-16 theorem-surface first robustness-row lock is pinned:
-	- `TARGET-SR-COV-MICRO-16-THEOREM-ROBUSTNESS-ROW1-v0`
-	- `SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_01_v0: PERTURB_INTERVAL_SCALE_SMALL_PINNED`
-	- `SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ROW_01_POPULATED`
-	- `SR_COVARIANCE_PROGRESS_CYCLE16_v0: THEOREM_ROBUSTNESS_ROW1_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE16_ARTIFACT_v0: sr_covariance_theorem_robustness_row1_cycle16_v0`
-	- artifact: `formal/output/sr_covariance_theorem_robustness_row1_cycle16_v0.json`
+  - `TARGET-SR-COV-MICRO-16-THEOREM-ROBUSTNESS-ROW1-v0`
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_01_v0: PERTURB_INTERVAL_SCALE_SMALL_PINNED`
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ROW_01_POPULATED`
+  - `SR_COVARIANCE_PROGRESS_CYCLE16_v0: THEOREM_ROBUSTNESS_ROW1_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE16_ARTIFACT_v0: sr_covariance_theorem_robustness_row1_cycle16_v0`
+  - artifact: `formal/output/sr_covariance_theorem_robustness_row1_cycle16_v0.json`
 - SR cycle-17 theorem-surface first negative-control row lock is pinned:
-	- `TARGET-SR-COV-MICRO-17-THEOREM-NEGCTRL-ROW1-v0`
-	- `SR_COVARIANCE_THEOREM_NEGCTRL_ROW_01_v0: BROKEN_INTERVAL_INVARIANCE_ASSUMPTION_PINNED`
-	- `SR_COVARIANCE_THEOREM_NEGCTRL_PROGRESS_v0: ROW_01_POPULATED`
-	- `SR_COVARIANCE_PROGRESS_CYCLE17_v0: THEOREM_NEGCTRL_ROW1_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE17_ARTIFACT_v0: sr_covariance_theorem_negctrl_row1_cycle17_v0`
-	- artifact: `formal/output/sr_covariance_theorem_negctrl_row1_cycle17_v0.json`
+  - `TARGET-SR-COV-MICRO-17-THEOREM-NEGCTRL-ROW1-v0`
+  - `SR_COVARIANCE_THEOREM_NEGCTRL_ROW_01_v0: BROKEN_INTERVAL_INVARIANCE_ASSUMPTION_PINNED`
+  - `SR_COVARIANCE_THEOREM_NEGCTRL_PROGRESS_v0: ROW_01_POPULATED`
+  - `SR_COVARIANCE_PROGRESS_CYCLE17_v0: THEOREM_NEGCTRL_ROW1_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE17_ARTIFACT_v0: sr_covariance_theorem_negctrl_row1_cycle17_v0`
+  - artifact: `formal/output/sr_covariance_theorem_negctrl_row1_cycle17_v0.json`
 - SR cycle-18 theorem-surface second robustness-row lock is pinned:
-	- `TARGET-SR-COV-MICRO-18-THEOREM-ROBUSTNESS-ROW2-v0`
-	- `SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_02_v0: PERTURB_VELOCITY_COMPOSITION_SMALL_PINNED`
-	- `SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ROW_02_POPULATED`
-	- `SR_COVARIANCE_PROGRESS_CYCLE18_v0: THEOREM_ROBUSTNESS_ROW2_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE18_ARTIFACT_v0: sr_covariance_theorem_robustness_row2_cycle18_v0`
-	- artifact: `formal/output/sr_covariance_theorem_robustness_row2_cycle18_v0.json`
+  - `TARGET-SR-COV-MICRO-18-THEOREM-ROBUSTNESS-ROW2-v0`
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_ROW_02_v0: PERTURB_VELOCITY_COMPOSITION_SMALL_PINNED`
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ROW_02_POPULATED`
+  - `SR_COVARIANCE_PROGRESS_CYCLE18_v0: THEOREM_ROBUSTNESS_ROW2_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE18_ARTIFACT_v0: sr_covariance_theorem_robustness_row2_cycle18_v0`
+  - artifact: `formal/output/sr_covariance_theorem_robustness_row2_cycle18_v0.json`
 - SR cycle-19 theorem-surface second negative-control row lock is pinned:
-	- `TARGET-SR-COV-MICRO-19-THEOREM-NEGCTRL-ROW2-v0`
-	- `SR_COVARIANCE_THEOREM_NEGCTRL_ROW_02_v0: BROKEN_VELOCITY_COMPOSITION_CLOSURE_ASSUMPTION_PINNED`
-	- `SR_COVARIANCE_THEOREM_NEGCTRL_PROGRESS_v0: ROW_02_POPULATED`
-	- `SR_COVARIANCE_PROGRESS_CYCLE19_v0: THEOREM_NEGCTRL_ROW2_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE19_ARTIFACT_v0: sr_covariance_theorem_negctrl_row2_cycle19_v0`
-	- artifact: `formal/output/sr_covariance_theorem_negctrl_row2_cycle19_v0.json`
+  - `TARGET-SR-COV-MICRO-19-THEOREM-NEGCTRL-ROW2-v0`
+  - `SR_COVARIANCE_THEOREM_NEGCTRL_ROW_02_v0: BROKEN_VELOCITY_COMPOSITION_CLOSURE_ASSUMPTION_PINNED`
+  - `SR_COVARIANCE_THEOREM_NEGCTRL_PROGRESS_v0: ROW_02_POPULATED`
+  - `SR_COVARIANCE_PROGRESS_CYCLE19_v0: THEOREM_NEGCTRL_ROW2_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE19_ARTIFACT_v0: sr_covariance_theorem_negctrl_row2_cycle19_v0`
+  - artifact: `formal/output/sr_covariance_theorem_negctrl_row2_cycle19_v0.json`
 - SR cycle-20 theorem-surface robustness/negative-control family-completion lock is pinned:
-	- `TARGET-SR-COV-MICRO-20-THEOREM-ROBUSTNESS-NEGCTRL-FAMILY-COMPLETE-v0`
-	- `SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ALL_REQUIRED_ROWS_POPULATED`
-	- `SR_COVARIANCE_THEOREM_NEGCTRL_PROGRESS_v0: ALL_REQUIRED_ROWS_POPULATED`
-	- `SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_FAMILY_COMPLETION_v0: CYCLE20_LOCKED`
-	- `SR_COVARIANCE_PROGRESS_CYCLE20_v0: THEOREM_ROBUSTNESS_NEGCTRL_FAMILY_COMPLETION_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE20_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_family_completion_cycle20_v0`
-	- artifact: `formal/output/sr_covariance_theorem_robustness_negctrl_family_completion_cycle20_v0.json`
+  - `TARGET-SR-COV-MICRO-20-THEOREM-ROBUSTNESS-NEGCTRL-FAMILY-COMPLETE-v0`
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_PROGRESS_v0: ALL_REQUIRED_ROWS_POPULATED`
+  - `SR_COVARIANCE_THEOREM_NEGCTRL_PROGRESS_v0: ALL_REQUIRED_ROWS_POPULATED`
+  - `SR_COVARIANCE_THEOREM_ROBUSTNESS_NEGCTRL_FAMILY_COMPLETION_v0: CYCLE20_LOCKED`
+  - `SR_COVARIANCE_PROGRESS_CYCLE20_v0: THEOREM_ROBUSTNESS_NEGCTRL_FAMILY_COMPLETION_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE20_ARTIFACT_v0: sr_covariance_theorem_robustness_negctrl_family_completion_cycle20_v0`
+  - artifact: `formal/output/sr_covariance_theorem_robustness_negctrl_family_completion_cycle20_v0.json`
 - SR cycle-21 theorem-surface pre-discharge criteria lock is pinned:
-	- `TARGET-SR-COV-MICRO-21-THEOREM-PREDISCHARGE-CRITERIA-v0`
-	- `SR_COVARIANCE_THEOREM_PREDISCHARGE_CRITERIA_v0: CYCLE21_ROW_LEVEL_CRITERIA_PINNED`
-	- `SR_COVARIANCE_THEOREM_CRITERIA_ROW_01_v0: ASSUMPTION_MINIMIZATION_LOCKED`
-	- `SR_COVARIANCE_THEOREM_CRITERIA_ROW_02_v0: ROBUSTNESS_ROWS_LOCKED`
-	- `SR_COVARIANCE_THEOREM_CRITERIA_ROW_03_v0: NEGCTRL_ROWS_LOCKED`
-	- `SR_COVARIANCE_THEOREM_CRITERIA_ROW_04_v0: RESULTS_SYNC_LOCKED`
-	- `SR_COVARIANCE_PROGRESS_CYCLE21_v0: THEOREM_PREDISCHARGE_CRITERIA_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE21_ARTIFACT_v0: sr_covariance_theorem_predischarge_criteria_cycle21_v0`
-	- artifact: `formal/output/sr_covariance_theorem_predischarge_criteria_cycle21_v0.json`
+  - `TARGET-SR-COV-MICRO-21-THEOREM-PREDISCHARGE-CRITERIA-v0`
+  - `SR_COVARIANCE_THEOREM_PREDISCHARGE_CRITERIA_v0: CYCLE21_ROW_LEVEL_CRITERIA_PINNED`
+  - `SR_COVARIANCE_THEOREM_CRITERIA_ROW_01_v0: ASSUMPTION_MINIMIZATION_LOCKED`
+  - `SR_COVARIANCE_THEOREM_CRITERIA_ROW_02_v0: ROBUSTNESS_ROWS_LOCKED`
+  - `SR_COVARIANCE_THEOREM_CRITERIA_ROW_03_v0: NEGCTRL_ROWS_LOCKED`
+  - `SR_COVARIANCE_THEOREM_CRITERIA_ROW_04_v0: RESULTS_SYNC_LOCKED`
+  - `SR_COVARIANCE_PROGRESS_CYCLE21_v0: THEOREM_PREDISCHARGE_CRITERIA_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE21_ARTIFACT_v0: sr_covariance_theorem_predischarge_criteria_cycle21_v0`
+  - artifact: `formal/output/sr_covariance_theorem_predischarge_criteria_cycle21_v0.json`
 - SR cycle-22 theorem-surface adjudication-transition lock is pinned:
-	- `TARGET-SR-COV-MICRO-22-THEOREM-ADJUDICATION-TRANSITION-v0`
-	- `SR_COVARIANCE_THEOREM_SURFACE_ADJUDICATION_v0: DISCHARGED_v0_PREDISCHARGE_CRITERIA_LOCKED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE22_v0: THEOREM_ADJUDICATION_TRANSITION_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE22_ARTIFACT_v0: sr_covariance_theorem_adjudication_transition_cycle22_v0`
-	- artifact: `formal/output/sr_covariance_theorem_adjudication_transition_cycle22_v0.json`
+  - `TARGET-SR-COV-MICRO-22-THEOREM-ADJUDICATION-TRANSITION-v0`
+  - `SR_COVARIANCE_THEOREM_SURFACE_ADJUDICATION_v0: DISCHARGED_v0_PREDISCHARGE_CRITERIA_LOCKED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE22_v0: THEOREM_ADJUDICATION_TRANSITION_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE22_ARTIFACT_v0: sr_covariance_theorem_adjudication_transition_cycle22_v0`
+  - artifact: `formal/output/sr_covariance_theorem_adjudication_transition_cycle22_v0.json`
 - SR cycle-23 theorem-surface package-freeze lock is pinned:
-	- `TARGET-SR-COV-MICRO-23-THEOREM-PACKAGE-FREEZE-v0`
-	- `SR_COVARIANCE_THEOREM_PACKAGE_FREEZE_v0: CYCLE23_FROZEN_CONTENTS_PINNED`
-	- `SR_COVARIANCE_PROGRESS_CYCLE23_v0: THEOREM_PACKAGE_FREEZE_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE23_ARTIFACT_v0: sr_covariance_theorem_package_freeze_cycle23_v0`
-	- artifact: `formal/output/sr_covariance_theorem_package_freeze_cycle23_v0.json`
+  - `TARGET-SR-COV-MICRO-23-THEOREM-PACKAGE-FREEZE-v0`
+  - `SR_COVARIANCE_THEOREM_PACKAGE_FREEZE_v0: CYCLE23_FROZEN_CONTENTS_PINNED`
+  - `SR_COVARIANCE_PROGRESS_CYCLE23_v0: THEOREM_PACKAGE_FREEZE_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE23_ARTIFACT_v0: sr_covariance_theorem_package_freeze_cycle23_v0`
+  - artifact: `formal/output/sr_covariance_theorem_package_freeze_cycle23_v0.json`
 - SR cycle-24 theorem-surface frozen-watch reopen-policy lock is pinned:
-	- `TARGET-SR-COV-MICRO-24-THEOREM-FROZEN-WATCH-REOPEN-POLICY-v0`
-	- `SR_COVARIANCE_THEOREM_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
-	- `SR_COVARIANCE_PROGRESS_CYCLE24_v0: THEOREM_FROZEN_WATCH_REOPEN_POLICY_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE24_ARTIFACT_v0: sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0`
-	- artifact: `formal/output/sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0.json`
+  - `TARGET-SR-COV-MICRO-24-THEOREM-FROZEN-WATCH-REOPEN-POLICY-v0`
+  - `SR_COVARIANCE_THEOREM_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
+  - `SR_COVARIANCE_PROGRESS_CYCLE24_v0: THEOREM_FROZEN_WATCH_REOPEN_POLICY_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE24_ARTIFACT_v0: sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0`
+  - artifact: `formal/output/sr_covariance_theorem_frozen_watch_reopen_policy_cycle24_v0.json`
 - SR cycle-25 theorem-surface derivation-promotion gate lock is pinned:
-	- `TARGET-SR-COV-MICRO-25-THEOREM-DERIVATION-PROMOTION-GATE-v0`
-	- `SR_COVARIANCE_THEOREM_DERIVATION_PROMOTION_GATE_v0: CYCLE25_CRITERIA_LOCKED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE25_v0: THEOREM_DERIVATION_PROMOTION_GATE_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE25_ARTIFACT_v0: sr_covariance_theorem_derivation_promotion_gate_cycle25_v0`
-	- artifact: `formal/output/sr_covariance_theorem_derivation_promotion_gate_cycle25_v0.json`
+  - `TARGET-SR-COV-MICRO-25-THEOREM-DERIVATION-PROMOTION-GATE-v0`
+  - `SR_COVARIANCE_THEOREM_DERIVATION_PROMOTION_GATE_v0: CYCLE25_CRITERIA_LOCKED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE25_v0: THEOREM_DERIVATION_PROMOTION_GATE_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE25_ARTIFACT_v0: sr_covariance_theorem_derivation_promotion_gate_cycle25_v0`
+  - artifact: `formal/output/sr_covariance_theorem_derivation_promotion_gate_cycle25_v0.json`
 - SR cycle-26 derivation-completeness gate scaffold lock is pinned:
-	- `TARGET-SR-COV-MICRO-26-DERIVATION-COMPLETENESS-GATE-SCAFFOLD-v0`
-	- `TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN`
-	- pointer: `formal/docs/paper/DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md`
-	- `SR_DERIVATION_COMPLETENESS_GATE_v0: CYCLE26_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE26_v0: DERIVATION_COMPLETENESS_GATE_SCAFFOLD_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE26_ARTIFACT_v0: sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0`
-	- artifact: `formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json`
+  - `TARGET-SR-COV-MICRO-26-DERIVATION-COMPLETENESS-GATE-SCAFFOLD-v0`
+  - `TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN`
+  - pointer: `formal/docs/paper/DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md`
+  - `SR_DERIVATION_COMPLETENESS_GATE_v0: CYCLE26_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE26_v0: DERIVATION_COMPLETENESS_GATE_SCAFFOLD_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE26_ARTIFACT_v0: sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0`
+  - artifact: `formal/output/sr_covariance_derivation_completeness_gate_scaffold_cycle26_v0.json`
 - SR cycle-27 theorem-object implementation gate lock is pinned:
-	- `TARGET-SR-COV-MICRO-27-THEOREM-OBJECT-IMPLEMENTATION-GATE-v0`
-	- `SR_COVARIANCE_THEOREM_OBJECT_IMPLEMENTATION_GATE_v0: CYCLE27_BASE_OBJECT_SET_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE27_v0: THEOREM_OBJECT_IMPLEMENTATION_GATE_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE27_ARTIFACT_v0: sr_covariance_theorem_object_implementation_gate_cycle27_v0`
-	- artifact: `formal/output/sr_covariance_theorem_object_implementation_gate_cycle27_v0.json`
+  - `TARGET-SR-COV-MICRO-27-THEOREM-OBJECT-IMPLEMENTATION-GATE-v0`
+  - `SR_COVARIANCE_THEOREM_OBJECT_IMPLEMENTATION_GATE_v0: CYCLE27_BASE_OBJECT_SET_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE27_v0: THEOREM_OBJECT_IMPLEMENTATION_GATE_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE27_ARTIFACT_v0: sr_covariance_theorem_object_implementation_gate_cycle27_v0`
+  - artifact: `formal/output/sr_covariance_theorem_object_implementation_gate_cycle27_v0.json`
 - SR cycle-28 theorem-object discharge stub lock is pinned:
-	- `TARGET-SR-COV-MICRO-28-THEOREM-OBJECT-DISCHARGE-STUB-v0`
-	- `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_STUB_v0: CYCLE28_BASE_THEOREM_SIGNATURES_PINNED_NONCLAIM`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE28_v0: THEOREM_OBJECT_DISCHARGE_STUB_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE28_ARTIFACT_v0: sr_covariance_theorem_object_discharge_stub_cycle28_v0`
-	- artifact: `formal/output/sr_covariance_theorem_object_discharge_stub_cycle28_v0.json`
+  - `TARGET-SR-COV-MICRO-28-THEOREM-OBJECT-DISCHARGE-STUB-v0`
+  - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_STUB_v0: CYCLE28_BASE_THEOREM_SIGNATURES_PINNED_NONCLAIM`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE28_v0: THEOREM_OBJECT_DISCHARGE_STUB_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE28_ARTIFACT_v0: sr_covariance_theorem_object_discharge_stub_cycle28_v0`
+  - artifact: `formal/output/sr_covariance_theorem_object_discharge_stub_cycle28_v0.json`
 - SR cycle-29 theorem-object phase-exit binding lock is pinned:
-	- `TARGET-SR-COV-MICRO-29-THEOREM-OBJECT-PHASE-EXIT-BINDING-v0`
-	- `SR_COVARIANCE_THEOREM_OBJECT_PHASE_EXIT_BINDING_v0: CYCLE29_PHASE_EXIT_TOKENS_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_EXIT_v0: OBJECT_THEOREM_SURFACES_BOUND_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_EXIT_v0: CANONICAL_EQUIVALENCE_SURFACE_BOUND_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_EXIT_v0: ASSUMPTION_MINIMIZATION_DISCHARGE_BOUND_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE4_EXIT_v0: ROBUSTNESS_NEGCTRL_DISCHARGE_BOUND_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE5_EXIT_v0: DERIVATION_COMPLETENESS_GATE_DISCHARGE_BOUND_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE6_EXIT_v0: INEVITABILITY_GATE_DISCHARGE_BOUND_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE7_EXIT_v0: PACKAGE_FREEZE_REOPEN_POLICY_BOUND_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE29_v0: THEOREM_OBJECT_PHASE_EXIT_BINDING_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE29_ARTIFACT_v0: sr_covariance_theorem_object_phase_exit_binding_cycle29_v0`
-	- artifact: `formal/output/sr_covariance_theorem_object_phase_exit_binding_cycle29_v0.json`
+  - `TARGET-SR-COV-MICRO-29-THEOREM-OBJECT-PHASE-EXIT-BINDING-v0`
+  - `SR_COVARIANCE_THEOREM_OBJECT_PHASE_EXIT_BINDING_v0: CYCLE29_PHASE_EXIT_TOKENS_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_EXIT_v0: OBJECT_THEOREM_SURFACES_BOUND_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_EXIT_v0: CANONICAL_EQUIVALENCE_SURFACE_BOUND_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_EXIT_v0: ASSUMPTION_MINIMIZATION_DISCHARGE_BOUND_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE4_EXIT_v0: ROBUSTNESS_NEGCTRL_DISCHARGE_BOUND_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE5_EXIT_v0: DERIVATION_COMPLETENESS_GATE_DISCHARGE_BOUND_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE6_EXIT_v0: INEVITABILITY_GATE_DISCHARGE_BOUND_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE7_EXIT_v0: PACKAGE_FREEZE_REOPEN_POLICY_BOUND_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE29_v0: THEOREM_OBJECT_PHASE_EXIT_BINDING_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE29_ARTIFACT_v0: sr_covariance_theorem_object_phase_exit_binding_cycle29_v0`
+  - artifact: `formal/output/sr_covariance_theorem_object_phase_exit_binding_cycle29_v0.json`
 - SR cycle-30 theorem-object discharge progression lock is pinned:
-	- `TARGET-SR-COV-MICRO-30-THEOREM-OBJECT-DISCHARGE-PROGRESSION-v0`
-	- `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_PROGRESSION_v0: CYCLE30_PHASE1_DISCHARGE_PROGRESS_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_01_v0: LORENTZ_TRANSFORM_OBJECT_SURFACE_PROGRESS_PINNED`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_02_v0: INTERVAL_INVARIANCE_SURFACE_PROGRESS_PINNED`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_03_v0: VELOCITY_COMPOSITION_SURFACE_PROGRESS_PINNED`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_v0: COVARIANCE_CONTRACT_SURFACE_PROGRESS_PINNED`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_PROGRESS_v0: ROWS_01_04_POPULATED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE30_v0: THEOREM_OBJECT_DISCHARGE_PROGRESSION_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE30_ARTIFACT_v0: sr_covariance_theorem_object_discharge_progression_cycle30_v0`
-	- artifact: `formal/output/sr_covariance_theorem_object_discharge_progression_cycle30_v0.json`
+  - `TARGET-SR-COV-MICRO-30-THEOREM-OBJECT-DISCHARGE-PROGRESSION-v0`
+  - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_PROGRESSION_v0: CYCLE30_PHASE1_DISCHARGE_PROGRESS_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_01_v0: LORENTZ_TRANSFORM_OBJECT_SURFACE_PROGRESS_PINNED`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_02_v0: INTERVAL_INVARIANCE_SURFACE_PROGRESS_PINNED`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_03_v0: VELOCITY_COMPOSITION_SURFACE_PROGRESS_PINNED`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_v0: COVARIANCE_CONTRACT_SURFACE_PROGRESS_PINNED`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_PROGRESS_v0: ROWS_01_04_POPULATED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE30_v0: THEOREM_OBJECT_DISCHARGE_PROGRESSION_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE30_ARTIFACT_v0: sr_covariance_theorem_object_discharge_progression_cycle30_v0`
+  - artifact: `formal/output/sr_covariance_theorem_object_discharge_progression_cycle30_v0.json`
 - SR cycle-31 theorem-object discharge row-01 lock is pinned:
-	- `TARGET-SR-COV-MICRO-31-THEOREM-OBJECT-DISCHARGE-ROW01-LOCK-v0`
-	- `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW01_LOCK_v0: CYCLE31_PHASE1_ROW01_DISCHARGE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_01_STATUS_v0: LORENTZ_TRANSFORM_OBJECT_SURFACE_DISCHARGE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE31_v0: THEOREM_OBJECT_DISCHARGE_ROW01_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE31_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row01_lock_cycle31_v0`
-	- artifact: `formal/output/sr_covariance_theorem_object_discharge_row01_lock_cycle31_v0.json`
+  - `TARGET-SR-COV-MICRO-31-THEOREM-OBJECT-DISCHARGE-ROW01-LOCK-v0`
+  - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW01_LOCK_v0: CYCLE31_PHASE1_ROW01_DISCHARGE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_01_STATUS_v0: LORENTZ_TRANSFORM_OBJECT_SURFACE_DISCHARGE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE31_v0: THEOREM_OBJECT_DISCHARGE_ROW01_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE31_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row01_lock_cycle31_v0`
+  - artifact: `formal/output/sr_covariance_theorem_object_discharge_row01_lock_cycle31_v0.json`
 - SR cycle-32 theorem-object discharge row-02 lock is pinned:
-	- `TARGET-SR-COV-MICRO-32-THEOREM-OBJECT-DISCHARGE-ROW02-LOCK-v0`
-	- `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW02_LOCK_v0: CYCLE32_PHASE1_ROW02_DISCHARGE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_02_STATUS_v0: INTERVAL_INVARIANCE_SURFACE_DISCHARGE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE32_v0: THEOREM_OBJECT_DISCHARGE_ROW02_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE32_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row02_lock_cycle32_v0`
-	- artifact: `formal/output/sr_covariance_theorem_object_discharge_row02_lock_cycle32_v0.json`
+  - `TARGET-SR-COV-MICRO-32-THEOREM-OBJECT-DISCHARGE-ROW02-LOCK-v0`
+  - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW02_LOCK_v0: CYCLE32_PHASE1_ROW02_DISCHARGE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_02_STATUS_v0: INTERVAL_INVARIANCE_SURFACE_DISCHARGE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE32_v0: THEOREM_OBJECT_DISCHARGE_ROW02_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE32_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row02_lock_cycle32_v0`
+  - artifact: `formal/output/sr_covariance_theorem_object_discharge_row02_lock_cycle32_v0.json`
 - SR cycle-33 theorem-object discharge row-03 lock is pinned:
-	- `TARGET-SR-COV-MICRO-33-THEOREM-OBJECT-DISCHARGE-ROW03-LOCK-v0`
-	- `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW03_LOCK_v0: CYCLE33_PHASE1_ROW03_DISCHARGE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_03_STATUS_v0: VELOCITY_COMPOSITION_SURFACE_DISCHARGE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE33_v0: THEOREM_OBJECT_DISCHARGE_ROW03_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE33_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row03_lock_cycle33_v0`
-	- artifact: `formal/output/sr_covariance_theorem_object_discharge_row03_lock_cycle33_v0.json`
+  - `TARGET-SR-COV-MICRO-33-THEOREM-OBJECT-DISCHARGE-ROW03-LOCK-v0`
+  - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW03_LOCK_v0: CYCLE33_PHASE1_ROW03_DISCHARGE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_03_STATUS_v0: VELOCITY_COMPOSITION_SURFACE_DISCHARGE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE33_v0: THEOREM_OBJECT_DISCHARGE_ROW03_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE33_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row03_lock_cycle33_v0`
+  - artifact: `formal/output/sr_covariance_theorem_object_discharge_row03_lock_cycle33_v0.json`
 - SR cycle-34 theorem-object discharge row-04 lock is pinned:
-	- `TARGET-SR-COV-MICRO-34-THEOREM-OBJECT-DISCHARGE-ROW04-LOCK-v0`
-	- `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW04_LOCK_v0: CYCLE34_PHASE1_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_STATUS_v0: COVARIANCE_CONTRACT_SURFACE_DISCHARGE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE34_v0: THEOREM_OBJECT_DISCHARGE_ROW04_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE34_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0`
-	- artifact: `formal/output/sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0.json`
+  - `TARGET-SR-COV-MICRO-34-THEOREM-OBJECT-DISCHARGE-ROW04-LOCK-v0`
+  - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_ROW04_LOCK_v0: CYCLE34_PHASE1_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_STATUS_v0: COVARIANCE_CONTRACT_SURFACE_DISCHARGE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE34_v0: THEOREM_OBJECT_DISCHARGE_ROW04_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE34_ARTIFACT_v0: sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0`
+  - artifact: `formal/output/sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0.json`
 - SR cycle-35 theorem-object discharge phase-I completion transition is pinned:
-	- `TARGET-SR-COV-MICRO-35-THEOREM-OBJECT-DISCHARGE-PHASE1-COMPLETE-TRANSITION-v0`
-	- `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_PHASE1_COMPLETION_v0: CYCLE35_PHASE1_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE35_v0: THEOREM_OBJECT_DISCHARGE_PHASE1_COMPLETION_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE35_ARTIFACT_v0: sr_covariance_theorem_object_discharge_phase1_completion_transition_cycle35_v0`
-	- artifact: `formal/output/sr_covariance_theorem_object_discharge_phase1_completion_transition_cycle35_v0.json`
+  - `TARGET-SR-COV-MICRO-35-THEOREM-OBJECT-DISCHARGE-PHASE1-COMPLETE-TRANSITION-v0`
+  - `SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_PHASE1_COMPLETION_v0: CYCLE35_PHASE1_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE35_v0: THEOREM_OBJECT_DISCHARGE_PHASE1_COMPLETION_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE35_ARTIFACT_v0: sr_covariance_theorem_object_discharge_phase1_completion_transition_cycle35_v0`
+  - artifact: `formal/output/sr_covariance_theorem_object_discharge_phase1_completion_transition_cycle35_v0.json`
 - SR cycle-36 phase-II canonical-equivalence surface entry lock is pinned:
-	- `TARGET-SR-COV-MICRO-36-CANONICAL-EQUIVALENCE-SURFACE-ENTRY-LOCK-v0`
-	- `SR_COVARIANCE_CANONICAL_EQUIVALENCE_SURFACE_ENTRY_LOCK_v0: CYCLE36_PHASE2_ENTRY_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE36_v0: PHASE2_CANONICAL_EQUIVALENCE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE36_ARTIFACT_v0: sr_covariance_canonical_equivalence_surface_entry_lock_cycle36_v0`
-	- artifact: `formal/output/sr_covariance_canonical_equivalence_surface_entry_lock_cycle36_v0.json`
+  - `TARGET-SR-COV-MICRO-36-CANONICAL-EQUIVALENCE-SURFACE-ENTRY-LOCK-v0`
+  - `SR_COVARIANCE_CANONICAL_EQUIVALENCE_SURFACE_ENTRY_LOCK_v0: CYCLE36_PHASE2_ENTRY_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE36_v0: PHASE2_CANONICAL_EQUIVALENCE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE36_ARTIFACT_v0: sr_covariance_canonical_equivalence_surface_entry_lock_cycle36_v0`
+  - artifact: `formal/output/sr_covariance_canonical_equivalence_surface_entry_lock_cycle36_v0.json`
 - SR cycle-37 phase-II canonical-equivalence theorem-surface lock is pinned:
-	- `TARGET-SR-COV-MICRO-37-CANONICAL-EQUIVALENCE-THEOREM-SURFACE-LOCK-v0`
-	- `SR_COVARIANCE_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_LOCK_v0: CYCLE37_PHASE2_THEOREM_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE37_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE37_ARTIFACT_v0: sr_covariance_canonical_equivalence_theorem_surface_lock_cycle37_v0`
-	- artifact: `formal/output/sr_covariance_canonical_equivalence_theorem_surface_lock_cycle37_v0.json`
+  - `TARGET-SR-COV-MICRO-37-CANONICAL-EQUIVALENCE-THEOREM-SURFACE-LOCK-v0`
+  - `SR_COVARIANCE_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_LOCK_v0: CYCLE37_PHASE2_THEOREM_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE37_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE37_ARTIFACT_v0: sr_covariance_canonical_equivalence_theorem_surface_lock_cycle37_v0`
+  - artifact: `formal/output/sr_covariance_canonical_equivalence_theorem_surface_lock_cycle37_v0.json`
 - SR cycle-38 phase-II canonical-equivalence theorem-object linkage lock is pinned:
-	- `TARGET-SR-COV-MICRO-38-CANONICAL-EQUIVALENCE-THEOREM-OBJECT-LINKAGE-LOCK-v0`
-	- `SR_COVARIANCE_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_LOCK_v0: CYCLE38_PHASE2_THEOREM_OBJECT_LINKAGE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE38_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE38_ARTIFACT_v0: sr_covariance_canonical_equivalence_theorem_object_linkage_lock_cycle38_v0`
-	- artifact: `formal/output/sr_covariance_canonical_equivalence_theorem_object_linkage_lock_cycle38_v0.json`
+  - `TARGET-SR-COV-MICRO-38-CANONICAL-EQUIVALENCE-THEOREM-OBJECT-LINKAGE-LOCK-v0`
+  - `SR_COVARIANCE_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_LOCK_v0: CYCLE38_PHASE2_THEOREM_OBJECT_LINKAGE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE38_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE38_ARTIFACT_v0: sr_covariance_canonical_equivalence_theorem_object_linkage_lock_cycle38_v0`
+  - artifact: `formal/output/sr_covariance_canonical_equivalence_theorem_object_linkage_lock_cycle38_v0.json`
 - SR cycle-39 phase-II canonical-equivalence pre-discharge criteria lock is pinned:
-	- `TARGET-SR-COV-MICRO-39-CANONICAL-EQUIVALENCE-PREDISCHARGE-CRITERIA-LOCK-v0`
-	- `SR_COVARIANCE_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_LOCK_v0: CYCLE39_PHASE2_PREDISCHARGE_CRITERIA_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE39_v0: PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE39_ARTIFACT_v0: sr_covariance_canonical_equivalence_predischarge_criteria_lock_cycle39_v0`
-	- artifact: `formal/output/sr_covariance_canonical_equivalence_predischarge_criteria_lock_cycle39_v0.json`
+  - `TARGET-SR-COV-MICRO-39-CANONICAL-EQUIVALENCE-PREDISCHARGE-CRITERIA-LOCK-v0`
+  - `SR_COVARIANCE_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_LOCK_v0: CYCLE39_PHASE2_PREDISCHARGE_CRITERIA_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE39_v0: PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE39_ARTIFACT_v0: sr_covariance_canonical_equivalence_predischarge_criteria_lock_cycle39_v0`
+  - artifact: `formal/output/sr_covariance_canonical_equivalence_predischarge_criteria_lock_cycle39_v0.json`
 - SR cycle-40 phase-II canonical-equivalence adjudication-transition lock is pinned:
-	- `TARGET-SR-COV-MICRO-40-CANONICAL-EQUIVALENCE-ADJUDICATION-TRANSITION-LOCK-v0`
-	- `SR_COVARIANCE_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_LOCK_v0: CYCLE40_PHASE2_ADJUDICATION_TRANSITION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE40_v0: PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE40_ARTIFACT_v0: sr_covariance_canonical_equivalence_adjudication_transition_lock_cycle40_v0`
-	- artifact: `formal/output/sr_covariance_canonical_equivalence_adjudication_transition_lock_cycle40_v0.json`
+  - `TARGET-SR-COV-MICRO-40-CANONICAL-EQUIVALENCE-ADJUDICATION-TRANSITION-LOCK-v0`
+  - `SR_COVARIANCE_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_LOCK_v0: CYCLE40_PHASE2_ADJUDICATION_TRANSITION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE40_v0: PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE40_ARTIFACT_v0: sr_covariance_canonical_equivalence_adjudication_transition_lock_cycle40_v0`
+  - artifact: `formal/output/sr_covariance_canonical_equivalence_adjudication_transition_lock_cycle40_v0.json`
 - SR cycle-41 phase-II canonical-equivalence package-freeze lock is pinned:
-	- `TARGET-SR-COV-MICRO-41-CANONICAL-EQUIVALENCE-PACKAGE-FREEZE-LOCK-v0`
-	- `SR_COVARIANCE_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_LOCK_v0: CYCLE41_PHASE2_PACKAGE_FREEZE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE41_v0: PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE41_ARTIFACT_v0: sr_covariance_canonical_equivalence_package_freeze_lock_cycle41_v0`
-	- artifact: `formal/output/sr_covariance_canonical_equivalence_package_freeze_lock_cycle41_v0.json`
+  - `TARGET-SR-COV-MICRO-41-CANONICAL-EQUIVALENCE-PACKAGE-FREEZE-LOCK-v0`
+  - `SR_COVARIANCE_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_LOCK_v0: CYCLE41_PHASE2_PACKAGE_FREEZE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE41_v0: PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE41_ARTIFACT_v0: sr_covariance_canonical_equivalence_package_freeze_lock_cycle41_v0`
+  - artifact: `formal/output/sr_covariance_canonical_equivalence_package_freeze_lock_cycle41_v0.json`
 - SR cycle-42 phase-III assumption-minimization discharge surface-entry lock is pinned:
-	- `TARGET-SR-COV-MICRO-42-ASSUMPTION-MINIMIZATION-DISCHARGE-SURFACE-ENTRY-LOCK-v0`
-	- `SR_COVARIANCE_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE42_PHASE3_ENTRY_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE42_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE42_ARTIFACT_v0: sr_covariance_assumption_minimization_discharge_surface_entry_lock_cycle42_v0`
-	- artifact: `formal/output/sr_covariance_assumption_minimization_discharge_surface_entry_lock_cycle42_v0.json`
+  - `TARGET-SR-COV-MICRO-42-ASSUMPTION-MINIMIZATION-DISCHARGE-SURFACE-ENTRY-LOCK-v0`
+  - `SR_COVARIANCE_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE42_PHASE3_ENTRY_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE42_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE42_ARTIFACT_v0: sr_covariance_assumption_minimization_discharge_surface_entry_lock_cycle42_v0`
+  - artifact: `formal/output/sr_covariance_assumption_minimization_discharge_surface_entry_lock_cycle42_v0.json`
 - SR cycle-43 phase-III assumption-minimization discharge theorem-surface lock is pinned:
-	- `TARGET-SR-COV-MICRO-43-ASSUMPTION-MINIMIZATION-DISCHARGE-THEOREM-SURFACE-LOCK-v0`
-	- `SR_COVARIANCE_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE43_PHASE3_THEOREM_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE43_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE43_ARTIFACT_v0: sr_covariance_assumption_minimization_discharge_theorem_surface_lock_cycle43_v0`
-	- artifact: `formal/output/sr_covariance_assumption_minimization_discharge_theorem_surface_lock_cycle43_v0.json`
+  - `TARGET-SR-COV-MICRO-43-ASSUMPTION-MINIMIZATION-DISCHARGE-THEOREM-SURFACE-LOCK-v0`
+  - `SR_COVARIANCE_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE43_PHASE3_THEOREM_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE43_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE43_ARTIFACT_v0: sr_covariance_assumption_minimization_discharge_theorem_surface_lock_cycle43_v0`
+  - artifact: `formal/output/sr_covariance_assumption_minimization_discharge_theorem_surface_lock_cycle43_v0.json`
 - SR cycle-44 phase-III robustness discharge surface-entry lock is pinned:
-	- `TARGET-SR-COV-MICRO-44-ROBUSTNESS-DISCHARGE-SURFACE-ENTRY-LOCK-v0`
-	- `SR_COVARIANCE_ASSUMPTION_ROBUSTNESS_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE44_PHASE3_ROBUSTNESS_ENTRY_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE44_v0: PHASE3_ROBUSTNESS_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE44_ARTIFACT_v0: sr_covariance_assumption_robustness_discharge_surface_entry_lock_cycle44_v0`
-	- artifact: `formal/output/sr_covariance_assumption_robustness_discharge_surface_entry_lock_cycle44_v0.json`
+  - `TARGET-SR-COV-MICRO-44-ROBUSTNESS-DISCHARGE-SURFACE-ENTRY-LOCK-v0`
+  - `SR_COVARIANCE_ASSUMPTION_ROBUSTNESS_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE44_PHASE3_ROBUSTNESS_ENTRY_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE44_v0: PHASE3_ROBUSTNESS_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE44_ARTIFACT_v0: sr_covariance_assumption_robustness_discharge_surface_entry_lock_cycle44_v0`
+  - artifact: `formal/output/sr_covariance_assumption_robustness_discharge_surface_entry_lock_cycle44_v0.json`
 - SR cycle-45 phase-III robustness discharge theorem-surface lock is pinned:
-	- `TARGET-SR-COV-MICRO-45-ROBUSTNESS-DISCHARGE-THEOREM-SURFACE-LOCK-v0`
-	- `SR_COVARIANCE_ASSUMPTION_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE45_PHASE3_ROBUSTNESS_THEOREM_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE45_v0: PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE45_ARTIFACT_v0: sr_covariance_assumption_robustness_discharge_theorem_surface_lock_cycle45_v0`
-	- artifact: `formal/output/sr_covariance_assumption_robustness_discharge_theorem_surface_lock_cycle45_v0.json`
+  - `TARGET-SR-COV-MICRO-45-ROBUSTNESS-DISCHARGE-THEOREM-SURFACE-LOCK-v0`
+  - `SR_COVARIANCE_ASSUMPTION_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE45_PHASE3_ROBUSTNESS_THEOREM_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE45_v0: PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE45_ARTIFACT_v0: sr_covariance_assumption_robustness_discharge_theorem_surface_lock_cycle45_v0`
+  - artifact: `formal/output/sr_covariance_assumption_robustness_discharge_theorem_surface_lock_cycle45_v0.json`
 - SR cycle-46 phase-III negative-control discharge surface-entry lock is pinned:
-	- `TARGET-SR-COV-MICRO-46-NEGCTRL-DISCHARGE-SURFACE-ENTRY-LOCK-v0`
-	- `SR_COVARIANCE_ASSUMPTION_NEGCTRL_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE46_PHASE3_NEGCTRL_ENTRY_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE46_v0: PHASE3_NEGCTRL_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE46_ARTIFACT_v0: sr_covariance_assumption_negctrl_discharge_surface_entry_lock_cycle46_v0`
-	- artifact: `formal/output/sr_covariance_assumption_negctrl_discharge_surface_entry_lock_cycle46_v0.json`
+  - `TARGET-SR-COV-MICRO-46-NEGCTRL-DISCHARGE-SURFACE-ENTRY-LOCK-v0`
+  - `SR_COVARIANCE_ASSUMPTION_NEGCTRL_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE46_PHASE3_NEGCTRL_ENTRY_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE46_v0: PHASE3_NEGCTRL_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE46_ARTIFACT_v0: sr_covariance_assumption_negctrl_discharge_surface_entry_lock_cycle46_v0`
+  - artifact: `formal/output/sr_covariance_assumption_negctrl_discharge_surface_entry_lock_cycle46_v0.json`
 - SR cycle-47 phase-III negative-control discharge theorem-surface lock is pinned:
-	- `TARGET-SR-COV-MICRO-47-NEGCTRL-DISCHARGE-THEOREM-SURFACE-LOCK-v0`
-	- `SR_COVARIANCE_ASSUMPTION_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE47_PHASE3_NEGCTRL_THEOREM_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE47_v0: PHASE3_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE47_ARTIFACT_v0: sr_covariance_assumption_negctrl_discharge_theorem_surface_lock_cycle47_v0`
-	- artifact: `formal/output/sr_covariance_assumption_negctrl_discharge_theorem_surface_lock_cycle47_v0.json`
+  - `TARGET-SR-COV-MICRO-47-NEGCTRL-DISCHARGE-THEOREM-SURFACE-LOCK-v0`
+  - `SR_COVARIANCE_ASSUMPTION_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE47_PHASE3_NEGCTRL_THEOREM_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE47_v0: PHASE3_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE47_ARTIFACT_v0: sr_covariance_assumption_negctrl_discharge_theorem_surface_lock_cycle47_v0`
+  - artifact: `formal/output/sr_covariance_assumption_negctrl_discharge_theorem_surface_lock_cycle47_v0.json`
 - SR cycle-48 phase-III assumption-minimization discharge package-freeze lock is pinned:
-	- `TARGET-SR-COV-MICRO-48-ASSUMPTION-MINIMIZATION-DISCHARGE-PACKAGE-FREEZE-LOCK-v0`
-	- `SR_COVARIANCE_ASSUMPTION_MINIMIZATION_DISCHARGE_PACKAGE_FREEZE_LOCK_v0: CYCLE48_PHASE3_PACKAGE_FREEZE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
-	- `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
-	- `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
-	- `SR_COVARIANCE_PROGRESS_CYCLE48_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_PACKAGE_FREEZE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE48_ARTIFACT_v0: sr_covariance_assumption_minimization_discharge_package_freeze_lock_cycle48_v0`
-	- artifact: `formal/output/sr_covariance_assumption_minimization_discharge_package_freeze_lock_cycle48_v0.json`
+  - `TARGET-SR-COV-MICRO-48-ASSUMPTION-MINIMIZATION-DISCHARGE-PACKAGE-FREEZE-LOCK-v0`
+  - `SR_COVARIANCE_ASSUMPTION_MINIMIZATION_DISCHARGE_PACKAGE_FREEZE_LOCK_v0: CYCLE48_PHASE3_PACKAGE_FREEZE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+  - `formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean`
+  - `SR_COVARIANCE_PROGRESS_CYCLE48_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_PACKAGE_FREEZE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE48_ARTIFACT_v0: sr_covariance_assumption_minimization_discharge_package_freeze_lock_cycle48_v0`
+  - artifact: `formal/output/sr_covariance_assumption_minimization_discharge_package_freeze_lock_cycle48_v0.json`
 - SR cycle-49 phase-III completion transition lock is pinned:
-	- `TARGET-SR-COV-MICRO-49-PHASE3-COMPLETION-TRANSITION-LOCK-v0`
-	- `SR_COVARIANCE_PHASE3_DISCHARGE_COMPLETION_LOCK_v0: CYCLE49_PHASE3_COMPLETION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_COMPLETION_STATUS_v0: ASSUMPTION_MINIMIZATION_ROBUSTNESS_NEGCTRL_DISCHARGE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE4_ENTRY_STATUS_v0: ROBUSTNESS_NEGCTRL_DISCHARGE_ENTRY_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE49_v0: PHASE3_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE49_ARTIFACT_v0: sr_covariance_phase3_discharge_completion_lock_cycle49_v0`
-	- artifact: `formal/output/sr_covariance_phase3_discharge_completion_lock_cycle49_v0.json`
+  - `TARGET-SR-COV-MICRO-49-PHASE3-COMPLETION-TRANSITION-LOCK-v0`
+  - `SR_COVARIANCE_PHASE3_DISCHARGE_COMPLETION_LOCK_v0: CYCLE49_PHASE3_COMPLETION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_COMPLETION_STATUS_v0: ASSUMPTION_MINIMIZATION_ROBUSTNESS_NEGCTRL_DISCHARGE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE4_ENTRY_STATUS_v0: ROBUSTNESS_NEGCTRL_DISCHARGE_ENTRY_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE49_v0: PHASE3_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE49_ARTIFACT_v0: sr_covariance_phase3_discharge_completion_lock_cycle49_v0`
+  - artifact: `formal/output/sr_covariance_phase3_discharge_completion_lock_cycle49_v0.json`
 - SR cycle-50 phase-IV robustness/negative-control discharge surface-entry lock is pinned:
-	- `TARGET-SR-COV-MICRO-50-PHASE4-ROBUSTNESS-NEGCTRL-DISCHARGE-SURFACE-ENTRY-LOCK-v0`
-	- `SR_COVARIANCE_PHASE4_ROBUSTNESS_NEGCTRL_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE50_PHASE4_ENTRY_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE4_ENTRY_STATUS_v0: ROBUSTNESS_NEGCTRL_DISCHARGE_ENTRY_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE4_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE50_v0: PHASE4_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE50_ARTIFACT_v0: sr_covariance_phase4_robustness_negctrl_discharge_surface_entry_lock_cycle50_v0`
-	- artifact: `formal/output/sr_covariance_phase4_robustness_negctrl_discharge_surface_entry_lock_cycle50_v0.json`
+  - `TARGET-SR-COV-MICRO-50-PHASE4-ROBUSTNESS-NEGCTRL-DISCHARGE-SURFACE-ENTRY-LOCK-v0`
+  - `SR_COVARIANCE_PHASE4_ROBUSTNESS_NEGCTRL_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE50_PHASE4_ENTRY_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE4_ENTRY_STATUS_v0: ROBUSTNESS_NEGCTRL_DISCHARGE_ENTRY_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE4_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE50_v0: PHASE4_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE50_ARTIFACT_v0: sr_covariance_phase4_robustness_negctrl_discharge_surface_entry_lock_cycle50_v0`
+  - artifact: `formal/output/sr_covariance_phase4_robustness_negctrl_discharge_surface_entry_lock_cycle50_v0.json`
 - SR cycle-51 phase-IV robustness/negative-control discharge theorem-surface lock is pinned:
-	- `TARGET-SR-COV-MICRO-51-PHASE4-ROBUSTNESS-NEGCTRL-DISCHARGE-THEOREM-SURFACE-LOCK-v0`
-	- `SR_COVARIANCE_PHASE4_ROBUSTNESS_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE51_PHASE4_THEOREM_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE4_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE51_v0: PHASE4_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE51_ARTIFACT_v0: sr_covariance_phase4_robustness_negctrl_discharge_theorem_surface_lock_cycle51_v0`
-	- artifact: `formal/output/sr_covariance_phase4_robustness_negctrl_discharge_theorem_surface_lock_cycle51_v0.json`
+  - `TARGET-SR-COV-MICRO-51-PHASE4-ROBUSTNESS-NEGCTRL-DISCHARGE-THEOREM-SURFACE-LOCK-v0`
+  - `SR_COVARIANCE_PHASE4_ROBUSTNESS_NEGCTRL_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE51_PHASE4_THEOREM_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE4_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE51_v0: PHASE4_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE51_ARTIFACT_v0: sr_covariance_phase4_robustness_negctrl_discharge_theorem_surface_lock_cycle51_v0`
+  - artifact: `formal/output/sr_covariance_phase4_robustness_negctrl_discharge_theorem_surface_lock_cycle51_v0.json`
 - SR cycle-52 phase-IV robustness/negative-control discharge package-freeze lock is pinned:
-	- `TARGET-SR-COV-MICRO-52-PHASE4-ROBUSTNESS-NEGCTRL-DISCHARGE-PACKAGE-FREEZE-LOCK-v0`
-	- `SR_COVARIANCE_PHASE4_ROBUSTNESS_NEGCTRL_DISCHARGE_PACKAGE_FREEZE_LOCK_v0: CYCLE52_PHASE4_PACKAGE_FREEZE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE4_DISCHARGE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE52_v0: PHASE4_DISCHARGE_PACKAGE_FREEZE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE52_ARTIFACT_v0: sr_covariance_phase4_robustness_negctrl_discharge_package_freeze_lock_cycle52_v0`
-	- artifact: `formal/output/sr_covariance_phase4_robustness_negctrl_discharge_package_freeze_lock_cycle52_v0.json`
+  - `TARGET-SR-COV-MICRO-52-PHASE4-ROBUSTNESS-NEGCTRL-DISCHARGE-PACKAGE-FREEZE-LOCK-v0`
+  - `SR_COVARIANCE_PHASE4_ROBUSTNESS_NEGCTRL_DISCHARGE_PACKAGE_FREEZE_LOCK_v0: CYCLE52_PHASE4_PACKAGE_FREEZE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE4_DISCHARGE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE52_v0: PHASE4_DISCHARGE_PACKAGE_FREEZE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE52_ARTIFACT_v0: sr_covariance_phase4_robustness_negctrl_discharge_package_freeze_lock_cycle52_v0`
+  - artifact: `formal/output/sr_covariance_phase4_robustness_negctrl_discharge_package_freeze_lock_cycle52_v0.json`
 - SR cycle-53 phase-IV completion transition lock is pinned:
-	- `TARGET-SR-COV-MICRO-53-PHASE4-COMPLETION-TRANSITION-LOCK-v0`
-	- `SR_COVARIANCE_PHASE4_DISCHARGE_COMPLETION_LOCK_v0: CYCLE53_PHASE4_COMPLETION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE4_COMPLETION_STATUS_v0: ROBUSTNESS_NEGCTRL_DISCHARGE_COMPLETION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE5_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE53_v0: PHASE4_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE53_ARTIFACT_v0: sr_covariance_phase4_discharge_completion_transition_lock_cycle53_v0`
-	- artifact: `formal/output/sr_covariance_phase4_discharge_completion_transition_lock_cycle53_v0.json`
+  - `TARGET-SR-COV-MICRO-53-PHASE4-COMPLETION-TRANSITION-LOCK-v0`
+  - `SR_COVARIANCE_PHASE4_DISCHARGE_COMPLETION_LOCK_v0: CYCLE53_PHASE4_COMPLETION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE4_COMPLETION_STATUS_v0: ROBUSTNESS_NEGCTRL_DISCHARGE_COMPLETION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE5_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE53_v0: PHASE4_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE53_ARTIFACT_v0: sr_covariance_phase4_discharge_completion_transition_lock_cycle53_v0`
+  - artifact: `formal/output/sr_covariance_phase4_discharge_completion_transition_lock_cycle53_v0.json`
 - SR cycle-54 phase-V derivation-completeness discharge surface-entry lock is pinned:
-	- `TARGET-SR-COV-MICRO-54-PHASE5-DERIVATION-COMPLETENESS-DISCHARGE-SURFACE-ENTRY-LOCK-v0`
-	- `SR_COVARIANCE_PHASE5_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE54_PHASE5_ENTRY_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE5_DERIVATION_COMPLETENESS_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE54_v0: PHASE5_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE54_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_discharge_surface_entry_lock_cycle54_v0`
-	- artifact: `formal/output/sr_covariance_phase5_derivation_completeness_discharge_surface_entry_lock_cycle54_v0.json`
+  - `TARGET-SR-COV-MICRO-54-PHASE5-DERIVATION-COMPLETENESS-DISCHARGE-SURFACE-ENTRY-LOCK-v0`
+  - `SR_COVARIANCE_PHASE5_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_ENTRY_LOCK_v0: CYCLE54_PHASE5_ENTRY_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE5_DERIVATION_COMPLETENESS_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE54_v0: PHASE5_DISCHARGE_SURFACE_ENTRY_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE54_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_discharge_surface_entry_lock_cycle54_v0`
+  - artifact: `formal/output/sr_covariance_phase5_derivation_completeness_discharge_surface_entry_lock_cycle54_v0.json`
 - SR cycle-55 phase-V derivation-completeness discharge theorem-surface lock is pinned:
-	- `TARGET-SR-COV-MICRO-55-PHASE5-DERIVATION-COMPLETENESS-DISCHARGE-THEOREM-SURFACE-LOCK-v0`
-	- `SR_COVARIANCE_PHASE5_DERIVATION_COMPLETENESS_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE55_PHASE5_THEOREM_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE5_DERIVATION_COMPLETENESS_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE55_v0: PHASE5_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE55_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_discharge_theorem_surface_lock_cycle55_v0`
-	- artifact: `formal/output/sr_covariance_phase5_derivation_completeness_discharge_theorem_surface_lock_cycle55_v0.json`
+  - `TARGET-SR-COV-MICRO-55-PHASE5-DERIVATION-COMPLETENESS-DISCHARGE-THEOREM-SURFACE-LOCK-v0`
+  - `SR_COVARIANCE_PHASE5_DERIVATION_COMPLETENESS_DISCHARGE_THEOREM_SURFACE_LOCK_v0: CYCLE55_PHASE5_THEOREM_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE5_DERIVATION_COMPLETENESS_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE55_v0: PHASE5_DISCHARGE_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE55_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_discharge_theorem_surface_lock_cycle55_v0`
+  - artifact: `formal/output/sr_covariance_phase5_derivation_completeness_discharge_theorem_surface_lock_cycle55_v0.json`
 - SR cycle-56 phase-V completion transition lock is pinned:
-	- `TARGET-SR-COV-MICRO-56-PHASE5-COMPLETION-TRANSITION-LOCK-v0`
-	- `SR_COVARIANCE_PHASE5_DISCHARGE_COMPLETION_LOCK_v0: CYCLE56_PHASE5_COMPLETION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE5_COMPLETION_STATUS_v0: DERIVATION_COMPLETENESS_GATE_DISCHARGE_COMPLETION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE6_ENTRY_STATUS_v0: INEVITABILITY_GATE_ENTRY_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE56_v0: PHASE5_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE56_ARTIFACT_v0: sr_covariance_phase5_discharge_completion_transition_lock_cycle56_v0`
-	- artifact: `formal/output/sr_covariance_phase5_discharge_completion_transition_lock_cycle56_v0.json`
+  - `TARGET-SR-COV-MICRO-56-PHASE5-COMPLETION-TRANSITION-LOCK-v0`
+  - `SR_COVARIANCE_PHASE5_DISCHARGE_COMPLETION_LOCK_v0: CYCLE56_PHASE5_COMPLETION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE5_COMPLETION_STATUS_v0: DERIVATION_COMPLETENESS_GATE_DISCHARGE_COMPLETION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE6_ENTRY_STATUS_v0: INEVITABILITY_GATE_ENTRY_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE56_v0: PHASE5_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE56_ARTIFACT_v0: sr_covariance_phase5_discharge_completion_transition_lock_cycle56_v0`
+  - artifact: `formal/output/sr_covariance_phase5_discharge_completion_transition_lock_cycle56_v0.json`
 - SR cycle-57 phase-VI inevitability necessity theorem-surface lock is pinned:
-	- `TARGET-SR-COV-MICRO-57-PHASE6-INEVITABILITY-NECESSITY-THEOREM-SURFACE-LOCK-v0`
-	- `SR_COVARIANCE_PHASE6_INEVITABILITY_NECESSITY_THEOREM_SURFACE_LOCK_v0: CYCLE57_PHASE6_NECESSITY_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE6_NECESSITY_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE57_v0: PHASE6_NECESSITY_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE57_ARTIFACT_v0: sr_covariance_phase6_inevitability_necessity_theorem_surface_lock_cycle57_v0`
-	- artifact: `formal/output/sr_covariance_phase6_inevitability_necessity_theorem_surface_lock_cycle57_v0.json`
+  - `TARGET-SR-COV-MICRO-57-PHASE6-INEVITABILITY-NECESSITY-THEOREM-SURFACE-LOCK-v0`
+  - `SR_COVARIANCE_PHASE6_INEVITABILITY_NECESSITY_THEOREM_SURFACE_LOCK_v0: CYCLE57_PHASE6_NECESSITY_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE6_NECESSITY_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE57_v0: PHASE6_NECESSITY_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE57_ARTIFACT_v0: sr_covariance_phase6_inevitability_necessity_theorem_surface_lock_cycle57_v0`
+  - artifact: `formal/output/sr_covariance_phase6_inevitability_necessity_theorem_surface_lock_cycle57_v0.json`
 - SR cycle-58 phase-VI inevitability counterfactual negative-control theorem-surface lock is pinned:
-	- `TARGET-SR-COV-MICRO-58-PHASE6-INEVITABILITY-COUNTERFACTUAL-NEGCTRL-THEOREM-SURFACE-LOCK-v0`
-	- `SR_COVARIANCE_PHASE6_INEVITABILITY_COUNTERFACTUAL_NEGCTRL_THEOREM_SURFACE_LOCK_v0: CYCLE58_PHASE6_COUNTERFACTUAL_NEGCTRL_SURFACE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE6_COUNTERFACTUAL_NEGCTRL_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE58_v0: PHASE6_COUNTERFACTUAL_NEGCTRL_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE58_ARTIFACT_v0: sr_covariance_phase6_inevitability_counterfactual_negctrl_theorem_surface_lock_cycle58_v0`
-	- artifact: `formal/output/sr_covariance_phase6_inevitability_counterfactual_negctrl_theorem_surface_lock_cycle58_v0.json`
+  - `TARGET-SR-COV-MICRO-58-PHASE6-INEVITABILITY-COUNTERFACTUAL-NEGCTRL-THEOREM-SURFACE-LOCK-v0`
+  - `SR_COVARIANCE_PHASE6_INEVITABILITY_COUNTERFACTUAL_NEGCTRL_THEOREM_SURFACE_LOCK_v0: CYCLE58_PHASE6_COUNTERFACTUAL_NEGCTRL_SURFACE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE6_COUNTERFACTUAL_NEGCTRL_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE58_v0: PHASE6_COUNTERFACTUAL_NEGCTRL_THEOREM_SURFACE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE58_ARTIFACT_v0: sr_covariance_phase6_inevitability_counterfactual_negctrl_theorem_surface_lock_cycle58_v0`
+  - artifact: `formal/output/sr_covariance_phase6_inevitability_counterfactual_negctrl_theorem_surface_lock_cycle58_v0.json`
 - SR cycle-59 phase-VI completion transition lock is pinned:
-	- `TARGET-SR-COV-MICRO-59-PHASE6-COMPLETION-TRANSITION-LOCK-v0`
-	- `SR_COVARIANCE_PHASE6_DISCHARGE_COMPLETION_LOCK_v0: CYCLE59_PHASE6_COMPLETION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE6_COMPLETION_STATUS_v0: INEVITABILITY_GATE_DISCHARGE_COMPLETION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE7_ENTRY_STATUS_v0: PACKAGE_FREEZE_REOPEN_POLICY_ENTRY_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE59_v0: PHASE6_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE59_ARTIFACT_v0: sr_covariance_phase6_discharge_completion_transition_lock_cycle59_v0`
-	- artifact: `formal/output/sr_covariance_phase6_discharge_completion_transition_lock_cycle59_v0.json`
+  - `TARGET-SR-COV-MICRO-59-PHASE6-COMPLETION-TRANSITION-LOCK-v0`
+  - `SR_COVARIANCE_PHASE6_DISCHARGE_COMPLETION_LOCK_v0: CYCLE59_PHASE6_COMPLETION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE6_COMPLETION_STATUS_v0: INEVITABILITY_GATE_DISCHARGE_COMPLETION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE7_ENTRY_STATUS_v0: PACKAGE_FREEZE_REOPEN_POLICY_ENTRY_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE59_v0: PHASE6_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE59_ARTIFACT_v0: sr_covariance_phase6_discharge_completion_transition_lock_cycle59_v0`
+  - artifact: `formal/output/sr_covariance_phase6_discharge_completion_transition_lock_cycle59_v0.json`
 - SR cycle-60 phase-VII package-freeze/reopen-policy lock is pinned:
-	- `TARGET-SR-COV-MICRO-60-PHASE7-PACKAGE-FREEZE-REOPEN-POLICY-LOCK-v0`
-	- `SR_COVARIANCE_PHASE7_PACKAGE_FREEZE_REOPEN_POLICY_LOCK_v0: CYCLE60_PHASE7_FREEZE_REOPEN_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE7_PACKAGE_FREEZE_REOPEN_POLICY_STATUS_v0: FROZEN_WATCH_REOPEN_POLICY_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE60_v0: PHASE7_FREEZE_REOPEN_POLICY_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE60_ARTIFACT_v0: sr_covariance_phase7_package_freeze_reopen_policy_lock_cycle60_v0`
-	- artifact: `formal/output/sr_covariance_phase7_package_freeze_reopen_policy_lock_cycle60_v0.json`
+  - `TARGET-SR-COV-MICRO-60-PHASE7-PACKAGE-FREEZE-REOPEN-POLICY-LOCK-v0`
+  - `SR_COVARIANCE_PHASE7_PACKAGE_FREEZE_REOPEN_POLICY_LOCK_v0: CYCLE60_PHASE7_FREEZE_REOPEN_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE7_PACKAGE_FREEZE_REOPEN_POLICY_STATUS_v0: FROZEN_WATCH_REOPEN_POLICY_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE60_v0: PHASE7_FREEZE_REOPEN_POLICY_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE60_ARTIFACT_v0: sr_covariance_phase7_package_freeze_reopen_policy_lock_cycle60_v0`
+  - artifact: `formal/output/sr_covariance_phase7_package_freeze_reopen_policy_lock_cycle60_v0.json`
 - SR cycle-61 phase-I discharge-grade theorem-object replacement lock is pinned:
-	- `TARGET-SR-COV-MICRO-61-PHASE1-DISCHARGE-GRADE-THEOREM-OBJECT-REPLACEMENT-LOCK-v0`
-	- `SR_COVARIANCE_PHASE1_DISCHARGE_GRADE_THEOREM_OBJECTS_LOCK_v0: CYCLE61_PHASE1_DISCHARGE_GRADE_OBJECTS_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_GRADE_STATUS_v0: THEOREM_OBJECT_REPLACEMENT_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE61_v0: PHASE1_DISCHARGE_GRADE_THEOREM_OBJECT_REPLACEMENT_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE61_ARTIFACT_v0: sr_covariance_phase1_discharge_grade_theorem_object_replacement_lock_cycle61_v0`
-	- artifact: `formal/output/sr_covariance_phase1_discharge_grade_theorem_object_replacement_lock_cycle61_v0.json`
+  - `TARGET-SR-COV-MICRO-61-PHASE1-DISCHARGE-GRADE-THEOREM-OBJECT-REPLACEMENT-LOCK-v0`
+  - `SR_COVARIANCE_PHASE1_DISCHARGE_GRADE_THEOREM_OBJECTS_LOCK_v0: CYCLE61_PHASE1_DISCHARGE_GRADE_OBJECTS_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_GRADE_STATUS_v0: THEOREM_OBJECT_REPLACEMENT_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE61_v0: PHASE1_DISCHARGE_GRADE_THEOREM_OBJECT_REPLACEMENT_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE61_ARTIFACT_v0: sr_covariance_phase1_discharge_grade_theorem_object_replacement_lock_cycle61_v0`
+  - artifact: `formal/output/sr_covariance_phase1_discharge_grade_theorem_object_replacement_lock_cycle61_v0.json`
 - SR cycle-62 phase-II canonical-equivalence theorem discharge lock is pinned:
-	- `TARGET-SR-COV-MICRO-62-PHASE2-CANONICAL-EQUIVALENCE-THEOREM-DISCHARGE-LOCK-v0`
-	- `SR_COVARIANCE_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_DISCHARGE_LOCK_v0: CYCLE62_PHASE2_EQUIVALENCE_DISCHARGE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_DISCHARGE_STATUS_v0: THEOREM_EQUIVALENCE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE62_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_DISCHARGE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE62_ARTIFACT_v0: sr_covariance_phase2_canonical_equivalence_theorem_discharge_lock_cycle62_v0`
-	- artifact: `formal/output/sr_covariance_phase2_canonical_equivalence_theorem_discharge_lock_cycle62_v0.json`
+  - `TARGET-SR-COV-MICRO-62-PHASE2-CANONICAL-EQUIVALENCE-THEOREM-DISCHARGE-LOCK-v0`
+  - `SR_COVARIANCE_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_DISCHARGE_LOCK_v0: CYCLE62_PHASE2_EQUIVALENCE_DISCHARGE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_DISCHARGE_STATUS_v0: THEOREM_EQUIVALENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE62_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_DISCHARGE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE62_ARTIFACT_v0: sr_covariance_phase2_canonical_equivalence_theorem_discharge_lock_cycle62_v0`
+  - artifact: `formal/output/sr_covariance_phase2_canonical_equivalence_theorem_discharge_lock_cycle62_v0.json`
 - SR cycle-63 phase-III assumption-minimization discharge completion lock is pinned:
-	- `TARGET-SR-COV-MICRO-63-PHASE3-ASSUMPTION-MINIMIZATION-DISCHARGE-COMPLETION-LOCK-v0`
-	- `SR_COVARIANCE_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_COMPLETION_LOCK_v0: CYCLE63_PHASE3_ASSUMPTION_MINIMIZATION_COMPLETION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_COMPLETION_STATUS_v0: DISCHARGE_RATIONALE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE63_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE63_ARTIFACT_v0: sr_covariance_phase3_assumption_minimization_discharge_completion_lock_cycle63_v0`
-	- artifact: `formal/output/sr_covariance_phase3_assumption_minimization_discharge_completion_lock_cycle63_v0.json`
+  - `TARGET-SR-COV-MICRO-63-PHASE3-ASSUMPTION-MINIMIZATION-DISCHARGE-COMPLETION-LOCK-v0`
+  - `SR_COVARIANCE_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_COMPLETION_LOCK_v0: CYCLE63_PHASE3_ASSUMPTION_MINIMIZATION_COMPLETION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_COMPLETION_STATUS_v0: DISCHARGE_RATIONALE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE63_v0: PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE63_ARTIFACT_v0: sr_covariance_phase3_assumption_minimization_discharge_completion_lock_cycle63_v0`
+  - artifact: `formal/output/sr_covariance_phase3_assumption_minimization_discharge_completion_lock_cycle63_v0.json`
 - SR cycle-64 phase-IV theorem-linked robustness/negative-control discharge completion lock is pinned:
-	- `TARGET-SR-COV-MICRO-64-PHASE4-THEOREM-LINKED-ROBUSTNESS-NEGCTRL-DISCHARGE-COMPLETION-LOCK-v0`
-	- `SR_COVARIANCE_PHASE4_THEOREM_LINKED_ROBUSTNESS_NEGCTRL_DISCHARGE_COMPLETION_LOCK_v0: CYCLE64_PHASE4_THEOREM_LINKED_ROBUSTNESS_NEGCTRL_COMPLETION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE4_THEOREM_LINKED_ROBUSTNESS_NEGCTRL_COMPLETION_STATUS_v0: FAILURE_INFORMATIVE_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE64_v0: PHASE4_THEOREM_LINKED_ROBUSTNESS_NEGCTRL_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE64_ARTIFACT_v0: sr_covariance_phase4_theorem_linked_robustness_negctrl_discharge_completion_lock_cycle64_v0`
-	- artifact: `formal/output/sr_covariance_phase4_theorem_linked_robustness_negctrl_discharge_completion_lock_cycle64_v0.json`
+  - `TARGET-SR-COV-MICRO-64-PHASE4-THEOREM-LINKED-ROBUSTNESS-NEGCTRL-DISCHARGE-COMPLETION-LOCK-v0`
+  - `SR_COVARIANCE_PHASE4_THEOREM_LINKED_ROBUSTNESS_NEGCTRL_DISCHARGE_COMPLETION_LOCK_v0: CYCLE64_PHASE4_THEOREM_LINKED_ROBUSTNESS_NEGCTRL_COMPLETION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE4_THEOREM_LINKED_ROBUSTNESS_NEGCTRL_COMPLETION_STATUS_v0: FAILURE_INFORMATIVE_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE64_v0: PHASE4_THEOREM_LINKED_ROBUSTNESS_NEGCTRL_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE64_ARTIFACT_v0: sr_covariance_phase4_theorem_linked_robustness_negctrl_discharge_completion_lock_cycle64_v0`
+  - artifact: `formal/output/sr_covariance_phase4_theorem_linked_robustness_negctrl_discharge_completion_lock_cycle64_v0.json`
 - SR cycle-65 phase-V derivation-completeness gate closure lock is pinned:
-	- `TARGET-SR-COV-MICRO-65-PHASE5-DERIVATION-COMPLETENESS-GATE-CLOSURE-LOCK-v0`
-	- `SR_DERIVATION_COMPLETENESS_GATE_CLOSURE_LOCK_v0: CYCLE65_PHASE5_GATE_CLOSURE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE5_DERIVATION_COMPLETENESS_GATE_CLOSURE_STATUS_v0: FAILURE_TRIGGER_AUDIT_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE65_v0: PHASE5_DERIVATION_COMPLETENESS_GATE_CLOSURE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE65_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_gate_closure_lock_cycle65_v0`
-	- artifact: `formal/output/sr_covariance_phase5_derivation_completeness_gate_closure_lock_cycle65_v0.json`
+  - `TARGET-SR-COV-MICRO-65-PHASE5-DERIVATION-COMPLETENESS-GATE-CLOSURE-LOCK-v0`
+  - `SR_DERIVATION_COMPLETENESS_GATE_CLOSURE_LOCK_v0: CYCLE65_PHASE5_GATE_CLOSURE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE5_DERIVATION_COMPLETENESS_GATE_CLOSURE_STATUS_v0: FAILURE_TRIGGER_AUDIT_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE65_v0: PHASE5_DERIVATION_COMPLETENESS_GATE_CLOSURE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE65_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_gate_closure_lock_cycle65_v0`
+  - artifact: `formal/output/sr_covariance_phase5_derivation_completeness_gate_closure_lock_cycle65_v0.json`
 - SR cycle-66 phase-VI inevitability necessity/counterfactual discharge completion lock is pinned:
-	- `TARGET-SR-COV-MICRO-66-PHASE6-INEVITABILITY-NECESSITY-COUNTERFACTUAL-DISCHARGE-COMPLETION-LOCK-v0`
-	- `SR_COVARIANCE_PHASE6_INEVITABILITY_NECESSITY_COUNTERFACTUAL_DISCHARGE_COMPLETION_LOCK_v0: CYCLE66_PHASE6_NECESSITY_COUNTERFACTUAL_COMPLETION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE6_INEVITABILITY_NECESSITY_COUNTERFACTUAL_COMPLETION_STATUS_v0: BOUNDED_INEVITABILITY_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE66_v0: PHASE6_INEVITABILITY_NECESSITY_COUNTERFACTUAL_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE66_ARTIFACT_v0: sr_covariance_phase6_inevitability_necessity_counterfactual_discharge_completion_lock_cycle66_v0`
-	- artifact: `formal/output/sr_covariance_phase6_inevitability_necessity_counterfactual_discharge_completion_lock_cycle66_v0.json`
+  - `TARGET-SR-COV-MICRO-66-PHASE6-INEVITABILITY-NECESSITY-COUNTERFACTUAL-DISCHARGE-COMPLETION-LOCK-v0`
+  - `SR_COVARIANCE_PHASE6_INEVITABILITY_NECESSITY_COUNTERFACTUAL_DISCHARGE_COMPLETION_LOCK_v0: CYCLE66_PHASE6_NECESSITY_COUNTERFACTUAL_COMPLETION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE6_INEVITABILITY_NECESSITY_COUNTERFACTUAL_COMPLETION_STATUS_v0: BOUNDED_INEVITABILITY_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE66_v0: PHASE6_INEVITABILITY_NECESSITY_COUNTERFACTUAL_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE66_ARTIFACT_v0: sr_covariance_phase6_inevitability_necessity_counterfactual_discharge_completion_lock_cycle66_v0`
+  - artifact: `formal/output/sr_covariance_phase6_inevitability_necessity_counterfactual_discharge_completion_lock_cycle66_v0.json`
 - SR cycle-67 phase-VII governance promotion-readiness lock is pinned:
-	- `TARGET-SR-COV-MICRO-67-PHASE7-GOVERNANCE-PROMOTION-READINESS-LOCK-v0`
-	- `SR_COVARIANCE_PHASE7_GOVERNANCE_PROMOTION_READINESS_LOCK_v0: CYCLE67_PHASE7_PROMOTION_READINESS_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PROMOTION_READINESS_STATUS_v0: PILLAR_STATUS_PROMOTION_INPUTS_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE67_v0: PHASE7_GOVERNANCE_PROMOTION_READINESS_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE67_ARTIFACT_v0: sr_covariance_phase7_governance_promotion_readiness_lock_cycle67_v0`
-	- artifact: `formal/output/sr_covariance_phase7_governance_promotion_readiness_lock_cycle67_v0.json`
+  - `TARGET-SR-COV-MICRO-67-PHASE7-GOVERNANCE-PROMOTION-READINESS-LOCK-v0`
+  - `SR_COVARIANCE_PHASE7_GOVERNANCE_PROMOTION_READINESS_LOCK_v0: CYCLE67_PHASE7_PROMOTION_READINESS_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PROMOTION_READINESS_STATUS_v0: PILLAR_STATUS_PROMOTION_INPUTS_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE67_v0: PHASE7_GOVERNANCE_PROMOTION_READINESS_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE67_ARTIFACT_v0: sr_covariance_phase7_governance_promotion_readiness_lock_cycle67_v0`
+  - artifact: `formal/output/sr_covariance_phase7_governance_promotion_readiness_lock_cycle67_v0.json`
 - SR cycle-68 phase-I discharge-grade theorem-replacement closure lock is pinned:
-	- `TARGET-SR-COV-MICRO-68-PHASE1-DISCHARGE-GRADE-THEOREM-REPLACEMENT-CLOSURE-LOCK-v0`
-	- `SR_COVARIANCE_PHASE1_DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_LOCK_v0: CYCLE68_PHASE1_REPLACEMENT_CLOSURE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE1_DISCHARGE_GRADE_REPLACEMENT_CLOSURE_STATUS_v0: DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE68_v0: PHASE1_DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE68_ARTIFACT_v0: sr_covariance_phase1_discharge_grade_theorem_replacement_closure_lock_cycle68_v0`
-	- artifact: `formal/output/sr_covariance_phase1_discharge_grade_theorem_replacement_closure_lock_cycle68_v0.json`
+  - `TARGET-SR-COV-MICRO-68-PHASE1-DISCHARGE-GRADE-THEOREM-REPLACEMENT-CLOSURE-LOCK-v0`
+  - `SR_COVARIANCE_PHASE1_DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_LOCK_v0: CYCLE68_PHASE1_REPLACEMENT_CLOSURE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE1_DISCHARGE_GRADE_REPLACEMENT_CLOSURE_STATUS_v0: DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE68_v0: PHASE1_DISCHARGE_GRADE_THEOREM_REPLACEMENT_CLOSURE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE68_ARTIFACT_v0: sr_covariance_phase1_discharge_grade_theorem_replacement_closure_lock_cycle68_v0`
+  - artifact: `formal/output/sr_covariance_phase1_discharge_grade_theorem_replacement_closure_lock_cycle68_v0.json`
 - SR cycle-69 phase-II canonical-equivalence theorem-discharge completion lock is pinned:
-	- `TARGET-SR-COV-MICRO-69-PHASE2-CANONICAL-EQUIVALENCE-THEOREM-DISCHARGE-COMPLETION-LOCK-v0`
-	- `SR_COVARIANCE_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_DISCHARGE_COMPLETION_LOCK_v0: CYCLE69_PHASE2_EQUIVALENCE_DISCHARGE_COMPLETION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_DISCHARGE_COMPLETION_STATUS_v0: THEOREM_EQUIVALENCE_DISCHARGE_COMPLETION_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE69_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE69_ARTIFACT_v0: sr_covariance_phase2_canonical_equivalence_theorem_discharge_completion_lock_cycle69_v0`
-	- artifact: `formal/output/sr_covariance_phase2_canonical_equivalence_theorem_discharge_completion_lock_cycle69_v0.json`
+  - `TARGET-SR-COV-MICRO-69-PHASE2-CANONICAL-EQUIVALENCE-THEOREM-DISCHARGE-COMPLETION-LOCK-v0`
+  - `SR_COVARIANCE_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_DISCHARGE_COMPLETION_LOCK_v0: CYCLE69_PHASE2_EQUIVALENCE_DISCHARGE_COMPLETION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_DISCHARGE_COMPLETION_STATUS_v0: THEOREM_EQUIVALENCE_DISCHARGE_COMPLETION_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE69_v0: PHASE2_CANONICAL_EQUIVALENCE_THEOREM_DISCHARGE_COMPLETION_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE69_ARTIFACT_v0: sr_covariance_phase2_canonical_equivalence_theorem_discharge_completion_lock_cycle69_v0`
+  - artifact: `formal/output/sr_covariance_phase2_canonical_equivalence_theorem_discharge_completion_lock_cycle69_v0.json`
 - SR cycle-70 phase-V derivation-completeness failure-trigger discharge lock is pinned:
-	- `TARGET-SR-COV-MICRO-70-PHASE5-DERIVATION-COMPLETENESS-FAILURE-TRIGGER-DISCHARGE-LOCK-v0`
-	- `SR_DERIVATION_COMPLETENESS_FAILURE_TRIGGER_DISCHARGE_LOCK_v0: CYCLE70_PHASE5_FAILURE_TRIGGER_DISCHARGE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE5_FAILURE_TRIGGER_DISCHARGE_STATUS_v0: MANDATORY_FAILURE_TRIGGER_SET_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE70_v0: PHASE5_FAILURE_TRIGGER_DISCHARGE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE70_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_failure_trigger_discharge_lock_cycle70_v0`
-	- artifact: `formal/output/sr_covariance_phase5_derivation_completeness_failure_trigger_discharge_lock_cycle70_v0.json`
+  - `TARGET-SR-COV-MICRO-70-PHASE5-DERIVATION-COMPLETENESS-FAILURE-TRIGGER-DISCHARGE-LOCK-v0`
+  - `SR_DERIVATION_COMPLETENESS_FAILURE_TRIGGER_DISCHARGE_LOCK_v0: CYCLE70_PHASE5_FAILURE_TRIGGER_DISCHARGE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE5_FAILURE_TRIGGER_DISCHARGE_STATUS_v0: MANDATORY_FAILURE_TRIGGER_SET_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE70_v0: PHASE5_FAILURE_TRIGGER_DISCHARGE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE70_ARTIFACT_v0: sr_covariance_phase5_derivation_completeness_failure_trigger_discharge_lock_cycle70_v0`
+  - artifact: `formal/output/sr_covariance_phase5_derivation_completeness_failure_trigger_discharge_lock_cycle70_v0.json`
 - SR cycle-71 phase-VI inevitability theorem-discharge closure lock is pinned:
-	- `TARGET-SR-COV-MICRO-71-PHASE6-INEVITABILITY-THEOREM-DISCHARGE-CLOSURE-LOCK-v0`
-	- `SR_COVARIANCE_PHASE6_INEVITABILITY_THEOREM_DISCHARGE_CLOSURE_LOCK_v0: CYCLE71_PHASE6_INEVITABILITY_THEOREM_CLOSURE_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE6_INEVITABILITY_THEOREM_DISCHARGE_CLOSURE_STATUS_v0: NECESSITY_COUNTERFACTUAL_THEOREM_DISCHARGE_CLOSURE_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE71_v0: PHASE6_INEVITABILITY_THEOREM_DISCHARGE_CLOSURE_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE71_ARTIFACT_v0: sr_covariance_phase6_inevitability_theorem_discharge_closure_lock_cycle71_v0`
-	- artifact: `formal/output/sr_covariance_phase6_inevitability_theorem_discharge_closure_lock_cycle71_v0.json`
+  - `TARGET-SR-COV-MICRO-71-PHASE6-INEVITABILITY-THEOREM-DISCHARGE-CLOSURE-LOCK-v0`
+  - `SR_COVARIANCE_PHASE6_INEVITABILITY_THEOREM_DISCHARGE_CLOSURE_LOCK_v0: CYCLE71_PHASE6_INEVITABILITY_THEOREM_CLOSURE_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE6_INEVITABILITY_THEOREM_DISCHARGE_CLOSURE_STATUS_v0: NECESSITY_COUNTERFACTUAL_THEOREM_DISCHARGE_CLOSURE_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE71_v0: PHASE6_INEVITABILITY_THEOREM_DISCHARGE_CLOSURE_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE71_ARTIFACT_v0: sr_covariance_phase6_inevitability_theorem_discharge_closure_lock_cycle71_v0`
+  - artifact: `formal/output/sr_covariance_phase6_inevitability_theorem_discharge_closure_lock_cycle71_v0.json`
 - SR cycle-72 phase-VII governance claim-promotion execution lock is pinned:
-	- `TARGET-SR-COV-MICRO-72-PHASE7-GOVERNANCE-CLAIM-PROMOTION-EXECUTION-LOCK-v0`
-	- `SR_COVARIANCE_PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_LOCK_v0: CYCLE72_PHASE7_PROMOTION_EXECUTION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_STATUS_v0: CLAIM_PROMOTION_EXECUTION_SCAFFOLD_PINNED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE72_v0: PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE72_ARTIFACT_v0: sr_covariance_phase7_governance_claim_promotion_execution_lock_cycle72_v0`
-	- artifact: `formal/output/sr_covariance_phase7_governance_claim_promotion_execution_lock_cycle72_v0.json`
+  - `TARGET-SR-COV-MICRO-72-PHASE7-GOVERNANCE-CLAIM-PROMOTION-EXECUTION-LOCK-v0`
+  - `SR_COVARIANCE_PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_LOCK_v0: CYCLE72_PHASE7_PROMOTION_EXECUTION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_STATUS_v0: CLAIM_PROMOTION_EXECUTION_SCAFFOLD_PINNED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE72_v0: PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE72_ARTIFACT_v0: sr_covariance_phase7_governance_claim_promotion_execution_lock_cycle72_v0`
+  - artifact: `formal/output/sr_covariance_phase7_governance_claim_promotion_execution_lock_cycle72_v0.json`
 - SR cycle-73 phase-V/VI theorem-discharge adjudication transition lock is pinned:
-	- `TARGET-SR-COV-MICRO-73-PHASE5-PHASE6-THEOREM-DISCHARGE-ADJUDICATION-TRANSITION-LOCK-v0`
-	- `SR_COVARIANCE_PHASE5_PHASE6_THEOREM_DISCHARGE_ADJUDICATION_LOCK_v0: CYCLE73_PHASE5_PHASE6_ADJUDICATION_PINNED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE5_FAILURE_TRIGGER_THEOREM_DISCHARGE_STATUS_v0: MANDATORY_FAILURE_TRIGGER_SET_THEOREM_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE6_INEVITABILITY_THEOREM_DISCHARGE_STATUS_v0: NECESSITY_COUNTERFACTUAL_THEOREM_DISCHARGED_NONCLAIM`
-	- `SR_FULL_DERIVATION_PHASE5_PHASE6_THEOREM_DISCHARGE_ADJUDICATION_STATUS_v0: PHASE5_PHASE6_THEOREM_DISCHARGED_NONCLAIM`
-	- `SR_COVARIANCE_PROGRESS_CYCLE73_v0: PHASE5_PHASE6_THEOREM_DISCHARGE_ADJUDICATION_TRANSITION_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE73_ARTIFACT_v0: sr_covariance_phase5_phase6_theorem_discharge_adjudication_transition_lock_cycle73_v0`
-	- artifact: `formal/output/sr_covariance_phase5_phase6_theorem_discharge_adjudication_transition_lock_cycle73_v0.json`
+  - `TARGET-SR-COV-MICRO-73-PHASE5-PHASE6-THEOREM-DISCHARGE-ADJUDICATION-TRANSITION-LOCK-v0`
+  - `SR_COVARIANCE_PHASE5_PHASE6_THEOREM_DISCHARGE_ADJUDICATION_LOCK_v0: CYCLE73_PHASE5_PHASE6_ADJUDICATION_PINNED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE5_FAILURE_TRIGGER_THEOREM_DISCHARGE_STATUS_v0: MANDATORY_FAILURE_TRIGGER_SET_THEOREM_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE6_INEVITABILITY_THEOREM_DISCHARGE_STATUS_v0: NECESSITY_COUNTERFACTUAL_THEOREM_DISCHARGED_NONCLAIM`
+  - `SR_FULL_DERIVATION_PHASE5_PHASE6_THEOREM_DISCHARGE_ADJUDICATION_STATUS_v0: PHASE5_PHASE6_THEOREM_DISCHARGED_NONCLAIM`
+  - `SR_COVARIANCE_PROGRESS_CYCLE73_v0: PHASE5_PHASE6_THEOREM_DISCHARGE_ADJUDICATION_TRANSITION_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE73_ARTIFACT_v0: sr_covariance_phase5_phase6_theorem_discharge_adjudication_transition_lock_cycle73_v0`
+  - artifact: `formal/output/sr_covariance_phase5_phase6_theorem_discharge_adjudication_transition_lock_cycle73_v0.json`
 - SR cycle-74 claim-label and pillar-closure transition lock is pinned:
-	- `TARGET-SR-COV-MICRO-74-CLAIM-LABEL-AND-PILLAR-CLOSURE-TRANSITION-LOCK-v0`
-	- `SR_COVARIANCE_CLAIM_LABEL_AND_PILLAR_CLOSURE_TRANSITION_LOCK_v0: CYCLE74_RESULTS_MATRIX_CLOSURE_PINNED`
-	- `SR_FULL_DERIVATION_RESULTS_LABEL_STATUS_v0: TOE_SR_THM_01_T_PROVED_BOUNDED_PINNED`
-	- `SR_FULL_DERIVATION_INEVITABILITY_CLAIM_STATUS_v0: BOUNDED_INEVITABILITY_DISCHARGED_PINNED`
-	- `SR_FULL_DERIVATION_PILLAR_MATRIX_STATUS_v0: PILLAR_SR_CLOSED_BOUNDED_PINNED`
-	- `SR_COVARIANCE_PROGRESS_CYCLE74_v0: CLAIM_LABEL_AND_PILLAR_CLOSURE_TRANSITION_LOCK_TOKEN_PINNED`
-	- `SR_COVARIANCE_CYCLE74_ARTIFACT_v0: sr_covariance_claim_label_and_pillar_closure_transition_lock_cycle74_v0`
-	- artifact: `formal/output/sr_covariance_claim_label_and_pillar_closure_transition_lock_cycle74_v0.json`
+  - `TARGET-SR-COV-MICRO-74-CLAIM-LABEL-AND-PILLAR-CLOSURE-TRANSITION-LOCK-v0`
+  - `SR_COVARIANCE_CLAIM_LABEL_AND_PILLAR_CLOSURE_TRANSITION_LOCK_v0: CYCLE74_RESULTS_MATRIX_CLOSURE_PINNED`
+  - `SR_FULL_DERIVATION_RESULTS_LABEL_STATUS_v0: TOE_SR_THM_01_T_PROVED_BOUNDED_PINNED`
+  - `SR_FULL_DERIVATION_INEVITABILITY_CLAIM_STATUS_v0: BOUNDED_INEVITABILITY_DISCHARGED_PINNED`
+  - `SR_FULL_DERIVATION_PILLAR_MATRIX_STATUS_v0: PILLAR_SR_CLOSED_BOUNDED_PINNED`
+  - `SR_COVARIANCE_PROGRESS_CYCLE74_v0: CLAIM_LABEL_AND_PILLAR_CLOSURE_TRANSITION_LOCK_TOKEN_PINNED`
+  - `SR_COVARIANCE_CYCLE74_ARTIFACT_v0: sr_covariance_claim_label_and_pillar_closure_transition_lock_cycle74_v0`
+  - artifact: `formal/output/sr_covariance_claim_label_and_pillar_closure_transition_lock_cycle74_v0.json`
 - Scope boundary remains explicit:
-	- bounded theorem-discharge posture under explicit assumptions,
-	- no external truth claim,
-	- no comparator-lane authorization.
+  - bounded theorem-discharge posture under explicit assumptions,
+  - no external truth claim,
+  - no comparator-lane authorization.
 
 QM evolution hardening scaffold checkpoint (2026-02-16):
 - Canonical hardening target is now pinned:
-	- `formal/docs/paper/DERIVATION_TARGET_QM_EVOLUTION_HARDENING_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_QM_EVOLUTION_HARDENING_v0.md`
 - Hardening adjudication token is explicit and synchronized to scaffold status:
-	- `QM_EVOLUTION_HARDENING_ADJUDICATION: DISCHARGED_v0_CONTRACT_HARDENED`
+  - `QM_EVOLUTION_HARDENING_ADJUDICATION: DISCHARGED_v0_CONTRACT_HARDENED`
 - Phase template lock artifacts are pinned:
-	- `formal/markdown/locks/policy/QM_EVOLUTION_ASSUMPTION_LEDGER_v0.md`
-	- `formal/markdown/locks/policy/QM_EVOLUTION_ROBUSTNESS_RECORD_v0.md`
-	- `formal/markdown/locks/policy/QM_EVOLUTION_NEGATIVE_CONTROL_RECORD_v0.md`
-	- `formal/markdown/locks/policy/QM_EVOLUTION_RESOLUTION_TREND_RECORD_v0.md`
-	- `formal/markdown/locks/policy/QM_EVOLUTION_PILLAR_PACKAGE_v0.md`
+  - `formal/markdown/locks/policy/QM_EVOLUTION_ASSUMPTION_LEDGER_v0.md`
+  - `formal/markdown/locks/policy/QM_EVOLUTION_ROBUSTNESS_RECORD_v0.md`
+  - `formal/markdown/locks/policy/QM_EVOLUTION_NEGATIVE_CONTROL_RECORD_v0.md`
+  - `formal/markdown/locks/policy/QM_EVOLUTION_RESOLUTION_TREND_RECORD_v0.md`
+  - `formal/markdown/locks/policy/QM_EVOLUTION_PILLAR_PACKAGE_v0.md`
 - Package freeze and reopen posture are explicit:
-	- `QM_EVOLUTION_PILLAR_PACKAGE_STATUS_v0: FROZEN_CONTENTS_PINNED`
-	- `QM_EVOLUTION_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
+  - `QM_EVOLUTION_PILLAR_PACKAGE_STATUS_v0: FROZEN_CONTENTS_PINNED`
+  - `QM_EVOLUTION_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
 - Enforcement gate is pinned:
-	- `formal/python/tests/test_qm_evolution_hardening_roadmap_gate.py`
+  - `formal/python/tests/test_qm_evolution_hardening_roadmap_gate.py`
 - Phase II assumption minimization is now populated:
-	- `formal/toe_formal/ToeFormal/QM/QMEvolutionAssumptionLedger.lean`
-	- `QMEvolutionAssumptions_v0`
-	- `QMEvolutionAssumptions_v0_min1`
-	- `QM_EVOLUTION_RECLASSIFICATION_v0_MIN1: hStepTotalPolicy_POLICY_TO_MATH_via_qm_step_total_of_definition`
-	- `QM_EVOLUTION_ASSUMPTION_LEDGER_PROGRESS_v0: BUNDLE_POPULATED`
-	- `QM_EVOLUTION_ASSUMPTION_LEDGER_PROGRESS_v0: BUNDLE_MIN1_POPULATED`
+  - `formal/toe_formal/ToeFormal/QM/QMEvolutionAssumptionLedger.lean`
+  - `QMEvolutionAssumptions_v0`
+  - `QMEvolutionAssumptions_v0_min1`
+  - `QM_EVOLUTION_RECLASSIFICATION_v0_MIN1: hStepTotalPolicy_POLICY_TO_MATH_via_qm_step_total_of_definition`
+  - `QM_EVOLUTION_ASSUMPTION_LEDGER_PROGRESS_v0: BUNDLE_POPULATED`
+  - `QM_EVOLUTION_ASSUMPTION_LEDGER_PROGRESS_v0: BUNDLE_MIN1_POPULATED`
 - Phase III first populated robustness row is pinned:
-	- `PERTURB_TIME_PARAMETER_SMALL_v0`
-	- `QM_EVOLUTION_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_TIME_PARAMETER_SMALL_POPULATED`
-	- artifact: `formal/output/qm_evolution_robustness_perturb_time_parameter_small_v0.json`
+  - `PERTURB_TIME_PARAMETER_SMALL_v0`
+  - `QM_EVOLUTION_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_TIME_PARAMETER_SMALL_POPULATED`
+  - artifact: `formal/output/qm_evolution_robustness_perturb_time_parameter_small_v0.json`
 - Phase III second populated robustness row is pinned:
-	- `PERTURB_STATE_CARRIER_SMALL_v0`
-	- `QM_EVOLUTION_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_STATE_CARRIER_SMALL_POPULATED`
-	- artifact: `formal/output/qm_evolution_robustness_perturb_state_carrier_small_v0.json`
+  - `PERTURB_STATE_CARRIER_SMALL_v0`
+  - `QM_EVOLUTION_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_STATE_CARRIER_SMALL_POPULATED`
+  - artifact: `formal/output/qm_evolution_robustness_perturb_state_carrier_small_v0.json`
 - Phase III third populated robustness row is pinned:
-	- `PERTURB_OPERATOR_STEP_SMALL_v0`
-	- `QM_EVOLUTION_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_OPERATOR_STEP_SMALL_POPULATED`
-	- artifact: `formal/output/qm_evolution_robustness_perturb_operator_step_small_v0.json`
+  - `PERTURB_OPERATOR_STEP_SMALL_v0`
+  - `QM_EVOLUTION_ROBUSTNESS_PROGRESS_v0: ROW_PERTURB_OPERATOR_STEP_SMALL_POPULATED`
+  - artifact: `formal/output/qm_evolution_robustness_perturb_operator_step_small_v0.json`
 - Phase III perturbation-family completion token is pinned:
-	- `QM_EVOLUTION_ROBUSTNESS_PROGRESS_v0: ALL_REQUIRED_PERTURBATION_ROWS_POPULATED`
+  - `QM_EVOLUTION_ROBUSTNESS_PROGRESS_v0: ALL_REQUIRED_PERTURBATION_ROWS_POPULATED`
 - Phase III first populated negative-control row is pinned:
-	- `NEGCTRL_INVALID_EVOLUTION_CONTEXT_v0`
-	- `QM_EVOLUTION_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_INVALID_EVOLUTION_CONTEXT_POPULATED`
-	- artifact: `formal/output/qm_evolution_negative_control_invalid_context_v0.json`
+  - `NEGCTRL_INVALID_EVOLUTION_CONTEXT_v0`
+  - `QM_EVOLUTION_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_INVALID_EVOLUTION_CONTEXT_POPULATED`
+  - artifact: `formal/output/qm_evolution_negative_control_invalid_context_v0.json`
 - Phase III second populated negative-control row is pinned:
-	- `NEGCTRL_BROKEN_STEP_CONTRACT_v0`
-	- `QM_EVOLUTION_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_BROKEN_STEP_CONTRACT_POPULATED`
-	- artifact: `formal/output/qm_evolution_negative_control_broken_step_contract_v0.json`
+  - `NEGCTRL_BROKEN_STEP_CONTRACT_v0`
+  - `QM_EVOLUTION_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_BROKEN_STEP_CONTRACT_POPULATED`
+  - artifact: `formal/output/qm_evolution_negative_control_broken_step_contract_v0.json`
 - Phase III third populated negative-control row is pinned:
-	- `NEGCTRL_INCOMPATIBLE_STATE_CARRIER_v0`
-	- `QM_EVOLUTION_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_INCOMPATIBLE_STATE_CARRIER_POPULATED`
-	- artifact: `formal/output/qm_evolution_negative_control_incompatible_state_carrier_v0.json`
+  - `NEGCTRL_INCOMPATIBLE_STATE_CARRIER_v0`
+  - `QM_EVOLUTION_NEGATIVE_CONTROL_PROGRESS_v0: ROW_NEGCTRL_INCOMPATIBLE_STATE_CARRIER_POPULATED`
+  - artifact: `formal/output/qm_evolution_negative_control_incompatible_state_carrier_v0.json`
 - Phase III negative-control-family completion token is pinned:
-	- `QM_EVOLUTION_NEGATIVE_CONTROL_PROGRESS_v0: ALL_REQUIRED_NEGATIVE_ROWS_POPULATED`
+  - `QM_EVOLUTION_NEGATIVE_CONTROL_PROGRESS_v0: ALL_REQUIRED_NEGATIVE_ROWS_POPULATED`
 - Phase IV first populated resolution row is pinned:
-	- `QM_RESOLUTION_32_v0`
-	- `QM_EVOLUTION_RESOLUTION_TREND_PROGRESS_v0: ROW_QM_RESOLUTION_32_POPULATED`
-	- artifact: `formal/output/qm_evolution_resolution_trend_32_v0.json`
+  - `QM_RESOLUTION_32_v0`
+  - `QM_EVOLUTION_RESOLUTION_TREND_PROGRESS_v0: ROW_QM_RESOLUTION_32_POPULATED`
+  - artifact: `formal/output/qm_evolution_resolution_trend_32_v0.json`
 - Phase IV second populated resolution row is pinned:
-	- `QM_RESOLUTION_64_v0`
-	- `QM_EVOLUTION_RESOLUTION_TREND_PROGRESS_v0: ROW_QM_RESOLUTION_64_POPULATED`
-	- artifact: `formal/output/qm_evolution_resolution_trend_64_v0.json`
+  - `QM_RESOLUTION_64_v0`
+  - `QM_EVOLUTION_RESOLUTION_TREND_PROGRESS_v0: ROW_QM_RESOLUTION_64_POPULATED`
+  - artifact: `formal/output/qm_evolution_resolution_trend_64_v0.json`
 - Phase IV third populated resolution row is pinned:
-	- `QM_RESOLUTION_128_v0`
-	- `QM_EVOLUTION_RESOLUTION_TREND_PROGRESS_v0: ROW_QM_RESOLUTION_128_POPULATED`
-	- artifact: `formal/output/qm_evolution_resolution_trend_128_v0.json`
+  - `QM_RESOLUTION_128_v0`
+  - `QM_EVOLUTION_RESOLUTION_TREND_PROGRESS_v0: ROW_QM_RESOLUTION_128_POPULATED`
+  - artifact: `formal/output/qm_evolution_resolution_trend_128_v0.json`
 - Phase IV resolution-family completion token is pinned:
-	- `QM_EVOLUTION_RESOLUTION_TREND_PROGRESS_v0: ALL_REQUIRED_RESOLUTION_ROWS_POPULATED`
+  - `QM_EVOLUTION_RESOLUTION_TREND_PROGRESS_v0: ALL_REQUIRED_RESOLUTION_ROWS_POPULATED`
 - Phase V pillar package freeze artifacts are pinned:
-	- `formal/docs/paper/TOE_QM_EVOLUTION_PILLAR_SUMMARY_v0.md`
-	- `formal/docs/paper/TOE_QM_EVOLUTION_CANONICAL_CHAIN_MAP_v0.md`
-	- `formal/markdown/locks/policy/QM_EVOLUTION_PILLAR_PACKAGE_v0.md`
-	- `QM_EVOLUTION_PILLAR_PACKAGE_PROGRESS_v0: REQUIRED_CONTENTS_PINNED`
+  - `formal/docs/paper/TOE_QM_EVOLUTION_PILLAR_SUMMARY_v0.md`
+  - `formal/docs/paper/TOE_QM_EVOLUTION_CANONICAL_CHAIN_MAP_v0.md`
+  - `formal/markdown/locks/policy/QM_EVOLUTION_PILLAR_PACKAGE_v0.md`
+  - `QM_EVOLUTION_PILLAR_PACKAGE_PROGRESS_v0: REQUIRED_CONTENTS_PINNED`
 
 QM full-derivation + GR extension checkpoint (2026-02-16):
 - QM full-derivation target is now pinned (derivation-grade path defined):
-	- `TOE-QM-THM-01: T-PROVED`
-	- `formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md`
-	- `QM_FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DERIVATION_GRADE`
-	- `QM_FULL_DERIVATION_RESULTS_LABEL_STATUS_v0: TOE_QM_THM_01_T_PROVED_BOUNDED_PINNED`
-	- `QM_FULL_DERIVATION_RESULTS_SCOPE_BOUNDARY_v0: BOUNDED_DERIVATION_GRADE_NONCLAIM_PINNED`
-	- `QM_FULL_DERIVATION_PILLAR_MATRIX_STATUS_v0: PILLAR_QM_CLOSED_BOUNDED_PINNED`
-	- `QM_FULL_DERIVATION_INEVITABILITY_STATUS_v0: DISCHARGED_v0_BOUNDED_ON_QM_THEOREM_SURFACE_V0`
-	- `QM_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
-	- `QM_FULL_DERIVATION_PROGRESS_v0: CYCLE1_CONTRACT_BRIDGE_TOKEN_PINNED`
-	- micro-target: `TARGET-QM-FULL-MICRO-01-CONTRACT-BRIDGE-v0`
-	- theorem token: `qm_full_derivation_cycle1_contract_bridge_token_v0`
-	- scaffold: `formal/toe_formal/ToeFormal/QM/QMFullDerivationScaffold.lean`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE2_v0: UNITARY_CONSISTENCY_TOKEN_PINNED`
-	- micro-target: `TARGET-QM-FULL-MICRO-02-UNITARY-CONSISTENCY-v0`
-	- theorem token: `qm_full_derivation_cycle2_unitary_consistency_token_v0`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE3_v0: ANTI_CIRCULARITY_GUARD_TOKEN_PINNED`
-	- micro-target: `TARGET-QM-FULL-MICRO-03-ANTI-CIRCULARITY-GUARD-v0`
-	- theorem token: `qm_full_derivation_cycle3_no_direct_schrodinger_insertion_guard_v0`
-	- `QM_ANTI_CIRCULARITY_GUARD_v0: NO_DIRECT_SCHRODINGER_INSERTION`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE4_v0: COMPOSITION_BUNDLE_TOKEN_PINNED`
-	- micro-target: `TARGET-QM-FULL-MICRO-04-COMPOSITION-BUNDLE-v0`
-	- theorem token: `qm_full_derivation_cycle4_composition_bundle_token_v0`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE5_v0: ASSUMPTION_MINIMIZATION_TOKEN_PINNED`
-	- micro-target: `TARGET-QM-FULL-MICRO-05-ASSUMPTION-MINIMIZATION-v0`
-	- theorem token: `qm_full_derivation_cycle5_policy_to_math_reclassification_token_v0`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE6_v0: EXIT_CRITERIA_COVERAGE_TOKEN_PINNED`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE7_v0: UNITARY_EXIT_ROW_PROMOTION_TOKEN_PINNED`
-	- theorem token: `qm_full_derivation_cycle6_unitary_exit_row_closure_token_v0`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE8_v0: DERIVATION_EXIT_ROW_PROMOTION_TOKEN_PINNED`
-	- theorem token: `qm_full_derivation_cycle7_derivation_exit_row_closure_token_v0`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE9_v0: ANTICIRCULARITY_EXIT_ROW_PROMOTION_TOKEN_PINNED`
-	- theorem token: `qm_full_derivation_cycle8_anticircularity_exit_row_closure_token_v0`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE10_v0: ASSUMPTION_MINIMIZATION_EXIT_ROW_PROMOTION_TOKEN_PINNED`
-	- theorem token: `qm_full_derivation_cycle9_assumption_minimization_exit_row_closure_token_v0`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE11_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE12_v0: DISCHARGE_TRANSITION_BUNDLE_TOKEN_PINNED`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE13_v0: KEYB_POLICY_SIGNOFF_SURFACE_TOKEN_PINNED`
-	- `QM_FULL_DERIVATION_PROGRESS_CYCLE14_v0: TWO_KEY_RELEASE_DISCHARGE_COMPLETED`
-	- `QM_FULL_DERIVATION_RECLASSIFICATION_v0_MIN1: hStepTotalPolicy_POLICY_TO_MATH_via_qm_step_total_of_definition`
-	- `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
-	- criteria rows:
-		- `QM_FULL_DERIVATION_CRITERIA_ROW_01_v0: EVOLUTION_LAW_DERIVATION_CHAIN_PINNED`
-		- `QM_FULL_DERIVATION_EXIT_ROW_01_STATUS_v0: DISCHARGED_v0_DERIVATION_GRADE`
-		- `QM_FULL_DERIVATION_CRITERIA_ROW_02_v0: UNITARY_CONSISTENCY_CHAIN_PINNED`
-		- `QM_FULL_DERIVATION_EXIT_ROW_02_STATUS_v0: DISCHARGED_v0_DERIVATION_GRADE`
-		- `QM_FULL_DERIVATION_CRITERIA_ROW_03_v0: ANTI_CIRCULARITY_GUARD_PINNED`
-		- `QM_FULL_DERIVATION_EXIT_ROW_04_STATUS_v0: DISCHARGED_v0_DERIVATION_GRADE`
-		- `QM_FULL_DERIVATION_CRITERIA_ROW_04_v0: ASSUMPTION_MINIMIZATION_PINNED`
-		- `QM_FULL_DERIVATION_EXIT_ROW_03_STATUS_v0: DISCHARGED_v0_DERIVATION_GRADE`
-		- `QM_FULL_DERIVATION_CRITERIA_ROW_05_v0: STATE_GATE_SYNC_PINNED`
-	- criteria evidence artifact:
-		- `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_full_derivation_discharge_criteria_cycle10_v0`
-		- `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 3925b71a53f85580e0fc22f48404cae71565b27926629b60aa3f702fe7b41ff1`
-		- `formal/output/qm_full_derivation_discharge_criteria_cycle10_v0.json`
-	- exit-criteria coverage artifact:
-		- `QM_FULL_DERIVATION_EXIT_CRITERIA_COVERAGE_ARTIFACT_v0: qm_full_derivation_exit_criteria_coverage_cycle14_v0`
-		- `formal/output/qm_full_derivation_exit_criteria_coverage_cycle14_v0.json`
-	- pre-discharge gate artifact:
-		- `QM_FULL_DERIVATION_PREDISCHARGE_GATE_ARTIFACT_v0: qm_full_derivation_predischarge_gate_cycle19_v0`
-		- `formal/output/qm_full_derivation_predischarge_gate_cycle19_v0.json`
-	- discharge-transition bundle artifact:
-		- `QM_FULL_DERIVATION_DISCHARGE_TRANSITION_BUNDLE_ARTIFACT_v0: qm_full_derivation_discharge_transition_bundle_cycle20_v0`
-		- `formal/output/qm_full_derivation_discharge_transition_bundle_cycle20_v0.json`
-	- key-B policy-signoff artifact:
-		- `QM_FULL_DERIVATION_KEYB_POLICY_SIGNOFF_ARTIFACT_v0: qm_full_derivation_keyb_policy_signoff_cycle21_v0`
-		- `formal/output/qm_full_derivation_keyb_policy_signoff_cycle21_v0.json`
+  - `TOE-QM-THM-01: T-PROVED`
+  - `formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md`
+  - `QM_FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DERIVATION_GRADE`
+  - `QM_FULL_DERIVATION_RESULTS_LABEL_STATUS_v0: TOE_QM_THM_01_T_PROVED_BOUNDED_PINNED`
+  - `QM_FULL_DERIVATION_RESULTS_SCOPE_BOUNDARY_v0: BOUNDED_DERIVATION_GRADE_NONCLAIM_PINNED`
+  - `QM_FULL_DERIVATION_PILLAR_MATRIX_STATUS_v0: PILLAR_QM_CLOSED_BOUNDED_PINNED`
+  - `QM_FULL_DERIVATION_INEVITABILITY_STATUS_v0: DISCHARGED_v0_BOUNDED_ON_QM_THEOREM_SURFACE_V0`
+  - `QM_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
+  - `QM_FULL_DERIVATION_PROGRESS_v0: CYCLE1_CONTRACT_BRIDGE_TOKEN_PINNED`
+  - micro-target: `TARGET-QM-FULL-MICRO-01-CONTRACT-BRIDGE-v0`
+  - theorem token: `qm_full_derivation_cycle1_contract_bridge_token_v0`
+  - scaffold: `formal/toe_formal/ToeFormal/QM/QMFullDerivationScaffold.lean`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE2_v0: UNITARY_CONSISTENCY_TOKEN_PINNED`
+  - micro-target: `TARGET-QM-FULL-MICRO-02-UNITARY-CONSISTENCY-v0`
+  - theorem token: `qm_full_derivation_cycle2_unitary_consistency_token_v0`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE3_v0: ANTI_CIRCULARITY_GUARD_TOKEN_PINNED`
+  - micro-target: `TARGET-QM-FULL-MICRO-03-ANTI-CIRCULARITY-GUARD-v0`
+  - theorem token: `qm_full_derivation_cycle3_no_direct_schrodinger_insertion_guard_v0`
+  - `QM_ANTI_CIRCULARITY_GUARD_v0: NO_DIRECT_SCHRODINGER_INSERTION`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE4_v0: COMPOSITION_BUNDLE_TOKEN_PINNED`
+  - micro-target: `TARGET-QM-FULL-MICRO-04-COMPOSITION-BUNDLE-v0`
+  - theorem token: `qm_full_derivation_cycle4_composition_bundle_token_v0`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE5_v0: ASSUMPTION_MINIMIZATION_TOKEN_PINNED`
+  - micro-target: `TARGET-QM-FULL-MICRO-05-ASSUMPTION-MINIMIZATION-v0`
+  - theorem token: `qm_full_derivation_cycle5_policy_to_math_reclassification_token_v0`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE6_v0: EXIT_CRITERIA_COVERAGE_TOKEN_PINNED`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE7_v0: UNITARY_EXIT_ROW_PROMOTION_TOKEN_PINNED`
+  - theorem token: `qm_full_derivation_cycle6_unitary_exit_row_closure_token_v0`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE8_v0: DERIVATION_EXIT_ROW_PROMOTION_TOKEN_PINNED`
+  - theorem token: `qm_full_derivation_cycle7_derivation_exit_row_closure_token_v0`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE9_v0: ANTICIRCULARITY_EXIT_ROW_PROMOTION_TOKEN_PINNED`
+  - theorem token: `qm_full_derivation_cycle8_anticircularity_exit_row_closure_token_v0`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE10_v0: ASSUMPTION_MINIMIZATION_EXIT_ROW_PROMOTION_TOKEN_PINNED`
+  - theorem token: `qm_full_derivation_cycle9_assumption_minimization_exit_row_closure_token_v0`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE11_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE12_v0: DISCHARGE_TRANSITION_BUNDLE_TOKEN_PINNED`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE13_v0: KEYB_POLICY_SIGNOFF_SURFACE_TOKEN_PINNED`
+  - `QM_FULL_DERIVATION_PROGRESS_CYCLE14_v0: TWO_KEY_RELEASE_DISCHARGE_COMPLETED`
+  - `QM_FULL_DERIVATION_RECLASSIFICATION_v0_MIN1: hStepTotalPolicy_POLICY_TO_MATH_via_qm_step_total_of_definition`
+  - `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+  - criteria rows:
+    - `QM_FULL_DERIVATION_CRITERIA_ROW_01_v0: EVOLUTION_LAW_DERIVATION_CHAIN_PINNED`
+    - `QM_FULL_DERIVATION_EXIT_ROW_01_STATUS_v0: DISCHARGED_v0_DERIVATION_GRADE`
+    - `QM_FULL_DERIVATION_CRITERIA_ROW_02_v0: UNITARY_CONSISTENCY_CHAIN_PINNED`
+    - `QM_FULL_DERIVATION_EXIT_ROW_02_STATUS_v0: DISCHARGED_v0_DERIVATION_GRADE`
+    - `QM_FULL_DERIVATION_CRITERIA_ROW_03_v0: ANTI_CIRCULARITY_GUARD_PINNED`
+    - `QM_FULL_DERIVATION_EXIT_ROW_04_STATUS_v0: DISCHARGED_v0_DERIVATION_GRADE`
+    - `QM_FULL_DERIVATION_CRITERIA_ROW_04_v0: ASSUMPTION_MINIMIZATION_PINNED`
+    - `QM_FULL_DERIVATION_EXIT_ROW_03_STATUS_v0: DISCHARGED_v0_DERIVATION_GRADE`
+    - `QM_FULL_DERIVATION_CRITERIA_ROW_05_v0: STATE_GATE_SYNC_PINNED`
+  - criteria evidence artifact:
+    - `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_full_derivation_discharge_criteria_cycle10_v0`
+    - `QM_FULL_DERIVATION_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 3925b71a53f85580e0fc22f48404cae71565b27926629b60aa3f702fe7b41ff1`
+    - `formal/output/qm_full_derivation_discharge_criteria_cycle10_v0.json`
+  - exit-criteria coverage artifact:
+    - `QM_FULL_DERIVATION_EXIT_CRITERIA_COVERAGE_ARTIFACT_v0: qm_full_derivation_exit_criteria_coverage_cycle14_v0`
+    - `formal/output/qm_full_derivation_exit_criteria_coverage_cycle14_v0.json`
+  - pre-discharge gate artifact:
+    - `QM_FULL_DERIVATION_PREDISCHARGE_GATE_ARTIFACT_v0: qm_full_derivation_predischarge_gate_cycle19_v0`
+    - `formal/output/qm_full_derivation_predischarge_gate_cycle19_v0.json`
+  - discharge-transition bundle artifact:
+    - `QM_FULL_DERIVATION_DISCHARGE_TRANSITION_BUNDLE_ARTIFACT_v0: qm_full_derivation_discharge_transition_bundle_cycle20_v0`
+    - `formal/output/qm_full_derivation_discharge_transition_bundle_cycle20_v0.json`
+  - key-B policy-signoff artifact:
+    - `QM_FULL_DERIVATION_KEYB_POLICY_SIGNOFF_ARTIFACT_v0: qm_full_derivation_keyb_policy_signoff_cycle21_v0`
+    - `formal/output/qm_full_derivation_keyb_policy_signoff_cycle21_v0.json`
 - GR continuum-limit bridge target is now pinned:
-	- `formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md`
-	- `GR_CONTINUUM_LIMIT_ADJUDICATION: DISCHARGED_v0_CONTINUUM_BRIDGE`
-	- `GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED`
-	- `GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0: GRID_INDEPENDENCE_SANITY_TOKEN_PINNED`
-	- `GR_CONTINUUM_LIMIT_PROGRESS_CYCLE3_v0: BRIDGE_THEOREM_SURFACE_TOKEN_PINNED`
-	- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
-	- criteria rows:
-		- `GR_CONTINUUM_LIMIT_CRITERIA_ROW_01_v0: REFINEMENT_TREND_MONOTONIC_PINNED`
-		- `GR_CONTINUUM_LIMIT_CRITERIA_ROW_02_v0: DISCRETE_TO_CONTINUUM_MAP_SURFACE_PINNED`
-		- `GR_CONTINUUM_LIMIT_CRITERIA_ROW_03_v0: BOUNDARY_ASSUMPTION_TRANSPARENCY_PINNED`
-		- `GR_CONTINUUM_LIMIT_CRITERIA_ROW_04_v0: STATE_GATE_SYNC_PINNED`
-	- criteria evidence artifact:
-		- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_continuum_discharge_criteria_cycle10_v0`
-		- `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: e33fb62cb631f5e507f4fc0163bbcfe82a940916c6fc7233ab1ea8968a5f5d84`
-		- `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`
-	- micro-target: `TARGET-GR-CONTINUUM-MICRO-01-REFINEMENT-TREND-v0`
-	- artifact token: `gr_continuum_refinement_trend_cycle1_v0`
-	- artifact: `formal/output/gr_continuum_refinement_trend_cycle1_v0.json`
-	- micro-target: `TARGET-GR-CONTINUUM-MICRO-02-GRID-INDEPENDENCE-SANITY-v0`
-	- artifact token: `gr_continuum_grid_independence_cycle2_v0`
-	- artifact: `formal/output/gr_continuum_grid_independence_cycle2_v0.json`
-	- micro-target: `TARGET-GR-CONTINUUM-MICRO-03-BRIDGE-THEOREM-SURFACE-v0`
-	- artifact token: `gr_continuum_bridge_theorem_surface_cycle3_v0`
-	- artifact: `formal/output/gr_continuum_bridge_theorem_surface_cycle3_v0.json`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md`
+  - `GR_CONTINUUM_LIMIT_ADJUDICATION: DISCHARGED_v0_CONTINUUM_BRIDGE`
+  - `GR_CONTINUUM_LIMIT_PROGRESS_v0: CYCLE1_REFINEMENT_TREND_TOKEN_PINNED`
+  - `GR_CONTINUUM_LIMIT_PROGRESS_CYCLE2_v0: GRID_INDEPENDENCE_SANITY_TOKEN_PINNED`
+  - `GR_CONTINUUM_LIMIT_PROGRESS_CYCLE3_v0: BRIDGE_THEOREM_SURFACE_TOKEN_PINNED`
+  - `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+  - criteria rows:
+    - `GR_CONTINUUM_LIMIT_CRITERIA_ROW_01_v0: REFINEMENT_TREND_MONOTONIC_PINNED`
+    - `GR_CONTINUUM_LIMIT_CRITERIA_ROW_02_v0: DISCRETE_TO_CONTINUUM_MAP_SURFACE_PINNED`
+    - `GR_CONTINUUM_LIMIT_CRITERIA_ROW_03_v0: BOUNDARY_ASSUMPTION_TRANSPARENCY_PINNED`
+    - `GR_CONTINUUM_LIMIT_CRITERIA_ROW_04_v0: STATE_GATE_SYNC_PINNED`
+  - criteria evidence artifact:
+    - `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_continuum_discharge_criteria_cycle10_v0`
+    - `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: e33fb62cb631f5e507f4fc0163bbcfe82a940916c6fc7233ab1ea8968a5f5d84`
+    - `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`
+  - micro-target: `TARGET-GR-CONTINUUM-MICRO-01-REFINEMENT-TREND-v0`
+  - artifact token: `gr_continuum_refinement_trend_cycle1_v0`
+  - artifact: `formal/output/gr_continuum_refinement_trend_cycle1_v0.json`
+  - micro-target: `TARGET-GR-CONTINUUM-MICRO-02-GRID-INDEPENDENCE-SANITY-v0`
+  - artifact token: `gr_continuum_grid_independence_cycle2_v0`
+  - artifact: `formal/output/gr_continuum_grid_independence_cycle2_v0.json`
+  - micro-target: `TARGET-GR-CONTINUUM-MICRO-03-BRIDGE-THEOREM-SURFACE-v0`
+  - artifact token: `gr_continuum_bridge_theorem_surface_cycle3_v0`
+  - artifact: `formal/output/gr_continuum_bridge_theorem_surface_cycle3_v0.json`
 - GR strong-field regime target is now pinned:
-	- `formal/docs/paper/DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0.md`
-	- `GR_STRONG_FIELD_ADJUDICATION: DISCHARGED_v0_STRONG_FIELD_PROGRAM`
-	- `GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED`
-	- `GR_STRONG_FIELD_PROGRESS_CYCLE2_v0: NONLINEAR_CLOSURE_SCAFFOLD_TOKEN_PINNED`
-	- `GR_STRONG_FIELD_PROGRESS_CYCLE3_v0: STRONG_FIELD_THEOREM_SURFACE_TOKEN_PINNED`
-	- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
-	- criteria rows:
-		- `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_01_v0: REGIME_PREDICATE_SURFACE_PINNED`
-		- `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_02_v0: NONLINEAR_CLOSURE_SURFACE_PINNED`
-		- `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_03_v0: REGULARITY_DOMAIN_BOUNDARY_PINNED`
-		- `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_04_v0: STATE_GATE_SYNC_PINNED`
-	- criteria evidence artifact:
-		- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_strong_field_discharge_criteria_cycle10_v0`
-		- `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 30c207b6f0e880f90a4295257cbe7af4a12a5c653bc86110359a9990c9bfcf00`
-		- `formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json`
-	- micro-target: `TARGET-GR-STRONG-FIELD-MICRO-01-REGIME-PREDICATE-v0`
-	- artifact token: `gr_strong_field_regime_predicate_cycle1_v0`
-	- artifact: `formal/output/gr_strong_field_regime_predicate_cycle1_v0.json`
-	- micro-target: `TARGET-GR-STRONG-FIELD-MICRO-02-NONLINEAR-CLOSURE-SCAFFOLD-v0`
-	- artifact token: `gr_strong_field_nonlinear_closure_cycle2_v0`
-	- artifact: `formal/output/gr_strong_field_nonlinear_closure_cycle2_v0.json`
-	- micro-target: `TARGET-GR-STRONG-FIELD-MICRO-03-THEOREM-SURFACE-v0`
-	- artifact token: `gr_strong_field_theorem_surface_cycle3_v0`
-	- artifact: `formal/output/gr_strong_field_theorem_surface_cycle3_v0.json`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0.md`
+  - `GR_STRONG_FIELD_ADJUDICATION: DISCHARGED_v0_STRONG_FIELD_PROGRAM`
+  - `GR_STRONG_FIELD_PROGRESS_v0: CYCLE1_REGIME_PREDICATE_TOKEN_PINNED`
+  - `GR_STRONG_FIELD_PROGRESS_CYCLE2_v0: NONLINEAR_CLOSURE_SCAFFOLD_TOKEN_PINNED`
+  - `GR_STRONG_FIELD_PROGRESS_CYCLE3_v0: STRONG_FIELD_THEOREM_SURFACE_TOKEN_PINNED`
+  - `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+  - criteria rows:
+    - `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_01_v0: REGIME_PREDICATE_SURFACE_PINNED`
+    - `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_02_v0: NONLINEAR_CLOSURE_SURFACE_PINNED`
+    - `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_03_v0: REGULARITY_DOMAIN_BOUNDARY_PINNED`
+    - `GR_STRONG_FIELD_REGIME_CRITERIA_ROW_04_v0: STATE_GATE_SYNC_PINNED`
+  - criteria evidence artifact:
+    - `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_strong_field_discharge_criteria_cycle10_v0`
+    - `GR_STRONG_FIELD_REGIME_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 30c207b6f0e880f90a4295257cbe7af4a12a5c653bc86110359a9990c9bfcf00`
+    - `formal/output/gr_strong_field_discharge_criteria_cycle10_v0.json`
+  - micro-target: `TARGET-GR-STRONG-FIELD-MICRO-01-REGIME-PREDICATE-v0`
+  - artifact token: `gr_strong_field_regime_predicate_cycle1_v0`
+  - artifact: `formal/output/gr_strong_field_regime_predicate_cycle1_v0.json`
+  - micro-target: `TARGET-GR-STRONG-FIELD-MICRO-02-NONLINEAR-CLOSURE-SCAFFOLD-v0`
+  - artifact token: `gr_strong_field_nonlinear_closure_cycle2_v0`
+  - artifact: `formal/output/gr_strong_field_nonlinear_closure_cycle2_v0.json`
+  - micro-target: `TARGET-GR-STRONG-FIELD-MICRO-03-THEOREM-SURFACE-v0`
+  - artifact token: `gr_strong_field_theorem_surface_cycle3_v0`
+  - artifact: `formal/output/gr_strong_field_theorem_surface_cycle3_v0.json`
 - Expansion enforcement gate is pinned:
-	- `formal/python/tests/test_qm_gr_regime_expansion_gate.py`
+  - `formal/python/tests/test_qm_gr_regime_expansion_gate.py`
 
 GR/QM inevitability gate package checkpoint (2026-02-16):
 - Canonical inevitability gate targets are now pinned:
-	- `formal/docs/paper/DERIVATION_TARGET_QM_INEVITABILITY_GATE_v0.md`
-	- `formal/docs/paper/DERIVATION_TARGET_GR01_INEVITABILITY_GATE_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_QM_INEVITABILITY_GATE_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_GR01_INEVITABILITY_GATE_v0.md`
 - Canonical inevitability enforcement tests are now pinned:
-	- `formal/python/tests/test_qm_inevitability_gate.py`
-	- `formal/python/tests/test_gr01_inevitability_gate.py`
+  - `formal/python/tests/test_qm_inevitability_gate.py`
+  - `formal/python/tests/test_gr01_inevitability_gate.py`
 - Gate posture is explicit and non-promotional until theorem-body closure exists:
-	- `QM_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
-	- `FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
+  - `QM_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
+  - `FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
 
 Project AAR checkpoint (2026-02-16):
 - Canonical after-action review deliverable is now pinned:
-	- `formal/docs/paper/PROJECT_AFTER_ACTION_REVIEW_v0.md`
-	- `PROJECT_AAR_ADJUDICATION_v0: PUBLISHED_POLICY_BASELINE_2026Q1`
-	- `PROJECT_AAR_SCOPE_BOUNDARY_v0: GOVERNANCE_ONLY_NONCLAIM_NONPROMOTIONAL`
-	- `PROJECT_AAR_Q2_GATE_PACK_v0: DEFINED_PENDING_EXECUTION`
-	- `PROJECT_AAR_Q3_GATE_PACK_v0: DEFINED_PENDING_EXECUTION`
-	- `PROJECT_AAR_Q4_GATE_PACK_v0: DEFINED_PENDING_EXECUTION`
+  - `formal/docs/paper/PROJECT_AFTER_ACTION_REVIEW_v0.md`
+  - `PROJECT_AAR_ADJUDICATION_v0: PUBLISHED_POLICY_BASELINE_2026Q1`
+  - `PROJECT_AAR_SCOPE_BOUNDARY_v0: GOVERNANCE_ONLY_NONCLAIM_NONPROMOTIONAL`
+  - `PROJECT_AAR_Q2_GATE_PACK_v0: DEFINED_PENDING_EXECUTION`
+  - `PROJECT_AAR_Q3_GATE_PACK_v0: DEFINED_PENDING_EXECUTION`
+  - `PROJECT_AAR_Q4_GATE_PACK_v0: DEFINED_PENDING_EXECUTION`
 
 QM-GR cross-lane compatibility checkpoint (2026-02-16):
 - cycle token:
-	- `QM_GR_CROSS_LANE_PROGRESS_v0: CYCLE1_COMPATIBILITY_BUNDLE_PINNED`
-	- `QM_GR_CROSS_LANE_PROGRESS_CYCLE2_v0: CYCLE2_COMPATIBILITY_BUNDLE_PINNED`
-	- `QM_GR_CROSS_LANE_PROGRESS_CYCLE3_v0: CYCLE3_COMPATIBILITY_BUNDLE_PINNED`
-	- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
-	- criteria rows:
-		- `QM_GR_INTEGRATED_CRITERIA_ROW_01_v0: LANE_CHECKPOINT_COMPATIBILITY_PINNED`
-		- `QM_GR_INTEGRATED_CRITERIA_ROW_02_v0: EXPLICIT_NON_CLAIM_POSTURE_PINNED`
-		- `QM_GR_INTEGRATED_CRITERIA_ROW_03_v0: STATE_GATE_SYNC_PINNED`
-	- criteria evidence artifact:
-		- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_gr_integrated_discharge_criteria_cycle10_v0`
-		- `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 51363f7dea1beef11cfd4f0f3f309fc2bdf241d870da0f0ffbfdd4864188afb4`
-		- `formal/output/qm_gr_integrated_discharge_criteria_cycle10_v0.json`
+  - `QM_GR_CROSS_LANE_PROGRESS_v0: CYCLE1_COMPATIBILITY_BUNDLE_PINNED`
+  - `QM_GR_CROSS_LANE_PROGRESS_CYCLE2_v0: CYCLE2_COMPATIBILITY_BUNDLE_PINNED`
+  - `QM_GR_CROSS_LANE_PROGRESS_CYCLE3_v0: CYCLE3_COMPATIBILITY_BUNDLE_PINNED`
+  - `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+  - criteria rows:
+    - `QM_GR_INTEGRATED_CRITERIA_ROW_01_v0: LANE_CHECKPOINT_COMPATIBILITY_PINNED`
+    - `QM_GR_INTEGRATED_CRITERIA_ROW_02_v0: EXPLICIT_NON_CLAIM_POSTURE_PINNED`
+    - `QM_GR_INTEGRATED_CRITERIA_ROW_03_v0: STATE_GATE_SYNC_PINNED`
+  - criteria evidence artifact:
+    - `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_v0: qm_gr_integrated_discharge_criteria_cycle10_v0`
+    - `QM_GR_INTEGRATED_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: 51363f7dea1beef11cfd4f0f3f309fc2bdf241d870da0f0ffbfdd4864188afb4`
+    - `formal/output/qm_gr_integrated_discharge_criteria_cycle10_v0.json`
 - compatibility bundle artifact:
-	- `formal/docs/paper/QM_GR_CROSS_LANE_COMPATIBILITY_BUNDLE_v0.md`
-	- artifact token: `qm_gr_cross_lane_compatibility_cycle1_v0`
-	- artifact: `formal/output/qm_gr_cross_lane_compatibility_cycle1_v0.json`
-	- artifact token: `qm_gr_cross_lane_compatibility_cycle2_v0`
-	- artifact: `formal/output/qm_gr_cross_lane_compatibility_cycle2_v0.json`
-	- artifact token: `qm_gr_cross_lane_compatibility_cycle3_v0`
-	- artifact: `formal/output/qm_gr_cross_lane_compatibility_cycle3_v0.json`
+  - `formal/docs/paper/QM_GR_CROSS_LANE_COMPATIBILITY_BUNDLE_v0.md`
+  - artifact token: `qm_gr_cross_lane_compatibility_cycle1_v0`
+  - artifact: `formal/output/qm_gr_cross_lane_compatibility_cycle1_v0.json`
+  - artifact token: `qm_gr_cross_lane_compatibility_cycle2_v0`
+  - artifact: `formal/output/qm_gr_cross_lane_compatibility_cycle2_v0.json`
+  - artifact token: `qm_gr_cross_lane_compatibility_cycle3_v0`
+  - artifact: `formal/output/qm_gr_cross_lane_compatibility_cycle3_v0.json`
 
 
 
@@ -1315,76 +1342,76 @@ Completeness register checkpoint (2026-02-06): Added Completeness Register + com
 
 Bridge attempts (bounded; falsifiable; structural-only)
 - BRIDGE_TICKET_0001 (C6↔UCFF dispersion square): formal/quarantine/bridge_tickets/BRIDGE_TICKET_0001_c6_ucff_dispersion_square.md
-	Evidence: formal/python/tests/test_bridge_c6_ucff_dispersion_square.py
+  Evidence: formal/python/tests/test_bridge_c6_ucff_dispersion_square.py
 - BRIDGE_TICKET_0002 (OV-BR-05↔UCFF low-k slope compatibility): formal/quarantine/bridge_tickets/BRIDGE_TICKET_0002_br05_ucff_lowk_slope.md
-	Evidence: formal/python/tests/test_bridge_br05_ucff_lowk_slope.py
+  Evidence: formal/python/tests/test_bridge_br05_ucff_lowk_slope.py
 - BRIDGE_TICKET_0003 (BRIDGE_TICKET_0002 guard: robustness + falsification): formal/quarantine/bridge_tickets/BRIDGE_TICKET_0003_br05_ucff_lowk_slope_robustness.md
-	Evidence: formal/python/tests/test_bridge_br05_ucff_lowk_slope_robustness.py
+  Evidence: formal/python/tests/test_bridge_br05_ucff_lowk_slope_robustness.py
 - BRIDGE_TICKET_0004 (BR-04 low-k window ↔ UCFF curvature/convexity constraint): formal/quarantine/bridge_tickets/BRIDGE_TICKET_0004_br05_ucff_lowk_curvature.md
-	Evidence: formal/python/tests/test_bridge_br05_ucff_lowk_curvature.py
+  Evidence: formal/python/tests/test_bridge_br05_ucff_lowk_curvature.py
 - BRIDGE_TICKET_TOYH_0001 (C6 phase invariance ↔ Toy-H gauge redundancy): formal/quarantine/bridge_tickets/BRIDGE_TICKET_TOYH_0001_c6_phase_invariance.md
-	Evidence: formal/python/tests/test_bridge_toyh_c6_phase_invariance.py
-	Feasibility: formal/quarantine/feasibility/BRIDGE_TOYH_C6_phase_invariance_feasibility.json
+  Evidence: formal/python/tests/test_bridge_toyh_c6_phase_invariance.py
+  Feasibility: formal/quarantine/feasibility/BRIDGE_TOYH_C6_phase_invariance_feasibility.json
 - BRIDGE_TICKET_TOYH_0002 (C6 current invariance ↔ Toy-H orthogonal gauge observable): formal/quarantine/bridge_tickets/BRIDGE_TICKET_TOYH_0002_c6_current_invariance.md
-	Evidence: formal/python/tests/test_bridge_toyh_c6_current_invariance.py
-	Feasibility: formal/quarantine/feasibility/BRIDGE_TOYH_C6_current_invariance_feasibility.json
+  Evidence: formal/python/tests/test_bridge_toyh_c6_current_invariance.py
+  Feasibility: formal/quarantine/feasibility/BRIDGE_TOYH_C6_current_invariance_feasibility.json
 - BRIDGE_TICKET_TOYH_0003 (C6 phase-anchor proxy ↔ Toy-H small-theta gauge observable): formal/quarantine/bridge_tickets/BRIDGE_TICKET_TOYH_0003_c6_phase_anchor.md
-	Evidence: formal/python/tests/test_bridge_toyh_c6_phase_anchor_determinism.py; formal/python/tests/test_bridge_toyh_c6_phase_anchor_negative_controls.py; formal/python/tests/test_bridge_toyh_c6_phase_anchor_resolution_scan.py; formal/python/tests/test_bridge_toyh_c6_phase_anchor_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyh_c6_phase_anchor_boundary_report_pointers_exist.py
-	Feasibility: formal/quarantine/feasibility/BRIDGE_TOYH_C6_phase_anchor_feasibility.json
+  Evidence: formal/python/tests/test_bridge_toyh_c6_phase_anchor_determinism.py; formal/python/tests/test_bridge_toyh_c6_phase_anchor_negative_controls.py; formal/python/tests/test_bridge_toyh_c6_phase_anchor_resolution_scan.py; formal/python/tests/test_bridge_toyh_c6_phase_anchor_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyh_c6_phase_anchor_boundary_report_pointers_exist.py
+  Feasibility: formal/quarantine/feasibility/BRIDGE_TOYH_C6_phase_anchor_feasibility.json
 - BRIDGE_FEASIBILITY_TOYG_0001 (Toy-G -> canonical feasibility scan): formal/quarantine/bridge_tickets/BRIDGE_FEASIBILITY_TOYG_0001_canonical_surface_scan.md
-	Evidence: formal/python/tests/test_bridge_toyg_canonical_feasibility_scan_determinism.py; formal/python/tests/test_bridge_toyg_canonical_feasibility_artifact_pointers_exist.py
-	Feasibility: formal/quarantine/feasibility/BRIDGE_TOYG_CANONICAL_feasibility.json
+  Evidence: formal/python/tests/test_bridge_toyg_canonical_feasibility_scan_determinism.py; formal/python/tests/test_bridge_toyg_canonical_feasibility_artifact_pointers_exist.py
+  Feasibility: formal/quarantine/feasibility/BRIDGE_TOYG_CANONICAL_feasibility.json
 - BRIDGE_TICKET_TOYG_0001 (C6 phase-winding quantization proxy ↔ Toy-G discreteness observable): formal/quarantine/bridge_tickets/BRIDGE_TICKET_TOYG_0001_c6_phase_winding_quantization.md
-	Evidence: formal/python/tests/test_bridge_toyg_c6_phase_winding_determinism.py; formal/python/tests/test_bridge_toyg_c6_phase_winding_perturbation_stability.py; formal/python/tests/test_bridge_toyg_c6_phase_winding_negative_controls.py; formal/python/tests/test_bridge_toyg_c6_phase_winding_resolution_scan.py
-	Feasibility: formal/quarantine/feasibility/BRIDGE_TOYG_CANONICAL_feasibility.json
+  Evidence: formal/python/tests/test_bridge_toyg_c6_phase_winding_determinism.py; formal/python/tests/test_bridge_toyg_c6_phase_winding_perturbation_stability.py; formal/python/tests/test_bridge_toyg_c6_phase_winding_negative_controls.py; formal/python/tests/test_bridge_toyg_c6_phase_winding_resolution_scan.py
+  Feasibility: formal/quarantine/feasibility/BRIDGE_TOYG_CANONICAL_feasibility.json
 - BRIDGE_TICKET_TOYG_0002 (C6 mode-index quantization proxy ↔ Toy-G discreteness observable): formal/quarantine/bridge_tickets/BRIDGE_TICKET_TOYG_0002_c6_mode_index_quantization.md
-	Evidence: formal/python/tests/test_bridge_toyg_c6_mode_index_quantization_determinism.py; formal/python/tests/test_bridge_toyg_c6_mode_index_quantization_perturbation_stability.py; formal/python/tests/test_bridge_toyg_c6_mode_index_quantization_negative_controls.py; formal/python/tests/test_bridge_toyg_c6_mode_index_quantization_resolution_scan.py; formal/python/tests/test_bridge_toyg_c6_mode_index_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyg_c6_mode_index_boundary_report_pointers_exist.py
-	Feasibility: formal/quarantine/feasibility/BRIDGE_TOYG_C6_mode_index_feasibility.json
+  Evidence: formal/python/tests/test_bridge_toyg_c6_mode_index_quantization_determinism.py; formal/python/tests/test_bridge_toyg_c6_mode_index_quantization_perturbation_stability.py; formal/python/tests/test_bridge_toyg_c6_mode_index_quantization_negative_controls.py; formal/python/tests/test_bridge_toyg_c6_mode_index_quantization_resolution_scan.py; formal/python/tests/test_bridge_toyg_c6_mode_index_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyg_c6_mode_index_boundary_report_pointers_exist.py
+  Feasibility: formal/quarantine/feasibility/BRIDGE_TOYG_C6_mode_index_feasibility.json
 - BRIDGE_TICKET_TOYG_0003 (C6 unwrap-stability proxy ↔ Toy-G boundary-sensitive observable): formal/quarantine/bridge_tickets/BRIDGE_TICKET_TOYG_0003_c6_unwrap_stability.md
-	Evidence: formal/python/tests/test_bridge_toyg_c6_unwrap_stability_determinism.py; formal/python/tests/test_bridge_toyg_c6_unwrap_stability_perturbation_stability.py; formal/python/tests/test_bridge_toyg_c6_unwrap_stability_negative_controls.py; formal/python/tests/test_bridge_toyg_c6_unwrap_stability_resolution_scan.py; formal/python/tests/test_bridge_toyg_c6_unwrap_stability_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyg_c6_unwrap_stability_boundary_report_pointers_exist.py
-	Feasibility: formal/quarantine/feasibility/BRIDGE_TOYG_C6_unwrap_stability_feasibility.json
+  Evidence: formal/python/tests/test_bridge_toyg_c6_unwrap_stability_determinism.py; formal/python/tests/test_bridge_toyg_c6_unwrap_stability_perturbation_stability.py; formal/python/tests/test_bridge_toyg_c6_unwrap_stability_negative_controls.py; formal/python/tests/test_bridge_toyg_c6_unwrap_stability_resolution_scan.py; formal/python/tests/test_bridge_toyg_c6_unwrap_stability_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyg_c6_unwrap_stability_boundary_report_pointers_exist.py
+  Feasibility: formal/quarantine/feasibility/BRIDGE_TOYG_C6_unwrap_stability_feasibility.json
 
 Bridge ledger (bounded evidence surface; bookkeeping)
 - formal/quarantine/bridge_tickets/BRIDGE_LEDGER.json
-	Evidence: formal/python/tests/test_bridge_ledger_generate_determinism.py; formal/python/tests/test_bridge_ledger_evidence_pointers_exist.py
+  Evidence: formal/python/tests/test_bridge_ledger_generate_determinism.py; formal/python/tests/test_bridge_ledger_evidence_pointers_exist.py
 
 Bridge boundary report (bounded domain scan; bookkeeping)
 - formal/quarantine/bridge_tickets/BRIDGE_BOUNDARY_REPORT.json
-	Evidence: formal/python/tests/test_bridge_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_boundary_report_evidence_pointers_exist.py
+  Evidence: formal/python/tests/test_bridge_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_boundary_report_evidence_pointers_exist.py
 - formal/quarantine/bridge_tickets/BRIDGE_TOYH_C6_phase_invariance_BOUNDARY_REPORT.json
-	Evidence: formal/python/tests/test_bridge_toyh_c6_phase_invariance_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyh_c6_phase_invariance_boundary_report_pointers_exist.py
+  Evidence: formal/python/tests/test_bridge_toyh_c6_phase_invariance_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyh_c6_phase_invariance_boundary_report_pointers_exist.py
 - formal/quarantine/bridge_tickets/BRIDGE_TOYH_C6_current_invariance_BOUNDARY_REPORT.json
-	Evidence: formal/python/tests/test_bridge_toyh_c6_current_invariance_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyh_c6_current_invariance_boundary_report_pointers_exist.py
+  Evidence: formal/python/tests/test_bridge_toyh_c6_current_invariance_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyh_c6_current_invariance_boundary_report_pointers_exist.py
 - formal/quarantine/bridge_tickets/BRIDGE_TOYH_C6_phase_anchor_BOUNDARY_REPORT.json
-	Evidence: formal/python/tests/test_bridge_toyh_c6_phase_anchor_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyh_c6_phase_anchor_boundary_report_pointers_exist.py
+  Evidence: formal/python/tests/test_bridge_toyh_c6_phase_anchor_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyh_c6_phase_anchor_boundary_report_pointers_exist.py
 - formal/quarantine/bridge_tickets/BRIDGE_TOYH_C6_ORTHOGONALITY_REPORT.json
-	Evidence: formal/python/tests/test_bridge_toyh_c6_orthogonality_report_generate_determinism.py; formal/python/tests/test_bridge_toyh_c6_orthogonality_report_pointers_exist.py; formal/python/tests/test_bridge_toyh_c6_orthogonality_independence.py
+  Evidence: formal/python/tests/test_bridge_toyh_c6_orthogonality_report_generate_determinism.py; formal/python/tests/test_bridge_toyh_c6_orthogonality_report_pointers_exist.py; formal/python/tests/test_bridge_toyh_c6_orthogonality_independence.py
 - formal/quarantine/bridge_tickets/BRIDGE_TOYH_C6_ORTHOGONALITY_MISMATCH_REPORT.json
-	Evidence: formal/python/tests/test_bridge_toyh_c6_orthogonality_mismatch_report_generate_determinism.py; formal/python/tests/test_bridge_toyh_c6_orthogonality_mismatch_report_pointers_exist.py; formal/python/tests/test_bridge_toyh_c6_orthogonality_mismatch_semantics.py; formal/python/tests/test_bridge_toyh_c6_orthogonality_robustness_guard.py
+  Evidence: formal/python/tests/test_bridge_toyh_c6_orthogonality_mismatch_report_generate_determinism.py; formal/python/tests/test_bridge_toyh_c6_orthogonality_mismatch_report_pointers_exist.py; formal/python/tests/test_bridge_toyh_c6_orthogonality_mismatch_semantics.py; formal/python/tests/test_bridge_toyh_c6_orthogonality_robustness_guard.py
 - formal/quarantine/bridge_tickets/BRIDGE_TOYG_C6_phase_winding_BOUNDARY_REPORT.json
-	Evidence: formal/python/tests/test_bridge_toyg_c6_phase_winding_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyg_c6_phase_winding_boundary_report_pointers_exist.py
+  Evidence: formal/python/tests/test_bridge_toyg_c6_phase_winding_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyg_c6_phase_winding_boundary_report_pointers_exist.py
 - formal/quarantine/bridge_tickets/BRIDGE_TOYG_C6_mode_index_BOUNDARY_REPORT.json
-	Evidence: formal/python/tests/test_bridge_toyg_c6_mode_index_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyg_c6_mode_index_boundary_report_pointers_exist.py
+  Evidence: formal/python/tests/test_bridge_toyg_c6_mode_index_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyg_c6_mode_index_boundary_report_pointers_exist.py
 - formal/quarantine/bridge_tickets/BRIDGE_TOYG_C6_unwrap_stability_BOUNDARY_REPORT.json
-	Evidence: formal/python/tests/test_bridge_toyg_c6_unwrap_stability_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyg_c6_unwrap_stability_boundary_report_pointers_exist.py
+  Evidence: formal/python/tests/test_bridge_toyg_c6_unwrap_stability_boundary_report_generate_determinism.py; formal/python/tests/test_bridge_toyg_c6_unwrap_stability_boundary_report_pointers_exist.py
 - formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_REPORT.json
-	Evidence: formal/python/tests/test_bridge_program_orthogonality_report_generate_determinism.py; formal/python/tests/test_bridge_program_orthogonality_report_pointers_exist.py; formal/python/tests/test_bridge_program_orthogonality_semantics.py; formal/python/tests/test_bridge_program_orthogonality_robustness_guard.py
+  Evidence: formal/python/tests/test_bridge_program_orthogonality_report_generate_determinism.py; formal/python/tests/test_bridge_program_orthogonality_report_pointers_exist.py; formal/python/tests/test_bridge_program_orthogonality_semantics.py; formal/python/tests/test_bridge_program_orthogonality_robustness_guard.py
 - formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_MISMATCH_REPORT.json
-	Evidence: formal/python/tests/test_bridge_program_orthogonality_mismatch_report_generate_determinism.py; formal/python/tests/test_bridge_program_orthogonality_mismatch_report_pointers_exist.py; formal/python/tests/test_bridge_program_orthogonality_mismatch_semantics.py
+  Evidence: formal/python/tests/test_bridge_program_orthogonality_mismatch_report_generate_determinism.py; formal/python/tests/test_bridge_program_orthogonality_mismatch_report_pointers_exist.py; formal/python/tests/test_bridge_program_orthogonality_mismatch_semantics.py
 - formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_MISMATCH_REASON_SUMMARY.json
-	Evidence: formal/python/tests/test_bridge_program_mismatch_reason_summary_determinism.py; formal/python/tests/test_bridge_program_post_toyg0002_regression_lock.py; formal/python/tests/test_bridge_program_post_toyh0003_regression_lock.py; formal/python/tests/test_bridge_toyg_c6_mode_index_resolution_regression_lock.py; formal/python/tests/test_bridge_toyg_c6_unwrap_resolution_regression_lock.py
+  Evidence: formal/python/tests/test_bridge_program_mismatch_reason_summary_determinism.py; formal/python/tests/test_bridge_program_post_toyg0002_regression_lock.py; formal/python/tests/test_bridge_program_post_toyh0003_regression_lock.py; formal/python/tests/test_bridge_toyg_c6_mode_index_resolution_regression_lock.py; formal/python/tests/test_bridge_toyg_c6_unwrap_resolution_regression_lock.py
 
 Bridge admissibility manifest (pinned inputs/grids/evidence; bookkeeping)
 - formal/quarantine/bridge_tickets/BRIDGE_ADMISSIBILITY_MANIFEST.json
-	Evidence: formal/python/tests/test_bridge_admissibility_manifest_generate_determinism.py; formal/python/tests/test_bridge_admissibility_manifest_pointers_exist.py
+  Evidence: formal/python/tests/test_bridge_admissibility_manifest_generate_determinism.py; formal/python/tests/test_bridge_admissibility_manifest_pointers_exist.py
 
 Toy substrate laws (consequence-engine lane)
 - TOY viability flow ledger: formal/quarantine/toy_laws/TOY_LAW_LEDGER.json
-	What it is: bounded evidence ledger for toy viability flow.
-	Regenerate: .\py.ps1 -m formal.python.tools.toy_law_ledger_generate --out formal/quarantine/toy_laws/TOY_LAW_LEDGER.json
-	Evidence: pytest nodes listed in ledger (bounded_multi).
-	Governance: consequence-engine only; no physics claim; ledger is reportable evidence surface.
-	Admissibility is defined by bounded pytest evidence nodes; front doors are report-only.
+  What it is: bounded evidence ledger for toy viability flow.
+  Regenerate: .\py.ps1 -m formal.python.tools.toy_law_ledger_generate --out formal/quarantine/toy_laws/TOY_LAW_LEDGER.json
+  Evidence: pytest nodes listed in ledger (bounded_multi).
+  Governance: consequence-engine only; no physics claim; ledger is reportable evidence surface.
+  Admissibility is defined by bounded pytest evidence nodes; front doors are report-only.
 - Pinned Family F report artifact: formal/output/toy_stochastic_selection_report_F1_pinned.json (generated by .\py.ps1 -m formal.python.tools.toy_stochastic_selection_report_generate --out formal/output/toy_stochastic_selection_report_F1_pinned.json; bounded evidence only).
 - Pinned Family G report artifact: formal/output/toy_topological_invariants_report_G1_pinned.json (generated by .\py.ps1 -m formal.python.tools.toy_topological_invariants_report_generate --out formal/output/toy_topological_invariants_report_G1_pinned.json; bounded evidence only).
 - Pinned Family H report artifact: formal/output/toy_gauge_redundancy_report_H1_pinned.json (generated by .\py.ps1 -m formal.python.tools.toy_gauge_redundancy_report_generate --out formal/output/toy_gauge_redundancy_report_H1_pinned.json; bounded evidence only).
@@ -1661,33 +1688,33 @@ Guardrails (non-negotiable):
 Conceptual / Technical Completeness Integration Plan (Roadmap; governance-safe)
 
 - Phase 1 — Variational backbone (highest priority)
-	Status: Implemented (structural-only; action-specific EL lemma exists; dynamics match pending)
-	Actions: define minimal action functional (schematic: kinetic + dispersion operator + coherence penalty); Lean-only Euler-Lagrange derivation (generic form only; no claim of CP-NLSE/CE-NWE match yet); add FN-01 inventory note "has variational parent" (Structural/Lean only, after dynamics match).
-	Evidence (scaffold): formal/toe_formal/ToeFormal/Variational/ActionScaffold.lean; formal/toe_formal/ToeFormal/Variational/EulerLagrange.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean
-	Planned evidence: Action-specific derivation lemmas tying EL to declared dynamics.
-	Notes: No behavioral upgrade; no empirical claims.
+  Status: Implemented (structural-only; action-specific EL lemma exists; dynamics match pending)
+  Actions: define minimal action functional (schematic: kinetic + dispersion operator + coherence penalty); Lean-only Euler-Lagrange derivation (generic form only; no claim of CP-NLSE/CE-NWE match yet); add FN-01 inventory note "has variational parent" (Structural/Lean only, after dynamics match).
+  Evidence (scaffold): formal/toe_formal/ToeFormal/Variational/ActionScaffold.lean; formal/toe_formal/ToeFormal/Variational/EulerLagrange.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean
+  Planned evidence: Action-specific derivation lemmas tying EL to declared dynamics.
+  Notes: No behavioral upgrade; no empirical claims.
 
 - Phase 2 — Symmetry closure (global phase / translation / rotation)
-	Status: Implemented (2026-02-05) via SYM-01 symmetry gate suite
-	Evidence: formal/toe_formal/ToeFormal/Constraints/SYM01_PhaseInvariant.lean; formal/python/tests/test_sym01_symmetry_gates.py; formal/markdown locks/constraints/SYM-01_symmetry_gates.md
-	Notes: Semantic/probe-relative; no Noether/conservation claims.
+  Status: Implemented (2026-02-05) via SYM-01 symmetry gate suite
+  Evidence: formal/toe_formal/ToeFormal/Constraints/SYM01_PhaseInvariant.lean; formal/python/tests/test_sym01_symmetry_gates.py; formal/markdown locks/constraints/SYM-01_symmetry_gates.md
+  Notes: Semantic/probe-relative; no Noether/conservation claims.
 
 - Phase 3 — Noether invariants (structural only)
-	Status: Implemented (structural-only; action-specific Noether lemma exists; dynamics match pending)
-	Actions: derive conserved quantities from the Phase 1 action (mass/energy analogs) and export Lean lemmas.
-	Evidence (scaffold): formal/toe_formal/ToeFormal/Variational/Noether.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean
-	Planned evidence: Action-specific derivation + invariant export lemmas.
-	Notes: Structural coherence only; conservation != empirical validation.
+  Status: Implemented (structural-only; action-specific Noether lemma exists; dynamics match pending)
+  Actions: derive conserved quantities from the Phase 1 action (mass/energy analogs) and export Lean lemmas.
+  Evidence (scaffold): formal/toe_formal/ToeFormal/Variational/Noether.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean
+  Planned evidence: Action-specific derivation + invariant export lemmas.
+  Notes: Structural coherence only; conservation != empirical validation.
 
 - Phase 4 — Observability / representation hygiene
-	Status: Implemented (OV-OBS-01, OV-FG-01)
-	Evidence: formal/python/artifacts/diagnostics/OV-OBS-01/metadata_invariance.json; formal/python/toe/observables/ovobs01_observability_metadata_invariance.py; formal/python/tools/ovobs01_metadata_invariance.py; formal/python/artifacts/diagnostics/OV-FG-01/ring_graph_fourier_mode_audit.json; formal/python/toe/observables/ovfg01_graph_fourier_mode_audit.py; formal/python/tools/ovfg01_graph_fourier_mode_audit.py
-	Notes: Behavioral audits only; no promotion.
+  Status: Implemented (OV-OBS-01, OV-FG-01)
+  Evidence: formal/python/artifacts/diagnostics/OV-OBS-01/metadata_invariance.json; formal/python/toe/observables/ovobs01_observability_metadata_invariance.py; formal/python/tools/ovobs01_metadata_invariance.py; formal/python/artifacts/diagnostics/OV-FG-01/ring_graph_fourier_mode_audit.json; formal/python/toe/observables/ovfg01_graph_fourier_mode_audit.py; formal/python/tools/ovfg01_graph_fourier_mode_audit.py
+  Notes: Behavioral audits only; no promotion.
 
 - Phase 5 — Comparator expansion (after Phases 1-4)
-	Status: Partially enabled (COMP-03 UCFF lane authorized post COMP-01/COMP-02; broader expansion remains gated)
-	Actions: keep UCFF dispersion comparator lane locked and deterministic; revisit canonical surface diversification; consider new domains only after explicit policy lift.
-	Notes: Comparator expansion is no longer globally blocked, but authorization remains scoped and governance-recorded.
+  Status: Partially enabled (COMP-03 UCFF lane authorized post COMP-01/COMP-02; broader expansion remains gated)
+  Actions: keep UCFF dispersion comparator lane locked and deterministic; revisit canonical surface diversification; consider new domains only after explicit policy lift.
+  Notes: Comparator expansion is no longer globally blocked, but authorization remains scoped and governance-recorded.
 
 
 
@@ -1946,105 +1973,105 @@ Pressure metric: For each pruning/audit table with `unknown` outcomes, track `un
 Planned Structural Validations (Unexecuted)
 
 - Reduction target: FN core dynamics → NLS/GPE under limits (λ→0, β→0, ρ→ρ₀)
-	Status: Hypothesis
-	Planned evidence: Lean limit proof (unwritten)
-	Notes: Planning target only; not asserted as a result.
+  Status: Hypothesis
+  Planned evidence: Lean limit proof (unwritten)
+  Notes: Planning target only; not asserted as a result.
 
 - Noether quantities from declared Lagrangian forms
-	Status: Hypothesis
-	Planned evidence: Lean derivation + invariant export lemma(s) (unwritten)
-	Notes: Abstract + action-specific Noether scaffolds exist (Variational/Noether.lean; Variational/DeclaredAction.lean); declared-Lagrangian derivation still pending.
+  Status: Hypothesis
+  Planned evidence: Lean derivation + invariant export lemma(s) (unwritten)
+  Notes: Abstract + action-specific Noether scaffolds exist (Variational/Noether.lean; Variational/DeclaredAction.lean); declared-Lagrangian derivation still pending.
 
 
 
 Planned Constraint + Verification Extensions (Unexecuted)
 
 - FN02_DispersionAdditivity (planned)
-	Status: Hypothesis
-	Role: Structural filter over FN-01 candidate set (additive closure / compatibility)
-	Notes: Placeholder name; does not create an FN inventory ID yet.
+  Status: Hypothesis
+  Role: Structural filter over FN-01 candidate set (additive closure / compatibility)
+  Notes: Placeholder name; does not create an FN inventory ID yet.
 
 - Invariance regression battery expansion (phase/translation/rotation)
-	Status: Hypothesis
-	Role: Behavioral (Python) evidence only; no structural promotion implied.
+  Status: Hypothesis
+  Role: Behavioral (Python) evidence only; no structural promotion implied.
 
 - Many-body orthogonality catastrophe trend audit (OV-MB-01)
-	Status: Hypothesis
-	Role: Behavioral (Python) toy-model trend check; does not constitute empirical anchoring.
-	Evidence: formal/python/toe/observables/ovmb01_orthogonality_catastrophe_audit.py; formal/python/tests/test_ovmb01_orthogonality_trend.py
-	Notes: Tight-binding ring + single-site impurity; validates overlap trend only.
+  Status: Hypothesis
+  Role: Behavioral (Python) toy-model trend check; does not constitute empirical anchoring.
+  Evidence: formal/python/toe/observables/ovmb01_orthogonality_catastrophe_audit.py; formal/python/tests/test_ovmb01_orthogonality_trend.py
+  Notes: Tight-binding ring + single-site impurity; validates overlap trend only.
 
 - Phase-transition window detector (OV-PT-01)
-	Status: Hypothesis
-	Role: Behavioral (Python) audit mechanism for hexatic-style two-step transitions on supplied data.
-	Evidence: formal/python/toe/observables/ovpt01_phase_transition_window_audit.py; formal/python/tests/test_ovpt01_hexatic_window_detector.py
-	Notes: Does not simulate melting; detects the signature window in provided order-parameter curves.
+  Status: Hypothesis
+  Role: Behavioral (Python) audit mechanism for hexatic-style two-step transitions on supplied data.
+  Evidence: formal/python/toe/observables/ovpt01_phase_transition_window_audit.py; formal/python/tests/test_ovpt01_hexatic_window_detector.py
+  Notes: Does not simulate melting; detects the signature window in provided order-parameter curves.
 
 - Quantum geometry (Berry/Chern) audit scaffold (OV-QC-01)
-	Status: Hypothesis
-	Role: Behavioral (Python) computational primitive for Berry curvature / Chern number checks in simplified lattice models.
-	Evidence: formal/python/toe/observables/ovqc01_berry_curvature_audit.py; formal/python/tests/test_ovqc01_chern_number_qiwuzhang.py
-	Notes: Not an EWT claim; a reusable audit primitive for future bridge models.
+  Status: Hypothesis
+  Role: Behavioral (Python) computational primitive for Berry curvature / Chern number checks in simplified lattice models.
+  Evidence: formal/python/toe/observables/ovqc01_berry_curvature_audit.py; formal/python/tests/test_ovqc01_chern_number_qiwuzhang.py
+  Notes: Not an EWT claim; a reusable audit primitive for future bridge models.
 
 - Brain–ZPF resonance overlap scaffold (OV-ZPF-01)
-	Status: Hypothesis
-	Role: Behavioral (Python) quarantine-safe audit scaffold: records frequency-band overlap geometry only (no coupling/feasibility claim).
-	Evidence: formal/python/toe/observables/ovzpf01_brain_zpf_resonance_audit.py; formal/python/tests/test_ovzpf01_brain_zpf_resonance.py
-	Notes: Synthetic/demo inputs by default; intended as a front-door quantitative harness for any future revalidation work.
+  Status: Hypothesis
+  Role: Behavioral (Python) quarantine-safe audit scaffold: records frequency-band overlap geometry only (no coupling/feasibility claim).
+  Evidence: formal/python/toe/observables/ovzpf01_brain_zpf_resonance_audit.py; formal/python/tests/test_ovzpf01_brain_zpf_resonance.py
+  Notes: Synthetic/demo inputs by default; intended as a front-door quantitative harness for any future revalidation work.
 
 - UCFF jitter-structure audit scaffold (OV-UCFF-01)
-	Status: Hypothesis
-	Role: Behavioral (Python) low-risk audit scaffold: symbolic term-presence checks plus a bounded numeric non-negativity scan for a UCFF-like ω²(k) polynomial under small parameter jitter.
-	Evidence: formal/python/toe/observables/ovucff01_jitter_structure_audit.py; formal/python/tests/test_ovucff01_jitter_structure_audit.py
-	Notes: Demonstration-only; not an empirical anchor and not a physics claim. Provides a disciplined front-door harness for reincorporating legacy UCFF symbolic structure work.
+  Status: Hypothesis
+  Role: Behavioral (Python) low-risk audit scaffold: symbolic term-presence checks plus a bounded numeric non-negativity scan for a UCFF-like ω²(k) polynomial under small parameter jitter.
+  Evidence: formal/python/toe/observables/ovucff01_jitter_structure_audit.py; formal/python/tests/test_ovucff01_jitter_structure_audit.py
+  Notes: Demonstration-only; not an empirical anchor and not a physics claim. Provides a disciplined front-door harness for reincorporating legacy UCFF symbolic structure work.
 
 - UCFF core front door (non-archive)
-	Status: Hypothesis
-	Role: Behavioral (Python) minimal typed-input, deterministic-output front door for UCFF-like dispersion bookkeeping (no implicit I/O; no archive imports).
-	Evidence: formal/python/toe/ucff/core_front_door.py; formal/python/tests/test_ucff_core_front_door_roundtrip.py; formal/python/tests/test_ucff_core_front_door_symbolic_invariant_01.py; formal/python/tests/test_ucff_core_front_door_symbolic_invariant_02.py; formal/docs/ucff_core_front_door_contract.md
-	Notes: Governance primitive only; enables clean-room porting of legacy UCFF core invariants against a non-archive surface. Bounded symbolic-family evidence is recorded via pytest nodes in the listed tests.
+  Status: Hypothesis
+  Role: Behavioral (Python) minimal typed-input, deterministic-output front door for UCFF-like dispersion bookkeeping (no implicit I/O; no archive imports).
+  Evidence: formal/python/toe/ucff/core_front_door.py; formal/python/tests/test_ucff_core_front_door_roundtrip.py; formal/python/tests/test_ucff_core_front_door_symbolic_invariant_01.py; formal/python/tests/test_ucff_core_front_door_symbolic_invariant_02.py; formal/docs/ucff_core_front_door_contract.md
+  Notes: Governance primitive only; enables clean-room porting of legacy UCFF core invariants against a non-archive surface. Bounded symbolic-family evidence is recorded via pytest nodes in the listed tests.
 
 - Framewise cross-variation audit scaffold (OV-UCFF-02)
-	Status: Hypothesis
-	Role: Behavioral (Python) numeric-only audit: summarizes frame-to-frame variation in a supplied (frames × bins) matrix, including a normalized outer-product cross-variation score.
-	Evidence: formal/python/toe/observables/ovucff02_framewise_variation_audit.py; formal/python/tests/test_ovucff02_framewise_variation_audit.py
-	Notes: Demonstration-only; intended as a safe front-door harness for any future pinned legacy "framewise cross-variation" artifacts.
+  Status: Hypothesis
+  Role: Behavioral (Python) numeric-only audit: summarizes frame-to-frame variation in a supplied (frames × bins) matrix, including a normalized outer-product cross-variation score.
+  Evidence: formal/python/toe/observables/ovucff02_framewise_variation_audit.py; formal/python/tests/test_ovucff02_framewise_variation_audit.py
+  Notes: Demonstration-only; intended as a safe front-door harness for any future pinned legacy "framewise cross-variation" artifacts.
 
 - Band energy distribution audit scaffold (OV-UCFF-03)
-	Status: Hypothesis
-	Role: Behavioral (Python) numeric-only audit: summarizes rFFT band energy distribution across frames and reports shape metrics (entropy/flatness/slope) for traceable comparisons.
-	Evidence: formal/python/toe/observables/ovucff03_band_energy_distribution_audit.py; formal/python/tests/test_ovucff03_band_energy_distribution_audit.py
-	Notes: Bookkeeping only; supports a pinned legacy-derived internal input artifact for deterministic re-porting.
+  Status: Hypothesis
+  Role: Behavioral (Python) numeric-only audit: summarizes rFFT band energy distribution across frames and reports shape metrics (entropy/flatness/slope) for traceable comparisons.
+  Evidence: formal/python/toe/observables/ovucff03_band_energy_distribution_audit.py; formal/python/tests/test_ovucff03_band_energy_distribution_audit.py
+  Notes: Bookkeeping only; supports a pinned legacy-derived internal input artifact for deterministic re-porting.
 
 - Band energy tolerance audit scaffold (OV-UCFF-03B)
-	Status: Hypothesis
-	Role: Behavioral (Python) numeric-only audit: recomputes the OV-UCFF-03 spectral fingerprint on pinned input and compares it against a pinned reference report under numeric tolerances, emitting PASS/FAIL plus error metrics.
-	Evidence: formal/python/toe/observables/ovucff03b_band_energy_tolerance_audit.py; formal/python/tests/test_ovucff03b_band_energy_tolerance_audit.py
-	Notes: Bookkeeping only; reference is an internal frozen report (not external evidence) intended to preserve legacy-compatible continuity across refactors.
+  Status: Hypothesis
+  Role: Behavioral (Python) numeric-only audit: recomputes the OV-UCFF-03 spectral fingerprint on pinned input and compares it against a pinned reference report under numeric tolerances, emitting PASS/FAIL plus error metrics.
+  Evidence: formal/python/toe/observables/ovucff03b_band_energy_tolerance_audit.py; formal/python/tests/test_ovucff03b_band_energy_tolerance_audit.py
+  Notes: Bookkeeping only; reference is an internal frozen report (not external evidence) intended to preserve legacy-compatible continuity across refactors.
 
 - Spectral evolution audit scaffold (OV-UCFF-04)
-	Status: Hypothesis
-	Role: Behavioral (Python) numeric-only audit: computes per-frame rFFT band-energy distributions and summarizes adjacent-frame spectral drift (L2 / cosine distance / Jensen–Shannon divergence) plus time-differenced shape scalars (entropy/slope).
-	Evidence: formal/python/toe/observables/ovucff04_spectral_evolution_audit.py; formal/python/tests/test_ovucff04_spectral_evolution_audit.py
-	Notes: Bookkeeping only; supports a pinned legacy-derived internal input artifact for deterministic re-porting.
+  Status: Hypothesis
+  Role: Behavioral (Python) numeric-only audit: computes per-frame rFFT band-energy distributions and summarizes adjacent-frame spectral drift (L2 / cosine distance / Jensen–Shannon divergence) plus time-differenced shape scalars (entropy/slope).
+  Evidence: formal/python/toe/observables/ovucff04_spectral_evolution_audit.py; formal/python/tests/test_ovucff04_spectral_evolution_audit.py
+  Notes: Bookkeeping only; supports a pinned legacy-derived internal input artifact for deterministic re-porting.
 
 - Temporal band modulation audit scaffold (OV-UCFF-05)
-	Status: Hypothesis
-	Role: Behavioral (Python) numeric-only audit: builds per-band energy time series and summarizes temporal modulation (per-band mean/std/CV, mean abs delta, dominant temporal harmonic via rFFT over time) plus a simple cross-band correlation coherence summary.
-	Evidence: formal/python/toe/observables/ovucff05_temporal_band_modulation_audit.py; formal/python/tests/test_ovucff05_temporal_band_modulation_audit.py
-	Notes: Bookkeeping only; supports a pinned legacy-derived internal input sequence (deterministically derived from the Phase-51 2-frame fixture) for deterministic re-porting.
+  Status: Hypothesis
+  Role: Behavioral (Python) numeric-only audit: builds per-band energy time series and summarizes temporal modulation (per-band mean/std/CV, mean abs delta, dominant temporal harmonic via rFFT over time) plus a simple cross-band correlation coherence summary.
+  Evidence: formal/python/toe/observables/ovucff05_temporal_band_modulation_audit.py; formal/python/tests/test_ovucff05_temporal_band_modulation_audit.py
+  Notes: Bookkeeping only; supports a pinned legacy-derived internal input sequence (deterministically derived from the Phase-51 2-frame fixture) for deterministic re-porting.
 
 - Temporal spectral entropy trends audit scaffold (OV-UCFF-06)
-	Status: Hypothesis
-	Role: Behavioral (Python) numeric-only audit: computes per-frame normalized band-energy entropy (0..1) and summarizes entropy trend behavior across time (mean/min/max, mean abs delta, linear slope vs time).
-	Evidence: formal/python/toe/observables/ovucff06_temporal_spectral_entropy_trends_audit.py; formal/python/tests/test_ovucff06_temporal_spectral_entropy_trends_audit.py
-	Notes: Bookkeeping only; supports a pinned legacy-derived internal input sequence (carried forward from OV-UCFF-05) for deterministic re-porting.
+  Status: Hypothesis
+  Role: Behavioral (Python) numeric-only audit: computes per-frame normalized band-energy entropy (0..1) and summarizes entropy trend behavior across time (mean/min/max, mean abs delta, linear slope vs time).
+  Evidence: formal/python/toe/observables/ovucff06_temporal_spectral_entropy_trends_audit.py; formal/python/tests/test_ovucff06_temporal_spectral_entropy_trends_audit.py
+  Notes: Bookkeeping only; supports a pinned legacy-derived internal input sequence (carried forward from OV-UCFF-05) for deterministic re-porting.
 
 - Cross-metric coupling audit scaffold (OV-UCFF-07)
-	Status: Hypothesis
-	Role: Behavioral (Python) numeric-only audit: computes deterministic coupling metrics between spectral entropy time series and spectral band-fraction modulation/drift (per-band correlations, entropy–modulation correlations, and lag-scan coupling).
-	Evidence: formal/python/toe/observables/ovucff07_cross_metric_coupling_audit.py; formal/python/tests/test_ovucff07_cross_metric_coupling_audit.py
-	Notes: Bookkeeping only; intended to connect standalone UCFF spectral monitors (entropy/modulation/drift) into cross-dimensional comparability signals without asserting any physical interpretation.
+  Status: Hypothesis
+  Role: Behavioral (Python) numeric-only audit: computes deterministic coupling metrics between spectral entropy time series and spectral band-fraction modulation/drift (per-band correlations, entropy–modulation correlations, and lag-scan coupling).
+  Evidence: formal/python/toe/observables/ovucff07_cross_metric_coupling_audit.py; formal/python/tests/test_ovucff07_cross_metric_coupling_audit.py
+  Notes: Bookkeeping only; intended to connect standalone UCFF spectral monitors (entropy/modulation/drift) into cross-dimensional comparability signals without asserting any physical interpretation.
 
 
 
@@ -4303,13 +4330,13 @@ Notes: Conversion chain and tolerance are pinned in the record; pairing mappings
 
 Scientific status note (2026-02-01)
 - Two-mode cross-anchor reporting exists:
-	- justified_only gated report (+ suppressed reasons): formal/output/cross_anchor_bragg_vs_sound_20260201_123051_720171.md
-	- (older runs retained under formal/output/cross_anchor_bragg_vs_sound_20260129_*.md)
+  - justified_only gated report (+ suppressed reasons): formal/output/cross_anchor_bragg_vs_sound_20260201_123051_720171.md
+  - (older runs retained under formal/output/cross_anchor_bragg_vs_sound_20260129_*.md)
 - Current state is mapping-backed: JUSTIFIED=2, SUPPRESSED=2 (TOTAL=4).
 - Evidence inputs now present (fail-closed for unmapped combinations):
-	- OV-BR-SND-03 audit comparability.status is established (pinned conversion + tolerance; computed only for explicitly paired rows)
-	- OV-BR-SND-01 comparability gate is OK (comparable_in_principle=True, current_blockers=[])
-	- Explicit Bragg↔Sound pairing tuples (v4): formal/external_evidence/bec_bragg_sound_pairing_TBD/ovbr_snd03_bragg_sound_mapping/mapping_tuples.json (mapping_tuples_count=2)
+  - OV-BR-SND-03 audit comparability.status is established (pinned conversion + tolerance; computed only for explicitly paired rows)
+  - OV-BR-SND-01 comparability gate is OK (comparable_in_principle=True, current_blockers=[])
+  - Explicit Bragg↔Sound pairing tuples (v4): formal/external_evidence/bec_bragg_sound_pairing_TBD/ovbr_snd03_bragg_sound_mapping/mapping_tuples.json (mapping_tuples_count=2)
 - Suppression logic is active: unpaired Bragg↔Sound combinations remain SUPPRESSED with explicit reasons.
 
 External anchor: Bragg ↔ Sound low-k consistency (cross-lane audit)
@@ -6397,10 +6424,10 @@ Scope / limits: Proxy falsifiability pressure only. Synthetic simulation evidenc
 Inputs (pinned; read-only):
 
 - DR-01 fit payload embedded in test (zero runtime I/O), provenance reference:
-	formal/external_evidence/bec_bragg_steinhauer_2001/dr01_fit_artifact.json
-	(used as an embedded constant; path is informational only)
-	Embedded payload digest (canonical json, sha256): 799b4fcc1d71a3e0a757044468f62d43c2148c619f568ac4cdca68d24914cd3e
-	If digest changes, treat as a new EMP-01 instance requiring review.
+  formal/external_evidence/bec_bragg_steinhauer_2001/dr01_fit_artifact.json
+  (used as an embedded constant; path is informational only)
+  Embedded payload digest (canonical json, sha256): 799b4fcc1d71a3e0a757044468f62d43c2148c619f568ac4cdca68d24914cd3e
+  If digest changes, treat as a new EMP-01 instance requiring review.
 - Fixed k-grid: (-3.0, -1.0, -0.25, 0.0, 0.25, 1.0, 3.0)
 - Threshold: tol = 1.0e-12
 
@@ -6550,3 +6577,4 @@ Comparator-expansion block rule (policy): historical baseline retained. Since 20
 
 
 Template status: We will keep editing.
+
