@@ -170,6 +170,15 @@ def emU1ConventionLockUnitsPolicyTokenV0 : String :=
 def emU1ConventionLockNoDynamicsTokenV0 : String :=
   "EM_U1_CONVENTION_LOCK_NO_DYNAMICS_v0: DEFINITIONAL_ONLY"
 
+def emU1ImportLanesPlaceholdersTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE7_v0: IMPORT_LANES_PLACEHOLDERS_TOKEN_PINNED"
+
+def emU1ImportLanesLocalizationGateTokenV0 : String :=
+  "EM_U1_IMPORT_LANES_LOCALIZATION_GATE_v0: CONSTITUTIVE_UNITS_GFIXING_ONLY_IN_CYCLE7_ARTIFACTS"
+
+def emU1ImportLanesNoDynamicsTokenV0 : String :=
+  "EM_U1_IMPORT_LANES_NO_DYNAMICS_v0: PLACEHOLDER_ONLY"
+
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
 
@@ -241,6 +250,17 @@ theorem em_u1_cycle006_token_binding_stub_v0 :
       "EM_U1_CONVENTION_LOCK_UNITS_POLICY_v0: UNITS_NOT_SELECTED" ∧
     emU1ConventionLockNoDynamicsTokenV0 =
       "EM_U1_CONVENTION_LOCK_NO_DYNAMICS_v0: DEFINITIONAL_ONLY" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle007_token_binding_stub_v0 :
+    emU1ImportLanesPlaceholdersTokenV0 =
+      "EM_U1_PROGRESS_CYCLE7_v0: IMPORT_LANES_PLACEHOLDERS_TOKEN_PINNED" ∧
+    emU1ImportLanesLocalizationGateTokenV0 =
+      "EM_U1_IMPORT_LANES_LOCALIZATION_GATE_v0: CONSTITUTIVE_UNITS_GFIXING_ONLY_IN_CYCLE7_ARTIFACTS" ∧
+    emU1ImportLanesNoDynamicsTokenV0 =
+      "EM_U1_IMPORT_LANES_NO_DYNAMICS_v0: PLACEHOLDER_ONLY" ∧
+    emU1NewPhysicsAssumptionIdGateTokenV0 =
+      "EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS" := by
   repeat' constructor <;> rfl
 
 end U1

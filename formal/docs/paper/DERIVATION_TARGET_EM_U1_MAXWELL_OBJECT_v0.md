@@ -265,6 +265,31 @@ Cycle-006 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-007 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-07-IMPORT-LANES-PLACEHOLDERS-v0`
+   - scope:
+     - planning-only bounded import-lane placeholder control for constitutive/units/gauge-fixing surfaces.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE7_v0: IMPORT_LANES_PLACEHOLDERS_TOKEN_PINNED`
+   - localization gate token:
+     - `EM_U1_IMPORT_LANES_LOCALIZATION_GATE_v0: CONSTITUTIVE_UNITS_GFIXING_ONLY_IN_CYCLE7_ARTIFACTS`
+   - placeholder-only gate token:
+     - `EM_U1_IMPORT_LANES_NO_DYNAMICS_v0: PLACEHOLDER_ONLY`
+   - new-physics assumption-ID gate token:
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - required import-lane assumption IDs:
+     - `ASM-EM-U1-PHY-CONSTITUTIVE-01`
+     - `ASM-EM-U1-PHY-UNITS-01`
+     - `ASM-EM-U1-PHY-GFIX-01`
+   - cycle adjudication token:
+     - `EM_U1_MICRO07_IMPORT_LANES_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_07_IMPORT_LANES_PLACEHOLDERS_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro07_import_lanes_placeholders.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

@@ -154,6 +154,26 @@ EM Cycle-006 convention-lock (3+1/sign/index) checkpoint (2026-02-18):
 - Scope boundary remains strict:
   - convention lock only, bounded and non-claim, no dynamics closure promotion and no new-physics import without explicit assumption IDs.
 
+EM Cycle-007 import-lanes placeholders checkpoint (2026-02-18):
+- Cycle-007 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-07-IMPORT-LANES-PLACEHOLDERS-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_07_IMPORT_LANES_PLACEHOLDERS_v0.md`
+- Import-lane placeholder tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE7_v0: IMPORT_LANES_PLACEHOLDERS_TOKEN_PINNED`
+  - `EM_U1_IMPORT_LANES_LOCALIZATION_GATE_v0: CONSTITUTIVE_UNITS_GFIXING_ONLY_IN_CYCLE7_ARTIFACTS`
+  - `EM_U1_IMPORT_LANES_NO_DYNAMICS_v0: PLACEHOLDER_ONLY`
+  - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+  - `EM_U1_MICRO07_IMPORT_LANES_ADJUDICATION: NOT_YET_DISCHARGED`
+- Canonical import-lane assumption IDs are now pinned:
+  - `ASM-EM-U1-PHY-CONSTITUTIVE-01`
+  - `ASM-EM-U1-PHY-UNITS-01`
+  - `ASM-EM-U1-PHY-GFIX-01`
+  - pointer: `formal/docs/paper/ASSUMPTION_REGISTRY_v1.md`
+- Cycle-007 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro07_import_lanes_placeholders.py`
+- Scope boundary remains strict:
+  - import-lane placeholders only, bounded and non-claim, no dynamics closure promotion and no constitutive/units/gauge-fixing import without explicit assumption IDs.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.
