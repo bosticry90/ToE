@@ -136,6 +136,24 @@ EM Cycle-005 Maxwell-form semantics-mapping checkpoint (2026-02-18):
 - Scope boundary remains strict:
   - semantics mapping only, bounded and non-claim, no dynamics closure promotion and no new-physics import without explicit assumption IDs.
 
+EM Cycle-006 convention-lock (3+1/sign/index) checkpoint (2026-02-18):
+- Cycle-006 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-06-CONVENTION-LOCK-3P1-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_06_CONVENTION_LOCK_3P1_v0.md`
+- Convention-lock tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE6_v0: CONVENTION_LOCK_3P1_TOKEN_PINNED`
+  - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+  - `EM_U1_CONVENTION_LOCK_INDEX_v0: INDEX_POSITION_RULES_FIXED`
+  - `EM_U1_CONVENTION_LOCK_EB_v0: E_B_SIGN_AND_EPSILON_FIXED`
+  - `EM_U1_CONVENTION_LOCK_UNITS_POLICY_v0: UNITS_NOT_SELECTED`
+  - `EM_U1_CONVENTION_LOCK_NO_DYNAMICS_v0: DEFINITIONAL_ONLY`
+  - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+  - `EM_U1_MICRO06_CONVENTION_LOCK_3P1_ADJUDICATION: NOT_YET_DISCHARGED`
+- Cycle-006 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro06_convention_lock_3p1.py`
+- Scope boundary remains strict:
+  - convention lock only, bounded and non-claim, no dynamics closure promotion and no new-physics import without explicit assumption IDs.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.

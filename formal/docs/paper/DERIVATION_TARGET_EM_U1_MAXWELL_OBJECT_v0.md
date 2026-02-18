@@ -240,6 +240,31 @@ Cycle-005 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-006 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-06-CONVENTION-LOCK-3P1-v0`
+   - scope:
+     - planning-only bounded convention lock for 3+1/sign/index semantics.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE6_v0: CONVENTION_LOCK_3P1_TOKEN_PINNED`
+   - convention lock tokens:
+     - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+     - `EM_U1_CONVENTION_LOCK_INDEX_v0: INDEX_POSITION_RULES_FIXED`
+     - `EM_U1_CONVENTION_LOCK_EB_v0: E_B_SIGN_AND_EPSILON_FIXED`
+     - `EM_U1_CONVENTION_LOCK_UNITS_POLICY_v0: UNITS_NOT_SELECTED`
+     - `EM_U1_CONVENTION_LOCK_NO_DYNAMICS_v0: DEFINITIONAL_ONLY`
+   - new-physics assumption-ID gate token:
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO06_CONVENTION_LOCK_3P1_ADJUDICATION: NOT_YET_DISCHARGED`
+   - required authorization prerequisite:
+     - `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_06_CONVENTION_LOCK_3P1_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro06_convention_lock_3p1.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

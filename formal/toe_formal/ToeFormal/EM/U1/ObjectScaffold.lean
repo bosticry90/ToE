@@ -152,6 +152,24 @@ def emU1MaxwellSemanticsMappingRhoJTokenV0 : String :=
 def emU1NewPhysicsAssumptionIdGateTokenV0 : String :=
   "EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS"
 
+def emU1ConventionLock3P1TokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE6_v0: CONVENTION_LOCK_3P1_TOKEN_PINNED"
+
+def emU1ConventionLockSignatureTokenV0 : String :=
+  "EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED"
+
+def emU1ConventionLockIndexTokenV0 : String :=
+  "EM_U1_CONVENTION_LOCK_INDEX_v0: INDEX_POSITION_RULES_FIXED"
+
+def emU1ConventionLockEBTokenV0 : String :=
+  "EM_U1_CONVENTION_LOCK_EB_v0: E_B_SIGN_AND_EPSILON_FIXED"
+
+def emU1ConventionLockUnitsPolicyTokenV0 : String :=
+  "EM_U1_CONVENTION_LOCK_UNITS_POLICY_v0: UNITS_NOT_SELECTED"
+
+def emU1ConventionLockNoDynamicsTokenV0 : String :=
+  "EM_U1_CONVENTION_LOCK_NO_DYNAMICS_v0: DEFINITIONAL_ONLY"
+
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
 
@@ -208,6 +226,21 @@ theorem em_u1_cycle005_token_binding_stub_v0 :
       "EM_U1_MAXWELL_SEMANTICS_MAPPING_RHOJ_v0: RHO_J_FROM_CURRENT_CARRIER_COMPONENTS" ∧
     emU1NewPhysicsAssumptionIdGateTokenV0 =
       "EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle006_token_binding_stub_v0 :
+    emU1ConventionLock3P1TokenV0 =
+      "EM_U1_PROGRESS_CYCLE6_v0: CONVENTION_LOCK_3P1_TOKEN_PINNED" ∧
+    emU1ConventionLockSignatureTokenV0 =
+      "EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED" ∧
+    emU1ConventionLockIndexTokenV0 =
+      "EM_U1_CONVENTION_LOCK_INDEX_v0: INDEX_POSITION_RULES_FIXED" ∧
+    emU1ConventionLockEBTokenV0 =
+      "EM_U1_CONVENTION_LOCK_EB_v0: E_B_SIGN_AND_EPSILON_FIXED" ∧
+    emU1ConventionLockUnitsPolicyTokenV0 =
+      "EM_U1_CONVENTION_LOCK_UNITS_POLICY_v0: UNITS_NOT_SELECTED" ∧
+    emU1ConventionLockNoDynamicsTokenV0 =
+      "EM_U1_CONVENTION_LOCK_NO_DYNAMICS_v0: DEFINITIONAL_ONLY" := by
   repeat' constructor <;> rfl
 
 end U1
