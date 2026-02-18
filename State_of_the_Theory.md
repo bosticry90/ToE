@@ -30,6 +30,10 @@ Governance architecture-freeze checkpoint (2026-02-18):
   - `formal/python/tests/test_no_unbounded_claims.py`
   - `formal/python/tests/test_new_pillar_must_pass_template.py`
   - `formal/python/tests/test_governance_version_bump_required.py`
+- Canonical introduction commit is pinned:
+  - `e98678d` (`Enforce architecture governance guards and sync pillar/state updates`)
+- Full-suite baseline at this checkpoint:
+  - `pytest` summary: `895 passed, 1 skipped`
 - Enforcement posture:
   - governance drift now fails CI unless explicitly versioned and synchronized.
 
