@@ -216,6 +216,30 @@ Cycle-004 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-005 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-05-MAXWELL-FORM-SEMANTICS-MAPPING-v0`
+   - scope:
+     - planning-only bounded semantics mapping from Maxwell-form symbols to pinned EM object carriers.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE5_v0: MAXWELL_FORM_SEMANTICS_MAPPING_TOKEN_PINNED`
+   - definitional-only gate token:
+     - `EM_U1_MAXWELL_SEMANTICS_DEFINITIONAL_ONLY_GATE_v0: NO_DYNAMICS_CLOSURE_CLAIM`
+   - carrier mapping tokens:
+     - `EM_U1_MAXWELL_SEMANTICS_MAPPING_EB_v0: E_B_FROM_FIELD_STRENGTH_CARRIER_COMPONENTS`
+     - `EM_U1_MAXWELL_SEMANTICS_MAPPING_RHOJ_v0: RHO_J_FROM_CURRENT_CARRIER_COMPONENTS`
+   - new-physics assumption-ID gate token:
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO05_MAXWELL_FORM_SEMANTICS_MAPPING_ADJUDICATION: NOT_YET_DISCHARGED`
+   - required authorization prerequisite:
+     - `EM_U1_MICRO03_PREDISCHARGE_GATE_BUNDLE_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_05_MAXWELL_FORM_SEMANTICS_MAPPING_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro05_maxwell_form_semantics_mapping.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

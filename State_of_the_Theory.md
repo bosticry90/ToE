@@ -120,6 +120,22 @@ EM Cycle-004 Maxwell-form attempt package checkpoint (2026-02-18):
 - Scope boundary remains strict:
   - Maxwell-form shape package only, bounded and non-claim, no theorem/dynamics closure promotion.
 
+EM Cycle-005 Maxwell-form semantics-mapping checkpoint (2026-02-18):
+- Cycle-005 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-05-MAXWELL-FORM-SEMANTICS-MAPPING-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_05_MAXWELL_FORM_SEMANTICS_MAPPING_v0.md`
+- Semantics-mapping tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE5_v0: MAXWELL_FORM_SEMANTICS_MAPPING_TOKEN_PINNED`
+  - `EM_U1_MAXWELL_SEMANTICS_DEFINITIONAL_ONLY_GATE_v0: NO_DYNAMICS_CLOSURE_CLAIM`
+  - `EM_U1_MAXWELL_SEMANTICS_MAPPING_EB_v0: E_B_FROM_FIELD_STRENGTH_CARRIER_COMPONENTS`
+  - `EM_U1_MAXWELL_SEMANTICS_MAPPING_RHOJ_v0: RHO_J_FROM_CURRENT_CARRIER_COMPONENTS`
+  - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+  - `EM_U1_MICRO05_MAXWELL_FORM_SEMANTICS_MAPPING_ADJUDICATION: NOT_YET_DISCHARGED`
+- Cycle-005 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro05_maxwell_form_semantics_mapping.py`
+- Scope boundary remains strict:
+  - semantics mapping only, bounded and non-claim, no dynamics closure promotion and no new-physics import without explicit assumption IDs.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.

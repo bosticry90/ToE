@@ -137,6 +137,21 @@ def emU1MaxwellFormShapeGateTokenV0 : String :=
 def emU1MaxwellFormLocalizationGateTokenV0 : String :=
   "EM_U1_MAXWELL_FORM_LOCALIZATION_GATE_v0: CYCLE4_ARTIFACT_ONLY"
 
+def emU1MaxwellFormSemanticsMappingTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE5_v0: MAXWELL_FORM_SEMANTICS_MAPPING_TOKEN_PINNED"
+
+def emU1MaxwellSemanticsDefinitionalOnlyGateTokenV0 : String :=
+  "EM_U1_MAXWELL_SEMANTICS_DEFINITIONAL_ONLY_GATE_v0: NO_DYNAMICS_CLOSURE_CLAIM"
+
+def emU1MaxwellSemanticsMappingEBTokenV0 : String :=
+  "EM_U1_MAXWELL_SEMANTICS_MAPPING_EB_v0: E_B_FROM_FIELD_STRENGTH_CARRIER_COMPONENTS"
+
+def emU1MaxwellSemanticsMappingRhoJTokenV0 : String :=
+  "EM_U1_MAXWELL_SEMANTICS_MAPPING_RHOJ_v0: RHO_J_FROM_CURRENT_CARRIER_COMPONENTS"
+
+def emU1NewPhysicsAssumptionIdGateTokenV0 : String :=
+  "EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS"
+
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
 
@@ -180,6 +195,19 @@ theorem em_u1_cycle004_token_binding_stub_v0 :
       "EM_U1_MAXWELL_FORM_SHAPE_GATE_v0: AUTHORIZED_PRESENCE_ONLY" ∧
     emU1MaxwellFormLocalizationGateTokenV0 =
       "EM_U1_MAXWELL_FORM_LOCALIZATION_GATE_v0: CYCLE4_ARTIFACT_ONLY" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle005_token_binding_stub_v0 :
+    emU1MaxwellFormSemanticsMappingTokenV0 =
+      "EM_U1_PROGRESS_CYCLE5_v0: MAXWELL_FORM_SEMANTICS_MAPPING_TOKEN_PINNED" ∧
+    emU1MaxwellSemanticsDefinitionalOnlyGateTokenV0 =
+      "EM_U1_MAXWELL_SEMANTICS_DEFINITIONAL_ONLY_GATE_v0: NO_DYNAMICS_CLOSURE_CLAIM" ∧
+    emU1MaxwellSemanticsMappingEBTokenV0 =
+      "EM_U1_MAXWELL_SEMANTICS_MAPPING_EB_v0: E_B_FROM_FIELD_STRENGTH_CARRIER_COMPONENTS" ∧
+    emU1MaxwellSemanticsMappingRhoJTokenV0 =
+      "EM_U1_MAXWELL_SEMANTICS_MAPPING_RHOJ_v0: RHO_J_FROM_CURRENT_CARRIER_COMPONENTS" ∧
+    emU1NewPhysicsAssumptionIdGateTokenV0 =
+      "EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS" := by
   repeat' constructor <;> rfl
 
 end U1
