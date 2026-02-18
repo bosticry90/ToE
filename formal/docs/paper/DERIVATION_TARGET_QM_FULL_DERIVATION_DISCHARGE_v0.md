@@ -49,6 +49,48 @@ Inevitability obligation linkage (must remain synchronized with gate target):
 - structural classification anchor token:
   - `QMInevitabilityConstructiveRouteClassification_v0`
 
+## Architecture phase coverage (v1)
+
+- `TARGET_DEFINITION`
+- `ASSUMPTION_FREEZE`
+- `CANONICAL_ROUTE`
+- `ANTI_SHORTCUT`
+- `COUNTERFACTUAL`
+- `INDEPENDENT_NECESSITY`
+- `HARDENING`
+- `BOUNDED_SCOPE`
+- `DRIFT_GATES`
+- `ADJUDICATION_SYNC`
+
+## TARGET section
+
+- `TARGET-QM-FULL-DERIVATION-DISCHARGE-v0` remains the frozen target surface.
+
+## ASSUMPTION FREEZE section
+
+- Minimized-assumption anchor remains explicit: `QMInevitabilityMinimizedAssumptions_v0`.
+- Required named-route assumptions remain explicit and theorem-linked.
+
+## CANONICAL ROUTE section
+
+- Canonical constructive route remains explicit and anti-circularity guarded.
+- Direct Schrodinger insertion remains forbidden on the canonical route.
+
+## COUNTERFACTUAL ROUTE section
+
+- Counterfactual break token remains explicit: `¬QMInevitabilityClosureSurface_v0`.
+- Per-assumption counterfactual break theorem tokens remain pinned.
+
+## INDEPENDENT NECESSITY ROUTE section
+
+- Structural classification anchor remains explicit:
+  `QMInevitabilityConstructiveRouteClassification_v0`.
+
+## BOUNDED SCOPE section
+
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded theorem-body scope only; no Born-rule/measurement-semantics completion claim and no external truth claim.
+
 Progress token:
 - `QM_FULL_DERIVATION_PROGRESS_v0: CYCLE1_CONTRACT_BRIDGE_TOKEN_PINNED`
 - `QM_FULL_DERIVATION_PROGRESS_CYCLE2_v0: UNITARY_CONSISTENCY_TOKEN_PINNED`

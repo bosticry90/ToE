@@ -1,10 +1,10 @@
-STATE OF THE THEORY
+# STATE OF THE THEORY
 
 Project: ToE
 
 Purpose: Epistemic inventory and stabilization
 
-Last updated: 2026-02-15
+Last updated: 2026-02-18
 
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
@@ -1669,7 +1669,7 @@ Conceptual / Technical Completeness Integration Plan (Roadmap; governance-safe)
 
 - Phase 2 — Symmetry closure (global phase / translation / rotation)
 	Status: Implemented (2026-02-05) via SYM-01 symmetry gate suite
-	Evidence: formal/toe_formal/ToeFormal/Constraints/SYM01_PhaseInvariant.lean; formal/python/tests/test_sym01_symmetry_gates.py; formal/markdown/locks/constraints/SYM-01_symmetry_gates.md
+	Evidence: formal/toe_formal/ToeFormal/Constraints/SYM01_PhaseInvariant.lean; formal/python/tests/test_sym01_symmetry_gates.py; formal/markdown locks/constraints/SYM-01_symmetry_gates.md
 	Notes: Semantic/probe-relative; no Noether/conservation claims.
 
 - Phase 3 — Noether invariants (structural only)
@@ -2278,13 +2278,13 @@ Category: Equation
 Short description: Small-amplitude limit of CP-NLSE
 Status: Locked
 
-Evidence: formal/toe\_formal/ToeFormal/CPNLSE2D/LinearizedEquation.lean; formal/python/tests/test\_dr01\_eq02\_dispersion.py; EQ-02-EVIDENCE-LEAN-BUILD
+Evidence: formal/toe\_formal/ToeFormal/CPNLSE2D/Dispersion.lean; formal/python/tests/test\_dr01\_eq02\_dispersion.py; EQ-02-EVIDENCE-LEAN-BUILD
 
 Scope / limits: small-amplitude (linearized) regime about ψ=0
 
 Dependencies: EQ-01
 
-Notes: Lean evidence is restricted to a dedicated EQ-02 definition module (LinearizedEquation.lean). Plane-wave reductions live under OP-PW-\*.
+Notes: Lean evidence is restricted to a dedicated EQ-02 definition module (Dispersion.lean). Plane-wave reductions live under OP-PW-\*.
 
 External anchor: None
 
@@ -2302,13 +2302,13 @@ Short description: Bookkeeping record of the intended Lean module build target f
 
 Status: Structural (Lean)
 
-Evidence: formal/toe\_formal/ToeFormal/CPNLSE2D/LinearizedEquation.lean
+Evidence: formal/toe\_formal/ToeFormal/CPNLSE2D/Dispersion.lean
 
 Scope / limits: Records build-target intent only; does not include build logs.
 
 Dependencies: None
 
-Notes: Intended build target: ToeFormal.CPNLSE2D.LinearizedEquation.
+Notes: Intended build target: ToeFormal.CPNLSE2D.Dispersion.
 
 External anchor: None
 
@@ -3021,7 +3021,7 @@ Short description: Family of candidate nonlinear deformation terms gated by CT-0
 
 Status: Structural (Lean)
 
-Evidence: formal/toe\_formal/ToeFormal/Constraints/FN01\_CausalityCoreConsumer.lean; formal/toe\_formal/ToeFormal/Constraints/FN01\_CausalityCoreBridge.lean; formal/toe\_formal/ToeFormal/Constraints/FN01\_DeformationClass.lean; formal/toe\_formal/ToeFormal/Constraints/FN01\_CandidateMembership.lean; formal/toe\_formal/ToeFormal/Constraints/FN01\_CandidateAPI.lean; formal/markdown/locks/functionals/FN-01\_deformation\_class.md; formal/python/tests/test\_fn01\_candidate\_table.py; formal/python/tests/test\_fn01\_near\_plane\_wave\_regression.py; formal/python/tests/test\_fn01\_candidate\_api\_enforced.py; CT-01-EVIDENCE-PHB; CT-01-EVIDENCE-SOLVER-OMEGA
+Evidence: formal/toe\_formal/ToeFormal/Constraints/FN01\_CausalityCoreConsumer.lean; formal/toe\_formal/ToeFormal/Constraints/FN01\_CausalityCoreBridge.lean; formal/toe\_formal/ToeFormal/Constraints/FN01\_DeformationClass.lean; formal/toe\_formal/ToeFormal/Constraints/FN01\_CandidateMembership.lean; formal/toe\_formal/ToeFormal/Constraints/FN01\_CandidateAPI.lean; formal/markdown locks/functionals/FN-01\_deformation\_class.md; formal/python/tests/test\_fn01\_candidate\_table.py; formal/python/tests/test\_fn01\_near\_plane\_wave\_regression.py; formal/python/tests/test\_fn01\_candidate\_api\_enforced.py; CT-01-EVIDENCE-PHB; CT-01-EVIDENCE-SOLVER-OMEGA
 
 Scope / limits: Organizational pruning framework for candidate deformations under CT-01 + source-free admissibility; probe-relative only.
 
@@ -4293,7 +4293,7 @@ Short description: Conservative audit ingesting locked Sound-lane derived speeds
 
 Status: Locked
 
-Evidence: formal/python/toe/observables/ovbr_snd03_cross_lane_lowk_consistency_audit_record.py; formal/python/tests/test_ov_br_snd03_cross_lane_lowk_consistency_audit_lock.py; formal/markdown/locks/observables/OV-BR-SND-03_cross_lane_lowk_consistency_audit.md
+Evidence: formal/python/toe/observables/ovbr_snd03_cross_lane_lowk_consistency_audit_record.py; formal/python/tests/test_ov_br_snd03_cross_lane_bridge_audit_lock.py; formal/markdown/locks/observables/OV-BR-SND-03_cross_lane_lowk_consistency_audit.md
 
 Scope / limits: Bookkeeping/audit only; no physics claim. Runs even without mapping; “absent” comparability is a valid conclusion. May be BLOCKED by admissibility manifest (CT01/SYM01/CAUS01).
 
@@ -4328,7 +4328,7 @@ Short description: Deterministic digitization of Shammass et al. Fig. 2 Bragg di
 
 Status: Locked
 
-Evidence: formal/python/toe/observables/ovbr03n_bragg_dispersion_k_omega_digitized.py; formal/python/tests/test_ov_br03n_bragg_dispersion_digitized_lock.py; formal/markdown/locks/observables/OV-BR-03_bragg_dispersion_k_omega_digitized.md; formal/external_evidence/bec_bragg_shammass_2012/source.pdf; formal/external_evidence/bec_bragg_shammass_2012/page_renders/page6_z4.png; formal/external_evidence/bec_bragg_shammass_2012/ovbr03n_digitization/condition_A.csv; formal/external_evidence/bec_bragg_shammass_2012/ovbr03n_digitization/condition_B.csv; formal/external_evidence/bec_bragg_shammass_2012/ovbr03n_digitization/k_omega_digitization.metadata.json
+Evidence: formal/python/toe/observables/ovbr03n_bragg_dispersion_k_omega_digitized.py; formal/python/tests/test_ov_br03n_bragg_dispersion_digitized_lock.py; formal/markdown/locks/observables/OV-BR-03_bragg_dispersion_k_omega_digitized.md; formal/external_evidence/bec_bragg_shammass_2012/source.pdf; formal/external_evidence/bec_bragg_shammass_2012/page_renders/page6_z4.png; formal/external_evidence/bec_bragg_shammass_2012/ovbr03n_digitization/k_omega_conditionA.csv; formal/external_evidence/bec_bragg_shammass_2012/ovbr03n_digitization/k_omega_conditionB.csv; formal/external_evidence/bec_bragg_shammass_2012/ovbr03n_digitization/k_omega_digitization.metadata.json
 
 Scope / limits: Anchor numeric ingestion only; render-based extraction (axis text is rasterized); no fitting; no regime averaging; no continuity claim; no cross-observable inference.
 
@@ -5537,7 +5537,7 @@ Short description: Maps dispersion relation to effective metric
 
 Status: Spec-backed
 
-Evidence: formal/markdown/locks/geometry/forced\_vs\_optional\_geometry.md
+Evidence: formal/markdown locks/geometry/forced\_vs\_optional\_geometry.md
 
 Scope / limits: Linear regime
 
@@ -5689,7 +5689,7 @@ Short description: Second-order time evolution operator
 
 Status: Locked
 
-Evidence: formal/toe\_formal/ToeFormal/UCFF/SecondOrderTimeDomain.lean; formal/toe\_formal/ToeFormal/UCFF/SecondOrderNumerics.lean; formal/python/tests/test\_ucff\_core\_symbolic.py; formal/python/tests/test\_ucff\_core\_roundtrip.py; OP-01-EVIDENCE-ARCHIVE-LEGACY
+Evidence: formal/toe\_formal/ToeFormal/UCFF/SecondOrderTimeDomain.lean; formal/toe\_formal/ToeFormal/UCFF/SecondOrderNumerics.lean; formal/python/tests/test\_ucff\_core\_front\_door\_symbolic\_invariant\_01.py; formal/python/tests/test\_ucff\_core\_front\_door\_symbolic\_invariant\_02.py; formal/python/tests/test\_ucff\_core\_front\_door\_roundtrip.py; OP-01-EVIDENCE-ARCHIVE-LEGACY
 
 Scope / limits: Homogeneous media
 
@@ -5876,7 +5876,7 @@ Short description: Classifies perturbations P\[ψ] by whether they introduce a l
 
 Status: Behavioral (Python)
 
-Evidence: formal/markdown/locks/constraints/dispersion\_preserving\_terms.md; CT-01-EVIDENCE-PHB; CT-01-EVIDENCE-SOLVER-OMEGA
+Evidence: formal/markdown locks/constraints/dispersion\_preserving\_terms.md; CT-01-EVIDENCE-PHB; CT-01-EVIDENCE-SOLVER-OMEGA
 
 Scope / limits: Linearization about ψ=0 only; CT-01 is defined and evaluated under probe-level semantics (plane-wave coefficient identity). Additional evidence includes solver-level consequence checks that ω̂(k) shifts when CT-01 fails; these do not change CT-01’s semantics.
 
@@ -6084,7 +6084,7 @@ Short description: Symmetry-based admissibility gate for deformation terms P\[ψ
 
 Status: Locked
 
-Evidence: formal/toe\_formal/ToeFormal/Constraints/SYM01\_PhaseInvariant.lean; formal/python/tests/test\_sym01\_symmetry\_gates.py; formal/markdown/locks/constraints/SYM-01\_symmetry\_gates.md
+Evidence: formal/toe\_formal/ToeFormal/Constraints/SYM01\_PhaseInvariant.lean; formal/python/tests/test\_sym01\_symmetry\_gates.py; formal/markdown locks/constraints/SYM-01\_symmetry\_gates.md
 
 Scope / limits: Organizational / pruning constraint only; probe-relative behavioral checks; passing does not imply physical correctness; failing is sufficient for exclusion. Gates: S1 (global phase invariance: ψ ↦ e^(iθ) ψ), S2 (spatial translation invariance: no explicit position dependence), S3 (spatial rotation invariance: isotropy under planar rotations). Rotation semantics: field rotated, reference grid held fixed.
 
@@ -6110,7 +6110,7 @@ Short description: Structural admissibility gates for candidate deformation term
 
 Status: Structural (Lean)
 
-Evidence: formal/toe\_formal/ToeFormal/Constraints/CAUS01\_CausalityCore.lean; formal/toe\_formal/ToeFormal/Constraints/CAUS01\_CausalityGate.lean; formal/markdown/locks/constraints/CAUS-01\_causality\_admissibility\_gates.md
+Evidence: formal/toe\_formal/ToeFormal/Constraints/CAUS01\_CausalityCore.lean; formal/toe\_formal/ToeFormal/Constraints/CAUS01\_CausalityGate.lean; formal/markdown locks/constraints/CAUS-01\_causality\_admissibility\_gates.md
 
 Scope / limits: Pruning constraint only; passing does not imply well-posedness or physical validity; failing is sufficient for member-level exclusion. Gates: C1 (no ψ-independent forcing: P\[0]=0), C2 (no elliptic-in-time behavior), C3 (locality as structural proxy for causal propagation intent: no nonlocal/integral/global coupling), C4 (time-order sanity: bounded differential order, no mixed time-order escalation under the declared form). All gates are semantic predicates supplied by caller in Lean; C4 is represented as TimeOrderSane(form, P) parameterized by declared EvolForm, and CAUS01\_Admissible instantiates it at the suite's declared form via TimeOrderSaneAt. Lean interface does not attempt PDE classification (hyperbolic/parabolic).
 
@@ -6478,6 +6478,14 @@ Comment: Action invariance is proved using point-sample norm ingredients, but no
 
 
 CHANGE LOG
+
+
+
+Date: 2026-02-18
+
+Change: Maintenance refresh for evidence currency and path validity: updated EQ-02 Lean module references from LinearizedEquation to Dispersion, refreshed OV-BR-03 digitization CSV names, replaced stale OV-BR-SND-03 and OP-01 Python test references with current canonical test files, and corrected stale lock-path roots for constraints/geometry/functionals evidence pointers.
+
+Reason: Ensure this inventory remains path-resolvable and synchronized with the current repository layout and canonical test/module surfaces.
 
 
 

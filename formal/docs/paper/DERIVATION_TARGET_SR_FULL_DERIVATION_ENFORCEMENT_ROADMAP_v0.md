@@ -24,6 +24,47 @@ Non-claim boundary:
 - no inevitability claim by itself.
 - no external truth claim.
 
+## Architecture phase coverage (v1)
+
+- `TARGET_DEFINITION`
+- `ASSUMPTION_FREEZE`
+- `CANONICAL_ROUTE`
+- `ANTI_SHORTCUT`
+- `COUNTERFACTUAL`
+- `INDEPENDENT_NECESSITY`
+- `HARDENING`
+- `BOUNDED_SCOPE`
+- `DRIFT_GATES`
+- `ADJUDICATION_SYNC`
+
+## TARGET section
+
+- `TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN` remains the frozen target surface.
+
+## ASSUMPTION FREEZE section
+
+- Required assumption classes remain explicit: `MATH|DEF|POLICY|SCOPE`.
+- Assumption minimization and discharge ordering remains phase-gated.
+
+## CANONICAL ROUTE section
+
+- Canonical route is phase-ordered and no-deviation by policy.
+- No phase-skip promotion is permitted.
+
+## COUNTERFACTUAL ROUTE section
+
+- Phase-VI counterfactual negative controls remain mandatory before inevitability discharge.
+- Reopen policy remains active on counterfactual or theorem regression.
+
+## INDEPENDENT NECESSITY ROUTE section
+
+- Independent-necessity classification remains synchronized to dedicated inevitability theorem obligations.
+
+## BOUNDED SCOPE section
+
+- non-claim boundary remains explicit and binding for this roadmap artifact.
+- bounded theorem-discharge scope only; no full-SR dynamics claim and no external truth claim by this artifact.
+
 ## Authoritative no-deviation rule
 
 - Execute phases strictly in order; no phase-skip promotion is allowed.

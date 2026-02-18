@@ -1,0 +1,134 @@
+{
+  "schema_id": "ARCHITECTURE_SCHEMA_v1",
+  "schema_version": 1,
+  "pillar_required_phases": [
+    "TARGET_DEFINITION",
+    "ASSUMPTION_FREEZE",
+    "CANONICAL_ROUTE",
+    "ANTI_SHORTCUT",
+    "COUNTERFACTUAL",
+    "INDEPENDENT_NECESSITY",
+    "HARDENING",
+    "BOUNDED_SCOPE",
+    "DRIFT_GATES",
+    "ADJUDICATION_SYNC"
+  ],
+  "allowed_token_classes": [
+    "STRUCTURAL",
+    "REGIME",
+    "APPROXIMATION",
+    "DERIVATION",
+    "INEVITABILITY"
+  ],
+  "allowed_adjudication_prefixes": [
+    "DISCHARGED_v0",
+    "T-PROVED",
+    "T-CONDITIONAL",
+    "LOCKED"
+  ],
+  "legacy_allowed_adjudication_prefixes": [
+    "DISCHARGED_CONDITIONAL_PUBLISH_v0",
+    "DISCHARGED_CONDITIONAL_v0",
+    "SATISFIED_v0_DISCRETE",
+    "NOT_YET_DISCHARGED",
+    "NOT_YET_SATISFIED",
+    "PUBLISHED_POLICY_BASELINE_2026Q1"
+  ],
+  "pillar_target_files": [
+    "DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+    "DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+    "DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md"
+  ],
+  "known_derivation_target_files": [
+    "DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+    "DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+    "DERIVATION_TARGET_GR_CONSERVATION_OBJECT_v0.md",
+    "DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md",
+    "DERIVATION_TARGET_GR_GEOMETRY_OBJECT_v0.md",
+    "DERIVATION_TARGET_GR_STRONG_FIELD_REGIME_v0.md",
+    "DERIVATION_TARGET_GR01_3D_03_CLOSURE_PACKAGE_v0.md",
+    "DERIVATION_TARGET_GR01_3D_03_DISCHARGE_ATTEMPT_PACKAGE_v0.md",
+    "DERIVATION_TARGET_GR01_3D_MAINSTREAM_CLASS_v0.md",
+    "DERIVATION_TARGET_GR01_3D_POINT_SOURCE_CLASS_v0.md",
+    "DERIVATION_TARGET_GR01_ACTION_RAC_RETIREMENT_ALIGNMENT_v0.md",
+    "DERIVATION_TARGET_GR01_ACTION_TO_OPERATOR_DISCRETE_DERIVATION_v0.md",
+    "DERIVATION_TARGET_GR01_BRIDGE_PROMOTION_v0.md",
+    "DERIVATION_TARGET_GR01_DERIVATION_GRADE_CHECKLIST_v0.md",
+    "DERIVATION_TARGET_GR01_END_TO_END_CLOSURE_v0.md",
+    "DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+    "DERIVATION_TARGET_GR01_HARDENING_v0.md",
+    "DERIVATION_TARGET_GR01_INEVITABILITY_GATE_v0.md",
+    "DERIVATION_TARGET_GR01_REGIME_PROMOTION_v0.md",
+    "DERIVATION_TARGET_GR01_SCALING_PROMOTION_v0.md",
+    "DERIVATION_TARGET_GR01_SYMMETRY_PROMOTION_v0.md",
+    "DERIVATION_TARGET_NEWTONIAN_LIMIT_v0.md",
+    "DERIVATION_TARGET_QFT_EVOLUTION_OBJECT_v0.md",
+    "DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0.md",
+    "DERIVATION_TARGET_QM_EVOLUTION_HARDENING_v0.md",
+    "DERIVATION_TARGET_QM_EVOLUTION_OBJECT_v0.md",
+    "DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+    "DERIVATION_TARGET_QM_INEVITABILITY_GATE_v0.md",
+    "DERIVATION_TARGET_QM_MEASUREMENT_SEMANTICS_v0.md",
+    "DERIVATION_TARGET_QM_SYMMETRY_OBJECT_v0.md",
+    "DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md",
+    "DERIVATION_TARGET_SR_COVARIANCE_THEOREM_SURFACE_v0.md",
+    "DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md",
+    "DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+    "DERIVATION_TARGET_THERMO_ENTROPY_OBJECT_v0.md"
+  ],
+  "phase_presence_markers": {
+    "TARGET_DEFINITION": [
+      "Spec ID:",
+      "Target ID:",
+      "Purpose:"
+    ],
+    "ASSUMPTION_FREEZE": [
+      "Assumption",
+      "ASSUMPTION",
+      "MinimizedAssumptions"
+    ],
+    "CANONICAL_ROUTE": [
+      "canonical",
+      "route"
+    ],
+    "ANTI_SHORTCUT": [
+      "anti-circular",
+      "no-shortcut",
+      "forbidden"
+    ],
+    "COUNTERFACTUAL": [
+      "counterfactual"
+    ],
+    "INDEPENDENT_NECESSITY": [
+      "structural classification",
+      "independent_necessity_class"
+    ],
+    "HARDENING": [
+      "hardening",
+      "robustness",
+      "negative-control"
+    ],
+    "BOUNDED_SCOPE": [
+      "Scope boundary",
+      "bounded",
+      "non-claim"
+    ],
+    "DRIFT_GATES": [
+      "gate",
+      "drift",
+      "reopen"
+    ],
+    "ADJUDICATION_SYNC": [
+      "Adjudication token",
+      "ADJUDICATION"
+    ]
+  },
+  "growth_policy": {
+    "baseline_cycle": 74,
+    "max_delta_per_cycle": {
+      "governance_docs": 1,
+      "token_categories": 1,
+      "adjudication_types": 1
+    }
+  }
+}

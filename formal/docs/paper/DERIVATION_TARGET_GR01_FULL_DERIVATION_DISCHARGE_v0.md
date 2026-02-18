@@ -53,6 +53,48 @@ Scope:
 - No continuum-limit, uniqueness, or infinite-domain inversion claims.
 - Bounded inevitability is discharged at theorem-body bounded scope under explicit dependency and anti-shortcut constraints.
 
+## Architecture phase coverage (v1)
+
+- `TARGET_DEFINITION`
+- `ASSUMPTION_FREEZE`
+- `CANONICAL_ROUTE`
+- `ANTI_SHORTCUT`
+- `COUNTERFACTUAL`
+- `INDEPENDENT_NECESSITY`
+- `HARDENING`
+- `BOUNDED_SCOPE`
+- `DRIFT_GATES`
+- `ADJUDICATION_SYNC`
+
+## TARGET section
+
+- `TARGET-GR01-FULL-DERIVATION-DISCHARGE-v0` remains the frozen target surface.
+
+## ASSUMPTION FREEZE section
+
+- Minimized-assumption anchor remains explicit: `GR01InevitabilityMinimizedAssumptions_v0`.
+- Required route assumptions remain explicit and theorem-linked.
+
+## CANONICAL ROUTE section
+
+- Canonical route remains action-native and constructor-routed on the bounded weak-field theorem surface.
+- Compatibility wrappers remain non-authoritative.
+
+## COUNTERFACTUAL ROUTE section
+
+- Counterfactual break token remains explicit: `¬GR01InevitabilityBoundedClosureSurface_v0`.
+- Per-assumption counterfactual break theorem tokens remain pinned.
+
+## INDEPENDENT NECESSITY ROUTE section
+
+- Structural classification anchor remains explicit:
+  `GR01InevitabilityConstructiveRouteClassification_v0`.
+
+## BOUNDED SCOPE section
+
+- non-claim boundary is explicit and binding for this artifact.
+- bounded/discrete weak-field v0 scope only; no continuum-limit, uniqueness, or infinite-domain inversion promotion.
+
 ## Current status
 
 Current GR01 state is strong but conditional:
