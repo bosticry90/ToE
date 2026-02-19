@@ -2,8 +2,8 @@
   "lock_id": "GOVERNANCE_VERSION_v1",
   "governance_version": 1,
   "tracked_hashes": {
-    "ARCHITECTURE_SCHEMA_v1.json": "10c32ba121d3e5bd259c33ba9148e79692ed4d7063b8bd0471f8119ab5a978f3",
-    "formal/docs/paper/ASSUMPTION_REGISTRY_v1.md": "37aa97a7c71441c1640f725196f30c79673086a4e76707adff5dafed29d0db7d"
+    "ARCHITECTURE_SCHEMA_v1.json": "f8c3088fa42787f2894f922e0ae4738c9aab88f859967565e48f9d9f4f3e96a2",
+    "formal/docs/paper/ASSUMPTION_REGISTRY_v1.md": "7a497de23fa6998cdf34c5edf3acfc5637d9022d322a91fa409d3e38c23fd358"
   },
   "adjudication_class_list": [
     "DISCHARGED_CONDITIONAL_PUBLISH_v0",
@@ -55,7 +55,7 @@
       "NOT_YET_*"
     ],
     "governance_surface_counts": {
-      "governance_docs": 57,
+      "governance_docs": 58,
       "token_categories": 7,
       "adjudication_types": 12
     }

@@ -606,6 +606,41 @@ Cycle-017 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-018 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-18-MAXWELL-TO-CONTINUITY-THEOREM-ATTEMPT-PACKAGE-v0`
+   - scope:
+     - planning-only bounded Maxwell-to-continuity theorem-attempt package lock.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE18_v0: MAXWELL_TO_CONTINUITY_THEOREM_ATTEMPT_TOKEN_PINNED`
+   - theorem-attempt route token:
+     - `EM_U1_MAXWELL_CONTINUITY_THEOREM_ROUTE_v0: DIVERGENCE_ANTISYM_COMMUTATION_ATTEMPT_PINNED`
+   - smoothness seam token:
+     - `EM_U1_MAXWELL_CONTINUITY_THEOREM_SMOOTHNESS_SEAM_v0: C2_REGULARITY_REQUIRED`
+   - localization gate token:
+     - `EM_U1_MAXWELL_CONTINUITY_THEOREM_LOCALIZATION_GATE_v0: CYCLE18_ARTIFACTS_ONLY`
+   - no-promotion gate token:
+     - `EM_U1_MAXWELL_CONTINUITY_THEOREM_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+   - required source/smoothness assumption IDs:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+     - `ASM-EM-U1-MATH-SMOOTH-01`
+   - required prerequisite chain tokens:
+     - `EM_U1_MAXWELL_CONTINUITY_ROUTE_v0: DIVERGENCE_OF_INHOM_SURFACE_ROUTE_PINNED`
+     - `EM_U1_DOUBLE_DIVERGENCE_SURFACE_v0: DD_F_ZERO_STATEMENT_PINNED`
+     - `EM_U1_ANTISYM_SURFACE_v0: F_ANTISYM_STATEMENT_PINNED`
+     - `EM_U1_COMMUTING_PARTIALS_SURFACE_v0: COMMUTATION_STATEMENT_PINNED`
+     - `EM_U1_CONTINUITY_TENSOR_SURFACE_v0: DIVERGENCE_CURRENT_STATEMENT_PINNED`
+   - required non-selection policy tokens:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO18_MAXWELL_CONTINUITY_THEOREM_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_18_MAXWELL_TO_CONTINUITY_THEOREM_ATTEMPT_PACKAGE_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro18_maxwell_to_continuity_theorem_attempt_package.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

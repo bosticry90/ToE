@@ -414,6 +414,32 @@ EM Cycle-017 double-divergence antisymmetry/commutation seam checkpoint (2026-02
 - Scope boundary remains strict:
   - double-divergence seam statements only, bounded and non-claim, no derivation/promotion claim, and no units/gauge/constitutive selection claim.
 
+EM Cycle-018 Maxwell-to-continuity theorem-attempt package checkpoint (2026-02-19):
+- Cycle-018 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-18-MAXWELL-TO-CONTINUITY-THEOREM-ATTEMPT-PACKAGE-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_18_MAXWELL_TO_CONTINUITY_THEOREM_ATTEMPT_PACKAGE_v0.md`
+- Theorem-attempt package tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE18_v0: MAXWELL_TO_CONTINUITY_THEOREM_ATTEMPT_TOKEN_PINNED`
+  - `EM_U1_MAXWELL_CONTINUITY_THEOREM_ROUTE_v0: DIVERGENCE_ANTISYM_COMMUTATION_ATTEMPT_PINNED`
+  - `EM_U1_MAXWELL_CONTINUITY_THEOREM_SMOOTHNESS_SEAM_v0: C2_REGULARITY_REQUIRED`
+  - `EM_U1_MAXWELL_CONTINUITY_THEOREM_LOCALIZATION_GATE_v0: CYCLE18_ARTIFACTS_ONLY`
+  - `EM_U1_MAXWELL_CONTINUITY_THEOREM_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+  - `EM_U1_MICRO18_MAXWELL_CONTINUITY_THEOREM_ADJUDICATION: NOT_YET_DISCHARGED`
+- Source/smoothness prerequisites remain explicit:
+  - `ASM-EM-U1-PHY-SOURCE-01`
+  - `ASM-EM-U1-MATH-SMOOTH-01`
+  - `EM_U1_MAXWELL_CONTINUITY_ROUTE_v0: DIVERGENCE_OF_INHOM_SURFACE_ROUTE_PINNED`
+  - `EM_U1_DOUBLE_DIVERGENCE_SURFACE_v0: DD_F_ZERO_STATEMENT_PINNED`
+  - `EM_U1_ANTISYM_SURFACE_v0: F_ANTISYM_STATEMENT_PINNED`
+  - `EM_U1_COMMUTING_PARTIALS_SURFACE_v0: COMMUTATION_STATEMENT_PINNED`
+  - `EM_U1_CONTINUITY_TENSOR_SURFACE_v0: DIVERGENCE_CURRENT_STATEMENT_PINNED`
+  - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+  - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+- Cycle-018 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro18_maxwell_to_continuity_theorem_attempt_package.py`
+- Scope boundary remains strict:
+  - theorem-attempt package statements only, bounded and non-claim, no theorem/discharge promotion claim, and no units/gauge/constitutive selection claim.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.

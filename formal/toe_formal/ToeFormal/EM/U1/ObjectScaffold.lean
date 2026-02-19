@@ -89,6 +89,14 @@ structure DoubleDivergenceSeam where
   doubleDivergenceTag : String
   localizationTag : String
 
+structure MaxwellToContinuityTheoremAttemptPackage where
+  sourceAssumptionId : String
+  smoothnessAssumptionId : String
+  theoremRouteTag : String
+  smoothnessTag : String
+  localizationTag : String
+  noPromotionTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -239,6 +247,15 @@ def doubleDivergenceSeamHarness
       seam.commutingPartialsTag = "commutation-statement-pinned" ∧
         seam.doubleDivergenceTag = "dd-f-zero-statement-pinned" ∧
           seam.localizationTag = "cycle17-artifacts-only"
+
+def maxwellToContinuityTheoremAttemptHarness
+    (pkg : MaxwellToContinuityTheoremAttemptPackage) : Prop :=
+  pkg.sourceAssumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    pkg.smoothnessAssumptionId = "ASM-EM-U1-MATH-SMOOTH-01" ∧
+      pkg.theoremRouteTag = "divergence-antisym-commutation-attempt-pinned" ∧
+        pkg.smoothnessTag = "c2-regularity-required" ∧
+          pkg.localizationTag = "cycle18-artifacts-only" ∧
+            pkg.noPromotionTag = "attempt-only-no-discharge"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -505,6 +522,21 @@ def emU1DoubleDivergenceLocalizationGateTokenV0 : String :=
 
 def emU1DoubleDivergenceNoDerivationTokenV0 : String :=
   "EM_U1_DOUBLE_DIVERGENCE_NO_DERIVATION_v0: STATEMENT_ONLY"
+
+def emU1MaxwellContinuityTheoremAttemptTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE18_v0: MAXWELL_TO_CONTINUITY_THEOREM_ATTEMPT_TOKEN_PINNED"
+
+def emU1MaxwellContinuityTheoremRouteTokenV0 : String :=
+  "EM_U1_MAXWELL_CONTINUITY_THEOREM_ROUTE_v0: DIVERGENCE_ANTISYM_COMMUTATION_ATTEMPT_PINNED"
+
+def emU1MaxwellContinuityTheoremSmoothnessSeamTokenV0 : String :=
+  "EM_U1_MAXWELL_CONTINUITY_THEOREM_SMOOTHNESS_SEAM_v0: C2_REGULARITY_REQUIRED"
+
+def emU1MaxwellContinuityTheoremLocalizationGateTokenV0 : String :=
+  "EM_U1_MAXWELL_CONTINUITY_THEOREM_LOCALIZATION_GATE_v0: CYCLE18_ARTIFACTS_ONLY"
+
+def emU1MaxwellContinuityTheoremNoPromotionTokenV0 : String :=
+  "EM_U1_MAXWELL_CONTINUITY_THEOREM_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -809,6 +841,29 @@ theorem em_u1_cycle017_double_divergence_harness_stub_v0 :
         commutingPartialsTag := "commutation-statement-pinned"
         doubleDivergenceTag := "dd-f-zero-statement-pinned"
         localizationTag := "cycle17-artifacts-only" } := by
+  repeat' constructor
+
+theorem em_u1_cycle018_token_binding_stub_v0 :
+    emU1MaxwellContinuityTheoremAttemptTokenV0 =
+      "EM_U1_PROGRESS_CYCLE18_v0: MAXWELL_TO_CONTINUITY_THEOREM_ATTEMPT_TOKEN_PINNED" ∧
+    emU1MaxwellContinuityTheoremRouteTokenV0 =
+      "EM_U1_MAXWELL_CONTINUITY_THEOREM_ROUTE_v0: DIVERGENCE_ANTISYM_COMMUTATION_ATTEMPT_PINNED" ∧
+    emU1MaxwellContinuityTheoremSmoothnessSeamTokenV0 =
+      "EM_U1_MAXWELL_CONTINUITY_THEOREM_SMOOTHNESS_SEAM_v0: C2_REGULARITY_REQUIRED" ∧
+    emU1MaxwellContinuityTheoremLocalizationGateTokenV0 =
+      "EM_U1_MAXWELL_CONTINUITY_THEOREM_LOCALIZATION_GATE_v0: CYCLE18_ARTIFACTS_ONLY" ∧
+    emU1MaxwellContinuityTheoremNoPromotionTokenV0 =
+      "EM_U1_MAXWELL_CONTINUITY_THEOREM_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE" := by
+  repeat' constructor
+
+theorem em_u1_cycle018_theorem_attempt_harness_stub_v0 :
+    maxwellToContinuityTheoremAttemptHarness
+      { sourceAssumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        smoothnessAssumptionId := "ASM-EM-U1-MATH-SMOOTH-01"
+        theoremRouteTag := "divergence-antisym-commutation-attempt-pinned"
+        smoothnessTag := "c2-regularity-required"
+        localizationTag := "cycle18-artifacts-only"
+        noPromotionTag := "attempt-only-no-discharge" } := by
   repeat' constructor
 
 end
