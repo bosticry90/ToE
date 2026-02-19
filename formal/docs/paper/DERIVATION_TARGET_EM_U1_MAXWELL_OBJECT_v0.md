@@ -468,6 +468,39 @@ Cycle-013 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-014 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-14-INDEX-METRIC-CURRENT-DECOMPOSITION-SURFACE-v0`
+   - scope:
+     - planning-only bounded index/metric raise-lower + current decomposition statement-surface lock.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE14_v0: INDEX_METRIC_CURRENT_DECOMPOSITION_TOKEN_PINNED`
+   - index/metric seam token:
+     - `EM_U1_INDEX_METRIC_RAISE_LOWER_SURFACE_v0: F_INDEX_POSITION_CONTRACT_PINNED`
+   - current decomposition seam token:
+     - `EM_U1_CURRENT_DECOMPOSITION_SURFACE_v0: JMU_RHOJ_SEAM_PINNED`
+   - localization gate token:
+     - `EM_U1_INDEX_METRIC_CURRENT_LOCALIZATION_GATE_v0: CYCLE14_ARTIFACTS_ONLY`
+   - no-derivation gate token:
+     - `EM_U1_INDEX_METRIC_CURRENT_NO_DERIVATION_v0: STATEMENT_ONLY`
+   - required source assumption ID:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+   - required convention/source prerequisite tokens:
+     - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+     - `EM_U1_CONVENTION_LOCK_INDEX_v0: INDEX_POSITION_RULES_FIXED`
+     - `EM_U1_SOURCE_OBJECT_CONVENTION_v0: CURRENT_OBJECT_DEFINED`
+     - `EM_U1_SOURCE_SPLIT_CONVENTION_v0: RHO_J_SPLIT_SEAM_DEFINED`
+   - required non-selection policy tokens:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO14_INDEX_METRIC_CURRENT_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_14_INDEX_METRIC_CURRENT_DECOMPOSITION_SURFACE_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro14_index_metric_current_decomposition_surface.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

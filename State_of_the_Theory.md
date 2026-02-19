@@ -306,6 +306,34 @@ EM Cycle-013 Maxwell tensor/forms compatibility-map checkpoint (2026-02-19):
 - Scope boundary remains strict:
   - compatibility-map statements only, bounded and non-claim, no derivation/promotion claim, and no units/gauge/constitutive selection claim.
 
+EM Cycle-014 index/metric + current decomposition surface checkpoint (2026-02-19):
+- Cycle-014 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-14-INDEX-METRIC-CURRENT-DECOMPOSITION-SURFACE-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_14_INDEX_METRIC_CURRENT_DECOMPOSITION_SURFACE_v0.md`
+- Index/metric + current decomposition tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE14_v0: INDEX_METRIC_CURRENT_DECOMPOSITION_TOKEN_PINNED`
+  - `EM_U1_INDEX_METRIC_RAISE_LOWER_SURFACE_v0: F_INDEX_POSITION_CONTRACT_PINNED`
+  - `EM_U1_CURRENT_DECOMPOSITION_SURFACE_v0: JMU_RHOJ_SEAM_PINNED`
+  - `EM_U1_INDEX_METRIC_CURRENT_LOCALIZATION_GATE_v0: CYCLE14_ARTIFACTS_ONLY`
+  - `EM_U1_INDEX_METRIC_CURRENT_NO_DERIVATION_v0: STATEMENT_ONLY`
+  - `EM_U1_MICRO14_INDEX_METRIC_CURRENT_ADJUDICATION: NOT_YET_DISCHARGED`
+- Localized statement seams are explicit:
+  - `F^{μν} := g^{μα} g^{νβ} F_{αβ}`
+  - `J^0 := ρ`
+  - `J^i := j^i`
+- Source/convention prerequisites remain explicit:
+  - `ASM-EM-U1-PHY-SOURCE-01`
+  - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+  - `EM_U1_CONVENTION_LOCK_INDEX_v0: INDEX_POSITION_RULES_FIXED`
+  - `EM_U1_SOURCE_OBJECT_CONVENTION_v0: CURRENT_OBJECT_DEFINED`
+  - `EM_U1_SOURCE_SPLIT_CONVENTION_v0: RHO_J_SPLIT_SEAM_DEFINED`
+  - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+  - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+- Cycle-014 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro14_index_metric_current_decomposition_surface.py`
+- Scope boundary remains strict:
+  - index/metric + current decomposition statements only, bounded and non-claim, no derivation/promotion claim, and no units/gauge/constitutive selection claim.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.

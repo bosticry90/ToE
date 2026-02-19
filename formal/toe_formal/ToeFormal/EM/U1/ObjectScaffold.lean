@@ -64,6 +64,12 @@ structure MaxwellStatementCompatibilityMap where
   conventionDependencyTag : String
   sourceDependencyTag : String
 
+structure IndexMetricCurrentDecompositionSurface where
+  assumptionId : String
+  raiseLowerTag : String
+  currentDecompositionTag : String
+  localizationTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -185,6 +191,13 @@ def maxwellCompatibilityHarness
       compat.homogeneousMapTag = "tensor-forms-homogeneous-map-pinned" ∧
         compat.conventionDependencyTag = "signature-hodge-eb-conventions-required" ∧
           compat.sourceDependencyTag = "source-object-seam-required"
+
+def indexMetricCurrentDecompositionHarness
+    (surface : IndexMetricCurrentDecompositionSurface) : Prop :=
+  surface.assumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    surface.raiseLowerTag = "f-index-position-contract-pinned" ∧
+      surface.currentDecompositionTag = "jmu-rhoj-seam-pinned" ∧
+        surface.localizationTag = "cycle14-artifacts-only"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -388,6 +401,21 @@ def emU1MaxwellCompatibilityLocalizationGateTokenV0 : String :=
 
 def emU1MaxwellCompatibilityNoDerivationTokenV0 : String :=
   "EM_U1_MAXWELL_COMPATIBILITY_NO_DERIVATION_v0: STATEMENT_ONLY"
+
+def emU1IndexMetricCurrentDecompositionTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE14_v0: INDEX_METRIC_CURRENT_DECOMPOSITION_TOKEN_PINNED"
+
+def emU1IndexMetricRaiseLowerSurfaceTokenV0 : String :=
+  "EM_U1_INDEX_METRIC_RAISE_LOWER_SURFACE_v0: F_INDEX_POSITION_CONTRACT_PINNED"
+
+def emU1CurrentDecompositionSurfaceTokenV0 : String :=
+  "EM_U1_CURRENT_DECOMPOSITION_SURFACE_v0: JMU_RHOJ_SEAM_PINNED"
+
+def emU1IndexMetricCurrentLocalizationGateTokenV0 : String :=
+  "EM_U1_INDEX_METRIC_CURRENT_LOCALIZATION_GATE_v0: CYCLE14_ARTIFACTS_ONLY"
+
+def emU1IndexMetricCurrentNoDerivationTokenV0 : String :=
+  "EM_U1_INDEX_METRIC_CURRENT_NO_DERIVATION_v0: STATEMENT_ONLY"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -605,6 +633,27 @@ theorem em_u1_cycle013_compatibility_harness_stub_v0 :
         homogeneousMapTag := "tensor-forms-homogeneous-map-pinned"
         conventionDependencyTag := "signature-hodge-eb-conventions-required"
         sourceDependencyTag := "source-object-seam-required" } := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle014_token_binding_stub_v0 :
+    emU1IndexMetricCurrentDecompositionTokenV0 =
+      "EM_U1_PROGRESS_CYCLE14_v0: INDEX_METRIC_CURRENT_DECOMPOSITION_TOKEN_PINNED" ∧
+    emU1IndexMetricRaiseLowerSurfaceTokenV0 =
+      "EM_U1_INDEX_METRIC_RAISE_LOWER_SURFACE_v0: F_INDEX_POSITION_CONTRACT_PINNED" ∧
+    emU1CurrentDecompositionSurfaceTokenV0 =
+      "EM_U1_CURRENT_DECOMPOSITION_SURFACE_v0: JMU_RHOJ_SEAM_PINNED" ∧
+    emU1IndexMetricCurrentLocalizationGateTokenV0 =
+      "EM_U1_INDEX_METRIC_CURRENT_LOCALIZATION_GATE_v0: CYCLE14_ARTIFACTS_ONLY" ∧
+    emU1IndexMetricCurrentNoDerivationTokenV0 =
+      "EM_U1_INDEX_METRIC_CURRENT_NO_DERIVATION_v0: STATEMENT_ONLY" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle014_index_metric_current_harness_stub_v0 :
+    indexMetricCurrentDecompositionHarness
+      { assumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        raiseLowerTag := "f-index-position-contract-pinned"
+        currentDecompositionTag := "jmu-rhoj-seam-pinned"
+        localizationTag := "cycle14-artifacts-only" } := by
   repeat' constructor <;> rfl
 
 end U1
