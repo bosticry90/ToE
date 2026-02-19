@@ -592,6 +592,10 @@ EM Cycle-023 authorized distributional semantics reference surface checkpoint (2
   - `formal/python/tests/test_em_u1_micro23_authorized_distributional_reference_surface_nonclaim.py`
 - Scope boundary remains strict:
   - authorized distributional reference-surface statements only, bounded and non-claim, no theorem/discharge promotion claim, and no distributional math or curved-space import claims.
+- Publish receipt:
+  - commit: `11b16c4` (`EM U1 Micro-23: authorized distributional semantics reference surface (non-claim) v0`)
+  - tag: `em-u1-micro23-authorized-distributional-semantics-reference-surface-nonclaim-v0`
+  - remote sync: `origin/main` updated and tag published.
 
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
