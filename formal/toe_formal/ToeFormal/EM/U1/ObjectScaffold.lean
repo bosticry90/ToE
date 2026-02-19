@@ -70,6 +70,12 @@ structure IndexMetricCurrentDecompositionSurface where
   currentDecompositionTag : String
   localizationTag : String
 
+structure ContinuitySurfaceCompatibilitySeam where
+  assumptionId : String
+  tensorContinuityTag : String
+  splitContinuityTag : String
+  localizationTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -198,6 +204,13 @@ def indexMetricCurrentDecompositionHarness
     surface.raiseLowerTag = "f-index-position-contract-pinned" ∧
       surface.currentDecompositionTag = "jmu-rhoj-seam-pinned" ∧
         surface.localizationTag = "cycle14-artifacts-only"
+
+def continuitySurfaceCompatibilityHarness
+    (surface : ContinuitySurfaceCompatibilitySeam) : Prop :=
+  surface.assumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    surface.tensorContinuityTag = "divergence-current-statement-pinned" ∧
+      surface.splitContinuityTag = "dt-rho-plus-divj-statement-pinned" ∧
+        surface.localizationTag = "cycle15-artifacts-only"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -416,6 +429,21 @@ def emU1IndexMetricCurrentLocalizationGateTokenV0 : String :=
 
 def emU1IndexMetricCurrentNoDerivationTokenV0 : String :=
   "EM_U1_INDEX_METRIC_CURRENT_NO_DERIVATION_v0: STATEMENT_ONLY"
+
+def emU1ContinuitySurfaceCompatibilityTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE15_v0: CONTINUITY_SURFACE_COMPATIBILITY_SEAM_TOKEN_PINNED"
+
+def emU1ContinuityTensorSurfaceTokenV0 : String :=
+  "EM_U1_CONTINUITY_TENSOR_SURFACE_v0: DIVERGENCE_CURRENT_STATEMENT_PINNED"
+
+def emU1ContinuitySplitSurfaceTokenV0 : String :=
+  "EM_U1_CONTINUITY_SPLIT_SURFACE_v0: DT_RHO_PLUS_DIVJ_STATEMENT_PINNED"
+
+def emU1ContinuityLocalizationGateTokenV0 : String :=
+  "EM_U1_CONTINUITY_LOCALIZATION_GATE_v0: CYCLE15_ARTIFACTS_ONLY"
+
+def emU1ContinuityNoDerivationTokenV0 : String :=
+  "EM_U1_CONTINUITY_NO_DERIVATION_v0: STATEMENT_ONLY"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -654,6 +682,27 @@ theorem em_u1_cycle014_index_metric_current_harness_stub_v0 :
         raiseLowerTag := "f-index-position-contract-pinned"
         currentDecompositionTag := "jmu-rhoj-seam-pinned"
         localizationTag := "cycle14-artifacts-only" } := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle015_token_binding_stub_v0 :
+    emU1ContinuitySurfaceCompatibilityTokenV0 =
+      "EM_U1_PROGRESS_CYCLE15_v0: CONTINUITY_SURFACE_COMPATIBILITY_SEAM_TOKEN_PINNED" ∧
+    emU1ContinuityTensorSurfaceTokenV0 =
+      "EM_U1_CONTINUITY_TENSOR_SURFACE_v0: DIVERGENCE_CURRENT_STATEMENT_PINNED" ∧
+    emU1ContinuitySplitSurfaceTokenV0 =
+      "EM_U1_CONTINUITY_SPLIT_SURFACE_v0: DT_RHO_PLUS_DIVJ_STATEMENT_PINNED" ∧
+    emU1ContinuityLocalizationGateTokenV0 =
+      "EM_U1_CONTINUITY_LOCALIZATION_GATE_v0: CYCLE15_ARTIFACTS_ONLY" ∧
+    emU1ContinuityNoDerivationTokenV0 =
+      "EM_U1_CONTINUITY_NO_DERIVATION_v0: STATEMENT_ONLY" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle015_continuity_surface_harness_stub_v0 :
+    continuitySurfaceCompatibilityHarness
+      { assumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        tensorContinuityTag := "divergence-current-statement-pinned"
+        splitContinuityTag := "dt-rho-plus-divj-statement-pinned"
+        localizationTag := "cycle15-artifacts-only" } := by
   repeat' constructor <;> rfl
 
 end U1

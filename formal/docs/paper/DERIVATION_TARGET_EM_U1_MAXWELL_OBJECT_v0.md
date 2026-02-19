@@ -501,6 +501,40 @@ Cycle-014 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-015 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-15-CONTINUITY-SURFACE-COMPATIBILITY-SEAM-v0`
+   - scope:
+     - planning-only bounded continuity statement-surface compatibility seam lock.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE15_v0: CONTINUITY_SURFACE_COMPATIBILITY_SEAM_TOKEN_PINNED`
+   - tensor continuity token:
+     - `EM_U1_CONTINUITY_TENSOR_SURFACE_v0: DIVERGENCE_CURRENT_STATEMENT_PINNED`
+   - 3+1 continuity token:
+     - `EM_U1_CONTINUITY_SPLIT_SURFACE_v0: DT_RHO_PLUS_DIVJ_STATEMENT_PINNED`
+   - localization gate token:
+     - `EM_U1_CONTINUITY_LOCALIZATION_GATE_v0: CYCLE15_ARTIFACTS_ONLY`
+   - no-derivation gate token:
+     - `EM_U1_CONTINUITY_NO_DERIVATION_v0: STATEMENT_ONLY`
+   - required source assumption ID:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+   - required convention/source prerequisite tokens:
+     - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+     - `EM_U1_SOURCE_OBJECT_CONVENTION_v0: CURRENT_OBJECT_DEFINED`
+     - `EM_U1_SOURCE_SPLIT_CONVENTION_v0: RHO_J_SPLIT_SEAM_DEFINED`
+     - `EM_U1_INDEX_METRIC_RAISE_LOWER_SURFACE_v0: F_INDEX_POSITION_CONTRACT_PINNED`
+     - `EM_U1_CURRENT_DECOMPOSITION_SURFACE_v0: JMU_RHOJ_SEAM_PINNED`
+   - required non-selection policy tokens:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO15_CONTINUITY_SURFACE_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_15_CONTINUITY_SURFACE_COMPATIBILITY_SEAM_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro15_continuity_surface_compatibility_seam.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 
