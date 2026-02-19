@@ -46,6 +46,14 @@ structure GaugeFixingImportInterface where
   assumptionId : String
   placeholderGaugeFixingLane : String
 
+structure EpsilonConvention where
+  orientationTag : String
+  normalizationTag : String
+
+structure HodgeStar2FormOperator where
+  conventionTag : String
+  apply : FieldStrength → FieldStrength
+
 structure DifferentialBundle where
   partialVector : (SpaceTimeIndex → ℝ) → SpaceTimeIndex → SpaceTimeIndex → ℝ
   partialScalar : (SpaceTimeIndex → ℝ) → SpaceTimeIndex → ℝ
@@ -91,6 +99,22 @@ def importLaneInterfaceApplicationHarness
   constitutive.assumptionId = "ASM-EM-U1-PHY-CONSTITUTIVE-01" ∧
     units.assumptionId = "ASM-EM-U1-PHY-UNITS-01" ∧
       gaugeFixing.assumptionId = "ASM-EM-U1-PHY-GFIX-01"
+
+def dualFieldStrengthFromConvention
+    (starOp : HodgeStar2FormOperator)
+    (F : FieldStrength) : FieldStrength :=
+  starOp.apply F
+
+def dualHodgeConventionHarness : Prop :=
+  let epsilon : EpsilonConvention :=
+    { orientationTag := "epsilon^0123=+1"
+      normalizationTag := "levi-civita-fixed" }
+  let star : HodgeStar2FormOperator :=
+    { conventionTag := "starstar-sign-fixed-under-signature"
+      apply := fun F => F }
+  epsilon.orientationTag = "epsilon^0123=+1" ∧
+    epsilon.normalizationTag = "levi-civita-fixed" ∧
+    star.conventionTag = "starstar-sign-fixed-under-signature"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -214,6 +238,24 @@ def emU1ImportLanesInterfaceLocalizationGateTokenV0 : String :=
 def emU1ImportLanesInterfaceApplicationHarnessTokenV0 : String :=
   "EM_U1_IMPORT_LANES_INTERFACE_APPLICATION_HARNESS_v0: REFERENCE_ONLY_IMPORT_APPLICATION"
 
+def emU1DualHodgeConventionLockTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE9_v0: DUAL_HODGE_CONVENTION_LOCK_TOKEN_PINNED"
+
+def emU1DualConventionTokenV0 : String :=
+  "EM_U1_DUAL_CONVENTION_v0: STARF_DEFINITION_FIXED"
+
+def emU1EpsilonConventionTokenV0 : String :=
+  "EM_U1_EPSILON_CONVENTION_v0: LEVI_CIVITA_NORMALIZATION_FIXED"
+
+def emU1HodgeStarConventionTokenV0 : String :=
+  "EM_U1_HODGE_STAR_CONVENTION_v0: STARSTAR_SIGN_FIXED_UNDER_SIGNATURE"
+
+def emU1DualHodgeLocalizationGateTokenV0 : String :=
+  "EM_U1_DUAL_HODGE_LOCALIZATION_GATE_v0: CYCLE6_CYCLE9_ARTIFACTS_ONLY"
+
+def emU1DualHodgeNoDynamicsTokenV0 : String :=
+  "EM_U1_DUAL_HODGE_NO_DYNAMICS_v0: CONVENTION_LOCK_ONLY"
+
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
 
@@ -320,6 +362,25 @@ theorem em_u1_cycle008_import_lane_interface_harness_stub_v0 :
       { assumptionId := "ASM-EM-U1-PHY-GFIX-01"
         placeholderGaugeFixingLane := "Lorenz|Coulomb|temporal|axial|Feynman" } := by
   repeat' constructor <;> rfl
+
+theorem em_u1_cycle009_token_binding_stub_v0 :
+    emU1DualHodgeConventionLockTokenV0 =
+      "EM_U1_PROGRESS_CYCLE9_v0: DUAL_HODGE_CONVENTION_LOCK_TOKEN_PINNED" ∧
+    emU1DualConventionTokenV0 =
+      "EM_U1_DUAL_CONVENTION_v0: STARF_DEFINITION_FIXED" ∧
+    emU1EpsilonConventionTokenV0 =
+      "EM_U1_EPSILON_CONVENTION_v0: LEVI_CIVITA_NORMALIZATION_FIXED" ∧
+    emU1HodgeStarConventionTokenV0 =
+      "EM_U1_HODGE_STAR_CONVENTION_v0: STARSTAR_SIGN_FIXED_UNDER_SIGNATURE" ∧
+    emU1DualHodgeLocalizationGateTokenV0 =
+      "EM_U1_DUAL_HODGE_LOCALIZATION_GATE_v0: CYCLE6_CYCLE9_ARTIFACTS_ONLY" ∧
+    emU1DualHodgeNoDynamicsTokenV0 =
+      "EM_U1_DUAL_HODGE_NO_DYNAMICS_v0: CONVENTION_LOCK_ONLY" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle009_dual_hodge_harness_stub_v0 :
+    dualHodgeConventionHarness := by
+  simp [dualHodgeConventionHarness]
 
 end U1
 end EM

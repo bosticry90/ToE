@@ -319,6 +319,34 @@ Cycle-008 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-009 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-09-DUAL-HODGE-CONVENTION-LOCK-v0`
+   - scope:
+     - planning-only bounded 4D dual/epsilon/Hodge convention-lock scaffold with no dynamics claims.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE9_v0: DUAL_HODGE_CONVENTION_LOCK_TOKEN_PINNED`
+   - dual-convention token:
+     - `EM_U1_DUAL_CONVENTION_v0: STARF_DEFINITION_FIXED`
+   - epsilon-convention token:
+     - `EM_U1_EPSILON_CONVENTION_v0: LEVI_CIVITA_NORMALIZATION_FIXED`
+   - hodge-star convention token:
+     - `EM_U1_HODGE_STAR_CONVENTION_v0: STARSTAR_SIGN_FIXED_UNDER_SIGNATURE`
+   - localization gate token:
+     - `EM_U1_DUAL_HODGE_LOCALIZATION_GATE_v0: CYCLE6_CYCLE9_ARTIFACTS_ONLY`
+   - no-dynamics token:
+     - `EM_U1_DUAL_HODGE_NO_DYNAMICS_v0: CONVENTION_LOCK_ONLY`
+   - required convention prerequisite tokens:
+     - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+     - `EM_U1_CONVENTION_LOCK_EB_v0: E_B_SIGN_AND_EPSILON_FIXED`
+   - cycle adjudication token:
+     - `EM_U1_MICRO09_DUAL_HODGE_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_09_DUAL_HODGE_CONVENTION_LOCK_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro09_dual_hodge_convention_lock.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

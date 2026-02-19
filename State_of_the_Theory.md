@@ -195,6 +195,26 @@ EM Cycle-008 import-lanes interface-contracts checkpoint (2026-02-18):
 - Scope boundary remains strict:
   - import-lane interface contracts only, bounded and non-claim, no unit-system or gauge-selection claim, and no dynamics closure promotion.
 
+EM Cycle-009 dual/hodge convention-lock checkpoint (2026-02-18):
+- Cycle-009 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-09-DUAL-HODGE-CONVENTION-LOCK-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_09_DUAL_HODGE_CONVENTION_LOCK_v0.md`
+- Dual/hodge convention-lock tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE9_v0: DUAL_HODGE_CONVENTION_LOCK_TOKEN_PINNED`
+  - `EM_U1_DUAL_CONVENTION_v0: STARF_DEFINITION_FIXED`
+  - `EM_U1_EPSILON_CONVENTION_v0: LEVI_CIVITA_NORMALIZATION_FIXED`
+  - `EM_U1_HODGE_STAR_CONVENTION_v0: STARSTAR_SIGN_FIXED_UNDER_SIGNATURE`
+  - `EM_U1_DUAL_HODGE_LOCALIZATION_GATE_v0: CYCLE6_CYCLE9_ARTIFACTS_ONLY`
+  - `EM_U1_DUAL_HODGE_NO_DYNAMICS_v0: CONVENTION_LOCK_ONLY`
+  - `EM_U1_MICRO09_DUAL_HODGE_ADJUDICATION: NOT_YET_DISCHARGED`
+- Cycle-009 convention prerequisites are preserved:
+  - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+  - `EM_U1_CONVENTION_LOCK_EB_v0: E_B_SIGN_AND_EPSILON_FIXED`
+- Cycle-009 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro09_dual_hodge_convention_lock.py`
+- Scope boundary remains strict:
+  - dual/epsilon/Hodge conventions only, bounded and non-claim, no Maxwell equation closure claims, and no dynamics promotion.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.
