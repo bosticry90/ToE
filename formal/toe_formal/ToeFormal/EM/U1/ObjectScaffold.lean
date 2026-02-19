@@ -97,6 +97,14 @@ structure MaxwellToContinuityTheoremAttemptPackage where
   localizationTag : String
   noPromotionTag : String
 
+structure SmoothnessWeakeningNegcontrolPackage where
+  sourceAssumptionId : String
+  smoothnessAssumptionId : String
+  negcontrolRouteTag : String
+  localizationTag : String
+  noPromotionTag : String
+  boundaryTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -256,6 +264,15 @@ def maxwellToContinuityTheoremAttemptHarness
         pkg.smoothnessTag = "c2-regularity-required" ∧
           pkg.localizationTag = "cycle18-artifacts-only" ∧
             pkg.noPromotionTag = "attempt-only-no-discharge"
+
+def smoothnessWeakeningNegcontrolHarness
+    (pkg : SmoothnessWeakeningNegcontrolPackage) : Prop :=
+  pkg.sourceAssumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    pkg.smoothnessAssumptionId = "ASM-EM-U1-MATH-SMOOTH-01" ∧
+      pkg.negcontrolRouteTag = "commutation-license-removal-breaks-route-pinned" ∧
+        pkg.localizationTag = "cycle19-artifacts-only" ∧
+          pkg.noPromotionTag = "negcontrol-only-no-discharge" ∧
+            pkg.boundaryTag = "no-distributional-or-curved-space-import"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -537,6 +554,21 @@ def emU1MaxwellContinuityTheoremLocalizationGateTokenV0 : String :=
 
 def emU1MaxwellContinuityTheoremNoPromotionTokenV0 : String :=
   "EM_U1_MAXWELL_CONTINUITY_THEOREM_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE"
+
+def emU1SmoothnessWeakeningNegcontrolTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE19_v0: SMOOTHNESS_WEAKENING_NEGCONTROL_TOKEN_PINNED"
+
+def emU1SmoothnessWeakeningNegcontrolRouteTokenV0 : String :=
+  "EM_U1_SMOOTHNESS_WEAKENING_NEGCONTROL_ROUTE_v0: COMMUTATION_LICENSE_REMOVAL_BREAKS_ROUTE_PINNED"
+
+def emU1SmoothnessWeakeningNegcontrolLocalizationGateTokenV0 : String :=
+  "EM_U1_SMOOTHNESS_WEAKENING_NEGCONTROL_LOCALIZATION_GATE_v0: CYCLE19_ARTIFACTS_ONLY"
+
+def emU1SmoothnessWeakeningNegcontrolNoPromotionTokenV0 : String :=
+  "EM_U1_SMOOTHNESS_WEAKENING_NEGCONTROL_NO_PROMOTION_v0: NEGCONTROL_ONLY_NO_DISCHARGE"
+
+def emU1SmoothnessWeakeningNegcontrolBoundaryTokenV0 : String :=
+  "EM_U1_SMOOTHNESS_WEAKENING_NEGCONTROL_BOUNDARY_v0: NO_DISTRIBUTIONAL_OR_CURVED_SPACE_IMPORT"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -864,6 +896,29 @@ theorem em_u1_cycle018_theorem_attempt_harness_stub_v0 :
         smoothnessTag := "c2-regularity-required"
         localizationTag := "cycle18-artifacts-only"
         noPromotionTag := "attempt-only-no-discharge" } := by
+  repeat' constructor
+
+theorem em_u1_cycle019_token_binding_stub_v0 :
+    emU1SmoothnessWeakeningNegcontrolTokenV0 =
+      "EM_U1_PROGRESS_CYCLE19_v0: SMOOTHNESS_WEAKENING_NEGCONTROL_TOKEN_PINNED" ∧
+    emU1SmoothnessWeakeningNegcontrolRouteTokenV0 =
+      "EM_U1_SMOOTHNESS_WEAKENING_NEGCONTROL_ROUTE_v0: COMMUTATION_LICENSE_REMOVAL_BREAKS_ROUTE_PINNED" ∧
+    emU1SmoothnessWeakeningNegcontrolLocalizationGateTokenV0 =
+      "EM_U1_SMOOTHNESS_WEAKENING_NEGCONTROL_LOCALIZATION_GATE_v0: CYCLE19_ARTIFACTS_ONLY" ∧
+    emU1SmoothnessWeakeningNegcontrolNoPromotionTokenV0 =
+      "EM_U1_SMOOTHNESS_WEAKENING_NEGCONTROL_NO_PROMOTION_v0: NEGCONTROL_ONLY_NO_DISCHARGE" ∧
+    emU1SmoothnessWeakeningNegcontrolBoundaryTokenV0 =
+      "EM_U1_SMOOTHNESS_WEAKENING_NEGCONTROL_BOUNDARY_v0: NO_DISTRIBUTIONAL_OR_CURVED_SPACE_IMPORT" := by
+  repeat' constructor
+
+theorem em_u1_cycle019_negcontrol_harness_stub_v0 :
+    smoothnessWeakeningNegcontrolHarness
+      { sourceAssumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        smoothnessAssumptionId := "ASM-EM-U1-MATH-SMOOTH-01"
+        negcontrolRouteTag := "commutation-license-removal-breaks-route-pinned"
+        localizationTag := "cycle19-artifacts-only"
+        noPromotionTag := "negcontrol-only-no-discharge"
+        boundaryTag := "no-distributional-or-curved-space-import" } := by
   repeat' constructor
 
 end
