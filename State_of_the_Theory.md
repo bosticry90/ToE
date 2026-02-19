@@ -174,6 +174,27 @@ EM Cycle-007 import-lanes placeholders checkpoint (2026-02-18):
 - Scope boundary remains strict:
   - import-lane placeholders only, bounded and non-claim, no dynamics closure promotion and no constitutive/units/gauge-fixing import without explicit assumption IDs.
 
+EM Cycle-008 import-lanes interface-contracts checkpoint (2026-02-18):
+- Cycle-008 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-08-IMPORT-LANES-INTERFACE-CONTRACTS-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_08_IMPORT_LANES_INTERFACE_CONTRACTS_v0.md`
+- Import-lane interface-contract tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE8_v0: IMPORT_LANES_INTERFACE_CONTRACTS_TOKEN_PINNED`
+  - `EM_U1_IMPORT_LANES_INTERFACE_CONTRACTS_v0: THREE_LANE_INTERFACES_DEFINED`
+  - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+  - `EM_U1_IMPORT_LANES_INTERFACE_LOCALIZATION_GATE_v0: CYCLE7_CYCLE8_ARTIFACTS_ONLY`
+  - `EM_U1_IMPORT_LANES_INTERFACE_APPLICATION_HARNESS_v0: REFERENCE_ONLY_IMPORT_APPLICATION`
+  - `EM_U1_IMPORT_LANES_NO_DYNAMICS_v0: PLACEHOLDER_ONLY`
+  - `EM_U1_MICRO08_IMPORT_LANES_INTERFACE_ADJUDICATION: NOT_YET_DISCHARGED`
+- Cycle-008 assumptions remain explicit and unchanged:
+  - `ASM-EM-U1-PHY-CONSTITUTIVE-01`
+  - `ASM-EM-U1-PHY-UNITS-01`
+  - `ASM-EM-U1-PHY-GFIX-01`
+- Cycle-008 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro08_import_lanes_interface_contracts.py`
+- Scope boundary remains strict:
+  - import-lane interface contracts only, bounded and non-claim, no unit-system or gauge-selection claim, and no dynamics closure promotion.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.

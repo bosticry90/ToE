@@ -290,6 +290,35 @@ Cycle-007 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-008 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-08-IMPORT-LANES-INTERFACE-CONTRACTS-v0`
+   - scope:
+     - planning-only bounded import-lane interface-contract seams for constitutive/units/gauge-fixing attachments.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE8_v0: IMPORT_LANES_INTERFACE_CONTRACTS_TOKEN_PINNED`
+   - interface-contract token:
+     - `EM_U1_IMPORT_LANES_INTERFACE_CONTRACTS_v0: THREE_LANE_INTERFACES_DEFINED`
+   - no-selection token:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+   - localization gate token:
+     - `EM_U1_IMPORT_LANES_INTERFACE_LOCALIZATION_GATE_v0: CYCLE7_CYCLE8_ARTIFACTS_ONLY`
+   - interface-application harness token:
+     - `EM_U1_IMPORT_LANES_INTERFACE_APPLICATION_HARNESS_v0: REFERENCE_ONLY_IMPORT_APPLICATION`
+   - no-dynamics token:
+     - `EM_U1_IMPORT_LANES_NO_DYNAMICS_v0: PLACEHOLDER_ONLY`
+   - required import-lane assumption IDs:
+     - `ASM-EM-U1-PHY-CONSTITUTIVE-01`
+     - `ASM-EM-U1-PHY-UNITS-01`
+     - `ASM-EM-U1-PHY-GFIX-01`
+   - cycle adjudication token:
+     - `EM_U1_MICRO08_IMPORT_LANES_INTERFACE_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_08_IMPORT_LANES_INTERFACE_CONTRACTS_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro08_import_lanes_interface_contracts.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

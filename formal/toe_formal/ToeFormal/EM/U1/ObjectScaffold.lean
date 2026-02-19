@@ -34,6 +34,18 @@ structure FieldStrength where
 structure CurrentSource where
   component : SpaceTimeIndex → ℝ
 
+structure ConstitutiveImportInterface where
+  assumptionId : String
+  placeholderConstitutiveLane : String
+
+structure UnitsImportInterface where
+  assumptionId : String
+  placeholderUnitsLane : String
+
+structure GaugeFixingImportInterface where
+  assumptionId : String
+  placeholderGaugeFixingLane : String
+
 structure DifferentialBundle where
   partialVector : (SpaceTimeIndex → ℝ) → SpaceTimeIndex → SpaceTimeIndex → ℝ
   partialScalar : (SpaceTimeIndex → ℝ) → SpaceTimeIndex → ℝ
@@ -71,6 +83,14 @@ def gaugeInvarianceContractSurface
   ∀ μ ν : SpaceTimeIndex,
     (fieldStrengthOfPotential d (gaugeTransform d A χ)).component μ ν =
       (fieldStrengthOfPotential d A).component μ ν
+
+def importLaneInterfaceApplicationHarness
+    (constitutive : ConstitutiveImportInterface)
+    (units : UnitsImportInterface)
+    (gaugeFixing : GaugeFixingImportInterface) : Prop :=
+  constitutive.assumptionId = "ASM-EM-U1-PHY-CONSTITUTIVE-01" ∧
+    units.assumptionId = "ASM-EM-U1-PHY-UNITS-01" ∧
+      gaugeFixing.assumptionId = "ASM-EM-U1-PHY-GFIX-01"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -179,6 +199,21 @@ def emU1ImportLanesLocalizationGateTokenV0 : String :=
 def emU1ImportLanesNoDynamicsTokenV0 : String :=
   "EM_U1_IMPORT_LANES_NO_DYNAMICS_v0: PLACEHOLDER_ONLY"
 
+def emU1ImportLanesInterfaceContractsProgressTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE8_v0: IMPORT_LANES_INTERFACE_CONTRACTS_TOKEN_PINNED"
+
+def emU1ImportLanesInterfaceContractsTokenV0 : String :=
+  "EM_U1_IMPORT_LANES_INTERFACE_CONTRACTS_v0: THREE_LANE_INTERFACES_DEFINED"
+
+def emU1ImportLanesInterfaceNoSelectionTokenV0 : String :=
+  "EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION"
+
+def emU1ImportLanesInterfaceLocalizationGateTokenV0 : String :=
+  "EM_U1_IMPORT_LANES_INTERFACE_LOCALIZATION_GATE_v0: CYCLE7_CYCLE8_ARTIFACTS_ONLY"
+
+def emU1ImportLanesInterfaceApplicationHarnessTokenV0 : String :=
+  "EM_U1_IMPORT_LANES_INTERFACE_APPLICATION_HARNESS_v0: REFERENCE_ONLY_IMPORT_APPLICATION"
+
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
 
@@ -261,6 +296,29 @@ theorem em_u1_cycle007_token_binding_stub_v0 :
       "EM_U1_IMPORT_LANES_NO_DYNAMICS_v0: PLACEHOLDER_ONLY" ∧
     emU1NewPhysicsAssumptionIdGateTokenV0 =
       "EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle008_token_binding_stub_v0 :
+    emU1ImportLanesInterfaceContractsProgressTokenV0 =
+      "EM_U1_PROGRESS_CYCLE8_v0: IMPORT_LANES_INTERFACE_CONTRACTS_TOKEN_PINNED" ∧
+    emU1ImportLanesInterfaceContractsTokenV0 =
+      "EM_U1_IMPORT_LANES_INTERFACE_CONTRACTS_v0: THREE_LANE_INTERFACES_DEFINED" ∧
+    emU1ImportLanesInterfaceNoSelectionTokenV0 =
+      "EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION" ∧
+    emU1ImportLanesInterfaceLocalizationGateTokenV0 =
+      "EM_U1_IMPORT_LANES_INTERFACE_LOCALIZATION_GATE_v0: CYCLE7_CYCLE8_ARTIFACTS_ONLY" ∧
+    emU1ImportLanesInterfaceApplicationHarnessTokenV0 =
+      "EM_U1_IMPORT_LANES_INTERFACE_APPLICATION_HARNESS_v0: REFERENCE_ONLY_IMPORT_APPLICATION" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle008_import_lane_interface_harness_stub_v0 :
+    importLaneInterfaceApplicationHarness
+      { assumptionId := "ASM-EM-U1-PHY-CONSTITUTIVE-01"
+        placeholderConstitutiveLane := "D,H,eps,mu" }
+      { assumptionId := "ASM-EM-U1-PHY-UNITS-01"
+        placeholderUnitsLane := "SI|Gaussian|Heaviside-Lorentz|c=1" }
+      { assumptionId := "ASM-EM-U1-PHY-GFIX-01"
+        placeholderGaugeFixingLane := "Lorenz|Coulomb|temporal|axial|Feynman" } := by
   repeat' constructor <;> rfl
 
 end U1
