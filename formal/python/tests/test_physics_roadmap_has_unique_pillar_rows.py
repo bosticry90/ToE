@@ -16,6 +16,15 @@ def find_repo_root(start: Path) -> Path:
 
 REPO_ROOT = find_repo_root(Path(__file__))
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+EXPECTED_PILLAR_SET = {
+    "PILLAR-GR",
+    "PILLAR-QM",
+    "PILLAR-EM",
+    "PILLAR-SR",
+    "PILLAR-QFT",
+    "PILLAR-STAT",
+    "PILLAR-COSMO",
+}
 
 
 def _read(path: Path) -> str:
@@ -44,3 +53,13 @@ def test_physics_roadmap_has_unique_pillar_rows() -> None:
         + ", ".join(f"{pillar} (x{counts[pillar]})" for pillar in duplicates)
     )
 
+
+def test_physics_roadmap_has_expected_pillar_set() -> None:
+    text = _read(ROADMAP_PATH)
+    actual_set = set(_pillar_rows(text))
+    missing = sorted(EXPECTED_PILLAR_SET - actual_set)
+    unexpected = sorted(actual_set - EXPECTED_PILLAR_SET)
+    assert not missing and not unexpected, (
+        "PHYSICS_ROADMAP_v0.md pillar set drift detected. "
+        f"missing={missing} unexpected={unexpected}"
+    )
