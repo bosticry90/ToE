@@ -439,6 +439,18 @@ EM Cycle-018 Maxwell-to-continuity theorem-attempt package checkpoint (2026-02-1
   - `formal/python/tests/test_em_u1_micro18_maxwell_to_continuity_theorem_attempt_package.py`
 - Scope boundary remains strict:
   - theorem-attempt package statements only, bounded and non-claim, no theorem/discharge promotion claim, and no units/gauge/constitutive selection claim.
+- Publish receipt:
+  - commit: `8468e94` (`EM U1 Micro-18: Maxwell-to-continuity theorem-attempt package v0`)
+  - tag: `em-u1-micro18-maxwell-to-continuity-theorem-attempt-package-v0`
+  - remote sync: `origin/main` updated and tag published.
+
+EM Cycle-019 queued direction checkpoint (2026-02-19):
+- Selected queue lane:
+  - `counterexample/neg-control`
+- Queue intent:
+  - bounded non-promotional failure-taxonomy/control package,
+  - explicit negative-control surfaces for continuity-route fragility when assumptions are weakened,
+  - no theorem promotion/discharge authorization in queue posture.
 
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
