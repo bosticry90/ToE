@@ -362,6 +362,33 @@ EM Cycle-015 continuity-surface compatibility seam checkpoint (2026-02-19):
 - Scope boundary remains strict:
   - continuity statements only, bounded and non-claim, no derivation/promotion claim, and no units/gauge/constitutive selection claim.
 
+EM Cycle-016 Maxwell-to-continuity route attempt-package checkpoint (2026-02-19):
+- Cycle-016 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-16-MAXWELL-TO-CONTINUITY-ROUTE-ATTEMPT-PACKAGE-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_16_MAXWELL_TO_CONTINUITY_ROUTE_ATTEMPT_PACKAGE_v0.md`
+- Maxwell-to-continuity route tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE16_v0: MAXWELL_TO_CONTINUITY_ROUTE_TOKEN_PINNED`
+  - `EM_U1_MAXWELL_CONTINUITY_ROUTE_v0: DIVERGENCE_OF_INHOM_SURFACE_ROUTE_PINNED`
+  - `EM_U1_MAXWELL_CONTINUITY_LOCALIZATION_GATE_v0: CYCLE16_ARTIFACTS_ONLY`
+  - `EM_U1_MAXWELL_CONTINUITY_NO_DERIVATION_v0: ATTEMPT_PACKAGE_ONLY`
+  - `EM_U1_MAXWELL_CONTINUITY_MATH_REGULARITY_SEAM_v0: COMMUTING_PARTIALS_REQUIRED`
+  - `EM_U1_MICRO16_MAXWELL_CONTINUITY_ADJUDICATION: NOT_YET_DISCHARGED`
+- Source/convention prerequisites remain explicit:
+  - `ASM-EM-U1-PHY-SOURCE-01`
+  - `EM_U1_MAXWELL_TENSOR_SURFACE_v0: INHOM_HOM_STATEMENTS_PINNED`
+  - `EM_U1_AF_BRIDGE_TENSOR_v0: F_MUNU_FROM_A_SEAM_PINNED`
+  - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+  - `EM_U1_INDEX_METRIC_RAISE_LOWER_SURFACE_v0: F_INDEX_POSITION_CONTRACT_PINNED`
+  - `EM_U1_CURRENT_DECOMPOSITION_SURFACE_v0: JMU_RHOJ_SEAM_PINNED`
+  - `EM_U1_CONTINUITY_TENSOR_SURFACE_v0: DIVERGENCE_CURRENT_STATEMENT_PINNED`
+  - `EM_U1_CONTINUITY_SPLIT_SURFACE_v0: DT_RHO_PLUS_DIVJ_STATEMENT_PINNED`
+  - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+  - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+- Cycle-016 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro16_maxwell_to_continuity_route_attempt_package.py`
+- Scope boundary remains strict:
+  - route-attempt statements only, bounded and non-claim, no derivation/promotion claim, and no units/gauge/constitutive selection claim.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.

@@ -76,6 +76,12 @@ structure ContinuitySurfaceCompatibilitySeam where
   splitContinuityTag : String
   localizationTag : String
 
+structure MaxwellToContinuityRouteAttemptPackage where
+  assumptionId : String
+  routeTag : String
+  regularityTag : String
+  localizationTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -211,6 +217,13 @@ def continuitySurfaceCompatibilityHarness
     surface.tensorContinuityTag = "divergence-current-statement-pinned" ∧
       surface.splitContinuityTag = "dt-rho-plus-divj-statement-pinned" ∧
         surface.localizationTag = "cycle15-artifacts-only"
+
+def maxwellToContinuityRouteHarness
+    (route : MaxwellToContinuityRouteAttemptPackage) : Prop :=
+  route.assumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    route.routeTag = "divergence-of-inhom-surface-route-pinned" ∧
+      route.regularityTag = "commuting-partials-required" ∧
+        route.localizationTag = "cycle16-artifacts-only"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -444,6 +457,21 @@ def emU1ContinuityLocalizationGateTokenV0 : String :=
 
 def emU1ContinuityNoDerivationTokenV0 : String :=
   "EM_U1_CONTINUITY_NO_DERIVATION_v0: STATEMENT_ONLY"
+
+def emU1MaxwellToContinuityRouteTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE16_v0: MAXWELL_TO_CONTINUITY_ROUTE_TOKEN_PINNED"
+
+def emU1MaxwellContinuityRouteTokenV0 : String :=
+  "EM_U1_MAXWELL_CONTINUITY_ROUTE_v0: DIVERGENCE_OF_INHOM_SURFACE_ROUTE_PINNED"
+
+def emU1MaxwellContinuityLocalizationGateTokenV0 : String :=
+  "EM_U1_MAXWELL_CONTINUITY_LOCALIZATION_GATE_v0: CYCLE16_ARTIFACTS_ONLY"
+
+def emU1MaxwellContinuityNoDerivationTokenV0 : String :=
+  "EM_U1_MAXWELL_CONTINUITY_NO_DERIVATION_v0: ATTEMPT_PACKAGE_ONLY"
+
+def emU1MaxwellContinuityMathRegularitySeamTokenV0 : String :=
+  "EM_U1_MAXWELL_CONTINUITY_MATH_REGULARITY_SEAM_v0: COMMUTING_PARTIALS_REQUIRED"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -703,6 +731,27 @@ theorem em_u1_cycle015_continuity_surface_harness_stub_v0 :
         tensorContinuityTag := "divergence-current-statement-pinned"
         splitContinuityTag := "dt-rho-plus-divj-statement-pinned"
         localizationTag := "cycle15-artifacts-only" } := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle016_token_binding_stub_v0 :
+    emU1MaxwellToContinuityRouteTokenV0 =
+      "EM_U1_PROGRESS_CYCLE16_v0: MAXWELL_TO_CONTINUITY_ROUTE_TOKEN_PINNED" ∧
+    emU1MaxwellContinuityRouteTokenV0 =
+      "EM_U1_MAXWELL_CONTINUITY_ROUTE_v0: DIVERGENCE_OF_INHOM_SURFACE_ROUTE_PINNED" ∧
+    emU1MaxwellContinuityLocalizationGateTokenV0 =
+      "EM_U1_MAXWELL_CONTINUITY_LOCALIZATION_GATE_v0: CYCLE16_ARTIFACTS_ONLY" ∧
+    emU1MaxwellContinuityNoDerivationTokenV0 =
+      "EM_U1_MAXWELL_CONTINUITY_NO_DERIVATION_v0: ATTEMPT_PACKAGE_ONLY" ∧
+    emU1MaxwellContinuityMathRegularitySeamTokenV0 =
+      "EM_U1_MAXWELL_CONTINUITY_MATH_REGULARITY_SEAM_v0: COMMUTING_PARTIALS_REQUIRED" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle016_route_harness_stub_v0 :
+    maxwellToContinuityRouteHarness
+      { assumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        routeTag := "divergence-of-inhom-surface-route-pinned"
+        regularityTag := "commuting-partials-required"
+        localizationTag := "cycle16-artifacts-only" } := by
   repeat' constructor <;> rfl
 
 end U1
