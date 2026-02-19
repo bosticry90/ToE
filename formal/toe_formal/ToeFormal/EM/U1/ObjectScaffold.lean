@@ -34,6 +34,15 @@ structure FieldStrength where
 structure CurrentSource where
   component : SpaceTimeIndex → ℝ
 
+structure CovariantCurrent where
+  component : SpaceTimeIndex → ℝ
+
+structure SourceSplitInterface where
+  assumptionId : String
+  rhoCarrierTag : String
+  spatialCurrentCarrierTag : String
+  continuityConstraintTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -115,6 +124,13 @@ def dualHodgeConventionHarness : Prop :=
   epsilon.orientationTag = "epsilon^0123=+1" ∧
     epsilon.normalizationTag = "levi-civita-fixed" ∧
     star.conventionTag = "starstar-sign-fixed-under-signature"
+
+def continuityPredicate (_J : CovariantCurrent) : Prop := True
+
+def sourceInterfaceApplicationHarness
+    (source : SourceSplitInterface) : Prop :=
+  source.assumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    source.continuityConstraintTag = "optional-interface-constraint-only"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -256,6 +272,24 @@ def emU1DualHodgeLocalizationGateTokenV0 : String :=
 def emU1DualHodgeNoDynamicsTokenV0 : String :=
   "EM_U1_DUAL_HODGE_NO_DYNAMICS_v0: CONVENTION_LOCK_ONLY"
 
+def emU1SourceCurrentInterfaceTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE10_v0: SOURCE_CURRENT_INTERFACE_TOKEN_PINNED"
+
+def emU1SourceObjectConventionTokenV0 : String :=
+  "EM_U1_SOURCE_OBJECT_CONVENTION_v0: CURRENT_OBJECT_DEFINED"
+
+def emU1SourceSplitConventionTokenV0 : String :=
+  "EM_U1_SOURCE_SPLIT_CONVENTION_v0: RHO_J_SPLIT_SEAM_DEFINED"
+
+def emU1SourceContinuityPredicateTokenV0 : String :=
+  "EM_U1_SOURCE_CONTINUITY_PREDICATE_v0: OPTIONAL_INTERFACE_CONSTRAINT_ONLY"
+
+def emU1SourceLocalizationGateTokenV0 : String :=
+  "EM_U1_SOURCE_LOCALIZATION_GATE_v0: CYCLE10_ARTIFACTS_ONLY"
+
+def emU1SourceNoDynamicsTokenV0 : String :=
+  "EM_U1_SOURCE_NO_DYNAMICS_v0: INTERFACE_ONLY"
+
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
 
@@ -381,6 +415,33 @@ theorem em_u1_cycle009_token_binding_stub_v0 :
 theorem em_u1_cycle009_dual_hodge_harness_stub_v0 :
     dualHodgeConventionHarness := by
   simp [dualHodgeConventionHarness]
+
+theorem em_u1_cycle010_token_binding_stub_v0 :
+    emU1SourceCurrentInterfaceTokenV0 =
+      "EM_U1_PROGRESS_CYCLE10_v0: SOURCE_CURRENT_INTERFACE_TOKEN_PINNED" ∧
+    emU1SourceObjectConventionTokenV0 =
+      "EM_U1_SOURCE_OBJECT_CONVENTION_v0: CURRENT_OBJECT_DEFINED" ∧
+    emU1SourceSplitConventionTokenV0 =
+      "EM_U1_SOURCE_SPLIT_CONVENTION_v0: RHO_J_SPLIT_SEAM_DEFINED" ∧
+    emU1SourceContinuityPredicateTokenV0 =
+      "EM_U1_SOURCE_CONTINUITY_PREDICATE_v0: OPTIONAL_INTERFACE_CONSTRAINT_ONLY" ∧
+    emU1SourceLocalizationGateTokenV0 =
+      "EM_U1_SOURCE_LOCALIZATION_GATE_v0: CYCLE10_ARTIFACTS_ONLY" ∧
+    emU1SourceNoDynamicsTokenV0 =
+      "EM_U1_SOURCE_NO_DYNAMICS_v0: INTERFACE_ONLY" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle010_source_interface_harness_stub_v0 :
+    sourceInterfaceApplicationHarness
+      { assumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        rhoCarrierTag := "rho"
+        spatialCurrentCarrierTag := "j"
+        continuityConstraintTag := "optional-interface-constraint-only" } := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle010_continuity_predicate_stub_v0 :
+    continuityPredicate { component := fun _ => 0 } := by
+  trivial
 
 end U1
 end EM

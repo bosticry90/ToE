@@ -215,6 +215,26 @@ EM Cycle-009 dual/hodge convention-lock checkpoint (2026-02-18):
 - Scope boundary remains strict:
   - dual/epsilon/Hodge conventions only, bounded and non-claim, no Maxwell equation closure claims, and no dynamics promotion.
 
+EM Cycle-010 source/current interface-contracts checkpoint (2026-02-18):
+- Cycle-010 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-10-SOURCE-CURRENT-INTERFACE-CONTRACTS-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_10_SOURCE_CURRENT_INTERFACE_CONTRACTS_v0.md`
+- Source/current interface tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE10_v0: SOURCE_CURRENT_INTERFACE_TOKEN_PINNED`
+  - `EM_U1_SOURCE_OBJECT_CONVENTION_v0: CURRENT_OBJECT_DEFINED`
+  - `EM_U1_SOURCE_SPLIT_CONVENTION_v0: RHO_J_SPLIT_SEAM_DEFINED`
+  - `EM_U1_SOURCE_CONTINUITY_PREDICATE_v0: OPTIONAL_INTERFACE_CONSTRAINT_ONLY`
+  - `EM_U1_SOURCE_LOCALIZATION_GATE_v0: CYCLE10_ARTIFACTS_ONLY`
+  - `EM_U1_SOURCE_NO_DYNAMICS_v0: INTERFACE_ONLY`
+  - `EM_U1_MICRO10_SOURCE_CURRENT_ADJUDICATION: NOT_YET_DISCHARGED`
+- Source/current assumption-ID gating is explicit:
+  - `ASM-EM-U1-PHY-SOURCE-01`
+  - pointer: `formal/docs/paper/ASSUMPTION_REGISTRY_v1.md`
+- Cycle-010 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro10_source_current_interface_contracts.py`
+- Scope boundary remains strict:
+  - source/current interface seams only, bounded and non-claim, no source-equation law claim, and no dynamics promotion.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.

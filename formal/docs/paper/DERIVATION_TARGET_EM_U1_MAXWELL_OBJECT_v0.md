@@ -347,6 +347,33 @@ Cycle-009 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-010 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-10-SOURCE-CURRENT-INTERFACE-CONTRACTS-v0`
+   - scope:
+     - planning-only bounded source/current interface seams with optional continuity predicate contract only.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE10_v0: SOURCE_CURRENT_INTERFACE_TOKEN_PINNED`
+   - source-object convention token:
+     - `EM_U1_SOURCE_OBJECT_CONVENTION_v0: CURRENT_OBJECT_DEFINED`
+   - source-split convention token:
+     - `EM_U1_SOURCE_SPLIT_CONVENTION_v0: RHO_J_SPLIT_SEAM_DEFINED`
+   - continuity predicate token:
+     - `EM_U1_SOURCE_CONTINUITY_PREDICATE_v0: OPTIONAL_INTERFACE_CONSTRAINT_ONLY`
+   - localization gate token:
+     - `EM_U1_SOURCE_LOCALIZATION_GATE_v0: CYCLE10_ARTIFACTS_ONLY`
+   - no-dynamics token:
+     - `EM_U1_SOURCE_NO_DYNAMICS_v0: INTERFACE_ONLY`
+   - required source assumption ID:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+   - cycle adjudication token:
+     - `EM_U1_MICRO10_SOURCE_CURRENT_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_10_SOURCE_CURRENT_INTERFACE_CONTRACTS_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro10_source_current_interface_contracts.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 
