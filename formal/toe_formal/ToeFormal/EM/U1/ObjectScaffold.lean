@@ -140,6 +140,15 @@ structure DistributionalReferenceSurfacePackage where
   noPromotionTag : String
   boundaryTag : String
 
+structure MaxwellToContinuityRouteClosureAttemptPackage where
+  sourceAssumptionId : String
+  smoothnessAssumptionId : String
+  distributionalAssumptionId : String
+  routeClosureTag : String
+  localizationTag : String
+  noPromotionTag : String
+  boundaryTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -347,6 +356,16 @@ def distributionalReferenceSurfaceHarness
           pkg.localizationTag = "cycle23-artifacts-only" ∧
             pkg.noPromotionTag = "reference-only-no-discharge" ∧
               pkg.boundaryTag = "no-distributional-math-or-curved-space-import"
+
+def maxwellToContinuityRouteClosureAttemptHarness
+    (pkg : MaxwellToContinuityRouteClosureAttemptPackage) : Prop :=
+  pkg.sourceAssumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    pkg.smoothnessAssumptionId = "ASM-EM-U1-MATH-SMOOTH-01" ∧
+      pkg.distributionalAssumptionId = "ASM-EM-U1-MATH-DISTRIB-01" ∧
+        pkg.routeClosureTag = "canonical-route-closure-attempt-pinned" ∧
+          pkg.localizationTag = "cycle24-artifacts-only" ∧
+            pkg.noPromotionTag = "attempt-only-no-discharge" ∧
+              pkg.boundaryTag = "no-full-derivation-discharge-or-inevitability-promotion"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -703,6 +722,21 @@ def emU1DistributionalReferenceSurfaceNoPromotionTokenV0 : String :=
 
 def emU1DistributionalReferenceSurfaceBoundaryTokenV0 : String :=
   "EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_BOUNDARY_v0: NO_DISTRIBUTIONAL_MATH_OR_CURVED_SPACE_IMPORT"
+
+def emU1MaxwellToContinuityRouteClosureAttemptTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE24_v0: MAXWELL_TO_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_TOKEN_PINNED"
+
+def emU1MaxwellToContinuityRouteClosureRouteTokenV0 : String :=
+  "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_v0: CANONICAL_ROUTE_CLOSURE_ATTEMPT_PINNED"
+
+def emU1MaxwellToContinuityRouteClosureLocalizationGateTokenV0 : String :=
+  "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_LOCALIZATION_GATE_v0: CYCLE24_ARTIFACTS_ONLY"
+
+def emU1MaxwellToContinuityRouteClosureNoPromotionTokenV0 : String :=
+  "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE"
+
+def emU1MaxwellToContinuityRouteClosureBoundaryTokenV0 : String :=
+  "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -1148,6 +1182,30 @@ theorem em_u1_cycle023_reference_surface_harness_stub_v0 :
         localizationTag := "cycle23-artifacts-only"
         noPromotionTag := "reference-only-no-discharge"
         boundaryTag := "no-distributional-math-or-curved-space-import" } := by
+  repeat' constructor
+
+theorem em_u1_cycle024_token_binding_stub_v0 :
+    emU1MaxwellToContinuityRouteClosureAttemptTokenV0 =
+      "EM_U1_PROGRESS_CYCLE24_v0: MAXWELL_TO_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_TOKEN_PINNED" ∧
+    emU1MaxwellToContinuityRouteClosureRouteTokenV0 =
+      "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_v0: CANONICAL_ROUTE_CLOSURE_ATTEMPT_PINNED" ∧
+    emU1MaxwellToContinuityRouteClosureLocalizationGateTokenV0 =
+      "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_LOCALIZATION_GATE_v0: CYCLE24_ARTIFACTS_ONLY" ∧
+    emU1MaxwellToContinuityRouteClosureNoPromotionTokenV0 =
+      "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE" ∧
+    emU1MaxwellToContinuityRouteClosureBoundaryTokenV0 =
+      "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION" := by
+  repeat' constructor
+
+theorem em_u1_cycle024_route_closure_harness_stub_v0 :
+    maxwellToContinuityRouteClosureAttemptHarness
+      { sourceAssumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        smoothnessAssumptionId := "ASM-EM-U1-MATH-SMOOTH-01"
+        distributionalAssumptionId := "ASM-EM-U1-MATH-DISTRIB-01"
+        routeClosureTag := "canonical-route-closure-attempt-pinned"
+        localizationTag := "cycle24-artifacts-only"
+        noPromotionTag := "attempt-only-no-discharge"
+        boundaryTag := "no-full-derivation-discharge-or-inevitability-promotion" } := by
   repeat' constructor
 
 end
