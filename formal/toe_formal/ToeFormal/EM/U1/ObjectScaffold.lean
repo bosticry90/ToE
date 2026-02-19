@@ -51,6 +51,12 @@ structure MaxwellFormsStatementSurface where
   homogeneousStatementTag : String
   inhomogeneousStatementTag : String
 
+structure PotentialFieldStrengthBridge where
+  assumptionId : String
+  formsBridgeTag : String
+  tensorBridgeTag : String
+  bianchiSeamTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -149,6 +155,21 @@ def maxwellEquationStatementSurfaceHarness
       forms.homogeneousStatementTag = "forms-homogeneous-statement-pinned" ∧
         forms.inhomogeneousStatementTag = "forms-inhomogeneous-statement-pinned" ∧
           sourceAssumptionId = "ASM-EM-U1-PHY-SOURCE-01"
+
+def fieldStrengthFromPotentialForms (_A : GaugePotential) : FieldStrength :=
+  { component := fun _ _ => 0 }
+
+def fieldStrengthFromPotentialTensor
+    (d : DifferentialBundle)
+    (A : GaugePotential) : FieldStrength :=
+  fieldStrengthOfPotential d A
+
+def afBridgeHarness
+    (bridge : PotentialFieldStrengthBridge) : Prop :=
+  bridge.assumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    bridge.formsBridgeTag = "F:=dA-seam-pinned" ∧
+      bridge.tensorBridgeTag = "Fmunu-from-A-seam-pinned" ∧
+        bridge.bianchiSeamTag = "homog-equation-seam-pinned"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -323,6 +344,24 @@ def emU1MaxwellSurfaceLocalizationGateTokenV0 : String :=
 def emU1MaxwellSurfaceNoDerivationTokenV0 : String :=
   "EM_U1_MAXWELL_SURFACE_NO_DERIVATION_v0: STATEMENT_ONLY"
 
+def emU1PotentialFieldStrengthBridgeTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE12_v0: POTENTIAL_FIELDSTRENGTH_BRIDGE_TOKEN_PINNED"
+
+def emU1AFBridgeFormsTokenV0 : String :=
+  "EM_U1_AF_BRIDGE_FORMS_v0: F_EQUALS_DA_SEAM_PINNED"
+
+def emU1AFBridgeTensorTokenV0 : String :=
+  "EM_U1_AF_BRIDGE_TENSOR_v0: F_MUNU_FROM_A_SEAM_PINNED"
+
+def emU1BianchiSurfaceTokenV0 : String :=
+  "EM_U1_BIANCHI_SURFACE_v0: HOMOG_EQUATION_SEAM_PINNED"
+
+def emU1AFBridgeLocalizationGateTokenV0 : String :=
+  "EM_U1_AF_BRIDGE_LOCALIZATION_GATE_v0: CYCLE12_ARTIFACTS_ONLY"
+
+def emU1AFBridgeNoDerivationTokenV0 : String :=
+  "EM_U1_AF_BRIDGE_NO_DERIVATION_v0: DEFINITION_ONLY"
+
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
 
@@ -496,6 +535,29 @@ theorem em_u1_cycle011_statement_surface_harness_stub_v0 :
       { homogeneousStatementTag := "forms-homogeneous-statement-pinned"
         inhomogeneousStatementTag := "forms-inhomogeneous-statement-pinned" }
       "ASM-EM-U1-PHY-SOURCE-01" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle012_token_binding_stub_v0 :
+    emU1PotentialFieldStrengthBridgeTokenV0 =
+      "EM_U1_PROGRESS_CYCLE12_v0: POTENTIAL_FIELDSTRENGTH_BRIDGE_TOKEN_PINNED" ∧
+    emU1AFBridgeFormsTokenV0 =
+      "EM_U1_AF_BRIDGE_FORMS_v0: F_EQUALS_DA_SEAM_PINNED" ∧
+    emU1AFBridgeTensorTokenV0 =
+      "EM_U1_AF_BRIDGE_TENSOR_v0: F_MUNU_FROM_A_SEAM_PINNED" ∧
+    emU1BianchiSurfaceTokenV0 =
+      "EM_U1_BIANCHI_SURFACE_v0: HOMOG_EQUATION_SEAM_PINNED" ∧
+    emU1AFBridgeLocalizationGateTokenV0 =
+      "EM_U1_AF_BRIDGE_LOCALIZATION_GATE_v0: CYCLE12_ARTIFACTS_ONLY" ∧
+    emU1AFBridgeNoDerivationTokenV0 =
+      "EM_U1_AF_BRIDGE_NO_DERIVATION_v0: DEFINITION_ONLY" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle012_af_bridge_harness_stub_v0 :
+    afBridgeHarness
+      { assumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        formsBridgeTag := "F:=dA-seam-pinned"
+        tensorBridgeTag := "Fmunu-from-A-seam-pinned"
+        bianchiSeamTag := "homog-equation-seam-pinned" } := by
   repeat' constructor <;> rfl
 
 end U1

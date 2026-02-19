@@ -403,6 +403,40 @@ Cycle-011 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-012 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-12-POTENTIAL-FIELDSTRENGTH-BRIDGE-LOCK-v0`
+   - scope:
+     - planning-only bounded potential/field-strength definition bridge lock in forms/tensor notation.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE12_v0: POTENTIAL_FIELDSTRENGTH_BRIDGE_TOKEN_PINNED`
+   - forms bridge token:
+     - `EM_U1_AF_BRIDGE_FORMS_v0: F_EQUALS_DA_SEAM_PINNED`
+   - tensor bridge token:
+     - `EM_U1_AF_BRIDGE_TENSOR_v0: F_MUNU_FROM_A_SEAM_PINNED`
+   - Bianchi seam token:
+     - `EM_U1_BIANCHI_SURFACE_v0: HOMOG_EQUATION_SEAM_PINNED`
+   - localization gate token:
+     - `EM_U1_AF_BRIDGE_LOCALIZATION_GATE_v0: CYCLE12_ARTIFACTS_ONLY`
+   - no-derivation gate token:
+     - `EM_U1_AF_BRIDGE_NO_DERIVATION_v0: DEFINITION_ONLY`
+   - required source assumption ID:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+   - required convention prerequisite tokens:
+     - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+     - `EM_U1_CONVENTION_LOCK_EB_v0: E_B_SIGN_AND_EPSILON_FIXED`
+     - `EM_U1_HODGE_STAR_CONVENTION_v0: STARSTAR_SIGN_FIXED_UNDER_SIGNATURE`
+   - required non-selection policy tokens:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO12_AF_BRIDGE_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_12_POTENTIAL_FIELDSTRENGTH_BRIDGE_LOCK_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro12_potential_fieldstrength_bridge_lock.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

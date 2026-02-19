@@ -256,6 +256,33 @@ EM Cycle-011 Maxwell equation statement-surfaces checkpoint (2026-02-19):
 - Scope boundary remains strict:
   - Maxwell equation statements only, bounded and non-claim, no derivation/promotion claim, and no units/gauge/constitutive selection claim.
 
+EM Cycle-012 potential/field-strength bridge-lock checkpoint (2026-02-19):
+- Cycle-012 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-12-POTENTIAL-FIELDSTRENGTH-BRIDGE-LOCK-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_12_POTENTIAL_FIELDSTRENGTH_BRIDGE_LOCK_v0.md`
+- A↔F bridge-lock tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE12_v0: POTENTIAL_FIELDSTRENGTH_BRIDGE_TOKEN_PINNED`
+  - `EM_U1_AF_BRIDGE_FORMS_v0: F_EQUALS_DA_SEAM_PINNED`
+  - `EM_U1_AF_BRIDGE_TENSOR_v0: F_MUNU_FROM_A_SEAM_PINNED`
+  - `EM_U1_BIANCHI_SURFACE_v0: HOMOG_EQUATION_SEAM_PINNED`
+  - `EM_U1_AF_BRIDGE_LOCALIZATION_GATE_v0: CYCLE12_ARTIFACTS_ONLY`
+  - `EM_U1_AF_BRIDGE_NO_DERIVATION_v0: DEFINITION_ONLY`
+  - `EM_U1_MICRO12_AF_BRIDGE_ADJUDICATION: NOT_YET_DISCHARGED`
+- Definition seams are explicit and localized:
+  - `F := dA`
+  - `F_{μν} := ∂_μ A_ν − ∂_ν A_μ`
+- Source/convention prerequisites remain explicit:
+  - `ASM-EM-U1-PHY-SOURCE-01`
+  - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+  - `EM_U1_CONVENTION_LOCK_EB_v0: E_B_SIGN_AND_EPSILON_FIXED`
+  - `EM_U1_HODGE_STAR_CONVENTION_v0: STARSTAR_SIGN_FIXED_UNDER_SIGNATURE`
+  - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+  - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+- Cycle-012 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro12_potential_fieldstrength_bridge_lock.py`
+- Scope boundary remains strict:
+  - potential/field-strength bridge definitions only, bounded and non-claim, no derivation/promotion claim, and no units/gauge/constitutive selection claim.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.
