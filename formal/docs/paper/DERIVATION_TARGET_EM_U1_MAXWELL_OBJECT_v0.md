@@ -864,6 +864,45 @@ Cycle-024 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem/discharge/inevitability promotion authorized.
 
+Cycle-025 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-25-DOUBLE-DIVERGENCE-THEOREM-CLOSURE-ATTEMPT-v0`
+   - scope:
+     - planning-only bounded double-divergence theorem-closure attempt package (non-claim).
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE25_v0: DOUBLE_DIVERGENCE_THEOREM_CLOSURE_ATTEMPT_TOKEN_PINNED`
+   - theorem-closure route token:
+     - `EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_ROUTE_v0: ANTISYM_COMMUTATION_THEOREM_SURFACE_PINNED`
+   - localization gate token:
+     - `EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_LOCALIZATION_GATE_v0: CYCLE25_ARTIFACTS_ONLY`
+   - no-promotion gate token:
+     - `EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+   - boundary guard token:
+     - `EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_PROMOTION`
+   - required source/smoothness/distributional assumption IDs:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+     - `ASM-EM-U1-MATH-SMOOTH-01`
+     - `ASM-EM-U1-MATH-DISTRIB-01`
+   - required prerequisite chain tokens:
+     - `EM_U1_DOUBLE_DIVERGENCE_SURFACE_v0: DD_F_ZERO_STATEMENT_PINNED`
+     - `EM_U1_ANTISYM_SURFACE_v0: F_ANTISYM_STATEMENT_PINNED`
+     - `EM_U1_COMMUTING_PARTIALS_SURFACE_v0: COMMUTATION_STATEMENT_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_THEOREM_ROUTE_v0: DIVERGENCE_ANTISYM_COMMUTATION_ATTEMPT_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_v0: CANONICAL_ROUTE_CLOSURE_ATTEMPT_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_ROUTE_v0: ASSUMPTION_ID_GATED_IMPORT_PERMISSION_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_ROUTE_v0: CLASSIFICATION_SURFACES_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_ROUTE_v0: REFERENCE_ONLY_SEMANTICS_PINNED`
+   - required non-selection policy tokens:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO25_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_25_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_ATTEMPT_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro25_double_divergence_theorem_closure_attempt.py`
+   - posture:
+     - planning-only/non-claim and no theorem/discharge/full-derivation promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

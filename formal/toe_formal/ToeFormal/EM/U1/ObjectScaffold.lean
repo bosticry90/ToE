@@ -149,6 +149,15 @@ structure MaxwellToContinuityRouteClosureAttemptPackage where
   noPromotionTag : String
   boundaryTag : String
 
+structure DoubleDivergenceTheoremClosureAttemptPackage where
+  sourceAssumptionId : String
+  smoothnessAssumptionId : String
+  distributionalAssumptionId : String
+  theoremClosureRouteTag : String
+  localizationTag : String
+  noPromotionTag : String
+  boundaryTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -366,6 +375,34 @@ def maxwellToContinuityRouteClosureAttemptHarness
           pkg.localizationTag = "cycle24-artifacts-only" ∧
             pkg.noPromotionTag = "attempt-only-no-discharge" ∧
               pkg.boundaryTag = "no-full-derivation-discharge-or-inevitability-promotion"
+
+def doubleDivergenceTheoremClosureAttemptHarness
+    (pkg : DoubleDivergenceTheoremClosureAttemptPackage) : Prop :=
+  pkg.sourceAssumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    pkg.smoothnessAssumptionId = "ASM-EM-U1-MATH-SMOOTH-01" ∧
+      pkg.distributionalAssumptionId = "ASM-EM-U1-MATH-DISTRIB-01" ∧
+        pkg.theoremClosureRouteTag = "antisym-commutation-theorem-surface-pinned" ∧
+          pkg.localizationTag = "cycle25-artifacts-only" ∧
+            pkg.noPromotionTag = "attempt-only-no-discharge" ∧
+              pkg.boundaryTag = "no-full-derivation-discharge-or-promotion"
+
+theorem em_u1_cycle025_double_divergence_zero_of_antisymmetry_and_commuting_partials_v0
+    (dd : SpaceTimeIndex → SpaceTimeIndex → ℝ)
+    (hComm : ∀ μ ν, dd μ ν = dd ν μ)
+    (hAntisym : ∀ μ ν, dd μ ν = -dd ν μ) :
+    ∀ μ ν, dd μ ν = 0 := by
+  intro μ ν
+  have hneg : dd μ ν = -dd μ ν := by
+    calc
+      dd μ ν = -dd ν μ := hAntisym μ ν
+      _ = -dd μ ν := by rw [hComm ν μ]
+  have hsum : dd μ ν + dd μ ν = 0 := by
+    linarith [hneg]
+  have htwo : (2 : ℝ) * dd μ ν = 0 := by
+    nlinarith [hsum]
+  have h2 : (2 : ℝ) ≠ 0 := by
+    norm_num
+  exact (mul_eq_zero.mp htwo).resolve_left h2
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -737,6 +774,21 @@ def emU1MaxwellToContinuityRouteClosureNoPromotionTokenV0 : String :=
 
 def emU1MaxwellToContinuityRouteClosureBoundaryTokenV0 : String :=
   "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION"
+
+def emU1DoubleDivergenceTheoremClosureAttemptTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE25_v0: DOUBLE_DIVERGENCE_THEOREM_CLOSURE_ATTEMPT_TOKEN_PINNED"
+
+def emU1DoubleDivergenceTheoremClosureRouteTokenV0 : String :=
+  "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_ROUTE_v0: ANTISYM_COMMUTATION_THEOREM_SURFACE_PINNED"
+
+def emU1DoubleDivergenceTheoremClosureLocalizationGateTokenV0 : String :=
+  "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_LOCALIZATION_GATE_v0: CYCLE25_ARTIFACTS_ONLY"
+
+def emU1DoubleDivergenceTheoremClosureNoPromotionTokenV0 : String :=
+  "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE"
+
+def emU1DoubleDivergenceTheoremClosureBoundaryTokenV0 : String :=
+  "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_PROMOTION"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -1206,6 +1258,30 @@ theorem em_u1_cycle024_route_closure_harness_stub_v0 :
         localizationTag := "cycle24-artifacts-only"
         noPromotionTag := "attempt-only-no-discharge"
         boundaryTag := "no-full-derivation-discharge-or-inevitability-promotion" } := by
+  repeat' constructor
+
+theorem em_u1_cycle025_token_binding_stub_v0 :
+    emU1DoubleDivergenceTheoremClosureAttemptTokenV0 =
+      "EM_U1_PROGRESS_CYCLE25_v0: DOUBLE_DIVERGENCE_THEOREM_CLOSURE_ATTEMPT_TOKEN_PINNED" ∧
+    emU1DoubleDivergenceTheoremClosureRouteTokenV0 =
+      "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_ROUTE_v0: ANTISYM_COMMUTATION_THEOREM_SURFACE_PINNED" ∧
+    emU1DoubleDivergenceTheoremClosureLocalizationGateTokenV0 =
+      "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_LOCALIZATION_GATE_v0: CYCLE25_ARTIFACTS_ONLY" ∧
+    emU1DoubleDivergenceTheoremClosureNoPromotionTokenV0 =
+      "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE" ∧
+    emU1DoubleDivergenceTheoremClosureBoundaryTokenV0 =
+      "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_PROMOTION" := by
+  repeat' constructor
+
+theorem em_u1_cycle025_theorem_closure_harness_stub_v0 :
+    doubleDivergenceTheoremClosureAttemptHarness
+      { sourceAssumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        smoothnessAssumptionId := "ASM-EM-U1-MATH-SMOOTH-01"
+        distributionalAssumptionId := "ASM-EM-U1-MATH-DISTRIB-01"
+        theoremClosureRouteTag := "antisym-commutation-theorem-surface-pinned"
+        localizationTag := "cycle25-artifacts-only"
+        noPromotionTag := "attempt-only-no-discharge"
+        boundaryTag := "no-full-derivation-discharge-or-promotion" } := by
   repeat' constructor
 
 end
