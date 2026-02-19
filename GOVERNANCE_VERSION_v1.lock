@@ -2,7 +2,7 @@
   "lock_id": "GOVERNANCE_VERSION_v1",
   "governance_version": 1,
   "tracked_hashes": {
-    "ARCHITECTURE_SCHEMA_v1.json": "ee5312c2ef8103525bed8760a836d5a75462b0255f0414e9379d136a39fcd8b8",
+    "ARCHITECTURE_SCHEMA_v1.json": "0f429b75bcd2b8a30de503f99504868880ff187f53554488bb5d90fbac4992c4",
     "formal/docs/paper/ASSUMPTION_REGISTRY_v1.md": "6e830af33e5e0936b0c9a0cbfbdd689fe472b4f978afdbe4936c5b04b8d3d19d"
   },
   "adjudication_class_list": [
@@ -55,7 +55,7 @@
       "NOT_YET_*"
     ],
     "governance_surface_counts": {
-      "governance_docs": 62,
+      "governance_docs": 63,
       "token_categories": 7,
       "adjudication_types": 12
     }

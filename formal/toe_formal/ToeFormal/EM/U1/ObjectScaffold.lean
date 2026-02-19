@@ -131,6 +131,15 @@ structure DistributionalSemanticsMappingPackage where
   noPromotionTag : String
   boundaryTag : String
 
+structure DistributionalReferenceSurfacePackage where
+  sourceAssumptionId : String
+  smoothnessAssumptionId : String
+  distributionalAssumptionId : String
+  referenceRouteTag : String
+  localizationTag : String
+  noPromotionTag : String
+  boundaryTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -327,6 +336,16 @@ def distributionalSemanticsMappingHarness
         pkg.mappingRouteTag = "classification-surfaces-pinned" ∧
           pkg.localizationTag = "cycle22-artifacts-only" ∧
             pkg.noPromotionTag = "mapping-only-no-discharge" ∧
+              pkg.boundaryTag = "no-distributional-math-or-curved-space-import"
+
+def distributionalReferenceSurfaceHarness
+    (pkg : DistributionalReferenceSurfacePackage) : Prop :=
+  pkg.sourceAssumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    pkg.smoothnessAssumptionId = "ASM-EM-U1-MATH-SMOOTH-01" ∧
+      pkg.distributionalAssumptionId = "ASM-EM-U1-MATH-DISTRIB-01" ∧
+        pkg.referenceRouteTag = "reference-only-semantics-pinned" ∧
+          pkg.localizationTag = "cycle23-artifacts-only" ∧
+            pkg.noPromotionTag = "reference-only-no-discharge" ∧
               pkg.boundaryTag = "no-distributional-math-or-curved-space-import"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
@@ -669,6 +688,21 @@ def emU1DistributionalSemanticsMappingNoPromotionTokenV0 : String :=
 
 def emU1DistributionalSemanticsMappingBoundaryTokenV0 : String :=
   "EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_BOUNDARY_v0: NO_DISTRIBUTIONAL_MATH_OR_CURVED_SPACE_IMPORT"
+
+def emU1AuthorizedDistributionalReferenceSurfaceTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE23_v0: AUTHORIZED_DISTRIBUTIONAL_REFERENCE_SURFACE_TOKEN_PINNED"
+
+def emU1DistributionalReferenceSurfaceRouteTokenV0 : String :=
+  "EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_ROUTE_v0: REFERENCE_ONLY_SEMANTICS_PINNED"
+
+def emU1DistributionalReferenceSurfaceLocalizationGateTokenV0 : String :=
+  "EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_LOCALIZATION_GATE_v0: CYCLE23_ARTIFACTS_ONLY"
+
+def emU1DistributionalReferenceSurfaceNoPromotionTokenV0 : String :=
+  "EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_NO_PROMOTION_v0: REFERENCE_ONLY_NO_DISCHARGE"
+
+def emU1DistributionalReferenceSurfaceBoundaryTokenV0 : String :=
+  "EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_BOUNDARY_v0: NO_DISTRIBUTIONAL_MATH_OR_CURVED_SPACE_IMPORT"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -1089,6 +1123,30 @@ theorem em_u1_cycle022_mapping_harness_stub_v0 :
         mappingRouteTag := "classification-surfaces-pinned"
         localizationTag := "cycle22-artifacts-only"
         noPromotionTag := "mapping-only-no-discharge"
+        boundaryTag := "no-distributional-math-or-curved-space-import" } := by
+  repeat' constructor
+
+theorem em_u1_cycle023_token_binding_stub_v0 :
+    emU1AuthorizedDistributionalReferenceSurfaceTokenV0 =
+      "EM_U1_PROGRESS_CYCLE23_v0: AUTHORIZED_DISTRIBUTIONAL_REFERENCE_SURFACE_TOKEN_PINNED" ∧
+    emU1DistributionalReferenceSurfaceRouteTokenV0 =
+      "EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_ROUTE_v0: REFERENCE_ONLY_SEMANTICS_PINNED" ∧
+    emU1DistributionalReferenceSurfaceLocalizationGateTokenV0 =
+      "EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_LOCALIZATION_GATE_v0: CYCLE23_ARTIFACTS_ONLY" ∧
+    emU1DistributionalReferenceSurfaceNoPromotionTokenV0 =
+      "EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_NO_PROMOTION_v0: REFERENCE_ONLY_NO_DISCHARGE" ∧
+    emU1DistributionalReferenceSurfaceBoundaryTokenV0 =
+      "EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_BOUNDARY_v0: NO_DISTRIBUTIONAL_MATH_OR_CURVED_SPACE_IMPORT" := by
+  repeat' constructor
+
+theorem em_u1_cycle023_reference_surface_harness_stub_v0 :
+    distributionalReferenceSurfaceHarness
+      { sourceAssumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        smoothnessAssumptionId := "ASM-EM-U1-MATH-SMOOTH-01"
+        distributionalAssumptionId := "ASM-EM-U1-MATH-DISTRIB-01"
+        referenceRouteTag := "reference-only-semantics-pinned"
+        localizationTag := "cycle23-artifacts-only"
+        noPromotionTag := "reference-only-no-discharge"
         boundaryTag := "no-distributional-math-or-curved-space-import" } := by
   repeat' constructor
 
