@@ -437,6 +437,37 @@ Cycle-012 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-013 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-13-MAXWELL-TENSOR-FORMS-COMPATIBILITY-MAP-v0`
+   - scope:
+     - planning-only bounded tensor/forms Maxwell statement-surface compatibility-map lock.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE13_v0: MAXWELL_COMPATIBILITY_MAP_TOKEN_PINNED`
+   - compatibility-map token:
+     - `EM_U1_MAXWELL_TENSOR_FORMS_MAP_v0: STATEMENT_SURFACE_TRANSLATION_PINNED`
+   - localization gate token:
+     - `EM_U1_MAXWELL_COMPATIBILITY_LOCALIZATION_GATE_v0: CYCLE13_ARTIFACTS_ONLY`
+   - no-derivation gate token:
+     - `EM_U1_MAXWELL_COMPATIBILITY_NO_DERIVATION_v0: STATEMENT_ONLY`
+   - required source assumption ID:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+   - required convention/source prerequisite tokens:
+     - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+     - `EM_U1_HODGE_STAR_CONVENTION_v0: STARSTAR_SIGN_FIXED_UNDER_SIGNATURE`
+     - `EM_U1_CONVENTION_LOCK_EB_v0: E_B_SIGN_AND_EPSILON_FIXED`
+     - `EM_U1_SOURCE_OBJECT_CONVENTION_v0: CURRENT_OBJECT_DEFINED`
+   - required non-selection policy tokens:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO13_MAXWELL_COMPATIBILITY_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_13_MAXWELL_TENSOR_FORMS_COMPATIBILITY_MAP_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro13_maxwell_tensor_forms_compatibility_map.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

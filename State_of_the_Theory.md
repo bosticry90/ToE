@@ -283,6 +283,29 @@ EM Cycle-012 potential/field-strength bridge-lock checkpoint (2026-02-19):
 - Scope boundary remains strict:
   - potential/field-strength bridge definitions only, bounded and non-claim, no derivation/promotion claim, and no units/gauge/constitutive selection claim.
 
+EM Cycle-013 Maxwell tensor/forms compatibility-map checkpoint (2026-02-19):
+- Cycle-013 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-13-MAXWELL-TENSOR-FORMS-COMPATIBILITY-MAP-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_13_MAXWELL_TENSOR_FORMS_COMPATIBILITY_MAP_v0.md`
+- Compatibility-map tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE13_v0: MAXWELL_COMPATIBILITY_MAP_TOKEN_PINNED`
+  - `EM_U1_MAXWELL_TENSOR_FORMS_MAP_v0: STATEMENT_SURFACE_TRANSLATION_PINNED`
+  - `EM_U1_MAXWELL_COMPATIBILITY_LOCALIZATION_GATE_v0: CYCLE13_ARTIFACTS_ONLY`
+  - `EM_U1_MAXWELL_COMPATIBILITY_NO_DERIVATION_v0: STATEMENT_ONLY`
+  - `EM_U1_MICRO13_MAXWELL_COMPATIBILITY_ADJUDICATION: NOT_YET_DISCHARGED`
+- Source/convention prerequisites remain explicit:
+  - `ASM-EM-U1-PHY-SOURCE-01`
+  - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+  - `EM_U1_HODGE_STAR_CONVENTION_v0: STARSTAR_SIGN_FIXED_UNDER_SIGNATURE`
+  - `EM_U1_CONVENTION_LOCK_EB_v0: E_B_SIGN_AND_EPSILON_FIXED`
+  - `EM_U1_SOURCE_OBJECT_CONVENTION_v0: CURRENT_OBJECT_DEFINED`
+  - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+  - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+- Cycle-013 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro13_maxwell_tensor_forms_compatibility_map.py`
+- Scope boundary remains strict:
+  - compatibility-map statements only, bounded and non-claim, no derivation/promotion claim, and no units/gauge/constitutive selection claim.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.

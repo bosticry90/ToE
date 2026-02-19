@@ -57,6 +57,13 @@ structure PotentialFieldStrengthBridge where
   tensorBridgeTag : String
   bianchiSeamTag : String
 
+structure MaxwellStatementCompatibilityMap where
+  assumptionId : String
+  inhomogeneousMapTag : String
+  homogeneousMapTag : String
+  conventionDependencyTag : String
+  sourceDependencyTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -170,6 +177,14 @@ def afBridgeHarness
     bridge.formsBridgeTag = "F:=dA-seam-pinned" ∧
       bridge.tensorBridgeTag = "Fmunu-from-A-seam-pinned" ∧
         bridge.bianchiSeamTag = "homog-equation-seam-pinned"
+
+def maxwellCompatibilityHarness
+    (compat : MaxwellStatementCompatibilityMap) : Prop :=
+  compat.assumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    compat.inhomogeneousMapTag = "tensor-forms-inhomogeneous-map-pinned" ∧
+      compat.homogeneousMapTag = "tensor-forms-homogeneous-map-pinned" ∧
+        compat.conventionDependencyTag = "signature-hodge-eb-conventions-required" ∧
+          compat.sourceDependencyTag = "source-object-seam-required"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -361,6 +376,18 @@ def emU1AFBridgeLocalizationGateTokenV0 : String :=
 
 def emU1AFBridgeNoDerivationTokenV0 : String :=
   "EM_U1_AF_BRIDGE_NO_DERIVATION_v0: DEFINITION_ONLY"
+
+def emU1MaxwellCompatibilityMapTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE13_v0: MAXWELL_COMPATIBILITY_MAP_TOKEN_PINNED"
+
+def emU1MaxwellTensorFormsMapTokenV0 : String :=
+  "EM_U1_MAXWELL_TENSOR_FORMS_MAP_v0: STATEMENT_SURFACE_TRANSLATION_PINNED"
+
+def emU1MaxwellCompatibilityLocalizationGateTokenV0 : String :=
+  "EM_U1_MAXWELL_COMPATIBILITY_LOCALIZATION_GATE_v0: CYCLE13_ARTIFACTS_ONLY"
+
+def emU1MaxwellCompatibilityNoDerivationTokenV0 : String :=
+  "EM_U1_MAXWELL_COMPATIBILITY_NO_DERIVATION_v0: STATEMENT_ONLY"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -558,6 +585,26 @@ theorem em_u1_cycle012_af_bridge_harness_stub_v0 :
         formsBridgeTag := "F:=dA-seam-pinned"
         tensorBridgeTag := "Fmunu-from-A-seam-pinned"
         bianchiSeamTag := "homog-equation-seam-pinned" } := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle013_token_binding_stub_v0 :
+    emU1MaxwellCompatibilityMapTokenV0 =
+      "EM_U1_PROGRESS_CYCLE13_v0: MAXWELL_COMPATIBILITY_MAP_TOKEN_PINNED" ∧
+    emU1MaxwellTensorFormsMapTokenV0 =
+      "EM_U1_MAXWELL_TENSOR_FORMS_MAP_v0: STATEMENT_SURFACE_TRANSLATION_PINNED" ∧
+    emU1MaxwellCompatibilityLocalizationGateTokenV0 =
+      "EM_U1_MAXWELL_COMPATIBILITY_LOCALIZATION_GATE_v0: CYCLE13_ARTIFACTS_ONLY" ∧
+    emU1MaxwellCompatibilityNoDerivationTokenV0 =
+      "EM_U1_MAXWELL_COMPATIBILITY_NO_DERIVATION_v0: STATEMENT_ONLY" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle013_compatibility_harness_stub_v0 :
+    maxwellCompatibilityHarness
+      { assumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        inhomogeneousMapTag := "tensor-forms-inhomogeneous-map-pinned"
+        homogeneousMapTag := "tensor-forms-homogeneous-map-pinned"
+        conventionDependencyTag := "signature-hodge-eb-conventions-required"
+        sourceDependencyTag := "source-object-seam-required" } := by
   repeat' constructor <;> rfl
 
 end U1
