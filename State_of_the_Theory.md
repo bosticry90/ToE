@@ -526,6 +526,10 @@ EM Cycle-021 distributional lane authorization scaffold checkpoint (2026-02-19):
   - `formal/python/tests/test_em_u1_micro21_distributional_lane_authorization_scaffold.py`
 - Scope boundary remains strict:
   - authorization-lane statements only, bounded and non-claim, no theorem/discharge promotion claim, and no distributional math or curved-space import claims.
+- Publish receipt:
+  - commit: `640cf27` (`EM U1 Micro-21: distributional lane authorization scaffold v0`)
+  - tag: `em-u1-micro21-distributional-lane-authorization-scaffold-v0`
+  - remote sync: `origin/main` updated and tag published.
 
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
