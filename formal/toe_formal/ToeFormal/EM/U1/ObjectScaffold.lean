@@ -167,6 +167,15 @@ structure DoubleDivergenceBindingTheoremClosureAttemptPackage where
   noPromotionTag : String
   boundaryTag : String
 
+structure BindingAssumptionsDischargeFromSmoothnessPackage where
+  sourceAssumptionId : String
+  smoothnessAssumptionId : String
+  distributionalAssumptionId : String
+  dischargeRouteTag : String
+  localizationTag : String
+  noPromotionTag : String
+  boundaryTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -405,6 +414,16 @@ def doubleDivergenceBindingTheoremClosureAttemptHarness
             pkg.noPromotionTag = "attempt-only-no-discharge" ∧
               pkg.boundaryTag = "no-full-derivation-discharge-or-inevitability-promotion"
 
+def bindingAssumptionsDischargeFromSmoothnessHarness
+    (pkg : BindingAssumptionsDischargeFromSmoothnessPackage) : Prop :=
+  pkg.sourceAssumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    pkg.smoothnessAssumptionId = "ASM-EM-U1-MATH-SMOOTH-01" ∧
+      pkg.distributionalAssumptionId = "ASM-EM-U1-MATH-DISTRIB-01" ∧
+        pkg.dischargeRouteTag = "smoothness-to-binding-assumptions-route-pinned" ∧
+          pkg.localizationTag = "cycle27-artifacts-only" ∧
+            pkg.noPromotionTag = "attempt-only-no-discharge" ∧
+              pkg.boundaryTag = "no-full-derivation-discharge-or-inevitability-promotion"
+
 theorem em_u1_cycle025_double_divergence_zero_of_antisymmetry_and_commuting_partials_v0
     (dd : SpaceTimeIndex → SpaceTimeIndex → ℝ)
     (hComm : ∀ μ ν, dd μ ν = dd ν μ)
@@ -437,6 +456,15 @@ structure DoubleDivergenceBindingAssumptions
   dd_commuting_partials :
     ∀ μ ν, ddFromFieldStrength d F μ ν = ddFromFieldStrength d F ν μ
   dd_antisymmetry_lift :
+    (∀ α β, F.component α β = -F.component β α) →
+      ∀ μ ν, ddFromFieldStrength d F μ ν = -ddFromFieldStrength d F ν μ
+
+structure DoubleDivergenceSmoothnessLaneAssumptions
+    (d : DifferentialBundle)
+    (F : FieldStrength) where
+  dd_commuting_partials_from_smoothness :
+    ∀ μ ν, ddFromFieldStrength d F μ ν = ddFromFieldStrength d F ν μ
+  dd_antisymmetry_lift_from_definition :
     (∀ α β, F.component α β = -F.component β α) →
       ∀ μ ν, ddFromFieldStrength d F μ ν = -ddFromFieldStrength d F ν μ
 
@@ -484,6 +512,43 @@ theorem em_u1_cycle026_double_divergence_zero_for_potential_field_strength_v0
       (fieldStrengthOfPotential d A)
       hBind
       (em_u1_cycle026_field_strength_antisymmetry_from_definition_v0 d A)
+
+theorem em_u1_cycle027_dd_commuting_partials_from_smoothness_v0
+    (d : DifferentialBundle)
+    (F : FieldStrength)
+    (hSmooth : DoubleDivergenceSmoothnessLaneAssumptions d F) :
+    ∀ μ ν, ddFromFieldStrength d F μ ν = ddFromFieldStrength d F ν μ := by
+  exact hSmooth.dd_commuting_partials_from_smoothness
+
+theorem em_u1_cycle027_dd_antisymmetry_lift_from_definition_v0
+    (d : DifferentialBundle)
+    (F : FieldStrength)
+    (hSmooth : DoubleDivergenceSmoothnessLaneAssumptions d F) :
+    (∀ α β, F.component α β = -F.component β α) →
+      ∀ μ ν, ddFromFieldStrength d F μ ν = -ddFromFieldStrength d F ν μ := by
+  exact hSmooth.dd_antisymmetry_lift_from_definition
+
+theorem em_u1_cycle027_build_binding_assumptions_v0
+    (d : DifferentialBundle)
+    (F : FieldStrength)
+    (hSmooth : DoubleDivergenceSmoothnessLaneAssumptions d F) :
+    DoubleDivergenceBindingAssumptions d F := by
+  exact
+    { dd_commuting_partials := em_u1_cycle027_dd_commuting_partials_from_smoothness_v0 d F hSmooth
+      dd_antisymmetry_lift :=
+        em_u1_cycle027_dd_antisymmetry_lift_from_definition_v0 d F hSmooth }
+
+theorem em_u1_cycle027_double_divergence_zero_via_built_binding_v0
+    (d : DifferentialBundle)
+    (F : FieldStrength)
+    (hSmooth : DoubleDivergenceSmoothnessLaneAssumptions d F)
+    (hFantisym : ∀ α β, F.component α β = -F.component β α) :
+    ∀ μ ν, ddFromFieldStrength d F μ ν = 0 := by
+  exact em_u1_cycle026_double_divergence_zero_for_field_strength_v0
+      d
+      F
+      (em_u1_cycle027_build_binding_assumptions_v0 d F hSmooth)
+      hFantisym
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -885,6 +950,21 @@ def emU1DoubleDivergenceBindingTheoremNoPromotionTokenV0 : String :=
 
 def emU1DoubleDivergenceBindingTheoremBoundaryTokenV0 : String :=
   "EM_U1_DOUBLE_DIVERGENCE_BINDING_THEOREM_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION"
+
+def emU1BindingAssumptionsDischargeFromSmoothnessTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE27_v0: BINDING_ASSUMPTIONS_DISCHARGE_FROM_SMOOTHNESS_TOKEN_PINNED"
+
+def emU1BindingAssumptionsDischargeRouteTokenV0 : String :=
+  "EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_ROUTE_v0: SMOOTHNESS_TO_BINDING_ASSUMPTIONS_ROUTE_PINNED"
+
+def emU1BindingAssumptionsDischargeLocalizationGateTokenV0 : String :=
+  "EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_LOCALIZATION_GATE_v0: CYCLE27_ARTIFACTS_ONLY"
+
+def emU1BindingAssumptionsDischargeNoPromotionTokenV0 : String :=
+  "EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE"
+
+def emU1BindingAssumptionsDischargeBoundaryTokenV0 : String :=
+  "EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -1400,6 +1480,30 @@ theorem em_u1_cycle026_theorem_binding_harness_stub_v0 :
         distributionalAssumptionId := "ASM-EM-U1-MATH-DISTRIB-01"
         bindingRouteTag := "dd-from-field-strength-binding-route-pinned"
         localizationTag := "cycle26-artifacts-only"
+        noPromotionTag := "attempt-only-no-discharge"
+        boundaryTag := "no-full-derivation-discharge-or-inevitability-promotion" } := by
+  repeat' constructor
+
+theorem em_u1_cycle027_token_binding_stub_v0 :
+    emU1BindingAssumptionsDischargeFromSmoothnessTokenV0 =
+      "EM_U1_PROGRESS_CYCLE27_v0: BINDING_ASSUMPTIONS_DISCHARGE_FROM_SMOOTHNESS_TOKEN_PINNED" ∧
+    emU1BindingAssumptionsDischargeRouteTokenV0 =
+      "EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_ROUTE_v0: SMOOTHNESS_TO_BINDING_ASSUMPTIONS_ROUTE_PINNED" ∧
+    emU1BindingAssumptionsDischargeLocalizationGateTokenV0 =
+      "EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_LOCALIZATION_GATE_v0: CYCLE27_ARTIFACTS_ONLY" ∧
+    emU1BindingAssumptionsDischargeNoPromotionTokenV0 =
+      "EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE" ∧
+    emU1BindingAssumptionsDischargeBoundaryTokenV0 =
+      "EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION" := by
+  repeat' constructor
+
+theorem em_u1_cycle027_binding_discharge_harness_stub_v0 :
+    bindingAssumptionsDischargeFromSmoothnessHarness
+      { sourceAssumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        smoothnessAssumptionId := "ASM-EM-U1-MATH-SMOOTH-01"
+        distributionalAssumptionId := "ASM-EM-U1-MATH-DISTRIB-01"
+        dischargeRouteTag := "smoothness-to-binding-assumptions-route-pinned"
+        localizationTag := "cycle27-artifacts-only"
         noPromotionTag := "attempt-only-no-discharge"
         boundaryTag := "no-full-derivation-discharge-or-inevitability-promotion" } := by
   repeat' constructor
