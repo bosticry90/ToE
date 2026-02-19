@@ -557,6 +557,10 @@ EM Cycle-022 authorized distributional semantics mapping checkpoint (2026-02-19)
   - `formal/python/tests/test_em_u1_micro22_authorized_distributional_semantics_mapping_nonclaim.py`
 - Scope boundary remains strict:
   - authorized distributional semantics-mapping statements only, bounded and non-claim, no theorem/discharge promotion claim, and no distributional math or curved-space import claims.
+- Publish receipt:
+  - commit: `f74baa2` (`EM U1 Micro-22: authorized distributional semantics mapping (non-claim) v0`)
+  - tag: `em-u1-micro22-authorized-distributional-semantics-mapping-nonclaim-v0`
+  - remote sync: `origin/main` updated and tag published.
 
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
