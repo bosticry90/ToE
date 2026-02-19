@@ -712,6 +712,41 @@ Cycle-020 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-021 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-21-DISTRIBUTIONAL-LANE-AUTHORIZATION-SCAFFOLD-v0`
+   - scope:
+     - planning-only bounded distributional lane authorization scaffold.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE21_v0: DISTRIBUTIONAL_LANE_AUTHORIZATION_SCAFFOLD_TOKEN_PINNED`
+   - authorization route token:
+     - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_ROUTE_v0: ASSUMPTION_ID_GATED_IMPORT_PERMISSION_PINNED`
+   - localization gate token:
+     - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_LOCALIZATION_GATE_v0: CYCLE21_ARTIFACTS_ONLY`
+   - no-promotion gate token:
+     - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_NO_PROMOTION_v0: AUTHORIZATION_ONLY_NO_DISCHARGE`
+   - boundary guard token:
+     - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_BOUNDARY_v0: NO_DISTRIBUTIONAL_MATH_OR_CURVED_SPACE_IMPORT`
+   - required source/smoothness/distributional assumption IDs:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+     - `ASM-EM-U1-MATH-SMOOTH-01`
+     - `ASM-EM-U1-MATH-DISTRIB-01`
+   - required prerequisite chain tokens:
+     - `EM_U1_MAXWELL_CONTINUITY_THEOREM_ROUTE_v0: DIVERGENCE_ANTISYM_COMMUTATION_ATTEMPT_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_THEOREM_SMOOTHNESS_SEAM_v0: C2_REGULARITY_REQUIRED`
+     - `EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_ROUTE_v0: SINGULAR_SOURCE_WITHOUT_DISTRIBUTIONAL_LANE_UNLICENSES_ROUTE`
+     - `EM_U1_MAXWELL_CONTINUITY_ROUTE_v0: DIVERGENCE_OF_INHOM_SURFACE_ROUTE_PINNED`
+   - required non-selection policy tokens:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO21_DISTRIBUTIONAL_AUTHORIZATION_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_21_DISTRIBUTIONAL_LANE_AUTHORIZATION_SCAFFOLD_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro21_distributional_lane_authorization_scaffold.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

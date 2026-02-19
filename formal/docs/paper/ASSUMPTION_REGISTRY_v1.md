@@ -40,6 +40,7 @@ Non-claim boundary:
 | `ASM-EM-U1-PHY-GFIX-01` | `STRUCTURAL` | `P-POLICY` | `em_u1_import_lanes_placeholders_v0` | Any gauge-fixing import (Lorenz/Coulomb/temporal/axial/Feynman) requires explicit assumption-ID gating and Cycle-007 localization. | `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_07_IMPORT_LANES_PLACEHOLDERS_v0.md` |
 | `ASM-EM-U1-PHY-SOURCE-01` | `STRUCTURAL` | `P-POLICY` | `em_u1_source_current_interface_contracts_v0` | Any source/current-lane import and continuity-predicate usage requires explicit assumption-ID gating and Cycle-010 localization. | `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_10_SOURCE_CURRENT_INTERFACE_CONTRACTS_v0.md` |
 | `ASM-EM-U1-MATH-SMOOTH-01` | `STRUCTURAL` | `P-POLICY` | `em_u1_maxwell_to_continuity_theorem_attempt_v0` | C2 regularity and commuting-partials seam usage requires explicit assumption-ID gating and Cycle-018 localization. | `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_18_MAXWELL_TO_CONTINUITY_THEOREM_ATTEMPT_PACKAGE_v0.md` |
+| `ASM-EM-U1-MATH-DISTRIB-01` | `STRUCTURAL` | `P-POLICY` | `em_u1_distributional_lane_authorization_scaffold_v0` | Any distributional/singular-source formalization import requires explicit assumption-ID gating and Cycle-021 localization. | `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_21_DISTRIBUTIONAL_LANE_AUTHORIZATION_SCAFFOLD_v0.md` |
 | `ASM-GR01-STR-01` | `STRUCTURAL` | `T-CONDITIONAL` | `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions` | Discrete/operator transport lemma `OperatorToDiscreteResidual` is theorem-level bookkeeping support. | `formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean` |
 | `ASM-GR01-REG-01` | `REGIME` | `T-CONDITIONAL` | `gr01_regime_predicate_under_uniform_bound` | Weak-field regime is theorem-conditional via explicit bound predicate (`WeakFieldRegimePredicate`). | `formal/toe_formal/ToeFormal/Variational/GR01BridgePromotion.lean` |
 | `ASM-GR01-REG-02` | `REGIME` | `P-POLICY` | `gr01_discrete_residual_from_bridge_promotion_chain` | Uniform weak-field bound for potential/source is explicit in bridge-promotion theorem assumptions. | `formal/toe_formal/ToeFormal/Variational/GR01BridgePromotion.lean` |
@@ -109,6 +110,10 @@ End-to-end closure target pointer:
 - `em_u1_maxwell_to_continuity_theorem_attempt_v0`:
   - `ASM-EM-U1-PHY-SOURCE-01`
   - `ASM-EM-U1-MATH-SMOOTH-01`
+- `em_u1_distributional_lane_authorization_scaffold_v0`:
+  - `ASM-EM-U1-PHY-SOURCE-01`
+  - `ASM-EM-U1-MATH-SMOOTH-01`
+  - `ASM-EM-U1-MATH-DISTRIB-01`
 - `TOE_GR01_weak_field_poisson_limit_under_default_quotient_assumptions`:
   - `ASM-GR01-STR-01`
   - `ASM-GR01-REG-01`

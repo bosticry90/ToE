@@ -113,6 +113,15 @@ structure DistributionalSingularSourceNegcontrolPackage where
   noPromotionTag : String
   boundaryTag : String
 
+structure DistributionalLaneAuthorizationPackage where
+  sourceAssumptionId : String
+  smoothnessAssumptionId : String
+  distributionalAssumptionId : String
+  authorizationRouteTag : String
+  localizationTag : String
+  noPromotionTag : String
+  boundaryTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -290,6 +299,16 @@ def distributionalSingularSourceNegcontrolHarness
         pkg.localizationTag = "cycle20-artifacts-only" ∧
           pkg.noPromotionTag = "negcontrol-only-no-discharge" ∧
             pkg.boundaryTag = "no-distributional-formalization-or-curved-space-import"
+
+def distributionalLaneAuthorizationHarness
+    (pkg : DistributionalLaneAuthorizationPackage) : Prop :=
+  pkg.sourceAssumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    pkg.smoothnessAssumptionId = "ASM-EM-U1-MATH-SMOOTH-01" ∧
+      pkg.distributionalAssumptionId = "ASM-EM-U1-MATH-DISTRIB-01" ∧
+        pkg.authorizationRouteTag = "assumption-id-gated-import-permission-pinned" ∧
+          pkg.localizationTag = "cycle21-artifacts-only" ∧
+            pkg.noPromotionTag = "authorization-only-no-discharge" ∧
+              pkg.boundaryTag = "no-distributional-math-or-curved-space-import"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -601,6 +620,21 @@ def emU1DistributionalSingularSourceNegcontrolNoPromotionTokenV0 : String :=
 
 def emU1DistributionalSingularSourceNegcontrolBoundaryTokenV0 : String :=
   "EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_BOUNDARY_v0: NO_DISTRIBUTIONAL_FORMALIZATION_OR_CURVED_SPACE_IMPORT"
+
+def emU1DistributionalLaneAuthorizationScaffoldTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE21_v0: DISTRIBUTIONAL_LANE_AUTHORIZATION_SCAFFOLD_TOKEN_PINNED"
+
+def emU1DistributionalLaneAuthorizationRouteTokenV0 : String :=
+  "EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_ROUTE_v0: ASSUMPTION_ID_GATED_IMPORT_PERMISSION_PINNED"
+
+def emU1DistributionalLaneAuthorizationLocalizationGateTokenV0 : String :=
+  "EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_LOCALIZATION_GATE_v0: CYCLE21_ARTIFACTS_ONLY"
+
+def emU1DistributionalLaneAuthorizationNoPromotionTokenV0 : String :=
+  "EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_NO_PROMOTION_v0: AUTHORIZATION_ONLY_NO_DISCHARGE"
+
+def emU1DistributionalLaneAuthorizationBoundaryTokenV0 : String :=
+  "EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_BOUNDARY_v0: NO_DISTRIBUTIONAL_MATH_OR_CURVED_SPACE_IMPORT"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -974,6 +1008,30 @@ theorem em_u1_cycle020_negcontrol_harness_stub_v0 :
         localizationTag := "cycle20-artifacts-only"
         noPromotionTag := "negcontrol-only-no-discharge"
         boundaryTag := "no-distributional-formalization-or-curved-space-import" } := by
+  repeat' constructor
+
+theorem em_u1_cycle021_token_binding_stub_v0 :
+    emU1DistributionalLaneAuthorizationScaffoldTokenV0 =
+      "EM_U1_PROGRESS_CYCLE21_v0: DISTRIBUTIONAL_LANE_AUTHORIZATION_SCAFFOLD_TOKEN_PINNED" ∧
+    emU1DistributionalLaneAuthorizationRouteTokenV0 =
+      "EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_ROUTE_v0: ASSUMPTION_ID_GATED_IMPORT_PERMISSION_PINNED" ∧
+    emU1DistributionalLaneAuthorizationLocalizationGateTokenV0 =
+      "EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_LOCALIZATION_GATE_v0: CYCLE21_ARTIFACTS_ONLY" ∧
+    emU1DistributionalLaneAuthorizationNoPromotionTokenV0 =
+      "EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_NO_PROMOTION_v0: AUTHORIZATION_ONLY_NO_DISCHARGE" ∧
+    emU1DistributionalLaneAuthorizationBoundaryTokenV0 =
+      "EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_BOUNDARY_v0: NO_DISTRIBUTIONAL_MATH_OR_CURVED_SPACE_IMPORT" := by
+  repeat' constructor
+
+theorem em_u1_cycle021_authorization_harness_stub_v0 :
+    distributionalLaneAuthorizationHarness
+      { sourceAssumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        smoothnessAssumptionId := "ASM-EM-U1-MATH-SMOOTH-01"
+        distributionalAssumptionId := "ASM-EM-U1-MATH-DISTRIB-01"
+        authorizationRouteTag := "assumption-id-gated-import-permission-pinned"
+        localizationTag := "cycle21-artifacts-only"
+        noPromotionTag := "authorization-only-no-discharge"
+        boundaryTag := "no-distributional-math-or-curved-space-import" } := by
   repeat' constructor
 
 end
