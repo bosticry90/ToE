@@ -131,7 +131,7 @@ Adjudication token:
 - No-promotion gate token:
   - `EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
 - Boundary guard token:
-  - `EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_PROMOTION`
+  - `EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
 
 ## ADJUDICATION_SYNC section
 
@@ -148,3 +148,4 @@ Deliverable pointers:
 - `formal/docs/paper/ASSUMPTION_REGISTRY_v1.md`
 - `formal/toe_formal/ToeFormal/EM/U1/ObjectScaffold.lean`
 - `formal/python/tests/test_em_u1_micro25_double_divergence_theorem_closure_attempt.py`
+

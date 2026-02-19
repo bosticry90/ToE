@@ -158,6 +158,15 @@ structure DoubleDivergenceTheoremClosureAttemptPackage where
   noPromotionTag : String
   boundaryTag : String
 
+structure DoubleDivergenceBindingTheoremClosureAttemptPackage where
+  sourceAssumptionId : String
+  smoothnessAssumptionId : String
+  distributionalAssumptionId : String
+  bindingRouteTag : String
+  localizationTag : String
+  noPromotionTag : String
+  boundaryTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -384,7 +393,17 @@ def doubleDivergenceTheoremClosureAttemptHarness
         pkg.theoremClosureRouteTag = "antisym-commutation-theorem-surface-pinned" ∧
           pkg.localizationTag = "cycle25-artifacts-only" ∧
             pkg.noPromotionTag = "attempt-only-no-discharge" ∧
-              pkg.boundaryTag = "no-full-derivation-discharge-or-promotion"
+              pkg.boundaryTag = "no-full-derivation-discharge-or-inevitability-promotion"
+
+def doubleDivergenceBindingTheoremClosureAttemptHarness
+    (pkg : DoubleDivergenceBindingTheoremClosureAttemptPackage) : Prop :=
+  pkg.sourceAssumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    pkg.smoothnessAssumptionId = "ASM-EM-U1-MATH-SMOOTH-01" ∧
+      pkg.distributionalAssumptionId = "ASM-EM-U1-MATH-DISTRIB-01" ∧
+        pkg.bindingRouteTag = "dd-from-field-strength-binding-route-pinned" ∧
+          pkg.localizationTag = "cycle26-artifacts-only" ∧
+            pkg.noPromotionTag = "attempt-only-no-discharge" ∧
+              pkg.boundaryTag = "no-full-derivation-discharge-or-inevitability-promotion"
 
 theorem em_u1_cycle025_double_divergence_zero_of_antisymmetry_and_commuting_partials_v0
     (dd : SpaceTimeIndex → SpaceTimeIndex → ℝ)
@@ -403,6 +422,68 @@ theorem em_u1_cycle025_double_divergence_zero_of_antisymmetry_and_commuting_part
   have h2 : (2 : ℝ) ≠ 0 := by
     norm_num
   exact (mul_eq_zero.mp htwo).resolve_left h2
+
+def ddFromFieldStrength
+    (d : DifferentialBundle)
+    (F : FieldStrength) : SpaceTimeIndex → SpaceTimeIndex → ℝ :=
+  fun μ ν =>
+    d.partialVector
+      (fun α => d.partialVector (fun β => F.component β ν) α μ)
+      μ ν
+
+structure DoubleDivergenceBindingAssumptions
+    (d : DifferentialBundle)
+    (F : FieldStrength) where
+  dd_commuting_partials :
+    ∀ μ ν, ddFromFieldStrength d F μ ν = ddFromFieldStrength d F ν μ
+  dd_antisymmetry_lift :
+    (∀ α β, F.component α β = -F.component β α) →
+      ∀ μ ν, ddFromFieldStrength d F μ ν = -ddFromFieldStrength d F ν μ
+
+theorem em_u1_cycle026_field_strength_antisymmetry_from_definition_v0
+    (d : DifferentialBundle)
+    (A : GaugePotential) :
+    ∀ μ ν, (fieldStrengthOfPotential d A).component μ ν = -(fieldStrengthOfPotential d A).component ν μ := by
+  intro μ ν
+  dsimp [fieldStrengthOfPotential]
+  ring
+
+theorem em_u1_cycle026_dd_symmetry_from_commuting_partials_v0
+    (d : DifferentialBundle)
+    (F : FieldStrength)
+    (hBind : DoubleDivergenceBindingAssumptions d F) :
+    ∀ μ ν, ddFromFieldStrength d F μ ν = ddFromFieldStrength d F ν μ := by
+  exact hBind.dd_commuting_partials
+
+theorem em_u1_cycle026_dd_antisymmetry_from_F_antisym_v0
+    (d : DifferentialBundle)
+    (F : FieldStrength)
+    (hFantisym : ∀ α β, F.component α β = -F.component β α)
+    (hBind : DoubleDivergenceBindingAssumptions d F) :
+    ∀ μ ν, ddFromFieldStrength d F μ ν = -ddFromFieldStrength d F ν μ := by
+  exact hBind.dd_antisymmetry_lift hFantisym
+
+theorem em_u1_cycle026_double_divergence_zero_for_field_strength_v0
+    (d : DifferentialBundle)
+    (F : FieldStrength)
+    (hBind : DoubleDivergenceBindingAssumptions d F)
+    (hFantisym : ∀ α β, F.component α β = -F.component β α) :
+    ∀ μ ν, ddFromFieldStrength d F μ ν = 0 := by
+  exact em_u1_cycle025_double_divergence_zero_of_antisymmetry_and_commuting_partials_v0
+      (ddFromFieldStrength d F)
+      (em_u1_cycle026_dd_symmetry_from_commuting_partials_v0 d F hBind)
+      (em_u1_cycle026_dd_antisymmetry_from_F_antisym_v0 d F hFantisym hBind)
+
+theorem em_u1_cycle026_double_divergence_zero_for_potential_field_strength_v0
+    (d : DifferentialBundle)
+    (A : GaugePotential)
+    (hBind : DoubleDivergenceBindingAssumptions d (fieldStrengthOfPotential d A)) :
+    ∀ μ ν, ddFromFieldStrength d (fieldStrengthOfPotential d A) μ ν = 0 := by
+  exact em_u1_cycle026_double_divergence_zero_for_field_strength_v0
+      d
+      (fieldStrengthOfPotential d A)
+      hBind
+      (em_u1_cycle026_field_strength_antisymmetry_from_definition_v0 d A)
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -788,7 +869,22 @@ def emU1DoubleDivergenceTheoremClosureNoPromotionTokenV0 : String :=
   "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE"
 
 def emU1DoubleDivergenceTheoremClosureBoundaryTokenV0 : String :=
-  "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_PROMOTION"
+  "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION"
+
+def emU1DoubleDivergenceBindingTheoremClosureAttemptTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE26_v0: DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSURE_ATTEMPT_TOKEN_PINNED"
+
+def emU1DoubleDivergenceBindingTheoremRouteTokenV0 : String :=
+  "EM_U1_DOUBLE_DIVERGENCE_BINDING_THEOREM_ROUTE_v0: DD_FROM_FIELD_STRENGTH_BINDING_ROUTE_PINNED"
+
+def emU1DoubleDivergenceBindingTheoremLocalizationGateTokenV0 : String :=
+  "EM_U1_DOUBLE_DIVERGENCE_BINDING_THEOREM_LOCALIZATION_GATE_v0: CYCLE26_ARTIFACTS_ONLY"
+
+def emU1DoubleDivergenceBindingTheoremNoPromotionTokenV0 : String :=
+  "EM_U1_DOUBLE_DIVERGENCE_BINDING_THEOREM_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE"
+
+def emU1DoubleDivergenceBindingTheoremBoundaryTokenV0 : String :=
+  "EM_U1_DOUBLE_DIVERGENCE_BINDING_THEOREM_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -1270,7 +1366,7 @@ theorem em_u1_cycle025_token_binding_stub_v0 :
     emU1DoubleDivergenceTheoremClosureNoPromotionTokenV0 =
       "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE" ∧
     emU1DoubleDivergenceTheoremClosureBoundaryTokenV0 =
-      "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_PROMOTION" := by
+      "EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION" := by
   repeat' constructor
 
 theorem em_u1_cycle025_theorem_closure_harness_stub_v0 :
@@ -1281,7 +1377,31 @@ theorem em_u1_cycle025_theorem_closure_harness_stub_v0 :
         theoremClosureRouteTag := "antisym-commutation-theorem-surface-pinned"
         localizationTag := "cycle25-artifacts-only"
         noPromotionTag := "attempt-only-no-discharge"
-        boundaryTag := "no-full-derivation-discharge-or-promotion" } := by
+        boundaryTag := "no-full-derivation-discharge-or-inevitability-promotion" } := by
+  repeat' constructor
+
+theorem em_u1_cycle026_token_binding_stub_v0 :
+    emU1DoubleDivergenceBindingTheoremClosureAttemptTokenV0 =
+      "EM_U1_PROGRESS_CYCLE26_v0: DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSURE_ATTEMPT_TOKEN_PINNED" ∧
+    emU1DoubleDivergenceBindingTheoremRouteTokenV0 =
+      "EM_U1_DOUBLE_DIVERGENCE_BINDING_THEOREM_ROUTE_v0: DD_FROM_FIELD_STRENGTH_BINDING_ROUTE_PINNED" ∧
+    emU1DoubleDivergenceBindingTheoremLocalizationGateTokenV0 =
+      "EM_U1_DOUBLE_DIVERGENCE_BINDING_THEOREM_LOCALIZATION_GATE_v0: CYCLE26_ARTIFACTS_ONLY" ∧
+    emU1DoubleDivergenceBindingTheoremNoPromotionTokenV0 =
+      "EM_U1_DOUBLE_DIVERGENCE_BINDING_THEOREM_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE" ∧
+    emU1DoubleDivergenceBindingTheoremBoundaryTokenV0 =
+      "EM_U1_DOUBLE_DIVERGENCE_BINDING_THEOREM_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION" := by
+  repeat' constructor
+
+theorem em_u1_cycle026_theorem_binding_harness_stub_v0 :
+    doubleDivergenceBindingTheoremClosureAttemptHarness
+      { sourceAssumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        smoothnessAssumptionId := "ASM-EM-U1-MATH-SMOOTH-01"
+        distributionalAssumptionId := "ASM-EM-U1-MATH-DISTRIB-01"
+        bindingRouteTag := "dd-from-field-strength-binding-route-pinned"
+        localizationTag := "cycle26-artifacts-only"
+        noPromotionTag := "attempt-only-no-discharge"
+        boundaryTag := "no-full-derivation-discharge-or-inevitability-promotion" } := by
   repeat' constructor
 
 end
@@ -1289,3 +1409,4 @@ end
 end U1
 end EM
 end ToeFormal
+
