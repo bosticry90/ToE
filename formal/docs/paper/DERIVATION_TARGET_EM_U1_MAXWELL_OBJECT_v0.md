@@ -571,6 +571,41 @@ Cycle-016 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-017 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-17-DOUBLE-DIVERGENCE-ANTISYM-COMMUTATION-SEAM-v0`
+   - scope:
+     - planning-only bounded double-divergence antisymmetry/commutation seam lock.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE17_v0: DOUBLE_DIVERGENCE_SEAM_TOKEN_PINNED`
+   - double-divergence seam token:
+     - `EM_U1_DOUBLE_DIVERGENCE_SURFACE_v0: DD_F_ZERO_STATEMENT_PINNED`
+   - antisymmetry seam token:
+     - `EM_U1_ANTISYM_SURFACE_v0: F_ANTISYM_STATEMENT_PINNED`
+   - commuting-partials seam token:
+     - `EM_U1_COMMUTING_PARTIALS_SURFACE_v0: COMMUTATION_STATEMENT_PINNED`
+   - localization gate token:
+     - `EM_U1_DOUBLE_DIVERGENCE_LOCALIZATION_GATE_v0: CYCLE17_ARTIFACTS_ONLY`
+   - no-derivation gate token:
+     - `EM_U1_DOUBLE_DIVERGENCE_NO_DERIVATION_v0: STATEMENT_ONLY`
+   - required source assumption ID:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+   - required prerequisite chain tokens:
+     - `EM_U1_AF_BRIDGE_TENSOR_v0: F_MUNU_FROM_A_SEAM_PINNED`
+     - `EM_U1_INDEX_METRIC_RAISE_LOWER_SURFACE_v0: F_INDEX_POSITION_CONTRACT_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_ROUTE_v0: DIVERGENCE_OF_INHOM_SURFACE_ROUTE_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_MATH_REGULARITY_SEAM_v0: COMMUTING_PARTIALS_REQUIRED`
+   - required non-selection policy tokens:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO17_DOUBLE_DIVERGENCE_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_17_DOUBLE_DIVERGENCE_ANTISYM_COMMUTATION_SEAM_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro17_double_divergence_antisym_commutation_seam.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

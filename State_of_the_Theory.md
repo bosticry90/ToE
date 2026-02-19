@@ -389,6 +389,31 @@ EM Cycle-016 Maxwell-to-continuity route attempt-package checkpoint (2026-02-19)
 - Scope boundary remains strict:
   - route-attempt statements only, bounded and non-claim, no derivation/promotion claim, and no units/gauge/constitutive selection claim.
 
+EM Cycle-017 double-divergence antisymmetry/commutation seam checkpoint (2026-02-19):
+- Cycle-017 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-17-DOUBLE-DIVERGENCE-ANTISYM-COMMUTATION-SEAM-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_17_DOUBLE_DIVERGENCE_ANTISYM_COMMUTATION_SEAM_v0.md`
+- Double-divergence seam tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE17_v0: DOUBLE_DIVERGENCE_SEAM_TOKEN_PINNED`
+  - `EM_U1_DOUBLE_DIVERGENCE_SURFACE_v0: DD_F_ZERO_STATEMENT_PINNED`
+  - `EM_U1_ANTISYM_SURFACE_v0: F_ANTISYM_STATEMENT_PINNED`
+  - `EM_U1_COMMUTING_PARTIALS_SURFACE_v0: COMMUTATION_STATEMENT_PINNED`
+  - `EM_U1_DOUBLE_DIVERGENCE_LOCALIZATION_GATE_v0: CYCLE17_ARTIFACTS_ONLY`
+  - `EM_U1_DOUBLE_DIVERGENCE_NO_DERIVATION_v0: STATEMENT_ONLY`
+  - `EM_U1_MICRO17_DOUBLE_DIVERGENCE_ADJUDICATION: NOT_YET_DISCHARGED`
+- Source/convention prerequisites remain explicit:
+  - `ASM-EM-U1-PHY-SOURCE-01`
+  - `EM_U1_AF_BRIDGE_TENSOR_v0: F_MUNU_FROM_A_SEAM_PINNED`
+  - `EM_U1_INDEX_METRIC_RAISE_LOWER_SURFACE_v0: F_INDEX_POSITION_CONTRACT_PINNED`
+  - `EM_U1_MAXWELL_CONTINUITY_ROUTE_v0: DIVERGENCE_OF_INHOM_SURFACE_ROUTE_PINNED`
+  - `EM_U1_MAXWELL_CONTINUITY_MATH_REGULARITY_SEAM_v0: COMMUTING_PARTIALS_REQUIRED`
+  - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+  - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+- Cycle-017 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro17_double_divergence_antisym_commutation_seam.py`
+- Scope boundary remains strict:
+  - double-divergence seam statements only, bounded and non-claim, no derivation/promotion claim, and no units/gauge/constitutive selection claim.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.

@@ -82,6 +82,13 @@ structure MaxwellToContinuityRouteAttemptPackage where
   regularityTag : String
   localizationTag : String
 
+structure DoubleDivergenceSeam where
+  assumptionId : String
+  antisymmetryTag : String
+  commutingPartialsTag : String
+  doubleDivergenceTag : String
+  localizationTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -224,6 +231,14 @@ def maxwellToContinuityRouteHarness
     route.routeTag = "divergence-of-inhom-surface-route-pinned" ∧
       route.regularityTag = "commuting-partials-required" ∧
         route.localizationTag = "cycle16-artifacts-only"
+
+def doubleDivergenceSeamHarness
+    (seam : DoubleDivergenceSeam) : Prop :=
+  seam.assumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    seam.antisymmetryTag = "f-antisym-statement-pinned" ∧
+      seam.commutingPartialsTag = "commutation-statement-pinned" ∧
+        seam.doubleDivergenceTag = "dd-f-zero-statement-pinned" ∧
+          seam.localizationTag = "cycle17-artifacts-only"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -472,6 +487,24 @@ def emU1MaxwellContinuityNoDerivationTokenV0 : String :=
 
 def emU1MaxwellContinuityMathRegularitySeamTokenV0 : String :=
   "EM_U1_MAXWELL_CONTINUITY_MATH_REGULARITY_SEAM_v0: COMMUTING_PARTIALS_REQUIRED"
+
+def emU1DoubleDivergenceSeamTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE17_v0: DOUBLE_DIVERGENCE_SEAM_TOKEN_PINNED"
+
+def emU1DoubleDivergenceSurfaceTokenV0 : String :=
+  "EM_U1_DOUBLE_DIVERGENCE_SURFACE_v0: DD_F_ZERO_STATEMENT_PINNED"
+
+def emU1AntisymSurfaceTokenV0 : String :=
+  "EM_U1_ANTISYM_SURFACE_v0: F_ANTISYM_STATEMENT_PINNED"
+
+def emU1CommutingPartialsSurfaceTokenV0 : String :=
+  "EM_U1_COMMUTING_PARTIALS_SURFACE_v0: COMMUTATION_STATEMENT_PINNED"
+
+def emU1DoubleDivergenceLocalizationGateTokenV0 : String :=
+  "EM_U1_DOUBLE_DIVERGENCE_LOCALIZATION_GATE_v0: CYCLE17_ARTIFACTS_ONLY"
+
+def emU1DoubleDivergenceNoDerivationTokenV0 : String :=
+  "EM_U1_DOUBLE_DIVERGENCE_NO_DERIVATION_v0: STATEMENT_ONLY"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -752,6 +785,30 @@ theorem em_u1_cycle016_route_harness_stub_v0 :
         routeTag := "divergence-of-inhom-surface-route-pinned"
         regularityTag := "commuting-partials-required"
         localizationTag := "cycle16-artifacts-only" } := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle017_token_binding_stub_v0 :
+    emU1DoubleDivergenceSeamTokenV0 =
+      "EM_U1_PROGRESS_CYCLE17_v0: DOUBLE_DIVERGENCE_SEAM_TOKEN_PINNED" ∧
+    emU1DoubleDivergenceSurfaceTokenV0 =
+      "EM_U1_DOUBLE_DIVERGENCE_SURFACE_v0: DD_F_ZERO_STATEMENT_PINNED" ∧
+    emU1AntisymSurfaceTokenV0 =
+      "EM_U1_ANTISYM_SURFACE_v0: F_ANTISYM_STATEMENT_PINNED" ∧
+    emU1CommutingPartialsSurfaceTokenV0 =
+      "EM_U1_COMMUTING_PARTIALS_SURFACE_v0: COMMUTATION_STATEMENT_PINNED" ∧
+    emU1DoubleDivergenceLocalizationGateTokenV0 =
+      "EM_U1_DOUBLE_DIVERGENCE_LOCALIZATION_GATE_v0: CYCLE17_ARTIFACTS_ONLY" ∧
+    emU1DoubleDivergenceNoDerivationTokenV0 =
+      "EM_U1_DOUBLE_DIVERGENCE_NO_DERIVATION_v0: STATEMENT_ONLY" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle017_double_divergence_harness_stub_v0 :
+    doubleDivergenceSeamHarness
+      { assumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        antisymmetryTag := "f-antisym-statement-pinned"
+        commutingPartialsTag := "commutation-statement-pinned"
+        doubleDivergenceTag := "dd-f-zero-statement-pinned"
+        localizationTag := "cycle17-artifacts-only" } := by
   repeat' constructor <;> rfl
 
 end U1
