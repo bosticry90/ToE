@@ -496,6 +496,18 @@ EM Cycle-020 distributional/singular-source neg-control checkpoint (2026-02-19):
   - `formal/python/tests/test_em_u1_micro20_distributional_singular_source_negcontrol.py`
 - Scope boundary remains strict:
   - distributional/singular-source neg-control statements only, bounded and non-claim, no theorem/discharge promotion claim, and no distributional formalization or curved-space import claims.
+- Publish receipt:
+  - commit: `9226535` (`EM U1 Micro-20: distributional/singular-source neg-control v0`)
+  - tag: `em-u1-micro20-distributional-singular-source-negcontrol-v0`
+  - remote sync: `origin/main` updated and tag published.
+
+EM Cycle-021 queued direction checkpoint (2026-02-19):
+- Selected queue lane:
+  - `distributional lane authorization scaffold`
+- Queue intent:
+  - assumption-ID-gated authorization surface for distributional formalization imports,
+  - localized to Cycle-021 artifacts only,
+  - no theorem promotion/discharge authorization in queue posture.
 
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
