@@ -531,6 +531,14 @@ EM Cycle-021 distributional lane authorization scaffold checkpoint (2026-02-19):
   - tag: `em-u1-micro21-distributional-lane-authorization-scaffold-v0`
   - remote sync: `origin/main` updated and tag published.
 
+EM Cycle-022 queued direction checkpoint (2026-02-19):
+- Selected queue lane:
+  - `authorized distributional semantics mapping (still non-claim)`
+- Queue intent:
+  - classify and localize what counts as a distributional import surface (for example delta-sources, weak-derivative language, and test-function pairing),
+  - bind classification to `ASM-EM-U1-MATH-DISTRIB-01` + Cycle-021 authorization posture,
+  - preserve planning-only/non-claim posture with no theorem promotion or discharge.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.
