@@ -518,7 +518,7 @@ theorem em_u1_cycle001_token_binding_stub_v0 :
       "EM_U1_PROGRESS_CYCLE3_v0: PREDISCHARGE_GATE_BUNDLE_TOKEN_PINNED" ∧
     emU1NoShortcutGuardTokenV0 =
       "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle002_token_binding_stub_v0 :
     emU1GaugeContractSurfaceTokenV0 =
@@ -527,7 +527,7 @@ theorem em_u1_cycle002_token_binding_stub_v0 :
       "EM_U1_GAUGE_CONTRACT_ASSUMPTION_SURFACE_v0: COMMUTATIVITY_LINEARITY_PINNED" ∧
     emU1GaugeContractDerivationTokenV0 =
       "EM_U1_GAUGE_CONTRACT_DERIVATION_TOKEN_v0: FIELD_STRENGTH_INVARIANCE_FROM_DIFFERENTIAL_BUNDLE_ASSUMPTIONS" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle003_token_binding_stub_v0 :
     emU1PredischargeGateBundleTokenV0 =
@@ -540,7 +540,7 @@ theorem em_u1_cycle003_token_binding_stub_v0 :
       "EM_U1_ASSUMPTION_REGISTRY_SYNC_GATE_v0: DIFFERENTIAL_BUNDLE_IDS_REQUIRED" ∧
     emU1MaxwellFormAuthorizationGateTokenV0 =
       "EM_U1_MAXWELL_FORM_AUTHORIZATION_GATE_v0: LOCKED_UNTIL_CYCLE3_ADJUDICATION_FLIP" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle004_token_binding_stub_v0 :
     emU1MaxwellFormAttemptPackageTokenV0 =
@@ -549,7 +549,7 @@ theorem em_u1_cycle004_token_binding_stub_v0 :
       "EM_U1_MAXWELL_FORM_SHAPE_GATE_v0: AUTHORIZED_PRESENCE_ONLY" ∧
     emU1MaxwellFormLocalizationGateTokenV0 =
       "EM_U1_MAXWELL_FORM_LOCALIZATION_GATE_v0: CYCLE4_ARTIFACT_ONLY" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle005_token_binding_stub_v0 :
     emU1MaxwellFormSemanticsMappingTokenV0 =
@@ -562,7 +562,7 @@ theorem em_u1_cycle005_token_binding_stub_v0 :
       "EM_U1_MAXWELL_SEMANTICS_MAPPING_RHOJ_v0: RHO_J_FROM_CURRENT_CARRIER_COMPONENTS" ∧
     emU1NewPhysicsAssumptionIdGateTokenV0 =
       "EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle006_token_binding_stub_v0 :
     emU1ConventionLock3P1TokenV0 =
@@ -577,7 +577,7 @@ theorem em_u1_cycle006_token_binding_stub_v0 :
       "EM_U1_CONVENTION_LOCK_UNITS_POLICY_v0: UNITS_NOT_SELECTED" ∧
     emU1ConventionLockNoDynamicsTokenV0 =
       "EM_U1_CONVENTION_LOCK_NO_DYNAMICS_v0: DEFINITIONAL_ONLY" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle007_token_binding_stub_v0 :
     emU1ImportLanesPlaceholdersTokenV0 =
@@ -588,7 +588,7 @@ theorem em_u1_cycle007_token_binding_stub_v0 :
       "EM_U1_IMPORT_LANES_NO_DYNAMICS_v0: PLACEHOLDER_ONLY" ∧
     emU1NewPhysicsAssumptionIdGateTokenV0 =
       "EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle008_token_binding_stub_v0 :
     emU1ImportLanesInterfaceContractsProgressTokenV0 =
@@ -601,7 +601,7 @@ theorem em_u1_cycle008_token_binding_stub_v0 :
       "EM_U1_IMPORT_LANES_INTERFACE_LOCALIZATION_GATE_v0: CYCLE7_CYCLE8_ARTIFACTS_ONLY" ∧
     emU1ImportLanesInterfaceApplicationHarnessTokenV0 =
       "EM_U1_IMPORT_LANES_INTERFACE_APPLICATION_HARNESS_v0: REFERENCE_ONLY_IMPORT_APPLICATION" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle008_import_lane_interface_harness_stub_v0 :
     importLaneInterfaceApplicationHarness
@@ -611,7 +611,7 @@ theorem em_u1_cycle008_import_lane_interface_harness_stub_v0 :
         placeholderUnitsLane := "SI|Gaussian|Heaviside-Lorentz|c=1" }
       { assumptionId := "ASM-EM-U1-PHY-GFIX-01"
         placeholderGaugeFixingLane := "Lorenz|Coulomb|temporal|axial|Feynman" } := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle009_token_binding_stub_v0 :
     emU1DualHodgeConventionLockTokenV0 =
@@ -626,7 +626,7 @@ theorem em_u1_cycle009_token_binding_stub_v0 :
       "EM_U1_DUAL_HODGE_LOCALIZATION_GATE_v0: CYCLE6_CYCLE9_ARTIFACTS_ONLY" ∧
     emU1DualHodgeNoDynamicsTokenV0 =
       "EM_U1_DUAL_HODGE_NO_DYNAMICS_v0: CONVENTION_LOCK_ONLY" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle009_dual_hodge_harness_stub_v0 :
     dualHodgeConventionHarness := by
@@ -645,7 +645,7 @@ theorem em_u1_cycle010_token_binding_stub_v0 :
       "EM_U1_SOURCE_LOCALIZATION_GATE_v0: CYCLE10_ARTIFACTS_ONLY" ∧
     emU1SourceNoDynamicsTokenV0 =
       "EM_U1_SOURCE_NO_DYNAMICS_v0: INTERFACE_ONLY" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle010_source_interface_harness_stub_v0 :
     sourceInterfaceApplicationHarness
@@ -653,7 +653,7 @@ theorem em_u1_cycle010_source_interface_harness_stub_v0 :
         rhoCarrierTag := "rho"
         spatialCurrentCarrierTag := "j"
         continuityConstraintTag := "optional-interface-constraint-only" } := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle010_continuity_predicate_stub_v0 :
     continuityPredicate { component := fun _ => 0 } := by
@@ -670,7 +670,7 @@ theorem em_u1_cycle011_token_binding_stub_v0 :
       "EM_U1_MAXWELL_SURFACE_LOCALIZATION_GATE_v0: CYCLE11_ARTIFACTS_ONLY" ∧
     emU1MaxwellSurfaceNoDerivationTokenV0 =
       "EM_U1_MAXWELL_SURFACE_NO_DERIVATION_v0: STATEMENT_ONLY" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle011_statement_surface_harness_stub_v0 :
     maxwellEquationStatementSurfaceHarness
@@ -679,7 +679,7 @@ theorem em_u1_cycle011_statement_surface_harness_stub_v0 :
       { homogeneousStatementTag := "forms-homogeneous-statement-pinned"
         inhomogeneousStatementTag := "forms-inhomogeneous-statement-pinned" }
       "ASM-EM-U1-PHY-SOURCE-01" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle012_token_binding_stub_v0 :
     emU1PotentialFieldStrengthBridgeTokenV0 =
@@ -694,7 +694,7 @@ theorem em_u1_cycle012_token_binding_stub_v0 :
       "EM_U1_AF_BRIDGE_LOCALIZATION_GATE_v0: CYCLE12_ARTIFACTS_ONLY" ∧
     emU1AFBridgeNoDerivationTokenV0 =
       "EM_U1_AF_BRIDGE_NO_DERIVATION_v0: DEFINITION_ONLY" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle012_af_bridge_harness_stub_v0 :
     afBridgeHarness
@@ -702,7 +702,7 @@ theorem em_u1_cycle012_af_bridge_harness_stub_v0 :
         formsBridgeTag := "F:=dA-seam-pinned"
         tensorBridgeTag := "Fmunu-from-A-seam-pinned"
         bianchiSeamTag := "homog-equation-seam-pinned" } := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle013_token_binding_stub_v0 :
     emU1MaxwellCompatibilityMapTokenV0 =
@@ -713,7 +713,7 @@ theorem em_u1_cycle013_token_binding_stub_v0 :
       "EM_U1_MAXWELL_COMPATIBILITY_LOCALIZATION_GATE_v0: CYCLE13_ARTIFACTS_ONLY" ∧
     emU1MaxwellCompatibilityNoDerivationTokenV0 =
       "EM_U1_MAXWELL_COMPATIBILITY_NO_DERIVATION_v0: STATEMENT_ONLY" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle013_compatibility_harness_stub_v0 :
     maxwellCompatibilityHarness
@@ -722,7 +722,7 @@ theorem em_u1_cycle013_compatibility_harness_stub_v0 :
         homogeneousMapTag := "tensor-forms-homogeneous-map-pinned"
         conventionDependencyTag := "signature-hodge-eb-conventions-required"
         sourceDependencyTag := "source-object-seam-required" } := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle014_token_binding_stub_v0 :
     emU1IndexMetricCurrentDecompositionTokenV0 =
@@ -735,7 +735,7 @@ theorem em_u1_cycle014_token_binding_stub_v0 :
       "EM_U1_INDEX_METRIC_CURRENT_LOCALIZATION_GATE_v0: CYCLE14_ARTIFACTS_ONLY" ∧
     emU1IndexMetricCurrentNoDerivationTokenV0 =
       "EM_U1_INDEX_METRIC_CURRENT_NO_DERIVATION_v0: STATEMENT_ONLY" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle014_index_metric_current_harness_stub_v0 :
     indexMetricCurrentDecompositionHarness
@@ -743,7 +743,7 @@ theorem em_u1_cycle014_index_metric_current_harness_stub_v0 :
         raiseLowerTag := "f-index-position-contract-pinned"
         currentDecompositionTag := "jmu-rhoj-seam-pinned"
         localizationTag := "cycle14-artifacts-only" } := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle015_token_binding_stub_v0 :
     emU1ContinuitySurfaceCompatibilityTokenV0 =
@@ -756,7 +756,7 @@ theorem em_u1_cycle015_token_binding_stub_v0 :
       "EM_U1_CONTINUITY_LOCALIZATION_GATE_v0: CYCLE15_ARTIFACTS_ONLY" ∧
     emU1ContinuityNoDerivationTokenV0 =
       "EM_U1_CONTINUITY_NO_DERIVATION_v0: STATEMENT_ONLY" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle015_continuity_surface_harness_stub_v0 :
     continuitySurfaceCompatibilityHarness
@@ -764,7 +764,7 @@ theorem em_u1_cycle015_continuity_surface_harness_stub_v0 :
         tensorContinuityTag := "divergence-current-statement-pinned"
         splitContinuityTag := "dt-rho-plus-divj-statement-pinned"
         localizationTag := "cycle15-artifacts-only" } := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle016_token_binding_stub_v0 :
     emU1MaxwellToContinuityRouteTokenV0 =
@@ -777,7 +777,7 @@ theorem em_u1_cycle016_token_binding_stub_v0 :
       "EM_U1_MAXWELL_CONTINUITY_NO_DERIVATION_v0: ATTEMPT_PACKAGE_ONLY" ∧
     emU1MaxwellContinuityMathRegularitySeamTokenV0 =
       "EM_U1_MAXWELL_CONTINUITY_MATH_REGULARITY_SEAM_v0: COMMUTING_PARTIALS_REQUIRED" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle016_route_harness_stub_v0 :
     maxwellToContinuityRouteHarness
@@ -785,7 +785,7 @@ theorem em_u1_cycle016_route_harness_stub_v0 :
         routeTag := "divergence-of-inhom-surface-route-pinned"
         regularityTag := "commuting-partials-required"
         localizationTag := "cycle16-artifacts-only" } := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle017_token_binding_stub_v0 :
     emU1DoubleDivergenceSeamTokenV0 =
@@ -800,7 +800,7 @@ theorem em_u1_cycle017_token_binding_stub_v0 :
       "EM_U1_DOUBLE_DIVERGENCE_LOCALIZATION_GATE_v0: CYCLE17_ARTIFACTS_ONLY" ∧
     emU1DoubleDivergenceNoDerivationTokenV0 =
       "EM_U1_DOUBLE_DIVERGENCE_NO_DERIVATION_v0: STATEMENT_ONLY" := by
-  repeat' constructor <;> rfl
+  repeat' constructor
 
 theorem em_u1_cycle017_double_divergence_harness_stub_v0 :
     doubleDivergenceSeamHarness
@@ -809,7 +809,9 @@ theorem em_u1_cycle017_double_divergence_harness_stub_v0 :
         commutingPartialsTag := "commutation-statement-pinned"
         doubleDivergenceTag := "dd-f-zero-statement-pinned"
         localizationTag := "cycle17-artifacts-only" } := by
-  repeat' constructor <;> rfl
+  repeat' constructor
+
+end
 
 end U1
 end EM
