@@ -747,6 +747,42 @@ Cycle-021 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-022 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-22-AUTHORIZED-DISTRIBUTIONAL-SEMANTICS-MAPPING-v0`
+   - scope:
+     - planning-only bounded authorized distributional semantics mapping (non-claim).
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE22_v0: AUTHORIZED_DISTRIBUTIONAL_SEMANTICS_MAPPING_TOKEN_PINNED`
+   - semantics-mapping route token:
+     - `EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_ROUTE_v0: CLASSIFICATION_SURFACES_PINNED`
+   - localization gate token:
+     - `EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_LOCALIZATION_GATE_v0: CYCLE22_ARTIFACTS_ONLY`
+   - no-promotion gate token:
+     - `EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_NO_PROMOTION_v0: MAPPING_ONLY_NO_DISCHARGE`
+   - boundary guard token:
+     - `EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_BOUNDARY_v0: NO_DISTRIBUTIONAL_MATH_OR_CURVED_SPACE_IMPORT`
+   - required source/smoothness/distributional assumption IDs:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+     - `ASM-EM-U1-MATH-SMOOTH-01`
+     - `ASM-EM-U1-MATH-DISTRIB-01`
+   - required prerequisite chain tokens:
+     - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_ROUTE_v0: ASSUMPTION_ID_GATED_IMPORT_PERMISSION_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_LOCALIZATION_GATE_v0: CYCLE21_ARTIFACTS_ONLY`
+     - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_NO_PROMOTION_v0: AUTHORIZATION_ONLY_NO_DISCHARGE`
+     - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_BOUNDARY_v0: NO_DISTRIBUTIONAL_MATH_OR_CURVED_SPACE_IMPORT`
+     - `EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_ROUTE_v0: SINGULAR_SOURCE_WITHOUT_DISTRIBUTIONAL_LANE_UNLICENSES_ROUTE`
+   - required non-selection policy tokens:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO22_DISTRIBUTIONAL_SEMANTICS_MAPPING_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_22_AUTHORIZED_DISTRIBUTIONAL_SEMANTICS_MAPPING_NONCLAIM_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro22_authorized_distributional_semantics_mapping_nonclaim.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 

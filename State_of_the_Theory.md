@@ -531,13 +531,32 @@ EM Cycle-021 distributional lane authorization scaffold checkpoint (2026-02-19):
   - tag: `em-u1-micro21-distributional-lane-authorization-scaffold-v0`
   - remote sync: `origin/main` updated and tag published.
 
-EM Cycle-022 queued direction checkpoint (2026-02-19):
-- Selected queue lane:
-  - `authorized distributional semantics mapping (still non-claim)`
-- Queue intent:
-  - classify and localize what counts as a distributional import surface (for example delta-sources, weak-derivative language, and test-function pairing),
-  - bind classification to `ASM-EM-U1-MATH-DISTRIB-01` + Cycle-021 authorization posture,
-  - preserve planning-only/non-claim posture with no theorem promotion or discharge.
+EM Cycle-022 authorized distributional semantics mapping checkpoint (2026-02-19):
+- Cycle-022 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-22-AUTHORIZED-DISTRIBUTIONAL-SEMANTICS-MAPPING-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_22_AUTHORIZED_DISTRIBUTIONAL_SEMANTICS_MAPPING_NONCLAIM_v0.md`
+- Authorized distributional semantics mapping tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE22_v0: AUTHORIZED_DISTRIBUTIONAL_SEMANTICS_MAPPING_TOKEN_PINNED`
+  - `EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_ROUTE_v0: CLASSIFICATION_SURFACES_PINNED`
+  - `EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_LOCALIZATION_GATE_v0: CYCLE22_ARTIFACTS_ONLY`
+  - `EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_NO_PROMOTION_v0: MAPPING_ONLY_NO_DISCHARGE`
+  - `EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_BOUNDARY_v0: NO_DISTRIBUTIONAL_MATH_OR_CURVED_SPACE_IMPORT`
+  - `EM_U1_MICRO22_DISTRIBUTIONAL_SEMANTICS_MAPPING_ADJUDICATION: NOT_YET_DISCHARGED`
+- Source/smoothness/distributional prerequisites are explicit:
+  - `ASM-EM-U1-PHY-SOURCE-01`
+  - `ASM-EM-U1-MATH-SMOOTH-01`
+  - `ASM-EM-U1-MATH-DISTRIB-01`
+  - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_ROUTE_v0: ASSUMPTION_ID_GATED_IMPORT_PERMISSION_PINNED`
+  - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_LOCALIZATION_GATE_v0: CYCLE21_ARTIFACTS_ONLY`
+  - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_NO_PROMOTION_v0: AUTHORIZATION_ONLY_NO_DISCHARGE`
+  - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_BOUNDARY_v0: NO_DISTRIBUTIONAL_MATH_OR_CURVED_SPACE_IMPORT`
+  - `EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_ROUTE_v0: SINGULAR_SOURCE_WITHOUT_DISTRIBUTIONAL_LANE_UNLICENSES_ROUTE`
+  - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+  - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+- Cycle-022 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro22_authorized_distributional_semantics_mapping_nonclaim.py`
+- Scope boundary remains strict:
+  - authorized distributional semantics-mapping statements only, bounded and non-claim, no theorem/discharge promotion claim, and no distributional math or curved-space import claims.
 
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
