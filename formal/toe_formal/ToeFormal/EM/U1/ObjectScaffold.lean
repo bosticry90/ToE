@@ -105,6 +105,14 @@ structure SmoothnessWeakeningNegcontrolPackage where
   noPromotionTag : String
   boundaryTag : String
 
+structure DistributionalSingularSourceNegcontrolPackage where
+  sourceAssumptionId : String
+  smoothnessAssumptionId : String
+  distributionalRouteTag : String
+  localizationTag : String
+  noPromotionTag : String
+  boundaryTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -273,6 +281,15 @@ def smoothnessWeakeningNegcontrolHarness
         pkg.localizationTag = "cycle19-artifacts-only" ∧
           pkg.noPromotionTag = "negcontrol-only-no-discharge" ∧
             pkg.boundaryTag = "no-distributional-or-curved-space-import"
+
+def distributionalSingularSourceNegcontrolHarness
+    (pkg : DistributionalSingularSourceNegcontrolPackage) : Prop :=
+  pkg.sourceAssumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
+    pkg.smoothnessAssumptionId = "ASM-EM-U1-MATH-SMOOTH-01" ∧
+      pkg.distributionalRouteTag = "singular-source-without-distributional-lane-unlicenses-route" ∧
+        pkg.localizationTag = "cycle20-artifacts-only" ∧
+          pkg.noPromotionTag = "negcontrol-only-no-discharge" ∧
+            pkg.boundaryTag = "no-distributional-formalization-or-curved-space-import"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -569,6 +586,21 @@ def emU1SmoothnessWeakeningNegcontrolNoPromotionTokenV0 : String :=
 
 def emU1SmoothnessWeakeningNegcontrolBoundaryTokenV0 : String :=
   "EM_U1_SMOOTHNESS_WEAKENING_NEGCONTROL_BOUNDARY_v0: NO_DISTRIBUTIONAL_OR_CURVED_SPACE_IMPORT"
+
+def emU1DistributionalSingularSourceNegcontrolTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE20_v0: DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_TOKEN_PINNED"
+
+def emU1DistributionalSingularSourceNegcontrolRouteTokenV0 : String :=
+  "EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_ROUTE_v0: SINGULAR_SOURCE_WITHOUT_DISTRIBUTIONAL_LANE_UNLICENSES_ROUTE"
+
+def emU1DistributionalSingularSourceNegcontrolLocalizationGateTokenV0 : String :=
+  "EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_LOCALIZATION_GATE_v0: CYCLE20_ARTIFACTS_ONLY"
+
+def emU1DistributionalSingularSourceNegcontrolNoPromotionTokenV0 : String :=
+  "EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_NO_PROMOTION_v0: NEGCONTROL_ONLY_NO_DISCHARGE"
+
+def emU1DistributionalSingularSourceNegcontrolBoundaryTokenV0 : String :=
+  "EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_BOUNDARY_v0: NO_DISTRIBUTIONAL_FORMALIZATION_OR_CURVED_SPACE_IMPORT"
 
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
@@ -919,6 +951,29 @@ theorem em_u1_cycle019_negcontrol_harness_stub_v0 :
         localizationTag := "cycle19-artifacts-only"
         noPromotionTag := "negcontrol-only-no-discharge"
         boundaryTag := "no-distributional-or-curved-space-import" } := by
+  repeat' constructor
+
+theorem em_u1_cycle020_token_binding_stub_v0 :
+    emU1DistributionalSingularSourceNegcontrolTokenV0 =
+      "EM_U1_PROGRESS_CYCLE20_v0: DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_TOKEN_PINNED" ∧
+    emU1DistributionalSingularSourceNegcontrolRouteTokenV0 =
+      "EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_ROUTE_v0: SINGULAR_SOURCE_WITHOUT_DISTRIBUTIONAL_LANE_UNLICENSES_ROUTE" ∧
+    emU1DistributionalSingularSourceNegcontrolLocalizationGateTokenV0 =
+      "EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_LOCALIZATION_GATE_v0: CYCLE20_ARTIFACTS_ONLY" ∧
+    emU1DistributionalSingularSourceNegcontrolNoPromotionTokenV0 =
+      "EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_NO_PROMOTION_v0: NEGCONTROL_ONLY_NO_DISCHARGE" ∧
+    emU1DistributionalSingularSourceNegcontrolBoundaryTokenV0 =
+      "EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_BOUNDARY_v0: NO_DISTRIBUTIONAL_FORMALIZATION_OR_CURVED_SPACE_IMPORT" := by
+  repeat' constructor
+
+theorem em_u1_cycle020_negcontrol_harness_stub_v0 :
+    distributionalSingularSourceNegcontrolHarness
+      { sourceAssumptionId := "ASM-EM-U1-PHY-SOURCE-01"
+        smoothnessAssumptionId := "ASM-EM-U1-MATH-SMOOTH-01"
+        distributionalRouteTag := "singular-source-without-distributional-lane-unlicenses-route"
+        localizationTag := "cycle20-artifacts-only"
+        noPromotionTag := "negcontrol-only-no-discharge"
+        boundaryTag := "no-distributional-formalization-or-curved-space-import" } := by
   repeat' constructor
 
 end

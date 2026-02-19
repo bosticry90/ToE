@@ -470,6 +470,33 @@ EM Cycle-019 smoothness-weakening neg-control checkpoint (2026-02-19):
 - Scope boundary remains strict:
   - smoothness-weakening neg-control statements only, bounded and non-claim, no theorem/discharge promotion claim, and no distributional or curved-space import claims.
 
+EM Cycle-020 distributional/singular-source neg-control checkpoint (2026-02-19):
+- Cycle-020 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-20-DISTRIBUTIONAL-SINGULAR-SOURCE-NEGCONTROL-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_20_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_v0.md`
+- Distributional/singular-source neg-control tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE20_v0: DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_TOKEN_PINNED`
+  - `EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_ROUTE_v0: SINGULAR_SOURCE_WITHOUT_DISTRIBUTIONAL_LANE_UNLICENSES_ROUTE`
+  - `EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_LOCALIZATION_GATE_v0: CYCLE20_ARTIFACTS_ONLY`
+  - `EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_NO_PROMOTION_v0: NEGCONTROL_ONLY_NO_DISCHARGE`
+  - `EM_U1_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_BOUNDARY_v0: NO_DISTRIBUTIONAL_FORMALIZATION_OR_CURVED_SPACE_IMPORT`
+  - `EM_U1_MICRO20_SINGULAR_SOURCE_NEGCONTROL_ADJUDICATION: NOT_YET_DISCHARGED`
+- Source/smoothness prerequisites remain explicit:
+  - `ASM-EM-U1-PHY-SOURCE-01`
+  - `ASM-EM-U1-MATH-SMOOTH-01`
+  - `EM_U1_MAXWELL_CONTINUITY_THEOREM_ROUTE_v0: DIVERGENCE_ANTISYM_COMMUTATION_ATTEMPT_PINNED`
+  - `EM_U1_MAXWELL_CONTINUITY_THEOREM_SMOOTHNESS_SEAM_v0: C2_REGULARITY_REQUIRED`
+  - `EM_U1_SMOOTHNESS_WEAKENING_NEGCONTROL_ROUTE_v0: COMMUTATION_LICENSE_REMOVAL_BREAKS_ROUTE_PINNED`
+  - `EM_U1_MAXWELL_CONTINUITY_ROUTE_v0: DIVERGENCE_OF_INHOM_SURFACE_ROUTE_PINNED`
+  - `EM_U1_DOUBLE_DIVERGENCE_SURFACE_v0: DD_F_ZERO_STATEMENT_PINNED`
+  - `EM_U1_COMMUTING_PARTIALS_SURFACE_v0: COMMUTATION_STATEMENT_PINNED`
+  - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+  - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+- Cycle-020 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro20_distributional_singular_source_negcontrol.py`
+- Scope boundary remains strict:
+  - distributional/singular-source neg-control statements only, bounded and non-claim, no theorem/discharge promotion claim, and no distributional formalization or curved-space import claims.
+
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
   - `conditional-publish endpoint`.
