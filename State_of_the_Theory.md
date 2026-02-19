@@ -4,7 +4,7 @@ Project: ToE
 
 Purpose: Epistemic inventory and stabilization
 
-Last updated: 2026-02-18
+Last updated: 2026-02-19
 
 Governance architecture-freeze checkpoint (2026-02-18):
 - Architecture schema is pinned and enforced:
@@ -234,6 +234,27 @@ EM Cycle-010 source/current interface-contracts checkpoint (2026-02-18):
   - `formal/python/tests/test_em_u1_micro10_source_current_interface_contracts.py`
 - Scope boundary remains strict:
   - source/current interface seams only, bounded and non-claim, no source-equation law claim, and no dynamics promotion.
+
+EM Cycle-011 Maxwell equation statement-surfaces checkpoint (2026-02-19):
+- Cycle-011 micro target is pinned:
+  - `TARGET-EM-U1-MICRO-11-MAXWELL-EQUATION-SURFACES-STATEMENT-LOCK-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_11_MAXWELL_EQUATION_SURFACES_STATEMENT_LOCK_v0.md`
+- Maxwell statement-surface tokens are explicit:
+  - `EM_U1_PROGRESS_CYCLE11_v0: MAXWELL_EQUATION_SURFACES_TOKEN_PINNED`
+  - `EM_U1_MAXWELL_TENSOR_SURFACE_v0: INHOM_HOM_STATEMENTS_PINNED`
+  - `EM_U1_MAXWELL_FORMS_SURFACE_v0: DUAL_HODGE_DEPENDENT_STATEMENTS_PINNED`
+  - `EM_U1_MAXWELL_SURFACE_LOCALIZATION_GATE_v0: CYCLE11_ARTIFACTS_ONLY`
+  - `EM_U1_MAXWELL_SURFACE_NO_DERIVATION_v0: STATEMENT_ONLY`
+  - `EM_U1_MICRO11_MAXWELL_SURFACES_ADJUDICATION: NOT_YET_DISCHARGED`
+- Source/convention prerequisites remain explicit:
+  - `ASM-EM-U1-PHY-SOURCE-01`
+  - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+  - `EM_U1_HODGE_STAR_CONVENTION_v0: STARSTAR_SIGN_FIXED_UNDER_SIGNATURE`
+  - `EM_U1_SOURCE_OBJECT_CONVENTION_v0: CURRENT_OBJECT_DEFINED`
+- Cycle-011 gate test is pinned:
+  - `formal/python/tests/test_em_u1_micro11_maxwell_equation_surfaces_statement_lock.py`
+- Scope boundary remains strict:
+  - Maxwell equation statements only, bounded and non-claim, no derivation/promotion claim, and no units/gauge/constitutive selection claim.
 
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:

@@ -43,6 +43,14 @@ structure SourceSplitInterface where
   spatialCurrentCarrierTag : String
   continuityConstraintTag : String
 
+structure MaxwellTensorStatementSurface where
+  inhomogeneousStatementTag : String
+  homogeneousStatementTag : String
+
+structure MaxwellFormsStatementSurface where
+  homogeneousStatementTag : String
+  inhomogeneousStatementTag : String
+
 structure ConstitutiveImportInterface where
   assumptionId : String
   placeholderConstitutiveLane : String
@@ -131,6 +139,16 @@ def sourceInterfaceApplicationHarness
     (source : SourceSplitInterface) : Prop :=
   source.assumptionId = "ASM-EM-U1-PHY-SOURCE-01" ∧
     source.continuityConstraintTag = "optional-interface-constraint-only"
+
+def maxwellEquationStatementSurfaceHarness
+    (tensor : MaxwellTensorStatementSurface)
+    (forms : MaxwellFormsStatementSurface)
+    (sourceAssumptionId : String) : Prop :=
+  tensor.inhomogeneousStatementTag = "tensor-inhomogeneous-statement-pinned" ∧
+    tensor.homogeneousStatementTag = "tensor-homogeneous-statement-pinned" ∧
+      forms.homogeneousStatementTag = "forms-homogeneous-statement-pinned" ∧
+        forms.inhomogeneousStatementTag = "forms-inhomogeneous-statement-pinned" ∧
+          sourceAssumptionId = "ASM-EM-U1-PHY-SOURCE-01"
 
 theorem em_u1_field_strength_invariance_under_contract_assumptions_v0
     (d : DifferentialBundle)
@@ -290,6 +308,21 @@ def emU1SourceLocalizationGateTokenV0 : String :=
 def emU1SourceNoDynamicsTokenV0 : String :=
   "EM_U1_SOURCE_NO_DYNAMICS_v0: INTERFACE_ONLY"
 
+def emU1MaxwellEquationSurfacesTokenV0 : String :=
+  "EM_U1_PROGRESS_CYCLE11_v0: MAXWELL_EQUATION_SURFACES_TOKEN_PINNED"
+
+def emU1MaxwellTensorSurfaceTokenV0 : String :=
+  "EM_U1_MAXWELL_TENSOR_SURFACE_v0: INHOM_HOM_STATEMENTS_PINNED"
+
+def emU1MaxwellFormsSurfaceTokenV0 : String :=
+  "EM_U1_MAXWELL_FORMS_SURFACE_v0: DUAL_HODGE_DEPENDENT_STATEMENTS_PINNED"
+
+def emU1MaxwellSurfaceLocalizationGateTokenV0 : String :=
+  "EM_U1_MAXWELL_SURFACE_LOCALIZATION_GATE_v0: CYCLE11_ARTIFACTS_ONLY"
+
+def emU1MaxwellSurfaceNoDerivationTokenV0 : String :=
+  "EM_U1_MAXWELL_SURFACE_NO_DERIVATION_v0: STATEMENT_ONLY"
+
 def emU1NoShortcutGuardTokenV0 : String :=
   "EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED"
 
@@ -442,6 +475,28 @@ theorem em_u1_cycle010_source_interface_harness_stub_v0 :
 theorem em_u1_cycle010_continuity_predicate_stub_v0 :
     continuityPredicate { component := fun _ => 0 } := by
   trivial
+
+theorem em_u1_cycle011_token_binding_stub_v0 :
+    emU1MaxwellEquationSurfacesTokenV0 =
+      "EM_U1_PROGRESS_CYCLE11_v0: MAXWELL_EQUATION_SURFACES_TOKEN_PINNED" ∧
+    emU1MaxwellTensorSurfaceTokenV0 =
+      "EM_U1_MAXWELL_TENSOR_SURFACE_v0: INHOM_HOM_STATEMENTS_PINNED" ∧
+    emU1MaxwellFormsSurfaceTokenV0 =
+      "EM_U1_MAXWELL_FORMS_SURFACE_v0: DUAL_HODGE_DEPENDENT_STATEMENTS_PINNED" ∧
+    emU1MaxwellSurfaceLocalizationGateTokenV0 =
+      "EM_U1_MAXWELL_SURFACE_LOCALIZATION_GATE_v0: CYCLE11_ARTIFACTS_ONLY" ∧
+    emU1MaxwellSurfaceNoDerivationTokenV0 =
+      "EM_U1_MAXWELL_SURFACE_NO_DERIVATION_v0: STATEMENT_ONLY" := by
+  repeat' constructor <;> rfl
+
+theorem em_u1_cycle011_statement_surface_harness_stub_v0 :
+    maxwellEquationStatementSurfaceHarness
+      { inhomogeneousStatementTag := "tensor-inhomogeneous-statement-pinned"
+        homogeneousStatementTag := "tensor-homogeneous-statement-pinned" }
+      { homogeneousStatementTag := "forms-homogeneous-statement-pinned"
+        inhomogeneousStatementTag := "forms-inhomogeneous-statement-pinned" }
+      "ASM-EM-U1-PHY-SOURCE-01" := by
+  repeat' constructor <;> rfl
 
 end U1
 end EM

@@ -374,6 +374,35 @@ Cycle-010 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem promotion authorized.
 
+Cycle-011 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-11-MAXWELL-EQUATION-SURFACES-STATEMENT-LOCK-v0`
+   - scope:
+     - planning-only bounded Maxwell equation statement-surface lock in tensor/forms notation.
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE11_v0: MAXWELL_EQUATION_SURFACES_TOKEN_PINNED`
+   - tensor statement-surface token:
+     - `EM_U1_MAXWELL_TENSOR_SURFACE_v0: INHOM_HOM_STATEMENTS_PINNED`
+   - forms statement-surface token:
+     - `EM_U1_MAXWELL_FORMS_SURFACE_v0: DUAL_HODGE_DEPENDENT_STATEMENTS_PINNED`
+   - localization gate token:
+     - `EM_U1_MAXWELL_SURFACE_LOCALIZATION_GATE_v0: CYCLE11_ARTIFACTS_ONLY`
+   - no-derivation gate token:
+     - `EM_U1_MAXWELL_SURFACE_NO_DERIVATION_v0: STATEMENT_ONLY`
+   - required source assumption ID:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+   - required convention/source prerequisite tokens:
+     - `EM_U1_CONVENTION_LOCK_SIGNATURE_v0: METRIC_SIGNATURE_FIXED`
+     - `EM_U1_HODGE_STAR_CONVENTION_v0: STARSTAR_SIGN_FIXED_UNDER_SIGNATURE`
+     - `EM_U1_SOURCE_OBJECT_CONVENTION_v0: CURRENT_OBJECT_DEFINED`
+   - cycle adjudication token:
+     - `EM_U1_MICRO11_MAXWELL_SURFACES_ADJUDICATION: NOT_YET_DISCHARGED`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_11_MAXWELL_EQUATION_SURFACES_STATEMENT_LOCK_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro11_maxwell_equation_surfaces_statement_lock.py`
+   - posture:
+     - planning-only/non-claim and no theorem promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 
