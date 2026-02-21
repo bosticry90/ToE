@@ -43,6 +43,20 @@ structure ActionDensity (Coordinate DensityValue : Type) where
 structure CanonicalMomentum (FieldValue MomentumValue : Type) where
   map : FieldValue → MomentumValue
 
+structure EvolutionGenerator (State : Type) where
+  step : State → State
+
+def EvolutionGeneratorStatementOnly
+    {State : Type}
+    (_generator : EvolutionGenerator State) : Prop :=
+  True
+
+theorem EvolutionGeneratorStatementOnly_holds
+    {State : Type}
+    (generator : EvolutionGenerator State) :
+    EvolutionGeneratorStatementOnly generator := by
+  trivial
+
 def EulerLagrangeStatementOnly
     {Coordinate FieldValue DensityValue : Type}
     (_field : QuantumField FieldValue)
