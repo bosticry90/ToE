@@ -16,6 +16,7 @@ Purpose:
 
 Adjudication token:
 - `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
+- `PILLAR-SR_REGISTRY_EXEMPTION_v0: SR_CLOSURE_NOT_TRACKED_IN_GENERIC_REGISTRY`
 
 Non-claim boundary:
 - planning-only enforcement control surface.

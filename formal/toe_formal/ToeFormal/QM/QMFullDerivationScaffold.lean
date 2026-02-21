@@ -7,7 +7,7 @@ Scope:
 - contract-bridge theorem token only
 - no Schrodinger derivation claim
 - no unitary-recovery claim
-/-
+-/
 
 import ToeFormal.QM.QMEvolutionAssumptionLedger
 
@@ -148,7 +148,7 @@ def QMInevitabilityClosureSurface_v0
     QMInevitabilityNoDirectSchrodingerInsertionRoute_v0
 
 structure QMInevitabilityMinimizedAssumptions_v0
-    (h : QMEvolutionAssumptions_v0_min1) : Prop where
+    (h : QMEvolutionAssumptions_v0_min1) where
   norm : h.State → ℝ
   unitaryConsistencyRoute : QMInevitabilityUnitaryConsistencyRoute_v0 h norm
   noDirectSchrodingerInsertionRoute : QMInevitabilityNoDirectSchrodingerInsertionRoute_v0
@@ -198,14 +198,8 @@ theorem qm_inevitability_counterfactual_breaks_without_required_assumption_v0
     (hMin : QMInevitabilityMinimizedAssumptions_v0 h)
     (hMissingAntiCircularity : ¬QMInevitabilityNoDirectSchrodingerInsertionRoute_v0) :
     ¬QMInevitabilityClosureSurface_v0 h hMin.norm := by
-  have hClosure : QMInevitabilityClosureSurface_v0 h hMin.norm :=
-    qm_inevitability_necessity_under_minimized_assumptions_v0 h hMin
-  exact
-    qm_inevitability_counterfactual_breaks_without_no_direct_schrodinger_insertion_assumption_v0
-      h
-      hMin.norm
-      hMissingAntiCircularity
-      hClosure
+  intro hClosure
+  exact hMissingAntiCircularity hClosure.right.right
 
 def QMInevitabilityConstructiveRouteClassification_v0
     (h : QMEvolutionAssumptions_v0_min1)

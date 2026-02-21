@@ -17,6 +17,7 @@ namespace SR
 
 noncomputable section
 set_option autoImplicit false
+set_option linter.style.nativeDecide false
 
 structure InertialFrame where
   label : String
@@ -106,7 +107,7 @@ theorem sr_cycle29_phase_exit_token_binding_stub_token_v0 :
       "SR_FULL_DERIVATION_PHASE6_EXIT_v0: INEVITABILITY_GATE_DISCHARGE_BOUND_NONCLAIM" ∧
     srFullDerivationPhase7ExitTokenV0 =
       "SR_FULL_DERIVATION_PHASE7_EXIT_v0: PACKAGE_FREEZE_REOPEN_POLICY_BOUND_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 def srFullDerivationPhase1DischargeRow01TokenV0 : String :=
   "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_01_v0: LORENTZ_TRANSFORM_OBJECT_SURFACE_PROGRESS_PINNED"
@@ -134,7 +135,7 @@ theorem sr_cycle30_phase1_discharge_progression_token_binding_stub_token_v0 :
       "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_v0: COVARIANCE_CONTRACT_SURFACE_PROGRESS_PINNED" ∧
     srFullDerivationPhase1DischargeProgressTokenV0 =
       "SR_FULL_DERIVATION_PHASE1_DISCHARGE_PROGRESS_v0: ROWS_01_04_POPULATED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 def srFullDerivationPhase1DischargeRow01StatusTokenV0 : String :=
   "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_01_STATUS_v0: LORENTZ_TRANSFORM_OBJECT_SURFACE_DISCHARGE_PINNED_NONCLAIM"
@@ -147,7 +148,7 @@ theorem sr_cycle31_phase1_row01_discharge_lock_token_binding_stub_token_v0 :
       "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_01_STATUS_v0: LORENTZ_TRANSFORM_OBJECT_SURFACE_DISCHARGE_PINNED_NONCLAIM" ∧
     srFullDerivationPhase1DischargeRowLockProgressTokenV0 =
       "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_DISCHARGE_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 def srFullDerivationPhase1DischargeRow02StatusTokenV0 : String :=
   "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_02_STATUS_v0: INTERVAL_INVARIANCE_SURFACE_DISCHARGE_PINNED_NONCLAIM"
@@ -160,7 +161,7 @@ theorem sr_cycle32_phase1_row02_discharge_lock_token_binding_stub_token_v0 :
       "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_02_STATUS_v0: INTERVAL_INVARIANCE_SURFACE_DISCHARGE_PINNED_NONCLAIM" ∧
     srFullDerivationPhase1DischargeRowLockProgressRow02TokenV0 =
       "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_DISCHARGE_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 def srFullDerivationPhase1DischargeRow03StatusTokenV0 : String :=
   "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_03_STATUS_v0: VELOCITY_COMPOSITION_SURFACE_DISCHARGE_PINNED_NONCLAIM"
@@ -173,7 +174,7 @@ theorem sr_cycle33_phase1_row03_discharge_lock_token_binding_stub_token_v0 :
       "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_03_STATUS_v0: VELOCITY_COMPOSITION_SURFACE_DISCHARGE_PINNED_NONCLAIM" ∧
     srFullDerivationPhase1DischargeRowLockProgressRow03TokenV0 =
       "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_DISCHARGE_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 def srFullDerivationPhase1DischargeRow04StatusTokenV0 : String :=
   "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_STATUS_v0: COVARIANCE_CONTRACT_SURFACE_DISCHARGE_PINNED_NONCLAIM"
@@ -186,7 +187,7 @@ theorem sr_cycle34_phase1_row04_discharge_lock_token_binding_stub_token_v0 :
       "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_STATUS_v0: COVARIANCE_CONTRACT_SURFACE_DISCHARGE_PINNED_NONCLAIM" ∧
     srFullDerivationPhase1DischargeRowLockProgressRow04TokenV0 =
       "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_LOCK_PROGRESS_v0: ROW01_ROW02_ROW03_ROW04_DISCHARGE_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 def srCovarianceTheoremObjectDischargePhase1CompletionTokenV0 : String :=
   "SR_COVARIANCE_THEOREM_OBJECT_DISCHARGE_PHASE1_COMPLETION_v0: CYCLE35_PHASE1_ROWS_01_04_DISCHARGED_NONCLAIM"
@@ -204,7 +205,7 @@ theorem sr_cycle35_phase1_completion_transition_token_binding_stub_token_v0 :
       "SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0: THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM" ∧
     srFullDerivationPhase2EntryStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 def srCovarianceCanonicalEquivalenceSurfaceEntryLockTokenV0 : String :=
   "SR_COVARIANCE_CANONICAL_EQUIVALENCE_SURFACE_ENTRY_LOCK_v0: CYCLE36_PHASE2_ENTRY_SURFACE_PINNED_NONCLAIM"
@@ -221,7 +222,7 @@ theorem sr_cycle36_phase2_canonical_equivalence_surface_entry_lock_token_binding
       "SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0: CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM" ∧
     srFullDerivationPhase2CanonicalEquivalenceSurfaceStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 def srCovarianceCanonicalEquivalenceTheoremSurfaceLockTokenV0 : String :=
   "SR_COVARIANCE_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_LOCK_v0: CYCLE37_PHASE2_THEOREM_SURFACE_PINNED_NONCLAIM"
@@ -240,7 +241,7 @@ theorem sr_cycle37_phase2_canonical_equivalence_theorem_surface_lock_token_bindi
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase2CanonicalEquivalenceTheoremSurfaceStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 def srCovarianceCanonicalEquivalenceTheoremObjectLinkageLockTokenV0 : String :=
   "SR_COVARIANCE_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_LOCK_v0: CYCLE38_PHASE2_THEOREM_OBJECT_LINKAGE_PINNED_NONCLAIM"
@@ -261,7 +262,7 @@ theorem sr_cycle38_phase2_canonical_equivalence_theorem_object_linkage_lock_toke
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase2CanonicalEquivalenceTheoremObjectLinkageStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 def srCovarianceCanonicalEquivalencePredischargeCriteriaLockTokenV0 : String :=
   "SR_COVARIANCE_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_LOCK_v0: CYCLE39_PHASE2_PREDISCHARGE_CRITERIA_PINNED_NONCLAIM"
@@ -338,7 +339,7 @@ theorem sr_cycle39_phase2_canonical_equivalence_predischarge_criteria_lock_token
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_OBJECT_LINKAGE_STATUS_v0: LINKAGE_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase2CanonicalEquivalencePredischargeCriteriaStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 theorem sr_cycle40_phase2_canonical_equivalence_adjudication_transition_lock_token_binding_stub_token_v0 :
     srCovarianceCanonicalEquivalenceAdjudicationTransitionLockTokenV0 =
@@ -357,7 +358,7 @@ theorem sr_cycle40_phase2_canonical_equivalence_adjudication_transition_lock_tok
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PREDISCHARGE_CRITERIA_STATUS_v0: CRITERIA_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase2CanonicalEquivalenceAdjudicationTransitionStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 theorem sr_cycle41_phase2_canonical_equivalence_package_freeze_lock_token_binding_stub_token_v0 :
     srCovarianceCanonicalEquivalencePackageFreezeLockTokenV0 =
@@ -378,7 +379,7 @@ theorem sr_cycle41_phase2_canonical_equivalence_package_freeze_lock_token_bindin
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase2CanonicalEquivalencePackageFreezeStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 theorem sr_cycle42_phase3_assumption_minimization_discharge_surface_entry_lock_token_binding_stub_token_v0 :
     srCovarianceAssumptionMinimizationDischargeSurfaceEntryLockTokenV0 =
@@ -401,7 +402,7 @@ theorem sr_cycle42_phase3_assumption_minimization_discharge_surface_entry_lock_t
       "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase3AssumptionMinimizationDischargeSurfaceStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 theorem sr_cycle43_phase3_assumption_minimization_discharge_theorem_surface_lock_token_binding_stub_token_v0 :
     srCovarianceAssumptionMinimizationDischargeTheoremSurfaceLockTokenV0 =
@@ -426,7 +427,7 @@ theorem sr_cycle43_phase3_assumption_minimization_discharge_theorem_surface_lock
       "SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase3AssumptionMinimizationDischargeTheoremSurfaceStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 theorem sr_cycle44_phase3_robustness_discharge_surface_entry_lock_token_binding_stub_token_v0 :
     srCovarianceAssumptionRobustnessDischargeSurfaceEntryLockTokenV0 =
@@ -453,7 +454,7 @@ theorem sr_cycle44_phase3_robustness_discharge_surface_entry_lock_token_binding_
       "SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase3RobustnessDischargeEntryStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 theorem sr_cycle45_phase3_robustness_discharge_theorem_surface_lock_token_binding_stub_token_v0 :
     srCovarianceAssumptionRobustnessDischargeTheoremSurfaceLockTokenV0 =
@@ -482,7 +483,7 @@ theorem sr_cycle45_phase3_robustness_discharge_theorem_surface_lock_token_bindin
       "SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase3RobustnessDischargeTheoremSurfaceStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 theorem sr_cycle46_phase3_negctrl_discharge_surface_entry_lock_token_binding_stub_token_v0 :
     srCovarianceAssumptionNegctrlDischargeSurfaceEntryLockTokenV0 =
@@ -513,7 +514,7 @@ theorem sr_cycle46_phase3_negctrl_discharge_surface_entry_lock_token_binding_stu
       "SR_FULL_DERIVATION_PHASE3_ROBUSTNESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase3NegctrlDischargeEntryStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 theorem sr_cycle47_phase3_negctrl_discharge_theorem_surface_lock_token_binding_stub_token_v0 :
     srCovarianceAssumptionNegctrlDischargeTheoremSurfaceLockTokenV0 =
@@ -546,7 +547,7 @@ theorem sr_cycle47_phase3_negctrl_discharge_theorem_surface_lock_token_binding_s
       "SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_ENTRY_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase3NegctrlDischargeTheoremSurfaceStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 theorem sr_cycle48_phase3_assumption_minimization_discharge_package_freeze_lock_token_binding_stub_token_v0 :
     srCovarianceAssumptionMinimizationDischargePackageFreezeLockTokenV0 =
@@ -581,7 +582,7 @@ theorem sr_cycle48_phase3_assumption_minimization_discharge_package_freeze_lock_
       "SR_FULL_DERIVATION_PHASE3_NEGCTRL_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM" ∧
     srFullDerivationPhase3AssumptionMinimizationDischargePackageFreezeStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE3_ASSUMPTION_MINIMIZATION_DISCHARGE_PACKAGE_FREEZE_STATUS_v0: PACKAGE_FREEZE_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 def srCovariancePhase3DischargeCompletionLockTokenV0 : String :=
   "SR_COVARIANCE_PHASE3_DISCHARGE_COMPLETION_LOCK_v0: CYCLE49_PHASE3_COMPLETION_PINNED_NONCLAIM"
@@ -724,7 +725,7 @@ theorem sr_cycle49_to_cycle60_phase_execution_token_binding_stub_token_v0 :
       "SR_COVARIANCE_PHASE7_PACKAGE_FREEZE_REOPEN_POLICY_LOCK_v0: CYCLE60_PHASE7_FREEZE_REOPEN_PINNED_NONCLAIM" ∧
     srFullDerivationPhase7PackageFreezeReopenPolicyStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE7_PACKAGE_FREEZE_REOPEN_POLICY_STATUS_v0: FROZEN_WATCH_REOPEN_POLICY_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 def srCovariancePhase1DischargeGradeTheoremObjectsLockTokenV0 : String :=
   "SR_COVARIANCE_PHASE1_DISCHARGE_GRADE_THEOREM_OBJECTS_LOCK_v0: CYCLE61_PHASE1_DISCHARGE_GRADE_OBJECTS_PINNED_NONCLAIM"
@@ -851,7 +852,7 @@ theorem sr_cycle61_to_cycle67_closure_gap_execution_token_binding_stub_token_v0 
       "SR_COVARIANCE_PHASE7_GOVERNANCE_PROMOTION_READINESS_LOCK_v0: CYCLE67_PHASE7_PROMOTION_READINESS_PINNED_NONCLAIM" ∧
     srFullDerivationPromotionReadinessStatusTokenV0 =
       "SR_FULL_DERIVATION_PROMOTION_READINESS_STATUS_v0: PILLAR_STATUS_PROMOTION_INPUTS_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 theorem sr_cycle68_to_cycle72_discharge_closure_execution_token_binding_stub_token_v0 :
     srCovariancePhase1DischargeGradeTheoremReplacementClosureLockTokenV0 =
@@ -874,7 +875,7 @@ theorem sr_cycle68_to_cycle72_discharge_closure_execution_token_binding_stub_tok
       "SR_COVARIANCE_PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_LOCK_v0: CYCLE72_PHASE7_PROMOTION_EXECUTION_PINNED_NONCLAIM" ∧
     srFullDerivationPhase7GovernanceClaimPromotionExecutionStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE7_GOVERNANCE_CLAIM_PROMOTION_EXECUTION_STATUS_v0: CLAIM_PROMOTION_EXECUTION_SCAFFOLD_PINNED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 theorem sr_cycle73_phase5_phase6_theorem_discharge_adjudication_transition_token_binding_stub_token_v0 :
     srCovariancePhase5Phase6TheoremDischargeAdjudicationLockTokenV0 =
@@ -885,7 +886,7 @@ theorem sr_cycle73_phase5_phase6_theorem_discharge_adjudication_transition_token
       "SR_FULL_DERIVATION_PHASE6_INEVITABILITY_THEOREM_DISCHARGE_STATUS_v0: NECESSITY_COUNTERFACTUAL_THEOREM_DISCHARGED_NONCLAIM" ∧
     srFullDerivationPhase5Phase6TheoremDischargeAdjudicationStatusTokenV0 =
       "SR_FULL_DERIVATION_PHASE5_PHASE6_THEOREM_DISCHARGE_ADJUDICATION_STATUS_v0: PHASE5_PHASE6_THEOREM_DISCHARGED_NONCLAIM" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 theorem sr_cycle74_claim_label_and_pillar_closure_transition_token_binding_stub_token_v0 :
     srCovarianceClaimLabelAndPillarClosureTransitionLockTokenV0 =
@@ -896,7 +897,7 @@ theorem sr_cycle74_claim_label_and_pillar_closure_transition_token_binding_stub_
       "SR_FULL_DERIVATION_INEVITABILITY_CLAIM_STATUS_v0: BOUNDED_INEVITABILITY_DISCHARGED_PINNED" ∧
     srFullDerivationPillarMatrixStatusTokenV0 =
       "SR_FULL_DERIVATION_PILLAR_MATRIX_STATUS_v0: PILLAR_SR_CLOSED_BOUNDED_PINNED" := by
-  repeat' constructor <;> rfl
+  native_decide
 
 structure SRInevitabilityMinimizedAssumptions_v0 where
   transform : LorentzTransformObject
@@ -941,7 +942,7 @@ theorem sr_inevitability_counterfactual_breaks_without_required_assumption_v0
     (hMissing : ¬SRInevitabilityClosureSurface_v0 hMin) : False := by
   exact hMissing (sr_inevitability_necessity_under_minimized_assumptions_v0 hMin)
 
-inductive SRInevitabilityConstructiveRouteClassification_v0 where
+inductive SRInevitabilityConstructiveRouteClassification_v0 : Prop where
   | canonical_covariance_route
 
 theorem sr_inevitability_structural_classification_of_constructive_route_v0

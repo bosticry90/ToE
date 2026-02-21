@@ -874,6 +874,8 @@ EM Cycle-030 Maxwell-to-continuity typed-route consumer attempt checkpoint (2026
 Pillar full-derivation discharge registry checkpoint (2026-02-20):
 - registry pointer:
   - `formal/docs/paper/PILLAR_DISCHARGE_REGISTRY_v0.json`
+- SR registry coverage token:
+  - `PILLAR-SR_REGISTRY_EXEMPTION_v0: SR_CLOSURE_NOT_TRACKED_IN_GENERIC_REGISTRY`
 
 Pillar-GR full-derivation discharge lane checkpoint (2026-02-20):
 - standardized discharge target:
@@ -1865,6 +1867,8 @@ SR covariance kickoff checkpoint (2026-02-16):
   - `SR_COVARIANCE_PROGRESS_CYCLE74_v0: CLAIM_LABEL_AND_PILLAR_CLOSURE_TRANSITION_LOCK_TOKEN_PINNED`
   - `SR_COVARIANCE_CYCLE74_ARTIFACT_v0: sr_covariance_claim_label_and_pillar_closure_transition_lock_cycle74_v0`
   - artifact: `formal/output/sr_covariance_claim_label_and_pillar_closure_transition_lock_cycle74_v0.json`
+  - build gate: `formal/python/tests/test_lean_build_gate_sr_covariance_object_discharge_stub.py`
+  - registry-exemption gate: `formal/python/tests/test_sr_registry_exemption_policy.py`
 - Scope boundary remains explicit:
   - bounded theorem-discharge posture under explicit assumptions,
   - no external truth claim,
@@ -1958,6 +1962,7 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
   - `QM_FULL_DERIVATION_PROGRESS_CYCLE2_v0: UNITARY_CONSISTENCY_TOKEN_PINNED`
   - micro-target: `TARGET-QM-FULL-MICRO-02-UNITARY-CONSISTENCY-v0`
   - theorem token: `qm_full_derivation_cycle2_unitary_consistency_token_v0`
+  - build gate: `formal/python/tests/test_lean_build_gate_qm_full_derivation_scaffold.py`
   - `QM_FULL_DERIVATION_PROGRESS_CYCLE3_v0: ANTI_CIRCULARITY_GUARD_TOKEN_PINNED`
   - micro-target: `TARGET-QM-FULL-MICRO-03-ANTI-CIRCULARITY-GUARD-v0`
   - theorem token: `qm_full_derivation_cycle3_no_direct_schrodinger_insertion_guard_v0`

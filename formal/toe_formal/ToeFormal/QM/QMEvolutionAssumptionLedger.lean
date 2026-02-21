@@ -7,7 +7,7 @@ Scope:
 - contract-only QM evolution theorem surface
 - explicit assumption bundle classification support
 - no Schrodinger derivation claim and no unitary-recovery claim
-/-
+-/
 
 import ToeFormal.QM.EvolutionContract
 

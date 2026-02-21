@@ -134,6 +134,7 @@ Current dual-layer snapshot (machine-checkable tokens):
 - `EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_CRITERIA_ARTIFACT_v0: em_pillar_full_discharge_adjudication_criteria_cycle46_v0`
 - `EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_FLIP_GATE_v0: CRITERIA_ARTIFACT_AND_NON_BLOCKED_ROWS_REQUIRED`
 - `formal/output/em_pillar_full_discharge_adjudication_criteria_cycle46_v0.json`
+- `PILLAR-SR_REGISTRY_EXEMPTION_v0: SR_CLOSURE_NOT_TRACKED_IN_GENERIC_REGISTRY`
 - blocker references:
   - GR: none (all required GR closure rows are non-`B-*`)
   - QM: none (all required QM closure rows are non-`B-*`)
@@ -219,6 +220,9 @@ governance decision.
   - `formal/python/tests/test_gr01_hardening_roadmap_gate.py`
   - `formal/python/tests/test_qm_evolution_hardening_roadmap_gate.py`
   - `formal/python/tests/test_qm_gr_regime_expansion_gate.py`
+  - `formal/python/tests/test_lean_build_gate_qm_full_derivation_scaffold.py`
+  - `formal/python/tests/test_lean_build_gate_sr_covariance_object_discharge_stub.py`
+  - `formal/python/tests/test_sr_registry_exemption_policy.py`
 
 ## Freeze Policy
 
