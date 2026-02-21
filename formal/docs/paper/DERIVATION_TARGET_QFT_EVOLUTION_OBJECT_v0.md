@@ -47,6 +47,9 @@ Kickoff token contract:
 - `TARGET-QFT-EVOL-MICRO-08-HAMILTONIAN-SURFACE-v0`
 - `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_08_HAMILTONIAN_SURFACE_v0.md`
 - `formal/python/tests/test_qft_evol_micro08_hamiltonian_surface_gate.py`
+- `TARGET-QFT-EVOL-MICRO-09-HAMILTONIAN-GENERATOR-INTERFACE-SURFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_09_HAMILTONIAN_GENERATOR_INTERFACE_SURFACE_v0.md`
+- `formal/python/tests/test_qft_evol_micro09_hamiltonian_generator_interface_surface_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.

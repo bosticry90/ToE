@@ -71,6 +71,19 @@ theorem HamiltonianStatementOnly_holds
     HamiltonianStatementOnly hamiltonian := by
   trivial
 
+def HamiltonianGeneratorInterfaceStatementOnly
+    {State : Type}
+    (_hamiltonian : Hamiltonian State)
+    (_generator : EvolutionGenerator State) : Prop :=
+  True
+
+theorem HamiltonianGeneratorInterfaceStatementOnly_holds
+    {State : Type}
+    (hamiltonian : Hamiltonian State)
+    (generator : EvolutionGenerator State) :
+    HamiltonianGeneratorInterfaceStatementOnly hamiltonian generator := by
+  trivial
+
 def EulerLagrangeStatementOnly
     {Coordinate FieldValue DensityValue : Type}
     (_field : QuantumField FieldValue)
