@@ -84,6 +84,21 @@ theorem HamiltonianGeneratorInterfaceStatementOnly_holds
     HamiltonianGeneratorInterfaceStatementOnly hamiltonian generator := by
   trivial
 
+def EvolutionContractInterfaceStatementOnly
+    {Time State : Type}
+    (_ctx : EvolutionContextObject Time State)
+    (_initialState : FieldStateObject State)
+    (_finalState : FieldStateObject State) : Prop :=
+  True
+
+theorem EvolutionContractInterfaceStatementOnly_holds
+    {Time State : Type}
+    (ctx : EvolutionContextObject Time State)
+    (initialState : FieldStateObject State)
+    (finalState : FieldStateObject State) :
+    EvolutionContractInterfaceStatementOnly ctx initialState finalState := by
+  trivial
+
 def EulerLagrangeStatementOnly
     {Coordinate FieldValue DensityValue : Type}
     (_field : QuantumField FieldValue)
