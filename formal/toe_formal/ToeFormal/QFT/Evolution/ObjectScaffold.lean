@@ -204,6 +204,21 @@ theorem QFTEvolutionTheoremTokenConsumerBindingCompatibilityStatementOnly_holds
     QFTEvolutionTheoremTokenConsumerBindingCompatibilityStatementOnly ctx initialState finalState := by
   trivial
 
+def QFTEvolutionTheoremTokenConsumerBindingCompatibilityConsumerStatementOnly
+    {Time State : Type}
+    (_ctx : EvolutionContextObject Time State)
+    (_initialState : FieldStateObject State)
+    (_finalState : FieldStateObject State) : Prop :=
+  True
+
+theorem QFTEvolutionTheoremTokenConsumerBindingCompatibilityConsumerStatementOnly_holds
+    {Time State : Type}
+    (ctx : EvolutionContextObject Time State)
+    (initialState : FieldStateObject State)
+    (finalState : FieldStateObject State) :
+    QFTEvolutionTheoremTokenConsumerBindingCompatibilityConsumerStatementOnly ctx initialState finalState := by
+  trivial
+
 def EulerLagrangeStatementOnly
     {Coordinate FieldValue DensityValue : Type}
     (_field : QuantumField FieldValue)
