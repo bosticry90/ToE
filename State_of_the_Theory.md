@@ -913,6 +913,7 @@ Pillar-EM full-derivation discharge lane checkpoint (2026-02-20):
   - `formal/python/tests/test_em_u1_canonical_route_admissibility_lock.py`
   - `formal/python/tests/test_em_u1_full_discharge_adjudication_criteria_artifact.py`
   - `formal/python/tests/test_results_row_class_semantics_policy.py`
+  - `formal/python/tests/test_em_lane_separation_policy.py`
 - adjudication-flip criteria artifact:
   - `EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_CRITERIA_ARTIFACT_v0: em_pillar_full_discharge_adjudication_criteria_cycle46_v0`
   - `EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_FLIP_GATE_v0: CRITERIA_ARTIFACT_AND_NON_BLOCKED_ROWS_REQUIRED`

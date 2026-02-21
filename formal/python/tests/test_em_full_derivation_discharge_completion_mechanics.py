@@ -29,6 +29,7 @@ EM_ADJUDICATION_CRITERIA_ARTIFACT_GATE_PATH = (
 EM_ADJUDICATION_CRITERIA_ARTIFACT_PATH = (
     "formal/output/em_pillar_full_discharge_adjudication_criteria_cycle46_v0.json"
 )
+EM_LANE_SEPARATION_POLICY_GATE_PATH = "formal/python/tests/test_em_lane_separation_policy.py"
 EM_SPECIFIC_GATE_PATH = "formal/python/tests/test_em_full_derivation_discharge_completion_mechanics.py"
 
 
@@ -78,6 +79,12 @@ def test_em_completion_mechanics_is_delegated_to_registry_driven_generic_gate() 
             f"{path} must reference the EM adjudication-criteria artifact path "
             f"`{EM_ADJUDICATION_CRITERIA_ARTIFACT_PATH}`."
         )
+
+    for path in [EM_TARGET_PATH, STATE_PATH]:
+        text = _read(path)
+        assert (
+            EM_LANE_SEPARATION_POLICY_GATE_PATH in text
+        ), f"{path} must reference the EM lane-separation policy gate `{EM_LANE_SEPARATION_POLICY_GATE_PATH}`."
 
 
 def test_em_completion_surfaces_do_not_pin_em_specific_gate_as_authority() -> None:

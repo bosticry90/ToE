@@ -225,13 +225,26 @@ def test_pillar_full_derivation_discharge_lane_contract_is_enforced_for_register
                     f"{pillar_name}: section heading `{normalized_heading}` violates canonical `## [A-Z0-9_]+ section` format."
                 )
 
+        adjudication_value = _extract_adjudication_value(pillar_key, discharge_text)
+        if not (adjudication_value == "NOT_YET_DISCHARGED" or adjudication_value.startswith("DISCHARGED")):
+            violations.append(
+                f"{pillar_name}: adjudication value `{adjudication_value}` must be NOT_YET_DISCHARGED or DISCHARGED_*."
+            )
+
+        pre_discharge_no_promotion_value = "ATTEMPT_ONLY_NO_DISCHARGE"
+        discharged_no_promotion_value = "DISCHARGED_NO_AUTOMATIC_PROMOTION"
+        is_discharged_posture = adjudication_value.startswith("DISCHARGED_")
+        expected_no_promotion_value = (
+            discharged_no_promotion_value if is_discharged_posture else pre_discharge_no_promotion_value
+        )
+
         localization_token = (
             f"PILLAR_{pillar_key}_FULL_DERIVATION_DISCHARGE_LOCALIZATION_GATE_v0: "
             "FULL_DISCHARGE_ARTIFACTS_ONLY"
         )
         no_promotion_token = (
             f"PILLAR_{pillar_key}_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: "
-            "ATTEMPT_ONLY_NO_DISCHARGE"
+            f"{expected_no_promotion_value}"
         )
         boundary_token = (
             f"PILLAR_{pillar_key}_FULL_DERIVATION_DISCHARGE_BOUNDARY_v0: "
@@ -242,6 +255,29 @@ def test_pillar_full_derivation_discharge_lane_contract_is_enforced_for_register
             if token not in discharge_text:
                 violations.append(f"{pillar_name}: missing required discharge-doc token `{token}`.")
 
+        no_promotion_pre_token = (
+            f"PILLAR_{pillar_key}_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: "
+            f"{pre_discharge_no_promotion_value}"
+        )
+        no_promotion_post_token = (
+            f"PILLAR_{pillar_key}_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: "
+            f"{discharged_no_promotion_value}"
+        )
+        if no_promotion_pre_token in discharge_text and no_promotion_post_token in discharge_text:
+            violations.append(
+                f"{pillar_name}: no-promotion token appears in both pre- and post-discharge forms; keep exactly one."
+            )
+        if is_discharged_posture and no_promotion_pre_token in discharge_text:
+            violations.append(
+                f"{pillar_name}: discharged adjudication cannot keep legacy no-promotion value "
+                f"`{pre_discharge_no_promotion_value}`."
+            )
+        if adjudication_value == "NOT_YET_DISCHARGED" and no_promotion_post_token in discharge_text:
+            violations.append(
+                f"{pillar_name}: NOT_YET_DISCHARGED adjudication cannot use post-discharge no-promotion value "
+                f"`{discharged_no_promotion_value}`."
+            )
+
         if discharge_doc_rel == umbrella_doc_rel:
             equivalence_token = f"PILLAR_{pillar_key}_DISCHARGE_DOC_IS_UMBRELLA_DOC_v0: TRUE"
             if equivalence_token not in discharge_text:
@@ -249,12 +285,6 @@ def test_pillar_full_derivation_discharge_lane_contract_is_enforced_for_register
                     f"{pillar_name}: discharge_doc_path equals umbrella_target_doc_path, "
                     f"but missing explicit equivalence token `{equivalence_token}`."
                 )
-
-        adjudication_value = _extract_adjudication_value(pillar_key, discharge_text)
-        if not (adjudication_value == "NOT_YET_DISCHARGED" or adjudication_value.startswith("DISCHARGED")):
-            violations.append(
-                f"{pillar_name}: adjudication value `{adjudication_value}` must be NOT_YET_DISCHARGED or DISCHARGED_*."
-            )
 
         if target_id not in umbrella_text:
             violations.append(f"{pillar_name}: umbrella target doc does not reference discharge target ID `{target_id}`.")

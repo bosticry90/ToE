@@ -122,7 +122,7 @@ Adjudication token:
 - Standardized pillar discharge lane tokens:
   - `PILLAR_EM_FULL_DERIVATION_DISCHARGE_ADJUDICATION: DISCHARGED_v0_DERIVATION_GRADE`
   - `PILLAR_EM_FULL_DERIVATION_DISCHARGE_LOCALIZATION_GATE_v0: FULL_DISCHARGE_ARTIFACTS_ONLY`
-  - `PILLAR_EM_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+  - `PILLAR_EM_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: DISCHARGED_NO_AUTOMATIC_PROMOTION`
   - `PILLAR_EM_FULL_DERIVATION_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
 - Intentional umbrella/discharge equivalence token:
   - `PILLAR_EM_DISCHARGE_DOC_IS_UMBRELLA_DOC_v0: TRUE`
@@ -1230,6 +1230,7 @@ EM full-discharge completion mechanics (v0):
   - `formal/python/tests/test_pillar_full_discharge_completion_mechanics.py`
   - `formal/python/tests/test_em_u1_canonical_route_admissibility_lock.py`
   - `formal/python/tests/test_results_row_class_semantics_policy.py`
+  - `formal/python/tests/test_em_lane_separation_policy.py`
 - adjudication criteria artifact (status-synchronized):
   - `EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_CRITERIA_ARTIFACT_v0: em_pillar_full_discharge_adjudication_criteria_cycle46_v0`
   - `EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_FLIP_GATE_v0: CRITERIA_ARTIFACT_AND_NON_BLOCKED_ROWS_REQUIRED`
