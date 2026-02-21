@@ -16,6 +16,8 @@ REPO_ROOT = find_repo_root(Path(__file__))
 QFT_GAUGE_TARGET_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+QFT_KICKOFF_GATE_PATH = "formal/python/tests/test_qft_gauge_kickoff_scaffold_gate.py"
+QFT_BUILD_GATE_PATH = "formal/python/tests/test_lean_build_gate_qft_gauge_object_scaffold.py"
 
 
 def _read(path: Path) -> str:
@@ -84,3 +86,16 @@ def test_qft_kickoff_nonclaim_boundary_is_explicit() -> None:
     ]
     missing = [phrase for phrase in required_nonclaim_phrases if phrase not in text]
     assert not missing, "QFT kickoff non-claim boundary phrase(s) missing: " + ", ".join(missing)
+
+
+def test_qft_kickoff_and_build_gates_are_pinned_in_authority_surfaces() -> None:
+    roadmap_text = _read(ROADMAP_PATH)
+    state_text = _read(STATE_PATH)
+
+    for required_path in [QFT_KICKOFF_GATE_PATH, QFT_BUILD_GATE_PATH]:
+        assert required_path in roadmap_text, (
+            f"Roadmap authority surface must pin `{required_path}`."
+        )
+        assert required_path in state_text, (
+            f"State authority surface must pin `{required_path}`."
+        )
