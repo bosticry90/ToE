@@ -17,6 +17,7 @@ QFT_EVOL_TARGET_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TAR
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 TRANCHE_GATE_PATH = "formal/python/tests/test_qft_evol_micro_tranche_01_06_completeness_gate.py"
+LEGACY_TRANCHE_GATE_PATH = "formal/python/tests/test_qft_evol_micro_tranche_01_05_completeness_gate.py"
 
 TRANCHE_ORDERED_TOKENS = [
     "TARGET-QFT-EVOL-MICRO-01-TIME-STATE-OPERATOR-SURFACE-v0",
@@ -74,4 +75,10 @@ def test_qft_evol_micro_tranche_gate_is_pinned_in_authority_surfaces() -> None:
     )
     assert TRANCHE_GATE_PATH in state_text, (
         f"State authority surface must pin `{TRANCHE_GATE_PATH}`."
+    )
+    assert LEGACY_TRANCHE_GATE_PATH not in roadmap_text, (
+        f"Roadmap authority surface must not pin legacy `{LEGACY_TRANCHE_GATE_PATH}`."
+    )
+    assert LEGACY_TRANCHE_GATE_PATH not in state_text, (
+        f"State authority surface must not pin legacy `{LEGACY_TRANCHE_GATE_PATH}`."
     )
