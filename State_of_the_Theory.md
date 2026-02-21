@@ -1177,6 +1177,9 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - micro-02 target: `TARGET-QFT-GAUGE-MICRO-02-CONNECTION-SURFACE-v0`
   - micro-02 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_GAUGE_MICRO_02_CONNECTION_SURFACE_v0.md`
   - micro-02 gate: `formal/python/tests/test_qft_gauge_micro02_connection_surface_gate.py`
+  - micro-03 target: `TARGET-QFT-GAUGE-MICRO-03-CURVATURE-SURFACE-v0`
+  - micro-03 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_GAUGE_MICRO_03_CURVATURE_SURFACE_v0.md`
+  - micro-03 gate: `formal/python/tests/test_qft_gauge_micro03_curvature_surface_gate.py`
 - Selection rationale (governance):
   - GR01 + continuum + strong-field-program + QM full-derivation closures are synchronized,
   - first unlock cohort (SR/EM) is closed under roadmap order intent,

@@ -23,6 +23,9 @@ Kickoff token contract:
 - `TARGET-QFT-GAUGE-MICRO-02-CONNECTION-SURFACE-v0`
 - `formal/docs/paper/DERIVATION_TARGET_QFT_GAUGE_MICRO_02_CONNECTION_SURFACE_v0.md`
 - `formal/python/tests/test_qft_gauge_micro02_connection_surface_gate.py`
+- `TARGET-QFT-GAUGE-MICRO-03-CURVATURE-SURFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_GAUGE_MICRO_03_CURVATURE_SURFACE_v0.md`
+- `formal/python/tests/test_qft_gauge_micro03_curvature_surface_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.
