@@ -159,6 +159,21 @@ theorem QFTEvolutionTheoremTokenInterfaceStatementOnly_holds
     QFTEvolutionTheoremTokenInterfaceStatementOnly ctx initialState finalState := by
   trivial
 
+def QFTEvolutionTheoremTokenConsumerInterfaceStatementOnly
+    {Time State : Type}
+    (_ctx : EvolutionContextObject Time State)
+    (_initialState : FieldStateObject State)
+    (_finalState : FieldStateObject State) : Prop :=
+  True
+
+theorem QFTEvolutionTheoremTokenConsumerInterfaceStatementOnly_holds
+    {Time State : Type}
+    (ctx : EvolutionContextObject Time State)
+    (initialState : FieldStateObject State)
+    (finalState : FieldStateObject State) :
+    QFTEvolutionTheoremTokenConsumerInterfaceStatementOnly ctx initialState finalState := by
+  trivial
+
 def EulerLagrangeStatementOnly
     {Coordinate FieldValue DensityValue : Type}
     (_field : QuantumField FieldValue)
