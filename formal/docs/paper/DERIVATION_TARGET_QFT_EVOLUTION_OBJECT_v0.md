@@ -39,15 +39,13 @@ Target scope:
 - Structural object: evolution object (time/state/evolution-operator scaffolding).
 - Map linkage: `TARGET-QFT-EVOL-PLAN` in `STRUCTURAL_CLOSENESS_MAP_v0`.
 
-Canonical Lean target (contract-only):
-- Module: `formal/toe_formal/ToeFormal/QFT/EvolutionContract.lean`
-- Theorem surface: `qft_evolution_under_contract_assumptions`
-- Lean header posture tokens: `Contract-only theorem surface.` and
-  `No Standard Model claim and no external truth claim.`
-
-Canonical Lean target (object scaffold):
-- Module: `formal/toe_formal/ToeFormal/QFT/Evolution/ObjectScaffold.lean`
-- Scope: typed carriers and statement-only seams.
+Canonical Lean targets:
+- Contract module: `formal/toe_formal/ToeFormal/QFT/EvolutionContract.lean`
+  - theorem surface: `qft_evolution_under_contract_assumptions`
+  - Lean header posture tokens: `Contract-only theorem surface.` and
+    `No Standard Model claim and no external truth claim.`
+- Object scaffold module: `formal/toe_formal/ToeFormal/QFT/Evolution/ObjectScaffold.lean`
+  - scope: typed carriers and statement-only seams.
 
 ## Minimum Structural Objects Required
 
