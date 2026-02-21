@@ -223,6 +223,7 @@ governance decision.
   - `formal/python/tests/test_lean_build_gate_qm_full_derivation_scaffold.py`
   - `formal/python/tests/test_lean_build_gate_sr_covariance_object_discharge_stub.py`
   - `formal/python/tests/test_sr_registry_exemption_policy.py`
+  - `formal/python/tests/test_results_table_integrity.py`
 
 ## Freeze Policy
 
