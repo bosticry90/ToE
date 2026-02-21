@@ -17,6 +17,9 @@ Kickoff token contract:
 - `QFT_GAUGE_ADJUDICATION: NOT_YET_DISCHARGED`
 - `QFT_GAUGE_SCOPE_BOUNDARY_v0: CONTRACT_OBJECT_SCAFFOLD_ONLY_NONCLAIM`
 - `QFT_PREREQS_v0: TARGET-EM-U1-PLAN;TARGET-SR-COV-PLAN`
+- `TARGET-QFT-GAUGE-MICRO-01-GROUP-ACTION-SURFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_GAUGE_MICRO_01_GROUP_ACTION_SURFACE_v0.md`
+- `formal/python/tests/test_qft_gauge_micro01_group_action_surface_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.
