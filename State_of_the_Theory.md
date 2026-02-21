@@ -1192,6 +1192,9 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - QFT evolution kickoff gate: `formal/python/tests/test_qft_evol_kickoff_scaffold_gate.py`
   - QFT evolution Lean scaffold: `formal/toe_formal/ToeFormal/QFT/Evolution/ObjectScaffold.lean`
   - QFT evolution Lean build gate: `formal/python/tests/test_lean_build_gate_qft_evol_object_scaffold.py`
+  - QFT evolution micro-01 target: `TARGET-QFT-EVOL-MICRO-01-TIME-STATE-OPERATOR-SURFACE-v0`
+  - QFT evolution micro-01 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_01_TIME_STATE_OPERATOR_SURFACE_v0.md`
+  - QFT evolution micro-01 gate: `formal/python/tests/test_qft_evol_micro01_time_state_operator_surface_gate.py`
 - Selection rationale (governance):
   - GR01 + continuum + strong-field-program + QM full-derivation closures are synchronized,
   - first unlock cohort (SR/EM) is closed under roadmap order intent,

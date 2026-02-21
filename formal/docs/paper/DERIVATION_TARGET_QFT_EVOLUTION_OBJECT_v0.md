@@ -23,6 +23,9 @@ Kickoff token contract:
 - `QFT_EVOL_DELIVERABLE_CANONICAL_MOMENTUM_PLACEHOLDER_v0: STATEMENT_ONLY`
 - `QFT_EVOL_DELIVERABLE_UNITARITY_PLACEHOLDER_v0: STATEMENT_ONLY_NONPROOF`
 - `formal/toe_formal/ToeFormal/QFT/Evolution/ObjectScaffold.lean`
+- `TARGET-QFT-EVOL-MICRO-01-TIME-STATE-OPERATOR-SURFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_01_TIME_STATE_OPERATOR_SURFACE_v0.md`
+- `formal/python/tests/test_qft_evol_micro01_time_state_operator_surface_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.

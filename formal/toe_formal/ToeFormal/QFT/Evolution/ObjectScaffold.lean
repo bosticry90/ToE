@@ -20,6 +20,15 @@ namespace ObjectScaffold
 noncomputable section
 set_option autoImplicit false
 
+structure TimeParameterObject (Time : Type) where
+  value : Time
+
+structure FieldStateObject (State : Type) where
+  value : State
+
+structure EvolutionOperatorObject (Time State : Type) where
+  step : TimeParameterObject Time → FieldStateObject State → FieldStateObject State
+
 structure QuantumField (FieldValue : Type) where
   value : FieldValue
 
