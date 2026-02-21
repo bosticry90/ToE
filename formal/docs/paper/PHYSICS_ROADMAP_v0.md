@@ -229,6 +229,7 @@ governance decision.
   - `formal/python/tests/test_qft_evol_micro03_action_density_surface_gate.py`
   - `formal/python/tests/test_qft_evol_micro04_euler_lagrange_surface_gate.py`
   - `formal/python/tests/test_qft_evol_micro05_unitarity_surface_gate.py`
+  - `formal/python/tests/test_qft_evol_micro06_canonical_momentum_surface_gate.py`
   - `formal/python/tests/test_qft_evol_micro_tranche_01_05_completeness_gate.py`
   - `formal/python/tests/test_qft_gauge_micro01_group_action_surface_gate.py`
   - `formal/python/tests/test_qft_gauge_micro02_connection_surface_gate.py`

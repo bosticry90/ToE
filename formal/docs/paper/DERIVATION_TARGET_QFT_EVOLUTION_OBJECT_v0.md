@@ -38,6 +38,9 @@ Kickoff token contract:
 - `TARGET-QFT-EVOL-MICRO-05-UNITARITY-SURFACE-v0`
 - `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_05_UNITARITY_SURFACE_v0.md`
 - `formal/python/tests/test_qft_evol_micro05_unitarity_surface_gate.py`
+- `TARGET-QFT-EVOL-MICRO-06-CANONICAL-MOMENTUM-SURFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_06_CANONICAL_MOMENTUM_SURFACE_v0.md`
+- `formal/python/tests/test_qft_evol_micro06_canonical_momentum_surface_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.
