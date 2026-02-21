@@ -222,6 +222,8 @@ governance decision.
   - `formal/python/tests/test_qm_evolution_hardening_roadmap_gate.py`
   - `formal/python/tests/test_qft_gauge_kickoff_scaffold_gate.py`
   - `formal/python/tests/test_lean_build_gate_qft_gauge_object_scaffold.py`
+  - `formal/python/tests/test_qft_evol_kickoff_scaffold_gate.py`
+  - `formal/python/tests/test_lean_build_gate_qft_evol_object_scaffold.py`
   - `formal/python/tests/test_qft_gauge_micro01_group_action_surface_gate.py`
   - `formal/python/tests/test_qft_gauge_micro02_connection_surface_gate.py`
   - `formal/python/tests/test_qft_gauge_micro03_curvature_surface_gate.py`
