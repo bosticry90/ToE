@@ -29,6 +29,9 @@ Kickoff token contract:
 - `TARGET-QFT-GAUGE-MICRO-04-GAUGE-TRANSFORM-INVARIANCE-SURFACE-v0`
 - `formal/docs/paper/DERIVATION_TARGET_QFT_GAUGE_MICRO_04_GAUGE_TRANSFORM_INVARIANCE_SURFACE_v0.md`
 - `formal/python/tests/test_qft_gauge_micro04_gauge_transform_invariance_surface_gate.py`
+- `TARGET-QFT-GAUGE-MICRO-05-COUPLING-SOURCE-CURRENT-INTERFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_GAUGE_MICRO_05_COUPLING_SOURCE_CURRENT_INTERFACE_v0.md`
+- `formal/python/tests/test_qft_gauge_micro05_coupling_source_current_interface_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.

@@ -68,6 +68,21 @@ theorem gaugeTransformStatementOnly_holds
     gaugeTransformStatementOnly transform := by
   trivial
 
+structure CurrentSourceInterface (SourceType CurrentType : Type) where
+  -- Statement-only coupling seam; no dynamics equation is encoded in kickoff.
+  map : SourceType → CurrentType
+
+def couplingStatementOnly
+    {SourceType CurrentType : Type}
+    (_interface : CurrentSourceInterface SourceType CurrentType) : Prop :=
+  True
+
+theorem couplingStatementOnly_holds
+    {SourceType CurrentType : Type}
+    (interface : CurrentSourceInterface SourceType CurrentType) :
+    couplingStatementOnly interface := by
+  trivial
+
 end
 
 end ObjectScaffold
