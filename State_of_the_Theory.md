@@ -1195,6 +1195,9 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - QFT evolution micro-01 target: `TARGET-QFT-EVOL-MICRO-01-TIME-STATE-OPERATOR-SURFACE-v0`
   - QFT evolution micro-01 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_01_TIME_STATE_OPERATOR_SURFACE_v0.md`
   - QFT evolution micro-01 gate: `formal/python/tests/test_qft_evol_micro01_time_state_operator_surface_gate.py`
+  - QFT evolution micro-02 target: `TARGET-QFT-EVOL-MICRO-02-EVOLUTION-CONTEXT-SURFACE-v0`
+  - QFT evolution micro-02 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_02_EVOLUTION_CONTEXT_SURFACE_v0.md`
+  - QFT evolution micro-02 gate: `formal/python/tests/test_qft_evol_micro02_evolution_context_surface_gate.py`
 - Selection rationale (governance):
   - GR01 + continuum + strong-field-program + QM full-derivation closures are synchronized,
   - first unlock cohort (SR/EM) is closed under roadmap order intent,

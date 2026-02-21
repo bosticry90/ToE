@@ -26,6 +26,9 @@ Kickoff token contract:
 - `TARGET-QFT-EVOL-MICRO-01-TIME-STATE-OPERATOR-SURFACE-v0`
 - `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_01_TIME_STATE_OPERATOR_SURFACE_v0.md`
 - `formal/python/tests/test_qft_evol_micro01_time_state_operator_surface_gate.py`
+- `TARGET-QFT-EVOL-MICRO-02-EVOLUTION-CONTEXT-SURFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_02_EVOLUTION_CONTEXT_SURFACE_v0.md`
+- `formal/python/tests/test_qft_evol_micro02_evolution_context_surface_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.

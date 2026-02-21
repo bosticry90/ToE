@@ -29,6 +29,11 @@ structure FieldStateObject (State : Type) where
 structure EvolutionOperatorObject (Time State : Type) where
   step : TimeParameterObject Time → FieldStateObject State → FieldStateObject State
 
+structure EvolutionContextObject (Time State : Type) where
+  timeParameter : TimeParameterObject Time
+  fieldState : FieldStateObject State
+  evolutionOperator : EvolutionOperatorObject Time State
+
 structure QuantumField (FieldValue : Type) where
   value : FieldValue
 
