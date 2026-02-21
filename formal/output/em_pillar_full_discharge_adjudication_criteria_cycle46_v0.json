@@ -1,0 +1,74 @@
+{
+  "record_id": "EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_CRITERIA_CYCLE46_v0",
+  "artifact_id": "em_pillar_full_discharge_adjudication_criteria_cycle46_v0",
+  "scope": "em_pillar_full_discharge_adjudication_criteria_v0",
+  "adjudication_token": "PILLAR_EM_FULL_DERIVATION_DISCHARGE_ADJUDICATION",
+  "adjudication_posture": "DISCHARGED_v0_DERIVATION_GRADE",
+  "required_results_rows": [
+    "TOE-EM-DER-01",
+    "TOE-EM-DER-02"
+  ],
+  "required_theorem_surfaces": [
+    "em_u1_cycle045_build_typed_route_spine_scope_from_subroute_chain_v0",
+    "em_u1_cycle045_typed_route_spine_scope_consumer_from_subroute_chain_v0",
+    "em_u1_cycle045_typed_route_spine_scope_canonical_derived_route_v0",
+    "em_u1_cycle044_build_diagonal_residual_scope_from_inhomogeneous_statement_v0",
+    "em_u1_cycle044_diagonal_residual_scope_consumer_from_inhomogeneous_statement_v0",
+    "em_u1_cycle044_diagonal_residual_scope_canonical_derived_route_v0",
+    "em_u1_cycle042_build_bridge_scope_from_intro_surface_v0",
+    "em_u1_cycle042_bridge_scope_consumer_from_intro_surface_v0",
+    "em_u1_cycle042_bridge_scope_canonical_derived_route_v0",
+    "em_u1_cycle046_build_diagonalization_scope_from_index_convention_route_v0",
+    "em_u1_cycle046_diagonalization_scope_consumer_from_index_convention_route_v0",
+    "em_u1_cycle046_diagonalization_scope_canonical_derived_route_v0",
+    "em_u1_cycle040_diagonalization_scope_canonical_derived_route_v0",
+    "em_u1_cycle041_build_smoothness_scope_from_typed_route_v0",
+    "em_u1_cycle041_smoothness_scope_consumer_from_typed_route_v0",
+    "em_u1_cycle041_smoothness_scope_canonical_derived_route_v0",
+    "em_u1_cycle043_build_continuity_scope_from_typed_route_and_inhomogeneous_statement_v0",
+    "em_u1_cycle043_continuity_scope_consumer_from_typed_route_and_inhomogeneous_statement_v0",
+    "em_u1_cycle043_continuity_scope_canonical_derived_route_v0"
+  ],
+  "criteria_rows": [
+    {
+      "row_id": "EM_PILLAR_FULL_DISCHARGE_CRITERIA_ROW_01_v0",
+      "status": "PINNED",
+      "completion_token": "EM_PILLAR_FULL_DISCHARGE_CRITERIA_ROW_01_v0: TYPED_ROUTE_CHAIN_PINNED",
+      "requirement": "required_theorem_surfaces_parity_between_registry_and_discharge_doc"
+    },
+    {
+      "row_id": "EM_PILLAR_FULL_DISCHARGE_CRITERIA_ROW_02_v0",
+      "status": "PINNED",
+      "completion_token": "EM_PILLAR_FULL_DISCHARGE_CRITERIA_ROW_02_v0: GOVERNANCE_CLOSURE_COUPLING_PINNED",
+      "requirement": "required_results_rows_and_roadmap_gates_are_synchronized"
+    }
+  ],
+  "current_row_statuses": {
+    "TOE-EM-DER-01": "T-CONDITIONAL",
+    "TOE-EM-DER-02": "T-CONDITIONAL"
+  },
+  "current_roadmap_gate_tokens": {
+    "PILLAR-EM_PHYSICS_STATUS": "CLOSED_v0_DERIVATION_GRADE",
+    "PILLAR-EM_GOVERNANCE_STATUS": "CLOSED_v0_REQUIRED_ROWS_CLEARED",
+    "PROCEED_GATE_EM": "ALLOWED_v0_PHYSICS_CLOSED",
+    "MATRIX_CLOSURE_GATE_EM": "ALLOWED_v0_GOVERNANCE_CLOSED"
+  },
+  "flip_preconditions": {
+    "adjudication_must_start_with": "DISCHARGED_",
+    "required_rows_must_be_non_blocked": true,
+    "physics_status_must_start_with": "CLOSED_",
+    "governance_status_must_start_with": "CLOSED_",
+    "proceed_gate_must_start_with": "ALLOWED_",
+    "matrix_gate_must_start_with": "ALLOWED_"
+  },
+  "flip_readiness": {
+    "adjudication_flip_allowed_now": true,
+    "reason": "required_rows_non_blocked_and_roadmap_gates_closed"
+  },
+  "determinism": {
+    "seed": "fixed-none",
+    "fingerprint_method": "literal-json-lock",
+    "schema_version": "v0"
+  },
+  "status": "LOCKED_EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_CRITERIA_CYCLE46"
+}

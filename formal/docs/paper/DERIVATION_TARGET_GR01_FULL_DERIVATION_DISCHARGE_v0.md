@@ -69,31 +69,66 @@ Scope:
 ## TARGET section
 
 - `TARGET-GR01-FULL-DERIVATION-DISCHARGE-v0` remains the frozen target surface.
+- Standardized pillar discharge target ID:
+  - `TARGET-PILLAR-GR-FULL-DERIVATION-DISCHARGE-v0`
 
-## ASSUMPTION FREEZE section
+## ASSUMPTION_FREEZE section
 
 - Minimized-assumption anchor remains explicit: `GR01InevitabilityMinimizedAssumptions_v0`.
 - Required route assumptions remain explicit and theorem-linked.
+- Canonical assumption classes and minimized-assumption anchor are frozen in this discharge lane.
 
-## CANONICAL ROUTE section
+## CANONICAL_ROUTE section
 
 - Canonical route remains action-native and constructor-routed on the bounded weak-field theorem surface.
 - Compatibility wrappers remain non-authoritative.
+- Canonical discharge route remains action-native and theorem-surface linked.
 
-## COUNTERFACTUAL ROUTE section
+## ANTI_SHORTCUT section
+
+- No-shortcut posture remains mandatory:
+  - no compatibility-wrapper-only closure claims,
+  - no direct bridge-shortcut promotion as canonical discharge.
+
+## COUNTERFACTUAL section
 
 - Counterfactual break token remains explicit: `¬GR01InevitabilityBoundedClosureSurface_v0`.
 - Per-assumption counterfactual break theorem tokens remain pinned.
+- Counterfactual break surfaces remain explicit and required for discharge-lane integrity.
 
-## INDEPENDENT NECESSITY ROUTE section
+## INDEPENDENT_NECESSITY section
 
 - Structural classification anchor remains explicit:
   `GR01InevitabilityConstructiveRouteClassification_v0`.
+- Independent-necessity classification remains theorem-linked and non-circular.
 
-## BOUNDED SCOPE section
+## BOUNDED_SCOPE section
 
 - non-claim boundary is explicit and binding for this artifact.
 - bounded/discrete weak-field v0 scope only; no continuum-limit, uniqueness, or infinite-domain inversion promotion.
+
+## HARDENING section
+
+- Discharge-lane hardening requires synchronized targets, row-level closure criteria, and theorem-surface anti-shortcut guards.
+
+- bounded non-claim discharge lane only; no continuum-limit or infinite-domain promotion.
+
+## DRIFT_GATES section
+
+- Standardized pillar discharge lane tokens:
+  - `PILLAR_GR_FULL_DERIVATION_DISCHARGE_LOCALIZATION_GATE_v0: FULL_DISCHARGE_ARTIFACTS_ONLY`
+  - `PILLAR_GR_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+  - `PILLAR_GR_FULL_DERIVATION_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+
+## ADJUDICATION_SYNC section
+
+- Standardized pillar discharge adjudication token:
+  - `PILLAR_GR_FULL_DERIVATION_DISCHARGE_ADJUDICATION: DISCHARGED_v0_DISCRETE`
+- Intentional umbrella/discharge equivalence token:
+  - `PILLAR_GR_DISCHARGE_DOC_IS_UMBRELLA_DOC_v0: TRUE`
+- Registry pointer:
+  - `formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md`
+  - `formal/docs/paper/PILLAR_DISCHARGE_REGISTRY_v0.json`
 
 ## Current status
 

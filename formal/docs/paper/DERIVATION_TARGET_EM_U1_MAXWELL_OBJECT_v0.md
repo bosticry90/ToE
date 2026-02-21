@@ -35,8 +35,10 @@ Adjudication token:
 - Canonical EM kickoff target remains:
   - `TARGET-EM-U1-PLAN`
 - Scope is a bounded U(1)/Maxwell object lane with explicit theorem-surface dependencies.
+- Standardized pillar discharge target ID:
+  - TARGET-PILLAR-EM-FULL-DERIVATION-DISCHARGE-v0
 
-## ASSUMPTION FREEZE section
+## ASSUMPTION_FREEZE section
 
 - Canonical assumption classes are explicit:
   - `MATH|DEF|POLICY|SCOPE`
@@ -46,13 +48,15 @@ Adjudication token:
   - typed gauge-potential carrier (`A_mu`) and field-strength construction (`F_munu`),
   - typed source/current carrier (`J_mu`) with continuity assumptions,
   - bounded-domain and non-radiative simplification boundaries are explicit where used.
+- Canonical EM assumption classes and bounded-source/smoothness lanes remain explicit for the discharge lane.
 
-## CANONICAL ROUTE section
+## CANONICAL_ROUTE section
 
 - Canonical route is object-first and theorem-surface driven:
   - `A_mu` object -> `F_munu` construction -> source coupling -> bounded Maxwell-form contract.
 - Canonical route must remain explicit and assumption-threaded.
 - Compatibility wrappers are allowed only as non-authoritative shells.
+- Canonical route remains object-first and theorem-surface linked.
 
 ## ANTI_SHORTCUT section
 
@@ -63,19 +67,21 @@ Adjudication token:
 - Required anti-shortcut control token:
   - `EM_U1_NO_SHORTCUT_GUARD_v0: OBJECT_ROUTE_REQUIRED`
 
-## COUNTERFACTUAL ROUTE section
+## COUNTERFACTUAL section
 
 - Counterfactual row requirements are explicit:
   - removing the gauge-contract assumptions breaks closure of the bounded theorem-surface target,
   - removing continuity assumptions breaks source-coupled closure obligations.
 - Counterfactual scaffold token:
   - `EM_U1_COUNTERFACTUAL_SCaffold_v0: REQUIRED_ASSUMPTION_REMOVAL_BREAKS_CLOSURE`
+- Counterfactual break surfaces remain explicit and required for discharge-lane integrity.
 
-## INDEPENDENT NECESSITY ROUTE section
+## INDEPENDENT_NECESSITY section
 
 - Structural classification requirement:
   - `EM_U1_INDEPENDENT_NECESSITY_CLASS_v0: OBJECT_CONSTRUCTIVE_ROUTE`
 - Independent-necessity route must be theorem-linked and non-circular.
+- Independent-necessity classification remains theorem-linked and non-circular.
 
 ## HARDENING section
 
@@ -86,13 +92,14 @@ Adjudication token:
 - Hardening scaffold token:
   - `EM_U1_HARDENING_SCAFFOLD_v0: ROBUSTNESS_NEGCTRL_TEMPLATES_PINNED`
 
-## BOUNDED SCOPE section
+## BOUNDED_SCOPE section
 
 - non-claim boundary is explicit and binding for this artifact.
 - bounded U(1)/Maxwell object scope only.
 - no non-Abelian gauge completion claim.
 - no Standard Model completion claim.
 - no external truth claim.
+- bounded non-claim discharge lane only; no non-Abelian/SM completion promotion.
 
 ## DRIFT_GATES section
 
@@ -112,6 +119,17 @@ Adjudication token:
   - `State_of_the_Theory.md`,
   - `RESULTS_TABLE_v0.md`,
   - gate tests/artifacts.
+- Standardized pillar discharge lane tokens:
+  - `PILLAR_EM_FULL_DERIVATION_DISCHARGE_ADJUDICATION: DISCHARGED_v0_DERIVATION_GRADE`
+  - `PILLAR_EM_FULL_DERIVATION_DISCHARGE_LOCALIZATION_GATE_v0: FULL_DISCHARGE_ARTIFACTS_ONLY`
+  - `PILLAR_EM_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+  - `PILLAR_EM_FULL_DERIVATION_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+- Intentional umbrella/discharge equivalence token:
+  - `PILLAR_EM_DISCHARGE_DOC_IS_UMBRELLA_DOC_v0: TRUE`
+- Standardized discharge lane pointers:
+  - `TARGET-PILLAR-EM-FULL-DERIVATION-DISCHARGE-v0`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md`
+  - `formal/docs/paper/PILLAR_DISCHARGE_REGISTRY_v0.json`
 
 Non-claim boundary:
 - planning-only artifact.
@@ -1003,6 +1021,167 @@ Cycle-027 kickoff micro-targets (now pinned):
    - posture:
      - planning-only/non-claim and no theorem/discharge/full-derivation promotion authorized.
 
+Cycle-028 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-28-MAXWELL-TO-CONTINUITY-DD-SUBROUTE-COMPOSITION-ATTEMPT-v0`
+   - scope:
+     - planning-only bounded Maxwell-to-continuity DD-subroute composition attempt package (non-claim).
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE28_v0: MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_ATTEMPT_TOKEN_PINNED`
+   - DD-subroute composition route token:
+     - `EM_U1_MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_ROUTE_v0: CYCLE27_DD_ZERO_SUBROUTE_ROUTE_PINNED`
+   - localization gate token:
+     - `EM_U1_MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_LOCALIZATION_GATE_v0: CYCLE28_ARTIFACTS_ONLY`
+   - no-promotion gate token:
+     - `EM_U1_MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+   - boundary guard token:
+     - `EM_U1_MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+   - required source/smoothness/distributional assumption IDs:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+     - `ASM-EM-U1-MATH-SMOOTH-01`
+     - `ASM-EM-U1-MATH-DISTRIB-01`
+   - required prerequisite chain tokens:
+     - `EM_U1_PROGRESS_CYCLE24_v0: MAXWELL_TO_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_TOKEN_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_v0: CANONICAL_ROUTE_CLOSURE_ATTEMPT_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_LOCALIZATION_GATE_v0: CYCLE24_ARTIFACTS_ONLY`
+     - `EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+     - `EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+     - `EM_U1_PROGRESS_CYCLE25_v0: DOUBLE_DIVERGENCE_THEOREM_CLOSURE_ATTEMPT_TOKEN_PINNED`
+     - `EM_U1_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_ROUTE_v0: ANTISYM_COMMUTATION_THEOREM_SURFACE_PINNED`
+     - `EM_U1_PROGRESS_CYCLE26_v0: DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSURE_ATTEMPT_TOKEN_PINNED`
+     - `EM_U1_DOUBLE_DIVERGENCE_BINDING_THEOREM_ROUTE_v0: DD_FROM_FIELD_STRENGTH_BINDING_ROUTE_PINNED`
+     - `EM_U1_PROGRESS_CYCLE27_v0: BINDING_ASSUMPTIONS_DISCHARGE_FROM_SMOOTHNESS_TOKEN_PINNED`
+     - `EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_ROUTE_v0: SMOOTHNESS_TO_BINDING_ASSUMPTIONS_ROUTE_PINNED`
+     - `EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_LOCALIZATION_GATE_v0: CYCLE27_ARTIFACTS_ONLY`
+     - `EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+     - `EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+     - `EM_U1_DOUBLE_DIVERGENCE_SURFACE_v0: DD_F_ZERO_STATEMENT_PINNED`
+     - `EM_U1_ANTISYM_SURFACE_v0: F_ANTISYM_STATEMENT_PINNED`
+     - `EM_U1_COMMUTING_PARTIALS_SURFACE_v0: COMMUTATION_STATEMENT_PINNED`
+     - `EM_U1_CONTINUITY_TENSOR_SURFACE_v0: DIVERGENCE_CURRENT_STATEMENT_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_THEOREM_ROUTE_v0: DIVERGENCE_ANTISYM_COMMUTATION_ATTEMPT_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_ROUTE_v0: ASSUMPTION_ID_GATED_IMPORT_PERMISSION_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_ROUTE_v0: CLASSIFICATION_SURFACES_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_ROUTE_v0: REFERENCE_ONLY_SEMANTICS_PINNED`
+     - `EM_U1_CYCLE028_CYCLE027_THEOREM_SURFACE_USAGE_GUARD_v0: MUST_REFERENCE_em_u1_cycle027_double_divergence_zero_via_built_binding_v0`
+   - required non-selection policy tokens:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO28_MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_ADJUDICATION: NOT_YET_DISCHARGED`
+   - Lean theorem surfaces:
+     - `em_u1_cycle028_dd_zero_substep_for_maxwell_continuity_route_v0`
+     - `em_u1_cycle028_maxwell_continuity_dd_subroute_composition_v0`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_28_MAXWELL_TO_CONTINUITY_DD_SUBROUTE_COMPOSITION_ATTEMPT_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro28_maxwell_to_continuity_dd_subroute_composition_attempt.py`
+   - posture:
+     - planning-only/non-claim and no theorem/discharge/full-derivation promotion authorized.
+
+Cycle-029 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-29-MAXWELL-TO-CONTINUITY-TYPED-DD-SUBROUTE-AUGMENTATION-ATTEMPT-v0`
+   - scope:
+     - planning-only bounded Maxwell-to-continuity typed DD-subroute augmentation attempt package (non-claim).
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE29_v0: MAXWELL_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_ATTEMPT_TOKEN_PINNED`
+   - typed DD-subroute augmentation route token:
+     - `EM_U1_MAXWELL_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_ROUTE_v0: BUILD_TYPED_ROUTE_WITH_DD_SUBSTEP_OBJECT_PINNED`
+   - localization gate token:
+     - `EM_U1_MAXWELL_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_LOCALIZATION_GATE_v0: CYCLE29_ARTIFACTS_ONLY`
+   - no-promotion gate token:
+     - `EM_U1_MAXWELL_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+   - boundary guard token:
+     - `EM_U1_MAXWELL_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+   - required source/smoothness/distributional assumption IDs:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+     - `ASM-EM-U1-MATH-SMOOTH-01`
+     - `ASM-EM-U1-MATH-DISTRIB-01`
+   - required prerequisite chain tokens:
+     - `EM_U1_PROGRESS_CYCLE28_v0: MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_ATTEMPT_TOKEN_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_ROUTE_v0: CYCLE27_DD_ZERO_SUBROUTE_ROUTE_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_LOCALIZATION_GATE_v0: CYCLE28_ARTIFACTS_ONLY`
+     - `EM_U1_MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+     - `EM_U1_MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+     - `EM_U1_PROGRESS_CYCLE27_v0: BINDING_ASSUMPTIONS_DISCHARGE_FROM_SMOOTHNESS_TOKEN_PINNED`
+     - `EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_ROUTE_v0: SMOOTHNESS_TO_BINDING_ASSUMPTIONS_ROUTE_PINNED`
+     - `EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_LOCALIZATION_GATE_v0: CYCLE27_ARTIFACTS_ONLY`
+     - `EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+     - `EM_U1_BINDING_ASSUMPTIONS_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+     - `EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_v0: CANONICAL_ROUTE_CLOSURE_ATTEMPT_PINNED`
+     - `EM_U1_DOUBLE_DIVERGENCE_SURFACE_v0: DD_F_ZERO_STATEMENT_PINNED`
+     - `EM_U1_ANTISYM_SURFACE_v0: F_ANTISYM_STATEMENT_PINNED`
+     - `EM_U1_COMMUTING_PARTIALS_SURFACE_v0: COMMUTATION_STATEMENT_PINNED`
+     - `EM_U1_CONTINUITY_TENSOR_SURFACE_v0: DIVERGENCE_CURRENT_STATEMENT_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_ROUTE_v0: ASSUMPTION_ID_GATED_IMPORT_PERMISSION_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_ROUTE_v0: CLASSIFICATION_SURFACES_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_ROUTE_v0: REFERENCE_ONLY_SEMANTICS_PINNED`
+     - `EM_U1_CYCLE029_CYCLE028_THEOREM_SURFACE_USAGE_GUARD_v0: MUST_REFERENCE_em_u1_cycle028_maxwell_continuity_dd_subroute_composition_v0`
+   - required non-selection policy tokens:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO29_MAXWELL_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_ADJUDICATION: NOT_YET_DISCHARGED`
+   - Lean theorem surfaces:
+     - `em_u1_cycle029_build_typed_route_with_dd_substep_object_v0`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_29_MAXWELL_TO_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_ATTEMPT_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro29_maxwell_to_continuity_typed_dd_subroute_augmentation_attempt.py`
+   - posture:
+     - planning-only/non-claim and no theorem/discharge/full-derivation promotion authorized.
+
+Cycle-030 kickoff micro-targets (now pinned):
+1. `TARGET-EM-U1-MICRO-30-MAXWELL-TO-CONTINUITY-TYPED-ROUTE-CONSUMER-ATTEMPT-v0`
+   - scope:
+     - planning-only bounded Maxwell-to-continuity typed-route consumer attempt package (non-claim).
+   - cycle token:
+     - `EM_U1_PROGRESS_CYCLE30_v0: MAXWELL_CONTINUITY_TYPED_ROUTE_CONSUMER_ATTEMPT_TOKEN_PINNED`
+   - typed-route consumer route token:
+     - `EM_U1_MAXWELL_CONTINUITY_TYPED_ROUTE_CONSUMER_ROUTE_v0: CONSUME_TYPED_ROUTE_WITH_DD_SUBSTEP_OBJECT_PINNED`
+   - localization gate token:
+     - `EM_U1_MAXWELL_CONTINUITY_TYPED_ROUTE_CONSUMER_LOCALIZATION_GATE_v0: CYCLE30_ARTIFACTS_ONLY`
+   - no-promotion gate token:
+     - `EM_U1_MAXWELL_CONTINUITY_TYPED_ROUTE_CONSUMER_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+   - boundary guard token:
+     - `EM_U1_MAXWELL_CONTINUITY_TYPED_ROUTE_CONSUMER_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+   - required source/smoothness/distributional assumption IDs:
+     - `ASM-EM-U1-PHY-SOURCE-01`
+     - `ASM-EM-U1-MATH-SMOOTH-01`
+     - `ASM-EM-U1-MATH-DISTRIB-01`
+   - required prerequisite chain tokens:
+     - `EM_U1_PROGRESS_CYCLE29_v0: MAXWELL_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_ATTEMPT_TOKEN_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_ROUTE_v0: BUILD_TYPED_ROUTE_WITH_DD_SUBSTEP_OBJECT_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_LOCALIZATION_GATE_v0: CYCLE29_ARTIFACTS_ONLY`
+     - `EM_U1_MAXWELL_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+     - `EM_U1_MAXWELL_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+     - `EM_U1_PROGRESS_CYCLE28_v0: MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_ATTEMPT_TOKEN_PINNED`
+     - `EM_U1_MAXWELL_CONTINUITY_DD_SUBROUTE_COMPOSITION_ROUTE_v0: CYCLE27_DD_ZERO_SUBROUTE_ROUTE_PINNED`
+     - `EM_U1_CYCLE029_CYCLE028_THEOREM_SURFACE_USAGE_GUARD_v0: MUST_REFERENCE_em_u1_cycle028_maxwell_continuity_dd_subroute_composition_v0`
+     - `EM_U1_CYCLE030_CYCLE029_THEOREM_SURFACE_USAGE_GUARD_v0: MUST_REFERENCE_em_u1_cycle029_build_typed_route_with_dd_substep_object_v0`
+     - `EM_U1_CYCLE030_TYPED_OBJECT_CONSUMPTION_GUARD_v0: MUST_CONSUME_MaxwellToContinuityRouteWithDdSubstepAttempt_ONLY`
+     - `EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_v0: CANONICAL_ROUTE_CLOSURE_ATTEMPT_PINNED`
+     - `EM_U1_DOUBLE_DIVERGENCE_SURFACE_v0: DD_F_ZERO_STATEMENT_PINNED`
+     - `EM_U1_ANTISYM_SURFACE_v0: F_ANTISYM_STATEMENT_PINNED`
+     - `EM_U1_COMMUTING_PARTIALS_SURFACE_v0: COMMUTATION_STATEMENT_PINNED`
+     - `EM_U1_CONTINUITY_TENSOR_SURFACE_v0: DIVERGENCE_CURRENT_STATEMENT_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_ROUTE_v0: ASSUMPTION_ID_GATED_IMPORT_PERMISSION_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_ROUTE_v0: CLASSIFICATION_SURFACES_PINNED`
+     - `EM_U1_DISTRIBUTIONAL_REFERENCE_SURFACE_ROUTE_v0: REFERENCE_ONLY_SEMANTICS_PINNED`
+   - required non-selection policy tokens:
+     - `EM_U1_IMPORT_LANES_INTERFACE_NO_SELECTION_v0: NO_UNITS_OR_GAUGE_SELECTION`
+     - `EM_U1_NEW_PHYSICS_ASSUMPTION_ID_GATE_v0: CONSTITUTIVE_UNITS_GAUGE_FIXING_REQUIRE_IDS`
+   - cycle adjudication token:
+     - `EM_U1_MICRO30_MAXWELL_CONTINUITY_TYPED_ROUTE_CONSUMER_ADJUDICATION: NOT_YET_DISCHARGED`
+   - Lean theorem surfaces:
+     - `em_u1_cycle030_build_typed_route_consumer_entrypoint_v0`
+     - `em_u1_cycle030_consume_typed_route_object_for_dd_zero_v0`
+   - artifact pointer:
+     - `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_30_MAXWELL_TO_CONTINUITY_TYPED_ROUTE_CONSUMER_ATTEMPT_v0.md`
+   - gate test pointer:
+     - `formal/python/tests/test_em_u1_micro30_maxwell_to_continuity_typed_route_consumer_attempt.py`
+   - posture:
+     - planning-only/non-claim and no theorem/discharge/full-derivation promotion authorized.
+
 Unlock condition:
 - `LOCKED` until `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED` in `PHYSICS_ROADMAP_v0.md`.
 
@@ -1010,6 +1189,89 @@ Closure definition:
 - typed EM theorem/derivation surface exists with explicit assumptions.
 - domain-of-validity and falsifiability hooks are explicit.
 - paper/state/results pointers are synchronized.
+
+EM full-discharge completion mechanics (v0):
+- completion criteria token:
+  - `EM_PILLAR_FULL_DISCHARGE_CRITERIA_v0: ROW_LEVEL_CRITERIA_PINNED`
+- row-level criteria:
+  - `EM_PILLAR_FULL_DISCHARGE_CRITERIA_ROW_01_v0: TYPED_ROUTE_CHAIN_PINNED`
+  - required theorem surfaces:
+    - `em_u1_cycle045_build_typed_route_spine_scope_from_subroute_chain_v0`
+    - `em_u1_cycle045_typed_route_spine_scope_consumer_from_subroute_chain_v0`
+    - `em_u1_cycle045_typed_route_spine_scope_canonical_derived_route_v0`
+    - `em_u1_cycle044_build_diagonal_residual_scope_from_inhomogeneous_statement_v0`
+    - `em_u1_cycle044_diagonal_residual_scope_consumer_from_inhomogeneous_statement_v0`
+    - `em_u1_cycle044_diagonal_residual_scope_canonical_derived_route_v0`
+    - `em_u1_cycle042_build_bridge_scope_from_intro_surface_v0`
+    - `em_u1_cycle042_bridge_scope_consumer_from_intro_surface_v0`
+    - `em_u1_cycle042_bridge_scope_canonical_derived_route_v0`
+    - `em_u1_cycle046_build_diagonalization_scope_from_index_convention_route_v0`
+    - `em_u1_cycle046_diagonalization_scope_consumer_from_index_convention_route_v0`
+    - `em_u1_cycle046_diagonalization_scope_canonical_derived_route_v0`
+    - `em_u1_cycle040_diagonalization_scope_canonical_derived_route_v0`
+    - `em_u1_cycle041_build_smoothness_scope_from_typed_route_v0`
+    - `em_u1_cycle041_smoothness_scope_consumer_from_typed_route_v0`
+    - `em_u1_cycle041_smoothness_scope_canonical_derived_route_v0`
+    - `em_u1_cycle043_build_continuity_scope_from_typed_route_and_inhomogeneous_statement_v0`
+    - `em_u1_cycle043_continuity_scope_consumer_from_typed_route_and_inhomogeneous_statement_v0`
+    - `em_u1_cycle043_continuity_scope_canonical_derived_route_v0`
+  - `EM_PILLAR_FULL_DISCHARGE_CRITERIA_ROW_02_v0: GOVERNANCE_CLOSURE_COUPLING_PINNED`
+  - required coupling surfaces:
+    - `TOE-EM-DER-01`
+    - `TOE-EM-DER-02`
+    - `PILLAR-EM_PHYSICS_STATUS`
+    - `PILLAR-EM_GOVERNANCE_STATUS`
+    - `PROCEED_GATE_EM`
+    - `MATRIX_CLOSURE_GATE_EM`
+- exit-row status tokens (discharged posture):
+  - `EM_PILLAR_FULL_DISCHARGE_EXIT_ROW_01_STATUS_v0: TOE-EM-DER-01_NON_BLOCKED_DISCHARGED`
+  - `EM_PILLAR_FULL_DISCHARGE_EXIT_ROW_02_STATUS_v0: TOE-EM-DER-02_NON_BLOCKED_DISCHARGED`
+- completion gate pointer:
+  - `formal/python/tests/test_pillar_full_discharge_completion_mechanics.py`
+  - `formal/python/tests/test_em_u1_canonical_route_admissibility_lock.py`
+- adjudication criteria artifact (status-synchronized):
+  - `EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_CRITERIA_ARTIFACT_v0: em_pillar_full_discharge_adjudication_criteria_cycle46_v0`
+  - `EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_FLIP_GATE_v0: CRITERIA_ARTIFACT_AND_NON_BLOCKED_ROWS_REQUIRED`
+  - `formal/output/em_pillar_full_discharge_adjudication_criteria_cycle46_v0.json`
+  - `formal/python/tests/test_em_u1_full_discharge_adjudication_criteria_artifact.py`
+- retained assumption-classification surfaces (explicit, no closure flip):
+  - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_BRIDGE_v0: PotentialFieldStrengthBridgeAssumptions_RETAINED_ASSUMPTION_OBJECT`
+  - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_SMOOTHNESS_v0: DoubleDivergenceSmoothnessLaneAssumptions_RETAINED_ASSUMPTION_OBJECT`
+  - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_COUPLING_DIAGONALIZATION_v0: residualIndexMapDiagonal_RETAINED_ASSUMPTION_WITNESS`
+  - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_SOURCE_RESIDUAL_LAW_v0: MaxwellToContinuitySourceResidualLawAssumptions_RETAINED_ASSUMPTION_OBJECT`
+  - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_INHOM_SOURCE_STATEMENT_v0: MaxwellToContinuityInhomogeneousSourceStatementAssumptions_RETAINED_ASSUMPTION_OBJECT`
+- scoped retained-assumption interfaces (cycle-038 contract promotion, no closure flip):
+  - `EM_PILLAR_RETAINED_SCOPE_CLASS_BRIDGE_v0: MaxwellToContinuityBridgeScopeAssumptions_RETAINED_SCOPE_OBJECT`
+  - `EM_PILLAR_RETAINED_SCOPE_CLASS_SMOOTHNESS_v0: MaxwellToContinuitySmoothnessScopeAssumptions_RETAINED_SCOPE_OBJECT`
+  - `EM_PILLAR_RETAINED_SCOPE_CLASS_DIAGONALIZATION_v0: MaxwellToContinuityDiagonalizationScopeAssumptions_RETAINED_SCOPE_OBJECT`
+- scoped-to-derived diagonalization reduction route (cycle-039, no closure flip):
+  - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_INDEX_MAP_AGREEMENT_v0: MaxwellToContinuityIndexMapAgreementAssumptions_RETAINED_ASSUMPTION_OBJECT`
+  - `EM_PILLAR_DERIVED_SCOPE_CLASS_DIAGONALIZATION_v0: MaxwellToContinuityDiagonalizationScopeAssumptions_DERIVED_FROM_INDEX_CONVENTION_AND_INDEX_MAP_AGREEMENT`
+- diagonalization route canonicalization (cycle-040, no closure flip):
+  - `EM_PILLAR_DIAGONALIZATION_SCOPE_ROUTE_SUPERSEDED_v0: Cycle-037_diagonalization_scope_builder_consumer_SUPERSEDED_BY_Cycle-039_derived_route`
+  - `EM_PILLAR_DIAGONALIZATION_SCOPE_CANONICAL_DERIVED_ROUTE_v0: Cycle-039_required_Cycle-037_diagonalization_route_NON_ADMISSIBLE_FOR_DISCHARGE`
+- smoothness route canonicalization (cycle-041, no closure flip):
+  - `EM_PILLAR_SMOOTHNESS_SCOPE_ROUTE_SUPERSEDED_v0: Cycle-037_smoothness_scope_builder_consumer_SUPERSEDED_BY_Cycle-041_derived_route`
+  - `EM_PILLAR_SMOOTHNESS_SCOPE_CANONICAL_DERIVED_ROUTE_v0: Cycle-041_required_Cycle-037_smoothness_route_NON_ADMISSIBLE_FOR_DISCHARGE`
+- bridge route canonicalization (cycle-042, no closure flip):
+  - `EM_PILLAR_BRIDGE_SCOPE_ROUTE_SUPERSEDED_v0: Cycle-037_bridge_scope_builder_consumer_SUPERSEDED_BY_Cycle-042_derived_route`
+  - `EM_PILLAR_BRIDGE_SCOPE_CANONICAL_DERIVED_ROUTE_v0: Cycle-042_required_Cycle-037_bridge_route_NON_ADMISSIBLE_FOR_DISCHARGE`
+- continuity route canonicalization (cycle-043, no closure flip):
+  - `EM_PILLAR_CONTINUITY_SCOPE_ROUTE_SUPERSEDED_v0: Cycle-035_coupling_builder_and_maxwell_to_continuity_surface_SUPERSEDED_BY_Cycle-043_derived_route`
+  - `EM_PILLAR_CONTINUITY_SCOPE_CANONICAL_DERIVED_ROUTE_v0: Cycle-043_required_Cycle-035_continuity_route_NON_ADMISSIBLE_FOR_DISCHARGE`
+- diagonal-residual route canonicalization (cycle-044, no closure flip):
+  - `EM_PILLAR_DIAGONAL_RESIDUAL_SCOPE_ROUTE_SUPERSEDED_v0: Cycle-036_inhomogeneous_to_diagonal_residual_surface_SUPERSEDED_BY_Cycle-044_derived_route`
+  - `EM_PILLAR_DIAGONAL_RESIDUAL_SCOPE_CANONICAL_DERIVED_ROUTE_v0: Cycle-044_required_Cycle-036_route_NON_ADMISSIBLE_FOR_DISCHARGE`
+- typed-route spine canonicalization (cycle-045, no closure flip):
+  - `EM_PILLAR_TYPED_ROUTE_SPINE_ROUTE_SUPERSEDED_v0: Cycle-027_to_Cycle-030_typed_route_spine_surfaces_SUPERSEDED_BY_Cycle-045_derived_route`
+  - `EM_PILLAR_TYPED_ROUTE_SPINE_CANONICAL_DERIVED_ROUTE_v0: Cycle-045_required_Cycle-027_to_Cycle-030_spine_NON_ADMISSIBLE_FOR_DISCHARGE`
+- index-convention diagonalization-route canonicalization (cycle-046, no closure flip):
+  - `EM_PILLAR_INDEX_CONVENTION_DIAGONALIZATION_ROUTE_SUPERSEDED_v0: Cycle-039_index_convention_diagonalization_trio_SUPERSEDED_BY_Cycle-046_derived_route`
+  - `EM_PILLAR_INDEX_CONVENTION_DIAGONALIZATION_CANONICAL_DERIVED_ROUTE_v0: Cycle-046_required_Cycle-039_trio_NON_ADMISSIBLE_FOR_DISCHARGE`
+- supersession traceability (historical continuity, no closure flip):
+  - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_BRIDGE_SUPERSEDED_BY_SCOPE_v0: MaxwellToContinuityBridgeScopeAssumptions`
+  - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_SMOOTHNESS_SUPERSEDED_BY_SCOPE_v0: MaxwellToContinuitySmoothnessScopeAssumptions`
+  - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_COUPLING_DIAGONALIZATION_SUPERSEDED_BY_SCOPE_v0: MaxwellToContinuityDiagonalizationScopeAssumptions`
 
 Non-claim boundary reinforcement:
 - no non-Abelian gauge completion claim.

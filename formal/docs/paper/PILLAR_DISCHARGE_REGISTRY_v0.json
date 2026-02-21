@@ -1,0 +1,102 @@
+{
+  "registry_id": "PILLAR_DISCHARGE_REGISTRY_v0",
+  "registry_version": 1,
+  "required_headers": [
+    "## TARGET section",
+    "## ASSUMPTION_FREEZE section",
+    "## CANONICAL_ROUTE section",
+    "## ANTI_SHORTCUT section",
+    "## COUNTERFACTUAL section",
+    "## INDEPENDENT_NECESSITY section",
+    "## HARDENING section",
+    "## BOUNDED_SCOPE section",
+    "## DRIFT_GATES section",
+    "## ADJUDICATION_SYNC section"
+  ],
+  "pillars": [
+    {
+      "pillar_key": "GR",
+      "pillar_name": "PILLAR-GR",
+      "roadmap_row_id": "PILLAR-GR",
+      "discharge_target_id": "TARGET-PILLAR-GR-FULL-DERIVATION-DISCHARGE-v0",
+      "discharge_doc_path": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "umbrella_target_doc_path": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "discharge_adjudication_token": "PILLAR_GR_FULL_DERIVATION_DISCHARGE_ADJUDICATION",
+      "state_checkpoint_header": "Pillar-GR full-derivation discharge lane checkpoint",
+      "required_results_rows": [
+        "TOE-GR-DER-01",
+        "TOE-GR-DER-02",
+        "TOE-GR-CONS-01"
+      ],
+      "required_theorem_surfaces": [
+        "differenceQuotientRep32_cubic_deviation_expand",
+        "gr01_el_implies_discrete_poisson_residual_from_bridge_promotion",
+        "gr01_end_to_end_poisson_equation_under_promoted_assumptions_of_hP"
+      ],
+      "lean_paths": [
+        "formal/toe_formal/ToeFormal/Variational/ActionRep32QuadraticCubic.lean",
+        "formal/toe_formal/ToeFormal/Variational/GR01BridgePromotion.lean",
+        "formal/toe_formal/ToeFormal/Variational/GR01EndToEndClosure.lean"
+      ]
+    },
+    {
+      "pillar_key": "QM",
+      "pillar_name": "PILLAR-QM",
+      "roadmap_row_id": "PILLAR-QM",
+      "discharge_target_id": "TARGET-PILLAR-QM-FULL-DERIVATION-DISCHARGE-v0",
+      "discharge_doc_path": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "umbrella_target_doc_path": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "discharge_adjudication_token": "PILLAR_QM_FULL_DERIVATION_DISCHARGE_ADJUDICATION",
+      "state_checkpoint_header": "Pillar-QM full-derivation discharge lane checkpoint",
+      "required_results_rows": [
+        "TOE-QM-THM-01"
+      ],
+      "required_theorem_surfaces": [
+        "qm_full_derivation_cycle1_contract_bridge_token_v0",
+        "qm_full_derivation_cycle2_unitary_consistency_token_v0",
+        "qm_full_derivation_cycle7_derivation_exit_row_closure_token_v0"
+      ],
+      "lean_paths": [
+        "formal/toe_formal/ToeFormal/QM/QMFullDerivationScaffold.lean"
+      ]
+    },
+    {
+      "pillar_key": "EM",
+      "pillar_name": "PILLAR-EM",
+      "roadmap_row_id": "PILLAR-EM",
+      "discharge_target_id": "TARGET-PILLAR-EM-FULL-DERIVATION-DISCHARGE-v0",
+      "discharge_doc_path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "umbrella_target_doc_path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "discharge_adjudication_token": "PILLAR_EM_FULL_DERIVATION_DISCHARGE_ADJUDICATION",
+      "state_checkpoint_header": "Pillar-EM full-derivation discharge lane checkpoint",
+      "required_results_rows": [
+        "TOE-EM-DER-01",
+        "TOE-EM-DER-02"
+      ],
+      "required_theorem_surfaces": [
+        "em_u1_cycle045_build_typed_route_spine_scope_from_subroute_chain_v0",
+        "em_u1_cycle045_typed_route_spine_scope_consumer_from_subroute_chain_v0",
+        "em_u1_cycle045_typed_route_spine_scope_canonical_derived_route_v0",
+        "em_u1_cycle044_build_diagonal_residual_scope_from_inhomogeneous_statement_v0",
+        "em_u1_cycle044_diagonal_residual_scope_consumer_from_inhomogeneous_statement_v0",
+        "em_u1_cycle044_diagonal_residual_scope_canonical_derived_route_v0",
+        "em_u1_cycle042_build_bridge_scope_from_intro_surface_v0",
+        "em_u1_cycle042_bridge_scope_consumer_from_intro_surface_v0",
+        "em_u1_cycle042_bridge_scope_canonical_derived_route_v0",
+        "em_u1_cycle046_build_diagonalization_scope_from_index_convention_route_v0",
+        "em_u1_cycle046_diagonalization_scope_consumer_from_index_convention_route_v0",
+        "em_u1_cycle046_diagonalization_scope_canonical_derived_route_v0",
+        "em_u1_cycle040_diagonalization_scope_canonical_derived_route_v0",
+        "em_u1_cycle041_build_smoothness_scope_from_typed_route_v0",
+        "em_u1_cycle041_smoothness_scope_consumer_from_typed_route_v0",
+        "em_u1_cycle041_smoothness_scope_canonical_derived_route_v0",
+        "em_u1_cycle043_build_continuity_scope_from_typed_route_and_inhomogeneous_statement_v0",
+        "em_u1_cycle043_continuity_scope_consumer_from_typed_route_and_inhomogeneous_statement_v0",
+        "em_u1_cycle043_continuity_scope_canonical_derived_route_v0"
+      ],
+      "lean_paths": [
+        "formal/toe_formal/ToeFormal/EM/U1/ObjectScaffold.lean"
+      ]
+    }
+  ]
+}

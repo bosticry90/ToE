@@ -65,31 +65,66 @@ Inevitability obligation linkage (must remain synchronized with gate target):
 ## TARGET section
 
 - `TARGET-QM-FULL-DERIVATION-DISCHARGE-v0` remains the frozen target surface.
+- Standardized pillar discharge target ID:
+  - `TARGET-PILLAR-QM-FULL-DERIVATION-DISCHARGE-v0`
 
-## ASSUMPTION FREEZE section
+## ASSUMPTION_FREEZE section
 
 - Minimized-assumption anchor remains explicit: `QMInevitabilityMinimizedAssumptions_v0`.
 - Required named-route assumptions remain explicit and theorem-linked.
+- Canonical assumption classes and minimized-assumption anchor are frozen in this discharge lane.
 
-## CANONICAL ROUTE section
+## CANONICAL_ROUTE section
 
 - Canonical constructive route remains explicit and anti-circularity guarded.
 - Direct Schrodinger insertion remains forbidden on the canonical route.
+- Canonical discharge route remains constructive, theorem-linked, and anti-circular.
 
-## COUNTERFACTUAL ROUTE section
+## ANTI_SHORTCUT section
+
+- No-shortcut posture remains mandatory:
+  - no direct Schrodinger insertion route,
+  - no compatibility-wrapper-only closure promotion.
+
+## COUNTERFACTUAL section
 
 - Counterfactual break token remains explicit: `¬QMInevitabilityClosureSurface_v0`.
 - Per-assumption counterfactual break theorem tokens remain pinned.
+- Counterfactual break surfaces remain explicit and required for discharge-lane integrity.
 
-## INDEPENDENT NECESSITY ROUTE section
+## INDEPENDENT_NECESSITY section
 
 - Structural classification anchor remains explicit:
   `QMInevitabilityConstructiveRouteClassification_v0`.
+- Independent-necessity classification remains theorem-linked and non-circular.
 
-## BOUNDED SCOPE section
+## BOUNDED_SCOPE section
 
 - non-claim boundary remains explicit and binding for this artifact.
 - bounded theorem-body scope only; no Born-rule/measurement-semantics completion claim and no external truth claim.
+
+## HARDENING section
+
+- Discharge-lane hardening requires synchronized target/state/results/roadmap surfaces with anti-circular guards.
+
+- bounded non-claim discharge lane only; no Born-rule completion or measurement-semantics completion promotion.
+
+## DRIFT_GATES section
+
+- Standardized pillar discharge lane tokens:
+  - `PILLAR_QM_FULL_DERIVATION_DISCHARGE_LOCALIZATION_GATE_v0: FULL_DISCHARGE_ARTIFACTS_ONLY`
+  - `PILLAR_QM_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+  - `PILLAR_QM_FULL_DERIVATION_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+
+## ADJUDICATION_SYNC section
+
+- Standardized pillar discharge adjudication token:
+  - `PILLAR_QM_FULL_DERIVATION_DISCHARGE_ADJUDICATION: DISCHARGED_v0_DERIVATION_GRADE`
+- Intentional umbrella/discharge equivalence token:
+  - `PILLAR_QM_DISCHARGE_DOC_IS_UMBRELLA_DOC_v0: TRUE`
+- Registry pointer:
+  - `formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md`
+  - `formal/docs/paper/PILLAR_DISCHARGE_REGISTRY_v0.json`
 
 Progress token:
 - `QM_FULL_DERIVATION_PROGRESS_v0: CYCLE1_CONTRACT_BRIDGE_TOKEN_PINNED`
