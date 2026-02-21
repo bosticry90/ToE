@@ -77,6 +77,9 @@ Kickoff token contract:
 - `TARGET-QFT-EVOL-MICRO-18-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-COMPATIBILITY-CONSUMER-SURFACE-v0`
 - `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_18_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_COMPATIBILITY_CONSUMER_SURFACE_v0.md`
 - `formal/python/tests/test_qft_evol_micro18_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_surface_gate.py`
+- `TARGET-QFT-EVOL-MICRO-19-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-COMPATIBILITY-CONSUMER-CONSISTENCY-SURFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_19_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_COMPATIBILITY_CONSUMER_CONSISTENCY_SURFACE_v0.md`
+- `formal/python/tests/test_qft_evol_micro19_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_consistency_surface_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.
