@@ -1024,25 +1024,25 @@ def test_gr01_phase3_and_phase4_artifact_schema_is_consistent() -> None:
         )
 
 
-def test_gr01_next_pillar_focus_is_explicit_and_points_to_sr() -> None:
+def test_gr01_next_pillar_focus_is_explicit_and_points_to_qft() -> None:
     state_text = _read(STATE_PATH)
     focus_value = _extract_state_token(state_text, "NEXT_PILLAR_FOCUS_v0")
     lane_value = _extract_state_token(state_text, "NEXT_PILLAR_PRIMARY_LANE_v0")
 
-    assert focus_value == "PILLAR-SR", (
-        "Next pillar focus drift: NEXT_PILLAR_FOCUS_v0 must remain PILLAR-SR."
+    assert focus_value == "PILLAR-QFT", (
+        "Next pillar focus drift: NEXT_PILLAR_FOCUS_v0 must remain PILLAR-QFT."
     )
-    assert lane_value == "TARGET-SR-COV-PLAN", (
-        "Next pillar lane drift: NEXT_PILLAR_PRIMARY_LANE_v0 must remain TARGET-SR-COV-PLAN."
+    assert lane_value == "TARGET-QFT-GAUGE-PLAN", (
+        "Next pillar lane drift: NEXT_PILLAR_PRIMARY_LANE_v0 must remain TARGET-QFT-GAUGE-PLAN."
     )
 
-    sr_target_text = _read(
-        REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md"
+    qft_target_text = _read(
+        REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0.md"
     )
-    required_sr_tokens = [
-        "DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0",
-        "TARGET-SR-COV-PLAN",
-        "covariance/kinematics closure posture",
+    required_qft_tokens = [
+        "DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0",
+        "TARGET-QFT-GAUGE-PLAN",
+        "local gauge object (group/action/context scaffolding)",
     ]
-    missing = [tok for tok in required_sr_tokens if tok not in sr_target_text]
-    assert not missing, "SR covariance target token drift: " + ", ".join(missing)
+    missing = [tok for tok in required_qft_tokens if tok not in qft_target_text]
+    assert not missing, "QFT gauge target token drift: " + ", ".join(missing)
