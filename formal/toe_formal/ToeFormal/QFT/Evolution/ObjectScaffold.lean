@@ -57,6 +57,20 @@ theorem EvolutionGeneratorStatementOnly_holds
     EvolutionGeneratorStatementOnly generator := by
   trivial
 
+structure Hamiltonian (State : Type) where
+  step : State → State
+
+def HamiltonianStatementOnly
+    {State : Type}
+    (_hamiltonian : Hamiltonian State) : Prop :=
+  True
+
+theorem HamiltonianStatementOnly_holds
+    {State : Type}
+    (hamiltonian : Hamiltonian State) :
+    HamiltonianStatementOnly hamiltonian := by
+  trivial
+
 def EulerLagrangeStatementOnly
     {Coordinate FieldValue DensityValue : Type}
     (_field : QuantumField FieldValue)
