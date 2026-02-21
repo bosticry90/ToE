@@ -59,6 +59,9 @@ Kickoff token contract:
 - `TARGET-QFT-EVOL-MICRO-12-QFT-EVOLUTION-UNDER-CONTRACT-ASSUMPTIONS-INTERFACE-SURFACE-v0`
 - `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_12_QFT_EVOLUTION_UNDER_CONTRACT_ASSUMPTIONS_INTERFACE_SURFACE_v0.md`
 - `formal/python/tests/test_qft_evol_micro12_qft_evolution_under_contract_assumptions_interface_surface_gate.py`
+- `TARGET-QFT-EVOL-MICRO-13-QFT-EVOLUTION-CONTRACT-THEOREM-INTERFACE-SURFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_13_QFT_EVOLUTION_CONTRACT_THEOREM_INTERFACE_SURFACE_v0.md`
+- `formal/python/tests/test_qft_evol_micro13_qft_evolution_contract_theorem_interface_surface_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.
