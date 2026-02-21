@@ -11,12 +11,21 @@ Purpose:
 - Convert `TARGET-QFT-GAUGE-PLAN` into an auditable work-order artifact.
 - Define minimal closure criteria without authorizing new comparator lanes.
 
+Kickoff token contract:
+- `DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0`
+- `TARGET-QFT-GAUGE-PLAN`
+- `QFT_GAUGE_ADJUDICATION: NOT_YET_DISCHARGED`
+- `QFT_GAUGE_SCOPE_BOUNDARY_v0: CONTRACT_OBJECT_SCAFFOLD_ONLY_NONCLAIM`
+- `QFT_PREREQS_v0: TARGET-EM-U1-PLAN;TARGET-SR-COV-PLAN`
+
 Non-claim boundary:
 - This artifact is planning-only.
 - This artifact is a non-claim and does not promote theorem/evidence status.
 - This artifact does not substitute for derivations or theorem discharge.
 - This artifact does not authorize new comparator lanes.
 - This artifact does not claim Standard Model recovery.
+- This artifact does not claim quantization closure.
+- This artifact does not claim dynamics derivation closure.
 
 Target scope:
 - Pillar: `PILLAR-QFT`.
@@ -45,6 +54,19 @@ Canonical Lean target (contract-only):
 
 5. Invariance contract surface
 - Explicit theorem-shaped contract for invariance under gauge action.
+
+## Kickoff Scaffold Deliverables (Contract/Object Only)
+
+- `QFT_GAUGE_DELIVERABLE_GROUP_SURFACE_v0: U1_AND_NONABELIAN_PLACEHOLDER_DECLARED`
+  - Group object surface includes explicit U(1) lane and nonabelian placeholder lane.
+- `QFT_GAUGE_DELIVERABLE_CONNECTION_SURFACE_v0: A_OBJECT_SURFACE_DECLARED`
+  - Connection/potential object surface `A` is declared as a typed scaffold surface only.
+- `QFT_GAUGE_DELIVERABLE_CURVATURE_SURFACE_v0: F_EQ_DA_PLUS_A_WEDGE_A_PLACEHOLDER_DECLARED`
+  - Curvature object surface includes `F = dA` with explicit `A∧A` placeholder posture.
+- `QFT_GAUGE_DELIVERABLE_TRANSFORM_SURFACE_v0: GAUGE_TRANSFORM_AND_INVARIANCE_STATEMENT_ONLY`
+  - Gauge-transform and invariance surfaces are statement-only (no closure promotion).
+- `QFT_GAUGE_DELIVERABLE_COUPLING_SURFACE_v0: CURRENT_SOURCE_INTERFACE_STATEMENT_ONLY`
+  - Coupling interface is source/current statement surface only (no dynamics claim).
 
 ## Theorem-Surface Contract (Future `T-CONDITIONAL` Target)
 

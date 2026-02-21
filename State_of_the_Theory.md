@@ -1169,6 +1169,7 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - `NEXT_PILLAR_FOCUS_v0: PILLAR-QFT`
   - `NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-QFT-GAUGE-PLAN`
   - pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0.md`
+  - kickoff gate: `formal/python/tests/test_qft_gauge_kickoff_scaffold_gate.py`
 - Selection rationale (governance):
   - GR01 + continuum + strong-field-program + QM full-derivation closures are synchronized,
   - first unlock cohort (SR/EM) is closed under roadmap order intent,
