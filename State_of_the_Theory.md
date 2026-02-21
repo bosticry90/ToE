@@ -1240,7 +1240,10 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - QFT evolution micro-16 target: `TARGET-QFT-EVOL-MICRO-16-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-INTERFACE-SURFACE-v0`
   - QFT evolution micro-16 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_16_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_INTERFACE_SURFACE_v0.md`
   - QFT evolution micro-16 gate: `formal/python/tests/test_qft_evol_micro16_qft_evolution_theorem_token_consumer_binding_interface_surface_gate.py`
-  - QFT evolution micro tranche gate (01-16): `formal/python/tests/test_qft_evol_micro_tranche_01_16_completeness_gate.py`
+  - QFT evolution micro-17 target: `TARGET-QFT-EVOL-MICRO-17-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-COMPATIBILITY-SURFACE-v0`
+  - QFT evolution micro-17 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_17_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_COMPATIBILITY_SURFACE_v0.md`
+  - QFT evolution micro-17 gate: `formal/python/tests/test_qft_evol_micro17_qft_evolution_theorem_token_consumer_binding_compatibility_surface_gate.py`
+  - QFT evolution micro tranche gate (01-17): `formal/python/tests/test_qft_evol_micro_tranche_01_17_completeness_gate.py`
 - Selection rationale (governance):
   - GR01 + continuum + strong-field-program + QM full-derivation closures are synchronized,
   - first unlock cohort (SR/EM) is closed under roadmap order intent,
