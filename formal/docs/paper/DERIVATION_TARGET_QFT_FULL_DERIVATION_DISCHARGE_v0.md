@@ -23,15 +23,19 @@ Inevitability adjudication token:
 Progress token:
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE1_v0: EVOL_SCAFFOLD_SATURATION_AND_SEMANTIC_HARDENING_PINNED`
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE2_v0: SEMANTIC_HARDENING_MILESTONE_TOKEN_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE3_v0: CANONICAL_MOMENTUM_INVARIANT_UNITARITY_ROUTE_PINNED`
 
 Semantic hardening milestone token:
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE3_v0: CANONICAL_MOMENTUM_INVARIANT_UNITARITY_ROUTE_PINNED`
 
 Hardening theorem tokens:
 - `qft_evol_canonical_momentum_surface_hardened_v0`
+- `qft_evol_canonical_momentum_invariant_step_surface_hardened_v0`
 - `qft_evol_hamiltonian_generator_compatibility_hardened_v0`
 - `qft_evol_unitarity_injective_step_surface_hardened_v0`
 - `qft_evol_generator_unitarity_chain_v0`
+- `qft_evol_unitarity_of_canonical_momentum_reflective_invariant_step_v0`
 
 Canonical Lean pointer:
 - `formal/toe_formal/ToeFormal/QFT/Evolution/ObjectScaffold.lean`
@@ -39,6 +43,7 @@ Canonical Lean pointer:
 Gate pointer:
 - `formal/python/tests/test_qft_full_derivation_discharge_gate.py`
 - `formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle3_gate.py`
 
 Scaffold saturation dependency:
 - `QFT_EVOL_SCAFFOLD_SATURATION_v0: MICRO_01_TO_MICRO_52_TRANCHE_01_52_FROZEN`
@@ -63,7 +68,8 @@ Scaffold saturation dependency:
   1. canonical momentum seam hardening,
   2. Hamiltonian-generator compatibility hardening,
   3. unitarity surface hardening,
-  4. theorem-chain composition.
+  4. theorem-chain composition,
+  5. canonical-momentum invariant unitarity route hardening.
 
 ## ANTI_SHORTCUT section
 
@@ -84,11 +90,15 @@ Scaffold saturation dependency:
 
 - Required semantic-hardening tokens:
   - `qft_evol_canonical_momentum_surface_hardened_v0`
+  - `qft_evol_canonical_momentum_invariant_step_surface_hardened_v0`
   - `qft_evol_hamiltonian_generator_compatibility_hardened_v0`
   - `qft_evol_unitarity_injective_step_surface_hardened_v0`
   - `qft_evol_generator_unitarity_chain_v0`
+  - `qft_evol_unitarity_of_canonical_momentum_reflective_invariant_step_v0`
 - Required cycle-2 milestone token:
   - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED`
+- Required cycle-3 milestone token:
+  - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE3_v0: CANONICAL_MOMENTUM_INVARIANT_UNITARITY_ROUTE_PINNED`
 - Hardening remains bounded and non-promotional.
 
 ## BOUNDED_SCOPE section
@@ -113,3 +123,4 @@ Scaffold saturation dependency:
 - pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md`
 - gate: `formal/python/tests/test_qft_full_derivation_discharge_gate.py`
 - hardening milestone gate: `formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py`
+- cycle-3 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle3_gate.py`

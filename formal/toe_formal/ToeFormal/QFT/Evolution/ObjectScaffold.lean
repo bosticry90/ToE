@@ -59,6 +59,20 @@ theorem qft_evol_canonical_momentum_surface_hardened_v0
     CanonicalMomentumSurface canonicalMomentum field momentum := by
   exact hMap
 
+def CanonicalMomentumInvariantUnderStep
+    {State MomentumValue : Type}
+    (canonicalMomentum : CanonicalMomentum State MomentumValue)
+    (step : State → State) : Prop :=
+  ∀ state : State, canonicalMomentum.map (step state) = canonicalMomentum.map state
+
+theorem qft_evol_canonical_momentum_invariant_step_surface_hardened_v0
+    {State MomentumValue : Type}
+    (canonicalMomentum : CanonicalMomentum State MomentumValue)
+    (step : State → State)
+    (hInvariant : CanonicalMomentumInvariantUnderStep canonicalMomentum step) :
+    CanonicalMomentumInvariantUnderStep canonicalMomentum step := by
+  exact hInvariant
+
 structure EvolutionGenerator (State : Type) where
   step : State → State
 
@@ -787,6 +801,20 @@ theorem qft_evol_generator_unitarity_chain_v0
     hamiltonian.step x = generator.step x := (hCompat x).symm
     _ = generator.step y := hxy
     _ = hamiltonian.step y := hCompat y
+
+theorem qft_evol_unitarity_of_canonical_momentum_reflective_invariant_step_v0
+    {State MomentumValue : Type}
+    (canonicalMomentum : CanonicalMomentum State MomentumValue)
+    (step : State → State)
+    (hReflectsState : Function.Injective canonicalMomentum.map)
+    (hInvariant : CanonicalMomentumInvariantUnderStep canonicalMomentum step) :
+    UnitarityStatementOnly step := by
+  intro x y hxy
+  apply hReflectsState
+  calc
+    canonicalMomentum.map x = canonicalMomentum.map (step x) := (hInvariant x).symm
+    _ = canonicalMomentum.map (step y) := by rw [hxy]
+    _ = canonicalMomentum.map y := hInvariant y
 
 end
 
