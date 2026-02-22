@@ -1397,6 +1397,9 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE15_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_NORMALIZATION_PINNED`
   - `QFT_FULL_DERIVATION_PROGRESS_CYCLE15_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_NORMALIZATION_TOKEN_PINNED`
   - QFT evolution semantic-hardening cycle-15 gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle15_gate.py`
+  - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE16_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_PINNED`
+  - `QFT_FULL_DERIVATION_PROGRESS_CYCLE16_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_TOKEN_PINNED`
+  - QFT evolution semantic-hardening cycle-16 gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle16_gate.py`
 - Selection rationale (governance):
   - GR01 + continuum + strong-field-program + QM full-derivation closures are synchronized,
   - first unlock cohort (SR/EM) is closed under roadmap order intent,
