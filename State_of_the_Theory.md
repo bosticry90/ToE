@@ -1264,7 +1264,10 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - QFT evolution micro-24 target: `TARGET-QFT-EVOL-MICRO-24-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-COMPATIBILITY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-SURFACE-v0`
   - QFT evolution micro-24 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_24_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_COMPATIBILITY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_SURFACE_v0.md`
   - QFT evolution micro-24 gate: `formal/python/tests/test_qft_evol_micro24_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_consistency_consumer_consistency_consumer_consistency_consumer_surface_gate.py`
-  - QFT evolution micro tranche gate (01-24): `formal/python/tests/test_qft_evol_micro_tranche_01_24_completeness_gate.py`
+  - QFT evolution micro-25 target: `TARGET-QFT-EVOL-MICRO-25-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-COMPATIBILITY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-SURFACE-v0`
+  - QFT evolution micro-25 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_25_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_COMPATIBILITY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_SURFACE_v0.md`
+  - QFT evolution micro-25 gate: `formal/python/tests/test_qft_evol_micro25_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_consistency_consumer_consistency_consumer_consistency_consumer_consistency_surface_gate.py`
+  - QFT evolution micro tranche gate (01-25): `formal/python/tests/test_qft_evol_micro_tranche_01_25_completeness_gate.py`
 - Selection rationale (governance):
   - GR01 + continuum + strong-field-program + QM full-derivation closures are synchronized,
   - first unlock cohort (SR/EM) is closed under roadmap order intent,
@@ -7564,6 +7567,7 @@ Comparator-expansion block rule (policy): historical baseline retained. Since 20
 
 
 Template status: We will keep editing.
+
 
 
 
