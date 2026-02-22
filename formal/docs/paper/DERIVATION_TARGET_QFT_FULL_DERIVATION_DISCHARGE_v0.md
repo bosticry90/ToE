@@ -29,6 +29,7 @@ Progress token:
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE6_v0: GENERATOR_UNITARITY_ROUTE_COHERENCE_TOKEN_PINNED`
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE7_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_TOKEN_PINNED`
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE8_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_COHERENCE_ALIGNMENT_TOKEN_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE9_v0: GENERATOR_UNITARITY_ROUTE_COHERENCE_NORMALIZATION_ALIGNMENT_TOKEN_PINNED`
 
 Semantic hardening milestone token:
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED`
@@ -38,6 +39,7 @@ Semantic hardening milestone token:
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE6_v0: GENERATOR_UNITARITY_ROUTE_COHERENCE_PINNED`
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE7_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_PINNED`
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE8_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_COHERENCE_ALIGNMENT_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE9_v0: GENERATOR_UNITARITY_ROUTE_COHERENCE_NORMALIZATION_ALIGNMENT_PINNED`
 
 Hardening theorem tokens:
 - `qft_evol_canonical_momentum_surface_hardened_v0`
@@ -52,6 +54,7 @@ Hardening theorem tokens:
 - `qft_evol_generator_unitarity_route_coherence_v0`
 - `qft_evol_generator_unitarity_route_normalization_v0`
 - `qft_evol_generator_unitarity_route_normalization_coherence_alignment_v0`
+- `qft_evol_generator_unitarity_route_coherence_normalization_alignment_v0`
 
 Canonical Lean pointer:
 - `formal/toe_formal/ToeFormal/QFT/Evolution/ObjectScaffold.lean`
@@ -65,6 +68,7 @@ Gate pointer:
 - `formal/python/tests/test_qft_evol_semantic_hardening_cycle6_gate.py`
 - `formal/python/tests/test_qft_evol_semantic_hardening_cycle7_gate.py`
 - `formal/python/tests/test_qft_evol_semantic_hardening_cycle8_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle9_gate.py`
 
 Scaffold saturation dependency:
 - `QFT_EVOL_SCAFFOLD_SATURATION_v0: MICRO_01_TO_MICRO_52_TRANCHE_01_52_FROZEN`
@@ -95,7 +99,8 @@ Scaffold saturation dependency:
   7. Hamiltonian-mediated reflective canonical-momentum generator-unitarity route hardening,
   8. Generator-unitarity route coherence hardening,
   9. Generator-unitarity route normalization hardening,
-  10. Generator-unitarity route normalization/coherence alignment hardening.
+  10. Generator-unitarity route normalization/coherence alignment hardening,
+  11. Generator-unitarity route coherence/normalization alignment hardening.
 
 ## ANTI_SHORTCUT section
 
@@ -126,6 +131,8 @@ Scaffold saturation dependency:
   - `qft_evol_generator_unitarity_via_hamiltonian_reflective_canonical_momentum_route_v0`
   - `qft_evol_generator_unitarity_route_coherence_v0`
   - `qft_evol_generator_unitarity_route_normalization_v0`
+  - `qft_evol_generator_unitarity_route_normalization_coherence_alignment_v0`
+  - `qft_evol_generator_unitarity_route_coherence_normalization_alignment_v0`
 - Required cycle-2 milestone token:
   - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED`
 - Required cycle-3 milestone token:
@@ -140,6 +147,8 @@ Scaffold saturation dependency:
   - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE7_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_PINNED`
 - Required cycle-8 milestone token:
   - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE8_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_COHERENCE_ALIGNMENT_PINNED`
+- Required cycle-9 milestone token:
+  - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE9_v0: GENERATOR_UNITARITY_ROUTE_COHERENCE_NORMALIZATION_ALIGNMENT_PINNED`
 - Hardening remains bounded and non-promotional.
 
 ## BOUNDED_SCOPE section
@@ -170,3 +179,4 @@ Scaffold saturation dependency:
 - cycle-6 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle6_gate.py`
 - cycle-7 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle7_gate.py`
 - cycle-8 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle8_gate.py`
+- cycle-9 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle9_gate.py`
