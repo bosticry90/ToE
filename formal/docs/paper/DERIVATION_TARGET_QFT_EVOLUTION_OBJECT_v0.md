@@ -179,6 +179,12 @@ Kickoff token contract:
 - `TARGET-QFT-EVOL-MICRO-52-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-COMPATIBILITY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-SURFACE-v0`
 - `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_52_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_COMPATIBILITY_CHAIN21_SURFACE_v0.md`
 - `formal/python/tests/test_qft_evol_micro52_qft_evolution_theorem_token_consumer_binding_compatibility_chain21_surface_gate.py`
+- `QFT_EVOL_SCAFFOLD_SATURATION_v0: MICRO_01_TO_MICRO_52_TRANCHE_01_52_FROZEN`
+- `QFT_EVOL_MICRO_EXPANSION_POLICY_v0: NO_NEW_MICRO_BEYOND_52_UNTIL_SEMANTIC_HARDENING_MILESTONE`
+- `TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md`
+- `formal/python/tests/test_qft_evol_scaffold_saturation_gate.py`
+- `formal/python/tests/test_qft_full_derivation_discharge_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.
@@ -201,7 +207,7 @@ Canonical Lean targets:
   - Lean header posture tokens: `Contract-only theorem surface.` and
     `No Standard Model claim and no external truth claim.`
 - Object scaffold module: `formal/toe_formal/ToeFormal/QFT/Evolution/ObjectScaffold.lean`
-  - scope: typed carriers and statement-only seams.
+  - scope: typed carriers, statement-only seams, and bounded semantic-hardening seams.
 
 ## Minimum Structural Objects Required
 
@@ -244,6 +250,21 @@ Canonical Lean targets:
   - avoids hidden assumptions and vacuous outputs,
   - remains non-claim and contract-only in v0.
 
+## Scaffold Saturation Checkpoint (MICRO-01..52)
+
+- `QFT_EVOL_SCAFFOLD_SATURATION_v0: MICRO_01_TO_MICRO_52_TRANCHE_01_52_FROZEN`
+- `QFT_EVOL_MICRO_EXPANSION_POLICY_v0: NO_NEW_MICRO_BEYOND_52_UNTIL_SEMANTIC_HARDENING_MILESTONE`
+- The scaffold rail is locked at tranche `01-52` with no micro-53 authorization in this artifact.
+- Additional progress is routed through semantic hardening and discharge-lane artifacts.
+
+## Full-Derivation Discharge Lane Kickoff
+
+- `TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0`
+- pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md`
+- gate: `formal/python/tests/test_qft_full_derivation_discharge_gate.py`
+- saturation gate: `formal/python/tests/test_qft_evol_scaffold_saturation_gate.py`
+- kickoff posture remains pre-discharge and non-claim while theorem-chain hardening begins.
+
 ## Closure Definition
 
 - `ABSENT -> P-POLICY` (planning closure):
@@ -255,6 +276,7 @@ Canonical Lean targets:
 - `P-POLICY -> T-CONDITIONAL` (theorem-surface closure):
   - Lean theorem surface in `formal/toe_formal/ToeFormal/QFT/EvolutionContract.lean` exists with explicit assumptions and non-vacuity checks,
   - theorem token `qft_evolution_under_contract_assumptions` is test-pinned,
+  - discharge-lane kickoff target `TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0` is pinned in authority surfaces,
   - assumptions are classified in paper/state artifacts,
   - no hidden assumptions remain in theorem signature text.
 

@@ -43,6 +43,22 @@ structure ActionDensity (Coordinate DensityValue : Type) where
 structure CanonicalMomentum (FieldValue MomentumValue : Type) where
   map : FieldValue → MomentumValue
 
+def CanonicalMomentumSurface
+    {FieldValue MomentumValue : Type}
+    (canonicalMomentum : CanonicalMomentum FieldValue MomentumValue)
+    (field : FieldValue)
+    (momentum : MomentumValue) : Prop :=
+  canonicalMomentum.map field = momentum
+
+theorem qft_evol_canonical_momentum_surface_hardened_v0
+    {FieldValue MomentumValue : Type}
+    (canonicalMomentum : CanonicalMomentum FieldValue MomentumValue)
+    (field : FieldValue)
+    (momentum : MomentumValue)
+    (hMap : canonicalMomentum.map field = momentum) :
+    CanonicalMomentumSurface canonicalMomentum field momentum := by
+  exact hMap
+
 structure EvolutionGenerator (State : Type) where
   step : State → State
 
@@ -73,16 +89,25 @@ theorem HamiltonianStatementOnly_holds
 
 def HamiltonianGeneratorInterfaceStatementOnly
     {State : Type}
-    (_hamiltonian : Hamiltonian State)
-    (_generator : EvolutionGenerator State) : Prop :=
-  True
+    (hamiltonian : Hamiltonian State)
+    (generator : EvolutionGenerator State) : Prop :=
+  ∀ state : State, generator.step state = hamiltonian.step state
 
 theorem HamiltonianGeneratorInterfaceStatementOnly_holds
     {State : Type}
     (hamiltonian : Hamiltonian State)
-    (generator : EvolutionGenerator State) :
+    (generator : EvolutionGenerator State)
+    (hCompat : ∀ state : State, generator.step state = hamiltonian.step state) :
     HamiltonianGeneratorInterfaceStatementOnly hamiltonian generator := by
-  trivial
+  exact hCompat
+
+theorem qft_evol_hamiltonian_generator_compatibility_hardened_v0
+    {State : Type}
+    (hamiltonian : Hamiltonian State)
+    (generator : EvolutionGenerator State)
+    (hCompat : ∀ state : State, generator.step state = hamiltonian.step state) :
+    HamiltonianGeneratorInterfaceStatementOnly hamiltonian generator := by
+  exact hCompat
 
 def EvolutionContractInterfaceStatementOnly
     {Time State : Type}
@@ -732,14 +757,36 @@ theorem EulerLagrangeStatementOnly_holds
 
 def UnitarityStatementOnly
     {State : Type}
-    (_step : State → State) : Prop :=
-  True
+    (step : State → State) : Prop :=
+  Function.Injective step
 
 theorem UnitarityStatementOnly_holds
     {State : Type}
-    (step : State → State) :
+    (step : State → State)
+    (hInjective : Function.Injective step) :
     UnitarityStatementOnly step := by
-  trivial
+  exact hInjective
+
+theorem qft_evol_unitarity_injective_step_surface_hardened_v0
+    {State : Type}
+    (step : State → State)
+    (hInjective : Function.Injective step) :
+    UnitarityStatementOnly step := by
+  exact hInjective
+
+theorem qft_evol_generator_unitarity_chain_v0
+    {State : Type}
+    (hamiltonian : Hamiltonian State)
+    (generator : EvolutionGenerator State)
+    (hCompat : HamiltonianGeneratorInterfaceStatementOnly hamiltonian generator)
+    (hHamiltonianInjective : Function.Injective hamiltonian.step) :
+    UnitarityStatementOnly generator.step := by
+  intro x y hxy
+  apply hHamiltonianInjective
+  calc
+    hamiltonian.step x = generator.step x := (hCompat x).symm
+    _ = generator.step y := hxy
+    _ = hamiltonian.step y := hCompat y
 
 end
 
