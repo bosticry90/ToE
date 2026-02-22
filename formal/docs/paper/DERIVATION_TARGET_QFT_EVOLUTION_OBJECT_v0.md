@@ -189,6 +189,8 @@ Kickoff token contract:
 - `formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py`
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE3_v0: CANONICAL_MOMENTUM_INVARIANT_UNITARITY_ROUTE_PINNED`
 - `formal/python/tests/test_qft_evol_semantic_hardening_cycle3_gate.py`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE4_v0: HAMILTONIAN_TO_GENERATOR_CANONICAL_MOMENTUM_ROUTE_PINNED`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle4_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.
@@ -271,6 +273,8 @@ Canonical Lean targets:
 - hardening milestone gate: `formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py`
 - cycle-3 hardening milestone token: `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE3_v0: CANONICAL_MOMENTUM_INVARIANT_UNITARITY_ROUTE_PINNED`
 - cycle-3 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle3_gate.py`
+- cycle-4 hardening milestone token: `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE4_v0: HAMILTONIAN_TO_GENERATOR_CANONICAL_MOMENTUM_ROUTE_PINNED`
+- cycle-4 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle4_gate.py`
 - kickoff posture remains pre-discharge and non-claim while theorem-chain hardening begins.
 
 ## Closure Definition
