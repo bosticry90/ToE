@@ -257,7 +257,8 @@ governance decision.
   - `formal/python/tests/test_qft_evol_micro31_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_consistency_consumer_consistency_consumer_consistency_consumer_consistency_consumer_consistency_consumer_consistency_consumer_consistency_surface_gate.py`
   - `formal/python/tests/test_qft_evol_micro32_qft_evolution_theorem_token_consumer_binding_compatibility_chain_surface_gate.py`
   - `formal/python/tests/test_qft_evol_micro33_qft_evolution_theorem_token_consumer_binding_compatibility_chain2_surface_gate.py`
-  - `formal/python/tests/test_qft_evol_micro_tranche_01_33_completeness_gate.py`
+  - `formal/python/tests/test_qft_evol_micro34_qft_evolution_theorem_token_consumer_binding_compatibility_chain3_surface_gate.py`
+  - `formal/python/tests/test_qft_evol_micro_tranche_01_34_completeness_gate.py`
   - `formal/python/tests/test_qft_gauge_micro01_group_action_surface_gate.py`
   - `formal/python/tests/test_qft_gauge_micro02_connection_surface_gate.py`
   - `formal/python/tests/test_qft_gauge_micro03_curvature_surface_gate.py`
