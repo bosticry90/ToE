@@ -245,7 +245,8 @@ governance decision.
   - `formal/python/tests/test_qft_evol_micro19_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_consistency_surface_gate.py`
   - `formal/python/tests/test_qft_evol_micro20_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_consistency_consumer_surface_gate.py`
   - `formal/python/tests/test_qft_evol_micro21_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_consistency_consumer_consistency_surface_gate.py`
-  - `formal/python/tests/test_qft_evol_micro_tranche_01_21_completeness_gate.py`
+  - `formal/python/tests/test_qft_evol_micro22_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_consistency_consumer_consistency_consumer_surface_gate.py`
+  - `formal/python/tests/test_qft_evol_micro_tranche_01_22_completeness_gate.py`
   - `formal/python/tests/test_qft_gauge_micro01_group_action_surface_gate.py`
   - `formal/python/tests/test_qft_gauge_micro02_connection_surface_gate.py`
   - `formal/python/tests/test_qft_gauge_micro03_curvature_surface_gate.py`
@@ -264,6 +265,7 @@ governance decision.
   - prerequisite closure checks passing,
   - roadmap update and doc-gate update,
   - governance-suite pass on pinned tests.
+
 
 
 

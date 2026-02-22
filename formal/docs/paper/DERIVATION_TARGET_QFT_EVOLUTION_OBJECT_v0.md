@@ -86,6 +86,9 @@ Kickoff token contract:
 - `TARGET-QFT-EVOL-MICRO-21-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-COMPATIBILITY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-SURFACE-v0`
 - `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_21_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_COMPATIBILITY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_SURFACE_v0.md`
 - `formal/python/tests/test_qft_evol_micro21_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_consistency_consumer_consistency_surface_gate.py`
+- `TARGET-QFT-EVOL-MICRO-22-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-COMPATIBILITY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-SURFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_22_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_COMPATIBILITY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_SURFACE_v0.md`
+- `formal/python/tests/test_qft_evol_micro22_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_consistency_consumer_consistency_consumer_surface_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.
@@ -169,4 +172,5 @@ Canonical Lean targets:
 
 - No new comparator lanes are authorized by this target.
 - Existing GR01 freeze policy remains in force unless explicitly reset in governance.
+
 
