@@ -27,6 +27,9 @@ QFT_FULL_DISCHARGE_TARGET_ID = "TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0"
 QFT_FULL_DISCHARGE_DOC_PATH = "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md"
 QFT_FULL_DISCHARGE_GATE_PATH = "formal/python/tests/test_qft_full_derivation_discharge_gate.py"
 QFT_EVOL_SATURATION_GATE_PATH = "formal/python/tests/test_qft_evol_scaffold_saturation_gate.py"
+QFT_EVOL_HARDENING_MILESTONE_GATE_PATH = (
+    "formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py"
+)
 
 REQUIRED_SECTION_HEADERS = [
     "## TARGET section",
@@ -62,7 +65,9 @@ def test_qft_evol_umbrella_references_qft_full_discharge_lane_artifacts() -> Non
         QFT_FULL_DISCHARGE_DOC_PATH,
         QFT_FULL_DISCHARGE_GATE_PATH,
         QFT_EVOL_SATURATION_GATE_PATH,
+        QFT_EVOL_HARDENING_MILESTONE_GATE_PATH,
         "QFT_EVOL_SCAFFOLD_SATURATION_v0: MICRO_01_TO_MICRO_52_TRANCHE_01_52_FROZEN",
+        "QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED",
     ]
     missing = [token for token in required_tokens if token not in text]
     assert not missing, "QFT evolution umbrella target missing discharge-lane token(s): " + ", ".join(missing)
@@ -76,6 +81,8 @@ def test_qft_full_discharge_doc_contains_required_tokens_and_headers() -> None:
         "QFT_FULL_DERIVATION_ADJUDICATION: NOT_YET_DISCHARGED",
         "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: NOT_YET_DISCHARGED",
         "QFT_FULL_DERIVATION_PROGRESS_CYCLE1_v0: EVOL_SCAFFOLD_SATURATION_AND_SEMANTIC_HARDENING_PINNED",
+        "QFT_FULL_DERIVATION_PROGRESS_CYCLE2_v0: SEMANTIC_HARDENING_MILESTONE_TOKEN_PINNED",
+        "QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED",
         "qft_evol_canonical_momentum_surface_hardened_v0",
         "qft_evol_hamiltonian_generator_compatibility_hardened_v0",
         "qft_evol_unitarity_injective_step_surface_hardened_v0",
@@ -86,6 +93,7 @@ def test_qft_full_discharge_doc_contains_required_tokens_and_headers() -> None:
         "PILLAR_QFT_FULL_DERIVATION_DISCHARGE_ADJUDICATION: NOT_YET_DISCHARGED",
         "formal/toe_formal/ToeFormal/QFT/Evolution/ObjectScaffold.lean",
         QFT_FULL_DISCHARGE_GATE_PATH,
+        QFT_EVOL_HARDENING_MILESTONE_GATE_PATH,
     ]
     missing = [token for token in required_tokens if token not in text]
     assert not missing, "QFT full-derivation discharge doc missing required token(s): " + ", ".join(missing)
@@ -134,6 +142,7 @@ def test_qft_full_discharge_lane_is_pinned_in_authority_surfaces() -> None:
         QFT_FULL_DISCHARGE_DOC_PATH,
         QFT_FULL_DISCHARGE_GATE_PATH,
         QFT_EVOL_SATURATION_GATE_PATH,
+        QFT_EVOL_HARDENING_MILESTONE_GATE_PATH,
     ]
 
     for token in required_tokens:

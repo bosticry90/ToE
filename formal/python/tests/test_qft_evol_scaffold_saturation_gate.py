@@ -17,10 +17,15 @@ QFT_EVOL_TARGET_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TAR
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 SATURATION_GATE_PATH = "formal/python/tests/test_qft_evol_scaffold_saturation_gate.py"
+MILESTONE_GATE_PATH = "formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py"
 TRANCHE_GATE_PATH = "formal/python/tests/test_qft_evol_micro_tranche_01_52_completeness_gate.py"
 SATURATION_TOKEN = "QFT_EVOL_SCAFFOLD_SATURATION_v0: MICRO_01_TO_MICRO_52_TRANCHE_01_52_FROZEN"
 EXPANSION_POLICY_TOKEN = (
     "QFT_EVOL_MICRO_EXPANSION_POLICY_v0: NO_NEW_MICRO_BEYOND_52_UNTIL_SEMANTIC_HARDENING_MILESTONE"
+)
+MILESTONE_TOKEN = (
+    "QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: "
+    "CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED"
 )
 
 FORBIDDEN_MICRO_TOKENS = [
@@ -43,7 +48,7 @@ def test_qft_evol_scaffold_saturation_artifacts_exist() -> None:
 
 def test_qft_evol_umbrella_contains_saturation_and_expansion_policy_tokens() -> None:
     text = _read(QFT_EVOL_TARGET_PATH)
-    required_tokens = [SATURATION_TOKEN, EXPANSION_POLICY_TOKEN]
+    required_tokens = [SATURATION_TOKEN, EXPANSION_POLICY_TOKEN, MILESTONE_TOKEN]
     missing = [token for token in required_tokens if token not in text]
     assert not missing, "QFT evolution umbrella target missing saturation token(s): " + ", ".join(missing)
 
@@ -69,6 +74,12 @@ def test_qft_evol_scaffold_saturation_gate_is_pinned_in_authority_surfaces() -> 
     )
     assert SATURATION_GATE_PATH in state_text, (
         f"State authority surface must pin `{SATURATION_GATE_PATH}`."
+    )
+    assert MILESTONE_GATE_PATH in roadmap_text, (
+        f"Roadmap authority surface must pin `{MILESTONE_GATE_PATH}`."
+    )
+    assert MILESTONE_GATE_PATH in state_text, (
+        f"State authority surface must pin `{MILESTONE_GATE_PATH}`."
     )
 
 

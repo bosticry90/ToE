@@ -185,6 +185,8 @@ Kickoff token contract:
 - `formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md`
 - `formal/python/tests/test_qft_evol_scaffold_saturation_gate.py`
 - `formal/python/tests/test_qft_full_derivation_discharge_gate.py`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED`
+- `formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py`
 
 Non-claim boundary:
 - This artifact is planning-only.
@@ -263,6 +265,8 @@ Canonical Lean targets:
 - pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md`
 - gate: `formal/python/tests/test_qft_full_derivation_discharge_gate.py`
 - saturation gate: `formal/python/tests/test_qft_evol_scaffold_saturation_gate.py`
+- hardening milestone token: `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED`
+- hardening milestone gate: `formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py`
 - kickoff posture remains pre-discharge and non-claim while theorem-chain hardening begins.
 
 ## Closure Definition
