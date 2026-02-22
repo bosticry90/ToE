@@ -1062,6 +1062,37 @@ theorem qft_evol_generator_unitarity_route_alignment_symmetry_witness_coherence_
         hHamiltonianInvariant).symm := by
   apply Subsingleton.elim
 
+theorem qft_evol_generator_unitarity_route_alignment_symmetry_witness_coherence_normalization_v0
+    {State MomentumValue : Type}
+    (canonicalMomentum : CanonicalMomentum State MomentumValue)
+    (hamiltonian : Hamiltonian State)
+    (generator : EvolutionGenerator State)
+    (hReflectsState : Function.Injective canonicalMomentum.map)
+    (hCompat : HamiltonianGeneratorInterfaceStatementOnly hamiltonian generator)
+    (hHamiltonianInvariant : CanonicalMomentumInvariantUnderStep canonicalMomentum hamiltonian.step) :
+    (qft_evol_generator_unitarity_route_alignment_symmetry_witness_v0
+        canonicalMomentum
+        hamiltonian
+        generator
+        hReflectsState
+        hCompat
+        hHamiltonianInvariant).symm
+      =
+      qft_evol_generator_unitarity_route_alignment_symmetry_witness_normalization_v0
+        canonicalMomentum
+        hamiltonian
+        generator
+        hReflectsState
+        hCompat
+        hHamiltonianInvariant := by
+  exact (qft_evol_generator_unitarity_route_alignment_symmetry_witness_coherence_alignment_v0
+    canonicalMomentum
+    hamiltonian
+    generator
+    hReflectsState
+    hCompat
+    hHamiltonianInvariant).symm
+
 end
 
 end ObjectScaffold

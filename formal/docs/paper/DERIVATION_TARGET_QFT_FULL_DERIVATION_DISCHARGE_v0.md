@@ -33,6 +33,7 @@ Progress token:
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE10_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_TOKEN_PINNED`
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE11_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_NORMALIZATION_TOKEN_PINNED`
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE12_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_ALIGNMENT_TOKEN_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE13_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_NORMALIZATION_TOKEN_PINNED`
 
 Semantic hardening milestone token:
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED`
@@ -46,6 +47,7 @@ Semantic hardening milestone token:
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE10_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_PINNED`
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE11_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_NORMALIZATION_PINNED`
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE12_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_ALIGNMENT_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE13_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_NORMALIZATION_PINNED`
 
 Hardening theorem tokens:
 - `qft_evol_canonical_momentum_surface_hardened_v0`
@@ -64,6 +66,7 @@ Hardening theorem tokens:
 - `qft_evol_generator_unitarity_route_alignment_symmetry_witness_v0`
 - `qft_evol_generator_unitarity_route_alignment_symmetry_witness_normalization_v0`
 - `qft_evol_generator_unitarity_route_alignment_symmetry_witness_coherence_alignment_v0`
+- `qft_evol_generator_unitarity_route_alignment_symmetry_witness_coherence_normalization_v0`
 
 Canonical Lean pointer:
 - `formal/toe_formal/ToeFormal/QFT/Evolution/ObjectScaffold.lean`
@@ -81,6 +84,7 @@ Gate pointer:
 - `formal/python/tests/test_qft_evol_semantic_hardening_cycle10_gate.py`
 - `formal/python/tests/test_qft_evol_semantic_hardening_cycle11_gate.py`
 - `formal/python/tests/test_qft_evol_semantic_hardening_cycle12_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle13_gate.py`
 
 Scaffold saturation dependency:
 - `QFT_EVOL_SCAFFOLD_SATURATION_v0: MICRO_01_TO_MICRO_52_TRANCHE_01_52_FROZEN`
@@ -115,7 +119,8 @@ Scaffold saturation dependency:
   11. Generator-unitarity route coherence/normalization alignment hardening,
   12. Generator-unitarity route alignment-symmetry witness hardening,
   13. Generator-unitarity route alignment-symmetry witness normalization hardening,
-  14. Generator-unitarity route alignment-symmetry witness coherence-alignment hardening.
+  14. Generator-unitarity route alignment-symmetry witness coherence-alignment hardening,
+  15. Generator-unitarity route alignment-symmetry witness coherence-normalization hardening.
 
 ## ANTI_SHORTCUT section
 
@@ -151,6 +156,7 @@ Scaffold saturation dependency:
   - `qft_evol_generator_unitarity_route_alignment_symmetry_witness_v0`
   - `qft_evol_generator_unitarity_route_alignment_symmetry_witness_normalization_v0`
   - `qft_evol_generator_unitarity_route_alignment_symmetry_witness_coherence_alignment_v0`
+  - `qft_evol_generator_unitarity_route_alignment_symmetry_witness_coherence_normalization_v0`
 - Required cycle-2 milestone token:
   - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED`
 - Required cycle-3 milestone token:
@@ -173,6 +179,8 @@ Scaffold saturation dependency:
   - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE11_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_NORMALIZATION_PINNED`
 - Required cycle-12 milestone token:
   - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE12_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_ALIGNMENT_PINNED`
+- Required cycle-13 milestone token:
+  - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE13_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_NORMALIZATION_PINNED`
 - Hardening remains bounded and non-promotional.
 
 ## BOUNDED_SCOPE section
@@ -207,3 +215,4 @@ Scaffold saturation dependency:
 - cycle-10 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle10_gate.py`
 - cycle-11 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle11_gate.py`
 - cycle-12 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle12_gate.py`
+- cycle-13 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle13_gate.py`
