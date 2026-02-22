@@ -850,6 +850,25 @@ theorem qft_evol_generator_unitarity_from_reflective_canonical_momentum_route_v0
       hCompat
       hHamiltonianInvariant)
 
+theorem qft_evol_generator_unitarity_via_hamiltonian_reflective_canonical_momentum_route_v0
+    {State MomentumValue : Type}
+    (canonicalMomentum : CanonicalMomentum State MomentumValue)
+    (hamiltonian : Hamiltonian State)
+    (generator : EvolutionGenerator State)
+    (hReflectsState : Function.Injective canonicalMomentum.map)
+    (hCompat : HamiltonianGeneratorInterfaceStatementOnly hamiltonian generator)
+    (hHamiltonianInvariant : CanonicalMomentumInvariantUnderStep canonicalMomentum hamiltonian.step) :
+    UnitarityStatementOnly generator.step := by
+  exact qft_evol_generator_unitarity_chain_v0
+    hamiltonian
+    generator
+    hCompat
+    (qft_evol_unitarity_of_canonical_momentum_reflective_invariant_step_v0
+      canonicalMomentum
+      hamiltonian.step
+      hReflectsState
+      hHamiltonianInvariant)
+
 end
 
 end ObjectScaffold

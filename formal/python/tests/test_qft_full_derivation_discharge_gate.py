@@ -36,6 +36,9 @@ QFT_EVOL_HARDENING_CYCLE3_GATE_PATH = (
 QFT_EVOL_HARDENING_CYCLE4_GATE_PATH = (
     "formal/python/tests/test_qft_evol_semantic_hardening_cycle4_gate.py"
 )
+QFT_EVOL_HARDENING_CYCLE5_GATE_PATH = (
+    "formal/python/tests/test_qft_evol_semantic_hardening_cycle5_gate.py"
+)
 
 REQUIRED_SECTION_HEADERS = [
     "## TARGET section",
@@ -74,10 +77,12 @@ def test_qft_evol_umbrella_references_qft_full_discharge_lane_artifacts() -> Non
         QFT_EVOL_HARDENING_MILESTONE_GATE_PATH,
         QFT_EVOL_HARDENING_CYCLE3_GATE_PATH,
         QFT_EVOL_HARDENING_CYCLE4_GATE_PATH,
+        QFT_EVOL_HARDENING_CYCLE5_GATE_PATH,
         "QFT_EVOL_SCAFFOLD_SATURATION_v0: MICRO_01_TO_MICRO_52_TRANCHE_01_52_FROZEN",
         "QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED",
         "QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE3_v0: CANONICAL_MOMENTUM_INVARIANT_UNITARITY_ROUTE_PINNED",
         "QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE4_v0: HAMILTONIAN_TO_GENERATOR_CANONICAL_MOMENTUM_ROUTE_PINNED",
+        "QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE5_v0: HAMILTONIAN_MEDIATED_REFLECTIVE_CANONICAL_MOMENTUM_GENERATOR_UNITARITY_ROUTE_PINNED",
     ]
     missing = [token for token in required_tokens if token not in text]
     assert not missing, "QFT evolution umbrella target missing discharge-lane token(s): " + ", ".join(missing)
@@ -94,9 +99,11 @@ def test_qft_full_discharge_doc_contains_required_tokens_and_headers() -> None:
         "QFT_FULL_DERIVATION_PROGRESS_CYCLE2_v0: SEMANTIC_HARDENING_MILESTONE_TOKEN_PINNED",
         "QFT_FULL_DERIVATION_PROGRESS_CYCLE3_v0: CANONICAL_MOMENTUM_INVARIANT_UNITARITY_ROUTE_PINNED",
         "QFT_FULL_DERIVATION_PROGRESS_CYCLE4_v0: HAMILTONIAN_TO_GENERATOR_CANONICAL_MOMENTUM_ROUTE_PINNED",
+        "QFT_FULL_DERIVATION_PROGRESS_CYCLE5_v0: HAMILTONIAN_MEDIATED_REFLECTIVE_CANONICAL_MOMENTUM_GENERATOR_UNITARITY_ROUTE_PINNED",
         "QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED",
         "QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE3_v0: CANONICAL_MOMENTUM_INVARIANT_UNITARITY_ROUTE_PINNED",
         "QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE4_v0: HAMILTONIAN_TO_GENERATOR_CANONICAL_MOMENTUM_ROUTE_PINNED",
+        "QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE5_v0: HAMILTONIAN_MEDIATED_REFLECTIVE_CANONICAL_MOMENTUM_GENERATOR_UNITARITY_ROUTE_PINNED",
         "qft_evol_canonical_momentum_surface_hardened_v0",
         "qft_evol_canonical_momentum_invariant_step_surface_hardened_v0",
         "qft_evol_hamiltonian_generator_compatibility_hardened_v0",
@@ -105,6 +112,7 @@ def test_qft_full_discharge_doc_contains_required_tokens_and_headers() -> None:
         "qft_evol_unitarity_of_canonical_momentum_reflective_invariant_step_v0",
         "qft_evol_generator_canonical_momentum_invariant_of_hamiltonian_compatibility_v0",
         "qft_evol_generator_unitarity_from_reflective_canonical_momentum_route_v0",
+        "qft_evol_generator_unitarity_via_hamiltonian_reflective_canonical_momentum_route_v0",
         "PILLAR_QFT_FULL_DERIVATION_DISCHARGE_LOCALIZATION_GATE_v0: FULL_DISCHARGE_ARTIFACTS_ONLY",
         "PILLAR_QFT_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE",
         "PILLAR_QFT_FULL_DERIVATION_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION",
@@ -114,6 +122,7 @@ def test_qft_full_discharge_doc_contains_required_tokens_and_headers() -> None:
         QFT_EVOL_HARDENING_MILESTONE_GATE_PATH,
         QFT_EVOL_HARDENING_CYCLE3_GATE_PATH,
         QFT_EVOL_HARDENING_CYCLE4_GATE_PATH,
+        QFT_EVOL_HARDENING_CYCLE5_GATE_PATH,
     ]
     missing = [token for token in required_tokens if token not in text]
     assert not missing, "QFT full-derivation discharge doc missing required token(s): " + ", ".join(missing)
@@ -153,6 +162,7 @@ def test_qft_full_discharge_lean_tokens_are_present() -> None:
         "theorem qft_evol_unitarity_of_canonical_momentum_reflective_invariant_step_v0",
         "theorem qft_evol_generator_canonical_momentum_invariant_of_hamiltonian_compatibility_v0",
         "theorem qft_evol_generator_unitarity_from_reflective_canonical_momentum_route_v0",
+        "theorem qft_evol_generator_unitarity_via_hamiltonian_reflective_canonical_momentum_route_v0",
     ]
     missing = [token for token in required_tokens if token not in text]
     assert not missing, "QFT evolution Lean scaffold missing full-discharge kickoff token(s): " + ", ".join(missing)
@@ -170,6 +180,7 @@ def test_qft_full_discharge_lane_is_pinned_in_authority_surfaces() -> None:
         QFT_EVOL_HARDENING_MILESTONE_GATE_PATH,
         QFT_EVOL_HARDENING_CYCLE3_GATE_PATH,
         QFT_EVOL_HARDENING_CYCLE4_GATE_PATH,
+        QFT_EVOL_HARDENING_CYCLE5_GATE_PATH,
     ]
 
     for token in required_tokens:
