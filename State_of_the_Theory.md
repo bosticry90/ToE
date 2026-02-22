@@ -1294,7 +1294,10 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - QFT evolution micro-34 target: `TARGET-QFT-EVOL-MICRO-34-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-COMPATIBILITY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-SURFACE-v0`
   - QFT evolution micro-34 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_34_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_COMPATIBILITY_CHAIN3_SURFACE_v0.md`
   - QFT evolution micro-34 gate: `formal/python/tests/test_qft_evol_micro34_qft_evolution_theorem_token_consumer_binding_compatibility_chain3_surface_gate.py`
-  - QFT evolution micro tranche gate (01-34): `formal/python/tests/test_qft_evol_micro_tranche_01_34_completeness_gate.py`
+  - QFT evolution micro-35 target: `TARGET-QFT-EVOL-MICRO-35-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-COMPATIBILITY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-SURFACE-v0`
+  - QFT evolution micro-35 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_35_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_COMPATIBILITY_CHAIN4_SURFACE_v0.md`
+  - QFT evolution micro-35 gate: `formal/python/tests/test_qft_evol_micro35_qft_evolution_theorem_token_consumer_binding_compatibility_chain4_surface_gate.py`
+  - QFT evolution micro tranche gate (01-35): `formal/python/tests/test_qft_evol_micro_tranche_01_35_completeness_gate.py`
 - Selection rationale (governance):
   - GR01 + continuum + strong-field-program + QM full-derivation closures are synchronized,
   - first unlock cohort (SR/EM) is closed under roadmap order intent,
