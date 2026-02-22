@@ -1282,7 +1282,10 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - QFT evolution micro-30 target: `TARGET-QFT-EVOL-MICRO-30-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-COMPATIBILITY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-SURFACE-v0`
   - QFT evolution micro-30 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_30_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_COMPATIBILITY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_SURFACE_v0.md`
   - QFT evolution micro-30 gate: `formal/python/tests/test_qft_evol_micro30_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_consistency_consumer_consistency_consumer_consistency_consumer_consistency_consumer_consistency_consumer_consistency_consumer_surface_gate.py`
-  - QFT evolution micro tranche gate (01-30): `formal/python/tests/test_qft_evol_micro_tranche_01_30_completeness_gate.py`
+  - QFT evolution micro-31 target: `TARGET-QFT-EVOL-MICRO-31-QFT-EVOLUTION-THEOREM-TOKEN-CONSUMER-BINDING-COMPATIBILITY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-CONSUMER-CONSISTENCY-SURFACE-v0`
+  - QFT evolution micro-31 pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EVOL_MICRO_31_QFT_EVOLUTION_THEOREM_TOKEN_CONSUMER_BINDING_COMPATIBILITY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_CONSUMER_CONSISTENCY_SURFACE_v0.md`
+  - QFT evolution micro-31 gate: `formal/python/tests/test_qft_evol_micro31_qft_evolution_theorem_token_consumer_binding_compatibility_consumer_consistency_consumer_consistency_consumer_consistency_consumer_consistency_consumer_consistency_consumer_consistency_consumer_consistency_surface_gate.py`
+  - QFT evolution micro tranche gate (01-31): `formal/python/tests/test_qft_evol_micro_tranche_01_31_completeness_gate.py`
 - Selection rationale (governance):
   - GR01 + continuum + strong-field-program + QM full-derivation closures are synchronized,
   - first unlock cohort (SR/EM) is closed under roadmap order intent,
