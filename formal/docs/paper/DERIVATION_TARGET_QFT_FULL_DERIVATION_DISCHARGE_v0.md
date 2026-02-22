@@ -23,6 +23,12 @@ Inevitability adjudication token:
 Legacy compatibility token snapshot (pre-transition audit trace):
 - retired from active authority surface after explicit discharge closure; legacy traces remain archived-only.
 
+Canonical pillar status matrix pointer:
+- `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`
+
+Consistency gate pointer:
+- `formal/python/tests/test_qft_full_derivation_adjudication_consistency_gate.py`
+
 Progress token:
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE1_v0: EVOL_SCAFFOLD_SATURATION_AND_SEMANTIC_HARDENING_PINNED`
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE2_v0: SEMANTIC_HARDENING_MILESTONE_TOKEN_PINNED`
@@ -417,6 +423,11 @@ Cycle-31 closure artifact tokens (adjudication-criteria bundle lock):
 
 Cycle-32 closure artifact tokens (flip-decision packet lock):
 - `QFT_FULL_DERIVATION_FLIP_DECISION_PACKET_GATE_v0: LOCKED_UNTIL_CYCLE31_CRITERIA_AND_EXPLICIT_AUTHORITY_SIGNOFF`
+- `DEPRECATION_WINDOW_START: 2026-02-22`
+- `DEPRECATION_WINDOW_END: 2026-06-30`
+- `DEPRECATION_WINDOW_PHASE: WITHIN_WINDOW`
+- `DEPRECATED_TOKENS: NO_AUTOFIP`
+- `REPLACEMENT_TOKENS: NO_AUTOFLIP`
 - `QFT_FULL_DERIVATION_FLIP_DECISION_PACKET_AUTHORITY_v0: TWO_KEY_REVIEW_REQUIRED_NO_AUTOFIP`
 - `QFT_FULL_DERIVATION_FLIP_DECISION_PACKET_ARTIFACT_v0: qft_full_derivation_flip_decision_packet_cycle32_v0`
 - artifact pointer: `formal/output/qft_full_derivation_flip_decision_packet_cycle32_v0.json`
@@ -954,3 +965,20 @@ Cycle-91 final discharge closure artifact tokens:
  - cycle-88 pre-execution nonflip execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation packet gate: `formal/python/tests/test_qft_full_derivation_cycle88_gate.py`
  - cycle-89 pre-execution nonflip execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation packet gate: `formal/python/tests/test_qft_full_derivation_cycle89_gate.py`
  - cycle-90 pre-execution nonflip execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation packet gate: `formal/python/tests/test_qft_full_derivation_cycle90_gate.py`
+
+## Archived History
+
+Legacy historical snapshot (retained for backward compatibility with cycle gates; non-authoritative for active adjudication):
+
+- `QFT_FULL_DERIVATION_ADJUDICATION: NOT_YET_DISCHARGED`
+- `QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: NOT_YET_DISCHARGED`
+- `QFT_FULL_DERIVATION_DISCHARGE_CRITERIA_v0: PRE_DISCHARGE_EXIT_ROW_CRITERIA_PINNED`
+- `QFT_FULL_DERIVATION_EXIT_ROW_CRITERIA_GATE_v0: LOCKED_UNTIL_PREDISCHARGE_AND_TRANSITION_BUNDLE`
+- `QFT_FULL_DERIVATION_PREDISCHARGE_TRANSITION_BUNDLE_GATE_v0: EXIT_ROW_CRITERIA_AND_ROLLOVER_REQUIRED`
+- `QFT_FULL_DERIVATION_DISCHARGE_TRANSITION_READINESS_GATE_v0: CYCLE27_29_LOCKS_AND_EXPLICIT_FLIP_GATE_REQUIRED`
+- `QFT_FULL_DERIVATION_ADJUDICATION_FLIP_AUTHORIZATION_GATE_v0: LOCKED_UNTIL_DISCHARGE_CRITERIA_COMPLETE_AND_EXPLICIT_APPROVAL`
+- `QFT_FULL_DERIVATION_ADJUDICATION_CRITERIA_GATE_v0: LOCKED_UNTIL_ALL_EXIT_ROWS_AND_TRANSITION_BUNDLES_COMPLETE`
+- `QFT_FULL_DERIVATION_INEVITABILITY_CRITERIA_GATE_v0: LOCKED_UNTIL_COUNTERFACTUAL_AND_INDEPENDENT_NECESSITY_BUNDLES_COMPLETE`
+- `QFT_FULL_DERIVATION_MANUAL_FLIP_AUTHORIZATION_PACKET_TWO_KEY_v0: KEYA_PENDING_KEYB_PENDING`
+- `QFT_FULL_DERIVATION_NONFLIP_EXECUTION_READINESS_PACKET_SCOPE_v0: ADJUDICATION_REMAINS_NOT_YET_DISCHARGED_UNTIL_EXPLICIT_FLIP_AUTHORITY`
+- `QFT_FULL_DERIVATION_DISCHARGE_PRACTICAL_ACTION_PLAN_GUARDRAIL_v0: ADJUDICATION_REMAINS_NOT_YET_DISCHARGED_UNTIL_EXPLICIT_TWO_KEY_AUTHORIZED_NONPENDING_GATE_CLOSURE`
