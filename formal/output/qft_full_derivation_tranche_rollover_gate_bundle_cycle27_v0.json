@@ -1,0 +1,21 @@
+{
+  "artifact_id": "qft_full_derivation_tranche_rollover_gate_bundle_cycle27_v0",
+  "target_id": "TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0",
+  "artifact_class": "QFT_FULL_DERIVATION_PREDISCHARGE_GATE_BUNDLE",
+  "cycle": 27,
+  "progress_token": "QFT_FULL_DERIVATION_PROGRESS_CYCLE27_v0: TRANCHE_ROLLOVER_LEGACY_FORBID_GATE_BUNDLE_PINNED",
+  "bundle_tokens": [
+    "QFT_FULL_DERIVATION_TRANCHE_ROLLOVER_GATE_v0: CYCLE26_TO_CYCLE27_HARDENING_ROUTE_ONLY",
+    "QFT_FULL_DERIVATION_LEGACY_ROUTE_FORBID_GATE_v0: NO_LEGACY_PROMOTION_OR_ADJUDICATION_SHORTCUT",
+    "QFT_FULL_DERIVATION_DISCHARGE_TRANSITION_POLICY_v0: LOCKED_UNTIL_EXIT_ROW_CRITERIA_AND_PREDISCHARGE_BUNDLE",
+    "QFT_FULL_DERIVATION_ADJUDICATION: NOT_YET_DISCHARGED",
+    "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: NOT_YET_DISCHARGED"
+  ],
+  "scope": "bounded_nonclaim_pre_discharge_only",
+  "legacy_forbid_policy": {
+    "allow_legacy_promotion": false,
+    "allow_adjudication_shortcut": false,
+    "require_exit_row_criteria_before_transition": true
+  },
+  "gate": "formal/python/tests/test_qft_full_derivation_tranche_rollover_cycle27_gate.py"
+}

@@ -1,0 +1,26 @@
+{
+  "artifact_id": "qft_full_derivation_keyb_auth_revalidation_replay_cycle53_v0",
+  "cycle": 53,
+  "status": "keyb_authorization_revalidation_replay_locked",
+  "source_cycles": [34, 35, 36, 52],
+  "key_state_packet": "KEYA_AUTHORIZED_KEYB_AUTHORIZED",
+  "transition_mode": "keyb_event_staging_only",
+  "token_write_allowed": false,
+  "checks": {
+    "cycle34_manual_authorization_packet_present": true,
+    "cycle35_execution_guard_present": true,
+    "cycle36_post_auth_revalidation_gate_present": true,
+    "cycle52_keya_revalidation_replay_present": true,
+    "keyb_event_packet_present": true,
+    "keya_authorized_confirmed": true,
+    "post_auth_revalidation_replay_required": true,
+    "nonflip_enforcement_confirmed": true,
+    "adjudication_token_state_verified": "NOT_YET_DISCHARGED"
+  },
+  "governance": {
+    "bounded_non_claim": true,
+    "external_truth_claim": false,
+    "quantization_closure_claim": false,
+    "dynamics_derivation_closure_claim": false
+  }
+}

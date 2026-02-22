@@ -1,0 +1,24 @@
+{
+  "artifact_id": "qft_full_derivation_token_flip_dryrun_handoff_cycle42_v0",
+  "cycle": 42,
+  "status": "handoff_ready",
+  "source_cycles": [37, 38, 39, 40, 41],
+  "dryrun_mode": "simulation_only",
+  "token_write_allowed": false,
+  "handoff_result": "archive_chain_handoff_ready_nonwrite",
+  "checks": {
+    "cycle41_archive_present": true,
+    "cycle40_closure_present": true,
+    "cycle39_reconciliation_present": true,
+    "cycle38_attestation_present": true,
+    "cycle37_simulator_present": true,
+    "handoff_readiness_verified": true,
+    "adjudication_token_state_verified": "NOT_YET_DISCHARGED"
+  },
+  "governance": {
+    "bounded_non_claim": true,
+    "external_truth_claim": false,
+    "quantization_closure_claim": false,
+    "dynamics_derivation_closure_claim": false
+  }
+}

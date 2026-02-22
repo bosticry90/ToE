@@ -1,0 +1,23 @@
+{
+  "artifact_id": "qft_full_derivation_post_authorization_revalidation_packet_cycle36_v0",
+  "target_id": "TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0",
+  "artifact_class": "QFT_FULL_DERIVATION_POST_AUTHORIZATION_REVALIDATION_PACKET",
+  "cycle": 36,
+  "progress_token": "QFT_FULL_DERIVATION_PROGRESS_CYCLE36_v0: POST_AUTHORIZATION_REVALIDATION_PACKET_LOCK_PINNED",
+  "bundle_tokens": [
+    "QFT_FULL_DERIVATION_PROGRESS_CYCLE35_v0: ADJUDICATION_EXECUTION_GUARD_LOCK_PINNED",
+    "QFT_FULL_DERIVATION_POST_AUTH_REVALIDATION_PACKET_GATE_v0: REVALIDATION_REQUIRED_AFTER_ANY_AUTH_STATUS_CHANGE",
+    "QFT_FULL_DERIVATION_POST_AUTH_REVALIDATION_SCOPE_v0: CYCLE27_35_BUNDLE_SUITE_MUST_PASS",
+    "QFT_FULL_DERIVATION_ADJUDICATION: NOT_YET_DISCHARGED",
+    "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: NOT_YET_DISCHARGED"
+  ],
+  "required_revalidation_test_selector": "qft_full_derivation_discharge_gate or qft_full_derivation_tranche_rollover_cycle27_gate or qft_full_derivation_exit_row_criteria_cycle28_gate or qft_full_derivation_predischarge_transition_cycle29_gate or qft_full_derivation_discharge_transition_readiness_cycle30_gate or qft_full_derivation_adjudication_criteria_cycle31_gate or qft_full_derivation_flip_decision_packet_cycle32_gate or qft_full_derivation_final_prefip_evidence_registry_cycle33_gate or qft_full_derivation_manual_flip_authorization_packet_cycle34_gate or qft_full_derivation_adjudication_execution_guard_cycle35_gate",
+  "scope": "bounded_nonclaim_pre_discharge_only",
+  "constraints": {
+    "adjudication_flip_allowed": false,
+    "inevitability_flip_allowed": false,
+    "require_revalidation_after_auth_change": true,
+    "require_cycle27_35_bundle_pass": true
+  },
+  "gate": "formal/python/tests/test_qft_full_derivation_post_authorization_revalidation_packet_cycle36_gate.py"
+}

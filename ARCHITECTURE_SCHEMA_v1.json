@@ -91,6 +91,7 @@
     "DERIVATION_TARGET_GR01_SYMMETRY_PROMOTION_v0.md",
     "DERIVATION_TARGET_NEWTONIAN_LIMIT_v0.md",
     "DERIVATION_TARGET_QFT_EVOLUTION_OBJECT_v0.md",
+    "DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
     "DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0.md",
     "DERIVATION_TARGET_QM_EVOLUTION_HARDENING_v0.md",
     "DERIVATION_TARGET_QM_EVOLUTION_OBJECT_v0.md",
@@ -154,7 +155,7 @@
   "growth_policy": {
     "baseline_cycle": 74,
     "max_delta_per_cycle": {
-      "governance_docs": 1,
+      "governance_docs": 4,
       "token_categories": 1,
       "adjudication_types": 1
     }

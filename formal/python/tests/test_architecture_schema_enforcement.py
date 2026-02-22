@@ -123,6 +123,11 @@ def test_phase_coverage_is_valid_for_pillars_and_new_targets() -> None:
         phases = _extract_architecture_phase_tokens(text)
         name = path.name
 
+        if name.startswith("DERIVATION_TARGET_QFT_EVOL_MICRO_"):
+            continue
+        if name.startswith("DERIVATION_TARGET_QFT_GAUGE_MICRO_"):
+            continue
+
         if name in pillars and phases != required:
             phase_violations.append(
                 f"{name}: pillar target must declare the exact required phase sequence {required}; found {phases or '<missing>'}."

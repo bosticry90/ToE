@@ -1,0 +1,24 @@
+{
+  "artifact_id": "qft_full_derivation_adjudication_execution_guard_cycle35_v0",
+  "target_id": "TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0",
+  "artifact_class": "QFT_FULL_DERIVATION_ADJUDICATION_EXECUTION_GUARD",
+  "cycle": 35,
+  "progress_token": "QFT_FULL_DERIVATION_PROGRESS_CYCLE35_v0: ADJUDICATION_EXECUTION_GUARD_LOCK_PINNED",
+  "bundle_tokens": [
+    "QFT_FULL_DERIVATION_PROGRESS_CYCLE34_v0: MANUAL_FLIP_AUTHORIZATION_PACKET_LOCK_PINNED",
+    "QFT_FULL_DERIVATION_ADJUDICATION_EXECUTION_GUARD_GATE_v0: FLIP_FORBIDDEN_UNLESS_TWO_KEY_AUTHORIZED_AND_NONPENDING",
+    "QFT_FULL_DERIVATION_MANUAL_FLIP_AUTHORIZATION_STATUS_GATE_v0: KEYA_KEYB_MUST_BE_AUTHORIZED",
+    "QFT_FULL_DERIVATION_ADJUDICATION: NOT_YET_DISCHARGED",
+    "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: NOT_YET_DISCHARGED"
+  ],
+  "required_authorization_packet": "qft_full_derivation_manual_flip_authorization_packet_cycle34_v0",
+  "scope": "bounded_nonclaim_pre_discharge_only",
+  "constraints": {
+    "adjudication_flip_allowed": false,
+    "inevitability_flip_allowed": false,
+    "forbid_flip_when_key_status_pending": true,
+    "require_keya_authorized": true,
+    "require_keyb_authorized": true
+  },
+  "gate": "formal/python/tests/test_qft_full_derivation_adjudication_execution_guard_cycle35_gate.py"
+}

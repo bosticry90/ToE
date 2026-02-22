@@ -1,0 +1,26 @@
+{
+  "artifact_id": "qft_full_derivation_discharge_transition_readiness_bundle_cycle30_v0",
+  "target_id": "TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0",
+  "artifact_class": "QFT_FULL_DERIVATION_DISCHARGE_TRANSITION_READINESS_BUNDLE",
+  "cycle": 30,
+  "progress_token": "QFT_FULL_DERIVATION_PROGRESS_CYCLE30_v0: DISCHARGE_TRANSITION_READINESS_BUNDLE_LOCK_PINNED",
+  "bundle_tokens": [
+    "QFT_FULL_DERIVATION_PROGRESS_CYCLE27_v0: TRANCHE_ROLLOVER_LEGACY_FORBID_GATE_BUNDLE_PINNED",
+    "QFT_FULL_DERIVATION_PROGRESS_CYCLE28_v0: EXIT_ROW_CRITERIA_LOCK_BUNDLE_PINNED",
+    "QFT_FULL_DERIVATION_PROGRESS_CYCLE29_v0: PREDISCHARGE_TRANSITION_BUNDLE_LOCK_PINNED",
+    "QFT_FULL_DERIVATION_DISCHARGE_TRANSITION_READINESS_GATE_v0: CYCLE27_29_LOCKS_AND_EXPLICIT_FLIP_GATE_REQUIRED",
+    "QFT_FULL_DERIVATION_ADJUDICATION_FLIP_AUTHORIZATION_GATE_v0: LOCKED_UNTIL_DISCHARGE_CRITERIA_COMPLETE_AND_EXPLICIT_APPROVAL",
+    "QFT_FULL_DERIVATION_ADJUDICATION: NOT_YET_DISCHARGED",
+    "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: NOT_YET_DISCHARGED"
+  ],
+  "scope": "bounded_nonclaim_pre_discharge_only",
+  "constraints": {
+    "adjudication_flip_allowed": false,
+    "inevitability_flip_allowed": false,
+    "requires_cycle27_rollover_bundle": true,
+    "requires_cycle28_exit_row_criteria_bundle": true,
+    "requires_cycle29_predischarge_transition_bundle": true,
+    "requires_explicit_flip_gate_closure": true
+  },
+  "gate": "formal/python/tests/test_qft_full_derivation_discharge_transition_readiness_cycle30_gate.py"
+}

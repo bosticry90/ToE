@@ -1,0 +1,24 @@
+{
+  "artifact_id": "qft_full_derivation_two_key_authorized_revalidation_closure_cycle54_v0",
+  "cycle": 54,
+  "status": "two_key_authorized_revalidation_closure_locked",
+  "source_cycles": [35, 36, 53],
+  "key_state_packet": "KEYA_AUTHORIZED_KEYB_AUTHORIZED",
+  "transition_mode": "two_key_authorized_revalidation_closure_only",
+  "token_write_allowed": false,
+  "checks": {
+    "cycle35_execution_guard_present": true,
+    "cycle36_post_auth_revalidation_gate_present": true,
+    "cycle53_keyb_revalidation_replay_present": true,
+    "keya_keyb_authorized_packet_present": true,
+    "revalidation_replay_closure_confirmed": true,
+    "nonflip_enforcement_confirmed": true,
+    "adjudication_token_state_verified": "NOT_YET_DISCHARGED"
+  },
+  "governance": {
+    "bounded_non_claim": true,
+    "external_truth_claim": false,
+    "quantization_closure_claim": false,
+    "dynamics_derivation_closure_claim": false
+  }
+}

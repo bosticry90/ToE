@@ -1,0 +1,14 @@
+{
+  "artifact_id": "qft_full_derivation_discharge_practical_action_plan_cycle81_v0",
+  "cycle": 81,
+  "status": "prerequisite_authorization_guard_execution_plan_pinned",
+  "phases": [
+    "cycle27_31_criteria_revalidation_and_evidence_lock_checklist",
+    "cycle32_34_explicit_authorization_replay_and_two_key_status_reconciliation",
+    "cycle35_execution_guard_enforcement_and_nonpending_assertion",
+    "cycle36_plus_nonflip_revalidation_and_readiness_replay_no_adjudication_flip"
+  ],
+  "guardrail": "adjudication_remains_not_yet_discharged_until_explicit_two_key_authorized_nonpending_gate_closure",
+  "token_write_allowed": false,
+  "adjudication_token_state_verified": "NOT_YET_DISCHARGED"
+}

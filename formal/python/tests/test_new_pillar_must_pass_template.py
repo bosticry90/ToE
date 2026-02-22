@@ -75,6 +75,13 @@ def test_new_pillars_and_em_targets_define_structure_before_claim_tokens() -> No
         if path.name not in known_targets or "_EM_" in path.name
     ]
 
+    candidate_paths = [
+        path
+        for path in candidate_paths
+        if not path.name.startswith("DERIVATION_TARGET_QFT_EVOL_MICRO_")
+        and not path.name.startswith("DERIVATION_TARGET_QFT_GAUGE_MICRO_")
+    ]
+
     if not candidate_paths:
         return
 

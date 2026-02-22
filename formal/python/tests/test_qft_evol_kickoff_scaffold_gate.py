@@ -44,13 +44,13 @@ def test_qft_evol_target_contains_required_kickoff_tokens() -> None:
     assert not missing, "QFT evolution kickoff target is missing required token(s): " + ", ".join(missing)
 
 
-def test_qft_roadmap_row_is_active_and_contains_evol_surface_pointer() -> None:
+def test_qft_roadmap_row_is_closed_and_contains_evol_surface_pointer() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     rows = [line.strip() for line in roadmap_text.splitlines() if line.strip().startswith("| `PILLAR-QFT` |")]
     assert len(rows) == 1, f"Expected exactly one PILLAR-QFT roadmap row, found {len(rows)}."
     row = rows[0]
     required_row_tokens = [
-        "| `ACTIVE` |",
+        "| `CLOSED` |",
         "TARGET-QFT-GAUGE-PLAN;TARGET-QFT-EVOL-PLAN",
         "formal/docs/paper/DERIVATION_TARGET_QFT_EVOLUTION_OBJECT_v0.md",
     ]

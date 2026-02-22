@@ -1,0 +1,21 @@
+{
+  "artifact_id": "qft_full_derivation_preexecution_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_packet_cycle71_v0",
+  "cycle": 71,
+  "status": "preexecution_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_packet_locked",
+  "source_cycles": [70],
+  "attestation_mode": "preexecution_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_only",
+  "token_write_allowed": false,
+  "checks": {
+    "cycle70_preexecution_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_packet_present": true,
+    "execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_nonflip_confirmation_present": true,
+    "preexecution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_packet_maintains_nonflip": true,
+    "adjudication_remains_not_yet_discharged": true,
+    "adjudication_token_state_verified": "NOT_YET_DISCHARGED"
+  },
+  "governance": {
+    "bounded_non_claim": true,
+    "external_truth_claim": false,
+    "quantization_closure_claim": false,
+    "dynamics_derivation_closure_claim": false
+  }
+}

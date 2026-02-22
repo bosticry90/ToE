@@ -1,0 +1,22 @@
+{
+  "artifact_id": "qft_full_derivation_flip_eligibility_attestation_packet_cycle57_v0",
+  "cycle": 57,
+  "status": "flip_eligibility_attestation_packet_locked",
+  "source_cycles": [56],
+  "attestation_mode": "flip_eligibility_attestation_only",
+  "token_write_allowed": false,
+  "checks": {
+    "cycle56_preflip_authority_attestation_present": true,
+    "flip_eligibility_attestation_present": true,
+    "nonflip_guard_still_active": true,
+    "eligibility_attestation_does_not_authorize_flip": true,
+    "adjudication_remains_not_yet_discharged": true,
+    "adjudication_token_state_verified": "NOT_YET_DISCHARGED"
+  },
+  "governance": {
+    "bounded_non_claim": true,
+    "external_truth_claim": false,
+    "quantization_closure_claim": false,
+    "dynamics_derivation_closure_claim": false
+  }
+}

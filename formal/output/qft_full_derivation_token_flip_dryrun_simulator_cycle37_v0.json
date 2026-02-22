@@ -1,0 +1,22 @@
+{
+  "artifact_id": "qft_full_derivation_token_flip_dryrun_simulator_cycle37_v0",
+  "cycle": 37,
+  "status": "active",
+  "dryrun_mode": "simulation_only",
+  "token_write_allowed": false,
+  "readiness_scope": "cycle27_36_bundles_only",
+  "inputs": {
+    "required_cycles": [27, 28, 29, 30, 31, 32, 33, 34, 35, 36],
+    "adjudication_token_state_required": "NOT_YET_DISCHARGED"
+  },
+  "outputs": {
+    "simulated_flip_result": "no_write_performed",
+    "next_action": "await_manual_authorization_and_revalidation"
+  },
+  "governance": {
+    "bounded_non_claim": true,
+    "external_truth_claim": false,
+    "quantization_closure_claim": false,
+    "dynamics_derivation_closure_claim": false
+  }
+}

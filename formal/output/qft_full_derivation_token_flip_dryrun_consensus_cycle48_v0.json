@@ -1,0 +1,30 @@
+{
+  "artifact_id": "qft_full_derivation_token_flip_dryrun_consensus_cycle48_v0",
+  "cycle": 48,
+  "status": "consensed",
+  "source_cycles": [37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47],
+  "dryrun_mode": "simulation_only",
+  "token_write_allowed": false,
+  "consensus_result": "concurrence_chain_consensed_nonwrite",
+  "checks": {
+    "cycle47_concurrence_present": true,
+    "cycle46_ratification_present": true,
+    "cycle45_witness_present": true,
+    "cycle44_notarization_present": true,
+    "cycle43_custody_present": true,
+    "cycle42_handoff_present": true,
+    "cycle41_archive_present": true,
+    "cycle40_closure_present": true,
+    "cycle39_reconciliation_present": true,
+    "cycle38_attestation_present": true,
+    "cycle37_simulator_present": true,
+    "multi_party_consensus_confirmed": true,
+    "adjudication_token_state_verified": "NOT_YET_DISCHARGED"
+  },
+  "governance": {
+    "bounded_non_claim": true,
+    "external_truth_claim": false,
+    "quantization_closure_claim": false,
+    "dynamics_derivation_closure_claim": false
+  }
+}

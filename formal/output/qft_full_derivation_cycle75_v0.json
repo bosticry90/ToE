@@ -1,0 +1,19 @@
+{
+  "artifact_id": "qft_full_derivation_preexecution_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_packet_cycle75_v0",
+  "cycle": 75,
+  "status": "preexecution_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_packet_locked",
+  "source_cycles": [74],
+  "transition_mode": "preexecution_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_to_attestation_confirmation_packet_lockstep_only",
+  "token_write_allowed": false,
+  "checks": {
+    "cycle74_preexecution_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_packet_present": true,
+    "nonflip_enforcement_confirmed": true,
+    "adjudication_token_state_verified": "NOT_YET_DISCHARGED"
+  },
+  "governance": {
+    "bounded_non_claim": true,
+    "external_truth_claim": false,
+    "quantization_closure_claim": false,
+    "dynamics_derivation_closure_claim": false
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "artifact_id": "qft_full_derivation_final_discharge_closure_cycle91_v0",
+  "cycle": 91,
+  "status": "final_discharge_closure_locked",
+  "adjudication_token_state_verified": "DISCHARGED_v0",
+  "inevitability_adjudication_state_verified": "DISCHARGED_v0",
+  "two_key_authorization_state": "KEYA_AUTHORIZED_KEYB_AUTHORIZED",
+  "final_flip_closure_gate": "EXPLICIT_TWO_KEY_AUTHORIZED_NONPENDING_AND_SIGNOFF_COMPLETE",
+  "notes": "Final discharge closure artifact for explicit two-key authorized nonpending transition."
+}

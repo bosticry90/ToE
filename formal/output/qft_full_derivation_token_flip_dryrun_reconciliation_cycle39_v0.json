@@ -1,0 +1,21 @@
+{
+  "artifact_id": "qft_full_derivation_token_flip_dryrun_reconciliation_cycle39_v0",
+  "cycle": 39,
+  "status": "reconciled",
+  "source_cycles": [37, 38],
+  "dryrun_mode": "simulation_only",
+  "token_write_allowed": false,
+  "reconciliation_result": "attestation_matches_simulator_no_mutation",
+  "checks": {
+    "cycle37_simulator_present": true,
+    "cycle38_attestation_present": true,
+    "simulator_attestation_alignment": true,
+    "adjudication_token_state_verified": "NOT_YET_DISCHARGED"
+  },
+  "governance": {
+    "bounded_non_claim": true,
+    "external_truth_claim": false,
+    "quantization_closure_claim": false,
+    "dynamics_derivation_closure_claim": false
+  }
+}

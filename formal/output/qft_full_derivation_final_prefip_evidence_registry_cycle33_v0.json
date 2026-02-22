@@ -1,0 +1,30 @@
+{
+  "artifact_id": "qft_full_derivation_final_prefip_evidence_registry_cycle33_v0",
+  "target_id": "TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0",
+  "artifact_class": "QFT_FULL_DERIVATION_FINAL_PREFLIP_EVIDENCE_REGISTRY",
+  "cycle": 33,
+  "progress_token": "QFT_FULL_DERIVATION_PROGRESS_CYCLE33_v0: FINAL_PREFLIP_EVIDENCE_REGISTRY_LOCK_PINNED",
+  "bundle_tokens": [
+    "QFT_FULL_DERIVATION_PROGRESS_CYCLE32_v0: FLIP_DECISION_PACKET_LOCK_PINNED",
+    "QFT_FULL_DERIVATION_FINAL_PREFLIP_EVIDENCE_REGISTRY_GATE_v0: LOCKED_UNTIL_ALL_REQUIRED_BUNDLES_PRESENT_AND_HASH_PINNED",
+    "QFT_FULL_DERIVATION_FINAL_PREFLIP_EVIDENCE_REQUIRED_BUNDLES_v0: CYCLE27_ROLLOVER;CYCLE28_EXIT_ROW;CYCLE29_PREDISCHARGE_TRANSITION;CYCLE30_READINESS;CYCLE31_ADJUDICATION_CRITERIA;CYCLE32_FLIP_PACKET",
+    "QFT_FULL_DERIVATION_ADJUDICATION: NOT_YET_DISCHARGED",
+    "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: NOT_YET_DISCHARGED"
+  ],
+  "required_bundle_artifacts": [
+    "qft_full_derivation_tranche_rollover_gate_bundle_cycle27_v0",
+    "qft_full_derivation_exit_row_criteria_cycle28_v0",
+    "qft_full_derivation_predischarge_transition_bundle_cycle29_v0",
+    "qft_full_derivation_discharge_transition_readiness_bundle_cycle30_v0",
+    "qft_full_derivation_adjudication_criteria_bundle_cycle31_v0",
+    "qft_full_derivation_flip_decision_packet_cycle32_v0"
+  ],
+  "scope": "bounded_nonclaim_pre_discharge_only",
+  "constraints": {
+    "adjudication_flip_allowed": false,
+    "inevitability_flip_allowed": false,
+    "requires_all_required_bundle_hashes": true,
+    "requires_explicit_manual_authorization": true
+  },
+  "gate": "formal/python/tests/test_qft_full_derivation_final_prefip_evidence_registry_cycle33_gate.py"
+}

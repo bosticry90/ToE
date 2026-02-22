@@ -1024,25 +1024,25 @@ def test_gr01_phase3_and_phase4_artifact_schema_is_consistent() -> None:
         )
 
 
-def test_gr01_next_pillar_focus_is_explicit_and_points_to_qft() -> None:
+def test_gr01_next_pillar_focus_is_explicit_and_points_to_stat() -> None:
     state_text = _read(STATE_PATH)
     focus_value = _extract_state_token(state_text, "NEXT_PILLAR_FOCUS_v0")
     lane_value = _extract_state_token(state_text, "NEXT_PILLAR_PRIMARY_LANE_v0")
 
-    assert focus_value == "PILLAR-QFT", (
-        "Next pillar focus drift: NEXT_PILLAR_FOCUS_v0 must remain PILLAR-QFT."
+    assert focus_value == "PILLAR-STAT", (
+        "Next pillar focus drift: NEXT_PILLAR_FOCUS_v0 must remain PILLAR-STAT."
     )
-    assert lane_value == "TARGET-QFT-GAUGE-PLAN", (
-        "Next pillar lane drift: NEXT_PILLAR_PRIMARY_LANE_v0 must remain TARGET-QFT-GAUGE-PLAN."
+    assert lane_value == "TARGET-TH-ENTROPY-PLAN", (
+        "Next pillar lane drift: NEXT_PILLAR_PRIMARY_LANE_v0 must remain TARGET-TH-ENTROPY-PLAN."
     )
 
-    qft_target_text = _read(
-        REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0.md"
+    stat_target_text = _read(
+        REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_THERMO_ENTROPY_OBJECT_v0.md"
     )
-    required_qft_tokens = [
-        "DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0",
-        "TARGET-QFT-GAUGE-PLAN",
-        "local gauge object (group/action/context scaffolding)",
+    required_stat_tokens = [
+        "DERIVATION_TARGET_THERMO_ENTROPY_OBJECT_v0",
+        "TARGET-TH-ENTROPY-PLAN",
+        "entropy-balance closure posture",
     ]
-    missing = [tok for tok in required_qft_tokens if tok not in qft_target_text]
-    assert not missing, "QFT gauge target token drift: " + ", ".join(missing)
+    missing = [tok for tok in required_stat_tokens if tok not in stat_target_text]
+    assert not missing, "STAT entropy target token drift: " + ", ".join(missing)
