@@ -28,6 +28,7 @@ Progress token:
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE5_v0: HAMILTONIAN_MEDIATED_REFLECTIVE_CANONICAL_MOMENTUM_GENERATOR_UNITARITY_ROUTE_PINNED`
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE6_v0: GENERATOR_UNITARITY_ROUTE_COHERENCE_TOKEN_PINNED`
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE7_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_TOKEN_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE8_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_COHERENCE_ALIGNMENT_TOKEN_PINNED`
 
 Semantic hardening milestone token:
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED`
@@ -36,6 +37,7 @@ Semantic hardening milestone token:
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE5_v0: HAMILTONIAN_MEDIATED_REFLECTIVE_CANONICAL_MOMENTUM_GENERATOR_UNITARITY_ROUTE_PINNED`
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE6_v0: GENERATOR_UNITARITY_ROUTE_COHERENCE_PINNED`
 - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE7_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE8_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_COHERENCE_ALIGNMENT_PINNED`
 
 Hardening theorem tokens:
 - `qft_evol_canonical_momentum_surface_hardened_v0`
@@ -49,6 +51,7 @@ Hardening theorem tokens:
 - `qft_evol_generator_unitarity_via_hamiltonian_reflective_canonical_momentum_route_v0`
 - `qft_evol_generator_unitarity_route_coherence_v0`
 - `qft_evol_generator_unitarity_route_normalization_v0`
+- `qft_evol_generator_unitarity_route_normalization_coherence_alignment_v0`
 
 Canonical Lean pointer:
 - `formal/toe_formal/ToeFormal/QFT/Evolution/ObjectScaffold.lean`
@@ -61,6 +64,7 @@ Gate pointer:
 - `formal/python/tests/test_qft_evol_semantic_hardening_cycle5_gate.py`
 - `formal/python/tests/test_qft_evol_semantic_hardening_cycle6_gate.py`
 - `formal/python/tests/test_qft_evol_semantic_hardening_cycle7_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle8_gate.py`
 
 Scaffold saturation dependency:
 - `QFT_EVOL_SCAFFOLD_SATURATION_v0: MICRO_01_TO_MICRO_52_TRANCHE_01_52_FROZEN`
@@ -90,7 +94,8 @@ Scaffold saturation dependency:
   6. Hamiltonian-to-generator canonical-momentum transfer route hardening,
   7. Hamiltonian-mediated reflective canonical-momentum generator-unitarity route hardening,
   8. Generator-unitarity route coherence hardening,
-  9. Generator-unitarity route normalization hardening.
+  9. Generator-unitarity route normalization hardening,
+  10. Generator-unitarity route normalization/coherence alignment hardening.
 
 ## ANTI_SHORTCUT section
 
@@ -133,6 +138,8 @@ Scaffold saturation dependency:
   - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE6_v0: GENERATOR_UNITARITY_ROUTE_COHERENCE_PINNED`
 - Required cycle-7 milestone token:
   - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE7_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_PINNED`
+- Required cycle-8 milestone token:
+  - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE8_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_COHERENCE_ALIGNMENT_PINNED`
 - Hardening remains bounded and non-promotional.
 
 ## BOUNDED_SCOPE section
@@ -162,3 +169,4 @@ Scaffold saturation dependency:
 - cycle-5 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle5_gate.py`
 - cycle-6 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle6_gate.py`
 - cycle-7 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle7_gate.py`
+- cycle-8 hardening gate: `formal/python/tests/test_qft_evol_semantic_hardening_cycle8_gate.py`
