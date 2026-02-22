@@ -3,6 +3,8 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from formal.python.tests._archived_history_sentinel import split_active_and_archived
+
 
 def find_repo_root(start: Path) -> Path:
     p = start.resolve()
@@ -30,17 +32,10 @@ def _read(path: Path) -> str:
     return path.read_text(encoding="utf-8")
 
 
-def _strip_archived_history(text: str) -> str:
-    m = re.search(r"^##\s+Archived History\s*$", text, flags=re.MULTILINE)
-    if m is None:
-        return text
-    return text[: m.start()]
-
-
 def test_qft_legacy_not_yet_adjudication_token_is_retired_from_active_authority_surfaces() -> None:
-    state_text = _strip_archived_history(_read(STATE_PATH))
-    roadmap_text = _strip_archived_history(_read(ROADMAP_PATH))
-    discharge_text = _strip_archived_history(_read(QFT_DISCHARGE_DOC_PATH))
+    state_text, _ = split_active_and_archived(_read(STATE_PATH), STATE_PATH)
+    roadmap_text, _ = split_active_and_archived(_read(ROADMAP_PATH), ROADMAP_PATH)
+    discharge_text, _ = split_active_and_archived(_read(QFT_DISCHARGE_DOC_PATH), QFT_DISCHARGE_DOC_PATH)
 
     assert LEGACY_QFT_ADJUDICATION_TOKEN not in state_text, "Legacy QFT adjudication token present in active State authority surface."
     assert LEGACY_QFT_INEVITABILITY_TOKEN not in state_text, "Legacy QFT inevitability token present in active State authority surface."

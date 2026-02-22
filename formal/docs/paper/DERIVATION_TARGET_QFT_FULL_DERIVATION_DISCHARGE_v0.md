@@ -966,7 +966,7 @@ Cycle-91 final discharge closure artifact tokens:
  - cycle-89 pre-execution nonflip execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation packet gate: `formal/python/tests/test_qft_full_derivation_cycle89_gate.py`
  - cycle-90 pre-execution nonflip execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation packet gate: `formal/python/tests/test_qft_full_derivation_cycle90_gate.py`
 
-## Archived History
+## ARCHIVED_HISTORY (NON-AUTHORITY)
 
 Legacy historical snapshot (retained for backward compatibility with cycle gates; non-authoritative for active adjudication):
 
@@ -982,3 +982,5 @@ Legacy historical snapshot (retained for backward compatibility with cycle gates
 - `QFT_FULL_DERIVATION_MANUAL_FLIP_AUTHORIZATION_PACKET_TWO_KEY_v0: KEYA_PENDING_KEYB_PENDING`
 - `QFT_FULL_DERIVATION_NONFLIP_EXECUTION_READINESS_PACKET_SCOPE_v0: ADJUDICATION_REMAINS_NOT_YET_DISCHARGED_UNTIL_EXPLICIT_FLIP_AUTHORITY`
 - `QFT_FULL_DERIVATION_DISCHARGE_PRACTICAL_ACTION_PLAN_GUARDRAIL_v0: ADJUDICATION_REMAINS_NOT_YET_DISCHARGED_UNTIL_EXPLICIT_TWO_KEY_AUTHORIZED_NONPENDING_GATE_CLOSURE`
+
+## END_ARCHIVED_HISTORY

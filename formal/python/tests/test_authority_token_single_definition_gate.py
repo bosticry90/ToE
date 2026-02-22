@@ -4,6 +4,8 @@ import json
 import re
 from pathlib import Path
 
+from formal.python.tests._archived_history_sentinel import split_active_and_archived
+
 
 def find_repo_root(start: Path) -> Path:
     p = start.resolve()
@@ -29,13 +31,6 @@ def _read_json(path: Path) -> dict:
     return json.loads(_read(path))
 
 
-def _strip_archived_history(text: str) -> str:
-    m = re.search(r"^##\s+Archived History\s*$", text, flags=re.MULTILINE)
-    if m is None:
-        return text
-    return text[: m.start()]
-
-
 def _count_token_definitions(text: str, token_name: str) -> int:
     return len(re.findall(rf"\b{re.escape(token_name)}\s*:", text))
 
@@ -49,8 +44,8 @@ def test_authority_token_definitions_are_single_in_active_mirrors_and_noncontrad
     pillars = matrix.get("pillars", {})
     assert pillars, "PILLAR_STATUS_MATRIX_v1.json must define at least one pillar row."
 
-    state_text = _strip_archived_history(_read(STATE_PATH))
-    roadmap_text = _strip_archived_history(_read(ROADMAP_PATH))
+    state_text, _ = split_active_and_archived(_read(STATE_PATH), STATE_PATH)
+    roadmap_text, _ = split_active_and_archived(_read(ROADMAP_PATH), ROADMAP_PATH)
 
     for pillar_id, entry in sorted(pillars.items()):
         discharge_rel = entry.get("discharge_doc")
@@ -61,7 +56,8 @@ def test_authority_token_definitions_are_single_in_active_mirrors_and_noncontrad
         assert isinstance(full_token_name, str) and full_token_name, f"{pillar_id}: missing full_derivation_token in matrix row."
         assert isinstance(inevitability_token_name, str) and inevitability_token_name, f"{pillar_id}: missing inevitability_token in matrix row."
 
-        discharge_text = _strip_archived_history(_read(REPO_ROOT / discharge_rel))
+        discharge_path = REPO_ROOT / discharge_rel
+        discharge_text, _ = split_active_and_archived(_read(discharge_path), discharge_path)
 
         for token_name in (full_token_name, inevitability_token_name):
             state_count = _count_token_definitions(state_text, token_name)

@@ -1631,7 +1631,7 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - QFT full-derivation nonflip execution-readiness packet artifact pointer: `formal/output/qft_full_derivation_nonflip_execution_readiness_packet_cycle55_v0.json`
   - QFT full-derivation nonflip execution-readiness packet cycle-55 gate: `formal/python/tests/test_qft_full_derivation_nonflip_execution_readiness_packet_cycle55_gate.py`
 
-## Archived History
+## ARCHIVED_HISTORY (NON-AUTHORITY)
 
 - legacy NOT_YET state prior to discharge:
   - `QFT_FULL_DERIVATION_ADJUDICATION: NOT_YET_DISCHARGED`
@@ -8157,6 +8157,8 @@ Comparator-expansion block rule (policy): historical baseline retained. Since 20
 
 
 Template status: We will keep editing.
+
+## END_ARCHIVED_HISTORY
 
 
 

@@ -638,11 +638,13 @@ QFT full-derivation pre-discharge closure pin (cycle-27/cycle-50):
   - roadmap update and doc-gate update,
   - governance-suite pass on pinned tests.
 
-## Archived History
+## ARCHIVED_HISTORY (NON-AUTHORITY)
 
 Legacy historical snapshot (non-authoritative for active adjudication):
 
 - `QFT_FULL_DERIVATION_NONFLIP_EXECUTION_READINESS_PACKET_SCOPE_v0: ADJUDICATION_REMAINS_NOT_YET_DISCHARGED_UNTIL_EXPLICIT_FLIP_AUTHORITY`
+
+## END_ARCHIVED_HISTORY
 
 
 
