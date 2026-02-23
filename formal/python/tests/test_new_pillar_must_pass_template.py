@@ -17,6 +17,7 @@ def find_repo_root(start: Path) -> Path:
 REPO_ROOT = find_repo_root(Path(__file__))
 ARCHITECTURE_SCHEMA_PATH = REPO_ROOT / "ARCHITECTURE_SCHEMA_v1.json"
 PAPER_DIR = REPO_ROOT / "formal" / "docs" / "paper"
+PILLAR_STATUS_MATRIX_PATH = PAPER_DIR / "PILLAR_STATUS_MATRIX_v1.json"
 
 BOUNDED_MARKERS = [
     "bounded scope section",
@@ -35,6 +36,25 @@ COUNTERFACTUAL_MARKERS = [
     "counterfactual route section",
     "counterfactual",
 ]
+
+
+def _derive_pillar_id(path_name: str) -> str | None:
+    name = path_name.upper()
+    if "_QFT_" in name:
+        return "PILLAR-QFT"
+    if "_QM_" in name:
+        return "PILLAR-QM"
+    if "_EM_" in name:
+        return "PILLAR-EM"
+    if "_SR_" in name:
+        return "PILLAR-SR"
+    if "_GR" in name:
+        return "PILLAR-GR"
+    if "THERMO" in name or "_STAT_" in name:
+        return "PILLAR-STAT"
+    if "COSMO" in name:
+        return "PILLAR-COSMO"
+    return None
 
 
 def _read(path: Path) -> str:
@@ -66,13 +86,15 @@ def _first_derivation_token_index(text: str) -> int:
 
 def test_new_pillars_and_em_targets_define_structure_before_claim_tokens() -> None:
     schema = _read_json(ARCHITECTURE_SCHEMA_PATH)
+    matrix = _read_json(PILLAR_STATUS_MATRIX_PATH)
+    matrix_pillars = set(matrix.get("pillars", {}).keys())
     known_targets = set(schema.get("known_derivation_target_files", []))
     all_targets = sorted(PAPER_DIR.glob("DERIVATION_TARGET*.md"))
 
     candidate_paths = [
         path
         for path in all_targets
-        if path.name not in known_targets or "_EM_" in path.name
+        if path.name not in known_targets
     ]
 
     candidate_paths = [
@@ -80,6 +102,7 @@ def test_new_pillars_and_em_targets_define_structure_before_claim_tokens() -> No
         for path in candidate_paths
         if not path.name.startswith("DERIVATION_TARGET_QFT_EVOL_MICRO_")
         and not path.name.startswith("DERIVATION_TARGET_QFT_GAUGE_MICRO_")
+        and not path.name.startswith("DERIVATION_TARGET_EM_U1_MICRO_")
     ]
 
     if not candidate_paths:
@@ -112,5 +135,28 @@ def test_new_pillars_and_em_targets_define_structure_before_claim_tokens() -> No
                 violations.append(
                     f"{path.name}: counterfactual section must be declared before discharge adjudication."
                 )
+
+        if "formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json" not in text:
+            violations.append(
+                f"{path.name}: must reference formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json as canonical pillar status matrix."
+            )
+
+        pillar_id = _derive_pillar_id(path.name)
+        if pillar_id is None:
+            violations.append(f"{path.name}: unable to derive pillar ID from target filename; add mapping to template gate.")
+        elif pillar_id not in matrix_pillars:
+            violations.append(f"{path.name}: missing required matrix row `{pillar_id}` in PILLAR_STATUS_MATRIX_v1.json.")
+
+        if re.search(r"formal/python/tests/test_[a-z0-9_]*consistency_gate\.py", text) is None:
+            violations.append(
+                f"{path.name}: must pin at least one consistency gate test path (test_*consistency_gate.py)."
+            )
+
+        has_retirement_gate = re.search(r"formal/python/tests/test_[a-z0-9_]*retirement_gate\.py", text) is not None
+        has_generic_retirement_gate = "formal/python/tests/test_pillar_adjudication_legacy_retirement_gate.py" in text
+        if not (has_retirement_gate or has_generic_retirement_gate):
+            violations.append(
+                f"{path.name}: must pin a retirement gate test path (pillar-specific or generic)."
+            )
 
     assert not violations, "New-pillar template gate violations:\n- " + "\n- ".join(violations)

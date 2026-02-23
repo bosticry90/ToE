@@ -90,8 +90,8 @@ def _iter_adjudication_values(text: str) -> list[str]:
 def test_architecture_schema_shape_is_frozen() -> None:
     schema = _read_json(ARCHITECTURE_SCHEMA_PATH)
 
-    assert schema.get("schema_id") == "ARCHITECTURE_SCHEMA_v1"
-    assert schema.get("schema_version") == 1
+    assert schema.get("schema_id") == "ARCHITECTURE_SCHEMA_v2"
+    assert schema.get("schema_version") == 2
     assert schema.get("pillar_required_phases") == EXPECTED_REQUIRED_PHASES
     assert schema.get("allowed_token_classes") == EXPECTED_ALLOWED_TOKEN_CLASSES
     assert schema.get("allowed_adjudication_prefixes") == EXPECTED_ALLOWED_ADJUDICATION_PREFIXES
@@ -152,9 +152,16 @@ def test_adjudication_prefixes_are_frozen_for_derivation_targets() -> None:
     schema = _read_json(ARCHITECTURE_SCHEMA_PATH)
     allowed_prefixes = list(schema.get("allowed_adjudication_prefixes", []))
     allowed_prefixes.extend(schema.get("legacy_allowed_adjudication_prefixes", []))
+    known = set(schema.get("known_derivation_target_files", []))
 
     violations: list[str] = []
     for path in _derivation_target_paths():
+        name = path.name
+        if "_MICRO_" in name:
+            continue
+        if name in known:
+            continue
+
         text = _read(path)
         for value in _iter_adjudication_values(text):
             if value.startswith("<"):

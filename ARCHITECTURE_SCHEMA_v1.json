@@ -1,6 +1,6 @@
 {
-  "schema_id": "ARCHITECTURE_SCHEMA_v1",
-  "schema_version": 1,
+  "schema_id": "ARCHITECTURE_SCHEMA_v2",
+  "schema_version": 2,
   "pillar_required_phases": [
     "TARGET_DEFINITION",
     "ASSUMPTION_FREEZE",
@@ -30,8 +30,6 @@
     "DISCHARGED_CONDITIONAL_PUBLISH_v0",
     "DISCHARGED_CONDITIONAL_v0",
     "SATISFIED_v0_DISCRETE",
-    "NOT_YET_DISCHARGED",
-    "NOT_YET_SATISFIED",
     "PUBLISHED_POLICY_BASELINE_2026Q1"
   ],
   "pillar_target_files": [

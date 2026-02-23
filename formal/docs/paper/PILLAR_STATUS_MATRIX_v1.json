@@ -1,0 +1,17 @@
+{
+  "matrix_id": "PILLAR_STATUS_MATRIX_v1",
+  "matrix_version": 1,
+  "canonical_source": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+  "pillars": {
+    "PILLAR-QFT": {
+      "discharge_doc": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "full_derivation_token": "QFT_FULL_DERIVATION_ADJUDICATION",
+      "inevitability_token": "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION",
+      "consistency_gate": "formal/python/tests/test_qft_full_derivation_adjudication_consistency_gate.py",
+      "legacy_retirement_gate": "formal/python/tests/test_qft_full_derivation_legacy_retirement_gate.py",
+      "full_derivation": "DISCHARGED_v0",
+      "inevitability": "DISCHARGED_v0",
+      "matrix_status": "CLOSED"
+    }
+  }
+}

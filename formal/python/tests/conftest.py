@@ -86,19 +86,6 @@ _QFT_EVOL_TRANCHE_DEPRECATED_PATTERN = re.compile(
 )
 
 
-def _is_legacy_qft_full_derivation_not_yet_gate(item) -> bool:
-    nodeid = item.nodeid
-    if "test_qft_full_derivation" not in nodeid or "_gate.py" not in nodeid:
-        return False
-
-    try:
-        test_text = Path(str(item.fspath)).read_text(encoding="utf-8")
-    except Exception:
-        return False
-
-    return "NOT_YET_DISCHARGED" in test_text
-
-
 def pytest_collection_modifyitems(config, items):
     for item in items:
         if _QFT_EVOL_TRANCHE_DEPRECATED_PATTERN.search(item.nodeid):
@@ -108,10 +95,3 @@ def pytest_collection_modifyitems(config, items):
                 )
             )
             continue
-
-        if _is_legacy_qft_full_derivation_not_yet_gate(item):
-            item.add_marker(
-                pytest.mark.skip(
-                    reason="Legacy QFT full-derivation NOT_YET snapshot gate retired after explicit DISCHARGED_v0 closure."
-                )
-            )

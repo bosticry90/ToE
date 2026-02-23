@@ -1,0 +1,63 @@
+{
+  "lock_id": "GOVERNANCE_VERSION_v2",
+  "governance_version": 2,
+  "tracked_hashes": {
+    "ARCHITECTURE_SCHEMA_v1.json": "0a8025a1926eb8afbdb425f4c40f226d3f2747434c687ddf384c4da6d99ca464",
+    "formal/docs/paper/ASSUMPTION_REGISTRY_v1.md": "6e830af33e5e0936b0c9a0cbfbdd689fe472b4f978afdbe4936c5b04b8d3d19d"
+  },
+  "adjudication_class_list": [
+    "DISCHARGED_CONDITIONAL_PUBLISH_v0",
+    "DISCHARGED_CONDITIONAL_v0",
+    "DISCHARGED_v0",
+    "LOCKED",
+    "PUBLISHED_POLICY_BASELINE_2026Q1",
+    "SATISFIED_v0_DISCRETE",
+    "T-CONDITIONAL",
+    "T-PROVED"
+  ],
+  "adjudication_class_list_sha256": "3855e3c69cf291e3ac11086cb99089691340ecae2fd33fa4168f86441420e16e",
+  "baseline": {
+    "cycle": 74,
+    "assumption_taxonomy_classes": [
+      "APPROXIMATION",
+      "BOUNDARY",
+      "CALIBRATION",
+      "NORMALIZATION",
+      "REGIME",
+      "STRUCTURAL",
+      "SYMMETRY"
+    ],
+    "state_status_categories": [
+      "T-CONDITIONAL",
+      "T-PROVED"
+    ],
+    "adjudication_values": [
+      "ACTIVE_v0",
+      "DISCHARGED_v0",
+      "DISCHARGED_CONDITIONAL_PUBLISH_v0",
+      "DISCHARGED_CONDITIONAL_v0",
+      "DISCHARGED_v0_BOUNDED",
+      "DISCHARGED_v0_CONTINUUM_BRIDGE",
+      "DISCHARGED_v0_CONTRACT_HARDENED",
+      "DISCHARGED_v0_DERIVATION_GRADE",
+      "DISCHARGED_v0_DISCRETE",
+      "DISCHARGED_v0_DISCRETE_HARDENED",
+      "DISCHARGED_v0_ROADMAP_PINNED",
+      "DISCHARGED_v0_STRONG_FIELD_PROGRAM",
+      "NOT_YET_DISCHARGED"
+    ],
+    "adjudication_suffix_patterns": [
+      "ACTIVE_v0",
+      "DISCHARGED_v0",
+      "DISCHARGED_CONDITIONAL_PUBLISH_v*",
+      "DISCHARGED_CONDITIONAL_v*",
+      "DISCHARGED_v0_*",
+      "NOT_YET_*"
+    ],
+    "governance_surface_counts": {
+      "governance_docs": 70,
+      "token_categories": 7,
+      "adjudication_types": 12
+    }
+  }
+}
