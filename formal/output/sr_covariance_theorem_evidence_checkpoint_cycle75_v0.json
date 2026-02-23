@@ -1,0 +1,28 @@
+{
+  "artifact_id": "SR_COVARIANCE_THEOREM_EVIDENCE_CHECKPOINT_CYCLE75_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "analytic_regime": "sr_covariance_bounded_theorem_surface",
+    "checkpoint": "phase1_phase2_theorem_evidence_checkpoint",
+    "evidence_items": [
+      "formal/output/sr_covariance_theorem_object_discharge_row04_lock_cycle34_v0.json",
+      "formal/output/sr_covariance_canonical_equivalence_theorem_surface_lock_cycle37_v0.json",
+      "formal/output/sr_covariance_claim_label_and_pillar_closure_transition_lock_cycle74_v0.json"
+    ],
+    "linked_tokens": [
+      "SR_FULL_DERIVATION_PHASE1_DISCHARGE_ROW_04_STATUS_v0",
+      "SR_FULL_DERIVATION_PHASE2_CANONICAL_EQUIVALENCE_THEOREM_SURFACE_STATUS_v0",
+      "SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION"
+    ],
+    "non_claim_boundary": [
+      "planning_only",
+      "bounded_theorem_discharge_scope_only",
+      "no_full_sr_dynamics_derivation_claim",
+      "no_inevitability_claim_by_artifact",
+      "no_external_truth_claim"
+    ],
+    "status": "theorem_evidence_checkpoint_non_promotional",
+    "generated_on": "2026-02-22"
+  },
+  "payload_sha256": "ca714da736df727d0c220b4e37bb6daa41ab6b39759055cf627162c00e0cf77a"
+}

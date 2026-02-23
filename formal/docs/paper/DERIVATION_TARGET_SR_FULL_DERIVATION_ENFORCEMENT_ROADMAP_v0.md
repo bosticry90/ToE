@@ -18,6 +18,12 @@ Adjudication token:
 - `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
 - `PILLAR-SR_REGISTRY_EXEMPTION_v0: SR_CLOSURE_NOT_TRACKED_IN_GENERIC_REGISTRY`
 
+Theorem-evidence checkpoint coupling bundle (bounded non-claim):
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle75_v0`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_ARTIFACT_SHA256_v0: ca714da736df727d0c220b4e37bb6daa41ab6b39759055cf627162c00e0cf77a`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle75_v0.json`
+
 Non-claim boundary:
 - planning-only enforcement control surface.
 - does not promote claim labels by itself.
@@ -1193,3 +1199,4 @@ Inevitability obligation linkage (authoritative theorem route, synchronized):
 - `formal/python/tests/test_sr_covariance_kickoff_gate.py`
 - `formal/python/tests/test_sr_theorem_surface_scaffold_gate.py`
 - `formal/python/tests/test_sr_full_derivation_enforcement_roadmap_gate.py`
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_gate.py`
