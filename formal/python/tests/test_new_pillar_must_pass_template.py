@@ -36,6 +36,20 @@ COUNTERFACTUAL_MARKERS = [
     "counterfactual route section",
     "counterfactual",
 ]
+CLAIM_TRACEABILITY_HEADER = "claim_traceability"
+TRACEABILITY_REQUIRED_FIELDS = [
+    "ClaimID",
+    "ClaimText",
+    "Location",
+    "ImpactClass",
+    "EnforcementBucket",
+    "EnforcingTests",
+    "EnforcedArtifacts",
+    "Tokens/Invariants",
+    "Notes",
+    "Fix (if D)",
+]
+TRACEABILITY_TIMELINE_PATTERN = re.compile(r"\b(CYCLE[-_ ]?\d+|BY_CYCLE_\d+|Q[1-4]-\d{4}|\d{4}-\d{2}-\d{2})\b")
 
 
 def _derive_pillar_id(path_name: str) -> str | None:
@@ -82,6 +96,31 @@ def _first_derivation_token_index(text: str) -> int:
     if token_match is None:
         return -1
     return token_match.start()
+
+
+def _extract_claim_traceability_entries(text: str, path_name: str) -> list[str]:
+    text_lower = text.lower()
+    start = text_lower.find(CLAIM_TRACEABILITY_HEADER)
+    assert start >= 0, f"{path_name}: missing required CLAIM_TRACEABILITY section."
+
+    section = text[start:]
+    starts = list(re.finditer(r"(?m)^\* ClaimID:\s*", section))
+    assert starts, f"{path_name}: CLAIM_TRACEABILITY section must include at least one `* ClaimID:` entry."
+
+    entries: list[str] = []
+    for i, match in enumerate(starts):
+        entry_start = match.start()
+        entry_end = starts[i + 1].start() if i + 1 < len(starts) else len(section)
+        entries.append(section[entry_start:entry_end].strip())
+    return entries
+
+
+def _field(entry: str, field_name: str) -> str:
+    m = re.search(rf"(?m)^\* {re.escape(field_name)}:\s*(.+)$", entry)
+    assert m is not None, f"Missing required field `{field_name}` in entry:\n{entry}"
+    value = m.group(1).strip()
+    assert value, f"Field `{field_name}` must be non-empty."
+    return value
 
 
 def test_new_pillars_and_em_targets_define_structure_before_claim_tokens() -> None:
@@ -158,5 +197,31 @@ def test_new_pillars_and_em_targets_define_structure_before_claim_tokens() -> No
             violations.append(
                 f"{path.name}: must pin a retirement gate test path (pillar-specific or generic)."
             )
+
+        try:
+            entries = _extract_claim_traceability_entries(text, path.name)
+            if len(entries) < 3:
+                violations.append(f"{path.name}: CLAIM_TRACEABILITY must include at least 3 entries.")
+
+            for entry in entries:
+                for field_name in TRACEABILITY_REQUIRED_FIELDS:
+                    _field(entry, field_name)
+
+                bucket = _field(entry, "EnforcementBucket")
+                if bucket not in {"A", "B", "C", "D"}:
+                    violations.append(f"{path.name}: invalid EnforcementBucket `{bucket}` in CLAIM_TRACEABILITY.")
+
+                if bucket == "D":
+                    fix_text = _field(entry, "Fix (if D)")
+                    if "TODO: add gate" not in fix_text:
+                        violations.append(
+                            f"{path.name}: bucket D entries must include `TODO: add gate` in Fix field."
+                        )
+                    if TRACEABILITY_TIMELINE_PATTERN.search(fix_text) is None:
+                        violations.append(
+                            f"{path.name}: bucket D entries must include bounded timeline token in Fix field."
+                        )
+        except AssertionError as exc:
+            violations.append(str(exc))
 
     assert not violations, "New-pillar template gate violations:\n- " + "\n- ".join(violations)
