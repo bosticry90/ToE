@@ -1186,6 +1186,11 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - `NEXT_PILLAR_FOCUS_v0: PILLAR-STAT`
   - `NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-TH-ENTROPY-PLAN`
   - canonical pillar status matrix pointer: `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`
+  - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_ARTIFACT_v0: qft_evidence_diversification_checkpoint_cycle01_v0`
+  - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_SHA256_v0: e577ce28c1ec133d1fb81fd4f02c86cb8cbc51ff2d376fb28007d85e31160d3a`
+  - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qft_evidence_diversification_checkpoint_cycle01_v0.json`
+  - `formal/python/tests/test_qft_evidence_diversification_checkpoint_coupling_gate.py`
   - `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
   - `SR_THEOREM_EVIDENCE_CHECKPOINT_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle75_v0`
   - `SR_THEOREM_EVIDENCE_CHECKPOINT_ARTIFACT_SHA256_v0: ca714da736df727d0c220b4e37bb6daa41ab6b39759055cf627162c00e0cf77a`

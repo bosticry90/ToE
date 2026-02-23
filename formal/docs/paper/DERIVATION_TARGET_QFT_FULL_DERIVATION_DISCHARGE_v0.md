@@ -35,6 +35,13 @@ Discharge readiness pack pointer:
 Consistency gate pointer:
 - `formal/python/tests/test_qft_full_derivation_adjudication_consistency_gate.py`
 
+Evidence-diversification checkpoint coupling bundle (bounded non-claim):
+- `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_ARTIFACT_v0: qft_evidence_diversification_checkpoint_cycle01_v0`
+- `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_SHA256_v0: e577ce28c1ec133d1fb81fd4f02c86cb8cbc51ff2d376fb28007d85e31160d3a`
+- `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/qft_evidence_diversification_checkpoint_cycle01_v0.json`
+- `formal/python/tests/test_qft_evidence_diversification_checkpoint_coupling_gate.py`
+
 Progress token:
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE1_v0: EVOL_SCAFFOLD_SATURATION_AND_SEMANTIC_HARDENING_PINNED`
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE2_v0: SEMANTIC_HARDENING_MILESTONE_TOKEN_PINNED`

@@ -1,0 +1,28 @@
+{
+  "artifact_id": "QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_CYCLE01_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "analytic_regime": "qft_bounded_nonflip_evidence_diversification_cycle01",
+    "diversification_focus": "readiness_packet_plus_independent_consistency_surface_alignment",
+    "evidence_items": [
+      "formal/docs/paper/QFT_DISCHARGE_READINESS_PACK_v0.md",
+      "formal/output/qft_full_derivation_nonflip_execution_readiness_packet_cycle55_v0.json",
+      "formal/python/tests/test_qft_full_derivation_adjudication_consistency_gate.py"
+    ],
+    "linked_tokens": [
+      "QFT_FULL_DERIVATION_ADJUDICATION",
+      "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION",
+      "QFT_FULL_DERIVATION_NONFLIP_EXECUTION_READINESS_PACKET_SCOPE_v0"
+    ],
+    "boundary_class": [
+      "planning_only",
+      "bounded_nonflip_scope_only",
+      "no_adjudication_flip_authorization_by_artifact",
+      "no_new_claim_semantics",
+      "no_external_truth_claim"
+    ],
+    "status": "evidence_diversification_checkpoint_non_promotional",
+    "generated_on": "2026-02-22"
+  },
+  "payload_sha256": "e577ce28c1ec133d1fb81fd4f02c86cb8cbc51ff2d376fb28007d85e31160d3a"
+}
