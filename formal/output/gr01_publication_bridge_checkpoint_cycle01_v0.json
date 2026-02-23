@@ -1,0 +1,28 @@
+{
+  "artifact_id": "GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE01_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "analytic_regime": "gr01_bounded_discrete_publication_bridge_cycle01",
+    "bridge_focus": "operator_transport_to_weak_field_poisson_limit",
+    "evidence_items": [
+      "formal/toe_formal/ToeFormal/Variational/GR01ActionToOperatorDiscrete.lean",
+      "formal/toe_formal/ToeFormal/Variational/GR01BridgePromotion.lean",
+      "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean"
+    ],
+    "theorem_tokens": [
+      "gr01_operator_residual_transport_from_bound_bridge_assumptions",
+      "gr01_el_implies_discrete_poisson_residual_from_operator_transport",
+      "actionRep32_weak_field_poisson_limit_under_default_quotient_assumptions_of_operator_transport_witness_v0"
+    ],
+    "boundary_class": [
+      "planning_only",
+      "bounded_discrete_scope_only",
+      "no_continuum_limit_promotion",
+      "no_uniqueness_or_infinite_domain_inversion_promotion",
+      "no_external_truth_claim"
+    ],
+    "status": "publication_bridge_checkpoint_non_promotional",
+    "generated_on": "2026-02-22"
+  },
+  "payload_sha256": "ffdf86538041007a0ce33d8de8ade2671fbca65eba52a5d96dc84a5a3e545bf6"
+}

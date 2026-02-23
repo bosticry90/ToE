@@ -974,6 +974,11 @@ GR01 full-derivation discharge checkpoint (2026-02-15):
   - `FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0_DISCRETE`
   - `FULL_DERIVATION_INEVITABILITY_STATUS_v0: DISCHARGED_v0_BOUNDED_ON_GR_THEOREM_SURFACE_V0`
   - `FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle01_v0`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_SHA256_v0: ffdf86538041007a0ce33d8de8ade2671fbca65eba52a5d96dc84a5a3e545bf6`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/gr01_publication_bridge_checkpoint_cycle01_v0.json`
+  - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_gate.py`
 - Open upgrade objects are explicit and auditable (non-blocking to the discharged bounded target):
   - these remain future upgrades and do not block `TOE-GR-FULL-01: T-PROVED`,
   - default action route is theorem-bound (`actionRep32_action_default_binding`)
