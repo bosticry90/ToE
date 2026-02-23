@@ -20,7 +20,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PILLAR_STATUS_MATRIX_v1.json"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 
-ROADMAP_PILLAR_ROW = re.compile(r"(?m)^\|\s*`(PILLAR-[A-Z0-9-]+)`\s*\|(.*)$")
+ROADMAP_PILLAR_ROW = re.compile(r"(?m)^\|\s*`(PILLAR-[A-Z0-9-]+)`\s*\|\s*`([A-Z]+)`\s*\|(.*)$")
 
 
 def _read(path: Path) -> str:
@@ -35,8 +35,8 @@ def _read_json(path: Path) -> dict:
 def _roadmap_pillars_from_table(active_text: str) -> list[str]:
     rows = ROADMAP_PILLAR_ROW.findall(active_text)
     pillars: list[str] = []
-    for pillar_id, row_tail in rows:
-        if "FULL-DERIVATION-DISCHARGE" in row_tail:
+    for pillar_id, status, row_tail in rows:
+        if status in {"ACTIVE", "CLOSED"} or "FULL-DERIVATION-DISCHARGE" in row_tail:
             pillars.append(pillar_id)
     return pillars
 

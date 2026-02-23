@@ -150,6 +150,7 @@ Current dual-layer snapshot (machine-checkable tokens):
 - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_CLAIM_TRACEABILITY_v0: SOT-CLAIM-033`
 - `formal/output/em_maxwell_linear_comparator_packet_cycle01_v0.json`
 - `formal/python/tests/test_em_comparator_evidence_coupling_gate.py`
+- `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
 - `PILLAR-SR_REGISTRY_EXEMPTION_v0: SR_CLOSURE_NOT_TRACKED_IN_GENERIC_REGISTRY`
 - blocker references:
   - GR: none (all required GR closure rows are non-`B-*`)

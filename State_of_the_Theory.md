@@ -1176,6 +1176,7 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - `NEXT_PILLAR_FOCUS_v0: PILLAR-STAT`
   - `NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-TH-ENTROPY-PLAN`
   - canonical pillar status matrix pointer: `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`
+  - `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
   - matrix consistency gate pointer: `formal/python/tests/test_pillar_status_matrix_consistency_gate.py`
   - matrix roadmap coverage gate pointer: `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
   - QFT adjudication consistency gate pointer: `formal/python/tests/test_qft_full_derivation_adjudication_consistency_gate.py`

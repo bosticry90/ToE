@@ -42,6 +42,16 @@
       "full_derivation": "DISCHARGED_v0_DISCRETE",
       "inevitability": "DISCHARGED_v0_BOUNDED",
       "matrix_status": "CLOSED"
+    },
+    "PILLAR-SR": {
+      "discharge_doc": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "full_derivation_token": "SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION",
+      "inevitability_token": "SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION",
+      "consistency_gate": "formal/python/tests/test_pillar_adjudication_cross_surface_consistency_gate.py",
+      "legacy_retirement_gate": "formal/python/tests/test_pillar_adjudication_legacy_retirement_gate.py",
+      "full_derivation": "DISCHARGED_v0_ROADMAP_PINNED",
+      "inevitability": "DISCHARGED_v0_ROADMAP_PINNED",
+      "matrix_status": "CLOSED"
     }
   }
 }
