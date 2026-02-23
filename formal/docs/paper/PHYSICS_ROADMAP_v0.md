@@ -150,6 +150,11 @@ Current dual-layer snapshot (machine-checkable tokens):
 - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_CLAIM_TRACEABILITY_v0: SOT-CLAIM-033`
 - `formal/output/em_maxwell_linear_comparator_packet_cycle01_v0.json`
 - `formal/python/tests/test_em_comparator_evidence_coupling_gate.py`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE02_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle02_v0`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE02_SHA256_v0: 9036ac5138284a001d725ca1172f12141f9f5406db26fc20ba20a2ea7f4236fe`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE02_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/em_maxwell_linear_comparator_packet_cycle02_v0.json`
+- `formal/python/tests/test_em_comparator_evidence_coupling_cycle02_gate.py`
 - `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
 - `PILLAR-SR_REGISTRY_EXEMPTION_v0: SR_CLOSURE_NOT_TRACKED_IN_GENERIC_REGISTRY`
 - `SR_THEOREM_EVIDENCE_CHECKPOINT_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle75_v0`

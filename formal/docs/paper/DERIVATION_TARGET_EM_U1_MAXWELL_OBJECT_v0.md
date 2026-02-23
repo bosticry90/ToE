@@ -1243,6 +1243,11 @@ EM full-discharge completion mechanics (v0):
   - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_CLAIM_TRACEABILITY_v0: SOT-CLAIM-033`
   - `formal/output/em_maxwell_linear_comparator_packet_cycle01_v0.json`
   - `formal/python/tests/test_em_comparator_evidence_coupling_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE02_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle02_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE02_SHA256_v0: 9036ac5138284a001d725ca1172f12141f9f5406db26fc20ba20a2ea7f4236fe`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE02_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle02_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle02_gate.py`
 - retained assumption-classification surfaces (explicit, no closure flip):
   - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_BRIDGE_v0: PotentialFieldStrengthBridgeAssumptions_RETAINED_ASSUMPTION_OBJECT`
   - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_SMOOTHNESS_v0: DoubleDivergenceSmoothnessLaneAssumptions_RETAINED_ASSUMPTION_OBJECT`
