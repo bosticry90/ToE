@@ -135,7 +135,7 @@ Non-claim boundary:
 - planning-only artifact.
 - non-claim control surface.
 - does not promote claim labels by itself.
-- no comparator-lane authorization.
+- no comparator-lane authorization beyond bounded linear-regime comparator packet controls.
 - no Standard Model completion claim.
 - no external truth claim.
 
@@ -1236,6 +1236,13 @@ EM full-discharge completion mechanics (v0):
   - `EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_FLIP_GATE_v0: CRITERIA_ARTIFACT_AND_NON_BLOCKED_ROWS_REQUIRED`
   - `formal/output/em_pillar_full_discharge_adjudication_criteria_cycle46_v0.json`
   - `formal/python/tests/test_em_u1_full_discharge_adjudication_criteria_artifact.py`
+- bounded linear-regime comparator evidence packet (non-promotional coupling layer):
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle01_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_SHA256_v0: a233e35a51f72b4520ce51ea06c5b807eb0b03f1a97327721d9d5963f2ea6dfc`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_CLAIM_TRACEABILITY_v0: SOT-CLAIM-033`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle01_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_gate.py`
 - retained assumption-classification surfaces (explicit, no closure flip):
   - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_BRIDGE_v0: PotentialFieldStrengthBridgeAssumptions_RETAINED_ASSUMPTION_OBJECT`
   - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_SMOOTHNESS_v0: DoubleDivergenceSmoothnessLaneAssumptions_RETAINED_ASSUMPTION_OBJECT`

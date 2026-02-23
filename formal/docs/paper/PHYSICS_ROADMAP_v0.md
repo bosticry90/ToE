@@ -140,6 +140,12 @@ Current dual-layer snapshot (machine-checkable tokens):
 - `EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_CRITERIA_ARTIFACT_v0: em_pillar_full_discharge_adjudication_criteria_cycle46_v0`
 - `EM_PILLAR_FULL_DISCHARGE_ADJUDICATION_FLIP_GATE_v0: CRITERIA_ARTIFACT_AND_NON_BLOCKED_ROWS_REQUIRED`
 - `formal/output/em_pillar_full_discharge_adjudication_criteria_cycle46_v0.json`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle01_v0`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_SHA256_v0: a233e35a51f72b4520ce51ea06c5b807eb0b03f1a97327721d9d5963f2ea6dfc`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_CLAIM_TRACEABILITY_v0: SOT-CLAIM-033`
+- `formal/output/em_maxwell_linear_comparator_packet_cycle01_v0.json`
+- `formal/python/tests/test_em_comparator_evidence_coupling_gate.py`
 - `PILLAR-SR_REGISTRY_EXEMPTION_v0: SR_CLOSURE_NOT_TRACKED_IN_GENERIC_REGISTRY`
 - blocker references:
   - GR: none (all required GR closure rows are non-`B-*`)

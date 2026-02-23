@@ -361,7 +361,18 @@ Method notes:
 * Notes: Structural anti-hallucination guard for active authority parsing.
 * Fix (if D): N/A
 
+* ClaimID: SOT-CLAIM-033
+* ClaimText: EM bounded linear-regime comparator packet is hash-pinned and synchronized across discharge/state/roadmap authority surfaces without relaxing non-claim boundaries.
+* Location: State_of_the_Theory.md:L923-L928
+* ImpactClass: Empirical
+* EnforcementBucket: A
+* EnforcingTests: formal/python/tests/test_em_comparator_evidence_coupling_gate.py
+* EnforcedArtifacts: formal/output/em_maxwell_linear_comparator_packet_cycle01_v0.json; formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md; formal/docs/paper/PHYSICS_ROADMAP_v0.md; State_of_the_Theory.md
+* Tokens/Invariants: EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_ARTIFACT_v0; EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_SHA256_v0; EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_COUPLING_GATE_v0.
+* Notes: Adds minimal empirical coupling density while preserving bounded non-promotional governance posture.
+* Fix (if D): N/A
+
 Summary:
-- Entries audited: 32
-- Bucket counts: A=16, B=13, C=3, D=0
+- Entries audited: 33
+- Bucket counts: A=17, B=13, C=3, D=0
 - Immediate D remediations required: none in this v0 sample.

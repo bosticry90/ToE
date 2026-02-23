@@ -1,0 +1,27 @@
+{
+  "artifact_id": "EM_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE01_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "analytic_regime": "U1_linear",
+    "comparator_reference": "textbook_maxwell_flat",
+    "invariant_surfaces": [
+      "energy_density",
+      "wave_equation",
+      "gauge_invariance"
+    ],
+    "delta_summary": {
+      "equivalence_class": "symbolic_equivalence_class",
+      "max_delta": 0.0,
+      "units": "normalized"
+    },
+    "non_claim_boundary": [
+      "planning_only",
+      "no_non_abelian_gauge_completion_claim",
+      "no_standard_model_completion_claim",
+      "no_external_truth_claim"
+    ],
+    "status": "comparator_ready_non_promotional",
+    "generated_on": "2026-02-22"
+  },
+  "payload_sha256": "a233e35a51f72b4520ce51ea06c5b807eb0b03f1a97327721d9d5963f2ea6dfc"
+}
