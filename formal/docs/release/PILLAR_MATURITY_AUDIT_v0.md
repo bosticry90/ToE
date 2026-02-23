@@ -5,6 +5,7 @@ This document does not define adjudication tokens, pillar status, or governance 
 All canonical authority resides in matrix + discharge + roadmap + state surfaces.
 
 Date: 2026-02-22
+Audit Version: v0.1 (post Phase 1–4 checkpoint expansion)
 Scope: QFT, QM, GR, EM, SR pillar authority surfaces.
 Purpose: score current maturity on closure robustness, empirical evidence completeness, and drift resistance.
 
@@ -31,26 +32,28 @@ Overall score weighting:
 - formal/python/tests/test_authority_token_single_definition_gate.py
 
 Validation baseline observed in current cycle:
-- Full suite: `1973 passed, 142 skipped`
+- Full suite: `1977 passed, 142 skipped`
 
 ## Results
 | Pillar | Closure Robustness | Evidence Completeness | Drift Resistance | Overall Maturity | Priority |
 |---|---:|---:|---:|---:|---|
-| QFT | 5.0 | 3.1 | 5.0 | 4.34 | Maintain / broaden physics-facing evidence lane |
+| QFT | 5.0 | 3.4 | 5.0 | 4.44 | Maintain / broaden evidence diversity under nonflip controls |
 | QM | 4.6 | 3.3 | 4.7 | 4.17 | Maintain / external-lane evidence strengthening |
-| GR | 4.1 | 2.6 | 4.8 | 3.75 | Publication-grade evidence bridge upgrade |
-| EM | 3.6 | 2.7 | 4.3 | 3.46 | Expand comparator depth beyond initial linear packet |
-| SR | 3.5 | 2.2 | 4.4 | 3.27 | Promote from enforcement-roadmap closure toward theorem-evidence closure |
+| GR | 4.2 | 3.0 | 4.8 | 3.93 | Continue publication-grade bridge depth (cycle-02+) |
+| EM | 3.6 | 3.1 | 4.4 | 3.63 | Continue comparator depth (cycle-03+) |
+| SR | 3.6 | 2.8 | 4.5 | 3.55 | Continue theorem-evidence progression beyond checkpoint cycle-75 |
 
 ## Delta Since Prior Audit
-- EM maturity improved materially from prior baseline due to bounded comparator packet coupling, cross-surface pointer/hash synchronization, and dedicated enforcement gate.
-- Drift resistance improved system-wide due to matrix-roadmap registration hardening, including ACTIVE/CLOSED row coverage and SR matrix registration.
-- SR is now represented in the canonical matrix (`PILLAR-SR`, `CLOSED`) but remains primarily an enforcement-roadmap closure surface rather than a full theorem-evidence closure surface.
+- SR evidence depth improved via theorem-evidence checkpoint artifact + dedicated coupling gate (`SR_THEOREM_EVIDENCE_CHECKPOINT_*`).
+- EM evidence depth improved again via comparator cycle-02 artifact + dedicated coupling gate (`EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE02_*`).
+- GR evidence depth improved via publication-bridge checkpoint artifact + dedicated coupling gate (`GR01_PUBLICATION_BRIDGE_CHECKPOINT_*`).
+- QFT evidence diversity improved via dedicated diversification checkpoint artifact + dedicated coupling gate (`QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_*`).
+- Drift resistance remains high and stable: matrix coverage, single-definition policy, and cross-surface coupling gates all remain green under full-suite validation.
 
 ## Evidence Notes by Pillar
 ### QFT
 - Closure robustness remains highest: adjudication + inevitability discharged with extensive pre-execution/nonflip governance chain and consistency gates.
-- Evidence maturity is still below closure maturity because artifacts are predominantly governance/closure controls; broader physics-facing comparator diversity remains the main gap.
+- Evidence maturity increased via explicit diversification checkpoint coupling while preserving bounded nonflip/non-claim posture.
 
 ### QM
 - Derivation-grade discharge remains strong with explicit anti-circularity, row-level criteria, and hashed artifact linkage.
@@ -58,29 +61,31 @@ Validation baseline observed in current cycle:
 
 ### GR
 - Bounded/discrete discharge posture remains robust and anti-shortcut disciplined.
-- Remaining maturity drag is evidence breadth at publication-grade bridge level (continuum/stronger external alignment lanes remain intentionally bounded).
+- Publication-bridge checkpoint is now pinned and coupled across authority surfaces; remaining drag is depth/replication breadth rather than absence of checkpoint evidence.
 
 ### EM
-- EM moved up from highest-risk status: comparator artifact, SHA binding, traceability token, and coupling gate reduced prior closure/evidence asymmetry.
-- EM is still bounded non-claim and currently limited to initial comparator depth; additional comparator cycles would raise evidence completeness further.
+- EM now has two comparator cycles (cycle-01 and cycle-02) with independent coupling gates and synchronized hash/pointer surfaces.
+- EM remains bounded non-claim; next gains come from controlled comparator depth expansion rather than governance changes.
 
 ### SR
 - SR now has explicit matrix registration and synchronized token mirrors across roadmap/state/matrix, improving drift resistance.
-- Current SR closure is enforcement-roadmap centric (`DISCHARGED_v0_ROADMAP_PINNED`) and therefore not yet equivalent to broader theorem-evidence completion.
+- SR now includes an explicit theorem-evidence checkpoint artifact and coupling gate, lifting evidence maturity while preserving enforcement-roadmap closure semantics.
+- SR remains below EM/GR evidence depth because current checkpoint is initial (single-cycle) rather than a broader theorem-evidence series.
 
 ## Highest-Leverage Next Remediation (smallest bounded move)
-Target: SR and EM evidence-depth expansion without scope inflation.
+Target: continue low-end evidence-depth growth (SR/EM) and then strengthen QM external-facing evidence interfaces without scope inflation.
 
 Action package (minimal):
-1. SR: pin one theorem-evidence checkpoint artifact linked to existing Phase-I/Phase-II discharge rows and enforce via a dedicated gate.
-2. EM: add one additional comparator packet cycle with explicit acceptance criteria and cross-surface hash/pointer coupling.
-3. Keep ACTIVE/CLOSED roadmap rows matrix-registered and single-definition synchronized under existing gates.
+1. SR: add theorem-evidence checkpoint cycle-02 with explicit linkage to next bounded theorem-discharge rows plus dedicated coupling gate.
+2. EM: add comparator cycle-03 with sensitivity-row expansion and dedicated coupling gate.
+3. QM: add one bounded external-lane evidence checkpoint (still non-claim) with artifact/hash/pointer coupling.
+4. Keep ACTIVE/CLOSED roadmap rows matrix-registered and single-definition synchronized under existing gates.
 
 Expected effect:
-- Raises Evidence Completeness for the two lowest-evidence pillars while preserving bounded non-claim posture.
-- Further reduces interpretation drift between closure labels and evidence-bearing artifacts.
+- Raises system floor further by lifting SR/EM evidence depth from checkpoint-level toward series-level.
+- Improves balance across pillars without altering adjudication semantics or governance versioning.
 
 ## Conclusion
 - Current maturity order: QFT > QM > GR > EM > SR.
 - Governance integrity and drift resistance are strong across the active canonical pillars under current matrix/coverage hardening.
-- Dominant bottleneck is no longer basic registration drift; it is physics-facing evidence depth, especially for SR and EM.
+- Dominant bottleneck remains evidence depth, but baseline has improved materially across all four recently-targeted lanes (SR/EM/GR/QFT).
