@@ -25,11 +25,21 @@
     },
     "PILLAR-QM": {
       "discharge_doc": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
-      "full_derivation_token": "QM_FULL_DERIVATION_ADJUDICATION",
-      "inevitability_token": "QM_FULL_DERIVATION_INEVITABILITY_ADJUDICATION",
+      "full_derivation_token": "PILLAR_QM_FULL_DERIVATION_DISCHARGE_ADJUDICATION",
+      "inevitability_token": "PILLAR_QM_FULL_DERIVATION_DISCHARGE_ADJUDICATION",
       "consistency_gate": "formal/python/tests/test_pillar_adjudication_cross_surface_consistency_gate.py",
       "legacy_retirement_gate": "formal/python/tests/test_pillar_adjudication_legacy_retirement_gate.py",
       "full_derivation": "DISCHARGED_v0_DERIVATION_GRADE",
+      "inevitability": "DISCHARGED_v0_DERIVATION_GRADE",
+      "matrix_status": "CLOSED"
+    },
+    "PILLAR-GR": {
+      "discharge_doc": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+      "full_derivation_token": "FULL_DERIVATION_ADJUDICATION",
+      "inevitability_token": "FULL_DERIVATION_INEVITABILITY_ADJUDICATION",
+      "consistency_gate": "formal/python/tests/test_pillar_adjudication_cross_surface_consistency_gate.py",
+      "legacy_retirement_gate": "formal/python/tests/test_pillar_adjudication_legacy_retirement_gate.py",
+      "full_derivation": "DISCHARGED_v0_DISCRETE",
       "inevitability": "DISCHARGED_v0_BOUNDED",
       "matrix_status": "CLOSED"
     }
