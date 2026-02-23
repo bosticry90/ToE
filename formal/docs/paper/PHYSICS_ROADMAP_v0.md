@@ -65,6 +65,7 @@ No-deviation sequencing rule:
   - `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`
 - Matrix consistency gate pointer:
   - `formal/python/tests/test_pillar_status_matrix_consistency_gate.py`
+  - `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
 - Post-GR01 unlock queue (frozen order intent):
   - first unlock cohort: `PILLAR-SR` and `PILLAR-EM` after `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED`,
   - downstream unlock order intent: `PILLAR-QFT` -> `PILLAR-STAT` -> `PILLAR-COSMO`, each gated by listed prerequisites.
@@ -519,6 +520,7 @@ QFT full-derivation pre-discharge closure pin (cycle-27/cycle-50):
 - Required governance suite (minimum):
   - `formal/python/tests/test_gr01_full_derivation_status_sync.py`
   - `formal/python/tests/test_gr01_hardening_roadmap_gate.py`
+  - `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
   - `formal/python/tests/test_qm_evolution_hardening_roadmap_gate.py`
   - `formal/python/tests/test_qft_gauge_kickoff_scaffold_gate.py`
   - `formal/python/tests/test_lean_build_gate_qft_gauge_object_scaffold.py`

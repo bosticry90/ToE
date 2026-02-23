@@ -18,6 +18,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 ARCHITECTURE_SCHEMA_PATH = REPO_ROOT / "ARCHITECTURE_SCHEMA_v1.json"
 PAPER_DIR = REPO_ROOT / "formal" / "docs" / "paper"
 PILLAR_STATUS_MATRIX_PATH = PAPER_DIR / "PILLAR_STATUS_MATRIX_v1.json"
+MATRIX_ROADMAP_COVERAGE_GATE_PATH = REPO_ROOT / "formal" / "python" / "tests" / "test_pillar_matrix_roadmap_coverage_gate.py"
 
 BOUNDED_MARKERS = [
     "bounded scope section",
@@ -185,6 +186,16 @@ def test_new_pillars_and_em_targets_define_structure_before_claim_tokens() -> No
             violations.append(f"{path.name}: unable to derive pillar ID from target filename; add mapping to template gate.")
         elif pillar_id not in matrix_pillars:
             violations.append(f"{path.name}: missing required matrix row `{pillar_id}` in PILLAR_STATUS_MATRIX_v1.json.")
+
+        if not MATRIX_ROADMAP_COVERAGE_GATE_PATH.exists():
+            violations.append(
+                f"{path.name}: required matrix coverage gate file missing: {MATRIX_ROADMAP_COVERAGE_GATE_PATH.as_posix()}"
+            )
+
+        if "formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py" not in text:
+            violations.append(
+                f"{path.name}: must pin formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py in governance test pointers."
+            )
 
         if re.search(r"formal/python/tests/test_[a-z0-9_]*consistency_gate\.py", text) is None:
             violations.append(
