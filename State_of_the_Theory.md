@@ -1357,7 +1357,12 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - QFT evolution saturation gate: `formal/python/tests/test_qft_evol_scaffold_saturation_gate.py`
   - QFT full-derivation discharge target: `TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0`
   - QFT full-derivation discharge pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md`
+  - QFT discharge readiness pack pointer: `formal/docs/paper/QFT_DISCHARGE_READINESS_PACK_v0.md`
   - QFT full-derivation discharge gate: `formal/python/tests/test_qft_full_derivation_discharge_gate.py`
+  - QFT full-derivation adjudication consistency gate: `formal/python/tests/test_qft_full_derivation_adjudication_consistency_gate.py`
+  - QFT discharge readiness pack gate: `formal/python/tests/test_qft_discharge_readiness_pack_gate.py`
+  - QFT adjudication flip policy gate: `formal/python/tests/test_pillar_adjudication_flip_policy_gate.py`
+  - QFT EVOL rollout/discharge alignment gate: `formal/python/tests/test_qft_evol_micro_rollout_requires_discharge_alignment_gate.py`
   - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED`
   - `QFT_FULL_DERIVATION_PROGRESS_CYCLE2_v0: SEMANTIC_HARDENING_MILESTONE_TOKEN_PINNED`
   - QFT evolution semantic-hardening milestone gate: `formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py`

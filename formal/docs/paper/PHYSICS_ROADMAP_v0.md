@@ -570,6 +570,11 @@ QFT full-derivation pre-discharge closure pin (cycle-27/cycle-50):
   - `formal/python/tests/test_qft_evol_micro_tranche_01_52_completeness_gate.py`
   - `formal/python/tests/test_qft_evol_scaffold_saturation_gate.py`
   - `formal/python/tests/test_qft_full_derivation_discharge_gate.py`
+  - `formal/python/tests/test_qft_full_derivation_adjudication_consistency_gate.py`
+  - `formal/python/tests/test_qft_discharge_readiness_pack_gate.py`
+  - `formal/python/tests/test_pillar_adjudication_flip_policy_gate.py`
+  - `formal/python/tests/test_qft_evol_micro_rollout_requires_discharge_alignment_gate.py`
+  - `formal/docs/paper/QFT_DISCHARGE_READINESS_PACK_v0.md`
   - `formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py`
   - `formal/python/tests/test_qft_evol_semantic_hardening_cycle3_gate.py`
   - `formal/python/tests/test_qft_evol_semantic_hardening_cycle4_gate.py`

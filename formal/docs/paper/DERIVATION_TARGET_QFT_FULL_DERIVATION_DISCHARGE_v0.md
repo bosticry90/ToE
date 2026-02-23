@@ -26,6 +26,12 @@ Legacy compatibility token snapshot (pre-transition audit trace):
 Canonical pillar status matrix pointer:
 - `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`
 
+Discharge readiness pack pointer:
+- `formal/docs/paper/QFT_DISCHARGE_READINESS_PACK_v0.md`
+- readiness gate: `formal/python/tests/test_qft_discharge_readiness_pack_gate.py`
+- flip policy gate: `formal/python/tests/test_pillar_adjudication_flip_policy_gate.py`
+- EVOL alignment gate: `formal/python/tests/test_qft_evol_micro_rollout_requires_discharge_alignment_gate.py`
+
 Consistency gate pointer:
 - `formal/python/tests/test_qft_full_derivation_adjudication_consistency_gate.py`
 
