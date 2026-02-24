@@ -4,8 +4,8 @@ Authority Status: ANALYTICAL / NON-AUTHORITY
 This document does not define adjudication tokens, pillar status, or governance semantics.
 All canonical authority resides in matrix + discharge + roadmap + state surfaces.
 
-Date: 2026-02-22
-Audit Version: v0.1 (post Phase 1–4 checkpoint expansion)
+Date: 2026-02-23
+Audit Version: v0.2 (re-baselined after 5x5 overreach correction)
 Scope: QFT, QM, GR, EM, SR pillar authority surfaces.
 Purpose: score current maturity on closure robustness, empirical evidence completeness, and drift resistance.
 
@@ -18,6 +18,13 @@ Overall score weighting:
 - Closure Robustness: 40%
 - Evidence Completeness: 35%
 - Drift Resistance: 25%
+
+Scoring guardrails:
+- Evidence custody maturity (hash/pointer parity + coupling-gate continuity) is necessary but not sufficient for `Evidence Completeness = 5.0`.
+- `Evidence Completeness = 5.0` requires explicit physics-facing adequacy justification, not only governance-control artifacts.
+- The document must carry explicit gate tokens to distinguish custody maturity from adequacy maturity:
+	- `EVIDENCE_CUSTODY_5X5_GATE`
+	- `EVIDENCE_ADEQUACY_5X5_GATE`
 
 ## Canonical Inputs
 - formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md
@@ -37,11 +44,15 @@ Validation baseline observed in current cycle:
 ## Results
 | Pillar | Closure Robustness | Evidence Completeness | Drift Resistance | Overall Maturity | Priority |
 |---|---:|---:|---:|---:|---|
-| QFT | 5.0 | 5.0 | 5.0 | 5.00 | Maintain all-5 custody under bounded non-claim controls |
-| QM | 5.0 | 5.0 | 5.0 | 5.00 | Maintain all-5 custody under bounded non-claim controls |
-| GR | 5.0 | 5.0 | 5.0 | 5.00 | Maintain all-5 custody under bounded non-claim controls |
-| EM | 5.0 | 5.0 | 5.0 | 5.00 | Maintain all-5 custody under bounded non-claim controls |
-| SR | 5.0 | 5.0 | 5.0 | 5.00 | Maintain all-5 custody under bounded non-claim controls |
+| QFT | 5.0 | 4.4 | 5.0 | 4.79 | Preserve top-tier closure/drift; expand adequacy-facing evidence justification |
+| QM | 4.7 | 4.1 | 4.9 | 4.55 | Strengthen adequacy-facing external lane beyond bounded internal continuity |
+| GR | 4.6 | 4.0 | 4.9 | 4.47 | Extend publication-bridge replication breadth with explicit adequacy criteria |
+| EM | 4.2 | 3.8 | 4.8 | 4.11 | Continue comparator depth and add adequacy-grade sensitivity justification |
+| SR | 4.1 | 3.7 | 4.8 | 4.02 | Continue theorem-evidence series and add explicit adequacy-facing bridge criteria |
+
+Current gating posture:
+- `EVIDENCE_CUSTODY_5X5_GATE: SATISFIED_v0`
+- `EVIDENCE_ADEQUACY_5X5_GATE: NOT_SATISFIED_v0`
 
 ## Delta Since Prior Audit
 - SR evidence depth improved via theorem-evidence checkpoint artifact + dedicated coupling gate (`SR_THEOREM_EVIDENCE_CHECKPOINT_*`).
@@ -253,8 +264,9 @@ Validation:
 - Cycle block C integrated sweep #2 (all active coupling gates + global matrix/coverage/single-definition gates) result: `57 passed in 16.80s`.
 - Cycle block C integrated sweep #3 (all active coupling gates + global matrix/coverage/single-definition gates) result: `57 passed in 16.86s`.
 
-All-5 promotion gate satisfaction (2026-02-23):
-- Gate status: `SATISFIED`.
+All-5 promotion gate reassessment (2026-02-23):
+- Gate status: `NOT_SATISFIED_v0`.
+- Rationale: cycle continuity and coupling custody are strong, but evidence adequacy remains bounded/non-claim and is not yet sufficient for uniform `Evidence Completeness = 5.0`.
 - Evidence/closure trace bundles by pillar:
 	- QFT: `qft_evidence_diversification_checkpoint_cycle08_v0` (+ cycle05/06/07 continuity).
 	- QM: `qm_external_lane_evidence_checkpoint_cycle08_v0` + `qm_closure_hardening_bundle_cycle01_v0`.
@@ -268,9 +280,9 @@ Governance posture:
 - Non-claim boundedness and drift-resistance controls remain intact under existing authority semantics.
 
 ## Conclusion
-- Current maturity state: QFT = QM = GR = EM = SR at all-5.
+- Current maturity state: re-baselined below all-5, with QFT highest and QM/GR/EM/SR in improving tiers.
 - Governance integrity and drift resistance remain strong across active canonical pillars under matrix/coverage hardening.
-- Promotion gate is satisfied for all-5 scoring under bounded non-claim custody semantics.
+- Custody maturity is high, but adequacy maturity is not yet sufficient for uniform `Evidence Completeness = 5.0`.
 
 ## 5x5 Target Program (all pillars to score 5.0 on all dimensions)
 
@@ -279,11 +291,11 @@ Target state:
 - Program remains non-authority and non-adjudicative; no status-token flips are authorized by this section.
 
 ### Gap-to-target snapshot (from current table)
-- QFT: Closure `5.0` (gap `+0.0`), Evidence `5.0` (gap `+0.0`), Drift `5.0` (gap `+0.0`).
-- QM: Closure `5.0` (gap `+0.0`), Evidence `5.0` (gap `+0.0`), Drift `5.0` (gap `+0.0`).
-- GR: Closure `5.0` (gap `+0.0`), Evidence `5.0` (gap `+0.0`), Drift `5.0` (gap `+0.0`).
-- EM: Closure `5.0` (gap `+0.0`), Evidence `5.0` (gap `+0.0`), Drift `5.0` (gap `+0.0`).
-- SR: Closure `5.0` (gap `+0.0`), Evidence `5.0` (gap `+0.0`), Drift `5.0` (gap `+0.0`).
+- QFT: Closure `5.0` (gap `+0.0`), Evidence `4.4` (gap `+0.6`), Drift `5.0` (gap `+0.0`).
+- QM: Closure `4.7` (gap `+0.3`), Evidence `4.1` (gap `+0.9`), Drift `4.9` (gap `+0.1`).
+- GR: Closure `4.6` (gap `+0.4`), Evidence `4.0` (gap `+1.0`), Drift `4.9` (gap `+0.1`).
+- EM: Closure `4.2` (gap `+0.8`), Evidence `3.8` (gap `+1.2`), Drift `4.8` (gap `+0.2`).
+- SR: Closure `4.1` (gap `+0.9`), Evidence `3.7` (gap `+1.3`), Drift `4.8` (gap `+0.2`).
 
 ### Exit criteria for assigning score 5.0
 
@@ -325,19 +337,19 @@ The all-5 target is considered achieved only when all of the following are true 
 2. Three consecutive full integrated sweeps are green (all active coupling tests + 3 global gates).
 3. The results table in this document is updated to `5.0` for every pillar/dimension with explicit trace links to the completed cycle bundles.
 
-### All-5 steady-state maintenance protocol (minimal)
+### Toward-all-5 maintenance protocol (minimal)
 
 Cadence:
 - Run one integrated coupling+governance sweep per release-candidate cut.
 - Run one additional integrated sweep immediately after any new cycle artifact is wired.
 
 Hold-line rules:
-1. Do not change all-5 scores unless one of the three global gates fails or a coupling gate fails.
+1. Do not assign all-5 scores unless both `EVIDENCE_CUSTODY_5X5_GATE` and `EVIDENCE_ADEQUACY_5X5_GATE` are `SATISFIED_v0`.
 2. No new cycle artifact may be merged without dedicated coupling gate coverage and 3-surface token parity (discharge + roadmap + state).
 3. No semantic broadening beyond bounded non-claim posture is allowed under this maintenance mode.
 
 Degrade-and-recover rule:
-- If any gate fails, mark affected pillar score(s) as `UNDER_REVIEW` in the next release note, restore green state, then reissue all-5 scores only after one fresh full integrated sweep is green.
+- If any gate fails, mark affected pillar score(s) as `UNDER_REVIEW` in the next release note, restore green state, then reissue higher scores only after required custody + adequacy gates are green.
 
 Trace requirement per maintenance release note:
 - Include integrated sweep result line (`N passed in Ts`) and any newly added artifact IDs (if applicable).
