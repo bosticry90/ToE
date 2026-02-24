@@ -1248,6 +1248,57 @@ EM full-discharge completion mechanics (v0):
   - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE02_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/em_maxwell_linear_comparator_packet_cycle02_v0.json`
   - `formal/python/tests/test_em_comparator_evidence_coupling_cycle02_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE03_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle03_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE03_SHA256_v0: 5eddffb6857909aa9712562e1e5ff7c132e32954c77f91bce91273a70c4165f6`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE03_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle03_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle03_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE04_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle04_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE04_SHA256_v0: 5de0789cf628d03f36962e57b64706363d5c72a7dda395bb7ac133052cfc8263`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE04_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle04_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle04_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE05_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle05_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE05_SHA256_v0: ae341e94101d00a041c31696237ddf477a0487852bf93f447f44163d2ab3c955`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE05_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle05_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle05_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE06_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle06_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE06_SHA256_v0: 66ced92fd66c7e7fb5772f97843ee15742d65d9d87ffa24d12787ef99a46d85e`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE06_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle06_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle06_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE07_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle07_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE07_SHA256_v0: eff46fa498f52fdd985d8ede1b39ef1bca68e6161dfe7e5124571a3b8bac9dff`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE07_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle07_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle07_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE08_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle08_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE08_SHA256_v0: d2dd338262d74dbc1fd8e40a944ef90b2622652699fc9b8e282a8d5d79931045`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE08_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle08_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle08_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE09_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle09_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE09_SHA256_v0: dd33f19b15f8964b424ff9c77d6126eea64eaf1eff585200fb5598dc39f470de`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE09_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle09_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle09_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE10_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle10_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE10_SHA256_v0: a64b4097e4dda8c24181016508635d429e4f5a97d4223b8c73ba1bf28d60ea15`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE10_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle10_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle10_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE11_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle11_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE11_SHA256_v0: b1b1bc3cfa0c0235dd96c655a02cdc55dc722d95042cc1984014b1f7da2c3dc7`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE11_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle11_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle11_gate.py`
+- closure-hardening bundle (bounded non-promotional coupling layer):
+  - `EM_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: em_closure_hardening_bundle_cycle01_v0`
+  - `EM_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 31a977e5427f6c27ac4be6ec0bbafd3c3a76700948c91e4e7c2ceb3716b749f2`
+  - `EM_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_closure_hardening_bundle_cycle01_v0.json`
+  - `formal/python/tests/test_em_closure_hardening_bundle_coupling_cycle01_gate.py`
 - retained assumption-classification surfaces (explicit, no closure flip):
   - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_BRIDGE_v0: PotentialFieldStrengthBridgeAssumptions_RETAINED_ASSUMPTION_OBJECT`
   - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_SMOOTHNESS_v0: DoubleDivergenceSmoothnessLaneAssumptions_RETAINED_ASSUMPTION_OBJECT`

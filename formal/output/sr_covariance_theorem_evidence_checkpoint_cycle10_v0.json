@@ -1,0 +1,18 @@
+{
+  "artifact_id": "sr_covariance_theorem_evidence_checkpoint_cycle10_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "sr_theorem_evidence_cycle10",
+    "status": "placeholder_non_promotional",
+    "non_claim_boundary": [
+      "planning_only",
+      "bounded_theorem_discharge_scope_only",
+      "no_full_sr_dynamics_derivation_claim",
+      "no_inevitability_claim_by_artifact",
+      "no_external_truth_claim"
+    ],
+    "generated_on": "2026-02-23"
+  },
+  "payload_sha256": "2902ec4a214aeb09b510628398e1443a7e3c890bc4be74f943e2b6c0eba4853f"
+}

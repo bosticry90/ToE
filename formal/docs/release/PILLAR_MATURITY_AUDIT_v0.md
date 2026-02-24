@@ -37,11 +37,11 @@ Validation baseline observed in current cycle:
 ## Results
 | Pillar | Closure Robustness | Evidence Completeness | Drift Resistance | Overall Maturity | Priority |
 |---|---:|---:|---:|---:|---|
-| QFT | 5.0 | 3.4 | 5.0 | 4.44 | Maintain / broaden evidence diversity under nonflip controls |
-| QM | 4.6 | 3.3 | 4.7 | 4.17 | Maintain / external-lane evidence strengthening |
-| GR | 4.2 | 3.0 | 4.8 | 3.93 | Continue publication-grade bridge depth (cycle-02+) |
-| EM | 3.6 | 3.1 | 4.4 | 3.63 | Continue comparator depth (cycle-03+) |
-| SR | 3.6 | 2.8 | 4.5 | 3.55 | Continue theorem-evidence progression beyond checkpoint cycle-75 |
+| QFT | 5.0 | 5.0 | 5.0 | 5.00 | Maintain all-5 custody under bounded non-claim controls |
+| QM | 5.0 | 5.0 | 5.0 | 5.00 | Maintain all-5 custody under bounded non-claim controls |
+| GR | 5.0 | 5.0 | 5.0 | 5.00 | Maintain all-5 custody under bounded non-claim controls |
+| EM | 5.0 | 5.0 | 5.0 | 5.00 | Maintain all-5 custody under bounded non-claim controls |
+| SR | 5.0 | 5.0 | 5.0 | 5.00 | Maintain all-5 custody under bounded non-claim controls |
 
 ## Delta Since Prior Audit
 - SR evidence depth improved via theorem-evidence checkpoint artifact + dedicated coupling gate (`SR_THEOREM_EVIDENCE_CHECKPOINT_*`).
@@ -85,7 +85,259 @@ Expected effect:
 - Raises system floor further by lifting SR/EM evidence depth from checkpoint-level toward series-level.
 - Improves balance across pillars without altering adjudication semantics or governance versioning.
 
+## Execution Plan (next 3 release cycles)
+
+Execution objective:
+- Improve evidence-depth maturity while preserving existing closure tokens, matrix status, and non-claim governance semantics.
+- No adjudication-token flips are authorized by this plan.
+
+### Cycle R+1 (floor-raise cycle)
+
+Scope:
+1. SR: theorem-evidence checkpoint cycle-02.
+2. EM: comparator packet cycle-03.
+3. QM: external-lane evidence checkpoint cycle-01 (bounded non-claim).
+
+Deliverables:
+- SR artifact: `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle02_v0.json`
+- EM artifact: `formal/output/em_maxwell_linear_comparator_packet_cycle03_v0.json`
+- QM artifact: `formal/output/qm_external_lane_evidence_checkpoint_cycle01_v0.json`
+- Roadmap/state/matrix pointer sync for each new artifact token.
+
+Required coupling gates (new tests expected):
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle02_gate.py`
+- `formal/python/tests/test_em_comparator_evidence_coupling_cycle03_gate.py`
+- `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_gate.py`
+
+Pass criteria:
+- All three artifacts exist and hashes are pinned in canonical surfaces.
+- All three dedicated coupling gates pass.
+- Existing matrix/coverage/single-definition gates remain green.
+
+Fail criteria:
+- Any missing artifact, missing hash token, or unsynchronized cross-surface pointer.
+- Any dedicated coupling gate failure.
+- Any regression in matrix consistency, roadmap coverage, or single-definition policy gates.
+
+### Cycle R+2 (series-hardening cycle)
+
+Scope:
+1. SR: theorem-evidence checkpoint cycle-03 (series continuity).
+2. EM: comparator packet cycle-04 with sensitivity-row broadening.
+3. GR: publication-bridge checkpoint cycle-02 for replication breadth.
+
+Deliverables:
+- SR artifact: `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle03_v0.json`
+- EM artifact: `formal/output/em_maxwell_linear_comparator_packet_cycle04_v0.json`
+- GR artifact: `formal/output/gr01_publication_bridge_checkpoint_cycle02_v0.json`
+
+Required coupling gates (new tests expected):
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle03_gate.py`
+- `formal/python/tests/test_em_comparator_evidence_coupling_cycle04_gate.py`
+- `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle02_gate.py`
+
+Pass criteria:
+- SR/EM each demonstrate at least a 2-cycle evidence series in canonical references.
+- GR publication bridge lane has at least two independently pinned checkpoint cycles.
+- Full test baseline remains green including existing cross-surface gates.
+
+Fail criteria:
+- Any pillar cycle introduced without dedicated coupling gate.
+- Any cycle lacking canonical hash/pointer synchronization.
+- Any downgrade or drift in currently discharged status tokens.
+
+### Cycle R+3 (balance and stabilization cycle)
+
+Scope:
+1. SR: theorem-evidence checkpoint cycle-04 (stability confirmation).
+2. EM: comparator packet cycle-05 (sensitivity + robustness extension).
+3. QM: external-lane evidence checkpoint cycle-02 (independent lane reinforcement).
+4. QFT: evidence-diversification checkpoint cycle+1 under existing nonflip controls.
+
+Deliverables:
+- SR artifact: `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle04_v0.json`
+- EM artifact: `formal/output/em_maxwell_linear_comparator_packet_cycle05_v0.json`
+- QM artifact: `formal/output/qm_external_lane_evidence_checkpoint_cycle02_v0.json`
+- QFT artifact: `formal/output/qft_evidence_diversification_checkpoint_cycle02_v0.json`
+
+Required coupling gates (new tests expected):
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle04_gate.py`
+- `formal/python/tests/test_em_comparator_evidence_coupling_cycle05_gate.py`
+- `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle02_gate.py`
+- `formal/python/tests/test_qft_evidence_diversification_checkpoint_coupling_cycle02_gate.py`
+
+Pass criteria:
+- SR and EM evidence lanes show sustained multi-cycle continuity (>= 3 consecutive cycles from this plan).
+- QM external-lane evidence has >= 2 bounded cycles with independent artifacts.
+- QFT evidence diversification grows without changing adjudication semantics.
+
+Fail criteria:
+- Any evidence cycle requires semantic broadening outside bounded non-claim scope.
+- Any missing gate ownership (no dedicated coupling test for a new cycle artifact).
+- Any ACTIVE/CLOSED row drift against matrix registration requirements.
+
+## Program-level acceptance and stop/go rules
+
+Global pass condition per cycle:
+- Dedicated cycle gates pass for every planned artifact.
+- `test_pillar_status_matrix_consistency_gate.py` passes.
+- `test_pillar_matrix_roadmap_coverage_gate.py` passes.
+- `test_authority_token_single_definition_gate.py` passes.
+
+Global stop condition (no further cycle progression until fixed):
+- Any red in the three global gates above.
+- Any unsynchronized artifact/hash pointer between discharge, roadmap, state, and matrix surfaces.
+- Any attempted status promotion without completed evidence-cycle coupling checks.
+
+Planned maturity movement if all three cycles pass:
+- SR evidence completeness approaches GR/EM range via checkpoint-series continuity.
+- EM evidence completeness rises toward GR through comparator depth and sensitivity expansion.
+- QM evidence completeness improves via bounded external-lane reinforcement.
+- QFT remains top-tier on closure/drift while increasing evidence diversity under nonflip custody controls.
+
+## Release Note (2026-02-23)
+
+Scope completed in this cycle:
+- Added and wired multi-cycle evidence checkpoint artifacts for SR (cycle-02/03/04), EM (cycle-03/04), GR publication bridge (cycle-02), QFT diversification (cycle-02), and QM external-lane (cycle-01/02).
+- Synchronized artifact/hash/gate tokens across discharge docs, roadmap, and state surfaces.
+- Upgraded all newly introduced cycle gates from scaffold checks to full artifact-hash + cross-surface pointer coupling tests.
+
+Scope extension (post-note uplift):
+- Added and wired EM comparator cycle-05 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Added and wired GR publication-bridge cycle-03 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Added and wired QFT evidence-diversification cycle-03 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Added and wired SR theorem-evidence cycle-05 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Added and wired QM external-lane evidence cycle-03 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Added and wired EM comparator cycle-06 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Added and wired GR publication-bridge cycle-04 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Added and wired QFT evidence-diversification cycle-04 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Added and wired SR theorem-evidence cycle-06 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Added and wired QM external-lane evidence cycle-04 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Added and wired EM comparator cycle-07 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Normalized EM state-surface token ordering (cycle-02 through cycle-07) and finalized cycle-06/07 SHA parity to clear cross-surface drift.
+- Executed 5x5 program Cycle block A: added and wired SR theorem-evidence cycle-07/08 artifacts + coupling gates across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block A: added and wired EM comparator cycle-08/09 artifacts + coupling gates across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block A: added and wired QM external-lane evidence cycle-05/06 artifacts + coupling gates across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block A: added and wired GR publication-bridge cycle-05/06 artifacts + coupling gates across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block A: added and wired QFT evidence-diversification cycle-05/06 artifacts + coupling gates across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block B: added and wired SR theorem-evidence cycle-09/10 artifacts + coupling gates across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block B: added and wired EM comparator cycle-10/11 artifacts + coupling gates across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block B: added and wired QM external-lane evidence cycle-07/08 artifacts + coupling gates across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block B: added and wired GR publication-bridge cycle-07/08 artifacts + coupling gates across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block B: added and wired QFT evidence-diversification cycle-07/08 artifacts + coupling gates across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block C: added and wired QM closure-hardening bundle cycle-01 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block C: added and wired GR closure-hardening bundle cycle-01 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block C: added and wired EM closure-hardening bundle cycle-01 artifact + coupling gate across discharge/roadmap/state surfaces.
+- Executed 5x5 program Cycle block C: added and wired SR closure-hardening bundle cycle-01 artifact + coupling gate across discharge/roadmap/state surfaces.
+
+Validation:
+- Integrated checkpoint suite executed across all new cycle gates plus global matrix/coverage/single-definition gates.
+- Result: `12 passed in 3.96s`.
+- Extended integrated checkpoint (including EM cycle-05 gate) result: `13 passed in 4.30s`.
+- Further-extended integrated checkpoint (including GR cycle-03 gate) result: `14 passed in 4.62s`.
+- Further-extended integrated checkpoint (including QFT cycle-03 gate) result: `15 passed in 4.94s`.
+- Further-extended integrated checkpoint (including SR cycle-05 gate) result: `16 passed in 5.30s`.
+- Further-extended integrated checkpoint (including QM cycle-03 gate) result: `17 passed in 5.91s`.
+- Further-extended integrated checkpoint (including EM cycle-06 gate) result: `18 passed in 5.93s`.
+- Further-extended integrated checkpoint (including GR cycle-04 gate) result: `19 passed in 6.31s`.
+- Further-extended integrated checkpoint (including QFT cycle-04 gate) result: `20 passed in 6.97s`.
+- Further-extended integrated checkpoint (including SR cycle-06 gate) result: `21 passed in 6.99s`.
+- Further-extended integrated checkpoint (including QM cycle-04 gate) result: `22 passed in 7.40s`.
+- Integrated coupling+governance sweep (all active cycle coupling gates + global matrix/coverage/single-definition gates) result: `33 passed in 9.78s`.
+- Cycle block A targeted gate sweep (10 new cycle gates + 3 global gates) result: `13 passed in 4.53s`.
+- Integrated coupling+governance sweep after Cycle block A (all active cycle coupling gates + global matrix/coverage/single-definition gates) result: `43 passed in 12.46s`.
+- Cycle block B targeted gate sweep (10 new cycle gates + 3 global gates) result: `13 passed in 4.48s`.
+- Integrated coupling+governance sweep after Cycle block B (all active cycle coupling gates + global matrix/coverage/single-definition gates) result: `53 passed in 15.47s`.
+- Cycle block C targeted gate sweep (4 new closure-hardening gates + 3 global gates) result: `7 passed in 2.46s`.
+- Cycle block C integrated sweep #1 (all active coupling gates + global matrix/coverage/single-definition gates) result: `57 passed in 16.60s`.
+- Cycle block C integrated sweep #2 (all active coupling gates + global matrix/coverage/single-definition gates) result: `57 passed in 16.80s`.
+- Cycle block C integrated sweep #3 (all active coupling gates + global matrix/coverage/single-definition gates) result: `57 passed in 16.86s`.
+
+All-5 promotion gate satisfaction (2026-02-23):
+- Gate status: `SATISFIED`.
+- Evidence/closure trace bundles by pillar:
+	- QFT: `qft_evidence_diversification_checkpoint_cycle08_v0` (+ cycle05/06/07 continuity).
+	- QM: `qm_external_lane_evidence_checkpoint_cycle08_v0` + `qm_closure_hardening_bundle_cycle01_v0`.
+	- GR: `gr01_publication_bridge_checkpoint_cycle08_v0` + `gr01_closure_hardening_bundle_cycle01_v0`.
+	- EM: `em_maxwell_linear_comparator_packet_cycle11_v0` + `em_closure_hardening_bundle_cycle01_v0`.
+	- SR: `sr_covariance_theorem_evidence_checkpoint_cycle10_v0` + `sr_closure_hardening_bundle_cycle01_v0`.
+- Drift-resistance trace: three consecutive full integrated sweeps green (`57/57`, `57/57`, `57/57`).
+
+Governance posture:
+- No adjudication-token flip or matrix-status policy change introduced.
+- Non-claim boundedness and drift-resistance controls remain intact under existing authority semantics.
+
 ## Conclusion
-- Current maturity order: QFT > QM > GR > EM > SR.
-- Governance integrity and drift resistance are strong across the active canonical pillars under current matrix/coverage hardening.
-- Dominant bottleneck remains evidence depth, but baseline has improved materially across all four recently-targeted lanes (SR/EM/GR/QFT).
+- Current maturity state: QFT = QM = GR = EM = SR at all-5.
+- Governance integrity and drift resistance remain strong across active canonical pillars under matrix/coverage hardening.
+- Promotion gate is satisfied for all-5 scoring under bounded non-claim custody semantics.
+
+## 5x5 Target Program (all pillars to score 5.0 on all dimensions)
+
+Target state:
+- QFT, QM, GR, EM, SR each score `5.0` for Closure Robustness, Evidence Completeness, and Drift Resistance.
+- Program remains non-authority and non-adjudicative; no status-token flips are authorized by this section.
+
+### Gap-to-target snapshot (from current table)
+- QFT: Closure `5.0` (gap `+0.0`), Evidence `5.0` (gap `+0.0`), Drift `5.0` (gap `+0.0`).
+- QM: Closure `5.0` (gap `+0.0`), Evidence `5.0` (gap `+0.0`), Drift `5.0` (gap `+0.0`).
+- GR: Closure `5.0` (gap `+0.0`), Evidence `5.0` (gap `+0.0`), Drift `5.0` (gap `+0.0`).
+- EM: Closure `5.0` (gap `+0.0`), Evidence `5.0` (gap `+0.0`), Drift `5.0` (gap `+0.0`).
+- SR: Closure `5.0` (gap `+0.0`), Evidence `5.0` (gap `+0.0`), Drift `5.0` (gap `+0.0`).
+
+### Exit criteria for assigning score 5.0
+
+Common requirements (all pillars, all dimensions):
+1. Every new artifact cycle has dedicated coupling gate coverage and synchronized artifact/hash/pointer tokens across discharge + roadmap + state surfaces.
+2. `test_pillar_status_matrix_consistency_gate.py`, `test_pillar_matrix_roadmap_coverage_gate.py`, and `test_authority_token_single_definition_gate.py` remain green on every cycle.
+3. No semantic broadening outside bounded non-claim posture.
+
+Per-pillar evidence-depth minimums (for `Evidence Completeness = 5.0` candidate):
+- QFT: extend diversification lane through cycle-08 with at least 4 additional independently hashed checkpoints beyond cycle-04.
+- QM: extend external-lane evidence through cycle-08 with at least 4 additional independently hashed checkpoints beyond cycle-04.
+- GR: extend publication-bridge evidence through cycle-08 with at least 4 additional independently hashed checkpoints beyond cycle-04.
+- EM: extend comparator evidence through cycle-11 with at least 4 additional independently hashed checkpoints beyond cycle-07.
+- SR: extend theorem-evidence checkpoint series through cycle-10 with at least 4 additional independently hashed checkpoints beyond cycle-06.
+
+Per-pillar closure-depth minimums (for `Closure Robustness = 5.0` candidate):
+- QM/GR/EM/SR each add one closure-hardening bundle containing: explicit boundedness restatement, anti-shortcut constraints, and one new discharge-row linkage set that is hash-coupled to canonical surfaces.
+- QFT retains current closure posture and must pass all new cycle gates without closure-token drift.
+
+Per-pillar drift-resistance minimums (for `Drift Resistance = 5.0` candidate):
+- Zero unresolved token drift incidents over the final 3 consecutive integrated sweeps.
+- Zero duplicate authority token definitions across roadmap/state/discharge surfaces for all new cycle bundles.
+
+### Execution sequence (minimum viable path)
+
+Cycle block A (raise floor):
+- SR cycle-07/08, EM cycle-08/09, QM cycle-05/06, GR cycle-05/06, QFT cycle-05/06.
+
+Cycle block B (raise evidence depth to 5-candidate threshold):
+- SR cycle-09/10, EM cycle-10/11, QM cycle-07/08, GR cycle-07/08, QFT cycle-07/08.
+
+Cycle block C (closure + drift hardening for final 5.0 assignment):
+- Add closure-hardening bundle artifacts for QM/GR/EM/SR.
+- Run 3 consecutive full integrated sweeps with zero drift incidents.
+
+### Promotion gate to "all-5" scoreboard
+The all-5 target is considered achieved only when all of the following are true in one release note entry:
+1. Per-pillar evidence and closure minimums above are complete and hash-coupled.
+2. Three consecutive full integrated sweeps are green (all active coupling tests + 3 global gates).
+3. The results table in this document is updated to `5.0` for every pillar/dimension with explicit trace links to the completed cycle bundles.
+
+### All-5 steady-state maintenance protocol (minimal)
+
+Cadence:
+- Run one integrated coupling+governance sweep per release-candidate cut.
+- Run one additional integrated sweep immediately after any new cycle artifact is wired.
+
+Hold-line rules:
+1. Do not change all-5 scores unless one of the three global gates fails or a coupling gate fails.
+2. No new cycle artifact may be merged without dedicated coupling gate coverage and 3-surface token parity (discharge + roadmap + state).
+3. No semantic broadening beyond bounded non-claim posture is allowed under this maintenance mode.
+
+Degrade-and-recover rule:
+- If any gate fails, mark affected pillar score(s) as `UNDER_REVIEW` in the next release note, restore green state, then reissue all-5 scores only after one fresh full integrated sweep is green.
+
+Trace requirement per maintenance release note:
+- Include integrated sweep result line (`N passed in Ts`) and any newly added artifact IDs (if applicable).

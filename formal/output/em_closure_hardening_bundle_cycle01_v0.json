@@ -1,0 +1,26 @@
+{
+  "artifact_id": "em_closure_hardening_bundle_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "em_closure_hardening_cycle01",
+    "status": "placeholder_non_promotional",
+    "boundedness_restatement": [
+      "bounded_linear_regime_scope_only",
+      "no_standard_model_completion_claim",
+      "no_non_abelian_completion_claim",
+      "no_external_truth_claim"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-EM-DER-01",
+      "TOE-EM-DER-02"
+    ],
+    "generated_on": "2026-02-23"
+  },
+  "payload_sha256": "31a977e5427f6c27ac4be6ec0bbafd3c3a76700948c91e4e7c2ceb3716b749f2"
+}

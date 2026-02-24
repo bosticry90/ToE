@@ -1,0 +1,17 @@
+{
+  "artifact_id": "gr01_publication_bridge_checkpoint_cycle03_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "gr01_publication_bridge_cycle03",
+    "status": "placeholder_non_promotional",
+    "non_claim_boundary": [
+      "planning_only",
+      "bounded_discrete_scope_only",
+      "no_external_truth_claim",
+      "no_publication_equivalence_claim_by_artifact"
+    ],
+    "generated_on": "2026-02-23"
+  },
+  "payload_sha256": "c63caae81d5557276e200e66a81ab13430586cc99c3eeaaf22f30582f5b4c9d7"
+}

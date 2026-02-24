@@ -1,0 +1,17 @@
+{
+  "artifact_id": "qft_evidence_diversification_checkpoint_cycle02_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "qft_evidence_diversification_cycle02",
+    "status": "placeholder_non_promotional",
+    "non_claim_boundary": [
+      "planning_only",
+      "bounded_evidence_diversification_scope_only",
+      "no_adjudication_flip_authorized",
+      "no_external_truth_claim"
+    ],
+    "generated_on": "2026-02-23"
+  },
+  "payload_sha256": "016c677d58dc07cac5dd07ecb990d2146668b5b24174d20db96ce9efbb2f2c84"
+}

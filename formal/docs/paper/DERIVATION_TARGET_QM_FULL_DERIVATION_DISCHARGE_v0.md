@@ -126,6 +126,55 @@ Inevitability obligation linkage (must remain synchronized with gate target):
   - `formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md`
   - `formal/docs/paper/PILLAR_DISCHARGE_REGISTRY_v0.json`
 
+- External-lane evidence checkpoint coupling bundle (bounded non-claim):
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_v0: qm_external_lane_evidence_checkpoint_cycle01_v0`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE01_SHA256_v0: c0e011e1c73ea5fa555ed965c62488a24d0506cc9acf61f02f1d0a762a160ec5`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_external_lane_evidence_checkpoint_cycle01_v0.json`
+  - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_gate.py`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE02_ARTIFACT_v0: qm_external_lane_evidence_checkpoint_cycle02_v0`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE02_SHA256_v0: ee514df5bf48bdc509fc726a775cdaab4a731b52a02b362e39e55c9b70a40019`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE02_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_external_lane_evidence_checkpoint_cycle02_v0.json`
+  - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle02_gate.py`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE03_ARTIFACT_v0: qm_external_lane_evidence_checkpoint_cycle03_v0`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE03_SHA256_v0: 277bc3e338f88e332cc2967a5d268cac4ada32f0e678be45806b5c86d86741c9`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE03_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_external_lane_evidence_checkpoint_cycle03_v0.json`
+  - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle03_gate.py`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE04_ARTIFACT_v0: qm_external_lane_evidence_checkpoint_cycle04_v0`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE04_SHA256_v0: 0eb3bbc0747847bf15d4ac5cbd707a3b7181bba45b94679abbb62f09ae185d2d`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE04_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_external_lane_evidence_checkpoint_cycle04_v0.json`
+  - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle04_gate.py`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE05_ARTIFACT_v0: qm_external_lane_evidence_checkpoint_cycle05_v0`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE05_SHA256_v0: 049810330058bf5a956b01712f0f3a71b7d10721b90aeb7058ceea721b9a053e`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE05_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_external_lane_evidence_checkpoint_cycle05_v0.json`
+  - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle05_gate.py`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE06_ARTIFACT_v0: qm_external_lane_evidence_checkpoint_cycle06_v0`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE06_SHA256_v0: 1a57390222d1fd927342661dc5aa8fe1913c7848775af1d28734da0abeb6d0ac`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE06_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_external_lane_evidence_checkpoint_cycle06_v0.json`
+  - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle06_gate.py`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE07_ARTIFACT_v0: qm_external_lane_evidence_checkpoint_cycle07_v0`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE07_SHA256_v0: b6b486d5ed9160e6f55b71af12ac4b54f1f304071e60163ac575067f7e8e03c7`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE07_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_external_lane_evidence_checkpoint_cycle07_v0.json`
+  - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle07_gate.py`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE08_ARTIFACT_v0: qm_external_lane_evidence_checkpoint_cycle08_v0`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE08_SHA256_v0: 9f21b723c9bde134b03a9f6de1a457affc30196944a984212fbb8b29e11c9f4c`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE08_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_external_lane_evidence_checkpoint_cycle08_v0.json`
+  - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle08_gate.py`
+
+- Closure-hardening bundle (bounded non-claim):
+  - `QM_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: qm_closure_hardening_bundle_cycle01_v0`
+  - `QM_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 00febafaaee38d6a0ba5492fabd7a6b578a417060c16d129ba6886d0cd02af77`
+  - `QM_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_closure_hardening_bundle_cycle01_v0.json`
+  - `formal/python/tests/test_qm_closure_hardening_bundle_coupling_cycle01_gate.py`
+
 Progress token:
 - `QM_FULL_DERIVATION_PROGRESS_v0: CYCLE1_CONTRACT_BRIDGE_TOKEN_PINNED`
 - `QM_FULL_DERIVATION_PROGRESS_CYCLE2_v0: UNITARY_CONSISTENCY_TOKEN_PINNED`

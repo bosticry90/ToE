@@ -1,0 +1,18 @@
+{
+  "artifact_id": "qm_external_lane_evidence_checkpoint_cycle03_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "qm_external_lane_evidence_cycle03",
+    "status": "placeholder_non_promotional",
+    "non_claim_boundary": [
+      "planning_only",
+      "bounded_external_lane_scope_only",
+      "no_born_rule_completion_claim",
+      "no_measurement_semantics_completion_claim",
+      "no_external_truth_claim"
+    ],
+    "generated_on": "2026-02-23"
+  },
+  "payload_sha256": "277bc3e338f88e332cc2967a5d268cac4ada32f0e678be45806b5c86d86741c9"
+}

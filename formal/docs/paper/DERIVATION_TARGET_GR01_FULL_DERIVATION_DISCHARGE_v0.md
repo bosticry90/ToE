@@ -136,6 +136,48 @@ Scope:
   - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/gr01_publication_bridge_checkpoint_cycle01_v0.json`
   - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_gate.py`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE02_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle02_v0`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE02_SHA256_v0: 6a71e6b1839dc946c3a07b128384772fd4ddcb47e7c9d4ab2c4760e54d36b659`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE02_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/gr01_publication_bridge_checkpoint_cycle02_v0.json`
+  - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle02_gate.py`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE03_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle03_v0`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE03_SHA256_v0: c63caae81d5557276e200e66a81ab13430586cc99c3eeaaf22f30582f5b4c9d7`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE03_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/gr01_publication_bridge_checkpoint_cycle03_v0.json`
+  - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle03_gate.py`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE04_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle04_v0`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE04_SHA256_v0: a7db419fe32564f9dcd3172054dbb1c1b49e8328c9389e724d2e75a32580f232`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE04_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/gr01_publication_bridge_checkpoint_cycle04_v0.json`
+  - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle04_gate.py`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE05_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle05_v0`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE05_SHA256_v0: 37151e8e8fedaca38b7b0aebe7e593e25b5a30619e5aff5c9be062093ccab9c5`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE05_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/gr01_publication_bridge_checkpoint_cycle05_v0.json`
+  - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle05_gate.py`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE06_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle06_v0`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE06_SHA256_v0: ff886663ad8e8ae050390814bab18cba7d489bcf05a0e4f14599a8db99f6b4e6`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE06_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/gr01_publication_bridge_checkpoint_cycle06_v0.json`
+  - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle06_gate.py`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE07_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle07_v0`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE07_SHA256_v0: 2664762c44c5cf6727ea6ea02b3540db5b046d95c2a440feb7b618db66bfb96f`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE07_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/gr01_publication_bridge_checkpoint_cycle07_v0.json`
+  - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle07_gate.py`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE08_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle08_v0`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE08_SHA256_v0: dfbf72476e0677a7a381c6194ed377cb58013af3d0b3456b4cc23f944710f076`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE08_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/gr01_publication_bridge_checkpoint_cycle08_v0.json`
+  - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle08_gate.py`
+
+- Closure-hardening bundle (bounded non-claim):
+  - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: gr01_closure_hardening_bundle_cycle01_v0`
+  - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 36b8d0abd7d56f1c39d02729528961ef95e4900a6f480c6aba4e5681fa0a8a7a`
+  - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/gr01_closure_hardening_bundle_cycle01_v0.json`
+  - `formal/python/tests/test_gr01_closure_hardening_bundle_coupling_cycle01_gate.py`
 
 ## Current status
 

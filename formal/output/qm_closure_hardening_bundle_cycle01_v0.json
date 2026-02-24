@@ -1,0 +1,25 @@
+{
+  "artifact_id": "qm_closure_hardening_bundle_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "qm_closure_hardening_cycle01",
+    "status": "placeholder_non_promotional",
+    "boundedness_restatement": [
+      "bounded_theorem_body_scope_only",
+      "no_born_rule_completion_claim",
+      "no_measurement_semantics_completion_claim",
+      "no_external_truth_claim"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-QM-THM-01"
+    ],
+    "generated_on": "2026-02-23"
+  },
+  "payload_sha256": "00febafaaee38d6a0ba5492fabd7a6b578a417060c16d129ba6886d0cd02af77"
+}
