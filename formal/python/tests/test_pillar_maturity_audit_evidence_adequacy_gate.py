@@ -17,6 +17,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 AUDIT_PATH = REPO_ROOT / "formal" / "docs" / "release" / "PILLAR_MATURITY_AUDIT_v0.md"
 
 PILLARS = ("QFT", "QM", "GR", "EM", "SR")
+ALLOWED_JUSTIFICATION_TOKEN_VALUES = {"PRESENT", "NOT_PRESENT_v0"}
 
 
 def _read(path: Path) -> str:
@@ -49,6 +50,16 @@ def test_pillar_maturity_audit_evidence_adequacy_gate() -> None:
     custody_gate = _extract_gate_token(text, "EVIDENCE_CUSTODY_5X5_GATE")
     adequacy_gate = _extract_gate_token(text, "EVIDENCE_ADEQUACY_5X5_GATE")
 
+    adequacy_justification_tokens = {
+        pillar: _extract_gate_token(text, f"EVIDENCE_ADEQUACY_{pillar}_5X5_JUSTIFICATION_v0")
+        for pillar in PILLARS
+    }
+    for pillar, token_value in adequacy_justification_tokens.items():
+        assert token_value in ALLOWED_JUSTIFICATION_TOKEN_VALUES, (
+            f"EVIDENCE_ADEQUACY_{pillar}_5X5_JUSTIFICATION_v0 must be one of "
+            f"{sorted(ALLOWED_JUSTIFICATION_TOKEN_VALUES)}."
+        )
+
     evidence_is_5 = {pillar: (vals[1] == 5.0) for pillar, vals in rows.items()}
     any_evidence_5 = any(evidence_is_5.values())
 
@@ -60,10 +71,10 @@ def test_pillar_maturity_audit_evidence_adequacy_gate() -> None:
         )
         for pillar, is_5 in evidence_is_5.items():
             if is_5:
-                token = f"EVIDENCE_ADEQUACY_{pillar}_5X5_JUSTIFICATION_v0"
-                value = _extract_gate_token(text, token)
+                value = adequacy_justification_tokens[pillar]
                 assert value == "PRESENT", (
-                    f"{token} must be PRESENT when {pillar} Evidence Completeness is scored 5.0."
+                    f"EVIDENCE_ADEQUACY_{pillar}_5X5_JUSTIFICATION_v0 must be PRESENT "
+                    f"when {pillar} Evidence Completeness is scored 5.0."
                 )
 
     if all_dimensions_5:

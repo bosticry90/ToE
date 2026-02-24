@@ -54,6 +54,13 @@ Current gating posture:
 - `EVIDENCE_CUSTODY_5X5_GATE: SATISFIED_v0`
 - `EVIDENCE_ADEQUACY_5X5_GATE: NOT_SATISFIED_v0`
 
+Per-pillar adequacy justification token scaffold:
+- `EVIDENCE_ADEQUACY_QFT_5X5_JUSTIFICATION_v0: NOT_PRESENT_v0`
+- `EVIDENCE_ADEQUACY_QM_5X5_JUSTIFICATION_v0: NOT_PRESENT_v0`
+- `EVIDENCE_ADEQUACY_GR_5X5_JUSTIFICATION_v0: NOT_PRESENT_v0`
+- `EVIDENCE_ADEQUACY_EM_5X5_JUSTIFICATION_v0: NOT_PRESENT_v0`
+- `EVIDENCE_ADEQUACY_SR_5X5_JUSTIFICATION_v0: NOT_PRESENT_v0`
+
 ## Delta Since Prior Audit
 - SR evidence depth improved via theorem-evidence checkpoint artifact + dedicated coupling gate (`SR_THEOREM_EVIDENCE_CHECKPOINT_*`).
 - EM evidence depth improved again via comparator cycle-02 artifact + dedicated coupling gate (`EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE02_*`).
