@@ -4,7 +4,26 @@ Project: ToE
 
 Purpose: Epistemic inventory and stabilization
 
-Last updated: 2026-02-20
+Last updated: 2026-02-24
+
+Canonical bounded status note (2026-02-24):
+- For the current canonical five-pillar set (`PILLAR-QFT`, `PILLAR-QM`, `PILLAR-GR`, `PILLAR-EM`, `PILLAR-SR`), bounded full-derivation and inevitability adjudications are discharged and matrix status is `CLOSED`.
+- Canonical source-of-truth pointer for this claim: `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`.
+- This note does not include downstream locked queue pillar (`PILLAR-COSMO`), and excludes `PILLAR-STAT` active pre-discharge posture from the canonical five-pillar closed-set claim.
+- This note does not assert all-5 adequacy completion; bounded governance discharge and adequacy maturity remain distinct.
+
+STAT activation checkpoint (2026-02-26):
+- pre-activation readiness audit pointer: `formal/docs/release/STAT_UNLOCK_READINESS_AUDIT_v0.md`.
+- matrix-prep checklist pointer (historical pre-activation, non-authoritative): `formal/docs/release/STAT_MATRIX_PREP_CHECKLIST_v0.md`.
+- post-activation validation template pointer: `formal/docs/release/PILLAR_STAT_ACTIVATION_CHANGESET_TEMPLATE_v0.md`.
+- `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION: ACTIVE_PREEXECUTION_v0_NONDISCHARGED`
+- `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: ACTIVE_PREEXECUTION_v0_NONDISCHARGED`
+- `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_v0: stat_evidence_checkpoint_cycle01_v0`
+- `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_SHA256_v0: 7322727f0e7ff87e127127a08228ea5e6bf46250b15698cfb9dfe6a6b766ca25`
+- `STAT_EVIDENCE_CHECKPOINT_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/stat_evidence_checkpoint_cycle01_v0.json`
+- `formal/python/tests/test_stat_evidence_checkpoint_coupling_cycle01_gate.py`
+- activation scope is structural/pre-discharge only; no STAT discharge claim and no adequacy completion claim.
 
 Governance architecture-freeze checkpoint (2026-02-18):
 - Architecture schema is pinned and enforced:
@@ -933,6 +952,11 @@ Pillar-QM full-derivation discharge lane checkpoint (2026-02-20):
   - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE08_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/qm_external_lane_evidence_checkpoint_cycle08_v0.json`
   - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle08_gate.py`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE09_ARTIFACT_v0: qm_external_lane_evidence_checkpoint_cycle09_v0`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE09_SHA256_v0: b041f3756cb0a32b8fd5df76610b7ca3f4ca6bef2a8b50c5dd6659cfb0bc4e1a`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE09_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_external_lane_evidence_checkpoint_cycle09_v0.json`
+  - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle09_gate.py`
   - `QM_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: qm_closure_hardening_bundle_cycle01_v0`
   - `QM_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 00febafaaee38d6a0ba5492fabd7a6b578a417060c16d129ba6886d0cd02af77`
   - `QM_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -1023,6 +1047,34 @@ Pillar-EM full-derivation discharge lane checkpoint (2026-02-20):
   - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE11_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/em_maxwell_linear_comparator_packet_cycle11_v0.json`
   - `formal/python/tests/test_em_comparator_evidence_coupling_cycle11_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE12_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle12_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE12_SHA256_v0: ae1e91e44b20e753ec0ac1c33a51b4516553d67bc113bae6a865778a12928267`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE12_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle12_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle12_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE13_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle13_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE13_SHA256_v0: 8218d90186c45afbccfbba1c48af66eb81c9c5793721631e75500bcac1e9bd81`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE13_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle13_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle13_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE14_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle14_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE14_SHA256_v0: ae644c6f5e0cd552fce955ddfd101a9d13f42a3f037df0f472c53b3839520ee2`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE14_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle14_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle14_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE15_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle15_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE15_SHA256_v0: db141a14dd046a2c428da6089f5025bd3654e843e0c4e0ac5b52e15ffe6d9808`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE15_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle15_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle15_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE16_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle16_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE16_SHA256_v0: f7062802b6b614874d432ec2d2294b1069585abe4413d9a9eb8720cfe5be3099`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE16_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle16_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle16_gate.py`
+  - `EVIDENCE_ADEQUACY_EM_5X5_JUSTIFICATION_v0: PRESENT`
+  - `EVIDENCE_ADEQUACY_EM_5X5_JUSTIFICATION_ENTRY_THRESHOLD_v0: MIN_5_ENTRIES_REQUIRED`
+  - adequacy authority block pointer: `formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md`
   - `EM_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: em_closure_hardening_bundle_cycle01_v0`
   - `EM_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 31a977e5427f6c27ac4be6ec0bbafd3c3a76700948c91e4e7c2ceb3716b749f2`
   - `EM_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -1112,6 +1164,11 @@ GR01 full-derivation discharge checkpoint (2026-02-15):
   - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE08_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/gr01_publication_bridge_checkpoint_cycle08_v0.json`
   - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle08_gate.py`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE09_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle09_v0`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE09_SHA256_v0: e8cc73a4a1aa58f1ef9ca326087323acc3c6ce8ae2b0d894b3551415b6e1e88c`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE09_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/gr01_publication_bridge_checkpoint_cycle09_v0.json`
+  - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle09_gate.py`
   - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: gr01_closure_hardening_bundle_cycle01_v0`
   - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 36b8d0abd7d56f1c39d02729528961ef95e4900a6f480c6aba4e5681fa0a8a7a`
   - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -1418,6 +1475,34 @@ Post-GR01 handoff checkpoint (2026-02-21):
   - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE10_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle10_v0.json`
   - `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle10_gate.py`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE11_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle11_v0`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE11_ARTIFACT_SHA256_v0: 3c0297cd67d78768e1a957f49283f1d93d7e5f601aa21817606f3780bbf31439`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE11_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle11_v0.json`
+  - `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle11_gate.py`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE12_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle12_v0`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE12_ARTIFACT_SHA256_v0: 555e1c0c2f3f07e076a00aa2ad322e05d8b863462c1ba718e6514de3b2ebbb0e`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE12_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle12_v0.json`
+  - `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle12_gate.py`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE13_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle13_v0`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE13_ARTIFACT_SHA256_v0: 54f051b40210a7e783b15838a4c21181a6ce46d26041497d1500c14f4ed908a9`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE13_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle13_v0.json`
+  - `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle13_gate.py`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle14_v0`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE14_ARTIFACT_SHA256_v0: 8235e707ebf81e2f775f72f5e608c4eb5d8ad1f8069656680d3f78af858a9404`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE14_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle14_v0.json`
+  - `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle14_gate.py`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle15_v0`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE15_ARTIFACT_SHA256_v0: 4a07a5d3e0bc4f94fef789127d1bed68134b18bd3eb3fd0de13411fbb5c53a6e`
+  - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE15_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle15_v0.json`
+  - `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle15_gate.py`
+  - `EVIDENCE_ADEQUACY_SR_5X5_JUSTIFICATION_v0: PRESENT`
+  - `EVIDENCE_ADEQUACY_SR_5X5_JUSTIFICATION_ENTRY_THRESHOLD_v0: MIN_5_ENTRIES_REQUIRED`
+  - adequacy authority block pointer: `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
   - `SR_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: sr_closure_hardening_bundle_cycle01_v0`
   - `SR_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 88037f4d978e060ee783665458d4b122ef53ba61a14cd9ccafc6d814001923bb`
   - `SR_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`

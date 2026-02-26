@@ -118,12 +118,23 @@ Rule:
     for that pillar are non-`B-*` in `RESULTS_TABLE_v0.md`.
 
 Current dual-layer snapshot (machine-checkable tokens):
+- Current canonical-five closure interpretation:
+  - The active canonical five-pillar set (`PILLAR-QFT`, `PILLAR-QM`, `PILLAR-GR`, `PILLAR-EM`, `PILLAR-SR`) is bounded full-derivation discharged, bounded inevitability discharged, and matrix-closed under v0 non-claim scope.
+  - Remaining downstream locked queue pillar (`PILLAR-COSMO`) is excluded from this closed-set interpretation until unlock prerequisites are satisfied.
+  - `PILLAR-STAT` `ACTIVE` pre-discharge posture is excluded from this matrix-closed five-pillar interpretation until discharge criteria are satisfied.
 - `PILLAR-GR_PHYSICS_STATUS: CLOSED_v0_DISCRETE_CONDITIONAL`
 - `PILLAR-GR_GOVERNANCE_STATUS: CLOSED_v0_REQUIRED_ROWS_CLEARED`
 - `FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
 - `PROCEED_GATE_GR: ALLOWED_v0_PHYSICS_CLOSED`
 - `MATRIX_CLOSURE_GATE_GR: ALLOWED_v0_GOVERNANCE_CLOSED`
 - `REQUIRED_GR_CLOSURE_ROWS: TOE-GR-DER-01,TOE-GR-DER-02,TOE-GR-CONS-01`
+- `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION: ACTIVE_PREEXECUTION_v0_NONDISCHARGED`
+- `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: ACTIVE_PREEXECUTION_v0_NONDISCHARGED`
+- `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_v0: stat_evidence_checkpoint_cycle01_v0`
+- `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_SHA256_v0: 7322727f0e7ff87e127127a08228ea5e6bf46250b15698cfb9dfe6a6b766ca25`
+- `STAT_EVIDENCE_CHECKPOINT_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/stat_evidence_checkpoint_cycle01_v0.json`
+- `formal/python/tests/test_stat_evidence_checkpoint_coupling_cycle01_gate.py`
 - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle01_v0`
 - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_SHA256_v0: ffdf86538041007a0ce33d8de8ade2671fbca65eba52a5d96dc84a5a3e545bf6`
 - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -164,6 +175,11 @@ Current dual-layer snapshot (machine-checkable tokens):
 - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE08_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/gr01_publication_bridge_checkpoint_cycle08_v0.json`
 - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle08_gate.py`
+- `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE09_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle09_v0`
+- `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE09_SHA256_v0: e8cc73a4a1aa58f1ef9ca326087323acc3c6ce8ae2b0d894b3551415b6e1e88c`
+- `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE09_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/gr01_publication_bridge_checkpoint_cycle09_v0.json`
+- `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle09_gate.py`
 - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: gr01_closure_hardening_bundle_cycle01_v0`
 - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 36b8d0abd7d56f1c39d02729528961ef95e4900a6f480c6aba4e5681fa0a8a7a`
 - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -215,6 +231,11 @@ Current dual-layer snapshot (machine-checkable tokens):
 - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE08_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/qm_external_lane_evidence_checkpoint_cycle08_v0.json`
 - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle08_gate.py`
+- `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE09_ARTIFACT_v0: qm_external_lane_evidence_checkpoint_cycle09_v0`
+- `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE09_SHA256_v0: b041f3756cb0a32b8fd5df76610b7ca3f4ca6bef2a8b50c5dd6659cfb0bc4e1a`
+- `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE09_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/qm_external_lane_evidence_checkpoint_cycle09_v0.json`
+- `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle09_gate.py`
 - `QM_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: qm_closure_hardening_bundle_cycle01_v0`
 - `QM_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 00febafaaee38d6a0ba5492fabd7a6b578a417060c16d129ba6886d0cd02af77`
 - `QM_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -290,6 +311,34 @@ Current dual-layer snapshot (machine-checkable tokens):
 - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE11_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/em_maxwell_linear_comparator_packet_cycle11_v0.json`
 - `formal/python/tests/test_em_comparator_evidence_coupling_cycle11_gate.py`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE12_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle12_v0`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE12_SHA256_v0: ae1e91e44b20e753ec0ac1c33a51b4516553d67bc113bae6a865778a12928267`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE12_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/em_maxwell_linear_comparator_packet_cycle12_v0.json`
+- `formal/python/tests/test_em_comparator_evidence_coupling_cycle12_gate.py`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE13_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle13_v0`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE13_SHA256_v0: 8218d90186c45afbccfbba1c48af66eb81c9c5793721631e75500bcac1e9bd81`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE13_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/em_maxwell_linear_comparator_packet_cycle13_v0.json`
+- `formal/python/tests/test_em_comparator_evidence_coupling_cycle13_gate.py`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE14_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle14_v0`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE14_SHA256_v0: ae644c6f5e0cd552fce955ddfd101a9d13f42a3f037df0f472c53b3839520ee2`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE14_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/em_maxwell_linear_comparator_packet_cycle14_v0.json`
+- `formal/python/tests/test_em_comparator_evidence_coupling_cycle14_gate.py`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE15_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle15_v0`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE15_SHA256_v0: db141a14dd046a2c428da6089f5025bd3654e843e0c4e0ac5b52e15ffe6d9808`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE15_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/em_maxwell_linear_comparator_packet_cycle15_v0.json`
+- `formal/python/tests/test_em_comparator_evidence_coupling_cycle15_gate.py`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE16_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle16_v0`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE16_SHA256_v0: f7062802b6b614874d432ec2d2294b1069585abe4413d9a9eb8720cfe5be3099`
+- `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE16_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/em_maxwell_linear_comparator_packet_cycle16_v0.json`
+- `formal/python/tests/test_em_comparator_evidence_coupling_cycle16_gate.py`
+- `EVIDENCE_ADEQUACY_EM_5X5_JUSTIFICATION_v0: PRESENT`
+- `EVIDENCE_ADEQUACY_EM_5X5_JUSTIFICATION_ENTRY_THRESHOLD_v0: MIN_5_ENTRIES_REQUIRED`
+- adequacy authority block pointer: `formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md`
 - `EM_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: em_closure_hardening_bundle_cycle01_v0`
 - `EM_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 31a977e5427f6c27ac4be6ec0bbafd3c3a76700948c91e4e7c2ceb3716b749f2`
 - `EM_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -347,6 +396,34 @@ Current dual-layer snapshot (machine-checkable tokens):
 - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE10_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle10_v0.json`
 - `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle10_gate.py`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE11_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle11_v0`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE11_ARTIFACT_SHA256_v0: 3c0297cd67d78768e1a957f49283f1d93d7e5f601aa21817606f3780bbf31439`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE11_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle11_v0.json`
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle11_gate.py`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE12_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle12_v0`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE12_ARTIFACT_SHA256_v0: 555e1c0c2f3f07e076a00aa2ad322e05d8b863462c1ba718e6514de3b2ebbb0e`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE12_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle12_v0.json`
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle12_gate.py`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE13_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle13_v0`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE13_ARTIFACT_SHA256_v0: 54f051b40210a7e783b15838a4c21181a6ce46d26041497d1500c14f4ed908a9`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE13_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle13_v0.json`
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle13_gate.py`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle14_v0`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE14_ARTIFACT_SHA256_v0: 8235e707ebf81e2f775f72f5e608c4eb5d8ad1f8069656680d3f78af858a9404`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE14_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle14_v0.json`
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle14_gate.py`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle15_v0`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE15_ARTIFACT_SHA256_v0: 4a07a5d3e0bc4f94fef789127d1bed68134b18bd3eb3fd0de13411fbb5c53a6e`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE15_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle15_v0.json`
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle15_gate.py`
+- `EVIDENCE_ADEQUACY_SR_5X5_JUSTIFICATION_v0: PRESENT`
+- `EVIDENCE_ADEQUACY_SR_5X5_JUSTIFICATION_ENTRY_THRESHOLD_v0: MIN_5_ENTRIES_REQUIRED`
+- adequacy authority block pointer: `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
 - `SR_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: sr_closure_hardening_bundle_cycle01_v0`
 - `SR_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 88037f4d978e060ee783665458d4b122ef53ba61a14cd9ccafc6d814001923bb`
 - `SR_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -740,7 +817,7 @@ QFT full-derivation pre-discharge closure pin (cycle-27/cycle-50):
 | `PILLAR-EM` | `CLOSED` | `TARGET-EM-U1-PLAN;TARGET-EM-U1-MICRO-01-OBJECT-SCAFFOLD-v0;TARGET-EM-U1-MICRO-02-GAUGE-CONTRACT-SURFACE-v0;TARGET-EM-U1-MICRO-03-PREDISCHARGE-GATE-BUNDLE-v0;TARGET-EM-U1-MICRO-04-MAXWELL-FORM-ATTEMPT-v0;TARGET-EM-U1-MICRO-05-MAXWELL-FORM-SEMANTICS-MAPPING-v0;TARGET-EM-U1-MICRO-06-CONVENTION-LOCK-3P1-v0;TARGET-EM-U1-MICRO-07-IMPORT-LANES-PLACEHOLDERS-v0;TARGET-EM-U1-MICRO-08-IMPORT-LANES-INTERFACE-CONTRACTS-v0;TARGET-EM-U1-MICRO-09-DUAL-HODGE-CONVENTION-LOCK-v0;TARGET-EM-U1-MICRO-10-SOURCE-CURRENT-INTERFACE-CONTRACTS-v0;TARGET-EM-U1-MICRO-11-MAXWELL-EQUATION-SURFACES-STATEMENT-LOCK-v0;TARGET-EM-U1-MICRO-12-POTENTIAL-FIELDSTRENGTH-BRIDGE-LOCK-v0;TARGET-EM-U1-MICRO-13-MAXWELL-TENSOR-FORMS-COMPATIBILITY-MAP-v0;TARGET-EM-U1-MICRO-14-INDEX-METRIC-CURRENT-DECOMPOSITION-SURFACE-v0;TARGET-EM-U1-MICRO-15-CONTINUITY-SURFACE-COMPATIBILITY-SEAM-v0;TARGET-EM-U1-MICRO-16-MAXWELL-TO-CONTINUITY-ROUTE-ATTEMPT-PACKAGE-v0;TARGET-EM-U1-MICRO-17-DOUBLE-DIVERGENCE-ANTISYM-COMMUTATION-SEAM-v0;TARGET-EM-U1-MICRO-18-MAXWELL-TO-CONTINUITY-THEOREM-ATTEMPT-PACKAGE-v0;TARGET-EM-U1-MICRO-19-SMOOTHNESS-WEAKENING-NEGCONTROL-v0;TARGET-EM-U1-MICRO-20-DISTRIBUTIONAL-SINGULAR-SOURCE-NEGCONTROL-v0;TARGET-EM-U1-MICRO-21-DISTRIBUTIONAL-LANE-AUTHORIZATION-SCAFFOLD-v0;TARGET-EM-U1-MICRO-22-AUTHORIZED-DISTRIBUTIONAL-SEMANTICS-MAPPING-v0;TARGET-EM-U1-MICRO-23-AUTHORIZED-DISTRIBUTIONAL-SEMANTICS-REFERENCE-SURFACE-v0;TARGET-EM-U1-MICRO-24-MAXWELL-TO-CONTINUITY-ROUTE-CLOSURE-ATTEMPT-PACKAGE-v0;TARGET-EM-U1-MICRO-25-DOUBLE-DIVERGENCE-THEOREM-CLOSURE-ATTEMPT-v0;TARGET-EM-U1-MICRO-26-DOUBLE-DIVERGENCE-BINDING-THEOREM-CLOSURE-ATTEMPT-v0;TARGET-EM-U1-MICRO-27-BINDING-ASSUMPTIONS-DISCHARGE-FROM-SMOOTHNESS-v0;TARGET-EM-U1-MICRO-28-MAXWELL-TO-CONTINUITY-DD-SUBROUTE-COMPOSITION-ATTEMPT-v0;TARGET-EM-U1-MICRO-29-MAXWELL-TO-CONTINUITY-TYPED-DD-SUBROUTE-AUGMENTATION-ATTEMPT-v0;TARGET-EM-U1-MICRO-30-MAXWELL-TO-CONTINUITY-TYPED-ROUTE-CONSUMER-ATTEMPT-v0` | `formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_01_OBJECT_SCAFFOLD_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_02_GAUGE_CONTRACT_SURFACE_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_03_PREDISCHARGE_GATE_BUNDLE_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_04_MAXWELL_FORM_ATTEMPT_PACKAGE_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_05_MAXWELL_FORM_SEMANTICS_MAPPING_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_06_CONVENTION_LOCK_3P1_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_07_IMPORT_LANES_PLACEHOLDERS_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_08_IMPORT_LANES_INTERFACE_CONTRACTS_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_09_DUAL_HODGE_CONVENTION_LOCK_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_10_SOURCE_CURRENT_INTERFACE_CONTRACTS_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_11_MAXWELL_EQUATION_SURFACES_STATEMENT_LOCK_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_12_POTENTIAL_FIELDSTRENGTH_BRIDGE_LOCK_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_13_MAXWELL_TENSOR_FORMS_COMPATIBILITY_MAP_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_14_INDEX_METRIC_CURRENT_DECOMPOSITION_SURFACE_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_15_CONTINUITY_SURFACE_COMPATIBILITY_SEAM_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_16_MAXWELL_TO_CONTINUITY_ROUTE_ATTEMPT_PACKAGE_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_17_DOUBLE_DIVERGENCE_ANTISYM_COMMUTATION_SEAM_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_18_MAXWELL_TO_CONTINUITY_THEOREM_ATTEMPT_PACKAGE_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_19_SMOOTHNESS_WEAKENING_NEGCONTROL_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_20_DISTRIBUTIONAL_SINGULAR_SOURCE_NEGCONTROL_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_21_DISTRIBUTIONAL_LANE_AUTHORIZATION_SCAFFOLD_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_22_AUTHORIZED_DISTRIBUTIONAL_SEMANTICS_MAPPING_NONCLAIM_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_23_AUTHORIZED_DISTRIBUTIONAL_SEMANTICS_REFERENCE_SURFACE_NONCLAIM_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_24_MAXWELL_TO_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_PACKAGE_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_25_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_ATTEMPT_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSURE_ATTEMPT_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_27_BINDING_ASSUMPTIONS_DISCHARGE_FROM_SMOOTHNESS_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_28_MAXWELL_TO_CONTINUITY_DD_SUBROUTE_COMPOSITION_ATTEMPT_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_29_MAXWELL_TO_CONTINUITY_TYPED_DD_SUBROUTE_AUGMENTATION_ATTEMPT_v0.md;formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_30_MAXWELL_TO_CONTINUITY_TYPED_ROUTE_CONSUMER_ATTEMPT_v0.md;formal/toe_formal/ToeFormal/EM/U1/ObjectScaffold.lean` | `TARGET-GR01-DERIV-CHECKLIST-PLAN` | U(1)/Maxwell-object recovery lane is discharged under bounded/non-claim scope with canonical route and governance gates synchronized. Cycle-001 object scaffold, Cycle-002 gauge-contract theorem-surface scaffold, Cycle-003 pre-discharge gate bundle, Cycle-004 Maxwell-form attempt package, Cycle-005 semantics mapping package, Cycle-006 convention-lock package, Cycle-007 import-lane placeholders package, Cycle-008 import-lane interface-contract package, Cycle-009 dual/Hodge convention-lock package, Cycle-010 source/current interface-contract package, Cycle-011 Maxwell equation statement-surface lock package, Cycle-012 potential/field-strength bridge-lock package, and Cycle-013 tensor/forms compatibility-map package, Cycle-014 index/metric + current-decomposition surface package, Cycle-015 continuity-surface compatibility seam package, Cycle-016 Maxwell-to-continuity route attempt-package, Cycle-017 double-divergence antisymmetry/commutation seam package, Cycle-018 Maxwell-to-continuity theorem-attempt package, Cycle-019 smoothness-weakening neg-control package, Cycle-020 distributional/singular-source neg-control package, Cycle-021 distributional lane authorization scaffold, and Cycle-022 authorized distributional semantics mapping package and Cycle-023 authorized distributional semantics reference surface package and Cycle-024 Maxwell-to-continuity route-closure attempt package and Cycle-025 double-divergence theorem-closure attempt package and Cycle-026 double-divergence binding theorem-closure attempt package and Cycle-027 binding-assumptions discharge-from-smoothness package and Cycle-028 Maxwell-to-continuity DD-subroute composition attempt package are pinned; theorem-attempt, neg-control, authorization, classification, reference-only, route-closure-attempt, theorem-closure-attempt, theorem-binding-attempt, binding-assumption-discharge-attempt, and DD-subroute-composition-attempt statements remain localized to their cycle artifacts unless explicitly reauthorized, and typed-DD-subroute-augmentation-attempt statements remain localized to their cycle artifacts unless explicitly reauthorized, and typed-route-consumer-attempt statements remain localized to their cycle artifacts unless explicitly reauthorized. |
 | `PILLAR-SR` | `CLOSED` | `TARGET-SR-COV-PLAN;TARGET-SR-COV-THEOREM-SURFACE-PLAN;TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN;TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN` | `formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md;formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_THEOREM_SURFACE_v0.md;formal/docs/paper/DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md;formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN` | Covariance/kinematics theorem chain discharged under explicit Lorentz and bounded-domain assumptions, derivation-completeness failure-trigger set theorem-discharged, bounded inevitability necessity/counterfactual surface theorem-discharged, and authoritative no-deviation full-derivation/discharge/inevitability roadmap closure synchronized to results/matrix promotion surfaces. |
 | `PILLAR-QFT` | `CLOSED` | `TARGET-QFT-GAUGE-PLAN;TARGET-QFT-EVOL-PLAN;TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0` | `formal/docs/paper/DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0.md;formal/docs/paper/DERIVATION_TARGET_QFT_EVOLUTION_OBJECT_v0.md;formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md` | `TARGET-EM-U1-PLAN;TARGET-SR-COV-PLAN` | Scaffold-first contract/object activation lane only; no quantization claim; no dynamics claim; scaffold saturation is frozen at QFT-EVOL MICRO-01..52; cycle-2 through cycle-26 semantic-hardening milestones are pinned; cycle-27 tranche-rollover legacy-forbid gate bundle is pinned; cycle-28 pre-discharge exit-row criteria lock bundle is pinned; cycle-29 pre-discharge transition bundle lock is pinned; cycle-30 discharge-transition readiness lock bundle is pinned; cycle-31 adjudication-criteria lock bundle is pinned; cycle-32 flip-decision packet lock bundle is pinned; cycle-33 final preflip evidence registry lock bundle is pinned; cycle-34 manual flip-authorization packet lock bundle is pinned; cycle-35 adjudication execution guard lock bundle is pinned; cycle-36 post-authorization revalidation packet lock bundle is pinned; cycle-37 token-flip dryrun simulator lock bundle is pinned; cycle-38 token-flip dryrun attestation lock bundle is pinned; cycle-39 token-flip dryrun reconciliation lock bundle is pinned; cycle-40 token-flip dryrun closure lock bundle is pinned; cycle-41 token-flip dryrun archival lock bundle is pinned; cycle-42 token-flip dryrun handoff lock bundle is pinned; cycle-43 token-flip dryrun custody lock bundle is pinned; cycle-44 token-flip dryrun notarization lock bundle is pinned; cycle-45 token-flip dryrun witness lock bundle is pinned; cycle-46 token-flip dryrun ratification lock bundle is pinned; cycle-47 token-flip dryrun concurrence lock bundle is pinned; cycle-48 token-flip dryrun consensus lock bundle is pinned; cycle-49 token-flip dryrun unanimity lock bundle is pinned; cycle-50 token-flip dryrun closure-consensus lock bundle is pinned; cycle-51 explicit two-key authorization + post-auth revalidation transition lock bundle is pinned; cycle-52 explicit KeyA-authorization event + post-auth revalidation replay lock bundle is pinned; cycle-53 explicit KeyB-authorization event + post-auth revalidation replay lock bundle is pinned; cycle-54 explicit two-key-authorized revalidation-closure lock bundle is pinned; cycle-55 explicit nonflip execution-readiness packet lock bundle is pinned; cycle-56 explicit pre-flip authority attestation packet lock bundle is pinned; cycle-57 explicit flip-eligibility attestation packet lock bundle is pinned; cycle-58 explicit final pre-execution nonflip attestation packet lock bundle is pinned; cycle-59 explicit pre-execution nonflip execution-boundary packet lock bundle is pinned; cycle-60 through cycle-80 pre-execution nonflip execution-custody attestation/confirmation lock bundles are pinned; cycle-81 custody attestation/confirmation lock bundle is pinned; discharge practical action-plan phases for criteria, authorization, and execution guard are pinned; discharge kickoff remains bounded/non-claim (no quantization closure claim, no dynamics derivation closure claim, and no external truth claim). |
-| `PILLAR-STAT` | `LOCKED` | `TARGET-TH-ENTROPY-PLAN` | `formal/docs/paper/DERIVATION_TARGET_THERMO_ENTROPY_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN` | Entropy-balance/thermodynamic closure target with explicit regime and non-equilibrium assumptions. |
+| `PILLAR-STAT` | `ACTIVE` | `TARGET-TH-ENTROPY-PLAN` | `formal/docs/paper/DERIVATION_TARGET_THERMO_ENTROPY_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN` | Entropy-balance/thermodynamic closure target with explicit regime and non-equilibrium assumptions. |
 | `PILLAR-COSMO` | `LOCKED` | `TARGET-COSMO-BG-PLAN` | `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-SR-COV-PLAN` | Background-cosmology target with explicit metric/expansion assumptions and falsifiable hooks. |
 
 ## Promotion Attempt Log
