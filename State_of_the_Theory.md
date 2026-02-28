@@ -9,6 +9,9 @@ Last updated: 2026-02-24
 Canonical bounded status note (2026-02-24):
 - For the current canonical five-pillar set (`PILLAR-QFT`, `PILLAR-QM`, `PILLAR-GR`, `PILLAR-EM`, `PILLAR-SR`), bounded full-derivation and inevitability adjudications are discharged and matrix status is `CLOSED`.
 - Canonical source-of-truth pointer for this claim: `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`.
+- Pillar phase advancement standard pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`.
+- Pillar phase advancement registry pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`.
+- Pillar phase advancement gate pointer: `formal/python/tests/test_pillar_phase_advancement_gate.py`.
 - This note does not include downstream locked queue pillar (`PILLAR-COSMO`), and excludes `PILLAR-STAT` active pre-discharge posture from the canonical five-pillar closed-set claim.
 - This note does not assert all-5 adequacy completion; bounded governance discharge and adequacy maturity remain distinct.
 
@@ -18,6 +21,20 @@ STAT activation checkpoint (2026-02-26):
 - post-activation validation template pointer: `formal/docs/release/PILLAR_STAT_ACTIVATION_CHANGESET_TEMPLATE_v0.md`.
 - `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION: ACTIVE_PREEXECUTION_v0_NONDISCHARGED`
 - `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: ACTIVE_PREEXECUTION_v0_NONDISCHARGED`
+- `STAT_SCAFFOLD_PHASE_COMPLETION_v0: CYCLE01_ROW_AND_TRANSITION_SCAFFOLDS_SATURATED`
+- `STAT_NEXT_EXECUTION_PHASE_v0: EVIDENCE_ADEQUACY_AND_DISCHARGE_READINESS`
+- `STAT_NEXT_EXECUTION_OBJECTIVE_v0: COMPLETE_5X5_ADEQUACY_INPUTS_BEFORE_FURTHER_SCAFFOLD_EXPANSION`
+- `STAT_NEXT_EXECUTION_TOKEN_v0: EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0`
+- `STAT_NEXT_EXECUTION_TOKEN_STATE_v0: NOT_PRESENT_v0`
+- `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: NOT_PRESENT_v0`
+- `STAT_SCAFFOLD_PHASE_COMPONENT_GATE_FREEZE_v0: 43`
+- `STAT_SCAFFOLD_PHASE_REOPEN_RULE_v0: EXPLICIT_REOPEN_REQUIRED_BEFORE_COMPONENT_GATE_EXPANSION`
+- `STAT_SCAFFOLD_PHASE_REOPEN_TOKEN_v0: NOT_PRESENT_v0`
+- `STAT_PHASE_ADVANCEMENT_GATE_v0: CROSS_SURFACE_PARITY_AND_COMPONENT_FREEZE_REQUIRED`
+- advancement contract pointer: `formal/docs/release/PILLAR_STAT_PHASE_ADVANCEMENT_CONTRACT_v0.md`
+- global standard pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`
+- registry pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`
+- advancement gate path: `formal/python/tests/test_pillar_phase_advancement_gate.py`
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_v0: stat_evidence_checkpoint_cycle01_v0`
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_SHA256_v0: 7322727f0e7ff87e127127a08228ea5e6bf46250b15698cfb9dfe6a6b766ca25`
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`

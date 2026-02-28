@@ -66,6 +66,10 @@ No-deviation sequencing rule:
 - Matrix consistency gate pointer:
   - `formal/python/tests/test_pillar_status_matrix_consistency_gate.py`
   - `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
+- Pillar phase advancement standard pointer:
+  - `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`
+  - `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`
+  - `formal/python/tests/test_pillar_phase_advancement_gate.py`
 - Post-GR01 unlock queue (frozen order intent):
   - first unlock cohort: `PILLAR-SR` and `PILLAR-EM` after `TARGET-GR01-DERIV-CHECKLIST-PLAN` is `CLOSED`,
   - downstream unlock order intent: `PILLAR-QFT` -> `PILLAR-STAT` -> `PILLAR-COSMO`, each gated by listed prerequisites.
@@ -133,6 +137,20 @@ Current dual-layer snapshot (machine-checkable tokens):
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_v0: stat_evidence_checkpoint_cycle01_v0`
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_SHA256_v0: 7322727f0e7ff87e127127a08228ea5e6bf46250b15698cfb9dfe6a6b766ca25`
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `STAT_SCAFFOLD_PHASE_COMPLETION_v0: CYCLE01_ROW_AND_TRANSITION_SCAFFOLDS_SATURATED`
+- `STAT_NEXT_EXECUTION_PHASE_v0: EVIDENCE_ADEQUACY_AND_DISCHARGE_READINESS`
+- `STAT_NEXT_EXECUTION_OBJECTIVE_v0: COMPLETE_5X5_ADEQUACY_INPUTS_BEFORE_FURTHER_SCAFFOLD_EXPANSION`
+- `STAT_NEXT_EXECUTION_TOKEN_v0: EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0`
+- `STAT_NEXT_EXECUTION_TOKEN_STATE_v0: NOT_PRESENT_v0`
+- `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: NOT_PRESENT_v0`
+- `STAT_SCAFFOLD_PHASE_COMPONENT_GATE_FREEZE_v0: 43`
+- `STAT_SCAFFOLD_PHASE_REOPEN_RULE_v0: EXPLICIT_REOPEN_REQUIRED_BEFORE_COMPONENT_GATE_EXPANSION`
+- `STAT_SCAFFOLD_PHASE_REOPEN_TOKEN_v0: NOT_PRESENT_v0`
+- `STAT_PHASE_ADVANCEMENT_GATE_v0: CROSS_SURFACE_PARITY_AND_COMPONENT_FREEZE_REQUIRED`
+- advancement contract pointer: `formal/docs/release/PILLAR_STAT_PHASE_ADVANCEMENT_CONTRACT_v0.md`
+- global standard pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`
+- registry pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`
+- advancement gate path: `formal/python/tests/test_pillar_phase_advancement_gate.py`
 - `formal/output/stat_evidence_checkpoint_cycle01_v0.json`
 - `formal/python/tests/test_stat_evidence_checkpoint_coupling_cycle01_gate.py`
 - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle01_v0`
@@ -561,6 +579,8 @@ QFT full-derivation pre-discharge closure pin (cycle-27/cycle-50):
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE42_v0: TOKEN_FLIP_DRYRUN_HANDOFF_LOCK_PINNED`
 - `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_HANDOFF_GATE_v0: REQUIRE_ARCHIVAL_IMMUTABILITY_AND_HANDOFF_READINESS`
 - `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_HANDOFF_SCOPE_v0: CYCLE41_ARCHIVE_CHAIN_AND_CYCLE37_40_TRACE_TRANSFER`
+- QFT full-derivation token-flip dryrun handoff artifact pointer: `formal/output/qft_full_derivation_token_flip_dryrun_handoff_cycle42_v0.json`
+- QFT full-derivation token-flip dryrun handoff cycle-42 gate: `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_handoff_cycle42_gate.py`
 - `QFT_FULL_DERIVATION_PROGRESS_CYCLE43_v0: TOKEN_FLIP_DRYRUN_CUSTODY_LOCK_PINNED`
 - `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CUSTODY_GATE_v0: REQUIRE_HANDOFF_COMPLETENESS_AND_CUSTODY_CHAIN_SEAL`
 - `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CUSTODY_SCOPE_v0: CYCLE42_HANDOFF_WITH_CYCLE37_41_AUDIT_LINKAGE`

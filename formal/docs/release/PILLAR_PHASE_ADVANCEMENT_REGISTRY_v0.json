@@ -1,0 +1,136 @@
+{
+  "registry_id": "PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0",
+  "registry_version": 1,
+  "standard_doc": "formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md",
+  "gate_path": "formal/python/tests/test_pillar_phase_advancement_gate.py",
+  "global_tokens": {
+    "focus_token": "NEXT_PILLAR_FOCUS_v0",
+    "lane_token": "NEXT_PILLAR_PRIMARY_LANE_v0"
+  },
+  "pillars": [
+    {
+      "pillar_id": "PILLAR-GR",
+      "mode": "CLOSED_HANDOFF",
+      "authority_doc_path": "formal/docs/paper/DERIVATION_TARGET_GR01_HARDENING_v0.md",
+      "expected_matrix_status": "CLOSED",
+      "completion_token": "GR01_HARDENING_ADJUDICATION",
+      "completion_value": "DISCHARGED_v0_DISCRETE_HARDENED",
+      "roadmap_proceed_token": "PROCEED_GATE_GR",
+      "roadmap_proceed_prefix": "ALLOWED_",
+      "expected_global_focus": "PILLAR-STAT",
+      "expected_global_lane": "TARGET-TH-ENTROPY-PLAN"
+    },
+    {
+      "pillar_id": "PILLAR-QM",
+      "mode": "CLOSED_HANDOFF",
+      "authority_doc_path": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "expected_matrix_status": "CLOSED",
+      "completion_token": "PILLAR_QM_FULL_DERIVATION_DISCHARGE_ADJUDICATION",
+      "completion_value": "DISCHARGED_v0_DERIVATION_GRADE",
+      "roadmap_proceed_token": "PROCEED_GATE_QM",
+      "roadmap_proceed_prefix": "ALLOWED_",
+      "expected_global_focus": "PILLAR-STAT",
+      "expected_global_lane": "TARGET-TH-ENTROPY-PLAN"
+    },
+    {
+      "pillar_id": "PILLAR-EM",
+      "mode": "CLOSED_HANDOFF",
+      "authority_doc_path": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "expected_matrix_status": "CLOSED",
+      "completion_token": "PILLAR_EM_FULL_DERIVATION_DISCHARGE_ADJUDICATION",
+      "completion_value": "DISCHARGED_v0_DERIVATION_GRADE",
+      "roadmap_proceed_token": "PROCEED_GATE_EM",
+      "roadmap_proceed_prefix": "ALLOWED_",
+      "expected_global_focus": "PILLAR-STAT",
+      "expected_global_lane": "TARGET-TH-ENTROPY-PLAN"
+    },
+    {
+      "pillar_id": "PILLAR-SR",
+      "mode": "PHASE_ORDERED",
+      "authority_doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "expected_matrix_status": "CLOSED",
+      "phase_pairs": [
+        {
+          "completion_token": "SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0",
+          "completion_value": "THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM",
+          "next_token": "SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0",
+          "next_value": "CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM"
+        },
+        {
+          "completion_token": "SR_FULL_DERIVATION_PHASE3_COMPLETION_STATUS_v0",
+          "completion_value": "ASSUMPTION_MINIMIZATION_ROBUSTNESS_NEGCTRL_DISCHARGE_PINNED_NONCLAIM",
+          "next_token": "SR_FULL_DERIVATION_PHASE4_ENTRY_STATUS_v0",
+          "next_value": "ROBUSTNESS_NEGCTRL_DISCHARGE_ENTRY_PINNED_NONCLAIM"
+        },
+        {
+          "completion_token": "SR_FULL_DERIVATION_PHASE4_COMPLETION_STATUS_v0",
+          "completion_value": "ROBUSTNESS_NEGCTRL_DISCHARGE_COMPLETION_PINNED_NONCLAIM",
+          "next_token": "SR_FULL_DERIVATION_PHASE5_ENTRY_STATUS_v0",
+          "next_value": "DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM"
+        },
+        {
+          "completion_token": "SR_FULL_DERIVATION_PHASE5_COMPLETION_STATUS_v0",
+          "completion_value": "DERIVATION_COMPLETENESS_GATE_DISCHARGE_COMPLETION_PINNED_NONCLAIM",
+          "next_token": "SR_FULL_DERIVATION_PHASE6_ENTRY_STATUS_v0",
+          "next_value": "INEVITABILITY_GATE_ENTRY_PINNED_NONCLAIM"
+        },
+        {
+          "completion_token": "SR_FULL_DERIVATION_PHASE6_COMPLETION_STATUS_v0",
+          "completion_value": "INEVITABILITY_GATE_DISCHARGE_COMPLETION_PINNED_NONCLAIM",
+          "next_token": "SR_FULL_DERIVATION_PHASE7_ENTRY_STATUS_v0",
+          "next_value": "PACKAGE_FREEZE_REOPEN_POLICY_ENTRY_PINNED_NONCLAIM"
+        }
+      ]
+    },
+    {
+      "pillar_id": "PILLAR-QFT",
+      "mode": "CLOSED_HANDOFF_ARTIFACT",
+      "authority_doc_path": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "expected_matrix_status": "CLOSED",
+      "completion_token": "QFT_FULL_DERIVATION_ADJUDICATION",
+      "completion_value": "DISCHARGED_v0",
+      "handoff_token": "QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_HANDOFF_ARTIFACT_v0",
+      "handoff_value": "qft_full_derivation_token_flip_dryrun_handoff_cycle42_v0",
+      "handoff_artifact_path": "formal/output/qft_full_derivation_token_flip_dryrun_handoff_cycle42_v0.json",
+      "handoff_gate_path": "formal/python/tests/test_qft_full_derivation_token_flip_dryrun_handoff_cycle42_gate.py",
+      "expected_global_focus": "PILLAR-STAT",
+      "expected_global_lane": "TARGET-TH-ENTROPY-PLAN"
+    },
+    {
+      "pillar_id": "PILLAR-STAT",
+      "mode": "ACTIVE_EXECUTION",
+      "authority_doc_path": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "contract_doc_path": "formal/docs/release/PILLAR_STAT_PHASE_ADVANCEMENT_CONTRACT_v0.md",
+      "component_gate_registry_path": "formal/docs/release/STAT_ROW_SCAFFOLD_COMPONENT_GATE_REGISTRY_v0.json",
+      "component_gate_registry_key": "component_gates",
+      "expected_matrix_status": "ACTIVE",
+      "expected_roadmap_status": "ACTIVE",
+      "required_tokens": {
+        "STAT_SCAFFOLD_PHASE_COMPLETION_v0": "CYCLE01_ROW_AND_TRANSITION_SCAFFOLDS_SATURATED",
+        "STAT_NEXT_EXECUTION_PHASE_v0": "EVIDENCE_ADEQUACY_AND_DISCHARGE_READINESS",
+        "STAT_NEXT_EXECUTION_OBJECTIVE_v0": "COMPLETE_5X5_ADEQUACY_INPUTS_BEFORE_FURTHER_SCAFFOLD_EXPANSION",
+        "STAT_NEXT_EXECUTION_TOKEN_v0": "EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0",
+        "STAT_NEXT_EXECUTION_TOKEN_STATE_v0": "NOT_PRESENT_v0",
+        "EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0": "NOT_PRESENT_v0",
+        "STAT_SCAFFOLD_PHASE_COMPONENT_GATE_FREEZE_v0": "43",
+        "STAT_SCAFFOLD_PHASE_REOPEN_RULE_v0": "EXPLICIT_REOPEN_REQUIRED_BEFORE_COMPONENT_GATE_EXPANSION",
+        "STAT_SCAFFOLD_PHASE_REOPEN_TOKEN_v0": "NOT_PRESENT_v0",
+        "STAT_PHASE_ADVANCEMENT_GATE_v0": "CROSS_SURFACE_PARITY_AND_COMPONENT_FREEZE_REQUIRED"
+      },
+      "component_gate_freeze_count": 43,
+      "component_gate_reopen_token": "STAT_SCAFFOLD_PHASE_REOPEN_TOKEN_v0",
+      "component_gate_reopen_absent_value": "NOT_PRESENT_v0"
+    },
+    {
+      "pillar_id": "PILLAR-COSMO",
+      "mode": "LOCKED_QUEUE",
+      "authority_doc_path": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "roadmap_status": "LOCKED",
+      "target_id": "TARGET-COSMO-BG-PLAN",
+      "prerequisites": [
+        "TARGET-GR01-DERIV-CHECKLIST-PLAN",
+        "TARGET-SR-COV-PLAN"
+      ]
+    }
+  ]
+}
