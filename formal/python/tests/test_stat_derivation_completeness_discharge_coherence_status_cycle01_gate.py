@@ -27,6 +27,7 @@ ARTIFACT_PATH = (
 EXPECTED_ARTIFACT_ID = "stat_derivation_completeness_discharge_coherence_status_cycle01_v0"
 EXPECTED_COUPLING_GATE = "ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED"
 EXPECTED_STATUS_VALUE = "COHERENCE_SCAFFOLD_PINNED_NONCLAIM"
+ALLOWED_FAILURE_TRIGGER_SURFACE_STATUS_VALUES = {"NOT_PRESENT_v0", "ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM"}
 EXPECTED_ARTIFACT_REL = "formal/output/stat_derivation_completeness_discharge_coherence_status_cycle01_v0.json"
 EXPECTED_GATE_REL = "formal/python/tests/test_stat_derivation_completeness_discharge_coherence_status_cycle01_gate.py"
 
@@ -81,11 +82,20 @@ def test_stat_derivation_completeness_discharge_coherence_status_cycle01_gate() 
         ("STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_CYCLE01_ARTIFACT_v0", EXPECTED_ARTIFACT_ID),
         ("STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_CYCLE01_GATE_v0", EXPECTED_COUPLING_GATE),
         ("STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_v0", EXPECTED_STATUS_VALUE),
-        ("STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0", "NOT_PRESENT_v0"),
     ):
         assert _extract_token(stat_text, token_name) == expected
         assert _extract_token(state_text, token_name) == expected
         assert _extract_token(roadmap_text, token_name) == expected
+
+    for doc_text, doc_label in (
+        (stat_text, "STAT plan"),
+        (state_text, "state"),
+        (roadmap_text, "roadmap"),
+    ):
+        failure_trigger_surface_status = _extract_token(doc_text, "STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0")
+        assert failure_trigger_surface_status in ALLOWED_FAILURE_TRIGGER_SURFACE_STATUS_VALUES, (
+            f"{doc_label} must keep the failure-trigger surface-status token either pre-admission or surface-status pinned."
+        )
 
     stat_sha = _extract_token(stat_text, "STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_CYCLE01_SHA256_v0")
     state_sha = _extract_token(state_text, "STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_CYCLE01_SHA256_v0")
