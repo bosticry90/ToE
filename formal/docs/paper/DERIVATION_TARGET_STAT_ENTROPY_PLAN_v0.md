@@ -83,11 +83,13 @@ Adequacy-facing 5x5 justification block (bounded, non-adjudicative):
 
 Phase advancement contract (active once scaffold saturation is pinned):
 - `STAT_SCAFFOLD_PHASE_COMPLETION_v0: CYCLE01_ROW_AND_TRANSITION_SCAFFOLDS_SATURATED`
-- `STAT_NEXT_EXECUTION_PHASE_v0: DERIVATION_COMPLETENESS_GATE_PREPARATION`
-- `STAT_NEXT_EXECUTION_OBJECTIVE_v0: DEFINE_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_AFTER_ADEQUACY`
-- `STAT_NEXT_EXECUTION_TOKEN_v0: STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0`
+- `STAT_NEXT_EXECUTION_PHASE_v0: DERIVATION_COMPLETENESS_GATE_ENTRY`
+- `STAT_NEXT_EXECUTION_OBJECTIVE_v0: PIN_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_AFTER_READINESS_PACKET`
+- `STAT_NEXT_EXECUTION_TOKEN_v0: STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0`
 - `STAT_NEXT_EXECUTION_TOKEN_STATE_v0: NOT_PRESENT_v0`
-- `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: NOT_PRESENT_v0`
+- `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+- `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_SCOPE_v0: ADEQUACY_COMPLETE_AND_SCOPE_BOUNDARIES_PINNED_BEFORE_ENTRY`
+- `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: NOT_PRESENT_v0`
 - `STAT_SCAFFOLD_PHASE_COMPONENT_GATE_FREEZE_v0: 43`
 - `STAT_SCAFFOLD_PHASE_REOPEN_RULE_v0: EXPLICIT_REOPEN_REQUIRED_BEFORE_COMPONENT_GATE_EXPANSION`
 - `STAT_SCAFFOLD_PHASE_REOPEN_TOKEN_v0: NOT_PRESENT_v0`
@@ -96,7 +98,7 @@ Phase advancement contract (active once scaffold saturation is pinned):
 - global standard pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`
 - registry pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`
 - advancement gate path: `formal/python/tests/test_pillar_phase_advancement_gate.py`
-- once the scaffold saturation token is pinned, continue on the next unfinished readiness packet or flip the reopen token in the same change set before expanding scaffold-phase component gates.
+- once the scaffold saturation token is pinned, continue on the next unfinished execution token or flip the reopen token in the same change set before expanding scaffold-phase component gates.
 
 Cycle01 evidence-checkpoint artifact scaffold (active pre-discharge structural checkpoint):
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_v0: stat_evidence_checkpoint_cycle01_v0`
@@ -447,6 +449,33 @@ Cycle01 `PILLAR-STAT` derivation-completeness gate scope-boundary scaffold (boun
 - bounded derivation-completeness gate scope only; no discharge completion claim and no external truth claim.
 - derivation-completeness gate scope-boundary scaffold remains placeholder/non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
 - no derivation-completeness discharge claim, no failure-trigger adjudication claim, no matrix-status change claim, and no external truth claim are introduced by this scaffold.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` derivation-completeness gate readiness packet (bounded non-promotional coupling layer):
+- `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_CYCLE01_ARTIFACT_v0: stat_derivation_completeness_gate_readiness_packet_cycle01_v0`
+- `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_CYCLE01_SHA256_v0: 5d5665426bee040ce202cc839727755c8985d3b18958d6ac612d4c1bb5cef1c3`
+- `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_derivation_completeness_gate_readiness_packet_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_derivation_completeness_gate_readiness_packet_cycle01_gate.py`
+- `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+- `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_SCOPE_v0: ADEQUACY_COMPLETE_AND_SCOPE_BOUNDARIES_PINNED_BEFORE_ENTRY`
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded derivation-completeness readiness-input scope only; no derivation-completeness discharge claim and no external truth claim.
+- readiness packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- required readiness inputs pinned for this packet:
+  - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_DERIVATION_COMPLETENESS_DISCHARGE_THEOREM_SURFACE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_DERIVATION_COMPLETENESS_DISCHARGE_OBJECT_SURFACE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0`
+  - `STAT_MULTI_CYCLE_DRIFT_RESISTANCE_SWEEP_CYCLE02_ARTIFACT_v0`
+- no derivation-completeness gate entry claim, no failure-trigger discharge claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
 - any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
 
 Cycle01 `PILLAR-STAT` failure-trigger audit scope-boundary scaffold (bounded non-promotional coupling layer):
