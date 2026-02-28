@@ -83,14 +83,15 @@ Adequacy-facing 5x5 justification block (bounded, non-adjudicative):
 
 Phase advancement contract (active once scaffold saturation is pinned):
 - `STAT_SCAFFOLD_PHASE_COMPLETION_v0: CYCLE01_ROW_AND_TRANSITION_SCAFFOLDS_SATURATED`
-- `STAT_NEXT_EXECUTION_PHASE_v0: DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_ENTRY`
-- `STAT_NEXT_EXECUTION_OBJECTIVE_v0: PIN_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_AFTER_GATE_ENTRY`
-- `STAT_NEXT_EXECUTION_TOKEN_v0: STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_v0`
+- `STAT_NEXT_EXECUTION_PHASE_v0: DERIVATION_COMPLETENESS_DISCHARGE_THEOREM_SURFACE_ENTRY`
+- `STAT_NEXT_EXECUTION_OBJECTIVE_v0: PIN_DERIVATION_COMPLETENESS_DISCHARGE_THEOREM_SURFACE_STATUS_AFTER_SURFACE_STATUS`
+- `STAT_NEXT_EXECUTION_TOKEN_v0: STAT_DERIVATION_COMPLETENESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0`
 - `STAT_NEXT_EXECUTION_TOKEN_STATE_v0: NOT_PRESENT_v0`
 - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
 - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_SCOPE_v0: ADEQUACY_COMPLETE_AND_SCOPE_BOUNDARIES_PINNED_BEFORE_ENTRY`
 - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
-- `STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_v0: NOT_PRESENT_v0`
+- `STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_DERIVATION_COMPLETENESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: NOT_PRESENT_v0`
 - `STAT_SCAFFOLD_PHASE_COMPONENT_GATE_FREEZE_v0: 43`
 - `STAT_SCAFFOLD_PHASE_REOPEN_RULE_v0: EXPLICIT_REOPEN_REQUIRED_BEFORE_COMPONENT_GATE_EXPANSION`
 - `STAT_SCAFFOLD_PHASE_REOPEN_TOKEN_v0: NOT_PRESENT_v0`
@@ -500,6 +501,30 @@ Cycle01 `PILLAR-STAT` derivation-completeness gate entry status packet (bounded 
   - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
   - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
 - no discharge-surface execution claim, no derivation-completeness discharge claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` derivation-completeness discharge-surface status packet (bounded non-promotional coupling layer):
+- `STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_CYCLE01_ARTIFACT_v0: stat_derivation_completeness_discharge_surface_status_cycle01_v0`
+- `STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_CYCLE01_SHA256_v0: 2c7e998b03316b2604e22aa613256dc22dcc22adad3b2238560779f95f97706a`
+- `STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_derivation_completeness_discharge_surface_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_derivation_completeness_discharge_surface_status_cycle01_gate.py`
+- `STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_DERIVATION_COMPLETENESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: NOT_PRESENT_v0`
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded derivation-completeness discharge-surface entry scope only; no theorem-surface execution claim and no external truth claim.
+- discharge-surface status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- required surface-status inputs pinned for this packet:
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_DERIVATION_COMPLETENESS_DISCHARGE_THEOREM_SURFACE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no theorem-surface execution claim, no derivation-completeness discharge claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
 - any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
 
 Cycle01 `PILLAR-STAT` failure-trigger audit scope-boundary scaffold (bounded non-promotional coupling layer):
