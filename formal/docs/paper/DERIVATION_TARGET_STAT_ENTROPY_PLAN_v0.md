@@ -83,13 +83,14 @@ Adequacy-facing 5x5 justification block (bounded, non-adjudicative):
 
 Phase advancement contract (active once scaffold saturation is pinned):
 - `STAT_SCAFFOLD_PHASE_COMPLETION_v0: CYCLE01_ROW_AND_TRANSITION_SCAFFOLDS_SATURATED`
-- `STAT_NEXT_EXECUTION_PHASE_v0: DERIVATION_COMPLETENESS_GATE_ENTRY`
-- `STAT_NEXT_EXECUTION_OBJECTIVE_v0: PIN_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_AFTER_READINESS_PACKET`
-- `STAT_NEXT_EXECUTION_TOKEN_v0: STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0`
+- `STAT_NEXT_EXECUTION_PHASE_v0: DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_ENTRY`
+- `STAT_NEXT_EXECUTION_OBJECTIVE_v0: PIN_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_AFTER_GATE_ENTRY`
+- `STAT_NEXT_EXECUTION_TOKEN_v0: STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_v0`
 - `STAT_NEXT_EXECUTION_TOKEN_STATE_v0: NOT_PRESENT_v0`
 - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
 - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_SCOPE_v0: ADEQUACY_COMPLETE_AND_SCOPE_BOUNDARIES_PINNED_BEFORE_ENTRY`
-- `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: NOT_PRESENT_v0`
+- `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+- `STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_v0: NOT_PRESENT_v0`
 - `STAT_SCAFFOLD_PHASE_COMPONENT_GATE_FREEZE_v0: 43`
 - `STAT_SCAFFOLD_PHASE_REOPEN_RULE_v0: EXPLICIT_REOPEN_REQUIRED_BEFORE_COMPONENT_GATE_EXPANSION`
 - `STAT_SCAFFOLD_PHASE_REOPEN_TOKEN_v0: NOT_PRESENT_v0`
@@ -476,6 +477,29 @@ Cycle01 `PILLAR-STAT` derivation-completeness gate readiness packet (bounded non
   - `STAT_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0`
   - `STAT_MULTI_CYCLE_DRIFT_RESISTANCE_SWEEP_CYCLE02_ARTIFACT_v0`
 - no derivation-completeness gate entry claim, no failure-trigger discharge claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` derivation-completeness gate entry status packet (bounded non-promotional coupling layer):
+- `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_CYCLE01_ARTIFACT_v0: stat_derivation_completeness_gate_entry_status_cycle01_v0`
+- `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_CYCLE01_SHA256_v0: a60ac39fa38b5c61a1f559ec0b39c5f396eb3d1dcc213e79d45dc44d2985c799`
+- `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_derivation_completeness_gate_entry_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_derivation_completeness_gate_entry_status_cycle01_gate.py`
+- `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+- `STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_v0: NOT_PRESENT_v0`
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded derivation-completeness gate-entry scope only; no discharge-surface execution claim and no external truth claim.
+- entry-status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- required entry inputs pinned for this packet:
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no discharge-surface execution claim, no derivation-completeness discharge claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
 - any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
 
 Cycle01 `PILLAR-STAT` failure-trigger audit scope-boundary scaffold (bounded non-promotional coupling layer):
