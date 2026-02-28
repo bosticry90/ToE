@@ -42,16 +42,52 @@ Required discharge rows (reserved placeholders; non-authoritative until wired):
 - `TOE-STAT-DER-01` (entropy-balance theorem surface placeholder)
 - `TOE-STAT-DER-02` (regime-validity and closure-coupling placeholder)
 
-Evidence adequacy placeholder:
-- `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: NOT_PRESENT_v0`
+Adequacy-facing 5x5 justification block (bounded, non-adjudicative):
+- `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
 - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_ENTRY_THRESHOLD_v0: MIN_5_ENTRIES_REQUIRED`
+- `STAT_ADEQUACY_ENTRY_01_v0`
+  - adequacy claim: DER-01 theorem-body scaffold preserves the minimum entropy-balance relation slots needed for bounded downstream discharge preparation.
+  - metric/invariant: required theorem-body component coverage.
+  - artifact hash token: `STAT_DER01_THEOREM_BODY_SCAFFOLD_CYCLE01_ARTIFACT_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_stat_der01_theorem_body_scaffold_coupling_cycle01_gate.py`.
+  - pass criterion: Boolean `True` and required component count `>= 5`.
+  - failure mode: theorem-body slot omission or row-binding drift.
+- `STAT_ADEQUACY_ENTRY_02_v0`
+  - adequacy claim: DER-01 object-surface scaffold preserves the minimum entropy quantity / flux / source slot surface needed for bounded theorem-object coherence.
+  - metric/invariant: required object-surface component coverage.
+  - artifact hash token: `STAT_DER01_OBJECT_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_stat_der01_object_surface_scaffold_coupling_cycle01_gate.py`.
+  - pass criterion: Boolean `True` and required component count `>= 5`.
+  - failure mode: object-surface slot omission or theorem/object coherence drift.
+- `STAT_ADEQUACY_ENTRY_03_v0`
+  - adequacy claim: DER-02 regime-validity / closure-coupling scaffold remains bounded to the DER-01 dependency chain instead of floating free of entropy-balance prerequisites.
+  - metric/invariant: sibling dependency and prerequisite linkage count.
+  - artifact hash token: `STAT_DER02_REGIME_CLOSURE_COUPLING_SCAFFOLD_CYCLE01_ARTIFACT_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate.py`.
+  - pass criterion: Boolean `True` and explicit dependency count `>= 2`.
+  - failure mode: regime-closure scaffold detaches from DER-01 prerequisite surfaces.
+- `STAT_ADEQUACY_ENTRY_04_v0`
+  - adequacy claim: multi-cycle drift resistance remains bounded across the admitted STAT scaffold bundle, so the active lane stays pointer-stable across consecutive cycles.
+  - metric/invariant: cycle-window token and pointer stability.
+  - artifact hash token: `STAT_MULTI_CYCLE_DRIFT_RESISTANCE_SWEEP_CYCLE02_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_stat_multi_cycle_drift_resistance_sweep_cycle02_gate.py`.
+  - pass criterion: Boolean `True` and cycle window size `>= 2`.
+  - failure mode: cross-surface pointer drift or token instability across admitted cycles.
+- `STAT_ADEQUACY_ENTRY_05_v0`
+  - adequacy claim: derivation-completeness gate scope-boundary remains explicitly blocked on adequacy completion and preserves the non-promotional transition boundary for the next STAT phase.
+  - metric/invariant: required derivation-completeness input coverage.
+  - artifact hash token: `STAT_DERIVATION_COMPLETENESS_GATE_SCOPE_BOUNDARY_CYCLE01_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_stat_derivation_completeness_gate_scope_boundary_cycle01_gate.py`.
+  - pass criterion: Boolean `True` and required input count `>= 4`.
+  - failure mode: premature completeness execution or missing downstream gate inputs.
 
 Phase advancement contract (active once scaffold saturation is pinned):
 - `STAT_SCAFFOLD_PHASE_COMPLETION_v0: CYCLE01_ROW_AND_TRANSITION_SCAFFOLDS_SATURATED`
-- `STAT_NEXT_EXECUTION_PHASE_v0: EVIDENCE_ADEQUACY_AND_DISCHARGE_READINESS`
-- `STAT_NEXT_EXECUTION_OBJECTIVE_v0: COMPLETE_5X5_ADEQUACY_INPUTS_BEFORE_FURTHER_SCAFFOLD_EXPANSION`
-- `STAT_NEXT_EXECUTION_TOKEN_v0: EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0`
+- `STAT_NEXT_EXECUTION_PHASE_v0: DERIVATION_COMPLETENESS_GATE_PREPARATION`
+- `STAT_NEXT_EXECUTION_OBJECTIVE_v0: DEFINE_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_AFTER_ADEQUACY`
+- `STAT_NEXT_EXECUTION_TOKEN_v0: STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0`
 - `STAT_NEXT_EXECUTION_TOKEN_STATE_v0: NOT_PRESENT_v0`
+- `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: NOT_PRESENT_v0`
 - `STAT_SCAFFOLD_PHASE_COMPONENT_GATE_FREEZE_v0: 43`
 - `STAT_SCAFFOLD_PHASE_REOPEN_RULE_v0: EXPLICIT_REOPEN_REQUIRED_BEFORE_COMPONENT_GATE_EXPANSION`
 - `STAT_SCAFFOLD_PHASE_REOPEN_TOKEN_v0: NOT_PRESENT_v0`
@@ -60,7 +96,7 @@ Phase advancement contract (active once scaffold saturation is pinned):
 - global standard pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`
 - registry pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`
 - advancement gate path: `formal/python/tests/test_pillar_phase_advancement_gate.py`
-- once the scaffold saturation token is pinned, continue on evidence-adequacy/discharge-readiness work or flip the reopen token in the same change set before expanding scaffold-phase component gates.
+- once the scaffold saturation token is pinned, continue on the next unfinished readiness packet or flip the reopen token in the same change set before expanding scaffold-phase component gates.
 
 Cycle01 evidence-checkpoint artifact scaffold (active pre-discharge structural checkpoint):
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_v0: stat_evidence_checkpoint_cycle01_v0`

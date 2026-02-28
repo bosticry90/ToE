@@ -58,6 +58,7 @@ Per-pillar adequacy justification token scaffold:
 - `EVIDENCE_ADEQUACY_QFT_5X5_JUSTIFICATION_v0: NOT_PRESENT_v0`
 - `EVIDENCE_ADEQUACY_QM_5X5_JUSTIFICATION_v0: NOT_PRESENT_v0`
 - `EVIDENCE_ADEQUACY_GR_5X5_JUSTIFICATION_v0: NOT_PRESENT_v0`
+- `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
 - `EVIDENCE_ADEQUACY_EM_5X5_JUSTIFICATION_v0: PRESENT`
 - `EVIDENCE_ADEQUACY_SR_5X5_JUSTIFICATION_v0: PRESENT`
 
@@ -70,6 +71,7 @@ Per-pillar adequacy justification token scaffold:
 - EM evidence depth improved again via comparator cycle-02 artifact + dedicated coupling gate (`EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE02_*`).
 - SR adequacy posture improved via explicit 5x5 adequacy-justification entries (`EVIDENCE_ADEQUACY_SR_5X5_JUSTIFICATION_v0: PRESENT`) linked to artifact-hash + coupling-gate + pass-criterion rows.
 - EM adequacy posture improved via explicit 5x5 comparator adequacy-justification entries (`EVIDENCE_ADEQUACY_EM_5X5_JUSTIFICATION_v0: PRESENT`) linked to cycle sensitivity rows.
+- STAT adequacy posture improved via explicit 5x5 adequacy-justification entries (`EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`) linked to active-lane scaffold integrity rows.
 - SR evidence depth extended by one cycle (`SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE11_*`) with dedicated coupling gate.
 - EM comparator depth extended by one cycle (`EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE12_*`) with dedicated coupling gate.
 - GR evidence depth improved via publication-bridge checkpoint artifact + dedicated coupling gate (`GR01_PUBLICATION_BRIDGE_CHECKPOINT_*`).
