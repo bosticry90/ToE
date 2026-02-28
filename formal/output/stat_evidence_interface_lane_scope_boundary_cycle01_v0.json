@@ -1,0 +1,27 @@
+{
+  "artifact_id": "stat_evidence_interface_lane_scope_boundary_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_evidence_interface_lane_scope_boundary_cycle01",
+    "status": "placeholder_non_promotional",
+    "interface_scope_boundary": [
+      "evidence_interface_schema_placeholder_only",
+      "no_external_dataset_admission_claim",
+      "no_stat_adequacy_adjudication_claim",
+      "no_label_promotion_claim",
+      "no_external_truth_claim"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "07f7b2e9a150021ffff8af54c763dc5dc12a35490b1fb2cc94f3eaa49f0729f8"
+}

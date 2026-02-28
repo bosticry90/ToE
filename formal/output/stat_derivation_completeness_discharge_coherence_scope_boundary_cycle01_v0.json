@@ -1,0 +1,35 @@
+{
+  "artifact_id": "stat_derivation_completeness_discharge_coherence_scope_boundary_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_derivation_completeness_discharge_coherence_scope_boundary_cycle01",
+    "status": "placeholder_non_promotional",
+    "coherence_scope_boundary": [
+      "derivation_completeness_discharge_surface_theorem_object_alignment_placeholder_only",
+      "derivation_completeness_discharge_dependency_consistency_placeholder_only",
+      "no_derivation_completeness_coherence_discharge_claim",
+      "no_label_promotion_claim",
+      "no_external_truth_claim"
+    ],
+    "required_coherence_inputs": [
+      "derivation_completeness_discharge_surface_scope_boundary_pinned_before_coherence_execution",
+      "derivation_completeness_discharge_theorem_surface_scope_boundary_pinned_before_coherence_execution",
+      "derivation_completeness_discharge_object_surface_scope_boundary_pinned_before_coherence_execution",
+      "failure_trigger_discharge_surface_scope_boundary_pinned_before_coherence_execution",
+      "evidence_adequacy_completion_token_required_before_coherence_execution",
+      "promotion_readiness_scope_boundary_pinned_before_coherence_execution"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "e3f74919f480d9f934ad725de76c97efe2f7ee01e5c9e481d9380c98f7e0b9a9"
+}

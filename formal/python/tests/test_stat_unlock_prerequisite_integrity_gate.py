@@ -71,9 +71,17 @@ def test_stat_unlock_prerequisite_integrity_gate() -> None:
     stat_plan_text = _read(STAT_PLAN_PATH)
 
     stat_row = _pillar_table_row(roadmap_text, "PILLAR-STAT")
-    assert _extract_status_from_row(stat_row) == "LOCKED", "PILLAR-STAT must remain LOCKED during readiness lane."
+    stat_status = _extract_status_from_row(stat_row)
+    assert stat_status in {"LOCKED", "ACTIVE"}, (
+        "PILLAR-STAT prerequisite integrity gate expects either the historical LOCKED posture or the canonical ACTIVE posture."
+    )
     assert "`TARGET-TH-ENTROPY-PLAN`" in stat_row
     assert "`TARGET-GR01-DERIV-CHECKLIST-PLAN`" in stat_row
+
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    if stat_status == "ACTIVE":
+        assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist after activation."
+        assert stat_matrix.get("matrix_status") == "ACTIVE", "PILLAR-STAT matrix status must be ACTIVE after activation."
 
     assert "`TOE-STAT-*` -> `TARGET-TH-ENTROPY-PLAN`" in roadmap_text
 

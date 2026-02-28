@@ -1,0 +1,34 @@
+{
+  "artifact_id": "stat_derivation_completeness_discharge_theorem_surface_scope_boundary_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_derivation_completeness_discharge_theorem_surface_scope_boundary_cycle01",
+    "status": "placeholder_non_promotional",
+    "theorem_surface_scope_boundary": [
+      "derivation_completeness_discharge_theorem_surface_structure_placeholder_only",
+      "derivation_completeness_discharge_assumption_surface_placeholder_only",
+      "no_derivation_completeness_theorem_discharge_claim",
+      "no_label_promotion_claim",
+      "no_external_truth_claim"
+    ],
+    "required_theorem_surface_inputs": [
+      "derivation_completeness_gate_scope_boundary_pinned_before_theorem_surface_execution",
+      "derivation_completeness_discharge_surface_scope_boundary_pinned_before_theorem_surface_execution",
+      "failure_trigger_audit_scope_boundary_pinned_before_theorem_surface_execution",
+      "evidence_adequacy_completion_token_required_before_theorem_surface_execution",
+      "promotion_readiness_scope_boundary_pinned_before_theorem_surface_execution"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "f1d21d62b217760aced33d411504cbb83a44ee106f72c5b17f6465282f690318"
+}

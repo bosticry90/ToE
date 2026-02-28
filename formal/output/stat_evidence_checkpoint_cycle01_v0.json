@@ -24,14 +24,61 @@
       "TOE-STAT-DER-01",
       "TOE-STAT-DER-02"
     ],
+    "acceptance_criteria_v0": {
+      "schema_version": "v0",
+      "placeholder_posture_required": {
+        "placeholder_template": true,
+        "payload_status": "structural_activation_checkpoint_placeholder"
+      },
+      "required_payload_keys": [
+        "artifact_id",
+        "cycle_id",
+        "target_id",
+        "status",
+        "scope_boundary",
+        "assumption_freeze_refs",
+        "required_results_rows_refs",
+        "acceptance_criteria_v0",
+        "cross_surface_pointers",
+        "artifact_sha256",
+        "generated_on"
+      ],
+      "required_results_rows_refs": [
+        "TOE-STAT-DER-01",
+        "TOE-STAT-DER-02"
+      ],
+      "scope_boundary_required": [
+        "classical_entropy_balance_scaffold_only",
+        "no_cosmology_claims",
+        "no_qft_statistical_ensemble_claims",
+        "no_black_hole_entropy_claims",
+        "no_holographic_principle_claims",
+        "no_emergent_gravity_claims",
+        "no_derivation_discharge_claim"
+      ],
+      "cross_surface_pointers_required": [
+        "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+        "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+        "State_of_the_Theory.md",
+        "formal/python/tests/test_stat_evidence_checkpoint_coupling_cycle01_gate.py",
+        "formal/python/tests/test_stat_evidence_checkpoint_cycle01_acceptance_gate.py"
+      ],
+      "non_claim_constraints": [
+        "no_toe_stat_der_label_promotion",
+        "no_discharge_adjudication_change",
+        "no_adequacy_completion_claim",
+        "no_external_truth_claim"
+      ]
+    },
     "cross_surface_pointers": [
       "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
       "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
       "State_of_the_Theory.md",
-      "formal/python/tests/test_stat_evidence_checkpoint_coupling_cycle01_gate.py"
+      "formal/python/tests/test_stat_evidence_checkpoint_coupling_cycle01_gate.py",
+      "formal/python/tests/test_stat_evidence_checkpoint_cycle01_acceptance_gate.py"
     ],
     "artifact_sha256": "TOP_LEVEL_payload_sha256",
     "generated_on": "2026-02-26"
   },
-  "payload_sha256": "7322727f0e7ff87e127127a08228ea5e6bf46250b15698cfb9dfe6a6b766ca25"
+  "payload_sha256": "8ac34ecb08f66c42ffddf07e9c481ae3e3700459b8330223762e041f14e403f3"
 }

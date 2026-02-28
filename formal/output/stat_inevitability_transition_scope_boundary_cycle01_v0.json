@@ -1,0 +1,38 @@
+{
+  "artifact_id": "stat_inevitability_transition_scope_boundary_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_inevitability_transition_scope_boundary_cycle01",
+    "status": "placeholder_non_promotional",
+    "inevitability_transition_scope_boundary": [
+      "adjudication_transition_dependency_placeholder_only",
+      "inevitability_transition_preexecution_guard_placeholder_only",
+      "no_inevitability_adjudication_claim",
+      "no_discharge_adjudication_claim",
+      "no_label_promotion_claim",
+      "no_external_truth_claim"
+    ],
+    "required_inevitability_transition_inputs": [
+      "adjudication_transition_scope_boundary_pinned_before_inevitability_transition_execution",
+      "discharge_completion_transition_scope_boundary_pinned_before_inevitability_transition_execution",
+      "derivation_completeness_discharge_coherence_scope_boundary_pinned_before_inevitability_transition_execution",
+      "failure_trigger_discharge_coherence_scope_boundary_pinned_before_inevitability_transition_execution",
+      "derivation_completeness_gate_scope_boundary_pinned_before_inevitability_transition_execution",
+      "failure_trigger_audit_scope_boundary_pinned_before_inevitability_transition_execution",
+      "evidence_adequacy_completion_token_required_before_inevitability_transition_execution",
+      "promotion_readiness_scope_boundary_pinned_before_inevitability_transition_execution"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "705db20d7c4b87e70d7a1dd3daf95ba7f5be75984ad5c94963d87551aa90fd15"
+}

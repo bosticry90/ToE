@@ -1,0 +1,39 @@
+{
+  "artifact_id": "stat_nonflip_execution_custody_scope_boundary_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_nonflip_execution_custody_scope_boundary_cycle01",
+    "status": "placeholder_non_promotional",
+    "nonflip_execution_custody": [
+      "nonflip_execution_boundary_dependency_placeholder_only",
+      "custody_chain_and_replay_guard_placeholder_only",
+      "no_execution_replay_flip",
+      "no_discharge_adjudication_flip",
+      "no_inevitability_adjudication_flip",
+      "no_label_promotion_claim",
+      "no_external_truth_claim"
+    ],
+    "required_nonflip_custody_inputs": [
+      "nonflip_execution_boundary_scope_boundary_pinned_before_nonflip_execution_custody",
+      "adjudication_transition_scope_boundary_pinned_before_nonflip_execution_custody",
+      "inevitability_transition_scope_boundary_pinned_before_nonflip_execution_custody",
+      "discharge_completion_transition_scope_boundary_pinned_before_nonflip_execution_custody",
+      "derivation_completeness_discharge_coherence_scope_boundary_pinned_before_nonflip_execution_custody",
+      "failure_trigger_discharge_coherence_scope_boundary_pinned_before_nonflip_execution_custody",
+      "evidence_adequacy_completion_token_required_before_nonflip_execution_custody",
+      "promotion_readiness_scope_boundary_pinned_before_nonflip_execution_custody"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "a21517422d694cf8d3897116677a87c93e1af77f8f0d222100be7bd1cdbd6809"
+}

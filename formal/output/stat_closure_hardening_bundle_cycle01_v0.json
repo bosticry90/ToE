@@ -1,0 +1,26 @@
+{
+  "artifact_id": "stat_closure_hardening_bundle_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_closure_hardening_cycle01",
+    "status": "placeholder_non_promotional",
+    "boundedness_restatement": [
+      "active_stage_pre_discharge_scope_only",
+      "no_toe_stat_der_discharge_claim",
+      "no_inevitability_or_adequacy_completion_claim",
+      "no_external_truth_claim"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "aa18259dcc81b62ebf0270eed148fb64d0e3c6c40cd1c750f588bfa93b0a8167"
+}

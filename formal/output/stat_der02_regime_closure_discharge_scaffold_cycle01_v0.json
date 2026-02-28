@@ -1,0 +1,76 @@
+{
+  "artifact_id": "stat_der02_regime_closure_discharge_scaffold_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "artifact_id": "stat_der02_regime_closure_discharge_scaffold_cycle01_v0",
+    "cycle_id": "CYCLE01",
+    "pillar_id": "PILLAR-STAT",
+    "target_id": "TARGET-TH-ENTROPY-PLAN",
+    "results_row_id": "TOE-STAT-DER-02",
+    "results_row_expected_label": "P-POLICY",
+    "status": "regime_closure_discharge_scaffold_placeholder_nonclaim",
+    "discharge_scope": [
+      "regime_validity_and_closure_discharge_scaffold_only",
+      "bounded_regime_closure_discharge_skeleton_placeholder",
+      "discharge_structure_without_adjudication_placeholder",
+      "no_inevitability_or_adequacy_claim",
+      "no_label_promotion_or_adjudication_flip"
+    ],
+    "required_discharge_components": [
+      "regime_validity_closure_statement_slot_placeholder",
+      "closure_coupling_consistency_slot_placeholder",
+      "assumption_freeze_and_regime_reference_slot_placeholder",
+      "der02_theorem_body_dependency_slot_placeholder",
+      "future_adequacy_linkage_slot_placeholder"
+    ],
+    "forbidden_claims": [
+      "no_regime_validity_discharge_claim",
+      "no_closure_coupling_discharge_claim",
+      "no_inevitability_claim",
+      "no_adequacy_claim",
+      "no_label_promotion_claim",
+      "no_external_truth_claim"
+    ],
+    "prerequisite_structural_checkpoint_artifact_id": "stat_evidence_checkpoint_cycle01_v0",
+    "prerequisite_structural_checkpoint_gates": [
+      "formal/python/tests/test_stat_evidence_checkpoint_coupling_cycle01_gate.py",
+      "formal/python/tests/test_stat_evidence_checkpoint_cycle01_acceptance_gate.py"
+    ],
+    "sibling_der02_theorem_body_scaffold_dependency_artifact_id": "stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0",
+    "sibling_der02_theorem_body_scaffold_dependency_artifact_path": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+    "sibling_der02_theorem_body_scaffold_dependency_gate": "formal/python/tests/test_stat_der02_theorem_body_scaffold_coupling_cycle01_gate.py",
+    "sibling_der02_regime_closure_scaffold_dependency_artifact_id": "stat_der02_regime_closure_coupling_scaffold_cycle01_v0",
+    "sibling_der02_regime_closure_scaffold_dependency_artifact_path": "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+    "sibling_der02_regime_closure_scaffold_dependency_gate": "formal/python/tests/test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate.py",
+    "sibling_der01_discharge_scaffold_dependency_artifact_id": "stat_der01_entropy_balance_discharge_scaffold_cycle01_v0",
+    "sibling_der01_discharge_scaffold_dependency_artifact_path": "formal/output/stat_der01_entropy_balance_discharge_scaffold_cycle01_v0.json",
+    "sibling_der01_discharge_scaffold_dependency_gate": "formal/python/tests/test_stat_der01_discharge_scaffold_coupling_cycle01_gate.py",
+    "sibling_der01_theorem_body_scope_boundary_dependency_artifact_id": "stat_der01_theorem_body_scope_boundary_cycle01_v0",
+    "sibling_der01_theorem_body_scope_boundary_dependency_artifact_path": "formal/output/stat_der01_theorem_body_scope_boundary_cycle01_v0.json",
+    "sibling_der01_theorem_body_scope_boundary_dependency_gate": "formal/python/tests/test_stat_der01_theorem_body_scope_boundary_cycle01_gate.py",
+    "theorem_body_scope_boundary_artifact_id": "stat_der02_theorem_body_scope_boundary_cycle01_v0",
+    "theorem_body_scope_boundary_artifact_path": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+    "theorem_body_scope_boundary_gate": "formal/python/tests/test_stat_der02_theorem_body_scope_boundary_cycle01_gate.py",
+    "cross_surface_pointers": [
+      "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "State_of_the_Theory.md",
+      "formal/docs/paper/RESULTS_TABLE_v0.md",
+      "formal/python/tests/test_stat_der02_discharge_scaffold_coupling_cycle01_gate.py"
+    ],
+    "non_claim_boundary": [
+      "placeholder_discharge_scaffold_only",
+      "no_toe_stat_der_02_label_promotion",
+      "no_discharge_adjudication_claim",
+      "no_regime_validity_discharge_claim",
+      "no_closure_coupling_discharge_claim",
+      "no_inevitability_claim",
+      "no_adequacy_completion_claim",
+      "no_external_truth_claim"
+    ],
+    "artifact_sha256": "TOP_LEVEL_payload_sha256",
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "f6a70fa5f8fbe4239346f50b3cee9acb3b9879f48cfccc59a418a1f0ee3a4078"
+}

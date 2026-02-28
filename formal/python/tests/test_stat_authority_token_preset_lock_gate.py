@@ -46,17 +46,23 @@ def test_stat_authority_token_preset_lock_gate() -> None:
     state_text = _read(STATE_PATH)
     matrix = _read_json(MATRIX_PATH)
 
-    assert "| `PILLAR-STAT` | `LOCKED` |" in roadmap_text, (
-        "STAT authority token preset lock gate only applies while `PILLAR-STAT` remains LOCKED."
-    )
-    assert "PILLAR-STAT" not in matrix.get("pillars", {}), (
-        "STAT authority tokens must remain preset-only until `PILLAR-STAT` is explicitly registered in the matrix at activation."
-    )
+    stat_locked = "| `PILLAR-STAT` | `LOCKED` |" in roadmap_text
+    if stat_locked:
+        assert "PILLAR-STAT" not in matrix.get("pillars", {}), (
+            "STAT authority tokens must remain preset-only until `PILLAR-STAT` is explicitly registered in the matrix at activation."
+        )
+    else:
+        assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
+            "STAT authority token preset gate expects either the historical LOCKED posture or the canonical ACTIVE posture."
+        )
+        stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+        assert isinstance(stat_matrix, dict), "ACTIVE STAT posture must be present in the pillar status matrix."
+        assert stat_matrix.get("matrix_status") == "ACTIVE", "PILLAR-STAT matrix status must be ACTIVE after activation."
 
     for token_name in (FULL_TOKEN, INEV_TOKEN):
         stat_values = _extract_token_values(stat_plan_text, token_name)
         assert stat_values == [PLACEHOLDER_VALUE], (
-            f"{token_name} must be defined exactly once in STAT plan with `{PLACEHOLDER_VALUE}` during locked readiness."
+            f"{token_name} must be defined exactly once in STAT plan with `{PLACEHOLDER_VALUE}`."
         )
 
         assert token_name in template_text, f"Activation changeset template must pin token name `{token_name}`."
@@ -64,12 +70,20 @@ def test_stat_authority_token_preset_lock_gate() -> None:
             f"Activation changeset template should pin token names, but not define `{token_name}` as a mirrored authority token line."
         )
 
-        assert token_name not in roadmap_text, (
-            f"{token_name} must not be mirrored into roadmap while `PILLAR-STAT` is still LOCKED."
-        )
-        assert token_name not in state_text, (
-            f"{token_name} must not be mirrored into State_of_the_Theory while `PILLAR-STAT` is still LOCKED."
-        )
+        if stat_locked:
+            assert token_name not in roadmap_text, (
+                f"{token_name} must not be mirrored into roadmap while `PILLAR-STAT` is still LOCKED."
+            )
+            assert token_name not in state_text, (
+                f"{token_name} must not be mirrored into State_of_the_Theory while `PILLAR-STAT` is still LOCKED."
+            )
+        else:
+            assert _extract_token_values(roadmap_text, token_name) == [PLACEHOLDER_VALUE], (
+                f"{token_name} must be mirrored into roadmap with the canonical placeholder value after activation."
+            )
+            assert _extract_token_values(state_text, token_name) == [PLACEHOLDER_VALUE], (
+                f"{token_name} must be mirrored into State_of_the_Theory with the canonical placeholder value after activation."
+            )
 
     assert f"`{PLACEHOLDER_VALUE}`" in template_text, "Activation template must pin the exact placeholder value."
     assert "STAT_AUTHORITY_TOKEN_PRESET_LOCK_v0: PINNED_NAMES_AND_PLACEHOLDER_VALUES_LOCKED_STAGE_ONLY" in stat_plan_text

@@ -1,0 +1,35 @@
+{
+  "artifact_id": "stat_evidence_adequacy_5x5_justification_scaffold_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_evidence_adequacy_5x5_justification_scaffold_cycle01",
+    "status": "placeholder_non_promotional",
+    "adequacy_scope_boundary": [
+      "five_by_five_justification_structure_placeholder_only",
+      "entry_threshold_binding_without_completion_claim",
+      "no_stat_adequacy_completion_claim",
+      "no_label_promotion_claim",
+      "no_external_truth_claim"
+    ],
+    "entry_threshold_token": "EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_ENTRY_THRESHOLD_v0: MIN_5_ENTRIES_REQUIRED",
+    "entry_placeholders": [
+      "STAT_ADEQUACY_ENTRY_01_v0_PLACEHOLDER",
+      "STAT_ADEQUACY_ENTRY_02_v0_PLACEHOLDER",
+      "STAT_ADEQUACY_ENTRY_03_v0_PLACEHOLDER",
+      "STAT_ADEQUACY_ENTRY_04_v0_PLACEHOLDER",
+      "STAT_ADEQUACY_ENTRY_05_v0_PLACEHOLDER"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "c768d24be2771ca4e79e1a1d2a4adf81e331cba2240e11903dc1127150074bc8"
+}

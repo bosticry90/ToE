@@ -43,15 +43,20 @@ def test_stat_unlock_readiness_pack_gate() -> None:
     matrix_prep_text = _read(MATRIX_PREP_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
-    assert "| `PILLAR-STAT` | `LOCKED` |" in roadmap_text, (
-        "STAT readiness aggregation gate only applies while `PILLAR-STAT` remains LOCKED."
-    )
+    stat_locked = "| `PILLAR-STAT` | `LOCKED` |" in roadmap_text
+    if not stat_locked:
+        assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
+            "STAT readiness aggregation gate expects either the historical LOCKED posture or the canonical ACTIVE posture."
+        )
 
     for gate_rel in STAT_READINESS_PACK_GATES:
         gate_path = REPO_ROOT / gate_rel
         assert gate_path.exists(), f"Missing STAT readiness gate file `{gate_rel}`."
         assert gate_rel in audit_text, f"STAT readiness audit must pin `{gate_rel}`."
         assert gate_rel in matrix_prep_text, f"STAT matrix prep checklist must pin `{gate_rel}`."
+
+    if not stat_locked:
+        return
 
     cmd = [sys.executable, "-m", "pytest", *STAT_READINESS_PACK_GATES]
     result = subprocess.run(

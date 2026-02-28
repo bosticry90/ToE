@@ -1,0 +1,44 @@
+{
+  "artifact_id": "stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01",
+    "status": "placeholder_non_promotional",
+    "nonflip_execution_custody_attestation_confirmation_attestation_confirmation": [
+      "nonflip_execution_custody_attestation_confirmation_attestation_dependency_placeholder_only",
+      "attestation_confirmation_attestation_confirmation_chain_continuity_placeholder_only",
+      "attestation_confirmation_attestation_confirmation_replay_and_fork_guard_placeholder_only",
+      "no_execution_replay_flip",
+      "no_discharge_adjudication_flip",
+      "no_inevitability_adjudication_flip",
+      "no_label_promotion_claim",
+      "no_external_truth_claim"
+    ],
+    "required_nonflip_custody_attestation_confirmation_attestation_confirmation_inputs": [
+      "nonflip_execution_custody_attestation_confirmation_attestation_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation",
+      "nonflip_execution_custody_attestation_confirmation_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation",
+      "nonflip_execution_custody_attestation_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation",
+      "nonflip_execution_custody_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation",
+      "nonflip_execution_boundary_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation",
+      "adjudication_transition_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation",
+      "inevitability_transition_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation",
+      "discharge_completion_transition_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation",
+      "derivation_completeness_discharge_coherence_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation",
+      "failure_trigger_discharge_coherence_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation",
+      "evidence_adequacy_completion_token_required_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation",
+      "promotion_readiness_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "8a33507186bc5d53a48805a09c6cc80dfaf532bfd8ef40b5d6a0964412c61461"
+}

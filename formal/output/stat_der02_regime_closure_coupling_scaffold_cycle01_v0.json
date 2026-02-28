@@ -1,0 +1,66 @@
+{
+  "artifact_id": "stat_der02_regime_closure_coupling_scaffold_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "artifact_id": "stat_der02_regime_closure_coupling_scaffold_cycle01_v0",
+    "cycle_id": "CYCLE01",
+    "pillar_id": "PILLAR-STAT",
+    "target_id": "TARGET-TH-ENTROPY-PLAN",
+    "results_row_id": "TOE-STAT-DER-02",
+    "results_row_expected_label": "P-POLICY",
+    "status": "regime_validity_closure_coupling_scaffold_placeholder_nonclaim",
+    "regime_validity_scope": [
+      "classical_entropy_balance_regime_validity_scaffold_only",
+      "bounded_equilibrium_or_near_equilibrium_placeholder",
+      "no_qm_qft_statistical_ensemble_coupling_claims",
+      "no_cosmology_coupling_claims",
+      "no_closure_discharge_claim"
+    ],
+    "closure_coupling_requirements": [
+      "toe_stat_der_01_theorem_surface_scaffold_pointer",
+      "toe_stat_der_01_discharge_scaffold_pointer",
+      "toe_stat_der_01_theorem_body_scope_boundary_pointer",
+      "toe_stat_der_02_theorem_body_scope_boundary_pointer",
+      "assumption_freeze_pointer_surface",
+      "results_row_label_persistence_pointer",
+      "future_adequacy_placeholder_pointer",
+      "future_coupling_gate_expansion_slot"
+    ],
+    "prerequisite_structural_checkpoint_artifact_id": "stat_evidence_checkpoint_cycle01_v0",
+    "prerequisite_structural_checkpoint_gates": [
+      "formal/python/tests/test_stat_evidence_checkpoint_coupling_cycle01_gate.py",
+      "formal/python/tests/test_stat_evidence_checkpoint_cycle01_acceptance_gate.py"
+    ],
+    "sibling_row_scaffold_dependency_artifact_id": "stat_der01_entropy_balance_theorem_surface_scaffold_cycle01_v0",
+    "sibling_row_scaffold_dependency_artifact_path": "formal/output/stat_der01_entropy_balance_theorem_surface_scaffold_cycle01_v0.json",
+    "sibling_row_scaffold_dependency_gate": "formal/python/tests/test_stat_der01_theorem_surface_scaffold_coupling_cycle01_gate.py",
+    "sibling_der01_discharge_scaffold_dependency_artifact_id": "stat_der01_entropy_balance_discharge_scaffold_cycle01_v0",
+    "sibling_der01_discharge_scaffold_dependency_artifact_path": "formal/output/stat_der01_entropy_balance_discharge_scaffold_cycle01_v0.json",
+    "sibling_der01_discharge_scaffold_dependency_gate": "formal/python/tests/test_stat_der01_discharge_scaffold_coupling_cycle01_gate.py",
+    "sibling_der01_theorem_body_scope_boundary_dependency_artifact_id": "stat_der01_theorem_body_scope_boundary_cycle01_v0",
+    "sibling_der01_theorem_body_scope_boundary_dependency_artifact_path": "formal/output/stat_der01_theorem_body_scope_boundary_cycle01_v0.json",
+    "sibling_der01_theorem_body_scope_boundary_dependency_gate": "formal/python/tests/test_stat_der01_theorem_body_scope_boundary_cycle01_gate.py",
+    "sibling_der02_theorem_body_scope_boundary_dependency_artifact_id": "stat_der02_theorem_body_scope_boundary_cycle01_v0",
+    "sibling_der02_theorem_body_scope_boundary_dependency_artifact_path": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+    "sibling_der02_theorem_body_scope_boundary_dependency_gate": "formal/python/tests/test_stat_der02_theorem_body_scope_boundary_cycle01_gate.py",
+    "cross_surface_pointers": [
+      "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "State_of_the_Theory.md",
+      "formal/docs/paper/RESULTS_TABLE_v0.md",
+      "formal/python/tests/test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate.py"
+    ],
+    "non_claim_boundary": [
+      "placeholder_regime_validity_closure_coupling_surface_only",
+      "no_toe_stat_der_02_label_promotion",
+      "no_derivation_discharge_claim",
+      "no_inevitability_claim",
+      "no_adequacy_completion_claim",
+      "no_external_truth_claim"
+    ],
+    "artifact_sha256": "TOP_LEVEL_payload_sha256",
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "b02ce1479bfbec4bb45b26aa43f7e68d46cfd29026a368ed42ba9f127c778f79"
+}

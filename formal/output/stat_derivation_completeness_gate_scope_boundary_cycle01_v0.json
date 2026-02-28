@@ -1,0 +1,33 @@
+{
+  "artifact_id": "stat_derivation_completeness_gate_scope_boundary_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_derivation_completeness_gate_scope_boundary_cycle01",
+    "status": "placeholder_non_promotional",
+    "derivation_completeness_scope_boundary": [
+      "derivation_completeness_gate_structure_placeholder_only",
+      "failure_trigger_audit_structure_placeholder_only",
+      "no_derivation_completeness_discharge_claim",
+      "no_label_promotion_claim",
+      "no_external_truth_claim"
+    ],
+    "required_gate_inputs": [
+      "der01_der02_row_scaffolds_pinned_before_completion_gate_execution",
+      "closure_hardening_bundle_pinned_before_completion_gate_execution",
+      "multi_cycle_drift_resistance_scaffold_pinned_before_completion_gate_execution",
+      "evidence_adequacy_completion_token_required_before_completion_gate_execution"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "a3b8a83a821f48bc64333e3806feb8a297a0478d6849827036eb62059b7d053f"
+}

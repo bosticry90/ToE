@@ -113,7 +113,9 @@ def test_stat_no_circular_dependency_with_closed_pillars() -> None:
 
     assert "PILLAR-STAT" in rows, "Roadmap must define a canonical `PILLAR-STAT` row."
     stat_row = rows["PILLAR-STAT"]
-    assert stat_row["status"] == "LOCKED", "This readiness gate only applies while `PILLAR-STAT` remains LOCKED."
+    assert stat_row["status"] in {"LOCKED", "ACTIVE"}, (
+        "STAT dependency gate expects either the historical LOCKED posture or the canonical ACTIVE posture."
+    )
     assert "TARGET-TH-ENTROPY-PLAN" in stat_row["targets"]  # type: ignore[operator]
 
     matrix_pillars = matrix.get("pillars", {})
@@ -123,14 +125,15 @@ def test_stat_no_circular_dependency_with_closed_pillars() -> None:
         assert entry.get("matrix_status") == "CLOSED", f"`{pillar_id}` must remain `CLOSED` during STAT readiness."
 
     reachable_from_stat = _reachable(graph, "PILLAR-STAT")
-    assert "PILLAR-QM" not in reachable_from_stat, (
-        "STAT prerequisite chain must not route through QM during locked readiness."
-    )
-    assert "PILLAR-QFT" not in reachable_from_stat, (
-        "STAT prerequisite chain must not route through QFT during locked readiness."
-    )
+    if stat_row["status"] == "LOCKED":
+        assert "PILLAR-QM" not in reachable_from_stat, (
+            "STAT prerequisite chain must not route through QM during locked readiness."
+        )
+        assert "PILLAR-QFT" not in reachable_from_stat, (
+            "STAT prerequisite chain must not route through QFT during locked readiness."
+        )
     assert all(rows[p]["status"] == "CLOSED" for p in reachable_from_stat), (
-        "STAT prerequisite chain must only traverse CLOSED pillars during locked readiness."
+        "STAT prerequisite chain must only traverse CLOSED pillars."
     )
 
     closed_pillars = [pillar_id for pillar_id, row in rows.items() if row["status"] == "CLOSED"]
@@ -169,5 +172,5 @@ def test_stat_no_circular_dependency_with_closed_pillars() -> None:
         "QM discharge target must not depend on STAT entropy target during STAT readiness."
     )
     assert "TARGET-TH-ENTROPY-PLAN" not in qft_discharge_text, (
-        "QFT discharge target must not depend on STAT entropy target during STAT readiness."
+        "QFT discharge target must not depend on STAT entropy target."
     )

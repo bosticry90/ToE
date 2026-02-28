@@ -1,0 +1,32 @@
+{
+  "artifact_id": "stat_promotion_readiness_scope_boundary_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_promotion_readiness_scope_boundary_cycle01",
+    "status": "placeholder_non_promotional",
+    "promotion_readiness_scope_boundary": [
+      "promotion_input_contract_placeholder_only",
+      "requires_derivation_completeness_gate_before_execution",
+      "requires_adequacy_completion_before_execution",
+      "no_claim_promotion_execution",
+      "no_external_truth_claim"
+    ],
+    "required_readiness_inputs": [
+      "derivation_completeness_gate_placeholder_required_before_execution",
+      "evidence_adequacy_5x5_completion_token_required_before_execution",
+      "results_rows_must_remain_p_policy_until_dedicated_promotion_gate"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "74b8b8d8916cfc3acaeca54bdaef125688fa8602cc2ebaca9fecfb1b4561baae"
+}

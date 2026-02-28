@@ -21,6 +21,9 @@ STAT_CYCLE01_ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "stat_evidence_ch
 STAT_CYCLE01_COUPLING_GATE_PATH = (
     REPO_ROOT / "formal" / "python" / "tests" / "test_stat_evidence_checkpoint_coupling_cycle01_gate.py"
 )
+STAT_CYCLE01_ACCEPTANCE_GATE_PATH = (
+    REPO_ROOT / "formal" / "python" / "tests" / "test_stat_evidence_checkpoint_cycle01_acceptance_gate.py"
+)
 
 
 def _read(path: Path) -> str:
@@ -51,9 +54,11 @@ def test_stat_readiness_placeholder_structure_gate() -> None:
     results_text = _read(RESULTS_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
-    assert "| `PILLAR-STAT` | `LOCKED` |" in roadmap_text, (
-        "STAT placeholder structure gate only applies while `PILLAR-STAT` remains LOCKED."
-    )
+    stat_locked = "| `PILLAR-STAT` | `LOCKED` |" in roadmap_text
+    if not stat_locked:
+        assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
+            "STAT placeholder structure gate expects either the historical LOCKED posture or the canonical ACTIVE posture."
+        )
 
     # Reserved STAT closure rows must exist in both the STAT plan and results table before activation.
     for row_id in ("TOE-STAT-DER-01", "TOE-STAT-DER-02"):
@@ -71,41 +76,54 @@ def test_stat_readiness_placeholder_structure_gate() -> None:
             f"`{row_id}` must point to the STAT readiness plan document."
         )
 
-    # Cycle01 artifact expectations must stay as placeholders (defined but unproduced) in the readiness lane.
     assert _extract_token(stat_plan_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_v0") == (
         "stat_evidence_checkpoint_cycle01_v0"
     )
-    assert _extract_token(stat_plan_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_SHA256_v0") == "NOT_PRESENT_v0"
     assert _extract_token(stat_plan_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_GATE_v0") == (
         "ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED"
-    )
-    assert _extract_token(stat_plan_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_COUPLING_GATE_PLACEHOLDER_v0") == (
-        "RESERVED_TEST_PATH_NOT_YET_BOUND"
     )
 
     assert "formal/output/stat_evidence_checkpoint_cycle01_v0.json" in stat_plan_text
     assert "formal/python/tests/test_stat_evidence_checkpoint_coupling_cycle01_gate.py" in stat_plan_text
 
-    for field_name in (
-        "artifact_id",
-        "cycle_id",
-        "target_id",
-        "scope_boundary",
-        "assumption_freeze_refs",
-        "required_results_rows_refs",
-        "cross_surface_pointers",
-        "artifact_sha256",
-    ):
-        assert f"`{field_name}`" in stat_plan_text, (
-            f"STAT Cycle01 placeholder schema must list `{field_name}`."
+    if stat_locked:
+        assert _extract_token(stat_plan_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_SHA256_v0") == "NOT_PRESENT_v0"
+        assert _extract_token(stat_plan_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_COUPLING_GATE_PLACEHOLDER_v0") == (
+            "RESERVED_TEST_PATH_NOT_YET_BOUND"
         )
 
-    assert "no non-placeholder SHA256 token may be emitted until the artifact is actually produced." in stat_plan_text
-    assert "must include a pinned SHA256 token and cross-surface pointers in the same change set." in stat_plan_text
+        for field_name in (
+            "artifact_id",
+            "cycle_id",
+            "target_id",
+            "scope_boundary",
+            "assumption_freeze_refs",
+            "required_results_rows_refs",
+            "cross_surface_pointers",
+            "artifact_sha256",
+        ):
+            assert f"`{field_name}`" in stat_plan_text, (
+                f"STAT Cycle01 placeholder schema must list `{field_name}`."
+            )
 
-    assert not STAT_CYCLE01_ARTIFACT_PATH.exists(), (
-        "STAT Cycle01 artifact must not be produced during locked readiness placeholder stage."
-    )
-    assert not STAT_CYCLE01_COUPLING_GATE_PATH.exists(), (
-        "STAT Cycle01 coupling gate path is reserved only; do not bind it before activation lane work."
-    )
+        assert "no non-placeholder SHA256 token may be emitted until the artifact is actually produced." in stat_plan_text
+        assert "must include a pinned SHA256 token and cross-surface pointers in the same change set." in stat_plan_text
+
+        assert not STAT_CYCLE01_ARTIFACT_PATH.exists(), (
+            "STAT Cycle01 artifact must not be produced during locked readiness placeholder stage."
+        )
+        assert not STAT_CYCLE01_COUPLING_GATE_PATH.exists(), (
+            "STAT Cycle01 coupling gate path is reserved only; do not bind it before activation lane work."
+        )
+    else:
+        assert _extract_token(stat_plan_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_SHA256_v0") != "NOT_PRESENT_v0"
+        assert _extract_token(stat_plan_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_ACCEPTANCE_GATE_v0") == (
+            "PAYLOAD_SCHEMA_SCOPE_POINTERS_ROWS_REQUIRED"
+        )
+        assert _extract_token(stat_plan_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_COUPLING_GATE_BINDING_v0") == (
+            "BOUND_TO_TEST_PATH_v0"
+        )
+        assert "acceptance criteria gate path: `formal/python/tests/test_stat_evidence_checkpoint_cycle01_acceptance_gate.py`" in stat_plan_text
+        assert STAT_CYCLE01_ARTIFACT_PATH.exists(), "STAT Cycle01 artifact must exist after activation."
+        assert STAT_CYCLE01_COUPLING_GATE_PATH.exists(), "STAT Cycle01 coupling gate must exist after activation."
+        assert STAT_CYCLE01_ACCEPTANCE_GATE_PATH.exists(), "STAT Cycle01 acceptance gate must exist after activation."

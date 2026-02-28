@@ -1,0 +1,37 @@
+{
+  "artifact_id": "stat_nonflip_execution_boundary_scope_boundary_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_nonflip_execution_boundary_scope_boundary_cycle01",
+    "status": "placeholder_non_promotional",
+    "nonflip_execution_boundary": [
+      "adjudication_and_inevitability_transition_alignment_placeholder_only",
+      "nonflip_execution_custody_placeholder_only",
+      "no_discharge_adjudication_flip",
+      "no_inevitability_adjudication_flip",
+      "no_label_promotion_claim",
+      "no_external_truth_claim"
+    ],
+    "required_nonflip_inputs": [
+      "adjudication_transition_scope_boundary_pinned_before_nonflip_execution",
+      "inevitability_transition_scope_boundary_pinned_before_nonflip_execution",
+      "discharge_completion_transition_scope_boundary_pinned_before_nonflip_execution",
+      "derivation_completeness_discharge_coherence_scope_boundary_pinned_before_nonflip_execution",
+      "failure_trigger_discharge_coherence_scope_boundary_pinned_before_nonflip_execution",
+      "evidence_adequacy_completion_token_required_before_nonflip_execution",
+      "promotion_readiness_scope_boundary_pinned_before_nonflip_execution"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "a8de8b21a00c4474904c1ab13dd553b133388856880ff01629db0d0134db37eb"
+}

@@ -1,0 +1,30 @@
+{
+  "artifact_id": "stat_multi_cycle_drift_resistance_sweep_cycle02_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_multi_cycle_drift_resistance_sweep_cycle02",
+    "status": "placeholder_non_promotional",
+    "cycle_window": [
+      "cycle01",
+      "cycle02"
+    ],
+    "drift_resistance_scope": [
+      "multi_cycle_token_stability_placeholder_only",
+      "cross_surface_pointer_stability_placeholder_only",
+      "no_adjudication_or_label_promotion_claim",
+      "no_external_truth_claim"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "bc7e2a3b07cef0764af36181ac7293f858b63401d2cbf82296c1c18ed37e6448"
+}

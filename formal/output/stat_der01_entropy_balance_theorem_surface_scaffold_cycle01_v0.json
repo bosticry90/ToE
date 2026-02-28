@@ -1,0 +1,49 @@
+{
+  "artifact_id": "stat_der01_entropy_balance_theorem_surface_scaffold_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "artifact_id": "stat_der01_entropy_balance_theorem_surface_scaffold_cycle01_v0",
+    "cycle_id": "CYCLE01",
+    "pillar_id": "PILLAR-STAT",
+    "target_id": "TARGET-TH-ENTROPY-PLAN",
+    "results_row_id": "TOE-STAT-DER-01",
+    "results_row_expected_label": "P-POLICY",
+    "status": "theorem_surface_scaffold_placeholder_nonclaim",
+    "theorem_surface_scope": [
+      "classical_entropy_balance_theorem_surface_scaffold_only",
+      "local_or_control_volume_formulation_placeholder",
+      "no_stat_discharge_claim"
+    ],
+    "required_surface_components": [
+      "entropy_state_quantity_symbol_surface",
+      "entropy_balance_relation_placeholder_surface",
+      "flux_or_source_term_slot_placeholder_surface",
+      "regime_assumption_pointer_surface",
+      "sign_convention_pointer_surface"
+    ],
+    "prerequisite_structural_checkpoint_artifact_id": "stat_evidence_checkpoint_cycle01_v0",
+    "prerequisite_structural_checkpoint_gates": [
+      "formal/python/tests/test_stat_evidence_checkpoint_coupling_cycle01_gate.py",
+      "formal/python/tests/test_stat_evidence_checkpoint_cycle01_acceptance_gate.py"
+    ],
+    "cross_surface_pointers": [
+      "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "State_of_the_Theory.md",
+      "formal/docs/paper/RESULTS_TABLE_v0.md",
+      "formal/python/tests/test_stat_der01_theorem_surface_scaffold_coupling_cycle01_gate.py"
+    ],
+    "non_claim_boundary": [
+      "placeholder_theorem_surface_only",
+      "no_toe_stat_der_01_label_promotion",
+      "no_derivation_discharge_claim",
+      "no_inevitability_claim",
+      "no_adequacy_completion_claim",
+      "no_external_truth_claim"
+    ],
+    "artifact_sha256": "TOP_LEVEL_payload_sha256",
+    "generated_on": "2026-02-26"
+  },
+  "payload_sha256": "5e570dd640294f84632c0933629a40e9d538c987e4eb642e522994e54b44a0ad"
+}

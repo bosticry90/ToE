@@ -1,0 +1,41 @@
+{
+  "artifact_id": "stat_nonflip_execution_custody_attestation_scope_boundary_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_nonflip_execution_custody_attestation_scope_boundary_cycle01",
+    "status": "placeholder_non_promotional",
+    "nonflip_execution_custody_attestation": [
+      "nonflip_execution_custody_dependency_placeholder_only",
+      "attestation_chain_continuity_placeholder_only",
+      "attestation_replay_and_fork_guard_placeholder_only",
+      "no_execution_replay_flip",
+      "no_discharge_adjudication_flip",
+      "no_inevitability_adjudication_flip",
+      "no_label_promotion_claim",
+      "no_external_truth_claim"
+    ],
+    "required_nonflip_custody_attestation_inputs": [
+      "nonflip_execution_custody_scope_boundary_pinned_before_nonflip_execution_custody_attestation",
+      "nonflip_execution_boundary_scope_boundary_pinned_before_nonflip_execution_custody_attestation",
+      "adjudication_transition_scope_boundary_pinned_before_nonflip_execution_custody_attestation",
+      "inevitability_transition_scope_boundary_pinned_before_nonflip_execution_custody_attestation",
+      "discharge_completion_transition_scope_boundary_pinned_before_nonflip_execution_custody_attestation",
+      "derivation_completeness_discharge_coherence_scope_boundary_pinned_before_nonflip_execution_custody_attestation",
+      "failure_trigger_discharge_coherence_scope_boundary_pinned_before_nonflip_execution_custody_attestation",
+      "evidence_adequacy_completion_token_required_before_nonflip_execution_custody_attestation",
+      "promotion_readiness_scope_boundary_pinned_before_nonflip_execution_custody_attestation"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_status_promotion",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-27"
+  },
+  "payload_sha256": "891168e7068596a71c42c7326f3dd1d874090a69884fa4e3ce0969557747bd28"
+}
