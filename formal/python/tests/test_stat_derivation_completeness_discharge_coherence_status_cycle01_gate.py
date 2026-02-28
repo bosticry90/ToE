@@ -21,15 +21,14 @@ STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PILLAR_STATUS_MATRIX_v1.json"
 ARTIFACT_PATH = (
-    REPO_ROOT / "formal" / "output" / "stat_derivation_completeness_discharge_object_surface_status_cycle01_v0.json"
+    REPO_ROOT / "formal" / "output" / "stat_derivation_completeness_discharge_coherence_status_cycle01_v0.json"
 )
 
-EXPECTED_ARTIFACT_ID = "stat_derivation_completeness_discharge_object_surface_status_cycle01_v0"
+EXPECTED_ARTIFACT_ID = "stat_derivation_completeness_discharge_coherence_status_cycle01_v0"
 EXPECTED_COUPLING_GATE = "ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED"
-EXPECTED_STATUS_VALUE = "OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM"
-ALLOWED_COHERENCE_STATUS_VALUES = {"NOT_PRESENT_v0", "COHERENCE_SCAFFOLD_PINNED_NONCLAIM"}
-EXPECTED_ARTIFACT_REL = "formal/output/stat_derivation_completeness_discharge_object_surface_status_cycle01_v0.json"
-EXPECTED_GATE_REL = "formal/python/tests/test_stat_derivation_completeness_discharge_object_surface_status_cycle01_gate.py"
+EXPECTED_STATUS_VALUE = "COHERENCE_SCAFFOLD_PINNED_NONCLAIM"
+EXPECTED_ARTIFACT_REL = "formal/output/stat_derivation_completeness_discharge_coherence_status_cycle01_v0.json"
+EXPECTED_GATE_REL = "formal/python/tests/test_stat_derivation_completeness_discharge_coherence_status_cycle01_gate.py"
 
 
 def _read(path: Path) -> str:
@@ -52,7 +51,7 @@ def _payload_hash(payload: dict) -> str:
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
 
 
-def test_stat_derivation_completeness_discharge_object_surface_status_cycle01_gate() -> None:
+def test_stat_derivation_completeness_discharge_coherence_status_cycle01_gate() -> None:
     stat_text = _read(STAT_DOC_PATH)
     state_text = _read(STATE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
@@ -60,11 +59,11 @@ def test_stat_derivation_completeness_discharge_object_surface_status_cycle01_ga
     artifact_json = _read_json(ARTIFACT_PATH)
 
     assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
-        "STAT derivation-completeness discharge object-surface status gate applies only after `PILLAR-STAT` activation."
+        "STAT derivation-completeness discharge coherence-status gate applies only after `PILLAR-STAT` activation."
     )
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), (
-        "PILLAR-STAT matrix row must exist for derivation-completeness discharge object-surface status gate."
+        "PILLAR-STAT matrix row must exist for derivation-completeness discharge coherence-status gate."
     )
     assert stat_matrix.get("matrix_status") == "ACTIVE", "PILLAR-STAT matrix row must be `ACTIVE`."
 
@@ -75,31 +74,22 @@ def test_stat_derivation_completeness_discharge_object_surface_status_cycle01_ga
 
     computed_payload_sha = _payload_hash(artifact_json["payload"])
     assert artifact_json.get("payload_sha256") == computed_payload_sha, (
-        "STAT derivation-completeness discharge object-surface status cycle-01 payload_sha256 does not match canonical payload hash."
+        "STAT derivation-completeness discharge coherence-status cycle-01 payload_sha256 does not match canonical payload hash."
     )
 
     for token_name, expected in (
-        ("STAT_DERIVATION_COMPLETENESS_DISCHARGE_OBJECT_SURFACE_STATUS_CYCLE01_ARTIFACT_v0", EXPECTED_ARTIFACT_ID),
-        ("STAT_DERIVATION_COMPLETENESS_DISCHARGE_OBJECT_SURFACE_STATUS_CYCLE01_GATE_v0", EXPECTED_COUPLING_GATE),
-        ("STAT_DERIVATION_COMPLETENESS_DISCHARGE_OBJECT_SURFACE_STATUS_v0", EXPECTED_STATUS_VALUE),
+        ("STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_CYCLE01_ARTIFACT_v0", EXPECTED_ARTIFACT_ID),
+        ("STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_CYCLE01_GATE_v0", EXPECTED_COUPLING_GATE),
+        ("STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_v0", EXPECTED_STATUS_VALUE),
+        ("STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0", "NOT_PRESENT_v0"),
     ):
         assert _extract_token(stat_text, token_name) == expected
         assert _extract_token(state_text, token_name) == expected
         assert _extract_token(roadmap_text, token_name) == expected
 
-    for doc_text, doc_label in (
-        (stat_text, "STAT plan"),
-        (state_text, "state"),
-        (roadmap_text, "roadmap"),
-    ):
-        coherence_status = _extract_token(doc_text, "STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_v0")
-        assert coherence_status in ALLOWED_COHERENCE_STATUS_VALUES, (
-            f"{doc_label} must keep the coherence-status token either pre-admission or coherence-status pinned."
-        )
-
-    stat_sha = _extract_token(stat_text, "STAT_DERIVATION_COMPLETENESS_DISCHARGE_OBJECT_SURFACE_STATUS_CYCLE01_SHA256_v0")
-    state_sha = _extract_token(state_text, "STAT_DERIVATION_COMPLETENESS_DISCHARGE_OBJECT_SURFACE_STATUS_CYCLE01_SHA256_v0")
-    roadmap_sha = _extract_token(roadmap_text, "STAT_DERIVATION_COMPLETENESS_DISCHARGE_OBJECT_SURFACE_STATUS_CYCLE01_SHA256_v0")
+    stat_sha = _extract_token(stat_text, "STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_CYCLE01_SHA256_v0")
+    state_sha = _extract_token(state_text, "STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_CYCLE01_SHA256_v0")
+    roadmap_sha = _extract_token(roadmap_text, "STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_CYCLE01_SHA256_v0")
     assert stat_sha == state_sha == roadmap_sha == artifact_json["payload_sha256"]
 
     for doc_text, doc_label in (
@@ -108,38 +98,47 @@ def test_stat_derivation_completeness_discharge_object_surface_status_cycle01_ga
         (roadmap_text, "roadmap"),
     ):
         assert _extract_token(doc_text, "STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0") == "PRESENT", (
-            f"{doc_label} must preserve the readiness packet before object-surface status admission."
+            f"{doc_label} must preserve the readiness packet before coherence-status admission."
         )
         assert _extract_token(
             doc_text, "STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0"
         ) == "DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM", (
-            f"{doc_label} must preserve the gate entry-status token before object-surface status admission."
+            f"{doc_label} must preserve the gate entry-status token before coherence-status admission."
         )
         assert _extract_token(
             doc_text, "STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_v0"
         ) == "ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM", (
-            f"{doc_label} must preserve the discharge-surface status token before object-surface status admission."
+            f"{doc_label} must preserve the discharge-surface status token before coherence-status admission."
         )
         assert _extract_token(
             doc_text, "STAT_DERIVATION_COMPLETENESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0"
         ) == "THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM", (
-            f"{doc_label} must preserve the theorem-surface status token before object-surface status admission."
+            f"{doc_label} must preserve the theorem-surface status token before coherence-status admission."
+        )
+        assert _extract_token(
+            doc_text, "STAT_DERIVATION_COMPLETENESS_DISCHARGE_OBJECT_SURFACE_STATUS_v0"
+        ) == "OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM", (
+            f"{doc_label} must preserve the object-surface status token before coherence-status admission."
         )
         assert EXPECTED_ARTIFACT_REL in doc_text, (
-            f"{doc_label} must pin the derivation-completeness discharge object-surface status artifact path."
+            f"{doc_label} must pin the derivation-completeness discharge coherence-status artifact path."
         )
         assert EXPECTED_GATE_REL in doc_text, (
-            f"{doc_label} must pin the derivation-completeness discharge object-surface status gate path."
+            f"{doc_label} must pin the derivation-completeness discharge coherence-status gate path."
         )
 
     for token_name, expected in (
         (
-            "STAT_DERIVATION_COMPLETENESS_DISCHARGE_OBJECT_SURFACE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0",
-            "stat_derivation_completeness_discharge_object_surface_scope_boundary_cycle01_v0",
-        ),
-        (
             "STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0",
             "stat_derivation_completeness_discharge_coherence_scope_boundary_cycle01_v0",
+        ),
+        (
+            "STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0",
+            "stat_failure_trigger_discharge_surface_scope_boundary_cycle01_v0",
+        ),
+        (
+            "STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0",
+            "stat_failure_trigger_discharge_coherence_scope_boundary_cycle01_v0",
         ),
         ("STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0", "stat_failure_trigger_audit_scope_boundary_cycle01_v0"),
         ("STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0", "stat_promotion_readiness_scope_boundary_cycle01_v0"),
@@ -149,35 +148,40 @@ def test_stat_derivation_completeness_discharge_object_surface_status_cycle01_ga
         assert _extract_token(roadmap_text, token_name) == expected
 
     payload = artifact_json["payload"]
-    assert payload.get("checkpoint") == "stat_derivation_completeness_discharge_object_surface_status_cycle01"
-    assert payload.get("status") == "object_surface_status_non_promotional"
-    assert payload.get("object_surface_entry_scope") == [
-        "derivation_completeness_discharge_object_surface_status_placeholder_only",
-        "theorem_surface_status_verified_before_object_surface_status",
-        "coherence_scope_boundary_pinned_before_object_surface_status",
-        "no_derivation_completeness_object_discharge_claim",
+    assert payload.get("checkpoint") == "stat_derivation_completeness_discharge_coherence_status_cycle01"
+    assert payload.get("status") == "coherence_status_non_promotional"
+    assert payload.get("coherence_entry_scope") == [
+        "derivation_completeness_discharge_coherence_status_placeholder_only",
+        "surface_theorem_object_status_bundle_verified_before_coherence_status",
+        "failure_trigger_surface_scope_boundary_pinned_before_coherence_status",
+        "no_derivation_completeness_coherence_discharge_claim",
         "no_external_truth_claim",
     ]
-    assert payload.get("required_object_surface_status_inputs") == [
+    assert payload.get("required_coherence_status_inputs") == [
         "derivation_completeness_gate_readiness_packet_present",
+        "derivation_completeness_gate_entry_status_pinned",
         "derivation_completeness_discharge_surface_status_pinned",
         "derivation_completeness_discharge_theorem_surface_status_pinned",
-        "derivation_completeness_discharge_object_surface_scope_boundary_pinned",
+        "derivation_completeness_discharge_object_surface_status_pinned",
         "derivation_completeness_discharge_coherence_scope_boundary_pinned",
+        "failure_trigger_discharge_surface_scope_boundary_pinned",
+        "failure_trigger_discharge_coherence_scope_boundary_pinned",
         "failure_trigger_audit_scope_boundary_pinned",
         "promotion_readiness_scope_boundary_pinned",
     ]
     assert payload.get("emitted_status_tokens") == [
-        "STAT_DERIVATION_COMPLETENESS_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
-        "STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_v0: NOT_PRESENT_v0",
+        "STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM",
+        "STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: NOT_PRESENT_v0",
     ]
     assert payload.get("required_token_bindings") == [
         "STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT",
         "STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM",
         "STAT_DERIVATION_COMPLETENESS_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
         "STAT_DERIVATION_COMPLETENESS_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
-        "STAT_DERIVATION_COMPLETENESS_DISCHARGE_OBJECT_SURFACE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_derivation_completeness_discharge_object_surface_scope_boundary_cycle01_v0",
+        "STAT_DERIVATION_COMPLETENESS_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
         "STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_derivation_completeness_discharge_coherence_scope_boundary_cycle01_v0",
+        "STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_failure_trigger_discharge_surface_scope_boundary_cycle01_v0",
+        "STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_failure_trigger_discharge_coherence_scope_boundary_cycle01_v0",
         "STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_failure_trigger_audit_scope_boundary_cycle01_v0",
         "STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_promotion_readiness_scope_boundary_cycle01_v0",
     ]
@@ -185,7 +189,7 @@ def test_stat_derivation_completeness_discharge_object_surface_status_cycle01_ga
         "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
         "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
         "State_of_the_Theory.md",
-        "formal/python/tests/test_stat_derivation_completeness_discharge_object_surface_status_cycle01_gate.py",
+        "formal/python/tests/test_stat_derivation_completeness_discharge_coherence_status_cycle01_gate.py",
     ]
     assert payload.get("anti_shortcut_constraints") == [
         "no_phase_skip_promotion",
@@ -194,5 +198,5 @@ def test_stat_derivation_completeness_discharge_object_surface_status_cycle01_ga
     ]
     assert payload.get("discharge_row_linkage") == ["TOE-STAT-DER-01", "TOE-STAT-DER-02"]
 
-    assert "- bounded derivation-completeness discharge object-surface entry scope only; no coherence execution claim and no external truth claim." in stat_text
-    assert "- object-surface status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion." in stat_text
+    assert "- bounded derivation-completeness discharge coherence entry scope only; no failure-trigger surface execution claim and no external truth claim." in stat_text
+    assert "- coherence-status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion." in stat_text
