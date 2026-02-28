@@ -167,6 +167,11 @@ Inevitability obligation linkage (must remain synchronized with gate target):
   - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE08_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/qm_external_lane_evidence_checkpoint_cycle08_v0.json`
   - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle08_gate.py`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE09_ARTIFACT_v0: qm_external_lane_evidence_checkpoint_cycle09_v0`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE09_SHA256_v0: b041f3756cb0a32b8fd5df76610b7ca3f4ca6bef2a8b50c5dd6659cfb0bc4e1a`
+  - `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE09_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_external_lane_evidence_checkpoint_cycle09_v0.json`
+  - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle09_gate.py`
 
 - Closure-hardening bundle (bounded non-claim):
   - `QM_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: qm_closure_hardening_bundle_cycle01_v0`

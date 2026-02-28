@@ -68,6 +68,31 @@ Theorem-evidence checkpoint coupling bundle (bounded non-claim):
 - `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE10_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle10_v0.json`
 - `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle10_gate.py`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE11_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle11_v0`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE11_ARTIFACT_SHA256_v0: 3c0297cd67d78768e1a957f49283f1d93d7e5f601aa21817606f3780bbf31439`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE11_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle11_v0.json`
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle11_gate.py`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE12_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle12_v0`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE12_ARTIFACT_SHA256_v0: 555e1c0c2f3f07e076a00aa2ad322e05d8b863462c1ba718e6514de3b2ebbb0e`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE12_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle12_v0.json`
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle12_gate.py`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE13_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle13_v0`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE13_ARTIFACT_SHA256_v0: 54f051b40210a7e783b15838a4c21181a6ce46d26041497d1500c14f4ed908a9`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE13_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle13_v0.json`
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle13_gate.py`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE14_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle14_v0`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE14_ARTIFACT_SHA256_v0: 8235e707ebf81e2f775f72f5e608c4eb5d8ad1f8069656680d3f78af858a9404`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE14_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle14_v0.json`
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle14_gate.py`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE15_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle15_v0`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE15_ARTIFACT_SHA256_v0: 4a07a5d3e0bc4f94fef789127d1bed68134b18bd3eb3fd0de13411fbb5c53a6e`
+- `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE15_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle15_v0.json`
+- `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle15_gate.py`
 
 - Closure-hardening bundle (bounded non-claim):
 - `SR_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: sr_closure_hardening_bundle_cycle01_v0`
@@ -75,6 +100,45 @@ Theorem-evidence checkpoint coupling bundle (bounded non-claim):
 - `SR_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/sr_closure_hardening_bundle_cycle01_v0.json`
 - `formal/python/tests/test_sr_closure_hardening_bundle_coupling_cycle01_gate.py`
+
+Adequacy-facing 5x5 justification block (bounded, non-adjudicative):
+- `EVIDENCE_ADEQUACY_SR_5X5_JUSTIFICATION_v0: PRESENT`
+- `EVIDENCE_ADEQUACY_SR_5X5_JUSTIFICATION_ENTRY_THRESHOLD_v0: MIN_5_ENTRIES_REQUIRED`
+- `SR_ADEQUACY_ENTRY_01_v0`
+  - adequacy claim: Lorentz covariance residuals remain bounded under inertial-frame transforms in scoped assumptions.
+  - metric/invariant: covariance identity check (`||eta' - Lambda^T eta Lambda||_max`).
+  - artifact hash token: `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE15_ARTIFACT_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle15_gate.py`.
+  - pass criterion: numeric `<= 1e-10` and Boolean pass required.
+  - failure taxonomy: frame-transform inconsistency or index/sign convention drift.
+- `SR_ADEQUACY_ENTRY_02_v0`
+  - adequacy claim: interval-invariance error remains within tolerance across sampled boosts.
+  - metric/invariant: invariant interval delta (`|s'^2 - s^2|`).
+  - artifact hash token: `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE10_ARTIFACT_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle10_gate.py`.
+  - pass criterion: numeric `<= 1e-9` and Boolean pass required.
+  - failure taxonomy: invariant preservation break under sampled transforms.
+- `SR_ADEQUACY_ENTRY_03_v0`
+  - adequacy claim: low-velocity limit recovers Galilean-form behavior within bounded error.
+  - metric/invariant: limit behavior check (`v/c -> 0` consistency residual).
+  - artifact hash token: `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE11_ARTIFACT_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle11_gate.py`.
+  - pass criterion: numeric `<= 5e-3` for sampled low-velocity envelope.
+  - failure taxonomy: incorrect asymptotic reduction or scaling mismatch.
+- `SR_ADEQUACY_ENTRY_04_v0`
+  - adequacy claim: dimensional structure is preserved for transform and interval quantities.
+  - metric/invariant: dimensional consistency check across symbolic term map.
+  - artifact hash token: `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE09_ARTIFACT_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle09_gate.py`.
+  - pass criterion: Boolean `True` for all mandatory rows.
+  - failure taxonomy: dimension-tag mismatch in theorem-evidence row mapping.
+- `SR_ADEQUACY_ENTRY_05_v0`
+  - adequacy claim: route stability under bounded perturbation does not create shortcut dependency.
+  - metric/invariant: perturbation stability of covariance checkpoint residual trend.
+  - artifact hash token: `SR_THEOREM_EVIDENCE_CHECKPOINT_CYCLE08_ARTIFACT_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle08_gate.py`.
+  - pass criterion: Boolean `True` for non-increasing residual trend and max step delta `<= 1e-2` over bounded perturbation ladder.
+  - failure taxonomy: instability spike or anti-shortcut constraint violation.
 
 Non-claim boundary:
 - planning-only enforcement control surface.

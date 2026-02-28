@@ -1293,12 +1293,81 @@ EM full-discharge completion mechanics (v0):
   - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE11_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/em_maxwell_linear_comparator_packet_cycle11_v0.json`
   - `formal/python/tests/test_em_comparator_evidence_coupling_cycle11_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE12_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle12_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE12_SHA256_v0: ae1e91e44b20e753ec0ac1c33a51b4516553d67bc113bae6a865778a12928267`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE12_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle12_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle12_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE13_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle13_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE13_SHA256_v0: 8218d90186c45afbccfbba1c48af66eb81c9c5793721631e75500bcac1e9bd81`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE13_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle13_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle13_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE14_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle14_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE14_SHA256_v0: ae644c6f5e0cd552fce955ddfd101a9d13f42a3f037df0f472c53b3839520ee2`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE14_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle14_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle14_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE15_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle15_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE15_SHA256_v0: db141a14dd046a2c428da6089f5025bd3654e843e0c4e0ac5b52e15ffe6d9808`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE15_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle15_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle15_gate.py`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE16_ARTIFACT_v0: em_maxwell_linear_comparator_packet_cycle16_v0`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE16_SHA256_v0: f7062802b6b614874d432ec2d2294b1069585abe4413d9a9eb8720cfe5be3099`
+  - `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE16_COUPLING_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/em_maxwell_linear_comparator_packet_cycle16_v0.json`
+  - `formal/python/tests/test_em_comparator_evidence_coupling_cycle16_gate.py`
 - closure-hardening bundle (bounded non-promotional coupling layer):
   - `EM_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: em_closure_hardening_bundle_cycle01_v0`
   - `EM_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 31a977e5427f6c27ac4be6ec0bbafd3c3a76700948c91e4e7c2ceb3716b749f2`
   - `EM_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/em_closure_hardening_bundle_cycle01_v0.json`
   - `formal/python/tests/test_em_closure_hardening_bundle_coupling_cycle01_gate.py`
+
+Adequacy-facing 5x5 justification block (bounded, non-adjudicative):
+- `EVIDENCE_ADEQUACY_EM_5X5_JUSTIFICATION_v0: PRESENT`
+- `EVIDENCE_ADEQUACY_EM_5X5_JUSTIFICATION_ENTRY_THRESHOLD_v0: MIN_5_ENTRIES_REQUIRED`
+- `EM_ADEQUACY_ENTRY_01_v0`
+  - adequacy claim: comparator residual remains bounded under discretization-step refinement.
+  - comparator cycle coverage: cycle-14, cycle-15, cycle-16.
+  - sensitivity dimension: grid/step-size sensitivity.
+  - artifact hash token: `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE16_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_em_comparator_evidence_coupling_cycle16_gate.py`.
+  - pass criterion: numeric relative residual delta `<= 1e-2`.
+  - failure mode: non-convergent discretization trend.
+- `EM_ADEQUACY_ENTRY_02_v0`
+  - adequacy claim: boundary-condition variant does not violate bounded Maxwell-lane comparator plausibility.
+  - comparator cycle coverage: cycle-11, cycle-12.
+  - sensitivity dimension: boundary-condition variant.
+  - artifact hash token: `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE12_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_em_comparator_evidence_coupling_cycle12_gate.py`.
+  - pass criterion: Boolean `True` and max deviation `<= 2e-2` over authorized boundary set.
+  - failure mode: boundary-conditioned divergence of comparator residuals.
+- `EM_ADEQUACY_ENTRY_03_v0`
+  - adequacy claim: bounded perturbation injection recovers baseline comparator envelope.
+  - comparator cycle coverage: cycle-09, cycle-12.
+  - sensitivity dimension: perturbation injection/recovery.
+  - artifact hash token: `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE09_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_em_comparator_evidence_coupling_cycle09_gate.py`.
+  - pass criterion: recovery residual returns to baseline band within bounded step count (`<= 8`).
+  - failure mode: non-recovery or monotone residual growth.
+- `EM_ADEQUACY_ENTRY_04_v0`
+  - adequacy claim: conservation/residual trend remains non-increasing under comparator sweep ordering.
+  - comparator cycle coverage: cycle-10, cycle-11.
+  - sensitivity dimension: conservation/residual trend check.
+  - artifact hash token: `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE11_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_em_comparator_evidence_coupling_cycle11_gate.py`.
+  - pass criterion: monotonic non-increase in residual summary metric (Boolean `True`).
+  - failure mode: trend inversion or conservation residual spike.
+- `EM_ADEQUACY_ENTRY_05_v0`
+  - adequacy claim: comparator route remains anti-shortcut compliant while preserving bounded non-claim semantics.
+  - comparator cycle coverage: cycle-08 through cycle-12.
+  - sensitivity dimension: cross-cycle governance-consistency sensitivity.
+  - artifact hash token: `EM_PILLAR_MAXWELL_LINEAR_COMPARATOR_PACKET_CYCLE08_SHA256_v0`.
+  - coupling gate path: `formal/python/tests/test_em_comparator_evidence_coupling_cycle08_gate.py`.
+  - pass criterion: Boolean `True` for route-token continuity and no unauthorized closure flip.
+  - failure mode: shortcut dependency or token-order drift breaking comparator route integrity.
 - retained assumption-classification surfaces (explicit, no closure flip):
   - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_BRIDGE_v0: PotentialFieldStrengthBridgeAssumptions_RETAINED_ASSUMPTION_OBJECT`
   - `EM_PILLAR_RETAINED_ASSUMPTION_CLASS_SMOOTHNESS_v0: DoubleDivergenceSmoothnessLaneAssumptions_RETAINED_ASSUMPTION_OBJECT`

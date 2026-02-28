@@ -1,0 +1,23 @@
+{
+  "artifact_id": "em_maxwell_linear_comparator_packet_cycle14_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "em_linear_comparator_cycle14",
+    "status": "placeholder_non_promotional",
+    "sensitivity_row_expansion": [
+      "time_step_refinement_consistency",
+      "boundary_condition_rotation",
+      "perturbation_decay_residual_trend"
+    ],
+    "non_claim_boundary": [
+      "planning_only",
+      "bounded_comparator_scope_only",
+      "no_standard_model_completion_claim",
+      "no_inevitability_claim_by_artifact",
+      "no_external_truth_claim"
+    ],
+    "generated_on": "2026-02-24"
+  },
+  "payload_sha256": "ae644c6f5e0cd552fce955ddfd101a9d13f42a3f037df0f472c53b3839520ee2"
+}

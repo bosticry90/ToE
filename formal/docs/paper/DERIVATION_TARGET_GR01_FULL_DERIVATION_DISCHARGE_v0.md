@@ -171,6 +171,11 @@ Scope:
   - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE08_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/gr01_publication_bridge_checkpoint_cycle08_v0.json`
   - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle08_gate.py`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE09_ARTIFACT_v0: gr01_publication_bridge_checkpoint_cycle09_v0`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE09_SHA256_v0: e8cc73a4a1aa58f1ef9ca326087323acc3c6ce8ae2b0d894b3551415b6e1e88c`
+  - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE09_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/gr01_publication_bridge_checkpoint_cycle09_v0.json`
+  - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle09_gate.py`
 
 - Closure-hardening bundle (bounded non-claim):
   - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: gr01_closure_hardening_bundle_cycle01_v0`
