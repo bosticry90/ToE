@@ -1,0 +1,22 @@
+{
+  "artifact_id": "cosmo_bg_micro02_expansion_law_surface_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro02_expansion_law_surface_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "expansion_law_surface_only_nonclaim_v0",
+    "expansion_surface_tokens": [
+      "COSMO_BG_MICRO02_EXPANSION_RELATION_SURFACE_v0: HUBBLE_SCALE_FACTOR_RELATION_PLACEHOLDER_PINNED",
+      "COSMO_BG_MICRO02_CURVATURE_SURFACE_v0: SPATIAL_CURVATURE_TERM_PLACEHOLDER_PINNED",
+      "COSMO_BG_MICRO02_SOURCE_COUPLING_SURFACE_v0: EFFECTIVE_DENSITY_PRESSURE_COUPLING_PLACEHOLDER_PINNED",
+      "COSMO_BG_MICRO02_REGIME_SURFACE_v0: HOMOGENEITY_ISOTROPY_BOUNDARY_PLACEHOLDER_PINNED"
+    ],
+    "anti_shortcut_constraints": [
+      "no_equation_closure_promotion",
+      "no_unbounded_regime_extension",
+      "no_external_truth_claim"
+    ],
+    "generated_on": "2026-03-01"
+  }
+}

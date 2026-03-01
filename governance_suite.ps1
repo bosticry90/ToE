@@ -29,6 +29,7 @@ Write-Host "Running governance suite via ./py.ps1" -ForegroundColor Cyan
   formal/python/tests/test_pillar_phase_advancement_gate.py `
   formal/python/tests/test_cosmo_background_kickoff_gate.py `
   formal/python/tests/test_cosmo_bg_micro01_object_surface_gate.py `
+  formal/python/tests/test_cosmo_bg_micro02_expansion_law_surface_gate.py `
   -q
 
 Write-Host "OK" -ForegroundColor Green
