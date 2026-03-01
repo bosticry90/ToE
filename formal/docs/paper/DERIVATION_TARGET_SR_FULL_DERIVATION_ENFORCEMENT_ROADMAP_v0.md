@@ -16,7 +16,7 @@ Purpose:
 
 Adjudication token:
 - `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
-- `PILLAR-SR_REGISTRY_EXEMPTION_v0: SR_CLOSURE_NOT_TRACKED_IN_GENERIC_REGISTRY`
+- `PILLAR_SR_FULL_DERIVATION_DISCHARGE_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
 
 Theorem-evidence checkpoint coupling bundle (bounded non-claim):
 - `SR_THEOREM_EVIDENCE_CHECKPOINT_ARTIFACT_v0: sr_covariance_theorem_evidence_checkpoint_cycle75_v0`
@@ -164,31 +164,31 @@ Non-claim boundary:
 
 - `TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN` remains the frozen target surface.
 
-## ASSUMPTION FREEZE section
+## ASSUMPTION_FREEZE section
 
 - Required assumption classes remain explicit: `MATH|DEF|POLICY|SCOPE`.
 - Assumption minimization and discharge ordering remains phase-gated.
 
-## CANONICAL ROUTE section
+## CANONICAL_ROUTE section
 
 - Canonical route is phase-ordered and no-deviation by policy.
 - No phase-skip promotion is permitted.
 
-## COUNTERFACTUAL ROUTE section
+## COUNTERFACTUAL section
 
 - Phase-VI counterfactual negative controls remain mandatory before inevitability discharge.
 - Reopen policy remains active on counterfactual or theorem regression.
 
-## INDEPENDENT NECESSITY ROUTE section
+## INDEPENDENT_NECESSITY section
 
 - Independent-necessity classification remains synchronized to dedicated inevitability theorem obligations.
 
-## BOUNDED SCOPE section
+## BOUNDED_SCOPE section
 
 - non-claim boundary remains explicit and binding for this roadmap artifact.
 - bounded theorem-discharge scope only; no full-SR dynamics claim and no external truth claim by this artifact.
 
-## Authoritative no-deviation rule
+## ANTI_SHORTCUT section
 
 - Execute phases strictly in order; no phase-skip promotion is allowed.
 - Promotion tokens may be pinned early, but claim promotion is forbidden until all upstream discharge gates are satisfied.
@@ -1295,7 +1295,7 @@ Inevitability obligation linkage (authoritative theorem route, synchronized):
 - artifact pointer:
   - `formal/output/sr_covariance_claim_label_and_pillar_closure_transition_lock_cycle74_v0.json`
 
-## Promotion gates
+## HARDENING section
 
 - `TOE-SR-THM-01` promotion to bounded proved posture is synchronized by cycle-074 claim-label transition lock.
 - Full-derivation/discharge wording is allowed only in bounded theorem-discharge scope with explicit assumptions and no external truth claim.
@@ -1310,9 +1310,22 @@ Inevitability obligation linkage (authoritative theorem route, synchronized):
 - `formal/docs/paper/RESULTS_TABLE_v0.md`
 - `State_of_the_Theory.md`
 
-## Enforcement hooks
+## DRIFT_GATES section
 
 - `formal/python/tests/test_sr_covariance_kickoff_gate.py`
 - `formal/python/tests/test_sr_theorem_surface_scaffold_gate.py`
 - `formal/python/tests/test_sr_full_derivation_enforcement_roadmap_gate.py`
 - `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_gate.py`
+- `formal/python/tests/test_pillar_full_derivation_discharge_lane.py`
+- `formal/python/tests/test_pillar_full_discharge_completion_mechanics.py`
+
+## ADJUDICATION_SYNC section
+
+- `PILLAR_SR_DISCHARGE_DOC_IS_UMBRELLA_DOC_v0: TRUE`
+- `PILLAR_SR_FULL_DERIVATION_DISCHARGE_LOCALIZATION_GATE_v0: FULL_DISCHARGE_ARTIFACTS_ONLY`
+- `PILLAR_SR_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: DISCHARGED_NO_AUTOMATIC_PROMOTION`
+- `PILLAR_SR_FULL_DERIVATION_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+- `PILLAR_SR_FULL_DERIVATION_DISCHARGE_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
+- `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
+- pointer: `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
+- gate: `formal/python/tests/test_sr_full_derivation_enforcement_roadmap_gate.py`

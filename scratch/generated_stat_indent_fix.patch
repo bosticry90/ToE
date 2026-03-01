@@ -1,0 +1,702 @@
+*** Begin Patch
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_adjudication_transition_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for adjudication transition scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_adjudication_transition_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for adjudication-transition status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_closure_hardening_bundle_coupling_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for closure-hardening gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_der01_discharge_scaffold_coupling_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for DER01 discharge scaffold gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_der01_object_surface_scaffold_coupling_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for DER01 object-surface scaffold gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_der01_theorem_body_scaffold_coupling_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for DER01 theorem-body scaffold gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_der01_theorem_body_scope_boundary_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for DER01 theorem-body scope-boundary gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_der01_theorem_surface_scaffold_coupling_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for DER01 theorem-surface scaffold gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_der02_discharge_scaffold_coupling_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for DER02 discharge scaffold gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_der02_object_surface_scaffold_coupling_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for DER02 object-surface scaffold gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for DER02 regime-closure scaffold gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_der02_theorem_body_scaffold_coupling_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for DER02 theorem-body scaffold gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_der02_theorem_body_scope_boundary_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for DER02 theorem-body scope-boundary gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_derivation_completeness_discharge_coherence_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for derivation-completeness discharge coherence scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_derivation_completeness_discharge_coherence_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for derivation-completeness discharge coherence-status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_derivation_completeness_discharge_object_surface_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for derivation-completeness discharge object-surface scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_derivation_completeness_discharge_object_surface_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for derivation-completeness discharge object-surface status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_derivation_completeness_discharge_surface_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for derivation-completeness discharge-surface scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_derivation_completeness_discharge_surface_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for derivation-completeness discharge-surface status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_derivation_completeness_discharge_theorem_surface_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for derivation-completeness discharge theorem-surface scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_derivation_completeness_discharge_theorem_surface_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for derivation-completeness discharge theorem-surface status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_derivation_completeness_gate_entry_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for derivation-completeness gate entry-status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_derivation_completeness_gate_readiness_packet_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for derivation-completeness gate readiness packet gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_derivation_completeness_gate_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for derivation-completeness gate scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_discharge_completion_transition_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for discharge completion transition scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_discharge_completion_transition_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for discharge-completion transition-status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_evidence_adequacy_5x5_justification_scaffold_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for adequacy 5x5 scaffold gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_evidence_checkpoint_coupling_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for active-cycle checkpoint coupling gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert ARTIFACT_PATH.exists(), "STAT evidence checkpoint cycle-01 artifact is missing."
+    artifact_json = json.loads(ARTIFACT_PATH.read_text(encoding="utf-8"))
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_evidence_checkpoint_cycle01_acceptance_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for STAT cycle01 acceptance gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    stat_gate_token = _extract_token(stat_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_ACCEPTANCE_GATE_v0")
+    state_gate_token = _extract_token(state_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_ACCEPTANCE_GATE_v0")
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_evidence_interface_lane_scope_boundary_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for evidence-interface scope-boundary gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_failure_trigger_audit_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for failure-trigger audit scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_failure_trigger_discharge_coherence_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for failure-trigger discharge coherence scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_failure_trigger_discharge_coherence_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for failure-trigger discharge coherence-status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_failure_trigger_discharge_object_surface_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for failure-trigger discharge object-surface scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_failure_trigger_discharge_object_surface_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for failure-trigger discharge object-surface status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_failure_trigger_discharge_surface_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for failure-trigger discharge-surface scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_failure_trigger_discharge_surface_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for failure-trigger discharge surface-status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_failure_trigger_discharge_theorem_surface_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for failure-trigger discharge theorem-surface scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_failure_trigger_discharge_theorem_surface_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for failure-trigger discharge theorem-surface status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_inevitability_transition_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for inevitability transition scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_inevitability_transition_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for inevitability-transition status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_multi_cycle_drift_resistance_sweep_cycle02_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for multi-cycle drift-resistance sweep gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_boundary_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip execution boundary scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_boundary_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip-execution-boundary status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_cycle01_gate.py
+@@
+    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict)
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py
+@@
+    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict)
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
+
+    assert artifact.get("artifact_id") == CURRENT_ARTIFACT_ID
+    assert artifact.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_gate.py
+@@
+    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict)
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py
+@@
+    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict)
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
+
+    assert artifact.get("artifact_id") == CURRENT_ARTIFACT_ID
+    assert artifact.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip execution custody attestation confirmation attestation confirmation attestation confirmation attestation confirmation attestation scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py
+@@
+    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict)
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
+    assert artifact.get("artifact_id") == CURRENT_ARTIFACT_ID
+    assert artifact.get("artifact_version") == "v0"
+    assert artifact.get("placeholder_template") is True
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip execution custody attestation confirmation attestation confirmation attestation confirmation attestation confirmation scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py
+@@
+    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict)
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
+
+    assert artifact.get("artifact_id") == CURRENT_ARTIFACT_ID
+    assert artifact.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip execution custody attestation confirmation attestation confirmation attestation confirmation attestation scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py
+@@
+    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict)
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
+
+    assert artifact.get("artifact_id") == CURRENT_ARTIFACT_ID
+    assert artifact.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip execution custody attestation confirmation attestation confirmation attestation confirmation scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip execution custody attestation confirmation attestation confirmation attestation scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip execution custody attestation confirmation attestation confirmation scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip-execution-custody-attestation-confirmation-attestation-confirmation status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip execution custody attestation confirmation attestation scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip-execution-custody-attestation-confirmation-attestation status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip execution custody attestation confirmation scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip-execution-custody-attestation-confirmation status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip execution custody attestation scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_attestation_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip-execution-custody-attestation status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_scope_boundary_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip execution custody scope-boundary gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_nonflip_execution_custody_status_cycle01_gate.py
+@@
+    assert isinstance(stat_matrix, dict), (
+        "PILLAR-STAT matrix row must exist for nonflip-execution-custody status gate."
+    )
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_promotion_readiness_scope_boundary_cycle01_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for promotion-readiness scope-boundary gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
+    assert artifact_json.get("artifact_version") == "v0"
+*** Update File: c:/Users/psboy/Documents/ToE/formal/python/tests/test_stat_row_scaffold_cycle01_aggregation_gate.py
+@@
+    )
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for row-scaffold aggregation gate."
+-        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
++    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
+
+    for gate_rel in STAT_ROW_SCAFFOLD_COMPONENT_GATES:
+        gate_path = REPO_ROOT / gate_rel
+*** End Patch
