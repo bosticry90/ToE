@@ -1804,6 +1804,22 @@ Post-GR01 handoff checkpoint (2026-02-21):
 - Next pillar focus is explicit and assumption-minimization-first:
   - `NEXT_PILLAR_FOCUS_v0: PILLAR-COSMO`
   - `NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-COSMO-BG-PLAN`
+
+COSMO rollup checkpoint (2026-03-01):
+- COSMO rollup summary/package surfaces are pinned:
+  - `formal/docs/paper/TOE_COSMO_BACKGROUND_PILLAR_SUMMARY_v0.md`
+  - `formal/markdown/locks/policy/COSMO_BACKGROUND_PILLAR_PACKAGE_v0.md`
+- COSMO rollup package freeze posture is explicit:
+  - `COSMO_BACKGROUND_PILLAR_PACKAGE_STATUS_v0: FROZEN_CONTENTS_PINNED`
+  - `COSMO_BACKGROUND_PILLAR_PACKAGE_PROGRESS_v0: REQUIRED_CONTENTS_PINNED`
+  - `COSMO_BACKGROUND_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
+- COSMO reopen triggers are explicit:
+  - `REOPEN_TRIGGER_COSMO_SURFACE_DRIFT_v0`
+  - `REOPEN_TRIGGER_COSMO_SCOPE_BOUNDARY_REGRESSION_v0`
+  - `REOPEN_TRIGGER_COSMO_PACKAGE_CONTENT_MISMATCH_v0`
+- COSMO rollup enforcement gates are pinned:
+  - `formal/python/tests/test_cosmo_background_pillar_package_rollup_gate.py`
+  - `formal/python/tests/test_cosmo_state_rollup_checkpoint_gate.py`
   - canonical pillar status matrix pointer: `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`
   - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_ARTIFACT_v0: qft_evidence_diversification_checkpoint_cycle01_v0`
   - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_SHA256_v0: e577ce28c1ec133d1fb81fd4f02c86cb8cbc51ff2d376fb28007d85e31160d3a`
