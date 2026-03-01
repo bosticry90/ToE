@@ -62,6 +62,8 @@ def test_cosmo_matrix_row_is_present_and_locked() -> None:
         "rollup_package_doc": "formal/markdown/locks/policy/COSMO_BACKGROUND_PILLAR_PACKAGE_v0.md",
         "rollup_gate": "formal/python/tests/test_cosmo_background_pillar_package_rollup_gate.py",
         "state_checkpoint_gate": "formal/python/tests/test_cosmo_state_rollup_checkpoint_gate.py",
+        "lane_drift_alarm_gate": "formal/python/tests/test_cosmo_bg_micro07_matrix_lane_drift_alarm_gate.py",
+        "lane_transition_policy": "LOCKED_QUEUE_ENFORCED_CROSS_SURFACE",
         "consistency_gate": "formal/python/tests/test_cosmo_matrix_rollup_crosspin_gate.py",
     }
 

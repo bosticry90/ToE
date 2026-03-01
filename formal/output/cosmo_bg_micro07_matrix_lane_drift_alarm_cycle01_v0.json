@@ -1,0 +1,28 @@
+{
+  "artifact_id": "cosmo_bg_micro07_matrix_lane_drift_alarm_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro07_matrix_lane_drift_alarm_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "matrix_lane_drift_alarm_only_nonclaim_v0",
+    "policy_tokens": [
+      "COSMO_MATRIX_LANE_DRIFT_ALARM_POLICY_v0: LOCKED_QUEUE_ENFORCED_CROSS_SURFACE",
+      "lane_transition_policy: LOCKED_QUEUE_ENFORCED_CROSS_SURFACE",
+      "lane_drift_alarm_gate: formal/python/tests/test_cosmo_bg_micro07_matrix_lane_drift_alarm_gate.py"
+    ],
+    "required_locked_queue_surfaces": [
+      "formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json",
+      "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json",
+      "State_of_the_Theory.md"
+    ],
+    "required_locked_queue_tokens": [
+      "PILLAR-COSMO -> matrix_status: LOCKED",
+      "PILLAR-COSMO roadmap status: LOCKED",
+      "NEXT_PILLAR_FOCUS_v0: PILLAR-COSMO",
+      "NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-COSMO-BG-PLAN",
+      "PILLAR-COSMO mode: LOCKED_QUEUE"
+    ]
+  }
+}

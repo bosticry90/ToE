@@ -1825,6 +1825,10 @@ COSMO rollup checkpoint (2026-03-01):
   - `COSMO_ROLLUP_STATE_CHECKPOINT_BOUNDARY_v0: SECTION_ISOLATED`
   - `COSMO_ROLLUP_STATE_CHECKPOINT_END_v0`
 
+- COSMO matrix-lane drift alarm posture is pinned:
+  - `COSMO_MATRIX_LANE_DRIFT_ALARM_POLICY_v0: LOCKED_QUEUE_ENFORCED_CROSS_SURFACE`
+  - `formal/python/tests/test_cosmo_bg_micro07_matrix_lane_drift_alarm_gate.py`
+
 QFT evidence diversification checkpoint log (legacy):
 - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_ARTIFACT_v0: qft_evidence_diversification_checkpoint_cycle01_v0`
   - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_SHA256_v0: e577ce28c1ec133d1fb81fd4f02c86cb8cbc51ff2d376fb28007d85e31160d3a`
