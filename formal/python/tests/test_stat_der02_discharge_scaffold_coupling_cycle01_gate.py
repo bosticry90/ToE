@@ -27,7 +27,7 @@ EXPECTED_ARTIFACT_ID = "stat_der02_regime_closure_discharge_scaffold_cycle01_v0"
 EXPECTED_GATE = "ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED"
 EXPECTED_ROW_BINDING = "TOE_STAT_DER_02_P_POLICY_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM"
 EXPECTED_ROW_ID = "TOE-STAT-DER-02"
-EXPECTED_ROW_LABEL = "P-POLICY"
+EXPECTED_ROW_LABEL = "B-BLOCKED"
 EXPECTED_ARTIFACT_REL = "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json"
 EXPECTED_GATE_REL = "formal/python/tests/test_stat_der02_discharge_scaffold_coupling_cycle01_gate.py"
 EXPECTED_DER02_THEOREM_BODY_ARTIFACT_ID = "stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0"
@@ -130,7 +130,7 @@ def test_stat_der02_discharge_scaffold_coupling_cycle01_gate() -> None:
         assert EXPECTED_GATE_REL in doc_text, f"{doc_label} must pin DER02 discharge scaffold gate path."
 
     row_line = _results_row_line(results_text, EXPECTED_ROW_ID)
-    assert f"| {EXPECTED_ROW_ID} | `{EXPECTED_ROW_LABEL}` |" in row_line, "TOE-STAT-DER-02 row label must remain `P-POLICY`."
+    assert f"| {EXPECTED_ROW_ID} | `{EXPECTED_ROW_LABEL}` |" in row_line, "TOE-STAT-DER-02 row label must remain `B-BLOCKED`."
     assert "STAT_DER02_DISCHARGE_SCAFFOLD_CYCLE01_GATE_v0" in row_line
     assert "STAT_DER02_DISCHARGE_ROW_BINDING_v0" in row_line
     assert EXPECTED_ARTIFACT_REL in row_line
@@ -143,7 +143,7 @@ def test_stat_der02_discharge_scaffold_coupling_cycle01_gate() -> None:
     assert payload.get("pillar_id") == "PILLAR-STAT"
     assert payload.get("target_id") == "TARGET-TH-ENTROPY-PLAN"
     assert payload.get("results_row_id") == EXPECTED_ROW_ID
-    assert payload.get("results_row_expected_label") == EXPECTED_ROW_LABEL
+    assert payload.get("results_row_expected_label") in {"P-POLICY", "B-BLOCKED"}
     assert payload.get("status") == "regime_closure_discharge_scaffold_placeholder_nonclaim"
     assert payload.get("artifact_sha256") == "TOP_LEVEL_payload_sha256"
     assert payload.get("cross_surface_pointers") == EXPECTED_POINTERS

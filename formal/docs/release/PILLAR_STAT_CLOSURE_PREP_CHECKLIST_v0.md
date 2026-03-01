@@ -21,7 +21,7 @@ Current authoritative posture:
 - `PILLAR-STAT` remains `ACTIVE` in canonical roadmap/matrix surfaces.
 - `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION` remains `ACTIVE_PREEXECUTION_v0_NONDISCHARGED`.
 - `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION` remains `ACTIVE_PREEXECUTION_v0_NONDISCHARGED`.
-- Required STAT closure rows remain reserved active-stage placeholders: `TOE-STAT-DER-01`, `TOE-STAT-DER-02` stay `P-POLICY`.
+- Required STAT closure rows remain active-stage blocked execution rows: `TOE-STAT-DER-01`, `TOE-STAT-DER-02` stay `B-BLOCKED`.
 
 Canonical anchors:
 - `formal/docs/paper/PHYSICS_ROADMAP_v0.md`
@@ -33,7 +33,7 @@ Canonical anchors:
 
 Current closure-prep posture tokens:
 - `PILLAR-STAT_PHYSICS_STATUS: OPEN_v0_ACTIVE_PREEXECUTION`
-- `PILLAR-STAT_GOVERNANCE_STATUS: OPEN_v0_REQUIRED_ROWS_POLICY_PLACEHOLDERS`
+- `PILLAR-STAT_GOVERNANCE_STATUS: OPEN_v0_REQUIRED_ROWS_BLOCKED_EXECUTION`
 - `PROCEED_GATE_STAT: BLOCKED_v0_PHYSICS_NOT_CLOSED`
 - `MATRIX_CLOSURE_GATE_STAT: BLOCKED_v0_GOVERNANCE_NOT_CLOSED`
 - `REQUIRED_STAT_CLOSURE_ROWS: TOE-STAT-DER-01,TOE-STAT-DER-02`
@@ -53,7 +53,7 @@ Pass evidence:
 ### Gate B - required row posture remains pre-closure (must be true now)
 1. `REQUIRED_STAT_CLOSURE_ROWS` resolves to exactly `TOE-STAT-DER-01,TOE-STAT-DER-02`.
 2. Each required row exists exactly once in `formal/docs/paper/RESULTS_TABLE_v0.md`.
-3. Each required row remains `P-POLICY` while `PILLAR-STAT` is pre-discharge.
+3. Each required row remains `B-BLOCKED` while `PILLAR-STAT` is pre-discharge.
 4. No required row is silently promoted during closure-prep-only changes.
 
 Pass evidence:

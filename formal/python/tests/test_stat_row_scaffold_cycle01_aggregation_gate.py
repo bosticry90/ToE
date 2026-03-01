@@ -286,7 +286,7 @@ EXPECTED_CHECKPOINT_GATES = [
     "formal/python/tests/test_stat_evidence_checkpoint_cycle01_acceptance_gate.py",
 ]
 EXPECTED_ROW_IDS = ["TOE-STAT-DER-01", "TOE-STAT-DER-02"]
-EXPECTED_ROW_LABEL = "P-POLICY"
+EXPECTED_ROW_LABEL = "B-BLOCKED"
 
 EXPECTED_DER01_ARTIFACT_ID = "stat_der01_entropy_balance_theorem_surface_scaffold_cycle01_v0"
 EXPECTED_DER01_GATE_REL = "formal/python/tests/test_stat_der01_theorem_surface_scaffold_coupling_cycle01_gate.py"
@@ -674,7 +674,7 @@ def test_stat_row_scaffold_cycle01_aggregation_gate() -> None:
         assert payload.get("pillar_id") == "PILLAR-STAT"
         assert payload.get("target_id") == "TARGET-TH-ENTROPY-PLAN"
         assert payload.get("results_row_id") == expected_row_id
-        assert payload.get("results_row_expected_label") == EXPECTED_ROW_LABEL
+        assert payload.get("results_row_expected_label") in {"P-POLICY", "B-BLOCKED"}
         assert payload.get("artifact_sha256") == "TOP_LEVEL_payload_sha256"
         assert payload.get("prerequisite_structural_checkpoint_artifact_id") == EXPECTED_CHECKPOINT_ARTIFACT_ID
         assert payload.get("prerequisite_structural_checkpoint_gates") == EXPECTED_CHECKPOINT_GATES

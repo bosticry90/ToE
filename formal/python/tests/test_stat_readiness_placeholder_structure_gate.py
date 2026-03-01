@@ -70,7 +70,7 @@ def test_stat_readiness_placeholder_structure_gate() -> None:
         statement = cols[2]
         evidence_pointer = cols[3]
 
-        assert claim_label == "P-POLICY", f"`{row_id}` must remain `P-POLICY` during readiness."
+        assert claim_label == "B-BLOCKED", f"`{row_id}` must remain `B-BLOCKED` during readiness."
         assert "TARGET-TH-ENTROPY-PLAN" in statement, f"`{row_id}` must remain bound to STAT target."
         assert "DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md" in evidence_pointer, (
             f"`{row_id}` must point to the STAT readiness plan document."

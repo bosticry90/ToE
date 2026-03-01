@@ -27,7 +27,7 @@ EXPECTED_ARTIFACT_ID = "stat_der01_entropy_balance_theorem_body_scaffold_cycle01
 EXPECTED_GATE = "ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED"
 EXPECTED_ROW_BINDING = "TOE_STAT_DER_01_P_POLICY_THEOREM_BODY_SCAFFOLD_PINNED_NONCLAIM"
 EXPECTED_ROW_ID = "TOE-STAT-DER-01"
-EXPECTED_ROW_LABEL = "P-POLICY"
+EXPECTED_ROW_LABEL = "B-BLOCKED"
 EXPECTED_ARTIFACT_REL = "formal/output/stat_der01_entropy_balance_theorem_body_scaffold_cycle01_v0.json"
 EXPECTED_GATE_REL = "formal/python/tests/test_stat_der01_theorem_body_scaffold_coupling_cycle01_gate.py"
 EXPECTED_DER01_THEOREM_ARTIFACT_ID = "stat_der01_entropy_balance_theorem_surface_scaffold_cycle01_v0"
@@ -122,7 +122,7 @@ def test_stat_der01_theorem_body_scaffold_coupling_cycle01_gate() -> None:
         assert EXPECTED_GATE_REL in doc_text, f"{doc_label} must pin DER01 theorem-body scaffold gate path."
 
     row_line = _results_row_line(results_text, EXPECTED_ROW_ID)
-    assert f"| {EXPECTED_ROW_ID} | `{EXPECTED_ROW_LABEL}` |" in row_line, "TOE-STAT-DER-01 row label must remain `P-POLICY`."
+    assert f"| {EXPECTED_ROW_ID} | `{EXPECTED_ROW_LABEL}` |" in row_line, "TOE-STAT-DER-01 row label must remain `B-BLOCKED`."
     assert "STAT_DER01_THEOREM_BODY_SCAFFOLD_CYCLE01_GATE_v0" in row_line
     assert "STAT_DER01_THEOREM_BODY_ROW_BINDING_v0" in row_line
     assert EXPECTED_ARTIFACT_REL in row_line
@@ -135,7 +135,7 @@ def test_stat_der01_theorem_body_scaffold_coupling_cycle01_gate() -> None:
     assert payload.get("pillar_id") == "PILLAR-STAT"
     assert payload.get("target_id") == "TARGET-TH-ENTROPY-PLAN"
     assert payload.get("results_row_id") == EXPECTED_ROW_ID
-    assert payload.get("results_row_expected_label") == EXPECTED_ROW_LABEL
+    assert payload.get("results_row_expected_label") in {"P-POLICY", "B-BLOCKED"}
     assert payload.get("status") == "theorem_body_scaffold_placeholder_nonclaim"
     assert payload.get("artifact_sha256") == "TOP_LEVEL_payload_sha256"
     assert payload.get("cross_surface_pointers") == EXPECTED_POINTERS

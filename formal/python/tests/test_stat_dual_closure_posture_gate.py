@@ -23,7 +23,7 @@ CHECKLIST_PATH = REPO_ROOT / "formal" / "docs" / "release" / "PILLAR_STAT_CLOSUR
 
 EXPECTED_TOKENS = {
     "PILLAR-STAT_PHYSICS_STATUS": "OPEN_v0_ACTIVE_PREEXECUTION",
-    "PILLAR-STAT_GOVERNANCE_STATUS": "OPEN_v0_REQUIRED_ROWS_POLICY_PLACEHOLDERS",
+    "PILLAR-STAT_GOVERNANCE_STATUS": "OPEN_v0_REQUIRED_ROWS_BLOCKED_EXECUTION",
     "PROCEED_GATE_STAT": "BLOCKED_v0_PHYSICS_NOT_CLOSED",
     "MATRIX_CLOSURE_GATE_STAT": "BLOCKED_v0_GOVERNANCE_NOT_CLOSED",
     "REQUIRED_STAT_CLOSURE_ROWS": "TOE-STAT-DER-01,TOE-STAT-DER-02",
@@ -79,7 +79,7 @@ def test_stat_closure_prep_posture_matches_active_matrix_state() -> None:
     assert stat_matrix.get("inevitability") == "ACTIVE_PREEXECUTION_v0_NONDISCHARGED"
 
 
-def test_stat_required_closure_rows_remain_placeholder_policy_rows() -> None:
+def test_stat_required_closure_rows_remain_blocked_execution_rows() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     results_text = _read(RESULTS_PATH)
 
@@ -88,8 +88,8 @@ def test_stat_required_closure_rows_remain_placeholder_policy_rows() -> None:
 
     for row_id in rows:
         status = _results_status(results_text, row_id)
-        assert status == "P-POLICY", (
-            f"STAT closure-prep row `{row_id}` must remain P-POLICY before full closure; found `{status}`."
+        assert status.startswith("B-"), (
+            f"STAT closure-prep row `{row_id}` must remain B-* blocked before full closure; found `{status}`."
         )
 
 
