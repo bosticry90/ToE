@@ -1,0 +1,104 @@
+from __future__ import annotations
+
+import json
+import re
+from pathlib import Path
+
+from formal.python.tests._archived_history_sentinel import split_active_and_archived
+
+
+def find_repo_root(start: Path) -> Path:
+    p = start.resolve()
+    while p != p.parent:
+        if (p / "formal").exists():
+            return p
+        p = p.parent
+    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PILLAR_STATUS_MATRIX_v1.json"
+ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+COSMO_TARGET_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md"
+
+
+def _read(path: Path) -> str:
+    assert path.exists(), f"Missing required file: {path}"
+    return path.read_text(encoding="utf-8")
+
+
+def _read_json(path: Path) -> dict:
+    return json.loads(_read(path))
+
+
+def _cosmo_roadmap_row(roadmap_text: str) -> tuple[str, str, str, str]:
+    active_text, _ = split_active_and_archived(roadmap_text, ROADMAP_PATH)
+    match = re.search(
+        r"^\|\s*`PILLAR-COSMO`\s*\|\s*`([^`]+)`\s*\|\s*`([^`]+)`\s*\|\s*`([^`]+)`\s*\|\s*`([^`]*)`\s*\|",
+        active_text,
+        flags=re.MULTILINE,
+    )
+    assert match is not None, "Missing active roadmap row for PILLAR-COSMO."
+    return match.groups()
+
+
+def test_cosmo_matrix_row_is_present_and_locked() -> None:
+    matrix = _read_json(MATRIX_PATH)
+    cosmo = matrix.get("pillars", {}).get("PILLAR-COSMO")
+    assert isinstance(cosmo, dict), "PILLAR-COSMO matrix row must exist."
+
+    expected_pairs = {
+        "discharge_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+        "full_derivation_token": "COSMO_BACKGROUND_ADJUDICATION",
+        "inevitability_token": "COSMO_BACKGROUND_ADJUDICATION",
+        "full_derivation": "NOT_YET_DISCHARGED",
+        "inevitability": "NOT_YET_DISCHARGED",
+        "matrix_status": "LOCKED",
+        "target_id": "TARGET-COSMO-BG-PLAN",
+        "target_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+        "prereq_targets": "TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-SR-COV-PLAN",
+        "rollup_summary_doc": "formal/docs/paper/TOE_COSMO_BACKGROUND_PILLAR_SUMMARY_v0.md",
+        "rollup_package_doc": "formal/markdown/locks/policy/COSMO_BACKGROUND_PILLAR_PACKAGE_v0.md",
+        "rollup_gate": "formal/python/tests/test_cosmo_background_pillar_package_rollup_gate.py",
+        "state_checkpoint_gate": "formal/python/tests/test_cosmo_state_rollup_checkpoint_gate.py",
+        "consistency_gate": "formal/python/tests/test_cosmo_matrix_rollup_crosspin_gate.py",
+    }
+
+    for key, expected in expected_pairs.items():
+        assert cosmo.get(key) == expected, f"PILLAR-COSMO matrix field drift: `{key}` must equal `{expected}`."
+
+
+def test_cosmo_matrix_crosspins_roadmap_state_and_target() -> None:
+    matrix = _read_json(MATRIX_PATH)
+    cosmo = matrix.get("pillars", {}).get("PILLAR-COSMO", {})
+
+    status, target_id, target_path, prereqs = _cosmo_roadmap_row(_read(ROADMAP_PATH))
+    assert status == cosmo.get("matrix_status")
+    assert target_id == cosmo.get("target_id")
+    assert target_path == cosmo.get("target_doc")
+    assert prereqs == cosmo.get("prereq_targets")
+
+    state_text = _read(STATE_PATH)
+    state_required = [
+        "NEXT_PILLAR_FOCUS_v0: PILLAR-COSMO",
+        "NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-COSMO-BG-PLAN",
+        cosmo["rollup_summary_doc"],
+        cosmo["rollup_package_doc"],
+        cosmo["rollup_gate"],
+        cosmo["state_checkpoint_gate"],
+    ]
+    missing_state = [token for token in state_required if token not in state_text]
+    assert not missing_state, "State COSMO matrix cross-pin token drift: " + ", ".join(missing_state)
+
+    target_text = _read(COSMO_TARGET_PATH)
+    target_required = [
+        "formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json",
+        cosmo["target_id"],
+        cosmo["rollup_summary_doc"],
+        cosmo["rollup_package_doc"],
+        cosmo["rollup_gate"],
+        "formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py",
+    ]
+    missing_target = [token for token in target_required if token not in target_text]
+    assert not missing_target, "COSMO target matrix cross-pin token drift: " + ", ".join(missing_target)

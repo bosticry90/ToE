@@ -86,6 +86,7 @@ Closure definition:
 Governance pointers:
 - canonical pillar status matrix: `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`
 - roadmap surface: `formal/docs/paper/PHYSICS_ROADMAP_v0.md`
+- matrix roadmap coverage gate: `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
 - state surface: `State_of_the_Theory.md`
 - phase advancement standard: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`
 - phase advancement registry: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`
