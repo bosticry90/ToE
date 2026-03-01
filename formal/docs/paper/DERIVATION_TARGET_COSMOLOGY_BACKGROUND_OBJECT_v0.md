@@ -82,6 +82,12 @@ Cycle-010 micro target lock:
 - `formal/output/cosmo_bg_micro10_lock_transition_dryrun_attestation_packet_cycle01_v0.json`
 - `formal/python/tests/test_cosmo_bg_micro10_lock_transition_dryrun_attestation_packet_gate.py`
 
+Cycle-011 micro target lock:
+- `TARGET-COSMO-BG-MICRO-11-DRYRUN-RECONCILIATION-PACKET-v0`
+- `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_11_DRYRUN_RECONCILIATION_PACKET_v0.md`
+- `formal/output/cosmo_bg_micro11_dryrun_reconciliation_packet_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_bg_micro11_dryrun_reconciliation_packet_gate.py`
+
 COSMO rollup package lock:
 - `formal/docs/paper/TOE_COSMO_BACKGROUND_PILLAR_SUMMARY_v0.md`
 - `formal/markdown/locks/policy/COSMO_BACKGROUND_PILLAR_PACKAGE_v0.md`
@@ -132,4 +138,5 @@ Governance pointers:
 - COSMO micro-08 gate: `formal/python/tests/test_cosmo_bg_micro08_locked_queue_unlock_transition_packet_gate.py`
 - COSMO micro-09 gate: `formal/python/tests/test_cosmo_bg_micro09_authorized_unlock_conditions_checklist_packet_gate.py`
 - COSMO micro-10 gate: `formal/python/tests/test_cosmo_bg_micro10_lock_transition_dryrun_attestation_packet_gate.py`
+- COSMO micro-11 gate: `formal/python/tests/test_cosmo_bg_micro11_dryrun_reconciliation_packet_gate.py`
 - COSMO rollup gate: `formal/python/tests/test_cosmo_background_pillar_package_rollup_gate.py`

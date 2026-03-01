@@ -1841,6 +1841,10 @@ COSMO rollup checkpoint (2026-03-01):
   - `COSMO_LOCK_TRANSITION_DRYRUN_ATTESTATION_PACKET_POLICY_v0: DRYRUN_ATTESTATION_REQUIRED_NO_STATUS_FLIP`
   - `formal/python/tests/test_cosmo_bg_micro10_lock_transition_dryrun_attestation_packet_gate.py`
 
+- COSMO dryrun reconciliation packet posture is pinned:
+  - `COSMO_DRYRUN_RECONCILIATION_PACKET_POLICY_v0: CYCLE08_09_10_POLICY_COHERENCE_REQUIRED_NO_STATUS_FLIP`
+  - `formal/python/tests/test_cosmo_bg_micro11_dryrun_reconciliation_packet_gate.py`
+
 QFT evidence diversification checkpoint log (legacy):
 - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_ARTIFACT_v0: qft_evidence_diversification_checkpoint_cycle01_v0`
   - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_SHA256_v0: e577ce28c1ec133d1fb81fd4f02c86cb8cbc51ff2d376fb28007d85e31160d3a`

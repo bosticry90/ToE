@@ -1,0 +1,24 @@
+{
+  "artifact_id": "cosmo_bg_micro11_dryrun_reconciliation_packet_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro11_dryrun_reconciliation_packet_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "dryrun_reconciliation_packet_only_nonclaim_v0",
+    "policy_tokens": [
+      "COSMO_DRYRUN_RECONCILIATION_PACKET_POLICY_v0: CYCLE08_09_10_POLICY_COHERENCE_REQUIRED_NO_STATUS_FLIP",
+      "dryrun_reconciliation_policy: CYCLE08_09_10_POLICY_COHERENCE_REQUIRED_NO_STATUS_FLIP",
+      "dryrun_reconciliation_gate: formal/python/tests/test_cosmo_bg_micro11_dryrun_reconciliation_packet_gate.py"
+    ],
+    "required_reconciliation_conditions": [
+      "Cycle-08 policy token remains pinned",
+      "Cycle-09 policy token remains pinned",
+      "Cycle-10 policy token remains pinned",
+      "matrix row status remains LOCKED",
+      "roadmap row status remains LOCKED",
+      "registry mode remains LOCKED_QUEUE",
+      "no LOCKED->ACTIVE/CLOSED status mutation in packet"
+    ]
+  }
+}

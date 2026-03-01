@@ -89,7 +89,10 @@
       "authorized_unlock_checklist_policy": "CHECKLIST_PACKET_COMPLETE_BEFORE_ANY_STATUS_CHANGE",
       "lock_transition_dryrun_attestation_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_10_LOCK_TRANSITION_DRYRUN_ATTESTATION_PACKET_v0.md",
       "lock_transition_dryrun_attestation_gate": "formal/python/tests/test_cosmo_bg_micro10_lock_transition_dryrun_attestation_packet_gate.py",
-      "lock_transition_dryrun_attestation_policy": "DRYRUN_ATTESTATION_REQUIRED_NO_STATUS_FLIP"
+      "lock_transition_dryrun_attestation_policy": "DRYRUN_ATTESTATION_REQUIRED_NO_STATUS_FLIP",
+      "dryrun_reconciliation_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_11_DRYRUN_RECONCILIATION_PACKET_v0.md",
+      "dryrun_reconciliation_gate": "formal/python/tests/test_cosmo_bg_micro11_dryrun_reconciliation_packet_gate.py",
+      "dryrun_reconciliation_policy": "CYCLE08_09_10_POLICY_COHERENCE_REQUIRED_NO_STATUS_FLIP"
     }
   }
 }
