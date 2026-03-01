@@ -1802,8 +1802,8 @@ Post-GR01 handoff checkpoint (2026-02-21):
 - Frozen-watch governance posture is explicit:
   - `GR01_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION`
 - Next pillar focus is explicit and assumption-minimization-first:
-  - `NEXT_PILLAR_FOCUS_v0: PILLAR-STAT`
-  - `NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-TH-ENTROPY-PLAN`
+  - `NEXT_PILLAR_FOCUS_v0: PILLAR-COSMO`
+  - `NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-COSMO-BG-PLAN`
   - canonical pillar status matrix pointer: `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`
   - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_ARTIFACT_v0: qft_evidence_diversification_checkpoint_cycle01_v0`
   - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_SHA256_v0: e577ce28c1ec133d1fb81fd4f02c86cb8cbc51ff2d376fb28007d85e31160d3a`

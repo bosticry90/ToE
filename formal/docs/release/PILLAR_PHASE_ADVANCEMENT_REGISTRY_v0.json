@@ -17,8 +17,8 @@
       "completion_value": "DISCHARGED_v0_DISCRETE_HARDENED",
       "roadmap_proceed_token": "PROCEED_GATE_GR",
       "roadmap_proceed_prefix": "ALLOWED_",
-      "expected_global_focus": "PILLAR-STAT",
-      "expected_global_lane": "TARGET-TH-ENTROPY-PLAN"
+      "expected_global_focus": "PILLAR-COSMO",
+      "expected_global_lane": "TARGET-COSMO-BG-PLAN"
     },
     {
       "pillar_id": "PILLAR-QM",
@@ -29,8 +29,8 @@
       "completion_value": "DISCHARGED_v0_DERIVATION_GRADE",
       "roadmap_proceed_token": "PROCEED_GATE_QM",
       "roadmap_proceed_prefix": "ALLOWED_",
-      "expected_global_focus": "PILLAR-STAT",
-      "expected_global_lane": "TARGET-TH-ENTROPY-PLAN"
+      "expected_global_focus": "PILLAR-COSMO",
+      "expected_global_lane": "TARGET-COSMO-BG-PLAN"
     },
     {
       "pillar_id": "PILLAR-EM",
@@ -41,8 +41,8 @@
       "completion_value": "DISCHARGED_v0_DERIVATION_GRADE",
       "roadmap_proceed_token": "PROCEED_GATE_EM",
       "roadmap_proceed_prefix": "ALLOWED_",
-      "expected_global_focus": "PILLAR-STAT",
-      "expected_global_lane": "TARGET-TH-ENTROPY-PLAN"
+      "expected_global_focus": "PILLAR-COSMO",
+      "expected_global_lane": "TARGET-COSMO-BG-PLAN"
     },
     {
       "pillar_id": "PILLAR-SR",
@@ -93,8 +93,8 @@
       "handoff_value": "qft_full_derivation_token_flip_dryrun_handoff_cycle42_v0",
       "handoff_artifact_path": "formal/output/qft_full_derivation_token_flip_dryrun_handoff_cycle42_v0.json",
       "handoff_gate_path": "formal/python/tests/test_qft_full_derivation_token_flip_dryrun_handoff_cycle42_gate.py",
-      "expected_global_focus": "PILLAR-STAT",
-      "expected_global_lane": "TARGET-TH-ENTROPY-PLAN"
+      "expected_global_focus": "PILLAR-COSMO",
+      "expected_global_lane": "TARGET-COSMO-BG-PLAN"
     },
     {
       "pillar_id": "PILLAR-STAT",

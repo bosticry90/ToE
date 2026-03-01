@@ -63,14 +63,14 @@ def test_qft_roadmap_row_is_closed_and_scaffold_only() -> None:
     assert not missing, "PILLAR-QFT roadmap row is missing required kickoff token(s): " + ", ".join(missing)
 
 
-def test_state_handoff_points_to_stat_entropy_kickoff() -> None:
+def test_state_handoff_points_to_cosmo_background_kickoff() -> None:
     text = _read(STATE_PATH)
     required_tokens = [
-        "NEXT_PILLAR_FOCUS_v0: PILLAR-STAT",
-        "NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-TH-ENTROPY-PLAN",
+        "NEXT_PILLAR_FOCUS_v0: PILLAR-COSMO",
+        "NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-COSMO-BG-PLAN",
     ]
     missing = [token for token in required_tokens if token not in text]
-    assert not missing, "State handoff is missing required STAT kickoff token(s): " + ", ".join(missing)
+    assert not missing, "State handoff is missing required COSMO kickoff token(s): " + ", ".join(missing)
 
 
 def test_qft_kickoff_nonclaim_boundary_is_explicit() -> None:

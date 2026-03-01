@@ -1024,25 +1024,25 @@ def test_gr01_phase3_and_phase4_artifact_schema_is_consistent() -> None:
         )
 
 
-def test_gr01_next_pillar_focus_is_explicit_and_points_to_stat() -> None:
+def test_gr01_next_pillar_focus_is_explicit_and_points_to_cosmo() -> None:
     state_text = _read(STATE_PATH)
     focus_value = _extract_state_token(state_text, "NEXT_PILLAR_FOCUS_v0")
     lane_value = _extract_state_token(state_text, "NEXT_PILLAR_PRIMARY_LANE_v0")
 
-    assert focus_value == "PILLAR-STAT", (
-        "Next pillar focus drift: NEXT_PILLAR_FOCUS_v0 must remain PILLAR-STAT."
+    assert focus_value == "PILLAR-COSMO", (
+        "Next pillar focus drift: NEXT_PILLAR_FOCUS_v0 must remain PILLAR-COSMO."
     )
-    assert lane_value == "TARGET-TH-ENTROPY-PLAN", (
-        "Next pillar lane drift: NEXT_PILLAR_PRIMARY_LANE_v0 must remain TARGET-TH-ENTROPY-PLAN."
+    assert lane_value == "TARGET-COSMO-BG-PLAN", (
+        "Next pillar lane drift: NEXT_PILLAR_PRIMARY_LANE_v0 must remain TARGET-COSMO-BG-PLAN."
     )
 
-    stat_target_text = _read(
-        REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_THERMO_ENTROPY_OBJECT_v0.md"
+    cosmo_target_text = _read(
+        REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md"
     )
-    required_stat_tokens = [
-        "DERIVATION_TARGET_THERMO_ENTROPY_OBJECT_v0",
-        "TARGET-TH-ENTROPY-PLAN",
-        "entropy-balance closure posture",
+    required_cosmo_tokens = [
+        "DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0",
+        "TARGET-COSMO-BG-PLAN",
+        "background-expansion closure posture",
     ]
-    missing = [tok for tok in required_stat_tokens if tok not in stat_target_text]
-    assert not missing, "STAT entropy target token drift: " + ", ".join(missing)
+    missing = [tok for tok in required_cosmo_tokens if tok not in cosmo_target_text]
+    assert not missing, "COSMO background target token drift: " + ", ".join(missing)
