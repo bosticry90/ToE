@@ -70,6 +70,9 @@ def test_cosmo_matrix_row_is_present_and_locked() -> None:
         "authorized_unlock_checklist_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_09_AUTHORIZED_UNLOCK_CONDITIONS_CHECKLIST_PACKET_v0.md",
         "authorized_unlock_checklist_gate": "formal/python/tests/test_cosmo_bg_micro09_authorized_unlock_conditions_checklist_packet_gate.py",
         "authorized_unlock_checklist_policy": "CHECKLIST_PACKET_COMPLETE_BEFORE_ANY_STATUS_CHANGE",
+        "lock_transition_dryrun_attestation_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_10_LOCK_TRANSITION_DRYRUN_ATTESTATION_PACKET_v0.md",
+        "lock_transition_dryrun_attestation_gate": "formal/python/tests/test_cosmo_bg_micro10_lock_transition_dryrun_attestation_packet_gate.py",
+        "lock_transition_dryrun_attestation_policy": "DRYRUN_ATTESTATION_REQUIRED_NO_STATUS_FLIP",
         "consistency_gate": "formal/python/tests/test_cosmo_matrix_rollup_crosspin_gate.py",
     }
 
@@ -99,6 +102,8 @@ def test_cosmo_matrix_crosspins_roadmap_state_and_target() -> None:
         cosmo["unlock_transition_packet_gate"],
         "COSMO_AUTHORIZED_UNLOCK_CHECKLIST_PACKET_POLICY_v0: CHECKLIST_PACKET_COMPLETE_BEFORE_ANY_STATUS_CHANGE",
         cosmo["authorized_unlock_checklist_gate"],
+        "COSMO_LOCK_TRANSITION_DRYRUN_ATTESTATION_PACKET_POLICY_v0: DRYRUN_ATTESTATION_REQUIRED_NO_STATUS_FLIP",
+        cosmo["lock_transition_dryrun_attestation_gate"],
     ]
     missing_state = [token for token in state_required if token not in state_text]
     assert not missing_state, "State COSMO matrix cross-pin token drift: " + ", ".join(missing_state)

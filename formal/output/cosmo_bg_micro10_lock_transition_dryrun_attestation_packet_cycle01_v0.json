@@ -1,0 +1,22 @@
+{
+  "artifact_id": "cosmo_bg_micro10_lock_transition_dryrun_attestation_packet_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro10_lock_transition_dryrun_attestation_packet_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "lock_transition_dryrun_attestation_packet_only_nonclaim_v0",
+    "policy_tokens": [
+      "COSMO_LOCK_TRANSITION_DRYRUN_ATTESTATION_PACKET_POLICY_v0: DRYRUN_ATTESTATION_REQUIRED_NO_STATUS_FLIP",
+      "lock_transition_dryrun_attestation_policy: DRYRUN_ATTESTATION_REQUIRED_NO_STATUS_FLIP",
+      "lock_transition_dryrun_attestation_gate: formal/python/tests/test_cosmo_bg_micro10_lock_transition_dryrun_attestation_packet_gate.py"
+    ],
+    "required_dryrun_attestation_witnesses": [
+      "matrix row status remains LOCKED",
+      "roadmap row status remains LOCKED",
+      "registry mode remains LOCKED_QUEUE",
+      "state retains NEXT_PILLAR_FOCUS and NEXT_PILLAR_PRIMARY_LANE for PILLAR-COSMO",
+      "no LOCKED->ACTIVE/CLOSED status mutation in packet"
+    ]
+  }
+}
