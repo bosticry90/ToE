@@ -1861,6 +1861,10 @@ COSMO rollup checkpoint (2026-03-01):
   - `COSMO_DRYRUN_CUSTODY_CONFIRMATION_ATTESTATION_PACKET_POLICY_v0: CYCLE08_09_10_11_12_13_14_CUSTODY_CONFIRMATION_ATTESTATION_LOCK_REQUIRED_NO_STATUS_FLIP`
   - `formal/python/tests/test_cosmo_bg_micro15_dryrun_custody_confirmation_attestation_packet_gate.py`
 
+- COSMO dryrun custody confirmation attestation confirmation packet posture is pinned:
+  - `COSMO_DRYRUN_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_PACKET_POLICY_v0: CYCLE08_09_10_11_12_13_14_15_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_LOCK_REQUIRED_NO_STATUS_FLIP`
+  - `formal/python/tests/test_cosmo_bg_micro16_dryrun_custody_confirmation_attestation_confirmation_packet_gate.py`
+
 - COSMO phase adherence snapshot is machine-auditable:
   - `COSMO_PHASE_ADHERENCE_SNAPSHOT_v0: LOCKED_QUEUE_CROSS_SURFACE_SYNCED`
   - `COSMO_PHASE_ADHERENCE_MATRIX_STATUS_v0: LOCKED`
