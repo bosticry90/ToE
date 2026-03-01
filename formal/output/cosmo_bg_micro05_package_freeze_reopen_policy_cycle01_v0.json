@@ -1,0 +1,28 @@
+{
+  "artifact_id": "cosmo_bg_micro05_package_freeze_reopen_policy_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro05_package_freeze_reopen_policy_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "package_freeze_reopen_policy_only_nonclaim_v0",
+    "package_freeze_tokens": [
+      "COSMO_BG_MICRO05_PACKAGE_FREEZE_STATUS_v0: FROZEN_CONTENTS_PINNED",
+      "COSMO_BG_MICRO05_REOPEN_POLICY_v0: FROZEN_WATCH_REOPEN_ON_REGRESSION",
+      "COSMO_BG_MICRO05_REOPEN_TRIGGER_SURFACE_DRIFT_v0: ENABLED",
+      "COSMO_BG_MICRO05_REOPEN_TRIGGER_SCOPE_REGRESSION_v0: ENABLED"
+    ],
+    "required_package_contents": [
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_01_OBJECT_SURFACE_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_02_EXPANSION_LAW_SURFACE_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_03_SOURCE_COUPLING_SURFACE_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_04_REGIME_FALSIFIABILITY_SURFACE_v0.md"
+    ],
+    "anti_shortcut_constraints": [
+      "no_equation_closure_promotion",
+      "no_unbounded_regime_extension",
+      "no_external_truth_claim"
+    ],
+    "generated_on": "2026-03-01"
+  }
+}

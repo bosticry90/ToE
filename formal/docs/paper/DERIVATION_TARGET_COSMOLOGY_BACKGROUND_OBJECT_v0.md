@@ -46,6 +46,12 @@ Cycle-004 micro target lock:
 - `formal/output/cosmo_bg_micro04_regime_falsifiability_surface_cycle01_v0.json`
 - `formal/python/tests/test_cosmo_bg_micro04_regime_falsifiability_surface_gate.py`
 
+Cycle-005 micro target lock:
+- `TARGET-COSMO-BG-MICRO-05-PACKAGE-FREEZE-REOPEN-POLICY-v0`
+- `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_05_PACKAGE_FREEZE_REOPEN_POLICY_v0.md`
+- `formal/output/cosmo_bg_micro05_package_freeze_reopen_policy_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_bg_micro05_package_freeze_reopen_policy_gate.py`
+
 Deliverable surfaces:
 - `COSMO_DELIVERABLE_METRIC_SURFACE_v0: BACKGROUND_METRIC_OBJECT_DECLARED`
 - `COSMO_DELIVERABLE_EXPANSION_SURFACE_v0: HUBBLE_LIKE_OBJECT_DECLARED`
@@ -84,3 +90,4 @@ Governance pointers:
 - COSMO micro-02 gate: `formal/python/tests/test_cosmo_bg_micro02_expansion_law_surface_gate.py`
 - COSMO micro-03 gate: `formal/python/tests/test_cosmo_bg_micro03_source_coupling_surface_gate.py`
 - COSMO micro-04 gate: `formal/python/tests/test_cosmo_bg_micro04_regime_falsifiability_surface_gate.py`
+- COSMO micro-05 gate: `formal/python/tests/test_cosmo_bg_micro05_package_freeze_reopen_policy_gate.py`
