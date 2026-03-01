@@ -154,8 +154,11 @@ def test_stat_unlock_prerequisite_integrity_gate() -> None:
     assert isinstance(stat_registry_entry, dict), "Phase advancement registry must include a PILLAR-STAT entry."
     assert stat_registry_entry.get("mode") == "ACTIVE_EXECUTION", "PILLAR-STAT must remain in ACTIVE_EXECUTION mode."
     assert stat_registry_entry.get("contract_doc_path") == "formal/docs/release/PILLAR_STAT_PHASE_ADVANCEMENT_CONTRACT_v0.md"
-    assert stat_registry_entry.get("expected_matrix_status") == "ACTIVE"
-    assert stat_registry_entry.get("expected_roadmap_status") == "ACTIVE"
+    assert stat_registry_entry.get("expected_matrix_status") in {"ACTIVE", "CLOSED"}
+    assert stat_registry_entry.get("expected_roadmap_status") in {"ACTIVE", "CLOSED"}
+    if stat_status in {"ACTIVE", "CLOSED"}:
+        assert stat_registry_entry.get("expected_matrix_status") == stat_status
+        assert stat_registry_entry.get("expected_roadmap_status") == stat_status
 
     required_tokens = stat_registry_entry.get("required_tokens")
     assert isinstance(required_tokens, dict), "PILLAR-STAT registry entry must pin required phase-advancement tokens."

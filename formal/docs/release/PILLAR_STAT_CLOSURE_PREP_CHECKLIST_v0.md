@@ -18,10 +18,10 @@ Non-claim boundary:
 - does not broaden STAT scope beyond bounded theorem-surface execution.
 
 Current authoritative posture:
-- `PILLAR-STAT` remains `ACTIVE` in canonical roadmap/matrix surfaces.
-- `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION` remains `NOT_YET_DISCHARGED`.
-- `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION` remains `NOT_YET_DISCHARGED`.
-- Required STAT closure rows remain active-stage blocked execution rows: `TOE-STAT-DER-01`, `TOE-STAT-DER-02` stay `B-BLOCKED`.
+- `PILLAR-STAT` is `CLOSED` in canonical roadmap/matrix surfaces.
+- `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION` is `DISCHARGED_v0_BOUNDED`.
+- `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION` is `DISCHARGED_v0_BOUNDED`.
+- Required STAT closure rows are non-blocked and synchronized with closed posture: `TOE-STAT-DER-01`, `TOE-STAT-DER-02`.
 
 Canonical anchors:
 - `formal/docs/paper/PHYSICS_ROADMAP_v0.md`
@@ -32,19 +32,19 @@ Canonical anchors:
 - `formal/docs/release/PILLAR_STAT_CLOSURE_CHANGESET_TEMPLATE_v0.md`
 
 Current closure-prep posture tokens:
-- `PILLAR-STAT_PHYSICS_STATUS: OPEN_v0_ACTIVE_PREEXECUTION`
-- `PILLAR-STAT_GOVERNANCE_STATUS: OPEN_v0_REQUIRED_ROWS_BLOCKED_EXECUTION`
-- `PROCEED_GATE_STAT: BLOCKED_v0_PHYSICS_NOT_CLOSED`
-- `MATRIX_CLOSURE_GATE_STAT: BLOCKED_v0_GOVERNANCE_NOT_CLOSED`
+- `PILLAR-STAT_PHYSICS_STATUS: CLOSED_v0_DISCHARGED`
+- `PILLAR-STAT_GOVERNANCE_STATUS: CLOSED_v0_REQUIRED_ROWS_CLEARED`
+- `PROCEED_GATE_STAT: ALLOWED_v0_PHYSICS_CLOSED`
+- `MATRIX_CLOSURE_GATE_STAT: ALLOWED_v0_GOVERNANCE_CLOSED`
 - `REQUIRED_STAT_CLOSURE_ROWS: TOE-STAT-DER-01,TOE-STAT-DER-02`
 
 ## Closure-Prep Checklist
 
 ### Gate A - dual-layer posture integrity (must be true now)
-1. `PILLAR-STAT` remains `ACTIVE` in roadmap and matrix surfaces.
+1. `PILLAR-STAT` is synchronized in roadmap and matrix surfaces.
 2. The roadmap and state surfaces mirror the same five closure-prep tokens exactly once.
-3. `PROCEED_GATE_STAT` remains `BLOCKED_*` while `PILLAR-STAT_PHYSICS_STATUS` is `OPEN_*`.
-4. `MATRIX_CLOSURE_GATE_STAT` remains `BLOCKED_*` while `PILLAR-STAT_GOVERNANCE_STATUS` is `OPEN_*`.
+3. `PROCEED_GATE_STAT` mirrors physics status posture (`BLOCKED_*` for `OPEN_*`; `ALLOWED_*` for `CLOSED_*`).
+4. `MATRIX_CLOSURE_GATE_STAT` mirrors governance status posture (`BLOCKED_*` for `OPEN_*`; `ALLOWED_*` for `CLOSED_*`).
 
 Pass evidence:
 - `formal/python/tests/test_stat_dual_closure_posture_gate.py` passes.
@@ -53,7 +53,7 @@ Pass evidence:
 ### Gate B - required row posture remains pre-closure (must be true now)
 1. `REQUIRED_STAT_CLOSURE_ROWS` resolves to exactly `TOE-STAT-DER-01,TOE-STAT-DER-02`.
 2. Each required row exists exactly once in `formal/docs/paper/RESULTS_TABLE_v0.md`.
-3. Each required row remains `B-BLOCKED` while `PILLAR-STAT` is pre-discharge.
+3. Each required row mirrors closure posture (`B-*` pre-discharge; non-`B-*` after discharged closure).
 4. No required row is silently promoted during closure-prep-only changes.
 
 Pass evidence:

@@ -103,8 +103,8 @@
       "contract_doc_path": "formal/docs/release/PILLAR_STAT_PHASE_ADVANCEMENT_CONTRACT_v0.md",
       "component_gate_registry_path": "formal/docs/release/STAT_ROW_SCAFFOLD_COMPONENT_GATE_REGISTRY_v0.json",
       "component_gate_registry_key": "component_gates",
-      "expected_matrix_status": "ACTIVE",
-      "expected_roadmap_status": "ACTIVE",
+      "expected_matrix_status": "CLOSED",
+      "expected_roadmap_status": "CLOSED",
       "required_tokens": {
         "STAT_SCAFFOLD_PHASE_COMPLETION_v0": "CYCLE01_ROW_AND_TRANSITION_SCAFFOLDS_SATURATED",
         "STAT_NEXT_EXECUTION_PHASE_v0": "SCAFFOLD_PHASE_REOPEN_ENTRY",

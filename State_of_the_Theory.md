@@ -13,7 +13,7 @@ Canonical bounded status note (2026-02-24):
 - Pillar phase advancement registry pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`.
 - Pillar phase advancement gate pointer: `formal/python/tests/test_pillar_phase_advancement_gate.py`.
 - Pillar closure standard pointer: `formal/docs/release/PILLAR_CLOSURE_STANDARD_v0.md`.
-- This note does not include downstream locked queue pillar (`PILLAR-COSMO`), and excludes `PILLAR-STAT` active pre-discharge posture from the canonical five-pillar closed-set claim.
+- This note does not include downstream locked queue pillar (`PILLAR-COSMO`); `PILLAR-STAT` closure posture is tracked separately from the canonical five-pillar closed-set claim.
 - This note does not assert all-5 adequacy completion; bounded governance discharge and adequacy maturity remain distinct.
 
 STAT activation checkpoint (2026-02-26):
@@ -22,12 +22,12 @@ STAT activation checkpoint (2026-02-26):
 - post-activation validation template pointer: `formal/docs/release/PILLAR_STAT_ACTIVATION_CHANGESET_TEMPLATE_v0.md`.
 - active-stage closure-prep checklist pointer: `formal/docs/release/PILLAR_STAT_CLOSURE_PREP_CHECKLIST_v0.md`.
 - active-stage closure changeset template pointer: `formal/docs/release/PILLAR_STAT_CLOSURE_CHANGESET_TEMPLATE_v0.md`.
-- `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION: NOT_YET_DISCHARGED`
-- `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: NOT_YET_DISCHARGED`
-- `PILLAR-STAT_PHYSICS_STATUS: OPEN_v0_ACTIVE_PREEXECUTION`
-- `PILLAR-STAT_GOVERNANCE_STATUS: OPEN_v0_REQUIRED_ROWS_BLOCKED_EXECUTION`
-- `PROCEED_GATE_STAT: BLOCKED_v0_PHYSICS_NOT_CLOSED`
-- `MATRIX_CLOSURE_GATE_STAT: BLOCKED_v0_GOVERNANCE_NOT_CLOSED`
+- `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION: DISCHARGED_v0_BOUNDED`
+- `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
+- `PILLAR-STAT_PHYSICS_STATUS: CLOSED_v0_DISCHARGED`
+- `PILLAR-STAT_GOVERNANCE_STATUS: CLOSED_v0_REQUIRED_ROWS_CLEARED`
+- `PROCEED_GATE_STAT: ALLOWED_v0_PHYSICS_CLOSED`
+- `MATRIX_CLOSURE_GATE_STAT: ALLOWED_v0_GOVERNANCE_CLOSED`
 - `REQUIRED_STAT_CLOSURE_ROWS: TOE-STAT-DER-01,TOE-STAT-DER-02`
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_v0: stat_evidence_checkpoint_cycle01_v0`
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_SHA256_v0: 8ac34ecb08f66c42ffddf07e9c481ae3e3700459b8330223762e041f14e403f3`
