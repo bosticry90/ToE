@@ -1,0 +1,22 @@
+{
+  "artifact_id": "cosmo_bg_micro04_regime_falsifiability_surface_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro04_regime_falsifiability_surface_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "regime_falsifiability_surface_only_nonclaim_v0",
+    "regime_falsifiability_tokens": [
+      "COSMO_BG_MICRO04_REGIME_BOUNDARY_SURFACE_v0: PARAMETER_DOMAIN_BOUNDARY_PLACEHOLDER_PINNED",
+      "COSMO_BG_MICRO04_BREAKDOWN_TRIGGER_SURFACE_v0: OUT_OF_SCOPE_TRIGGER_PLACEHOLDER_PINNED",
+      "COSMO_BG_MICRO04_FALSIFIABILITY_HOOK_SURFACE_v0: OBSERVABLE_TENSION_HOOK_PLACEHOLDER_PINNED",
+      "COSMO_BG_MICRO04_REOPEN_POLICY_SURFACE_v0: REGIME_DRIFT_REOPEN_TRIGGER_PLACEHOLDER_PINNED"
+    ],
+    "anti_shortcut_constraints": [
+      "no_equation_closure_promotion",
+      "no_unbounded_regime_extension",
+      "no_external_truth_claim"
+    ],
+    "generated_on": "2026-03-01"
+  }
+}
