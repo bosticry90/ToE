@@ -4,6 +4,8 @@ import json
 import re
 from pathlib import Path
 
+from formal.python.tests._archived_history_sentinel import split_active_and_archived
+
 
 def find_repo_root(start: Path) -> Path:
     p = start.resolve()
@@ -35,35 +37,60 @@ def _extract_token(text: str, token_name: str) -> str:
     return m.group(1)
 
 
-def _qft_roadmap_row(text: str) -> str:
-    rows = [line.strip() for line in text.splitlines() if line.strip().startswith("| `PILLAR-QFT` |")]
-    assert len(rows) == 1, f"Expected exactly one PILLAR-QFT row, found {len(rows)}."
-    return rows[0]
+def _roadmap_status_for_pillar(active_text: str, pillar_id: str) -> str:
+    match = re.search(
+        rf"^\|\s*`{re.escape(pillar_id)}`\s*\|\s*`([^`]+)`\s*\|",
+        active_text,
+        flags=re.MULTILINE,
+    )
+    assert match is not None, f"Missing active roadmap row for {pillar_id}."
+    return match.group(1)
 
 
-def test_pillar_status_matrix_qft_entry_matches_all_authority_surfaces() -> None:
+def test_pillar_status_matrix_rows_match_discharge_docs_and_roadmap() -> None:
     matrix = _read_json(MATRIX_PATH)
-    canonical_rel = matrix.get("canonical_source")
-    assert isinstance(canonical_rel, str) and canonical_rel, "Matrix must declare canonical_source."
+    pillars = matrix.get("pillars", {})
+    assert isinstance(pillars, dict) and pillars, "Matrix must define at least one pillar row."
 
-    canonical_path = REPO_ROOT / canonical_rel
-    canonical_text = _read(canonical_path)
-    state_text = _read(STATE_PATH)
-    roadmap_text = _read(ROADMAP_PATH)
+    roadmap_active, _ = split_active_and_archived(_read(ROADMAP_PATH), ROADMAP_PATH)
+    for pillar_id, row in pillars.items():
+        assert isinstance(row, dict), f"Matrix row for {pillar_id} must be an object."
+        required_fields = [
+            "discharge_doc",
+            "full_derivation_token",
+            "inevitability_token",
+            "full_derivation",
+            "inevitability",
+            "matrix_status",
+        ]
+        missing = [field for field in required_fields if field not in row]
+        assert not missing, f"Matrix row {pillar_id} missing required field(s): {', '.join(missing)}"
 
+        discharge_path = REPO_ROOT / row["discharge_doc"]
+        discharge_text = _read(discharge_path)
+
+        full_derivation_value = _extract_token(discharge_text, row["full_derivation_token"])
+        inevitability_value = _extract_token(discharge_text, row["inevitability_token"])
+        assert row["full_derivation"] == full_derivation_value, (
+            f"{pillar_id} full_derivation drift between matrix and discharge doc."
+        )
+        assert row["inevitability"] == inevitability_value, (
+            f"{pillar_id} inevitability drift between matrix and discharge doc."
+        )
+
+        roadmap_status = _roadmap_status_for_pillar(roadmap_active, pillar_id)
+        assert row["matrix_status"] == roadmap_status, (
+            f"{pillar_id} matrix_status drift between matrix and roadmap."
+        )
+
+
+def test_pillar_status_matrix_qft_entry_matches_state_tokens() -> None:
+    matrix = _read_json(MATRIX_PATH)
     qft_entry = matrix.get("pillars", {}).get("PILLAR-QFT", {})
     assert qft_entry, "Matrix must define PILLAR-QFT entry."
 
-    canonical_adjudication = _extract_token(canonical_text, "QFT_FULL_DERIVATION_ADJUDICATION")
-    canonical_inevitability = _extract_token(canonical_text, "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION")
-
-    assert qft_entry.get("full_derivation") == canonical_adjudication
-    assert qft_entry.get("inevitability") == canonical_inevitability
-
+    state_text = _read(STATE_PATH)
     state_adjudication = _extract_token(state_text, "QFT_FULL_DERIVATION_ADJUDICATION")
     state_inevitability = _extract_token(state_text, "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION")
     assert qft_entry.get("full_derivation") == state_adjudication
     assert qft_entry.get("inevitability") == state_inevitability
-
-    qft_row = _qft_roadmap_row(roadmap_text)
-    assert f"| `{qft_entry.get('matrix_status')}` |" in qft_row, "Roadmap matrix status must match pillar status matrix."
