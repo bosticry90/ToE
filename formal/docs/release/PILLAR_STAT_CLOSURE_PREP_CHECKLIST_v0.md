@@ -7,8 +7,8 @@ Classification:
 - `P-POLICY`
 
 Purpose:
-- Define the active-stage closure-prep lane for `PILLAR-STAT` after activation and before any earned `ACTIVE -> CLOSED` transition.
-- Make the current open, blocked, non-promotional closeout posture machine-checkable.
+- Define the closure-tracking lane for `PILLAR-STAT` across both pre-discharge and discharged closure postures.
+- Make the current canonical closure posture machine-checkable.
 
 Non-claim boundary:
 - planning/control artifact only.
@@ -50,17 +50,17 @@ Pass evidence:
 - `formal/python/tests/test_stat_dual_closure_posture_gate.py` passes.
 - `formal/python/tests/test_pillar_dual_layer_gate_template.py` passes.
 
-### Gate B - required row posture remains pre-closure (must be true now)
+### Gate B - required row posture integrity (must be true now)
 1. `REQUIRED_STAT_CLOSURE_ROWS` resolves to exactly `TOE-STAT-DER-01,TOE-STAT-DER-02`.
 2. Each required row exists exactly once in `formal/docs/paper/RESULTS_TABLE_v0.md`.
 3. Each required row mirrors closure posture (`B-*` pre-discharge; non-`B-*` after discharged closure).
-4. No required row is silently promoted during closure-prep-only changes.
+4. No required row is silently relabeled outside a bounded closure-sync change set.
 
 Pass evidence:
 - `formal/python/tests/test_stat_dual_closure_posture_gate.py` passes.
 - `formal/python/tests/test_results_table_integrity.py` passes.
 
-### Gate C - future closeout prerequisites are explicit (must stay blocked until earned)
+### Gate C - closeout prerequisites remain explicit
 1. `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION` may change to `DISCHARGED_*` only when theorem/discharge surfaces actually earn it.
 2. `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION` may change to `DISCHARGED_*` only when inevitability closure is earned.
 3. `TOE-STAT-DER-01` and `TOE-STAT-DER-02` must be non-placeholder and non-`B-*` before matrix closure is attempted.
@@ -90,8 +90,9 @@ python -m pytest formal/python/tests/test_stat_dual_closure_posture_gate.py form
 - `STAT_CLOSURE_PREP_REQUIRED_ROWS_v0: PASS | FAIL`
 - `STAT_CLOSURE_PREP_FUTURE_CLOSEOUT_PATH_v0: PASS | FAIL`
 - `STAT_CLOSURE_PREP_GATEPACK_v0: PASS | FAIL`
-- `STAT_CLOSURE_PREP_FINAL_v0: ACTIVE_OPEN_TRACKED | CLOSURE_READY | NOT_READY`
+- `STAT_CLOSURE_PREP_FINAL_v0: ACTIVE_OPEN_TRACKED | CLOSURE_READY | CLOSED_DISCHARGED_TRACKED | NOT_READY`
 
 Decision rule:
 - Emit `ACTIVE_OPEN_TRACKED` only when Gates A, B, and D are `PASS` and Gate C remains explicitly blocked-but-defined.
 - Emit `CLOSURE_READY` only when STAT adjudication tokens are discharged, required closure rows are non-placeholder/non-`B-*`, and the bounded closure changeset is ready to apply.
+- Emit `CLOSED_DISCHARGED_TRACKED` when discharged adjudications, non-`B-*` required rows, and closed gate/matrix parity are already synchronized.
