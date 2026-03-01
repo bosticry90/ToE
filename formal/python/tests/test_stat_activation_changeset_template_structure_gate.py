@@ -64,7 +64,7 @@ def test_stat_activation_changeset_template_structure_gate() -> None:
     assert "Pinned token names:" in template_text
     assert "`PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION`" in template_text
     assert "`PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION`" in template_text
-    assert "`ACTIVE_PREEXECUTION_v0_NONDISCHARGED`" in template_text
+    assert "`NOT_YET_DISCHARGED`" in template_text
 
     # Ensure the lock-scoped preflight command and post-activation command are both explicitly present.
     code_blocks = re.findall(r"```powershell\n(.*?)\n```", template_text, flags=re.DOTALL)

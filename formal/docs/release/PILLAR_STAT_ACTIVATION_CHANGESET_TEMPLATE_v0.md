@@ -84,7 +84,7 @@ Pinned token names:
 - `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION`
 
 Pinned placeholder value (non-discharged; legacy-safe):
-- `ACTIVE_PREEXECUTION_v0_NONDISCHARGED`
+- `NOT_YET_DISCHARGED`
 
 Locked-stage preset source:
 - `formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md`

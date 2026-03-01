@@ -75,8 +75,8 @@ def test_stat_closure_prep_posture_matches_active_matrix_state() -> None:
     assert stat_matrix.get("matrix_status") == "ACTIVE", (
         "PILLAR-STAT matrix status must remain ACTIVE during closure prep."
     )
-    assert stat_matrix.get("full_derivation") == "ACTIVE_PREEXECUTION_v0_NONDISCHARGED"
-    assert stat_matrix.get("inevitability") == "ACTIVE_PREEXECUTION_v0_NONDISCHARGED"
+    assert stat_matrix.get("full_derivation") == "NOT_YET_DISCHARGED"
+    assert stat_matrix.get("inevitability") == "NOT_YET_DISCHARGED"
 
 
 def test_stat_required_closure_rows_remain_blocked_execution_rows() -> None:

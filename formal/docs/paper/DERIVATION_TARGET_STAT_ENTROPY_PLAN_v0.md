@@ -26,8 +26,8 @@ Activation posture:
 - this document does not authorize `LOCKED -> ACTIVE` transitions.
 
 Authority token preset (pre-activation, non-authoritative naming freeze):
-- `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION: ACTIVE_PREEXECUTION_v0_NONDISCHARGED`
-- `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: ACTIVE_PREEXECUTION_v0_NONDISCHARGED`
+- `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION: NOT_YET_DISCHARGED`
+- `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: NOT_YET_DISCHARGED`
 - `STAT_AUTHORITY_TOKEN_PRESET_LOCK_v0: PINNED_NAMES_AND_PLACEHOLDER_VALUES_LOCKED_STAGE_ONLY`
 - These tokens are pre-pinned here to eliminate naming decisions before activation.
 - While `PILLAR-STAT` is `LOCKED`, do not mirror these token definitions into `PHYSICS_ROADMAP_v0.md`, `State_of_the_Theory.md`, or `PILLAR_STATUS_MATRIX_v1.json`.

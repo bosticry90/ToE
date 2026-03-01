@@ -59,8 +59,8 @@
       "inevitability_token": "PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION",
       "consistency_gate": "formal/python/tests/test_pillar_adjudication_cross_surface_consistency_gate.py",
       "legacy_retirement_gate": "formal/python/tests/test_pillar_adjudication_legacy_retirement_gate.py",
-      "full_derivation": "ACTIVE_PREEXECUTION_v0_NONDISCHARGED",
-      "inevitability": "ACTIVE_PREEXECUTION_v0_NONDISCHARGED",
+      "full_derivation": "NOT_YET_DISCHARGED",
+      "inevitability": "NOT_YET_DISCHARGED",
       "matrix_status": "ACTIVE"
     }
   }
