@@ -1,0 +1,22 @@
+{
+  "artifact_id": "cosmo_bg_micro09_authorized_unlock_conditions_checklist_packet_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro09_authorized_unlock_conditions_checklist_packet_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "authorized_unlock_checklist_packet_only_nonclaim_v0",
+    "policy_tokens": [
+      "COSMO_AUTHORIZED_UNLOCK_CHECKLIST_PACKET_POLICY_v0: CHECKLIST_PACKET_COMPLETE_BEFORE_ANY_STATUS_CHANGE",
+      "authorized_unlock_checklist_policy: CHECKLIST_PACKET_COMPLETE_BEFORE_ANY_STATUS_CHANGE",
+      "authorized_unlock_checklist_gate: formal/python/tests/test_cosmo_bg_micro09_authorized_unlock_conditions_checklist_packet_gate.py"
+    ],
+    "authorized_unlock_checklist_items": [
+      "matrix row fields complete for unlock checklist pointers",
+      "roadmap row remains LOCKED",
+      "registry mode remains LOCKED_QUEUE",
+      "state includes unlock packet policy tokens",
+      "no LOCKED->ACTIVE/CLOSED status flip in packet"
+    ]
+  }
+}
