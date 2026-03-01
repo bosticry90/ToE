@@ -1857,6 +1857,15 @@ COSMO rollup checkpoint (2026-03-01):
   - `COSMO_DRYRUN_CUSTODY_CONFIRMATION_PACKET_POLICY_v0: CYCLE08_09_10_11_12_13_CUSTODY_CONFIRMATION_LOCK_REQUIRED_NO_STATUS_FLIP`
   - `formal/python/tests/test_cosmo_bg_micro14_dryrun_custody_confirmation_packet_gate.py`
 
+- COSMO phase adherence snapshot is machine-auditable:
+  - `COSMO_PHASE_ADHERENCE_SNAPSHOT_v0: LOCKED_QUEUE_CROSS_SURFACE_SYNCED`
+  - `COSMO_PHASE_ADHERENCE_MATRIX_STATUS_v0: LOCKED`
+  - `COSMO_PHASE_ADHERENCE_ROADMAP_STATUS_v0: LOCKED`
+  - `COSMO_PHASE_ADHERENCE_REGISTRY_MODE_v0: LOCKED_QUEUE`
+  - `COSMO_PHASE_ADHERENCE_PRIMARY_LANE_v0: TARGET-COSMO-BG-PLAN`
+  - `COSMO_PHASE_ADHERENCE_GOVERNANCE_SUITE_v0: INCLUDED`
+  - `formal/python/tests/test_cosmo_phase_adherence_snapshot_gate.py`
+
 QFT evidence diversification checkpoint log (legacy):
 - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_ARTIFACT_v0: qft_evidence_diversification_checkpoint_cycle01_v0`
   - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_SHA256_v0: e577ce28c1ec133d1fb81fd4f02c86cb8cbc51ff2d376fb28007d85e31160d3a`
