@@ -1,0 +1,22 @@
+{
+  "artifact_id": "cosmo_bg_micro01_object_surface_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro01_object_surface_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "background_only_nonclaim_v0",
+    "object_surface_tokens": [
+      "COSMO_BG_MICRO01_METRIC_SURFACE_v0: FLRW_TYPED_METRIC_PLACEHOLDER_PINNED",
+      "COSMO_BG_MICRO01_EXPANSION_SURFACE_v0: SCALE_FACTOR_AND_HUBBLE_PLACEHOLDER_PINNED",
+      "COSMO_BG_MICRO01_SOURCE_SURFACE_v0: EFFECTIVE_FLUID_SOURCE_PLACEHOLDER_PINNED",
+      "COSMO_BG_MICRO01_REGIME_SURFACE_v0: DOMAIN_OF_VALIDITY_OBJECTS_PINNED"
+    ],
+    "anti_shortcut_constraints": [
+      "no_equation_closure_promotion",
+      "no_unbounded_regime_extension",
+      "no_external_truth_claim"
+    ],
+    "generated_on": "2026-03-01"
+  }
+}

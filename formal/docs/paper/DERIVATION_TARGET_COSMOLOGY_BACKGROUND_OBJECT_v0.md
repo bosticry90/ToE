@@ -22,6 +22,12 @@ Scope boundary token:
 Prerequisite lock:
 - `COSMO_PREREQS_v0: TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-SR-COV-PLAN`
 
+Cycle-001 micro target lock:
+- `TARGET-COSMO-BG-MICRO-01-OBJECT-SURFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_01_OBJECT_SURFACE_v0.md`
+- `formal/output/cosmo_bg_micro01_object_surface_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_bg_micro01_object_surface_gate.py`
+
 Deliverable surfaces:
 - `COSMO_DELIVERABLE_METRIC_SURFACE_v0: BACKGROUND_METRIC_OBJECT_DECLARED`
 - `COSMO_DELIVERABLE_EXPANSION_SURFACE_v0: HUBBLE_LIKE_OBJECT_DECLARED`
@@ -56,3 +62,4 @@ Governance pointers:
 - phase advancement registry: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`
 - phase advancement gate: `formal/python/tests/test_pillar_phase_advancement_gate.py`
 - COSMO kickoff gate: `formal/python/tests/test_cosmo_background_kickoff_gate.py`
+- COSMO micro-01 gate: `formal/python/tests/test_cosmo_bg_micro01_object_surface_gate.py`

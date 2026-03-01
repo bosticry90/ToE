@@ -27,6 +27,8 @@ Write-Host "Running governance suite via ./py.ps1" -ForegroundColor Cyan
   formal/python/tests/test_state_doc_mainline_does_not_depend_on_variantA.py `
   formal/python/tests/test_state_doc_mainline_cannot_claim_beta_nonzero.py `
   formal/python/tests/test_pillar_phase_advancement_gate.py `
+  formal/python/tests/test_cosmo_background_kickoff_gate.py `
+  formal/python/tests/test_cosmo_bg_micro01_object_surface_gate.py `
   -q
 
 Write-Host "OK" -ForegroundColor Green
