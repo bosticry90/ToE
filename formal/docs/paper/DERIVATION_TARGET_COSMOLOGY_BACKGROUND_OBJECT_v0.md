@@ -118,6 +118,12 @@ Cycle-016 micro target lock:
 - `formal/output/cosmo_bg_micro16_dryrun_custody_confirmation_attestation_confirmation_packet_cycle01_v0.json`
 - `formal/python/tests/test_cosmo_bg_micro16_dryrun_custody_confirmation_attestation_confirmation_packet_gate.py`
 
+Cycle-017 micro target lock:
+- `TARGET-COSMO-BG-MICRO-17-DRYRUN-CUSTODY-CONFIRMATION-ATTESTATION-CONFIRMATION-ATTESTATION-PACKET-v0`
+- `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_17_DRYRUN_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_PACKET_v0.md`
+- `formal/output/cosmo_bg_micro17_dryrun_custody_confirmation_attestation_confirmation_attestation_packet_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_bg_micro17_dryrun_custody_confirmation_attestation_confirmation_attestation_packet_gate.py`
+
 COSMO rollup package lock:
 - `formal/docs/paper/TOE_COSMO_BACKGROUND_PILLAR_SUMMARY_v0.md`
 - `formal/markdown/locks/policy/COSMO_BACKGROUND_PILLAR_PACKAGE_v0.md`
@@ -174,4 +180,5 @@ Governance pointers:
 - COSMO micro-14 gate: `formal/python/tests/test_cosmo_bg_micro14_dryrun_custody_confirmation_packet_gate.py`
 - COSMO micro-15 gate: `formal/python/tests/test_cosmo_bg_micro15_dryrun_custody_confirmation_attestation_packet_gate.py`
 - COSMO micro-16 gate: `formal/python/tests/test_cosmo_bg_micro16_dryrun_custody_confirmation_attestation_confirmation_packet_gate.py`
+- COSMO micro-17 gate: `formal/python/tests/test_cosmo_bg_micro17_dryrun_custody_confirmation_attestation_confirmation_attestation_packet_gate.py`
 - COSMO rollup gate: `formal/python/tests/test_cosmo_background_pillar_package_rollup_gate.py`

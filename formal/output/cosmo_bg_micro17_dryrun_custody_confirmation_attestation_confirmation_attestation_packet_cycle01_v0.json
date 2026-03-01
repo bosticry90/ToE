@@ -1,0 +1,27 @@
+{
+  "artifact_id": "cosmo_bg_micro17_dryrun_custody_confirmation_attestation_confirmation_attestation_packet_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro17_dryrun_custody_confirmation_attestation_confirmation_attestation_packet_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "dryrun_custody_confirmation_attestation_confirmation_attestation_packet_only_nonclaim_v0",
+    "policy_tokens": [
+      "COSMO_DRYRUN_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_PACKET_POLICY_v0: CYCLE08_09_10_11_12_13_14_15_16_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_LOCK_REQUIRED_NO_STATUS_FLIP",
+      "dryrun_custody_confirmation_attestation_confirmation_attestation_policy: CYCLE08_09_10_11_12_13_14_15_16_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_LOCK_REQUIRED_NO_STATUS_FLIP",
+      "dryrun_custody_confirmation_attestation_confirmation_attestation_gate: formal/python/tests/test_cosmo_bg_micro17_dryrun_custody_confirmation_attestation_confirmation_attestation_packet_gate.py"
+    ],
+    "required_custody_confirmation_attestation_confirmation_attestation_bundle_pointers": [
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_08_LOCKED_QUEUE_UNLOCK_TRANSITION_PACKET_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_09_AUTHORIZED_UNLOCK_CONDITIONS_CHECKLIST_PACKET_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_10_LOCK_TRANSITION_DRYRUN_ATTESTATION_PACKET_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_11_DRYRUN_RECONCILIATION_PACKET_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_12_DRYRUN_CLOSURE_PACKET_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_13_DRYRUN_CUSTODY_PACKET_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_14_DRYRUN_CUSTODY_CONFIRMATION_PACKET_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_15_DRYRUN_CUSTODY_CONFIRMATION_ATTESTATION_PACKET_v0.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_16_DRYRUN_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_PACKET_v0.md"
+    ],
+    "required_custody_confirmation_attestation_confirmation_attestation_bundle_hash": "c08_c09_c10_c11_c12_c13_c14_c15_c16_pointer_bundle_cycle01_v0"
+  }
+}
