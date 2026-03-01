@@ -97,6 +97,9 @@ def test_cosmo_matrix_row_is_present_and_locked() -> None:
         "dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_18_DRYRUN_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_PACKET_v0.md",
         "dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_gate": "formal/python/tests/test_cosmo_bg_micro18_dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_packet_gate.py",
         "dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_policy": "CYCLE08_09_10_11_12_13_14_15_16_17_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_LOCK_REQUIRED_NO_STATUS_FLIP",
+        "dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_attestation_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_19_DRYRUN_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_PACKET_v0.md",
+        "dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_attestation_gate": "formal/python/tests/test_cosmo_bg_micro19_dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_attestation_packet_gate.py",
+        "dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_attestation_policy": "CYCLE08_09_10_11_12_13_14_15_16_17_18_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_LOCK_REQUIRED_NO_STATUS_FLIP",
         "consistency_gate": "formal/python/tests/test_cosmo_matrix_rollup_crosspin_gate.py",
     }
 
@@ -144,6 +147,8 @@ def test_cosmo_matrix_crosspins_roadmap_state_and_target() -> None:
         cosmo["dryrun_custody_confirmation_attestation_confirmation_attestation_gate"],
         "COSMO_DRYRUN_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_PACKET_POLICY_v0: CYCLE08_09_10_11_12_13_14_15_16_17_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_LOCK_REQUIRED_NO_STATUS_FLIP",
         cosmo["dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_gate"],
+        "COSMO_DRYRUN_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_PACKET_POLICY_v0: CYCLE08_09_10_11_12_13_14_15_16_17_18_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_LOCK_REQUIRED_NO_STATUS_FLIP",
+        cosmo["dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_attestation_gate"],
     ]
     missing_state = [token for token in state_required if token not in state_text]
     assert not missing_state, "State COSMO matrix cross-pin token drift: " + ", ".join(missing_state)
