@@ -98,7 +98,10 @@
       "dryrun_closure_policy": "CYCLE08_09_10_11_BUNDLE_HASH_POINTER_LOCK_REQUIRED_NO_STATUS_FLIP",
       "dryrun_custody_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_13_DRYRUN_CUSTODY_PACKET_v0.md",
       "dryrun_custody_gate": "formal/python/tests/test_cosmo_bg_micro13_dryrun_custody_packet_gate.py",
-      "dryrun_custody_policy": "CYCLE08_09_10_11_12_CUSTODY_ATTESTATION_LOCK_REQUIRED_NO_STATUS_FLIP"
+      "dryrun_custody_policy": "CYCLE08_09_10_11_12_CUSTODY_ATTESTATION_LOCK_REQUIRED_NO_STATUS_FLIP",
+      "dryrun_custody_confirmation_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_14_DRYRUN_CUSTODY_CONFIRMATION_PACKET_v0.md",
+      "dryrun_custody_confirmation_gate": "formal/python/tests/test_cosmo_bg_micro14_dryrun_custody_confirmation_packet_gate.py",
+      "dryrun_custody_confirmation_policy": "CYCLE08_09_10_11_12_13_CUSTODY_CONFIRMATION_LOCK_REQUIRED_NO_STATUS_FLIP"
     }
   }
 }
