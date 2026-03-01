@@ -35,6 +35,7 @@ Write-Host "Running governance suite via ./py.ps1" -ForegroundColor Cyan
   formal/python/tests/test_cosmo_bg_micro03_source_coupling_surface_gate.py `
   formal/python/tests/test_cosmo_bg_micro04_regime_falsifiability_surface_gate.py `
   formal/python/tests/test_cosmo_bg_micro05_package_freeze_reopen_policy_gate.py `
+  formal/python/tests/test_cosmo_bg_micro06_state_checkpoint_boundary_gate.py `
   formal/python/tests/test_cosmo_background_pillar_package_rollup_gate.py `
   formal/python/tests/test_cosmo_state_rollup_checkpoint_gate.py `
   formal/python/tests/test_cosmo_matrix_rollup_crosspin_gate.py `
