@@ -76,6 +76,9 @@ def test_cosmo_matrix_row_is_present_and_locked() -> None:
         "dryrun_reconciliation_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_11_DRYRUN_RECONCILIATION_PACKET_v0.md",
         "dryrun_reconciliation_gate": "formal/python/tests/test_cosmo_bg_micro11_dryrun_reconciliation_packet_gate.py",
         "dryrun_reconciliation_policy": "CYCLE08_09_10_POLICY_COHERENCE_REQUIRED_NO_STATUS_FLIP",
+        "dryrun_closure_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_12_DRYRUN_CLOSURE_PACKET_v0.md",
+        "dryrun_closure_gate": "formal/python/tests/test_cosmo_bg_micro12_dryrun_closure_packet_gate.py",
+        "dryrun_closure_policy": "CYCLE08_09_10_11_BUNDLE_HASH_POINTER_LOCK_REQUIRED_NO_STATUS_FLIP",
         "consistency_gate": "formal/python/tests/test_cosmo_matrix_rollup_crosspin_gate.py",
     }
 
@@ -109,6 +112,8 @@ def test_cosmo_matrix_crosspins_roadmap_state_and_target() -> None:
         cosmo["lock_transition_dryrun_attestation_gate"],
         "COSMO_DRYRUN_RECONCILIATION_PACKET_POLICY_v0: CYCLE08_09_10_POLICY_COHERENCE_REQUIRED_NO_STATUS_FLIP",
         cosmo["dryrun_reconciliation_gate"],
+        "COSMO_DRYRUN_CLOSURE_PACKET_POLICY_v0: CYCLE08_09_10_11_BUNDLE_HASH_POINTER_LOCK_REQUIRED_NO_STATUS_FLIP",
+        cosmo["dryrun_closure_gate"],
     ]
     missing_state = [token for token in state_required if token not in state_text]
     assert not missing_state, "State COSMO matrix cross-pin token drift: " + ", ".join(missing_state)
