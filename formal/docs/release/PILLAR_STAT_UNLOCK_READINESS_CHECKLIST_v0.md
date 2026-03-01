@@ -155,18 +155,20 @@ Fail conditions:
 Unlock authorization rule:
 - Emit `GO` only when all four checks are `PASS` and no bounded-scope violations are present.
 
-## Post-Activation Closure-Prep Handoff (ACTIVE posture only)
+## Post-Activation Closure-Prep Handoff (Historical ACTIVE posture)
 
 Purpose:
-- Separate the current `ACTIVE` pre-discharge lane from the future `ACTIVE -> CLOSED` transition.
+- Separate the historical `ACTIVE` pre-discharge lane from the subsequent `ACTIVE -> CLOSED` transition.
 - Pin the exact closure-prep control surfaces without authorizing closure by itself.
 
-Current closure-prep posture (must remain true until fully earned closure criteria are satisfied):
+Historical closure-prep posture at handoff time:
 - `PILLAR-STAT_PHYSICS_STATUS: OPEN_v0_ACTIVE_PREEXECUTION`
 - `PILLAR-STAT_GOVERNANCE_STATUS: OPEN_v0_REQUIRED_ROWS_BLOCKED_EXECUTION`
 - `PROCEED_GATE_STAT: BLOCKED_v0_PHYSICS_NOT_CLOSED`
 - `MATRIX_CLOSURE_GATE_STAT: BLOCKED_v0_GOVERNANCE_NOT_CLOSED`
 - `REQUIRED_STAT_CLOSURE_ROWS: TOE-STAT-DER-01,TOE-STAT-DER-02`
+
+Current canonical posture is tracked in roadmap/state/matrix surfaces and closure-prep controls.
 
 Closure-prep control surfaces:
 - `formal/docs/release/PILLAR_STAT_CLOSURE_PREP_CHECKLIST_v0.md`

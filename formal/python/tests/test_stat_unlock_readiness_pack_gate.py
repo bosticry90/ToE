@@ -45,8 +45,8 @@ def test_stat_unlock_readiness_pack_gate() -> None:
 
     stat_locked = "| `PILLAR-STAT` | `LOCKED` |" in roadmap_text
     if not stat_locked:
-        assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
-            "STAT readiness aggregation gate expects either the historical LOCKED posture or the canonical ACTIVE posture."
+        assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text or "| `PILLAR-STAT` | `CLOSED` |" in roadmap_text, (
+            "STAT readiness aggregation gate expects LOCKED, ACTIVE, or CLOSED posture."
         )
 
     for gate_rel in STAT_READINESS_PACK_GATES:
