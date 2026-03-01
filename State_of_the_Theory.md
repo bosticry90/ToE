@@ -22,6 +22,23 @@ STAT activation checkpoint (2026-02-26):
 - post-activation validation template pointer: `formal/docs/release/PILLAR_STAT_ACTIVATION_CHANGESET_TEMPLATE_v0.md`.
 - active-stage closure-prep checklist pointer: `formal/docs/release/PILLAR_STAT_CLOSURE_PREP_CHECKLIST_v0.md`.
 - active-stage closure changeset template pointer: `formal/docs/release/PILLAR_STAT_CLOSURE_CHANGESET_TEMPLATE_v0.md`.
+
+STAT release surface index (historical vs current canonical):
+- current canonical closure posture controls:
+  - `formal/docs/paper/PHYSICS_ROADMAP_v0.md`
+  - `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`
+  - `formal/docs/paper/RESULTS_TABLE_v0.md`
+  - `formal/docs/release/PILLAR_STAT_CLOSURE_PREP_CHECKLIST_v0.md`
+- current canonical execution controls:
+  - `formal/docs/release/PILLAR_STAT_PHASE_ADVANCEMENT_CONTRACT_v0.md`
+  - `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`
+- historical activation/unlock context:
+  - `formal/docs/release/PILLAR_STAT_UNLOCK_READINESS_CHECKLIST_v0.md`
+  - `formal/docs/release/PILLAR_STAT_ACTIVATION_CHANGESET_TEMPLATE_v0.md`
+  - `formal/docs/release/STAT_UNLOCK_READINESS_AUDIT_v0.md`
+  - `formal/docs/release/STAT_MATRIX_PREP_CHECKLIST_v0.md`
+- historical closeout procedure context:
+  - `formal/docs/release/PILLAR_STAT_CLOSURE_CHANGESET_TEMPLATE_v0.md`
 - `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION: DISCHARGED_v0_BOUNDED`
 - `PILLAR_STAT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
 - `PILLAR-STAT_PHYSICS_STATUS: CLOSED_v0_DISCHARGED`
