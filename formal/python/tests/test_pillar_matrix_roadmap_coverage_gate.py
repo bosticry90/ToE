@@ -41,6 +41,11 @@ def _roadmap_pillars_from_table(active_text: str) -> list[str]:
     return pillars
 
 
+def _all_roadmap_pillars_from_table(active_text: str) -> list[str]:
+    rows = ROADMAP_PILLAR_ROW.findall(active_text)
+    return [pillar_id for pillar_id, _, _ in rows]
+
+
 def test_roadmap_pillars_are_matrix_registered() -> None:
     matrix = _read_json(MATRIX_PATH)
     matrix_pillars = set(matrix.get("pillars", {}).keys())
@@ -60,4 +65,24 @@ def test_roadmap_pillars_are_matrix_registered() -> None:
     assert not missing_in_matrix, (
         "Roadmap pillars missing in matrix: " + ", ".join(missing_in_matrix) +
         ". Add rows to formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json."
+    )
+
+
+def test_matrix_pillars_are_roadmap_registered() -> None:
+    matrix = _read_json(MATRIX_PATH)
+    matrix_pillars = set(matrix.get("pillars", {}).keys())
+    assert matrix_pillars, "PILLAR_STATUS_MATRIX_v1.json must define at least one pillar row."
+
+    roadmap_active, _ = split_active_and_archived(_read(ROADMAP_PATH), ROADMAP_PATH)
+    roadmap_rows = _all_roadmap_pillars_from_table(roadmap_active)
+    assert roadmap_rows, "PHYSICS_ROADMAP_v0.md must contain at least one pillar row in the active table."
+
+    duplicates = sorted({pillar for pillar in roadmap_rows if roadmap_rows.count(pillar) > 1})
+    assert not duplicates, "Duplicate pillar rows found in roadmap table: " + ", ".join(duplicates)
+
+    roadmap_pillars = set(roadmap_rows)
+    missing_in_roadmap = sorted(matrix_pillars - roadmap_pillars)
+    assert not missing_in_roadmap, (
+        "Matrix pillars missing in roadmap: " + ", ".join(missing_in_roadmap) +
+        ". Add rows to formal/docs/paper/PHYSICS_ROADMAP_v0.md."
     )
