@@ -83,9 +83,9 @@ Adequacy-facing 5x5 justification block (bounded, non-adjudicative):
 
 Phase advancement contract (active once scaffold saturation is pinned):
 - `STAT_SCAFFOLD_PHASE_COMPLETION_v0: CYCLE01_ROW_AND_TRANSITION_SCAFFOLDS_SATURATED`
-- `STAT_NEXT_EXECUTION_PHASE_v0: FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_ENTRY`
-- `STAT_NEXT_EXECUTION_OBJECTIVE_v0: PIN_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_AFTER_THEOREM_STATUS`
-- `STAT_NEXT_EXECUTION_TOKEN_v0: STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0`
+- `STAT_NEXT_EXECUTION_PHASE_v0: SCAFFOLD_PHASE_REOPEN_ENTRY`
+- `STAT_NEXT_EXECUTION_OBJECTIVE_v0: FLIP_STAT_SCAFFOLD_PHASE_REOPEN_TOKEN_BEFORE_COMPONENT_GATE_EXPANSION`
+- `STAT_NEXT_EXECUTION_TOKEN_v0: STAT_SCAFFOLD_PHASE_REOPEN_TOKEN_v0`
 - `STAT_NEXT_EXECUTION_TOKEN_STATE_v0: NOT_PRESENT_v0`
 - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
 - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_SCOPE_v0: ADEQUACY_COMPLETE_AND_SCOPE_BOUNDARIES_PINNED_BEFORE_ENTRY`
@@ -96,7 +96,24 @@ Phase advancement contract (active once scaffold saturation is pinned):
 - `STAT_DERIVATION_COMPLETENESS_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
 - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
 - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-- `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: NOT_PRESENT_v0`
+- `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
 - `STAT_SCAFFOLD_PHASE_COMPONENT_GATE_FREEZE_v0: 43`
 - `STAT_SCAFFOLD_PHASE_REOPEN_RULE_v0: EXPLICIT_REOPEN_REQUIRED_BEFORE_COMPONENT_GATE_EXPANSION`
 - `STAT_SCAFFOLD_PHASE_REOPEN_TOKEN_v0: NOT_PRESENT_v0`
@@ -644,7 +661,7 @@ Cycle01 `PILLAR-STAT` failure-trigger discharge theorem-surface status packet (b
 - artifact path: `formal/output/stat_failure_trigger_discharge_theorem_surface_status_cycle01_v0.json`
 - coupling gate path: `formal/python/tests/test_stat_failure_trigger_discharge_theorem_surface_status_cycle01_gate.py`
 - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
-- `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: NOT_PRESENT_v0`
+- historical downstream handoff note: theorem-surface status was pinned before the object-surface status packet landed.
 - discharge row linkage (bounded/non-promotional):
   - `TOE-STAT-DER-01`
   - `TOE-STAT-DER-02`
@@ -660,6 +677,587 @@ Cycle01 `PILLAR-STAT` failure-trigger discharge theorem-surface status packet (b
   - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
   - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
 - no object-surface execution claim, no failure-trigger theorem discharge claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` failure-trigger discharge object-surface status packet (bounded non-promotional coupling layer):
+- `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_CYCLE01_ARTIFACT_v0: stat_failure_trigger_discharge_object_surface_status_cycle01_v0`
+- `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_CYCLE01_SHA256_v0: d904aa6f5bcc10d7212e25a70cdc5a738e1516bc791fdac9f0052897290f7c11`
+- `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_failure_trigger_discharge_object_surface_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_failure_trigger_discharge_object_surface_status_cycle01_gate.py`
+- `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- historical downstream handoff note: object-surface status was pinned before the coherence-status packet landed.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded failure-trigger discharge object-surface entry scope only; no coherence execution claim and no external truth claim.
+- failure-trigger discharge object-surface status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the theorem-surface status artifact is pinned before object-surface status admission.
+- required object-surface status inputs pinned for this packet:
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no coherence execution claim, no failure-trigger object discharge claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` failure-trigger discharge coherence-status packet (bounded non-promotional coupling layer):
+- `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_CYCLE01_ARTIFACT_v0: stat_failure_trigger_discharge_coherence_status_cycle01_v0`
+- `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_CYCLE01_SHA256_v0: 860678ca8e84adec89cbbcb4b4eec13b3b2e75bbad4d2f52fa6a120e29be8e25`
+- `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_failure_trigger_discharge_coherence_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_failure_trigger_discharge_coherence_status_cycle01_gate.py`
+- `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+- historical downstream handoff captured here; the live discharge-completion transition status token is pinned in the phase-advancement block and the dedicated transition-status packet below.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded failure-trigger discharge coherence entry scope only; no discharge-completion transition execution claim and no external truth claim.
+- failure-trigger discharge coherence-status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the object-surface status artifact is pinned before coherence-status admission.
+- required coherence-status inputs pinned for this packet:
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no discharge-completion transition execution claim, no failure-trigger coherence discharge claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` discharge-completion transition-status packet (bounded non-promotional coupling layer):
+- `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_CYCLE01_ARTIFACT_v0: stat_discharge_completion_transition_status_cycle01_v0`
+- `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_CYCLE01_SHA256_v0: 6216c80f387c889f975ea3a603bfe212531b7fbd1d5943521eb022f1ef913d99`
+- `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_discharge_completion_transition_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_discharge_completion_transition_status_cycle01_gate.py`
+- `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+- historical downstream handoff captured here; the live adjudication-transition status token is pinned in the phase-advancement block and the dedicated transition-status packet below.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded discharge-completion transition entry scope only; no adjudication-transition execution claim and no external truth claim.
+- discharge-completion transition-status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the failure-trigger coherence-status artifact is pinned before discharge-completion transition-status admission.
+- required transition-status inputs pinned for this packet:
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_ADJUDICATION_TRANSITION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no discharge-completion transition claim, no adjudication-transition execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` adjudication-transition status packet (bounded non-promotional coupling layer):
+- `STAT_ADJUDICATION_TRANSITION_STATUS_CYCLE01_ARTIFACT_v0: stat_adjudication_transition_status_cycle01_v0`
+- `STAT_ADJUDICATION_TRANSITION_STATUS_CYCLE01_SHA256_v0: 963ab7a8028a6071deef2ab6fb452c35afeaf6ae081051747f65919079e46c4b`
+- `STAT_ADJUDICATION_TRANSITION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_adjudication_transition_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_adjudication_transition_status_cycle01_gate.py`
+- `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+- historical downstream handoff captured here; the live inevitability-transition status token is pinned in the phase-advancement block and the dedicated transition-status packet below.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded adjudication-transition entry scope only; no inevitability-transition execution claim and no external truth claim.
+- adjudication-transition status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the discharge-completion transition-status artifact is pinned before adjudication-transition status admission.
+- required transition-status inputs pinned for this packet:
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_ADJUDICATION_TRANSITION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_INEVITABILITY_TRANSITION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no adjudication-transition claim, no inevitability-transition execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` inevitability-transition status packet (bounded non-promotional coupling layer):
+- `STAT_INEVITABILITY_TRANSITION_STATUS_CYCLE01_ARTIFACT_v0: stat_inevitability_transition_status_cycle01_v0`
+- `STAT_INEVITABILITY_TRANSITION_STATUS_CYCLE01_SHA256_v0: 259f25dcb0d87a1cf6f89273449da5d4f9fb421dce9955b4fc160b10f943fdc4`
+- `STAT_INEVITABILITY_TRANSITION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_inevitability_transition_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_inevitability_transition_status_cycle01_gate.py`
+- `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+- historical downstream handoff captured here; the live nonflip-execution-boundary status token is pinned in the phase-advancement block and the dedicated boundary-status packet below.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded inevitability-transition entry scope only; no nonflip-execution-boundary execution claim and no external truth claim.
+- inevitability-transition status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the adjudication-transition status artifact is pinned before inevitability-transition status admission.
+- required transition-status inputs pinned for this packet:
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_INEVITABILITY_TRANSITION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no inevitability-transition claim, no nonflip-execution-boundary execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` nonflip-execution-boundary status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_boundary_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_CYCLE01_SHA256_v0: 4f1fcde1b3c29009e26003941c037be1dfe74bd3c224283befc52e844baaf91f`
+- `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_boundary_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_boundary_status_cycle01_gate.py`
+- `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM`
+- downstream handoff note: nonflip-execution-custody status now pins on its own packet; this boundary packet remains historical and non-promotional.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded nonflip-execution-boundary entry scope only; no nonflip-execution-custody execution claim and no external truth claim.
+- nonflip-execution-boundary status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the inevitability-transition status artifact is pinned before nonflip-execution-boundary status admission.
+- required boundary-status inputs pinned for this packet:
+  - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_INEVITABILITY_TRANSITION_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no nonflip-execution-boundary claim, no nonflip-execution-custody execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` nonflip-execution-custody status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_CYCLE01_SHA256_v0: 52bb0447e77c732d0f28dd739d6de321fa0ba49a4aab686b4671da9a72f3784e`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_custody_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_status_cycle01_gate.py`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM`
+- downstream handoff note: nonflip-execution-custody-attestation status now pins on its own packet; this custody packet remains historical and non-promotional.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded nonflip-execution-custody entry scope only; no nonflip-execution-custody-attestation execution claim and no external truth claim.
+- nonflip-execution-custody status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the nonflip-execution-boundary status artifact is pinned before nonflip-execution-custody status admission.
+- required custody-status inputs pinned for this packet:
+  - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no nonflip-execution-custody claim, no nonflip-execution-custody-attestation execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` nonflip-execution-custody-attestation status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_CYCLE01_SHA256_v0: 4d02cc77cdb5e4631b6c5977f423e214a149a3aca3648dc047bd82832f0f65a0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_status_cycle01_gate.py`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- downstream handoff note: nonflip-execution-custody-attestation-confirmation status now pins on its own packet; this attestation packet remains historical and non-promotional.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded nonflip-execution-custody-attestation entry scope only; no nonflip-execution-custody-attestation-confirmation execution claim and no external truth claim.
+- nonflip-execution-custody-attestation status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the nonflip-execution-custody status artifact is pinned before nonflip-execution-custody-attestation status admission.
+- required attestation-status inputs pinned for this packet:
+  - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no nonflip-execution-custody-attestation claim, no nonflip-execution-custody-attestation-confirmation execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` nonflip-execution-custody-attestation-confirmation status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_SHA256_v0: 530e3d50bd608e6af9e63549abc9930d9b4406549a6bd0ed0e62d9e0d3972b68`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_confirmation_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_status_cycle01_gate.py`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+- downstream handoff note: nonflip-execution-custody-attestation-confirmation-attestation status now pins on its own packet; this confirmation packet remains historical and non-promotional.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded nonflip-execution-custody-attestation-confirmation entry scope only; no nonflip-execution-custody-attestation-confirmation-attestation execution claim and no external truth claim.
+- nonflip-execution-custody-attestation-confirmation status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the nonflip-execution-custody-attestation status artifact is pinned before nonflip-execution-custody-attestation-confirmation status admission.
+- required confirmation-status inputs pinned for this packet:
+  - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no nonflip-execution-custody-attestation-confirmation claim, no nonflip-execution-custody-attestation-confirmation-attestation execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` nonflip-execution-custody-attestation-confirmation-attestation status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_SHA256_v0: 45190955609a7ecc3d3801ea72777156dec7e7e0bbf937ed2d08f5b940c11c8a`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_status_cycle01_gate.py`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- downstream handoff note: the cycle01 nonflip-execution-custody-attestation-confirmation-attestation-confirmation status packet below now carries the next pinned successor handoff.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded nonflip-execution-custody-attestation-confirmation-attestation entry scope only; no nonflip-execution-custody-attestation-confirmation-attestation-confirmation execution claim and no external truth claim.
+- nonflip-execution-custody-attestation-confirmation-attestation status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the nonflip-execution-custody-attestation-confirmation status artifact is pinned before nonflip-execution-custody-attestation-confirmation-attestation status admission.
+- required confirmation-attestation status inputs pinned for this packet:
+  - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no nonflip-execution-custody-attestation-confirmation-attestation claim, no nonflip-execution-custody-attestation-confirmation-attestation-confirmation execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` nonflip-execution-custody-attestation-confirmation-attestation-confirmation status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_SHA256_v0: f912ed20dbd5e40f5d5404bd3624ec5728b82ac351f172a890a4cf4ec6636736`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+- downstream handoff note: the cycle01 nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation status packet below now carries the next pinned successor handoff.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded nonflip-execution-custody-attestation-confirmation-attestation-confirmation entry scope only; no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation execution claim and no external truth claim.
+- nonflip-execution-custody-attestation-confirmation-attestation-confirmation status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the nonflip-execution-custody-attestation-confirmation-attestation status artifact is pinned before nonflip-execution-custody-attestation-confirmation-attestation-confirmation status admission.
+- required confirmation-attestation-confirmation status inputs pinned for this packet:
+  - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no nonflip-execution-custody-attestation-confirmation-attestation-confirmation claim, no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_SHA256_v0: 3395e90460f9a83d5697ac4c6698672ad76d413b74e5517043a3876757fec91d`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- downstream handoff note: the cycle01 nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation status packet below now carries the next pinned successor handoff.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation entry scope only; no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation execution claim and no external truth claim.
+- nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the nonflip-execution-custody-attestation-confirmation-attestation-confirmation status artifact is pinned before nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation status admission.
+- required confirmation-attestation-confirmation-attestation status inputs pinned for this packet:
+  - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation claim, no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_SHA256_v0: 201ba143dd2e83d92f091e8db77e1f5124f18b8d7decaec06ea5f18ec0537ae5`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+- downstream handoff note: the cycle01 nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status packet below now carries the next pinned successor handoff.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation entry scope only; no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation execution claim and no external truth claim.
+- nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation status artifact is pinned before nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation status admission.
+- required confirmation-attestation-confirmation-attestation-confirmation status inputs pinned for this packet:
+  - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation claim, no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+
+Cycle01 `PILLAR-STAT` nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_SHA256_v0: 2b3f4d16b55837f1dc7a6549fc0ab846d871678a8003b9cbb379b91a9d993806`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- downstream handoff note: the cycle01 nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status packet below now carries the next pinned successor handoff.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation entry scope only; no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation execution claim and no external truth claim.
+- nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation status artifact is pinned before nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status admission.
+- required confirmation-attestation-confirmation-attestation-confirmation-attestation status inputs pinned for this packet:
+  - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation claim, no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+
+Cycle01 `PILLAR-STAT` nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_SHA256_v0: c9ec6d4c60bd7cedfcdc05ba6ed30942149b99e4a29b665eddded1d783e73477`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+- downstream handoff note: the cycle01 nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status packet below now carries the next pinned successor handoff.
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation entry scope only; no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation execution claim and no external truth claim.
+- nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status artifact is pinned before nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status admission.
+- required confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status inputs pinned for this packet:
+  - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation claim, no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
+- any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
+
+Cycle01 `PILLAR-STAT` nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_SHA256_v0: cede46cb7141fad1d369c84c2b9d57cf1b2b4637f3a3c6023db26b7269057e10`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- discharge row linkage (bounded/non-promotional):
+  - `TOE-STAT-DER-01`
+  - `TOE-STAT-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation entry scope only; no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation execution claim and no external truth claim.
+- nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status artifact is pinned before nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status admission.
+- required confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status inputs pinned for this packet:
+  - `EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+  - `STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_ARTIFACT_v0`
+  - `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+  - `STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0`
+- no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation claim, no nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation execution claim, no matrix-status change claim, and no external truth claim are introduced by this packet.
 - any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
 
 Cycle01 `PILLAR-STAT` failure-trigger audit scope-boundary scaffold (bounded non-promotional coupling layer):
@@ -1016,3 +1614,42 @@ Explicit exclusions at this stage:
 - no adjudication flip.
 - no matrix-status change.
 - no roadmap activation edit.
+
+Cycle01 `PILLAR-STAT` attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation scope-boundary scaffold (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_SHA256_v0: 400ad97070dea671f6629c4365627dd4ec9ece05e22c715f4d097c66546d8a19`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_gate.py`
+- bounded attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation scope only; no execution replay flip, no discharge adjudication flip, no inevitability adjudication flip, and no external truth claim.
+
+Cycle01 `PILLAR-STAT` attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation scope-boundary scaffold (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_SHA256_v0: 2ceacb7b0c53bd9e088d36c65bd1e17eb012c510dc85cde39d297049aec0889d`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_cycle01_gate.py`
+- bounded attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation scope only; no execution replay flip, no discharge adjudication flip, no inevitability adjudication flip, and no external truth claim.
+
+Cycle01 `PILLAR-STAT` attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_SHA256_v0: 507bd00987340f7abc48791c6791313d08cf394bf8dbd35dc4ae219fede1f362`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py`
+- bounded attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation entry scope only; no attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation execution claim and no external truth claim.
+- attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status artifact is pinned before attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status admission.
+
+Cycle01 `PILLAR-STAT` attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status packet (bounded non-promotional coupling layer):
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_SHA256_v0: 5c68036598b3280abd7b96220d349d84aabf20b8b28e930fabe44a39a8deedbc`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM`
+- artifact path: `formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py`
+- bounded attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation entry scope only; no execution replay flip, no discharge adjudication flip, no inevitability adjudication flip, and no external truth claim.
+- attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
+- dependency ladder back to the attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status artifact and both prerequisite confirmation/attestation scope-boundary bundles is pinned before attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status admission.

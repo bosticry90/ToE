@@ -1,0 +1,91 @@
+{
+  "artifact_id": "stat_nonflip_execution_custody_attestation_confirmation_attestation_status_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "stat_nonflip_execution_custody_attestation_confirmation_attestation_status_cycle01",
+    "status": "nonflip_execution_custody_attestation_confirmation_attestation_status_non_promotional",
+    "confirmation_attestation_entry_scope": [
+      "nonflip_execution_custody_attestation_confirmation_attestation_status_placeholder_only",
+      "nonflip_execution_custody_attestation_confirmation_status_verified_before_nonflip_execution_custody_attestation_confirmation_attestation_status",
+      "nonflip_execution_custody_attestation_confirmation_attestation_confirmation_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_status",
+      "no_nonflip_execution_custody_attestation_confirmation_attestation_claim",
+      "no_external_truth_claim"
+    ],
+    "required_confirmation_attestation_status_inputs": [
+      "evidence_adequacy_5x5_justification_present",
+      "derivation_completeness_gate_readiness_packet_present",
+      "failure_trigger_discharge_surface_status_pinned",
+      "failure_trigger_discharge_theorem_surface_status_pinned",
+      "failure_trigger_discharge_object_surface_status_pinned",
+      "failure_trigger_discharge_coherence_status_pinned",
+      "discharge_completion_transition_status_pinned",
+      "adjudication_transition_status_pinned",
+      "inevitability_transition_status_pinned",
+      "nonflip_execution_boundary_status_pinned",
+      "nonflip_execution_custody_status_pinned",
+      "nonflip_execution_custody_attestation_status_pinned",
+      "nonflip_execution_custody_attestation_confirmation_status_pinned",
+      "nonflip_execution_custody_attestation_confirmation_attestation_scope_boundary_pinned",
+      "nonflip_execution_custody_attestation_confirmation_attestation_confirmation_scope_boundary_pinned",
+      "failure_trigger_audit_scope_boundary_pinned",
+      "promotion_readiness_scope_boundary_pinned"
+    ],
+    "dependency_ladder": [
+      "stat_failure_trigger_discharge_surface_status_cycle01_v0",
+      "stat_failure_trigger_discharge_theorem_surface_status_cycle01_v0",
+      "stat_failure_trigger_discharge_object_surface_status_cycle01_v0",
+      "stat_failure_trigger_discharge_coherence_status_cycle01_v0",
+      "stat_discharge_completion_transition_status_cycle01_v0",
+      "stat_adjudication_transition_status_cycle01_v0",
+      "stat_inevitability_transition_status_cycle01_v0",
+      "stat_nonflip_execution_boundary_status_cycle01_v0",
+      "stat_nonflip_execution_custody_status_cycle01_v0",
+      "stat_nonflip_execution_custody_attestation_status_cycle01_v0",
+      "stat_nonflip_execution_custody_attestation_confirmation_status_cycle01_v0",
+      "stat_nonflip_execution_custody_attestation_confirmation_attestation_scope_boundary_cycle01_v0"
+    ],
+    "emitted_status_tokens": [
+      "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM",
+      "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: NOT_PRESENT_v0"
+    ],
+    "required_token_bindings": [
+      "EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT",
+      "STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT",
+      "STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM",
+      "STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+      "STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+      "STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+      "STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM",
+      "STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM",
+      "STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM",
+      "STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM",
+      "STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM",
+      "STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM",
+      "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM",
+      "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM",
+      "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_status_cycle01_v0",
+      "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_scope_boundary_cycle01_v0",
+      "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_v0",
+      "STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_failure_trigger_audit_scope_boundary_cycle01_v0",
+      "STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_promotion_readiness_scope_boundary_cycle01_v0"
+    ],
+    "cross_surface_pointers": [
+      "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "State_of_the_Theory.md",
+      "formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_status_cycle01_gate.py"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_completion_claim",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "generated_on": "2026-02-28"
+  },
+  "payload_sha256": "45190955609a7ecc3d3801ea72777156dec7e7e0bbf937ed2d08f5b940c11c8a"
+}

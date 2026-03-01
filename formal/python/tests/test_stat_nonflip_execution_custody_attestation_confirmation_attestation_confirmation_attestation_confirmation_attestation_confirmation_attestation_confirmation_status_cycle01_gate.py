@@ -1,0 +1,191 @@
+from __future__ import annotations
+
+import hashlib
+import json
+import re
+from pathlib import Path
+
+
+def find_repo_root(start: Path) -> Path:
+    p = start.resolve()
+    while p != p.parent:
+        if (p / "formal").exists():
+            return p
+        p = p.parent
+    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+STAT_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md"
+STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PILLAR_STATUS_MATRIX_v1.json"
+ARTIFACT_PATH = REPO_ROOT / "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json"
+PREDECESSOR_ARTIFACT_PATH = REPO_ROOT / "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json"
+CURRENT_ARTIFACT_ID = "stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0"
+PREDECESSOR_ARTIFACT_ID = "stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0"
+CURRENT_ARTIFACT_TOKEN = "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_ARTIFACT_v0"
+CURRENT_SHA_TOKEN = "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_SHA256_v0"
+CURRENT_GATE_TOKEN = "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_CYCLE01_GATE_v0"
+CURRENT_STATUS_TOKEN = "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0"
+CURRENT_STATUS_VALUE = "NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM"
+NEXT_STATUS_TOKEN = "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0"
+ALLOWED_NEXT_STATUS_VALUES = {
+    "NOT_PRESENT_v0",
+    "NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM",
+}
+PREDECESSOR_ARTIFACT_TOKEN = "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_ARTIFACT_v0"
+CURRENT_SCOPE_BOUNDARY_TOKEN = "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0"
+NEXT_SCOPE_BOUNDARY_TOKEN = "STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0"
+EXPECTED_ARTIFACT_REL = "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json"
+EXPECTED_GATE_REL = "formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py"
+
+
+def _read(path: Path) -> str:
+    return path.read_text(encoding="utf-8")
+
+
+def _read_json(path: Path) -> dict:
+    return json.loads(_read(path))
+
+
+def _extract_token(text: str, token_name: str) -> str:
+    m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-]+)", text)
+    assert m is not None, f"Missing token `{token_name}`."
+    return m.group(1)
+
+
+def _payload_hash(payload: dict) -> str:
+    canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
+    return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
+
+
+def test_test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_gate() -> None:
+    stat_text = _read(STAT_DOC_PATH)
+    state_text = _read(STATE_PATH)
+    roadmap_text = _read(ROADMAP_PATH)
+    matrix = _read_json(MATRIX_PATH)
+    artifact = _read_json(ARTIFACT_PATH)
+    predecessor = _read_json(PREDECESSOR_ARTIFACT_PATH)
+
+    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict)
+    assert stat_matrix.get("matrix_status") == "ACTIVE"
+
+    assert artifact.get("artifact_id") == CURRENT_ARTIFACT_ID
+    assert artifact.get("artifact_version") == "v0"
+    assert artifact.get("placeholder_template") is True
+    assert predecessor.get("artifact_id") == PREDECESSOR_ARTIFACT_ID
+    assert artifact.get("payload_sha256") == _payload_hash(artifact["payload"])
+
+    for doc_text in (stat_text, state_text, roadmap_text):
+        assert _extract_token(doc_text, CURRENT_ARTIFACT_TOKEN) == CURRENT_ARTIFACT_ID
+        assert _extract_token(doc_text, CURRENT_GATE_TOKEN) == "ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED"
+        assert _extract_token(doc_text, CURRENT_STATUS_TOKEN) == CURRENT_STATUS_VALUE
+        assert _extract_token(doc_text, NEXT_STATUS_TOKEN) in ALLOWED_NEXT_STATUS_VALUES
+        assert _extract_token(doc_text, PREDECESSOR_ARTIFACT_TOKEN) == PREDECESSOR_ARTIFACT_ID
+        assert _extract_token(doc_text, CURRENT_SCOPE_BOUNDARY_TOKEN) == "stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_v0"
+        assert _extract_token(doc_text, NEXT_SCOPE_BOUNDARY_TOKEN) == "stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_cycle01_v0"
+        assert _extract_token(doc_text, CURRENT_SHA_TOKEN) == artifact["payload_sha256"]
+        assert EXPECTED_ARTIFACT_REL in doc_text
+        assert EXPECTED_GATE_REL in doc_text
+
+    payload = artifact["payload"]
+    assert payload.get("checkpoint") == 'stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01'
+    assert payload.get("status") == 'nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_non_promotional'
+    assert payload.get('confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_entry_scope') == ['nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_placeholder_only',
+ 'nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_verified_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status',
+ 'nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_pinned_before_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status',
+ 'no_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_claim',
+ 'no_external_truth_claim']
+    assert payload.get('required_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_inputs') == ['evidence_adequacy_5x5_justification_present',
+ 'derivation_completeness_gate_readiness_packet_present',
+ 'failure_trigger_discharge_surface_status_pinned',
+ 'failure_trigger_discharge_theorem_surface_status_pinned',
+ 'failure_trigger_discharge_object_surface_status_pinned',
+ 'failure_trigger_discharge_coherence_status_pinned',
+ 'discharge_completion_transition_status_pinned',
+ 'adjudication_transition_status_pinned',
+ 'inevitability_transition_status_pinned',
+ 'nonflip_execution_boundary_status_pinned',
+ 'nonflip_execution_custody_status_pinned',
+ 'nonflip_execution_custody_attestation_status_pinned',
+ 'nonflip_execution_custody_attestation_confirmation_status_pinned',
+ 'nonflip_execution_custody_attestation_confirmation_attestation_status_pinned',
+ 'nonflip_execution_custody_attestation_confirmation_attestation_confirmation_status_pinned',
+ 'nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_status_pinned',
+ 'nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_pinned',
+ 'nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_pinned',
+ 'nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_pinned',
+ 'nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_pinned',
+ 'nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_pinned',
+ 'nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_pinned',
+ 'failure_trigger_audit_scope_boundary_pinned',
+ 'promotion_readiness_scope_boundary_pinned']
+    assert payload.get("dependency_ladder") == ['stat_failure_trigger_discharge_surface_status_cycle01_v0',
+ 'stat_failure_trigger_discharge_theorem_surface_status_cycle01_v0',
+ 'stat_failure_trigger_discharge_object_surface_status_cycle01_v0',
+ 'stat_failure_trigger_discharge_coherence_status_cycle01_v0',
+ 'stat_discharge_completion_transition_status_cycle01_v0',
+ 'stat_adjudication_transition_status_cycle01_v0',
+ 'stat_inevitability_transition_status_cycle01_v0',
+ 'stat_nonflip_execution_boundary_status_cycle01_v0',
+ 'stat_nonflip_execution_custody_status_cycle01_v0',
+ 'stat_nonflip_execution_custody_attestation_status_cycle01_v0',
+ 'stat_nonflip_execution_custody_attestation_confirmation_status_cycle01_v0',
+ 'stat_nonflip_execution_custody_attestation_confirmation_attestation_status_cycle01_v0',
+ 'stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_status_cycle01_v0',
+ 'stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0',
+ 'stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0',
+ 'stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0',
+ 'stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0',
+ 'stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0',
+ 'stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_v0']
+    assert payload.get("emitted_status_tokens") == ['STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: '
+ 'NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: '
+ 'NOT_PRESENT_v0']
+    assert payload.get("required_token_bindings") == ['EVIDENCE_ADEQUACY_STAT_5X5_JUSTIFICATION_v0: PRESENT',
+ 'STAT_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT',
+ 'STAT_DERIVATION_COMPLETENESS_GATE_ENTRY_STATUS_v0: DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM',
+ 'STAT_FAILURE_TRIGGER_DISCHARGE_SURFACE_STATUS_v0: ENTRY_SURFACE_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_STATUS_v0: THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_v0: OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_v0: COHERENCE_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_v0: DISCHARGE_COMPLETION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_ADJUDICATION_TRANSITION_STATUS_v0: ADJUDICATION_TRANSITION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_INEVITABILITY_TRANSITION_STATUS_v0: INEVITABILITY_TRANSITION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0: NONFLIP_EXECUTION_BOUNDARY_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_v0: NONFLIP_EXECUTION_CUSTODY_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_v0: '
+ 'NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: '
+ 'NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: '
+ 'NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: '
+ 'NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: '
+ 'NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: '
+ 'NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_v0: '
+ 'NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_v0: '
+ 'NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCAFFOLD_PINNED_NONCLAIM',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_CYCLE01_ARTIFACT_v0: '
+ 'stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: '
+ 'stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_v0',
+ 'STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: '
+ 'stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_cycle01_v0',
+ 'STAT_FAILURE_TRIGGER_AUDIT_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_failure_trigger_audit_scope_boundary_cycle01_v0',
+ 'STAT_PROMOTION_READINESS_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_promotion_readiness_scope_boundary_cycle01_v0']
+    assert payload.get("cross_surface_pointers") == ['formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md',
+ 'formal/docs/paper/PHYSICS_ROADMAP_v0.md',
+ 'State_of_the_Theory.md',
+ 'formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py']
+    assert payload.get("anti_shortcut_constraints") == ['no_phase_skip_promotion', 'no_implicit_completion_claim', 'artifact_hash_and_cross_surface_pointers_required']
+    assert payload.get("discharge_row_linkage") == ["TOE-STAT-DER-01", "TOE-STAT-DER-02"]

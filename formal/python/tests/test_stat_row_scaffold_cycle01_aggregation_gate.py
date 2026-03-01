@@ -97,6 +97,75 @@ STAT_FAILURE_TRIGGER_DISCHARGE_THEOREM_SURFACE_SCOPE_BOUNDARY_ARTIFACT_PATH = (
 STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_SCOPE_BOUNDARY_ARTIFACT_PATH = (
     REPO_ROOT / "formal" / "output" / "stat_failure_trigger_discharge_object_surface_scope_boundary_cycle01_v0.json"
 )
+STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "stat_failure_trigger_discharge_object_surface_status_cycle01_v0.json"
+)
+STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "stat_failure_trigger_discharge_coherence_status_cycle01_v0.json"
+)
+STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "stat_discharge_completion_transition_status_cycle01_v0.json"
+)
+STAT_ADJUDICATION_TRANSITION_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "stat_adjudication_transition_status_cycle01_v0.json"
+)
+STAT_INEVITABILITY_TRANSITION_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "stat_inevitability_transition_status_cycle01_v0.json"
+)
+STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "stat_nonflip_execution_boundary_status_cycle01_v0.json"
+)
+STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "stat_nonflip_execution_custody_status_cycle01_v0.json"
+)
+STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "stat_nonflip_execution_custody_attestation_status_cycle01_v0.json"
+)
+STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT / "formal" / "output" / "stat_nonflip_execution_custody_attestation_confirmation_status_cycle01_v0.json"
+)
+STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "stat_nonflip_execution_custody_attestation_confirmation_attestation_status_cycle01_v0.json"
+)
+STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json"
+)
+STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json"
+)
+STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json"
+)
+STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json"
+)
+STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json"
+)
+STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_ARTIFACT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json"
+)
 STAT_DISCHARGE_COMPLETION_TRANSITION_SCOPE_BOUNDARY_ARTIFACT_PATH = (
     REPO_ROOT / "formal" / "output" / "stat_discharge_completion_transition_scope_boundary_cycle01_v0.json"
 )
@@ -2757,6 +2826,189 @@ def test_stat_row_scaffold_cycle01_aggregation_gate() -> None:
         "STAT row-scaffold aggregation phase admits exactly one STAT failure-trigger discharge object-surface scope-boundary payload at this stage: "
         f"{[str(p.relative_to(REPO_ROOT)) for p in stat_failure_trigger_discharge_object_surface_scope_boundary_payloads]}"
     )
+    stat_failure_trigger_discharge_object_surface_status_payloads = sorted(
+        REPO_ROOT.glob("formal/output/stat_failure_trigger_discharge_object_surface_status_cycle01_v0.json")
+    )
+    assert stat_failure_trigger_discharge_object_surface_status_payloads == [
+        STAT_FAILURE_TRIGGER_DISCHARGE_OBJECT_SURFACE_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT failure-trigger discharge object-surface status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_failure_trigger_discharge_object_surface_status_payloads]}"
+    )
+    stat_failure_trigger_discharge_coherence_status_payloads = sorted(
+        REPO_ROOT.glob("formal/output/stat_failure_trigger_discharge_coherence_status_cycle01_v0.json")
+    )
+    assert stat_failure_trigger_discharge_coherence_status_payloads == [
+        STAT_FAILURE_TRIGGER_DISCHARGE_COHERENCE_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT failure-trigger discharge coherence-status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_failure_trigger_discharge_coherence_status_payloads]}"
+    )
+    stat_discharge_completion_transition_status_payloads = sorted(
+        REPO_ROOT.glob("formal/output/stat_discharge_completion_transition_status_cycle01_v0.json")
+    )
+    assert stat_discharge_completion_transition_status_payloads == [
+        STAT_DISCHARGE_COMPLETION_TRANSITION_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT discharge-completion transition-status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_discharge_completion_transition_status_payloads]}"
+    )
+    stat_adjudication_transition_status_payloads = sorted(
+        REPO_ROOT.glob("formal/output/stat_adjudication_transition_status_cycle01_v0.json")
+    )
+    assert stat_adjudication_transition_status_payloads == [
+        STAT_ADJUDICATION_TRANSITION_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT adjudication-transition status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_adjudication_transition_status_payloads]}"
+    )
+    stat_inevitability_transition_status_payloads = sorted(
+        REPO_ROOT.glob("formal/output/stat_inevitability_transition_status_cycle01_v0.json")
+    )
+    assert stat_inevitability_transition_status_payloads == [
+        STAT_INEVITABILITY_TRANSITION_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT inevitability-transition status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_inevitability_transition_status_payloads]}"
+    )
+    stat_nonflip_execution_boundary_status_payloads = sorted(
+        REPO_ROOT.glob("formal/output/stat_nonflip_execution_boundary_status_cycle01_v0.json")
+    )
+    assert stat_nonflip_execution_boundary_status_payloads == [
+        STAT_NONFLIP_EXECUTION_BOUNDARY_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT nonflip-execution-boundary status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_boundary_status_payloads]}"
+    )
+    stat_nonflip_execution_custody_status_payloads = sorted(
+        REPO_ROOT.glob("formal/output/stat_nonflip_execution_custody_status_cycle01_v0.json")
+    )
+    assert stat_nonflip_execution_custody_status_payloads == [
+        STAT_NONFLIP_EXECUTION_CUSTODY_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT nonflip-execution-custody status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_status_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_status_payloads = sorted(
+        REPO_ROOT.glob("formal/output/stat_nonflip_execution_custody_attestation_status_cycle01_v0.json")
+    )
+    assert stat_nonflip_execution_custody_attestation_status_payloads == [
+        STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT nonflip-execution-custody-attestation status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_status_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_confirmation_status_payloads = sorted(
+        REPO_ROOT.glob("formal/output/stat_nonflip_execution_custody_attestation_confirmation_status_cycle01_v0.json")
+    )
+    assert stat_nonflip_execution_custody_attestation_confirmation_status_payloads == [
+        STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT nonflip-execution-custody-attestation-confirmation status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_status_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_confirmation_attestation_status_payloads = sorted(
+        REPO_ROOT.glob(
+            "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_status_cycle01_v0.json"
+        )
+    )
+    assert stat_nonflip_execution_custody_attestation_confirmation_attestation_status_payloads == [
+        STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT nonflip-execution-custody-attestation-confirmation-attestation status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_attestation_status_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_status_payloads = sorted(
+        REPO_ROOT.glob(
+            "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json"
+        )
+    )
+    assert stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_status_payloads == [
+        STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT nonflip-execution-custody-attestation-confirmation-attestation-confirmation status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_status_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_status_payloads = sorted(
+        REPO_ROOT.glob(
+            "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json"
+        )
+    )
+    assert stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_status_payloads == [
+        STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_status_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_payloads = sorted(
+        REPO_ROOT.glob(
+            "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json"
+        )
+    )
+    assert stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_payloads == [
+        STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_payloads = sorted(
+        REPO_ROOT.glob(
+            "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json"
+        )
+    )
+    assert stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_payloads == [
+        STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_payloads = sorted(
+        REPO_ROOT.glob(
+            "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json"
+        )
+    )
+    assert stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_payloads == [
+        STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_payloads = sorted(
+        REPO_ROOT.glob(
+            "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json"
+        )
+    )
+    assert stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_payloads == [
+        STAT_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_STATUS_ARTIFACT_PATH
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_payloads = sorted(
+        REPO_ROOT.glob(
+            "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json"
+        )
+    )
+    assert stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_payloads == [
+        REPO_ROOT / "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_v0.json"
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_payloads = (
+        sorted(
+            REPO_ROOT.glob(
+                "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json"
+            )
+        )
+    )
+    assert stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_payloads == [
+        REPO_ROOT
+        / "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json"
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_payloads]}"
+    )
     stat_discharge_completion_transition_scope_boundary_payloads = sorted(
         REPO_ROOT.glob("formal/output/stat_discharge_completion_transition_scope_boundary_cycle01_v0.json")
     )
@@ -2904,6 +3156,32 @@ def test_stat_row_scaffold_cycle01_aggregation_gate() -> None:
     ], (
         "STAT row-scaffold aggregation phase admits exactly one STAT nonflip execution custody attestation confirmation attestation confirmation attestation confirmation attestation confirmation attestation scope-boundary payload at this stage: "
         f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_payloads = (
+        sorted(
+            REPO_ROOT.glob(
+                "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_v0.json"
+            )
+        )
+    )
+    assert stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_payloads == [
+        REPO_ROOT / "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_v0.json"
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation scope-boundary payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_payloads]}"
+    )
+    stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_payloads = (
+        sorted(
+            REPO_ROOT.glob(
+                "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_cycle01_v0.json"
+            )
+        )
+    )
+    assert stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_payloads == [
+        REPO_ROOT / "formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_cycle01_v0.json"
+    ], (
+        "STAT row-scaffold aggregation phase admits exactly one STAT attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation scope-boundary payload at this stage: "
+        f"{[str(p.relative_to(REPO_ROOT)) for p in stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_payloads]}"
     )
 
     for glob_pattern in DISALLOWED_OUTPUT_GLOBS:

@@ -50,10 +50,40 @@ Fail conditions:
 Pass evidence:
 - Structural object list and closure definition lines remain present and unambiguous.
 - `formal/python/tests/test_stat_authority_token_preset_lock_gate.py` passes.
+- Phase-advancement handoff pins remain synchronized across:
+  - `formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md`
+  - `formal/docs/paper/PHYSICS_ROADMAP_v0.md`
+  - `State_of_the_Theory.md`
+  - `formal/docs/release/PILLAR_STAT_PHASE_ADVANCEMENT_CONTRACT_v0.md`
+  - `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`
+- Current handoff evidence is certified by:
+  - `formal/python/tests/test_stat_failure_trigger_discharge_object_surface_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_failure_trigger_discharge_coherence_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_discharge_completion_transition_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_adjudication_transition_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_inevitability_transition_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_boundary_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_scope_boundary_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_scope_boundary_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py`
+  - `formal/python/tests/test_stat_unlock_prerequisite_integrity_gate.py`
+  - `formal/python/tests/test_pillar_phase_advancement_gate.py`
 
 Fail conditions:
 - Missing required structural object definition.
 - Scope drift into unbounded or claim-level semantics.
+- Any drift between the pinned nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status token and the post-saturation scaffold reopen token handoff.
 
 ### Gate C — unlock transition wiring (must be completed in one change set)
 1. Update roadmap pillar table row: `PILLAR-STAT` status `LOCKED` -> `ACTIVE`.
@@ -124,6 +154,29 @@ Fail conditions:
 
 Unlock authorization rule:
 - Emit `GO` only when all four checks are `PASS` and no bounded-scope violations are present.
+
+## Post-Activation Closure-Prep Handoff (ACTIVE posture only)
+
+Purpose:
+- Separate the current `ACTIVE` pre-discharge lane from the future `ACTIVE -> CLOSED` transition.
+- Pin the exact closure-prep control surfaces without authorizing closure by itself.
+
+Current closure-prep posture (must remain true until fully earned closure criteria are satisfied):
+- `PILLAR-STAT_PHYSICS_STATUS: OPEN_v0_ACTIVE_PREEXECUTION`
+- `PILLAR-STAT_GOVERNANCE_STATUS: OPEN_v0_REQUIRED_ROWS_POLICY_PLACEHOLDERS`
+- `PROCEED_GATE_STAT: BLOCKED_v0_PHYSICS_NOT_CLOSED`
+- `MATRIX_CLOSURE_GATE_STAT: BLOCKED_v0_GOVERNANCE_NOT_CLOSED`
+- `REQUIRED_STAT_CLOSURE_ROWS: TOE-STAT-DER-01,TOE-STAT-DER-02`
+
+Closure-prep control surfaces:
+- `formal/docs/release/PILLAR_STAT_CLOSURE_PREP_CHECKLIST_v0.md`
+- `formal/docs/release/PILLAR_STAT_CLOSURE_CHANGESET_TEMPLATE_v0.md`
+- `formal/python/tests/test_stat_dual_closure_posture_gate.py`
+- `formal/python/tests/test_stat_closure_changeset_template_structure_gate.py`
+
+Boundary note:
+- This handoff does not authorize `ACTIVE -> CLOSED`.
+- Full closure still requires discharged adjudication tokens, non-placeholder required STAT closure rows, and matrix/roadmap synchronization in one bounded change set.
 
 ## Activation Execution Attestation (2026-02-26)
 
