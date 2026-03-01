@@ -97,6 +97,71 @@
       "lean_paths": [
         "formal/toe_formal/ToeFormal/EM/U1/ObjectScaffold.lean"
       ]
+    },
+    {
+      "pillar_key": "SR",
+      "pillar_name": "PILLAR-SR",
+      "roadmap_row_id": "PILLAR-SR",
+      "discharge_target_id": "TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN",
+      "discharge_doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "umbrella_target_doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "discharge_adjudication_token": "PILLAR_SR_FULL_DERIVATION_DISCHARGE_ADJUDICATION",
+      "state_checkpoint_header": "SR full-derivation enforcement roadmap checkpoint (2026-02-16):",
+      "required_results_rows": [
+        "TOE-SR-THM-01"
+      ],
+      "required_theorem_surfaces": [
+        "sr_inevitability_structural_classification_of_constructive_route_v0",
+        "sr_inevitability_discharge_ready_bundle_v0",
+        "sr_inevitability_physics_substance_dependency_bundle_v0"
+      ],
+      "lean_paths": [
+        "formal/toe_formal/ToeFormal/SR/CovarianceObjectDischargeStub.lean"
+      ]
+    },
+    {
+      "pillar_key": "STAT",
+      "pillar_name": "PILLAR-STAT",
+      "roadmap_row_id": "PILLAR-STAT",
+      "discharge_target_id": "TARGET-TH-ENTROPY-PLAN",
+      "discharge_doc_path": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "umbrella_target_doc_path": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "discharge_adjudication_token": "PILLAR_STAT_FULL_DERIVATION_DISCHARGE_ADJUDICATION",
+      "state_checkpoint_header": "Pillar-STAT full-derivation discharge lane checkpoint",
+      "required_results_rows": [
+        "TOE-STAT-DER-01",
+        "TOE-STAT-DER-02"
+      ],
+      "required_theorem_surfaces": [
+        "differenceQuotientRep32_cubic_deviation_expand",
+        "ActionRep32FiniteDifferenceRepresentsP_of_cubic",
+        "ActionRep32FiniteDifferenceDeviationFromP_of_cubic_totalDeviationAtStep"
+      ],
+      "lean_paths": [
+        "formal/toe_formal/ToeFormal/Variational/ActionRep32QuadraticCubic.lean"
+      ]
+    },
+    {
+      "pillar_key": "QFT",
+      "pillar_name": "PILLAR-QFT",
+      "roadmap_row_id": "PILLAR-QFT",
+      "discharge_target_id": "TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0",
+      "discharge_doc_path": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "umbrella_target_doc_path": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "discharge_adjudication_token": "PILLAR_QFT_FULL_DERIVATION_DISCHARGE_ADJUDICATION",
+      "state_checkpoint_header": "Pillar-QFT full-derivation discharge lane checkpoint (2026-02-20):",
+      "required_results_rows": [
+        "TOE-QFT-PLAN-01",
+        "TOE-QFT-PLAN-02"
+      ],
+      "required_theorem_surfaces": [
+        "qft_evol_generator_unitarity_from_reflective_canonical_momentum_route_v0",
+        "qft_evol_generator_unitarity_via_hamiltonian_reflective_canonical_momentum_route_v0",
+        "qft_evol_generator_unitarity_route_coherence_v0"
+      ],
+      "lean_paths": [
+        "formal/toe_formal/ToeFormal/QFT/Evolution/ObjectScaffold.lean"
+      ]
     }
   ]
 }

@@ -32,6 +32,12 @@ Authority token preset (pre-activation, non-authoritative naming freeze):
 - These tokens are pre-pinned here to eliminate naming decisions before activation.
 - While `PILLAR-STAT` is `LOCKED`, do not mirror these token definitions into `PHYSICS_ROADMAP_v0.md`, `State_of_the_Theory.md`, or `PILLAR_STATUS_MATRIX_v1.json`.
 
+Registry theorem surfaces (generic full-discharge mechanics lane binding):
+- `differenceQuotientRep32_cubic_deviation_expand`
+- `ActionRep32FiniteDifferenceRepresentsP_of_cubic`
+- `ActionRep32FiniteDifferenceDeviationFromP_of_cubic_totalDeviationAtStep`
+- These theorem-surface tokens are pinned as registry-coupled discharge prerequisites and do not by themselves authorize any closure-state promotion.
+
 Minimum structural objects required:
 - entropy / entropy-production object surface.
 - flux / balance law object surface.
