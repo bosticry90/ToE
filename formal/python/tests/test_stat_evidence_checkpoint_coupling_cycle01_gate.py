@@ -59,7 +59,7 @@ def test_stat_evidence_checkpoint_coupling_cycle01_gate() -> None:
     )
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for active-cycle checkpoint coupling gate."
-    assert stat_matrix.get("matrix_status") == "ACTIVE", "PILLAR-STAT matrix row must be `ACTIVE`."
+    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
 
     assert ARTIFACT_PATH.exists(), "STAT evidence checkpoint cycle-01 artifact is missing."
     artifact_json = json.loads(ARTIFACT_PATH.read_text(encoding="utf-8"))

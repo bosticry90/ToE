@@ -90,7 +90,7 @@ def test_stat_der01_discharge_scaffold_coupling_cycle01_gate() -> None:
     )
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for DER01 discharge scaffold gate."
-    assert stat_matrix.get("matrix_status") == "ACTIVE", "PILLAR-STAT matrix row must be `ACTIVE`."
+    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
 
     assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
     assert artifact_json.get("artifact_version") == "v0"

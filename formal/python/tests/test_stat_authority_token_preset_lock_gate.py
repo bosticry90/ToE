@@ -47,23 +47,27 @@ def test_stat_authority_token_preset_lock_gate() -> None:
     matrix = _read_json(MATRIX_PATH)
 
     stat_locked = "| `PILLAR-STAT` | `LOCKED` |" in roadmap_text
+    stat_active = "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text
+    stat_closed = "| `PILLAR-STAT` | `CLOSED` |" in roadmap_text
     if stat_locked:
         assert "PILLAR-STAT" not in matrix.get("pillars", {}), (
             "STAT authority tokens must remain preset-only until `PILLAR-STAT` is explicitly registered in the matrix at activation."
         )
     else:
-        assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
-            "STAT authority token preset gate expects either the historical LOCKED posture or the canonical ACTIVE posture."
+        assert stat_active or stat_closed, (
+            "STAT authority token preset gate expects LOCKED, ACTIVE, or CLOSED posture."
         )
         stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
-        assert isinstance(stat_matrix, dict), "ACTIVE STAT posture must be present in the pillar status matrix."
-        assert stat_matrix.get("matrix_status") == "ACTIVE", "PILLAR-STAT matrix status must be ACTIVE after activation."
+        assert isinstance(stat_matrix, dict), "ACTIVE/CLOSED STAT posture must be present in the pillar status matrix."
+        matrix_status = stat_matrix.get("matrix_status")
+        assert matrix_status in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix status must be ACTIVE or CLOSED."
+        if stat_active:
+            assert matrix_status == "ACTIVE", "PILLAR-STAT matrix status must mirror ACTIVE roadmap posture."
+        if stat_closed:
+            assert matrix_status == "CLOSED", "PILLAR-STAT matrix status must mirror CLOSED roadmap posture."
 
     for token_name in (FULL_TOKEN, INEV_TOKEN):
         stat_values = _extract_token_values(stat_plan_text, token_name)
-        assert stat_values == [PLACEHOLDER_VALUE], (
-            f"{token_name} must be defined exactly once in STAT plan with `{PLACEHOLDER_VALUE}`."
-        )
 
         assert token_name in template_text, f"Activation changeset template must pin token name `{token_name}`."
         assert _extract_token_values(template_text, token_name) == [], (
@@ -71,18 +75,36 @@ def test_stat_authority_token_preset_lock_gate() -> None:
         )
 
         if stat_locked:
+            assert stat_values == [PLACEHOLDER_VALUE], (
+                f"{token_name} must be defined exactly once in STAT plan with `{PLACEHOLDER_VALUE}`."
+            )
             assert token_name not in roadmap_text, (
                 f"{token_name} must not be mirrored into roadmap while `PILLAR-STAT` is still LOCKED."
             )
             assert token_name not in state_text, (
                 f"{token_name} must not be mirrored into State_of_the_Theory while `PILLAR-STAT` is still LOCKED."
             )
-        else:
+        elif stat_active:
+            assert stat_values == [PLACEHOLDER_VALUE], (
+                f"{token_name} must be defined exactly once in STAT plan with `{PLACEHOLDER_VALUE}` in ACTIVE posture."
+            )
             assert _extract_token_values(roadmap_text, token_name) == [PLACEHOLDER_VALUE], (
                 f"{token_name} must be mirrored into roadmap with the canonical placeholder value after activation."
             )
             assert _extract_token_values(state_text, token_name) == [PLACEHOLDER_VALUE], (
                 f"{token_name} must be mirrored into State_of_the_Theory with the canonical placeholder value after activation."
+            )
+        else:
+            assert len(stat_values) == 1 and stat_values[0].startswith("DISCHARGED"), (
+                f"{token_name} must be defined once in STAT plan with a DISCHARGED* value in CLOSED posture."
+            )
+            roadmap_values = _extract_token_values(roadmap_text, token_name)
+            state_values = _extract_token_values(state_text, token_name)
+            assert len(roadmap_values) == 1 and roadmap_values[0].startswith("DISCHARGED"), (
+                f"{token_name} must be mirrored into roadmap with a DISCHARGED* value in CLOSED posture."
+            )
+            assert len(state_values) == 1 and state_values[0].startswith("DISCHARGED"), (
+                f"{token_name} must be mirrored into State_of_the_Theory with a DISCHARGED* value in CLOSED posture."
             )
 
     assert f"`{PLACEHOLDER_VALUE}`" in template_text, "Activation template must pin the exact placeholder value."

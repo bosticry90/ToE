@@ -518,7 +518,7 @@ def test_stat_row_scaffold_cycle01_aggregation_gate() -> None:
     )
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for row-scaffold aggregation gate."
-    assert stat_matrix.get("matrix_status") == "ACTIVE", "PILLAR-STAT matrix row must be `ACTIVE`."
+    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
 
     for gate_rel in STAT_ROW_SCAFFOLD_COMPONENT_GATES:
         gate_path = REPO_ROOT / gate_rel

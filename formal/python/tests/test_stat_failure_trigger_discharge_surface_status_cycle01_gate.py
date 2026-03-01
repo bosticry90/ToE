@@ -64,7 +64,7 @@ def test_stat_failure_trigger_discharge_surface_status_cycle01_gate() -> None:
     assert isinstance(stat_matrix, dict), (
         "PILLAR-STAT matrix row must exist for failure-trigger discharge surface-status gate."
     )
-    assert stat_matrix.get("matrix_status") == "ACTIVE", "PILLAR-STAT matrix row must be `ACTIVE`."
+    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
 
     assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
     assert artifact_json.get("artifact_version") == "v0"

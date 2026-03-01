@@ -90,7 +90,7 @@ def test_stat_nonflip_execution_custody_attestation_confirmation_attestation_con
     assert isinstance(stat_matrix, dict), (
         "PILLAR-STAT matrix row must exist for nonflip-execution-custody-attestation-confirmation-attestation-confirmation-attestation-confirmation status gate."
     )
-    assert stat_matrix.get("matrix_status") == "ACTIVE", "PILLAR-STAT matrix row must be `ACTIVE`."
+    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
 
     assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
     assert artifact_json.get("artifact_version") == "v0"

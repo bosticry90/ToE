@@ -71,7 +71,7 @@ def test_test_stat_nonflip_execution_custody_attestation_confirmation_attestatio
     assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict)
-    assert stat_matrix.get("matrix_status") == "ACTIVE"
+    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}
 
     assert artifact.get("artifact_id") == CURRENT_ARTIFACT_ID
     assert artifact.get("artifact_version") == "v0"

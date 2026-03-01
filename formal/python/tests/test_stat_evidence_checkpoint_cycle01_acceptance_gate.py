@@ -101,7 +101,7 @@ def test_stat_evidence_checkpoint_cycle01_acceptance_gate() -> None:
     )
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for STAT cycle01 acceptance gate."
-    assert stat_matrix.get("matrix_status") == "ACTIVE", "PILLAR-STAT matrix row must be `ACTIVE`."
+    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
 
     stat_gate_token = _extract_token(stat_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_ACCEPTANCE_GATE_v0")
     state_gate_token = _extract_token(state_text, "STAT_EVIDENCE_CHECKPOINT_CYCLE01_ACCEPTANCE_GATE_v0")

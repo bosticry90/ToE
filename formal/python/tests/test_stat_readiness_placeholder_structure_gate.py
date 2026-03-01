@@ -55,9 +55,10 @@ def test_stat_readiness_placeholder_structure_gate() -> None:
     roadmap_text = _read(ROADMAP_PATH)
 
     stat_locked = "| `PILLAR-STAT` | `LOCKED` |" in roadmap_text
+    stat_closed = "| `PILLAR-STAT` | `CLOSED` |" in roadmap_text
     if not stat_locked:
-        assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
-            "STAT placeholder structure gate expects either the historical LOCKED posture or the canonical ACTIVE posture."
+        assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text or stat_closed, (
+            "STAT placeholder structure gate expects LOCKED, ACTIVE, or CLOSED posture."
         )
 
     # Reserved STAT closure rows must exist in both the STAT plan and results table before activation.
@@ -70,7 +71,10 @@ def test_stat_readiness_placeholder_structure_gate() -> None:
         statement = cols[2]
         evidence_pointer = cols[3]
 
-        assert claim_label == "B-BLOCKED", f"`{row_id}` must remain `B-BLOCKED` during readiness."
+        if stat_locked or "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text:
+            assert claim_label.startswith("B-"), f"`{row_id}` must remain `B-*` during ACTIVE readiness posture."
+        else:
+            assert not claim_label.startswith("B-"), f"`{row_id}` must be non-`B-*` during CLOSED discharge posture."
         assert "TARGET-TH-ENTROPY-PLAN" in statement, f"`{row_id}` must remain bound to STAT target."
         assert "DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md" in evidence_pointer, (
             f"`{row_id}` must point to the STAT readiness plan document."

@@ -45,6 +45,12 @@ def _extract_token(text: str, token_name: str) -> str:
     return m.group(1)
 
 
+def _extract_checklist_token(text: str, token_name: str) -> str:
+    m = re.search(rf"`{re.escape(token_name)}:\s*([A-Za-z0-9_,-]+)`", text)
+    assert m is not None, f"Missing checklist token mirror `{token_name}`."
+    return m.group(1)
+
+
 def _results_status(text: str, row_id: str) -> str:
     m = re.search(rf"^\|\s*{re.escape(row_id)}\s*\|\s*`([^`]+)`\s*\|", text, flags=re.MULTILINE)
     assert m is not None, f"Missing result row `{row_id}`."
@@ -56,27 +62,63 @@ def test_stat_dual_closure_tokens_are_mirrored_across_canonical_surfaces() -> No
     state_text = _read(STATE_PATH)
     checklist_text = _read(CHECKLIST_PATH)
 
-    for token_name, expected in EXPECTED_TOKENS.items():
-        assert _extract_token(roadmap_text, token_name) == expected
-        assert _extract_token(state_text, token_name) == expected
-        assert f"`{token_name}: {expected}`" in checklist_text
+    for token_name in EXPECTED_TOKENS:
+        roadmap_value = _extract_token(roadmap_text, token_name)
+        state_value = _extract_token(state_text, token_name)
+        checklist_value = _extract_checklist_token(checklist_text, token_name)
+        assert roadmap_value == state_value, f"{token_name} must be mirrored between roadmap and state."
+        assert roadmap_value == checklist_value, f"{token_name} must be mirrored between roadmap and checklist."
 
 
-def test_stat_closure_prep_posture_matches_active_matrix_state() -> None:
+def test_stat_dual_closure_posture_matches_matrix_and_gate_tokens() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     matrix = _read_json(MATRIX_PATH)
+    results_text = _read(RESULTS_PATH)
 
     row_match = re.search(r"^\|\s*`PILLAR-STAT`\s*\|\s*`([^`]+)`\s*\|", roadmap_text, flags=re.MULTILINE)
     assert row_match is not None, "Missing roadmap row for PILLAR-STAT."
-    assert row_match.group(1) == "ACTIVE", "PILLAR-STAT roadmap row must remain ACTIVE during closure prep."
+    roadmap_status = row_match.group(1)
+    assert roadmap_status in {"ACTIVE", "CLOSED"}, "PILLAR-STAT roadmap row must be ACTIVE or CLOSED."
 
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist."
-    assert stat_matrix.get("matrix_status") == "ACTIVE", (
-        "PILLAR-STAT matrix status must remain ACTIVE during closure prep."
-    )
-    assert stat_matrix.get("full_derivation") == "NOT_YET_DISCHARGED"
-    assert stat_matrix.get("inevitability") == "NOT_YET_DISCHARGED"
+    matrix_status = stat_matrix.get("matrix_status")
+    assert matrix_status in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix status must be ACTIVE or CLOSED."
+    assert roadmap_status == matrix_status, "Roadmap and matrix status must mirror for PILLAR-STAT."
+
+    full_derivation = str(stat_matrix.get("full_derivation", ""))
+    inevitability = str(stat_matrix.get("inevitability", ""))
+    physics_status = _extract_token(roadmap_text, "PILLAR-STAT_PHYSICS_STATUS")
+    governance_status = _extract_token(roadmap_text, "PILLAR-STAT_GOVERNANCE_STATUS")
+    proceed_gate = _extract_token(roadmap_text, "PROCEED_GATE_STAT")
+    matrix_gate = _extract_token(roadmap_text, "MATRIX_CLOSURE_GATE_STAT")
+    rows = [row.strip() for row in _extract_token(roadmap_text, "REQUIRED_STAT_CLOSURE_ROWS").split(",") if row.strip()]
+
+    for row_id in rows:
+        status = _results_status(results_text, row_id)
+        if matrix_status == "ACTIVE":
+            assert status.startswith("B-"), (
+                f"STAT pre-discharge row `{row_id}` must remain B-* blocked before closure; found `{status}`."
+            )
+        else:
+            assert not status.startswith("B-"), (
+                f"STAT discharged row `{row_id}` must be non-B-* after closure; found `{status}`."
+            )
+
+    if matrix_status == "ACTIVE":
+        assert full_derivation == "NOT_YET_DISCHARGED"
+        assert inevitability == "NOT_YET_DISCHARGED"
+        assert physics_status.startswith("OPEN_")
+        assert governance_status.startswith("OPEN_")
+        assert proceed_gate.startswith("BLOCKED_")
+        assert matrix_gate.startswith("BLOCKED_")
+    else:
+        assert full_derivation.startswith("DISCHARGED")
+        assert inevitability.startswith("DISCHARGED")
+        assert physics_status.startswith("CLOSED_")
+        assert governance_status.startswith("CLOSED_")
+        assert proceed_gate.startswith("ALLOWED_")
+        assert matrix_gate.startswith("ALLOWED_")
 
 
 def test_stat_required_closure_rows_remain_blocked_execution_rows() -> None:
@@ -86,22 +128,44 @@ def test_stat_required_closure_rows_remain_blocked_execution_rows() -> None:
     rows = [row.strip() for row in _extract_token(roadmap_text, "REQUIRED_STAT_CLOSURE_ROWS").split(",") if row.strip()]
     assert rows == ["TOE-STAT-DER-01", "TOE-STAT-DER-02"]
 
+    matrix = _read_json(MATRIX_PATH)
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist."
+    matrix_status = stat_matrix.get("matrix_status")
+    assert matrix_status in {"ACTIVE", "CLOSED"}
+
     for row_id in rows:
         status = _results_status(results_text, row_id)
-        assert status.startswith("B-"), (
-            f"STAT closure-prep row `{row_id}` must remain B-* blocked before full closure; found `{status}`."
-        )
+        if matrix_status == "ACTIVE":
+            assert status.startswith("B-"), (
+                f"STAT closure-prep row `{row_id}` must remain B-* blocked before full closure; found `{status}`."
+            )
+        else:
+            assert not status.startswith("B-"), (
+                f"STAT discharged row `{row_id}` must be non-B-* after closure; found `{status}`."
+            )
 
 
 def test_stat_blocked_closure_gates_remain_consistent_with_open_statuses() -> None:
     roadmap_text = _read(ROADMAP_PATH)
+    matrix = _read_json(MATRIX_PATH)
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist."
+    matrix_status = stat_matrix.get("matrix_status")
+    assert matrix_status in {"ACTIVE", "CLOSED"}
 
     physics_status = _extract_token(roadmap_text, "PILLAR-STAT_PHYSICS_STATUS")
     governance_status = _extract_token(roadmap_text, "PILLAR-STAT_GOVERNANCE_STATUS")
     proceed_gate = _extract_token(roadmap_text, "PROCEED_GATE_STAT")
     matrix_gate = _extract_token(roadmap_text, "MATRIX_CLOSURE_GATE_STAT")
 
-    assert physics_status.startswith("OPEN_")
-    assert governance_status.startswith("OPEN_")
-    assert proceed_gate.startswith("BLOCKED_")
-    assert matrix_gate.startswith("BLOCKED_")
+    if matrix_status == "ACTIVE":
+        assert physics_status.startswith("OPEN_")
+        assert governance_status.startswith("OPEN_")
+        assert proceed_gate.startswith("BLOCKED_")
+        assert matrix_gate.startswith("BLOCKED_")
+    else:
+        assert physics_status.startswith("CLOSED_")
+        assert governance_status.startswith("CLOSED_")
+        assert proceed_gate.startswith("ALLOWED_")
+        assert matrix_gate.startswith("ALLOWED_")

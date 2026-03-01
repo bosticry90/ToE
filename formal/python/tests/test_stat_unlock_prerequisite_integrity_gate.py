@@ -91,8 +91,8 @@ def test_stat_unlock_prerequisite_integrity_gate() -> None:
 
     stat_row = _pillar_table_row(roadmap_text, "PILLAR-STAT")
     stat_status = _extract_status_from_row(stat_row)
-    assert stat_status in {"LOCKED", "ACTIVE"}, (
-        "PILLAR-STAT prerequisite integrity gate expects either the historical LOCKED posture or the canonical ACTIVE posture."
+    assert stat_status in {"LOCKED", "ACTIVE", "CLOSED"}, (
+        "PILLAR-STAT prerequisite integrity gate expects LOCKED, ACTIVE, or CLOSED posture."
     )
     assert "`TARGET-TH-ENTROPY-PLAN`" in stat_row
     assert "`TARGET-GR01-DERIV-CHECKLIST-PLAN`" in stat_row
@@ -100,7 +100,12 @@ def test_stat_unlock_prerequisite_integrity_gate() -> None:
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     if stat_status == "ACTIVE":
         assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist after activation."
-        assert stat_matrix.get("matrix_status") == "ACTIVE", "PILLAR-STAT matrix status must be ACTIVE after activation."
+        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix status must be ACTIVE or CLOSED."
+        assert stat_matrix.get("matrix_status") == stat_status, "PILLAR-STAT matrix status must mirror roadmap posture."
+    elif stat_status == "CLOSED":
+        assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist in CLOSED posture."
+        assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix status must be ACTIVE or CLOSED."
+        assert stat_matrix.get("matrix_status") == stat_status, "PILLAR-STAT matrix status must mirror roadmap posture."
 
     assert "`TOE-STAT-*` -> `TARGET-TH-ENTROPY-PLAN`" in roadmap_text
 

@@ -66,7 +66,7 @@ def test_stat_derivation_completeness_discharge_surface_scope_boundary_cycle01_g
     assert isinstance(stat_matrix, dict), (
         "PILLAR-STAT matrix row must exist for derivation-completeness discharge-surface scope-boundary gate."
     )
-    assert stat_matrix.get("matrix_status") == "ACTIVE", "PILLAR-STAT matrix row must be `ACTIVE`."
+    assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
 
     assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
     assert artifact_json.get("artifact_version") == "v0"
