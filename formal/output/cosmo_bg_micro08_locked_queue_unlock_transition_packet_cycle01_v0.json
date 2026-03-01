@@ -1,0 +1,22 @@
+{
+  "artifact_id": "cosmo_bg_micro08_locked_queue_unlock_transition_packet_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro08_locked_queue_unlock_transition_packet_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "locked_queue_unlock_transition_packet_only_nonclaim_v0",
+    "policy_tokens": [
+      "COSMO_LOCKED_QUEUE_UNLOCK_TRANSITION_PACKET_POLICY_v0: PREAUTHORIZED_CONDITIONS_REQUIRED_NO_STATUS_FLIP",
+      "unlock_transition_packet_policy: PREAUTHORIZED_CONDITIONS_REQUIRED_NO_STATUS_FLIP",
+      "unlock_transition_packet_gate: formal/python/tests/test_cosmo_bg_micro08_locked_queue_unlock_transition_packet_gate.py"
+    ],
+    "required_preauthorized_unlock_conditions": [
+      "PILLAR-COSMO matrix_status: LOCKED",
+      "PILLAR-COSMO roadmap status: LOCKED",
+      "PILLAR-COSMO mode: LOCKED_QUEUE",
+      "NEXT_PILLAR_FOCUS_v0: PILLAR-COSMO",
+      "NEXT_PILLAR_PRIMARY_LANE_v0: TARGET-COSMO-BG-PLAN"
+    ]
+  }
+}

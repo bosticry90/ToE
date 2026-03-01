@@ -64,6 +64,9 @@ def test_cosmo_matrix_row_is_present_and_locked() -> None:
         "state_checkpoint_gate": "formal/python/tests/test_cosmo_state_rollup_checkpoint_gate.py",
         "lane_drift_alarm_gate": "formal/python/tests/test_cosmo_bg_micro07_matrix_lane_drift_alarm_gate.py",
         "lane_transition_policy": "LOCKED_QUEUE_ENFORCED_CROSS_SURFACE",
+        "unlock_transition_packet_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_08_LOCKED_QUEUE_UNLOCK_TRANSITION_PACKET_v0.md",
+        "unlock_transition_packet_gate": "formal/python/tests/test_cosmo_bg_micro08_locked_queue_unlock_transition_packet_gate.py",
+        "unlock_transition_packet_policy": "PREAUTHORIZED_CONDITIONS_REQUIRED_NO_STATUS_FLIP",
         "consistency_gate": "formal/python/tests/test_cosmo_matrix_rollup_crosspin_gate.py",
     }
 
@@ -89,6 +92,8 @@ def test_cosmo_matrix_crosspins_roadmap_state_and_target() -> None:
         cosmo["rollup_package_doc"],
         cosmo["rollup_gate"],
         cosmo["state_checkpoint_gate"],
+        "COSMO_LOCKED_QUEUE_UNLOCK_TRANSITION_PACKET_POLICY_v0: PREAUTHORIZED_CONDITIONS_REQUIRED_NO_STATUS_FLIP",
+        cosmo["unlock_transition_packet_gate"],
     ]
     missing_state = [token for token in state_required if token not in state_text]
     assert not missing_state, "State COSMO matrix cross-pin token drift: " + ", ".join(missing_state)
