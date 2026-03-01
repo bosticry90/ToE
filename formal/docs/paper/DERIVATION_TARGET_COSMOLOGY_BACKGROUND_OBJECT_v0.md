@@ -34,6 +34,12 @@ Cycle-002 micro target lock:
 - `formal/output/cosmo_bg_micro02_expansion_law_surface_cycle01_v0.json`
 - `formal/python/tests/test_cosmo_bg_micro02_expansion_law_surface_gate.py`
 
+Cycle-003 micro target lock:
+- `TARGET-COSMO-BG-MICRO-03-SOURCE-COUPLING-SURFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_03_SOURCE_COUPLING_SURFACE_v0.md`
+- `formal/output/cosmo_bg_micro03_source_coupling_surface_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_bg_micro03_source_coupling_surface_gate.py`
+
 Deliverable surfaces:
 - `COSMO_DELIVERABLE_METRIC_SURFACE_v0: BACKGROUND_METRIC_OBJECT_DECLARED`
 - `COSMO_DELIVERABLE_EXPANSION_SURFACE_v0: HUBBLE_LIKE_OBJECT_DECLARED`
@@ -70,3 +76,4 @@ Governance pointers:
 - COSMO kickoff gate: `formal/python/tests/test_cosmo_background_kickoff_gate.py`
 - COSMO micro-01 gate: `formal/python/tests/test_cosmo_bg_micro01_object_surface_gate.py`
 - COSMO micro-02 gate: `formal/python/tests/test_cosmo_bg_micro02_expansion_law_surface_gate.py`
+- COSMO micro-03 gate: `formal/python/tests/test_cosmo_bg_micro03_source_coupling_surface_gate.py`

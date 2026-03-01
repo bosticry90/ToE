@@ -1,0 +1,22 @@
+{
+  "artifact_id": "cosmo_bg_micro03_source_coupling_surface_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro03_source_coupling_surface_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "source_coupling_surface_only_nonclaim_v0",
+    "source_coupling_tokens": [
+      "COSMO_BG_MICRO03_DENSITY_COUPLING_SURFACE_v0: EFFECTIVE_DENSITY_COUPLING_PLACEHOLDER_PINNED",
+      "COSMO_BG_MICRO03_PRESSURE_COUPLING_SURFACE_v0: EFFECTIVE_PRESSURE_COUPLING_PLACEHOLDER_PINNED",
+      "COSMO_BG_MICRO03_EOS_SURFACE_v0: EQUATION_OF_STATE_PLACEHOLDER_PINNED",
+      "COSMO_BG_MICRO03_REGIME_SURFACE_v0: SOURCE_COUPLING_REGIME_BOUNDARY_PLACEHOLDER_PINNED"
+    ],
+    "anti_shortcut_constraints": [
+      "no_equation_closure_promotion",
+      "no_unbounded_regime_extension",
+      "no_external_truth_claim"
+    ],
+    "generated_on": "2026-03-01"
+  }
+}
