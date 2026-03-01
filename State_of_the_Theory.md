@@ -1864,6 +1864,8 @@ COSMO rollup checkpoint (2026-03-01):
   - `COSMO_PHASE_ADHERENCE_REGISTRY_MODE_v0: LOCKED_QUEUE`
   - `COSMO_PHASE_ADHERENCE_PRIMARY_LANE_v0: TARGET-COSMO-BG-PLAN`
   - `COSMO_PHASE_ADHERENCE_GOVERNANCE_SUITE_v0: INCLUDED`
+  - `formal/docs/release/LOCKED_QUEUE_PHASE_ADHERENCE_STANDARD_v0.md`
+  - `formal/python/tests/test_locked_queue_phase_adherence_standard_gate.py`
   - `formal/python/tests/test_cosmo_phase_adherence_snapshot_gate.py`
 
 QFT evidence diversification checkpoint log (legacy):
