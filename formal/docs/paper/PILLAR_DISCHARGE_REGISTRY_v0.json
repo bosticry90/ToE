@@ -162,6 +162,45 @@
       "lean_paths": [
         "formal/toe_formal/ToeFormal/QFT/Evolution/ObjectScaffold.lean"
       ]
+    },
+    {
+      "pillar_key": "COSMO",
+      "pillar_name": "PILLAR-COSMO",
+      "roadmap_row_id": "PILLAR-COSMO",
+      "discharge_target_id": "TARGET-COSMO-BG-PLAN",
+      "discharge_doc_path": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "umbrella_target_doc_path": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "discharge_adjudication_token": "COSMO_BACKGROUND_ADJUDICATION",
+      "state_checkpoint_header": "Pillar-COSMO full-derivation discharge lane checkpoint",
+      "required_results_rows": [
+        "TOE-COSMO-DER-01",
+        "TOE-COSMO-DER-02"
+      ],
+      "required_theorem_surfaces": [
+        "cosmo_bg_micro01_object_surface_cycle01_v0",
+        "cosmo_bg_micro02_expansion_law_surface_cycle01_v0",
+        "cosmo_bg_micro03_source_coupling_surface_cycle01_v0",
+        "cosmo_bg_micro04_regime_falsifiability_surface_cycle01_v0",
+        "cosmo_bg_micro05_package_freeze_reopen_policy_cycle01_v0",
+        "cosmo_bg_micro06_state_checkpoint_boundary_cycle01_v0",
+        "cosmo_bg_micro07_matrix_lane_drift_alarm_cycle01_v0",
+        "cosmo_bg_micro08_locked_queue_unlock_transition_packet_cycle01_v0",
+        "cosmo_bg_micro09_authorized_unlock_conditions_checklist_packet_cycle01_v0",
+        "cosmo_bg_micro10_lock_transition_dryrun_attestation_packet_cycle01_v0",
+        "cosmo_bg_micro11_dryrun_reconciliation_packet_cycle01_v0",
+        "cosmo_bg_micro12_dryrun_closure_packet_cycle01_v0",
+        "cosmo_bg_micro13_dryrun_custody_packet_cycle01_v0",
+        "cosmo_bg_micro14_dryrun_custody_confirmation_packet_cycle01_v0",
+        "cosmo_bg_micro15_dryrun_custody_confirmation_attestation_packet_cycle01_v0",
+        "cosmo_bg_micro16_dryrun_custody_confirmation_attestation_confirmation_packet_cycle01_v0",
+        "cosmo_bg_micro17_dryrun_custody_confirmation_attestation_confirmation_attestation_packet_cycle01_v0",
+        "cosmo_bg_micro18_dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_packet_cycle01_v0",
+        "cosmo_bg_micro19_dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_attestation_packet_cycle01_v0",
+        "cosmo_bg_micro20_dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_packet_cycle01_v0"
+      ],
+      "lean_paths": [
+        "formal/toe_formal/ToeFormal/Cosmology/BackgroundObjectScaffold.lean"
+      ]
     }
   ]
 }
