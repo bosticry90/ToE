@@ -186,10 +186,10 @@ def test_gr01_der02_promotion_requires_alignment_and_checklist_closure_tokens() 
     if not der02_status.startswith("B-"):
         alignment_text = _read(ALIGNMENT_PATH)
         checklist_text = _read(CHECKLIST_PATH)
-        assert "ALIGNMENT_ADJUDICATION: DISCHARGED_CONDITIONAL_PUBLISH_v0" in alignment_text, (
+        assert "ALIGNMENT_ADJUDICATION: DISCHARGED_v0" in alignment_text, (
             "TOE-GR-DER-02 is non-blocked, but alignment adjudication is not discharged."
         )
-        assert "DER02_CHECKLIST_ADJUDICATION: DISCHARGED_CONDITIONAL_v0" in checklist_text, (
+        assert "DER02_CHECKLIST_ADJUDICATION: DISCHARGED_v0" in checklist_text, (
             "TOE-GR-DER-02 is non-blocked, but DER-02 checklist adjudication token is missing."
         )
 

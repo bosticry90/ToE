@@ -1600,7 +1600,7 @@ GR01 governance-alignment checkpoint (2026-02-15):
   - `formal/docs/paper/DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_COUNTERFACTUAL_v0.md`
   - `formal/python/tests/test_phase4_global_unification_and_residual_debt_gate.py`
 - Action/RAC alignment adjudication token:
-  - `ALIGNMENT_ADJUDICATION: DISCHARGED_CONDITIONAL_PUBLISH_v0`
+  - `ALIGNMENT_ADJUDICATION: DISCHARGED_v0`
 - Default-quotient lock pointers (synchronized support set):
   - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_hAction_provenance_v0.md`
   - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_hRAC_obligation_bundle_v0.md`

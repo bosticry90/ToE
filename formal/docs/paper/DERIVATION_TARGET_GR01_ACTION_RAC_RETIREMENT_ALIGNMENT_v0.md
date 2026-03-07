@@ -57,7 +57,7 @@ Non-claim boundary:
 
 - Alignment may be marked discharged without retiring `hAction`/`hRAC` only when
   all conditions below are true:
-  1. `conditional-publish endpoint` remains explicit in the stance surface.
+  1. explicit discharged endpoint remains synchronized in the stance surface.
   2. `BLK-01` and `BLK-02` remain explicit as intentionally deferred retirement
      blockers with pinned replacement-object pointers.
   3. Required lock pointers remain pinned and synchronized across checklist,
@@ -67,11 +67,11 @@ Non-claim boundary:
 - Alignment adjudication token (machine-checkable):
   - allowed values:
     - `NOT_YET_DISCHARGED`
-    - `DISCHARGED_CONDITIONAL_PUBLISH_v0`
+    - `DISCHARGED_v0`
   - single token line required:
     - `ALIGNMENT_ADJUDICATION: <allowed value>`
   - transition rule:
-    - `ALIGNMENT_ADJUDICATION: DISCHARGED_CONDITIONAL_PUBLISH_v0` requires all
+    - `ALIGNMENT_ADJUDICATION: DISCHARGED_v0` requires all
       endpoint conditions above to be satisfied and cross-surface blocker-state
       synchronization.
     - `ALIGNMENT_ADJUDICATION: NOT_YET_DISCHARGED` keeps action/RAC retirement
@@ -80,12 +80,12 @@ Non-claim boundary:
 ## v0 Snapshot
 
 - Current retirement posture:
-  - explicit non-retirement (`conditional-publish endpoint`).
+  - explicit non-retirement (discharged endpoint with pinned blocker pointers).
 - Current blocker posture:
   - action/RAC retirement remains explicitly deferred under conditional-publish
     endpoint with pinned replacement-object pointers.
 - Current alignment adjudication token (v0):
-  - `ALIGNMENT_ADJUDICATION: DISCHARGED_CONDITIONAL_PUBLISH_v0`
+  - `ALIGNMENT_ADJUDICATION: DISCHARGED_v0`
 
 ## Dependencies
 

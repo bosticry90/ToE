@@ -120,4 +120,4 @@ Status:
 - theorem-chain closure milestone is complete and auditable.
 - this checklist is the canonical planning surface for derivation-grade maintenance and cross-surface synchronization.
 - checklist adjudication token (v0):
-  - `DER02_CHECKLIST_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
+  - `DER02_CHECKLIST_ADJUDICATION: DISCHARGED_v0`

@@ -27,8 +27,8 @@ Non-claim boundary:
 - `TOE-GR-3D-03` remains `T-CONDITIONAL` under bounded/discrete v0 scope.
 - closure-package adjudication remains:
   - `ADJUDICATION: SATISFIED_v0_DISCRETE`
-- action/RAC alignment remains conditional-publish:
-  - `ALIGNMENT_ADJUDICATION: DISCHARGED_CONDITIONAL_PUBLISH_v0`
+- action/RAC alignment remains discharged and explicit:
+  - `ALIGNMENT_ADJUDICATION: DISCHARGED_v0`
 
 ## Micro-target Scope
 

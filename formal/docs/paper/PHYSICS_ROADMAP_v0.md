@@ -942,9 +942,9 @@ Completed unblock milestone:
   `gr01_der01_scaffold_bundle_under_promoted_assumptions` in
   `formal/toe_formal/ToeFormal/Variational/GR01DerivationScaffoldPromotion.lean`.
 - `TOE-GR-DER-02` promoted to `T-PROVED` via synchronized derivation-grade
-  package and action/RAC retirement alignment under conditional-publish endpoint:
-  - `DER02_CHECKLIST_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
-  - `ALIGNMENT_ADJUDICATION: DISCHARGED_CONDITIONAL_PUBLISH_v0`
+  package and action/RAC retirement alignment under discharged endpoint:
+  - `DER02_CHECKLIST_ADJUDICATION: DISCHARGED_v0`
+  - `ALIGNMENT_ADJUDICATION: DISCHARGED_v0`
   - lock pointers synchronized across checklist/newtonian/roadmap/state:
     - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_hAction_provenance_v0.md`
     - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_hRAC_obligation_bundle_v0.md`

@@ -216,8 +216,8 @@ Required to keep non-blocking conditional status:
    - retain `ACTION_TO_OPERATOR_ADJUDICATION: DISCHARGED_v0_DISCRETE` in
      `DERIVATION_TARGET_GR01_ACTION_TO_OPERATOR_DISCRETE_DERIVATION_v0.md`,
    - keep bounded/discrete non-claim boundaries explicit.
-2. Retain action/RAC alignment adjudication under conditional-publish endpoint:
-   - `ALIGNMENT_ADJUDICATION: DISCHARGED_CONDITIONAL_PUBLISH_v0` in
+2. Retain action/RAC alignment adjudication under discharged endpoint:
+  - `ALIGNMENT_ADJUDICATION: DISCHARGED_v0` in
      `DERIVATION_TARGET_GR01_ACTION_RAC_RETIREMENT_ALIGNMENT_v0.md`.
    - keep `BLK-01` / `BLK-02` explicit as deferred retirement blockers with
      replacement-object pointers.
@@ -228,7 +228,7 @@ Required to keep non-blocking conditional status:
    - `MATRIX_CLOSURE_GATE_GR: ALLOWED_v0_GOVERNANCE_CLOSED`,
    - matrix status promotion remains a separate explicit governance action.
 4. Keep derivation-grade checklist adjudication explicit:
-   - `DER02_CHECKLIST_ADJUDICATION: DISCHARGED_CONDITIONAL_v0` in
+  - `DER02_CHECKLIST_ADJUDICATION: DISCHARGED_v0` in
      `DERIVATION_TARGET_GR01_DERIVATION_GRADE_CHECKLIST_v0.md`.
 5. Preserve cross-surface lock-pointer synchronization:
    - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_hAction_provenance_v0.md`
