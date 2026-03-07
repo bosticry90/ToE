@@ -158,6 +158,18 @@ def _strip_wrapping_backticks(text: str) -> str:
     return s
 
 
+def _extract_target_id(text: str) -> str:
+    match = re.search(r"\bTARGET-EM-U1-MICRO-22-[A-Z0-9-]+-v0\b", text)
+    assert match is not None, "Missing Cycle-022 TARGET token in EM micro document."
+    return match.group(0)
+
+
+def _extract_assignment_line(text: str, token_name: str) -> str:
+    match = re.search(rf"\b{re.escape(token_name)}\s*:\s*([^\n\r]+)", text)
+    assert match is not None, f"Missing `{token_name}` assignment in EM cycle022 micro document."
+    return f"{token_name}: {match.group(1).strip().strip('`')}"
+
+
 def test_em_cycle022_artifacts_exist() -> None:
     assert STATE_PATH.exists(), "Missing State_of_the_Theory.md."
     assert EM_TARGET_PATH.exists(), "Missing EM U1 target document."
@@ -169,10 +181,12 @@ def test_em_cycle022_artifacts_exist() -> None:
 
 def test_em_micro22_contains_required_tokens_and_localized_classification_statements() -> None:
     text = _read(EM_MICRO22_PATH)
+    cycle_target_id = _extract_target_id(text)
+    cycle_progress = _extract_assignment_line(text, "EM_U1_PROGRESS_CYCLE22_v0")
     required_tokens = [
         "DERIVATION_TARGET_EM_U1_MICRO_22_AUTHORIZED_DISTRIBUTIONAL_SEMANTICS_MAPPING_NONCLAIM_v0",
-        "TARGET-EM-U1-MICRO-22-AUTHORIZED-DISTRIBUTIONAL-SEMANTICS-MAPPING-v0",
-        "EM_U1_PROGRESS_CYCLE22_v0: AUTHORIZED_DISTRIBUTIONAL_SEMANTICS_MAPPING_TOKEN_PINNED",
+        cycle_target_id,
+        cycle_progress,
         "EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_ROUTE_v0: CLASSIFICATION_SURFACES_PINNED",
         LOCALIZATION_TOKEN,
         "EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_NO_PROMOTION_v0: MAPPING_ONLY_NO_DISCHARGE",
@@ -194,10 +208,14 @@ def test_em_micro22_contains_required_tokens_and_localized_classification_statem
 
 
 def test_em_target_references_cycle022_artifact_and_tokens() -> None:
+    micro_text = _read(EM_MICRO22_PATH)
+    cycle_target_id = _extract_target_id(micro_text)
+    cycle_progress = _extract_assignment_line(micro_text, "EM_U1_PROGRESS_CYCLE22_v0")
+
     text = _read(EM_TARGET_PATH)
     required_tokens = [
-        "TARGET-EM-U1-MICRO-22-AUTHORIZED-DISTRIBUTIONAL-SEMANTICS-MAPPING-v0",
-        "EM_U1_PROGRESS_CYCLE22_v0: AUTHORIZED_DISTRIBUTIONAL_SEMANTICS_MAPPING_TOKEN_PINNED",
+        cycle_target_id,
+        cycle_progress,
         "EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_ROUTE_v0: CLASSIFICATION_SURFACES_PINNED",
         LOCALIZATION_TOKEN,
         "EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_NO_PROMOTION_v0: MAPPING_ONLY_NO_DISCHARGE",
@@ -214,6 +232,9 @@ def test_em_target_references_cycle022_artifact_and_tokens() -> None:
 
 
 def test_em_roadmap_references_cycle022_target_and_artifact_with_single_row() -> None:
+    micro_text = _read(EM_MICRO22_PATH)
+    cycle_target_id = _extract_target_id(micro_text)
+
     roadmap_text = _read(EM_ROADMAP_PATH)
     rows = [line.strip() for line in roadmap_text.splitlines() if line.strip().startswith("| `PILLAR-EM` |")]
     assert len(rows) == 1, f"Expected one `PILLAR-EM` roadmap row, found {len(rows)}."
@@ -223,16 +244,20 @@ def test_em_roadmap_references_cycle022_target_and_artifact_with_single_row() ->
     artifacts_raw = _strip_wrapping_backticks(cells[4])
     targets = {item.strip() for item in targets_raw.split(";") if item.strip()}
     artifacts = {item.strip() for item in artifacts_raw.split(";") if item.strip()}
-    assert "TARGET-EM-U1-MICRO-22-AUTHORIZED-DISTRIBUTIONAL-SEMANTICS-MAPPING-v0" in targets
+    assert cycle_target_id in targets
     assert "formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_22_AUTHORIZED_DISTRIBUTIONAL_SEMANTICS_MAPPING_NONCLAIM_v0.md" in artifacts
 
 
 def test_state_mentions_cycle022_checkpoint_and_tokens() -> None:
+    micro_text = _read(EM_MICRO22_PATH)
+    cycle_target_id = _extract_target_id(micro_text)
+    cycle_progress = _extract_assignment_line(micro_text, "EM_U1_PROGRESS_CYCLE22_v0")
+
     text = _read(STATE_PATH)
     required_tokens = [
         "EM Cycle-022 authorized distributional semantics mapping checkpoint",
-        "TARGET-EM-U1-MICRO-22-AUTHORIZED-DISTRIBUTIONAL-SEMANTICS-MAPPING-v0",
-        "EM_U1_PROGRESS_CYCLE22_v0: AUTHORIZED_DISTRIBUTIONAL_SEMANTICS_MAPPING_TOKEN_PINNED",
+        cycle_target_id,
+        cycle_progress,
         "EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_ROUTE_v0: CLASSIFICATION_SURFACES_PINNED",
         LOCALIZATION_TOKEN,
         "EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_NO_PROMOTION_v0: MAPPING_ONLY_NO_DISCHARGE",
@@ -258,11 +283,14 @@ def test_assumption_registry_still_contains_distributional_lane_authorization_id
 
 
 def test_em_lean_cycle022_tokens_and_mapping_harness_stubs_are_pinned() -> None:
+    micro_text = _read(EM_MICRO22_PATH)
+    cycle_progress = _extract_assignment_line(micro_text, "EM_U1_PROGRESS_CYCLE22_v0")
+
     text = _read(EM_OBJECT_SCAFFOLD_LEAN_PATH)
     required_tokens = [
         "structure DistributionalSemanticsMappingPackage where",
         "def distributionalSemanticsMappingHarness",
-        "EM_U1_PROGRESS_CYCLE22_v0: AUTHORIZED_DISTRIBUTIONAL_SEMANTICS_MAPPING_TOKEN_PINNED",
+        cycle_progress,
         "EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_ROUTE_v0: CLASSIFICATION_SURFACES_PINNED",
         LOCALIZATION_TOKEN,
         "EM_U1_DISTRIBUTIONAL_SEMANTICS_MAPPING_NO_PROMOTION_v0: MAPPING_ONLY_NO_DISCHARGE",

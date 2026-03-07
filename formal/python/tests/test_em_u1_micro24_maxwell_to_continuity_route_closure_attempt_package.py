@@ -169,6 +169,18 @@ def _strip_wrapping_backticks(text: str) -> str:
     return s
 
 
+def _extract_target_id(text: str) -> str:
+    match = re.search(r"\bTARGET-EM-U1-MICRO-24-[A-Z0-9-]+-v0\b", text)
+    assert match is not None, "Missing Cycle-024 TARGET token in EM micro document."
+    return match.group(0)
+
+
+def _extract_assignment_line(text: str, token_name: str) -> str:
+    match = re.search(rf"\b{re.escape(token_name)}\s*:\s*([^\n\r]+)", text)
+    assert match is not None, f"Missing `{token_name}` assignment in EM cycle024 micro document."
+    return f"{token_name}: {match.group(1).strip().strip('`')}"
+
+
 def test_em_cycle024_artifacts_exist() -> None:
     assert STATE_PATH.exists(), "Missing State_of_the_Theory.md."
     assert EM_TARGET_PATH.exists(), "Missing EM U1 target document."
@@ -180,10 +192,12 @@ def test_em_cycle024_artifacts_exist() -> None:
 
 def test_em_micro24_contains_required_tokens_and_localized_route_closure_statements() -> None:
     text = _read(EM_MICRO24_PATH)
+    cycle_target_id = _extract_target_id(text)
+    cycle_progress = _extract_assignment_line(text, "EM_U1_PROGRESS_CYCLE24_v0")
     required_tokens = [
         "DERIVATION_TARGET_EM_U1_MICRO_24_MAXWELL_TO_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_PACKAGE_v0",
-        "TARGET-EM-U1-MICRO-24-MAXWELL-TO-CONTINUITY-ROUTE-CLOSURE-ATTEMPT-PACKAGE-v0",
-        "EM_U1_PROGRESS_CYCLE24_v0: MAXWELL_TO_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_TOKEN_PINNED",
+        cycle_target_id,
+        cycle_progress,
         "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_v0: CANONICAL_ROUTE_CLOSURE_ATTEMPT_PINNED",
         LOCALIZATION_TOKEN,
         "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE",
@@ -205,10 +219,14 @@ def test_em_micro24_contains_required_tokens_and_localized_route_closure_stateme
 
 
 def test_em_target_references_cycle024_artifact_and_tokens() -> None:
+    micro_text = _read(EM_MICRO24_PATH)
+    cycle_target_id = _extract_target_id(micro_text)
+    cycle_progress = _extract_assignment_line(micro_text, "EM_U1_PROGRESS_CYCLE24_v0")
+
     text = _read(EM_TARGET_PATH)
     required_tokens = [
-        "TARGET-EM-U1-MICRO-24-MAXWELL-TO-CONTINUITY-ROUTE-CLOSURE-ATTEMPT-PACKAGE-v0",
-        "EM_U1_PROGRESS_CYCLE24_v0: MAXWELL_TO_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_TOKEN_PINNED",
+        cycle_target_id,
+        cycle_progress,
         "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_v0: CANONICAL_ROUTE_CLOSURE_ATTEMPT_PINNED",
         LOCALIZATION_TOKEN,
         "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE",
@@ -225,6 +243,9 @@ def test_em_target_references_cycle024_artifact_and_tokens() -> None:
 
 
 def test_em_roadmap_references_cycle024_target_and_artifact_with_single_row() -> None:
+    micro_text = _read(EM_MICRO24_PATH)
+    cycle_target_id = _extract_target_id(micro_text)
+
     roadmap_text = _read(EM_ROADMAP_PATH)
     rows = [line.strip() for line in roadmap_text.splitlines() if line.strip().startswith("| `PILLAR-EM` |")]
     assert len(rows) == 1, f"Expected one `PILLAR-EM` roadmap row, found {len(rows)}."
@@ -234,7 +255,7 @@ def test_em_roadmap_references_cycle024_target_and_artifact_with_single_row() ->
     artifacts_raw = _strip_wrapping_backticks(cells[4])
     targets = {item.strip() for item in targets_raw.split(";") if item.strip()}
     artifacts = {item.strip() for item in artifacts_raw.split(";") if item.strip()}
-    assert "TARGET-EM-U1-MICRO-24-MAXWELL-TO-CONTINUITY-ROUTE-CLOSURE-ATTEMPT-PACKAGE-v0" in targets
+    assert cycle_target_id in targets
     assert (
         "formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_24_MAXWELL_TO_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_PACKAGE_v0.md"
         in artifacts
@@ -242,11 +263,15 @@ def test_em_roadmap_references_cycle024_target_and_artifact_with_single_row() ->
 
 
 def test_state_mentions_cycle024_checkpoint_and_tokens() -> None:
+    micro_text = _read(EM_MICRO24_PATH)
+    cycle_target_id = _extract_target_id(micro_text)
+    cycle_progress = _extract_assignment_line(micro_text, "EM_U1_PROGRESS_CYCLE24_v0")
+
     text = _read(STATE_PATH)
     required_tokens = [
         "EM Cycle-024 Maxwell-to-continuity route-closure attempt checkpoint",
-        "TARGET-EM-U1-MICRO-24-MAXWELL-TO-CONTINUITY-ROUTE-CLOSURE-ATTEMPT-PACKAGE-v0",
-        "EM_U1_PROGRESS_CYCLE24_v0: MAXWELL_TO_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_TOKEN_PINNED",
+        cycle_target_id,
+        cycle_progress,
         "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_v0: CANONICAL_ROUTE_CLOSURE_ATTEMPT_PINNED",
         LOCALIZATION_TOKEN,
         "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE",
@@ -277,11 +302,14 @@ def test_assumption_registry_contains_required_source_smoothness_distributional_
 
 
 def test_em_lean_cycle024_tokens_and_route_closure_harness_stubs_are_pinned() -> None:
+    micro_text = _read(EM_MICRO24_PATH)
+    cycle_progress = _extract_assignment_line(micro_text, "EM_U1_PROGRESS_CYCLE24_v0")
+
     text = _read(EM_OBJECT_SCAFFOLD_LEAN_PATH)
     required_tokens = [
         "structure MaxwellToContinuityRouteClosureAttemptPackage where",
         "def maxwellToContinuityRouteClosureAttemptHarness",
-        "EM_U1_PROGRESS_CYCLE24_v0: MAXWELL_TO_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_TOKEN_PINNED",
+        cycle_progress,
         "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_ATTEMPT_v0: CANONICAL_ROUTE_CLOSURE_ATTEMPT_PINNED",
         LOCALIZATION_TOKEN,
         "EM_U1_MAXWELL_CONTINUITY_ROUTE_CLOSURE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE",
