@@ -15,9 +15,9 @@ into a terminal full-completion posture with no unresolved pillar-critical rows.
 
 - Matrix status is CLOSED for all pillars.
 - Phase registry modes are mixed:
-  - PILLAR-STAT: ACTIVE_EXECUTION
-  - PILLAR-COSMO: LOCKED_QUEUE with roadmap_status CLOSED
-  - PILLAR-SR: PHASE_ORDERED
+  - PILLAR-STAT: CLOSED_HANDOFF
+  - PILLAR-COSMO: CLOSED_HANDOFF
+  - PILLAR-SR: CLOSED_HANDOFF
   - PILLAR-GR, PILLAR-QM, PILLAR-EM: CLOSED_HANDOFF
   - PILLAR-QFT: CLOSED_HANDOFF_ARTIFACT
 - Results table still includes unresolved rows impacting full-completion claims:
@@ -118,16 +118,16 @@ Exit criteria:
 
 ### PILLAR-STAT
 
-- Primary debt: ACTIVE_EXECUTION mode and scaffold/reopen dependence.
+- Primary debt: derivation rows remain scaffold-conditional despite terminal mode closure.
 - Work package:
   - Execute reopen-completion cycle.
   - Promote derivation rows from scaffold-conditional to final closure posture.
 
 ### PILLAR-COSMO
 
-- Primary debt: LOCKED_QUEUE mode with CLOSED status compatibility bridge.
+- Primary debt: conditional closure-package posture remains after mode normalization.
 - Work package:
-  - Complete authorized transition and remove compatibility-only semantics.
+  - Preserve closed-handoff governance parity while retiring compatibility-only semantics.
   - Promote conditional closure-package posture to terminal closure posture.
 
 ## Recommended Execution Order
