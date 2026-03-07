@@ -63,11 +63,11 @@ def test_cosmo_phase_adherence_cross_surface_alignment() -> None:
     matrix = _read_json(MATRIX_PATH)
     cosmo = matrix.get("pillars", {}).get("PILLAR-COSMO")
     assert isinstance(cosmo, dict), "PILLAR-COSMO matrix row must exist."
-    assert cosmo.get("matrix_status") == "LOCKED"
+    assert cosmo.get("matrix_status") == "CLOSED"
     assert cosmo.get("target_id") == "TARGET-COSMO-BG-PLAN"
 
     status, target_id, target_doc, prereqs = _cosmo_roadmap_row(_read(ROADMAP_PATH))
-    assert status == "LOCKED"
+    assert status == "CLOSED"
     assert target_id == "TARGET-COSMO-BG-PLAN"
     assert target_doc == "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md"
     assert prereqs == "TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-SR-COV-PLAN"
@@ -76,7 +76,7 @@ def test_cosmo_phase_adherence_cross_surface_alignment() -> None:
     rows = [row for row in registry.get("pillars", []) if row.get("pillar_id") == "PILLAR-COSMO"]
     assert len(rows) == 1, "PILLAR-COSMO registry row must exist exactly once."
     assert rows[0].get("mode") == "LOCKED_QUEUE"
-    assert rows[0].get("roadmap_status") == "LOCKED"
+    assert rows[0].get("roadmap_status") == "CLOSED"
 
 
 def test_cosmo_phase_adherence_gate_is_in_governance_suite() -> None:

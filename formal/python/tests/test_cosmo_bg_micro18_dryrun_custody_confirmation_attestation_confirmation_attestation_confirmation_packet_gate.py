@@ -87,13 +87,13 @@ def test_cosmo_dryrun_custody_confirmation_attestation_confirmation_attestation_
     cosmo = matrix.get("pillars", {}).get("PILLAR-COSMO")
     assert isinstance(cosmo, dict), "PILLAR-COSMO matrix row must exist."
 
-    assert cosmo.get("matrix_status") == "LOCKED"
+    assert cosmo.get("matrix_status") == "CLOSED"
     assert cosmo.get("dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_doc") == "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_18_DRYRUN_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_PACKET_v0.md"
     assert cosmo.get("dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_gate") == "formal/python/tests/test_cosmo_bg_micro18_dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_packet_gate.py"
     assert cosmo.get("dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_policy") == "CYCLE08_09_10_11_12_13_14_15_16_17_CUSTODY_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_LOCK_REQUIRED_NO_STATUS_FLIP"
 
     status, target_id, target_path, prereqs = _cosmo_roadmap_row(_read(ROADMAP_PATH))
-    assert status == "LOCKED"
+    assert status == "CLOSED"
     assert target_id == "TARGET-COSMO-BG-PLAN"
     assert target_path == "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md"
     assert prereqs == "TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-SR-COV-PLAN"
@@ -102,7 +102,7 @@ def test_cosmo_dryrun_custody_confirmation_attestation_confirmation_attestation_
     rows = [row for row in registry.get("pillars", []) if row.get("pillar_id") == "PILLAR-COSMO"]
     assert len(rows) == 1
     assert rows[0].get("mode") == "LOCKED_QUEUE"
-    assert rows[0].get("roadmap_status") == "LOCKED"
+    assert rows[0].get("roadmap_status") == "CLOSED"
 
     state_text = _read(STATE_PATH)
     required_state_tokens = [

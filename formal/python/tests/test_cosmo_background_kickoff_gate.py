@@ -31,7 +31,7 @@ def test_cosmo_target_contains_required_kickoff_tokens() -> None:
     required_tokens = [
         "DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0",
         "TARGET-COSMO-BG-PLAN",
-        "COSMO_BACKGROUND_ADJUDICATION: NOT_YET_DISCHARGED",
+        "COSMO_BACKGROUND_ADJUDICATION: DISCHARGED_v0_BOUNDED",
         "COSMO_BACKGROUND_SCOPE_BOUNDARY_v0: BACKGROUND_ONLY_NONCLAIM",
         "COSMO_PREREQS_v0: TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-SR-COV-PLAN",
         "COSMO_DELIVERABLE_METRIC_SURFACE_v0: BACKGROUND_METRIC_OBJECT_DECLARED",
@@ -54,7 +54,7 @@ def test_cosmo_roadmap_row_is_locked_and_points_to_target() -> None:
     assert match is not None, "Missing roadmap row for PILLAR-COSMO."
 
     status, target_id, target_path, prereqs = match.groups()
-    assert status == "LOCKED", "PILLAR-COSMO roadmap status must remain LOCKED."
+    assert status == "CLOSED", "PILLAR-COSMO roadmap status must remain CLOSED."
     assert target_id == "TARGET-COSMO-BG-PLAN", "PILLAR-COSMO target ID drift detected in roadmap."
     assert target_path == "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md", (
         "PILLAR-COSMO authority target path drift detected in roadmap."

@@ -111,14 +111,14 @@ def test_cosmo_matrix_roadmap_registry_state_are_locked_queue_aligned() -> None:
     cosmo = matrix.get("pillars", {}).get("PILLAR-COSMO")
     assert isinstance(cosmo, dict), "PILLAR-COSMO matrix row must exist."
 
-    assert cosmo.get("matrix_status") == "LOCKED"
+    assert cosmo.get("matrix_status") == "CLOSED"
     assert cosmo.get("target_id") == "TARGET-COSMO-BG-PLAN"
     assert cosmo.get("prereq_targets") == "TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-SR-COV-PLAN"
     assert cosmo.get("lane_transition_policy") == "LOCKED_QUEUE_ENFORCED_CROSS_SURFACE"
     assert cosmo.get("lane_drift_alarm_gate") == "formal/python/tests/test_cosmo_bg_micro07_matrix_lane_drift_alarm_gate.py"
 
     status, target_id, target_path, prereqs = _cosmo_roadmap_row(_read(ROADMAP_PATH))
-    assert status == "LOCKED"
+    assert status == "CLOSED"
     assert status == cosmo.get("matrix_status")
     assert target_id == cosmo.get("target_id")
     assert target_path == cosmo.get("target_doc")
@@ -130,7 +130,7 @@ def test_cosmo_matrix_roadmap_registry_state_are_locked_queue_aligned() -> None:
     assert len(cosmo_rows) == 1, "Registry must contain exactly one PILLAR-COSMO row."
     cosmo_registry = cosmo_rows[0]
     assert cosmo_registry.get("mode") == "LOCKED_QUEUE"
-    assert cosmo_registry.get("roadmap_status") == "LOCKED"
+    assert cosmo_registry.get("roadmap_status") == "CLOSED"
     assert cosmo_registry.get("target_id") == "TARGET-COSMO-BG-PLAN"
 
     state_text = _read(STATE_PATH)

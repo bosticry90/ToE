@@ -54,7 +54,15 @@ Write-Host "Running governance suite via ./py.ps1" -ForegroundColor Cyan
   formal/python/tests/test_cosmo_phase_adherence_snapshot_gate.py `
   formal/python/tests/test_cosmo_background_pillar_package_rollup_gate.py `
   formal/python/tests/test_cosmo_state_rollup_checkpoint_gate.py `
+  formal/python/tests/test_cosmo_rollup_pointer_completeness_gate.py `
   formal/python/tests/test_cosmo_matrix_rollup_crosspin_gate.py `
+  formal/python/tests/test_cosmo_external_implications_reference_surface_policy_gate.py `
+  formal/python/tests/test_cosmo_external_implications_cross_surface_parity_gate.py `
+  formal/python/tests/test_cosmo_derivation_completeness_gate_readiness_packet_cycle01_gate.py `
+  formal/python/tests/test_cosmo_der01_theorem_surface_scaffold_cycle01_gate.py `
+  formal/python/tests/test_cosmo_der02_governance_coupling_scaffold_cycle01_gate.py `
+  formal/python/tests/test_cosmo_der01_closure_package_cycle01_gate.py `
+  formal/python/tests/test_cosmo_der02_closure_package_cycle01_gate.py `
   formal/python/tests/test_orchestration_report_contract_gate.py `
   formal/python/tests/test_conftest_signature_stability_gate.py `
   formal/python/tests/test_repository_retention_policy_contract_gate.py `
