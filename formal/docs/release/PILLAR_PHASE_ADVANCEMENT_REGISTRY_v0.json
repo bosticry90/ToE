@@ -123,14 +123,15 @@
     },
     {
       "pillar_id": "PILLAR-COSMO",
-      "mode": "LOCKED_QUEUE",
+      "mode": "CLOSED_HANDOFF",
       "authority_doc_path": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
-      "roadmap_status": "CLOSED",
-      "target_id": "TARGET-COSMO-BG-PLAN",
-      "prerequisites": [
-        "TARGET-GR01-DERIV-CHECKLIST-PLAN",
-        "TARGET-SR-COV-PLAN"
-      ]
+      "expected_matrix_status": "CLOSED",
+      "completion_token": "COSMO_BACKGROUND_ADJUDICATION",
+      "completion_value": "DISCHARGED_v0_BOUNDED",
+      "roadmap_proceed_token": "PROCEED_GATE_COSMO",
+      "roadmap_proceed_prefix": "ALLOWED_",
+      "expected_global_focus": "PILLAR-COSMO",
+      "expected_global_lane": "TARGET-COSMO-BG-PLAN"
     }
   ]
 }

@@ -129,9 +129,9 @@ def test_cosmo_matrix_roadmap_registry_state_are_locked_queue_aligned() -> None:
     cosmo_rows = [row for row in pillars if row.get("pillar_id") == "PILLAR-COSMO"]
     assert len(cosmo_rows) == 1, "Registry must contain exactly one PILLAR-COSMO row."
     cosmo_registry = cosmo_rows[0]
-    assert cosmo_registry.get("mode") == "LOCKED_QUEUE"
-    assert cosmo_registry.get("roadmap_status") == "CLOSED"
-    assert cosmo_registry.get("target_id") == "TARGET-COSMO-BG-PLAN"
+    assert cosmo_registry.get("mode") == "CLOSED_HANDOFF"
+    assert cosmo_registry.get("expected_matrix_status") == "CLOSED"
+    assert cosmo_registry.get("expected_global_lane") == "TARGET-COSMO-BG-PLAN"
 
     state_text = _read(STATE_PATH)
     state_required = [
@@ -175,3 +175,5 @@ def test_cosmo_micro07_artifact_schema_and_token_alignment() -> None:
 
     required_tokens = body.get("required_locked_queue_tokens")
     assert isinstance(required_tokens, list) and len(required_tokens) == 5
+
+

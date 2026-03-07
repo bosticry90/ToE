@@ -101,8 +101,8 @@ def test_cosmo_dryrun_custody_confirmation_attestation_keeps_locked_queue_status
     registry = _read_json(REGISTRY_PATH)
     rows = [row for row in registry.get("pillars", []) if row.get("pillar_id") == "PILLAR-COSMO"]
     assert len(rows) == 1
-    assert rows[0].get("mode") == "LOCKED_QUEUE"
-    assert rows[0].get("roadmap_status") == "CLOSED"
+    assert rows[0].get("mode") == "CLOSED_HANDOFF"
+    assert rows[0].get("expected_matrix_status") == "CLOSED"
 
     state_text = _read(STATE_PATH)
     required_state_tokens = [
@@ -139,3 +139,4 @@ def test_cosmo_micro15_artifact_schema_and_token_alignment() -> None:
     assert isinstance(pointers, list) and len(pointers) == 7
 
     assert body.get("required_custody_confirmation_attestation_bundle_hash") == "c08_c09_c10_c11_c12_c13_c14_pointer_bundle_cycle01_v0"
+

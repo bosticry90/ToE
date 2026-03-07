@@ -129,8 +129,8 @@ def test_cosmo_authorized_unlock_checklist_packet_keeps_locked_queue_status() ->
     registry = _read_json(REGISTRY_PATH)
     rows = [row for row in registry.get("pillars", []) if row.get("pillar_id") == "PILLAR-COSMO"]
     assert len(rows) == 1
-    assert rows[0].get("mode") == "LOCKED_QUEUE"
-    assert rows[0].get("roadmap_status") == "CLOSED"
+    assert rows[0].get("mode") == "CLOSED_HANDOFF"
+    assert rows[0].get("expected_matrix_status") == "CLOSED"
 
     state_text = _read(STATE_PATH)
     required_state_tokens = [
@@ -165,3 +165,5 @@ def test_cosmo_micro09_artifact_schema_and_token_alignment() -> None:
 
     checklist_items = body.get("authorized_unlock_checklist_items")
     assert isinstance(checklist_items, list) and len(checklist_items) == 5
+
+

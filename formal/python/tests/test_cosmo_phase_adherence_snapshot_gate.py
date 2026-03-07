@@ -47,10 +47,10 @@ def _cosmo_roadmap_row(roadmap_text: str) -> tuple[str, str, str, str]:
 def test_cosmo_phase_adherence_snapshot_tokens_pinned() -> None:
     state_text = _read(STATE_PATH)
     required_tokens = [
-        "COSMO_PHASE_ADHERENCE_SNAPSHOT_v0: LOCKED_QUEUE_CROSS_SURFACE_SYNCED",
-        "COSMO_PHASE_ADHERENCE_MATRIX_STATUS_v0: LOCKED",
-        "COSMO_PHASE_ADHERENCE_ROADMAP_STATUS_v0: LOCKED",
-        "COSMO_PHASE_ADHERENCE_REGISTRY_MODE_v0: LOCKED_QUEUE",
+        "COSMO_PHASE_ADHERENCE_SNAPSHOT_v0: CLOSED_HANDOFF_CROSS_SURFACE_SYNCED",
+        "COSMO_PHASE_ADHERENCE_MATRIX_STATUS_v0: CLOSED",
+        "COSMO_PHASE_ADHERENCE_ROADMAP_STATUS_v0: CLOSED",
+        "COSMO_PHASE_ADHERENCE_REGISTRY_MODE_v0: CLOSED_HANDOFF",
         "COSMO_PHASE_ADHERENCE_PRIMARY_LANE_v0: TARGET-COSMO-BG-PLAN",
         "COSMO_PHASE_ADHERENCE_GOVERNANCE_SUITE_v0: INCLUDED",
         "formal/python/tests/test_cosmo_phase_adherence_snapshot_gate.py",
@@ -75,11 +75,12 @@ def test_cosmo_phase_adherence_cross_surface_alignment() -> None:
     registry = _read_json(REGISTRY_PATH)
     rows = [row for row in registry.get("pillars", []) if row.get("pillar_id") == "PILLAR-COSMO"]
     assert len(rows) == 1, "PILLAR-COSMO registry row must exist exactly once."
-    assert rows[0].get("mode") == "LOCKED_QUEUE"
-    assert rows[0].get("roadmap_status") == "CLOSED"
+    assert rows[0].get("mode") == "CLOSED_HANDOFF"
+    assert rows[0].get("expected_matrix_status") == "CLOSED"
 
 
 def test_cosmo_phase_adherence_gate_is_in_governance_suite() -> None:
     suite_text = _read(SUITE_PATH)
     gate_path = "formal/python/tests/test_cosmo_phase_adherence_snapshot_gate.py"
     assert gate_path in suite_text, "Governance suite must execute COSMO phase adherence snapshot gate."
+

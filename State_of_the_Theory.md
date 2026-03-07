@@ -1991,10 +1991,10 @@ COSMO rollup checkpoint (2026-03-01):
   - `formal/python/tests/test_cosmo_bg_micro27_dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_packet_gate.py`
 
 - COSMO phase adherence snapshot is machine-auditable:
-  - `COSMO_PHASE_ADHERENCE_SNAPSHOT_v0: LOCKED_QUEUE_CROSS_SURFACE_SYNCED`
-  - `COSMO_PHASE_ADHERENCE_MATRIX_STATUS_v0: LOCKED`
-  - `COSMO_PHASE_ADHERENCE_ROADMAP_STATUS_v0: LOCKED`
-  - `COSMO_PHASE_ADHERENCE_REGISTRY_MODE_v0: LOCKED_QUEUE`
+  - `COSMO_PHASE_ADHERENCE_SNAPSHOT_v0: CLOSED_HANDOFF_CROSS_SURFACE_SYNCED`
+  - `COSMO_PHASE_ADHERENCE_MATRIX_STATUS_v0: CLOSED`
+  - `COSMO_PHASE_ADHERENCE_ROADMAP_STATUS_v0: CLOSED`
+  - `COSMO_PHASE_ADHERENCE_REGISTRY_MODE_v0: CLOSED_HANDOFF`
   - `COSMO_PHASE_ADHERENCE_PRIMARY_LANE_v0: TARGET-COSMO-BG-PLAN`
   - `COSMO_PHASE_ADHERENCE_GOVERNANCE_SUITE_v0: INCLUDED`
   - `formal/docs/release/LOCKED_QUEUE_PHASE_ADHERENCE_STANDARD_v0.md`
