@@ -6,7 +6,7 @@
     "checkpoint": "cosmo_der02_object_surface_scaffold_cycle01",
     "status": "object_surface_scaffold_discharged_conditional_nonclaim",
     "scope": "cosmo_der02_object_surface_scaffold_bounded_conditional_v0",
-    "row_binding": "TOE_COSMO_DER_02_P_POLICY_OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+    "row_binding": "TOE_COSMO_DER_02_T_PROVED_OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
     "dependency_tokens": [
       "cosmo_der02_governance_coupling_surface_scaffold_cycle01_v0",
       "cosmo_der02_discharge_scaffold_cycle01_v0"
@@ -30,5 +30,5 @@
     ],
     "generated_on": "2026-03-06"
   },
-  "payload_sha256": "93a3bddf6e78a38f757eed39bec013d0a7034e3c2c2cc6545398dabbdbb99b89"
+  "payload_sha256": "3ef6ff2cbfa185381584f20735ee8e9b9369685a5123f5b0bee90729705afef1"
 }

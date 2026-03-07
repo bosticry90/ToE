@@ -26,7 +26,7 @@ ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "cosmo_der02_governance_coupli
 
 EXPECTED_ARTIFACT_ID = "cosmo_der02_governance_coupling_scaffold_cycle01_v0"
 EXPECTED_GATE = "ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED"
-EXPECTED_ROW_BINDING = "TOE_COSMO_DER_02_P_POLICY_GOVERNANCE_COUPLING_SCAFFOLD_PINNED_NONCLAIM"
+EXPECTED_ROW_BINDING = "TOE_COSMO_DER_02_T_PROVED_GOVERNANCE_COUPLING_SCAFFOLD_PINNED_NONCLAIM"
 EXPECTED_ARTIFACT_REL = "formal/output/cosmo_der02_governance_coupling_scaffold_cycle01_v0.json"
 EXPECTED_GATE_REL = "formal/python/tests/test_cosmo_der02_governance_coupling_scaffold_cycle01_gate.py"
 

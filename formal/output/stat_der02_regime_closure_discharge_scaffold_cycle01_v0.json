@@ -8,7 +8,7 @@
     "pillar_id": "PILLAR-STAT",
     "target_id": "TARGET-TH-ENTROPY-PLAN",
     "results_row_id": "TOE-STAT-DER-02",
-    "results_row_expected_label": "P-POLICY",
+    "results_row_expected_label": "T-PROVED",
     "status": "regime_closure_discharge_scaffold_placeholder_nonclaim",
     "discharge_scope": [
       "regime_validity_and_closure_discharge_scaffold_only",
@@ -72,5 +72,5 @@
     "artifact_sha256": "TOP_LEVEL_payload_sha256",
     "generated_on": "2026-02-27"
   },
-  "payload_sha256": "f6a70fa5f8fbe4239346f50b3cee9acb3b9879f48cfccc59a418a1f0ee3a4078"
+  "payload_sha256": "6f7410efedac6801950dcbd4f8a90cbc57c185b337a5e75859abec29ec6bac65"
 }

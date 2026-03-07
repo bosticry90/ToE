@@ -6,7 +6,7 @@
     "checkpoint": "cosmo_der01_theorem_surface_scaffold_cycle01",
     "status": "typed_theorem_surface_scaffold_non_promotional",
     "scope": "cosmo_der01_theorem_surface_scaffold_only_nonclaim_v0",
-    "row_binding": "TOE_COSMO_DER_01_P_POLICY_THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
+    "row_binding": "TOE_COSMO_DER_01_T_PROVED_THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM",
     "theorem_surface_tokens": [
       "cosmo_bg_micro01_object_surface_cycle01_v0",
       "cosmo_bg_micro02_expansion_law_surface_cycle01_v0",
@@ -38,5 +38,5 @@
     ],
     "generated_on": "2026-03-06"
   },
-  "payload_sha256": "aee09c1bdc59b79b5c3e01b94db9ca3fa5eddd5047ebf28f51bdf45d69ff28ff"
+  "payload_sha256": "b9e0cda8703c1fd79c5a8bf9725049c1a55bb02dd3af54911873d8898d2351d5"
 }

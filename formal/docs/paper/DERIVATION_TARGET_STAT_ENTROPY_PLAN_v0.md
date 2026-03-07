@@ -164,7 +164,7 @@ Cycle01 `TOE-STAT-DER-01` theorem-surface scaffold (active pre-discharge, row-co
 - `STAT_DER01_THEOREM_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_v0: stat_der01_entropy_balance_theorem_surface_scaffold_cycle01_v0`
 - `STAT_DER01_THEOREM_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_SHA256_v0: 5e570dd640294f84632c0933629a40e9d538c987e4eb642e522994e54b44a0ad`
 - `STAT_DER01_THEOREM_SURFACE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `STAT_DER01_THEOREM_SURFACE_ROW_BINDING_v0: TOE_STAT_DER_01_P_POLICY_THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_DER01_THEOREM_SURFACE_ROW_BINDING_v0: TOE_STAT_DER_01_T_PROVED_THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
 - artifact path: `formal/output/stat_der01_entropy_balance_theorem_surface_scaffold_cycle01_v0.json`
 - coupling gate path: `formal/python/tests/test_stat_der01_theorem_surface_scaffold_coupling_cycle01_gate.py`
 - row coupling target: `TOE-STAT-DER-01` in `formal/docs/paper/RESULTS_TABLE_v0.md`
@@ -180,7 +180,7 @@ Cycle01 `TOE-STAT-DER-01` theorem-body scope-boundary scaffold (active pre-disch
 - `STAT_DER01_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_der01_theorem_body_scope_boundary_cycle01_v0`
 - `STAT_DER01_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_SHA256_v0: 6b69e4754091b9ba173f2393fceeb6f1bc6d5239dc0d6695ccfed2688d749cd1`
 - `STAT_DER01_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `STAT_DER01_THEOREM_BODY_SCOPE_BOUNDARY_ROW_BINDING_v0: TOE_STAT_DER_01_P_POLICY_THEOREM_BODY_SCOPE_BOUNDARY_PINNED_NONCLAIM`
+- `STAT_DER01_THEOREM_BODY_SCOPE_BOUNDARY_ROW_BINDING_v0: TOE_STAT_DER_01_T_PROVED_THEOREM_BODY_SCOPE_BOUNDARY_PINNED_NONCLAIM`
 - artifact path: `formal/output/stat_der01_theorem_body_scope_boundary_cycle01_v0.json`
 - coupling gate path: `formal/python/tests/test_stat_der01_theorem_body_scope_boundary_cycle01_gate.py`
 - row coupling target: `TOE-STAT-DER-01` in `formal/docs/paper/RESULTS_TABLE_v0.md`
@@ -203,7 +203,7 @@ Cycle01 `TOE-STAT-DER-01` theorem-body scaffold (active pre-discharge, row-coupl
 - `STAT_DER01_THEOREM_BODY_SCAFFOLD_CYCLE01_ARTIFACT_v0: stat_der01_entropy_balance_theorem_body_scaffold_cycle01_v0`
 - `STAT_DER01_THEOREM_BODY_SCAFFOLD_CYCLE01_ARTIFACT_SHA256_v0: b2464f954f70c6346d529eebfaa6f97f4e681bbc6bc77a5017b1bf56e2f37685`
 - `STAT_DER01_THEOREM_BODY_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `STAT_DER01_THEOREM_BODY_ROW_BINDING_v0: TOE_STAT_DER_01_P_POLICY_THEOREM_BODY_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_DER01_THEOREM_BODY_ROW_BINDING_v0: TOE_STAT_DER_01_T_PROVED_THEOREM_BODY_SCAFFOLD_PINNED_NONCLAIM`
 - artifact path: `formal/output/stat_der01_entropy_balance_theorem_body_scaffold_cycle01_v0.json`
 - coupling gate path: `formal/python/tests/test_stat_der01_theorem_body_scaffold_coupling_cycle01_gate.py`
 - row coupling target: `TOE-STAT-DER-01` in `formal/docs/paper/RESULTS_TABLE_v0.md`
@@ -225,7 +225,7 @@ Cycle01 `TOE-STAT-DER-01` discharge scaffold (active post-theorem-body, row-coup
 - `STAT_DER01_DISCHARGE_SCAFFOLD_CYCLE01_ARTIFACT_v0: stat_der01_entropy_balance_discharge_scaffold_cycle01_v0`
 - `STAT_DER01_DISCHARGE_SCAFFOLD_CYCLE01_ARTIFACT_SHA256_v0: aa734727dc949c22b42babbc315567c2dbe574c0035d55109005b427f567ef91`
 - `STAT_DER01_DISCHARGE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `STAT_DER01_DISCHARGE_ROW_BINDING_v0: TOE_STAT_DER_01_P_POLICY_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_DER01_DISCHARGE_ROW_BINDING_v0: TOE_STAT_DER_01_T_PROVED_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM`
 - artifact path: `formal/output/stat_der01_entropy_balance_discharge_scaffold_cycle01_v0.json`
 - coupling gate path: `formal/python/tests/test_stat_der01_discharge_scaffold_coupling_cycle01_gate.py`
 - row coupling target: `TOE-STAT-DER-01` in `formal/docs/paper/RESULTS_TABLE_v0.md`
@@ -249,7 +249,7 @@ Cycle01 `TOE-STAT-DER-01` object-surface scaffold (active pre-discharge, row-cou
 - `STAT_DER01_OBJECT_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_v0: stat_der01_entropy_balance_object_surface_scaffold_cycle01_v0`
 - `STAT_DER01_OBJECT_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_SHA256_v0: 686395a362cffa89bb39623555a69bf921c60f04f224edf905b582f58b119e1b`
 - `STAT_DER01_OBJECT_SURFACE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `STAT_DER01_OBJECT_SURFACE_ROW_BINDING_v0: TOE_STAT_DER_01_P_POLICY_OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_DER01_OBJECT_SURFACE_ROW_BINDING_v0: TOE_STAT_DER_01_T_PROVED_OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
 - artifact path: `formal/output/stat_der01_entropy_balance_object_surface_scaffold_cycle01_v0.json`
 - coupling gate path: `formal/python/tests/test_stat_der01_object_surface_scaffold_coupling_cycle01_gate.py`
 - row coupling target: `TOE-STAT-DER-01` in `formal/docs/paper/RESULTS_TABLE_v0.md`
@@ -267,7 +267,7 @@ Cycle01 `TOE-STAT-DER-02` regime-validity/closure-coupling scaffold (active pre-
 - `STAT_DER02_REGIME_CLOSURE_COUPLING_SCAFFOLD_CYCLE01_ARTIFACT_v0: stat_der02_regime_closure_coupling_scaffold_cycle01_v0`
 - `STAT_DER02_REGIME_CLOSURE_COUPLING_SCAFFOLD_CYCLE01_ARTIFACT_SHA256_v0: b02ce1479bfbec4bb45b26aa43f7e68d46cfd29026a368ed42ba9f127c778f79`
 - `STAT_DER02_REGIME_CLOSURE_COUPLING_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `STAT_DER02_REGIME_CLOSURE_COUPLING_ROW_BINDING_v0: TOE_STAT_DER_02_P_POLICY_REGIME_VALIDITY_CLOSURE_COUPLING_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_DER02_REGIME_CLOSURE_COUPLING_ROW_BINDING_v0: TOE_STAT_DER_02_T_PROVED_REGIME_VALIDITY_CLOSURE_COUPLING_SCAFFOLD_PINNED_NONCLAIM`
 - artifact path: `formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json`
 - coupling gate path: `formal/python/tests/test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate.py`
 - row coupling target: `TOE-STAT-DER-02` in `formal/docs/paper/RESULTS_TABLE_v0.md`
@@ -291,7 +291,7 @@ Cycle01 `TOE-STAT-DER-02` theorem-body scope-boundary scaffold (active pre-disch
 - `STAT_DER02_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: stat_der02_theorem_body_scope_boundary_cycle01_v0`
 - `STAT_DER02_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_SHA256_v0: 16ade2d66762272fa5decf30249753a8b44b35cffd752eb6e7bd50dfd37fd0b5`
 - `STAT_DER02_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `STAT_DER02_THEOREM_BODY_SCOPE_BOUNDARY_ROW_BINDING_v0: TOE_STAT_DER_02_P_POLICY_THEOREM_BODY_SCOPE_BOUNDARY_PINNED_NONCLAIM`
+- `STAT_DER02_THEOREM_BODY_SCOPE_BOUNDARY_ROW_BINDING_v0: TOE_STAT_DER_02_T_PROVED_THEOREM_BODY_SCOPE_BOUNDARY_PINNED_NONCLAIM`
 - artifact path: `formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json`
 - coupling gate path: `formal/python/tests/test_stat_der02_theorem_body_scope_boundary_cycle01_gate.py`
 - row coupling target: `TOE-STAT-DER-02` in `formal/docs/paper/RESULTS_TABLE_v0.md`
@@ -318,7 +318,7 @@ Cycle01 `TOE-STAT-DER-02` theorem-body scaffold (active pre-discharge, row-coupl
 - `STAT_DER02_THEOREM_BODY_SCAFFOLD_CYCLE01_ARTIFACT_v0: stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0`
 - `STAT_DER02_THEOREM_BODY_SCAFFOLD_CYCLE01_ARTIFACT_SHA256_v0: cd2a8dd9e6f39593551acf98f0ed0fed20b12d5d662eee1b3a85c20493fd5dd0`
 - `STAT_DER02_THEOREM_BODY_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `STAT_DER02_THEOREM_BODY_ROW_BINDING_v0: TOE_STAT_DER_02_P_POLICY_THEOREM_BODY_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_DER02_THEOREM_BODY_ROW_BINDING_v0: TOE_STAT_DER_02_T_PROVED_THEOREM_BODY_SCAFFOLD_PINNED_NONCLAIM`
 - artifact path: `formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json`
 - coupling gate path: `formal/python/tests/test_stat_der02_theorem_body_scaffold_coupling_cycle01_gate.py`
 - row coupling target: `TOE-STAT-DER-02` in `formal/docs/paper/RESULTS_TABLE_v0.md`
@@ -342,7 +342,7 @@ Cycle01 `TOE-STAT-DER-02` discharge scaffold (active post-theorem-body, row-coup
 - `STAT_DER02_DISCHARGE_SCAFFOLD_CYCLE01_ARTIFACT_v0: stat_der02_regime_closure_discharge_scaffold_cycle01_v0`
 - `STAT_DER02_DISCHARGE_SCAFFOLD_CYCLE01_ARTIFACT_SHA256_v0: f6a70fa5f8fbe4239346f50b3cee9acb3b9879f48cfccc59a418a1f0ee3a4078`
 - `STAT_DER02_DISCHARGE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `STAT_DER02_DISCHARGE_ROW_BINDING_v0: TOE_STAT_DER_02_P_POLICY_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_DER02_DISCHARGE_ROW_BINDING_v0: TOE_STAT_DER_02_T_PROVED_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM`
 - artifact path: `formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json`
 - coupling gate path: `formal/python/tests/test_stat_der02_discharge_scaffold_coupling_cycle01_gate.py`
 - row coupling target: `TOE-STAT-DER-02` in `formal/docs/paper/RESULTS_TABLE_v0.md`
@@ -368,7 +368,7 @@ Cycle01 `TOE-STAT-DER-02` object-surface scaffold (active post-discharge-scaffol
 - `STAT_DER02_OBJECT_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_v0: stat_der02_regime_closure_object_surface_scaffold_cycle01_v0`
 - `STAT_DER02_OBJECT_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_SHA256_v0: 4c06cbc619335321d2e6185247239d8770bef30a1e9d6fe86e830b2dc4780908`
 - `STAT_DER02_OBJECT_SURFACE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `STAT_DER02_OBJECT_SURFACE_ROW_BINDING_v0: TOE_STAT_DER_02_P_POLICY_OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_DER02_OBJECT_SURFACE_ROW_BINDING_v0: TOE_STAT_DER_02_T_PROVED_OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
 - artifact path: `formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json`
 - coupling gate path: `formal/python/tests/test_stat_der02_object_surface_scaffold_coupling_cycle01_gate.py`
 - row coupling target: `TOE-STAT-DER-02` in `formal/docs/paper/RESULTS_TABLE_v0.md`

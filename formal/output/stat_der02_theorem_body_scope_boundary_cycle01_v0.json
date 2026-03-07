@@ -8,7 +8,7 @@
     "pillar_id": "PILLAR-STAT",
     "target_id": "TARGET-TH-ENTROPY-PLAN",
     "results_row_id": "TOE-STAT-DER-02",
-    "results_row_expected_label": "P-POLICY",
+    "results_row_expected_label": "T-PROVED",
     "status": "theorem_body_scope_boundary_placeholder_nonclaim",
     "allowed_operations": [
       "regime_validity_symbolic_scope_declaration",
@@ -72,5 +72,5 @@
     "artifact_sha256": "TOP_LEVEL_payload_sha256",
     "generated_on": "2026-02-27"
   },
-  "payload_sha256": "16ade2d66762272fa5decf30249753a8b44b35cffd752eb6e7bd50dfd37fd0b5"
+  "payload_sha256": "e0185996ae2b365da2ff6759dee04af5c2b8ab2697101c9cd7d805c36f11c56c"
 }

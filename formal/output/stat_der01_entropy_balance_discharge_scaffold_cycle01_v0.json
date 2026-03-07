@@ -8,7 +8,7 @@
     "pillar_id": "PILLAR-STAT",
     "target_id": "TARGET-TH-ENTROPY-PLAN",
     "results_row_id": "TOE-STAT-DER-01",
-    "results_row_expected_label": "P-POLICY",
+    "results_row_expected_label": "T-PROVED",
     "status": "discharge_scaffold_placeholder_nonclaim",
     "discharge_scope": [
       "classical_entropy_balance_discharge_scaffold_only",
@@ -69,5 +69,5 @@
     "artifact_sha256": "TOP_LEVEL_payload_sha256",
     "generated_on": "2026-02-27"
   },
-  "payload_sha256": "aa734727dc949c22b42babbc315567c2dbe574c0035d55109005b427f567ef91"
+  "payload_sha256": "2838f07b58ebab2f1de7f9b5a65e396b5eed876c104a84b3f67f6bdad53c2cd8"
 }
