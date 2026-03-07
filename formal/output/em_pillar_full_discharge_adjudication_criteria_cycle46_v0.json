@@ -44,8 +44,8 @@
     }
   ],
   "current_row_statuses": {
-    "TOE-EM-DER-01": "T-CONDITIONAL",
-    "TOE-EM-DER-02": "T-CONDITIONAL"
+    "TOE-EM-DER-01": "T-PROVED",
+    "TOE-EM-DER-02": "T-PROVED"
   },
   "current_roadmap_gate_tokens": {
     "PILLAR-EM_PHYSICS_STATUS": "CLOSED_v0_DERIVATION_GRADE",
