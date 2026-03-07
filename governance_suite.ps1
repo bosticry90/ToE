@@ -30,6 +30,7 @@ Write-Host "Running governance suite via ./py.ps1" -ForegroundColor Cyan
   formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py `
   formal/python/tests/test_pillar_phase_advancement_gate.py `
   formal/python/tests/test_pillar_full_completion_action_plan_gate.py `
+  formal/python/tests/test_phase4_global_unification_and_residual_debt_gate.py `
   formal/python/tests/test_locked_queue_phase_adherence_standard_gate.py `
   formal/python/tests/test_cosmo_background_kickoff_gate.py `
   formal/python/tests/test_cosmo_bg_micro01_object_surface_gate.py `

@@ -22,7 +22,8 @@ into a terminal full-completion posture with no unresolved pillar-critical rows.
   - PILLAR-QFT: CLOSED_HANDOFF_ARTIFACT
 - Results table still includes unresolved rows impacting full-completion claims:
   - GR blocked rows retired in Phase 3 tranche (TOE-GR-01, TOE-GR-THM-01 now non-blocked).
-  - Multiple pillar derivation rows remain T-CONDITIONAL (GR/EM/STAT/COSMO).
+  - Multiple pillar derivation rows remain governance placeholders (`P-POLICY`) for GR/EM/STAT/COSMO DER lanes.
+  - Residual global blockers remain explicit: `BLK-01`, `BLK-02`.
 
 ## Full-Completion Definition
 
@@ -73,13 +74,20 @@ Exit criteria:
 
 ### Phase 4: Cross-Pillar Unification and Residual-Risk Closure
 
+Canonical artifacts and enforcement surface:
+- `formal/docs/release/RESIDUAL_GLOBAL_DEBT_REGISTER_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_CLOSURE_v0.md`
+- `formal/python/tests/test_phase4_global_unification_and_residual_debt_gate.py`
+
 1. Add a unification target that composes pillar-level closure contracts under shared assumptions.
 2. Add counterfactual and necessity checks at cross-pillar level.
 3. Add final release gate verifying no legacy contradiction between matrix closure and results semantics.
+4. Retire residual global blocker rows (`BLK-01`, `BLK-02`) only after replacement artifacts are pinned and synchronized.
 
 Exit criteria:
 - Unification target is pinned with passing gates.
 - No residual cross-surface contradiction warnings.
+- Residual global blockers (`BLK-01`, `BLK-02`) are discharged and no longer `B-BLOCKED`.
 
 ## Pillar-Specific Work Packages
 

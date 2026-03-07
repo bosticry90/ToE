@@ -1584,6 +1584,17 @@ GR01 governance-alignment checkpoint (2026-02-15):
 - Deferred retirement blockers remain explicit and intentionally open:
   - `BLK-01`
   - `BLK-02`
+- Residual global debt register and phase-4 unification target are pinned:
+  - `RESIDUAL_GLOBAL_DEBT_STATUS_v0: ACTIVE`
+  - `BLK01_RAC_PROMOTION_ADJUDICATION_v0: NOT_YET_DISCHARGED`
+  - `BLK02_ACTION_RAC_RETIREMENT_ADJUDICATION_v0: NOT_YET_DISCHARGED`
+  - `TOE_GLOBAL_UNIFICATION_COMPOSITION_STATUS_v0: NOT_YET_DISCHARGED`
+  - `TOE_GLOBAL_UNIFICATION_NECESSITY_STATUS_v0: NOT_YET_DISCHARGED`
+  - `TOE_GLOBAL_UNIFICATION_COUNTERFACTUAL_STATUS_v0: NOT_YET_DISCHARGED`
+  - `TOE_GLOBAL_UNIFICATION_ADJUDICATION_v0: NOT_YET_DISCHARGED`
+  - `formal/docs/release/RESIDUAL_GLOBAL_DEBT_REGISTER_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_CLOSURE_v0.md`
+  - `formal/python/tests/test_phase4_global_unification_and_residual_debt_gate.py`
 - Action/RAC alignment adjudication token:
   - `ALIGNMENT_ADJUDICATION: DISCHARGED_CONDITIONAL_PUBLISH_v0`
 - Default-quotient lock pointers (synchronized support set):
