@@ -46,41 +46,15 @@
     },
     {
       "pillar_id": "PILLAR-SR",
-      "mode": "PHASE_ORDERED",
+      "mode": "CLOSED_HANDOFF",
       "authority_doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
       "expected_matrix_status": "CLOSED",
-      "phase_pairs": [
-        {
-          "completion_token": "SR_FULL_DERIVATION_PHASE1_COMPLETION_STATUS_v0",
-          "completion_value": "THEOREM_OBJECT_ROWS_01_04_DISCHARGED_NONCLAIM",
-          "next_token": "SR_FULL_DERIVATION_PHASE2_ENTRY_STATUS_v0",
-          "next_value": "CANONICAL_EQUIVALENCE_SURFACE_ENTRY_PINNED_NONCLAIM"
-        },
-        {
-          "completion_token": "SR_FULL_DERIVATION_PHASE3_COMPLETION_STATUS_v0",
-          "completion_value": "ASSUMPTION_MINIMIZATION_ROBUSTNESS_NEGCTRL_DISCHARGE_PINNED_NONCLAIM",
-          "next_token": "SR_FULL_DERIVATION_PHASE4_ENTRY_STATUS_v0",
-          "next_value": "ROBUSTNESS_NEGCTRL_DISCHARGE_ENTRY_PINNED_NONCLAIM"
-        },
-        {
-          "completion_token": "SR_FULL_DERIVATION_PHASE4_COMPLETION_STATUS_v0",
-          "completion_value": "ROBUSTNESS_NEGCTRL_DISCHARGE_COMPLETION_PINNED_NONCLAIM",
-          "next_token": "SR_FULL_DERIVATION_PHASE5_ENTRY_STATUS_v0",
-          "next_value": "DERIVATION_COMPLETENESS_GATE_ENTRY_PINNED_NONCLAIM"
-        },
-        {
-          "completion_token": "SR_FULL_DERIVATION_PHASE5_COMPLETION_STATUS_v0",
-          "completion_value": "DERIVATION_COMPLETENESS_GATE_DISCHARGE_COMPLETION_PINNED_NONCLAIM",
-          "next_token": "SR_FULL_DERIVATION_PHASE6_ENTRY_STATUS_v0",
-          "next_value": "INEVITABILITY_GATE_ENTRY_PINNED_NONCLAIM"
-        },
-        {
-          "completion_token": "SR_FULL_DERIVATION_PHASE6_COMPLETION_STATUS_v0",
-          "completion_value": "INEVITABILITY_GATE_DISCHARGE_COMPLETION_PINNED_NONCLAIM",
-          "next_token": "SR_FULL_DERIVATION_PHASE7_ENTRY_STATUS_v0",
-          "next_value": "PACKAGE_FREEZE_REOPEN_POLICY_ENTRY_PINNED_NONCLAIM"
-        }
-      ]
+      "completion_token": "SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION",
+      "completion_value": "DISCHARGED_v0_ROADMAP_PINNED",
+      "roadmap_proceed_token": "PROCEED_GATE_SR",
+      "roadmap_proceed_prefix": "ALLOWED_",
+      "expected_global_focus": "PILLAR-COSMO",
+      "expected_global_lane": "TARGET-COSMO-BG-PLAN"
     },
     {
       "pillar_id": "PILLAR-QFT",
