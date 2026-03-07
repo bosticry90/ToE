@@ -1,0 +1,105 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "TOE_ADJUDICATION_REPORT_SCHEMA_v0",
+  "title": "ToE Adjudication Report v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_id",
+    "generated_at_utc",
+    "runner_version",
+    "checks_run",
+    "failures",
+    "uncertainties",
+    "speculative_flags",
+    "manual_review_required"
+  ],
+  "properties": {
+    "schema_id": {
+      "type": "string",
+      "const": "TOE_ADJUDICATION_REPORT_SCHEMA_v0"
+    },
+    "generated_at_utc": {
+      "type": "string"
+    },
+    "runner_version": {
+      "type": "string"
+    },
+    "checks_run": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "check_id",
+          "status",
+          "return_code",
+          "duration_seconds",
+          "command"
+        ],
+        "properties": {
+          "check_id": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "passed",
+              "failed",
+              "timed_out"
+            ]
+          },
+          "return_code": {
+            "type": "integer"
+          },
+          "duration_seconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "command": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "stdout_tail": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "stderr_tail": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "failures": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "uncertainties": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "speculative_flags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "manual_review_required": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

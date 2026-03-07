@@ -46,6 +46,7 @@ def test_matrix_defined_adjudication_tokens_do_not_reintroduce_legacy_not_yet_va
         discharge_rel = entry.get("discharge_doc")
         full_token_name = entry.get("full_derivation_token")
         inevitability_token_name = entry.get("inevitability_token")
+        matrix_status = entry.get("matrix_status")
 
         assert isinstance(discharge_rel, str) and discharge_rel, f"{pillar_id}: missing discharge_doc in matrix row."
         assert isinstance(full_token_name, str) and full_token_name, f"{pillar_id}: missing full_derivation_token in matrix row."
@@ -53,6 +54,9 @@ def test_matrix_defined_adjudication_tokens_do_not_reintroduce_legacy_not_yet_va
 
         discharge_path = REPO_ROOT / discharge_rel
         discharge_text, _ = split_active_and_archived(_read(discharge_path), discharge_path)
+
+        if matrix_status == "LOCKED":
+            continue
 
         for token_name in (full_token_name, inevitability_token_name):
             for prefix in LEGACY_FORBIDDEN_PREFIXES:

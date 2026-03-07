@@ -48,3 +48,75 @@ jobs:
 
       - name: Run test suite
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests -q
+
+  orchestration-smoke:
+    name: Async Orchestration Smoke
+    runs-on: windows-latest
+    needs: governance
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Create venv
+        run: python -m venv .venv
+
+      - name: Install pytest
+        run: .\.venv\Scripts\python.exe -m pip install --upgrade pip pytest
+
+      - name: Run orchestration unit test
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests/test_orchestration_runner.py -q
+
+      - name: Run async orchestration manifest
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m formal.python.orchestration.runner --manifest formal/docs/release/TOE_ASYNC_ORCHESTRATION_MANIFEST_v0.json --output formal/output/reports/toe_orchestration_report_v0.json --max-concurrency 2 --fail-on-check-failure
+
+      - name: Validate report contract fields
+        run: >
+          pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -c
+          "import json; p='formal/output/reports/toe_orchestration_report_v0.json'; d=json.load(open(p, encoding='utf-8')); req=['schema_id','checks_run','failures','uncertainties','speculative_flags','manual_review_required']; missing=[k for k in req if k not in d]; assert not missing, f'Missing report keys: {missing}'"
+
+  sql-integrity-smoke:
+    name: SQL Integrity Snapshot Smoke
+    runs-on: windows-latest
+    needs: governance
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Create venv
+        run: python -m venv .venv
+
+      - name: Install pytest
+        run: .\.venv\Scripts\python.exe -m pip install --upgrade pip pytest
+
+      - name: Run SQL snapshot tool test
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests/test_sql_integrity_snapshot_tool.py -q
+
+      - name: Build SQL integrity snapshot mirror
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m formal.python.tools.sql_integrity_snapshot --db formal/output/reports/toe_integrity_snapshot_v0.sqlite3 --report formal/output/reports/toe_integrity_snapshot_report_v0.json --fail-on-issues
+
+  rust-trust-core:
+    name: Rust Trust Core
+    runs-on: windows-latest
+    needs: governance
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Build trust-core pilot
+        run: cargo build --manifest-path formal/rust/toe_trust_core/Cargo.toml
+
+      - name: Run trust-core pilot
+        run: cargo run --manifest-path formal/rust/toe_trust_core/Cargo.toml

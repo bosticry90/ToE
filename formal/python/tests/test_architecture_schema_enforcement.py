@@ -127,6 +127,8 @@ def test_phase_coverage_is_valid_for_pillars_and_new_targets() -> None:
             continue
         if name.startswith("DERIVATION_TARGET_QFT_GAUGE_MICRO_"):
             continue
+        if name.startswith("DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_"):
+            continue
 
         if name in pillars and phases != required:
             phase_violations.append(

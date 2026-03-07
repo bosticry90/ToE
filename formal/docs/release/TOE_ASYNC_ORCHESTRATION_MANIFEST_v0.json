@@ -1,0 +1,28 @@
+{
+  "schema_id": "TOE_ASYNC_ORCHESTRATION_MANIFEST_v0",
+  "runner_version": "v0",
+  "checks": [
+    {
+      "check_id": "state_theory_dag",
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "formal/python/tests/test_state_theory_dag.py",
+        "-q"
+      ],
+      "timeout_seconds": 240
+    },
+    {
+      "check_id": "pillar_phase_advancement_gate",
+      "command": [
+        "{python}",
+        "-m",
+        "pytest",
+        "formal/python/tests/test_pillar_phase_advancement_gate.py",
+        "-q"
+      ],
+      "timeout_seconds": 240
+    }
+  ]
+}

@@ -25,6 +25,11 @@ EXCLUDED_NON_AUTHORITATIVE_DIRS = {
     "backup",
     "scratch",
     "tests_quarantine",
+    "target",
+}
+
+EXCLUDED_NON_AUTHORITATIVE_LOCKFILES = {
+    "Cargo.lock",
 }
 
 
@@ -59,7 +64,9 @@ def _authoritative_json_surfaces() -> list[Path]:
     paths.update(
         path
         for path in REPO_ROOT.rglob("*.lock")
-        if path.is_file() and _is_authoritative_surface(path)
+        if path.is_file()
+        and path.name not in EXCLUDED_NON_AUTHORITATIVE_LOCKFILES
+        and _is_authoritative_surface(path)
     )
     paths.update(
         path

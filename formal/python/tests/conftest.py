@@ -86,7 +86,16 @@ _QFT_EVOL_TRANCHE_DEPRECATED_PATTERN = re.compile(
 )
 
 
+def _pillar_stat_is_active() -> bool:
+    roadmap = _repo_root() / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+    if not roadmap.exists():
+        return False
+    text = roadmap.read_text(encoding="utf-8")
+    return "| `PILLAR-STAT` | `ACTIVE` |" in text
+
+
 def pytest_collection_modifyitems(config, items):
+    stat_active = _pillar_stat_is_active()
     for item in items:
         if _QFT_EVOL_TRANCHE_DEPRECATED_PATTERN.search(item.nodeid):
             item.add_marker(
@@ -95,3 +104,12 @@ def pytest_collection_modifyitems(config, items):
                 )
             )
             continue
+
+        # STAT cycle gates are only meaningful once PILLAR-STAT is explicitly active in the roadmap.
+        test_file = Path(str(item.fspath)).name.lower()
+        if not stat_active and test_file.startswith("test_stat_"):
+            item.add_marker(
+                pytest.mark.skip(
+                    reason="PILLAR-STAT is not ACTIVE in PHYSICS_ROADMAP_v0.md; STAT cycle gates are deferred."
+                )
+            )

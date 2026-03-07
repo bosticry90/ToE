@@ -705,7 +705,7 @@ def test_qft_full_discharge_doc_contains_required_tokens_and_headers() -> None:
         "qft_evol_generator_unitarity_route_alignment_symmetry_witness_coherence_symmetry_witness_alignment_symmetry_witness_alignment_symmetry_witness_alignment_normalization_v0",
         "qft_evol_generator_unitarity_route_alignment_symmetry_witness_coherence_symmetry_witness_alignment_symmetry_witness_alignment_symmetry_witness_alignment_symmetry_witness_v0",
         "PILLAR_QFT_FULL_DERIVATION_DISCHARGE_LOCALIZATION_GATE_v0: FULL_DISCHARGE_ARTIFACTS_ONLY",
-        "PILLAR_QFT_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE",
+        "PILLAR_QFT_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: DISCHARGED_NO_AUTOMATIC_PROMOTION",
         "PILLAR_QFT_FULL_DERIVATION_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION",
         "QFT_FULL_DERIVATION_TRANCHE_ROLLOVER_GATE_v0: CYCLE26_TO_CYCLE27_HARDENING_ROUTE_ONLY",
         "QFT_FULL_DERIVATION_LEGACY_ROUTE_FORBID_GATE_v0: NO_LEGACY_PROMOTION_OR_ADJUDICATION_SHORTCUT",
