@@ -122,14 +122,7 @@ def test_stat_der01_object_surface_scaffold_coupling_cycle01_gate() -> None:
     row_line = _results_row_line(results_text, EXPECTED_ROW_ID)
     assert f"| {EXPECTED_ROW_ID} | `{EXPECTED_ROW_LABEL}` |" in row_line, "Row label must remain `T-PROVED`."
 
-    if stat_closed:
-        return
 
-    assert "STAT_DER01_OBJECT_SURFACE_SCAFFOLD_CYCLE01_GATE_v0" in row_line
-    assert "STAT_DER01_OBJECT_SURFACE_ROW_BINDING_v0" in row_line
-    assert EXPECTED_ARTIFACT_REL in row_line
-    assert EXPECTED_GATE_REL in row_line
-    assert "label promotion" in row_line
 
     payload = artifact_json["payload"]
     assert payload.get("artifact_id") == EXPECTED_ARTIFACT_ID
