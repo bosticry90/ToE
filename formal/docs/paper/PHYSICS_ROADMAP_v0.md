@@ -126,7 +126,7 @@ Current dual-layer snapshot (machine-checkable tokens):
   - The active canonical five-pillar set (`PILLAR-QFT`, `PILLAR-QM`, `PILLAR-GR`, `PILLAR-EM`, `PILLAR-SR`) is bounded full-derivation discharged, bounded inevitability discharged, and matrix-closed under v0 non-claim scope.
   - Remaining downstream locked queue pillar (`PILLAR-COSMO`) is excluded from this closed-set interpretation until unlock prerequisites are satisfied.
   - `PILLAR-STAT` closure posture is synchronized under discharged adjudication tokens and canonical matrix-closed status.
-- `PILLAR-GR_PHYSICS_STATUS: CLOSED_v0_DISCRETE_CONDITIONAL`
+- `PILLAR-GR_PHYSICS_STATUS: CLOSED_v0_DISCHARGED`
 - `PILLAR-GR_GOVERNANCE_STATUS: CLOSED_v0_REQUIRED_ROWS_CLEARED`
 - `FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0_BOUNDED`
 - `PROCEED_GATE_GR: ALLOWED_v0_PHYSICS_CLOSED`
@@ -938,10 +938,10 @@ GR v0 matrix-closure unblock priority (remaining execution order):
 1. none (required GR closure rows cleared for v0 matrix-closure gate).
 
 Completed unblock milestone:
-- `TOE-GR-DER-01` promoted to `T-CONDITIONAL` via
+- `TOE-GR-DER-01` promoted to `T-PROVED` via
   `gr01_der01_scaffold_bundle_under_promoted_assumptions` in
   `formal/toe_formal/ToeFormal/Variational/GR01DerivationScaffoldPromotion.lean`.
-- `TOE-GR-DER-02` promoted to `T-CONDITIONAL` via synchronized derivation-grade
+- `TOE-GR-DER-02` promoted to `T-PROVED` via synchronized derivation-grade
   package and action/RAC retirement alignment under conditional-publish endpoint:
   - `DER02_CHECKLIST_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
   - `ALIGNMENT_ADJUDICATION: DISCHARGED_CONDITIONAL_PUBLISH_v0`
@@ -949,11 +949,11 @@ Completed unblock milestone:
     - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_hAction_provenance_v0.md`
     - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_hRAC_obligation_bundle_v0.md`
     - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_bridge_discharge_object_v0.md`
-- `TOE-GR-CONS-01` promoted to `T-CONDITIONAL` via bridge-composed conservation
+- `TOE-GR-CONS-01` promoted to `T-PROVED` via bridge-composed conservation
   compatibility theorem surface in `ConservationContract.lean`:
   - `gr01_conservation_compatibility_from_poisson_residual_v0`
   - `gr01_conservation_compatibility_from_bridge_promotion_chain_v0`
-  - `CONS01_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
+  - `CONS01_ADJUDICATION: DISCHARGED_v0`
 - Full-derivation escalation lane is discharged for bounded/discrete v0 scope:
   - target artifact:
     `formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md`
@@ -1317,7 +1317,7 @@ QFT full-derivation pre-discharge closure pin (cycle-27/cycle-50):
 | Pillar / Blocker | Target ID | Promotion hypothesis | Promotion mechanism | Promotion attempt cycle | Attempt status | Discharge path defined | Discharge scaffold module | Next promotion objective (token) | Result |
 |---|---|---|---|---|---|---|---|---|---|
 | `PILLAR-GR / TOE-GR-3D-03 (Track B)` | `TARGET-GR01-3D-POINT-SOURCE-PLAN` | Bounded-domain Dirichlet point-source posture can support domain-wise residual characterization and away-from-source Poisson closure under explicit assumptions. | Freeze `PointSourceDirichletBoundaryAssumptions`, then pin finite-domain operator-equation/linear-system/system/candidate bridge objects and theorem tokens without continuum or infinite-domain inversion claims; keep bounded attempt package pinned in `TARGET-GR01-3D-03-ATTEMPT-PACKAGE-PLAN` (`formal/docs/paper/DERIVATION_TARGET_GR01_3D_03_DISCHARGE_ATTEMPT_PACKAGE_v0.md`) and closure-focused package pinned in `TARGET-GR01-3D-03-CLOSURE-PACKAGE-PLAN` (`formal/docs/paper/DERIVATION_TARGET_GR01_3D_03_CLOSURE_PACKAGE_v0.md`). | `Cycle-002 (2026-02-14)` | `B-DISCHARGE-ATTEMPTED-BUT-UNPROVEN` | `YES` | `formal/toe_formal/ToeFormal/Variational/GR01Mainstream3DPointSource.lean` | `gr01_mainstream3d_point_source_poissonEquation3D_away_from_source_exists_from_operator_equation_under_invertibility` | Attempt executed; objective advanced to existential away-from-source closure token; status remains blocker-facing and unproven for promotion. |
-| `PILLAR-GR / TOE-GR-CONS-01` | `TARGET-GR-CONS-PLAN` | Weak-field conservation compatibility can be promoted from contract baseline to a bridge-composed theorem-surface token under explicit assumptions. | Compose GR01 bridge residual closure with conservation compatibility theorem tokens in `ConservationContract.lean`, bind assumption IDs, and enforce non-claim boundaries with promotion tests. | `Cycle-008 (2026-02-15)` | `DISCHARGED_CONDITIONAL_v0` | `YES` | `formal/toe_formal/ToeFormal/GR/ConservationContract.lean` | `gr01_conservation_compatibility_from_bridge_promotion_chain_v0` | Promotion executed: `TOE-GR-CONS-01` moved to non-blocked theorem-conditional status; compatibility closure is explicit under weak-field/default-quotient assumptions while full conservation-family completion remains out of scope. |
+| `PILLAR-GR / TOE-GR-CONS-01` | `TARGET-GR-CONS-PLAN` | Weak-field conservation compatibility can be promoted from contract baseline to a bridge-composed theorem-surface token under explicit assumptions. | Compose GR01 bridge residual closure with conservation compatibility theorem tokens in `ConservationContract.lean`, bind assumption IDs, and enforce non-claim boundaries with promotion tests. | `Cycle-008 (2026-02-15)` | `DISCHARGED_v0` | `YES` | `formal/toe_formal/ToeFormal/GR/ConservationContract.lean` | `gr01_conservation_compatibility_from_bridge_promotion_chain_v0` | Promotion executed: `TOE-GR-CONS-01` moved to non-blocked theorem-grade status; compatibility closure is explicit under weak-field/default-quotient assumptions while full conservation-family completion remains out of scope. |
 | `PILLAR-GR / action-to-operator upstream depth` | `TARGET-GR01-ACTION-TO-OPERATOR-DISCRETE-DERIVATION_v0` | Discrete action surface can discharge operator-side posture under explicit finite-difference variation assumptions and bounded/non-claim constraints. | Freeze the action/variation bridge route (`ActionRep32FiniteDifferenceRepresentsP`, `ActionVariationBridgeRep32At`), discharge evaluator transport (`MICRO-03A2`, `MICRO-03A3`) with a bridge witness constructor route, and keep bounded/non-claim boundaries explicit. | `Cycle-004 (2026-02-14)` | `DISCHARGED_v0_DISCRETE` | `YES` | `formal/toe_formal/ToeFormal/Variational/GR01ActionToOperatorDiscrete.lean` | `actionRep32_produces_operator_equation_discrete_of_bridge_witness_constructor_v0` | Discharge route assembled in-module via `mk_ELImpliesDiscretePoissonResidual_from_bridge_v0` and guarded end-to-end theorem chain; adjudication synchronized to `ACTION_TO_OPERATOR_ADJUDICATION: DISCHARGED_v0_DISCRETE`; enforcement gate pinned at `formal/python/tests/test_gr01_action_operator_discharge_gate.py`. |
 | `PILLAR-GR / full-derivation discharge` | `TARGET-GR01-FULL-DERIVATION-DISCHARGE_v0` | Weak-field Poisson operator posture should be derivable from the declared action route without policy bridge assumptions. | Convert the current contract-level EL->residual bridge into an algebra-level derivation path by eliminating placeholder/axiomatic default-route objects and proving a direct action-side discharge theorem; keep bounded/discrete/non-claim limits explicit. | `Cycle-009 (2026-02-15)` | `B-DISCHARGE-ATTEMPTED-BUT-UNPROVEN` | `YES` | `formal/toe_formal/ToeFormal/Variational/ActionRep32QuadraticCubic.lean` | `actionRep32_produces_operator_equation_discrete_without_bridge_assumptions_v0` | Blocker inventory is pinned in `DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md`; deviation expansion theorem token exists (`differenceQuotientRep32_cubic_deviation_expand`), but adjudication remains open. |
 

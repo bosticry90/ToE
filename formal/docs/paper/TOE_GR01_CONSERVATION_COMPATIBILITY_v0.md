@@ -4,7 +4,7 @@ Spec ID:
 - `TOE_GR01_CONSERVATION_COMPATIBILITY_v0`
 
 Classification:
-- `T-CONDITIONAL`
+- `T-PROVED`
 
 Purpose:
 - Define a minimal, bounded conservation-compatibility surface for GR01 weak-field closure.
@@ -26,7 +26,7 @@ Scope:
   - full GR conservation-family closure remains out of scope for v0.
 
 Adjudication token:
-- `CONS01_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
+- `CONS01_ADJUDICATION: DISCHARGED_v0`
 
 ## Dependencies
 
@@ -37,7 +37,7 @@ Adjudication token:
 
 ## Promotion / Maintenance Boundary
 
-- This artifact is now maintained at `T-CONDITIONAL` only while:
+- This artifact is now maintained at `T-PROVED` while:
   - theorem-surface conservation compatibility tokens remain pinned,
   - assumption IDs and scope limits remain explicit in `ASSUMPTION_REGISTRY_v1.md`,
   - enforcement tests continue to pin theorem tokens and non-claim wording.

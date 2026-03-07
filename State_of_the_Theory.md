@@ -1608,14 +1608,14 @@ GR01 governance-alignment checkpoint (2026-02-15):
 
 GR01 conservation-closure sync checkpoint (2026-02-15):
 - Conservation compatibility promotion is now synchronized:
-  - `TOE-GR-CONS-01: T-CONDITIONAL`
-  - `CONS01_ADJUDICATION: DISCHARGED_CONDITIONAL_v0`
+  - `TOE-GR-CONS-01: T-PROVED`
+  - `CONS01_ADJUDICATION: DISCHARGED_v0`
 - Required GR closure rows are non-blocking:
-  - `TOE-GR-DER-01: P-POLICY`
-  - `TOE-GR-DER-02: P-POLICY`
-  - `TOE-GR-CONS-01: T-CONDITIONAL`
+  - `TOE-GR-DER-01: T-PROVED`
+  - `TOE-GR-DER-02: T-PROVED`
+  - `TOE-GR-CONS-01: T-PROVED`
 - Dual-layer gates are synchronized to current governance state:
-  - `PILLAR-GR_PHYSICS_STATUS: CLOSED_v0_DISCRETE_CONDITIONAL`
+  - `PILLAR-GR_PHYSICS_STATUS: CLOSED_v0_DISCHARGED`
   - `PILLAR-GR_GOVERNANCE_STATUS: CLOSED_v0_REQUIRED_ROWS_CLEARED`
   - `PROCEED_GATE_GR: ALLOWED_v0_PHYSICS_CLOSED`
   - `MATRIX_CLOSURE_GATE_GR: ALLOWED_v0_GOVERNANCE_CLOSED`
