@@ -95,6 +95,6 @@ def test_cosmo_der02_governance_coupling_scaffold_cycle01_gate() -> None:
         assert token in (json.dumps(artifact_json) if ":" in token else lean_text + json.dumps(artifact_json))
 
     assert "TOE-COSMO-DER-02" in results_text
-    assert "| TOE-COSMO-DER-02 | `P-POLICY` |" in results_text
+    assert "| TOE-COSMO-DER-02 | `T-PROVED` |" in results_text
 
     assert EXPECTED_GATE_REL in suite_text

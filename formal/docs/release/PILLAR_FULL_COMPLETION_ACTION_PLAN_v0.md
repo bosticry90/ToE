@@ -22,7 +22,7 @@ into a terminal full-completion posture with no unresolved pillar-critical rows.
   - PILLAR-QFT: CLOSED_HANDOFF_ARTIFACT
 - Results table still includes unresolved rows impacting full-completion claims:
   - GR blocked rows retired in Phase 3 tranche (TOE-GR-01, TOE-GR-THM-01 now non-blocked).
-  - Multiple pillar derivation rows remain governance placeholders (`P-POLICY`) for GR/STAT/COSMO DER lanes.
+  - No pillar derivation rows remain governance placeholders (`P-POLICY`) in RESULTS_TABLE DER lanes.
   - Residual global blockers remain explicit: `BLK-01`, `BLK-02`.
 
 ## Full-Completion Definition

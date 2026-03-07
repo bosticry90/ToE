@@ -121,6 +121,6 @@ def test_cosmo_der02_closure_package_cycle01_gate() -> None:
     ]:
         assert theorem_token in lean_text
 
-    assert "| TOE-COSMO-DER-02 | `P-POLICY` |" in results_text
+    assert "| TOE-COSMO-DER-02 | `T-PROVED` |" in results_text
     assert EXPECTED_GATE_REL in results_text
     assert EXPECTED_GATE_REL in suite_text
