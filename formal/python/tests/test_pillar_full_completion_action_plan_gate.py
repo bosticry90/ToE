@@ -50,6 +50,11 @@ def _conditional_derivation_rows(results_text: str) -> list[str]:
     return pattern.findall(results_text)
 
 
+def _policy_derivation_rows(results_text: str) -> list[str]:
+    pattern = re.compile(r"^\|\s*(TOE-(?:GR|QM|EM|SR|QFT|STAT|COSMO)-DER-[0-9]+)\s*\|\s*`P-POLICY`\s*\|", flags=re.MULTILINE)
+    return pattern.findall(results_text)
+
+
 def test_full_completion_plan_contract_and_gate_wiring() -> None:
     plan_text = _read(PLAN_PATH)
     suite_text = _read(SUITE_PATH)
@@ -105,9 +110,10 @@ def test_full_completion_gap_visibility_and_attestation_rule() -> None:
     )
     blocked_rows = _blocked_pillar_rows(results_text)
     conditional_der_rows = _conditional_derivation_rows(results_text)
+    policy_der_rows = _policy_derivation_rows(results_text)
 
     # Until completion debt is gone, the project remains in planning/execution posture.
-    if non_terminal_modes or blocked_rows or conditional_der_rows:
+    if non_terminal_modes or blocked_rows or conditional_der_rows or policy_der_rows:
         assert "Status: Active Planning" in _read(PLAN_PATH)
         return
 
