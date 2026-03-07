@@ -65,6 +65,16 @@ Write-Host "Running governance suite via ./py.ps1" -ForegroundColor Cyan
   formal/python/tests/test_cosmo_der02_governance_coupling_scaffold_cycle01_gate.py `
   formal/python/tests/test_cosmo_der01_closure_package_cycle01_gate.py `
   formal/python/tests/test_cosmo_der02_closure_package_cycle01_gate.py `
+  formal/python/tests/test_stat_der01_theorem_surface_scaffold_coupling_cycle01_gate.py `
+  formal/python/tests/test_stat_der01_theorem_body_scope_boundary_cycle01_gate.py `
+  formal/python/tests/test_stat_der01_theorem_body_scaffold_coupling_cycle01_gate.py `
+  formal/python/tests/test_stat_der01_discharge_scaffold_coupling_cycle01_gate.py `
+  formal/python/tests/test_stat_der01_object_surface_scaffold_coupling_cycle01_gate.py `
+  formal/python/tests/test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate.py `
+  formal/python/tests/test_stat_der02_theorem_body_scope_boundary_cycle01_gate.py `
+  formal/python/tests/test_stat_der02_theorem_body_scaffold_coupling_cycle01_gate.py `
+  formal/python/tests/test_stat_der02_discharge_scaffold_coupling_cycle01_gate.py `
+  formal/python/tests/test_stat_der02_object_surface_scaffold_coupling_cycle01_gate.py `
   formal/python/tests/test_orchestration_report_contract_gate.py `
   formal/python/tests/test_conftest_signature_stability_gate.py `
   formal/python/tests/test_repository_retention_policy_contract_gate.py `

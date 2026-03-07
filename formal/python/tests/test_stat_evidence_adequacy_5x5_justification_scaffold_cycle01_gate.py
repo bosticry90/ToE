@@ -77,9 +77,7 @@ def test_stat_evidence_adequacy_5x5_justification_scaffold_cycle01_gate() -> Non
     matrix = _read_json(MATRIX_PATH)
     artifact_json = _read_json(ARTIFACT_PATH)
 
-    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
-        "STAT adequacy 5x5 scaffold gate applies only after `PILLAR-STAT` activation."
-    )
+    assert ("| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text or "| `PILLAR-STAT` | `CLOSED` |" in roadmap_text), ("STAT gate requires `PILLAR-STAT` ACTIVE or CLOSED posture.")
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for adequacy 5x5 scaffold gate."
     assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."

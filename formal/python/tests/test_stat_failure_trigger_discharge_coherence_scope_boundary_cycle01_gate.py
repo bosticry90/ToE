@@ -61,9 +61,7 @@ def test_stat_failure_trigger_discharge_coherence_scope_boundary_cycle01_gate() 
     matrix = _read_json(MATRIX_PATH)
     artifact_json = _read_json(ARTIFACT_PATH)
 
-    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
-        "STAT failure-trigger discharge coherence scope-boundary gate applies only after `PILLAR-STAT` activation."
-    )
+    assert ("| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text or "| `PILLAR-STAT` | `CLOSED` |" in roadmap_text), ("STAT gate requires `PILLAR-STAT` ACTIVE or CLOSED posture.")
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), (
         "PILLAR-STAT matrix row must exist for failure-trigger discharge coherence scope-boundary gate."

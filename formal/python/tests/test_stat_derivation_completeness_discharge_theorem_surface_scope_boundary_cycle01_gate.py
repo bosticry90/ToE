@@ -61,9 +61,7 @@ def test_stat_derivation_completeness_discharge_theorem_surface_scope_boundary_c
     matrix = _read_json(MATRIX_PATH)
     artifact_json = _read_json(ARTIFACT_PATH)
 
-    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
-        "STAT derivation-completeness discharge theorem-surface scope-boundary gate applies only after `PILLAR-STAT` activation."
-    )
+    assert ("| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text or "| `PILLAR-STAT` | `CLOSED` |" in roadmap_text), ("STAT gate requires `PILLAR-STAT` ACTIVE or CLOSED posture.")
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), (
         "PILLAR-STAT matrix row must exist for derivation-completeness discharge theorem-surface scope-boundary gate."

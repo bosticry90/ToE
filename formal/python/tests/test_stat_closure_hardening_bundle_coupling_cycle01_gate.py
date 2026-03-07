@@ -55,9 +55,7 @@ def test_stat_closure_hardening_bundle_coupling_cycle01_gate() -> None:
     matrix = _read_json(MATRIX_PATH)
     artifact_json = _read_json(ARTIFACT_PATH)
 
-    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
-        "STAT closure-hardening gate applies only after `PILLAR-STAT` activation."
-    )
+    assert ("| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text or "| `PILLAR-STAT` | `CLOSED` |" in roadmap_text), ("STAT gate requires `PILLAR-STAT` ACTIVE or CLOSED posture.")
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for closure-hardening gate."
     assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."

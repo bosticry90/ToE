@@ -77,9 +77,7 @@ def test_stat_nonflip_execution_custody_attestation_confirmation_attestation_sta
     artifact_json = _read_json(ARTIFACT_PATH)
     confirmation_status_artifact_json = _read_json(CONFIRMATION_STATUS_ARTIFACT_PATH)
 
-    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
-        "STAT nonflip-execution-custody-attestation-confirmation-attestation status gate applies only after `PILLAR-STAT` activation."
-    )
+    assert ("| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text or "| `PILLAR-STAT` | `CLOSED` |" in roadmap_text), ("STAT gate requires `PILLAR-STAT` ACTIVE or CLOSED posture.")
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), (
         "PILLAR-STAT matrix row must exist for nonflip-execution-custody-attestation-confirmation-attestation status gate."

@@ -62,9 +62,7 @@ def test_stat_adjudication_transition_status_cycle01_gate() -> None:
     artifact_json = _read_json(ARTIFACT_PATH)
     discharge_completion_status_artifact_json = _read_json(DISCHARGE_COMPLETION_STATUS_ARTIFACT_PATH)
 
-    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
-        "STAT adjudication-transition status gate applies only after `PILLAR-STAT` activation."
-    )
+    assert ("| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text or "| `PILLAR-STAT` | `CLOSED` |" in roadmap_text), ("STAT gate requires `PILLAR-STAT` ACTIVE or CLOSED posture.")
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), (
         "PILLAR-STAT matrix row must exist for adjudication-transition status gate."

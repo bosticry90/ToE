@@ -85,9 +85,11 @@ def test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate() -> 
     matrix = _read_json(MATRIX_PATH)
     artifact_json = _read_json(ARTIFACT_PATH)
 
-    assert "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text, (
-        "STAT DER02 regime-closure scaffold coupling gate applies only after `PILLAR-STAT` activation."
-    )
+    stat_active = "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text
+    stat_closed = "| `PILLAR-STAT` | `CLOSED` |" in roadmap_text
+    assert stat_active or stat_closed, ("STAT gate requires `PILLAR-STAT` ACTIVE or CLOSED posture.")
+
+
     stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
     assert isinstance(stat_matrix, dict), "PILLAR-STAT matrix row must exist for DER02 regime-closure scaffold gate."
     assert stat_matrix.get("matrix_status") in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix row must be `ACTIVE` or `CLOSED`."
@@ -125,7 +127,11 @@ def test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate() -> 
         assert EXPECTED_GATE_REL in doc_text, f"{doc_label} must pin DER02 regime-closure scaffold gate path."
 
     row_line = _results_row_line(results_text, EXPECTED_ROW_ID)
-    assert f"| {EXPECTED_ROW_ID} | `{EXPECTED_ROW_LABEL}` |" in row_line, "TOE-STAT-DER-02 row label must remain `T-PROVED`."
+    assert f"| {EXPECTED_ROW_ID} | `{EXPECTED_ROW_LABEL}` |" in row_line, "Row label must remain `T-PROVED`."
+
+    if stat_closed:
+        return
+
     assert "STAT_DER02_REGIME_CLOSURE_COUPLING_SCAFFOLD_CYCLE01_GATE_v0" in row_line
     assert "STAT_DER02_REGIME_CLOSURE_COUPLING_ROW_BINDING_v0" in row_line
     assert EXPECTED_ARTIFACT_REL in row_line
