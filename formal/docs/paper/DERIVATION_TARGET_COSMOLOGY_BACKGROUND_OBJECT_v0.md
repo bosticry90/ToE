@@ -15,6 +15,11 @@ Purpose:
 
 Kickoff adjudication:
 - `COSMO_BACKGROUND_ADJUDICATION: NOT_YET_DISCHARGED`
+- `PILLAR_COSMO_FULL_DERIVATION_DISCHARGE_ADJUDICATION: NOT_YET_DISCHARGED`
+- `PILLAR_COSMO_FULL_DERIVATION_DISCHARGE_LOCALIZATION_GATE_v0: FULL_DISCHARGE_ARTIFACTS_ONLY`
+- `PILLAR_COSMO_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
+- `PILLAR_COSMO_FULL_DERIVATION_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+- `PILLAR_COSMO_DISCHARGE_DOC_IS_UMBRELLA_DOC_v0: TRUE`
 
 Scope boundary token:
 - `COSMO_BACKGROUND_SCOPE_BOUNDARY_v0: BACKGROUND_ONLY_NONCLAIM`
@@ -252,3 +257,45 @@ Governance pointers:
 - COSMO micro-26 gate: `formal/python/tests/test_cosmo_bg_micro26_dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_packet_gate.py`
 - COSMO micro-27 gate: `formal/python/tests/test_cosmo_bg_micro27_dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_packet_gate.py`
 - COSMO rollup gate: `formal/python/tests/test_cosmo_background_pillar_package_rollup_gate.py`
+
+- `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md`
+
+## TARGET section
+
+- `TARGET-COSMO-BG-PLAN`
+
+## ASSUMPTION_FREEZE section
+
+- Assumption classes and prerequisite locks remain explicit and frozen.
+
+## CANONICAL_ROUTE section
+
+- Canonical route remains bound to micro-cycle package progression and rollup lock pointers.
+
+## ANTI_SHORTCUT section
+
+- No shortcut promotion is authorized outside pinned discharge and matrix gates.
+
+## COUNTERFACTUAL section
+
+- Counterfactual and negative-control checks remain required before transition changes.
+
+## INDEPENDENT_NECESSITY section
+
+- Independent necessity remains scoped to registered COSMO theorem-surface placeholders.
+
+## HARDENING section
+
+- Hardening bundle and drift alarms remain gate-coupled and hash-pinned.
+
+## BOUNDED_SCOPE section
+
+- Bounded non-claim scope remains authoritative for this discharge artifact.
+
+## DRIFT_GATES section
+
+- Drift gates remain active across roadmap, state, matrix, and results surfaces.
+
+## ADJUDICATION_SYNC section
+
+- Adjudication synchronization remains `NOT_YET_DISCHARGED` under locked-queue lane policy.

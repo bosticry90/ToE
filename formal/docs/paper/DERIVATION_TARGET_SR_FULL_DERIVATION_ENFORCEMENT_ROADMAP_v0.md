@@ -11,6 +11,7 @@ Classification:
 
 Purpose:
 - Pin an authoritative, no-deviation execution roadmap to reach SR full derivation/discharge/inevitability.
+- Authoritative no-deviation rule: phase order and enforcement gates are mandatory.
 - Prevent lane drift from prior proven governance sequence discipline.
 - Enforce phase order, promotion gates, and reopen triggers under explicit non-claim boundaries.
 

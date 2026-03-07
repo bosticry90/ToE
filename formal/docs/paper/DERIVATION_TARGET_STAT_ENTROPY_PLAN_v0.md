@@ -436,6 +436,52 @@ Cycle02 `PILLAR-STAT` multi-cycle drift-resistance sweep scaffold (bounded non-p
 - no discharge adjudication claim, no inevitability claim, no adequacy completion claim, and no external truth claim are introduced by this scaffold.
 - any artifact revision must update the pinned SHA256 token and cross-surface pointers in the same change set.
 
+- `formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md`
+- `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_LOCALIZATION_GATE_v0: FULL_DISCHARGE_ARTIFACTS_ONLY`
+- `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: DISCHARGED_NO_AUTOMATIC_PROMOTION`
+- `PILLAR_STAT_FULL_DERIVATION_DISCHARGE_BOUNDARY_v0: NO_FULL_DERIVATION_DISCHARGE_OR_INEVITABILITY_PROMOTION`
+- `PILLAR_STAT_DISCHARGE_DOC_IS_UMBRELLA_DOC_v0: TRUE`
+
+## TARGET section
+
+- `TARGET-TH-ENTROPY-PLAN`
+
+## ASSUMPTION_FREEZE section
+
+- Assumption classes remain explicit and frozen for bounded scope execution.
+
+## CANONICAL_ROUTE section
+
+- Canonical route remains pinned to the registered STAT discharge package.
+
+## ANTI_SHORTCUT section
+
+- No shortcut promotion is authorized outside pinned discharge gates.
+
+## COUNTERFACTUAL section
+
+- Counterfactual checks remain required before any future transition changes.
+
+## INDEPENDENT_NECESSITY section
+
+- Structural necessity classification remains scoped to registry-coupled theorem surfaces.
+
+## HARDENING section
+
+- Hardening artifacts remain hash-pinned and gate-coupled.
+
+## BOUNDED_SCOPE section
+
+- Bounded non-claim scope remains authoritative for this artifact.
+
+## DRIFT_GATES section
+
+- Drift gates remain active across roadmap, state, and results surfaces.
+
+## ADJUDICATION_SYNC section
+
+- Adjudication synchronization remains `DISCHARGED_v0_BOUNDED` under pinned lane policy.
+
 Cycle01 `PILLAR-STAT` evidence-adequacy 5x5 justification scaffold (bounded non-promotional coupling layer):
 - `STAT_EVIDENCE_ADEQUACY_5X5_JUSTIFICATION_SCAFFOLD_CYCLE01_ARTIFACT_v0: stat_evidence_adequacy_5x5_justification_scaffold_cycle01_v0`
 - `STAT_EVIDENCE_ADEQUACY_5X5_JUSTIFICATION_SCAFFOLD_CYCLE01_SHA256_v0: c768d24be2771ca4e79e1a1d2a4adf81e331cba2240e11903dc1127150074bc8`
