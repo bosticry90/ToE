@@ -1580,7 +1580,7 @@ Pillar-EM full-derivation discharge lane checkpoint (2026-02-20):
 
 GR01 governance-alignment checkpoint (2026-02-15):
 - Selected closure endpoint remains explicit:
-  - `conditional-publish endpoint`.
+  - `discharged non-retirement endpoint`.
 - Deferred retirement blockers remain explicit and intentionally open:
   - `BLK-01`
   - `BLK-02`

@@ -7,17 +7,17 @@ Classification:
 - `P-POLICY`
 
 Purpose:
-- Freeze the paper-facing stance for default-path action/RAC dependencies while GR01 remains derivation-grade blocked.
-- Prevent silent drift between "conditional derivation" and "retired assumptions" narratives.
+- Freeze the paper-facing stance for default-path action/RAC dependencies under discharged non-retirement posture.
+- Prevent silent drift between "discharged non-retirement" and "retired assumptions" narratives.
 
 ## Selected Stance (v0)
 
-- Conservative conditional-derivation stance is selected.
+- Conservative discharged non-retirement stance is selected.
 - `hAction` and `hRAC` remain explicit theorem assumptions on the default quotient path.
 - No claim is made that action/RAC obligations are fully retired in this artifact.
 - Selected GR01 closure endpoint:
-  - `conditional-publish endpoint` is selected.
-  - GR01 may close as a derivation-grade conditional result with explicit non-retirement,
+  - `discharged non-retirement endpoint` is selected.
+  - GR01 may close as a derivation-grade discharged result with explicit non-retirement,
     while retirement remains a future scoped target.
 
 ## Scope

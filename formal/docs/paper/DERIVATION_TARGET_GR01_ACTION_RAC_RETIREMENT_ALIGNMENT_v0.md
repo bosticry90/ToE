@@ -11,7 +11,7 @@ Classification:
 
 Purpose:
 - Freeze a bounded discharge path for the remaining GR01 action/RAC retirement alignment blocker.
-- Keep `conditional-publish endpoint` explicit until retirement criteria are discharged.
+- Keep `discharged non-retirement endpoint` explicit while retirement criteria remain deferred.
 - Prevent silent drift between "explicit non-retirement posture" and "retired assumptions" narratives.
 
 Non-claim boundary:
@@ -25,7 +25,7 @@ Non-claim boundary:
 
 1. Stance surface remains explicit:
 - `formal/docs/paper/TOE_GR01_ACTION_RAC_STANCE_v0.md`
-- `conditional-publish endpoint`
+- `discharged non-retirement endpoint`
 - explicit `hAction` / `hRAC` posture.
 
 2. Retirement criteria remain explicit and synchronized:
@@ -47,13 +47,13 @@ Non-claim boundary:
 
 ## Mandatory Failure Triggers
 
-- missing explicit `conditional-publish endpoint` stance token.
+- missing explicit `discharged non-retirement endpoint` stance token.
 - missing `hAction` or `hRAC` explicit posture.
 - missing any locked support pointer listed above.
 - removal of `BLK-01`/`BLK-02` blocker mention without replacement discharge artifact.
 - cross-surface mismatch about action/RAC retirement posture.
 
-## Discharged Alignment Endpoint Definition (v0 conditional-publish posture)
+## Discharged Alignment Endpoint Definition (v0 non-retirement posture)
 
 - Alignment may be marked discharged without retiring `hAction`/`hRAC` only when
   all conditions below are true:
@@ -82,7 +82,7 @@ Non-claim boundary:
 - Current retirement posture:
   - explicit non-retirement (discharged endpoint with pinned blocker pointers).
 - Current blocker posture:
-  - action/RAC retirement remains explicitly deferred under conditional-publish
+  - action/RAC retirement remains explicitly deferred under discharged non-retirement
     endpoint with pinned replacement-object pointers.
 - Current alignment adjudication token (v0):
   - `ALIGNMENT_ADJUDICATION: DISCHARGED_v0`

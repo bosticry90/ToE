@@ -79,7 +79,7 @@ Remaining blocker checklist (tokenized):
    - keep action/RAC stance surface explicit:
      - `formal/docs/paper/TOE_GR01_ACTION_RAC_STANCE_v0.md`
    - closure endpoint for this pillar is fixed to:
-     - `conditional-publish endpoint` (explicit non-retirement allowed, with future retirement scoped separately)
+    - `discharged non-retirement endpoint` (explicit non-retirement allowed, with future retirement scoped separately)
    - keep default-quotient lock pointers explicit:
      - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_hAction_provenance_v0.md`
      - `formal/markdown/locks/functionals/FN-DERIVE_default_quotient_hRAC_obligation_bundle_v0.md`

@@ -211,7 +211,7 @@ Frozen assumptions used here:
 
 ## Promotion Maintenance Bundle (DER-02, v0)
 
-Required to keep non-blocking conditional status:
+Required to keep non-blocking discharged status:
 1. Synchronize action->operator depth discharge references:
    - retain `ACTION_TO_OPERATOR_ADJUDICATION: DISCHARGED_v0_DISCRETE` in
      `DERIVATION_TARGET_GR01_ACTION_TO_OPERATOR_DISCRETE_DERIVATION_v0.md`,
@@ -222,7 +222,7 @@ Required to keep non-blocking conditional status:
    - keep `BLK-01` / `BLK-02` explicit as deferred retirement blockers with
      replacement-object pointers.
 3. Keep dual-format closure synchronization explicit:
-   - `PILLAR-GR_PHYSICS_STATUS: CLOSED_v0_DISCRETE_CONDITIONAL`,
+  - `PILLAR-GR_PHYSICS_STATUS: CLOSED_v0_DISCHARGED`,
    - `PILLAR-GR_GOVERNANCE_STATUS: CLOSED_v0_REQUIRED_ROWS_CLEARED`,
    - `PROCEED_GATE_GR: ALLOWED_v0_PHYSICS_CLOSED`,
    - `MATRIX_CLOSURE_GATE_GR: ALLOWED_v0_GOVERNANCE_CLOSED`,
