@@ -1,0 +1,44 @@
+{
+  "artifact_id": "cosmo_derivation_completeness_gate_readiness_packet_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_derivation_completeness_gate_readiness_packet_cycle01",
+    "status": "readiness_packet_non_promotional",
+    "readiness_scope": [
+      "locked_queue_prerequisites_pinned_before_derivation_completeness_entry",
+      "results_table_rows_remain_blocked_until_authorized_transition",
+      "no_derivation_completeness_discharge_claim",
+      "no_external_truth_claim"
+    ],
+    "required_packet_inputs": [
+      "required_cosmo_closure_rows_declared",
+      "cosmo_locked_queue_status_pinned",
+      "cosmo_external_implications_reference_only_policy_pinned",
+      "cosmo_rollup_pointer_completeness_gate_pinned"
+    ],
+    "required_token_bindings": [
+      "PROCEED_GATE_COSMO: BLOCKED_v0_LOCKED_QUEUE",
+      "MATRIX_CLOSURE_GATE_COSMO: BLOCKED_v0_LOCKED_QUEUE",
+      "REQUIRED_COSMO_CLOSURE_ROWS: TOE-COSMO-DER-01,TOE-COSMO-DER-02",
+      "COSMO_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT"
+    ],
+    "cross_surface_pointers": [
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "State_of_the_Theory.md",
+      "formal/python/tests/test_cosmo_derivation_completeness_gate_readiness_packet_cycle01_gate.py"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_completion_claim",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-COSMO-DER-01",
+      "TOE-COSMO-DER-02"
+    ],
+    "generated_on": "2026-03-06"
+  },
+  "payload_sha256": "7a379acfa77e131bf1c26bb72acfb5956995c8ff05d5135eb7ce4baabc0daf1d"
+}

@@ -1,0 +1,34 @@
+{
+  "artifact_id": "cosmo_der01_discharge_scaffold_cycle01_v0",
+  "artifact_version": "v0",
+  "placeholder_template": false,
+  "payload": {
+    "checkpoint": "cosmo_der01_discharge_scaffold_cycle01",
+    "status": "discharge_scaffold_discharged_conditional_nonclaim",
+    "scope": "cosmo_der01_discharge_scaffold_bounded_conditional_v0",
+    "row_binding": "TOE_COSMO_DER_01_P_POLICY_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM",
+    "dependency_tokens": [
+      "cosmo_der01_theorem_body_scope_boundary_cycle01_v0",
+      "cosmo_der01_theorem_body_scaffold_cycle01_v0"
+    ],
+    "cross_surface_pointers": [
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "State_of_the_Theory.md",
+      "formal/docs/paper/RESULTS_TABLE_v0.md",
+      "formal/toe_formal/ToeFormal/Cosmology/BackgroundObjectScaffold.lean",
+      "formal/output/cosmo_der01_theorem_body_scaffold_cycle01_v0.json",
+      "formal/python/tests/test_cosmo_der01_closure_package_cycle01_gate.py"
+    ],
+    "anti_shortcut_constraints": [
+      "no_phase_skip_promotion",
+      "no_implicit_completion_claim",
+      "artifact_hash_and_cross_surface_pointers_required"
+    ],
+    "discharge_row_linkage": [
+      "TOE-COSMO-DER-01"
+    ],
+    "generated_on": "2026-03-06"
+  },
+  "payload_sha256": "3fc930a94edd49c934a51372420341ec2ee4939edebcc4705eabda67bcf5abe3"
+}
