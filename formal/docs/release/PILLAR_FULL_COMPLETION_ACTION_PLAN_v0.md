@@ -77,6 +77,9 @@ Exit criteria:
 Canonical artifacts and enforcement surface:
 - `formal/docs/release/RESIDUAL_GLOBAL_DEBT_REGISTER_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_CLOSURE_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_COMPOSITION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_NECESSITY_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_COUNTERFACTUAL_v0.md`
 - `formal/python/tests/test_phase4_global_unification_and_residual_debt_gate.py`
 
 1. Add a unification target that composes pillar-level closure contracts under shared assumptions.
@@ -85,7 +88,7 @@ Canonical artifacts and enforcement surface:
 4. Retire residual global blocker rows (`BLK-01`, `BLK-02`) only after replacement artifacts are pinned and synchronized.
 
 Exit criteria:
-- Unification target is pinned with passing gates.
+- Unification target plus composition/necessity/counterfactual packages are pinned with passing gates.
 - No residual cross-surface contradiction warnings.
 - Residual global blockers (`BLK-01`, `BLK-02`) are discharged and no longer `B-BLOCKED`.
 

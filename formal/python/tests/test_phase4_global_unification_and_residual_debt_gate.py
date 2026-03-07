@@ -17,6 +17,9 @@ REPO_ROOT = find_repo_root(Path(__file__))
 PLAN_PATH = REPO_ROOT / "formal" / "docs" / "release" / "PILLAR_FULL_COMPLETION_ACTION_PLAN_v0.md"
 DEBT_PATH = REPO_ROOT / "formal" / "docs" / "release" / "RESIDUAL_GLOBAL_DEBT_REGISTER_v0.md"
 UNIFICATION_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_CLOSURE_v0.md"
+COMPOSITION_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_COMPOSITION_v0.md"
+NECESSITY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_NECESSITY_v0.md"
+COUNTERFACTUAL_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_COUNTERFACTUAL_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 RESULTS_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "RESULTS_TABLE_v0.md"
@@ -25,6 +28,9 @@ SUITE_PATH = REPO_ROOT / "governance_suite.ps1"
 GATE_REL = "formal/python/tests/test_phase4_global_unification_and_residual_debt_gate.py"
 DEBT_REL = "formal/docs/release/RESIDUAL_GLOBAL_DEBT_REGISTER_v0.md"
 UNIFICATION_REL = "formal/docs/paper/DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_CLOSURE_v0.md"
+COMPOSITION_REL = "formal/docs/paper/DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_COMPOSITION_v0.md"
+NECESSITY_REL = "formal/docs/paper/DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_NECESSITY_v0.md"
+COUNTERFACTUAL_REL = "formal/docs/paper/DERIVATION_TARGET_TOE_GLOBAL_UNIFICATION_COUNTERFACTUAL_v0.md"
 
 
 def _read(path: Path) -> str:
@@ -48,6 +54,9 @@ def test_phase4_artifacts_are_pinned_and_wired() -> None:
     plan_text = _read(PLAN_PATH)
     debt_text = _read(DEBT_PATH)
     unification_text = _read(UNIFICATION_PATH)
+    composition_text = _read(COMPOSITION_PATH)
+    necessity_text = _read(NECESSITY_PATH)
+    counterfactual_text = _read(COUNTERFACTUAL_PATH)
     state_text = _read(STATE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
     suite_text = _read(SUITE_PATH)
@@ -56,6 +65,9 @@ def test_phase4_artifacts_are_pinned_and_wired() -> None:
         "### Phase 4: Cross-Pillar Unification and Residual-Risk Closure",
         DEBT_REL,
         UNIFICATION_REL,
+        COMPOSITION_REL,
+        NECESSITY_REL,
+        COUNTERFACTUAL_REL,
         GATE_REL,
     ):
         assert token in plan_text, f"Action plan missing Phase-4 token `{token}`."
@@ -63,10 +75,20 @@ def test_phase4_artifacts_are_pinned_and_wired() -> None:
     assert GATE_REL in debt_text, "Residual debt register must pin phase-4 enforcement gate."
     assert DEBT_REL in unification_text, "Global unification target must depend on residual debt register."
     assert GATE_REL in unification_text, "Global unification target must pin phase-4 enforcement gate."
+    assert COMPOSITION_REL in unification_text, "Global unification target must pin composition package."
+    assert NECESSITY_REL in unification_text, "Global unification target must pin necessity package."
+    assert COUNTERFACTUAL_REL in unification_text, "Global unification target must pin counterfactual package."
+
+    assert "TOE_GLOBAL_UNIFICATION_COMPOSITION_ADJUDICATION_v0: DISCHARGED_v0" in composition_text
+    assert "TOE_GLOBAL_UNIFICATION_NECESSITY_ADJUDICATION_v0: DISCHARGED_v0" in necessity_text
+    assert "TOE_GLOBAL_UNIFICATION_COUNTERFACTUAL_ADJUDICATION_v0: DISCHARGED_v0" in counterfactual_text
 
     for doc_text, label in ((state_text, "state"), (roadmap_text, "roadmap")):
         assert DEBT_REL in doc_text, f"{label} must pin residual debt register path."
         assert UNIFICATION_REL in doc_text, f"{label} must pin global unification target path."
+        assert COMPOSITION_REL in doc_text, f"{label} must pin global composition package path."
+        assert NECESSITY_REL in doc_text, f"{label} must pin global necessity package path."
+        assert COUNTERFACTUAL_REL in doc_text, f"{label} must pin global counterfactual package path."
         assert GATE_REL in doc_text, f"{label} must pin phase-4 enforcement gate path."
 
     assert GATE_REL in suite_text, "governance_suite.ps1 must include phase-4 global debt/unification gate."
