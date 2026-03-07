@@ -89,6 +89,7 @@ Canonical artifacts and enforcement surface:
 
 Exit criteria:
 - Unification target plus composition/necessity/counterfactual packages are pinned with passing gates.
+- All pillar derivation rows (`TOE-<pillar>-DER-*`) are theorem-grade (`T-PROVED`) before global theorem relabel/promotion.
 - No residual cross-surface contradiction warnings.
 - Residual global blockers (`BLK-01`, `BLK-02`) are discharged and no longer `B-BLOCKED`.
 

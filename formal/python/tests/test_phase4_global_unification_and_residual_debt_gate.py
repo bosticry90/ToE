@@ -50,6 +50,17 @@ def _result_row_status(row_id: str, results_text: str) -> str:
     return m.group(1)
 
 
+def _pillar_derivation_rows(results_text: str) -> list[tuple[str, str]]:
+    pattern = re.compile(r"^\|\s*(TOE-(?:GR|QM|EM|SR|QFT|STAT|COSMO)-DER-[0-9]+)\s*\|\s*`([^`]+)`\s*\|", flags=re.MULTILINE)
+    return pattern.findall(results_text)
+
+
+def _classification(doc_text: str) -> str:
+    m = re.search(r"Classification:\s*\n-\s*`([^`]+)`", doc_text)
+    assert m is not None, "Missing Classification line."
+    return m.group(1)
+
+
 def test_phase4_artifacts_are_pinned_and_wired() -> None:
     plan_text = _read(PLAN_PATH)
     debt_text = _read(DEBT_PATH)
@@ -124,6 +135,10 @@ def test_residual_debt_and_unification_transition_contract() -> None:
     composition = _extract_token(unification_text, "TOE_GLOBAL_UNIFICATION_COMPOSITION_STATUS_v0")
     necessity = _extract_token(unification_text, "TOE_GLOBAL_UNIFICATION_NECESSITY_STATUS_v0")
     counterfactual = _extract_token(unification_text, "TOE_GLOBAL_UNIFICATION_COUNTERFACTUAL_STATUS_v0")
+    unification_class = _classification(unification_text)
+
+    der_rows = _pillar_derivation_rows(results_text)
+    non_theorem_der_rows = [row_id for row_id, label in der_rows if label != "T-PROVED"]
 
     blockers_open = blk01_status.startswith("B-") or blk02_status.startswith("B-")
 
@@ -137,8 +152,24 @@ def test_residual_debt_and_unification_transition_contract() -> None:
         assert "Status: Active Planning" in plan_text, "Action plan must remain Active Planning while residual blockers remain."
         return
 
+    # Even after blocker retirement, global theorem promotion is forbidden until all pillar DER rows are theorem-grade.
+    if non_theorem_der_rows:
+        assert unification_class == "P-POLICY", (
+            "Global unification must remain P-POLICY until all pillar DER rows are theorem-grade. "
+            f"Non-theorem rows: {', '.join(non_theorem_der_rows)}"
+        )
+        assert composition == "PENDING_THEOREM_GRADE_v0"
+        assert necessity == "PENDING_THEOREM_GRADE_v0"
+        assert counterfactual == "PENDING_THEOREM_GRADE_v0"
+        assert unification_adj == "PENDING_THEOREM_GRADE_v0"
+        assert "Status: Active Planning" in plan_text, (
+            "Action plan must remain Active Planning while theorem-grade DER conversion remains open."
+        )
+        return
+
     assert blk01_adj == "DISCHARGED_v0", "BLK01 adjudication must be discharged when BLK-01 is non-blocked."
     assert blk02_adj == "DISCHARGED_v0", "BLK02 adjudication must be discharged when BLK-02 is non-blocked."
+    assert unification_class == "T-PROVED", "Global unification must be T-PROVED after theorem-grade DER conversion is complete."
     assert composition == "DISCHARGED_v0", "Unification composition status must be discharged after blocker retirement."
     assert necessity == "DISCHARGED_v0", "Unification necessity status must be discharged after blocker retirement."
     assert counterfactual == "DISCHARGED_v0", "Unification counterfactual status must be discharged after blocker retirement."
