@@ -83,6 +83,13 @@ To avoid ambiguity between system Python and your venv Python on Windows, prefer
 Troubleshooting (Windows)
 - If `powershell` is not recognized, you are likely already in PowerShell 7 (`pwsh`). Just run `./py.ps1 ...` directly from your current session.
 
+Local Stack Preflight (Python + Rust)
+- Run preflight: `./py.ps1 -m formal.python.tools.dev_stack_preflight`
+- Require local Rust for trust-core work: `./py.ps1 -m formal.python.tools.dev_stack_preflight --require-rust`
+- If Rust is missing locally, trust-core checks in CI remain blocking. To install locally on Windows:
+   - `winget install Rustlang.Rustup`
+   - Restart terminal and verify: `cargo --version`
+
 To run modules outside pytest without relying on implicit sys.path behavior, prefer module invocation from the repo root:
 
 `./py.ps1 -m formal.python.toe.bridges.br01_dispersion_to_metric`
