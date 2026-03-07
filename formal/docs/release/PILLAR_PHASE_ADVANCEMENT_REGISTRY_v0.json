@@ -151,7 +151,7 @@
       "pillar_id": "PILLAR-COSMO",
       "mode": "LOCKED_QUEUE",
       "authority_doc_path": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
-      "roadmap_status": "LOCKED",
+      "roadmap_status": "CLOSED",
       "target_id": "TARGET-COSMO-BG-PLAN",
       "prerequisites": [
         "TARGET-GR01-DERIV-CHECKLIST-PLAN",

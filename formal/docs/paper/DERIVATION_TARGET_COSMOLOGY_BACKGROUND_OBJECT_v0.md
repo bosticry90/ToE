@@ -14,7 +14,7 @@ Purpose:
 - Keep metric/expansion assumptions explicit and bounded.
 
 Kickoff adjudication:
-- `COSMO_BACKGROUND_ADJUDICATION: NOT_YET_DISCHARGED`
+- `COSMO_BACKGROUND_ADJUDICATION: DISCHARGED_v0_BOUNDED`
 - `PILLAR_COSMO_FULL_DERIVATION_DISCHARGE_ADJUDICATION: NOT_YET_DISCHARGED`
 - `PILLAR_COSMO_FULL_DERIVATION_DISCHARGE_LOCALIZATION_GATE_v0: FULL_DISCHARGE_ARTIFACTS_ONLY`
 - `PILLAR_COSMO_FULL_DERIVATION_DISCHARGE_NO_PROMOTION_v0: ATTEMPT_ONLY_NO_DISCHARGE`
@@ -194,6 +194,11 @@ COSMO rollup package lock:
 - `formal/markdown/locks/policy/COSMO_BACKGROUND_PILLAR_PACKAGE_v0.md`
 - `formal/python/tests/test_cosmo_background_pillar_package_rollup_gate.py`
 
+External implications pilot reference lock:
+- `TARGET-COSMO-BG-EXTERNAL-HI-REFERENCE-SURFACE-v0`
+- `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_EXTERNAL_HYDROGEN_INTENSITY_REFERENCE_SURFACE_v0.md`
+- `formal/python/tests/test_cosmo_external_implications_reference_surface_policy_gate.py`
+
 Deliverable surfaces:
 - `COSMO_DELIVERABLE_METRIC_SURFACE_v0: BACKGROUND_METRIC_OBJECT_DECLARED`
 - `COSMO_DELIVERABLE_EXPANSION_SURFACE_v0: HUBBLE_LIKE_OBJECT_DECLARED`
@@ -219,6 +224,109 @@ Closure definition:
 - typed cosmology theorem/derivation surface exists with explicit assumptions.
 - explicit falsifiability hooks and regime limits.
 - paper/state/results pointers are synchronized.
+
+Cycle01 `PILLAR-COSMO` derivation-completeness gate readiness packet (bounded non-promotional coupling layer):
+- `COSMO_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_CYCLE01_ARTIFACT_v0: cosmo_derivation_completeness_gate_readiness_packet_cycle01_v0`
+- `COSMO_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_CYCLE01_SHA256_v0: 7a379acfa77e131bf1c26bb72acfb5956995c8ff05d5135eb7ce4baabc0daf1d`
+- `COSMO_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- artifact path: `formal/output/cosmo_derivation_completeness_gate_readiness_packet_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_cosmo_derivation_completeness_gate_readiness_packet_cycle01_gate.py`
+- `COSMO_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+- `COSMO_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_SCOPE_v0: LOCKED_QUEUE_PREREQUISITES_PINNED_BEFORE_ENTRY`
+- discharge row linkage (bounded/non-promotional):
+	- `TOE-COSMO-DER-01`
+	- `TOE-COSMO-DER-02`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded derivation-completeness readiness-input scope only; no derivation-completeness discharge claim and no external truth claim.
+- readiness packet remains non-promotional and does not authorize `TOE-COSMO-DER-*` label promotion.
+
+Cycle01 `TOE-COSMO-DER-01` theorem-surface scaffold (active pre-discharge, row-coupled non-claim):
+- `COSMO_DER01_THEOREM_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der01_theorem_surface_scaffold_cycle01_v0`
+- `COSMO_DER01_THEOREM_SURFACE_SCAFFOLD_CYCLE01_SHA256_v0: aee09c1bdc59b79b5c3e01b94db9ca3fa5eddd5047ebf28f51bdf45d69ff28ff`
+- `COSMO_DER01_THEOREM_SURFACE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER01_THEOREM_SURFACE_ROW_BINDING_v0: TOE_COSMO_DER_01_P_POLICY_THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- artifact path: `formal/output/cosmo_der01_theorem_surface_scaffold_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_cosmo_der01_theorem_surface_scaffold_cycle01_gate.py`
+- row coupling target: `TOE-COSMO-DER-01` in `formal/docs/paper/RESULTS_TABLE_v0.md`
+- theorem-surface tokens:
+	- `cosmo_bg_micro01_object_surface_cycle01_v0`
+	- `cosmo_bg_micro02_expansion_law_surface_cycle01_v0`
+	- `cosmo_bg_micro03_source_coupling_surface_cycle01_v0`
+	- `cosmo_bg_micro04_regime_falsifiability_surface_cycle01_v0`
+	- `cosmo_der01_background_surface_scaffold_cycle01_v0`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded theorem-surface scaffold scope only; no derivation-discharge claim and no external truth claim.
+- theorem-surface scaffold remains non-promotional and does not authorize `TOE-COSMO-DER-01` label promotion.
+
+Cycle01 `TOE-COSMO-DER-02` governance-coupling scaffold (active pre-discharge, row-coupled non-claim):
+- `COSMO_DER02_GOVERNANCE_COUPLING_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der02_governance_coupling_scaffold_cycle01_v0`
+- `COSMO_DER02_GOVERNANCE_COUPLING_SCAFFOLD_CYCLE01_SHA256_v0: e7647af3a7cbdc4bb42633519aac3c6c66072f2b42a8160278368d2d2c59cac2`
+- `COSMO_DER02_GOVERNANCE_COUPLING_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER02_GOVERNANCE_COUPLING_ROW_BINDING_v0: TOE_COSMO_DER_02_P_POLICY_GOVERNANCE_COUPLING_SCAFFOLD_PINNED_NONCLAIM`
+- artifact path: `formal/output/cosmo_der02_governance_coupling_scaffold_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_cosmo_der02_governance_coupling_scaffold_cycle01_gate.py`
+- row coupling target: `TOE-COSMO-DER-02` in `formal/docs/paper/RESULTS_TABLE_v0.md`
+- dependency token:
+	- `COSMO_DER01_THEOREM_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der01_theorem_surface_scaffold_cycle01_v0`
+- governance-coupling policy tokens:
+	- `COSMO_LOCKED_QUEUE_UNLOCK_TRANSITION_PACKET_POLICY_v0: PREAUTHORIZED_CONDITIONS_REQUIRED_NO_STATUS_FLIP`
+	- `COSMO_AUTHORIZED_UNLOCK_CHECKLIST_PACKET_POLICY_v0: CHECKLIST_PACKET_COMPLETE_BEFORE_ANY_STATUS_CHANGE`
+	- `COSMO_DRYRUN_RECONCILIATION_PACKET_POLICY_v0: CYCLE08_09_10_POLICY_COHERENCE_REQUIRED_NO_STATUS_FLIP`
+- non-claim boundary remains explicit and binding for this artifact.
+- bounded governance-coupling scaffold scope only; no derivation-discharge claim and no external truth claim.
+- governance-coupling scaffold remains non-promotional and does not authorize `TOE-COSMO-DER-02` label promotion.
+
+Cycle01 `TOE-COSMO-DER-01` closure package (theorem-body/discharge/object-surface, row-coupled non-claim):
+- `COSMO_DER01_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: cosmo_der01_theorem_body_scope_boundary_cycle01_v0`
+- `COSMO_DER01_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_SHA256_v0: 8d3a2728481957b437dd349c3efb422f4be7223f777c623bc361d4621bc5c68d`
+- `COSMO_DER01_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER01_THEOREM_BODY_SCOPE_BOUNDARY_ROW_BINDING_v0: TOE_COSMO_DER_01_P_POLICY_THEOREM_BODY_SCOPE_BOUNDARY_PINNED_NONCLAIM`
+- `COSMO_DER01_THEOREM_BODY_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der01_theorem_body_scaffold_cycle01_v0`
+- `COSMO_DER01_THEOREM_BODY_SCAFFOLD_CYCLE01_SHA256_v0: fe3539b332e557bf4dba7705c7bc134c9173ad964b714875bba9d2d543311c4d`
+- `COSMO_DER01_THEOREM_BODY_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER01_THEOREM_BODY_SCAFFOLD_ROW_BINDING_v0: TOE_COSMO_DER_01_P_POLICY_THEOREM_BODY_SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_DER01_DISCHARGE_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der01_discharge_scaffold_cycle01_v0`
+- `COSMO_DER01_DISCHARGE_SCAFFOLD_CYCLE01_SHA256_v0: 3fc930a94edd49c934a51372420341ec2ee4939edebcc4705eabda67bcf5abe3`
+- `COSMO_DER01_DISCHARGE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER01_DISCHARGE_SCAFFOLD_ROW_BINDING_v0: TOE_COSMO_DER_01_P_POLICY_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_DER01_OBJECT_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der01_object_surface_scaffold_cycle01_v0`
+- `COSMO_DER01_OBJECT_SURFACE_SCAFFOLD_CYCLE01_SHA256_v0: 5f9bf4ca09c1b4bb158ab3dc69d712f87b56ba198a6c1e2fbe8ce1fa6214c97a`
+- `COSMO_DER01_OBJECT_SURFACE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER01_OBJECT_SURFACE_SCAFFOLD_ROW_BINDING_v0: TOE_COSMO_DER_01_P_POLICY_OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- artifact paths:
+	- `formal/output/cosmo_der01_theorem_body_scope_boundary_cycle01_v0.json`
+	- `formal/output/cosmo_der01_theorem_body_scaffold_cycle01_v0.json`
+	- `formal/output/cosmo_der01_discharge_scaffold_cycle01_v0.json`
+	- `formal/output/cosmo_der01_object_surface_scaffold_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_cosmo_der01_closure_package_cycle01_gate.py`
+- bounded closure-package scaffold scope only; no derivation-discharge claim and no external truth claim.
+- closure-package scaffold remains non-promotional and does not authorize `TOE-COSMO-DER-01` label promotion.
+
+Cycle01 `TOE-COSMO-DER-02` closure package (theorem-body/discharge/object-surface, row-coupled non-claim):
+- `COSMO_DER02_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: cosmo_der02_theorem_body_scope_boundary_cycle01_v0`
+- `COSMO_DER02_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_SHA256_v0: f71023ae77d38c3ece085e733affd85bcd163cd99e97cb86709e70fddde6d488`
+- `COSMO_DER02_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER02_THEOREM_BODY_SCOPE_BOUNDARY_ROW_BINDING_v0: TOE_COSMO_DER_02_P_POLICY_THEOREM_BODY_SCOPE_BOUNDARY_PINNED_NONCLAIM`
+- `COSMO_DER02_THEOREM_BODY_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der02_theorem_body_scaffold_cycle01_v0`
+- `COSMO_DER02_THEOREM_BODY_SCAFFOLD_CYCLE01_SHA256_v0: 69b6263c5d5252d531a3df276f680ec3f61782f20d6a662ebf77820a62dbc1c0`
+- `COSMO_DER02_THEOREM_BODY_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER02_THEOREM_BODY_SCAFFOLD_ROW_BINDING_v0: TOE_COSMO_DER_02_P_POLICY_THEOREM_BODY_SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_DER02_DISCHARGE_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der02_discharge_scaffold_cycle01_v0`
+- `COSMO_DER02_DISCHARGE_SCAFFOLD_CYCLE01_SHA256_v0: 2053db7cbf1deb8a342c5238d41f9ea86c1e4a53db5ae4580ce5ff02b2e6ab7c`
+- `COSMO_DER02_DISCHARGE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER02_DISCHARGE_SCAFFOLD_ROW_BINDING_v0: TOE_COSMO_DER_02_P_POLICY_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_DER02_OBJECT_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der02_object_surface_scaffold_cycle01_v0`
+- `COSMO_DER02_OBJECT_SURFACE_SCAFFOLD_CYCLE01_SHA256_v0: 93a3bddf6e78a38f757eed39bec013d0a7034e3c2c2cc6545398dabbdbb99b89`
+- `COSMO_DER02_OBJECT_SURFACE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER02_OBJECT_SURFACE_SCAFFOLD_ROW_BINDING_v0: TOE_COSMO_DER_02_P_POLICY_OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- artifact paths:
+	- `formal/output/cosmo_der02_theorem_body_scope_boundary_cycle01_v0.json`
+	- `formal/output/cosmo_der02_theorem_body_scaffold_cycle01_v0.json`
+	- `formal/output/cosmo_der02_discharge_scaffold_cycle01_v0.json`
+	- `formal/output/cosmo_der02_object_surface_scaffold_cycle01_v0.json`
+- coupling gate path: `formal/python/tests/test_cosmo_der02_closure_package_cycle01_gate.py`
+- bounded closure-package scaffold scope only; no derivation-discharge claim and no external truth claim.
+- closure-package scaffold remains non-promotional and does not authorize `TOE-COSMO-DER-02` label promotion.
 
 Governance pointers:
 - canonical pillar status matrix: `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`
@@ -257,6 +365,12 @@ Governance pointers:
 - COSMO micro-26 gate: `formal/python/tests/test_cosmo_bg_micro26_dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_packet_gate.py`
 - COSMO micro-27 gate: `formal/python/tests/test_cosmo_bg_micro27_dryrun_custody_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_packet_gate.py`
 - COSMO rollup gate: `formal/python/tests/test_cosmo_background_pillar_package_rollup_gate.py`
+- COSMO external implications pilot gate: `formal/python/tests/test_cosmo_external_implications_reference_surface_policy_gate.py`
+- COSMO derivation-completeness readiness packet gate: `formal/python/tests/test_cosmo_derivation_completeness_gate_readiness_packet_cycle01_gate.py`
+- COSMO DER-01 theorem-surface scaffold gate: `formal/python/tests/test_cosmo_der01_theorem_surface_scaffold_cycle01_gate.py`
+- COSMO DER-02 governance-coupling scaffold gate: `formal/python/tests/test_cosmo_der02_governance_coupling_scaffold_cycle01_gate.py`
+- COSMO DER-01 closure package gate: `formal/python/tests/test_cosmo_der01_closure_package_cycle01_gate.py`
+- COSMO DER-02 closure package gate: `formal/python/tests/test_cosmo_der02_closure_package_cycle01_gate.py`
 
 - `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md`
 

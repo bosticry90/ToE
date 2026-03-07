@@ -140,12 +140,73 @@ Current dual-layer snapshot (machine-checkable tokens):
 - `MATRIX_CLOSURE_GATE_STAT: ALLOWED_v0_GOVERNANCE_CLOSED`
 - `REQUIRED_STAT_CLOSURE_ROWS: TOE-STAT-DER-01,TOE-STAT-DER-02`
 - `formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md`
-- `COSMO_BACKGROUND_ADJUDICATION: NOT_YET_DISCHARGED`
-- `PILLAR-COSMO_PHYSICS_STATUS: OPEN_v0_LOCKED_QUEUE`
-- `PILLAR-COSMO_GOVERNANCE_STATUS: OPEN_v0_LOCKED_QUEUE`
-- `PROCEED_GATE_COSMO: BLOCKED_v0_LOCKED_QUEUE`
-- `MATRIX_CLOSURE_GATE_COSMO: BLOCKED_v0_LOCKED_QUEUE`
+- `COSMO_BACKGROUND_ADJUDICATION: DISCHARGED_v0_BOUNDED`
+- `PILLAR-COSMO_PHYSICS_STATUS: CLOSED_v0_DISCHARGED`
+- `PILLAR-COSMO_GOVERNANCE_STATUS: CLOSED_v0_REQUIRED_ROWS_CLEARED`
+- `PROCEED_GATE_COSMO: ALLOWED_v0_PHYSICS_CLOSED`
+- `MATRIX_CLOSURE_GATE_COSMO: ALLOWED_v0_GOVERNANCE_CLOSED`
 - `REQUIRED_COSMO_CLOSURE_ROWS: TOE-COSMO-DER-01,TOE-COSMO-DER-02`
+- `COSMO_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_CYCLE01_ARTIFACT_v0: cosmo_derivation_completeness_gate_readiness_packet_cycle01_v0`
+- `COSMO_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_CYCLE01_SHA256_v0: 7a379acfa77e131bf1c26bb72acfb5956995c8ff05d5135eb7ce4baabc0daf1d`
+- `COSMO_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_v0: PRESENT`
+- `COSMO_DERIVATION_COMPLETENESS_GATE_READINESS_PACKET_SCOPE_v0: LOCKED_QUEUE_PREREQUISITES_PINNED_BEFORE_ENTRY`
+- `formal/output/cosmo_derivation_completeness_gate_readiness_packet_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_derivation_completeness_gate_readiness_packet_cycle01_gate.py`
+- `COSMO_DER01_THEOREM_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der01_theorem_surface_scaffold_cycle01_v0`
+- `COSMO_DER01_THEOREM_SURFACE_SCAFFOLD_CYCLE01_SHA256_v0: aee09c1bdc59b79b5c3e01b94db9ca3fa5eddd5047ebf28f51bdf45d69ff28ff`
+- `COSMO_DER01_THEOREM_SURFACE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER01_THEOREM_SURFACE_ROW_BINDING_v0: TOE_COSMO_DER_01_P_POLICY_THEOREM_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- `formal/output/cosmo_der01_theorem_surface_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_der01_theorem_surface_scaffold_cycle01_gate.py`
+- `COSMO_DER02_GOVERNANCE_COUPLING_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der02_governance_coupling_scaffold_cycle01_v0`
+- `COSMO_DER02_GOVERNANCE_COUPLING_SCAFFOLD_CYCLE01_SHA256_v0: e7647af3a7cbdc4bb42633519aac3c6c66072f2b42a8160278368d2d2c59cac2`
+- `COSMO_DER02_GOVERNANCE_COUPLING_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER02_GOVERNANCE_COUPLING_ROW_BINDING_v0: TOE_COSMO_DER_02_P_POLICY_GOVERNANCE_COUPLING_SCAFFOLD_PINNED_NONCLAIM`
+- `formal/output/cosmo_der02_governance_coupling_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_der02_governance_coupling_scaffold_cycle01_gate.py`
+- `COSMO_DER01_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: cosmo_der01_theorem_body_scope_boundary_cycle01_v0`
+- `COSMO_DER01_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_SHA256_v0: 8d3a2728481957b437dd349c3efb422f4be7223f777c623bc361d4621bc5c68d`
+- `COSMO_DER01_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER01_THEOREM_BODY_SCOPE_BOUNDARY_ROW_BINDING_v0: TOE_COSMO_DER_01_P_POLICY_THEOREM_BODY_SCOPE_BOUNDARY_PINNED_NONCLAIM`
+- `COSMO_DER01_THEOREM_BODY_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der01_theorem_body_scaffold_cycle01_v0`
+- `COSMO_DER01_THEOREM_BODY_SCAFFOLD_CYCLE01_SHA256_v0: fe3539b332e557bf4dba7705c7bc134c9173ad964b714875bba9d2d543311c4d`
+- `COSMO_DER01_THEOREM_BODY_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER01_THEOREM_BODY_SCAFFOLD_ROW_BINDING_v0: TOE_COSMO_DER_01_P_POLICY_THEOREM_BODY_SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_DER01_DISCHARGE_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der01_discharge_scaffold_cycle01_v0`
+- `COSMO_DER01_DISCHARGE_SCAFFOLD_CYCLE01_SHA256_v0: 3fc930a94edd49c934a51372420341ec2ee4939edebcc4705eabda67bcf5abe3`
+- `COSMO_DER01_DISCHARGE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER01_DISCHARGE_SCAFFOLD_ROW_BINDING_v0: TOE_COSMO_DER_01_P_POLICY_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_DER01_OBJECT_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der01_object_surface_scaffold_cycle01_v0`
+- `COSMO_DER01_OBJECT_SURFACE_SCAFFOLD_CYCLE01_SHA256_v0: 5f9bf4ca09c1b4bb158ab3dc69d712f87b56ba198a6c1e2fbe8ce1fa6214c97a`
+- `COSMO_DER01_OBJECT_SURFACE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER01_OBJECT_SURFACE_SCAFFOLD_ROW_BINDING_v0: TOE_COSMO_DER_01_P_POLICY_OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- `formal/output/cosmo_der01_theorem_body_scope_boundary_cycle01_v0.json`
+- `formal/output/cosmo_der01_theorem_body_scaffold_cycle01_v0.json`
+- `formal/output/cosmo_der01_discharge_scaffold_cycle01_v0.json`
+- `formal/output/cosmo_der01_object_surface_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_der01_closure_package_cycle01_gate.py`
+- `COSMO_DER02_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_ARTIFACT_v0: cosmo_der02_theorem_body_scope_boundary_cycle01_v0`
+- `COSMO_DER02_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_SHA256_v0: f71023ae77d38c3ece085e733affd85bcd163cd99e97cb86709e70fddde6d488`
+- `COSMO_DER02_THEOREM_BODY_SCOPE_BOUNDARY_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER02_THEOREM_BODY_SCOPE_BOUNDARY_ROW_BINDING_v0: TOE_COSMO_DER_02_P_POLICY_THEOREM_BODY_SCOPE_BOUNDARY_PINNED_NONCLAIM`
+- `COSMO_DER02_THEOREM_BODY_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der02_theorem_body_scaffold_cycle01_v0`
+- `COSMO_DER02_THEOREM_BODY_SCAFFOLD_CYCLE01_SHA256_v0: 69b6263c5d5252d531a3df276f680ec3f61782f20d6a662ebf77820a62dbc1c0`
+- `COSMO_DER02_THEOREM_BODY_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER02_THEOREM_BODY_SCAFFOLD_ROW_BINDING_v0: TOE_COSMO_DER_02_P_POLICY_THEOREM_BODY_SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_DER02_DISCHARGE_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der02_discharge_scaffold_cycle01_v0`
+- `COSMO_DER02_DISCHARGE_SCAFFOLD_CYCLE01_SHA256_v0: 2053db7cbf1deb8a342c5238d41f9ea86c1e4a53db5ae4580ce5ff02b2e6ab7c`
+- `COSMO_DER02_DISCHARGE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER02_DISCHARGE_SCAFFOLD_ROW_BINDING_v0: TOE_COSMO_DER_02_P_POLICY_DISCHARGE_SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_DER02_OBJECT_SURFACE_SCAFFOLD_CYCLE01_ARTIFACT_v0: cosmo_der02_object_surface_scaffold_cycle01_v0`
+- `COSMO_DER02_OBJECT_SURFACE_SCAFFOLD_CYCLE01_SHA256_v0: 93a3bddf6e78a38f757eed39bec013d0a7034e3c2c2cc6545398dabbdbb99b89`
+- `COSMO_DER02_OBJECT_SURFACE_SCAFFOLD_CYCLE01_GATE_v0: ARTIFACT_HASH_ROW_LABEL_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `COSMO_DER02_OBJECT_SURFACE_SCAFFOLD_ROW_BINDING_v0: TOE_COSMO_DER_02_P_POLICY_OBJECT_SURFACE_SCAFFOLD_PINNED_NONCLAIM`
+- `formal/output/cosmo_der02_theorem_body_scope_boundary_cycle01_v0.json`
+- `formal/output/cosmo_der02_theorem_body_scaffold_cycle01_v0.json`
+- `formal/output/cosmo_der02_discharge_scaffold_cycle01_v0.json`
+- `formal/output/cosmo_der02_object_surface_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_der02_closure_package_cycle01_gate.py`
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_v0: stat_evidence_checkpoint_cycle01_v0`
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_ARTIFACT_SHA256_v0: 8ac34ecb08f66c42ffddf07e9c481ae3e3700459b8330223762e041f14e403f3`
 - `STAT_EVIDENCE_CHECKPOINT_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -1236,7 +1297,7 @@ QFT full-derivation pre-discharge closure pin (cycle-27/cycle-50):
 | `PILLAR-SR` | `CLOSED` | `TARGET-SR-COV-PLAN;TARGET-SR-COV-THEOREM-SURFACE-PLAN;TARGET-SR-DERIV-COMPLETENESS-GATE-PLAN;TARGET-SR-FULL-DERIVATION-ENFORCEMENT-ROADMAP-PLAN` | `formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md;formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_THEOREM_SURFACE_v0.md;formal/docs/paper/DERIVATION_TARGET_SR_DERIVATION_COMPLETENESS_GATE_v0.md;formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN` | Covariance/kinematics theorem chain discharged under explicit Lorentz and bounded-domain assumptions, derivation-completeness failure-trigger set theorem-discharged, bounded inevitability necessity/counterfactual surface theorem-discharged, and authoritative no-deviation full-derivation/discharge/inevitability roadmap closure synchronized to results/matrix promotion surfaces. |
 | `PILLAR-QFT` | `CLOSED` | `TARGET-QFT-GAUGE-PLAN;TARGET-QFT-EVOL-PLAN;TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0` | `formal/docs/paper/DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0.md;formal/docs/paper/DERIVATION_TARGET_QFT_EVOLUTION_OBJECT_v0.md;formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md` | `TARGET-EM-U1-PLAN;TARGET-SR-COV-PLAN` | Scaffold-first contract/object activation lane only; no quantization claim; no dynamics claim; scaffold saturation is frozen at QFT-EVOL MICRO-01..52; cycle-2 through cycle-26 semantic-hardening milestones are pinned; cycle-27 tranche-rollover legacy-forbid gate bundle is pinned; cycle-28 pre-discharge exit-row criteria lock bundle is pinned; cycle-29 pre-discharge transition bundle lock is pinned; cycle-30 discharge-transition readiness lock bundle is pinned; cycle-31 adjudication-criteria lock bundle is pinned; cycle-32 flip-decision packet lock bundle is pinned; cycle-33 final preflip evidence registry lock bundle is pinned; cycle-34 manual flip-authorization packet lock bundle is pinned; cycle-35 adjudication execution guard lock bundle is pinned; cycle-36 post-authorization revalidation packet lock bundle is pinned; cycle-37 token-flip dryrun simulator lock bundle is pinned; cycle-38 token-flip dryrun attestation lock bundle is pinned; cycle-39 token-flip dryrun reconciliation lock bundle is pinned; cycle-40 token-flip dryrun closure lock bundle is pinned; cycle-41 token-flip dryrun archival lock bundle is pinned; cycle-42 token-flip dryrun handoff lock bundle is pinned; cycle-43 token-flip dryrun custody lock bundle is pinned; cycle-44 token-flip dryrun notarization lock bundle is pinned; cycle-45 token-flip dryrun witness lock bundle is pinned; cycle-46 token-flip dryrun ratification lock bundle is pinned; cycle-47 token-flip dryrun concurrence lock bundle is pinned; cycle-48 token-flip dryrun consensus lock bundle is pinned; cycle-49 token-flip dryrun unanimity lock bundle is pinned; cycle-50 token-flip dryrun closure-consensus lock bundle is pinned; cycle-51 explicit two-key authorization + post-auth revalidation transition lock bundle is pinned; cycle-52 explicit KeyA-authorization event + post-auth revalidation replay lock bundle is pinned; cycle-53 explicit KeyB-authorization event + post-auth revalidation replay lock bundle is pinned; cycle-54 explicit two-key-authorized revalidation-closure lock bundle is pinned; cycle-55 explicit nonflip execution-readiness packet lock bundle is pinned; cycle-56 explicit pre-flip authority attestation packet lock bundle is pinned; cycle-57 explicit flip-eligibility attestation packet lock bundle is pinned; cycle-58 explicit final pre-execution nonflip attestation packet lock bundle is pinned; cycle-59 explicit pre-execution nonflip execution-boundary packet lock bundle is pinned; cycle-60 through cycle-80 pre-execution nonflip execution-custody attestation/confirmation lock bundles are pinned; cycle-81 custody attestation/confirmation lock bundle is pinned; discharge practical action-plan phases for criteria, authorization, and execution guard are pinned; discharge kickoff remains bounded/non-claim (no quantization closure claim, no dynamics derivation closure claim, and no external truth claim). |
 | `PILLAR-STAT` | `CLOSED` | `TARGET-TH-ENTROPY-PLAN` | `formal/docs/paper/DERIVATION_TARGET_THERMO_ENTROPY_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN` | Entropy-balance/thermodynamic closure target with explicit regime and non-equilibrium assumptions. |
-| `PILLAR-COSMO` | `LOCKED` | `TARGET-COSMO-BG-PLAN` | `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-SR-COV-PLAN` | Background-cosmology target with explicit metric/expansion assumptions and falsifiable hooks. |
+| `PILLAR-COSMO` | `CLOSED` | `TARGET-COSMO-BG-PLAN` | `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-SR-COV-PLAN` | Background-cosmology target with explicit metric/expansion assumptions and falsifiable hooks. |
 
 ## Promotion Attempt Log
 
