@@ -3,7 +3,7 @@
 Document ID: PILLAR_FULL_COMPLETION_ACTION_PLAN_v0
 Owner: Governance
 Status: Active Planning
-Last-Updated: 2026-03-06
+Last-Updated: 2026-03-07
 
 ## Purpose
 
@@ -21,7 +21,7 @@ into a terminal full-completion posture with no unresolved pillar-critical rows.
   - PILLAR-GR, PILLAR-QM, PILLAR-EM: CLOSED_HANDOFF
   - PILLAR-QFT: CLOSED_HANDOFF_ARTIFACT
 - Results table still includes unresolved rows impacting full-completion claims:
-  - GR blocked rows: TOE-GR-01, TOE-GR-THM-01
+  - GR blocked rows retired in Phase 3 tranche (TOE-GR-01, TOE-GR-THM-01 now non-blocked).
   - Multiple pillar derivation rows remain T-CONDITIONAL (GR/EM/STAT/COSMO).
 
 ## Full-Completion Definition
