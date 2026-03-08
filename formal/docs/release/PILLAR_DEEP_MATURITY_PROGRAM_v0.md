@@ -64,7 +64,7 @@ Canonical pointers:
 - SR M4 seam-closure promotion target: `formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md`
 - SR M4 seam-closure promotion gate: `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`
 - SR M5 theory-parity-link target: `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`
-- SR M5 theory-parity-link gate: `formal/python/tests/test_sr_m5_theory_parity_link_cycle09_gate.py`
+- SR M5 theory-parity-link gate: `formal/python/tests/test_sr_m5_theory_parity_link_cycle10_gate.py`
 - Existing closure standard: `formal/docs/release/PILLAR_CLOSURE_STANDARD_v0.md`
 - Existing phase advancement standard: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`
 
