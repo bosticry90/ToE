@@ -1,0 +1,18 @@
+{
+  "artifact_id": "qm_m2_assumption_minimization_scaffold_cycle01_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "pillar": "PILLAR-QM",
+    "maturity_tier": "M2_DERIVATION_COMPLETE",
+    "row": "assumption_minimization",
+    "status": "SCAFFOLD_PINNED_NONCLAIM",
+    "scope": "bounded_nonclaim",
+    "requirements": [
+      "assumption_inventory_explicit",
+      "policy_to_math_reclassification_explicit",
+      "minimality_boundary_stated"
+    ],
+    "generated_on": "2026-03-07"
+  },
+  "payload_sha256": "c32ac32cebd7443e046aedef3fdbccb97661936ee7c5fd61741aef6cf68a07ba"
+}

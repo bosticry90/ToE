@@ -173,6 +173,77 @@ Inevitability obligation linkage (must remain synchronized with gate target):
   - `formal/output/qm_external_lane_evidence_checkpoint_cycle09_v0.json`
   - `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle09_gate.py`
 
+- QM first discriminator scaffold bundle (bounded non-claim):
+  - `EMP_QM_01_DISCRIMINATOR_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+  - `EMP_QM_01_PRUNE_DECISION_v0: ELIMINATION_READY_BOUNDED_v0`
+  - `EMP_QM_01_PRUNE_RESULT_v0: PASS_AND_PRUNE_SIGNAL_PRESENT_v0`
+  - `EMP_QM_01_ARTIFACT_v0: qm_empirical_discriminator_emp_qm_01_run_cycle02_v0`
+  - `EMP_QM_01_ARTIFACT_SHA256_v0: 5fad6fdfaa020303fd912dd5d1f31c112457d0978dffaefd7fd3c9c001da17f5`
+  - `EMP_QM_01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_DISCRIMINATOR_EMP_QM_01_v0.md`
+  - `formal/output/qm_empirical_discriminator_emp_qm_01_run_cycle02_v0.json`
+  - `formal/python/tests/test_qm_empirical_discriminator_emp_qm_01_scaffold_gate.py`
+
+- QM M2 analytic completeness scaffold bundle (bounded non-claim):
+  - `QM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+  - `QM_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: qm_m2_analytic_completeness_scaffold_cycle01_v0`
+  - `QM_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 192432c694de481ae9c34b073ebcd214dacfd1ce1b0adc6799697c82bb9d301e`
+  - `QM_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_m2_analytic_completeness_scaffold_cycle01_v0.json`
+  - `formal/python/tests/test_qm_m2_analytic_completeness_scaffold_cycle01_gate.py`
+
+- QM M2 canonical equivalence scaffold bundle (bounded non-claim):
+  - `QM_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+  - `QM_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: qm_m2_canonical_equivalence_scaffold_cycle01_v0`
+  - `QM_M2_CANONICAL_EQUIVALENCE_SHA256_v0: 0b5e239151028bb4920840b24ad9f1f6a3fdb44dc39437ff9b3269aadea638ae`
+  - `QM_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_m2_canonical_equivalence_scaffold_cycle01_v0.json`
+  - `formal/python/tests/test_qm_m2_canonical_equivalence_scaffold_cycle01_gate.py`
+
+- QM M2 assumption minimization scaffold bundle (bounded non-claim):
+  - `QM_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+  - `QM_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: qm_m2_assumption_minimization_scaffold_cycle01_v0`
+  - `QM_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: c32ac32cebd7443e046aedef3fdbccb97661936ee7c5fd61741aef6cf68a07ba`
+  - `QM_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_m2_assumption_minimization_scaffold_cycle01_v0.json`
+  - `formal/python/tests/test_qm_m2_assumption_minimization_scaffold_cycle01_gate.py`
+
+- QM M2 literature alignment scaffold bundle (bounded non-claim):
+  - `QM_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+  - `QM_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: qm_m2_literature_alignment_scaffold_cycle01_v0`
+  - `QM_M2_LITERATURE_ALIGNMENT_SHA256_v0: 8eecd039c5ecf244054b8727a61835f2f8261d08d875aae945699477c14c3332`
+  - `QM_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_m2_literature_alignment_scaffold_cycle01_v0.json`
+  - `formal/python/tests/test_qm_m2_literature_alignment_scaffold_cycle01_gate.py`
+
+- QM M2 completion promotion bundle (bounded non-claim):
+  - `QM_M2_STATUS_v0: COMPLETE_BOUNDED_v0`
+  - `QM_M2_COMPLETION_ARTIFACT_v0: qm_m2_completion_promotion_cycle01_v0`
+  - `QM_M2_COMPLETION_SHA256_v0: ed9b3fb5bdf9899076a487a6b840368f6c5b58403632c1706948314330fc4cdb`
+  - `QM_M2_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/output/qm_m2_completion_promotion_cycle01_v0.json`
+  - `formal/python/tests/test_qm_m2_completion_promotion_cycle01_gate.py`
+
+- QM M3 completion promotion bundle (bounded non-claim):
+  - `QM_M3_STATUS_v0: COMPLETE_BOUNDED_v0`
+  - `QM_M3_COMPLETION_ARTIFACT_v0: qm_m3_completion_promotion_cycle01_v0`
+  - `QM_M3_COMPLETION_SHA256_v0: 55ae0f9927e8f3bfb39754e0732361ffce7bf8e90235e67c6827e8ea903ee0d0`
+  - `QM_M3_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `QM_M3_PROMOTION_READINESS_v0: FIRST_DISCRIMINATOR_CLOSED_AND_PROMOTED_v0`
+  - `formal/docs/paper/DERIVATION_TARGET_QM_M3_COMPLETION_PROMOTION_v0.md`
+  - `formal/output/qm_m3_completion_promotion_cycle01_v0.json`
+  - `formal/python/tests/test_qm_m3_completion_promotion_cycle01_gate.py`
+
+- QM M4 seam-closure promotion bundle (bounded non-claim):
+  - `QM_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
+  - `QM_M4_PROMOTION_READINESS_v0: CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0`
+  - `QM_M4_SEAM_CLOSURE_ARTIFACT_v0: qm_m4_seam_closure_promotion_cycle01_v0`
+  - `QM_M4_SEAM_CLOSURE_SHA256_v0: 6958fd41d0e8a413c0cbe304d17a4ec06807bb799f4d606fd41b86dc1436c3ad`
+  - `QM_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/docs/paper/DERIVATION_TARGET_QM_M4_SEAM_CLOSURE_PROMOTION_v0.md`
+  - `formal/output/qm_m4_seam_closure_promotion_cycle01_v0.json`
+  - `formal/python/tests/test_qm_m4_seam_closure_promotion_cycle01_gate.py`
+
 - Closure-hardening bundle (bounded non-claim):
   - `QM_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: qm_closure_hardening_bundle_cycle01_v0`
   - `QM_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 00febafaaee38d6a0ba5492fabd7a6b578a417060c16d129ba6886d0cd02af77`

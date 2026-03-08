@@ -1,0 +1,16 @@
+{
+  "artifact_id": "qm_empirical_discriminator_emp_qm_01_scaffold_cycle01_v0",
+  "artifact_version": 1,
+  "pillar": "PILLAR-QM",
+  "discriminator_id": "EMP-QM-01",
+  "status": "SCAFFOLD_PINNED_NONCLAIM",
+  "scope": "bounded_nonclaim_discriminator_scaffold",
+  "inputs": {
+    "bridge_lane": "OV-DR-BR-01",
+    "upstream_reference": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md"
+  },
+  "outputs": {
+    "candidate_elimination_ready": false,
+    "reason": "scaffold_only"
+  }
+}

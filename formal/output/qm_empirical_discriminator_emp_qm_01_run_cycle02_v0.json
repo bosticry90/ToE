@@ -1,0 +1,27 @@
+{
+  "artifact_id": "qm_empirical_discriminator_emp_qm_01_run_cycle02_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "pillar": "PILLAR-QM",
+    "discriminator_id": "EMP-QM-01",
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "scope": "bounded_nonclaim_discriminator_run",
+    "decision": {
+      "candidate_elimination_ready": true,
+      "prune_decision": "PASS_AND_PRUNE_SIGNAL_PRESENT_v0",
+      "pruned_candidate_families": [
+        "QM_EMP_QM_01_NULL_FAMILY"
+      ],
+      "survivor_guard": {
+        "required": true,
+        "satisfied": true,
+        "surviving_candidate_families": [
+          "QM_EMP_QM_01_BASELINE_FAMILY"
+        ]
+      }
+    },
+    "lane_reference": "OV-DR-BR-01",
+    "generated_on": "2026-03-07"
+  },
+  "payload_sha256": "c348ca5a70d21b84eb5d6561b18cd87a027d5302f9827085a2d6d363cedc22d2"
+}
