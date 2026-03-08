@@ -1,0 +1,26 @@
+{
+  "artifact_id": "gr_empirical_discriminator_emp_gr_01_run_cycle01_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "pillar": "PILLAR-GR",
+    "discriminator_id": "EMP-GR-01",
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "scope": "bounded_nonclaim_discriminator_run",
+    "decision": {
+      "candidate_elimination_ready": true,
+      "prune_decision": "PASS_AND_PRUNE_SIGNAL_PRESENT_v0",
+      "pruned_candidate_families": [
+        "GR_EMP_GR_01_NULL_FAMILY"
+      ],
+      "survivor_guard": {
+        "required": true,
+        "satisfied": true,
+        "surviving_candidate_families": [
+          "GR_EMP_GR_01_BASELINE_FAMILY"
+        ]
+      }
+    },
+    "lane_reference": "GR-DERIV-COMPLETENESS",
+    "generated_on": "2026-03-07"
+  }
+}
