@@ -62,7 +62,7 @@ Canonical bounded status note (2026-02-24):
 - SR M4 seam-closure promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md`.
 - SR M4 seam-closure promotion gate pointer: `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`.
 - SR M5 theory-parity-link target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`.
-- SR M5 theory-parity-link gate pointer: `formal/python/tests/test_sr_m5_theory_parity_link_cycle32_gate.py`.
+- SR M5 theory-parity-link gate pointer: `formal/python/tests/test_sr_m5_theory_parity_link_cycle33_gate.py`.
 - `PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0: ACTIVE_v0`
 - `PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_THEORY_PARITY_LINK_EXECUTION_v0`
 - `PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0`
@@ -158,11 +158,11 @@ Canonical bounded status note (2026-02-24):
 - `SR_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/sr_m4_seam_closure_promotion_cycle01_v0.json`
 - `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
-- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle32_v0`
-- `SR_M5_THEORY_PARITY_SHA256_v0: 9c86f98de9975d9d7fef478c3728647ad69e0a455f915bbdae3ba1d15a53a2e6`
+- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle33_v0`
+- `SR_M5_THEORY_PARITY_SHA256_v0: 7589942eeca3971cd41d9d245b0ef6e4328e61bfbe75b10c9de6e5a21339ca6f`
 - `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
-- `formal/output/sr_m5_theory_parity_link_cycle32_v0.json`
+- `formal/output/sr_m5_theory_parity_link_cycle33_v0.json`
 - `QM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
 - `QM_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: qm_m2_analytic_completeness_scaffold_cycle01_v0`
 - `QM_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 192432c694de481ae9c34b073ebcd214dacfd1ce1b0adc6799697c82bb9d301e`

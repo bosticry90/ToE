@@ -5,6 +5,13 @@ import json
 import re
 from pathlib import Path
 
+import pytest
+
+
+pytestmark = pytest.mark.skip(
+    reason="Historical SR M5 cycle gate retained for archive traceability; cycle33 is canonical active gate."
+)
+
 
 def find_repo_root(start: Path) -> Path:
     p = start.resolve()
