@@ -13,6 +13,69 @@ Purpose:
 - Freeze one planning-only cosmology target for background-expansion closure posture.
 - Keep metric/expansion assumptions explicit and bounded.
 
+COSMO deep-maturity scaffold bundle (bounded non-claim):
+- `COSMO_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: cosmo_m2_analytic_completeness_scaffold_cycle01_v0`
+- `COSMO_M2_ANALYTIC_COMPLETENESS_SHA256_v0: d44b0895113706d18fd824e362446dc5deb52e91b053f7c43df2d5c09acad6bd`
+- `COSMO_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/cosmo_m2_analytic_completeness_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_m2_analytic_completeness_scaffold_cycle01_gate.py`
+- `COSMO_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: cosmo_m2_canonical_equivalence_scaffold_cycle01_v0`
+- `COSMO_M2_CANONICAL_EQUIVALENCE_SHA256_v0: bc043ee389ebadc91f2329dd817e7780d7a6c89544e539257a7e4181db8ecbac`
+- `COSMO_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/cosmo_m2_canonical_equivalence_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_m2_canonical_equivalence_scaffold_cycle01_gate.py`
+- `COSMO_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: cosmo_m2_assumption_minimization_scaffold_cycle01_v0`
+- `COSMO_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: 582f28df575158593c5b76b28675ea2fb8c1d8eb42d4a66908bd9e21df1a3084`
+- `COSMO_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/cosmo_m2_assumption_minimization_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_m2_assumption_minimization_scaffold_cycle01_gate.py`
+- `COSMO_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: cosmo_m2_literature_alignment_scaffold_cycle01_v0`
+- `COSMO_M2_LITERATURE_ALIGNMENT_SHA256_v0: fa846681cf8c12f5e7c4446640d1b097585895016738f0dbea206037014869c8`
+- `COSMO_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/cosmo_m2_literature_alignment_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_m2_literature_alignment_scaffold_cycle01_gate.py`
+- `COSMO_M2_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `COSMO_M2_COMPLETION_ARTIFACT_v0: cosmo_m2_completion_promotion_cycle01_v0`
+- `COSMO_M2_COMPLETION_SHA256_v0: 23f471127d15fd22e7f712b4f415aa61457a5234669f62710c34ab27630f89e1`
+- `COSMO_M2_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/cosmo_m2_completion_promotion_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_m2_completion_promotion_cycle01_gate.py`
+
+COSMO M3 first discriminator bundle (bounded non-claim):
+- `EMP_COSMO_01_DISCRIMINATOR_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `EMP_COSMO_01_PRUNE_DECISION_v0: ELIMINATION_READY_BOUNDED_v0`
+- `EMP_COSMO_01_PRUNE_RESULT_v0: PASS_AND_PRUNE_SIGNAL_PRESENT_v0`
+- `EMP_COSMO_01_ARTIFACT_v0: cosmo_empirical_discriminator_emp_cosmo_01_run_cycle01_v0`
+- `EMP_COSMO_01_ARTIFACT_SHA256_v0: 17dbf1fb7965376c314b4dfcf38b2909fc75d17c4a21fdaa80f47b9d928c2a47`
+- `EMP_COSMO_01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_DISCRIMINATOR_EMP_COSMO_01_v0.md`
+- `formal/output/cosmo_empirical_discriminator_emp_cosmo_01_run_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_empirical_discriminator_emp_cosmo_01_scaffold_gate.py`
+
+COSMO M3 completion promotion bundle (bounded non-claim):
+- `COSMO_M3_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `COSMO_M3_PROMOTION_READINESS_v0: FIRST_DISCRIMINATOR_CLOSED_AND_PROMOTED_v0`
+- `COSMO_M3_COMPLETION_ARTIFACT_v0: cosmo_m3_completion_promotion_cycle01_v0`
+- `COSMO_M3_COMPLETION_SHA256_v0: fde30711d57abcfb88679dccc3eb6b21fb28ee87cf2f00916d32339d1b2a3202`
+- `COSMO_M3_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_COSMO_M3_COMPLETION_PROMOTION_v0.md`
+- `formal/output/cosmo_m3_completion_promotion_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_m3_completion_promotion_cycle01_gate.py`
+
+COSMO M4 seam-closure promotion bundle (bounded non-claim):
+- `COSMO_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `COSMO_M4_PROMOTION_READINESS_v0: CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0`
+- `COSMO_M4_SEAM_CLOSURE_ARTIFACT_v0: cosmo_m4_seam_closure_promotion_cycle01_v0`
+- `COSMO_M4_SEAM_CLOSURE_SHA256_v0: 4fcb9fe42b680f2eab2d95ed63f853c18e2b415367cd08cac8af96d66a994d40`
+- `COSMO_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_COSMO_M4_SEAM_CLOSURE_PROMOTION_v0.md`
+- `formal/output/cosmo_m4_seam_closure_promotion_cycle01_v0.json`
+- `formal/python/tests/test_cosmo_m4_seam_closure_promotion_cycle01_gate.py`
+
 Kickoff adjudication:
 - `COSMO_BACKGROUND_ADJUDICATION: DISCHARGED_v0_BOUNDED`
 - `PILLAR_COSMO_FULL_DERIVATION_DISCHARGE_ADJUDICATION: NOT_YET_DISCHARGED`

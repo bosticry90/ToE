@@ -1,0 +1,18 @@
+{
+  "artifact_id": "cosmo_m2_assumption_minimization_scaffold_cycle01_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "pillar": "PILLAR-COSMO",
+    "maturity_tier": "M2_DERIVATION_COMPLETE",
+    "row": "assumption_minimization",
+    "status": "SCAFFOLD_PINNED_NONCLAIM",
+    "scope": "bounded_nonclaim",
+    "requirements": [
+      "background_assumptions_enumerated",
+      "gauge_choice_and_symmetry_constraints_explicit",
+      "minimal_closure_assumption_set_locked"
+    ],
+    "generated_on": "2026-03-07"
+  },
+  "payload_sha256": "582f28df575158593c5b76b28675ea2fb8c1d8eb42d4a66908bd9e21df1a3084"
+}

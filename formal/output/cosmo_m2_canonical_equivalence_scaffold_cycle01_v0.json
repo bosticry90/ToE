@@ -1,0 +1,18 @@
+{
+  "artifact_id": "cosmo_m2_canonical_equivalence_scaffold_cycle01_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "pillar": "PILLAR-COSMO",
+    "maturity_tier": "M2_DERIVATION_COMPLETE",
+    "row": "canonical_equivalence",
+    "status": "SCAFFOLD_PINNED_NONCLAIM",
+    "scope": "bounded_nonclaim",
+    "requirements": [
+      "canonical_form_mapping_explicit",
+      "operator_symbol_alignment_explicit",
+      "bounded_equivalence_scope_stated"
+    ],
+    "generated_on": "2026-03-07"
+  },
+  "payload_sha256": "bc043ee389ebadc91f2329dd817e7780d7a6c89544e539257a7e4181db8ecbac"
+}
