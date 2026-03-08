@@ -8,7 +8,7 @@ from pathlib import Path
 import pytest
 
 
-pytestmark = pytest.mark.skip(reason="Historical SR M5 cycle gate retained for archive traceability; cycle13 is canonical active gate.")
+pytestmark = pytest.mark.skip(reason="Historical SR M5 cycle gate retained for archive traceability; cycle14 is canonical active gate.")
 
 
 def find_repo_root(start: Path) -> Path:
@@ -91,6 +91,7 @@ def test_sr_m5_theory_parity_link_cycle01_gate() -> None:
         assert path_ref in sr_text
         assert path_ref in state_text
         assert path_ref in roadmap_text
+
 
 
 
