@@ -9,7 +9,7 @@ import pytest
 
 
 pytestmark = pytest.mark.skip(
-    reason="Historical SR M5 cycle gate retained for archive traceability; cycle27 is canonical active gate."
+    reason="Historical SR M5 cycle gate retained for archive traceability; cycle28 is canonical active gate."
 )
 
 
@@ -94,6 +94,7 @@ def test_sr_m5_theory_parity_link_cycle26_gate() -> None:
         assert path_ref in sr_text
         assert path_ref in state_text
         assert path_ref in roadmap_text
+
 
 
 
