@@ -2,6 +2,12 @@ $ErrorActionPreference = 'Stop'
 
 Write-Host "Running governance suite via ./py.ps1" -ForegroundColor Cyan
 
+Write-Host "Running local stack preflight" -ForegroundColor Cyan
+./py.ps1 -m formal.python.tools.dev_stack_preflight
+if ($LASTEXITCODE -ne 0) {
+  throw "Dev stack preflight failed."
+}
+
 ./py.ps1 -m pytest `
   formal/python/tests/test_state_theory_dag.py `
   formal/python/tests/test_state_doc_no_duplicate_gapids.py `
@@ -138,10 +144,42 @@ Write-Host "Running governance suite via ./py.ps1" -ForegroundColor Cyan
   formal/python/tests/test_orchestration_report_contract_gate.py `
   formal/python/tests/test_conftest_signature_stability_gate.py `
   formal/python/tests/test_repository_retention_policy_contract_gate.py `
+  formal/python/tests/test_local_execution_posture_gate.py `
   formal/python/tests/test_dev_stack_preflight.py `
   formal/python/tests/test_ci_tranche3_gates.py `
   formal/python/tests/test_sql_integrity_snapshot_tool.py `
   -q
+
+if ($LASTEXITCODE -ne 0) {
+  throw "Governance pytest tranche failed."
+}
+
+Write-Host "Running local orchestration manifest" -ForegroundColor Cyan
+./py.ps1 -m formal.python.orchestration.runner --manifest formal/docs/release/TOE_ASYNC_ORCHESTRATION_MANIFEST_v0.json --output formal/output/reports/toe_orchestration_report_v0.json --max-concurrency 2 --fail-on-check-failure
+if ($LASTEXITCODE -ne 0) {
+  throw "Orchestration runner failed."
+}
+
+Write-Host "Running SQL integrity snapshot mirror" -ForegroundColor Cyan
+./py.ps1 -m formal.python.tools.sql_integrity_snapshot --db formal/output/reports/toe_integrity_snapshot_v0.sqlite3 --report formal/output/reports/toe_integrity_snapshot_report_v0.json --fail-on-issues
+if ($LASTEXITCODE -ne 0) {
+  throw "SQL integrity snapshot reported issues."
+}
+
+# Local Rust trust-core execution is policy-enforced when cargo is available.
+# Set TOE_REQUIRE_RUST_LOCAL=1 to fail hard when cargo is missing.
+$cargo = Get-Command cargo -ErrorAction SilentlyContinue
+if ($null -ne $cargo) {
+  Write-Host "Running Rust trust-core pilot" -ForegroundColor Cyan
+  cargo run --manifest-path formal/rust/toe_trust_core/Cargo.toml
+  if ($LASTEXITCODE -ne 0) {
+    throw "Rust trust-core pilot failed."
+  }
+} elseif ($env:TOE_REQUIRE_RUST_LOCAL -eq '1') {
+  throw "Rust is required locally (TOE_REQUIRE_RUST_LOCAL=1) but cargo was not found."
+} else {
+  Write-Host "WARN: cargo not found; skipping local Rust trust-core run." -ForegroundColor Yellow
+}
 
 Write-Host "OK" -ForegroundColor Green
 
