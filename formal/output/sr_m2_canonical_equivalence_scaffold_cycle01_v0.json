@@ -1,0 +1,18 @@
+{
+  "artifact_id": "sr_m2_canonical_equivalence_scaffold_cycle01_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "pillar": "PILLAR-SR",
+    "maturity_tier": "M2_DERIVATION_COMPLETE",
+    "row": "canonical_equivalence",
+    "status": "SCAFFOLD_PINNED_NONCLAIM",
+    "scope": "bounded_nonclaim",
+    "requirements": [
+      "canonical_form_pairing_explicit",
+      "normalization_map_explicit",
+      "equivalence_boundary_stated"
+    ],
+    "generated_on": "2026-03-07"
+  },
+  "payload_sha256": "a2e8d032516f4143ddd7b9215030750725a2cb5a7470aebc5a113b2f4b94c55a"
+}
