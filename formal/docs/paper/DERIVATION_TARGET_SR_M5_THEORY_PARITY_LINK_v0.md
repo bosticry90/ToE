@@ -20,11 +20,11 @@ Non-claim boundary:
 
 Tranche bundle (bounded non-claim):
 - `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
-- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle29_v0`
-- `SR_M5_THEORY_PARITY_SHA256_v0: 540c18f4aa0e1ab71f521cbfef4a627030e1004bc41bb7a4f9a5b7f9c9370434`
+- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle30_v0`
+- `SR_M5_THEORY_PARITY_SHA256_v0: 01249df9a8b3b51c5ca4acce13ad177e730821d81baca2b361039dff879f81ba`
 - `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- artifact path: `formal/output/sr_m5_theory_parity_link_cycle29_v0.json`
-- coupling gate path: `formal/python/tests/test_sr_m5_theory_parity_link_cycle29_gate.py`
+- artifact path: `formal/output/sr_m5_theory_parity_link_cycle30_v0.json`
+- coupling gate path: `formal/python/tests/test_sr_m5_theory_parity_link_cycle30_gate.py`
 
 Tranche semantics:
 - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
