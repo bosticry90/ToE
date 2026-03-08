@@ -95,7 +95,7 @@ def test_deep_maturity_program_pointers_and_tokens_are_pinned() -> None:
         "formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md",
         "formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py",
         "formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md",
-        "formal/python/tests/test_sr_m5_theory_parity_link_cycle08_gate.py",
+        "formal/python/tests/test_sr_m5_theory_parity_link_cycle09_gate.py",
         REGISTRY_REL,
         GATE_REL,
     ):
@@ -141,7 +141,7 @@ def test_deep_maturity_registry_covers_all_matrix_pillars() -> None:
         "formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py"
     )
     assert registry.get("sr_m5_theory_parity_gate_path") == (
-        "formal/python/tests/test_sr_m5_theory_parity_link_cycle08_gate.py"
+        "formal/python/tests/test_sr_m5_theory_parity_link_cycle09_gate.py"
     )
     assert registry.get("gr_m3_completion_gate_path") == "formal/python/tests/test_gr_m3_completion_promotion_cycle01_gate.py"
     assert registry.get("stat_m3_completion_gate_path") == "formal/python/tests/test_stat_m3_completion_promotion_cycle01_gate.py"
@@ -285,8 +285,8 @@ def test_deep_maturity_registry_covers_all_matrix_pillars() -> None:
     sr_m5_theory_parity = sr_row.get("m5_theory_parity", {})
     assert sr_m5_theory_parity.get("target_id") == "TARGET-SR-M5-THEORY-PARITY-LINK-v0"
     assert sr_m5_theory_parity.get("doc_path") == "formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md"
-    assert sr_m5_theory_parity.get("artifact_path") == "formal/output/sr_m5_theory_parity_link_cycle08_v0.json"
-    assert sr_m5_theory_parity.get("gate_path") == "formal/python/tests/test_sr_m5_theory_parity_link_cycle08_gate.py"
+    assert sr_m5_theory_parity.get("artifact_path") == "formal/output/sr_m5_theory_parity_link_cycle09_v0.json"
+    assert sr_m5_theory_parity.get("gate_path") == "formal/python/tests/test_sr_m5_theory_parity_link_cycle09_gate.py"
 
     registry_pillars = {row.get("pillar_id") for row in registry_rows}
     assert registry_pillars == matrix_pillars, "Deep maturity registry must cover all matrix pillars exactly."
