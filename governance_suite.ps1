@@ -29,6 +29,66 @@ Write-Host "Running governance suite via ./py.ps1" -ForegroundColor Cyan
   formal/python/tests/test_pillar_status_matrix_consistency_gate.py `
   formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py `
   formal/python/tests/test_pillar_phase_advancement_gate.py `
+  formal/python/tests/test_pillar_deep_maturity_program_gate.py `
+  formal/python/tests/test_phase3_m3_consolidation_promotion_cycle01_gate.py `
+  formal/python/tests/test_qm_m3_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_gr_m3_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_stat_m3_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_cosmo_m3_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_em_m3_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_qft_m3_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_sr_m3_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_qm_m4_seam_closure_promotion_cycle01_gate.py `
+  formal/python/tests/test_gr_m4_seam_closure_promotion_cycle01_gate.py `
+  formal/python/tests/test_stat_m4_seam_closure_promotion_cycle01_gate.py `
+  formal/python/tests/test_cosmo_m4_seam_closure_promotion_cycle01_gate.py `
+  formal/python/tests/test_em_m4_seam_closure_promotion_cycle01_gate.py `
+  formal/python/tests/test_qft_m4_seam_closure_promotion_cycle01_gate.py `
+  formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py `
+  formal/python/tests/test_sr_m5_theory_parity_link_cycle07_gate.py `
+  formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py `
+  formal/python/tests/test_qm_m2_analytic_completeness_scaffold_cycle01_gate.py `
+  formal/python/tests/test_qm_m2_canonical_equivalence_scaffold_cycle01_gate.py `
+  formal/python/tests/test_qm_m2_assumption_minimization_scaffold_cycle01_gate.py `
+  formal/python/tests/test_qm_m2_literature_alignment_scaffold_cycle01_gate.py `
+  formal/python/tests/test_qm_m2_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_gr_m2_analytic_completeness_scaffold_cycle01_gate.py `
+  formal/python/tests/test_gr_m2_canonical_equivalence_scaffold_cycle01_gate.py `
+  formal/python/tests/test_gr_m2_assumption_minimization_scaffold_cycle01_gate.py `
+  formal/python/tests/test_gr_m2_literature_alignment_scaffold_cycle01_gate.py `
+  formal/python/tests/test_gr_m2_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_stat_m2_analytic_completeness_scaffold_cycle01_gate.py `
+  formal/python/tests/test_stat_m2_canonical_equivalence_scaffold_cycle01_gate.py `
+  formal/python/tests/test_stat_m2_assumption_minimization_scaffold_cycle01_gate.py `
+  formal/python/tests/test_stat_m2_literature_alignment_scaffold_cycle01_gate.py `
+  formal/python/tests/test_stat_m2_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_cosmo_m2_analytic_completeness_scaffold_cycle01_gate.py `
+  formal/python/tests/test_cosmo_m2_canonical_equivalence_scaffold_cycle01_gate.py `
+  formal/python/tests/test_cosmo_m2_assumption_minimization_scaffold_cycle01_gate.py `
+  formal/python/tests/test_cosmo_m2_literature_alignment_scaffold_cycle01_gate.py `
+  formal/python/tests/test_cosmo_m2_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_em_m2_analytic_completeness_scaffold_cycle01_gate.py `
+  formal/python/tests/test_em_m2_canonical_equivalence_scaffold_cycle01_gate.py `
+  formal/python/tests/test_em_m2_assumption_minimization_scaffold_cycle01_gate.py `
+  formal/python/tests/test_em_m2_literature_alignment_scaffold_cycle01_gate.py `
+  formal/python/tests/test_em_m2_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_qft_m2_analytic_completeness_scaffold_cycle01_gate.py `
+  formal/python/tests/test_qft_m2_canonical_equivalence_scaffold_cycle01_gate.py `
+  formal/python/tests/test_qft_m2_assumption_minimization_scaffold_cycle01_gate.py `
+  formal/python/tests/test_qft_m2_literature_alignment_scaffold_cycle01_gate.py `
+  formal/python/tests/test_qft_m2_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_sr_m2_analytic_completeness_scaffold_cycle01_gate.py `
+  formal/python/tests/test_sr_m2_canonical_equivalence_scaffold_cycle01_gate.py `
+  formal/python/tests/test_sr_m2_assumption_minimization_scaffold_cycle01_gate.py `
+  formal/python/tests/test_sr_m2_literature_alignment_scaffold_cycle01_gate.py `
+  formal/python/tests/test_sr_m2_completion_promotion_cycle01_gate.py `
+  formal/python/tests/test_qm_empirical_discriminator_emp_qm_01_scaffold_gate.py `
+  formal/python/tests/test_gr_empirical_discriminator_emp_gr_01_scaffold_gate.py `
+  formal/python/tests/test_stat_empirical_discriminator_emp_stat_01_scaffold_gate.py `
+  formal/python/tests/test_cosmo_empirical_discriminator_emp_cosmo_01_scaffold_gate.py `
+  formal/python/tests/test_em_empirical_discriminator_emp_em_01_scaffold_gate.py `
+  formal/python/tests/test_qft_empirical_discriminator_emp_qft_01_scaffold_gate.py `
+  formal/python/tests/test_sr_empirical_discriminator_emp_sr_01_scaffold_gate.py `
   formal/python/tests/test_pillar_full_completion_action_plan_gate.py `
   formal/python/tests/test_phase4_global_unification_and_residual_debt_gate.py `
   formal/python/tests/test_locked_queue_phase_adherence_standard_gate.py `

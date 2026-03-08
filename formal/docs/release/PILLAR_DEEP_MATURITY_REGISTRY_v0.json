@@ -1,0 +1,435 @@
+{
+  "registry_id": "PILLAR_DEEP_MATURITY_REGISTRY_v0",
+  "registry_version": 1,
+  "program_doc": "formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md",
+  "gate_path": "formal/python/tests/test_pillar_deep_maturity_program_gate.py",
+  "m2_gate_path": "formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py",
+  "qm_m3_gate_path": "formal/python/tests/test_qm_empirical_discriminator_emp_qm_01_scaffold_gate.py",
+  "qm_m3_completion_gate_path": "formal/python/tests/test_qm_m3_completion_promotion_cycle01_gate.py",
+  "qm_m4_seam_closure_gate_path": "formal/python/tests/test_qm_m4_seam_closure_promotion_cycle01_gate.py",
+  "gr_m3_gate_path": "formal/python/tests/test_gr_empirical_discriminator_emp_gr_01_scaffold_gate.py",
+  "gr_m3_completion_gate_path": "formal/python/tests/test_gr_m3_completion_promotion_cycle01_gate.py",
+  "gr_m4_seam_closure_gate_path": "formal/python/tests/test_gr_m4_seam_closure_promotion_cycle01_gate.py",
+  "stat_m3_gate_path": "formal/python/tests/test_stat_empirical_discriminator_emp_stat_01_scaffold_gate.py",
+  "stat_m3_completion_gate_path": "formal/python/tests/test_stat_m3_completion_promotion_cycle01_gate.py",
+  "stat_m4_seam_closure_gate_path": "formal/python/tests/test_stat_m4_seam_closure_promotion_cycle01_gate.py",
+  "cosmo_m3_gate_path": "formal/python/tests/test_cosmo_empirical_discriminator_emp_cosmo_01_scaffold_gate.py",
+  "cosmo_m3_completion_gate_path": "formal/python/tests/test_cosmo_m3_completion_promotion_cycle01_gate.py",
+  "cosmo_m4_seam_closure_gate_path": "formal/python/tests/test_cosmo_m4_seam_closure_promotion_cycle01_gate.py",
+  "em_m3_gate_path": "formal/python/tests/test_em_empirical_discriminator_emp_em_01_scaffold_gate.py",
+  "em_m3_completion_gate_path": "formal/python/tests/test_em_m3_completion_promotion_cycle01_gate.py",
+  "em_m4_seam_closure_gate_path": "formal/python/tests/test_em_m4_seam_closure_promotion_cycle01_gate.py",
+  "qft_m3_gate_path": "formal/python/tests/test_qft_empirical_discriminator_emp_qft_01_scaffold_gate.py",
+  "qft_m3_completion_gate_path": "formal/python/tests/test_qft_m3_completion_promotion_cycle01_gate.py",
+  "qft_m4_seam_closure_gate_path": "formal/python/tests/test_qft_m4_seam_closure_promotion_cycle01_gate.py",
+  "sr_m3_gate_path": "formal/python/tests/test_sr_empirical_discriminator_emp_sr_01_scaffold_gate.py",
+  "sr_m3_completion_gate_path": "formal/python/tests/test_sr_m3_completion_promotion_cycle01_gate.py",
+  "sr_m4_seam_closure_gate_path": "formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py",
+  "sr_m5_theory_parity_gate_path": "formal/python/tests/test_sr_m5_theory_parity_link_cycle07_gate.py",
+  "m3_consolidation_gate_path": "formal/python/tests/test_phase3_m3_consolidation_promotion_cycle01_gate.py",
+  "program_status": {
+    "PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0": "ACTIVE_v0",
+    "PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0": "PHASE_5_M5_THEORY_PARITY_LINK_EXECUTION_v0",
+    "PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0": "TARGET-SR-M5-THEORY-PARITY-LINK-v0",
+    "PILLAR_DEEP_MATURITY_NEXT_TARGET_v0": "TARGET-SR-M5-THEORY-PARITY-LINK-v0"
+  },
+  "m3_consolidation": {
+    "target_id": "TARGET-PHASE3-M3-CONSOLIDATION-PROMOTION-v0",
+    "doc_path": "formal/docs/release/PHASE3_M3_CONSOLIDATION_PROMOTION_v0.md",
+    "artifact_path": "formal/output/phase3_m3_consolidation_promotion_cycle01_v0.json",
+    "gate_path": "formal/python/tests/test_phase3_m3_consolidation_promotion_cycle01_gate.py"
+  },
+  "tier_tokens": {
+    "m1": "M1_THEOREM_CLOSED",
+    "m2": "M2_DERIVATION_COMPLETE",
+    "m3": "M3_EMPIRICALLY_DISCRIMINATIVE",
+    "m4": "M4_CROSS_PILLAR_INEVITABLE",
+    "m5": "M5_THEORY_PARITY_LINKED"
+  },
+  "pillars": [
+    {
+      "pillar_id": "PILLAR-QM",
+      "priority": 1,
+      "m1_status": "COMPLETE_BOUNDED_v0",
+      "m2_status": "COMPLETE_BOUNDED_v0",
+      "m3_status": "COMPLETE_BOUNDED_v0",
+      "m4_status": "COMPLETE_BOUNDED_v0",
+      "next_target": "TARGET-QM-M4-SEAM-CLOSURE-PROMOTION-v0",
+      "m2_plan_doc": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "m2_exit_rows": {
+        "analytic_completeness": {
+          "token_name": "QM_M2_ANALYTIC_COMPLETENESS_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/qm_m2_analytic_completeness_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_qm_m2_analytic_completeness_scaffold_cycle01_gate.py"
+        },
+        "canonical_equivalence": {
+          "token_name": "QM_M2_CANONICAL_EQUIVALENCE_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/qm_m2_canonical_equivalence_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_qm_m2_canonical_equivalence_scaffold_cycle01_gate.py"
+        },
+        "assumption_minimization": {
+          "token_name": "QM_M2_ASSUMPTION_MINIMIZATION_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/qm_m2_assumption_minimization_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_qm_m2_assumption_minimization_scaffold_cycle01_gate.py"
+        },
+        "literature_alignment": {
+          "token_name": "QM_M2_LITERATURE_ALIGNMENT_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/qm_m2_literature_alignment_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_qm_m2_literature_alignment_scaffold_cycle01_gate.py"
+        }
+      },
+      "m3_first_discriminator": {
+        "target_id": "TARGET-QM-EMPIRICAL-DISCRIMINATOR-EMP-QM-01-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_DISCRIMINATOR_EMP_QM_01_v0.md",
+        "artifact_path": "formal/output/qm_empirical_discriminator_emp_qm_01_run_cycle02_v0.json",
+        "gate_path": "formal/python/tests/test_qm_empirical_discriminator_emp_qm_01_scaffold_gate.py"
+      },
+      "m3_completion": {
+        "target_id": "TARGET-QM-M3-COMPLETION-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_QM_M3_COMPLETION_PROMOTION_v0.md",
+        "artifact_path": "formal/output/qm_m3_completion_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_qm_m3_completion_promotion_cycle01_gate.py"
+      },
+      "m4_completion": {
+        "target_id": "TARGET-QM-M4-SEAM-CLOSURE-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_QM_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "artifact_path": "formal/output/qm_m4_seam_closure_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_qm_m4_seam_closure_promotion_cycle01_gate.py"
+      }
+    },
+    {
+      "pillar_id": "PILLAR-GR",
+      "priority": 2,
+      "m1_status": "COMPLETE_BOUNDED_v0",
+      "m2_status": "COMPLETE_BOUNDED_v0",
+      "m3_status": "COMPLETE_BOUNDED_v0",
+      "m4_status": "COMPLETE_BOUNDED_v0",
+      "next_target": "TARGET-GR-M4-SEAM-CLOSURE-PROMOTION-v0",
+      "m2_plan_doc": "formal/docs/paper/DERIVATION_COMPLETENESS_GATE_v0.md",
+      "m2_exit_rows": {
+        "analytic_completeness": {
+          "token_name": "GR_M2_ANALYTIC_COMPLETENESS_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/gr_m2_analytic_completeness_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_gr_m2_analytic_completeness_scaffold_cycle01_gate.py"
+        },
+        "canonical_equivalence": {
+          "token_name": "GR_M2_CANONICAL_EQUIVALENCE_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/gr_m2_canonical_equivalence_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_gr_m2_canonical_equivalence_scaffold_cycle01_gate.py"
+        },
+        "assumption_minimization": {
+          "token_name": "GR_M2_ASSUMPTION_MINIMIZATION_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/gr_m2_assumption_minimization_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_gr_m2_assumption_minimization_scaffold_cycle01_gate.py"
+        },
+        "literature_alignment": {
+          "token_name": "GR_M2_LITERATURE_ALIGNMENT_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/gr_m2_literature_alignment_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_gr_m2_literature_alignment_scaffold_cycle01_gate.py"
+        }
+      },
+      "m3_first_discriminator": {
+        "target_id": "TARGET-GR-EMPIRICAL-DISCRIMINATOR-EMP-GR-01-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_DISCRIMINATOR_EMP_GR_01_v0.md",
+        "artifact_path": "formal/output/gr_empirical_discriminator_emp_gr_01_run_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_gr_empirical_discriminator_emp_gr_01_scaffold_gate.py"
+      },
+      "m3_completion": {
+        "target_id": "TARGET-GR-M3-COMPLETION-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_GR_M3_COMPLETION_PROMOTION_v0.md",
+        "artifact_path": "formal/output/gr_m3_completion_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_gr_m3_completion_promotion_cycle01_gate.py"
+      },
+      "m4_completion": {
+        "target_id": "TARGET-GR-M4-SEAM-CLOSURE-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_GR_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "artifact_path": "formal/output/gr_m4_seam_closure_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_gr_m4_seam_closure_promotion_cycle01_gate.py"
+      }
+    },
+    {
+      "pillar_id": "PILLAR-STAT",
+      "priority": 3,
+      "m1_status": "COMPLETE_BOUNDED_v0",
+      "m2_status": "COMPLETE_BOUNDED_v0",
+      "m3_status": "COMPLETE_BOUNDED_v0",
+      "m4_status": "COMPLETE_BOUNDED_v0",
+      "next_target": "TARGET-STAT-M4-SEAM-CLOSURE-PROMOTION-v0",
+      "m2_plan_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "m2_exit_rows": {
+        "analytic_completeness": {
+          "token_name": "STAT_M2_ANALYTIC_COMPLETENESS_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/stat_m2_analytic_completeness_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_stat_m2_analytic_completeness_scaffold_cycle01_gate.py"
+        },
+        "canonical_equivalence": {
+          "token_name": "STAT_M2_CANONICAL_EQUIVALENCE_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/stat_m2_canonical_equivalence_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_stat_m2_canonical_equivalence_scaffold_cycle01_gate.py"
+        },
+        "assumption_minimization": {
+          "token_name": "STAT_M2_ASSUMPTION_MINIMIZATION_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/stat_m2_assumption_minimization_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_stat_m2_assumption_minimization_scaffold_cycle01_gate.py"
+        },
+        "literature_alignment": {
+          "token_name": "STAT_M2_LITERATURE_ALIGNMENT_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/stat_m2_literature_alignment_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_stat_m2_literature_alignment_scaffold_cycle01_gate.py"
+        }
+      },
+      "m3_first_discriminator": {
+        "target_id": "TARGET-STAT-EMPIRICAL-DISCRIMINATOR-EMP-STAT-01-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_DISCRIMINATOR_EMP_STAT_01_v0.md",
+        "artifact_path": "formal/output/stat_empirical_discriminator_emp_stat_01_run_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_stat_empirical_discriminator_emp_stat_01_scaffold_gate.py"
+      },
+      "m3_completion": {
+        "target_id": "TARGET-STAT-M3-COMPLETION-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_STAT_M3_COMPLETION_PROMOTION_v0.md",
+        "artifact_path": "formal/output/stat_m3_completion_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_stat_m3_completion_promotion_cycle01_gate.py"
+      },
+      "m4_completion": {
+        "target_id": "TARGET-STAT-M4-SEAM-CLOSURE-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_STAT_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "artifact_path": "formal/output/stat_m4_seam_closure_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_stat_m4_seam_closure_promotion_cycle01_gate.py"
+      }
+    },
+    {
+      "pillar_id": "PILLAR-COSMO",
+      "priority": 4,
+      "m1_status": "COMPLETE_BOUNDED_v0",
+      "m2_status": "COMPLETE_BOUNDED_v0",
+      "m3_status": "COMPLETE_BOUNDED_v0",
+      "m4_status": "COMPLETE_BOUNDED_v0",
+      "next_target": "TARGET-EM-M4-SEAM-CLOSURE-PROMOTION-v0",
+      "m2_plan_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "m2_exit_rows": {
+        "analytic_completeness": {
+          "token_name": "COSMO_M2_ANALYTIC_COMPLETENESS_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/cosmo_m2_analytic_completeness_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_cosmo_m2_analytic_completeness_scaffold_cycle01_gate.py"
+        },
+        "canonical_equivalence": {
+          "token_name": "COSMO_M2_CANONICAL_EQUIVALENCE_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/cosmo_m2_canonical_equivalence_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_cosmo_m2_canonical_equivalence_scaffold_cycle01_gate.py"
+        },
+        "assumption_minimization": {
+          "token_name": "COSMO_M2_ASSUMPTION_MINIMIZATION_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/cosmo_m2_assumption_minimization_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_cosmo_m2_assumption_minimization_scaffold_cycle01_gate.py"
+        },
+        "literature_alignment": {
+          "token_name": "COSMO_M2_LITERATURE_ALIGNMENT_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/cosmo_m2_literature_alignment_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_cosmo_m2_literature_alignment_scaffold_cycle01_gate.py"
+        }
+      },
+      "m3_first_discriminator": {
+        "target_id": "TARGET-COSMO-EMPIRICAL-DISCRIMINATOR-EMP-COSMO-01-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_DISCRIMINATOR_EMP_COSMO_01_v0.md",
+        "artifact_path": "formal/output/cosmo_empirical_discriminator_emp_cosmo_01_run_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_cosmo_empirical_discriminator_emp_cosmo_01_scaffold_gate.py"
+      },
+      "m3_completion": {
+        "target_id": "TARGET-COSMO-M3-COMPLETION-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_COSMO_M3_COMPLETION_PROMOTION_v0.md",
+        "artifact_path": "formal/output/cosmo_m3_completion_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_cosmo_m3_completion_promotion_cycle01_gate.py"
+      },
+      "m4_completion": {
+        "target_id": "TARGET-COSMO-M4-SEAM-CLOSURE-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_COSMO_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "artifact_path": "formal/output/cosmo_m4_seam_closure_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_cosmo_m4_seam_closure_promotion_cycle01_gate.py"
+      }
+    },
+    {
+      "pillar_id": "PILLAR-EM",
+      "priority": 5,
+      "m1_status": "COMPLETE_BOUNDED_v0",
+      "m2_status": "COMPLETE_BOUNDED_v0",
+      "m3_status": "COMPLETE_BOUNDED_v0",
+      "m4_status": "COMPLETE_BOUNDED_v0",
+      "next_target": "TARGET-QFT-M4-SEAM-CLOSURE-PROMOTION-v0",
+      "m2_plan_doc": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "m2_exit_rows": {
+        "analytic_completeness": {
+          "token_name": "EM_M2_ANALYTIC_COMPLETENESS_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/em_m2_analytic_completeness_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_em_m2_analytic_completeness_scaffold_cycle01_gate.py"
+        },
+        "canonical_equivalence": {
+          "token_name": "EM_M2_CANONICAL_EQUIVALENCE_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/em_m2_canonical_equivalence_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_em_m2_canonical_equivalence_scaffold_cycle01_gate.py"
+        },
+        "assumption_minimization": {
+          "token_name": "EM_M2_ASSUMPTION_MINIMIZATION_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/em_m2_assumption_minimization_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_em_m2_assumption_minimization_scaffold_cycle01_gate.py"
+        },
+        "literature_alignment": {
+          "token_name": "EM_M2_LITERATURE_ALIGNMENT_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/em_m2_literature_alignment_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_em_m2_literature_alignment_scaffold_cycle01_gate.py"
+        }
+      },
+      "m3_first_discriminator": {
+        "target_id": "TARGET-EM-EMPIRICAL-DISCRIMINATOR-EMP-EM-01-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_DISCRIMINATOR_EMP_EM_01_v0.md",
+        "artifact_path": "formal/output/em_empirical_discriminator_emp_em_01_run_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_em_empirical_discriminator_emp_em_01_scaffold_gate.py"
+      },
+      "m3_completion": {
+        "target_id": "TARGET-EM-M3-COMPLETION-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_EM_M3_COMPLETION_PROMOTION_v0.md",
+        "artifact_path": "formal/output/em_m3_completion_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_em_m3_completion_promotion_cycle01_gate.py"
+      },
+      "m4_completion": {
+        "target_id": "TARGET-EM-M4-SEAM-CLOSURE-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_EM_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "artifact_path": "formal/output/em_m4_seam_closure_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_em_m4_seam_closure_promotion_cycle01_gate.py"
+      }
+    },
+    {
+      "pillar_id": "PILLAR-QFT",
+      "priority": 6,
+      "m1_status": "COMPLETE_BOUNDED_v0",
+      "m2_status": "COMPLETE_BOUNDED_v0",
+      "m3_status": "COMPLETE_BOUNDED_v0",
+      "m4_status": "COMPLETE_BOUNDED_v0",
+      "next_target": "TARGET-SR-M4-SEAM-CLOSURE-PROMOTION-v0",
+      "m2_plan_doc": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "m2_exit_rows": {
+        "analytic_completeness": {
+          "token_name": "QFT_M2_ANALYTIC_COMPLETENESS_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/qft_m2_analytic_completeness_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_qft_m2_analytic_completeness_scaffold_cycle01_gate.py"
+        },
+        "canonical_equivalence": {
+          "token_name": "QFT_M2_CANONICAL_EQUIVALENCE_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/qft_m2_canonical_equivalence_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_qft_m2_canonical_equivalence_scaffold_cycle01_gate.py"
+        },
+        "assumption_minimization": {
+          "token_name": "QFT_M2_ASSUMPTION_MINIMIZATION_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/qft_m2_assumption_minimization_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_qft_m2_assumption_minimization_scaffold_cycle01_gate.py"
+        },
+        "literature_alignment": {
+          "token_name": "QFT_M2_LITERATURE_ALIGNMENT_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/qft_m2_literature_alignment_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_qft_m2_literature_alignment_scaffold_cycle01_gate.py"
+        }
+      },
+      "m3_first_discriminator": {
+        "target_id": "TARGET-QFT-EMPIRICAL-DISCRIMINATOR-EMP-QFT-01-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_DISCRIMINATOR_EMP_QFT_01_v0.md",
+        "artifact_path": "formal/output/qft_empirical_discriminator_emp_qft_01_run_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_qft_empirical_discriminator_emp_qft_01_scaffold_gate.py"
+      },
+      "m3_completion": {
+        "target_id": "TARGET-QFT-M3-COMPLETION-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_QFT_M3_COMPLETION_PROMOTION_v0.md",
+        "artifact_path": "formal/output/qft_m3_completion_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_qft_m3_completion_promotion_cycle01_gate.py"
+      },
+      "m4_completion": {
+        "target_id": "TARGET-QFT-M4-SEAM-CLOSURE-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_QFT_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "artifact_path": "formal/output/qft_m4_seam_closure_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_qft_m4_seam_closure_promotion_cycle01_gate.py"
+      }
+    },
+    {
+      "pillar_id": "PILLAR-SR",
+      "priority": 7,
+      "m1_status": "COMPLETE_BOUNDED_v0",
+      "m2_status": "COMPLETE_BOUNDED_v0",
+      "m3_status": "COMPLETE_BOUNDED_v0",
+      "m4_status": "COMPLETE_BOUNDED_v0",
+      "next_target": "TARGET-SR-M5-THEORY-PARITY-LINK-v0",
+      "m2_plan_doc": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "m2_exit_rows": {
+        "analytic_completeness": {
+          "token_name": "SR_M2_ANALYTIC_COMPLETENESS_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/sr_m2_analytic_completeness_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_sr_m2_analytic_completeness_scaffold_cycle01_gate.py"
+        },
+        "canonical_equivalence": {
+          "token_name": "SR_M2_CANONICAL_EQUIVALENCE_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/sr_m2_canonical_equivalence_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_sr_m2_canonical_equivalence_scaffold_cycle01_gate.py"
+        },
+        "assumption_minimization": {
+          "token_name": "SR_M2_ASSUMPTION_MINIMIZATION_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/sr_m2_assumption_minimization_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_sr_m2_assumption_minimization_scaffold_cycle01_gate.py"
+        },
+        "literature_alignment": {
+          "token_name": "SR_M2_LITERATURE_ALIGNMENT_STATUS_v0",
+          "token_value": "SCAFFOLD_PINNED_NONCLAIM",
+          "artifact_path": "formal/output/sr_m2_literature_alignment_scaffold_cycle01_v0.json",
+          "gate_path": "formal/python/tests/test_sr_m2_literature_alignment_scaffold_cycle01_gate.py"
+        }
+      },
+      "m3_first_discriminator": {
+        "target_id": "TARGET-SR-EMPIRICAL-DISCRIMINATOR-EMP-SR-01-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_DISCRIMINATOR_EMP_SR_01_v0.md",
+        "artifact_path": "formal/output/sr_empirical_discriminator_emp_sr_01_run_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_sr_empirical_discriminator_emp_sr_01_scaffold_gate.py"
+      },
+      "m3_completion": {
+        "target_id": "TARGET-SR-M3-COMPLETION-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_M3_COMPLETION_PROMOTION_v0.md",
+        "artifact_path": "formal/output/sr_m3_completion_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_sr_m3_completion_promotion_cycle01_gate.py"
+      },
+      "m4_completion": {
+        "target_id": "TARGET-SR-M4-SEAM-CLOSURE-PROMOTION-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "artifact_path": "formal/output/sr_m4_seam_closure_promotion_cycle01_v0.json",
+        "gate_path": "formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py"
+      },
+      "m5_theory_parity": {
+        "target_id": "TARGET-SR-M5-THEORY-PARITY-LINK-v0",
+        "doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md",
+        "artifact_path": "formal/output/sr_m5_theory_parity_link_cycle07_v0.json",
+        "gate_path": "formal/python/tests/test_sr_m5_theory_parity_link_cycle07_gate.py"
+      }
+    }
+  ]
+}

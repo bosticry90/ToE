@@ -15,6 +15,79 @@ Purpose:
 - Prevent lane drift from prior proven governance sequence discipline.
 - Enforce phase order, promotion gates, and reopen triggers under explicit non-claim boundaries.
 
+SR deep-maturity scaffold bundle (bounded non-claim):
+- `SR_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `SR_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: sr_m2_analytic_completeness_scaffold_cycle01_v0`
+- `SR_M2_ANALYTIC_COMPLETENESS_SHA256_v0: e3fd1a4ebfbbc49ff14ce28671c118315b3aa07ffb439639e191ad097c5095ec`
+- `SR_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_m2_analytic_completeness_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_sr_m2_analytic_completeness_scaffold_cycle01_gate.py`
+- `SR_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `SR_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: sr_m2_canonical_equivalence_scaffold_cycle01_v0`
+- `SR_M2_CANONICAL_EQUIVALENCE_SHA256_v0: a2e8d032516f4143ddd7b9215030750725a2cb5a7470aebc5a113b2f4b94c55a`
+- `SR_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_m2_canonical_equivalence_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_sr_m2_canonical_equivalence_scaffold_cycle01_gate.py`
+- `SR_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `SR_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: sr_m2_assumption_minimization_scaffold_cycle01_v0`
+- `SR_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: 6b27683d4a071b3ac7fe5e35980f4d913fe968d1de3b976be288855b56f77984`
+- `SR_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_m2_assumption_minimization_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_sr_m2_assumption_minimization_scaffold_cycle01_gate.py`
+- `SR_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `SR_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: sr_m2_literature_alignment_scaffold_cycle01_v0`
+- `SR_M2_LITERATURE_ALIGNMENT_SHA256_v0: 0d74782e94d37098f60ace2962323067c910ef2c40aa18118e7e2fff7c27d8b5`
+- `SR_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_m2_literature_alignment_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_sr_m2_literature_alignment_scaffold_cycle01_gate.py`
+- `SR_M2_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `SR_M2_COMPLETION_ARTIFACT_v0: sr_m2_completion_promotion_cycle01_v0`
+- `SR_M2_COMPLETION_SHA256_v0: 39de2aa27d8100c74a1122f739d10a9ff17843f1fa1cdfcf28749defd3e5577f`
+- `SR_M2_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/sr_m2_completion_promotion_cycle01_v0.json`
+- `formal/python/tests/test_sr_m2_completion_promotion_cycle01_gate.py`
+
+SR M3 first discriminator bundle (bounded non-claim):
+- `EMP_SR_01_DISCRIMINATOR_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `EMP_SR_01_PRUNE_DECISION_v0: ELIMINATION_READY_BOUNDED_v0`
+- `EMP_SR_01_PRUNE_RESULT_v0: PASS_AND_PRUNE_SIGNAL_PRESENT_v0`
+- `EMP_SR_01_ARTIFACT_v0: sr_empirical_discriminator_emp_sr_01_run_cycle01_v0`
+- `EMP_SR_01_ARTIFACT_SHA256_v0: 2f2e200035413a0ae3f7be863c5b46f01cfe62ac4fd511b4711cb57d433ff023`
+- `EMP_SR_01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_DISCRIMINATOR_EMP_SR_01_v0.md`
+- `formal/output/sr_empirical_discriminator_emp_sr_01_run_cycle01_v0.json`
+- `formal/python/tests/test_sr_empirical_discriminator_emp_sr_01_scaffold_gate.py`
+
+SR M3 completion promotion bundle (bounded non-claim):
+- `SR_M3_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `SR_M3_PROMOTION_READINESS_v0: FIRST_DISCRIMINATOR_CLOSED_AND_PROMOTED_v0`
+- `SR_M3_COMPLETION_ARTIFACT_v0: sr_m3_completion_promotion_cycle01_v0`
+- `SR_M3_COMPLETION_SHA256_v0: f9d6c3722330192259d5e63661b419cc33a892fb004eac40c0001de4b66c3db0`
+- `SR_M3_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_SR_M3_COMPLETION_PROMOTION_v0.md`
+- `formal/output/sr_m3_completion_promotion_cycle01_v0.json`
+- `formal/python/tests/test_sr_m3_completion_promotion_cycle01_gate.py`
+
+SR M4 seam-closure promotion bundle (bounded non-claim):
+- `SR_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `SR_M4_PROMOTION_READINESS_v0: CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0`
+- `SR_M4_SEAM_CLOSURE_ARTIFACT_v0: sr_m4_seam_closure_promotion_cycle01_v0`
+- `SR_M4_SEAM_CLOSURE_SHA256_v0: 10e6a8c286f2beba41cdb55b6c58a4e894fcfc2e3166a6e317646d0dca27982d`
+- `SR_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md`
+- `formal/output/sr_m4_seam_closure_promotion_cycle01_v0.json`
+- `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`
+
+SR M5 theory-parity-link tranche (bounded non-claim):
+- `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
+- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle07_v0`
+- `SR_M5_THEORY_PARITY_SHA256_v0: 69f244c06c5dc8b6f1743ecaa1e253e2a7e6c3ea28cccc2772957cf5d6001a25`
+- `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`
+- `formal/output/sr_m5_theory_parity_link_cycle07_v0.json`
+- `formal/python/tests/test_sr_m5_theory_parity_link_cycle07_gate.py`
+
 Adjudication token:
 - `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
 - `PILLAR_SR_FULL_DERIVATION_DISCHARGE_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
