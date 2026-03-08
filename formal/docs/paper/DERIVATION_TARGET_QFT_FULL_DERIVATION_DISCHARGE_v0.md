@@ -14,6 +14,69 @@ Purpose:
 - Freeze the initial semantic-hardening theorem-chain entry points for canonical momentum, Hamiltonian-generator compatibility, and unitarity.
 - Keep the lane bounded and non-claim while discharge obligations are assembled.
 
+QFT deep-maturity scaffold bundle (bounded non-claim):
+- `QFT_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `QFT_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: qft_m2_analytic_completeness_scaffold_cycle01_v0`
+- `QFT_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 77131b316529184d14401ed586ef698538b96491e1def62f03e20edd3cced13e`
+- `QFT_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/qft_m2_analytic_completeness_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_qft_m2_analytic_completeness_scaffold_cycle01_gate.py`
+- `QFT_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `QFT_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: qft_m2_canonical_equivalence_scaffold_cycle01_v0`
+- `QFT_M2_CANONICAL_EQUIVALENCE_SHA256_v0: 88891e4413ce6bb767c0f9d1eb04a6958514d45d6109354340d157930a67a7bc`
+- `QFT_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/qft_m2_canonical_equivalence_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_qft_m2_canonical_equivalence_scaffold_cycle01_gate.py`
+- `QFT_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `QFT_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: qft_m2_assumption_minimization_scaffold_cycle01_v0`
+- `QFT_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: 8ac9c8f558e4608ee08d34b5ac6e38f18503fc5f5909f65bcb2c2a969b66948c`
+- `QFT_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/qft_m2_assumption_minimization_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_qft_m2_assumption_minimization_scaffold_cycle01_gate.py`
+- `QFT_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `QFT_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: qft_m2_literature_alignment_scaffold_cycle01_v0`
+- `QFT_M2_LITERATURE_ALIGNMENT_SHA256_v0: 7c59d4c9758cba8f1f2919fa2eab41931aa180d65483caddb5b5ed0a078ef285`
+- `QFT_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/qft_m2_literature_alignment_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_qft_m2_literature_alignment_scaffold_cycle01_gate.py`
+- `QFT_M2_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `QFT_M2_COMPLETION_ARTIFACT_v0: qft_m2_completion_promotion_cycle01_v0`
+- `QFT_M2_COMPLETION_SHA256_v0: 4da23bb3d4938d961905f836465a7ecf91fdcbb9418a2a7be1cab58f950fe232`
+- `QFT_M2_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/qft_m2_completion_promotion_cycle01_v0.json`
+- `formal/python/tests/test_qft_m2_completion_promotion_cycle01_gate.py`
+
+QFT M3 first discriminator bundle (bounded non-claim):
+- `EMP_QFT_01_DISCRIMINATOR_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `EMP_QFT_01_PRUNE_DECISION_v0: ELIMINATION_READY_BOUNDED_v0`
+- `EMP_QFT_01_PRUNE_RESULT_v0: PASS_AND_PRUNE_SIGNAL_PRESENT_v0`
+- `EMP_QFT_01_ARTIFACT_v0: qft_empirical_discriminator_emp_qft_01_run_cycle01_v0`
+- `EMP_QFT_01_ARTIFACT_SHA256_v0: 7b23eebf8deaac1ebe61fdcd2a0fd401e412e776eed4004fd8a9db89f15a4580`
+- `EMP_QFT_01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_DISCRIMINATOR_EMP_QFT_01_v0.md`
+- `formal/output/qft_empirical_discriminator_emp_qft_01_run_cycle01_v0.json`
+- `formal/python/tests/test_qft_empirical_discriminator_emp_qft_01_scaffold_gate.py`
+
+QFT M3 completion promotion bundle (bounded non-claim):
+- `QFT_M3_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `QFT_M3_PROMOTION_READINESS_v0: FIRST_DISCRIMINATOR_CLOSED_AND_PROMOTED_v0`
+- `QFT_M3_COMPLETION_ARTIFACT_v0: qft_m3_completion_promotion_cycle01_v0`
+- `QFT_M3_COMPLETION_SHA256_v0: f0dbe27f97b08b2d9f652f21d914d2e9fdb52397f1c1aee8d5ea6b7428b88f3c`
+- `QFT_M3_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_M3_COMPLETION_PROMOTION_v0.md`
+- `formal/output/qft_m3_completion_promotion_cycle01_v0.json`
+- `formal/python/tests/test_qft_m3_completion_promotion_cycle01_gate.py`
+
+QFT M4 seam-closure promotion bundle (bounded non-claim):
+- `QFT_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `QFT_M4_PROMOTION_READINESS_v0: CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0`
+- `QFT_M4_SEAM_CLOSURE_ARTIFACT_v0: qft_m4_seam_closure_promotion_cycle01_v0`
+- `QFT_M4_SEAM_CLOSURE_SHA256_v0: 5f01e0e528c0c46748f0059994f026142c29f51103ea0a30afb9ddf51af6fbd4`
+- `QFT_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_M4_SEAM_CLOSURE_PROMOTION_v0.md`
+- `formal/output/qft_m4_seam_closure_promotion_cycle01_v0.json`
+- `formal/python/tests/test_qft_m4_seam_closure_promotion_cycle01_gate.py`
+
 Adjudication token:
 - `QFT_FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0`
 
