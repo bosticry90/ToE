@@ -5,11 +5,6 @@ import json
 import re
 from pathlib import Path
 
-import pytest
-
-
-pytestmark = pytest.mark.skip(reason="Historical SR M5 cycle gate retained for archive traceability; cycle32 is canonical active gate.")
-
 
 def find_repo_root(start: Path) -> Path:
     p = start.resolve()
@@ -26,10 +21,11 @@ TARGET_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_S
 SR_AUTHORITY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
-ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "sr_m5_theory_parity_link_cycle08_v0.json"
+ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "sr_m5_theory_parity_link_cycle32_v0.json"
 
-EXPECTED_ARTIFACT_ID = "sr_m5_theory_parity_link_cycle08_v0"
+EXPECTED_ARTIFACT_ID = "sr_m5_theory_parity_link_cycle32_v0"
 EXPECTED_GATE = "ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED"
+EXPECTED_AUDIT_OBJECTIVE = "LEGACY_LEAKAGE_ZERO_SINGLE_ACTIVE_POINTER_AND_TOKEN_ORDER_STABLE_v0"
 
 
 def _read(path: Path) -> str:
@@ -47,24 +43,25 @@ def _extract_token(text: str, token_name: str) -> str:
     return m.group(1)
 
 
-def test_sr_m5_theory_parity_link_cycle08_gate() -> None:
+def test_sr_m5_theory_parity_link_cycle32_gate() -> None:
     registry = _read_json(REGISTRY_PATH)
     target_text = _read(TARGET_DOC_PATH)
     sr_text = _read(SR_AUTHORITY_PATH)
     state_text = _read(STATE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
-    assert ARTIFACT_PATH.exists(), "SR M5 theory-parity-link cycle08 artifact is missing."
+    assert ARTIFACT_PATH.exists(), "SR M5 theory-parity-link cycle32 artifact is missing."
     artifact_json = _read_json(ARTIFACT_PATH)
     artifact_hash = hashlib.sha256(ARTIFACT_PATH.read_bytes()).hexdigest()
 
     assert artifact_json.get("artifact_id") == EXPECTED_ARTIFACT_ID
     assert artifact_json.get("payload", {}).get("maturity_tier") == "M5_THEORY_PARITY_LINKED"
     assert artifact_json.get("payload", {}).get("status") == "RUN_BOUNDED_v0_NONCLAIM"
+    assert artifact_json.get("payload", {}).get("audit_objective") == EXPECTED_AUDIT_OBJECTIVE
     assert artifact_json.get("payload", {}).get("readiness") == "THEORY_PARITY_LINK_PINNED_v0"
 
     assert registry.get("sr_m5_theory_parity_gate_path") == (
-        "formal/python/tests/test_sr_m5_theory_parity_link_cycle08_gate.py"
+        "formal/python/tests/test_sr_m5_theory_parity_link_cycle32_gate.py"
     )
 
     sr_row = next((row for row in registry.get("pillars", []) if row.get("pillar_id") == "PILLAR-SR"), None)
@@ -73,8 +70,8 @@ def test_sr_m5_theory_parity_link_cycle08_gate() -> None:
     m5_parity = sr_row.get("m5_theory_parity", {})
     assert m5_parity.get("target_id") == "TARGET-SR-M5-THEORY-PARITY-LINK-v0"
     assert m5_parity.get("doc_path") == "formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md"
-    assert m5_parity.get("artifact_path") == "formal/output/sr_m5_theory_parity_link_cycle08_v0.json"
-    assert m5_parity.get("gate_path") == "formal/python/tests/test_sr_m5_theory_parity_link_cycle08_gate.py"
+    assert m5_parity.get("artifact_path") == "formal/output/sr_m5_theory_parity_link_cycle32_v0.json"
+    assert m5_parity.get("gate_path") == "formal/python/tests/test_sr_m5_theory_parity_link_cycle32_gate.py"
 
     for text in (target_text, sr_text, state_text, roadmap_text):
         assert _extract_token(text, "SR_M5_STATUS_v0") == "RUN_BOUNDED_v0_NONCLAIM"
@@ -84,14 +81,46 @@ def test_sr_m5_theory_parity_link_cycle08_gate() -> None:
         assert _extract_token(text, "SR_M5_READINESS_v0") == "THEORY_PARITY_LINK_PINNED_v0"
 
     for path_ref in (
-        "formal/output/sr_m5_theory_parity_link_cycle08_v0.json",
-        "formal/python/tests/test_sr_m5_theory_parity_link_cycle08_gate.py",
+        "formal/output/sr_m5_theory_parity_link_cycle32_v0.json",
+        "formal/python/tests/test_sr_m5_theory_parity_link_cycle32_gate.py",
         "formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md",
     ):
         assert path_ref in target_text
         assert path_ref in sr_text
         assert path_ref in state_text
         assert path_ref in roadmap_text
+
+    # Cycle32 objective: exactly one active pointer, no legacy leakage from cycle31, and stable token ordering.
+    for text in (target_text, sr_text, state_text, roadmap_text):
+        assert text.count("formal/output/sr_m5_theory_parity_link_cycle32_v0.json") == 1
+        assert text.count("formal/python/tests/test_sr_m5_theory_parity_link_cycle32_gate.py") == 1
+        assert "formal/output/sr_m5_theory_parity_link_cycle31_v0.json" not in text
+        assert "formal/python/tests/test_sr_m5_theory_parity_link_cycle31_gate.py" not in text
+
+        idx_status = text.find("SR_M5_STATUS_v0")
+        idx_artifact = text.find("SR_M5_THEORY_PARITY_ARTIFACT_v0")
+        idx_sha = text.find("SR_M5_THEORY_PARITY_SHA256_v0")
+        idx_gate = text.find("SR_M5_THEORY_PARITY_GATE_v0")
+        idx_readiness = text.find("SR_M5_READINESS_v0")
+
+        assert -1 not in (idx_status, idx_artifact, idx_sha, idx_gate, idx_readiness)
+        assert idx_status < idx_artifact < idx_sha < idx_gate < idx_readiness
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

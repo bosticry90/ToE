@@ -118,7 +118,7 @@ No-deviation sequencing rule:
   - `formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md`
   - `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`
   - `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`
-  - `formal/python/tests/test_sr_m5_theory_parity_link_cycle31_gate.py`
+  - `formal/python/tests/test_sr_m5_theory_parity_link_cycle32_gate.py`
   - `formal/docs/paper/DERIVATION_TARGET_GR_M4_SEAM_CLOSURE_PROMOTION_v0.md`
   - `formal/python/tests/test_gr_m4_seam_closure_promotion_cycle01_gate.py`
   - `PILLAR_DEEP_MATURITY_NEXT_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0`
@@ -152,11 +152,11 @@ No-deviation sequencing rule:
   - `SR_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/sr_m4_seam_closure_promotion_cycle01_v0.json`
   - `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
-  - `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle31_v0`
-  - `SR_M5_THEORY_PARITY_SHA256_v0: 497914bfb827ded7534b26a6dc6b86ab0551ae364453dabe9bfb57566b05ba93`
+  - `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle32_v0`
+  - `SR_M5_THEORY_PARITY_SHA256_v0: 9c86f98de9975d9d7fef478c3728647ad69e0a455f915bbdae3ba1d15a53a2e6`
   - `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
-  - `formal/output/sr_m5_theory_parity_link_cycle31_v0.json`
+  - `formal/output/sr_m5_theory_parity_link_cycle32_v0.json`
   - `STAT_M4_SEAM_CLOSURE_ARTIFACT_v0: stat_m4_seam_closure_promotion_cycle01_v0`
   - `STAT_M4_SEAM_CLOSURE_SHA256_v0: c05aa4b0e4609cd90f84c8d987209e8ab023d1a5754969a3746c45762053ef6f`
   - `STAT_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`

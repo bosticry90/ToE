@@ -8,7 +8,7 @@ from pathlib import Path
 import pytest
 
 
-pytestmark = pytest.mark.skip(reason="Historical SR M5 cycle gate retained for archive traceability; cycle31 is canonical active gate.")
+pytestmark = pytest.mark.skip(reason="Historical SR M5 cycle gate retained for archive traceability; cycle32 is canonical active gate.")
 
 
 def find_repo_root(start: Path) -> Path:
