@@ -1,0 +1,26 @@
+{
+  "artifact_id": "em_empirical_discriminator_emp_em_01_run_cycle01_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "pillar": "PILLAR-EM",
+    "discriminator_id": "EMP-EM-01",
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "scope": "bounded_nonclaim_discriminator_run",
+    "decision": {
+      "candidate_elimination_ready": true,
+      "prune_decision": "PASS_AND_PRUNE_SIGNAL_PRESENT_v0",
+      "pruned_candidate_families": [
+        "EM_EMP_EM_01_NULL_FAMILY"
+      ],
+      "survivor_guard": {
+        "required": true,
+        "satisfied": true,
+        "surviving_candidate_families": [
+          "EM_EMP_EM_01_BASELINE_FAMILY"
+        ]
+      }
+    },
+    "lane_reference": "EM-U1-MAXWELL-OBJECT",
+    "generated_on": "2026-03-07"
+  }
+}
