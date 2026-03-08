@@ -25,7 +25,7 @@
   "sr_m3_gate_path": "formal/python/tests/test_sr_empirical_discriminator_emp_sr_01_scaffold_gate.py",
   "sr_m3_completion_gate_path": "formal/python/tests/test_sr_m3_completion_promotion_cycle01_gate.py",
   "sr_m4_seam_closure_gate_path": "formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py",
-  "sr_m5_theory_parity_gate_path": "formal/python/tests/test_sr_m5_theory_parity_link_cycle12_gate.py",
+  "sr_m5_theory_parity_gate_path": "formal/python/tests/test_sr_m5_theory_parity_link_cycle13_gate.py",
   "m3_consolidation_gate_path": "formal/python/tests/test_phase3_m3_consolidation_promotion_cycle01_gate.py",
   "program_status": {
     "PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0": "ACTIVE_v0",
@@ -427,11 +427,12 @@
       "m5_theory_parity": {
         "target_id": "TARGET-SR-M5-THEORY-PARITY-LINK-v0",
         "doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md",
-        "artifact_path": "formal/output/sr_m5_theory_parity_link_cycle12_v0.json",
-        "gate_path": "formal/python/tests/test_sr_m5_theory_parity_link_cycle12_gate.py"
+        "artifact_path": "formal/output/sr_m5_theory_parity_link_cycle13_v0.json",
+        "gate_path": "formal/python/tests/test_sr_m5_theory_parity_link_cycle13_gate.py"
       }
     }
   ]
 }
+
 
 
