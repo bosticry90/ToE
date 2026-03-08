@@ -81,12 +81,12 @@ SR M4 seam-closure promotion bundle (bounded non-claim):
 SR M5 theory-parity-link tranche (bounded non-claim):
 - `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
-- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle17_v0`
-- `SR_M5_THEORY_PARITY_SHA256_v0: 65c558121e225cb8b4b4e88cb243f7269ea16d72ebcf890b4d3b68139a103ae1`
+- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle18_v0`
+- `SR_M5_THEORY_PARITY_SHA256_v0: 959d1afab734dcd4d24aa900156f3820cc2bd018bdb654dec4fe2e4cc6557745`
 - `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`
-- `formal/output/sr_m5_theory_parity_link_cycle17_v0.json`
-- `formal/python/tests/test_sr_m5_theory_parity_link_cycle17_gate.py`
+- `formal/output/sr_m5_theory_parity_link_cycle18_v0.json`
+- `formal/python/tests/test_sr_m5_theory_parity_link_cycle18_gate.py`
 
 Adjudication token:
 - `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
@@ -1403,6 +1403,7 @@ Inevitability obligation linkage (authoritative theorem route, synchronized):
 - `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
 - pointer: `formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md`
 - gate: `formal/python/tests/test_sr_full_derivation_enforcement_roadmap_gate.py`
+
 
 
 
