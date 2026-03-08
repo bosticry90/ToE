@@ -20,11 +20,11 @@ Non-claim boundary:
 
 Tranche bundle (bounded non-claim):
 - `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
-- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle10_v0`
-- `SR_M5_THEORY_PARITY_SHA256_v0: 0783b8b6e697cf18d6db0389db591449ffdbd00ea0a01461bae674a189b6e0d0`
+- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle11_v0`
+- `SR_M5_THEORY_PARITY_SHA256_v0: 4e1c3474165f15afbcc6350996b335edb4cd1e121f28168e30f87a533e794b8c`
 - `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- artifact path: `formal/output/sr_m5_theory_parity_link_cycle10_v0.json`
-- coupling gate path: `formal/python/tests/test_sr_m5_theory_parity_link_cycle10_gate.py`
+- artifact path: `formal/output/sr_m5_theory_parity_link_cycle11_v0.json`
+- coupling gate path: `formal/python/tests/test_sr_m5_theory_parity_link_cycle11_gate.py`
 
 Tranche semantics:
 - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
@@ -41,3 +41,4 @@ Canonical pointers:
 Scope statement:
 - this target pins SR M5 theory-parity-link as a bounded governance transition.
 - it does not assert inevitability completion or adjudication promotion.
+
