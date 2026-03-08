@@ -13,6 +13,69 @@ Purpose:
 - Provide a locked-status skeleton target for STAT entropy-lane full-derivation planning.
 - Define required structure and discharge-row placeholders without activating `PILLAR-STAT`.
 
+STAT deep-maturity scaffold bundle (bounded non-claim):
+- `STAT_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: stat_m2_analytic_completeness_scaffold_cycle01_v0`
+- `STAT_M2_ANALYTIC_COMPLETENESS_SHA256_v0: e05286c3288297442525e3c39e5443c7faaa405a89bad25f280bc1f5f35b4cc0`
+- `STAT_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/stat_m2_analytic_completeness_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_stat_m2_analytic_completeness_scaffold_cycle01_gate.py`
+- `STAT_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: stat_m2_canonical_equivalence_scaffold_cycle01_v0`
+- `STAT_M2_CANONICAL_EQUIVALENCE_SHA256_v0: ee38b9f7a669e8c37b9cc1dc7a76d179db8e09f177e83024733c86c82438a46d`
+- `STAT_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/stat_m2_canonical_equivalence_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_stat_m2_canonical_equivalence_scaffold_cycle01_gate.py`
+- `STAT_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: stat_m2_assumption_minimization_scaffold_cycle01_v0`
+- `STAT_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: 89bf467278875521ff1329120ca37999d7a07ed229ed049f95e6b9abdfef5501`
+- `STAT_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/stat_m2_assumption_minimization_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_stat_m2_assumption_minimization_scaffold_cycle01_gate.py`
+- `STAT_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: stat_m2_literature_alignment_scaffold_cycle01_v0`
+- `STAT_M2_LITERATURE_ALIGNMENT_SHA256_v0: 641b3adc446ffa9f187caa48f8167444b17d0f6c473e3b10d2e7906f604b59ba`
+- `STAT_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/stat_m2_literature_alignment_scaffold_cycle01_v0.json`
+- `formal/python/tests/test_stat_m2_literature_alignment_scaffold_cycle01_gate.py`
+- `STAT_M2_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `STAT_M2_COMPLETION_ARTIFACT_v0: stat_m2_completion_promotion_cycle01_v0`
+- `STAT_M2_COMPLETION_SHA256_v0: 40bce813ec8667c63f5f92d611fcde35a026fc0d807974be645bfa28eff99e8b`
+- `STAT_M2_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/output/stat_m2_completion_promotion_cycle01_v0.json`
+- `formal/python/tests/test_stat_m2_completion_promotion_cycle01_gate.py`
+
+STAT M3 first discriminator bundle (bounded non-claim):
+- `EMP_STAT_01_DISCRIMINATOR_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `EMP_STAT_01_PRUNE_DECISION_v0: ELIMINATION_READY_BOUNDED_v0`
+- `EMP_STAT_01_PRUNE_RESULT_v0: PASS_AND_PRUNE_SIGNAL_PRESENT_v0`
+- `EMP_STAT_01_ARTIFACT_v0: stat_empirical_discriminator_emp_stat_01_run_cycle01_v0`
+- `EMP_STAT_01_ARTIFACT_SHA256_v0: 756202f681c9b220722d8cce03dbdd7bcf7907d849d725d6f942585fa89b01d8`
+- `EMP_STAT_01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_DISCRIMINATOR_EMP_STAT_01_v0.md`
+- `formal/output/stat_empirical_discriminator_emp_stat_01_run_cycle01_v0.json`
+- `formal/python/tests/test_stat_empirical_discriminator_emp_stat_01_scaffold_gate.py`
+
+STAT M3 completion promotion bundle (bounded non-claim):
+- `STAT_M3_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `STAT_M3_PROMOTION_READINESS_v0: FIRST_DISCRIMINATOR_CLOSED_AND_PROMOTED_v0`
+- `STAT_M3_COMPLETION_ARTIFACT_v0: stat_m3_completion_promotion_cycle01_v0`
+- `STAT_M3_COMPLETION_SHA256_v0: 205e142bf8ef5a1644ae6da1dc6eb6f3e4c318316f3722c2731634fd8b925641`
+- `STAT_M3_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_STAT_M3_COMPLETION_PROMOTION_v0.md`
+- `formal/output/stat_m3_completion_promotion_cycle01_v0.json`
+- `formal/python/tests/test_stat_m3_completion_promotion_cycle01_gate.py`
+
+STAT M4 seam-closure promotion bundle (bounded non-claim):
+- `STAT_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `STAT_M4_PROMOTION_READINESS_v0: CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0`
+- `STAT_M4_SEAM_CLOSURE_ARTIFACT_v0: stat_m4_seam_closure_promotion_cycle01_v0`
+- `STAT_M4_SEAM_CLOSURE_SHA256_v0: c05aa4b0e4609cd90f84c8d987209e8ab023d1a5754969a3746c45762053ef6f`
+- `STAT_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_STAT_M4_SEAM_CLOSURE_PROMOTION_v0.md`
+- `formal/output/stat_m4_seam_closure_promotion_cycle01_v0.json`
+- `formal/python/tests/test_stat_m4_seam_closure_promotion_cycle01_gate.py`
+
 Non-claim boundary:
 - planning-only artifact.
 - non-claim control surface.

@@ -1,0 +1,26 @@
+{
+  "artifact_id": "stat_empirical_discriminator_emp_stat_01_run_cycle01_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "pillar": "PILLAR-STAT",
+    "discriminator_id": "EMP-STAT-01",
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "scope": "bounded_nonclaim_discriminator_run",
+    "decision": {
+      "candidate_elimination_ready": true,
+      "prune_decision": "PASS_AND_PRUNE_SIGNAL_PRESENT_v0",
+      "pruned_candidate_families": [
+        "STAT_EMP_STAT_01_NULL_FAMILY"
+      ],
+      "survivor_guard": {
+        "required": true,
+        "satisfied": true,
+        "surviving_candidate_families": [
+          "STAT_EMP_STAT_01_BASELINE_FAMILY"
+        ]
+      }
+    },
+    "lane_reference": "STAT-ENTROPY-DERIVATION",
+    "generated_on": "2026-03-07"
+  }
+}

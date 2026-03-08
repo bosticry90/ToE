@@ -1,0 +1,18 @@
+{
+  "artifact_id": "stat_m2_analytic_completeness_scaffold_cycle01_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "pillar": "PILLAR-STAT",
+    "maturity_tier": "M2_DERIVATION_COMPLETE",
+    "row": "analytic_completeness",
+    "status": "SCAFFOLD_PINNED_NONCLAIM",
+    "scope": "bounded_nonclaim",
+    "requirements": [
+      "entropy_balance_chain_explicit",
+      "regime_boundary_handling_explicit",
+      "operator_form_surface_explicit"
+    ],
+    "generated_on": "2026-03-07"
+  },
+  "payload_sha256": "e05286c3288297442525e3c39e5443c7faaa405a89bad25f280bc1f5f35b4cc0"
+}
