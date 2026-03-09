@@ -82,8 +82,8 @@ Non-claim boundary:
 
 ## Enforcement Hooks
 
-- `formal/python/tests/test_physics_roadmap_enforcement.py`
-- `formal/python/tests/test_gr_3d_03_discharge_attempt_package_gate.py`
+- `formal/python/tests/test_gr01_action_operator_discharge_gate.py`
+- `formal/python/tests/test_gr01_hardening_roadmap_gate.py`
 
 ## Freeze Policy
 

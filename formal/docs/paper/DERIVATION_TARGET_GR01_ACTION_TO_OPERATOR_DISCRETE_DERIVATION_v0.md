@@ -248,10 +248,9 @@ Current token:
 
 ## Enforcement Hooks
 
-- `formal/python/tests/test_physics_roadmap_enforcement.py`
-- `formal/python/tests/test_paper_ready_physics_gate.py`
-- `formal/python/tests/test_paper_semantic_drift_bans.py`
 - `formal/python/tests/test_gr01_action_operator_discharge_gate.py`
+- `formal/python/tests/test_gr01_hardening_roadmap_gate.py`
+- `formal/python/tests/test_toe_target_spec_doc.py`
 
 ## Freeze Policy
 

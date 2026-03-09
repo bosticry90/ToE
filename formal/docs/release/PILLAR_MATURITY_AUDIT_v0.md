@@ -192,14 +192,14 @@ Scope:
 Deliverables:
 - SR artifact: `formal/output/sr_covariance_theorem_evidence_checkpoint_cycle14_v0.json`
 - EM artifact: `formal/output/em_maxwell_linear_comparator_packet_cycle15_v0.json`
-- QM artifact: `formal/output/qm_external_lane_evidence_checkpoint_cycle10_v0.json`
-- QFT artifact: `formal/output/qft_evidence_diversification_checkpoint_cycle09_v0.json`
+- QM artifact (planned, not yet instantiated): `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_CYCLE10_PLANNED_v0`
+- QFT artifact (planned, not yet instantiated): `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_CYCLE09_PLANNED_v0`
 
 Required coupling gates (new tests expected):
 - `formal/python/tests/test_sr_theorem_evidence_checkpoint_coupling_cycle14_gate.py`
 - `formal/python/tests/test_em_comparator_evidence_coupling_cycle15_gate.py`
-- `formal/python/tests/test_qm_external_lane_evidence_checkpoint_coupling_cycle10_gate.py`
-- `formal/python/tests/test_qft_evidence_diversification_checkpoint_coupling_cycle09_gate.py`
+- QM coupling gate (planned, not yet instantiated): `QM_EXTERNAL_LANE_EVIDENCE_CHECKPOINT_COUPLING_CYCLE10_PLANNED_v0`
+- QFT coupling gate (planned, not yet instantiated): `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_COUPLING_CYCLE09_PLANNED_v0`
 
 Pass criteria:
 - SR and EM evidence lanes show sustained multi-cycle continuity (>= 3 consecutive cycles from this plan).
