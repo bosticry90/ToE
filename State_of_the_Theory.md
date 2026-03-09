@@ -62,7 +62,7 @@ Canonical bounded status note (2026-02-24):
 - SR M4 seam-closure promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md`.
 - SR M4 seam-closure promotion gate pointer: `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`.
 - SR M5 theory-parity-link target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`.
-- SR M5 theory-parity-link gate pointer: `formal/python/tests/test_sr_m5_theory_parity_link_cycle40_gate.py`.
+- SR M5 theory-parity-link gate pointer: `formal/python/tests/test_sr_m5_theory_parity_link_cycle41_gate.py`.
 - `PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0: ACTIVE_v0`
 - `PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_THEORY_PARITY_LINK_EXECUTION_v0`
 - `PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0`
@@ -158,13 +158,13 @@ Canonical bounded status note (2026-02-24):
 - `SR_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/sr_m4_seam_closure_promotion_cycle01_v0.json`
 - `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
-- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle40_v0`
-- `SR_M5_THEORY_PARITY_SHA256_v0: 9e91b1c8dd3347f694c38810a23aecabb854407a30fc19173180f5254ad67f33`
+- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle41_v0`
+- `SR_M5_THEORY_PARITY_SHA256_v0: 4f94e1b64af542e19b75bbde71e588339fad2ef662434dc684475afc337bc995`
 - `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `SR_M5_PHASE5_ADVANCEMENT_DELTA_TOKEN_v0: CYCLE40_ADVANCEMENT_CONTRACT_GATE_INTRODUCED_v0`
+- `SR_M5_PHASE5_ADVANCEMENT_DELTA_TOKEN_v0: CYCLE41_POINTER_PARITY_ADVANCEMENT_v0`
 - `SR_M5_PHASE5_ADVANCEMENT_CONTRACT_GATE_v0: formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py`
 - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
-- `formal/output/sr_m5_theory_parity_link_cycle40_v0.json`
+- `formal/output/sr_m5_theory_parity_link_cycle41_v0.json`
 - `QM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
 - `QM_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: qm_m2_analytic_completeness_scaffold_cycle01_v0`
 - `QM_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 192432c694de481ae9c34b073ebcd214dacfd1ce1b0adc6799697c82bb9d301e`
