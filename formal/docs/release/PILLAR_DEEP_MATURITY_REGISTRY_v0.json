@@ -25,10 +25,15 @@
   "sr_m3_gate_path": "formal/python/tests/test_sr_empirical_discriminator_emp_sr_01_scaffold_gate.py",
   "sr_m3_completion_gate_path": "formal/python/tests/test_sr_m3_completion_promotion_cycle01_gate.py",
   "sr_m4_seam_closure_gate_path": "formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py",
-  "sr_m5_theory_parity_gate_path": "formal/python/tests/test_sr_m5_theory_parity_link_cycle50_gate.py",
+  "sr_m5_theory_parity_gate_path": "formal/python/tests/test_sr_m5_theory_parity_link_cycle51_gate.py",
   "sr_m5_phase5_advancement_contract_gate_path": "formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py",
   "sr_m5_archive_discipline_gate_path": "formal/python/tests/test_sr_m5_cycle_archive_discipline_gate.py",
+  "sr_m5_next_target_semantics_gate_path": "formal/python/tests/test_pillar_deep_maturity_next_target_semantics_gate.py",
+  "sr_m5_archive_retention_policy_gate_path": "formal/python/tests/test_sr_m5_archive_retention_policy_gate.py",
+  "sr_m5_periodic_quality_checkpoint_gate_path": "formal/python/tests/test_sr_m5_periodic_quality_checkpoint_gate.py",
   "sr_m5_archive_retention_policy_doc": "formal/docs/release/SR_M5_ARCHIVE_RETENTION_POLICY_v0.md",
+  "sr_m5_latest_quality_checkpoint_artifact_path": "formal/output/sr_m5_quality_checkpoint_cycle50_v0.json",
+  "sr_m5_completed_row_terminal_next_target_token": "TARGET-PHASE5-SR-M5-CONTROLLED-v0",
   "m3_consolidation_gate_path": "formal/python/tests/test_phase3_m3_consolidation_promotion_cycle01_gate.py",
   "program_status": {
     "PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0": "ACTIVE_v0",
@@ -57,7 +62,7 @@
       "m2_status": "COMPLETE_BOUNDED_v0",
       "m3_status": "COMPLETE_BOUNDED_v0",
       "m4_status": "COMPLETE_BOUNDED_v0",
-      "next_target": "TARGET-QM-M4-SEAM-CLOSURE-PROMOTION-v0",
+      "next_target": "TARGET-PHASE5-SR-M5-CONTROLLED-v0",
       "m2_plan_doc": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
       "m2_exit_rows": {
         "analytic_completeness": {
@@ -111,7 +116,7 @@
       "m2_status": "COMPLETE_BOUNDED_v0",
       "m3_status": "COMPLETE_BOUNDED_v0",
       "m4_status": "COMPLETE_BOUNDED_v0",
-      "next_target": "TARGET-GR-M4-SEAM-CLOSURE-PROMOTION-v0",
+      "next_target": "TARGET-PHASE5-SR-M5-CONTROLLED-v0",
       "m2_plan_doc": "formal/docs/paper/DERIVATION_COMPLETENESS_GATE_v0.md",
       "m2_exit_rows": {
         "analytic_completeness": {
@@ -165,7 +170,7 @@
       "m2_status": "COMPLETE_BOUNDED_v0",
       "m3_status": "COMPLETE_BOUNDED_v0",
       "m4_status": "COMPLETE_BOUNDED_v0",
-      "next_target": "TARGET-STAT-M4-SEAM-CLOSURE-PROMOTION-v0",
+      "next_target": "TARGET-PHASE5-SR-M5-CONTROLLED-v0",
       "m2_plan_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
       "m2_exit_rows": {
         "analytic_completeness": {
@@ -219,7 +224,7 @@
       "m2_status": "COMPLETE_BOUNDED_v0",
       "m3_status": "COMPLETE_BOUNDED_v0",
       "m4_status": "COMPLETE_BOUNDED_v0",
-      "next_target": "TARGET-EM-M4-SEAM-CLOSURE-PROMOTION-v0",
+      "next_target": "TARGET-PHASE5-SR-M5-CONTROLLED-v0",
       "m2_plan_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
       "m2_exit_rows": {
         "analytic_completeness": {
@@ -273,7 +278,7 @@
       "m2_status": "COMPLETE_BOUNDED_v0",
       "m3_status": "COMPLETE_BOUNDED_v0",
       "m4_status": "COMPLETE_BOUNDED_v0",
-      "next_target": "TARGET-QFT-M4-SEAM-CLOSURE-PROMOTION-v0",
+      "next_target": "TARGET-PHASE5-SR-M5-CONTROLLED-v0",
       "m2_plan_doc": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
       "m2_exit_rows": {
         "analytic_completeness": {
@@ -327,7 +332,7 @@
       "m2_status": "COMPLETE_BOUNDED_v0",
       "m3_status": "COMPLETE_BOUNDED_v0",
       "m4_status": "COMPLETE_BOUNDED_v0",
-      "next_target": "TARGET-SR-M4-SEAM-CLOSURE-PROMOTION-v0",
+      "next_target": "TARGET-PHASE5-SR-M5-CONTROLLED-v0",
       "m2_plan_doc": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
       "m2_exit_rows": {
         "analytic_completeness": {
@@ -430,8 +435,8 @@
       "m5_theory_parity": {
         "target_id": "TARGET-SR-M5-THEORY-PARITY-LINK-v0",
         "doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md",
-        "artifact_path": "formal/output/sr_m5_theory_parity_link_cycle50_v0.json",
-        "gate_path": "formal/python/tests/test_sr_m5_theory_parity_link_cycle50_gate.py"
+        "artifact_path": "formal/output/sr_m5_theory_parity_link_cycle51_v0.json",
+        "gate_path": "formal/python/tests/test_sr_m5_theory_parity_link_cycle51_gate.py"
       }
     }
   ]

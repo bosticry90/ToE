@@ -64,10 +64,14 @@ Canonical pointers:
 - SR M4 seam-closure promotion target: `formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md`
 - SR M4 seam-closure promotion gate: `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`
 - SR M5 theory-parity-link target: `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`
-- SR M5 theory-parity-link gate: `formal/python/tests/test_sr_m5_theory_parity_link_cycle50_gate.py`
+- SR M5 theory-parity-link gate: `formal/python/tests/test_sr_m5_theory_parity_link_cycle51_gate.py`
 - SR M5 phase-5 advancement contract gate: `formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py`
 - SR M5 archive discipline gate: `formal/python/tests/test_sr_m5_cycle_archive_discipline_gate.py`
+- SR M5 next-target semantics gate: `formal/python/tests/test_pillar_deep_maturity_next_target_semantics_gate.py`
+- SR M5 archive retention policy gate: `formal/python/tests/test_sr_m5_archive_retention_policy_gate.py`
+- SR M5 periodic quality checkpoint gate: `formal/python/tests/test_sr_m5_periodic_quality_checkpoint_gate.py`
 - SR M5 archive retention policy: `formal/docs/release/SR_M5_ARCHIVE_RETENTION_POLICY_v0.md`
+- SR M5 latest quality checkpoint artifact: `formal/output/sr_m5_quality_checkpoint_cycle50_v0.json`
 - Existing closure standard: `formal/docs/release/PILLAR_CLOSURE_STANDARD_v0.md`
 - Existing phase advancement standard: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`
 

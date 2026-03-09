@@ -1,0 +1,11 @@
+{
+  "artifact_id": "sr_m5_quality_checkpoint_cycle50_v0",
+  "artifact_version": "v0",
+  "generated_on": "2026-03-08",
+  "active_cycle": 50,
+  "active_gate_path": "formal/python/tests/test_sr_m5_theory_parity_link_cycle50_gate.py",
+  "artifact_count": 50,
+  "gate_count": 50,
+  "non_skipped_gate_count": 1,
+  "scope": "sr_m5_periodic_quality_checkpoint"
+}
