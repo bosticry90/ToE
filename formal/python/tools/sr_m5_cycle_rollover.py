@@ -36,6 +36,22 @@ CANONICAL_UPDATE_FILES = (
     "State_of_the_Theory.md",
 )
 
+PRECHECK_CONTAINS = {
+    "governance_suite.ps1": ("gate",),
+    "formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md": ("gate",),
+    "formal/python/tests/test_pillar_deep_maturity_program_gate.py": ("gate",),
+    "formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md": ("gate", "artifact_path", "artifact_id", "delta", "hash"),
+    "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md": (
+        "gate",
+        "artifact_path",
+        "artifact_id",
+        "delta",
+        "hash",
+    ),
+    "formal/docs/paper/PHYSICS_ROADMAP_v0.md": ("gate", "artifact_path", "artifact_id", "delta", "hash"),
+    "State_of_the_Theory.md": ("gate", "artifact_path", "artifact_id", "delta", "hash"),
+}
+
 
 def _repo_root_from_this_file() -> Path:
     return Path(__file__).resolve().parents[3]
@@ -100,6 +116,30 @@ def _arg_parser() -> argparse.ArgumentParser:
     return p
 
 
+def _preflight_verify_current_cycle_surface(
+    *,
+    repo: Path,
+    current_gate_rel: str,
+    current_artifact_rel: str,
+    current_artifact_id: str,
+    old_delta: str,
+    old_hash: str,
+) -> None:
+    token_map = {
+        "gate": current_gate_rel,
+        "artifact_path": current_artifact_rel,
+        "artifact_id": current_artifact_id,
+        "delta": old_delta,
+        "hash": old_hash,
+    }
+    for rel, required_tokens in PRECHECK_CONTAINS.items():
+        text = _read_text(repo / rel)
+        for key in required_tokens:
+            token = token_map[key]
+            if token not in text:
+                raise RuntimeError(f"Preflight failed: expected `{token}` in `{rel}`.")
+
+
 def main() -> int:
     args = _arg_parser().parse_args()
     repo = _repo_root_from_this_file()
@@ -131,6 +171,18 @@ def main() -> int:
         raise RuntimeError("Next cycle gate/artifact already exists; refusing to overwrite.")
 
     current_artifact_json = _read_json(current_artifact_path)
+    current_artifact_id = str(current_artifact_json["artifact_id"])
+    old_delta = f"CYCLE{current_cycle}_POINTER_PARITY_ADVANCEMENT_v0"
+
+    _preflight_verify_current_cycle_surface(
+        repo=repo,
+        current_gate_rel=current_gate_rel,
+        current_artifact_rel=current_artifact_rel,
+        current_artifact_id=current_artifact_id,
+        old_delta=old_delta,
+        old_hash=old_hash,
+    )
+
     next_artifact_json = copy.deepcopy(current_artifact_json)
     next_artifact_json["artifact_id"] = str(next_artifact_json["artifact_id"]).replace(
         f"cycle{current_cycle}", f"cycle{next_cycle}"
@@ -159,8 +211,6 @@ def main() -> int:
     _write_json(registry_path, registry)
 
     next_artifact_id = next_artifact_json["artifact_id"]
-    current_artifact_id = current_artifact_json["artifact_id"]
-    old_delta = f"CYCLE{current_cycle}_POINTER_PARITY_ADVANCEMENT_v0"
     new_delta = f"CYCLE{next_cycle}_POINTER_PARITY_ADVANCEMENT_v0"
 
     for rel in CANONICAL_UPDATE_FILES:

@@ -118,7 +118,7 @@ No-deviation sequencing rule:
   - `formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md`
   - `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`
   - `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`
-  - `formal/python/tests/test_sr_m5_theory_parity_link_cycle47_gate.py`
+  - `formal/python/tests/test_sr_m5_theory_parity_link_cycle48_gate.py`
   - `formal/docs/paper/DERIVATION_TARGET_GR_M4_SEAM_CLOSURE_PROMOTION_v0.md`
   - `formal/python/tests/test_gr_m4_seam_closure_promotion_cycle01_gate.py`
   - `PILLAR_DEEP_MATURITY_NEXT_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0`
@@ -152,13 +152,13 @@ No-deviation sequencing rule:
   - `SR_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/sr_m4_seam_closure_promotion_cycle01_v0.json`
   - `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
-  - `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle47_v0`
-  - `SR_M5_THEORY_PARITY_SHA256_v0: bc14bc1e715332a5690cee259441f72c1f5e5ef2383506719d412a07a2be7e83`
+  - `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle48_v0`
+  - `SR_M5_THEORY_PARITY_SHA256_v0: cd572ff68e7cfc17aadf005d9056c3b781c6f0bb23fe24e27e8a9abb99b20857`
   - `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-  - `SR_M5_PHASE5_ADVANCEMENT_DELTA_TOKEN_v0: CYCLE47_POINTER_PARITY_ADVANCEMENT_v0`
+  - `SR_M5_PHASE5_ADVANCEMENT_DELTA_TOKEN_v0: CYCLE48_POINTER_PARITY_ADVANCEMENT_v0`
   - `SR_M5_PHASE5_ADVANCEMENT_CONTRACT_GATE_v0: formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py`
   - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
-  - `formal/output/sr_m5_theory_parity_link_cycle47_v0.json`
+  - `formal/output/sr_m5_theory_parity_link_cycle48_v0.json`
   - `STAT_M4_SEAM_CLOSURE_ARTIFACT_v0: stat_m4_seam_closure_promotion_cycle01_v0`
   - `STAT_M4_SEAM_CLOSURE_SHA256_v0: c05aa4b0e4609cd90f84c8d987209e8ab023d1a5754969a3746c45762053ef6f`
   - `STAT_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
