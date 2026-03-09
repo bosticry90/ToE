@@ -51,8 +51,9 @@ if ($LASTEXITCODE -ne 0) {
   formal/python/tests/test_em_m4_seam_closure_promotion_cycle01_gate.py `
   formal/python/tests/test_qft_m4_seam_closure_promotion_cycle01_gate.py `
   formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py `
-  formal/python/tests/test_sr_m5_theory_parity_link_cycle46_gate.py `
+  formal/python/tests/test_sr_m5_theory_parity_link_cycle47_gate.py `
   formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py `
+  formal/python/tests/test_sr_m5_cycle_archive_discipline_gate.py `
   formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py `
   formal/python/tests/test_qm_m2_analytic_completeness_scaffold_cycle01_gate.py `
   formal/python/tests/test_qm_m2_canonical_equivalence_scaffold_cycle01_gate.py `
