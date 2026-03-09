@@ -62,7 +62,7 @@ Canonical bounded status note (2026-02-24):
 - SR M4 seam-closure promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md`.
 - SR M4 seam-closure promotion gate pointer: `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`.
 - SR M5 theory-parity-link target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`.
-- SR M5 theory-parity-link gate pointer: `formal/python/tests/test_sr_m5_theory_parity_link_cycle35_gate.py`.
+- SR M5 theory-parity-link gate pointer: `formal/python/tests/test_sr_m5_theory_parity_link_cycle36_gate.py`.
 - `PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0: ACTIVE_v0`
 - `PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_THEORY_PARITY_LINK_EXECUTION_v0`
 - `PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0`
@@ -158,11 +158,11 @@ Canonical bounded status note (2026-02-24):
 - `SR_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/sr_m4_seam_closure_promotion_cycle01_v0.json`
 - `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
-- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle35_v0`
-- `SR_M5_THEORY_PARITY_SHA256_v0: 51a538147a70dc0d308cb46f5672c0acfcd0d792d762cca72b8693079f1b92ce`
+- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle36_v0`
+- `SR_M5_THEORY_PARITY_SHA256_v0: 41dd9fb0e9160763bc46c2ffb0e976898058d2e6f036f936dd66b2ff653d86dd`
 - `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
-- `formal/output/sr_m5_theory_parity_link_cycle35_v0.json`
+- `formal/output/sr_m5_theory_parity_link_cycle36_v0.json`
 - `QM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
 - `QM_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: qm_m2_analytic_completeness_scaffold_cycle01_v0`
 - `QM_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 192432c694de481ae9c34b073ebcd214dacfd1ce1b0adc6799697c82bb9d301e`
@@ -921,6 +921,23 @@ STAT release surface index (historical vs current canonical):
 - `formal/output/stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_v0.json`
 - `formal/python/tests/test_stat_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_status_cycle01_gate.py`
 - activation scope is structural/pre-discharge only; no STAT discharge claim and no adequacy completion claim.
+
+Governance local execution posture checkpoint (2026-03-08):
+- Governance suite posture is upgraded from static-only validation toward runtime-local validation.
+- Canonical local runtime checks now include:
+  - preflight: `formal.python.tools.dev_stack_preflight`
+  - orchestration runtime: `formal.python.orchestration.runner`
+  - SQL integrity runtime: `formal.python.tools.sql_integrity_snapshot`
+  - Rust trust-core runtime (cargo-conditional): `cargo run --manifest-path formal/rust/toe_trust_core/Cargo.toml`
+- Strict local Rust posture is explicitly supported:
+  - `TOE_REQUIRE_RUST_LOCAL=1` fails governance when cargo is absent.
+- Execution-posture regression gate is pinned:
+  - `formal/python/tests/test_local_execution_posture_gate.py`
+- Canonical local governance tier names are pinned in:
+  - `formal/docs/release/TOE_ARCHITECTURE_STACK_v0.md`
+  - `STATIC_GOVERNANCE_v0`
+  - `RUNTIME_GOVERNANCE_v0`
+  - `STRICT_RUNTIME_GOVERNANCE_v0`
 
 Governance architecture-freeze checkpoint (2026-02-18):
 - Architecture schema is pinned and enforced:
