@@ -1,0 +1,19 @@
+{
+  "artifact_id": "sr_m5_theory_parity_link_cycle44_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "pillar": "PILLAR-SR",
+    "maturity_tier": "M5_THEORY_PARITY_LINKED",
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "basis": {
+      "linked_target": "TARGET-SR-M5-THEORY-PARITY-LINK-v0",
+      "parity_scope": "cross_surface_token_and_pointer_parity",
+      "cycle": "cycle44"
+    },
+    "audit_objective": "LEGACY_LEAKAGE_ZERO_SINGLE_ACTIVE_POINTER_AND_TOKEN_ORDER_STABLE_v0",
+    "phase5_advancement_delta_token": "CYCLE44_POINTER_PARITY_ADVANCEMENT_v0",
+    "readiness": "THEORY_PARITY_LINK_PINNED_v0",
+    "scope": "bounded_nonclaim_theory_parity_link",
+    "generated_on": "2026-03-08"
+  }
+}

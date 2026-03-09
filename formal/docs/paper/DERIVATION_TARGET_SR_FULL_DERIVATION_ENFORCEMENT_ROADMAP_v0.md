@@ -80,15 +80,15 @@ SR M4 seam-closure promotion bundle (bounded non-claim):
 
 SR M5 theory-parity-link tranche (bounded non-claim):
 - `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
-- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle43_v0`
-- `SR_M5_THEORY_PARITY_SHA256_v0: f33d5802ce58d3f3eb713c46e4729849f4e39f64278fb8fa070141095ea10064`
+- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle44_v0`
+- `SR_M5_THEORY_PARITY_SHA256_v0: 05e358b0cbc854f1931a39d66b5908c0b75f298b773ed0c10264283326904baa`
 - `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `SR_M5_PHASE5_ADVANCEMENT_DELTA_TOKEN_v0: CYCLE43_POINTER_PARITY_ADVANCEMENT_v0`
+- `SR_M5_PHASE5_ADVANCEMENT_DELTA_TOKEN_v0: CYCLE44_POINTER_PARITY_ADVANCEMENT_v0`
 - `SR_M5_PHASE5_ADVANCEMENT_CONTRACT_GATE_v0: formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py`
 - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
 - `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`
-- `formal/output/sr_m5_theory_parity_link_cycle43_v0.json`
-- `formal/python/tests/test_sr_m5_theory_parity_link_cycle43_gate.py`
+- `formal/output/sr_m5_theory_parity_link_cycle44_v0.json`
+- `formal/python/tests/test_sr_m5_theory_parity_link_cycle44_gate.py`
 
 Adjudication token:
 - `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
