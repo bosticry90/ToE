@@ -11,6 +11,7 @@
       "cycle": "cycle40"
     },
     "audit_objective": "LEGACY_LEAKAGE_ZERO_SINGLE_ACTIVE_POINTER_AND_TOKEN_ORDER_STABLE_v0",
+    "phase5_advancement_delta_token": "CYCLE40_ADVANCEMENT_CONTRACT_GATE_INTRODUCED_v0",
     "readiness": "THEORY_PARITY_LINK_PINNED_v0",
     "scope": "bounded_nonclaim_theory_parity_link",
     "generated_on": "2026-03-08"

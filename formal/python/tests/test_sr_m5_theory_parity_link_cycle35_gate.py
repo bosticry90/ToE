@@ -9,7 +9,7 @@ import pytest
 
 
 pytestmark = pytest.mark.skip(
-    reason="Historical SR M5 cycle gate retained for archive traceability; cycle36 is canonical active gate."
+    reason="Historical SR M5 cycle gate retained for archive traceability; active gate is registry-driven."
 )
 
 

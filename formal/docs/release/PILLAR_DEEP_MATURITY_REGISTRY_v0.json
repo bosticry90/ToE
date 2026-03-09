@@ -26,6 +26,7 @@
   "sr_m3_completion_gate_path": "formal/python/tests/test_sr_m3_completion_promotion_cycle01_gate.py",
   "sr_m4_seam_closure_gate_path": "formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py",
   "sr_m5_theory_parity_gate_path": "formal/python/tests/test_sr_m5_theory_parity_link_cycle40_gate.py",
+  "sr_m5_phase5_advancement_contract_gate_path": "formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py",
   "m3_consolidation_gate_path": "formal/python/tests/test_phase3_m3_consolidation_promotion_cycle01_gate.py",
   "program_status": {
     "PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0": "ACTIVE_v0",
