@@ -19,10 +19,10 @@ Current packet-02 decision distribution (bounded):
 - `SR: RETAIN_v0`
 
 Outstanding blockers:
-1. Packet-03 is now scaffolded for all pillars, but packet-03 matrix/decision policy surfaces are not yet pinned.
-2. Derivation-depth stage bundles are now synchronized for M4 seam-closure docs; M2 source-doc subphase backfill remains the next depth target where absent.
+1. Packet-03 matrix and decision-policy surfaces are now pinned; next pressure target is packet-04 policy framing.
+2. Derivation-depth stage bundles are synchronized for M4 seam-closure docs; M2 source-doc subphase backfill remains the next depth target where absent.
 3. Packet-02 non-inconclusive seam-coupling pointers are synchronized; ongoing requirement is to keep artifact->chain-matrix parity locked under new edits.
-4. Shadow numerics cycle-03 is started; cycle-04 progression is not started.
+4. Shadow numerics cycle-04 is now started; cycle-05 progression is not started.
 
 Validation checkpoint:
 - run `./governance_suite.ps1`.

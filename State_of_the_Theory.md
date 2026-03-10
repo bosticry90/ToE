@@ -52,6 +52,7 @@ Canonical bounded status note (2026-02-24):
 - SR empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
 - Master action shadow numerics cycle-02 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE02_v0.md`.
 - Master action shadow numerics cycle-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE03_v0.md`.
+- Master action shadow numerics cycle-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE04_v0.md`.
 - QM empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
 - GR empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
 - GR empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
@@ -67,6 +68,7 @@ Canonical bounded status note (2026-02-24):
 - SR empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
 - Foundational empirical packet matrix pointer: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0.json`.
 - Foundational empirical packet-02 matrix pointer: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0.json`.
+- Foundational empirical packet-03 matrix pointer: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET03_MATRIX_v0.json`.
 - Foundational derivation chain matrix pointer: `formal/docs/paper/FOUNDATIONAL_DERIVATION_CHAIN_MATRIX_v0.json`.
 - Master action seam registry gate pointer: `formal/python/tests/test_toe_master_action_seam_registry_gate.py`.
 - Master action assumption classification gate pointer: `formal/python/tests/test_toe_master_action_assumption_classification_gate.py`.
@@ -94,8 +96,11 @@ Canonical bounded status note (2026-02-24):
 - SR empirical comparison packet-03 gate pointer: `formal/python/tests/test_sr_empirical_comparison_packet_03_gate.py`.
 - Master action shadow numerics cycle-02 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle02_gate.py`.
 - Master action shadow numerics cycle-03 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle03_gate.py`.
+- Master action shadow numerics cycle-04 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle04_gate.py`.
 - Foundational empirical packet-02 matrix consistency gate pointer: `formal/python/tests/test_foundational_empirical_packet02_matrix_consistency_gate.py`.
 - Foundational empirical packet-02 decision balance gate pointer: `formal/python/tests/test_foundational_empirical_packet02_decision_balance_gate.py`.
+- Foundational empirical packet-03 matrix consistency gate pointer: `formal/python/tests/test_foundational_empirical_packet03_matrix_consistency_gate.py`.
+- Foundational empirical packet-03 decision policy gate pointer: `formal/python/tests/test_foundational_empirical_packet03_decision_policy_gate.py`.
 - QM empirical packet-01 evidence promotion gate pointer: `formal/python/tests/test_qm_empirical_packet_01_evidence_promotion_gate.py`.
 - GR empirical comparison packet-01 gate pointer: `formal/python/tests/test_gr_empirical_comparison_packet_01_gate.py`.
 - GR empirical packet-01 evidence promotion gate pointer: `formal/python/tests/test_gr_empirical_packet_01_evidence_promotion_gate.py`.
