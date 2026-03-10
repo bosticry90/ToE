@@ -58,8 +58,17 @@ def test_packet04_framing_holds_next_step_inconclusive_policy() -> None:
     rows = matrix.get("rows", {})
     assert isinstance(rows, dict) and len(rows) == 7
 
-    # Packet-04 is framed but not yet executed; all row payloads remain future placeholders.
     for lane, row in rows.items():
-        assert "packet_04" in row["next_doc_path"].lower(), f"{lane}: next_doc_path drift"
-        assert "packet_04" in row["next_artifact_path"].lower(), f"{lane}: next_artifact_path drift"
-        assert "packet_04" in row["next_gate_path"].lower(), f"{lane}: next_gate_path drift"
+        assert "packet_04" in row["doc_path"].lower(), f"{lane}: doc_path drift"
+        assert "packet_04" in row["artifact_path"].lower(), f"{lane}: artifact_path drift"
+        assert "packet_04" in row["gate_path"].lower(), f"{lane}: gate_path drift"
+
+        artifact = _read_json(REPO_ROOT / row["artifact_path"])
+        payload = artifact.get("payload", {})
+        decision = payload.get("decision")
+        assert decision in {"RETAIN_v0", "PRUNE_v0", "INCONCLUSIVE_v0"}, (
+            f"{lane}: unexpected packet-04 decision `{decision}`."
+        )
+        assert decision == "INCONCLUSIVE_v0", (
+            f"{lane}: packet-04 baseline must remain INCONCLUSIVE_v0 until packet-05-or-higher policy transition."
+        )

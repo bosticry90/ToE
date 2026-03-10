@@ -60,10 +60,18 @@ if ($LASTEXITCODE -ne 0) {
   formal/python/tests/test_em_empirical_comparison_packet_03_gate.py `
   formal/python/tests/test_qft_empirical_comparison_packet_03_gate.py `
   formal/python/tests/test_sr_empirical_comparison_packet_03_gate.py `
+  formal/python/tests/test_qm_empirical_comparison_packet_04_gate.py `
+  formal/python/tests/test_gr_empirical_comparison_packet_04_gate.py `
+  formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py `
+  formal/python/tests/test_cosmo_empirical_comparison_packet_04_gate.py `
+  formal/python/tests/test_em_empirical_comparison_packet_04_gate.py `
+  formal/python/tests/test_qft_empirical_comparison_packet_04_gate.py `
+  formal/python/tests/test_sr_empirical_comparison_packet_04_gate.py `
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle02_gate.py `
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle03_gate.py `
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle04_gate.py `
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle05_gate.py `
+  formal/python/tests/test_toe_master_action_shadow_numerics_cycle06_gate.py `
   formal/python/tests/test_qm_empirical_packet_01_evidence_promotion_gate.py `
   formal/python/tests/test_gr_empirical_comparison_packet_01_gate.py `
   formal/python/tests/test_gr_empirical_packet_01_evidence_promotion_gate.py `

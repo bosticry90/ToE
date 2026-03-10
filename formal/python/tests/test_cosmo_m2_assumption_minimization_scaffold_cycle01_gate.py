@@ -54,9 +54,9 @@ def test_cosmo_m2_assumption_minimization_scaffold_cycle01_gate() -> None:
     expected_sha = _payload_hash(artifact_json["payload"])
     assert artifact_json.get("payload_sha256") == expected_sha
 
-    assert _extract_token(cosmo_text, "COSMO_M2_ASSUMPTION_MINIMIZATION_STATUS_v0") == "SCAFFOLD_PINNED_NONCLAIM"
-    assert _extract_token(state_text, "COSMO_M2_ASSUMPTION_MINIMIZATION_STATUS_v0") == "SCAFFOLD_PINNED_NONCLAIM"
-    assert _extract_token(roadmap_text, "COSMO_M2_ASSUMPTION_MINIMIZATION_STATUS_v0") == "SCAFFOLD_PINNED_NONCLAIM"
+    assert _extract_token(cosmo_text, "COSMO_M2_ASSUMPTION_MINIMIZATION_STATUS_v0") == "RUN_BOUNDED_v0_NONCLAIM"
+    assert _extract_token(state_text, "COSMO_M2_ASSUMPTION_MINIMIZATION_STATUS_v0") == "RUN_BOUNDED_v0_NONCLAIM"
+    assert _extract_token(roadmap_text, "COSMO_M2_ASSUMPTION_MINIMIZATION_STATUS_v0") == "RUN_BOUNDED_v0_NONCLAIM"
 
     assert _extract_token(cosmo_text, "COSMO_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0") == EXPECTED_ARTIFACT_ID
     assert _extract_token(state_text, "COSMO_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0") == EXPECTED_ARTIFACT_ID

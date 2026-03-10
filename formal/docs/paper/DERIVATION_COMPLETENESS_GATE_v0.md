@@ -97,25 +97,25 @@ Non-claim boundary:
 
 ## GR M2 Deep-Maturity Scaffold Bundle (bounded non-claim)
 
-- `GR_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `GR_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `GR_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: gr_m2_analytic_completeness_scaffold_cycle01_v0`
 - `GR_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 6d9102ca85e641c449dac0347c980f27c9e705c78d9762db500f967663e2d884`
 - `GR_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/gr_m2_analytic_completeness_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_gr_m2_analytic_completeness_scaffold_cycle01_gate.py`
-- `GR_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `GR_M2_CANONICAL_EQUIVALENCE_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `GR_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: gr_m2_canonical_equivalence_scaffold_cycle01_v0`
 - `GR_M2_CANONICAL_EQUIVALENCE_SHA256_v0: 1d714b56a4219913ff11b5a666c4378b62b44dc7eacd1b99087989a449be06b6`
 - `GR_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/gr_m2_canonical_equivalence_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_gr_m2_canonical_equivalence_scaffold_cycle01_gate.py`
-- `GR_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `GR_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `GR_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: gr_m2_assumption_minimization_scaffold_cycle01_v0`
 - `GR_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: d15f3f5e53c3ddc2fc0b1c359811451ab8989b279935827823b6a0a2b5cd3b9c`
 - `GR_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/gr_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_gr_m2_assumption_minimization_scaffold_cycle01_gate.py`
-- `GR_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `GR_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `GR_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: gr_m2_literature_alignment_scaffold_cycle01_v0`
 - `GR_M2_LITERATURE_ALIGNMENT_SHA256_v0: df8ea4954b7d5372fcf5902c5844241c985c736938dbd209e0e0368d803f927e`
 - `GR_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -161,3 +161,4 @@ Non-claim boundary:
 - `formal/docs/paper/DERIVATION_TARGET_GR_M4_SEAM_CLOSURE_PROMOTION_v0.md`
 - `formal/output/gr_m4_seam_closure_promotion_cycle01_v0.json`
 - `formal/python/tests/test_gr_m4_seam_closure_promotion_cycle01_gate.py`
+

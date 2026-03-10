@@ -55,11 +55,25 @@ def test_packet04_matrix_rows_pin_next_surface_paths() -> None:
     assert set(rows.keys()) == expected_lanes
 
     for lane, row in rows.items():
-        for key in ("next_doc_path", "next_artifact_path", "next_gate_path"):
-            value = row.get(key)
-            assert isinstance(value, str) and value
-            assert "packet_04" in value.lower(), f"{lane}: `{key}` must point to packet-04 surface."
+        doc_path = REPO_ROOT / row["doc_path"]
+        artifact_path = REPO_ROOT / row["artifact_path"]
+        gate_path = REPO_ROOT / row["gate_path"]
 
-        assert row["next_doc_path"].endswith("_PACKET_04_v0.md")
-        assert row["next_artifact_path"].endswith("_packet_04_v0.json")
-        assert row["next_gate_path"].endswith("_packet_04_gate.py")
+        assert doc_path.exists(), f"{lane}: missing packet-04 doc `{doc_path}`."
+        assert artifact_path.exists(), f"{lane}: missing packet-04 artifact `{artifact_path}`."
+        assert gate_path.exists(), f"{lane}: missing packet-04 gate `{gate_path}`."
+
+        doc_text = _read(doc_path)
+        artifact = _read_json(artifact_path)
+        payload = artifact.get("payload", {})
+
+        assert artifact.get("artifact_id", "").endswith("_packet_04_v0")
+        assert payload.get("status") == "RUN_BOUNDED_v0_NONCLAIM"
+        assert payload.get("decision") in {"RETAIN_v0", "PRUNE_v0", "INCONCLUSIVE_v0"}
+        assert payload.get("decision") == "INCONCLUSIVE_v0"
+
+        assert f"{lane}_EMPIRICAL_PACKET_04_STATUS_v0" in doc_text
+        assert f"{lane}_EMPIRICAL_PACKET_04_ARTIFACT_v0" in doc_text
+        assert f"{lane}_EMPIRICAL_PACKET_04_GATE_v0" in doc_text
+        assert f"{lane}_EMPIRICAL_PACKET_04_DECISION_v0" in doc_text
+        assert f"{lane}_EMPIRICAL_PACKET_04_EVIDENCE_TIER_v0" in doc_text

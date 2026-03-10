@@ -54,9 +54,9 @@ def test_cosmo_m2_analytic_completeness_scaffold_cycle01_gate() -> None:
     expected_sha = _payload_hash(artifact_json["payload"])
     assert artifact_json.get("payload_sha256") == expected_sha
 
-    assert _extract_token(cosmo_text, "COSMO_M2_ANALYTIC_COMPLETENESS_STATUS_v0") == "SCAFFOLD_PINNED_NONCLAIM"
-    assert _extract_token(state_text, "COSMO_M2_ANALYTIC_COMPLETENESS_STATUS_v0") == "SCAFFOLD_PINNED_NONCLAIM"
-    assert _extract_token(roadmap_text, "COSMO_M2_ANALYTIC_COMPLETENESS_STATUS_v0") == "SCAFFOLD_PINNED_NONCLAIM"
+    assert _extract_token(cosmo_text, "COSMO_M2_ANALYTIC_COMPLETENESS_STATUS_v0") == "RUN_BOUNDED_v0_NONCLAIM"
+    assert _extract_token(state_text, "COSMO_M2_ANALYTIC_COMPLETENESS_STATUS_v0") == "RUN_BOUNDED_v0_NONCLAIM"
+    assert _extract_token(roadmap_text, "COSMO_M2_ANALYTIC_COMPLETENESS_STATUS_v0") == "RUN_BOUNDED_v0_NONCLAIM"
 
     assert _extract_token(cosmo_text, "COSMO_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0") == EXPECTED_ARTIFACT_ID
     assert _extract_token(state_text, "COSMO_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0") == EXPECTED_ARTIFACT_ID
@@ -74,3 +74,4 @@ def test_cosmo_m2_analytic_completeness_scaffold_cycle01_gate() -> None:
     assert artifact_rel in cosmo_text
     assert artifact_rel in state_text
     assert artifact_rel in roadmap_text
+

@@ -54,9 +54,9 @@ def test_qft_m2_canonical_equivalence_scaffold_cycle01_gate() -> None:
     expected_sha = _payload_hash(artifact_json["payload"])
     assert artifact_json.get("payload_sha256") == expected_sha
 
-    assert _extract_token(qft_text, "QFT_M2_CANONICAL_EQUIVALENCE_STATUS_v0") == "SCAFFOLD_PINNED_NONCLAIM"
-    assert _extract_token(state_text, "QFT_M2_CANONICAL_EQUIVALENCE_STATUS_v0") == "SCAFFOLD_PINNED_NONCLAIM"
-    assert _extract_token(roadmap_text, "QFT_M2_CANONICAL_EQUIVALENCE_STATUS_v0") == "SCAFFOLD_PINNED_NONCLAIM"
+    assert _extract_token(qft_text, "QFT_M2_CANONICAL_EQUIVALENCE_STATUS_v0") == "RUN_BOUNDED_v0_NONCLAIM"
+    assert _extract_token(state_text, "QFT_M2_CANONICAL_EQUIVALENCE_STATUS_v0") == "RUN_BOUNDED_v0_NONCLAIM"
+    assert _extract_token(roadmap_text, "QFT_M2_CANONICAL_EQUIVALENCE_STATUS_v0") == "RUN_BOUNDED_v0_NONCLAIM"
 
     assert _extract_token(qft_text, "QFT_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0") == EXPECTED_ARTIFACT_ID
     assert _extract_token(state_text, "QFT_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0") == EXPECTED_ARTIFACT_ID
@@ -74,3 +74,4 @@ def test_qft_m2_canonical_equivalence_scaffold_cycle01_gate() -> None:
     assert artifact_rel in qft_text
     assert artifact_rel in state_text
     assert artifact_rel in roadmap_text
+

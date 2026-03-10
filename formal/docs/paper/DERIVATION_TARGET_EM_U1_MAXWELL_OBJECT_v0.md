@@ -15,25 +15,25 @@ Purpose:
 - Define the first nontrivial EM object set and kickoff sequence under governance-enforced phase discipline.
 
 EM deep-maturity scaffold bundle (bounded non-claim):
-- `EM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `EM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `EM_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: em_m2_analytic_completeness_scaffold_cycle01_v0`
 - `EM_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 2375174c650c2f0ad333cbe67b20c2f0b8dcd7dc8975b11e810b09e7fba006ac`
 - `EM_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/em_m2_analytic_completeness_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_em_m2_analytic_completeness_scaffold_cycle01_gate.py`
-- `EM_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `EM_M2_CANONICAL_EQUIVALENCE_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `EM_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: em_m2_canonical_equivalence_scaffold_cycle01_v0`
 - `EM_M2_CANONICAL_EQUIVALENCE_SHA256_v0: 4e4a03382bd81c2b9576a5b4ba248aafc36cb8ac254158b50f720da23d4cfe66`
 - `EM_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/em_m2_canonical_equivalence_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_em_m2_canonical_equivalence_scaffold_cycle01_gate.py`
-- `EM_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `EM_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `EM_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: em_m2_assumption_minimization_scaffold_cycle01_v0`
 - `EM_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: c7ac89d946b47414d0d3de604cbf52f055eda466aec6961b4cd476ae7a6a4f28`
 - `EM_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/em_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_em_m2_assumption_minimization_scaffold_cycle01_gate.py`
-- `EM_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `EM_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `EM_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: em_m2_literature_alignment_scaffold_cycle01_v0`
 - `EM_M2_LITERATURE_ALIGNMENT_SHA256_v0: 9194dd215a82fd62ca63cf1b79307d6ad0ae318c49511b8a60aea6a0ed7121fd`
 - `EM_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -1474,4 +1474,5 @@ Non-claim boundary reinforcement:
 - no non-Abelian gauge completion claim.
 - no Standard Model completion claim.
 - no external truth claim.
+
 

@@ -50,10 +50,18 @@ Canonical bounded status note (2026-02-24):
 - EM empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
 - QFT empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
 - SR empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
+- QM empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
+- GR empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
+- STAT empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
+- COSMO empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
+- EM empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
+- QFT empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
+- SR empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
 - Master action shadow numerics cycle-02 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE02_v0.md`.
 - Master action shadow numerics cycle-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE03_v0.md`.
 - Master action shadow numerics cycle-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE04_v0.md`.
 - Master action shadow numerics cycle-05 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE05_v0.md`.
+- Master action shadow numerics cycle-06 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE06_v0.md`.
 - QM empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
 - GR empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
 - GR empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
@@ -96,10 +104,18 @@ Canonical bounded status note (2026-02-24):
 - EM empirical comparison packet-03 gate pointer: `formal/python/tests/test_em_empirical_comparison_packet_03_gate.py`.
 - QFT empirical comparison packet-03 gate pointer: `formal/python/tests/test_qft_empirical_comparison_packet_03_gate.py`.
 - SR empirical comparison packet-03 gate pointer: `formal/python/tests/test_sr_empirical_comparison_packet_03_gate.py`.
+- QM empirical comparison packet-04 gate pointer: `formal/python/tests/test_qm_empirical_comparison_packet_04_gate.py`.
+- GR empirical comparison packet-04 gate pointer: `formal/python/tests/test_gr_empirical_comparison_packet_04_gate.py`.
+- STAT empirical comparison packet-04 gate pointer: `formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py`.
+- COSMO empirical comparison packet-04 gate pointer: `formal/python/tests/test_cosmo_empirical_comparison_packet_04_gate.py`.
+- EM empirical comparison packet-04 gate pointer: `formal/python/tests/test_em_empirical_comparison_packet_04_gate.py`.
+- QFT empirical comparison packet-04 gate pointer: `formal/python/tests/test_qft_empirical_comparison_packet_04_gate.py`.
+- SR empirical comparison packet-04 gate pointer: `formal/python/tests/test_sr_empirical_comparison_packet_04_gate.py`.
 - Master action shadow numerics cycle-02 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle02_gate.py`.
 - Master action shadow numerics cycle-03 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle03_gate.py`.
 - Master action shadow numerics cycle-04 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle04_gate.py`.
 - Master action shadow numerics cycle-05 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle05_gate.py`.
+- Master action shadow numerics cycle-06 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle06_gate.py`.
 - Foundational empirical packet-02 matrix consistency gate pointer: `formal/python/tests/test_foundational_empirical_packet02_matrix_consistency_gate.py`.
 - Foundational empirical packet-02 decision balance gate pointer: `formal/python/tests/test_foundational_empirical_packet02_decision_balance_gate.py`.
 - Foundational empirical packet-03 matrix consistency gate pointer: `formal/python/tests/test_foundational_empirical_packet03_matrix_consistency_gate.py`.
@@ -270,25 +286,25 @@ Canonical bounded status note (2026-02-24):
 - `SR_M5_PHASE5_ADVANCEMENT_CONTRACT_GATE_v0: formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py`
 - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
 - `formal/output/sr_m5_theory_parity_link_cycle51_v0.json`
-- `QM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `QM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `QM_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: qm_m2_analytic_completeness_scaffold_cycle01_v0`
 - `QM_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 192432c694de481ae9c34b073ebcd214dacfd1ce1b0adc6799697c82bb9d301e`
 - `QM_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/qm_m2_analytic_completeness_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_qm_m2_analytic_completeness_scaffold_cycle01_gate.py`
-- `QM_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `QM_M2_CANONICAL_EQUIVALENCE_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `QM_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: qm_m2_canonical_equivalence_scaffold_cycle01_v0`
 - `QM_M2_CANONICAL_EQUIVALENCE_SHA256_v0: 0b5e239151028bb4920840b24ad9f1f6a3fdb44dc39437ff9b3269aadea638ae`
 - `QM_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/qm_m2_canonical_equivalence_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_qm_m2_canonical_equivalence_scaffold_cycle01_gate.py`
-- `QM_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `QM_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `QM_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: qm_m2_assumption_minimization_scaffold_cycle01_v0`
 - `QM_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: c32ac32cebd7443e046aedef3fdbccb97661936ee7c5fd61741aef6cf68a07ba`
 - `QM_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/qm_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_qm_m2_assumption_minimization_scaffold_cycle01_gate.py`
-- `QM_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `QM_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `QM_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: qm_m2_literature_alignment_scaffold_cycle01_v0`
 - `QM_M2_LITERATURE_ALIGNMENT_SHA256_v0: 8eecd039c5ecf244054b8727a61835f2f8261d08d875aae945699477c14c3332`
 - `QM_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -300,25 +316,25 @@ Canonical bounded status note (2026-02-24):
 - `QM_M2_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/qm_m2_completion_promotion_cycle01_v0.json`
 - `formal/python/tests/test_qm_m2_completion_promotion_cycle01_gate.py`
-- `GR_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `GR_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `GR_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: gr_m2_analytic_completeness_scaffold_cycle01_v0`
 - `GR_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 6d9102ca85e641c449dac0347c980f27c9e705c78d9762db500f967663e2d884`
 - `GR_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/gr_m2_analytic_completeness_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_gr_m2_analytic_completeness_scaffold_cycle01_gate.py`
-- `GR_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `GR_M2_CANONICAL_EQUIVALENCE_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `GR_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: gr_m2_canonical_equivalence_scaffold_cycle01_v0`
 - `GR_M2_CANONICAL_EQUIVALENCE_SHA256_v0: 1d714b56a4219913ff11b5a666c4378b62b44dc7eacd1b99087989a449be06b6`
 - `GR_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/gr_m2_canonical_equivalence_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_gr_m2_canonical_equivalence_scaffold_cycle01_gate.py`
-- `GR_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `GR_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `GR_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: gr_m2_assumption_minimization_scaffold_cycle01_v0`
 - `GR_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: d15f3f5e53c3ddc2fc0b1c359811451ab8989b279935827823b6a0a2b5cd3b9c`
 - `GR_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/gr_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_gr_m2_assumption_minimization_scaffold_cycle01_gate.py`
-- `GR_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `GR_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `GR_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: gr_m2_literature_alignment_scaffold_cycle01_v0`
 - `GR_M2_LITERATURE_ALIGNMENT_SHA256_v0: df8ea4954b7d5372fcf5902c5844241c985c736938dbd209e0e0368d803f927e`
 - `GR_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -330,25 +346,25 @@ Canonical bounded status note (2026-02-24):
 - `GR_M2_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/gr_m2_completion_promotion_cycle01_v0.json`
 - `formal/python/tests/test_gr_m2_completion_promotion_cycle01_gate.py`
-- `STAT_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `STAT_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: stat_m2_analytic_completeness_scaffold_cycle01_v0`
 - `STAT_M2_ANALYTIC_COMPLETENESS_SHA256_v0: e05286c3288297442525e3c39e5443c7faaa405a89bad25f280bc1f5f35b4cc0`
 - `STAT_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/stat_m2_analytic_completeness_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_stat_m2_analytic_completeness_scaffold_cycle01_gate.py`
-- `STAT_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_M2_CANONICAL_EQUIVALENCE_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `STAT_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: stat_m2_canonical_equivalence_scaffold_cycle01_v0`
 - `STAT_M2_CANONICAL_EQUIVALENCE_SHA256_v0: ee38b9f7a669e8c37b9cc1dc7a76d179db8e09f177e83024733c86c82438a46d`
 - `STAT_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/stat_m2_canonical_equivalence_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_stat_m2_canonical_equivalence_scaffold_cycle01_gate.py`
-- `STAT_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `STAT_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: stat_m2_assumption_minimization_scaffold_cycle01_v0`
 - `STAT_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: 89bf467278875521ff1329120ca37999d7a07ed229ed049f95e6b9abdfef5501`
 - `STAT_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/stat_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_stat_m2_assumption_minimization_scaffold_cycle01_gate.py`
-- `STAT_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `STAT_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: stat_m2_literature_alignment_scaffold_cycle01_v0`
 - `STAT_M2_LITERATURE_ALIGNMENT_SHA256_v0: 641b3adc446ffa9f187caa48f8167444b17d0f6c473e3b10d2e7906f604b59ba`
 - `STAT_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -360,25 +376,25 @@ Canonical bounded status note (2026-02-24):
 - `STAT_M2_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/stat_m2_completion_promotion_cycle01_v0.json`
 - `formal/python/tests/test_stat_m2_completion_promotion_cycle01_gate.py`
-- `COSMO_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `COSMO_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: cosmo_m2_analytic_completeness_scaffold_cycle01_v0`
 - `COSMO_M2_ANALYTIC_COMPLETENESS_SHA256_v0: d44b0895113706d18fd824e362446dc5deb52e91b053f7c43df2d5c09acad6bd`
 - `COSMO_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/cosmo_m2_analytic_completeness_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_cosmo_m2_analytic_completeness_scaffold_cycle01_gate.py`
-- `COSMO_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_M2_CANONICAL_EQUIVALENCE_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `COSMO_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: cosmo_m2_canonical_equivalence_scaffold_cycle01_v0`
 - `COSMO_M2_CANONICAL_EQUIVALENCE_SHA256_v0: bc043ee389ebadc91f2329dd817e7780d7a6c89544e539257a7e4181db8ecbac`
 - `COSMO_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/cosmo_m2_canonical_equivalence_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_cosmo_m2_canonical_equivalence_scaffold_cycle01_gate.py`
-- `COSMO_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `COSMO_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: cosmo_m2_assumption_minimization_scaffold_cycle01_v0`
 - `COSMO_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: 582f28df575158593c5b76b28675ea2fb8c1d8eb42d4a66908bd9e21df1a3084`
 - `COSMO_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/cosmo_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_cosmo_m2_assumption_minimization_scaffold_cycle01_gate.py`
-- `COSMO_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `COSMO_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: cosmo_m2_literature_alignment_scaffold_cycle01_v0`
 - `COSMO_M2_LITERATURE_ALIGNMENT_SHA256_v0: fa846681cf8c12f5e7c4446640d1b097585895016738f0dbea206037014869c8`
 - `COSMO_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -390,25 +406,25 @@ Canonical bounded status note (2026-02-24):
 - `COSMO_M2_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/cosmo_m2_completion_promotion_cycle01_v0.json`
 - `formal/python/tests/test_cosmo_m2_completion_promotion_cycle01_gate.py`
-- `EM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `EM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `EM_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: em_m2_analytic_completeness_scaffold_cycle01_v0`
 - `EM_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 2375174c650c2f0ad333cbe67b20c2f0b8dcd7dc8975b11e810b09e7fba006ac`
 - `EM_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/em_m2_analytic_completeness_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_em_m2_analytic_completeness_scaffold_cycle01_gate.py`
-- `EM_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `EM_M2_CANONICAL_EQUIVALENCE_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `EM_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: em_m2_canonical_equivalence_scaffold_cycle01_v0`
 - `EM_M2_CANONICAL_EQUIVALENCE_SHA256_v0: 4e4a03382bd81c2b9576a5b4ba248aafc36cb8ac254158b50f720da23d4cfe66`
 - `EM_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/em_m2_canonical_equivalence_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_em_m2_canonical_equivalence_scaffold_cycle01_gate.py`
-- `EM_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `EM_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `EM_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: em_m2_assumption_minimization_scaffold_cycle01_v0`
 - `EM_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: c7ac89d946b47414d0d3de604cbf52f055eda466aec6961b4cd476ae7a6a4f28`
 - `EM_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/em_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_em_m2_assumption_minimization_scaffold_cycle01_gate.py`
-- `EM_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `EM_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `EM_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: em_m2_literature_alignment_scaffold_cycle01_v0`
 - `EM_M2_LITERATURE_ALIGNMENT_SHA256_v0: 9194dd215a82fd62ca63cf1b79307d6ad0ae318c49511b8a60aea6a0ed7121fd`
 - `EM_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -420,25 +436,25 @@ Canonical bounded status note (2026-02-24):
 - `EM_M2_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/em_m2_completion_promotion_cycle01_v0.json`
 - `formal/python/tests/test_em_m2_completion_promotion_cycle01_gate.py`
-- `QFT_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `QFT_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `QFT_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: qft_m2_analytic_completeness_scaffold_cycle01_v0`
 - `QFT_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 77131b316529184d14401ed586ef698538b96491e1def62f03e20edd3cced13e`
 - `QFT_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/qft_m2_analytic_completeness_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_qft_m2_analytic_completeness_scaffold_cycle01_gate.py`
-- `QFT_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `QFT_M2_CANONICAL_EQUIVALENCE_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `QFT_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: qft_m2_canonical_equivalence_scaffold_cycle01_v0`
 - `QFT_M2_CANONICAL_EQUIVALENCE_SHA256_v0: 88891e4413ce6bb767c0f9d1eb04a6958514d45d6109354340d157930a67a7bc`
 - `QFT_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/qft_m2_canonical_equivalence_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_qft_m2_canonical_equivalence_scaffold_cycle01_gate.py`
-- `QFT_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `QFT_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `QFT_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: qft_m2_assumption_minimization_scaffold_cycle01_v0`
 - `QFT_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: 8ac9c8f558e4608ee08d34b5ac6e38f18503fc5f5909f65bcb2c2a969b66948c`
 - `QFT_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/qft_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_qft_m2_assumption_minimization_scaffold_cycle01_gate.py`
-- `QFT_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `QFT_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `QFT_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: qft_m2_literature_alignment_scaffold_cycle01_v0`
 - `QFT_M2_LITERATURE_ALIGNMENT_SHA256_v0: 7c59d4c9758cba8f1f2919fa2eab41931aa180d65483caddb5b5ed0a078ef285`
 - `QFT_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -450,25 +466,25 @@ Canonical bounded status note (2026-02-24):
 - `QFT_M2_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/qft_m2_completion_promotion_cycle01_v0.json`
 - `formal/python/tests/test_qft_m2_completion_promotion_cycle01_gate.py`
-- `SR_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `SR_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `SR_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: sr_m2_analytic_completeness_scaffold_cycle01_v0`
 - `SR_M2_ANALYTIC_COMPLETENESS_SHA256_v0: e3fd1a4ebfbbc49ff14ce28671c118315b3aa07ffb439639e191ad097c5095ec`
 - `SR_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/sr_m2_analytic_completeness_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_sr_m2_analytic_completeness_scaffold_cycle01_gate.py`
-- `SR_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `SR_M2_CANONICAL_EQUIVALENCE_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `SR_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: sr_m2_canonical_equivalence_scaffold_cycle01_v0`
 - `SR_M2_CANONICAL_EQUIVALENCE_SHA256_v0: a2e8d032516f4143ddd7b9215030750725a2cb5a7470aebc5a113b2f4b94c55a`
 - `SR_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/sr_m2_canonical_equivalence_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_sr_m2_canonical_equivalence_scaffold_cycle01_gate.py`
-- `SR_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `SR_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `SR_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: sr_m2_assumption_minimization_scaffold_cycle01_v0`
 - `SR_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: 6b27683d4a071b3ac7fe5e35980f4d913fe968d1de3b976be288855b56f77984`
 - `SR_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/sr_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_sr_m2_assumption_minimization_scaffold_cycle01_gate.py`
-- `SR_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `SR_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `SR_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: sr_m2_literature_alignment_scaffold_cycle01_v0`
 - `SR_M2_LITERATURE_ALIGNMENT_SHA256_v0: 0d74782e94d37098f60ace2962323067c910ef2c40aa18118e7e2fff7c27d8b5`
 - `SR_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -9686,6 +9702,7 @@ Comparator-expansion block rule (policy): historical baseline retained. Since 20
 Template status: We will keep editing.
 
 ## END_ARCHIVED_HISTORY
+
 
 
 

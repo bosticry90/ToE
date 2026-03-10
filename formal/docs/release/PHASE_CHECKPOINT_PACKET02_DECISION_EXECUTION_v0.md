@@ -19,12 +19,12 @@ Current packet-02 decision distribution (bounded):
 - `SR: RETAIN_v0`
 
 Outstanding blockers:
-1. Packet-04 policy framing is now pinned; next pressure target is packet-04 execution surfaces and packet-05 policy framing.
+1. Packet-04 execution surfaces are now pinned; next pressure target is packet-05 policy framing.
 2. Derivation-depth stage bundles and M2 source-doc subphase tokens are synchronized on canonical surfaces; next depth target is theorem-witness hardening where still scaffolded.
 3. Packet-02 non-inconclusive seam-coupling pointers are synchronized; ongoing requirement is to keep artifact->chain-matrix parity locked under new edits.
-4. Shadow numerics cycle-05 is now started; cycle-06 progression is not started.
+4. Shadow numerics cycle-06 is now started; cycle-07 progression is not started.
 
 Validation checkpoint:
 - run `./governance_suite.ps1`.
 - keep bounded non-claim posture across all decision surfaces.
-- latest full-suite snapshot: `347 passed` with orchestration/sql/rust checks green.
+- latest full-suite snapshot: `360 passed` with orchestration/sql/rust checks green.

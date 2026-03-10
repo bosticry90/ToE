@@ -14,25 +14,25 @@ Purpose:
 - Define required structure and discharge-row placeholders without activating `PILLAR-STAT`.
 
 STAT deep-maturity scaffold bundle (bounded non-claim):
-- `STAT_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `STAT_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: stat_m2_analytic_completeness_scaffold_cycle01_v0`
 - `STAT_M2_ANALYTIC_COMPLETENESS_SHA256_v0: e05286c3288297442525e3c39e5443c7faaa405a89bad25f280bc1f5f35b4cc0`
 - `STAT_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/stat_m2_analytic_completeness_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_stat_m2_analytic_completeness_scaffold_cycle01_gate.py`
-- `STAT_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_M2_CANONICAL_EQUIVALENCE_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `STAT_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: stat_m2_canonical_equivalence_scaffold_cycle01_v0`
 - `STAT_M2_CANONICAL_EQUIVALENCE_SHA256_v0: ee38b9f7a669e8c37b9cc1dc7a76d179db8e09f177e83024733c86c82438a46d`
 - `STAT_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/stat_m2_canonical_equivalence_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_stat_m2_canonical_equivalence_scaffold_cycle01_gate.py`
-- `STAT_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `STAT_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: stat_m2_assumption_minimization_scaffold_cycle01_v0`
 - `STAT_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: 89bf467278875521ff1329120ca37999d7a07ed229ed049f95e6b9abdfef5501`
 - `STAT_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/stat_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_stat_m2_assumption_minimization_scaffold_cycle01_gate.py`
-- `STAT_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `STAT_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `STAT_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: stat_m2_literature_alignment_scaffold_cycle01_v0`
 - `STAT_M2_LITERATURE_ALIGNMENT_SHA256_v0: 641b3adc446ffa9f187caa48f8167444b17d0f6c473e3b10d2e7906f604b59ba`
 - `STAT_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -1768,3 +1768,4 @@ Cycle01 `PILLAR-STAT` attestation-confirmation-attestation-confirmation-attestat
 - bounded attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation entry scope only; no execution replay flip, no discharge adjudication flip, no inevitability adjudication flip, and no external truth claim.
 - attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status packet remains non-promotional and does not authorize `TOE-STAT-DER-*` label promotion.
 - dependency ladder back to the attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation status artifact and both prerequisite confirmation/attestation scope-boundary bundles is pinned before attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation-confirmation-attestation status admission.
+

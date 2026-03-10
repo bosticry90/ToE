@@ -14,25 +14,25 @@ Purpose:
 - Keep metric/expansion assumptions explicit and bounded.
 
 COSMO deep-maturity scaffold bundle (bounded non-claim):
-- `COSMO_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `COSMO_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: cosmo_m2_analytic_completeness_scaffold_cycle01_v0`
 - `COSMO_M2_ANALYTIC_COMPLETENESS_SHA256_v0: d44b0895113706d18fd824e362446dc5deb52e91b053f7c43df2d5c09acad6bd`
 - `COSMO_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/cosmo_m2_analytic_completeness_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_cosmo_m2_analytic_completeness_scaffold_cycle01_gate.py`
-- `COSMO_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_M2_CANONICAL_EQUIVALENCE_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `COSMO_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: cosmo_m2_canonical_equivalence_scaffold_cycle01_v0`
 - `COSMO_M2_CANONICAL_EQUIVALENCE_SHA256_v0: bc043ee389ebadc91f2329dd817e7780d7a6c89544e539257a7e4181db8ecbac`
 - `COSMO_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/cosmo_m2_canonical_equivalence_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_cosmo_m2_canonical_equivalence_scaffold_cycle01_gate.py`
-- `COSMO_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `COSMO_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: cosmo_m2_assumption_minimization_scaffold_cycle01_v0`
 - `COSMO_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: 582f28df575158593c5b76b28675ea2fb8c1d8eb42d4a66908bd9e21df1a3084`
 - `COSMO_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/cosmo_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_cosmo_m2_assumption_minimization_scaffold_cycle01_gate.py`
-- `COSMO_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+- `COSMO_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `COSMO_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: cosmo_m2_literature_alignment_scaffold_cycle01_v0`
 - `COSMO_M2_LITERATURE_ALIGNMENT_SHA256_v0: fa846681cf8c12f5e7c4446640d1b097585895016738f0dbea206037014869c8`
 - `COSMO_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -476,3 +476,4 @@ Governance pointers:
 ## ADJUDICATION_SYNC section
 
 - Adjudication synchronization remains `NOT_YET_DISCHARGED` under locked-queue lane policy.
+

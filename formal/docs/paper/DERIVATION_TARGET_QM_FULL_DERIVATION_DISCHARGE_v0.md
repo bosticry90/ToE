@@ -185,7 +185,7 @@ Inevitability obligation linkage (must remain synchronized with gate target):
   - `formal/python/tests/test_qm_empirical_discriminator_emp_qm_01_scaffold_gate.py`
 
 - QM M2 analytic completeness scaffold bundle (bounded non-claim):
-  - `QM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+  - `QM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
   - `QM_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: qm_m2_analytic_completeness_scaffold_cycle01_v0`
   - `QM_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 192432c694de481ae9c34b073ebcd214dacfd1ce1b0adc6799697c82bb9d301e`
   - `QM_M2_ANALYTIC_COMPLETENESS_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -193,7 +193,7 @@ Inevitability obligation linkage (must remain synchronized with gate target):
   - `formal/python/tests/test_qm_m2_analytic_completeness_scaffold_cycle01_gate.py`
 
 - QM M2 canonical equivalence scaffold bundle (bounded non-claim):
-  - `QM_M2_CANONICAL_EQUIVALENCE_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+  - `QM_M2_CANONICAL_EQUIVALENCE_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
   - `QM_M2_CANONICAL_EQUIVALENCE_ARTIFACT_v0: qm_m2_canonical_equivalence_scaffold_cycle01_v0`
   - `QM_M2_CANONICAL_EQUIVALENCE_SHA256_v0: 0b5e239151028bb4920840b24ad9f1f6a3fdb44dc39437ff9b3269aadea638ae`
   - `QM_M2_CANONICAL_EQUIVALENCE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -201,7 +201,7 @@ Inevitability obligation linkage (must remain synchronized with gate target):
   - `formal/python/tests/test_qm_m2_canonical_equivalence_scaffold_cycle01_gate.py`
 
 - QM M2 assumption minimization scaffold bundle (bounded non-claim):
-  - `QM_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+  - `QM_M2_ASSUMPTION_MINIMIZATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
   - `QM_M2_ASSUMPTION_MINIMIZATION_ARTIFACT_v0: qm_m2_assumption_minimization_scaffold_cycle01_v0`
   - `QM_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: c32ac32cebd7443e046aedef3fdbccb97661936ee7c5fd61741aef6cf68a07ba`
   - `QM_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -209,7 +209,7 @@ Inevitability obligation linkage (must remain synchronized with gate target):
   - `formal/python/tests/test_qm_m2_assumption_minimization_scaffold_cycle01_gate.py`
 
 - QM M2 literature alignment scaffold bundle (bounded non-claim):
-  - `QM_M2_LITERATURE_ALIGNMENT_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+  - `QM_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
   - `QM_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: qm_m2_literature_alignment_scaffold_cycle01_v0`
   - `QM_M2_LITERATURE_ALIGNMENT_SHA256_v0: 8eecd039c5ecf244054b8727a61835f2f8261d08d875aae945699477c14c3332`
   - `QM_M2_LITERATURE_ALIGNMENT_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -426,3 +426,4 @@ Exit criteria (for future adjudication flip):
 - gate tests assert anti-circularity and no hidden assumptions,
 - adjudication synchronized to `DISCHARGED_v0_DERIVATION_GRADE`,
 - bounded inevitability synchronized to `DISCHARGED_v0_BOUNDED` with dedicated theorem-body inevitability gate closure pinned.
+
