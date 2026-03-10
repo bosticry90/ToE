@@ -1,0 +1,100 @@
+{
+  "matrix_id": "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0",
+  "matrix_version": 3,
+  "protocol_doc": "formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md",
+  "progression_policy": "NO_DIRECT_PRUNE_WITH_SCAFFOLD_UNCERTAINTY",
+  "progression_mode": "CYCLE_ORDERED_BOUNDED_NONCLAIM",
+  "allowed_evidence_tiers": [
+    "SCAFFOLD_v0",
+    "INTERMEDIATE_v0",
+    "DISCHARGE_GRADE_v0"
+  ],
+  "prune_min_evidence_tier": "INTERMEDIATE_v0",
+  "allowed_decisions": [
+    "RETAIN_v0",
+    "PRUNE_v0",
+    "INCONCLUSIVE_v0"
+  ],
+  "rows": {
+    "TOE": {
+      "doc_path": "formal/docs/paper/DERIVATION_TARGET_TOE_EMPIRICAL_COMPARISON_PACKET_01_v0.md",
+      "status_token": "TOE_EMPIRICAL_PACKET_01_STATUS_v0",
+      "artifact_token": "TOE_EMPIRICAL_PACKET_01_ARTIFACT_v0",
+      "gate_token": "TOE_EMPIRICAL_PACKET_01_GATE_v0",
+      "decision_token": "TOE_EMPIRICAL_PACKET_01_DECISION_v0",
+      "artifact_path": "formal/output/toe_empirical_comparison_packet_01_v0.json",
+      "gate_path": "formal/python/tests/test_toe_empirical_comparison_packet_01_gate.py",
+      "evidence_tier_token": "TOE_EMPIRICAL_PACKET_01_EVIDENCE_TIER_v0"
+    },
+    "QM": {
+      "doc_path": "formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_01_v0.md",
+      "status_token": "QM_EMPIRICAL_PACKET_01_STATUS_v0",
+      "artifact_token": "QM_EMPIRICAL_PACKET_01_ARTIFACT_v0",
+      "gate_token": "QM_EMPIRICAL_PACKET_01_GATE_v0",
+      "decision_token": "QM_EMPIRICAL_PACKET_01_DECISION_v0",
+      "artifact_path": "formal/output/qm_empirical_comparison_packet_01_v0.json",
+      "gate_path": "formal/python/tests/test_qm_empirical_comparison_packet_01_gate.py",
+      "evidence_tier_token": "QM_EMPIRICAL_PACKET_01_EVIDENCE_TIER_v0"
+    },
+    "GR": {
+      "doc_path": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_01_v0.md",
+      "status_token": "GR_EMPIRICAL_PACKET_01_STATUS_v0",
+      "artifact_token": "GR_EMPIRICAL_PACKET_01_ARTIFACT_v0",
+      "gate_token": "GR_EMPIRICAL_PACKET_01_GATE_v0",
+      "decision_token": "GR_EMPIRICAL_PACKET_01_DECISION_v0",
+      "artifact_path": "formal/output/gr_empirical_comparison_packet_01_v0.json",
+      "gate_path": "formal/python/tests/test_gr_empirical_comparison_packet_01_gate.py",
+      "evidence_tier_token": "GR_EMPIRICAL_PACKET_01_EVIDENCE_TIER_v0"
+    },
+    "STAT": {
+      "doc_path": "formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_01_v0.md",
+      "status_token": "STAT_EMPIRICAL_PACKET_01_STATUS_v0",
+      "artifact_token": "STAT_EMPIRICAL_PACKET_01_ARTIFACT_v0",
+      "gate_token": "STAT_EMPIRICAL_PACKET_01_GATE_v0",
+      "decision_token": "STAT_EMPIRICAL_PACKET_01_DECISION_v0",
+      "artifact_path": "formal/output/stat_empirical_comparison_packet_01_v0.json",
+      "gate_path": "formal/python/tests/test_stat_empirical_comparison_packet_01_gate.py",
+      "evidence_tier_token": "STAT_EMPIRICAL_PACKET_01_EVIDENCE_TIER_v0"
+    },
+    "COSMO": {
+      "doc_path": "formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_01_v0.md",
+      "status_token": "COSMO_EMPIRICAL_PACKET_01_STATUS_v0",
+      "artifact_token": "COSMO_EMPIRICAL_PACKET_01_ARTIFACT_v0",
+      "gate_token": "COSMO_EMPIRICAL_PACKET_01_GATE_v0",
+      "decision_token": "COSMO_EMPIRICAL_PACKET_01_DECISION_v0",
+      "artifact_path": "formal/output/cosmo_empirical_comparison_packet_01_v0.json",
+      "gate_path": "formal/python/tests/test_cosmo_empirical_comparison_packet_01_gate.py",
+      "evidence_tier_token": "COSMO_EMPIRICAL_PACKET_01_EVIDENCE_TIER_v0"
+    },
+    "EM": {
+      "doc_path": "formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_01_v0.md",
+      "status_token": "EM_EMPIRICAL_PACKET_01_STATUS_v0",
+      "artifact_token": "EM_EMPIRICAL_PACKET_01_ARTIFACT_v0",
+      "gate_token": "EM_EMPIRICAL_PACKET_01_GATE_v0",
+      "decision_token": "EM_EMPIRICAL_PACKET_01_DECISION_v0",
+      "artifact_path": "formal/output/em_empirical_comparison_packet_01_v0.json",
+      "gate_path": "formal/python/tests/test_em_empirical_comparison_packet_01_gate.py",
+      "evidence_tier_token": "EM_EMPIRICAL_PACKET_01_EVIDENCE_TIER_v0"
+    },
+    "QFT": {
+      "doc_path": "formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_01_v0.md",
+      "status_token": "QFT_EMPIRICAL_PACKET_01_STATUS_v0",
+      "artifact_token": "QFT_EMPIRICAL_PACKET_01_ARTIFACT_v0",
+      "gate_token": "QFT_EMPIRICAL_PACKET_01_GATE_v0",
+      "decision_token": "QFT_EMPIRICAL_PACKET_01_DECISION_v0",
+      "artifact_path": "formal/output/qft_empirical_comparison_packet_01_v0.json",
+      "gate_path": "formal/python/tests/test_qft_empirical_comparison_packet_01_gate.py",
+      "evidence_tier_token": "QFT_EMPIRICAL_PACKET_01_EVIDENCE_TIER_v0"
+    },
+    "SR": {
+      "doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_01_v0.md",
+      "status_token": "SR_EMPIRICAL_PACKET_01_STATUS_v0",
+      "artifact_token": "SR_EMPIRICAL_PACKET_01_ARTIFACT_v0",
+      "gate_token": "SR_EMPIRICAL_PACKET_01_GATE_v0",
+      "decision_token": "SR_EMPIRICAL_PACKET_01_DECISION_v0",
+      "artifact_path": "formal/output/sr_empirical_comparison_packet_01_v0.json",
+      "gate_path": "formal/python/tests/test_sr_empirical_comparison_packet_01_gate.py",
+      "evidence_tier_token": "SR_EMPIRICAL_PACKET_01_EVIDENCE_TIER_v0"
+    }
+  }
+}

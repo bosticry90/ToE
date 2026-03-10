@@ -1,0 +1,249 @@
+{
+  "matrix_id": "FOUNDATIONAL_DERIVATION_CHAIN_MATRIX_v0",
+  "matrix_version": 3,
+  "standard_doc": "formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md",
+  "phase_rows": {
+    "QM": {
+      "m2": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+        "status_token": "QM_M2_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m3": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_QM_M3_COMPLETION_PROMOTION_v0.md",
+        "status_token": "QM_M3_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m4": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_QM_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "status_token": "QM_M4_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      }
+    },
+    "GR": {
+      "m2": {
+        "source_doc": "formal/docs/paper/DERIVATION_COMPLETENESS_GATE_v0.md",
+        "status_token": "GR_M2_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m3": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_GR_M3_COMPLETION_PROMOTION_v0.md",
+        "status_token": "GR_M3_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m4": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_GR_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "status_token": "GR_M4_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      }
+    },
+    "STAT": {
+      "m2": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+        "status_token": "STAT_M2_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m3": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_M3_COMPLETION_PROMOTION_v0.md",
+        "status_token": "STAT_M3_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m4": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "status_token": "STAT_M4_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      }
+    },
+    "COSMO": {
+      "m2": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+        "status_token": "COSMO_M2_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m3": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_COSMO_M3_COMPLETION_PROMOTION_v0.md",
+        "status_token": "COSMO_M3_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m4": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_COSMO_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "status_token": "COSMO_M4_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      }
+    },
+    "EM": {
+      "m2": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+        "status_token": "EM_M2_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m3": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_EM_M3_COMPLETION_PROMOTION_v0.md",
+        "status_token": "EM_M3_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m4": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_EM_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "status_token": "EM_M4_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      }
+    },
+    "QFT": {
+      "m2": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+        "status_token": "QFT_M2_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m3": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_QFT_M3_COMPLETION_PROMOTION_v0.md",
+        "status_token": "QFT_M3_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m4": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_QFT_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "status_token": "QFT_M4_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      }
+    },
+    "SR": {
+      "m2": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+        "status_token": "SR_M2_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m3": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_SR_M3_COMPLETION_PROMOTION_v0.md",
+        "status_token": "SR_M3_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      },
+      "m4": {
+        "source_doc": "formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+        "status_token": "SR_M4_STATUS_v0",
+        "expected_status": "COMPLETE_BOUNDED_v0"
+      }
+    }
+  },
+  "m2_subphase_rows": {
+    "QM": {
+      "source_doc": "formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md",
+      "ANALYTIC_COMPLETENESS_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "CANONICAL_EQUIVALENCE_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "ASSUMPTION_MINIMIZATION_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "LITERATURE_ALIGNMENT_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM"
+    },
+    "GR": {
+      "source_doc": "formal/docs/paper/DERIVATION_COMPLETENESS_GATE_v0.md",
+      "ANALYTIC_COMPLETENESS_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "CANONICAL_EQUIVALENCE_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "ASSUMPTION_MINIMIZATION_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "LITERATURE_ALIGNMENT_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM"
+    },
+    "STAT": {
+      "source_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "ANALYTIC_COMPLETENESS_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "CANONICAL_EQUIVALENCE_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "ASSUMPTION_MINIMIZATION_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "LITERATURE_ALIGNMENT_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM"
+    },
+    "COSMO": {
+      "source_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "ANALYTIC_COMPLETENESS_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "CANONICAL_EQUIVALENCE_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "ASSUMPTION_MINIMIZATION_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "LITERATURE_ALIGNMENT_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM"
+    },
+    "EM": {
+      "source_doc": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
+      "ANALYTIC_COMPLETENESS_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "CANONICAL_EQUIVALENCE_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "ASSUMPTION_MINIMIZATION_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "LITERATURE_ALIGNMENT_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM"
+    },
+    "QFT": {
+      "source_doc": "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md",
+      "ANALYTIC_COMPLETENESS_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "CANONICAL_EQUIVALENCE_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "ASSUMPTION_MINIMIZATION_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "LITERATURE_ALIGNMENT_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM"
+    },
+    "SR": {
+      "source_doc": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
+      "ANALYTIC_COMPLETENESS_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "CANONICAL_EQUIVALENCE_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "ASSUMPTION_MINIMIZATION_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM",
+      "LITERATURE_ALIGNMENT_STATUS_v0": "SCAFFOLD_PINNED_NONCLAIM"
+    }
+  },
+  "lanes": {
+    "QM_M3": {
+      "target_doc": "formal/docs/paper/DERIVATION_TARGET_QM_M3_COMPLETION_PROMOTION_v0.md",
+      "ACTION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "VARIATION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "BRIDGE_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "OPERATOR_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "TRANSPORT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "RESIDUAL_LAW_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "REGIME_LIMIT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0"
+    },
+    "GR_M3": {
+      "target_doc": "formal/docs/paper/DERIVATION_TARGET_GR_M3_COMPLETION_PROMOTION_v0.md",
+      "ACTION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "VARIATION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "BRIDGE_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "OPERATOR_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "TRANSPORT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "RESIDUAL_LAW_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "REGIME_LIMIT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0"
+    },
+    "STAT_M3": {
+      "target_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_M3_COMPLETION_PROMOTION_v0.md",
+      "ACTION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "VARIATION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "BRIDGE_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "OPERATOR_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "TRANSPORT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "RESIDUAL_LAW_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "REGIME_LIMIT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0"
+    },
+    "COSMO_M3": {
+      "target_doc": "formal/docs/paper/DERIVATION_TARGET_COSMO_M3_COMPLETION_PROMOTION_v0.md",
+      "ACTION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "VARIATION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "BRIDGE_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "OPERATOR_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "TRANSPORT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "RESIDUAL_LAW_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "REGIME_LIMIT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0"
+    },
+    "EM_M3": {
+      "target_doc": "formal/docs/paper/DERIVATION_TARGET_EM_M3_COMPLETION_PROMOTION_v0.md",
+      "ACTION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "VARIATION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "BRIDGE_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "OPERATOR_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "TRANSPORT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "RESIDUAL_LAW_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "REGIME_LIMIT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0"
+    },
+    "QFT_M3": {
+      "target_doc": "formal/docs/paper/DERIVATION_TARGET_QFT_M3_COMPLETION_PROMOTION_v0.md",
+      "ACTION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "VARIATION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "BRIDGE_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "OPERATOR_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "TRANSPORT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "RESIDUAL_LAW_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "REGIME_LIMIT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0"
+    },
+    "SR_M3": {
+      "target_doc": "formal/docs/paper/DERIVATION_TARGET_SR_M3_COMPLETION_PROMOTION_v0.md",
+      "ACTION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "VARIATION_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "BRIDGE_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "OPERATOR_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "TRANSPORT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "RESIDUAL_LAW_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0",
+      "REGIME_LIMIT_STAGE_STATUS_v0": "COMPLETE_BOUNDED_v0"
+    }
+  }
+}

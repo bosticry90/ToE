@@ -17,6 +17,101 @@ Canonical bounded status note (2026-02-24):
 - Pillar deep maturity registry pointer: `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json`.
 - Pillar deep maturity gate pointer: `formal/python/tests/test_pillar_deep_maturity_program_gate.py`.
 - Pillar deep maturity M2 gate pointer: `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py`.
+- Foundational derivation-chain standard pointer: `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md`.
+- Foundational derivation-chain execution plan pointer: `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_EXECUTION_PLAN_v0.md`.
+- Candidate master action pointer (non-canonical): `formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md`.
+- Master action seam-constraint registry pointer: `formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md`.
+- Master action shadow numerics target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_v0.md`.
+- Foundational prediction scaffold plan pointer: `formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md`.
+- Foundational empirical comparison protocol pointer: `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`.
+- ToE empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
+- ToE empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
+- QM empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
+- QM empirical comparison packet-02 target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_02_v0.md`.
+- QM empirical packet-02 decision record pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`.
+- GR empirical comparison packet-02 target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_02_v0.md`.
+- GR empirical packet-02 decision record pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`.
+- STAT empirical comparison packet-02 target pointer: `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_02_v0.md`.
+- STAT empirical packet-02 decision record pointer: `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`.
+- COSMO empirical comparison packet-02 target pointer: `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_02_v0.md`.
+- COSMO empirical packet-02 decision record pointer: `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`.
+- EM empirical comparison packet-02 target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_02_v0.md`.
+- EM empirical packet-02 decision record pointer: `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`.
+- QFT empirical comparison packet-02 target pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_02_v0.md`.
+- QFT empirical packet-02 decision record pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`.
+- SR empirical comparison packet-02 target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_02_v0.md`.
+- SR empirical packet-02 decision record pointer: `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`.
+- Packet-02 decision ledger pointer: `formal/output/empirical_packet02_decision_ledger_v0.json`.
+- Packet-02 decision execution checkpoint pointer: `formal/docs/release/PHASE_CHECKPOINT_PACKET02_DECISION_EXECUTION_v0.md`.
+- QM empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
+- GR empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
+- STAT empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
+- COSMO empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
+- EM empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
+- QFT empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
+- SR empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
+- Master action shadow numerics cycle-02 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE02_v0.md`.
+- Master action shadow numerics cycle-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE03_v0.md`.
+- QM empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
+- GR empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
+- GR empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
+- STAT empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
+- STAT empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
+- COSMO empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
+- COSMO empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
+- EM empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
+- EM empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
+- QFT empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
+- QFT empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
+- SR empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
+- SR empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
+- Foundational empirical packet matrix pointer: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0.json`.
+- Foundational empirical packet-02 matrix pointer: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0.json`.
+- Foundational derivation chain matrix pointer: `formal/docs/paper/FOUNDATIONAL_DERIVATION_CHAIN_MATRIX_v0.json`.
+- Master action seam registry gate pointer: `formal/python/tests/test_toe_master_action_seam_registry_gate.py`.
+- Master action assumption classification gate pointer: `formal/python/tests/test_toe_master_action_assumption_classification_gate.py`.
+- Master action shadow numerics gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle01_gate.py`.
+- Foundational prediction scaffold coverage gate pointer: `formal/python/tests/test_foundational_prediction_scaffold_coverage_gate.py`.
+- ToE empirical comparison packet-01 gate pointer: `formal/python/tests/test_toe_empirical_comparison_packet_01_gate.py`.
+- ToE empirical packet-01 evidence promotion gate pointer: `formal/python/tests/test_toe_empirical_packet_01_evidence_promotion_gate.py`.
+- QM empirical comparison packet-01 gate pointer: `formal/python/tests/test_qm_empirical_comparison_packet_01_gate.py`.
+- QM empirical comparison packet-02 gate pointer: `formal/python/tests/test_qm_empirical_comparison_packet_02_gate.py`.
+- QM empirical packet-02 decision record gate pointer: `formal/python/tests/test_qm_empirical_packet_02_decision_record_gate.py`.
+- GR empirical packet-02 decision record gate pointer: `formal/python/tests/test_gr_empirical_packet_02_decision_record_gate.py`.
+- STAT empirical packet-02 decision record gate pointer: `formal/python/tests/test_stat_empirical_packet_02_decision_record_gate.py`.
+- COSMO empirical packet-02 decision record gate pointer: `formal/python/tests/test_cosmo_empirical_packet_02_decision_record_gate.py`.
+- EM empirical packet-02 decision record gate pointer: `formal/python/tests/test_em_empirical_packet_02_decision_record_gate.py`.
+- QFT empirical packet-02 decision record gate pointer: `formal/python/tests/test_qft_empirical_packet_02_decision_record_gate.py`.
+- SR empirical packet-02 decision record gate pointer: `formal/python/tests/test_sr_empirical_packet_02_decision_record_gate.py`.
+- Packet-02 decision ledger parity gate pointer: `formal/python/tests/test_empirical_packet02_decision_ledger_parity_gate.py`.
+- Packet-02 M4 seam coupling gate pointer: `formal/python/tests/test_packet02_m4_seam_coupling_gate.py`.
+- QM empirical comparison packet-03 gate pointer: `formal/python/tests/test_qm_empirical_comparison_packet_03_gate.py`.
+- GR empirical comparison packet-03 gate pointer: `formal/python/tests/test_gr_empirical_comparison_packet_03_gate.py`.
+- STAT empirical comparison packet-03 gate pointer: `formal/python/tests/test_stat_empirical_comparison_packet_03_gate.py`.
+- COSMO empirical comparison packet-03 gate pointer: `formal/python/tests/test_cosmo_empirical_comparison_packet_03_gate.py`.
+- EM empirical comparison packet-03 gate pointer: `formal/python/tests/test_em_empirical_comparison_packet_03_gate.py`.
+- QFT empirical comparison packet-03 gate pointer: `formal/python/tests/test_qft_empirical_comparison_packet_03_gate.py`.
+- SR empirical comparison packet-03 gate pointer: `formal/python/tests/test_sr_empirical_comparison_packet_03_gate.py`.
+- Master action shadow numerics cycle-02 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle02_gate.py`.
+- Master action shadow numerics cycle-03 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle03_gate.py`.
+- Foundational empirical packet-02 matrix consistency gate pointer: `formal/python/tests/test_foundational_empirical_packet02_matrix_consistency_gate.py`.
+- Foundational empirical packet-02 decision balance gate pointer: `formal/python/tests/test_foundational_empirical_packet02_decision_balance_gate.py`.
+- QM empirical packet-01 evidence promotion gate pointer: `formal/python/tests/test_qm_empirical_packet_01_evidence_promotion_gate.py`.
+- GR empirical comparison packet-01 gate pointer: `formal/python/tests/test_gr_empirical_comparison_packet_01_gate.py`.
+- GR empirical packet-01 evidence promotion gate pointer: `formal/python/tests/test_gr_empirical_packet_01_evidence_promotion_gate.py`.
+- STAT empirical comparison packet-01 gate pointer: `formal/python/tests/test_stat_empirical_comparison_packet_01_gate.py`.
+- STAT empirical packet-01 evidence promotion gate pointer: `formal/python/tests/test_stat_empirical_packet_01_evidence_promotion_gate.py`.
+- COSMO empirical comparison packet-01 gate pointer: `formal/python/tests/test_cosmo_empirical_comparison_packet_01_gate.py`.
+- COSMO empirical packet-01 evidence promotion gate pointer: `formal/python/tests/test_cosmo_empirical_packet_01_evidence_promotion_gate.py`.
+- EM empirical comparison packet-01 gate pointer: `formal/python/tests/test_em_empirical_comparison_packet_01_gate.py`.
+- EM empirical packet-01 evidence promotion gate pointer: `formal/python/tests/test_em_empirical_packet_01_evidence_promotion_gate.py`.
+- QFT empirical comparison packet-01 gate pointer: `formal/python/tests/test_qft_empirical_comparison_packet_01_gate.py`.
+- QFT empirical packet-01 evidence promotion gate pointer: `formal/python/tests/test_qft_empirical_packet_01_evidence_promotion_gate.py`.
+- SR empirical comparison packet-01 gate pointer: `formal/python/tests/test_sr_empirical_comparison_packet_01_gate.py`.
+- SR empirical packet-01 evidence promotion gate pointer: `formal/python/tests/test_sr_empirical_packet_01_evidence_promotion_gate.py`.
+- Foundational empirical packet matrix consistency gate pointer: `formal/python/tests/test_foundational_empirical_packet_matrix_consistency_gate.py`.
+- Foundational empirical packet progression policy gate pointer: `formal/python/tests/test_foundational_empirical_packet_progression_policy_gate.py`.
+- Foundational derivation chain matrix consistency gate pointer: `formal/python/tests/test_foundational_derivation_chain_matrix_consistency_gate.py`.
 - QM first discriminator gate pointer: `formal/python/tests/test_qm_empirical_discriminator_emp_qm_01_scaffold_gate.py`.
 - QM first discriminator target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_DISCRIMINATOR_EMP_QM_01_v0.md`.
 - GR first discriminator gate pointer: `formal/python/tests/test_gr_empirical_discriminator_emp_gr_01_scaffold_gate.py`.

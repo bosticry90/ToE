@@ -1,0 +1,14 @@
+{
+  "artifact_id": "em_empirical_comparison_packet_03_v0",
+  "payload": {
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "decision": "INCONCLUSIVE_v0",
+    "artifact_pointer": "formal/output/toe_master_action_shadow_numerics_cycle02_v0.json",
+    "bridge_pointer": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
+    "prediction_pointer": "formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md",
+    "discriminator_output_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_DISCRIMINATOR_EMP_EM_01_v0.md",
+    "uncertainty_annotation": "em_packet03_intermediate_uncertainty_v0",
+    "bounded_validity_window": "em_packet03_cycle03_window_v0",
+    "evidence_tier": "INTERMEDIATE_v0"
+  }
+}

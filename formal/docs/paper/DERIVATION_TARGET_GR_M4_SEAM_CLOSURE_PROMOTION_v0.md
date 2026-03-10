@@ -18,6 +18,15 @@ Non-claim boundary:
 - no external truth claim.
 - no automatic adjudication promotion.
 
+Foundational derivation-chain stage bundle (v0):
+- `GR_M4_ACTION_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `GR_M4_VARIATION_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `GR_M4_BRIDGE_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `GR_M4_OPERATOR_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `GR_M4_TRANSPORT_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `GR_M4_RESIDUAL_LAW_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `GR_M4_REGIME_LIMIT_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+
 Completion bundle (bounded non-claim):
 - `GR_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
 - `GR_M4_SEAM_CLOSURE_ARTIFACT_v0: gr_m4_seam_closure_promotion_cycle01_v0`

@@ -1,0 +1,23 @@
+{
+  "artifact_id": "gr_empirical_comparison_packet_02_v0",
+  "payload": {
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "decision": "RETAIN_v0",
+    "artifact_pointer": "formal/output/toe_master_action_shadow_numerics_cycle01_v0.json",
+    "bridge_pointer": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
+    "prediction_pointer": "formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md",
+    "discriminator_output_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_DISCRIMINATOR_EMP_GR_01_v0.md",
+    "uncertainty_annotation": "gr_packet02_intermediate_uncertainty_v0",
+    "bounded_validity_window": "gr_packet02_cycle02_window_v0",
+    "evidence_tier": "INTERMEDIATE_v0",
+    "decision_eligibility": {
+      "retain_allowed": true,
+      "prune_allowed": true,
+      "prune_guard_satisfied": true
+    },
+    "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md",
+    "decision_basis": "cycle02_guard_satisfied_retain_v0",
+    "comparator_delta_summary": "bounded_non_eliminative_delta_cycle02_v0",
+    "m4_seam_closure_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_M4_SEAM_CLOSURE_PROMOTION_v0.md"
+  }
+}

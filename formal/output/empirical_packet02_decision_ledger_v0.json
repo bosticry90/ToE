@@ -1,0 +1,48 @@
+{
+  "ledger_id": "empirical_packet02_decision_ledger_v0",
+  "ledger_version": 1,
+  "rows": {
+    "QM": {
+      "decision": "RETAIN_v0",
+      "basis": "cycle02_guard_satisfied_retain_v0",
+      "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md"
+    },
+    "GR": {
+      "decision": "RETAIN_v0",
+      "basis": "cycle02_guard_satisfied_retain_v0",
+      "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md"
+    },
+    "STAT": {
+      "decision": "RETAIN_v0",
+      "basis": "cycle02_guard_satisfied_retain_v0",
+      "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md"
+    },
+    "COSMO": {
+      "decision": "PRUNE_v0",
+      "basis": "cycle02_guard_satisfied_prune_v0",
+      "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md"
+    },
+    "EM": {
+      "decision": "RETAIN_v0",
+      "basis": "cycle02_guard_satisfied_retain_v0",
+      "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md"
+    },
+    "QFT": {
+      "decision": "PRUNE_v0",
+      "basis": "cycle02_guard_satisfied_prune_v0",
+      "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md"
+    },
+    "SR": {
+      "decision": "RETAIN_v0",
+      "basis": "cycle02_guard_satisfied_retain_v0",
+      "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md"
+    }
+  }
+}

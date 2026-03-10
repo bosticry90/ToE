@@ -35,6 +35,51 @@ if ($LASTEXITCODE -ne 0) {
   formal/python/tests/test_pillar_status_matrix_consistency_gate.py `
   formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py `
   formal/python/tests/test_pillar_phase_advancement_gate.py `
+  formal/python/tests/test_foundational_derivation_chain_coverage_gate.py `
+  formal/python/tests/test_toe_master_action_seam_registry_gate.py `
+  formal/python/tests/test_toe_master_action_assumption_classification_gate.py `
+  formal/python/tests/test_toe_master_action_shadow_numerics_cycle01_gate.py `
+  formal/python/tests/test_foundational_prediction_scaffold_coverage_gate.py `
+  formal/python/tests/test_toe_empirical_comparison_packet_01_gate.py `
+  formal/python/tests/test_toe_empirical_packet_01_evidence_promotion_gate.py `
+  formal/python/tests/test_qm_empirical_comparison_packet_01_gate.py `
+  formal/python/tests/test_qm_empirical_comparison_packet_02_gate.py `
+  formal/python/tests/test_qm_empirical_packet_02_decision_record_gate.py `
+  formal/python/tests/test_gr_empirical_packet_02_decision_record_gate.py `
+  formal/python/tests/test_stat_empirical_packet_02_decision_record_gate.py `
+  formal/python/tests/test_cosmo_empirical_packet_02_decision_record_gate.py `
+  formal/python/tests/test_em_empirical_packet_02_decision_record_gate.py `
+  formal/python/tests/test_qft_empirical_packet_02_decision_record_gate.py `
+  formal/python/tests/test_sr_empirical_packet_02_decision_record_gate.py `
+  formal/python/tests/test_empirical_packet02_decision_ledger_parity_gate.py `
+  formal/python/tests/test_packet02_m4_seam_coupling_gate.py `
+  formal/python/tests/test_qm_empirical_comparison_packet_03_gate.py `
+  formal/python/tests/test_gr_empirical_comparison_packet_03_gate.py `
+  formal/python/tests/test_stat_empirical_comparison_packet_03_gate.py `
+  formal/python/tests/test_cosmo_empirical_comparison_packet_03_gate.py `
+  formal/python/tests/test_em_empirical_comparison_packet_03_gate.py `
+  formal/python/tests/test_qft_empirical_comparison_packet_03_gate.py `
+  formal/python/tests/test_sr_empirical_comparison_packet_03_gate.py `
+  formal/python/tests/test_toe_master_action_shadow_numerics_cycle02_gate.py `
+  formal/python/tests/test_toe_master_action_shadow_numerics_cycle03_gate.py `
+  formal/python/tests/test_qm_empirical_packet_01_evidence_promotion_gate.py `
+  formal/python/tests/test_gr_empirical_comparison_packet_01_gate.py `
+  formal/python/tests/test_gr_empirical_packet_01_evidence_promotion_gate.py `
+  formal/python/tests/test_stat_empirical_comparison_packet_01_gate.py `
+  formal/python/tests/test_stat_empirical_packet_01_evidence_promotion_gate.py `
+  formal/python/tests/test_cosmo_empirical_comparison_packet_01_gate.py `
+  formal/python/tests/test_cosmo_empirical_packet_01_evidence_promotion_gate.py `
+  formal/python/tests/test_em_empirical_comparison_packet_01_gate.py `
+  formal/python/tests/test_em_empirical_packet_01_evidence_promotion_gate.py `
+  formal/python/tests/test_qft_empirical_comparison_packet_01_gate.py `
+  formal/python/tests/test_qft_empirical_packet_01_evidence_promotion_gate.py `
+  formal/python/tests/test_sr_empirical_comparison_packet_01_gate.py `
+  formal/python/tests/test_sr_empirical_packet_01_evidence_promotion_gate.py `
+  formal/python/tests/test_foundational_empirical_packet_matrix_consistency_gate.py `
+  formal/python/tests/test_foundational_empirical_packet02_matrix_consistency_gate.py `
+  formal/python/tests/test_foundational_empirical_packet02_decision_balance_gate.py `
+  formal/python/tests/test_foundational_empirical_packet_progression_policy_gate.py `
+  formal/python/tests/test_foundational_derivation_chain_matrix_consistency_gate.py `
   formal/python/tests/test_pillar_deep_maturity_program_gate.py `
   formal/python/tests/test_phase3_m3_consolidation_promotion_cycle01_gate.py `
   formal/python/tests/test_qm_m3_completion_promotion_cycle01_gate.py `

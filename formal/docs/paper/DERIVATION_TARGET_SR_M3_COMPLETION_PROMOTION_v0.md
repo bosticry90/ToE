@@ -18,6 +18,18 @@ Non-claim boundary:
 - no external truth claim.
 - no automatic adjudication promotion.
 
+Foundational derivation-chain stage bundle (v0):
+- `SR_M3_ACTION_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `SR_M3_VARIATION_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `SR_M3_BRIDGE_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `SR_M3_OPERATOR_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `SR_M3_TRANSPORT_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `SR_M3_RESIDUAL_LAW_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `SR_M3_REGIME_LIMIT_STAGE_STATUS_v0: COMPLETE_BOUNDED_v0`
+
+Prediction scaffold token (Phase 2 C3):
+- `SR_M3_PREDICTION_SCAFFOLD_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
+
 Completion bundle (bounded non-claim):
 - `SR_M3_STATUS_v0: COMPLETE_BOUNDED_v0`
 - `SR_M3_COMPLETION_ARTIFACT_v0: sr_m3_completion_promotion_cycle01_v0`
