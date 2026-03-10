@@ -115,6 +115,7 @@ No-deviation sequencing rule:
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0.json`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0.json`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET03_MATRIX_v0.json`
+  - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0.json`
   - `formal/docs/paper/FOUNDATIONAL_DERIVATION_CHAIN_MATRIX_v0.json`
   - `formal/python/tests/test_toe_master_action_seam_registry_gate.py`
   - `formal/python/tests/test_toe_master_action_assumption_classification_gate.py`
@@ -164,11 +165,16 @@ No-deviation sequencing rule:
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE04_v0.md`
   - `formal/output/toe_master_action_shadow_numerics_cycle04_v0.json`
   - `formal/python/tests/test_toe_master_action_shadow_numerics_cycle04_gate.py`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE05_v0.md`
+  - `formal/output/toe_master_action_shadow_numerics_cycle05_v0.json`
+  - `formal/python/tests/test_toe_master_action_shadow_numerics_cycle05_gate.py`
   - `formal/python/tests/test_packet02_m4_seam_coupling_gate.py`
   - `formal/python/tests/test_foundational_empirical_packet02_matrix_consistency_gate.py`
   - `formal/python/tests/test_foundational_empirical_packet02_decision_balance_gate.py`
   - `formal/python/tests/test_foundational_empirical_packet03_matrix_consistency_gate.py`
   - `formal/python/tests/test_foundational_empirical_packet03_decision_policy_gate.py`
+  - `formal/python/tests/test_foundational_empirical_packet04_matrix_consistency_gate.py`
+  - `formal/python/tests/test_foundational_empirical_packet04_decision_policy_gate.py`
   - `formal/python/tests/test_qm_empirical_packet_01_evidence_promotion_gate.py`
   - `formal/python/tests/test_gr_empirical_comparison_packet_01_gate.py`
   - `formal/python/tests/test_gr_empirical_packet_01_evidence_promotion_gate.py`

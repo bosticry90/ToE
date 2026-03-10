@@ -30,6 +30,7 @@ Protocol tokens:
 - `FOUNDATIONAL_EMPIRICAL_PACKET_01_BASELINE_DECISION_v0: INCONCLUSIVE_ONLY_UNTIL_PACKET02_OR_HIGHER`
 - `FOUNDATIONAL_EMPIRICAL_PACKET_02_DECISION_ELIGIBILITY_v0: RETAIN_OR_PRUNE_ALLOWED_WITH_PROTOCOL_GUARDS`
 - `FOUNDATIONAL_EMPIRICAL_PACKET_03_BASELINE_DECISION_v0: INCONCLUSIVE_ONLY_UNTIL_PACKET04_OR_HIGHER`
+- `FOUNDATIONAL_EMPIRICAL_PACKET_04_BASELINE_DECISION_v0: INCONCLUSIVE_ONLY_UNTIL_PACKET05_OR_HIGHER`
 - `FOUNDATIONAL_EMPIRICAL_COMPARISON_EVIDENCE_TIERS_v0: SCAFFOLD_INTERMEDIATE_DISCHARGE_GRADE`
 - `FOUNDATIONAL_EMPIRICAL_COMPARISON_PRUNE_MIN_EVIDENCE_TIER_v0: INTERMEDIATE_v0`
 
@@ -55,3 +56,4 @@ Protocol constraints:
 - cycle progression must remain explicit and bounded non-claim.
 - packet-02 (or higher) may emit `RETAIN_v0` or `PRUNE_v0` only with explicit guard-satisfying eligibility payload fields.
 - packet-03 baseline remains `INCONCLUSIVE_v0` across pillars until packet-04-or-higher policy transition is explicitly pinned.
+- packet-04 baseline remains `INCONCLUSIVE_v0` across pillars until packet-05-or-higher policy transition is explicitly pinned.

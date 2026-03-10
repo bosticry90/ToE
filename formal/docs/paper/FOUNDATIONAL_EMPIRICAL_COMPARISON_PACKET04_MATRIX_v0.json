@@ -1,0 +1,47 @@
+{
+  "matrix_id": "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0",
+  "matrix_version": 1,
+  "protocol_doc": "formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md",
+  "allowed_decisions": [
+    "RETAIN_v0",
+    "PRUNE_v0",
+    "INCONCLUSIVE_v0"
+  ],
+  "rows": {
+    "QM": {
+      "next_doc_path": "formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+      "next_artifact_path": "formal/output/qm_empirical_comparison_packet_04_v0.json",
+      "next_gate_path": "formal/python/tests/test_qm_empirical_comparison_packet_04_gate.py"
+    },
+    "GR": {
+      "next_doc_path": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+      "next_artifact_path": "formal/output/gr_empirical_comparison_packet_04_v0.json",
+      "next_gate_path": "formal/python/tests/test_gr_empirical_comparison_packet_04_gate.py"
+    },
+    "STAT": {
+      "next_doc_path": "formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+      "next_artifact_path": "formal/output/stat_empirical_comparison_packet_04_v0.json",
+      "next_gate_path": "formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py"
+    },
+    "COSMO": {
+      "next_doc_path": "formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+      "next_artifact_path": "formal/output/cosmo_empirical_comparison_packet_04_v0.json",
+      "next_gate_path": "formal/python/tests/test_cosmo_empirical_comparison_packet_04_gate.py"
+    },
+    "EM": {
+      "next_doc_path": "formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+      "next_artifact_path": "formal/output/em_empirical_comparison_packet_04_v0.json",
+      "next_gate_path": "formal/python/tests/test_em_empirical_comparison_packet_04_gate.py"
+    },
+    "QFT": {
+      "next_doc_path": "formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+      "next_artifact_path": "formal/output/qft_empirical_comparison_packet_04_v0.json",
+      "next_gate_path": "formal/python/tests/test_qft_empirical_comparison_packet_04_gate.py"
+    },
+    "SR": {
+      "next_doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+      "next_artifact_path": "formal/output/sr_empirical_comparison_packet_04_v0.json",
+      "next_gate_path": "formal/python/tests/test_sr_empirical_comparison_packet_04_gate.py"
+    }
+  }
+}

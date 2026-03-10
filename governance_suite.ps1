@@ -63,6 +63,7 @@ if ($LASTEXITCODE -ne 0) {
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle02_gate.py `
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle03_gate.py `
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle04_gate.py `
+  formal/python/tests/test_toe_master_action_shadow_numerics_cycle05_gate.py `
   formal/python/tests/test_qm_empirical_packet_01_evidence_promotion_gate.py `
   formal/python/tests/test_gr_empirical_comparison_packet_01_gate.py `
   formal/python/tests/test_gr_empirical_packet_01_evidence_promotion_gate.py `
@@ -81,6 +82,8 @@ if ($LASTEXITCODE -ne 0) {
   formal/python/tests/test_foundational_empirical_packet02_decision_balance_gate.py `
   formal/python/tests/test_foundational_empirical_packet03_matrix_consistency_gate.py `
   formal/python/tests/test_foundational_empirical_packet03_decision_policy_gate.py `
+  formal/python/tests/test_foundational_empirical_packet04_matrix_consistency_gate.py `
+  formal/python/tests/test_foundational_empirical_packet04_decision_policy_gate.py `
   formal/python/tests/test_foundational_empirical_packet_progression_policy_gate.py `
   formal/python/tests/test_foundational_derivation_chain_matrix_consistency_gate.py `
   formal/python/tests/test_pillar_deep_maturity_program_gate.py `
