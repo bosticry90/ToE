@@ -44,6 +44,8 @@ Canonical anchors:
 - `formal/output/master_action_variant_c_pressure_cycle09_drift_report_v0.json`
 - `formal/output/master_action_variant_c_pressure_cycle10_execution_report_v0.json`
 - `formal/output/master_action_variant_c_pressure_cycle10_drift_report_v0.json`
+- `formal/output/master_action_variant_c_pressure_cycle11_execution_report_v0.json`
+- `formal/output/master_action_variant_c_pressure_cycle11_drift_report_v0.json`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_PACKET02_DECISION_RECORD_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE01_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE02_v0.md`
@@ -55,6 +57,7 @@ Canonical anchors:
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE08_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE09_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE10_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE11_v0.md`
 - `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`
 
 ## Variant set (bounded v0)
@@ -99,6 +102,22 @@ This guidance does not override existing required packet fields.
 1. Preserve packet-02 required payload guards and decision-eligibility semantics.
 2. Preserve M4 seam-coupling requirement (`m4_seam_closure_pointer` parity).
 3. Record variant label only as analysis metadata until a dedicated gate contract is introduced.
+
+## Tightened discriminator rule (cycle11 activation)
+
+Rule token:
+- `PRIORITY_DECISION_BASIS_REQUIRES_COUNTERFACTUAL_COMPATIBILITY_v0`
+
+Policy:
+- priority-lane (`QFT`, `SR`) decision-basis tags in active pressure cycles must include explicit counterfactual-compatibility qualification.
+- each priority-lane payload must carry:
+  - `master_action_variant_counterfactual_check_v0` in `{PASS_v0, FAIL_v0}`
+- cycle11 activation uses `PASS_v0` tags under unchanged bounded non-claim posture.
+
+Counterfactual lane requirement (cycle11 activation):
+- designate one control lane (`QM`) as the bounded counterfactual-control lane using:
+  - `master_action_variant_counterfactual_lane_v0: COUNTERFACTUAL_CONTROL_QM_v0`
+- this is a policy-pressure discriminator tag and does not alter lane decision eligibility.
 
 ## Completion condition (for this note)
 

@@ -47,11 +47,20 @@ Interpretation policy:
 
 Next-cycle bounded objective:
 - Execute one additional packet cycle with variant metadata preserved.
-- Execute `VARIANT_C_PRESSURE_CYCLE10_v0` with explicit priority lanes (`QFT`, `SR`).
+- Execute `VARIANT_C_PRESSURE_CYCLE11_v0` with explicit priority lanes (`QFT`, `SR`).
+- Apply tightened discriminator rule token: `PRIORITY_DECISION_BASIS_REQUIRES_COUNTERFACTUAL_COMPATIBILITY_v0`.
 - Recompute scorecard and compare drift in:
   - `prune_rate`
   - `retain_minus_prune`
 - Retain bounded non-claim posture for all updates.
+
+Cycle plateau-stop contract:
+- `VARIANT_C_DRIFT_PLATEAU_WINDOW_v0: 5`
+- if `retain_delta = prune_delta = inconclusive_delta = 0` for five consecutive cycle drift reports,
+  strategy change is mandatory before further cycle rollover.
+- mandatory strategy change must include at least one:
+  - tightened decision-basis criterion, or
+  - bounded counterfactual-control lane policy tag.
 
 Canonical pointers:
 - variant note: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_DISCRIMINATOR_NOTE_v0.md`
@@ -76,6 +85,8 @@ Canonical pointers:
 - cycle09 drift report: `formal/output/master_action_variant_c_pressure_cycle09_drift_report_v0.json`
 - cycle10 execution report: `formal/output/master_action_variant_c_pressure_cycle10_execution_report_v0.json`
 - cycle10 drift report: `formal/output/master_action_variant_c_pressure_cycle10_drift_report_v0.json`
-- cycle target: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE10_v0.md`
+- cycle11 execution report: `formal/output/master_action_variant_c_pressure_cycle11_execution_report_v0.json`
+- cycle11 drift report: `formal/output/master_action_variant_c_pressure_cycle11_drift_report_v0.json`
+- cycle target: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE11_v0.md`
 - packet-02 matrix: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0.json`
 - protocol: `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`

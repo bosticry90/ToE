@@ -64,6 +64,8 @@ Canonical bounded status note (2026-02-24):
 - Master-action variant C pressure cycle09 drift report pointer: `formal/output/master_action_variant_c_pressure_cycle09_drift_report_v0.json`.
 - Master-action variant C pressure cycle10 execution report pointer: `formal/output/master_action_variant_c_pressure_cycle10_execution_report_v0.json`.
 - Master-action variant C pressure cycle10 drift report pointer: `formal/output/master_action_variant_c_pressure_cycle10_drift_report_v0.json`.
+- Master-action variant C pressure cycle11 execution report pointer: `formal/output/master_action_variant_c_pressure_cycle11_execution_report_v0.json`.
+- Master-action variant C pressure cycle11 drift report pointer: `formal/output/master_action_variant_c_pressure_cycle11_drift_report_v0.json`.
 - Master-action variant cycle10 full-governance checkpoint pointer: `formal/output/governance_full_suite_checkpoint_master_action_variant_cycle10_v0.json`.
 - Master-action variant packet-02 decision record pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_PACKET02_DECISION_RECORD_v0.md`.
 - Master-action variant C pressure cycle01 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE01_v0.md`.
@@ -76,6 +78,7 @@ Canonical bounded status note (2026-02-24):
 - Master-action variant C pressure cycle08 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE08_v0.md`.
 - Master-action variant C pressure cycle09 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE09_v0.md`.
 - Master-action variant C pressure cycle10 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE10_v0.md`.
+- Master-action variant C pressure cycle11 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE11_v0.md`.
 - Packet-02 decision execution checkpoint pointer: `formal/docs/release/PHASE_CHECKPOINT_PACKET02_DECISION_EXECUTION_v0.md`.
 - QM empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
 - GR empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
