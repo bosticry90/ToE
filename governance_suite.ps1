@@ -8,6 +8,21 @@ if ($LASTEXITCODE -ne 0) {
   throw "Dev stack preflight failed."
 }
 
+Write-Host "Running local divergence guardrail" -ForegroundColor Cyan
+git show-ref --verify --quiet refs/remotes/origin/main
+if ($LASTEXITCODE -eq 0) {
+  $aheadLimit = 20
+  $aheadCountRaw = git rev-list --count origin/main..HEAD
+  if ($LASTEXITCODE -ne 0) {
+    throw "Unable to compute local ahead count against origin/main."
+  }
+  $aheadCount = [int]($aheadCountRaw.Trim())
+  Write-Host "divergence_guardrail.ahead_count=$aheadCount limit=$aheadLimit"
+  if ($aheadCount -gt $aheadLimit) {
+    throw "Divergence guardrail failed: local branch is ahead by $aheadCount commits (limit $aheadLimit)."
+  }
+}
+
 ./py.ps1 -m pytest `
   formal/python/tests/test_state_theory_dag.py `
   formal/python/tests/test_state_doc_no_duplicate_gapids.py `
@@ -110,7 +125,7 @@ if ($LASTEXITCODE -ne 0) {
   formal/python/tests/test_em_m4_seam_closure_promotion_cycle01_gate.py `
   formal/python/tests/test_qft_m4_seam_closure_promotion_cycle01_gate.py `
   formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py `
-  formal/python/tests/test_sr_m5_theory_parity_link_cycle55_gate.py `
+  formal/python/tests/test_sr_m5_theory_parity_link_cycle56_gate.py `
   formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py `
   formal/python/tests/test_sr_m5_cycle_archive_discipline_gate.py `
   formal/python/tests/test_pillar_deep_maturity_next_target_semantics_gate.py `

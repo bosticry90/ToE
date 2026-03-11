@@ -57,6 +57,9 @@ def test_deep_maturity_program_pointers_and_tokens_are_pinned() -> None:
         "PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_THEORY_PARITY_LINK_EXECUTION_v0",
         "PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0",
         "PILLAR_DEEP_MATURITY_NEXT_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0",
+        "PHASE5_M5_COMPLETION_MIN_ACTIVE_CYCLES_v0: 10",
+        "PHASE5_M5_COMPLETION_STABILITY_WINDOW_v0: 5_CONSECUTIVE_GREEN_v0",
+        "PHASE5_M5_COMPLETION_REQUIRED_GATES_v0: SR_M5_THEORY_PARITY_AND_PHASE5_CONTRACT_AND_ARCHIVE_DISCIPLINE",
         "formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py",
         "formal/python/tests/test_qm_empirical_discriminator_emp_qm_01_scaffold_gate.py",
         "formal/python/tests/test_gr_empirical_discriminator_emp_gr_01_scaffold_gate.py",
@@ -96,7 +99,7 @@ def test_deep_maturity_program_pointers_and_tokens_are_pinned() -> None:
         "formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md",
         "formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py",
         "formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md",
-        "formal/python/tests/test_sr_m5_theory_parity_link_cycle55_gate.py",
+        "formal/python/tests/test_sr_m5_theory_parity_link_cycle56_gate.py",
         "formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py",
         "formal/python/tests/test_sr_m5_cycle_archive_discipline_gate.py",
         "formal/python/tests/test_pillar_deep_maturity_next_target_semantics_gate.py",
@@ -149,7 +152,7 @@ def test_deep_maturity_registry_covers_all_matrix_pillars() -> None:
         "formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py"
     )
     assert registry.get("sr_m5_theory_parity_gate_path") == (
-        "formal/python/tests/test_sr_m5_theory_parity_link_cycle55_gate.py"
+        "formal/python/tests/test_sr_m5_theory_parity_link_cycle56_gate.py"
     )
     assert registry.get("sr_m5_phase5_advancement_contract_gate_path") == (
         "formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py"
@@ -319,8 +322,8 @@ def test_deep_maturity_registry_covers_all_matrix_pillars() -> None:
     sr_m5_theory_parity = sr_row.get("m5_theory_parity", {})
     assert sr_m5_theory_parity.get("target_id") == "TARGET-SR-M5-THEORY-PARITY-LINK-v0"
     assert sr_m5_theory_parity.get("doc_path") == "formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md"
-    assert sr_m5_theory_parity.get("artifact_path") == "formal/output/sr_m5_theory_parity_link_cycle55_v0.json"
-    assert sr_m5_theory_parity.get("gate_path") == "formal/python/tests/test_sr_m5_theory_parity_link_cycle55_gate.py"
+    assert sr_m5_theory_parity.get("artifact_path") == "formal/output/sr_m5_theory_parity_link_cycle56_v0.json"
+    assert sr_m5_theory_parity.get("gate_path") == "formal/python/tests/test_sr_m5_theory_parity_link_cycle56_gate.py"
 
     registry_pillars = {row.get("pillar_id") for row in registry_rows}
     assert registry_pillars == matrix_pillars, "Deep maturity registry must cover all matrix pillars exactly."

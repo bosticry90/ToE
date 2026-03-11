@@ -64,7 +64,7 @@ Canonical pointers:
 - SR M4 seam-closure promotion target: `formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md`
 - SR M4 seam-closure promotion gate: `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`
 - SR M5 theory-parity-link target: `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`
-- SR M5 theory-parity-link gate: `formal/python/tests/test_sr_m5_theory_parity_link_cycle55_gate.py`
+- SR M5 theory-parity-link gate: `formal/python/tests/test_sr_m5_theory_parity_link_cycle56_gate.py`
 - SR M5 phase-5 advancement contract gate: `formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py`
 - SR M5 archive discipline gate: `formal/python/tests/test_sr_m5_cycle_archive_discipline_gate.py`
 - SR M5 next-target semantics gate: `formal/python/tests/test_pillar_deep_maturity_next_target_semantics_gate.py`
@@ -167,8 +167,15 @@ Scope:
 2. Require hash-pinned artifact/doc/gate pointer parity across canonical surfaces.
 3. Keep all M5 updates under non-claim boundaries with no adjudication promotion.
 
+Completion threshold tokens:
+- `PHASE5_M5_COMPLETION_MIN_ACTIVE_CYCLES_v0: 10`
+- `PHASE5_M5_COMPLETION_STABILITY_WINDOW_v0: 5_CONSECUTIVE_GREEN_v0`
+- `PHASE5_M5_COMPLETION_REQUIRED_GATES_v0: SR_M5_THEORY_PARITY_AND_PHASE5_CONTRACT_AND_ARCHIVE_DISCIPLINE`
+
 Exit criteria:
 - Active M5 lane has synchronized artifact hash and pointer parity across target, authority, roadmap, state, and registry surfaces.
+- At least `PHASE5_M5_COMPLETION_MIN_ACTIVE_CYCLES_v0` active cycles have completed under bounded non-claim posture.
+- The latest `PHASE5_M5_COMPLETION_STABILITY_WINDOW_v0` cycle rollovers are governance-green with all `PHASE5_M5_COMPLETION_REQUIRED_GATES_v0` satisfied.
 
 ## Priority Order (v0)
 
