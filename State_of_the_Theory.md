@@ -52,6 +52,10 @@ Canonical bounded status note (2026-02-24):
 - SR empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
 - QM empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
 - GR empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
+- GR empirical comparison packet-05 target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_05_v0.md`.
+- GR empirical comparison packet-05 artifact pointer: `formal/output/gr_empirical_comparison_packet_05_v0.json`.
+- GR empirical comparison packet-05 gate pointer: `formal/python/tests/test_gr_empirical_comparison_packet_05_gate.py`.
+- GR empirical comparison packet-05 schema gate pointer: `formal/python/tests/test_gr_empirical_packet_05_artifact_schema_gate.py`.
 - STAT empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
 - COSMO empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
 - EM empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.

@@ -1,0 +1,16 @@
+{
+  "schema_id": "TOE_EMPIRICAL_PACKET_SCHEMA_v0",
+  "artifact_id": "gr_empirical_comparison_packet_05_v0",
+  "payload": {
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "decision": "INCONCLUSIVE_v0",
+    "artifact_pointer": "formal/output/phase5_m5_completion_closeout_checkpoint_v0.json",
+    "bridge_pointer": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
+    "prediction_pointer": "formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md",
+    "discriminator_output_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_DISCRIMINATOR_EMP_GR_01_v0.md",
+    "uncertainty_annotation": "gr_packet05_post_closeout_uncertainty_v0",
+    "bounded_validity_window": "gr_packet05_cycle01_window_v0",
+    "evidence_tier": "INTERMEDIATE_v0",
+    "maturity_guardrail": "PHASE5_CLOSEOUT_POSTURE_PRESERVED_v0"
+  }
+}

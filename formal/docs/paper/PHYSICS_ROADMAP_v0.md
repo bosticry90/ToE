@@ -162,6 +162,10 @@ No-deviation sequencing rule:
   - `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
   - `formal/output/gr_empirical_comparison_packet_04_v0.json`
   - `formal/python/tests/test_gr_empirical_comparison_packet_04_gate.py`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_05_v0.md`
+  - `formal/output/gr_empirical_comparison_packet_05_v0.json`
+  - `formal/python/tests/test_gr_empirical_comparison_packet_05_gate.py`
+  - `formal/python/tests/test_gr_empirical_packet_05_artifact_schema_gate.py`
   - `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
   - `formal/output/stat_empirical_comparison_packet_04_v0.json`
   - `formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py`

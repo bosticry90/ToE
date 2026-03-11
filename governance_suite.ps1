@@ -77,6 +77,8 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_sr_empirical_comparison_packet_03_gate.py `
   formal/python/tests/test_qm_empirical_comparison_packet_04_gate.py `
   formal/python/tests/test_gr_empirical_comparison_packet_04_gate.py `
+  formal/python/tests/test_gr_empirical_comparison_packet_05_gate.py `
+  formal/python/tests/test_gr_empirical_packet_05_artifact_schema_gate.py `
   formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py `
   formal/python/tests/test_cosmo_empirical_comparison_packet_04_gate.py `
   formal/python/tests/test_em_empirical_comparison_packet_04_gate.py `
