@@ -10,7 +10,7 @@ Classification:
 - `P-POLICY`
 
 Purpose:
-- Pin the first bounded non-inconclusive decision record for SR packet-02.
+- Pin the current bounded decision record for SR packet-02.
 - Keep the decision auditable and strictly non-claim.
 
 Non-claim boundary:
@@ -20,8 +20,8 @@ Non-claim boundary:
 
 Decision bundle:
 - `SR_EMPIRICAL_PACKET_02_DECISION_RECORD_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
-- `SR_EMPIRICAL_PACKET_02_DECISION_RESULT_v0: RETAIN_v0`
-- `SR_EMPIRICAL_PACKET_02_DECISION_BASIS_v0: CYCLE02_GUARD_SATISFIED_RETAIN`
+- `SR_EMPIRICAL_PACKET_02_DECISION_RESULT_v0: INCONCLUSIVE_v0`
+- `SR_EMPIRICAL_PACKET_02_DECISION_BASIS_v0: CYCLE12_VARIANT_C_PRIORITY_LANE_INCONCLUSIVE_ADMISSIBILITY_SCORE_0P55_THRESHOLD_0P60`
 - `SR_EMPIRICAL_PACKET_02_DECISION_GUARD_v0: PROTOCOL_COMPLIANT_INTERMEDIATE_TIER`
 
 Canonical pointers:

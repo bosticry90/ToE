@@ -45,7 +45,7 @@ Interpretation policy:
 - It does not mean automatic prune adjudication.
 - Existing packet-02 retain/prune outcomes remain authoritative at lane level.
 
-Next-cycle bounded objective:
+Cycle12 bounded objective (completed):
 - Execute one additional packet cycle with variant metadata preserved.
 - Execute `VARIANT_C_PRESSURE_CYCLE12_v0` with explicit priority lanes (`QFT`, `SR`).
 - Apply tightened discriminator rule token: `PRIORITY_DECISION_BASIS_REQUIRES_COUNTERFACTUAL_COMPATIBILITY_v0`.
@@ -64,8 +64,8 @@ Cycle plateau-stop contract:
   - bounded counterfactual-control lane policy tag.
 
 Active plateau monitoring state:
-- `VARIANT_C_ZERO_DRIFT_STREAK_CURRENT_v0: 5`
-- `VARIANT_C_ZERO_DRIFT_STREAK_SOURCE_v0: CYCLE07_TO_CYCLE11`
+- `VARIANT_C_ZERO_DRIFT_STREAK_CURRENT_v0: 0`
+- `VARIANT_C_ZERO_DRIFT_STREAK_SOURCE_v0: RESET_ON_CYCLE12_NONZERO_DRIFT`
 
 Cycle12 success/failure contract (predeclared):
 - success: any non-zero movement in cycle12 drift decision deltas (`retain_delta`, `prune_delta`, or `inconclusive_delta`).
@@ -101,6 +101,8 @@ Canonical pointers:
 - cycle11 drift report: `formal/output/master_action_variant_c_pressure_cycle11_drift_report_v0.json`
 - cycle12 execution report: `formal/output/master_action_variant_c_pressure_cycle12_execution_report_v0.json`
 - cycle12 drift report: `formal/output/master_action_variant_c_pressure_cycle12_drift_report_v0.json`
+- cycle12 full-suite checkpoint: `formal/output/governance_full_suite_checkpoint_master_action_variant_cycle12_v0.json`
+- cycle12 release note: `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE12_RELEASE_NOTE_v0.md`
 - cycle target: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE12_v0.md`
 - packet-02 matrix: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0.json`
 - protocol: `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`

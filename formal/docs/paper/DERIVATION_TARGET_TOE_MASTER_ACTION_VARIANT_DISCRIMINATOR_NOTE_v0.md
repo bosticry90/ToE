@@ -46,6 +46,8 @@ Canonical anchors:
 - `formal/output/master_action_variant_c_pressure_cycle10_drift_report_v0.json`
 - `formal/output/master_action_variant_c_pressure_cycle11_execution_report_v0.json`
 - `formal/output/master_action_variant_c_pressure_cycle11_drift_report_v0.json`
+- `formal/output/master_action_variant_c_pressure_cycle12_execution_report_v0.json`
+- `formal/output/master_action_variant_c_pressure_cycle12_drift_report_v0.json`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_PACKET02_DECISION_RECORD_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE01_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE02_v0.md`
@@ -58,6 +60,7 @@ Canonical anchors:
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE09_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE10_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE11_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE12_v0.md`
 - `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`
 
 ## Variant set (bounded v0)
