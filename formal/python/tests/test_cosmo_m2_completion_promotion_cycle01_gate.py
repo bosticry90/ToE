@@ -66,7 +66,7 @@ def test_cosmo_m2_completion_promotion_cycle01_gate() -> None:
     for key in ROW_KEYS:
         row = m2_rows.get(key)
         assert isinstance(row, dict), f"Missing COSMO M2 row `{key}`."
-        assert row.get("token_value") == "SCAFFOLD_PINNED_NONCLAIM", f"COSMO M2 row `{key}` must be scaffold-pinned."
+        assert row.get("token_value") == "RUN_BOUNDED_v0_NONCLAIM", f"COSMO M2 row `{key}` must be active bounded-run."
 
     assert ARTIFACT_PATH.exists(), "COSMO M2 completion promotion artifact is missing."
     artifact_json = _read_json(ARTIFACT_PATH)

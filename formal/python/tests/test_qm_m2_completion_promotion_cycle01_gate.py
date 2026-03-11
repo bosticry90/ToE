@@ -66,7 +66,7 @@ def test_qm_m2_completion_promotion_cycle01_gate() -> None:
     for key in ROW_KEYS:
         row = m2_rows.get(key)
         assert isinstance(row, dict), f"Missing QM M2 row `{key}`."
-        assert row.get("token_value") == "SCAFFOLD_PINNED_NONCLAIM", f"QM M2 row `{key}` must be scaffold-pinned."
+        assert row.get("token_value") == "RUN_BOUNDED_v0_NONCLAIM", f"QM M2 row `{key}` must be active bounded-run."
 
     assert ARTIFACT_PATH.exists(), "QM M2 completion promotion artifact is missing."
     artifact_json = _read_json(ARTIFACT_PATH)
@@ -95,3 +95,4 @@ def test_qm_m2_completion_promotion_cycle01_gate() -> None:
     assert artifact_rel in qm_text
     assert artifact_rel in state_text
     assert artifact_rel in roadmap_text
+
