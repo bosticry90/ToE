@@ -4,13 +4,13 @@
   "payload": {
     "status": "RUN_BOUNDED_v0_NONCLAIM",
     "decision": "INCONCLUSIVE_v0",
-    "artifact_pointer": "formal/output/toe_master_action_shadow_numerics_cycle13_v0.json",
+    "artifact_pointer": "formal/output/toe_master_action_shadow_numerics_cycle14_v0.json",
     "bridge_pointer": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
     "prediction_pointer": "formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md",
     "discriminator_output_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_DISCRIMINATOR_EMP_GR_01_v0.md",
     "discriminator_analysis_pointer": "formal/output/gr_empirical_discriminator_emp_gr_01_run_cycle01_v0.json",
-    "uncertainty_annotation": "gr_packet05_cycle13_shadow_uncertainty_v0",
-    "bounded_validity_window": "gr_packet05_cycle13_window_v0",
+    "uncertainty_annotation": "gr_packet05_cycle14_shadow_uncertainty_v0",
+    "bounded_validity_window": "gr_packet05_cycle14_window_v0",
     "evidence_tier": "INTERMEDIATE_v0",
     "maturity_guardrail": "PHASE5_CLOSEOUT_POSTURE_PRESERVED_v0"
   }
