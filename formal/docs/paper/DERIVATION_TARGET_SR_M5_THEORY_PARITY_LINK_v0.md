@@ -20,13 +20,13 @@ Non-claim boundary:
 
 Tranche bundle (bounded non-claim):
 - `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
-- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle53_v0`
-- `SR_M5_THEORY_PARITY_SHA256_v0: 3fe2c0041856470e4ca474fe08e45f0794c8d2cbe27a0ae85140ecb0bc53e8ca`
+- `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle54_v0`
+- `SR_M5_THEORY_PARITY_SHA256_v0: 23822661e23ee28e797d50dc4bc72c6e6e58f59991b39dcca04208cb721de685`
 - `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
-- `SR_M5_PHASE5_ADVANCEMENT_DELTA_TOKEN_v0: CYCLE53_POINTER_PARITY_ADVANCEMENT_v0`
+- `SR_M5_PHASE5_ADVANCEMENT_DELTA_TOKEN_v0: CYCLE54_POINTER_PARITY_ADVANCEMENT_v0`
 - `SR_M5_PHASE5_ADVANCEMENT_CONTRACT_GATE_v0: formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py`
-- artifact path: `formal/output/sr_m5_theory_parity_link_cycle53_v0.json`
-- coupling gate path: `formal/python/tests/test_sr_m5_theory_parity_link_cycle53_gate.py`
+- artifact path: `formal/output/sr_m5_theory_parity_link_cycle54_v0.json`
+- coupling gate path: `formal/python/tests/test_sr_m5_theory_parity_link_cycle54_gate.py`
 
 Tranche semantics:
 - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
