@@ -1,0 +1,19 @@
+{
+  "checkpoint_id": "PROOF_DEBT_BURNDOWN_CHECKPOINT_CYCLE01_v0",
+  "status": "ACTIVE_BOUNDED_v0_NONCLAIM",
+  "generated_on": "2026-03-11T18:05:00",
+  "target_markers": {
+    "state_line_5112": "Status: In progress (injectivity proof pending)",
+    "state_line_5148": "Status: In progress (proof pending)"
+  },
+  "execution_targets": [
+    "REP_NON_ALIAS_INJECTIVITY_PROOF_CHAIN",
+    "QUOTIENT_EQUIVALENCE_COMPLETION_CHAIN"
+  ],
+  "mode": "PARALLEL_BOUNDED_NONCLAIM",
+  "status_summary": {
+    "targeting_bound": true,
+    "adjudication_changed": false,
+    "matrix_status_changed": false
+  }
+}
