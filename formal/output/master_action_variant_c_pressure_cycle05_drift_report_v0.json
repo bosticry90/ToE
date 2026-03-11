@@ -1,0 +1,23 @@
+{
+  "report_id": "MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE05_DRIFT_REPORT_v0",
+  "status": "RUN_BOUNDED_v0_NONCLAIM",
+  "cycle04_report_pointer": "formal/output/master_action_variant_c_pressure_cycle04_execution_report_v0.json",
+  "cycle05_report_pointer": "formal/output/master_action_variant_c_pressure_cycle05_execution_report_v0.json",
+  "generated_on": "2026-03-11T14:11:49",
+  "drift": {
+    "retain_delta": 0,
+    "prune_delta": 0,
+    "inconclusive_delta": 0,
+    "priority_lane_count_delta": 0,
+    "control_lane_count_delta": 0,
+    "reference_lane_count_delta": 0
+  },
+  "priority_lane_counter_snapshot": {
+    "qft": 1,
+    "sr": 1
+  },
+  "guard_consistency": {
+    "cycle04_all_guards_true": true,
+    "cycle05_all_guards_true": true
+  }
+}

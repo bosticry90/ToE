@@ -19,6 +19,7 @@ Non-claim boundary:
 
 Canonical anchors:
 - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md`
+- `formal/docs/release/MASTER_ACTION_MATURITY_PILLAR_INTEGRATION_ACTION_PLAN_v0.md`
 - `formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md`
 - `formal/python/tests/test_foundational_derivation_chain_coverage_gate.py`
 - `formal/docs/paper/PHYSICS_ROADMAP_v0.md`

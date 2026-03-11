@@ -7,8 +7,8 @@
     "bridge_pointer": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
     "prediction_pointer": "formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md",
     "discriminator_output_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_DISCRIMINATOR_EMP_GR_01_v0.md",
-    "uncertainty_annotation": "gr_packet02_intermediate_uncertainty_v0",
-    "bounded_validity_window": "gr_packet02_cycle02_window_v0",
+    "uncertainty_annotation": "gr_packet02_variant_c_pressure_cycle10_uncertainty_v0",
+    "bounded_validity_window": "gr_packet02_variant_c_pressure_cycle10_window_v0",
     "evidence_tier": "INTERMEDIATE_v0",
     "decision_eligibility": {
       "retain_allowed": true,
@@ -18,6 +18,10 @@
     "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md",
     "decision_basis": "cycle02_guard_satisfied_retain_v0",
     "comparator_delta_summary": "bounded_non_eliminative_delta_cycle02_v0",
-    "m4_seam_closure_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_M4_SEAM_CLOSURE_PROMOTION_v0.md"
+    "m4_seam_closure_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+    "master_action_variant_candidate_v0": "VARIANT_A_BASELINE_v0",
+    "master_action_variant_note_pointer_v0": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_DISCRIMINATOR_NOTE_v0.md",
+    "master_action_variant_cycle_target_v0": "VARIANT_C_PRESSURE_CYCLE10_v0",
+    "master_action_variant_cycle_role_v0": "CONTROL_LANE_v0"
   }
 }

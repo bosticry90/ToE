@@ -109,3 +109,48 @@ This working-form may be promoted only after all are explicit:
 - bridge-to-operator transport is closed for admitted pillars.
 - regime-limit projections are synchronized with discriminator artifacts.
 - anti-circularity and no-shortcut guards are discharged at bounded scope.
+
+## Compact layered form (physics-facing working view)
+
+Equivalent compact writing for discussion and derivation planning:
+
+```
+S_master = integral d^4x sqrt(-g) [
+  L_geometry
+  + L_field
+  + L_interaction
+  + L_transport
+  + L_entropy
+  + L_seam
+]
+```
+
+with the v0 mapping:
+
+- `L_geometry` -> Einstein-Hilbert-type geometry block.
+- `L_field` -> matter and gauge kinetic blocks.
+- `L_interaction` -> covariant couplings and potential terms.
+- `L_transport` -> operator-to-residual transport-support structure.
+- `L_entropy` -> bounded statistical term (`rho ln rho` family).
+- `L_seam` -> explicit seam constraints `C_k` with multipliers `lambda_k`.
+
+This compact form is interpretive and must remain algebraically tied to the explicit `S_ToE` surface above.
+
+## Regime-reading guide (bounded, non-promotional)
+
+Use the same parent action and emphasize different dominant blocks by regime:
+
+1. Geometry-dominant regime:
+- prioritize `L_geometry + L_seam` and weak-field residual projections.
+
+2. Quantum/operator-dominant regime:
+- prioritize `L_field + L_interaction + L_transport` and operator closure routes.
+
+3. Thermodynamic/coarse-grained regime:
+- prioritize `L_entropy + L_transport` with residual-law statistics checks.
+
+4. Cosmology/background regime:
+- prioritize `L_geometry + L_field + L_seam` under large-scale background assumptions.
+
+Interpretation constraint:
+- regime emphasis is a derivation lens, not a claim of independent underlying laws.

@@ -72,6 +72,7 @@ No-deviation sequencing rule:
   - `formal/python/tests/test_pillar_phase_advancement_gate.py`
 - Pillar deep maturity program pointer:
   - `formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md`
+  - `formal/docs/release/MASTER_ACTION_MATURITY_PILLAR_INTEGRATION_ACTION_PLAN_v0.md`
   - `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json`
   - `formal/python/tests/test_pillar_deep_maturity_program_gate.py`
   - `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py`
@@ -114,6 +115,7 @@ No-deviation sequencing rule:
   - `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0.json`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0.json`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_DISCRIMINATOR_NOTE_v0.md`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET03_MATRIX_v0.json`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0.json`
   - `formal/docs/paper/FOUNDATIONAL_DERIVATION_CHAIN_MATRIX_v0.json`
@@ -134,6 +136,39 @@ No-deviation sequencing rule:
   - `formal/python/tests/test_sr_empirical_packet_02_decision_record_gate.py`
   - `formal/python/tests/test_empirical_packet02_decision_ledger_parity_gate.py`
   - `formal/output/empirical_packet02_decision_ledger_v0.json`
+  - `formal/output/master_action_variant_packet02_decision_summary_v0.json`
+  - `formal/output/master_action_variant_packet02_scorecard_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle01_execution_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle02_execution_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle02_drift_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle03_execution_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle03_drift_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle04_execution_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle04_drift_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle05_execution_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle05_drift_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle06_execution_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle06_drift_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle07_execution_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle07_drift_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle08_execution_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle08_drift_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle09_execution_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle09_drift_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle10_execution_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle10_drift_report_v0.json`
+  - `formal/output/governance_full_suite_checkpoint_master_action_variant_cycle10_v0.json`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_PACKET02_DECISION_RECORD_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE01_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE02_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE03_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE04_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE05_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE06_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE07_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE08_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE09_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE10_v0.md`
   - `formal/docs/release/PHASE_CHECKPOINT_PACKET02_DECISION_EXECUTION_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_03_v0.md`
   - `formal/output/qm_empirical_comparison_packet_03_v0.json`

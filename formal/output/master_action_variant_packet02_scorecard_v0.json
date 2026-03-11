@@ -1,0 +1,69 @@
+{
+  "scorecard_id": "MASTER_ACTION_VARIANT_PACKET02_SCORECARD_v0",
+  "status": "RUN_BOUNDED_v0_NONCLAIM",
+  "source_summary_pointer": "formal/output/master_action_variant_packet02_decision_summary_v0.json",
+  "note_pointer": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_DISCRIMINATOR_NOTE_v0.md",
+  "generated_on": "2026-03-11T13:48:00",
+  "variant_rows": [
+    {
+      "variant": "VARIANT_A_BASELINE_v0",
+      "counts": {
+        "retain": 2,
+        "prune": 0,
+        "inconclusive": 0,
+        "total": 2
+      },
+      "metrics": {
+        "retain_minus_prune": 2,
+        "prune_rate": 0.0,
+        "retain_rate": 1.0,
+        "inconclusive_rate": 0.0,
+        "decisiveness_rate": 1.0
+      },
+      "interpretation": {
+        "status": "RUN_BOUNDED_v0_NONCLAIM",
+        "note": "Metric-only bounded summary; no theorem/adjudication promotion semantics."
+      }
+    },
+    {
+      "variant": "VARIANT_B_SEAM_WEIGHT_SHIFT_v0",
+      "counts": {
+        "retain": 2,
+        "prune": 1,
+        "inconclusive": 0,
+        "total": 3
+      },
+      "metrics": {
+        "retain_minus_prune": 1,
+        "prune_rate": 0.3333,
+        "retain_rate": 0.6667,
+        "inconclusive_rate": 0.0,
+        "decisiveness_rate": 1.0
+      },
+      "interpretation": {
+        "status": "RUN_BOUNDED_v0_NONCLAIM",
+        "note": "Metric-only bounded summary; no theorem/adjudication promotion semantics."
+      }
+    },
+    {
+      "variant": "VARIANT_C_SEAM_TRANSPORT_CROSS_TERM_v0",
+      "counts": {
+        "retain": 1,
+        "prune": 1,
+        "inconclusive": 0,
+        "total": 2
+      },
+      "metrics": {
+        "retain_minus_prune": 0,
+        "prune_rate": 0.5,
+        "retain_rate": 0.5,
+        "inconclusive_rate": 0.0,
+        "decisiveness_rate": 1.0
+      },
+      "interpretation": {
+        "status": "RUN_BOUNDED_v0_NONCLAIM",
+        "note": "Metric-only bounded summary; no theorem/adjudication promotion semantics."
+      }
+    }
+  ]
+}

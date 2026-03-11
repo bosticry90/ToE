@@ -18,6 +18,12 @@ Current packet-02 decision distribution (bounded):
 - `QFT: PRUNE_v0`
 - `SR: RETAIN_v0`
 
+Master-action variant checkpoint (bounded):
+- `formal/output/master_action_variant_packet02_decision_summary_v0.json`
+- `formal/output/master_action_variant_packet02_scorecard_v0.json`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_PACKET02_DECISION_RECORD_v0.md`
+- priority-elimination candidate (next bounded cycle focus): `VARIANT_C_SEAM_TRANSPORT_CROSS_TERM_v0`
+
 Outstanding blockers:
 1. Packet-04 execution surfaces are now pinned; next pressure target is packet-05 policy framing.
 2. Derivation-depth stage bundles and M2 source-doc subphase tokens are synchronized on canonical surfaces; next depth target is theorem-witness hardening where still scaffolded.

@@ -7,8 +7,8 @@
     "bridge_pointer": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
     "prediction_pointer": "formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md",
     "discriminator_output_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_DISCRIMINATOR_EMP_QFT_01_v0.md",
-    "uncertainty_annotation": "qft_packet02_intermediate_uncertainty_v0",
-    "bounded_validity_window": "qft_packet02_cycle02_window_v0",
+    "uncertainty_annotation": "qft_packet02_variant_c_pressure_cycle10_uncertainty_v0",
+    "bounded_validity_window": "qft_packet02_variant_c_pressure_cycle10_window_v0",
     "evidence_tier": "INTERMEDIATE_v0",
     "decision_eligibility": {
       "retain_allowed": true,
@@ -16,8 +16,16 @@
       "prune_guard_satisfied": true
     },
     "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md",
-    "decision_basis": "cycle02_guard_satisfied_prune_v0",
-    "comparator_delta_summary": "bounded_eliminative_delta_cycle02_v0",
-    "m4_seam_closure_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_M4_SEAM_CLOSURE_PROMOTION_v0.md"
+    "decision_basis": "cycle10_variant_c_priority_lane_prune_flip_counter_2_v0",
+    "comparator_delta_summary": "variant_c_priority_lane_cycle10_prune_delta_flip_counter_2_v0",
+    "m4_seam_closure_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_M4_SEAM_CLOSURE_PROMOTION_v0.md",
+    "master_action_variant_candidate_v0": "VARIANT_C_SEAM_TRANSPORT_CROSS_TERM_v0",
+    "master_action_variant_note_pointer_v0": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_DISCRIMINATOR_NOTE_v0.md",
+    "master_action_variant_cycle_target_v0": "VARIANT_C_PRESSURE_CYCLE10_v0",
+    "master_action_variant_cycle_role_v0": "PRIORITY_LANE_v0",
+    "master_action_variant_flip_trigger_counter_v0": 2,
+    "master_action_variant_flip_eligibility_rule_v0": "TWO_CONSECUTIVE_DRIFT_WINDOWS_REQUIRED_v0",
+    "master_action_variant_flip_eligibility_status_v0": "ELIGIBLE_v0",
+    "master_action_variant_priority_threshold_profile_v0": "STRICT_PRIORITY_THRESHOLD_CYCLE10_v0"
   }
 }

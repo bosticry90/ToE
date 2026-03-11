@@ -2,6 +2,7 @@
   "matrix_id": "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0",
   "matrix_version": 1,
   "protocol_doc": "formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md",
+  "master_action_variant_discriminator_note_path": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_DISCRIMINATOR_NOTE_v0.md",
   "allowed_decisions": [
     "RETAIN_v0",
     "PRUNE_v0",

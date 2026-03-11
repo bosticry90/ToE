@@ -1,0 +1,76 @@
+{
+  "summary_id": "MASTER_ACTION_VARIANT_PACKET02_DECISION_SUMMARY_v0",
+  "status": "RUN_BOUNDED_v0_NONCLAIM",
+  "note_pointer": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_DISCRIMINATOR_NOTE_v0.md",
+  "generated_on": "2026-03-11T13:44:56",
+  "variant_rows": [
+    {
+      "variant": "VARIANT_A_BASELINE_v0",
+      "counts": {
+        "retain": 2,
+        "prune": 0,
+        "inconclusive": 0,
+        "total": 2
+      },
+      "lanes": [
+        {
+          "lane": "GR",
+          "decision": "RETAIN_v0",
+          "artifact_path": "formal/output/gr_empirical_comparison_packet_02_v0.json"
+        },
+        {
+          "lane": "QM",
+          "decision": "RETAIN_v0",
+          "artifact_path": "formal/output/qm_empirical_comparison_packet_02_v0.json"
+        }
+      ]
+    },
+    {
+      "variant": "VARIANT_B_SEAM_WEIGHT_SHIFT_v0",
+      "counts": {
+        "retain": 2,
+        "prune": 1,
+        "inconclusive": 0,
+        "total": 3
+      },
+      "lanes": [
+        {
+          "lane": "EM",
+          "decision": "RETAIN_v0",
+          "artifact_path": "formal/output/em_empirical_comparison_packet_02_v0.json"
+        },
+        {
+          "lane": "COSMO",
+          "decision": "PRUNE_v0",
+          "artifact_path": "formal/output/cosmo_empirical_comparison_packet_02_v0.json"
+        },
+        {
+          "lane": "STAT",
+          "decision": "RETAIN_v0",
+          "artifact_path": "formal/output/stat_empirical_comparison_packet_02_v0.json"
+        }
+      ]
+    },
+    {
+      "variant": "VARIANT_C_SEAM_TRANSPORT_CROSS_TERM_v0",
+      "counts": {
+        "retain": 1,
+        "prune": 1,
+        "inconclusive": 0,
+        "total": 2
+      },
+      "lanes": [
+        {
+          "lane": "QFT",
+          "decision": "PRUNE_v0",
+          "artifact_path": "formal/output/qft_empirical_comparison_packet_02_v0.json"
+        },
+        {
+          "lane": "SR",
+          "decision": "RETAIN_v0",
+          "artifact_path": "formal/output/sr_empirical_comparison_packet_02_v0.json"
+        }
+      ]
+    }
+  ]
+}

@@ -23,6 +23,7 @@ Non-claim boundary:
 
 Canonical pointers:
 - Program doc: `formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md`
+- Master-action maturity integration plan: `formal/docs/release/MASTER_ACTION_MATURITY_PILLAR_INTEGRATION_ACTION_PLAN_v0.md`
 - Program registry: `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json`
 - Program gate: `formal/python/tests/test_pillar_deep_maturity_program_gate.py`
 - M2 scaffold gate: `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py`

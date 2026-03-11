@@ -34,13 +34,13 @@
     },
     "QFT": {
       "decision": "PRUNE_v0",
-      "basis": "cycle02_guard_satisfied_prune_v0",
+      "basis": "cycle10_variant_c_priority_lane_prune_flip_counter_2_v0",
       "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER",
       "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md"
     },
     "SR": {
       "decision": "RETAIN_v0",
-      "basis": "cycle02_guard_satisfied_retain_v0",
+      "basis": "cycle10_variant_c_priority_lane_retain_flip_counter_2_v0",
       "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER",
       "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md"
     }
