@@ -67,6 +67,7 @@ Canonical bounded status note (2026-02-24):
 - Master action shadow numerics cycle-05 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE05_v0.md`.
 - Master action shadow numerics cycle-06 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE06_v0.md`.
 - Master action shadow numerics cycle-07 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE07_v0.md`.
+- Master action shadow numerics cycle-08 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE08_v0.md`.
 - QM empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
 - GR empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
 - GR empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
@@ -122,6 +123,7 @@ Canonical bounded status note (2026-02-24):
 - Master action shadow numerics cycle-05 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle05_gate.py`.
 - Master action shadow numerics cycle-06 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle06_gate.py`.
 - Master action shadow numerics cycle-07 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle07_gate.py`.
+- Master action shadow numerics cycle-08 gate pointer: `formal/python/tests/test_toe_master_action_shadow_numerics_cycle08_gate.py`.
 - Foundational empirical packet-02 matrix consistency gate pointer: `formal/python/tests/test_foundational_empirical_packet02_matrix_consistency_gate.py`.
 - Foundational empirical packet-02 decision balance gate pointer: `formal/python/tests/test_foundational_empirical_packet02_decision_balance_gate.py`.
 - Foundational empirical packet-03 matrix consistency gate pointer: `formal/python/tests/test_foundational_empirical_packet03_matrix_consistency_gate.py`.
