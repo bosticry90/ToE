@@ -22,7 +22,7 @@ Completion semantics:
 - `TOE_COMPLETE_v1`:
   - `TOE_COMPLETE_v0` plus all of:
     1. active-lane closure packetization (`COSMO` continuity tranche packet locked),
-    2. master-action variant cycle progression continuation checkpoint (`cycle13`),
+    2. master-action variant cycle progression continuation checkpoint (`cycle14`),
     3. deep-maturity delta attestation under current bounded controls,
     4. matrix/state/roadmap pointer parity and no-drift gates green,
     5. full governance suite green at completion checkpoint.
@@ -31,13 +31,15 @@ Canonical program anchors:
 - `formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md`
 - `formal/docs/release/MASTER_ACTION_MATURITY_PILLAR_INTEGRATION_ACTION_PLAN_v0.md`
 - `formal/docs/release/COSMO_DRYRUN_CUSTODY_CHAIN_CLOSEOUT_PACKET_v0.md`
-- `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE13_RELEASE_NOTE_v0.md`
+- `formal/docs/release/COSMO_DRYRUN_CUSTODY_CHAIN_CONTINUATION_PACKET_CYCLE02_v0.md`
+- `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE14_RELEASE_NOTE_v0.md`
+- `formal/output/deep_maturity_delta_v1_cycle01_v0.json`
 - `formal/output/toe_complete_v1_checkpoint_v0.json`
 
 Deep-maturity delta definition:
 - `DEEP_MATURITY_DELTA_v1_SCOPE_v0: ASSUMPTION_MINIMIZATION_AND_CROSS_SURFACE_INEVITABILITY_CONFIDENCE`
 - `DEEP_MATURITY_DELTA_v1_EXECUTION_MODE_v0: BOUNDED_NONCLAIM_CONTINUATION`
-- `DEEP_MATURITY_DELTA_v1_STATUS_v0: CHECKPOINT_BOUND`
+- `DEEP_MATURITY_DELTA_v1_STATUS_v0: CYCLE01_INCREMENT_ATTESTED`
 
 Legacy scaffold gatekeeping commitment:
 - keep LCRD legacy scaffold gates skipped until canonical non-archive front door is declared.
