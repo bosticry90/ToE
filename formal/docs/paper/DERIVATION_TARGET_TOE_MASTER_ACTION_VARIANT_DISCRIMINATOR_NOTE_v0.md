@@ -50,6 +50,8 @@ Canonical anchors:
 - `formal/output/master_action_variant_c_pressure_cycle12_drift_report_v0.json`
 - `formal/output/master_action_variant_c_pressure_cycle13_execution_report_v0.json`
 - `formal/output/master_action_variant_c_pressure_cycle13_drift_report_v0.json`
+- `formal/output/master_action_variant_c_pressure_cycle14_execution_report_v0.json`
+- `formal/output/master_action_variant_c_pressure_cycle14_drift_report_v0.json`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_PACKET02_DECISION_RECORD_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE01_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE02_v0.md`
@@ -64,6 +66,7 @@ Canonical anchors:
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE11_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE12_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE13_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE14_v0.md`
 - `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`
 
 ## Variant set (bounded v0)
@@ -160,6 +163,16 @@ Policy token:
 Policy:
 - cycle13 is authorized as continuation (not escalation) because cycle12 recorded non-zero information gain.
 - preserve cycle12 threshold policy (`0.60`) and priority-lane guard structure.
+- continuation execution remains bounded non-claim and does not authorize adjudication promotion.
+
+## Cycle14 continuation policy (declared)
+
+Policy token:
+- `CYCLE14_PRIORITY_CONTINUATION_PARITY_LOCK_v0`
+
+Policy:
+- cycle14 is authorized as continuation by preserving cycle13 parity posture under bounded non-claim controls.
+- preserve threshold policy (`0.60`) and priority-lane guard structure.
 - continuation execution remains bounded non-claim and does not authorize adjudication promotion.
 
 ## Completion condition (for this note)
