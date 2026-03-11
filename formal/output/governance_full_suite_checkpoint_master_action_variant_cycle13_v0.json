@@ -1,0 +1,49 @@
+{
+  "checkpoint_id": "GOVERNANCE_FULL_SUITE_CHECKPOINT_MASTER_ACTION_VARIANT_CYCLE13_v0",
+  "status": "RUN_BOUNDED_v0_NONCLAIM",
+  "generated_on": "2026-03-11T16:31:00",
+  "suite_command": "./governance_suite.ps1",
+  "pytest_summary": {
+    "passed": 372,
+    "failed": 0,
+    "duration_seconds": 97.99
+  },
+  "focused_suite_summary": {
+    "command": "./py.ps1 -m pytest -q formal/python/tests/test_foundational_empirical_packet02_matrix_consistency_gate.py formal/python/tests/test_foundational_empirical_packet02_decision_balance_gate.py formal/python/tests/test_packet02_m4_seam_coupling_gate.py formal/python/tests/test_empirical_packet02_decision_ledger_parity_gate.py",
+    "passed": 5,
+    "failed": 0,
+    "duration_seconds": 2.02
+  },
+  "preflight": {
+    "python_ok": true,
+    "cargo_ok": true,
+    "status": "ok"
+  },
+  "divergence_guardrail": {
+    "ahead_count": 0,
+    "limit": 20
+  },
+  "orchestration_manifest": {
+    "checks": 2,
+    "passed": 2,
+    "failed": 0,
+    "timed_out": 0,
+    "report_path": "formal/output/reports/toe_orchestration_report_v0.json"
+  },
+  "sql_integrity_snapshot": {
+    "issues": 0,
+    "report_path": "formal/output/reports/toe_integrity_snapshot_report_v0.json"
+  },
+  "rust_trust_core": {
+    "ok": true,
+    "schema_id": "ARCHITECTURE_SCHEMA_v2",
+    "matrix_pillars": 7,
+    "registry_pillars": 7
+  },
+  "attestation_scope": {
+    "variant_cycle_target": "VARIANT_C_PRESSURE_CYCLE13_v0",
+    "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_PACKET02_DECISION_RECORD_v0.md",
+    "state_pointer": "State_of_the_Theory.md",
+    "roadmap_pointer": "formal/docs/paper/PHYSICS_ROADMAP_v0.md"
+  }
+}
