@@ -119,6 +119,33 @@ Counterfactual lane requirement (cycle11 activation):
   - `master_action_variant_counterfactual_lane_v0: COUNTERFACTUAL_CONTROL_QM_v0`
 - this is a policy-pressure discriminator tag and does not alter lane decision eligibility.
 
+## Cycle12 strategy-change policy (predeclared)
+
+Policy token:
+- `CYCLE12_PRIORITY_ADMISSIBILITY_PERTURBATION_v0`
+
+Measurable perturbation:
+- introduce `master_action_variant_priority_admissibility_score_v0` on priority lanes (`QFT`, `SR`).
+- enforce `master_action_variant_priority_admissibility_threshold_v0: 0.60`.
+- if score is below threshold, lane decision is forced to `INCONCLUSIVE_v0` for cycle12 (bounded policy-only force).
+
+Cycle12 predeclared success criteria:
+1. information-gain success is recorded if at least one holds:
+  - `inconclusive_delta != 0` between cycle11 and cycle12, or
+  - `retain_delta != 0` between cycle11 and cycle12, or
+  - `prune_delta != 0` between cycle11 and cycle12.
+2. strategy-change guards remain true in cycle12 execution report.
+
+Cycle12 predeclared failure and escalation trigger:
+- if cycle12 drift remains all-zero (`retain_delta = prune_delta = inconclusive_delta = 0`),
+  trigger mandatory escalation package before cycle13.
+
+Escalation package minimum contents:
+1. stronger counterfactual lane constraint:
+  - require dual control-lane counterfactual tags on `QM` and `GR`.
+2. tightened admissibility threshold transition:
+  - raise threshold token to `0.70` for priority-lane decision admissibility.
+
 ## Completion condition (for this note)
 
 This note is complete when:

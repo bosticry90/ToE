@@ -47,8 +47,9 @@ Interpretation policy:
 
 Next-cycle bounded objective:
 - Execute one additional packet cycle with variant metadata preserved.
-- Execute `VARIANT_C_PRESSURE_CYCLE11_v0` with explicit priority lanes (`QFT`, `SR`).
+- Execute `VARIANT_C_PRESSURE_CYCLE12_v0` with explicit priority lanes (`QFT`, `SR`).
 - Apply tightened discriminator rule token: `PRIORITY_DECISION_BASIS_REQUIRES_COUNTERFACTUAL_COMPATIBILITY_v0`.
+- Apply measurable perturbation token: `CYCLE12_PRIORITY_ADMISSIBILITY_PERTURBATION_v0`.
 - Recompute scorecard and compare drift in:
   - `prune_rate`
   - `retain_minus_prune`
@@ -61,6 +62,17 @@ Cycle plateau-stop contract:
 - mandatory strategy change must include at least one:
   - tightened decision-basis criterion, or
   - bounded counterfactual-control lane policy tag.
+
+Active plateau monitoring state:
+- `VARIANT_C_ZERO_DRIFT_STREAK_CURRENT_v0: 5`
+- `VARIANT_C_ZERO_DRIFT_STREAK_SOURCE_v0: CYCLE07_TO_CYCLE11`
+
+Cycle12 success/failure contract (predeclared):
+- success: any non-zero movement in cycle12 drift decision deltas (`retain_delta`, `prune_delta`, or `inconclusive_delta`).
+- failure: all decision deltas remain zero in cycle12 drift report.
+- failure action: mandatory escalation package before cycle13 with:
+  - stronger counterfactual lane constraint (`QM` and `GR` dual-control tags), and
+  - tightened priority admissibility threshold transition to `0.70`.
 
 Canonical pointers:
 - variant note: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_DISCRIMINATOR_NOTE_v0.md`
@@ -87,6 +99,8 @@ Canonical pointers:
 - cycle10 drift report: `formal/output/master_action_variant_c_pressure_cycle10_drift_report_v0.json`
 - cycle11 execution report: `formal/output/master_action_variant_c_pressure_cycle11_execution_report_v0.json`
 - cycle11 drift report: `formal/output/master_action_variant_c_pressure_cycle11_drift_report_v0.json`
-- cycle target: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE11_v0.md`
+- cycle12 execution report: `formal/output/master_action_variant_c_pressure_cycle12_execution_report_v0.json`
+- cycle12 drift report: `formal/output/master_action_variant_c_pressure_cycle12_drift_report_v0.json`
+- cycle target: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE12_v0.md`
 - packet-02 matrix: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0.json`
 - protocol: `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`

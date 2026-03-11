@@ -7,8 +7,8 @@
     "bridge_pointer": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
     "prediction_pointer": "formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md",
     "discriminator_output_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_DISCRIMINATOR_EMP_QM_01_v0.md",
-    "uncertainty_annotation": "qm_packet02_variant_c_pressure_cycle11_uncertainty_v0",
-    "bounded_validity_window": "qm_packet02_variant_c_pressure_cycle11_window_v0",
+    "uncertainty_annotation": "qm_packet02_variant_c_pressure_cycle12_uncertainty_v0",
+    "bounded_validity_window": "qm_packet02_variant_c_pressure_cycle12_window_v0",
     "evidence_tier": "INTERMEDIATE_v0",
     "decision_eligibility": {
       "retain_allowed": true,
@@ -21,7 +21,7 @@
     "m4_seam_closure_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_M4_SEAM_CLOSURE_PROMOTION_v0.md",
     "master_action_variant_candidate_v0": "VARIANT_A_BASELINE_v0",
     "master_action_variant_note_pointer_v0": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_DISCRIMINATOR_NOTE_v0.md",
-    "master_action_variant_cycle_target_v0": "VARIANT_C_PRESSURE_CYCLE11_v0",
+    "master_action_variant_cycle_target_v0": "VARIANT_C_PRESSURE_CYCLE12_v0",
     "master_action_variant_cycle_role_v0": "CONTROL_LANE_v0",
     "master_action_variant_counterfactual_lane_v0": "COUNTERFACTUAL_CONTROL_QM_v0"
   }

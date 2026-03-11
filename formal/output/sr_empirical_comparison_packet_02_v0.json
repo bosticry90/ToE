@@ -2,13 +2,13 @@
   "artifact_id": "sr_empirical_comparison_packet_02_v0",
   "payload": {
     "status": "RUN_BOUNDED_v0_NONCLAIM",
-    "decision": "RETAIN_v0",
+    "decision": "INCONCLUSIVE_v0",
     "artifact_pointer": "formal/output/toe_master_action_shadow_numerics_cycle01_v0.json",
     "bridge_pointer": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
     "prediction_pointer": "formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md",
     "discriminator_output_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_DISCRIMINATOR_EMP_SR_01_v0.md",
-    "uncertainty_annotation": "sr_packet02_variant_c_pressure_cycle11_uncertainty_v0",
-    "bounded_validity_window": "sr_packet02_variant_c_pressure_cycle11_window_v0",
+    "uncertainty_annotation": "sr_packet02_variant_c_pressure_cycle12_uncertainty_v0",
+    "bounded_validity_window": "sr_packet02_variant_c_pressure_cycle12_window_v0",
     "evidence_tier": "INTERMEDIATE_v0",
     "decision_eligibility": {
       "retain_allowed": true,
@@ -16,17 +16,19 @@
       "prune_guard_satisfied": true
     },
     "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md",
-    "decision_basis": "cycle11_variant_c_priority_lane_retain_flip_counter_2_counterfactual_checked_v0",
-    "comparator_delta_summary": "variant_c_priority_lane_cycle11_retain_delta_flip_counter_2_counterfactual_checked_v0",
+    "decision_basis": "cycle12_variant_c_priority_lane_inconclusive_admissibility_score_0p55_threshold_0p60_v0",
+    "comparator_delta_summary": "variant_c_priority_lane_cycle12_inconclusive_admissibility_fail_v0",
     "m4_seam_closure_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md",
     "master_action_variant_candidate_v0": "VARIANT_C_SEAM_TRANSPORT_CROSS_TERM_v0",
     "master_action_variant_note_pointer_v0": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_DISCRIMINATOR_NOTE_v0.md",
-    "master_action_variant_cycle_target_v0": "VARIANT_C_PRESSURE_CYCLE11_v0",
+    "master_action_variant_cycle_target_v0": "VARIANT_C_PRESSURE_CYCLE12_v0",
     "master_action_variant_cycle_role_v0": "PRIORITY_LANE_v0",
-    "master_action_variant_priority_threshold_profile_v0": "STRICT_PRIORITY_THRESHOLD_CYCLE11_v0",
+    "master_action_variant_priority_threshold_profile_v0": "STRICT_PRIORITY_THRESHOLD_CYCLE12_v0",
     "master_action_variant_flip_eligibility_rule_v0": "TWO_CONSECUTIVE_DRIFT_WINDOWS_REQUIRED_v0",
     "master_action_variant_flip_trigger_counter_v0": 2,
     "master_action_variant_flip_eligibility_status_v0": "ELIGIBLE_v0",
-    "master_action_variant_counterfactual_check_v0": "PASS_v0"
+    "master_action_variant_counterfactual_check_v0": "PASS_v0",
+    "master_action_variant_priority_admissibility_threshold_v0": 0.6,
+    "master_action_variant_priority_admissibility_score_v0": 0.55
   }
 }

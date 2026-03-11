@@ -34,13 +34,13 @@
     },
     "QFT": {
       "decision": "PRUNE_v0",
-      "basis": "cycle11_variant_c_priority_lane_prune_flip_counter_2_counterfactual_checked_v0",
+      "basis": "cycle12_variant_c_priority_lane_prune_admissibility_score_0p64_threshold_0p60_v0",
       "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER",
       "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md"
     },
     "SR": {
-      "decision": "RETAIN_v0",
-      "basis": "cycle11_variant_c_priority_lane_retain_flip_counter_2_counterfactual_checked_v0",
+      "decision": "INCONCLUSIVE_v0",
+      "basis": "cycle12_variant_c_priority_lane_inconclusive_admissibility_score_0p55_threshold_0p60_v0",
       "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER",
       "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md"
     }
