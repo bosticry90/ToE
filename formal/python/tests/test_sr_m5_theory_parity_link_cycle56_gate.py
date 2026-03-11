@@ -74,7 +74,7 @@ def test_sr_m5_theory_parity_link_cycle56_gate() -> None:
     assert m5_parity.get("gate_path") == "formal/python/tests/test_sr_m5_theory_parity_link_cycle56_gate.py"
 
     for text in (target_text, sr_text, state_text, roadmap_text):
-        assert _extract_token(text, "SR_M5_STATUS_v0") == "RUN_BOUNDED_v0_NONCLAIM"
+        assert _extract_token(text, "SR_M5_STATUS_v0") == "COMPLETE_BOUNDED_v0"
         assert _extract_token(text, "SR_M5_THEORY_PARITY_ARTIFACT_v0") == EXPECTED_ARTIFACT_ID
         assert _extract_token(text, "SR_M5_THEORY_PARITY_SHA256_v0") == artifact_hash
         assert _extract_token(text, "SR_M5_THEORY_PARITY_GATE_v0") == EXPECTED_GATE

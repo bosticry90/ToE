@@ -53,10 +53,14 @@ def test_deep_maturity_program_pointers_and_tokens_are_pinned() -> None:
         "M3_EMPIRICALLY_DISCRIMINATIVE",
         "M4_CROSS_PILLAR_INEVITABLE",
         "M5_THEORY_PARITY_LINKED",
-        "PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0: ACTIVE_v0",
-        "PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_THEORY_PARITY_LINK_EXECUTION_v0",
-        "PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0",
-        "PILLAR_DEEP_MATURITY_NEXT_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0",
+        "PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0: COMPLETE_BOUNDED_v0",
+        "PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_COMPLETION_CLOSED_v0",
+        "PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-PHASE5-SR-M5-CONTROLLED-v0",
+        "PILLAR_DEEP_MATURITY_NEXT_TARGET_v0: TARGET-PHASE5-SR-M5-CONTROLLED-v0",
+        "PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_STATUS_v0: COMPLETE_BOUNDED_v0",
+        "PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_ARTIFACT_v0: phase5_m5_completion_closeout_checkpoint_v0",
+        "PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_SHA256_v0:",
+        "PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_GATE_v0: formal/python/tests/test_phase5_m5_completion_closeout_gate.py",
         "PHASE5_M5_COMPLETION_MIN_ACTIVE_CYCLES_v0: 10",
         "PHASE5_M5_COMPLETION_STABILITY_WINDOW_v0: 5_CONSECUTIVE_GREEN_v0",
         "PHASE5_M5_COMPLETION_REQUIRED_GATES_v0: SR_M5_THEORY_PARITY_AND_PHASE5_CONTRACT_AND_ARCHIVE_DISCIPLINE",
@@ -105,8 +109,10 @@ def test_deep_maturity_program_pointers_and_tokens_are_pinned() -> None:
         "formal/python/tests/test_pillar_deep_maturity_next_target_semantics_gate.py",
         "formal/python/tests/test_sr_m5_archive_retention_policy_gate.py",
         "formal/python/tests/test_sr_m5_periodic_quality_checkpoint_gate.py",
+        "formal/python/tests/test_phase5_m5_completion_closeout_gate.py",
         "formal/docs/release/SR_M5_ARCHIVE_RETENTION_POLICY_v0.md",
         "formal/output/sr_m5_quality_checkpoint_cycle50_v0.json",
+        "formal/output/phase5_m5_completion_closeout_checkpoint_v0.json",
         REGISTRY_REL,
         GATE_REL,
     ):
@@ -169,6 +175,12 @@ def test_deep_maturity_registry_covers_all_matrix_pillars() -> None:
     assert registry.get("sr_m5_periodic_quality_checkpoint_gate_path") == (
         "formal/python/tests/test_sr_m5_periodic_quality_checkpoint_gate.py"
     )
+    assert registry.get("phase5_m5_closeout_gate_path") == (
+        "formal/python/tests/test_phase5_m5_completion_closeout_gate.py"
+    )
+    assert registry.get("phase5_m5_closeout_artifact_path") == (
+        "formal/output/phase5_m5_completion_closeout_checkpoint_v0.json"
+    )
     assert registry.get("sr_m5_archive_retention_policy_doc") == (
         "formal/docs/release/SR_M5_ARCHIVE_RETENTION_POLICY_v0.md"
     )
@@ -186,10 +198,10 @@ def test_deep_maturity_registry_covers_all_matrix_pillars() -> None:
     assert registry.get("sr_m3_completion_gate_path") == "formal/python/tests/test_sr_m3_completion_promotion_cycle01_gate.py"
 
     status = registry.get("program_status", {})
-    assert status.get("PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0") == "ACTIVE_v0"
-    assert status.get("PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0") == "PHASE_5_M5_THEORY_PARITY_LINK_EXECUTION_v0"
-    assert status.get("PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0") == "TARGET-SR-M5-THEORY-PARITY-LINK-v0"
-    assert status.get("PILLAR_DEEP_MATURITY_NEXT_TARGET_v0") == "TARGET-SR-M5-THEORY-PARITY-LINK-v0"
+    assert status.get("PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0") == "COMPLETE_BOUNDED_v0"
+    assert status.get("PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0") == "PHASE_5_M5_COMPLETION_CLOSED_v0"
+    assert status.get("PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0") == "TARGET-PHASE5-SR-M5-CONTROLLED-v0"
+    assert status.get("PILLAR_DEEP_MATURITY_NEXT_TARGET_v0") == "TARGET-PHASE5-SR-M5-CONTROLLED-v0"
 
     consolidation = registry.get("m3_consolidation", {})
     assert consolidation.get("target_id") == "TARGET-PHASE3-M3-CONSOLIDATION-PROMOTION-v0"
@@ -302,7 +314,7 @@ def test_deep_maturity_registry_covers_all_matrix_pillars() -> None:
 
     sr_row = next((row for row in registry_rows if row.get("pillar_id") == "PILLAR-SR"), None)
     assert sr_row is not None, "PILLAR-SR row is required."
-    assert sr_row.get("next_target") == "TARGET-SR-M5-THEORY-PARITY-LINK-v0"
+    assert sr_row.get("next_target") == COMPLETED_ROW_TERMINAL_TARGET
 
     for row in registry_rows:
         if row.get("pillar_id") != "PILLAR-SR" and str(row.get("m4_status", "")).startswith("COMPLETE"):

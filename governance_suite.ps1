@@ -129,6 +129,7 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py `
   formal/python/tests/test_sr_m5_cycle_archive_discipline_gate.py `
   formal/python/tests/test_pillar_deep_maturity_next_target_semantics_gate.py `
+  formal/python/tests/test_phase5_m5_completion_closeout_gate.py `
   formal/python/tests/test_sr_m5_archive_retention_policy_gate.py `
   formal/python/tests/test_sr_m5_periodic_quality_checkpoint_gate.py `
   formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py `

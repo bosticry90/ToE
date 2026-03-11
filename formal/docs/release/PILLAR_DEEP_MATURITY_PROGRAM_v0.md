@@ -65,6 +65,8 @@ Canonical pointers:
 - SR M4 seam-closure promotion gate: `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`
 - SR M5 theory-parity-link target: `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`
 - SR M5 theory-parity-link gate: `formal/python/tests/test_sr_m5_theory_parity_link_cycle56_gate.py`
+- Phase-5 M5 completion closeout gate: `formal/python/tests/test_phase5_m5_completion_closeout_gate.py`
+- Phase-5 M5 completion closeout artifact: `formal/output/phase5_m5_completion_closeout_checkpoint_v0.json`
 - SR M5 phase-5 advancement contract gate: `formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py`
 - SR M5 archive discipline gate: `formal/python/tests/test_sr_m5_cycle_archive_discipline_gate.py`
 - SR M5 next-target semantics gate: `formal/python/tests/test_pillar_deep_maturity_next_target_semantics_gate.py`
@@ -76,10 +78,14 @@ Canonical pointers:
 - Existing phase advancement standard: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`
 
 Program status tokens:
-- `PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0: ACTIVE_v0`
-- `PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_THEORY_PARITY_LINK_EXECUTION_v0`
-- `PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0`
-- `PILLAR_DEEP_MATURITY_NEXT_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0`
+- `PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_COMPLETION_CLOSED_v0`
+- `PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-PHASE5-SR-M5-CONTROLLED-v0`
+- `PILLAR_DEEP_MATURITY_NEXT_TARGET_v0: TARGET-PHASE5-SR-M5-CONTROLLED-v0`
+- `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_ARTIFACT_v0: phase5_m5_completion_closeout_checkpoint_v0`
+- `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_SHA256_v0: e78f7b123d8ea1311d5616e8f6de85af6423281403ff683de58b0fda3bf21c00`
+- `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_GATE_v0: formal/python/tests/test_phase5_m5_completion_closeout_gate.py`
 
 ## Tier Model (M1-M5)
 
@@ -111,7 +117,7 @@ Exit criteria:
 ### Phase 2: Derivation completeness promotion
 
 Current execution status:
-- `PHASE_5_M5_THEORY_PARITY_LINK_EXECUTION_v0` is active.
+- `PHASE_5_M5_THEORY_PARITY_LINK_EXECUTION_v0` is complete and closed under bounded non-claim posture.
 - per-pillar M2 rows are in active bounded-run posture in the deep-maturity registry.
 - QM M3 completion-promotion tranche is complete under non-claim boundaries.
 - GR M3 completion-promotion tranche is complete under non-claim boundaries.
@@ -128,7 +134,7 @@ Current execution status:
 - EM M4 seam-closure promotion tranche is complete under non-claim boundaries.
 - QFT M4 seam-closure promotion tranche is complete under non-claim boundaries.
 - SR M4 seam-closure promotion tranche is complete under non-claim boundaries.
-- SR M5 theory-parity-link targeting is active under non-claim boundaries.
+- SR M5 theory-parity-link targeting is complete and transitioned to terminal bounded posture.
 
 Scope:
 1. Execute `M2` closure packages pillar by pillar.
@@ -169,6 +175,8 @@ Scope:
 
 Completion threshold tokens:
 - `PHASE5_M5_COMPLETION_MIN_ACTIVE_CYCLES_v0: 10`
+- `PHASE5_M5_COMPLETION_INTRO_CYCLE_v0: 40`
+- `PHASE5_M5_COMPLETION_COUNTING_RULE_v0: ACTIVE_SR_M5_CYCLE_NUMBER_MINUS_INTRO_CYCLE_PLUS_ONE`
 - `PHASE5_M5_COMPLETION_STABILITY_WINDOW_v0: 5_CONSECUTIVE_GREEN_v0`
 - `PHASE5_M5_COMPLETION_REQUIRED_GATES_v0: SR_M5_THEORY_PARITY_AND_PHASE5_CONTRACT_AND_ARCHIVE_DISCIPLINE`
 

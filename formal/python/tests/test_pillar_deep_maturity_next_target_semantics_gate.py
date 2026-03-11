@@ -28,6 +28,8 @@ def _read_json(path: Path) -> dict:
 def test_pillar_deep_maturity_next_target_semantics_gate() -> None:
     registry = _read_json(REGISTRY_PATH)
     assert registry.get("sr_m5_completed_row_terminal_next_target_token") == TERMINAL_TOKEN
+    status = registry.get("program_status", {})
+    program_completed = status.get("PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0") == "COMPLETE_BOUNDED_v0"
 
     rows = registry.get("pillars", [])
     assert isinstance(rows, list) and rows, "Missing deep maturity pillar rows."
@@ -36,7 +38,8 @@ def test_pillar_deep_maturity_next_target_semantics_gate() -> None:
     assert len(sr_rows) == 1, "Expected exactly one SR row in deep maturity registry."
     sr_row = sr_rows[0]
 
-    assert sr_row.get("next_target") == SR_ACTIVE_TOKEN
+    expected_sr_next_target = TERMINAL_TOKEN if program_completed else SR_ACTIVE_TOKEN
+    assert sr_row.get("next_target") == expected_sr_next_target
     assert str(sr_row.get("m4_status", "")).startswith("COMPLETE")
 
     for row in rows:

@@ -79,16 +79,22 @@ SR M4 seam-closure promotion bundle (bounded non-claim):
 - `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`
 
 SR M5 theory-parity-link tranche (bounded non-claim):
-- `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `SR_M5_STATUS_v0: COMPLETE_BOUNDED_v0`
 - `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle56_v0`
 - `SR_M5_THEORY_PARITY_SHA256_v0: 8ba86c73090c17ee0a2e1f41bf0c984ec46d427866703715291b4ad7202c799d`
 - `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `SR_M5_PHASE5_ADVANCEMENT_DELTA_TOKEN_v0: CYCLE56_POINTER_PARITY_ADVANCEMENT_v0`
 - `SR_M5_PHASE5_ADVANCEMENT_CONTRACT_GATE_v0: formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py`
 - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
+- `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_ARTIFACT_v0: phase5_m5_completion_closeout_checkpoint_v0`
+- `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_SHA256_v0: e78f7b123d8ea1311d5616e8f6de85af6423281403ff683de58b0fda3bf21c00`
+- `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_GATE_v0: formal/python/tests/test_phase5_m5_completion_closeout_gate.py`
 - `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`
 - `formal/output/sr_m5_theory_parity_link_cycle56_v0.json`
 - `formal/python/tests/test_sr_m5_theory_parity_link_cycle56_gate.py`
+- `formal/output/phase5_m5_completion_closeout_checkpoint_v0.json`
+- `formal/python/tests/test_phase5_m5_completion_closeout_gate.py`
 
 Adjudication token:
 - `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`

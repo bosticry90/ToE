@@ -31,15 +31,17 @@
   "sr_m5_next_target_semantics_gate_path": "formal/python/tests/test_pillar_deep_maturity_next_target_semantics_gate.py",
   "sr_m5_archive_retention_policy_gate_path": "formal/python/tests/test_sr_m5_archive_retention_policy_gate.py",
   "sr_m5_periodic_quality_checkpoint_gate_path": "formal/python/tests/test_sr_m5_periodic_quality_checkpoint_gate.py",
+  "phase5_m5_closeout_gate_path": "formal/python/tests/test_phase5_m5_completion_closeout_gate.py",
+  "phase5_m5_closeout_artifact_path": "formal/output/phase5_m5_completion_closeout_checkpoint_v0.json",
   "sr_m5_archive_retention_policy_doc": "formal/docs/release/SR_M5_ARCHIVE_RETENTION_POLICY_v0.md",
   "sr_m5_latest_quality_checkpoint_artifact_path": "formal/output/sr_m5_quality_checkpoint_cycle50_v0.json",
   "sr_m5_completed_row_terminal_next_target_token": "TARGET-PHASE5-SR-M5-CONTROLLED-v0",
   "m3_consolidation_gate_path": "formal/python/tests/test_phase3_m3_consolidation_promotion_cycle01_gate.py",
   "program_status": {
-    "PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0": "ACTIVE_v0",
-    "PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0": "PHASE_5_M5_THEORY_PARITY_LINK_EXECUTION_v0",
-    "PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0": "TARGET-SR-M5-THEORY-PARITY-LINK-v0",
-    "PILLAR_DEEP_MATURITY_NEXT_TARGET_v0": "TARGET-SR-M5-THEORY-PARITY-LINK-v0"
+    "PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0": "COMPLETE_BOUNDED_v0",
+    "PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0": "PHASE_5_M5_COMPLETION_CLOSED_v0",
+    "PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0": "TARGET-PHASE5-SR-M5-CONTROLLED-v0",
+    "PILLAR_DEEP_MATURITY_NEXT_TARGET_v0": "TARGET-PHASE5-SR-M5-CONTROLLED-v0"
   },
   "m3_consolidation": {
     "target_id": "TARGET-PHASE3-M3-CONSOLIDATION-PROMOTION-v0",
@@ -386,7 +388,7 @@
       "m2_status": "COMPLETE_BOUNDED_v0",
       "m3_status": "COMPLETE_BOUNDED_v0",
       "m4_status": "COMPLETE_BOUNDED_v0",
-      "next_target": "TARGET-SR-M5-THEORY-PARITY-LINK-v0",
+      "next_target": "TARGET-PHASE5-SR-M5-CONTROLLED-v0",
       "m2_plan_doc": "formal/docs/paper/DERIVATION_TARGET_SR_FULL_DERIVATION_ENFORCEMENT_ROADMAP_v0.md",
       "m2_exit_rows": {
         "analytic_completeness": {

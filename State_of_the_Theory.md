@@ -184,10 +184,12 @@ Canonical bounded status note (2026-02-24):
 - SR M4 seam-closure promotion gate pointer: `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`.
 - SR M5 theory-parity-link target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_M5_THEORY_PARITY_LINK_v0.md`.
 - SR M5 theory-parity-link gate pointer: `formal/python/tests/test_sr_m5_theory_parity_link_cycle56_gate.py`.
-- `PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0: ACTIVE_v0`
-- `PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_THEORY_PARITY_LINK_EXECUTION_v0`
-- `PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0`
-- `PILLAR_DEEP_MATURITY_NEXT_TARGET_v0: TARGET-SR-M5-THEORY-PARITY-LINK-v0`
+- Phase-5 M5 completion closeout gate pointer: `formal/python/tests/test_phase5_m5_completion_closeout_gate.py`.
+- Phase-5 M5 completion closeout artifact pointer: `formal/output/phase5_m5_completion_closeout_checkpoint_v0.json`.
+- `PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_COMPLETION_CLOSED_v0`
+- `PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-PHASE5-SR-M5-CONTROLLED-v0`
+- `PILLAR_DEEP_MATURITY_NEXT_TARGET_v0: TARGET-PHASE5-SR-M5-CONTROLLED-v0`
 - `PHASE3_M3_CONSOLIDATION_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `PHASE3_M3_CONSOLIDATION_READINESS_v0: READY_FOR_M4_SEAM_CLOSURE_PROMOTION_v0`
 - `PHASE3_M3_CONSOLIDATION_ARTIFACT_v0: phase3_m3_consolidation_promotion_cycle01_v0`
@@ -278,7 +280,7 @@ Canonical bounded status note (2026-02-24):
 - `SR_M4_SEAM_CLOSURE_SHA256_v0: 10e6a8c286f2beba41cdb55b6c58a4e894fcfc2e3166a6e317646d0dca27982d`
 - `SR_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/sr_m4_seam_closure_promotion_cycle01_v0.json`
-- `SR_M5_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `SR_M5_STATUS_v0: COMPLETE_BOUNDED_v0`
 - `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle56_v0`
 - `SR_M5_THEORY_PARITY_SHA256_v0: 8ba86c73090c17ee0a2e1f41bf0c984ec46d427866703715291b4ad7202c799d`
 - `SR_M5_THEORY_PARITY_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -286,6 +288,10 @@ Canonical bounded status note (2026-02-24):
 - `SR_M5_PHASE5_ADVANCEMENT_CONTRACT_GATE_v0: formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py`
 - `SR_M5_READINESS_v0: THEORY_PARITY_LINK_PINNED_v0`
 - `formal/output/sr_m5_theory_parity_link_cycle56_v0.json`
+- `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_STATUS_v0: COMPLETE_BOUNDED_v0`
+- `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_ARTIFACT_v0: phase5_m5_completion_closeout_checkpoint_v0`
+- `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_SHA256_v0: e78f7b123d8ea1311d5616e8f6de85af6423281403ff683de58b0fda3bf21c00`
+- `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_GATE_v0: formal/python/tests/test_phase5_m5_completion_closeout_gate.py`
 - `QM_M2_ANALYTIC_COMPLETENESS_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `QM_M2_ANALYTIC_COMPLETENESS_ARTIFACT_v0: qm_m2_analytic_completeness_scaffold_cycle01_v0`
 - `QM_M2_ANALYTIC_COMPLETENESS_SHA256_v0: 192432c694de481ae9c34b073ebcd214dacfd1ce1b0adc6799697c82bb9d301e`
