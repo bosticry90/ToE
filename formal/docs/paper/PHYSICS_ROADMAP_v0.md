@@ -205,6 +205,9 @@ No-deviation sequencing rule:
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE09_v0.md`
   - `formal/output/toe_master_action_shadow_numerics_cycle09_v0.json`
   - `formal/python/tests/test_toe_master_action_shadow_numerics_cycle09_gate.py`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE10_v0.md`
+  - `formal/output/toe_master_action_shadow_numerics_cycle10_v0.json`
+  - `formal/python/tests/test_toe_master_action_shadow_numerics_cycle10_gate.py`
   - `formal/python/tests/test_packet02_m4_seam_coupling_gate.py`
   - `formal/python/tests/test_foundational_empirical_packet02_matrix_consistency_gate.py`
   - `formal/python/tests/test_foundational_empirical_packet02_decision_balance_gate.py`

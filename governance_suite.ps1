@@ -92,6 +92,7 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle07_gate.py `
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle08_gate.py `
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle09_gate.py `
+  formal/python/tests/test_toe_master_action_shadow_numerics_cycle10_gate.py `
   formal/python/tests/test_qm_empirical_packet_01_evidence_promotion_gate.py `
   formal/python/tests/test_gr_empirical_comparison_packet_01_gate.py `
   formal/python/tests/test_gr_empirical_packet_01_evidence_promotion_gate.py `
