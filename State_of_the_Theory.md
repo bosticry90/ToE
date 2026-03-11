@@ -1151,6 +1151,8 @@ Governance architecture-freeze checkpoint (2026-02-18):
     - `ADJUDICATION_SYNC`
 - Governance version lock is pinned:
   - `GOVERNANCE_VERSION_v2.lock`
+- Historical governance lock note:
+  - `GOVERNANCE_VERSION_v1.lock` is retained as historical reference-only and is not canonical lock authority.
 - New machine-enforced governance tests are pinned:
   - `formal/python/tests/test_architecture_schema_enforcement.py`
   - `formal/python/tests/test_pillar_structure_integrity.py`
@@ -1165,6 +1167,14 @@ Governance architecture-freeze checkpoint (2026-02-18):
   - `pytest` summary: `895 passed, 1 skipped`
 - Enforcement posture:
   - governance drift now fails CI unless explicitly versioned and synchronized.
+
+Repository disposition checkpoint (2026-03-11):
+- Promote/archive/prune checklist is pinned:
+  - `formal/docs/release/REPO_PROMOTE_ARCHIVE_PRUNE_CHECKLIST_v0.md`
+- Archived root planning note (reference-only):
+  - `archive/docs/Deepening.txt`
+- Aristotle exploratory hold (not promoted into canonical governance/physics workflow):
+  - `formal/aristotle/claim_registry.yaml`
 
 EM pillar architecture kickoff checkpoint (2026-02-18):
 - EM target is now architecture-v1 structured and phase-synchronized:
