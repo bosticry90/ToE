@@ -51,6 +51,34 @@ theorem em_qft_seam_cycle01_theorem_pointer
     classBCompatibilitySurface witness ctx potential :=
   h_surface
 
+/-- Cycle02 bounded discharge surface for the EM-QFT Class-B seam pilot.
+
+This extends the cycle01 pointer by binding explicit no-shortcut posture while
+retaining Class-B scope.
+-/
+def cycle02DischargeSurface
+    {GaugeElem FieldValue : Type}
+    (witness : EMQFTSeamWitnessPackage)
+    (ctx : ToeFormal.QFT.GaugeContext GaugeElem FieldValue)
+    (potential : ToeFormal.EM.U1.GaugePotential) : Prop :=
+  classBCompatibilitySurface witness ctx potential /\
+    witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0"
+
+/-- Cycle02 bounded discharge theorem for EM-QFT seam promotion.
+
+This theorem discharges the bounded theorem-route obligation for cycle02 while
+remaining explicitly non-promotional (Class B retained).
+-/
+theorem em_qft_seam_cycle02_discharge_proof
+    {GaugeElem FieldValue : Type}
+    (witness : EMQFTSeamWitnessPackage)
+    (ctx : ToeFormal.QFT.GaugeContext GaugeElem FieldValue)
+    (potential : ToeFormal.EM.U1.GaugePotential)
+    (h_surface : classBCompatibilitySurface witness ctx potential)
+    (h_no_shortcut : witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0") :
+    cycle02DischargeSurface witness ctx potential := by
+  exact And.intro h_surface h_no_shortcut
+
 end EMQFT
 end Bridges
 end ToeFormal

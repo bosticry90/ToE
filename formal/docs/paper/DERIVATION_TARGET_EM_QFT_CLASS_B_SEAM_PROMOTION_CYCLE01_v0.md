@@ -57,4 +57,4 @@ Cycle01 theorem pointer lock
 
 Cycle01 exit posture
 - `EM_QFT_CLASS_B_PROMOTION_CYCLE01_STATUS_v0: THEOREM_POINTER_PINNED_PENDING_PROOF_DISCHARGE`
-- Class status remains `B` until theorem pointer + executable gate evidence are both pinned.
+- Class status remains `B` until the full `B -> A` completion bundle in `TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md` is pinned (witness package, theorem pointer, no-shortcut / anti-circularity statement, executable gate, and registry class flip).

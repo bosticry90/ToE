@@ -21,6 +21,7 @@ Canonical anchors:
 - `formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md`
 - `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
 - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md`
 - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_EXECUTION_PLAN_v0.md`
 - `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`
@@ -29,6 +30,7 @@ Canonical anchors:
 - `formal/python/tests/test_toe_master_action_assumption_classification_gate.py`
 - `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`
 - `formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`
+- `formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py`
 
 Registry posture token:
 - `TOE_MASTER_ACTION_SEAM_REGISTRY_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
@@ -120,7 +122,17 @@ Theorem pointer (cycle01):
 Theorem gate pointer (cycle01):
 - `formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`
 
+Discharge target pointer (cycle02):
+- `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
+
+Discharge theorem pointer (cycle02):
+- `formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean#em_qft_seam_cycle02_discharge_proof`
+
+Discharge gate pointer (cycle02):
+- `formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py`
+
 Cycle01 pilot lock:
 - `TOE_CLASS_B_PROMOTION_PILOT_SEAM_v0: SEAM-EM-QFT`
 - `TOE_CLASS_B_PROMOTION_PILOT_CLASS_v0: TOE_CK_CLASS_COMPATIBILITY_v0`
-- `EM_QFT_CLASS_B_PROMOTION_CYCLE01_STATUS_v0: THEOREM_POINTER_PINNED_PENDING_PROOF_DISCHARGE`
+- `EM_QFT_CLASS_B_PROMOTION_CYCLE01_STATUS_v0: THEOREM_POINTER_PINNED_v0_COMPLETE`
+- `EM_QFT_CLASS_B_PROMOTION_CYCLE02_STATUS_v0: PROOF_DISCHARGED_CLASS_B_PENDING_CLASS_FLIP_v0`

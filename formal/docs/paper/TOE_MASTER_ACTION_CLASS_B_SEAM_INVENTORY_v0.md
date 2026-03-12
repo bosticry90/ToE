@@ -29,9 +29,11 @@ Canonical anchors:
 - `formal/output/sr_m4_seam_closure_promotion_cycle01_v0.json`
 - `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`
 - `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
 - `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`
 - `formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean`
 - `formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`
+- `formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py`
 
 Inventory posture token:
 - `TOE_MASTER_ACTION_CLASS_B_INVENTORY_STATUS_v0: ACTIVE_AUDIT_v0_NONCLAIM`
@@ -40,7 +42,7 @@ Class-B inventory rows (v0)
 
 | seam_id | class | seam_class_token | witness_route_status | source_artifacts | promotion_candidate |
 | --- | --- | --- | --- | --- | --- |
-| `SEAM-EM-QFT` | `B` | `TOE_CK_CLASS_COMPATIBILITY_v0` | `THEOREM_POINTER_PINNED_PENDING_PROOF_DISCHARGE_v0` | `em_m4_seam_closure_promotion_cycle01_v0`, `qft_m4_seam_closure_promotion_cycle01_v0` | `YES` |
+| `SEAM-EM-QFT` | `B` | `TOE_CK_CLASS_COMPATIBILITY_v0` | `PROOF_DISCHARGED_CYCLE02_v0` | `em_m4_seam_closure_promotion_cycle01_v0`, `qft_m4_seam_closure_promotion_cycle01_v0` | `YES` |
 | `SEAM-GR-QM` | `B` | `TOE_CK_CLASS_COMPATIBILITY_v0` | `COUNTERFACTUAL_BUNDLE_PINNED_v0` | `gr_m4_seam_closure_promotion_cycle01_v0`, `qm_m4_seam_closure_promotion_cycle01_v0` | `NO` |
 | `SEAM-QM-STAT` | `B` | `TOE_CK_CLASS_COMPATIBILITY_v0` | `COUNTERFACTUAL_BUNDLE_PINNED_v0` | `qm_m4_seam_closure_promotion_cycle01_v0` | `NO` |
 | `SEAM-STAT-QM` | `B` | `TOE_CK_CLASS_COMPATIBILITY_v0` | `COUNTERFACTUAL_BUNDLE_PINNED_v0` | `stat_m4_seam_closure_promotion_cycle01_v0` | `NO` |
@@ -51,10 +53,14 @@ Pilot promotion lock (cycle01)
 - `TOE_CLASS_B_PROMOTION_PILOT_SEAM_v0: SEAM-EM-QFT`
 - `TOE_CLASS_B_PROMOTION_PILOT_CLASS_v0: TOE_CK_CLASS_COMPATIBILITY_v0`
 - `TOE_CLASS_B_PROMOTION_PILOT_TARGET_v0: DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0`
+- `TOE_CLASS_B_PROMOTION_PILOT_DISCHARGE_TARGET_v0: DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0`
 - `TOE_CLASS_B_PROMOTION_PILOT_WITNESS_PACKAGE_v0: formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`
 - `TOE_CLASS_B_PROMOTION_PILOT_GATE_v0: formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`
 - `TOE_CLASS_B_PROMOTION_PILOT_THEOREM_POINTER_v0: formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean#em_qft_seam_cycle01_theorem_pointer`
 - `TOE_CLASS_B_PROMOTION_PILOT_THEOREM_GATE_v0: formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`
+- `TOE_CLASS_B_PROMOTION_PILOT_DISCHARGE_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean#em_qft_seam_cycle02_discharge_proof`
+- `TOE_CLASS_B_PROMOTION_PILOT_DISCHARGE_GATE_v0: formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py`
+- `TOE_CLASS_B_PROMOTION_PILOT_CLASS_STATUS_v0: B_RETAINED_v0`
 
 Promotion completion rule (v0)
 - A seam may move `B -> A` only when all are pinned:
