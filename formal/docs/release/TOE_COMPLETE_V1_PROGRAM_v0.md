@@ -37,8 +37,11 @@ Canonical program anchors:
 - `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE16_RELEASE_NOTE_v0.md`
 - `formal/output/deep_maturity_delta_v1_cycle01_v0.json`
 - `formal/output/deep_maturity_delta_v1_cycle02_v0.json`
+- `formal/output/deep_maturity_delta_v1_cycle03_v0.json`
 - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE01_v0.md`
+- `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE02_v0.md`
 - `formal/output/proof_debt_burndown_checkpoint_cycle01_v0.json`
+- `formal/output/proof_debt_burndown_checkpoint_cycle02_v0.json`
 - `formal/docs/release/TOE_COMPLETE_V1_TERMINAL_GATE_v0.md`
 - `formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json`
 - `formal/output/toe_complete_v1_checkpoint_v0.json`
@@ -46,7 +49,7 @@ Canonical program anchors:
 Deep-maturity delta definition:
 - `DEEP_MATURITY_DELTA_v1_SCOPE_v0: ASSUMPTION_MINIMIZATION_AND_CROSS_SURFACE_INEVITABILITY_CONFIDENCE`
 - `DEEP_MATURITY_DELTA_v1_EXECUTION_MODE_v0: BOUNDED_NONCLAIM_CONTINUATION`
-- `DEEP_MATURITY_DELTA_v1_STATUS_v0: CYCLE02_INCREMENT_ATTESTED`
+- `DEEP_MATURITY_DELTA_v1_STATUS_v0: CYCLE03_INCREMENT_ATTESTED`
 
 Terminal gate definition:
 - `TOE_COMPLETE_V1_TERMINAL_REQUIRED_CONSECUTIVE_GOVERNANCE_GREEN_v0: 3`

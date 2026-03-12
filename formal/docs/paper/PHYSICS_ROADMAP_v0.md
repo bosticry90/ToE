@@ -212,8 +212,11 @@ No-deviation sequencing rule:
   - `formal/output/toe_complete_v1_checkpoint_v0.json`
   - `formal/output/deep_maturity_delta_v1_cycle01_v0.json`
   - `formal/output/deep_maturity_delta_v1_cycle02_v0.json`
+  - `formal/output/deep_maturity_delta_v1_cycle03_v0.json`
   - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE01_v0.md`
+  - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE02_v0.md`
   - `formal/output/proof_debt_burndown_checkpoint_cycle01_v0.json`
+  - `formal/output/proof_debt_burndown_checkpoint_cycle02_v0.json`
   - `formal/docs/release/TOE_COMPLETE_V1_TERMINAL_GATE_v0.md`
   - `formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json`
   - `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_03_v0.md`

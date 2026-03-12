@@ -1,14 +1,14 @@
 {
   "checkpoint_id": "TOE_COMPLETE_V1_TERMINAL_GATE_CHECKPOINT_v0",
   "status": "IN_PROGRESS_v0_NONCLAIM",
-  "generated_on": "2026-03-11T18:18:00",
+  "generated_on": "2026-03-11T19:30:00",
   "thresholds": {
     "required_consecutive_governance_green": 3,
     "critical_pending_tokens_allowed": 0,
     "reopen_policy_mode": "REGRESSION_ONLY"
   },
   "current_progress": {
-    "consecutive_governance_green": 3,
+    "consecutive_governance_green": 4,
     "critical_pending_tokens_detected": 2,
     "critical_pending_marker_refs": [
       "State_of_the_Theory.md:5112",
