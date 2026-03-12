@@ -22,9 +22,15 @@ Canonical bounded status note (2026-02-24):
 - Foundational derivation-chain execution plan pointer: `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_EXECUTION_PLAN_v0.md`.
 - Candidate master action pointer (non-canonical): `formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md`.
 - Master action seam-constraint registry pointer: `formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md`.
+- Master action Class-B seam inventory pointer: `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`.
+- EM-QFT Class-B seam-promotion pilot target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`.
+- Seam witness package schema pointer: `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`.
 - Master action shadow numerics target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_v0.md`.
 - Foundational prediction scaffold plan pointer: `formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md`.
 - Foundational empirical comparison protocol pointer: `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`.
+- Prediction-first hypothesis template pointer: `formal/docs/release/PREDICTION_FIRST_HYPOTHESIS_TEMPLATE_v0.md`.
+- Prediction-first Bragg packet-02 hypothesis instance pointer: `formal/docs/lanes/HYPOTHESIS_OV_DR_BR_PACKET02_v0.md`.
+- Prediction-first scoreboard pointer: `formal/output/prediction_first_scoreboard_v0.json`.
 - ToE empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
 - ToE empirical packet-01 evidence promotion target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`.
 - QM empirical comparison packet-01 target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_01_v0.md`.
@@ -187,6 +193,8 @@ Canonical bounded status note (2026-02-24):
 - Foundational empirical packet matrix pointer: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0.json`.
 - Foundational empirical packet-02 matrix pointer: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0.json`.
 - Master-action variant discriminator note pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_DISCRIMINATOR_NOTE_v0.md`.
+- Class-B seam inventory gate pointer: `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`.
+- Prediction-first scoreboard gate pointer: `formal/python/tests/test_prediction_first_scoreboard_gate.py`.
 - Foundational empirical packet-03 matrix pointer: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET03_MATRIX_v0.json`.
 - Foundational empirical packet-04 matrix pointer: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0.json`.
 - Foundational derivation chain matrix pointer: `formal/docs/paper/FOUNDATIONAL_DERIVATION_CHAIN_MATRIX_v0.json`.

@@ -80,9 +80,15 @@ No-deviation sequencing rule:
   - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_EXECUTION_PLAN_v0.md`
   - `formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md`
   - `formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md`
+  - `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
+  - `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_v0.md`
   - `formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md`
   - `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`
+  - `formal/docs/release/PREDICTION_FIRST_HYPOTHESIS_TEMPLATE_v0.md`
+  - `formal/docs/lanes/HYPOTHESIS_OV_DR_BR_PACKET02_v0.md`
+  - `formal/output/prediction_first_scoreboard_v0.json`
   - `formal/docs/paper/DERIVATION_TARGET_TOE_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_TOE_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
@@ -116,6 +122,8 @@ No-deviation sequencing rule:
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0.json`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0.json`
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_DISCRIMINATOR_NOTE_v0.md`
+  - `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`
+  - `formal/python/tests/test_prediction_first_scoreboard_gate.py`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET03_MATRIX_v0.json`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0.json`
   - `formal/docs/paper/FOUNDATIONAL_DERIVATION_CHAIN_MATRIX_v0.json`

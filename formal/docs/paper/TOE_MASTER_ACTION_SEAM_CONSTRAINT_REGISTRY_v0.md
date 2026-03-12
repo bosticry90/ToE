@@ -19,10 +19,14 @@ Non-claim boundary:
 
 Canonical anchors:
 - `formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md`
+- `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
 - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md`
 - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_EXECUTION_PLAN_v0.md`
+- `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`
 - `formal/python/tests/test_toe_master_action_seam_registry_gate.py`
 - `formal/python/tests/test_toe_master_action_assumption_classification_gate.py`
+- `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`
 
 Registry posture token:
 - `TOE_MASTER_ACTION_SEAM_REGISTRY_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
@@ -96,3 +100,18 @@ Delta objectives:
 1. Reduce duplicated policy assumptions across lane docs.
 2. Promote Class B entries to Class A only with explicit theorem witness pointers.
 3. Keep Class C entries explicit and non-promoted until bridge and transport closure exists.
+
+## Class-B promotion tranche (cycle01)
+
+Class-B inventory pointer:
+- `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`
+
+Pilot promotion target pointer:
+- `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
+
+Witness package schema pointer:
+- `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`
+
+Cycle01 pilot lock:
+- `TOE_CLASS_B_PROMOTION_PILOT_SEAM_v0: SEAM-EM-QFT`
+- `TOE_CLASS_B_PROMOTION_PILOT_CLASS_v0: TOE_CK_CLASS_COMPATIBILITY_v0`

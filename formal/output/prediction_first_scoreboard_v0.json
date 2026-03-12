@@ -1,0 +1,67 @@
+{
+  "scoreboard_id": "prediction_first_scoreboard_v0",
+  "status": "ACTIVE_v0_NONCLAIM",
+  "generated_on": "2026-03-11T22:45:00",
+  "source_surfaces": {
+    "protocol": "formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md",
+    "packet02_matrix": "formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0.json",
+    "packet02_ledger": "formal/output/empirical_packet02_decision_ledger_v0.json"
+  },
+  "decision_tokens": [
+    "RETAIN_v0",
+    "PRUNE_v0",
+    "INCONCLUSIVE_v0"
+  ],
+  "summary": {
+    "total_lanes": 7,
+    "retain_count": 4,
+    "prune_count": 2,
+    "inconclusive_count": 1,
+    "evidence_tier_floor": "INTERMEDIATE_v0",
+    "decision_balance_status": "MIXED_RETAIN_PRUNE_PRESENT_v0"
+  },
+  "rows": {
+    "QM": {
+      "decision": "RETAIN_v0",
+      "evidence_tier": "INTERMEDIATE_v0",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md",
+      "artifact_pointer": "formal/output/qm_empirical_comparison_packet_02_v0.json"
+    },
+    "GR": {
+      "decision": "RETAIN_v0",
+      "evidence_tier": "INTERMEDIATE_v0",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md",
+      "artifact_pointer": "formal/output/gr_empirical_comparison_packet_02_v0.json"
+    },
+    "STAT": {
+      "decision": "RETAIN_v0",
+      "evidence_tier": "INTERMEDIATE_v0",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md",
+      "artifact_pointer": "formal/output/stat_empirical_comparison_packet_02_v0.json"
+    },
+    "COSMO": {
+      "decision": "PRUNE_v0",
+      "evidence_tier": "INTERMEDIATE_v0",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md",
+      "artifact_pointer": "formal/output/cosmo_empirical_comparison_packet_02_v0.json"
+    },
+    "EM": {
+      "decision": "RETAIN_v0",
+      "evidence_tier": "INTERMEDIATE_v0",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md",
+      "artifact_pointer": "formal/output/em_empirical_comparison_packet_02_v0.json"
+    },
+    "QFT": {
+      "decision": "PRUNE_v0",
+      "evidence_tier": "INTERMEDIATE_v0",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md",
+      "artifact_pointer": "formal/output/qft_empirical_comparison_packet_02_v0.json"
+    },
+    "SR": {
+      "decision": "INCONCLUSIVE_v0",
+      "evidence_tier": "INTERMEDIATE_v0",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md",
+      "artifact_pointer": "formal/output/sr_empirical_comparison_packet_02_v0.json"
+    }
+  }
+}
