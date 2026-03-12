@@ -34,14 +34,19 @@ def test_class_b_inventory_surface_is_pinned() -> None:
         "TOE_CLASS_B_PROMOTION_PILOT_CLASS_v0: TOE_CK_CLASS_COMPATIBILITY_v0",
         "TOE_CLASS_B_PROMOTION_PILOT_TARGET_v0: DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0",
         "TOE_CLASS_B_PROMOTION_PILOT_DISCHARGE_TARGET_v0: DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0",
+        "TOE_CLASS_B_PROMOTION_PILOT_CLASS_FLIP_TARGET_v0: DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0",
         "TOE_CLASS_B_PROMOTION_PILOT_WITNESS_PACKAGE_v0: formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean",
         "TOE_CLASS_B_PROMOTION_PILOT_THEOREM_POINTER_v0: formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean#em_qft_seam_cycle01_theorem_pointer",
         "TOE_CLASS_B_PROMOTION_PILOT_THEOREM_GATE_v0: formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py",
         "TOE_CLASS_B_PROMOTION_PILOT_DISCHARGE_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean#em_qft_seam_cycle02_discharge_proof",
         "TOE_CLASS_B_PROMOTION_PILOT_DISCHARGE_GATE_v0: formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py",
-        "TOE_CLASS_B_PROMOTION_PILOT_CLASS_STATUS_v0: B_RETAINED_v0",
+        "TOE_CLASS_B_PROMOTION_PILOT_DISCHARGE_STATUS_v0: PROOF_DISCHARGED_CYCLE02_v0",
+        "TOE_CLASS_B_PROMOTION_PILOT_CLASS_FLIP_AUTHORIZATION_v0: formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean#em_qft_seam_cycle03_class_flip_authorization",
+        "TOE_CLASS_B_PROMOTION_PILOT_CLASS_FLIP_GATE_v0: formal/python/tests/test_em_qft_seam_promotion_cycle03_class_flip_gate.py",
+        "TOE_CLASS_B_PROMOTION_PILOT_CLASS_STATUS_v0: A_PROMOTED_v0",
         "formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md",
         "formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md",
+        "formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md",
         "formal/python/tests/test_toe_master_action_class_b_inventory_gate.py",
     )
     for token in required:
@@ -73,6 +78,8 @@ def test_class_b_inventory_is_cross_surface_pinned() -> None:
     theorem_gate_rel = "formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py"
     discharge_rel = "formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md"
     discharge_gate_rel = "formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py"
+    class_flip_rel = "formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md"
+    class_flip_gate_rel = "formal/python/tests/test_em_qft_seam_promotion_cycle03_class_flip_gate.py"
 
     assert inventory_rel in reg_text
     assert pilot_rel in reg_text
@@ -81,6 +88,8 @@ def test_class_b_inventory_is_cross_surface_pinned() -> None:
     assert theorem_gate_rel in reg_text
     assert discharge_rel in reg_text
     assert discharge_gate_rel in reg_text
+    assert class_flip_rel in reg_text
+    assert class_flip_gate_rel in reg_text
 
     for ref in (
         inventory_rel,
@@ -90,6 +99,8 @@ def test_class_b_inventory_is_cross_surface_pinned() -> None:
         theorem_gate_rel,
         discharge_rel,
         discharge_gate_rel,
+        class_flip_rel,
+        class_flip_gate_rel,
     ):
         assert ref in roadmap_text
         assert ref in state_text

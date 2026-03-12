@@ -32,10 +32,14 @@ def test_toe_master_action_seam_registry_surface_is_pinned() -> None:
         "TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0",
         "TOE_MASTER_ACTION_SEAM_REGISTRY_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM",
         "TOE_CK_CLASS_COMPATIBILITY_v0",
+        "TOE_CK_CLASS_THEOREM_LINKED_v0",
         "TOE_CK_CLASS_BRIDGE_ADMISSIBILITY_v0",
         "TOE_CK_CLASS_TRANSPORT_CONSISTENCY_v0",
         "TOE_CK_CLASS_REGIME_INTERFACE_BOUNDEDNESS_v0",
         "formal/python/tests/test_toe_master_action_seam_registry_gate.py",
+        "formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md",
+        "formal/python/tests/test_em_qft_seam_promotion_cycle03_class_flip_gate.py",
+        "EM_QFT_CLASS_B_PROMOTION_CYCLE03_STATUS_v0: CLASS_A_PROMOTED_v0_NONCLAIM",
     ):
         assert token in registry_text, f"Registry missing token `{token}`."
 

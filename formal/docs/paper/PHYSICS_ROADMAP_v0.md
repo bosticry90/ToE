@@ -83,6 +83,7 @@ No-deviation sequencing rule:
   - `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`
   - `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`
   - `formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean`
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_v0.md`
@@ -127,6 +128,7 @@ No-deviation sequencing rule:
   - `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`
   - `formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`
   - `formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py`
+  - `formal/python/tests/test_em_qft_seam_promotion_cycle03_class_flip_gate.py`
   - `formal/python/tests/test_prediction_first_scoreboard_gate.py`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET03_MATRIX_v0.json`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0.json`

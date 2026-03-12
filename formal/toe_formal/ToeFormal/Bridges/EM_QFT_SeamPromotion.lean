@@ -79,6 +79,34 @@ theorem em_qft_seam_cycle02_discharge_proof
     cycle02DischargeSurface witness ctx potential := by
   exact And.intro h_surface h_no_shortcut
 
+/-- Cycle03 bounded class-flip authorization surface.
+
+This surface records that cycle02 discharge prerequisites are present and a
+Class-A promotion-control action may be executed at the registry layer.
+-/
+def cycle03ClassFlipAuthorizationSurface
+    {GaugeElem FieldValue : Type}
+    (witness : EMQFTSeamWitnessPackage)
+    (ctx : ToeFormal.QFT.GaugeContext GaugeElem FieldValue)
+    (potential : ToeFormal.EM.U1.GaugePotential) : Prop :=
+  cycle02DischargeSurface witness ctx potential /\
+    witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0"
+
+/-- Cycle03 class-flip authorization theorem for EM-QFT seam promotion.
+
+This theorem does not add new physics proof obligations; it binds the already
+discharged cycle02 surface to the governance authorization step.
+-/
+theorem em_qft_seam_cycle03_class_flip_authorization
+    {GaugeElem FieldValue : Type}
+    (witness : EMQFTSeamWitnessPackage)
+    (ctx : ToeFormal.QFT.GaugeContext GaugeElem FieldValue)
+    (potential : ToeFormal.EM.U1.GaugePotential)
+    (h_discharge : cycle02DischargeSurface witness ctx potential) :
+    cycle03ClassFlipAuthorizationSurface witness ctx potential := by
+  have h_cycle01 : classBCompatibilitySurface witness ctx potential := h_discharge.left
+  exact And.intro h_discharge h_cycle01.right
+
 end EMQFT
 end Bridges
 end ToeFormal

@@ -22,6 +22,7 @@ Canonical anchors:
 - `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`
 - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md`
 - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_EXECUTION_PLAN_v0.md`
 - `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`
@@ -31,6 +32,7 @@ Canonical anchors:
 - `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`
 - `formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`
 - `formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py`
+- `formal/python/tests/test_em_qft_seam_promotion_cycle03_class_flip_gate.py`
 
 Registry posture token:
 - `TOE_MASTER_ACTION_SEAM_REGISTRY_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
@@ -91,6 +93,7 @@ Assumption classification token:
 Class A (theorem-linked constraints):
 - explicit theorem/target-linked assumptions already pinned in lane authority docs.
 - minimization stance: preserve theorem signatures; reduce duplicate narrative assumptions.
+- class token for promoted seam rows: `TOE_CK_CLASS_THEOREM_LINKED_v0`.
 
 Class B (policy-level placeholders):
 - seam constraints still described by policy names only.
@@ -131,8 +134,18 @@ Discharge theorem pointer (cycle02):
 Discharge gate pointer (cycle02):
 - `formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py`
 
+Class-flip target pointer (cycle03):
+- `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`
+
+Class-flip authorization theorem pointer (cycle03):
+- `formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean#em_qft_seam_cycle03_class_flip_authorization`
+
+Class-flip gate pointer (cycle03):
+- `formal/python/tests/test_em_qft_seam_promotion_cycle03_class_flip_gate.py`
+
 Cycle01 pilot lock:
 - `TOE_CLASS_B_PROMOTION_PILOT_SEAM_v0: SEAM-EM-QFT`
 - `TOE_CLASS_B_PROMOTION_PILOT_CLASS_v0: TOE_CK_CLASS_COMPATIBILITY_v0`
 - `EM_QFT_CLASS_B_PROMOTION_CYCLE01_STATUS_v0: THEOREM_POINTER_PINNED_v0_COMPLETE`
 - `EM_QFT_CLASS_B_PROMOTION_CYCLE02_STATUS_v0: PROOF_DISCHARGED_CLASS_B_PENDING_CLASS_FLIP_v0`
+- `EM_QFT_CLASS_B_PROMOTION_CYCLE03_STATUS_v0: CLASS_A_PROMOTED_v0_NONCLAIM`
