@@ -127,10 +127,13 @@ Canonical bounded status note (2026-02-24):
 - deep maturity delta v1 cycle01 artifact pointer: `formal/output/deep_maturity_delta_v1_cycle01_v0.json`.
 - deep maturity delta v1 cycle02 artifact pointer: `formal/output/deep_maturity_delta_v1_cycle02_v0.json`.
 - deep maturity delta v1 cycle03 artifact pointer: `formal/output/deep_maturity_delta_v1_cycle03_v0.json`.
+- deep maturity delta v1 cycle04 artifact pointer: `formal/output/deep_maturity_delta_v1_cycle04_v0.json`.
 - proof debt burndown packet cycle01 pointer: `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE01_v0.md`.
 - proof debt burndown checkpoint cycle01 pointer: `formal/output/proof_debt_burndown_checkpoint_cycle01_v0.json`.
 - proof debt burndown packet cycle02 pointer: `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE02_v0.md`.
 - proof debt burndown checkpoint cycle02 pointer: `formal/output/proof_debt_burndown_checkpoint_cycle02_v0.json`.
+- proof debt burndown packet cycle03 pointer: `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE03_v0.md`.
+- proof debt burndown checkpoint cycle03 pointer: `formal/output/proof_debt_burndown_checkpoint_cycle03_v0.json`.
 - ToE Complete-v1 terminal gate definition pointer: `formal/docs/release/TOE_COMPLETE_V1_TERMINAL_GATE_v0.md`.
 - ToE Complete-v1 terminal gate checkpoint pointer: `formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json`.
 - QM empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
@@ -2821,6 +2824,14 @@ ToE Complete-v1 checkpoint refresh cycle03 (2026-03-11):
   - master-action variant cycle17 continuation surfaces,
   - deep-maturity delta cycle03 increment token.
 
+ToE Complete-v1 checkpoint refresh cycle04 (2026-03-11):
+- deep-maturity delta cycle04 increment artifact is pinned:
+  - `formal/output/deep_maturity_delta_v1_cycle04_v0.json`
+- refreshed completion binding now references:
+  - active COSMO continuation cycle05 packet/checkpoint,
+  - master-action variant cycle17 continuation surfaces,
+  - deep-maturity delta cycle04 increment token.
+
 Proof-debt burndown checkpoint cycle01 (2026-03-11):
 - parallel proof-debt packet targeting pending non-alias/equivalence/injectivity markers is pinned:
   - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE01_v0.md`
@@ -2833,6 +2844,14 @@ Proof-debt burndown checkpoint cycle02 (2026-03-11):
 - parallel proof-debt packet continuation is pinned:
   - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE02_v0.md`
   - `formal/output/proof_debt_burndown_checkpoint_cycle02_v0.json`
+- targeted pending markers remain explicit:
+  - `State_of_the_Theory.md:5112`
+  - `State_of_the_Theory.md:5148`
+
+Proof-debt burndown checkpoint cycle03 (2026-03-11):
+- parallel proof-debt packet continuation is pinned:
+  - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE03_v0.md`
+  - `formal/output/proof_debt_burndown_checkpoint_cycle03_v0.json`
 - targeted pending markers remain explicit:
   - `State_of_the_Theory.md:5112`
   - `State_of_the_Theory.md:5148`
