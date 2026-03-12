@@ -34,6 +34,12 @@ Required promotion bundle (cycle01)
 4. Pilot gate pointer:
 - `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`
 
+5. Theorem pointer:
+- `formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean#em_qft_seam_cycle01_theorem_pointer`
+
+6. Theorem gate pointer:
+- `formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`
+
 5. Existing seam closure evidence anchors:
 - `formal/output/em_m4_seam_closure_promotion_cycle01_v0.json`
 - `formal/output/qft_m4_seam_closure_promotion_cycle01_v0.json`
@@ -42,7 +48,13 @@ Cycle01 deliverables
 - `DELIVERABLE-EM-QFT-SEAM-PROMOTION-01_v0: CLASS_B_INVENTORY_ROW_PINNED`
 - `DELIVERABLE-EM-QFT-SEAM-PROMOTION-02_v0: WITNESS_PACKAGE_SCHEMA_PINNED`
 - `DELIVERABLE-EM-QFT-SEAM-PROMOTION-03_v0: NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED`
+- `DELIVERABLE-EM-QFT-SEAM-PROMOTION-04_v0: THEOREM_POINTER_AND_GATE_PINNED`
+
+Cycle01 theorem pointer lock
+- `EM_QFT_CLASS_B_PROMOTION_CYCLE01_THEOREM_STATUS_v0: THEOREM_POINTER_PINNED_v0_NONCLAIM`
+- `EM_QFT_CLASS_B_PROMOTION_CYCLE01_THEOREM_POINTER_v0: formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean#em_qft_seam_cycle01_theorem_pointer`
+- `EM_QFT_CLASS_B_PROMOTION_CYCLE01_THEOREM_GATE_v0: formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`
 
 Cycle01 exit posture
-- `EM_QFT_CLASS_B_PROMOTION_CYCLE01_STATUS_v0: PLAN_PINNED_PENDING_THEOREM_POINTER`
+- `EM_QFT_CLASS_B_PROMOTION_CYCLE01_STATUS_v0: THEOREM_POINTER_PINNED_PENDING_PROOF_DISCHARGE`
 - Class status remains `B` until theorem pointer + executable gate evidence are both pinned.

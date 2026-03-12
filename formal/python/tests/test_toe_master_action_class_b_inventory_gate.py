@@ -34,6 +34,8 @@ def test_class_b_inventory_surface_is_pinned() -> None:
         "TOE_CLASS_B_PROMOTION_PILOT_CLASS_v0: TOE_CK_CLASS_COMPATIBILITY_v0",
         "TOE_CLASS_B_PROMOTION_PILOT_TARGET_v0: DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0",
         "TOE_CLASS_B_PROMOTION_PILOT_WITNESS_PACKAGE_v0: formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean",
+        "TOE_CLASS_B_PROMOTION_PILOT_THEOREM_POINTER_v0: formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean#em_qft_seam_cycle01_theorem_pointer",
+        "TOE_CLASS_B_PROMOTION_PILOT_THEOREM_GATE_v0: formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py",
         "formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md",
         "formal/python/tests/test_toe_master_action_class_b_inventory_gate.py",
     )
@@ -62,11 +64,15 @@ def test_class_b_inventory_is_cross_surface_pinned() -> None:
     inventory_rel = "formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md"
     pilot_rel = "formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md"
     witness_rel = "formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean"
+    theorem_rel = "formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean"
+    theorem_gate_rel = "formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py"
 
     assert inventory_rel in reg_text
     assert pilot_rel in reg_text
     assert witness_rel in reg_text
+    assert theorem_rel in reg_text
+    assert theorem_gate_rel in reg_text
 
-    for ref in (inventory_rel, pilot_rel, witness_rel):
+    for ref in (inventory_rel, pilot_rel, witness_rel, theorem_rel, theorem_gate_rel):
         assert ref in roadmap_text
         assert ref in state_text

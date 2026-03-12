@@ -25,6 +25,8 @@ Canonical bounded status note (2026-02-24):
 - Master action Class-B seam inventory pointer: `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`.
 - EM-QFT Class-B seam-promotion pilot target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`.
 - Seam witness package schema pointer: `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`.
+- EM-QFT seam-promotion theorem pointer surface: `formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean`.
+- EM-QFT seam-promotion theorem gate pointer: `formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`.
 - Master action shadow numerics target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_v0.md`.
 - Foundational prediction scaffold plan pointer: `formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md`.
 - Foundational empirical comparison protocol pointer: `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`.
