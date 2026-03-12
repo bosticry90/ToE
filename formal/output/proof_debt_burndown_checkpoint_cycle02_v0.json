@@ -3,8 +3,8 @@
   "status": "ACTIVE_BOUNDED_v0_NONCLAIM",
   "generated_on": "2026-03-11T19:25:00",
   "target_markers": {
-    "state_line_5112": "Status: In progress (injectivity proof pending)",
-    "state_line_5148": "Status: In progress (proof pending)"
+    "gapid_COMP-FN-REP-GRID": "Status: In progress (injectivity proof pending)",
+    "gapid_COMP-FN-REP-NONALIAS-EQUIV-01": "Status: In progress (proof pending)"
   },
   "execution_targets": [
     "REP_NON_ALIAS_INJECTIVITY_PROOF_CHAIN",

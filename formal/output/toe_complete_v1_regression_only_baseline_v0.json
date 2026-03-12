@@ -1,0 +1,20 @@
+{
+  "baseline_id": "TOE_COMPLETE_V1_REGRESSION_ONLY_BASELINE_v0",
+  "status": "FROZEN_v0_NONCLAIM",
+  "generated_on": "2026-03-12T14:00:00",
+  "freeze_policy": "REGRESSION_ONLY",
+  "source_checkpoints": {
+    "complete_v1_checkpoint": "formal/output/toe_complete_v1_checkpoint_v0.json",
+    "terminal_gate_checkpoint": "formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json",
+    "proof_debt_closeout_checkpoint": "formal/output/proof_debt_burndown_checkpoint_cycle04_v0.json"
+  },
+  "frozen_gapids": [
+    "COMP-FN-REP-GRID",
+    "COMP-FN-REP-NONALIAS-EQUIV-01"
+  ],
+  "baseline_assertions": {
+    "terminal_gate_satisfied": true,
+    "critical_pending_tokens_detected": 0,
+    "reopen_on_regression_only": true
+  }
+}

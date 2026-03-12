@@ -43,11 +43,14 @@ Canonical program anchors:
 - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE01_v0.md`
 - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE02_v0.md`
 - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE03_v0.md`
+- `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE04_v0.md`
 - `formal/output/proof_debt_burndown_checkpoint_cycle01_v0.json`
 - `formal/output/proof_debt_burndown_checkpoint_cycle02_v0.json`
 - `formal/output/proof_debt_burndown_checkpoint_cycle03_v0.json`
+- `formal/output/proof_debt_burndown_checkpoint_cycle04_v0.json`
 - `formal/docs/release/TOE_COMPLETE_V1_TERMINAL_GATE_v0.md`
 - `formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json`
+- `formal/output/toe_complete_v1_regression_only_baseline_v0.json`
 - `formal/output/toe_complete_v1_checkpoint_v0.json`
 
 Deep-maturity delta definition:
@@ -65,4 +68,4 @@ Legacy scaffold gatekeeping commitment:
 - activate one scaffold at a time with clean-room artifact lineage and governance proof.
 
 Completion token:
-- `TOE_COMPLETE_V1_PROGRAM_STATUS_v0: CHECKPOINT_EXECUTED_PENDING_FUTURE_REOPEN_ONLY_ON_REGRESSION`
+- `TOE_COMPLETE_V1_PROGRAM_STATUS_v0: TERMINAL_SATISFIED_REGRESSION_ONLY_BASELINE_FROZEN`

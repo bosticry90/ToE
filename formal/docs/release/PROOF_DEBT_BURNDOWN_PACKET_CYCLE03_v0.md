@@ -16,8 +16,8 @@ Non-claim boundary:
 - no matrix-status promotion.
 
 Targeted pending markers:
-- `State_of_the_Theory.md:5112`
-- `State_of_the_Theory.md:5148`
+- `GapID: COMP-FN-REP-GRID`
+- `GapID: COMP-FN-REP-NONALIAS-EQUIV-01`
 
 Cycle03 action targets:
 - `PROOF_DEBT_BURNDOWN_TARGET_01_v0: REP_NON_ALIAS_INJECTIVITY_PROOF_CHAIN`

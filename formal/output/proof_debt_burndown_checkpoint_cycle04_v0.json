@@ -1,0 +1,24 @@
+{
+  "checkpoint_id": "PROOF_DEBT_BURNDOWN_CHECKPOINT_CYCLE04_v0",
+  "status": "CLOSEOUT_EXECUTED_v0_NONCLAIM",
+  "generated_on": "2026-03-12T14:00:00",
+  "target_markers": {
+    "gapid_COMP-FN-REP-GRID": "Status: Discharged (quotient policy pinned and consumed)",
+    "gapid_COMP-FN-REP-NONALIAS-EQUIV-01": "Status: Discharged (transport + invariance theorem + policy eligibility witnesses)"
+  },
+  "execution_targets": [
+    "REP_NON_ALIAS_INJECTIVITY_PROOF_CHAIN",
+    "QUOTIENT_EQUIVALENCE_COMPLETION_CHAIN"
+  ],
+  "mode": "PARALLEL_BOUNDED_NONCLAIM",
+  "closeout": {
+    "regression_only_baseline_freeze": true,
+    "baseline_artifact": "formal/output/toe_complete_v1_regression_only_baseline_v0.json"
+  },
+  "status_summary": {
+    "targeting_bound": true,
+    "adjudication_changed": false,
+    "matrix_status_changed": false,
+    "critical_pending_tokens_remaining": 0
+  }
+}

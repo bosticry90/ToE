@@ -53,11 +53,15 @@ def test_comp_fn_rep_nonalias_equiv01_gap_is_wired() -> None:
         "comparatorSurfaceNonAlias_eligible",
         "diagnosticNonAlias_not_eligible",
     ]
+    required_status_tokens = [
+        "Discharged",
+        "structural-only",
+    ]
 
     matched = False
     for block in blocks:
         status = _first_field(block, "Status") or ""
-        if "In progress" not in status:
+        if any(token not in status for token in required_status_tokens):
             continue
 
         evidence = _first_field(block, "Evidence path") or ""

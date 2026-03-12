@@ -22,9 +22,10 @@ Terminal gate thresholds:
 
 Terminal gate conditions:
 1. At least `3` consecutive tranche checkpoints are governance-green.
-2. No unresolved critical pending tokens remain in active lanes.
+2. No unresolved critical pending tokens remain in active lanes (tracked by stable GapID markers).
 3. Active-lane policies are in frozen-watch regression-only reopen posture.
 4. Complete-v1 checkpoint bindings remain matrix/state/roadmap parity-synchronized.
 
 Terminal gate artifact:
 - `formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json`
+- `formal/output/toe_complete_v1_regression_only_baseline_v0.json`

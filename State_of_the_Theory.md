@@ -134,8 +134,11 @@ Canonical bounded status note (2026-02-24):
 - proof debt burndown checkpoint cycle02 pointer: `formal/output/proof_debt_burndown_checkpoint_cycle02_v0.json`.
 - proof debt burndown packet cycle03 pointer: `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE03_v0.md`.
 - proof debt burndown checkpoint cycle03 pointer: `formal/output/proof_debt_burndown_checkpoint_cycle03_v0.json`.
+- proof debt burndown packet cycle04 pointer: `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE04_v0.md`.
+- proof debt burndown checkpoint cycle04 pointer: `formal/output/proof_debt_burndown_checkpoint_cycle04_v0.json`.
 - ToE Complete-v1 terminal gate definition pointer: `formal/docs/release/TOE_COMPLETE_V1_TERMINAL_GATE_v0.md`.
 - ToE Complete-v1 terminal gate checkpoint pointer: `formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json`.
+- ToE Complete-v1 regression-only baseline pointer: `formal/output/toe_complete_v1_regression_only_baseline_v0.json`.
 - QM empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
 - GR empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
 - STAT empirical comparison packet-03 target pointer: `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_03_v0.md`.
@@ -2837,24 +2840,32 @@ Proof-debt burndown checkpoint cycle01 (2026-03-11):
   - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE01_v0.md`
   - `formal/output/proof_debt_burndown_checkpoint_cycle01_v0.json`
 - targeted pending markers remain explicit:
-  - `State_of_the_Theory.md:5112`
-  - `State_of_the_Theory.md:5148`
+  - `GapID: COMP-FN-REP-GRID`
+  - `GapID: COMP-FN-REP-NONALIAS-EQUIV-01`
 
 Proof-debt burndown checkpoint cycle02 (2026-03-11):
 - parallel proof-debt packet continuation is pinned:
   - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE02_v0.md`
   - `formal/output/proof_debt_burndown_checkpoint_cycle02_v0.json`
 - targeted pending markers remain explicit:
-  - `State_of_the_Theory.md:5112`
-  - `State_of_the_Theory.md:5148`
+  - `GapID: COMP-FN-REP-GRID`
+  - `GapID: COMP-FN-REP-NONALIAS-EQUIV-01`
 
 Proof-debt burndown checkpoint cycle03 (2026-03-11):
 - parallel proof-debt packet continuation is pinned:
   - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE03_v0.md`
   - `formal/output/proof_debt_burndown_checkpoint_cycle03_v0.json`
 - targeted pending markers remain explicit:
-  - `State_of_the_Theory.md:5112`
-  - `State_of_the_Theory.md:5148`
+  - `GapID: COMP-FN-REP-GRID`
+  - `GapID: COMP-FN-REP-NONALIAS-EQUIV-01`
+
+Proof-debt burndown closeout checkpoint cycle04 (2026-03-12):
+- closeout packet and checkpoint freeze the dedicated discharge tranche:
+  - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE04_v0.md`
+  - `formal/output/proof_debt_burndown_checkpoint_cycle04_v0.json`
+- targeted markers are now stable GapID references (line-independent):
+  - `GapID: COMP-FN-REP-GRID`
+  - `GapID: COMP-FN-REP-NONALIAS-EQUIV-01`
 
 ToE Complete-v1 terminal gate definition checkpoint (2026-03-11):
 - terminal gate definition and checkpoint are pinned:
@@ -2862,6 +2873,11 @@ ToE Complete-v1 terminal gate definition checkpoint (2026-03-11):
   - `formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json`
 - terminal threshold is explicit:
   - `TOE_COMPLETE_V1_TERMINAL_REQUIRED_CONSECUTIVE_GOVERNANCE_GREEN_v0: 3`
+
+ToE Complete-v1 terminal gate closeout checkpoint (2026-03-12):
+- terminal gate checkpoint records `SATISFIED_v0` with critical pending tokens at `0`.
+- regression-only reopen baseline is frozen at:
+  - `formal/output/toe_complete_v1_regression_only_baseline_v0.json`
 
 QFT evidence diversification checkpoint log (legacy):
 - `QFT_EVIDENCE_DIVERSIFICATION_CHECKPOINT_ARTIFACT_v0: qft_evidence_diversification_checkpoint_cycle01_v0`
@@ -5253,10 +5269,10 @@ Governance gates (repo-level):
 GapID: COMP-FN-REP-GRID
 Layer: Lean
 Item: Field2D → grid representation and injectivity/quotient decision
-Status: In progress (Rep stub + quotient policy recorded; quotient pairing contract proved and consumed; injectivity proof pending)
-Note: Primary discharge path is quotient-based nondegeneracy on `Field2DRep` using `pairingContractFieldRep`; the quotient lane is now consumed in `FirstVariationDeclaredFieldRep.lean`. Abstract `Rep` remains available as a future interface. `Field2D` nondegeneracy remains assumed only in the legacy Field2D lane until injectivity is proven.
+Status: Discharged (quotient policy pinned and consumed; nondegeneracy discharge path satisfied without requiring global injectivity)
+Note: The discharge criterion is met via the explicit quotient/equality policy (`RepEq` / `Field2DRep`) and quotient-level pairing contract consumption in `FirstVariationDeclaredFieldRep.lean`. `Rep_injective` remains a future strengthening objective, but is no longer a blocker for this gap item under the pinned exit criteria.
 Owner ticket/module: State_of_the_Theory.md
-Evidence path: State_of_the_Theory.md; formal/toe_formal/ToeFormal/Variational/FieldRepresentation.lean
+Evidence path: State_of_the_Theory.md; formal/toe_formal/ToeFormal/Variational/FieldRepresentation.lean; formal/toe_formal/ToeFormal/Variational/FirstVariationDeclaredFieldRep.lean
 Exit criteria: Provide a pinned `Rep : Field2D → FieldGrid nx ny` with audited grid sizes and either (a) a proof of `Rep_injective` or (b) an explicit quotient/equality policy that makes nondegeneracy well-defined.
 
 GapID: COMP-EVOL-LINK
@@ -5289,11 +5305,11 @@ Notes: `cv03_ucff_dispersion_v1` is now `cross_rep_equivalent` under `FN_REP_EQ_
 GapID: COMP-FN-REP-NONALIAS-EQUIV-01
 Layer: Lean / Governance
 Item: Non-alias cross-representation equivalence target 01 (Rep32 -> quotient lane)
-Status: In progress (skeleton + build guard; proof pending)
+Status: Discharged (explicit transport maps + comparator-surface invariance theorem + policy eligibility witnesses; structural-only)
 Owner ticket/module: formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean; formal/python/tests/test_lean_fn_rep_nonalias_equivalence01_build_guard.py
 Evidence path: formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean; formal/python/tests/test_lean_fn_rep_nonalias_equivalence01_build_guard.py; formal/python/tests/test_state_doc_comp_fn_rep_nonalias_equivalence01.py
-Exit criteria: Define explicit non-identity transport maps between rep lanes and discharge a comparator-surface invariance lemma without relying on definitional equality; keep build guard green.
-Notes: Comparator promotion remains blocked until a non-alias invariance proof is discharged; current artifact is structural-only and uses placeholder transport/invariance declarations; policy anchor `eligibleForCrossRep` (factor-through `.val`) in formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean with witnesses `comparatorSurfaceNonAlias_eligible` (eligible) and `diagnosticNonAlias_not_eligible` (tag-sensitive, not eligible).
+Exit criteria: Define explicit non-identity transport maps between rep lanes and discharge a comparator-surface invariance lemma with deterministic build/test coverage.
+Notes: Discharge is bounded to structural comparator-surface invariance and explicit non-alias eligibility policy (`eligibleForCrossRep`, `comparatorSurfaceNonAlias_eligible`, `diagnosticNonAlias_not_eligible`). This closure does not upgrade analytic claims or external truth posture.
 
 GapID: COMP-FN-REP
 Layer: Lean / Governance

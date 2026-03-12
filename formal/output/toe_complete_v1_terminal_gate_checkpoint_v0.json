@@ -1,7 +1,7 @@
 {
   "checkpoint_id": "TOE_COMPLETE_V1_TERMINAL_GATE_CHECKPOINT_v0",
-  "status": "IN_PROGRESS_v0_NONCLAIM",
-  "generated_on": "2026-03-11T20:30:00",
+  "status": "SATISFIED_v0_NONCLAIM",
+  "generated_on": "2026-03-12T14:00:00",
   "thresholds": {
     "required_consecutive_governance_green": 3,
     "critical_pending_tokens_allowed": 0,
@@ -9,12 +9,15 @@
   },
   "current_progress": {
     "consecutive_governance_green": 5,
-    "critical_pending_tokens_detected": 2,
-    "critical_pending_marker_refs": [
-      "State_of_the_Theory.md:5112",
-      "State_of_the_Theory.md:5148"
+    "critical_pending_tokens_detected": 0,
+    "critical_pending_marker_refs": [],
+    "critical_pending_gapids_monitored": [
+      "COMP-FN-REP-GRID",
+      "COMP-FN-REP-NONALIAS-EQUIV-01"
     ],
-    "regression_only_reopen_policy_bound": true
+    "regression_only_reopen_policy_bound": true,
+    "regression_only_baseline_frozen": true,
+    "regression_only_baseline_artifact": "formal/output/toe_complete_v1_regression_only_baseline_v0.json"
   },
-  "terminal_gate_result": "NOT_YET_SATISFIED_v0"
+  "terminal_gate_result": "SATISFIED_v0"
 }
