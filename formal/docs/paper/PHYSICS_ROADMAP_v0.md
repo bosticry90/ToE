@@ -169,6 +169,8 @@ No-deviation sequencing rule:
   - `formal/output/master_action_variant_c_pressure_cycle15_drift_report_v0.json`
   - `formal/output/master_action_variant_c_pressure_cycle16_execution_report_v0.json`
   - `formal/output/master_action_variant_c_pressure_cycle16_drift_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle17_execution_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle17_drift_report_v0.json`
   - `formal/output/governance_full_suite_checkpoint_master_action_variant_cycle10_v0.json`
   - `formal/output/governance_full_suite_checkpoint_master_action_variant_cycle11_v0.json`
   - `formal/output/governance_full_suite_checkpoint_master_action_variant_cycle12_v0.json`
@@ -176,12 +178,14 @@ No-deviation sequencing rule:
   - `formal/output/governance_full_suite_checkpoint_master_action_variant_cycle14_v0.json`
   - `formal/output/governance_full_suite_checkpoint_master_action_variant_cycle15_v0.json`
   - `formal/output/governance_full_suite_checkpoint_master_action_variant_cycle16_v0.json`
+  - `formal/output/governance_full_suite_checkpoint_master_action_variant_cycle17_v0.json`
   - `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE11_RELEASE_NOTE_v0.md`
   - `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE12_RELEASE_NOTE_v0.md`
   - `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE13_RELEASE_NOTE_v0.md`
   - `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE14_RELEASE_NOTE_v0.md`
   - `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE15_RELEASE_NOTE_v0.md`
   - `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE16_RELEASE_NOTE_v0.md`
+  - `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE17_RELEASE_NOTE_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_PACKET02_DECISION_RECORD_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE01_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE02_v0.md`
@@ -199,6 +203,7 @@ No-deviation sequencing rule:
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE14_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE15_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE16_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE17_v0.md`
   - `formal/docs/release/PHASE_CHECKPOINT_PACKET02_DECISION_EXECUTION_v0.md`
   - `formal/docs/release/COSMO_DRYRUN_CUSTODY_CHAIN_CLOSEOUT_PACKET_v0.md`
   - `formal/output/cosmo_dryrun_custody_chain_closeout_checkpoint_v0.json`
@@ -208,6 +213,8 @@ No-deviation sequencing rule:
   - `formal/output/cosmo_dryrun_custody_chain_continuation_checkpoint_cycle03_v0.json`
   - `formal/docs/release/COSMO_DRYRUN_CUSTODY_CHAIN_CONTINUATION_PACKET_CYCLE04_v0.md`
   - `formal/output/cosmo_dryrun_custody_chain_continuation_checkpoint_cycle04_v0.json`
+  - `formal/docs/release/COSMO_DRYRUN_CUSTODY_CHAIN_CONTINUATION_PACKET_CYCLE05_v0.md`
+  - `formal/output/cosmo_dryrun_custody_chain_continuation_checkpoint_cycle05_v0.json`
   - `formal/docs/release/TOE_COMPLETE_V1_PROGRAM_v0.md`
   - `formal/output/toe_complete_v1_checkpoint_v0.json`
   - `formal/output/deep_maturity_delta_v1_cycle01_v0.json`
