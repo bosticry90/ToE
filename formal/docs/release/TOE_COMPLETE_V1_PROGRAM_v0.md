@@ -22,7 +22,7 @@ Completion semantics:
 - `TOE_COMPLETE_v1`:
   - `TOE_COMPLETE_v0` plus all of:
     1. active-lane closure packetization (`COSMO` continuity tranche packet locked),
-    2. master-action variant cycle progression continuation checkpoint (`cycle15`),
+    2. master-action variant cycle progression continuation checkpoint (`cycle16`),
     3. deep-maturity delta attestation under current bounded controls,
     4. matrix/state/roadmap pointer parity and no-drift gates green,
     5. full governance suite green at completion checkpoint.
@@ -33,7 +33,8 @@ Canonical program anchors:
 - `formal/docs/release/COSMO_DRYRUN_CUSTODY_CHAIN_CLOSEOUT_PACKET_v0.md`
 - `formal/docs/release/COSMO_DRYRUN_CUSTODY_CHAIN_CONTINUATION_PACKET_CYCLE02_v0.md`
 - `formal/docs/release/COSMO_DRYRUN_CUSTODY_CHAIN_CONTINUATION_PACKET_CYCLE03_v0.md`
-- `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE15_RELEASE_NOTE_v0.md`
+- `formal/docs/release/COSMO_DRYRUN_CUSTODY_CHAIN_CONTINUATION_PACKET_CYCLE04_v0.md`
+- `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE16_RELEASE_NOTE_v0.md`
 - `formal/output/deep_maturity_delta_v1_cycle01_v0.json`
 - `formal/output/deep_maturity_delta_v1_cycle02_v0.json`
 - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE01_v0.md`
