@@ -1,0 +1,18 @@
+{
+  "artifact_id": "gr_m2_assumption_minimization_depth_exemplar_cycle02_v0",
+  "artifact_version": "v0",
+  "payload": {
+    "pillar": "PILLAR-GR",
+    "maturity_tier": "M2_DERIVATION_COMPLETE",
+    "row": "assumption_minimization",
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "scope": "bounded_nonclaim",
+    "depth_cycle": "cycle02",
+    "requirements": [
+      "assumption_inventory_delta_vs_cycle01_explicit",
+      "minimality_boundary_delta_vs_cycle01_explicit",
+      "counterfactual_route_reclassification_delta_explicit"
+    ],
+    "generated_on": "2026-03-12"
+  }
+}

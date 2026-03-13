@@ -1,0 +1,33 @@
+{
+  "artifact_id": "toe_qft_scalar_route_section_map_v0",
+  "phase": "PHASE_3_ROUTE_A_SCALAR_MANUSCRIPT_ASSEMBLY",
+  "route_scope": "bounded_free_scalar_qft_to_qm_bridge",
+  "sections": [
+    "motivation_and_scope",
+    "master_action_starting_point",
+    "scalar_field_derivation",
+    "covariance_and_stress_energy",
+    "quantization_route",
+    "operator_commutator_and_mode_expansion",
+    "normalization_and_one_particle_state",
+    "nonrelativistic_schrodinger_limit",
+    "open_items_and_bounded_claims"
+  ],
+  "source_pointers": {
+    "milestone_summary": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md",
+    "field_derivation": "formal/docs/paper/toe_qft_scalar_field_derivation_report_v0.md",
+    "quantization": "formal/docs/paper/toe_qft_scalar_canonical_quantization_report_v0.md",
+    "nonrelativistic_bridge": "formal/docs/paper/toe_qft_scalar_nonrelativistic_limit_report_v0.md"
+  },
+  "open_items": [
+    "optional_two_point_or_propagator_surface",
+    "manuscript_section_drafting_completion"
+  ],
+  "non_claim_boundaries": [
+    "no_interacting_field_completion_claim",
+    "no_gauge_sector_completion_claim",
+    "no_multi_particle_scattering_completion_claim",
+    "no_standard_model_completion_claim"
+  ],
+  "status": "MANUSCRIPT_SKELETON_PINNED_BOUNDED_FREE_SCALAR_QFT_TO_QM_BRIDGE"
+}

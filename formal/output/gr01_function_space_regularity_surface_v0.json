@@ -1,0 +1,8 @@
+{
+  "artifact_id": "gr01_function_space_regularity_surface_v0",
+  "status": "ATTACK_TRACK_ACTIVE_NONCLAIM",
+  "current_scope": "DISCRETE_BOUNDED_FIELD_REGULARITY_ONLY",
+  "next_scope": "CONTINUUM_REGULARITY_CLASS_EXPLICITATION_REQUIRED",
+  "sobolev_claimed": false,
+  "uniqueness_claimed": false
+}

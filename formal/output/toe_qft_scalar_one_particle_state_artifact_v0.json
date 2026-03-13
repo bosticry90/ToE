@@ -1,0 +1,21 @@
+{
+  "artifact_id": "toe_qft_scalar_one_particle_state_artifact_v0",
+  "phase": "PHASE_3_ROUTE_A_NORMALIZATION_ONE_PARTICLE_HARDENING",
+  "source": "free_scalar_normalization_route",
+  "normalization": {
+    "ladder_commutator": "[a_k,a_q_dagger]=(2pi)^3 delta^3(k-q)",
+    "vacuum_condition": "a_k|0>=0",
+    "one_particle_definition": "|k>=a_k^dagger|0>",
+    "inner_product": "<k|q>=(2pi)^3 delta^3(k-q)"
+  },
+  "hamiltonian_interpretation": {
+    "occupation_density_operator": "a_k^dagger a_k",
+    "bounded_free_scalar": true
+  },
+  "assumptions": [
+    "free_scalar_regime_only",
+    "distribution_smearing_inherited_from_tranches_e_f",
+    "multi_particle_scattering_deferred"
+  ],
+  "status": "PINNED_ROUTE_A_NORMALIZATION_ONE_PARTICLE_HARDENING"
+}

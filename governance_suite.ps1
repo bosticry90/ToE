@@ -24,6 +24,8 @@ if ($LASTEXITCODE -eq 0) {
 }
 
 ./py.ps1 -m pytest `
+  formal/python/tests/test_active_dependency_baseline_lock_gate.py `
+  formal/python/tests/test_dependency_security_scan_schedule_gate.py `
   formal/python/tests/test_state_theory_dag.py `
   formal/python/tests/test_state_doc_no_duplicate_gapids.py `
   formal/python/tests/test_toe_target_spec_doc.py `
@@ -49,6 +51,8 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_state_doc_mainline_cannot_claim_beta_nonzero.py `
   formal/python/tests/test_pillar_status_matrix_consistency_gate.py `
   formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py `
+  formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py `
+  formal/python/tests/test_toe_seam_status_split_gate.py `
   formal/python/tests/test_pillar_phase_advancement_gate.py `
   formal/python/tests/test_foundational_derivation_chain_coverage_gate.py `
   formal/python/tests/test_toe_master_action_seam_registry_gate.py `
@@ -75,15 +79,30 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_em_empirical_comparison_packet_03_gate.py `
   formal/python/tests/test_qft_empirical_comparison_packet_03_gate.py `
   formal/python/tests/test_sr_empirical_comparison_packet_03_gate.py `
+    formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py `
+    formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py `
+    formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py `
+    formal/python/tests/test_proof_debt_marker_stability_gate.py `
+    formal/python/tests/test_proof_debt_burndown_cycle05_gate.py `
+    formal/python/tests/test_qm_m2_assumption_minimization_depth_exemplar_cycle02_gate.py `
+    formal/python/tests/test_gr_m2_assumption_minimization_depth_exemplar_cycle02_gate.py `
+    formal/python/tests/test_stat_m2_assumption_minimization_depth_exemplar_cycle02_gate.py `
   formal/python/tests/test_qm_empirical_comparison_packet_04_gate.py `
   formal/python/tests/test_gr_empirical_comparison_packet_04_gate.py `
   formal/python/tests/test_gr_empirical_comparison_packet_05_gate.py `
   formal/python/tests/test_gr_empirical_packet_05_artifact_schema_gate.py `
+  formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py `
+  formal/python/tests/test_sr_empirical_packet_05_artifact_schema_gate.py `
+  formal/python/tests/test_empirical_packet05_decision_ledger_parity_gate.py `
+  formal/python/tests/test_empirical_packet05_falsification_surface_gate.py `
+  formal/python/tests/test_foundational_empirical_packet05_override_policy_gate.py `
   formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py `
   formal/python/tests/test_cosmo_empirical_comparison_packet_04_gate.py `
   formal/python/tests/test_em_empirical_comparison_packet_04_gate.py `
   formal/python/tests/test_qft_empirical_comparison_packet_04_gate.py `
   formal/python/tests/test_sr_empirical_comparison_packet_04_gate.py `
+  formal/python/tests/test_foundational_empirical_packet05_matrix_consistency_gate.py `
+  formal/python/tests/test_foundational_empirical_packet05_progression_policy_gate.py `
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle02_gate.py `
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle03_gate.py `
   formal/python/tests/test_toe_master_action_shadow_numerics_cycle04_gate.py `
@@ -143,6 +162,14 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_phase5_m5_completion_closeout_gate.py `
   formal/python/tests/test_sr_m5_archive_retention_policy_gate.py `
   formal/python/tests/test_sr_m5_periodic_quality_checkpoint_gate.py `
+  formal/python/tests/test_master_action_variant_cycle18_sensitivity_gate.py `
+  formal/python/tests/test_gr01_publication_grade_discharge_package_gate.py `
+  formal/python/tests/test_gr01_publication_theorem_claim_advancement_gate.py `
+  formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py `
+  formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py `
+  formal/python/tests/test_gr01_function_space_continuum_regularity_route_gate.py `
+  formal/python/tests/test_gr01_function_space_nonclaim_boundary_evidence_gate.py `
+  formal/python/tests/test_gr01_function_space_completion_criteria_gate.py `
   formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py `
   formal/python/tests/test_qm_m2_analytic_completeness_scaffold_cycle01_gate.py `
   formal/python/tests/test_qm_m2_canonical_equivalence_scaffold_cycle01_gate.py `

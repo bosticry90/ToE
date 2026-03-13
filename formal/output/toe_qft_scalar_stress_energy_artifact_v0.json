@@ -1,0 +1,21 @@
+{
+  "artifact_id": "toe_qft_scalar_stress_energy_artifact_v0",
+  "phase": "PHASE_2_RELATIVISTIC_COVARIANCE",
+  "source": "master_action_scalar_slice",
+  "covariance": {
+    "field_type": "lorentz_scalar",
+    "statement": "scalar_action_and_eom_covariant_under_declared_lorentz_transformations",
+    "kg_class_consistency": true
+  },
+  "stress_energy": {
+    "canonical_tensor": "T^{mu nu}_can = (d^mu phi)(d^nu phi) - eta^{mu nu} L_scalar",
+    "symmetric_tensor": "T^{mu nu}_sym = (d^mu phi)(d^nu phi) - 1/2 eta^{mu nu}[(d_alpha phi)(d^alpha phi) - m_eff^2 phi^2 - 2V_int(phi)]",
+    "energy_density_component": "T^{00} = 1/2[(partial_t phi)^2 + |grad phi|^2 + m_eff^2 phi^2] + V_int(phi)"
+  },
+  "assumptions": [
+    "flat_lorentz_metric_eta",
+    "smooth_field_and_boundary_decay",
+    "bounded_interaction_potential"
+  ],
+  "status": "PINNED_PHASE2_COVARIANCE_AND_STRESS_ENERGY_ROUTE"
+}

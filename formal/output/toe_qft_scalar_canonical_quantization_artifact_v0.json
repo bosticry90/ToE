@@ -1,0 +1,22 @@
+{
+  "artifact_id": "toe_qft_scalar_canonical_quantization_artifact_v0",
+  "phase": "PHASE_3_ROUTE_A_CANONICAL_QUANTIZATION",
+  "source": "master_action_scalar_slice",
+  "canonical_variables": {
+    "field": "phi",
+    "canonical_momentum": "pi = partial_t(phi)"
+  },
+  "hamiltonian_density": "H = 1/2 pi^2 + 1/2 |grad phi|^2 + 1/2 m_eff^2 phi^2 + V_int(phi)",
+  "equal_time_commutators": {
+    "[phi,pi]": "i delta^3(x-y)",
+    "[phi,phi]": "0",
+    "[pi,pi]": "0"
+  },
+  "route_status": "BOUNDED_CANONICAL_QUANTIZATION_ROUTE_DECLARED",
+  "assumptions": [
+    "equal_time_hypersurface_split",
+    "operator_valued_distribution_framework",
+    "regularization_and_domain_details_deferred"
+  ],
+  "status": "PINNED_PHASE3_CANONICAL_QUANTIZATION_KICKOFF"
+}

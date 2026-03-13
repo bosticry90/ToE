@@ -1,0 +1,21 @@
+{
+  "artifact_id": "gr01_function_space_continuum_regularity_route_v0",
+  "status": "ROUTE_EXPLICITATED_v0_NONCLAIM",
+  "target_class": "H1_LOCAL_TO_H2_WEAK_ROUTE_DECLARED",
+  "milestones": [
+    "DISCRETE_TO_CONTINUUM_CARRIER_MAP_PINNED",
+    "WEAK_DERIVATIVE_WITNESS_TEMPLATE_PINNED",
+    "BOUNDARY_TRACE_CONTRACT_PINNED",
+    "SOBELOV_CLASS_ADMISSIBILITY_CHECKLIST_PINNED"
+  ],
+  "nonclaim_boundary": {
+    "continuum_completion_claimed": false,
+    "sobolev_completion_claimed": false,
+    "uniqueness_claimed": false
+  },
+  "anchors": [
+    "formal/docs/paper/TOE_GR01_ANALYTIC_DISCHARGE_v0.md",
+    "formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md",
+    "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean"
+  ]
+}

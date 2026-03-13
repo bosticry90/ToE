@@ -1,0 +1,24 @@
+{
+  "artifact_id": "toe_qft_scalar_hamiltonian_density_artifact_v0",
+  "phase": "PHASE_3_ROUTE_A_QUANTIZATION_REFINEMENT",
+  "source": "master_action_scalar_slice",
+  "canonical_momentum": {
+    "definition": "pi = dL/d(partial_t phi)",
+    "result": "pi = partial_t(phi)"
+  },
+  "hamiltonian_density": {
+    "legendre_relation": "H = pi partial_t(phi) - L_scalar",
+    "expanded_form": "H = 1/2 pi^2 + 1/2 |grad phi|^2 + 1/2 m_eff^2 phi^2 + V_int(phi)"
+  },
+  "operator_facing_route": {
+    "equal_time_commutator_phi_pi": "[phi(t,x), pi(t,y)] = i delta^3(x-y)",
+    "equal_time_commutator_phi_phi": "[phi,phi] = 0",
+    "equal_time_commutator_pi_pi": "[pi,pi] = 0"
+  },
+  "assumptions": [
+    "equal_time_foliation_admissible",
+    "operator_valued_distribution_pairing",
+    "domain_regularization_deferred"
+  ],
+  "status": "PINNED_ROUTE_A_CANONICAL_MOMENTUM_HAMILTONIAN_REFINEMENT"
+}

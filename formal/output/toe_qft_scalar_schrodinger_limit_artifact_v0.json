@@ -1,0 +1,26 @@
+{
+  "artifact_id": "toe_qft_scalar_schrodinger_limit_artifact_v0",
+  "phase": "PHASE_3_ROUTE_A_NONRELATIVISTIC_SCHRODINGER_BRIDGE",
+  "source": "free_scalar_nonrelativistic_bridge_route",
+  "low_energy_assumptions": {
+    "momentum_hierarchy": "|k| << m",
+    "units": "c=1",
+    "positive_frequency_sector_selected": true
+  },
+  "phase_extraction": {
+    "field_decomposition": "phi(t,x)=exp(-i m t) psi(t,x)/sqrt(2m)",
+    "fast_oscillation_remainder_suppressed": true,
+    "leading_order_envelope_kept": true
+  },
+  "schrodinger_limit": {
+    "equation": "i partial_t psi = -(nabla^2/(2m)) psi",
+    "order_control": "leading_order_in_|k|/m",
+    "one_particle_posture_bounded": true
+  },
+  "assumptions": [
+    "free_scalar_regime_only",
+    "non_relativistic_expansion_leading_order",
+    "interaction_and_scattering_corrections_deferred"
+  ],
+  "status": "PINNED_ROUTE_A_NONRELATIVISTIC_SCHRODINGER_BRIDGE"
+}

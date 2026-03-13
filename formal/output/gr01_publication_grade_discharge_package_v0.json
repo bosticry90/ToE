@@ -1,0 +1,22 @@
+{
+  "artifact_id": "gr01_publication_grade_discharge_package_v0",
+  "status": "PACKAGE_COMPLETE_v0_DISCRETE_SCOPE_NONCLAIM",
+  "scope": "DISCRETE_WEAK_FIELD_ONLY",
+  "required_surfaces": [
+    "formal/docs/paper/DERIVATION_COMPLETENESS_GATE_v0.md",
+    "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
+    "formal/docs/paper/TOE_GR01_ANALYTIC_DISCHARGE_v0.md",
+    "formal/docs/paper/TOE_GR01_CANONICAL_EQUIVALENCE_THEOREM_v0.md",
+    "formal/docs/paper/TOE_GR01_WEAK_FIELD_EXPANSION_NOTE_v0.md",
+    "formal/docs/paper/TOE_GR01_POTENTIAL_IDENTIFICATION_v0.md",
+    "formal/docs/paper/TOE_GR01_LAPLACIAN_EXTRACTION_v0.md",
+    "formal/output/gr01_publication_bridge_checkpoint_cycle09_v0.json",
+    "formal/docs/release/TOE_CLOSURE_SEMANTICS_STANDARD_v0.md"
+  ],
+  "interpretation": {
+    "bounded_nonclaim": true,
+    "continuum_limit_claimed": false,
+    "all_regime_claimed": false,
+    "publication_package_complete": true
+  }
+}

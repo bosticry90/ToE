@@ -34,11 +34,11 @@ def test_gr_empirical_comparison_packet_05_gate() -> None:
 
     assert "GR_EMPIRICAL_PACKET_05_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM" in text
     assert "GR_EMPIRICAL_PACKET_05_ARTIFACT_v0: gr_empirical_comparison_packet_05_v0" in text
-    assert "GR_EMPIRICAL_PACKET_05_DECISION_v0: INCONCLUSIVE_v0" in text
+    assert "GR_EMPIRICAL_PACKET_05_DECISION_v0: RETAIN_v0" in text
     assert "formal/python/tests/test_gr_empirical_comparison_packet_05_gate.py" in text
 
     assert artifact.get("schema_id") == "TOE_EMPIRICAL_PACKET_SCHEMA_v0"
     assert artifact.get("artifact_id") == "gr_empirical_comparison_packet_05_v0"
     assert payload.get("status") == "RUN_BOUNDED_v0_NONCLAIM"
-    assert payload.get("decision") == "INCONCLUSIVE_v0"
+    assert payload.get("decision") == "RETAIN_v0"
     assert payload.get("evidence_tier") == "INTERMEDIATE_v0"

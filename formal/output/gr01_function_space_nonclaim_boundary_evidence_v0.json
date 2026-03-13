@@ -1,0 +1,14 @@
+{
+  "artifact_id": "gr01_function_space_nonclaim_boundary_evidence_v0",
+  "status": "DISCHARGED_v0_CONCRETE_EVIDENCE_NONCLAIM",
+  "boundary_tokens": {
+    "sobolev": "NOT_CLAIMED",
+    "uniqueness": "NOT_CLAIMED",
+    "continuum_completion": "NOT_CLAIMED"
+  },
+  "anchors": [
+    "formal/docs/paper/TOE_GR01_FUNCTION_SPACE_REGULARITY_SURFACE_v0.md",
+    "formal/docs/paper/TOE_GR01_ANALYTIC_DISCHARGE_v0.md",
+    "formal/docs/paper/TOE_GR01_CANONICAL_EQUIVALENCE_THEOREM_v0.md"
+  ]
+}

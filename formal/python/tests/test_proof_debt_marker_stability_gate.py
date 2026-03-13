@@ -22,6 +22,7 @@ PROOF_DEBT_CHECKPOINT_PATHS = [
     REPO_ROOT / "formal" / "output" / "proof_debt_burndown_checkpoint_cycle02_v0.json",
     REPO_ROOT / "formal" / "output" / "proof_debt_burndown_checkpoint_cycle03_v0.json",
     REPO_ROOT / "formal" / "output" / "proof_debt_burndown_checkpoint_cycle04_v0.json",
+    REPO_ROOT / "formal" / "output" / "proof_debt_burndown_checkpoint_cycle05_v0.json",
 ]
 TRACKED_GAPIDS = [
     "COMP-FN-REP-GRID",

@@ -1,0 +1,26 @@
+{
+  "artifact_id": "toe_qft_scalar_creation_annihilation_artifact_v0",
+  "phase": "PHASE_3_ROUTE_A_MODE_EXPANSION_OPERATOR_HARDENING",
+  "source": "free_scalar_mode_expansion_route",
+  "mode_expansion": {
+    "field_expression": "phi(t,x)=int[d^3k/((2pi)^3 sqrt(2 omega_k))] (a_k exp(-i(omega_k t-k.x)) + a_k^dagger exp(+i(omega_k t-k.x)))",
+    "omega_k": "sqrt(k^2 + m^2)",
+    "mass_posture": "m^2 >= 0 bounded_free_scalar"
+  },
+  "ladder_commutators": {
+    "[a_k,a_q_dagger]": "(2pi)^3 delta^3(k-q)",
+    "[a_k,a_q]": "0",
+    "[a_k_dagger,a_q_dagger]": "0"
+  },
+  "operator_interpretation": {
+    "a_k_role": "occupation_lowering",
+    "a_k_dagger_role": "occupation_raising",
+    "fock_posture_bounded": true
+  },
+  "assumptions": [
+    "free_scalar_regime_only",
+    "distribution_smearing_inherited_from_tranche_e",
+    "full_domain_rigor_deferred"
+  ],
+  "status": "PINNED_ROUTE_A_MODE_EXPANSION_OPERATOR_HARDENING"
+}

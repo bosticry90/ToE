@@ -177,6 +177,15 @@ Scope:
   - `formal/output/gr01_publication_bridge_checkpoint_cycle09_v0.json`
   - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle09_gate.py`
 
+- Publication-grade discharge package bundle (bounded non-claim):
+  - `GR01_PUBLICATION_GRADE_DISCHARGE_PACKAGE_STATUS_v0: PACKAGE_COMPLETE_v0_DISCRETE_SCOPE_NONCLAIM`
+  - `GR01_PUBLICATION_GRADE_DISCHARGE_SCOPE_v0: DISCRETE_WEAK_FIELD_ONLY`
+  - `GR01_PUBLICATION_GRADE_DISCHARGE_GATE_v0: CROSS_SURFACE_PACKAGE_PARITY_REQUIRED`
+  - `GR01_PUBLICATION_GRADE_DISCHARGE_ARTIFACT_v0: gr01_publication_grade_discharge_package_v0`
+  - `formal/docs/release/GR01_PUBLICATION_GRADE_DISCHARGE_PACKAGE_v0.md`
+  - `formal/output/gr01_publication_grade_discharge_package_v0.json`
+  - `formal/python/tests/test_gr01_publication_grade_discharge_package_gate.py`
+
 - Closure-hardening bundle (bounded non-claim):
   - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: gr01_closure_hardening_bundle_cycle01_v0`
   - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 36b8d0abd7d56f1c39d02729528961ef95e4900a6f480c6aba4e5681fa0a8a7a`

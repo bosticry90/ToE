@@ -20,19 +20,28 @@ Non-claim boundary:
 Canonical anchors:
 - `formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md`
 - `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`
+- `formal/docs/release/TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`
 - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md`
 - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_EXECUTION_PLAN_v0.md`
 - `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`
 - `formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean`
+- `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean`
 - `formal/python/tests/test_toe_master_action_seam_registry_gate.py`
 - `formal/python/tests/test_toe_master_action_assumption_classification_gate.py`
 - `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`
 - `formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`
 - `formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py`
 - `formal/python/tests/test_em_qft_seam_promotion_cycle03_class_flip_gate.py`
+- `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`
+- `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`
+- `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
+- `formal/python/tests/test_toe_seam_status_split_gate.py`
 
 Registry posture token:
 - `TOE_MASTER_ACTION_SEAM_REGISTRY_STATUS_v0: SCAFFOLD_PINNED_NONCLAIM`
@@ -143,9 +152,72 @@ Class-flip authorization theorem pointer (cycle03):
 Class-flip gate pointer (cycle03):
 - `formal/python/tests/test_em_qft_seam_promotion_cycle03_class_flip_gate.py`
 
+Next pilot target pointer (cycle01 scaffold):
+- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
+
+Next pilot theorem pointer (cycle01 scaffold):
+- `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_seam_cycle01_theorem_pointer`
+
+Next pilot theorem gate pointer (cycle01 scaffold):
+- `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`
+
+Next pilot discharge target pointer (cycle02):
+- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
+
+Next pilot discharge theorem pointer (cycle02):
+- `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_seam_cycle02_discharge_proof`
+
+Next pilot discharge gate pointer (cycle02):
+- `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`
+
+Next pilot class-flip target pointer (cycle03):
+- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`
+
+Next pilot class-flip authorization theorem pointer (cycle03):
+- `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_seam_cycle03_class_flip_authorization`
+
+Next pilot class-flip gate pointer (cycle03):
+- `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
+
 Cycle01 pilot lock:
 - `TOE_CLASS_B_PROMOTION_PILOT_SEAM_v0: SEAM-EM-QFT`
 - `TOE_CLASS_B_PROMOTION_PILOT_CLASS_v0: TOE_CK_CLASS_COMPATIBILITY_v0`
 - `EM_QFT_CLASS_B_PROMOTION_CYCLE01_STATUS_v0: THEOREM_POINTER_PINNED_v0_COMPLETE`
 - `EM_QFT_CLASS_B_PROMOTION_CYCLE02_STATUS_v0: PROOF_DISCHARGED_CLASS_B_PENDING_CLASS_FLIP_v0`
 - `EM_QFT_CLASS_B_PROMOTION_CYCLE03_STATUS_v0: CLASS_A_PROMOTED_v0_NONCLAIM`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE01_STATUS_v0: THEOREM_POINTER_PINNED_PENDING_PROOF_DISCHARGE`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_STATUS_v0: PROOF_DISCHARGED_CLASS_B_PENDING_CLASS_FLIP_v0`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_STATUS_v0: CLASS_A_PROMOTED_v0_NONCLAIM`
+
+## Seam governance-vs-physics status snapshot (v0)
+
+- Standard pointer:
+	- `formal/docs/release/TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0.md`
+
+- `SEAM_GR_QM_GOVERNANCE_COMPLETE_v0: YES`
+- `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO`
+- `SEAM_GR_QM_STATUS_READ_v0: GOVERNANCE_COMPLETE_BUT_PHYSICS_INCOMPLETE`
+- `SEAM_GR_QM_PHYSICS_BLOCKER_v0: SHARED_DYNAMICS_TRANSPORT_AND_REGIME_CLOSURE_NOT_DISCHARGED`
+
+- `SEAM_EM_QFT_GOVERNANCE_COMPLETE_v0: YES`
+- `SEAM_EM_QFT_PHYSICS_COMPLETE_v0: NO`
+- `SEAM_EM_QFT_STATUS_READ_v0: GOVERNANCE_COMPLETE_BUT_PHYSICS_INCOMPLETE`
+- `SEAM_EM_QFT_PHYSICS_BLOCKER_v0: SHARED_DYNAMICS_AND_RESIDUAL_UNIFICATION_NOT_DISCHARGED`
+
+- `SEAM_QM_STAT_GOVERNANCE_COMPLETE_v0: NO`
+- `SEAM_QM_STAT_PHYSICS_COMPLETE_v0: NO`
+- `SEAM_QM_STAT_STATUS_READ_v0: CLASS_B_TRACKED_NOT_GOVERNANCE_COMPLETE_NOT_PHYSICS_COMPLETE`
+- `SEAM_QM_STAT_GOVERNANCE_BLOCKER_v0: NO_THEOREM_LINKED_PROMOTION_PACKAGE_PINNED`
+- `SEAM_QM_STAT_PHYSICS_BLOCKER_v0: NO_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE`
+
+- `SEAM_STAT_QM_GOVERNANCE_COMPLETE_v0: NO`
+- `SEAM_STAT_QM_PHYSICS_COMPLETE_v0: NO`
+- `SEAM_STAT_QM_STATUS_READ_v0: CLASS_B_TRACKED_NOT_GOVERNANCE_COMPLETE_NOT_PHYSICS_COMPLETE`
+
+- `SEAM_COSMO_SR_GOVERNANCE_COMPLETE_v0: NO`
+- `SEAM_COSMO_SR_PHYSICS_COMPLETE_v0: NO`
+- `SEAM_COSMO_SR_STATUS_READ_v0: CLASS_B_TRACKED_NOT_GOVERNANCE_COMPLETE_NOT_PHYSICS_COMPLETE`
+
+- `SEAM_SR_COSMO_GOVERNANCE_COMPLETE_v0: NO`
+- `SEAM_SR_COSMO_PHYSICS_COMPLETE_v0: NO`
+- `SEAM_SR_COSMO_STATUS_READ_v0: CLASS_B_TRACKED_NOT_GOVERNANCE_COMPLETE_NOT_PHYSICS_COMPLETE`

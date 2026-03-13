@@ -1,0 +1,30 @@
+{
+  "report_id": "MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE18_DRIFT_REPORT_v0",
+  "status": "RUN_BOUNDED_v0_NONCLAIM",
+  "cycle17_report_pointer": "formal/output/master_action_variant_c_pressure_cycle17_execution_report_v0.json",
+  "cycle18_report_pointer": "formal/output/master_action_variant_c_pressure_cycle18_execution_report_v0.json",
+  "generated_on": "2026-03-12T18:20:00",
+  "strategy_change_token": "CYCLE18_PRIORITY_SENSITIVITY_REBALANCE_v0",
+  "drift": {
+    "retain_delta": 0,
+    "prune_delta": 0,
+    "inconclusive_delta": 0,
+    "priority_lane_count_delta": 0,
+    "control_lane_count_delta": 0,
+    "reference_lane_count_delta": 0
+  },
+  "priority_lane_admissibility_delta": {
+    "qft_score_delta": 0.02,
+    "sr_score_delta": 0.07,
+    "threshold_delta": 0.02
+  },
+  "success_criteria": {
+    "policy_continuation_valid": true,
+    "measurable_drift_observed": true,
+    "escalation_required": false
+  },
+  "guard_consistency": {
+    "cycle17_all_guards_true": true,
+    "cycle18_all_guards_true": true
+  }
+}

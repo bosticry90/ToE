@@ -1,0 +1,25 @@
+{
+  "artifact_id": "toe_qft_scalar_operator_commutator_artifact_v0",
+  "phase": "PHASE_3_ROUTE_A_OPERATOR_COMMUTATOR_HARDENING",
+  "source": "free_scalar_canonical_route",
+  "equal_time_commutators": {
+    "[phi,pi]": "i delta^3(x-y)",
+    "[phi,phi]": "0",
+    "[pi,pi]": "0"
+  },
+  "operator_distribution_posture": {
+    "smearing_required": true,
+    "pointwise_product_claimed": false,
+    "test_function_framework": "tempered_distribution_style_bounded_posture"
+  },
+  "heisenberg_route_consistency": {
+    "statement": "partial_t(phi) = i[H,phi] consistent_with_pi_equals_partial_t_phi",
+    "bounded_status": true
+  },
+  "assumptions": [
+    "free_scalar_regime_for_operator_hardening",
+    "equal_time_hypersurface_fixed",
+    "domain_closure_deferred"
+  ],
+  "status": "PINNED_ROUTE_A_OPERATOR_COMMUTATOR_HARDENING"
+}

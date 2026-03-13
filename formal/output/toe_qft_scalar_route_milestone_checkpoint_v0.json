@@ -1,0 +1,24 @@
+{
+  "artifact_id": "toe_qft_scalar_route_milestone_checkpoint_v0",
+  "phase": "PHASE_3_ROUTE_A_SCALAR_MILESTONE_CONSOLIDATION",
+  "route_scope": "bounded_free_scalar_qft_to_qm_bridge",
+  "ladder_checkpoint": {
+    "charter_criteria_pinned": true,
+    "field_and_covariance_pinned": true,
+    "quantization_hamiltonian_pinned": true,
+    "operator_mode_pinned": true,
+    "normalization_one_particle_pinned": true,
+    "nonrelativistic_schrodinger_bridge_pinned": true
+  },
+  "open_items": [
+    "optional_two_point_or_propagator_surface",
+    "scalar_route_manuscript_assembly_package"
+  ],
+  "non_claim_boundaries": [
+    "no_interacting_field_completion_claim",
+    "no_gauge_sector_completion_claim",
+    "no_multi_particle_scattering_completion_claim",
+    "no_standard_model_completion_claim"
+  ],
+  "status": "MILESTONE_PINNED_BOUNDED_FREE_SCALAR_QFT_TO_QM_BRIDGE"
+}

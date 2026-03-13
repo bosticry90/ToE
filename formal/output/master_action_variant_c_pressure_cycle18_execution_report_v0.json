@@ -1,0 +1,117 @@
+{
+  "report_id": "MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE18_EXECUTION_REPORT_v0",
+  "status": "RUN_BOUNDED_v0_NONCLAIM",
+  "cycle_target": "VARIANT_C_PRESSURE_CYCLE18_v0",
+  "generated_on": "2026-03-12T18:20:00",
+  "strategy_change_token": "CYCLE18_PRIORITY_SENSITIVITY_REBALANCE_v0",
+  "summary_pointer": "formal/output/master_action_variant_packet02_decision_summary_v0.json",
+  "scorecard_pointer": "formal/output/master_action_variant_packet02_scorecard_v0.json",
+  "lane_counts": {
+    "total": 7,
+    "priority": 2,
+    "control": 2,
+    "reference": 3
+  },
+  "decision_counts": {
+    "retain": 4,
+    "prune": 2,
+    "inconclusive": 1
+  },
+  "guards": {
+    "all_rows_have_cycle_target": true,
+    "all_rows_have_cycle_role": true,
+    "priority_rows_have_strict_profile": true,
+    "priority_rows_have_counterfactual_check": true,
+    "priority_rows_have_admissibility_score": true,
+    "priority_rows_have_admissibility_threshold": true,
+    "qm_counterfactual_lane_pinned": true,
+    "all_rows_have_m4_pointer": true,
+    "all_rows_have_decision_record": true
+  },
+  "priority_lane_admissibility_snapshot": {
+    "qft_score": 0.66,
+    "sr_score": 0.62,
+    "threshold": 0.62
+  },
+  "lane_rows": [
+    {
+      "lane": "QM",
+      "artifact_path": "formal/output/qm_empirical_comparison_packet_02_v0.json",
+      "decision": "RETAIN_v0",
+      "variant": "VARIANT_A_BASELINE_v0",
+      "cycle_target": "VARIANT_C_PRESSURE_CYCLE18_v0",
+      "cycle_role": "CONTROL_LANE_v0",
+      "counterfactual_lane": "COUNTERFACTUAL_CONTROL_QM_v0",
+      "has_m4_seam_pointer": true,
+      "has_decision_record_pointer": true
+    },
+    {
+      "lane": "GR",
+      "artifact_path": "formal/output/gr_empirical_comparison_packet_02_v0.json",
+      "decision": "RETAIN_v0",
+      "variant": "VARIANT_A_BASELINE_v0",
+      "cycle_target": "VARIANT_C_PRESSURE_CYCLE18_v0",
+      "cycle_role": "CONTROL_LANE_v0",
+      "has_m4_seam_pointer": true,
+      "has_decision_record_pointer": true
+    },
+    {
+      "lane": "STAT",
+      "artifact_path": "formal/output/stat_empirical_comparison_packet_02_v0.json",
+      "decision": "RETAIN_v0",
+      "variant": "VARIANT_B_SEAM_WEIGHT_SHIFT_v0",
+      "cycle_target": "VARIANT_C_PRESSURE_CYCLE18_v0",
+      "cycle_role": "REFERENCE_LANE_v0",
+      "has_m4_seam_pointer": true,
+      "has_decision_record_pointer": true
+    },
+    {
+      "lane": "COSMO",
+      "artifact_path": "formal/output/cosmo_empirical_comparison_packet_02_v0.json",
+      "decision": "PRUNE_v0",
+      "variant": "VARIANT_B_SEAM_WEIGHT_SHIFT_v0",
+      "cycle_target": "VARIANT_C_PRESSURE_CYCLE18_v0",
+      "cycle_role": "REFERENCE_LANE_v0",
+      "has_m4_seam_pointer": true,
+      "has_decision_record_pointer": true
+    },
+    {
+      "lane": "EM",
+      "artifact_path": "formal/output/em_empirical_comparison_packet_02_v0.json",
+      "decision": "RETAIN_v0",
+      "variant": "VARIANT_B_SEAM_WEIGHT_SHIFT_v0",
+      "cycle_target": "VARIANT_C_PRESSURE_CYCLE18_v0",
+      "cycle_role": "REFERENCE_LANE_v0",
+      "has_m4_seam_pointer": true,
+      "has_decision_record_pointer": true
+    },
+    {
+      "lane": "QFT",
+      "artifact_path": "formal/output/qft_empirical_comparison_packet_02_v0.json",
+      "decision": "PRUNE_v0",
+      "variant": "VARIANT_C_SEAM_TRANSPORT_CROSS_TERM_v0",
+      "cycle_target": "VARIANT_C_PRESSURE_CYCLE18_v0",
+      "cycle_role": "PRIORITY_LANE_v0",
+      "priority_threshold_profile": "SENSITIVITY_REBALANCE_THRESHOLD_CYCLE18_v0",
+      "counterfactual_check": "PASS_v0",
+      "admissibility_score": 0.66,
+      "admissibility_threshold": 0.62,
+      "has_m4_seam_pointer": true,
+      "has_decision_record_pointer": true
+    },
+    {
+      "lane": "SR",
+      "artifact_path": "formal/output/sr_empirical_comparison_packet_02_v0.json",
+      "decision": "INCONCLUSIVE_v0",
+      "variant": "VARIANT_C_SEAM_TRANSPORT_CROSS_TERM_v0",
+      "cycle_target": "VARIANT_C_PRESSURE_CYCLE18_v0",
+      "cycle_role": "PRIORITY_LANE_v0",
+      "priority_threshold_profile": "SENSITIVITY_REBALANCE_THRESHOLD_CYCLE18_v0",
+      "counterfactual_check": "PASS_v0",
+      "admissibility_score": 0.62,
+      "admissibility_threshold": 0.62,
+      "has_m4_seam_pointer": true,
+      "has_decision_record_pointer": true
+    }
+  ]
+}

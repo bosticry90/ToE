@@ -66,6 +66,9 @@ No-deviation sequencing rule:
 - Matrix consistency gate pointer:
   - `formal/python/tests/test_pillar_status_matrix_consistency_gate.py`
   - `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
+- Closure semantics standard pointer:
+  - `formal/docs/release/TOE_CLOSURE_SEMANTICS_STANDARD_v0.md`
+  - `formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py`
 - Pillar phase advancement standard pointer:
   - `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`
   - `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`
@@ -78,6 +81,9 @@ No-deviation sequencing rule:
   - `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py`
   - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md`
   - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_EXECUTION_PLAN_v0.md`
+  - `formal/docs/release/TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0.md`
+  - `formal/docs/release/TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0.md`
+  - `formal/python/tests/test_toe_seam_status_split_gate.py`
   - `formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md`
   - `formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md`
   - `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`
@@ -111,8 +117,26 @@ No-deviation sequencing rule:
   - `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md`
+  - `formal/output/sr_empirical_comparison_packet_05_v0.json`
+  - `formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py`
+  - `formal/python/tests/test_sr_empirical_packet_05_artifact_schema_gate.py`
+  - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET05_MATRIX_v0.json`
+  - `formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_PROGRESSION_POLICY_v0.md`
+  - `formal/docs/release/FOUNDATIONAL_EMPIRICAL_DECISION_AND_FALSIFICATION_STANDARD_v0.md`
+  - `formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_OVERRIDE_POLICY_v0.md`
+  - `formal/output/empirical_packet05_decision_ledger_v0.json`
+  - `formal/python/tests/test_empirical_packet05_decision_ledger_parity_gate.py`
+  - `formal/python/tests/test_empirical_packet05_falsification_surface_gate.py`
+  - `formal/python/tests/test_foundational_empirical_packet05_override_policy_gate.py`
+  - `formal/python/tests/test_foundational_empirical_packet05_matrix_consistency_gate.py`
+  - `formal/python/tests/test_foundational_empirical_packet05_progression_policy_gate.py`
   - `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
+  - `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE18_RELEASE_NOTE_v0.md`
+  - `formal/output/master_action_variant_c_pressure_cycle18_execution_report_v0.json`
+  - `formal/output/master_action_variant_c_pressure_cycle18_drift_report_v0.json`
+  - `formal/python/tests/test_master_action_variant_cycle18_sensitivity_gate.py`
   - `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
@@ -129,6 +153,13 @@ No-deviation sequencing rule:
   - `formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`
   - `formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py`
   - `formal/python/tests/test_em_qft_seam_promotion_cycle03_class_flip_gate.py`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`
+  - `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean`
+  - `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`
+  - `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`
+  - `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
   - `formal/python/tests/test_prediction_first_scoreboard_gate.py`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET03_MATRIX_v0.json`
   - `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0.json`
@@ -239,10 +270,12 @@ No-deviation sequencing rule:
   - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE02_v0.md`
   - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE03_v0.md`
   - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE04_v0.md`
+  - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE05_v0.md`
   - `formal/output/proof_debt_burndown_checkpoint_cycle01_v0.json`
   - `formal/output/proof_debt_burndown_checkpoint_cycle02_v0.json`
   - `formal/output/proof_debt_burndown_checkpoint_cycle03_v0.json`
   - `formal/output/proof_debt_burndown_checkpoint_cycle04_v0.json`
+  - `formal/output/proof_debt_burndown_checkpoint_cycle05_v0.json`
   - `formal/docs/release/TOE_COMPLETE_V1_TERMINAL_GATE_v0.md`
   - `formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json`
   - `formal/output/toe_complete_v1_regression_only_baseline_v0.json`
@@ -525,6 +558,12 @@ No-deviation sequencing rule:
   - `QM_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: c32ac32cebd7443e046aedef3fdbccb97661936ee7c5fd61741aef6cf68a07ba`
   - `QM_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/qm_m2_assumption_minimization_scaffold_cycle01_v0.json`
+  - `QM_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+  - `QM_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_ARTIFACT_v0: qm_m2_assumption_minimization_depth_exemplar_cycle02_v0`
+  - `QM_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/docs/paper/DERIVATION_TARGET_QM_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_v0.md`
+  - `formal/output/qm_m2_assumption_minimization_depth_exemplar_cycle02_v0.json`
+  - `formal/python/tests/test_qm_m2_assumption_minimization_depth_exemplar_cycle02_gate.py`
   - `QM_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
   - `QM_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: qm_m2_literature_alignment_scaffold_cycle01_v0`
   - `QM_M2_LITERATURE_ALIGNMENT_SHA256_v0: 8eecd039c5ecf244054b8727a61835f2f8261d08d875aae945699477c14c3332`
@@ -550,6 +589,12 @@ No-deviation sequencing rule:
   - `GR_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: d15f3f5e53c3ddc2fc0b1c359811451ab8989b279935827823b6a0a2b5cd3b9c`
   - `GR_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/gr_m2_assumption_minimization_scaffold_cycle01_v0.json`
+  - `GR_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+  - `GR_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_ARTIFACT_v0: gr_m2_assumption_minimization_depth_exemplar_cycle02_v0`
+  - `GR_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_v0.md`
+  - `formal/output/gr_m2_assumption_minimization_depth_exemplar_cycle02_v0.json`
+  - `formal/python/tests/test_gr_m2_assumption_minimization_depth_exemplar_cycle02_gate.py`
   - `GR_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
   - `GR_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: gr_m2_literature_alignment_scaffold_cycle01_v0`
   - `GR_M2_LITERATURE_ALIGNMENT_SHA256_v0: df8ea4954b7d5372fcf5902c5844241c985c736938dbd209e0e0368d803f927e`
@@ -575,6 +620,12 @@ No-deviation sequencing rule:
   - `STAT_M2_ASSUMPTION_MINIMIZATION_SHA256_v0: 89bf467278875521ff1329120ca37999d7a07ed229ed049f95e6b9abdfef5501`
   - `STAT_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/stat_m2_assumption_minimization_scaffold_cycle01_v0.json`
+  - `STAT_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+  - `STAT_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_ARTIFACT_v0: stat_m2_assumption_minimization_depth_exemplar_cycle02_v0`
+  - `STAT_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+  - `formal/docs/paper/DERIVATION_TARGET_STAT_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_v0.md`
+  - `formal/output/stat_m2_assumption_minimization_depth_exemplar_cycle02_v0.json`
+  - `formal/python/tests/test_stat_m2_assumption_minimization_depth_exemplar_cycle02_gate.py`
   - `STAT_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
   - `STAT_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: stat_m2_literature_alignment_scaffold_cycle01_v0`
   - `STAT_M2_LITERATURE_ALIGNMENT_SHA256_v0: 641b3adc446ffa9f187caa48f8167444b17d0f6c473e3b10d2e7906f604b59ba`
@@ -761,6 +812,9 @@ Definitions:
 - `PHYSICS-CLOSED`: core theorem-chain objective is discharged under explicit assumptions and pinned non-claim boundaries.
 - `GOVERNANCE-CLOSED`: roadmap closure criteria are satisfied (no required blocker rows remain `B-*` for the pillar closure package).
 - `MATRIX-CLOSED`: pillar matrix `Status: CLOSED` under canonical unlock/publishability policy.
+- Standard pointer:
+  - `formal/docs/release/TOE_CLOSURE_SEMANTICS_STANDARD_v0.md`
+  - `formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py`
 
 Terminology discipline:
 - Conversational `closed` defaults to `PHYSICS-CLOSED` unless explicitly qualified.
@@ -769,6 +823,7 @@ Terminology discipline:
 Rule:
 - Pillar matrix `Status` remains canonical for unlock policy (`ACTIVE`/`LOCKED`/`CLOSED`).
 - Dual-layer status lines are diagnostic and do not override matrix status.
+- `TOE_COMPLETE_v0` and `TOE_COMPLETE_v1` remain bounded repo-completion tokens and are not physics-complete claims.
 - Proceed gate:
   - Theorem-engineering progression to next-pillar targets is allowed only when
     `PILLAR-*_PHYSICS_STATUS` is `CLOSED_*` under explicit assumptions and
@@ -1316,6 +1371,27 @@ Current dual-layer snapshot (machine-checkable tokens):
 - `GR01_PUBLICATION_BRIDGE_CHECKPOINT_CYCLE09_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/gr01_publication_bridge_checkpoint_cycle09_v0.json`
 - `formal/python/tests/test_gr01_publication_bridge_checkpoint_coupling_cycle09_gate.py`
+  - `formal/docs/release/GR01_PUBLICATION_GRADE_DISCHARGE_PACKAGE_v0.md`
+  - `formal/output/gr01_publication_grade_discharge_package_v0.json`
+  - `formal/python/tests/test_gr01_publication_grade_discharge_package_gate.py`
+  - `formal/docs/release/GR01_PUBLICATION_THEOREM_CLAIM_ADVANCEMENT_STANDARD_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md`
+  - `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`
+  - `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_REGULARITY_SURFACE_v0.md`
+  - `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_DISCRETE_REGULARITY_EVIDENCE_v0.md`
+  - `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_CONTINUUM_REGULARITY_ROUTE_v0.md`
+  - `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_NONCLAIM_BOUNDARY_EVIDENCE_v0.md`
+  - `formal/output/gr01_function_space_regularity_surface_v0.json`
+  - `formal/output/gr01_function_space_completion_criteria_cycle10_v0.json`
+  - `formal/output/gr01_function_space_discrete_regularity_evidence_v0.json`
+  - `formal/output/gr01_function_space_continuum_regularity_route_v0.json`
+  - `formal/output/gr01_function_space_nonclaim_boundary_evidence_v0.json`
+  - `formal/python/tests/test_gr01_publication_theorem_claim_advancement_gate.py`
+  - `formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py`
+  - `formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py`
+  - `formal/python/tests/test_gr01_function_space_continuum_regularity_route_gate.py`
+  - `formal/python/tests/test_gr01_function_space_nonclaim_boundary_evidence_gate.py`
+  - `formal/python/tests/test_gr01_function_space_completion_criteria_gate.py`
 - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_ARTIFACT_v0: gr01_closure_hardening_bundle_cycle01_v0`
 - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_SHA256_v0: 36b8d0abd7d56f1c39d02729528961ef95e4900a6f480c6aba4e5681fa0a8a7a`
 - `GR01_CLOSURE_HARDENING_BUNDLE_CYCLE01_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
@@ -2050,6 +2126,48 @@ QFT full-derivation pre-discharge closure pin (cycle-27/cycle-50):
   - `formal/python/tests/test_qft_full_derivation_discharge_gate.py`
   - `formal/python/tests/test_qft_full_derivation_adjudication_consistency_gate.py`
   - `formal/python/tests/test_qft_discharge_readiness_pack_gate.py`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_QFT_SCALAR_ROUTE_v0.md`
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_COMPLETION_CRITERIA_v0.md`
+  - `formal/docs/paper/toe_qft_scalar_field_derivation_report_v0.md`
+  - `formal/output/toe_qft_scalar_field_equations_v0.json`
+  - `formal/docs/paper/toe_qft_scalar_covariance_report_v0.md`
+  - `formal/output/toe_qft_scalar_stress_energy_artifact_v0.json`
+  - `formal/docs/paper/toe_qft_scalar_canonical_quantization_report_v0.md`
+  - `formal/output/toe_qft_scalar_canonical_quantization_artifact_v0.json`
+  - `formal/docs/paper/toe_qft_scalar_canonical_momentum_report_v0.md`
+  - `formal/output/toe_qft_scalar_hamiltonian_density_artifact_v0.json`
+  - `formal/docs/paper/toe_qft_scalar_operator_commutator_report_v0.md`
+  - `formal/output/toe_qft_scalar_operator_commutator_artifact_v0.json`
+  - `formal/docs/paper/toe_qft_scalar_mode_expansion_report_v0.md`
+  - `formal/output/toe_qft_scalar_creation_annihilation_artifact_v0.json`
+  - `formal/docs/paper/toe_qft_scalar_normalization_report_v0.md`
+  - `formal/output/toe_qft_scalar_one_particle_state_artifact_v0.json`
+  - `formal/docs/paper/toe_qft_scalar_nonrelativistic_limit_report_v0.md`
+  - `formal/output/toe_qft_scalar_schrodinger_limit_artifact_v0.json`
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md`
+  - `formal/output/toe_qft_scalar_route_milestone_checkpoint_v0.json`
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_SKELETON_v0.md`
+  - `formal/output/toe_qft_scalar_route_section_map_v0.json`
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_DRAFT_v0.md`
+  - `formal/output/toe_qft_scalar_route_manuscript_fill_map_v0.json`
+  - `formal/output/toe_qft_scalar_route_citation_binding_map_v0.json`
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_BIBLIOGRAPHY_ALIGNMENT_v0.md`
+  - `formal/output/toe_qft_scalar_route_reference_map_v0.json`
+  - `formal/python/tests/test_toe_qft_scalar_route_charter_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_field_equation_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_covariance_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_quantization_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_hamiltonian_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_operator_commutator_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_mode_expansion_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_normalization_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_nonrelativistic_limit_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_milestone_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_manuscript_skeleton_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_manuscript_draft_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_citation_binding_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_bibliography_alignment_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_parity_gate.py`
   - `formal/python/tests/test_pillar_adjudication_flip_policy_gate.py`
   - `formal/python/tests/test_qft_evol_micro_rollout_requires_discharge_alignment_gate.py`
   - `formal/docs/paper/QFT_DISCHARGE_READINESS_PACK_v0.md`

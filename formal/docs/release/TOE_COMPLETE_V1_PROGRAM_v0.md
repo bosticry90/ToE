@@ -26,6 +26,17 @@ Completion semantics:
     3. deep-maturity delta attestation under current bounded controls,
     4. matrix/state/roadmap pointer parity and no-drift gates green,
     5. full governance suite green at completion checkpoint.
+- Interpretation guardrail:
+  - `TOE_COMPLETE_v0` and `TOE_COMPLETE_v1` are bounded repo-completion semantics.
+  - they do not mean publication-grade all-regime derivation closure.
+  - they do not mean seam-total physics closure.
+  - they do not mean external-truth confirmation.
+- Closure semantics standard pointer:
+  - `formal/docs/release/TOE_CLOSURE_SEMANTICS_STANDARD_v0.md`
+- Canonical action promotion standard pointer:
+  - `formal/docs/release/TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0.md`
+- Cross-surface guard gate pointer:
+  - `formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py`
 
 Canonical program anchors:
 - `formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md`
@@ -44,10 +55,14 @@ Canonical program anchors:
 - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE02_v0.md`
 - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE03_v0.md`
 - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE04_v0.md`
+- `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE05_v0.md`
 - `formal/output/proof_debt_burndown_checkpoint_cycle01_v0.json`
 - `formal/output/proof_debt_burndown_checkpoint_cycle02_v0.json`
 - `formal/output/proof_debt_burndown_checkpoint_cycle03_v0.json`
 - `formal/output/proof_debt_burndown_checkpoint_cycle04_v0.json`
+- `formal/output/proof_debt_burndown_checkpoint_cycle05_v0.json`
+- `formal/docs/release/TOE_CLOSURE_SEMANTICS_STANDARD_v0.md`
+- `formal/docs/release/TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0.md`
 - `formal/docs/release/TOE_COMPLETE_V1_TERMINAL_GATE_v0.md`
 - `formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json`
 - `formal/output/toe_complete_v1_regression_only_baseline_v0.json`
@@ -69,3 +84,4 @@ Legacy scaffold gatekeeping commitment:
 
 Completion token:
 - `TOE_COMPLETE_V1_PROGRAM_STATUS_v0: TERMINAL_SATISFIED_REGRESSION_ONLY_BASELINE_FROZEN`
+- `TOE_COMPLETE_V1_INTERPRETATION_v0: BOUNDED_REPO_COMPLETION_NOT_PHYSICS_COMPLETE`

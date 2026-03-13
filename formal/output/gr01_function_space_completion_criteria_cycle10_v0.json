@@ -1,0 +1,49 @@
+{
+  "record_id": "GR01_FUNCTION_SPACE_COMPLETION_CRITERIA_CYCLE10_v0",
+  "artifact_id": "gr01_function_space_completion_criteria_cycle10_v0",
+  "scope": "gr01_function_space_completion_criteria_v0",
+  "criteria_rows": [
+    {
+      "row_id": "GR01_FUNCTION_SPACE_CRITERIA_ROW_01_v0",
+      "status": "DISCHARGED_v0_CONCRETE_EVIDENCE_NONCLAIM",
+      "evidence_tokens": [
+        "GR01_FUNCTION_SPACE_CURRENT_SCOPE_v0: DISCRETE_BOUNDED_FIELD_REGULARITY_ONLY",
+        "GR01_FUNCTION_SPACE_DISCRETE_REGULARITY_CLASS_v0: FINITE_DISCRETE_LATTICE_SCALAR_FIELD_CLASS",
+        "formal/docs/paper/TOE_GR01_FUNCTION_SPACE_DISCRETE_REGULARITY_EVIDENCE_v0.md",
+        "formal/output/gr01_function_space_discrete_regularity_evidence_v0.json"
+      ]
+    },
+    {
+      "row_id": "GR01_FUNCTION_SPACE_CRITERIA_ROW_02_v0",
+      "status": "ROUTE_EXPLICITATED_v0_NONCLAIM",
+      "evidence_tokens": [
+        "GR01_FUNCTION_SPACE_NEXT_SCOPE_v0: CONTINUUM_REGULARITY_CLASS_EXPLICITATION_REQUIRED",
+        "GR01_FUNCTION_SPACE_CONTINUUM_ROUTE_STATUS_v0: ROUTE_EXPLICITATED_v0_NONCLAIM",
+        "formal/docs/paper/TOE_GR01_FUNCTION_SPACE_CONTINUUM_REGULARITY_ROUTE_v0.md",
+        "formal/output/gr01_function_space_continuum_regularity_route_v0.json"
+      ]
+    },
+    {
+      "row_id": "GR01_FUNCTION_SPACE_CRITERIA_ROW_03_v0",
+      "status": "DISCHARGED_v0_CONCRETE_EVIDENCE_NONCLAIM",
+      "evidence_tokens": [
+        "GR01_FUNCTION_SPACE_SOBELOV_CLAIM_v0: NOT_CLAIMED",
+        "GR01_FUNCTION_SPACE_UNIQUENESS_CLAIM_v0: NOT_CLAIMED",
+        "GR01_FUNCTION_SPACE_NONCLAIM_BOUNDARY_STATUS_v0: DISCHARGED_v0_CONCRETE_EVIDENCE_NONCLAIM",
+        "formal/docs/paper/TOE_GR01_FUNCTION_SPACE_NONCLAIM_BOUNDARY_EVIDENCE_v0.md",
+        "formal/output/gr01_function_space_nonclaim_boundary_evidence_v0.json"
+      ]
+    },
+    {
+      "row_id": "GR01_FUNCTION_SPACE_CRITERIA_ROW_04_v0",
+      "status": "PINNED",
+      "evidence_tokens": [
+        "State_of_the_Theory.md",
+        "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+        "formal/python/tests/test_gr01_function_space_completion_criteria_gate.py"
+      ]
+    }
+  ],
+  "adjudication_posture": "ATTACK_TRACK_ACTIVE_NONCLAIM",
+  "status": "LOCKED_GR01_FUNCTION_SPACE_CRITERIA_CYCLE10_ROW01_ROW03_DISCHARGED_ROW02_ROUTE_NONCLAIM"
+}

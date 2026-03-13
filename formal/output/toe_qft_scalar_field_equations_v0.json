@@ -1,0 +1,24 @@
+{
+  "artifact_id": "toe_qft_scalar_field_equations_v0",
+  "phase": "PHASE_1_CLASSICAL_SCALAR_FIELD",
+  "source": "master_action_scalar_slice",
+  "assumptions": [
+    "real_scalar_field_phi",
+    "vanishing_boundary_variation_terms",
+    "fixed_scalar_slice_coefficients_during_variation",
+    "free_field_limit_for_kg_mapping"
+  ],
+  "lagrangian_density": "L_scalar = 1/2 * d_mu(phi) * d^mu(phi) - 1/2 * m_eff^2 * phi^2 - V_int(phi)",
+  "euler_lagrange": {
+    "general_form": "d_mu(dL/d(d_mu phi)) - dL/dphi = 0",
+    "dL_d_dmu_phi": "d^mu(phi)",
+    "dL_d_phi": "-m_eff^2 * phi - dV_int/dphi",
+    "equation_of_motion": "box(phi) + m_eff^2 * phi + dV_int/dphi = 0"
+  },
+  "klein_gordon_mapping": {
+    "condition": "dV_int/dphi = 0",
+    "equation": "(box + m_eff^2) phi = 0",
+    "classification": "KLEIN_GORDON_CLASS_COMPATIBLE"
+  },
+  "status": "PINNED_PHASE1_KG_CLASS_ROUTE"
+}

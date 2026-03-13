@@ -74,6 +74,10 @@ Non-claim boundary:
 
 - canonical checklist pointer:
   - `formal/docs/paper/DERIVATION_TARGET_GR01_DERIVATION_GRADE_CHECKLIST_v0.md`
+- publication-grade package pointer:
+  - `formal/docs/release/GR01_PUBLICATION_GRADE_DISCHARGE_PACKAGE_v0.md`
+  - `formal/output/gr01_publication_grade_discharge_package_v0.json`
+  - `formal/python/tests/test_gr01_publication_grade_discharge_package_gate.py`
 - theorem and bridge surfaces:
   - `formal/docs/paper/TOE_GR01_THEOREM_SURFACE_v0.md`
   - `formal/docs/paper/TOE_GR01_PROJECTION_BRIDGE_SPEC_v0.md`
@@ -87,6 +91,24 @@ Non-claim boundary:
   - `formal/docs/paper/TOE_GR01_LAPLACIAN_EXTRACTION_v0.md`
 - paper manuscript structure anchor:
   - `formal/docs/paper/PHYSICS_PAPER_OUTLINE_v0.md`
+- theorem-claim advancement anchors:
+  - `formal/docs/release/GR01_PUBLICATION_THEOREM_CLAIM_ADVANCEMENT_STANDARD_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md`
+  - `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`
+  - `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_REGULARITY_SURFACE_v0.md`
+  - `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_DISCRETE_REGULARITY_EVIDENCE_v0.md`
+  - `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_CONTINUUM_REGULARITY_ROUTE_v0.md`
+  - `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_NONCLAIM_BOUNDARY_EVIDENCE_v0.md`
+  - `formal/output/gr01_function_space_completion_criteria_cycle10_v0.json`
+  - `formal/output/gr01_function_space_discrete_regularity_evidence_v0.json`
+  - `formal/output/gr01_function_space_continuum_regularity_route_v0.json`
+  - `formal/output/gr01_function_space_nonclaim_boundary_evidence_v0.json`
+  - `formal/python/tests/test_gr01_publication_theorem_claim_advancement_gate.py`
+  - `formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py`
+  - `formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py`
+  - `formal/python/tests/test_gr01_function_space_continuum_regularity_route_gate.py`
+  - `formal/python/tests/test_gr01_function_space_nonclaim_boundary_evidence_gate.py`
+  - `formal/python/tests/test_gr01_function_space_completion_criteria_gate.py`
 
 ## Status
 

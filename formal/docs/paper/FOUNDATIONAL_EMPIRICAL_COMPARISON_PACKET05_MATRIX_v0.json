@@ -1,0 +1,38 @@
+{
+  "matrix_id": "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET05_MATRIX_v0",
+  "matrix_version": 1,
+  "protocol_doc": "formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md",
+  "progression_policy_doc": "formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_PROGRESSION_POLICY_v0.md",
+  "enabled_lanes": [
+    "GR",
+    "SR"
+  ],
+  "allowed_decisions": [
+    "RETAIN_v0",
+    "PRUNE_v0",
+    "INCONCLUSIVE_v0"
+  ],
+  "override_policy_doc": "formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_OVERRIDE_POLICY_v0.md",
+  "rows": {
+    "GR": {
+      "doc_path": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_05_v0.md",
+      "artifact_path": "formal/output/gr_empirical_comparison_packet_05_v0.json",
+      "gate_path": "formal/python/tests/test_gr_empirical_comparison_packet_05_gate.py",
+      "schema_gate_path": "formal/python/tests/test_gr_empirical_packet_05_artifact_schema_gate.py",
+      "decision_record_path": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_05_DECISION_RECORD_v0.md",
+      "falsification_surface_path": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_05_FALSIFICATION_SURFACE_v0.md",
+      "override_criteria_path": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_05_OVERRIDE_CRITERIA_v0.md",
+      "source_packet04_artifact_path": "formal/output/gr_empirical_comparison_packet_04_v0.json"
+    },
+    "SR": {
+      "doc_path": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md",
+      "artifact_path": "formal/output/sr_empirical_comparison_packet_05_v0.json",
+      "gate_path": "formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py",
+      "schema_gate_path": "formal/python/tests/test_sr_empirical_packet_05_artifact_schema_gate.py",
+      "decision_record_path": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_05_DECISION_RECORD_v0.md",
+      "falsification_surface_path": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_05_FALSIFICATION_SURFACE_v0.md",
+      "override_criteria_path": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_05_OVERRIDE_CRITERIA_v0.md",
+      "source_packet04_artifact_path": "formal/output/sr_empirical_comparison_packet_04_v0.json"
+    }
+  }
+}

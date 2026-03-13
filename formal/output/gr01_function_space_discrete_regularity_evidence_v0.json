@@ -1,0 +1,16 @@
+{
+  "artifact_id": "gr01_function_space_discrete_regularity_evidence_v0",
+  "status": "DISCHARGED_v0_CONCRETE_EVIDENCE_NONCLAIM",
+  "regularity_class": "FINITE_DISCRETE_LATTICE_SCALAR_FIELD_CLASS",
+  "witnesses": [
+    "ScalarField1D",
+    "ScalarField3D",
+    "FieldGrid"
+  ],
+  "boundary_posture": "EXPLICIT_PERIODIC_OR_DISCRETE_BOUNDARY_CONVENTIONS",
+  "formal_anchors": [
+    "formal/docs/paper/TOE_GR01_ANALYTIC_DISCHARGE_v0.md",
+    "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean",
+    "formal/toe_formal/ToeFormal/Variational/DiscreteField.lean"
+  ]
+}

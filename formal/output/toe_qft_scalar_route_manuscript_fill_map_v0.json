@@ -1,0 +1,52 @@
+{
+  "artifact_id": "toe_qft_scalar_route_manuscript_fill_map_v0",
+  "phase": "PHASE_3_ROUTE_A_SCALAR_MANUSCRIPT_FILL",
+  "route_scope": "bounded_free_scalar_qft_to_qm_bridge",
+  "section_fill_status": {
+    "motivation_and_scope": "GAP_CLOSED_v1",
+    "master_action_starting_point": "GAP_CLOSED_v1",
+    "scalar_field_derivation": "GAP_CLOSED_v1",
+    "covariance_and_stress_energy": "GAP_CLOSED_v2",
+    "quantization_route": "GAP_CLOSED_v2",
+    "operator_commutator_and_mode_expansion": "GAP_CLOSED_v2",
+    "normalization_and_one_particle_state": "GAP_CLOSED_v2",
+    "nonrelativistic_schrodinger_limit": "GAP_CLOSED_v2",
+    "open_items_and_bounded_claims": "GAP_CLOSED_v2"
+  },
+  "source_pointers": {
+    "skeleton": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_SKELETON_v0.md",
+    "milestone_summary": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md",
+    "section_map": "formal/output/toe_qft_scalar_route_section_map_v0.json",
+    "nonrelativistic_bridge": "formal/docs/paper/toe_qft_scalar_nonrelativistic_limit_report_v0.md"
+  },
+  "ranked_glue_gaps": [
+    "quantization_mode_normalization_transition_tightening",
+    "qft_to_schrodinger_interpretive_bridge_clarity",
+    "limitations_bounded_claim_publication_prose_hardening",
+    "narrative_redundancy_reduction"
+  ],
+  "resolved_glue_gaps": [
+    "scope_bounded_claim_framing_coherence_sections_1_2",
+    "covariance_to_quantization_transition_paragraph",
+    "shared_assumptions_table_sections_6_to_8",
+    "notation_harmonization_block_k_omega_low_energy",
+    "quantization_mode_normalization_transition_tightening",
+    "qft_to_schrodinger_interpretive_bridge_clarity",
+    "limitations_bounded_claim_publication_prose_hardening",
+    "narrative_redundancy_reduction"
+  ],
+  "remaining_explanatory_glue": [
+    "final_copy_edit_tone_consistency"
+  ],
+  "citation_binding_status": {
+    "internal_section_bindings": "ALIGNED_v1",
+    "external_references": "ALIGNED_v1"
+  },
+  "non_claim_boundaries": [
+    "no_interacting_field_completion_claim",
+    "no_gauge_sector_completion_claim",
+    "no_multi_particle_scattering_completion_claim",
+    "no_standard_model_completion_claim"
+  ],
+  "status": "MANUSCRIPT_FILL_GAP_CLOSURE_PASS4_BIBLIOGRAPHY_ALIGNED_BOUNDED_FREE_SCALAR_QFT_TO_QM_BRIDGE"
+}

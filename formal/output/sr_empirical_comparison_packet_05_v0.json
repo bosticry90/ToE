@@ -1,0 +1,22 @@
+{
+  "schema_id": "TOE_EMPIRICAL_PACKET_SCHEMA_v0",
+  "artifact_id": "sr_empirical_comparison_packet_05_v0",
+  "payload": {
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "decision": "RETAIN_v0",
+    "decision_basis": "packet05_lane_override_retain_survivor_guard_and_prune_signal_v0",
+    "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_05_DECISION_RECORD_v0.md",
+    "artifact_pointer": "formal/output/toe_master_action_shadow_numerics_cycle15_v0.json",
+    "bridge_pointer": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
+    "prediction_pointer": "formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md",
+    "discriminator_output_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_DISCRIMINATOR_EMP_SR_01_v0.md",
+    "discriminator_analysis_pointer": "formal/output/sr_empirical_discriminator_emp_sr_01_run_cycle01_v0.json",
+    "falsification_surface_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_05_FALSIFICATION_SURFACE_v0.md",
+    "falsification_hook": "COVARIANCE_DISCRIMINATOR_DRIFT_EXCEEDS_BOUNDED_TOLERANCE",
+    "uncertainty_annotation": "sr_packet05_cycle15_shadow_uncertainty_v0",
+    "bounded_validity_window": "sr_packet05_cycle15_window_v0",
+    "evidence_tier": "INTERMEDIATE_v0",
+    "maturity_guardrail": "PHASE5_CLOSEOUT_POSTURE_PRESERVED_v0",
+    "override_criteria_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_05_OVERRIDE_CRITERIA_v0.md"
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "artifact_id": "toe_qft_scalar_route_citation_binding_map_v0",
+  "phase": "PHASE_3_ROUTE_A_SCALAR_MANUSCRIPT_CITATION_BINDING",
+  "route_scope": "bounded_free_scalar_qft_to_qm_bridge",
+  "section_bindings": {
+    "motivation_and_scope": {
+      "placeholder": "[CIT:motivation_and_scope -> formal/docs/paper/DERIVATION_TARGET_TOE_QFT_SCALAR_ROUTE_v0.md]",
+      "source_path": "formal/docs/paper/DERIVATION_TARGET_TOE_QFT_SCALAR_ROUTE_v0.md",
+      "gate_path": "formal/python/tests/test_toe_qft_scalar_route_charter_gate.py"
+    },
+    "master_action_starting_point": {
+      "placeholder": "[CIT:master_action_starting_point -> formal/docs/paper/DERIVATION_TARGET_TOE_QFT_SCALAR_ROUTE_v0.md]",
+      "source_path": "formal/docs/paper/DERIVATION_TARGET_TOE_QFT_SCALAR_ROUTE_v0.md",
+      "gate_path": "formal/python/tests/test_toe_qft_scalar_route_charter_gate.py"
+    },
+    "scalar_field_derivation": {
+      "placeholder": "[CIT:scalar_field_derivation -> formal/docs/paper/toe_qft_scalar_field_derivation_report_v0.md]",
+      "source_path": "formal/docs/paper/toe_qft_scalar_field_derivation_report_v0.md",
+      "gate_path": "formal/python/tests/test_toe_qft_scalar_field_equation_gate.py"
+    },
+    "covariance_and_stress_energy": {
+      "placeholder": "[CIT:covariance_and_stress_energy -> formal/docs/paper/toe_qft_scalar_covariance_report_v0.md]",
+      "source_path": "formal/docs/paper/toe_qft_scalar_covariance_report_v0.md",
+      "gate_path": "formal/python/tests/test_toe_qft_scalar_covariance_gate.py"
+    },
+    "quantization_route": {
+      "placeholder": "[CIT:quantization_route -> formal/docs/paper/toe_qft_scalar_canonical_quantization_report_v0.md]",
+      "source_path": "formal/docs/paper/toe_qft_scalar_canonical_quantization_report_v0.md",
+      "gate_path": "formal/python/tests/test_toe_qft_scalar_quantization_gate.py"
+    },
+    "operator_commutator_and_mode_expansion": {
+      "placeholder": "[CIT:operator_commutator_and_mode_expansion -> formal/docs/paper/toe_qft_scalar_mode_expansion_report_v0.md]",
+      "source_path": "formal/docs/paper/toe_qft_scalar_mode_expansion_report_v0.md",
+      "gate_path": "formal/python/tests/test_toe_qft_scalar_mode_expansion_gate.py"
+    },
+    "normalization_and_one_particle_state": {
+      "placeholder": "[CIT:normalization_and_one_particle_state -> formal/docs/paper/toe_qft_scalar_normalization_report_v0.md]",
+      "source_path": "formal/docs/paper/toe_qft_scalar_normalization_report_v0.md",
+      "gate_path": "formal/python/tests/test_toe_qft_scalar_normalization_gate.py"
+    },
+    "nonrelativistic_schrodinger_limit": {
+      "placeholder": "[CIT:nonrelativistic_schrodinger_limit -> formal/docs/paper/toe_qft_scalar_nonrelativistic_limit_report_v0.md]",
+      "source_path": "formal/docs/paper/toe_qft_scalar_nonrelativistic_limit_report_v0.md",
+      "gate_path": "formal/python/tests/test_toe_qft_scalar_nonrelativistic_limit_gate.py"
+    },
+    "open_items_and_bounded_claims": {
+      "placeholder": "[CIT:open_items_and_bounded_claims -> formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md]",
+      "source_path": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md",
+      "gate_path": "formal/python/tests/test_toe_qft_scalar_route_milestone_gate.py"
+    }
+  },
+  "binding_coverage": {
+    "section_count": 9,
+    "all_sections_bound": true,
+    "internal_paths_exist": true
+  },
+  "external_reference_status": "DEFERRED",
+  "status": "CITATION_BINDING_INTERNAL_TRACEABILITY_ALIGNED_v0"
+}

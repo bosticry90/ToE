@@ -1,0 +1,20 @@
+{
+  "ledger_id": "empirical_packet05_decision_ledger_v0",
+  "ledger_version": 1,
+  "rows": {
+    "GR": {
+      "decision": "RETAIN_v0",
+      "basis": "packet05_lane_override_retain_survivor_guard_and_prune_signal_v0",
+      "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER_OVERRIDE",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_05_DECISION_RECORD_v0.md",
+      "falsification_surface_pointer": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_05_FALSIFICATION_SURFACE_v0.md"
+    },
+    "SR": {
+      "decision": "RETAIN_v0",
+      "basis": "packet05_lane_override_retain_survivor_guard_and_prune_signal_v0",
+      "guard": "PROTOCOL_COMPLIANT_INTERMEDIATE_TIER_OVERRIDE",
+      "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_05_DECISION_RECORD_v0.md",
+      "falsification_surface_pointer": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_05_FALSIFICATION_SURFACE_v0.md"
+    }
+  }
+}

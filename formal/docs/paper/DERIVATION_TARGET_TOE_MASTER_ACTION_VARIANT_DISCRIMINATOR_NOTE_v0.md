@@ -58,6 +58,9 @@ Canonical anchors:
 - `formal/output/master_action_variant_c_pressure_cycle16_drift_report_v0.json`
 - `formal/output/master_action_variant_c_pressure_cycle17_execution_report_v0.json`
 - `formal/output/master_action_variant_c_pressure_cycle17_drift_report_v0.json`
+- `formal/output/master_action_variant_c_pressure_cycle18_execution_report_v0.json`
+- `formal/output/master_action_variant_c_pressure_cycle18_drift_report_v0.json`
+- `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE18_RELEASE_NOTE_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_PACKET02_DECISION_RECORD_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE01_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE02_v0.md`
@@ -213,6 +216,19 @@ Policy:
 - cycle17 is authorized as continuation by preserving cycle16 parity posture under bounded non-claim controls.
 - preserve threshold policy (`0.60`) and priority-lane guard structure.
 - continuation execution remains bounded non-claim and does not authorize adjudication promotion.
+
+## Cycle18 sensitivity-rebalance policy (declared)
+
+Policy token:
+- `CYCLE18_PRIORITY_SENSITIVITY_REBALANCE_v0`
+
+Policy:
+- cycle18 is authorized as a sensitivity-rebalance tranche, not a parity-only continuation.
+- priority-lane admissibility profile is tightened to `SENSITIVITY_REBALANCE_THRESHOLD_CYCLE18_v0`.
+- measurable drift is required in cycle18 via either:
+  - non-zero decision-count drift, or
+  - non-zero priority admissibility delta on at least one priority lane.
+- bounded non-claim posture remains unchanged and does not authorize adjudication promotion.
 
 ## Completion condition (for this note)
 

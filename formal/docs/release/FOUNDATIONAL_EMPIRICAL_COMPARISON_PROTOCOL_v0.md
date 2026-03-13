@@ -31,6 +31,13 @@ Protocol tokens:
 - `FOUNDATIONAL_EMPIRICAL_PACKET_02_DECISION_ELIGIBILITY_v0: RETAIN_OR_PRUNE_ALLOWED_WITH_PROTOCOL_GUARDS`
 - `FOUNDATIONAL_EMPIRICAL_PACKET_03_BASELINE_DECISION_v0: INCONCLUSIVE_ONLY_UNTIL_PACKET04_OR_HIGHER`
 - `FOUNDATIONAL_EMPIRICAL_PACKET_04_BASELINE_DECISION_v0: INCONCLUSIVE_ONLY_UNTIL_PACKET05_OR_HIGHER`
+- `FOUNDATIONAL_EMPIRICAL_PACKET_05_ENABLEMENT_v0: SELECTIVE_LANE_ENABLEMENT_ALLOWED_WITH_PACKET04_INCONCLUSIVE_AND_INTERMEDIATE_EVIDENCE`
+- `FOUNDATIONAL_EMPIRICAL_PACKET_05_ALLOWED_LANE_BOOTSTRAP_v0: GR_SR_CYCLE01`
+- `FOUNDATIONAL_EMPIRICAL_PACKET_05_DECISION_BASELINE_v0: INCONCLUSIVE_ONLY_UNTIL_LANE_SPECIFIC_ELIGIBILITY_OVERRIDE`
+- `FOUNDATIONAL_EMPIRICAL_PACKET_05_DECISION_LEDGER_REQUIREMENT_v0: EXPLICIT_LEDGER_REQUIRED`
+- `FOUNDATIONAL_EMPIRICAL_PACKET_05_DECISION_RECORD_REQUIREMENT_v0: PER_LANE_RECORD_REQUIRED`
+- `FOUNDATIONAL_EMPIRICAL_PACKET_05_FALSIFICATION_SURFACE_REQUIREMENT_v0: PER_LANE_INVALIDATION_HOOK_REQUIRED`
+- `FOUNDATIONAL_EMPIRICAL_PACKET_05_OVERRIDE_MODE_v0: GR_SR_ACTIVE_OVERRIDE_CRITERIA_PINNED`
 - `FOUNDATIONAL_EMPIRICAL_COMPARISON_EVIDENCE_TIERS_v0: SCAFFOLD_INTERMEDIATE_DISCHARGE_GRADE`
 - `FOUNDATIONAL_EMPIRICAL_COMPARISON_PRUNE_MIN_EVIDENCE_TIER_v0: INTERMEDIATE_v0`
 
@@ -57,3 +64,8 @@ Protocol constraints:
 - packet-02 (or higher) may emit `RETAIN_v0` or `PRUNE_v0` only with explicit guard-satisfying eligibility payload fields.
 - packet-03 baseline remains `INCONCLUSIVE_v0` across pillars until packet-04-or-higher policy transition is explicitly pinned.
 - packet-04 baseline remains `INCONCLUSIVE_v0` across pillars until packet-05-or-higher policy transition is explicitly pinned.
+- packet-05 can be enabled selectively by lane when packet-04 remains `INCONCLUSIVE_v0` with `INTERMEDIATE_v0` evidence and the packet-05 lane policy surface is explicitly pinned.
+- packet-05 baseline remains `INCONCLUSIVE_v0` until a lane-specific packet-05 eligibility override is pinned.
+- active override lanes may emit `RETAIN_v0` or `PRUNE_v0` only when per-lane override criteria are pinned and satisfied.
+- each active packet-05 lane must pin a decision-record surface and a falsification surface.
+- active packet-05 lanes must also appear in an explicit decision ledger.

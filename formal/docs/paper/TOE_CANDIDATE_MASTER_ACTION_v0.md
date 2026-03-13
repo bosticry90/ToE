@@ -21,8 +21,13 @@ Non-claim boundary:
 
 Canonical anchors:
 - `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md`
+- `formal/docs/release/TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0.md`
 - `formal/docs/paper/PHYSICS_ROADMAP_v0.md`
 - `State_of_the_Theory.md`
+
+Canonical promotion status (v0):
+- `TOE_CANONICAL_ACTION_PROMOTION_STATUS_v0: BLOCKED_PENDING_CRITERIA`
+- `TOE_CANONICAL_ACTION_PROMOTION_REQUIRES_v0: THEOREM_TRANSPORT_REGIME_AND_GOVERNANCE_ALIGNMENT`
 
 ## Candidate action surface (working-form)
 
@@ -109,6 +114,9 @@ This working-form may be promoted only after all are explicit:
 - bridge-to-operator transport is closed for admitted pillars.
 - regime-limit projections are synchronized with discriminator artifacts.
 - anti-circularity and no-shortcut guards are discharged at bounded scope.
+- Promotion standard pointer:
+  - `formal/docs/release/TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0.md`
+  - `formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py`
 
 ## Compact layered form (physics-facing working view)
 

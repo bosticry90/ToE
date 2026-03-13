@@ -3369,6 +3369,50 @@ Pillar-QFT full-derivation discharge lane checkpoint (2026-02-20):
 - `PROCEED_GATE_QFT: ALLOWED_v0_PHYSICS_CLOSED`
 - `MATRIX_CLOSURE_GATE_QFT: ALLOWED_v0_GOVERNANCE_CLOSED`
 - `REQUIRED_QFT_CLOSURE_ROWS: TOE-QFT-PLAN-01,TOE-QFT-PLAN-02`
+
+QFT scalar-route flagship lane checkpoint (2026-03-12):
+- QFT scalar-route flagship target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_QFT_SCALAR_ROUTE_v0.md`
+- QFT scalar-route completion criteria pointer: `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_COMPLETION_CRITERIA_v0.md`
+- QFT scalar-route phase-1 derivation report pointer: `formal/docs/paper/toe_qft_scalar_field_derivation_report_v0.md`
+- QFT scalar-route phase-1 equation artifact pointer: `formal/output/toe_qft_scalar_field_equations_v0.json`
+- QFT scalar-route phase-2 covariance report pointer: `formal/docs/paper/toe_qft_scalar_covariance_report_v0.md`
+- QFT scalar-route phase-2 stress-energy artifact pointer: `formal/output/toe_qft_scalar_stress_energy_artifact_v0.json`
+- QFT scalar-route phase-3 route-a canonical quantization report pointer: `formal/docs/paper/toe_qft_scalar_canonical_quantization_report_v0.md`
+- QFT scalar-route phase-3 route-a canonical quantization artifact pointer: `formal/output/toe_qft_scalar_canonical_quantization_artifact_v0.json`
+- QFT scalar-route tranche-d canonical momentum report pointer: `formal/docs/paper/toe_qft_scalar_canonical_momentum_report_v0.md`
+- QFT scalar-route tranche-d Hamiltonian density artifact pointer: `formal/output/toe_qft_scalar_hamiltonian_density_artifact_v0.json`
+- QFT scalar-route tranche-e operator/commutator report pointer: `formal/docs/paper/toe_qft_scalar_operator_commutator_report_v0.md`
+- QFT scalar-route tranche-e operator/commutator artifact pointer: `formal/output/toe_qft_scalar_operator_commutator_artifact_v0.json`
+- QFT scalar-route tranche-f mode-expansion report pointer: `formal/docs/paper/toe_qft_scalar_mode_expansion_report_v0.md`
+- QFT scalar-route tranche-f creation/annihilation artifact pointer: `formal/output/toe_qft_scalar_creation_annihilation_artifact_v0.json`
+- QFT scalar-route tranche-g normalization report pointer: `formal/docs/paper/toe_qft_scalar_normalization_report_v0.md`
+- QFT scalar-route tranche-g one-particle-state artifact pointer: `formal/output/toe_qft_scalar_one_particle_state_artifact_v0.json`
+- QFT scalar-route tranche-h nonrelativistic-limit report pointer: `formal/docs/paper/toe_qft_scalar_nonrelativistic_limit_report_v0.md`
+- QFT scalar-route tranche-h Schrodinger-limit artifact pointer: `formal/output/toe_qft_scalar_schrodinger_limit_artifact_v0.json`
+- QFT scalar-route milestone summary pointer: `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md`
+- QFT scalar-route milestone checkpoint artifact pointer: `formal/output/toe_qft_scalar_route_milestone_checkpoint_v0.json`
+- QFT scalar-route manuscript skeleton pointer: `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_SKELETON_v0.md`
+- QFT scalar-route section-map artifact pointer: `formal/output/toe_qft_scalar_route_section_map_v0.json`
+- QFT scalar-route manuscript draft pointer: `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_DRAFT_v0.md`
+- QFT scalar-route manuscript fill-map artifact pointer: `formal/output/toe_qft_scalar_route_manuscript_fill_map_v0.json`
+- QFT scalar-route citation-binding artifact pointer: `formal/output/toe_qft_scalar_route_citation_binding_map_v0.json`
+- QFT scalar-route bibliography alignment pointer: `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_BIBLIOGRAPHY_ALIGNMENT_v0.md`
+- QFT scalar-route reference-map artifact pointer: `formal/output/toe_qft_scalar_route_reference_map_v0.json`
+- QFT scalar-route charter gate pointer: `formal/python/tests/test_toe_qft_scalar_route_charter_gate.py`
+- QFT scalar-route phase-1 equation gate pointer: `formal/python/tests/test_toe_qft_scalar_field_equation_gate.py`
+- QFT scalar-route phase-2 covariance gate pointer: `formal/python/tests/test_toe_qft_scalar_covariance_gate.py`
+- QFT scalar-route phase-3 route-a quantization gate pointer: `formal/python/tests/test_toe_qft_scalar_quantization_gate.py`
+- QFT scalar-route tranche-d Hamiltonian gate pointer: `formal/python/tests/test_toe_qft_scalar_hamiltonian_gate.py`
+- QFT scalar-route tranche-e operator/commutator gate pointer: `formal/python/tests/test_toe_qft_scalar_operator_commutator_gate.py`
+- QFT scalar-route tranche-f mode-expansion gate pointer: `formal/python/tests/test_toe_qft_scalar_mode_expansion_gate.py`
+- QFT scalar-route tranche-g normalization gate pointer: `formal/python/tests/test_toe_qft_scalar_normalization_gate.py`
+- QFT scalar-route tranche-h nonrelativistic-limit gate pointer: `formal/python/tests/test_toe_qft_scalar_nonrelativistic_limit_gate.py`
+- QFT scalar-route milestone gate pointer: `formal/python/tests/test_toe_qft_scalar_route_milestone_gate.py`
+- QFT scalar-route manuscript skeleton gate pointer: `formal/python/tests/test_toe_qft_scalar_route_manuscript_skeleton_gate.py`
+- QFT scalar-route manuscript draft gate pointer: `formal/python/tests/test_toe_qft_scalar_route_manuscript_draft_gate.py`
+- QFT scalar-route citation-binding gate pointer: `formal/python/tests/test_toe_qft_scalar_route_citation_binding_gate.py`
+- QFT scalar-route bibliography alignment gate pointer: `formal/python/tests/test_toe_qft_scalar_route_bibliography_alignment_gate.py`
+- QFT scalar-route cross-surface parity gate pointer: `formal/python/tests/test_toe_qft_scalar_route_parity_gate.py`
   - `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED`
   - `QFT_FULL_DERIVATION_PROGRESS_CYCLE2_v0: SEMANTIC_HARDENING_MILESTONE_TOKEN_PINNED`
   - QFT evolution semantic-hardening milestone gate: `formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py`
