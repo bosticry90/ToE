@@ -57,9 +57,10 @@ Section drafts:
 - External reference placeholder: [REFSEC:nonrelativistic_schrodinger_limit]
 
 9. Open items and bounded claims:
-- Remaining optional free-field refinements include two-point/propagator exposition and editorial tightening of section transitions.
+- Propagator/two-point hardening is now pinned as the final bounded free-field strengthening pass in this lane.
+- Remaining physics-depth items are interacting-field and gauge-adjacent extensions, both explicitly deferred.
 - Non-claim boundaries remain explicit and unchanged.
-- Citation placeholder: [CIT:open_items_and_bounded_claims -> formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md]
+- Citation placeholder: [CIT:open_items_and_bounded_claims -> formal/docs/paper/toe_qft_scalar_propagator_report_v0.md]
 - External reference placeholder: [REFSEC:open_items_and_bounded_claims]
 
 Gap-closure pass v1:
@@ -121,5 +122,7 @@ Non-claim boundary:
 Reproducibility pointers:
 - `formal/output/toe_qft_scalar_route_manuscript_fill_map_v0.json`
 - `formal/output/toe_qft_scalar_route_reference_map_v0.json`
+- `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_REVIEW_READINESS_v0.md`
+- `formal/output/toe_qft_scalar_route_review_readiness_checkpoint_v0.json`
 - `formal/python/tests/test_toe_qft_scalar_route_manuscript_draft_gate.py`
 - `formal/python/tests/test_toe_qft_scalar_route_bibliography_alignment_gate.py`

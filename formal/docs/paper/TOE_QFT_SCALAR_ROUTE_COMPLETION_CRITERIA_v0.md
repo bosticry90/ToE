@@ -31,6 +31,10 @@ Phase gates and artifact families:
 - Phase 3 (one primary route required):
   - canonical: `formal/docs/paper/toe_qft_scalar_canonical_quantization_report_v0.md`
   - or path-integral: `formal/docs/paper/toe_qft_scalar_path_integral_report_v0.md`
+- Phase 3.5:
+  - `formal/docs/paper/toe_qft_scalar_propagator_report_v0.md`
+  - `formal/output/toe_qft_scalar_two_point_function_artifact_v0.json`
+  - `formal/python/tests/test_toe_qft_scalar_propagator_gate.py`
 - Phase 4:
   - `formal/docs/paper/toe_qft_scalar_equivalence_statement_v0.md`
   - `formal/output/toe_qft_nonrelativistic_limit_artifact_v0.json`
@@ -39,6 +43,10 @@ Phase gates and artifact families:
   - `formal/docs/paper/TOE_QFT_SCALAR_DERIVATION_MANUSCRIPT_v0.md`
   - `formal/docs/paper/TOE_QFT_SCALAR_EVIDENCE_PACKAGE_v0.md`
   - `formal/python/tests/test_toe_qft_publication_package_integrity_gate.py`
+- Review-readiness package:
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_REVIEW_READINESS_v0.md`
+  - `formal/output/toe_qft_scalar_route_review_readiness_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_scalar_route_review_readiness_gate.py`
 
 Alternative planning notes:
 - Conservative route: freeze classical scalar derivation first, defer quantization packaging.

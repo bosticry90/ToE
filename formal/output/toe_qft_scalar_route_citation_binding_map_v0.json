@@ -44,9 +44,9 @@
       "gate_path": "formal/python/tests/test_toe_qft_scalar_nonrelativistic_limit_gate.py"
     },
     "open_items_and_bounded_claims": {
-      "placeholder": "[CIT:open_items_and_bounded_claims -> formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md]",
-      "source_path": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md",
-      "gate_path": "formal/python/tests/test_toe_qft_scalar_route_milestone_gate.py"
+      "placeholder": "[CIT:open_items_and_bounded_claims -> formal/docs/paper/toe_qft_scalar_propagator_report_v0.md]",
+      "source_path": "formal/docs/paper/toe_qft_scalar_propagator_report_v0.md",
+      "gate_path": "formal/python/tests/test_toe_qft_scalar_propagator_gate.py"
     }
   },
   "binding_coverage": {

@@ -17,11 +17,12 @@
     "milestone_summary": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md",
     "field_derivation": "formal/docs/paper/toe_qft_scalar_field_derivation_report_v0.md",
     "quantization": "formal/docs/paper/toe_qft_scalar_canonical_quantization_report_v0.md",
-    "nonrelativistic_bridge": "formal/docs/paper/toe_qft_scalar_nonrelativistic_limit_report_v0.md"
+    "nonrelativistic_bridge": "formal/docs/paper/toe_qft_scalar_nonrelativistic_limit_report_v0.md",
+    "propagator_hardening": "formal/docs/paper/toe_qft_scalar_propagator_report_v0.md"
   },
   "open_items": [
-    "optional_two_point_or_propagator_surface",
-    "manuscript_section_drafting_completion"
+    "interacting_field_depth_tranche_deferred",
+    "gauge_adjacent_lane_deferred"
   ],
   "non_claim_boundaries": [
     "no_interacting_field_completion_claim",

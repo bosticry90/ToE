@@ -2144,8 +2144,12 @@ QFT full-derivation pre-discharge closure pin (cycle-27/cycle-50):
   - `formal/output/toe_qft_scalar_one_particle_state_artifact_v0.json`
   - `formal/docs/paper/toe_qft_scalar_nonrelativistic_limit_report_v0.md`
   - `formal/output/toe_qft_scalar_schrodinger_limit_artifact_v0.json`
+  - `formal/docs/paper/toe_qft_scalar_propagator_report_v0.md`
+  - `formal/output/toe_qft_scalar_two_point_function_artifact_v0.json`
   - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md`
   - `formal/output/toe_qft_scalar_route_milestone_checkpoint_v0.json`
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_REVIEW_READINESS_v0.md`
+  - `formal/output/toe_qft_scalar_route_review_readiness_checkpoint_v0.json`
   - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_SKELETON_v0.md`
   - `formal/output/toe_qft_scalar_route_section_map_v0.json`
   - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_DRAFT_v0.md`
@@ -2162,7 +2166,9 @@ QFT full-derivation pre-discharge closure pin (cycle-27/cycle-50):
   - `formal/python/tests/test_toe_qft_scalar_mode_expansion_gate.py`
   - `formal/python/tests/test_toe_qft_scalar_normalization_gate.py`
   - `formal/python/tests/test_toe_qft_scalar_nonrelativistic_limit_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_propagator_gate.py`
   - `formal/python/tests/test_toe_qft_scalar_route_milestone_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_review_readiness_gate.py`
   - `formal/python/tests/test_toe_qft_scalar_route_manuscript_skeleton_gate.py`
   - `formal/python/tests/test_toe_qft_scalar_route_manuscript_draft_gate.py`
   - `formal/python/tests/test_toe_qft_scalar_route_citation_binding_gate.py`

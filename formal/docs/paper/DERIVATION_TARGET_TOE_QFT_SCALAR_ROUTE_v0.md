@@ -81,6 +81,14 @@ Phase 3 (weeks 8-11): Quantization route
   - planned artifact: `formal/docs/paper/toe_qft_scalar_path_integral_report_v0.md`
   - planned gate: `formal/python/tests/test_toe_qft_scalar_path_integral_gate.py`
 
+Phase 3.5 (weeks 11-12): Propagator and two-point-function hardening
+- objective: pin free-scalar two-point and propagator structures as a physically weightier bounded layer.
+- artifacts:
+  - `formal/docs/paper/toe_qft_scalar_propagator_report_v0.md`
+  - `formal/output/toe_qft_scalar_two_point_function_artifact_v0.json`
+- gate:
+  - `formal/python/tests/test_toe_qft_scalar_propagator_gate.py`
+
 Phase 4 (weeks 12-14): Compatibility and limits
 - objective: connect the scalar route to known limits.
 - targets:
@@ -106,6 +114,7 @@ Phase 5 (weeks 15-16): Publication package
 2. Completion criteria freeze.
 3. Minimal charter gate enforcing existence and required structure.
 4. Phase 1 kickoff: Euler-Lagrange derivation report + symbolic equation artifact.
+5. Tranche-I hardening: propagator/two-point report + artifact + gate.
 
 ## Architecture phase coverage (v1)
 - `TARGET_DEFINITION`

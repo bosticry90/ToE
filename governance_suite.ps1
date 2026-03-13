@@ -170,6 +170,8 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_gr01_function_space_continuum_regularity_route_gate.py `
   formal/python/tests/test_gr01_function_space_nonclaim_boundary_evidence_gate.py `
   formal/python/tests/test_gr01_function_space_completion_criteria_gate.py `
+  formal/python/tests/test_toe_qft_scalar_propagator_gate.py `
+  formal/python/tests/test_toe_qft_scalar_route_review_readiness_gate.py `
   formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py `
   formal/python/tests/test_qm_m2_analytic_completeness_scaffold_cycle01_gate.py `
   formal/python/tests/test_qm_m2_canonical_equivalence_scaffold_cycle01_gate.py `

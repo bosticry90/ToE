@@ -1,0 +1,25 @@
+{
+  "artifact_id": "toe_qft_scalar_two_point_function_artifact_v0",
+  "phase": "PHASE_3_ROUTE_A_PROPAGATOR_TWO_POINT_HARDENING",
+  "source": "free_scalar_propagator_route",
+  "two_point_structure": {
+    "wightman": "W(x-y)=<0|phi(x)phi(y)|0>",
+    "time_ordered": "Delta_F(x-y)=<0|T{phi(x)phi(y)}|0>",
+    "momentum_space": "Delta_F(k)=i/(k^2-m^2+i*epsilon)"
+  },
+  "eom_consistency": {
+    "operator_equation": "(box+m^2)Delta_F(x-y)=-i delta^4(x-y)",
+    "distribution_posture": true
+  },
+  "route_compatibility": {
+    "commutator_tranche_consistent": true,
+    "mode_expansion_tranche_consistent": true,
+    "normalization_tranche_consistent": true
+  },
+  "assumptions": [
+    "free_scalar_regime_only",
+    "distribution_smearing_required",
+    "domain_and_interacting_renormalization_deferred"
+  ],
+  "status": "PINNED_ROUTE_A_PROPAGATOR_TWO_POINT_HARDENING"
+}

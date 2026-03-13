@@ -3389,8 +3389,12 @@ QFT scalar-route flagship lane checkpoint (2026-03-12):
 - QFT scalar-route tranche-g one-particle-state artifact pointer: `formal/output/toe_qft_scalar_one_particle_state_artifact_v0.json`
 - QFT scalar-route tranche-h nonrelativistic-limit report pointer: `formal/docs/paper/toe_qft_scalar_nonrelativistic_limit_report_v0.md`
 - QFT scalar-route tranche-h Schrodinger-limit artifact pointer: `formal/output/toe_qft_scalar_schrodinger_limit_artifact_v0.json`
+- QFT scalar-route tranche-i propagator/two-point report pointer: `formal/docs/paper/toe_qft_scalar_propagator_report_v0.md`
+- QFT scalar-route tranche-i propagator/two-point artifact pointer: `formal/output/toe_qft_scalar_two_point_function_artifact_v0.json`
 - QFT scalar-route milestone summary pointer: `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md`
 - QFT scalar-route milestone checkpoint artifact pointer: `formal/output/toe_qft_scalar_route_milestone_checkpoint_v0.json`
+- QFT scalar-route review-readiness package pointer: `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_REVIEW_READINESS_v0.md`
+- QFT scalar-route review-readiness checkpoint artifact pointer: `formal/output/toe_qft_scalar_route_review_readiness_checkpoint_v0.json`
 - QFT scalar-route manuscript skeleton pointer: `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_SKELETON_v0.md`
 - QFT scalar-route section-map artifact pointer: `formal/output/toe_qft_scalar_route_section_map_v0.json`
 - QFT scalar-route manuscript draft pointer: `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_DRAFT_v0.md`
@@ -3407,7 +3411,9 @@ QFT scalar-route flagship lane checkpoint (2026-03-12):
 - QFT scalar-route tranche-f mode-expansion gate pointer: `formal/python/tests/test_toe_qft_scalar_mode_expansion_gate.py`
 - QFT scalar-route tranche-g normalization gate pointer: `formal/python/tests/test_toe_qft_scalar_normalization_gate.py`
 - QFT scalar-route tranche-h nonrelativistic-limit gate pointer: `formal/python/tests/test_toe_qft_scalar_nonrelativistic_limit_gate.py`
+- QFT scalar-route tranche-i propagator/two-point gate pointer: `formal/python/tests/test_toe_qft_scalar_propagator_gate.py`
 - QFT scalar-route milestone gate pointer: `formal/python/tests/test_toe_qft_scalar_route_milestone_gate.py`
+- QFT scalar-route review-readiness gate pointer: `formal/python/tests/test_toe_qft_scalar_route_review_readiness_gate.py`
 - QFT scalar-route manuscript skeleton gate pointer: `formal/python/tests/test_toe_qft_scalar_route_manuscript_skeleton_gate.py`
 - QFT scalar-route manuscript draft gate pointer: `formal/python/tests/test_toe_qft_scalar_route_manuscript_draft_gate.py`
 - QFT scalar-route citation-binding gate pointer: `formal/python/tests/test_toe_qft_scalar_route_citation_binding_gate.py`

@@ -41,7 +41,8 @@
       "REF_SAKURAI_MODERN_QM"
     ],
     "open_items_and_bounded_claims": [
-      "REF_REPO_SCALAR_MILESTONE_SUMMARY",
+      "REF_REPO_SCALAR_PROPAGATOR",
+      "REF_REPO_SCALAR_REVIEW_READINESS",
       "REF_INTERPRETIVE_LIMITATIONS_CONTEXT"
     ]
   },
@@ -85,6 +86,16 @@
       "category": "repo_internal_support",
       "label": "ToE scalar milestone summary",
       "pointer": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MILESTONE_SUMMARY_v0.md"
+    },
+    "REF_REPO_SCALAR_PROPAGATOR": {
+      "category": "repo_internal_support",
+      "label": "ToE scalar propagator report",
+      "pointer": "formal/docs/paper/toe_qft_scalar_propagator_report_v0.md"
+    },
+    "REF_REPO_SCALAR_REVIEW_READINESS": {
+      "category": "repo_internal_support",
+      "label": "ToE scalar review-readiness package",
+      "pointer": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_REVIEW_READINESS_v0.md"
     },
     "REF_PESKIN_SCHROEDER_QFT": {
       "category": "standard_physics_background",

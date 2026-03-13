@@ -8,11 +8,13 @@
     "quantization_hamiltonian_pinned": true,
     "operator_mode_pinned": true,
     "normalization_one_particle_pinned": true,
-    "nonrelativistic_schrodinger_bridge_pinned": true
+    "nonrelativistic_schrodinger_bridge_pinned": true,
+    "propagator_two_point_pinned": true,
+    "review_readiness_package_pinned": true
   },
   "open_items": [
-    "optional_two_point_or_propagator_surface",
-    "scalar_route_manuscript_assembly_package"
+    "interacting_field_depth_tranche_deferred",
+    "gauge_adjacent_lane_deferred"
   ],
   "non_claim_boundaries": [
     "no_interacting_field_completion_claim",
@@ -20,5 +22,5 @@
     "no_multi_particle_scattering_completion_claim",
     "no_standard_model_completion_claim"
   ],
-  "status": "MILESTONE_PINNED_BOUNDED_FREE_SCALAR_QFT_TO_QM_BRIDGE"
+  "status": "MILESTONE_PINNED_BOUNDED_FREE_SCALAR_QFT_TO_QM_BRIDGE_PROPAGATOR_AND_REVIEW_READY"
 }

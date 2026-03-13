@@ -55,13 +55,15 @@ def test_toe_qft_scalar_route_milestone_checkpoint_schema_is_pinned() -> None:
     assert ladder.get("operator_mode_pinned") is True
     assert ladder.get("normalization_one_particle_pinned") is True
     assert ladder.get("nonrelativistic_schrodinger_bridge_pinned") is True
+    assert ladder.get("propagator_two_point_pinned") is True
+    assert ladder.get("review_readiness_package_pinned") is True
 
     open_items = artifact.get("open_items", [])
-    assert "optional_two_point_or_propagator_surface" in open_items
-    assert "scalar_route_manuscript_assembly_package" in open_items
+    assert "interacting_field_depth_tranche_deferred" in open_items
+    assert "gauge_adjacent_lane_deferred" in open_items
 
     non_claims = artifact.get("non_claim_boundaries", [])
     assert "no_interacting_field_completion_claim" in non_claims
     assert "no_gauge_sector_completion_claim" in non_claims
 
-    assert artifact.get("status") == "MILESTONE_PINNED_BOUNDED_FREE_SCALAR_QFT_TO_QM_BRIDGE"
+    assert artifact.get("status") == "MILESTONE_PINNED_BOUNDED_FREE_SCALAR_QFT_TO_QM_BRIDGE_PROPAGATOR_AND_REVIEW_READY"

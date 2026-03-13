@@ -1,0 +1,24 @@
+{
+  "artifact_id": "toe_qft_scalar_route_review_readiness_checkpoint_v0",
+  "phase": "PHASE_3_ROUTE_A_SCALAR_REVIEW_READINESS",
+  "route_scope": "bounded_free_scalar_qft_to_qm_bridge",
+  "derived_bundle": {
+    "field_equation": true,
+    "covariance_stress_energy": true,
+    "canonical_quantization": true,
+    "operator_mode_normalization": true,
+    "nonrelativistic_limit": true,
+    "propagator_two_point": true
+  },
+  "interpretation": {
+    "reconstructed_core": "free_scalar_klein_gordon_quantization_and_propagator_contract",
+    "bounded_route_novelty": "cross_surface_master_action_to_qft_qm_gate_backed_chain",
+    "broad_physics_claim_justified": false
+  },
+  "open_items": [
+    "interacting_field_completion",
+    "gauge_sector_completion",
+    "renormalization_and_multi_particle_scattering"
+  ],
+  "status": "READY_FOR_BOUNDED_FREE_SCALAR_REVIEW"
+}

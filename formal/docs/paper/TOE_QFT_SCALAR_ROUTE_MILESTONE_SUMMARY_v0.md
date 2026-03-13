@@ -14,14 +14,16 @@ Pinned derivation ladder (current milestone):
 4. Operator/commutator, mode expansion, and creation/annihilation structure.
 5. Normalization and one-particle-state construction.
 6. Bounded non-relativistic bridge to a Schrodinger-class limit.
+7. Bounded propagator/two-point-function hardening under the free-scalar route contract.
+8. Review-readiness package separating bounded derivation closure from broader physics-claim scope.
 
 Milestone status statement:
 - The route is pinned as a bounded free-scalar QFT-to-QM bridge track.
 - Governance cadence has been maintained by local validation, canonical registration, parity extension, and focused reruns.
 
 Open items (bounded backlog):
-1. Optional free-field two-point function/propagator-facing tranche.
-2. Manuscript assembly package for the scalar flagship lane.
+1. Interacting-field depth tranche (bounded, deferred).
+2. Gauge-adjacent bounded lane (deferred).
 3. Any deeper technical extensions remain explicitly outside this milestone unless separately bounded and pinned.
 
 Non-claim boundary:
@@ -32,4 +34,6 @@ Non-claim boundary:
 
 Reproducibility pointers:
 - `formal/output/toe_qft_scalar_route_milestone_checkpoint_v0.json`
+- `formal/output/toe_qft_scalar_two_point_function_artifact_v0.json`
+- `formal/output/toe_qft_scalar_route_review_readiness_checkpoint_v0.json`
 - `formal/python/tests/test_toe_qft_scalar_route_milestone_gate.py`
