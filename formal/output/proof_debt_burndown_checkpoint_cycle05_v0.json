@@ -1,0 +1,24 @@
+{
+  "checkpoint_id": "PROOF_DEBT_BURNDOWN_CHECKPOINT_CYCLE05_v0",
+  "status": "CONTINUITY_AUDIT_EXECUTED_v0_NONCLAIM",
+  "generated_on": "2026-03-12T12:00:00",
+  "target_markers": {
+    "gapid_COMP-FN-REP-GRID": "Status: Discharged (stable GapID tracking reconfirmed)",
+    "gapid_COMP-FN-REP-NONALIAS-EQUIV-01": "Status: Discharged (stable GapID tracking reconfirmed)"
+  },
+  "execution_targets": [
+    "GAPID_STABILITY_RECONFIRMATION_CHAIN",
+    "REGRESSION_ONLY_REOPEN_POSTURE_RECONFIRMATION_CHAIN"
+  ],
+  "mode": "PARALLEL_BOUNDED_NONCLAIM",
+  "continuity": {
+    "post_closeout_regression_monitoring": true,
+    "baseline_artifact": "formal/output/toe_complete_v1_regression_only_baseline_v0.json"
+  },
+  "status_summary": {
+    "targeting_bound": true,
+    "adjudication_changed": false,
+    "matrix_status_changed": false,
+    "critical_pending_tokens_remaining": 0
+  }
+}

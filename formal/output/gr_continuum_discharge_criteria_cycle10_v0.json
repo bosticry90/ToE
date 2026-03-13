@@ -45,5 +45,5 @@
     "fingerprint_method": "literal-json-lock",
     "schema_version": "v0"
   },
-  "status": "LOCKED_GR_CONTINUUM_CRITERIA_CYCLE10_DISCHARGED"
+  "status": "LOCKED_GR_CONTINUUM_CRITERIA_CYCLE10_PINNED"
 }

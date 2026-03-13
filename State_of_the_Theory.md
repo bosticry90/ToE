@@ -8,7 +8,10 @@ Last updated: 2026-03-10
 
 Canonical bounded status note (2026-02-24):
 - For the current canonical five-pillar set (`PILLAR-QFT`, `PILLAR-QM`, `PILLAR-GR`, `PILLAR-EM`, `PILLAR-SR`), bounded full-derivation and inevitability adjudications are discharged and matrix status is `CLOSED`.
+- Under the canonical closure semantics standard, this means bounded repo-local `PHYSICS-CLOSED` plus `MATRIX-CLOSED` within pinned non-claim scope, not a claim of physics-complete ToE.
 - Canonical source-of-truth pointer for this claim: `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`.
+- Closure semantics standard pointer: `formal/docs/release/TOE_CLOSURE_SEMANTICS_STANDARD_v0.md`.
+- Closure semantics and action promotion gate pointer: `formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py`.
 - Pillar phase advancement standard pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`.
 - Pillar phase advancement registry pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`.
 - Pillar phase advancement gate pointer: `formal/python/tests/test_pillar_phase_advancement_gate.py`.
@@ -20,17 +23,27 @@ Canonical bounded status note (2026-02-24):
 - Pillar deep maturity M2 gate pointer: `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py`.
 - Foundational derivation-chain standard pointer: `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md`.
 - Foundational derivation-chain execution plan pointer: `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_EXECUTION_PLAN_v0.md`.
+- Canonical action promotion standard pointer: `formal/docs/release/TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0.md`.
+- Seam status semantics standard pointer: `formal/docs/release/TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0.md`.
 - Candidate master action pointer (non-canonical): `formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md`.
 - Master action seam-constraint registry pointer: `formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md`.
 - Master action Class-B seam inventory pointer: `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`.
 - EM-QFT Class-B seam-promotion pilot target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`.
 - EM-QFT Class-B seam-promotion discharge target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`.
 - EM-QFT Class-B seam-promotion class-flip target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`.
+- GR-QM Class-B seam-promotion pilot target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`.
+- GR-QM Class-B seam-promotion discharge target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`.
+- GR-QM Class-B seam-promotion class-flip target pointer: `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`.
 - Seam witness package schema pointer: `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`.
 - EM-QFT seam-promotion theorem pointer surface: `formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean`.
+- GR-QM seam-promotion theorem pointer surface: `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean`.
 - EM-QFT seam-promotion theorem gate pointer: `formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`.
 - EM-QFT seam-promotion discharge gate pointer: `formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py`.
 - EM-QFT seam-promotion class-flip gate pointer: `formal/python/tests/test_em_qft_seam_promotion_cycle03_class_flip_gate.py`.
+- GR-QM seam-promotion theorem gate pointer: `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`.
+- GR-QM seam-promotion discharge gate pointer: `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`.
+- GR-QM seam-promotion class-flip gate pointer: `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`.
+- Seam status split gate pointer: `formal/python/tests/test_toe_seam_status_split_gate.py`.
 - Master action shadow numerics target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_v0.md`.
 - Foundational prediction scaffold plan pointer: `formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md`.
 - Foundational empirical comparison protocol pointer: `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`.
@@ -105,6 +118,10 @@ Canonical bounded status note (2026-02-24):
 - Master-action variant cycle15 release note pointer: `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE15_RELEASE_NOTE_v0.md`.
 - Master-action variant cycle16 release note pointer: `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE16_RELEASE_NOTE_v0.md`.
 - Master-action variant cycle17 release note pointer: `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE17_RELEASE_NOTE_v0.md`.
+- Master-action variant cycle18 release note pointer: `formal/docs/release/MASTER_ACTION_VARIANT_CYCLE18_RELEASE_NOTE_v0.md`.
+- Master-action variant C pressure cycle18 execution report pointer: `formal/output/master_action_variant_c_pressure_cycle18_execution_report_v0.json`.
+- Master-action variant C pressure cycle18 drift report pointer: `formal/output/master_action_variant_c_pressure_cycle18_drift_report_v0.json`.
+- Master-action variant cycle18 sensitivity gate pointer: `formal/python/tests/test_master_action_variant_cycle18_sensitivity_gate.py`.
 - Master-action variant packet-02 decision record pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_PACKET02_DECISION_RECORD_v0.md`.
 - Master-action variant C pressure cycle01 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE01_v0.md`.
 - Master-action variant C pressure cycle02 target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_VARIANT_C_PRESSURE_CYCLE02_v0.md`.
@@ -148,6 +165,8 @@ Canonical bounded status note (2026-02-24):
 - proof debt burndown checkpoint cycle03 pointer: `formal/output/proof_debt_burndown_checkpoint_cycle03_v0.json`.
 - proof debt burndown packet cycle04 pointer: `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE04_v0.md`.
 - proof debt burndown checkpoint cycle04 pointer: `formal/output/proof_debt_burndown_checkpoint_cycle04_v0.json`.
+- proof debt burndown packet cycle05 pointer: `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE05_v0.md`.
+- proof debt burndown checkpoint cycle05 pointer: `formal/output/proof_debt_burndown_checkpoint_cycle05_v0.json`.
 - ToE Complete-v1 terminal gate definition pointer: `formal/docs/release/TOE_COMPLETE_V1_TERMINAL_GATE_v0.md`.
 - ToE Complete-v1 terminal gate checkpoint pointer: `formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json`.
 - ToE Complete-v1 regression-only baseline pointer: `formal/output/toe_complete_v1_regression_only_baseline_v0.json`.
@@ -164,6 +183,34 @@ Canonical bounded status note (2026-02-24):
 - GR empirical comparison packet-05 artifact pointer: `formal/output/gr_empirical_comparison_packet_05_v0.json`.
 - GR empirical comparison packet-05 gate pointer: `formal/python/tests/test_gr_empirical_comparison_packet_05_gate.py`.
 - GR empirical comparison packet-05 schema gate pointer: `formal/python/tests/test_gr_empirical_packet_05_artifact_schema_gate.py`.
+- SR empirical comparison packet-05 target pointer: `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md`.
+- SR empirical comparison packet-05 artifact pointer: `formal/output/sr_empirical_comparison_packet_05_v0.json`.
+- SR empirical comparison packet-05 gate pointer: `formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py`.
+- SR empirical comparison packet-05 schema gate pointer: `formal/python/tests/test_sr_empirical_packet_05_artifact_schema_gate.py`.
+- Foundational empirical packet-05 matrix pointer: `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET05_MATRIX_v0.json`.
+- Foundational empirical packet-05 progression policy pointer: `formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_PROGRESSION_POLICY_v0.md`.
+- Foundational empirical decision/falsification standard pointer: `formal/docs/release/FOUNDATIONAL_EMPIRICAL_DECISION_AND_FALSIFICATION_STANDARD_v0.md`.
+- Foundational empirical packet-05 override policy pointer: `formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_OVERRIDE_POLICY_v0.md`.
+- GR01 publication theorem-claim advancement standard pointer: `formal/docs/release/GR01_PUBLICATION_THEOREM_CLAIM_ADVANCEMENT_STANDARD_v0.md`.
+- GR01 publication theorem-claim advancement gate pointer: `formal/python/tests/test_gr01_publication_theorem_claim_advancement_gate.py`.
+- GR continuum cycle10 discharge criteria gate pointer: `formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py`.
+- GR01 function-space completion criteria artifact pointer: `formal/output/gr01_function_space_completion_criteria_cycle10_v0.json`.
+- GR01 function-space discrete regularity evidence note pointer: `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_DISCRETE_REGULARITY_EVIDENCE_v0.md`.
+- GR01 function-space discrete regularity evidence artifact pointer: `formal/output/gr01_function_space_discrete_regularity_evidence_v0.json`.
+- GR01 function-space discrete regularity evidence gate pointer: `formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py`.
+- GR01 function-space continuum regularity route note pointer: `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_CONTINUUM_REGULARITY_ROUTE_v0.md`.
+- GR01 function-space continuum regularity route artifact pointer: `formal/output/gr01_function_space_continuum_regularity_route_v0.json`.
+- GR01 function-space continuum regularity route gate pointer: `formal/python/tests/test_gr01_function_space_continuum_regularity_route_gate.py`.
+- GR01 function-space non-claim boundary evidence note pointer: `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_NONCLAIM_BOUNDARY_EVIDENCE_v0.md`.
+- GR01 function-space non-claim boundary evidence artifact pointer: `formal/output/gr01_function_space_nonclaim_boundary_evidence_v0.json`.
+- GR01 function-space non-claim boundary evidence gate pointer: `formal/python/tests/test_gr01_function_space_nonclaim_boundary_evidence_gate.py`.
+- GR01 function-space completion criteria gate pointer: `formal/python/tests/test_gr01_function_space_completion_criteria_gate.py`.
+- Packet-05 decision ledger pointer: `formal/output/empirical_packet05_decision_ledger_v0.json`.
+- Packet-05 decision ledger gate pointer: `formal/python/tests/test_empirical_packet05_decision_ledger_parity_gate.py`.
+- Packet-05 falsification surface gate pointer: `formal/python/tests/test_empirical_packet05_falsification_surface_gate.py`.
+- Packet-05 override policy gate pointer: `formal/python/tests/test_foundational_empirical_packet05_override_policy_gate.py`.
+- Foundational empirical packet-05 matrix consistency gate pointer: `formal/python/tests/test_foundational_empirical_packet05_matrix_consistency_gate.py`.
+- Foundational empirical packet-05 progression policy gate pointer: `formal/python/tests/test_foundational_empirical_packet05_progression_policy_gate.py`.
 - STAT empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
 - COSMO empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
 - EM empirical comparison packet-04 target pointer: `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_04_v0.md`.
@@ -443,6 +490,12 @@ Canonical bounded status note (2026-02-24):
 - `QM_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/qm_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_qm_m2_assumption_minimization_scaffold_cycle01_gate.py`
+- `QM_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `QM_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_ARTIFACT_v0: qm_m2_assumption_minimization_depth_exemplar_cycle02_v0`
+- `QM_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_QM_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_v0.md`
+- `formal/output/qm_m2_assumption_minimization_depth_exemplar_cycle02_v0.json`
+- `formal/python/tests/test_qm_m2_assumption_minimization_depth_exemplar_cycle02_gate.py`
 - `QM_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `QM_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: qm_m2_literature_alignment_scaffold_cycle01_v0`
 - `QM_M2_LITERATURE_ALIGNMENT_SHA256_v0: 8eecd039c5ecf244054b8727a61835f2f8261d08d875aae945699477c14c3332`
@@ -473,6 +526,12 @@ Canonical bounded status note (2026-02-24):
 - `GR_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/gr_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_gr_m2_assumption_minimization_scaffold_cycle01_gate.py`
+- `GR_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `GR_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_ARTIFACT_v0: gr_m2_assumption_minimization_depth_exemplar_cycle02_v0`
+- `GR_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_GR_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_v0.md`
+- `formal/output/gr_m2_assumption_minimization_depth_exemplar_cycle02_v0.json`
+- `formal/python/tests/test_gr_m2_assumption_minimization_depth_exemplar_cycle02_gate.py`
 - `GR_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `GR_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: gr_m2_literature_alignment_scaffold_cycle01_v0`
 - `GR_M2_LITERATURE_ALIGNMENT_SHA256_v0: df8ea4954b7d5372fcf5902c5844241c985c736938dbd209e0e0368d803f927e`
@@ -503,6 +562,12 @@ Canonical bounded status note (2026-02-24):
 - `STAT_M2_ASSUMPTION_MINIMIZATION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
 - `formal/output/stat_m2_assumption_minimization_scaffold_cycle01_v0.json`
 - `formal/python/tests/test_stat_m2_assumption_minimization_scaffold_cycle01_gate.py`
+- `STAT_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `STAT_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_ARTIFACT_v0: stat_m2_assumption_minimization_depth_exemplar_cycle02_v0`
+- `STAT_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
+- `formal/docs/paper/DERIVATION_TARGET_STAT_M2_ASSUMPTION_MINIMIZATION_DEPTH_EXEMPLAR_CYCLE02_v0.md`
+- `formal/output/stat_m2_assumption_minimization_depth_exemplar_cycle02_v0.json`
+- `formal/python/tests/test_stat_m2_assumption_minimization_depth_exemplar_cycle02_gate.py`
 - `STAT_M2_LITERATURE_ALIGNMENT_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
 - `STAT_M2_LITERATURE_ALIGNMENT_ARTIFACT_v0: stat_m2_literature_alignment_scaffold_cycle01_v0`
 - `STAT_M2_LITERATURE_ALIGNMENT_SHA256_v0: 641b3adc446ffa9f187caa48f8167444b17d0f6c473e3b10d2e7906f604b59ba`
@@ -2881,6 +2946,85 @@ Proof-debt burndown closeout checkpoint cycle04 (2026-03-12):
   - `GapID: COMP-FN-REP-GRID`
   - `GapID: COMP-FN-REP-NONALIAS-EQUIV-01`
 
+Proof-debt burndown continuity checkpoint cycle05 (2026-03-12):
+- continuity packet and checkpoint reconfirm stable GapID tracking under regression-only reopen posture:
+  - `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE05_v0.md`
+  - `formal/output/proof_debt_burndown_checkpoint_cycle05_v0.json`
+- targeted markers remain stable GapID references (line-independent):
+  - `GapID: COMP-FN-REP-GRID`
+  - `GapID: COMP-FN-REP-NONALIAS-EQUIV-01`
+
+GR01 publication-grade discharge package checkpoint (2026-03-12):
+- bounded discrete-scope publication package is pinned:
+  - `formal/docs/release/GR01_PUBLICATION_GRADE_DISCHARGE_PACKAGE_v0.md`
+  - `formal/output/gr01_publication_grade_discharge_package_v0.json`
+  - `formal/python/tests/test_gr01_publication_grade_discharge_package_gate.py`
+- package interpretation remains bounded and non-claim:
+  - `GR01_PUBLICATION_GRADE_DISCHARGE_PACKAGE_STATUS_v0: PACKAGE_COMPLETE_v0_DISCRETE_SCOPE_NONCLAIM`
+  - `GR01_PUBLICATION_GRADE_DISCHARGE_SCOPE_v0: DISCRETE_WEAK_FIELD_ONLY`
+
+GR01 theorem-claim advancement checkpoint (2026-03-12):
+- stronger theorem-claim attack track is pinned with row-level completion criteria:
+  - `formal/docs/release/GR01_PUBLICATION_THEOREM_CLAIM_ADVANCEMENT_STANDARD_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md`
+  - `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_REGULARITY_SURFACE_v0.md`
+  - `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_DISCRETE_REGULARITY_EVIDENCE_v0.md`
+  - `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_CONTINUUM_REGULARITY_ROUTE_v0.md`
+  - `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_NONCLAIM_BOUNDARY_EVIDENCE_v0.md`
+  - `formal/output/gr01_function_space_regularity_surface_v0.json`
+  - `formal/output/gr01_function_space_completion_criteria_cycle10_v0.json`
+  - `formal/output/gr01_function_space_discrete_regularity_evidence_v0.json`
+  - `formal/output/gr01_function_space_continuum_regularity_route_v0.json`
+  - `formal/output/gr01_function_space_nonclaim_boundary_evidence_v0.json`
+  - `formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py`
+  - `formal/python/tests/test_gr01_function_space_continuum_regularity_route_gate.py`
+  - `formal/python/tests/test_gr01_function_space_nonclaim_boundary_evidence_gate.py`
+  - `formal/python/tests/test_gr01_function_space_completion_criteria_gate.py`
+- theorem-claim advancement remains non-claim despite explicit completion rows:
+  - `GR01_PUBLICATION_THEOREM_CLAIM_COMPLETION_MODE_v0: CONTINUUM_AND_FUNCTION_SPACE_ROW_LEVEL_CRITERIA_PINNED`
+  - `GR01_PUBLICATION_THEOREM_CLAIM_CONTINUUM_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+  - `GR01_PUBLICATION_THEOREM_CLAIM_FUNCTION_SPACE_CRITERIA_v0: CYCLE10_ROW_LEVEL_CRITERIA_PINNED`
+- function-space rows 01 and 03 are now evidence-backed and row 02 route is explicitated:
+  - `GR01_FUNCTION_SPACE_PARTIAL_DISCHARGE_STATUS_v0: ROW_01_AND_ROW_03_DISCHARGED_ROW_02_ROUTE_EXPLICITATED_NONCLAIM`
+  - `GR01_FUNCTION_SPACE_CRITERIA_ROW_01_v0: CURRENT_DISCRETE_REGULARITY_SCOPE_DISCHARGED_WITH_CONCRETE_EVIDENCE`
+  - `GR01_FUNCTION_SPACE_CRITERIA_ROW_02_v0: CONTINUUM_REGULARITY_CLASS_EXPLICITATION_ROUTE_EXPLICITATED_NONCLAIM`
+  - `GR01_FUNCTION_SPACE_CONTINUUM_ROUTE_STATUS_v0: ROUTE_EXPLICITATED_v0_NONCLAIM`
+  - `GR01_FUNCTION_SPACE_CRITERIA_ROW_03_v0: SOBOLEV_AND_UNIQUENESS_NONCLAIM_BOUNDARY_DISCHARGED_WITH_CONCRETE_EVIDENCE`
+  - `GR01_FUNCTION_SPACE_NONCLAIM_BOUNDARY_STATUS_v0: DISCHARGED_v0_CONCRETE_EVIDENCE_NONCLAIM`
+  - `GR01_FUNCTION_SPACE_DISCRETE_REGULARITY_CLASS_v0: FINITE_DISCRETE_LATTICE_SCALAR_FIELD_CLASS`
+
+Seam governance-vs-physics completion split checkpoint (2026-03-12):
+- seam status semantics standard is pinned:
+  - `formal/docs/release/TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0.md`
+  - `formal/python/tests/test_toe_seam_status_split_gate.py`
+- initial seam snapshot is explicit:
+  - `SEAM_EM_QFT_GOVERNANCE_COMPLETE_v0: YES`
+  - `SEAM_EM_QFT_PHYSICS_COMPLETE_v0: NO`
+  - `SEAM_GR_QM_GOVERNANCE_COMPLETE_v0: YES`
+  - `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO`
+  - `SEAM_QM_STAT_GOVERNANCE_COMPLETE_v0: NO`
+  - `SEAM_QM_STAT_PHYSICS_COMPLETE_v0: NO`
+  - `SEAM_STAT_QM_GOVERNANCE_COMPLETE_v0: NO`
+  - `SEAM_STAT_QM_PHYSICS_COMPLETE_v0: NO`
+  - `SEAM_COSMO_SR_GOVERNANCE_COMPLETE_v0: NO`
+  - `SEAM_COSMO_SR_PHYSICS_COMPLETE_v0: NO`
+  - `SEAM_SR_COSMO_GOVERNANCE_COMPLETE_v0: NO`
+  - `SEAM_SR_COSMO_PHYSICS_COMPLETE_v0: NO`
+
+Packet-05 decision-ledger and falsification checkpoint (2026-03-12):
+- active packet-05 lanes now pin explicit decision and falsification surfaces:
+  - `formal/output/empirical_packet05_decision_ledger_v0.json`
+  - `formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_OVERRIDE_POLICY_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_05_DECISION_RECORD_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_05_DECISION_RECORD_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_05_OVERRIDE_CRITERIA_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_05_OVERRIDE_CRITERIA_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_05_FALSIFICATION_SURFACE_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_05_FALSIFICATION_SURFACE_v0.md`
+- active packet-05 lanes now carry bounded override decisions:
+  - `GR_EMPIRICAL_PACKET_05_DECISION_v0: RETAIN_v0`
+  - `SR_EMPIRICAL_PACKET_05_DECISION_v0: RETAIN_v0`
+
 ToE Complete-v1 terminal gate definition checkpoint (2026-03-11):
 - terminal gate definition and checkpoint are pinned:
   - `formal/docs/release/TOE_COMPLETE_V1_TERMINAL_GATE_v0.md`
@@ -4595,6 +4739,8 @@ QM full-derivation + GR extension checkpoint (2026-02-16):
     - `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_v0: gr_continuum_discharge_criteria_cycle10_v0`
     - `GR_CONTINUUM_LIMIT_DISCHARGE_CRITERIA_ARTIFACT_SHA256_v0: e33fb62cb631f5e507f4fc0163bbcfe82a940916c6fc7233ab1ea8968a5f5d84`
     - `formal/output/gr_continuum_discharge_criteria_cycle10_v0.json`
+  - cycle10 criteria gate:
+    - `formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py`
   - micro-target: `TARGET-GR-CONTINUUM-MICRO-01-REFINEMENT-TREND-v0`
   - artifact token: `gr_continuum_refinement_trend_cycle1_v0`
   - artifact: `formal/output/gr_continuum_refinement_trend_cycle1_v0.json`
