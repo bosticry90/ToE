@@ -1,0 +1,9 @@
+{
+  "package_id": "scalar_paper1",
+  "canonical_manuscript": "formal/docs/submission/scalar_paper1/main.tex",
+  "bibliography": "formal/docs/submission/scalar_paper1/refs.bib",
+  "figures_dir": "formal/docs/submission/scalar_paper1/figures",
+  "source_policy": "single_source_canonical_tex",
+  "export_status_token": "SCALAR_ROUTE_EXPORT_CANONICAL_PACKAGE_STATUS_v0: CANONICAL_SCALAR_PAPER1_EXPORT_OBJECT_PINNED",
+  "seam_hold_token": "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0"
+}

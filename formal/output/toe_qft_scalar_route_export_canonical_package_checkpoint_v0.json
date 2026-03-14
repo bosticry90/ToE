@@ -1,0 +1,30 @@
+{
+  "artifact_id": "toe_qft_scalar_route_export_canonical_package_checkpoint_v0",
+  "phase": "PHASE_3_ROUTE_A_SCALAR_CANONICAL_EXPORT_PACKAGE",
+  "scope": "bounded_free_scalar_paper1_canonical_single_source_export",
+  "export_package": {
+    "package_root": "formal/docs/submission/scalar_paper1",
+    "canonical_manuscript": "formal/docs/submission/scalar_paper1/main.tex",
+    "bibliography": "formal/docs/submission/scalar_paper1/refs.bib",
+    "metadata": "formal/docs/submission/scalar_paper1/metadata.json",
+    "figures_dir": "formal/docs/submission/scalar_paper1/figures"
+  },
+  "gate_checks": {
+    "canonical_tex_manuscript_exists": true,
+    "bibliography_exists": true,
+    "figure_package_placeholder_exists": true,
+    "title_abstract_placeholders_present": true,
+    "bounded_claim_language_matches_governed_manuscript": true,
+    "physical_contribution_section_represented": true,
+    "state_and_roadmap_pointers_present": true,
+    "seam_hold_unchanged": true
+  },
+  "policy_guardrails": {
+    "scalar_paper1_baseline_freeze": true,
+    "no_new_scalar_tranche_authorized": true,
+    "single_source_canonical_export": true,
+    "seam_hold_token": "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0"
+  },
+  "status_token": "SCALAR_ROUTE_EXPORT_CANONICAL_PACKAGE_STATUS_v0: CANONICAL_SCALAR_PAPER1_EXPORT_OBJECT_PINNED",
+  "status": "CANONICAL_SCALAR_PAPER1_EXPORT_OBJECT_PINNED"
+}

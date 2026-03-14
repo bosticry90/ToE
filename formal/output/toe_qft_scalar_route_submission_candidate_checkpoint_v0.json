@@ -1,0 +1,33 @@
+{
+  "artifact_id": "toe_qft_scalar_route_submission_candidate_checkpoint_v0",
+  "phase": "PHASE_3_ROUTE_A_SCALAR_SUBMISSION_CANDIDATE_BASELINE",
+  "scope": "bounded_free_scalar_paper1_internal_submission_candidate",
+  "submission_candidate_checks": {
+    "exact_bounded_claim_paragraph": true,
+    "physical_contribution_section_readiness": true,
+    "terminology_consistency_across_sections": true,
+    "section_level_classification_clarity": true,
+    "submission_candidate_packaging_completeness": true
+  },
+  "policy_constraints": {
+    "scalar_paper1_baseline_freeze": true,
+    "scalar_extension_policy_exception_only": true,
+    "no_new_scalar_tranche_authorized": true
+  },
+  "pointers": {
+    "submission_readiness_note": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_READINESS_NOTE_v0.md",
+    "submission_readiness_checkpoint": "formal/output/toe_qft_scalar_route_submission_readiness_checkpoint_v0.json",
+    "manuscript_draft": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_DRAFT_v0.md",
+    "manuscript_fill_map": "formal/output/toe_qft_scalar_route_manuscript_fill_map_v0.json",
+    "review_readiness_package": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_REVIEW_READINESS_v0.md",
+    "physics_contribution_classification": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_PHYSICS_CONTRIBUTION_CLASSIFICATION_v0.md"
+  },
+  "outside_scope": [
+    "no_new_scalar_derivation_tranche_authorized",
+    "no_interacting_field_completion_claim",
+    "no_gauge_sector_completion_claim",
+    "no_standard_model_completion_claim"
+  ],
+  "status_token": "SCALAR_ROUTE_SUBMISSION_CANDIDATE_STATUS_v0: BASELINE_LOCKED_FOR_INTERNAL_SUBMISSION_CANDIDATE",
+  "status": "BASELINE_LOCKED_FOR_INTERNAL_SUBMISSION_CANDIDATE"
+}
