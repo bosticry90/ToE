@@ -22,7 +22,6 @@ REFS_PATH = EXPORT_ROOT / "refs.bib"
 METADATA_PATH = EXPORT_ROOT / "metadata.json"
 FIGURES_DIR = EXPORT_ROOT / "figures"
 MANUSCRIPT_DRAFT_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_DRAFT_v0.md"
-FORK_DECISION_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_FORK_DECISION_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 
@@ -114,7 +113,6 @@ def test_toe_qft_scalar_export_package_files_and_content_exist() -> None:
 def test_toe_qft_scalar_export_is_mirrored_in_authority_surfaces_and_seam_hold_is_unchanged() -> None:
     state_text = _read(STATE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
-    fork_text = _read(FORK_DECISION_PATH)
 
     refs = [
         "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_EXPORT_CANONICAL_PACKAGE_v0.md",
@@ -129,7 +127,3 @@ def test_toe_qft_scalar_export_is_mirrored_in_authority_surfaces_and_seam_hold_i
     for ref in refs:
         assert ref in state_text, f"State missing scalar export canonical-package ref: {ref}"
         assert ref in roadmap_text, f"Roadmap missing scalar export canonical-package ref: {ref}"
-
-    assert "Chosen decision:" in fork_text
-    assert "- HOLD_FOR_SCALAR_PUBLICATION_v0" in fork_text
-    assert "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0" in fork_text

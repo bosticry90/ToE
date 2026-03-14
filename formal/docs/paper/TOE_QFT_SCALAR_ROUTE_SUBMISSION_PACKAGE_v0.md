@@ -49,3 +49,4 @@ Reproducibility pointers:
 - formal/docs/submission/scalar_paper1/COVER_LETTER_SKELETON.md
 - formal/docs/submission/scalar_paper1/REVIEWER_FACING_SUMMARY.md
 - formal/docs/submission/scalar_paper1/UPLOAD_BUNDLE_MANIFEST.md
+- formal/docs/submission/scalar_paper1/SUBMISSION_EXECUTION_BOARD.md

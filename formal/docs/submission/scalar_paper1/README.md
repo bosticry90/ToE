@@ -40,3 +40,11 @@ Submission-package hardening artifacts (active):
 - COVER_LETTER_SKELETON.md
 - REVIEWER_FACING_SUMMARY.md
 - UPLOAD_BUNDLE_MANIFEST.md
+- SUBMISSION_EXECUTION_BOARD.md
+
+Execution handoff:
+- Active runbook: `SUBMISSION_EXECUTION_BOARD.md`.
+- Execution is limited to formatting, packaging, and submission metadata hardening.
+
+Focused scalar gate replay command:
+- `python -m pytest -q formal/python/tests/test_toe_qft_scalar_route_export_compile_validation_gate.py formal/python/tests/test_toe_qft_scalar_route_export_canonical_package_gate.py formal/python/tests/test_toe_qft_scalar_route_submission_package_gate.py formal/python/tests/test_toe_qft_scalar_route_submission_candidate_gate.py formal/python/tests/test_toe_qft_scalar_route_submission_readiness_gate.py formal/python/tests/test_toe_qft_gr_seam_fork_decision_gate.py`

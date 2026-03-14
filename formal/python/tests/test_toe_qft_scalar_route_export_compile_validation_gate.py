@@ -21,7 +21,6 @@ MAIN_PDF_PATH = REPO_ROOT / "formal" / "docs" / "submission" / "scalar_paper1" /
 MAIN_LOG_PATH = REPO_ROOT / "formal" / "docs" / "submission" / "scalar_paper1" / "main.log"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
-FORK_DECISION_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_FORK_DECISION_v0.md"
 
 
 def _read(path: Path) -> str:
@@ -102,7 +101,6 @@ def test_toe_qft_scalar_export_compile_validation_artifacts_are_present() -> Non
 def test_toe_qft_scalar_export_compile_validation_is_mirrored_in_authority_surfaces() -> None:
     state_text = _read(STATE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
-    fork_text = _read(FORK_DECISION_PATH)
 
     refs = [
         "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_EXPORT_COMPILE_VALIDATION_v0.md",
@@ -116,5 +114,3 @@ def test_toe_qft_scalar_export_compile_validation_is_mirrored_in_authority_surfa
     for ref in refs:
         assert ref in state_text, f"State missing compile-validation ref: {ref}"
         assert ref in roadmap_text, f"Roadmap missing compile-validation ref: {ref}"
-
-    assert "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0" in fork_text

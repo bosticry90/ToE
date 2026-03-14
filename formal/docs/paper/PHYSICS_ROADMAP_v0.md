@@ -318,6 +318,32 @@ No-deviation sequencing rule:
   - `formal/python/tests/test_cosmo_empirical_comparison_packet_04_gate.py`
   - `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
   - `formal/output/em_empirical_comparison_packet_04_v0.json`
+
+  Scalar publication hardening mirror block (bounded):
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_EXPORT_CANONICAL_PACKAGE_v0.md`
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_EXPORT_COMPILE_VALIDATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_PACKAGE_v0.md`
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_CANDIDATE_BASELINE_v0.md`
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_READINESS_NOTE_v0.md`
+  - `formal/output/toe_qft_scalar_route_export_canonical_package_checkpoint_v0.json`
+  - `formal/output/toe_qft_scalar_route_export_compile_validation_checkpoint_v0.json`
+  - `formal/output/toe_qft_scalar_route_submission_package_checkpoint_v0.json`
+  - `formal/output/toe_qft_scalar_route_submission_candidate_checkpoint_v0.json`
+  - `formal/output/toe_qft_scalar_route_submission_readiness_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_scalar_route_export_canonical_package_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_export_compile_validation_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_submission_package_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_submission_candidate_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_submission_readiness_gate.py`
+  - `formal/docs/submission/scalar_paper1/main.tex`
+  - `formal/docs/submission/scalar_paper1/main.pdf`
+  - `formal/docs/submission/scalar_paper1/refs.bib`
+  - `SCALAR_ROUTE_EXPORT_CANONICAL_PACKAGE_STATUS_v0: CANONICAL_SCALAR_PAPER1_EXPORT_OBJECT_PINNED`
+  - `SCALAR_ROUTE_EXPORT_COMPILE_VALIDATION_STATUS_v0: COMPILE_AND_PDF_ARTIFACT_VALIDATED`
+  - `SCALAR_ROUTE_SUBMISSION_PACKAGE_STATUS_v0: EXTERNAL_SUBMISSION_PACKAGE_READY_BOUNDED`
+  - `SCALAR_ROUTE_SUBMISSION_CANDIDATE_STATUS_v0: BASELINE_LOCKED_FOR_INTERNAL_SUBMISSION_CANDIDATE`
+  - `SCALAR_ROUTE_SUBMISSION_READINESS_STATUS_v0: READY_FOR_BOUNDED_PAPER1_SUBMISSION_PACKAGE`
+  - `QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0`
   - `formal/python/tests/test_em_empirical_comparison_packet_04_gate.py`
   - `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
   - `formal/output/qft_empirical_comparison_packet_04_v0.json`

@@ -16,6 +16,18 @@ Submission support files:
 3. FIGURE_PACKAGE_PLAN.md
 4. COVER_LETTER_SKELETON.md
 5. REVIEWER_FACING_SUMMARY.md
+6. SUBMISSION_EXECUTION_BOARD.md
+
+Upload-bundle assembly order:
+1. Verify figure files exist in `figures/` and replace placeholder-only state.
+2. Run compile replay from package directory:
+	- `pdflatex -interaction=nonstopmode -halt-on-error main.tex`
+	- `bibtex main`
+	- `pdflatex -interaction=nonstopmode -halt-on-error main.tex`
+	- `pdflatex -interaction=nonstopmode -halt-on-error main.tex`
+3. Confirm `main.pdf` and `main.log` were updated in current pass.
+4. Collect canonical source bundle, generated artifacts, and support files.
+5. Perform pre-upload checklist and gate replay.
 
 Pre-upload checks:
 1. Compile replay succeeds from canonical source.
@@ -23,6 +35,11 @@ Pre-upload checks:
 3. Author and affiliation placeholders are replaced.
 4. Figure placeholders are replaced with final files.
 5. Non-claim boundary language is unchanged in meaning.
+
+Current readiness notes:
+- Title and abstract lock is complete.
+- Compile/PDF baseline exists and is validated.
+- Author metadata and final figures remain last-mile blockers.
 
 Policy lock:
 - Submission assembly is formatting and packaging only.
