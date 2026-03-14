@@ -12,6 +12,10 @@ Planned figure set:
 2. `figures/claim_boundary_map_v1.pdf`
    - Purpose: Visual split of recovered structure, interpretive clarification, bounded novelty, and explicit non-claims.
 
+Current production status:
+1. `figures/scalar_route_flow_v1.pdf`: PRODUCED
+2. `figures/claim_boundary_map_v1.pdf`: PRODUCED
+
 Execution checklist:
 1. Produce both files as vector PDF assets.
 2. Replace boxed placeholder in `main.tex` with `\\includegraphics` call for `scalar_route_flow_v1.pdf`.

@@ -35,6 +35,7 @@ Compile-validation freeze status:
 
 Submission-package hardening artifacts (active):
 - TITLE_ABSTRACT_LOCK.md
+- SUBMISSION_METADATA_LOCK.md
 - VENUE_FORMATTING_PROFILE.md
 - FIGURE_PACKAGE_PLAN.md
 - COVER_LETTER_SKELETON.md

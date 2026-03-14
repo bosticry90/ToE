@@ -3,8 +3,12 @@
 Canonical source bundle:
 1. main.tex
 2. refs.bib
-3. figures/.gitkeep (replace with final figure files)
-4. metadata.json
+3. figures/scalar_route_flow_v1.pdf
+4. figures/claim_boundary_map_v1.pdf
+5. figures/scalar_route_flow_v1.tex
+6. figures/claim_boundary_map_v1.tex
+7. figures/.gitkeep
+8. metadata.json
 
 Generated artifact bundle:
 1. main.pdf
@@ -17,6 +21,7 @@ Submission support files:
 4. COVER_LETTER_SKELETON.md
 5. REVIEWER_FACING_SUMMARY.md
 6. SUBMISSION_EXECUTION_BOARD.md
+7. SUBMISSION_METADATA_LOCK.md
 
 Upload-bundle assembly order:
 1. Verify figure files exist in `figures/` and replace placeholder-only state.
@@ -38,8 +43,9 @@ Pre-upload checks:
 
 Current readiness notes:
 - Title and abstract lock is complete.
+- Figure filenames are now fixed in the bundle inventory.
 - Compile/PDF baseline exists and is validated.
-- Author metadata and final figures remain last-mile blockers.
+- Corresponding-contact email remains final-owner confirmation item.
 
 Policy lock:
 - Submission assembly is formatting and packaging only.

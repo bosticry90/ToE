@@ -13,18 +13,17 @@ Execution status:
 2. Canonical compile and PDF validation: COMPLETE
 3. Reviewer-facing summary draft: COMPLETE
 4. Cover letter skeleton draft: COMPLETE
-5. Venue profile and formatting path: IN_PROGRESS
-6. Figure package final production files: IN_PROGRESS
+5. Venue profile and formatting path: COMPLETE
+6. Figure package final production files: COMPLETE
 7. Upload bundle final assembly: IN_PROGRESS
+8. Submission metadata lock: COMPLETE
 
 Immediate execution checklist:
-1. Confirm final author and affiliation block for submission metadata.
-2. Produce `figures/scalar_route_flow_v1.pdf` and `figures/claim_boundary_map_v1.pdf`.
-3. Replace in-manuscript boxed figure with final `\\includegraphics` call.
-4. Run compile replay and verify final PDF metadata.
-5. Assemble final upload bundle from `UPLOAD_BUNDLE_MANIFEST.md`.
-6. Copy final title and abstract to submission form fields.
-7. Run scalar submission gate replay before upload.
+1. Run compile replay and verify final PDF metadata.
+2. Assemble final upload bundle from `UPLOAD_BUNDLE_MANIFEST.md`.
+3. Copy final title, abstract, and keywords to submission form fields.
+4. Replace corresponding-contact placeholder email with final address.
+5. Run scalar submission gate replay before upload.
 
 Definition of done for this board:
 - Author metadata is no longer placeholder text.

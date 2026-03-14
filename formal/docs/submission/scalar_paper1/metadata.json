@@ -3,6 +3,24 @@
   "canonical_manuscript": "formal/docs/submission/scalar_paper1/main.tex",
   "bibliography": "formal/docs/submission/scalar_paper1/refs.bib",
   "figures_dir": "formal/docs/submission/scalar_paper1/figures",
+  "submission_target_primary": "arXiv",
+  "submission_target_secondary": "journal_tbd_after_arxiv",
+  "locked_title": "Bounded Free-Scalar QFT-to-QM Bridge: A Governed Canonical Baseline and Low-Energy Extraction",
+  "locked_abstract": "We present a bounded free-scalar route that starts from a QFT-first posture and derives a Schrodinger-class low-energy limit under explicit assumptions. The contribution is governance-first and reproducibility-first: a pinned derivation and manuscript chain is assembled into one canonical TeX source with a compile-validated PDF artifact for Paper 1. Claims are intentionally bounded to free-field structure and interpretive bridge statements; interacting-field, gauge-sector, multi-particle scattering, and Standard Model completion claims are explicitly out of scope.",
+  "authors": [
+    {
+      "name": "ToE Collaboration",
+      "affiliation": "Independent Research Program",
+      "corresponding": true,
+      "email": "corresponding.author@placeholder.org"
+    }
+  ],
+  "keywords": [
+    "scalar field theory",
+    "canonical quantization",
+    "non-relativistic limit",
+    "reproducible derivation governance"
+  ],
   "source_policy": "single_source_canonical_tex",
   "export_status_token": "SCALAR_ROUTE_EXPORT_CANONICAL_PACKAGE_STATUS_v0: CANONICAL_SCALAR_PAPER1_EXPORT_OBJECT_PINNED",
   "seam_hold_token": "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0"

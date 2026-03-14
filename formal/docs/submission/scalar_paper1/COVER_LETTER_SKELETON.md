@@ -1,11 +1,15 @@
 # Scalar Paper 1 Cover Letter Skeleton
 
+Submission mode:
+- Primary release target: arXiv (no editor letter required for upload)
+- Secondary submission target: journal venue after arXiv release
+
 Subject:
-- Submission for consideration in [VENUE]: Bounded Free-Scalar QFT-to-QM Bridge
+- Submission for consideration in [JOURNAL VENUE]: Bounded Free-Scalar QFT-to-QM Bridge
 
 Dear Editor,
 
-Please consider our manuscript, "Bounded Free-Scalar QFT-to-QM Bridge: A Governed Canonical Baseline and Low-Energy Extraction," for consideration in [VENUE].
+Please consider our manuscript, "Bounded Free-Scalar QFT-to-QM Bridge: A Governed Canonical Baseline and Low-Energy Extraction," for consideration in [JOURNAL VENUE].
 
 This submission presents a bounded free-scalar route that starts from a QFT-first posture and derives a Schrodinger-class low-energy limit under explicit assumptions. The manuscript is organized as a governed and reproducible chain from derivation surfaces to a canonical TeX source and compile-validated PDF artifact.
 
@@ -27,8 +31,8 @@ Administrative declarations:
 
 Recommended metadata fields for submission form:
 1. Manuscript type: [ARTICLE TYPE]
-2. Keywords: [KEYWORD 1], [KEYWORD 2], [KEYWORD 3]
-3. Corresponding author: [NAME, EMAIL]
+2. Keywords: scalar field theory, canonical quantization, non-relativistic limit, reproducible derivation governance
+3. Corresponding author: ToE Collaboration, corresponding.author@placeholder.org
 
 Sincerely,
-[AUTHOR BLOCK]
+[AUTHOR BLOCK: TOE COLLABORATION]
