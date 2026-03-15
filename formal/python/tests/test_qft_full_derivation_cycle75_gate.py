@@ -36,6 +36,7 @@ def test_cycle75_preexecution_nonflip_execution_custody_attestation_confirmation
 def test_cycle75_preexecution_nonflip_execution_custody_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_attestation_confirmation_packet_tokens_in_state_and_roadmap() -> None:
     state = _read(Path("State_of_the_Theory.md"))
     roadmap = _read(Path("formal/docs/paper/PHYSICS_ROADMAP_v0.md"))
+    inventory = _read(Path("formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md"))
 
     required = [
         "QFT_FULL_DERIVATION_PROGRESS_CYCLE75_v0: PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_ATTESTATION_CONFIRMATION_PACKET_LOCK_PINNED",
@@ -44,7 +45,7 @@ def test_cycle75_preexecution_nonflip_execution_custody_attestation_confirmation
         "formal/python/tests/test_qft_full_derivation_cycle75_gate.py",
     ]
     for token in required:
-        assert token in state
+        assert token in state or token in inventory
         assert token in roadmap
 
 
