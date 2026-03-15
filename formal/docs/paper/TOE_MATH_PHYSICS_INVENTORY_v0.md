@@ -1,0 +1,715 @@
+# ToE Math and Physics Inventory v0
+
+Spec ID:
+- `TOE_MATH_PHYSICS_INVENTORY_v0`
+
+Classification:
+- `P-POLICY`
+
+Purpose:
+- Provide one canonical, current-state inventory for math objects, physics objects, and major claim surfaces.
+- Distinguish defined, used, validated, bounded/non-claim, and open/proof-debt states.
+- Point to canonical source, checkpoint, and gate surfaces without duplicating detailed derivation content.
+- Pin one centralized work-and-equations compendium surface for direct math/physics equation lookup.
+
+Non-claim boundary:
+- inventory/control artifact only.
+- no theorem promotion by itself.
+- no adjudication upgrade by itself.
+- no external truth claim.
+
+## 1) Scope and semantics
+
+This inventory is:
+- a current-state ledger for canonical surfaces used to answer "what do we have now".
+- a crosswalk across document, artifact, and gate surfaces.
+- a dependency-aware status map for active/open decision-relevant rows.
+
+This inventory is not:
+- a full historical changelog.
+- a replacement for derivation target documents.
+- a substitute for release notes, policy standards, or artifact payloads.
+
+Status semantics:
+- `DEFINED`: canonical object/surface exists with pinned definition source.
+- `USED`: object/surface is consumed by one or more active canonical routes.
+- `VALIDATED`: object/surface has checkpoint and gate evidence in canonical surfaces.
+- `BOUNDED_NONCLAIM`: object/surface is intentionally policy-bounded and not promoted to stronger claim class.
+- `OPEN_PROOF_DEBT`: object/surface has unresolved proof, seam, empirical, or packaging debt.
+
+Decision relevance semantics:
+- `CURRENT`: directly affects current admissible actions and status decisions.
+- `BACKGROUND`: active support context, not a near-term decision switch.
+- `ARCHIVAL_SHADOW`: retained only for traceability, no direct current decision role.
+
+Row schema:
+- `inventory_id`
+- `domain` (`math` or `physics`)
+- `category`
+- `name`
+- `decision_relevance`
+- `canonical_source`
+- `checkpoint_source`
+- `gate_source`
+- `status`
+- `claim_level`
+- `dependencies`
+- `notes`
+
+## 2) Mathematical inventory
+
+| inventory_id | domain | category | name | decision_relevance | canonical_source | checkpoint_source | gate_source | status | claim_level | dependencies | notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `INV-MATH-ASSUMPTION-REGISTRY-v1` | `math` | `assumptions` | Assumption registry ledger | `CURRENT` | `formal/docs/paper/ASSUMPTION_REGISTRY_v1.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` | `VALIDATED` | `P-POLICY` | `INV-MATH-CLAIM-TAXONOMY-v0` | Canonical assumption ID ledger used across theorem surfaces. |
+| `INV-MATH-CLAIM-TAXONOMY-v0` | `math` | `claim_semantics` | Claim taxonomy semantics | `CURRENT` | `formal/docs/paper/CLAIM_TAXONOMY_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py` | `VALIDATED` | `P-POLICY` | `none` | Canonical claim/non-claim labels used by this inventory. |
+| `INV-MATH-DERIV-COMPLETENESS-GATE-v0` | `math` | `theorem_surfaces` | Derivation completeness gate policy | `CURRENT` | `formal/docs/paper/DERIVATION_COMPLETENESS_GATE_v0.md` | `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json` | `formal/python/tests/test_pillar_deep_maturity_program_gate.py` | `USED` | `P-POLICY` | `INV-MATH-ASSUMPTION-REGISTRY-v1` | Publication-grade sufficiency constraints. |
+| `INV-MATH-PILLAR-STATUS-MATRIX-v1` | `math` | `invariants` | Pillar status matrix | `CURRENT` | `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_pillar_phase_advancement_gate.py` | `VALIDATED` | `P-POLICY` | `none` | Matrix-closure state surface under bounded semantics. |
+| `INV-MATH-PROOF-DEBT-BURNDOWN-c04` | `math` | `proof_debt` | Proof debt burndown checkpoint c04 | `CURRENT` | `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE04_v0.md` | `formal/output/proof_debt_burndown_checkpoint_cycle04_v0.json` | `formal/python/tests/test_toe_complete_v1_terminal_gate.py` | `OPEN_PROOF_DEBT` | `P-POLICY` | `INV-MATH-ASSUMPTION-REGISTRY-v1` | GapID-based proof debt traceability surface. |
+| `INV-MATH-QM-EVOLUTION-CONTRACT` | `math` | `theorem_surfaces` | QM evolution contract theorem surface | `BACKGROUND` | `formal/toe_formal/ToeFormal/QM/EvolutionContract.lean` | `formal/docs/paper/DERIVATION_TARGET_QM_EVOLUTION_OBJECT_v0.md` | `formal/python/tests/test_qm_derivation_chain_gate.py` | `USED` | `T-CONDITIONAL` | `INV-MATH-ASSUMPTION-REGISTRY-v1` | Canonical typed theorem surface consumed by QM routes. |
+| `INV-MATH-GR-CONSERVATION-CONTRACT` | `math` | `theorem_surfaces` | GR conservation compatibility theorem surface | `BACKGROUND` | `formal/toe_formal/ToeFormal/GR/ConservationContract.lean` | `formal/docs/paper/TOE_GR01_CONSERVATION_COMPATIBILITY_v0.md` | `formal/python/tests/test_gr01_conservation_compatibility_promotion_gate.py` | `USED` | `T-CONDITIONAL` | `INV-MATH-ASSUMPTION-REGISTRY-v1` | Bridge-compatible conservation theorem surface. |
+| `INV-MATH-SEAM-WITNESS-PACKAGE` | `math` | `witnesses` | Seam witness package schema | `CURRENT` | `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean` | `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md` | `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py` | `VALIDATED` | `P-POLICY` | `INV-PHYS-SEAM-CLASSB-INVENTORY-v0` | Required witness route surface for seam promotions. |
+| `INV-MATH-PHYS-WORK-EQ-COMPENDIUM-v0` | `math` | `synthesis_surface` | Centralized math/physics work and equations compendium | `CURRENT` | `formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` | `USED` | `P-POLICY` | `INV-MATH-CLAIM-TAXONOMY-v0` | Single lookup surface for active equation statements and route-level work pointers. |
+
+## 3) Physics inventory
+
+| inventory_id | domain | category | name | decision_relevance | canonical_source | checkpoint_source | gate_source | status | claim_level | dependencies | notes |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| `INV-PHYS-ROADMAP-v0` | `physics` | `routes` | Physics roadmap dispatch surface | `CURRENT` | `formal/docs/paper/PHYSICS_ROADMAP_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` | `VALIDATED` | `P-POLICY` | `INV-MATH-PILLAR-STATUS-MATRIX-v1` | Canonical route and pin registry. |
+| `INV-PHYS-DEEP-MATURITY-PROGRAM-v0` | `physics` | `pillars` | Pillar deep maturity program | `CURRENT` | `formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md` | `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json` | `formal/python/tests/test_pillar_deep_maturity_program_gate.py` | `VALIDATED` | `P-POLICY` | `INV-PHYS-ROADMAP-v0` | Program-level M1-M5 posture control. |
+| `INV-PHYS-EM-U1-OBJECT-v0` | `physics` | `object_surfaces` | EM U1 Maxwell object surface | `CURRENT` | `formal/docs/paper/DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_em_u1_maxwell_object_gate.py` | `USED` | `T-CONDITIONAL` | `INV-MATH-ASSUMPTION-REGISTRY-v1` | EM U1 object and route anchor. |
+| `INV-PHYS-EM-U1-MICRO21` | `physics` | `active_micro_route` | EM U1 distributional lane authorization scaffold | `CURRENT` | `formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_21_DISTRIBUTIONAL_LANE_AUTHORIZATION_SCAFFOLD_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_em_u1_micro21_distributional_lane_authorization_scaffold_gate.py` | `OPEN_PROOF_DEBT` | `P-POLICY` | `INV-PHYS-EM-U1-OBJECT-v0` | Active/open route surface with distributional debt relevance. |
+| `INV-PHYS-QFT-GAUGE-OBJECT-v0` | `physics` | `object_surfaces` | QFT gauge object surface | `BACKGROUND` | `formal/docs/paper/DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0.md` | `formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md` | `formal/python/tests/test_qft_full_derivation_discharge_gate.py` | `USED` | `T-CONDITIONAL` | `INV-PHYS-ROADMAP-v0` | Canonical QFT gauge route object. |
+| `INV-PHYS-QM-EVOLUTION-OBJECT-v0` | `physics` | `object_surfaces` | QM evolution object surface | `BACKGROUND` | `formal/docs/paper/DERIVATION_TARGET_QM_EVOLUTION_OBJECT_v0.md` | `formal/docs/paper/DERIVATION_TARGET_QM_FULL_DERIVATION_DISCHARGE_v0.md` | `formal/python/tests/test_qm_full_derivation_discharge_gate.py` | `USED` | `T-CONDITIONAL` | `INV-MATH-QM-EVOLUTION-CONTRACT` | QM pillar object anchor. |
+| `INV-PHYS-GR-GEOMETRY-OBJECT-v0` | `physics` | `object_surfaces` | GR geometry object surface | `BACKGROUND` | `formal/docs/paper/DERIVATION_TARGET_GR_GEOMETRY_OBJECT_v0.md` | `formal/docs/paper/TOE_GR01_ANALYTIC_DISCHARGE_v0.md` | `formal/python/tests/test_gr01_publication_theorem_claim_advancement_gate.py` | `USED` | `T-CONDITIONAL` | `INV-MATH-GR-CONSERVATION-CONTRACT` | GR object route anchor and discharge-facing surface. |
+| `INV-PHYS-SR-COVARIANCE-OBJECT-v0` | `physics` | `object_surfaces` | SR covariance object surface | `BACKGROUND` | `formal/docs/paper/DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0.md` | `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json` | `formal/python/tests/test_sr_m5_theory_parity_link_cycle56_gate.py` | `USED` | `T-CONDITIONAL` | `INV-PHYS-DEEP-MATURITY-PROGRAM-v0` | SR parity-link maturity surface. |
+| `INV-PHYS-STAT-ENTROPY-PLAN-v0` | `physics` | `object_surfaces` | STAT entropy plan surface | `BACKGROUND` | `formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md` | `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json` | `formal/python/tests/test_stat_m3_completion_promotion_cycle01_gate.py` | `USED` | `P-POLICY` | `INV-PHYS-DEEP-MATURITY-PROGRAM-v0` | STAT route and discriminator dependency surface. |
+| `INV-PHYS-COSMO-BG-OBJECT-v0` | `physics` | `object_surfaces` | Cosmology background object surface | `BACKGROUND` | `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md` | `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json` | `formal/python/tests/test_cosmo_background_kickoff_gate.py` | `USED` | `P-POLICY` | `INV-PHYS-DEEP-MATURITY-PROGRAM-v0` | COSMO route anchor with active checkpoint chain. |
+| `INV-PHYS-SEAM-CLASSB-INVENTORY-v0` | `physics` | `seams` | Class-B seam inventory | `CURRENT` | `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py` | `VALIDATED` | `P-POLICY` | `INV-MATH-SEAM-WITNESS-PACKAGE` | Primary seam status and promotion-readiness surface. |
+| `INV-PHYS-SEAM-CONSTRAINT-REGISTRY-v0` | `physics` | `seams` | Seam constraint registry | `CURRENT` | `formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_toe_master_action_seam_registry_gate.py` | `VALIDATED` | `P-POLICY` | `INV-PHYS-SEAM-CLASSB-INVENTORY-v0` | Constraint-level seam policy and class wiring. |
+| `INV-PHYS-PREDICTION-SCOREBOARD-v0` | `physics` | `evidence_lanes` | Prediction-first scoreboard | `CURRENT` | `formal/output/prediction_first_scoreboard_v0.json` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_prediction_first_scoreboard_gate.py` | `VALIDATED` | `E-REPRO` | `INV-PHYS-ROADMAP-v0` | Prediction/evidence lane decision surface. |
+| `INV-PHYS-EMPIRICAL-PROTOCOL-v0` | `physics` | `evidence_lanes` | Foundational empirical comparison protocol | `CURRENT` | `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md` | `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET05_MATRIX_v0.json` | `formal/python/tests/test_foundational_empirical_packet05_progression_policy_gate.py` | `VALIDATED` | `P-POLICY` | `INV-PHYS-ROADMAP-v0` | Packet progression and falsification protocol anchor. |
+| `INV-PHYS-QFT-GR-PACKET41-HOLD` | `physics` | `hold_controls` | QFT-GR Packet41 hold posture | `CURRENT` | `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` | `BOUNDED_NONCLAIM` | `P-POLICY` | `INV-PHYS-SEAM-CONSTRAINT-REGISTRY-v0` | Explicit hold-retained state under missing numeric inputs. |
+| `INV-PHYS-WORK-EQ-COMPENDIUM-v0` | `physics` | `synthesis_surface` | Centralized math/physics work and equations compendium | `CURRENT` | `formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` | `USED` | `P-POLICY` | `INV-PHYS-ROADMAP-v0` | Physics-facing entrypoint to unified equations/work ledger. |
+
+## 4) Validation status
+
+Validation interpretation:
+- A row is considered validation-complete only if source, checkpoint, and gate pointers are all pinned and present in canonical surfaces.
+- `OPEN_PROOF_DEBT` rows may have valid checkpoint/gate pointers while still carrying unresolved discharge obligations.
+
+Validation rollup (v0 draft):
+- `validated_rows`: 9
+- `used_rows`: 8
+- `open_proof_debt_rows`: 2
+- `bounded_nonclaim_rows`: 1
+
+Unresolved dependency highlights:
+- `INV-PHYS-EM-U1-MICRO21` depends on distributional authorization closure in downstream EM U1 route closure attempts.
+- `INV-MATH-PROOF-DEBT-BURNDOWN-c04` remains open until tracked GapID debt rows clear without policy drift.
+
+## 5) Open debt / unresolved items
+
+Proof debt:
+- `INV-MATH-PROOF-DEBT-BURNDOWN-c04` (`OPEN_PROOF_DEBT`)
+- linked closeout surfaces: `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE05_v0.md` and `formal/output/proof_debt_burndown_checkpoint_cycle05_v0.json`
+
+Seam debt:
+- Global seam physics completion remains non-closed in current audit posture.
+- canonical status pointer: `formal/docs/release/REPO_STATUS_AUDIT_20260315_v0.md`
+
+Empirical debt:
+- Packet and discriminator coverage is active but remains bounded and mixed-progress at repository-wide posture.
+
+Packaging/publication debt:
+- Scalar submission lane is marked ready for bounded package preparation, but this does not supersede non-claim boundaries.
+
+## 6) Crosswalk
+
+| inventory item | canonical source file | checkpoint | gate |
+| --- | --- | --- | --- |
+| `INV-MATH-ASSUMPTION-REGISTRY-v1` | `formal/docs/paper/ASSUMPTION_REGISTRY_v1.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` |
+| `INV-MATH-CLAIM-TAXONOMY-v0` | `formal/docs/paper/CLAIM_TAXONOMY_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py` |
+| `INV-PHYS-ROADMAP-v0` | `formal/docs/paper/PHYSICS_ROADMAP_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` |
+| `INV-PHYS-DEEP-MATURITY-PROGRAM-v0` | `formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md` | `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json` | `formal/python/tests/test_pillar_deep_maturity_program_gate.py` |
+| `INV-PHYS-SEAM-CLASSB-INVENTORY-v0` | `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py` |
+| `INV-PHYS-PREDICTION-SCOREBOARD-v0` | `formal/output/prediction_first_scoreboard_v0.json` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_prediction_first_scoreboard_gate.py` |
+| `INV-MATH-PHYS-WORK-EQ-COMPENDIUM-v0` | `formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` |
+
+## Canonical pointers for authority surfaces
+
+- Compact authority surface pointer: `State_of_the_Theory.md`
+- Centralized math/physics/equations compendium pointer: `formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md`
+- Changelog archive summary pointer: `formal/docs/release/TOE_CHANGELOG_ARCHIVE_v0.md`
+- Packet history archive summary pointer: `formal/docs/release/TOE_PACKET_HISTORY_ARCHIVE_v0.md`
+- Seam history archive summary pointer: `formal/docs/release/TOE_SEAM_HISTORY_ARCHIVE_v0.md`
+- Archived history extract pointer: `archive/State_of_the_Theory_ARCHIVED_HISTORY_EXTRACT_v0.md`
+
+## Transitional compatibility pointers (state-pin migration tranche)
+
+- `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
+- `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`
+- `formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean`
+- `formal/python/tests/test_em_qft_seam_promotion_cycle01_theorem_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
+- `formal/python/tests/test_em_qft_seam_promotion_cycle02_discharge_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`
+- `formal/python/tests/test_em_qft_seam_promotion_cycle03_class_flip_gate.py`
+- `formal/docs/release/PREDICTION_FIRST_HYPOTHESIS_TEMPLATE_v0.md`
+- `formal/docs/lanes/HYPOTHESIS_OV_DR_BR_PACKET02_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_02_DECISION_RECORD_v0.md`
+- `formal/python/tests/test_qm_empirical_packet_02_decision_record_gate.py`
+- `formal/python/tests/test_gr_empirical_packet_02_decision_record_gate.py`
+- `formal/python/tests/test_stat_empirical_packet_02_decision_record_gate.py`
+- `formal/python/tests/test_cosmo_empirical_packet_02_decision_record_gate.py`
+- `formal/python/tests/test_em_empirical_packet_02_decision_record_gate.py`
+- `formal/python/tests/test_qft_empirical_packet_02_decision_record_gate.py`
+- `formal/python/tests/test_sr_empirical_packet_02_decision_record_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_02_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_02_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_02_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_02_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_02_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_02_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_02_v0.md`
+- `formal/python/tests/test_qm_empirical_comparison_packet_02_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`
+- `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean`
+- `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`
+- `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`
+- `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_QM_M4_SEAM_CLOSURE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_M4_SEAM_CLOSURE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_STAT_M4_SEAM_CLOSURE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_COSMO_M4_SEAM_CLOSURE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_M4_SEAM_CLOSURE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_M4_SEAM_CLOSURE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_SR_M4_SEAM_CLOSURE_PROMOTION_v0.md`
+- `formal/python/tests/test_qm_m4_seam_closure_promotion_cycle01_gate.py`
+- `formal/python/tests/test_gr_m4_seam_closure_promotion_cycle01_gate.py`
+- `formal/python/tests/test_stat_m4_seam_closure_promotion_cycle01_gate.py`
+- `formal/python/tests/test_cosmo_m4_seam_closure_promotion_cycle01_gate.py`
+- `formal/python/tests/test_em_m4_seam_closure_promotion_cycle01_gate.py`
+- `formal/python/tests/test_qft_m4_seam_closure_promotion_cycle01_gate.py`
+- `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`
+- `formal/docs/release/TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0.md`
+- `formal/python/tests/test_toe_seam_status_split_gate.py`
+- `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET03_MATRIX_v0.json`
+- `formal/python/tests/test_foundational_empirical_packet03_matrix_consistency_gate.py`
+- `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0.json`
+- `formal/python/tests/test_foundational_empirical_packet04_matrix_consistency_gate.py`
+- `formal/python/tests/test_foundational_empirical_packet04_decision_policy_gate.py`
+- `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET05_MATRIX_v0.json`
+- `formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_PROGRESSION_POLICY_v0.md`
+- `formal/python/tests/test_foundational_empirical_packet05_matrix_consistency_gate.py`
+- `formal/python/tests/test_foundational_empirical_packet05_progression_policy_gate.py`
+- `formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_OVERRIDE_POLICY_v0.md`
+- `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0.json`
+- `formal/python/tests/test_foundational_empirical_packet_matrix_consistency_gate.py`
+- `formal/python/tests/test_foundational_empirical_packet_progression_policy_gate.py`
+- `formal/python/tests/test_foundational_empirical_packet05_override_policy_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_03_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_03_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_03_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_03_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_03_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_03_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_03_v0.md`
+- `formal/python/tests/test_qm_empirical_comparison_packet_03_gate.py`
+- `formal/python/tests/test_gr_empirical_comparison_packet_03_gate.py`
+- `formal/python/tests/test_stat_empirical_comparison_packet_03_gate.py`
+- `formal/python/tests/test_cosmo_empirical_comparison_packet_03_gate.py`
+- `formal/python/tests/test_em_empirical_comparison_packet_03_gate.py`
+- `formal/python/tests/test_qft_empirical_comparison_packet_03_gate.py`
+- `formal/python/tests/test_sr_empirical_comparison_packet_03_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
+- `formal/python/tests/test_qm_empirical_comparison_packet_04_gate.py`
+- `formal/python/tests/test_gr_empirical_comparison_packet_04_gate.py`
+- `formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py`
+- `formal/python/tests/test_cosmo_empirical_comparison_packet_04_gate.py`
+- `formal/python/tests/test_em_empirical_comparison_packet_04_gate.py`
+- `formal/python/tests/test_qft_empirical_comparison_packet_04_gate.py`
+- `formal/python/tests/test_sr_empirical_comparison_packet_04_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md`
+- `formal/python/tests/test_toe_empirical_comparison_packet_01_gate.py`
+- `formal/python/tests/test_toe_empirical_packet_01_evidence_promotion_gate.py`
+- `formal/python/tests/test_qm_empirical_comparison_packet_01_gate.py`
+- `formal/python/tests/test_qm_empirical_packet_01_evidence_promotion_gate.py`
+- `formal/python/tests/test_gr_empirical_comparison_packet_01_gate.py`
+- `formal/python/tests/test_gr_empirical_packet_01_evidence_promotion_gate.py`
+- `formal/python/tests/test_stat_empirical_comparison_packet_01_gate.py`
+- `formal/python/tests/test_stat_empirical_packet_01_evidence_promotion_gate.py`
+- `formal/python/tests/test_cosmo_empirical_comparison_packet_01_gate.py`
+- `formal/python/tests/test_cosmo_empirical_packet_01_evidence_promotion_gate.py`
+- `formal/python/tests/test_em_empirical_comparison_packet_01_gate.py`
+- `formal/python/tests/test_em_empirical_packet_01_evidence_promotion_gate.py`
+- `formal/python/tests/test_qft_empirical_comparison_packet_01_gate.py`
+- `formal/python/tests/test_qft_empirical_packet_01_evidence_promotion_gate.py`
+- `formal/python/tests/test_sr_empirical_comparison_packet_01_gate.py`
+- `formal/python/tests/test_sr_empirical_packet_01_evidence_promotion_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_DISCRIMINATOR_EMP_QM_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_DISCRIMINATOR_EMP_GR_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_DISCRIMINATOR_EMP_STAT_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_DISCRIMINATOR_EMP_COSMO_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_DISCRIMINATOR_EMP_EM_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_DISCRIMINATOR_EMP_QFT_01_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_DISCRIMINATOR_EMP_SR_01_v0.md`
+- `formal/python/tests/test_qm_empirical_discriminator_emp_qm_01_scaffold_gate.py`
+- `formal/python/tests/test_gr_empirical_discriminator_emp_gr_01_scaffold_gate.py`
+- `formal/python/tests/test_stat_empirical_discriminator_emp_stat_01_scaffold_gate.py`
+- `formal/python/tests/test_cosmo_empirical_discriminator_emp_cosmo_01_scaffold_gate.py`
+- `formal/python/tests/test_em_empirical_discriminator_emp_em_01_scaffold_gate.py`
+- `formal/python/tests/test_qft_empirical_discriminator_emp_qft_01_scaffold_gate.py`
+- `formal/python/tests/test_sr_empirical_discriminator_emp_sr_01_scaffold_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE02_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE03_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE04_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE05_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE06_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE07_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE08_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE09_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE10_v0.md`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle02_gate.py`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle03_gate.py`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle04_gate.py`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle05_gate.py`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle06_gate.py`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle07_gate.py`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle08_gate.py`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle09_gate.py`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle10_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE11_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE12_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE13_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE14_v0.md`
+- `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_CYCLE15_v0.md`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle11_gate.py`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle12_gate.py`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle13_gate.py`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle14_gate.py`
+- `formal/python/tests/test_toe_master_action_shadow_numerics_cycle15_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_05_v0.md`
+- `formal/output/gr_empirical_comparison_packet_05_v0.json`
+- `formal/python/tests/test_gr_empirical_comparison_packet_05_gate.py`
+- `formal/python/tests/test_gr_empirical_packet_05_artifact_schema_gate.py`
+- `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md`
+- `formal/output/sr_empirical_comparison_packet_05_v0.json`
+- `formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py`
+- `formal/python/tests/test_sr_empirical_packet_05_artifact_schema_gate.py`
+- `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE01_v0.md`
+- `formal/output/proof_debt_burndown_checkpoint_cycle01_v0.json`
+- `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE02_v0.md`
+- `formal/output/proof_debt_burndown_checkpoint_cycle02_v0.json`
+- `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE03_v0.md`
+- `formal/output/proof_debt_burndown_checkpoint_cycle03_v0.json`
+- `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE04_v0.md`
+- `formal/output/proof_debt_burndown_checkpoint_cycle04_v0.json`
+- `formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE05_v0.md`
+- `formal/output/proof_debt_burndown_checkpoint_cycle05_v0.json`
+- `formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json`
+- `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_REVIEW_v0.md`
+- `formal/output/toe_qft_gr_seam_packet41_eligibility_review_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_gr_seam_packet41_eligibility_review_gate.py`
+- `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_REVIEW_v0.md`
+- `formal/output/toe_qft_gr_seam_packet41_targeted_justification_review_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_gr_seam_packet41_targeted_justification_review_gate.py`
+- `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_v0.md`
+- `formal/output/toe_qft_gr_seam_packet41_hold_fork_decision_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_gr_seam_packet41_hold_fork_decision_gate.py`
+- `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_NUMERIC_THRESHOLDS_v0.md`
+- `formal/output/toe_qft_gr_seam_packet41_reconsideration_numeric_thresholds_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_gr_seam_packet41_reconsideration_numeric_thresholds_gate.py`
+- `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md`
+- `formal/output/toe_qft_gr_seam_packet41_numeric_threshold_measurement_protocol_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_gr_seam_packet41_numeric_threshold_measurement_protocol_gate.py`
+- `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md`
+- `formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_worksheet_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_gr_seam_packet41_reconsideration_scorecard_worksheet_gate.py`
+- `formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_gr_seam_packet41_reconsideration_scorecard_cycle01_evaluation_gate.py`
+- `TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_STATUS_v0: REVIEW_COMPLETE_HOLD_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_DISPOSITION_v0: HOLD_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_STATUS_v0: REVIEW_COMPLETE_INSUFFICIENT_FOR_AUTHORIZATION_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_OUTCOME_v0: HOLD_RETAINED_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_STATUS_v0: DECISION_COMPLETE_HOLD_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_OUTCOME_v0: HOLD_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_NUMERIC_THRESHOLDS_STATUS_v0: ACTIVE_HOLD_GATED_NUMERIC_CRITERIA_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_NUMERIC_THRESHOLDS_OUTCOME_v0: HOLD_RETAINED_UNTIL_NUMERIC_CLEARANCE_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_STATUS_v0: ACTIVE_OPERATIONAL_FORMULAS_LOCKED_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_OUTCOME_v0: HOLD_RETAINED_PENDING_MEASURED_CLEARANCE_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_STATUS_v0: ACTIVE_CANONICAL_WORKSHEET_LOCKED_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_OUTCOME_v0: HOLD_RETAINED_PENDING_SCORECARD_EVIDENCE_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0: EVALUATED_HOLD_RETAINED_MISSING_NUMERIC_INPUTS_v0`
+- `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_CANDIDATE_BASELINE_v0.md`
+- `formal/output/toe_qft_scalar_route_submission_candidate_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_scalar_route_submission_candidate_gate.py`
+- `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_READINESS_NOTE_v0.md`
+- `formal/output/toe_qft_scalar_route_submission_readiness_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_scalar_route_submission_readiness_gate.py`
+- `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_PACKAGE_v0.md`
+- `formal/output/toe_qft_scalar_route_submission_package_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_scalar_route_submission_package_gate.py`
+- `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_TECHNICAL_SIGNOFF_v0.md`
+- `formal/output/toe_qft_scalar_route_technical_signoff_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_scalar_route_technical_signoff_gate.py`
+- `SCALAR_ROUTE_SUBMISSION_CANDIDATE_STATUS_v0: BASELINE_LOCKED_FOR_INTERNAL_SUBMISSION_CANDIDATE`
+- `SCALAR_ROUTE_SUBMISSION_READINESS_STATUS_v0: READY_FOR_BOUNDED_PAPER1_SUBMISSION_PACKAGE`
+- `SCALAR_ROUTE_SUBMISSION_PACKAGE_STATUS_v0: EXTERNAL_SUBMISSION_PACKAGE_READY_BOUNDED`
+- `QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0`
+- `SCALAR_ROUTE_TECHNICAL_SIGNOFF_STATUS_v0: SIGNED_OFF_BOUNDED_RIGOR_BASELINE_v0`
+- `SCALAR_ROUTE_TECHNICAL_SIGNOFF_DEBT_CLASS_v0: BOUNDED_LINKAGE_RECOVERY_DEBT_v0`
+- `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_EXPORT_CANONICAL_PACKAGE_v0.md`
+- `formal/output/toe_qft_scalar_route_export_canonical_package_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_scalar_route_export_canonical_package_gate.py`
+- `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_EXPORT_COMPILE_VALIDATION_v0.md`
+- `formal/output/toe_qft_scalar_route_export_compile_validation_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_scalar_route_export_compile_validation_gate.py`
+- `formal/docs/submission/scalar_paper1/main.tex`
+- `formal/docs/submission/scalar_paper1/refs.bib`
+- `formal/docs/submission/scalar_paper1/main.pdf`
+- `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_SKELETON_v0.md`
+- `formal/output/toe_qft_scalar_route_section_map_v0.json`
+- `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_DRAFT_v0.md`
+- `formal/output/toe_qft_scalar_route_manuscript_fill_map_v0.json`
+- `formal/output/toe_qft_scalar_route_citation_binding_map_v0.json`
+- `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_BIBLIOGRAPHY_ALIGNMENT_v0.md`
+- `formal/output/toe_qft_scalar_route_reference_map_v0.json`
+- `formal/python/tests/test_toe_qft_scalar_route_manuscript_skeleton_gate.py`
+- `formal/python/tests/test_toe_qft_scalar_route_manuscript_draft_gate.py`
+- `formal/python/tests/test_toe_qft_scalar_route_citation_binding_gate.py`
+- `formal/python/tests/test_toe_qft_scalar_route_bibliography_alignment_gate.py`
+- `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_FULL_TECHNICAL_RECORD_v0.md`
+- `formal/output/toe_qft_scalar_route_full_technical_record_checkpoint_v0.json`
+- `formal/output/toe_qft_scalar_route_scalar_inventory_manifest_v0.json`
+- `formal/python/tests/test_toe_qft_scalar_route_full_technical_record_gate.py`
+- `formal/python/tests/test_toe_qft_scalar_route_full_technical_record_coupling_gate.py`
+- `SCALAR_ROUTE_EXPORT_CANONICAL_PACKAGE_STATUS_v0: CANONICAL_SCALAR_PAPER1_EXPORT_OBJECT_PINNED`
+- `SCALAR_ROUTE_EXPORT_COMPILE_VALIDATION_STATUS_v0: COMPILE_AND_PDF_ARTIFACT_VALIDATED`
+- `SCALAR_ROUTE_FULL_TECHNICAL_RECORD_STATUS_v0: PHASE0_PHASE1_LOCKED_AUDIT_READY_V0`
+- `SCALAR_ROUTE_FULL_TECHNICAL_RECORD_COUPLING_STATUS_v0: ARTIFACT_AND_STATUS_PARITY_ENFORCED`
+- `SCALAR_ROUTE_FULL_TECHNICAL_RECORD_CHECKPOINT_FILE_v0: toe_qft_scalar_route_full_technical_record_checkpoint_v0.json`
+- `SCALAR_ROUTE_FULL_TECHNICAL_RECORD_MANIFEST_FILE_v0: toe_qft_scalar_route_scalar_inventory_manifest_v0.json`
+- `formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle3_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle4_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle5_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle6_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle7_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle8_gate.py`
+- `formal/python/tests/test_qft_evol_scaffold_saturation_gate.py`
+- `formal/python/tests/test_qft_evol_micro_tranche_01_52_completeness_gate.py`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: CANONICAL_MOMENTUM_HAMILTONIAN_UNITARITY_CHAIN_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE2_v0: SEMANTIC_HARDENING_MILESTONE_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE3_v0: CANONICAL_MOMENTUM_INVARIANT_UNITARITY_ROUTE_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE3_v0: CANONICAL_MOMENTUM_INVARIANT_UNITARITY_ROUTE_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE4_v0: HAMILTONIAN_TO_GENERATOR_CANONICAL_MOMENTUM_ROUTE_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE4_v0: HAMILTONIAN_TO_GENERATOR_CANONICAL_MOMENTUM_ROUTE_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE5_v0: HAMILTONIAN_MEDIATED_REFLECTIVE_CANONICAL_MOMENTUM_GENERATOR_UNITARITY_ROUTE_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE5_v0: HAMILTONIAN_MEDIATED_REFLECTIVE_CANONICAL_MOMENTUM_GENERATOR_UNITARITY_ROUTE_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE6_v0: GENERATOR_UNITARITY_ROUTE_COHERENCE_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE6_v0: GENERATOR_UNITARITY_ROUTE_COHERENCE_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE7_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE7_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE8_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_COHERENCE_ALIGNMENT_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE8_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_COHERENCE_ALIGNMENT_TOKEN_PINNED`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle9_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle10_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle11_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle12_gate.py`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE9_v0: GENERATOR_UNITARITY_ROUTE_COHERENCE_NORMALIZATION_ALIGNMENT_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE9_v0: GENERATOR_UNITARITY_ROUTE_COHERENCE_NORMALIZATION_ALIGNMENT_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE10_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE10_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE11_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_NORMALIZATION_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE11_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_NORMALIZATION_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE12_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_ALIGNMENT_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE12_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_ALIGNMENT_TOKEN_PINNED`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle13_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle14_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle15_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle16_gate.py`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE13_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_NORMALIZATION_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE13_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_NORMALIZATION_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE14_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE14_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE15_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_NORMALIZATION_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE15_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_NORMALIZATION_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE16_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE16_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_TOKEN_PINNED`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle17_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle18_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle19_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle20_gate.py`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE17_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_NORMALIZATION_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE17_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_NORMALIZATION_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE18_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE18_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE19_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_NORMALIZATION_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE19_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_NORMALIZATION_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE20_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE20_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_TOKEN_PINNED`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle21_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle22_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle23_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle24_gate.py`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE21_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_NORMALIZATION_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE21_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_NORMALIZATION_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE22_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE22_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE23_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_NORMALIZATION_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE23_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_NORMALIZATION_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE24_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE24_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_TOKEN_PINNED`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle25_gate.py`
+- `formal/python/tests/test_qft_evol_semantic_hardening_cycle26_gate.py`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE25_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_NORMALIZATION_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE25_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_NORMALIZATION_TOKEN_PINNED`
+- `QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_CYCLE26_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE26_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_ALIGNMENT_SYMMETRY_WITNESS_TOKEN_PINNED`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE27_v0: TRANCHE_ROLLOVER_LEGACY_FORBID_GATE_BUNDLE_PINNED`
+- `QFT_FULL_DERIVATION_TRANCHE_ROLLOVER_GATE_v0: CYCLE26_TO_CYCLE27_HARDENING_ROUTE_ONLY`
+- `QFT_FULL_DERIVATION_LEGACY_ROUTE_FORBID_GATE_v0: NO_LEGACY_PROMOTION_OR_ADJUDICATION_SHORTCUT`
+- `QFT_FULL_DERIVATION_DISCHARGE_TRANSITION_POLICY_v0: LOCKED_UNTIL_EXIT_ROW_CRITERIA_AND_PREDISCHARGE_BUNDLE`
+- `QFT_FULL_DERIVATION_TRANCHE_ROLLOVER_GATE_BUNDLE_ARTIFACT_v0: qft_full_derivation_tranche_rollover_gate_bundle_cycle27_v0`
+- `formal/output/qft_full_derivation_tranche_rollover_gate_bundle_cycle27_v0.json`
+- `formal/python/tests/test_qft_full_derivation_tranche_rollover_cycle27_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE28_v0: EXIT_ROW_CRITERIA_LOCK_BUNDLE_PINNED`
+- `QFT_FULL_DERIVATION_DISCHARGE_CRITERIA_v0: PRE_DISCHARGE_EXIT_ROW_CRITERIA_PINNED`
+- `QFT_FULL_DERIVATION_CRITERIA_ROW_01_v0: CANONICAL_ROUTE_CONTINUITY_PINNED`
+- `QFT_FULL_DERIVATION_CRITERIA_ROW_02_v0: TRANCHE_ROLLOVER_AND_LEGACY_FORBID_PINNED`
+- `QFT_FULL_DERIVATION_CRITERIA_ROW_03_v0: AUTHORITY_SURFACE_SYNC_PINNED`
+- `QFT_FULL_DERIVATION_EXIT_ROW_01_STATUS_v0: LOCKED_PRE_DISCHARGE`
+- `QFT_FULL_DERIVATION_EXIT_ROW_02_STATUS_v0: LOCKED_PRE_DISCHARGE`
+- `QFT_FULL_DERIVATION_EXIT_ROW_03_STATUS_v0: LOCKED_PRE_DISCHARGE`
+- `QFT_FULL_DERIVATION_EXIT_ROW_CRITERIA_GATE_v0: LOCKED_UNTIL_PREDISCHARGE_AND_TRANSITION_BUNDLE`
+- `QFT_FULL_DERIVATION_EXIT_ROW_CRITERIA_ARTIFACT_v0: qft_full_derivation_exit_row_criteria_cycle28_v0`
+- `formal/output/qft_full_derivation_exit_row_criteria_cycle28_v0.json`
+- `formal/python/tests/test_qft_full_derivation_exit_row_criteria_cycle28_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE29_v0: PREDISCHARGE_TRANSITION_BUNDLE_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_PREDISCHARGE_TRANSITION_BUNDLE_GATE_v0: EXIT_ROW_CRITERIA_AND_ROLLOVER_REQUIRED`
+- `QFT_FULL_DERIVATION_ADJUDICATION_FLIP_BLOCK_v0: REQUIRE_EXPLICIT_DISCHARGE_GATE_CLOSURE`
+- `QFT_FULL_DERIVATION_PREDISCHARGE_TRANSITION_BUNDLE_ARTIFACT_v0: qft_full_derivation_predischarge_transition_bundle_cycle29_v0`
+- `formal/output/qft_full_derivation_predischarge_transition_bundle_cycle29_v0.json`
+- `formal/python/tests/test_qft_full_derivation_predischarge_transition_cycle29_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE31_v0: ADJUDICATION_CRITERIA_BUNDLE_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_ADJUDICATION_CRITERIA_GATE_v0: LOCKED_UNTIL_ALL_EXIT_ROWS_AND_TRANSITION_BUNDLES_COMPLETE`
+- `QFT_FULL_DERIVATION_INEVITABILITY_CRITERIA_GATE_v0: LOCKED_UNTIL_COUNTERFACTUAL_AND_INDEPENDENT_NECESSITY_BUNDLES_COMPLETE`
+- `QFT_FULL_DERIVATION_ADJUDICATION_CRITERIA_BUNDLE_ARTIFACT_v0: qft_full_derivation_adjudication_criteria_bundle_cycle31_v0`
+- `formal/output/qft_full_derivation_adjudication_criteria_bundle_cycle31_v0.json`
+- `formal/python/tests/test_qft_full_derivation_adjudication_criteria_cycle31_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE32_v0: FLIP_DECISION_PACKET_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_FLIP_DECISION_PACKET_GATE_v0: LOCKED_UNTIL_CYCLE31_CRITERIA_AND_EXPLICIT_AUTHORITY_SIGNOFF`
+- `QFT_FULL_DERIVATION_FLIP_DECISION_PACKET_AUTHORITY_v0: TWO_KEY_REVIEW_REQUIRED_NO_AUTOFIP`
+- `QFT_FULL_DERIVATION_FLIP_DECISION_PACKET_ARTIFACT_v0: qft_full_derivation_flip_decision_packet_cycle32_v0`
+- `formal/output/qft_full_derivation_flip_decision_packet_cycle32_v0.json`
+- `formal/python/tests/test_qft_full_derivation_flip_decision_packet_cycle32_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE33_v0: FINAL_PREFLIP_EVIDENCE_REGISTRY_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_FINAL_PREFLIP_EVIDENCE_REGISTRY_GATE_v0: LOCKED_UNTIL_ALL_REQUIRED_BUNDLES_PRESENT_AND_HASH_PINNED`
+- `QFT_FULL_DERIVATION_FINAL_PREFLIP_EVIDENCE_REQUIRED_BUNDLES_v0: CYCLE27_ROLLOVER;CYCLE28_EXIT_ROW;CYCLE29_PREDISCHARGE_TRANSITION;CYCLE30_READINESS;CYCLE31_ADJUDICATION_CRITERIA;CYCLE32_FLIP_PACKET`
+- `QFT_FULL_DERIVATION_FINAL_PREFLIP_EVIDENCE_REGISTRY_ARTIFACT_v0: qft_full_derivation_final_prefip_evidence_registry_cycle33_v0`
+- `formal/output/qft_full_derivation_final_prefip_evidence_registry_cycle33_v0.json`
+- `formal/python/tests/test_qft_full_derivation_final_prefip_evidence_registry_cycle33_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE34_v0: MANUAL_FLIP_AUTHORIZATION_PACKET_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_MANUAL_FLIP_AUTHORIZATION_PACKET_GATE_v0: LOCKED_UNTIL_CYCLE33_REGISTRY_HASH_AND_TWO_KEY_SIGNOFF_PRESENT`
+- `QFT_FULL_DERIVATION_MANUAL_FLIP_AUTHORIZATION_PACKET_TWO_KEY_v0: KEYA_PENDING_KEYB_PENDING`
+- `QFT_FULL_DERIVATION_MANUAL_FLIP_AUTHORIZATION_PACKET_ARTIFACT_v0: qft_full_derivation_manual_flip_authorization_packet_cycle34_v0`
+- `formal/output/qft_full_derivation_manual_flip_authorization_packet_cycle34_v0.json`
+- `formal/python/tests/test_qft_full_derivation_manual_flip_authorization_packet_cycle34_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE35_v0: ADJUDICATION_EXECUTION_GUARD_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_ADJUDICATION_EXECUTION_GUARD_GATE_v0: FLIP_FORBIDDEN_UNLESS_TWO_KEY_AUTHORIZED_AND_NONPENDING`
+- `QFT_FULL_DERIVATION_MANUAL_FLIP_AUTHORIZATION_STATUS_GATE_v0: KEYA_KEYB_MUST_BE_AUTHORIZED`
+- `QFT_FULL_DERIVATION_ADJUDICATION_EXECUTION_GUARD_ARTIFACT_v0: qft_full_derivation_adjudication_execution_guard_cycle35_v0`
+- `formal/output/qft_full_derivation_adjudication_execution_guard_cycle35_v0.json`
+- `formal/python/tests/test_qft_full_derivation_adjudication_execution_guard_cycle35_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE36_v0: POST_AUTHORIZATION_REVALIDATION_PACKET_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_POST_AUTH_REVALIDATION_PACKET_GATE_v0: REVALIDATION_REQUIRED_AFTER_ANY_AUTH_STATUS_CHANGE`
+- `QFT_FULL_DERIVATION_POST_AUTH_REVALIDATION_SCOPE_v0: CYCLE27_35_BUNDLE_SUITE_MUST_PASS`
+- `QFT_FULL_DERIVATION_POST_AUTH_REVALIDATION_PACKET_ARTIFACT_v0: qft_full_derivation_post_authorization_revalidation_packet_cycle36_v0`
+- `formal/output/qft_full_derivation_post_authorization_revalidation_packet_cycle36_v0.json`
+- `formal/python/tests/test_qft_full_derivation_post_authorization_revalidation_packet_cycle36_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE37_v0: TOKEN_FLIP_DRYRUN_SIMULATOR_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_GATE_v0: SIMULATION_ONLY_NO_TOKEN_WRITE`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_SCOPE_v0: READINESS_CHECK_AGAINST_CYCLE27_36_BUNDLES_ONLY`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_SIMULATOR_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_simulator_cycle37_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_simulator_cycle37_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_simulator_cycle37_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE38_v0: TOKEN_FLIP_DRYRUN_ATTESTATION_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_ATTESTATION_GATE_v0: REQUIRE_SIMULATOR_OUTPUT_AND_NONWRITE_CONFIRMATION`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_ATTESTATION_SCOPE_v0: CYCLE37_SIMULATOR_AND_CYCLE27_36_INPUTS_REPLAYED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_ATTESTATION_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_attestation_cycle38_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_attestation_cycle38_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_attestation_cycle38_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE39_v0: TOKEN_FLIP_DRYRUN_RECONCILIATION_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_RECONCILIATION_GATE_v0: REQUIRE_ATTESTATION_MATCH_AND_NO_TOKEN_MUTATION`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_RECONCILIATION_SCOPE_v0: CYCLE38_ATTESTATION_AND_CYCLE37_SIMULATOR_ALIGNMENT`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_RECONCILIATION_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_reconciliation_cycle39_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_reconciliation_cycle39_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_reconciliation_cycle39_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE40_v0: TOKEN_FLIP_DRYRUN_CLOSURE_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CLOSURE_GATE_v0: REQUIRE_RECONCILIATION_COMPLETE_AND_NONWRITE_FINALIZED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CLOSURE_SCOPE_v0: CYCLE39_RECONCILIATION_PLUS_CYCLE37_38_TRACEABILITY`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CLOSURE_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_closure_cycle40_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_closure_cycle40_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_closure_cycle40_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE41_v0: TOKEN_FLIP_DRYRUN_ARCHIVAL_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_ARCHIVAL_GATE_v0: REQUIRE_CYCLE40_CLOSURE_AND_IMMUTABLE_ARCHIVE_PIN`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_ARCHIVAL_SCOPE_v0: CYCLE37_40_TRACE_CHAIN_ARCHIVED_NO_TOKEN_WRITE`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_ARCHIVAL_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_archival_cycle41_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_archival_cycle41_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_archival_cycle41_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE42_v0: TOKEN_FLIP_DRYRUN_HANDOFF_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_HANDOFF_GATE_v0: REQUIRE_ARCHIVAL_IMMUTABILITY_AND_HANDOFF_READINESS`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_HANDOFF_SCOPE_v0: CYCLE41_ARCHIVE_CHAIN_AND_CYCLE37_40_TRACE_TRANSFER`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_HANDOFF_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_handoff_cycle42_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_handoff_cycle42_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_handoff_cycle42_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE43_v0: TOKEN_FLIP_DRYRUN_CUSTODY_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CUSTODY_GATE_v0: REQUIRE_HANDOFF_COMPLETENESS_AND_CUSTODY_CHAIN_SEAL`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CUSTODY_SCOPE_v0: CYCLE42_HANDOFF_WITH_CYCLE37_41_AUDIT_LINKAGE`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CUSTODY_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_custody_cycle43_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_custody_cycle43_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_custody_cycle43_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE44_v0: TOKEN_FLIP_DRYRUN_NOTARIZATION_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_NOTARIZATION_GATE_v0: REQUIRE_CUSTODY_SEAL_AND_NOTARIZED_NONWRITE_ATTESTATION`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_NOTARIZATION_SCOPE_v0: CYCLE43_CUSTODY_WITH_CYCLE37_42_CHAIN_VERIFICATION`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_NOTARIZATION_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_notarization_cycle44_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_notarization_cycle44_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_notarization_cycle44_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE45_v0: TOKEN_FLIP_DRYRUN_WITNESS_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_WITNESS_GATE_v0: REQUIRE_NOTARIZATION_COMPLETION_AND_WITNESS_NONWRITE_CONFIRMATION`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_WITNESS_SCOPE_v0: CYCLE44_NOTARIZATION_WITH_CYCLE37_43_CHAIN_AUDIT`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_WITNESS_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_witness_cycle45_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_witness_cycle45_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_witness_cycle45_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE46_v0: TOKEN_FLIP_DRYRUN_RATIFICATION_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_RATIFICATION_GATE_v0: REQUIRE_WITNESS_CONFIRMATION_AND_RATIFIED_NONWRITE_STATUS`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_RATIFICATION_SCOPE_v0: CYCLE45_WITNESS_WITH_CYCLE37_44_CHAIN_REVIEW`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_RATIFICATION_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_ratification_cycle46_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_ratification_cycle46_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_ratification_cycle46_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE47_v0: TOKEN_FLIP_DRYRUN_CONCURRENCE_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CONCURRENCE_GATE_v0: REQUIRE_RATIFICATION_COMPLETION_AND_MULTI_WITNESS_CONCURRENCE`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CONCURRENCE_SCOPE_v0: CYCLE46_RATIFICATION_WITH_CYCLE37_45_CHAIN_AUDIT`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CONCURRENCE_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_concurrence_cycle47_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_concurrence_cycle47_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_concurrence_cycle47_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE48_v0: TOKEN_FLIP_DRYRUN_CONSENSUS_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CONSENSUS_GATE_v0: REQUIRE_CONCURRENCE_COMPLETION_AND_MULTI_PARTY_CONSENSUS_NONWRITE`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CONSENSUS_SCOPE_v0: CYCLE47_CONCURRENCE_WITH_CYCLE37_46_CHAIN_REVIEW`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CONSENSUS_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_consensus_cycle48_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_consensus_cycle48_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_consensus_cycle48_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE49_v0: TOKEN_FLIP_DRYRUN_UNANIMITY_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_UNANIMITY_GATE_v0: REQUIRE_CONSENSUS_COMPLETION_AND_UNANIMOUS_NONWRITE_CONFIRMATION`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_UNANIMITY_SCOPE_v0: CYCLE48_CONSENSUS_WITH_CYCLE37_47_CHAIN_REVIEW`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_UNANIMITY_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_unanimity_cycle49_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_unanimity_cycle49_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_unanimity_cycle49_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE50_v0: TOKEN_FLIP_DRYRUN_CLOSURE_CONSENSUS_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CLOSURE_CONSENSUS_GATE_v0: REQUIRE_UNANIMITY_COMPLETION_AND_FINAL_NONWRITE_CLOSURE_CONSENSUS`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CLOSURE_CONSENSUS_SCOPE_v0: CYCLE49_UNANIMITY_WITH_CYCLE37_48_CHAIN_REVIEW`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_CLOSURE_CONSENSUS_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_closure_consensus_cycle50_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_closure_consensus_cycle50_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_closure_consensus_cycle50_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE51_v0: TWO_KEY_AUTH_REVALIDATION_TRANSITION_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TWO_KEY_AUTH_REVALIDATION_TRANSITION_GATE_v0: REQUIRE_EXPLICIT_TWO_KEY_AUTH_STATE_TRANSITION_PACKET_AND_NONFLIP_ENFORCEMENT`
+- `QFT_FULL_DERIVATION_TWO_KEY_AUTH_REVALIDATION_TRANSITION_SCOPE_v0: KEYA_KEYB_STATUS_CHANGE_MUST_TRIGGER_POST_AUTH_REVALIDATION_REPLAY`
+- `QFT_FULL_DERIVATION_TWO_KEY_AUTH_REVALIDATION_TRANSITION_ARTIFACT_v0: qft_full_derivation_two_key_auth_revalidation_transition_cycle51_v0`
+- `formal/output/qft_full_derivation_two_key_auth_revalidation_transition_cycle51_v0.json`
+- `formal/python/tests/test_qft_full_derivation_two_key_auth_revalidation_transition_cycle51_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE52_v0: KEYA_AUTHORIZATION_REVALIDATION_REPLAY_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_KEYA_AUTH_REVALIDATION_REPLAY_GATE_v0: REQUIRE_KEYA_AUTH_EVENT_PACKET_WITH_KEYB_STILL_PENDING_AND_NONFLIP_ENFORCEMENT`
+- `QFT_FULL_DERIVATION_KEYA_AUTH_REVALIDATION_REPLAY_SCOPE_v0: KEYA_AUTHORIZED_KEYB_PENDING_REQUIRES_IMMEDIATE_POST_AUTH_REVALIDATION_REPLAY`
+- `QFT_FULL_DERIVATION_KEYA_AUTH_REVALIDATION_REPLAY_ARTIFACT_v0: qft_full_derivation_keya_auth_revalidation_replay_cycle52_v0`
+- `formal/output/qft_full_derivation_keya_auth_revalidation_replay_cycle52_v0.json`
+- `formal/python/tests/test_qft_full_derivation_keya_auth_revalidation_replay_cycle52_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE53_v0: KEYB_AUTHORIZATION_REVALIDATION_REPLAY_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_KEYB_AUTH_REVALIDATION_REPLAY_GATE_v0: REQUIRE_KEYB_AUTH_EVENT_PACKET_WITH_KEYA_ALREADY_AUTHORIZED_AND_NONFLIP_ENFORCEMENT`
+- `QFT_FULL_DERIVATION_KEYB_AUTH_REVALIDATION_REPLAY_SCOPE_v0: KEYA_AUTHORIZED_KEYB_AUTHORIZED_REQUIRES_IMMEDIATE_POST_AUTH_REVALIDATION_REPLAY`
+- `QFT_FULL_DERIVATION_KEYB_AUTH_REVALIDATION_REPLAY_ARTIFACT_v0: qft_full_derivation_keyb_auth_revalidation_replay_cycle53_v0`
+- `formal/output/qft_full_derivation_keyb_auth_revalidation_replay_cycle53_v0.json`
+- `formal/python/tests/test_qft_full_derivation_keyb_auth_revalidation_replay_cycle53_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE54_v0: TWO_KEY_AUTHORIZED_REVALIDATION_CLOSURE_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_TWO_KEY_AUTHORIZED_REVALIDATION_CLOSURE_GATE_v0: REQUIRE_KEYA_KEYB_AUTHORIZED_PACKET_AND_POST_AUTH_REVALIDATION_CLOSURE_NONFLIP`
+- `QFT_FULL_DERIVATION_TWO_KEY_AUTHORIZED_REVALIDATION_CLOSURE_SCOPE_v0: KEYA_AUTHORIZED_KEYB_AUTHORIZED_REVALIDATION_REPLAY_CLOSURE_REQUIRED_BEFORE_ANY_FLIP`
+- `QFT_FULL_DERIVATION_TWO_KEY_AUTHORIZED_REVALIDATION_CLOSURE_ARTIFACT_v0: qft_full_derivation_two_key_authorized_revalidation_closure_cycle54_v0`
+- `formal/output/qft_full_derivation_two_key_authorized_revalidation_closure_cycle54_v0.json`
+- `formal/python/tests/test_qft_full_derivation_two_key_authorized_revalidation_closure_cycle54_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE55_v0: NONFLIP_EXECUTION_READINESS_PACKET_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_NONFLIP_EXECUTION_READINESS_PACKET_GATE_v0: REQUIRE_TWO_KEY_AUTHORIZED_REVALIDATION_CLOSURE_AND_NONFLIP_EXECUTION_PACKET`
+- `QFT_FULL_DERIVATION_NONFLIP_EXECUTION_READINESS_PACKET_SCOPE_v0: ADJUDICATION_REMAINS_NOT_YET_DISCHARGED_UNTIL_EXPLICIT_FLIP_AUTHORITY`
+- `QFT_FULL_DERIVATION_NONFLIP_EXECUTION_READINESS_PACKET_ARTIFACT_v0: qft_full_derivation_nonflip_execution_readiness_packet_cycle55_v0`
+- `formal/output/qft_full_derivation_nonflip_execution_readiness_packet_cycle55_v0.json`
+- `formal/python/tests/test_qft_full_derivation_nonflip_execution_readiness_packet_cycle55_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE56_v0: PREFLIP_AUTHORITY_ATTESTATION_PACKET_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_PREFLIP_AUTHORITY_ATTESTATION_PACKET_GATE_v0: REQUIRE_NONFLIP_EXECUTION_READINESS_PACKET_AND_EXPLICIT_PREFLIP_AUTHORITY_ATTESTATION`
+- `QFT_FULL_DERIVATION_PREFLIP_AUTHORITY_ATTESTATION_PACKET_SCOPE_v0: PREFLIP_AUTHORITY_ATTESTATION_DOES_NOT_AUTHORIZE_ADJUDICATION_FLIP`
+- `QFT_FULL_DERIVATION_PREFLIP_AUTHORITY_ATTESTATION_PACKET_ARTIFACT_v0: qft_full_derivation_preflip_authority_attestation_packet_cycle56_v0`
+- `formal/output/qft_full_derivation_preflip_authority_attestation_packet_cycle56_v0.json`
+- `formal/python/tests/test_qft_full_derivation_preflip_authority_attestation_packet_cycle56_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE57_v0: FLIP_ELIGIBILITY_ATTESTATION_PACKET_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_FLIP_ELIGIBILITY_ATTESTATION_PACKET_GATE_v0: REQUIRE_PREFLIP_AUTHORITY_ATTESTATION_PACKET_AND_NONFLIP_GUARD_STILL_ACTIVE`
+- `QFT_FULL_DERIVATION_FLIP_ELIGIBILITY_ATTESTATION_PACKET_SCOPE_v0: ELIGIBILITY_ATTESTED_WITHOUT_EXECUTING_OR_AUTHORIZING_ADJUDICATION_FLIP`
+- `QFT_FULL_DERIVATION_FLIP_ELIGIBILITY_ATTESTATION_PACKET_ARTIFACT_v0: qft_full_derivation_flip_eligibility_attestation_packet_cycle57_v0`
+- `formal/output/qft_full_derivation_flip_eligibility_attestation_packet_cycle57_v0.json`
+- `formal/python/tests/test_qft_full_derivation_flip_eligibility_attestation_packet_cycle57_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE58_v0: FINAL_PREEXECUTION_NONFLIP_ATTESTATION_PACKET_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_FINAL_PREEXECUTION_NONFLIP_ATTESTATION_PACKET_GATE_v0: REQUIRE_FLIP_ELIGIBILITY_ATTESTATION_PACKET_AND_FINAL_PREEXECUTION_NONFLIP_ATTESTATION`
+- `QFT_FULL_DERIVATION_FINAL_PREEXECUTION_NONFLIP_ATTESTATION_PACKET_SCOPE_v0: FINAL_PREEXECUTION_ATTESTATION_CONFIRMS_NONFLIP_EXECUTION_AND_NO_ADJUDICATION_FLIP`
+- `QFT_FULL_DERIVATION_FINAL_PREEXECUTION_NONFLIP_ATTESTATION_PACKET_ARTIFACT_v0: qft_full_derivation_final_preexecution_nonflip_attestation_packet_cycle58_v0`
+- `formal/output/qft_full_derivation_final_preexecution_nonflip_attestation_packet_cycle58_v0.json`
+- `formal/python/tests/test_qft_full_derivation_final_preexecution_nonflip_attestation_packet_cycle58_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE59_v0: PREEXECUTION_NONFLIP_EXECUTION_BOUNDARY_PACKET_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_PREEXECUTION_NONFLIP_EXECUTION_BOUNDARY_PACKET_GATE_v0: REQUIRE_FINAL_PREEXECUTION_NONFLIP_ATTESTATION_PACKET_AND_EXECUTION_BOUNDARY_NONFLIP_CONFIRMATION`
+- `QFT_FULL_DERIVATION_PREEXECUTION_NONFLIP_EXECUTION_BOUNDARY_PACKET_SCOPE_v0: PREEXECUTION_BOUNDARY_CONFIRMATION_MAINTAINS_NONFLIP_EXECUTION_AND_NO_ADJUDICATION_FLIP`
+- `QFT_FULL_DERIVATION_PREEXECUTION_NONFLIP_EXECUTION_BOUNDARY_PACKET_ARTIFACT_v0: qft_full_derivation_preexecution_nonflip_execution_boundary_packet_cycle59_v0`
+- `formal/output/qft_full_derivation_preexecution_nonflip_execution_boundary_packet_cycle59_v0.json`
+- `formal/python/tests/test_qft_full_derivation_preexecution_nonflip_execution_boundary_packet_cycle59_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE60_v0: PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_PACKET_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_PACKET_GATE_v0: REQUIRE_PREEXECUTION_NONFLIP_EXECUTION_BOUNDARY_PACKET_AND_EXECUTION_CUSTODY_NONFLIP_CONFIRMATION`
+- `QFT_FULL_DERIVATION_PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_PACKET_SCOPE_v0: PREEXECUTION_CUSTODY_CONFIRMATION_MAINTAINS_NONFLIP_EXECUTION_AND_NO_ADJUDICATION_FLIP`
+- `QFT_FULL_DERIVATION_PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_PACKET_ARTIFACT_v0: qft_full_derivation_preexecution_nonflip_execution_custody_packet_cycle60_v0`
+- `formal/output/qft_full_derivation_preexecution_nonflip_execution_custody_packet_cycle60_v0.json`
+- `formal/python/tests/test_qft_full_derivation_preexecution_nonflip_execution_custody_packet_cycle60_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE61_v0: PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_PACKET_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_PACKET_GATE_v0: REQUIRE_PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_PACKET_AND_EXECUTION_CUSTODY_ATTESTATION_NONFLIP_CONFIRMATION`
+- `QFT_FULL_DERIVATION_PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_PACKET_SCOPE_v0: PREEXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_MAINTAINS_NONFLIP_EXECUTION_AND_NO_ADJUDICATION_FLIP`
+- `QFT_FULL_DERIVATION_PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_PACKET_ARTIFACT_v0: qft_full_derivation_preexecution_nonflip_execution_custody_attestation_packet_cycle61_v0`
+- `formal/output/qft_full_derivation_preexecution_nonflip_execution_custody_attestation_packet_cycle61_v0.json`
+- `formal/python/tests/test_qft_full_derivation_preexecution_nonflip_execution_custody_attestation_packet_cycle61_gate.py`
+- `QFT_FULL_DERIVATION_PROGRESS_CYCLE62_v0: PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_PACKET_LOCK_PINNED`
+- `QFT_FULL_DERIVATION_PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_PACKET_GATE_v0: REQUIRE_PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_PACKET_AND_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_NONFLIP_CONFIRMATION`
+- `QFT_FULL_DERIVATION_PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_PACKET_SCOPE_v0: PREEXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_PACKET_MAINTAINS_NONFLIP_EXECUTION_AND_NO_ADJUDICATION_FLIP`
+- `QFT_FULL_DERIVATION_PREEXECUTION_NONFLIP_EXECUTION_CUSTODY_ATTESTATION_CONFIRMATION_PACKET_ARTIFACT_v0: qft_full_derivation_preexecution_nonflip_execution_custody_attestation_confirmation_packet_cycle62_v0`
+- `formal/output/qft_full_derivation_preexecution_nonflip_execution_custody_attestation_confirmation_packet_cycle62_v0.json`
+- `formal/python/tests/test_qft_full_derivation_preexecution_nonflip_execution_custody_attestation_confirmation_packet_cycle62_gate.py`
