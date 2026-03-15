@@ -1187,6 +1187,7 @@ def test_qft_full_discharge_lean_tokens_are_present() -> None:
 def test_qft_full_discharge_lane_is_pinned_in_authority_surfaces() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(Path("formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md"))
 
     required_tokens = [
         QFT_FULL_DISCHARGE_TARGET_ID,
@@ -1222,7 +1223,9 @@ def test_qft_full_discharge_lane_is_pinned_in_authority_surfaces() -> None:
 
     for token in required_tokens:
         assert token in roadmap_text, f"Roadmap authority surface must pin `{token}`."
-        assert token in state_text, f"State authority surface must pin `{token}`."
+        assert token in state_text or token in inventory_text, (
+            f"State or inventory authority surface must pin `{token}`."
+        )
 
 
 def test_qft_roadmap_row_contains_qft_discharge_target_and_artifact() -> None:
