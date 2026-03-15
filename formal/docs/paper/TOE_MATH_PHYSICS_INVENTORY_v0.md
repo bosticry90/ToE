@@ -879,3 +879,6 @@ Packaging/publication debt:
 - `QFT_FULL_DERIVATION_FINAL_DISCHARGE_CLOSURE_ARTIFACT_v0: qft_full_derivation_final_discharge_closure_cycle91_v0`
 - `formal/output/qft_full_derivation_final_discharge_closure_cycle91_v0.json`
 - `formal/python/tests/test_qft_full_derivation_discharge_gate.py`
+- `formal/python/tests/test_qft_evol_micro_tranche_01_40_completeness_gate.py`
+- `formal/python/tests/test_qft_evol_micro_tranche_01_41_completeness_gate.py`
+- `formal/python/tests/test_qft_evol_micro_tranche_01_42_completeness_gate.py`
