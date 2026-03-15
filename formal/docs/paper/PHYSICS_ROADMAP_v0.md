@@ -18,6 +18,18 @@ Non-claim boundary:
 - no comparator-lane authorization by itself.
 - no external truth claim.
 
+Repository-wide governance and physics status audit checkpoint (2026-03-15):
+- Audit release doc pointer: `formal/docs/release/REPO_STATUS_AUDIT_20260315_v0.md`.
+- Audit checkpoint pointer: `formal/output/repo_status_audit_20260315_checkpoint_v0.json`.
+- Audit gate pointer: `formal/python/tests/test_repo_status_audit_20260315_gate.py`.
+- `REPO_STATUS_AUDIT_DATE_v0: 2026-03-15`
+- `REPO_STATUS_GOVERNANCE_v0: STRONG_BOUNDED_NONCLAIM`
+- `REPO_STATUS_PHYSICS_v0: DISCRIMINATIVE_MIXED_PROGRESS`
+- `REPO_STATUS_TOE_COMPLETE_V1_v0: TERMINAL_SATISFIED_v0_NONCLAIM`
+- `REPO_STATUS_SEAM_PHYSICS_COMPLETE_GLOBAL_v0: NO`
+- `REPO_STATUS_PACKET41_v0: HOLD_RETAINED_MISSING_NUMERIC_INPUTS`
+- `REPO_STATUS_SCALAR_SUBMISSION_v0: READY_FOR_BOUNDED_PAPER1_SUBMISSION_PACKAGE`
+
 Status semantics:
 - `ACTIVE`: currently authorized pillar execution lane.
 - `LOCKED`: target exists but prerequisites are not yet closed.
@@ -322,16 +334,222 @@ No-deviation sequencing rule:
   Scalar publication hardening mirror block (bounded):
   - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_EXPORT_CANONICAL_PACKAGE_v0.md`
   - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_EXPORT_COMPILE_VALIDATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_FULL_TECHNICAL_RECORD_v0.md`
+  - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_TECHNICAL_SIGNOFF_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET06_OBJECTIVE_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET06_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET07_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET07_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET07_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET08_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET08_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET08_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET09_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET09_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET09_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET10_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET10_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET10_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET11_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET11_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET11_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET12_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET12_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET12_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET13_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET13_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET13_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET14_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET14_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET14_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET15_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET15_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET15_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET16_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET16_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET16_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET17_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET17_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET17_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET18_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET18_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET18_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET19_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET19_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET19_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET20_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET20_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET20_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET21_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET21_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET21_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET22_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET22_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET22_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET23_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET23_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET23_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET24_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET24_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET24_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET25_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET25_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET25_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET26_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET26_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET26_ASSESSMENT_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET27_AUTHORIZATION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET27_BOUNDED_EXECUTION_v0.md`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET27_ASSESSMENT_v0.md`
   - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_PACKAGE_v0.md`
   - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_CANDIDATE_BASELINE_v0.md`
   - `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_READINESS_NOTE_v0.md`
   - `formal/output/toe_qft_scalar_route_export_canonical_package_checkpoint_v0.json`
   - `formal/output/toe_qft_scalar_route_export_compile_validation_checkpoint_v0.json`
+  - `formal/output/toe_qft_scalar_route_full_technical_record_checkpoint_v0.json`
+  - `formal/output/toe_qft_scalar_route_scalar_inventory_manifest_v0.json`
+  - `formal/output/toe_qft_scalar_route_technical_signoff_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_reactivation_objective_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet06_objective_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet06_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet07_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet07_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet07_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet08_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet08_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet08_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet09_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet09_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet09_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet10_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet10_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet10_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet11_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet11_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet11_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet12_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet12_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet12_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet13_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet13_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet13_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet14_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet14_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet14_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet15_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet15_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet15_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet16_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet16_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet16_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet17_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet17_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet17_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet18_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet18_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet18_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet19_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet19_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet19_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet20_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet20_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet20_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet21_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet21_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet21_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet22_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet22_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet22_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet23_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet23_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet23_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet24_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet24_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet24_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet25_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet25_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet25_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet26_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet26_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet26_assessment_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet27_authorization_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet27_bounded_execution_checkpoint_v0.json`
+  - `formal/output/toe_qft_gr_seam_packet27_assessment_checkpoint_v0.json`
   - `formal/output/toe_qft_scalar_route_submission_package_checkpoint_v0.json`
   - `formal/output/toe_qft_scalar_route_submission_candidate_checkpoint_v0.json`
   - `formal/output/toe_qft_scalar_route_submission_readiness_checkpoint_v0.json`
   - `formal/python/tests/test_toe_qft_scalar_route_export_canonical_package_gate.py`
   - `formal/python/tests/test_toe_qft_scalar_route_export_compile_validation_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_full_technical_record_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_full_technical_record_coupling_gate.py`
+  - `formal/python/tests/test_toe_qft_scalar_route_technical_signoff_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_reactivation_objective_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet06_objective_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet06_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet07_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet07_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet07_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet08_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet08_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet08_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet09_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet09_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet09_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet10_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet10_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet10_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet11_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet11_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet11_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet12_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet12_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet12_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet13_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet13_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet13_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet14_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet14_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet14_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet15_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet15_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet15_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet16_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet16_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet16_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet17_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet17_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet17_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet18_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet18_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet18_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet19_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet19_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet19_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet20_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet20_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet20_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet21_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet21_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet21_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet22_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet22_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet22_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet23_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet23_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet23_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet24_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet24_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet24_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet25_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet25_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet25_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet26_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet26_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet26_assessment_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet27_authorization_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet27_bounded_execution_gate.py`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet27_assessment_gate.py`
   - `formal/python/tests/test_toe_qft_scalar_route_submission_package_gate.py`
   - `formal/python/tests/test_toe_qft_scalar_route_submission_candidate_gate.py`
   - `formal/python/tests/test_toe_qft_scalar_route_submission_readiness_gate.py`
@@ -340,6 +558,280 @@ No-deviation sequencing rule:
   - `formal/docs/submission/scalar_paper1/refs.bib`
   - `SCALAR_ROUTE_EXPORT_CANONICAL_PACKAGE_STATUS_v0: CANONICAL_SCALAR_PAPER1_EXPORT_OBJECT_PINNED`
   - `SCALAR_ROUTE_EXPORT_COMPILE_VALIDATION_STATUS_v0: COMPILE_AND_PDF_ARTIFACT_VALIDATED`
+  - `SCALAR_ROUTE_FULL_TECHNICAL_RECORD_STATUS_v0: PHASE0_PHASE1_LOCKED_AUDIT_READY_V0`
+  - `SCALAR_ROUTE_FULL_TECHNICAL_RECORD_COUPLING_STATUS_v0: ARTIFACT_AND_STATUS_PARITY_ENFORCED`
+  - `SCALAR_ROUTE_FULL_TECHNICAL_RECORD_CHECKPOINT_FILE_v0: toe_qft_scalar_route_full_technical_record_checkpoint_v0.json`
+  - `SCALAR_ROUTE_FULL_TECHNICAL_RECORD_MANIFEST_FILE_v0: toe_qft_scalar_route_scalar_inventory_manifest_v0.json`
+  - `SCALAR_ROUTE_TECHNICAL_SIGNOFF_STATUS_v0: SIGNED_OFF_BOUNDED_RIGOR_BASELINE_v0`
+  - `SCALAR_ROUTE_TECHNICAL_SIGNOFF_DEBT_CLASS_v0: BOUNDED_LINKAGE_RECOVERY_DEBT_v0`
+  - `TOE_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_STATUS_v0: ACTIVE_BOUNDED_OBJECTIVE_LOCKED`
+  - `TOE_QFT_GR_SEAM_PACKET06_STATUS_v0: EXECUTED_BOUNDED_OBJECTIVE_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET06_ASSESSMENT_STATUS_v0: ASSESSED_OBJECTIVE_ADVANCEMENT_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET07_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_EXACT_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET07_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET07_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET08_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET08_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET08_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET09_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET09_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET09_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET10_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET10_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET10_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET11_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET11_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET11_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET12_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET12_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET12_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET13_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET13_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET13_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET14_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET14_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET14_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET15_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET15_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET15_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET16_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET16_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET16_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET17_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET17_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET17_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET18_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET18_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET18_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET19_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET19_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET19_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET20_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET20_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET20_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET21_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET21_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET21_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET22_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET22_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET22_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET23_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET23_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET23_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET24_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET24_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET24_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET25_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET25_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET25_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET26_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET26_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET26_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET27_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `TOE_QFT_GR_SEAM_PACKET27_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `TOE_QFT_GR_SEAM_PACKET27_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET28_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet28_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet28_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET28_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET28_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet28_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet28_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET28_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET28_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet28_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet28_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET28_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET29_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet29_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet29_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET29_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET29_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet29_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet29_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET29_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET29_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet29_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet29_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET29_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET30_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet30_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet30_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET30_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET30_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet30_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet30_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET30_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET30_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet30_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet30_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET30_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET31_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet31_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet31_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET31_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET31_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet31_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet31_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET31_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET31_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet31_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet31_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET31_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET32_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet32_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet32_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET32_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET32_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet32_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet32_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET32_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET32_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet32_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet32_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET32_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET33_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet33_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet33_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET33_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET33_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet33_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet33_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET33_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET33_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet33_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet33_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET33_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET34_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet34_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet34_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET34_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET34_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet34_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet34_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET34_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET34_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet34_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet34_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET34_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET35_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet35_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet35_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET35_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET35_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet35_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet35_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET35_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET35_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet35_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet35_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET35_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET36_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet36_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet36_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET36_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET36_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet36_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet36_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET36_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET36_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet36_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet36_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET36_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET37_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet37_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet37_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET37_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET37_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet37_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet37_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET37_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET37_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet37_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet37_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET37_ASSESSMENT_STATUS_v0: ASSESSED_TARGET_SATISFACTION_VERIFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET38_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet38_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet38_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET38_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET38_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet38_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet38_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET38_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET38_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet38_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet38_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET38_ASSESSMENT_STATUS_v0: BOUNDED_TARGET_CONFIRMED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET39_AUTHORIZATION_READINESS_v0: CONDITIONAL_READINESS_ONLY_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET39_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet39_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet39_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET39_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET39_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet39_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet39_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET39_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET39_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet39_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet39_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET39_ASSESSMENT_STATUS_v0: BOUNDED_TARGET_CONFIRMED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET40_AUTHORIZATION_READINESS_v0: CONDITIONAL_READINESS_ONLY_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET40_AUTHORIZATION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet40_authorization_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet40_authorization_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET40_AUTHORIZATION_STATUS_v0: AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET40_BOUNDED_EXECUTION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet40_bounded_execution_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet40_bounded_execution_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET40_STATUS_v0: EXECUTED_BOUNDED_TARGET_STEP_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET40_ASSESSMENT_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet40_assessment_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet40_assessment_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET40_ASSESSMENT_STATUS_v0: BOUNDED_TARGET_CONFIRMED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET41_AUTHORIZATION_READINESS_v0: CONDITIONAL_READINESS_ONLY_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md`
+  - `formal/output/toe_qft_gr_seam_convergence_termination_criterion_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_convergence_termination_criterion_gate.py`
+  - `TOE_QFT_GR_SEAM_CONVERGENCE_STATUS_v0: ACTIVE_CONVERGENCE_GUARDRAIL_ENFORCED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET41_AUTHORIZATION_POLICY_v0: FROZEN_UNTIL_CONVERGENCE_BINDING_SATISFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet41_eligibility_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet41_eligibility_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_STATUS_v0: REVIEW_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_DISPOSITION_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet41_targeted_justification_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet41_targeted_justification_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_STATUS_v0: REVIEW_COMPLETE_INSUFFICIENT_FOR_AUTHORIZATION_v0`
+  - `TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_OUTCOME_v0: HOLD_RETAINED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet41_hold_fork_decision_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet41_hold_fork_decision_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_STATUS_v0: DECISION_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_OUTCOME_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_RETROSPECTIVE_CUMULATIVE_DELTA_AUDIT_v0.md`
+  - `formal/output/toe_qft_gr_seam_retrospective_cumulative_delta_audit_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_retrospective_cumulative_delta_audit_gate.py`
+  - `TOE_QFT_GR_SEAM_RETROSPECTIVE_CUMULATIVE_DELTA_AUDIT_STATUS_v0: COMPLETE_MATERIAL_CUMULATIVE_WITH_PLATEAU_RISK_v0`
+  - `TOE_QFT_GR_SEAM_RETROSPECTIVE_CUMULATIVE_DELTA_AUDIT_OUTCOME_v0: HOLD_RETAINED_EVIDENCE_BASE_UPDATED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_NUMERIC_THRESHOLDS_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet41_reconsideration_numeric_thresholds_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet41_reconsideration_numeric_thresholds_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_NUMERIC_THRESHOLDS_STATUS_v0: ACTIVE_HOLD_GATED_NUMERIC_CRITERIA_v0`
+  - `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_NUMERIC_THRESHOLDS_OUTCOME_v0: HOLD_RETAINED_UNTIL_NUMERIC_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet41_numeric_threshold_measurement_protocol_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet41_numeric_threshold_measurement_protocol_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET41_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_STATUS_v0: ACTIVE_OPERATIONAL_FORMULAS_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET41_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_OUTCOME_v0: HOLD_RETAINED_PENDING_MEASURED_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_worksheet_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet41_reconsideration_scorecard_worksheet_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_STATUS_v0: ACTIVE_CANONICAL_WORKSHEET_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_OUTCOME_v0: HOLD_RETAINED_PENDING_SCORECARD_EVIDENCE_v0`
+  - `formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet41_reconsideration_scorecard_cycle01_evaluation_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0: EVALUATED_HOLD_RETAINED_MISSING_NUMERIC_INPUTS_v0`
   - `SCALAR_ROUTE_SUBMISSION_PACKAGE_STATUS_v0: EXTERNAL_SUBMISSION_PACKAGE_READY_BOUNDED`
   - `SCALAR_ROUTE_SUBMISSION_CANDIDATE_STATUS_v0: BASELINE_LOCKED_FOR_INTERNAL_SUBMISSION_CANDIDATE`
   - `SCALAR_ROUTE_SUBMISSION_READINESS_STATUS_v0: READY_FOR_BOUNDED_PAPER1_SUBMISSION_PACKAGE`

@@ -1,0 +1,86 @@
+{
+  "artifact_id": "toe_qft_gr_seam_convergence_termination_criterion_checkpoint_v0",
+  "phase": "PHASE_2T_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION",
+  "scope": "program_level_convergence_and_termination_control",
+  "payload": {
+    "criterion_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md",
+    "parent_objective_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_v0.md",
+    "parent_objective_checkpoint_path": "formal/output/toe_qft_gr_seam_reactivation_objective_checkpoint_v0.json",
+    "current_program_anchor_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET40_ASSESSMENT_v0.md",
+    "current_program_anchor_checkpoint_path": "formal/output/toe_qft_gr_seam_packet40_assessment_checkpoint_v0.json",
+    "active_seam_question": "stress_energy_to_weak_curvature_handoff_strengthening",
+    "fixed_end_states": {
+      "seam_discharged": "ALLOWED_v0",
+      "seam_held": "ALLOWED_v0",
+      "seam_forked": "ALLOWED_v0",
+      "seam_terminated_as_nonproductive": "ALLOWED_v0",
+      "indefinite_packet_extension_without_measurable_seam_level_gain": "FORBIDDEN_v0"
+    },
+    "seam_level_progress_metric": {
+      "discriminator_strength_increase": "REQUIRED_v0",
+      "residual_ambiguity_decrease": "REQUIRED_v0",
+      "remaining_gap_narrowing": "REQUIRED_v0",
+      "objective_distance_reduction": "REQUIRED_v0"
+    },
+    "marginal_gain_threshold": {
+      "future_packet_must_exceed_local_narrowing_only": "PASS_REQUIRED_v0",
+      "future_packet_must_improve_seam_level_closure_prospects": "PASS_REQUIRED_v0",
+      "future_packet_must_state_expected_incremental_gain_in_one_sentence": "PASS_REQUIRED_v0",
+      "future_packet_must_not_be_justified_by_packet_order_alone": "PASS_REQUIRED_v0"
+    },
+    "stagnation_test": {
+      "semantic_reencoding_without_new_discriminator_content": "TRIGGER_v0",
+      "negligible_residual_ambiguity_reduction": "TRIGGER_v0",
+      "no_explicit_reduction_in_remaining_objective_distance": "TRIGGER_v0",
+      "decision_equivalent_successor": "TRIGGER_v0",
+      "stagnation_result_status": "HOLD_FORK_OR_TERMINATE_REQUIRED_v0"
+    },
+    "anti_infinite_ladder_rule": {
+      "future_packet_cannot_be_authorized_merely_for_local_narrowing": "ENFORCED_v0",
+      "local_progress_is_necessary_but_not_sufficient": "ENFORCED_v0",
+      "narrative_momentum_authorization": "FORBIDDEN_v0"
+    },
+    "mandatory_disposition_rule": {
+      "allowed_outcomes": [
+        "hold",
+        "fork",
+        "terminate"
+      ],
+      "authorize_next_packet_without_convergence_pass": "FORBIDDEN_v0"
+    },
+    "future_packet41_authorization_binding": {
+      "required_parent_assessment_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET40_ASSESSMENT_v0.md",
+      "required_convergence_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md",
+      "required_packet41_eligibility_review_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_REVIEW_v0.md",
+      "required_packet41_targeted_justification_review_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_REVIEW_v0.md",
+      "required_packet41_hold_fork_decision_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_v0.md",
+      "required_packet41_retrospective_cumulative_delta_audit_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_RETROSPECTIVE_CUMULATIVE_DELTA_AUDIT_v0.md",
+      "required_packet41_reconsideration_numeric_thresholds_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_NUMERIC_THRESHOLDS_v0.md",
+      "required_packet41_numeric_threshold_measurement_protocol_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md",
+      "required_packet41_reconsideration_scorecard_worksheet_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md",
+      "seam_level_gain_statement_required": "YES_v0",
+      "packet41_must_clear_marginal_gain_threshold": "YES_v0",
+      "packet41_must_clear_stagnation_test": "YES_v0",
+      "packet41_must_fail_if_only_ladder_rung": "YES_v0",
+      "packet41_must_carry_review_disposition_release_from_hold": "YES_v0",
+      "packet41_must_clear_targeted_justification_review": "YES_v0",
+      "packet41_must_clear_hold_fork_decision_release_condition": "YES_v0",
+      "packet41_must_clear_retrospective_cumulative_delta_audit_release_condition": "YES_v0",
+      "packet41_must_clear_reconsideration_numeric_thresholds_release_condition": "YES_v0",
+      "packet41_must_clear_numeric_threshold_measurement_protocol_release_condition": "YES_v0",
+      "packet41_must_clear_reconsideration_scorecard_worksheet_release_condition": "YES_v0"
+    },
+    "current_program_disposition": {
+      "current_packet_ceiling_without_new_binding": "PACKET40_ASSESSMENT_COMPLETE_v0",
+      "packet41_authorization_status": "FROZEN_PENDING_CONVERGENCE_BINDING_v0",
+      "current_disposition": "HOLD_UNTIL_FUTURE_AUTHORIZATION_SATISFIES_CONVERGENCE_BINDING_v0"
+    },
+    "guardrails": {
+      "scalar_drift_status": "NO_SCALAR_BASELINE_DRIFT_v0",
+      "scalar_scope_backflow_status": "NO_BACKFLOW_DETECTED_v0",
+      "seam_fork_decision_status": "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0",
+      "non_claim_boundary_status": "ENFORCED_v0"
+    }
+  },
+  "status": "SEAM_CONVERGENCE_TERMINATION_CRITERION_ACTIVE_v0"
+}

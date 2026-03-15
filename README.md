@@ -1,9 +1,10 @@
 README.md
 A Formal Research Hypothesis Toward a Unified Physical Framework
 
-PROJECT STATUS (2026-01-23)
+PROJECT STATUS (2026-03-15)
 Tooling is frozen except for bugfixes that preserve existing contracts.
 Current work is in the discriminative science phase: evidence-only runs, candidate pruning, and inventory updates.
+Governance status is terminal-satisfied under bounded non-claim semantics; seam-level physics closure remains incomplete.
 
 Purpose of This Project
 This project is an honest attempt to explore whether a very simple idea can be pushed far enough to matter.

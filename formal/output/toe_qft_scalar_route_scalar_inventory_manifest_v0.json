@@ -1,0 +1,57 @@
+{
+  "artifact_id": "toe_qft_scalar_route_scalar_inventory_manifest_v0",
+  "phase": "PHASE_1_SCALAR_FULL_TECHNICAL_INVENTORY",
+  "scope": "scalar_lane_plus_scalar_linked_cross_lane_evidence",
+  "freeze_date": "2026-03-14",
+  "cycle_cutoff": "qft_evidence_diversification_cycle08",
+  "report_inventory": [
+    "formal/docs/paper/toe_qft_scalar_field_derivation_report_v0.md",
+    "formal/docs/paper/toe_qft_scalar_covariance_report_v0.md",
+    "formal/docs/paper/toe_qft_scalar_canonical_quantization_report_v0.md",
+    "formal/docs/paper/toe_qft_scalar_canonical_momentum_report_v0.md",
+    "formal/docs/paper/toe_qft_scalar_mode_expansion_report_v0.md",
+    "formal/docs/paper/toe_qft_scalar_normalization_report_v0.md",
+    "formal/docs/paper/toe_qft_scalar_operator_commutator_report_v0.md",
+    "formal/docs/paper/toe_qft_scalar_propagator_report_v0.md",
+    "formal/docs/paper/toe_qft_scalar_nonrelativistic_limit_report_v0.md"
+  ],
+  "artifact_inventory": [
+    "formal/output/toe_qft_scalar_field_equations_v0.json",
+    "formal/output/toe_qft_scalar_stress_energy_artifact_v0.json",
+    "formal/output/toe_qft_scalar_canonical_quantization_artifact_v0.json",
+    "formal/output/toe_qft_scalar_hamiltonian_density_artifact_v0.json",
+    "formal/output/toe_qft_scalar_creation_annihilation_artifact_v0.json",
+    "formal/output/toe_qft_scalar_one_particle_state_artifact_v0.json",
+    "formal/output/toe_qft_scalar_operator_commutator_artifact_v0.json",
+    "formal/output/toe_qft_scalar_two_point_function_artifact_v0.json",
+    "formal/output/toe_qft_scalar_schrodinger_limit_artifact_v0.json"
+  ],
+  "gate_inventory": [
+    "formal/python/tests/test_toe_qft_scalar_field_equation_gate.py",
+    "formal/python/tests/test_toe_qft_scalar_covariance_gate.py",
+    "formal/python/tests/test_toe_qft_scalar_quantization_gate.py",
+    "formal/python/tests/test_toe_qft_scalar_hamiltonian_gate.py",
+    "formal/python/tests/test_toe_qft_scalar_mode_expansion_gate.py",
+    "formal/python/tests/test_toe_qft_scalar_normalization_gate.py",
+    "formal/python/tests/test_toe_qft_scalar_operator_commutator_gate.py",
+    "formal/python/tests/test_toe_qft_scalar_propagator_gate.py",
+    "formal/python/tests/test_toe_qft_scalar_nonrelativistic_limit_gate.py"
+  ],
+  "scalar_linked_cross_lane_evidence_inventory": [
+    "formal/output/qft_evidence_diversification_checkpoint_cycle01_v0.json",
+    "formal/output/qft_evidence_diversification_checkpoint_cycle02_v0.json",
+    "formal/output/qft_evidence_diversification_checkpoint_cycle03_v0.json",
+    "formal/output/qft_evidence_diversification_checkpoint_cycle04_v0.json",
+    "formal/output/qft_evidence_diversification_checkpoint_cycle05_v0.json",
+    "formal/output/qft_evidence_diversification_checkpoint_cycle06_v0.json",
+    "formal/output/qft_evidence_diversification_checkpoint_cycle07_v0.json",
+    "formal/output/qft_evidence_diversification_checkpoint_cycle08_v0.json"
+  ],
+  "counts": {
+    "report_inventory": 9,
+    "artifact_inventory": 9,
+    "gate_inventory": 9,
+    "scalar_linked_cross_lane_evidence_inventory": 8
+  },
+  "status": "INVENTORY_LOCKED_FOR_SCALAR_FULL_TECHNICAL_RECORD_V0"
+}

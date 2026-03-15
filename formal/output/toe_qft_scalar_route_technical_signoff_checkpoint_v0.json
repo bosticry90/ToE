@@ -1,0 +1,43 @@
+{
+  "artifact_id": "toe_qft_scalar_route_technical_signoff_checkpoint_v0",
+  "phase": "PHASE_2_SCALAR_TECHNICAL_SIGNOFF",
+  "scope": "bounded_scalar_rigor_signoff",
+  "payload": {
+    "signoff_doc_path": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_TECHNICAL_SIGNOFF_v0.md",
+    "technical_record_path": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_FULL_TECHNICAL_RECORD_v0.md",
+    "technical_record_checkpoint_path": "formal/output/toe_qft_scalar_route_full_technical_record_checkpoint_v0.json",
+    "classification": {
+      "non_blocking_for_scalar_paper": [
+        "SCALAR-CLAIM-02-COVARIANCE",
+        "SCALAR-CLAIM-04-HAMILTONIAN-DENSITY",
+        "SCALAR-CLAIM-06-NORMALIZATION",
+        "SCALAR-CLAIM-07-OPERATOR-COMMUTATOR",
+        "SCALAR-CLAIM-08-PROPAGATOR-TWO-POINT"
+      ],
+      "blocking_for_stronger_claims": [
+        "SCALAR-CLAIM-03-CANONICAL-QUANTIZATION",
+        "SCALAR-CLAIM-09-NONRELATIVISTIC-LIMIT"
+      ],
+      "deferred_to_later_lanes": [
+        "interacting_field_completion",
+        "gauge_sector_completion",
+        "renormalization_and_multi_particle_scattering"
+      ]
+    },
+    "coverage_summary": {
+      "ledger_claims": 9,
+      "full_derived": 9,
+      "summarized_only": 0,
+      "distributed_derivation": 0,
+      "missing_derivation": 0,
+      "lean_linked": 1,
+      "lean_partial_linked": 8,
+      "lean_missing_linkage": 0,
+      "paper_may_rely_with_boundary": 9,
+      "paper_may_rely_with_gap_flag": 0,
+      "paper_must_not_rely": 0
+    },
+    "seam_hold_status": "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0"
+  },
+  "status": "SIGNED_OFF_BOUNDED_RIGOR_BASELINE_v0"
+}

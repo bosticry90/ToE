@@ -1,0 +1,27 @@
+{
+  "artifact_id": "toe_qft_gr_seam_reactivation_objective_checkpoint_v0",
+  "phase": "PHASE_0_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_LOCK",
+  "scope": "bounded_seam_objective_reactivation",
+  "payload": {
+    "objective_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_v0.md",
+    "scalar_freeze_doc_path": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_TECHNICAL_SIGNOFF_v0.md",
+    "scalar_freeze_checkpoint_path": "formal/output/toe_qft_scalar_route_technical_signoff_checkpoint_v0.json",
+    "active_seam_question": "stress_energy_to_weak_curvature_handoff_strengthening",
+    "success_criteria": [
+      "explicit_non_circular_handoff_assumptions",
+      "objective_checkpoint_authority_parity_locked",
+      "seam_objective_and_status_split_gates_green"
+    ],
+    "stop_conditions": [
+      "scalar_scope_drift_requested",
+      "packet_without_objective_advancement",
+      "traceability_or_nonclaim_boundary_weakened"
+    ],
+    "governance": {
+      "objective_status": "ACTIVE_BOUNDED_OBJECTIVE_LOCKED",
+      "seam_fork_decision_status": "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0",
+      "seam_execution_authorization": "PLANNING_AND_BOUNDED_PREPARATION_ONLY"
+    }
+  },
+  "status": "OBJECTIVE_LOCKED_PENDING_PACKET06_BOUNDARY_CHECK_v0"
+}

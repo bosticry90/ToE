@@ -47,6 +47,7 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_state_doc_comp03_comp05_transition.py `
   formal/python/tests/test_state_doc_comp_evol_link_discharge.py `
   formal/python/tests/test_state_doc_cv_lane_wiring.py `
+  formal/python/tests/test_repo_status_audit_20260315_gate.py `
   formal/python/tests/test_state_doc_mainline_does_not_depend_on_variantA.py `
   formal/python/tests/test_state_doc_mainline_cannot_claim_beta_nonzero.py `
   formal/python/tests/test_pillar_status_matrix_consistency_gate.py `

@@ -1,0 +1,49 @@
+{
+  "artifact_id": "toe_qft_gr_seam_packet08_bounded_execution_checkpoint_v0",
+  "phase": "PHASE_1F_QFT_GR_SEAM_PACKET08_BOUNDED_EXECUTION",
+  "scope": "execute_authorized_packet08_bounded_target",
+  "payload": {
+    "packet_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET08_BOUNDED_EXECUTION_v0.md",
+    "parent_authorization_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET08_AUTHORIZATION_v0.md",
+    "parent_authorization_checkpoint_path": "formal/output/toe_qft_gr_seam_packet08_authorization_checkpoint_v0.json",
+    "parent_objective_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_v0.md",
+    "parent_objective_checkpoint_path": "formal/output/toe_qft_gr_seam_reactivation_objective_checkpoint_v0.json",
+    "active_seam_question": "stress_energy_to_weak_curvature_handoff_strengthening",
+    "authorized_target_binding": {
+      "authorization_decision_outcome": "AUTHORIZE_PACKET08_BOUNDED_TARGET_v0",
+      "authorized_exact_target": "freeze_residual_risk_classification_map_for_packet07_delta_rows_with_per_row_pass_fail_criterion_and_no_scalar_scope_backflow",
+      "execution_target_match": "EXACT_MATCH_CONFIRMED_v0"
+    },
+    "residual_risk_map": [
+      {
+        "delta_row_id": "bounded_stress_energy_source_assumption__weak_curvature_linearized_interface_boundary",
+        "risk_class": "LOW_BOUNDED_INTERFACE_MISBINDING_v0",
+        "pass_fail_criterion": "interface_counterpart_uniqueness_and_bound_consistency",
+        "criterion_result": "PASS_v0"
+      },
+      {
+        "delta_row_id": "non_circular_dependency_guardrail__interface_dependency_acyclicity_constraint",
+        "risk_class": "LOW_BOUNDED_DEPENDENCY_BACKEDGE_v0",
+        "pass_fail_criterion": "acyclicity_constraint_integrity_under_bounded_interface_projection",
+        "criterion_result": "PASS_v0"
+      }
+    ],
+    "acceptance_criteria": {
+      "ac1_row_coverage": "PASS_v0",
+      "ac2_per_row_pass_fail_criterion_presence": "PASS_v0",
+      "ac3_no_scalar_scope_backflow": "PASS_v0",
+      "ac4_non_claim_boundary_preserved": "PASS_v0"
+    },
+    "fallback_condition": {
+      "fallback_hold_triggered": "NO_v0",
+      "fallback_hold_reason": "NONE_v0"
+    },
+    "scalar_compliance": {
+      "scalar_drift_status": "NO_SCALAR_BASELINE_DRIFT_v0"
+    },
+    "guardrails": {
+      "seam_fork_decision_status": "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0"
+    }
+  },
+  "status": "PACKET08_EXECUTED_UNDER_AUTHORIZED_BOUNDED_TARGET_v0"
+}

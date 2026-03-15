@@ -1,0 +1,43 @@
+{
+  "artifact_id": "toe_qft_scalar_route_full_technical_record_checkpoint_v0",
+  "phase": "PHASE_1_SCALAR_FULL_TECHNICAL_RECORD_CHECKPOINT",
+  "scope": "physics_math_rigor_first",
+  "payload": {
+    "target_id": "TARGET-TOE-QFT-SCALAR-ROUTE-FULL-TECHNICAL-RECORD-v0",
+    "technical_record_path": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_FULL_TECHNICAL_RECORD_v0.md",
+    "inventory_manifest_path": "formal/output/toe_qft_scalar_route_scalar_inventory_manifest_v0.json",
+    "coverage_summary": {
+      "ledger_claims": 9,
+      "full_derived": 9,
+      "summarized_only": 0,
+      "distributed_derivation": 0,
+      "missing_derivation": 0,
+      "lean_linked": 1,
+      "lean_partial_linked": 8,
+      "lean_missing_linkage": 0,
+      "blocker_critical_claims": 3,
+      "high_critical_claims": 5,
+      "medium_critical_claims": 1,
+      "low_critical_claims": 0,
+      "recover_in_ledger": 8,
+      "retain_as_summary": 0,
+      "scope_downgrade_required": 1,
+      "blocker_pending_derivation": 0,
+      "paper_may_rely_with_boundary": 9,
+      "paper_may_rely_with_gap_flag": 0,
+      "paper_must_not_rely": 0
+    },
+    "governance": {
+      "seam_hold_status": "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0",
+      "non_claim_boundary_locked": true,
+      "lean_linkage_required": true,
+      "cross_lane_scope_included": true
+    },
+    "cross_surface_pointers": [
+      "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_FULL_TECHNICAL_RECORD_v0.md",
+      "formal/output/toe_qft_scalar_route_scalar_inventory_manifest_v0.json",
+      "formal/python/tests/test_toe_qft_scalar_route_full_technical_record_gate.py"
+    ]
+  },
+  "status": "PHASE0_PHASE1_LOCKED_AUDIT_READY_V0"
+}

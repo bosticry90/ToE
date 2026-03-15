@@ -1,0 +1,39 @@
+{
+  "artifact_id": "toe_qft_gr_seam_packet08_authorization_checkpoint_v0",
+  "phase": "PHASE_1E_QFT_GR_SEAM_PACKET08_AUTHORIZATION",
+  "scope": "explicit_packet08_decision_control",
+  "payload": {
+    "authorization_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET08_AUTHORIZATION_v0.md",
+    "parent_assessment_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET07_ASSESSMENT_v0.md",
+    "parent_assessment_checkpoint_path": "formal/output/toe_qft_gr_seam_packet07_assessment_checkpoint_v0.json",
+    "parent_objective_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_v0.md",
+    "parent_objective_checkpoint_path": "formal/output/toe_qft_gr_seam_reactivation_objective_checkpoint_v0.json",
+    "active_seam_question": "stress_energy_to_weak_curvature_handoff_strengthening",
+    "preconditions_from_packet07_assessment": {
+      "material_advancement_on_active_question": "SATISFIED_v0",
+      "remaining_target_is_narrower_than_objective": "SATISFIED_v0",
+      "scalar_drift_trigger_status": "NOT_TRIGGERED_v0",
+      "hold_refine_condition_status": "NOT_HIT_v0"
+    },
+    "authorization_decision": {
+      "authorized": true,
+      "decision_outcome": "AUTHORIZE_PACKET08_BOUNDED_TARGET_v0",
+      "status": "AUTHORIZED_WITH_SINGLE_BOUNDED_TARGET_v0",
+      "branch_a_authorize_packet08": "ACTIVE",
+      "branch_b_hold_and_refine_objective": "INACTIVE"
+    },
+    "packet08_bounded_target": {
+      "exact_target": "freeze_residual_risk_classification_map_for_packet07_delta_rows_with_per_row_pass_fail_criterion_and_no_scalar_scope_backflow",
+      "success_condition": "residual_risk_map_and_row_pass_fail_criteria_pinned_in_one_packet08_canonical_surface",
+      "stop_rule": "if_scalar_scope_drift_or_target_scope_expansion_then_authorization_void_and_hold_refine_required"
+    },
+    "scalar_compliance": {
+      "scalar_drift_status": "NO_SCALAR_BASELINE_DRIFT_v0"
+    },
+    "guardrails": {
+      "seam_fork_decision_status": "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0",
+      "packet_authorization_discipline": "NO_PACKET08_WITHOUT_EXPLICIT_BOUNDED_TARGET_v0"
+    }
+  },
+  "status": "PACKET08_AUTHORIZATION_EXPLICIT_DECISION_COMPLETE_v0"
+}
