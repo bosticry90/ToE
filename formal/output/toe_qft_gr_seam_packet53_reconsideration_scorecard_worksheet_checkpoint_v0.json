@@ -1,0 +1,83 @@
+{
+  "artifact_id": "toe_qft_gr_seam_packet53_reconsideration_scorecard_worksheet_checkpoint_v0",
+  "phase": "PHASE_2ZA_QFT_GR_SEAM_PACKET53_RECONSIDERATION_SCORECARD_WORKSHEET",
+  "scope": "canonical_packet53_reconsideration_evidence_scorecard_under_hold",
+  "payload": {
+    "scorecard_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET53_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md",
+    "parent_measurement_protocol_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET53_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md",
+    "parent_measurement_protocol_checkpoint_path": "formal/output/toe_qft_gr_seam_packet53_numeric_threshold_measurement_protocol_checkpoint_v0.json",
+    "parent_numeric_thresholds_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET53_RECONSIDERATION_NUMERIC_THRESHOLDS_v0.md",
+    "parent_numeric_thresholds_checkpoint_path": "formal/output/toe_qft_gr_seam_packet53_reconsideration_numeric_thresholds_checkpoint_v0.json",
+    "parent_convergence_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md",
+    "parent_convergence_checkpoint_path": "formal/output/toe_qft_gr_seam_convergence_termination_criterion_checkpoint_v0.json",
+    "active_seam_question": "stress_energy_to_weak_curvature_handoff_strengthening",
+    "formula_version": "packet53_measurement_protocol_v0",
+    "worksheet_schema": {
+      "required_inputs": [
+        "cycle_id",
+        "D_prev",
+        "A_prev",
+        "O_prev",
+        "D_curr",
+        "A_curr",
+        "O_curr",
+        "N_curr",
+        "DeltaA_curr",
+        "DeltaO_curr",
+        "I_stag_curr",
+        "I_stag_prev",
+        "I_stag_prev2"
+      ],
+      "computed_fields": [
+        "G_prev",
+        "G_curr",
+        "S_value",
+        "M_value",
+        "Streak3_value"
+      ],
+      "threshold_pass_fields": [
+        "threshold_1_pass",
+        "threshold_2_pass",
+        "threshold_3_pass",
+        "threshold_4_pass"
+      ],
+      "review_layer_fields": [
+        "packet53_eligibility_review_pass",
+        "packet53_targeted_justification_review_pass",
+        "packet53_hold_fork_release_condition_pass",
+        "retrospective_cumulative_delta_audit_release_condition_pass"
+      ],
+      "required_evidence_field": "evidence_sources_used",
+      "required_disposition_field": "disposition_recommendation"
+    },
+    "threshold_rules": {
+      "threshold_1": "S(c)>=0.12",
+      "threshold_2": "M(c)>=0.18",
+      "threshold_3": "Streak3(c)<=1",
+      "threshold_4": "threshold_1_and_threshold_2_and_threshold_3_and_existing_review_layers_pass"
+    },
+    "admissibility_rules": {
+      "machine_readable_only": true,
+      "checkpoint_field_trace_required": true,
+      "prose_only_non_admissible_without_checkpoint_mirror": true
+    },
+    "disposition_rules": {
+      "default_disposition_recommendation": "HOLD_RETAINED_v0",
+      "eligible_reconsideration_disposition_recommendation": "ELIGIBLE_FOR_RECONSIDERATION_REVIEW_ONLY_v0",
+      "authorization_artifact_creation": "FORBIDDEN_v0"
+    },
+    "hold_policy": {
+      "packet53_authorization_freeze_status": "ENFORCED_v0",
+      "release_without_threshold_4_pass": "FORBIDDEN_v0",
+      "release_without_review_stack_clearance": "FORBIDDEN_v0"
+    }
+  },
+  "status": "PACKET53_RECONSIDERATION_SCORECARD_WORKSHEET_ACTIVE_v0"
+}
+
+
+
+
+
+
+
