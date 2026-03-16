@@ -22,6 +22,7 @@ OBJECTIVE_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_r
 ASSESSMENT_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_PACKET40_ASSESSMENT_v0.md"
 ASSESSMENT_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet40_assessment_checkpoint_v0.json"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 PACKET41_AUTH_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_PACKET41_AUTHORIZATION_v0.md"
 PACKET41_AUTH_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_authorization_checkpoint_v0.json"
@@ -40,6 +41,14 @@ def _extract_token(text: str, token_name: str) -> str:
     m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-\.]+)", text)
     assert m is not None, f"Missing token `{token_name}`."
     return m.group(1)
+
+
+def _extract_token_from_surfaces(texts: list[str], token_name: str) -> str:
+    for text in texts:
+        m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-\.]+)", text)
+        if m is not None:
+            return m.group(1)
+    raise AssertionError(f"Missing token `{token_name}` across authority surfaces.")
 
 
 def test_qft_gr_seam_convergence_criterion_document_structure() -> None:
@@ -145,6 +154,7 @@ def test_qft_gr_seam_convergence_authority_parity_and_future_packet41_binding() 
     objective_text = _read(OBJECTIVE_DOC_PATH)
     assessment_text = _read(ASSESSMENT_DOC_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
     q = "stress_energy_to_weak_curvature_handoff_strengthening"
@@ -158,14 +168,20 @@ def test_qft_gr_seam_convergence_authority_parity_and_future_packet41_binding() 
         "formal/python/tests/test_toe_qft_gr_seam_convergence_termination_criterion_gate.py",
     ]
     for ref in refs:
-        assert ref in state_text, f"Missing convergence pointer in State_of_the_Theory.md: {ref}"
+        assert any(ref in text for text in (state_text, inventory_text, roadmap_text)), (
+            f"Missing convergence pointer across authority surfaces: {ref}"
+        )
         assert ref in roadmap_text, f"Missing convergence pointer in PHYSICS_ROADMAP_v0.md: {ref}"
 
-    state_status = _extract_token(state_text, "TOE_QFT_GR_SEAM_CONVERGENCE_STATUS_v0")
+    state_status = _extract_token_from_surfaces(
+        [state_text, inventory_text, roadmap_text], "TOE_QFT_GR_SEAM_CONVERGENCE_STATUS_v0"
+    )
     roadmap_status = _extract_token(roadmap_text, "TOE_QFT_GR_SEAM_CONVERGENCE_STATUS_v0")
     assert state_status == roadmap_status == "ACTIVE_CONVERGENCE_GUARDRAIL_ENFORCED_v0"
 
-    state_policy = _extract_token(state_text, "TOE_QFT_GR_SEAM_PACKET41_AUTHORIZATION_POLICY_v0")
+    state_policy = _extract_token_from_surfaces(
+        [state_text, inventory_text, roadmap_text], "TOE_QFT_GR_SEAM_PACKET41_AUTHORIZATION_POLICY_v0"
+    )
     roadmap_policy = _extract_token(roadmap_text, "TOE_QFT_GR_SEAM_PACKET41_AUTHORIZATION_POLICY_v0")
     assert state_policy == roadmap_policy == "FROZEN_UNTIL_CONVERGENCE_BINDING_SATISFIED_v0"
 

@@ -1,0 +1,90 @@
+{
+  "artifact_id": "toe_qft_gr_seam_packet44_numeric_threshold_measurement_protocol_checkpoint_v0",
+  "phase": "PHASE_2Z_QFT_GR_SEAM_PACKET44_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL",
+  "scope": "operational_measurement_rules_for_packet44_reconsideration_numeric_thresholds",
+  "payload": {
+    "protocol_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET44_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md",
+    "parent_scorecard_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET44_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md",
+    "parent_scorecard_checkpoint_path": "formal/output/toe_qft_gr_seam_packet44_reconsideration_scorecard_worksheet_checkpoint_v0.json",
+    "parent_numeric_thresholds_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET44_RECONSIDERATION_NUMERIC_THRESHOLDS_v0.md",
+    "parent_numeric_thresholds_checkpoint_path": "formal/output/toe_qft_gr_seam_packet44_reconsideration_numeric_thresholds_checkpoint_v0.json",
+    "parent_convergence_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md",
+    "parent_convergence_checkpoint_path": "formal/output/toe_qft_gr_seam_convergence_termination_criterion_checkpoint_v0.json",
+    "active_seam_question": "stress_energy_to_weak_curvature_handoff_strengthening",
+    "operational_variables": {
+      "D": "discriminator_deficit_score_in_0_1",
+      "A": "residual_ambiguity_score_in_0_1",
+      "O": "objective_distance_score_in_0_1",
+      "N": "new_discriminator_content_flag_in_0_or_1",
+      "eps": 1e-06
+    },
+    "formulas": {
+      "gap_score": "G(c)=0.5*D(c)+0.3*A(c)+0.2*O(c)",
+      "seam_gap_shrinkage_fraction": "S(c)=max(0,(G(c-1)-G(c))/max(G(c-1),eps))",
+      "marginal_gain_index": "M(c)=0.5*N(c)+0.3*max(0,A(c-1)-A(c))+0.2*max(0,O(c-1)-O(c))",
+      "stagnation_indicator": "I_stag(i)=1_if_N(i)=0_and_DeltaA(i)<0.03_and_DeltaO(i)<0.03_else_0",
+      "stagnation_streak3": "Streak3(c)=I_stag(c)+I_stag(c-1)+I_stag(c-2)"
+    },
+    "threshold_pass_rules": {
+      "threshold_1": "S(c)>=0.12",
+      "threshold_2": "M(c)>=0.18",
+      "threshold_3": "Streak3(c)<=1",
+      "threshold_4": "threshold_1_and_threshold_2_and_threshold_3_and_existing_review_layers_pass"
+    },
+    "admissible_evidence_surfaces": [
+      "formal/output/toe_qft_gr_seam_packet*_assessment_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_packet44_eligibility_review_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_packet44_targeted_justification_review_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_packet44_hold_fork_decision_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_retrospective_cumulative_delta_audit_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_packet44_reconsideration_numeric_thresholds_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_packet44_numeric_threshold_measurement_protocol_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_packet44_reconsideration_scorecard_worksheet_checkpoint_v0.json"
+    ],
+    "evidence_admissibility_rules": {
+      "machine_readable_only": true,
+      "prose_only_non_admissible_without_checkpoint_mirror": true,
+      "missing_required_numeric_fields_auto_fail": true
+    },
+    "required_measurement_artifact_fields": [
+      "cycle_id",
+      "D_prev",
+      "A_prev",
+      "O_prev",
+      "D_curr",
+      "A_curr",
+      "O_curr",
+      "N_curr",
+      "G_prev",
+      "G_curr",
+      "S_value",
+      "M_value",
+      "Streak3_value",
+      "threshold_1_pass",
+      "threshold_2_pass",
+      "threshold_3_pass",
+      "threshold_4_pass",
+      "evidence_sources_used",
+      "formula_version"
+    ],
+    "scorecard_binding": {
+      "scorecard_required": true,
+      "scorecard_schema_status": "REQUIRED_CANONICAL_WORKSHEET_v0"
+    },
+    "hold_policy": {
+      "packet44_authorization_freeze_status": "ENFORCED_v0",
+      "release_without_full_measurement_protocol_compliance": "FORBIDDEN_v0",
+      "release_without_scorecard_worksheet_completion": "FORBIDDEN_v0",
+      "automatic_release_without_threshold_4_pass": "FORBIDDEN_v0"
+    },
+    "guardrails": {
+      "scalar_drift_status": "NO_SCALAR_BASELINE_DRIFT_v0",
+      "scalar_scope_backflow_status": "NO_BACKFLOW_DETECTED_v0",
+      "seam_fork_decision_status": "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0",
+      "non_claim_boundary_status": "ENFORCED_v0"
+    }
+  },
+  "status": "PACKET44_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_ACTIVE_v0"
+}
+
+

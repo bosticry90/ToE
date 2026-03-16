@@ -832,6 +832,216 @@ No-deviation sequencing rule:
   - `formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json`
   - `formal/python/tests/test_toe_qft_gr_seam_packet41_reconsideration_scorecard_cycle01_evaluation_gate.py`
   - `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0: EVALUATED_HOLD_RETAINED_MISSING_NUMERIC_INPUTS_v0`
+  - `TOE_QFT_GR_SEAM_PACKET42_AUTHORIZATION_READINESS_v0: CONDITIONAL_READINESS_ONLY_v0`
+  - `TOE_QFT_GR_SEAM_PACKET42_AUTHORIZATION_POLICY_v0: FROZEN_UNTIL_CONVERGENCE_BINDING_SATISFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET42_ELIGIBILITY_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet42_eligibility_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet42_eligibility_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET42_ELIGIBILITY_STATUS_v0: REVIEW_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET42_ELIGIBILITY_DISPOSITION_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET42_TARGETED_JUSTIFICATION_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet42_targeted_justification_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet42_targeted_justification_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET42_TARGETED_JUSTIFICATION_STATUS_v0: REVIEW_COMPLETE_INSUFFICIENT_FOR_AUTHORIZATION_v0`
+  - `TOE_QFT_GR_SEAM_PACKET42_TARGETED_JUSTIFICATION_OUTCOME_v0: HOLD_RETAINED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET42_HOLD_FORK_DECISION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet42_hold_fork_decision_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet42_hold_fork_decision_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET42_HOLD_FORK_DECISION_STATUS_v0: DECISION_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET42_HOLD_FORK_DECISION_OUTCOME_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET42_RECONSIDERATION_NUMERIC_THRESHOLDS_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet42_reconsideration_numeric_thresholds_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet42_reconsideration_numeric_thresholds_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET42_RECONSIDERATION_NUMERIC_THRESHOLDS_STATUS_v0: ACTIVE_HOLD_GATED_NUMERIC_CRITERIA_v0`
+  - `TOE_QFT_GR_SEAM_PACKET42_RECONSIDERATION_NUMERIC_THRESHOLDS_OUTCOME_v0: HOLD_RETAINED_UNTIL_NUMERIC_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET42_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet42_numeric_threshold_measurement_protocol_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet42_numeric_threshold_measurement_protocol_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET42_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_STATUS_v0: ACTIVE_OPERATIONAL_FORMULAS_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET42_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_OUTCOME_v0: HOLD_RETAINED_PENDING_MEASURED_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET42_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet42_reconsideration_scorecard_worksheet_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet42_reconsideration_scorecard_worksheet_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET42_RECONSIDERATION_SCORECARD_STATUS_v0: ACTIVE_CANONICAL_WORKSHEET_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET42_RECONSIDERATION_SCORECARD_OUTCOME_v0: HOLD_RETAINED_PENDING_SCORECARD_EVIDENCE_v0`
+  - `formal/output/toe_qft_gr_seam_packet42_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet42_reconsideration_scorecard_cycle01_evaluation_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET42_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0: EVALUATED_HOLD_RETAINED_MISSING_NUMERIC_INPUTS_v0`
+  - `TOE_QFT_GR_SEAM_PACKET43_AUTHORIZATION_READINESS_v0: CONDITIONAL_READINESS_ONLY_v0`
+  - `TOE_QFT_GR_SEAM_PACKET43_AUTHORIZATION_POLICY_v0: FROZEN_UNTIL_CONVERGENCE_BINDING_SATISFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET43_ELIGIBILITY_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet43_eligibility_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet43_eligibility_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET43_ELIGIBILITY_STATUS_v0: REVIEW_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET43_ELIGIBILITY_DISPOSITION_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET43_TARGETED_JUSTIFICATION_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet43_targeted_justification_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet43_targeted_justification_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET43_TARGETED_JUSTIFICATION_STATUS_v0: REVIEW_COMPLETE_INSUFFICIENT_FOR_AUTHORIZATION_v0`
+  - `TOE_QFT_GR_SEAM_PACKET43_TARGETED_JUSTIFICATION_OUTCOME_v0: HOLD_RETAINED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET43_HOLD_FORK_DECISION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet43_hold_fork_decision_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet43_hold_fork_decision_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET43_HOLD_FORK_DECISION_STATUS_v0: DECISION_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET43_HOLD_FORK_DECISION_OUTCOME_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET43_RECONSIDERATION_NUMERIC_THRESHOLDS_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet43_reconsideration_numeric_thresholds_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet43_reconsideration_numeric_thresholds_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET43_RECONSIDERATION_NUMERIC_THRESHOLDS_STATUS_v0: ACTIVE_HOLD_GATED_NUMERIC_CRITERIA_v0`
+  - `TOE_QFT_GR_SEAM_PACKET43_RECONSIDERATION_NUMERIC_THRESHOLDS_OUTCOME_v0: HOLD_RETAINED_UNTIL_NUMERIC_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET43_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet43_numeric_threshold_measurement_protocol_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet43_numeric_threshold_measurement_protocol_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET43_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_STATUS_v0: ACTIVE_OPERATIONAL_FORMULAS_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET43_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_OUTCOME_v0: HOLD_RETAINED_PENDING_MEASURED_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET43_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet43_reconsideration_scorecard_worksheet_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet43_reconsideration_scorecard_worksheet_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET43_RECONSIDERATION_SCORECARD_STATUS_v0: ACTIVE_CANONICAL_WORKSHEET_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET43_RECONSIDERATION_SCORECARD_OUTCOME_v0: HOLD_RETAINED_PENDING_SCORECARD_EVIDENCE_v0`
+  - `formal/output/toe_qft_gr_seam_packet43_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet43_reconsideration_scorecard_cycle01_evaluation_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET43_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0: EVALUATED_HOLD_RETAINED_MISSING_NUMERIC_INPUTS_v0`
+  - `TOE_QFT_GR_SEAM_PACKET44_AUTHORIZATION_READINESS_v0: CONDITIONAL_READINESS_ONLY_v0`
+  - `TOE_QFT_GR_SEAM_PACKET44_AUTHORIZATION_POLICY_v0: FROZEN_UNTIL_CONVERGENCE_BINDING_SATISFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET44_ELIGIBILITY_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet44_eligibility_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet44_eligibility_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET44_ELIGIBILITY_STATUS_v0: REVIEW_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET44_ELIGIBILITY_DISPOSITION_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET44_TARGETED_JUSTIFICATION_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet44_targeted_justification_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet44_targeted_justification_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET44_TARGETED_JUSTIFICATION_STATUS_v0: REVIEW_COMPLETE_INSUFFICIENT_FOR_AUTHORIZATION_v0`
+  - `TOE_QFT_GR_SEAM_PACKET44_TARGETED_JUSTIFICATION_OUTCOME_v0: HOLD_RETAINED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET44_HOLD_FORK_DECISION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet44_hold_fork_decision_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet44_hold_fork_decision_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET44_HOLD_FORK_DECISION_STATUS_v0: DECISION_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET44_HOLD_FORK_DECISION_OUTCOME_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET44_RECONSIDERATION_NUMERIC_THRESHOLDS_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet44_reconsideration_numeric_thresholds_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet44_reconsideration_numeric_thresholds_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET44_RECONSIDERATION_NUMERIC_THRESHOLDS_STATUS_v0: ACTIVE_HOLD_GATED_NUMERIC_CRITERIA_v0`
+  - `TOE_QFT_GR_SEAM_PACKET44_RECONSIDERATION_NUMERIC_THRESHOLDS_OUTCOME_v0: HOLD_RETAINED_UNTIL_NUMERIC_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET44_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet44_numeric_threshold_measurement_protocol_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet44_numeric_threshold_measurement_protocol_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET44_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_STATUS_v0: ACTIVE_OPERATIONAL_FORMULAS_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET44_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_OUTCOME_v0: HOLD_RETAINED_PENDING_MEASURED_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET44_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet44_reconsideration_scorecard_worksheet_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet44_reconsideration_scorecard_worksheet_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET44_RECONSIDERATION_SCORECARD_STATUS_v0: ACTIVE_CANONICAL_WORKSHEET_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET44_RECONSIDERATION_SCORECARD_OUTCOME_v0: HOLD_RETAINED_PENDING_SCORECARD_EVIDENCE_v0`
+  - `formal/output/toe_qft_gr_seam_packet44_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet44_reconsideration_scorecard_cycle01_evaluation_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET44_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0: EVALUATED_HOLD_RETAINED_MISSING_NUMERIC_INPUTS_v0`
+  - `TOE_QFT_GR_SEAM_PACKET45_AUTHORIZATION_READINESS_v0: CONDITIONAL_READINESS_ONLY_v0`
+  - `TOE_QFT_GR_SEAM_PACKET45_AUTHORIZATION_POLICY_v0: FROZEN_UNTIL_CONVERGENCE_BINDING_SATISFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET45_ELIGIBILITY_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet45_eligibility_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet45_eligibility_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET45_ELIGIBILITY_STATUS_v0: REVIEW_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET45_ELIGIBILITY_DISPOSITION_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET45_TARGETED_JUSTIFICATION_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet45_targeted_justification_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet45_targeted_justification_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET45_TARGETED_JUSTIFICATION_STATUS_v0: REVIEW_COMPLETE_INSUFFICIENT_FOR_AUTHORIZATION_v0`
+  - `TOE_QFT_GR_SEAM_PACKET45_TARGETED_JUSTIFICATION_OUTCOME_v0: HOLD_RETAINED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET45_HOLD_FORK_DECISION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet45_hold_fork_decision_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet45_hold_fork_decision_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET45_HOLD_FORK_DECISION_STATUS_v0: DECISION_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET45_HOLD_FORK_DECISION_OUTCOME_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET45_RECONSIDERATION_NUMERIC_THRESHOLDS_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet45_reconsideration_numeric_thresholds_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet45_reconsideration_numeric_thresholds_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET45_RECONSIDERATION_NUMERIC_THRESHOLDS_STATUS_v0: ACTIVE_HOLD_GATED_NUMERIC_CRITERIA_v0`
+  - `TOE_QFT_GR_SEAM_PACKET45_RECONSIDERATION_NUMERIC_THRESHOLDS_OUTCOME_v0: HOLD_RETAINED_UNTIL_NUMERIC_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET45_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet45_numeric_threshold_measurement_protocol_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet45_numeric_threshold_measurement_protocol_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET45_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_STATUS_v0: ACTIVE_OPERATIONAL_FORMULAS_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET45_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_OUTCOME_v0: HOLD_RETAINED_PENDING_MEASURED_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET45_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet45_reconsideration_scorecard_worksheet_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet45_reconsideration_scorecard_worksheet_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET45_RECONSIDERATION_SCORECARD_STATUS_v0: ACTIVE_CANONICAL_WORKSHEET_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET45_RECONSIDERATION_SCORECARD_OUTCOME_v0: HOLD_RETAINED_PENDING_SCORECARD_EVIDENCE_v0`
+  - `formal/output/toe_qft_gr_seam_packet45_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet45_reconsideration_scorecard_cycle01_evaluation_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET45_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0: EVALUATED_HOLD_RETAINED_MISSING_NUMERIC_INPUTS_v0`
+  - `TOE_QFT_GR_SEAM_PACKET46_AUTHORIZATION_READINESS_v0: CONDITIONAL_READINESS_ONLY_v0`
+  - `TOE_QFT_GR_SEAM_PACKET46_AUTHORIZATION_POLICY_v0: FROZEN_UNTIL_CONVERGENCE_BINDING_SATISFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET46_ELIGIBILITY_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet46_eligibility_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet46_eligibility_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET46_ELIGIBILITY_STATUS_v0: REVIEW_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET46_ELIGIBILITY_DISPOSITION_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET46_TARGETED_JUSTIFICATION_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet46_targeted_justification_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet46_targeted_justification_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET46_TARGETED_JUSTIFICATION_STATUS_v0: REVIEW_COMPLETE_INSUFFICIENT_FOR_AUTHORIZATION_v0`
+  - `TOE_QFT_GR_SEAM_PACKET46_TARGETED_JUSTIFICATION_OUTCOME_v0: HOLD_RETAINED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET46_HOLD_FORK_DECISION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet46_hold_fork_decision_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet46_hold_fork_decision_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET46_HOLD_FORK_DECISION_STATUS_v0: DECISION_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET46_HOLD_FORK_DECISION_OUTCOME_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET46_RECONSIDERATION_NUMERIC_THRESHOLDS_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet46_reconsideration_numeric_thresholds_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet46_reconsideration_numeric_thresholds_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET46_RECONSIDERATION_NUMERIC_THRESHOLDS_STATUS_v0: ACTIVE_HOLD_GATED_NUMERIC_CRITERIA_v0`
+  - `TOE_QFT_GR_SEAM_PACKET46_RECONSIDERATION_NUMERIC_THRESHOLDS_OUTCOME_v0: HOLD_RETAINED_UNTIL_NUMERIC_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET46_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet46_numeric_threshold_measurement_protocol_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet46_numeric_threshold_measurement_protocol_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET46_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_STATUS_v0: ACTIVE_OPERATIONAL_FORMULAS_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET46_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_OUTCOME_v0: HOLD_RETAINED_PENDING_MEASURED_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET46_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet46_reconsideration_scorecard_worksheet_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet46_reconsideration_scorecard_worksheet_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET46_RECONSIDERATION_SCORECARD_STATUS_v0: ACTIVE_CANONICAL_WORKSHEET_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET46_RECONSIDERATION_SCORECARD_OUTCOME_v0: HOLD_RETAINED_PENDING_SCORECARD_EVIDENCE_v0`
+  - `formal/output/toe_qft_gr_seam_packet46_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet46_reconsideration_scorecard_cycle01_evaluation_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET46_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0: EVALUATED_HOLD_RETAINED_MISSING_NUMERIC_INPUTS_v0`
+  - `TOE_QFT_GR_SEAM_PACKET47_AUTHORIZATION_READINESS_v0: CONDITIONAL_READINESS_ONLY_v0`
+  - `TOE_QFT_GR_SEAM_PACKET47_AUTHORIZATION_POLICY_v0: FROZEN_UNTIL_CONVERGENCE_BINDING_SATISFIED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET47_ELIGIBILITY_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet47_eligibility_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet47_eligibility_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET47_ELIGIBILITY_STATUS_v0: REVIEW_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET47_ELIGIBILITY_DISPOSITION_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET47_TARGETED_JUSTIFICATION_REVIEW_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet47_targeted_justification_review_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet47_targeted_justification_review_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET47_TARGETED_JUSTIFICATION_STATUS_v0: REVIEW_COMPLETE_INSUFFICIENT_FOR_AUTHORIZATION_v0`
+  - `TOE_QFT_GR_SEAM_PACKET47_TARGETED_JUSTIFICATION_OUTCOME_v0: HOLD_RETAINED_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET47_HOLD_FORK_DECISION_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet47_hold_fork_decision_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet47_hold_fork_decision_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET47_HOLD_FORK_DECISION_STATUS_v0: DECISION_COMPLETE_HOLD_v0`
+  - `TOE_QFT_GR_SEAM_PACKET47_HOLD_FORK_DECISION_OUTCOME_v0: HOLD_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET47_RECONSIDERATION_NUMERIC_THRESHOLDS_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet47_reconsideration_numeric_thresholds_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet47_reconsideration_numeric_thresholds_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET47_RECONSIDERATION_NUMERIC_THRESHOLDS_STATUS_v0: ACTIVE_HOLD_GATED_NUMERIC_CRITERIA_v0`
+  - `TOE_QFT_GR_SEAM_PACKET47_RECONSIDERATION_NUMERIC_THRESHOLDS_OUTCOME_v0: HOLD_RETAINED_UNTIL_NUMERIC_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET47_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet47_numeric_threshold_measurement_protocol_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet47_numeric_threshold_measurement_protocol_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET47_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_STATUS_v0: ACTIVE_OPERATIONAL_FORMULAS_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET47_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_OUTCOME_v0: HOLD_RETAINED_PENDING_MEASURED_CLEARANCE_v0`
+  - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET47_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md`
+  - `formal/output/toe_qft_gr_seam_packet47_reconsideration_scorecard_worksheet_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet47_reconsideration_scorecard_worksheet_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET47_RECONSIDERATION_SCORECARD_STATUS_v0: ACTIVE_CANONICAL_WORKSHEET_LOCKED_v0`
+  - `TOE_QFT_GR_SEAM_PACKET47_RECONSIDERATION_SCORECARD_OUTCOME_v0: HOLD_RETAINED_PENDING_SCORECARD_EVIDENCE_v0`
+  - `formal/output/toe_qft_gr_seam_packet47_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json`
+  - `formal/python/tests/test_toe_qft_gr_seam_packet47_reconsideration_scorecard_cycle01_evaluation_gate.py`
+  - `TOE_QFT_GR_SEAM_PACKET47_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0: EVALUATED_HOLD_RETAINED_MISSING_NUMERIC_INPUTS_v0`
   - `SCALAR_ROUTE_SUBMISSION_PACKAGE_STATUS_v0: EXTERNAL_SUBMISSION_PACKAGE_READY_BOUNDED`
   - `SCALAR_ROUTE_SUBMISSION_CANDIDATE_STATUS_v0: BASELINE_LOCKED_FOR_INTERNAL_SUBMISSION_CANDIDATE`
   - `SCALAR_ROUTE_SUBMISSION_READINESS_STATUS_v0: READY_FOR_BOUNDED_PAPER1_SUBMISSION_PACKAGE`
@@ -2770,6 +2980,9 @@ Legacy historical snapshot (non-authoritative for active adjudication):
 - `QFT_FULL_DERIVATION_NONFLIP_EXECUTION_READINESS_PACKET_SCOPE_v0: ADJUDICATION_REMAINS_NOT_YET_DISCHARGED_UNTIL_EXPLICIT_FLIP_AUTHORITY`
 
 ## END_ARCHIVED_HISTORY
+
+
+
 
 
 

@@ -1,0 +1,66 @@
+{
+  "artifact_id": "toe_qft_gr_seam_packet47_reconsideration_numeric_thresholds_checkpoint_v0",
+  "phase": "PHASE_2Y_QFT_GR_SEAM_PACKET47_RECONSIDERATION_NUMERIC_THRESHOLDS",
+  "scope": "packet47_quantitative_reconsideration_thresholds_under_hold",
+  "payload": {
+    "threshold_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET47_RECONSIDERATION_NUMERIC_THRESHOLDS_v0.md",
+    "parent_convergence_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md",
+    "parent_convergence_checkpoint_path": "formal/output/toe_qft_gr_seam_convergence_termination_criterion_checkpoint_v0.json",
+    "parent_hold_fork_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET47_HOLD_FORK_DECISION_v0.md",
+    "parent_hold_fork_checkpoint_path": "formal/output/toe_qft_gr_seam_packet47_hold_fork_decision_checkpoint_v0.json",
+    "parent_retrospective_audit_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_RETROSPECTIVE_CUMULATIVE_DELTA_AUDIT_v0.md",
+    "parent_retrospective_audit_checkpoint_path": "formal/output/toe_qft_gr_seam_retrospective_cumulative_delta_audit_checkpoint_v0.json",
+    "parent_measurement_protocol_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET47_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md",
+    "parent_measurement_protocol_checkpoint_path": "formal/output/toe_qft_gr_seam_packet47_numeric_threshold_measurement_protocol_checkpoint_v0.json",
+    "parent_scorecard_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET47_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md",
+    "parent_scorecard_checkpoint_path": "formal/output/toe_qft_gr_seam_packet47_reconsideration_scorecard_worksheet_checkpoint_v0.json",
+    "active_seam_question": "stress_energy_to_weak_curvature_handoff_strengthening",
+    "baseline_window_packets": "packet39_to_packet40",
+    "baseline_classification": "MATERIALLY_CUMULATIVE_WITH_PLATEAU_RISK_v0",
+    "numeric_thresholds": {
+      "min_seam_gap_shrinkage_fraction": {
+        "required_minimum": 0.12,
+        "token": "NUMERIC_THRESHOLD_MIN_SEAM_GAP_SHRINKAGE_GE_0P12_v0"
+      },
+      "min_marginal_gain_index": {
+        "required_minimum": 0.18,
+        "token": "NUMERIC_THRESHOLD_MIN_MARGINAL_GAIN_INDEX_GE_0P18_v0"
+      },
+      "max_consecutive_stagnant_packets": {
+        "required_maximum": 1,
+        "window_size": 3,
+        "token": "NUMERIC_THRESHOLD_MAX_STAGNATION_STREAK_LE_1_OF_3_v0"
+      },
+      "packet47_reconsideration_release_gate": {
+        "all_numeric_thresholds_required": true,
+        "existing_review_layers_required": true,
+        "token": "NUMERIC_THRESHOLD_PACKET47_RELEASE_REQUIRES_ALL_NUMERIC_AND_EXISTING_BINDINGS_v0"
+      }
+    },
+    "measurement_discipline": {
+      "seam_gap_shrinkage_measurement_rule": "compute_fractional_reduction_against_last_confirmed_gap_baseline_and_record_method_in_checkpoint",
+      "marginal_gain_index_rule": "compute_weighted_index_over_discriminator_strength_residual_ambiguity_and_objective_distance_components",
+      "stagnation_counter_rule": "count_cycles_with_no_material_discriminator_increment_or_objective_distance_reduction",
+      "measurement_transparency_requirement": "each_metric_must_include_explicit_formula_and_value_trace",
+      "measurement_protocol_binding_status": "REQUIRED_v0",
+      "reconsideration_scorecard_binding_status": "REQUIRED_v0"
+    },
+    "hold_release_policy": {
+      "current_disposition": "HOLD_v0",
+      "automatic_release_without_full_clearance": "FORBIDDEN_v0"
+    },
+    "guardrails": {
+      "packet47_authorization_freeze_status": "ENFORCED_v0",
+      "scalar_drift_status": "NO_SCALAR_BASELINE_DRIFT_v0",
+      "scalar_scope_backflow_status": "NO_BACKFLOW_DETECTED_v0",
+      "seam_fork_decision_status": "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0",
+      "non_claim_boundary_status": "ENFORCED_v0"
+    }
+  },
+  "status": "PACKET47_RECONSIDERATION_NUMERIC_THRESHOLDS_ACTIVE_v0"
+}
+
+
+
+
+
