@@ -13,13 +13,13 @@
 Establish a bounded remediation program with explicit workstreams, blockers, evidence, and hard exit criteria. This tracker is the canonical top-level source of truth for active, blocked, completed, and next work.
 
 ## Current Status
-- Primary workstream: WS-08
-- Active task: WS-08-T05
+- Primary workstream: none (next consolidation slice definition pending)
+- Active task: none
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
 - WS-07: DONE
-- WS-08: ACTIVE (architecture consolidation phase)
+- WS-08: DONE (architecture consolidation phase)
 - Program state: ACTIVE
 - Active WS-05 plan pointer: `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`
 - Active WS-05 baseline pointer: `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md`
@@ -37,7 +37,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 | WS-05 | Authority Surface Consolidation | DONE | NO | Define primary authority residency and reduce cross-surface coordination burden. |
 | WS-06 | Repetition Reduction Phase 2 | DONE | NO | Consolidate repeated gate families using shared helpers and registry-driven tests. |
 | WS-07 | Scientific Core Separation Refresh | DONE | NO | Refresh scientific-core tagging and restart subset boundaries for theory work. |
-| WS-08 | Governance Right-Sizing | ACTIVE | YES | Operationalize quarantine and retirement controls while preserving rigor. |
+| WS-08 | Governance Right-Sizing | DONE | NO | Operationalize quarantine and retirement controls while preserving rigor. |
 
 ## Status Labels
 - TODO
@@ -73,7 +73,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-08-T05 | Governance Right-Sizing | Record WS-08 completion checkpoint | ACTIVE | user | WS-08-T04 | `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` | WS-08 closure row is recorded with full evidence chain |
+| none | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -123,6 +123,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-08-T02 | Governance Right-Sizing | Draft active quarantine operation policy and review cadence | DONE | user | WS-08-T01 | 2026-03-18: quarantine operating rules, lifecycle states, and review cadence documented in `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` with register linkage to `formal/docs/release/QUARANTINE_REGISTER_v0.md` | Quarantine policy and cadence controls are explicitly documented with bounded evidence |
 | WS-08-T03 | Governance Right-Sizing | Draft deprecated gate retirement policy | DONE | user | WS-08-T02 | 2026-03-18: retirement policy artifact `formal/docs/release/DEPRECATED_GATE_RETIREMENT_POLICY_v0.md` created with disposition states (`CANDIDATE`, `DEPRECATED`, `RETIRED`) and lifecycle/review rules | Deprecated gate retirement policy artifact with explicit disposition states is drafted and linked |
 | WS-08-T04 | Governance Right-Sizing | Identify and record governance suite simplification candidates | DONE | user | WS-08-T03 | 2026-03-18: candidate matrix `formal/docs/release/WS_08_GOVERNANCE_SUITE_SIMPLIFICATION_CANDIDATES_v0.md` added with bounded adoption criteria and rollout guardrails derived from current governance suite script surfaces | Candidate list with bounded adoption criteria is documented with evidence linkage |
+| WS-08-T05 | Governance Right-Sizing | Record WS-08 completion checkpoint | DONE | user | WS-08-T04 | 2026-03-18: WS-08 marked DONE in tracker and WS-08 plan closure checkpoint recorded with evidence chain (`ea34c61`, `7d262c9`, `28b5ba9`, `601c9ff`) | WS-08 closure row is recorded with full evidence chain |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
