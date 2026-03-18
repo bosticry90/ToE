@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-08
-- Active task: WS-08-T02
+- Active task: WS-08-T03
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -73,7 +73,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-08-T02 | Governance Right-Sizing | Draft active quarantine operation policy and review cadence | ACTIVE | user | WS-08-T01 | `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` | Quarantine policy and cadence controls are explicitly documented with bounded evidence |
+| WS-08-T03 | Governance Right-Sizing | Draft deprecated gate retirement policy | ACTIVE | user | WS-08-T02 | `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` | Deprecated gate retirement policy artifact with explicit disposition states is drafted and linked |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -120,6 +120,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-07-T04 | Scientific Core Separation Refresh | Apply bounded refresh update to scientific-core index and tracker CE-03 row | DONE | user | WS-07-T03 | 2026-03-18: CE-03 marked DONE in consolidation exit gate and index completion anchor note added; evidence chain includes commits `0c48e25` and `0addd8b` | CE-03 row marked DONE with concrete index and commit evidence |
 | WS-07-T05 | Scientific Core Separation Refresh | Record WS-07 completion checkpoint | DONE | user | WS-07-T04 | 2026-03-18: WS-07 marked DONE and primary workstream advanced to WS-08 activation in tracker and WS-07 plan | WS-07 closure row recorded with complete evidence chain |
 | WS-08-T01 | Governance Right-Sizing | Define refresh scope and baseline snapshot | DONE | user | none | 2026-03-18: baseline pinned in `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` with WS-08 deliverable scope and tracker linkage | WS-08 baseline and bounded deliverable scope committed with tracker linkage |
+| WS-08-T02 | Governance Right-Sizing | Draft active quarantine operation policy and review cadence | DONE | user | WS-08-T01 | 2026-03-18: quarantine operating rules, lifecycle states, and review cadence documented in `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` with register linkage to `formal/docs/release/QUARANTINE_REGISTER_v0.md` | Quarantine policy and cadence controls are explicitly documented with bounded evidence |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
