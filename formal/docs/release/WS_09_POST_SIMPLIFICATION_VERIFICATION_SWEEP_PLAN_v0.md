@@ -50,7 +50,7 @@ Execution contract:
 - 2026-03-18 WS-09-T01: Aligned compact state checkpoint fields in `State_of_the_Theory.md` with tracker authority and activated WS-09 slice in `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md`.
 - 2026-03-18 WS-09-T02: Added bounded CE-05 validation matrix and explicit command set spanning architecture/growth guard, authority consistency, simplified seam representatives, and governance suite.
 - 2026-03-18 WS-09-T03: Ran bounded targeted checks and recorded `51 passed in 4.19s` in `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md`.
-- 2026-03-18 WS-09-T04: Governance suite invocation failed at divergence guardrail (`ahead_count=24`, limit `20`); run log captured at `scratch/ce05_governance_suite_run.log` and status recorded in CE-05 checkpoint artifact.
+- 2026-03-18 WS-09-T04: First governance suite invocation failed at divergence guardrail (`ahead_count=24`, limit `20`); after divergence resolution and rerun, canonical suite still failed at governance pytest tranche (`14 failed, 408 passed`), recorded in CE-05 checkpoint artifact and run log.
 
 ## Exit Criteria
 - CE-05 validation matrix is explicit and bounded.

@@ -30,14 +30,21 @@ Command:
 
 Result:
 - Exit status: failed (`governance_suite_exit_code=1`)
-- Failure cause: divergence guardrail blocked run (`divergence_guardrail.ahead_count=24 limit=20`).
-- Guard stage context: tooling validation completed successfully before guardrail check; failure occurred at local ahead-count gate in `governance_suite.ps1`.
+- Run 1 failure cause: divergence guardrail blocked run (`divergence_guardrail.ahead_count=24 limit=20`).
+- Run 1 guard stage context: tooling validation completed successfully before guardrail check; failure occurred at local ahead-count gate in `governance_suite.ps1`.
 
 Follow-up command (captured run with log):
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1 *> scratch/ce05_governance_suite_run.log; Write-Output "governance_suite_exit_code=$LASTEXITCODE"`
 
 Follow-up status:
-- Governance suite content checks are blocked by local divergence guard policy, not by observed schema/tooling failure in this run.
+- Divergence was resolved (`origin/main...HEAD` -> `0 0`) and canonical suite was rerun unchanged.
+- Run 2 failure cause: governance pytest tranche failed (`14 failed, 408 passed in 142.59s`) with representative failures in state/pillar parity and conftest signature stability gates.
+- Representative failing gates:
+	- `formal/python/tests/test_pillar_status_matrix_consistency_gate.py`
+	- `formal/python/tests/test_pillar_phase_advancement_gate.py`
+	- `formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py`
+	- `formal/python/tests/test_conftest_signature_stability_gate.py`
+- Current blocker state: canonical governance suite remains red under normal semantics; CE-05 cannot close.
 
 ## Closure Criteria
 - Targeted checks pass and are recorded with command text and pass counts.

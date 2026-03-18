@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-09
-- Active task: none (WS-09-T04 blocked by divergence guardrail)
+- Active task: none (WS-09-T04 blocked by governance suite pytest tranche failures)
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -81,7 +81,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-09-T04 | Post-Simplification Verification Sweep | Run governance suite checkpoint | BLOCKED | user | divergence_guardrail.ahead_count=24 limit=20 | `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md`, `scratch/ce05_governance_suite_run.log` | Governance suite completes successfully and result is recorded in CE-05 checkpoint artifact |
+| WS-09-T04 | Post-Simplification Verification Sweep | Run governance suite checkpoint | BLOCKED | user | governance pytest tranche failures (`14 failed, 408 passed`) after divergence was resolved | `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md`, `scratch/ce05_governance_suite_run.log` | Governance suite completes successfully and result is recorded in CE-05 checkpoint artifact |
 
 ## Completed Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
