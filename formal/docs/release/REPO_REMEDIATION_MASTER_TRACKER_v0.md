@@ -18,6 +18,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - WS-01 through WS-04: DONE
 - WS-05 through WS-08: TODO (architecture consolidation phase)
 - Program state: ACTIVE
+- Active WS-05 plan pointer: `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`
 
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
@@ -65,7 +66,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-05-T01 | Authority Surface Consolidation | Write and ratify authority residency model (state vs inventory vs roadmap) | ACTIVE | user | none | pending | Residency model committed and cross-surface fallback pattern identified for elimination |
+| WS-05-T01 | Authority Surface Consolidation | Write and ratify authority residency model (state vs inventory vs roadmap) | ACTIVE | user | none | `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md` | Residency model committed and cross-surface fallback pattern identified for elimination |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
