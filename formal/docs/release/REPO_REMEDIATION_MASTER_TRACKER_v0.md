@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-07
-- Active task: none
+- Active task: WS-07-T02
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -24,6 +24,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Active WS-05 plan pointer: `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`
 - Active WS-05 baseline pointer: `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md`
 - Active WS-06 plan pointer: `formal/docs/release/WS_06_REPETITION_REDUCTION_PHASE2_PLAN_v0.md`
+- Active WS-07 plan pointer: `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md`
 
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
@@ -33,8 +34,8 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 | WS-03 | Scientific Core Separation | DONE | NO | Separate scientific-core surfaces from governance-heavy surfaces. |
 | WS-04 | Math and Evidence Deepening | DONE | NO | Deepen theorem content and broaden empirical confrontation. |
 | WS-05 | Authority Surface Consolidation | DONE | NO | Define primary authority residency and reduce cross-surface coordination burden. |
-| WS-06 | Repetition Reduction Phase 2 | ACTIVE | YES | Consolidate repeated gate families using shared helpers and registry-driven tests. |
-| WS-07 | Scientific Core Separation Refresh | TODO | NO | Refresh scientific-core tagging and restart subset boundaries for theory work. |
+| WS-06 | Repetition Reduction Phase 2 | DONE | NO | Consolidate repeated gate families using shared helpers and registry-driven tests. |
+| WS-07 | Scientific Core Separation Refresh | ACTIVE | YES | Refresh scientific-core tagging and restart subset boundaries for theory work. |
 | WS-08 | Governance Right-Sizing | TODO | NO | Operationalize quarantine and retirement controls while preserving rigor. |
 
 ## Status Labels
@@ -71,7 +72,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| none | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
+| WS-07-T02 | Scientific Core Separation Refresh | Define explicit science-vs-governance separation criteria refresh | ACTIVE | user | WS-07-T01 | `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md` | Updated criteria section for scientific-core index refresh is drafted and linked |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -112,6 +113,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-06-T03 | Repetition Reduction Phase 2 | Implement shared helper and representative parametrized gate | DONE | user | WS-06-T02 | 2026-03-18: added shared helper `formal/python/tests/qft_full_derivation_token_flip_dryrun_helpers.py` and representative parametrized gate `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_representative_cycles37_50_gate.py`; targeted pytest `6 passed in 0.73s` | First reduced slice committed with targeted pytest evidence |
 | WS-06-T04 | Repetition Reduction Phase 2 | Fold remaining selected family members to reduced pattern | DONE | user | WS-06-T03 | 2026-03-18: added reduced-pattern remaining-cycles gate `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_remaining_cycles38_49_gate.py`; bounded family-level reduced-path pytest `42 passed in 1.68s` | Family reduction committed with bounded family-level pytest evidence |
 | WS-06-T05 | Repetition Reduction Phase 2 | Record WS-06 completion checkpoint | DONE | user | WS-06-T04 | 2026-03-18: WS-06 closure checkpoint recorded with evidence chain (`e96adbb`, `dd9bb12`, `8fecd0e`) | WS-06 closure checkpoint row recorded with evidence |
+| WS-07-T01 | Scientific Core Separation Refresh | Define refresh scope and baseline snapshot | DONE | user | none | 2026-03-18: baseline pinned in `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md` (12 indexed active surfaces; science:ceremony ratio 7:5) | Baseline snapshot and CE-03 target scope committed with tracker linkage |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
