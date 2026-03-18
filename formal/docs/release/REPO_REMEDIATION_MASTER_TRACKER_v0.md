@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-07
-- Active task: WS-07-T04
+- Active task: WS-07-T05
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -64,7 +64,7 @@ Theory work may restart only when all rows below are satisfied:
 | --- | --- | --- | --- |
 | CE-01 | Documented primary authority model with explicit residency rules across state/inventory/roadmap. | DONE | `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`, commits `b43a60e` and `484f351` |
 | CE-02 | One major repeated family reduced to shared helper or registry-driven form. | DONE | `formal/python/tests/qft_full_derivation_token_flip_dryrun_helpers.py`, `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_representative_cycles37_50_gate.py`, `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_remaining_cycles38_49_gate.py`, commits `dd9bb12` and `8fecd0e` |
-| CE-03 | Scientific core index refreshed with explicit science vs governance separation and restart subset. | TODO | Pending |
+| CE-03 | Scientific core index refreshed with explicit science vs governance separation and restart subset. | DONE | `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` sections `Separation Criteria Refresh (WS-07-T02)` and `Restart Subset Boundary (WS-07-T03)`, commits `0c48e25` and `0addd8b` |
 | CE-04 | Quarantine and deprecated gate retirement policy documented and active. | TODO | Pending |
 | CE-05 | Relevant governance and seam checks pass after simplification changes. | TODO | Pending |
 | CE-06 | Anti-regrowth guardrails committed to prevent reintroducing architecture overgrowth. | TODO | Pending |
@@ -72,7 +72,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-07-T04 | Scientific Core Separation Refresh | Apply bounded refresh update to scientific-core index and tracker CE-03 row | ACTIVE | user | WS-07-T03 | `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md` | CE-03 row is marked DONE with concrete index and commit evidence |
+| WS-07-T05 | Scientific Core Separation Refresh | Record WS-07 completion checkpoint | ACTIVE | user | WS-07-T04 | `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md` | WS-07 closure row is recorded with full evidence chain |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -116,6 +116,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-07-T01 | Scientific Core Separation Refresh | Define refresh scope and baseline snapshot | DONE | user | none | 2026-03-18: baseline pinned in `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md` (12 indexed active surfaces; science:ceremony ratio 7:5) | Baseline snapshot and CE-03 target scope committed with tracker linkage |
 | WS-07-T02 | Scientific Core Separation Refresh | Define explicit science-vs-governance separation criteria refresh | DONE | user | WS-07-T01 | 2026-03-18: `Separation Criteria Refresh (WS-07-T02)` section added in `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` and linked in WS-07 plan evidence log | Updated criteria section for scientific-core index refresh committed with bounded evidence |
 | WS-07-T03 | Scientific Core Separation Refresh | Define restart subset boundary for post-consolidation theory work | DONE | user | WS-07-T02 | 2026-03-18: `Restart Subset Boundary (WS-07-T03)` section with restart subset table (`RS-01`..`RS-07`) added in `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` and linked in WS-07 plan evidence log | Restart subset table committed with explicit inclusion and exclusion rules |
+| WS-07-T04 | Scientific Core Separation Refresh | Apply bounded refresh update to scientific-core index and tracker CE-03 row | DONE | user | WS-07-T03 | 2026-03-18: CE-03 marked DONE in consolidation exit gate and index completion anchor note added; evidence chain includes commits `0c48e25` and `0addd8b` | CE-03 row marked DONE with concrete index and commit evidence |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |

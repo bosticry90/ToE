@@ -32,13 +32,14 @@ Out of scope during WS-07:
 | WS-07-T01 | Define refresh scope and baseline snapshot | DONE | none | Baseline counts and target surface pinned in this plan | Plan file + tracker linkage |
 | WS-07-T02 | Define explicit science-vs-governance separation criteria refresh | DONE | WS-07-T01 | Updated criteria section for scientific-core index refresh | Updated index section + bounded diff evidence |
 | WS-07-T03 | Define restart subset boundary for post-consolidation theory work | DONE | WS-07-T02 | Restart subset table in scientific-core index | Section committed in index |
-| WS-07-T04 | Apply bounded refresh update to scientific-core index and tracker CE-03 row | ACTIVE | WS-07-T03 | CE-03 marked done with concrete evidence | Tracker and index updates + targeted checks |
-| WS-07-T05 | Record WS-07 completion checkpoint | TODO | WS-07-T04 | WS-07 closure row in tracker | Closure row with evidence chain |
+| WS-07-T04 | Apply bounded refresh update to scientific-core index and tracker CE-03 row | DONE | WS-07-T03 | CE-03 marked done with concrete evidence | Tracker and index updates + targeted checks |
+| WS-07-T05 | Record WS-07 completion checkpoint | ACTIVE | WS-07-T04 | WS-07 closure row in tracker | Closure row with evidence chain |
 
 ## Evidence Log
 - 2026-03-18 WS-07-T01: Baseline pinned from `SCIENTIFIC_CORE_INDEX_v0.md` (12 indexed active surfaces; science:ceremony ratio 7:5) and CE-03 target scoped.
 - 2026-03-18 WS-07-T02: Added `Separation Criteria Refresh (WS-07-T02)` section to `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` with primary decision rules, tie-break rules, and refresh application contract.
 - 2026-03-18 WS-07-T03: Added `Restart Subset Boundary (WS-07-T03)` section and restart subset table (`RS-01`..`RS-07`) to `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` with explicit inclusion and exclusion rules.
+- 2026-03-18 WS-07-T04: Updated CE-03 to DONE in `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md` and added index completion anchor note in `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md`.
 
 ## Exit Criteria
 - Scientific-core index includes explicit science vs governance separation criteria refresh.

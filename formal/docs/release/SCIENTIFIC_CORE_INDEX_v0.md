@@ -122,3 +122,4 @@ This section defines the bounded subset of surfaces eligible to anchor theory-wo
 ## Notes
 - Seed index from WS-03-T01 was expanded in WS-03-T02 to include an explicit category coverage check.
 - WS-03-T03 and WS-03-T04 lists are derived directly from primary-category criteria above.
+- WS-07-T04 completion anchor: explicit separation criteria refresh and restart subset boundary are now both present in this index and serve as CE-03 evidence inputs.
