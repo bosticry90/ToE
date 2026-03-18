@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-07
-- Active task: WS-07-T02
+- Active task: WS-07-T03
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -72,7 +72,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-07-T02 | Scientific Core Separation Refresh | Define explicit science-vs-governance separation criteria refresh | ACTIVE | user | WS-07-T01 | `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md` | Updated criteria section for scientific-core index refresh is drafted and linked |
+| WS-07-T03 | Scientific Core Separation Refresh | Define restart subset boundary for post-consolidation theory work | ACTIVE | user | WS-07-T02 | `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md` | Restart subset table is drafted in scientific-core index with explicit inclusion rules |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -114,6 +114,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-06-T04 | Repetition Reduction Phase 2 | Fold remaining selected family members to reduced pattern | DONE | user | WS-06-T03 | 2026-03-18: added reduced-pattern remaining-cycles gate `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_remaining_cycles38_49_gate.py`; bounded family-level reduced-path pytest `42 passed in 1.68s` | Family reduction committed with bounded family-level pytest evidence |
 | WS-06-T05 | Repetition Reduction Phase 2 | Record WS-06 completion checkpoint | DONE | user | WS-06-T04 | 2026-03-18: WS-06 closure checkpoint recorded with evidence chain (`e96adbb`, `dd9bb12`, `8fecd0e`) | WS-06 closure checkpoint row recorded with evidence |
 | WS-07-T01 | Scientific Core Separation Refresh | Define refresh scope and baseline snapshot | DONE | user | none | 2026-03-18: baseline pinned in `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md` (12 indexed active surfaces; science:ceremony ratio 7:5) | Baseline snapshot and CE-03 target scope committed with tracker linkage |
+| WS-07-T02 | Scientific Core Separation Refresh | Define explicit science-vs-governance separation criteria refresh | DONE | user | WS-07-T01 | 2026-03-18: `Separation Criteria Refresh (WS-07-T02)` section added in `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` and linked in WS-07 plan evidence log | Updated criteria section for scientific-core index refresh committed with bounded evidence |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
