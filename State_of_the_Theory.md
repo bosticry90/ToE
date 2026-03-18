@@ -13,6 +13,15 @@ Canonical status summary (current):
 - Packet41 disposition: HOLD_RETAINED_MISSING_NUMERIC_INPUTS
 - Scalar submission lane: READY_FOR_BOUNDED_PAPER1_SUBMISSION_PACKAGE
 
+Architecture consolidation phase checkpoint (2026-03-18):
+- Program tracker pointer: `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md`.
+- Consolidation charter pointer: `formal/docs/release/ARCHITECTURE_CONSOLIDATION_PHASE_v0.md`.
+- `ARCHITECTURE_CONSOLIDATION_PHASE_v0: ACTIVE`
+- `THEORY_WORK_POSTURE_v0: PAUSED_UNTIL_CONSOLIDATION_EXIT_GATE`
+- `CONSOLIDATION_PRIMARY_WORKSTREAM_v0: WS-05_AUTHORITY_SURFACE_CONSOLIDATION`
+- `CONSOLIDATION_EXIT_GATE_v0: HARD_BLOCK_ON_THEORY_RESTART`
+- `CONSOLIDATION_EXIT_GATE_ROWS_v0: CE-01..CE-06`
+
 Pillar status:
 - Canonical source-of-truth: formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json
 - Deep maturity posture source: formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md
