@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-08
-- Active task: none (WS-08 activation pending)
+- Active task: WS-08-T02
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -25,6 +25,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Active WS-05 baseline pointer: `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md`
 - Active WS-06 plan pointer: `formal/docs/release/WS_06_REPETITION_REDUCTION_PHASE2_PLAN_v0.md`
 - Active WS-07 plan pointer: `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md`
+- Active WS-08 plan pointer: `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md`
 
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
@@ -72,7 +73,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| none | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
+| WS-08-T02 | Governance Right-Sizing | Draft active quarantine operation policy and review cadence | ACTIVE | user | WS-08-T01 | `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` | Quarantine policy and cadence controls are explicitly documented with bounded evidence |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -118,6 +119,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-07-T03 | Scientific Core Separation Refresh | Define restart subset boundary for post-consolidation theory work | DONE | user | WS-07-T02 | 2026-03-18: `Restart Subset Boundary (WS-07-T03)` section with restart subset table (`RS-01`..`RS-07`) added in `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` and linked in WS-07 plan evidence log | Restart subset table committed with explicit inclusion and exclusion rules |
 | WS-07-T04 | Scientific Core Separation Refresh | Apply bounded refresh update to scientific-core index and tracker CE-03 row | DONE | user | WS-07-T03 | 2026-03-18: CE-03 marked DONE in consolidation exit gate and index completion anchor note added; evidence chain includes commits `0c48e25` and `0addd8b` | CE-03 row marked DONE with concrete index and commit evidence |
 | WS-07-T05 | Scientific Core Separation Refresh | Record WS-07 completion checkpoint | DONE | user | WS-07-T04 | 2026-03-18: WS-07 marked DONE and primary workstream advanced to WS-08 activation in tracker and WS-07 plan | WS-07 closure row recorded with complete evidence chain |
+| WS-08-T01 | Governance Right-Sizing | Define refresh scope and baseline snapshot | DONE | user | none | 2026-03-18: baseline pinned in `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` with WS-08 deliverable scope and tracker linkage | WS-08 baseline and bounded deliverable scope committed with tracker linkage |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
