@@ -24,6 +24,11 @@ Architecture consolidation phase checkpoint (2026-03-18, CE-05 slice activation)
 - `CONSOLIDATION_EXIT_GATE_v0: HARD_BLOCK_ON_THEORY_RESTART`
 - `CONSOLIDATION_EXIT_GATE_ROWS_v0: CE-01..CE-06`
 
+Architecture consolidation anti-regrowth closure checkpoint (2026-03-18):
+- Anti-regrowth guardrail authority pointer: `formal/docs/release/CE_06_ANTI_REGROWTH_GUARDRAILS_v0.md`.
+- `CE_06_ANTI_REGROWTH_GUARDRAILS_v0: ACTIVE`
+- `CONSOLIDATION_EXIT_GATE_CE06_STATUS_v0: DONE`
+
 Pillar status:
 - Canonical source-of-truth: formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json
 - Deep maturity posture source: formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md

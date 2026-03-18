@@ -28,6 +28,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Active WS-07 plan pointer: `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md`
 - Active WS-08 plan pointer: `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md`
 - Active WS-09 plan pointer: `formal/docs/release/WS_09_POST_SIMPLIFICATION_VERIFICATION_SWEEP_PLAN_v0.md`
+- Active CE-06 guardrail pointer: `formal/docs/release/CE_06_ANTI_REGROWTH_GUARDRAILS_v0.md`
 
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
@@ -71,7 +72,7 @@ Theory work may restart only when all rows below are satisfied:
 | CE-03 | Scientific core index refreshed with explicit science vs governance separation and restart subset. | DONE | `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` sections `Separation Criteria Refresh (WS-07-T02)` and `Restart Subset Boundary (WS-07-T03)`, commits `0c48e25` and `0addd8b` |
 | CE-04 | Quarantine and deprecated gate retirement policy documented and active. | DONE | `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` section `Active Quarantine Operation Policy (WS-08-T02)` and `formal/docs/release/DEPRECATED_GATE_RETIREMENT_POLICY_v0.md` (`Status: ACTIVE`) |
 | CE-05 | Relevant governance and seam checks pass after simplification changes. | DONE | `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md` (targeted checks `51 passed`; failing tranche reduced `11/3 -> 18/1 -> 19/0`; canonical `governance_suite.ps1` unchanged rerun `422 passed in 141.30s`) |
-| CE-06 | Anti-regrowth guardrails committed to prevent reintroducing architecture overgrowth. | TODO | Pending |
+| CE-06 | Anti-regrowth guardrails committed to prevent reintroducing architecture overgrowth. | DONE | `formal/docs/release/CE_06_ANTI_REGROWTH_GUARDRAILS_v0.md`; cross-surface references pinned in `State_of_the_Theory.md` and `formal/docs/paper/PHYSICS_ROADMAP_v0.md` |
 
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |

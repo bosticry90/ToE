@@ -34,10 +34,12 @@ Architecture consolidation governance checkpoint (2026-03-18):
 - Program tracker pointer: `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md`.
 - State surface mirror pointer: `State_of_the_Theory.md`.
 - Consolidation charter pointer: `formal/docs/release/ARCHITECTURE_CONSOLIDATION_PHASE_v0.md`.
+- Anti-regrowth guardrail authority pointer: `formal/docs/release/CE_06_ANTI_REGROWTH_GUARDRAILS_v0.md`.
 - `ARCHITECTURE_CONSOLIDATION_PHASE_v0: ACTIVE`
 - `THEORY_WORK_POSTURE_v0: PAUSED_UNTIL_CONSOLIDATION_EXIT_GATE`
 - `ROADMAP_EXECUTION_POSTURE_v0: CONSOLIDATION_ONLY`
 - `THEORY_RESTART_CONDITION_v0: ALL_EXIT_ROWS_CE-01_TO_CE-06_SATISFIED`
+- `CONSOLIDATION_EXIT_GATE_CE06_STATUS_v0: DONE`
 
 Status semantics:
 - `ACTIVE`: currently authorized pillar execution lane.
