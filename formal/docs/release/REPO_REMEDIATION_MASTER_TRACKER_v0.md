@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-08
-- Active task: WS-08-T03
+- Active task: WS-08-T04
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -66,14 +66,14 @@ Theory work may restart only when all rows below are satisfied:
 | CE-01 | Documented primary authority model with explicit residency rules across state/inventory/roadmap. | DONE | `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`, commits `b43a60e` and `484f351` |
 | CE-02 | One major repeated family reduced to shared helper or registry-driven form. | DONE | `formal/python/tests/qft_full_derivation_token_flip_dryrun_helpers.py`, `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_representative_cycles37_50_gate.py`, `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_remaining_cycles38_49_gate.py`, commits `dd9bb12` and `8fecd0e` |
 | CE-03 | Scientific core index refreshed with explicit science vs governance separation and restart subset. | DONE | `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` sections `Separation Criteria Refresh (WS-07-T02)` and `Restart Subset Boundary (WS-07-T03)`, commits `0c48e25` and `0addd8b` |
-| CE-04 | Quarantine and deprecated gate retirement policy documented and active. | TODO | Pending |
+| CE-04 | Quarantine and deprecated gate retirement policy documented and active. | DONE | `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` section `Active Quarantine Operation Policy (WS-08-T02)` and `formal/docs/release/DEPRECATED_GATE_RETIREMENT_POLICY_v0.md` (`Status: ACTIVE`) |
 | CE-05 | Relevant governance and seam checks pass after simplification changes. | TODO | Pending |
 | CE-06 | Anti-regrowth guardrails committed to prevent reintroducing architecture overgrowth. | TODO | Pending |
 
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-08-T03 | Governance Right-Sizing | Draft deprecated gate retirement policy | ACTIVE | user | WS-08-T02 | `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` | Deprecated gate retirement policy artifact with explicit disposition states is drafted and linked |
+| WS-08-T04 | Governance Right-Sizing | Identify and record governance suite simplification candidates | ACTIVE | user | WS-08-T03 | `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` | Candidate list with bounded adoption criteria is documented with evidence linkage |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -121,6 +121,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-07-T05 | Scientific Core Separation Refresh | Record WS-07 completion checkpoint | DONE | user | WS-07-T04 | 2026-03-18: WS-07 marked DONE and primary workstream advanced to WS-08 activation in tracker and WS-07 plan | WS-07 closure row recorded with complete evidence chain |
 | WS-08-T01 | Governance Right-Sizing | Define refresh scope and baseline snapshot | DONE | user | none | 2026-03-18: baseline pinned in `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` with WS-08 deliverable scope and tracker linkage | WS-08 baseline and bounded deliverable scope committed with tracker linkage |
 | WS-08-T02 | Governance Right-Sizing | Draft active quarantine operation policy and review cadence | DONE | user | WS-08-T01 | 2026-03-18: quarantine operating rules, lifecycle states, and review cadence documented in `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` with register linkage to `formal/docs/release/QUARANTINE_REGISTER_v0.md` | Quarantine policy and cadence controls are explicitly documented with bounded evidence |
+| WS-08-T03 | Governance Right-Sizing | Draft deprecated gate retirement policy | DONE | user | WS-08-T02 | 2026-03-18: retirement policy artifact `formal/docs/release/DEPRECATED_GATE_RETIREMENT_POLICY_v0.md` created with disposition states (`CANDIDATE`, `DEPRECATED`, `RETIRED`) and lifecycle/review rules | Deprecated gate retirement policy artifact with explicit disposition states is drafted and linked |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |

@@ -31,8 +31,8 @@ Out of scope during WS-08:
 | --- | --- | --- | --- | --- | --- |
 | WS-08-T01 | Define refresh scope and baseline snapshot | DONE | none | WS-08 plan baseline and bounded deliverable contract | Plan file + tracker linkage |
 | WS-08-T02 | Draft active quarantine operation policy and review cadence | DONE | WS-08-T01 | Quarantine operation policy section or artifact with cadence controls | Bounded policy text + tracker evidence row |
-| WS-08-T03 | Draft deprecated gate retirement policy | ACTIVE | WS-08-T02 | Deprecated gate retirement policy artifact with disposition states | Policy artifact + tracker evidence |
-| WS-08-T04 | Identify and record governance suite simplification candidates | TODO | WS-08-T03 | Candidate list with bounded adoption criteria | Candidate matrix + tracker evidence |
+| WS-08-T03 | Draft deprecated gate retirement policy | DONE | WS-08-T02 | Deprecated gate retirement policy artifact with disposition states | Policy artifact + tracker evidence |
+| WS-08-T04 | Identify and record governance suite simplification candidates | ACTIVE | WS-08-T03 | Candidate list with bounded adoption criteria | Candidate matrix + tracker evidence |
 | WS-08-T05 | Record WS-08 completion checkpoint | TODO | WS-08-T04 | WS-08 closure row in tracker | Closure row with evidence chain |
 
 ## Active Quarantine Operation Policy (WS-08-T02)
@@ -62,6 +62,7 @@ This policy governs how quarantine rows are added, reviewed, and transitioned wh
 ## Evidence Log
 - 2026-03-18 WS-08-T01: Created WS-08 workstream plan, pinned baseline references, and linked tracker activation to this plan.
 - 2026-03-18 WS-08-T02: Added explicit quarantine operation policy and review cadence section in this plan, anchored to `formal/docs/release/QUARANTINE_REGISTER_v0.md` maintenance rules and lifecycle controls.
+- 2026-03-18 WS-08-T03: Added deprecated gate retirement policy artifact `formal/docs/release/DEPRECATED_GATE_RETIREMENT_POLICY_v0.md` with explicit disposition states, lifecycle rules, and review cadence.
 
 ## Exit Criteria
 - Quarantine operation policy and cadence are explicit and auditable.
