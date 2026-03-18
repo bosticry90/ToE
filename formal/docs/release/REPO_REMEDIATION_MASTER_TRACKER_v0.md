@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-09
-- Active task: WS-09-T03
+- Active task: WS-09-T04
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -76,7 +76,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-09-T03 | Post-Simplification Verification Sweep | Run targeted post-simplification checks | ACTIVE | user | WS-09-T02 | `formal/docs/release/WS_09_POST_SIMPLIFICATION_VERIFICATION_SWEEP_PLAN_v0.md` | Targeted architecture/authority/seam representative checks pass and are recorded with command evidence |
+| WS-09-T04 | Post-Simplification Verification Sweep | Run governance suite checkpoint | ACTIVE | user | WS-09-T03 | `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md` | Governance suite command and pass result are recorded in CE-05 checkpoint artifact |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -129,6 +129,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-08-T05 | Governance Right-Sizing | Record WS-08 completion checkpoint | DONE | user | WS-08-T04 | 2026-03-18: WS-08 marked DONE in tracker and WS-08 plan closure checkpoint recorded with evidence chain (`ea34c61`, `7d262c9`, `28b5ba9`, `601c9ff`) | WS-08 closure row is recorded with full evidence chain |
 | WS-09-T01 | Post-Simplification Verification Sweep | Align compact state surface with tracker checkpoint fields | DONE | user | none | 2026-03-18: aligned consolidation primary workstream/active task/checkpoint wording between `State_of_the_Theory.md` and tracker while opening CE-05 slice | Compact state checkpoint fields match active tracker authority for CE-05 kickoff |
 | WS-09-T02 | Post-Simplification Verification Sweep | Define bounded CE-05 validation matrix | DONE | user | WS-09-T01 | 2026-03-18: CE-05 bounded validation matrix and command ladder recorded in `formal/docs/release/WS_09_POST_SIMPLIFICATION_VERIFICATION_SWEEP_PLAN_v0.md` | Validation matrix maps required bounded checks and command set for CE-05 evidence |
+| WS-09-T03 | Post-Simplification Verification Sweep | Run targeted post-simplification checks | DONE | user | WS-09-T02 | 2026-03-18: targeted command set executed with result `51 passed in 4.19s`; evidence recorded in `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md` | Targeted architecture/authority/seam representative checks pass and are recorded with command evidence |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
