@@ -13,13 +13,13 @@
 Establish a bounded remediation program with explicit workstreams, blockers, evidence, and hard exit criteria. This tracker is the canonical top-level source of truth for active, blocked, completed, and next work.
 
 ## Current Status
-- Primary workstream: WS-07
-- Active task: WS-07-T05
+- Primary workstream: WS-08
+- Active task: none (WS-08 activation pending)
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
-- WS-07: ACTIVE
-- WS-08: TODO (architecture consolidation phase)
+- WS-07: DONE
+- WS-08: ACTIVE (architecture consolidation phase)
 - Program state: ACTIVE
 - Active WS-05 plan pointer: `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`
 - Active WS-05 baseline pointer: `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md`
@@ -35,8 +35,8 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 | WS-04 | Math and Evidence Deepening | DONE | NO | Deepen theorem content and broaden empirical confrontation. |
 | WS-05 | Authority Surface Consolidation | DONE | NO | Define primary authority residency and reduce cross-surface coordination burden. |
 | WS-06 | Repetition Reduction Phase 2 | DONE | NO | Consolidate repeated gate families using shared helpers and registry-driven tests. |
-| WS-07 | Scientific Core Separation Refresh | ACTIVE | YES | Refresh scientific-core tagging and restart subset boundaries for theory work. |
-| WS-08 | Governance Right-Sizing | TODO | NO | Operationalize quarantine and retirement controls while preserving rigor. |
+| WS-07 | Scientific Core Separation Refresh | DONE | NO | Refresh scientific-core tagging and restart subset boundaries for theory work. |
+| WS-08 | Governance Right-Sizing | ACTIVE | YES | Operationalize quarantine and retirement controls while preserving rigor. |
 
 ## Status Labels
 - TODO
@@ -72,7 +72,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-07-T05 | Scientific Core Separation Refresh | Record WS-07 completion checkpoint | ACTIVE | user | WS-07-T04 | `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md` | WS-07 closure row is recorded with full evidence chain |
+| none | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -117,6 +117,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-07-T02 | Scientific Core Separation Refresh | Define explicit science-vs-governance separation criteria refresh | DONE | user | WS-07-T01 | 2026-03-18: `Separation Criteria Refresh (WS-07-T02)` section added in `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` and linked in WS-07 plan evidence log | Updated criteria section for scientific-core index refresh committed with bounded evidence |
 | WS-07-T03 | Scientific Core Separation Refresh | Define restart subset boundary for post-consolidation theory work | DONE | user | WS-07-T02 | 2026-03-18: `Restart Subset Boundary (WS-07-T03)` section with restart subset table (`RS-01`..`RS-07`) added in `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` and linked in WS-07 plan evidence log | Restart subset table committed with explicit inclusion and exclusion rules |
 | WS-07-T04 | Scientific Core Separation Refresh | Apply bounded refresh update to scientific-core index and tracker CE-03 row | DONE | user | WS-07-T03 | 2026-03-18: CE-03 marked DONE in consolidation exit gate and index completion anchor note added; evidence chain includes commits `0c48e25` and `0addd8b` | CE-03 row marked DONE with concrete index and commit evidence |
+| WS-07-T05 | Scientific Core Separation Refresh | Record WS-07 completion checkpoint | DONE | user | WS-07-T04 | 2026-03-18: WS-07 marked DONE and primary workstream advanced to WS-08 activation in tracker and WS-07 plan | WS-07 closure row recorded with complete evidence chain |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
