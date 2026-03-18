@@ -57,7 +57,9 @@ Why first:
 
 ## Progress Update
 - 2026-03-18 WS-09-T04B Family-A slice completed: `State_of_the_Theory.md` parity blocks restored and focused Family-A subset run passed (`12 passed in 5.61s`).
-- Families B and C remain pending before full 14-test subset rerun and canonical governance rerun.
+- 2026-03-18 Full 14-node failing-tranche rerun after commit `c677152`: `11 passed, 3 failed`.
+- Residual split: Family-B pillar/status consistency (2 failures) and Family-C conftest/signature stability (1 failure).
+- Next bounded slice opened: Family-B.
 
 ## Expected Verification Commands
 Failing subset (exact 14 tests):

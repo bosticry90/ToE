@@ -58,6 +58,24 @@ Scope note:
 - This run covers Family-A authority/state parity repairs only.
 - Family-B pillar/status consistency and Family-C conftest/signature stability remain pending before full failing-subset and canonical governance reruns.
 
+### WS-09-T04B Full 14-Test Tranche Rerun (post Family-A commit)
+Command:
+- `python snippet runner: load node IDs from scratch/ce05_failed_tests_exact.txt (strip FAILED prefix) and execute pytest -q over exact 14 nodes`
+
+Result:
+- `11 passed, 3 failed in 2.40s`
+- Exit status: failed (`EXIT_CODE=1`)
+
+Remaining failing tests:
+- `formal/python/tests/test_pillar_status_matrix_consistency_gate.py::test_pillar_status_matrix_qft_entry_matches_state_tokens`
+- `formal/python/tests/test_pillar_phase_advancement_gate.py::test_registry_drives_pillar_phase_advancement_semantics`
+- `formal/python/tests/test_conftest_signature_stability_gate.py::test_conftest_signature_matches_protocol_pin`
+
+Residual-family split:
+- Family-B pillar/status consistency: 2 failures.
+- Family-C conftest/signature stability: 1 failure.
+- Next bounded slice opened: Family-B (per triage remediation order).
+
 ## Closure Criteria
 - Targeted checks pass and are recorded with command text and pass counts.
 - Governance suite passes and is recorded with command text and result.

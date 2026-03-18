@@ -76,7 +76,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-09-T04B | Post-Simplification Verification Sweep | Remediate smallest shared governance-tranche root-cause family | ACTIVE | user | WS-09-T04A | `formal/docs/release/WS_09_T04A_FAILING_GOVERNANCE_TRANCHE_TRIAGE_NOTE_v0.md`; `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md` (Family-A slice: `12 passed in 5.61s`) | Authority/state parity root-cause family is repaired and failing subset count decreases |
+| WS-09-T04B | Post-Simplification Verification Sweep | Remediate smallest shared governance-tranche root-cause family | ACTIVE | user | WS-09-T04A | `formal/docs/release/WS_09_T04A_FAILING_GOVERNANCE_TRANCHE_TRIAGE_NOTE_v0.md`; commit `c677152`; `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md` (full 14-node rerun: `11 passed, 3 failed`) | Family-B pillar/status consistency slice is repaired and remaining failing subset decreases from 3 to <=1 |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |

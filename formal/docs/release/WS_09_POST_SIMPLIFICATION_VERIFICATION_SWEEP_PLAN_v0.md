@@ -37,7 +37,7 @@ Out of scope during WS-09:
 | ID | Task | Status | Blocked By | Deliverable | Evidence Required |
 | --- | --- | --- | --- | --- | --- |
 | WS-09-T04A | Create failing-governance-tranche triage note | DONE | none | Failure inventory, grouped root causes, remediation order, verification commands | Triage note committed and linked in tracker/plan |
-| WS-09-T04B | Remediate smallest shared root-cause family first | ACTIVE | WS-09-T04A | Authority/state parity family fix slice | Failing subset reduced with bounded diff evidence |
+| WS-09-T04B | Remediate smallest shared root-cause family first | ACTIVE | WS-09-T04A | Family-B pillar/status consistency fix slice | Remaining failing subset decreases from 3 to <=1 with bounded diff evidence |
 | WS-09-T04C | Re-run failing subset then canonical governance suite | TODO | WS-09-T04B | Green subset + green canonical governance suite | Command outputs recorded in CE-05 checkpoint artifact |
 
 ## CE-05 Bounded Validation Matrix (WS-09-T02)
@@ -60,6 +60,7 @@ Execution contract:
 - 2026-03-18 WS-09-T04: First governance suite invocation failed at divergence guardrail (`ahead_count=24`, limit `20`); after divergence resolution and rerun, canonical suite still failed at governance pytest tranche (`14 failed, 408 passed`), recorded in CE-05 checkpoint artifact and run log.
 - 2026-03-18 WS-09-T04A: Added `formal/docs/release/WS_09_T04A_FAILING_GOVERNANCE_TRANCHE_TRIAGE_NOTE_v0.md` with exact 14 failing tests, grouped failure families, remediation order, and expected verification commands.
 - 2026-03-18 WS-09-T04B (Family-A slice): Restored required authority/state parity `ID` and `GapID` blocks in `State_of_the_Theory.md`; Family-A validation subset passed (`12 passed in 5.61s`) and was recorded in `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md`.
+- 2026-03-18 WS-09-T04B full failing-tranche rerun (post commit `c677152`): exact 14-node subset returned `11 passed, 3 failed`; residual failures split into Family-B (2) and Family-C (1). Next bounded slice opened: Family-B.
 
 ## Exit Criteria
 - CE-05 validation matrix is explicit and bounded.
