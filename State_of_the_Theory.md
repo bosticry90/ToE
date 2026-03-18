@@ -3324,6 +3324,98 @@ Archived historical progression moved to:
 
 This authority surface intentionally keeps only current-state decision posture and canonical pointers.
 
+## Family-A State Parity Restore (WS-09-T04B)
+
+ID: OV-CV-01
+Status: Active comparator lane
+Evidence: formal/python/toe/comparators/cv01_bec_bragg_v1.py; formal/python/tests/test_cv01_bec_bragg_v1_front_door.py
+Dependencies: OV-01g
+
+
+ID: OV-CV-BR-01
+Status: Active pruning bridge lane
+Evidence: formal/markdown/locks/observables/OV-CV-BR-01_cv01_v1_pruning_bridge.md; formal/markdown/locks/observables/OV-CV-BR-01_cv01_v1_pruning_bridge_NEG_CONTROL.md; formal/python/toe/observables/ovcvbr01_cv01_v1_pruning_bridge_record.py
+Dependencies: OV-CV-01
+
+
+ID: DRBR-DOMAIN-02
+Status: Active bounded domain lane
+Evidence: formal/docs/second_empirical_comparator_domain_bec_bragg_b1.md; formal/python/toe/comparators/cv02_bec_bragg_b1_v0.py
+Dependencies: DR-02
+
+
+ID: OV-CV-02
+Status: Active second comparator lane
+Evidence: formal/python/toe/comparators/cv02_bec_bragg_b1_v0.py; formal/python/tests/test_cv02_bec_bragg_b1_front_door.py
+Dependencies: DRBR-DOMAIN-02
+
+
+ID: POL-01
+Status: Active mainline policy lane
+Evidence: formal/python/toe/comparators/comparator_rep_interpretability_manifest.json; formal/python/tests/test_state_doc_mainline_does_not_depend_on_variantA.py
+Dependencies: OV-01g, DQ-01
+
+GapID: COMP-FN-REP
+Status: In progress; Rep64 lane build-verified
+Scope: FN representation policy governance wiring
+Evidence path: formal/toe_formal/ToeFormal/Variational/FNRepresentationEquivalencePolicy.lean; formal/toe_formal/ToeFormal/Variational/ActionRep64CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep64Pcubic.lean; formal/python/tests/test_lean_fn01_rep64_build_guard.py; formal/python/tests/test_comparator_rep_policy_gate.py; formal/python/toe/constraints/fn_rep_equivalence_policy.json; formal/python/toe/comparators/comparator_rep_interpretability_manifest.json
+Notes: within_rep_only; FN_REP_EQ_POLICY_V1
+Exit criteria: policy lane wiring remains versioned and test-gated
+
+GapID: COMP-FN-REP32-64-EQUIV
+Status: Implemented
+Scope: Rep32/Rep64 equivalence stability
+Evidence path: formal/toe_formal/ToeFormal/Variational/FNRep32Rep64Equivalence.lean; formal/python/tests/test_lean_fn_rep32_rep64_equivalence_build_guard.py; formal/python/toe/comparators/comparator_rep_interpretability_manifest.json; formal/python/tests/test_comparator_rep_policy_gate.py
+Notes: cross_rep_equivalent; FN_REP_EQ_POLICY_V1
+Exit criteria: equivalence remains lockstep under policy manifest freeze
+
+GapID: COMP-FN-REP32-LINK
+Status: Implemented with build guard
+Scope: Rep32 lane linkage to FN01 discharge
+Evidence path: formal/toe_formal/ToeFormal/Variational/ActionRep32CubicLane.lean; formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep32Pcubic.lean; formal/python/tests/test_lean_fn01_rep32_build_guard.py; formal/python/tests/test_fn01_candidate_api_enforced.py
+Notes: Rep32 lane linkage is explicit and regression-gated
+Exit criteria: versioned compile guard and lane tests remain green
+
+GapID: COMP-FN-REP-NONALIAS-EQUIV-01
+Status: Discharged; structural-only
+Scope: Non-alias equivalence for cross-representation admission
+Evidence path: formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean; formal/python/tests/test_lean_fn_rep_nonalias_equivalence01_build_guard.py
+Notes: eligibleForCrossRep; comparatorSurfaceNonAlias_eligible; diagnosticNonAlias_not_eligible
+Exit criteria: non-alias equivalence remains structural and regression-only reopen
+
+GapID: COMP-03
+Status: Implemented
+Scope: CV03 UCFF dispersion comparator front-door lane
+Evidence path: formal/python/toe/comparators/cv03_ucff_dispersion_v1.py; formal/python/tests/test_cv03_ucff_dispersion_v1_front_door.py; formal/python/tests/test_cv03_ucff_dispersion_v1_surface_contract_freeze.py; formal/docs/cv03_ucff_dispersion_v1_front_door_contract.md
+Notes: UCFF lane promoted to implemented comparator surface
+Exit criteria: front-door contract and surface freeze remain stable
+
+GapID: COMP-05
+Status: Lifted
+Scope: Lifted into COMP-03/OV-CV-03 UCFF active lane
+Evidence path: formal/python/toe/comparators/cv03_ucff_dispersion_v1.py; formal/docs/cv03_ucff_dispersion_v1_front_door_contract.md
+Notes: superseded by active CV03 UCFF lane
+Exit criteria: remains lifted while COMP-03/OV-CV-03 UCFF lane is canonical
+
+GapID: COMP-PRED-FALS
+Status: Active falsification lane
+Scope: Comparator falsification wiring for CV01 bridge, CV02 domain, and CV03 UCFF
+Evidence path: formal/python/toe/comparators/cv01_bec_bragg_v1.py; formal/python/toe/observables/ovcvbr01_cv01_v1_pruning_bridge_record.py; formal/markdown/locks/observables/OV-CV-BR-01_cv01_v1_pruning_bridge.md; formal/python/toe/comparators/cv02_bec_bragg_b1_v0.py; formal/docs/second_empirical_comparator_domain_bec_bragg_b1.md; formal/python/toe/comparators/cv03_ucff_dispersion_v1.py; formal/python/tests/test_cv03_ucff_dispersion_v1_front_door.py; formal/python/tests/test_cv03_ucff_dispersion_v1_surface_contract_freeze.py; formal/docs/cv03_ucff_dispersion_v1_front_door_contract.md
+Notes: lane wiring preserved under single evidence-path field
+Exit criteria: falsification lanes remain pointer-stable and gated
+
+GapID: COMP-EVOL-LINK
+Status: Discharged; build-verified
+Scope: Evolution-generator linkage through declared dynamics
+Evidence path: formal/toe_formal/ToeFormal/Variational/EvolutionGeneratorLaw.lean; formal/toe_formal/ToeFormal/Variational/SemigroupWithGenerator.lean; formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean; formal/toe_formal/ToeFormal/Variational/EvolutionDeclared.lean; formal/toe_formal/ToeFormal/Variational/DeclaredDynamics.lean; formal/python/tests/test_lean_evolution_generator_linkage.py; formal/python/tests/test_lean_declared_dynamics_bridge.py; formal/python/tests/test_lean_variational_core_build_guard.py
+Notes: Type-level generator link is explicit in declared evolution and dynamics surfaces
+Exit criteria: build-verified Lean linkage remains stable
+
+GR continuum cycle10 criteria parity pointers:
+- formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md
+- formal/output/gr_continuum_discharge_criteria_cycle10_v0.json
+- formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py
+
 ## END_ARCHIVED_HISTORY
 
 

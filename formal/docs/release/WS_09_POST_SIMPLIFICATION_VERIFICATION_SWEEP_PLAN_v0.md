@@ -59,6 +59,7 @@ Execution contract:
 - 2026-03-18 WS-09-T03: Ran bounded targeted checks and recorded `51 passed in 4.19s` in `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md`.
 - 2026-03-18 WS-09-T04: First governance suite invocation failed at divergence guardrail (`ahead_count=24`, limit `20`); after divergence resolution and rerun, canonical suite still failed at governance pytest tranche (`14 failed, 408 passed`), recorded in CE-05 checkpoint artifact and run log.
 - 2026-03-18 WS-09-T04A: Added `formal/docs/release/WS_09_T04A_FAILING_GOVERNANCE_TRANCHE_TRIAGE_NOTE_v0.md` with exact 14 failing tests, grouped failure families, remediation order, and expected verification commands.
+- 2026-03-18 WS-09-T04B (Family-A slice): Restored required authority/state parity `ID` and `GapID` blocks in `State_of_the_Theory.md`; Family-A validation subset passed (`12 passed in 5.61s`) and was recorded in `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md`.
 
 ## Exit Criteria
 - CE-05 validation matrix is explicit and bounded.

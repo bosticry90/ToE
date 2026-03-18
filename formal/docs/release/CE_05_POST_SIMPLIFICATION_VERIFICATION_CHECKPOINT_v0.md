@@ -46,6 +46,18 @@ Follow-up status:
 	- `formal/python/tests/test_conftest_signature_stability_gate.py`
 - Current blocker state: canonical governance suite remains red under normal semantics; CE-05 cannot close.
 
+### WS-09-T04B Family-A Slice Validation
+Command:
+- `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest formal/python/tests/test_state_doc_comp_fn_rep_policy.py formal/python/tests/test_state_doc_comp_fn_rep32_64_equiv.py formal/python/tests/test_state_doc_comp_fn_rep32_link_discharge.py formal/python/tests/test_state_doc_comp_fn_rep_nonalias_equivalence01.py formal/python/tests/test_state_doc_comp03_comp05_transition.py formal/python/tests/test_state_doc_comp_evol_link_discharge.py formal/python/tests/test_state_doc_cv_lane_wiring.py formal/python/tests/test_state_doc_mainline_does_not_depend_on_variantA.py formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py -q`
+
+Result:
+- `12 passed in 5.61s`
+- Exit status: success
+
+Scope note:
+- This run covers Family-A authority/state parity repairs only.
+- Family-B pillar/status consistency and Family-C conftest/signature stability remain pending before full failing-subset and canonical governance reruns.
+
 ## Closure Criteria
 - Targeted checks pass and are recorded with command text and pass counts.
 - Governance suite passes and is recorded with command text and result.

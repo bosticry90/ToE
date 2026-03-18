@@ -55,6 +55,10 @@ Why first:
 4. Re-run failing subset.
 5. Re-run `governance_suite.ps1` unchanged.
 
+## Progress Update
+- 2026-03-18 WS-09-T04B Family-A slice completed: `State_of_the_Theory.md` parity blocks restored and focused Family-A subset run passed (`12 passed in 5.61s`).
+- Families B and C remain pending before full 14-test subset rerun and canonical governance rerun.
+
 ## Expected Verification Commands
 Failing subset (exact 14 tests):
 - `./py.ps1 -m pytest -q formal/python/tests/test_state_doc_comp_fn_rep_policy.py formal/python/tests/test_state_doc_comp_fn_rep32_64_equiv.py formal/python/tests/test_state_doc_comp_fn_rep32_link_discharge.py formal/python/tests/test_state_doc_comp_fn_rep_nonalias_equivalence01.py formal/python/tests/test_state_doc_comp03_comp05_transition.py formal/python/tests/test_state_doc_comp_evol_link_discharge.py formal/python/tests/test_state_doc_cv_lane_wiring.py formal/python/tests/test_state_doc_mainline_does_not_depend_on_variantA.py formal/python/tests/test_pillar_status_matrix_consistency_gate.py formal/python/tests/test_pillar_phase_advancement_gate.py formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py formal/python/tests/test_conftest_signature_stability_gate.py`
