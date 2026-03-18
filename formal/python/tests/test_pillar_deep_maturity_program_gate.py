@@ -17,6 +17,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 PROGRAM_PATH = REPO_ROOT / "formal" / "docs" / "release" / "PILLAR_DEEP_MATURITY_PROGRAM_v0.md"
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "PILLAR_DEEP_MATURITY_REGISTRY_v0.json"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PILLAR_STATUS_MATRIX_v1.json"
 
@@ -44,7 +45,7 @@ def _read_json(path: Path) -> dict:
 def test_deep_maturity_program_pointers_and_tokens_are_pinned() -> None:
     program_text = _read(PROGRAM_PATH)
     roadmap_text = _read(ROADMAP_PATH)
-    state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     for token in (
         "PILLAR_DEEP_MATURITY_PROGRAM_v0",
@@ -118,7 +119,7 @@ def test_deep_maturity_program_pointers_and_tokens_are_pinned() -> None:
     ):
         assert token in program_text, f"Deep maturity program missing token `{token}`."
 
-    for surface_text, label in ((roadmap_text, "roadmap"), (state_text, "state")):
+    for surface_text, label in ((roadmap_text, "roadmap"), (inventory_text, "inventory")):
         assert PROGRAM_REL in surface_text, f"{label} must pin deep maturity program pointer."
         assert REGISTRY_REL in surface_text, f"{label} must pin deep maturity registry pointer."
         assert GATE_REL in surface_text, f"{label} must pin deep maturity gate pointer."

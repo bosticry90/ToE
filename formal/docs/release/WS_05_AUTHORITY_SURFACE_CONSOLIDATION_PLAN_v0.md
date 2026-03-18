@@ -33,14 +33,15 @@ Out of scope during WS-05:
 | --- | --- | --- | --- | --- | --- |
 | WS-05-T01 | Write and ratify authority residency model | DONE | none | Residency model in this plan + tracker linkage | File commit + tracker row update |
 | WS-05-T02 | Baseline representative canonical-change coordination cost | DONE | WS-05-T01 | Before-state touch matrix (3 workflows) | `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md` |
-| WS-05-T03 | Select and remove one repeated cross-surface fallback pattern | ACTIVE | WS-05-T02 | Removed fallback pattern and explicit replacement rule | Diff + targeted gate run |
-| WS-05-T04 | Align authority consistency gate expectations to residency model | TODO | WS-05-T03 | Updated gate assumptions for authority vs pointer roles | Targeted pytest output |
+| WS-05-T03 | Select and remove one repeated cross-surface fallback pattern | DONE | WS-05-T02 | Removed fallback pattern and explicit replacement rule | Diff + targeted gate run |
+| WS-05-T04 | Align authority consistency gate expectations to residency model | ACTIVE | WS-05-T03 | Updated gate assumptions for authority vs pointer roles | Targeted pytest output |
 | WS-05-T05 | Record WS-05 completion checkpoint | TODO | WS-05-T04 | WS-05 closure row in master tracker | Exit criteria all satisfied |
 
 ## Evidence Log
 
 - 2026-03-18 WS-05-T01: Residency model drafted and linked in this plan; tracker linkage active.
 - 2026-03-18 WS-05-T02: Baseline matrix committed in `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md` with conservative before-state touch/edit counts for WF-01 through WF-03.
+- 2026-03-18 WS-05-T03: Removed one repeated fallback pattern for deep-maturity pointer parity by shifting enforcement from roadmap+state duplication to roadmap+central-inventory residency in `formal/python/tests/test_pillar_deep_maturity_program_gate.py`; compact-state duplicate deep-maturity pointer rows removed from `State_of_the_Theory.md`.
 
 ## Candidate Baseline Workflows for WS-05-T02
 1. Pillar status promotion workflow.
