@@ -13,12 +13,13 @@
 Establish a bounded remediation program with explicit workstreams, blockers, evidence, and hard exit criteria. This tracker is the canonical top-level source of truth for active, blocked, completed, and next work.
 
 ## Current Status
-- Primary workstream: WS-06
-- Active task: WS-06-T05
+- Primary workstream: WS-07
+- Active task: none
 - WS-01 through WS-04: DONE
 - WS-05: DONE
-- WS-06: ACTIVE
-- WS-07 through WS-08: TODO (architecture consolidation phase)
+- WS-06: DONE
+- WS-07: ACTIVE
+- WS-08: TODO (architecture consolidation phase)
 - Program state: ACTIVE
 - Active WS-05 plan pointer: `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`
 - Active WS-05 baseline pointer: `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md`
@@ -61,7 +62,7 @@ Theory work may restart only when all rows below are satisfied:
 | Exit ID | Requirement | Status | Evidence |
 | --- | --- | --- | --- |
 | CE-01 | Documented primary authority model with explicit residency rules across state/inventory/roadmap. | DONE | `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`, commits `b43a60e` and `484f351` |
-| CE-02 | One major repeated family reduced to shared helper or registry-driven form. | TODO | Pending |
+| CE-02 | One major repeated family reduced to shared helper or registry-driven form. | DONE | `formal/python/tests/qft_full_derivation_token_flip_dryrun_helpers.py`, `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_representative_cycles37_50_gate.py`, `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_remaining_cycles38_49_gate.py`, commits `dd9bb12` and `8fecd0e` |
 | CE-03 | Scientific core index refreshed with explicit science vs governance separation and restart subset. | TODO | Pending |
 | CE-04 | Quarantine and deprecated gate retirement policy documented and active. | TODO | Pending |
 | CE-05 | Relevant governance and seam checks pass after simplification changes. | TODO | Pending |
@@ -70,7 +71,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-06-T05 | Repetition Reduction Phase 2 | Record WS-06 completion checkpoint | ACTIVE | user | WS-06-T04 | `formal/docs/release/WS_06_REPETITION_REDUCTION_PHASE2_PLAN_v0.md` | WS-06 closure checkpoint row recorded with evidence |
+| none | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -110,6 +111,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-06-T02 | Repetition Reduction Phase 2 | Define reduction contract and helper interface | DONE | user | WS-06-T01 | 2026-03-18: helper API and full cycle mapping drafted in `formal/docs/release/WS_06_DRYRUN_TOKEN_FLIP_FAMILY_MAPPING_v0.md`; plan updated to activate WS-06-T03 | Helper API and parametrization contract drafted for selected family |
 | WS-06-T03 | Repetition Reduction Phase 2 | Implement shared helper and representative parametrized gate | DONE | user | WS-06-T02 | 2026-03-18: added shared helper `formal/python/tests/qft_full_derivation_token_flip_dryrun_helpers.py` and representative parametrized gate `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_representative_cycles37_50_gate.py`; targeted pytest `6 passed in 0.73s` | First reduced slice committed with targeted pytest evidence |
 | WS-06-T04 | Repetition Reduction Phase 2 | Fold remaining selected family members to reduced pattern | DONE | user | WS-06-T03 | 2026-03-18: added reduced-pattern remaining-cycles gate `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_remaining_cycles38_49_gate.py`; bounded family-level reduced-path pytest `42 passed in 1.68s` | Family reduction committed with bounded family-level pytest evidence |
+| WS-06-T05 | Repetition Reduction Phase 2 | Record WS-06 completion checkpoint | DONE | user | WS-06-T04 | 2026-03-18: WS-06 closure checkpoint recorded with evidence chain (`e96adbb`, `dd9bb12`, `8fecd0e`) | WS-06 closure checkpoint row recorded with evidence |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
