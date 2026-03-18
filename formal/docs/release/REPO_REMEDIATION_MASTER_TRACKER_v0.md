@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-08
-- Active task: WS-08-T04
+- Active task: WS-08-T05
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -73,7 +73,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-08-T04 | Governance Right-Sizing | Identify and record governance suite simplification candidates | ACTIVE | user | WS-08-T03 | `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` | Candidate list with bounded adoption criteria is documented with evidence linkage |
+| WS-08-T05 | Governance Right-Sizing | Record WS-08 completion checkpoint | ACTIVE | user | WS-08-T04 | `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` | WS-08 closure row is recorded with full evidence chain |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -122,6 +122,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-08-T01 | Governance Right-Sizing | Define refresh scope and baseline snapshot | DONE | user | none | 2026-03-18: baseline pinned in `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` with WS-08 deliverable scope and tracker linkage | WS-08 baseline and bounded deliverable scope committed with tracker linkage |
 | WS-08-T02 | Governance Right-Sizing | Draft active quarantine operation policy and review cadence | DONE | user | WS-08-T01 | 2026-03-18: quarantine operating rules, lifecycle states, and review cadence documented in `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` with register linkage to `formal/docs/release/QUARANTINE_REGISTER_v0.md` | Quarantine policy and cadence controls are explicitly documented with bounded evidence |
 | WS-08-T03 | Governance Right-Sizing | Draft deprecated gate retirement policy | DONE | user | WS-08-T02 | 2026-03-18: retirement policy artifact `formal/docs/release/DEPRECATED_GATE_RETIREMENT_POLICY_v0.md` created with disposition states (`CANDIDATE`, `DEPRECATED`, `RETIRED`) and lifecycle/review rules | Deprecated gate retirement policy artifact with explicit disposition states is drafted and linked |
+| WS-08-T04 | Governance Right-Sizing | Identify and record governance suite simplification candidates | DONE | user | WS-08-T03 | 2026-03-18: candidate matrix `formal/docs/release/WS_08_GOVERNANCE_SUITE_SIMPLIFICATION_CANDIDATES_v0.md` added with bounded adoption criteria and rollout guardrails derived from current governance suite script surfaces | Candidate list with bounded adoption criteria is documented with evidence linkage |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
