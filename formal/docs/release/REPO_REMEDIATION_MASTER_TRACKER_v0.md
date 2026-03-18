@@ -13,14 +13,16 @@
 Establish a bounded remediation program with explicit workstreams, blockers, evidence, and hard exit criteria. This tracker is the canonical top-level source of truth for active, blocked, completed, and next work.
 
 ## Current Status
-- Primary workstream: none
-- Active task: none
+- Primary workstream: WS-06
+- Active task: WS-06-T02
 - WS-01 through WS-04: DONE
 - WS-05: DONE
-- WS-06 through WS-08: TODO (architecture consolidation phase)
+- WS-06: ACTIVE
+- WS-07 through WS-08: TODO (architecture consolidation phase)
 - Program state: ACTIVE
 - Active WS-05 plan pointer: `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`
 - Active WS-05 baseline pointer: `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md`
+- Active WS-06 plan pointer: `formal/docs/release/WS_06_REPETITION_REDUCTION_PHASE2_PLAN_v0.md`
 
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
@@ -30,7 +32,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 | WS-03 | Scientific Core Separation | DONE | NO | Separate scientific-core surfaces from governance-heavy surfaces. |
 | WS-04 | Math and Evidence Deepening | DONE | NO | Deepen theorem content and broaden empirical confrontation. |
 | WS-05 | Authority Surface Consolidation | DONE | NO | Define primary authority residency and reduce cross-surface coordination burden. |
-| WS-06 | Repetition Reduction Phase 2 | TODO | NO | Consolidate repeated gate families using shared helpers and registry-driven tests. |
+| WS-06 | Repetition Reduction Phase 2 | ACTIVE | YES | Consolidate repeated gate families using shared helpers and registry-driven tests. |
 | WS-07 | Scientific Core Separation Refresh | TODO | NO | Refresh scientific-core tagging and restart subset boundaries for theory work. |
 | WS-08 | Governance Right-Sizing | TODO | NO | Operationalize quarantine and retirement controls while preserving rigor. |
 
@@ -68,7 +70,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| none | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
+| WS-06-T02 | Repetition Reduction Phase 2 | Define reduction contract and helper interface | ACTIVE | user | WS-06-T01 | `formal/docs/release/WS_06_REPETITION_REDUCTION_PHASE2_PLAN_v0.md` | Helper API and parametrization contract drafted for selected family |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -104,6 +106,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-05-T03 | Authority Surface Consolidation | Select and remove one repeated cross-surface fallback pattern | DONE | user | WS-05-T02 | 2026-03-18: `formal/python/tests/test_pillar_deep_maturity_program_gate.py` and `State_of_the_Theory.md` updated; targeted gate run `2 passed in 0.93s`; commit `b43a60e` | One repeated fallback pattern removed and replacement rule committed with bounded gate evidence |
 | WS-05-T04 | Authority Surface Consolidation | Align authority consistency gate expectations to residency model | DONE | user | WS-05-T03 | 2026-03-18: `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py` aligned and verified `2 passed in 0.73s`; commit `484f351` | At least one authority consistency gate family aligned to residency model and passes bounded verification |
 | WS-05-T05 | Authority Surface Consolidation | Record WS-05 completion checkpoint | DONE | user | WS-05-T04 | 2026-03-18: WS-05 closure checkpoint row recorded with evidence chain (`51c9a65`, `b43a60e`, `484f351`) | WS-05 closure checkpoint row recorded with evidence |
+| WS-06-T01 | Repetition Reduction Phase 2 | Select repeated family and baseline clone surface | DONE | user | none | 2026-03-18: selected family `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_*_cycle*_gate.py`, baseline count 14 files, plan `formal/docs/release/WS_06_REPETITION_REDUCTION_PHASE2_PLAN_v0.md` | Selected family and baseline documented with tracker linkage |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
