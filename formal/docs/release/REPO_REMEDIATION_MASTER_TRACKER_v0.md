@@ -13,19 +13,21 @@
 Establish a bounded remediation program with explicit workstreams, blockers, evidence, and hard exit criteria. This tracker is the canonical top-level source of truth for active, blocked, completed, and next work.
 
 ## Current Status
-- Primary workstream: none (next consolidation slice definition pending)
-- Active task: none
+- Primary workstream: WS-09
+- Active task: WS-09-T02
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
 - WS-07: DONE
 - WS-08: DONE (architecture consolidation phase)
+- WS-09: ACTIVE (CE-05 post-simplification verification sweep)
 - Program state: ACTIVE
 - Active WS-05 plan pointer: `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`
 - Active WS-05 baseline pointer: `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md`
 - Active WS-06 plan pointer: `formal/docs/release/WS_06_REPETITION_REDUCTION_PHASE2_PLAN_v0.md`
 - Active WS-07 plan pointer: `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md`
 - Active WS-08 plan pointer: `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md`
+- Active WS-09 plan pointer: `formal/docs/release/WS_09_POST_SIMPLIFICATION_VERIFICATION_SWEEP_PLAN_v0.md`
 
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
@@ -38,6 +40,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 | WS-06 | Repetition Reduction Phase 2 | DONE | NO | Consolidate repeated gate families using shared helpers and registry-driven tests. |
 | WS-07 | Scientific Core Separation Refresh | DONE | NO | Refresh scientific-core tagging and restart subset boundaries for theory work. |
 | WS-08 | Governance Right-Sizing | DONE | NO | Operationalize quarantine and retirement controls while preserving rigor. |
+| WS-09 | Post-Simplification Verification Sweep | ACTIVE | YES | Execute bounded CE-05 verification ladder and record evidence-backed closure checkpoint. |
 
 ## Status Labels
 - TODO
@@ -73,7 +76,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| none | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
+| WS-09-T02 | Post-Simplification Verification Sweep | Define bounded CE-05 validation matrix | ACTIVE | user | WS-09-T01 | `formal/docs/release/WS_09_POST_SIMPLIFICATION_VERIFICATION_SWEEP_PLAN_v0.md` | Validation matrix maps required bounded checks and command set for CE-05 evidence |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -124,6 +127,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-08-T03 | Governance Right-Sizing | Draft deprecated gate retirement policy | DONE | user | WS-08-T02 | 2026-03-18: retirement policy artifact `formal/docs/release/DEPRECATED_GATE_RETIREMENT_POLICY_v0.md` created with disposition states (`CANDIDATE`, `DEPRECATED`, `RETIRED`) and lifecycle/review rules | Deprecated gate retirement policy artifact with explicit disposition states is drafted and linked |
 | WS-08-T04 | Governance Right-Sizing | Identify and record governance suite simplification candidates | DONE | user | WS-08-T03 | 2026-03-18: candidate matrix `formal/docs/release/WS_08_GOVERNANCE_SUITE_SIMPLIFICATION_CANDIDATES_v0.md` added with bounded adoption criteria and rollout guardrails derived from current governance suite script surfaces | Candidate list with bounded adoption criteria is documented with evidence linkage |
 | WS-08-T05 | Governance Right-Sizing | Record WS-08 completion checkpoint | DONE | user | WS-08-T04 | 2026-03-18: WS-08 marked DONE in tracker and WS-08 plan closure checkpoint recorded with evidence chain (`ea34c61`, `7d262c9`, `28b5ba9`, `601c9ff`) | WS-08 closure row is recorded with full evidence chain |
+| WS-09-T01 | Post-Simplification Verification Sweep | Align compact state surface with tracker checkpoint fields | DONE | user | none | 2026-03-18: aligned consolidation primary workstream/active task/checkpoint wording between `State_of_the_Theory.md` and tracker while opening CE-05 slice | Compact state checkpoint fields match active tracker authority for CE-05 kickoff |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
