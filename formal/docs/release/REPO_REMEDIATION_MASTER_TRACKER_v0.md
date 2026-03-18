@@ -4,7 +4,8 @@
 - Phase: `ARCHITECTURE_CONSOLIDATION_PHASE_v0`
 - Program posture: ACTIVE
 - Scope posture: consolidation-only
-- Theory expansion posture: PAUSED_UNTIL_CONSOLIDATION_EXIT_GATE
+- Theory expansion posture: RESTART_AUTHORIZED_POST_CONSOLIDATION_EXIT_GATE
+- Consolidation exit-gate posture: SATISFIED_CE01_TO_CE06
 - Consolidation charter pointer: `formal/docs/release/ARCHITECTURE_CONSOLIDATION_PHASE_v0.md`
 - Canonical state mirror pointer: `State_of_the_Theory.md`
 - Canonical roadmap mirror pointer: `formal/docs/paper/PHYSICS_ROADMAP_v0.md`
