@@ -3,7 +3,7 @@
 ## Workstream
 - ID: WS-09
 - Name: Post-Simplification Verification Sweep
-- Status: ACTIVE
+- Status: DONE
 - Priority: PRIMARY
 
 ## Objective

@@ -13,14 +13,14 @@
 Establish a bounded remediation program with explicit workstreams, blockers, evidence, and hard exit criteria. This tracker is the canonical top-level source of truth for active, blocked, completed, and next work.
 
 ## Current Status
-- Primary workstream: WS-09
-- Active task: WS-09-T05
+- Primary workstream: none
+- Active task: none
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
 - WS-07: DONE
 - WS-08: DONE (architecture consolidation phase)
-- WS-09: ACTIVE (CE-05 post-simplification verification sweep)
+- WS-09: DONE (CE-05 post-simplification verification sweep)
 - Program state: ACTIVE
 - Active WS-05 plan pointer: `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`
 - Active WS-05 baseline pointer: `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md`
@@ -40,7 +40,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 | WS-06 | Repetition Reduction Phase 2 | DONE | NO | Consolidate repeated gate families using shared helpers and registry-driven tests. |
 | WS-07 | Scientific Core Separation Refresh | DONE | NO | Refresh scientific-core tagging and restart subset boundaries for theory work. |
 | WS-08 | Governance Right-Sizing | DONE | NO | Operationalize quarantine and retirement controls while preserving rigor. |
-| WS-09 | Post-Simplification Verification Sweep | ACTIVE | YES | Execute bounded CE-05 verification ladder and record evidence-backed closure checkpoint. |
+| WS-09 | Post-Simplification Verification Sweep | DONE | NO | Completed bounded CE-05 verification ladder with evidence-backed closure checkpoint. |
 
 ## Status Labels
 - TODO
@@ -76,12 +76,12 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-09-T05 | Post-Simplification Verification Sweep | Record CE-05 closure checkpoint | ACTIVE | user | WS-09-T04C | `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md`; `formal/docs/release/WS_09_POST_SIMPLIFICATION_VERIFICATION_SWEEP_PLAN_v0.md` | CE-05 tracker row is marked DONE with full evidence chain and governance suite unchanged pass |
+| none | none | none | none | none | none | none | none |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-09-T04 | Post-Simplification Verification Sweep | Run governance suite checkpoint | BLOCKED | user | governance pytest tranche failures (`14 failed, 408 passed`) after divergence was resolved | `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md`, `scratch/ce05_governance_suite_run.log` | Governance suite completes successfully and result is recorded in CE-05 checkpoint artifact |
+| none | none | none | none | none | none | none | none |
 
 ## Completed Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -131,6 +131,9 @@ Theory work may restart only when all rows below are satisfied:
 | WS-09-T02 | Post-Simplification Verification Sweep | Define bounded CE-05 validation matrix | DONE | user | WS-09-T01 | 2026-03-18: CE-05 bounded validation matrix and command ladder recorded in `formal/docs/release/WS_09_POST_SIMPLIFICATION_VERIFICATION_SWEEP_PLAN_v0.md` | Validation matrix maps required bounded checks and command set for CE-05 evidence |
 | WS-09-T03 | Post-Simplification Verification Sweep | Run targeted post-simplification checks | DONE | user | WS-09-T02 | 2026-03-18: targeted command set executed with result `51 passed in 4.19s`; evidence recorded in `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md` | Targeted architecture/authority/seam representative checks pass and are recorded with command evidence |
 | WS-09-T04A | Post-Simplification Verification Sweep | Create failing-governance-tranche triage note | DONE | user | none | 2026-03-18: triage note `formal/docs/release/WS_09_T04A_FAILING_GOVERNANCE_TRANCHE_TRIAGE_NOTE_v0.md` recorded exact failing tests, grouped root causes, remediation order, and verification commands | Failing-governance-tranche triage note exists and is linked for bounded remediation |
+| WS-09-T04B | Post-Simplification Verification Sweep | Remediate smallest shared governance-tranche root-cause family | DONE | user | WS-09-T04A | 2026-03-18: Family-B subset passed (`2 passed in 0.82s`) and failing-tranche rerun reduced to single residual (`1 failed, 18 passed in 7.66s`); evidence recorded in CE-05 checkpoint artifact | Remaining failing subset reduced from 3 to <=1 with bounded diff evidence |
+| WS-09-T04C | Post-Simplification Verification Sweep | Re-run failing subset then canonical governance suite | DONE | user | WS-09-T04B | 2026-03-18: failing-tranche rerun passed (`19 passed in 7.21s`) and unchanged `governance_suite.ps1` rerun passed (`422 passed in 141.30s`) after bounded residual fixes; evidence recorded in CE-05 checkpoint artifact | Green failing subset and green canonical governance suite recorded in CE-05 checkpoint artifact |
+| WS-09-T05 | Post-Simplification Verification Sweep | Record CE-05 closure checkpoint | DONE | user | WS-09-T04C | 2026-03-18: CE-05 row marked DONE with full evidence chain in tracker; WS-09 plan task table reflects T05 DONE | CE-05 closure is explicitly recorded and WS-09 closure state is consistent across tracker and WS-09 plan |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
