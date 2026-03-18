@@ -29,7 +29,15 @@ Command:
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1`
 
 Result:
-- Pending
+- Exit status: failed (`governance_suite_exit_code=1`)
+- Failure cause: divergence guardrail blocked run (`divergence_guardrail.ahead_count=24 limit=20`).
+- Guard stage context: tooling validation completed successfully before guardrail check; failure occurred at local ahead-count gate in `governance_suite.ps1`.
+
+Follow-up command (captured run with log):
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1 *> scratch/ce05_governance_suite_run.log; Write-Output "governance_suite_exit_code=$LASTEXITCODE"`
+
+Follow-up status:
+- Governance suite content checks are blocked by local divergence guard policy, not by observed schema/tooling failure in this run.
 
 ## Closure Criteria
 - Targeted checks pass and are recorded with command text and pass counts.

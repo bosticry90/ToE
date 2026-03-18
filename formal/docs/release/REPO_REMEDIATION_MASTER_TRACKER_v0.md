@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-09
-- Active task: WS-09-T04
+- Active task: none (WS-09-T04 blocked by divergence guardrail)
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -76,12 +76,12 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-09-T04 | Post-Simplification Verification Sweep | Run governance suite checkpoint | ACTIVE | user | WS-09-T03 | `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md` | Governance suite command and pass result are recorded in CE-05 checkpoint artifact |
+| none | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| none | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
+| WS-09-T04 | Post-Simplification Verification Sweep | Run governance suite checkpoint | BLOCKED | user | divergence_guardrail.ahead_count=24 limit=20 | `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md`, `scratch/ce05_governance_suite_run.log` | Governance suite completes successfully and result is recorded in CE-05 checkpoint artifact |
 
 ## Completed Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
