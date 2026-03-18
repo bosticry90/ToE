@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-06
-- Active task: WS-06-T02
+- Active task: WS-06-T03
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: ACTIVE
@@ -70,7 +70,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-06-T02 | Repetition Reduction Phase 2 | Define reduction contract and helper interface | ACTIVE | user | WS-06-T01 | `formal/docs/release/WS_06_REPETITION_REDUCTION_PHASE2_PLAN_v0.md` | Helper API and parametrization contract drafted for selected family |
+| WS-06-T03 | Repetition Reduction Phase 2 | Implement shared helper and representative parametrized gate | ACTIVE | user | WS-06-T02 | `formal/docs/release/WS_06_DRYRUN_TOKEN_FLIP_FAMILY_MAPPING_v0.md` | First reduced slice committed with targeted pytest evidence |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -107,6 +107,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-05-T04 | Authority Surface Consolidation | Align authority consistency gate expectations to residency model | DONE | user | WS-05-T03 | 2026-03-18: `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py` aligned and verified `2 passed in 0.73s`; commit `484f351` | At least one authority consistency gate family aligned to residency model and passes bounded verification |
 | WS-05-T05 | Authority Surface Consolidation | Record WS-05 completion checkpoint | DONE | user | WS-05-T04 | 2026-03-18: WS-05 closure checkpoint row recorded with evidence chain (`51c9a65`, `b43a60e`, `484f351`) | WS-05 closure checkpoint row recorded with evidence |
 | WS-06-T01 | Repetition Reduction Phase 2 | Select repeated family and baseline clone surface | DONE | user | none | 2026-03-18: selected family `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_*_cycle*_gate.py`, baseline count 14 files, plan `formal/docs/release/WS_06_REPETITION_REDUCTION_PHASE2_PLAN_v0.md` | Selected family and baseline documented with tracker linkage |
+| WS-06-T02 | Repetition Reduction Phase 2 | Define reduction contract and helper interface | DONE | user | WS-06-T01 | 2026-03-18: helper API and full cycle mapping drafted in `formal/docs/release/WS_06_DRYRUN_TOKEN_FLIP_FAMILY_MAPPING_v0.md`; plan updated to activate WS-06-T03 | Helper API and parametrization contract drafted for selected family |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
