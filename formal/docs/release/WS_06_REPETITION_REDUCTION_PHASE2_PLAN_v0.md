@@ -36,13 +36,14 @@ Out of scope during WS-06:
 | --- | --- | --- | --- | --- | --- |
 | WS-06-T01 | Select repeated family and baseline clone surface | DONE | none | Family selection + baseline count in this plan | File commit + tracker linkage |
 | WS-06-T02 | Define reduction contract and helper interface | DONE | WS-06-T01 | Helper API and parametrization contract | Draft helper + mapping table |
-| WS-06-T03 | Implement shared helper and representative parametrized gate | ACTIVE | WS-06-T02 | First reduced slice committed | Targeted pytest output |
-| WS-06-T04 | Fold remaining selected family members to reduced pattern | TODO | WS-06-T03 | Family reduction committed | Family-level pytest output |
+| WS-06-T03 | Implement shared helper and representative parametrized gate | DONE | WS-06-T02 | First reduced slice committed | Targeted pytest output |
+| WS-06-T04 | Fold remaining selected family members to reduced pattern | ACTIVE | WS-06-T03 | Family reduction committed | Family-level pytest output |
 | WS-06-T05 | Record WS-06 completion checkpoint | TODO | WS-06-T04 | WS-06 closure row in master tracker | Exit criteria all satisfied |
 
 ## Evidence Log
 - 2026-03-18 WS-06-T01: Selected dryrun token-flip family (`test_qft_full_derivation_token_flip_dryrun_*_cycle*_gate.py`) with baseline clone surface count = 14 files.
 - 2026-03-18 WS-06-T02: Drafted helper API and full cycle mapping contract in `formal/docs/release/WS_06_DRYRUN_TOKEN_FLIP_FAMILY_MAPPING_v0.md` for cycles 37 through 50.
+- 2026-03-18 WS-06-T03: Added shared helper module `formal/python/tests/qft_full_derivation_token_flip_dryrun_helpers.py` and representative parametrized gate `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_representative_cycles37_50_gate.py`; targeted pytest passed (`6 passed in 0.73s`).
 
 ## Exit Criteria
 - Selected repeated family is reduced to shared helper and/or parametrized form.
