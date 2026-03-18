@@ -3,7 +3,7 @@
 ## Workstream
 - ID: WS-05
 - Name: Authority Surface Consolidation
-- Status: ACTIVE
+- Status: DONE
 - Priority: PRIMARY
 
 ## Objective
@@ -35,7 +35,7 @@ Out of scope during WS-05:
 | WS-05-T02 | Baseline representative canonical-change coordination cost | DONE | WS-05-T01 | Before-state touch matrix (3 workflows) | `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md` |
 | WS-05-T03 | Select and remove one repeated cross-surface fallback pattern | DONE | WS-05-T02 | Removed fallback pattern and explicit replacement rule | Diff + targeted gate run |
 | WS-05-T04 | Align authority consistency gate expectations to residency model | DONE | WS-05-T03 | Updated gate assumptions for authority vs pointer roles | Targeted pytest output |
-| WS-05-T05 | Record WS-05 completion checkpoint | ACTIVE | WS-05-T04 | WS-05 closure row in master tracker | Exit criteria all satisfied |
+| WS-05-T05 | Record WS-05 completion checkpoint | DONE | WS-05-T04 | WS-05 closure row in master tracker | Exit criteria all satisfied |
 
 ## Evidence Log
 
@@ -43,6 +43,7 @@ Out of scope during WS-05:
 - 2026-03-18 WS-05-T02: Baseline matrix committed in `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md` with conservative before-state touch/edit counts for WF-01 through WF-03.
 - 2026-03-18 WS-05-T03: Removed one repeated fallback pattern for deep-maturity pointer parity by shifting enforcement from roadmap+state duplication to roadmap+central-inventory residency in `formal/python/tests/test_pillar_deep_maturity_program_gate.py`; compact-state duplicate deep-maturity pointer rows removed from `State_of_the_Theory.md`.
 - 2026-03-18 WS-05-T04: Aligned authority-consistency expectations in `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py` to enforce roadmap pointer pinning for registry+gate references under residency-aware model; targeted verification passed (`2 passed`).
+- 2026-03-18 WS-05-T05: WS-05 closure checkpoint recorded in master tracker with bounded evidence chain (commits `51c9a65`, `b43a60e`, `484f351`) and targeted validation references for T03/T04 gates.
 
 ## Candidate Baseline Workflows for WS-05-T02
 1. Pillar status promotion workflow.

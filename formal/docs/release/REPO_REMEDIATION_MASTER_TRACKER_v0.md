@@ -13,10 +13,11 @@
 Establish a bounded remediation program with explicit workstreams, blockers, evidence, and hard exit criteria. This tracker is the canonical top-level source of truth for active, blocked, completed, and next work.
 
 ## Current Status
-- Primary workstream: WS-05
-- Active task: WS-05-T05
+- Primary workstream: none
+- Active task: none
 - WS-01 through WS-04: DONE
-- WS-05 through WS-08: TODO (architecture consolidation phase)
+- WS-05: DONE
+- WS-06 through WS-08: TODO (architecture consolidation phase)
 - Program state: ACTIVE
 - Active WS-05 plan pointer: `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`
 - Active WS-05 baseline pointer: `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md`
@@ -28,7 +29,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 | WS-02 | Surface Reduction | DONE | NO | Reduce duplicated test and gate surface via registry and parametrization. |
 | WS-03 | Scientific Core Separation | DONE | NO | Separate scientific-core surfaces from governance-heavy surfaces. |
 | WS-04 | Math and Evidence Deepening | DONE | NO | Deepen theorem content and broaden empirical confrontation. |
-| WS-05 | Authority Surface Consolidation | ACTIVE | YES | Define primary authority residency and reduce cross-surface coordination burden. |
+| WS-05 | Authority Surface Consolidation | DONE | NO | Define primary authority residency and reduce cross-surface coordination burden. |
 | WS-06 | Repetition Reduction Phase 2 | TODO | NO | Consolidate repeated gate families using shared helpers and registry-driven tests. |
 | WS-07 | Scientific Core Separation Refresh | TODO | NO | Refresh scientific-core tagging and restart subset boundaries for theory work. |
 | WS-08 | Governance Right-Sizing | TODO | NO | Operationalize quarantine and retirement controls while preserving rigor. |
@@ -57,7 +58,7 @@ Theory work may restart only when all rows below are satisfied:
 
 | Exit ID | Requirement | Status | Evidence |
 | --- | --- | --- | --- |
-| CE-01 | Documented primary authority model with explicit residency rules across state/inventory/roadmap. | TODO | Pending |
+| CE-01 | Documented primary authority model with explicit residency rules across state/inventory/roadmap. | DONE | `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`, commits `b43a60e` and `484f351` |
 | CE-02 | One major repeated family reduced to shared helper or registry-driven form. | TODO | Pending |
 | CE-03 | Scientific core index refreshed with explicit science vs governance separation and restart subset. | TODO | Pending |
 | CE-04 | Quarantine and deprecated gate retirement policy documented and active. | TODO | Pending |
@@ -67,7 +68,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-05-T05 | Authority Surface Consolidation | Record WS-05 completion checkpoint | ACTIVE | user | WS-05-T04 | `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py` aligned to residency-aware roadmap pinning and targeted pytest passed | WS-05 closure checkpoint row recorded with evidence |
+| none | n/a | n/a | n/a | n/a | n/a | n/a | n/a |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -100,6 +101,9 @@ Theory work may restart only when all rows below are satisfied:
 | WS-04-T04 | Math and Evidence Deepening | Choose one empirical lane to broaden | DONE | user | WS-04-T03 | 2026-03-17: empirical lane selection section added in WS_04_MATH_AND_EVIDENCE_DEEPENING_PLAN_v0.md | Lane selection committed |
 | WS-04-T05 | Math and Evidence Deepening | Define falsification criteria for selected lane | DONE | user | WS-04-T04 | 2026-03-17: falsification criteria section added in WS_04_MATH_AND_EVIDENCE_DEEPENING_PLAN_v0.md | Falsification criteria committed |
 | WS-04-T06 | Math and Evidence Deepening | Complete one substantive upgrade | DONE | user | WS-04-T05 | 2026-03-17: packet44 protocol extension validated with targeted gate (`3 passed in 0.72s`) | One theorem or lane upgrade completed |
+| WS-05-T03 | Authority Surface Consolidation | Select and remove one repeated cross-surface fallback pattern | DONE | user | WS-05-T02 | 2026-03-18: `formal/python/tests/test_pillar_deep_maturity_program_gate.py` and `State_of_the_Theory.md` updated; targeted gate run `2 passed in 0.93s`; commit `b43a60e` | One repeated fallback pattern removed and replacement rule committed with bounded gate evidence |
+| WS-05-T04 | Authority Surface Consolidation | Align authority consistency gate expectations to residency model | DONE | user | WS-05-T03 | 2026-03-18: `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py` aligned and verified `2 passed in 0.73s`; commit `484f351` | At least one authority consistency gate family aligned to residency model and passes bounded verification |
+| WS-05-T05 | Authority Surface Consolidation | Record WS-05 completion checkpoint | DONE | user | WS-05-T04 | 2026-03-18: WS-05 closure checkpoint row recorded with evidence chain (`51c9a65`, `b43a60e`, `484f351`) | WS-05 closure checkpoint row recorded with evidence |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
