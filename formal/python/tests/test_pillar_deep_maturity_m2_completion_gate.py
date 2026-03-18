@@ -15,6 +15,10 @@ def find_repo_root(start: Path) -> Path:
 
 REPO_ROOT = find_repo_root(Path(__file__))
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "PILLAR_DEEP_MATURITY_REGISTRY_v0.json"
+ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+
+REGISTRY_REL = "formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json"
+M2_GATE_REL = "formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py"
 
 
 VALID_M2 = {"NOT_STARTED_v0", "IN_PROGRESS_v0", "COMPLETE_v0", "COMPLETE_BOUNDED_v0"}
@@ -75,3 +79,10 @@ def test_m2_registry_structure_and_targets_are_pinned() -> None:
                 assert token_value not in {"PLANNED_v0", "NOT_PRESENT_v0"}, (
                     f"{pillar_id}: {key} cannot remain planned when m2_status is complete."
                 )
+
+
+def test_m2_registry_and_gate_are_pinned_in_roadmap() -> None:
+    roadmap_text = _read(ROADMAP_PATH)
+
+    assert REGISTRY_REL in roadmap_text, "Roadmap must pin deep-maturity registry pointer."
+    assert M2_GATE_REL in roadmap_text, "Roadmap must pin deep-maturity M2 gate pointer."

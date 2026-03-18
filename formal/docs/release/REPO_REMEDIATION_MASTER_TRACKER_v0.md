@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-05
-- Active task: WS-05-T04
+- Active task: WS-05-T05
 - WS-01 through WS-04: DONE
 - WS-05 through WS-08: TODO (architecture consolidation phase)
 - Program state: ACTIVE
@@ -67,7 +67,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-05-T04 | Authority Surface Consolidation | Align authority consistency gate expectations to residency model | ACTIVE | user | WS-05-T03 | `formal/python/tests/test_pillar_deep_maturity_program_gate.py` and `State_of_the_Theory.md` updated to roadmap+inventory residency for deep-maturity pointer parity | At least one authority consistency gate family aligned to residency model and passes bounded verification |
+| WS-05-T05 | Authority Surface Consolidation | Record WS-05 completion checkpoint | ACTIVE | user | WS-05-T04 | `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py` aligned to residency-aware roadmap pinning and targeted pytest passed | WS-05 closure checkpoint row recorded with evidence |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
