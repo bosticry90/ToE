@@ -96,6 +96,29 @@ Method:
 | Ceremony-heavy surfaces | 5 |
 | Science:ceremony ratio | 7:5 |
 
+## Restart Subset Boundary (WS-07-T03)
+This section defines the bounded subset of surfaces eligible to anchor theory-work restart once consolidation exit gates are satisfied.
+
+### Inclusion Rules
+- Include only surfaces whose primary category is science-critical under the Separation Criteria Refresh (WS-07-T02).
+- Include only surfaces with role summaries that directly constrain theorem validity, numeric model behavior, bridge interpretation, or empirical comparator semantics.
+- Exclude governance-control and evidence-bookkeeping surfaces from restart execution paths; they remain control/traceability dependencies.
+
+### Restart Subset Table
+| Restart ID | Canonical ID | Surface Path | Inclusion Basis | Restart Role |
+| --- | --- | --- | --- | --- |
+| RS-01 | SCI-0001 | State_of_the_Theory.md | theorem surface primary category | Top-level theorem posture and bridge commitments for restart context. |
+| RS-02 | SCI-0004 | formal/docs/paper/PHYSICS_ROADMAP_v0.md | empirical protocol primary category | Comparator and route sequencing surface for bounded restart runs. |
+| RS-03 | SCI-0005 | formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md | theorem surface primary category | Equation and derivation reference surface for restart derivation checks. |
+| RS-04 | SCI-0006 | formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md | bridge logic primary category | Seam bridge readiness constraints used by restart interpretation gates. |
+| RS-05 | SCI-0007 | formal/docs/paper/TOE_QFT_GR_SEAM_PACKET40_ASSESSMENT_v0.md | bridge logic primary category | Packet-level seam assessment logic for restart comparator framing. |
+| RS-06 | SCI-0008 | formal/docs/paper/TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md | bridge logic primary category | Convergence-stop interpretation criteria for restart validity bounds. |
+| RS-07 | SCI-0010 | formal/docs/paper/TOE_QFT_GR_SEAM_PACKET44_NUMERIC_THRESHOLD_MEASUREMENT_PROTOCOL_v0.md | numerical model primary category | Numeric threshold semantics for bounded restart measurements. |
+
+### Excluded-From-Restart Control Set
+- SCI-0002, SCI-0003, SCI-0009, SCI-0011, SCI-0012 remain required governance/traceability controls and are not restart subset members.
+- This exclusion does not retire these surfaces; it prevents control-plane expansion from being treated as theory-progress execution.
+
 ## Notes
 - Seed index from WS-03-T01 was expanded in WS-03-T02 to include an explicit category coverage check.
 - WS-03-T03 and WS-03-T04 lists are derived directly from primary-category criteria above.

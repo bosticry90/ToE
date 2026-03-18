@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-07
-- Active task: WS-07-T03
+- Active task: WS-07-T04
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -72,7 +72,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-07-T03 | Scientific Core Separation Refresh | Define restart subset boundary for post-consolidation theory work | ACTIVE | user | WS-07-T02 | `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md` | Restart subset table is drafted in scientific-core index with explicit inclusion rules |
+| WS-07-T04 | Scientific Core Separation Refresh | Apply bounded refresh update to scientific-core index and tracker CE-03 row | ACTIVE | user | WS-07-T03 | `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md` | CE-03 row is marked DONE with concrete index and commit evidence |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -115,6 +115,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-06-T05 | Repetition Reduction Phase 2 | Record WS-06 completion checkpoint | DONE | user | WS-06-T04 | 2026-03-18: WS-06 closure checkpoint recorded with evidence chain (`e96adbb`, `dd9bb12`, `8fecd0e`) | WS-06 closure checkpoint row recorded with evidence |
 | WS-07-T01 | Scientific Core Separation Refresh | Define refresh scope and baseline snapshot | DONE | user | none | 2026-03-18: baseline pinned in `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md` (12 indexed active surfaces; science:ceremony ratio 7:5) | Baseline snapshot and CE-03 target scope committed with tracker linkage |
 | WS-07-T02 | Scientific Core Separation Refresh | Define explicit science-vs-governance separation criteria refresh | DONE | user | WS-07-T01 | 2026-03-18: `Separation Criteria Refresh (WS-07-T02)` section added in `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` and linked in WS-07 plan evidence log | Updated criteria section for scientific-core index refresh committed with bounded evidence |
+| WS-07-T03 | Scientific Core Separation Refresh | Define restart subset boundary for post-consolidation theory work | DONE | user | WS-07-T02 | 2026-03-18: `Restart Subset Boundary (WS-07-T03)` section with restart subset table (`RS-01`..`RS-07`) added in `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` and linked in WS-07 plan evidence log | Restart subset table committed with explicit inclusion and exclusion rules |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
