@@ -60,6 +60,9 @@ Why first:
 - 2026-03-18 Full 14-node failing-tranche rerun after commit `c677152`: `11 passed, 3 failed`.
 - Residual split: Family-B pillar/status consistency (2 failures) and Family-C conftest/signature stability (1 failure).
 - Next bounded slice opened: Family-B.
+- 2026-03-18 WS-09-T04B Family-B subset run passed (`2 passed in 0.82s`).
+- 2026-03-18 Bounded failing-tranche rerun after Family-B patch: `1 failed, 18 passed in 7.66s`.
+- Residual split now: Family-B (0), Family-C (1). Family-C is the sole remaining blocker.
 
 ## Expected Verification Commands
 Failing subset (exact 14 tests):

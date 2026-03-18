@@ -30,15 +30,15 @@ Out of scope during WS-09:
 | WS-09-T01 | Align compact state surface with tracker checkpoint fields | DONE | none | Tracker/state alignment for primary workstream, active task, and checkpoint wording | Bounded tracker+state diff evidence |
 | WS-09-T02 | Define bounded CE-05 validation matrix | DONE | WS-09-T01 | Validation matrix mapped to architecture/growth, authority, simplified seam families, governance suite | Matrix section with explicit command set |
 | WS-09-T03 | Run targeted post-simplification checks | DONE | WS-09-T02 | Targeted check results with pass counts | Command outputs recorded in CE-05 checkpoint artifact |
-| WS-09-T04 | Run governance suite checkpoint | BLOCKED | WS-09-T03 | Governance suite result record | Command output and return status recorded in CE-05 checkpoint artifact |
-| WS-09-T05 | Record CE-05 closure checkpoint | TODO | WS-09-T04 | CE-05 marked DONE in tracker with evidence | Tracker CE-05 row updated with artifact and commit chain |
+| WS-09-T04 | Run governance suite checkpoint | DONE | WS-09-T03 | Governance suite result record | Command output and return status recorded in CE-05 checkpoint artifact |
+| WS-09-T05 | Record CE-05 closure checkpoint | DONE | WS-09-T04 | CE-05 marked DONE in tracker with evidence | Tracker CE-05 row updated with artifact and commit chain |
 
 ## WS-09-T04 Remediation Subtasks
 | ID | Task | Status | Blocked By | Deliverable | Evidence Required |
 | --- | --- | --- | --- | --- | --- |
 | WS-09-T04A | Create failing-governance-tranche triage note | DONE | none | Failure inventory, grouped root causes, remediation order, verification commands | Triage note committed and linked in tracker/plan |
-| WS-09-T04B | Remediate smallest shared root-cause family first | ACTIVE | WS-09-T04A | Family-B pillar/status consistency fix slice | Remaining failing subset decreases from 3 to <=1 with bounded diff evidence |
-| WS-09-T04C | Re-run failing subset then canonical governance suite | TODO | WS-09-T04B | Green subset + green canonical governance suite | Command outputs recorded in CE-05 checkpoint artifact |
+| WS-09-T04B | Remediate smallest shared root-cause family first | DONE | WS-09-T04A | Family-B pillar/status consistency fix slice | Remaining failing subset decreases from 3 to <=1 with bounded diff evidence |
+| WS-09-T04C | Re-run failing subset then canonical governance suite | DONE | WS-09-T04B | Green subset + green canonical governance suite | Command outputs recorded in CE-05 checkpoint artifact |
 
 ## CE-05 Bounded Validation Matrix (WS-09-T02)
 | Lane | Scope | Command |
@@ -61,6 +61,8 @@ Execution contract:
 - 2026-03-18 WS-09-T04A: Added `formal/docs/release/WS_09_T04A_FAILING_GOVERNANCE_TRANCHE_TRIAGE_NOTE_v0.md` with exact 14 failing tests, grouped failure families, remediation order, and expected verification commands.
 - 2026-03-18 WS-09-T04B (Family-A slice): Restored required authority/state parity `ID` and `GapID` blocks in `State_of_the_Theory.md`; Family-A validation subset passed (`12 passed in 5.61s`) and was recorded in `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md`.
 - 2026-03-18 WS-09-T04B full failing-tranche rerun (post commit `c677152`): exact 14-node subset returned `11 passed, 3 failed`; residual failures split into Family-B (2) and Family-C (1). Next bounded slice opened: Family-B.
+- 2026-03-18 WS-09-T04B (Family-B slice): Family-B subset passed (`2 passed in 0.82s`) and bounded failing-tranche rerun reduced to single residual (`1 failed, 18 passed in 7.66s`), leaving Family-C conftest/signature stability as the only blocker.
+- 2026-03-18 WS-09-T04C (Family-C + governance closure): conftest signature parity fixed in `formal/docs/release/CONFTEST_STABILITY_PROTOCOL_v0.md`; failing-tranche rerun passed (`19 passed in 7.21s`); first unchanged governance rerun surfaced 2 residual non-tranche gates, both remediated with bounded state/archive parity edits; final unchanged governance rerun passed (`422 passed in 141.30s`).
 
 ## Exit Criteria
 - CE-05 validation matrix is explicit and bounded.

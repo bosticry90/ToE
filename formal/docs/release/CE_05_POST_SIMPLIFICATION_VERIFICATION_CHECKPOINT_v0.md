@@ -76,6 +76,45 @@ Residual-family split:
 - Family-C conftest/signature stability: 1 failure.
 - Next bounded slice opened: Family-B (per triage remediation order).
 
+### WS-09-T04B Family-B Slice Validation
+Command:
+- `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_pillar_status_matrix_consistency_gate.py::test_pillar_status_matrix_qft_entry_matches_state_tokens formal/python/tests/test_pillar_phase_advancement_gate.py::test_registry_drives_pillar_phase_advancement_semantics`
+
+Result:
+- `2 passed in 0.82s`
+- Exit status: success
+
+### WS-09-T04B Failing-Tranche Rerun (post Family-B patch)
+Command:
+- `./py.ps1 -m pytest -q formal/python/tests/test_state_doc_comp_fn_rep_policy.py formal/python/tests/test_state_doc_comp_fn_rep32_64_equiv.py formal/python/tests/test_state_doc_comp_fn_rep32_link_discharge.py formal/python/tests/test_state_doc_comp_fn_rep_nonalias_equivalence01.py formal/python/tests/test_state_doc_comp03_comp05_transition.py formal/python/tests/test_state_doc_comp_evol_link_discharge.py formal/python/tests/test_state_doc_cv_lane_wiring.py formal/python/tests/test_state_doc_mainline_does_not_depend_on_variantA.py formal/python/tests/test_pillar_status_matrix_consistency_gate.py formal/python/tests/test_pillar_phase_advancement_gate.py formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py formal/python/tests/test_conftest_signature_stability_gate.py`
+
+Result:
+- `1 failed, 18 passed in 7.66s`
+- Exit status: failed
+
+Remaining failing test:
+- `formal/python/tests/test_conftest_signature_stability_gate.py::test_conftest_signature_matches_protocol_pin`
+
+Residual-family split:
+- Family-B pillar/status consistency: 0 failures.
+- Family-C conftest/signature stability: 1 failure.
+- Family-C is now the only blocker before canonical governance-suite rerun.
+
+### WS-09-T04C Canonical Governance Suite Rerun (unchanged script)
+Command:
+- `pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1`
+
+Result:
+- First rerun surfaced additional residual gates outside the original failing tranche (`2 failed, 420 passed`):
+	- `formal/python/tests/test_state_theory_dag.py::test_inventory_ids_exist_and_dependencies_are_valid_and_acyclic`
+	- `formal/python/tests/test_proof_debt_marker_stability_gate.py::test_tracked_gapids_exist_once_in_state_doc`
+- After bounded residual fixes and unchanged rerun, canonical governance suite passed:
+	- `422 passed in 141.30s`
+	- Exit status: success
+
+Assessment:
+- WS-09-T04 governance-suite checkpoint is now clear under unchanged execution semantics.
+
 ## Closure Criteria
 - Targeted checks pass and are recorded with command text and pass counts.
 - Governance suite passes and is recorded with command text and result.

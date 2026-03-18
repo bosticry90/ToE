@@ -3355,6 +3355,24 @@ Status: Active mainline policy lane
 Evidence: formal/python/toe/comparators/comparator_rep_interpretability_manifest.json; formal/python/tests/test_state_doc_mainline_does_not_depend_on_variantA.py
 Dependencies: OV-01g, DQ-01
 
+
+ID: OV-01g
+Status: Canonical fit-family robustness gate (authority pointer retained in archive inventory)
+Evidence: archive/State_of_the_Theory_ARCHIVED_HISTORY_EXTRACT_v0.md
+Dependencies: STATE-ARCHIVE-LINK-v2
+
+
+ID: DR-02
+Status: Canonical DR evidence anchor (authority pointer retained in archive inventory)
+Evidence: archive/State_of_the_Theory_ARCHIVED_HISTORY_EXTRACT_v0.md
+Dependencies: STATE-ARCHIVE-LINK-v2
+
+
+ID: DQ-01
+Status: Canonical curved-fit adequacy policy gate (authority pointer retained in archive inventory)
+Evidence: archive/State_of_the_Theory_ARCHIVED_HISTORY_EXTRACT_v0.md
+Dependencies: STATE-ARCHIVE-LINK-v2
+
 GapID: COMP-FN-REP
 Status: In progress; Rep64 lane build-verified
 Scope: FN representation policy governance wiring
@@ -3415,6 +3433,13 @@ GR continuum cycle10 criteria parity pointers:
 - formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md
 - formal/output/gr_continuum_discharge_criteria_cycle10_v0.json
 - formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py
+
+Family-B pillar/state parity tokens:
+- `QFT_FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0`
+- `QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0`
+- `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_HANDOFF_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_handoff_cycle42_v0`
+- `formal/output/qft_full_derivation_token_flip_dryrun_handoff_cycle42_v0.json`
+- `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_handoff_cycle42_gate.py`
 
 ## END_ARCHIVED_HISTORY
 

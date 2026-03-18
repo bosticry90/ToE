@@ -14,7 +14,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-09
-- Active task: WS-09-T04B
+- Active task: WS-09-T05
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -70,13 +70,13 @@ Theory work may restart only when all rows below are satisfied:
 | CE-02 | One major repeated family reduced to shared helper or registry-driven form. | DONE | `formal/python/tests/qft_full_derivation_token_flip_dryrun_helpers.py`, `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_representative_cycles37_50_gate.py`, `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_remaining_cycles38_49_gate.py`, commits `dd9bb12` and `8fecd0e` |
 | CE-03 | Scientific core index refreshed with explicit science vs governance separation and restart subset. | DONE | `formal/docs/release/SCIENTIFIC_CORE_INDEX_v0.md` sections `Separation Criteria Refresh (WS-07-T02)` and `Restart Subset Boundary (WS-07-T03)`, commits `0c48e25` and `0addd8b` |
 | CE-04 | Quarantine and deprecated gate retirement policy documented and active. | DONE | `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md` section `Active Quarantine Operation Policy (WS-08-T02)` and `formal/docs/release/DEPRECATED_GATE_RETIREMENT_POLICY_v0.md` (`Status: ACTIVE`) |
-| CE-05 | Relevant governance and seam checks pass after simplification changes. | TODO | Pending |
+| CE-05 | Relevant governance and seam checks pass after simplification changes. | DONE | `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md` (targeted checks `51 passed`; failing tranche reduced `11/3 -> 18/1 -> 19/0`; canonical `governance_suite.ps1` unchanged rerun `422 passed in 141.30s`) |
 | CE-06 | Anti-regrowth guardrails committed to prevent reintroducing architecture overgrowth. | TODO | Pending |
 
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-09-T04B | Post-Simplification Verification Sweep | Remediate smallest shared governance-tranche root-cause family | ACTIVE | user | WS-09-T04A | `formal/docs/release/WS_09_T04A_FAILING_GOVERNANCE_TRANCHE_TRIAGE_NOTE_v0.md`; commit `c677152`; `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md` (full 14-node rerun: `11 passed, 3 failed`) | Family-B pillar/status consistency slice is repaired and remaining failing subset decreases from 3 to <=1 |
+| WS-09-T05 | Post-Simplification Verification Sweep | Record CE-05 closure checkpoint | ACTIVE | user | WS-09-T04C | `formal/docs/release/CE_05_POST_SIMPLIFICATION_VERIFICATION_CHECKPOINT_v0.md`; `formal/docs/release/WS_09_POST_SIMPLIFICATION_VERIFICATION_SWEEP_PLAN_v0.md` | CE-05 tracker row is marked DONE with full evidence chain and governance suite unchanged pass |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
