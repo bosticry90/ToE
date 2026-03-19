@@ -1,0 +1,60 @@
+{
+  "record_id": "COSMO_BACKGROUND_FULL_DISCHARGE_ADJUDICATION_CRITERIA_CYCLE01_v0",
+  "artifact_id": "cosmo_background_full_discharge_adjudication_criteria_cycle01_v0",
+  "scope": "cosmo_background_full_discharge_adjudication_criteria_v0",
+  "pillar": "PILLAR-COSMO",
+  "adjudication_token": "COSMO_BACKGROUND_ADJUDICATION",
+  "adjudication_posture": "NOT_YET_DISCHARGED",
+  "criteria_rows": [
+    {
+      "row_id": "COSMO_BACKGROUND_FULL_DISCHARGE_CRITERIA_ROW_01_v0",
+      "status": "PINNED",
+      "description": "MICRO_CYCLE_COHERENCE_AND_CANONICAL_ARTIFACT_PINNED"
+    },
+    {
+      "row_id": "COSMO_BACKGROUND_FULL_DISCHARGE_CRITERIA_ROW_02_v0",
+      "status": "PINNED",
+      "description": "COMPLETION_AUTHORITY_AND_FLIP_GATING_PINNED"
+    }
+  ],
+  "required_surface_tokens": [
+    "COSMO_BACKGROUND_ADJUDICATION: NOT_YET_DISCHARGED",
+    "COSMO_BACKGROUND_FULL_DISCHARGE_CRITERIA_ROW_01_v0: MICRO_CYCLE_COHERENCE_AND_CANONICAL_ARTIFACT_PINNED",
+    "COSMO_BACKGROUND_FULL_DISCHARGE_CRITERIA_ROW_02_v0: COMPLETION_AUTHORITY_AND_FLIP_GATING_PINNED",
+    "COSMO_BACKGROUND_FULL_DISCHARGE_EXIT_ROW_01_STATUS_v0: TOE-COSMO-DER-01_B-BLOCKED_PENDING_DISCHARGE",
+    "COSMO_BACKGROUND_FULL_DISCHARGE_EXIT_ROW_02_STATUS_v0: TOE-COSMO-DER-02_B-BLOCKED_PENDING_DISCHARGE",
+    "COSMO_BACKGROUND_FULL_DISCHARGE_ADJUDICATION_CRITERIA_ARTIFACT_v0: cosmo_background_full_discharge_adjudication_criteria_cycle01_v0",
+    "COSMO_BACKGROUND_FULL_DISCHARGE_ADJUDICATION_FLIP_GATE_v0: CRITERIA_ARTIFACT_AND_COMPLETION_ROWS_REQUIRED_NO_STATUS_FLIP_WITHOUT_AUTHORIZATION",
+    "REQUIRED_COSMO_CLOSURE_ROWS: TOE-COSMO-DER-01,TOE-COSMO-DER-02",
+    "PROCEED_GATE_COSMO: BLOCKED_v0_PHYSICS_NOT_CLOSED",
+    "MATRIX_CLOSURE_GATE_COSMO: BLOCKED_v0_GOVERNANCE_NOT_CLOSED"
+  ],
+  "required_results_rows": [
+    "TOE-COSMO-DER-01",
+    "TOE-COSMO-DER-02"
+  ],
+  "current_row_statuses": {
+    "TOE-COSMO-DER-01": "B-BLOCKED",
+    "TOE-COSMO-DER-02": "B-BLOCKED"
+  },
+  "current_roadmap_gate_tokens": {
+    "PILLAR-COSMO_PHYSICS_STATUS": "OPEN_v0_LOCKED_QUEUE_PENDING_DISCHARGE_ROWS",
+    "PILLAR-COSMO_GOVERNANCE_STATUS": "OPEN_v0_REQUIRED_ROWS_BLOCKED",
+    "PROCEED_GATE_COSMO": "BLOCKED_v0_PHYSICS_NOT_CLOSED",
+    "MATRIX_CLOSURE_GATE_COSMO": "BLOCKED_v0_GOVERNANCE_NOT_CLOSED"
+  },
+  "required_artifacts": [
+    "formal/output/cosmo_bg_micro91_dryrun_nonflip_boundary_execution_custody_recertification_continuity_audit_cycle01_v0.json",
+    "formal/output/cosmo_full_discharge_exit_row_readiness_cycle01_v0.json"
+  ],
+  "flip_preconditions": {
+    "adjudication_must_start_with": "DISCHARGED_",
+    "all_criteria_rows_must_be_pinned": true,
+    "explicit_authorization_required": true,
+    "forbid_premature_flip_token": "ADJUDICATION_FLIP_GRANTED"
+  },
+  "flip_readiness": {
+    "adjudication_flip_allowed_now": false,
+    "reason": "adjudication_not_discharged_completion_lane_only"
+  }
+}

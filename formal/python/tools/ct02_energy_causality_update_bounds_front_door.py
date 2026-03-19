@@ -4,23 +4,13 @@ import json
 from pathlib import Path
 
 import numpy as np
+from formal.python.meta.repo_environment import find_repo_root
 
 from formal.python.toe.comparators.ct02_energy_causality_update_bounds_v0 import (
     CT02EnergyCausalityCase,
     CT02EnergyCausalityReport,
     ct02_v0_tolerances,
 )
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _default_artifact_dir(repo_root: Path) -> Path:
@@ -169,7 +159,7 @@ def build_ct02_reports(
 
 
 def main() -> None:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out_dir = _default_artifact_dir(repo_root)
     report, candidate = build_ct02_reports()
     out_dir.mkdir(parents=True, exist_ok=True)

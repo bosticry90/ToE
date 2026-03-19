@@ -31,6 +31,7 @@ import hashlib
 import json
 import math
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 import numpy as np
@@ -53,15 +54,6 @@ def _sha256_file(path: Path) -> str:
 
 def _sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _to_gray(img: np.ndarray) -> np.ndarray:
@@ -327,7 +319,7 @@ def _render_csv_text(points: list[dict[str, float]]) -> str:
 
 
 def ovbm02_digitized_linewidth_dataset_record(*, date: str = "2026-01-24") -> OVBM02DigitizedLinewidthDatasetRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     pdf_rel = "formal/external_evidence/bec_bragg_stenger_1999/9901109v1.pdf"
     png_rel = "formal/external_evidence/bec_bragg_stenger_1999/Fig3_page4_z4.png"
@@ -389,7 +381,7 @@ def ovbm02_digitized_linewidth_dataset_record(*, date: str = "2026-01-24") -> OV
 
 
 def write_ovbm02_digitized_artifacts(*, date: str = "2026-01-24") -> dict[str, Path]:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     rec = ovbm02_digitized_linewidth_dataset_record(date=str(date))
 
     png_path = repo_root / rec.source["render_png_relpath"]
@@ -441,7 +433,7 @@ def render_ovbm02_digitized_lock_markdown(record: OVBM02DigitizedLinewidthDatase
 
 
 def write_ovbm02_digitized_lock(*, lock_path: Path | None = None, date: str = "2026-01-24") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     out = lock_path
     if out is None:

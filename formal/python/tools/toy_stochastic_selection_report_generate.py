@@ -22,6 +22,7 @@ if __name__ == "__main__" and (__package__ is None or __package__ == ""):
 
 import argparse
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Optional
 
 from formal.python.tools.toy_stochastic_selection_front_door import (
@@ -45,16 +46,6 @@ PINNED_INPUT = StochasticSelectionInput(
 )
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
-
 
 def build_toy_stochastic_selection_report_payload() -> dict:
     return build_toy_stochastic_selection_report(PINNED_INPUT)
@@ -74,7 +65,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     p.add_argument("--no-write", action="store_true", help="Do not write the file; just validate generation")
 
     args = p.parse_args(argv)
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     payload = build_toy_stochastic_selection_report_payload()
     out_text = render_toy_stochastic_selection_report_text(payload)

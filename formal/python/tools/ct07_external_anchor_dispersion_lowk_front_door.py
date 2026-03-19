@@ -7,23 +7,13 @@ import math
 from pathlib import Path
 
 import numpy as np
+from formal.python.meta.repo_environment import find_repo_root
 
 from formal.python.toe.comparators.ct07_external_anchor_dispersion_lowk_slice_v0 import (
     CT07ExternalAnchorLowKCase,
     CT07ExternalAnchorLowKReport,
     ct07_v0_tolerances,
 )
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _default_artifact_dir(repo_root: Path) -> Path:
@@ -118,7 +108,7 @@ def build_ct07_reports(
     c_s2_scale_negative: float = 2.0,
 ) -> tuple[CT07ExternalAnchorLowKReport, CT07ExternalAnchorLowKReport]:
     tolerances = ct07_v0_tolerances(tolerance_profile)
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     artifact_dir = _default_artifact_dir(repo_root)
     origin_csv = repo_root / "formal" / "external_evidence" / "bec_bragg_steinhauer_2001" / "omega_k_data.csv"
 
@@ -205,7 +195,7 @@ def build_ct07_reports(
 
 
 def main() -> None:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out_dir = _default_artifact_dir(repo_root)
     report, candidate = build_ct07_reports()
     out_dir.mkdir(parents=True, exist_ok=True)

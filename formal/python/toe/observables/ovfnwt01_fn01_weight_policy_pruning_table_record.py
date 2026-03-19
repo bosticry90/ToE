@@ -22,6 +22,8 @@ import re
 from pathlib import Path
 from typing import Any, Literal
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.constraints.admissibility_manifest import check_required_gates
 
 
@@ -35,15 +37,6 @@ def _sha256_text(text: str) -> str:
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_json_block(md_text: str) -> dict[str, Any]:
@@ -112,7 +105,7 @@ def ovfnwt01_weight_policy_pruning_table_record(
     policy_decl_lock_path: Path | None = None,
     admissibility_manifest_path: Path | None = None,
 ) -> OVFNWT01WeightPolicyPruningTableRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     use_override_inputs = admissibility_manifest_path is not None
 
@@ -505,7 +498,7 @@ def write_ovfnwt01_lock(
     policy_decl_lock_path: Path | None = None,
     admissibility_manifest_path: Path | None = None,
 ) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = (

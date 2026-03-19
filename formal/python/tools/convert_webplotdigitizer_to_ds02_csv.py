@@ -43,6 +43,7 @@ import argparse
 import csv
 import sys
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 
 
 def _ensure_repo_root_on_syspath() -> None:
@@ -58,14 +59,6 @@ def _ensure_repo_root_on_syspath() -> None:
 
 _ensure_repo_root_on_syspath()
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _parse_two_col_csv(path: Path) -> list[tuple[float, float]]:
@@ -198,7 +191,7 @@ def main(argv: list[str] | None = None) -> int:
 
     args = parser.parse_args(argv)
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     default_out = (
         repo_root
         / "formal"

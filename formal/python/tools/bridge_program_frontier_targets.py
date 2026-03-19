@@ -18,6 +18,8 @@ import json
 from pathlib import Path
 from typing import Optional
 
+from formal.python.meta.repo_environment import find_repo_root
+
 
 SOURCE_MISMATCH_REPORT = "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_ORTHOGONALITY_MISMATCH_REPORT.json"
 SOURCE_SUMMARY_REPORT = "formal/quarantine/bridge_tickets/BRIDGE_PROGRAM_MISMATCH_REASON_SUMMARY.json"
@@ -25,17 +27,6 @@ DEFAULT_TARGET_REASONS = (
     "mismatch_toyh_current_only",
     "mismatch_toyh_pair_vs_toyg_bridge",
 )
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _sha256_path(p: Path) -> str:
@@ -247,7 +238,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     args = p.parse_args(argv)
 
     target_reasons = tuple(args.target_reason) if args.target_reason else DEFAULT_TARGET_REASONS
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     payload = build_bridge_program_frontier_targets(
         repo_root=repo_root,
         source_mismatch_report=str(args.source_mismatch_report),

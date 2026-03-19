@@ -41,6 +41,7 @@ import math
 import sys
 from dataclasses import dataclass
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 
 
 def _ensure_repo_root_on_syspath() -> None:
@@ -66,14 +67,6 @@ class WindowSpec:
     window_id: str
     kmax_um_inv: float
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _sha256_file(path: Path) -> str:
@@ -214,7 +207,7 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--force", action="store_true", help="Overwrite existing artifact files")
     args = parser.parse_args(argv)
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     b1_dir = repo_root / "formal" / "external_evidence" / "bec_bragg_b1_second_dataset_TBD"
     default_csv = b1_dir / "omega_k_data.csv"
 

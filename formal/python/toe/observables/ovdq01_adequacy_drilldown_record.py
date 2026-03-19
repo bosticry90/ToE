@@ -15,8 +15,9 @@ import json
 from pathlib import Path
 from typing import Any
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.observables.ovdq01_dq01_diagnostics_record import (
-    _find_repo_root,
     ovdq01_dq01_diagnostics_record,
 )
 
@@ -279,7 +280,7 @@ def ovdq01_adequacy_drilldown_record(*, adequacy_policy: str = "DQ-01_v1") -> OV
 
 
 def default_artifact_path() -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     return (
         repo_root
         / "formal"

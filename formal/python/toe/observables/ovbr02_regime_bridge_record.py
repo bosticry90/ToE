@@ -26,6 +26,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 from formal.python.toe.observables.ov01_fit_family_robustness import (
@@ -38,15 +39,6 @@ from formal.python.toe.observables.ovxd03_overlap_band_record import ovxd03_over
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_json_block(md_text: str) -> dict[str, Any]:
@@ -185,7 +177,7 @@ def ovbr02_regime_bridge_record(
     adequacy_policy: str = "DQ-01_v1",
     q_threshold: float = 0.90,
 ) -> OVBR02RegimeBridgeRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     xd03 = ovxd03_overlap_band_record()
     bands = xd03.bands
@@ -292,7 +284,7 @@ def render_ovbr02_lock_markdown(record: OVBR02RegimeBridgeRecord) -> str:
 
 
 def write_ovbr02_lock(*, lock_path: Path | None = None) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     rec = ovbr02_regime_bridge_record()
 
     out = lock_path
@@ -317,7 +309,7 @@ def write_ovbr02_lock_for_policy(
     adequacy_policy: str,
     q_threshold: float,
 ) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     is_canonical = (str(adequacy_policy) == "DQ-01_v1") and (abs(float(q_threshold) - 0.90) <= 1e-12)
     if lock_path is None and (not is_canonical):

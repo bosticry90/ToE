@@ -22,6 +22,7 @@ QFT_EVOL_OBJECT_SCAFFOLD_LEAN_PATH = (
 )
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 QFT_FULL_DISCHARGE_TARGET_ID = "TARGET-QFT-FULL-DERIVATION-DISCHARGE-v0"
 QFT_FULL_DISCHARGE_DOC_PATH = "formal/docs/paper/DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md"
@@ -320,6 +321,7 @@ def test_qft_full_derivation_discharge_artifacts_exist() -> None:
     assert QFT_EVOL_OBJECT_SCAFFOLD_LEAN_PATH.exists(), "Missing QFT evolution object scaffold Lean module."
     assert ROADMAP_PATH.exists(), "Missing PHYSICS roadmap document."
     assert STATE_PATH.exists(), "Missing state checkpoint document."
+    assert INVENTORY_PATH.exists(), "Missing TOE_MATH_PHYSICS_INVENTORY authority surface."
 
 
 def test_qft_evol_umbrella_references_qft_full_discharge_lane_artifacts() -> None:
@@ -1187,7 +1189,7 @@ def test_qft_full_discharge_lean_tokens_are_present() -> None:
 def test_qft_full_discharge_lane_is_pinned_in_authority_surfaces() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
-    inventory_text = _read(Path("formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md"))
+    inventory_text = _read(INVENTORY_PATH)
 
     required_tokens = [
         QFT_FULL_DISCHARGE_TARGET_ID,

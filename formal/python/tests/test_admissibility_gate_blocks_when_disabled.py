@@ -4,23 +4,15 @@ import json
 from pathlib import Path
 
 import pytest
+from formal.python.meta.repo_environment import find_repo_root
 
 from formal.python.toe.observables.ovbr04a_bragg_lowk_slope_conditionA_record import (
     ovbr04a_bragg_lowk_slope_conditionA_record,
 )
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
-
-
 def test_admissibility_manifest_override_blocks_ct01(monkeypatch: pytest.MonkeyPatch, tmp_path: Path):
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     manifest_path = repo_root / "formal" / "markdown locks" / "gates" / "admissibility_manifest.json"
     assert manifest_path.exists(), f"Missing manifest: {manifest_path}"
 

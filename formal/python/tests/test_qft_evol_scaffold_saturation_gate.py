@@ -16,6 +16,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 QFT_EVOL_TARGET_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_QFT_EVOLUTION_OBJECT_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 SATURATION_GATE_PATH = "formal/python/tests/test_qft_evol_scaffold_saturation_gate.py"
 MILESTONE_GATE_PATH = "formal/python/tests/test_qft_evol_semantic_hardening_milestone_gate.py"
 TRANCHE_GATE_PATH = "formal/python/tests/test_qft_evol_micro_tranche_01_52_completeness_gate.py"
@@ -56,30 +57,32 @@ def test_qft_evol_umbrella_contains_saturation_and_expansion_policy_tokens() -> 
 def test_qft_evol_micro52_tranche_pin_remains_authoritative() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     assert TRANCHE_GATE_PATH in roadmap_text, (
         f"Roadmap authority surface must pin `{TRANCHE_GATE_PATH}` while saturation is active."
     )
-    assert TRANCHE_GATE_PATH in state_text, (
-        f"State authority surface must pin `{TRANCHE_GATE_PATH}` while saturation is active."
+    assert TRANCHE_GATE_PATH in state_text or TRANCHE_GATE_PATH in inventory_text, (
+        f"State/Inventory authority surface must pin `{TRANCHE_GATE_PATH}` while saturation is active."
     )
 
 
 def test_qft_evol_scaffold_saturation_gate_is_pinned_in_authority_surfaces() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     assert SATURATION_GATE_PATH in roadmap_text, (
         f"Roadmap authority surface must pin `{SATURATION_GATE_PATH}`."
     )
-    assert SATURATION_GATE_PATH in state_text, (
-        f"State authority surface must pin `{SATURATION_GATE_PATH}`."
+    assert SATURATION_GATE_PATH in state_text or SATURATION_GATE_PATH in inventory_text, (
+        f"State/Inventory authority surface must pin `{SATURATION_GATE_PATH}`."
     )
     assert MILESTONE_GATE_PATH in roadmap_text, (
         f"Roadmap authority surface must pin `{MILESTONE_GATE_PATH}`."
     )
-    assert MILESTONE_GATE_PATH in state_text, (
-        f"State authority surface must pin `{MILESTONE_GATE_PATH}`."
+    assert MILESTONE_GATE_PATH in state_text or MILESTONE_GATE_PATH in inventory_text, (
+        f"State/Inventory authority surface must pin `{MILESTONE_GATE_PATH}`."
     )
 
 
@@ -87,8 +90,10 @@ def test_qft_evol_scaffold_saturation_forbids_micro53_roll_forward_without_reaut
     target_text = _read(QFT_EVOL_TARGET_PATH)
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     for forbidden in FORBIDDEN_MICRO_TOKENS:
         assert forbidden not in target_text, f"QFT evolution umbrella target must not include `{forbidden}`."
         assert forbidden not in roadmap_text, f"Roadmap must not include `{forbidden}` under saturation freeze."
         assert forbidden not in state_text, f"State must not include `{forbidden}` under saturation freeze."
+        assert forbidden not in inventory_text, f"Inventory must not include `{forbidden}` under saturation freeze."

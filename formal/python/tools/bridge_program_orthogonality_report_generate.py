@@ -19,6 +19,7 @@ from pathlib import Path
 from typing import Optional
 
 import numpy as np
+from formal.python.meta.repo_environment import find_repo_root
 
 from formal.python.tools.bridge_toyg_c6_mode_index_quantization import (
     evaluate_toyg_c6_mode_index_quantization,
@@ -52,17 +53,6 @@ _V5_TOLERANCE_PROFILES = {
         "current_anchor_min_response": 1.25e-8,
     },
 }
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _sha256_bytes(data: bytes) -> str:
@@ -835,7 +825,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     )
 
     args = p.parse_args(argv)
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     payload = build_bridge_program_orthogonality_report(
         repo_root=repo_root,

@@ -22,6 +22,7 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 from formal.python.toe.observables.ovsnd02_sound_speed_from_propagation_record import (
@@ -35,15 +36,6 @@ from formal.python.toe.observables.ovsnd03n_central_density_digitized import (
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _count_density_conditions_from_csv(csv_path: Path) -> int:
@@ -93,7 +85,7 @@ class OVSND03NDensityCoverageReportRecord:
 
 
 def ovsnd03n_density_coverage_report_record(*, date: str = "2026-01-24") -> OVSND03NDensityCoverageReportRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     snd02 = ovsnd02_sound_speed_from_propagation_record(date=str(date))
     den = ovsnd03n_central_density_digitized_record(date=str(date))
@@ -185,7 +177,7 @@ def render_ovsnd03n_coverage_lock_markdown(record: OVSND03NDensityCoverageReport
 
 
 def write_ovsnd03n_coverage_lock(*, lock_path: Path | None = None, date: str = "2026-01-24") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = repo_root / "formal" / "markdown" / "locks" / "observables" / "OV-SND-03N_density_coverage_report.md"

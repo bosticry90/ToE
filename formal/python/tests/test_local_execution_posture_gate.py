@@ -2,17 +2,10 @@ from __future__ import annotations
 
 from pathlib import Path
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+from formal.python.meta.repo_environment import find_repo_root
 
 
-REPO_ROOT = _find_repo_root(Path(__file__))
+REPO_ROOT = find_repo_root(Path(__file__))
 GOVERNANCE_SUITE_PATH = REPO_ROOT / "governance_suite.ps1"
 
 

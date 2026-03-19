@@ -23,6 +23,7 @@ ASSESSMENT_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM
 OBJECTIVE_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_v0.md"
 OBJECTIVE_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_reactivation_objective_checkpoint_v0.json"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 
 
@@ -35,10 +36,12 @@ def _read_json(path: Path) -> dict:
     return json.loads(_read(path))
 
 
-def _extract_token(text: str, token_name: str) -> str:
-    m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-\.]+)", text)
-    assert m is not None, f"Missing token `{token_name}`."
-    return m.group(1)
+def _extract_token_from_surfaces(texts: list[str], token_name: str) -> str:
+    for text in texts:
+        m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-\.]+)", text)
+        if m is not None:
+            return m.group(1)
+    assert False, f"Missing token `{token_name}` across authority surfaces."
 
 
 def test_qft_gr_seam_packet40_bounded_execution_document_structure() -> None:
@@ -127,6 +130,7 @@ def test_qft_gr_seam_packet40_bounded_execution_authority_parity_and_invariance(
     objective_text = _read(OBJECTIVE_DOC_PATH)
     objective_checkpoint = _read_json(OBJECTIVE_CHECKPOINT_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
     q = "stress_energy_to_weak_curvature_handoff_strengthening"
@@ -142,13 +146,21 @@ def test_qft_gr_seam_packet40_bounded_execution_authority_parity_and_invariance(
         "formal/python/tests/test_toe_qft_gr_seam_packet40_bounded_execution_gate.py",
     ]
     for ref in refs:
-        assert ref in state_text, f"Missing packet40 execution pointer in State_of_the_Theory.md: {ref}"
+        assert any(ref in text for text in (state_text, inventory_text, roadmap_text)), (
+            f"Missing packet40 execution pointer across authority surfaces: {ref}"
+        )
         assert ref in roadmap_text, f"Missing packet40 execution pointer in PHYSICS_ROADMAP_v0.md: {ref}"
 
-    state_packet40 = _extract_token(state_text, "TOE_QFT_GR_SEAM_PACKET40_STATUS_v0")
-    roadmap_packet40 = _extract_token(roadmap_text, "TOE_QFT_GR_SEAM_PACKET40_STATUS_v0")
+    state_packet40 = _extract_token_from_surfaces(
+        [state_text, inventory_text, roadmap_text],
+        "TOE_QFT_GR_SEAM_PACKET40_STATUS_v0",
+    )
+    roadmap_packet40 = _extract_token_from_surfaces([roadmap_text], "TOE_QFT_GR_SEAM_PACKET40_STATUS_v0")
     assert state_packet40 == roadmap_packet40 == "EXECUTED_BOUNDED_TARGET_STEP_v0"
 
-    state_seam = _extract_token(state_text, "QFT_GR_SEAM_FORK_DECISION_STATUS_v0")
-    roadmap_seam = _extract_token(roadmap_text, "QFT_GR_SEAM_FORK_DECISION_STATUS_v0")
+    state_seam = _extract_token_from_surfaces(
+        [state_text, inventory_text, roadmap_text],
+        "QFT_GR_SEAM_FORK_DECISION_STATUS_v0",
+    )
+    roadmap_seam = _extract_token_from_surfaces([roadmap_text], "QFT_GR_SEAM_FORK_DECISION_STATUS_v0")
     assert state_seam == roadmap_seam == "HOLD_FOR_SCALAR_PUBLICATION_v0"

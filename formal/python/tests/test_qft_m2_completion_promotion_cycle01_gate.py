@@ -20,6 +20,7 @@ REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "PILLAR_DEEP_MATURIT
 QFT_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "qft_m2_completion_promotion_cycle01_v0.json"
 
 EXPECTED_ARTIFACT_ID = "qft_m2_completion_promotion_cycle01_v0"
@@ -47,6 +48,15 @@ def _extract_token(text: str, token_name: str) -> str:
     return m.group(1)
 
 
+def _extract_token_from_compact_state_or_inventory(state_text: str, inventory_text: str, token_name: str) -> str:
+    m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-]+)", state_text)
+    if m is not None:
+        return m.group(1)
+    m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-]+)", inventory_text)
+    assert m is not None, f"Missing token `{token_name}` in compact state or central inventory."
+    return m.group(1)
+
+
 def _payload_hash(payload: dict) -> str:
     canonical = json.dumps(payload, sort_keys=True, separators=(",", ":"))
     return hashlib.sha256(canonical.encode("utf-8")).hexdigest()
@@ -57,6 +67,7 @@ def test_qft_m2_completion_promotion_cycle01_gate() -> None:
     qft_text = _read(QFT_DOC_PATH)
     state_text = _read(STATE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     qft_row = next((row for row in registry.get("pillars", []) if row.get("pillar_id") == "PILLAR-QFT"), None)
     assert qft_row is not None, "Missing PILLAR-QFT row in deep maturity registry."
@@ -91,8 +102,21 @@ def test_qft_m2_completion_promotion_cycle01_gate() -> None:
     assert _extract_token(state_text, "QFT_M2_COMPLETION_GATE_v0") == EXPECTED_GATE
     assert _extract_token(roadmap_text, "QFT_M2_COMPLETION_GATE_v0") == EXPECTED_GATE
 
+    assert _extract_token_from_compact_state_or_inventory(
+        state_text, inventory_text, "QFT_M2_STATUS_v0"
+    ) == "COMPLETE_BOUNDED_v0"
+    assert _extract_token_from_compact_state_or_inventory(
+        state_text, inventory_text, "QFT_M2_COMPLETION_ARTIFACT_v0"
+    ) == EXPECTED_ARTIFACT_ID
+    assert _extract_token_from_compact_state_or_inventory(
+        state_text, inventory_text, "QFT_M2_COMPLETION_SHA256_v0"
+    ) == expected_sha
+    assert _extract_token_from_compact_state_or_inventory(
+        state_text, inventory_text, "QFT_M2_COMPLETION_GATE_v0"
+    ) == EXPECTED_GATE
+
     artifact_rel = "formal/output/qft_m2_completion_promotion_cycle01_v0.json"
     assert artifact_rel in qft_text
-    assert artifact_rel in state_text
+    assert artifact_rel in state_text or artifact_rel in inventory_text
     assert artifact_rel in roadmap_text
 

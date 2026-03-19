@@ -17,6 +17,7 @@ INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_CL
 SEAM_REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+CENTRAL_INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 
 def _read(path: Path) -> str:
@@ -70,6 +71,7 @@ def test_class_b_inventory_is_cross_surface_pinned() -> None:
     reg_text = _read(SEAM_REGISTRY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    central_inventory_text = _read(CENTRAL_INVENTORY_PATH)
 
     inventory_rel = "formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md"
     pilot_rel = "formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md"
@@ -103,4 +105,5 @@ def test_class_b_inventory_is_cross_surface_pinned() -> None:
         class_flip_gate_rel,
     ):
         assert ref in roadmap_text
-        assert ref in state_text
+        # Transitional policy: references may be pinned in compact State or central inventory.
+        assert (ref in state_text) or (ref in central_inventory_text)

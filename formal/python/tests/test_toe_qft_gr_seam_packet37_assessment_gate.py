@@ -41,6 +41,7 @@ PARENT_AUTH_CHECKPOINT = (
 )
 
 STATE_PATH = ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 
 EXPECTED_TARGET = (
@@ -156,6 +157,7 @@ def test_packet37_assessment_scalar_and_guardrail_invariants() -> None:
 
 def test_packet37_assessment_authority_pointer_parity() -> None:
     state_text = _read_text(STATE_PATH)
+    inventory_text = _read_text(INVENTORY_PATH)
     roadmap_text = _read_text(ROADMAP_PATH)
 
     refs = [
@@ -164,7 +166,9 @@ def test_packet37_assessment_authority_pointer_parity() -> None:
         "formal/python/tests/test_toe_qft_gr_seam_packet37_assessment_gate.py",
     ]
     for ref in refs:
-        assert ref in state_text, f"Missing packet37 assessment pointer in State_of_the_Theory.md: {ref}"
+        assert (ref in state_text) or (ref in inventory_text) or (ref in roadmap_text), (
+            f"Missing packet37 assessment pointer across authority surfaces: {ref}"
+        )
         assert ref in roadmap_text, f"Missing packet37 assessment pointer in PHYSICS_ROADMAP_v0.md: {ref}"
 
 

@@ -17,6 +17,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 POLICY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "FOUNDATIONAL_EMPIRICAL_PACKET05_OVERRIDE_POLICY_v0.md"
 MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET05_MATRIX_v0.json"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 
 
@@ -32,6 +33,9 @@ def _read_json(path: Path) -> dict:
 def test_packet05_override_policy_is_pinned() -> None:
     policy_text = _read(POLICY_PATH)
     matrix = _read_json(MATRIX_PATH)
+    state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
+    roadmap_text = _read(ROADMAP_PATH)
 
     for token in (
         "FOUNDATIONAL_EMPIRICAL_PACKET05_OVERRIDE_POLICY_v0",
@@ -42,9 +46,12 @@ def test_packet05_override_policy_is_pinned() -> None:
 
     assert matrix.get("override_policy_doc") == "formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_OVERRIDE_POLICY_v0.md"
 
-    for text in (_read(STATE_PATH), _read(ROADMAP_PATH)):
-        assert "formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_OVERRIDE_POLICY_v0.md" in text
-        assert "formal/python/tests/test_foundational_empirical_packet05_override_policy_gate.py" in text
+    for ref in (
+        "formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_OVERRIDE_POLICY_v0.md",
+        "formal/python/tests/test_foundational_empirical_packet05_override_policy_gate.py",
+    ):
+        assert ref in roadmap_text
+        assert ref in state_text or ref in inventory_text
 
 
 def test_packet05_override_rows_have_criteria_docs_for_noninconclusive_decisions() -> None:

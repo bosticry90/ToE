@@ -22,6 +22,7 @@ QFT_EVOL_OBJECT_SCAFFOLD_LEAN_PATH = (
 )
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 MILESTONE_TOKEN = (
     "QFT_EVOL_SEMANTIC_HARDENING_MILESTONE_v0: "
@@ -56,15 +57,20 @@ def test_qft_semantic_hardening_milestone_tokens_are_pinned_in_qft_docs() -> Non
 def test_qft_semantic_hardening_milestone_gate_is_pinned_in_authority_surfaces() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     assert MILESTONE_GATE_PATH in roadmap_text, (
         f"Roadmap authority surface must pin `{MILESTONE_GATE_PATH}`."
     )
-    assert MILESTONE_GATE_PATH in state_text, (
-        f"State authority surface must pin `{MILESTONE_GATE_PATH}`."
+    assert MILESTONE_GATE_PATH in state_text or MILESTONE_GATE_PATH in inventory_text, (
+        f"State/Inventory authority surface must pin `{MILESTONE_GATE_PATH}`."
     )
-    assert MILESTONE_TOKEN in state_text, "State authority surface missing semantic-hardening milestone token."
-    assert CYCLE2_PROGRESS_TOKEN in state_text, "State authority surface missing cycle-2 progress token."
+    assert MILESTONE_TOKEN in state_text or MILESTONE_TOKEN in inventory_text, (
+        "State/Inventory authority surface missing semantic-hardening milestone token."
+    )
+    assert CYCLE2_PROGRESS_TOKEN in state_text or CYCLE2_PROGRESS_TOKEN in inventory_text, (
+        "State/Inventory authority surface missing cycle-2 progress token."
+    )
 
 
 def test_qft_evol_object_scaffold_contains_required_hardening_theorem_tokens() -> None:

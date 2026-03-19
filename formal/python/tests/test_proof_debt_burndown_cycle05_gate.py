@@ -18,6 +18,7 @@ PACKET_PATH = REPO_ROOT / "formal" / "docs" / "release" / "PROOF_DEBT_BURNDOWN_P
 CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "proof_debt_burndown_checkpoint_cycle05_v0.json"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 PROGRAM_PATH = REPO_ROOT / "formal" / "docs" / "release" / "TOE_COMPLETE_V1_PROGRAM_v0.md"
 
 PACKET_REL = "formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE05_v0.md"
@@ -58,9 +59,10 @@ def test_proof_debt_cycle05_cross_surface_pointer_parity() -> None:
 
     state_text = _read(STATE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     program_text = _read(PROGRAM_PATH)
 
     for ref in refs:
-        assert ref in state_text
         assert ref in roadmap_text
         assert ref in program_text
+        assert ref in state_text or ref in inventory_text

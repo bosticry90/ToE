@@ -21,6 +21,7 @@ from dataclasses import asdict
 import hashlib
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 
 import numpy as np
 
@@ -30,13 +31,6 @@ def _sha256_json(payload: object) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def ring_graph_laplacian(*, n: int, dx: float = 1.0) -> np.ndarray:
@@ -132,7 +126,7 @@ def ovfg01_graph_fourier_mode_audit(*, n: int, dx: float, mode_m: int) -> OVFG01
 
 
 def default_artifact_path() -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     return repo_root / "formal" / "python" / "artifacts" / "diagnostics" / "OV-FG-01" / "ring_graph_fourier_mode_audit.json"
 
 

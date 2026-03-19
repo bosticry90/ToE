@@ -30,6 +30,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.constraints.admissibility_manifest import check_required_gates
 from formal.python.toe.observables.ovbr02_regime_bridge_record import ovbr02_regime_bridge_record
 from formal.python.toe.observables.ovbr03n_bragg_dispersion_k_omega_digitized import ovbr03n_digitized_dispersion_record
@@ -69,15 +71,6 @@ RC_PAIRING_MAPPING_INVALID = "PAIRING_MAPPING_INVALID"
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _try_load_json(repo_root: Path, relpath: str) -> tuple[bool, dict[str, Any] | None, str | None]:
@@ -136,7 +129,7 @@ def ovbr_snd03_cross_lane_lowk_consistency_audit_record(
     sound_date: str = "2026-01-24",
     bragg_date: str = "2026-01-25",
 ) -> OVBR_SND03CrossLaneLowKConsistencyAuditRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     required_gates = ["CT01", "SYM01", "CAUS01"]
     gate_check = check_required_gates(repo_root=repo_root, required_gate_ids=required_gates)
@@ -669,7 +662,7 @@ def write_ovbr_snd03_lock(
     sound_date: str = "2026-01-24",
     bragg_date: str = "2026-01-25",
 ) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = (

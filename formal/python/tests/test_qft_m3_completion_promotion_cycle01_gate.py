@@ -21,6 +21,7 @@ TARGET_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_Q
 QFT_AUTHORITY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_QFT_FULL_DERIVATION_DISCHARGE_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "qft_m3_completion_promotion_cycle01_v0.json"
 
 EXPECTED_ARTIFACT_ID = "qft_m3_completion_promotion_cycle01_v0"
@@ -42,12 +43,22 @@ def _extract_token(text: str, token_name: str) -> str:
     return m.group(1)
 
 
+def _extract_token_from_compact_state_or_inventory(state_text: str, inventory_text: str, token_name: str) -> str:
+    m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-]+)", state_text)
+    if m is not None:
+        return m.group(1)
+    m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-]+)", inventory_text)
+    assert m is not None, f"Missing token `{token_name}` in compact state or central inventory."
+    return m.group(1)
+
+
 def test_qft_m3_completion_promotion_cycle01_gate() -> None:
     registry = _read_json(REGISTRY_PATH)
     target_text = _read(TARGET_DOC_PATH)
     qft_text = _read(QFT_AUTHORITY_PATH)
     state_text = _read(STATE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     assert ARTIFACT_PATH.exists(), "QFT M3 completion promotion artifact is missing."
     artifact_json = _read_json(ARTIFACT_PATH)
@@ -74,6 +85,22 @@ def test_qft_m3_completion_promotion_cycle01_gate() -> None:
         assert _extract_token(text, "QFT_M3_COMPLETION_GATE_v0") == EXPECTED_GATE
         assert _extract_token(text, "QFT_M3_PROMOTION_READINESS_v0") == "FIRST_DISCRIMINATOR_CLOSED_AND_PROMOTED_v0"
 
+    assert _extract_token_from_compact_state_or_inventory(
+        state_text, inventory_text, "QFT_M3_STATUS_v0"
+    ) == "COMPLETE_BOUNDED_v0"
+    assert _extract_token_from_compact_state_or_inventory(
+        state_text, inventory_text, "QFT_M3_COMPLETION_ARTIFACT_v0"
+    ) == EXPECTED_ARTIFACT_ID
+    assert _extract_token_from_compact_state_or_inventory(
+        state_text, inventory_text, "QFT_M3_COMPLETION_SHA256_v0"
+    ) == artifact_hash
+    assert _extract_token_from_compact_state_or_inventory(
+        state_text, inventory_text, "QFT_M3_COMPLETION_GATE_v0"
+    ) == EXPECTED_GATE
+    assert _extract_token_from_compact_state_or_inventory(
+        state_text, inventory_text, "QFT_M3_PROMOTION_READINESS_v0"
+    ) == "FIRST_DISCRIMINATOR_CLOSED_AND_PROMOTED_v0"
+
     for path_ref in (
         "formal/output/qft_m3_completion_promotion_cycle01_v0.json",
         "formal/python/tests/test_qft_m3_completion_promotion_cycle01_gate.py",
@@ -81,5 +108,5 @@ def test_qft_m3_completion_promotion_cycle01_gate() -> None:
     ):
         assert path_ref in target_text
         assert path_ref in qft_text
-        assert path_ref in state_text
+        assert path_ref in state_text or path_ref in inventory_text
         assert path_ref in roadmap_text

@@ -15,6 +15,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.constraints.fn01_artifact import fn01_make_P_cubic_artifact
 from formal.python.toe.dr01_fit import DR01Fit1D
 from formal.python.toe.dr01_fit_curved import DR01FitCurved1D
@@ -31,15 +33,6 @@ from formal.python.toe.observables.ovxd02_preference_agreement_record import (
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _load_json(path: Path) -> dict:
@@ -107,7 +100,7 @@ def _load_dr01_fit_curved_from_json(path: Path) -> DR01FitCurved1D:
 
 
 def compute_ovxd02_record(*, repo_root: Path | None = None) -> OVXD02PreferenceAgreementRecord:
-    repo_root = _find_repo_root(Path(__file__)) if repo_root is None else Path(repo_root)
+    repo_root = find_repo_root(Path(__file__)) if repo_root is None else Path(repo_root)
 
     fn = fn01_make_P_cubic_artifact(g=0.3)
 
@@ -194,7 +187,7 @@ def render_ovxd02_lock_markdown(record: OVXD02PreferenceAgreementRecord) -> str:
 
 
 def write_ovxd02_lock(*, lock_path: Path | None = None) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = (

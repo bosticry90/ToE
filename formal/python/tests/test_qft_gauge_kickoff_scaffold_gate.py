@@ -16,6 +16,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 QFT_GAUGE_TARGET_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_QFT_GAUGE_OBJECT_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 QFT_KICKOFF_GATE_PATH = "formal/python/tests/test_qft_gauge_kickoff_scaffold_gate.py"
 QFT_BUILD_GATE_PATH = "formal/python/tests/test_lean_build_gate_qft_gauge_object_scaffold.py"
 
@@ -90,11 +91,12 @@ def test_qft_kickoff_nonclaim_boundary_is_explicit() -> None:
 def test_qft_kickoff_and_build_gates_are_pinned_in_authority_surfaces() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     for required_path in [QFT_KICKOFF_GATE_PATH, QFT_BUILD_GATE_PATH]:
         assert required_path in roadmap_text, (
             f"Roadmap authority surface must pin `{required_path}`."
         )
-        assert required_path in state_text, (
-            f"State authority surface must pin `{required_path}`."
+        assert required_path in state_text or required_path in inventory_text, (
+            f"State or inventory authority surface must pin `{required_path}`."
         )

@@ -23,17 +23,10 @@ if __name__ == "__main__" and (__package__ is None or __package__ == ""):
 
 import argparse
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 
 import fitz  # PyMuPDF
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def main(argv: list[str] | None = None) -> int:
@@ -63,7 +56,7 @@ def main(argv: list[str] | None = None) -> int:
     if not out_dir_rel.startswith("formal/external_evidence/"):
         raise ValueError("out-dir-relpath must be under formal/external_evidence/")
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     pdf_path = repo_root / pdf_rel
     out_dir = repo_root / out_dir_rel
     out_dir.mkdir(parents=True, exist_ok=True)

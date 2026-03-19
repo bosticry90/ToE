@@ -19,6 +19,7 @@ DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_STAT_EMP
 ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "stat_empirical_discriminator_emp_stat_01_run_cycle01_v0.json"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 
 def _read(path: Path) -> str:
@@ -61,10 +62,11 @@ def test_stat_emp_stat_01_run_bundle_is_hash_and_pointer_pinned() -> None:
 def test_stat_emp_stat_01_cross_surface_pointers_are_present() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     for path_ref in (
         "formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_DISCRIMINATOR_EMP_STAT_01_v0.md",
         "formal/python/tests/test_stat_empirical_discriminator_emp_stat_01_scaffold_gate.py",
     ):
         assert path_ref in roadmap_text, f"Roadmap must pin `{path_ref}`."
-        assert path_ref in state_text, f"State must pin `{path_ref}`."
+        assert path_ref in state_text or path_ref in inventory_text, f"Compact-State or central inventory must pin `{path_ref}`."

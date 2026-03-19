@@ -22,6 +22,7 @@ if __name__ == "__main__" and (__package__ is None or __package__ == ""):
 
 import argparse
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Optional
 
 from formal.python.tools.toy_gauge_redundancy_front_door import (
@@ -56,16 +57,6 @@ PINNED_INPUTS: dict[str, ToyHInput] = {
 }
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
-
 
 def build_toy_gauge_redundancy_report_payload(*, candidate_id: str = "H1_phase_gauge") -> dict:
     if candidate_id not in PINNED_INPUTS:
@@ -93,7 +84,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     p.add_argument("--no-write", action="store_true", help="Do not write the file; just validate generation")
 
     args = p.parse_args(argv)
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     candidate_id = str(args.candidate_id)
     payload = build_toy_gauge_redundancy_report_payload(candidate_id=candidate_id)

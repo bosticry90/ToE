@@ -24,6 +24,9 @@ jobs:
       - name: Install pytest
         run: .\.venv\Scripts\python.exe -m pip install --upgrade pip pytest
 
+      - name: Run tooling validate checks (no writes)
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./tooling_validate.ps1
+
       - name: Run governance suite
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1
 

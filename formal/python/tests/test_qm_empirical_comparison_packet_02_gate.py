@@ -20,6 +20,7 @@ PROTOCOL_PATH = REPO_ROOT / "formal" / "docs" / "release" / "FOUNDATIONAL_EMPIRI
 ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "qm_empirical_comparison_packet_02_v0.json"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 EXPECTED_ARTIFACT_ID = "qm_empirical_comparison_packet_02_v0"
 EXPECTED_GATE = "ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED"
@@ -42,6 +43,7 @@ def test_qm_empirical_packet_02_gate() -> None:
     protocol_text = _read(PROTOCOL_PATH)
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     artifact_json = json.loads(_read(ARTIFACT_PATH))
     payload = artifact_json.get("payload", {})
@@ -82,4 +84,4 @@ def test_qm_empirical_packet_02_gate() -> None:
         "formal/python/tests/test_qm_empirical_comparison_packet_02_gate.py",
     ):
         assert path_ref in roadmap_text
-        assert path_ref in state_text
+        assert path_ref in state_text or path_ref in inventory_text

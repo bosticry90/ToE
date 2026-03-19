@@ -17,6 +17,7 @@ def find_repo_root(start: Path) -> Path:
 REPO_ROOT = find_repo_root(Path(__file__))
 EVALUATION_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 PACKET41_AUTH_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_PACKET41_AUTHORIZATION_v0.md"
 PACKET41_AUTH_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_authorization_checkpoint_v0.json"
@@ -35,6 +36,12 @@ def _extract_token(text: str, token_name: str) -> str:
     m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-\.]+)", text)
     assert m is not None, f"Missing token `{token_name}`."
     return m.group(1)
+
+
+def _extract_token_from_compact_state_or_inventory(state_text: str, inventory_text: str, token_name: str) -> str:
+    if re.search(rf"\b{re.escape(token_name)}\s*:\s*", state_text):
+        return _extract_token(state_text, token_name)
+    return _extract_token(inventory_text, token_name)
 
 
 def test_packet41_scorecard_cycle01_checkpoint_schema_and_hold_result() -> None:
@@ -65,6 +72,7 @@ def test_packet41_scorecard_cycle01_checkpoint_schema_and_hold_result() -> None:
 
 def test_packet41_scorecard_cycle01_authority_parity_and_freeze() -> None:
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
     refs = [
@@ -72,10 +80,14 @@ def test_packet41_scorecard_cycle01_authority_parity_and_freeze() -> None:
         "formal/python/tests/test_toe_qft_gr_seam_packet41_reconsideration_scorecard_cycle01_evaluation_gate.py",
     ]
     for ref in refs:
-        assert ref in state_text, f"Missing scorecard cycle01 pointer in State_of_the_Theory.md: {ref}"
+        assert ref in state_text or ref in inventory_text, (
+            f"Missing scorecard cycle01 pointer in compact-State or central inventory: {ref}"
+        )
         assert ref in roadmap_text, f"Missing scorecard cycle01 pointer in PHYSICS_ROADMAP_v0.md: {ref}"
 
-    state_status = _extract_token(state_text, "TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0")
+    state_status = _extract_token_from_compact_state_or_inventory(
+        state_text, inventory_text, "TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0"
+    )
     roadmap_status = _extract_token(roadmap_text, "TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0")
     assert state_status == roadmap_status == "EVALUATED_HOLD_RETAINED_MISSING_NUMERIC_INPUTS_v0"
 

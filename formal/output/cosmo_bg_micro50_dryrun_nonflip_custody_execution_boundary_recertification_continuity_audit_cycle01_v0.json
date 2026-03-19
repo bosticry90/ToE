@@ -1,0 +1,39 @@
+{
+  "artifact_id": "cosmo_bg_micro50_dryrun_nonflip_custody_execution_boundary_recertification_continuity_audit_cycle01_v0",
+  "target_id": "TARGET-COSMO-BG-MICRO-50-DRYRUN-NONFLIP-CUSTODY-EXECUTION-BOUNDARY-RECERTIFICATION-CONTINUITY-AUDIT-v0",
+  "spec_id": "DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_50_DRYRUN_NONFLIP_CUSTODY_EXECUTION_BOUNDARY_RECERTIFICATION_CONTINUITY_AUDIT_v0",
+  "pillar": "PILLAR-COSMO",
+  "cycle": "Cycle-050",
+  "classification": "P-POLICY",
+  "status": "LOCKED",
+  "adjudication": {
+    "token": "COSMO_BG_MICRO50_DRYRUN_NONFLIP_CUSTODY_EXECUTION_BOUNDARY_RECERTIFICATION_CONTINUITY_AUDIT_ADJUDICATION",
+    "value": "NOT_YET_DISCHARGED"
+  },
+  "scope_boundary": {
+    "token": "COSMO_BG_MICRO50_SCOPE_BOUNDARY_v0",
+    "value": "DRYRUN_NONFLIP_CUSTODY_EXECUTION_BOUNDARY_RECERTIFICATION_CONTINUITY_AUDIT_ONLY_NONCLAIM"
+  },
+  "progress": {
+    "token": "COSMO_BG_MICRO50_PROGRESS_v0",
+    "value": "DRYRUN_NONFLIP_CUSTODY_EXECUTION_BOUNDARY_RECERTIFICATION_CONTINUITY_AUDIT_TOKEN_PINNED"
+  },
+  "policy_tokens": {
+    "dryrun_nonflip_custody_execution_boundary_recertification_continuity_audit_policy": "CYCLE08_09_10_11_12_13_14_15_16_17_18_19_20_21_22_23_24_25_26_27_28_29_30_31_32_33_34_35_36_37_38_39_40_41_42_43_44_45_46_47_48_49_DRYRUN_NONFLIP_CUSTODY_EXECUTION_BOUNDARY_RECERTIFICATION_CONTINUITY_LOCK_REQUIRED_NO_STATUS_FLIP_NO_COMPARATOR_AUTHORIZATION"
+  },
+  "cross_surface_requirements": [
+    "State_of_the_Theory.md",
+    "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+    "formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json",
+    "formal/python/tests/test_cosmo_matrix_rollup_crosspin_gate.py"
+  ],
+  "forbidden_token_prefixes": [
+    "ADJUDICATION_FLIP",
+    "COMPARATOR_LANE_AUTHORIZATION"
+  ],
+  "notes": [
+    "Cycle-050 is governance-only and non-claim.",
+    "No status flip is authorized.",
+    "No comparator authorization is granted."
+  ]
+}

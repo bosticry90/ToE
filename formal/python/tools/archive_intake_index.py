@@ -43,18 +43,9 @@ import hashlib
 import json
 from dataclasses import dataclass
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Iterable, Optional
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _sha256_path(p: Path) -> str:
@@ -218,7 +209,7 @@ def main(argv: list[str] | None = None) -> int:
 
     args = parser.parse_args(argv)
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     roots = [repo_root / r for r in args.roots]
     payload = build_index(repo_root=repo_root, roots=roots)
 

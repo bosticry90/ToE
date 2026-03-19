@@ -18,6 +18,7 @@ INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_CL
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+CENTRAL_INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 THEOREM_POINTER_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal" / "Bridges" / "EM_QFT_SeamPromotion.lean"
 
 THEOREM_POINTER_REL = "formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean"
@@ -36,6 +37,7 @@ def test_em_qft_cycle01_theorem_pointer_is_cross_surface_pinned() -> None:
     registry_text = _read(REGISTRY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    central_inventory_text = _read(CENTRAL_INVENTORY_PATH)
     theorem_text = _read(THEOREM_POINTER_PATH)
 
     assert "EM_QFT_CLASS_B_PROMOTION_CYCLE01_STATUS_v0: THEOREM_POINTER_PINNED_PENDING_PROOF_DISCHARGE" in target_text
@@ -43,8 +45,11 @@ def test_em_qft_cycle01_theorem_pointer_is_cross_surface_pinned() -> None:
     assert f"EM_QFT_CLASS_B_PROMOTION_CYCLE01_THEOREM_POINTER_v0: {THEOREM_POINTER_REL}#{THEOREM_POINTER_SYMBOL}" in target_text
     assert f"EM_QFT_CLASS_B_PROMOTION_CYCLE01_THEOREM_GATE_v0: {THEOREM_GATE_REL}" in target_text
 
-    for text in (inventory_text, registry_text, roadmap_text, state_text):
+    for text in (inventory_text, registry_text, roadmap_text):
         assert THEOREM_POINTER_REL in text
         assert THEOREM_GATE_REL in text
+
+    assert THEOREM_POINTER_REL in state_text or THEOREM_POINTER_REL in central_inventory_text
+    assert THEOREM_GATE_REL in state_text or THEOREM_GATE_REL in central_inventory_text
 
     assert THEOREM_POINTER_SYMBOL in theorem_text

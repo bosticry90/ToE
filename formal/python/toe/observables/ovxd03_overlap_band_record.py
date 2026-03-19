@@ -26,6 +26,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from formal.python.meta.repo_environment import find_repo_root
+
 
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":")).encode("utf-8")
@@ -36,15 +38,6 @@ def _sha256_file(path: Path) -> str:
     h = hashlib.sha256()
     h.update(path.read_bytes())
     return h.hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 @dataclass(frozen=True)
@@ -105,7 +98,7 @@ def _band_from_csv(csv_path: Path) -> KBand:
 def ovxd03_overlap_band_record() -> OVXD03OverlapBandRecord:
     """Compute k-bands and overlap band for OV-01g / OV-02x / OV-03x datasets."""
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     # Dataset keys are stable inventory IDs.
     steinhauer_csv = (
@@ -201,7 +194,7 @@ def render_ovxd03_lock_markdown(record: OVXD03OverlapBandRecord) -> str:
 def write_ovxd03_lock(*, lock_path: Path | None = None) -> Path:
     """Write the OV-XD-03 lock markdown deterministically."""
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = (

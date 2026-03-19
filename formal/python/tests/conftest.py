@@ -6,11 +6,12 @@ from pathlib import Path
 
 import pytest
 
+from formal.python.meta.repo_environment import find_repo_root
+from formal.python.meta.repo_environment import normalize_sys_path_entry
+
 
 def _repo_root() -> Path:
-    # Anchored to: formal/python/tests/conftest.py
-    # Layout: tests -> python -> formal -> repo_root
-    root = Path(__file__).resolve().parents[3]
+    root = find_repo_root(Path(__file__))
     formal_python = root / "formal" / "python"
     if not formal_python.exists():
         raise RuntimeError(
@@ -27,17 +28,7 @@ def _repo_root() -> Path:
 
 
 def _norm_path_entry(entry: str) -> str:
-    if entry == "":
-        p = Path.cwd()
-    else:
-        p = Path(entry)
-
-    try:
-        resolved = p.resolve(strict=False)
-    except Exception:
-        resolved = p
-
-    return str(resolved).replace("/", "\\").rstrip("\\").lower()
+    return normalize_sys_path_entry(entry)
 
 
 def _enforce_sys_path_quarantine_invariants() -> None:

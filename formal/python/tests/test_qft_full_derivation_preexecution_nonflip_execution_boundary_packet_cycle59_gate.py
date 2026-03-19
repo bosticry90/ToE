@@ -35,6 +35,7 @@ def test_cycle59_preexecution_nonflip_execution_boundary_packet_tokens_in_discha
 
 def test_cycle59_preexecution_nonflip_execution_boundary_packet_tokens_in_state_and_roadmap() -> None:
     state = _read(Path("State_of_the_Theory.md"))
+    inventory = _read(Path("formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md"))
     roadmap = _read(Path("formal/docs/paper/PHYSICS_ROADMAP_v0.md"))
 
     required = [
@@ -44,7 +45,7 @@ def test_cycle59_preexecution_nonflip_execution_boundary_packet_tokens_in_state_
         "formal/python/tests/test_qft_full_derivation_preexecution_nonflip_execution_boundary_packet_cycle59_gate.py",
     ]
     for token in required:
-        assert token in state
+        assert token in state or token in inventory
         assert token in roadmap
 
 
@@ -67,3 +68,7 @@ def test_cycle59_preexecution_nonflip_execution_boundary_packet_artifact_json_ex
     assert '"status": "preexecution_nonflip_execution_boundary_packet_locked"' in artifact
     assert '"token_write_allowed": false' in artifact
     assert '"adjudication_token_state_verified": "NOT_YET_DISCHARGED"' in artifact
+
+
+
+

@@ -1,0 +1,485 @@
+Running governance suite via ./py.ps1
+Running local stack preflight
+preflight.python_executable=C:\Users\psboy\Documents\ToE\.venv\Scripts\python.exe
+preflight.python_ok=True
+preflight.cargo_ok=True
+preflight.status=ok
+Running tooling validation checks (no writes)
+Running tooling validation checks via ./py.ps1
+import ok: regen_canonical_locks
+import ok: lint_mapping_tuples
+import ok: ovsw01_shallow_water_lowk_slope_record
+Validated canonical locks (no writes):
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-BR-02_regime_bridge_record.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-BR-03N_bragg_dispersion_k_omega_digitized.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-BR-04a_bragg_lowk_slope_conditionA.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-BR-04b_bragg_lowk_slope_conditionB.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-BR-05_bragg_lowk_slope_summary.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-DR-BR-00_br01_prediction_declarations.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-DR-BR-01_candidate_pruning_table.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SEL-BR-01_bragg_lowk_slope_audit.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-BR-FN-00_fn01_metric_residual_prediction_declarations.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-BR-FN-01_fn01_metric_residual_pruning_table.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-FN-WT-00_fn01_weight_policy_declarations.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-FN-WT-01_fn01_weight_policy_pruning_table.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-FN-WT-02_selected_weight_policy.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-FN-02_weighted_residual_audit.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-BR-SND-03_cross_lane_lowk_consistency_audit.md
+Validated canonical locks (no writes):
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-BR-SND-01_sound_vs_bragg_lowk_comparability.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-BR-SND-02_cross_source_density_mapping.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-BR-SND-03_cross_lane_lowk_consistency_audit.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-BR-SND-03_cross_lane_lowk_consistency_audit_OVERRIDE.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SEL-SND-01_sound_anchor_ingestion_audit.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SEL-SND-02_sound_anchor_interaction_stress_test.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SEL-SND-03_sound_speed_derived_audit.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SEL-SND-04_density_dependence_audit.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SEL-SND-05_multi_density_constancy_audit.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SND-01N2_sound_propagation_distance_time_digitized.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SND-01_sound_propagation_distance_time_digitized.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SND-01_sound_speed_scaling_anchor.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SND-02B_sound_speed_from_propagation_seriesB.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SND-02_sound_speed_from_propagation.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SND-03N2_secondary_density_conditions_digitized.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SND-03N_density_coverage_report.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SND-03_central_density_digitized.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SND-03_sound_speed_density_scaling.md
+  - C:\Users\psboy\Documents\ToE\formal\markdown\locks\observables\OV-SND-04_sound_speed_density_constancy.md
+{'schema': 'OV-BR-SND-03_cross_lane_lowk_consistency_audit/v4', 'status_date': '2026-01-25', 'observable_id': 'OV-BR-SND-03', 'sound_date': '2026-01-24', 'bragg_date': '2026-01-25', 'status': {'blocked': True, 'blockers': ['admissibility_manifest_blocked'], 'inputs': {'required_gates': ['CT01', 'SYM01', 'CAUS01'], 'admissibility_manifest': {'path': 'formal/markdown locks/gates/admissibility_manifest.json', 'version': 1}}}, 'comparability': {'status': 'blocked', 'reasons': ['GATES_DISABLED']}, 'rows': [], 'source_locators': {}, 'notes': 'Blocked by admissibility manifest; audit not computed.', 'fingerprint': '3a3d3d8e6e1568b42b75c6cc2e6e733b5b754c7ca40abdaf6e92939a16bf2d11'}
+OV-SW-01 report
+  schema: OV-SW-01_shallow_water_lowk_slope/v1
+  record_fingerprint: 84249163534dd44f37f770da3574488dd53371bc97b9c4f5c52f5aa555643e05
+  blocked: True
+  blockers: omega_over_2pi_vs_k_lowk_csv_missing, omega_over_2pi_vs_k_lowk_metadata_missing
+OK
+Running local divergence guardrail
+divergence_guardrail.ahead_count=0 limit=20
+......................................FFFFFFFFF...F..F.......F.......... [ 17%]
+........................................................................ [ 34%]
+..........................................................F............. [ 51%]
+........................................................................ [ 68%]
+........................................................................ [ 85%]
+.................................................F............           [100%]
+================================== FAILURES ===================================
+_______________ test_comp_fn_rep_policy_is_wired_and_evidenced ________________
+
+    def test_comp_fn_rep_policy_is_wired_and_evidenced():
+        text = STATE_PATH.read_text(encoding="utf-8")
+        required_tokens = [
+            "formal/toe_formal/ToeFormal/Variational/FNRepresentationEquivalencePolicy.lean",
+            "formal/toe_formal/ToeFormal/Variational/ActionRep64CubicLane.lean",
+            "formal/toe_formal/ToeFormal/Variational/DischargeELMatchesFN01Rep64Pcubic.lean",
+            "formal/python/tests/test_lean_fn01_rep64_build_guard.py",
+            "formal/python/tests/test_comparator_rep_policy_gate.py",
+            "formal/python/toe/constraints/fn_rep_equivalence_policy.json",
+            "formal/python/toe/comparators/comparator_rep_interpretability_manifest.json",
+        ]
+>       blocks = _extract_gap_blocks(text, gap_id="COMP-FN-REP")
+
+formal\python\tests\test_state_doc_comp_fn_rep_policy.py:54: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+
+    def _extract_gap_blocks(text: str, *, gap_id: str) -> list[str]:
+        marker_re = re.compile(rf"^GapID:\s*{re.escape(gap_id)}\s*$", flags=re.MULTILINE)
+        blocks: list[str] = []
+        for m in marker_re.finditer(text):
+            start = m.start()
+            nxt = re.search(r"^GapID:\s*\S+\s*$", text[m.end() :], flags=re.MULTILINE)
+            if nxt is None:
+                blocks.append(text[start:])
+            else:
+                blocks.append(text[start : m.end() + nxt.start()])
+        if not blocks:
+>           raise AssertionError(f"Could not find exact gap marker for GapID: {gap_id!r}")
+E           AssertionError: Could not find exact gap marker for GapID: 'COMP-FN-REP'
+
+formal\python\tests\test_state_doc_comp_fn_rep_policy.py:31: AssertionError
+___________ test_comp_fn_rep32_64_equiv_gap_is_wired_and_evidenced ____________
+
+    def test_comp_fn_rep32_64_equiv_gap_is_wired_and_evidenced():
+        text = STATE_PATH.read_text(encoding="utf-8")
+        required_tokens = [
+            "formal/toe_formal/ToeFormal/Variational/FNRep32Rep64Equivalence.lean",
+            "formal/python/tests/test_lean_fn_rep32_rep64_equivalence_build_guard.py",
+            "formal/python/toe/comparators/comparator_rep_interpretability_manifest.json",
+            "formal/python/tests/test_comparator_rep_policy_gate.py",
+        ]
+    
+>       blocks = _extract_gap_blocks(text, gap_id="COMP-FN-REP32-64-EQUIV")
+
+formal\python\tests\test_state_doc_comp_fn_rep32_64_equiv.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+
+    def _extract_gap_blocks(text: str, *, gap_id: str) -> list[str]:
+        marker_re = re.compile(rf"^GapID:\s*{re.escape(gap_id)}\s*$", flags=re.MULTILINE)
+        blocks: list[str] = []
+        for m in marker_re.finditer(text):
+            start = m.start()
+            nxt = re.search(r"^GapID:\s*\S+\s*$", text[m.end() :], flags=re.MULTILINE)
+            if nxt is None:
+                blocks.append(text[start:])
+            else:
+                blocks.append(text[start : m.end() + nxt.start()])
+        if not blocks:
+>           raise AssertionError(f"Could not find exact gap marker for GapID: {gap_id!r}")
+E           AssertionError: Could not find exact gap marker for GapID: 'COMP-FN-REP32-64-EQUIV'
+
+formal\python\tests\test_state_doc_comp_fn_rep32_64_equiv.py:31: AssertionError
+_______ test_comp_fn_rep32_link_is_marked_implemented_and_build_guarded _______
+
+    def test_comp_fn_rep32_link_is_marked_implemented_and_build_guarded():
+        text = STATE_PATH.read_text(encoding="utf-8")
+>       blocks = _extract_gap_blocks(text, gap_id="COMP-FN-REP32-LINK")
+
+formal\python\tests\test_state_doc_comp_fn_rep32_link_discharge.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+
+    def _extract_gap_blocks(text: str, *, gap_id: str) -> list[str]:
+        marker_re = re.compile(rf"^GapID:\s*{re.escape(gap_id)}\s*$", flags=re.MULTILINE)
+        blocks: list[str] = []
+        for m in marker_re.finditer(text):
+            start = m.start()
+            nxt = re.search(r"^GapID:\s*\S+\s*$", text[m.end() :], flags=re.MULTILINE)
+            if nxt is None:
+                blocks.append(text[start:])
+            else:
+                blocks.append(text[start : m.end() + nxt.start()])
+        if not blocks:
+>           raise AssertionError(f"Could not find exact gap marker for GapID: {gap_id!r}")
+E           AssertionError: Could not find exact gap marker for GapID: 'COMP-FN-REP32-LINK'
+
+formal\python\tests\test_state_doc_comp_fn_rep32_link_discharge.py:31: AssertionError
+_______________ test_comp_fn_rep_nonalias_equiv01_gap_is_wired ________________
+
+    def test_comp_fn_rep_nonalias_equiv01_gap_is_wired() -> None:
+        text = STATE_PATH.read_text(encoding="utf-8")
+>       blocks = _extract_gap_blocks(text, gap_id="COMP-FN-REP-NONALIAS-EQUIV-01")
+
+formal\python\tests\test_state_doc_comp_fn_rep_nonalias_equivalence01.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+
+    def _extract_gap_blocks(text: str, *, gap_id: str) -> list[str]:
+        marker_re = re.compile(rf"^GapID:\s*{re.escape(gap_id)}\s*$", flags=re.MULTILINE)
+        blocks: list[str] = []
+        for m in marker_re.finditer(text):
+            start = m.start()
+            nxt = re.search(r"^GapID:\s*\S+\s*$", text[m.end() :], flags=re.MULTILINE)
+            if nxt is None:
+                blocks.append(text[start:])
+            else:
+                blocks.append(text[start : m.end() + nxt.start()])
+        if not blocks:
+>           raise AssertionError(f"Could not find exact gap marker for GapID: {gap_id!r}")
+E           AssertionError: Could not find exact gap marker for GapID: 'COMP-FN-REP-NONALIAS-EQUIV-01'
+
+formal\python\tests\test_state_doc_comp_fn_rep_nonalias_equivalence01.py:31: AssertionError
+_______________ test_comp03_is_implemented_and_comp05_is_lifted _______________
+
+    def test_comp03_is_implemented_and_comp05_is_lifted():
+        text = STATE_PATH.read_text(encoding="utf-8")
+    
+>       comp03_blocks = _extract_gap_blocks(text, gap_id="COMP-03")
+
+formal\python\tests\test_state_doc_comp03_comp05_transition.py:46: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+
+    def _extract_gap_blocks(text: str, *, gap_id: str) -> list[str]:
+        marker_re = re.compile(rf"^GapID:\s*{re.escape(gap_id)}\s*$", flags=re.MULTILINE)
+        blocks: list[str] = []
+        for m in marker_re.finditer(text):
+            start = m.start()
+            nxt = re.search(r"^GapID:\s*\S+\s*$", text[m.end() :], flags=re.MULTILINE)
+            if nxt is None:
+                blocks.append(text[start:])
+            else:
+                blocks.append(text[start : m.end() + nxt.start()])
+        if not blocks:
+>           raise AssertionError(f"Could not find exact gap marker for GapID: {gap_id!r}")
+E           AssertionError: Could not find exact gap marker for GapID: 'COMP-03'
+
+formal\python\tests\test_state_doc_comp03_comp05_transition.py:31: AssertionError
+_________________ test_comp_pred_fals_mentions_cv03_ucff_lane _________________
+
+    def test_comp_pred_fals_mentions_cv03_ucff_lane():
+        text = STATE_PATH.read_text(encoding="utf-8")
+>       blocks = _extract_gap_blocks(text, gap_id="COMP-PRED-FALS")
+
+formal\python\tests\test_state_doc_comp03_comp05_transition.py:76: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+
+    def _extract_gap_blocks(text: str, *, gap_id: str) -> list[str]:
+        marker_re = re.compile(rf"^GapID:\s*{re.escape(gap_id)}\s*$", flags=re.MULTILINE)
+        blocks: list[str] = []
+        for m in marker_re.finditer(text):
+            start = m.start()
+            nxt = re.search(r"^GapID:\s*\S+\s*$", text[m.end() :], flags=re.MULTILINE)
+            if nxt is None:
+                blocks.append(text[start:])
+            else:
+                blocks.append(text[start : m.end() + nxt.start()])
+        if not blocks:
+>           raise AssertionError(f"Could not find exact gap marker for GapID: {gap_id!r}")
+E           AssertionError: Could not find exact gap marker for GapID: 'COMP-PRED-FALS'
+
+formal\python\tests\test_state_doc_comp03_comp05_transition.py:31: AssertionError
+_________ test_comp_evol_link_is_marked_discharged_and_build_verified _________
+
+    def test_comp_evol_link_is_marked_discharged_and_build_verified():
+        text = STATE_PATH.read_text(encoding="utf-8")
+>       blocks = _extract_gap_blocks(text, gap_id="COMP-EVOL-LINK")
+
+formal\python\tests\test_state_doc_comp_evol_link_discharge.py:45: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+
+    def _extract_gap_blocks(text: str, *, gap_id: str) -> list[str]:
+        marker_re = re.compile(rf"^GapID:\s*{re.escape(gap_id)}\s*$", flags=re.MULTILINE)
+        blocks: list[str] = []
+        for m in marker_re.finditer(text):
+            start = m.start()
+            nxt = re.search(r"^GapID:\s*\S+\s*$", text[m.end() :], flags=re.MULTILINE)
+            if nxt is None:
+                blocks.append(text[start:])
+            else:
+                blocks.append(text[start : m.end() + nxt.start()])
+        if not blocks:
+>           raise AssertionError(f"Could not find exact gap marker for GapID: {gap_id!r}")
+E           AssertionError: Could not find exact gap marker for GapID: 'COMP-EVOL-LINK'
+
+formal\python\tests\test_state_doc_comp_evol_link_discharge.py:31: AssertionError
+____________ test_state_doc_has_cv_and_domain_blocks_with_evidence ____________
+
+    def test_state_doc_has_cv_and_domain_blocks_with_evidence():
+        text = STATE_PATH.read_text(encoding="utf-8")
+    
+        required_ids = ["OV-CV-01", "OV-CV-BR-01", "DRBR-DOMAIN-02", "OV-CV-02"]
+        for block_id in required_ids:
+>           block = _extract_block(text, block_id=block_id)
+
+formal\python\tests\test_state_doc_cv_lane_wiring.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+
+    def _extract_block(text: str, *, block_id: str) -> str:
+        marker_re = re.compile(rf"^ID:\s*{re.escape(block_id)}\s*$", flags=re.MULTILINE)
+        m = marker_re.search(text)
+        if m is None:
+>           raise AssertionError(f"Could not find exact block marker for ID: {block_id!r}")
+E           AssertionError: Could not find exact block marker for ID: 'OV-CV-01'
+
+formal\python\tests\test_state_doc_cv_lane_wiring.py:24: AssertionError
+_____ test_comp_pred_fals_evidence_mentions_cv_bridge_and_domain02_lanes ______
+
+    def test_comp_pred_fals_evidence_mentions_cv_bridge_and_domain02_lanes():
+        text = STATE_PATH.read_text(encoding="utf-8")
+>       block = _extract_gap_block(text, gap_id="COMP-PRED-FALS")
+
+formal\python\tests\test_state_doc_cv_lane_wiring.py:82: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+
+    def _extract_gap_block(text: str, *, gap_id: str) -> str:
+        marker_re = re.compile(rf"^GapID:\s*{re.escape(gap_id)}\s*$", flags=re.MULTILINE)
+        m = marker_re.search(text)
+        if m is None:
+>           raise AssertionError(f"Could not find exact gap marker for GapID: {gap_id!r}")
+E           AssertionError: Could not find exact gap marker for GapID: 'COMP-PRED-FALS'
+
+formal\python\tests\test_state_doc_cv_lane_wiring.py:37: AssertionError
+______ test_pol01_mainline_dependencies_do_not_include_variantA_or_ov01x ______
+
+    def test_pol01_mainline_dependencies_do_not_include_variantA_or_ov01x():
+        doc = (REPO_ROOT / "State_of_the_Theory.md").read_text(encoding="utf-8")
+    
+>       pol_block = _extract_block(doc, block_id="POL-01")
+
+formal\python\tests\test_state_doc_mainline_does_not_depend_on_variantA.py:41: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+
+    def _extract_block(text: str, *, block_id: str) -> str:
+        marker = f"ID: {block_id}"
+        start = text.find(marker)
+        if start < 0:
+>           raise AssertionError(f"Could not find block marker: {marker!r}")
+E           AssertionError: Could not find block marker: 'ID: POL-01'
+
+formal\python\tests\test_state_doc_mainline_does_not_depend_on_variantA.py:22: AssertionError
+__________ test_pillar_status_matrix_qft_entry_matches_state_tokens ___________
+
+    def test_pillar_status_matrix_qft_entry_matches_state_tokens() -> None:
+        matrix = _read_json(MATRIX_PATH)
+        qft_entry = matrix.get("pillars", {}).get("PILLAR-QFT", {})
+        assert qft_entry, "Matrix must define PILLAR-QFT entry."
+    
+        state_text = _read(STATE_PATH)
+>       state_adjudication = _extract_token(state_text, "QFT_FULL_DERIVATION_ADJUDICATION")
+
+formal\python\tests\test_pillar_status_matrix_consistency_gate.py:93: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+token_name = 'QFT_FULL_DERIVATION_ADJUDICATION'
+
+    def _extract_token(text: str, token_name: str) -> str:
+        m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-]+)", text)
+>       assert m is not None, f"Missing token `{token_name}`."
+E       AssertionError: Missing token `QFT_FULL_DERIVATION_ADJUDICATION`.
+E       assert None is not None
+
+formal\python\tests\test_pillar_status_matrix_consistency_gate.py:36: AssertionError
+___________ test_registry_drives_pillar_phase_advancement_semantics ___________
+
+    def test_registry_drives_pillar_phase_advancement_semantics() -> None:
+        registry = _read_json(REGISTRY_PATH)
+        matrix = _read_json(MATRIX_PATH)
+        roadmap_text = _read(ROADMAP_PATH)
+        state_text = _read(STATE_PATH)
+    
+        assert registry.get("registry_id") == "PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0"
+        assert registry.get("registry_version") == 1
+        assert registry.get("standard_doc") == STANDARD_REL
+        assert registry.get("gate_path") == GATE_REL
+    
+        global_tokens = registry.get("global_tokens", {})
+        focus_token = global_tokens.get("focus_token")
+        lane_token = global_tokens.get("lane_token")
+        assert focus_token == "NEXT_PILLAR_FOCUS_v0"
+        assert lane_token == "NEXT_PILLAR_PRIMARY_LANE_v0"
+    
+        focus_value = _extract_token(state_text, focus_token)
+        lane_value = _extract_token(state_text, lane_token)
+    
+        pillars = registry.get("pillars", [])
+        assert isinstance(pillars, list) and pillars, "Phase advancement registry must define pillar entries."
+        pillar_ids = [entry.get("pillar_id") for entry in pillars]
+        assert len(pillar_ids) == len(set(pillar_ids)), "Phase advancement registry pillar IDs must be unique."
+    
+        matrix_pillars = matrix.get("pillars", {})
+    
+        for entry in pillars:
+            pillar_id = entry["pillar_id"]
+            mode = entry["mode"]
+            authority_text = _read(REPO_ROOT / entry["authority_doc_path"])
+    
+            expected_matrix_status = entry.get("expected_matrix_status")
+            if expected_matrix_status is not None:
+                matrix_entry = matrix_pillars.get(pillar_id)
+                assert isinstance(matrix_entry, dict), f"{pillar_id}: matrix row is required by phase advancement registry."
+                assert matrix_entry.get("matrix_status") == expected_matrix_status, (
+                    f"{pillar_id}: matrix status must remain {expected_matrix_status}."
+                )
+    
+            if mode == "CLOSED_HANDOFF":
+                assert _extract_token(authority_text, entry["completion_token"]) == entry["completion_value"]
+                proceed_token = entry.get("roadmap_proceed_token")
+                if proceed_token:
+                    proceed_value = _extract_token(roadmap_text, proceed_token)
+                    assert proceed_value.startswith(entry["roadmap_proceed_prefix"]), (
+                        f"{pillar_id}: roadmap proceed gate must start with {entry['roadmap_proceed_prefix']}."
+                    )
+                assert focus_value == entry["expected_global_focus"], (
+                    f"{pillar_id}: global next-pillar focus drift detected."
+                )
+                assert lane_value == entry["expected_global_lane"], (
+                    f"{pillar_id}: global next-pillar lane drift detected."
+                )
+    
+            elif mode == "CLOSED_HANDOFF_ARTIFACT":
+                assert _extract_token(authority_text, entry["completion_token"]) == entry["completion_value"]
+                for doc_text, doc_label in ((authority_text, "authority doc"), (state_text, "state")):
+>                   assert _extract_token(doc_text, entry["handoff_token"]) == entry["handoff_value"], (
+                        f"{pillar_id}: {doc_label} must pin the declared handoff token."
+                    )
+
+formal\python\tests\test_pillar_phase_advancement_gate.py:139: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+text = '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+token_name = 'QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_HANDOFF_ARTIFACT_v0'
+
+    def _extract_token(text: str, token_name: str) -> str:
+        match = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-]+)", text)
+>       assert match is not None, f"Missing token `{token_name}`."
+E       AssertionError: Missing token `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_HANDOFF_ARTIFACT_v0`.
+E       assert None is not None
+
+formal\python\tests\test_pillar_phase_advancement_gate.py:41: AssertionError
+___ test_gr_continuum_cycle10_criteria_pointer_parity_in_state_and_roadmap ____
+
+    def test_gr_continuum_cycle10_criteria_pointer_parity_in_state_and_roadmap() -> None:
+        state_text = _read(STATE_PATH)
+        roadmap_text = _read(ROADMAP_PATH)
+    
+        required_refs = (
+            "formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md",
+            "formal/output/gr_continuum_discharge_criteria_cycle10_v0.json",
+            "formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py",
+        )
+    
+        for ref in required_refs:
+>           assert ref in state_text
+E           AssertionError: assert 'formal/output/gr_continuum_discharge_criteria_cycle10_v0.json' in '## AUTHORITY_SURFACE_v2 (COMPACT_CURRENT_STATE)\n\nProject posture:\n- This file is the compact authority surface for...rface intentionally keeps only current-state decision posture and canonical pointers.\n\n## END_ARCHIVED_HISTORY\n\n\n'
+
+formal\python\tests\test_gr_continuum_discharge_criteria_cycle10_gate.py:69: AssertionError
+________________ test_conftest_signature_matches_protocol_pin _________________
+
+    def test_conftest_signature_matches_protocol_pin() -> None:
+        protocol_text = _read(PROTOCOL_PATH)
+        expected_hash = _extract_protocol_hash(protocol_text)
+        current_hash = _normalized_sha256(CONFTEST_PATH)
+    
+>       assert current_hash == expected_hash, (
+            "conftest.py hash drift detected.\n"
+            f"Expected: {expected_hash}\n"
+            f"Current:  {current_hash}\n"
+            "Update CONFTEST_STABILITY_SHA256_v0 in formal/docs/release/CONFTEST_STABILITY_PROTOCOL_v0.md "
+            "after approved conftest changes."
+        )
+E       AssertionError: conftest.py hash drift detected.
+E         Expected: c2672bafdfca146e1fd00fa31400bbd183edea6580737cf2b165a415f45b75c1
+E         Current:  316030643a64b3cf369fb7074294056174718f08d187bb0b61d39b03e26ad678
+E         Update CONFTEST_STABILITY_SHA256_v0 in formal/docs/release/CONFTEST_STABILITY_PROTOCOL_v0.md after approved conftest changes.
+E       assert '316030643a64...39b03e26ad678' == 'c2672bafdfca...5a415f45b75c1'
+E         
+E         - c2672bafdfca146e1fd00fa31400bbd183edea6580737cf2b165a415f45b75c1
+E         + 316030643a64b3cf369fb7074294056174718f08d187bb0b61d39b03e26ad678
+
+formal\python\tests\test_conftest_signature_stability_gate.py:59: AssertionError
+=========================== short test summary info ===========================
+FAILED formal/python/tests/test_state_doc_comp_fn_rep_policy.py::test_comp_fn_rep_policy_is_wired_and_evidenced
+FAILED formal/python/tests/test_state_doc_comp_fn_rep32_64_equiv.py::test_comp_fn_rep32_64_equiv_gap_is_wired_and_evidenced
+FAILED formal/python/tests/test_state_doc_comp_fn_rep32_link_discharge.py::test_comp_fn_rep32_link_is_marked_implemented_and_build_guarded
+FAILED formal/python/tests/test_state_doc_comp_fn_rep_nonalias_equivalence01.py::test_comp_fn_rep_nonalias_equiv01_gap_is_wired
+FAILED formal/python/tests/test_state_doc_comp03_comp05_transition.py::test_comp03_is_implemented_and_comp05_is_lifted
+FAILED formal/python/tests/test_state_doc_comp03_comp05_transition.py::test_comp_pred_fals_mentions_cv03_ucff_lane
+FAILED formal/python/tests/test_state_doc_comp_evol_link_discharge.py::test_comp_evol_link_is_marked_discharged_and_build_verified
+FAILED formal/python/tests/test_state_doc_cv_lane_wiring.py::test_state_doc_has_cv_and_domain_blocks_with_evidence
+FAILED formal/python/tests/test_state_doc_cv_lane_wiring.py::test_comp_pred_fals_evidence_mentions_cv_bridge_and_domain02_lanes
+FAILED formal/python/tests/test_state_doc_mainline_does_not_depend_on_variantA.py::test_pol01_mainline_dependencies_do_not_include_variantA_or_ov01x
+FAILED formal/python/tests/test_pillar_status_matrix_consistency_gate.py::test_pillar_status_matrix_qft_entry_matches_state_tokens
+FAILED formal/python/tests/test_pillar_phase_advancement_gate.py::test_registry_drives_pillar_phase_advancement_semantics
+FAILED formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py::test_gr_continuum_cycle10_criteria_pointer_parity_in_state_and_roadmap
+FAILED formal/python/tests/test_conftest_signature_stability_gate.py::test_conftest_signature_matches_protocol_pin
+14 failed, 408 passed in 142.59s (0:02:22)
+Exception: C:\Users\psboy\Documents\ToE\governance_suite.ps1:281:3
+Line |
+ 281 |    throw "Governance pytest tranche failed."
+     |    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+     | Governance pytest tranche failed.

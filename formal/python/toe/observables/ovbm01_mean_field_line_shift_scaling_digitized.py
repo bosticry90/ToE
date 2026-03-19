@@ -19,6 +19,7 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 
@@ -33,15 +34,6 @@ def _sha256_file(path: Path) -> str:
         for chunk in iter(lambda: f.read(1024 * 1024), b""):
             h.update(chunk)
     return h.hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 # Minimal digitized target: panel (a), filled-circle series only.
@@ -125,7 +117,7 @@ def _sha256_text(text: str) -> str:
 
 
 def ovbm01_digitized_mean_shift_dataset_record(*, date: str = "2026-01-23") -> OVBM01DigitizedMeanShiftDatasetRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     base = repo_root / "formal" / "external_evidence" / "bec_bragg_stenger_1999"
 
     pdf_rel = "formal/external_evidence/bec_bragg_stenger_1999/9901109v1.pdf"
@@ -186,7 +178,7 @@ def ovbm01_digitized_mean_shift_dataset_record(*, date: str = "2026-01-23") -> O
 
 
 def write_ovbm01_digitized_artifacts(*, date: str = "2026-01-23") -> dict[str, Path]:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     rec = ovbm01_digitized_mean_shift_dataset_record(date=str(date))
 
     csv_text = _render_csv_text()
@@ -234,7 +226,7 @@ def render_ovbm01_digitized_lock_markdown(record: OVBM01DigitizedMeanShiftDatase
 
 
 def write_ovbm01_digitized_lock(*, lock_path: Path | None = None, date: str = "2026-01-23") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     out = lock_path
     if out is None:

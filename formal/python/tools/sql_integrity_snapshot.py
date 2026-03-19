@@ -8,19 +8,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+from formal.python.meta.repo_environment import find_repo_root
 
 
-REPO_ROOT = _find_repo_root(Path(__file__))
+REPO_ROOT = find_repo_root(Path(__file__))
 SCHEMA_ID = "TOE_SQL_INTEGRITY_SNAPSHOT_REPORT_v0"
 
 

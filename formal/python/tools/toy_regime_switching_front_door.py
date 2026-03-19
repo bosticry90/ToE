@@ -35,6 +35,7 @@ import hashlib
 import json
 from math import isfinite
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any, Dict, Optional
 
 
@@ -43,16 +44,6 @@ TOOL_VERSION = "v1"
 CANDIDATE_IDS = ("D1_threshold_switch",)
 MU_DEF_IDS = ("mu_state",)
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _canonical_json(payload: object) -> str:
@@ -218,7 +209,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     )
 
     args = p.parse_args(argv)
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     inp = _build_input_from_args(args)
     payload = build_toy_regime_switching_report(inp)

@@ -30,6 +30,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 
@@ -60,15 +61,6 @@ def _sha256_file(path: Path) -> str:
 
 def _sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _normalize_extracted_text(s: str) -> str:
@@ -164,7 +156,7 @@ class OVSND03NCentralDensityDigitizedRecord:
 
 
 def ovsnd03n_central_density_digitized_record(*, date: str = "2026-01-24") -> OVSND03NCentralDensityDigitizedRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     pdf_rel = "formal/external_evidence/bec_sound_andrews_1997/9711224v1.pdf"
     csv_rel = "formal/external_evidence/bec_sound_andrews_1997/ovsnd03_density_digitization/central_density.csv"
@@ -245,7 +237,7 @@ def ovsnd03n_central_density_digitized_record(*, date: str = "2026-01-24") -> OV
 
 
 def write_ovsnd03n_digitized_artifacts(*, date: str = "2026-01-24") -> dict[str, Path]:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     rec = ovsnd03n_central_density_digitized_record(date=str(date))
 
     pdf_path = repo_root / rec.source["arxiv_pdf_relpath"]
@@ -299,7 +291,7 @@ def render_ovsnd03n_digitized_lock_markdown(record: OVSND03NCentralDensityDigiti
 
 
 def write_ovsnd03n_digitized_lock(*, lock_path: Path | None = None, date: str = "2026-01-24") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = repo_root / "formal" / "markdown" / "locks" / "observables" / "OV-SND-03_central_density_digitized.md"

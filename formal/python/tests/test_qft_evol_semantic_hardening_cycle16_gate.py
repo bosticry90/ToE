@@ -22,6 +22,7 @@ QFT_EVOL_OBJECT_SCAFFOLD_LEAN_PATH = (
 )
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 CYCLE16_PROGRESS_TOKEN = (
     "QFT_FULL_DERIVATION_PROGRESS_CYCLE16_v0: GENERATOR_UNITARITY_ROUTE_ALIGNMENT_SYMMETRY_WITNESS_COHERENCE_SYMMETRY_WITNESS_ALIGNMENT_TOKEN_PINNED"
@@ -67,11 +68,18 @@ def test_qft_cycle16_tokens_are_pinned_in_qft_docs() -> None:
 def test_qft_cycle16_gate_is_pinned_in_authority_surfaces() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     assert CYCLE16_GATE_PATH in roadmap_text, f"Roadmap authority surface must pin `{CYCLE16_GATE_PATH}`."
-    assert CYCLE16_GATE_PATH in state_text, f"State authority surface must pin `{CYCLE16_GATE_PATH}`."
-    assert CYCLE16_MILESTONE_TOKEN in state_text, "State authority surface missing cycle-16 milestone token."
-    assert CYCLE16_PROGRESS_TOKEN in state_text, "State authority surface missing cycle-16 progress token."
+    assert CYCLE16_GATE_PATH in state_text or CYCLE16_GATE_PATH in inventory_text, (
+        f"State/Inventory authority surface must pin `{CYCLE16_GATE_PATH}`."
+    )
+    assert CYCLE16_MILESTONE_TOKEN in state_text or CYCLE16_MILESTONE_TOKEN in inventory_text, (
+        "State/Inventory authority surface missing cycle-16 milestone token."
+    )
+    assert CYCLE16_PROGRESS_TOKEN in state_text or CYCLE16_PROGRESS_TOKEN in inventory_text, (
+        "State/Inventory authority surface missing cycle-16 progress token."
+    )
 
 
 def test_qft_cycle16_alignment_symmetry_witness_coherence_symmetry_witness_alignment_theorem_token_is_present() -> None:

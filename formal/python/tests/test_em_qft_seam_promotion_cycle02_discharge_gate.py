@@ -19,6 +19,7 @@ INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_CL
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+CENTRAL_INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 THEOREM_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal" / "Bridges" / "EM_QFT_SeamPromotion.lean"
 
 CYCLE02_TARGET_REL = "formal/docs/paper/DERIVATION_TARGET_EM_QFT_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md"
@@ -40,6 +41,7 @@ def test_em_qft_cycle02_discharge_surface_and_parity() -> None:
     registry_text = _read(REGISTRY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    central_inventory_text = _read(CENTRAL_INVENTORY_PATH)
     theorem_text = _read(THEOREM_PATH)
 
     assert "full `B -> A` completion bundle" in cycle01_target_text
@@ -57,9 +59,12 @@ def test_em_qft_cycle02_discharge_surface_and_parity() -> None:
     assert CYCLE02_TARGET_REL in inventory_text
     assert DISCHARGE_GATE_REL in inventory_text
 
-    for text in (registry_text, roadmap_text, state_text):
+    for text in (registry_text, roadmap_text):
         assert CYCLE02_TARGET_REL in text
         assert DISCHARGE_GATE_REL in text
+
+    assert CYCLE02_TARGET_REL in state_text or CYCLE02_TARGET_REL in central_inventory_text
+    assert DISCHARGE_GATE_REL in state_text or DISCHARGE_GATE_REL in central_inventory_text
 
     assert DISCHARGE_THEOREM_SYMBOL in theorem_text
     assert NO_SHORTCUT_TOKEN in theorem_text

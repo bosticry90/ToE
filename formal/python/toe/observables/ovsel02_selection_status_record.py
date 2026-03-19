@@ -22,6 +22,8 @@ import json
 from pathlib import Path
 from typing import Any, Literal
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.observables.ovdq01_policy_sensitivity_record import default_artifact_path
 
 
@@ -31,15 +33,6 @@ SelectionStatus = Literal["decisive_curved", "undecided"]
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _load_json(path: Path) -> dict[str, Any]:
@@ -104,7 +97,7 @@ def ovsel02_selection_status_record(
     q_threshold_v1: float = 0.90,
     q_threshold_v2: float = 1.05,
 ) -> OVSEL02SelectionStatusRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     artifact_path = default_artifact_path()
     artifact = _load_json(artifact_path)
@@ -214,7 +207,7 @@ def render_ovsel02_lock_markdown(record: OVSEL02SelectionStatusRecord) -> str:
 
 
 def write_ovsel02_lock(*, lock_path: Path | None = None) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = repo_root / "formal" / "markdown" / "locks" / "observables" / "OV-SEL-02_selection_status_policy_compare.md"

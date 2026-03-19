@@ -54,19 +54,9 @@ from pathlib import Path
 from typing import Optional
 
 import numpy as np
+from formal.python.meta.repo_environment import find_repo_root
 
 from formal.python.toe.ucff.core_front_door import UcffCoreParams, ucff_dispersion_omega2_numeric
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _sha256_bytes(data: bytes) -> str:
@@ -358,7 +348,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     p.add_argument("--no-write", action="store_true", help="Do not write the file; just validate generation")
 
     args = p.parse_args(argv)
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     payload = build_bridge_boundary_report_payload(repo_root=repo_root)
     out_text = json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=False) + "\n"

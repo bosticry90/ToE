@@ -17,21 +17,11 @@ from pathlib import Path
 
 import numpy as np
 
+from formal.python.meta.repo_environment import find_repo_root
 from formal.python.toe.comparators.rl07_energy_noether_conservation_v0 import (
     RL07EnergyCase,
     RL07EnergyReport,
 )
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _default_artifact_dir(repo_root: Path) -> Path:
@@ -235,7 +225,7 @@ def main() -> None:
     parser.add_argument("--domain-tag", type=str, default="rl07-energy-noether-domain-01", help="Pinned domain tag.")
     args = parser.parse_args()
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out_dir = args.out_dir or _default_artifact_dir(repo_root)
     dx = float(args.length) / float(args.nx)
     dt = float(args.dt) if args.dt is not None else 0.1 * dx

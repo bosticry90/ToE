@@ -12,15 +12,9 @@ import json
 from pathlib import Path
 
 import numpy as np
+from formal.python.meta.repo_environment import find_repo_root
 
 from formal.python.toe.ucff.core_front_door import UcffCoreParams, ucff_dispersion_omega2_numeric
-
-
-def _find_repo_root(start: Path) -> Path:
-    for parent in (start.resolve(), *start.resolve().parents):
-        if (parent / "README.md").exists():
-            return parent
-    raise RuntimeError("Could not locate repo root (expected README.md)")
 
 
 def _load_first_json_block_from_markdown(path: Path) -> dict:
@@ -51,7 +45,7 @@ def _fit_slope_through_origin(*, x: np.ndarray, y: np.ndarray) -> float:
 
 
 def test_bridge_br05_ucff_lowk_slope_intervals_overlap_and_ucff_can_match() -> None:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     lock_rel = Path("formal/markdown/locks/observables/OV-BR-05_bragg_lowk_slope_summary_OVERRIDE.md")
     payload = _load_first_json_block_from_markdown(repo_root / lock_rel)

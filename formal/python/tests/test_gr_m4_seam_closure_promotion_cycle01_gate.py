@@ -21,6 +21,7 @@ TARGET_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_G
 GR_AUTHORITY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_COMPLETENESS_GATE_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+CENTRAL_INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "gr_m4_seam_closure_promotion_cycle01_v0.json"
 
 EXPECTED_ARTIFACT_ID = "gr_m4_seam_closure_promotion_cycle01_v0"
@@ -48,6 +49,7 @@ def test_gr_m4_seam_closure_promotion_cycle01_gate() -> None:
     gr_text = _read(GR_AUTHORITY_PATH)
     state_text = _read(STATE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
+    central_inventory_text = _read(CENTRAL_INVENTORY_PATH)
 
     assert ARTIFACT_PATH.exists(), "GR M4 seam-closure promotion artifact is missing."
     artifact_json = _read_json(ARTIFACT_PATH)
@@ -81,5 +83,5 @@ def test_gr_m4_seam_closure_promotion_cycle01_gate() -> None:
     ):
         assert path_ref in target_text
         assert path_ref in gr_text
-        assert path_ref in state_text
+        assert path_ref in state_text or path_ref in central_inventory_text
         assert path_ref in roadmap_text

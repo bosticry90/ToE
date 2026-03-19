@@ -18,6 +18,7 @@ from dataclasses import dataclass
 import hashlib
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any, Literal
 
 from formal.python.toe.comparators.cv01_bec_bragg_v1 import cv01_bec_bragg_v1_record
@@ -38,13 +39,6 @@ def _sha256_json(payload: object) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _read_json(path: Path) -> dict[str, Any]:
@@ -137,7 +131,7 @@ def ovcvbr01_cv01_v1_pruning_bridge_record(
     cv01_artifact_dir: Path | None = None,
     policy_path: Path | None = None,
 ) -> OVCVBR01PruningBridgeRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     default_policy = repo_root / "formal" / "python" / "toe" / "observables" / "cv01_v1_pruning_reason_policy.json"
     resolved_policy = (policy_path or default_policy).resolve()
@@ -365,7 +359,7 @@ def write_ovcvbr01_lock(
     cv01_artifact_dir: Path | None = None,
     policy_path: Path | None = None,
 ) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = (

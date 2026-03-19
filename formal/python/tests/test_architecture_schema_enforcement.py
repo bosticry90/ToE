@@ -87,6 +87,10 @@ def _iter_adjudication_values(text: str) -> list[str]:
     return values
 
 
+def _matches_any_pattern(name: str, patterns: list[str]) -> bool:
+    return any(re.match(pattern, name) for pattern in patterns)
+
+
 def test_architecture_schema_shape_is_frozen() -> None:
     schema = _read_json(ARCHITECTURE_SCHEMA_PATH)
 
@@ -116,6 +120,7 @@ def test_phase_coverage_is_valid_for_pillars_and_new_targets() -> None:
     required = schema["pillar_required_phases"]
     known = set(schema.get("known_derivation_target_files", []))
     pillars = set(schema.get("pillar_target_files", []))
+    phase_exempt_patterns = schema.get("phase_coverage_exempt_name_patterns", [])
 
     phase_violations: list[str] = []
     for path in _derivation_target_paths():
@@ -128,6 +133,8 @@ def test_phase_coverage_is_valid_for_pillars_and_new_targets() -> None:
         if name.startswith("DERIVATION_TARGET_QFT_GAUGE_MICRO_"):
             continue
         if name.startswith("DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_"):
+            continue
+        if _matches_any_pattern(name, phase_exempt_patterns):
             continue
 
         if name in pillars and phases != required:
@@ -155,11 +162,14 @@ def test_adjudication_prefixes_are_frozen_for_derivation_targets() -> None:
     allowed_prefixes = list(schema.get("allowed_adjudication_prefixes", []))
     allowed_prefixes.extend(schema.get("legacy_allowed_adjudication_prefixes", []))
     known = set(schema.get("known_derivation_target_files", []))
+    adjudication_exempt_patterns = schema.get("adjudication_prefix_exempt_name_patterns", [])
 
     violations: list[str] = []
     for path in _derivation_target_paths():
         name = path.name
         if "_MICRO_" in name:
+            continue
+        if _matches_any_pattern(name, adjudication_exempt_patterns):
             continue
         if name in known:
             continue

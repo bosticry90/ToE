@@ -1,0 +1,29 @@
+{
+  "artifact_id": "cosmo_bg_micro23_dryrun_nonflip_bounded_scope_audit_cycle01_v0",
+  "artifact_version": "v0",
+  "cycle": "CYCLE-023",
+  "sha256": "e15191d8ac76597f61050182cdb8bcc9486fca8ecf14ceeb5b8fcf71b9822f5c",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro23_dryrun_nonflip_bounded_scope_audit_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "dryrun_nonflip_bounded_scope_audit_only_nonclaim_v0",
+    "boundary_statement": "DRYRUN_NONFLIP_LANE_ONLY_BOUNDED_SCOPE_AUDIT_NO_ADJUDICATION_FLIP_NO_COMPARATOR_AUTHORIZATION",
+    "policy_tokens": [
+      "COSMO_DRYRUN_NONFLIP_BOUNDED_SCOPE_AUDIT_POLICY_v0: CYCLE08_09_10_11_12_13_14_15_16_17_18_19_20_21_22_DRYRUN_NONFLIP_BOUNDED_SCOPE_AUDIT_LOCK_REQUIRED_NO_STATUS_FLIP_NO_COMPARATOR_AUTHORIZATION",
+      "dryrun_nonflip_bounded_scope_audit_policy: CYCLE08_09_10_11_12_13_14_15_16_17_18_19_20_21_22_DRYRUN_NONFLIP_BOUNDED_SCOPE_AUDIT_LOCK_REQUIRED_NO_STATUS_FLIP_NO_COMPARATOR_AUTHORIZATION",
+      "dryrun_nonflip_bounded_scope_audit_gate: formal/python/tests/test_cosmo_bg_micro23_dryrun_nonflip_bounded_scope_audit_gate.py"
+    ],
+    "required_cross_surface_pointers": [
+      "State_of_the_Theory.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json",
+      "formal/python/tests/test_cosmo_matrix_rollup_crosspin_gate.py"
+    ],
+    "required_previous_cycle_pointers": [
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_22_DRYRUN_NONFLIP_EXECUTION_CUSTODY_PARITY_PACKET_v0.md",
+      "formal/output/cosmo_bg_micro22_dryrun_nonflip_execution_custody_parity_packet_cycle01_v0.json",
+      "formal/python/tests/test_cosmo_bg_micro22_dryrun_nonflip_execution_custody_parity_packet_gate.py"
+    ]
+  }
+}

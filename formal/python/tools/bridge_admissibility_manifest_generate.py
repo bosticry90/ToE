@@ -38,16 +38,7 @@ import json
 from pathlib import Path
 from typing import Optional
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+from formal.python.meta.repo_environment import find_repo_root
 
 
 def _sha256_bytes(data: bytes) -> str:
@@ -515,7 +506,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     p.add_argument("--no-write", action="store_true", help="Do not write the file; just validate generation")
 
     args = p.parse_args(argv)
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     payload = build_bridge_admissibility_manifest_payload(repo_root=repo_root)
     out_text = json.dumps(payload, indent=2, sort_keys=True, ensure_ascii=False) + "\n"

@@ -17,6 +17,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0.json"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 
 def _read(path: Path) -> str:
@@ -53,8 +54,9 @@ def test_packet02_decision_balance_gate() -> None:
 
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     for ref in (
         "formal/python/tests/test_foundational_empirical_packet02_decision_balance_gate.py",
     ):
         assert ref in roadmap_text
-        assert ref in state_text
+        assert ref in state_text or ref in inventory_text

@@ -17,6 +17,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 BASELINE_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_SCALAR_ROUTE_SUBMISSION_CANDIDATE_BASELINE_v0.md"
 CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_scalar_route_submission_candidate_checkpoint_v0.json"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 
 
@@ -69,6 +70,7 @@ def test_toe_qft_scalar_submission_candidate_checkpoint_schema_is_pinned() -> No
 
 def test_toe_qft_scalar_submission_candidate_is_mirrored_in_authority_surfaces() -> None:
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
     refs = [
@@ -79,5 +81,7 @@ def test_toe_qft_scalar_submission_candidate_is_mirrored_in_authority_surfaces()
     ]
 
     for ref in refs:
-        assert ref in state_text, f"State missing scalar submission-candidate ref: {ref}"
+        assert ref in state_text or ref in inventory_text, (
+            f"State/Inventory missing scalar submission-candidate ref: {ref}"
+        )
         assert ref in roadmap_text, f"Roadmap missing scalar submission-candidate ref: {ref}"

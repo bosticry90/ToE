@@ -21,18 +21,8 @@ from typing import Iterable
 
 import numpy as np
 
+from formal.python.meta.repo_environment import find_repo_root
 from formal.python.toe.comparators.rl03_weak_field_poisson_v0 import RL03PoissonReport
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _default_artifact_dir(repo_root: Path) -> Path:
@@ -136,7 +126,7 @@ def main() -> None:
     parser.add_argument("--regime-tag", type=str, default="rl03-weak-field", help="Pinned regime tag.")
     args = parser.parse_args()
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out_dir = args.out_dir or _default_artifact_dir(repo_root)
 
     ref_path, cand_path = write_rl03_reports(

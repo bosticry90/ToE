@@ -19,7 +19,7 @@ import math
 from pathlib import Path
 from typing import Any
 
-from formal.python.toe.observables.ovdq01_dq01_diagnostics_record import _find_repo_root
+from formal.python.meta.repo_environment import find_repo_root
 
 
 def _sha256_json(payload: object) -> str:
@@ -131,7 +131,7 @@ class OVDQ01DS02UnitsInvariantRecord:
 
 
 def ovdq01_ds02_units_invariant_record(*, dr01_kmax_um_inv: float = 3.33842) -> OVDQ01DS02UnitsInvariantRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     csv_rel = "formal/external_evidence/bec_bragg_ds02_lowk_dataset_TBD/omega_k_data.csv"
     csv_path = repo_root / csv_rel
 
@@ -268,7 +268,7 @@ def ovdq01_ds02_units_invariant_record(*, dr01_kmax_um_inv: float = 3.33842) -> 
 
 
 def default_artifact_path() -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     return repo_root / "formal" / "python" / "artifacts" / "diagnostics" / "OV-DQ-01" / "DS02_units_invariant.json"
 
 

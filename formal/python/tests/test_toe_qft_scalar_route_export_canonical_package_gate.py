@@ -23,6 +23,7 @@ METADATA_PATH = EXPORT_ROOT / "metadata.json"
 FIGURES_DIR = EXPORT_ROOT / "figures"
 MANUSCRIPT_DRAFT_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_DRAFT_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 
 
@@ -112,6 +113,7 @@ def test_toe_qft_scalar_export_package_files_and_content_exist() -> None:
 
 def test_toe_qft_scalar_export_is_mirrored_in_authority_surfaces_and_seam_hold_is_unchanged() -> None:
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
     refs = [
@@ -125,5 +127,7 @@ def test_toe_qft_scalar_export_is_mirrored_in_authority_surfaces_and_seam_hold_i
     ]
 
     for ref in refs:
-        assert ref in state_text, f"State missing scalar export canonical-package ref: {ref}"
+        assert ref in state_text or ref in inventory_text, (
+            f"State/Inventory missing scalar export canonical-package ref: {ref}"
+        )
         assert ref in roadmap_text, f"Roadmap missing scalar export canonical-package ref: {ref}"

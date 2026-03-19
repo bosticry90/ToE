@@ -20,6 +20,7 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 
@@ -32,13 +33,6 @@ def _sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _read_k_f_csv(csv_path: Path) -> tuple[list[tuple[float, float]], str]:
@@ -149,7 +143,7 @@ def ovsw01_shallow_water_lowk_slope_record(
     *,
     date: str = "2026-01-25",
 ) -> OVSW01ShallowWaterLowkSlopeRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     csv_rel = "formal/external_evidence/shallow_water_TBD/ovsw01_digitization/omega_over_2pi_vs_k_lowk.csv"
     meta_rel = "formal/external_evidence/shallow_water_TBD/ovsw01_digitization/omega_over_2pi_vs_k_lowk.metadata.json"
@@ -264,7 +258,7 @@ def render_ovsw01_lock_markdown(record: OVSW01ShallowWaterLowkSlopeRecord) -> st
 
 
 def write_ovsw01_lock(*, lock_path: Path | None = None, date: str = "2026-01-25") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = (

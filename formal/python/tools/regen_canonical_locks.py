@@ -34,8 +34,10 @@ import csv
 import hashlib
 import json
 import os
+import re
 from pathlib import Path
 
+from formal.python.meta.repo_environment import find_repo_root
 from formal.python.toe.observables.ovbr02_regime_bridge_record import write_ovbr02_lock
 from formal.python.toe.observables.ovdq02_dq01_v2_threshold_update_record import write_ovdq02_lock
 from formal.python.toe.observables.ovdq03_dq01_active_policy_activation_record import write_ovdq03_lock
@@ -79,18 +81,6 @@ from formal.python.toe.observables.ovfnwt02_selected_weight_policy_record import
 from formal.python.toe.observables.ovfn02_weighted_residual_audit_record import write_ovfn02_lock
 from formal.python.toe.observables.ovsw01_shallow_water_lowk_slope_record import write_ovsw01_lock
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
-
-
 def _sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
@@ -99,6 +89,71 @@ def _with_suffix(path: Path, *, suffix: str) -> Path:
     if not suffix:
         return path
     return path.with_name(path.stem + str(suffix) + path.suffix)
+
+
+def _extract_json_block(md_text: str) -> dict[str, object]:
+    m = re.search(r"```json\s*(\{.*?\})\s*```", md_text, flags=re.DOTALL)
+    if m is None:
+        raise ValueError("missing_json_block")
+    payload = json.loads(m.group(1))
+    if not isinstance(payload, dict):
+        raise ValueError("json_block_not_object")
+    return payload
+
+
+def _validate_existing_locks(*, lock_paths: list[Path]) -> list[str]:
+    errors: list[str] = []
+    for lock_path in lock_paths:
+        if not lock_path.exists():
+            errors.append(f"missing:{lock_path}")
+            continue
+        try:
+            payload = _extract_json_block(lock_path.read_text(encoding="utf-8"))
+        except (OSError, ValueError, json.JSONDecodeError) as exc:
+            errors.append(f"invalid:{lock_path}:{exc}")
+            continue
+        schema = payload.get("schema")
+        if not isinstance(schema, str) or not schema:
+            errors.append(f"invalid_schema:{lock_path}")
+    return errors
+
+
+def _core_non_sound_lock_targets(*, repo_root: Path) -> list[Path]:
+    obs_dir = repo_root / "formal" / "markdown" / "locks" / "observables"
+    return [
+        obs_dir / "OV-XD-04_overlap_only_preference_comparison.md",
+        obs_dir / "OV-BR-02_regime_bridge_record.md",
+        obs_dir / "OV-SEL-01_selection_status.md",
+        obs_dir / "OV-DQ-02_dq01_v2_threshold_update.md",
+        obs_dir / "OV-DQ-03_dq01_active_policy_activation.md",
+    ]
+
+
+def _bragg_lock_targets(*, repo_root: Path, lock_suffix: str) -> list[Path]:
+    obs_dir = repo_root / "formal" / "markdown" / "locks" / "observables"
+    return [
+        _with_suffix(obs_dir / "OV-BR-02_regime_bridge_record.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-BR-03N_bragg_dispersion_k_omega_digitized.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-BR-04a_bragg_lowk_slope_conditionA.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-BR-04b_bragg_lowk_slope_conditionB.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-BR-05_bragg_lowk_slope_summary.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-DR-BR-00_br01_prediction_declarations.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-DR-BR-01_candidate_pruning_table.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-SEL-BR-01_bragg_lowk_slope_audit.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-BR-FN-00_fn01_metric_residual_prediction_declarations.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-BR-FN-01_fn01_metric_residual_pruning_table.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-FN-WT-00_fn01_weight_policy_declarations.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-FN-WT-01_fn01_weight_policy_pruning_table.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-FN-WT-02_selected_weight_policy.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-FN-02_weighted_residual_audit.md", suffix=lock_suffix),
+        _with_suffix(obs_dir / "OV-BR-SND-03_cross_lane_lowk_consistency_audit.md", suffix=lock_suffix),
+    ]
+
+
+def _sound_lock_targets(*, repo_root: Path) -> list[Path]:
+    obs_dir = repo_root / "formal" / "markdown" / "locks" / "observables"
+    prefixes = ("OV-SND", "OV-SEL-SND", "OV-BR-SND", "SND-DIG")
+    return [p for p in obs_dir.glob("*.md") if p.name.startswith(prefixes)]
 
 
 def _validate_ovsnd03n2_frozen_artifacts(*, repo_root: Path) -> tuple[bool, str]:
@@ -289,6 +344,14 @@ def main(argv: list[str] | None = None) -> int:
         action="store_true",
         help="Also regenerate the OV-SND* anchor locks/audits (treated as canonical only if this flag is set)",
     )
+    p.add_argument(
+        "--validate-only",
+        action="store_true",
+        help=(
+            "Validate preconditions and existing canonical lock structure without writing files. "
+            "Useful for smoke checks that must not mutate repository state."
+        ),
+    )
 
     lane = p.add_mutually_exclusive_group()
     lane.add_argument(
@@ -337,6 +400,62 @@ def main(argv: list[str] | None = None) -> int:
     if bool(args.sw_only) and bool(args.include_snd):
         raise SystemExit("--sw-only cannot be combined with --include-snd")
 
+    if bool(args.validate_only):
+        repo_root = find_repo_root(Path(__file__))
+        validated: list[Path] = []
+
+        if bool(args.sw_only):
+            validated = [repo_root / "formal" / "markdown" / "locks" / "observables" / "OV-SW-01_shallow_water_lowk_slope.md"]
+        elif bool(args.bragg_only):
+            ok, reason = _validate_ovbr03n_frozen_artifacts(repo_root=repo_root)
+            if not ok:
+                raise RuntimeError(
+                    "OV-BR-03N frozen artifacts missing/invalid (" + reason + "). "
+                    "Repair frozen artifacts before validate-only checks."
+                )
+            validated = _bragg_lock_targets(repo_root=repo_root, lock_suffix=lock_suffix)
+        else:
+            if bool(args.snd_only):
+                validated = _sound_lock_targets(repo_root=repo_root)
+            else:
+                validated = _core_non_sound_lock_targets(repo_root=repo_root)
+                if bool(args.include_snd):
+                    validated.extend(_sound_lock_targets(repo_root=repo_root))
+
+        if bool(args.snd_only) or bool(args.include_snd):
+            try:
+                from formal.python.tools.lint_mapping_tuples import lint_mapping_tuples
+
+                lint_mapping_tuples(date="2026-01-24", fail_fast=True)
+            except ModuleNotFoundError:
+                pass
+
+            ok3n, reason3n = _validate_ovsnd03n_frozen_artifacts(repo_root=repo_root)
+            if not ok3n:
+                raise RuntimeError("OV-SND-03N frozen artifacts missing/invalid (" + reason3n + ") in validate-only mode.")
+
+            ok3n2, reason3n2 = _validate_ovsnd03n2_frozen_artifacts(repo_root=repo_root)
+            if not ok3n2 and reason3n2 not in {"missing_csv_and_metadata", "missing_csv", "missing_metadata"}:
+                raise RuntimeError("OV-SND-03N2 frozen artifacts invalid (" + reason3n2 + ") in validate-only mode.")
+
+        if not validated:
+            raise RuntimeError("No lock targets resolved for validate-only mode.")
+
+        issues = _validate_existing_locks(lock_paths=validated)
+        if issues:
+            preview = "\n".join(f"  - {i}" for i in issues[:20])
+            raise RuntimeError(
+                "Validate-only checks failed for canonical locks:\n"
+                + preview
+                + ("\n  - ..." if len(issues) > 20 else "")
+            )
+
+        if args.report:
+            print("Validated canonical locks (no writes):")
+            for path in validated:
+                print(f"  - {path}")
+        return 0
+
     written: list[str] = []
 
     if bool(args.sw_only):
@@ -350,7 +469,7 @@ def main(argv: list[str] | None = None) -> int:
         return 0
 
     if bool(args.bragg_only):
-        repo_root = _find_repo_root(Path(__file__))
+        repo_root = find_repo_root(Path(__file__))
         manifest_path = Path(args.admissibility_manifest) if args.admissibility_manifest else None
         ok, reason = _validate_ovbr03n_frozen_artifacts(repo_root=repo_root)
         if not ok:
@@ -491,14 +610,14 @@ def main(argv: list[str] | None = None) -> int:
 
         # Density digitization + scaling (sound lane).
         written.append(str(write_snddig01_lock(date=date)))
-        repo_root = _find_repo_root(Path(__file__))
+        repo_root = find_repo_root(Path(__file__))
         ok3n, _ = _validate_ovsnd03n_frozen_artifacts(repo_root=repo_root)
         if not ok3n:
             write_ovsnd03n_digitized_artifacts(date=date)
         written.append(str(write_ovsnd03n_digitized_lock(date=date)))
         written.append(str(write_ovsnd03n_coverage_lock(date=date)))
         # Secondary density source (may be blocked until pinned source/table exists).
-        repo_root = _find_repo_root(Path(__file__))
+        repo_root = find_repo_root(Path(__file__))
         ok, reason = _validate_ovsnd03n2_frozen_artifacts(repo_root=repo_root)
         if ok:
             # Hard guard: when frozen artifacts validate, never invoke pixel digitization during regen.

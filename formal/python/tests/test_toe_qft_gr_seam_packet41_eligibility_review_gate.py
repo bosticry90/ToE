@@ -23,6 +23,7 @@ ASSESSMENT_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM
 ASSESSMENT_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet40_assessment_checkpoint_v0.json"
 OBJECTIVE_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_reactivation_objective_checkpoint_v0.json"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 PACKET41_AUTH_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_PACKET41_AUTHORIZATION_v0.md"
 PACKET41_AUTH_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_authorization_checkpoint_v0.json"
@@ -41,6 +42,12 @@ def _extract_token(text: str, token_name: str) -> str:
     m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-\.]+)", text)
     assert m is not None, f"Missing token `{token_name}`."
     return m.group(1)
+
+
+def _extract_token_from_compact_state_or_inventory(state_text: str, inventory_text: str, token_name: str) -> str:
+    if re.search(rf"\b{re.escape(token_name)}\s*:\s*", state_text):
+        return _extract_token(state_text, token_name)
+    return _extract_token(inventory_text, token_name)
 
 
 def test_qft_gr_seam_packet41_eligibility_review_document_structure() -> None:
@@ -117,6 +124,7 @@ def test_qft_gr_seam_packet41_eligibility_review_authority_parity_and_freeze_enf
     assessment_text = _read(ASSESSMENT_DOC_PATH)
     convergence_text = _read(CONVERGENCE_DOC_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
     q = "stress_energy_to_weak_curvature_handoff_strengthening"
@@ -130,14 +138,20 @@ def test_qft_gr_seam_packet41_eligibility_review_authority_parity_and_freeze_enf
         "formal/python/tests/test_toe_qft_gr_seam_packet41_eligibility_review_gate.py",
     ]
     for ref in refs:
-        assert ref in state_text, f"Missing packet41 eligibility review pointer in State_of_the_Theory.md: {ref}"
+        assert ref in state_text or ref in inventory_text, (
+            f"Missing packet41 eligibility review pointer in compact-State or central inventory: {ref}"
+        )
         assert ref in roadmap_text, f"Missing packet41 eligibility review pointer in PHYSICS_ROADMAP_v0.md: {ref}"
 
-    state_status = _extract_token(state_text, "TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_STATUS_v0")
+    state_status = _extract_token_from_compact_state_or_inventory(
+        state_text, inventory_text, "TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_STATUS_v0"
+    )
     roadmap_status = _extract_token(roadmap_text, "TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_STATUS_v0")
     assert state_status == roadmap_status == "REVIEW_COMPLETE_HOLD_v0"
 
-    state_disposition = _extract_token(state_text, "TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_DISPOSITION_v0")
+    state_disposition = _extract_token_from_compact_state_or_inventory(
+        state_text, inventory_text, "TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_DISPOSITION_v0"
+    )
     roadmap_disposition = _extract_token(roadmap_text, "TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_DISPOSITION_v0")
     assert state_disposition == roadmap_disposition == "HOLD_v0"
 

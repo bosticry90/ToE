@@ -16,6 +16,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+CENTRAL_INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 
 def _read(path: Path) -> str:
@@ -27,6 +28,7 @@ def test_toe_master_action_seam_registry_surface_is_pinned() -> None:
     registry_text = _read(REGISTRY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    central_inventory_text = _read(CENTRAL_INVENTORY_PATH)
 
     for token in (
         "TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0",
@@ -45,4 +47,4 @@ def test_toe_master_action_seam_registry_surface_is_pinned() -> None:
 
     reg_rel = "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md"
     assert reg_rel in roadmap_text, "Roadmap must pin seam registry doc."
-    assert reg_rel in state_text, "State must pin seam registry doc."
+    assert reg_rel in state_text or reg_rel in central_inventory_text, "Compact-State or central inventory must pin seam registry doc."

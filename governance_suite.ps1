@@ -8,6 +8,12 @@ if ($LASTEXITCODE -ne 0) {
   throw "Dev stack preflight failed."
 }
 
+Write-Host "Running tooling validation checks (no writes)" -ForegroundColor Cyan
+pwsh -NoProfile -ExecutionPolicy Bypass -File ./tooling_validate.ps1
+if ($LASTEXITCODE -ne 0) {
+  throw "Tooling validate checks failed."
+}
+
 Write-Host "Running local divergence guardrail" -ForegroundColor Cyan
 git show-ref --verify --quiet refs/remotes/origin/main
 if ($LASTEXITCODE -eq 0) {

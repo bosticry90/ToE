@@ -22,6 +22,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any, Literal
 
 from formal.python.toe.constraints.admissibility_manifest import check_required_gates
@@ -39,13 +40,6 @@ def _sha256_json(payload: object) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_json_block(md_text: str) -> dict[str, Any]:
@@ -130,7 +124,7 @@ def ovbrfn01_metric_residual_pruning_table_record(
     pred_decl_lock_path: Path | None = None,
     admissibility_manifest_path: Path | None = None,
 ) -> OVBRFN01MetricResidualPruningTableRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     default_residual = (
         repo_root
@@ -368,7 +362,7 @@ def write_ovbrfn01_lock(
     pred_decl_lock_path: Path | None = None,
     admissibility_manifest_path: Path | None = None,
 ) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = (

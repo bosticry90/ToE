@@ -21,6 +21,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.constraints.admissibility_manifest import check_required_gates
 
 
@@ -31,15 +33,6 @@ def _sha256_text(text: str) -> str:
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _br01_candidate_ids(*, repo_root: Path) -> list[str]:
@@ -122,7 +115,7 @@ def ovdrbr00_br01_prediction_declarations_record(
     declarations_path: Path | None = None,
     admissibility_manifest_path: Path | None = None,
 ) -> OVDRBR00BR01PredictionDeclarationsRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     default_path = repo_root / "formal" / "python" / "toe" / "bridges" / "br01_prediction_declarations.json"
     decl_path = (declarations_path or default_path).resolve()
@@ -309,7 +302,7 @@ def write_ovdrbr00_lock(
     date: str = "2026-01-25",
     admissibility_manifest_path: Path | None = None,
 ) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = (

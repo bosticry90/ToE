@@ -18,6 +18,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0.json"
 PROTOCOL_PATH = REPO_ROOT / "formal" / "docs" / "release" / "FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 
 
@@ -39,6 +40,7 @@ def _extract_token(text: str, token_name: str) -> str:
 def test_packet04_decision_policy_surface_is_pinned() -> None:
     protocol_text = _read(PROTOCOL_PATH)
     roadmap_text = _read(ROADMAP_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     state_text = _read(STATE_PATH)
 
     assert _extract_token(protocol_text, "FOUNDATIONAL_EMPIRICAL_PACKET_04_BASELINE_DECISION_v0") == (
@@ -50,7 +52,7 @@ def test_packet04_decision_policy_surface_is_pinned() -> None:
         "formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0.json",
     ):
         assert ref in roadmap_text
-        assert ref in state_text
+        assert ref in state_text or ref in inventory_text
 
 
 def test_packet04_framing_holds_next_step_inconclusive_policy() -> None:

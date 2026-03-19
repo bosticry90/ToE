@@ -26,6 +26,7 @@ import argparse
 import json
 import re
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 
 from formal.python.toe.observables.ov01_fit_family_robustness import (
     OV01FitFamilyRobustnessReport,
@@ -36,14 +37,6 @@ from formal.python.toe.observables.ov03x_fit_family_robustness_record import (
     write_ov03x_lock,
 )
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_json_block(md_text: str) -> dict:
@@ -113,7 +106,7 @@ def main(argv: list[str] | None = None) -> int:
     if not args.report:
         return 0
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     canonical_lock_path = (
         repo_root
         / "formal"

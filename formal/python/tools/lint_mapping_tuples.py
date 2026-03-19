@@ -17,17 +17,8 @@ from pathlib import Path
 from typing import Any, Iterable
 
 import csv
+from formal.python.meta.repo_environment import find_repo_root
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 _ALLOWED_PAIR_TYPES_DENSITY = {"same_source", "cross_source_hypothesis"}
@@ -218,7 +209,7 @@ def lint_mapping_tuples(*, date: str = "2026-01-24", fail_fast: bool = False) ->
     """
 
     _ = date  # Reserved for future date-scoped mapping files.
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     res02 = _lint_ovbr_snd02_density_mapping(repo_root=repo_root)
     res03 = _lint_ovbr_snd03_bragg_sound_pairing(repo_root=repo_root)

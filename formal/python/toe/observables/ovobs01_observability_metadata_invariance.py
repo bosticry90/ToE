@@ -24,6 +24,7 @@ from dataclasses import dataclass
 import hashlib
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from dataclasses import asdict
 
 from formal.python.toe.constraints.fn01_artifact import FN01Artifact1D
@@ -37,13 +38,6 @@ def _sha256_json(payload: object) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _load_dr01_fit_from_json(path: Path) -> DR01Fit1D:
@@ -159,7 +153,7 @@ def ovobs01_metadata_invariance_audit(
 
 
 def default_artifact_path() -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     return repo_root / "formal" / "python" / "artifacts" / "diagnostics" / "OV-OBS-01" / "metadata_invariance.json"
 
 
@@ -169,7 +163,7 @@ def write_ovobs01_metadata_invariance_artifact(*, path: Path | None = None) -> P
     Uses the frozen DR-01 fit artifact and the promoted FN-01 P_cubic constructor.
     """
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     dr_path = (
         repo_root
         / "formal"

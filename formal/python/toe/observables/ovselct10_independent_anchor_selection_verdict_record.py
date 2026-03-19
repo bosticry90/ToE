@@ -15,6 +15,7 @@ from dataclasses import dataclass
 import hashlib
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 
@@ -31,13 +32,6 @@ def _sha256_json(payload: object) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _load_text(path: Path) -> str:
@@ -87,7 +81,7 @@ class OVSELCT1001SelectionVerdictRecord:
 
 
 def ovselct10_selection_verdict_record(*, status_date: str = "2026-02-12") -> OVSELCT1001SelectionVerdictRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     intake_dir = repo_root / "formal" / "external_evidence" / "ct10_independent_external_anchor_tbd"
     filter_doc = (
         repo_root / "formal" / "docs" / "programs" / "CT10_independent_external_anchor_selection_filter_v0.md"
@@ -236,7 +230,7 @@ def render_ovselct10_lock_markdown(record: OVSELCT1001SelectionVerdictRecord) ->
 def write_ovselct10_lock(
     *, lock_path: Path | None = None, status_date: str = "2026-02-12"
 ) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = (

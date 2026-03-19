@@ -17,6 +17,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 from formal.python.toe.constraints.admissibility_manifest import check_required_gates
@@ -33,13 +34,6 @@ def _sha256_json(payload: object) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_record_fingerprint(md_text: str) -> str:
@@ -85,7 +79,7 @@ class OVBR05BraggLowKSlopeSummaryRecord:
 
 
 def ovbr05_bragg_lowk_slope_summary_record(*, date: str = "2026-01-25", admissibility_manifest_path: Path | None = None) -> OVBR05BraggLowKSlopeSummaryRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     required_gates = ["CT01", "SYM01", "CAUS01"]
     gate_check = check_required_gates(repo_root=repo_root, required_gate_ids=required_gates, manifest_path=admissibility_manifest_path)
@@ -244,7 +238,7 @@ def render_ovbr05_lock_markdown(record: OVBR05BraggLowKSlopeSummaryRecord) -> st
 
 
 def write_ovbr05_lock(*, lock_path: Path | None = None, date: str = "2026-01-25", admissibility_manifest_path: Path | None = None) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = repo_root / "formal" / "markdown" / "locks" / "observables" / "OV-BR-05_bragg_lowk_slope_summary.md"

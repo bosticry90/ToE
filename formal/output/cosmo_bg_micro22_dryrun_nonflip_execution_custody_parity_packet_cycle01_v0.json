@@ -1,0 +1,29 @@
+{
+  "artifact_id": "cosmo_bg_micro22_dryrun_nonflip_execution_custody_parity_packet_cycle01_v0",
+  "artifact_version": "v0",
+  "cycle": "CYCLE-022",
+  "sha256": "1cb307f70f50e666f8029193a4cc5587e14549ea826dc57de5f95653252a6b16",
+  "placeholder_template": true,
+  "payload": {
+    "checkpoint": "cosmo_bg_micro22_dryrun_nonflip_execution_custody_parity_packet_cycle01",
+    "status": "placeholder_non_promotional",
+    "scope": "dryrun_nonflip_execution_custody_parity_packet_only_nonclaim_v0",
+    "boundary_statement": "DRYRUN_NONFLIP_LANE_ONLY_EXECUTION_CUSTODY_PARITY_NO_ADJUDICATION_FLIP_NO_COMPARATOR_AUTHORIZATION",
+    "policy_tokens": [
+      "COSMO_DRYRUN_NONFLIP_EXECUTION_CUSTODY_PARITY_PACKET_POLICY_v0: CYCLE08_09_10_11_12_13_14_15_16_17_18_19_20_21_DRYRUN_NONFLIP_EXECUTION_CUSTODY_PARITY_LOCK_REQUIRED_NO_STATUS_FLIP_NO_COMPARATOR_AUTHORIZATION",
+      "dryrun_nonflip_execution_custody_parity_packet_policy: CYCLE08_09_10_11_12_13_14_15_16_17_18_19_20_21_DRYRUN_NONFLIP_EXECUTION_CUSTODY_PARITY_LOCK_REQUIRED_NO_STATUS_FLIP_NO_COMPARATOR_AUTHORIZATION",
+      "dryrun_nonflip_execution_custody_parity_packet_gate: formal/python/tests/test_cosmo_bg_micro22_dryrun_nonflip_execution_custody_parity_packet_gate.py"
+    ],
+    "required_cross_surface_pointers": [
+      "State_of_the_Theory.md",
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md",
+      "formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json",
+      "formal/python/tests/test_cosmo_matrix_rollup_crosspin_gate.py"
+    ],
+    "required_previous_cycle_pointers": [
+      "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_21_DRYRUN_NONFLIP_EXECUTION_BOUNDARY_STATUS_v0.md",
+      "formal/output/cosmo_bg_micro21_dryrun_nonflip_execution_boundary_status_cycle01_v0.json",
+      "formal/python/tests/test_cosmo_bg_micro21_dryrun_nonflip_execution_boundary_status_gate.py"
+    ]
+  }
+}

@@ -26,6 +26,8 @@ import re
 from pathlib import Path
 from typing import Any, Literal
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.observables.ov01_fit_family_robustness import (
     OV01FitFamilyRobustnessReport,
     ov01_fit_family_robustness_failure_reasons,
@@ -39,15 +41,6 @@ SelectionStatus = Literal["decisive_curved", "undecided"]
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_json_block(md_text: str) -> dict[str, Any]:
@@ -161,7 +154,7 @@ class OVSEL01SelectionStatusRecord:
 
 
 def ovsel01_selection_status_record(*, status_date: str = "2026-01-23") -> OVSEL01SelectionStatusRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     posture = dq01_active_policy()
     active_policy_id = str(posture["active_policy_id"])
@@ -272,7 +265,7 @@ def render_ovsel01_lock_markdown(record: OVSEL01SelectionStatusRecord) -> str:
 
 
 def write_ovsel01_lock(*, lock_path: Path | None = None, status_date: str = "2026-01-23") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = repo_root / "formal" / "markdown" / "locks" / "observables" / "OV-SEL-01_selection_status.md"

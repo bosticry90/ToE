@@ -20,6 +20,7 @@ QFT_FULL_DISCHARGE_TARGET_PATH = (
 )
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "qft_full_derivation_flip_decision_packet_cycle32_v0.json"
 
 CYCLE32_PROGRESS_TOKEN = "QFT_FULL_DERIVATION_PROGRESS_CYCLE32_v0: FLIP_DECISION_PACKET_LOCK_PINNED"
@@ -69,6 +70,7 @@ def test_qft_cycle32_flip_decision_packet_tokens_are_pinned_in_qft_docs() -> Non
 def test_qft_cycle32_flip_decision_packet_gate_is_pinned_in_authority_surfaces() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     for token in [
         CYCLE32_GATE_PATH,
@@ -77,10 +79,14 @@ def test_qft_cycle32_flip_decision_packet_gate_is_pinned_in_authority_surfaces()
         FLIP_DECISION_PACKET_AUTHORITY_TOKEN,
     ]:
         assert token in roadmap_text, f"Roadmap authority surface must pin `{token}`."
-        assert token in state_text, f"State authority surface must pin `{token}`."
+        assert token in state_text or token in inventory_text, (
+            f"State/Inventory authority surface must pin `{token}`."
+        )
 
     for token in [ARTIFACT_TOKEN, ARTIFACT_POINTER]:
-        assert token in state_text, f"State authority surface must pin `{token}`."
+        assert token in state_text or token in inventory_text, (
+            f"State/Inventory authority surface must pin `{token}`."
+        )
 
 
 def test_qft_cycle32_flip_decision_packet_artifact_payload_is_consistent() -> None:

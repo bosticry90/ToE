@@ -1,0 +1,29 @@
+{
+  "record_id": "COSMO_FULL_DISCHARGE_EXIT_ROW_AUTHORIZATION_PACKET_CYCLE01_v0",
+  "artifact_id": "cosmo_full_discharge_exit_row_authorization_packet_cycle01_v0",
+  "scope": "cosmo_full_discharge_exit_row_authorization_packet_v0",
+  "pillar": "PILLAR-COSMO",
+  "target_id": "TARGET-COSMO-BG-FULL-DISCHARGE-EXIT-ROW-AUTHORIZATION-PACKET-v0",
+  "packet_status": {
+    "token": "COSMO_FULL_DISCHARGE_EXIT_ROW_AUTHORIZATION_PACKET_STATUS_v0",
+    "value": "AUTHORIZATION_PENDING"
+  },
+  "packet_gate": {
+    "token": "COSMO_FULL_DISCHARGE_EXIT_ROW_AUTHORIZATION_PACKET_GATE_v0",
+    "value": "LOCKED_UNTIL_EXPLICIT_AUTHORIZATION_PACKET_PRESENT_AND_ROADMAP_GATES_CLOSED"
+  },
+  "required_condition_token": "COSMO_FULL_DISCHARGE_EXIT_ROW_02_NON_BLOCK_CONDITIONS_v0: ROADMAP_GATES_CLOSED_AND_EXPLICIT_AUTHORIZATION_PACKET_REQUIRED",
+  "current_roadmap_gate_tokens": {
+    "PROCEED_GATE_COSMO": "BLOCKED_v0_PHYSICS_NOT_CLOSED",
+    "MATRIX_CLOSURE_GATE_COSMO": "BLOCKED_v0_GOVERNANCE_NOT_CLOSED"
+  },
+  "adjudication_lock": "COSMO_BACKGROUND_ADJUDICATION: NOT_YET_DISCHARGED",
+  "authorization_decision": {
+    "packet_satisfies_row02_non_block_requirement_now": false,
+    "reason": "roadmap_gates_not_closed"
+  },
+  "forbidden_tokens": [
+    "ADJUDICATION_FLIP_GRANTED",
+    "COMPARATOR_LANE_AUTHORIZATION_GRANTED"
+  ]
+}

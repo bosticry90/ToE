@@ -22,6 +22,7 @@ from dataclasses import dataclass
 import hashlib
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 from formal.python.toe.observables.ovsnd02_sound_speed_from_propagation_record import (
@@ -41,15 +42,6 @@ from formal.python.toe.observables.ovsnd03n2_secondary_density_conditions_digiti
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _sha256_file(path: Path) -> str:
@@ -122,7 +114,7 @@ class OVBR_SND02CrossSourceDensityMappingRecord:
 
 
 def ovbr_snd02_cross_source_density_mapping_record(*, date: str = "2026-01-24") -> OVBR_SND02CrossSourceDensityMappingRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     snd02 = ovsnd02_sound_speed_from_propagation_record(date=str(date))
     snd02b = ovsnd02b_sound_speed_from_propagation_record(date=str(date))
@@ -279,7 +271,7 @@ def render_ovbr_snd02_lock_markdown(record: OVBR_SND02CrossSourceDensityMappingR
 
 
 def write_ovbr_snd02_lock(*, lock_path: Path | None = None, date: str = "2026-01-24") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = repo_root / "formal" / "markdown" / "locks" / "observables" / "OV-BR-SND-02_cross_source_density_mapping.md"

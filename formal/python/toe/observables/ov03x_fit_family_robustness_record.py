@@ -17,6 +17,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.constraints.fn01_artifact import fn01_make_P_cubic_artifact
 from formal.python.toe.dr01_fit import DR01Fit1D
 from formal.python.toe.dr01_fit_curved import DR01FitCurved1D
@@ -31,15 +33,6 @@ def _sha256_file(path: Path) -> str:
         for chunk in iter(lambda: f.read(1024 * 1024), b""):
             h.update(chunk)
     return h.hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _load_json(path: Path) -> dict:
@@ -107,7 +100,7 @@ def ov03x_fit_family_robustness_report(
 ) -> OV01FitFamilyRobustnessReport:
     """Compute OV-03x robustness report from frozen B1 artifacts."""
 
-    repo_root = _find_repo_root(Path(__file__)) if repo_root is None else Path(repo_root)
+    repo_root = find_repo_root(Path(__file__)) if repo_root is None else Path(repo_root)
     b1_dir = repo_root / "formal" / "external_evidence" / "bec_bragg_b1_second_dataset_TBD"
 
     lin_paths = [
@@ -158,7 +151,7 @@ def render_ov03x_lock_markdown(
     q_threshold: float = 0.90,
     config_tag: str | None = None,
 ) -> str:
-    repo_root = _find_repo_root(Path(__file__)) if repo_root is None else Path(repo_root)
+    repo_root = find_repo_root(Path(__file__)) if repo_root is None else Path(repo_root)
     b1_dir = repo_root / "formal" / "external_evidence" / "bec_bragg_b1_second_dataset_TBD"
     csv_path = b1_dir / "omega_k_data.csv"
 
@@ -212,7 +205,7 @@ def write_ov03x_lock(
     q_threshold: float = 0.90,
     config_tag: str | None = None,
 ) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     is_canonical = (str(adequacy_policy) == "DQ-01_v1") and (abs(float(q_threshold) - 0.90) <= 1e-12) and (config_tag is None)
 

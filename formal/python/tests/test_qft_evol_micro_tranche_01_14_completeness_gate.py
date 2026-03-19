@@ -16,6 +16,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 QFT_EVOL_TARGET_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_QFT_EVOLUTION_OBJECT_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 TRANCHE_GATE_PATH = "formal/python/tests/test_qft_evol_micro_tranche_01_14_completeness_gate.py"
 LEGACY_TRANCHE_GATE_PATH = "formal/python/tests/test_qft_evol_micro_tranche_01_13_completeness_gate.py"
 
@@ -83,6 +84,7 @@ def test_qft_evol_micro_tranche_artifacts_exist() -> None:
     assert QFT_EVOL_TARGET_PATH.exists(), "Missing QFT evolution umbrella target document."
     assert ROADMAP_PATH.exists(), "Missing PHYSICS roadmap document."
     assert STATE_PATH.exists(), "Missing state checkpoint document."
+    assert INVENTORY_PATH.exists(), "Missing TOE_MATH_PHYSICS_INVENTORY authority surface."
 
 
 def test_qft_evol_umbrella_contains_micro_tranche_01_14_in_order() -> None:
@@ -93,16 +95,17 @@ def test_qft_evol_umbrella_contains_micro_tranche_01_14_in_order() -> None:
 def test_qft_evol_micro_tranche_gate_is_pinned_in_authority_surfaces() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     assert TRANCHE_GATE_PATH in roadmap_text, (
         f"Roadmap authority surface must pin `{TRANCHE_GATE_PATH}`."
     )
-    assert TRANCHE_GATE_PATH in state_text, (
-        f"State authority surface must pin `{TRANCHE_GATE_PATH}`."
+    assert TRANCHE_GATE_PATH in state_text or TRANCHE_GATE_PATH in inventory_text, (
+        f"State or inventory authority surface must pin `{TRANCHE_GATE_PATH}`."
     )
     assert LEGACY_TRANCHE_GATE_PATH not in roadmap_text, (
         f"Roadmap authority surface must not pin legacy `{LEGACY_TRANCHE_GATE_PATH}`."
     )
-    assert LEGACY_TRANCHE_GATE_PATH not in state_text, (
-        f"State authority surface must not pin legacy `{LEGACY_TRANCHE_GATE_PATH}`."
+    assert LEGACY_TRANCHE_GATE_PATH not in state_text and LEGACY_TRANCHE_GATE_PATH not in inventory_text, (
+        f"State and inventory authority surfaces must not pin legacy `{LEGACY_TRANCHE_GATE_PATH}`."
     )

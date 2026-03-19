@@ -18,6 +18,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0.json"
 PROTOCOL_PATH = REPO_ROOT / "formal" / "docs" / "release" / "FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 PACKET02_MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET02_MATRIX_v0.json"
 
@@ -41,6 +42,7 @@ def test_empirical_progression_policy_surface_is_pinned() -> None:
     matrix = _read_json(MATRIX_PATH)
     protocol_text = _read(PROTOCOL_PATH)
     roadmap_text = _read(ROADMAP_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     state_text = _read(STATE_PATH)
 
     assert matrix.get("matrix_id") == "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0"
@@ -74,7 +76,7 @@ def test_empirical_progression_policy_surface_is_pinned() -> None:
         "formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0.json",
     ):
         assert ref in roadmap_text, f"Roadmap must pin `{ref}`."
-        assert ref in state_text, f"State must pin `{ref}`."
+        assert ref in state_text or ref in inventory_text, f"Compact-State or central inventory must pin `{ref}`."
 
 
 def test_empirical_progression_policy_disallows_direct_prune_with_scaffold_uncertainty() -> None:

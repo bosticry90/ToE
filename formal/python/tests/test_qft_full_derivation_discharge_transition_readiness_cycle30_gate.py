@@ -20,6 +20,7 @@ QFT_FULL_DISCHARGE_TARGET_PATH = (
 )
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ARTIFACT_PATH = (
     REPO_ROOT
     / "formal"
@@ -51,6 +52,7 @@ def test_qft_cycle30_discharge_transition_readiness_artifacts_exist() -> None:
     assert QFT_FULL_DISCHARGE_TARGET_PATH.exists(), "Missing QFT full-derivation discharge target document."
     assert ROADMAP_PATH.exists(), "Missing PHYSICS roadmap document."
     assert STATE_PATH.exists(), "Missing state checkpoint document."
+    assert INVENTORY_PATH.exists(), "Missing TOE_MATH_PHYSICS_INVENTORY authority surface."
     assert ARTIFACT_PATH.exists(), "Missing cycle-30 discharge-transition readiness artifact bundle."
 
 
@@ -74,6 +76,7 @@ def test_qft_cycle30_discharge_transition_readiness_tokens_are_pinned_in_qft_doc
 def test_qft_cycle30_discharge_transition_readiness_gate_is_pinned_in_authority_surfaces() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     for token in [
         CYCLE30_GATE_PATH,
@@ -82,10 +85,14 @@ def test_qft_cycle30_discharge_transition_readiness_gate_is_pinned_in_authority_
         FLIP_AUTHORIZATION_GATE_TOKEN,
     ]:
         assert token in roadmap_text, f"Roadmap authority surface must pin `{token}`."
-        assert token in state_text, f"State authority surface must pin `{token}`."
+        assert token in state_text or token in inventory_text, (
+            f"State or inventory authority surface must pin `{token}`."
+        )
 
     for token in [ARTIFACT_TOKEN, ARTIFACT_POINTER]:
-        assert token in state_text, f"State authority surface must pin `{token}`."
+        assert token in state_text or token in inventory_text, (
+            f"State or inventory authority surface must pin `{token}`."
+        )
 
 
 def test_qft_cycle30_discharge_transition_readiness_artifact_payload_is_consistent() -> None:

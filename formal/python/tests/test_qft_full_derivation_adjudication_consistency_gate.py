@@ -19,6 +19,7 @@ QFT_DISCHARGE_DOC_PATH = (
 )
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 
 def _read(path: Path) -> str:
@@ -32,21 +33,34 @@ def _extract_token(text: str, token_name: str) -> str:
     return m.group(1)
 
 
+def _extract_token_from_surfaces(token_name: str, *surfaces: str) -> str:
+    for surface in surfaces:
+        m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-]+)", surface)
+        if m is not None:
+            return m.group(1)
+    assert False, f"Missing token `{token_name}` across authority surfaces."
+
+
 def test_qft_full_derivation_adjudication_tokens_are_consistent_across_authority_surfaces() -> None:
     canonical_text = _read(QFT_DISCHARGE_DOC_PATH)
     state_text = _read(STATE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     canonical_adjudication = _extract_token(canonical_text, "QFT_FULL_DERIVATION_ADJUDICATION")
     canonical_inevitability = _extract_token(canonical_text, "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION")
 
-    state_adjudication = _extract_token(state_text, "QFT_FULL_DERIVATION_ADJUDICATION")
-    state_inevitability = _extract_token(state_text, "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION")
+    state_or_inventory_adjudication = _extract_token_from_surfaces(
+        "QFT_FULL_DERIVATION_ADJUDICATION", state_text, inventory_text, roadmap_text
+    )
+    state_or_inventory_inevitability = _extract_token_from_surfaces(
+        "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION", state_text, inventory_text, roadmap_text
+    )
 
     roadmap_adjudication = _extract_token(roadmap_text, "QFT_FULL_DERIVATION_ADJUDICATION")
     roadmap_inevitability = _extract_token(roadmap_text, "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION")
 
-    assert canonical_adjudication == state_adjudication == roadmap_adjudication
-    assert canonical_inevitability == state_inevitability == roadmap_inevitability
+    assert canonical_adjudication == state_or_inventory_adjudication == roadmap_adjudication
+    assert canonical_inevitability == state_or_inventory_inevitability == roadmap_inevitability
     assert canonical_adjudication == "DISCHARGED_v0"
     assert canonical_inevitability == "DISCHARGED_v0"

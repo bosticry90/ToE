@@ -25,6 +25,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.dr01_fit_adequacy import dr01_check_curved_fit_adequacy
 from formal.python.toe.dr01_fit_curved import DR01FitCurved1D
 from formal.python.toe.dr01_fit_quality import DR01FitQualityCurved1D
@@ -37,15 +39,6 @@ from formal.python.toe.observables.ov01_fit_family_robustness import (
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_json_block(md_text: str) -> dict[str, Any]:
@@ -198,7 +191,7 @@ class OVDQ01DQ01DiagnosticsRecord:
 
 
 def ovdq01_dq01_diagnostics_record(*, adequacy_policy: str = "DQ-01_v1") -> OVDQ01DQ01DiagnosticsRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     pol = str(adequacy_policy)
 
     # Load robustness reports from canonical locks (authoritative for summary values).
@@ -304,7 +297,7 @@ def render_ovdq01_lock_markdown(record: OVDQ01DQ01DiagnosticsRecord) -> str:
 
 
 def write_ovdq01_lock(*, lock_path: Path | None = None) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     rec = ovdq01_dq01_diagnostics_record()
 
     out = lock_path

@@ -24,6 +24,8 @@ import re
 from pathlib import Path
 from typing import Any, Literal
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.observables.ovxd03_overlap_band_record import ovxd03_overlap_band_record
 
 
@@ -33,15 +35,6 @@ OVPreferredFamily = Literal["curved", "undecided"]
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_json_block(md_text: str) -> dict[str, Any]:
@@ -153,7 +146,7 @@ def ovxd04_overlap_only_preference_comparison_record(
     adequacy_policy: str = "DQ-01_v1",
     q_threshold: float = 0.90,
 ) -> OVXD04OverlapOnlyPreferenceComparisonRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     xd03 = ovxd03_overlap_band_record()
     overlap = xd03.overlap
@@ -236,7 +229,7 @@ def render_ovxd04_lock_markdown(record: OVXD04OverlapOnlyPreferenceComparisonRec
 
 
 def write_ovxd04_lock(*, lock_path: Path | None = None) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     rec = ovxd04_overlap_only_preference_comparison_record()
 
     out = lock_path
@@ -261,7 +254,7 @@ def write_ovxd04_lock_for_policy(
     adequacy_policy: str,
     q_threshold: float,
 ) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     is_canonical = (str(adequacy_policy) == "DQ-01_v1") and (abs(float(q_threshold) - 0.90) <= 1e-12)
     if lock_path is None and (not is_canonical):

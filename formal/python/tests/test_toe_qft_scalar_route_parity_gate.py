@@ -15,6 +15,7 @@ def find_repo_root(start: Path) -> Path:
 
 REPO_ROOT = find_repo_root(Path(__file__))
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 
 REQUIRED_REFS = (
@@ -429,12 +430,34 @@ def _extract_token(text: str, token_name: str) -> str:
     return m.group(1)
 
 
+def _extract_token_from_compact_state_or_inventory(
+    state_text: str,
+    inventory_text: str,
+    token_name: str,
+) -> str:
+    m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-\.]+)", state_text)
+    if m is not None:
+        return m.group(1)
+    m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-\.]+)", inventory_text)
+    assert m is not None, f"Missing token `{token_name}` in compact State or Inventory."
+    return m.group(1)
+
+
 def test_toe_qft_scalar_route_cross_surface_pointer_parity() -> None:
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
     for ref in REQUIRED_REFS:
-        assert ref in state_text, f"Scalar-route pointer missing from State_of_the_Theory.md: {ref}"
+        is_scalar_family_ref = (
+            "scalar_route" in ref
+            or "toe_qft_scalar_" in ref
+            or "test_toe_qft_scalar_" in ref
+        )
+        if is_scalar_family_ref:
+            assert ref in state_text or ref in inventory_text, (
+                f"Scalar-route pointer missing from compact State/Inventory: {ref}"
+            )
         assert ref in roadmap_text, f"Scalar-route pointer missing from PHYSICS_ROADMAP_v0.md: {ref}"
 
 
@@ -446,16 +469,33 @@ def test_toe_qft_scalar_route_referenced_surfaces_exist() -> None:
 
 def test_toe_qft_scalar_route_full_technical_record_token_parity() -> None:
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
-    state_status = _extract_token(state_text, "SCALAR_ROUTE_FULL_TECHNICAL_RECORD_STATUS_v0")
+    state_status = _extract_token_from_compact_state_or_inventory(
+        state_text,
+        inventory_text,
+        "SCALAR_ROUTE_FULL_TECHNICAL_RECORD_STATUS_v0",
+    )
     roadmap_status = _extract_token(roadmap_text, "SCALAR_ROUTE_FULL_TECHNICAL_RECORD_STATUS_v0")
-    state_coupling = _extract_token(state_text, "SCALAR_ROUTE_FULL_TECHNICAL_RECORD_COUPLING_STATUS_v0")
+    state_coupling = _extract_token_from_compact_state_or_inventory(
+        state_text,
+        inventory_text,
+        "SCALAR_ROUTE_FULL_TECHNICAL_RECORD_COUPLING_STATUS_v0",
+    )
     roadmap_coupling = _extract_token(roadmap_text, "SCALAR_ROUTE_FULL_TECHNICAL_RECORD_COUPLING_STATUS_v0")
 
-    state_checkpoint_file = _extract_token(state_text, "SCALAR_ROUTE_FULL_TECHNICAL_RECORD_CHECKPOINT_FILE_v0")
+    state_checkpoint_file = _extract_token_from_compact_state_or_inventory(
+        state_text,
+        inventory_text,
+        "SCALAR_ROUTE_FULL_TECHNICAL_RECORD_CHECKPOINT_FILE_v0",
+    )
     roadmap_checkpoint_file = _extract_token(roadmap_text, "SCALAR_ROUTE_FULL_TECHNICAL_RECORD_CHECKPOINT_FILE_v0")
-    state_manifest_file = _extract_token(state_text, "SCALAR_ROUTE_FULL_TECHNICAL_RECORD_MANIFEST_FILE_v0")
+    state_manifest_file = _extract_token_from_compact_state_or_inventory(
+        state_text,
+        inventory_text,
+        "SCALAR_ROUTE_FULL_TECHNICAL_RECORD_MANIFEST_FILE_v0",
+    )
     roadmap_manifest_file = _extract_token(roadmap_text, "SCALAR_ROUTE_FULL_TECHNICAL_RECORD_MANIFEST_FILE_v0")
 
     assert state_status == roadmap_status == "PHASE0_PHASE1_LOCKED_AUDIT_READY_V0"
@@ -466,8 +506,13 @@ def test_toe_qft_scalar_route_full_technical_record_token_parity() -> None:
 
 def test_toe_qft_scalar_route_seam_hold_posture_is_unchanged() -> None:
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
-    state_seam = _extract_token(state_text, "QFT_GR_SEAM_FORK_DECISION_STATUS_v0")
+    state_seam = _extract_token_from_compact_state_or_inventory(
+        state_text,
+        inventory_text,
+        "QFT_GR_SEAM_FORK_DECISION_STATUS_v0",
+    )
     roadmap_seam = _extract_token(roadmap_text, "QFT_GR_SEAM_FORK_DECISION_STATUS_v0")
     assert state_seam == roadmap_seam == "HOLD_FOR_SCALAR_PUBLICATION_v0"

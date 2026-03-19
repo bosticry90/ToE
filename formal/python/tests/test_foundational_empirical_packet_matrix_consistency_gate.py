@@ -18,6 +18,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0.json"
 PROTOCOL_PATH = REPO_ROOT / "formal" / "docs" / "release" / "FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 
 
@@ -39,6 +40,7 @@ def _extract_token(text: str, token_name: str) -> str:
 def test_empirical_packet_matrix_surface_is_pinned() -> None:
     matrix = _read_json(MATRIX_PATH)
     roadmap = _read(ROADMAP_PATH)
+    inventory = _read(INVENTORY_PATH)
     state = _read(STATE_PATH)
 
     assert matrix.get("matrix_id") == "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET_MATRIX_v0"
@@ -50,13 +52,14 @@ def test_empirical_packet_matrix_surface_is_pinned() -> None:
         "formal/python/tests/test_foundational_empirical_packet_matrix_consistency_gate.py",
     ):
         assert ref in roadmap, f"Roadmap must pin `{ref}`."
-        assert ref in state, f"State must pin `{ref}`."
+        assert ref in state or ref in inventory, f"Compact-State or central inventory must pin `{ref}`."
 
 
 def test_empirical_packet_matrix_rows_match_docs_artifacts_and_protocol() -> None:
     matrix = _read_json(MATRIX_PATH)
     protocol_text = _read(PROTOCOL_PATH)
     roadmap_text = _read(ROADMAP_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     state_text = _read(STATE_PATH)
 
     assert _extract_token(protocol_text, "FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_STATUS_v0") == "RUN_BOUNDED_v0_NONCLAIM"
@@ -112,12 +115,13 @@ def test_empirical_packet_matrix_rows_match_docs_artifacts_and_protocol() -> Non
 
         for ref in (row["doc_path"], row["gate_path"]):
             assert ref in roadmap_text, f"{lane}: roadmap must pin `{ref}`."
-            assert ref in state_text, f"{lane}: state must pin `{ref}`."
+            assert ref in state_text or ref in inventory_text, f"{lane}: compact-State or central inventory must pin `{ref}`."
 
 
 def test_intermediate_evidence_rows_require_promotion_surfaces() -> None:
     matrix = _read_json(MATRIX_PATH)
     roadmap_text = _read(ROADMAP_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     state_text = _read(STATE_PATH)
 
     rows = matrix.get("rows", {})
@@ -144,7 +148,9 @@ def test_intermediate_evidence_rows_require_promotion_surfaces() -> None:
             "_EMPIRICAL_PACKET_01_EVIDENCE_PROMOTION_v0.md",
         )
         assert promotion_doc_rel in roadmap_text, f"{lane}: roadmap must pin `{promotion_doc_rel}` for INTERMEDIATE evidence tier."
-        assert promotion_doc_rel in state_text, f"{lane}: state must pin `{promotion_doc_rel}` for INTERMEDIATE evidence tier."
+        assert promotion_doc_rel in state_text or promotion_doc_rel in inventory_text, (
+            f"{lane}: compact-State or central inventory must pin `{promotion_doc_rel}` for INTERMEDIATE evidence tier."
+        )
         assert (REPO_ROOT / promotion_doc_rel).exists(), (
             f"{lane}: expected promotion doc file missing `{promotion_doc_rel}`."
         )
@@ -158,7 +164,9 @@ def test_intermediate_evidence_rows_require_promotion_surfaces() -> None:
             "_empirical_packet_01_evidence_promotion_gate.py",
         )
         assert promotion_gate_rel in roadmap_text, f"{lane}: roadmap must pin `{promotion_gate_rel}` for INTERMEDIATE evidence tier."
-        assert promotion_gate_rel in state_text, f"{lane}: state must pin `{promotion_gate_rel}` for INTERMEDIATE evidence tier."
+        assert promotion_gate_rel in state_text or promotion_gate_rel in inventory_text, (
+            f"{lane}: compact-State or central inventory must pin `{promotion_gate_rel}` for INTERMEDIATE evidence tier."
+        )
         assert (REPO_ROOT / promotion_gate_rel).exists(), (
             f"{lane}: expected promotion gate file missing `{promotion_gate_rel}`."
         )

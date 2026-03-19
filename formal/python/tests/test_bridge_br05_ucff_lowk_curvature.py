@@ -12,15 +12,9 @@ import json
 from pathlib import Path
 
 import numpy as np
+from formal.python.meta.repo_environment import find_repo_root
 
 from formal.python.toe.ucff.core_front_door import UcffCoreParams, ucff_dispersion_omega2_numeric
-
-
-def _find_repo_root(start: Path) -> Path:
-    for parent in (start.resolve(), *start.resolve().parents):
-        if (parent / "formal").exists():
-            return parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory)")
 
 
 def _load_first_json_block_from_markdown(path: Path) -> dict:
@@ -45,7 +39,7 @@ def _uniform_grid(*, k_max: float, n: int) -> np.ndarray:
 
 
 def test_bridge_br_lowk_window_ucff_omega2_is_convex_on_pinned_grid() -> None:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     # Source the low-k window definition from the Bragg lane selection rule.
     ovbr04a_rel = Path("formal/markdown/locks/observables/OV-BR-04a_bragg_lowk_slope_conditionA_OVERRIDE.md")
@@ -82,7 +76,7 @@ def test_bridge_br_lowk_window_ucff_omega2_convexity_negative_control_operator_s
     deterministic adversarial transformation to the finite-difference operator.
     """
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     ovbr04a_rel = Path("formal/markdown/locks/observables/OV-BR-04a_bragg_lowk_slope_conditionA_OVERRIDE.md")
     ovbr04a = _load_first_json_block_from_markdown(repo_root / ovbr04a_rel)

@@ -27,6 +27,7 @@ from dataclasses import dataclass
 import hashlib
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 import numpy as np
@@ -49,15 +50,6 @@ def _sha256_file(path: Path) -> str:
 
 def _sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 @dataclass(frozen=True)
@@ -500,7 +492,7 @@ def _digitize_from_png(*, png_path: Path) -> dict[str, Any]:
 
 
 def write_ovbr03n_digitized_artifacts(*, date: str = "2026-01-25", force_redigitize: bool = False) -> dict[str, Path]:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     base = repo_root / "formal" / "external_evidence" / "bec_bragg_shammass_2012" / "ovbr03n_digitization"
     base.mkdir(parents=True, exist_ok=True)
@@ -621,7 +613,7 @@ class OVBR03NDigitizedDispersionRecord:
 
 
 def ovbr03n_digitized_dispersion_record(*, date: str = "2026-01-25") -> OVBR03NDigitizedDispersionRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     paths = write_ovbr03n_digitized_artifacts(date=str(date), force_redigitize=False)
     meta = json.loads(Path(paths["metadata"]).read_text(encoding="utf-8"))
@@ -679,7 +671,7 @@ def render_ovbr03n_digitized_lock_markdown(record: OVBR03NDigitizedDispersionRec
 
 
 def write_ovbr03n_digitized_lock(*, lock_path: Path | None = None, date: str = "2026-01-25") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = repo_root / "formal" / "markdown" / "locks" / "observables" / "OV-BR-03_bragg_dispersion_k_omega_digitized.md"

@@ -78,7 +78,8 @@ Some of the verification and bridge code lives under formal/python and is exerci
 To avoid ambiguity between system Python and your venv Python on Windows, prefer running everything through the repo-local PowerShell wrapper script:
 
 - Run tests: `./py.ps1 -m pytest -q`
-- Run sound-only canonical regen: `./py.ps1 -m formal.python.tools.regen_canonical_locks --snd-only --report`
+- Run tooling validation (non-mutating): `pwsh -NoProfile -ExecutionPolicy Bypass -File ./tooling_validate.ps1`
+- Run explicit canonical regeneration: `pwsh -NoProfile -ExecutionPolicy Bypass -File ./tooling_regen.ps1`
 - Lint mapping tuples: `./py.ps1 -m formal.python.tools.lint_mapping_tuples --fail-fast`
 
 Troubleshooting (Windows)

@@ -35,6 +35,7 @@ def test_cycle39_dryrun_reconciliation_tokens_in_discharge_doc() -> None:
 
 def test_cycle39_dryrun_reconciliation_tokens_in_state_and_roadmap() -> None:
     state = _read(Path("State_of_the_Theory.md"))
+    inventory = _read(Path("formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md"))
     roadmap = _read(Path("formal/docs/paper/PHYSICS_ROADMAP_v0.md"))
 
     required = [
@@ -44,7 +45,7 @@ def test_cycle39_dryrun_reconciliation_tokens_in_state_and_roadmap() -> None:
         "formal/python/tests/test_qft_full_derivation_token_flip_dryrun_reconciliation_cycle39_gate.py",
     ]
     for token in required:
-        assert token in state
+        assert token in state or token in inventory
         assert token in roadmap
 
 

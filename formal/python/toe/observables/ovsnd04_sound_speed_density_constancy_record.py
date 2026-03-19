@@ -21,6 +21,7 @@ import csv
 import hashlib
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 import numpy as np
@@ -45,15 +46,6 @@ from formal.python.toe.observables.ovbr_snd02_cross_source_density_mapping_recor
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _read_secondary_density_csv(csv_path: Path) -> list[dict[str, Any]]:
@@ -117,7 +109,7 @@ class OVSND04SoundSpeedDensityConstancyRecord:
 
 
 def ovsnd04_sound_speed_density_constancy_record(*, date: str = "2026-01-24") -> OVSND04SoundSpeedDensityConstancyRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     snd02 = ovsnd02_sound_speed_from_propagation_record(date=str(date))
     snd02b = ovsnd02b_sound_speed_from_propagation_record(date=str(date))
@@ -356,7 +348,7 @@ def render_ovsnd04_lock_markdown(record: OVSND04SoundSpeedDensityConstancyRecord
 
 
 def write_ovsnd04_lock(*, lock_path: Path | None = None, date: str = "2026-01-24") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = repo_root / "formal" / "markdown" / "locks" / "observables" / "OV-SND-04_sound_speed_density_constancy.md"

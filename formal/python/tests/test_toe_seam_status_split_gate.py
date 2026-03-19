@@ -18,6 +18,7 @@ REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_SEA
 INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+CENTRAL_INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 
 def _read(path: Path) -> str:
@@ -31,6 +32,7 @@ def test_seam_status_standard_and_snapshot_are_cross_pinned() -> None:
     inventory_text = _read(INVENTORY_PATH)
     state_text = _read(STATE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
+    central_inventory_text = _read(CENTRAL_INVENTORY_PATH)
 
     for token in (
         "TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0",
@@ -71,6 +73,15 @@ def test_seam_status_standard_and_snapshot_are_cross_pinned() -> None:
         assert token in registry_text
         assert token in inventory_text
 
-    for text in (state_text, roadmap_text):
+    for text in (roadmap_text,):
         assert "formal/docs/release/TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0.md" in text
         assert "formal/python/tests/test_toe_seam_status_split_gate.py" in text
+
+    assert (
+        "formal/docs/release/TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0.md" in state_text
+        or "formal/docs/release/TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0.md" in central_inventory_text
+    )
+    assert (
+        "formal/python/tests/test_toe_seam_status_split_gate.py" in state_text
+        or "formal/python/tests/test_toe_seam_status_split_gate.py" in central_inventory_text
+    )

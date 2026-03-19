@@ -171,6 +171,31 @@ Canonical worksheet that records these fields:
 - formal/docs/paper/TOE_QFT_GR_SEAM_PACKET44_RECONSIDERATION_SCORECARD_WORKSHEET_v0.md
 - formal/python/tests/test_toe_qft_gr_seam_packet44_reconsideration_scorecard_worksheet_gate.py
 
+## Comparator and Falsification Extension (WS-04-T06)
+
+Extension status tokens:
+- TOE_QFT_GR_SEAM_PACKET44_NUMERIC_THRESHOLD_COMPARATOR_BINDING_STATUS_v0: REQUIRED_COMPARATOR_LANE_COVERAGE_v0
+- TOE_QFT_GR_SEAM_PACKET44_NUMERIC_THRESHOLD_FALSIFICATION_BINDING_STATUS_v0: REQUIRED_PREDECLARED_FAIL_CONDITIONS_v0
+
+Comparator requirement:
+- At least one comparator lane must be scored with the same D/A/O metric definitions and formula version before any release reconsideration decision can move out of HOLD.
+- Comparator scoring must include:
+	- comparator_lane_id
+	- comparator_G_prev, comparator_G_curr
+	- comparator_S_value, comparator_M_value, comparator_Streak3_value
+	- comparator_threshold_1_pass, comparator_threshold_2_pass, comparator_threshold_3_pass
+
+Predeclared falsification requirements:
+- F1 (shrinkage failure): if S(c) < 0.05 for two consecutive measured cycles, lane status is `NUMERIC_LANE_FALSIFIED_PENDING_REDESIGN_v0`.
+- F2 (marginal gain failure): if M(c) < 0.10 for two consecutive measured cycles with N(c)=0, lane status is `NUMERIC_LANE_FALSIFIED_PENDING_REDESIGN_v0`.
+- F3 (stagnation failure): if Streak3(c) = 3, lane status is `NUMERIC_LANE_FALSIFIED_PENDING_REDESIGN_v0`.
+- F4 (comparator failure): if comparator lane strictly outperforms packet lane on both S(c) and M(c) for two consecutive cycles, lane status is `NUMERIC_LANE_FALSIFIED_PENDING_REDESIGN_v0`.
+
+Adjudication and promotion guard:
+- Any F1-F4 trigger forces `threshold_4_pass = false` for the affected cycle.
+- No packet release authorization can proceed while lane status is `NUMERIC_LANE_FALSIFIED_PENDING_REDESIGN_v0`.
+- Falsification trigger and comparator evidence fields must be present in the measurement artifact to preserve admissibility.
+
 Non-claim boundary:
 - This protocol does not authorize packet44.
 - This protocol does not claim seam closure.

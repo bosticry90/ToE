@@ -16,6 +16,9 @@ def find_repo_root(start: Path) -> Path:
 
 REPO_ROOT = find_repo_root(Path(__file__))
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
+ARCHIVE_STATE_EXTRACT_PATH = REPO_ROOT / "archive" / "State_of_the_Theory_ARCHIVED_HISTORY_EXTRACT_v0.md"
 TERMINAL_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_complete_v1_terminal_gate_checkpoint_v0.json"
 PROOF_DEBT_CHECKPOINT_PATHS = [
     REPO_ROOT / "formal" / "output" / "proof_debt_burndown_checkpoint_cycle01_v0.json",
@@ -27,6 +30,20 @@ PROOF_DEBT_CHECKPOINT_PATHS = [
 TRACKED_GAPIDS = [
     "COMP-FN-REP-GRID",
     "COMP-FN-REP-NONALIAS-EQUIV-01",
+]
+
+PROOF_DEBT_CROSS_SURFACE_REFS = [
+    "formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE01_v0.md",
+    "formal/output/proof_debt_burndown_checkpoint_cycle01_v0.json",
+    "formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE02_v0.md",
+    "formal/output/proof_debt_burndown_checkpoint_cycle02_v0.json",
+    "formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE03_v0.md",
+    "formal/output/proof_debt_burndown_checkpoint_cycle03_v0.json",
+    "formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE04_v0.md",
+    "formal/output/proof_debt_burndown_checkpoint_cycle04_v0.json",
+    "formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE05_v0.md",
+    "formal/output/proof_debt_burndown_checkpoint_cycle05_v0.json",
+    "formal/output/toe_complete_v1_terminal_gate_checkpoint_v0.json",
 ]
 
 
@@ -67,7 +84,24 @@ def test_terminal_checkpoint_tracks_gapids_not_lines() -> None:
 
 
 def test_tracked_gapids_exist_once_in_state_doc() -> None:
-    text = STATE_PATH.read_text(encoding="utf-8")
+    state_text = STATE_PATH.read_text(encoding="utf-8")
+    inventory_text = INVENTORY_PATH.read_text(encoding="utf-8")
+    archive_text = ARCHIVE_STATE_EXTRACT_PATH.read_text(encoding="utf-8")
     for gapid in TRACKED_GAPIDS:
-        count = len(re.findall(rf"^GapID:\s*{re.escape(gapid)}\s*$", text, flags=re.MULTILINE))
-        assert count == 1, f"Expected exactly one block for {gapid}, found {count}"
+        state_count = len(re.findall(rf"^GapID:\s*{re.escape(gapid)}\s*$", state_text, flags=re.MULTILINE))
+        inventory_count = len(re.findall(rf"^GapID:\s*{re.escape(gapid)}\s*$", inventory_text, flags=re.MULTILINE))
+        archive_count = len(re.findall(rf"^GapID:\s*{re.escape(gapid)}\s*$", archive_text, flags=re.MULTILINE))
+        total_count = state_count + inventory_count + archive_count
+        assert total_count == 1, (
+            f"Expected exactly one canonical block for {gapid} across compact-State/inventory/archive, found {total_count}"
+        )
+
+
+def test_proof_debt_checkpoint_pointers_are_cross_surface_pinned() -> None:
+    state_text = STATE_PATH.read_text(encoding="utf-8")
+    roadmap_text = ROADMAP_PATH.read_text(encoding="utf-8")
+    inventory_text = INVENTORY_PATH.read_text(encoding="utf-8")
+
+    for ref in PROOF_DEBT_CROSS_SURFACE_REFS:
+        assert ref in roadmap_text
+        assert ref in state_text or ref in inventory_text

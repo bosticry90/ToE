@@ -31,6 +31,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Optional
 
 import numpy as np
@@ -45,16 +46,6 @@ from formal.python.crft.cp_nlse_2d import (
 
 SURFACE_PATH = "formal/python/crft/cp_nlse_2d.py"
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    if p.is_file():
-        p = p.parent
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _sha256_path(p: Path) -> str:
@@ -128,7 +119,7 @@ def main(argv: Optional[list[str]] = None) -> int:
     parser.add_argument("--out", required=True, help="Repo-relative output JSON path")
 
     args = parser.parse_args(argv)
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     payload = build_bridge_toyh_c6_phase_invariance_feasibility(repo_root=repo_root)
 

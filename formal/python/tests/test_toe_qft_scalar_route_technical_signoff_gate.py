@@ -18,6 +18,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 SIGNOFF_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_SCALAR_ROUTE_TECHNICAL_SIGNOFF_v0.md"
 SIGNOFF_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_scalar_route_technical_signoff_checkpoint_v0.json"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 
 
@@ -33,6 +34,19 @@ def _read_json(path: Path) -> dict:
 def _extract_token(text: str, token_name: str) -> str:
     m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-\.]+)", text)
     assert m is not None, f"Missing token `{token_name}`."
+    return m.group(1)
+
+
+def _extract_token_from_compact_state_or_inventory(
+    state_text: str,
+    inventory_text: str,
+    token_name: str,
+) -> str:
+    m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-\.]+)", state_text)
+    if m is not None:
+        return m.group(1)
+    m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-\.]+)", inventory_text)
+    assert m is not None, f"Missing token `{token_name}` in compact State or Inventory."
     return m.group(1)
 
 
@@ -85,6 +99,7 @@ def test_scalar_technical_signoff_checkpoint_schema_is_pinned() -> None:
 
 def test_scalar_technical_signoff_authority_surface_parity() -> None:
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
     required_refs = [
@@ -93,12 +108,22 @@ def test_scalar_technical_signoff_authority_surface_parity() -> None:
         "formal/python/tests/test_toe_qft_scalar_route_technical_signoff_gate.py",
     ]
     for ref in required_refs:
-        assert ref in state_text, f"Missing signoff pointer in State_of_the_Theory.md: {ref}"
+        assert ref in state_text or ref in inventory_text, (
+            f"Missing signoff pointer in compact State/Inventory: {ref}"
+        )
         assert ref in roadmap_text, f"Missing signoff pointer in PHYSICS_ROADMAP_v0.md: {ref}"
 
-    state_status = _extract_token(state_text, "SCALAR_ROUTE_TECHNICAL_SIGNOFF_STATUS_v0")
+    state_status = _extract_token_from_compact_state_or_inventory(
+        state_text,
+        inventory_text,
+        "SCALAR_ROUTE_TECHNICAL_SIGNOFF_STATUS_v0",
+    )
     roadmap_status = _extract_token(roadmap_text, "SCALAR_ROUTE_TECHNICAL_SIGNOFF_STATUS_v0")
-    state_debt = _extract_token(state_text, "SCALAR_ROUTE_TECHNICAL_SIGNOFF_DEBT_CLASS_v0")
+    state_debt = _extract_token_from_compact_state_or_inventory(
+        state_text,
+        inventory_text,
+        "SCALAR_ROUTE_TECHNICAL_SIGNOFF_DEBT_CLASS_v0",
+    )
     roadmap_debt = _extract_token(roadmap_text, "SCALAR_ROUTE_TECHNICAL_SIGNOFF_DEBT_CLASS_v0")
 
     assert state_status == roadmap_status == "SIGNED_OFF_BOUNDED_RIGOR_BASELINE_v0"

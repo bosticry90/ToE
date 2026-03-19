@@ -22,6 +22,7 @@ from dataclasses import dataclass
 import hashlib
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 from formal.python.toe.observables.ovdq01_policy_sensitivity_record import default_artifact_path
@@ -32,13 +33,6 @@ def _sha256_json(payload: object) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _load_json(path: Path) -> dict[str, Any]:
@@ -103,7 +97,7 @@ def ovdq02_dq01_v2_threshold_update_record(
     q_threshold_from: float = 0.90,
     q_threshold_to: float = 1.05,
 ) -> OVDQ02DQ01v2ThresholdUpdateRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     artifact_path = default_artifact_path()
     artifact = _load_json(artifact_path)
@@ -208,7 +202,7 @@ def render_ovdq02_lock_markdown(record: OVDQ02DQ01v2ThresholdUpdateRecord) -> st
 
 
 def write_ovdq02_lock(*, lock_path: Path | None = None) -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = repo_root / "formal" / "markdown" / "locks" / "policies" / "DQ-01_v2_threshold_update.md"

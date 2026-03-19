@@ -17,6 +17,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "sr_empirical_comparison_packet_05_v0.json"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 DOC_REL = "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md"
 ARTIFACT_REL = "formal/output/sr_empirical_comparison_packet_05_v0.json"
@@ -71,8 +72,7 @@ def test_sr_empirical_packet_05_artifact_schema_gate() -> None:
 
     state_text = _read(STATE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
-    for text in (state_text, roadmap_text):
-        assert DOC_REL in text
-        assert ARTIFACT_REL in text
-        assert GATE_REL in text
-        assert SCHEMA_GATE_REL in text
+    inventory_text = _read(INVENTORY_PATH)
+    for ref in (DOC_REL, ARTIFACT_REL, GATE_REL, SCHEMA_GATE_REL):
+        assert ref in roadmap_text
+        assert ref in state_text or ref in inventory_text

@@ -27,6 +27,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 import numpy as np
@@ -49,13 +50,6 @@ def _atomic_write_text(*, path: Path, text: str) -> None:
     tmp.replace(path)
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _as_2d_float(x: np.ndarray) -> np.ndarray:
@@ -173,7 +167,7 @@ def default_pinned_input_path() -> Path:
     This is a data artifact (JSON) intended for legacy re-port traceability.
     """
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     return (
         repo_root
         / "formal"
@@ -195,7 +189,7 @@ def load_pinned_input_X(*, path: Path | None = None) -> np.ndarray:
 
 
 def default_artifact_path() -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     return repo_root / "formal" / "python" / "artifacts" / "diagnostics" / "OV-UCFF-02" / "ucff_framewise_variation.json"
 
 
@@ -244,7 +238,7 @@ def write_ovucff02_framewise_variation_artifact(*, path: Path | None = None) -> 
 
 
 def default_reference_report_path() -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     return (
         repo_root
         / "formal"

@@ -8,6 +8,7 @@ from pathlib import Path
 from typing import Any, Mapping
 
 import numpy as np
+from formal.python.meta.repo_environment import find_repo_root
 
 
 RL11_TOLERANCE_PROFILE_ENV = "TOE_RL11_TOLERANCE_PROFILE"
@@ -27,15 +28,6 @@ RL11_TOLERANCE_PROFILES: dict[str, dict[str, float]] = {
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _relpath(repo_root: Path, path: Path) -> str:
@@ -322,7 +314,7 @@ def rl11_causality_signal_cone_v0_record(
     profile = str(tolerance_profile).strip().lower() if tolerance_profile is not None else rl11_v0_tolerance_profile_from_env(env)
     tolerances = rl11_v0_tolerances(profile)
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     data_dir = (artifact_dir or _default_artifact_dir(repo_root)).resolve()
     ref_path = data_dir / "rl11_reference_report.json"
     cand_path = data_dir / "rl11_candidate_report.json"

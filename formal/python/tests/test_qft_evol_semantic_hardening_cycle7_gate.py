@@ -22,6 +22,7 @@ QFT_EVOL_OBJECT_SCAFFOLD_LEAN_PATH = (
 )
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 CYCLE7_PROGRESS_TOKEN = "QFT_FULL_DERIVATION_PROGRESS_CYCLE7_v0: GENERATOR_UNITARITY_ROUTE_NORMALIZATION_TOKEN_PINNED"
 CYCLE7_MILESTONE_TOKEN = (
@@ -65,11 +66,18 @@ def test_qft_cycle7_tokens_are_pinned_in_qft_docs() -> None:
 def test_qft_cycle7_gate_is_pinned_in_authority_surfaces() -> None:
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     assert CYCLE7_GATE_PATH in roadmap_text, f"Roadmap authority surface must pin `{CYCLE7_GATE_PATH}`."
-    assert CYCLE7_GATE_PATH in state_text, f"State authority surface must pin `{CYCLE7_GATE_PATH}`."
-    assert CYCLE7_MILESTONE_TOKEN in state_text, "State authority surface missing cycle-7 milestone token."
-    assert CYCLE7_PROGRESS_TOKEN in state_text, "State authority surface missing cycle-7 progress token."
+    assert CYCLE7_GATE_PATH in state_text or CYCLE7_GATE_PATH in inventory_text, (
+        f"State/Inventory authority surface must pin `{CYCLE7_GATE_PATH}`."
+    )
+    assert CYCLE7_MILESTONE_TOKEN in state_text or CYCLE7_MILESTONE_TOKEN in inventory_text, (
+        "State/Inventory authority surface missing cycle-7 milestone token."
+    )
+    assert CYCLE7_PROGRESS_TOKEN in state_text or CYCLE7_PROGRESS_TOKEN in inventory_text, (
+        "State/Inventory authority surface missing cycle-7 progress token."
+    )
 
 
 def test_qft_cycle7_normalization_theorem_token_is_present() -> None:

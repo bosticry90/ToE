@@ -29,6 +29,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 from formal.python.toe.constraints.fn01_artifact import fn01_make_P_cubic_artifact
@@ -43,15 +44,6 @@ from formal.python.toe.observables.ovxd03_overlap_band_record import ovxd03_over
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_json_block(md_text: str) -> dict[str, Any]:
@@ -250,7 +242,7 @@ def _load_ov03x_preference_from_lock(*, repo_root: Path) -> dict[str, Any]:
 def ovbr01_regime_bridge_record() -> OVBR01RegimeBridgeRecord:
     """Compute the OV-BR-01 bookkeeping record (no fitting / no inference)."""
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     xd03 = ovxd03_overlap_band_record()
     bands = xd03.bands
@@ -346,7 +338,7 @@ def render_ovbr01_lock_markdown(record: OVBR01RegimeBridgeRecord) -> str:
 def write_ovbr01_lock(*, lock_path: Path | None = None) -> Path:
     """Write the OV-BR-01 lock markdown deterministically."""
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = (

@@ -23,6 +23,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 from formal.python.toe.observables.ovdq03_dq01_active_policy_activation_record import (
@@ -46,13 +47,6 @@ def _sha256_json(payload: object) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_json_block(md_text: str) -> dict[str, Any]:
@@ -118,7 +112,7 @@ def ovsel_snd05_multi_density_constancy_audit_record(
     *,
     status_date: str = "2026-01-24",
 ) -> OVSELSND05MultiDensityConstancyAuditRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     cov = ovsnd03n_density_coverage_report_record(date=str(status_date))
     br = ovbr_snd02_cross_source_density_mapping_record(date=str(status_date))
@@ -220,7 +214,7 @@ def render_ovsel_snd05_lock_markdown(record: OVSELSND05MultiDensityConstancyAudi
 
 
 def write_ovsel_snd05_lock(*, lock_path: Path | None = None, status_date: str = "2026-01-24") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = repo_root / "formal" / "markdown" / "locks" / "observables" / "OV-SEL-SND-05_multi_density_constancy_audit.md"

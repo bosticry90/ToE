@@ -20,6 +20,7 @@ PROTOCOL_PATH = REPO_ROOT / "formal" / "docs" / "release" / "FOUNDATIONAL_EMPIRI
 ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "toe_empirical_comparison_packet_01_v0.json"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 EXPECTED_ARTIFACT_ID = "toe_empirical_comparison_packet_01_v0"
 EXPECTED_GATE = "ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED"
@@ -42,6 +43,7 @@ def test_toe_empirical_packet_01_gate() -> None:
     protocol_text = _read(PROTOCOL_PATH)
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
 
     assert ARTIFACT_PATH.exists(), "Empirical packet-01 artifact is missing."
     artifact_json = json.loads(ARTIFACT_PATH.read_text(encoding="utf-8"))
@@ -76,4 +78,4 @@ def test_toe_empirical_packet_01_gate() -> None:
         "formal/python/tests/test_toe_empirical_comparison_packet_01_gate.py",
     ):
         assert path_ref in roadmap_text, f"Roadmap must pin `{path_ref}`."
-        assert path_ref in state_text, f"State must pin `{path_ref}`."
+        assert path_ref in state_text or path_ref in inventory_text, f"Compact-State or central inventory must pin `{path_ref}`."

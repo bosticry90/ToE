@@ -25,6 +25,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.observables.ovbm01_mean_field_line_shift_scaling_digitized import (
     ovbm01_digitized_mean_shift_dataset_record,
 )
@@ -40,15 +42,6 @@ from formal.python.toe.observables.ovxd04_overlap_only_preference_comparison_rec
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_json_block(md_text: str) -> dict[str, Any]:
@@ -120,7 +113,7 @@ def ovselbm02_numeric_benchmark_ingestion_record(
     *,
     status_date: str = "2026-01-23",
 ) -> OVSELBM02NumericBenchmarkIngestionRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     # New numeric benchmark record.
     bm01n = ovbm01_digitized_mean_shift_dataset_record(date=str(status_date))
@@ -236,7 +229,7 @@ def render_ovselbm02_lock_markdown(record: OVSELBM02NumericBenchmarkIngestionRec
 
 
 def write_ovselbm02_lock(*, lock_path: Path | None = None, status_date: str = "2026-01-23") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     out = lock_path
     if out is None:

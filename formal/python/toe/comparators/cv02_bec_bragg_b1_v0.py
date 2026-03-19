@@ -6,6 +6,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.comparators.cv01_bec_bragg_v0 import (
     cv01_compare_curved_fit,
     cv01_compare_linear_fit,
@@ -17,15 +19,6 @@ from formal.python.toe.dr01_fit_curved import DR01FitCurved1D
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _default_artifact_dir(repo_root: Path) -> Path:
@@ -143,7 +136,7 @@ def cv02_bec_bragg_b1_v0_record(
     tol_unit_gxx: float = 1e-12,
     tol_declared_speed: float = 1e-12,
 ) -> CV02BecBraggB1V0Record:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     data_dir = (artifact_dir or _default_artifact_dir(repo_root)).resolve()
 
     linear_path = data_dir / "dr01_fit_artifact.json"

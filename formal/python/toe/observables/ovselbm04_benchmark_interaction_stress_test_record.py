@@ -31,6 +31,8 @@ import re
 from pathlib import Path
 from typing import Any
 
+from formal.python.meta.repo_environment import find_repo_root
+
 from formal.python.toe.observables.ovbm01_mean_field_line_shift_scaling_benchmark import (
     ovbm01_mean_field_line_shift_scaling_benchmark,
 )
@@ -59,15 +61,6 @@ from formal.python.toe.observables.ovxd04_overlap_only_preference_comparison_rec
 def _sha256_json(payload: object) -> str:
     b = json.dumps(payload, sort_keys=True, separators=(",", ":"), ensure_ascii=True).encode("utf-8")
     return hashlib.sha256(b).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_json_block(md_text: str) -> dict[str, Any]:
@@ -156,7 +149,7 @@ def ovselbm04_benchmark_interaction_stress_test_record(
     *,
     status_date: str = "2026-01-23",
 ) -> OVSELBM04BenchmarkInteractionStressTestRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     # Benchmarks: confirm their locks still compute, but treat them as non-participating.
     bm01 = ovbm01_mean_field_line_shift_scaling_benchmark()
@@ -346,7 +339,7 @@ def render_ovselbm04_lock_markdown(record: OVSELBM04BenchmarkInteractionStressTe
 
 
 def write_ovselbm04_lock(*, lock_path: Path | None = None, status_date: str = "2026-01-23") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     out = lock_path
     if out is None:

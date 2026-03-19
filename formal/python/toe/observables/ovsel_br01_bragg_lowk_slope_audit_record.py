@@ -18,6 +18,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 from formal.python.toe.observables.ovbr03n_bragg_dispersion_k_omega_digitized import (
@@ -36,13 +37,6 @@ def _sha256_json(payload: object) -> str:
     return hashlib.sha256(b).hexdigest()
 
 
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _extract_json_block(md_text: str) -> dict[str, Any]:
@@ -108,7 +102,7 @@ class OVSELBR01BraggLowKSlopeAuditRecord:
 
 
 def ovsel_br01_bragg_lowk_slope_audit_record(*, status_date: str = "2026-01-25") -> OVSELBR01BraggLowKSlopeAuditRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     br03n = ovbr03n_digitized_dispersion_record(date=str(status_date))
     br04a = ovbr04a_bragg_lowk_slope_conditionA_record(date=str(status_date))
@@ -211,7 +205,7 @@ def render_ovsel_br01_lock_markdown(record: OVSELBR01BraggLowKSlopeAuditRecord) 
 
 
 def write_ovsel_br01_lock(*, lock_path: Path | None = None, status_date: str = "2026-01-25") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = (

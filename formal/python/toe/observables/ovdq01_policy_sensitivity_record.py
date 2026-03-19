@@ -33,9 +33,10 @@ from formal.python.toe.constraints.fn01_artifact import fn01_make_P_cubic_artifa
 from formal.python.toe.dr01_fit import DR01Fit1D
 from formal.python.toe.dr01_fit_curved import DR01FitCurved1D
 from formal.python.toe.dr01_fit_quality import DR01FitQualityCurved1D
+from formal.python.meta.repo_environment import find_repo_root
 from formal.python.toe.observables.ov01_fit_family_robustness import ov01_fit_family_robustness_gate
 from formal.python.toe.observables.ov02_digitization_invariance import ov02_digitization_invariance_gate
-from formal.python.toe.observables.ovdq01_dq01_diagnostics_record import _find_repo_root, _load_robustness_report_from_lock
+from formal.python.toe.observables.ovdq01_dq01_diagnostics_record import _load_robustness_report_from_lock
 
 
 def _sha256_json(payload: object) -> str:
@@ -44,7 +45,7 @@ def _sha256_json(payload: object) -> str:
 
 
 def default_artifact_path() -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     return repo_root / "formal" / "python" / "artifacts" / "diagnostics" / "OV-DQ-01" / "OV-DQ-01_policy_sensitivity.json"
 
 
@@ -131,7 +132,7 @@ def _what_if_reasons(*, r_max_linear: float, curved_adequacy_passes: bool, q_rat
 
 
 def _evaluate_grid(*, obs_id: str, lock_rel_path: str, thresholds: list[float]) -> dict[str, Any]:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     rep, fp = _load_robustness_report_from_lock(repo_root=repo_root, lock_rel_path=lock_rel_path)
 
     out_rows: list[dict[str, Any]] = []
@@ -165,7 +166,7 @@ def _evaluate_grid(*, obs_id: str, lock_rel_path: str, thresholds: list[float]) 
 
 
 def _evaluate_grid_from_ov01g_external_evidence(*, thresholds: list[float]) -> dict[str, Any]:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     base = repo_root / "formal" / "external_evidence" / "bec_bragg_steinhauer_2001"
 
     # Linear DR windows
@@ -220,7 +221,7 @@ def _evaluate_grid_from_ov01g_external_evidence(*, thresholds: list[float]) -> d
 
 
 def _evaluate_grid_for_ov02x(*, thresholds: list[float]) -> dict[str, Any]:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     base = repo_root / "formal" / "external_evidence" / "bec_bragg_steinhauer_2001"
 
     # Use the same 4-window set used by OV-01g mainline (DR-02a/03a/04d/05a).

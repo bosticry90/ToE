@@ -42,6 +42,7 @@ import sys
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 
 
 def _ensure_repo_root_on_syspath() -> None:
@@ -68,14 +69,6 @@ class WindowSpec:
     window_id: str
     kmax_um_inv: float
 
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _sha256_file(path: Path) -> str:
@@ -337,7 +330,7 @@ def main(argv: list[str] | None = None) -> int:
     )
     args = parser.parse_args(argv)
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     ds02_dir, default_csv = _default_ds02_paths(repo_root)
 
     csv_path = Path(args.csv) if args.csv is not None else default_csv

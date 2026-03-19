@@ -16,6 +16,7 @@ def find_repo_root(start: Path) -> Path:
 REPO_ROOT = find_repo_root(Path(__file__))
 MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0.json"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 
 
@@ -31,6 +32,7 @@ def _read_json(path: Path) -> dict:
 def test_packet04_matrix_surface_is_pinned() -> None:
     matrix = _read_json(MATRIX_PATH)
     roadmap = _read(ROADMAP_PATH)
+    inventory = _read(INVENTORY_PATH)
     state = _read(STATE_PATH)
 
     assert matrix.get("matrix_id") == "FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0"
@@ -43,7 +45,7 @@ def test_packet04_matrix_surface_is_pinned() -> None:
         "formal/python/tests/test_foundational_empirical_packet04_matrix_consistency_gate.py",
     ):
         assert ref in roadmap
-        assert ref in state
+        assert ref in state or ref in inventory
 
 
 def test_packet04_matrix_rows_pin_next_surface_paths() -> None:

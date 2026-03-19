@@ -34,12 +34,13 @@ from formal.python.toe.constraints.fn01_artifact import fn01_make_P_cubic_artifa
 from formal.python.toe.dr01_fit import DR01Fit1D
 from formal.python.toe.dr01_fit_curved import DR01FitCurved1D
 from formal.python.toe.dr01_fit_quality import DR01FitQualityCurved1D
+from formal.python.meta.repo_environment import find_repo_root
 from formal.python.toe.observables.ov01_fit_family_robustness import _dedupe_aligned_windows
 from formal.python.toe.observables.ov01_multi_fit_stability import ov01_multi_fit_stability
 from formal.python.toe.observables.ov01_multi_fit_stability_curved import ov01_multi_fit_stability_curved
 from formal.python.toe.observables.ov01_observable import ov01_observable_residual_from
 from formal.python.toe.observables.ov01_observable_curved import ov01_observable_residual_from_curved
-from formal.python.toe.observables.ovdq01_dq01_diagnostics_record import _find_repo_root, _load_robustness_report_from_lock
+from formal.python.toe.observables.ovdq01_dq01_diagnostics_record import _load_robustness_report_from_lock
 
 
 def _sha256_json(payload: object) -> str:
@@ -48,7 +49,7 @@ def _sha256_json(payload: object) -> str:
 
 
 def default_artifact_path() -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     return repo_root / "formal" / "python" / "artifacts" / "diagnostics" / "OV-DQ-01" / "OV-DQ-01_qratio_decomposition.json"
 
 
@@ -281,7 +282,7 @@ def _compute_for_observable(*, repo_root: Path, obs_id: str) -> dict[str, Any]:
 
 
 def ovdq01_qratio_decomposition_record() -> OVDQ01QRatioDecompositionRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     ov04x = _compute_for_observable(repo_root=repo_root, obs_id="OV-04x")
     ov03x = _compute_for_observable(repo_root=repo_root, obs_id="OV-03x")

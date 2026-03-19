@@ -20,6 +20,7 @@ MAIN_TEX_PATH = REPO_ROOT / "formal" / "docs" / "submission" / "scalar_paper1" /
 MAIN_PDF_PATH = REPO_ROOT / "formal" / "docs" / "submission" / "scalar_paper1" / "main.pdf"
 MAIN_LOG_PATH = REPO_ROOT / "formal" / "docs" / "submission" / "scalar_paper1" / "main.log"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 
 
@@ -100,6 +101,7 @@ def test_toe_qft_scalar_export_compile_validation_artifacts_are_present() -> Non
 
 def test_toe_qft_scalar_export_compile_validation_is_mirrored_in_authority_surfaces() -> None:
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     roadmap_text = _read(ROADMAP_PATH)
 
     refs = [
@@ -112,5 +114,7 @@ def test_toe_qft_scalar_export_compile_validation_is_mirrored_in_authority_surfa
     ]
 
     for ref in refs:
-        assert ref in state_text, f"State missing compile-validation ref: {ref}"
+        assert ref in state_text or ref in inventory_text, (
+            f"State/Inventory missing compile-validation ref: {ref}"
+        )
         assert ref in roadmap_text, f"Roadmap missing compile-validation ref: {ref}"

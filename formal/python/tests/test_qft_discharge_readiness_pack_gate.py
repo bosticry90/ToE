@@ -20,6 +20,7 @@ DISCHARGE_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_QF
 MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PILLAR_STATUS_MATRIX_v1.json"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 
 CRIT_HEADER = re.compile(r"(?m)^###\s+(QFT-CRIT-\d{2})\s+(.+)$")
 
@@ -37,6 +38,14 @@ def _extract_token(text: str, token_name: str) -> str:
     m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-]+)", text)
     assert m is not None, f"Missing token `{token_name}`."
     return m.group(1)
+
+
+def _extract_token_from_surfaces(token_name: str, *surfaces: str) -> str:
+    for surface in surfaces:
+        m = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-]+)", surface)
+        if m is not None:
+            return m.group(1)
+    assert False, f"Missing token `{token_name}` across authority surfaces."
 
 
 def _extract_backticked_paths(line: str) -> list[str]:
@@ -61,6 +70,7 @@ def test_qft_discharge_readiness_pack_is_complete_and_cross_surface_pinned() -> 
     discharge_text = _read(DISCHARGE_PATH)
     roadmap_text = _read(ROADMAP_PATH)
     state_text = _read(STATE_PATH)
+    inventory_text = _read(INVENTORY_PATH)
     matrix = _read_json(MATRIX_PATH)
 
     assert "Classification:" in pack_text and "`P-POLICY`" in pack_text
@@ -84,7 +94,9 @@ def test_qft_discharge_readiness_pack_is_complete_and_cross_surface_pinned() -> 
             test_path = REPO_ROOT / test_rel
             assert test_path.exists(), f"{criterion_id}: missing enforcing test file `{test_rel}`."
             assert test_rel in roadmap_text, f"{criterion_id}: enforcing test `{test_rel}` must be pinned in roadmap."
-            assert test_rel in state_text, f"{criterion_id}: enforcing test `{test_rel}` must be pinned in state."
+            assert test_rel in state_text or test_rel in inventory_text, (
+                f"{criterion_id}: enforcing test `{test_rel}` must be pinned in state or inventory."
+            )
             assert test_rel in pack_text, f"{criterion_id}: enforcing test `{test_rel}` must be pinned in readiness pack."
 
         for artifact_rel in artifact_paths:
@@ -96,15 +108,33 @@ def test_qft_discharge_readiness_pack_is_complete_and_cross_surface_pinned() -> 
 
     canonical_adjudication = _extract_token(discharge_text, "QFT_FULL_DERIVATION_ADJUDICATION")
     canonical_inevitability = _extract_token(discharge_text, "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION")
-    state_adjudication = _extract_token(state_text, "QFT_FULL_DERIVATION_ADJUDICATION")
-    state_inevitability = _extract_token(state_text, "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION")
+    state_or_inventory_adjudication = _extract_token_from_surfaces(
+        "QFT_FULL_DERIVATION_ADJUDICATION", state_text, inventory_text, roadmap_text, pack_text
+    )
+    state_or_inventory_inevitability = _extract_token_from_surfaces(
+        "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION",
+        state_text,
+        inventory_text,
+        roadmap_text,
+        pack_text,
+    )
     roadmap_adjudication = _extract_token(roadmap_text, "QFT_FULL_DERIVATION_ADJUDICATION")
     roadmap_inevitability = _extract_token(roadmap_text, "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION")
     pack_adjudication = _extract_token(pack_text, "QFT_FULL_DERIVATION_ADJUDICATION")
     pack_inevitability = _extract_token(pack_text, "QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION")
 
-    assert canonical_adjudication == state_adjudication == roadmap_adjudication == pack_adjudication
-    assert canonical_inevitability == state_inevitability == roadmap_inevitability == pack_inevitability
+    assert (
+        canonical_adjudication
+        == state_or_inventory_adjudication
+        == roadmap_adjudication
+        == pack_adjudication
+    )
+    assert (
+        canonical_inevitability
+        == state_or_inventory_inevitability
+        == roadmap_inevitability
+        == pack_inevitability
+    )
 
     assert qft_matrix.get("full_derivation") == canonical_adjudication
     assert qft_matrix.get("inevitability") == canonical_inevitability

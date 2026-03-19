@@ -25,6 +25,7 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 from typing import Any
 
 
@@ -55,15 +56,6 @@ def _sha256_file(path: Path) -> str:
 
 def _sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
-
-
-def _find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def _read_density_conditions_csv(csv_path: Path) -> tuple[list[dict[str, Any]], str]:
@@ -620,7 +612,7 @@ def ovsnd03n2_secondary_density_conditions_digitized_record(
     *,
     date: str = "2026-01-24",
 ) -> OVSND03N2SecondaryDensityConditionsDigitizedRecord:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     # Expected pinning locations.
     pdf_rel = "formal/external_evidence/bec_sound_density_secondary_TBD/source.pdf"
@@ -746,7 +738,7 @@ def write_ovsnd03n2_digitized_artifacts(
     - Only if missing (or force_redigitize=True) will this function run extraction/digitization.
     """
 
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
 
     csv_rel = (
         "formal/external_evidence/bec_sound_density_secondary_TBD/ovsnd03n2_density_digitization/"
@@ -827,7 +819,7 @@ def render_ovsnd03n2_lock_markdown(record: OVSND03N2SecondaryDensityConditionsDi
 
 
 def write_ovsnd03n2_lock(*, lock_path: Path | None = None, date: str = "2026-01-24") -> Path:
-    repo_root = _find_repo_root(Path(__file__))
+    repo_root = find_repo_root(Path(__file__))
     out = lock_path
     if out is None:
         out = repo_root / "formal" / "markdown" / "locks" / "observables" / "OV-SND-03N2_secondary_density_conditions_digitized.md"
