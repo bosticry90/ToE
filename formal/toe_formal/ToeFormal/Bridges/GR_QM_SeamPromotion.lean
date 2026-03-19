@@ -51,6 +51,13 @@ theorem gr_qm_seam_cycle02_discharge_proof
     cycle02DischargeSurface witness := by
   exact And.intro h_surface h_no_shortcut
 
+/-- Cycle02 bridge theorem: discharged surface retains the cycle01 Class-B compatibility surface. -/
+theorem gr_qm_cycle02_class_b_retention_bridge
+    (witness : GRQMSeamWitnessPackage)
+    (h_discharge : cycle02DischargeSurface witness) :
+    classBCompatibilitySurface witness := by
+  exact h_discharge.left
+
 /-- Cycle03 bounded class-flip authorization surface. -/
 def cycle03ClassFlipAuthorizationSurface
     (witness : GRQMSeamWitnessPackage) : Prop :=
