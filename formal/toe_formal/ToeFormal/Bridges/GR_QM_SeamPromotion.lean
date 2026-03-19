@@ -148,6 +148,12 @@ def cycle03RegimeClosureSemanticsSurface
     witness.grAssumptionId = "GR_SHARED_DYNAMICS_REGIME_CLOSURE_v0" /\
     witness.qmAssumptionId = "QM_SHARED_DYNAMICS_REGIME_CLOSURE_v0"
 
+/-- Cycle03 shared-dynamics transport semantics surface: regime-closure package retains transport tag pinning. -/
+def cycle03SharedDynamicsTransportSemanticsSurface
+    (witness : GRQMSeamWitnessPackage) : Prop :=
+  cycle03RegimeClosureSemanticsSurface witness /\
+    witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0"
+
 /-- Cycle03 ready-package theorem for bounded class-flip handoff assembly. -/
 theorem gr_qm_cycle03_class_flip_ready_package
     (witness : GRQMSeamWitnessPackage)
@@ -199,6 +205,16 @@ theorem gr_qm_cycle03_regime_closure_semantics_package
   have h_completion_parity : cycle03ClassFlipCompletionParitySurface witness :=
     gr_qm_cycle03_completion_parity_package witness h_discharge h_class_token
   exact And.intro h_completion_parity (And.intro h_gr_regime h_qm_regime)
+
+/-- Cycle03 shared-dynamics transport semantics theorem: regime-closure package retains explicit no-shortcut transport pinning. -/
+theorem gr_qm_cycle03_shared_dynamics_transport_semantics_package
+    (witness : GRQMSeamWitnessPackage)
+    (h_regime_closure : cycle03RegimeClosureSemanticsSurface witness) :
+    cycle03SharedDynamicsTransportSemanticsSurface witness := by
+  have h_no_shortcut :
+      witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" :=
+    h_regime_closure.left.left.right.right.right
+  exact And.intro h_regime_closure h_no_shortcut
 
 /-- Cycle03 class-flip authorization theorem for GR-QM seam promotion. -/
 theorem gr_qm_seam_cycle03_class_flip_authorization

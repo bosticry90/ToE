@@ -162,6 +162,16 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Unchanged stop condition: no new surfaces beyond the currently authorized GR-QM tranche are permitted without another explicit authorization step.
 - Next scientific decision must now be deliberate under the five-gate baseline, with shared-dynamics transport semantics preferred as the cleanest next bounded target.
 
+## WS-10-T05 Shared-Dynamics Transport Semantics Checkpoint (2026-03-19)
+- Checkpoint status: `BOUNDED_SHARED_DYNAMICS_TRANSPORT_INCREMENT_RECORDED`
+- Wider-tranche authorization anchor: `e118b72`
+- Shared-dynamics transport scientific increment result: cycle03 now exposes an explicit shared-dynamics transport semantics package theorem that retains no-shortcut transport pinning on top of the regime-closure witness package.
+- Shared-dynamics transport scientific surfaces touched: `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md` and `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean`, with enforcement extended in `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`.
+- Five-gate shared-dynamics transport validation result: `7 passed in 3.15s`
+- Operative validation baseline remains the declared five-gate ladder: `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`, `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`, `formal/python/tests/test_toe_master_action_seam_registry_gate.py`
+- Unchanged tranche-boundary audit: scientific edits stayed inside the same authorized GR-QM tranche surfaces with no inventory/registry/control-surface widening required.
+- Next decision boundary after transport semantics: make a deliberate post-transport theorem target choice under the unchanged five-gate baseline before any further GR-QM increment.
+
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
 | --- | --- | --- | --- | --- |
@@ -210,7 +220,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-10-T05 | Theory Restart Pilot | Hold the widened GR-QM tranche at a checkpointed regime-closure semantics increment before the next scientific move | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; widened GR-QM ladder passed cleanly (`3 passed in 1.95s`); broader cross-cycle authorization chain recorded across commits `bf9a5fe` and `24422a7` with standing three-gate validation results `3 passed in 2.10s` and `3 passed in 2.00s`; 2026-03-19: larger tranche activation anchored on `0d023e1`; same-lane tranche increments recorded in `1f37ccc` and `32cd56c`; wider tranche authorization anchored on `e118b72`; checkpointed widened activation ladder passed (`8 passed in 3.21s`); first widened scientific slice landed as cycle03 completion-parity theorem work and checkpointed widened scientific ladder passed (`7 passed in 3.09s`); bounded regime-closure semantics increment now extends the same cycle03 package under the unchanged five-gate ladder (`7 passed in 3.40s`) | Regime-closure semantics increment, exact five-gate pass count, unchanged no-new-surfaces stop condition, and next-target posture are all checkpointed before another GR-QM increment |
+| WS-10-T05 | Theory Restart Pilot | Hold the widened GR-QM tranche at a checkpointed shared-dynamics transport semantics increment before the next scientific move | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; widened GR-QM ladder passed cleanly (`3 passed in 1.95s`); broader cross-cycle authorization chain recorded across commits `bf9a5fe` and `24422a7` with standing three-gate validation results `3 passed in 2.10s` and `3 passed in 2.00s`; 2026-03-19: larger tranche activation anchored on `0d023e1`; same-lane tranche increments recorded in `1f37ccc` and `32cd56c`; wider tranche authorization anchored on `e118b72`; checkpointed widened activation ladder passed (`8 passed in 3.21s`); first widened scientific slice landed as cycle03 completion-parity theorem work and checkpointed widened scientific ladder passed (`7 passed in 3.09s`); bounded regime-closure semantics increment extended the same cycle03 package under the unchanged five-gate ladder (`7 passed in 3.40s`); bounded shared-dynamics transport semantics increment now extends that package under the same unchanged five-gate ladder (`7 passed in 3.15s`) | Shared-dynamics transport semantics increment, exact five-gate pass count, unchanged same-surface tranche boundary, and post-transport decision boundary are all checkpointed before another GR-QM increment |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |

@@ -111,6 +111,15 @@ Cycle03 widened regime-closure semantics theorem
 - `GR_QM_CLASS_B_PROMOTION_CYCLE03_REGIME_CLOSURE_CONCLUSION_v0: CYCLE03_COMPLETION_PARITY_PACKAGE_PLUS_SHARED_DYNAMICS_REGIME_IDS_EXPLICIT`
 - Bounded interpretation: under the widened tranche, the cycle03 completion-parity package can now expose paired GR/QM shared-dynamics regime identifiers inside the same theorem witness form, making regime-closure semantics explicit without claiming that the seam-registry physics blocker is fully discharged by this step alone.
 
+Cycle03 widened shared-dynamics transport semantics theorem
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_SHARED_DYNAMICS_TRANSPORT_STATUS_v0: EXPLICIT_WIDER_TRANCHE_v0_NONCLAIM`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_SHARED_DYNAMICS_TRANSPORT_NAME_v0: CYCLE03_REGIME_CLOSURE_PACKAGE_RETAINS_SHARED_DYNAMICS_TRANSPORT_TAG_PINNING`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_SHARED_DYNAMICS_TRANSPORT_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_cycle03_shared_dynamics_transport_semantics_package`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_SHARED_DYNAMICS_TRANSPORT_DEPENDS_ON_v0: gr_qm_cycle03_regime_closure_semantics_package`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_SHARED_DYNAMICS_TRANSPORT_HYPOTHESES_v0: CYCLE03_REGIME_CLOSURE_SEMANTICS_SURFACE_ESTABLISHED`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_SHARED_DYNAMICS_TRANSPORT_CONCLUSION_v0: CYCLE03_REGIME_CLOSURE_PACKAGE_PLUS_NO_SHORTCUT_TRANSPORT_TAG_EXPLICIT`
+- Bounded interpretation: under the widened tranche, the regime-closure witness package now explicitly retains the no-shortcut shared-dynamics transport tag in the same theorem form, deepening transport semantics without claiming that the seam-registry physics blocker is fully discharged by this step alone.
+
 Exit posture (cycle03)
 - `GR_QM_CLASS_PROMOTION_DECISION_v0: B_TO_A_FLIP_EXECUTED_v0`
 - `GR_QM_CLASS_PROMOTION_SCOPE_v0: SINGLE_SEAM_SINGLE_CYCLE_BOUNDED_v0`

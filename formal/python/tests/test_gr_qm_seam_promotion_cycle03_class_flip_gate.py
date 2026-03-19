@@ -30,6 +30,7 @@ AUTH_BRIDGE_SYMBOL = "gr_qm_cycle02_to_cycle03_authorization_bridge"
 AUTH_RETENTION_SYMBOL = "gr_qm_cycle03_authorization_retains_transport"
 COMPLETION_PARITY_SYMBOL = "gr_qm_cycle03_completion_parity_package"
 REGIME_CLOSURE_SYMBOL = "gr_qm_cycle03_regime_closure_semantics_package"
+SHARED_DYNAMICS_TRANSPORT_SYMBOL = "gr_qm_cycle03_shared_dynamics_transport_semantics_package"
 
 
 def _read(path: Path) -> str:
@@ -107,6 +108,19 @@ def test_gr_qm_cycle03_class_flip_surface_and_parity() -> None:
         "GR_QM_CLASS_B_PROMOTION_CYCLE03_REGIME_CLOSURE_CONCLUSION_v0: "
         "CYCLE03_COMPLETION_PARITY_PACKAGE_PLUS_SHARED_DYNAMICS_REGIME_IDS_EXPLICIT"
     ) in cycle03_target_text
+    assert "GR_QM_CLASS_B_PROMOTION_CYCLE03_SHARED_DYNAMICS_TRANSPORT_STATUS_v0: EXPLICIT_WIDER_TRANCHE_v0_NONCLAIM" in cycle03_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE03_SHARED_DYNAMICS_TRANSPORT_THEOREM_v0: "
+        f"{THEOREM_REL}#{SHARED_DYNAMICS_TRANSPORT_SYMBOL}"
+    ) in cycle03_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE03_SHARED_DYNAMICS_TRANSPORT_DEPENDS_ON_v0: "
+        f"{REGIME_CLOSURE_SYMBOL}"
+    ) in cycle03_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE03_SHARED_DYNAMICS_TRANSPORT_CONCLUSION_v0: "
+        "CYCLE03_REGIME_CLOSURE_PACKAGE_PLUS_NO_SHORTCUT_TRANSPORT_TAG_EXPLICIT"
+    ) in cycle03_target_text
 
     assert CYCLE03_TARGET_REL in inventory_text
     assert CYCLE03_GATE_REL in inventory_text
@@ -129,3 +143,4 @@ def test_gr_qm_cycle03_class_flip_surface_and_parity() -> None:
     assert AUTH_RETENTION_SYMBOL in theorem_text
     assert COMPLETION_PARITY_SYMBOL in theorem_text
     assert REGIME_CLOSURE_SYMBOL in theorem_text
+    assert SHARED_DYNAMICS_TRANSPORT_SYMBOL in theorem_text
