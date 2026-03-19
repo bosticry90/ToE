@@ -26,24 +26,26 @@ Out of scope during WS-10:
 - broad README or architecture cleanup.
 
 ## Restart Slice Target
-- Active slice ID: `WS-10-T05_GR_QM_SEAM_DISCHARGE`
+- Active slice ID: `WS-10-T05_GR_QM_LARGER_DISCHARGE_TRANCHE`
 - Active pillar: `SEAM-GR-QM`
-- Primary target surface: `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
-- Supporting theorem surfaces:
-	- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
-	- `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`
-	- `formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md`
-- Evidence goal: bounded GR-QM seam discharge target is now explicitly activated as the next post-pilot scientific slice without mixing seam work into this activation commit.
+- Handoff anchor: `0d023e1`
+- Primary tranche target surfaces:
+	- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
+	- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`
+	- `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean`
+- Evidence goal: bounded larger GR-QM discharge tranche is explicitly activated from the `0d023e1` checkpoint boundary without mixing scientific edits into this control-surface commit.
 
 ## Verification Ladder
 1. `./py.ps1 -m pytest -q formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
-2. `./py.ps1 -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`
-3. Optional only if slice activation touches inventory or registry parity surfaces: `./py.ps1 -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
+2. `./py.ps1 -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
+3. No broader validation expansion unless the tranche itself adds a new named control-surface authorization.
 
 Execution contract:
 - Run tracker/state/roadmap parity checks before theorem-surface edits.
 - Keep this activation commit control-surface only and avoid mixing in GR-QM theorem edits.
-- Do not expand verification beyond the local gate ladder unless a touched surface forces it.
+- Keep tranche scientific edits confined to `DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`, `DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`, and `GR_QM_SeamPromotion.lean`.
+- Permit one last same-lane theorem only if it is named before editing, uses the same three files and same three-gate ladder, and introduces no new control surfaces or adjoining package surfaces.
+- Stop immediately once the bounded larger tranche lands or the predeclared same-lane exception boundary is reached.
 - Record exact command text and results in the evidence log below.
 
 ## Task Plan
@@ -53,7 +55,7 @@ Execution contract:
 | WS-10-T02 | Deepen GR01 boundary-term regularity lemma | DONE | WS-10-T01 | Local theorem-surface deepening in GR01 regularity and support notes | Theorem-surface diff plus local GR01 gate ladder green |
 | WS-10-T03 | Run bounded GR01 verification ladder | DONE | WS-10-T02 | Local gate results recorded in artifact | Exact command outputs and exit status |
 | WS-10-T04 | Record WS-10 first-slice checkpoint | DONE | WS-10-T03 | Tracker and WS-10 evidence closure note | Commit hash, touched files, and result summary |
-| WS-10-T05 | Open next bounded theory slice: GR-QM seam discharge | ACTIVE | WS-10-T04 | Control-surface activation for the GR-QM seam discharge target | Bounded diff evidence plus targeted parity verification |
+| WS-10-T05 | Open next bounded theory slice: larger GR-QM discharge tranche | ACTIVE | WS-10-T04 | Control-surface activation for the larger GR-QM discharge tranche anchored on `0d023e1` | Bounded diff evidence plus targeted parity verification |
 
 ## Guardrails
 - No unnecessary governance-family expansion.
@@ -77,6 +79,7 @@ Execution contract:
 - 2026-03-18 WS-10-T05 multi-cycle checkpoint: GR-QM has advanced from cycle02-local foundation work into bounded multi-cycle authorization structure and the standing local validation baseline is now the widened three-gate GR-QM ladder.
 - 2026-03-18 WS-10-T05 broader scientific slice: commit `24422a7` added the authorization-retention bridge as a second bounded cross-cycle theorem and validated it via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py` -> `3 passed in 2.00s`.
 - 2026-03-18 WS-10-T05 tranche-decision checkpoint: the GR-QM lane now has a stable widened three-gate baseline plus a two-object broader cross-cycle theorem chain, so the next slice should be opened deliberately as a larger discharge tranche unless one last same-lane theorem is equally clean and still confined to the same three-file, three-gate scope.
+- 2026-03-19 WS-10-T05 larger-tranche activation: the tranche-decision boundary at `0d023e1` is now converted into the active bounded slice `WS-10-T05_GR_QM_LARGER_DISCHARGE_TRANCHE`, restricted to the cycle02 discharge target, the cycle03 class-flip target, and the shared `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean` surface under the standing three-gate ladder; control-surface parity validation via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py` -> `3 passed in 1.41s`.
 
 ## Exit Criteria
 - WS-10-T01 activation note is mirrored in the canonical control surfaces and verified.
@@ -89,3 +92,4 @@ Execution contract:
 - When a widened GR-QM validation ladder is run, the result must explicitly record whether hidden coupling was detected before broader scientific scope is authorized.
 - When a broader GR-QM multi-cycle bridge slice lands, the checkpoint must record the scientific scope transition and the standing widened validation baseline before the next seam theorem slice begins.
 - Once the broader GR-QM lane contains more than one cross-cycle theorem object under the standing widened baseline, the next checkpoint must elevate the decision to tranche level unless an equally clean same-lane theorem remains available inside the same three-file, three-gate scope.
+- Once tranche-level activation is recorded, all further GR-QM work in WS-10-T05 must remain inside the two target docs plus `GR_QM_SeamPromotion.lean`, use the standing three-gate ladder, and halt at tranche completion or the predeclared same-lane exception boundary.

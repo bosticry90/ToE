@@ -52,10 +52,11 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Completed bounded slice: `WS-10-T02_GR01_BOUNDARY_TERM_REGULARITY`
 - Completed theorem result: GR01 local boundary-term regularity lemma contract pinned without reopening tracker/state/roadmap/package-control churn.
 - Completed theorem verification result: `3 passed in 1.94s` via `formal/python/tests/test_gr01_function_space_completion_criteria_gate.py`, `formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py`, `formal/python/tests/test_gr01_publication_grade_discharge_package_gate.py`.
-- Next bounded slice: `WS-10-T05_GR_QM_SEAM_DISCHARGE`
-- Next bounded target: `DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0`
-- Next target path: `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
-- Next bounded verification path: `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py` plus pre-slice control-surface parity checks.
+- Next bounded slice: `WS-10-T05_GR_QM_LARGER_DISCHARGE_TRANCHE`
+- Next bounded targets: `DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0` plus `DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0`
+- Next target paths: `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md` plus `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`
+- Shared theorem surface: `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean`
+- Next bounded verification path: standing three-gate ladder `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py` plus pre-slice control-surface parity checks.
 
 ## WS-10-T05 Activation (2026-03-18)
 - Activation status: `ACTIVE_BOUNDED_v0`
@@ -96,6 +97,16 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Standing GR-QM validation baseline: `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
 - Latest broader validation result: `3 passed in 2.00s`
 - Deliberate next-slice posture: open a larger GR-QM discharge tranche by explicit control-surface decision; permit one more same-lane theorem only if it is equally clean and remains confined to the same three files and standing three-gate ladder.
+
+## WS-10-T05 Larger Tranche Activation (2026-03-19)
+- Activation status: `ACTIVE_BOUNDED_v0`
+- Activated slice: `WS-10-T05_GR_QM_LARGER_DISCHARGE_TRANCHE`
+- Handoff anchor: `0d023e1`
+- Activated tranche scope: `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`, `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`, and `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean`
+- Standing tranche validation ladder: `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
+- Exception rule: allow one last same-lane theorem only if it is named before editing, remains inside the same three scientific files, uses the same standing three-gate ladder, and introduces no new control surfaces or adjoining package surfaces.
+- Stop condition: halt after the bounded larger tranche lands or at the predeclared same-lane exception boundary; do not permit opportunistic expansion beyond the tranche scope.
+- Activation verification result: `3 passed in 1.41s` via `formal/python/tests/test_state_theory_dag.py` and `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`.
 
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
@@ -145,7 +156,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-10-T05 | Theory Restart Pilot | Advance bounded GR-QM seam lane to a tranche decision boundary | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; widened GR-QM ladder passed cleanly (`3 passed in 1.95s`); broader cross-cycle authorization chain recorded across commits `bf9a5fe` and `24422a7` with standing three-gate validation results `3 passed in 2.10s` and `3 passed in 2.00s` | The broader GR-QM chain is explicitly recorded, the three-gate ladder is the standing local baseline, and the next slice is chosen deliberately as either a larger discharge tranche or one last equally clean same-lane theorem |
+| WS-10-T05 | Theory Restart Pilot | Open the larger GR-QM discharge tranche as the next bounded slice | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; widened GR-QM ladder passed cleanly (`3 passed in 1.95s`); broader cross-cycle authorization chain recorded across commits `bf9a5fe` and `24422a7` with standing three-gate validation results `3 passed in 2.10s` and `3 passed in 2.00s`; 2026-03-19: larger tranche activation anchored on `0d023e1` and restricted to the two target docs plus shared `GR_QM_SeamPromotion.lean` theorem surface; control-surface parity validation passed (`3 passed in 1.41s`) | The larger tranche is explicitly active with fixed touched files, fixed three-gate validation ladder, and a hard stop at tranche completion or the predeclared same-lane exception boundary |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
