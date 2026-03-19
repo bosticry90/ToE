@@ -27,6 +27,7 @@ CYCLE03_GATE_REL = "formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_
 THEOREM_REL = "formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean"
 AUTH_SYMBOL = "gr_qm_seam_cycle03_class_flip_authorization"
 AUTH_BRIDGE_SYMBOL = "gr_qm_cycle02_to_cycle03_authorization_bridge"
+AUTH_RETENTION_SYMBOL = "gr_qm_cycle03_authorization_retains_transport"
 
 
 def _read(path: Path) -> str:
@@ -65,6 +66,19 @@ def test_gr_qm_cycle03_class_flip_surface_and_parity() -> None:
         "GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_BRIDGE_CONCLUSION_v0: "
         "CYCLE03_CLASS_FLIP_AUTHORIZATION_SURFACE_ESTABLISHED"
     ) in cycle03_target_text
+    assert "GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_RETENTION_STATUS_v0: EXPLICIT_BOUNDED_v0_NONCLAIM" in cycle03_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_RETENTION_THEOREM_v0: "
+        f"{THEOREM_REL}#{AUTH_RETENTION_SYMBOL}"
+    ) in cycle03_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_RETENTION_DEPENDS_ON_v0: "
+        f"{AUTH_BRIDGE_SYMBOL}"
+    ) in cycle03_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_RETENTION_CONCLUSION_v0: "
+        "CYCLE03_AUTHORIZATION_PLUS_NO_SHORTCUT_TRANSPORT_RETAINED"
+    ) in cycle03_target_text
 
     assert CYCLE03_TARGET_REL in inventory_text
     assert CYCLE03_GATE_REL in inventory_text
@@ -84,3 +98,4 @@ def test_gr_qm_cycle03_class_flip_surface_and_parity() -> None:
 
     assert AUTH_SYMBOL in theorem_text
     assert AUTH_BRIDGE_SYMBOL in theorem_text
+    assert AUTH_RETENTION_SYMBOL in theorem_text

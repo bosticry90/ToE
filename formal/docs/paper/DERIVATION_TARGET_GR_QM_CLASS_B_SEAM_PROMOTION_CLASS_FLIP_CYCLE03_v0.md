@@ -66,6 +66,15 @@ Cycle03 bounded cross-cycle authorization bridge
 - `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_BRIDGE_CONCLUSION_v0: CYCLE03_CLASS_FLIP_AUTHORIZATION_SURFACE_ESTABLISHED`
 - Bounded interpretation: the cycle02-local retention transport chain is sufficient to assemble the cycle03 authorization surface without widening beyond the GR-QM seam ladder.
 
+Cycle03 bounded authorization retention corollary
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_RETENTION_STATUS_v0: EXPLICIT_BOUNDED_v0_NONCLAIM`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_RETENTION_NAME_v0: CYCLE03_AUTHORIZATION_SURFACE_RETAINS_NO_SHORTCUT_TRANSPORT`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_RETENTION_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_cycle03_authorization_retains_transport`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_RETENTION_DEPENDS_ON_v0: gr_qm_cycle02_to_cycle03_authorization_bridge`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_RETENTION_HYPOTHESES_v0: CYCLE02_DISCHARGE_SURFACE_ESTABLISHED`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_RETENTION_CONCLUSION_v0: CYCLE03_AUTHORIZATION_PLUS_NO_SHORTCUT_TRANSPORT_RETAINED`
+- Bounded interpretation: once the cycle03 authorization surface is assembled, the cycle02 no-shortcut transport remains attached to that authorization package without widening into registry or inventory coordination.
+
 Exit posture (cycle03)
 - `GR_QM_CLASS_PROMOTION_DECISION_v0: B_TO_A_FLIP_EXECUTED_v0`
 - `GR_QM_CLASS_PROMOTION_SCOPE_v0: SINGLE_SEAM_SINGLE_CYCLE_BOUNDED_v0`

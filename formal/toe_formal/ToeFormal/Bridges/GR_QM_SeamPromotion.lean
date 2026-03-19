@@ -94,6 +94,16 @@ theorem gr_qm_cycle02_to_cycle03_authorization_bridge
     gr_qm_cycle02_retention_transport_contract witness h_discharge
   exact And.intro h_discharge h_transport.left
 
+/-- Cycle03 corollary: the assembled authorization surface retains the no-shortcut transport package. -/
+theorem gr_qm_cycle03_authorization_retains_transport
+    (witness : GRQMSeamWitnessPackage)
+    (h_discharge : cycle02DischargeSurface witness) :
+    cycle03ClassFlipAuthorizationSurface witness /\
+    witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" := by
+  have h_auth : cycle03ClassFlipAuthorizationSurface witness :=
+    gr_qm_cycle02_to_cycle03_authorization_bridge witness h_discharge
+  exact And.intro h_auth h_discharge.right
+
 /-- Cycle03 class-flip authorization theorem for GR-QM seam promotion. -/
 theorem gr_qm_seam_cycle03_class_flip_authorization
     (witness : GRQMSeamWitnessPackage)
