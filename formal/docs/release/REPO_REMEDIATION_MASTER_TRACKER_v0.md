@@ -73,6 +73,13 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Local validation chain: `1 passed in 0.73s`, `1 passed in 0.75s`, `1 passed in 0.75s` via `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`.
 - Explicit decision: keep GR-QM validation cycle02-local for now; defer cycle01/cycle03 widening unless shared assumptions, theorem anchors, or cross-lane coupling change.
 
+## WS-10-T05 Validation Widening Checkpoint (2026-03-18)
+- Widening status: `COMPLETED_WITHOUT_HIDDEN_COUPLING`
+- Widened validation command: `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
+- Widened validation result: `3 passed in 1.95s`
+- Interpretation: the shared `GR_QM_SeamPromotion.lean` bridge surface remains compatible with cycle01 and cycle03 gate expectations after the three cycle02-local increments.
+- Next decision posture: widening is now evidenced; any further move should choose deliberately between more cycle02-local theorem work and a broader GR-QM scientific slice.
+
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
 | --- | --- | --- | --- | --- |
@@ -121,7 +128,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-10-T05 | Theory Restart Pilot | Advance bounded GR-QM cycle02-local discharge lane | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; local gate stayed green (`1 passed in 0.73s`, `1 passed in 0.75s`, `1 passed in 0.75s`) with widening explicitly deferred | Three bounded GR-QM cycle02-local increments are recorded with local validation evidence and an explicit next-scope decision |
+| WS-10-T05 | Theory Restart Pilot | Advance bounded GR-QM discharge lane with evidence-first widening | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; local gate stayed green (`1 passed in 0.73s`, `1 passed in 0.75s`, `1 passed in 0.75s`); widened GR-QM ladder then passed cleanly (`3 passed in 1.95s`) across cycle01/cycle02/cycle03 | Three bounded GR-QM cycle02-local increments are recorded and the first widened GR-QM ladder result is captured for the next scope decision |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |

@@ -72,6 +72,7 @@ Execution contract:
 - 2026-03-18 WS-10-T05 scientific increment 2: commit `f587707` added the cycle02 compatibility-persistence corollary and local validation via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py` -> `1 passed in 0.75s`.
 - 2026-03-18 WS-10-T05 scientific increment 3: commit `4b74614` added the cycle02 retention transport corollary and local validation via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py` -> `1 passed in 0.75s`.
 - 2026-03-18 WS-10-T05 progress checkpoint: three bounded cycle02-local increments are now recorded and widening to `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py` plus `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py` remains deferred unless shared-coupling changes.
+- 2026-03-18 WS-10-T05 widened validation checkpoint: `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py` -> `3 passed in 1.95s`; no hidden cross-lane coupling detected in the shared `GR_QM_SeamPromotion.lean` bridge surface.
 
 ## Exit Criteria
 - WS-10-T01 activation note is mirrored in the canonical control surfaces and verified.
@@ -81,3 +82,4 @@ Execution contract:
 - The next bounded theory slice is explicitly selected before any additional theorem or seam work begins.
 - The active next slice is explicitly activated in the control surfaces before any GR-QM scientific edits begin.
 - WS-10-T05 progress checkpoints must record bounded GR-QM local increments, local validation evidence, and the current decision on whether validation widening remains deferred.
+- When a widened GR-QM validation ladder is run, the result must explicitly record whether hidden coupling was detected before broader scientific scope is authorized.
