@@ -22,7 +22,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - WS-07: DONE
 - WS-08: DONE (architecture consolidation phase)
 - WS-09: DONE (CE-05 post-simplification verification sweep)
-- WS-10: ACTIVE (first pilot phase closed; next bounded slice selected)
+- WS-10: ACTIVE (GR-QM seam discharge slice activated)
 - Program state: ACTIVE
 - Active WS-05 plan pointer: `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`
 - Active WS-05 baseline pointer: `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md`
@@ -48,6 +48,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Pilot phase status: `CLOSED_WITH_BOUNDED_EVIDENCE`
 - Activation commit: `a055921`
 - First theorem-deepening commit: `da6e6c5`
+- First pilot closure commit: `e825281`
 - Completed bounded slice: `WS-10-T02_GR01_BOUNDARY_TERM_REGULARITY`
 - Completed theorem result: GR01 local boundary-term regularity lemma contract pinned without reopening tracker/state/roadmap/package-control churn.
 - Completed theorem verification result: `3 passed in 1.94s` via `formal/python/tests/test_gr01_function_space_completion_criteria_gate.py`, `formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py`, `formal/python/tests/test_gr01_publication_grade_discharge_package_gate.py`.
@@ -55,6 +56,13 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Next bounded target: `DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0`
 - Next target path: `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
 - Next bounded verification path: `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py` plus pre-slice control-surface parity checks.
+
+## WS-10-T05 Activation (2026-03-18)
+- Activation status: `ACTIVE_BOUNDED_v0`
+- Activated slice: `WS-10-T05_GR_QM_SEAM_DISCHARGE`
+- Activated target: `DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0`
+- Activation scope: control-surface activation only; no GR-QM scientific derivation edits mixed into this commit.
+- Activation verification result: `3 passed in 1.42s` via `formal/python/tests/test_state_theory_dag.py` and `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`.
 
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
@@ -104,7 +112,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-10-T05 | Theory Restart Pilot | Open next bounded theory slice: GR-QM seam discharge | ACTIVE | user | WS-10-T04 | 2026-03-18: WS-10 first pilot checkpoint recorded; next bounded target pinned to `DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0` without starting seam work in this commit | Next slice activation note exists and the bounded GR-QM target, theorem pointer family, and gate path are explicit |
+| WS-10-T05 | Theory Restart Pilot | Activate bounded GR-QM seam discharge slice | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM seam discharge slice activated in tracker/state/roadmap/WS-10 plan; control-surface parity run `3 passed in 1.42s` via `test_state_theory_dag.py` and `test_pillar_matrix_roadmap_coverage_gate.py` | GR-QM slice is explicitly active in the control surfaces and bounded activation evidence is recorded |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |

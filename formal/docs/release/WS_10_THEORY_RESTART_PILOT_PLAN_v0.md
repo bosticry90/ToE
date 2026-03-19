@@ -33,7 +33,7 @@ Out of scope during WS-10:
 	- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CYCLE01_v0.md`
 	- `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`
 	- `formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md`
-- Evidence goal: bounded GR-QM seam discharge target is explicitly selected and prepared as the next post-pilot scientific slice without mixing seam work into the pilot-closure commit.
+- Evidence goal: bounded GR-QM seam discharge target is now explicitly activated as the next post-pilot scientific slice without mixing seam work into this activation commit.
 
 ## Verification Ladder
 1. `./py.ps1 -m pytest -q formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
@@ -42,7 +42,7 @@ Out of scope during WS-10:
 
 Execution contract:
 - Run tracker/state/roadmap parity checks before theorem-surface edits.
-- Keep the first slice local to GR01 and avoid multi-pillar coupling.
+- Keep this activation commit control-surface only and avoid mixing in GR-QM theorem edits.
 - Do not expand verification beyond the local gate ladder unless a touched surface forces it.
 - Record exact command text and results in the evidence log below.
 
@@ -67,6 +67,7 @@ Execution contract:
 - 2026-03-18 WS-10-T02/T03: bounded GR01 theorem-deepening slice committed in `da6e6c5` and validated via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr01_function_space_completion_criteria_gate.py formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py formal/python/tests/test_gr01_publication_grade_discharge_package_gate.py` -> `3 passed in 1.94s`.
 - 2026-03-18 WS-10-T04: first pilot checkpoint closed with bounded evidence; activation commit `a055921` plus theorem-deepening commit `da6e6c5` now define the first restart phase.
 - 2026-03-18 WS-10-T05 selection: next bounded target pinned to `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md` with local gate `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py` reserved for the next scientific slice.
+- 2026-03-18 WS-10-T05 activation: control surfaces promoted the GR-QM seam discharge slice from selected to active and recorded parity validation via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py` -> `3 passed in 1.42s`.
 
 ## Exit Criteria
 - WS-10-T01 activation note is mirrored in the canonical control surfaces and verified.
@@ -74,3 +75,4 @@ Execution contract:
 - Local GR01 verification ladder passes and is recorded.
 - The first restart slice closes with explicit evidence and no governance-family regrowth.
 - The next bounded theory slice is explicitly selected before any additional theorem or seam work begins.
+- The active next slice is explicitly activated in the control surfaces before any GR-QM scientific edits begin.

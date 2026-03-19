@@ -47,13 +47,15 @@ Immediate bounded theory restart slice (2026-03-18):
 - `THEORY_RESTART_SLICE_v0: WS-10-T05_GR_QM_SEAM_DISCHARGE`
 - `THEORY_RESTART_ACTIVE_PILLAR_v0: SEAM-GR-QM`
 - `THEORY_RESTART_ACTIVE_TARGET_v0: DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0`
-- `THEORY_RESTART_ACTIVE_STATUS_v0: NEXT_BOUNDED_SLICE_SELECTED_v0`
+- `THEORY_RESTART_ACTIVE_STATUS_v0: ACTIVE_BOUNDED_v0`
 - `THEORY_RESTART_ACTIVE_VERIFICATION_v0: GR_QM_CYCLE02_DISCHARGE_GATE_v0`
 - `THEORY_RESTART_ACTIVATION_VALIDATION_v0: 5_PASSED_IN_2_54S`
 - `THEORY_RESTART_PILOT_PHASE1_STATUS_v0: CLOSED_WITH_BOUNDED_EVIDENCE`
 - `THEORY_RESTART_PILOT_PHASE1_COMMITS_v0: a055921_PLUS_da6e6c5`
 - `THEORY_RESTART_PILOT_PHASE1_VALIDATION_v0: ACTIVATION_5_PASSED_PLUS_GR01_3_PASSED`
-- Restart scope note: the first bounded GR01 theorem-deepening slice is closed; the next explicitly selected bounded follow-up is GR-QM seam discharge.
+- `THEORY_RESTART_T05_ACTIVATION_v0: CONTROL_SURFACES_ACTIVE_ONLY`
+- `THEORY_RESTART_T05_ACTIVATION_VALIDATION_v0: 3_PASSED_IN_1_42S`
+- Restart scope note: the first bounded GR01 theorem-deepening slice is closed and the GR-QM seam discharge tranche is now the active bounded follow-up; no GR-QM scientific edits are included in this activation step.
 
 Status semantics:
 - `ACTIVE`: currently authorized pillar execution lane.
