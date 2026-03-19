@@ -64,6 +64,15 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Activation scope: control-surface activation only; no GR-QM scientific derivation edits mixed into this commit.
 - Activation verification result: `3 passed in 1.42s` via `formal/python/tests/test_state_theory_dag.py` and `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`.
 
+## WS-10-T05 Scientific Progress Checkpoint (2026-03-18)
+- Progress status: `THREE_CYCLE02_LOCAL_INCREMENTS_RECORDED`
+- GR-QM scientific commit 1: `6adf4a3`
+- GR-QM scientific commit 2: `f587707`
+- GR-QM scientific commit 3: `4b74614`
+- Local theorem chain: cycle02 bridge increment -> compatibility-persistence corollary -> retention transport corollary.
+- Local validation chain: `1 passed in 0.73s`, `1 passed in 0.75s`, `1 passed in 0.75s` via `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`.
+- Explicit decision: keep GR-QM validation cycle02-local for now; defer cycle01/cycle03 widening unless shared assumptions, theorem anchors, or cross-lane coupling change.
+
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
 | --- | --- | --- | --- | --- |
@@ -112,7 +121,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-10-T05 | Theory Restart Pilot | Activate bounded GR-QM seam discharge slice | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM seam discharge slice activated in tracker/state/roadmap/WS-10 plan; control-surface parity run `3 passed in 1.42s` via `test_state_theory_dag.py` and `test_pillar_matrix_roadmap_coverage_gate.py` | GR-QM slice is explicitly active in the control surfaces and bounded activation evidence is recorded |
+| WS-10-T05 | Theory Restart Pilot | Advance bounded GR-QM cycle02-local discharge lane | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; local gate stayed green (`1 passed in 0.73s`, `1 passed in 0.75s`, `1 passed in 0.75s`) with widening explicitly deferred | Three bounded GR-QM cycle02-local increments are recorded with local validation evidence and an explicit next-scope decision |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |

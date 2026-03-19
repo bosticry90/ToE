@@ -68,6 +68,10 @@ Execution contract:
 - 2026-03-18 WS-10-T04: first pilot checkpoint closed with bounded evidence; activation commit `a055921` plus theorem-deepening commit `da6e6c5` now define the first restart phase.
 - 2026-03-18 WS-10-T05 selection: next bounded target pinned to `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md` with local gate `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py` reserved for the next scientific slice.
 - 2026-03-18 WS-10-T05 activation: control surfaces promoted the GR-QM seam discharge slice from selected to active and recorded parity validation via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py` -> `3 passed in 1.42s`.
+- 2026-03-18 WS-10-T05 scientific increment 1: commit `6adf4a3` added the bounded cycle02 bridge increment and local validation via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py` -> `1 passed in 0.73s`.
+- 2026-03-18 WS-10-T05 scientific increment 2: commit `f587707` added the cycle02 compatibility-persistence corollary and local validation via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py` -> `1 passed in 0.75s`.
+- 2026-03-18 WS-10-T05 scientific increment 3: commit `4b74614` added the cycle02 retention transport corollary and local validation via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py` -> `1 passed in 0.75s`.
+- 2026-03-18 WS-10-T05 progress checkpoint: three bounded cycle02-local increments are now recorded and widening to `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py` plus `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py` remains deferred unless shared-coupling changes.
 
 ## Exit Criteria
 - WS-10-T01 activation note is mirrored in the canonical control surfaces and verified.
@@ -76,3 +80,4 @@ Execution contract:
 - The first restart slice closes with explicit evidence and no governance-family regrowth.
 - The next bounded theory slice is explicitly selected before any additional theorem or seam work begins.
 - The active next slice is explicitly activated in the control surfaces before any GR-QM scientific edits begin.
+- WS-10-T05 progress checkpoints must record bounded GR-QM local increments, local validation evidence, and the current decision on whether validation widening remains deferred.
