@@ -71,6 +71,15 @@ Cycle02 bounded compatibility persistence corollary
 - `GR_QM_CLASS_B_PROMOTION_CYCLE02_COMPATIBILITY_PERSISTENCE_CONCLUSION_v0: TOE_CK_CLASS_COMPATIBILITY_v0_RETAINED`
 - Bounded interpretation: the cycle02 discharge surface narrows to the retained compatibility tag without widening the tranche beyond Class `B`.
 
+Cycle02 bounded retention transport corollary
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_RETENTION_TRANSPORT_STATUS_v0: EXPLICIT_BOUNDED_v0_NONCLAIM`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_RETENTION_TRANSPORT_NAME_v0: COMPATIBILITY_AND_NO_SHORTCUT_TAGS_TRANSPORT_TOGETHER`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_RETENTION_TRANSPORT_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_cycle02_retention_transport_contract`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_RETENTION_TRANSPORT_DEPENDS_ON_v0: gr_qm_cycle02_compatibility_tag_persistence`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_RETENTION_TRANSPORT_HYPOTHESES_v0: CYCLE02_DISCHARGE_SURFACE_ESTABLISHED`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_RETENTION_TRANSPORT_CONCLUSION_v0: COMPATIBILITY_AND_NO_SHORTCUT_TAGS_RETAINED`
+- Bounded interpretation: the cycle02 discharge contract transports the retained compatibility tag and the pinned no-shortcut tag as one bounded witness package without widening into class-flip semantics.
+
 Exit posture (cycle02)
 - `GR_QM_CLASS_B_PROMOTION_CLASS_v0: B_RETAINED_v0`
 - Any `B -> A` move remains gated by the full promotion completion rule in `TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`.

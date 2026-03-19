@@ -67,6 +67,16 @@ theorem gr_qm_cycle02_compatibility_tag_persistence
     gr_qm_cycle02_class_b_retention_bridge witness h_discharge
   exact h_retained.right
 
+/-- Cycle02 transport corollary: the retained compatibility tag and no-shortcut tag transport together. -/
+theorem gr_qm_cycle02_retention_transport_contract
+    (witness : GRQMSeamWitnessPackage)
+    (h_discharge : cycle02DischargeSurface witness) :
+    witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0" /\
+    witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" := by
+  constructor
+  · exact gr_qm_cycle02_compatibility_tag_persistence witness h_discharge
+  · exact h_discharge.right
+
 /-- Cycle03 bounded class-flip authorization surface. -/
 def cycle03ClassFlipAuthorizationSurface
     (witness : GRQMSeamWitnessPackage) : Prop :=

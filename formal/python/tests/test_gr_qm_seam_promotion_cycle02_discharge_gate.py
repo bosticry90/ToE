@@ -28,6 +28,7 @@ THEOREM_REL = "formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean"
 DISCHARGE_THEOREM_SYMBOL = "gr_qm_seam_cycle02_discharge_proof"
 BRIDGE_THEOREM_SYMBOL = "gr_qm_cycle02_class_b_retention_bridge"
 PERSISTENCE_THEOREM_SYMBOL = "gr_qm_cycle02_compatibility_tag_persistence"
+TRANSPORT_THEOREM_SYMBOL = "gr_qm_cycle02_retention_transport_contract"
 NO_SHORTCUT_TOKEN = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0"
 
 
@@ -77,6 +78,19 @@ def test_gr_qm_cycle02_discharge_surface_and_parity() -> None:
         "GR_QM_CLASS_B_PROMOTION_CYCLE02_COMPATIBILITY_PERSISTENCE_CONCLUSION_v0: "
         "TOE_CK_CLASS_COMPATIBILITY_v0_RETAINED"
     ) in cycle02_target_text
+    assert "GR_QM_CLASS_B_PROMOTION_CYCLE02_RETENTION_TRANSPORT_STATUS_v0: EXPLICIT_BOUNDED_v0_NONCLAIM" in cycle02_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE02_RETENTION_TRANSPORT_THEOREM_v0: "
+        f"{THEOREM_REL}#{TRANSPORT_THEOREM_SYMBOL}"
+    ) in cycle02_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE02_RETENTION_TRANSPORT_DEPENDS_ON_v0: "
+        f"{PERSISTENCE_THEOREM_SYMBOL}"
+    ) in cycle02_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE02_RETENTION_TRANSPORT_CONCLUSION_v0: "
+        "COMPATIBILITY_AND_NO_SHORTCUT_TAGS_RETAINED"
+    ) in cycle02_target_text
     assert "GR_QM_CLASS_B_PROMOTION_CLASS_v0: B_RETAINED_v0" in cycle02_target_text
 
     assert CYCLE02_TARGET_REL in inventory_text
@@ -92,4 +106,5 @@ def test_gr_qm_cycle02_discharge_surface_and_parity() -> None:
     assert DISCHARGE_THEOREM_SYMBOL in theorem_text
     assert BRIDGE_THEOREM_SYMBOL in theorem_text
     assert PERSISTENCE_THEOREM_SYMBOL in theorem_text
+    assert TRANSPORT_THEOREM_SYMBOL in theorem_text
     assert NO_SHORTCUT_TOKEN in theorem_text
