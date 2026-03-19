@@ -108,6 +108,17 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Stop condition: halt after the bounded larger tranche lands or at the predeclared same-lane exception boundary; do not permit opportunistic expansion beyond the tranche scope.
 - Activation verification result: `3 passed in 1.41s` via `formal/python/tests/test_state_theory_dag.py` and `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`.
 
+## WS-10-T05 First Larger Scientific Increment Checkpoint (2026-03-19)
+- Checkpoint status: `FIRST_LARGER_GR_QM_INCREMENT_RECORDED`
+- Larger-tranche activation commit: `ad6ca2b`
+- First larger scientific commit: `1f37ccc`
+- Scientific increment result: cycle02 now exports a bounded handoff-readiness contract and cycle03 now retains a bounded class-flip-ready package theorem, matched by new anchors in `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean`.
+- Standing GR-QM validation ladder: `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
+- Scientific increment validation result: `3 passed in 2.00s`
+- Checkpoint control-surface parity result: `3 passed in 1.38s` via `formal/python/tests/test_state_theory_dag.py` and `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
+- Stop-condition audit: no tracker/state/roadmap edits, no inventory/registry edits, and no widening beyond the standing three-gate GR-QM ladder were required.
+- Next-slice boundary: any further same-lane GR-QM increment must remain inside the same two target docs plus `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean` unless the standing ladder itself forces an explicit widening decision.
+
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
 | --- | --- | --- | --- | --- |
@@ -156,7 +167,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-10-T05 | Theory Restart Pilot | Open the larger GR-QM discharge tranche as the next bounded slice | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; widened GR-QM ladder passed cleanly (`3 passed in 1.95s`); broader cross-cycle authorization chain recorded across commits `bf9a5fe` and `24422a7` with standing three-gate validation results `3 passed in 2.10s` and `3 passed in 2.00s`; 2026-03-19: larger tranche activation anchored on `0d023e1` and restricted to the two target docs plus shared `GR_QM_SeamPromotion.lean` theorem surface; control-surface parity validation passed (`3 passed in 1.41s`) | The larger tranche is explicitly active with fixed touched files, fixed three-gate validation ladder, and a hard stop at tranche completion or the predeclared same-lane exception boundary |
+| WS-10-T05 | Theory Restart Pilot | Open the larger GR-QM discharge tranche as the next bounded slice | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; widened GR-QM ladder passed cleanly (`3 passed in 1.95s`); broader cross-cycle authorization chain recorded across commits `bf9a5fe` and `24422a7` with standing three-gate validation results `3 passed in 2.10s` and `3 passed in 2.00s`; 2026-03-19: larger tranche activation anchored on `0d023e1` and restricted to the two target docs plus shared `GR_QM_SeamPromotion.lean` theorem surface; control-surface parity validation passed (`3 passed in 1.41s`); first larger scientific increment committed in `1f37ccc` under the same three-file scope and validated on the standing ladder (`3 passed in 2.00s`) with stop conditions respected; first larger scientific checkpoint parity rerun passed (`3 passed in 1.38s`) | The larger tranche is explicitly active, the first larger scientific increment is checkpointed under the same fixed three-file scope and three-gate ladder, and any next same-lane increment must remain inside that boundary unless the ladder forces explicit widening |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
