@@ -35,8 +35,13 @@ Interpretation rule:
 - class `A` or `CLASS_A_PROMOTED_*` may imply governance completion for a seam package.
 - class `A` does not imply physics completion.
 - class `B` may still be governance-tracked, but is not governance-complete unless an explicit completion rule says otherwise.
+- physics completion requires an explicit blocker-discharge package theorem plus cross-surface parity in seam registry and seam inventory.
+- when physics completion is asserted, status read must be `GOVERNANCE_COMPLETE_AND_PHYSICS_COMPLETE` and blocker residue must be explicitly `NONE_BLOCKER_REMAINING_IN_SCOPE`.
 
 Required tokens:
 - `TOE_SEAM_STATUS_SEMANTICS_STATUS_v0: CANONICAL_PINNED`
 - `SEAM_STATUS_CLASS_A_NOT_PHYSICS_COMPLETE_v0: TRUE`
 - `SEAM_STATUS_GOVERNANCE_COMPLETE_REQUIRES_CROSS_SURFACE_PARITY_v0: TRUE`
+- `SEAM_STATUS_PHYSICS_COMPLETE_REQUIRES_EXPLICIT_BLOCKER_DISCHARGE_v0: TRUE`
+- `SEAM_STATUS_PHYSICS_COMPLETE_STATUS_READ_TOKEN_v0: GOVERNANCE_COMPLETE_AND_PHYSICS_COMPLETE`
+- `SEAM_STATUS_PHYSICS_COMPLETE_BLOCKER_TOKEN_v0: NONE_BLOCKER_REMAINING_IN_SCOPE`
