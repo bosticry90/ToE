@@ -71,7 +71,13 @@ Canonical pointers:
 Required discharge objects:
 - explicit weak-field ansatz object,
 - explicit perturbation-order bookkeeping,
+- explicit local boundary-term regularity lemma for the discrete summation-by-parts step,
 - explicit remainder control statement.
+
+Boundary-term regularity checkpoint:
+- `GR01_BOUNDARY_TERM_LOCAL_LEMMA_NAME_v0: PERIODIC_DISCRETE_SUMMATION_BY_PARTS_BOUNDARY_CANCELLATION`
+- role: freeze the bounded discrete hypothesis/conclusion pair used when the weak-field derivation cancels endpoint terms under `ASM-GR01-BND-01`.
+- non-claim boundary: the lemma is local to the finite/discrete theorem surface and does not advance continuum or Sobolev regularity claims.
 
 Dependencies:
 - theorem surface: `formal/docs/paper/TOE_GR01_THEOREM_SURFACE_v0.md`

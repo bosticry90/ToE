@@ -61,14 +61,17 @@ Frozen assumptions used here:
 - theorem-facing domain in v0 is a finite discrete lattice scalar-field surface (`ScalarField1D` / `ScalarField3D`).
 - boundary posture is explicit and frozen by `ASM-GR01-BND-01` (periodic/discrete boundary conventions).
 - regularity posture in v0 is discrete bounded-field regularity on finite-domain points; no continuum Sobolev-class claim is made.
+- local boundary-term regularity lemma `PERIODIC_DISCRETE_SUMMATION_BY_PARTS_BOUNDARY_CANCELLATION` is pinned on the same finite/discrete carrier and is used only to justify null boundary pairing plus bounded interior first-difference retention.
 - continuum operator notation is reporting shorthand layered over the discrete theorem surface.
 
 ## Integration-By-Parts And Boundary-Term Handling (explicit v0 narrative)
 
 1. Start from first variation on the declared variational route under the default quotient path.
 2. Apply the discrete summation-by-parts analogue (integration-by-parts counterpart) used by the weak-field bridge narrative.
-3. Boundary-term handling is fixed by periodic/discrete boundary conventions (`ASM-GR01-BND-01`), so boundary contributions are explicitly scoped as null under that contract.
-4. This v0 surface records the integration-by-parts and boundary-term contract explicitly while full derivation-grade discharge remains blocker-facing.
+3. Invoke the local boundary-term regularity lemma `PERIODIC_DISCRETE_SUMMATION_BY_PARTS_BOUNDARY_CANCELLATION` on the finite discrete lattice carrier with bounded nearest-neighbor differences.
+4. Boundary-term handling is fixed by periodic/discrete boundary conventions (`ASM-GR01-BND-01`), so the endpoint pairing cancels exactly under that contract.
+5. The remaining interior first-difference pairing stays inside the already-declared bounded discrete regularity class, which is sufficient for the current theorem-facing weak-field derivation.
+6. This v0 surface records the integration-by-parts and boundary-term contract explicitly while full derivation-grade discharge remains blocker-facing.
 
 ## Constants Normalization And Canonical Form Mapping (scoped)
 
