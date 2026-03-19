@@ -88,6 +88,15 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Broader validation result: `3 passed in 2.10s`
 - Next bounded decision: either deepen the cross-cycle bridge chain once more or pause and decide whether GR-QM is ready for a larger discharge tranche.
 
+## WS-10-T05 Tranche Decision Checkpoint (2026-03-18)
+- Checkpoint status: `READY_FOR_LARGER_GR_QM_DISCHARGE_TRANCHE_DECISION`
+- Broader GR-QM scientific commit 1: `bf9a5fe`
+- Broader GR-QM scientific commit 2: `24422a7`
+- Broader theorem chain: cycle02 retention transport now feeds a bounded cycle03 authorization bridge plus an authorization-retention bridge, so the lane has moved beyond cycle02-local refinement into a real multi-cycle seam chain.
+- Standing GR-QM validation baseline: `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
+- Latest broader validation result: `3 passed in 2.00s`
+- Deliberate next-slice posture: open a larger GR-QM discharge tranche by explicit control-surface decision; permit one more same-lane theorem only if it is equally clean and remains confined to the same three files and standing three-gate ladder.
+
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
 | --- | --- | --- | --- | --- |
@@ -136,7 +145,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-10-T05 | Theory Restart Pilot | Advance bounded GR-QM seam lane into multi-cycle authorization structure | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; widened GR-QM ladder passed cleanly (`3 passed in 1.95s`); broader cross-cycle authorization bridge committed in `bf9a5fe` and validated on the standing three-gate ladder (`3 passed in 2.10s`) | GR-QM multi-cycle authorization work is explicitly recorded, the three-gate ladder is the standing local baseline, and the next bounded scientific decision is clear |
+| WS-10-T05 | Theory Restart Pilot | Advance bounded GR-QM seam lane to a tranche decision boundary | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; widened GR-QM ladder passed cleanly (`3 passed in 1.95s`); broader cross-cycle authorization chain recorded across commits `bf9a5fe` and `24422a7` with standing three-gate validation results `3 passed in 2.10s` and `3 passed in 2.00s` | The broader GR-QM chain is explicitly recorded, the three-gate ladder is the standing local baseline, and the next slice is chosen deliberately as either a larger discharge tranche or one last equally clean same-lane theorem |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
