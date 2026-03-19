@@ -154,6 +154,18 @@ def cycle03SharedDynamicsTransportSemanticsSurface
   cycle03RegimeClosureSemanticsSurface witness /\
     witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0"
 
+/-- Cycle03 blocker-discharge package surface: shared-dynamics transport and regime-closure components are explicit together. -/
+def cycle03PhysicsBlockerDischargeSurface
+    (witness : GRQMSeamWitnessPackage) : Prop :=
+  cycle03SharedDynamicsTransportSemanticsSurface witness /\
+    witness.grAssumptionId = "GR_SHARED_DYNAMICS_REGIME_CLOSURE_v0" /\
+    witness.qmAssumptionId = "QM_SHARED_DYNAMICS_REGIME_CLOSURE_v0"
+
+/-- Cycle03 explicit blocker target: this names the seam-registry blocker package to be discharged in-phase. -/
+def cycle03SharedDynamicsTransportAndRegimeClosureNotDischargedTarget
+    (witness : GRQMSeamWitnessPackage) : Prop :=
+  cycle03PhysicsBlockerDischargeSurface witness
+
 /-- Cycle03 ready-package theorem for bounded class-flip handoff assembly. -/
 theorem gr_qm_cycle03_class_flip_ready_package
     (witness : GRQMSeamWitnessPackage)
@@ -215,6 +227,32 @@ theorem gr_qm_cycle03_shared_dynamics_transport_semantics_package
       witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" :=
     h_regime_closure.left.left.right.right.right
   exact And.intro h_regime_closure h_no_shortcut
+
+/-- Cycle03 blocker-discharge package theorem: shared-dynamics transport and regime-closure components are assembled in one bounded witness form. -/
+theorem gr_qm_cycle03_transport_and_regime_closure_blocker_discharge_package
+    (witness : GRQMSeamWitnessPackage)
+    (h_discharge : cycle02DischargeSurface witness)
+    (h_class_token : witness.classToken = "TOE_CK_CLASS_THEOREM_LINKED_v0")
+    (h_gr_regime : witness.grAssumptionId = "GR_SHARED_DYNAMICS_REGIME_CLOSURE_v0")
+    (h_qm_regime : witness.qmAssumptionId = "QM_SHARED_DYNAMICS_REGIME_CLOSURE_v0") :
+    cycle03PhysicsBlockerDischargeSurface witness := by
+  have h_regime_closure : cycle03RegimeClosureSemanticsSurface witness :=
+    gr_qm_cycle03_regime_closure_semantics_package witness h_discharge h_class_token h_gr_regime h_qm_regime
+  have h_transport : cycle03SharedDynamicsTransportSemanticsSurface witness :=
+    gr_qm_cycle03_shared_dynamics_transport_semantics_package witness h_regime_closure
+  exact And.intro h_transport (And.intro h_gr_regime h_qm_regime)
+
+/-- Cycle03 explicit blocker discharge theorem: the named NOT_DISCHARGED blocker target is discharged by one package theorem. -/
+theorem gr_qm_cycle03_shared_dynamics_transport_and_regime_closure_not_discharged_blocker_discharged
+    (witness : GRQMSeamWitnessPackage)
+    (h_discharge : cycle02DischargeSurface witness)
+    (h_class_token : witness.classToken = "TOE_CK_CLASS_THEOREM_LINKED_v0")
+    (h_gr_regime : witness.grAssumptionId = "GR_SHARED_DYNAMICS_REGIME_CLOSURE_v0")
+    (h_qm_regime : witness.qmAssumptionId = "QM_SHARED_DYNAMICS_REGIME_CLOSURE_v0") :
+    cycle03SharedDynamicsTransportAndRegimeClosureNotDischargedTarget witness := by
+  exact
+    gr_qm_cycle03_transport_and_regime_closure_blocker_discharge_package
+      witness h_discharge h_class_token h_gr_regime h_qm_regime
 
 /-- Cycle03 class-flip authorization theorem for GR-QM seam promotion. -/
 theorem gr_qm_seam_cycle03_class_flip_authorization

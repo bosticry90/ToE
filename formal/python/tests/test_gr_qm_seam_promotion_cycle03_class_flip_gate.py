@@ -31,6 +31,8 @@ AUTH_RETENTION_SYMBOL = "gr_qm_cycle03_authorization_retains_transport"
 COMPLETION_PARITY_SYMBOL = "gr_qm_cycle03_completion_parity_package"
 REGIME_CLOSURE_SYMBOL = "gr_qm_cycle03_regime_closure_semantics_package"
 SHARED_DYNAMICS_TRANSPORT_SYMBOL = "gr_qm_cycle03_shared_dynamics_transport_semantics_package"
+BLOCKER_DISCHARGE_PACKAGE_SYMBOL = "gr_qm_cycle03_transport_and_regime_closure_blocker_discharge_package"
+EXPLICIT_BLOCKER_DISCHARGE_SYMBOL = "gr_qm_cycle03_shared_dynamics_transport_and_regime_closure_not_discharged_blocker_discharged"
 
 
 def _read(path: Path) -> str:
@@ -121,6 +123,31 @@ def test_gr_qm_cycle03_class_flip_surface_and_parity() -> None:
         "GR_QM_CLASS_B_PROMOTION_CYCLE03_SHARED_DYNAMICS_TRANSPORT_CONCLUSION_v0: "
         "CYCLE03_REGIME_CLOSURE_PACKAGE_PLUS_NO_SHORTCUT_TRANSPORT_TAG_EXPLICIT"
     ) in cycle03_target_text
+    assert "GR_QM_CLASS_B_PROMOTION_CYCLE03_BLOCKER_DISCHARGE_PACKAGE_STATUS_v0: EXPLICIT_WIDER_TRANCHE_v0_NONCLAIM" in cycle03_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE03_BLOCKER_DISCHARGE_TARGET_TOKEN_v0: "
+        "SHARED_DYNAMICS_TRANSPORT_AND_REGIME_CLOSURE_NOT_DISCHARGED"
+    ) in cycle03_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE03_BLOCKER_DISCHARGE_RESOLUTION_v0: "
+        "DISCHARGED_BY_SINGLE_BLOCKER_PACKAGE_THEOREM"
+    ) in cycle03_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE03_BLOCKER_DISCHARGE_PACKAGE_THEOREM_v0: "
+        f"{THEOREM_REL}#{BLOCKER_DISCHARGE_PACKAGE_SYMBOL}"
+    ) in cycle03_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE03_BLOCKER_DISCHARGE_EXPLICIT_THEOREM_v0: "
+        f"{THEOREM_REL}#{EXPLICIT_BLOCKER_DISCHARGE_SYMBOL}"
+    ) in cycle03_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE03_BLOCKER_DISCHARGE_PACKAGE_DEPENDS_ON_v0: "
+        f"{SHARED_DYNAMICS_TRANSPORT_SYMBOL}"
+    ) in cycle03_target_text
+    assert (
+        "GR_QM_CLASS_B_PROMOTION_CYCLE03_BLOCKER_DISCHARGE_PACKAGE_CONCLUSION_v0: "
+        "CYCLE03_SHARED_DYNAMICS_TRANSPORT_AND_REGIME_CLOSURE_COMPONENTS_EXPLICIT_IN_ONE_PACKAGE"
+    ) in cycle03_target_text
 
     assert CYCLE03_TARGET_REL in inventory_text
     assert CYCLE03_GATE_REL in inventory_text
@@ -144,3 +171,5 @@ def test_gr_qm_cycle03_class_flip_surface_and_parity() -> None:
     assert COMPLETION_PARITY_SYMBOL in theorem_text
     assert REGIME_CLOSURE_SYMBOL in theorem_text
     assert SHARED_DYNAMICS_TRANSPORT_SYMBOL in theorem_text
+    assert BLOCKER_DISCHARGE_PACKAGE_SYMBOL in theorem_text
+    assert EXPLICIT_BLOCKER_DISCHARGE_SYMBOL in theorem_text
