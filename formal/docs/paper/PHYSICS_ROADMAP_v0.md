@@ -42,6 +42,16 @@ Architecture consolidation governance checkpoint (2026-03-18):
 - `CONSOLIDATION_EXIT_GATE_CE06_STATUS_v0: DONE`
 - `CONSOLIDATION_EXIT_GATE_STATUS_v0: SATISFIED`
 
+Immediate bounded theory restart slice (2026-03-18):
+- Restart slice authority pointer: `formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md`.
+- `THEORY_RESTART_SLICE_v0: WS-10-T02_GR01_BOUNDARY_TERM_REGULARITY`
+- `THEORY_RESTART_ACTIVE_PILLAR_v0: PILLAR-GR`
+- `THEORY_RESTART_ACTIVE_TARGET_v0: TOE_GR01_FUNCTION_SPACE_REGULARITY_SURFACE_v0`
+- `THEORY_RESTART_ACTIVE_STATUS_v0: ACTIVE_BOUNDED_v0`
+- `THEORY_RESTART_ACTIVE_VERIFICATION_v0: GR01_LOCAL_GATE_LADDER_v0`
+- `THEORY_RESTART_ACTIVATION_VALIDATION_v0: 5_PASSED_IN_2_54S`
+- Restart scope note: one bounded GR01 theorem-deepening slice only before any seam-physics or empirical broadening follow-up.
+
 Status semantics:
 - `ACTIVE`: currently authorized pillar execution lane.
 - `LOCKED`: target exists but prerequisites are not yet closed.

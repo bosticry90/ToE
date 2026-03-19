@@ -1,0 +1,69 @@
+# WS_10_THEORY_RESTART_PILOT_PLAN_v0
+
+## Workstream
+- ID: WS-10
+- Name: Theory Restart Pilot
+- Status: ACTIVE
+- Priority: PRIMARY
+
+## Objective
+Resume post-consolidation theory work with one bounded theorem-facing slice that proves restart can proceed under the CE-06 anti-regrowth guardrails without reopening broad governance churn.
+
+## Scope
+In scope:
+- pin one bounded restart slice in tracker, state, and roadmap surfaces.
+- deepen one GR01 theorem-facing surface with a single nontrivial boundary-term regularity lemma.
+- verify the slice through the smallest local gate ladder that matches the touched surfaces.
+- record bounded evidence and close the restart activation task explicitly.
+
+Out of scope during WS-10:
+- broad seam-physics promotion work.
+- new governance-family creation.
+- cloned gate expansion.
+- authority-residency redistribution without explicit decision.
+- broad README or architecture cleanup.
+
+## Restart Slice Target
+- Active slice ID: `WS-10-T02_GR01_BOUNDARY_TERM_REGULARITY`
+- Active pillar: `PILLAR-GR`
+- Primary target surface: `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_REGULARITY_SURFACE_v0.md`
+- Supporting theorem surfaces:
+	- `formal/docs/paper/TOE_GR01_ANALYTIC_DISCHARGE_v0.md`
+	- `formal/docs/paper/TOE_GR01_CANONICAL_EQUIVALENCE_THEOREM_v0.md`
+	- `formal/docs/paper/TOE_GR01_WEAK_FIELD_EXPANSION_NOTE_v0.md`
+- Evidence goal: local boundary-term regularity lemma deepens GR01 theorem content without changing pillar-closure semantics.
+
+## Verification Ladder
+1. `./py.ps1 -m pytest -q formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
+2. `./py.ps1 -m pytest -q formal/python/tests/test_gr01_function_space_completion_criteria_gate.py formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py`
+3. Optional only if theorem-surface completeness tables change: `./py.ps1 -m pytest -q formal/python/tests/test_gr01_publication_grade_discharge_package_gate.py`
+
+Execution contract:
+- Run tracker/state/roadmap parity checks before theorem-surface edits.
+- Keep the first slice local to GR01 and avoid multi-pillar coupling.
+- Do not expand verification beyond the local gate ladder unless a touched surface forces it.
+- Record exact command text and results in the evidence log below.
+
+## Task Plan
+| ID | Task | Status | Blocked By | Deliverable | Evidence Required |
+| --- | --- | --- | --- | --- | --- |
+| WS-10-T01 | Open bounded restart slice and pin first theorem target | DONE | none | Tracker/state/roadmap activation notes plus bounded restart plan artifact | Bounded diff evidence plus targeted parity verification |
+| WS-10-T02 | Deepen GR01 boundary-term regularity lemma | ACTIVE | WS-10-T01 | Local theorem-surface deepening in GR01 regularity and support notes | Theorem-surface diff plus local GR01 gate ladder green |
+| WS-10-T03 | Run bounded GR01 verification ladder | TODO | WS-10-T02 | Local gate results recorded in artifact | Exact command outputs and exit status |
+| WS-10-T04 | Record WS-10 first-slice checkpoint | TODO | WS-10-T03 | Tracker and WS-10 evidence closure note | Commit hash, touched files, and result summary |
+
+## Guardrails
+- No unnecessary governance-family expansion.
+- No cloned gate proliferation where shared or registry patterns already exist.
+- No duplicated authority residency without explicit decision.
+- Bounded theory slices only.
+
+## Evidence Log
+- 2026-03-18 WS-10 kickoff: activated bounded theory restart pilot with first target `TOE_GR01_FUNCTION_SPACE_REGULARITY_SURFACE_v0` and supporting authority pointer set `formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md`.
+- 2026-03-18 WS-10-T01: bounded activation validation passed via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py formal/python/tests/test_gr01_function_space_completion_criteria_gate.py formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py` -> `5 passed in 2.54s`.
+
+## Exit Criteria
+- WS-10-T01 activation note is mirrored in the canonical control surfaces and verified.
+- WS-10-T02 deepens GR01 theorem content without broadening scope beyond the bounded slice.
+- Local GR01 verification ladder passes and is recorded.
+- The first restart slice closes with explicit evidence and no governance-family regrowth.

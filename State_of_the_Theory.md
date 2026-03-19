@@ -30,6 +30,19 @@ Architecture consolidation anti-regrowth closure checkpoint (2026-03-18):
 - `CONSOLIDATION_EXIT_GATE_CE06_STATUS_v0: DONE`
 - `CONSOLIDATION_EXIT_GATE_STATUS_v0: SATISFIED`
 
+Theory restart pilot activation (2026-03-18):
+- Theory restart slice authority pointer: `formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md`.
+- `THEORY_RESTART_PRIMARY_WORKSTREAM_v0: WS-10`
+- `THEORY_RESTART_ACTIVE_TASK_v0: WS-10-T02`
+- `THEORY_RESTART_PRIMARY_SLICE_v0: WS-10-T02_GR01_BOUNDARY_TERM_REGULARITY`
+- `THEORY_RESTART_ACTIVE_PILLAR_v0: PILLAR-GR`
+- `THEORY_RESTART_PRIMARY_TARGET_v0: TOE_GR01_FUNCTION_SPACE_REGULARITY_SURFACE_v0`
+- `THEORY_RESTART_PRIMARY_STATUS_v0: ACTIVE_BOUNDED_v0`
+- `THEORY_RESTART_PRIMARY_EVIDENCE_GOAL_v0: LOCAL_BOUNDARY_TERM_REGULARITY_LEMMA`
+- `THEORY_RESTART_PRIMARY_VERIFICATION_v0: GR01_LOCAL_GATE_LADDER_v0`
+- `THEORY_RESTART_ACTIVATION_VALIDATION_v0: 5_PASSED_IN_2_54S`
+- Restart guardrail note: bounded theorem deepening only; no governance-family expansion and no authority-residency duplication.
+
 Pillar status:
 - Canonical source-of-truth: formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json
 - Deep maturity posture source: formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md
@@ -50,6 +63,7 @@ Proof debt summary:
 - Proof-debt checkpoint source: formal/output/proof_debt_burndown_checkpoint_cycle05_v0.json
 
 Next admissible actions:
+- Use `formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md` for the currently active bounded restart slice.
 - Use formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md for object-level dependencies and open debt.
 - Use formal/docs/paper/PHYSICS_ROADMAP_v0.md for active route sequencing and canonical pin checks.
 

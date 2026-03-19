@@ -14,14 +14,15 @@
 Establish a bounded remediation program with explicit workstreams, blockers, evidence, and hard exit criteria. This tracker is the canonical top-level source of truth for active, blocked, completed, and next work.
 
 ## Current Status
-- Primary workstream: none
-- Active task: none
+- Primary workstream: WS-10
+- Active task: WS-10-T02
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
 - WS-07: DONE
 - WS-08: DONE (architecture consolidation phase)
 - WS-09: DONE (CE-05 post-simplification verification sweep)
+- WS-10: ACTIVE (bounded theory restart pilot)
 - Program state: ACTIVE
 - Active WS-05 plan pointer: `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`
 - Active WS-05 baseline pointer: `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md`
@@ -29,7 +30,19 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Active WS-07 plan pointer: `formal/docs/release/WS_07_SCIENTIFIC_CORE_SEPARATION_REFRESH_PLAN_v0.md`
 - Active WS-08 plan pointer: `formal/docs/release/WS_08_GOVERNANCE_RIGHT_SIZING_PLAN_v0.md`
 - Active WS-09 plan pointer: `formal/docs/release/WS_09_POST_SIMPLIFICATION_VERIFICATION_SWEEP_PLAN_v0.md`
+- Active WS-10 plan pointer: `formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md`
 - Active CE-06 guardrail pointer: `formal/docs/release/CE_06_ANTI_REGROWTH_GUARDRAILS_v0.md`
+
+## Bounded Theory Restart Activation (2026-03-18)
+- Restart workstream: `WS-10`
+- Restart task: `WS-10-T02`
+- Restart slice pointer: `formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md`
+- First restart target: `TOE_GR01_FUNCTION_SPACE_REGULARITY_SURFACE_v0`
+- First restart theorem note: bounded GR01 boundary-term regularity lemma only.
+- First restart evidence goal: local theorem-surface deepening with no governance-family expansion.
+- First restart verification path: `formal/python/tests/test_state_theory_dag.py`, `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`, `formal/python/tests/test_gr01_function_space_completion_criteria_gate.py`, `formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py`, optional `formal/python/tests/test_gr01_publication_grade_discharge_package_gate.py`.
+- Restart activation verification result: `5 passed in 2.54s`.
+- Restart guardrails: no new governance family, no cloned gate proliferation, no duplicated authority residency without explicit decision, bounded slice only.
 
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
@@ -43,6 +56,7 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 | WS-07 | Scientific Core Separation Refresh | DONE | NO | Refresh scientific-core tagging and restart subset boundaries for theory work. |
 | WS-08 | Governance Right-Sizing | DONE | NO | Operationalize quarantine and retirement controls while preserving rigor. |
 | WS-09 | Post-Simplification Verification Sweep | DONE | NO | Completed bounded CE-05 verification ladder with evidence-backed closure checkpoint. |
+| WS-10 | Theory Restart Pilot | ACTIVE | YES | Execute one bounded post-consolidation theory slice under anti-regrowth guardrails before any broader theory churn. |
 
 ## Status Labels
 - TODO
@@ -78,7 +92,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| none | none | none | none | none | none | none | none |
+| WS-10-T02 | Theory Restart Pilot | Deepen GR01 boundary-term regularity lemma | ACTIVE | user | WS-10-T01 | 2026-03-18: WS-10 activation note validated; next bounded slice remains local to `TOE_GR01_FUNCTION_SPACE_REGULARITY_SURFACE_v0` and supporting GR01 theorem surfaces | GR01 theorem surfaces are deepened with bounded scope and local GR01 verification ladder passes |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -136,6 +150,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-09-T04B | Post-Simplification Verification Sweep | Remediate smallest shared governance-tranche root-cause family | DONE | user | WS-09-T04A | 2026-03-18: Family-B subset passed (`2 passed in 0.82s`) and failing-tranche rerun reduced to single residual (`1 failed, 18 passed in 7.66s`); evidence recorded in CE-05 checkpoint artifact | Remaining failing subset reduced from 3 to <=1 with bounded diff evidence |
 | WS-09-T04C | Post-Simplification Verification Sweep | Re-run failing subset then canonical governance suite | DONE | user | WS-09-T04B | 2026-03-18: failing-tranche rerun passed (`19 passed in 7.21s`) and unchanged `governance_suite.ps1` rerun passed (`422 passed in 141.30s`) after bounded residual fixes; evidence recorded in CE-05 checkpoint artifact | Green failing subset and green canonical governance suite recorded in CE-05 checkpoint artifact |
 | WS-09-T05 | Post-Simplification Verification Sweep | Record CE-05 closure checkpoint | DONE | user | WS-09-T04C | 2026-03-18: CE-05 row marked DONE with full evidence chain in tracker; WS-09 plan task table reflects T05 DONE | CE-05 closure is explicitly recorded and WS-09 closure state is consistent across tracker and WS-09 plan |
+| WS-10-T01 | Theory Restart Pilot | Open bounded restart slice and pin first theorem target | DONE | user | none | 2026-03-18: tracker/state/roadmap activation notes and `formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md` created; bounded validation `5 passed in 2.54s` via `test_state_theory_dag.py`, `test_pillar_matrix_roadmap_coverage_gate.py`, `test_gr01_function_space_completion_criteria_gate.py`, `test_gr01_function_space_discrete_regularity_evidence_gate.py` | Tracker/state/roadmap activation notes exist, first bounded target is pinned, and targeted parity verification is recorded |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
