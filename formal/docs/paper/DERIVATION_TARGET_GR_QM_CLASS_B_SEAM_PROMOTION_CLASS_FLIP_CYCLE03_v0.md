@@ -75,6 +75,15 @@ Cycle03 bounded authorization retention corollary
 - `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_RETENTION_CONCLUSION_v0: CYCLE03_AUTHORIZATION_PLUS_NO_SHORTCUT_TRANSPORT_RETAINED`
 - Bounded interpretation: once the cycle03 authorization surface is assembled, the cycle02 no-shortcut transport remains attached to that authorization package without widening into registry or inventory coordination.
 
+Cycle03 bounded class-flip-ready package theorem
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_READY_PACKAGE_STATUS_v0: EXPLICIT_BOUNDED_v0_NONCLAIM`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_READY_PACKAGE_NAME_v0: CYCLE03_AUTHORIZATION_RETAINS_SEAM_ID_AND_NO_SHORTCUT_PACKAGE`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_READY_PACKAGE_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_cycle03_class_flip_ready_package`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_READY_PACKAGE_DEPENDS_ON_v0: gr_qm_cycle03_authorization_retains_transport`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_READY_PACKAGE_HYPOTHESES_v0: CYCLE02_DISCHARGE_SURFACE_ESTABLISHED`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_READY_PACKAGE_CONCLUSION_v0: CYCLE03_AUTHORIZATION_SURFACE_PLUS_SEAM_ID_AND_NO_SHORTCUT_PACKAGE_RETAINED`
+- Bounded interpretation: the cycle03 authorization package now remains explicitly linked to the exported cycle02 seam-id and no-shortcut witness package, giving the tranche a class-flip-ready handoff surface without forcing registry or inventory edits.
+
 Exit posture (cycle03)
 - `GR_QM_CLASS_PROMOTION_DECISION_v0: B_TO_A_FLIP_EXECUTED_v0`
 - `GR_QM_CLASS_PROMOTION_SCOPE_v0: SINGLE_SEAM_SINGLE_CYCLE_BOUNDED_v0`

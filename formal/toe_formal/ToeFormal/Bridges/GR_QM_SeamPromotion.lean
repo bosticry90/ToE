@@ -77,6 +77,21 @@ theorem gr_qm_cycle02_retention_transport_contract
   · exact gr_qm_cycle02_compatibility_tag_persistence witness h_discharge
   · exact h_discharge.right
 
+/-- Cycle02 handoff contract: discharge exports the seam id plus retained tags as one bounded package. -/
+theorem gr_qm_cycle02_handoff_readiness_contract
+    (witness : GRQMSeamWitnessPackage)
+    (h_discharge : cycle02DischargeSurface witness) :
+    witness.seamId = "SEAM-GR-QM" /\
+    witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0" /\
+    witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" := by
+  have h_retained : classBCompatibilitySurface witness :=
+    gr_qm_cycle02_class_b_retention_bridge witness h_discharge
+  have h_transport :
+      witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0" /\
+      witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" :=
+    gr_qm_cycle02_retention_transport_contract witness h_discharge
+  exact And.intro h_retained.left (And.intro h_transport.left h_transport.right)
+
 /-- Cycle03 bounded class-flip authorization surface. -/
 def cycle03ClassFlipAuthorizationSurface
     (witness : GRQMSeamWitnessPackage) : Prop :=
@@ -103,6 +118,29 @@ theorem gr_qm_cycle03_authorization_retains_transport
   have h_auth : cycle03ClassFlipAuthorizationSurface witness :=
     gr_qm_cycle02_to_cycle03_authorization_bridge witness h_discharge
   exact And.intro h_auth h_discharge.right
+
+/-- Cycle03 ready-package theorem: authorization retains the exported seam id and no-shortcut package. -/
+def cycle03ClassFlipReadySurface
+    (witness : GRQMSeamWitnessPackage) : Prop :=
+  cycle03ClassFlipAuthorizationSurface witness /\
+    witness.seamId = "SEAM-GR-QM" /\
+    witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0"
+
+/-- Cycle03 ready-package theorem for bounded class-flip handoff assembly. -/
+theorem gr_qm_cycle03_class_flip_ready_package
+    (witness : GRQMSeamWitnessPackage)
+    (h_discharge : cycle02DischargeSurface witness) :
+    cycle03ClassFlipReadySurface witness := by
+  have h_auth_transport :
+      cycle03ClassFlipAuthorizationSurface witness /\
+      witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" :=
+    gr_qm_cycle03_authorization_retains_transport witness h_discharge
+  have h_handoff :
+      witness.seamId = "SEAM-GR-QM" /\
+      witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0" /\
+      witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" :=
+    gr_qm_cycle02_handoff_readiness_contract witness h_discharge
+  exact And.intro h_auth_transport.left (And.intro h_handoff.left h_auth_transport.right)
 
 /-- Cycle03 class-flip authorization theorem for GR-QM seam promotion. -/
 theorem gr_qm_seam_cycle03_class_flip_authorization

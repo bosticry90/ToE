@@ -80,6 +80,15 @@ Cycle02 bounded retention transport corollary
 - `GR_QM_CLASS_B_PROMOTION_CYCLE02_RETENTION_TRANSPORT_CONCLUSION_v0: COMPATIBILITY_AND_NO_SHORTCUT_TAGS_RETAINED`
 - Bounded interpretation: the cycle02 discharge contract transports the retained compatibility tag and the pinned no-shortcut tag as one bounded witness package without widening into class-flip semantics.
 
+Cycle02 bounded handoff-readiness contract
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_HANDOFF_READINESS_STATUS_v0: EXPLICIT_BOUNDED_v0_NONCLAIM`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_HANDOFF_READINESS_NAME_v0: CYCLE02_DISCHARGE_EXPORTS_CLASS_FLIP_READY_WITNESS_PACKAGE`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_HANDOFF_READINESS_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_cycle02_handoff_readiness_contract`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_HANDOFF_READINESS_DEPENDS_ON_v0: gr_qm_cycle02_retention_transport_contract`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_HANDOFF_READINESS_HYPOTHESES_v0: CYCLE02_DISCHARGE_SURFACE_ESTABLISHED`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_HANDOFF_READINESS_CONCLUSION_v0: SEAM_ID_AND_RETAINED_TAG_PACKAGE_EXPORTED`
+- Bounded interpretation: the cycle02 discharge surface now exports a single handoff witness package containing the seam identifier, retained compatibility tag, and pinned no-shortcut tag, ready for bounded cycle03 use without widening beyond the GR-QM ladder.
+
 Exit posture (cycle02)
 - `GR_QM_CLASS_B_PROMOTION_CLASS_v0: B_RETAINED_v0`
 - Any `B -> A` move remains gated by the full promotion completion rule in `TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`.
