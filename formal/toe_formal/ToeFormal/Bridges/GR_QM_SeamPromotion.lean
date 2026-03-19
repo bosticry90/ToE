@@ -83,13 +83,23 @@ def cycle03ClassFlipAuthorizationSurface
   cycle02DischargeSurface witness /\
     witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0"
 
+/-- Cycle03 cross-cycle bridge theorem: the cycle02 transport contract assembles the authorization surface. -/
+theorem gr_qm_cycle02_to_cycle03_authorization_bridge
+    (witness : GRQMSeamWitnessPackage)
+    (h_discharge : cycle02DischargeSurface witness) :
+    cycle03ClassFlipAuthorizationSurface witness := by
+  have h_transport :
+      witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0" /\
+      witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" :=
+    gr_qm_cycle02_retention_transport_contract witness h_discharge
+  exact And.intro h_discharge h_transport.left
+
 /-- Cycle03 class-flip authorization theorem for GR-QM seam promotion. -/
 theorem gr_qm_seam_cycle03_class_flip_authorization
     (witness : GRQMSeamWitnessPackage)
     (h_discharge : cycle02DischargeSurface witness) :
     cycle03ClassFlipAuthorizationSurface witness := by
-  have h_cycle01 : classBCompatibilitySurface witness := h_discharge.left
-  exact And.intro h_discharge h_cycle01.right
+  exact gr_qm_cycle02_to_cycle03_authorization_bridge witness h_discharge
 
 end GRQM
 end Bridges

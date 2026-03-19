@@ -42,6 +42,9 @@ Cycle03 promotion bundle (bounded)
 6. Class-flip gate pointer:
 - `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
 
+7. Cross-cycle authorization bridge theorem pointer:
+- `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_cycle02_to_cycle03_authorization_bridge`
+
 Cycle03 deliverables
 - `DELIVERABLE-GR-QM-SEAM-PROMOTION-CLASS-FLIP-01_v0: CYCLE03_TARGET_PINNED`
 - `DELIVERABLE-GR-QM-SEAM-PROMOTION-CLASS-FLIP-02_v0: CLASS_FLIP_AUTHORIZATION_POINTER_PINNED`
@@ -53,6 +56,15 @@ Cycle03 promotion posture
 - `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_seam_cycle03_class_flip_authorization`
 - `GR_QM_CLASS_B_PROMOTION_CYCLE03_GATE_v0: formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
 - `GR_QM_CLASS_B_PROMOTION_CYCLE03_CLASS_TOKEN_v0: TOE_CK_CLASS_THEOREM_LINKED_v0`
+
+Cycle03 bounded cross-cycle authorization bridge
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_BRIDGE_STATUS_v0: EXPLICIT_BOUNDED_v0_NONCLAIM`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_BRIDGE_NAME_v0: CYCLE02_RETENTION_TRANSPORT_IMPLIES_CYCLE03_AUTHORIZATION_SURFACE`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_BRIDGE_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_cycle02_to_cycle03_authorization_bridge`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_BRIDGE_DEPENDS_ON_v0: gr_qm_cycle02_retention_transport_contract`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_BRIDGE_HYPOTHESES_v0: CYCLE02_DISCHARGE_SURFACE_AND_RETAINED_TAG_TRANSPORT`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_AUTHORIZATION_BRIDGE_CONCLUSION_v0: CYCLE03_CLASS_FLIP_AUTHORIZATION_SURFACE_ESTABLISHED`
+- Bounded interpretation: the cycle02-local retention transport chain is sufficient to assemble the cycle03 authorization surface without widening beyond the GR-QM seam ladder.
 
 Exit posture (cycle03)
 - `GR_QM_CLASS_PROMOTION_DECISION_v0: B_TO_A_FLIP_EXECUTED_v0`
