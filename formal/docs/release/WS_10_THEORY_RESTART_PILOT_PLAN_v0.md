@@ -26,30 +26,32 @@ Out of scope during WS-10:
 - broad README or architecture cleanup.
 
 ## Restart Slice Target
-- Active slice ID: `WS-10-T05_GR_QM_COMPLETION_PARITY_WIDER_TRANCHE`
+- Active slice ID: `WS-10-T06_GR_QM_POST_COMPLETION_HANDOFF_BOUNDARY`
 - Active pillar: `SEAM-GR-QM`
-- Handoff anchor: `e118b72`
-- Primary tranche target surfaces:
-	- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`
-	- `formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`
-	- `formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean`
-- Declared wider-baseline control surfaces:
+- Handoff anchor: `5a2823d`
+- Primary handoff control surfaces:
+	- `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md`
+	- `State_of_the_Theory.md`
+	- `formal/docs/paper/PHYSICS_ROADMAP_v0.md`
+	- `formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md`
+- Seam continuity control surfaces:
 	- `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`
 	- `formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md`
-- Evidence goal: wider GR-QM completion-parity tranche remains explicitly activated from the `e118b72` checkpoint boundary so bounded regime-closure and shared-dynamics transport semantics work can run against a named inventory/registry-aware baseline, then land as phase2 seam-completion closeout semantics across the pinned control surfaces.
+- Evidence goal: GR-QM completion remains canonically closed while a new bounded post-completion handoff decision is made outside the completed GR-QM completion lane, with legacy compatibility-token retention kept explicit as non-authoritative technical debt until split-gate dependency removal.
 
 ## Verification Ladder
 1. `./py.ps1 -m pytest -q formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
-2. `./py.ps1 -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py formal/python/tests/test_toe_master_action_class_b_inventory_gate.py formal/python/tests/test_toe_master_action_seam_registry_gate.py`
-3. No broader validation expansion unless this five-gate baseline itself forces a further named authorization step.
+2. `./py.ps1 -m pytest -q formal/python/tests/test_toe_seam_status_split_gate.py`
+3. `./py.ps1 -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py formal/python/tests/test_toe_master_action_class_b_inventory_gate.py formal/python/tests/test_toe_master_action_seam_registry_gate.py`
+4. No new GR-QM completion theorem-surface edits unless a new explicit post-handoff authorization is recorded.
 
 Execution contract:
-- Run tracker/state/roadmap parity checks before theorem-surface edits.
-- Keep this activation commit control-surface only and avoid mixing in GR-QM theorem edits.
-- Keep tranche scientific edits confined to `DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md`, `DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_CLASS_FLIP_CYCLE03_v0.md`, and `GR_QM_SeamPromotion.lean`.
-- Do not widen the scientific file set in the first widened slice; the widening is in the declared baseline, not in silent surface spread.
-- First widened scientific slice must validate against the five-gate ladder before any further tranche decision is considered.
-- Stop immediately once the first widened slice lands unless that five-gate baseline itself forces a new explicit decision.
+- Run tracker/state/roadmap parity checks before activating any next scientific target.
+- Keep this activation step control-surface only and avoid mixing in new GR-QM completion theorem edits.
+- Treat retained legacy `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO` strings as transition-only technical debt, not active truth.
+- Carry explicit retirement trigger text for that legacy token until split-gate continuity dependency is removed.
+- Do not reopen GR-QM completion tranche semantics in this task; only handoff-boundary and next-target-decision surfaces are in scope.
+- Stop once handoff boundary status is pinned and validated unless a distinct non-GR-QM-completion target activation is explicitly authorized.
 - Record exact command text and results in the evidence log below.
 
 ## Task Plan
@@ -59,7 +61,8 @@ Execution contract:
 | WS-10-T02 | Deepen GR01 boundary-term regularity lemma | DONE | WS-10-T01 | Local theorem-surface deepening in GR01 regularity and support notes | Theorem-surface diff plus local GR01 gate ladder green |
 | WS-10-T03 | Run bounded GR01 verification ladder | DONE | WS-10-T02 | Local gate results recorded in artifact | Exact command outputs and exit status |
 | WS-10-T04 | Record WS-10 first-slice checkpoint | DONE | WS-10-T03 | Tracker and WS-10 evidence closure note | Commit hash, touched files, and result summary |
-| WS-10-T05 | Execute phase2 GR-QM seam-completion closeout after the shared-dynamics transport semantics checkpoint | ACTIVE | WS-10-T04 | Control-surface activation anchored on `e118b72`, explicit five-gate validation ladder, bounded regime-closure plus shared-dynamics transport semantics increments, and phase2 seam-completion closeout semantics mirrored across the pinned control surfaces | Bounded diff evidence plus targeted parity verification |
+| WS-10-T05 | Execute phase2 GR-QM seam-completion closeout after the shared-dynamics transport semantics checkpoint | DONE | WS-10-T04 | Phase2 closeout commits `16b021c` and `5a2823d` now pin semantic-standard hardening, registry/inventory completion flip, and tracker/state/roadmap/WS-10 mirrors | GR-QM seam completion is canonically closed with closeout validation evidence and blocker cleared in-scope |
+| WS-10-T06 | Open bounded post-completion handoff boundary after canonical GR-QM seam closure | ACTIVE | WS-10-T05 | Control-surface-only handoff activation pinned across tracker/state/roadmap/WS-10, with explicit non-authoritative legacy-token technical-debt retention and retirement trigger | Bounded diff evidence plus parity/continuity validation without reopening GR-QM completion theorem work |
 
 ## Guardrails
 - No unnecessary governance-family expansion.
@@ -93,6 +96,7 @@ Execution contract:
 - 2026-03-19 WS-10-T05 regime-closure checkpoint: bounded regime-closure semantics validation via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py formal/python/tests/test_toe_master_action_class_b_inventory_gate.py formal/python/tests/test_toe_master_action_seam_registry_gate.py` -> `7 passed in 3.40s`; the increment adds the cycle03 regime-closure semantics package theorem under the same authorized GR-QM scientific surfaces, and the stop condition remains unchanged: no new surfaces beyond the authorized GR-QM tranche without another explicit authorization.
 - 2026-03-19 WS-10-T05 shared-dynamics transport checkpoint: bounded shared-dynamics transport semantics validation via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py formal/python/tests/test_toe_master_action_class_b_inventory_gate.py formal/python/tests/test_toe_master_action_seam_registry_gate.py` -> `7 passed in 3.15s`; the increment adds the cycle03 shared-dynamics transport semantics package theorem under the same authorized GR-QM scientific surfaces, and the stop condition remains unchanged: no new surfaces beyond the authorized GR-QM tranche without another explicit authorization.
 - 2026-03-19 WS-10-T05 phase2 closeout checkpoint: phase1 boundary commit `e18abfa` is now mirrored into semantic-standard plus control-surface closeout via `formal/docs/release/TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0.md`, `formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md`, `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`, `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md`, `State_of_the_Theory.md`, `formal/docs/paper/PHYSICS_ROADMAP_v0.md`, and `formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md`; GR-QM seam status now pins `SEAM_GR_QM_PHYSICS_COMPLETE_v0: YES`, `SEAM_GR_QM_STATUS_READ_v0: GOVERNANCE_COMPLETE_AND_PHYSICS_COMPLETE`, and `SEAM_GR_QM_PHYSICS_BLOCKER_v0: NONE_BLOCKER_REMAINING_IN_SCOPE` with transition compatibility token retention noted for split-gate continuity; closeout validation via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py formal/python/tests/test_toe_master_action_class_b_inventory_gate.py formal/python/tests/test_toe_master_action_seam_registry_gate.py formal/python/tests/test_toe_seam_status_split_gate.py formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py` -> `11 passed in 5.23s`.
+- 2026-03-19 WS-10-T06 activation: post-completion handoff boundary is now the active bounded slice; control surfaces pin that GR-QM completion remains closed, legacy `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO` is transition-only technical debt, and the next task must be handoff publication or explicit non-GR-QM-completion target selection under unchanged parity checks; validation rerun via `c:/Users/psboy/Documents/ToE/.venv/Scripts/python.exe -m pytest -q formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py formal/python/tests/test_toe_master_action_class_b_inventory_gate.py formal/python/tests/test_toe_master_action_seam_registry_gate.py formal/python/tests/test_toe_seam_status_split_gate.py formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py` -> `11 passed in 5.03s`.
 
 ## Exit Criteria
 - WS-10-T01 activation note is mirrored in the canonical control surfaces and verified.
@@ -113,3 +117,4 @@ Execution contract:
 - Once a bounded regime-closure semantics increment is checkpointed under the widened tranche, the next step must again be a deliberate target choice under the same five-gate baseline, with no new surfaces beyond the authorized GR-QM tranche unless explicit reauthorization is recorded first.
 - Once a bounded shared-dynamics transport semantics increment is checkpointed under the widened tranche, the next step must be a deliberate post-transport target choice under the same five-gate baseline, with no new surfaces beyond the authorized GR-QM tranche unless explicit reauthorization is recorded first.
 - Once phase2 seam-completion closeout is initiated, semantic-standard updates plus registry/inventory completion flips and tracker/state/roadmap/WS-10 mirrors must be recorded together, then validated against the same five-gate GR-QM ladder plus seam-status split and state/roadmap parity checks before the next GR-QM target is selected.
+- Once phase2 seam-completion closeout is pinned, WS-10-T06 must hold the lane in control-surface-only handoff mode until the next scientific target is explicitly selected outside GR-QM completion closeout semantics.

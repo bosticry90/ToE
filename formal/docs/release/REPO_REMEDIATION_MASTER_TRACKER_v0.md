@@ -15,14 +15,14 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 
 ## Current Status
 - Primary workstream: WS-10
-- Active task: WS-10-T05
+- Active task: WS-10-T06
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
 - WS-07: DONE
 - WS-08: DONE (architecture consolidation phase)
 - WS-09: DONE (CE-05 post-simplification verification sweep)
-- WS-10: ACTIVE (GR-QM seam completion closeout checkpoint recorded)
+- WS-10: ACTIVE (GR-QM completion handoff boundary now active after closeout)
 - Program state: ACTIVE
 - Active WS-05 plan pointer: `formal/docs/release/WS_05_AUTHORITY_SURFACE_CONSOLIDATION_PLAN_v0.md`
 - Active WS-05 baseline pointer: `formal/docs/release/WS_05_AUTHORITY_COORDINATION_BASELINE_MATRIX_v0.md`
@@ -183,7 +183,18 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Transition compatibility note: legacy `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO` token retained as transition-only, non-authoritative parity string for split-gate continuity.
 - Closeout validation ladder: `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`, `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`, `formal/python/tests/test_toe_master_action_seam_registry_gate.py`, `formal/python/tests/test_toe_seam_status_split_gate.py`, `formal/python/tests/test_state_theory_dag.py`, `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
 - Closeout validation result: `11_PASSED_IN_5_23S`
-- Next boundary: retain the same five-gate GR-QM theorem ladder plus seam-status/state/roadmap control-surface parity before selecting the next bounded GR-QM target.
+- Next boundary: GR-QM completion lane is closed; the next bounded task is a post-completion handoff decision boundary and must not reopen GR-QM completion semantics work.
+
+## WS-10-T06 Post-Completion Handoff Boundary Activation (2026-03-19)
+- Activation status: `ACTIVE_BOUNDED_v0`
+- Activation anchor: phase2 closeout commits `16b021c` and `5a2823d`
+- Activated slice: `WS-10-T06_GR_QM_POST_COMPLETION_HANDOFF_BOUNDARY`
+- Activation scope: control-surface semantics only in tracker/state/roadmap/WS-10 plan; no GR-QM theorem-surface edits.
+- Activation objective: record GR-QM seam completion as closed, keep legacy compatibility text explicitly non-authoritative, and pin the next-target decision boundary outside the completed GR-QM completion lane.
+- Legacy token technical-debt status: retained `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO` compatibility text is accepted only as transition debt and must be retired once split-gate continuity dependency is removed.
+- Activation validation ladder: `formal/python/tests/test_state_theory_dag.py`, `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`, `formal/python/tests/test_toe_seam_status_split_gate.py`, plus unchanged GR-QM five-gate regression baseline.
+- Activation validation result: `11 passed in 5.03s`
+- Next boundary: either (a) publish a bounded GR-QM completion handoff packet as CLOSED evidence for T06 or (b) select and activate a non-GR-QM-completion scientific target by explicit control-surface decision.
 
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
@@ -233,7 +244,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-10-T05 | Theory Restart Pilot | Execute the Phase 2 GR-QM seam-completion closeout after the shared-dynamics transport semantics checkpoint | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; widened GR-QM ladder passed cleanly (`3 passed in 1.95s`); broader cross-cycle authorization chain recorded across commits `bf9a5fe` and `24422a7` with standing three-gate validation results `3 passed in 2.10s` and `3 passed in 2.00s`; 2026-03-19: larger tranche activation anchored on `0d023e1`; same-lane tranche increments recorded in `1f37ccc` and `32cd56c`; wider tranche authorization anchored on `e118b72`; checkpointed widened activation ladder passed (`8 passed in 3.21s`); first widened scientific slice landed as cycle03 completion-parity theorem work and checkpointed widened scientific ladder passed (`7 passed in 3.09s`); bounded regime-closure semantics increment extended the same cycle03 package under the unchanged five-gate ladder (`7 passed in 3.40s`); bounded shared-dynamics transport semantics increment now extends that package under the same unchanged five-gate ladder (`7 passed in 3.15s`); Phase 2 closeout now records semantic-standard hardening, registry/inventory GR-QM completion flip, and tracker/state/roadmap/WS-10 mirror updates from phase1 checkpoint `e18abfa`; closeout validation ladder is green (`11 passed in 5.23s`) | Phase 2 closeout semantic standard, registry/inventory completion flip, and eight-gate validation evidence are all checkpointed before any next GR-QM target choice |
+| WS-10-T06 | Theory Restart Pilot | Open bounded post-completion handoff boundary after canonical GR-QM seam closure | ACTIVE | user | WS-10-T05 | 2026-03-19: GR-QM seam completion is canonically closed (`SEAM_GR_QM_PHYSICS_COMPLETE_v0: YES`, blocker cleared); T06 now activates control-surface-only handoff semantics so next work is outside the completed GR-QM completion lane and legacy `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO` remains explicit non-authoritative technical debt pending split-gate dependency removal; validation rerun `11 passed in 5.03s` | Tracker/state/roadmap/WS-10 surfaces pin T06 handoff boundary and validation ladder is green without reopening GR-QM completion theorem work |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -295,7 +306,8 @@ Theory work may restart only when all rows below are satisfied:
 | WS-10-T02 | Theory Restart Pilot | Deepen GR01 boundary-term regularity lemma | DONE | user | WS-10-T01 | 2026-03-18: bounded GR01 theorem-surface deepening committed in `da6e6c5`; local verification `3 passed in 1.94s` via `test_gr01_function_space_completion_criteria_gate.py`, `test_gr01_function_space_discrete_regularity_evidence_gate.py`, `test_gr01_publication_grade_discharge_package_gate.py` | GR01 theorem surfaces are deepened with bounded scope and local GR01 verification ladder passes |
 | WS-10-T03 | Theory Restart Pilot | Run bounded GR01 verification ladder | DONE | user | WS-10-T02 | 2026-03-18: exact bounded GR01 ladder recorded and green (`3 passed in 1.94s`) | Local GR01 gate results are recorded with exact command and exit status |
 | WS-10-T04 | Theory Restart Pilot | Record WS-10 first-slice checkpoint | DONE | user | WS-10-T03 | 2026-03-18: tracker/state/roadmap/WS-10 plan updated to close first pilot phase and select next bounded slice explicitly | First WS-10 pilot phase is closed with evidence and next bounded target is explicit |
-| WS-10-T05 | Theory Restart Pilot | Activate wider GR-QM completion-parity tranche and take first bounded widened slice | ACTIVE | user | WS-10-T04 | 2026-03-19: second same-lane checkpoint `32cd56c` and control checkpoint `e118b72` preserved; wider tranche now explicitly authorized with inventory/registry-aware five-gate baseline before the next scientific increment | Wider tranche authority is mirrored across control surfaces, the five-gate ladder is explicit, and first widened scientific slice can be evaluated against the declared baseline |
+| WS-10-T05 | Theory Restart Pilot | Execute phase2 GR-QM seam-completion closeout after bounded regime-closure and shared-dynamics transport increments | DONE | user | WS-10-T04 | 2026-03-19: phase2 closeout commits `16b021c` and `5a2823d` pin positive seam-complete semantics, completion flip surfaces, and tracker/state/roadmap/WS-10 mirrors; closeout validation ladder green (`11 passed in 5.00s`) | GR-QM seam completion is canonically closed and mirrored, blocker is discharged, and next work must move to post-completion handoff/target-selection boundary |
+| WS-10-T06 | Theory Restart Pilot | Open bounded post-completion handoff boundary after canonical GR-QM seam closure | ACTIVE | user | WS-10-T05 | 2026-03-19: T06 is activated as control-surface-only follow-up to closed GR-QM completion; legacy compatibility token retention is explicitly technical debt with retirement trigger tied to split-gate continuity dependency removal; bounded parity/continuity rerun is green (`11 passed in 5.03s`) | Active control surfaces encode the post-completion boundary and prevent further in-lane GR-QM completion work without new explicit authorization |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
