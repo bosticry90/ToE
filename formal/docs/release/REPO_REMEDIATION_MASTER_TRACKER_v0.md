@@ -80,6 +80,14 @@ Establish a bounded remediation program with explicit workstreams, blockers, evi
 - Interpretation: the shared `GR_QM_SeamPromotion.lean` bridge surface remains compatible with cycle01 and cycle03 gate expectations after the three cycle02-local increments.
 - Next decision posture: widening is now evidenced; any further move should choose deliberately between more cycle02-local theorem work and a broader GR-QM scientific slice.
 
+## WS-10-T05 Multi-Cycle Bridge Checkpoint (2026-03-18)
+- Phase status: `MULTI_CYCLE_AUTHORIZATION_BRIDGE_UNDERWAY`
+- Broader GR-QM scientific commit: `bf9a5fe`
+- Broader theorem result: first cross-cycle authorization bridge now lifts cycle02 retention transport into the cycle03 authorization surface.
+- Standing GR-QM validation baseline: `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`
+- Broader validation result: `3 passed in 2.10s`
+- Next bounded decision: either deepen the cross-cycle bridge chain once more or pause and decide whether GR-QM is ready for a larger discharge tranche.
+
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
 | --- | --- | --- | --- | --- |
@@ -128,7 +136,7 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-10-T05 | Theory Restart Pilot | Advance bounded GR-QM discharge lane with evidence-first widening | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; local gate stayed green (`1 passed in 0.73s`, `1 passed in 0.75s`, `1 passed in 0.75s`); widened GR-QM ladder then passed cleanly (`3 passed in 1.95s`) across cycle01/cycle02/cycle03 | Three bounded GR-QM cycle02-local increments are recorded and the first widened GR-QM ladder result is captured for the next scope decision |
+| WS-10-T05 | Theory Restart Pilot | Advance bounded GR-QM seam lane into multi-cycle authorization structure | ACTIVE | user | WS-10-T04 | 2026-03-18: GR-QM cycle02-local chain recorded across commits `6adf4a3`, `f587707`, `4b74614`; widened GR-QM ladder passed cleanly (`3 passed in 1.95s`); broader cross-cycle authorization bridge committed in `bf9a5fe` and validated on the standing three-gate ladder (`3 passed in 2.10s`) | GR-QM multi-cycle authorization work is explicitly recorded, the three-gate ladder is the standing local baseline, and the next bounded scientific decision is clear |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
