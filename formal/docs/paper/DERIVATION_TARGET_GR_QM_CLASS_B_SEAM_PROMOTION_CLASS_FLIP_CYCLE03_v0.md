@@ -84,6 +84,15 @@ Cycle03 bounded class-flip-ready package theorem
 - `GR_QM_CLASS_B_PROMOTION_CYCLE03_READY_PACKAGE_CONCLUSION_v0: CYCLE03_AUTHORIZATION_SURFACE_PLUS_SEAM_ID_AND_NO_SHORTCUT_PACKAGE_RETAINED`
 - Bounded interpretation: the cycle03 authorization package now remains explicitly linked to the exported cycle02 seam-id and no-shortcut witness package, giving the tranche a class-flip-ready handoff surface without forcing registry or inventory edits.
 
+Cycle03 bounded normalized class-flip package theorem
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_NORMALIZED_PACKAGE_STATUS_v0: EXPLICIT_BOUNDED_v0_NONCLAIM`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_NORMALIZED_PACKAGE_NAME_v0: CYCLE03_READY_PACKAGE_EXPOSES_AUTHORIZATION_AND_RETAINED_TAG_NORMAL_FORM`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_NORMALIZED_PACKAGE_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_cycle03_class_flip_normalized_package`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_NORMALIZED_PACKAGE_DEPENDS_ON_v0: gr_qm_cycle03_class_flip_ready_package`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_NORMALIZED_PACKAGE_HYPOTHESES_v0: CYCLE02_DISCHARGE_SURFACE_ESTABLISHED`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_NORMALIZED_PACKAGE_CONCLUSION_v0: CYCLE03_AUTHORIZATION_SURFACE_PLUS_SEAM_ID_COMPATIBILITY_AND_NO_SHORTCUT_TAGS_EXPLICIT`
+- Bounded interpretation: the cycle03 ready package is now normalized into one explicit witness form that surfaces authorization, seam id, retained compatibility, and pinned no-shortcut transport together, keeping the tranche ready for any future widened decision without introducing registry or inventory coordination.
+
 Exit posture (cycle03)
 - `GR_QM_CLASS_PROMOTION_DECISION_v0: B_TO_A_FLIP_EXECUTED_v0`
 - `GR_QM_CLASS_PROMOTION_SCOPE_v0: SINGLE_SEAM_SINGLE_CYCLE_BOUNDED_v0`

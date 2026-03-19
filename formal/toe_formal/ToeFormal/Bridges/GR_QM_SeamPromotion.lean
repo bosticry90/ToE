@@ -126,6 +126,14 @@ def cycle03ClassFlipReadySurface
     witness.seamId = "SEAM-GR-QM" /\
     witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0"
 
+/-- Cycle03 normalized package surface: authorization and retained tags are exposed in one explicit form. -/
+def cycle03ClassFlipNormalizedSurface
+    (witness : GRQMSeamWitnessPackage) : Prop :=
+  cycle03ClassFlipAuthorizationSurface witness /\
+    witness.seamId = "SEAM-GR-QM" /\
+    witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0" /\
+    witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0"
+
 /-- Cycle03 ready-package theorem for bounded class-flip handoff assembly. -/
 theorem gr_qm_cycle03_class_flip_ready_package
     (witness : GRQMSeamWitnessPackage)
@@ -141,6 +149,20 @@ theorem gr_qm_cycle03_class_flip_ready_package
       witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" :=
     gr_qm_cycle02_handoff_readiness_contract witness h_discharge
   exact And.intro h_auth_transport.left (And.intro h_handoff.left h_auth_transport.right)
+
+/-- Cycle03 normalization theorem: the ready package exposes authorization and retained tags in one witness form. -/
+theorem gr_qm_cycle03_class_flip_normalized_package
+    (witness : GRQMSeamWitnessPackage)
+    (h_discharge : cycle02DischargeSurface witness) :
+    cycle03ClassFlipNormalizedSurface witness := by
+  have h_ready : cycle03ClassFlipReadySurface witness :=
+    gr_qm_cycle03_class_flip_ready_package witness h_discharge
+  have h_handoff :
+      witness.seamId = "SEAM-GR-QM" /\
+      witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0" /\
+      witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" :=
+    gr_qm_cycle02_handoff_readiness_contract witness h_discharge
+  exact And.intro h_ready.left (And.intro h_ready.right.left (And.intro h_handoff.right.left h_ready.right.right))
 
 /-- Cycle03 class-flip authorization theorem for GR-QM seam promotion. -/
 theorem gr_qm_seam_cycle03_class_flip_authorization
