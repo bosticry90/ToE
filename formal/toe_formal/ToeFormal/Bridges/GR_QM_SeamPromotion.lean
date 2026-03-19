@@ -58,6 +58,15 @@ theorem gr_qm_cycle02_class_b_retention_bridge
     classBCompatibilitySurface witness := by
   exact h_discharge.left
 
+/-- Cycle02 corollary: the retained Class-B surface preserves the compatibility tag itself. -/
+theorem gr_qm_cycle02_compatibility_tag_persistence
+    (witness : GRQMSeamWitnessPackage)
+    (h_discharge : cycle02DischargeSurface witness) :
+    witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0" := by
+  have h_retained : classBCompatibilitySurface witness :=
+    gr_qm_cycle02_class_b_retention_bridge witness h_discharge
+  exact h_retained.right
+
 /-- Cycle03 bounded class-flip authorization surface. -/
 def cycle03ClassFlipAuthorizationSurface
     (witness : GRQMSeamWitnessPackage) : Prop :=

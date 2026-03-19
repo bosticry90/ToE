@@ -62,6 +62,15 @@ Cycle02 bounded bridge statement
 - `GR_QM_CLASS_B_PROMOTION_CYCLE02_BRIDGE_STATEMENT_CONCLUSION_v0: CLASS_B_COMPATIBILITY_SURFACE_RETAINED`
 - Bounded interpretation: once the cycle02 discharge surface is established, the tranche retains the cycle01 Class-B compatibility surface while remaining explicitly non-promotional.
 
+Cycle02 bounded compatibility persistence corollary
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_COMPATIBILITY_PERSISTENCE_STATUS_v0: EXPLICIT_BOUNDED_v0_NONCLAIM`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_COMPATIBILITY_PERSISTENCE_NAME_v0: CLASS_B_COMPATIBILITY_TAG_PERSISTS_AFTER_DISCHARGE`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_COMPATIBILITY_PERSISTENCE_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_cycle02_compatibility_tag_persistence`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_COMPATIBILITY_PERSISTENCE_DEPENDS_ON_v0: gr_qm_cycle02_class_b_retention_bridge`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_COMPATIBILITY_PERSISTENCE_HYPOTHESES_v0: CYCLE02_DISCHARGE_SURFACE_ESTABLISHED`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE02_COMPATIBILITY_PERSISTENCE_CONCLUSION_v0: TOE_CK_CLASS_COMPATIBILITY_v0_RETAINED`
+- Bounded interpretation: the cycle02 discharge surface narrows to the retained compatibility tag without widening the tranche beyond Class `B`.
+
 Exit posture (cycle02)
 - `GR_QM_CLASS_B_PROMOTION_CLASS_v0: B_RETAINED_v0`
 - Any `B -> A` move remains gated by the full promotion completion rule in `TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md`.
