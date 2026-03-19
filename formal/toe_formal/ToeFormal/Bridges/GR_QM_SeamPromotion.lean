@@ -22,6 +22,7 @@ structure GRQMSeamWitnessPackage where
   grAssumptionId : String
   qmAssumptionId : String
   compatibilityTag : String
+  classToken : String
   noShortcutTag : String
 
 /-- Class-B compatibility seam surface for cycle01 pointer pinning. -/
@@ -134,6 +135,19 @@ def cycle03ClassFlipNormalizedSurface
     witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0" /\
     witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0"
 
+/-- Cycle03 completion-parity surface: the normalized package is paired with the promoted class token. -/
+def cycle03ClassFlipCompletionParitySurface
+    (witness : GRQMSeamWitnessPackage) : Prop :=
+  cycle03ClassFlipNormalizedSurface witness /\
+    witness.classToken = "TOE_CK_CLASS_THEOREM_LINKED_v0"
+
+/-- Cycle03 regime-closure semantics surface: completion parity is paired with explicit GR/QM regime ids. -/
+def cycle03RegimeClosureSemanticsSurface
+    (witness : GRQMSeamWitnessPackage) : Prop :=
+  cycle03ClassFlipCompletionParitySurface witness /\
+    witness.grAssumptionId = "GR_SHARED_DYNAMICS_REGIME_CLOSURE_v0" /\
+    witness.qmAssumptionId = "QM_SHARED_DYNAMICS_REGIME_CLOSURE_v0"
+
 /-- Cycle03 ready-package theorem for bounded class-flip handoff assembly. -/
 theorem gr_qm_cycle03_class_flip_ready_package
     (witness : GRQMSeamWitnessPackage)
@@ -163,6 +177,28 @@ theorem gr_qm_cycle03_class_flip_normalized_package
       witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" :=
     gr_qm_cycle02_handoff_readiness_contract witness h_discharge
   exact And.intro h_ready.left (And.intro h_ready.right.left (And.intro h_handoff.right.left h_ready.right.right))
+
+/-- Cycle03 completion-parity theorem: the normalized package can expose the promoted class token explicitly. -/
+theorem gr_qm_cycle03_completion_parity_package
+    (witness : GRQMSeamWitnessPackage)
+    (h_discharge : cycle02DischargeSurface witness)
+    (h_class_token : witness.classToken = "TOE_CK_CLASS_THEOREM_LINKED_v0") :
+    cycle03ClassFlipCompletionParitySurface witness := by
+  have h_normalized : cycle03ClassFlipNormalizedSurface witness :=
+    gr_qm_cycle03_class_flip_normalized_package witness h_discharge
+  exact And.intro h_normalized h_class_token
+
+/-- Cycle03 regime-closure semantics theorem: completion parity can expose the paired GR/QM regime ids explicitly. -/
+theorem gr_qm_cycle03_regime_closure_semantics_package
+    (witness : GRQMSeamWitnessPackage)
+    (h_discharge : cycle02DischargeSurface witness)
+    (h_class_token : witness.classToken = "TOE_CK_CLASS_THEOREM_LINKED_v0")
+    (h_gr_regime : witness.grAssumptionId = "GR_SHARED_DYNAMICS_REGIME_CLOSURE_v0")
+    (h_qm_regime : witness.qmAssumptionId = "QM_SHARED_DYNAMICS_REGIME_CLOSURE_v0") :
+    cycle03RegimeClosureSemanticsSurface witness := by
+  have h_completion_parity : cycle03ClassFlipCompletionParitySurface witness :=
+    gr_qm_cycle03_completion_parity_package witness h_discharge h_class_token
+  exact And.intro h_completion_parity (And.intro h_gr_regime h_qm_regime)
 
 /-- Cycle03 class-flip authorization theorem for GR-QM seam promotion. -/
 theorem gr_qm_seam_cycle03_class_flip_authorization

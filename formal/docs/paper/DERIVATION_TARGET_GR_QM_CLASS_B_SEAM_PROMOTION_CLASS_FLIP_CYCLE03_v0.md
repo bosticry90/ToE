@@ -93,6 +93,24 @@ Cycle03 bounded normalized class-flip package theorem
 - `GR_QM_CLASS_B_PROMOTION_CYCLE03_NORMALIZED_PACKAGE_CONCLUSION_v0: CYCLE03_AUTHORIZATION_SURFACE_PLUS_SEAM_ID_COMPATIBILITY_AND_NO_SHORTCUT_TAGS_EXPLICIT`
 - Bounded interpretation: the cycle03 ready package is now normalized into one explicit witness form that surfaces authorization, seam id, retained compatibility, and pinned no-shortcut transport together, keeping the tranche ready for any future widened decision without introducing registry or inventory coordination.
 
+Cycle03 widened completion-parity package theorem
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_COMPLETION_PARITY_STATUS_v0: EXPLICIT_WIDER_TRANCHE_v0_NONCLAIM`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_COMPLETION_PARITY_NAME_v0: CYCLE03_NORMALIZED_PACKAGE_EXPOSES_PROMOTED_CLASS_TOKEN`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_COMPLETION_PARITY_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_cycle03_completion_parity_package`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_COMPLETION_PARITY_DEPENDS_ON_v0: gr_qm_cycle03_class_flip_normalized_package`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_COMPLETION_PARITY_HYPOTHESES_v0: CYCLE02_DISCHARGE_SURFACE_ESTABLISHED_AND_CLASS_TOKEN_PINNED`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_COMPLETION_PARITY_CONCLUSION_v0: CYCLE03_NORMALIZED_PACKAGE_PLUS_TOE_CK_CLASS_THEOREM_LINKED_TOKEN_EXPLICIT`
+- Bounded interpretation: under the widened tranche, the cycle03 normalized package can now carry the same promoted class token already pinned in inventory and registry, making completion-side parity explicit in the GR-QM theorem surface without claiming that inventory or registry state is derived by this document alone.
+
+Cycle03 widened regime-closure semantics theorem
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_REGIME_CLOSURE_STATUS_v0: EXPLICIT_WIDER_TRANCHE_v0_NONCLAIM`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_REGIME_CLOSURE_NAME_v0: CYCLE03_COMPLETION_PARITY_PACKAGE_EXPOSES_SHARED_DYNAMICS_REGIME_IDS`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_REGIME_CLOSURE_THEOREM_v0: formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean#gr_qm_cycle03_regime_closure_semantics_package`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_REGIME_CLOSURE_DEPENDS_ON_v0: gr_qm_cycle03_completion_parity_package`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_REGIME_CLOSURE_HYPOTHESES_v0: CYCLE02_DISCHARGE_SURFACE_CLASS_TOKEN_AND_GR_QM_REGIME_IDS_PINNED`
+- `GR_QM_CLASS_B_PROMOTION_CYCLE03_REGIME_CLOSURE_CONCLUSION_v0: CYCLE03_COMPLETION_PARITY_PACKAGE_PLUS_SHARED_DYNAMICS_REGIME_IDS_EXPLICIT`
+- Bounded interpretation: under the widened tranche, the cycle03 completion-parity package can now expose paired GR/QM shared-dynamics regime identifiers inside the same theorem witness form, making regime-closure semantics explicit without claiming that the seam-registry physics blocker is fully discharged by this step alone.
+
 Exit posture (cycle03)
 - `GR_QM_CLASS_PROMOTION_DECISION_v0: B_TO_A_FLIP_EXECUTED_v0`
 - `GR_QM_CLASS_PROMOTION_SCOPE_v0: SINGLE_SEAM_SINGLE_CYCLE_BOUNDED_v0`
