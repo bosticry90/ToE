@@ -13,6 +13,11 @@ RELEASE-GATE POLICY (R1-A, 2026-03-20)
 - Governance lane command: `pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1`
 - Branch-health lane command: `./py.ps1 -m pytest formal/python/tests -q`
 
+CI TRUTH CONTRACT (R5-A, 2026-03-20)
+- CI represents governance, full pytest branch-health, and Lean build as explicit lanes in `.github/workflows/ci.yml`.
+- Governance remains a prerequisite lane before downstream CI lanes execute.
+- Lean lane target is the authoritative Lean project at `formal/toe_formal`.
+
 Purpose of This Project
 This project is an honest attempt to explore whether a very simple idea can be pushed far enough to matter.
 The long-term aspiration is to understand whether a single underlying structure could, in principle, support or organize the many laws we use to describe the universe. This aspiration is often called a Theory of Everything.
