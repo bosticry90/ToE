@@ -22,6 +22,12 @@ Non-claim boundary:
 - no full relativistic field-theory completion claim.
 - no external truth claim.
 
+Authority boundary decision (R2-B):
+- `SR_AUTHORITY_BOUNDARY_MODEL_v0: COMPACT_STATE_MIRROR_AUTHORITATIVE`
+- `SR_COVARIANCE_AUTHORITY_OWNER_v0: DERIVATION_TARGET_SR_COVARIANCE_OBJECT_v0_PLUS_COMPACT_STATE_MIRROR`
+- `SR_COVARIANCE_STATE_MIRROR_POLICY_v0: REQUIRED_FOR_ACTIVE_AUTHORITY_RESIDENCY`
+- `SR_COVARIANCE_FORMAL_ONLY_POSTURE_v0: REJECTED`
+
 Minimum structural objects required:
 - spacetime transform object
 - invariant interval or equivalent invariant structure

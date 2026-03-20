@@ -5704,6 +5704,9 @@ SR M4 seam-closure promotion bundle (bounded non-claim):
 - `formal/python/tests/test_sr_m4_seam_closure_promotion_cycle01_gate.py`
 
 SR M5 theory-parity-link tranche (bounded non-claim):
+- `SR_AUTHORITY_BOUNDARY_MODEL_v0: COMPACT_STATE_MIRROR_AUTHORITATIVE`
+- `SR_COVARIANCE_AUTHORITY_RESIDENCY_v0: FORMAL_TARGET_PLUS_COMPACT_STATE_MIRROR`
+- `SR_COVARIANCE_FORMAL_ONLY_POSTURE_v0: REJECTED`
 - `SR_M5_STATUS_v0: COMPLETE_BOUNDED_v0`
 - `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle56_v0`
 - `SR_M5_THEORY_PARITY_SHA256_v0: 8ba86c73090c17ee0a2e1f41bf0c984ec46d427866703715291b4ad7202c799d`
@@ -5722,7 +5725,7 @@ SR M5 theory-parity-link tranche (bounded non-claim):
 - `formal/python/tests/test_phase5_m5_completion_closeout_gate.py`
 
 Adjudication token:
-- `SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION (historical): DISCHARGED_v0_ROADMAP_PINNED`
+- `LEGACY_SR_FULL_DERIVATION_ENFORCEMENT_ADJUDICATION_SNAPSHOT_v0: DISCHARGED_v0_ROADMAP_PINNED_NON_AUTHORITATIVE_SNAPSHOT`
 - `PILLAR_SR_FULL_DERIVATION_DISCHARGE_ADJUDICATION: DISCHARGED_v0_ROADMAP_PINNED`
 
 Theorem-evidence checkpoint coupling bundle (bounded non-claim):

@@ -18,6 +18,11 @@ Non-claim boundary:
 - no external truth claim.
 - no automatic adjudication promotion.
 
+Authority boundary decision (R2-B):
+- `SR_AUTHORITY_BOUNDARY_MODEL_v0: COMPACT_STATE_MIRROR_AUTHORITATIVE`
+- `SR_COVARIANCE_AUTHORITY_RESIDENCY_v0: FORMAL_TARGET_PLUS_COMPACT_STATE_MIRROR`
+- `SR_COVARIANCE_FORMAL_ONLY_POSTURE_v0: REJECTED`
+
 Tranche bundle (completed bounded):
 - `SR_M5_STATUS_v0: COMPLETE_BOUNDED_v0`
 - `SR_M5_THEORY_PARITY_ARTIFACT_v0: sr_m5_theory_parity_link_cycle56_v0`
