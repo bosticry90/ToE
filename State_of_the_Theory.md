@@ -3547,8 +3547,8 @@ GR continuum cycle10 criteria parity pointers:
 - formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py
 
 Family-B pillar/state parity tokens:
-- `QFT_FULL_DERIVATION_ADJUDICATION: DISCHARGED_v0`
-- `QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION: DISCHARGED_v0`
+- `LEGACY_QFT_FULL_DERIVATION_ADJUDICATION_SNAPSHOT_v0: DISCHARGED_v0_NON_AUTHORITATIVE_ARCHIVE_ONLY`
+- `LEGACY_QFT_FULL_DERIVATION_INEVITABILITY_ADJUDICATION_SNAPSHOT_v0: DISCHARGED_v0_NON_AUTHORITATIVE_ARCHIVE_ONLY`
 - `QFT_FULL_DERIVATION_TOKEN_FLIP_DRYRUN_HANDOFF_ARTIFACT_v0: qft_full_derivation_token_flip_dryrun_handoff_cycle42_v0`
 - `formal/output/qft_full_derivation_token_flip_dryrun_handoff_cycle42_v0.json`
 - `formal/python/tests/test_qft_full_derivation_token_flip_dryrun_handoff_cycle42_gate.py`
