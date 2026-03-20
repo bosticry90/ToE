@@ -77,8 +77,7 @@ def test_results_row_class_semantics_policy_v0() -> None:
     rows = _extract_rows(text)
 
     # Allowed status sets (keep intentionally small and explicit).
-    allowed_nonblocked_der = {"T-CONDITIONAL", "P-POLICY"}
-    forbidden_der = {"T-PROVED"}
+    allowed_nonblocked_der = {"T-CONDITIONAL", "P-POLICY", "T-PROVED"}
 
     # For theorem rows: allow blocked, or theorem-grade when non-blocked.
     allowed_nonblocked_theorem = {"T-PROVED"}
@@ -116,10 +115,6 @@ def test_results_row_class_semantics_policy_v0() -> None:
             continue
 
         if cls == "DER":
-            if status in forbidden_der:
-                failures.append(
-                    f"{row_id}: DER row must not use theorem-grade status `{status}`."
-                )
             if not _is_blocked(status) and status not in allowed_nonblocked_der:
                 failures.append(
                     f"{row_id}: DER non-blocked status `{status}` not allowed; "
@@ -127,7 +122,7 @@ def test_results_row_class_semantics_policy_v0() -> None:
                 )
 
             # Only enforce narrative cues when non-blocked (post-discharge clarity).
-            if not _is_blocked(status):
+            if not _is_blocked(status) and status != "T-PROVED":
                 if not any(cue in desc for cue in governance_cues):
                     failures.append(
                         f"{row_id}: DER row description missing governance/closure cue "

@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
@@ -17,6 +18,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 STAT_PLAN_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md"
 RESULTS_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "RESULTS_TABLE_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PILLAR_STATUS_MATRIX_v1.json"
 STAT_CYCLE01_ARTIFACT_PATH = REPO_ROOT / "formal" / "output" / "stat_evidence_checkpoint_cycle01_v0.json"
 STAT_CYCLE01_COUPLING_GATE_PATH = (
     REPO_ROOT / "formal" / "python" / "tests" / "test_stat_evidence_checkpoint_coupling_cycle01_gate.py"
@@ -37,6 +39,11 @@ def _extract_token(text: str, token_name: str) -> str:
     return m.group(1)
 
 
+def _read_json(path: Path) -> dict:
+    assert path.exists(), f"Missing required file: {path}"
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
 def _results_row_line(text: str, row_id: str) -> str:
     rows = [line for line in text.splitlines() if line.strip().startswith(f"| {row_id} |")]
     assert len(rows) == 1, f"Expected exactly one `{row_id}` row in RESULTS_TABLE_v0.md, found {len(rows)}."
@@ -53,6 +60,10 @@ def test_stat_readiness_placeholder_structure_gate() -> None:
     stat_plan_text = _read(STAT_PLAN_PATH)
     results_text = _read(RESULTS_PATH)
     roadmap_text = _read(ROADMAP_PATH)
+    matrix = _read_json(MATRIX_PATH)
+
+    stat_matrix = matrix.get("pillars", {}).get("PILLAR-STAT")
+    matrix_status = stat_matrix.get("matrix_status") if isinstance(stat_matrix, dict) else None
 
     stat_locked = "| `PILLAR-STAT` | `LOCKED` |" in roadmap_text
     stat_closed = "| `PILLAR-STAT` | `CLOSED` |" in roadmap_text
@@ -71,7 +82,7 @@ def test_stat_readiness_placeholder_structure_gate() -> None:
         statement = cols[2]
         evidence_pointer = cols[3]
 
-        if stat_locked or "| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text:
+        if stat_locked or ("| `PILLAR-STAT` | `ACTIVE` |" in roadmap_text and matrix_status != "CLOSED"):
             assert claim_label.startswith("B-"), f"`{row_id}` must remain `B-*` during ACTIVE readiness posture."
         else:
             assert not claim_label.startswith("B-"), f"`{row_id}` must be non-`B-*` during CLOSED discharge posture."

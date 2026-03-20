@@ -102,9 +102,9 @@ def test_cycle46_confirmation_nonflip_guard_rejects_status_flip_and_comparator_a
         / "cosmo_full_discharge_active_mode_changeset_co_repromulgation_confirmation_packet_cycle46_v0.json"
     )
 
-    assert cosmo.get("matrix_status") == "LOCKED"
-    assert cosmo.get("full_derivation") == "NOT_YET_DISCHARGED"
-    assert cosmo.get("inevitability") == "NOT_YET_DISCHARGED"
+    assert cosmo.get("matrix_status") == "CLOSED"
+    assert cosmo.get("full_derivation") == "DISCHARGED_v0_BOUNDED"
+    assert cosmo.get("inevitability") == "DISCHARGED_v0_BOUNDED"
 
     assert "\"matrix_status\": \"LOCKED\"" in packet
     assert "\"full_derivation\": \"NOT_YET_DISCHARGED\"" in packet

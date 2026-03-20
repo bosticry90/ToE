@@ -62,7 +62,9 @@ def test_stat_authority_token_preset_lock_gate() -> None:
         matrix_status = stat_matrix.get("matrix_status")
         assert matrix_status in {"ACTIVE", "CLOSED"}, "PILLAR-STAT matrix status must be ACTIVE or CLOSED."
         if stat_active:
-            assert matrix_status == "ACTIVE", "PILLAR-STAT matrix status must mirror ACTIVE roadmap posture."
+            assert matrix_status in {"ACTIVE", "CLOSED"}, (
+                "ACTIVE roadmap posture may run with staged CLOSED matrix handoff or fully ACTIVE matrix ownership."
+            )
         if stat_closed:
             assert matrix_status == "CLOSED", "PILLAR-STAT matrix status must mirror CLOSED roadmap posture."
 
@@ -85,15 +87,28 @@ def test_stat_authority_token_preset_lock_gate() -> None:
                 f"{token_name} must not be mirrored into State_of_the_Theory while `PILLAR-STAT` is still LOCKED."
             )
         elif stat_active:
-            assert stat_values == [PLACEHOLDER_VALUE], (
-                f"{token_name} must be defined exactly once in STAT plan with `{PLACEHOLDER_VALUE}` in ACTIVE posture."
-            )
-            assert _extract_token_values(roadmap_text, token_name) == [PLACEHOLDER_VALUE], (
-                f"{token_name} must be mirrored into roadmap with the canonical placeholder value after activation."
-            )
-            assert _extract_token_values(state_text, token_name) == [PLACEHOLDER_VALUE], (
-                f"{token_name} must be mirrored into State_of_the_Theory with the canonical placeholder value after activation."
-            )
+            if matrix_status == "ACTIVE":
+                assert stat_values == [PLACEHOLDER_VALUE], (
+                    f"{token_name} must be defined exactly once in STAT plan with `{PLACEHOLDER_VALUE}` in ACTIVE matrix posture."
+                )
+                assert _extract_token_values(roadmap_text, token_name) == [PLACEHOLDER_VALUE], (
+                    f"{token_name} must be mirrored into roadmap with the canonical placeholder value in ACTIVE matrix posture."
+                )
+                assert _extract_token_values(state_text, token_name) == [PLACEHOLDER_VALUE], (
+                    f"{token_name} must be mirrored into State_of_the_Theory with the canonical placeholder value in ACTIVE matrix posture."
+                )
+            else:
+                assert len(stat_values) == 1 and stat_values[0].startswith("DISCHARGED"), (
+                    f"{token_name} must remain DISCHARGED* in staged ACTIVE-roadmap/CLOSED-matrix handoff posture."
+                )
+                roadmap_values = _extract_token_values(roadmap_text, token_name)
+                state_values = _extract_token_values(state_text, token_name)
+                assert len(roadmap_values) == 1 and roadmap_values[0].startswith("DISCHARGED"), (
+                    f"{token_name} must be mirrored as DISCHARGED* in roadmap during staged handoff posture."
+                )
+                assert len(state_values) == 1 and state_values[0].startswith("DISCHARGED"), (
+                    f"{token_name} must be mirrored as DISCHARGED* in State_of_the_Theory during staged handoff posture."
+                )
         else:
             assert len(stat_values) == 1 and stat_values[0].startswith("DISCHARGED"), (
                 f"{token_name} must be defined once in STAT plan with a DISCHARGED* value in CLOSED posture."

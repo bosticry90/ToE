@@ -27,7 +27,7 @@ def _read(path: Path) -> str:
 
 
 def _expected_micro_indices() -> list[str]:
-    return [f"{i:02d}" for i in range(1, 28)]
+    return [f"{i:02d}" for i in range(1, 30)]
 
 
 def _extract_micro_doc_paths(target_text: str) -> dict[str, str]:

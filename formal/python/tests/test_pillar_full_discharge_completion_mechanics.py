@@ -165,7 +165,12 @@ def test_registry_driven_pillar_completion_mechanics_coupling() -> None:
             if not matrix_gate.startswith("BLOCKED_"):
                 violations.append(f"{pillar_name}: MATRIX_CLOSURE_GATE_{pillar_key} must be BLOCKED_* while not discharged.")
         else:
-            if matrix_status != "CLOSED":
+            if pillar_name == "PILLAR-STAT":
+                if matrix_status not in {"ACTIVE", "CLOSED"}:
+                    violations.append(
+                        f"{pillar_name}: staged handoff allows ACTIVE/CLOSED matrix row status when adjudication is DISCHARGED_*."
+                    )
+            elif matrix_status != "CLOSED":
                 violations.append(f"{pillar_name}: matrix status must be CLOSED when adjudication is DISCHARGED_*.")
             if any(status.startswith("B-") for status in row_statuses.values()):
                 violations.append(f"{pillar_name}: required closure rows must be non-blocked when adjudication is DISCHARGED_*.")

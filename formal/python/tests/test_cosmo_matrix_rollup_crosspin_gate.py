@@ -22,6 +22,46 @@ ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 COSMO_TARGET_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md"
 
+# Literal cross-pin token residency block for nonflip micro21-29 rollup gates.
+COSMO_NONFLIP_MICRO21_29_ROLLUP_TOKENS = {
+    "dryrun_nonflip_execution_boundary_status_doc",
+    "dryrun_nonflip_execution_boundary_status_gate",
+    "dryrun_nonflip_execution_boundary_status_policy",
+    "COSMO_DRYRUN_NONFLIP_EXECUTION_BOUNDARY_STATUS_POLICY_v0",
+    "dryrun_nonflip_execution_custody_parity_packet_doc",
+    "dryrun_nonflip_execution_custody_parity_packet_gate",
+    "dryrun_nonflip_execution_custody_parity_packet_policy",
+    "COSMO_DRYRUN_NONFLIP_EXECUTION_CUSTODY_PARITY_PACKET_POLICY_v0",
+    "dryrun_nonflip_bounded_scope_audit_doc",
+    "dryrun_nonflip_bounded_scope_audit_gate",
+    "dryrun_nonflip_bounded_scope_audit_policy",
+    "COSMO_DRYRUN_NONFLIP_BOUNDED_SCOPE_AUDIT_POLICY_v0",
+    "dryrun_nonflip_custody_chain_parity_audit_doc",
+    "dryrun_nonflip_custody_chain_parity_audit_gate",
+    "dryrun_nonflip_custody_chain_parity_audit_policy",
+    "COSMO_DRYRUN_NONFLIP_CUSTODY_CHAIN_PARITY_AUDIT_POLICY_v0",
+    "dryrun_nonflip_execution_boundary_recertification_packet_doc",
+    "dryrun_nonflip_execution_boundary_recertification_packet_gate",
+    "dryrun_nonflip_execution_boundary_recertification_packet_policy",
+    "COSMO_DRYRUN_NONFLIP_EXECUTION_BOUNDARY_RECERTIFICATION_PACKET_POLICY_v0",
+    "dryrun_nonflip_execution_custody_continuity_audit_doc",
+    "dryrun_nonflip_execution_custody_continuity_audit_gate",
+    "dryrun_nonflip_execution_custody_continuity_audit_policy",
+    "COSMO_DRYRUN_NONFLIP_EXECUTION_CUSTODY_CONTINUITY_AUDIT_POLICY_v0",
+    "dryrun_nonflip_custody_boundary_recertification_audit_doc",
+    "dryrun_nonflip_custody_boundary_recertification_audit_gate",
+    "dryrun_nonflip_custody_boundary_recertification_audit_policy",
+    "COSMO_DRYRUN_NONFLIP_CUSTODY_BOUNDARY_RECERTIFICATION_AUDIT_POLICY_v0",
+    "dryrun_nonflip_execution_boundary_continuity_recertification_audit_doc",
+    "dryrun_nonflip_execution_boundary_continuity_recertification_audit_gate",
+    "dryrun_nonflip_execution_boundary_continuity_recertification_audit_policy",
+    "COSMO_DRYRUN_NONFLIP_EXECUTION_BOUNDARY_CONTINUITY_RECERTIFICATION_AUDIT_POLICY_v0",
+    "dryrun_nonflip_execution_custody_recertification_continuity_audit_doc",
+    "dryrun_nonflip_execution_custody_recertification_continuity_audit_gate",
+    "dryrun_nonflip_execution_custody_recertification_continuity_audit_policy",
+    "COSMO_DRYRUN_NONFLIP_EXECUTION_CUSTODY_RECERTIFICATION_CONTINUITY_AUDIT_POLICY_v0",
+}
+
 
 def _read(path: Path) -> str:
     assert path.exists(), f"Missing required file: {path}"

@@ -47,26 +47,42 @@ def test_cosmo_closure_rows_are_declared_and_blocked() -> None:
     required_rows = [row.strip() for row in required_rows_raw.split(",") if row.strip()]
     assert required_rows == ["TOE-COSMO-DER-01", "TOE-COSMO-DER-02"]
 
+    adjudication = _extract_token_value("COSMO_BACKGROUND_ADJUDICATION", roadmap)
     for row_id in required_rows:
         status = _results_row_status(row_id, results)
-        assert status.startswith("B-"), f"COSMO closure row must stay blocked pre-discharge: {row_id} -> {status}"
+        if adjudication == "NOT_YET_DISCHARGED":
+            assert status.startswith("B-"), f"COSMO closure row must stay blocked pre-discharge: {row_id} -> {status}"
+        else:
+            assert not status.startswith("B-"), f"COSMO closure row must be non-blocked after discharge: {row_id} -> {status}"
 
 
 def test_cosmo_roadmap_gates_remain_blocked_until_discharge() -> None:
     roadmap = _read(ROADMAP_PATH)
+    adjudication = _extract_token_value("COSMO_BACKGROUND_ADJUDICATION", roadmap)
 
-    assert _extract_token_value("PILLAR-COSMO_PHYSICS_STATUS", roadmap).startswith("OPEN_")
-    assert _extract_token_value("PILLAR-COSMO_GOVERNANCE_STATUS", roadmap).startswith("OPEN_")
-    assert _extract_token_value("PROCEED_GATE_COSMO", roadmap).startswith("BLOCKED_")
-    assert _extract_token_value("MATRIX_CLOSURE_GATE_COSMO", roadmap).startswith("BLOCKED_")
+    if adjudication == "NOT_YET_DISCHARGED":
+        assert _extract_token_value("PILLAR-COSMO_PHYSICS_STATUS", roadmap).startswith("OPEN_")
+        assert _extract_token_value("PILLAR-COSMO_GOVERNANCE_STATUS", roadmap).startswith("OPEN_")
+        assert _extract_token_value("PROCEED_GATE_COSMO", roadmap).startswith("BLOCKED_")
+        assert _extract_token_value("MATRIX_CLOSURE_GATE_COSMO", roadmap).startswith("BLOCKED_")
+    else:
+        assert adjudication.startswith("DISCHARGED")
+        assert _extract_token_value("PILLAR-COSMO_PHYSICS_STATUS", roadmap).startswith("CLOSED_")
+        assert _extract_token_value("PILLAR-COSMO_GOVERNANCE_STATUS", roadmap).startswith("CLOSED_")
+        assert _extract_token_value("PROCEED_GATE_COSMO", roadmap).startswith("ALLOWED_")
+        assert _extract_token_value("MATRIX_CLOSURE_GATE_COSMO", roadmap).startswith("ALLOWED_")
 
 
 def test_cosmo_target_and_state_pin_discharge_lane_tokens() -> None:
     target = _read(COSMO_TARGET_PATH)
     state = _read(STATE_PATH)
 
+    assert (
+        "COSMO_BACKGROUND_ADJUDICATION: NOT_YET_DISCHARGED" in state
+        or "COSMO_BACKGROUND_ADJUDICATION: DISCHARGED_v0_BOUNDED" in state
+    ), "State must expose either pre-discharge or discharged COSMO adjudication token."
+
     required_tokens = [
-        "COSMO_BACKGROUND_ADJUDICATION: NOT_YET_DISCHARGED",
         "COSMO_BACKGROUND_FULL_DISCHARGE_EXIT_ROW_01_STATUS_v0: TOE-COSMO-DER-01_B-BLOCKED_PENDING_DISCHARGE",
         "COSMO_BACKGROUND_FULL_DISCHARGE_EXIT_ROW_02_STATUS_v0: TOE-COSMO-DER-02_B-BLOCKED_PENDING_DISCHARGE",
         "REQUIRED_COSMO_CLOSURE_ROWS: TOE-COSMO-DER-01,TOE-COSMO-DER-02",
