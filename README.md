@@ -6,6 +6,13 @@ Tooling is frozen except for bugfixes that preserve existing contracts.
 Current work is in the discriminative science phase: evidence-only runs, candidate pruning, and inventory updates.
 Governance status is terminal-satisfied under bounded non-claim semantics; seam-level physics closure remains incomplete.
 
+RELEASE-GATE POLICY (R1-A, 2026-03-20)
+- Governance is the prerequisite lane for release readiness.
+- Full pytest is the authoritative branch-health lane.
+- A branch is release-gate ready only when both lanes are green.
+- Governance lane command: `pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1`
+- Branch-health lane command: `./py.ps1 -m pytest formal/python/tests -q`
+
 Purpose of This Project
 This project is an honest attempt to explore whether a very simple idea can be pushed far enough to matter.
 The long-term aspiration is to understand whether a single underlying structure could, in principle, support or organize the many laws we use to describe the universe. This aspiration is often called a Theory of Everything.

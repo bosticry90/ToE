@@ -18,6 +18,13 @@ Non-claim boundary:
 - no comparator-lane authorization by itself.
 - no external truth claim.
 
+Release-gate truth policy (R1-A, 2026-03-20):
+- Governance lane is the prerequisite lane for release-gate eligibility.
+- Full pytest lane is the authoritative branch-health lane.
+- Release-gate posture is satisfied only when both lanes are green.
+- Governance lane command: `pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1`
+- Branch-health lane command: `./py.ps1 -m pytest formal/python/tests -q`
+
 Repository-wide governance and physics status audit checkpoint (2026-03-15):
 - Audit release doc pointer: `formal/docs/release/REPO_STATUS_AUDIT_20260315_v0.md`.
 - Audit checkpoint pointer: `formal/output/repo_status_audit_20260315_checkpoint_v0.json`.

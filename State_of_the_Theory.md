@@ -13,6 +13,13 @@ Canonical status summary (current):
 - Packet41 disposition: HOLD_RETAINED_MISSING_NUMERIC_INPUTS
 - Scalar submission lane: READY_FOR_BOUNDED_PAPER1_SUBMISSION_PACKAGE
 
+Release-gate truth policy checkpoint (R1-A, 2026-03-20):
+- `RELEASE_GATE_GOVERNANCE_LANE_v0: PREREQUISITE`
+- `RELEASE_GATE_GOVERNANCE_COMMAND_v0: pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1`
+- `RELEASE_GATE_BRANCH_HEALTH_LANE_v0: AUTHORITATIVE_FULL_PYTEST`
+- `RELEASE_GATE_BRANCH_HEALTH_COMMAND_v0: ./py.ps1 -m pytest formal/python/tests -q`
+- `RELEASE_GATE_POLICY_v0: GOVERNANCE_PREREQUISITE_PLUS_FULL_PYTEST_AUTHORITATIVE_BRANCH_HEALTH`
+
 Architecture consolidation phase checkpoint (2026-03-18, CE-05 slice activation):
 - Program tracker pointer: `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md`.
 - Consolidation charter pointer: `formal/docs/release/ARCHITECTURE_CONSOLIDATION_PHASE_v0.md`.
