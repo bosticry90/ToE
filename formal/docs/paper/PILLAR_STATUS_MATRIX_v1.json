@@ -235,6 +235,8 @@
       "dryrun_nonflip_execution_boundary_continuity_recertification_audit_doc": "formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_28_DRYRUN_NONFLIP_EXECUTION_BOUNDARY_CONTINUITY_RECERTIFICATION_AUDIT_v0.md",
       "full_discharge_active_mode_changeset_endorsement_artifact": "formal/output/cosmo_full_discharge_active_mode_changeset_endorsement_packet_cycle12_v0.json",
       "matrix_status": "CLOSED",
+      "micro21_27_canonical_family": "DRYRUN_NONFLIP_EXECUTION_BOUNDARY_CUSTODY_PARITY_BOUNDED_SCOPE",
+      "micro21_27_legacy_family_status": "DRYRUN_CUSTODY_CONFIRMATION_CHAIN_NON_AUTHORITATIVE_ARCHIVE_ONLY",
       "full_discharge_active_transition_authorization_gate": "LOCKED_UNTIL_ACTIVE_MODE_CHANGESET_AND_DISCHARGE_AUTHORITY_APPROVAL",
       "full_discharge_active_mode_changeset_attestation_artifact": "formal/output/cosmo_full_discharge_active_mode_changeset_attestation_packet_cycle06_v0.json",
       "full_discharge_active_mode_changeset_gate": "READINESS_CHECKLIST_AND_AUTHORIZATION_GATES_REQUIRED",
