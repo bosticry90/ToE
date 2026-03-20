@@ -14,6 +14,11 @@ Scope:
 Current adjudication posture:
 - `COSMO_BACKGROUND_ADJUDICATION: DISCHARGED_v0_BOUNDED`
 
+R3-C family authority interpretation:
+- `COSMO_MICRO21_27_CANONICAL_FAMILY_v0: DRYRUN_NONFLIP_EXECUTION_BOUNDARY_CUSTODY_PARITY_BOUNDED_SCOPE`
+- `COSMO_MICRO21_27_LEGACY_FAMILY_STATUS_v0: DRYRUN_CUSTODY_CONFIRMATION_CHAIN_NON_AUTHORITATIVE_ARCHIVE_ONLY`
+- micro21-27 custody-confirmation-chain progress literals in this summary are retained as historical continuity markers and are not live canonical authority.
+
 Micro-cycle status snapshot:
 - `COSMO_BG_MICRO01_PROGRESS_v0: OBJECT_SURFACE_TOKEN_PINNED`
 - `COSMO_BG_MICRO02_PROGRESS_v0: EXPANSION_LAW_SURFACE_TOKEN_PINNED`

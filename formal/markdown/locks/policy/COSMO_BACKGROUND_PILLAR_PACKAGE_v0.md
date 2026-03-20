@@ -18,6 +18,11 @@ Reopen triggers:
 - `REOPEN_TRIGGER_COSMO_SCOPE_BOUNDARY_REGRESSION_v0`
 - `REOPEN_TRIGGER_COSMO_PACKAGE_CONTENT_MISMATCH_v0`
 
+R3-C family authority interpretation:
+- `COSMO_MICRO21_27_CANONICAL_FAMILY_v0: DRYRUN_NONFLIP_EXECUTION_BOUNDARY_CUSTODY_PARITY_BOUNDED_SCOPE`
+- `COSMO_MICRO21_27_LEGACY_FAMILY_STATUS_v0: DRYRUN_CUSTODY_CONFIRMATION_CHAIN_NON_AUTHORITATIVE_ARCHIVE_ONLY`
+- legacy custody-confirmation-chain micro21-27 document/artifact entries below are retained for archive continuity and are not active canonical-family authority.
+
 Required package contents:
 - `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_MICRO_01_OBJECT_SURFACE_v0.md`
