@@ -3346,6 +3346,7 @@ Legacy historical snapshot (non-authoritative for active adjudication):
 ## COSMO R0-C.1 TOKEN PARITY PATCH (2026-03-19)
 - Auto-generated from failing COSMO gate expectations.
 - Non-authoritative staging patch for R0-C.1 burn-down.
+- R3-B retirement posture: custody-confirmation-chain micro21-27 entries are archive-only and non-authoritative for active canonical-family adjudication.
 
 - `COSMO_BACKGROUND_ADJUDICATION (historical): NOT_YET_DISCHARGED`
 - `COSMO_BG_MICRO21_DRYRUN_NONFLIP_EXECUTION_BOUNDARY_STATUS_ADJUDICATION: NOT_YET_DISCHARGED`

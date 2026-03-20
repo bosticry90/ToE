@@ -237,6 +237,7 @@
       "matrix_status": "CLOSED",
       "micro21_27_canonical_family": "DRYRUN_NONFLIP_EXECUTION_BOUNDARY_CUSTODY_PARITY_BOUNDED_SCOPE",
       "micro21_27_legacy_family_status": "DRYRUN_CUSTODY_CONFIRMATION_CHAIN_NON_AUTHORITATIVE_ARCHIVE_ONLY",
+      "micro21_27_legacy_family_retirement": "LEGACY_CHAIN_POINTERS_RETAINED_FOR_ARCHIVE_CONTINUITY_ONLY",
       "full_discharge_active_transition_authorization_gate": "LOCKED_UNTIL_ACTIVE_MODE_CHANGESET_AND_DISCHARGE_AUTHORITY_APPROVAL",
       "full_discharge_active_mode_changeset_attestation_artifact": "formal/output/cosmo_full_discharge_active_mode_changeset_attestation_packet_cycle06_v0.json",
       "full_discharge_active_mode_changeset_gate": "READINESS_CHECKLIST_AND_AUTHORIZATION_GATES_REQUIRED",
