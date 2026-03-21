@@ -86,3 +86,22 @@ If decision is `DEFER_FOCUSED_ONLY_v0`:
 - retain current focused-bundle policy
 - perform no governance-suite edits
 - continue recording cycle-level stability evidence
+
+## 9) Closing Checkpoint
+
+Closing decision checkpoint:
+- `e1ddf38` is the canonical closeout commit for the suite-promotion question in this tranche.
+
+Operational consequence:
+1. focused GR01 packet-phase bundle remains active,
+2. governance-suite promotion is out of scope,
+3. promotion may be reopened only via a new bounded decision slice.
+
+## 10) Methodology-Note Boundary
+
+Out-of-scope notes are intentionally excluded from this tranche:
+1. `Architecture-Governance Imps and Sigs.txt`
+2. `Physics Imps and Sigs.txt`
+
+Boundary rule:
+- Integrate methodology-note content only through a separate methodology-integration slice, not through this GR01 promotion-decision tranche.
