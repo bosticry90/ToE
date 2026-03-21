@@ -2947,13 +2947,15 @@ theorem gr01_inevitability_positive_dependency_core_lemma_bundle_v0
 theorem gr01_inevitability_physics_substance_dependency_bundle_v0
     (hMin : GR01InevitabilityMinimizedAssumptions_v0) :
     GR01InevitabilityBoundedClosureSurface_v0 := by
+  have hCoreBundle :=
+    gr01_inevitability_positive_dependency_core_lemma_bundle_v0 hMin
   have hFDTransport :=
     actionRep32_fd_expansion_and_vanishing_to_radial_evaluator_transport_constructor_v0
   have hOperatorTransport :=
     actionRep32_el_implies_operator_residual_transport_from_fd_expansion_constructor_of_rac_default_binding_from_probe_model_v0
   have hWeakFieldClosure :=
     actionRep32_weak_field_poisson_limit_under_default_binding_assumptions_of_action_native_transport_constructor_from_fd_expansion_v0
-  exact gr01_inevitability_necessity_under_minimized_assumptions_v0 hMin
+  exact hCoreBundle.left
 
 theorem gr01_inevitability_endpoint_counterfactual_breaks_without_no_bridge_dependency_v0
     (hMin : GR01InevitabilityMinimizedAssumptions_v0)
@@ -2967,6 +2969,8 @@ theorem gr01_inevitability_endpoint_counterfactual_breaks_without_no_bridge_depe
 theorem gr01_inevitability_independent_necessity_class_from_endpoint_counterfactual_v0
     (hMin : GR01InevitabilityMinimizedAssumptions_v0) :
     GR01InevitabilityConstructiveRouteClassification_v0 hMin := by
+  have hCoreBundle :=
+    gr01_inevitability_positive_dependency_core_lemma_bundle_v0 hMin
   have hPhysics :=
     gr01_inevitability_physics_substance_dependency_bundle_v0 hMin
   have hNoMissingNoBridgeDependency :
@@ -2977,7 +2981,7 @@ theorem gr01_inevitability_independent_necessity_class_from_endpoint_counterfact
         hMin
         hMissingNoBridgeDependency)
         hPhysics
-  exact hPhysics
+        exact hCoreBundle.left
 
 end
 

@@ -24,6 +24,7 @@ Inevitability obligation linkage (must remain synchronized with gate target):
   - `gr01_inevitability_structural_classification_of_constructive_route_v0`
   - `gr01_inevitability_discharge_ready_bundle_v0`
   - `gr01_inevitability_route_bundle_without_bridge_shortcuts_v0`
+  - `gr01_inevitability_positive_dependency_core_lemma_bundle_v0`
 - minimized-assumption anchor token:
   - `GR01InevitabilityMinimizedAssumptions_v0`
 - named-route assumption tokens:
