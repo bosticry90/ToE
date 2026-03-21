@@ -27,6 +27,12 @@ Overall integration posture:
 - Methodology is formally integrated for bounded GR01 focused usage.
 - Governance-suite elevation remains intentionally deferred.
 
+Pilot-state closeout checkpoint:
+- `321f24b` is the canonical closeout checkpoint for this workflow-simplification pilot state.
+
+Current truth-surface rule:
+- Use this status artifact as the active truth surface for "where are we at" on workflow-simplification integration.
+
 ## 2) Completed Integration Surfaces
 
 1. `New Workflow Constitution.txt`
@@ -57,6 +63,11 @@ Implications:
 1. keep focused GR01 packet-phase validation active
 2. do not edit governance suite in this tranche
 3. reopen promotion only via explicit bounded decision slice
+
+Checkpoint chain (control story):
+1. `617b799` - stability evidence + promotion decision brief created
+2. `e1ddf38` - formal defer decision encoded (`DEFER_FOCUSED_ONLY_v0`)
+3. `321f24b` - defer checkpoint closed and integration status recorded
 
 ## 5) Remaining Work (bounded)
 
