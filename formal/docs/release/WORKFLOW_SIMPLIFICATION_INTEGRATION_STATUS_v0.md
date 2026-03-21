@@ -68,6 +68,11 @@ Checkpoint chain (control story):
 1. `617b799` - stability evidence + promotion decision brief created
 2. `e1ddf38` - formal defer decision encoded (`DEFER_FOCUSED_ONLY_v0`)
 3. `321f24b` - defer checkpoint closed and integration status recorded
+4. `f6a5f62` - precision clarification naming `321f24b` as canonical pilot-state closeout and this file as truth surface
+
+Interpretation rule:
+- `321f24b` remains the pilot-state closeout checkpoint.
+- `f6a5f62` is a clarification commit, not a reopening or promotion event.
 
 ## 5) Remaining Work (bounded)
 
@@ -78,3 +83,6 @@ Checkpoint chain (control story):
 ## 6) Scope Guard
 
 This status record supersedes outdated assumptions that protocol, packet consolidation, or checklist extension remain unimplemented.
+
+Workflow-line closure rule:
+- Keep this workflow-simplification line closed unless a new bounded rollout or promotion slice is explicitly opened.
