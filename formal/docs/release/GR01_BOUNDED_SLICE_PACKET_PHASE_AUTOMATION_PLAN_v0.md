@@ -82,6 +82,11 @@ Phase B status:
 Phase C:
 - consider promotion into governance suite only after explicit authorization
 
+Phase C status:
+- Decision set to `DEFER_FOCUSED_ONLY_v0`.
+- Governance-suite promotion is deferred in the current tranche.
+- Active policy remains focused-bundle-only.
+
 ## 6) Success Criteria
 
 Automation phase is successful when:

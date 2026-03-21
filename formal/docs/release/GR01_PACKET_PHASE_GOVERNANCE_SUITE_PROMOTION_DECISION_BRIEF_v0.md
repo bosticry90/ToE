@@ -61,16 +61,19 @@ Option C (Not recommended now):
 ## 6) Recommendation
 
 Recommended decision:
-- Option B with bounded scope and explicit non-semantic guardrails.
+- Option A (`DEFER_FOCUSED_ONLY_v0`).
 
-Required safeguards if approved:
-1. No theorem-semantics assertions in this gate.
-2. No cross-pillar expansion in same tranche.
-3. If instability/noise appears, roll back to focused-bundle-only mode.
+Reason:
+- Evidence is strong for focused GR01 use, but still lane-local for governance-suite promotion.
+
+Immediate action:
+1. Keep packet-phase gate in focused GR01 bundle.
+2. Make no governance-suite edits in this tranche.
+3. Reassess promotion after additional repeated-cycle or second-lane evidence.
 
 ## 7) Decision Token (manual)
 
-`GR01_PACKET_PHASE_GOV_SUITE_PROMOTION_DECISION_v0: PENDING`
+`GR01_PACKET_PHASE_GOV_SUITE_PROMOTION_DECISION_v0: DEFER_FOCUSED_ONLY_v0`
 
 Allowed values:
 1. `APPROVE_BOUNDED_PROMOTION_v0`
@@ -79,7 +82,7 @@ Allowed values:
 
 ## 8) No-Action Clause
 
-If decision remains pending:
+If decision is `DEFER_FOCUSED_ONLY_v0`:
 - retain current focused-bundle policy
 - perform no governance-suite edits
 - continue recording cycle-level stability evidence
