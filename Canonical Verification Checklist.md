@@ -3,6 +3,23 @@ Canonical Verification Checklist
 ITEM ID:
 Current status: Locked
 
+Slice metadata:
+- Slice ID:
+- Boundary anchor:
+- Objective (one line):
+
+Representation-first triage:
+- Reduced object named? YES / NO
+- Blocker class tagged? ALGEBRAIC / SEMANTIC / REPRESENTATIONAL / MIXED
+- Comparator or symmetry-reduced alternative considered? YES / NO
+- Triage note pointer:
+
+Operational lifecycle coverage:
+- Search artifact present? YES / NO
+- Referee objection pass recorded? YES / NO
+- Repair envelope declared? YES / NO
+- Certification lane declared? Lean / Pytest / Lock / Mixed
+
 Intent (Markdown):
 - File:
 - Section:
@@ -20,8 +37,22 @@ Structure (Lean):
 - Lemmas present? YES / NO
 - Any axioms used? YES / NO (list)
 
+Repair discipline:
+- File envelope declared? YES / NO
+- Disallowed surfaces untouched? YES / NO
+- New gate family introduced? YES / NO
+- Stop-condition hit? YES / NO
+
+Certification discipline:
+- Exact validation ladder recorded? YES / NO
+- Validation result summary recorded? YES / NO
+- Unresolved blocker explicitly stated? YES / NO
+- Next-lane decision rule applied? YES / NO
+
 Traceability:
 - All artifacts linked from inventory? YES / NO
+- Search/referee/repair/certify artifacts cross-linked? YES / NO
+- Authority-vs-consumer surfaces distinguished? YES / NO
 
 Verdict:
 - Remains Locked

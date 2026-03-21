@@ -147,6 +147,63 @@ modify inventory status
 
 justify correctness
 
+7️⃣ Bounded Slice Operational Protocol (Search -> Referee -> Repair -> Certify)
+
+This lifecycle is an operational discipline for bounded slices.
+
+It is not a new authority layer.
+
+Authority remains:
+
+1. Lean structural authority
+2. Gate predicates and enforced manifests
+3. Typed empirical artifacts and front-door bridge rules
+4. Python consequence checks
+
+Operational lifecycle for each bounded slice:
+
+A. Search (route discovery only)
+
+- Generate candidate theorem/comparator routes.
+- Enumerate candidate representations and reduced objects.
+- Record assumptions and failure risks explicitly.
+- Outputs are provisional and non-adjudicating.
+
+B. Referee (critical challenge)
+
+- Challenge algebraic, semantic, and regime assumptions.
+- Require at least one independent objection pass.
+- Identify hidden dependence, boundary errors, and scope drift.
+- Keep unresolved objections as explicit blockers.
+
+C. Repair (bounded correction)
+
+- Resolve only blockers inside the declared envelope.
+- Do not widen into new gate families unless rescoped.
+- Preserve anti-regrowth rules and non-claim status.
+
+D. Certify (closure under existing authority)
+
+- Certify only through Lean/tests/locks under current gates.
+- Record exact file envelope, validations run, and unresolved debt.
+- No status promotion by narrative alone.
+
+Representation-first triage is mandatory before opening a hard slice:
+
+- What reduced object is being targeted?
+- Is the blocker algebraic, semantic, or representational?
+- Can a comparator or symmetry-reduced object expose the same claim?
+- Is the current surface the wrong ontology level for the objective?
+
+Triage is a dispatch discipline, not a replacement for admissibility gates.
+
+Lifecycle boundaries:
+
+- Search artifacts do not certify truth.
+- Referee objections are first-class outputs.
+- Repair actions remain envelope-bounded.
+- Certification uses existing constitutional authorities only.
+
 
 Progress Without Completion (Explicit)
 
