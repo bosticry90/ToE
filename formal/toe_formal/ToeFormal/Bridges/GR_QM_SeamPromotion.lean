@@ -154,6 +154,20 @@ def cycle03SharedDynamicsTransportSemanticsSurface
   cycle03RegimeClosureSemanticsSurface witness /\
     witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0"
 
+/--
+Cycle03 shared-dynamics transport semantic-contract surface:
+the transport witness is carried together with explicit seam, class-token,
+compatibility-tag, and paired GR/QM regime-id equalities.
+-/
+def cycle03SharedDynamicsTransportSemanticContractSurface
+    (witness : GRQMSeamWitnessPackage) : Prop :=
+  cycle03SharedDynamicsTransportSemanticsSurface witness /\
+    witness.seamId = "SEAM-GR-QM" /\
+    witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0" /\
+    witness.classToken = "TOE_CK_CLASS_THEOREM_LINKED_v0" /\
+    witness.grAssumptionId = "GR_SHARED_DYNAMICS_REGIME_CLOSURE_v0" /\
+    witness.qmAssumptionId = "QM_SHARED_DYNAMICS_REGIME_CLOSURE_v0"
+
 /-- Cycle03 blocker-discharge package surface: shared-dynamics transport and regime-closure components are explicit together. -/
 def cycle03PhysicsBlockerDischargeSurface
     (witness : GRQMSeamWitnessPackage) : Prop :=
@@ -222,11 +236,33 @@ theorem gr_qm_cycle03_regime_closure_semantics_package
 theorem gr_qm_cycle03_shared_dynamics_transport_semantics_package
     (witness : GRQMSeamWitnessPackage)
     (h_regime_closure : cycle03RegimeClosureSemanticsSurface witness) :
-    cycle03SharedDynamicsTransportSemanticsSurface witness := by
+    cycle03SharedDynamicsTransportSemanticContractSurface witness := by
+  have h_completion : cycle03ClassFlipCompletionParitySurface witness :=
+    h_regime_closure.left
+  have h_normalized : cycle03ClassFlipNormalizedSurface witness :=
+    h_completion.left
+  have h_authorization : cycle03ClassFlipAuthorizationSurface witness :=
+    h_normalized.left
+  have h_seam : witness.seamId = "SEAM-GR-QM" :=
+    h_normalized.right.left
+  have h_compat : witness.compatibilityTag = "TOE_CK_CLASS_COMPATIBILITY_v0" :=
+    h_normalized.right.right.left
+  have h_class : witness.classToken = "TOE_CK_CLASS_THEOREM_LINKED_v0" :=
+    h_completion.right
+  have h_gr : witness.grAssumptionId = "GR_SHARED_DYNAMICS_REGIME_CLOSURE_v0" :=
+    h_regime_closure.right.left
+  have h_qm : witness.qmAssumptionId = "QM_SHARED_DYNAMICS_REGIME_CLOSURE_v0" :=
+    h_regime_closure.right.right
   have h_no_shortcut :
       witness.noShortcutTag = "NO_SHORTCUT_PROMOTION_CHECKLIST_PINNED_v0" :=
-    h_regime_closure.left.left.right.right.right
-  exact And.intro h_regime_closure h_no_shortcut
+    h_normalized.right.right.right
+  have h_transport : cycle03SharedDynamicsTransportSemanticsSurface witness :=
+    And.intro h_regime_closure h_no_shortcut
+  exact And.intro h_transport
+    (And.intro h_seam
+      (And.intro h_compat
+        (And.intro h_class
+          (And.intro h_gr h_qm))))
 
 /-- Cycle03 blocker-discharge package theorem: shared-dynamics transport and regime-closure components are assembled in one bounded witness form. -/
 theorem gr_qm_cycle03_transport_and_regime_closure_blocker_discharge_package
@@ -238,8 +274,10 @@ theorem gr_qm_cycle03_transport_and_regime_closure_blocker_discharge_package
     cycle03PhysicsBlockerDischargeSurface witness := by
   have h_regime_closure : cycle03RegimeClosureSemanticsSurface witness :=
     gr_qm_cycle03_regime_closure_semantics_package witness h_discharge h_class_token h_gr_regime h_qm_regime
-  have h_transport : cycle03SharedDynamicsTransportSemanticsSurface witness :=
+  have h_transport_contract : cycle03SharedDynamicsTransportSemanticContractSurface witness :=
     gr_qm_cycle03_shared_dynamics_transport_semantics_package witness h_regime_closure
+  have h_transport : cycle03SharedDynamicsTransportSemanticsSurface witness :=
+    h_transport_contract.left
   exact And.intro h_transport (And.intro h_gr_regime h_qm_regime)
 
 /-- Cycle03 explicit blocker discharge theorem: the named NOT_DISCHARGED blocker target is discharged by one package theorem. -/
