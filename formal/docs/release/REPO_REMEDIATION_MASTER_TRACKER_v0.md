@@ -368,6 +368,13 @@ Program intent: execute a strict truth-restoration sequence before any new theor
 - Activation validation result: `11 passed in 5.03s`
 - Next boundary: either (a) publish a bounded GR-QM completion handoff packet as CLOSED evidence for T06 or (b) select and activate a non-GR-QM-completion scientific target by explicit control-surface decision.
 
+## WS-10-T06 Supersede Resolution by QFT-GR Reactivation (2026-03-21)
+- Resolution status: `SUPERSEDED_BY_QFT_GR_REACTIVATION_v0`
+- Resolution posture: T06 is resolved by supersession, not by extending GR-QM completion-lane theorem work.
+- Successor lane activation: `WS-10-T07_QFT_GR_SEAM_REACTIVATION_AUTHORIZATION_BOUNDARY`.
+- Invariance constraints preserved: scalar freeze unchanged, workflow line unchanged, and `QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0` unchanged.
+- Resolution artifact pointer: `formal/docs/release/WS_10_T06_SUPERSEDE_BY_QFT_GR_REACTIVATION_DECISION_v0.md`.
+
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
 | --- | --- | --- | --- | --- |
@@ -416,7 +423,8 @@ Theory work may restart only when all rows below are satisfied:
 ## Active Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| WS-10-T06 | Theory Restart Pilot | Open bounded post-completion handoff boundary after canonical GR-QM seam closure | ACTIVE | user | WS-10-T05 | 2026-03-19: GR-QM seam completion is canonically closed (`SEAM_GR_QM_PHYSICS_COMPLETE_v0: YES`, blocker cleared); T06 now activates control-surface-only handoff semantics so next work is outside the completed GR-QM completion lane and legacy `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO` remains explicit non-authoritative technical debt pending split-gate dependency removal; validation rerun `11 passed in 5.03s` | Tracker/state/roadmap/WS-10 surfaces pin T06 handoff boundary and validation ladder is green without reopening GR-QM completion theorem work |
+| WS-10-T06 | Theory Restart Pilot | Open bounded post-completion handoff boundary after canonical GR-QM seam closure | DONE | user | WS-10-T05 | 2026-03-21: T06 resolved by explicit supersession to non-GR-QM successor lane; compatibility-token technical debt remains explicit and non-authoritative; no GR-QM theorem-lane reopen performed | T06 boundary is resolved and successor lane activation is explicitly pinned in tracker/state/roadmap/WS-10 surfaces |
+| WS-10-T07 | Theory Restart Pilot | Activate QFT-GR seam reactivation as the post-T06 authorized next lane | ACTIVE | user | WS-10-T06 | 2026-03-21: control-surface-only successor-lane authorization opened with scalar freeze and Packet42 hold invariance preserved; bounded validation ladder rerun is green (`14 passed in 5.87s`) including QFT-GR objective gate parity | Successor non-GR-QM lane is active in control surfaces with no packet42 hold release and no theorem-surface edits |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -479,7 +487,8 @@ Theory work may restart only when all rows below are satisfied:
 | WS-10-T03 | Theory Restart Pilot | Run bounded GR01 verification ladder | DONE | user | WS-10-T02 | 2026-03-18: exact bounded GR01 ladder recorded and green (`3 passed in 1.94s`) | Local GR01 gate results are recorded with exact command and exit status |
 | WS-10-T04 | Theory Restart Pilot | Record WS-10 first-slice checkpoint | DONE | user | WS-10-T03 | 2026-03-18: tracker/state/roadmap/WS-10 plan updated to close first pilot phase and select next bounded slice explicitly | First WS-10 pilot phase is closed with evidence and next bounded target is explicit |
 | WS-10-T05 | Theory Restart Pilot | Execute phase2 GR-QM seam-completion closeout after bounded regime-closure and shared-dynamics transport increments | DONE | user | WS-10-T04 | 2026-03-19: phase2 closeout commits `16b021c` and `5a2823d` pin positive seam-complete semantics, completion flip surfaces, and tracker/state/roadmap/WS-10 mirrors; closeout validation ladder green (`11 passed in 5.00s`) | GR-QM seam completion is canonically closed and mirrored, blocker is discharged, and next work must move to post-completion handoff/target-selection boundary |
-| WS-10-T06 | Theory Restart Pilot | Open bounded post-completion handoff boundary after canonical GR-QM seam closure | ACTIVE | user | WS-10-T05 | 2026-03-19: T06 is activated as control-surface-only follow-up to closed GR-QM completion; legacy compatibility token retention is explicitly technical debt with retirement trigger tied to split-gate continuity dependency removal; bounded parity/continuity rerun is green (`11 passed in 5.03s`) | Active control surfaces encode the post-completion boundary and prevent further in-lane GR-QM completion work without new explicit authorization |
+| WS-10-T06 | Theory Restart Pilot | Open bounded post-completion handoff boundary after canonical GR-QM seam closure | DONE | user | WS-10-T05 | 2026-03-21: T06 supersede resolution committed; successor non-GR-QM lane activation is now explicit and bounded | Post-completion boundary is resolved and no further GR-QM completion-lane work is authorized without new explicit decision |
+| WS-10-T07 | Theory Restart Pilot | Activate QFT-GR seam reactivation as the post-T06 authorized next lane | ACTIVE | user | WS-10-T06 | 2026-03-21: successor lane is activated at control-surface layer with Packet42 hold and scalar freeze unchanged; bounded-ladder evidence attached (`14 passed in 5.87s`) including QFT-GR objective parity gate | Successor lane is explicit across control surfaces and bounded-ladder evidence is attached |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
