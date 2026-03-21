@@ -31,6 +31,18 @@ CI truth contract checkpoint (R5-A, 2026-03-20):
 - Full pytest remains explicit branch-health CI lane.
 - Lean build is an explicit blocking CI lane targeting `formal/toe_formal`.
 
+R6 consolidation checkpoint (R6-CLOSEOUT, 2026-03-20):
+- R6 post-truth consolidation completed across three bounded duplicate families.
+- Consolidation helper surfaces:
+  - `formal/python/tests/cosmo_nonflip_gate_family_helper.py`
+  - `formal/python/tests/sr_m5_cycle_gate_family_helper.py`
+  - `formal/python/tests/qft_evidence_diversification_cycle_gate_family_helper.py`
+- Bounded validation evidence summary:
+  - COSMO micro21-27 nonflip subset: `42 passed in 4.48s`
+  - SR M5 cycle50-56 subset: `1 passed, 6 skipped in 4.44s`
+  - QFT evidence-diversification cycle02-08 subset: `7 passed in 4.68s`
+- Consolidation boundary decision: no additional family reduction is active until explicit authorization opens the next bounded slice.
+
 Repository-wide governance and physics status audit checkpoint (2026-03-15):
 - Audit release doc pointer: `formal/docs/release/REPO_STATUS_AUDIT_20260315_v0.md`.
 - Audit checkpoint pointer: `formal/output/repo_status_audit_20260315_checkpoint_v0.json`.

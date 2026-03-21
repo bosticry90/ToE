@@ -18,6 +18,15 @@ CI TRUTH CONTRACT (R5-A, 2026-03-20)
 - Governance remains a prerequisite lane before downstream CI lanes execute.
 - Lean lane target is the authoritative Lean project at `formal/toe_formal`.
 
+R6 CONSOLIDATION CHECKPOINT (R6-CLOSEOUT, 2026-03-20)
+- Post-truth duplicate-family consolidation is complete for three bounded families.
+- Consolidated helper families:
+   - `formal/python/tests/cosmo_nonflip_gate_family_helper.py` (COSMO micro21-27 nonflip)
+   - `formal/python/tests/sr_m5_cycle_gate_family_helper.py` (SR M5 cycle50-56)
+   - `formal/python/tests/qft_evidence_diversification_cycle_gate_family_helper.py` (QFT evidence-diversification cycle02-08)
+- All three bounded family subsets were green at consolidation time and retained original gate file paths.
+- Consolidation boundary decision: stop at R6 closeout and require explicit authorization before any additional family reduction slice.
+
 Purpose of This Project
 This project is an honest attempt to explore whether a very simple idea can be pushed far enough to matter.
 The long-term aspiration is to understand whether a single underlying structure could, in principle, support or organize the many laws we use to describe the universe. This aspiration is often called a Theory of Everything.
