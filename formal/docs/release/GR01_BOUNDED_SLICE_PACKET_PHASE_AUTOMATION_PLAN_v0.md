@@ -68,8 +68,16 @@ Phase A:
 - add focused gate file
 - run focused invocation only
 
+Phase A status:
+- COMPLETE (`test_gr01_bounded_slice_packet_phase_gate.py` added and focused run green)
+
 Phase B:
 - if stable for at least one additional live cycle, evaluate inclusion in bounded GR01 ladder extension
+
+Phase B status:
+- COMPLETE (additional stability run and fixed-ladder drift check both green)
+- Bounded-ladder extension approved for focused GR01 bundles
+- Evidence: `formal/docs/release/GR01_BOUNDED_SLICE_PACKET_PHASE_AUTOMATION_PHASEB_EXECUTION_v0.md`
 
 Phase C:
 - consider promotion into governance suite only after explicit authorization
