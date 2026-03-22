@@ -1,0 +1,88 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+
+def find_repo_root(start: Path) -> Path:
+    p = start.resolve()
+    while p != p.parent:
+        if (p / "formal").exists():
+            return p
+        p = p.parent
+    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+SYNTHESIS_0111_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT01_TO_11_SYNTHESIS_NOTE_v0.md"
+)
+INCREMENT11_PACKET_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT11_EXECUTION_PACKET_v0.md"
+)
+OBJECTIVE_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_v0.md"
+
+REQUIRED_QUESTION = "stress_energy_to_weak_curvature_handoff_strengthening"
+REQUIRED_HOLD_TOKEN = "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0"
+
+
+def _read(path: Path) -> str:
+    assert path.exists(), f"Missing required file: {path}"
+    return path.read_text(encoding="utf-8")
+
+
+def test_synthesis_0111_exists_and_is_anchored() -> None:
+    synthesis = _read(SYNTHESIS_0111_PATH)
+    objective = _read(OBJECTIVE_PATH)
+    increment11 = _read(INCREMENT11_PACKET_PATH)
+
+    assert REQUIRED_QUESTION in objective
+    assert REQUIRED_QUESTION in increment11
+    assert REQUIRED_QUESTION in synthesis
+    assert "formal/docs/paper/TOE_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_v0.md" in synthesis
+    assert "formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_BOUNDED_EXECUTION_PACKET_v0.md" in synthesis
+
+
+def test_synthesis_0111_contains_required_sections() -> None:
+    synthesis = _read(SYNTHESIS_0111_PATH)
+
+    required_sections = [
+        "## 1) Cumulative Establishment (Increment01-11)",
+        "## 2) Interaction: Witness-Consistency with Prior Constraint Stack",
+        "## 3) Open Items (Still Unresolved)",
+        "## 4) Increment12 Decision Question",
+        "## 5) Packet42 Hold Rationale",
+        "## 6) Non-Claim Boundary",
+    ]
+    for section in required_sections:
+        assert section in synthesis
+
+
+def test_synthesis_0111_tokens_present() -> None:
+    synthesis = _read(SYNTHESIS_0111_PATH)
+
+    assert REQUIRED_HOLD_TOKEN in synthesis
+    assert (
+        "QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT12_DECISION_RULE_v0: "
+        "REQUIRE_NEW_INCOMPATIBILITY_OR_DEPENDENCY_CRITERION_BEYOND_ORIGIN_PROVENANCE_EPOCH_BRANCH_IRREVERSIBILITY_FALLBACK_COMPLETENESS_WITNESS_CONSISTENCY_STACK"
+    ) in synthesis
+    assert (
+        "QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT01_TO_11_SYNTHESIS_STATUS_v0: "
+        "SYNTHESIZED_BOUNDED_v0"
+    ) in synthesis
+
+
+def test_synthesis_0111_nonclaim_markers_present() -> None:
+    synthesis = _read(SYNTHESIS_0111_PATH)
+
+    assert "does not claim seam closure" in synthesis
+    assert "does not claim QFT-GR unification completeness" in synthesis
+    assert "does not authorize packet42 hold release" in synthesis
+    assert "does not reopen scalar/workflow/GR-QM lines" in synthesis
