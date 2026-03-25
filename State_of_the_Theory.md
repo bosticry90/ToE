@@ -244,12 +244,14 @@ Canonical bounded status note (2026-02-24):
 - `DISCHARGED_v0_*` tokens represent bounded route/governance discharge under pinned assumptions and are not global-physics completeness claims.
 - Canonical source-of-truth pointer for this claim: `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`.
 - Closure semantics standard pointer: `formal/docs/release/TOE_CLOSURE_SEMANTICS_STANDARD_v0.md`.
+- Language enforcement policy pointer: `formal/docs/release/TOE_LANGUAGE_ENFORCEMENT_POLICY_v0.md`.
 - Closure semantics and action promotion gate pointer: `formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py`.
 - Closure status-language ambiguity guard gate pointer: `formal/python/tests/test_toe_closure_status_language_ambiguity_guard_gate.py`.
 - Pillar phase advancement standard pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`.
 - Pillar phase advancement registry pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`.
 - Pillar phase advancement gate pointer: `formal/python/tests/test_pillar_phase_advancement_gate.py`.
 - Pillar closure standard pointer: `formal/docs/release/PILLAR_CLOSURE_STANDARD_v0.md`.
+- Scored audit matrix artifact pointer: `formal/docs/release/SCORED_AUDIT_MATRIX_v1.json`.
 - Master action maturity pillar integration action plan pointer: `formal/docs/release/MASTER_ACTION_MATURITY_PILLAR_INTEGRATION_ACTION_PLAN_v0.md`.
 - Pillar deep maturity M2 gate pointer: `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py`.
 - Foundational derivation-chain standard pointer: `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md`.
@@ -3059,6 +3061,9 @@ Seam governance-vs-physics completion closeout checkpoint (2026-03-19):
   - `SEAM_GR_QM_STATUS_READ_v0: GOVERNANCE_COMPLETE_AND_PHYSICS_COMPLETE`
   - `SEAM_GR_QM_PHYSICS_BLOCKER_v0: NONE_BLOCKER_REMAINING_IN_SCOPE`
   - `SEAM_GR_QM_PHYSICS_COMPLETION_BASIS_v0: CYCLE03_SHARED_DYNAMICS_TRANSPORT_AND_REGIME_CLOSURE_BLOCKER_DISCHARGE_PACKAGE`
+- seam interpretation rule remains explicit:
+  - `SEAM_STATUS_INTERPRETATION_RULE_v0: GOVERNANCE_COMPLETE_DOES_NOT_IMPLY_PHYSICS_COMPLETE`
+  - `SEAM_PHYSICS_COMPLETION_SCOPE_RULE_v0: PHYSICS_COMPLETE_REQUIRES_EXPLICIT_BLOCKER_DISCHARGE_BASIS`
 - transition compatibility token retained as non-authoritative legacy string for split-gate continuity:
   - `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO`
 

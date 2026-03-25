@@ -1,0 +1,121 @@
+{
+  "matrix_id": "SCORED_AUDIT_MATRIX_v1",
+  "matrix_version": 1,
+  "snapshot_date": "2026-03-25",
+  "non_claim_boundary": {
+    "scope": "repo-local governance and bounded physics investigation",
+    "claim_level": "NOT_GLOBAL_PHYSICS_COMPLETE_TOE",
+    "evidence_tier": "DISCRIMINATIVE_MIXED_PROGRESS"
+  },
+  "score_domains": [
+    "ARCHITECTURE_GOVERNANCE",
+    "DERIVATION_CHAIN_COMPLETENESS",
+    "SEAM_PHYSICS_CLOSURE",
+    "EVIDENCE_TIER_PROGRESSION",
+    "MATHEMATICAL_FORMALIZATION",
+    "MAINTENANCE_HEALTH"
+  ],
+  "audit_rows": [
+    {
+      "row_id": "PILLAR-QFT",
+      "entity_type": "pillar",
+      "entity_name": "Quantum Field Theory",
+      "scores": {
+        "ARCHITECTURE_GOVERNANCE": {
+          "score": 9,
+          "status": "DISCHARGED_v0_BOUNDED",
+          "meaning": "Governance-complete within bounded scope and non-claim policy."
+        },
+        "DERIVATION_CHAIN_COMPLETENESS": {
+          "score": 9,
+          "status": "COMPLETE_BOUNDED_v0",
+          "meaning": "Core chain rows are populated under pinned assumptions."
+        },
+        "SEAM_PHYSICS_CLOSURE": {
+          "score": 2,
+          "status": "NOT_CLAIMED",
+          "open_debt": [
+            "QFT-GR seam physics closure requires additional bounded bridge discharge evidence."
+          ]
+        },
+        "EVIDENCE_TIER_PROGRESSION": {
+          "score": 4,
+          "status": "INTERMEDIATE_v0",
+          "meaning": "Comparator evidence remains bounded and non-final."
+        },
+        "MATHEMATICAL_FORMALIZATION": {
+          "score": 8,
+          "status": "FORMALIZED_BOUNDED_v0",
+          "meaning": "Formal lane is active with bounded assumptions."
+        },
+        "MAINTENANCE_HEALTH": {
+          "score": 7,
+          "status": "GREEN_WITH_GUARDS_v0",
+          "meaning": "Governance and branch-health lanes are stable."
+        }
+      },
+      "cross_pins": {
+        "authority": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+        "gate": "formal/python/tests/test_toe_qft_scalar_route_submission_readiness_gate.py"
+      },
+      "non_overread_safeguard": "bounded_scope"
+    },
+    {
+      "row_id": "SEAM-GR-QM",
+      "entity_type": "seam",
+      "entity_name": "GR-QM",
+      "scores": {
+        "ARCHITECTURE_GOVERNANCE": {
+          "score": 10,
+          "status": "DISCHARGED_v0_BOUNDED",
+          "meaning": "Governance lane complete under bounded policy and explicit assumptions."
+        },
+        "DERIVATION_CHAIN_COMPLETENESS": {
+          "score": 9,
+          "status": "COMPLETE_BOUNDED_v0",
+          "meaning": "Required derivation chain rows are locked in bounded posture."
+        },
+        "SEAM_PHYSICS_CLOSURE": {
+          "score": 9,
+          "status": "YES_WITHIN_BOUNDED_SCOPE",
+          "meaning": "Seam physics closure is scoped to declared bounded regime."
+        },
+        "EVIDENCE_TIER_PROGRESSION": {
+          "score": 5,
+          "status": "INTERMEDIATE_v0",
+          "meaning": "Evidence is discriminative but not all-regime final."
+        },
+        "MATHEMATICAL_FORMALIZATION": {
+          "score": 10,
+          "status": "FORMALIZED_BOUNDED_v0",
+          "meaning": "Witness-package and formal seams are present and cross-pinned."
+        },
+        "MAINTENANCE_HEALTH": {
+          "score": 9,
+          "status": "GREEN_WITH_GUARDS_v0",
+          "meaning": "Governance and seam guard gates are green."
+        }
+      },
+      "cross_pins": {
+        "authority": "formal/docs/release/TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0.md",
+        "gate": "formal/python/tests/test_toe_seam_status_split_gate.py"
+      },
+      "non_overread_safeguard": "governance_not_global_physics"
+    }
+  ],
+  "summary_scores": {
+    "ARCHITECTURE_GOVERNANCE": 9.5,
+    "DERIVATION_CHAIN_COMPLETENESS": 9.0,
+    "SEAM_PHYSICS_CLOSURE": 5.5,
+    "EVIDENCE_TIER_PROGRESSION": 4.5,
+    "MATHEMATICAL_FORMALIZATION": 9.0,
+    "MAINTENANCE_HEALTH": 8.0,
+    "OVERALL_GOVERNANCE": "STRONG_BOUNDED_NONCLAIM",
+    "OVERALL_PHYSICS": "DISCRIMINATIVE_MIXED_PROGRESS",
+    "OVERALL_SEAM_PHYSICS_COMPLETE_GLOBAL": "NO"
+  },
+  "non_claim_footer": {
+    "text": "This matrix reports bounded closure posture and governance health. It does not claim global physics completeness, external truth confirmation, or all-regime seam closure.",
+    "authority": "State_of_the_Theory.md"
+  }
+}

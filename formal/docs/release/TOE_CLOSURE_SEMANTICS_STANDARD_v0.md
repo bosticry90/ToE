@@ -22,6 +22,7 @@ Canonical anchors:
 - `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`
 - `State_of_the_Theory.md`
 - `formal/docs/release/TOE_COMPLETE_V1_PROGRAM_v0.md`
+- `formal/docs/release/TOE_LANGUAGE_ENFORCEMENT_POLICY_v0.md`
 - `formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py`
 
 Dual-layer closure semantics:
@@ -61,3 +62,4 @@ Required tokens:
 - `TOE_DISCHARGED_SEMANTICS_RULE_v0: DISCHARGED_IS_ROUTE_OR_GOVERNANCE_NOT_GLOBAL_PHYSICS_COMPLETENESS`
 - `TOE_DISCHARGED_VARIANT_REQUIREMENT_v0: USE_DISCHARGED_v0_BOUNDED_WHEN_CONTINUUM_OR_EQUIVALENCE_OPEN`
 - `TOE_CLOSURE_SEMANTICS_AMBIGUITY_GUARD_GATE_v0: formal/python/tests/test_toe_closure_status_language_ambiguity_guard_gate.py`
+- `TOE_LANGUAGE_ENFORCEMENT_POLICY_POINTER_v0: formal/docs/release/TOE_LANGUAGE_ENFORCEMENT_POLICY_v0.md`

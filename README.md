@@ -4,7 +4,9 @@ A Formal Research Hypothesis Toward a Unified Physical Framework
 PROJECT STATUS (2026-03-15)
 Tooling is frozen except for bugfixes that preserve existing contracts.
 Current work is in the discriminative science phase: evidence-only runs, candidate pruning, and inventory updates.
-Governance status is terminal-satisfied under bounded non-claim semantics; seam-level physics closure remains incomplete.
+Governance status is TERMINAL_SATISFIED_v0_NONCLAIM under pinned policy scope.
+Physics status is MIXED_PROGRESS_v0 with seam-level physics closure still incomplete.
+This is NOT a physics-complete ToE claim.
 
 RELEASE-GATE POLICY (R1-A, 2026-03-20)
 - Governance is the prerequisite lane for release readiness.
@@ -67,6 +69,9 @@ This project is considered rejected if any of the following are true.
 5. Complexity grows without bound
    If the idea can only survive by becoming increasingly complex, ad hoc, or special-case-driven, the hypothesis fails its core promise.
    A foundation should simplify, not endlessly grow.
+6. Language drift collapses scope boundaries
+   If status summaries use COMPLETE, CLOSED, or DISCHARGED without layer qualifiers or bounded-scope framing, the hypothesis framing fails.
+   Governance rigor is a claim about process quality, not a claim of global physics adequacy.
 
 Formal Predictions
 (What Must Be True If the Idea Is Worth Continuing)

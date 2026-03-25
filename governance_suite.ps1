@@ -65,6 +65,9 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py `
   formal/python/tests/test_toe_closure_status_language_ambiguity_guard_gate.py `
   formal/python/tests/test_toe_seam_status_split_gate.py `
+  formal/python/tests/test_toe_language_enforcement_policy_gate.py `
+  formal/python/tests/test_toe_status_language_lock_guard_gate.py `
+  formal/python/tests/test_scored_audit_matrix_schema_and_language_gate.py `
   formal/python/tests/test_pillar_phase_advancement_gate.py `
   formal/python/tests/test_foundational_derivation_chain_coverage_gate.py `
   formal/python/tests/test_toe_master_action_seam_registry_gate.py `
