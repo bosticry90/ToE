@@ -46,6 +46,10 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_rl01_relativistic_dispersion_v0_surface_contract_freeze.py `
   formal/python/tests/test_rl01_relativistic_dispersion_v0_pinned_artifacts.py `
   formal/python/tests/test_rl01_relativistic_dispersion_v0_lock.py `
+  formal/python/tests/test_ct01_no_superluminal_propagation_v0_front_door.py `
+  formal/python/tests/test_ct01_no_superluminal_propagation_v0_surface_contract_freeze.py `
+  formal/python/tests/test_ct01_no_superluminal_propagation_v0_pinned_artifacts.py `
+  formal/python/tests/test_ct01_no_superluminal_propagation_v0_lock.py `
   formal/python/tests/test_state_doc_comp_fn_rep_policy.py `
   formal/python/tests/test_state_doc_comp_fn_rep32_64_equiv.py `
   formal/python/tests/test_state_doc_comp_fn_rep32_link_discharge.py `
@@ -59,6 +63,7 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_pillar_status_matrix_consistency_gate.py `
   formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py `
   formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py `
+  formal/python/tests/test_toe_closure_status_language_ambiguity_guard_gate.py `
   formal/python/tests/test_toe_seam_status_split_gate.py `
   formal/python/tests/test_pillar_phase_advancement_gate.py `
   formal/python/tests/test_foundational_derivation_chain_coverage_gate.py `

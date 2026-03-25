@@ -1,0 +1,33 @@
+{
+  "schema": "repo_truth_reconciliation_slice_checkpoint/v0",
+  "date": "2026-03-25",
+  "status": "COMPLETED_BOUNDED_v0_NONCLAIM",
+  "scope": "STATUS_ALIGNMENT_AND_GOVERNANCE_HEALTH",
+  "no_new_physics_claims": true,
+  "ct01_resolution": {
+    "decision": "REPAIR",
+    "authoritative_coverage_restored": true
+  },
+  "execution": {
+    "sr_m5_archive_discipline_repaired": true,
+    "bom_ast_fragility_hardened": true,
+    "closure_taxonomy_hardened": true,
+    "ambiguity_guard_gate_added": true
+  },
+  "verification": {
+    "focused_reconciliation_bundle": {
+      "result": "PASS",
+      "tests_passed": 22
+    },
+    "closure_taxonomy_focused_bundle": {
+      "result": "PASS",
+      "tests_passed": 6
+    },
+    "governance_suite": {
+      "result": "PASS",
+      "tests_passed": 461,
+      "command": "./governance_suite.ps1"
+    }
+  },
+  "summary_report": "formal/docs/release/REPO_TRUTH_RECONCILIATION_SLICE_REPORT_20260325_v0.md"
+}

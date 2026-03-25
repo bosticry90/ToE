@@ -13,7 +13,7 @@ CANDIDATE_FILE = REPO_ROOT / "formal" / "python" / "toe" / "bridges" / "br01_can
 
 
 def _find_candidate_defs() -> set[str]:
-    tree = ast.parse(CANDIDATE_FILE.read_text(encoding="utf-8"), filename=str(CANDIDATE_FILE))
+    tree = ast.parse(CANDIDATE_FILE.read_text(encoding="utf-8-sig"), filename=str(CANDIDATE_FILE))
     names: set[str] = set()
     for node in ast.walk(tree):
         if isinstance(node, ast.FunctionDef) and node.name.startswith("BR01_"):

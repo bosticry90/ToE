@@ -63,6 +63,11 @@ def register_sr_m5_cycle_gate(module_globals: dict[str, object], spec: SrM5Cycle
     artifact_path = REPO_ROOT / "formal" / "output" / f"sr_m5_theory_parity_link_cycle{cycle_str}_v0.json"
     expected_artifact_id = f"sr_m5_theory_parity_link_cycle{cycle_str}_v0"
 
+    if spec.skip_historical:
+        module_globals["pytestmark"] = pytest.mark.skip(
+            reason="Historical SR M5 cycle gate retained for archive traceability; active gate is registry-driven."
+        )
+
     def _test_cycle_gate() -> None:
         if spec.skip_historical:
             pytest.skip("Historical SR M5 cycle gate retained for archive traceability; active gate is registry-driven.")

@@ -16,7 +16,7 @@ OVDR_FILE = REPO_ROOT / "formal" / "python" / "toe" / "observables" / "ovdrbr01_
 
 
 def _imported_modules(path: Path) -> set[str]:
-    tree = ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
+    tree = ast.parse(path.read_text(encoding="utf-8-sig"), filename=str(path))
     mods: set[str] = set()
     for node in ast.walk(tree):
         if isinstance(node, ast.Import):

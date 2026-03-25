@@ -38,7 +38,7 @@ def _fn01_artifact_constructor_ids(*, repo_root: Path) -> list[str]:
     """Canonical FN candidate ID surface for FN-01 downstream records."""
 
     artifact_file = repo_root / "formal" / "python" / "toe" / "constraints" / "fn01_artifact.py"
-    tree = ast.parse(artifact_file.read_text(encoding="utf-8"), filename=str(artifact_file))
+    tree = ast.parse(artifact_file.read_text(encoding="utf-8-sig"), filename=str(artifact_file))
 
     names: set[str] = set()
     for node in ast.walk(tree):
@@ -53,7 +53,7 @@ def _br01_candidate_ids(*, repo_root: Path) -> list[str]:
     """Canonical BR candidate ID surface for weight-policy targeting."""
 
     cand_file = repo_root / "formal" / "python" / "toe" / "bridges" / "br01_candidates.py"
-    tree = ast.parse(cand_file.read_text(encoding="utf-8"), filename=str(cand_file))
+    tree = ast.parse(cand_file.read_text(encoding="utf-8-sig"), filename=str(cand_file))
 
     names: set[str] = set()
     for node in ast.walk(tree):

@@ -240,9 +240,12 @@ Repository-wide governance and physics status audit checkpoint (2026-03-15):
 Canonical bounded status note (2026-02-24):
 - For the current canonical five-pillar set (`PILLAR-QFT`, `PILLAR-QM`, `PILLAR-GR`, `PILLAR-EM`, `PILLAR-SR`), bounded full-derivation and inevitability adjudications are discharged and matrix status is `CLOSED`.
 - Under the canonical closure semantics standard, this means bounded repo-local `PHYSICS-CLOSED` plus `MATRIX-CLOSED` within pinned non-claim scope, not a claim of physics-complete ToE.
+- Status-language safety rule: status summaries must not use unqualified `CLOSED` or unqualified `DISCHARGED` as interpretation markers; use layer-qualified closure language and bounded non-claim framing.
+- `DISCHARGED_v0_*` tokens represent bounded route/governance discharge under pinned assumptions and are not global-physics completeness claims.
 - Canonical source-of-truth pointer for this claim: `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`.
 - Closure semantics standard pointer: `formal/docs/release/TOE_CLOSURE_SEMANTICS_STANDARD_v0.md`.
 - Closure semantics and action promotion gate pointer: `formal/python/tests/test_toe_closure_and_action_promotion_standards_gate.py`.
+- Closure status-language ambiguity guard gate pointer: `formal/python/tests/test_toe_closure_status_language_ambiguity_guard_gate.py`.
 - Pillar phase advancement standard pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_STANDARD_v0.md`.
 - Pillar phase advancement registry pointer: `formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json`.
 - Pillar phase advancement gate pointer: `formal/python/tests/test_pillar_phase_advancement_gate.py`.

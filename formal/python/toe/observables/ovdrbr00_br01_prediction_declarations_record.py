@@ -37,7 +37,7 @@ def _sha256_json(payload: object) -> str:
 
 def _br01_candidate_ids(*, repo_root: Path) -> list[str]:
     cand_file = repo_root / "formal" / "python" / "toe" / "bridges" / "br01_candidates.py"
-    tree = ast.parse(cand_file.read_text(encoding="utf-8"), filename=str(cand_file))
+    tree = ast.parse(cand_file.read_text(encoding="utf-8-sig"), filename=str(cand_file))
 
     names: set[str] = set()
     for node in ast.walk(tree):

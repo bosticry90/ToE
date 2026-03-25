@@ -45,7 +45,7 @@ def _fn01_artifact_constructor_ids(*, repo_root: Path) -> list[str]:
     """
 
     artifact_file = repo_root / "formal" / "python" / "toe" / "constraints" / "fn01_artifact.py"
-    tree = ast.parse(artifact_file.read_text(encoding="utf-8"), filename=str(artifact_file))
+    tree = ast.parse(artifact_file.read_text(encoding="utf-8-sig"), filename=str(artifact_file))
 
     names: set[str] = set()
     for node in ast.walk(tree):
