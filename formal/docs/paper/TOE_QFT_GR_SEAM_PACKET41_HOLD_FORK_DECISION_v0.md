@@ -38,6 +38,7 @@ Packet41 hold-fork decision status tokens:
 - packet41_targeted_justification_review_checkpoint_path: formal/output/toe_qft_gr_seam_packet41_targeted_justification_review_checkpoint_v0.json
 - convergence_criterion_doc_path: formal/docs/paper/TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md
 - convergence_criterion_checkpoint_path: formal/output/toe_qft_gr_seam_convergence_termination_criterion_checkpoint_v0.json
+- packet41_reconsideration_scorecard_cycle02_checkpoint_path: formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json
 
 ## Decision Branches
 
@@ -51,7 +52,7 @@ Packet41 hold-fork decision status tokens:
 - eligibility_review_alignment: REVIEW_COMPLETE_HOLD_v0
 - targeted_justification_alignment: REVIEW_COMPLETE_INSUFFICIENT_FOR_AUTHORIZATION_v0
 - convergence_alignment: FROZEN_PENDING_CONVERGENCE_BINDING_v0
-- rationale_summary: packet41_remains_on_hold_because_seam_level_marginal_gain_and_stagnation_clearance_are_not_yet_demonstrated_by_a_concrete_successor_discriminator_package
+- rationale_summary: packet41_remains_on_hold_because_cycle02_numeric_thresholds_1_to_3_are_cleared_but_threshold_4_fails_due_to_review_layer_stack_not_cleared
 
 ## Fork Trigger Criteria (for future reconsideration)
 
@@ -64,7 +65,7 @@ Packet41 hold-fork decision status tokens:
 
 - decision_outcome: HOLD_PACKET41_AUTHORIZATION_v0
 - packet41_authorization_freeze_status: ENFORCED_v0
-- release_from_hold_requires: updated_eligibility_and_targeted_justification_reviews_with_passed_marginal_gain_and_stagnation_checks
+- release_from_hold_requires: updated_eligibility_and_targeted_justification_reviews_with_review_layer_stack_clearance_and_threshold_4_pass
 
 ## Guardrails and Invariance
 

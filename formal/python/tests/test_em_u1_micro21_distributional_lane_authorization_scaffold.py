@@ -128,6 +128,13 @@ AUTHORIZATION_PATTERNS = {
     "authz_outcome": re.escape("AUTHZ_OUTCOME: IMPORTS_NOT_LICENSED_WITHOUT_AUTHORIZATION_LANE"),
 }
 
+CYCLE021_TOKEN_TO_LEAN_TAG = {
+    "EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_ROUTE_v0": "assumption-id-gated-import-permission-pinned",
+    "EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_LOCALIZATION_GATE_v0": "cycle21-artifacts-only",
+    "EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_NO_PROMOTION_v0": "authorization-only-no-discharge",
+    "EM_U1_DISTRIBUTIONAL_LANE_AUTHORIZATION_BOUNDARY_v0": "no-distributional-math-or-curved-space-import",
+}
+
 
 def _read(path: Path) -> str:
     assert path.exists(), f"Missing required file: {path}"
@@ -284,6 +291,31 @@ def test_em_lean_cycle021_tokens_and_authorization_harness_stubs_are_pinned() ->
     ]
     missing = [token for token in required_tokens if token not in text]
     assert not missing, "EM U1 Lean scaffold is missing required Cycle-021 token(s): " + ", ".join(missing)
+
+
+def test_cycle021_doc_to_lean_authorization_mapping_parity() -> None:
+    micro_text = _read(EM_MICRO21_PATH)
+    lean_text = _read(EM_OBJECT_SCAFFOLD_LEAN_PATH)
+
+    for token_name, expected_tag in CYCLE021_TOKEN_TO_LEAN_TAG.items():
+        assignment = _extract_assignment_line(micro_text, token_name)
+        assert assignment in micro_text, f"Missing Cycle-021 assignment in micro artifact: {assignment}"
+        assert f'"{expected_tag}"' in lean_text, (
+            "Cycle-021 token-to-Lean mapping drift detected for "
+            f"{token_name}; missing Lean harness tag `{expected_tag}`."
+        )
+
+    required_lean_assertions = [
+        'pkg.sourceAssumptionId = "ASM-EM-U1-PHY-SOURCE-01"',
+        'pkg.smoothnessAssumptionId = "ASM-EM-U1-MATH-SMOOTH-01"',
+        'pkg.distributionalAssumptionId = "ASM-EM-U1-MATH-DISTRIB-01"',
+        "theorem em_u1_cycle021_authorization_harness_stub_v0",
+    ]
+    missing = [line for line in required_lean_assertions if line not in lean_text]
+    assert not missing, (
+        "Cycle-021 Lean authorization harness lost required assumption-ID or theorem bindings: "
+        + ", ".join(missing)
+    )
 
 
 def test_cycle021_authorization_statements_are_localized_to_cycle21_artifact() -> None:

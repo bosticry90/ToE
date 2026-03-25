@@ -205,6 +205,23 @@ Program intent: execute a strict truth-restoration sequence before any new theor
 - Active WS-10 plan pointer: `formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md`
 - Active CE-06 guardrail pointer: `formal/docs/release/CE_06_ANTI_REGROWTH_GUARDRAILS_v0.md`
 
+## Execution Reset Checkpoint (2026-03-24)
+- Checkpoint pointer: `formal/docs/release/WS_10_EXECUTION_RESET_SLICEB_ACTIVATION_20260324_v0.md`
+- Audit execution program pointer: `formal/docs/release/WS_10_AUDIT_EXECUTION_PROGRAM_20260324_v0.md`
+- Execution mode: `OBJECT_LEVEL_SLICEB_PRIMARY`
+- Scalar submission posture: `PAUSED_BY_OWNER_DECISION_v0`
+- Scalar technical baseline posture: `FROZEN_READ_ONLY_BASELINE_v0`
+- Active science lane surfaces: `QFT_GR_SEAM_REACTIVATION_SLICEB_AUTHORIZATION_BRIEF_PLUS_BOUNDED_EXECUTION_PACKET_PLUS_INCREMENT10_ASSESSMENT_PLUS_INCREMENT11_EXECUTION_PACKET`
+- Focused gate ladder token: `SLICEB_BASE_PLUS_INCREMENT11_PLUS_INCREMENT11_DECISION_PLUS_INCREMENT01_TO_11_SYNTHESIS_PLUS_OBJECTIVE_GATE_PLUS_SEAM_STATUS_SPLIT_GATE`
+- Batching policy: `TWO_TO_FOUR_OBJECT_LEVEL_INCREMENTS_BEFORE_SINGLE_PARITY_PASS`
+- Control-surface churn target: `NEAR_ZERO_NEW_CONTROL_SURFACE_FILES`
+- Hold invariance: `QFT_GR_SEAM_FORK_DECISION_STATUS_HOLD_FOR_SCALAR_PUBLICATION_UNCHANGED`
+- Audit execution program status: `ACTIVE_BOUNDED_v0`
+- Primary tranche: `QFT_GR_SLICEB_6_INCREMENT_TRANCHE`
+- Primary tranche scope: `INCREMENT31_TO_INCREMENT36`
+- Packet41 day-10 posture: `BOUNDED_PERMANENT_HOLD_IF_NUMERICS_INSUFFICIENT`
+- Next-lane priority: `GR01_DERIVATION_COMPLETENESS_DEEPENING`
+
 ## Bounded Theory Restart Activation (2026-03-18)
 - Restart workstream: `WS-10`
 - Restart task: `WS-10-T05`

@@ -5,6 +5,7 @@ Package ID:
 
 Scope:
 - External submission-facing package assembly for the bounded Paper 1 scalar route baseline.
+- Includes the governed support-package layer that tracks last-mile owner confirmation separately from package readiness.
 
 Purpose:
 - Promote the scalar manuscript from internal submission-candidate lock to externally submission-ready package state.
@@ -30,6 +31,9 @@ Submission-package components:
 6. Formatting and metadata readiness:
 - submission-facing formatting checklist and metadata placeholders are pinned as ready.
 
+7. Submission-support package parity:
+- support-file coherence, figure bundle presence, and owner-confirmation blocker tracking are pinned in a dedicated support-package layer.
+
 Policy guardrails:
 - scalar Paper 1 baseline freeze remains active.
 - no new scalar derivation tranche is authorized.
@@ -40,6 +44,9 @@ Status token:
 
 Reproducibility pointers:
 - formal/output/toe_qft_scalar_route_submission_package_checkpoint_v0.json
+- formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_SUPPORT_PACKAGE_v0.md
+- formal/output/toe_qft_scalar_route_submission_support_package_checkpoint_v0.json
+- formal/python/tests/test_toe_qft_scalar_route_submission_support_package_gate.py
 - formal/python/tests/test_toe_qft_scalar_route_submission_package_gate.py
 - formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_CANDIDATE_BASELINE_v0.md
 - formal/docs/paper/TOE_QFT_GR_SEAM_FORK_DECISION_v0.md

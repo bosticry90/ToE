@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 
 
@@ -24,6 +25,12 @@ ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 def _read(path: Path) -> str:
     assert path.exists(), f"Missing required file: {path}"
     return path.read_text(encoding="utf-8")
+
+
+def _extract_token_value(text: str, token_name: str) -> str:
+    match = re.search(rf"\b{re.escape(token_name)}\s*:\s*([A-Za-z0-9_\-\.]+)", text)
+    assert match is not None, f"Missing token `{token_name}`"
+    return match.group(1)
 
 
 def test_gr01_function_space_completion_criteria_are_pinned() -> None:
@@ -51,6 +58,26 @@ def test_gr01_function_space_completion_criteria_are_pinned() -> None:
     assert row_map["GR01_FUNCTION_SPACE_CRITERIA_ROW_02_v0"]["status"] == "ROUTE_EXPLICITATED_v0_NONCLAIM"
     assert row_map["GR01_FUNCTION_SPACE_CRITERIA_ROW_03_v0"]["status"] == "DISCHARGED_v0_CONCRETE_EVIDENCE_NONCLAIM"
     assert row_map["GR01_FUNCTION_SPACE_CRITERIA_ROW_04_v0"]["status"] == "PINNED"
+
+    assert artifact["adjudication_posture"] == "ATTACK_TRACK_ACTIVE_NONCLAIM"
+    assert (
+        _extract_token_value(surface_text, "GR01_FUNCTION_SPACE_REGULARITY_STATUS_v0")
+        == artifact["adjudication_posture"]
+    )
+
+    row02_surface = _extract_token_value(surface_text, "GR01_FUNCTION_SPACE_CRITERIA_ROW_02_v0")
+    assert row02_surface == "CONTINUUM_REGULARITY_CLASS_EXPLICITATION_ROUTE_EXPLICITATED_NONCLAIM"
+    assert any(
+        token == "GR01_FUNCTION_SPACE_CONTINUUM_ROUTE_STATUS_v0: ROUTE_EXPLICITATED_v0_NONCLAIM"
+        for token in row_map["GR01_FUNCTION_SPACE_CRITERIA_ROW_02_v0"]["evidence_tokens"]
+    )
+
+    row03_surface = _extract_token_value(surface_text, "GR01_FUNCTION_SPACE_CRITERIA_ROW_03_v0")
+    assert row03_surface == "SOBOLEV_AND_UNIQUENESS_NONCLAIM_BOUNDARY_DISCHARGED_WITH_CONCRETE_EVIDENCE"
+    assert any(
+        token == "GR01_FUNCTION_SPACE_NONCLAIM_BOUNDARY_STATUS_v0: DISCHARGED_v0_CONCRETE_EVIDENCE_NONCLAIM"
+        for token in row_map["GR01_FUNCTION_SPACE_CRITERIA_ROW_03_v0"]["evidence_tokens"]
+    )
 
     for text in (_read(STATE_PATH), _read(ROADMAP_PATH)):
         assert "formal/output/gr01_function_space_completion_criteria_cycle10_v0.json" in text

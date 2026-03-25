@@ -1,0 +1,73 @@
+{
+  "artifact_id": "toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0",
+  "phase": "PHASE_2ZB_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_EVALUATION_CYCLE02",
+  "scope": "second_packet41_reconsideration_scorecard_evaluation_with_admissible_numeric_fields_under_hold",
+  "payload": {
+    "cycle_id": "packet41_reconsideration_cycle02_admissible_numeric_fill_packet39_to_packet40",
+    "scorecard_schema_checkpoint_path": "formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_worksheet_checkpoint_v0.json",
+    "measurement_protocol_checkpoint_path": "formal/output/toe_qft_gr_seam_packet41_numeric_threshold_measurement_protocol_checkpoint_v0.json",
+    "numeric_thresholds_checkpoint_path": "formal/output/toe_qft_gr_seam_packet41_reconsideration_numeric_thresholds_checkpoint_v0.json",
+    "evidence_sources_used": [
+      "formal/output/toe_qft_gr_seam_packet39_assessment_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_packet40_assessment_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_packet41_eligibility_review_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_packet41_targeted_justification_review_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_packet41_hold_fork_decision_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_retrospective_cumulative_delta_audit_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_packet41_reconsideration_numeric_thresholds_checkpoint_v0.json",
+      "formal/output/toe_qft_gr_seam_packet41_numeric_threshold_measurement_protocol_checkpoint_v0.json"
+    ],
+    "input_field_availability": {
+      "D_prev": true,
+      "A_prev": true,
+      "O_prev": true,
+      "D_curr": true,
+      "A_curr": true,
+      "O_curr": true,
+      "N_curr": true,
+      "DeltaA_curr": true,
+      "DeltaO_curr": true,
+      "I_stag_curr": true,
+      "I_stag_prev": true,
+      "I_stag_prev2": true
+    },
+    "scorecard_values": {
+      "D_prev": 0.42,
+      "A_prev": 0.38,
+      "O_prev": 0.36,
+      "D_curr": 0.34,
+      "A_curr": 0.31,
+      "O_curr": 0.3,
+      "N_curr": 1,
+      "DeltaA_curr": 0.07,
+      "DeltaO_curr": 0.06,
+      "I_stag_curr": 0,
+      "I_stag_prev": 1,
+      "I_stag_prev2": 0,
+      "G_prev": 0.396,
+      "G_curr": 0.323,
+      "S_value": 0.1843434343,
+      "M_value": 0.533,
+      "Streak3_value": 1
+    },
+    "threshold_pass": {
+      "threshold_1_pass": true,
+      "threshold_2_pass": true,
+      "threshold_3_pass": true,
+      "threshold_4_pass": false,
+      "auto_fail_reason": "REVIEW_LAYER_STACK_NOT_CLEARED_v0"
+    },
+    "review_layer_pass": {
+      "packet41_eligibility_review_pass": false,
+      "packet41_targeted_justification_review_pass": false,
+      "packet41_hold_fork_release_condition_pass": false,
+      "retrospective_cumulative_delta_audit_release_condition_pass": false
+    },
+    "existing_review_layers_pass": false,
+    "formula_version": "packet41_measurement_protocol_v0",
+    "disposition_recommendation": "HOLD_RETAINED_v0",
+    "authorization_artifact_creation": "FORBIDDEN_v0",
+    "evaluation_outcome": "HOLD_RETAINED_DUE_TO_REVIEW_LAYER_FAILURE_v0"
+  },
+  "status": "PACKET41_RECONSIDERATION_SCORECARD_EVALUATION_CYCLE02_COMPLETE_HOLD_v0"
+}

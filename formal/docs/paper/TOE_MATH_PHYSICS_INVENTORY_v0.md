@@ -89,6 +89,9 @@ Row schema:
 | `INV-PHYS-PREDICTION-SCOREBOARD-v0` | `physics` | `evidence_lanes` | Prediction-first scoreboard | `CURRENT` | `formal/output/prediction_first_scoreboard_v0.json` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_prediction_first_scoreboard_gate.py` | `VALIDATED` | `E-REPRO` | `INV-PHYS-ROADMAP-v0` | Prediction/evidence lane decision surface. |
 | `INV-PHYS-EMPIRICAL-PROTOCOL-v0` | `physics` | `evidence_lanes` | Foundational empirical comparison protocol | `CURRENT` | `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md` | `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET05_MATRIX_v0.json` | `formal/python/tests/test_foundational_empirical_packet05_progression_policy_gate.py` | `VALIDATED` | `P-POLICY` | `INV-PHYS-ROADMAP-v0` | Packet progression and falsification protocol anchor. |
 | `INV-PHYS-QFT-GR-PACKET41-HOLD` | `physics` | `hold_controls` | QFT-GR Packet41 hold posture | `CURRENT` | `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` | `BOUNDED_NONCLAIM` | `P-POLICY` | `INV-PHYS-SEAM-CONSTRAINT-REGISTRY-v0` | Explicit hold-retained state under missing numeric inputs. |
+| `INV-PHYS-QFT-GR-PACKET41-SUCCESSOR-PACKAGE-v0` | `physics` | `hold_controls` | QFT-GR Packet41 successor discriminator package | `CURRENT` | `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md` | `formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json` | `formal/python/tests/test_toe_qft_gr_seam_packet41_successor_discriminator_package_gate.py` | `BOUNDED_NONCLAIM` | `P-POLICY` | `INV-PHYS-QFT-GR-PACKET41-HOLD` | Concrete successor package pinned while hold remains active pending admissible numeric clearance. |
+| `INV-PHYS-QFT-GR-SLICEB-INC15-v0` | `physics` | `seams` | QFT-GR Slice B Increment15 bounded authority package | `CURRENT` | `formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT15_EXECUTION_PACKET_v0.md` | `formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT01_TO_15_SYNTHESIS_NOTE_v0.md` | `formal/python/tests/test_qft_gr_seam_reactivation_sliceb_increment15_authority_mirror_gate.py` | `VALIDATED` | `P-POLICY` | `INV-PHYS-SEAM-CLASSB-INVENTORY-v0` | Increment15 semantic-delta decision, execution, assessment, and synthesis bundle mirrored under authority hold invariance. |
+| `INV-PHYS-SCALAR-SUBMISSION-SUPPORT-v0` | `physics` | `publication_support` | Scalar Paper 1 submission support package | `CURRENT` | `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_SUPPORT_PACKAGE_v0.md` | `formal/output/toe_qft_scalar_route_submission_support_package_checkpoint_v0.json` | `formal/python/tests/test_toe_qft_scalar_route_submission_support_package_gate.py` | `VALIDATED` | `P-POLICY` | `INV-PHYS-ROADMAP-v0` | Support-bundle coherence layer with explicit owner-confirmation blocker tracking. |
 | `INV-PHYS-WORK-EQ-COMPENDIUM-v0` | `physics` | `synthesis_surface` | Centralized math/physics work and equations compendium | `CURRENT` | `formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` | `USED` | `P-POLICY` | `INV-PHYS-ROADMAP-v0` | Physics-facing entrypoint to unified equations/work ledger. |
 
 ## 4) Validation status
@@ -98,10 +101,10 @@ Validation interpretation:
 - `OPEN_PROOF_DEBT` rows may have valid checkpoint/gate pointers while still carrying unresolved discharge obligations.
 
 Validation rollup (v0 draft):
-- `validated_rows`: 9
-- `used_rows`: 8
+- `validated_rows`: 12
+- `used_rows`: 12
 - `open_proof_debt_rows`: 2
-- `bounded_nonclaim_rows`: 1
+- `bounded_nonclaim_rows`: 2
 
 Unresolved dependency highlights:
 - `INV-PHYS-EM-U1-MICRO21` depends on distributional authorization closure in downstream EM U1 route closure attempts.
@@ -122,6 +125,7 @@ Empirical debt:
 
 Packaging/publication debt:
 - Scalar submission lane is marked ready for bounded package preparation, but this does not supersede non-claim boundaries.
+- Scalar submission support package is ready with owner confirmation still pending for the final corresponding-contact email.
 
 ## 6) Crosswalk
 
@@ -132,6 +136,9 @@ Packaging/publication debt:
 | `INV-PHYS-ROADMAP-v0` | `formal/docs/paper/PHYSICS_ROADMAP_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` |
 | `INV-PHYS-DEEP-MATURITY-PROGRAM-v0` | `formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md` | `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json` | `formal/python/tests/test_pillar_deep_maturity_program_gate.py` |
 | `INV-PHYS-SEAM-CLASSB-INVENTORY-v0` | `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py` |
+| `INV-PHYS-QFT-GR-PACKET41-SUCCESSOR-PACKAGE-v0` | `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md` | `formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json` | `formal/python/tests/test_toe_qft_gr_seam_packet41_successor_discriminator_package_gate.py` |
+| `INV-PHYS-QFT-GR-SLICEB-INC15-v0` | `formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT15_EXECUTION_PACKET_v0.md` | `formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT01_TO_15_SYNTHESIS_NOTE_v0.md` | `formal/python/tests/test_qft_gr_seam_reactivation_sliceb_increment15_authority_mirror_gate.py` |
+| `INV-PHYS-SCALAR-SUBMISSION-SUPPORT-v0` | `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_SUPPORT_PACKAGE_v0.md` | `formal/output/toe_qft_scalar_route_submission_support_package_checkpoint_v0.json` | `formal/python/tests/test_toe_qft_scalar_route_submission_support_package_gate.py` |
 | `INV-PHYS-PREDICTION-SCOREBOARD-v0` | `formal/output/prediction_first_scoreboard_v0.json` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_prediction_first_scoreboard_gate.py` |
 | `INV-MATH-PHYS-WORK-EQ-COMPENDIUM-v0` | `formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` |
 
@@ -427,6 +434,9 @@ Packaging/publication debt:
 - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_REVIEW_v0.md`
 - `formal/output/toe_qft_gr_seam_packet41_targeted_justification_review_checkpoint_v0.json`
 - `formal/python/tests/test_toe_qft_gr_seam_packet41_targeted_justification_review_gate.py`
+- `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md`
+- `formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_gr_seam_packet41_successor_discriminator_package_gate.py`
 - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_v0.md`
 - `formal/output/toe_qft_gr_seam_packet41_hold_fork_decision_checkpoint_v0.json`
 - `formal/python/tests/test_toe_qft_gr_seam_packet41_hold_fork_decision_gate.py`
@@ -441,10 +451,14 @@ Packaging/publication debt:
 - `formal/python/tests/test_toe_qft_gr_seam_packet41_reconsideration_scorecard_worksheet_gate.py`
 - `formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json`
 - `formal/python/tests/test_toe_qft_gr_seam_packet41_reconsideration_scorecard_cycle01_evaluation_gate.py`
+- `formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json`
+- `formal/python/tests/test_toe_qft_gr_seam_packet41_reconsideration_scorecard_cycle02_evaluation_gate.py`
 - `TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_STATUS_v0: REVIEW_COMPLETE_HOLD_v0`
 - `TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_DISPOSITION_v0: HOLD_v0`
 - `TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_STATUS_v0: REVIEW_COMPLETE_INSUFFICIENT_FOR_AUTHORIZATION_v0`
 - `TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_OUTCOME_v0: HOLD_RETAINED_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_STATUS_v0: DEFINED_NUMERICALLY_EVALUATED_CYCLE02_REVIEW_LAYER_CLEARANCE_PENDING_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_OUTCOME_v0: HOLD_RETAINED_REVIEW_LAYER_CLEARANCE_PENDING_v0`
 - `TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_STATUS_v0: DECISION_COMPLETE_HOLD_v0`
 - `TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_OUTCOME_v0: HOLD_v0`
 - `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_NUMERIC_THRESHOLDS_STATUS_v0: ACTIVE_HOLD_GATED_NUMERIC_CRITERIA_v0`
@@ -454,6 +468,7 @@ Packaging/publication debt:
 - `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_STATUS_v0: ACTIVE_CANONICAL_WORKSHEET_LOCKED_v0`
 - `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_OUTCOME_v0: HOLD_RETAINED_PENDING_SCORECARD_EVIDENCE_v0`
 - `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_CYCLE01_STATUS_v0: EVALUATED_HOLD_RETAINED_MISSING_NUMERIC_INPUTS_v0`
+- `TOE_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_CYCLE02_STATUS_v0: EVALUATED_HOLD_RETAINED_REVIEW_LAYER_FAILURE_v0`
 - `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET42_ELIGIBILITY_REVIEW_v0.md`
 - `formal/output/toe_qft_gr_seam_packet42_eligibility_review_checkpoint_v0.json`
 - `formal/python/tests/test_toe_qft_gr_seam_packet42_eligibility_review_gate.py`

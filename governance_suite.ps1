@@ -179,6 +179,14 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_gr01_function_space_completion_criteria_gate.py `
   formal/python/tests/test_toe_qft_scalar_propagator_gate.py `
   formal/python/tests/test_toe_qft_scalar_route_review_readiness_gate.py `
+  formal/python/tests/test_toe_qft_scalar_route_submission_candidate_gate.py `
+  formal/python/tests/test_toe_qft_scalar_route_submission_readiness_gate.py `
+  formal/python/tests/test_toe_qft_scalar_route_submission_package_gate.py `
+  formal/python/tests/test_toe_qft_scalar_route_submission_support_package_gate.py `
+  formal/python/tests/test_qft_gr_seam_reactivation_sliceb_increment15_authority_mirror_gate.py `
+  formal/python/tests/test_qft_gr_seam_reactivation_sliceb_science_first_enforcement_gate.py `
+  formal/python/tests/test_qft_gr_seam_reactivation_sliceb_derivation_completeness_enforcement_gate.py `
+  formal/python/tests/test_toe_qft_gr_seam_packet41_successor_discriminator_package_gate.py `
   formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py `
   formal/python/tests/test_qm_m2_analytic_completeness_scaffold_cycle01_gate.py `
   formal/python/tests/test_qm_m2_canonical_equivalence_scaffold_cycle01_gate.py `

@@ -8,7 +8,8 @@
     "figure_diagram_package_ready": true,
     "reviewer_facing_bounded_claim_summary_ready": true,
     "cover_letter_skeleton_ready": true,
-    "formatting_and_metadata_readiness": true
+    "formatting_and_metadata_readiness": true,
+    "submission_support_package_ready": true
   },
   "policy_guardrails": {
     "scalar_paper1_baseline_freeze": true,
@@ -21,7 +22,9 @@
     "submission_candidate_checkpoint": "formal/output/toe_qft_scalar_route_submission_candidate_checkpoint_v0.json",
     "submission_readiness_note": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_READINESS_NOTE_v0.md",
     "manuscript_draft": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_MANUSCRIPT_DRAFT_v0.md",
-    "seam_fork_decision_note": "formal/docs/paper/TOE_QFT_GR_SEAM_FORK_DECISION_v0.md"
+    "seam_fork_decision_note": "formal/docs/paper/TOE_QFT_GR_SEAM_FORK_DECISION_v0.md",
+    "submission_support_package_note": "formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_SUPPORT_PACKAGE_v0.md",
+    "submission_support_package_checkpoint": "formal/output/toe_qft_scalar_route_submission_support_package_checkpoint_v0.json"
   },
   "status_token": "SCALAR_ROUTE_SUBMISSION_PACKAGE_STATUS_v0: EXTERNAL_SUBMISSION_PACKAGE_READY_BOUNDED",
   "status": "EXTERNAL_SUBMISSION_PACKAGE_READY_BOUNDED"

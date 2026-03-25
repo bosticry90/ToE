@@ -67,6 +67,27 @@ Execution contract:
 | WS-10-T06 | Open bounded post-completion handoff boundary after canonical GR-QM seam closure | DONE | WS-10-T05 | T06 resolved by explicit supersession decision to non-GR-QM next lane under unchanged scalar-freeze and Packet42-hold invariance | Bounded diff evidence plus parity/continuity validation without reopening GR-QM completion theorem work |
 | WS-10-T07 | Activate QFT-GR seam reactivation as the post-T06 authorized next lane | ACTIVE | WS-10-T06 | Control-surface-only authorization of QFT-GR reactivation lane pinned across tracker/state/roadmap/WS-10, with no packet42 hold release and no theorem-surface edits | Bounded diff evidence plus parity/continuity validation and seam objective gate parity |
 
+## Execution Reset Implementation Checkpoint (2026-03-24)
+- Checkpoint packet pointer: `formal/docs/release/WS_10_EXECUTION_RESET_SLICEB_ACTIVATION_20260324_v0.md`.
+- Execution mode: `OBJECT_LEVEL_SLICEB_PRIMARY`.
+- Scalar submission posture: `PAUSED_BY_OWNER_DECISION_v0`.
+- Scalar technical baseline posture: `FROZEN_READ_ONLY_BASELINE_v0`.
+- Active science lane surfaces:
+	- `formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_AUTHORIZATION_BRIEF_v0.md`
+	- `formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_BOUNDED_EXECUTION_PACKET_v0.md`
+	- `formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT10_ASSESSMENT_NOTE_v0.md`
+	- `formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT11_EXECUTION_PACKET_v0.md`
+- Focused ladder:
+	1. `./py.ps1 -m pytest -q formal/python/tests/test_qft_gr_seam_reactivation_sliceb_gate.py`
+	2. `./py.ps1 -m pytest -q formal/python/tests/test_qft_gr_seam_reactivation_sliceb_increment11_gate.py`
+	3. `./py.ps1 -m pytest -q formal/python/tests/test_qft_gr_seam_reactivation_sliceb_increment11_semantic_delta_decision_gate.py`
+	4. `./py.ps1 -m pytest -q formal/python/tests/test_qft_gr_seam_reactivation_sliceb_increment01_to_11_synthesis_gate.py`
+	5. `./py.ps1 -m pytest -q formal/python/tests/test_toe_qft_gr_seam_reactivation_objective_gate.py`
+	6. `./py.ps1 -m pytest -q formal/python/tests/test_toe_seam_status_split_gate.py`
+- Batching policy: `TWO_TO_FOUR_OBJECT_LEVEL_INCREMENTS_BEFORE_SINGLE_PARITY_PASS`.
+- Churn target: `NEAR_ZERO_NEW_CONTROL_SURFACE_FILES`.
+- Hold invariance: `QFT_GR_SEAM_FORK_DECISION_STATUS_HOLD_FOR_SCALAR_PUBLICATION_UNCHANGED`.
+
 ## Guardrails
 - No unnecessary governance-family expansion.
 - No cloned gate proliferation where shared or registry patterns already exist.

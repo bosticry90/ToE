@@ -17,6 +17,7 @@ def find_repo_root(start: Path) -> Path:
 REPO_ROOT = find_repo_root(Path(__file__))
 DECISION_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_v0.md"
 DECISION_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_hold_fork_decision_checkpoint_v0.json"
+SCORECARD_CYCLE02_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json"
 ELIGIBILITY_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_REVIEW_v0.md"
 ELIGIBILITY_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_eligibility_review_checkpoint_v0.json"
 TARGETED_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_REVIEW_v0.md"
@@ -63,6 +64,7 @@ def test_qft_gr_seam_packet41_hold_fork_decision_document_structure() -> None:
         "disposition_fork: INACTIVE",
         "disposition_terminate: INACTIVE",
         "## Decision Rationale",
+        "packet41_reconsideration_scorecard_cycle02_checkpoint_path: formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json",
         "eligibility_review_alignment: REVIEW_COMPLETE_HOLD_v0",
         "targeted_justification_alignment: REVIEW_COMPLETE_INSUFFICIENT_FOR_AUTHORIZATION_v0",
         "convergence_alignment: FROZEN_PENDING_CONVERGENCE_BINDING_v0",
@@ -82,6 +84,7 @@ def test_qft_gr_seam_packet41_hold_fork_decision_checkpoint_schema_and_alignment
     eligibility_artifact = _read_json(ELIGIBILITY_CHECKPOINT_PATH)
     targeted_artifact = _read_json(TARGETED_CHECKPOINT_PATH)
     convergence_artifact = _read_json(CONVERGENCE_CHECKPOINT_PATH)
+    scorecard_cycle02_artifact = _read_json(SCORECARD_CYCLE02_CHECKPOINT_PATH)
 
     assert artifact.get("artifact_id") == "toe_qft_gr_seam_packet41_hold_fork_decision_checkpoint_v0"
     assert artifact.get("phase") == "PHASE_2W_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION"
@@ -91,6 +94,9 @@ def test_qft_gr_seam_packet41_hold_fork_decision_checkpoint_schema_and_alignment
     assert payload.get("decision_doc_path") == "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_v0.md"
     assert payload.get("parent_eligibility_review_doc_path") == "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_REVIEW_v0.md"
     assert payload.get("parent_targeted_justification_review_doc_path") == "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_REVIEW_v0.md"
+    assert payload.get("parent_scorecard_cycle02_checkpoint_path") == (
+        "formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json"
+    )
     assert payload.get("active_seam_question") == "stress_energy_to_weak_curvature_handoff_strengthening"
 
     branches = payload.get("decision_branches", {})
@@ -103,9 +109,26 @@ def test_qft_gr_seam_packet41_hold_fork_decision_checkpoint_schema_and_alignment
     assert output.get("decision_outcome") == "HOLD_PACKET41_AUTHORIZATION_v0"
     assert output.get("packet41_authorization_freeze_status") == "ENFORCED_v0"
 
+    scorecard_payload = scorecard_cycle02_artifact.get("payload", {})
+    threshold_pass = scorecard_payload.get("threshold_pass", {})
+    assert threshold_pass.get("threshold_1_pass") is True
+    assert threshold_pass.get("threshold_2_pass") is True
+    assert threshold_pass.get("threshold_3_pass") is True
+    assert threshold_pass.get("threshold_4_pass") is False
+    assert threshold_pass.get("auto_fail_reason") == "REVIEW_LAYER_STACK_NOT_CLEARED_v0"
+
+    review_layer_pass = scorecard_payload.get("review_layer_pass", {})
+    assert review_layer_pass.get("packet41_eligibility_review_pass") is False
+    assert review_layer_pass.get("packet41_targeted_justification_review_pass") is False
+    assert review_layer_pass.get("packet41_hold_fork_release_condition_pass") is False
+    assert scorecard_payload.get("existing_review_layers_pass") is False
+    assert scorecard_payload.get("disposition_recommendation") == "HOLD_RETAINED_v0"
+    assert scorecard_payload.get("evaluation_outcome") == "HOLD_RETAINED_DUE_TO_REVIEW_LAYER_FAILURE_v0"
+
     assert eligibility_artifact.get("status") == "PACKET41_ELIGIBILITY_REVIEW_COMPLETE_HOLD_v0"
     assert targeted_artifact.get("status") == "PACKET41_TARGETED_JUSTIFICATION_REVIEW_COMPLETE_INSUFFICIENT_v0"
     assert convergence_artifact.get("status") == "SEAM_CONVERGENCE_TERMINATION_CRITERION_ACTIVE_v0"
+    assert scorecard_cycle02_artifact.get("status") == "PACKET41_RECONSIDERATION_SCORECARD_EVALUATION_CYCLE02_COMPLETE_HOLD_v0"
 
 
 def test_qft_gr_seam_packet41_hold_fork_decision_authority_parity_and_freeze() -> None:

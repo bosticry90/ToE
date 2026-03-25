@@ -1,0 +1,9 @@
+{
+  "comparison": "abs<=",
+  "passes_threshold": true,
+  "observed_value": 0.099,
+  "units": "dimensionless residual",
+  "threshold_value": 0.1,
+  "increment": 58,
+  "equation_id": "stress_curvature_handoff_residual_v0"
+}

@@ -1,0 +1,35 @@
+{
+  "artifact_id": "toe_qft_scalar_route_submission_support_package_checkpoint_v0",
+  "phase": "PHASE_3_ROUTE_A_SCALAR_SUBMISSION_SUPPORT_PACKAGE",
+  "scope": "bounded_free_scalar_paper1_submission_support_bundle",
+  "support_package_checks": {
+    "metadata_lock_coherence": true,
+    "support_file_bundle_complete": true,
+    "figure_bundle_present": true,
+    "placeholder_control_policy_explicit": true,
+    "pre_upload_blocker_registry_pinned": true
+  },
+  "owner_confirmation_blockers": {
+    "corresponding_contact_placeholder_pending": true,
+    "final_upload_bundle_assembly_pending": true,
+    "pending_owner_confirmation_item_count": 1
+  },
+  "policy_guardrails": {
+    "scalar_paper1_baseline_freeze": true,
+    "no_new_scalar_tranche_authorized": true,
+    "seam_expansion_held": true,
+    "seam_hold_token": "QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0"
+  },
+  "pointers": {
+    "title_abstract_lock": "formal/docs/submission/scalar_paper1/TITLE_ABSTRACT_LOCK.md",
+    "submission_metadata_lock": "formal/docs/submission/scalar_paper1/SUBMISSION_METADATA_LOCK.md",
+    "venue_formatting_profile": "formal/docs/submission/scalar_paper1/VENUE_FORMATTING_PROFILE.md",
+    "figure_package_plan": "formal/docs/submission/scalar_paper1/FIGURE_PACKAGE_PLAN.md",
+    "cover_letter_skeleton": "formal/docs/submission/scalar_paper1/COVER_LETTER_SKELETON.md",
+    "reviewer_facing_summary": "formal/docs/submission/scalar_paper1/REVIEWER_FACING_SUMMARY.md",
+    "upload_bundle_manifest": "formal/docs/submission/scalar_paper1/UPLOAD_BUNDLE_MANIFEST.md",
+    "submission_execution_board": "formal/docs/submission/scalar_paper1/SUBMISSION_EXECUTION_BOARD.md"
+  },
+  "status_token": "SCALAR_ROUTE_SUBMISSION_SUPPORT_PACKAGE_STATUS_v0: READY_WITH_OWNER_CONFIRMATION_PENDING_v0",
+  "status": "READY_WITH_OWNER_CONFIRMATION_PENDING_v0"
+}

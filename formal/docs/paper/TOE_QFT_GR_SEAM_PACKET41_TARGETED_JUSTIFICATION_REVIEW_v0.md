@@ -35,32 +35,35 @@ Packet41 targeted justification status tokens:
 - packet40_assessment_checkpoint_path: formal/output/toe_qft_gr_seam_packet40_assessment_checkpoint_v0.json
 - convergence_criterion_doc_path: formal/docs/paper/TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md
 - convergence_criterion_checkpoint_path: formal/output/toe_qft_gr_seam_convergence_termination_criterion_checkpoint_v0.json
+- packet41_reconsideration_scorecard_cycle02_checkpoint_path: formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json
 
 ## Candidate Packet41 Target Under Review
 
 - candidate_packet41_target: freeze_one_bounded_handoff_post_refutation_resilience_closure_stability_discriminator_that_maps_packet40_closure_refutation_resilience_witness_to_a_single_non_scalar_expanding_closure_stability_witness
+- candidate_packet41_successor_package_doc_path: formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md
+- candidate_packet41_successor_package_checkpoint_path: formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json
 - candidate_gain_claim_required: explicit_seam_level_gap_shrinkage_statement_and_objective_distance_reduction_statement
 - candidate_stagnation_clearance_required: explicit_non_reencoding_discriminator_delta_against_packet40
 
 ## Justification Checks
 
-- seam_gap_still_measurably_shrinking_check: FAIL_v0_NOT_YET_DEMONSTRATED
-- expected_marginal_gain_above_threshold_check: FAIL_v0_NOT_YET_DEMONSTRATED
-- stagnation_clearance_check: FAIL_v0_UNRESOLVED_PENDING_CONCRETE_DISCRIMINATOR_PACKAGE
+- seam_gap_still_measurably_shrinking_check: PASS_v0_CYCLE02_THRESHOLD1_CLEARED
+- expected_marginal_gain_above_threshold_check: PASS_v0_CYCLE02_THRESHOLD2_CLEARED
+- stagnation_clearance_check: PASS_v0_CYCLE02_THRESHOLD3_CLEARED
 - remaining_gap_narrower_than_objective_check: PASS_v0
 
 ## Review Outcome
 
-- targeted_justification_verdict: INSUFFICIENT_FOR_PACKET41_AUTHORIZATION_v0
+- targeted_justification_verdict: INSUFFICIENT_FOR_PACKET41_AUTHORIZATION_REVIEW_LAYER_STACK_NOT_CLEARED_v0
 - hold_alignment_status: CONSISTENT_WITH_PACKET41_ELIGIBILITY_HOLD_v0
-- hold_retention_rationale: no concrete packet41 discriminator package yet demonstrates seam-level marginal gain above threshold or clears stagnation conditions.
+- hold_retention_rationale: cycle02 numeric thresholds 1 to 3 are cleared, but review-layer stack remains uncleared so threshold_4 fails and hold is retained.
 
 ## Required Next Evidence Before Reconsideration
 
-- evidence_1: one concrete packet41 successor discriminator package with explicit seam-level gain statement
-- evidence_2: explicit residual ambiguity reduction beyond packet40 at seam level
-- evidence_3: explicit objective-distance reduction statement tied to reactivation objective
-- evidence_4: explicit stagnation clearance under anti-infinite-ladder rule
+- evidence_1: preserve admissible cycle02 numeric field population from allowed checkpoint sources under rerun
+- evidence_2: clear review-layer stack release conditions so threshold_4 can pass
+- evidence_3: maintain explicit objective-distance reduction traceability tied to the reactivation objective
+- evidence_4: preserve anti-infinite-ladder stagnation clearance with scorecard-backed evidence on reconsideration
 
 ## Guardrails and Invariance
 
@@ -73,6 +76,9 @@ Packet41 targeted justification status tokens:
 ## Reproducibility Pointers
 
 - formal/output/toe_qft_gr_seam_packet41_targeted_justification_review_checkpoint_v0.json
+- formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md
+- formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json
+- formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json
 - formal/python/tests/test_toe_qft_gr_seam_packet41_targeted_justification_review_gate.py
 - formal/python/tests/test_toe_qft_gr_seam_packet41_eligibility_review_gate.py
 

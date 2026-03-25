@@ -34,7 +34,7 @@ Cluster checkpoints:
 13. `24b3ebe` - Increment12 checkpoint.
 14. `1761506` - Increment13 checkpoint.
 15. `2cda1d0` - Increment14 checkpoint.
-16. `2e73e40` - Increment15 checkpoint.
+16. `worktree` - Increment15 checkpoint.
 
 ## 1) Cumulative Establishment (Increment01-15)
 
@@ -52,8 +52,8 @@ Cluster checkpoints:
 - Increment12 established witness-minimality dependency and invalidated non-minimal witness supersets among non-contradictory active-transition support sets.
 - Increment13 established witness-uniqueness dependency and invalidated multiple distinct minimal non-contradictory witness sets for one fixed same-epoch fallback precondition falsification context.
 - Increment14 established witness-reevaluation-stability dependency and invalidated changed admissible witness outcomes across reevaluation under unchanged fixed same-epoch admissibility inputs.
-- Increment15 established witness-strengthening-monotonicity dependency and invalidated degraded or context-divergent admissible outcomes under controlled same-epoch admissibility-input strengthening.
-- Collectively, Increment01-15 establish a bounded local handoff contract with layered admissibility guards across ordering, origin composition, provenance identity, epoch freshness, branch directionality, fallback-entry completeness, witness sufficiency, witness consistency, witness minimality, minimal-support uniqueness, fixed-input reevaluation idempotence, and controlled-strengthening monotonicity.
+- Increment15 established witness-strengthening monotonicity dependency and invalidated degraded or context-divergent admissible outcomes under controlled same-epoch admissibility-input strengthening.
+- Collectively, Increment01-15 establish a bounded local handoff contract with layered admissibility guards across ordering, origin composition, provenance identity, epoch freshness, branch directionality, fallback-entry completeness, witness sufficiency, witness consistency, witness minimality, minimal-support uniqueness, fixed-input reevaluation idempotence, and controlled-strengthening directional admissibility.
 
 ## 2) Interaction: Strengthening-Monotonicity with Prior Constraint Stack
 
@@ -67,8 +67,8 @@ Cluster checkpoints:
 - Witness-minimality ensures only inclusion-minimal non-contradictory witness sets are admissible support for same-epoch fallback precondition falsification.
 - Witness-uniqueness ensures each fixed same-epoch fallback precondition falsification context maps to at most one admissible minimal non-contradictory witness set.
 - Reevaluation-stability ensures unchanged fixed same-epoch admissibility inputs cannot produce alternate admissible witness outcomes across repeated checks.
-- Strengthening-monotonicity ensures controlled same-epoch admissibility-input strengthening cannot degrade admissibility or generate context-divergent admissible outcomes.
-- Together these constraints enforce composition purity, provenance uniqueness, temporal coherence, monotone branch progression, disciplined fallback-entry eligibility, witness sufficiency, witness consistency, minimal support selection, fixed-context minimal-support determinacy, fixed-input admissibility idempotence, and controlled-strengthening directional stability.
+- Strengthening-monotonicity ensures controlled same-epoch admissibility-input augmentation cannot degrade admissibility or introduce context-divergent outcomes.
+- Together these constraints enforce composition purity, provenance uniqueness, temporal coherence, monotone branch progression, disciplined fallback-entry eligibility, witness sufficiency, witness consistency, minimal support selection, fixed-context minimal-support determinacy, fixed-input admissibility idempotence, and controlled-strengthening directional admissibility.
 
 ## 3) Open Items (Still Unresolved)
 
@@ -81,8 +81,8 @@ Cluster checkpoints:
 
 - `QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT16_DECISION_RULE_v0: REQUIRE_NEW_INCOMPATIBILITY_OR_DEPENDENCY_CRITERION_BEYOND_ORIGIN_PROVENANCE_EPOCH_BRANCH_IRREVERSIBILITY_FALLBACK_COMPLETENESS_WITNESS_CONSISTENCY_MINIMALITY_UNIQUENESS_REEVALUATION_STABILITY_STRENGTHENING_MONOTONICITY_STACK`
 - Candidate additive targets for Increment16 are limited to one of:
-  - incompatibility criterion that restricts admissible witness-support states beyond controlled-strengthening-monotone fixed-input reevaluation-stable unique minimal support for a fixed context;
-  - dependency criterion that tightens admissibility obligations without duplicating fallback-entry, witness-consistency, witness-minimality, witness-uniqueness, reevaluation-stability, or strengthening-monotonicity checks;
+  - incompatibility criterion that prevents admissibility path dependence under controlled same-context witness strengthening;
+  - dependency criterion that constrains admissibility-step ordering effects beyond fixed-input reevaluation and strengthening-monotonicity checks;
   - bounded stop-condition criterion formalizing non-additivity under the full Increment01-15 guard stack.
 
 ## 5) Packet42 Hold Rationale

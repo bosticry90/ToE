@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import fnmatch
 import json
 import re
 from pathlib import Path
@@ -16,6 +17,8 @@ def find_repo_root(start: Path) -> Path:
 
 REPO_ROOT = find_repo_root(Path(__file__))
 EVALUATION_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0.json"
+WORKSHEET_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_reconsideration_scorecard_worksheet_checkpoint_v0.json"
+MEASUREMENT_PROTOCOL_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_numeric_threshold_measurement_protocol_checkpoint_v0.json"
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
@@ -46,6 +49,8 @@ def _extract_token_from_compact_state_or_inventory(state_text: str, inventory_te
 
 def test_packet41_scorecard_cycle01_checkpoint_schema_and_hold_result() -> None:
     artifact = _read_json(EVALUATION_CHECKPOINT_PATH)
+    worksheet = _read_json(WORKSHEET_CHECKPOINT_PATH)
+    protocol = _read_json(MEASUREMENT_PROTOCOL_CHECKPOINT_PATH)
 
     assert artifact.get("artifact_id") == "toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle01_checkpoint_v0"
     assert artifact.get("phase") == "PHASE_2ZB_QFT_GR_SEAM_PACKET41_RECONSIDERATION_SCORECARD_EVALUATION_CYCLE01"
@@ -55,15 +60,67 @@ def test_packet41_scorecard_cycle01_checkpoint_schema_and_hold_result() -> None:
     assert payload.get("cycle_id") == "packet41_reconsideration_cycle01_baseline_packet39_to_packet40"
     assert payload.get("formula_version") == "packet41_measurement_protocol_v0"
 
+    worksheet_payload = worksheet.get("payload", {})
+    worksheet_schema = worksheet_payload.get("worksheet_schema", {})
+    assert payload.get("formula_version") == worksheet_payload.get("formula_version")
+
     availability = payload.get("input_field_availability", {})
+    required_inputs = worksheet_schema.get("required_inputs", [])
+    expected_availability_keys = {name for name in required_inputs if name != "cycle_id"}
+    assert set(availability.keys()) == expected_availability_keys
     assert all(v is False for v in availability.values())
 
+    scorecard_values = payload.get("scorecard_values", {})
+    computed_fields = worksheet_schema.get("computed_fields", [])
+    expected_scorecard_value_keys = expected_availability_keys | set(computed_fields)
+    assert set(scorecard_values.keys()) == expected_scorecard_value_keys
+    assert all(v is None for v in scorecard_values.values())
+
+    protocol_payload = protocol.get("payload", {})
+    required_measurement_fields = set(protocol_payload.get("required_measurement_artifact_fields", []))
+    expected_measurement_fields = (
+        {"cycle_id", "evidence_sources_used", "formula_version"}
+        | expected_scorecard_value_keys
+        | set(worksheet_schema.get("threshold_pass_fields", []))
+    )
+    assert required_measurement_fields.issubset(expected_measurement_fields)
+
+    worksheet_only_staging_inputs = expected_measurement_fields - required_measurement_fields
+    assert worksheet_only_staging_inputs == {
+        "DeltaA_curr",
+        "DeltaO_curr",
+        "I_stag_curr",
+        "I_stag_prev",
+        "I_stag_prev2",
+    }
+
+    payload_field_coverage = {"cycle_id", "evidence_sources_used", "formula_version"}
+    payload_field_coverage |= set(scorecard_values.keys())
+    payload_field_coverage |= set(payload.get("threshold_pass", {}).keys())
+    payload_field_coverage.discard("auto_fail_reason")
+    assert required_measurement_fields.issubset(payload_field_coverage)
+
     thresholds = payload.get("threshold_pass", {})
+    threshold_fields = worksheet_schema.get("threshold_pass_fields", [])
+    assert set(threshold_fields).issubset(set(thresholds.keys()))
     assert thresholds.get("threshold_1_pass") is False
     assert thresholds.get("threshold_2_pass") is False
     assert thresholds.get("threshold_3_pass") is False
     assert thresholds.get("threshold_4_pass") is False
     assert thresholds.get("auto_fail_reason") == "MISSING_REQUIRED_NUMERIC_FIELDS_FROM_ADMISSIBLE_CHECKPOINTS_v0"
+
+    review_layer = payload.get("review_layer_pass", {})
+    expected_review_layer_fields = set(worksheet_schema.get("review_layer_fields", []))
+    assert set(review_layer.keys()) == expected_review_layer_fields
+    assert all(v is False for v in review_layer.values())
+
+    admissible_patterns = protocol.get("payload", {}).get("admissible_evidence_surfaces", [])
+    evidence_sources = payload.get("evidence_sources_used", [])
+    assert evidence_sources, "Expected at least one evidence source in cycle01 scorecard evaluation payload"
+    for source in evidence_sources:
+        assert any(fnmatch.fnmatch(source, pattern) for pattern in admissible_patterns), (
+            f"Non-admissible evidence source in cycle01 scorecard evaluation payload: {source}"
+        )
 
     assert payload.get("existing_review_layers_pass") is False
     assert payload.get("disposition_recommendation") == "HOLD_RETAINED_v0"

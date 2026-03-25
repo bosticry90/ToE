@@ -104,3 +104,33 @@ def test_sliceb_increment15_status_tokens_present() -> None:
     assert "QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT15_ASSESSMENT_STATUS_v0: ASSESSED_BOUNDED_v0" in assess
     assert "QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT15_OBJECTIVE_ADVANCEMENT_v0: YES" in assess
     assert "QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT15_WITNESS_STRENGTHENING_MONOTONICITY_DEPENDENCY_v0: ENFORCED" in assess
+
+
+def test_sliceb_increment15_packet_assessment_semantic_delta_alignment() -> None:
+    packet = _read(INCREMENT15_PACKET_PATH)
+    assess = _read(INCREMENT15_ASSESS_PATH)
+
+    # Increment15 must stay aligned on what was newly added and why it matters.
+    assert "witness-strengthening monotonicity dependency" in packet
+    assert "witness-strengthening monotonicity dependency" in assess
+    assert "controlled admissibility-input augmentation" in packet
+    assert "controlled same-epoch admissibility-input strengthening" in assess
+    assert "degraded or context-divergent admissible outcomes" in packet
+    assert "degraded or context-divergent admissible outcomes" in assess
+
+
+def test_sliceb_increment15_forbidden_overclaim_and_drift_phrases_absent() -> None:
+    packet = _read(INCREMENT15_PACKET_PATH)
+    assess = _read(INCREMENT15_ASSESS_PATH)
+
+    forbidden_phrases = [
+        "seam closure achieved",
+        "claims qft-gr unification completeness",
+        "authorizes packet42 hold release",
+        "lifts Packet42 hold",
+    ]
+
+    for text in (packet, assess):
+        lowered = text.lower()
+        for phrase in forbidden_phrases:
+            assert phrase.lower() not in lowered

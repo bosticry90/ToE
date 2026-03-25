@@ -8,35 +8,38 @@
     "parent_assessment_checkpoint_path": "formal/output/toe_qft_gr_seam_packet40_assessment_checkpoint_v0.json",
     "parent_convergence_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md",
     "parent_convergence_checkpoint_path": "formal/output/toe_qft_gr_seam_convergence_termination_criterion_checkpoint_v0.json",
+    "parent_scorecard_cycle02_checkpoint_path": "formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json",
     "parent_objective_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_v0.md",
     "parent_objective_checkpoint_path": "formal/output/toe_qft_gr_seam_reactivation_objective_checkpoint_v0.json",
     "active_seam_question": "stress_energy_to_weak_curvature_handoff_strengthening",
     "eligibility_review_questions": {
-      "seam_gap_still_measurably_shrinking": "NOT_YET_DEMONSTRATED_v0",
-      "expected_marginal_gain_above_threshold": "NOT_YET_DEMONSTRATED_v0",
-      "stagnation_or_semantic_reencoding_risk": "UNRESOLVED_PENDING_CONCRETE_PACKET41_TARGET_v0",
+      "seam_gap_still_measurably_shrinking": "DEMONSTRATED_v0_CYCLE02_THRESHOLD1_PASS",
+      "expected_marginal_gain_above_threshold": "DEMONSTRATED_v0_CYCLE02_THRESHOLD2_PASS",
+      "stagnation_or_semantic_reencoding_risk": "CONTROLLED_v0_CYCLE02_THRESHOLD3_PASS",
       "remaining_gap_still_narrower_than_objective": "SATISFIED_v0"
     },
     "packet41_readiness_assessment": {
       "projected_packet41_target_from_packet40_assessment": "freeze_one_bounded_handoff_post_refutation_resilience_closure_stability_discriminator_that_maps_packet40_closure_refutation_resilience_witness_to_a_single_non_scalar_expanding_closure_stability_witness",
       "projected_packet41_genuine_progress_condition": "adds_new_post_refutation_resilience_closure_stability_discriminator_not_present_in_packet40",
-      "current_packet41_gain_statement_status": "MISSING_v0",
-      "current_packet41_stagnation_clearance_status": "NOT_YET_DEMONSTRATED_v0",
-      "current_packet41_convergence_binding_status": "INCOMPLETE_v0"
+      "packet41_successor_discriminator_package_doc_path": "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md",
+      "packet41_successor_discriminator_package_checkpoint_path": "formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json",
+      "current_packet41_gain_statement_status": "NUMERICALLY_DEMONSTRATED_CYCLE02_v0",
+      "current_packet41_stagnation_clearance_status": "NUMERICALLY_CLEARED_CYCLE02_v0",
+      "current_packet41_convergence_binding_status": "REVIEW_LAYER_STACK_CLEARANCE_PENDING_v0"
     },
     "disposition_decision": {
       "disposition_authorize": "INACTIVE",
       "disposition_hold": "ACTIVE",
       "disposition_fork": "INACTIVE",
       "disposition_terminate": "INACTIVE",
-      "review_decision_outcome": "HOLD_PACKET41_PENDING_CONCRETE_SEAM_LEVEL_GAIN_EVIDENCE_v0",
-      "review_decision_rationale": "packet41_is_not_currently_eligible_because_no_concrete_successor_discriminator_package_has_yet_demonstrated_measurable_seam_gap_shrinkage_above_threshold_or_cleared_stagnation"
+      "review_decision_outcome": "HOLD_PACKET41_PENDING_REVIEW_LAYER_STACK_CLEARANCE_v0",
+      "review_decision_rationale": "packet41_retains_hold_because_cycle02_numeric_thresholds_1_to_3_are_cleared_but_threshold_4_fails_due_to_review_layer_stack_not_cleared"
     },
     "required_conditions_to_exit_hold": {
-      "condition_1": "define_one_concrete_packet41_successor_discriminator_with_explicit_seam_level_gain_statement",
-      "condition_2": "show_residual_ambiguity_reduction_beyond_packet40_at_seam_level_not_only_local_level",
-      "condition_3": "demonstrate_remaining_objective_distance_reduction",
-      "condition_4": "clear_stagnation_test_and_non_ladder_rung_test_under_convergence_criterion"
+      "condition_1": "preserve_cycle02_admissible_numeric_field_integrity_under_recheck",
+      "condition_2": "sustain_seam_gap_shrinkage_and_marginal_gain_clearance_under_repeat_measurement",
+      "condition_3": "maintain_numeric_objective_distance_reduction_traceability_to_allowed_sources",
+      "condition_4": "clear_review_layer_stack_and_threshold_4_release_conditions_under_convergence_criterion"
     },
     "guardrails": {
       "packet41_authorization_freeze_status": "ENFORCED_v0",

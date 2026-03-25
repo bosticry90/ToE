@@ -17,6 +17,7 @@ def find_repo_root(start: Path) -> Path:
 REPO_ROOT = find_repo_root(Path(__file__))
 REVIEW_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_REVIEW_v0.md"
 REVIEW_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_targeted_justification_review_checkpoint_v0.json"
+SCORECARD_CYCLE02_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json"
 ELIGIBILITY_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_REVIEW_v0.md"
 ELIGIBILITY_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_eligibility_review_checkpoint_v0.json"
 CONVERGENCE_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md"
@@ -56,14 +57,17 @@ def test_qft_gr_seam_packet41_targeted_justification_review_document_structure()
         "Review ID:",
         "Parent eligibility review:",
         "Parent convergence criterion:",
+        "packet41_reconsideration_scorecard_cycle02_checkpoint_path: formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json",
         "## Candidate Packet41 Target Under Review",
+        "candidate_packet41_successor_package_doc_path: formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md",
+        "candidate_packet41_successor_package_checkpoint_path: formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json",
         "## Justification Checks",
-        "seam_gap_still_measurably_shrinking_check: FAIL_v0_NOT_YET_DEMONSTRATED",
-        "expected_marginal_gain_above_threshold_check: FAIL_v0_NOT_YET_DEMONSTRATED",
-        "stagnation_clearance_check: FAIL_v0_UNRESOLVED_PENDING_CONCRETE_DISCRIMINATOR_PACKAGE",
+        "seam_gap_still_measurably_shrinking_check: PASS_v0_CYCLE02_THRESHOLD1_CLEARED",
+        "expected_marginal_gain_above_threshold_check: PASS_v0_CYCLE02_THRESHOLD2_CLEARED",
+        "stagnation_clearance_check: PASS_v0_CYCLE02_THRESHOLD3_CLEARED",
         "remaining_gap_narrower_than_objective_check: PASS_v0",
         "## Review Outcome",
-        "targeted_justification_verdict: INSUFFICIENT_FOR_PACKET41_AUTHORIZATION_v0",
+        "targeted_justification_verdict: INSUFFICIENT_FOR_PACKET41_AUTHORIZATION_REVIEW_LAYER_STACK_NOT_CLEARED_v0",
         "hold_alignment_status: CONSISTENT_WITH_PACKET41_ELIGIBILITY_HOLD_v0",
         "packet41_authorization_freeze_status: ENFORCED_v0",
         "TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_STATUS_v0: REVIEW_COMPLETE_INSUFFICIENT_FOR_AUTHORIZATION_v0",
@@ -79,6 +83,7 @@ def test_qft_gr_seam_packet41_targeted_justification_review_checkpoint_schema_an
     artifact = _read_json(REVIEW_CHECKPOINT_PATH)
     eligibility_artifact = _read_json(ELIGIBILITY_CHECKPOINT_PATH)
     convergence_artifact = _read_json(CONVERGENCE_CHECKPOINT_PATH)
+    scorecard_cycle02_artifact = _read_json(SCORECARD_CYCLE02_CHECKPOINT_PATH)
 
     assert artifact.get("artifact_id") == "toe_qft_gr_seam_packet41_targeted_justification_review_checkpoint_v0"
     assert artifact.get("phase") == "PHASE_2V_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_REVIEW"
@@ -88,20 +93,38 @@ def test_qft_gr_seam_packet41_targeted_justification_review_checkpoint_schema_an
     assert payload.get("review_doc_path") == "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_REVIEW_v0.md"
     assert payload.get("parent_eligibility_review_doc_path") == "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_REVIEW_v0.md"
     assert payload.get("parent_convergence_doc_path") == "formal/docs/paper/TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md"
+    assert payload.get("parent_scorecard_cycle02_checkpoint_path") == (
+        "formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json"
+    )
     assert payload.get("active_seam_question") == "stress_energy_to_weak_curvature_handoff_strengthening"
 
     checks = payload.get("justification_checks", {})
-    assert checks.get("seam_gap_still_measurably_shrinking_check") == "FAIL_v0_NOT_YET_DEMONSTRATED"
-    assert checks.get("expected_marginal_gain_above_threshold_check") == "FAIL_v0_NOT_YET_DEMONSTRATED"
-    assert checks.get("stagnation_clearance_check") == "FAIL_v0_UNRESOLVED_PENDING_CONCRETE_DISCRIMINATOR_PACKAGE"
+    assert checks.get("seam_gap_still_measurably_shrinking_check") == "PASS_v0_CYCLE02_THRESHOLD1_CLEARED"
+    assert checks.get("expected_marginal_gain_above_threshold_check") == "PASS_v0_CYCLE02_THRESHOLD2_CLEARED"
+    assert checks.get("stagnation_clearance_check") == "PASS_v0_CYCLE02_THRESHOLD3_CLEARED"
     assert checks.get("remaining_gap_narrower_than_objective_check") == "PASS_v0"
 
     outcome = payload.get("review_outcome", {})
-    assert outcome.get("targeted_justification_verdict") == "INSUFFICIENT_FOR_PACKET41_AUTHORIZATION_v0"
+    assert outcome.get("targeted_justification_verdict") == "INSUFFICIENT_FOR_PACKET41_AUTHORIZATION_REVIEW_LAYER_STACK_NOT_CLEARED_v0"
     assert outcome.get("hold_alignment_status") == "CONSISTENT_WITH_PACKET41_ELIGIBILITY_HOLD_v0"
+
+    scorecard_payload = scorecard_cycle02_artifact.get("payload", {})
+    threshold_pass = scorecard_payload.get("threshold_pass", {})
+    assert threshold_pass.get("threshold_1_pass") is True
+    assert threshold_pass.get("threshold_2_pass") is True
+    assert threshold_pass.get("threshold_3_pass") is True
+    assert threshold_pass.get("threshold_4_pass") is False
+    assert threshold_pass.get("auto_fail_reason") == "REVIEW_LAYER_STACK_NOT_CLEARED_v0"
+
+    review_layer_pass = scorecard_payload.get("review_layer_pass", {})
+    assert review_layer_pass.get("packet41_targeted_justification_review_pass") is False
+    assert review_layer_pass.get("packet41_hold_fork_release_condition_pass") is False
+    assert scorecard_payload.get("existing_review_layers_pass") is False
+    assert scorecard_payload.get("evaluation_outcome") == "HOLD_RETAINED_DUE_TO_REVIEW_LAYER_FAILURE_v0"
 
     assert eligibility_artifact.get("status") == "PACKET41_ELIGIBILITY_REVIEW_COMPLETE_HOLD_v0"
     assert convergence_artifact.get("status") == "SEAM_CONVERGENCE_TERMINATION_CRITERION_ACTIVE_v0"
+    assert scorecard_cycle02_artifact.get("status") == "PACKET41_RECONSIDERATION_SCORECARD_EVALUATION_CYCLE02_COMPLETE_HOLD_v0"
 
 
 def test_qft_gr_seam_packet41_targeted_justification_review_authority_parity_and_freeze() -> None:
@@ -123,6 +146,8 @@ def test_qft_gr_seam_packet41_targeted_justification_review_authority_parity_and
         "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_TARGETED_JUSTIFICATION_REVIEW_v0.md",
         "formal/output/toe_qft_gr_seam_packet41_targeted_justification_review_checkpoint_v0.json",
         "formal/python/tests/test_toe_qft_gr_seam_packet41_targeted_justification_review_gate.py",
+        "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md",
+        "formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json",
     ]
     for ref in refs:
         assert ref in state_text or ref in inventory_text, (

@@ -17,6 +17,7 @@ def find_repo_root(start: Path) -> Path:
 REPO_ROOT = find_repo_root(Path(__file__))
 REVIEW_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_REVIEW_v0.md"
 REVIEW_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_eligibility_review_checkpoint_v0.json"
+SCORECARD_CYCLE02_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json"
 CONVERGENCE_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md"
 CONVERGENCE_CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "toe_qft_gr_seam_convergence_termination_criterion_checkpoint_v0.json"
 ASSESSMENT_DOC_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_QFT_GR_SEAM_PACKET40_ASSESSMENT_v0.md"
@@ -57,18 +58,21 @@ def test_qft_gr_seam_packet41_eligibility_review_document_structure() -> None:
         "Parent assessment:",
         "Parent convergence criterion:",
         "## Review Inputs",
+        "packet41_reconsideration_scorecard_cycle02_checkpoint_path: formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json",
         "## Eligibility Review Questions",
-        "seam_gap_still_measurably_shrinking: NOT_YET_DEMONSTRATED_v0",
-        "expected_marginal_gain_above_threshold: NOT_YET_DEMONSTRATED_v0",
-        "stagnation_or_semantic_reencoding_risk: UNRESOLVED_PENDING_CONCRETE_PACKET41_TARGET_v0",
+        "seam_gap_still_measurably_shrinking: DEMONSTRATED_v0_CYCLE02_THRESHOLD1_PASS",
+        "expected_marginal_gain_above_threshold: DEMONSTRATED_v0_CYCLE02_THRESHOLD2_PASS",
+        "stagnation_or_semantic_reencoding_risk: CONTROLLED_v0_CYCLE02_THRESHOLD3_PASS",
         "remaining_gap_still_narrower_than_objective: SATISFIED_v0",
         "## Packet41 Readiness Assessment",
-        "current_packet41_gain_statement_status: MISSING_v0",
-        "current_packet41_stagnation_clearance_status: NOT_YET_DEMONSTRATED_v0",
-        "current_packet41_convergence_binding_status: INCOMPLETE_v0",
+        "packet41_successor_discriminator_package_doc_path: formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md",
+        "packet41_successor_discriminator_package_checkpoint_path: formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json",
+        "current_packet41_gain_statement_status: NUMERICALLY_DEMONSTRATED_CYCLE02_v0",
+        "current_packet41_stagnation_clearance_status: NUMERICALLY_CLEARED_CYCLE02_v0",
+        "current_packet41_convergence_binding_status: REVIEW_LAYER_STACK_CLEARANCE_PENDING_v0",
         "## Disposition Decision",
         "disposition_hold: ACTIVE",
-        "review_decision_outcome: HOLD_PACKET41_PENDING_CONCRETE_SEAM_LEVEL_GAIN_EVIDENCE_v0",
+        "review_decision_outcome: HOLD_PACKET41_PENDING_REVIEW_LAYER_STACK_CLEARANCE_v0",
         "## Required Conditions To Exit Hold",
         "packet41_authorization_freeze_status: ENFORCED_v0",
         "TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_STATUS_v0: REVIEW_COMPLETE_HOLD_v0",
@@ -85,6 +89,7 @@ def test_qft_gr_seam_packet41_eligibility_review_checkpoint_schema_and_hold_disp
     assessment_artifact = _read_json(ASSESSMENT_CHECKPOINT_PATH)
     convergence_artifact = _read_json(CONVERGENCE_CHECKPOINT_PATH)
     objective_artifact = _read_json(OBJECTIVE_CHECKPOINT_PATH)
+    scorecard_cycle02_artifact = _read_json(SCORECARD_CYCLE02_CHECKPOINT_PATH)
 
     assert artifact.get("artifact_id") == "toe_qft_gr_seam_packet41_eligibility_review_checkpoint_v0"
     assert artifact.get("phase") == "PHASE_2U_QFT_GR_SEAM_PACKET41_ELIGIBILITY_REVIEW"
@@ -94,29 +99,54 @@ def test_qft_gr_seam_packet41_eligibility_review_checkpoint_schema_and_hold_disp
     assert payload.get("review_doc_path") == "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_REVIEW_v0.md"
     assert payload.get("parent_assessment_doc_path") == "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET40_ASSESSMENT_v0.md"
     assert payload.get("parent_convergence_doc_path") == "formal/docs/paper/TOE_QFT_GR_SEAM_CONVERGENCE_TERMINATION_CRITERION_v0.md"
+    assert payload.get("parent_scorecard_cycle02_checkpoint_path") == (
+        "formal/output/toe_qft_gr_seam_packet41_reconsideration_scorecard_evaluation_cycle02_checkpoint_v0.json"
+    )
     assert payload.get("active_seam_question") == "stress_energy_to_weak_curvature_handoff_strengthening"
 
     questions = payload.get("eligibility_review_questions", {})
-    assert questions.get("seam_gap_still_measurably_shrinking") == "NOT_YET_DEMONSTRATED_v0"
-    assert questions.get("expected_marginal_gain_above_threshold") == "NOT_YET_DEMONSTRATED_v0"
-    assert questions.get("stagnation_or_semantic_reencoding_risk") == "UNRESOLVED_PENDING_CONCRETE_PACKET41_TARGET_v0"
+    assert questions.get("seam_gap_still_measurably_shrinking") == "DEMONSTRATED_v0_CYCLE02_THRESHOLD1_PASS"
+    assert questions.get("expected_marginal_gain_above_threshold") == "DEMONSTRATED_v0_CYCLE02_THRESHOLD2_PASS"
+    assert questions.get("stagnation_or_semantic_reencoding_risk") == "CONTROLLED_v0_CYCLE02_THRESHOLD3_PASS"
     assert questions.get("remaining_gap_still_narrower_than_objective") == "SATISFIED_v0"
 
     readiness = payload.get("packet41_readiness_assessment", {})
-    assert readiness.get("current_packet41_gain_statement_status") == "MISSING_v0"
-    assert readiness.get("current_packet41_stagnation_clearance_status") == "NOT_YET_DEMONSTRATED_v0"
-    assert readiness.get("current_packet41_convergence_binding_status") == "INCOMPLETE_v0"
+    assert readiness.get("packet41_successor_discriminator_package_doc_path") == (
+        "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md"
+    )
+    assert readiness.get("packet41_successor_discriminator_package_checkpoint_path") == (
+        "formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json"
+    )
+    assert readiness.get("current_packet41_gain_statement_status") == "NUMERICALLY_DEMONSTRATED_CYCLE02_v0"
+    assert readiness.get("current_packet41_stagnation_clearance_status") == "NUMERICALLY_CLEARED_CYCLE02_v0"
+    assert readiness.get("current_packet41_convergence_binding_status") == "REVIEW_LAYER_STACK_CLEARANCE_PENDING_v0"
 
     disposition = payload.get("disposition_decision", {})
     assert disposition.get("disposition_authorize") == "INACTIVE"
     assert disposition.get("disposition_hold") == "ACTIVE"
     assert disposition.get("disposition_fork") == "INACTIVE"
     assert disposition.get("disposition_terminate") == "INACTIVE"
-    assert disposition.get("review_decision_outcome") == "HOLD_PACKET41_PENDING_CONCRETE_SEAM_LEVEL_GAIN_EVIDENCE_v0"
+    assert disposition.get("review_decision_outcome") == "HOLD_PACKET41_PENDING_REVIEW_LAYER_STACK_CLEARANCE_v0"
+
+    scorecard_payload = scorecard_cycle02_artifact.get("payload", {})
+    threshold_pass = scorecard_payload.get("threshold_pass", {})
+    assert threshold_pass.get("threshold_1_pass") is True
+    assert threshold_pass.get("threshold_2_pass") is True
+    assert threshold_pass.get("threshold_3_pass") is True
+    assert threshold_pass.get("threshold_4_pass") is False
+    assert threshold_pass.get("auto_fail_reason") == "REVIEW_LAYER_STACK_NOT_CLEARED_v0"
+
+    review_layer_pass = scorecard_payload.get("review_layer_pass", {})
+    assert review_layer_pass.get("packet41_eligibility_review_pass") is False
+    assert review_layer_pass.get("packet41_targeted_justification_review_pass") is False
+    assert review_layer_pass.get("packet41_hold_fork_release_condition_pass") is False
+    assert scorecard_payload.get("existing_review_layers_pass") is False
+    assert scorecard_payload.get("evaluation_outcome") == "HOLD_RETAINED_DUE_TO_REVIEW_LAYER_FAILURE_v0"
 
     assert assessment_artifact.get("status") == "PACKET40_ASSESSMENT_COMPLETE_CONDITIONAL_PACKET41_READINESS_ONLY_v0"
     assert convergence_artifact.get("status") == "SEAM_CONVERGENCE_TERMINATION_CRITERION_ACTIVE_v0"
     assert objective_artifact.get("payload", {}).get("active_seam_question") == "stress_energy_to_weak_curvature_handoff_strengthening"
+    assert scorecard_cycle02_artifact.get("status") == "PACKET41_RECONSIDERATION_SCORECARD_EVALUATION_CYCLE02_COMPLETE_HOLD_v0"
 
 
 def test_qft_gr_seam_packet41_eligibility_review_authority_parity_and_freeze_enforcement() -> None:
@@ -136,6 +166,8 @@ def test_qft_gr_seam_packet41_eligibility_review_authority_parity_and_freeze_enf
         "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_ELIGIBILITY_REVIEW_v0.md",
         "formal/output/toe_qft_gr_seam_packet41_eligibility_review_checkpoint_v0.json",
         "formal/python/tests/test_toe_qft_gr_seam_packet41_eligibility_review_gate.py",
+        "formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md",
+        "formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json",
     ]
     for ref in refs:
         assert ref in state_text or ref in inventory_text, (
