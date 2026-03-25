@@ -1,0 +1,35 @@
+{
+  "artifact_id": "gr_continuum_science_increment_20260325_v0",
+  "lane": "GR_CONTINUUM_FUNCTION_SPACE",
+  "status": "RESIDUAL_ORDER_ESTIMATE_PINNED_NONCLAIM",
+  "model": "E_h <= C*h^p on bounded domains",
+  "bounded_scope": {
+    "infinite_domain_uniqueness_claimed": false,
+    "singular_source_completion_claimed": false
+  },
+  "residual_witness": {
+    "h_values": [
+      0.03125,
+      0.015625,
+      0.0078125
+    ],
+    "E_h": [
+      0.0098,
+      0.00245,
+      0.0006125
+    ],
+    "ratio_Eh_over_Eh2": [
+      4.0,
+      4.0
+    ],
+    "p_estimate": [
+      2.0,
+      2.0
+    ],
+    "interpretation": "second-order-like bounded refinement trend witness"
+  },
+  "function_space_route_payload": {
+    "local_H1_bound_template": "||u_h||_{H1(K)} <= C_K*(||f||_{L2(Omega)} + ||u_h||_{L2(Omega)})",
+    "weak_derivative_cauchy_template": "||grad u_h - grad u_h'||_{L2(K)} -> 0 as h,h' -> 0"
+  }
+}

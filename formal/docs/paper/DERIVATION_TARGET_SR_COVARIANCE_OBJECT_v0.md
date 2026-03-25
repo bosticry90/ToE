@@ -34,6 +34,22 @@ Minimum structural objects required:
 - velocity-composition/kinematics object
 - explicit covariance contract
 
+Bounded scientific increment (2026-03-25):
+- `SR_COVARIANCE_SCI_INCREMENT_20260325_STATUS_v0: BOUNDED_CLOSURE_EXTENSION_PINNED`
+- `SR_COVARIANCE_SCI_INCREMENT_20260325_ARTIFACT_v0: sr_covariance_science_increment_20260325_v0`
+- artifact pointer:
+   - `formal/output/sr_covariance_science_increment_20260325_v0.json`
+- mathematical payload:
+   - `SR_COVARIANCE_LORENTZ_MATRIX_FORM_v0: LAMBDA_BETA_EQUALS_GAMMA_[[1_MINUS_BETA],[-BETA_1]]`
+   - `SR_COVARIANCE_INTERVAL_INVARIANCE_IDENTITY_v0: T_PRIME_SQUARED_MINUS_X_PRIME_SQUARED_EQUALS_T_SQUARED_MINUS_X_SQUARED`
+   - `SR_COVARIANCE_VELOCITY_COMPOSITION_FORM_v0: BETA12_EQUALS_BETA1_PLUS_BETA2_OVER_1_PLUS_BETA1_BETA2`
+   - `SR_COVARIANCE_DOMAIN_BOUNDARY_v0: ABS_BETA_STRICTLY_LESS_THAN_ONE`
+- exact rational witness bundle (units c=1):
+   - `SR_COVARIANCE_EXACT_INTERVAL_WITNESS_v0: t_equals_5_x_equals_3_beta_equals_4_over_5_implies_s2_equals_16_and_s2_prime_equals_16`
+   - `SR_COVARIANCE_EXACT_COMPOSITION_WITNESS_v0: beta1_equals_3_over_5_beta2_equals_1_over_2_implies_beta12_equals_11_over_13`
+- falsification hook:
+   - `SR_COVARIANCE_SCI_INCREMENT_FALSIFICATION_HOOK_v0: FAIL_IF_INTERVAL_IDENTITY_OR_SUBLUMINAL_COMPOSITION_IS_VIOLATED_IN_DECLARED_DOMAIN`
+
 Canonical SR object checklist (v0 planning):
 1. Lorentz transform object:
    - typed map between inertial coordinate frames.

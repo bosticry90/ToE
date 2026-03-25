@@ -181,6 +181,7 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_gr01_publication_grade_discharge_package_gate.py `
   formal/python/tests/test_gr01_publication_theorem_claim_advancement_gate.py `
   formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py `
+  formal/python/tests/test_w1_w2_science_increment_gate.py `
   formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py `
   formal/python/tests/test_gr01_function_space_continuum_regularity_route_gate.py `
   formal/python/tests/test_gr01_function_space_nonclaim_boundary_evidence_gate.py `

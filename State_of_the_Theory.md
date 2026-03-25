@@ -253,6 +253,20 @@ Canonical bounded status note (2026-02-24):
 - Pillar closure standard pointer: `formal/docs/release/PILLAR_CLOSURE_STANDARD_v0.md`.
 - Scored audit matrix artifact pointer: `formal/docs/release/SCORED_AUDIT_MATRIX_v1.json`.
 - Master action maturity pillar integration action plan pointer: `formal/docs/release/MASTER_ACTION_MATURITY_PILLAR_INTEGRATION_ACTION_PLAN_v0.md`.
+
+Weak-lane science increment checkpoint (2026-03-25):
+- W1 SR covariance bounded closure increment pinned:
+  - `SR_COVARIANCE_SCI_INCREMENT_20260325_STATUS_v0: BOUNDED_CLOSURE_EXTENSION_PINNED`
+  - `SR_COVARIANCE_SCI_INCREMENT_20260325_ARTIFACT_v0: sr_covariance_science_increment_20260325_v0`
+  - `SR_COVARIANCE_INTERVAL_INVARIANCE_IDENTITY_v0: T_PRIME_SQUARED_MINUS_X_PRIME_SQUARED_EQUALS_T_SQUARED_MINUS_X_SQUARED`
+  - `SR_COVARIANCE_VELOCITY_COMPOSITION_FORM_v0: BETA12_EQUALS_BETA1_PLUS_BETA2_OVER_1_PLUS_BETA1_BETA2`
+  - `formal/output/sr_covariance_science_increment_20260325_v0.json`
+- W2 GR continuum/function-space bounded closure increment pinned:
+  - `GR_CONTINUUM_SCI_INCREMENT_20260325_STATUS_v0: RESIDUAL_ORDER_ESTIMATE_PINNED_NONCLAIM`
+  - `GR_CONTINUUM_SCI_INCREMENT_20260325_ARTIFACT_v0: gr_continuum_science_increment_20260325_v0`
+  - `GR_CONTINUUM_RESIDUAL_ORDER_ESTIMATE_v0: P_APPROX_2_FROM_TWO_LEVEL_REFINEMENT_RATIO`
+  - `GR01_FUNCTION_SPACE_CONTINUUM_SCI_INCREMENT_20260325_v0: ORDERED_REFINEMENT_WITNESS_LINKED_NONCLAIM`
+  - `formal/output/gr_continuum_science_increment_20260325_v0.json`
 - Pillar deep maturity M2 gate pointer: `formal/python/tests/test_pillar_deep_maturity_m2_completion_gate.py`.
 - Foundational derivation-chain standard pointer: `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md`.
 - Foundational derivation-chain execution plan pointer: `formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_EXECUTION_PLAN_v0.md`.

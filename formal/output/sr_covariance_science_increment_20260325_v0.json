@@ -1,0 +1,29 @@
+{
+  "artifact_id": "sr_covariance_science_increment_20260325_v0",
+  "lane": "SR_COVARIANCE",
+  "status": "BOUNDED_CLOSURE_EXTENSION_PINNED",
+  "units": "c_equals_1",
+  "closure_forms": {
+    "lorentz_matrix": "Lambda(beta)=gamma*[[1,-beta],[-beta,1]]",
+    "interval_identity": "t_prime^2 - x_prime^2 = t^2 - x^2",
+    "velocity_composition": "beta12=(beta1+beta2)/(1+beta1*beta2)",
+    "domain": "|beta|<1"
+  },
+  "exact_rational_witness": {
+    "interval_case": {
+      "t": "5",
+      "x": "3",
+      "beta": "4/5",
+      "gamma": "5/3",
+      "s2": "16",
+      "s2_prime": "16"
+    },
+    "composition_case": {
+      "beta1": "3/5",
+      "beta2": "1/2",
+      "beta12": "11/13",
+      "subluminal": true
+    }
+  },
+  "falsification_hook": "FAIL_IF_INTERVAL_IDENTITY_OR_SUBLUMINAL_COMPOSITION_IS_VIOLATED_IN_DECLARED_DOMAIN"
+}
