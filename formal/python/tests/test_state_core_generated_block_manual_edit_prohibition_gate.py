@@ -31,6 +31,11 @@ def test_state_core_generated_first_cutover_policy_exists_and_is_explicit() -> N
         "Edit `formal/docs/release/state_core_v0.json`.",
         "--apply-mirrors --verify-mirrors",
         "pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1",
+        "Generated snippet artifacts are excluded from commit by default:",
+        "formal/output/state_core_generated/state_core_tracker_snippet_v0.md",
+        "formal/output/state_core_generated/state_core_ws10_snippet_v0.md",
+        "Keep `manual_surface_compression_ratio >= 4.0`.",
+        "Keep `governance_gate_default_enforced: true`.",
     ]
     missing = [token for token in required_tokens if token not in text]
     assert not missing, "Generated-first cutover policy missing required token(s): " + ", ".join(missing)

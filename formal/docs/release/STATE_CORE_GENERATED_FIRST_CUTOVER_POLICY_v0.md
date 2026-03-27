@@ -46,3 +46,17 @@ Operator workflow is fixed for migrated control families:
 - Run governance.
 
 Manual mirror editing in generated sections is not an authorized workflow.
+
+## Commit Discipline (Generated Snippets)
+Generated snippet artifacts are excluded from commit by default:
+- `formal/output/state_core_generated/state_core_tracker_snippet_v0.md`
+- `formal/output/state_core_generated/state_core_ws10_snippet_v0.md`
+
+These snippets are local renderer outputs and are not required as canonical committed artifacts.
+
+## Next-Family Selection Rule
+Before migrating another family, enforce all of the following:
+- Migrate exactly one bounded family per tranche.
+- Keep `manual_surface_compression_ratio >= 4.0`.
+- Keep `governance_gate_default_enforced: true`.
+- Require renderer apply/verify plus governance green before merge.
