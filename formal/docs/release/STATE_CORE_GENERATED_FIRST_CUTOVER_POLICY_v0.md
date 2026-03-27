@@ -13,6 +13,7 @@ Migrated control families in scope:
 - WS evidence-log/checkpoint-entry family
 - WS scientific artifact lineage metadata family (bounded tranche)
 - WS scientific artifact gate metadata family (bounded tranche)
+- WS additive-candidate declaration metadata family (bounded tranche)
 
 ## Canonical Edit Path (Generated-First)
 The default canonical edit path is:

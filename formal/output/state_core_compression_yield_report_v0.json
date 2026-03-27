@@ -1,6 +1,6 @@
 {
   "artifact_id": "state_core_compression_yield_report_v0",
-  "generated_at_utc": "2026-03-27T04:02:35.697459+00:00",
+  "generated_at_utc": "2026-03-27T04:23:03.725312+00:00",
   "scope": {
     "lane": "QM_STAT",
     "active_tranche_id": "WS-10-T19",
@@ -21,10 +21,11 @@
     "ws10_evidence_log_entry_count": 9,
     "ws10_scientific_artifact_lineage_entry_count": 4,
     "ws10_scientific_artifact_gate_metadata_entry_count": 4,
+    "ws10_additive_candidate_declaration_entry_count": 8,
     "total_status_family_entries": 30,
     "total_control_family_entries": 39,
-    "total_scientific_family_entries": 8,
-    "total_migrated_family_entries": 47,
+    "total_scientific_family_entries": 16,
+    "total_migrated_family_entries": 55,
     "mirrors_per_structured_source": 4.0,
     "tranches_tracked_per_structured_source": 3.0,
     "status_family_entries_per_structured_source": 9.0,
@@ -32,10 +33,11 @@
     "ws10_evidence_log_entries_per_structured_source": 9.0,
     "ws10_scientific_artifact_lineage_entries_per_structured_source": 4.0,
     "ws10_scientific_artifact_gate_metadata_entries_per_structured_source": 4.0,
+    "ws10_additive_candidate_declaration_entries_per_structured_source": 8.0,
     "total_status_family_entries_per_structured_source": 30.0,
     "total_control_family_entries_per_structured_source": 39.0,
-    "total_scientific_family_entries_per_structured_source": 8.0,
-    "total_migrated_family_entries_per_structured_source": 47.0,
+    "total_scientific_family_entries_per_structured_source": 16.0,
+    "total_migrated_family_entries_per_structured_source": 55.0,
     "governance_gate_default_enforced": true
   },
   "non_claim_boundary": {

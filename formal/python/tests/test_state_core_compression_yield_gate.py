@@ -65,14 +65,16 @@ def test_state_core_compression_yield_gate_report_generation_and_contract() -> N
     assert metrics["ws10_scientific_artifact_lineage_entries_per_structured_source"] >= 4.0
     assert metrics["ws10_scientific_artifact_gate_metadata_entry_count"] >= 4
     assert metrics["ws10_scientific_artifact_gate_metadata_entries_per_structured_source"] >= 4.0
+    assert metrics["ws10_additive_candidate_declaration_entry_count"] >= 8
+    assert metrics["ws10_additive_candidate_declaration_entries_per_structured_source"] >= 8.0
     assert metrics["total_status_family_entries"] >= 30
     assert metrics["total_status_family_entries_per_structured_source"] >= 30.0
     assert metrics["total_control_family_entries"] >= 39
     assert metrics["total_control_family_entries_per_structured_source"] >= 39.0
-    assert metrics["total_scientific_family_entries"] >= 8
-    assert metrics["total_scientific_family_entries_per_structured_source"] >= 8.0
-    assert metrics["total_migrated_family_entries"] >= 47
-    assert metrics["total_migrated_family_entries_per_structured_source"] >= 47.0
+    assert metrics["total_scientific_family_entries"] >= 16
+    assert metrics["total_scientific_family_entries_per_structured_source"] >= 16.0
+    assert metrics["total_migrated_family_entries"] >= 55
+    assert metrics["total_migrated_family_entries_per_structured_source"] >= 55.0
     assert metrics["governance_gate_default_enforced"] is True
 
     scope = report["scope"]

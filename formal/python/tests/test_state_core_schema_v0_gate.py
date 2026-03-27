@@ -70,6 +70,15 @@ def test_state_core_matches_schema_contract() -> None:
     gate_entry_ids = [entry["id"] for entry in gate_metadata_family["entries"]]
     assert gate_metadata_family["active_gate_entry_id"] in gate_entry_ids
 
+    additive_candidate_family = state_core["ws10_additive_candidate_declaration_metadata_family"]
+    assert additive_candidate_family["family_id"] == "WS10_ADDITIVE_CANDIDATE_DECLARATION_METADATA_v0"
+    assert additive_candidate_family["active_candidate_id"].startswith("WS10-AC")
+    assert isinstance(additive_candidate_family["entries"], list)
+    assert len(additive_candidate_family["entries"]) >= 1
+
+    candidate_ids = [entry["candidate_id"] for entry in additive_candidate_family["entries"]]
+    assert additive_candidate_family["active_candidate_id"] in candidate_ids
+
 
 def test_state_core_paths_resolve() -> None:
     state_core = _load_json(STATE_CORE_PATH)
@@ -101,3 +110,15 @@ def test_state_core_paths_resolve() -> None:
         assert artifact_path.exists(), f"Missing gate metadata artifact path: {artifact_path}"
         assert gate_entry["tranche_id"] in tranche_ids, f"Unknown tranche_id in gate metadata entry: {gate_entry['tranche_id']}"
         assert gate_entry["lineage_id"] in lineage_ids, f"Unknown lineage_id in gate metadata entry: {gate_entry['lineage_id']}"
+
+    additive_candidate_family = state_core["ws10_additive_candidate_declaration_metadata_family"]
+    for entry in additive_candidate_family["entries"]:
+        decision_path = REPO_ROOT / entry["decision_linkage"]
+        artifact_pointer_path = REPO_ROOT / entry["artifact_pointer"]
+        assert entry["lane"] in state_core["lanes"], f"Unknown lane in additive candidate entry: {entry['lane']}"
+        assert entry["cycle_target"].startswith("CYCLE"), (
+            f"Unexpected cycle_target in additive candidate entry: {entry['cycle_target']}"
+        )
+        assert entry["status_token"].endswith("DECLARED_BOUNDED_NONREDUNDANT_PAYLOAD_v0")
+        assert decision_path.exists(), f"Missing additive candidate decision linkage: {decision_path}"
+        assert artifact_pointer_path.exists(), f"Missing additive candidate artifact pointer: {artifact_pointer_path}"

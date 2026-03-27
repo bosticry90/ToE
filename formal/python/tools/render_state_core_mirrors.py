@@ -132,6 +132,40 @@ def _validate_state_core(schema: dict[str, Any], state_core: dict[str, Any]) -> 
             "ws10_scientific_artifact_gate_metadata_family lineage_id must appear in ws10_scientific_artifact_lineage_family",
         )
 
+    additive_family = state_core["ws10_additive_candidate_declaration_metadata_family"]
+    _ensure("family_id" in additive_family, "ws10_additive_candidate_declaration_metadata_family missing family_id")
+    _ensure(
+        "active_candidate_id" in additive_family,
+        "ws10_additive_candidate_declaration_metadata_family missing active_candidate_id",
+    )
+    _ensure("entries" in additive_family, "ws10_additive_candidate_declaration_metadata_family missing entries")
+    _ensure(
+        len(additive_family["entries"]) >= 1,
+        "ws10_additive_candidate_declaration_metadata_family entries cannot be empty",
+    )
+    candidate_ids = [entry["candidate_id"] for entry in additive_family["entries"]]
+    _ensure(
+        additive_family["active_candidate_id"] in candidate_ids,
+        "ws10_additive_candidate_declaration_metadata_family active_candidate_id must appear in entries",
+    )
+    for additive_entry in additive_family["entries"]:
+        for field in [
+            "candidate_id",
+            "lane",
+            "cycle_target",
+            "decision_linkage",
+            "artifact_pointer",
+            "status_token",
+        ]:
+            _ensure(
+                field in additive_entry,
+                f"ws10_additive_candidate_declaration_metadata_family entry missing field: {field}",
+            )
+        _ensure(
+            additive_entry["lane"] in state_core["lanes"],
+            "ws10_additive_candidate_declaration_metadata_family lane must appear in lanes",
+        )
+
     recent_chain = state_core["recent_tranche_chain_by_lane"][state_core["active_lane"]]
     _ensure(
         state_core["active_tranche_id"] in recent_chain,
@@ -220,6 +254,26 @@ def _scientific_artifact_gate_metadata_family_summary(state_core: dict[str, Any]
     return active_gate_entry_id, active_entry["lineage_id"], active_entry["gate_test"], entry_count, gate_chain
 
 
+def _additive_candidate_declaration_metadata_family_summary(
+    state_core: dict[str, Any],
+) -> tuple[str, str, str, int, str]:
+    family = state_core["ws10_additive_candidate_declaration_metadata_family"]
+    entries = family["entries"]
+    active_candidate_id = family["active_candidate_id"]
+    active_entry = next(entry for entry in entries if entry["candidate_id"] == active_candidate_id)
+    entry_count = len(entries)
+    candidate_chain = " -> ".join(
+        f"{entry['candidate_id']}:{entry['lane']}:{entry['cycle_target']}" for entry in entries
+    )
+    return (
+        active_candidate_id,
+        active_entry["lane"],
+        active_entry["cycle_target"],
+        entry_count,
+        candidate_chain,
+    )
+
+
 def _find_active_tranche(state_core: dict[str, Any]) -> dict[str, Any]:
     active_tranche_id = state_core["active_tranche_id"]
     active_lane = state_core["active_lane"]
@@ -293,6 +347,13 @@ def _render_tracker_snippet(state_core: dict[str, Any]) -> str:
     active_evidence_id, active_evidence_task_id, evidence_count, _ = _evidence_log_family_summary(state_core)
     active_lineage_id, active_lineage_tranche_id, active_lineage_artifact, lineage_count, _ = _scientific_artifact_lineage_family_summary(state_core)
     active_gate_entry_id, active_gate_lineage_id, active_gate_test, gate_entry_count, _ = _scientific_artifact_gate_metadata_family_summary(state_core)
+    (
+        active_candidate_id,
+        active_candidate_lane,
+        active_candidate_cycle_target,
+        additive_candidate_entry_count,
+        _,
+    ) = _additive_candidate_declaration_metadata_family_summary(state_core)
     return "\n".join(
         [
             "<!-- GENERATED: STATE_CORE_TRACKER_STATUS_v0 -->",
@@ -316,6 +377,10 @@ def _render_tracker_snippet(state_core: dict[str, Any]) -> str:
             f"- `STATE_CORE_TRACKER_WS10_GATE_META_ACTIVE_LINEAGE_v0: {active_gate_lineage_id}`",
             f"- `STATE_CORE_TRACKER_WS10_GATE_META_ACTIVE_TEST_v0: {active_gate_test}`",
             f"- `STATE_CORE_TRACKER_WS10_GATE_META_ENTRY_COUNT_v0: {gate_entry_count}`",
+            f"- `STATE_CORE_TRACKER_WS10_ADDITIVE_CANDIDATE_ACTIVE_ID_v0: {active_candidate_id}`",
+            f"- `STATE_CORE_TRACKER_WS10_ADDITIVE_CANDIDATE_ACTIVE_LANE_v0: {active_candidate_lane}`",
+            f"- `STATE_CORE_TRACKER_WS10_ADDITIVE_CANDIDATE_ACTIVE_CYCLE_TARGET_v0: {active_candidate_cycle_target}`",
+            f"- `STATE_CORE_TRACKER_WS10_ADDITIVE_CANDIDATE_ENTRY_COUNT_v0: {additive_candidate_entry_count}`",
             "<!-- /GENERATED: STATE_CORE_TRACKER_STATUS_v0 -->",
         ]
     )
@@ -328,6 +393,13 @@ def _render_ws10_snippet(state_core: dict[str, Any]) -> str:
     active_evidence_id, active_evidence_task_id, evidence_count, evidence_chain = _evidence_log_family_summary(state_core)
     active_lineage_id, active_lineage_tranche_id, active_lineage_artifact, lineage_count, lineage_chain = _scientific_artifact_lineage_family_summary(state_core)
     active_gate_entry_id, active_gate_lineage_id, active_gate_test, gate_entry_count, gate_chain = _scientific_artifact_gate_metadata_family_summary(state_core)
+    (
+        active_candidate_id,
+        active_candidate_lane,
+        active_candidate_cycle_target,
+        additive_candidate_entry_count,
+        additive_candidate_chain,
+    ) = _additive_candidate_declaration_metadata_family_summary(state_core)
     return "\n".join(
         [
             "<!-- GENERATED: STATE_CORE_WS10_STATUS_v0 -->",
@@ -354,6 +426,11 @@ def _render_ws10_snippet(state_core: dict[str, Any]) -> str:
             f"- `STATE_CORE_WS10_GATE_META_ACTIVE_TEST_v0: {active_gate_test}`",
             f"- `STATE_CORE_WS10_GATE_META_ENTRY_COUNT_v0: {gate_entry_count}`",
             f"- `STATE_CORE_WS10_GATE_META_CHAIN_v0: {gate_chain}`",
+            f"- `STATE_CORE_WS10_ADDITIVE_CANDIDATE_ACTIVE_ID_v0: {active_candidate_id}`",
+            f"- `STATE_CORE_WS10_ADDITIVE_CANDIDATE_ACTIVE_LANE_v0: {active_candidate_lane}`",
+            f"- `STATE_CORE_WS10_ADDITIVE_CANDIDATE_ACTIVE_CYCLE_TARGET_v0: {active_candidate_cycle_target}`",
+            f"- `STATE_CORE_WS10_ADDITIVE_CANDIDATE_ENTRY_COUNT_v0: {additive_candidate_entry_count}`",
+            f"- `STATE_CORE_WS10_ADDITIVE_CANDIDATE_CHAIN_v0: {additive_candidate_chain}`",
             "<!-- /GENERATED: STATE_CORE_WS10_STATUS_v0 -->",
         ]
     )
