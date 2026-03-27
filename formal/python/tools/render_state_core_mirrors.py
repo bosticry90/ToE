@@ -108,6 +108,30 @@ def _validate_state_core(schema: dict[str, Any], state_core: dict[str, Any]) -> 
                 f"ws10_scientific_artifact_lineage_family entry missing field: {field}",
             )
 
+    gate_family = state_core["ws10_scientific_artifact_gate_metadata_family"]
+    _ensure("family_id" in gate_family, "ws10_scientific_artifact_gate_metadata_family missing family_id")
+    _ensure("active_gate_entry_id" in gate_family, "ws10_scientific_artifact_gate_metadata_family missing active_gate_entry_id")
+    _ensure("entries" in gate_family, "ws10_scientific_artifact_gate_metadata_family missing entries")
+    _ensure(
+        len(gate_family["entries"]) >= 1,
+        "ws10_scientific_artifact_gate_metadata_family entries cannot be empty",
+    )
+    gate_entry_ids = [entry["id"] for entry in gate_family["entries"]]
+    _ensure(
+        gate_family["active_gate_entry_id"] in gate_entry_ids,
+        "ws10_scientific_artifact_gate_metadata_family active_gate_entry_id must appear in entries",
+    )
+    for gate_entry in gate_family["entries"]:
+        for field in ["id", "lineage_id", "tranche_id", "gate_test", "artifact", "gate_role"]:
+            _ensure(
+                field in gate_entry,
+                f"ws10_scientific_artifact_gate_metadata_family entry missing field: {field}",
+            )
+        _ensure(
+            gate_entry["lineage_id"] in lineage_ids,
+            "ws10_scientific_artifact_gate_metadata_family lineage_id must appear in ws10_scientific_artifact_lineage_family",
+        )
+
     recent_chain = state_core["recent_tranche_chain_by_lane"][state_core["active_lane"]]
     _ensure(
         state_core["active_tranche_id"] in recent_chain,
@@ -186,6 +210,16 @@ def _scientific_artifact_lineage_family_summary(state_core: dict[str, Any]) -> t
     return active_lineage_id, active_lineage["tranche_id"], active_lineage["artifact"], lineage_count, lineage_chain
 
 
+def _scientific_artifact_gate_metadata_family_summary(state_core: dict[str, Any]) -> tuple[str, str, str, int, str]:
+    family = state_core["ws10_scientific_artifact_gate_metadata_family"]
+    entries = family["entries"]
+    active_gate_entry_id = family["active_gate_entry_id"]
+    active_entry = next(entry for entry in entries if entry["id"] == active_gate_entry_id)
+    entry_count = len(entries)
+    gate_chain = " -> ".join(f"{entry['id']}:{entry['tranche_id']}" for entry in entries)
+    return active_gate_entry_id, active_entry["lineage_id"], active_entry["gate_test"], entry_count, gate_chain
+
+
 def _find_active_tranche(state_core: dict[str, Any]) -> dict[str, Any]:
     active_tranche_id = state_core["active_tranche_id"]
     active_lane = state_core["active_lane"]
@@ -258,6 +292,7 @@ def _render_tracker_snippet(state_core: dict[str, Any]) -> str:
     active_tasks_text, row_count, done_count, _ = _task_status_family_summary(state_core)
     active_evidence_id, active_evidence_task_id, evidence_count, _ = _evidence_log_family_summary(state_core)
     active_lineage_id, active_lineage_tranche_id, active_lineage_artifact, lineage_count, _ = _scientific_artifact_lineage_family_summary(state_core)
+    active_gate_entry_id, active_gate_lineage_id, active_gate_test, gate_entry_count, _ = _scientific_artifact_gate_metadata_family_summary(state_core)
     return "\n".join(
         [
             "<!-- GENERATED: STATE_CORE_TRACKER_STATUS_v0 -->",
@@ -277,6 +312,10 @@ def _render_tracker_snippet(state_core: dict[str, Any]) -> str:
             f"- `STATE_CORE_TRACKER_WS10_LINEAGE_ACTIVE_TRANCHE_v0: {active_lineage_tranche_id}`",
             f"- `STATE_CORE_TRACKER_WS10_LINEAGE_ACTIVE_ARTIFACT_v0: {active_lineage_artifact}`",
             f"- `STATE_CORE_TRACKER_WS10_LINEAGE_ENTRY_COUNT_v0: {lineage_count}`",
+            f"- `STATE_CORE_TRACKER_WS10_GATE_META_ACTIVE_ENTRY_v0: {active_gate_entry_id}`",
+            f"- `STATE_CORE_TRACKER_WS10_GATE_META_ACTIVE_LINEAGE_v0: {active_gate_lineage_id}`",
+            f"- `STATE_CORE_TRACKER_WS10_GATE_META_ACTIVE_TEST_v0: {active_gate_test}`",
+            f"- `STATE_CORE_TRACKER_WS10_GATE_META_ENTRY_COUNT_v0: {gate_entry_count}`",
             "<!-- /GENERATED: STATE_CORE_TRACKER_STATUS_v0 -->",
         ]
     )
@@ -288,6 +327,7 @@ def _render_ws10_snippet(state_core: dict[str, Any]) -> str:
     active_tasks_text, row_count, done_count, task_chain = _task_status_family_summary(state_core)
     active_evidence_id, active_evidence_task_id, evidence_count, evidence_chain = _evidence_log_family_summary(state_core)
     active_lineage_id, active_lineage_tranche_id, active_lineage_artifact, lineage_count, lineage_chain = _scientific_artifact_lineage_family_summary(state_core)
+    active_gate_entry_id, active_gate_lineage_id, active_gate_test, gate_entry_count, gate_chain = _scientific_artifact_gate_metadata_family_summary(state_core)
     return "\n".join(
         [
             "<!-- GENERATED: STATE_CORE_WS10_STATUS_v0 -->",
@@ -309,6 +349,11 @@ def _render_ws10_snippet(state_core: dict[str, Any]) -> str:
             f"- `STATE_CORE_WS10_LINEAGE_ACTIVE_ARTIFACT_v0: {active_lineage_artifact}`",
             f"- `STATE_CORE_WS10_LINEAGE_ENTRY_COUNT_v0: {lineage_count}`",
             f"- `STATE_CORE_WS10_LINEAGE_CHAIN_v0: {lineage_chain}`",
+            f"- `STATE_CORE_WS10_GATE_META_ACTIVE_ENTRY_v0: {active_gate_entry_id}`",
+            f"- `STATE_CORE_WS10_GATE_META_ACTIVE_LINEAGE_v0: {active_gate_lineage_id}`",
+            f"- `STATE_CORE_WS10_GATE_META_ACTIVE_TEST_v0: {active_gate_test}`",
+            f"- `STATE_CORE_WS10_GATE_META_ENTRY_COUNT_v0: {gate_entry_count}`",
+            f"- `STATE_CORE_WS10_GATE_META_CHAIN_v0: {gate_chain}`",
             "<!-- /GENERATED: STATE_CORE_WS10_STATUS_v0 -->",
         ]
     )

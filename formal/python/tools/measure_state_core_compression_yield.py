@@ -48,9 +48,13 @@ def _measure(state_core: dict[str, Any], governance_suite_text: str) -> dict[str
     ws10_task_status_row_count = len(state_core["ws10_task_status_table_family"]["rows"])
     ws10_evidence_log_entry_count = len(state_core["ws10_evidence_log_family"]["entries"])
     ws10_scientific_artifact_lineage_entry_count = len(state_core["ws10_scientific_artifact_lineage_family"]["lineages"])
+    ws10_scientific_artifact_gate_metadata_entry_count = len(state_core["ws10_scientific_artifact_gate_metadata_family"]["entries"])
     total_status_family_entries = status_family_chain_length + ws10_task_status_row_count
     total_control_family_entries = total_status_family_entries + ws10_evidence_log_entry_count
-    total_scientific_family_entries = ws10_scientific_artifact_lineage_entry_count
+    total_scientific_family_entries = (
+        ws10_scientific_artifact_lineage_entry_count
+        + ws10_scientific_artifact_gate_metadata_entry_count
+    )
     total_migrated_family_entries = total_control_family_entries + total_scientific_family_entries
 
     governance_gate_default_enforced = all(
@@ -75,6 +79,7 @@ def _measure(state_core: dict[str, Any], governance_suite_text: str) -> dict[str
             "ws10_task_status_row_count": ws10_task_status_row_count,
             "ws10_evidence_log_entry_count": ws10_evidence_log_entry_count,
             "ws10_scientific_artifact_lineage_entry_count": ws10_scientific_artifact_lineage_entry_count,
+            "ws10_scientific_artifact_gate_metadata_entry_count": ws10_scientific_artifact_gate_metadata_entry_count,
             "total_status_family_entries": total_status_family_entries,
             "total_control_family_entries": total_control_family_entries,
             "total_scientific_family_entries": total_scientific_family_entries,
@@ -85,6 +90,7 @@ def _measure(state_core: dict[str, Any], governance_suite_text: str) -> dict[str
             "ws10_task_status_rows_per_structured_source": ws10_task_status_row_count / structured_source_count,
             "ws10_evidence_log_entries_per_structured_source": ws10_evidence_log_entry_count / structured_source_count,
             "ws10_scientific_artifact_lineage_entries_per_structured_source": ws10_scientific_artifact_lineage_entry_count / structured_source_count,
+            "ws10_scientific_artifact_gate_metadata_entries_per_structured_source": ws10_scientific_artifact_gate_metadata_entry_count / structured_source_count,
             "total_status_family_entries_per_structured_source": total_status_family_entries / structured_source_count,
             "total_control_family_entries_per_structured_source": total_control_family_entries / structured_source_count,
             "total_scientific_family_entries_per_structured_source": total_scientific_family_entries / structured_source_count,

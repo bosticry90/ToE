@@ -61,6 +61,15 @@ def test_state_core_matches_schema_contract() -> None:
     lineage_ids = [entry["id"] for entry in lineage_family["lineages"]]
     assert lineage_family["active_lineage_id"] in lineage_ids
 
+    gate_metadata_family = state_core["ws10_scientific_artifact_gate_metadata_family"]
+    assert gate_metadata_family["family_id"] == "WS10_SCIENTIFIC_ARTIFACT_GATE_METADATA_v0"
+    assert gate_metadata_family["active_gate_entry_id"].startswith("WS10-G")
+    assert isinstance(gate_metadata_family["entries"], list)
+    assert len(gate_metadata_family["entries"]) >= 1
+
+    gate_entry_ids = [entry["id"] for entry in gate_metadata_family["entries"]]
+    assert gate_metadata_family["active_gate_entry_id"] in gate_entry_ids
+
 
 def test_state_core_paths_resolve() -> None:
     state_core = _load_json(STATE_CORE_PATH)
@@ -82,3 +91,13 @@ def test_state_core_paths_resolve() -> None:
         artifact_path = REPO_ROOT / lineage["artifact"]
         assert artifact_path.exists(), f"Missing lineage artifact path: {artifact_path}"
         assert lineage["tranche_id"] in tranche_ids, f"Unknown tranche_id in lineage entry: {lineage['tranche_id']}"
+
+    lineage_ids = {lineage["id"] for lineage in lineage_family["lineages"]}
+    gate_metadata_family = state_core["ws10_scientific_artifact_gate_metadata_family"]
+    for gate_entry in gate_metadata_family["entries"]:
+        gate_path = REPO_ROOT / gate_entry["gate_test"]
+        artifact_path = REPO_ROOT / gate_entry["artifact"]
+        assert gate_path.exists(), f"Missing gate metadata test path: {gate_path}"
+        assert artifact_path.exists(), f"Missing gate metadata artifact path: {artifact_path}"
+        assert gate_entry["tranche_id"] in tranche_ids, f"Unknown tranche_id in gate metadata entry: {gate_entry['tranche_id']}"
+        assert gate_entry["lineage_id"] in lineage_ids, f"Unknown lineage_id in gate metadata entry: {gate_entry['lineage_id']}"

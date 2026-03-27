@@ -40,6 +40,7 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_ws10_task_status_table_family_gate.py `
   formal/python/tests/test_ws10_evidence_log_family_gate.py `
   formal/python/tests/test_ws10_scientific_artifact_lineage_family_gate.py `
+  formal/python/tests/test_ws10_scientific_artifact_gate_metadata_family_gate.py `
   formal/python/tests/test_state_core_compression_yield_gate.py `
   formal/python/tests/test_state_doc_no_duplicate_gapids.py `
   formal/python/tests/test_toe_target_spec_doc.py `

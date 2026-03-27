@@ -302,6 +302,44 @@
       }
     ]
   },
+  "ws10_scientific_artifact_gate_metadata_family": {
+    "family_id": "WS10_SCIENTIFIC_ARTIFACT_GATE_METADATA_v0",
+    "active_gate_entry_id": "WS10-G19",
+    "entries": [
+      {
+        "id": "WS10-G10",
+        "lineage_id": "WS10-L10",
+        "tranche_id": "WS-10-T10",
+        "gate_test": "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle07_gate.py",
+        "artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle07_v0.json",
+        "gate_role": "bounded_scientific_artifact_verification"
+      },
+      {
+        "id": "WS10-G17",
+        "lineage_id": "WS10-L17",
+        "tranche_id": "WS-10-T17",
+        "gate_test": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle09_gate.py",
+        "artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle09_v0.json",
+        "gate_role": "bounded_scientific_artifact_verification"
+      },
+      {
+        "id": "WS10-G18",
+        "lineage_id": "WS10-L18",
+        "tranche_id": "WS-10-T18",
+        "gate_test": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle10_gate.py",
+        "artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle10_v0.json",
+        "gate_role": "bounded_scientific_artifact_verification"
+      },
+      {
+        "id": "WS10-G19",
+        "lineage_id": "WS10-L19",
+        "tranche_id": "WS-10-T19",
+        "gate_test": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle11_gate.py",
+        "artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json",
+        "gate_role": "bounded_scientific_artifact_verification"
+      }
+    ]
+  },
   "lanes": {
     "QM_STAT": {
       "status": "STOPPED_AT_SYNTHESIS_BOUNDARY",
