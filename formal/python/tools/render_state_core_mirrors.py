@@ -88,6 +88,26 @@ def _validate_state_core(schema: dict[str, Any], state_core: dict[str, Any]) -> 
         "ws10_evidence_log_family active_entry_id must appear in entries",
     )
 
+    lineage_family = state_core["ws10_scientific_artifact_lineage_family"]
+    _ensure("family_id" in lineage_family, "ws10_scientific_artifact_lineage_family missing family_id")
+    _ensure("active_lineage_id" in lineage_family, "ws10_scientific_artifact_lineage_family missing active_lineage_id")
+    _ensure("lineages" in lineage_family, "ws10_scientific_artifact_lineage_family missing lineages")
+    _ensure(
+        len(lineage_family["lineages"]) >= 1,
+        "ws10_scientific_artifact_lineage_family lineages cannot be empty",
+    )
+    lineage_ids = [entry["id"] for entry in lineage_family["lineages"]]
+    _ensure(
+        lineage_family["active_lineage_id"] in lineage_ids,
+        "ws10_scientific_artifact_lineage_family active_lineage_id must appear in lineages",
+    )
+    for lineage_entry in lineage_family["lineages"]:
+        for field in ["id", "tranche_id", "lane", "cycle", "artifact", "lineage_role"]:
+            _ensure(
+                field in lineage_entry,
+                f"ws10_scientific_artifact_lineage_family entry missing field: {field}",
+            )
+
     recent_chain = state_core["recent_tranche_chain_by_lane"][state_core["active_lane"]]
     _ensure(
         state_core["active_tranche_id"] in recent_chain,
@@ -154,6 +174,16 @@ def _evidence_log_family_summary(state_core: dict[str, Any]) -> tuple[str, str, 
     entry_count = len(entries)
     evidence_chain = " -> ".join(f"{entry['id']}:{entry['task_id']}" for entry in entries)
     return active_entry_id, active_entry["task_id"], entry_count, evidence_chain
+
+
+def _scientific_artifact_lineage_family_summary(state_core: dict[str, Any]) -> tuple[str, str, str, int, str]:
+    family = state_core["ws10_scientific_artifact_lineage_family"]
+    lineages = family["lineages"]
+    active_lineage_id = family["active_lineage_id"]
+    active_lineage = next(entry for entry in lineages if entry["id"] == active_lineage_id)
+    lineage_count = len(lineages)
+    lineage_chain = " -> ".join(f"{entry['id']}:{entry['tranche_id']}" for entry in lineages)
+    return active_lineage_id, active_lineage["tranche_id"], active_lineage["artifact"], lineage_count, lineage_chain
 
 
 def _find_active_tranche(state_core: dict[str, Any]) -> dict[str, Any]:
@@ -227,6 +257,7 @@ def _render_tracker_snippet(state_core: dict[str, Any]) -> str:
     active_decision, active_decision_status, _ = _status_family_summary(state_core)
     active_tasks_text, row_count, done_count, _ = _task_status_family_summary(state_core)
     active_evidence_id, active_evidence_task_id, evidence_count, _ = _evidence_log_family_summary(state_core)
+    active_lineage_id, active_lineage_tranche_id, active_lineage_artifact, lineage_count, _ = _scientific_artifact_lineage_family_summary(state_core)
     return "\n".join(
         [
             "<!-- GENERATED: STATE_CORE_TRACKER_STATUS_v0 -->",
@@ -242,6 +273,10 @@ def _render_tracker_snippet(state_core: dict[str, Any]) -> str:
             f"- `STATE_CORE_TRACKER_WS10_EVIDENCE_ACTIVE_ENTRY_v0: {active_evidence_id}`",
             f"- `STATE_CORE_TRACKER_WS10_EVIDENCE_ACTIVE_TASK_v0: {active_evidence_task_id}`",
             f"- `STATE_CORE_TRACKER_WS10_EVIDENCE_ENTRY_COUNT_v0: {evidence_count}`",
+            f"- `STATE_CORE_TRACKER_WS10_LINEAGE_ACTIVE_ID_v0: {active_lineage_id}`",
+            f"- `STATE_CORE_TRACKER_WS10_LINEAGE_ACTIVE_TRANCHE_v0: {active_lineage_tranche_id}`",
+            f"- `STATE_CORE_TRACKER_WS10_LINEAGE_ACTIVE_ARTIFACT_v0: {active_lineage_artifact}`",
+            f"- `STATE_CORE_TRACKER_WS10_LINEAGE_ENTRY_COUNT_v0: {lineage_count}`",
             "<!-- /GENERATED: STATE_CORE_TRACKER_STATUS_v0 -->",
         ]
     )
@@ -252,6 +287,7 @@ def _render_ws10_snippet(state_core: dict[str, Any]) -> str:
     active_decision, _, chain_compact = _status_family_summary(state_core)
     active_tasks_text, row_count, done_count, task_chain = _task_status_family_summary(state_core)
     active_evidence_id, active_evidence_task_id, evidence_count, evidence_chain = _evidence_log_family_summary(state_core)
+    active_lineage_id, active_lineage_tranche_id, active_lineage_artifact, lineage_count, lineage_chain = _scientific_artifact_lineage_family_summary(state_core)
     return "\n".join(
         [
             "<!-- GENERATED: STATE_CORE_WS10_STATUS_v0 -->",
@@ -268,6 +304,11 @@ def _render_ws10_snippet(state_core: dict[str, Any]) -> str:
             f"- `STATE_CORE_WS10_EVIDENCE_ACTIVE_TASK_v0: {active_evidence_task_id}`",
             f"- `STATE_CORE_WS10_EVIDENCE_ENTRY_COUNT_v0: {evidence_count}`",
             f"- `STATE_CORE_WS10_EVIDENCE_CHAIN_v0: {evidence_chain}`",
+            f"- `STATE_CORE_WS10_LINEAGE_ACTIVE_ID_v0: {active_lineage_id}`",
+            f"- `STATE_CORE_WS10_LINEAGE_ACTIVE_TRANCHE_v0: {active_lineage_tranche_id}`",
+            f"- `STATE_CORE_WS10_LINEAGE_ACTIVE_ARTIFACT_v0: {active_lineage_artifact}`",
+            f"- `STATE_CORE_WS10_LINEAGE_ENTRY_COUNT_v0: {lineage_count}`",
+            f"- `STATE_CORE_WS10_LINEAGE_CHAIN_v0: {lineage_chain}`",
             "<!-- /GENERATED: STATE_CORE_WS10_STATUS_v0 -->",
         ]
     )

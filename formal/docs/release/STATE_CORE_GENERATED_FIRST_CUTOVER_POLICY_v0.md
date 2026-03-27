@@ -11,6 +11,7 @@ Migrated control families in scope:
 - WS-10 branch/boundary authorization family
 - WS task/status table family
 - WS evidence-log/checkpoint-entry family
+- WS scientific artifact lineage metadata family (bounded tranche)
 
 ## Canonical Edit Path (Generated-First)
 The default canonical edit path is:

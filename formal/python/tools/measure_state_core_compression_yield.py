@@ -47,8 +47,11 @@ def _measure(state_core: dict[str, Any], governance_suite_text: str) -> dict[str
     status_family_chain_length = len(state_core["ws10_branch_boundary_status_family"]["decision_chain"])
     ws10_task_status_row_count = len(state_core["ws10_task_status_table_family"]["rows"])
     ws10_evidence_log_entry_count = len(state_core["ws10_evidence_log_family"]["entries"])
+    ws10_scientific_artifact_lineage_entry_count = len(state_core["ws10_scientific_artifact_lineage_family"]["lineages"])
     total_status_family_entries = status_family_chain_length + ws10_task_status_row_count
     total_control_family_entries = total_status_family_entries + ws10_evidence_log_entry_count
+    total_scientific_family_entries = ws10_scientific_artifact_lineage_entry_count
+    total_migrated_family_entries = total_control_family_entries + total_scientific_family_entries
 
     governance_gate_default_enforced = all(
         token in governance_suite_text for token in REQUIRED_GOVERNANCE_GATE_TOKENS
@@ -71,15 +74,21 @@ def _measure(state_core: dict[str, Any], governance_suite_text: str) -> dict[str
             "status_family_chain_length": status_family_chain_length,
             "ws10_task_status_row_count": ws10_task_status_row_count,
             "ws10_evidence_log_entry_count": ws10_evidence_log_entry_count,
+            "ws10_scientific_artifact_lineage_entry_count": ws10_scientific_artifact_lineage_entry_count,
             "total_status_family_entries": total_status_family_entries,
             "total_control_family_entries": total_control_family_entries,
+            "total_scientific_family_entries": total_scientific_family_entries,
+            "total_migrated_family_entries": total_migrated_family_entries,
             "mirrors_per_structured_source": mirror_target_count / structured_source_count,
             "tranches_tracked_per_structured_source": recent_tranche_chain_length / structured_source_count,
             "status_family_entries_per_structured_source": status_family_chain_length / structured_source_count,
             "ws10_task_status_rows_per_structured_source": ws10_task_status_row_count / structured_source_count,
             "ws10_evidence_log_entries_per_structured_source": ws10_evidence_log_entry_count / structured_source_count,
+            "ws10_scientific_artifact_lineage_entries_per_structured_source": ws10_scientific_artifact_lineage_entry_count / structured_source_count,
             "total_status_family_entries_per_structured_source": total_status_family_entries / structured_source_count,
             "total_control_family_entries_per_structured_source": total_control_family_entries / structured_source_count,
+            "total_scientific_family_entries_per_structured_source": total_scientific_family_entries / structured_source_count,
+            "total_migrated_family_entries_per_structured_source": total_migrated_family_entries / structured_source_count,
             "governance_gate_default_enforced": governance_gate_default_enforced,
         },
         "non_claim_boundary": {

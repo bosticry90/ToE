@@ -11,6 +11,7 @@
     "ws10_branch_boundary_status_family",
     "ws10_task_status_table_family",
     "ws10_evidence_log_family",
+    "ws10_scientific_artifact_lineage_family",
     "lanes",
     "tranches",
     "non_claim_invariants",

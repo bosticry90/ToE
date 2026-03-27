@@ -264,6 +264,44 @@
       }
     ]
   },
+  "ws10_scientific_artifact_lineage_family": {
+    "family_id": "WS10_SCIENTIFIC_ARTIFACT_LINEAGE_METADATA_v0",
+    "active_lineage_id": "WS10-L19",
+    "lineages": [
+      {
+        "id": "WS10-L10",
+        "tranche_id": "WS-10-T10",
+        "lane": "COSMO_SR",
+        "cycle": "CYCLE07",
+        "artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle07_v0.json",
+        "lineage_role": "cycle_boundary_kickoff"
+      },
+      {
+        "id": "WS10-L17",
+        "tranche_id": "WS-10-T17",
+        "lane": "QM_STAT",
+        "cycle": "CYCLE09",
+        "artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle09_v0.json",
+        "lineage_role": "cycle_increment"
+      },
+      {
+        "id": "WS10-L18",
+        "tranche_id": "WS-10-T18",
+        "lane": "QM_STAT",
+        "cycle": "CYCLE10",
+        "artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle10_v0.json",
+        "lineage_role": "cycle_increment"
+      },
+      {
+        "id": "WS10-L19",
+        "tranche_id": "WS-10-T19",
+        "lane": "QM_STAT",
+        "cycle": "CYCLE11",
+        "artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json",
+        "lineage_role": "cycle_synthesis_boundary"
+      }
+    ]
+  },
   "lanes": {
     "QM_STAT": {
       "status": "STOPPED_AT_SYNTHESIS_BOUNDARY",

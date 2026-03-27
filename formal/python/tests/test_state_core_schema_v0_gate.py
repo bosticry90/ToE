@@ -52,6 +52,15 @@ def test_state_core_matches_schema_contract() -> None:
         assert transition["to"] in schema["allowed_status_postures"]
         assert "decision_basis" in transition
 
+    lineage_family = state_core["ws10_scientific_artifact_lineage_family"]
+    assert lineage_family["family_id"] == "WS10_SCIENTIFIC_ARTIFACT_LINEAGE_METADATA_v0"
+    assert lineage_family["active_lineage_id"].startswith("WS10-L")
+    assert isinstance(lineage_family["lineages"], list)
+    assert len(lineage_family["lineages"]) >= 1
+
+    lineage_ids = [entry["id"] for entry in lineage_family["lineages"]]
+    assert lineage_family["active_lineage_id"] in lineage_ids
+
 
 def test_state_core_paths_resolve() -> None:
     state_core = _load_json(STATE_CORE_PATH)
@@ -66,3 +75,10 @@ def test_state_core_paths_resolve() -> None:
         target_path = REPO_ROOT / target["path"]
         assert target_path.exists(), f"Missing mirror target path: {target_path}"
         assert target["marker_id"].startswith("STATE_CORE_"), "marker_id must use STATE_CORE_ prefix"
+
+    lineage_family = state_core["ws10_scientific_artifact_lineage_family"]
+    tranche_ids = {tranche["id"] for tranche in state_core["tranches"]}
+    for lineage in lineage_family["lineages"]:
+        artifact_path = REPO_ROOT / lineage["artifact"]
+        assert artifact_path.exists(), f"Missing lineage artifact path: {artifact_path}"
+        assert lineage["tranche_id"] in tranche_ids, f"Unknown tranche_id in lineage entry: {lineage['tranche_id']}"

@@ -61,10 +61,16 @@ def test_state_core_compression_yield_gate_report_generation_and_contract() -> N
     assert metrics["ws10_task_status_rows_per_structured_source"] >= 21.0
     assert metrics["ws10_evidence_log_entry_count"] >= 9
     assert metrics["ws10_evidence_log_entries_per_structured_source"] >= 9.0
+    assert metrics["ws10_scientific_artifact_lineage_entry_count"] >= 4
+    assert metrics["ws10_scientific_artifact_lineage_entries_per_structured_source"] >= 4.0
     assert metrics["total_status_family_entries"] >= 30
     assert metrics["total_status_family_entries_per_structured_source"] >= 30.0
     assert metrics["total_control_family_entries"] >= 39
     assert metrics["total_control_family_entries_per_structured_source"] >= 39.0
+    assert metrics["total_scientific_family_entries"] >= 4
+    assert metrics["total_scientific_family_entries_per_structured_source"] >= 4.0
+    assert metrics["total_migrated_family_entries"] >= 43
+    assert metrics["total_migrated_family_entries_per_structured_source"] >= 43.0
     assert metrics["governance_gate_default_enforced"] is True
 
     scope = report["scope"]
