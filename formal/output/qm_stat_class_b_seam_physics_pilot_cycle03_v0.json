@@ -1,0 +1,91 @@
+{
+  "artifact_id": "qm_stat_class_b_seam_physics_pilot_cycle03_v0",
+  "seam_id": "SEAM-QM-STAT",
+  "class_token": "TOE_CK_CLASS_COMPATIBILITY_v0",
+  "status": "CRITERIA_AND_HIGHER_MOMENT_EXCLUSION_PINNED_NONCLAIM",
+  "derived_from": {
+    "artifact_id": "qm_stat_class_b_seam_physics_pilot_cycle02_v0",
+    "artifact_path": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle02_v0.json"
+  },
+  "blocker_discharge_criteria": {
+    "token": "MASS_MEAN_VARIANCE_THIRD_MOMENT_PARITY_REQUIRED",
+    "shared_support": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "qm_probability_mass": [
+      "1/8",
+      "3/8",
+      "3/8",
+      "1/8"
+    ],
+    "stat_probability_mass": [
+      "1/8",
+      "3/8",
+      "3/8",
+      "1/8"
+    ],
+    "normalization": {
+      "qm_sum": "1/1",
+      "stat_sum": "1/1"
+    },
+    "first_moment": {
+      "qm_mu": "3/2",
+      "stat_mu": "3/2"
+    },
+    "second_central_moment": {
+      "qm_var": "3/4",
+      "stat_var": "3/4"
+    },
+    "third_central_moment": {
+      "qm_m3": "0/1",
+      "stat_m3": "0/1"
+    }
+  },
+  "bounded_incompatibility_exclusion": {
+    "counterexample_id": "qm_stat_cycle03_third_moment_drift_counterexample_v0",
+    "shared_support": [
+      0,
+      1,
+      2,
+      3
+    ],
+    "qm_probability_mass": [
+      "0/1",
+      "1/2",
+      "1/2",
+      "0/1"
+    ],
+    "stat_probability_mass": [
+      "0/1",
+      "1/4",
+      "3/4",
+      "0/1"
+    ],
+    "first_moment": {
+      "qm_mu": "3/2",
+      "stat_mu": "7/4"
+    },
+    "second_central_moment": {
+      "qm_var": "1/4",
+      "stat_var": "3/16"
+    },
+    "third_central_moment": {
+      "qm_m3": "0/1",
+      "stat_m3": "-3/32"
+    },
+    "classification": "NONCOMPATIBLE_EXCLUDED_v0"
+  },
+  "bounded_scope": {
+    "class_flip_claimed": false,
+    "full_theorem_discharge_claimed": false,
+    "continuum_statistical_closure_claimed": false,
+    "external_truth_claimed": false
+  },
+  "adjudication": {
+    "token": "QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE03_ADJUDICATION",
+    "value": "NOT_YET_DISCHARGED"
+  }
+}

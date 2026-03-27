@@ -101,7 +101,30 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_em_empirical_comparison_packet_03_gate.py `
   formal/python/tests/test_qft_empirical_comparison_packet_03_gate.py `
   formal/python/tests/test_sr_empirical_comparison_packet_03_gate.py `
-    formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py `
+  formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py `
+    formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle01_gate.py `
+  formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle02_gate.py `
+  formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle03_gate.py `
+  formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle04_gate.py `
+  formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle05_gate.py `
+  formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle06_gate.py `
+  formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle01_to_02_synthesis_gate.py `
+  formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle02_to_03_synthesis_gate.py `
+  formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle03_to_04_synthesis_gate.py `
+  formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle04_to_05_synthesis_gate.py `
+  formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle05_to_06_synthesis_gate.py `
+  formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle01_gate.py `
+  formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle02_gate.py `
+  formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle03_gate.py `
+  formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle04_gate.py `
+  formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle05_gate.py `
+  formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle06_gate.py `
+  formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle01_synthesis_gate.py `
+  formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle01_to_02_synthesis_gate.py `
+  formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle02_to_03_synthesis_gate.py `
+  formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle03_to_04_synthesis_gate.py `
+  formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle04_to_05_synthesis_gate.py `
+  formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle05_to_06_synthesis_gate.py `
     formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py `
     formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py `
     formal/python/tests/test_proof_debt_marker_stability_gate.py `
@@ -188,7 +211,10 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_gr01_publication_grade_discharge_package_gate.py `
   formal/python/tests/test_gr01_publication_theorem_claim_advancement_gate.py `
   formal/python/tests/test_gr_continuum_discharge_criteria_cycle10_gate.py `
+  formal/python/tests/test_gr_w2_continuum_regularity_increment_gate.py `
   formal/python/tests/test_w1_w2_science_increment_gate.py `
+  formal/python/tests/test_em_distributional_science_increment_gate.py `
+  formal/python/tests/test_em_distributional_weak_form_derivation_surface_gate.py `
   formal/python/tests/test_gr01_function_space_discrete_regularity_evidence_gate.py `
   formal/python/tests/test_gr01_function_space_continuum_regularity_route_gate.py `
   formal/python/tests/test_gr01_function_space_nonclaim_boundary_evidence_gate.py `

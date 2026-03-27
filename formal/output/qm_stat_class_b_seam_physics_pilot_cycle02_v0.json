@@ -1,0 +1,73 @@
+{
+  "artifact_id": "qm_stat_class_b_seam_physics_pilot_cycle02_v0",
+  "seam_id": "SEAM-QM-STAT",
+  "class_token": "TOE_CK_CLASS_COMPATIBILITY_v0",
+  "status": "CRITERIA_AND_EXCLUSION_PAYLOAD_PINNED_NONCLAIM",
+  "derived_from": {
+    "artifact_id": "qm_stat_class_b_seam_physics_pilot_cycle01_v0",
+    "artifact_path": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle01_v0.json"
+  },
+  "blocker_discharge_criteria": {
+    "token": "MASS_NORMALIZATION_AND_MOMENT_PARITY_REQUIRED",
+    "shared_support": [
+      0,
+      1,
+      2
+    ],
+    "qm_probability_mass": [
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    "stat_probability_mass": [
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    "normalization": {
+      "qm_sum": "1/1",
+      "stat_sum": "1/1"
+    },
+    "first_moment": {
+      "qm_mu": "2/3",
+      "stat_mu": "2/3"
+    },
+    "second_central_moment": {
+      "qm_var": "5/9",
+      "stat_var": "5/9"
+    }
+  },
+  "bounded_incompatibility_exclusion": {
+    "counterexample_id": "qm_stat_cycle02_mass_drift_counterexample_v0",
+    "shared_support": [
+      0,
+      1,
+      2
+    ],
+    "qm_probability_mass": [
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    "stat_probability_mass": [
+      "1/3",
+      "1/3",
+      "1/3"
+    ],
+    "first_moment": {
+      "qm_mu": "2/3",
+      "stat_mu": "1/1"
+    },
+    "classification": "NONCOMPATIBLE_EXCLUDED_v0"
+  },
+  "bounded_scope": {
+    "class_flip_claimed": false,
+    "full_theorem_discharge_claimed": false,
+    "continuum_statistical_closure_claimed": false,
+    "external_truth_claimed": false
+  },
+  "adjudication": {
+    "token": "QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE02_ADJUDICATION",
+    "value": "NOT_YET_DISCHARGED"
+  }
+}

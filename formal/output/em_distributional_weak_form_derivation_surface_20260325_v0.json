@@ -1,0 +1,44 @@
+{
+  "artifact_id": "em_distributional_weak_form_derivation_surface_20260325_v0",
+  "status": "BOUNDED_WEAK_FORM_DERIVATION_SURFACE_PINNED_NONCLAIM",
+  "lane": "EM_U1_MICRO_DISTRIBUTIONAL",
+  "derived_from": {
+    "artifact_path": "formal/output/em_distributional_science_increment_20260325_v0.json",
+    "artifact_id": "em_distributional_science_increment_20260325_v0"
+  },
+  "doc_pointer": "formal/docs/paper/DERIVATION_TARGET_EM_DISTRIBUTIONAL_WEAK_FORM_DERIVATION_SURFACE_20260325_v0.md",
+  "assumption_ids": [
+    "ASM-EM-U1-PHY-SOURCE-01",
+    "ASM-EM-U1-MATH-SMOOTH-01",
+    "ASM-EM-U1-MATH-DISTRIB-01"
+  ],
+  "weak_form_derivation": {
+    "test_function_space": "C_c^infinity(omega)",
+    "identity": "<partial_mu J^mu, phi> = -<J^mu, partial_mu phi>",
+    "integration_by_parts_boundary_condition": "compact_support_boundary_term_zero",
+    "steps": [
+      "pairing_definition",
+      "bounded_support_localization",
+      "integration_by_parts",
+      "boundary_term_vanishes",
+      "symbolic_identity_conclusion"
+    ]
+  },
+  "bounded_singular_source_witness": {
+    "model": "1D_point_source",
+    "distribution": "delta(x)",
+    "pairing_left": "<delta, phi>",
+    "pairing_right": "phi(0)",
+    "symbolic_consistency": true
+  },
+  "bounded_scope": {
+    "theorem_discharge_claimed": false,
+    "curved_space_covariant_divergence_claimed": false,
+    "non_abelian_completion_claimed": false,
+    "external_truth_claimed": false
+  },
+  "adjudication": {
+    "token": "EM_DISTRIBUTIONAL_WEAK_FORM_DERIVATION_20260325_ADJUDICATION",
+    "value": "NOT_YET_DISCHARGED"
+  }
+}

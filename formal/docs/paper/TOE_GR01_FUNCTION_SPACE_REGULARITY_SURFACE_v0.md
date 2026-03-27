@@ -46,6 +46,8 @@ Completion criteria bundle:
 - row-02 route path: `formal/output/gr01_function_space_continuum_regularity_route_v0.json`
 - `GR01_FUNCTION_SPACE_ROW_02_NUMERIC_SUPPORT_ARTIFACT_v0: gr_continuum_science_increment_20260325_v0`
 - row-02 numeric-support path: `formal/output/gr_continuum_science_increment_20260325_v0.json`
+- `GR01_FUNCTION_SPACE_ROW_02_CONTINUATION_ARTIFACT_v0: gr_w2_continuum_regularity_increment_20260325_v0`
+- row-02 continuation path: `formal/output/gr_w2_continuum_regularity_increment_20260325_v0.json`
 - row-02 route note path: `formal/docs/paper/TOE_GR01_FUNCTION_SPACE_CONTINUUM_REGULARITY_ROUTE_v0.md`
 - row-02 route gate path: `formal/python/tests/test_gr01_function_space_continuum_regularity_route_gate.py`
 - `GR01_FUNCTION_SPACE_ROW_03_EVIDENCE_ARTIFACT_v0: gr01_function_space_nonclaim_boundary_evidence_v0`

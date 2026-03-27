@@ -1,0 +1,50 @@
+{
+  "artifact_id": "qm_stat_class_b_seam_physics_pilot_cycle01_v0",
+  "seam_id": "SEAM-QM-STAT",
+  "class_token": "TOE_CK_CLASS_COMPATIBILITY_v0",
+  "status": "WITNESS_AND_BOUNDED_PAYLOAD_PINNED_NONCLAIM",
+  "witness_package_pointer": "formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean",
+  "source_artifacts": [
+    "formal/output/qm_m4_seam_closure_promotion_cycle01_v0.json",
+    "formal/output/stat_m4_seam_closure_promotion_cycle01_v0.json"
+  ],
+  "compatibility_payload": {
+    "payload_status": "BOUNDED_MOMENT_TRANSPORT_CONSISTENCY_PINNED_NONCLAIM",
+    "route": "PROBABILITY_MASS_TO_MOMENT_SURFACE_ALIGNMENT",
+    "scope": "FINITE_STATE_DISCRETE_ONLY_NONCLAIM",
+    "observable_symbol": "X",
+    "state_support": [
+      0,
+      1,
+      2
+    ],
+    "qm_probability_mass": [
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    "stat_probability_mass": [
+      "1/2",
+      "1/3",
+      "1/6"
+    ],
+    "first_moment": {
+      "qm_mu": "2/3",
+      "stat_mu": "2/3"
+    },
+    "second_central_moment": {
+      "qm_var": "5/9",
+      "stat_var": "5/9"
+    }
+  },
+  "bounded_scope": {
+    "class_flip_claimed": false,
+    "full_theorem_discharge_claimed": false,
+    "continuum_statistical_closure_claimed": false,
+    "external_truth_claimed": false
+  },
+  "adjudication": {
+    "token": "QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE01_ADJUDICATION",
+    "value": "NOT_YET_DISCHARGED"
+  }
+}

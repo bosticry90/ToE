@@ -187,7 +187,7 @@ Program intent: execute a strict truth-restoration sequence before any new theor
 
 ## Current Status
 - Primary workstream: WS-10
-- Active task: WS-10-T06
+- Active task: WS-10-T19-BOUNDARY-PENDING-NEXT-BRANCH-DECISION
 - WS-01 through WS-04: DONE
 - WS-05: DONE
 - WS-06: DONE
@@ -392,6 +392,38 @@ Program intent: execute a strict truth-restoration sequence before any new theor
 - Invariance constraints preserved: scalar freeze unchanged, workflow line unchanged, and `QFT_GR_SEAM_FORK_DECISION_STATUS_v0: HOLD_FOR_SCALAR_PUBLICATION_v0` unchanged.
 - Resolution artifact pointer: `formal/docs/release/WS_10_T06_SUPERSEDE_BY_QFT_GR_REACTIVATION_DECISION_v0.md`.
 
+## WS-10-T07A Cycle07 Single-Lane Selection Gate Resolution (2026-03-26)
+- Gate status: `CLOSED_SELECTED_LANE_v0`
+- Gate strategy: `SINGLE_LANE_FIRST`
+- Candidate lanes: `QM_STAT_CYCLE07_PLUS_COSMO_SR_CYCLE07`
+- Selected lane token: `QM_STAT_CYCLE07`
+- Non-selected lane lock: `COSMO_SR_READ_ONLY_CHECKPOINT_MAINTENANCE_ONLY`
+- Non-selected lane prohibited scope: `NO_NEW_SYNTHESIS_NO_NEW_CYCLE_DRAFTING_NO_NEW_PAYLOAD_EXPLORATION_UNTIL_ACTIVE_TRANCHE_STOP_CONDITION`
+- Gate policy: authority decision is now resolved and selected-lane-only drafting may proceed under bounded controls.
+- Gate artifact pointer: `formal/docs/release/WS_10_T07_CLASS_B_CYCLE07_LANE_SELECTION_GATE_v0.md`.
+- Checkpoint posture: control-surface only resolution; no theorem-surface edits and no class-flip claims.
+
+## WS-10-T07B Physics-First Policy Enforcement Checkpoint (2026-03-26)
+- Policy status: `ACTIVE_ENFORCED_v0`
+- Priority rule: `PHYSICS_BLOCKER_FIRST_GOVERNANCE_UNBLOCKER_ONLY`
+- Release-gate truth posture: `GOVERNANCE_PREREQUISITE_PLUS_FULL_PYTEST_UNCHANGED`
+- Policy artifact pointer: `formal/docs/release/WS_10_T07B_PHYSICS_FIRST_EXECUTION_POLICY_v0.md`.
+- Checkpoint posture: control-surface policy alignment only; no theorem-surface edits.
+
+## WS-10-T08 QM-STAT Cycle07 Boundary Decision (2026-03-26)
+- Tranche status: `STOPPED_AT_SYNTHESIS_BOUNDARY_PENDING_BRANCH_DECISION_v0`
+- Boundary artifact pointer: `formal/docs/release/WS_10_T08_QM_STAT_CYCLE07_BOUNDARY_DECISION_v0.md`.
+- Selected lane status: `QM_STAT_CYCLE07_BOUNDARY_READY`
+- Non-selected lane lock reasserted: `COSMO_SR_READ_ONLY_CHECKPOINT_MAINTENANCE_ONLY`
+- Decision posture: no further additive payload opened in this tranche without explicit bounded payload definition.
+
+## WS-10-T09 Post-T08 Lane Authorization Decision (2026-03-26)
+- Decision status: `CLOSED_AUTHORIZED_COSMO_SR_NEXT_LANE_v0`
+- Decision artifact pointer: `formal/docs/release/WS_10_T09_POST_T08_LANE_AUTHORIZATION_DECISION_v0.md`.
+- QM-STAT reopen condition: `REQUIRE_EXPLICIT_BOUNDED_ADDITIVE_PAYLOAD_DECLARATION`
+- COSMO-SR next-lane authorization status: `ACTIVE_BOUNDED_CONTROL_SURFACES_ONLY_v0`
+- Authorization scope: `PRE_DRAFT_AUTHORIZATION_ONLY_NO_THEOREM_SURFACE_EDITS`
+
 ## Workstreams
 | ID | Workstream | Status | Primary | Scope Summary |
 | --- | --- | --- | --- | --- |
@@ -442,6 +474,20 @@ Theory work may restart only when all rows below are satisfied:
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | WS-10-T06 | Theory Restart Pilot | Open bounded post-completion handoff boundary after canonical GR-QM seam closure | DONE | user | WS-10-T05 | 2026-03-21: T06 resolved by explicit supersession to non-GR-QM successor lane; compatibility-token technical debt remains explicit and non-authoritative; no GR-QM theorem-lane reopen performed | T06 boundary is resolved and successor lane activation is explicitly pinned in tracker/state/roadmap/WS-10 surfaces |
 | WS-10-T07 | Theory Restart Pilot | Activate QFT-GR seam reactivation as the post-T06 authorized next lane | ACTIVE | user | WS-10-T06 | 2026-03-21: control-surface-only successor-lane authorization opened with scalar freeze and Packet42 hold invariance preserved; bounded validation ladder rerun is green (`14 passed in 5.87s`) including QFT-GR objective gate parity | Successor non-GR-QM lane is active in control surfaces with no packet42 hold release and no theorem-surface edits |
+| WS-10-T07A | Theory Restart Pilot | Resolve formal authority gate by selecting one Class-B Cycle07 lane (QM-STAT or COSMO-SR) before drafting any Cycle07 target | DONE | user | WS-10-T07 | 2026-03-26: control surfaces now pin closed selected-lane decision (`QM_STAT_CYCLE07`) plus non-selected lane read-only lock (`COSMO_SR`) via dedicated gate artifact | Selected lane is explicit across control surfaces and non-selected lane is hard-locked to checkpoint/snapshot maintenance only until active tranche stop condition |
+| WS-10-T07B | Theory Restart Pilot | Enforce physics-first execution priority while preserving release-gate truth and bounded non-claim controls | ACTIVE | user | WS-10-T07 | 2026-03-26: tracker/state/roadmap/readme now pin physics-blocker-first priority rule, governance-as-unblocker semantics, and unchanged release-gate truth via dedicated policy artifact | Physics-first policy is explicit across canonical control surfaces with no theorem-surface edits |
+| WS-10-T08 | Theory Restart Pilot | Execute selected-lane-only QM-STAT Cycle07 bounded tranche and stop at clean synthesis boundary when no immediate additive payload is explicitly defined | DONE | user | WS-10-T07A | 2026-03-26: Cycle07 target/gate plus Cycle06-to-07 synthesis checkpoint are green (`15 passed`), and boundary decision artifact now pins stop-at-boundary posture with COSMO-SR lock unchanged | QM-STAT Cycle07 tranche is completed to a bounded handoff checkpoint and next branch move requires explicit authorization |
+| WS-10-T09 | Theory Restart Pilot | Execute post-T08 branch decision: reopen QM-STAT only with explicit additive payload else authorize COSMO-SR as next lane | DONE | user | WS-10-T08 | 2026-03-26: no immediate additive QM-STAT payload declared, so COSMO-SR next-lane control-surface authorization is now closed and explicit without theorem-surface edits | Branch decision is explicit and mirrored; next COSMO-SR cycle drafting requires separate bounded tranche activation step |
+| WS-10-T10 | Theory Restart Pilot | Begin COSMO-SR Cycle07 bounded tranche with one doc, one artifact, one narrow gate, and matching Cycle06-to-07 synthesis checkpoint | DONE | user | WS-10-T09 | 2026-03-26: added Cycle07 target doc/artifact/gate plus Cycle06-to-07 synthesis checkpoint doc/gate for COSMO-SR, then cleanly stopped at synthesis boundary under unchanged reopen controls | COSMO-SR Cycle07 bounded tranche and synthesis checkpoint artifacts exist and lane is at clean branch-decision boundary with no unauthorized cross-lane expansion |
+| WS-10-T11 | Theory Restart Pilot | Execute post-COSMO-SR-Cycle07 boundary lane authorization decision: reopen QM-STAT or continue COSMO-SR only with explicit bounded additive payload; otherwise remain paused | DONE | user | WS-10-T10 | 2026-03-26: explicit post-T10 decision artifact now pins symmetric pause posture with no active lane unless bounded additive payload is declared for exactly one lane | Post-T10 branch decision is explicit and mirrored in tracker/state/roadmap/WS-10 control surfaces with bounded non-claim invariance unchanged |
+| WS-10-T12 | Theory Restart Pilot | Derive bounded additive candidates for QM-STAT and COSMO-SR, then authorize only the clearer non-redundant lane | DONE | user | WS-10-T11 | 2026-03-26: dual candidate artifacts declared for `QM_STAT_CYCLE08` and `COSMO_SR_CYCLE08`; comparative decision artifact authorizes only QM-STAT under control-surface pre-draft scope | Dual candidates and single-lane authorization decision are explicit and mirrored with no theorem-surface edits |
+| WS-10-T13 | Theory Restart Pilot | Begin QM-STAT Cycle08 bounded kickoff with one target doc, one artifact, one narrow gate, then stop at Cycle07-to-08 synthesis checkpoint when no further additive payload is explicitly declared | DONE | user | WS-10-T12 | 2026-03-26: Cycle08 kickoff trio is green (`20 passed in 4.94s`), Cycle07-to-08 synthesis checkpoint doc/gate and boundary decision artifact are pinned, and lane is stopped at clean branch boundary with COSMO-SR still paused unless explicit additive payload is declared | T13 bounded kickoff and synthesis-boundary stop are complete and mirrored across tracker/state/roadmap/WS-10 |
+| WS-10-T14 | Theory Restart Pilot | Execute post-T13 branch authorization: declare bounded additive candidates for QM-STAT and COSMO-SR, then authorize only the clearer one | DONE | user | WS-10-T13 | 2026-03-26: declared T14 candidate artifacts for `QM_STAT_CYCLE09` and `COSMO_SR_CYCLE08`; comparative decision artifact authorizes QM-STAT (`QM_STAT_CYCLE09_PRE_DRAFT_AUTHORIZATION_ONLY_v0`) as clearer non-redundant payload with COSMO-SR remaining paused | Post-T13 branch authorization is explicit and mirrored across tracker/state/roadmap/WS-10 with no theorem-surface edits |
+| WS-10-T15 | Theory Restart Pilot | Begin QM-STAT Cycle09 bounded kickoff with one target doc, one artifact, one narrow gate, then stop at Cycle08-to-09 synthesis checkpoint when no additional additive payload is explicitly declared | DONE | user | WS-10-T14 | 2026-03-26: added Cycle09 target doc/artifact/gate for QM-STAT fourteenth-moment parity plus bounded incompatibility exclusion (`26 passed in 6.27s`), then pinned Cycle08-to-09 synthesis checkpoint doc/gate and boundary decision artifact to stop at clean branch boundary pending next authorization decision | T15 bounded kickoff and Cycle08-to-09 synthesis-boundary stop are complete and mirrored across tracker/state/roadmap/WS-10 |
+| WS-10-T16 | Theory Restart Pilot | Execute post-T15 branch authorization: declare bounded additive candidates for QM-STAT and COSMO-SR, then authorize only the clearer one | DONE | user | WS-10-T15 | 2026-03-26: declared T16 candidate artifacts for `QM_STAT_CYCLE10` and `COSMO_SR_CYCLE08`; comparative decision artifact authorizes QM-STAT (`QM_STAT_CYCLE10_PRE_DRAFT_AUTHORIZATION_ONLY_v0`) as clearer non-redundant payload with COSMO-SR remaining paused; targeted bundle result `31 passed in 6.97s` | Post-T15 branch authorization is explicit and mirrored across tracker/state/roadmap/WS-10 with no theorem-surface edits |
+| WS-10-T17 | Theory Restart Pilot | Begin QM-STAT Cycle10 bounded kickoff with one target doc, one artifact, one narrow gate, then stop at Cycle09-to-10 synthesis checkpoint when no additional additive payload is explicitly declared | DONE | user | WS-10-T16 | 2026-03-26: added Cycle10 target doc/artifact/gate for QM-STAT sixteenth-moment parity plus bounded incompatibility exclusion (`26 passed in 6.40s`), then pinned Cycle09-to-10 synthesis checkpoint doc/gate and boundary decision artifact to stop at clean branch boundary pending next authorization decision | T17 bounded kickoff and Cycle09-to-10 synthesis-boundary stop are complete and mirrored across tracker/state/roadmap/WS-10 |
+| WS-10-T18 | Theory Restart Pilot | Execute post-T17 branch authorization: declare bounded additive candidates for QM-STAT and COSMO-SR, then authorize only the clearer one | DONE | user | WS-10-T17 | 2026-03-26: declared T18 candidate artifacts for `QM_STAT_CYCLE11` and `COSMO_SR_CYCLE08`; comparative decision artifact authorizes QM-STAT (`QM_STAT_CYCLE11_PRE_DRAFT_AUTHORIZATION_ONLY_v0`) as clearer non-redundant payload with COSMO-SR remaining paused; targeted bundle result `14 passed in 4.44s` | Post-T17 branch authorization is explicit and mirrored across tracker/state/roadmap/WS-10 with no theorem-surface edits |
+| WS-10-T19 | Theory Restart Pilot | Begin QM-STAT Cycle11 bounded kickoff with one target doc, one artifact, one narrow gate, then stop at Cycle10-to-11 synthesis checkpoint when no additional additive payload is explicitly declared | DONE | user | WS-10-T18 | 2026-03-26: added Cycle11 target doc/artifact/gate for QM-STAT eighteenth-moment parity plus bounded incompatibility exclusion (`26 passed in 6.27s`), then pinned Cycle10-to-11 synthesis checkpoint doc/gate and boundary decision artifact to stop at clean branch boundary pending next authorization decision | T19 bounded kickoff and Cycle10-to-11 synthesis-boundary stop are complete and mirrored across tracker/state/roadmap/WS-10 |
 
 ## Blocked Tasks
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |
@@ -506,6 +552,7 @@ Theory work may restart only when all rows below are satisfied:
 | WS-10-T05 | Theory Restart Pilot | Execute phase2 GR-QM seam-completion closeout after bounded regime-closure and shared-dynamics transport increments | DONE | user | WS-10-T04 | 2026-03-19: phase2 closeout commits `16b021c` and `5a2823d` pin positive seam-complete semantics, completion flip surfaces, and tracker/state/roadmap/WS-10 mirrors; closeout validation ladder green (`11 passed in 5.00s`) | GR-QM seam completion is canonically closed and mirrored, blocker is discharged, and next work must move to post-completion handoff/target-selection boundary |
 | WS-10-T06 | Theory Restart Pilot | Open bounded post-completion handoff boundary after canonical GR-QM seam closure | DONE | user | WS-10-T05 | 2026-03-21: T06 supersede resolution committed; successor non-GR-QM lane activation is now explicit and bounded | Post-completion boundary is resolved and no further GR-QM completion-lane work is authorized without new explicit decision |
 | WS-10-T07 | Theory Restart Pilot | Activate QFT-GR seam reactivation as the post-T06 authorized next lane | ACTIVE | user | WS-10-T06 | 2026-03-21: successor lane is activated at control-surface layer with Packet42 hold and scalar freeze unchanged; bounded-ladder evidence attached (`14 passed in 5.87s`) including QFT-GR objective parity gate | Successor lane is explicit across control surfaces and bounded-ladder evidence is attached |
+| WS-10-T07A | Theory Restart Pilot | Resolve formal authority gate by selecting one Class-B Cycle07 lane (QM-STAT or COSMO-SR) before drafting any Cycle07 target | DONE | user | WS-10-T07 | 2026-03-26: control surfaces now pin closed selected-lane decision (`QM_STAT_CYCLE07`) plus non-selected lane read-only lock (`COSMO_SR`) via dedicated gate artifact | Selected lane is explicit across control surfaces and non-selected lane is hard-locked to checkpoint/snapshot maintenance only until active tranche stop condition |
 
 ## Workstream Task Ledger
 | ID | Workstream | Task | Status | Owner | Blocked By | Evidence | Exit Criteria |

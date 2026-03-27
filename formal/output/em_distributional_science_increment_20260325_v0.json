@@ -1,0 +1,39 @@
+{
+  "artifact_id": "em_distributional_science_increment_20260325_v0",
+  "lane": "EM_U1_MICRO_DISTRIBUTIONAL",
+  "status": "BOUNDED_WEAK_FORM_SEMANTICS_PINNED_NONCLAIM",
+  "generated_on": "2026-03-25",
+  "assumption_ids": [
+    "ASM-EM-U1-PHY-SOURCE-01",
+    "ASM-EM-U1-MATH-SMOOTH-01",
+    "ASM-EM-U1-MATH-DISTRIB-01"
+  ],
+  "weak_form_semantics": {
+    "test_function_space": "C_c^infinity(omega)",
+    "support_localization": "bounded_compact_support",
+    "distributional_continuity_identity": "<partial_mu J^mu, phi> = -<J^mu, partial_mu phi>",
+    "singular_source_model": "point_source_q_delta_x",
+    "admissible_claim_scope": "semantic_mapping_and_bounded_pairing_only"
+  },
+  "toy_pairing_witness": {
+    "domain_interval": [
+      -1.0,
+      1.0
+    ],
+    "test_function": "phi(x)=x(1-x^2)",
+    "source_distribution": "J(x)=H(x)",
+    "lhs_pairing_partial_J_phi": "1/1",
+    "rhs_neg_pairing_J_partial_phi": "1/1",
+    "difference": "0/1"
+  },
+  "bounded_scope": {
+    "curved_space_covariant_divergence_claimed": false,
+    "theorem_discharge_claimed": false,
+    "non_abelian_completion_claimed": false,
+    "external_truth_claimed": false
+  },
+  "adjudication": {
+    "token": "EM_DISTRIBUTIONAL_SCI_INCREMENT_20260325_ADJUDICATION",
+    "value": "NOT_YET_DISCHARGED"
+  }
+}

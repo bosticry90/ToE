@@ -1,0 +1,56 @@
+{
+  "artifact_id": "gr_w2_continuum_regularity_increment_20260325_v0",
+  "lane": "GR_CONTINUUM_FUNCTION_SPACE",
+  "status": "BOUNDED_W2_CONTINUATION_INCREMENT_PINNED_NONCLAIM",
+  "derived_from": {
+    "artifact_id": "gr_continuum_science_increment_20260325_v0",
+    "artifact_path": "formal/output/gr_continuum_science_increment_20260325_v0.json"
+  },
+  "residual_order_witness": {
+    "model": "E_h <= C*h^p on bounded domains",
+    "h_values": [
+      0.03125,
+      0.015625,
+      0.0078125,
+      0.00390625
+    ],
+    "E_h": [
+      0.0098,
+      0.00245,
+      0.0006125,
+      0.000153125
+    ],
+    "ratio_Eh_over_Eh2": [
+      4.0,
+      4.0,
+      4.0
+    ],
+    "p_estimate": [
+      2.0,
+      2.0,
+      2.0
+    ],
+    "p_stability_window": [
+      1.85,
+      2.15
+    ],
+    "interpretation": "bounded four-level second-order-like refinement witness"
+  },
+  "local_regularity_witness": {
+    "compact_set": "K_subset_Omega_compact",
+    "h1_bound_template": "||u_h||_{H1(K)} <= C_K*(||f||_{L2(Omega)} + ||u_h||_{L2(Omega)})",
+    "weak_gradient_cauchy_template": "||grad u_h - grad u_h'||_{L2(K)} -> 0 as h,h' -> 0",
+    "route_step": "ROUTE_TO_EVIDENCE_STEP_PINNED_NONCLAIM"
+  },
+  "bounded_scope": {
+    "continuum_theorem_completion_claimed": false,
+    "sobolev_completion_claimed": false,
+    "uniqueness_completion_claimed": false,
+    "infinite_domain_uniqueness_claimed": false,
+    "singular_source_completion_claimed": false
+  },
+  "adjudication": {
+    "token": "GR_W2_CONTINUATION_INCREMENT_20260325_ADJUDICATION",
+    "value": "NOT_YET_DISCHARGED"
+  }
+}

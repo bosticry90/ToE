@@ -37,6 +37,11 @@ Bounded math payload (2026-03-25):
 - continuity-to-bridge coupling token:
 	- `GR01_FUNCTION_SPACE_CONTINUUM_COUPLING_ARTIFACT_POINTER_v0: formal/output/gr_continuum_science_increment_20260325_v0.json`
 
+Bounded W2 continuation payload (2026-03-25):
+- `GR01_FUNCTION_SPACE_W2_CONTINUATION_STATUS_v0: ROUTE_TO_EVIDENCE_STEP_PINNED_NONCLAIM`
+- `GR01_FUNCTION_SPACE_W2_CONTINUATION_ARTIFACT_POINTER_v0: formal/output/gr_w2_continuum_regularity_increment_20260325_v0.json`
+- `GR01_FUNCTION_SPACE_W2_CONTINUATION_PAYLOAD_v0: FOUR_LEVEL_RESIDUAL_ORDER_STABILITY_PLUS_LOCAL_REGULARITY_TEMPLATE`
+
 Anchors:
 - `formal/docs/paper/TOE_GR01_ANALYTIC_DISCHARGE_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_GR_CONTINUUM_LIMIT_BRIDGE_v0.md`

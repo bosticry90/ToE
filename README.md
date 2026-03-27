@@ -8,6 +8,21 @@ Governance status is TERMINAL_SATISFIED_v0_NONCLAIM under pinned policy scope.
 Physics status is MIXED_PROGRESS_v0 with seam-level physics closure still incomplete.
 This is NOT a physics-complete ToE claim.
 
+PHYSICS-FIRST EXECUTION POLICY CHECKPOINT (WS-10-T07B, 2026-03-26)
+- Physics-closure blockers are prioritized ahead of governance expansion work.
+- Governance remains active as a strict enabling lane for parity, safety, and non-claim boundary integrity.
+- Release-gate truth remains unchanged: governance prerequisite plus full pytest branch-health.
+- Policy artifact: `formal/docs/release/WS_10_T07B_PHYSICS_FIRST_EXECUTION_POLICY_v0.md`.
+
+STATE-CORE GENERATED-FIRST CUTOVER (2026-03-26)
+- Canonical control-plane edit path for migrated WS families is generated-first.
+- Canonical steps:
+   1) Edit `formal/docs/release/state_core_v0.json`.
+   2) Run `./py.ps1 -m formal.python.tools.render_state_core_mirrors --apply-mirrors --verify-mirrors`.
+   3) Run `pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1`.
+- Direct human edits inside `<!-- GENERATED: ... -->` mirror blocks are prohibited.
+- Cutover policy artifact: `formal/docs/release/STATE_CORE_GENERATED_FIRST_CUTOVER_POLICY_v0.md`.
+
 RELEASE-GATE POLICY (R1-A, 2026-03-20)
 - Governance is the prerequisite lane for release readiness.
 - Full pytest is the authoritative branch-health lane.

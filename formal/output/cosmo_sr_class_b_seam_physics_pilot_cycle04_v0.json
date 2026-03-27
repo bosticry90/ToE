@@ -1,0 +1,62 @@
+{
+  "artifact_id": "cosmo_sr_class_b_seam_physics_pilot_cycle04_v0",
+  "seam_id": "SEAM-COSMO-SR",
+  "class_token": "TOE_CK_CLASS_COMPATIBILITY_v0",
+  "status": "CRITERIA_AND_SEXTIC_EXCLUSION_PINNED_NONCLAIM",
+  "derived_from": {
+    "artifact_id": "cosmo_sr_class_b_seam_physics_pilot_cycle03_v0",
+    "artifact_path": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle03_v0.json"
+  },
+  "blocker_discharge_criteria": {
+    "token": "EXACT_SR_DOPPLER_MATCH_SEXTIC_IMPROVEMENT_REQUIRED",
+    "z_window": {
+      "z_min": "0/1",
+      "z_max": "1/5"
+    },
+    "epsilon_abs": "1/1000",
+    "samples": [
+      {
+        "z": "1/20",
+        "beta_exact": "41/841",
+        "beta_series4": "31201/640000",
+        "beta_series6": "24960799/512000000",
+        "abs_delta_series4": "41/538240000",
+        "abs_delta_series6": "31959/430592000000"
+      },
+      {
+        "z": "1/10",
+        "beta_exact": "21/221",
+        "beta_series4": "3801/40000",
+        "beta_series6": "760199/8000000",
+        "abs_delta_series4": "21/8840000",
+        "abs_delta_series6": "3979/1768000000"
+      },
+      {
+        "z": "1/5",
+        "beta_exact": "11/61",
+        "beta_series4": "451/2500",
+        "beta_series6": "22549/125000",
+        "abs_delta_series4": "11/152500",
+        "abs_delta_series6": "489/7625000"
+      }
+    ]
+  },
+  "bounded_incompatibility_exclusion": {
+    "counterexample_id": "cosmo_sr_cycle04_high_z_sextic_drift_v0",
+    "z": "1/1",
+    "beta_exact": "3/5",
+    "beta_series6": "5/8",
+    "abs_delta": "1/40",
+    "classification": "NONCOMPATIBLE_EXCLUDED_v0"
+  },
+  "bounded_scope": {
+    "class_flip_claimed": false,
+    "full_theorem_discharge_claimed": false,
+    "global_cosmology_completion_claimed": false,
+    "external_truth_claimed": false
+  },
+  "adjudication": {
+    "token": "COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE04_ADJUDICATION",
+    "value": "NOT_YET_DISCHARGED"
+  }
+}
