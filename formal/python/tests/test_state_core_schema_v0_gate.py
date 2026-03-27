@@ -1,0 +1,68 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+
+def find_repo_root(start: Path) -> Path:
+    p = start.resolve()
+    while p != p.parent:
+        if (p / "formal").exists():
+            return p
+        p = p.parent
+    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+SCHEMA_PATH = REPO_ROOT / "formal" / "docs" / "release" / "STATE_CORE_SCHEMA_v0.json"
+STATE_CORE_PATH = REPO_ROOT / "formal" / "docs" / "release" / "state_core_v0.json"
+
+
+def _load_json(path: Path) -> dict:
+    assert path.exists(), f"Missing required file: {path}"
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def test_state_core_files_exist() -> None:
+    assert SCHEMA_PATH.exists(), "Missing STATE_CORE_SCHEMA_v0.json"
+    assert STATE_CORE_PATH.exists(), "Missing state_core_v0.json"
+
+
+def test_state_core_matches_schema_contract() -> None:
+    schema = _load_json(SCHEMA_PATH)
+    state_core = _load_json(STATE_CORE_PATH)
+
+    assert state_core["schema_id"] == schema["schema_id"]
+
+    for key in schema["required_top_level"]:
+        assert key in state_core, f"state_core missing top-level key: {key}"
+
+    assert isinstance(state_core["tranches"], list)
+    assert len(state_core["tranches"]) >= 1
+
+    for tranche in state_core["tranches"]:
+        for field in schema["required_tranche_fields"]:
+            assert field in tranche, f"tranche missing required field: {field}"
+
+        assert tranche["mode"] in schema["allowed_modes"]
+        assert tranche["scientific_delta_class"] in schema["allowed_scientific_delta_classes"]
+
+        transition = tranche["status_transition"]
+        assert transition["from"] in schema["allowed_status_postures"]
+        assert transition["to"] in schema["allowed_status_postures"]
+        assert "decision_basis" in transition
+
+
+def test_state_core_paths_resolve() -> None:
+    state_core = _load_json(STATE_CORE_PATH)
+
+    for tranche in state_core["tranches"]:
+        artifact_path = REPO_ROOT / tranche["evidence_artifact"]
+        gate_path = REPO_ROOT / tranche["gate_test"]
+        assert artifact_path.exists(), f"Missing tranche evidence artifact: {artifact_path}"
+        assert gate_path.exists(), f"Missing tranche gate test: {gate_path}"
+
+    for target in state_core["mirror_targets"]:
+        target_path = REPO_ROOT / target["path"]
+        assert target_path.exists(), f"Missing mirror target path: {target_path}"
+        assert target["marker_id"].startswith("STATE_CORE_"), "marker_id must use STATE_CORE_ prefix"

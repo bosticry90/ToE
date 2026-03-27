@@ -1,0 +1,62 @@
+{
+  "artifact_id": "cosmo_sr_class_b_seam_physics_pilot_cycle07_v0",
+  "seam_id": "SEAM-COSMO-SR",
+  "class_token": "TOE_CK_CLASS_COMPATIBILITY_v0",
+  "status": "CRITERIA_AND_DODECIC_EXCLUSION_PINNED_NONCLAIM",
+  "derived_from": {
+    "artifact_id": "cosmo_sr_class_b_seam_physics_pilot_cycle06_v0",
+    "artifact_path": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle06_v0.json"
+  },
+  "blocker_discharge_criteria": {
+    "token": "EXACT_SR_DOPPLER_MATCH_DODECIC_IMPROVEMENT_REQUIRED",
+    "z_window": {
+      "z_min": "0/1",
+      "z_max": "1/5"
+    },
+    "epsilon_abs": "1/1000",
+    "samples": [
+      {
+        "z": "1/20",
+        "beta_exact": "41/841",
+        "beta_series10": "15974911359199/327680000000000",
+        "beta_series12": "12779929087359199/262144000000000000",
+        "abs_delta_series10": "20453086359/275578880000000000",
+        "abs_delta_series12": "16362469086359/220463104000000000000"
+      },
+      {
+        "z": "1/10",
+        "beta_exact": "21/221",
+        "beta_series10": "30407959799/320000000000",
+        "beta_series12": "6081591959799/64000000000000",
+        "abs_delta_series10": "159115579/70720000000000",
+        "abs_delta_series12": "31823115579/14144000000000000"
+      },
+      {
+        "z": "1/5",
+        "beta_exact": "11/61",
+        "beta_series10": "56372449/312500000",
+        "beta_series12": "2818622449/15625000000",
+        "abs_delta_series10": "1219389/19062500000",
+        "abs_delta_series12": "60969389/953125000000"
+      }
+    ]
+  },
+  "bounded_incompatibility_exclusion": {
+    "counterexample_id": "cosmo_sr_cycle07_high_z_dodecic_drift_v0",
+    "z": "1/1",
+    "beta_exact": "3/5",
+    "beta_series12": "33/64",
+    "abs_delta": "27/320",
+    "classification": "NONCOMPATIBLE_EXCLUDED_v0"
+  },
+  "bounded_scope": {
+    "class_flip_claimed": false,
+    "full_theorem_discharge_claimed": false,
+    "global_cosmology_completion_claimed": false,
+    "external_truth_claimed": false
+  },
+  "adjudication": {
+    "token": "COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE07_ADJUDICATION",
+    "value": "NOT_YET_DISCHARGED"
+  }
+}

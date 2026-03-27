@@ -1,0 +1,397 @@
+{
+  "schema_id": "STATE_CORE_SCHEMA_v0",
+  "schema_version": 1,
+  "active_lane": "QM_STAT",
+  "active_tranche_id": "WS-10-T19",
+  "queued_lanes": [
+    "COSMO_SR"
+  ],
+  "recent_tranche_chain_by_lane": {
+    "QM_STAT": [
+      "WS-10-T17",
+      "WS-10-T18",
+      "WS-10-T19"
+    ],
+    "COSMO_SR": [
+      "WS-10-T10",
+      "WS-10-T11"
+    ]
+  },
+  "ws10_branch_boundary_status_family": {
+    "family_id": "WS10_BRANCH_BOUNDARY_AUTHORIZATION_STATUS_v0",
+    "active_decision_id": "WS-10-T19",
+    "decision_chain": [
+      {
+        "id": "WS-10-T11",
+        "kind": "branch_authorization",
+        "status": "CLOSED_PAUSED_PENDING_EXPLICIT_ADDITIVE_PAYLOAD_DECLARATION_v0",
+        "decision_artifact": "formal/docs/release/WS_10_T11_POST_T10_LANE_AUTHORIZATION_DECISION_v0.md"
+      },
+      {
+        "id": "WS-10-T12",
+        "kind": "branch_authorization",
+        "status": "CLOSED_AUTHORIZED_QM_STAT_BASED_ON_CLEARER_NONREDUNDANT_PAYLOAD_v0",
+        "decision_artifact": "formal/docs/release/WS_10_T12_POST_T11_DUAL_CANDIDATE_LANE_AUTHORIZATION_DECISION_v0.md"
+      },
+      {
+        "id": "WS-10-T13",
+        "kind": "boundary_stop",
+        "status": "STOPPED_AT_CYCLE07_TO_08_SYNTHESIS_BOUNDARY_v0",
+        "decision_artifact": "formal/docs/release/WS_10_T13_QM_STAT_CYCLE08_BOUNDARY_DECISION_v0.md"
+      },
+      {
+        "id": "WS-10-T14",
+        "kind": "branch_authorization",
+        "status": "CLOSED_AUTHORIZED_QM_STAT_BASED_ON_CLEARER_NONREDUNDANT_PAYLOAD_v1",
+        "decision_artifact": "formal/docs/release/WS_10_T14_POST_T13_DUAL_CANDIDATE_LANE_AUTHORIZATION_DECISION_v0.md"
+      },
+      {
+        "id": "WS-10-T15",
+        "kind": "boundary_stop",
+        "status": "STOPPED_AT_CYCLE08_TO_09_SYNTHESIS_BOUNDARY_v0",
+        "decision_artifact": "formal/docs/release/WS_10_T15_QM_STAT_CYCLE09_BOUNDARY_DECISION_v0.md"
+      },
+      {
+        "id": "WS-10-T16",
+        "kind": "branch_authorization",
+        "status": "CLOSED_AUTHORIZED_QM_STAT_BASED_ON_CLEARER_NONREDUNDANT_PAYLOAD_v2",
+        "decision_artifact": "formal/docs/release/WS_10_T16_POST_T15_DUAL_CANDIDATE_LANE_AUTHORIZATION_DECISION_v0.md"
+      },
+      {
+        "id": "WS-10-T17",
+        "kind": "boundary_stop",
+        "status": "STOPPED_AT_CYCLE09_TO_10_SYNTHESIS_BOUNDARY_v0",
+        "decision_artifact": "formal/docs/release/WS_10_T17_QM_STAT_CYCLE10_BOUNDARY_DECISION_v0.md"
+      },
+      {
+        "id": "WS-10-T18",
+        "kind": "branch_authorization",
+        "status": "CLOSED_AUTHORIZED_QM_STAT_BASED_ON_CLEARER_NONREDUNDANT_PAYLOAD_v3",
+        "decision_artifact": "formal/docs/release/WS_10_T18_POST_T17_DUAL_CANDIDATE_LANE_AUTHORIZATION_DECISION_v0.md"
+      },
+      {
+        "id": "WS-10-T19",
+        "kind": "boundary_stop",
+        "status": "STOPPED_AT_CYCLE10_TO_11_SYNTHESIS_BOUNDARY_v0",
+        "decision_artifact": "formal/docs/release/WS_10_T19_QM_STAT_CYCLE11_BOUNDARY_DECISION_v0.md"
+      }
+    ]
+  },
+  "ws10_task_status_table_family": {
+    "family_id": "WS10_TASK_STATUS_TABLE_v0",
+    "primary_table_source": "formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md",
+    "mirror_table_source": "formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md",
+    "active_task_ids": [
+      "WS-10-T07",
+      "WS-10-T07B"
+    ],
+    "rows": [
+      {
+        "id": "WS-10-T01",
+        "status": "DONE",
+        "blocked_by": "none"
+      },
+      {
+        "id": "WS-10-T02",
+        "status": "DONE",
+        "blocked_by": "WS-10-T01"
+      },
+      {
+        "id": "WS-10-T03",
+        "status": "DONE",
+        "blocked_by": "WS-10-T02"
+      },
+      {
+        "id": "WS-10-T04",
+        "status": "DONE",
+        "blocked_by": "WS-10-T03"
+      },
+      {
+        "id": "WS-10-T05",
+        "status": "DONE",
+        "blocked_by": "WS-10-T04"
+      },
+      {
+        "id": "WS-10-T06",
+        "status": "DONE",
+        "blocked_by": "WS-10-T05"
+      },
+      {
+        "id": "WS-10-T07",
+        "status": "ACTIVE",
+        "blocked_by": "WS-10-T06"
+      },
+      {
+        "id": "WS-10-T07A",
+        "status": "DONE",
+        "blocked_by": "WS-10-T07"
+      },
+      {
+        "id": "WS-10-T07B",
+        "status": "ACTIVE",
+        "blocked_by": "WS-10-T07"
+      },
+      {
+        "id": "WS-10-T08",
+        "status": "DONE",
+        "blocked_by": "WS-10-T07A"
+      },
+      {
+        "id": "WS-10-T09",
+        "status": "DONE",
+        "blocked_by": "WS-10-T08"
+      },
+      {
+        "id": "WS-10-T10",
+        "status": "DONE",
+        "blocked_by": "WS-10-T09"
+      },
+      {
+        "id": "WS-10-T11",
+        "status": "DONE",
+        "blocked_by": "WS-10-T10"
+      },
+      {
+        "id": "WS-10-T12",
+        "status": "DONE",
+        "blocked_by": "WS-10-T11"
+      },
+      {
+        "id": "WS-10-T13",
+        "status": "DONE",
+        "blocked_by": "WS-10-T12"
+      },
+      {
+        "id": "WS-10-T14",
+        "status": "DONE",
+        "blocked_by": "WS-10-T13"
+      },
+      {
+        "id": "WS-10-T15",
+        "status": "DONE",
+        "blocked_by": "WS-10-T14"
+      },
+      {
+        "id": "WS-10-T16",
+        "status": "DONE",
+        "blocked_by": "WS-10-T15"
+      },
+      {
+        "id": "WS-10-T17",
+        "status": "DONE",
+        "blocked_by": "WS-10-T16"
+      },
+      {
+        "id": "WS-10-T18",
+        "status": "DONE",
+        "blocked_by": "WS-10-T17"
+      },
+      {
+        "id": "WS-10-T19",
+        "status": "DONE",
+        "blocked_by": "WS-10-T18"
+      }
+    ]
+  },
+  "ws10_evidence_log_family": {
+    "family_id": "WS10_EVIDENCE_LOG_CHECKPOINT_ENTRIES_v0",
+    "primary_log_source": "formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md",
+    "mirror_log_source": "formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md",
+    "active_entry_id": "WS10-E19",
+    "entries": [
+      {
+        "id": "WS10-E11",
+        "task_id": "WS-10-T11",
+        "date": "2026-03-26",
+        "checkpoint": "Post-T10 branch decision pinned with symmetric pause and explicit additive-payload requirement.",
+        "decision_artifact": "formal/docs/release/WS_10_T11_POST_T10_LANE_AUTHORIZATION_DECISION_v0.md"
+      },
+      {
+        "id": "WS10-E12",
+        "task_id": "WS-10-T12",
+        "date": "2026-03-26",
+        "checkpoint": "Dual-candidate authorization selects QM-STAT as clearer non-redundant lane payload.",
+        "decision_artifact": "formal/docs/release/WS_10_T12_POST_T11_DUAL_CANDIDATE_LANE_AUTHORIZATION_DECISION_v0.md"
+      },
+      {
+        "id": "WS10-E13",
+        "task_id": "WS-10-T13",
+        "date": "2026-03-26",
+        "checkpoint": "Cycle07-to-08 synthesis boundary checkpoint pinned with clean stop posture.",
+        "decision_artifact": "formal/docs/release/WS_10_T13_QM_STAT_CYCLE08_BOUNDARY_DECISION_v0.md"
+      },
+      {
+        "id": "WS10-E14",
+        "task_id": "WS-10-T14",
+        "date": "2026-03-26",
+        "checkpoint": "Post-T13 authorization keeps QM-STAT active lane and COSMO-SR paused.",
+        "decision_artifact": "formal/docs/release/WS_10_T14_POST_T13_DUAL_CANDIDATE_LANE_AUTHORIZATION_DECISION_v0.md"
+      },
+      {
+        "id": "WS10-E15",
+        "task_id": "WS-10-T15",
+        "date": "2026-03-26",
+        "checkpoint": "Cycle08-to-09 synthesis boundary checkpoint pinned with explicit boundary stop.",
+        "decision_artifact": "formal/docs/release/WS_10_T15_QM_STAT_CYCLE09_BOUNDARY_DECISION_v0.md"
+      },
+      {
+        "id": "WS10-E16",
+        "task_id": "WS-10-T16",
+        "date": "2026-03-26",
+        "checkpoint": "Post-T15 authorization advances QM-STAT to cycle10 pre-draft scope.",
+        "decision_artifact": "formal/docs/release/WS_10_T16_POST_T15_DUAL_CANDIDATE_LANE_AUTHORIZATION_DECISION_v0.md"
+      },
+      {
+        "id": "WS10-E17",
+        "task_id": "WS-10-T17",
+        "date": "2026-03-26",
+        "checkpoint": "Cycle09-to-10 synthesis boundary checkpoint pinned with branch-decision handoff.",
+        "decision_artifact": "formal/docs/release/WS_10_T17_QM_STAT_CYCLE10_BOUNDARY_DECISION_v0.md"
+      },
+      {
+        "id": "WS10-E18",
+        "task_id": "WS-10-T18",
+        "date": "2026-03-26",
+        "checkpoint": "Post-T17 authorization advances QM-STAT to cycle11 pre-draft scope.",
+        "decision_artifact": "formal/docs/release/WS_10_T18_POST_T17_DUAL_CANDIDATE_LANE_AUTHORIZATION_DECISION_v0.md"
+      },
+      {
+        "id": "WS10-E19",
+        "task_id": "WS-10-T19",
+        "date": "2026-03-26",
+        "checkpoint": "Cycle10-to-11 synthesis boundary checkpoint pinned with explicit stop-unless-additive rule.",
+        "decision_artifact": "formal/docs/release/WS_10_T19_QM_STAT_CYCLE11_BOUNDARY_DECISION_v0.md"
+      }
+    ]
+  },
+  "lanes": {
+    "QM_STAT": {
+      "status": "STOPPED_AT_SYNTHESIS_BOUNDARY",
+      "active_cycle": "CYCLE11",
+      "boundary": "CYCLE10_TO_11_SYNTHESIS",
+      "next_decision": "PENDING_BRANCH_DECISION",
+      "authorized_basis": "WS_10_T18_POST_T17_DUAL_CANDIDATE_LANE_AUTHORIZATION_DECISION_v0"
+    },
+    "COSMO_SR": {
+      "status": "PAUSED",
+      "active_cycle": "CYCLE08",
+      "boundary": "WAITING_FOR_CLEARER_ADDITIVE_PAYLOAD",
+      "next_decision": "PENDING_BRANCH_DECISION",
+      "authorized_basis": "NOT_AUTHORIZED_POST_T18"
+    }
+  },
+  "tranches": [
+    {
+      "id": "WS-10-T10",
+      "lane": "COSMO_SR",
+      "mode": "synthesis",
+      "scientific_delta_class": "physics_compatibility",
+      "scientific_delta_summary": "Pins COSMO-SR cycle07 bounded dodecic low-z alignment and explicit high-z exclusion under non-claim scope.",
+      "predecessor": "WS-10-T09",
+      "stop_condition": "Stop at Cycle06-to-07 synthesis boundary unless a clearly additive payload is explicitly declared.",
+      "non_claim_boundary": "No class flip claim, no full theorem discharge claim, no global cosmology completion claim, no external truth claim.",
+      "evidence_artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle07_v0.json",
+      "gate_test": "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle07_gate.py",
+      "status_transition": {
+        "from": "ACTIVE",
+        "to": "STOPPED_AT_SYNTHESIS_BOUNDARY",
+        "decision_basis": "WS_10_T10_COSMO_SR_CYCLE07_BOUNDARY_DECISION_v0"
+      }
+    },
+    {
+      "id": "WS-10-T11",
+      "lane": "COSMO_SR",
+      "mode": "decision",
+      "scientific_delta_class": "blocker_discharge",
+      "scientific_delta_summary": "Pins post-cycle07 lane decision boundary requiring explicit bounded additive payload declaration for COSMO-SR continuation.",
+      "predecessor": "WS-10-T10",
+      "stop_condition": "Remain paused unless a clearly additive COSMO-SR payload is explicitly declared and authorized.",
+      "non_claim_boundary": "No class flip claim, no full theorem discharge claim, no global cosmology completion claim, no external truth claim.",
+      "evidence_artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle07_v0.json",
+      "gate_test": "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle06_to_07_synthesis_gate.py",
+      "status_transition": {
+        "from": "STOPPED_AT_SYNTHESIS_BOUNDARY",
+        "to": "PAUSED",
+        "decision_basis": "WS_10_T11_POST_T10_LANE_AUTHORIZATION_DECISION_v0"
+      }
+    },
+    {
+      "id": "WS-10-T17",
+      "lane": "QM_STAT",
+      "mode": "increment",
+      "scientific_delta_class": "math_strengthening",
+      "scientific_delta_summary": "Raised bounded compatibility checks through fourteenth central moment with explicit mismatch exclusions preserved.",
+      "predecessor": "WS-10-T16",
+      "stop_condition": "Advance only if an additive payload is explicit and remains within non-claim boundaries.",
+      "non_claim_boundary": "No class flip claim, no full theorem discharge claim, no continuum closure claim, no external truth claim.",
+      "evidence_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle09_v0.json",
+      "gate_test": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle09_gate.py",
+      "status_transition": {
+        "from": "ACTIVE",
+        "to": "DONE",
+        "decision_basis": "WS_10_T17_QM_STAT_CYCLE09_ADVANCE_DECISION_v0"
+      }
+    },
+    {
+      "id": "WS-10-T18",
+      "lane": "QM_STAT",
+      "mode": "increment",
+      "scientific_delta_class": "math_strengthening",
+      "scientific_delta_summary": "Extended bounded compatibility checks through sixteenth central moment with explicit mismatch exclusions preserved.",
+      "predecessor": "WS-10-T17",
+      "stop_condition": "Advance only if an additive payload is explicit and remains within non-claim boundaries.",
+      "non_claim_boundary": "No class flip claim, no full theorem discharge claim, no continuum closure claim, no external truth claim.",
+      "evidence_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle10_v0.json",
+      "gate_test": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle10_gate.py",
+      "status_transition": {
+        "from": "ACTIVE",
+        "to": "DONE",
+        "decision_basis": "WS_10_T18_QM_STAT_CYCLE10_ADVANCE_DECISION_v0"
+      }
+    },
+    {
+      "id": "WS-10-T19",
+      "lane": "QM_STAT",
+      "mode": "synthesis",
+      "scientific_delta_class": "math_strengthening",
+      "scientific_delta_summary": "Extends finite-state compatibility witness to eighteenth central moment with explicit mismatch exclusion.",
+      "predecessor": "WS-10-T18",
+      "stop_condition": "Stop at Cycle10-to-11 synthesis boundary unless a clearly additive payload is explicitly declared.",
+      "non_claim_boundary": "No class flip claim, no full theorem discharge claim, no continuum closure claim, no external truth claim.",
+      "evidence_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json",
+      "gate_test": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle11_gate.py",
+      "status_transition": {
+        "from": "ACTIVE",
+        "to": "STOPPED_AT_SYNTHESIS_BOUNDARY",
+        "decision_basis": "WS_10_T19_QM_STAT_CYCLE11_BOUNDARY_DECISION_v0"
+      }
+    }
+  ],
+  "non_claim_invariants": {
+    "non_claim_boundary_enforced": true,
+    "scalar_freeze_unchanged": true,
+    "packet_hold_invariance_unchanged": true
+  },
+  "release_gate_truth": {
+    "governance_prerequisite": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1",
+    "branch_health_lane": "./py.ps1 -m pytest formal/python/tests -q"
+  },
+  "mirror_targets": [
+    {
+      "path": "State_of_the_Theory.md",
+      "marker_id": "STATE_CORE_ACTIVE_LANE_v0"
+    },
+    {
+      "path": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+      "marker_id": "STATE_CORE_ROADMAP_STATUS_v0"
+    },
+    {
+      "path": "formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md",
+      "marker_id": "STATE_CORE_TRACKER_STATUS_v0"
+    },
+    {
+      "path": "formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md",
+      "marker_id": "STATE_CORE_WS10_STATUS_v0"
+    }
+  ]
+}

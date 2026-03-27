@@ -33,6 +33,13 @@ if ($LASTEXITCODE -eq 0) {
   formal/python/tests/test_active_dependency_baseline_lock_gate.py `
   formal/python/tests/test_dependency_security_scan_schedule_gate.py `
   formal/python/tests/test_state_theory_dag.py `
+  formal/python/tests/test_state_core_generation_integrity_gate.py `
+  formal/python/tests/test_state_core_generated_block_manual_edit_prohibition_gate.py `
+  formal/python/tests/test_cosmo_sr_state_core_generation_integrity_gate.py `
+  formal/python/tests/test_ws10_branch_boundary_status_family_gate.py `
+  formal/python/tests/test_ws10_task_status_table_family_gate.py `
+  formal/python/tests/test_ws10_evidence_log_family_gate.py `
+  formal/python/tests/test_state_core_compression_yield_gate.py `
   formal/python/tests/test_state_doc_no_duplicate_gapids.py `
   formal/python/tests/test_toe_target_spec_doc.py `
   formal/python/tests/test_relativistic_limit_dispersion_lane_doc.py `

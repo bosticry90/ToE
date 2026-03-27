@@ -1,0 +1,38 @@
+{
+  "artifact_id": "state_core_compression_yield_report_v0",
+  "generated_at_utc": "2026-03-27T03:14:38.005699+00:00",
+  "scope": {
+    "lane": "QM_STAT",
+    "active_tranche_id": "WS-10-T19",
+    "recent_tranche_chain": [
+      "WS-10-T17",
+      "WS-10-T18",
+      "WS-10-T19"
+    ]
+  },
+  "metrics": {
+    "structured_source_count": 1,
+    "legacy_manual_mirror_surface_count": 4,
+    "manual_surface_reduction_count": 3,
+    "manual_surface_compression_ratio": 4.0,
+    "recent_tranche_chain_length": 3,
+    "status_family_chain_length": 9,
+    "ws10_task_status_row_count": 21,
+    "ws10_evidence_log_entry_count": 9,
+    "total_status_family_entries": 30,
+    "total_control_family_entries": 39,
+    "mirrors_per_structured_source": 4.0,
+    "tranches_tracked_per_structured_source": 3.0,
+    "status_family_entries_per_structured_source": 9.0,
+    "ws10_task_status_rows_per_structured_source": 21.0,
+    "ws10_evidence_log_entries_per_structured_source": 9.0,
+    "total_status_family_entries_per_structured_source": 30.0,
+    "total_control_family_entries_per_structured_source": 39.0,
+    "governance_gate_default_enforced": true
+  },
+  "non_claim_boundary": {
+    "scientific_truth_claimed": false,
+    "operational_metric_only": true,
+    "external_benchmark_claimed": false
+  }
+}

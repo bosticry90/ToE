@@ -1,0 +1,62 @@
+{
+  "schema_id": "STATE_CORE_SCHEMA_v0",
+  "schema_version": 1,
+  "required_top_level": [
+    "schema_id",
+    "schema_version",
+    "active_lane",
+    "active_tranche_id",
+    "queued_lanes",
+    "recent_tranche_chain_by_lane",
+    "ws10_branch_boundary_status_family",
+    "ws10_task_status_table_family",
+    "ws10_evidence_log_family",
+    "lanes",
+    "tranches",
+    "non_claim_invariants",
+    "release_gate_truth",
+    "mirror_targets"
+  ],
+  "allowed_modes": [
+    "kickoff",
+    "increment",
+    "synthesis",
+    "decision"
+  ],
+  "allowed_scientific_delta_classes": [
+    "math_strengthening",
+    "physics_compatibility",
+    "blocker_discharge",
+    "assumption_narrowing",
+    "prediction_or_exclusion"
+  ],
+  "allowed_support_classes": [
+    "mirror_generation",
+    "parity_maintenance",
+    "governance_hygiene",
+    "tooling_refactor"
+  ],
+  "allowed_status_postures": [
+    "ACTIVE",
+    "STOPPED_AT_SYNTHESIS_BOUNDARY",
+    "PENDING_BRANCH_DECISION",
+    "CLOSED_AUTHORIZED",
+    "DONE",
+    "PAUSED"
+  ],
+  "max_active_lanes": 1,
+  "max_queued_lanes": 1,
+  "required_tranche_fields": [
+    "id",
+    "lane",
+    "mode",
+    "scientific_delta_class",
+    "scientific_delta_summary",
+    "predecessor",
+    "stop_condition",
+    "non_claim_boundary",
+    "evidence_artifact",
+    "gate_test",
+    "status_transition"
+  ]
+}
