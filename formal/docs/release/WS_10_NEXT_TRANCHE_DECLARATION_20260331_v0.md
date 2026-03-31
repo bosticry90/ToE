@@ -20,3 +20,19 @@ Tranche one-sentence declaration:
 1. This tranche performs documentation-only scope declaration.
 2. No implementation edits beyond this declaration are allowed in this tranche.
 3. Post-tranche verification must use checkpoint_ladder.ps1 exactly.
+
+## Implementation Tranche Contract (Strict)
+
+1. Objective lock:
+	- Implement only governance-control hardening of this declaration artifact.
+	- Do not implement source/test/tooling edits in this tranche.
+2. File lock:
+	- Allowed file remains exactly: formal/docs/release/WS_10_NEXT_TRANCHE_DECLARATION_20260331_v0.md.
+	- Any additional modified file is an automatic tranche failure.
+3. Decision lock:
+	- No scope expansion without a new declaration commit before edits.
+4. Acceptance evidence:
+	- checkpoint_ladder.ps1 must pass all four ordered steps.
+	- Tree must be clean after generated-output restore.
+5. Failure handling:
+	- If any checkpoint step fails, stop tranche, discard this edit, and recover to rollback anchor 4c418c4.
