@@ -11,10 +11,17 @@ Accepted continuation baseline:
 
 All new tranche work MUST start from the accepted clean baseline above.
 
-After each tranche, rerun this checkpoint ladder in order:
+After each tranche, execute the checkpoint ladder runner:
+```
+pwsh -NoProfile -ExecutionPolicy Bypass -File ./checkpoint_ladder.ps1
+```
+
+This automated tool runs the four-step verification in order:
 1. renderer apply/verify
 2. state-core integrity gate
 3. compression/yield gate
 4. full governance suite
 
-Only continue if all four checkpoints pass.
+The tool automatically restores generated outputs and reports final status.
+
+Only continue if all four checkpoints pass and working tree is clean post-restore.
