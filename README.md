@@ -20,6 +20,8 @@ STATE-CORE GENERATED-FIRST CUTOVER (2026-03-26)
    1) Edit `formal/docs/release/state_core_v0.json`.
    2) Run `./py.ps1 -m formal.python.tools.render_state_core_mirrors --apply-mirrors --verify-mirrors`.
    3) Run `pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1`.
+- Post-tranche safety ladder (exact order, restores generated outputs at the end):
+   - `pwsh -NoProfile -ExecutionPolicy Bypass -File ./checkpoint_ladder.ps1`
 - Direct human edits inside `<!-- GENERATED: ... -->` mirror blocks are prohibited.
 - Cutover policy artifact: `formal/docs/release/STATE_CORE_GENERATED_FIRST_CUTOVER_POLICY_v0.md`.
 
