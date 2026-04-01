@@ -62,7 +62,15 @@ finally {
     }
 
     Write-Host "`nPost-run git status:" -ForegroundColor Yellow
-    git status --short
+    $statusOutput = @(git status --short)
+    if ($statusOutput.Count -gt 0) {
+        $statusOutput | ForEach-Object { Write-Host $_ }
+        Write-Host "`nCheckpoint ladder post-run hygiene failed: working tree is not clean after generated-output restore." -ForegroundColor Red
+        $failed = $true
+    }
+    else {
+        Write-Host "(clean)" -ForegroundColor Green
+    }
 
     Pop-Location
 }

@@ -63,3 +63,19 @@ def test_checkpoint_ladder_contract_gate_exits_nonzero_on_failure() -> None:
     assert catch_idx < flag_idx < fail_exit_idx < exit_one_idx, (
         "Failure contract violated: runner must set failed flag and exit non-zero on failure."
     )
+
+
+def test_checkpoint_ladder_contract_gate_requires_clean_tree_after_restore() -> None:
+    content = _read_ladder()
+
+    status_idx = _index_or_fail(content, "$statusOutput = @(git status --short)")
+    dirty_guard_idx = _index_or_fail(content, "if ($statusOutput.Count -gt 0) {")
+    hygiene_msg_idx = _index_or_fail(
+        content,
+        "Checkpoint ladder post-run hygiene failed: working tree is not clean after generated-output restore.",
+    )
+    fail_flag_idx = content.rfind("$failed = $true")
+
+    assert status_idx < dirty_guard_idx < hygiene_msg_idx < fail_flag_idx, (
+        "Clean-tree guard violated: checkpoint ladder must fail when git status is non-empty after restore."
+    )

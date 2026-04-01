@@ -22,6 +22,7 @@ STATE-CORE GENERATED-FIRST CUTOVER (2026-03-26)
    3) Run `pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1`.
 - Post-tranche safety ladder (exact order, restores generated outputs at the end):
    - `pwsh -NoProfile -ExecutionPolicy Bypass -File ./checkpoint_ladder.ps1`
+   - Acceptance requires the runner to finish green **and** leave `git status --short` empty after auto-restore.
 - Direct human edits inside `<!-- GENERATED: ... -->` mirror blocks are prohibited.
 - Cutover policy artifact: `formal/docs/release/STATE_CORE_GENERATED_FIRST_CUTOVER_POLICY_v0.md`.
 
