@@ -74,6 +74,20 @@ def _adjudication_type_count() -> int:
 
 
 def _governance_doc_count() -> int:
+    schema = _read_json(ARCHITECTURE_SCHEMA_PATH)
+    inventory = schema.get("governance_surface_inventory", {}).get("governance_docs")
+    if isinstance(inventory, dict):
+        docs: set[str] = set()
+        for rel_path in inventory.get("fixed_files", []):
+            path = REPO_ROOT / rel_path
+            assert path.exists(), f"Missing governance fixed file declared in schema inventory: {rel_path}"
+            docs.add(str(path.relative_to(REPO_ROOT)))
+        for pattern in inventory.get("glob_patterns", []):
+            for path in REPO_ROOT.glob(pattern):
+                docs.add(str(path.relative_to(REPO_ROOT)))
+        return len(docs)
+
+    # Legacy fallback retained for backward compatibility with historical snapshots.
     docs: set[str] = set()
     docs.add(str(ARCHITECTURE_SCHEMA_PATH.relative_to(REPO_ROOT)))
     docs.add(str(STATE_PATH.relative_to(REPO_ROOT)))

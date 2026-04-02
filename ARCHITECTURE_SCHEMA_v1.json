@@ -488,5 +488,20 @@
       "token_categories": 1,
       "adjudication_types": 1
     }
+  },
+  "governance_surface_inventory": {
+    "schema": "GOVERNANCE_SURFACE_INVENTORY_v1",
+    "governance_docs": {
+      "fixed_files": [
+        "ARCHITECTURE_SCHEMA_v1.json",
+        "State_of_the_Theory.md",
+        "formal/docs/paper/ASSUMPTION_REGISTRY_v1.md",
+        "formal/docs/paper/RESULTS_TABLE_v0.md"
+      ],
+      "glob_patterns": [
+        "formal/docs/paper/DERIVATION_TARGET*.md",
+        "GOVERNANCE_VERSION_v*.lock"
+      ]
+    }
   }
 }
