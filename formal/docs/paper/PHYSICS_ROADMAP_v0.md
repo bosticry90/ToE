@@ -258,6 +258,12 @@ Immediate bounded theory restart slice (2026-03-19):
 - `THEORY_RESTART_T19_QM_STAT_CYCLE11_BOUNDARY_DECISION_ARTIFACT_v0: formal/docs/release/WS_10_T19_QM_STAT_CYCLE11_BOUNDARY_DECISION_v0.md`
 - `THEORY_RESTART_T19_AUTHORIZATION_BASIS_v0: WS_10_T18_POST_T17_DUAL_CANDIDATE_LANE_AUTHORIZATION_DECISION_v0`
 - `THEORY_RESTART_T19_NON_ACTIVE_LANE_STATUS_v0: COSMO_SR_REMAINS_PAUSED_PENDING_NEW_EXPLICIT_ADDITIVE_PAYLOAD_DECLARATION_v3`
+- `THEORY_RESTART_T19_INFORMATION_CONSTRAINT_STATUS_v0: FOUNDATION_PINNED_NONCLAIM`
+- `THEORY_RESTART_T19_INFORMATION_CONSTRAINT_TARGET_v0: formal/docs/paper/DERIVATION_TARGET_INFORMATION_CONSTRAINT_OPERATIONAL_POSITION_INTEGRATION_v0.md`
+- `THEORY_RESTART_T19_INFORMATION_CONSTRAINT_ARTIFACT_v0: formal/output/information_constraint_operational_position_integration_v0.json`
+- `THEORY_RESTART_T19_INFORMATION_CONSTRAINT_GATE_v0: formal/python/tests/test_information_constraint_operational_position_integration_gate.py`
+- `THEORY_RESTART_T19_INFORMATION_CONSTRAINT_AUTHORITY_PARITY_GATE_v0: formal/python/tests/test_information_constraint_operational_position_authority_parity_gate.py`
+- `THEORY_RESTART_T19_INFORMATION_CONSTRAINT_PACKET42_HOLD_INVARIANCE_v0: ENFORCED`
 - Restart scope note: the first bounded GR01 theorem-deepening slice is closed, GR-QM completion closeout is canonically pinned, and the active bounded follow-up is now post-completion handoff/next-target boundary control work rather than further GR-QM completion-lane theorem increments.
 
 Execution reset checkpoint (2026-03-24):

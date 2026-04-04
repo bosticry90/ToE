@@ -80,6 +80,12 @@ This yields coupled equation families for geometry, matter, gauge, auxiliary/sca
 - `sum_k lambda_k * C_k(...)`.
 - encodes cross-pillar compatibility, bridge admissibility, and transport consistency constraints.
 
+7. Information-constraint and operational-position interpretation:
+- `I_phi` is interpreted as a bounded timing/correlation consistency functional carried by admitted `C_k` classes.
+- operational position is interpreted as satisfaction of timing-window plus correlation-consistency constraints.
+- `INFO_CONSTRAINT_LAYER_STATUS_v0: FOUNDATION_PINNED_NONCLAIM`.
+- `POSITION_OPERATIONAL_MAP_STATUS_v0: FOUNDATION_PINNED_NONCLAIM`.
+
 ## Derivation-chain alignment
 
 This candidate is aligned to the standardized chain:

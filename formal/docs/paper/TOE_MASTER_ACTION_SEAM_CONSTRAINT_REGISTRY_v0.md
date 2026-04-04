@@ -64,6 +64,14 @@ Registry posture token:
 - token: `TOE_CK_CLASS_REGIME_INTERFACE_BOUNDEDNESS_v0`
 - meaning: preserve bounded validity assumptions when taking regime limits.
 
+## Information-constraint class binding map (v0)
+
+- `INFORMATION_CONSTRAINT_CLASS_BINDING_STATUS_v0: FOUNDATION_PINNED_NONCLAIM`
+- `TOE_CK_CLASS_COMPATIBILITY_v0 -> correlation-structure consistency`
+- `TOE_CK_CLASS_BRIDGE_ADMISSIBILITY_v0 -> operational-position witness admissibility`
+- `TOE_CK_CLASS_TRANSPORT_CONSISTENCY_v0 -> timing-window + causal-order admissibility`
+- `TOE_CK_CLASS_REGIME_INTERFACE_BOUNDEDNESS_v0 -> closure-domain and scale-transition boundedness`
+
 ## Per-pillar mapping scaffold (v0)
 
 QM lane mapping:

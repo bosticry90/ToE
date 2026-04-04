@@ -1,0 +1,49 @@
+{
+  "artifact_id": "information_constraint_operational_position_integration_v0",
+  "target_id": "TARGET-INFORMATION-CONSTRAINT-OPERATIONAL-POSITION-INTEGRATION-v0",
+  "status": "FOUNDATION_PINNED_NONCLAIM",
+  "classification": "P-PHYSICS",
+  "seam_class_bindings": [
+    {
+      "token": "TOE_CK_CLASS_COMPATIBILITY_v0",
+      "meaning": "correlation_structure_consistency"
+    },
+    {
+      "token": "TOE_CK_CLASS_BRIDGE_ADMISSIBILITY_v0",
+      "meaning": "operational_position_witness_admissibility"
+    },
+    {
+      "token": "TOE_CK_CLASS_TRANSPORT_CONSISTENCY_v0",
+      "meaning": "timing_window_and_causal_order_preservation"
+    },
+    {
+      "token": "TOE_CK_CLASS_REGIME_INTERFACE_BOUNDEDNESS_v0",
+      "meaning": "closure_domain_and_scale_transition_boundedness"
+    }
+  ],
+  "pinned_surfaces": {
+    "position_operational_surface": "POSITION_AS_TIMING_AND_CORRELATION_CONSTRAINT_SATISFIABILITY",
+    "information_consistency_functional_surface": "I_PHI_TIMING_PLUS_CORRELATION_PLUS_CAUSAL_ADMISSIBILITY",
+    "resonance_closure_quantization_surface": "PHASE_CLOSURE_2PI_N_STATEMENT_LOCK",
+    "hierarchical_chirality_coupling_surface": "CHIRALITY_AS_MULTISCALE_CONSTRAINT_FUNCTIONAL",
+    "dressed_state_emergence_surface": "OBSERVED_OBJECT_AS_EXCITATION_PLUS_BACKREACTION_PATTERN"
+  },
+  "bounded_scope": {
+    "class_flip_claimed": false,
+    "seam_physics_complete_claimed": false,
+    "canonical_action_promotion_claimed": false,
+    "external_truth_claimed": false,
+    "release_gate_policy_changed": false,
+    "packet_hold_posture_changed": false
+  },
+  "adjudication": {
+    "token": "INFORMATION_CONSTRAINT_OPERATIONAL_POSITION_ADJUDICATION_v0",
+    "value": "NOT_YET_DISCHARGED"
+  },
+  "canonical_references": [
+    "formal/docs/paper/DERIVATION_TARGET_INFORMATION_CONSTRAINT_OPERATIONAL_POSITION_INTEGRATION_v0.md",
+    "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+    "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
+    "formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md"
+  ]
+}
