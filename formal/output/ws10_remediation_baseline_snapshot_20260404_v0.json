@@ -1,0 +1,21 @@
+{
+  "artifact_id": "ws10_remediation_baseline_snapshot_20260404_v0",
+  "status": "LOCKED_PHASE_A_KICKOFF",
+  "anchored_commit": "95def34",
+  "captured_on": "2026-04-04",
+  "baseline_envelope": {
+    "full_pytest_collected": 5043,
+    "full_pytest_result": "GREEN",
+    "checkpoint_ladder_result": "GREEN",
+    "governance_suite_result": "GREEN",
+    "clean_tree_required": true
+  },
+  "invariance": {
+    "release_gate_truth_invariance": "ENFORCED",
+    "packet42_policy_invariance": "ENFORCED",
+    "nonclaim_boundary_invariance": "ENFORCED",
+    "scalar_freeze_policy_invariance": "ENFORCED"
+  },
+  "program_pointer": "formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
+  "kickoff_gate": "formal/python/tests/test_ws10_t20_remediation_kickoff_gate.py"
+}

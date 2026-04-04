@@ -248,6 +248,12 @@ Theory restart pilot activation (2026-03-19):
 - `THEORY_RESTART_T19_INFORMATION_CONSTRAINT_GATE_v0: formal/python/tests/test_information_constraint_operational_position_integration_gate.py`
 - `THEORY_RESTART_T19_INFORMATION_CONSTRAINT_AUTHORITY_PARITY_GATE_v0: formal/python/tests/test_information_constraint_operational_position_authority_parity_gate.py`
 - `THEORY_RESTART_T19_INFORMATION_CONSTRAINT_PACKET42_HOLD_INVARIANCE_v0: ENFORCED`
+- `THEORY_RESTART_T20_REMEDIATION_PROGRAM_STATUS_v0: LOCKED_PHASE_A_KICKOFF`
+- `THEORY_RESTART_T20_REMEDIATION_PROGRAM_ARTIFACT_v0: formal/output/ws10_remediation_baseline_snapshot_20260404_v0.json`
+- `THEORY_RESTART_T20_REMEDIATION_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T20_REMEDIATION_PROGRAM_GATE_v0: formal/python/tests/test_ws10_t20_remediation_kickoff_gate.py`
+- `THEORY_RESTART_T20_REMEDIATION_RELEASE_GATE_TRUTH_INVARIANCE_v0: ENFORCED`
+- `THEORY_RESTART_T20_REMEDIATION_PACKET42_POLICY_INVARIANCE_v0: ENFORCED`
 - Restart guardrail note: bounded theorem deepening only; no governance-family expansion and no authority-residency duplication.
 
 Execution reset checkpoint (2026-03-24):
