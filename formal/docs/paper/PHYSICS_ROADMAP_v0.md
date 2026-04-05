@@ -270,6 +270,18 @@ Immediate bounded theory restart slice (2026-03-19):
 - `THEORY_RESTART_T20_REMEDIATION_PROGRAM_GATE_v0: formal/python/tests/test_ws10_t20_remediation_kickoff_gate.py`
 - `THEORY_RESTART_T20_REMEDIATION_RELEASE_GATE_TRUTH_INVARIANCE_v0: ENFORCED`
 - `THEORY_RESTART_T20_REMEDIATION_PACKET42_POLICY_INVARIANCE_v0: ENFORCED`
+- `THEORY_RESTART_T21_REMEDIATION_PHASE_B_STATUS_v0: ACTIVE_AUTHORITY_RESIDENCY_PARITY_HARDENING`
+- `THEORY_RESTART_T21_REMEDIATION_PHASE_B_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_21_DECLARATION_20260404_v0.md`
+- `THEORY_RESTART_T21_REMEDIATION_PHASE_B_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T21_REMEDIATION_PHASE_B_PARITY_GATE_v0: formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py`
+- `THEORY_RESTART_T21_REMEDIATION_PHASE_B_OWNERSHIP_GATE_v0: formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py`
+- `THEORY_RESTART_T21_REMEDIATION_PACKET42_POLICY_INVARIANCE_v0: ENFORCED`
+- `THEORY_RESTART_T22_REMEDIATION_PHASE_C_STATUS_v0: ACTIVE_LEAN_PROOF_DEBT_LEDGER_KICKOFF`
+- `THEORY_RESTART_T22_REMEDIATION_PHASE_C_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_22_DECLARATION_20260405_v0.md`
+- `THEORY_RESTART_T22_REMEDIATION_PHASE_C_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T22_REMEDIATION_PHASE_C_CHECKPOINT_ARTIFACT_v0: formal/output/ws10_lean_proof_debt_ledger_checkpoint_20260405_v0.json`
+- `THEORY_RESTART_T22_REMEDIATION_PHASE_C_GATE_v0: formal/python/tests/test_ws10_t22_lean_proof_debt_ledger_gate.py`
+- `THEORY_RESTART_T22_REMEDIATION_PACKET42_POLICY_INVARIANCE_v0: ENFORCED`
 - Restart scope note: the first bounded GR01 theorem-deepening slice is closed, GR-QM completion closeout is canonically pinned, and the active bounded follow-up is now post-completion handoff/next-target boundary control work rather than further GR-QM completion-lane theorem increments.
 
 Execution reset checkpoint (2026-03-24):

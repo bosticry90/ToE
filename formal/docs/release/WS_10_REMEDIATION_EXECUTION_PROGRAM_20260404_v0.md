@@ -33,9 +33,34 @@ Out of scope:
 
 ## Baseline snapshot pointer
 - formal/output/ws10_remediation_baseline_snapshot_20260404_v0.json
+- formal/output/ws10_lean_proof_debt_ledger_checkpoint_20260405_v0.json
 
 ## Program gate pointer
 - formal/python/tests/test_ws10_t20_remediation_kickoff_gate.py
+- formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py
+- formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py
+- formal/python/tests/test_ws10_t22_lean_proof_debt_ledger_gate.py
+
+## Phase B authority ownership matrix
+
+| authority_surface | canonical_owner | parity_surface | enforcement_gate |
+| --- | --- | --- | --- |
+| remediation_program_status | State_of_the_Theory.md | formal/docs/paper/PHYSICS_ROADMAP_v0.md | formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py |
+| remediation_program_doc_pointer | State_of_the_Theory.md | formal/docs/paper/PHYSICS_ROADMAP_v0.md | formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py |
+| remediation_program_phase_b_gate_pointer | State_of_the_Theory.md | formal/docs/paper/PHYSICS_ROADMAP_v0.md | formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py |
+| remediation_authority_ownership_matrix_pointer | formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md | State_of_the_Theory.md + formal/docs/paper/PHYSICS_ROADMAP_v0.md | formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py |
+
+## Phase B status
+- WS10_REMEDIATION_PHASE_B_STATUS_v0: ACTIVE_AUTHORITY_RESIDENCY_PARITY_HARDENING
+- WS10_REMEDIATION_PHASE_B_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_21_DECLARATION_20260404_v0.md
+- WS10_REMEDIATION_PHASE_B_PARITY_GATE_v0: formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py
+- WS10_REMEDIATION_PHASE_B_OWNERSHIP_GATE_v0: formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py
+
+## Phase C status
+- WS10_REMEDIATION_PHASE_C_STATUS_v0: ACTIVE_LEAN_PROOF_DEBT_LEDGER_KICKOFF
+- WS10_REMEDIATION_PHASE_C_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_22_DECLARATION_20260405_v0.md
+- WS10_REMEDIATION_PHASE_C_CHECKPOINT_ARTIFACT_v0: formal/output/ws10_lean_proof_debt_ledger_checkpoint_20260405_v0.json
+- WS10_REMEDIATION_PHASE_C_GATE_v0: formal/python/tests/test_ws10_t22_lean_proof_debt_ledger_gate.py
 
 ## Invariance lock
 - REMEDIATION_RELEASE_GATE_TRUTH_INVARIANCE_v0: ENFORCED
@@ -45,3 +70,4 @@ Out of scope:
 
 ## Adjudication
 - WS10_REMEDIATION_PROGRAM_ADJUDICATION_v0: LOCKED_PHASE_A_KICKOFF
+- WS10_REMEDIATION_PHASE_C_ADJUDICATION_v0: ACTIVE_LEDGER_FIRST_OPERATIONALIZATION_NONCLAIM

@@ -1,0 +1,35 @@
+{
+  "artifact_id": "ws10_lean_proof_debt_ledger_checkpoint_20260405_v0",
+  "status": "ACTIVE_LEAN_PROOF_DEBT_LEDGER_KICKOFF",
+  "anchored_commit": "269cd81",
+  "captured_on": "2026-04-05",
+  "execution_mode": "LEDGER_FIRST_OPERATIONALIZATION_NONCLAIM",
+  "a1_sequence": [
+    "formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean",
+    "formal/toe_formal/ToeFormal/Bridges/BR01_DispersionToMetric.lean",
+    "formal/toe_formal/ToeFormal/Constraints/CT01_Abstract.lean"
+  ],
+  "a2_sequence": [
+    "formal/toe_formal/ToeFormal/Derivation/Bridges/B4_CRFT_to_AcousticMetric.lean",
+    "formal/toe_formal/ToeFormal/Derivation/Bridges/B1_P1_to_UCFF_FirstOrderDispersion.lean"
+  ],
+  "a3_sequence": [
+    "formal/toe_formal/ToeFormal/Derivation/Bridges/B2_P2_to_UCFF_SecondOrderTimeDomain.lean",
+    "formal/toe_formal/ToeFormal/Derivation/Bridges/B3_P2_to_UCFF_SecondOrderNumerics.lean"
+  ],
+  "variational_package": [
+    "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+    "formal/toe_formal/ToeFormal/Variational/FirstVariationDeclared.lean",
+    "formal/toe_formal/ToeFormal/Variational/ActionToFirstVariationBridgeRep32.lean",
+    "formal/toe_formal/ToeFormal/Variational/FieldRepresentation.lean"
+  ],
+  "invariance": {
+    "release_gate_truth_invariance": "ENFORCED",
+    "packet42_policy_invariance": "ENFORCED",
+    "nonclaim_boundary_invariance": "ENFORCED",
+    "scalar_freeze_policy_invariance": "ENFORCED"
+  },
+  "declaration_pointer": "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_22_DECLARATION_20260405_v0.md",
+  "program_pointer": "formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
+  "gate_pointer": "formal/python/tests/test_ws10_t22_lean_proof_debt_ledger_gate.py"
+}
