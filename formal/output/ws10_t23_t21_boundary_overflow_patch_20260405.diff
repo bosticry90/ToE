@@ -1,0 +1,212 @@
+diff --git a/GOVERNANCE_VERSION_v2.lock b/GOVERNANCE_VERSION_v2.lock
+index bcded91..654e8bd 100644
+--- a/GOVERNANCE_VERSION_v2.lock
++++ b/GOVERNANCE_VERSION_v2.lock
+@@ -55,7 +55,7 @@
+       "NOT_YET_*"
+     ],
+     "governance_surface_counts": {
+-      "governance_docs": 397,
++      "governance_docs": 398,
+       "token_categories": 7,
+       "adjudication_types": 12
+     }
+diff --git a/formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_21_DECLARATION_20260404_v0.md b/formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_21_DECLARATION_20260404_v0.md
+new file mode 100644
+index 0000000..bfee4a3
+--- /dev/null
++++ b/formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_21_DECLARATION_20260404_v0.md
+@@ -0,0 +1,40 @@
++# WS-10 Implementation Tranche 21 Declaration (2026-04-04)
++
++## Tranche name
++WS_10_IMPLEMENTATION_TRANCHE_21_REMEDIATION_PROGRAM_PHASE_B_AUTHORITY_RESIDENCY
++
++## Objective
++Execute a bounded Phase B authority-residency and parity-hardening kickoff by pinning an authority ownership matrix, wiring enforcement gates, and mirroring minimal status tokens across canonical authority surfaces without altering release-gate truth or claim posture.
++
++## Allowed files
++- formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_21_DECLARATION_20260404_v0.md (new)
++- formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md (edit)
++- formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py (new)
++- formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py (new)
++- State_of_the_Theory.md (edit)
++- formal/docs/paper/PHYSICS_ROADMAP_v0.md (edit)
++- GOVERNANCE_VERSION_v2.lock (edit, governance baseline count sync only)
++
++## Out of scope
++- derivation target theorem changes
++- seam status class changes or physics-complete status flips
++- Packet41/Packet42 policy changes
++- scalar freeze policy changes
++- release-gate truth policy changes
++- broad remediation phase expansion beyond authority residency kickoff
++
++## Acceptance
++1. formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py is green.
++2. formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py is green.
++3. Full formal/python/tests suite is green.
++4. ./checkpoint_ladder.ps1 is green end-to-end.
++5. Generated outputs are restored as needed and the working tree is clean afterward.
++
++## Rollback anchor
++269cd81
++
++## Hard stop rule
++If any file outside the Allowed files list changes before acceptance, stop immediately, revert the drift, and treat the tranche as failed until the boundary is restored.
++
++## Boundary freshness note
++This tranche is authority-surface hardening only and intentionally constrained to ownership-residency specification, parity wiring, and gate enforcement for Phase B kickoff.
+\ No newline at end of file
+diff --git a/formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py b/formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py
+new file mode 100644
+index 0000000..7d2f840
+--- /dev/null
++++ b/formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py
+@@ -0,0 +1,73 @@
++from __future__ import annotations
++
++from pathlib import Path
++
++
++def find_repo_root(start: Path) -> Path:
++    p = start.resolve()
++    while p != p.parent:
++        if (p / "formal").exists():
++            return p
++        p = p.parent
++    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
++
++
++REPO_ROOT = find_repo_root(Path(__file__))
++PROGRAM_PATH = REPO_ROOT / "formal" / "docs" / "release" / "WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md"
++
++
++def _read(path: Path) -> str:
++    assert path.exists(), f"Missing required file: {path}"
++    return path.read_text(encoding="utf-8")
++
++
++def _phase_b_matrix_rows(text: str) -> list[list[str]]:
++    start_marker = "## Phase B authority ownership matrix"
++    end_marker = "## Phase B status"
++    assert start_marker in text, "Missing Phase B authority ownership matrix section."
++    assert end_marker in text, "Missing Phase B status section."
++
++    section = text.split(start_marker, 1)[1].split(end_marker, 1)[0]
++    rows: list[list[str]] = []
++    for line in section.splitlines():
++        stripped = line.strip()
++        if not stripped.startswith("|"):
++            continue
++        cells = [cell.strip() for cell in stripped.split("|")[1:-1]]
++        if not cells or cells[0] in {"authority_surface", "---"}:
++            continue
++        rows.append(cells)
++    return rows
++
++
++def test_ws10_t21_matrix_has_required_rows() -> None:
++    text = _read(PROGRAM_PATH)
++    rows = _phase_b_matrix_rows(text)
++    assert rows, "Phase B authority ownership matrix has no data rows."
++    expected_surfaces = {
++        "remediation_program_status",
++        "remediation_program_doc_pointer",
++        "remediation_program_phase_b_gate_pointer",
++        "remediation_authority_ownership_matrix_pointer",
++    }
++    found_surfaces = {row[0] for row in rows}
++    missing = sorted(expected_surfaces - found_surfaces)
++    assert not missing, "Missing authority surface row(s): " + ", ".join(missing)
++
++
++def test_ws10_t21_matrix_surface_uniqueness_and_owners() -> None:
++    text = _read(PROGRAM_PATH)
++    rows = _phase_b_matrix_rows(text)
++
++    surfaces = [row[0] for row in rows]
++    assert len(surfaces) == len(set(surfaces)), "Duplicate authority_surface entries in Phase B matrix."
++
++    for row in rows:
++        assert len(row) == 4, f"Unexpected matrix column count for row: {row}"
++        canonical_owner = row[1]
++        enforcement_gate = row[3]
++        assert canonical_owner, f"Empty canonical_owner in row: {row}"
++        assert "formal/python/tests/test_ws10_t21_" in enforcement_gate, (
++            "Phase B matrix row must point to a T21 enforcement gate: "
++            f"{row}"
++        )
+\ No newline at end of file
+diff --git a/formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py b/formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py
+new file mode 100644
+index 0000000..9ef8f37
+--- /dev/null
++++ b/formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py
+@@ -0,0 +1,65 @@
++from __future__ import annotations
++
++from pathlib import Path
++
++from formal.python.tests._archived_history_sentinel import split_active_and_archived
++
++
++def find_repo_root(start: Path) -> Path:
++    p = start.resolve()
++    while p != p.parent:
++        if (p / "formal").exists():
++            return p
++        p = p.parent
++    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
++
++
++REPO_ROOT = find_repo_root(Path(__file__))
++STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
++ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
++PROGRAM_PATH = REPO_ROOT / "formal" / "docs" / "release" / "WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md"
++DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "WS_10_IMPLEMENTATION_TRANCHE_21_DECLARATION_20260404_v0.md"
++
++
++def _read(path: Path) -> str:
++    assert path.exists(), f"Missing required file: {path}"
++    return path.read_text(encoding="utf-8")
++
++
++def _active_text(path: Path) -> str:
++    active, _ = split_active_and_archived(_read(path), path)
++    return active
++
++
++def test_ws10_t21_phase_b_files_exist() -> None:
++    assert PROGRAM_PATH.exists(), "Missing remediation execution program doc."
++    assert DECLARATION_PATH.exists(), "Missing Tranche 21 declaration."
++
++
++def test_ws10_t21_phase_b_tokens_parity() -> None:
++    state_text = _active_text(STATE_PATH)
++    roadmap_text = _active_text(ROADMAP_PATH)
++    parity_tokens = [
++        "THEORY_RESTART_T21_REMEDIATION_PHASE_B_STATUS_v0: ACTIVE_AUTHORITY_RESIDENCY_PARITY_HARDENING",
++        "THEORY_RESTART_T21_REMEDIATION_PHASE_B_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_21_DECLARATION_20260404_v0.md",
++        "THEORY_RESTART_T21_REMEDIATION_PHASE_B_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
++        "THEORY_RESTART_T21_REMEDIATION_PHASE_B_PARITY_GATE_v0: formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py",
++        "THEORY_RESTART_T21_REMEDIATION_PHASE_B_OWNERSHIP_GATE_v0: formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py",
++        "THEORY_RESTART_T21_REMEDIATION_PACKET42_POLICY_INVARIANCE_v0: ENFORCED",
++    ]
++
++    for token in parity_tokens:
++        assert token in state_text, f"Missing state token: {token}"
++        assert token in roadmap_text, f"Missing roadmap token: {token}"
++
++
++def test_ws10_t21_program_phase_b_tokens_present() -> None:
++    text = _read(PROGRAM_PATH)
++    required = [
++        "WS10_REMEDIATION_PHASE_B_STATUS_v0: ACTIVE_AUTHORITY_RESIDENCY_PARITY_HARDENING",
++        "WS10_REMEDIATION_PHASE_B_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_21_DECLARATION_20260404_v0.md",
++        "WS10_REMEDIATION_PHASE_B_PARITY_GATE_v0: formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py",
++        "WS10_REMEDIATION_PHASE_B_OWNERSHIP_GATE_v0: formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py",
++    ]
++    missing = [token for token in required if token not in text]
++    assert not missing, "Missing remediation program Phase B token(s): " + ", ".join(missing)
+\ No newline at end of file

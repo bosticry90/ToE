@@ -1,0 +1,4 @@
+GOVERNANCE_VERSION_v2.lock
+formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_21_DECLARATION_20260404_v0.md
+formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py
+formal/python/tests/test_ws10_t21_authority_residency_parity_gate.py
