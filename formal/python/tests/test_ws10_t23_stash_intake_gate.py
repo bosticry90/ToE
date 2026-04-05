@@ -51,7 +51,7 @@ def test_ws10_t23_tokens_parity() -> None:
     state_text = _active_text(STATE_PATH)
     roadmap_text = _active_text(ROADMAP_PATH)
     parity_tokens = [
-        "THEORY_RESTART_T23_REMEDIATION_PHASE_D_STATUS_v0: ACTIVE_T21_STASH_INTAKE_ARTIFACTIZATION_NONLIVE",
+        "THEORY_RESTART_T23_REMEDIATION_PHASE_D_STATUS_v0: LOCKED_T21_STASH_INTAKE_ARTIFACTIZATION_NONLIVE",
         "THEORY_RESTART_T23_REMEDIATION_PHASE_D_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_23_DECLARATION_20260405_v0.md",
         "THEORY_RESTART_T23_REMEDIATION_PHASE_D_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
         "THEORY_RESTART_T23_REMEDIATION_PHASE_D_CHECKPOINT_ARTIFACT_v0: formal/output/ws10_t23_stash_intake_checkpoint_20260405_v0.json",
@@ -68,7 +68,7 @@ def test_ws10_t23_tokens_parity() -> None:
 def test_ws10_t23_program_tokens_present() -> None:
     text = _read(PROGRAM_PATH)
     required = [
-        "WS10_REMEDIATION_PHASE_D_STATUS_v0: ACTIVE_T21_STASH_INTAKE_ARTIFACTIZATION_NONLIVE",
+        "WS10_REMEDIATION_PHASE_D_STATUS_v0: LOCKED_T21_STASH_INTAKE_ARTIFACTIZATION_NONLIVE",
         "WS10_REMEDIATION_PHASE_D_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_23_DECLARATION_20260405_v0.md",
         "WS10_REMEDIATION_PHASE_D_CHECKPOINT_ARTIFACT_v0: formal/output/ws10_t23_stash_intake_checkpoint_20260405_v0.json",
         "WS10_REMEDIATION_PHASE_D_PATCH_ARTIFACT_v0: formal/output/ws10_t23_t21_boundary_overflow_patch_20260405.diff",
@@ -82,7 +82,7 @@ def test_ws10_t23_program_tokens_present() -> None:
 def test_ws10_t23_checkpoint_schema() -> None:
     payload = _json(CHECKPOINT_PATH)
     assert payload.get("artifact_id") == "ws10_t23_stash_intake_checkpoint_20260405_v0"
-    assert payload.get("status") == "ACTIVE_T21_STASH_INTAKE_ARTIFACTIZATION_NONLIVE"
+    assert payload.get("status") == "LOCKED_T21_STASH_INTAKE_ARTIFACTIZATION_NONLIVE"
     assert payload.get("anchored_commit") == "7730c32"
     assert payload.get("source_stash_label") == "temp-ws10-t21-out-of-bound-hygiene"
     assert payload.get("patch_artifact") == "formal/output/ws10_t23_t21_boundary_overflow_patch_20260405.diff"
