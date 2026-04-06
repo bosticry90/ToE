@@ -18,6 +18,12 @@ if ($LASTEXITCODE -ne 0) {
   throw "Tooling validate checks failed."
 }
 
+Write-Host "Running authority-surface parity precheck" -ForegroundColor Cyan
+./py.ps1 -m formal.python.tools.authority_surface_parity_check
+if ($LASTEXITCODE -ne 0) {
+  throw "Authority-surface parity precheck failed."
+}
+
 Write-Host "Running local divergence guardrail" -ForegroundColor Cyan
 git show-ref --verify --quiet refs/remotes/origin/main
 if ($LASTEXITCODE -eq 0) {
