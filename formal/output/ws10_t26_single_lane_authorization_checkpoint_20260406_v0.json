@@ -1,0 +1,35 @@
+{
+  "artifact_id": "ws10_t26_single_lane_authorization_checkpoint_20260406_v0",
+  "status": "ACTIVE_SINGLE_LANE_AUTHORIZED_NONCLAIM",
+  "anchored_commit": "522eedb",
+  "captured_on": "2026-04-06",
+  "phase": "E",
+  "entry_criteria": "REQUIRES_T25_ACCEPTANCE_PLUS_TWO_PINNED_CANDIDATES_PLUS_DECISION_ONLY_SCOPE",
+  "candidate_count": 2,
+  "execution_live_token_count": 0,
+  "authorization_state": "ONE_LANE_AUTHORIZED_ONE_LANE_PAUSED_NONLIVE",
+  "declared_winner_lane": "A1_GR_QM_SEAM_PROMOTION",
+  "declared_loser_lane": "A1_BR01_DISPERSION_TO_METRIC",
+  "authorized_lane_status": "AUTHORIZED_SINGLE_LANE_NONLIVE",
+  "paused_lane_status": "PAUSED_DEFERRED_NONLIVE",
+  "no_third_status_values": "ENFORCED",
+  "required_preconditions": [
+    "THEORY_RESTART_T25_REMEDIATION_PHASE_E_STATUS_v0: ACTIVE_DUAL_CANDIDATE_PREDECISION_NONCLAIM",
+    "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_26_DECLARATION_20260406_v0.md",
+    "formal/python/tests/test_ws10_t26_dual_candidate_lane_selection_gate.py"
+  ],
+  "candidate_artifacts": {
+    "candidate_a": "formal/docs/release/WS_10_T25_A1_GR_QM_SEAM_PROMOTION_MICRO_CANDIDATE_v0.md",
+    "candidate_b": "formal/docs/release/WS_10_T25_A1_BR01_DISPERSION_TO_METRIC_MICRO_CANDIDATE_v0.md"
+  },
+  "decision_artifact": "formal/docs/release/WS_10_T26_DUAL_CANDIDATE_LANE_SELECTION_DECISION_20260406_v0.md",
+  "invariance": {
+    "release_gate_truth_invariance": "ENFORCED",
+    "packet42_policy_invariance": "ENFORCED",
+    "nonclaim_boundary_invariance": "ENFORCED",
+    "scalar_freeze_policy_invariance": "ENFORCED"
+  },
+  "declaration_pointer": "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_26_DECLARATION_20260406_v0.md",
+  "program_pointer": "formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
+  "gate_pointer": "formal/python/tests/test_ws10_t26_dual_candidate_lane_selection_gate.py"
+}
