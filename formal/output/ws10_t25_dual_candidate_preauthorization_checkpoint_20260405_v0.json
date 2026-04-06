@@ -1,0 +1,38 @@
+{
+  "artifact_id": "ws10_t25_dual_candidate_preauthorization_checkpoint_20260405_v0",
+  "status": "ACTIVE_DUAL_CANDIDATE_PREDECISION_NONCLAIM",
+  "anchored_commit": "28f228f",
+  "captured_on": "2026-04-05",
+  "phase": "E",
+  "entry_criteria": "REQUIRES_T24_ACCEPTANCE_PLUS_TWO_STRUCTURALLY_MATCHED_CANDIDATES_PLUS_NO_EXECUTION_LIVE_TOKENS",
+  "candidate_count": 2,
+  "execution_live_token_count": 0,
+  "authorization_state": "BOTH_LANES_PREDECISION_NOT_AUTHORIZED_NONLIVE",
+  "required_sections": [
+    "Candidate identity",
+    "Objective class",
+    "Bounded scope",
+    "Candidate payload",
+    "Non-authorization status",
+    "Comparative evaluation hooks",
+    "Pointer contract"
+  ],
+  "required_preconditions": [
+    "THEORY_RESTART_T24_REMEDIATION_PHASE_E_STATUS_v0: ACTIVE_PHASE_E_PREAUTHORIZATION_NONCLAIM",
+    "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_25_DECLARATION_20260405_v0.md",
+    "formal/python/tests/test_ws10_t25_dual_candidate_authorization_gate.py"
+  ],
+  "candidate_artifacts": {
+    "candidate_a": "formal/docs/release/WS_10_T25_A1_GR_QM_SEAM_PROMOTION_MICRO_CANDIDATE_v0.md",
+    "candidate_b": "formal/docs/release/WS_10_T25_A1_BR01_DISPERSION_TO_METRIC_MICRO_CANDIDATE_v0.md"
+  },
+  "invariance": {
+    "release_gate_truth_invariance": "ENFORCED",
+    "packet42_policy_invariance": "ENFORCED",
+    "nonclaim_boundary_invariance": "ENFORCED",
+    "scalar_freeze_policy_invariance": "ENFORCED"
+  },
+  "declaration_pointer": "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_25_DECLARATION_20260405_v0.md",
+  "program_pointer": "formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
+  "gate_pointer": "formal/python/tests/test_ws10_t25_dual_candidate_authorization_gate.py"
+}

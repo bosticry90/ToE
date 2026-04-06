@@ -36,6 +36,7 @@ Out of scope:
 - formal/output/ws10_lean_proof_debt_ledger_checkpoint_20260405_v0.json
 - formal/output/ws10_t23_stash_intake_checkpoint_20260405_v0.json
 - formal/output/ws10_t24_phase_e_preauthorization_checkpoint_20260405_v0.json
+- formal/output/ws10_t25_dual_candidate_preauthorization_checkpoint_20260405_v0.json
 
 ## Program gate pointer
 - formal/python/tests/test_ws10_t20_remediation_kickoff_gate.py
@@ -44,6 +45,7 @@ Out of scope:
 - formal/python/tests/test_ws10_t22_lean_proof_debt_ledger_gate.py
 - formal/python/tests/test_ws10_t23_stash_intake_gate.py
 - formal/python/tests/test_ws10_t24_phase_e_preauthorization_gate.py
+- formal/python/tests/test_ws10_t25_dual_candidate_authorization_gate.py
 
 ## Phase B authority ownership matrix
 
@@ -81,6 +83,19 @@ Out of scope:
 - WS10_REMEDIATION_PHASE_E_GATE_v0: formal/python/tests/test_ws10_t24_phase_e_preauthorization_gate.py
 - WS10_REMEDIATION_PHASE_E_ENTRY_CRITERIA_v0: REQUIRES_T23_LOCK_PLUS_BOUNDED_DECLARATION_PLUS_FULL_ACCEPTANCE_LADDER_PASS
 
+## Phase E T25 candidate pre-decision status
+- WS10_REMEDIATION_PHASE_E_T25_STATUS_v0: ACTIVE_DUAL_CANDIDATE_PREDECISION_NONCLAIM
+- WS10_REMEDIATION_PHASE_E_T25_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_25_DECLARATION_20260405_v0.md
+- WS10_REMEDIATION_PHASE_E_T25_CANDIDATE_A_ARTIFACT_v0: formal/docs/release/WS_10_T25_A1_GR_QM_SEAM_PROMOTION_MICRO_CANDIDATE_v0.md
+- WS10_REMEDIATION_PHASE_E_T25_CANDIDATE_B_ARTIFACT_v0: formal/docs/release/WS_10_T25_A1_BR01_DISPERSION_TO_METRIC_MICRO_CANDIDATE_v0.md
+- WS10_REMEDIATION_PHASE_E_T25_CHECKPOINT_ARTIFACT_v0: formal/output/ws10_t25_dual_candidate_preauthorization_checkpoint_20260405_v0.json
+- WS10_REMEDIATION_PHASE_E_T25_GATE_v0: formal/python/tests/test_ws10_t25_dual_candidate_authorization_gate.py
+- WS10_REMEDIATION_PHASE_E_T25_ENTRY_CRITERIA_v0: REQUIRES_T24_ACCEPTANCE_PLUS_TWO_STRUCTURALLY_MATCHED_CANDIDATES_PLUS_NO_EXECUTION_LIVE_TOKENS
+- WS10_REMEDIATION_PHASE_E_T25_CANDIDATE_COUNT_v0: 2
+- WS10_REMEDIATION_PHASE_E_T25_EXECUTION_LIVE_TOKEN_COUNT_v0: 0
+- WS10_REMEDIATION_PHASE_E_T25_AUTHORIZATION_STATE_v0: BOTH_LANES_PREDECISION_NOT_AUTHORIZED_NONLIVE
+- WS10_REMEDIATION_PHASE_E_T25_ROLLBACK_ANCHOR_v0: 28f228f
+
 ## Invariance lock
 - REMEDIATION_RELEASE_GATE_TRUTH_INVARIANCE_v0: ENFORCED
 - REMEDIATION_PACKET42_POLICY_INVARIANCE_v0: ENFORCED
@@ -92,3 +107,4 @@ Out of scope:
 - WS10_REMEDIATION_PHASE_C_ADJUDICATION_v0: ACTIVE_LEDGER_FIRST_OPERATIONALIZATION_NONCLAIM
 - WS10_REMEDIATION_PHASE_D_ADJUDICATION_v0: ACCEPTED_STASH_ISOLATED_AND_ARTIFACTIZED_NONLIVE
 - WS10_REMEDIATION_PHASE_E_ADJUDICATION_v0: PREAUTH_CRITERIA_PINNED_NONCLAIM
+- WS10_REMEDIATION_PHASE_E_T25_ADJUDICATION_v0: CANDIDATE_ARTIFACTS_PINNED_NONLIVE_PREDECISION
