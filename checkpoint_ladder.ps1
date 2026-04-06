@@ -1,7 +1,14 @@
+param(
+    [switch]$Resume
+)
+
 $ErrorActionPreference = 'Stop'
 
 $repoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 Push-Location $repoRoot
+
+$progressPath = 'formal/output/reports/checkpoint_ladder_progress_v0.json'
+$summaryPath = 'formal/output/reports/checkpoint_ladder_acceptance_summary_v0.json'
 
 $generatedOutputsManifestPath = 'formal/docs/release/CHECKPOINT_LADDER_GENERATED_OUTPUTS_MANIFEST_v0.json'
 
@@ -42,37 +49,123 @@ function Get-GeneratedOutputs {
 
 $generatedOutputs = @(Get-GeneratedOutputs -ManifestPath $generatedOutputsManifestPath)
 
+function Load-ProgressState {
+    param(
+        [Parameter(Mandatory = $true)] [string]$Path
+    )
+    if (-not (Test-Path $Path)) {
+        return @{}
+    }
+    $raw = Get-Content $Path -Raw | ConvertFrom-Json
+    $state = @{}
+    if ($null -ne $raw.completed_steps) {
+        foreach ($step in $raw.completed_steps) {
+            $state[[string]$step] = $true
+        }
+    }
+    return $state
+}
+
+function Save-ProgressState {
+    param(
+        [Parameter(Mandatory = $true)] [string]$Path,
+        [Parameter(Mandatory = $true)] [hashtable]$State
+    )
+    $completed = @($State.Keys | Sort-Object)
+    $payload = [ordered]@{
+        schema_id = 'CHECKPOINT_LADDER_PROGRESS_v0'
+        updated_at_utc = (Get-Date).ToUniversalTime().ToString('o')
+        completed_steps = $completed
+    }
+    $dir = Split-Path -Parent $Path
+    if (-not (Test-Path $dir)) {
+        New-Item -ItemType Directory -Path $dir -Force | Out-Null
+    }
+    $payload | ConvertTo-Json -Depth 5 | Set-Content -Path $Path -Encoding utf8
+}
+
+function Write-AcceptanceSummary {
+    param(
+        [Parameter(Mandatory = $true)] [string]$Path,
+        [Parameter(Mandatory = $true)] [array]$StepResults,
+        [Parameter(Mandatory = $true)] [bool]$Failed,
+        [Parameter(Mandatory = $true)] [bool]$CleanTree,
+        [Parameter(Mandatory = $false)] [array]$StatusOutput
+    )
+
+    $headRaw = git rev-parse --short HEAD
+    $head = ''
+    if ($LASTEXITCODE -eq 0) {
+        $head = [string]$headRaw
+        $head = $head.Trim()
+    }
+
+    $payload = [ordered]@{
+        schema_id = 'CHECKPOINT_LADDER_ACCEPTANCE_SUMMARY_v0'
+        generated_at_utc = (Get-Date).ToUniversalTime().ToString('o')
+        head_commit = $head
+        resume_mode = [bool]$Resume
+        failed = [bool]$Failed
+        clean_tree = [bool]$CleanTree
+        step_results = $StepResults
+        status_output = $StatusOutput
+    }
+    $dir = Split-Path -Parent $Path
+    if (-not (Test-Path $dir)) {
+        New-Item -ItemType Directory -Path $dir -Force | Out-Null
+    }
+    $payload | ConvertTo-Json -Depth 8 | Set-Content -Path $Path -Encoding utf8
+}
+
+$progressState = Load-ProgressState -Path $progressPath
+$stepResults = @()
+
 function Invoke-Step {
     param(
+        [Parameter(Mandatory = $true)] [string]$StepKey,
         [Parameter(Mandatory = $true)] [string]$Name,
         [Parameter(Mandatory = $true)] [scriptblock]$Body
     )
 
+    if ($Resume -and $progressState.ContainsKey($StepKey) -and $progressState[$StepKey]) {
+        Write-Host ("`n==> {0} (resume skip)" -f $Name) -ForegroundColor Yellow
+        $script:stepResults += [ordered]@{ step = $Name; key = $StepKey; status = 'SKIPPED_RESUME' }
+        return
+    }
+
     Write-Host ("`n==> {0}" -f $Name) -ForegroundColor Cyan
     & $Body
     if ($LASTEXITCODE -ne 0) {
+        $script:stepResults += [ordered]@{ step = $Name; key = $StepKey; status = 'FAILED' }
         throw ("Step failed: {0}" -f $Name)
     }
+    $script:stepResults += [ordered]@{ step = $Name; key = $StepKey; status = 'PASSED' }
+    $script:progressState[$StepKey] = $true
+    Save-ProgressState -Path $progressPath -State $script:progressState
     Write-Host ("PASS: {0}" -f $Name) -ForegroundColor Green
 }
 
 $failed = $false
 
 try {
-    Invoke-Step -Name '1) renderer apply/verify' -Body {
+    Invoke-Step -StepKey 'render_apply_verify' -Name '1) renderer apply/verify' -Body {
         ./py.ps1 -m formal.python.tools.render_state_core_mirrors --apply-mirrors --verify-mirrors
     }
 
-    Invoke-Step -Name '2) state-core integrity gate' -Body {
+    Invoke-Step -StepKey 'state_core_integrity' -Name '2) state-core integrity gate' -Body {
         ./py.ps1 -m pytest formal/python/tests/test_state_core_generation_integrity_gate.py -q
     }
 
-    Invoke-Step -Name '3) compression/yield gate' -Body {
+    Invoke-Step -StepKey 'compression_yield' -Name '3) compression/yield gate' -Body {
         ./py.ps1 -m pytest formal/python/tests/test_state_core_compression_yield_gate.py -q
     }
 
-    Invoke-Step -Name '4) full governance suite' -Body {
+    Invoke-Step -StepKey 'full_governance_suite' -Name '4) full governance suite' -Body {
         pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1
+    }
+
+    if (Test-Path $progressPath) {
+        Remove-Item $progressPath -Force
     }
 
     Write-Host "`nCheckpoint ladder complete: all four steps are green." -ForegroundColor Green
@@ -96,6 +189,7 @@ finally {
 
     Write-Host "`nPost-run git status:" -ForegroundColor Yellow
     $statusOutput = @(git status --short)
+    $cleanTree = ($statusOutput.Count -eq 0)
     if ($statusOutput.Count -gt 0) {
         $statusOutput | ForEach-Object { Write-Host $_ }
         Write-Host "`nCheckpoint ladder post-run hygiene failed: working tree is not clean after generated-output restore." -ForegroundColor Red
@@ -104,6 +198,8 @@ finally {
     else {
         Write-Host "(clean)" -ForegroundColor Green
     }
+
+    Write-AcceptanceSummary -Path $summaryPath -StepResults $stepResults -Failed $failed -CleanTree $cleanTree -StatusOutput $statusOutput
 
     Pop-Location
 }

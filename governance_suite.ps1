@@ -1,3 +1,7 @@
+param(
+  [switch]$AllowDivergenceOverride
+)
+
 $ErrorActionPreference = 'Stop'
 
 Write-Host "Running governance suite via ./py.ps1" -ForegroundColor Cyan
@@ -17,15 +21,27 @@ if ($LASTEXITCODE -ne 0) {
 Write-Host "Running local divergence guardrail" -ForegroundColor Cyan
 git show-ref --verify --quiet refs/remotes/origin/main
 if ($LASTEXITCODE -eq 0) {
-  $aheadLimit = 20
+  $warnLimit = 10
+  $hardLimit = 20
+  $overrideLimit = 30
   $aheadCountRaw = git rev-list --count origin/main..HEAD
   if ($LASTEXITCODE -ne 0) {
     throw "Unable to compute local ahead count against origin/main."
   }
   $aheadCount = [int]($aheadCountRaw.Trim())
-  Write-Host "divergence_guardrail.ahead_count=$aheadCount limit=$aheadLimit"
-  if ($aheadCount -gt $aheadLimit) {
-    throw "Divergence guardrail failed: local branch is ahead by $aheadCount commits (limit $aheadLimit)."
+  Write-Host "divergence_guardrail.ahead_count=$aheadCount warn_limit=$warnLimit hard_limit=$hardLimit override_limit=$overrideLimit"
+
+  if ($aheadCount -le $warnLimit) {
+    # Normal operating range.
+  } elseif ($aheadCount -le $hardLimit) {
+    Write-Host "WARN: divergence guardrail warning band: local branch is ahead by $aheadCount commits (warn threshold $warnLimit)." -ForegroundColor Yellow
+  } elseif ($aheadCount -le $overrideLimit) {
+    if (-not $AllowDivergenceOverride -and $env:TOE_ALLOW_DIVERGENCE_OVERRIDE -ne '1') {
+      throw "Divergence guardrail failed: local branch is ahead by $aheadCount commits (hard limit $hardLimit). Re-run with -AllowDivergenceOverride or set TOE_ALLOW_DIVERGENCE_OVERRIDE=1 for temporary override up to $overrideLimit."
+    }
+    Write-Host "WARN: divergence guardrail override band active: local branch is ahead by $aheadCount commits (override limit $overrideLimit)." -ForegroundColor Yellow
+  } else {
+    throw "Divergence guardrail failed: local branch is ahead by $aheadCount commits (override limit $overrideLimit)."
   }
 }
 
@@ -333,6 +349,10 @@ formal/python/tests/test_dev_stack_preflight.py
 formal/python/tests/test_ci_tranche3_gates.py
 formal/python/tests/test_sql_integrity_snapshot_tool.py
 '@
+$registryTokenCount = @($governanceGateTokenRegistry -split "`r?`n" | Where-Object { $_.Trim().Length -gt 0 }).Count
+if ($registryTokenCount -eq 0) {
+  throw "Governance gate token registry unexpectedly empty."
+}
 Write-Host "Resolving governance pytest manifest selection" -ForegroundColor Cyan
 $governanceTests = @(
   ./py.ps1 -m formal.python.tools.governance_manifest_select `

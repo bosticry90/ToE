@@ -17,6 +17,8 @@ LADDER_PATH = REPO_ROOT / "checkpoint_ladder.ps1"
 MANIFEST_PATH = (
     REPO_ROOT / "formal" / "docs" / "release" / "CHECKPOINT_LADDER_GENERATED_OUTPUTS_MANIFEST_v0.json"
 )
+PROGRESS_PATH = REPO_ROOT / "formal" / "output" / "reports" / "checkpoint_ladder_progress_v0.json"
+SUMMARY_PATH = REPO_ROOT / "formal" / "output" / "reports" / "checkpoint_ladder_acceptance_summary_v0.json"
 
 
 def _read_ladder() -> str:
@@ -38,10 +40,10 @@ def _index_or_fail(content: str, needle: str) -> int:
 def test_checkpoint_ladder_contract_gate_required_steps_in_order() -> None:
     content = _read_ladder()
 
-    s1 = _index_or_fail(content, "Invoke-Step -Name '1) renderer apply/verify'")
-    s2 = _index_or_fail(content, "Invoke-Step -Name '2) state-core integrity gate'")
-    s3 = _index_or_fail(content, "Invoke-Step -Name '3) compression/yield gate'")
-    s4 = _index_or_fail(content, "Invoke-Step -Name '4) full governance suite'")
+    s1 = _index_or_fail(content, "Invoke-Step -StepKey 'render_apply_verify' -Name '1) renderer apply/verify'")
+    s2 = _index_or_fail(content, "Invoke-Step -StepKey 'state_core_integrity' -Name '2) state-core integrity gate'")
+    s3 = _index_or_fail(content, "Invoke-Step -StepKey 'compression_yield' -Name '3) compression/yield gate'")
+    s4 = _index_or_fail(content, "Invoke-Step -StepKey 'full_governance_suite' -Name '4) full governance suite'")
 
     assert s1 < s2 < s3 < s4, "Checkpoint ladder step order contract violated."
 
@@ -94,3 +96,22 @@ def test_checkpoint_ladder_contract_gate_requires_clean_tree_after_restore() -> 
     assert status_idx < dirty_guard_idx < hygiene_msg_idx < fail_flag_idx, (
         "Clean-tree guard violated: checkpoint ladder must fail when git status is non-empty after restore."
     )
+
+
+def test_checkpoint_ladder_contract_gate_resume_and_summary_contracts_present() -> None:
+    content = _read_ladder()
+
+    _index_or_fail(content, "param(")
+    _index_or_fail(content, "[switch]$Resume")
+    _index_or_fail(content, "$progressPath = 'formal/output/reports/checkpoint_ladder_progress_v0.json'")
+    _index_or_fail(content, "$summaryPath = 'formal/output/reports/checkpoint_ladder_acceptance_summary_v0.json'")
+    _index_or_fail(content, "schema_id = 'CHECKPOINT_LADDER_PROGRESS_v0'")
+    _index_or_fail(content, "schema_id = 'CHECKPOINT_LADDER_ACCEPTANCE_SUMMARY_v0'")
+    _index_or_fail(content, "(resume skip)")
+    _index_or_fail(content, "Write-AcceptanceSummary")
+
+
+def test_checkpoint_ladder_contract_gate_summary_and_progress_paths_are_release_stable() -> None:
+    # Contract path guards help preserve downstream automation expectations.
+    assert str(PROGRESS_PATH).endswith("formal\\output\\reports\\checkpoint_ladder_progress_v0.json")
+    assert str(SUMMARY_PATH).endswith("formal\\output\\reports\\checkpoint_ladder_acceptance_summary_v0.json")
