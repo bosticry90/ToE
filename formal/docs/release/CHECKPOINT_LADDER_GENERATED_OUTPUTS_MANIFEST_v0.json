@@ -1,0 +1,17 @@
+{
+  "schema_id": "CHECKPOINT_LADDER_GENERATED_OUTPUTS_MANIFEST_v0",
+  "generated_outputs": [
+    {
+      "path": "formal/output/state_core_compression_yield_report_v0.json",
+      "restore": true
+    },
+    {
+      "path": "formal/output/state_core_generated/state_core_tracker_snippet_v0.md",
+      "restore": true
+    },
+    {
+      "path": "formal/output/state_core_generated/state_core_ws10_snippet_v0.md",
+      "restore": true
+    }
+  ]
+}

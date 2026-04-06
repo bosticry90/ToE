@@ -3,11 +3,44 @@ $ErrorActionPreference = 'Stop'
 $repoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 Push-Location $repoRoot
 
-$generatedOutputs = @(
-    'formal/output/state_core_compression_yield_report_v0.json',
-    'formal/output/state_core_generated/state_core_tracker_snippet_v0.md',
-    'formal/output/state_core_generated/state_core_ws10_snippet_v0.md'
-)
+$generatedOutputsManifestPath = 'formal/docs/release/CHECKPOINT_LADDER_GENERATED_OUTPUTS_MANIFEST_v0.json'
+
+function Get-GeneratedOutputs {
+    param(
+        [Parameter(Mandatory = $true)] [string]$ManifestPath
+    )
+
+    if (-not (Test-Path $ManifestPath)) {
+        throw ("Missing generated-output manifest: {0}" -f $ManifestPath)
+    }
+
+    $manifest = Get-Content $ManifestPath -Raw | ConvertFrom-Json
+    $schemaId = [string]$manifest.schema_id
+    if ($schemaId -ne 'CHECKPOINT_LADDER_GENERATED_OUTPUTS_MANIFEST_v0') {
+        throw ("Unexpected generated-output manifest schema_id: {0}" -f $schemaId)
+    }
+
+    if ($null -eq $manifest.generated_outputs -or $manifest.generated_outputs.Count -eq 0) {
+        throw 'Generated-output manifest has no generated_outputs entries.'
+    }
+
+    $outputs = @()
+    foreach ($entry in $manifest.generated_outputs) {
+        $path = [string]$entry.path
+        $restore = [bool]$entry.restore
+        if ($restore -and -not [string]::IsNullOrWhiteSpace($path)) {
+            $outputs += $path
+        }
+    }
+
+    if ($outputs.Count -eq 0) {
+        throw 'Generated-output manifest produced zero restore paths.'
+    }
+
+    return $outputs
+}
+
+$generatedOutputs = @(Get-GeneratedOutputs -ManifestPath $generatedOutputsManifestPath)
 
 function Invoke-Step {
     param(

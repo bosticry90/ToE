@@ -14,11 +14,19 @@ def find_repo_root(start: Path) -> Path:
 
 REPO_ROOT = find_repo_root(Path(__file__))
 LADDER_PATH = REPO_ROOT / "checkpoint_ladder.ps1"
+MANIFEST_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "CHECKPOINT_LADDER_GENERATED_OUTPUTS_MANIFEST_v0.json"
+)
 
 
 def _read_ladder() -> str:
     assert LADDER_PATH.exists(), "Missing checkpoint ladder runner script."
     return LADDER_PATH.read_text(encoding="utf-8")
+
+
+def _read_manifest() -> str:
+    assert MANIFEST_PATH.exists(), "Missing checkpoint-ladder generated-output manifest."
+    return MANIFEST_PATH.read_text(encoding="utf-8")
 
 
 def _index_or_fail(content: str, needle: str) -> int:
@@ -40,10 +48,17 @@ def test_checkpoint_ladder_contract_gate_required_steps_in_order() -> None:
 
 def test_checkpoint_ladder_contract_gate_restores_generated_outputs() -> None:
     content = _read_ladder()
+    manifest = _read_manifest()
 
-    _index_or_fail(content, "formal/output/state_core_compression_yield_report_v0.json")
-    _index_or_fail(content, "formal/output/state_core_generated/state_core_tracker_snippet_v0.md")
-    _index_or_fail(content, "formal/output/state_core_generated/state_core_ws10_snippet_v0.md")
+    _index_or_fail(content, "$generatedOutputsManifestPath = 'formal/docs/release/CHECKPOINT_LADDER_GENERATED_OUTPUTS_MANIFEST_v0.json'")
+    _index_or_fail(content, "$generatedOutputs = @(Get-GeneratedOutputs -ManifestPath $generatedOutputsManifestPath)")
+    _index_or_fail(content, "Get-Content $ManifestPath -Raw | ConvertFrom-Json")
+    _index_or_fail(content, "CHECKPOINT_LADDER_GENERATED_OUTPUTS_MANIFEST_v0")
+
+    _index_or_fail(manifest, '"path": "formal/output/state_core_compression_yield_report_v0.json"')
+    _index_or_fail(manifest, '"path": "formal/output/state_core_generated/state_core_tracker_snippet_v0.md"')
+    _index_or_fail(manifest, '"path": "formal/output/state_core_generated/state_core_ws10_snippet_v0.md"')
+    _index_or_fail(manifest, '"restore": true')
 
     finally_idx = _index_or_fail(content, "finally {")
     restore_idx = _index_or_fail(content, "git restore -- $existing")
