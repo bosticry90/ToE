@@ -290,6 +290,13 @@ Immediate bounded theory restart slice (2026-03-19):
 - `THEORY_RESTART_T23_REMEDIATION_PHASE_D_MANIFEST_ARTIFACT_v0: formal/output/ws10_t23_t21_boundary_overflow_manifest_20260405.txt`
 - `THEORY_RESTART_T23_REMEDIATION_PHASE_D_GATE_v0: formal/python/tests/test_ws10_t23_stash_intake_gate.py`
 - `THEORY_RESTART_T23_REMEDIATION_PACKET42_POLICY_INVARIANCE_v0: ENFORCED`
+- `THEORY_RESTART_T24_REMEDIATION_PHASE_E_STATUS_v0: ACTIVE_PHASE_E_PREAUTHORIZATION_NONCLAIM`
+- `THEORY_RESTART_T24_REMEDIATION_PHASE_E_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_24_DECLARATION_20260405_v0.md`
+- `THEORY_RESTART_T24_REMEDIATION_PHASE_E_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T24_REMEDIATION_PHASE_E_CHECKPOINT_ARTIFACT_v0: formal/output/ws10_t24_phase_e_preauthorization_checkpoint_20260405_v0.json`
+- `THEORY_RESTART_T24_REMEDIATION_PHASE_E_GATE_v0: formal/python/tests/test_ws10_t24_phase_e_preauthorization_gate.py`
+- `THEORY_RESTART_T24_REMEDIATION_PHASE_E_ENTRY_CRITERIA_v0: REQUIRES_T23_LOCK_PLUS_BOUNDED_DECLARATION_PLUS_FULL_ACCEPTANCE_LADDER_PASS`
+- `THEORY_RESTART_T24_REMEDIATION_PACKET42_POLICY_INVARIANCE_v0: ENFORCED`
 - Restart scope note: the first bounded GR01 theorem-deepening slice is closed, GR-QM completion closeout is canonically pinned, and the active bounded follow-up is now post-completion handoff/next-target boundary control work rather than further GR-QM completion-lane theorem increments.
 
 Execution reset checkpoint (2026-03-24):

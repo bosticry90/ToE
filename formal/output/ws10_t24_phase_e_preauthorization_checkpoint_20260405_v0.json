@@ -1,0 +1,27 @@
+{
+  "artifact_id": "ws10_t24_phase_e_preauthorization_checkpoint_20260405_v0",
+  "status": "ACTIVE_PHASE_E_PREAUTHORIZATION_NONCLAIM",
+  "anchored_commit": "ec19bf7",
+  "captured_on": "2026-04-05",
+  "phase": "E",
+  "entry_criteria": "REQUIRES_T23_LOCK_PLUS_BOUNDED_DECLARATION_PLUS_FULL_ACCEPTANCE_LADDER_PASS",
+  "required_preconditions": [
+    "WS10_REMEDIATION_PHASE_D_STATUS_v0: LOCKED_T21_STASH_INTAKE_ARTIFACTIZATION_NONLIVE",
+    "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_24_DECLARATION_20260405_v0.md",
+    "formal/python/tests/test_ws10_t24_phase_e_preauthorization_gate.py"
+  ],
+  "allowed_lane_scope": [
+    "A1_GR_QM_SEAM_PROMOTION",
+    "A1_BR01_DISPERSION_TO_METRIC",
+    "A1_CT01_ABSTRACT_CONSTRAINT"
+  ],
+  "invariance": {
+    "release_gate_truth_invariance": "ENFORCED",
+    "packet42_policy_invariance": "ENFORCED",
+    "nonclaim_boundary_invariance": "ENFORCED",
+    "scalar_freeze_policy_invariance": "ENFORCED"
+  },
+  "declaration_pointer": "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_24_DECLARATION_20260405_v0.md",
+  "program_pointer": "formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
+  "gate_pointer": "formal/python/tests/test_ws10_t24_phase_e_preauthorization_gate.py"
+}

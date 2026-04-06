@@ -35,6 +35,7 @@ Out of scope:
 - formal/output/ws10_remediation_baseline_snapshot_20260404_v0.json
 - formal/output/ws10_lean_proof_debt_ledger_checkpoint_20260405_v0.json
 - formal/output/ws10_t23_stash_intake_checkpoint_20260405_v0.json
+- formal/output/ws10_t24_phase_e_preauthorization_checkpoint_20260405_v0.json
 
 ## Program gate pointer
 - formal/python/tests/test_ws10_t20_remediation_kickoff_gate.py
@@ -42,6 +43,7 @@ Out of scope:
 - formal/python/tests/test_ws10_t21_authority_ownership_enforcement_gate.py
 - formal/python/tests/test_ws10_t22_lean_proof_debt_ledger_gate.py
 - formal/python/tests/test_ws10_t23_stash_intake_gate.py
+- formal/python/tests/test_ws10_t24_phase_e_preauthorization_gate.py
 
 ## Phase B authority ownership matrix
 
@@ -72,6 +74,13 @@ Out of scope:
 - WS10_REMEDIATION_PHASE_D_MANIFEST_ARTIFACT_v0: formal/output/ws10_t23_t21_boundary_overflow_manifest_20260405.txt
 - WS10_REMEDIATION_PHASE_D_GATE_v0: formal/python/tests/test_ws10_t23_stash_intake_gate.py
 
+## Phase E status
+- WS10_REMEDIATION_PHASE_E_STATUS_v0: ACTIVE_PHASE_E_PREAUTHORIZATION_NONCLAIM
+- WS10_REMEDIATION_PHASE_E_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_24_DECLARATION_20260405_v0.md
+- WS10_REMEDIATION_PHASE_E_CHECKPOINT_ARTIFACT_v0: formal/output/ws10_t24_phase_e_preauthorization_checkpoint_20260405_v0.json
+- WS10_REMEDIATION_PHASE_E_GATE_v0: formal/python/tests/test_ws10_t24_phase_e_preauthorization_gate.py
+- WS10_REMEDIATION_PHASE_E_ENTRY_CRITERIA_v0: REQUIRES_T23_LOCK_PLUS_BOUNDED_DECLARATION_PLUS_FULL_ACCEPTANCE_LADDER_PASS
+
 ## Invariance lock
 - REMEDIATION_RELEASE_GATE_TRUTH_INVARIANCE_v0: ENFORCED
 - REMEDIATION_PACKET42_POLICY_INVARIANCE_v0: ENFORCED
@@ -82,3 +91,4 @@ Out of scope:
 - WS10_REMEDIATION_PROGRAM_ADJUDICATION_v0: LOCKED_PHASE_A_KICKOFF
 - WS10_REMEDIATION_PHASE_C_ADJUDICATION_v0: ACTIVE_LEDGER_FIRST_OPERATIONALIZATION_NONCLAIM
 - WS10_REMEDIATION_PHASE_D_ADJUDICATION_v0: ACCEPTED_STASH_ISOLATED_AND_ARTIFACTIZED_NONLIVE
+- WS10_REMEDIATION_PHASE_E_ADJUDICATION_v0: PREAUTH_CRITERIA_PINNED_NONCLAIM
