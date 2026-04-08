@@ -209,7 +209,12 @@ finally {
         $postRunStatus | ForEach-Object { Write-Host $_ }
     }
 
-    $newDrift = @(Compare-Object -ReferenceObject $preRunStatus -DifferenceObject $postRunStatus -PassThru | Sort-Object)
+    $newDrift = @(
+        Compare-Object -ReferenceObject $preRunStatus -DifferenceObject $postRunStatus |
+        Where-Object { $_.SideIndicator -eq '=>' } |
+        Select-Object -ExpandProperty InputObject |
+        Sort-Object
+    )
     if ($newDrift.Count -gt 0) {
         Write-Host "`nCheckpoint ladder post-run hygiene failed: new working-tree drift detected relative to pre-run baseline." -ForegroundColor Red
         $newDrift | ForEach-Object { Write-Host ("  drift: {0}" -f $_) -ForegroundColor Red }

@@ -82,19 +82,22 @@ def test_checkpoint_ladder_contract_gate_exits_nonzero_on_failure() -> None:
     )
 
 
-def test_checkpoint_ladder_contract_gate_requires_clean_tree_after_restore() -> None:
+def test_checkpoint_ladder_contract_gate_requires_no_new_drift_after_restore() -> None:
     content = _read_ladder()
 
-    status_idx = _index_or_fail(content, "$statusOutput = @(git status --short)")
-    dirty_guard_idx = _index_or_fail(content, "if ($statusOutput.Count -gt 0) {")
+    pre_snapshot_idx = _index_or_fail(content, "$preRunStatus = @(Get-GitStatusSnapshot)")
+    post_snapshot_idx = _index_or_fail(content, "$postRunStatus = @(Get-GitStatusSnapshot)")
+    compare_idx = _index_or_fail(content, "Compare-Object -ReferenceObject $preRunStatus -DifferenceObject $postRunStatus")
+    side_indicator_idx = _index_or_fail(content, "Where-Object { $_.SideIndicator -eq '=>' }")
+    dirty_guard_idx = _index_or_fail(content, "if ($newDrift.Count -gt 0) {")
     hygiene_msg_idx = _index_or_fail(
         content,
-        "Checkpoint ladder post-run hygiene failed: working tree is not clean after generated-output restore.",
+        "Checkpoint ladder post-run hygiene failed: new working-tree drift detected relative to pre-run baseline.",
     )
     fail_flag_idx = content.rfind("$failed = $true")
 
-    assert status_idx < dirty_guard_idx < hygiene_msg_idx < fail_flag_idx, (
-        "Clean-tree guard violated: checkpoint ladder must fail when git status is non-empty after restore."
+    assert pre_snapshot_idx < post_snapshot_idx < compare_idx < side_indicator_idx < dirty_guard_idx < hygiene_msg_idx < fail_flag_idx, (
+        "Hygiene guard violated: checkpoint ladder must fail only on new drift relative to pre-run baseline."
     )
 
 
