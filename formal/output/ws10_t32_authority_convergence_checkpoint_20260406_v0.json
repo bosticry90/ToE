@@ -1,0 +1,42 @@
+{
+  "artifact_id": "ws10_t32_authority_convergence_checkpoint_20260406_v0",
+  "status": "ACTIVE_AUTHORITY_CONVERGENCE_ACCEPTANCE_READY_NONLIVE_v0",
+  "anchored_commit": "522eedb",
+  "captured_on": "2026-04-06",
+  "phase": "F",
+  "entry_criteria": "REQUIRES_T31_ACCEPTANCE_PLUS_PROOF_DEBT_COUPLING_PARITY",
+  "execution_live_token_count": 0,
+  "active_lane": "A1_GR_QM_SEAM_PROMOTION",
+  "paused_lane": "A1_BR01_DISPERSION_TO_METRIC",
+  "convergence_scope_token": "CONTROL_SURFACE_AUTHORITY_CONVERGENCE_NONLIVE",
+  "convergence_result": "ACTIVE_AUTHORITY_CONVERGENCE_ACCEPTANCE_READY_NONLIVE_v0",
+  "branch_chain_status": "UNAMBIGUOUS_SINGLE_ACTIVE_LANE",
+  "stop_condition": "HALT_ON_CONVERGENCE_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN",
+  "required_preconditions": [
+    "THEORY_RESTART_T31_REMEDIATION_PHASE_E_STATUS_v0: ACTIVE_PROOF_DEBT_WITNESS_COUPLING_NONLIVE_v0",
+    "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_32_DECLARATION_20260406_v0.md",
+    "formal/python/tests/test_ws10_t32_authority_convergence_gate.py"
+  ],
+  "authority_state_pointer": "State_of_the_Theory.md",
+  "authority_roadmap_pointer": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+  "authority_program_pointer": "formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
+  "governance_acceptance_pointer": "governance_suite.ps1",
+  "full_pytest_acceptance_pointer": "py.ps1 -m pytest formal/python/tests -q",
+  "decision_artifact": "formal/docs/release/WS_10_T32_AUTHORITY_CONVERGENCE_DECISION_20260406_v0.md",
+  "verification_ladder": [
+    "formal/python/tests/test_ws10_t32_authority_convergence_gate.py",
+    "formal/python/tests/test_state_theory_dag.py",
+    "formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py",
+    "formal/python/tests/test_toe_seam_status_split_gate.py",
+    "formal/python/tests/test_ws10_t31_proof_debt_coupling_gate.py"
+  ],
+  "invariance": {
+    "release_gate_truth_invariance": "ENFORCED",
+    "packet42_policy_invariance": "ENFORCED",
+    "nonclaim_boundary_invariance": "ENFORCED",
+    "scalar_freeze_policy_invariance": "ENFORCED"
+  },
+  "declaration_pointer": "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_32_DECLARATION_20260406_v0.md",
+  "program_pointer": "formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
+  "gate_pointer": "formal/python/tests/test_ws10_t32_authority_convergence_gate.py"
+}

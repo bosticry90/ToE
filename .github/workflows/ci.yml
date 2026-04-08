@@ -24,16 +24,49 @@ jobs:
       - name: Install pytest
         run: .\.venv\Scripts\python.exe -m pip install --upgrade pip pytest
 
+      - name: Run dev stack preflight
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m formal.python.tools.dev_stack_preflight --report-format json
+
       - name: Run tooling validate checks (no writes)
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./tooling_validate.ps1
 
       - name: Run governance suite
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1
 
+  dependency-security:
+    name: Dependency Security
+    runs-on: windows-latest
+    needs: governance
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Create venv
+        run: python -m venv .venv
+
+      - name: Install pip-audit and pytest
+        run: .\.venv\Scripts\python.exe -m pip install --upgrade pip pip-audit pytest
+
+      - name: Run dependency security scan
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./dependency_security_scan.ps1
+
+      - name: Validate dependency scan report contract
+        run: >
+          pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -c
+          "import json; p='formal/output/reports/dependency_security_scan_report_v0.json'; d=json.load(open(p, encoding='utf-8')); assert isinstance(d.get('dependencies'), list), 'dependencies field missing or invalid'"
+
+      - name: Run dependency security gates
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests/test_active_dependency_baseline_lock_gate.py formal/python/tests/test_dependency_security_scan_schedule_gate.py -q
+
   tests:
     name: Python Tests
     runs-on: windows-latest
-    needs: governance
+    needs: [governance, dependency-security]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -55,7 +88,7 @@ jobs:
   lean-build:
     name: Lean Build
     runs-on: ubuntu-latest
-    needs: governance
+    needs: [governance, dependency-security]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -73,7 +106,7 @@ jobs:
   orchestration-smoke:
     name: Async Orchestration Smoke
     runs-on: windows-latest
-    needs: governance
+    needs: [governance, dependency-security]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -103,7 +136,7 @@ jobs:
   sql-integrity-smoke:
     name: SQL Integrity Snapshot Smoke
     runs-on: windows-latest
-    needs: governance
+    needs: [governance, dependency-security]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -128,7 +161,7 @@ jobs:
   rust-trust-core:
     name: Rust Trust Core
     runs-on: windows-latest
-    needs: governance
+    needs: [governance, dependency-security]
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -141,3 +174,25 @@ jobs:
 
       - name: Run trust-core pilot
         run: cargo run --manifest-path formal/rust/toe_trust_core/Cargo.toml
+
+  authority-forward-scaffold-smoke:
+    name: Authority Forward Scaffold Smoke
+    runs-on: windows-latest
+    needs: [governance, dependency-security]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Create venv
+        run: python -m venv .venv
+
+      - name: Install pytest
+        run: .\.venv\Scripts\python.exe -m pip install --upgrade pip pytest
+
+      - name: Run authority forward scaffold gates
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests/test_formal_python_bridge_parity_gate.py formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py formal/python/tests/test_proof_debt_witness_traceability_gate.py -q

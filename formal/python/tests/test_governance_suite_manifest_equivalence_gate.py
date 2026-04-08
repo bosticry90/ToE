@@ -45,7 +45,9 @@ def test_governance_manifest_preserves_legacy_effective_selection_coverage() -> 
     payload = json.loads(manifest_path.read_text(encoding="utf-8"))
 
     group = payload["groups"]["governance_pytests"]
-    tests, expected_count, expected_sha = selector.load_manifest_tests(manifest_path, "governance_pytests")
+    tests, expected_count, expected_sha, _ = selector.load_manifest_tests(
+        manifest_path, "governance_pytests"
+    )
 
     assert expected_count == EXPECTED_LEGACY_COUNT, "Manifest expected_count drifted from legacy baseline."
     assert expected_sha == EXPECTED_LEGACY_SHA256, "Manifest expected_sha256 drifted from legacy baseline."
@@ -61,7 +63,7 @@ def test_governance_manifest_preserves_legacy_effective_selection_coverage() -> 
 
 def test_governance_text_pinned_registry_matches_manifest_and_disk() -> None:
     manifest_path = _manifest_path()
-    tests, _, _ = selector.load_manifest_tests(manifest_path, "governance_pytests")
+    tests, _, _, _ = selector.load_manifest_tests(manifest_path, "governance_pytests")
 
     suite_path = _governance_suite_path()
     suite_content = suite_path.read_text(encoding="utf-8")

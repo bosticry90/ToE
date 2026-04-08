@@ -1,7 +1,43 @@
 {
   "schema_id": "GOVERNANCE_TEST_MANIFEST_v1",
   "source_commit": "e2a28bf",
+  "test_tiers": {
+    "formal/python/tests/test_active_dependency_baseline_lock_gate.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_dependency_security_scan_schedule_gate.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_state_theory_dag.py": "TIER_CRITICAL",
+    "formal/python/tests/test_state_core_generation_integrity_gate.py": "TIER_CRITICAL",
+    "formal/python/tests/test_state_core_generated_block_manual_edit_prohibition_gate.py": "TIER_CRITICAL",
+    "formal/python/tests/test_cosmo_sr_state_core_generation_integrity_gate.py": "TIER_CRITICAL",
+    "formal/python/tests/test_state_core_compression_yield_gate.py": "TIER_CRITICAL",
+    "formal/python/tests/test_toe_status_language_lock_guard_gate.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_toe_language_enforcement_policy_gate.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_pillar_phase_advancement_gate.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_toe_master_action_seam_registry_gate.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_foundational_derivation_chain_coverage_gate.py": "TIER_INTEGRITY",
+    "formal/python/tests/test_formal_python_bridge_parity_gate.py": "TIER_INTEGRITY"
+  },
   "groups": {
+    "critical_gates": {
+      "tests": [
+        "formal/python/tests/test_state_theory_dag.py",
+        "formal/python/tests/test_state_core_generation_integrity_gate.py",
+        "formal/python/tests/test_state_core_generated_block_manual_edit_prohibition_gate.py",
+        "formal/python/tests/test_cosmo_sr_state_core_generation_integrity_gate.py",
+        "formal/python/tests/test_state_core_compression_yield_gate.py"
+      ]
+    },
+    "integrity_gates": {
+      "tests": [
+        "formal/python/tests/test_active_dependency_baseline_lock_gate.py",
+        "formal/python/tests/test_dependency_security_scan_schedule_gate.py",
+        "formal/python/tests/test_toe_status_language_lock_guard_gate.py",
+        "formal/python/tests/test_toe_language_enforcement_policy_gate.py",
+        "formal/python/tests/test_pillar_phase_advancement_gate.py",
+        "formal/python/tests/test_toe_master_action_seam_registry_gate.py",
+        "formal/python/tests/test_foundational_derivation_chain_coverage_gate.py",
+        "formal/python/tests/test_formal_python_bridge_parity_gate.py"
+      ]
+    },
     "governance_pytests": {
       "expected_count": 298,
       "expected_sha256": "18e5424388060e770ba6b1acb626a27c0f437324614f16bd8b1f221655ccdcb2",

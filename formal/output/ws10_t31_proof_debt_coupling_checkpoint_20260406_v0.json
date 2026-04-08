@@ -1,0 +1,42 @@
+{
+  "artifact_id": "ws10_t31_proof_debt_coupling_checkpoint_20260406_v0",
+  "status": "ACTIVE_PROOF_DEBT_WITNESS_COUPLING_NONLIVE_v0",
+  "anchored_commit": "522eedb",
+  "captured_on": "2026-04-06",
+  "phase": "E",
+  "entry_criteria": "REQUIRES_T30_ACCEPTANCE_PLUS_PACKET05_OPERATIONALIZATION_PARITY",
+  "execution_live_token_count": 0,
+  "active_lane": "A1_GR_QM_SEAM_PROMOTION",
+  "paused_lane": "A1_BR01_DISPERSION_TO_METRIC",
+  "proof_debt_scope_token": "CONTROL_SURFACE_PROOF_DEBT_COUPLING_NONLIVE",
+  "coupling_result": "ACTIVE_PROOF_DEBT_WITNESS_COUPLING_NONLIVE_v0",
+  "orphan_binding_status": "NO_ORPHAN_PROOF_DEBT_ROWS_v0",
+  "branch_chain_status": "UNAMBIGUOUS_SINGLE_ACTIVE_LANE",
+  "stop_condition": "HALT_ON_PROOF_DEBT_DRIFT_OR_ORPHAN_BINDING_OR_LIVE_TOKEN",
+  "required_preconditions": [
+    "THEORY_RESTART_T30_REMEDIATION_PHASE_D_STATUS_v0: ACTIVE_PACKET05_DECISION_LEDGER_AND_FALSIFICATION_BINDINGS_NONLIVE_v0",
+    "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_31_DECLARATION_20260406_v0.md",
+    "formal/python/tests/test_ws10_t31_proof_debt_coupling_gate.py"
+  ],
+  "proof_debt_traceability_pointer": "formal/docs/release/TOE_PROOF_DEBT_WITNESS_TRACEABILITY_v0.md",
+  "proof_debt_packet_pointer": "formal/docs/release/PROOF_DEBT_BURNDOWN_PACKET_CYCLE05_v0.md",
+  "proof_debt_checkpoint_pointer": "formal/output/proof_debt_burndown_checkpoint_cycle05_v0.json",
+  "proof_debt_registry_pointer": "formal/toe_formal/ToeFormal/ProofDebtRegistry.lean",
+  "orphan_binding_count": 0,
+  "decision_artifact": "formal/docs/release/WS_10_T31_PROOF_DEBT_COUPLING_DECISION_20260406_v0.md",
+  "verification_ladder": [
+    "formal/python/tests/test_ws10_t31_proof_debt_coupling_gate.py",
+    "formal/python/tests/test_proof_debt_witness_traceability_gate.py",
+    "formal/python/tests/test_proof_debt_burndown_cycle05_gate.py",
+    "formal/python/tests/test_ws10_t22_lean_proof_debt_ledger_gate.py"
+  ],
+  "invariance": {
+    "release_gate_truth_invariance": "ENFORCED",
+    "packet42_policy_invariance": "ENFORCED",
+    "nonclaim_boundary_invariance": "ENFORCED",
+    "scalar_freeze_policy_invariance": "ENFORCED"
+  },
+  "declaration_pointer": "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_31_DECLARATION_20260406_v0.md",
+  "program_pointer": "formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
+  "gate_pointer": "formal/python/tests/test_ws10_t31_proof_debt_coupling_gate.py"
+}

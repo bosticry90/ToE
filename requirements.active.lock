@@ -1,6 +1,7 @@
-{
-  "lock_id": "requirements.active.lock",
-  "lock_version": 2,
-  "format": "json+freeze-compat",
-  "freeze_blob": " cryptography==46.0.5 fonttools==4.60.2 pillow==12.1.1 "
-}
+# requirements.active.lock
+# Lock version: 3
+# Format: pip-freeze
+# Last updated: 2026-04-06
+cryptography==46.0.6
+fonttools==4.60.2
+pillow==12.1.1

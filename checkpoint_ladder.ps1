@@ -12,6 +12,14 @@ $summaryPath = 'formal/output/reports/checkpoint_ladder_acceptance_summary_v0.js
 
 $generatedOutputsManifestPath = 'formal/docs/release/CHECKPOINT_LADDER_GENERATED_OUTPUTS_MANIFEST_v0.json'
 
+function Get-GitStatusSnapshot {
+    $status = @(git status --short)
+    if ($LASTEXITCODE -ne 0) {
+        throw 'Failed to read git status snapshot.'
+    }
+    return @($status | Sort-Object)
+}
+
 function Get-GeneratedOutputs {
     param(
         [Parameter(Mandatory = $true)] [string]$ManifestPath
@@ -48,6 +56,7 @@ function Get-GeneratedOutputs {
 }
 
 $generatedOutputs = @(Get-GeneratedOutputs -ManifestPath $generatedOutputsManifestPath)
+$preRunStatus = @(Get-GitStatusSnapshot)
 
 function Load-ProgressState {
     param(
@@ -188,15 +197,26 @@ finally {
     }
 
     Write-Host "`nPost-run git status:" -ForegroundColor Yellow
-    $statusOutput = @(git status --short)
-    $cleanTree = ($statusOutput.Count -eq 0)
-    if ($statusOutput.Count -gt 0) {
-        $statusOutput | ForEach-Object { Write-Host $_ }
-        Write-Host "`nCheckpoint ladder post-run hygiene failed: working tree is not clean after generated-output restore." -ForegroundColor Red
+    $postRunStatus = @(Get-GitStatusSnapshot)
+
+    $statusOutput = $postRunStatus
+    $cleanTree = ($postRunStatus.Count -eq 0)
+
+    if ($postRunStatus.Count -eq 0) {
+        Write-Host "(clean)" -ForegroundColor Green
+    }
+    else {
+        $postRunStatus | ForEach-Object { Write-Host $_ }
+    }
+
+    $newDrift = @(Compare-Object -ReferenceObject $preRunStatus -DifferenceObject $postRunStatus -PassThru | Sort-Object)
+    if ($newDrift.Count -gt 0) {
+        Write-Host "`nCheckpoint ladder post-run hygiene failed: new working-tree drift detected relative to pre-run baseline." -ForegroundColor Red
+        $newDrift | ForEach-Object { Write-Host ("  drift: {0}" -f $_) -ForegroundColor Red }
         $failed = $true
     }
     else {
-        Write-Host "(clean)" -ForegroundColor Green
+        Write-Host "`nCheckpoint ladder hygiene check passed: no new drift relative to pre-run baseline." -ForegroundColor Green
     }
 
     Write-AcceptanceSummary -Path $summaryPath -StepResults $stepResults -Failed $failed -CleanTree $cleanTree -StatusOutput $statusOutput

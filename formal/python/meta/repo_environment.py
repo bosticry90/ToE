@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+import unicodedata
 
 
 def find_repo_root(start: Path, *, marker_dir: str = "formal") -> Path:
@@ -25,4 +26,7 @@ def normalize_sys_path_entry(entry: str) -> str:
     except Exception:
         resolved = p
 
-    return str(resolved).replace("/", "\\").rstrip("\\").lower()
+    normalized = unicodedata.normalize("NFKC", str(resolved)).replace("/", "\\").rstrip("\\")
+    if normalized.startswith("\\\\"):
+        raise ValueError(f"UNC paths are not permitted in sys.path quarantine checks: {entry}")
+    return normalized.lower()

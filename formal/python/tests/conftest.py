@@ -31,6 +31,11 @@ def _norm_path_entry(entry: str) -> str:
     return normalize_sys_path_entry(entry)
 
 
+def _is_archive_path(entry: str, archive_norm: str) -> bool:
+    normalized = entry.replace("/", "\\")
+    return normalized == archive_norm or normalized.startswith(archive_norm + "\\")
+
+
 def _enforce_sys_path_quarantine_invariants() -> None:
     root = _repo_root()
     root_norm = _norm_path_entry(str(root))
@@ -45,6 +50,7 @@ def _enforce_sys_path_quarantine_invariants() -> None:
     # Allowlist: in rare cases a test may temporarily prepend a path ahead of repo root
     # (e.g., for ephemeral module loading). This fixture is opt-in and should stay empty
     # in the canonical suite.
+    # Policy: formal/docs/release/CONFTEST_SYS_PATH_ALLOWLIST_POLICY_v0.md
     allowed_prefixes = getattr(pytest, "_toe_sys_path_pre_root_allowlist", ())
     for idx, entry in enumerate(normalized[:root_idx]):
         if entry == "":
@@ -54,8 +60,12 @@ def _enforce_sys_path_quarantine_invariants() -> None:
         # No restriction on other pre-root paths beyond the allowlist; we only require
         # that archive never appears and repo-root is present.
 
-    if any(p == archive_norm or p.startswith(archive_norm + "\\") for p in normalized):
-        raise AssertionError("Archive quarantine violation: archive path present in sys.path")
+    for idx, entry in enumerate(normalized):
+        if _is_archive_path(entry, archive_norm):
+            raise AssertionError(
+                "Archive quarantine violation: archive path present in sys.path "
+                f"at index {idx}: {entry}"
+            )
 
 
 def pytest_configure():

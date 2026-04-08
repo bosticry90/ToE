@@ -3,6 +3,16 @@ $ErrorActionPreference = 'Stop'
 Write-Host "Running tooling validation checks via ./py.ps1" -ForegroundColor Cyan
 
 try {
+	$lockPath = "requirements.active.lock"
+	if (-not (Test-Path $lockPath)) {
+		throw "Missing dependency lockfile: $lockPath"
+	}
+
+	$lockContent = Get-Content -Path $lockPath -Raw
+	if ($lockContent.Trim().StartsWith("{") -or $lockContent.Trim().StartsWith("[")) {
+		throw "Invalid dependency lockfile format: expected pip-freeze lines in $lockPath"
+	}
+
 	./py.ps1 -c "import formal.python.tools.regen_canonical_locks as m; print('import ok: regen_canonical_locks')"
 	./py.ps1 -c "import formal.python.tools.lint_mapping_tuples as m; print('import ok: lint_mapping_tuples')"
 	./py.ps1 -c "import formal.python.tools.ovsw01_shallow_water_lowk_slope_record as m; print('import ok: ovsw01_shallow_water_lowk_slope_record')"

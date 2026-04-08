@@ -1,0 +1,66 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+
+def find_repo_root(start: Path) -> Path:
+    p = start.resolve()
+    while p != p.parent:
+        if (p / "formal").exists():
+            return p
+        p = p.parent
+    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+PROGRAM_PATH = REPO_ROOT / "formal" / "docs" / "release" / "PHYS_MATH_THROUGHPUT_REMEDIATION_PROGRAM_v0.md"
+DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "PHYS_MATH_THROUGHPUT_IMPLEMENTATION_TRANCHE_10_PHASE5_SSOT_CUTOVER_REHEARSAL_20260407_v0.md"
+CHECKPOINT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "physics_math_throughput_phase5_t10_ssot_cutover_rehearsal_20260407_v0.json"
+
+
+def _read(path: Path) -> str:
+    assert path.exists(), f"Missing required file: {path}"
+    return path.read_text(encoding="utf-8")
+
+
+def _read_json(path: Path) -> dict:
+    return json.loads(_read(path))
+
+
+def test_phase5_t10_files_exist() -> None:
+    assert PROGRAM_PATH.exists()
+    assert DECLARATION_PATH.exists()
+    assert CHECKPOINT_PATH.exists()
+
+
+def test_phase5_t10_program_tokens_present() -> None:
+    text = _read(PROGRAM_PATH)
+    required = [
+        "PHYS_MATH_THROUGHPUT_PROGRAM_STATUS_v0: ACTIVE_PHASE5_T10_SSOT_CUTOVER_REHEARSAL",
+        "PHYS_MATH_THROUGHPUT_PROGRAM_PHASE5_T10_DECLARATION_v0: formal/docs/release/PHYS_MATH_THROUGHPUT_IMPLEMENTATION_TRANCHE_10_PHASE5_SSOT_CUTOVER_REHEARSAL_20260407_v0.md",
+        "PHYS_MATH_THROUGHPUT_PROGRAM_PHASE5_T10_CHECKPOINT_v0: formal/output/reports/physics_math_throughput_phase5_t10_ssot_cutover_rehearsal_20260407_v0.json",
+        "PHYS_MATH_THROUGHPUT_PROGRAM_PHASE5_T10_GATE_v0: formal/python/tests/test_physics_math_throughput_phase5_t10_ssot_cutover_rehearsal_gate.py",
+    ]
+    missing = [token for token in required if token not in text]
+    assert not missing
+
+
+def test_phase5_t10_checkpoint_contract() -> None:
+    payload = _read_json(CHECKPOINT_PATH)
+    assert payload.get("schema_id") == "PHYS_MATH_THROUGHPUT_PHASE5_T10_SSOT_CUTOVER_REHEARSAL_v0"
+    assert payload.get("status") == "PHASE5_T10_REHEARSAL_DECLARED_NONLIVE_NONCLAIM"
+
+    contract = payload.get("rehearsal_contract", {})
+    assert contract.get("mode") == "SSOT_TOKEN_MAPPING_AND_PARITY_REHEARSAL"
+    assert contract.get("token_mapping_rows") == 3
+    assert contract.get("cutover_live_enabled") is False
+    rows = contract.get("rows", [])
+    assert len(rows) == 3
+
+
+def test_phase5_t10_controls() -> None:
+    controls = _read_json(CHECKPOINT_PATH).get("controls", {})
+    assert controls.get("release_gate_truth_changed") is False
+    assert controls.get("nonclaim_boundary_changed") is False
+    assert controls.get("stop_condition") == "HALT_ON_RELEASE_GATE_OR_NONCLAIM_OR_SSOT_REHEARSAL_DRIFT"

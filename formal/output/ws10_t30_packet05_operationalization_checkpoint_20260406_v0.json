@@ -1,0 +1,39 @@
+{
+  "artifact_id": "ws10_t30_packet05_operationalization_checkpoint_20260406_v0",
+  "status": "ACTIVE_PACKET05_DECISION_LEDGER_AND_FALSIFICATION_BINDINGS_NONLIVE_v0",
+  "anchored_commit": "522eedb",
+  "captured_on": "2026-04-06",
+  "phase": "D",
+  "entry_criteria": "REQUIRES_T29_ACCEPTANCE_PLUS_SINGLE_LANE_NONLIVE_CONTINUITY_RECONCILIATION",
+  "execution_live_token_count": 0,
+  "active_lane": "A1_GR_QM_SEAM_PROMOTION",
+  "paused_lane": "A1_BR01_DISPERSION_TO_METRIC",
+  "packet05_scope_token": "CONTROL_SURFACE_PACKET05_OPERATIONALIZATION_NONLIVE",
+  "operationalization_result": "ACTIVE_PACKET05_DECISION_LEDGER_AND_FALSIFICATION_BINDINGS_NONLIVE_v0",
+  "branch_chain_status": "UNAMBIGUOUS_SINGLE_ACTIVE_LANE",
+  "stop_condition": "HALT_ON_PACKET05_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN",
+  "required_preconditions": [
+    "THEORY_RESTART_T29_REMEDIATION_PHASE_C_STATUS_v0: ACTIVE_CONTINUITY_RECONCILIATION_POST_T28_NONLIVE",
+    "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_30_DECLARATION_20260406_v0.md",
+    "formal/python/tests/test_ws10_t30_packet05_operationalization_gate.py"
+  ],
+  "packet05_ledger_pointer": "formal/output/empirical_packet05_decision_ledger_v0.json",
+  "packet05_protocol_pointer": "formal/docs/release/FOUNDATIONAL_EMPIRICAL_DECISION_AND_FALSIFICATION_STANDARD_v0.md",
+  "decision_artifact": "formal/docs/release/WS_10_T30_PACKET05_OPERATIONALIZATION_DECISION_20260406_v0.md",
+  "verification_ladder": [
+    "formal/python/tests/test_ws10_t30_packet05_operationalization_gate.py",
+    "formal/python/tests/test_empirical_packet05_decision_ledger_parity_gate.py",
+    "formal/python/tests/test_empirical_packet05_falsification_surface_gate.py",
+    "formal/python/tests/test_foundational_empirical_packet05_progression_policy_gate.py",
+    "formal/python/tests/test_foundational_empirical_packet05_override_policy_gate.py"
+  ],
+  "invariance": {
+    "release_gate_truth_invariance": "ENFORCED",
+    "packet42_policy_invariance": "ENFORCED",
+    "nonclaim_boundary_invariance": "ENFORCED",
+    "scalar_freeze_policy_invariance": "ENFORCED"
+  },
+  "declaration_pointer": "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_30_DECLARATION_20260406_v0.md",
+  "program_pointer": "formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
+  "gate_pointer": "formal/python/tests/test_ws10_t30_packet05_operationalization_gate.py"
+}

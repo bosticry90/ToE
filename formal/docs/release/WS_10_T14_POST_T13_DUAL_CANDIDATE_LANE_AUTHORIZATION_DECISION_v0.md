@@ -34,6 +34,13 @@ Authorize exactly one lane using this order:
 - Non-authorized lane token: `COSMO_SR_REMAINS_PAUSED_PENDING_CLEARER_ADDITIVE_PAYLOAD_v1`.
 - Scope token: `CONTROL_SURFACE_AUTHORIZATION_ONLY_NO_THEOREM_SURFACE_EDITS`.
 
+## Approval Binding (Machine-Checkable)
+- approval_authority: `WS10_GOVERNANCE_COUNCIL`
+- approval_timestamp_utc: `2026-04-08T02:10:00Z`
+- approval_scope_token: `PHYS_MATH_THROUGHPUT_T12_APPROVAL_BINDING_NONLIVE`
+- approval_expiry_utc: `2026-05-08T02:10:00Z`
+- authorized_live_envelope: `FIRST_BOUNDED_LIVE_PACKET_POST_APPROVAL`
+
 ## Invariance and Boundaries
 - Release-gate contract is unchanged.
 - Scalar freeze is unchanged.

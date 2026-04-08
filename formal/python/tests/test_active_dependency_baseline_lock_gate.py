@@ -20,7 +20,7 @@ LOCK_PATH = REPO_ROOT / "requirements.active.lock"
 
 
 MIN_SAFE_VERSIONS = {
-    "cryptography": "46.0.5",
+    "cryptography": "46.0.6",
     "fonttools": "4.60.2",
     "pillow": "12.1.1",
 }
@@ -46,6 +46,16 @@ def _parse_lock(path: Path) -> dict[str, str]:
 def test_active_dependency_lock_exists_and_is_nonempty() -> None:
     assert LOCK_PATH.exists(), f"Missing active dependency baseline lock: {LOCK_PATH}"
     assert LOCK_PATH.stat().st_size > 0, "Active dependency lockfile is empty"
+
+
+def test_active_dependency_lock_is_pip_freeze_format() -> None:
+    text = LOCK_PATH.read_text(encoding="utf-8").lstrip()
+    assert not text.startswith("{"), (
+        "Active dependency lockfile must be pip-freeze format, not JSON object format"
+    )
+    assert not text.startswith("["), (
+        "Active dependency lockfile must be pip-freeze format, not JSON array format"
+    )
 
 
 def test_active_dependency_lock_has_minimum_safe_versions() -> None:

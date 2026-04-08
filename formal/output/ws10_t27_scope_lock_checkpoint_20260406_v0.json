@@ -1,0 +1,36 @@
+{
+  "artifact_id": "ws10_t27_scope_lock_checkpoint_20260406_v0",
+  "status": "ACTIVE_SINGLE_LANE_SCOPE_LOCK_NONLIVE",
+  "anchored_commit": "522eedb",
+  "captured_on": "2026-04-06",
+  "phase": "E",
+  "entry_criteria": "REQUIRES_T26_ACCEPTANCE_PLUS_SINGLE_LANE_NONLIVE_AUTHORIZATION_PLUS_SCOPE_LOCK_BOUNDARY_DECLARATION",
+  "execution_live_token_count": 0,
+  "scope_token": "CONTROL_SURFACE_SCOPE_LOCK_SINGLE_LANE_A1_GR_QM_NONLIVE",
+  "authorized_lane": "A1_GR_QM_SEAM_PROMOTION",
+  "paused_lane": "A1_BR01_DISPERSION_TO_METRIC",
+  "authorized_lane_status": "AUTHORIZED_SINGLE_LANE_NONLIVE",
+  "paused_lane_status": "PAUSED_DEFERRED_NONLIVE",
+  "stop_condition": "HALT_ON_SCOPE_DRIFT_OR_ANY_EXECUTION_LIVE_TOKEN",
+  "required_preconditions": [
+    "THEORY_RESTART_T26_REMEDIATION_PHASE_E_STATUS_v0: ACTIVE_SINGLE_LANE_DECISION_AUTHORIZATION_NONCLAIM",
+    "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_27_DECLARATION_20260406_v0.md",
+    "formal/python/tests/test_ws10_t27_single_lane_scope_lock_gate.py"
+  ],
+  "scope_lock_artifact": "formal/docs/release/WS_10_T27_SINGLE_LANE_SCOPE_LOCK_20260406_v0.md",
+  "locked_theorem_surface": "formal/toe_formal/ToeFormal/Bridges/GR_QM_SeamPromotion.lean",
+  "verification_ladder": [
+    "formal/python/tests/test_ws10_t26_dual_candidate_lane_selection_gate.py",
+    "formal/python/tests/test_ws10_t27_single_lane_scope_lock_gate.py",
+    "formal/python/tests/test_toe_qft_gr_seam_packet42_hold_fork_decision_gate.py"
+  ],
+  "invariance": {
+    "release_gate_truth_invariance": "ENFORCED",
+    "packet42_policy_invariance": "ENFORCED",
+    "nonclaim_boundary_invariance": "ENFORCED",
+    "scalar_freeze_policy_invariance": "ENFORCED"
+  },
+  "declaration_pointer": "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_27_DECLARATION_20260406_v0.md",
+  "program_pointer": "formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
+  "gate_pointer": "formal/python/tests/test_ws10_t27_single_lane_scope_lock_gate.py"
+}

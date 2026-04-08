@@ -30,6 +30,7 @@ EXCLUDED_NON_AUTHORITATIVE_DIRS = {
 
 EXCLUDED_NON_AUTHORITATIVE_LOCKFILES = {
     "Cargo.lock",
+    "requirements.active.lock",
 }
 
 

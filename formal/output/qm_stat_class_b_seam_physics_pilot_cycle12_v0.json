@@ -1,0 +1,12 @@
+{
+  "artifact_id": "qm_stat_class_b_seam_physics_pilot_cycle12_v0",
+  "status": "DECLARED_BOUNDED_NONCLAIM",
+  "lane": "QM_STAT",
+  "cycle_target": "CYCLE12",
+  "payload": {
+    "additive_candidate_type": "bounded_nonredundant_payload",
+    "scope": "pre_draft_authorization_only",
+    "release_gate_invariance": "GOVERNANCE_PREREQUISITE_PLUS_FULL_PYTEST_UNCHANGED",
+    "non_claim_invariance": true
+  }
+}

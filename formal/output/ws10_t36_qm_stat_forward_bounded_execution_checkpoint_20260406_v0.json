@@ -1,0 +1,49 @@
+{
+  "artifact_id": "ws10_t36_qm_stat_forward_bounded_execution_checkpoint_20260406_v0",
+  "status": "ACTIVE_QM_STAT_FORWARD_BOUNDED_EXECUTION_NONLIVE_v0",
+  "anchored_commit": "522eedb",
+  "captured_on": "2026-04-06",
+  "phase": "J",
+  "entry_criteria": "REQUIRES_T35_ACCEPTANCE_PLUS_QM_STAT_FORWARD_CONTINUATION_SELECTION",
+  "execution_live_token_count": 0,
+  "active_lane": "A1_GR_QM_SEAM_PROMOTION",
+  "paused_lane": "A1_BR01_DISPERSION_TO_METRIC",
+  "forward_execution_scope_token": "CONTROL_SURFACE_QM_STAT_FORWARD_BOUNDED_EXECUTION_NONLIVE",
+  "forward_execution_result": "QM_STAT_FORWARD_BOUNDED_EXECUTION_PINNED_NONLIVE_v0",
+  "selected_branch": "QM_STAT_FORWARD_CONTINUATION",
+  "selected_lane": "QM_STAT",
+  "selected_target": "CYCLE12_FORWARD_EXECUTION",
+  "selected_candidate_artifact_pointer": "formal/docs/release/WS_10_T20_QM_STAT_CYCLE12_ADDITIVE_CANDIDATE_v0.md",
+  "selected_target_artifact_pointer": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle12_v0.json",
+  "selected_target_gate_pointer": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py",
+  "branch_chain_status": "UNAMBIGUOUS_SINGLE_ACTIVE_LANE",
+  "stop_condition": "HALT_ON_FORWARD_EXECUTION_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN",
+  "required_preconditions": [
+    "THEORY_RESTART_T35_CONTINUATION_PHASE_I_STATUS_v0: ACTIVE_QM_STAT_FORWARD_CONTINUATION_SELECTION_NONLIVE_v0",
+    "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_36_DECLARATION_20260406_v0.md",
+    "formal/python/tests/test_ws10_t36_qm_stat_forward_bounded_execution_gate.py",
+    "formal/output/qm_stat_class_b_seam_physics_pilot_cycle12_v0.json"
+  ],
+  "authority_state_pointer": "State_of_the_Theory.md",
+  "authority_roadmap_pointer": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+  "authority_program_pointer": "formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
+  "governance_acceptance_pointer": "governance_suite.ps1",
+  "full_pytest_acceptance_pointer": "py.ps1 -m pytest formal/python/tests -q",
+  "decision_artifact": "formal/docs/release/WS_10_T36_QM_STAT_FORWARD_BOUNDED_EXECUTION_DECISION_20260406_v0.md",
+  "verification_ladder": [
+    "formal/python/tests/test_ws10_t36_qm_stat_forward_bounded_execution_gate.py",
+    "formal/python/tests/test_state_theory_dag.py",
+    "formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py",
+    "formal/python/tests/test_toe_seam_status_split_gate.py",
+    "formal/python/tests/test_ws10_t35_qm_stat_forward_continuation_selection_gate.py"
+  ],
+  "invariance": {
+    "release_gate_truth_invariance": "ENFORCED",
+    "packet42_policy_invariance": "ENFORCED",
+    "nonclaim_boundary_invariance": "ENFORCED",
+    "scalar_freeze_policy_invariance": "ENFORCED"
+  },
+  "declaration_pointer": "formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_36_DECLARATION_20260406_v0.md",
+  "program_pointer": "formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md",
+  "gate_pointer": "formal/python/tests/test_ws10_t36_qm_stat_forward_bounded_execution_gate.py"
+}
