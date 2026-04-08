@@ -37,6 +37,34 @@ T14_PATH = (
     / "reports"
     / "physics_math_throughput_phase6_t14_second_live_matrix_packet_20260407_v0.json"
 )
+T15_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "reports"
+    / "physics_math_throughput_phase6_t15_third_live_matrix_packet_20260407_v0.json"
+)
+T16_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "reports"
+    / "physics_math_throughput_phase6_t16_fourth_live_matrix_packet_20260407_v0.json"
+)
+T17_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "reports"
+    / "physics_math_throughput_phase6_t17_fifth_live_matrix_packet_20260407_v0.json"
+)
+T18_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "reports"
+    / "physics_math_throughput_phase6_t18_sixth_live_matrix_packet_20260407_v0.json"
+)
 
 
 def _read_json(path: Path) -> dict:
@@ -47,7 +75,18 @@ def _read_json(path: Path) -> dict:
 
 def compute_live_matrix_packet_metrics() -> dict:
     t12 = _read_json(T12_PATH)
-    packet_payload = _read_json(T14_PATH) if T14_PATH.exists() else _read_json(T13_PATH)
+    if T18_PATH.exists():
+        packet_payload = _read_json(T18_PATH)
+    elif T17_PATH.exists():
+        packet_payload = _read_json(T17_PATH)
+    elif T16_PATH.exists():
+        packet_payload = _read_json(T16_PATH)
+    elif T15_PATH.exists():
+        packet_payload = _read_json(T15_PATH)
+    elif T14_PATH.exists():
+        packet_payload = _read_json(T14_PATH)
+    else:
+        packet_payload = _read_json(T13_PATH)
     rolling = compute_metrics()
 
     delta = t12.get("go_no_go_contract", {}).get("delta_fields", {})

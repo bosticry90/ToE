@@ -1,0 +1,115 @@
+{
+  "schema_id": "PHYS_MATH_THROUGHPUT_PHASE6_T18_SIXTH_LIVE_MATRIX_PACKET_v0",
+  "status": "PHASE6_T18_SIXTH_LIVE_MATRIX_PACKET_EXECUTED_NONLIVE_NONCLAIM",
+  "generated_at_utc": "2026-04-08T07:10:00Z",
+  "lineage": {
+    "parent_checkpoint": "formal/output/reports/physics_math_throughput_phase6_t17_fifth_live_matrix_packet_20260407_v0.json",
+    "authorization_anchor": "formal/docs/release/WS_10_T14_POST_T13_DUAL_CANDIDATE_LANE_AUTHORIZATION_DECISION_v0.md"
+  },
+  "coverage_contract": {
+    "declared_tranche_count": 19,
+    "tranche_ids": [
+      "T00_BASELINE",
+      "T01_RETRO_PREP",
+      "T02_RETRO_EXECUTION",
+      "T03_PHASE2_BOOTSTRAP",
+      "T04_PHASE2_COMPATIBILITY",
+      "T05_PHASE3_BOOTSTRAP",
+      "T06_PHASE4_BOOTSTRAP",
+      "T07_PHASE5_BOOTSTRAP",
+      "T08_PHASE3_EXECUTION_PACKET",
+      "T09_PHASE4_EXECUTION_PACKET",
+      "T10_PHASE5_SSOT_REHEARSAL",
+      "T11_CLOSEOUT_READINESS",
+      "T12_LIVE_AUTHORIZATION_DECISION_PACKET",
+      "T13_FIRST_LIVE_MATRIX_PACKET_EXECUTED_NONLIVE",
+      "T14_SECOND_LIVE_MATRIX_PACKET_EXECUTED_NONLIVE",
+      "T15_THIRD_LIVE_MATRIX_PACKET_EXECUTED_NONLIVE",
+      "T16_FOURTH_LIVE_MATRIX_PACKET_EXECUTED_NONLIVE",
+      "T17_FIFTH_LIVE_MATRIX_PACKET_EXECUTED_NONLIVE",
+      "T18_SIXTH_LIVE_MATRIX_PACKET_EXECUTED_NONLIVE"
+    ],
+    "summary_gate": "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py"
+  },
+  "live_matrix_packet": {
+    "execution_mode": "ONE_PRIMARY_PILLAR_PLUS_ONE_PRIMARY_SEAM",
+    "execution_live_enabled": false,
+    "execution_window": {
+      "authorization_window_hours": 72,
+      "window_state": "EXECUTION_COMPLETED_NONLIVE",
+      "window_start_utc": "2026-04-08T07:20:00Z",
+      "window_expiry_utc": "2026-04-11T07:20:00Z"
+    },
+    "objectives": {
+      "primary_pillar": "QM",
+      "primary_pillar_depth_objective": "QM_CYCLE12_CONTINUATION_DEPTH_PACKET6_NONLIVE",
+      "primary_seam": "SEAM_GR_QM",
+      "primary_seam_objective": "GR_QM_CONTINUITY_INTEGRATION_PACKET6_NONLIVE",
+      "lane_selection_required_before_execution": true
+    },
+    "lane_status": {
+      "QM": "SELECTED_EXECUTED_NONLIVE",
+      "GR": "PAUSED_UNSELECTED",
+      "STAT": "PAUSED_UNSELECTED",
+      "COSMO": "PAUSED_UNSELECTED",
+      "EM": "PAUSED_UNSELECTED",
+      "QFT": "PAUSED_UNSELECTED",
+      "SR": "PAUSED_UNSELECTED",
+      "SEAM_GR_QM": "SELECTED_EXECUTED_NONLIVE",
+      "SEAM_EM_QFT": "PAUSED_UNSELECTED",
+      "SEAM_QM_STAT": "PAUSED_UNSELECTED",
+      "SEAM_COSMO_SR": "PAUSED_UNSELECTED"
+    },
+    "required_green_gates": [
+      "formal/python/tests/test_physics_math_throughput_phase6_policy_approval_binding_gate.py",
+      "formal/python/tests/test_physics_math_throughput_phase6_non_placeholder_delta_gate.py",
+      "formal/python/tests/test_physics_math_throughput_rolling_window_improvement_gate.py",
+      "formal/python/tests/test_physics_math_throughput_phase6_live_matrix_objective_gate.py",
+      "formal/python/tests/test_physics_math_throughput_phase6_live_authorization_expiry_gate.py",
+      "formal/python/tests/test_physics_math_throughput_phase6_live_invariance_continuity_gate.py",
+      "formal/python/tests/test_physics_math_throughput_phase6_live_promotion_policy_gate.py",
+      "formal/python/tests/test_physics_math_throughput_phase6_t18_sixth_live_matrix_packet_gate.py",
+      "formal/python/tests/test_physics_math_throughput_program_closeout_summary_gate.py"
+    ],
+    "measurement_wiring": {
+      "delta_refresh_tool": "formal/python/tools/physics_math_throughput_phase6_delta_refresh.py",
+      "rolling_window_tool": "formal/python/tools/physics_math_throughput_rolling_window_metrics.py",
+      "live_matrix_packet_metrics_tool": "formal/python/tools/physics_math_throughput_phase6_live_matrix_packet_metrics.py",
+      "delta_parent_contract": "formal/output/reports/physics_math_throughput_phase6_t12_live_authorization_decision_packet_20260407_v0.json"
+    },
+    "execution_evidence": {
+      "bounded_execution_surface": [
+        "formal/docs/release/WS_10_T39_QM_STAT_BOUNDARY_DECISION_20260406_v0.md",
+        "formal/docs/release/WS_10_T40_QM_STAT_CONTINUITY_AUTHORIZATION_20260406_v0.md"
+      ],
+      "packet_metrics": {
+        "science_surface_share_delta": 0.004211,
+        "theorem_depth_queue_delta": 6,
+        "seam_empirical_packet_delta": 5,
+        "rolling_science_signal": 5.5,
+        "rolling_controls_signal": 0.027944
+      },
+      "execution_result": "GREEN_NONLIVE_BOUNDED_PACKET"
+    },
+    "promotion_decision": {
+      "policy": "CONSERVATIVE_TWO_CONSECUTIVE_GREEN_LIVE_PACKETS_REQUIRED",
+      "current_packet_id": 6,
+      "current_packet_result": "GREEN_NONLIVE_BOUNDED_PACKET",
+      "consecutive_green_packets": 6,
+      "required_consecutive_green_packets": 2,
+      "packet7_authorized": true,
+      "scope_escalation_authorized": true,
+      "decision": "AUTHORIZE_NEXT_BOUNDED_PACKET",
+      "rollback_required": false
+    },
+    "rollback_anchor": "WORKING_TREE_BASELINE_20260407_T18_EXECUTION"
+  },
+  "controls": {
+    "release_gate_truth_changed": false,
+    "nonclaim_boundary_changed": false,
+    "packet_policy_changed": false,
+    "scalar_freeze_policy_changed": false,
+    "execution_live_enabled": false,
+    "stop_condition": "HALT_ON_RELEASE_GATE_OR_NONCLAIM_OR_LIVE_PACKET_SCOPE_DRIFT"
+  }
+}

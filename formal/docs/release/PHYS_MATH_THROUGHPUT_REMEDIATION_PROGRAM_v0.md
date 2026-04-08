@@ -169,6 +169,70 @@ Create a bounded remediation program that improves physics and mathematics throu
 - `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_EXECUTION_STATUS_v0: SECOND_LIVE_MATRIX_PACKET_EXECUTED_NONLIVE_NONCLAIM`
 - `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_STOP_CONDITION_v0: HALT_ON_RELEASE_GATE_OR_NONCLAIM_OR_LIVE_PACKET_SCOPE_DRIFT`
 
+## Phase 6 tranche 15 third live matrix packet execution tokens
+- `PHYS_MATH_THROUGHPUT_PROGRAM_STATUS_v0: ACTIVE_PHASE6_T15_THIRD_LIVE_MATRIX_PACKET`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_T15_DECLARATION_v0: formal/docs/release/PHYS_MATH_THROUGHPUT_IMPLEMENTATION_TRANCHE_15_PHASE6_THIRD_LIVE_MATRIX_PACKET_20260407_v0.md`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_T15_CHECKPOINT_v0: formal/output/reports/physics_math_throughput_phase6_t15_third_live_matrix_packet_20260407_v0.json`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_T15_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_t15_third_live_matrix_packet_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_MATRIX_OBJECTIVE_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_matrix_objective_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_LIVE_EXPIRY_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_authorization_expiry_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_LIVE_INVARIANCE_CONTINUITY_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_invariance_continuity_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_PROMOTION_POLICY_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_promotion_policy_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_MATRIX_MODE_v0: ONE_PRIMARY_PILLAR_PLUS_ONE_PRIMARY_SEAM`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_NON_SELECTED_LANES_POLICY_v0: EXPLICIT_PAUSED_STATUS_REQUIRED`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_LIVE_AUTHORIZATION_EXPIRY_v0: 72_HOURS`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_PROMOTION_POLICY_v0: CONSERVATIVE_TWO_CONSECUTIVE_GREEN_LIVE_PACKETS_REQUIRED`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_EXECUTION_STATUS_v0: THIRD_LIVE_MATRIX_PACKET_EXECUTED_NONLIVE_NONCLAIM`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_STOP_CONDITION_v0: HALT_ON_RELEASE_GATE_OR_NONCLAIM_OR_LIVE_PACKET_SCOPE_DRIFT`
+
+## Phase 6 tranche 16 fourth live matrix packet execution tokens
+- `PHYS_MATH_THROUGHPUT_PROGRAM_STATUS_v0: ACTIVE_PHASE6_T16_FOURTH_LIVE_MATRIX_PACKET`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_T16_DECLARATION_v0: formal/docs/release/PHYS_MATH_THROUGHPUT_IMPLEMENTATION_TRANCHE_16_PHASE6_FOURTH_LIVE_MATRIX_PACKET_20260407_v0.md`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_T16_CHECKPOINT_v0: formal/output/reports/physics_math_throughput_phase6_t16_fourth_live_matrix_packet_20260407_v0.json`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_T16_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_t16_fourth_live_matrix_packet_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_MATRIX_OBJECTIVE_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_matrix_objective_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_LIVE_EXPIRY_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_authorization_expiry_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_LIVE_INVARIANCE_CONTINUITY_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_invariance_continuity_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_PROMOTION_POLICY_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_promotion_policy_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_MATRIX_MODE_v0: ONE_PRIMARY_PILLAR_PLUS_ONE_PRIMARY_SEAM`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_NON_SELECTED_LANES_POLICY_v0: EXPLICIT_PAUSED_STATUS_REQUIRED`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_LIVE_AUTHORIZATION_EXPIRY_v0: 72_HOURS`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_PROMOTION_POLICY_v0: CONSERVATIVE_TWO_CONSECUTIVE_GREEN_LIVE_PACKETS_REQUIRED`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_EXECUTION_STATUS_v0: FOURTH_LIVE_MATRIX_PACKET_EXECUTED_NONLIVE_NONCLAIM`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_STOP_CONDITION_v0: HALT_ON_RELEASE_GATE_OR_NONCLAIM_OR_LIVE_PACKET_SCOPE_DRIFT`
+
+## Phase 6 tranche 17 fifth live matrix packet execution tokens
+- `PHYS_MATH_THROUGHPUT_PROGRAM_STATUS_v0: ACTIVE_PHASE6_T17_FIFTH_LIVE_MATRIX_PACKET`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_T17_DECLARATION_v0: formal/docs/release/PHYS_MATH_THROUGHPUT_IMPLEMENTATION_TRANCHE_17_PHASE6_FIFTH_LIVE_MATRIX_PACKET_20260407_v0.md`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_T17_CHECKPOINT_v0: formal/output/reports/physics_math_throughput_phase6_t17_fifth_live_matrix_packet_20260407_v0.json`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_T17_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_t17_fifth_live_matrix_packet_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_MATRIX_OBJECTIVE_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_matrix_objective_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_LIVE_EXPIRY_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_authorization_expiry_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_LIVE_INVARIANCE_CONTINUITY_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_invariance_continuity_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_PROMOTION_POLICY_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_promotion_policy_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_MATRIX_MODE_v0: ONE_PRIMARY_PILLAR_PLUS_ONE_PRIMARY_SEAM`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_NON_SELECTED_LANES_POLICY_v0: EXPLICIT_PAUSED_STATUS_REQUIRED`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_LIVE_AUTHORIZATION_EXPIRY_v0: 72_HOURS`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_PROMOTION_POLICY_v0: CONSERVATIVE_TWO_CONSECUTIVE_GREEN_LIVE_PACKETS_REQUIRED`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_EXECUTION_STATUS_v0: FIFTH_LIVE_MATRIX_PACKET_EXECUTED_NONLIVE_NONCLAIM`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_STOP_CONDITION_v0: HALT_ON_RELEASE_GATE_OR_NONCLAIM_OR_LIVE_PACKET_SCOPE_DRIFT`
+
+## Phase 6 tranche 18 sixth live matrix packet execution tokens
+- `PHYS_MATH_THROUGHPUT_PROGRAM_STATUS_v0: ACTIVE_PHASE6_T18_SIXTH_LIVE_MATRIX_PACKET`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_T18_DECLARATION_v0: formal/docs/release/PHYS_MATH_THROUGHPUT_IMPLEMENTATION_TRANCHE_18_PHASE6_SIXTH_LIVE_MATRIX_PACKET_20260407_v0.md`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_T18_CHECKPOINT_v0: formal/output/reports/physics_math_throughput_phase6_t18_sixth_live_matrix_packet_20260407_v0.json`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_T18_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_t18_sixth_live_matrix_packet_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_MATRIX_OBJECTIVE_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_matrix_objective_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_LIVE_EXPIRY_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_authorization_expiry_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_LIVE_INVARIANCE_CONTINUITY_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_invariance_continuity_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_PROMOTION_POLICY_GATE_v0: formal/python/tests/test_physics_math_throughput_phase6_live_promotion_policy_gate.py`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_MATRIX_MODE_v0: ONE_PRIMARY_PILLAR_PLUS_ONE_PRIMARY_SEAM`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_NON_SELECTED_LANES_POLICY_v0: EXPLICIT_PAUSED_STATUS_REQUIRED`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_LIVE_AUTHORIZATION_EXPIRY_v0: 72_HOURS`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_PROMOTION_POLICY_v0: CONSERVATIVE_TWO_CONSECUTIVE_GREEN_LIVE_PACKETS_REQUIRED`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_EXECUTION_STATUS_v0: SIXTH_LIVE_MATRIX_PACKET_EXECUTED_NONLIVE_NONCLAIM`
+- `PHYS_MATH_THROUGHPUT_PROGRAM_PHASE6_STOP_CONDITION_v0: HALT_ON_RELEASE_GATE_OR_NONCLAIM_OR_LIVE_PACKET_SCOPE_DRIFT`
+
 ## Initial phased scope
 1. Phase 0: Baseline capture and measurement lock.
 2. Phase 1: Retroactive truth alignment and debt exposure.
@@ -279,3 +343,39 @@ Create a bounded remediation program that improves physics and mathematics throu
 5. Packet 2 non-live bounded execution evidence is present with selected primary pillar/seam and recorded metrics.
 6. Promotion policy gate enforces Packet 3 authorization only when consecutive green packet count reaches two.
 7. Matrix-objective gate, live-expiry gate, post-live invariance continuity gate, promotion policy gate, tranche 14 gate, and consolidated summary gate are green.
+
+## Acceptance for Phase 6 tranche 15 third live matrix packet execution
+1. Tranche 15 declaration and checkpoint artifact are present.
+2. Exactly one primary pillar objective and one primary seam objective are selected and executed under non-live posture.
+3. Non-selected lanes are explicitly present and paused in status artifacts.
+4. Live authorization expiry remains fixed to 72 hours and conservative promotion policy remains explicit.
+5. Packet 3 non-live bounded execution evidence is present with selected primary pillar/seam and recorded metrics.
+6. Promotion policy gate enforces Packet 4 authorization with conservative-policy invariance preserved.
+7. Matrix-objective gate, live-expiry gate, post-live invariance continuity gate, promotion policy gate, tranche 15 gate, and consolidated summary gate are green.
+
+## Acceptance for Phase 6 tranche 16 fourth live matrix packet execution
+1. Tranche 16 declaration and checkpoint artifact are present.
+2. Exactly one primary pillar objective and one primary seam objective are selected and executed under non-live posture.
+3. Non-selected lanes are explicitly present and paused in status artifacts.
+4. Live authorization expiry remains fixed to 72 hours and conservative promotion policy remains explicit.
+5. Packet 4 non-live bounded execution evidence is present with selected primary pillar/seam and recorded metrics.
+6. Promotion policy gate enforces Packet 5 authorization with conservative-policy invariance preserved.
+7. Matrix-objective gate, live-expiry gate, post-live invariance continuity gate, promotion policy gate, tranche 16 gate, and consolidated summary gate are green.
+
+## Acceptance for Phase 6 tranche 17 fifth live matrix packet execution
+1. Tranche 17 declaration and checkpoint artifact are present.
+2. Exactly one primary pillar objective and one primary seam objective are selected and executed under non-live posture.
+3. Non-selected lanes are explicitly present and paused in status artifacts.
+4. Live authorization expiry remains fixed to 72 hours and conservative promotion policy remains explicit.
+5. Packet 5 non-live bounded execution evidence is present with selected primary pillar/seam and recorded metrics.
+6. Promotion policy gate enforces Packet 6 authorization with conservative-policy invariance preserved.
+7. Matrix-objective gate, live-expiry gate, post-live invariance continuity gate, promotion policy gate, tranche 17 gate, and consolidated summary gate are green.
+
+## Acceptance for Phase 6 tranche 18 sixth live matrix packet execution
+1. Tranche 18 declaration and checkpoint artifact are present.
+2. Exactly one primary pillar objective and one primary seam objective are selected and executed under non-live posture.
+3. Non-selected lanes are explicitly present and paused in status artifacts.
+4. Live authorization expiry remains fixed to 72 hours and conservative promotion policy remains explicit.
+5. Packet 6 non-live bounded execution evidence is present with selected primary pillar/seam and recorded metrics.
+6. Promotion policy gate enforces Packet 7 authorization with conservative-policy invariance preserved.
+7. Matrix-objective gate, live-expiry gate, post-live invariance continuity gate, promotion policy gate, tranche 18 gate, and consolidated summary gate are green.

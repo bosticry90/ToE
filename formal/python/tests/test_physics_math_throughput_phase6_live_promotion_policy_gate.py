@@ -29,6 +29,34 @@ T14_CHECKPOINT_PATH = (
     / "reports"
     / "physics_math_throughput_phase6_t14_second_live_matrix_packet_20260407_v0.json"
 )
+T15_CHECKPOINT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "reports"
+    / "physics_math_throughput_phase6_t15_third_live_matrix_packet_20260407_v0.json"
+)
+T16_CHECKPOINT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "reports"
+    / "physics_math_throughput_phase6_t16_fourth_live_matrix_packet_20260407_v0.json"
+)
+T17_CHECKPOINT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "reports"
+    / "physics_math_throughput_phase6_t17_fifth_live_matrix_packet_20260407_v0.json"
+)
+T18_CHECKPOINT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "reports"
+    / "physics_math_throughput_phase6_t18_sixth_live_matrix_packet_20260407_v0.json"
+)
 
 
 def _read(path: Path) -> str:
@@ -77,5 +105,53 @@ def test_packet2_unlocks_next_packet_after_second_consecutive_green() -> None:
     assert promotion.get("required_consecutive_green_packets") == 2
     assert promotion.get("consecutive_green_packets") == 2
     assert promotion.get("packet3_authorized") is True
+    assert promotion.get("scope_escalation_authorized") is True
+    assert promotion.get("decision") == "AUTHORIZE_NEXT_BOUNDED_PACKET"
+
+
+def test_packet3_preserves_conservative_policy_and_authorizes_packet4() -> None:
+    payload = _read_json(T15_CHECKPOINT_PATH)
+    promotion = payload.get("live_matrix_packet", {}).get("promotion_decision", {})
+
+    assert promotion.get("policy") == "CONSERVATIVE_TWO_CONSECUTIVE_GREEN_LIVE_PACKETS_REQUIRED"
+    assert promotion.get("required_consecutive_green_packets") == 2
+    assert promotion.get("consecutive_green_packets") == 3
+    assert promotion.get("packet4_authorized") is True
+    assert promotion.get("scope_escalation_authorized") is True
+    assert promotion.get("decision") == "AUTHORIZE_NEXT_BOUNDED_PACKET"
+
+
+def test_packet4_preserves_conservative_policy_and_authorizes_packet5() -> None:
+    payload = _read_json(T16_CHECKPOINT_PATH)
+    promotion = payload.get("live_matrix_packet", {}).get("promotion_decision", {})
+
+    assert promotion.get("policy") == "CONSERVATIVE_TWO_CONSECUTIVE_GREEN_LIVE_PACKETS_REQUIRED"
+    assert promotion.get("required_consecutive_green_packets") == 2
+    assert promotion.get("consecutive_green_packets") == 4
+    assert promotion.get("packet5_authorized") is True
+    assert promotion.get("scope_escalation_authorized") is True
+    assert promotion.get("decision") == "AUTHORIZE_NEXT_BOUNDED_PACKET"
+
+
+def test_packet5_preserves_conservative_policy_and_authorizes_packet6() -> None:
+    payload = _read_json(T17_CHECKPOINT_PATH)
+    promotion = payload.get("live_matrix_packet", {}).get("promotion_decision", {})
+
+    assert promotion.get("policy") == "CONSERVATIVE_TWO_CONSECUTIVE_GREEN_LIVE_PACKETS_REQUIRED"
+    assert promotion.get("required_consecutive_green_packets") == 2
+    assert promotion.get("consecutive_green_packets") == 5
+    assert promotion.get("packet6_authorized") is True
+    assert promotion.get("scope_escalation_authorized") is True
+    assert promotion.get("decision") == "AUTHORIZE_NEXT_BOUNDED_PACKET"
+
+
+def test_packet6_preserves_conservative_policy_and_authorizes_packet7() -> None:
+    payload = _read_json(T18_CHECKPOINT_PATH)
+    promotion = payload.get("live_matrix_packet", {}).get("promotion_decision", {})
+
+    assert promotion.get("policy") == "CONSERVATIVE_TWO_CONSECUTIVE_GREEN_LIVE_PACKETS_REQUIRED"
+    assert promotion.get("required_consecutive_green_packets") == 2
+    assert promotion.get("consecutive_green_packets") == 6
+    assert promotion.get("packet7_authorized") is True
     assert promotion.get("scope_escalation_authorized") is True
     assert promotion.get("decision") == "AUTHORIZE_NEXT_BOUNDED_PACKET"

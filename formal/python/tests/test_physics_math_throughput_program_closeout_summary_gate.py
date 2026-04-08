@@ -31,6 +31,10 @@ REPORT_PATHS = [
     "formal/output/reports/physics_math_throughput_phase6_t12_live_authorization_decision_packet_20260407_v0.json",
     "formal/output/reports/physics_math_throughput_phase6_t13_first_live_matrix_packet_20260407_v0.json",
     "formal/output/reports/physics_math_throughput_phase6_t14_second_live_matrix_packet_20260407_v0.json",
+    "formal/output/reports/physics_math_throughput_phase6_t15_third_live_matrix_packet_20260407_v0.json",
+    "formal/output/reports/physics_math_throughput_phase6_t16_fourth_live_matrix_packet_20260407_v0.json",
+    "formal/output/reports/physics_math_throughput_phase6_t17_fifth_live_matrix_packet_20260407_v0.json",
+    "formal/output/reports/physics_math_throughput_phase6_t18_sixth_live_matrix_packet_20260407_v0.json",
 ]
 
 
@@ -96,6 +100,50 @@ def test_phase6_t14_second_live_packet_declares_extended_coverage() -> None:
         / "formal/output/reports/physics_math_throughput_phase6_t14_second_live_matrix_packet_20260407_v0.json"
     )
     contract = packet.get("coverage_contract", {})
+    # T14 contract is historically pinned to the first 15 tranches.
+    assert contract.get("declared_tranche_count") == 15
+    assert len(contract.get("tranche_ids", [])) == 15
+
+
+def test_phase6_t15_third_live_packet_declares_extended_coverage() -> None:
+    packet = _read_json(
+        REPO_ROOT
+        / "formal/output/reports/physics_math_throughput_phase6_t15_third_live_matrix_packet_20260407_v0.json"
+    )
+    contract = packet.get("coverage_contract", {})
+    # T15 contract is historically pinned to the first 16 tranches.
+    assert contract.get("declared_tranche_count") == 16
+    assert len(contract.get("tranche_ids", [])) == 16
+
+
+def test_phase6_t16_fourth_live_packet_declares_extended_coverage() -> None:
+    packet = _read_json(
+        REPO_ROOT
+        / "formal/output/reports/physics_math_throughput_phase6_t16_fourth_live_matrix_packet_20260407_v0.json"
+    )
+    contract = packet.get("coverage_contract", {})
+    # T16 contract is historically pinned to the first 17 tranches.
+    assert contract.get("declared_tranche_count") == 17
+    assert len(contract.get("tranche_ids", [])) == 17
+
+
+def test_phase6_t17_fifth_live_packet_declares_extended_coverage() -> None:
+    packet = _read_json(
+        REPO_ROOT
+        / "formal/output/reports/physics_math_throughput_phase6_t17_fifth_live_matrix_packet_20260407_v0.json"
+    )
+    contract = packet.get("coverage_contract", {})
+    # T17 contract is historically pinned to the first 18 tranches.
+    assert contract.get("declared_tranche_count") == 18
+    assert len(contract.get("tranche_ids", [])) == 18
+
+
+def test_phase6_t18_sixth_live_packet_declares_extended_coverage() -> None:
+    packet = _read_json(
+        REPO_ROOT
+        / "formal/output/reports/physics_math_throughput_phase6_t18_sixth_live_matrix_packet_20260407_v0.json"
+    )
+    contract = packet.get("coverage_contract", {})
     assert contract.get("declared_tranche_count") == len(REPORT_PATHS)
     assert len(contract.get("tranche_ids", [])) == len(REPORT_PATHS)
 
@@ -123,3 +171,55 @@ def test_phase6_t14_required_green_gates_include_live_controls() -> None:
     assert "formal/python/tests/test_physics_math_throughput_phase6_live_invariance_continuity_gate.py" in required
     assert "formal/python/tests/test_physics_math_throughput_phase6_live_promotion_policy_gate.py" in required
     assert "formal/python/tests/test_physics_math_throughput_phase6_t14_second_live_matrix_packet_gate.py" in required
+
+
+def test_phase6_t15_required_green_gates_include_live_controls() -> None:
+    packet = _read_json(
+        REPO_ROOT
+        / "formal/output/reports/physics_math_throughput_phase6_t15_third_live_matrix_packet_20260407_v0.json"
+    )
+    required = set(packet.get("live_matrix_packet", {}).get("required_green_gates", []))
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_matrix_objective_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_authorization_expiry_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_invariance_continuity_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_promotion_policy_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_t15_third_live_matrix_packet_gate.py" in required
+
+
+def test_phase6_t16_required_green_gates_include_live_controls() -> None:
+    packet = _read_json(
+        REPO_ROOT
+        / "formal/output/reports/physics_math_throughput_phase6_t16_fourth_live_matrix_packet_20260407_v0.json"
+    )
+    required = set(packet.get("live_matrix_packet", {}).get("required_green_gates", []))
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_matrix_objective_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_authorization_expiry_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_invariance_continuity_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_promotion_policy_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_t16_fourth_live_matrix_packet_gate.py" in required
+
+
+def test_phase6_t17_required_green_gates_include_live_controls() -> None:
+    packet = _read_json(
+        REPO_ROOT
+        / "formal/output/reports/physics_math_throughput_phase6_t17_fifth_live_matrix_packet_20260407_v0.json"
+    )
+    required = set(packet.get("live_matrix_packet", {}).get("required_green_gates", []))
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_matrix_objective_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_authorization_expiry_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_invariance_continuity_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_promotion_policy_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_t17_fifth_live_matrix_packet_gate.py" in required
+
+
+def test_phase6_t18_required_green_gates_include_live_controls() -> None:
+    packet = _read_json(
+        REPO_ROOT
+        / "formal/output/reports/physics_math_throughput_phase6_t18_sixth_live_matrix_packet_20260407_v0.json"
+    )
+    required = set(packet.get("live_matrix_packet", {}).get("required_green_gates", []))
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_matrix_objective_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_authorization_expiry_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_invariance_continuity_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_live_promotion_policy_gate.py" in required
+    assert "formal/python/tests/test_physics_math_throughput_phase6_t18_sixth_live_matrix_packet_gate.py" in required
