@@ -1,0 +1,30 @@
+{
+  "schema_id": "CONVERGENCE_PROMOTION_SIGNIFICANCE_CHECKPOINT_20260409_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "declared_at": "2026-04-09",
+  "baseline_pack_pointer": "formal/output/reports/convergence_baseline_pack_20260409_v0.json",
+  "declaration_pointer": "formal/docs/release/CONVERGENCE_PROMOTION_SIGNIFICANCE_DECLARATION_20260409_v0.md",
+  "promotion_significance": {
+    "discriminator_threshold": {
+      "metric": "CONVERGENCE_SCORE",
+      "operator": ">=",
+      "value": 0.65
+    },
+    "discriminator_score": {
+      "value": 0.65,
+      "measurement_window": "B0A_TO_P1_DECLARATION"
+    },
+    "blocker_reduction_claim": {
+      "baseline_total": 11,
+      "current_total": 11,
+      "delta": 0,
+      "required_for_promotion": "delta_must_be_negative"
+    },
+    "proof_debt_movement": {
+      "baseline_open_items": 3,
+      "current_open_items": 3,
+      "delta": 0,
+      "required_for_promotion": "delta_must_be_negative_or_formally_justified_exception"
+    }
+  }
+}

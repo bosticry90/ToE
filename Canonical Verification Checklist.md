@@ -8,6 +8,14 @@ Slice metadata:
 - Boundary anchor:
 - Objective (one line):
 
+Baseline-pack linkage (required for convergence claims):
+- Baseline pack pointer declared? YES / NO
+- Blocker-count-by-class delta recorded? YES / NO
+- Theorem-depth baseline delta recorded? YES / NO
+- Redundant-registry count delta recorded? YES / NO
+- Checkpoint-count delta recorded? YES / NO
+- Active canonical owners delta recorded? YES / NO
+
 Representation-first triage:
 - Reduced object named? YES / NO
 - Blocker class tagged? ALGEBRAIC / SEMANTIC / REPRESENTATIONAL / MIXED
@@ -48,6 +56,13 @@ Certification discipline:
 - Validation result summary recorded? YES / NO
 - Unresolved blocker explicitly stated? YES / NO
 - Next-lane decision rule applied? YES / NO
+- Promotion-significance checkpoint pointer declared? YES / NO
+- Discriminator threshold defined? YES / NO
+- Discriminator score measured? YES / NO
+- Blocker-reduction claim present? YES / NO
+- Blocker-count delta measured? YES / NO
+- Proof-debt movement recorded? YES / NO
+- Proof-debt delta measured? YES / NO
 
 Traceability:
 - All artifacts linked from inventory? YES / NO

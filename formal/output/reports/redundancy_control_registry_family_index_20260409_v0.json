@@ -1,0 +1,19 @@
+{
+  "schema_id": "REDUNDANCY_CONTROL_REGISTRY_FAMILY_INDEX_20260409_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM_PILOT",
+  "pilot_scope": "ONE_REGISTRY_FAMILY",
+  "families": [
+    {
+      "family_id": "TOE_MASTER_ACTION_SEAM_REGISTRY",
+      "canonical_owner": "formal/docs/release/TOE_MASTER_ACTION_SEAM_REGISTRY.md",
+      "retention_policy": "ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE",
+      "archive_destination": "archive/docs/release/",
+      "parity_dependencies": [
+        "State_of_the_Theory.md",
+        "Canonical Verification Checklist.md",
+        "formal/python/tests/test_toe_master_action_seam_registry_gate.py"
+      ]
+    }
+  ],
+  "admission_rule": "MISSING_OWNER_OR_RETENTION_OR_ARCHIVE_OR_PARITY_DEPENDENCIES_IS_HARD_FAIL"
+}

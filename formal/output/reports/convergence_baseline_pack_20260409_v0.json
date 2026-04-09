@@ -1,0 +1,71 @@
+{
+  "schema_id": "CONVERGENCE_BASELINE_PACK_20260409_v0",
+  "captured_at_utc": "2026-04-09T00:00:00Z",
+  "status": "DECLARED_BASELINE_PACK_NONLIVE_NONCLAIM",
+  "required_metrics": {
+    "blocker_count_by_class": {
+      "source": "formal/output/ws10_tgc76_row_promotion_blocker_burn_review_checkpoint_20260408_v0.json",
+      "current": {
+        "THEOREM_GAP": 7,
+        "SEAM_INTEGRATION_GAP": 3,
+        "PARITY_DRIFT": 1,
+        "GOVERNANCE_GUARDRAIL": 0,
+        "EVIDENCE_ALIGNMENT_GAP": 0
+      },
+      "net_delta": 0
+    },
+    "theorem_depth_baseline": {
+      "score_name": "THEOREM_DEPTH_QUEUE_ROW_COUNT",
+      "value": 3,
+      "source": "formal/output/reports/physics_math_throughput_phase3_t08_theorem_depth_execution_packet_20260407_v0.json",
+      "source_field": "execution_packet.queue_row_count"
+    },
+    "redundant_registry_count": {
+      "value": 3,
+      "unit": "registry_families",
+      "method": "manual_family_overlap_baseline_v0",
+      "families": [
+        "PILLAR_STATUS_AND_MATURITY_OVERLAP",
+        "SEAM_STATUS_AND_PACKET_OVERLAP",
+        "TRANCHE_CHECKPOINT_CROSS_LIST_OVERLAP"
+      ]
+    },
+    "checkpoint_count": {
+      "value": 1121,
+      "scope": "formal/output/**/*.json",
+      "method": "filesystem_count",
+      "command": "Get-ChildItem formal/output -Recurse -File -Filter *.json | Measure-Object"
+    },
+    "active_canonical_owners_list": {
+      "count": 5,
+      "owners": [
+        {
+          "token_family": "PILLAR_PHASE_STATUS",
+          "owner_path": "formal/docs/release/PILLAR_PHASE_ADVANCEMENT_REGISTRY_v0.json"
+        },
+        {
+          "token_family": "PILLAR_DEEP_MATURITY",
+          "owner_path": "formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json"
+        },
+        {
+          "token_family": "SEAM_CONSTRAINT_STATUS",
+          "owner_path": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md"
+        },
+        {
+          "token_family": "SEAM_PACKET_PROGRESS",
+          "owner_path": "formal/docs/paper/QFT_GR_SEAM_PACKET_REGISTRY_v0.json"
+        },
+        {
+          "token_family": "TRANCHE_COMPLETION_BLOCKER_MATRIX",
+          "owner_path": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md"
+        }
+      ]
+    }
+  },
+  "source_bundle": {
+    "global_completion_baseline": "formal/output/ws10_global_completion_baseline_snapshot_20260408_v0.json",
+    "blocker_burn_window": "formal/output/ws10_tgc76_row_promotion_blocker_burn_review_checkpoint_20260408_v0.json",
+    "theorem_depth_packet": "formal/output/reports/physics_math_throughput_phase3_t08_theorem_depth_execution_packet_20260407_v0.json"
+  },
+  "non_claim_boundary": "This baseline pack is a repository-local control artifact and does not assert external scientific adequacy."
+}

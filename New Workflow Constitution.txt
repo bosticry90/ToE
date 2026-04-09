@@ -204,6 +204,14 @@ Lifecycle boundaries:
 - Repair actions remain envelope-bounded.
 - Certification uses existing constitutional authorities only.
 
+Anti-regrowth admission rule (binding):
+
+- No new registry family may be introduced unless all are declared:
+	canonical owner, retention policy, archive destination, parity dependencies.
+- No new checkpoint family may be introduced unless all are declared:
+	canonical owner, retention policy, archive destination, parity dependencies.
+- Missing any admission field is a hard stop for promotion under current authority.
+
 
 Progress Without Completion (Explicit)
 
