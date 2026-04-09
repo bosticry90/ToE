@@ -65,6 +65,8 @@ Certification discipline:
 - Proof-debt delta measured? YES / NO
 
 Traceability:
+- Seam-family canonical index pointer declared? YES / NO
+- Seam-family owner/retention/archive/parity fields complete? YES / NO
 - All artifacts linked from inventory? YES / NO
 - Search/referee/repair/certify artifacts cross-linked? YES / NO
 - Authority-vs-consumer surfaces distinguished? YES / NO

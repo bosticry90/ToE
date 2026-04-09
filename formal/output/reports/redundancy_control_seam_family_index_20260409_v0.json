@@ -1,0 +1,19 @@
+{
+  "schema_id": "REDUNDANCY_CONTROL_SEAM_FAMILY_INDEX_20260409_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM_PILOT",
+  "pilot_scope": "ONE_SEAM_FAMILY",
+  "families": [
+    {
+      "family_id": "SEAM_QM_STAT_CLASS_B_PHYSICS_PILOT",
+      "canonical_owner": "formal/docs/paper/TOE_CLASS_B_SEAM_PILOT_STATUS.md",
+      "retention_policy": "ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE",
+      "archive_destination": "archive/docs/paper/",
+      "parity_dependencies": [
+        "State_of_the_Theory.md",
+        "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle01_gate.py",
+        "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle06_to_07_synthesis_gate.py"
+      ]
+    }
+  ],
+  "admission_rule": "MISSING_OWNER_OR_RETENTION_OR_ARCHIVE_OR_PARITY_DEPENDENCIES_IS_HARD_FAIL"
+}
