@@ -67,6 +67,12 @@ Redundancy-control admission semantics checkpoint (R3-A, 2026-04-09):
 - `REDUNDANCY_CONTROL_ADMISSION_SEMANTICS_RULE_v0: OWNER_AND_PARITY_PATHS_MUST_EXIST_PLUS_ARCHIVE_DESTINATION_MUST_EXIST_PLUS_RETENTION_POLICY_MUST_BE_ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE`
 - `REDUNDANCY_CONTROL_ADMISSION_SEMANTICS_GATE_v0: formal/python/tests/test_redundancy_control_admission_semantics_gate.py`
 
+Redundancy-control registry full-family index checkpoint (R4-A, 2026-04-09):
+- `REDUNDANCY_CONTROL_REGISTRY_FULL_INDEX_STATUS_v0: ACTIVE_ALL_FAMILIES_NONLIVE_NONCLAIM`
+- `REDUNDANCY_CONTROL_REGISTRY_FULL_INDEX_SCOPE_v0: WS10_FAMILY_SET_PLUS_TOE_MASTER_ACTION_SEAM_REGISTRY`
+- `REDUNDANCY_CONTROL_REGISTRY_FULL_INDEX_v0: formal/output/reports/redundancy_control_registry_family_index_full_20260409_v0.json`
+- `REDUNDANCY_CONTROL_REGISTRY_FULL_INDEX_GATE_v0: formal/python/tests/test_redundancy_control_registry_full_family_index_gate.py`
+
 CI truth contract checkpoint (R5-A, 2026-03-20):
 - `CI_TRUTH_WORKFLOW_v0: .github/workflows/ci.yml`
 - `CI_TRUTH_GOVERNANCE_LANE_v0: PREREQUISITE`

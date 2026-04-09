@@ -69,6 +69,8 @@ Certification discipline:
 Traceability:
 - Seam-family canonical index pointer declared? YES / NO
 - Seam-family owner/retention/archive/parity fields complete? YES / NO
+- Registry full-family index declared? YES / NO
+- Registry full-family coverage complete? YES / NO
 - Canonical owner path exists for each pilot family? YES / NO
 - Archive destination path exists for each pilot family? YES / NO
 - Parity dependency paths exist for each pilot family? YES / NO
