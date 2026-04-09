@@ -375,6 +375,18 @@ if ($LASTEXITCODE -ne 0) {
   throw "Governance pytest tranche failed."
 }
 
+Write-Host "Running convergence hardening tranche gates" -ForegroundColor Cyan
+$convergenceHardeningTests = @(
+  "formal/python/tests/test_convergence_baseline_pack_gate.py"
+  "formal/python/tests/test_convergence_promotion_significance_gate.py"
+  "formal/python/tests/test_redundancy_control_registry_family_index_gate.py"
+  "formal/python/tests/test_redundancy_control_seam_family_index_gate.py"
+)
+./py.ps1 -m pytest @convergenceHardeningTests -q
+if ($LASTEXITCODE -ne 0) {
+  throw "Convergence hardening tranche gates failed."
+}
+
 Write-Host "Running local orchestration manifest" -ForegroundColor Cyan
 ./py.ps1 -m formal.python.orchestration.runner --manifest formal/docs/release/TOE_ASYNC_ORCHESTRATION_MANIFEST_v0.json --output formal/output/reports/toe_orchestration_report_v0.json --max-concurrency 2 --fail-on-check-failure
 if ($LASTEXITCODE -ne 0) {

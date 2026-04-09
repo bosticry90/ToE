@@ -18,6 +18,7 @@ def find_repo_root(start: Path) -> Path:
 REPO_ROOT = find_repo_root(Path(__file__))
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 CHECKLIST_PATH = REPO_ROOT / "Canonical Verification Checklist.md"
+GOVERNANCE_SUITE_PATH = REPO_ROOT / "governance_suite.ps1"
 DECLARATION_PATH = (
     REPO_ROOT
     / "formal"
@@ -109,3 +110,16 @@ def test_convergence_promotion_significance_state_and_checklist_tokens_present()
     ]
     for token in checklist_required:
         assert token in checklist_text, f"Missing checklist token: {token}"
+
+
+def test_convergence_hardening_bundle_is_wired_in_governance_suite() -> None:
+    suite_text = _read(GOVERNANCE_SUITE_PATH)
+    required = [
+        "Running convergence hardening tranche gates",
+        "formal/python/tests/test_convergence_baseline_pack_gate.py",
+        "formal/python/tests/test_convergence_promotion_significance_gate.py",
+        "formal/python/tests/test_redundancy_control_registry_family_index_gate.py",
+        "formal/python/tests/test_redundancy_control_seam_family_index_gate.py",
+    ]
+    for token in required:
+        assert token in suite_text, f"Missing governance-suite integration token: {token}"
