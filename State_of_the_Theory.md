@@ -73,6 +73,12 @@ Redundancy-control registry full-family index checkpoint (R4-A, 2026-04-09):
 - `REDUNDANCY_CONTROL_REGISTRY_FULL_INDEX_v0: formal/output/reports/redundancy_control_registry_family_index_full_20260409_v0.json`
 - `REDUNDANCY_CONTROL_REGISTRY_FULL_INDEX_GATE_v0: formal/python/tests/test_redundancy_control_registry_full_family_index_gate.py`
 
+Redundancy-control seam full-family index checkpoint (R4-B, 2026-04-09):
+- `REDUNDANCY_CONTROL_SEAM_FULL_INDEX_STATUS_v0: ACTIVE_ALL_FAMILIES_NONLIVE_NONCLAIM`
+- `REDUNDANCY_CONTROL_SEAM_FULL_INDEX_SCOPE_v0: QM_STAT_PLUS_COSMO_SR_CLASS_B_SEAM_PILOT_FAMILIES`
+- `REDUNDANCY_CONTROL_SEAM_FULL_INDEX_v0: formal/output/reports/redundancy_control_seam_family_index_full_20260409_v0.json`
+- `REDUNDANCY_CONTROL_SEAM_FULL_INDEX_GATE_v0: formal/python/tests/test_redundancy_control_seam_full_family_index_gate.py`
+
 CI truth contract checkpoint (R5-A, 2026-03-20):
 - `CI_TRUTH_WORKFLOW_v0: .github/workflows/ci.yml`
 - `CI_TRUTH_GOVERNANCE_LANE_v0: PREREQUISITE`

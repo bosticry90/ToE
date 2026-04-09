@@ -1,0 +1,85 @@
+{
+  "schema_id": "REDUNDANCY_CONTROL_REGISTRY_FAMILY_INDEX_FULL_20260409_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM_EXPANDED",
+  "pilot_scope": "ALL_ACTIVE_REGISTRY_FAMILIES",
+  "families": [
+    {
+      "family_id": "TOE_MASTER_ACTION_SEAM_REGISTRY",
+      "canonical_owner": "formal/docs/release/TOE_MASTER_ACTION_SEAM_REGISTRY.md",
+      "retention_policy": "ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE",
+      "archive_destination": "archive/docs/release/",
+      "parity_dependencies": [
+        "State_of_the_Theory.md",
+        "Canonical Verification Checklist.md",
+        "formal/python/tests/test_toe_master_action_seam_registry_gate.py"
+      ]
+    },
+    {
+      "family_id": "WS10_BRANCH_BOUNDARY_STATUS_FAMILY",
+      "canonical_owner": "formal/python/tests/test_ws10_branch_boundary_status_family_gate.py",
+      "retention_policy": "ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE",
+      "archive_destination": "archive/docs/release/",
+      "parity_dependencies": [
+        "State_of_the_Theory.md",
+        "formal/python/tests/test_ws10_branch_boundary_status_family_gate.py",
+        "formal/docs/release/WS10_UNTRACKED_BATCH_INTAKE_DECLARATION_20260409_v0.md"
+      ]
+    },
+    {
+      "family_id": "WS10_TASK_STATUS_TABLE_FAMILY",
+      "canonical_owner": "formal/python/tests/test_ws10_task_status_table_family_gate.py",
+      "retention_policy": "ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE",
+      "archive_destination": "archive/docs/release/",
+      "parity_dependencies": [
+        "State_of_the_Theory.md",
+        "formal/python/tests/test_ws10_task_status_table_family_gate.py",
+        "formal/docs/release/WS10_UNTRACKED_BATCH_INTAKE_DECLARATION_20260409_v0.md"
+      ]
+    },
+    {
+      "family_id": "WS10_EVIDENCE_LOG_FAMILY",
+      "canonical_owner": "formal/python/tests/test_ws10_evidence_log_family_gate.py",
+      "retention_policy": "ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE",
+      "archive_destination": "archive/docs/release/",
+      "parity_dependencies": [
+        "State_of_the_Theory.md",
+        "formal/python/tests/test_ws10_evidence_log_family_gate.py",
+        "formal/docs/release/WS10_UNTRACKED_BATCH_INTAKE_DECLARATION_20260409_v0.md"
+      ]
+    },
+    {
+      "family_id": "WS10_SCIENTIFIC_ARTIFACT_LINEAGE_FAMILY",
+      "canonical_owner": "formal/python/tests/test_ws10_scientific_artifact_lineage_family_gate.py",
+      "retention_policy": "ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE",
+      "archive_destination": "archive/docs/release/",
+      "parity_dependencies": [
+        "State_of_the_Theory.md",
+        "formal/python/tests/test_ws10_scientific_artifact_lineage_family_gate.py",
+        "formal/docs/release/WS10_UNTRACKED_BATCH_INTAKE_DECLARATION_20260409_v0.md"
+      ]
+    },
+    {
+      "family_id": "WS10_SCIENTIFIC_ARTIFACT_GATE_METADATA_FAMILY",
+      "canonical_owner": "formal/python/tests/test_ws10_scientific_artifact_gate_metadata_family_gate.py",
+      "retention_policy": "ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE",
+      "archive_destination": "archive/docs/release/",
+      "parity_dependencies": [
+        "State_of_the_Theory.md",
+        "formal/python/tests/test_ws10_scientific_artifact_gate_metadata_family_gate.py",
+        "formal/docs/release/WS10_UNTRACKED_BATCH_INTAKE_DECLARATION_20260409_v0.md"
+      ]
+    },
+    {
+      "family_id": "WS10_ADDITIVE_CANDIDATE_DECLARATION_METADATA_FAMILY",
+      "canonical_owner": "formal/python/tests/test_ws10_additive_candidate_declaration_metadata_family_gate.py",
+      "retention_policy": "ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE",
+      "archive_destination": "archive/docs/release/",
+      "parity_dependencies": [
+        "State_of_the_Theory.md",
+        "formal/python/tests/test_ws10_additive_candidate_declaration_metadata_family_gate.py",
+        "formal/docs/release/WS10_UNTRACKED_BATCH_INTAKE_DECLARATION_20260409_v0.md"
+      ]
+    }
+  ],
+  "admission_rule": "MISSING_OWNER_OR_RETENTION_OR_ARCHIVE_OR_PARITY_DEPENDENCIES_IS_HARD_FAIL"
+}

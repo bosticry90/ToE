@@ -1,0 +1,30 @@
+{
+  "schema_id": "REDUNDANCY_CONTROL_SEAM_FAMILY_INDEX_FULL_20260409_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM_EXPANDED",
+  "pilot_scope": "ALL_ACTIVE_SEAM_FAMILIES",
+  "families": [
+    {
+      "family_id": "SEAM_QM_STAT_CLASS_B_PHYSICS_PILOT",
+      "canonical_owner": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE11_v0.md",
+      "retention_policy": "ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE",
+      "archive_destination": "archive/docs/paper/",
+      "parity_dependencies": [
+        "State_of_the_Theory.md",
+        "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle11_gate.py",
+        "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle10_to_11_synthesis_gate.py"
+      ]
+    },
+    {
+      "family_id": "SEAM_COSMO_SR_CLASS_B_PHYSICS_PILOT",
+      "canonical_owner": "formal/docs/paper/DERIVATION_TARGET_COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE07_v0.md",
+      "retention_policy": "ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE",
+      "archive_destination": "archive/docs/paper/",
+      "parity_dependencies": [
+        "State_of_the_Theory.md",
+        "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle07_gate.py",
+        "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle06_to_07_synthesis_gate.py"
+      ]
+    }
+  ],
+  "admission_rule": "MISSING_OWNER_OR_RETENTION_OR_ARCHIVE_OR_PARITY_DEPENDENCIES_IS_HARD_FAIL"
+}
