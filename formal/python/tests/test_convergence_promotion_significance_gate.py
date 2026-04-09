@@ -120,6 +120,7 @@ def test_convergence_hardening_bundle_is_wired_in_governance_suite() -> None:
         "formal/python/tests/test_convergence_promotion_authorization_block_gate.py",
         "formal/python/tests/test_redundancy_control_registry_family_index_gate.py",
         "formal/python/tests/test_redundancy_control_seam_family_index_gate.py",
+        "formal/python/tests/test_redundancy_control_admission_semantics_gate.py",
     ]
     for token in required:
         assert token in suite_text, f"Missing governance-suite integration token: {token}"
