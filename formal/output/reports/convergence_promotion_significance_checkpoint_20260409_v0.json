@@ -25,6 +25,17 @@
       "current_open_items": 3,
       "delta": 0,
       "required_for_promotion": "delta_must_be_negative_or_formally_justified_exception"
+    },
+    "promotion_authorization": {
+      "status": "BLOCKED_PENDING_BLOCKER_AND_PROOF_DEBT_MOVEMENT",
+      "block_reasons": [
+        "BLOCKER_DELTA_NOT_NEGATIVE",
+        "PROOF_DEBT_DELTA_NOT_NEGATIVE"
+      ],
+      "exception": {
+        "declared": false,
+        "rationale_pointer": ""
+      }
     }
   }
 }

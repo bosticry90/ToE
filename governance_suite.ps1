@@ -355,6 +355,7 @@ formal/python/tests/test_dev_stack_preflight.py
 formal/python/tests/test_ci_tranche3_gates.py
 formal/python/tests/test_convergence_baseline_pack_gate.py
 formal/python/tests/test_convergence_promotion_significance_gate.py
+formal/python/tests/test_convergence_promotion_authorization_block_gate.py
 formal/python/tests/test_redundancy_control_registry_family_index_gate.py
 formal/python/tests/test_redundancy_control_seam_family_index_gate.py
 formal/python/tests/test_sql_integrity_snapshot_tool.py

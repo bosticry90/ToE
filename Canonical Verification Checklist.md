@@ -63,6 +63,8 @@ Certification discipline:
 - Blocker-count delta measured? YES / NO
 - Proof-debt movement recorded? YES / NO
 - Proof-debt delta measured? YES / NO
+- Promotion authorization status recorded? YES / NO
+- Exception declaration recorded if used? YES / NO
 
 Traceability:
 - Seam-family canonical index pointer declared? YES / NO

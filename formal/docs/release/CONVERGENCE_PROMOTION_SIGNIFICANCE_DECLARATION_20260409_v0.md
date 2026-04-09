@@ -31,8 +31,21 @@ A promotion-significance checkpoint must declare:
 This declaration is a governance contract only and does not authorize live/theory status
 promotion by itself.
 
+## Promotion Authorization Decision Rule
+
+A promotion-significance checkpoint must include `promotion_authorization` and classify the
+candidate slice as one of:
+
+- `PROMOTION_ELIGIBLE` when discriminator threshold is met and both blocker/proof-debt deltas
+	are negative,
+- `EXCEPTION_REVIEW_REQUIRED` when an explicit exception is declared with rationale pointer, or
+- `BLOCKED_PENDING_BLOCKER_AND_PROOF_DEBT_MOVEMENT` otherwise.
+
+Missing authorization status or unresolved blocking reasons is a hard fail for this gate.
+
 ## Pinned Pointers
 
 - baseline_pack_pointer: formal/output/reports/convergence_baseline_pack_20260409_v0.json
 - checkpoint_pointer: formal/output/reports/convergence_promotion_significance_checkpoint_20260409_v0.json
 - gate_pointer: formal/python/tests/test_convergence_promotion_significance_gate.py
+- authorization_gate_pointer: formal/python/tests/test_convergence_promotion_authorization_block_gate.py
