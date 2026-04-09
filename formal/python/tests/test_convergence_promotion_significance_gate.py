@@ -115,7 +115,6 @@ def test_convergence_promotion_significance_state_and_checklist_tokens_present()
 def test_convergence_hardening_bundle_is_wired_in_governance_suite() -> None:
     suite_text = _read(GOVERNANCE_SUITE_PATH)
     required = [
-        "Running convergence hardening tranche gates",
         "formal/python/tests/test_convergence_baseline_pack_gate.py",
         "formal/python/tests/test_convergence_promotion_significance_gate.py",
         "formal/python/tests/test_redundancy_control_registry_family_index_gate.py",

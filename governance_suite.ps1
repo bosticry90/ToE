@@ -353,6 +353,10 @@ formal/python/tests/test_repository_retention_policy_contract_gate.py
 formal/python/tests/test_local_execution_posture_gate.py
 formal/python/tests/test_dev_stack_preflight.py
 formal/python/tests/test_ci_tranche3_gates.py
+formal/python/tests/test_convergence_baseline_pack_gate.py
+formal/python/tests/test_convergence_promotion_significance_gate.py
+formal/python/tests/test_redundancy_control_registry_family_index_gate.py
+formal/python/tests/test_redundancy_control_seam_family_index_gate.py
 formal/python/tests/test_sql_integrity_snapshot_tool.py
 '@
 $registryTokenCount = @($governanceGateTokenRegistry -split "`r?`n" | Where-Object { $_.Trim().Length -gt 0 }).Count
@@ -373,18 +377,6 @@ if ($LASTEXITCODE -ne 0) {
 ./py.ps1 -m pytest @governanceTests -q
 if ($LASTEXITCODE -ne 0) {
   throw "Governance pytest tranche failed."
-}
-
-Write-Host "Running convergence hardening tranche gates" -ForegroundColor Cyan
-$convergenceHardeningTests = @(
-  "formal/python/tests/test_convergence_baseline_pack_gate.py"
-  "formal/python/tests/test_convergence_promotion_significance_gate.py"
-  "formal/python/tests/test_redundancy_control_registry_family_index_gate.py"
-  "formal/python/tests/test_redundancy_control_seam_family_index_gate.py"
-)
-./py.ps1 -m pytest @convergenceHardeningTests -q
-if ($LASTEXITCODE -ne 0) {
-  throw "Convergence hardening tranche gates failed."
 }
 
 Write-Host "Running local orchestration manifest" -ForegroundColor Cyan

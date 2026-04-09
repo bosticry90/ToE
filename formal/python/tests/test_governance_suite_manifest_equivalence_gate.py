@@ -8,8 +8,8 @@ from pathlib import Path
 from formal.python.tools import governance_manifest_select as selector
 
 
-EXPECTED_LEGACY_COUNT = 298
-EXPECTED_LEGACY_SHA256 = "18e5424388060e770ba6b1acb626a27c0f437324614f16bd8b1f221655ccdcb2"
+EXPECTED_LEGACY_COUNT = 302
+EXPECTED_LEGACY_SHA256 = "9d0b8fa00d0a793a779fc02727fa5c3d663adacec3ad8ead2c0a3c51a58c42e4"
 EXPECTED_FIRST_TEST = "formal/python/tests/test_active_dependency_baseline_lock_gate.py"
 EXPECTED_LAST_TEST = "formal/python/tests/test_sql_integrity_snapshot_tool.py"
 
