@@ -1,0 +1,17 @@
+{
+  "schema_id": "WS10_TGC19_POST_DUAL_CONTINUATION_SEAM_BRANCH_DECISION_20260408_v0",
+  "captured_at_utc": "2026-04-08T00:00:00Z",
+  "tranche_id": "TGC-19",
+  "qm_stat_row": "ROW-SEAM-QM-STAT-001",
+  "cosmo_sr_row": "ROW-SEAM-COSMO-SR-001",
+  "decision_state": "NEXT_DUAL_PATH_CONTINUATION_PACKAGE_PINNED",
+  "evidence": {
+    "command": "./py.ps1 -m pytest -q formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle11_gate.py formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle10_to_11_synthesis_gate.py formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle07_gate.py formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle06_to_07_synthesis_gate.py formal/python/tests/test_toe_qft_gr_seam_reactivation_objective_gate.py formal/python/tests/test_toe_seam_status_split_gate.py formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py",
+    "passed": 28,
+    "failed": 0,
+    "duration_seconds": 6.67
+  },
+  "scope_drift_detected": false,
+  "parity_drift_detected": false,
+  "next_action": "EXECUTE_NEXT_DUAL_SEAM_CONTINUATION_SLICES_AND_CHECKPOINT"
+}

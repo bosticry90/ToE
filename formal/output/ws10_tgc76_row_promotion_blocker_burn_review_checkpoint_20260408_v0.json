@@ -1,0 +1,37 @@
+{
+  "schema_id": "WS10_TGC76_ROW_PROMOTION_BLOCKER_BURN_REVIEW_20260408_v0",
+  "captured_at_utc": "2026-04-08T00:00:00Z",
+  "tranche_id": "TGC-76",
+  "window": {
+    "start": "TGC-69",
+    "end": "TGC-76"
+  },
+  "row_promotion_count": 0,
+  "blocker_counts": {
+    "prior": {
+      "THEOREM_GAP": 7,
+      "SEAM_INTEGRATION_GAP": 3,
+      "PARITY_DRIFT": 1,
+      "GOVERNANCE_GUARDRAIL": 0,
+      "EVIDENCE_ALIGNMENT_GAP": 0
+    },
+    "current": {
+      "THEOREM_GAP": 7,
+      "SEAM_INTEGRATION_GAP": 3,
+      "PARITY_DRIFT": 1,
+      "GOVERNANCE_GUARDRAIL": 0,
+      "EVIDENCE_ALIGNMENT_GAP": 0
+    },
+    "net_delta": 0
+  },
+  "ccg02_exception": {
+    "required": true,
+    "scope": "LIMITED_TO_TRANSITION_INTO_THEOREM_GAP_CLOSURE_TRANCHES",
+    "compensating_actions": [
+      "EXECUTE_TGC77_THEOREM_GAP_CLOSURE_QM",
+      "EXECUTE_TGC78_THEOREM_GAP_CLOSURE_COSMO",
+      "HALT_RESUME_IF_BLOCKER_COUNTS_UNCHANGED_AFTER_TGC78"
+    ]
+  },
+  "next_action": "EXECUTE_TGC77_AND_TGC78_BEFORE_RESUMING_REPEATING_CADENCE"
+}

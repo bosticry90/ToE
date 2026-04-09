@@ -1,0 +1,22 @@
+{
+  "schema_id": "WS10_TGC75_FULL_LANE_CADENCE_CHECKPOINT_20260408_v0",
+  "captured_at_utc": "2026-04-08T00:00:00Z",
+  "tranche_id": "TGC-75",
+  "evidence": {
+    "governance_lane": {
+      "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1",
+      "passed": 628,
+      "failed": 0,
+      "duration_seconds": 233.99
+    },
+    "branch_health_lane": {
+      "command": "./py.ps1 -m pytest formal/python/tests -q",
+      "passed": 5052,
+      "skipped": 202,
+      "failed": 0,
+      "duration_seconds": 360.82
+    }
+  },
+  "decision_state": "CADENCE_REQUIREMENT_SATISFIED",
+  "next_action": "PUBLISH_TGC76_ROW_PROMOTION_AND_BLOCKER_BURN_REVIEW"
+}

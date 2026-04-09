@@ -1,0 +1,793 @@
+{
+  "schema_id": "WS10_UNTRACKED_BATCH_INTAKE_INVENTORY_20260409_v0",
+  "status": "ACTIVE_INTAKE_NONLIVE_NONCLAIM",
+  "generated_at": "2026-04-09",
+  "total_files": 156,
+  "classification_counts": {
+    "live_candidate": 156,
+    "archive_candidate": 0,
+    "discard_candidate": 0
+  },
+  "files": [
+    {
+      "path": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_GLOBAL_COMPLETION_EXECUTION_PROGRAM_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_PACKET41_PACKET42_HOLD_RECONSIDERATION_POLICY_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_03_SEAM_INCREMENT_AUTHORIZATION_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_04_FIRST_PILLAR_INCREMENT_SELECTION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_05_SEAM_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_05_SEAM_INCREMENT_EXECUTION_RUNBOOK_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_06_GR_PILLAR_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_06_GR_PILLAR_INCREMENT_EXECUTION_RUNBOOK_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_07_SEAM_ADDITIVE_PAYLOAD_PRECHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_08_GR_PACKET05_INCREMENT_PRECHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_09_SEAM_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_10_GR_PACKET05_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_11_QM_STAT_CONTINUATION_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_12_COSMO_SR_PAYLOAD_CLARITY_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_13_QM_STAT_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_14_COSMO_SR_CONTROLLED_REOPEN_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_15_POST_DUAL_EXECUTION_SEAM_BRANCH_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_16_PILLAR_PRIORITY_RETARGET_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_17_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_18_STAT_PACKET04_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_19_POST_DUAL_CONTINUATION_SEAM_BRANCH_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_20_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_21_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_22_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_23_POST_DUAL_CONTINUATION_SEAM_BRANCH_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_24_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_25_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_26_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_27_POST_DUAL_CONTINUATION_SEAM_BRANCH_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_28_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_29_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_30_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_31_POST_DUAL_CONTINUATION_SEAM_BRANCH_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_32_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_33_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_34_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_35_POST_DUAL_CONTINUATION_SEAM_BRANCH_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_36_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_37_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_38_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_39_POST_DUAL_CONTINUATION_SEAM_BRANCH_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_40_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_41_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_42_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_43_POST_DUAL_CONTINUATION_SEAM_BRANCH_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_44_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_45_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_46_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_47_POST_DUAL_CONTINUATION_SEAM_BRANCH_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_48_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_49_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_50_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_51_POST_DUAL_CONTINUATION_SEAM_BRANCH_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_52_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_53_FULL_LANE_CADENCE_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_54_ROW_PROMOTION_BLOCKER_BURN_REVIEW_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_55_QM_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_56_COSMO_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_57_POST_THEOREM_GAP_BLOCKER_BURN_DELTA_REEVALUATION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_58_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_59_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_60_POST_DUAL_CONTINUATION_SEAM_BRANCH_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_61_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_62_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_63_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_64_FULL_LANE_CADENCE_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_65_ROW_PROMOTION_BLOCKER_BURN_REVIEW_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_66_QM_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_67_COSMO_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_68_POST_THEOREM_GAP_BLOCKER_BURN_DELTA_REEVALUATION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_69_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_70_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_71_POST_DUAL_CONTINUATION_SEAM_BRANCH_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_72_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_73_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_74_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_75_FULL_LANE_CADENCE_CHECKPOINT_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/docs/release/WS_10_TGC_76_ROW_PROMOTION_BLOCKER_BURN_REVIEW_20260408_v0.md",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_global_completion_baseline_snapshot_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_packet41_packet42_hold_reconsideration_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc03_seam_increment_authorization_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc04_first_pillar_increment_selection_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc05_seam_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc06_gr_pillar_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc07_seam_additive_payload_precheckpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc08_gr_packet05_increment_precheckpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc09_seam_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc10_gr_packet05_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc11_qm_stat_continuation_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc12_cosmo_sr_payload_clarity_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc13_qm_stat_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc14_cosmo_sr_controlled_reopen_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc15_post_dual_execution_seam_branch_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc16_pillar_priority_retarget_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc17_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc18_stat_packet04_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc19_post_dual_continuation_seam_branch_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc20_stat_packet04_continuation_candidate_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc21_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc22_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc23_post_dual_continuation_seam_branch_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc24_stat_packet04_continuation_candidate_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc25_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc26_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc27_post_dual_continuation_seam_branch_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc28_stat_packet04_continuation_candidate_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc29_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc30_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc31_post_dual_continuation_seam_branch_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc32_stat_packet04_continuation_candidate_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc33_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc34_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc35_post_dual_continuation_seam_branch_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc36_stat_packet04_continuation_candidate_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc37_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc38_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc39_post_dual_continuation_seam_branch_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc40_stat_packet04_continuation_candidate_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc41_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc42_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc43_post_dual_continuation_seam_branch_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc44_stat_packet04_continuation_candidate_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc45_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc46_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc47_post_dual_continuation_seam_branch_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc48_stat_packet04_continuation_candidate_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc49_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc50_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc51_post_dual_continuation_seam_branch_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc52_stat_packet04_continuation_candidate_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc53_full_lane_cadence_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc54_row_promotion_blocker_burn_review_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc55_qm_theorem_gap_closure_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc56_cosmo_theorem_gap_closure_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc57_post_theorem_gap_blocker_burn_delta_reevaluation_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc58_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc59_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc60_post_dual_continuation_seam_branch_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc61_stat_packet04_continuation_candidate_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc62_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc63_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc64_full_lane_cadence_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc65_row_promotion_blocker_burn_review_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc66_qm_theorem_gap_closure_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc67_cosmo_theorem_gap_closure_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc68_post_theorem_gap_blocker_burn_delta_reevaluation_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc69_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc70_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc71_post_dual_continuation_seam_branch_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc72_stat_packet04_continuation_candidate_decision_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc73_dual_seam_continuation_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc74_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc75_full_lane_cadence_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_tgc76_row_promotion_blocker_burn_review_checkpoint_20260408_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    },
+    {
+      "path": "formal/output/ws10_untracked_batch_intake_inventory_20260409_v0.json",
+      "classification": "live_candidate",
+      "reason": "Pre-existing WS-10 untracked execution batch; retained for bounded intake commit."
+    }
+  ]
+}

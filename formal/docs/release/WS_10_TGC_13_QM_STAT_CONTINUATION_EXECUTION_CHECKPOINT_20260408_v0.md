@@ -1,0 +1,31 @@
+# WS-10 TGC-13 QM_STAT Continuation Execution Checkpoint (2026-04-08)
+
+## Status
+- ACTIVE
+- Date: 2026-04-08
+- Tranche: TGC-13
+- Class: QM_STAT_CONTINUATION_EXECUTION_CHECKPOINT_NONCLAIM
+
+## Objective
+Record bounded QM_STAT continuation execution checkpoint for ROW-SEAM-QM-STAT-001.
+
+## Execution evidence
+- `./py.ps1 -m pytest -q formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle11_gate.py formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle10_to_11_synthesis_gate.py formal/python/tests/test_toe_qft_gr_seam_reactivation_objective_gate.py formal/python/tests/test_toe_seam_status_split_gate.py formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
+- Result: `18 passed in 5.03s`
+
+## Decision state
+- `TGC13_EXECUTION_STATE_v0: BOUNDED_QM_STAT_CONTINUATION_EXECUTION_CHECKPOINT_PINNED`
+- `TGC13_ACTIVE_ROW_v0: ROW-SEAM-QM-STAT-001`
+- `TGC13_SCOPE_DRIFT_STATUS_v0: NONE_DETECTED`
+- `TGC13_PARITY_DRIFT_STATUS_v0: NONE_DETECTED`
+
+## Next step
+Prepare next bounded QM_STAT continuation candidate or explicitly branch to COSMO_SR reopen progression.
+
+## Linkage
+- Program pointer: formal/docs/release/WS_10_GLOBAL_COMPLETION_EXECUTION_PROGRAM_20260408_v0.md
+- Matrix pointer: formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md
+- Checkpoint JSON pointer: formal/output/ws10_tgc13_qm_stat_continuation_execution_checkpoint_20260408_v0.json
+
+## Non-claim boundary
+This checkpoint captures bounded continuation execution only and does not assert seam global completion.

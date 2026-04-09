@@ -1,0 +1,16 @@
+{
+  "schema_id": "WS10_TGC44_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0",
+  "captured_at_utc": "2026-04-08T00:00:00Z",
+  "tranche_id": "TGC-44",
+  "active_row": "ROW-PILLAR-STAT-001",
+  "decision_state": "NEXT_STAT_PACKET04_CONTINUATION_PACKAGE_PINNED",
+  "evidence": {
+    "command": "./py.ps1 -m pytest -q formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py formal/python/tests/test_foundational_empirical_packet04_matrix_consistency_gate.py formal/python/tests/test_foundational_empirical_packet04_decision_policy_gate.py formal/python/tests/test_toe_qft_gr_seam_reactivation_objective_gate.py formal/python/tests/test_toe_seam_status_split_gate.py",
+    "passed": 9,
+    "failed": 0,
+    "duration_seconds": 4.19
+  },
+  "packet04_matrix_drift_detected": false,
+  "packet04_policy_regression_detected": false,
+  "next_action": "EXECUTE_NEXT_BOUNDED_STAT_PACKET04_CONTINUATION_INCREMENT_AND_CHECKPOINT"
+}

@@ -1,0 +1,15 @@
+{
+  "schema_id": "WS10_TGC03_SEAM_INCREMENT_AUTHORIZATION_CHECKPOINT_20260408_v0",
+  "captured_at_utc": "2026-04-08T00:00:00Z",
+  "tranche_id": "TGC-03",
+  "active_row": "ROW-SEAM-QFT-GR-001",
+  "decision_state": "BOUNDED_CONTINUATION_AUTHORIZED_PENDING_EXECUTION",
+  "evidence": {
+    "command": "./py.ps1 -m pytest -q formal/python/tests/test_toe_qft_gr_seam_reactivation_objective_gate.py formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle11_gate.py formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle10_to_11_synthesis_gate.py formal/python/tests/test_toe_seam_status_split_gate.py",
+    "passed": 15,
+    "failed": 0,
+    "duration_seconds": 3.61
+  },
+  "stop_condition": "HALT_ON_SCOPE_DRIFT_OR_PARITY_DRIFT_OR_GATE_REGRESSION",
+  "next_action": "EXECUTE_SINGLE_BOUNDED_SEAM_INCREMENT"
+}

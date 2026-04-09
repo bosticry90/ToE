@@ -1,0 +1,16 @@
+{
+  "schema_id": "WS10_TGC04_FIRST_PILLAR_INCREMENT_SELECTION_CHECKPOINT_20260408_v0",
+  "captured_at_utc": "2026-04-08T00:00:00Z",
+  "tranche_id": "TGC-04",
+  "selected_row": "ROW-PILLAR-GR-001",
+  "decision_state": "ROW_SELECTED_AND_BASELINE_VALIDATED",
+  "selection_reason": "SEAM_COUPLED_LOWEST_BLOCKER_SURFACE_WITH_GREEN_FOCUSED_BUNDLE",
+  "evidence": {
+    "command": "./py.ps1 -m pytest -q formal/python/tests/test_gr_empirical_comparison_packet_05_gate.py formal/python/tests/test_foundational_empirical_packet05_matrix_consistency_gate.py",
+    "passed": 3,
+    "failed": 0,
+    "duration_seconds": 1.84
+  },
+  "stop_condition": "HALT_ON_PACKET05_MATRIX_DRIFT_OR_GATE_REGRESSION",
+  "next_action": "EXECUTE_SINGLE_BOUNDED_GR_PILLAR_INCREMENT"
+}

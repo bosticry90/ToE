@@ -1,0 +1,15 @@
+{
+  "schema_id": "WS10_TGC16_PILLAR_PRIORITY_RETARGET_DECISION_CHECKPOINT_20260408_v0",
+  "captured_at_utc": "2026-04-08T00:00:00Z",
+  "tranche_id": "TGC-16",
+  "active_row": "ROW-PILLAR-STAT-001",
+  "decision_state": "STAT_PACKET04_PRIORITY_PACKAGE_PINNED",
+  "evidence": {
+    "command": "./py.ps1 -m pytest -q formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py formal/python/tests/test_foundational_empirical_packet04_matrix_consistency_gate.py formal/python/tests/test_foundational_empirical_packet04_decision_policy_gate.py formal/python/tests/test_toe_qft_gr_seam_reactivation_objective_gate.py",
+    "passed": 8,
+    "failed": 0,
+    "duration_seconds": 3.23
+  },
+  "scope_boundary": "PACKET04_CHAIN_ONLY_NO_CROSS_PILLAR_AUTHORITY_EXPANSION",
+  "next_action": "EXECUTE_BOUNDED_STAT_PACKET04_INCREMENT"
+}

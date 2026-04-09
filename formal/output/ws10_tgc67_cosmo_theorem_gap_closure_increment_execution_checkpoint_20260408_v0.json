@@ -1,0 +1,16 @@
+{
+  "schema_id": "WS10_TGC67_COSMO_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0",
+  "captured_at_utc": "2026-04-08T00:00:00Z",
+  "tranche_id": "TGC-67",
+  "active_row": "ROW-PILLAR-COSMO-001",
+  "decision_state": "COSMO_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_PINNED",
+  "evidence": {
+    "command": "./py.ps1 -m pytest -q formal/python/tests/test_cosmo_empirical_comparison_packet_04_gate.py formal/python/tests/test_foundational_empirical_packet04_matrix_consistency_gate.py formal/python/tests/test_foundational_empirical_packet04_decision_policy_gate.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py formal/python/tests/test_toe_seam_status_split_gate.py",
+    "passed": 8,
+    "failed": 0,
+    "duration_seconds": 4.39
+  },
+  "packet04_matrix_drift_detected": false,
+  "packet04_policy_regression_detected": false,
+  "next_action": "PUBLISH_BLOCKER_BURN_DELTA_REEVALUATION_BEFORE_SEAM_STAT_RESUME"
+}

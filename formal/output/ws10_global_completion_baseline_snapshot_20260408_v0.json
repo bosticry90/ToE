@@ -1,0 +1,51 @@
+{
+  "schema_id": "WS10_GLOBAL_COMPLETION_BASELINE_SNAPSHOT_20260408_v0",
+  "captured_at_utc": "2026-04-08T00:00:00Z",
+  "program_class": "MATH_PHYSICS_THROUGHPUT_AND_COMPLETION_NONCLAIM",
+  "priority_mode": "THROUGHPUT_FIRST",
+  "publication_scope": "EXCLUDED_BY_OWNER_DIRECTION",
+  "governance_prerequisite": {
+    "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1",
+    "status": "PASS",
+    "pytest_passed": 628,
+    "pytest_failed": 0,
+    "duration_seconds": 215.37,
+    "orchestration_checks_passed": 2,
+    "orchestration_checks_failed": 0,
+    "sql_integrity_issues": 0,
+    "rust_trust_core_status": "OK"
+  },
+  "focused_baseline_bundles": [
+    {
+      "id": "AUTHORITY_AND_SEAM_STATUS_CORE",
+      "command": "./py.ps1 -m pytest -q formal/python/tests/test_state_theory_dag.py formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py formal/python/tests/test_toe_seam_status_split_gate.py",
+      "status": "PASS",
+      "passed": 4,
+      "failed": 0,
+      "duration_seconds": 2.41
+    },
+    {
+      "id": "ACTIVE_SEAM_LANE_BUNDLE",
+      "command": "./py.ps1 -m pytest -q formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle11_gate.py formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle10_to_11_synthesis_gate.py formal/python/tests/test_toe_qft_gr_seam_reactivation_objective_gate.py",
+      "status": "PASS",
+      "passed": 14,
+      "failed": 0,
+      "duration_seconds": 2.41
+    }
+  ],
+  "active_lane_snapshot": {
+    "workstream": "WS-10",
+    "seam_lane": "QFT_GR_REACTIVATION_BOUNDARY_CHAIN",
+    "qm_stat_cycle": "CYCLE11_BOUNDARY_STOP",
+    "cosmo_sr_cycle": "PAUSED_PENDING_EXPLICIT_ADDITIVE_PAYLOAD",
+    "packet41_status": "HOLD_RETAINED_REVIEW_LAYER_FAILURE_CYCLE02_NUMERIC_EVALUATED",
+    "packet42_policy": "HOLD_INVARIANCE_ENFORCED"
+  },
+  "next_actions": [
+    "Create canonical global-completion matrix artifact with row ownership and blocker class.",
+    "Pin packet41/42 reconsideration criteria for seam-throughput continuity.",
+    "Execute first bounded seam increment and propagate parity across state/roadmap/inventory.",
+    "Execute first pillar closure row chosen by seam-coupling leverage."
+  ],
+  "non_claim_boundary": "This baseline reflects repository-local verification posture and execution readiness only."
+}
