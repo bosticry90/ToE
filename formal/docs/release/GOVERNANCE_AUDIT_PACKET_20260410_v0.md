@@ -66,6 +66,14 @@ Publish a machine-readable governance audit packet that separates artifact growt
 - conditional status allows limited tranche classes only
 - watch and blocked statuses require exception artifact pointers
 
+## Freshness requirements
+- freshness snapshot declaration pointer
+- freshness snapshot report pointer
+- max-age budget for required governance inputs
+- per-source freshness status and age measurements
+- stale-input effect must invalidate readiness and promotion eligibility
+- freshness summary must expose stale input list and overall freshness status
+
 ## Gate hook
 - formal/python/tests/test_governance_audit_packet_gate.py
 

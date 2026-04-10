@@ -214,6 +214,36 @@ def test_governance_audit_packet_shape() -> None:
     assert "required_exception_artifact" in current_action
     assert isinstance(current_action.get("action_summary"), str) and current_action.get("action_summary")
 
+    freshness = payload.get("freshness_validation", {})
+    assert freshness.get("declaration_pointer") == "formal/docs/release/GOVERNANCE_FRESHNESS_SNAPSHOT_20260410_v0.md"
+    assert freshness.get("report_pointer") == "formal/output/reports/governance_freshness_snapshot_20260410_v0.json"
+    policy = freshness.get("policy", {})
+    assert isinstance(policy.get("max_age_seconds"), int)
+    assert policy.get("max_age_seconds") > 0
+    assert policy.get("stale_input_effect") == "READINESS_INVALID_AND_PROMOTION_NOT_ELIGIBLE"
+    sources = freshness.get("sources", {})
+    assert isinstance(sources, dict)
+    assert set(sources.keys()) == {
+        "runtime_baseline",
+        "artifact_growth_snapshot",
+        "blocker_closure_map",
+        "promotion_readiness",
+        "promotion_action_policy",
+    }
+    for source_name, source in sources.items():
+        assert isinstance(source.get("report_pointer"), str) and source.get("report_pointer"), source_name
+        assert isinstance(source.get("captured_at_utc"), str) and source.get("captured_at_utc"), source_name
+        assert isinstance(source.get("age_seconds"), int), source_name
+        assert source.get("age_seconds") >= 0, source_name
+        assert isinstance(source.get("max_age_seconds"), int), source_name
+        assert isinstance(source.get("is_fresh"), bool), source_name
+    summary = freshness.get("freshness_summary", {})
+    assert summary.get("freshness_status") == "FRESH"
+    assert summary.get("all_required_inputs_fresh") is True
+    assert summary.get("stale_inputs") == []
+    assert summary.get("readiness_inputs_valid") is True
+    assert summary.get("promotion_eligibility_from_freshness") is True
+
 
 def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
     state_text = _active_text(STATE_PATH)
@@ -244,6 +274,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "GOVERNANCE_AUDIT_PACKET_PROMOTION_ACTION_POLICY_JSON_v0: formal/output/reports/governance_promotion_readiness_action_20260410_v0.json",
         "GOVERNANCE_AUDIT_PACKET_PROMOTION_ACTION_POLICY_TOOL_v0: formal/python/tools/governance_promotion_readiness_action.py",
         "GOVERNANCE_AUDIT_PACKET_PROMOTION_ACTION_POLICY_RULE_v0: BLOCKED_DISALLOWS_PROMOTION_CONDITIONAL_IS_LIMITED_READY_IS_ALLOWED_WATCH_BLOCKED_REQUIRE_EXCEPTION_POINTERS",
+        "GOVERNANCE_AUDIT_PACKET_FRESHNESS_DECLARATION_v0: formal/docs/release/GOVERNANCE_FRESHNESS_SNAPSHOT_20260410_v0.md",
+        "GOVERNANCE_AUDIT_PACKET_FRESHNESS_JSON_v0: formal/output/reports/governance_freshness_snapshot_20260410_v0.json",
+        "GOVERNANCE_AUDIT_PACKET_FRESHNESS_TOOL_v0: formal/python/tools/governance_freshness_snapshot.py",
+        "GOVERNANCE_AUDIT_PACKET_FRESHNESS_RULE_v0: STALE_INPUTS_INVALIDATE_READINESS_AND_PROMOTION_ELIGIBILITY",
         "GOVERNANCE_AUDIT_PACKET_OWNER_COVERAGE_RULE_v0: EVERY_COMPLETION_ROW_REQUIRES_PRIMARY_AND_SECONDARY_OWNER_ASSIGNMENT",
         "GOVERNANCE_AUDIT_PACKET_GATE_v0: formal/python/tests/test_governance_audit_packet_gate.py",
     ]
@@ -273,6 +307,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "Promotion-action policy report pointer declared? YES / NO",
         "Promotion-action policy status mapping exhaustive? YES / NO",
         "Promotion-action policy enforced for current readiness status? YES / NO",
+        "Freshness snapshot declaration pointer declared? YES / NO",
+        "Freshness snapshot report pointer declared? YES / NO",
+        "Freshness budgets applied to all required inputs? YES / NO",
+        "Stale inputs invalidate readiness and promotion eligibility? YES / NO",
     ]
     for token in checklist_required:
         assert token in checklist_text, f"Missing checklist token: {token}"

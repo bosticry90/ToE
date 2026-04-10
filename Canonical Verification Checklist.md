@@ -42,6 +42,10 @@ Baseline-pack linkage (required for convergence claims):
 - Promotion-action policy report pointer declared? YES / NO
 - Promotion-action policy status mapping exhaustive? YES / NO
 - Promotion-action policy enforced for current readiness status? YES / NO
+- Freshness snapshot declaration pointer declared? YES / NO
+- Freshness snapshot report pointer declared? YES / NO
+- Freshness budgets applied to all required inputs? YES / NO
+- Stale inputs invalidate readiness and promotion eligibility? YES / NO
 
 Representation-first triage:
 - Reduced object named? YES / NO
