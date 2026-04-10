@@ -1,0 +1,96 @@
+{
+  "schema_id": "GOVERNANCE_AUDIT_PACKET_CLOSURE_OWNER_MAP_20260410_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-10T00:00:00Z",
+  "rows": [
+    {
+      "row_id": "ROW-SEAM-QFT-GR-001",
+      "primary_owner": "TEAM_SEAM_QFT_GR",
+      "secondary_owner": "TEAM_GOVERNANCE_CORE",
+      "owning_lane": "QFT_GR_REACTIVATION",
+      "required_evidence_surface": "formal/docs/paper/TOE_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_v0.md",
+      "exit_criterion": "BOUNDED_INCREMENT_CHECKPOINT_AND_GATE_PASS"
+    },
+    {
+      "row_id": "ROW-SEAM-QM-STAT-001",
+      "primary_owner": "TEAM_SEAM_QM_STAT",
+      "secondary_owner": "TEAM_GOVERNANCE_CORE",
+      "owning_lane": "QM_STAT_CYCLE11",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE11_v0.md",
+      "exit_criterion": "CYCLE_GATE_AND_SYNTHESIS_GATE_PASS"
+    },
+    {
+      "row_id": "ROW-SEAM-COSMO-SR-001",
+      "primary_owner": "TEAM_SEAM_COSMO_SR",
+      "secondary_owner": "TEAM_GOVERNANCE_CORE",
+      "owning_lane": "COSMO_SR_CYCLE07",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE07_v0.md",
+      "exit_criterion": "CYCLE_GATE_AND_SYNTHESIS_GATE_PASS"
+    },
+    {
+      "row_id": "ROW-SEAM-GR-QM-001",
+      "primary_owner": "TEAM_SEAM_GR_QM",
+      "secondary_owner": "TEAM_GOVERNANCE_CORE",
+      "owning_lane": "GR_QM_PROMOTION",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_GR_QM_CLASS_B_SEAM_PROMOTION_DISCHARGE_CYCLE02_v0.md",
+      "exit_criterion": "DISCHARGE_GATE_PASS_AND_PARITY_LOCK"
+    },
+    {
+      "row_id": "ROW-PILLAR-QM-001",
+      "primary_owner": "TEAM_PILLAR_QM",
+      "secondary_owner": "TEAM_GOVERNANCE_CORE",
+      "owning_lane": "QM_DERIVATION_CHAIN",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+      "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE"
+    },
+    {
+      "row_id": "ROW-PILLAR-GR-001",
+      "primary_owner": "TEAM_PILLAR_GR",
+      "secondary_owner": "TEAM_GOVERNANCE_CORE",
+      "owning_lane": "GR_DERIVATION_CHAIN",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_05_v0.md",
+      "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE"
+    },
+    {
+      "row_id": "ROW-PILLAR-STAT-001",
+      "primary_owner": "TEAM_PILLAR_STAT",
+      "secondary_owner": "TEAM_GOVERNANCE_CORE",
+      "owning_lane": "STAT_DERIVATION_CHAIN",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+      "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE"
+    },
+    {
+      "row_id": "ROW-PILLAR-COSMO-001",
+      "primary_owner": "TEAM_PILLAR_COSMO",
+      "secondary_owner": "TEAM_GOVERNANCE_CORE",
+      "owning_lane": "COSMO_DERIVATION_CHAIN",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+      "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE"
+    },
+    {
+      "row_id": "ROW-PILLAR-EM-001",
+      "primary_owner": "TEAM_PILLAR_EM",
+      "secondary_owner": "TEAM_GOVERNANCE_CORE",
+      "owning_lane": "EM_DERIVATION_CHAIN",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+      "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE"
+    },
+    {
+      "row_id": "ROW-PILLAR-QFT-001",
+      "primary_owner": "TEAM_PILLAR_QFT",
+      "secondary_owner": "TEAM_GOVERNANCE_CORE",
+      "owning_lane": "QFT_DERIVATION_CHAIN",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+      "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE"
+    },
+    {
+      "row_id": "ROW-PILLAR-SR-001",
+      "primary_owner": "TEAM_PILLAR_SR",
+      "secondary_owner": "TEAM_GOVERNANCE_CORE",
+      "owning_lane": "SR_DERIVATION_CHAIN",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md",
+      "exit_criterion": "PACKET_GATE_PASS_AND_BLOCKER_DELTA_NEGATIVE"
+    }
+  ],
+  "non_claim_boundary": "This owner map is a repository-local accountability map and does not assert scientific adequacy."
+}

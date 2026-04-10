@@ -18,6 +18,9 @@ GLOBAL_COMPLETION_BASELINE_PATH = REPO_ROOT / "formal" / "output" / "ws10_global
 BLOCKER_BURN_REVIEW_PATH = REPO_ROOT / "formal" / "output" / "ws10_tgc76_row_promotion_blocker_burn_review_checkpoint_20260408_v0.json"
 COMPLETION_MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "release" / "TOE_GLOBAL_COMPLETION_MATRIX_v0.md"
 SEAM_INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md"
+ARTIFACT_LIFECYCLE_POLICY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "ARTIFACT_LIFECYCLE_POLICY_20260410_v0.json"
+ARTIFACT_LIFECYCLE_POLICY_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "ARTIFACT_LIFECYCLE_POLICY_20260410_v0.md"
+CLOSURE_OWNER_MAP_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_AUDIT_PACKET_CLOSURE_OWNER_MAP_20260410_v0.json"
 
 
 def _read_json(path: Path) -> dict[str, Any]:
@@ -64,6 +67,21 @@ def _resolve_timestamp(captured_at_utc: str | None) -> str:
     return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
 
 
+def _owner_rows_by_id(owner_map: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    rows = owner_map.get("rows", [])
+    if not isinstance(rows, list):
+        return {}
+    out: dict[str, dict[str, Any]] = {}
+    for entry in rows:
+        if not isinstance(entry, dict):
+            continue
+        row_id = str(entry.get("row_id", "")).strip()
+        if not row_id:
+            continue
+        out[row_id] = entry
+    return out
+
+
 def build_packet(
     *,
     output_path: Path,
@@ -78,6 +96,8 @@ def build_packet(
     completion_baseline = _read_json(GLOBAL_COMPLETION_BASELINE_PATH)
     blocker_review = _read_json(BLOCKER_BURN_REVIEW_PATH)
     completion_rows = _parse_completion_rows(COMPLETION_MATRIX_PATH)
+    lifecycle_policy = _read_json(ARTIFACT_LIFECYCLE_POLICY_PATH)
+    closure_owner_map = _read_json(CLOSURE_OWNER_MAP_PATH)
 
     blocker_current = (
         blocker_review.get("blocker_counts", {}).get("current", {})
@@ -87,12 +107,41 @@ def build_packet(
 
     row_blockers = Counter(row["blocker_class"] for row in completion_rows)
     unresolved_classes = [k for k, v in blocker_current.items() if isinstance(v, int) and v > 0]
+    owner_rows = _owner_rows_by_id(closure_owner_map)
+    missing_owner_rows = sorted(
+        [row["row_id"] for row in completion_rows if row["row_id"] not in owner_rows]
+    )
+    owner_assignments = []
+    for row in completion_rows:
+        owner_row = owner_rows.get(row["row_id"], {})
+        owner_assignments.append(
+            {
+                "row_id": row["row_id"],
+                "blocker_class": row["blocker_class"],
+                "primary_owner": owner_row.get("primary_owner"),
+                "secondary_owner": owner_row.get("secondary_owner"),
+                "required_evidence_surface": owner_row.get("required_evidence_surface"),
+                "exit_criterion": owner_row.get("exit_criterion"),
+            }
+        )
 
     runtime_governance = (
         completion_baseline.get("governance_prerequisite", {}).get("duration_seconds")
         if isinstance(completion_baseline.get("governance_prerequisite", {}), dict)
         else None
     )
+
+    family_rules = lifecycle_policy.get("family_rules", [])
+    if not isinstance(family_rules, list):
+        family_rules = []
+    family_rules_missing_archive = 0
+    for rule in family_rules:
+        if not isinstance(rule, dict):
+            family_rules_missing_archive += 1
+            continue
+        archive_destination = str(rule.get("archive_destination", "")).strip()
+        if not archive_destination:
+            family_rules_missing_archive += 1
 
     packet = {
         "schema_id": SCHEMA_ID,
@@ -129,11 +178,28 @@ def build_packet(
             .get("checkpoint_count", {})
             .get("value"),
         },
+        "artifact_lifecycle_policy": {
+            "declaration_pointer": str(ARTIFACT_LIFECYCLE_POLICY_DECLARATION_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "policy_pointer": str(ARTIFACT_LIFECYCLE_POLICY_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "retention_policy": lifecycle_policy.get("retention_policy", {}),
+            "family_rules_count": len(family_rules),
+            "family_rules_missing_archive_destination_count": family_rules_missing_archive,
+            "exemption_classes": lifecycle_policy.get("exemption_classes", []),
+        },
         "closure_map": {
             "blocker_count_by_class": blocker_current,
             "rows_total": len(completion_rows),
             "rows_by_blocker_class": dict(sorted(row_blockers.items())),
             "unresolved_blocker_classes": sorted(unresolved_classes),
+            "row_owner_assignments": owner_assignments,
+            "owner_assignment_coverage": {
+                "mapped_rows": len(completion_rows) - len(missing_owner_rows),
+                "missing_rows": missing_owner_rows,
+                "coverage_ratio": round((len(completion_rows) - len(missing_owner_rows)) / len(completion_rows), 6)
+                if completion_rows
+                else 0.0,
+                "owner_map_pointer": str(CLOSURE_OWNER_MAP_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            },
             "source_matrix": str(COMPLETION_MATRIX_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
             "seam_inventory_pointer": str(SEAM_INVENTORY_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
         },

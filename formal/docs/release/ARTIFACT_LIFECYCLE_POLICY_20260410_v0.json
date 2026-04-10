@@ -1,0 +1,46 @@
+{
+  "schema_id": "ARTIFACT_LIFECYCLE_POLICY_20260410_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-10T00:00:00Z",
+  "retention_policy": {
+    "active_window_days": 90,
+    "archive_after_days": 180,
+    "review_cadence_days": 30
+  },
+  "exemption_classes": [
+    "CANONICAL_RELEASE_PACKET",
+    "BASELINE_LOCK",
+    "LEGAL_AUDIT_RECORD"
+  ],
+  "family_rules": [
+    {
+      "family_id": "FORMAL_REPORTS_JSON",
+      "scope_glob": "formal/output/reports/**/*.json",
+      "retention_days": 90,
+      "archive_destination": "archive/output/reports/",
+      "exemption_class": null
+    },
+    {
+      "family_id": "WS10_CHECKPOINT_JSON",
+      "scope_glob": "formal/output/ws10_*.json",
+      "retention_days": 180,
+      "archive_destination": "archive/output/ws10/",
+      "exemption_class": "CANONICAL_RELEASE_PACKET"
+    },
+    {
+      "family_id": "QM_STAT_SEAM_CYCLE_JSON",
+      "scope_glob": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle*.json",
+      "retention_days": 120,
+      "archive_destination": "archive/output/seams/qm_stat/",
+      "exemption_class": null
+    },
+    {
+      "family_id": "COSMO_SR_SEAM_CYCLE_JSON",
+      "scope_glob": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle*.json",
+      "retention_days": 120,
+      "archive_destination": "archive/output/seams/cosmo_sr/",
+      "exemption_class": null
+    }
+  ],
+  "non_claim_boundary": "This policy governs repository artifact residency only and does not assert scientific adequacy."
+}

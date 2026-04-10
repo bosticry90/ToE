@@ -19,6 +19,10 @@ Baseline-pack linkage (required for convergence claims):
 - Governance runtime baseline recorded? YES / NO
 - Branch-health runtime baseline recorded? YES / NO
 - Artifact/evidence/closure dimensions separated? YES / NO
+- Artifact lifecycle policy pointer declared? YES / NO
+- Artifact family retention and archive thresholds pinned? YES / NO
+- Closure owner map pointer declared? YES / NO
+- Every closure row has primary and secondary owner? YES / NO
 - Closure-growth delta recorded? YES / NO
 
 Representation-first triage:

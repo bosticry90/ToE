@@ -80,6 +80,16 @@ def test_governance_audit_packet_shape() -> None:
         assert isinstance(artifact_snapshot[required_key], int)
         assert artifact_snapshot[required_key] >= 0
 
+    lifecycle_policy = payload.get("artifact_lifecycle_policy", {})
+    assert lifecycle_policy.get("declaration_pointer") == "formal/docs/release/ARTIFACT_LIFECYCLE_POLICY_20260410_v0.md"
+    assert lifecycle_policy.get("policy_pointer") == "formal/docs/release/ARTIFACT_LIFECYCLE_POLICY_20260410_v0.json"
+    assert isinstance(lifecycle_policy.get("retention_policy"), dict)
+    assert isinstance(lifecycle_policy.get("family_rules_count"), int)
+    assert lifecycle_policy.get("family_rules_count") > 0
+    assert lifecycle_policy.get("family_rules_missing_archive_destination_count") == 0
+    assert isinstance(lifecycle_policy.get("exemption_classes"), list)
+    assert len(lifecycle_policy.get("exemption_classes")) > 0
+
     closure_map = payload.get("closure_map", {})
     blocker_map = closure_map.get("blocker_count_by_class", {})
     assert set(blocker_map.keys()) == REQUIRED_BLOCKER_CLASSES
@@ -90,6 +100,24 @@ def test_governance_audit_packet_shape() -> None:
     assert isinstance(unresolved, list)
     for item in unresolved:
         assert item in REQUIRED_BLOCKER_CLASSES
+
+    owner_assignments = closure_map.get("row_owner_assignments", [])
+    assert isinstance(owner_assignments, list)
+    assert len(owner_assignments) == closure_map.get("rows_total")
+    for row in owner_assignments:
+        assert isinstance(row.get("row_id"), str) and row["row_id"]
+        assert isinstance(row.get("primary_owner"), str) and row["primary_owner"]
+        assert isinstance(row.get("secondary_owner"), str) and row["secondary_owner"]
+        assert isinstance(row.get("required_evidence_surface"), str) and row["required_evidence_surface"]
+        assert isinstance(row.get("exit_criterion"), str) and row["exit_criterion"]
+
+    owner_coverage = closure_map.get("owner_assignment_coverage", {})
+    assert owner_coverage.get("mapped_rows") == closure_map.get("rows_total")
+    assert owner_coverage.get("missing_rows") == []
+    assert owner_coverage.get("coverage_ratio") == 1.0
+    assert owner_coverage.get("owner_map_pointer") == (
+        "formal/docs/release/GOVERNANCE_AUDIT_PACKET_CLOSURE_OWNER_MAP_20260410_v0.json"
+    )
 
     rubric = payload.get("risk_delta_rubric", {})
     required_axes = rubric.get("required_axes", [])
@@ -109,6 +137,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "GOVERNANCE_AUDIT_PACKET_DECLARATION_v0: formal/docs/release/GOVERNANCE_AUDIT_PACKET_20260410_v0.md",
         "GOVERNANCE_AUDIT_PACKET_JSON_v0: formal/output/reports/governance_audit_packet_20260410_v0.json",
         "GOVERNANCE_AUDIT_PACKET_DIMENSION_RULE_v0: SEPARATE_ARTIFACT_GROWTH_EVIDENCE_GROWTH_AND_CLOSURE_GROWTH",
+        "GOVERNANCE_AUDIT_PACKET_ARTIFACT_LIFECYCLE_POLICY_DECLARATION_v0: formal/docs/release/ARTIFACT_LIFECYCLE_POLICY_20260410_v0.md",
+        "GOVERNANCE_AUDIT_PACKET_ARTIFACT_LIFECYCLE_POLICY_JSON_v0: formal/docs/release/ARTIFACT_LIFECYCLE_POLICY_20260410_v0.json",
+        "GOVERNANCE_AUDIT_PACKET_CLOSURE_OWNER_MAP_JSON_v0: formal/docs/release/GOVERNANCE_AUDIT_PACKET_CLOSURE_OWNER_MAP_20260410_v0.json",
+        "GOVERNANCE_AUDIT_PACKET_OWNER_COVERAGE_RULE_v0: EVERY_COMPLETION_ROW_REQUIRES_PRIMARY_AND_SECONDARY_OWNER_ASSIGNMENT",
         "GOVERNANCE_AUDIT_PACKET_GATE_v0: formal/python/tests/test_governance_audit_packet_gate.py",
     ]
     for token in state_required:
@@ -119,6 +151,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "Governance runtime baseline recorded? YES / NO",
         "Branch-health runtime baseline recorded? YES / NO",
         "Artifact/evidence/closure dimensions separated? YES / NO",
+        "Artifact lifecycle policy pointer declared? YES / NO",
+        "Artifact family retention and archive thresholds pinned? YES / NO",
+        "Closure owner map pointer declared? YES / NO",
+        "Every closure row has primary and secondary owner? YES / NO",
         "Closure-growth delta recorded? YES / NO",
     ]
     for token in checklist_required:

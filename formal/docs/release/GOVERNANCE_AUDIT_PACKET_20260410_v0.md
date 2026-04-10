@@ -21,11 +21,20 @@ Publish a machine-readable governance audit packet that separates artifact growt
 - branch-health full pytest runtime baseline
 - warning and hard budget thresholds for both runtime lanes
 
+## Artifact lifecycle requirements
+- lifecycle policy declaration pointer
+- machine-readable policy pointer
+- retention policy thresholds
+- exemption classes and family rule count
+- missing archive-destination count must be zero
+
 ## Closure-map requirements
 - blocker count by class
 - unresolved blocker classes
 - row count and row-to-blocker distribution
 - seam/theorem source pointers
+- row owner assignments for all rows
+- owner coverage ratio and missing-row list
 
 ## Gate hook
 - formal/python/tests/test_governance_audit_packet_gate.py
