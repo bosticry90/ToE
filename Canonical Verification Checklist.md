@@ -91,6 +91,9 @@ Traceability:
 - Packet history archive Wave-6 declaration present? YES / NO
 - Packet history active release surface archived? YES / NO
 - Packet posture authority remains in compact state and inventory? YES / NO
+- Changelog archive Wave-7 declaration present? YES / NO
+- Changelog active release surface archived? YES / NO
+- Change posture authority remains in compact state and inventory? YES / NO
 - Canonical owner path exists for each pilot family? YES / NO
 - Archive destination path exists for each pilot family? YES / NO
 - Parity dependency paths exist for each pilot family? YES / NO

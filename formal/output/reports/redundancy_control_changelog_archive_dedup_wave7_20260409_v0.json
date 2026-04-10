@@ -1,0 +1,15 @@
+{
+  "schema_id": "REDUNDANCY_CONTROL_CHANGELOG_ARCHIVE_DEDUP_WAVE7_20260409_v0",
+  "status": "RUN_BOUNDED_v0_NONCLAIM",
+  "family_id": "CHANGELOG_SUPPORT_SURFACES",
+  "active_surface_removed": "formal/docs/release/TOE_CHANGELOG_ARCHIVE_v0.md",
+  "archived_surface_path": "archive/docs/release/TOE_CHANGELOG_ARCHIVE_v0.md",
+  "active_authority_surface": "State_of_the_Theory.md",
+  "dedup_declaration_pointer": "formal/docs/release/REDUNDANCY_CONTROL_CHANGELOG_ARCHIVE_DEDUP_WAVE7_DECLARATION_20260409_v0.md",
+  "parity_updated": [
+    "State_of_the_Theory.md",
+    "Canonical Verification Checklist.md",
+    "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+    "formal/python/tests/test_redundancy_control_changelog_archive_dedup_wave7_gate.py"
+  ]
+}

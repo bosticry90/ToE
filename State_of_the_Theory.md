@@ -105,6 +105,12 @@ Redundancy-control packet history archive dedup checkpoint (R4-F, 2026-04-09):
 - `REDUNDANCY_CONTROL_PACKET_HISTORY_ARCHIVE_DEDUP_WAVE6_REPORT_v0: formal/output/reports/redundancy_control_packet_history_archive_dedup_wave6_20260409_v0.json`
 - `REDUNDANCY_CONTROL_PACKET_HISTORY_ARCHIVE_DEDUP_WAVE6_GATE_v0: formal/python/tests/test_redundancy_control_packet_history_archive_dedup_wave6_gate.py`
 
+Redundancy-control changelog archive dedup checkpoint (R4-G, 2026-04-09):
+- `REDUNDANCY_CONTROL_CHANGELOG_ARCHIVE_DEDUP_WAVE7_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `REDUNDANCY_CONTROL_CHANGELOG_ARCHIVE_DEDUP_WAVE7_DECLARATION_v0: formal/docs/release/REDUNDANCY_CONTROL_CHANGELOG_ARCHIVE_DEDUP_WAVE7_DECLARATION_20260409_v0.md`
+- `REDUNDANCY_CONTROL_CHANGELOG_ARCHIVE_DEDUP_WAVE7_REPORT_v0: formal/output/reports/redundancy_control_changelog_archive_dedup_wave7_20260409_v0.json`
+- `REDUNDANCY_CONTROL_CHANGELOG_ARCHIVE_DEDUP_WAVE7_GATE_v0: formal/python/tests/test_redundancy_control_changelog_archive_dedup_wave7_gate.py`
+
 CI truth contract checkpoint (R5-A, 2026-03-20):
 - `CI_TRUTH_WORKFLOW_v0: .github/workflows/ci.yml`
 - `CI_TRUTH_GOVERNANCE_LANE_v0: PREREQUISITE`
@@ -723,7 +729,7 @@ Next admissible actions:
 
 Pointers to detailed inventories and archives:
 - Inventory: formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md
-- Changelog archive: formal/docs/release/TOE_CHANGELOG_ARCHIVE_v0.md
+- Changelog archive: archive/docs/release/TOE_CHANGELOG_ARCHIVE_v0.md
 - Packet history archive: archive/docs/release/TOE_PACKET_HISTORY_ARCHIVE_v0.md
 - Seam history archive: archive/docs/release/TOE_SEAM_HISTORY_ARCHIVE_v0.md
 - Deep overflow archive extract: archive/State_of_the_Theory_ARCHIVED_HISTORY_EXTRACT_v0.md
@@ -4032,7 +4038,7 @@ QFT scalar-route flagship lane checkpoint (2026-03-12):
 
 Archived historical progression moved to:
 - archive/State_of_the_Theory_ARCHIVED_HISTORY_EXTRACT_v0.md
-- formal/docs/release/TOE_CHANGELOG_ARCHIVE_v0.md
+- archive/docs/release/TOE_CHANGELOG_ARCHIVE_v0.md
 - archive/docs/release/TOE_PACKET_HISTORY_ARCHIVE_v0.md
 - archive/docs/release/TOE_SEAM_HISTORY_ARCHIVE_v0.md
 
