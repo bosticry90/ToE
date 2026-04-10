@@ -1,0 +1,212 @@
+from __future__ import annotations
+
+import argparse
+import json
+from collections import Counter
+from datetime import datetime, timezone
+from pathlib import Path
+from typing import Any
+
+from formal.python.meta.repo_environment import find_repo_root
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+SCHEMA_ID = "GOVERNANCE_AUDIT_PACKET_20260410_v0"
+
+CONVERGENCE_BASELINE_PATH = REPO_ROOT / "formal" / "output" / "reports" / "convergence_baseline_pack_20260409_v0.json"
+GLOBAL_COMPLETION_BASELINE_PATH = REPO_ROOT / "formal" / "output" / "ws10_global_completion_baseline_snapshot_20260408_v0.json"
+BLOCKER_BURN_REVIEW_PATH = REPO_ROOT / "formal" / "output" / "ws10_tgc76_row_promotion_blocker_burn_review_checkpoint_20260408_v0.json"
+COMPLETION_MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "release" / "TOE_GLOBAL_COMPLETION_MATRIX_v0.md"
+SEAM_INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md"
+
+
+def _read_json(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        raise FileNotFoundError(f"Missing required file: {path}")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _count_json_files(path: Path) -> int:
+    if not path.exists():
+        return 0
+    return sum(1 for candidate in path.rglob("*.json") if candidate.is_file())
+
+
+def _parse_completion_rows(matrix_path: Path) -> list[dict[str, str]]:
+    if not matrix_path.exists():
+        raise FileNotFoundError(f"Missing required file: {matrix_path}")
+
+    rows: list[dict[str, str]] = []
+    for line in matrix_path.read_text(encoding="utf-8").splitlines():
+        if not line.startswith("| ROW-"):
+            continue
+        cells = [cell.strip() for cell in line.strip().strip("|").split("|")]
+        if len(cells) < 8:
+            continue
+        rows.append(
+            {
+                "row_id": cells[0],
+                "domain": cells[1],
+                "lane": cells[2],
+                "current_status": cells[3],
+                "blocker_class": cells[4],
+                "primary_target": cells[5],
+                "primary_artifact": cells[6],
+                "primary_gate": cells[7],
+            }
+        )
+    return rows
+
+
+def _resolve_timestamp(captured_at_utc: str | None) -> str:
+    if captured_at_utc:
+        return captured_at_utc
+    return datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+
+def build_packet(
+    *,
+    output_path: Path,
+    captured_at_utc: str | None,
+    branch_health_runtime_seconds: float | None,
+    governance_budget_warn_seconds: float,
+    governance_budget_hard_seconds: float,
+    branch_budget_warn_seconds: float,
+    branch_budget_hard_seconds: float,
+) -> dict[str, Any]:
+    convergence = _read_json(CONVERGENCE_BASELINE_PATH)
+    completion_baseline = _read_json(GLOBAL_COMPLETION_BASELINE_PATH)
+    blocker_review = _read_json(BLOCKER_BURN_REVIEW_PATH)
+    completion_rows = _parse_completion_rows(COMPLETION_MATRIX_PATH)
+
+    blocker_current = (
+        blocker_review.get("blocker_counts", {}).get("current", {})
+        if isinstance(blocker_review.get("blocker_counts", {}), dict)
+        else {}
+    )
+
+    row_blockers = Counter(row["blocker_class"] for row in completion_rows)
+    unresolved_classes = [k for k, v in blocker_current.items() if isinstance(v, int) and v > 0]
+
+    runtime_governance = (
+        completion_baseline.get("governance_prerequisite", {}).get("duration_seconds")
+        if isinstance(completion_baseline.get("governance_prerequisite", {}), dict)
+        else None
+    )
+
+    packet = {
+        "schema_id": SCHEMA_ID,
+        "captured_at_utc": _resolve_timestamp(captured_at_utc),
+        "status": "ACTIVE_NONLIVE_NONCLAIM",
+        "throughput_dimensions": {
+            "artifact_growth": {
+                "assessment": "HIGH_ACTIVITY_SURFACE",
+                "governance_decision_role": "CONTEXT_ONLY",
+            },
+            "evidence_growth": {
+                "assessment": "MIXED",
+                "governance_decision_role": "SECONDARY_GATE",
+            },
+            "closure_growth": {
+                "assessment": "MIXED_BLOCKER_CONSTRAINED",
+                "governance_decision_role": "PRIMARY_GATE",
+            },
+        },
+        "runtime_baselines": {
+            "governance_suite_seconds_baseline": runtime_governance,
+            "branch_health_pytest_seconds_baseline": branch_health_runtime_seconds,
+            "budget_policy": {
+                "governance_warn_seconds": governance_budget_warn_seconds,
+                "governance_hard_seconds": governance_budget_hard_seconds,
+                "branch_health_warn_seconds": branch_budget_warn_seconds,
+                "branch_health_hard_seconds": branch_budget_hard_seconds,
+            },
+        },
+        "artifact_snapshot": {
+            "json_files_under_formal_output": _count_json_files(REPO_ROOT / "formal" / "output"),
+            "json_files_under_formal_output_reports": _count_json_files(REPO_ROOT / "formal" / "output" / "reports"),
+            "baseline_checkpoint_count": convergence.get("required_metrics", {})
+            .get("checkpoint_count", {})
+            .get("value"),
+        },
+        "closure_map": {
+            "blocker_count_by_class": blocker_current,
+            "rows_total": len(completion_rows),
+            "rows_by_blocker_class": dict(sorted(row_blockers.items())),
+            "unresolved_blocker_classes": sorted(unresolved_classes),
+            "source_matrix": str(COMPLETION_MATRIX_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "seam_inventory_pointer": str(SEAM_INVENTORY_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+        },
+        "risk_delta_rubric": {
+            "required_axes": [
+                "runtime_budget_delta",
+                "artifact_growth_delta",
+                "evidence_growth_delta",
+                "closure_growth_delta",
+            ],
+            "rule": "NO_PHASE_LEVEL_IMPROVEMENT_CLAIM_WITHOUT_EXPLICIT_CLOSURE_GROWTH_DELTA",
+        },
+        "source_bundle": {
+            "convergence_baseline_pack": str(CONVERGENCE_BASELINE_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "global_completion_baseline": str(GLOBAL_COMPLETION_BASELINE_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "blocker_burn_review": str(BLOCKER_BURN_REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+        },
+        "non_claim_boundary": "This packet is a repository-local governance control artifact and does not assert scientific adequacy.",
+    }
+
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_text(json.dumps(packet, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return packet
+
+
+def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Generate governance audit packet with runtime and closure-map baselines.")
+    parser.add_argument(
+        "--out",
+        type=Path,
+        default=REPO_ROOT / "formal" / "output" / "reports" / "governance_audit_packet_20260410_v0.json",
+        help="Output path for the governance audit packet JSON.",
+    )
+    parser.add_argument(
+        "--captured-at-utc",
+        default=None,
+        help="Optional RFC3339 UTC timestamp override (e.g. 2026-04-10T00:00:00Z).",
+    )
+    parser.add_argument(
+        "--branch-health-runtime-seconds",
+        type=float,
+        default=None,
+        help="Optional branch-health pytest runtime baseline in seconds.",
+    )
+    parser.add_argument("--governance-budget-warn-seconds", type=float, default=300.0)
+    parser.add_argument("--governance-budget-hard-seconds", type=float, default=600.0)
+    parser.add_argument("--branch-health-budget-warn-seconds", type=float, default=900.0)
+    parser.add_argument("--branch-health-budget-hard-seconds", type=float, default=1800.0)
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    ns = _parse_args(argv)
+    output_path = ns.out if ns.out.is_absolute() else (REPO_ROOT / ns.out)
+
+    packet = build_packet(
+        output_path=output_path,
+        captured_at_utc=ns.captured_at_utc,
+        branch_health_runtime_seconds=ns.branch_health_runtime_seconds,
+        governance_budget_warn_seconds=ns.governance_budget_warn_seconds,
+        governance_budget_hard_seconds=ns.governance_budget_hard_seconds,
+        branch_budget_warn_seconds=ns.branch_health_budget_warn_seconds,
+        branch_budget_hard_seconds=ns.branch_health_budget_hard_seconds,
+    )
+
+    print(
+        "governance_audit_packet_generate: "
+        f"rows_total={packet['closure_map']['rows_total']} "
+        f"json_formal_output={packet['artifact_snapshot']['json_files_under_formal_output']} "
+        f"out={output_path}"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

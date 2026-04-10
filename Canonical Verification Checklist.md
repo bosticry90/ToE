@@ -15,6 +15,11 @@ Baseline-pack linkage (required for convergence claims):
 - Redundant-registry count delta recorded? YES / NO
 - Checkpoint-count delta recorded? YES / NO
 - Active canonical owners delta recorded? YES / NO
+- Governance audit packet pointer declared? YES / NO
+- Governance runtime baseline recorded? YES / NO
+- Branch-health runtime baseline recorded? YES / NO
+- Artifact/evidence/closure dimensions separated? YES / NO
+- Closure-growth delta recorded? YES / NO
 
 Representation-first triage:
 - Reduced object named? YES / NO

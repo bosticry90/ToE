@@ -39,8 +39,8 @@
       ]
     },
     "governance_pytests": {
-      "expected_count": 314,
-      "expected_sha256": "f64efa9f5fa33095d7876ac4872c45596754c2e30f23771b3d40cbff6542a5c4",
+      "expected_count": 315,
+      "expected_sha256": "e8e1ff861ab3dd15683a6ea00f396478f139fca1a94271e9441a90cc467f99ad",
       "tests": [
         "formal/python/tests/test_active_dependency_baseline_lock_gate.py",
         "formal/python/tests/test_dependency_security_scan_schedule_gate.py",
@@ -355,6 +355,7 @@
         "formal/python/tests/test_redundancy_control_repo_disposition_checklist_dedup_wave8_gate.py",
         "formal/python/tests/test_redundancy_control_ws10_audit_exec_program_dedup_wave9_gate.py",
         "formal/python/tests/test_redundancy_control_repo_comprehensive_audit_dedup_wave10_gate.py",
+        "formal/python/tests/test_governance_audit_packet_gate.py",
         "formal/python/tests/test_sql_integrity_snapshot_tool.py"
       ]
     }
