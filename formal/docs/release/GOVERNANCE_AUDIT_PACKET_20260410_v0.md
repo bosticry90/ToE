@@ -83,6 +83,14 @@ Publish a machine-readable governance audit packet that separates artifact growt
 - movement rule requiring exception when net delta is non-negative
 - exception requirement with artifact pointer when required
 
+## Operational closeout requirements
+- operational closeout declaration pointer
+- operational closeout report pointer
+- explicit closeout rule id and required packet section list
+- criteria booleans for controls, acceptance, and anchor hygiene
+- closeout status is COMPLETE only when all criteria are true
+- closeout next-action field reflects complete vs incomplete state
+
 ## Gate hook
 - formal/python/tests/test_governance_audit_packet_gate.py
 

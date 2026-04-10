@@ -268,6 +268,41 @@ def test_governance_audit_packet_shape() -> None:
     else:
         assert exception_requirement.get("exception_required") is False
 
+    closeout = payload.get("operational_closeout", {})
+    assert closeout.get("declaration_pointer") == "formal/docs/release/GOVERNANCE_OPERATIONAL_REFINEMENT_CLOSEOUT_20260410_v0.md"
+    assert closeout.get("report_pointer") == "formal/output/reports/governance_operational_refinement_closeout_20260410_v0.json"
+    closeout_rule = closeout.get("closeout_rule", {})
+    assert closeout_rule.get("rule_id") == "AUDIT_PACKET_OPERATIONAL_REFINEMENT_CLOSEOUT_v0"
+    required_sections = closeout_rule.get("required_packet_sections", [])
+    assert isinstance(required_sections, list)
+    assert set(required_sections) == {
+        "runtime_baselines",
+        "artifact_growth_tracking",
+        "artifact_lifecycle_policy",
+        "closure_map",
+        "promotion_readiness",
+        "promotion_action_policy",
+        "freshness_validation",
+        "blocker_trend_window",
+    }
+    criteria = closeout.get("criteria", {})
+    assert isinstance(criteria, dict)
+    for key in [
+        "required_packet_sections_present",
+        "readiness_action_policy_present",
+        "freshness_enforcement_present",
+        "blocker_trend_enforcement_present",
+        "governance_and_checkpoint_green",
+        "clean_tree_now",
+        "synced_with_origin_main_now",
+    ]:
+        assert key in criteria
+        assert isinstance(criteria[key], bool)
+    summary = closeout.get("summary", {})
+    assert isinstance(summary.get("all_criteria_satisfied"), bool)
+    assert summary.get("closeout_status") in {"COMPLETE", "INCOMPLETE"}
+    assert summary.get("next_action") in {"MAINTENANCE_MODE", "CONTINUE_REFINEMENT_OR_FINALIZE_ANCHOR"}
+
 
 def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
     state_text = _active_text(STATE_PATH)
@@ -306,6 +341,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "GOVERNANCE_AUDIT_PACKET_BLOCKER_TREND_JSON_v0: formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
         "GOVERNANCE_AUDIT_PACKET_BLOCKER_TREND_TOOL_v0: formal/python/tools/governance_blocker_trend_window.py",
         "GOVERNANCE_AUDIT_PACKET_BLOCKER_TREND_RULE_v0: NET_DELTA_LT_0_IS_PROGRESS_NET_DELTA_GE_0_REQUIRES_EXCEPTION",
+        "GOVERNANCE_AUDIT_PACKET_OPERATIONAL_CLOSEOUT_DECLARATION_v0: formal/docs/release/GOVERNANCE_OPERATIONAL_REFINEMENT_CLOSEOUT_20260410_v0.md",
+        "GOVERNANCE_AUDIT_PACKET_OPERATIONAL_CLOSEOUT_JSON_v0: formal/output/reports/governance_operational_refinement_closeout_20260410_v0.json",
+        "GOVERNANCE_AUDIT_PACKET_OPERATIONAL_CLOSEOUT_TOOL_v0: formal/python/tools/governance_operational_closeout.py",
+        "GOVERNANCE_AUDIT_PACKET_OPERATIONAL_CLOSEOUT_RULE_v0: ALL_REQUIRED_CRITERIA_MUST_BE_TRUE_FOR_COMPLETE",
         "GOVERNANCE_AUDIT_PACKET_OWNER_COVERAGE_RULE_v0: EVERY_COMPLETION_ROW_REQUIRES_PRIMARY_AND_SECONDARY_OWNER_ASSIGNMENT",
         "GOVERNANCE_AUDIT_PACKET_GATE_v0: formal/python/tests/test_governance_audit_packet_gate.py",
     ]
@@ -343,6 +382,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "Blocker trend window report pointer declared? YES / NO",
         "Blocker trend movement status recorded? YES / NO",
         "Flat or increasing blocker trend requires exception artifact? YES / NO",
+        "Operational closeout declaration pointer declared? YES / NO",
+        "Operational closeout report pointer declared? YES / NO",
+        "Operational closeout criteria recorded and typed? YES / NO",
+        "Operational closeout complete only when all criteria true? YES / NO",
     ]
     for token in checklist_required:
         assert token in checklist_text, f"Missing checklist token: {token}"

@@ -50,6 +50,10 @@ Baseline-pack linkage (required for convergence claims):
 - Blocker trend window report pointer declared? YES / NO
 - Blocker trend movement status recorded? YES / NO
 - Flat or increasing blocker trend requires exception artifact? YES / NO
+- Operational closeout declaration pointer declared? YES / NO
+- Operational closeout report pointer declared? YES / NO
+- Operational closeout criteria recorded and typed? YES / NO
+- Operational closeout complete only when all criteria true? YES / NO
 
 Representation-first triage:
 - Reduced object named? YES / NO
