@@ -60,6 +60,15 @@ def test_governance_audit_packet_shape() -> None:
     assert dimensions["closure_growth"].get("governance_decision_role") == "PRIMARY_GATE"
 
     runtime = payload.get("runtime_baselines", {})
+    assert runtime.get("declaration_pointer") == "formal/docs/release/GOVERNANCE_RUNTIME_BASELINE_20260410_v0.md"
+    assert runtime.get("report_pointer") == "formal/output/reports/governance_runtime_baseline_20260410_v0.json"
+    for runtime_key in [
+        "governance_suite_seconds_baseline",
+        "branch_health_full_pytest_seconds_baseline",
+        "checkpoint_ladder_seconds_baseline",
+    ]:
+        assert isinstance(runtime.get(runtime_key), (int, float))
+        assert runtime[runtime_key] > 0
     budget_policy = runtime.get("budget_policy", {})
     for required_key in [
         "governance_warn_seconds",
@@ -140,6 +149,9 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "GOVERNANCE_AUDIT_PACKET_ARTIFACT_LIFECYCLE_POLICY_DECLARATION_v0: formal/docs/release/ARTIFACT_LIFECYCLE_POLICY_20260410_v0.md",
         "GOVERNANCE_AUDIT_PACKET_ARTIFACT_LIFECYCLE_POLICY_JSON_v0: formal/docs/release/ARTIFACT_LIFECYCLE_POLICY_20260410_v0.json",
         "GOVERNANCE_AUDIT_PACKET_CLOSURE_OWNER_MAP_JSON_v0: formal/docs/release/GOVERNANCE_AUDIT_PACKET_CLOSURE_OWNER_MAP_20260410_v0.json",
+        "GOVERNANCE_AUDIT_PACKET_RUNTIME_BASELINE_DECLARATION_v0: formal/docs/release/GOVERNANCE_RUNTIME_BASELINE_20260410_v0.md",
+        "GOVERNANCE_AUDIT_PACKET_RUNTIME_BASELINE_JSON_v0: formal/output/reports/governance_runtime_baseline_20260410_v0.json",
+        "GOVERNANCE_AUDIT_PACKET_RUNTIME_CAPTURE_TOOL_v0: formal/python/tools/governance_runtime_baseline_capture.py",
         "GOVERNANCE_AUDIT_PACKET_OWNER_COVERAGE_RULE_v0: EVERY_COMPLETION_ROW_REQUIRES_PRIMARY_AND_SECONDARY_OWNER_ASSIGNMENT",
         "GOVERNANCE_AUDIT_PACKET_GATE_v0: formal/python/tests/test_governance_audit_packet_gate.py",
     ]

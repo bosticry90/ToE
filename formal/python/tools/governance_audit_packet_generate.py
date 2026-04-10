@@ -21,6 +21,8 @@ SEAM_INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTI
 ARTIFACT_LIFECYCLE_POLICY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "ARTIFACT_LIFECYCLE_POLICY_20260410_v0.json"
 ARTIFACT_LIFECYCLE_POLICY_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "ARTIFACT_LIFECYCLE_POLICY_20260410_v0.md"
 CLOSURE_OWNER_MAP_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_AUDIT_PACKET_CLOSURE_OWNER_MAP_20260410_v0.json"
+GOVERNANCE_RUNTIME_BASELINE_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_RUNTIME_BASELINE_20260410_v0.md"
+GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_runtime_baseline_20260410_v0.json"
 
 
 def _read_json(path: Path) -> dict[str, Any]:
@@ -98,6 +100,7 @@ def build_packet(
     completion_rows = _parse_completion_rows(COMPLETION_MATRIX_PATH)
     lifecycle_policy = _read_json(ARTIFACT_LIFECYCLE_POLICY_PATH)
     closure_owner_map = _read_json(CLOSURE_OWNER_MAP_PATH)
+    runtime_baseline = _read_json(GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH)
 
     blocker_current = (
         blocker_review.get("blocker_counts", {}).get("current", {})
@@ -130,6 +133,12 @@ def build_packet(
         if isinstance(completion_baseline.get("governance_prerequisite", {}), dict)
         else None
     )
+    runtime_seconds = runtime_baseline.get("runtime_seconds", {})
+    if not isinstance(runtime_seconds, dict):
+        runtime_seconds = {}
+    governance_suite_runtime = runtime_seconds.get("governance_suite", runtime_governance)
+    branch_health_runtime = runtime_seconds.get("branch_health_full_pytest", branch_health_runtime_seconds)
+    checkpoint_ladder_runtime = runtime_seconds.get("checkpoint_ladder")
 
     family_rules = lifecycle_policy.get("family_rules", [])
     if not isinstance(family_rules, list):
@@ -162,8 +171,12 @@ def build_packet(
             },
         },
         "runtime_baselines": {
-            "governance_suite_seconds_baseline": runtime_governance,
-            "branch_health_pytest_seconds_baseline": branch_health_runtime_seconds,
+            "declaration_pointer": str(GOVERNANCE_RUNTIME_BASELINE_DECLARATION_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "report_pointer": str(GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "governance_suite_seconds_baseline": governance_suite_runtime,
+            "branch_health_full_pytest_seconds_baseline": branch_health_runtime,
+            "branch_health_pytest_seconds_baseline": branch_health_runtime,
+            "checkpoint_ladder_seconds_baseline": checkpoint_ladder_runtime,
             "budget_policy": {
                 "governance_warn_seconds": governance_budget_warn_seconds,
                 "governance_hard_seconds": governance_budget_hard_seconds,
