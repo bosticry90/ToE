@@ -244,6 +244,30 @@ def test_governance_audit_packet_shape() -> None:
     assert summary.get("readiness_inputs_valid") is True
     assert summary.get("promotion_eligibility_from_freshness") is True
 
+    trend = payload.get("blocker_trend_window", {})
+    assert trend.get("declaration_pointer") == "formal/docs/release/GOVERNANCE_BLOCKER_TREND_WINDOW_20260410_v0.md"
+    assert trend.get("report_pointer") == "formal/output/reports/governance_blocker_trend_window_20260410_v0.json"
+    window = trend.get("window", {})
+    assert isinstance(window, dict)
+    assert isinstance(window.get("start"), str) and window.get("start")
+    assert isinstance(window.get("end"), str) and window.get("end")
+    assert isinstance(trend.get("tranche_id"), str) and trend.get("tranche_id")
+    blocker_counts = trend.get("blocker_counts", {})
+    assert isinstance(blocker_counts.get("prior"), dict)
+    assert isinstance(blocker_counts.get("current"), dict)
+    assert isinstance(blocker_counts.get("net_delta"), int)
+    trend_summary = trend.get("trend_summary", {})
+    assert trend_summary.get("movement_status") in {"DECREASING", "FLAT", "INCREASING"}
+    assert trend_summary.get("movement_rule") == "NET_DELTA_LT_0_IS_PROGRESS_NET_DELTA_GE_0_REQUIRES_EXCEPTION"
+    exception_requirement = trend.get("exception_requirement", {})
+    assert isinstance(exception_requirement.get("exception_required"), bool)
+    if blocker_counts.get("net_delta", 0) >= 0:
+        assert exception_requirement.get("exception_required") is True
+        pointer = exception_requirement.get("exception_artifact_pointer")
+        assert isinstance(pointer, str) and pointer
+    else:
+        assert exception_requirement.get("exception_required") is False
+
 
 def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
     state_text = _active_text(STATE_PATH)
@@ -278,6 +302,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "GOVERNANCE_AUDIT_PACKET_FRESHNESS_JSON_v0: formal/output/reports/governance_freshness_snapshot_20260410_v0.json",
         "GOVERNANCE_AUDIT_PACKET_FRESHNESS_TOOL_v0: formal/python/tools/governance_freshness_snapshot.py",
         "GOVERNANCE_AUDIT_PACKET_FRESHNESS_RULE_v0: STALE_INPUTS_INVALIDATE_READINESS_AND_PROMOTION_ELIGIBILITY",
+        "GOVERNANCE_AUDIT_PACKET_BLOCKER_TREND_DECLARATION_v0: formal/docs/release/GOVERNANCE_BLOCKER_TREND_WINDOW_20260410_v0.md",
+        "GOVERNANCE_AUDIT_PACKET_BLOCKER_TREND_JSON_v0: formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+        "GOVERNANCE_AUDIT_PACKET_BLOCKER_TREND_TOOL_v0: formal/python/tools/governance_blocker_trend_window.py",
+        "GOVERNANCE_AUDIT_PACKET_BLOCKER_TREND_RULE_v0: NET_DELTA_LT_0_IS_PROGRESS_NET_DELTA_GE_0_REQUIRES_EXCEPTION",
         "GOVERNANCE_AUDIT_PACKET_OWNER_COVERAGE_RULE_v0: EVERY_COMPLETION_ROW_REQUIRES_PRIMARY_AND_SECONDARY_OWNER_ASSIGNMENT",
         "GOVERNANCE_AUDIT_PACKET_GATE_v0: formal/python/tests/test_governance_audit_packet_gate.py",
     ]
@@ -311,6 +339,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "Freshness snapshot report pointer declared? YES / NO",
         "Freshness budgets applied to all required inputs? YES / NO",
         "Stale inputs invalidate readiness and promotion eligibility? YES / NO",
+        "Blocker trend window declaration pointer declared? YES / NO",
+        "Blocker trend window report pointer declared? YES / NO",
+        "Blocker trend movement status recorded? YES / NO",
+        "Flat or increasing blocker trend requires exception artifact? YES / NO",
     ]
     for token in checklist_required:
         assert token in checklist_text, f"Missing checklist token: {token}"

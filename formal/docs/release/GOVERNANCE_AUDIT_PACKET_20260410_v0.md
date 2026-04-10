@@ -74,6 +74,15 @@ Publish a machine-readable governance audit packet that separates artifact growt
 - stale-input effect must invalidate readiness and promotion eligibility
 - freshness summary must expose stale input list and overall freshness status
 
+## Blocker trend window requirements
+- blocker trend window declaration pointer
+- blocker trend window report pointer
+- window start/end and tranche id
+- blocker counts prior/current/net delta
+- trend movement status
+- movement rule requiring exception when net delta is non-negative
+- exception requirement with artifact pointer when required
+
 ## Gate hook
 - formal/python/tests/test_governance_audit_packet_gate.py
 

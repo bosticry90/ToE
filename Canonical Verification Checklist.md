@@ -46,6 +46,10 @@ Baseline-pack linkage (required for convergence claims):
 - Freshness snapshot report pointer declared? YES / NO
 - Freshness budgets applied to all required inputs? YES / NO
 - Stale inputs invalidate readiness and promotion eligibility? YES / NO
+- Blocker trend window declaration pointer declared? YES / NO
+- Blocker trend window report pointer declared? YES / NO
+- Blocker trend movement status recorded? YES / NO
+- Flat or increasing blocker trend requires exception artifact? YES / NO
 
 Representation-first triage:
 - Reduced object named? YES / NO

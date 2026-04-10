@@ -29,6 +29,8 @@ PROMOTION_ACTION_POLICY_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "rele
 PROMOTION_ACTION_POLICY_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_promotion_readiness_action_20260410_v0.json"
 FRESHNESS_SNAPSHOT_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_FRESHNESS_SNAPSHOT_20260410_v0.md"
 FRESHNESS_SNAPSHOT_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_freshness_snapshot_20260410_v0.json"
+BLOCKER_TREND_WINDOW_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_BLOCKER_TREND_WINDOW_20260410_v0.md"
+BLOCKER_TREND_WINDOW_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_blocker_trend_window_20260410_v0.json"
 GOVERNANCE_RUNTIME_BASELINE_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_RUNTIME_BASELINE_20260410_v0.md"
 GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_runtime_baseline_20260410_v0.json"
 GOVERNANCE_ARTIFACT_GROWTH_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_ARTIFACT_GROWTH_BASELINE_20260410_v0.md"
@@ -115,6 +117,7 @@ def build_packet(
     promotion_readiness = _read_json(PROMOTION_READINESS_REPORT_PATH)
     promotion_action_policy = _read_json(PROMOTION_ACTION_POLICY_REPORT_PATH)
     freshness_snapshot = _read_json(FRESHNESS_SNAPSHOT_REPORT_PATH)
+    blocker_trend_window = _read_json(BLOCKER_TREND_WINDOW_REPORT_PATH)
     runtime_baseline = _read_json(GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH)
     artifact_growth_baseline = _read_json(GOVERNANCE_ARTIFACT_GROWTH_BASELINE_PATH)
     artifact_growth_snapshot = _read_json(GOVERNANCE_ARTIFACT_GROWTH_SNAPSHOT_PATH)
@@ -295,6 +298,15 @@ def build_packet(
             "policy": freshness_snapshot.get("policy", {}),
             "sources": freshness_snapshot.get("sources", {}),
             "freshness_summary": freshness_snapshot.get("freshness_summary", {}),
+        },
+        "blocker_trend_window": {
+            "declaration_pointer": str(BLOCKER_TREND_WINDOW_DECLARATION_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "report_pointer": str(BLOCKER_TREND_WINDOW_REPORT_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "window": blocker_trend_window.get("window", {}),
+            "tranche_id": blocker_trend_window.get("tranche_id"),
+            "blocker_counts": blocker_trend_window.get("blocker_counts", {}),
+            "trend_summary": blocker_trend_window.get("trend_summary", {}),
+            "exception_requirement": blocker_trend_window.get("exception_requirement", {}),
         },
         "risk_delta_rubric": {
             "required_axes": [
