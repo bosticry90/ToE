@@ -87,6 +87,12 @@ Redundancy-control dedup wave progress checkpoint (R4-C, 2026-04-09):
 - `REDUNDANCY_CONTROL_DEDUP_WAVE_PROGRESS_REPORT_v0: formal/output/reports/redundancy_control_dedup_wave_progress_20260409_v0.json`
 - `REDUNDANCY_CONTROL_DEDUP_WAVE_PROGRESS_GATE_v0: formal/python/tests/test_redundancy_control_dedup_wave_progress_gate.py`
 
+Redundancy-control seam QM-STAT owner dedup checkpoint (R4-D, 2026-04-09):
+- `REDUNDANCY_CONTROL_SEAM_QM_STAT_OWNER_DEDUP_WAVE4_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `REDUNDANCY_CONTROL_SEAM_QM_STAT_OWNER_DEDUP_WAVE4_DECLARATION_v0: formal/docs/release/REDUNDANCY_CONTROL_SEAM_QM_STAT_OWNER_DEDUP_WAVE4_DECLARATION_20260409_v0.md`
+- `REDUNDANCY_CONTROL_SEAM_QM_STAT_OWNER_DEDUP_WAVE4_REPORT_v0: formal/output/reports/redundancy_control_seam_qm_stat_owner_dedup_wave4_20260409_v0.json`
+- `REDUNDANCY_CONTROL_SEAM_QM_STAT_OWNER_DEDUP_WAVE4_GATE_v0: formal/python/tests/test_redundancy_control_seam_qm_stat_owner_dedup_wave4_gate.py`
+
 CI truth contract checkpoint (R5-A, 2026-03-20):
 - `CI_TRUTH_WORKFLOW_v0: .github/workflows/ci.yml`
 - `CI_TRUTH_GOVERNANCE_LANE_v0: PREREQUISITE`

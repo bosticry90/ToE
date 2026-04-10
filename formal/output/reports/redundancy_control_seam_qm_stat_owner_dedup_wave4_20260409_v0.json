@@ -1,0 +1,10 @@
+{
+  "schema_id": "REDUNDANCY_CONTROL_SEAM_QM_STAT_OWNER_DEDUP_WAVE4_20260409_v0",
+  "status": "RUN_BOUNDED_v0_NONCLAIM",
+  "family_id": "SEAM_QM_STAT_CLASS_B_PHYSICS_PILOT",
+  "active_owner_surface_removed": "formal/docs/paper/TOE_CLASS_B_SEAM_PILOT_STATUS.md",
+  "archived_owner_surface_path": "archive/docs/paper/TOE_CLASS_B_SEAM_PILOT_STATUS.md",
+  "active_full_index_owner_surface": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE11_v0.md",
+  "declaration_pointer": "formal/docs/release/REDUNDANCY_CONTROL_SEAM_QM_STAT_OWNER_DEDUP_WAVE4_DECLARATION_20260409_v0.md",
+  "rule": "LEGACY_OWNER_STATUS_SURFACE_MUST_BE_ARCHIVED_AND_FULL_INDEX_OWNER_MUST_REMAIN_ACTIVE"
+}

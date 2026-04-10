@@ -82,6 +82,9 @@ Traceability:
 - De-dup wave progress declaration present? YES / NO
 - Completed wave singleton paths archived and absent from active reports? YES / NO
 - Admission semantics remains full-index scoped? YES / NO
+- Seam QM-STAT owner Wave-4 declaration present? YES / NO
+- Seam QM-STAT legacy owner surface archived? YES / NO
+- Seam QM-STAT full-index owner unchanged? YES / NO
 - Canonical owner path exists for each pilot family? YES / NO
 - Archive destination path exists for each pilot family? YES / NO
 - Parity dependency paths exist for each pilot family? YES / NO
