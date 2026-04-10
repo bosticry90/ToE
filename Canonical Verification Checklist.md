@@ -71,6 +71,9 @@ Traceability:
 - Seam-family owner/retention/archive/parity fields complete? YES / NO
 - Seam full-family index declared? YES / NO
 - Seam full-family coverage complete? YES / NO
+- Seam Wave-2 de-dup declaration present? YES / NO
+- Seam pilot singleton archived? YES / NO
+- Seam Wave-2 parity pointers updated? YES / NO
 - Registry full-family index declared? YES / NO
 - Registry full-family coverage complete? YES / NO
 - Registry Wave-1 de-dup declaration present? YES / NO

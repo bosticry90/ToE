@@ -1,0 +1,19 @@
+{
+  "schema_id": "REDUNDANCY_CONTROL_SEAM_DEDUP_WAVE2_20260409_v0",
+  "status": "RUN_BOUNDED_v0_NONCLAIM",
+  "scope": "ONE_FAMILY_ONLY",
+  "family_id": "SEAM_QM_STAT_CLASS_B_PHYSICS_PILOT",
+  "active_surface_removed": "formal/output/reports/redundancy_control_seam_family_index_20260409_v0.json",
+  "archived_surface_path": "archive/output/reports/redundancy_control_seam_family_index_20260409_v0.json",
+  "active_authority_surface": "formal/output/reports/redundancy_control_seam_family_index_full_20260409_v0.json",
+  "canonical_owner": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE11_v0.md",
+  "archive_destination": "archive/output/reports/",
+  "dedup_declaration_pointer": "formal/docs/release/REDUNDANCY_CONTROL_SEAM_DEDUP_WAVE2_DECLARATION_20260409_v0.md",
+  "parity_updates": [
+    "State_of_the_Theory.md",
+    "Canonical Verification Checklist.md",
+    "formal/python/tests/test_redundancy_control_seam_family_index_gate.py",
+    "formal/python/tests/test_redundancy_control_admission_semantics_gate.py"
+  ],
+  "rule": "PILOT_SINGLETON_SURFACE_MUST_BE_ARCHIVED_AND_FAMILY_COVERED_BY_FULL_INDEX"
+}
