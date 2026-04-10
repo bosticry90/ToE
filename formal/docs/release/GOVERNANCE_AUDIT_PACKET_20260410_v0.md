@@ -16,6 +16,15 @@ Publish a machine-readable governance audit packet that separates artifact growt
 2. evidence growth
 3. closure growth
 
+## Artifact growth tracking requirements
+- artifact growth baseline declaration pointer
+- artifact growth baseline report pointer
+- artifact growth snapshot report pointer
+- artifact growth snapshot tool pointer
+- baseline counts for formal/output and formal/output/reports JSON artifacts
+- current counts for formal/output and formal/output/reports JSON artifacts
+- delta vs baseline for both JSON artifact scopes
+
 ## Runtime baseline requirements
 - governance suite runtime baseline
 - branch-health full pytest runtime baseline

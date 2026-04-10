@@ -23,6 +23,9 @@ ARTIFACT_LIFECYCLE_POLICY_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "re
 CLOSURE_OWNER_MAP_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_AUDIT_PACKET_CLOSURE_OWNER_MAP_20260410_v0.json"
 GOVERNANCE_RUNTIME_BASELINE_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_RUNTIME_BASELINE_20260410_v0.md"
 GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_runtime_baseline_20260410_v0.json"
+GOVERNANCE_ARTIFACT_GROWTH_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_ARTIFACT_GROWTH_BASELINE_20260410_v0.md"
+GOVERNANCE_ARTIFACT_GROWTH_BASELINE_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_artifact_growth_baseline_20260410_v0.json"
+GOVERNANCE_ARTIFACT_GROWTH_SNAPSHOT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_artifact_growth_snapshot_20260410_v0.json"
 
 
 def _read_json(path: Path) -> dict[str, Any]:
@@ -101,6 +104,8 @@ def build_packet(
     lifecycle_policy = _read_json(ARTIFACT_LIFECYCLE_POLICY_PATH)
     closure_owner_map = _read_json(CLOSURE_OWNER_MAP_PATH)
     runtime_baseline = _read_json(GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH)
+    artifact_growth_baseline = _read_json(GOVERNANCE_ARTIFACT_GROWTH_BASELINE_PATH)
+    artifact_growth_snapshot = _read_json(GOVERNANCE_ARTIFACT_GROWTH_SNAPSHOT_PATH)
 
     blocker_current = (
         blocker_review.get("blocker_counts", {}).get("current", {})
@@ -152,6 +157,19 @@ def build_packet(
         if not archive_destination:
             family_rules_missing_archive += 1
 
+    growth_current = artifact_growth_snapshot.get("current_counts", {})
+    if not isinstance(growth_current, dict):
+        growth_current = {}
+    growth_delta = artifact_growth_snapshot.get("delta_vs_baseline", {})
+    if not isinstance(growth_delta, dict):
+        growth_delta = {}
+    growth_baseline = artifact_growth_baseline.get("baseline_counts", {})
+    if not isinstance(growth_baseline, dict):
+        growth_baseline = {}
+
+    current_output_count = int(growth_current.get("json_files_under_formal_output", _count_json_files(REPO_ROOT / "formal" / "output")))
+    current_reports_count = int(growth_current.get("json_files_under_formal_output_reports", _count_json_files(REPO_ROOT / "formal" / "output" / "reports")))
+
     packet = {
         "schema_id": SCHEMA_ID,
         "captured_at_utc": _resolve_timestamp(captured_at_utc),
@@ -185,11 +203,28 @@ def build_packet(
             },
         },
         "artifact_snapshot": {
-            "json_files_under_formal_output": _count_json_files(REPO_ROOT / "formal" / "output"),
-            "json_files_under_formal_output_reports": _count_json_files(REPO_ROOT / "formal" / "output" / "reports"),
+            "json_files_under_formal_output": current_output_count,
+            "json_files_under_formal_output_reports": current_reports_count,
             "baseline_checkpoint_count": convergence.get("required_metrics", {})
             .get("checkpoint_count", {})
             .get("value"),
+        },
+        "artifact_growth_tracking": {
+            "declaration_pointer": str(GOVERNANCE_ARTIFACT_GROWTH_DECLARATION_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "baseline_report_pointer": str(GOVERNANCE_ARTIFACT_GROWTH_BASELINE_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "snapshot_report_pointer": str(GOVERNANCE_ARTIFACT_GROWTH_SNAPSHOT_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "baseline_counts": {
+                "json_files_under_formal_output": int(growth_baseline.get("json_files_under_formal_output", 0)),
+                "json_files_under_formal_output_reports": int(growth_baseline.get("json_files_under_formal_output_reports", 0)),
+            },
+            "current_counts": {
+                "json_files_under_formal_output": current_output_count,
+                "json_files_under_formal_output_reports": current_reports_count,
+            },
+            "delta_vs_baseline": {
+                "json_files_under_formal_output": int(growth_delta.get("json_files_under_formal_output", 0)),
+                "json_files_under_formal_output_reports": int(growth_delta.get("json_files_under_formal_output_reports", 0)),
+            },
         },
         "artifact_lifecycle_policy": {
             "declaration_pointer": str(ARTIFACT_LIFECYCLE_POLICY_DECLARATION_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),

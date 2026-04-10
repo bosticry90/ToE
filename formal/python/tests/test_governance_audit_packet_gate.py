@@ -89,6 +89,20 @@ def test_governance_audit_packet_shape() -> None:
         assert isinstance(artifact_snapshot[required_key], int)
         assert artifact_snapshot[required_key] >= 0
 
+    growth = payload.get("artifact_growth_tracking", {})
+    assert growth.get("declaration_pointer") == "formal/docs/release/GOVERNANCE_ARTIFACT_GROWTH_BASELINE_20260410_v0.md"
+    assert growth.get("baseline_report_pointer") == "formal/output/reports/governance_artifact_growth_baseline_20260410_v0.json"
+    assert growth.get("snapshot_report_pointer") == "formal/output/reports/governance_artifact_growth_snapshot_20260410_v0.json"
+    for scope in ["baseline_counts", "current_counts", "delta_vs_baseline"]:
+        values = growth.get(scope, {})
+        assert isinstance(values, dict)
+        for key in [
+            "json_files_under_formal_output",
+            "json_files_under_formal_output_reports",
+        ]:
+            assert key in values
+            assert isinstance(values[key], int)
+
     lifecycle_policy = payload.get("artifact_lifecycle_policy", {})
     assert lifecycle_policy.get("declaration_pointer") == "formal/docs/release/ARTIFACT_LIFECYCLE_POLICY_20260410_v0.md"
     assert lifecycle_policy.get("policy_pointer") == "formal/docs/release/ARTIFACT_LIFECYCLE_POLICY_20260410_v0.json"
@@ -152,6 +166,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "GOVERNANCE_AUDIT_PACKET_RUNTIME_BASELINE_DECLARATION_v0: formal/docs/release/GOVERNANCE_RUNTIME_BASELINE_20260410_v0.md",
         "GOVERNANCE_AUDIT_PACKET_RUNTIME_BASELINE_JSON_v0: formal/output/reports/governance_runtime_baseline_20260410_v0.json",
         "GOVERNANCE_AUDIT_PACKET_RUNTIME_CAPTURE_TOOL_v0: formal/python/tools/governance_runtime_baseline_capture.py",
+        "GOVERNANCE_AUDIT_PACKET_ARTIFACT_GROWTH_DECLARATION_v0: formal/docs/release/GOVERNANCE_ARTIFACT_GROWTH_BASELINE_20260410_v0.md",
+        "GOVERNANCE_AUDIT_PACKET_ARTIFACT_GROWTH_BASELINE_JSON_v0: formal/output/reports/governance_artifact_growth_baseline_20260410_v0.json",
+        "GOVERNANCE_AUDIT_PACKET_ARTIFACT_GROWTH_SNAPSHOT_JSON_v0: formal/output/reports/governance_artifact_growth_snapshot_20260410_v0.json",
+        "GOVERNANCE_AUDIT_PACKET_ARTIFACT_GROWTH_SNAPSHOT_TOOL_v0: formal/python/tools/governance_artifact_growth_snapshot.py",
         "GOVERNANCE_AUDIT_PACKET_OWNER_COVERAGE_RULE_v0: EVERY_COMPLETION_ROW_REQUIRES_PRIMARY_AND_SECONDARY_OWNER_ASSIGNMENT",
         "GOVERNANCE_AUDIT_PACKET_GATE_v0: formal/python/tests/test_governance_audit_packet_gate.py",
     ]

@@ -24,6 +24,11 @@ Baseline-pack linkage (required for convergence claims):
 - Closure owner map pointer declared? YES / NO
 - Every closure row has primary and secondary owner? YES / NO
 - Closure-growth delta recorded? YES / NO
+- Artifact growth baseline declaration pointer declared? YES / NO
+- Artifact growth baseline report pointer declared? YES / NO
+- Artifact growth snapshot report pointer declared? YES / NO
+- Artifact growth snapshot tool pointer declared? YES / NO
+- Artifact growth delta vs baseline recorded? YES / NO
 
 Representation-first triage:
 - Reduced object named? YES / NO
