@@ -23,7 +23,7 @@ REGISTRY_INDEX_PATH = (
     / "formal"
     / "output"
     / "reports"
-    / "redundancy_control_registry_family_index_20260409_v0.json"
+    / "redundancy_control_registry_family_index_full_20260409_v0.json"
 )
 SEAM_INDEX_PATH = (
     REPO_ROOT
@@ -91,6 +91,7 @@ def test_redundancy_control_admission_tokens_present() -> None:
 
     state_required = [
         "REDUNDANCY_CONTROL_ADMISSION_SEMANTICS_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM",
+        "REDUNDANCY_CONTROL_ADMISSION_SEMANTICS_SCOPE_v0: REGISTRY_FULL_PLUS_SEAM_PILOT_FAMILY_INDEXES",
         "REDUNDANCY_CONTROL_ADMISSION_SEMANTICS_RULE_v0: OWNER_AND_PARITY_PATHS_MUST_EXIST_PLUS_ARCHIVE_DESTINATION_MUST_EXIST_PLUS_RETENTION_POLICY_MUST_BE_ACTIVE_WINDOW_90_DAYS_THEN_ARCHIVE",
         "REDUNDANCY_CONTROL_ADMISSION_SEMANTICS_GATE_v0: formal/python/tests/test_redundancy_control_admission_semantics_gate.py",
     ]

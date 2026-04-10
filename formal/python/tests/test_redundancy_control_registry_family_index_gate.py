@@ -17,12 +17,40 @@ def find_repo_root(start: Path) -> Path:
 
 REPO_ROOT = find_repo_root(Path(__file__))
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
-INDEX_PATH = (
+FULL_INDEX_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "reports"
+    / "redundancy_control_registry_family_index_full_20260409_v0.json"
+)
+ARCHIVED_PILOT_INDEX_PATH = (
+    REPO_ROOT
+    / "archive"
+    / "output"
+    / "reports"
+    / "redundancy_control_registry_family_index_20260409_v0.json"
+)
+ACTIVE_PILOT_INDEX_PATH = (
     REPO_ROOT
     / "formal"
     / "output"
     / "reports"
     / "redundancy_control_registry_family_index_20260409_v0.json"
+)
+DEDUP_DECLARATION_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "REDUNDANCY_CONTROL_REGISTRY_DEDUP_WAVE1_DECLARATION_20260409_v0.md"
+)
+DEDUP_REPORT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "reports"
+    / "redundancy_control_registry_dedup_wave1_20260409_v0.json"
 )
 
 
@@ -40,39 +68,55 @@ def _json(path: Path) -> dict:
     return json.loads(_read(path))
 
 
-def test_redundancy_control_registry_family_index_shape() -> None:
-    payload = _json(INDEX_PATH)
+def test_redundancy_control_registry_family_index_wave1_shape() -> None:
+    full_payload = _json(FULL_INDEX_PATH)
+    archived_payload = _json(ARCHIVED_PILOT_INDEX_PATH)
+    dedup_payload = _json(DEDUP_REPORT_PATH)
 
-    assert payload.get("schema_id") == "REDUNDANCY_CONTROL_REGISTRY_FAMILY_INDEX_20260409_v0"
-    assert payload.get("status") == "ACTIVE_NONLIVE_NONCLAIM_PILOT"
-    assert payload.get("pilot_scope") == "ONE_REGISTRY_FAMILY"
-    assert payload.get("admission_rule") == (
-        "MISSING_OWNER_OR_RETENTION_OR_ARCHIVE_OR_PARITY_DEPENDENCIES_IS_HARD_FAIL"
+    assert not ACTIVE_PILOT_INDEX_PATH.exists(), (
+        "Registry pilot singleton must be retired from active reports after Wave 1 de-dup."
     )
 
-    families = payload.get("families")
-    assert isinstance(families, list)
-    assert len(families) == 1
+    assert full_payload.get("schema_id") == "REDUNDANCY_CONTROL_REGISTRY_FAMILY_INDEX_FULL_20260409_v0"
+    assert archived_payload.get("schema_id") == "REDUNDANCY_CONTROL_REGISTRY_FAMILY_INDEX_20260409_v0"
 
-    family = families[0]
-    assert family.get("family_id") == "TOE_MASTER_ACTION_SEAM_REGISTRY"
-    assert isinstance(family.get("canonical_owner"), str) and family["canonical_owner"]
-    assert isinstance(family.get("retention_policy"), str) and family["retention_policy"]
-    assert isinstance(family.get("archive_destination"), str) and family["archive_destination"]
+    full_families = full_payload.get("families")
+    assert isinstance(full_families, list)
+    assert any(f.get("family_id") == "TOE_MASTER_ACTION_SEAM_REGISTRY" for f in full_families)
 
-    parity_deps = family.get("parity_dependencies")
-    assert isinstance(parity_deps, list)
-    assert len(parity_deps) >= 3
+    assert dedup_payload.get("schema_id") == "REDUNDANCY_CONTROL_REGISTRY_DEDUP_WAVE1_20260409_v0"
+    assert dedup_payload.get("status") == "RUN_BOUNDED_v0_NONCLAIM"
+    assert dedup_payload.get("family_id") == "TOE_MASTER_ACTION_SEAM_REGISTRY"
+    assert dedup_payload.get("active_surface_removed") == (
+        "formal/output/reports/redundancy_control_registry_family_index_20260409_v0.json"
+    )
+    assert dedup_payload.get("archived_surface_path") == (
+        "archive/output/reports/redundancy_control_registry_family_index_20260409_v0.json"
+    )
+    assert dedup_payload.get("active_authority_surface") == (
+        "formal/output/reports/redundancy_control_registry_family_index_full_20260409_v0.json"
+    )
+
+    declaration_pointer = dedup_payload.get("dedup_declaration_pointer")
+    assert declaration_pointer == (
+        "formal/docs/release/REDUNDANCY_CONTROL_REGISTRY_DEDUP_WAVE1_DECLARATION_20260409_v0.md"
+    )
+    assert DEDUP_DECLARATION_PATH.exists(), (
+        "Registry Wave 1 de-dup declaration must exist at canonical path."
+    )
 
 
 def test_redundancy_control_registry_family_index_state_tokens_present() -> None:
     state_text = _active_text(STATE_PATH)
 
     required = [
-        "REDUNDANCY_CONTROL_REGISTRY_PILOT_STATUS_v0: ACTIVE_ONE_FAMILY_NONLIVE_NONCLAIM",
-        "REDUNDANCY_CONTROL_REGISTRY_PILOT_INDEX_v0: formal/output/reports/redundancy_control_registry_family_index_20260409_v0.json",
-        "REDUNDANCY_CONTROL_REGISTRY_PILOT_RULE_v0: MISSING_OWNER_OR_RETENTION_OR_ARCHIVE_OR_PARITY_DEPENDENCIES_IS_HARD_FAIL",
+        "REDUNDANCY_CONTROL_REGISTRY_PILOT_STATUS_v0: SUPERSEDED_BY_FULL_INDEX_DEDUP_WAVE1",
+        "REDUNDANCY_CONTROL_REGISTRY_PILOT_INDEX_ARCHIVED_v0: archive/output/reports/redundancy_control_registry_family_index_20260409_v0.json",
+        "REDUNDANCY_CONTROL_REGISTRY_DEDUP_WAVE1_DECLARATION_v0: formal/docs/release/REDUNDANCY_CONTROL_REGISTRY_DEDUP_WAVE1_DECLARATION_20260409_v0.md",
+        "REDUNDANCY_CONTROL_REGISTRY_DEDUP_WAVE1_REPORT_v0: formal/output/reports/redundancy_control_registry_dedup_wave1_20260409_v0.json",
+        "REDUNDANCY_CONTROL_REGISTRY_DEDUP_WAVE1_RULE_v0: PILOT_SINGLETON_SURFACE_MUST_BE_ARCHIVED_AND_FAMILY_COVERED_BY_FULL_INDEX",
         "REDUNDANCY_CONTROL_REGISTRY_PILOT_GATE_v0: formal/python/tests/test_redundancy_control_registry_family_index_gate.py",
     ]
     for token in required:
         assert token in state_text, f"Missing state token: {token}"
+

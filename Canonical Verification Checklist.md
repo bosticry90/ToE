@@ -73,6 +73,9 @@ Traceability:
 - Seam full-family coverage complete? YES / NO
 - Registry full-family index declared? YES / NO
 - Registry full-family coverage complete? YES / NO
+- Registry Wave-1 de-dup declaration present? YES / NO
+- Registry pilot singleton archived? YES / NO
+- Registry Wave-1 parity pointers updated? YES / NO
 - Canonical owner path exists for each pilot family? YES / NO
 - Archive destination path exists for each pilot family? YES / NO
 - Parity dependency paths exist for each pilot family? YES / NO
