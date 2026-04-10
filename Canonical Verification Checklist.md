@@ -79,6 +79,9 @@ Traceability:
 - Registry Wave-1 de-dup declaration present? YES / NO
 - Registry pilot singleton archived? YES / NO
 - Registry Wave-1 parity pointers updated? YES / NO
+- De-dup wave progress declaration present? YES / NO
+- Completed wave singleton paths archived and absent from active reports? YES / NO
+- Admission semantics remains full-index scoped? YES / NO
 - Canonical owner path exists for each pilot family? YES / NO
 - Archive destination path exists for each pilot family? YES / NO
 - Parity dependency paths exist for each pilot family? YES / NO

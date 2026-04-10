@@ -361,6 +361,7 @@ formal/python/tests/test_redundancy_control_seam_family_index_gate.py
 formal/python/tests/test_redundancy_control_admission_semantics_gate.py
 formal/python/tests/test_redundancy_control_registry_full_family_index_gate.py
 formal/python/tests/test_redundancy_control_seam_full_family_index_gate.py
+formal/python/tests/test_redundancy_control_dedup_wave_progress_gate.py
 formal/python/tests/test_sql_integrity_snapshot_tool.py
 '@
 $registryTokenCount = @($governanceGateTokenRegistry -split "`r?`n" | Where-Object { $_.Trim().Length -gt 0 }).Count

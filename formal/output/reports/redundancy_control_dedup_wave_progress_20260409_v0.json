@@ -1,0 +1,24 @@
+{
+  "schema_id": "REDUNDANCY_CONTROL_DEDUP_WAVE_PROGRESS_20260409_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "completed_waves": [
+    {
+      "wave_id": "WAVE1_REGISTRY_SINGLETON_COLLAPSE",
+      "family_id": "TOE_MASTER_ACTION_SEAM_REGISTRY",
+      "active_removed": "formal/output/reports/redundancy_control_registry_family_index_20260409_v0.json",
+      "archived_path": "archive/output/reports/redundancy_control_registry_family_index_20260409_v0.json",
+      "declaration": "formal/docs/release/REDUNDANCY_CONTROL_REGISTRY_DEDUP_WAVE1_DECLARATION_20260409_v0.md",
+      "report": "formal/output/reports/redundancy_control_registry_dedup_wave1_20260409_v0.json"
+    },
+    {
+      "wave_id": "WAVE2_SEAM_SINGLETON_COLLAPSE",
+      "family_id": "SEAM_QM_STAT_CLASS_B_PHYSICS_PILOT",
+      "active_removed": "formal/output/reports/redundancy_control_seam_family_index_20260409_v0.json",
+      "archived_path": "archive/output/reports/redundancy_control_seam_family_index_20260409_v0.json",
+      "declaration": "formal/docs/release/REDUNDANCY_CONTROL_SEAM_DEDUP_WAVE2_DECLARATION_20260409_v0.md",
+      "report": "formal/output/reports/redundancy_control_seam_dedup_wave2_20260409_v0.json"
+    }
+  ],
+  "admission_scope_required": "REGISTRY_FULL_PLUS_SEAM_FULL_FAMILY_INDEXES",
+  "regression_rule": "COMPLETED_WAVE_ACTIVE_PILOT_SINGLETON_PATHS_MUST_STAY_ARCHIVED_AND_ABSENT_FROM_ACTIVE_REPORTS"
+}

@@ -81,6 +81,12 @@ Redundancy-control seam full-family index checkpoint (R4-B, 2026-04-09):
 - `REDUNDANCY_CONTROL_SEAM_FULL_INDEX_v0: formal/output/reports/redundancy_control_seam_family_index_full_20260409_v0.json`
 - `REDUNDANCY_CONTROL_SEAM_FULL_INDEX_GATE_v0: formal/python/tests/test_redundancy_control_seam_full_family_index_gate.py`
 
+Redundancy-control dedup wave progress checkpoint (R4-C, 2026-04-09):
+- `REDUNDANCY_CONTROL_DEDUP_WAVE_PROGRESS_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `REDUNDANCY_CONTROL_DEDUP_WAVE_PROGRESS_DECLARATION_v0: formal/docs/release/REDUNDANCY_CONTROL_DEDUP_WAVE_PROGRESS_20260409_v0.md`
+- `REDUNDANCY_CONTROL_DEDUP_WAVE_PROGRESS_REPORT_v0: formal/output/reports/redundancy_control_dedup_wave_progress_20260409_v0.json`
+- `REDUNDANCY_CONTROL_DEDUP_WAVE_PROGRESS_GATE_v0: formal/python/tests/test_redundancy_control_dedup_wave_progress_gate.py`
+
 CI truth contract checkpoint (R5-A, 2026-03-20):
 - `CI_TRUTH_WORKFLOW_v0: .github/workflows/ci.yml`
 - `CI_TRUTH_GOVERNANCE_LANE_v0: PREREQUISITE`
