@@ -755,6 +755,25 @@ Pointers to detailed inventories and archives:
 Compatibility transition note:
 - Legacy pinned token surfaces remain below during transition to avoid breaking existing governance gates.
 
+## Immediate Next Steps: Global Completion Plan
+
+### TGC-77: QM Theorem-Gap Closure Increment
+- Declaration published: formal/docs/release/TGC_77_DECLARATION.md.
+- Governance gate semantics restored: Invoke-GovernanceGate now enforces declaration and matrix contracts.
+- Validation completed: focused gate + full governance + checkpoint ladder all green.
+- Checkpoint pinned: formal/docs/release/WS_10_TGC_77_QM_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260409_v0.md and formal/output/ws10_tgc77_qm_theorem_gap_closure_increment_execution_checkpoint_20260409_v0.json.
+
+### TGC-78: COSMO Theorem-Gap Closure Increment
+- Declaration published: formal/docs/release/TGC_78_DECLARATION.md.
+- Execute tranche and validate outputs using restored governance-gate semantics.
+- Pin artifacts (release docs, checkpoints).
+
+### Post-TGC-78 Verification
+- Re-read execution program and matrix.
+- Verify TGC-77 and TGC-78 completion.
+- Check matrix rows (EM/QFT/SR) for progress.
+- Review queue text for further work.
+
 State DAG compatibility inventory (transitional):
 
 ID: STATE-AUTHORITY-ROOT-v2

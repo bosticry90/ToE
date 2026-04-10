@@ -2,6 +2,60 @@ param(
   [switch]$AllowDivergenceOverride
 )
 
+function Invoke-GovernanceGate {
+  param(
+    [Parameter(Mandatory = $true)][string]$TargetRow,
+    [Parameter(Mandatory = $true)][string]$BlockerClass,
+    [Parameter(Mandatory = $true)][string]$Declaration
+  )
+
+  $matrixPath = "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md"
+
+  if (-not (Test-Path $Declaration)) {
+    throw "Governance gate failed: declaration not found at '$Declaration'."
+  }
+  if (-not (Test-Path $matrixPath)) {
+    throw "Governance gate failed: completion matrix not found at '$matrixPath'."
+  }
+
+  $declarationText = Get-Content -Path $Declaration -Raw
+  if ($declarationText -notmatch [Regex]::Escape("Target row: $TargetRow")) {
+    throw "Governance gate failed: declaration '$Declaration' does not pin target row '$TargetRow'."
+  }
+  if ($declarationText -notmatch [Regex]::Escape("Blocker class: $BlockerClass")) {
+    throw "Governance gate failed: declaration '$Declaration' does not pin blocker class '$BlockerClass'."
+  }
+
+  $matrixText = Get-Content -Path $matrixPath -Raw
+  $rowPattern = "(?m)^\|\s*" + [Regex]::Escape($TargetRow) + "\s*\|.*$"
+  $rowMatch = [Regex]::Match($matrixText, $rowPattern)
+  if (-not $rowMatch.Success) {
+    throw "Governance gate failed: target row '$TargetRow' not found in '$matrixPath'."
+  }
+
+  $cells = $rowMatch.Value.Trim('|').Split('|') | ForEach-Object { $_.Trim() }
+  if ($cells.Count -lt 8) {
+    throw "Governance gate failed: matrix row '$TargetRow' has unexpected column count."
+  }
+
+  $rowBlockerClass = $cells[4]
+  $primaryTarget = $cells[5]
+  $primaryArtifact = $cells[6]
+  $primaryGate = $cells[7]
+
+  if ($rowBlockerClass -ne $BlockerClass) {
+    throw "Governance gate failed: matrix blocker class '$rowBlockerClass' does not match expected '$BlockerClass' for row '$TargetRow'."
+  }
+
+  foreach ($requiredPath in @($primaryTarget, $primaryArtifact, $primaryGate)) {
+    if (-not (Test-Path $requiredPath)) {
+      throw "Governance gate failed: matrix-pinned path '$requiredPath' is missing for row '$TargetRow'."
+    }
+  }
+
+  Write-Host "governance_gate.ok row=$TargetRow blocker=$BlockerClass declaration=$Declaration" -ForegroundColor Green
+}
+
 $ErrorActionPreference = 'Stop'
 
 Write-Host "Running governance suite via ./py.ps1" -ForegroundColor Cyan
@@ -419,6 +473,12 @@ if ($null -ne $cargo) {
 }
 
 Write-Host "OK" -ForegroundColor Green
+
+# Governance gate for TGC-77
+Invoke-GovernanceGate -TargetRow "ROW-PILLAR-QM-001" -BlockerClass "THEOREM_GAP" -Declaration "formal/docs/release/TGC_77_DECLARATION.md"
+
+# Governance gate for TGC-78
+Invoke-GovernanceGate -TargetRow "ROW-PILLAR-COSMO-001" -BlockerClass "THEOREM_GAP" -Declaration "formal/docs/release/TGC_78_DECLARATION.md"
 
 
 

@@ -135,6 +135,7 @@ A row is considered promoted only when all of the following are true:
 - TGC-74 checkpoint pointer: formal/output/ws10_tgc74_stat_packet04_continuation_increment_execution_checkpoint_20260408_v0.json
 - TGC-75 checkpoint pointer: formal/output/ws10_tgc75_full_lane_cadence_checkpoint_20260408_v0.json
 - TGC-76 checkpoint pointer: formal/output/ws10_tgc76_row_promotion_blocker_burn_review_checkpoint_20260408_v0.json
+- TGC-77 checkpoint pointer: formal/output/ws10_tgc77_qm_theorem_gap_closure_increment_execution_checkpoint_20260409_v0.json
 
 ## Non-claim boundary
 This matrix is a repository-local execution control surface and does not represent a global adequacy claim.
