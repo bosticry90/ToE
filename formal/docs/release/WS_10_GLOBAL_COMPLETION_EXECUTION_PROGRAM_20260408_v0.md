@@ -182,6 +182,8 @@ Out of scope:
 - TGC-76 checkpoint JSON: formal/output/ws10_tgc76_row_promotion_blocker_burn_review_checkpoint_20260408_v0.json
 - TGC-77 checkpoint: formal/docs/release/WS_10_TGC_77_QM_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260409_v0.md
 - TGC-77 checkpoint JSON: formal/output/ws10_tgc77_qm_theorem_gap_closure_increment_execution_checkpoint_20260409_v0.json
+- TGC-78 checkpoint: formal/docs/release/WS_10_TGC_78_COSMO_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260409_v0.md
+- TGC-78 checkpoint JSON: formal/output/ws10_tgc78_cosmo_theorem_gap_closure_increment_execution_checkpoint_20260409_v0.json
 
 ## Execution runbook pointers
 - TGC-05 seam runbook: formal/docs/release/WS_10_TGC_05_SEAM_INCREMENT_EXECUTION_RUNBOOK_20260408_v0.md

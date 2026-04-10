@@ -765,12 +765,12 @@ Compatibility transition note:
 
 ### TGC-78: COSMO Theorem-Gap Closure Increment
 - Declaration published: formal/docs/release/TGC_78_DECLARATION.md.
-- Execute tranche and validate outputs using restored governance-gate semantics.
-- Pin artifacts (release docs, checkpoints).
+- Validation completed using restored governance-gate semantics: focused bundle + full governance + checkpoint ladder all green.
+- Checkpoint pinned: formal/docs/release/WS_10_TGC_78_COSMO_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260409_v0.md and formal/output/ws10_tgc78_cosmo_theorem_gap_closure_increment_execution_checkpoint_20260409_v0.json.
 
 ### Post-TGC-78 Verification
-- Re-read execution program and matrix.
-- Verify TGC-77 and TGC-78 completion.
+- Execution program and matrix updated with TGC-77 and TGC-78 checkpoint linkage.
+- TGC-77 and TGC-78 bounded execution checkpoints are pinned.
 - Check matrix rows (EM/QFT/SR) for progress.
 - Review queue text for further work.
 
