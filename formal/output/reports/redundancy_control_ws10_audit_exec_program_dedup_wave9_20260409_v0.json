@@ -1,0 +1,16 @@
+{
+  "schema_id": "REDUNDANCY_CONTROL_WS10_AUDIT_EXEC_PROGRAM_DEDUP_WAVE9_20260409_v0",
+  "status": "RUN_BOUNDED_v0_NONCLAIM",
+  "family_id": "WS10_EXECUTION_PROGRAM_SUPPORT_SURFACES",
+  "active_surface_removed": "formal/docs/release/WS_10_AUDIT_EXECUTION_PROGRAM_20260324_v0.md",
+  "archived_surface_path": "archive/docs/release/WS_10_AUDIT_EXECUTION_PROGRAM_20260324_v0.md",
+  "active_authority_surface": "formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md",
+  "dedup_declaration_pointer": "formal/docs/release/REDUNDANCY_CONTROL_WS10_AUDIT_EXEC_PROGRAM_DEDUP_WAVE9_DECLARATION_20260409_v0.md",
+  "parity_updated": [
+    "State_of_the_Theory.md",
+    "formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md",
+    "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+    "Canonical Verification Checklist.md",
+    "formal/python/tests/test_redundancy_control_ws10_audit_exec_program_dedup_wave9_gate.py"
+  ]
+}

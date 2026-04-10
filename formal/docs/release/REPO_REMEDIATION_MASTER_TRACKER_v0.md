@@ -207,7 +207,7 @@ Program intent: execute a strict truth-restoration sequence before any new theor
 
 ## Execution Reset Checkpoint (2026-03-24)
 - Checkpoint pointer: `formal/docs/release/WS_10_EXECUTION_RESET_SLICEB_ACTIVATION_20260324_v0.md`
-- Audit execution program pointer: `formal/docs/release/WS_10_AUDIT_EXECUTION_PROGRAM_20260324_v0.md`
+- Audit execution program pointer: `archive/docs/release/WS_10_AUDIT_EXECUTION_PROGRAM_20260324_v0.md`
 - Execution mode: `OBJECT_LEVEL_SLICEB_PRIMARY`
 - Scalar submission posture: `PAUSED_BY_OWNER_DECISION_v0`
 - Scalar technical baseline posture: `FROZEN_READ_ONLY_BASELINE_v0`

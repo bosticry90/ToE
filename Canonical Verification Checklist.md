@@ -97,6 +97,9 @@ Traceability:
 - Repo disposition checklist Wave-8 declaration present? YES / NO
 - Repo disposition active release surface archived? YES / NO
 - Repository retention policy remains active authority? YES / NO
+- WS-10 audit execution program Wave-9 declaration present? YES / NO
+- WS-10 audit execution program active release surface archived? YES / NO
+- Execution reset pointer parity preserved across state/tracker/roadmap? YES / NO
 - Canonical owner path exists for each pilot family? YES / NO
 - Archive destination path exists for each pilot family? YES / NO
 - Parity dependency paths exist for each pilot family? YES / NO

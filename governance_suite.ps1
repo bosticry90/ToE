@@ -367,6 +367,7 @@ formal/python/tests/test_redundancy_control_seam_history_archive_dedup_wave5_gat
 formal/python/tests/test_redundancy_control_packet_history_archive_dedup_wave6_gate.py
 formal/python/tests/test_redundancy_control_changelog_archive_dedup_wave7_gate.py
 formal/python/tests/test_redundancy_control_repo_disposition_checklist_dedup_wave8_gate.py
+formal/python/tests/test_redundancy_control_ws10_audit_exec_program_dedup_wave9_gate.py
 formal/python/tests/test_sql_integrity_snapshot_tool.py
 '@
 $registryTokenCount = @($governanceGateTokenRegistry -split "`r?`n" | Where-Object { $_.Trim().Length -gt 0 }).Count

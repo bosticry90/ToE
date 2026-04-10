@@ -117,6 +117,12 @@ Redundancy-control repo disposition checklist dedup checkpoint (R4-H, 2026-04-09
 - `REDUNDANCY_CONTROL_REPO_DISPOSITION_CHECKLIST_DEDUP_WAVE8_REPORT_v0: formal/output/reports/redundancy_control_repo_disposition_checklist_dedup_wave8_20260409_v0.json`
 - `REDUNDANCY_CONTROL_REPO_DISPOSITION_CHECKLIST_DEDUP_WAVE8_GATE_v0: formal/python/tests/test_redundancy_control_repo_disposition_checklist_dedup_wave8_gate.py`
 
+Redundancy-control WS-10 audit execution program dedup checkpoint (R4-I, 2026-04-09):
+- `REDUNDANCY_CONTROL_WS10_AUDIT_EXEC_PROGRAM_DEDUP_WAVE9_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `REDUNDANCY_CONTROL_WS10_AUDIT_EXEC_PROGRAM_DEDUP_WAVE9_DECLARATION_v0: formal/docs/release/REDUNDANCY_CONTROL_WS10_AUDIT_EXEC_PROGRAM_DEDUP_WAVE9_DECLARATION_20260409_v0.md`
+- `REDUNDANCY_CONTROL_WS10_AUDIT_EXEC_PROGRAM_DEDUP_WAVE9_REPORT_v0: formal/output/reports/redundancy_control_ws10_audit_exec_program_dedup_wave9_20260409_v0.json`
+- `REDUNDANCY_CONTROL_WS10_AUDIT_EXEC_PROGRAM_DEDUP_WAVE9_GATE_v0: formal/python/tests/test_redundancy_control_ws10_audit_exec_program_dedup_wave9_gate.py`
+
 CI truth contract checkpoint (R5-A, 2026-03-20):
 - `CI_TRUTH_WORKFLOW_v0: .github/workflows/ci.yml`
 - `CI_TRUTH_GOVERNANCE_LANE_v0: PREREQUISITE`
@@ -694,7 +700,7 @@ Theory restart pilot activation (2026-03-19):
 
 Execution reset checkpoint (2026-03-24):
 - Execution reset packet pointer: `formal/docs/release/WS_10_EXECUTION_RESET_SLICEB_ACTIVATION_20260324_v0.md`.
-- Audit execution program pointer: `formal/docs/release/WS_10_AUDIT_EXECUTION_PROGRAM_20260324_v0.md`.
+- Audit execution program pointer: `archive/docs/release/WS_10_AUDIT_EXECUTION_PROGRAM_20260324_v0.md`.
 - `THEORY_RESTART_EXECUTION_MODE_v0: OBJECT_LEVEL_SLICEB_PRIMARY`
 - `SCALAR_SUBMISSION_EXECUTION_POSTURE_v0: PAUSED_BY_OWNER_DECISION_v0`
 - `SCALAR_TECHNICAL_BASELINE_POSTURE_v0: FROZEN_READ_ONLY_BASELINE_v0`

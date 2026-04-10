@@ -614,7 +614,7 @@ Immediate bounded theory restart slice (2026-03-19):
 
 Execution reset checkpoint (2026-03-24):
 - Execution reset packet pointer: `formal/docs/release/WS_10_EXECUTION_RESET_SLICEB_ACTIVATION_20260324_v0.md`.
-- Audit execution program pointer: `formal/docs/release/WS_10_AUDIT_EXECUTION_PROGRAM_20260324_v0.md`.
+- Audit execution program pointer: `archive/docs/release/WS_10_AUDIT_EXECUTION_PROGRAM_20260324_v0.md`.
 - `THEORY_RESTART_EXECUTION_MODE_v0: OBJECT_LEVEL_SLICEB_PRIMARY`
 - `SCALAR_SUBMISSION_EXECUTION_POSTURE_v0: PAUSED_BY_OWNER_DECISION_v0`
 - `SCALAR_TECHNICAL_BASELINE_POSTURE_v0: FROZEN_READ_ONLY_BASELINE_v0`
