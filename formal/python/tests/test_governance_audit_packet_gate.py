@@ -189,6 +189,31 @@ def test_governance_audit_packet_shape() -> None:
         assert key in components
         assert isinstance(components[key], (int, float))
 
+    action_policy = payload.get("promotion_action_policy", {})
+    assert action_policy.get("declaration_pointer") == "formal/docs/release/GOVERNANCE_PROMOTION_READINESS_ACTION_20260410_v0.md"
+    assert action_policy.get("report_pointer") == "formal/output/reports/governance_promotion_readiness_action_20260410_v0.json"
+    readiness_input = action_policy.get("readiness_input", {})
+    assert readiness_input.get("status") == readiness.get("readiness_status")
+    assert readiness_input.get("status_rule") == readiness.get("status_rule")
+    status_rules = action_policy.get("status_action_rules", {})
+    assert set(status_rules.keys()) == {"READY", "CONDITIONAL", "WATCH", "BLOCKED"}
+    for rule_name, rule in status_rules.items():
+        assert isinstance(rule.get("promotion_allowed"), bool), rule_name
+        assert isinstance(rule.get("required_owner_signoff"), list), rule_name
+        assert isinstance(rule.get("allowed_tranche_classes"), list), rule_name
+        assert isinstance(rule.get("exception_required"), bool), rule_name
+        assert "required_exception_artifact" in rule
+        assert isinstance(rule.get("action_summary"), str) and rule.get("action_summary")
+
+    current_action = action_policy.get("current_action", {})
+    assert current_action.get("status") == readiness.get("readiness_status")
+    assert isinstance(current_action.get("promotion_allowed"), bool)
+    assert isinstance(current_action.get("required_owner_signoff"), list)
+    assert isinstance(current_action.get("allowed_tranche_classes"), list)
+    assert isinstance(current_action.get("exception_required"), bool)
+    assert "required_exception_artifact" in current_action
+    assert isinstance(current_action.get("action_summary"), str) and current_action.get("action_summary")
+
 
 def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
     state_text = _active_text(STATE_PATH)
@@ -215,6 +240,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "GOVERNANCE_AUDIT_PACKET_PROMOTION_READINESS_JSON_v0: formal/output/reports/governance_promotion_readiness_score_20260410_v0.json",
         "GOVERNANCE_AUDIT_PACKET_PROMOTION_READINESS_TOOL_v0: formal/python/tools/governance_promotion_readiness_score.py",
         "GOVERNANCE_AUDIT_PACKET_PROMOTION_READINESS_STATUS_RULE_v0: READY_GE_85_CONDITIONAL_GE_65_WATCH_GE_45_ELSE_BLOCKED",
+        "GOVERNANCE_AUDIT_PACKET_PROMOTION_ACTION_POLICY_DECLARATION_v0: formal/docs/release/GOVERNANCE_PROMOTION_READINESS_ACTION_20260410_v0.md",
+        "GOVERNANCE_AUDIT_PACKET_PROMOTION_ACTION_POLICY_JSON_v0: formal/output/reports/governance_promotion_readiness_action_20260410_v0.json",
+        "GOVERNANCE_AUDIT_PACKET_PROMOTION_ACTION_POLICY_TOOL_v0: formal/python/tools/governance_promotion_readiness_action.py",
+        "GOVERNANCE_AUDIT_PACKET_PROMOTION_ACTION_POLICY_RULE_v0: BLOCKED_DISALLOWS_PROMOTION_CONDITIONAL_IS_LIMITED_READY_IS_ALLOWED_WATCH_BLOCKED_REQUIRE_EXCEPTION_POINTERS",
         "GOVERNANCE_AUDIT_PACKET_OWNER_COVERAGE_RULE_v0: EVERY_COMPLETION_ROW_REQUIRES_PRIMARY_AND_SECONDARY_OWNER_ASSIGNMENT",
         "GOVERNANCE_AUDIT_PACKET_GATE_v0: formal/python/tests/test_governance_audit_packet_gate.py",
     ]
@@ -240,6 +269,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "Promotion-readiness score recorded? YES / NO",
         "Promotion-readiness status recorded? YES / NO",
         "Promotion-readiness status rule applied? YES / NO",
+        "Promotion-action policy declaration pointer declared? YES / NO",
+        "Promotion-action policy report pointer declared? YES / NO",
+        "Promotion-action policy status mapping exhaustive? YES / NO",
+        "Promotion-action policy enforced for current readiness status? YES / NO",
     ]
     for token in checklist_required:
         assert token in checklist_text, f"Missing checklist token: {token}"

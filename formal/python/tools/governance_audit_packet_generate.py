@@ -25,6 +25,8 @@ BLOCKER_CLOSURE_MAP_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release"
 BLOCKER_CLOSURE_MAP_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_blocker_closure_map_20260410_v0.json"
 PROMOTION_READINESS_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_PROMOTION_READINESS_SCORE_20260410_v0.md"
 PROMOTION_READINESS_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_promotion_readiness_score_20260410_v0.json"
+PROMOTION_ACTION_POLICY_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_PROMOTION_READINESS_ACTION_20260410_v0.md"
+PROMOTION_ACTION_POLICY_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_promotion_readiness_action_20260410_v0.json"
 GOVERNANCE_RUNTIME_BASELINE_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_RUNTIME_BASELINE_20260410_v0.md"
 GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_runtime_baseline_20260410_v0.json"
 GOVERNANCE_ARTIFACT_GROWTH_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_ARTIFACT_GROWTH_BASELINE_20260410_v0.md"
@@ -109,6 +111,7 @@ def build_packet(
     closure_owner_map = _read_json(CLOSURE_OWNER_MAP_PATH)
     blocker_closure_map = _read_json(BLOCKER_CLOSURE_MAP_REPORT_PATH)
     promotion_readiness = _read_json(PROMOTION_READINESS_REPORT_PATH)
+    promotion_action_policy = _read_json(PROMOTION_ACTION_POLICY_REPORT_PATH)
     runtime_baseline = _read_json(GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH)
     artifact_growth_baseline = _read_json(GOVERNANCE_ARTIFACT_GROWTH_BASELINE_PATH)
     artifact_growth_snapshot = _read_json(GOVERNANCE_ARTIFACT_GROWTH_SNAPSHOT_PATH)
@@ -275,6 +278,13 @@ def build_packet(
             "readiness_status": promotion_readiness.get("score", {}).get("readiness_status"),
             "status_rule": promotion_readiness.get("score", {}).get("status_rule"),
             "components": promotion_readiness.get("components", {}),
+        },
+        "promotion_action_policy": {
+            "declaration_pointer": str(PROMOTION_ACTION_POLICY_DECLARATION_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "report_pointer": str(PROMOTION_ACTION_POLICY_REPORT_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "readiness_input": promotion_action_policy.get("readiness_input", {}),
+            "current_action": promotion_action_policy.get("current_action", {}),
+            "status_action_rules": promotion_action_policy.get("status_action_rules", {}),
         },
         "risk_delta_rubric": {
             "required_axes": [

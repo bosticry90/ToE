@@ -38,6 +38,10 @@ Baseline-pack linkage (required for convergence claims):
 - Promotion-readiness score recorded? YES / NO
 - Promotion-readiness status recorded? YES / NO
 - Promotion-readiness status rule applied? YES / NO
+- Promotion-action policy declaration pointer declared? YES / NO
+- Promotion-action policy report pointer declared? YES / NO
+- Promotion-action policy status mapping exhaustive? YES / NO
+- Promotion-action policy enforced for current readiness status? YES / NO
 
 Representation-first triage:
 - Reduced object named? YES / NO

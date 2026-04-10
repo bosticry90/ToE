@@ -57,6 +57,15 @@ Publish a machine-readable governance audit packet that separates artifact growt
 - explicit status-rule threshold string
 - component-level sub-scores for ownership, map coverage, runtime, artifact growth, and blocker pressure
 
+## Promotion-action policy requirements
+- promotion-action policy declaration pointer
+- promotion-action policy report pointer
+- exhaustive action mapping for READY, CONDITIONAL, WATCH, BLOCKED
+- current-status action selection aligned to readiness status
+- blocked status disallows promotion actions
+- conditional status allows limited tranche classes only
+- watch and blocked statuses require exception artifact pointers
+
 ## Gate hook
 - formal/python/tests/test_governance_audit_packet_gate.py
 
