@@ -289,8 +289,9 @@ Out of scope:
 74. TGC-74: Execute next bounded STAT packet04 continuation increment and checkpoint it (DONE).
 75. TGC-75: Execute full-lane cadence checkpoint (`governance_suite.ps1` + full `formal/python/tests`) and pin artifact (DONE).
 76. TGC-76: Publish 8-tranche window row-promotion review and blocker-burn scoreboard update (DONE).
-77. TGC-77: Execute theorem-gap closure increment for ROW-PILLAR-QM-001 with bounded checkpointing (NEXT).
-78. TGC-78: Execute theorem-gap closure increment for ROW-PILLAR-COSMO-001 with bounded checkpointing (NEXT).
+77. TGC-77: Execute theorem-gap closure increment for ROW-PILLAR-QM-001 with bounded checkpointing (DONE).
+78. TGC-78: Execute theorem-gap closure increment for ROW-PILLAR-COSMO-001 with bounded checkpointing (DONE).
+79. TGC-79: Publish post-theorem-gap blocker-burn delta reevaluation after TGC-77/TGC-78 and enforce halt-if-unchanged rule (NEXT).
 
 ## Verification contract
 - Governance prerequisite lane must stay green:

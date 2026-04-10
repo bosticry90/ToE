@@ -40,9 +40,9 @@ A row is considered promoted only when all of the following are true:
 | ROW-PILLAR-SR-001 | pillar | SR_DERIVATION_CHAIN | IN_PROGRESS | THEOREM_GAP | formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md | formal/output/sr_empirical_comparison_packet_05_v0.json | formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py |
 
 ## Throughput queue ordering
-1. Execute theorem-gap closure increment for ROW-PILLAR-QM-001 with bounded checkpointing.
-2. Execute theorem-gap closure increment for ROW-PILLAR-COSMO-001 with bounded checkpointing.
-3. Resume seam/STAT repeating cadence only after post-closure blocker-burn reevaluation.
+1. Publish post-theorem-gap blocker-burn delta reevaluation checkpoint after TGC-77/TGC-78.
+2. Halt seam/STAT resume tranches while blocker-burn delta remains unchanged.
+3. Publish refreshed row-promotion and blocker-burn review checkpoint before any new resume exception.
 
 ## Blocker-burn scoreboard (rolling 8-tranche window)
 - Baseline counts (current snapshot):
@@ -137,6 +137,7 @@ A row is considered promoted only when all of the following are true:
 - TGC-76 checkpoint pointer: formal/output/ws10_tgc76_row_promotion_blocker_burn_review_checkpoint_20260408_v0.json
 - TGC-77 checkpoint pointer: formal/output/ws10_tgc77_qm_theorem_gap_closure_increment_execution_checkpoint_20260409_v0.json
 - TGC-78 checkpoint pointer: formal/output/ws10_tgc78_cosmo_theorem_gap_closure_increment_execution_checkpoint_20260409_v0.json
+- TGC-79 checkpoint pointer: formal/output/ws10_tgc79_post_theorem_gap_blocker_burn_delta_reevaluation_checkpoint_20260410_v0.json
 
 ## Non-claim boundary
 This matrix is a repository-local execution control surface and does not represent a global adequacy claim.
