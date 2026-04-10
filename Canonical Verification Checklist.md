@@ -85,6 +85,9 @@ Traceability:
 - Seam QM-STAT owner Wave-4 declaration present? YES / NO
 - Seam QM-STAT legacy owner surface archived? YES / NO
 - Seam QM-STAT full-index owner unchanged? YES / NO
+- Seam history archive Wave-5 declaration present? YES / NO
+- Seam history active release surface archived? YES / NO
+- Seam status semantics owner remains active? YES / NO
 - Canonical owner path exists for each pilot family? YES / NO
 - Archive destination path exists for each pilot family? YES / NO
 - Parity dependency paths exist for each pilot family? YES / NO
