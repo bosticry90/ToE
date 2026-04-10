@@ -147,7 +147,7 @@ Packaging/publication debt:
 - Compact authority surface pointer: `State_of_the_Theory.md`
 - Centralized math/physics/equations compendium pointer: `formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md`
 - Changelog archive summary pointer: `formal/docs/release/TOE_CHANGELOG_ARCHIVE_v0.md`
-- Packet history archive summary pointer: `formal/docs/release/TOE_PACKET_HISTORY_ARCHIVE_v0.md`
+- Packet history archive summary pointer: `archive/docs/release/TOE_PACKET_HISTORY_ARCHIVE_v0.md`
 - Seam history archive summary pointer: `archive/docs/release/TOE_SEAM_HISTORY_ARCHIVE_v0.md`
 - Archived history extract pointer: `archive/State_of_the_Theory_ARCHIVED_HISTORY_EXTRACT_v0.md`
 
