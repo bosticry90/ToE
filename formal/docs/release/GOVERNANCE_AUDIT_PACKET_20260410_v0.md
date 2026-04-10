@@ -49,6 +49,14 @@ Publish a machine-readable governance audit packet that separates artifact growt
 - blocker class plus owning row/lane per map row
 - required closure artifact and exit criterion per map row
 
+## Promotion-readiness requirements
+- promotion-readiness declaration pointer
+- promotion-readiness report pointer
+- readiness score (0 to 100)
+- readiness status class
+- explicit status-rule threshold string
+- component-level sub-scores for ownership, map coverage, runtime, artifact growth, and blocker pressure
+
 ## Gate hook
 - formal/python/tests/test_governance_audit_packet_gate.py
 

@@ -168,6 +168,27 @@ def test_governance_audit_packet_shape() -> None:
         "closure_growth_delta",
     }
 
+    readiness = payload.get("promotion_readiness", {})
+    assert readiness.get("declaration_pointer") == "formal/docs/release/GOVERNANCE_PROMOTION_READINESS_SCORE_20260410_v0.md"
+    assert readiness.get("report_pointer") == "formal/output/reports/governance_promotion_readiness_score_20260410_v0.json"
+    score = readiness.get("readiness_score_0_to_100")
+    assert isinstance(score, (int, float))
+    assert 0 <= score <= 100
+    assert readiness.get("readiness_status") in {"READY", "CONDITIONAL", "WATCH", "BLOCKED"}
+    assert readiness.get("status_rule") == "READY>=85; CONDITIONAL>=65; WATCH>=45; else BLOCKED"
+    components = readiness.get("components", {})
+    assert isinstance(components, dict)
+    for key in [
+        "owner_coverage_ratio",
+        "blocker_map_coverage_ratio",
+        "runtime_health_score",
+        "artifact_growth_score",
+        "blocker_pressure_score",
+        "blocker_delta_bonus",
+    ]:
+        assert key in components
+        assert isinstance(components[key], (int, float))
+
 
 def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
     state_text = _active_text(STATE_PATH)
@@ -190,6 +211,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "GOVERNANCE_AUDIT_PACKET_BLOCKER_CLOSURE_MAP_DECLARATION_v0: formal/docs/release/GOVERNANCE_BLOCKER_CLOSURE_MAP_20260410_v0.md",
         "GOVERNANCE_AUDIT_PACKET_BLOCKER_CLOSURE_MAP_JSON_v0: formal/output/reports/governance_blocker_closure_map_20260410_v0.json",
         "GOVERNANCE_AUDIT_PACKET_BLOCKER_CLOSURE_MAP_TOOL_v0: formal/python/tools/governance_blocker_closure_map_generate.py",
+        "GOVERNANCE_AUDIT_PACKET_PROMOTION_READINESS_DECLARATION_v0: formal/docs/release/GOVERNANCE_PROMOTION_READINESS_SCORE_20260410_v0.md",
+        "GOVERNANCE_AUDIT_PACKET_PROMOTION_READINESS_JSON_v0: formal/output/reports/governance_promotion_readiness_score_20260410_v0.json",
+        "GOVERNANCE_AUDIT_PACKET_PROMOTION_READINESS_TOOL_v0: formal/python/tools/governance_promotion_readiness_score.py",
+        "GOVERNANCE_AUDIT_PACKET_PROMOTION_READINESS_STATUS_RULE_v0: READY_GE_85_CONDITIONAL_GE_65_WATCH_GE_45_ELSE_BLOCKED",
         "GOVERNANCE_AUDIT_PACKET_OWNER_COVERAGE_RULE_v0: EVERY_COMPLETION_ROW_REQUIRES_PRIMARY_AND_SECONDARY_OWNER_ASSIGNMENT",
         "GOVERNANCE_AUDIT_PACKET_GATE_v0: formal/python/tests/test_governance_audit_packet_gate.py",
     ]
@@ -210,6 +235,11 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "Blocker-to-closure map report pointer declared? YES / NO",
         "Blocker-to-closure map includes blocker class plus owning row/lane? YES / NO",
         "Blocker-to-closure map includes required closure artifact and exit criterion? YES / NO",
+        "Promotion-readiness declaration pointer declared? YES / NO",
+        "Promotion-readiness report pointer declared? YES / NO",
+        "Promotion-readiness score recorded? YES / NO",
+        "Promotion-readiness status recorded? YES / NO",
+        "Promotion-readiness status rule applied? YES / NO",
     ]
     for token in checklist_required:
         assert token in checklist_text, f"Missing checklist token: {token}"

@@ -23,6 +23,8 @@ ARTIFACT_LIFECYCLE_POLICY_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "re
 CLOSURE_OWNER_MAP_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_AUDIT_PACKET_CLOSURE_OWNER_MAP_20260410_v0.json"
 BLOCKER_CLOSURE_MAP_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_BLOCKER_CLOSURE_MAP_20260410_v0.md"
 BLOCKER_CLOSURE_MAP_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_blocker_closure_map_20260410_v0.json"
+PROMOTION_READINESS_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_PROMOTION_READINESS_SCORE_20260410_v0.md"
+PROMOTION_READINESS_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_promotion_readiness_score_20260410_v0.json"
 GOVERNANCE_RUNTIME_BASELINE_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_RUNTIME_BASELINE_20260410_v0.md"
 GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_runtime_baseline_20260410_v0.json"
 GOVERNANCE_ARTIFACT_GROWTH_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_ARTIFACT_GROWTH_BASELINE_20260410_v0.md"
@@ -106,6 +108,7 @@ def build_packet(
     lifecycle_policy = _read_json(ARTIFACT_LIFECYCLE_POLICY_PATH)
     closure_owner_map = _read_json(CLOSURE_OWNER_MAP_PATH)
     blocker_closure_map = _read_json(BLOCKER_CLOSURE_MAP_REPORT_PATH)
+    promotion_readiness = _read_json(PROMOTION_READINESS_REPORT_PATH)
     runtime_baseline = _read_json(GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH)
     artifact_growth_baseline = _read_json(GOVERNANCE_ARTIFACT_GROWTH_BASELINE_PATH)
     artifact_growth_snapshot = _read_json(GOVERNANCE_ARTIFACT_GROWTH_SNAPSHOT_PATH)
@@ -264,6 +267,14 @@ def build_packet(
             },
             "source_matrix": str(COMPLETION_MATRIX_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
             "seam_inventory_pointer": str(SEAM_INVENTORY_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+        },
+        "promotion_readiness": {
+            "declaration_pointer": str(PROMOTION_READINESS_DECLARATION_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "report_pointer": str(PROMOTION_READINESS_REPORT_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+            "readiness_score_0_to_100": promotion_readiness.get("score", {}).get("readiness_score_0_to_100"),
+            "readiness_status": promotion_readiness.get("score", {}).get("readiness_status"),
+            "status_rule": promotion_readiness.get("score", {}).get("status_rule"),
+            "components": promotion_readiness.get("components", {}),
         },
         "risk_delta_rubric": {
             "required_axes": [

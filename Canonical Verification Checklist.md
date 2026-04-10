@@ -33,6 +33,11 @@ Baseline-pack linkage (required for convergence claims):
 - Blocker-to-closure map report pointer declared? YES / NO
 - Blocker-to-closure map includes blocker class plus owning row/lane? YES / NO
 - Blocker-to-closure map includes required closure artifact and exit criterion? YES / NO
+- Promotion-readiness declaration pointer declared? YES / NO
+- Promotion-readiness report pointer declared? YES / NO
+- Promotion-readiness score recorded? YES / NO
+- Promotion-readiness status recorded? YES / NO
+- Promotion-readiness status rule applied? YES / NO
 
 Representation-first triage:
 - Reduced object named? YES / NO
