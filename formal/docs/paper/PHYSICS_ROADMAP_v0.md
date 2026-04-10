@@ -45,6 +45,7 @@ R6 consolidation checkpoint (R6-CLOSEOUT, 2026-03-20):
 
 Repository-wide governance and physics status audit checkpoint (2026-03-15):
 - Audit release doc pointer: `formal/docs/release/REPO_STATUS_AUDIT_20260315_v0.md`.
+- Comprehensive audit archive pointer: `archive/docs/release/REPO_COMPREHENSIVE_AUDIT_20260317_v0.md`.
 - Audit checkpoint pointer: `formal/output/repo_status_audit_20260315_checkpoint_v0.json`.
 - Audit gate pointer: `formal/python/tests/test_repo_status_audit_20260315_gate.py`.
 - `REPO_STATUS_AUDIT_DATE_v0: 2026-03-15`

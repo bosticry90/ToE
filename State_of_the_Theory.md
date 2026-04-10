@@ -123,6 +123,12 @@ Redundancy-control WS-10 audit execution program dedup checkpoint (R4-I, 2026-04
 - `REDUNDANCY_CONTROL_WS10_AUDIT_EXEC_PROGRAM_DEDUP_WAVE9_REPORT_v0: formal/output/reports/redundancy_control_ws10_audit_exec_program_dedup_wave9_20260409_v0.json`
 - `REDUNDANCY_CONTROL_WS10_AUDIT_EXEC_PROGRAM_DEDUP_WAVE9_GATE_v0: formal/python/tests/test_redundancy_control_ws10_audit_exec_program_dedup_wave9_gate.py`
 
+Redundancy-control repo comprehensive audit dedup checkpoint (R4-J, 2026-04-09):
+- `REDUNDANCY_CONTROL_REPO_COMPREHENSIVE_AUDIT_DEDUP_WAVE10_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `REDUNDANCY_CONTROL_REPO_COMPREHENSIVE_AUDIT_DEDUP_WAVE10_DECLARATION_v0: formal/docs/release/REDUNDANCY_CONTROL_REPO_COMPREHENSIVE_AUDIT_DEDUP_WAVE10_DECLARATION_20260409_v0.md`
+- `REDUNDANCY_CONTROL_REPO_COMPREHENSIVE_AUDIT_DEDUP_WAVE10_REPORT_v0: formal/output/reports/redundancy_control_repo_comprehensive_audit_dedup_wave10_20260409_v0.json`
+- `REDUNDANCY_CONTROL_REPO_COMPREHENSIVE_AUDIT_DEDUP_WAVE10_GATE_v0: formal/python/tests/test_redundancy_control_repo_comprehensive_audit_dedup_wave10_gate.py`
+
 CI truth contract checkpoint (R5-A, 2026-03-20):
 - `CI_TRUTH_WORKFLOW_v0: .github/workflows/ci.yml`
 - `CI_TRUTH_GOVERNANCE_LANE_v0: PREREQUISITE`
@@ -773,6 +779,7 @@ Last updated: 2026-03-15
 
 Repository-wide governance and physics status audit checkpoint (2026-03-15):
 - Audit release doc pointer: `formal/docs/release/REPO_STATUS_AUDIT_20260315_v0.md`.
+- Comprehensive audit archive pointer: `archive/docs/release/REPO_COMPREHENSIVE_AUDIT_20260317_v0.md`.
 - Audit checkpoint pointer: `formal/output/repo_status_audit_20260315_checkpoint_v0.json`.
 - Audit gate pointer: `formal/python/tests/test_repo_status_audit_20260315_gate.py`.
 - `REPO_STATUS_AUDIT_DATE_v0: 2026-03-15`
