@@ -111,6 +111,12 @@ Redundancy-control changelog archive dedup checkpoint (R4-G, 2026-04-09):
 - `REDUNDANCY_CONTROL_CHANGELOG_ARCHIVE_DEDUP_WAVE7_REPORT_v0: formal/output/reports/redundancy_control_changelog_archive_dedup_wave7_20260409_v0.json`
 - `REDUNDANCY_CONTROL_CHANGELOG_ARCHIVE_DEDUP_WAVE7_GATE_v0: formal/python/tests/test_redundancy_control_changelog_archive_dedup_wave7_gate.py`
 
+Redundancy-control repo disposition checklist dedup checkpoint (R4-H, 2026-04-09):
+- `REDUNDANCY_CONTROL_REPO_DISPOSITION_CHECKLIST_DEDUP_WAVE8_STATUS_v0: RUN_BOUNDED_v0_NONCLAIM`
+- `REDUNDANCY_CONTROL_REPO_DISPOSITION_CHECKLIST_DEDUP_WAVE8_DECLARATION_v0: formal/docs/release/REDUNDANCY_CONTROL_REPO_DISPOSITION_CHECKLIST_DEDUP_WAVE8_DECLARATION_20260409_v0.md`
+- `REDUNDANCY_CONTROL_REPO_DISPOSITION_CHECKLIST_DEDUP_WAVE8_REPORT_v0: formal/output/reports/redundancy_control_repo_disposition_checklist_dedup_wave8_20260409_v0.json`
+- `REDUNDANCY_CONTROL_REPO_DISPOSITION_CHECKLIST_DEDUP_WAVE8_GATE_v0: formal/python/tests/test_redundancy_control_repo_disposition_checklist_dedup_wave8_gate.py`
+
 CI truth contract checkpoint (R5-A, 2026-03-20):
 - `CI_TRUTH_WORKFLOW_v0: .github/workflows/ci.yml`
 - `CI_TRUTH_GOVERNANCE_LANE_v0: PREREQUISITE`
@@ -1895,7 +1901,7 @@ Governance architecture-freeze checkpoint (2026-02-18):
 
 Repository disposition checkpoint (2026-03-11):
 - Promote/archive/prune checklist is pinned:
-  - `formal/docs/release/REPO_PROMOTE_ARCHIVE_PRUNE_CHECKLIST_v0.md`
+  - `archive/docs/release/REPO_PROMOTE_ARCHIVE_PRUNE_CHECKLIST_v0.md`
 - Archived root planning note (reference-only):
   - `archive/docs/Deepening.txt`
 - Aristotle exploratory hold (not promoted into canonical governance/physics workflow):

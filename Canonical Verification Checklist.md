@@ -94,6 +94,9 @@ Traceability:
 - Changelog archive Wave-7 declaration present? YES / NO
 - Changelog active release surface archived? YES / NO
 - Change posture authority remains in compact state and inventory? YES / NO
+- Repo disposition checklist Wave-8 declaration present? YES / NO
+- Repo disposition active release surface archived? YES / NO
+- Repository retention policy remains active authority? YES / NO
 - Canonical owner path exists for each pilot family? YES / NO
 - Archive destination path exists for each pilot family? YES / NO
 - Parity dependency paths exist for each pilot family? YES / NO
