@@ -29,6 +29,10 @@ Baseline-pack linkage (required for convergence claims):
 - Artifact growth snapshot report pointer declared? YES / NO
 - Artifact growth snapshot tool pointer declared? YES / NO
 - Artifact growth delta vs baseline recorded? YES / NO
+- Blocker-to-closure map declaration pointer declared? YES / NO
+- Blocker-to-closure map report pointer declared? YES / NO
+- Blocker-to-closure map includes blocker class plus owning row/lane? YES / NO
+- Blocker-to-closure map includes required closure artifact and exit criterion? YES / NO
 
 Representation-first triage:
 - Reduced object named? YES / NO

@@ -124,6 +124,23 @@ def test_governance_audit_packet_shape() -> None:
     for item in unresolved:
         assert item in REQUIRED_BLOCKER_CLASSES
 
+    blocker_to_closure = closure_map.get("blocker_to_closure_map", {})
+    assert blocker_to_closure.get("declaration_pointer") == "formal/docs/release/GOVERNANCE_BLOCKER_CLOSURE_MAP_20260410_v0.md"
+    assert blocker_to_closure.get("report_pointer") == "formal/output/reports/governance_blocker_closure_map_20260410_v0.json"
+    assert blocker_to_closure.get("rows_total") == closure_map.get("rows_total")
+    assert blocker_to_closure.get("missing_owner_rows") == []
+    mappings = blocker_to_closure.get("mappings", [])
+    assert isinstance(mappings, list)
+    assert len(mappings) == closure_map.get("rows_total")
+    for row in mappings:
+        assert row.get("blocker_class") in REQUIRED_BLOCKER_CLASSES
+        assert isinstance(row.get("row_id"), str) and row["row_id"]
+        assert isinstance(row.get("owning_lane"), str) and row["owning_lane"]
+        assert isinstance(row.get("required_closure_artifact"), str) and row["required_closure_artifact"]
+        assert isinstance(row.get("required_evidence_surface"), str) and row["required_evidence_surface"]
+        assert isinstance(row.get("exit_criterion"), str) and row["exit_criterion"]
+        assert isinstance(row.get("closure_gate"), str) and row["closure_gate"]
+
     owner_assignments = closure_map.get("row_owner_assignments", [])
     assert isinstance(owner_assignments, list)
     assert len(owner_assignments) == closure_map.get("rows_total")
@@ -170,6 +187,9 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "GOVERNANCE_AUDIT_PACKET_ARTIFACT_GROWTH_BASELINE_JSON_v0: formal/output/reports/governance_artifact_growth_baseline_20260410_v0.json",
         "GOVERNANCE_AUDIT_PACKET_ARTIFACT_GROWTH_SNAPSHOT_JSON_v0: formal/output/reports/governance_artifact_growth_snapshot_20260410_v0.json",
         "GOVERNANCE_AUDIT_PACKET_ARTIFACT_GROWTH_SNAPSHOT_TOOL_v0: formal/python/tools/governance_artifact_growth_snapshot.py",
+        "GOVERNANCE_AUDIT_PACKET_BLOCKER_CLOSURE_MAP_DECLARATION_v0: formal/docs/release/GOVERNANCE_BLOCKER_CLOSURE_MAP_20260410_v0.md",
+        "GOVERNANCE_AUDIT_PACKET_BLOCKER_CLOSURE_MAP_JSON_v0: formal/output/reports/governance_blocker_closure_map_20260410_v0.json",
+        "GOVERNANCE_AUDIT_PACKET_BLOCKER_CLOSURE_MAP_TOOL_v0: formal/python/tools/governance_blocker_closure_map_generate.py",
         "GOVERNANCE_AUDIT_PACKET_OWNER_COVERAGE_RULE_v0: EVERY_COMPLETION_ROW_REQUIRES_PRIMARY_AND_SECONDARY_OWNER_ASSIGNMENT",
         "GOVERNANCE_AUDIT_PACKET_GATE_v0: formal/python/tests/test_governance_audit_packet_gate.py",
     ]
@@ -186,6 +206,10 @@ def test_governance_audit_packet_state_and_checklist_tokens_present() -> None:
         "Closure owner map pointer declared? YES / NO",
         "Every closure row has primary and secondary owner? YES / NO",
         "Closure-growth delta recorded? YES / NO",
+        "Blocker-to-closure map declaration pointer declared? YES / NO",
+        "Blocker-to-closure map report pointer declared? YES / NO",
+        "Blocker-to-closure map includes blocker class plus owning row/lane? YES / NO",
+        "Blocker-to-closure map includes required closure artifact and exit criterion? YES / NO",
     ]
     for token in checklist_required:
         assert token in checklist_text, f"Missing checklist token: {token}"

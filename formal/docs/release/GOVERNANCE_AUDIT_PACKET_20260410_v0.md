@@ -44,6 +44,10 @@ Publish a machine-readable governance audit packet that separates artifact growt
 - seam/theorem source pointers
 - row owner assignments for all rows
 - owner coverage ratio and missing-row list
+- blocker-to-closure declaration pointer
+- blocker-to-closure report pointer
+- blocker class plus owning row/lane per map row
+- required closure artifact and exit criterion per map row
 
 ## Gate hook
 - formal/python/tests/test_governance_audit_packet_gate.py

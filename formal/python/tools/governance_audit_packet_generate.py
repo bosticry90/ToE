@@ -21,6 +21,8 @@ SEAM_INVENTORY_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTI
 ARTIFACT_LIFECYCLE_POLICY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "ARTIFACT_LIFECYCLE_POLICY_20260410_v0.json"
 ARTIFACT_LIFECYCLE_POLICY_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "ARTIFACT_LIFECYCLE_POLICY_20260410_v0.md"
 CLOSURE_OWNER_MAP_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_AUDIT_PACKET_CLOSURE_OWNER_MAP_20260410_v0.json"
+BLOCKER_CLOSURE_MAP_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_BLOCKER_CLOSURE_MAP_20260410_v0.md"
+BLOCKER_CLOSURE_MAP_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_blocker_closure_map_20260410_v0.json"
 GOVERNANCE_RUNTIME_BASELINE_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_RUNTIME_BASELINE_20260410_v0.md"
 GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_runtime_baseline_20260410_v0.json"
 GOVERNANCE_ARTIFACT_GROWTH_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_ARTIFACT_GROWTH_BASELINE_20260410_v0.md"
@@ -103,6 +105,7 @@ def build_packet(
     completion_rows = _parse_completion_rows(COMPLETION_MATRIX_PATH)
     lifecycle_policy = _read_json(ARTIFACT_LIFECYCLE_POLICY_PATH)
     closure_owner_map = _read_json(CLOSURE_OWNER_MAP_PATH)
+    blocker_closure_map = _read_json(BLOCKER_CLOSURE_MAP_REPORT_PATH)
     runtime_baseline = _read_json(GOVERNANCE_RUNTIME_BASELINE_REPORT_PATH)
     artifact_growth_baseline = _read_json(GOVERNANCE_ARTIFACT_GROWTH_BASELINE_PATH)
     artifact_growth_snapshot = _read_json(GOVERNANCE_ARTIFACT_GROWTH_SNAPSHOT_PATH)
@@ -132,6 +135,10 @@ def build_packet(
                 "exit_criterion": owner_row.get("exit_criterion"),
             }
         )
+
+    blocker_closure_rows = blocker_closure_map.get("mappings", [])
+    if not isinstance(blocker_closure_rows, list):
+        blocker_closure_rows = []
 
     runtime_governance = (
         completion_baseline.get("governance_prerequisite", {}).get("duration_seconds")
@@ -239,6 +246,13 @@ def build_packet(
             "rows_total": len(completion_rows),
             "rows_by_blocker_class": dict(sorted(row_blockers.items())),
             "unresolved_blocker_classes": sorted(unresolved_classes),
+            "blocker_to_closure_map": {
+                "declaration_pointer": str(BLOCKER_CLOSURE_MAP_DECLARATION_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+                "report_pointer": str(BLOCKER_CLOSURE_MAP_REPORT_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+                "rows_total": int(blocker_closure_map.get("rows_total", len(blocker_closure_rows))),
+                "missing_owner_rows": blocker_closure_map.get("missing_owner_rows", []),
+                "mappings": blocker_closure_rows,
+            },
             "row_owner_assignments": owner_assignments,
             "owner_assignment_coverage": {
                 "mapped_rows": len(completion_rows) - len(missing_owner_rows),
