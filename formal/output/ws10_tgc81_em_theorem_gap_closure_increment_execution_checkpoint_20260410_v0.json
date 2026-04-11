@@ -1,0 +1,33 @@
+{
+  "schema_id": "WS10_TGC81_EM_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260410_v0",
+  "captured_at_utc": "2026-04-10T00:00:00Z",
+  "tranche_id": "TGC-81",
+  "target_row": "ROW-PILLAR-EM-001",
+  "blocker_class": "THEOREM_GAP",
+  "declaration_path": "formal/docs/release/TGC_81_DECLARATION.md",
+  "matrix_path": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+  "verification": {
+    "focused_gate": {
+      "command": "./py.ps1 -m pytest formal/python/tests/test_em_empirical_comparison_packet_04_gate.py -q",
+      "result": "1 passed in 0.90s"
+    },
+    "full_governance": {
+      "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1",
+      "pytest_result": "666 passed in 227.49s",
+      "governance_gate_ok": true
+    },
+    "checkpoint_ladder": {
+      "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./checkpoint_ladder.ps1",
+      "result": "all_four_steps_passed",
+      "governance_pytest_result": "666 passed in 227.91s",
+      "governance_gate_ok": true
+    }
+  },
+  "decision_state": {
+    "execution_state": "EM_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_PINNED",
+    "active_row": "ROW-PILLAR-EM-001",
+    "packet04_matrix_drift_status": "NONE_DETECTED",
+    "packet04_policy_regression_status": "NONE_DETECTED"
+  },
+  "acceptance_posture": "TGC81_EXECUTION_AND_VALIDATION_COMPLETE_PENDING_BOUNDED_COMMIT"
+}

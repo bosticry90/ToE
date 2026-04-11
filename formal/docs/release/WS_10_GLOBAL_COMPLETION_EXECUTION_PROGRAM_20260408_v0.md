@@ -184,6 +184,12 @@ Out of scope:
 - TGC-77 checkpoint JSON: formal/output/ws10_tgc77_qm_theorem_gap_closure_increment_execution_checkpoint_20260409_v0.json
 - TGC-78 checkpoint: formal/docs/release/WS_10_TGC_78_COSMO_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260409_v0.md
 - TGC-78 checkpoint JSON: formal/output/ws10_tgc78_cosmo_theorem_gap_closure_increment_execution_checkpoint_20260409_v0.json
+- TGC-79 checkpoint: formal/docs/release/WS_10_TGC_79_POST_THEOREM_GAP_BLOCKER_BURN_DELTA_REEVALUATION_CHECKPOINT_20260410_v0.md
+- TGC-79 checkpoint JSON: formal/output/ws10_tgc79_post_theorem_gap_blocker_burn_delta_reevaluation_checkpoint_20260410_v0.json
+- TGC-80 checkpoint: formal/docs/release/WS_10_TGC_80_ROW_PROMOTION_BLOCKER_BURN_REVIEW_REFRESH_20260410_v0.md
+- TGC-80 checkpoint JSON: formal/output/ws10_tgc80_row_promotion_blocker_burn_review_refresh_20260410_v0.json
+- TGC-81 checkpoint: formal/docs/release/WS_10_TGC_81_EM_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260410_v0.md
+- TGC-81 checkpoint JSON: formal/output/ws10_tgc81_em_theorem_gap_closure_increment_execution_checkpoint_20260410_v0.json
 
 ## Execution runbook pointers
 - TGC-05 seam runbook: formal/docs/release/WS_10_TGC_05_SEAM_INCREMENT_EXECUTION_RUNBOOK_20260408_v0.md
@@ -292,7 +298,9 @@ Out of scope:
 77. TGC-77: Execute theorem-gap closure increment for ROW-PILLAR-QM-001 with bounded checkpointing (DONE).
 78. TGC-78: Execute theorem-gap closure increment for ROW-PILLAR-COSMO-001 with bounded checkpointing (DONE).
 79. TGC-79: Publish post-theorem-gap blocker-burn delta reevaluation after TGC-77/TGC-78 and enforce halt-if-unchanged rule (DONE).
-80. TGC-80: Publish refreshed row-promotion and blocker-burn review checkpoint before any resume exception (NEXT).
+80. TGC-80: Publish refreshed row-promotion and blocker-burn review checkpoint before any resume exception (DONE).
+81. TGC-81: Execute theorem-gap closure increment for ROW-PILLAR-EM-001 with bounded checkpointing (DONE).
+82. TGC-82: Publish post-closure blocker-burn delta reevaluation before any seam/STAT resume decision (NEXT).
 
 ## Verification contract
 - Governance prerequisite lane must stay green:
