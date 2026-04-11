@@ -40,9 +40,9 @@ A row is considered promoted only when all of the following are true:
 | ROW-PILLAR-SR-001 | pillar | SR_DERIVATION_CHAIN | THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_PINNED | THEOREM_GAP | formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md | formal/output/sr_empirical_comparison_packet_05_v0.json | formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py |
 
 ## Throughput queue ordering
-1. Publish bounded trigger-watch refresh checkpoint before any additional resume reconsideration attempt.
-2. Keep seam/STAT resume tranches halted while trigger-watch continuity remains unchanged and no newly pinned exception basis exists.
-3. Reauthorize any resume tranche only via a newly pinned bounded exception scope that explicitly supersedes TGC-88 through TGC-91.
+1. Publish bounded branch decision package that authorizes single seam reentry only with new blocker-reducing exception basis, else routes to theorem-gap rework.
+2. Keep seam/STAT resume tranches halted while closure traceability remains non-reducing and blocker trend net delta remains unchanged.
+3. Reauthorize any resume tranche only via a newly pinned bounded exception scope that explicitly supersedes TGC-88 through TGC-92 and preserves negative blocker-delta requirements.
 
 ## Blocker-burn scoreboard (rolling 8-tranche window)
 - Baseline counts (current snapshot):
@@ -150,6 +150,7 @@ A row is considered promoted only when all of the following are true:
 - TGC-89 checkpoint pointer: formal/output/ws10_tgc89_post_decision_blocker_burn_watchpoint_exception_basis_reevaluation_20260410_v0.json
 - TGC-90 checkpoint pointer: formal/output/ws10_tgc90_bounded_resume_reconsideration_trigger_review_checkpoint_20260410_v0.json
 - TGC-91 checkpoint pointer: formal/output/ws10_tgc91_bounded_blocked_posture_continuity_trigger_watch_checkpoint_20260410_v0.json
+- TGC-92 checkpoint pointer: formal/output/ws10_tgc92_closure_to_blocker_traceability_decision_package_20260410_v0.json
 
 ## Non-claim boundary
 This matrix is a repository-local execution control surface and does not represent a global adequacy claim.
