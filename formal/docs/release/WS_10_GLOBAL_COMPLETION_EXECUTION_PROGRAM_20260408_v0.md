@@ -321,7 +321,8 @@ Out of scope:
 88. TGC-88: Publish bounded resume exception decision package before any seam/STAT execution tranche (DONE).
 89. TGC-89: Publish bounded post-decision blocker-burn watchpoint and exception-basis reevaluation checkpoint before any resume reconsideration (DONE).
 90. TGC-90: Publish bounded resume reconsideration trigger review checkpoint before any seam/STAT execution tranche (DONE).
-91. TGC-91: Publish bounded blocked-posture continuity and trigger-watch checkpoint before any further resume reconsideration attempt (NEXT).
+91. TGC-91: Publish bounded blocked-posture continuity and trigger-watch checkpoint before any further resume reconsideration attempt (DONE).
+92. TGC-92: Publish bounded trigger-watch refresh checkpoint before any additional resume reconsideration attempt (NEXT).
 
 ## Verification contract
 - Governance prerequisite lane must stay green:
