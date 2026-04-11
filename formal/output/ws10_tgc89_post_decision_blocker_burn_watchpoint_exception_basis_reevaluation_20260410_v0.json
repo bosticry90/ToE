@@ -1,0 +1,43 @@
+{
+  "schema_id": "WS10_TGC89_POST_DECISION_BLOCKER_BURN_WATCHPOINT_EXCEPTION_BASIS_REEVALUATION_20260410_v0",
+  "captured_at_utc": "2026-04-10T00:00:00Z",
+  "tranche_id": "TGC-89",
+  "inputs": {
+    "tgc86_blocker_burn_net_delta": 0,
+    "tgc87_blocker_burn_net_delta": 0,
+    "tgc88": {
+      "decision_domain": "DEFERRED",
+      "resume_authorization": "NOT_AUTHORIZED",
+      "exception_scope": "NONE"
+    }
+  },
+  "reevaluation": {
+    "blocker_burn_changed": false,
+    "new_exception_basis": false,
+    "resume_posture": "BLOCKED",
+    "next_review_trigger": "ON_PINNED_BLOCKER_BURN_REDUCTION_OR_NEW_EXCEPTION_BASIS_EVIDENCE"
+  },
+  "blocker_counts": {
+    "prior": {
+      "THEOREM_GAP": 7,
+      "SEAM_INTEGRATION_GAP": 3,
+      "PARITY_DRIFT": 1,
+      "GOVERNANCE_GUARDRAIL": 0,
+      "EVIDENCE_ALIGNMENT_GAP": 0
+    },
+    "current": {
+      "THEOREM_GAP": 7,
+      "SEAM_INTEGRATION_GAP": 3,
+      "PARITY_DRIFT": 1,
+      "GOVERNANCE_GUARDRAIL": 0,
+      "EVIDENCE_ALIGNMENT_GAP": 0
+    },
+    "net_delta": 0
+  },
+  "decision_state": {
+    "state": "WATCHPOINT_REEVALUATION_PINNED",
+    "resume_reauthorization": "NOT_AUTHORIZED",
+    "exception_scope": "NONE"
+  },
+  "next_action": "PUBLISH_TGC90_BOUNDED_RESUME_RECONSIDERATION_TRIGGER_REVIEW_CHECKPOINT"
+}
