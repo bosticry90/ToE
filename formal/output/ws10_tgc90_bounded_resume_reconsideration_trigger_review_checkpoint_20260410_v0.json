@@ -1,0 +1,31 @@
+{
+  "schema_id": "WS10_TGC90_BOUNDED_RESUME_RECONSIDERATION_TRIGGER_REVIEW_CHECKPOINT_20260410_v0",
+  "captured_at_utc": "2026-04-10T00:00:00Z",
+  "tranche_id": "TGC-90",
+  "admissible_triggers": [
+    "PINNED_BLOCKER_BURN_REDUCTION_EXISTS",
+    "NEW_EXPLICIT_EXCEPTION_BASIS_EVIDENCED"
+  ],
+  "evidence_review": {
+    "blocker_counts": {
+      "THEOREM_GAP": 7,
+      "SEAM_INTEGRATION_GAP": 3,
+      "PARITY_DRIFT": 1,
+      "GOVERNANCE_GUARDRAIL": 0,
+      "EVIDENCE_ALIGNMENT_GAP": 0
+    },
+    "net_blocker_burn_delta": 0,
+    "new_exception_basis_since_tgc89": "NONE"
+  },
+  "trigger_verdicts": {
+    "pinned_blocker_burn_reduction_exists": false,
+    "new_explicit_exception_basis_evidenced": false,
+    "reconsideration_eligible": false
+  },
+  "decision": {
+    "resume_reauthorization": "NOT_AUTHORIZED",
+    "resume_posture": "BLOCKED",
+    "exception_scope": "NONE"
+  },
+  "next_action": "PUBLISH_TGC91_BOUNDED_BLOCKED_POSTURE_CONTINUITY_AND_TRIGGER_WATCH_CHECKPOINT"
+}
