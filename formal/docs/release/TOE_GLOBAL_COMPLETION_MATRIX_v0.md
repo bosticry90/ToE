@@ -40,9 +40,9 @@ A row is considered promoted only when all of the following are true:
 | ROW-PILLAR-SR-001 | pillar | SR_DERIVATION_CHAIN | THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_PINNED | THEOREM_GAP | formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md | formal/output/sr_empirical_comparison_packet_05_v0.json | formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py |
 
 ## Throughput queue ordering
-1. Publish bounded resume exception decision package before any seam/STAT execution tranche.
-2. Keep seam/STAT resume tranches halted while blocker-burn delta remains unchanged.
-3. Reauthorize any resume tranche only via a newly pinned bounded exception scope.
+1. Publish bounded post-decision blocker-burn watchpoint and exception-basis reevaluation checkpoint before any seam/STAT resume reconsideration.
+2. Keep seam/STAT resume tranches halted while blocker-burn delta remains unchanged and TGC-88 decision domain remains non-authorizing.
+3. Reauthorize any resume tranche only via a newly pinned bounded exception scope that explicitly supersedes TGC-88.
 
 ## Blocker-burn scoreboard (rolling 8-tranche window)
 - Baseline counts (current snapshot):
@@ -146,6 +146,7 @@ A row is considered promoted only when all of the following are true:
 - TGC-85 checkpoint pointer: formal/output/ws10_tgc85_sr_theorem_gap_closure_increment_execution_checkpoint_20260410_v0.json
 - TGC-86 checkpoint pointer: formal/output/ws10_tgc86_post_closure_blocker_burn_delta_reevaluation_checkpoint_20260410_v0.json
 - TGC-87 checkpoint pointer: formal/output/ws10_tgc87_row_promotion_blocker_burn_review_refresh_20260410_v0.json
+- TGC-88 checkpoint pointer: formal/output/ws10_tgc88_bounded_resume_exception_decision_package_20260410_v0.json
 
 ## Non-claim boundary
 This matrix is a repository-local execution control surface and does not represent a global adequacy claim.

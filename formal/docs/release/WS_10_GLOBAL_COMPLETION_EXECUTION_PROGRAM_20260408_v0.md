@@ -318,7 +318,8 @@ Out of scope:
 85. TGC-85: Execute theorem-gap closure increment for ROW-PILLAR-SR-001 with bounded checkpointing (DONE).
 86. TGC-86: Publish post-closure blocker-burn delta reevaluation before any seam/STAT resume decision (DONE).
 87. TGC-87: Publish refreshed row-promotion and blocker-burn review checkpoint before any resume exception (DONE).
-88. TGC-88: Publish bounded resume exception decision package before any seam/STAT execution tranche (NEXT).
+88. TGC-88: Publish bounded resume exception decision package before any seam/STAT execution tranche (DONE).
+89. TGC-89: Publish bounded post-decision blocker-burn watchpoint and exception-basis reevaluation checkpoint before any resume reconsideration (NEXT).
 
 ## Verification contract
 - Governance prerequisite lane must stay green:

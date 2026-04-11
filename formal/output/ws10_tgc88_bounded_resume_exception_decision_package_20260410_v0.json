@@ -1,0 +1,36 @@
+{
+  "schema_id": "WS10_TGC88_BOUNDED_RESUME_EXCEPTION_DECISION_PACKAGE_20260410_v0",
+  "captured_at_utc": "2026-04-10T00:00:00Z",
+  "tranche_id": "TGC-88",
+  "decision_inputs": {
+    "tgc86": {
+      "blocker_burn_net_delta": 0,
+      "resume_eligibility": "HALTED_PENDING_REVIEW_REFRESH"
+    },
+    "tgc87": {
+      "blocker_burn_net_delta": 0,
+      "resume_policy": "HALTED_PENDING_BOUNDED_RESUME_EXCEPTION_DECISION"
+    }
+  },
+  "decision": {
+    "domain": "DEFERRED",
+    "resume_authorization": "NOT_AUTHORIZED",
+    "exception_scope": "NONE"
+  },
+  "rationale": [
+    "BLOCKER_BURN_DELTA_UNCHANGED_ACROSS_TGC86_AND_TGC87",
+    "NO_NEW_EXCEPTION_BASIS_PINNED_FOR_SAFE_BOUNDED_REENTRY",
+    "CCG02_DEFAULT_HALT_POSTURE_REMAINS_CONTROLLING"
+  ],
+  "guardrails": {
+    "resume_default": "BLOCKED",
+    "supersedence_requirement": "FUTURE_DECISION_TRANCHE_REQUIRED",
+    "future_authorization_requirements": [
+      "EXPLICIT_BOUNDED_SCOPE",
+      "EXPLICIT_ROLLBACK_TRIGGER",
+      "COMPENSATING_VERIFICATION_EVIDENCE",
+      "EXPLICIT_POST_RESUME_REEVALUATION_POINTER"
+    ]
+  },
+  "next_action": "PUBLISH_TGC89_POST_DECISION_BLOCKER_BURN_WATCHPOINT_AND_EXCEPTION_BASIS_REEVALUATION_CHECKPOINT"
+}
