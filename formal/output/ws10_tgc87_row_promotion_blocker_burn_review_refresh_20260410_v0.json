@@ -1,0 +1,37 @@
+{
+  "schema_id": "WS10_TGC87_ROW_PROMOTION_BLOCKER_BURN_REVIEW_REFRESH_20260410_v0",
+  "captured_at_utc": "2026-04-10T00:00:00Z",
+  "tranche_id": "TGC-87",
+  "window": {
+    "start": "TGC-80",
+    "end": "TGC-87"
+  },
+  "row_promotion_count": 0,
+  "blocker_counts": {
+    "prior": {
+      "THEOREM_GAP": 7,
+      "SEAM_INTEGRATION_GAP": 3,
+      "PARITY_DRIFT": 1,
+      "GOVERNANCE_GUARDRAIL": 0,
+      "EVIDENCE_ALIGNMENT_GAP": 0
+    },
+    "current": {
+      "THEOREM_GAP": 7,
+      "SEAM_INTEGRATION_GAP": 3,
+      "PARITY_DRIFT": 1,
+      "GOVERNANCE_GUARDRAIL": 0,
+      "EVIDENCE_ALIGNMENT_GAP": 0
+    },
+    "net_delta": 0
+  },
+  "ccg02_exception": {
+    "required": true,
+    "scope": "LIMITED_TO_ONE_BOUNDED_SEAM_INCREMENT_AND_ONE_BOUNDED_STAT_INCREMENT",
+    "compensating_actions": [
+      "PUBLISH_TGC88_BOUNDED_RESUME_EXCEPTION_DECISION_PACKAGE",
+      "EXECUTE_AT_MOST_ONE_BOUNDED_SEAM_INCREMENT_AND_ONE_BOUNDED_STAT_INCREMENT",
+      "PUBLISH_POST_RESUME_BLOCKER_BURN_DELTA_REEVALUATION_BEFORE_ANY_ADDITIONAL_RESUME"
+    ]
+  },
+  "next_action": "PUBLISH_TGC88_BOUNDED_RESUME_EXCEPTION_DECISION_PACKAGE_BEFORE_ANY_EXECUTION_TRANCHE"
+}

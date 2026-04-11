@@ -40,7 +40,7 @@ A row is considered promoted only when all of the following are true:
 | ROW-PILLAR-SR-001 | pillar | SR_DERIVATION_CHAIN | THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_PINNED | THEOREM_GAP | formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md | formal/output/sr_empirical_comparison_packet_05_v0.json | formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py |
 
 ## Throughput queue ordering
-1. Publish refreshed row-promotion and blocker-burn review checkpoint before any resume exception.
+1. Publish bounded resume exception decision package before any seam/STAT execution tranche.
 2. Keep seam/STAT resume tranches halted while blocker-burn delta remains unchanged.
 3. Reauthorize any resume tranche only via a newly pinned bounded exception scope.
 
@@ -145,6 +145,7 @@ A row is considered promoted only when all of the following are true:
 - TGC-84 checkpoint pointer: formal/output/ws10_tgc84_post_closure_blocker_burn_delta_reevaluation_checkpoint_20260410_v0.json
 - TGC-85 checkpoint pointer: formal/output/ws10_tgc85_sr_theorem_gap_closure_increment_execution_checkpoint_20260410_v0.json
 - TGC-86 checkpoint pointer: formal/output/ws10_tgc86_post_closure_blocker_burn_delta_reevaluation_checkpoint_20260410_v0.json
+- TGC-87 checkpoint pointer: formal/output/ws10_tgc87_row_promotion_blocker_burn_review_refresh_20260410_v0.json
 
 ## Non-claim boundary
 This matrix is a repository-local execution control surface and does not represent a global adequacy claim.

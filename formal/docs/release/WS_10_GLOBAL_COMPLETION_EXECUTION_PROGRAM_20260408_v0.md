@@ -200,6 +200,8 @@ Out of scope:
 - TGC-85 checkpoint JSON: formal/output/ws10_tgc85_sr_theorem_gap_closure_increment_execution_checkpoint_20260410_v0.json
 - TGC-86 checkpoint: formal/docs/release/WS_10_TGC_86_POST_CLOSURE_BLOCKER_BURN_DELTA_REEVALUATION_CHECKPOINT_20260410_v0.md
 - TGC-86 checkpoint JSON: formal/output/ws10_tgc86_post_closure_blocker_burn_delta_reevaluation_checkpoint_20260410_v0.json
+- TGC-87 checkpoint: formal/docs/release/WS_10_TGC_87_ROW_PROMOTION_BLOCKER_BURN_REVIEW_REFRESH_20260410_v0.md
+- TGC-87 checkpoint JSON: formal/output/ws10_tgc87_row_promotion_blocker_burn_review_refresh_20260410_v0.json
 
 ## Execution runbook pointers
 - TGC-05 seam runbook: formal/docs/release/WS_10_TGC_05_SEAM_INCREMENT_EXECUTION_RUNBOOK_20260408_v0.md
@@ -315,7 +317,8 @@ Out of scope:
 84. TGC-84: Publish post-closure blocker-burn delta reevaluation before any seam/STAT resume decision (DONE).
 85. TGC-85: Execute theorem-gap closure increment for ROW-PILLAR-SR-001 with bounded checkpointing (DONE).
 86. TGC-86: Publish post-closure blocker-burn delta reevaluation before any seam/STAT resume decision (DONE).
-87. TGC-87: Publish refreshed row-promotion and blocker-burn review checkpoint before any resume exception (NEXT).
+87. TGC-87: Publish refreshed row-promotion and blocker-burn review checkpoint before any resume exception (DONE).
+88. TGC-88: Publish bounded resume exception decision package before any seam/STAT execution tranche (NEXT).
 
 ## Verification contract
 - Governance prerequisite lane must stay green:
