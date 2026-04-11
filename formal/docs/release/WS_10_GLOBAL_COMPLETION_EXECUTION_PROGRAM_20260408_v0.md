@@ -192,6 +192,8 @@ Out of scope:
 - TGC-81 checkpoint JSON: formal/output/ws10_tgc81_em_theorem_gap_closure_increment_execution_checkpoint_20260410_v0.json
 - TGC-82 checkpoint: formal/docs/release/WS_10_TGC_82_POST_CLOSURE_BLOCKER_BURN_DELTA_REEVALUATION_CHECKPOINT_20260410_v0.md
 - TGC-82 checkpoint JSON: formal/output/ws10_tgc82_post_closure_blocker_burn_delta_reevaluation_checkpoint_20260410_v0.json
+- TGC-83 checkpoint: formal/docs/release/WS_10_TGC_83_QFT_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260410_v0.md
+- TGC-83 checkpoint JSON: formal/output/ws10_tgc83_qft_theorem_gap_closure_increment_execution_checkpoint_20260410_v0.json
 
 ## Execution runbook pointers
 - TGC-05 seam runbook: formal/docs/release/WS_10_TGC_05_SEAM_INCREMENT_EXECUTION_RUNBOOK_20260408_v0.md
@@ -303,7 +305,8 @@ Out of scope:
 80. TGC-80: Publish refreshed row-promotion and blocker-burn review checkpoint before any resume exception (DONE).
 81. TGC-81: Execute theorem-gap closure increment for ROW-PILLAR-EM-001 with bounded checkpointing (DONE).
 82. TGC-82: Publish post-closure blocker-burn delta reevaluation before any seam/STAT resume decision (DONE).
-83. TGC-83: Execute theorem-gap closure increment for ROW-PILLAR-QFT-001 with bounded checkpointing (NEXT).
+83. TGC-83: Execute theorem-gap closure increment for ROW-PILLAR-QFT-001 with bounded checkpointing (DONE).
+84. TGC-84: Publish post-closure blocker-burn delta reevaluation before any seam/STAT resume decision (NEXT).
 
 ## Verification contract
 - Governance prerequisite lane must stay green:

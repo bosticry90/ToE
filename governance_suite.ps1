@@ -481,6 +481,9 @@ Invoke-GovernanceGate -TargetRow "ROW-PILLAR-QM-001" -BlockerClass "THEOREM_GAP"
 # Governance gate for TGC-78
 Invoke-GovernanceGate -TargetRow "ROW-PILLAR-COSMO-001" -BlockerClass "THEOREM_GAP" -Declaration "formal/docs/release/TGC_78_DECLARATION.md"
 
+# Governance gate for TGC-83
+Invoke-GovernanceGate -TargetRow "ROW-PILLAR-QFT-001" -BlockerClass "THEOREM_GAP" -Declaration "formal/docs/release/TGC_83_DECLARATION.md"
+
 
 
 

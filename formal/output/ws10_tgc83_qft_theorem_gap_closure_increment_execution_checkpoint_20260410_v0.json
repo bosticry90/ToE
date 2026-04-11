@@ -1,0 +1,42 @@
+{
+  "schema_id": "WS10_TGC83_QFT_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260410_v0",
+  "captured_at_utc": "2026-04-10T00:00:00Z",
+  "tranche_id": "TGC-83",
+  "target_row": "ROW-PILLAR-QFT-001",
+  "blocker_class": "THEOREM_GAP",
+  "declaration_path": "formal/docs/release/TGC_83_DECLARATION.md",
+  "matrix_path": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+  "verification": {
+    "focused_gate": {
+      "command": "./py.ps1 -m pytest formal/python/tests/test_qft_empirical_comparison_packet_04_gate.py -q",
+      "result": "1 passed in 0.88s"
+    },
+    "full_governance": {
+      "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1",
+      "pytest_result": "666 passed in 229.31s",
+      "governance_gate_ok": true
+    },
+    "checkpoint_ladder": {
+      "command": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./checkpoint_ladder.ps1",
+      "result": "all_four_steps_passed",
+      "governance_pytest_result": "666 passed in 229.31s",
+      "governance_gate_ok": true
+    },
+    "governance_gate_evidence": [
+      "governance_gate.ok row=ROW-PILLAR-QM-001 blocker=THEOREM_GAP declaration=formal/docs/release/TGC_77_DECLARATION.md",
+      "governance_gate.ok row=ROW-PILLAR-COSMO-001 blocker=THEOREM_GAP declaration=formal/docs/release/TGC_78_DECLARATION.md",
+      "governance_gate.ok row=ROW-PILLAR-QFT-001 blocker=THEOREM_GAP declaration=formal/docs/release/TGC_83_DECLARATION.md"
+    ]
+  },
+  "decision_state": {
+    "execution_state": "QFT_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_PINNED",
+    "active_row": "ROW-PILLAR-QFT-001",
+    "packet04_matrix_drift_status": "NONE_DETECTED",
+    "packet04_policy_regression_status": "NONE_DETECTED"
+  },
+  "follow_on_posture": {
+    "seam_stat_resume_halted": true,
+    "required_next_tranche": "TGC-84_POST_CLOSURE_BLOCKER_BURN_DELTA_REEVALUATION"
+  },
+  "acceptance_posture": "TGC83_EXECUTION_AND_VALIDATION_COMPLETE_PENDING_BOUNDED_COMMIT"
+}

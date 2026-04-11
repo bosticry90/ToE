@@ -36,13 +36,13 @@ A row is considered promoted only when all of the following are true:
 | ROW-PILLAR-STAT-001 | pillar | STAT_DERIVATION_CHAIN | NEXT_BOUNDED_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_PINNED | THEOREM_GAP | formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_04_v0.md | formal/output/stat_empirical_comparison_packet_04_v0.json | formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py |
 | ROW-PILLAR-COSMO-001 | pillar | COSMO_DERIVATION_CHAIN | THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_PINNED | THEOREM_GAP | formal/docs/paper/DERIVATION_TARGET_COSMO_EMPIRICAL_COMPARISON_PACKET_04_v0.md | formal/output/cosmo_empirical_comparison_packet_04_v0.json | formal/python/tests/test_cosmo_empirical_comparison_packet_04_gate.py |
 | ROW-PILLAR-EM-001 | pillar | EM_DERIVATION_CHAIN | THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_PINNED | THEOREM_GAP | formal/docs/paper/DERIVATION_TARGET_EM_EMPIRICAL_COMPARISON_PACKET_04_v0.md | formal/output/em_empirical_comparison_packet_04_v0.json | formal/python/tests/test_em_empirical_comparison_packet_04_gate.py |
-| ROW-PILLAR-QFT-001 | pillar | QFT_DERIVATION_CHAIN | IN_PROGRESS | THEOREM_GAP | formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_04_v0.md | formal/output/qft_empirical_comparison_packet_04_v0.json | formal/python/tests/test_qft_empirical_comparison_packet_04_gate.py |
+| ROW-PILLAR-QFT-001 | pillar | QFT_DERIVATION_CHAIN | THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_PINNED | THEOREM_GAP | formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_04_v0.md | formal/output/qft_empirical_comparison_packet_04_v0.json | formal/python/tests/test_qft_empirical_comparison_packet_04_gate.py |
 | ROW-PILLAR-SR-001 | pillar | SR_DERIVATION_CHAIN | IN_PROGRESS | THEOREM_GAP | formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md | formal/output/sr_empirical_comparison_packet_05_v0.json | formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py |
 
 ## Throughput queue ordering
-1. Execute theorem-gap closure increment for ROW-PILLAR-QFT-001 with bounded checkpointing.
-2. Publish post-closure blocker-burn delta reevaluation before any seam/STAT resume decision.
-3. Keep seam/STAT resume tranches halted while blocker-burn delta remains unchanged.
+1. Publish post-closure blocker-burn delta reevaluation after TGC-83.
+2. Keep seam/STAT resume tranches halted while blocker-burn delta remains unchanged.
+3. Reauthorize any resume tranche only via a newly pinned bounded exception scope.
 
 ## Blocker-burn scoreboard (rolling 8-tranche window)
 - Baseline counts (current snapshot):
@@ -141,6 +141,7 @@ A row is considered promoted only when all of the following are true:
 - TGC-80 checkpoint pointer: formal/output/ws10_tgc80_row_promotion_blocker_burn_review_refresh_20260410_v0.json
 - TGC-81 checkpoint pointer: formal/output/ws10_tgc81_em_theorem_gap_closure_increment_execution_checkpoint_20260410_v0.json
 - TGC-82 checkpoint pointer: formal/output/ws10_tgc82_post_closure_blocker_burn_delta_reevaluation_checkpoint_20260410_v0.json
+- TGC-83 checkpoint pointer: formal/output/ws10_tgc83_qft_theorem_gap_closure_increment_execution_checkpoint_20260410_v0.json
 
 ## Non-claim boundary
 This matrix is a repository-local execution control surface and does not represent a global adequacy claim.
