@@ -1,0 +1,37 @@
+{
+  "schema_id": "WS10_TGC80_ROW_PROMOTION_BLOCKER_BURN_REVIEW_REFRESH_20260410_v0",
+  "captured_at_utc": "2026-04-10T00:00:00Z",
+  "tranche_id": "TGC-80",
+  "window": {
+    "start": "TGC-73",
+    "end": "TGC-80"
+  },
+  "row_promotion_count": 0,
+  "blocker_counts": {
+    "prior": {
+      "THEOREM_GAP": 7,
+      "SEAM_INTEGRATION_GAP": 3,
+      "PARITY_DRIFT": 1,
+      "GOVERNANCE_GUARDRAIL": 0,
+      "EVIDENCE_ALIGNMENT_GAP": 0
+    },
+    "current": {
+      "THEOREM_GAP": 7,
+      "SEAM_INTEGRATION_GAP": 3,
+      "PARITY_DRIFT": 1,
+      "GOVERNANCE_GUARDRAIL": 0,
+      "EVIDENCE_ALIGNMENT_GAP": 0
+    },
+    "net_delta": 0
+  },
+  "ccg02_exception": {
+    "required": true,
+    "scope": "THEOREM_GAP_PRIORITY_ONLY_UNTIL_NEXT_DELTA_REEVALUATION",
+    "compensating_actions": [
+      "EXECUTE_TGC81_THEOREM_GAP_CLOSURE_EM",
+      "PUBLISH_POST_CLOSURE_DELTA_REEVALUATION_BEFORE_ANY_SEAM_STAT_RESUME",
+      "KEEP_SEAM_STAT_RESUME_HALTED_WHILE_DELTA_UNCHANGED"
+    ]
+  },
+  "next_action": "EXECUTE_TGC81_THEOREM_GAP_CLOSURE_EM_UNDER_BOUNDED_CHECKPOINTING"
+}

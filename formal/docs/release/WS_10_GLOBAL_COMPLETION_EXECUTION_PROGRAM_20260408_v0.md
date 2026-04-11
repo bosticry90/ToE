@@ -291,7 +291,8 @@ Out of scope:
 76. TGC-76: Publish 8-tranche window row-promotion review and blocker-burn scoreboard update (DONE).
 77. TGC-77: Execute theorem-gap closure increment for ROW-PILLAR-QM-001 with bounded checkpointing (DONE).
 78. TGC-78: Execute theorem-gap closure increment for ROW-PILLAR-COSMO-001 with bounded checkpointing (DONE).
-79. TGC-79: Publish post-theorem-gap blocker-burn delta reevaluation after TGC-77/TGC-78 and enforce halt-if-unchanged rule (NEXT).
+79. TGC-79: Publish post-theorem-gap blocker-burn delta reevaluation after TGC-77/TGC-78 and enforce halt-if-unchanged rule (DONE).
+80. TGC-80: Publish refreshed row-promotion and blocker-burn review checkpoint before any resume exception (NEXT).
 
 ## Verification contract
 - Governance prerequisite lane must stay green:
