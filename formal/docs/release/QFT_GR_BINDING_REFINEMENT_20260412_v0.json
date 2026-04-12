@@ -1,0 +1,62 @@
+{
+  "schema_id": "QFT_GR_BINDING_REFINEMENT_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T00:45:00Z",
+  "objective": "Execute one bounded targeted refinement of QFT-GR comparator binding after partial hold, without widening scope or opening new comparators.",
+  "required_inputs": {
+    "qft_gr_comparator_binding_execution_report": "formal/output/reports/qft_gr_comparator_binding_execution_20260412_v0.json",
+    "qft_gr_post_signal_interpretation_report": "formal/output/reports/qft_gr_post_signal_interpretation_20260412_v0.json",
+    "qft_gr_first_test_packet_report": "formal/output/reports/qft_gr_first_test_packet_20260412_v0.json",
+    "science_new_untouched_lane_selection_report": "formal/output/reports/science_new_untouched_lane_selection_20260412_v0.json",
+    "science_frontier_preservation_record_report": "formal/output/reports/science_frontier_preservation_record_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "em_qft_higher_level_structure_review_report": "formal/output/reports/em_qft_higher_level_structure_review_20260412_v0.json",
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json"
+  },
+  "refinement_policy": {
+    "required_binding_outcome": "QFT_GR_BINDING_PARTIAL_HOLD",
+    "required_binding_next_action": "OPEN_ONE_BOUNDED_QFT_GR_BINDING_REFINEMENT_LAYER",
+    "required_interpretation_outcome": "QFT_GR_EXTERNALLY_COMPARABLE_CANDIDATE",
+    "required_first_test_outcome": "QFT_GR_SEAM_SIGNAL_PRODUCED",
+    "required_lane_selection_outcome": "ACTIVATE_QFT_GR_UNTOUCHED_FIRST_TEST",
+    "required_preservation_outcome": "FRONTIER_PRESERVED_AT_CANONICAL_COMMIT",
+    "qm_stat_required_review_outcome": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+    "gr_required_outcome": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "em_qft_required_outcome": "EM_QFT_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "binding_lock": {
+      "seam_id": "QFT-GR",
+      "comparator_id": "EXT-COMP-QFT-GR-0001",
+      "quantity_id": "qft_gr_bridge_transport_interface_residual"
+    },
+    "binding_weakness": {
+      "weakness_id": "qft_gr_transport_residual_tolerance_gap",
+      "description": "Residual tolerance remains above comparator acceptance threshold under current QFT-GR binding map"
+    },
+    "single_refinement": {
+      "refinement_id": "qft_gr_single_weighted_residual_calibration",
+      "description": "Apply one bounded calibration update to comparator weighting for the existing QFT-GR bound quantity"
+    },
+    "single_comparator_only": true,
+    "single_quantity_only": true,
+    "no_scope_widening": true,
+    "refinement_executable_under_declared_structure": true,
+    "binding_confirmed": false,
+    "probe_ready": false,
+    "binding_still_partial_hold": true,
+    "requires_undeclared_structure": false,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "refinement_contract": {
+    "allowed_outcomes": [
+      "QFT_GR_BINDING_CONFIRMED",
+      "QFT_GR_PROBE_READY",
+      "QFT_GR_BINDING_STILL_PARTIAL_HOLD",
+      "QFT_GR_REFINEMENT_REQUIRES_UNDECLARED_STRUCTURE"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QFT_GR_BINDING_REFINEMENT_OUTCOME",
+    "no_loop_rule": "ONE_QFT_GR_BINDING_REFINEMENT_LAYER_ONLY",
+    "default_outcome": "QFT_GR_BINDING_STILL_PARTIAL_HOLD"
+  },
+  "non_claim_boundary": "Repository-local QFT-GR binding refinement declaration only; no scientific adequacy claim."
+}
