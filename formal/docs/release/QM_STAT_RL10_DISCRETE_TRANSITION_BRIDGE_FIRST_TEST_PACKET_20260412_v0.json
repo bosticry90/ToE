@@ -1,0 +1,64 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_FIRST_TEST_PACKET_20260412_v0",
+  "packet_id": "QM-STAT-RL10-DISCRETE-TRANSITION-BRIDGE-FIRST-TEST-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "new_external_path_seam_model_proposal_declaration": "formal/docs/release/NEW_EXTERNAL_PATH_SEAM_MODEL_PROPOSAL_20260411_v0.json",
+    "new_external_path_seam_model_proposal_report": "formal/output/reports/new_external_path_seam_model_proposal_20260411_v0.json",
+    "qm_stat_transition_dynamics_feasibility_review_report": "formal/output/reports/qm_stat_transition_dynamics_feasibility_review_20260411_v0.json",
+    "qm_stat_rl10_sigma_db_transformation_report": "formal/output/reports/qm_stat_rl10_sigma_db_transformation_20260411_v0.json",
+    "qm_stat_single_baseline_comparator_report": "formal/output/reports/qm_stat_single_baseline_comparator_20260411_v0.json"
+  },
+  "test_scope": {
+    "proposed_seam_model_class_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "bounded_first_test_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_FIRST_TEST_v0",
+    "governance_boundary": "DO_NOT_REOPEN_EXISTING_QM_STAT_OR_OTHER_CYCLE11_LANES",
+    "single_baseline_id": "OV-RL-10",
+    "discrete_support_only": true
+  },
+  "declared_transition_structure": {
+    "discrete_transition_kernel": {
+      "kernel_id": "RL10_BRIDGE_KERNEL_v0",
+      "state_space": [
+        "S0",
+        "S1",
+        "S2"
+      ],
+      "row_stochastic": true
+    },
+    "bidirectional_transition_rate_matrix": {
+      "matrix_id": "RL10_BRIDGE_RATE_MATRIX_v0",
+      "shape": [
+        3,
+        3
+      ],
+      "bidirectional": true,
+      "nonnegative_off_diagonal": true
+    },
+    "stationary_flow_sigma_db_interface": {
+      "interface_id": "RL10_BRIDGE_SIGMA_DB_INTERFACE_v0",
+      "sigma_proxy_mapping_declared": true,
+      "db_residual_mapping_declared": true,
+      "baseline_id": "OV-RL-10"
+    }
+  },
+  "undeclared_structure_policy": {
+    "allowed_new_assumptions": [
+      "DECLARE_DISCRETE_TRANSITION_DYNAMICS_OPERATOR_OR_MARKOV_KERNEL",
+      "DECLARE_BIDIRECTIONAL_TRANSITION_RATES_OR_EQUIVALENT_TRANSITION_MATRIX",
+      "DECLARE_STATIONARY_FLOW_TO_SIGMA_DB_OBSERVABLE_INTERFACE"
+    ],
+    "forbidden_extra_assumptions": []
+  },
+  "terminal_contract": {
+    "allowed_outcomes": [
+      "BRIDGE_SEAM_FIRST_TEST_EXECUTABLE",
+      "BRIDGE_SEAM_FIRST_TEST_INCOHERENT",
+      "BRIDGE_SEAM_FIRST_TEST_OUT_OF_SCOPE",
+      "BRIDGE_SEAM_FIRST_TEST_REQUIRES_UNDECLARED_STRUCTURE"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_TERMINAL_OUTCOME",
+    "no_loop_rule": "ONE_BOUNDED_FIRST_TEST_PACKET_ONLY"
+  },
+  "non_claim_boundary": "Repository-local bounded first-test packet declaration only; no scientific adequacy claim."
+}
