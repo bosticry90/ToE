@@ -1,0 +1,34 @@
+{
+  "schema_id": "EM_QFT_POST_FIRST_TEST_DECISION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T19:40:00Z",
+  "objective": "Bounded post-first-test decision layer for EM-QFT to select exactly one next route after a valid-but-nonmoving first-test result.",
+  "required_inputs": {
+    "em_qft_seam_first_test_packet_report": "formal/output/reports/em_qft_seam_first_test_packet_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "science_post_qm_stat_rebalance_report": "formal/output/reports/science_post_qm_stat_rebalance_20260412_v0.json"
+  },
+  "decision_policy": {
+    "required_first_test_outcome": "EM_QFT_SEAM_VALID_BUT_NONMOVING",
+    "required_target_seam": "SEAM-EM-QFT",
+    "require_gr_row_001_frozen": true,
+    "require_qm_stat_untouched_hold": true,
+    "packet_shape_refinement_viable": false,
+    "different_subseam_indicated": false,
+    "require_rescoring": false,
+    "single_decision_only": true,
+    "single_outcome_only": true
+  },
+  "decision_contract": {
+    "allowed_outcomes": [
+      "ACTIVATE_EM_QFT_SIGNAL_REFINEMENT_PACKET",
+      "ACTIVATE_EM_QFT_DIFFERENT_TARGET_SUBSEAM",
+      "HOLD_EM_QFT_AND_REQUIRE_RESCORING",
+      "EM_QFT_REQUIRES_DIFFERENT_ATTACK_CLASS"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_EM_QFT_POST_FIRST_TEST_DECISION_OUTCOME",
+    "no_loop_rule": "ONE_EM_QFT_POST_FIRST_TEST_DECISION_ONLY",
+    "default_outcome": "EM_QFT_REQUIRES_DIFFERENT_ATTACK_CLASS"
+  },
+  "non_claim_boundary": "Repository-local EM-QFT post-first-test decision declaration only; no scientific adequacy claim."
+}
