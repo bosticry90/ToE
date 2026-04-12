@@ -1,0 +1,30 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_ROBUSTNESS_REFINEMENT_EXECUTION_20260412_v0",
+  "execution_id": "QM-STAT-RL10-BRIDGE-ROBUSTNESS-REFINEMENT-EXEC-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_robustness_gap_review_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_robustness_gap_review_execution_20260412_v0.json",
+    "bridge_robustness_gap_review_ruling_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_robustness_gap_review_ruling_20260412_v0.json",
+    "bridge_probe_readiness_robustness_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_readiness_robustness_execution_20260412_v0.json"
+  },
+  "refinement_spec": {
+    "seam_model_class_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0",
+    "refinement_focus": "THRESHOLD_STRICTNESS_ONLY",
+    "pre_refinement_probe_ready_margin_min": 0.06,
+    "refined_probe_ready_margin_min": 0.04,
+    "path_falsification_observed": false
+  },
+  "execution_contract": {
+    "allowed_outcomes": [
+      "BRIDGE_SIGNAL_PROBE_READY",
+      "BRIDGE_SIGNAL_COMPARATOR_BOUND_BUT_HOLD",
+      "BRIDGE_SIGNAL_PATH_FALSIFIED",
+      "ROBUSTNESS_REFINEMENT_INCONCLUSIVE"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_REFINEMENT_EXECUTION_OUTCOME",
+    "no_loop_rule": "ONE_BRIDGE_ROBUSTNESS_REFINEMENT_EXECUTION_ONLY"
+  },
+  "non_claim_boundary": "Repository-local bridge robustness refinement execution declaration only; no scientific adequacy claim."
+}
