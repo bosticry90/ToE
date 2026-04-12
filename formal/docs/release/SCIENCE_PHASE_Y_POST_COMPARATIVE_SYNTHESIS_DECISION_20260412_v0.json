@@ -1,0 +1,49 @@
+{
+  "schema_id": "SCIENCE_PHASE_Y_POST_COMPARATIVE_SYNTHESIS_DECISION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T06:00:00Z",
+  "objective": "Issue one bounded post-comparative project-level decision after Phase X without reopening any closed or held lane.",
+  "canonical_antecedent_commits": {
+    "phase_x_comparative_synthesis_commit": "b72da16",
+    "phase_w_plateau_decision_commit": "85a4d5a",
+    "phase_j_stop_state_commit": "e1eb7fd"
+  },
+  "required_inputs": {
+    "science_phase_x_governed_lane_end_comparative_synthesis_report": "formal/output/reports/science_phase_x_governed_lane_end_comparative_synthesis_20260412_v0.json",
+    "science_phase_w_pre_execution_plateau_decision_report": "formal/output/reports/science_phase_w_pre_execution_plateau_decision_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "post_comparative_decision_contract": {
+    "required_phase_x_outcome": "GOVERNED_LANE_END_COMPARATIVE_SYNTHESIS_COMPLETE",
+    "required_thermal_lane_id": "LANE-THERMAL-BOUNDARY-001",
+    "required_thermal_lane_status": "PRESERVED_INACTIVE_NEAR_READY_NOT_EXECUTABLE",
+    "required_thermal_no_further_closure_authorized": true,
+    "required_thermal_packet_authorized": false,
+    "required_phase_w_outcome": "HOLD_CANDIDATE_AS_NEAR_READY_BUT_NOT_EXECUTABLE",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "decision_signals": {
+      "revise_higher_level_policy_for_near_ready_lanes": false,
+      "wait_for_stronger_candidate_class": true,
+      "open_new_meta_selection_lane": false,
+      "maintain_current_governed_stop_state": false,
+      "force_policy_decision_escalation_now": false
+    }
+  },
+  "post_comparative_decision_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_Y_POST_COMPARATIVE_SYNTHESIS_DECISION_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_Y_POST_COMPARATIVE_SYNTHESIS_DECISION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "REVISE_HIGHER_LEVEL_POLICY_FOR_NEAR_READY_LANES",
+      "WAIT_FOR_STRONGER_CANDIDATE_CLASS",
+      "OPEN_NEW_META_SELECTION_LANE",
+      "MAINTAIN_CURRENT_GOVERNED_STOP_STATE",
+      "POST_COMPARATIVE_DECISION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_COMPARATIVE_DECISION_REPAIR"
+    ],
+    "default_outcome": "POST_COMPARATIVE_DECISION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-comparative project decision declaration only; no scientific adequacy claim."
+}

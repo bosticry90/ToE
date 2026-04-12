@@ -1,0 +1,69 @@
+{
+  "captured_at_utc": "2026-04-12T23:36:04Z",
+  "criteria": {
+    "decision_signal_shape_ok": true,
+    "forbid_closed_or_held_lane_reopen": true,
+    "no_loop_rule_declared": true,
+    "non_reopen_summary_outcome_match": true,
+    "phase_w_outcome_match": true,
+    "phase_x_outcome_match": true,
+    "single_decision_signal_selected": true,
+    "single_terminal_outcome_rule_declared": true,
+    "thermal_lane_classification_match": true,
+    "thermal_lane_status_match": true,
+    "thermal_no_further_closure_authorized_match": true,
+    "thermal_packet_authorized_match": true
+  },
+  "decision_signals": {
+    "force_policy_decision_escalation_now": false,
+    "maintain_current_governed_stop_state": false,
+    "open_new_meta_selection_lane": false,
+    "revise_higher_level_policy_for_near_ready_lanes": false,
+    "wait_for_stronger_candidate_class": true
+  },
+  "non_claim_boundary": "Repository-local post-comparative project decision report only; no scientific adequacy claim.",
+  "objective_quality": {
+    "criteria": {
+      "allowed_outcome_materialized": true,
+      "post_comparative_decision_preconditions_satisfied": true,
+      "single_outcome_materialized": true
+    },
+    "inputs": {
+      "non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+      "phase_w_outcome": "HOLD_CANDIDATE_AS_NEAR_READY_BUT_NOT_EXECUTABLE",
+      "phase_x_outcome": "GOVERNED_LANE_END_COMPARATIVE_SYNTHESIS_COMPLETE",
+      "phase_x_thermal_lane_status": "PRESERVED_INACTIVE_NEAR_READY_NOT_EXECUTABLE",
+      "phase_x_thermal_no_further_closure_authorized": true,
+      "phase_x_thermal_packet_authorized": false,
+      "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+      "required_phase_w_outcome": "HOLD_CANDIDATE_AS_NEAR_READY_BUT_NOT_EXECUTABLE",
+      "required_phase_x_outcome": "GOVERNED_LANE_END_COMPARATIVE_SYNTHESIS_COMPLETE",
+      "required_thermal_lane_status": "PRESERVED_INACTIVE_NEAR_READY_NOT_EXECUTABLE",
+      "required_thermal_no_further_closure_authorized": true,
+      "required_thermal_packet_authorized": false
+    },
+    "summary": {
+      "all_criteria_satisfied": true,
+      "next_action": "WAIT_FOR_STRONGER_CANDIDATE_CLASS_BEFORE_NEW_MATURATION_PROGRAM",
+      "phase_status": "COMPLETE"
+    }
+  },
+  "schema_id": "SCIENCE_PHASE_Y_POST_COMPARATIVE_SYNTHESIS_DECISION_REPORT_20260412_v0",
+  "source_bundle": {
+    "declaration": "formal/docs/release/SCIENCE_PHASE_Y_POST_COMPARATIVE_SYNTHESIS_DECISION_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json",
+    "science_phase_w_pre_execution_plateau_decision_report": "formal/output/reports/science_phase_w_pre_execution_plateau_decision_20260412_v0.json",
+    "science_phase_x_governed_lane_end_comparative_synthesis_report": "formal/output/reports/science_phase_x_governed_lane_end_comparative_synthesis_20260412_v0.json"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "summary": {
+    "lane_specific_reopen_authorized": false,
+    "next_action": "WAIT_FOR_STRONGER_CANDIDATE_CLASS_BEFORE_NEW_MATURATION_PROGRAM",
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "terminal_outcome": "WAIT_FOR_STRONGER_CANDIDATE_CLASS",
+    "thermal_boundary_lane_status": "PRESERVED_INACTIVE_NEAR_READY_NOT_EXECUTABLE",
+    "thermal_boundary_no_further_closure_authorized": true,
+    "thermal_boundary_packet_authorized": false
+  }
+}
