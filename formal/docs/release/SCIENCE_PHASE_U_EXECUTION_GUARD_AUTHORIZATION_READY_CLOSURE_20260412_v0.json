@@ -1,0 +1,47 @@
+{
+  "schema_id": "SCIENCE_PHASE_U_EXECUTION_GUARD_AUTHORIZATION_READY_CLOSURE_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T03:20:00Z",
+  "objective": "Close the final execution-guard and authorization-review-ready gates for LANE-THERMAL-BOUNDARY-001 and issue one bounded authorization decision without running a packet.",
+  "canonical_antecedent_commits": {
+    "phase_t_residual_field_commit": "1f9589b",
+    "phase_s_readiness_commit": "f0d9342",
+    "phase_r_threshold_closure_commit": "5681325",
+    "phase_j_stop_state_commit": "e1eb7fd"
+  },
+  "required_inputs": {
+    "science_phase_t_residual_authorization_field_closure_report": "formal/output/reports/science_phase_t_residual_authorization_field_closure_20260412_v0.json",
+    "science_phase_o_authorized_candidate_next_step_selection_report": "formal/output/reports/science_phase_o_authorized_candidate_next_step_selection_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "execution_guard_authorization_contract": {
+    "required_phase_t_outcome": "RESIDUAL_FIELD_PARTIAL_HOLD",
+    "required_phase_t_authorized_lane_id": "LANE-THERMAL-BOUNDARY-001",
+    "required_phase_t_packet_authorization": false,
+    "required_phase_o_outcome": "HOLD_AUTHORIZED_CANDIDATE_AND_DO_NOT_OPEN_PACKET",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "closure_fields": {
+      "execution_guard_binding_closed": false,
+      "authorization_review_ready": false,
+      "packet_execution_still_separate": true,
+      "policy_escalation_required": false
+    }
+  },
+  "execution_guard_authorization_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_U_EXECUTION_GUARD_AUTHORIZATION_READY_CLOSURE_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_U_EXECUTION_GUARD_AUTHORIZATION_READY_CLOSURE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "AUTHORIZATION_REVIEW_READY_AND_PACKET_AUTHORIZED",
+      "EXECUTION_GUARD_PARTIAL_HOLD",
+      "REQUIRES_HIGHER_LEVEL_POLICY",
+      "CANDIDATE_WITHDRAWN",
+      "EXECUTION_GUARD_AUTHORIZATION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_EXECUTION_GUARD_REPAIR"
+    ],
+    "default_outcome": "EXECUTION_GUARD_AUTHORIZATION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local execution-guard and authorization-ready closure declaration only; no scientific adequacy claim."
+}
