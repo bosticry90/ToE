@@ -1,0 +1,42 @@
+{
+  "schema_id": "QM_STAT_SINGLE_BASELINE_COMPARATOR_20260411_v0",
+  "comparator_id": "QM_STAT_SINGLE_BASELINE_COMPARATOR_v0",
+  "target_seam": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "lane": "QM_STAT_CYCLE11",
+    "source_signature_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json",
+    "source_signature_id": "QM_STAT_CYCLE11_MASS_AND_HIGHER_MOMENT_PARITY_SIGNATURE_v0"
+  },
+  "baseline_comparator": {
+    "baseline_count": 1,
+    "baseline_id": "OV-RL-10",
+    "baseline_name": "RL10_ENTROPY_BALANCE",
+    "baseline_schema": "OV-RL-10_entropy_balance_comparator/v0",
+    "selection_reason": "QM-STAT needs one stat-facing external comparator surface, and RL10 is the closest existing pinned regime lane with deterministic entropy-balance observables and external evidence artifacts.",
+    "lock_markdown": "formal/markdown/locks/observables/OV-RL-10_entropy_balance_v0.md",
+    "front_door_contract": "formal/docs/rl10_entropy_balance_v0_front_door_contract.md",
+    "reference_artifact": "formal/external_evidence/rl10_entropy_balance_domain_01/rl10_reference_report.json",
+    "candidate_artifact": "formal/external_evidence/rl10_entropy_balance_domain_01/rl10_candidate_report.json"
+  },
+  "comparison_spec": {
+    "compared_observable": "FINITE_SUPPORT_PROBABILITY_MASS_AND_HIGHER_CENTRAL_MOMENT_PARITY_SIGNATURE",
+    "candidate_signature_fields": [
+      "blocker_discharge_criteria.shared_support",
+      "blocker_discharge_criteria.qm_probability_mass",
+      "blocker_discharge_criteria.stat_probability_mass",
+      "blocker_discharge_criteria.second_central_moment",
+      "blocker_discharge_criteria.fourth_central_moment",
+      "blocker_discharge_criteria.eighteenth_central_moment"
+    ],
+    "comparison_method": "MAP_QM_STAT_SIGNATURE_TO_RL10_STATIONARY_DISTRIBUTION_AND_ENTROPY_BALANCE_INTERFACE",
+    "external_comparability_threshold": "REQUIRES_SINGLE_BASELINE_ALIGNMENT_AND_QM_STAT_OUTPUT_WITH_STATIONARY_PI_AND_AT_LEAST_ONE_OF_SIGMA_PROXY_OR_DB_RESIDUAL",
+    "numerical_probe_ready_threshold": "REQUIRES_SINGLE_BASELINE_ALIGNMENT_AND_ONE_BOUNDED_NUMERICAL_PROBE_CAPABLE_OF_EMITTING_RL10_INTERFACE_FIELDS",
+    "non_separation_rule": "IF_QM_STAT_REMAINS_INTERNAL_ONLY_OR_RL10_INTERFACE_FIELDS_ARE_ABSENT_CLASSIFY_INTERNAL_ONLY_REMAINS"
+  },
+  "execution_policy": {
+    "single_baseline_only": true,
+    "single_baseline_only_rule": "ONE_DECLARED_BASELINE_COMPARATOR_ONLY",
+    "no_loop_rule": "ONE_SINGLE_BASELINE_COMPARATOR_DECLARATION_ONLY"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT single-baseline comparator declaration only; no scientific adequacy claim."
+}

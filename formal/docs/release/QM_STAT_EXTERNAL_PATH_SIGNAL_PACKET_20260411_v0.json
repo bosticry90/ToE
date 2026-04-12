@@ -1,0 +1,49 @@
+{
+  "schema_id": "QM_STAT_EXTERNAL_PATH_SIGNAL_PACKET_20260411_v0",
+  "packet_id": "QMSTAT-EPS-001",
+  "target_seam": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "lane": "QM_STAT_CYCLE11",
+    "blocker_class": "SEAM_INTEGRATION_GAP"
+  },
+  "required_inputs": {
+    "discovery_engine_scoring_routing_review_report": "formal/output/reports/discovery_engine_scoring_routing_review_20260411_v0.json",
+    "discovery_engine_review_checkpoint_report": "formal/output/reports/discovery_engine_review_checkpoint_20260411_v0.json",
+    "discovery_priority_queue_report": "formal/output/reports/discovery_priority_queue_report_20260411_v0.json",
+    "qm_stat_single_baseline_comparator_report": "formal/output/reports/qm_stat_single_baseline_comparator_20260411_v0.json",
+    "qm_stat_discovery_interpretation_report": "formal/output/reports/qm_stat_discovery_interpretation_report_20260411_v0.json",
+    "qm_stat_discovery_numerical_probe_execution_report": "formal/output/reports/qm_stat_discovery_numerical_probe_execution_report_20260411_v0.json",
+    "qm_stat_discovery_post_derivation_probe_decision_report": "formal/output/reports/qm_stat_discovery_post_derivation_probe_decision_report_20260411_v0.json"
+  },
+  "baseline_comparator": {
+    "comparator_id": "QM_STAT_SINGLE_BASELINE_COMPARATOR_v0",
+    "comparator_kind": "STANDARD_BASELINE_OR_COMPETING_PATH_NUMERICAL_REFERENCE",
+    "comparator_policy": "ONE_DECLARED_BASELINE_COMPARATOR_ONLY",
+    "current_status": "DECLARED_VIA_REQUIRED_REPORT"
+  },
+  "candidate_external_path_signal": {
+    "signal_id": "QM_STAT_EXTERNAL_PATH_SIGNAL_v0",
+    "signal_definition": "Produce EXTERNALLY_COMPARABLE or NUMERICAL_PROBE_READY on ROW-SEAM-QM-STAT-001 against one declared baseline comparator.",
+    "supported_interpretations": [
+      "EXTERNALLY_COMPARABLE",
+      "NUMERICAL_PROBE_READY"
+    ]
+  },
+  "execution_contract": {
+    "allowed_outcomes": [
+      "EXTERNAL_PATH_SIGNAL_PRODUCED",
+      "PATH_FALSIFIED",
+      "INTERNAL_ONLY_REMAINS"
+    ],
+    "success_rule": "AT_LEAST_ONE_EXTERNALLY_COMPARABLE_DISCRIMINATOR_CANDIDATE_PRODUCED",
+    "failure_rule": "NO_EXTERNAL_SEPARATION_BEYOND_INTERNAL_ONLY_DISCRIMINATION",
+    "path_falsification_rule": "PATH_FALSIFICATION_OBSERVED_TRUE",
+    "no_loop_rule": "ONE_EXTERNAL_PATH_SIGNAL_PACKET_ONLY"
+  },
+  "selection_policy": {
+    "require_hold_state": true,
+    "require_target_to_remain_top_ranked": true,
+    "require_absent_external_path_signal": true
+  },
+  "non_claim_boundary": "Repository-local QM-STAT external-path signal packet declaration only; no scientific adequacy claim."
+}
