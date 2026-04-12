@@ -1,0 +1,46 @@
+{
+  "schema_id": "SCIENCE_RESTART_MODE_SELECTION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T02:45:00Z",
+  "objective": "Select exactly one authorized restart mode after closed-frontier synthesis and probe-readiness standard candidate generation.",
+  "required_inputs": {
+    "science_common_failure_modes_synthesis_report": "formal/output/reports/science_common_failure_modes_synthesis_20260412_v0.json",
+    "probe_readiness_standard_candidate_report": "formal/output/reports/probe_readiness_standard_candidate_20260412_v0.json"
+  },
+  "selection_policy": {
+    "required_synthesis_outcome": "COMMON_FAILURE_MODES_SYNTHESIZED_AND_LOCKED",
+    "allowed_probe_standard_outcomes": [
+      "REQUIRES_RESTART_SELECTION_LAYER",
+      "PROBE_READINESS_STANDARD_CANDIDATE_DRAFTED"
+    ],
+    "allowed_restart_modes": [
+      "NEW_POLICY_EVIDENCE_STANDARD_LANE",
+      "GENUINELY_UNTOUCHED_LANE"
+    ],
+    "selected_restart_mode": "NEW_POLICY_EVIDENCE_STANDARD_LANE",
+    "policy_lane_id": "POLICY-PROBE-READINESS-v1",
+    "untouched_lane_candidate_id": "UNSET",
+    "untouched_lane_non_consumption_proof_declared": false,
+    "consumed_lane_aliases": [
+      "QM-STAT",
+      "GR-ROW-001",
+      "EM-QFT",
+      "SHARED-MODEL-CLASS",
+      "QFT-GR"
+    ],
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "selection_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_RESTART_MODE_SELECTION_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_RESTART_MODE_SELECTION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "RESTART_MODE_SELECTED_POLICY_LANE",
+      "RESTART_MODE_SELECTED_UNTOUCHED_LANE",
+      "RESTART_MODE_SELECTION_BLOCKED_CONSUMED_LANE_ALIAS",
+      "RESTART_MODE_SELECTION_EVIDENCE_INCOMPLETE"
+    ],
+    "default_outcome": "RESTART_MODE_SELECTION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local restart-mode selection declaration only; no scientific adequacy claim."
+}

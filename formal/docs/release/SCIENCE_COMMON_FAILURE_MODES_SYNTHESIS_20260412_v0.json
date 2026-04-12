@@ -1,0 +1,53 @@
+{
+  "schema_id": "SCIENCE_COMMON_FAILURE_MODES_SYNTHESIS_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T02:10:00Z",
+  "objective": "Synthesize cross-lane common failure modes and missing structures across GR, EM-QFT, shared model-class, and QFT-GR without reopening any consumed lane.",
+  "required_inputs": {
+    "shared_model_class_post_refinement_decision_report": "formal/output/reports/shared_model_class_post_refinement_decision_20260412_v0.json",
+    "qft_gr_post_refinement_decision_report": "formal/output/reports/qft_gr_post_refinement_decision_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "em_qft_higher_level_structure_review_report": "formal/output/reports/em_qft_higher_level_structure_review_20260412_v0.json",
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json",
+    "governance_blocker_trend_window_report": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "governance_blocker_closure_map_report": "formal/output/reports/governance_blocker_closure_map_20260410_v0.json",
+    "em_qft_interface_alignment_obligation_declaration_report": "formal/output/reports/em_qft_interface_alignment_obligation_declaration_20260412_v0.json",
+    "gr_regime_limit_alignment_obligation_declaration_report": "formal/output/reports/gr_regime_limit_alignment_obligation_declaration_20260412_v0.json"
+  },
+  "synthesis_policy": {
+    "required_shared_model_class_outcome": "HOLD_SHARED_MODEL_CLASS_AS_EXTERNALLY_COMPARABLE_BUT_NOT_PROBE_READY",
+    "required_qft_gr_outcome": "HOLD_QFT_GR_AS_EXTERNALLY_COMPARABLE_BUT_NOT_PROBE_READY",
+    "required_gr_outcome": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "required_em_qft_outcome": "EM_QFT_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "required_qm_stat_outcome": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+    "required_trend_movement_status": "FLAT",
+    "required_trend_net_delta": 0,
+    "required_em_qft_obligation_outcome": "EM_QFT_INTERFACE_ALIGNMENT_OBLIGATION_DECLARED",
+    "required_gr_obligation_outcome": "GR_REGIME_LIMIT_ALIGNMENT_OBLIGATION_DECLARED",
+    "required_obligation_type": "THEOREM_LINKED",
+    "minimum_blocker_rows": 1,
+    "policy_lane_required_for_restart": false,
+    "architecture_review_required": false,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "failure_mode_taxonomy_contract": {
+    "required_taxonomy_keys": [
+      "comparator_residual_tolerance_gap",
+      "externally_comparable_to_probe_ready_transition_gap",
+      "bridge_interface_obligation_non_discharge",
+      "regime_translation_gap",
+      "proof_debt_plateau"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_COMMON_FAILURE_MODES_SYNTHESIS_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_COMMON_FAILURE_MODES_SYNTHESIS_LAYER_ONLY",
+    "allowed_outcomes": [
+      "COMMON_FAILURE_MODES_SYNTHESIZED_AND_LOCKED",
+      "COMMON_FAILURE_MODES_EVIDENCE_INCOMPLETE",
+      "REQUIRES_POLICY_LANE_FOR_PROBE_READINESS_STANDARD",
+      "HOLD_PENDING_ARCHITECTURE_REVIEW"
+    ],
+    "default_outcome": "COMMON_FAILURE_MODES_SYNTHESIZED_AND_LOCKED"
+  },
+  "non_claim_boundary": "Repository-local cross-lane synthesis declaration only; no scientific adequacy claim."
+}

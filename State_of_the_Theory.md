@@ -343,6 +343,54 @@ GR first bounded discovery tranche checkpoint (P41-A, 2026-04-11):
 - `GR_DISCOVERY_SINGLE_OUTCOME_RULE_v0: EXACTLY_ONE_ALLOWED_TERMINAL_OUTCOME_REQUIRED`
 - `GR_DISCOVERY_NO_PROBE_RULE_v0: DERIVATION_ONLY_FIRST_TRANCHE_PROBE_DISABLED_UNLESS_EXPLICITLY_ENABLED`
 
+Phase A canonical freeze integrity checkpoint (P42-A, 2026-04-12):
+- `SCIENCE_PHASE_A_CANONICAL_FREEZE_INTEGRITY_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `SCIENCE_PHASE_A_CANONICAL_FREEZE_INTEGRITY_DECLARATION_v0: formal/docs/release/SCIENCE_PHASE_A_CANONICAL_FREEZE_INTEGRITY_20260412_v0.json`
+- `SCIENCE_PHASE_A_CANONICAL_FREEZE_INTEGRITY_REPORT_TOOL_v0: formal/python/tools/science_phase_a_canonical_freeze_integrity_report.py`
+- `SCIENCE_PHASE_A_CANONICAL_FREEZE_INTEGRITY_REPORT_JSON_v0: formal/output/reports/science_phase_a_canonical_freeze_integrity_20260412_v0.json`
+- `SCIENCE_PHASE_A_CANONICAL_FREEZE_INTEGRITY_GATE_v0: formal/python/tests/test_science_phase_a_canonical_freeze_integrity_report.py`
+- `SCIENCE_PHASE_A_CANONICAL_FREEZE_INTEGRITY_RESULT_v0: PHASE_A_CANONICAL_FREEZE_INTEGRITY_CONFIRMED`
+
+Common failure modes synthesis checkpoint (P43-A, 2026-04-12):
+- `SCIENCE_COMMON_FAILURE_MODES_SYNTHESIS_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `SCIENCE_COMMON_FAILURE_MODES_SYNTHESIS_DECLARATION_v0: formal/docs/release/SCIENCE_COMMON_FAILURE_MODES_SYNTHESIS_20260412_v0.json`
+- `SCIENCE_COMMON_FAILURE_MODES_SYNTHESIS_REPORT_TOOL_v0: formal/python/tools/science_common_failure_modes_synthesis_report.py`
+- `SCIENCE_COMMON_FAILURE_MODES_SYNTHESIS_REPORT_JSON_v0: formal/output/reports/science_common_failure_modes_synthesis_20260412_v0.json`
+- `SCIENCE_COMMON_FAILURE_MODES_SYNTHESIS_GATE_v0: formal/python/tests/test_science_common_failure_modes_synthesis_report.py`
+- `SCIENCE_COMMON_FAILURE_MODES_SYNTHESIS_RESULT_v0: COMMON_FAILURE_MODES_SYNTHESIZED_AND_LOCKED`
+
+Probe readiness standard candidate checkpoint (P44-A, 2026-04-12):
+- `PROBE_READINESS_STANDARD_CANDIDATE_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `PROBE_READINESS_STANDARD_CANDIDATE_DECLARATION_v0: formal/docs/release/PROBE_READINESS_STANDARD_CANDIDATE_20260412_v0.json`
+- `PROBE_READINESS_STANDARD_CANDIDATE_REPORT_TOOL_v0: formal/python/tools/probe_readiness_standard_candidate_report.py`
+- `PROBE_READINESS_STANDARD_CANDIDATE_REPORT_JSON_v0: formal/output/reports/probe_readiness_standard_candidate_20260412_v0.json`
+- `PROBE_READINESS_STANDARD_CANDIDATE_GATE_v0: formal/python/tests/test_probe_readiness_standard_candidate_report.py`
+- `PROBE_READINESS_STANDARD_CANDIDATE_RESULT_v0: REQUIRES_RESTART_SELECTION_LAYER`
+
+Science restart mode selection checkpoint (P45-A, 2026-04-12):
+- `SCIENCE_RESTART_MODE_SELECTION_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `SCIENCE_RESTART_MODE_SELECTION_DECLARATION_v0: formal/docs/release/SCIENCE_RESTART_MODE_SELECTION_20260412_v0.json`
+- `SCIENCE_RESTART_MODE_SELECTION_REPORT_TOOL_v0: formal/python/tools/science_restart_mode_selection_report.py`
+- `SCIENCE_RESTART_MODE_SELECTION_REPORT_JSON_v0: formal/output/reports/science_restart_mode_selection_20260412_v0.json`
+- `SCIENCE_RESTART_MODE_SELECTION_GATE_v0: formal/python/tests/test_science_restart_mode_selection_report.py`
+- `SCIENCE_RESTART_MODE_SELECTION_RESULT_v0: RESTART_MODE_SELECTED_POLICY_LANE`
+
+Probe readiness standard formalization checkpoint (P46-A, 2026-04-12):
+- `PROBE_READINESS_STANDARD_FORMALIZATION_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `PROBE_READINESS_STANDARD_FORMALIZATION_DECLARATION_v0: formal/docs/release/PROBE_READINESS_STANDARD_FORMALIZATION_20260412_v0.json`
+- `PROBE_READINESS_STANDARD_FORMALIZATION_REPORT_TOOL_v0: formal/python/tools/probe_readiness_standard_formalization_report.py`
+- `PROBE_READINESS_STANDARD_FORMALIZATION_REPORT_JSON_v0: formal/output/reports/probe_readiness_standard_formalization_20260412_v0.json`
+- `PROBE_READINESS_STANDARD_FORMALIZATION_GATE_v0: formal/python/tests/test_probe_readiness_standard_formalization_report.py`
+- `PROBE_READINESS_STANDARD_FORMALIZATION_RESULT_v0: PROBE_READINESS_STANDARD_FORMALIZED_AND_LOCKED`
+
+Closed lane reopen eligibility checkpoint (P47-A, 2026-04-12):
+- `SCIENCE_CLOSED_LANE_REOPEN_ELIGIBILITY_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `SCIENCE_CLOSED_LANE_REOPEN_ELIGIBILITY_DECLARATION_v0: formal/docs/release/SCIENCE_CLOSED_LANE_REOPEN_ELIGIBILITY_20260412_v0.json`
+- `SCIENCE_CLOSED_LANE_REOPEN_ELIGIBILITY_REPORT_TOOL_v0: formal/python/tools/science_closed_lane_reopen_eligibility_report.py`
+- `SCIENCE_CLOSED_LANE_REOPEN_ELIGIBILITY_REPORT_JSON_v0: formal/output/reports/science_closed_lane_reopen_eligibility_20260412_v0.json`
+- `SCIENCE_CLOSED_LANE_REOPEN_ELIGIBILITY_GATE_v0: formal/python/tests/test_science_closed_lane_reopen_eligibility_report.py`
+- `SCIENCE_CLOSED_LANE_REOPEN_ELIGIBILITY_RESULT_v0: CLOSED_LANE_REOPEN_NONE_ELIGIBLE`
+
 Governance audit packet checkpoint (A1-A, 2026-04-10):
 - `GOVERNANCE_AUDIT_PACKET_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
 - `GOVERNANCE_AUDIT_PACKET_DECLARATION_v0: formal/docs/release/GOVERNANCE_AUDIT_PACKET_20260410_v0.md`

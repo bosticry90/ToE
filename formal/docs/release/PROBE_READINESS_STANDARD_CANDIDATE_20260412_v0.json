@@ -1,0 +1,52 @@
+{
+  "schema_id": "PROBE_READINESS_STANDARD_CANDIDATE_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T02:30:00Z",
+  "objective": "Define a stronger machine-checkable probe-readiness standard candidate for future restart authorization without reopening consumed lanes.",
+  "required_inputs": {
+    "science_common_failure_modes_synthesis_report": "formal/output/reports/science_common_failure_modes_synthesis_20260412_v0.json",
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json",
+    "governance_blocker_trend_window_report": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json"
+  },
+  "candidate_policy": {
+    "required_synthesis_outcome": "COMMON_FAILURE_MODES_SYNTHESIZED_AND_LOCKED",
+    "required_qm_stat_policy_outcome": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+    "required_trend_movement_status": "FLAT",
+    "required_trend_net_delta": 0,
+    "comparator_fidelity_minimum": "DECLARED_AND_MACHINE_CHECKABLE",
+    "repeatability_stability_minimum": "DECLARED_AND_MACHINE_CHECKABLE",
+    "observable_mapping_minimum": "DECLARED_AND_MACHINE_CHECKABLE",
+    "numeric_measurement_inputs": "MANDATORY_BEFORE_PROBE_READY",
+    "partial_hold_routing_rule": "PARTIAL_HOLD_REQUIRES_POLICY_OR_CLOSURE_NO_UNBOUNDED_RETRY_LOOP",
+    "transition_levels": [
+      "INTERNAL_CONSISTENCY_ONLY",
+      "EXTERNALLY_COMPARABLE_CANDIDATE",
+      "PROBE_READY",
+      "PREDICTIVELY_CONFIRMED"
+    ],
+    "requires_restart_selection_layer": true,
+    "architecture_review_required": false,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "candidate_contract": {
+    "required_standard_keys": [
+      "comparator_fidelity_minimum",
+      "repeatability_stability_minimum",
+      "observable_mapping_minimum",
+      "numeric_measurement_inputs",
+      "partial_hold_routing_rule",
+      "transition_levels"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_PROBE_READINESS_STANDARD_CANDIDATE_OUTCOME",
+    "no_loop_rule": "ONE_PROBE_READINESS_STANDARD_CANDIDATE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "PROBE_READINESS_STANDARD_CANDIDATE_DRAFTED",
+      "PROBE_READINESS_STANDARD_EVIDENCE_INCOMPLETE",
+      "REQUIRES_RESTART_SELECTION_LAYER",
+      "HOLD_PENDING_ARCHITECTURE_REVIEW"
+    ],
+    "default_outcome": "PROBE_READINESS_STANDARD_CANDIDATE_DRAFTED"
+  },
+  "non_claim_boundary": "Repository-local probe-readiness standard candidate declaration only; no scientific adequacy claim."
+}

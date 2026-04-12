@@ -1,0 +1,48 @@
+{
+  "schema_id": "PROBE_READINESS_STANDARD_FORMALIZATION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T03:25:00Z",
+  "objective": "Formalize the probe-readiness standard as a machine-checkable policy lane artifact before any closed-lane re-entry decision.",
+  "required_inputs": {
+    "science_common_failure_modes_synthesis_report": "formal/output/reports/science_common_failure_modes_synthesis_20260412_v0.json",
+    "probe_readiness_standard_candidate_report": "formal/output/reports/probe_readiness_standard_candidate_20260412_v0.json",
+    "science_restart_mode_selection_report": "formal/output/reports/science_restart_mode_selection_20260412_v0.json"
+  },
+  "formalization_policy": {
+    "required_synthesis_outcome": "COMMON_FAILURE_MODES_SYNTHESIZED_AND_LOCKED",
+    "allowed_candidate_outcomes": [
+      "REQUIRES_RESTART_SELECTION_LAYER",
+      "PROBE_READINESS_STANDARD_CANDIDATE_DRAFTED"
+    ],
+    "required_restart_selection_outcome": "RESTART_MODE_SELECTED_POLICY_LANE",
+    "required_standard_keys": [
+      "comparator_fidelity_minimum",
+      "repeatability_stability_minimum",
+      "observable_mapping_minimum",
+      "numeric_measurement_inputs",
+      "partial_hold_routing_rule",
+      "transition_levels"
+    ],
+    "transition_levels_required_exact": [
+      "INTERNAL_CONSISTENCY_ONLY",
+      "EXTERNALLY_COMPARABLE_CANDIDATE",
+      "PROBE_READY",
+      "PREDICTIVELY_CONFIRMED"
+    ],
+    "enforce_non_reopen_during_formalization": true,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "formalization_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_PROBE_READINESS_STANDARD_FORMALIZATION_OUTCOME",
+    "no_loop_rule": "ONE_PROBE_READINESS_STANDARD_FORMALIZATION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "PROBE_READINESS_STANDARD_FORMALIZED_AND_LOCKED",
+      "PROBE_READINESS_STANDARD_FORMALIZATION_INCOMPLETE",
+      "PROBE_READINESS_STANDARD_FORMALIZATION_CONTRACT_VIOLATION",
+      "HOLD_PENDING_POLICY_REPAIR"
+    ],
+    "default_outcome": "PROBE_READINESS_STANDARD_FORMALIZATION_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local probe-readiness standard formalization declaration only; no scientific adequacy claim."
+}
