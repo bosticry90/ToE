@@ -1,0 +1,48 @@
+{
+  "schema_id": "SCIENCE_PHASE_R_SIGNAL_PRODUCED_THRESHOLD_CLOSURE_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T02:20:00Z",
+  "objective": "Close the remaining discriminative-signal threshold gap for the thermal-boundary candidate and determine whether residual Phase O fields are sufficiently resolved for a future packet-authorization review.",
+  "canonical_antecedent_commits": {
+    "phase_q_signal_definition_commit": "327180e",
+    "phase_p_specification_commit": "915ed86",
+    "phase_o_authorized_candidate_hold_commit": "8dcbc62",
+    "phase_j_stop_state_commit": "e1eb7fd"
+  },
+  "required_inputs": {
+    "science_phase_q_candidate_discriminative_signal_definition_report": "formal/output/reports/science_phase_q_candidate_discriminative_signal_definition_20260412_v0.json",
+    "science_phase_p_authorized_candidate_specification_refinement_report": "formal/output/reports/science_phase_p_authorized_candidate_specification_refinement_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "signal_threshold_contract": {
+    "required_phase_q_outcome": "DISCRIMINATIVE_SIGNAL_PARTIAL_HOLD",
+    "required_phase_q_authorized_lane_id": "LANE-THERMAL-BOUNDARY-001",
+    "required_phase_q_packet_authorization": false,
+    "required_phase_p_outcome": "CANDIDATE_SPECIFICATION_PARTIAL_HOLD_REQUIRES_MORE_DEFINITION",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "signal_threshold_closure": {
+      "signal_produced_threshold_defined": true,
+      "weakly_moving_vs_signal_produced_separation_defined": true,
+      "remaining_phase_o_fields_resolved": false,
+      "threshold_measurement_mapping_complete": true,
+      "authorization_review_ready": false
+    }
+  },
+  "signal_threshold_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_R_SIGNAL_PRODUCED_THRESHOLD_CLOSURE_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_R_SIGNAL_PRODUCED_THRESHOLD_CLOSURE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "SIGNAL_PRODUCED_THRESHOLD_DEFINED_AND_LOCKED",
+      "SIGNAL_THRESHOLD_PARTIAL_HOLD",
+      "CANDIDATE_REQUIRES_DIFFERENT_CANDIDATE_CLASS",
+      "CANDIDATE_WITHDRAWN",
+      "SIGNAL_THRESHOLD_CLOSURE_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_SIGNAL_THRESHOLD_REPAIR"
+    ],
+    "default_outcome": "SIGNAL_THRESHOLD_CLOSURE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local signal-produced threshold closure declaration only; no scientific adequacy claim."
+}
