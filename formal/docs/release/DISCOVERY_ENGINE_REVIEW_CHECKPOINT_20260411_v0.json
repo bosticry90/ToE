@@ -1,0 +1,33 @@
+{
+  "schema_id": "DISCOVERY_ENGINE_REVIEW_CHECKPOINT_20260411_v0",
+  "checkpoint_id": "DERC-001",
+  "current_mode": "CONTROL_PLUS_DISCOVERY_OVERLAY",
+  "required_inputs": {
+    "discovery_engine_transition_packet": "formal/docs/release/DISCOVERY_ENGINE_TRANSITION_PACKET_20260411_v0.json",
+    "discovery_queue_transition_decision_report": "formal/output/reports/discovery_queue_transition_decision_report_20260411_v0.json",
+    "discovery_queue_review_pass_report": "formal/output/reports/discovery_queue_review_pass_report_20260411_v0.json",
+    "discovery_queue_rescoring_pass_report": "formal/output/reports/discovery_queue_rescoring_pass_report_20260411_v0.json",
+    "qm_stat_discovery_ruling_report": "formal/output/reports/qm_stat_discovery_ruling_report_20260411_v0.json",
+    "qm_stat_post_cycle_decision_report": "formal/output/reports/qm_stat_discovery_post_derivation_probe_decision_report_20260411_v0.json",
+    "qft_gr_discovery_ruling_report": "formal/output/reports/qft_gr_discovery_ruling_report_20260411_v0.json",
+    "qft_gr_post_cycle_decision_report": "formal/output/reports/qft_gr_discovery_post_cycle_decision_report_20260411_v0.json",
+    "gr_discovery_discriminator_tranche_report": "formal/output/reports/gr_discovery_discriminator_tranche_report_20260411_v0.json",
+    "gr_discovery_ruling_report": "formal/output/reports/gr_discovery_ruling_report_20260411_v0.json"
+  },
+  "review_questions": [
+    "IS_DISCOVERY_YIELD_IMPROVING_RELATIVE_TO_PRETRANSITION_BASELINE",
+    "ARE_INTERNAL_ONLY_DISCRIMINATOR_SEAMS_ACCUMULATING_TOWARD_A_STRONGER_EXTERNAL_PATH",
+    "SHOULD_NEXT_EXPANSION_OPEN_ANOTHER_SEAM_OR_REASSESS_SCORING_ROUTING_FIRST"
+  ],
+  "decision_policy": {
+    "pretransition_baseline_inference_rule": "MODE_TRANSITION_FROM_CONTROL_MODE_PRIMARY_IMPLIES_ZERO_DISCOVERY_OVERLAY_BASELINE",
+    "minimum_internal_only_lanes_for_review_hold": 2,
+    "pause_when_yield_improves_but_external_path_not_established": true,
+    "allow_expansion_only_when_external_discriminative_leverage_established": true,
+    "hold_policy": "NO_FURTHER_LANE_EXPANSION_UNTIL_REVIEW_CHECKPOINT_RESOLVED",
+    "pause_next_action": "REASSESS_DISCOVERY_SCORING_ROUTING_BEFORE_ANY_FURTHER_LANE_EXPANSION",
+    "expansion_next_action": "AUTHORIZE_ONE_NEW_DISCOVERY_SEAM_EXPANSION",
+    "repair_next_action": "RESTORE_DISCOVERY_REVIEW_INPUTS_AND_REEVALUATE_ONCE"
+  },
+  "non_claim_boundary": "Repository-local discovery-engine review checkpoint declaration only; no scientific adequacy claim."
+}
