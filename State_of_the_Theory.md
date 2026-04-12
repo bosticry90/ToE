@@ -407,6 +407,14 @@ Closed lane non-reopen reason summary checkpoint (P49-A, 2026-04-12):
 - `SCIENCE_CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_GATE_v0: formal/python/tests/test_science_closed_lane_non_reopen_reason_summary_report.py`
 - `SCIENCE_CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_RESULT_v0: CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED`
 
+Phase D untouched lane first-test packet checkpoint (P50-A, 2026-04-12):
+- `SCIENCE_PHASE_D_UNTOUCHED_LANE_FIRST_TEST_PACKET_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `SCIENCE_PHASE_D_UNTOUCHED_LANE_FIRST_TEST_PACKET_DECLARATION_v0: formal/docs/release/SCIENCE_PHASE_D_UNTOUCHED_LANE_FIRST_TEST_PACKET_20260412_v0.json`
+- `SCIENCE_PHASE_D_UNTOUCHED_LANE_FIRST_TEST_PACKET_REPORT_TOOL_v0: formal/python/tools/science_phase_d_untouched_lane_first_test_packet_report.py`
+- `SCIENCE_PHASE_D_UNTOUCHED_LANE_FIRST_TEST_PACKET_REPORT_JSON_v0: formal/output/reports/science_phase_d_untouched_lane_first_test_packet_20260412_v0.json`
+- `SCIENCE_PHASE_D_UNTOUCHED_LANE_FIRST_TEST_PACKET_GATE_v0: formal/python/tests/test_science_phase_d_untouched_lane_first_test_packet_report.py`
+- `SCIENCE_PHASE_D_UNTOUCHED_LANE_FIRST_TEST_PACKET_RESULT_v0: UNTOUCHED_LANE_FIRST_TEST_NONDISCRIMINATIVE_HOLD`
+
 Governance audit packet checkpoint (A1-A, 2026-04-10):
 - `GOVERNANCE_AUDIT_PACKET_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
 - `GOVERNANCE_AUDIT_PACKET_DECLARATION_v0: formal/docs/release/GOVERNANCE_AUDIT_PACKET_20260410_v0.md`
