@@ -1,0 +1,55 @@
+{
+  "schema_id": "SCIENCE_PHASE_X_GOVERNED_LANE_END_COMPARATIVE_SYNTHESIS_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T05:00:00Z",
+  "objective": "Issue one bounded project-level comparative synthesis across governed lane-end states after Phase W and lock thermal-boundary as preserved but inactive.",
+  "canonical_antecedent_commits": {
+    "phase_w_plateau_decision_commit": "85a4d5a",
+    "phase_v_execution_guard_binding_commit": "6bcc9f9",
+    "phase_j_stop_state_commit": "e1eb7fd"
+  },
+  "required_inputs": {
+    "science_phase_w_pre_execution_plateau_decision_report": "formal/output/reports/science_phase_w_pre_execution_plateau_decision_20260412_v0.json",
+    "science_phase_j_untouched_lane_post_refinement_decision_report": "formal/output/reports/science_phase_j_untouched_lane_post_refinement_decision_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "governed_lane_end_synthesis_contract": {
+    "required_phase_w_outcome": "HOLD_CANDIDATE_AS_NEAR_READY_BUT_NOT_EXECUTABLE",
+    "required_phase_w_authorized_lane_id": "LANE-THERMAL-BOUNDARY-001",
+    "required_phase_w_packet_authorization": false,
+    "required_phase_j_outcome": "HOLD_UNTOUCHED_LANE_AS_VALID_BUT_NONMOVING",
+    "required_phase_j_target_lane": "LANE-NEUTRINO-INTERFACE-001",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "required_closed_lane_ids": [
+      "QM-STAT",
+      "GR-ROW-001",
+      "EM-QFT",
+      "SHARED-MODEL-CLASS",
+      "QFT-GR"
+    ],
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "synthesis_signals": {
+      "lane_end_family_complete": true,
+      "thermal_lane_marked_preserved_inactive": true,
+      "thermal_lane_further_closure_prohibited": true,
+      "thermal_lane_packet_prohibited": true,
+      "project_level_synthesis_only": true,
+      "policy_revision_evaluation_required": true,
+      "force_policy_escalation_now": false
+    }
+  },
+  "governed_lane_end_synthesis_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_X_GOVERNED_LANE_END_COMPARATIVE_SYNTHESIS_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_X_GOVERNED_LANE_END_COMPARATIVE_SYNTHESIS_LAYER_ONLY",
+    "allowed_outcomes": [
+      "GOVERNED_LANE_END_COMPARATIVE_SYNTHESIS_COMPLETE",
+      "ESCALATE_TO_HIGHER_LEVEL_POLICY_FOR_FUTURE_CANDIDATE_SELECTION",
+      "GOVERNED_LANE_END_SYNTHESIS_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_GOVERNED_LANE_END_SYNTHESIS_REPAIR"
+    ],
+    "default_outcome": "GOVERNED_LANE_END_SYNTHESIS_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local governed lane-end comparative synthesis declaration only; no scientific adequacy claim."
+}
