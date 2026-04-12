@@ -1,0 +1,30 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_EXTERNAL_COMPARABILITY_ADJUDICATION_20260412_v0",
+  "adjudication_id": "QM-STAT-RL10-BRIDGE-EXTERNAL-COMPARABILITY-ADJUDICATION-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_signal_interpretation_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_signal_interpretation_20260412_v0.json",
+    "bridge_first_test_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_first_test_execution_20260412_v0.json",
+    "bridge_first_test_ruling_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_first_test_ruling_20260412_v0.json",
+    "qm_stat_single_baseline_comparator_report": "formal/output/reports/qm_stat_single_baseline_comparator_20260411_v0.json"
+  },
+  "comparator_binding": {
+    "external_comparator_id": "OV-RL-10",
+    "external_comparator_schema": "OV-RL-10_entropy_balance_comparator/v0",
+    "comparable_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0",
+    "confirmation_signal_margin_min": 0.05,
+    "probe_ready_signal_margin_min": 0.10
+  },
+  "adjudication_contract": {
+    "allowed_outcomes": [
+      "BRIDGE_SIGNAL_EXTERNALLY_COMPARABLE_CONFIRMED",
+      "BRIDGE_SIGNAL_PROBE_READY",
+      "BRIDGE_SIGNAL_CANDIDATE_ONLY_HOLD",
+      "BRIDGE_SIGNAL_PATH_FALSIFIED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_ADJUDICATION_OUTCOME",
+    "no_loop_rule": "ONE_BRIDGE_EXTERNAL_COMPARABILITY_ADJUDICATION_ONLY",
+    "default_outcome": "BRIDGE_SIGNAL_CANDIDATE_ONLY_HOLD"
+  },
+  "non_claim_boundary": "Repository-local bridge external-comparability adjudication declaration only; no scientific adequacy claim."
+}
