@@ -1,0 +1,48 @@
+{
+  "schema_id": "SCIENCE_PHASE_S_AUTHORIZATION_READINESS_CLOSURE_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T02:40:00Z",
+  "objective": "Close final authorization-readiness gaps for the thermal-boundary candidate and issue one bounded packet-authorization readiness verdict without opening execution.",
+  "canonical_antecedent_commits": {
+    "phase_r_threshold_closure_commit": "5681325",
+    "phase_q_signal_definition_commit": "327180e",
+    "phase_p_specification_commit": "915ed86",
+    "phase_j_stop_state_commit": "e1eb7fd"
+  },
+  "required_inputs": {
+    "science_phase_r_signal_produced_threshold_closure_report": "formal/output/reports/science_phase_r_signal_produced_threshold_closure_20260412_v0.json",
+    "science_phase_o_authorized_candidate_next_step_selection_report": "formal/output/reports/science_phase_o_authorized_candidate_next_step_selection_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "authorization_readiness_contract": {
+    "required_phase_r_outcome": "SIGNAL_THRESHOLD_PARTIAL_HOLD",
+    "required_phase_r_authorized_lane_id": "LANE-THERMAL-BOUNDARY-001",
+    "required_phase_r_packet_authorization": false,
+    "required_phase_o_outcome": "HOLD_AUTHORIZED_CANDIDATE_AND_DO_NOT_OPEN_PACKET",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "authorization_readiness": {
+      "remaining_phase_o_fields_resolved": false,
+      "authorization_review_ready": false,
+      "policy_compliance_bundle_complete": true,
+      "candidate_preservation_status_confirmed": true,
+      "packet_execution_still_separate": true
+    }
+  },
+  "authorization_readiness_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_S_AUTHORIZATION_READINESS_CLOSURE_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_S_AUTHORIZATION_READINESS_CLOSURE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "AUTHORIZATION_READINESS_COMPLETE_PACKET_AUTHORIZED",
+      "AUTHORIZATION_READINESS_PARTIAL_HOLD",
+      "CANDIDATE_REQUIRES_HIGHER_LEVEL_POLICY",
+      "CANDIDATE_WITHDRAWN",
+      "AUTHORIZATION_READINESS_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_AUTHORIZATION_READINESS_REPAIR"
+    ],
+    "default_outcome": "AUTHORIZATION_READINESS_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local authorization-readiness closure declaration only; no scientific adequacy claim."
+}
