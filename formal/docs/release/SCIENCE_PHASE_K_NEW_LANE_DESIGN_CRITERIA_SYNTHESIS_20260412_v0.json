@@ -1,0 +1,50 @@
+{
+  "schema_id": "SCIENCE_PHASE_K_NEW_LANE_DESIGN_CRITERIA_SYNTHESIS_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T08:20:00Z",
+  "objective": "Synthesize machine-checkable new-lane design criteria from consumed-lane and held-lane endpoints, then issue one bounded resume-path recommendation without reopening any lane.",
+  "required_inputs": {
+    "science_phase_j_untouched_lane_post_refinement_decision_report": "formal/output/reports/science_phase_j_untouched_lane_post_refinement_decision_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json",
+    "science_phase_d_untouched_lane_selection_report": "formal/output/reports/science_phase_d_untouched_lane_selection_20260412_v0.json",
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "em_qft_higher_level_structure_review_report": "formal/output/reports/em_qft_higher_level_structure_review_20260412_v0.json",
+    "shared_model_class_post_refinement_decision_report": "formal/output/reports/shared_model_class_post_refinement_decision_20260412_v0.json",
+    "qft_gr_post_refinement_decision_report": "formal/output/reports/qft_gr_post_refinement_decision_20260412_v0.json"
+  },
+  "synthesis_policy": {
+    "required_phase_j_outcome": "HOLD_UNTOUCHED_LANE_AS_VALID_BUT_NONMOVING",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "required_phase_d_selection_outcome": "UNTOUCHED_LANE_SELECTED_FOR_BOUNDED_FIRST_TEST",
+    "required_legacy_lane_outcomes": {
+      "QM-STAT": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+      "GR-ROW-001": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+      "EM-QFT": "EM_QFT_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+      "SHARED-MODEL-CLASS": "HOLD_SHARED_MODEL_CLASS_AS_EXTERNALLY_COMPARABLE_BUT_NOT_PROBE_READY",
+      "QFT-GR": "HOLD_QFT_GR_AS_EXTERNALLY_COMPARABLE_BUT_NOT_PROBE_READY"
+    },
+    "required_held_untouched_lane": "LANE-NEUTRINO-INTERFACE-001",
+    "non_reopen_rule_enforced": true,
+    "recommend_resume_mode": "HIGHER_LEVEL_SELECTION_POLICY_LANE",
+    "criteria_axes": [
+      "discriminative_observable_strength",
+      "external_comparator_path_clarity",
+      "declared_structure_sufficiency",
+      "attack_family_mobility"
+    ],
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "synthesis_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_K_NEW_LANE_DESIGN_CRITERIA_SYNTHESIS_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_K_NEW_LANE_DESIGN_CRITERIA_SYNTHESIS_LAYER_ONLY",
+    "allowed_outcomes": [
+      "NEW_LANE_DESIGN_CRITERIA_SYNTHESIZED_AND_LOCKED",
+      "NEW_LANE_DESIGN_CRITERIA_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_SYNTHESIS_REPAIR"
+    ],
+    "default_outcome": "NEW_LANE_DESIGN_CRITERIA_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local new-lane design criteria synthesis declaration only; no scientific adequacy claim."
+}
