@@ -1,0 +1,31 @@
+{
+  "schema_id": "GR_ROW_001_HIGHER_LEVEL_STRUCTURE_REVIEW_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T19:12:00Z",
+  "objective": "Conduct bounded higher-level structural review for ROW-PILLAR-GR-001 based on convergent failure pattern across two distinct GR attack families.",
+  "required_inputs": {
+    "gr_master_action_transport_attack_retry_packet_report": "formal/output/reports/gr_master_action_transport_attack_retry_packet_20260412_v0.json",
+    "gr_regime_limit_alignment_attack_retry_packet_report": "formal/output/reports/gr_regime_limit_alignment_attack_retry_packet_20260412_v0.json",
+    "gr_master_action_transport_obligation_declaration_report": "formal/output/reports/gr_master_action_transport_obligation_declaration_20260412_v0.json",
+    "gr_regime_limit_alignment_obligation_declaration_report": "formal/output/reports/gr_regime_limit_alignment_obligation_declaration_20260412_v0.json"
+  },
+  "review_policy": {
+    "target_row": "ROW-PILLAR-GR-001",
+    "convergence_pattern": "two_distinct_attack_families_both_declared_but_insufficient",
+    "review_scope": "higher-level_structural_adequacy",
+    "single_review_only": true,
+    "single_outcome_only": true
+  },
+  "review_contract": {
+    "allowed_outcomes": [
+      "HIGHER_LEVEL_GR_STRUCTURE_DECLARABLE",
+      "HIGHER_LEVEL_GR_STRUCTURE_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+      "HIGHER_LEVEL_GR_STRUCTURE_REQUIRES_HIGHER_LEVEL_POLICY",
+      "HOLD_ROW_001_AND_STOP_ATTACK_CLASS_CYCLING"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_GR_STRUCTURE_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_GR_ROW_001_STRUCTURE_REVIEW_ONLY",
+    "default_outcome": "HOLD_ROW_001_AND_STOP_ATTACK_CLASS_CYCLING"
+  },
+  "non_claim_boundary": "Repository-local GR row 001 higher-level structural review only; no scientific adequacy claim."
+}
