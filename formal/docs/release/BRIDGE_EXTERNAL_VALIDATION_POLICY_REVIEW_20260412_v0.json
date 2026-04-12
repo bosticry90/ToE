@@ -1,0 +1,33 @@
+{
+  "schema_id": "BRIDGE_EXTERNAL_VALIDATION_POLICY_REVIEW_20260412_v0",
+  "review_id": "BRIDGE-EXTERNAL-VALIDATION-POLICY-REVIEW-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_admissibility_standard_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_admissibility_standard_review_20260412_v0.json",
+    "bridge_repeatability_check_naming_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_repeatability_check_naming_review_20260412_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "external_validation_policy": {
+    "repeatability_admissibility_criteria_defined": false,
+    "cross_probe_admissibility_criteria_defined": false,
+    "second_cycle_minimum_evidence_defined": false,
+    "second_cycle_minimum_evidence_satisfied": false,
+    "no_further_external_validation_path_triggered": false
+  },
+  "review_contract": {
+    "allowed_outcomes": [
+      "ADMISSIBLE_REPEATABILITY_STANDARD_DEFINED",
+      "ADMISSIBLE_CROSS_PROBE_STANDARD_DEFINED",
+      "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+      "NO_FURTHER_EXTERNAL_VALIDATION_PATH_JUSTIFIED_YET"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_EXTERNAL_VALIDATION_POLICY_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_EXTERNAL_VALIDATION_POLICY_REVIEW_ONLY",
+    "default_outcome": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD"
+  },
+  "non_claim_boundary": "Repository-local bridge external-validation policy review declaration only; no scientific adequacy claim."
+}
