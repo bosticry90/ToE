@@ -1,0 +1,37 @@
+{
+  "schema_id": "EM_QFT_NEXT_ATTACK_CLASS_SELECTION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T19:50:00Z",
+  "objective": "Bounded EM-QFT attack-class reselection after post-first-test decision requires a different attack class.",
+  "required_inputs": {
+    "em_qft_post_first_test_decision_report": "formal/output/reports/em_qft_post_first_test_decision_20260412_v0.json",
+    "em_qft_seam_first_test_packet_report": "formal/output/reports/em_qft_seam_first_test_packet_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "science_post_qm_stat_rebalance_report": "formal/output/reports/science_post_qm_stat_rebalance_20260412_v0.json"
+  },
+  "selection_policy": {
+    "required_decision_outcome": "EM_QFT_REQUIRES_DIFFERENT_ATTACK_CLASS",
+    "required_first_test_outcome": "EM_QFT_SEAM_VALID_BUT_NONMOVING",
+    "required_target_seam": "SEAM-EM-QFT",
+    "require_gr_row_001_frozen": true,
+    "require_qm_stat_hold_unchanged": true,
+    "signal_refinement_priority": false,
+    "subseam_reselection_priority": false,
+    "interface_alignment_priority": true,
+    "require_rescoring": false,
+    "single_selection_only": true,
+    "single_outcome_only": true
+  },
+  "selection_contract": {
+    "allowed_outcomes": [
+      "EM_QFT_SIGNAL_REFINEMENT_ATTACK",
+      "EM_QFT_SUBSEAM_TARGET_RESELECTION_ATTACK",
+      "EM_QFT_INTERFACE_ALIGNMENT_ATTACK",
+      "HOLD_EM_QFT_AND_REQUIRE_RESCORING"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_EM_QFT_NEXT_ATTACK_CLASS_OUTCOME",
+    "no_loop_rule": "ONE_EM_QFT_NEXT_ATTACK_CLASS_SELECTION_ONLY",
+    "default_outcome": "HOLD_EM_QFT_AND_REQUIRE_RESCORING"
+  },
+  "non_claim_boundary": "Repository-local EM-QFT next attack-class selection declaration only; no scientific adequacy claim."
+}
