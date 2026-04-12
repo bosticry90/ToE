@@ -1,0 +1,50 @@
+{
+  "schema_id": "QFT_GR_COMPARATOR_BINDING_EXECUTION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T00:35:00Z",
+  "objective": "Run one bounded comparator-binding execution for the QFT-GR lane using one comparator and one bound quantity only.",
+  "required_inputs": {
+    "qft_gr_post_signal_interpretation_report": "formal/output/reports/qft_gr_post_signal_interpretation_20260412_v0.json",
+    "qft_gr_first_test_packet_report": "formal/output/reports/qft_gr_first_test_packet_20260412_v0.json",
+    "science_new_untouched_lane_selection_report": "formal/output/reports/science_new_untouched_lane_selection_20260412_v0.json",
+    "science_frontier_preservation_record_report": "formal/output/reports/science_frontier_preservation_record_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "em_qft_higher_level_structure_review_report": "formal/output/reports/em_qft_higher_level_structure_review_20260412_v0.json",
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json"
+  },
+  "binding_policy": {
+    "required_interpretation_outcome": "QFT_GR_EXTERNALLY_COMPARABLE_CANDIDATE",
+    "required_first_test_outcome": "QFT_GR_SEAM_SIGNAL_PRODUCED",
+    "required_lane_selection_outcome": "ACTIVATE_QFT_GR_UNTOUCHED_FIRST_TEST",
+    "required_preservation_outcome": "FRONTIER_PRESERVED_AT_CANONICAL_COMMIT",
+    "qm_stat_required_review_outcome": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+    "gr_required_outcome": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "em_qft_required_outcome": "EM_QFT_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "single_comparator": {
+      "comparator_id": "EXT-COMP-QFT-GR-0001",
+      "description": "External comparator focused on QFT-GR bridge transport consistency under bounded mapping"
+    },
+    "single_bound_quantity": {
+      "quantity_id": "qft_gr_bridge_transport_interface_residual",
+      "description": "Residual on the QFT-GR bridge transport interface under one bounded comparator map"
+    },
+    "binding_confirmed": false,
+    "binding_partial_evidence": true,
+    "probe_ready_now": false,
+    "path_falsified": false,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "binding_contract": {
+    "allowed_outcomes": [
+      "QFT_GR_COMPARATOR_BINDING_CONFIRMED",
+      "QFT_GR_PROBE_READY",
+      "QFT_GR_BINDING_PARTIAL_HOLD",
+      "QFT_GR_PATH_FALSIFIED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QFT_GR_COMPARATOR_BINDING_EXECUTION_OUTCOME",
+    "no_loop_rule": "ONE_QFT_GR_COMPARATOR_BINDING_EXECUTION_LAYER_ONLY",
+    "default_outcome": "QFT_GR_BINDING_PARTIAL_HOLD"
+  },
+  "non_claim_boundary": "Repository-local QFT-GR comparator-binding execution declaration only; no scientific adequacy claim."
+}
