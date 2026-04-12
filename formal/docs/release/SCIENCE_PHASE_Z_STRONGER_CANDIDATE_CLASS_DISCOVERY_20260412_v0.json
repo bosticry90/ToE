@@ -1,0 +1,49 @@
+{
+  "schema_id": "SCIENCE_PHASE_Z_STRONGER_CANDIDATE_CLASS_DISCOVERY_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T07:00:00Z",
+  "objective": "Issue one bounded stronger-candidate-class discovery decision after Phase Y without reopening any governed lane.",
+  "canonical_antecedent_commits": {
+    "phase_y_post_comparative_decision_commit": "ee619a2",
+    "phase_x_comparative_synthesis_commit": "b72da16",
+    "phase_w_plateau_decision_commit": "85a4d5a"
+  },
+  "required_inputs": {
+    "science_phase_y_post_comparative_synthesis_decision_report": "formal/output/reports/science_phase_y_post_comparative_synthesis_decision_20260412_v0.json",
+    "science_phase_x_governed_lane_end_comparative_synthesis_report": "formal/output/reports/science_phase_x_governed_lane_end_comparative_synthesis_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "stronger_candidate_class_discovery_contract": {
+    "required_phase_y_outcome": "WAIT_FOR_STRONGER_CANDIDATE_CLASS",
+    "required_phase_x_outcome": "GOVERNED_LANE_END_COMPARATIVE_SYNTHESIS_COMPLETE",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "required_thermal_lane_status": "PRESERVED_INACTIVE_NEAR_READY_NOT_EXECUTABLE",
+    "required_thermal_no_further_closure_authorized": true,
+    "required_thermal_packet_authorized": false,
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "discovery_signals": {
+      "candidate_class_structural_properties_defined": true,
+      "candidate_class_observable_interface_requirements_defined": true,
+      "candidate_class_exclusion_patterns_defined": true,
+      "stronger_candidate_class_named": false,
+      "higher_level_policy_revision_needed": false,
+      "maintain_governed_stop_state": false
+    }
+  },
+  "stronger_candidate_class_discovery_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_Z_STRONGER_CANDIDATE_CLASS_DISCOVERY_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_Z_STRONGER_CANDIDATE_CLASS_DISCOVERY_LAYER_ONLY",
+    "allowed_outcomes": [
+      "STRONGER_CANDIDATE_CLASS_IDENTIFIED",
+      "NO_STRONGER_CANDIDATE_CLASS_IDENTIFIED_YET",
+      "REQUIRES_HIGHER_LEVEL_POLICY_REVISION",
+      "MAINTAIN_CURRENT_GOVERNED_STOP_STATE",
+      "STRONGER_CANDIDATE_CLASS_DISCOVERY_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_STRONGER_CANDIDATE_CLASS_DISCOVERY_REPAIR"
+    ],
+    "default_outcome": "STRONGER_CANDIDATE_CLASS_DISCOVERY_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local stronger-candidate-class discovery declaration only; no scientific adequacy claim."
+}
