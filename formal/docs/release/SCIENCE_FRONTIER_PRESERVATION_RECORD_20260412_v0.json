@@ -1,0 +1,49 @@
+{
+  "schema_id": "SCIENCE_FRONTIER_PRESERVATION_RECORD_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T23:55:00Z",
+  "objective": "Record one bounded canonical preservation of the science frontier after PRESERVE_CURRENT_FRONTIER_AND_STOP_ACTIVE_EXECUTION was materialized.",
+  "required_inputs": {
+    "science_post_shared_model_class_frontier_decision_report": "formal/output/reports/science_post_shared_model_class_frontier_decision_20260412_v0.json",
+    "shared_model_class_post_refinement_decision_report": "formal/output/reports/shared_model_class_post_refinement_decision_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "em_qft_higher_level_structure_review_report": "formal/output/reports/em_qft_higher_level_structure_review_20260412_v0.json",
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json"
+  },
+  "preservation_policy": {
+    "required_frontier_decision_outcome": "PRESERVE_CURRENT_FRONTIER_AND_STOP_ACTIVE_EXECUTION",
+    "required_frontier_next_action": "NO_FURTHER_ACTIVE_EXECUTION_AUTHORIZED",
+    "required_post_refinement_outcome": "HOLD_SHARED_MODEL_CLASS_AS_EXTERNALLY_COMPARABLE_BUT_NOT_PROBE_READY",
+    "qm_stat_required_review_outcome": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+    "gr_required_outcome": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "em_qft_required_outcome": "EM_QFT_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "canonical_commit": "bb83c46",
+    "all_active_execution_lanes_closed": true,
+    "restart_prerequisites_documented": true,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "frontier_state": {
+    "qm_stat": "parked — EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+    "gr_row_001": "frozen — GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "em_qft": "frozen — EM_QFT_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "shared_model_class": "externally comparable candidate, not probe-ready — HOLD_SHARED_MODEL_CLASS_AS_EXTERNALLY_COMPARABLE_BUT_NOT_PROBE_READY",
+    "active_execution_authorized": false,
+    "restart_conditions": [
+      "new_higher_level_policy_or_evidence_standard",
+      "genuinely_new_untouched_lane_identified"
+    ]
+  },
+  "preservation_contract": {
+    "allowed_outcomes": [
+      "FRONTIER_PRESERVED_AT_CANONICAL_COMMIT",
+      "FRONTIER_RECORD_INCOMPLETE",
+      "RESTART_PREREQUISITES_DOCUMENTED",
+      "HOLD_PENDING_EXTERNAL_REVIEW"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_FRONTIER_PRESERVATION_RECORD_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_FRONTIER_PRESERVATION_RECORD_LAYER_ONLY",
+    "default_outcome": "FRONTIER_PRESERVED_AT_CANONICAL_COMMIT"
+  },
+  "non_claim_boundary": "Repository-local science frontier preservation record declaration only; no scientific adequacy claim."
+}
