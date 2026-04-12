@@ -1,0 +1,37 @@
+{
+  "schema_id": "EM_QFT_INTERFACE_ALIGNMENT_PACKET_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T20:00:00Z",
+  "packet_id": "EM-QFT-IA-001",
+  "target_seam": "SEAM-EM-QFT",
+  "attack_class": "EM_QFT_INTERFACE_ALIGNMENT_ATTACK",
+  "objective": "Execute one bounded EM-QFT interface-alignment packet and emit one immediate ruling.",
+  "required_inputs": {
+    "em_qft_next_attack_class_selection_report": "formal/output/reports/em_qft_next_attack_class_selection_20260412_v0.json",
+    "em_qft_seam_first_test_packet_report": "formal/output/reports/em_qft_seam_first_test_packet_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "science_post_qm_stat_rebalance_report": "formal/output/reports/science_post_qm_stat_rebalance_20260412_v0.json"
+  },
+  "alignment_policy": {
+    "required_selected_attack_class": "EM_QFT_INTERFACE_ALIGNMENT_ATTACK",
+    "required_target_seam": "SEAM-EM-QFT",
+    "require_gr_row_001_frozen": true,
+    "require_qm_stat_hold_unchanged": true,
+    "em_qft_interface_alignment_obligation_declared": false,
+    "em_qft_signal_observed": false,
+    "single_execution_only": true,
+    "single_ruling_only": true
+  },
+  "ruling_contract": {
+    "allowed_outcomes": [
+      "EM_QFT_SEAM_SIGNAL_PRODUCED",
+      "EM_QFT_VALID_BUT_NONMOVING",
+      "EM_QFT_PATH_FALSIFIED",
+      "EM_QFT_INTERFACE_ALIGNMENT_REQUIRES_UNDECLARED_STRUCTURE"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_EM_QFT_INTERFACE_ALIGNMENT_OUTCOME",
+    "no_loop_rule": "ONE_EM_QFT_INTERFACE_ALIGNMENT_PACKET_ONLY",
+    "default_outcome": "EM_QFT_PATH_FALSIFIED"
+  },
+  "non_claim_boundary": "Repository-local EM-QFT interface-alignment packet declaration only; no scientific adequacy claim."
+}
