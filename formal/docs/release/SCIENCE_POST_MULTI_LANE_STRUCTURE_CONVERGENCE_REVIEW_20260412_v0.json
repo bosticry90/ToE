@@ -1,0 +1,34 @@
+{
+  "schema_id": "SCIENCE_POST_MULTI_LANE_STRUCTURE_CONVERGENCE_REVIEW_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T20:45:00Z",
+  "objective": "Run one bounded program-level structural-convergence review across parked QM-STAT, frozen GR row-001, and frozen EM-QFT to determine next governance program direction.",
+  "required_inputs": {
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "em_qft_higher_level_structure_review_report": "formal/output/reports/em_qft_higher_level_structure_review_20260412_v0.json"
+  },
+  "convergence_policy": {
+    "qm_stat_required_review_outcome": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+    "gr_required_outcome": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "em_qft_required_outcome": "EM_QFT_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "shared_structural_pattern_detected": true,
+    "shared_model_class_program_feasible": true,
+    "separate_model_class_programs_feasible": true,
+    "activate_different_existing_lane": false,
+    "single_review_only": true,
+    "single_outcome_only": true
+  },
+  "review_contract": {
+    "allowed_outcomes": [
+      "NEW_SHARED_MODEL_CLASS_PROGRAM_JUSTIFIED",
+      "SEPARATE_NEW_MODEL_CLASS_PROGRAMS_REQUIRED",
+      "ACTIVATE_DIFFERENT_EXISTING_LANE",
+      "HOLD_AND_REQUIRE_HIGHER_LEVEL_ARCHITECTURE_REVIEW"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_MULTI_LANE_CONVERGENCE_OUTCOME",
+    "no_loop_rule": "ONE_POST_MULTI_LANE_CONVERGENCE_REVIEW_ONLY",
+    "default_outcome": "HOLD_AND_REQUIRE_HIGHER_LEVEL_ARCHITECTURE_REVIEW"
+  },
+  "non_claim_boundary": "Repository-local post-multi-lane structural-convergence review declaration only; no scientific adequacy claim."
+}
