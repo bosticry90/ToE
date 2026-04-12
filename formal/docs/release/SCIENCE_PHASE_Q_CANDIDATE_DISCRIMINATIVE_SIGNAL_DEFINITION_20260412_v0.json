@@ -1,0 +1,48 @@
+{
+  "schema_id": "SCIENCE_PHASE_Q_CANDIDATE_DISCRIMINATIVE_SIGNAL_DEFINITION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T01:55:00Z",
+  "objective": "Define and lock one bounded discriminative-signal standard for the held thermal-boundary candidate without opening packet execution.",
+  "canonical_antecedent_commits": {
+    "phase_p_specification_commit": "915ed86",
+    "phase_o_authorized_candidate_hold_commit": "8dcbc62",
+    "phase_n_candidate_screen_commit": "21a9fe4",
+    "phase_j_stop_state_commit": "e1eb7fd"
+  },
+  "required_inputs": {
+    "science_phase_p_authorized_candidate_specification_refinement_report": "formal/output/reports/science_phase_p_authorized_candidate_specification_refinement_20260412_v0.json",
+    "science_phase_o_authorized_candidate_next_step_selection_report": "formal/output/reports/science_phase_o_authorized_candidate_next_step_selection_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "discriminative_signal_contract": {
+    "required_phase_p_outcome": "CANDIDATE_SPECIFICATION_PARTIAL_HOLD_REQUIRES_MORE_DEFINITION",
+    "required_phase_p_authorized_lane_id": "LANE-THERMAL-BOUNDARY-001",
+    "required_phase_p_packet_authorization": false,
+    "required_phase_o_outcome": "HOLD_AUTHORIZED_CANDIDATE_AND_DO_NOT_OPEN_PACKET",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "discriminative_signal_definition": {
+      "observable_interface_measurement_named": true,
+      "nonmoving_threshold_defined": true,
+      "weakly_moving_threshold_defined": true,
+      "signal_produced_threshold_defined": false,
+      "remaining_phase_o_fields_resolved": false
+    }
+  },
+  "discriminative_signal_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_Q_CANDIDATE_DISCRIMINATIVE_SIGNAL_DEFINITION_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_Q_CANDIDATE_DISCRIMINATIVE_SIGNAL_DEFINITION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "DISCRIMINATIVE_SIGNAL_DEFINED_AND_LOCKED",
+      "DISCRIMINATIVE_SIGNAL_PARTIAL_HOLD",
+      "CANDIDATE_REQUIRES_DIFFERENT_CANDIDATE_CLASS",
+      "CANDIDATE_WITHDRAWN",
+      "DISCRIMINATIVE_SIGNAL_DEFINITION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_DISCRIMINATIVE_SIGNAL_REPAIR"
+    ],
+    "default_outcome": "DISCRIMINATIVE_SIGNAL_DEFINITION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local candidate discriminative-signal definition declaration only; no scientific adequacy claim."
+}
