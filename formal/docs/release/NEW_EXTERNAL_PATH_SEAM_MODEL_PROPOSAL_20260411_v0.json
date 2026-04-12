@@ -1,0 +1,35 @@
+{
+  "schema_id": "NEW_EXTERNAL_PATH_SEAM_MODEL_PROPOSAL_20260411_v0",
+  "proposal_id": "NEW-EXTERNAL-PATH-SEAM-MODEL-PROPOSAL-001",
+  "required_inputs": {
+    "discovery_external_path_routing_refresh_report": "formal/output/reports/discovery_external_path_routing_refresh_20260411_v0.json",
+    "qm_stat_cycle11_lane_status_report": "formal/output/reports/qm_stat_cycle11_lane_status_20260411_v0.json",
+    "qm_stat_transition_dynamics_feasibility_review_report": "formal/output/reports/qm_stat_transition_dynamics_feasibility_review_20260411_v0.json",
+    "qm_stat_rl10_sigma_db_transformation_report": "formal/output/reports/qm_stat_rl10_sigma_db_transformation_20260411_v0.json",
+    "qm_stat_single_baseline_comparator_report": "formal/output/reports/qm_stat_single_baseline_comparator_20260411_v0.json"
+  },
+  "proposal_scope": {
+    "proposed_seam_model_class_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "target_row_family": "ROW-SEAM-QM-STAT-001_SUCCESSOR_CLASS",
+    "baseline_comparator_id": "OV-RL-10",
+    "missing_external_path_structures": [
+      "DISCRETE_TRANSITION_DYNAMICS_OPERATOR_OR_MARKOV_KERNEL",
+      "BIDIRECTIONAL_TRANSITION_RATES_OR_EQUIVALENT_TRANSITION_MATRIX",
+      "STATIONARY_FLOW_TO_SIGMA_DB_OBSERVABLE_INTERFACE"
+    ],
+    "non_insertability_claim": "THE_REQUIRED_TRANSITION_STRUCTURE_CANNOT_BE_INSERTED_INTO_QM_STAT_CYCLE11_WITHOUT_EXITING_THE_CURRENT_HIGHER_MOMENT_AUDIT_SCOPE",
+    "bounded_first_test_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_FIRST_TEST_v0",
+    "bounded_first_test_description": "DECLARE_ONE_DISCRETE_TRANSITION_KERNEL_PLUS_BIDIRECTIONAL_RATE_STRUCTURE_AND_CHECK_SINGLE_BASELINE_OV_RL_10_SIGMA_DB_INTERFACE_COMPATIBILITY_ON_CURRENT_DISCRETE_SUPPORT_ONLY"
+  },
+  "proposal_contract": {
+    "allowed_outcomes": [
+      "NEW_SEAM_MODEL_PROPOSAL_JUSTIFIED",
+      "PROPOSAL_UNDERDEFINED",
+      "NO_NEW_SEAM_MODEL_CLASS_JUSTIFIED_YET"
+    ],
+    "no_loop_rule": "ONE_NEW_EXTERNAL_PATH_SEAM_MODEL_PROPOSAL_ONLY",
+    "no_existing_lane_reopen_rule": "DO_NOT_REOPEN_EXISTING_QM_STAT_OR_OTHER_CYCLE11_LANES_FROM_THIS_PROPOSAL",
+    "success_rule": "A_SINGLE_NEW_SEAM_MODEL_CLASS_AND_SINGLE_BOUNDED_FIRST_TEST_ARE_BOTH_SPECIFIED_AND_ROOTED_IN_CURRENT_MISSING_EXTERNAL_PATH_STRUCTURE"
+  },
+  "non_claim_boundary": "Repository-local new external-path seam/model-class proposal declaration only; no scientific adequacy claim."
+}
