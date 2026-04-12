@@ -1,0 +1,57 @@
+{
+  "schema_id": "SCIENCE_PHASE_L_HIGHER_LEVEL_SELECTION_POLICY_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T00:05:00Z",
+  "objective": "Define and lock one higher-level selection policy lane that governs future untouched-lane authorization using D-through-K evidence without reopening or immediate packet execution.",
+  "canonical_antecedent_commits": {
+    "phase_k_tranche_commit": "15cee75",
+    "phase_k_phase_j_pin_commit": "035b1bb",
+    "phase_j_stop_state_commit": "e1eb7fd"
+  },
+  "required_inputs": {
+    "science_phase_k_new_lane_design_criteria_synthesis_report": "formal/output/reports/science_phase_k_new_lane_design_criteria_synthesis_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "policy_contract": {
+    "required_phase_k_outcome": "NEW_LANE_DESIGN_CRITERIA_SYNTHESIZED_AND_LOCKED",
+    "required_phase_k_resume_mode": "HIGHER_LEVEL_SELECTION_POLICY_LANE",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "required_lane_end_state_family_size": 6,
+    "forbid_closed_or_held_lane_reopen": true,
+    "forbid_new_untouched_lane_packet_before_policy_gate": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "lane_discriminativity_prerequisites": [
+      "predeclared_primary_discriminator_with_expected_directionality",
+      "explicit_external_comparator_path_before_first_test",
+      "declared_structure_threshold_above_minimum_sufficiency"
+    ],
+    "acceptable_first_test_attack_class_properties": [
+      "outcome_class_mobility_evidence",
+      "independence_from_prior_closed_lane_aliases",
+      "bounded_measurable_transition_hypothesis"
+    ],
+    "nonmoving_early_warning_signals": [
+      "first_test_nondiscriminative_hold_without_external_mapping_gain",
+      "attack_reselection_changes_packet_form_without_outcome_class_shift",
+      "refinement_cycle_retains_valid_but_nonmoving_class"
+    ],
+    "exclude_likely_low_yield_lanes_when": [
+      "no_explicit_discriminator_declared",
+      "external_comparator_route_unspecified",
+      "requires_undeclared_structure_to_progress",
+      "high_alias_risk_to_closed_or_held_lane_family"
+    ]
+  },
+  "selection_policy_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_L_HIGHER_LEVEL_SELECTION_POLICY_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_L_HIGHER_LEVEL_SELECTION_POLICY_LAYER_ONLY",
+    "allowed_outcomes": [
+      "HIGHER_LEVEL_SELECTION_POLICY_DEFINED_AND_LOCKED",
+      "HIGHER_LEVEL_SELECTION_POLICY_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_SELECTION_POLICY_REPAIR"
+    ],
+    "default_outcome": "HIGHER_LEVEL_SELECTION_POLICY_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local higher-level lane-selection policy declaration only; no scientific adequacy claim."
+}
