@@ -1,0 +1,20 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_PROBE_RULING_20260412_v0",
+  "ruling_id": "QM-STAT-RL10-BRIDGE-PROBE-RULING-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_probe_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_execution_20260412_v0.json"
+  },
+  "ruling_contract": {
+    "allowed_outcomes": [
+      "PROBE_SIGNAL_CONFIRMED",
+      "PROBE_SIGNAL_NONDISCRIMINATIVE",
+      "PROBE_SIGNAL_INCONCLUSIVE",
+      "PROBE_PATH_FALSIFIED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_PROBE_RULING_OUTCOME",
+    "no_loop_rule": "ONE_BRIDGE_PROBE_RULING_ONLY",
+    "default_outcome": "PROBE_SIGNAL_INCONCLUSIVE"
+  },
+  "non_claim_boundary": "Repository-local bridge probe ruling declaration only; no scientific adequacy claim."
+}
