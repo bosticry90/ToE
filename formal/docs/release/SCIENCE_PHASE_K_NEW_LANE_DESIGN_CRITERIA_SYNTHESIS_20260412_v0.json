@@ -3,6 +3,11 @@
   "status": "ACTIVE_NONLIVE_NONCLAIM",
   "captured_at_utc": "2026-04-13T08:20:00Z",
   "objective": "Synthesize machine-checkable new-lane design criteria from consumed-lane and held-lane endpoints, then issue one bounded resume-path recommendation without reopening any lane.",
+  "canonical_antecedent_stop_state": {
+    "phase_j_commit": "e1eb7fd",
+    "phase_j_stop_outcome": "HOLD_UNTOUCHED_LANE_AS_VALID_BUT_NONMOVING",
+    "phase_j_continue_authorized": false
+  },
   "required_inputs": {
     "science_phase_j_untouched_lane_post_refinement_decision_report": "formal/output/reports/science_phase_j_untouched_lane_post_refinement_decision_20260412_v0.json",
     "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json",
