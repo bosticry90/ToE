@@ -1,0 +1,29 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_PROBE_READINESS_ROBUSTNESS_EXECUTION_20260412_v0",
+  "execution_id": "QM-STAT-RL10-BRIDGE-PROBE-READINESS-ROBUSTNESS-EXEC-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_external_comparator_binding_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_external_comparator_binding_execution_20260412_v0.json",
+    "bridge_external_comparator_binding_ruling_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_external_comparator_binding_ruling_20260412_v0.json"
+  },
+  "robustness_spec": {
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0",
+    "baseline_signal_margin": 0.07,
+    "perturbation_delta": 0.03,
+    "probe_ready_margin_min": 0.06,
+    "hold_margin_min": 0.02,
+    "path_falsification_observed": false
+  },
+  "execution_contract": {
+    "allowed_outcomes": [
+      "BRIDGE_SIGNAL_PROBE_READY",
+      "BRIDGE_SIGNAL_COMPARATOR_BOUND_BUT_HOLD",
+      "BRIDGE_SIGNAL_ROBUSTNESS_FAILURE",
+      "BRIDGE_SIGNAL_PATH_FALSIFIED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_ROBUSTNESS_EXECUTION_OUTCOME",
+    "no_loop_rule": "ONE_BRIDGE_PROBE_READINESS_ROBUSTNESS_EXECUTION_ONLY"
+  },
+  "non_claim_boundary": "Repository-local bridge probe-readiness robustness execution declaration only; no scientific adequacy claim."
+}
