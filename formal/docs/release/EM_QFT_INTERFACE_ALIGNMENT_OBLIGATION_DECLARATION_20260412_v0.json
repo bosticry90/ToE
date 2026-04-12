@@ -1,0 +1,33 @@
+{
+  "schema_id": "EM_QFT_INTERFACE_ALIGNMENT_OBLIGATION_DECLARATION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T20:10:00Z",
+  "objective": "Declare the missing EM-QFT interface-alignment obligation and determine if one bounded retry is justified.",
+  "required_inputs": {
+    "em_qft_interface_alignment_packet_report": "formal/output/reports/em_qft_interface_alignment_packet_20260412_v0.json",
+    "em_qft_next_attack_class_selection_report": "formal/output/reports/em_qft_next_attack_class_selection_20260412_v0.json"
+  },
+  "obligation_policy": {
+    "target_seam": "SEAM-EM-QFT",
+    "required_attack_class": "EM_QFT_INTERFACE_ALIGNMENT_ATTACK",
+    "missing_obligation_id": "EM_QFT_INTERFACE_ALIGNMENT_BRIDGE_OBLIGATION_v0",
+    "missing_obligation_statement": "SEAM-EM-QFT interface-alignment route requires explicit interface bridge obligation linking EM witness alignment constraints to QFT seam dispatch semantics.",
+    "obligation_type": "THEOREM_LINKED",
+    "scope_violation_detected": false,
+    "requires_higher_level_policy": false,
+    "obligation_justified": true,
+    "obligation_declared": true
+  },
+  "declaration_contract": {
+    "allowed_outcomes": [
+      "EM_QFT_INTERFACE_ALIGNMENT_OBLIGATION_DECLARED",
+      "EM_QFT_INTERFACE_ALIGNMENT_OBLIGATION_REQUIRES_HIGHER_LEVEL_POLICY",
+      "EM_QFT_INTERFACE_ALIGNMENT_OBLIGATION_OUT_OF_SCOPE",
+      "EM_QFT_INTERFACE_ALIGNMENT_OBLIGATION_NOT_JUSTIFIED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_EM_QFT_INTERFACE_ALIGNMENT_OBLIGATION_DECLARATION_OUTCOME",
+    "no_loop_rule": "ONE_EM_QFT_INTERFACE_ALIGNMENT_OBLIGATION_DECLARATION_ONLY",
+    "default_outcome": "EM_QFT_INTERFACE_ALIGNMENT_OBLIGATION_NOT_JUSTIFIED"
+  },
+  "non_claim_boundary": "Repository-local EM-QFT interface-alignment obligation declaration only; no scientific adequacy claim."
+}
