@@ -1,0 +1,40 @@
+{
+  "schema_id": "SCIENCE_CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T04:15:00Z",
+  "objective": "Provide one concise machine-checkable reason summary for why each consumed lane remains non-eligible after formalized probe-readiness standard and reopen-eligibility evaluation.",
+  "required_inputs": {
+    "probe_readiness_standard_formalization_report": "formal/output/reports/probe_readiness_standard_formalization_20260412_v0.json",
+    "science_closed_lane_reopen_eligibility_report": "formal/output/reports/science_closed_lane_reopen_eligibility_20260412_v0.json",
+    "shared_model_class_post_refinement_decision_report": "formal/output/reports/shared_model_class_post_refinement_decision_20260412_v0.json",
+    "qft_gr_post_refinement_decision_report": "formal/output/reports/qft_gr_post_refinement_decision_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "em_qft_higher_level_structure_review_report": "formal/output/reports/em_qft_higher_level_structure_review_20260412_v0.json",
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json"
+  },
+  "summary_policy": {
+    "required_formalization_outcome": "PROBE_READINESS_STANDARD_FORMALIZED_AND_LOCKED",
+    "required_reopen_eligibility_outcome": "CLOSED_LANE_REOPEN_NONE_ELIGIBLE",
+    "required_lane_outcomes": {
+      "QM-STAT": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+      "GR-ROW-001": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+      "EM-QFT": "EM_QFT_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+      "SHARED-MODEL-CLASS": "HOLD_SHARED_MODEL_CLASS_AS_EXTERNALLY_COMPARABLE_BUT_NOT_PROBE_READY",
+      "QFT-GR": "HOLD_QFT_GR_AS_EXTERNALLY_COMPARABLE_BUT_NOT_PROBE_READY"
+    },
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "summary_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_OUTCOME",
+    "no_loop_rule": "ONE_CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LAYER_ONLY",
+    "allowed_outcomes": [
+      "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+      "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_INCOMPLETE",
+      "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_CONTRACT_VIOLATION",
+      "HOLD_PENDING_REASON_SUMMARY_REPAIR"
+    ],
+    "default_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local closed-lane non-reopen reason summary declaration only; no scientific adequacy claim."
+}

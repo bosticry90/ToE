@@ -1,0 +1,39 @@
+{
+  "schema_id": "SCIENCE_PHASE_D_UNTOUCHED_LANE_SELECTION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T04:05:00Z",
+  "objective": "Select exactly one genuinely untouched lane for bounded science continuation after formalized no-reopen outcome on consumed lanes.",
+  "required_inputs": {
+    "science_closed_lane_reopen_eligibility_report": "formal/output/reports/science_closed_lane_reopen_eligibility_20260412_v0.json",
+    "probe_readiness_standard_formalization_report": "formal/output/reports/probe_readiness_standard_formalization_20260412_v0.json",
+    "science_common_failure_modes_synthesis_report": "formal/output/reports/science_common_failure_modes_synthesis_20260412_v0.json"
+  },
+  "selection_policy": {
+    "required_reopen_eligibility_outcome": "CLOSED_LANE_REOPEN_NONE_ELIGIBLE",
+    "required_formalization_outcome": "PROBE_READINESS_STANDARD_FORMALIZED_AND_LOCKED",
+    "required_synthesis_outcome": "COMMON_FAILURE_MODES_SYNTHESIZED_AND_LOCKED",
+    "consumed_lane_aliases": [
+      "QM-STAT",
+      "GR-ROW-001",
+      "EM-QFT",
+      "SHARED-MODEL-CLASS",
+      "QFT-GR"
+    ],
+    "untouched_lane_candidate_id": "LANE-NEUTRINO-INTERFACE-001",
+    "untouched_lane_non_consumption_proof_declared": true,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "selection_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_D_UNTOUCHED_LANE_SELECTION_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_D_UNTOUCHED_LANE_SELECTION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "UNTOUCHED_LANE_SELECTED_FOR_BOUNDED_FIRST_TEST",
+      "UNTOUCHED_LANE_SELECTION_EVIDENCE_INCOMPLETE",
+      "UNTOUCHED_LANE_SELECTION_BLOCKED_CONSUMED_ALIAS",
+      "HOLD_PENDING_UNTOUCHED_CANDIDATE_REPAIR"
+    ],
+    "default_outcome": "UNTOUCHED_LANE_SELECTION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local untouched-lane selection declaration only; no scientific adequacy claim."
+}

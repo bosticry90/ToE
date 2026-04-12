@@ -391,6 +391,22 @@ Closed lane reopen eligibility checkpoint (P47-A, 2026-04-12):
 - `SCIENCE_CLOSED_LANE_REOPEN_ELIGIBILITY_GATE_v0: formal/python/tests/test_science_closed_lane_reopen_eligibility_report.py`
 - `SCIENCE_CLOSED_LANE_REOPEN_ELIGIBILITY_RESULT_v0: CLOSED_LANE_REOPEN_NONE_ELIGIBLE`
 
+Phase D untouched lane selection checkpoint (P48-A, 2026-04-12):
+- `SCIENCE_PHASE_D_UNTOUCHED_LANE_SELECTION_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `SCIENCE_PHASE_D_UNTOUCHED_LANE_SELECTION_DECLARATION_v0: formal/docs/release/SCIENCE_PHASE_D_UNTOUCHED_LANE_SELECTION_20260412_v0.json`
+- `SCIENCE_PHASE_D_UNTOUCHED_LANE_SELECTION_REPORT_TOOL_v0: formal/python/tools/science_phase_d_untouched_lane_selection_report.py`
+- `SCIENCE_PHASE_D_UNTOUCHED_LANE_SELECTION_REPORT_JSON_v0: formal/output/reports/science_phase_d_untouched_lane_selection_20260412_v0.json`
+- `SCIENCE_PHASE_D_UNTOUCHED_LANE_SELECTION_GATE_v0: formal/python/tests/test_science_phase_d_untouched_lane_selection_report.py`
+- `SCIENCE_PHASE_D_UNTOUCHED_LANE_SELECTION_RESULT_v0: UNTOUCHED_LANE_SELECTED_FOR_BOUNDED_FIRST_TEST`
+
+Closed lane non-reopen reason summary checkpoint (P49-A, 2026-04-12):
+- `SCIENCE_CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `SCIENCE_CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_DECLARATION_v0: formal/docs/release/SCIENCE_CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_20260412_v0.json`
+- `SCIENCE_CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_REPORT_TOOL_v0: formal/python/tools/science_closed_lane_non_reopen_reason_summary_report.py`
+- `SCIENCE_CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_REPORT_JSON_v0: formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json`
+- `SCIENCE_CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_GATE_v0: formal/python/tests/test_science_closed_lane_non_reopen_reason_summary_report.py`
+- `SCIENCE_CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_RESULT_v0: CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED`
+
 Governance audit packet checkpoint (A1-A, 2026-04-10):
 - `GOVERNANCE_AUDIT_PACKET_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
 - `GOVERNANCE_AUDIT_PACKET_DECLARATION_v0: formal/docs/release/GOVERNANCE_AUDIT_PACKET_20260410_v0.md`
