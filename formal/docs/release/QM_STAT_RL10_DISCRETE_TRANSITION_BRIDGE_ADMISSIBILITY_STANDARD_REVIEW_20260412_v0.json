@@ -1,0 +1,32 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_ADMISSIBILITY_STANDARD_REVIEW_20260412_v0",
+  "review_id": "QM-STAT-RL10-BRIDGE-ADMISSIBILITY-STANDARD-REVIEW-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_repeatability_check_naming_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_repeatability_check_naming_review_20260412_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "admissibility_policy": {
+    "admissibility_standard_defined": false,
+    "declaration_standard_defined": false,
+    "bounded_check_families_defined": false,
+    "require_external_validation_policy_surface": false,
+    "external_validation_policy_surface_defined": false
+  },
+  "review_contract": {
+    "allowed_outcomes": [
+      "ADMISSIBILITY_STANDARD_READY_FOR_BOUNDED_CHECK_NAMING",
+      "DECLARATION_STANDARD_REQUIRED_BEFORE_NAMING",
+      "EXTERNAL_VALIDATION_POLICY_SURFACE_REQUIRED",
+      "LIMITED_HOLD_RETAINED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_ADMISSIBILITY_STANDARD_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_BRIDGE_ADMISSIBILITY_STANDARD_REVIEW_ONLY",
+    "default_outcome": "LIMITED_HOLD_RETAINED"
+  },
+  "non_claim_boundary": "Repository-local bridge admissibility-standard review declaration only; no scientific adequacy claim."
+}
