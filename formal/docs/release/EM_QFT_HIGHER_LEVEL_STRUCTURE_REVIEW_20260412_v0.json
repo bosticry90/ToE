@@ -1,0 +1,34 @@
+{
+  "schema_id": "EM_QFT_HIGHER_LEVEL_STRUCTURE_REVIEW_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T20:30:00Z",
+  "objective": "Conduct one bounded higher-level structural review for SEAM-EM-QFT after declared obligation retry remained insufficient.",
+  "required_inputs": {
+    "em_qft_seam_first_test_packet_report": "formal/output/reports/em_qft_seam_first_test_packet_20260412_v0.json",
+    "em_qft_post_first_test_decision_report": "formal/output/reports/em_qft_post_first_test_decision_20260412_v0.json",
+    "em_qft_interface_alignment_packet_report": "formal/output/reports/em_qft_interface_alignment_packet_20260412_v0.json",
+    "em_qft_interface_alignment_obligation_declaration_report": "formal/output/reports/em_qft_interface_alignment_obligation_declaration_20260412_v0.json",
+    "em_qft_interface_alignment_retry_packet_report": "formal/output/reports/em_qft_interface_alignment_retry_packet_20260412_v0.json"
+  },
+  "review_policy": {
+    "target_seam": "SEAM-EM-QFT",
+    "freeze_attack_class_cycling_for_seam": true,
+    "declareable_within_current_scope": false,
+    "requires_new_seam_or_model_class": true,
+    "requires_higher_level_policy": false,
+    "single_review_only": true,
+    "single_outcome_only": true
+  },
+  "review_contract": {
+    "allowed_outcomes": [
+      "EM_QFT_HIGHER_LEVEL_STRUCTURE_DECLARABLE",
+      "EM_QFT_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+      "EM_QFT_REQUIRES_HIGHER_LEVEL_POLICY",
+      "HOLD_EM_QFT_AND_STOP_ATTACK_CLASS_CYCLING"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_EM_QFT_HIGHER_LEVEL_STRUCTURE_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_EM_QFT_HIGHER_LEVEL_STRUCTURE_REVIEW_ONLY",
+    "default_outcome": "HOLD_EM_QFT_AND_STOP_ATTACK_CLASS_CYCLING"
+  },
+  "non_claim_boundary": "Repository-local EM-QFT higher-level structural review declaration only; no scientific adequacy claim."
+}
