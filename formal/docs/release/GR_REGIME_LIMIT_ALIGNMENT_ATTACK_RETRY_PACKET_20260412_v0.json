@@ -1,0 +1,38 @@
+{
+  "schema_id": "GR_REGIME_LIMIT_ALIGNMENT_ATTACK_RETRY_PACKET_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T19:10:00Z",
+  "packet_id": "GR-RLA-RETRY-001",
+  "target_row": "ROW-PILLAR-GR-001",
+  "attack_class": "GR_REGIME_LIMIT_ALIGNMENT_ATTACK",
+  "objective": "Execute exactly one bounded retry of the GR regime-limit alignment attack packet bound to the declared obligation and emit one immediate ruling.",
+  "required_inputs": {
+    "gr_regime_limit_alignment_attack_packet_declaration": "formal/docs/release/GR_REGIME_LIMIT_ALIGNMENT_ATTACK_PACKET_20260412_v0.json",
+    "gr_regime_limit_alignment_attack_packet_report": "formal/output/reports/gr_regime_limit_alignment_attack_packet_20260412_v0.json",
+    "gr_regime_limit_alignment_obligation_declaration_report": "formal/output/reports/gr_regime_limit_alignment_obligation_declaration_20260412_v0.json",
+    "gr_subtarget_report": "formal/output/reports/theorem_gap_gr_subtarget_tranche_20260411_v0.json",
+    "row_outcome_trend_report": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_report": "formal/output/reports/physics_progress_ledger_v0.json"
+  },
+  "retry_binding": {
+    "required_prior_packet_outcome": "GR_REGIME_LIMIT_ALIGNMENT_REQUIRES_UNDECLARED_STRUCTURE",
+    "required_obligation_outcome": "GR_REGIME_LIMIT_ALIGNMENT_OBLIGATION_DECLARED",
+    "required_obligation_id": "GR_REGIME_LIMIT_TO_ALIGNMENT_BRIDGE_OBLIGATION_v0",
+    "required_attack_class": "GR_REGIME_LIMIT_ALIGNMENT_ATTACK",
+    "required_target_row": "ROW-PILLAR-GR-001",
+    "single_retry_only": true,
+    "single_ruling_only": true
+  },
+  "ruling_contract": {
+    "allowed_outcomes": [
+      "GR_BLOCKER_MOVED",
+      "GR_VALID_BUT_NONMOVING",
+      "GR_PATH_FALSIFIED",
+      "GR_REGIME_LIMIT_ALIGNMENT_OBLIGATION_DECLARED_BUT_STILL_INSUFFICIENT"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_GR_REGIME_LIMIT_ALIGNMENT_RETRY_OUTCOME",
+    "no_loop_rule": "ONE_GR_REGIME_LIMIT_ALIGNMENT_RETRY_PACKET_ONLY",
+    "default_outcome": "GR_PATH_FALSIFIED"
+  },
+  "non_claim_boundary": "Repository-local GR regime-limit alignment retry packet declaration only; no scientific adequacy claim."
+}
