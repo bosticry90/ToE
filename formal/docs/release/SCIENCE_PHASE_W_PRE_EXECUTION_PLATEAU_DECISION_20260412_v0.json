@@ -1,0 +1,48 @@
+{
+  "schema_id": "SCIENCE_PHASE_W_PRE_EXECUTION_PLATEAU_DECISION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T04:00:00Z",
+  "objective": "Issue one bounded post-Phase-V decision on whether additional closure work is justified or the candidate should be held at near-ready status.",
+  "canonical_antecedent_commits": {
+    "phase_v_execution_guard_binding_commit": "6bcc9f9",
+    "phase_u_execution_guard_commit": "7e61897",
+    "phase_t_residual_field_commit": "1f9589b",
+    "phase_j_stop_state_commit": "e1eb7fd"
+  },
+  "required_inputs": {
+    "science_phase_v_execution_guard_binding_closure_report": "formal/output/reports/science_phase_v_execution_guard_binding_closure_20260412_v0.json",
+    "science_phase_s_authorization_readiness_closure_report": "formal/output/reports/science_phase_s_authorization_readiness_closure_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "plateau_decision_contract": {
+    "required_phase_v_outcome": "EXECUTION_GUARD_BINDING_PARTIAL_HOLD",
+    "required_phase_v_authorized_lane_id": "LANE-THERMAL-BOUNDARY-001",
+    "required_phase_v_packet_authorization": false,
+    "required_phase_s_outcome": "AUTHORIZATION_READINESS_PARTIAL_HOLD",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "plateau_signals": {
+      "authorization_state_changed_since_phase_s": false,
+      "distinct_remaining_field_identified": false,
+      "residual_blocker_repetition_detected": true,
+      "candidate_preservation_status_confirmed": true,
+      "policy_escalation_required": false
+    }
+  },
+  "plateau_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_W_PRE_EXECUTION_PLATEAU_DECISION_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_W_PRE_EXECUTION_PLATEAU_DECISION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "AUTHORIZE_ONE_FINAL_CLOSURE_TRANCHE",
+      "HOLD_CANDIDATE_AS_NEAR_READY_BUT_NOT_EXECUTABLE",
+      "ESCALATE_TO_HIGHER_LEVEL_POLICY",
+      "WITHDRAW_CANDIDATE_FROM_ACTIVE_PREPARATION",
+      "PRE_EXECUTION_PLATEAU_DECISION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_PRE_EXECUTION_PLATEAU_REPAIR"
+    ],
+    "default_outcome": "PRE_EXECUTION_PLATEAU_DECISION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local pre-execution plateau decision declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,62 @@
+{
+  "captured_at_utc": "2026-04-12T23:25:32Z",
+  "criteria": {
+    "forbid_closed_or_held_lane_reopen": true,
+    "no_loop_rule_declared": true,
+    "non_reopen_summary_outcome_match": true,
+    "phase_s_outcome_match": true,
+    "phase_v_authorized_lane_id_match": true,
+    "phase_v_outcome_match": true,
+    "phase_v_packet_authorization_match": true,
+    "plateau_signal_shape_ok": true,
+    "single_terminal_outcome_rule_declared": true
+  },
+  "non_claim_boundary": "Repository-local pre-execution plateau decision report only; no scientific adequacy claim.",
+  "objective_quality": {
+    "criteria": {
+      "allowed_outcome_materialized": true,
+      "pre_execution_plateau_preconditions_satisfied": true,
+      "single_outcome_materialized": true
+    },
+    "inputs": {
+      "non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+      "phase_s_outcome": "AUTHORIZATION_READINESS_PARTIAL_HOLD",
+      "phase_v_authorized_lane_id": "LANE-THERMAL-BOUNDARY-001",
+      "phase_v_outcome": "EXECUTION_GUARD_BINDING_PARTIAL_HOLD",
+      "phase_v_packet_authorization": false,
+      "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+      "required_phase_s_outcome": "AUTHORIZATION_READINESS_PARTIAL_HOLD",
+      "required_phase_v_authorized_lane_id": "LANE-THERMAL-BOUNDARY-001",
+      "required_phase_v_outcome": "EXECUTION_GUARD_BINDING_PARTIAL_HOLD",
+      "required_phase_v_packet_authorization": false
+    },
+    "summary": {
+      "all_criteria_satisfied": true,
+      "next_action": "PRESERVE_NEAR_READY_STATUS_AND_STOP_FURTHER_CLOSURE_LOOP_UNTIL_NEW_FIELD_IS_IDENTIFIED",
+      "phase_status": "COMPLETE"
+    }
+  },
+  "plateau_signals": {
+    "authorization_state_changed_since_phase_s": false,
+    "candidate_preservation_status_confirmed": true,
+    "distinct_remaining_field_identified": false,
+    "policy_escalation_required": false,
+    "residual_blocker_repetition_detected": true
+  },
+  "schema_id": "SCIENCE_PHASE_W_PRE_EXECUTION_PLATEAU_DECISION_REPORT_20260412_v0",
+  "source_bundle": {
+    "declaration": "formal/docs/release/SCIENCE_PHASE_W_PRE_EXECUTION_PLATEAU_DECISION_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json",
+    "science_phase_s_authorization_readiness_closure_report": "formal/output/reports/science_phase_s_authorization_readiness_closure_20260412_v0.json",
+    "science_phase_v_execution_guard_binding_closure_report": "formal/output/reports/science_phase_v_execution_guard_binding_closure_20260412_v0.json"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "summary": {
+    "authorize_first_test_packet": false,
+    "authorized_lane_id": "LANE-THERMAL-BOUNDARY-001",
+    "next_action": "PRESERVE_NEAR_READY_STATUS_AND_STOP_FURTHER_CLOSURE_LOOP_UNTIL_NEW_FIELD_IS_IDENTIFIED",
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "terminal_outcome": "HOLD_CANDIDATE_AS_NEAR_READY_BUT_NOT_EXECUTABLE"
+  }
+}
