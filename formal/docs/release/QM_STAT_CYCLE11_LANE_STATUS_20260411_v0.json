@@ -1,0 +1,30 @@
+{
+  "schema_id": "QM_STAT_CYCLE11_LANE_STATUS_20260411_v0",
+  "status_id": "QMSTAT-CYCLE11-LANE-STATUS-001",
+  "target_lane": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "lane": "QM_STAT_CYCLE11"
+  },
+  "required_inputs": {
+    "qm_stat_discovery_post_derivation_probe_decision_report": "formal/output/reports/qm_stat_discovery_post_derivation_probe_decision_report_20260411_v0.json",
+    "qm_stat_rl10_observable_mapping_review_report": "formal/output/reports/qm_stat_rl10_observable_mapping_review_20260411_v0.json",
+    "qm_stat_rl10_interface_transformation_report": "formal/output/reports/qm_stat_rl10_interface_transformation_20260411_v0.json",
+    "qm_stat_rl10_sigma_db_transformation_report": "formal/output/reports/qm_stat_rl10_sigma_db_transformation_20260411_v0.json",
+    "qm_stat_transition_dynamics_feasibility_review_report": "formal/output/reports/qm_stat_transition_dynamics_feasibility_review_20260411_v0.json",
+    "discovery_engine_scoring_routing_review_report": "formal/output/reports/discovery_engine_scoring_routing_review_20260411_v0.json"
+  },
+  "status_contract": {
+    "allowed_externalization_status": [
+      "OUT_OF_SCOPE_UNDER_CYCLE11",
+      "INCOMPLETE_BUT_STILL_IN_SCOPE_UNDER_CYCLE11",
+      "PATH_FALSIFIED"
+    ],
+    "allowed_internal_lane_status": [
+      "RETAINED",
+      "RETIRED"
+    ],
+    "no_loop_rule": "ONE_QM_STAT_CYCLE11_LANE_STATUS_SYNTHESIS_ONLY",
+    "routing_implication_rule": "IF_EXTERNALIZATION_STATUS_IS_OUT_OF_SCOPE_UNDER_CYCLE11_THEN_QM_STAT_CANNOT_SATISFY_CURRENT_EXTERNAL_PATH_REOPEN_CONDITION"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT Cycle11 lane-status declaration only; no scientific adequacy claim."
+}
