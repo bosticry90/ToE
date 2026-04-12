@@ -1,0 +1,31 @@
+{
+  "schema_id": "GR_POST_TRANSPORT_RETRY_DECISION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T18:50:00Z",
+  "objective": "Bounded decision layer to select next GR attack class after transport exhaustion, with transport now deprioritized for ROW-PILLAR-GR-001.",
+  "required_inputs": {
+    "gr_master_action_transport_attack_retry_packet_report": "formal/output/reports/gr_master_action_transport_attack_retry_packet_20260412_v0.json",
+    "gr_master_action_transport_obligation_declaration_report": "formal/output/reports/gr_master_action_transport_obligation_declaration_20260412_v0.json"
+  },
+  "decision_policy": {
+    "target_row": "ROW-PILLAR-GR-001",
+    "prior_attack_class": "GR_MASTER_ACTION_TRANSPORT_ATTACK",
+    "prior_result": "GR_TRANSPORT_OBLIGATION_DECLARED_BUT_STILL_INSUFFICIENT",
+    "transport_now_deprioritized": true,
+    "focus_area": "REGIME_LIMIT_STRUCTURE",
+    "single_decision_only": true,
+    "single_outcome_only": true
+  },
+  "decision_contract": {
+    "allowed_outcomes": [
+      "ACTIVATE_GR_WEAK_FIELD_CLOSURE_ATTACK",
+      "ACTIVATE_GR_REGIME_LIMIT_ALIGNMENT_ATTACK",
+      "ACTIVATE_GR_SEAM_INTERFACE_ATTACK",
+      "HOLD_GR_AND_REQUIRE_HIGHER_LEVEL_REVIEW"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_GR_POST_TRANSPORT_DECISION_OUTCOME",
+    "no_loop_rule": "ONE_GR_POST_TRANSPORT_DECISION_ONLY",
+    "default_outcome": "ACTIVATE_GR_REGIME_LIMIT_ALIGNMENT_ATTACK"
+  },
+  "non_claim_boundary": "Repository-local GR post-transport-retry decision layer only; no scientific adequacy claim."
+}
