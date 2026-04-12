@@ -439,6 +439,14 @@ Phase G untouched lane interface-alignment packet checkpoint (P53-A, 2026-04-12)
 - `SCIENCE_PHASE_G_UNTOUCHED_LANE_INTERFACE_ALIGNMENT_PACKET_GATE_v0: formal/python/tests/test_science_phase_g_untouched_lane_interface_alignment_packet_report.py`
 - `SCIENCE_PHASE_G_UNTOUCHED_LANE_INTERFACE_ALIGNMENT_PACKET_RESULT_v0: UNTOUCHED_LANE_VALID_BUT_NONMOVING`
 
+Phase H untouched lane post-packet decision checkpoint (P54-A, 2026-04-12):
+- `SCIENCE_PHASE_H_UNTOUCHED_LANE_POST_PACKET_DECISION_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `SCIENCE_PHASE_H_UNTOUCHED_LANE_POST_PACKET_DECISION_DECLARATION_v0: formal/docs/release/SCIENCE_PHASE_H_UNTOUCHED_LANE_POST_PACKET_DECISION_20260412_v0.json`
+- `SCIENCE_PHASE_H_UNTOUCHED_LANE_POST_PACKET_DECISION_REPORT_TOOL_v0: formal/python/tools/science_phase_h_untouched_lane_post_packet_decision_report.py`
+- `SCIENCE_PHASE_H_UNTOUCHED_LANE_POST_PACKET_DECISION_REPORT_JSON_v0: formal/output/reports/science_phase_h_untouched_lane_post_packet_decision_20260412_v0.json`
+- `SCIENCE_PHASE_H_UNTOUCHED_LANE_POST_PACKET_DECISION_GATE_v0: formal/python/tests/test_science_phase_h_untouched_lane_post_packet_decision_report.py`
+- `SCIENCE_PHASE_H_UNTOUCHED_LANE_POST_PACKET_DECISION_RESULT_v0: UNTOUCHED_LANE_SIGNAL_REFINEMENT_JUSTIFIED`
+
 Governance audit packet checkpoint (A1-A, 2026-04-10):
 - `GOVERNANCE_AUDIT_PACKET_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
 - `GOVERNANCE_AUDIT_PACKET_DECLARATION_v0: formal/docs/release/GOVERNANCE_AUDIT_PACKET_20260410_v0.md`
