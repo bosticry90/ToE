@@ -1,0 +1,37 @@
+{
+  "schema_id": "EM_QFT_SEAM_FIRST_TEST_PACKET_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T19:30:00Z",
+  "packet_id": "EM-QFT-FT-001",
+  "target_seam": "SEAM-EM-QFT",
+  "objective": "Execute one bounded EM-QFT seam first-test packet after GR row freeze and emit one immediate ruling.",
+  "required_inputs": {
+    "science_post_qm_stat_rebalance_report": "formal/output/reports/science_post_qm_stat_rebalance_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "em_m4_seam_closure_promotion_cycle01": "formal/output/em_m4_seam_closure_promotion_cycle01_v0.json",
+    "qft_m4_seam_closure_promotion_cycle01": "formal/output/qft_m4_seam_closure_promotion_cycle01_v0.json"
+  },
+  "first_test_policy": {
+    "required_rebalance_outcome": "ACTIVATE_GR_BLOCKER_MOVING_TRANCHE",
+    "required_gr_freeze_outcome": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "required_target_seam": "SEAM-EM-QFT",
+    "required_em_m4_status": "COMPLETE_BOUNDED_v0",
+    "required_qft_m4_status": "COMPLETE_BOUNDED_v0",
+    "em_qft_declared_structure_sufficient": true,
+    "em_qft_signal_observed": false,
+    "single_execution_only": true,
+    "single_ruling_only": true
+  },
+  "ruling_contract": {
+    "allowed_outcomes": [
+      "EM_QFT_SEAM_SIGNAL_PRODUCED",
+      "EM_QFT_SEAM_VALID_BUT_NONMOVING",
+      "EM_QFT_SEAM_REQUIRES_UNDECLARED_STRUCTURE",
+      "EM_QFT_SEAM_PATH_FALSIFIED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_EM_QFT_FIRST_TEST_OUTCOME",
+    "no_loop_rule": "ONE_EM_QFT_FIRST_TEST_PACKET_ONLY",
+    "default_outcome": "EM_QFT_SEAM_PATH_FALSIFIED"
+  },
+  "non_claim_boundary": "Repository-local EM-QFT seam first-test packet declaration only; no scientific adequacy claim."
+}
