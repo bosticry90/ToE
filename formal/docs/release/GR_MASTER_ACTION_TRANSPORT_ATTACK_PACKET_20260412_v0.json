@@ -1,0 +1,36 @@
+{
+  "schema_id": "GR_MASTER_ACTION_TRANSPORT_ATTACK_PACKET_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T18:25:00Z",
+  "packet_id": "GR-MAT-001",
+  "target_row": "ROW-PILLAR-GR-001",
+  "attack_class": "GR_MASTER_ACTION_TRANSPORT_ATTACK",
+  "objective": "Execute one bounded GR master-action transport attack packet and emit one immediate ruling on blocker movement for ROW-PILLAR-GR-001.",
+  "required_inputs": {
+    "gr_subtarget_declaration": "formal/docs/release/THEOREM_GAP_GR_SUBTARGET_TRANCHE_20260411_v0.json",
+    "gr_subtarget_report": "formal/output/reports/theorem_gap_gr_subtarget_tranche_20260411_v0.json",
+    "gr_stop_rule_decision_report": "formal/output/reports/theorem_gap_gr_bounded_stop_rule_decision_20260411_v0.json",
+    "row_outcome_trend_report": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_report": "formal/output/reports/physics_progress_ledger_v0.json",
+    "master_action_transport_surface_report": "formal/output/reports/direct_master_action_residual_transport_attack_class_packet_20260411_v0.json"
+  },
+  "transport_policy": {
+    "gr_master_action_transport_obligation_declared": false,
+    "require_reclassification_signal": true,
+    "require_no_delta_signal": true,
+    "single_execution_only": true,
+    "single_ruling_only": true
+  },
+  "ruling_contract": {
+    "allowed_outcomes": [
+      "GR_BLOCKER_MOVED",
+      "GR_VALID_BUT_NONMOVING",
+      "GR_PATH_FALSIFIED",
+      "GR_MASTER_ACTION_TRANSPORT_REQUIRES_UNDECLARED_STRUCTURE"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_GR_MASTER_ACTION_TRANSPORT_OUTCOME",
+    "no_loop_rule": "ONE_GR_MASTER_ACTION_TRANSPORT_PACKET_ONLY",
+    "default_outcome": "GR_VALID_BUT_NONMOVING"
+  },
+  "non_claim_boundary": "Repository-local GR master-action transport attack packet declaration only; no scientific adequacy claim."
+}
