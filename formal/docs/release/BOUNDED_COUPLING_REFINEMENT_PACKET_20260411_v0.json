@@ -1,0 +1,32 @@
+{
+  "schema_id": "BOUNDED_COUPLING_REFINEMENT_PACKET_20260411_v0",
+  "packet_id": "BCRP-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "packet_basis": "AUTHORITY_COUPLING_REVIEW_REQUIRES_SEAM_TO_LEDGER_BINDING_REFINEMENT",
+  "required_inputs": {
+    "authority_coupling_review_report": "formal/output/reports/authority_coupling_review_20260411_v0.json"
+  },
+  "coupling_defect_to_refine": {
+    "identified_defect": "SEAM_COHERENCE_OBSERVABLE_BUT_NOT_CORRELATED_WITH_LEDGER_BLOCKER_ARTIFACT_FLUX",
+    "defect_explanation": "Revised blocker definition fires on seam-row state transition, but no corresponding ledger artifact change observed for authoritative blocker token. Gap is localized between seam coherence and ledger state.",
+    "binding_to_establish": "TIGHT_CORRELATION_BETWEEN_SEAM_COHERENCE_CHANGE_AND_LEDGER_ARTIFACT_FLUX"
+  },
+  "refinement_scope": {
+    "target_row_id": "ROW-SEAM-QM-STAT-001",
+    "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "artifact_to_refine": "SEAM_TO_LEDGER_CORRELATOR_BINDING_WITNESS",
+    "refinement_action": "ADD_EXPLICIT_SEAM_COHERENCE_TO_LEDGER_ARTIFACT_CORRELATION_MONITOR"
+  },
+  "tighter_coupling_evidence": {
+    "evidence_criterion_1": "SEAM_COHERENCE_TRANSITION_DETECTED_FOR_TARGET_ROW",
+    "evidence_criterion_2": "CORRESPONDING_LEDGER_BLOCKER_ARTIFACT_STATE_CHANGE_DETECTED_WITHIN_COHERENCE_EVENT",
+    "evidence_criterion_3": "CORRELATION_COEFFICIENT_OR_BINDING_WITNESS_MATERIALIZES_SHOWING_TIGHT_COUPLING",
+    "success_definition": "ALL_THREE_CRITERIA_SATISFIED_DEMONSTRATES_REFINED_BINDING"
+  },
+  "refinement_policy": {
+    "test_scope": "SINGLE_ROW_SINGLE_BINDING_ONCE",
+    "no_loop_rule": "ONE_BOUNDED_COUPLING_REFINEMENT_PACKET_EXECUTION_ONLY",
+    "reversibility_rule": "REFINEMENT_RESULTS_MUST_BE_ASSESSED_BEFORE_PROMOTION_OR_ROLLBACK",
+    "no_further_refinement_loops_until_result_assessed": true
+  }
+}

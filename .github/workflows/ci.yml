@@ -33,6 +33,39 @@ jobs:
       - name: Run governance suite
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1
 
+      - name: Enforce measured policy guard (manual integration must fail by default)
+        run: >
+          pwsh -NoProfile -ExecutionPolicy Bypass -Command
+          "pwsh -NoProfile -ExecutionPolicy Bypass -File ./dual_track_execution.ps1 -Stage integration -GovernanceSuiteSeconds 1 -BranchHealthFullPytestSeconds 1 -CheckpointLadderSeconds 1; if ($LASTEXITCODE -eq 0) { throw 'Expected integration stage to fail without measured capture or explicit override.' }"
+
+      - name: Run dual-track measured policy regression gates
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests/test_dual_track_cutover_measured_mode_policy_gate.py -q
+
+      - name: Run ledger contradiction guard gate
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests/test_physics_progress_ledger_tgc93_consistency_gate.py -q
+
+      - name: Run invalidation telemetry gate
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests/test_governance_invalidation_select_telemetry_gate.py -q
+
+      - name: Positive-path measured artifact policy smoke
+        run: >
+          pwsh -NoProfile -ExecutionPolicy Bypass -Command
+          "pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m formal.python.tools.governance_runtime_baseline_capture --governance-suite-seconds 1 --branch-health-full-pytest-seconds 1 --checkpoint-ladder-seconds 1 --measurement-mode MEASURED; if ($LASTEXITCODE -ne 0) { throw 'Measured baseline artifact generation failed.' }; pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m formal.python.tools.dual_track_runtime_snapshot --governance-suite-seconds 1 --branch-health-full-pytest-seconds 1 --checkpoint-ladder-seconds 1 --measurement-mode MEASURED; if ($LASTEXITCODE -ne 0) { throw 'Measured snapshot artifact generation failed.' }; pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m formal.python.tools.dual_track_cutover_report_generate --governance-required-improvement-percent 0 --checkpoint-required-improvement-percent 0; if ($LASTEXITCODE -ne 0) { throw 'Measured cutover report generation failed.' };"
+
+      - name: Assert measured policy satisfaction in cutover artifact
+        run: >
+          pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -c
+          "import json; p='formal/output/reports/dual_track_cutover_report_v0.json'; d=json.load(open(p, encoding='utf-8')); mp=d.get('measurement_policy',{}); assert mp.get('measured_mode_required') is True, 'measured_mode_required must be true'; assert mp.get('measured_mode_satisfied') is True, 'measured_mode_satisfied must be true in positive-path smoke';"
+
+      - name: Capture governance parallel capability probe report
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m formal.python.tools.governance_parallel_capability_probe
+
+      - name: Generate dual-track hardening closeout report
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m formal.python.tools.dual_track_hardening_closeout --min-invalidation-runs 1 --min-subset-hit-rate-percent 0
+
+      - name: Validate dual-track hardening closeout gate
+        run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests/test_dual_track_hardening_closeout_gate.py -q
+
   dependency-security:
     name: Dependency Security
     runs-on: windows-latest
@@ -84,6 +117,37 @@ jobs:
 
       - name: Run test suite
         run: pwsh -NoProfile -ExecutionPolicy Bypass -File ./py.ps1 -m pytest formal/python/tests -q
+
+  python-governance-linux-parity:
+    name: Python Governance Linux Parity
+    runs-on: ubuntu-latest
+    needs: [governance, dependency-security]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+
+      - name: Create venv
+        run: python -m venv .venv
+
+      - name: Install pytest
+        run: ./.venv/bin/python -m pip install --upgrade pip pytest
+
+      - name: Resolve Linux parity critical gate set
+        run: ./.venv/bin/python -m formal.python.tools.governance_manifest_select --manifest formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json --group critical_gates --enforce-expected > critical_gates_linux.txt
+
+      - name: Resolve Linux parity integrity gate set
+        run: ./.venv/bin/python -m formal.python.tools.governance_manifest_select --manifest formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json --group integrity_gates --enforce-expected > integrity_gates_linux.txt
+
+      - name: Run Linux parity critical gate set
+        run: xargs -a critical_gates_linux.txt ./.venv/bin/python -m pytest -q
+
+      - name: Run Linux parity integrity gate set
+        run: xargs -a integrity_gates_linux.txt ./.venv/bin/python -m pytest -q
 
   lean-build:
     name: Lean Build

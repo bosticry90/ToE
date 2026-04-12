@@ -1,0 +1,49 @@
+{
+  "schema_id": "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN_DISCHARGE_TRANCHE_EMU1_DISTRIBUTIONAL_AUTH_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T22:22:00Z",
+  "attack_class": "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN",
+  "tranche_id": "PDFC-EMU1-DISCHARGE-001",
+  "cluster_id": "PDC-EMU1-DISTRIBUTIONAL-AUTH-01",
+  "cluster_name": "em_u1_distributional_authorization_surface",
+  "execution_mode": "single_cluster_bounded_discharge",
+  "debt_object_execution_targets": [
+    {
+      "debt_id": "PD-INV-PHYS-EM-U1-MICRO21",
+      "current_unresolved_condition": "distributional authorization and authorized reference surfaces are not yet blocker-state effective",
+      "target_discharged_condition": "cycle21 authorization plus cycle22 and cycle23 authorized surfaces pass with blocker-linked closure semantics",
+      "artifact_or_theorem_surface": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_21_DISTRIBUTIONAL_LANE_AUTHORIZATION_SCAFFOLD_v0.md",
+      "witness_or_trace_required": [
+        "formal/python/tests/test_em_u1_micro21_distributional_lane_authorization_scaffold_gate.py",
+        "formal/python/tests/test_em_u1_micro22_authorized_distributional_semantics_mapping_nonclaim.py",
+        "formal/python/tests/test_em_u1_micro23_authorized_distributional_reference_surface_nonclaim.py"
+      ],
+      "blocker_link": "THEOREM_GAP",
+      "success_token": "PD_OBJECT_PD-INV-PHYS-EM-U1-MICRO21_DISCHARGED",
+      "fail_token": "PD_OBJECT_PD-INV-PHYS-EM-U1-MICRO21_UNRESOLVED"
+    }
+  ],
+  "blocker_transition_criteria": {
+    "full_movement": "theorem_gap_delta_lt_0_or_blocker_class_state_changed",
+    "partial_movement": "formal_gap_closed_tied_to_blocker_and_no_blocker_delta",
+    "no_movement": "no_formal_gap_closed_tied_to_blocker_and_no_blocker_delta"
+  },
+  "cluster_level_state_outputs": [
+    "PROOF_DEBT_DISCHARGE_SUCCESS_BLOCKER_MOVED",
+    "PROOF_DEBT_DISCHARGE_PARTIAL_FORMAL_PROGRESS_NO_BLOCKER_MOVE",
+    "PROOF_DEBT_DISCHARGE_FAILED_NO_FORMAL_CLOSURE"
+  ],
+  "state_transition_semantics": {
+    "success": "at_least_one_debt_object_discharged_and_blocker_state_moved",
+    "partial_progress": "at_least_one_debt_object_discharged_but_blocker_state_unchanged",
+    "failure": "no_debt_object_discharged_and_blocker_state_unchanged",
+    "fail_closed_rule": "documentation_only_or_selection_only_changes_do_not_count_as_discharge"
+  },
+  "required_inputs": {
+    "campaign_packet_pointer": "formal/docs/release/PROOF_DEBT_FIRST_FORMAL_CAMPAIGN_PACKET_EMU1_DISTRIBUTIONAL_AUTH_20260411_v0.json",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_pointer": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_pointer": "formal/output/reports/physics_progress_ledger_v0.json"
+  },
+  "non_claim_boundary": "Repository-local proof-debt-first discharge tranche declaration only; no scientific adequacy claim."
+}

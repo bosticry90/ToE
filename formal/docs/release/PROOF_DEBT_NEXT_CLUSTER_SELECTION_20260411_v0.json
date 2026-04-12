@@ -1,0 +1,83 @@
+{
+  "schema_id": "PROOF_DEBT_NEXT_CLUSTER_SELECTION_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T21:35:00Z",
+  "selection_scope": "POST_PDC_TRACEABILITY_EMU1_BRANCH_RULING",
+  "required_inputs": {
+    "branch_ruling_report": "formal/output/reports/proof_debt_cluster_branch_ruling_report_20260411_v0.json",
+    "active_cluster_focus_report": "formal/output/reports/proof_debt_active_cluster_next_tranche_focus_report_20260411_v0.json",
+    "cluster_focus_reports": [
+      "formal/output/reports/proof_debt_active_cluster_next_tranche_focus_math_pd_burndown_20260411_v0.json",
+      "formal/output/reports/proof_debt_active_cluster_next_tranche_focus_emu1_distributional_auth_20260411_v0.json"
+    ],
+    "inventory_pointer": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "ledger_pointer": "formal/output/reports/physics_progress_ledger_v0.json"
+  },
+  "selection_policy": {
+    "exclude_from_blocker_facing_priority": [
+      "PDC-TRACEABILITY-EMU1-01"
+    ],
+    "retain_as_support_lane": [
+      "PDC-TRACEABILITY-EMU1-01"
+    ],
+    "required_direct_impact_signals": [
+      "plausible_theorem_gap_delta_lt_0_path",
+      "plausible_seam_integration_gap_delta_lt_0_path",
+      "plausible_global_row_success_increment_path",
+      "explicit_blocker_state_token_transition_path"
+    ],
+    "weights": {
+      "plausible_theorem_gap_delta_lt_0_path": 4,
+      "plausible_seam_integration_gap_delta_lt_0_path": 4,
+      "plausible_global_row_success_increment_path": 3,
+      "explicit_blocker_state_token_transition_path": 5
+    }
+  },
+  "candidate_clusters": [
+    {
+      "cluster_id": "PDC-TRACEABILITY-EMU1-01",
+      "cluster_name": "proof_debt_traceability_and_em_u1_distributional_authorization",
+      "source_surfaces": [
+        "INV-MATH-PROOF-DEBT-BURNDOWN-c04",
+        "INV-PHYS-EM-U1-MICRO21"
+      ],
+      "direct_impact_signals": {
+        "plausible_theorem_gap_delta_lt_0_path": false,
+        "plausible_seam_integration_gap_delta_lt_0_path": false,
+        "plausible_global_row_success_increment_path": false,
+        "explicit_blocker_state_token_transition_path": false
+      },
+      "priority_note": "Excluded by branch ruling for blocker-facing allocation; retained as support lane only."
+    },
+    {
+      "cluster_id": "PDC-MATH-PROOF-DEBT-BURNDOWN-01",
+      "cluster_name": "proof_debt_marker_burndown_terminal_gate_alignment",
+      "source_surfaces": [
+        "INV-MATH-PROOF-DEBT-BURNDOWN-c04"
+      ],
+      "direct_impact_signals": {
+        "plausible_theorem_gap_delta_lt_0_path": true,
+        "plausible_seam_integration_gap_delta_lt_0_path": false,
+        "plausible_global_row_success_increment_path": true,
+        "explicit_blocker_state_token_transition_path": true
+      },
+      "priority_note": "Single-surface proof-debt closeout with direct terminal gate coupling; evaluate as primary next blocker-facing candidate."
+    },
+    {
+      "cluster_id": "PDC-EMU1-DISTRIBUTIONAL-AUTH-01",
+      "cluster_name": "em_u1_distributional_authorization_surface",
+      "source_surfaces": [
+        "INV-PHYS-EM-U1-MICRO21"
+      ],
+      "direct_impact_signals": {
+        "plausible_theorem_gap_delta_lt_0_path": true,
+        "plausible_seam_integration_gap_delta_lt_0_path": false,
+        "plausible_global_row_success_increment_path": false,
+        "explicit_blocker_state_token_transition_path": true
+      },
+      "priority_note": "Distributional authorization surface isolated as standalone candidate; promote only if blocker-transition contract remains explicit."
+    }
+  ],
+  "non_claim_boundary": "Repository-local next-cluster selection declaration only; no scientific adequacy claim."
+}

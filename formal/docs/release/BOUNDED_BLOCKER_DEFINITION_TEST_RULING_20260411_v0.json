@@ -1,0 +1,38 @@
+{
+  "schema_id": "BOUNDED_BLOCKER_DEFINITION_TEST_RULING_20260411_v0",
+  "ruling_id": "BBDTR-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "ruling_basis": "BOUNDED_BLOCKER_DEFINITION_TEST_EXECUTION_COMPLETED",
+  "required_inputs": {
+    "bounded_blocker_definition_test_execution_report": "formal/output/reports/bounded_blocker_definition_test_execution_20260411_v0.json"
+  },
+  "ruling_outcomes": [
+    {
+      "outcome_id": "OUTCOME_1",
+      "outcome": "REVISED_BLOCKER_DEF_REVEALS_MEANINGFUL_MOVEMENT",
+      "activation_condition": "REVISED_DEF_FIRES_AND_DEMONSTRATES_TIGHTER_COUPLING_THAN_DIAGNOSTIC_SIGNAL",
+      "interpretation": "Updated blocker definition successfully captures state transition stricter than diagnostic but with authoritative-level rigor."
+    },
+    {
+      "outcome_id": "OUTCOME_2",
+      "outcome": "REVISED_BLOCKER_DEF_VALID_BUT_NONMOVING",
+      "activation_condition": "REVISED_DEF_FIRES_BUT_DOES_NOT_EXCEED_DIAGNOSTIC_SIGNAL_RIGOR_OR_DOES_NOT_CORRELATE_WITH_THEORY_ADVANCE",
+      "interpretation": "Updated blocker definition fires validly but does not demonstrate tighter coupling or more authoritative rigor than diagnostic signal."
+    },
+    {
+      "outcome_id": "OUTCOME_3",
+      "outcome": "REVISED_BLOCKER_DEF_NOT_FIT_FOR_AUTHORITY_USE",
+      "activation_condition": "REVISED_DEF_DOES_NOT_FIRE_OR_FIRES_INCONSISTENTLY_WITH_ARCHITECTURE_COHERENCE",
+      "interpretation": "Updated blocker definition does not establish independent standing; not fit for authoritative blocker role."
+    }
+  ],
+  "ruling_policy": {
+    "promotion_requires_both_signals_still": false,
+    "promotion_requires_revised_def_fires_decisively": true,
+    "promotion_requires_tighter_coupling_than_diagnostic": true,
+    "authoritative_still_blocked_in_this_evaluation": true,
+    "default_ruling": "REVISED_BLOCKER_DEF_VALID_BUT_NONMOVING",
+    "no_loop_rule": "ONE_BOUNDED_BLOCKER_DEFINITION_TEST_RULING_ONLY",
+    "no_further_blocker_def_tests_until_defect_resolved_policy": true
+  }
+}

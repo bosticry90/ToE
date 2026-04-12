@@ -1,0 +1,45 @@
+{
+  "schema_id": "SCIENCE_POST_DIRECT_ATTACK_CLASS_DECISION_20260411_v0",
+  "decision_id": "SPDAD-001",
+  "current_attack_class": "DIRECT_MASTER_ACTION_RESIDUAL_TRANSPORT_ATTACK_CLASS",
+  "required_inputs": {
+    "science_global_completion_baseline_report": "formal/output/reports/science_global_completion_baseline_20260411_v0.json",
+    "proof_debt_program_exhaustion_decision_report": "formal/output/reports/proof_debt_program_exhaustion_decision_20260411_v0.json",
+    "qm_blocker_moving_ruling_report": "formal/output/reports/qm_blocker_moving_ruling_20260411_v0.json",
+    "direct_master_action_residual_transport_attack_class_packet_report": "formal/output/reports/direct_master_action_residual_transport_attack_class_packet_20260411_v0.json",
+    "qm_stat_transport_residual_ruling_report": "formal/output/reports/qm_stat_transport_residual_ruling_20260411_v0.json"
+  },
+  "candidate_routes": [
+    {
+      "route_id": "FILTER_REVISION_ROUTE",
+      "activation_condition": "SPECIFIC_FILTER_DEFECT_IDENTIFIED_AND_BOUNDED",
+      "next_action": "EXECUTE_FILTER_REVISION_PACKET_ONCE"
+    },
+    {
+      "route_id": "ARCHITECTURE_LEVEL_BLOCKER_DIAGNOSIS_ROUTE",
+      "activation_condition": "NO_SPECIFIC_FILTER_DEFECT_AND_MULTIPLE_DISTINCT_LOCAL_ATTACK_CLASSES_NONMOVING",
+      "next_action": "MATERIALIZE_ARCHITECTURE_LEVEL_BLOCKER_DIAGNOSIS_PACKET"
+    },
+    {
+      "route_id": "PROGRAM_POSTURE_REVIEW_ROUTE",
+      "activation_condition": "DECISION_INPUTS_INCOMPLETE_OR_EXECUTABLE_DISCRIMINATOR_ARCHITECTURE_REQUIRES_REASSESSMENT",
+      "next_action": "REVIEW_BLOCKER_MOVING_UNIT_DEFINITION_AND_PROGRAM_POSTURE_ONCE"
+    }
+  ],
+  "decision_policy": {
+    "specific_filter_defect_identified": false,
+    "specific_filter_defect_note": null,
+    "bounded_filter_revision_packet": null,
+    "minimum_distinct_nonmoving_attack_classes": 3,
+    "required_nonmoving_attack_classes": [
+      "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN",
+      "QM_BLOCKER_MOVING_TRANCHE",
+      "DIRECT_MASTER_ACTION_RESIDUAL_TRANSPORT_ATTACK_CLASS"
+    ],
+    "architecture_level_selected_attack_class": "ARCHITECTURE_LEVEL_BLOCKER_DIAGNOSIS",
+    "architecture_level_next_action": "MATERIALIZE_ARCHITECTURE_LEVEL_BLOCKER_DIAGNOSIS_PACKET",
+    "program_posture_review_next_action": "REVIEW_BLOCKER_MOVING_UNIT_DEFINITION_AND_PROGRAM_POSTURE_ONCE",
+    "no_further_local_attack_packets_policy": "NO_FURTHER_LOCAL_ATTACK_PACKETS_UNTIL_DECISION_RESOLVED"
+  },
+  "non_claim_boundary": "Repository-local post-direct-attack-class decision declaration only; no scientific adequacy claim."
+}

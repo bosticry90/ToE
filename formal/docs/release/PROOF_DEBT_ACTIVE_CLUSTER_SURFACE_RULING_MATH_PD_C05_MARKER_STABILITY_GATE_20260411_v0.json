@@ -1,0 +1,22 @@
+{
+  "schema_id": "PROOF_DEBT_ACTIVE_CLUSTER_SURFACE_RULING_MATH_PD_C05_MARKER_STABILITY_GATE_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T21:51:00Z",
+  "cluster_id": "PDC-MATH-PROOF-DEBT-BURNDOWN-01",
+  "cluster_name": "proof_debt_marker_burndown_terminal_gate_alignment",
+  "ruling_scope": "POST_EXECUTION_SURFACE_DISPOSITION",
+  "target_surface": {
+    "surface_id": "MATH-PD-C05-MARKER-STABILITY-GATE",
+    "surface_path": "formal/python/tests/test_proof_debt_marker_stability_gate.py",
+    "surface_kind": "gate_test"
+  },
+  "required_inputs": {
+    "surface_tranche_report": "formal/output/reports/proof_debt_active_cluster_surface_tranche_report_20260411_v0.json"
+  },
+  "ruling_policy": {
+    "exclude_from_immediate_reselection_when": "surface_gate_passed_and_all_blocker_movement_signals_false",
+    "retain_as_supporting_surface_when": "surface_gate_passed_but_no_blocker_movement",
+    "productive_surface_when": "surface_gate_passed_and_any_blocker_movement_signal_true"
+  },
+  "non_claim_boundary": "Repository-local active-cluster surface ruling declaration; no scientific adequacy claim."
+}

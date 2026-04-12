@@ -1,0 +1,37 @@
+{
+  "schema_id": "POST_MEASUREMENT_REGIME_PILOT_DECISION_20260411_v0",
+  "decision_id": "PMRPD-001",
+  "current_pilot_ruling": "REVISED_SIGNAL_VALID_BUT_NONMOVING",
+  "required_inputs": {
+    "bounded_measurement_regime_pilot_ruling_report": "formal/output/reports/bounded_measurement_regime_pilot_ruling_20260411_v0.json",
+    "bounded_measurement_regime_pilot_execution_report": "formal/output/reports/bounded_measurement_regime_pilot_execution_20260411_v0.json"
+  },
+  "candidate_routes": [
+    {
+      "route_id": "ROLL_BACK_ROUTE",
+      "activation_condition": "REVISED_SIGNAL_NOT_FIT_OR_BLOCKER_CORRELATION_NOT_ESTABLISHED",
+      "next_action": "DEPRECATE_REVISED_SIGNAL_AND_RESTORE_PRIOR_REGIME"
+    },
+    {
+      "route_id": "RETAIN_DIAGNOSTIC_ROUTE",
+      "activation_condition": "REVISED_SIGNAL_VALID_BUT_NOT_PROMOTION_BEARING_AND_NO_SPECIFIC_COUPLING_DEFECT",
+      "next_action": "REGISTER_REVISED_SIGNAL_AS_DIAGNOSTIC_ONLY_AND_HOLD"
+    },
+    {
+      "route_id": "AUTHORITY_COUPLING_REFINEMENT_ROUTE",
+      "activation_condition": "SPECIFIC_BOUNDED_COUPLING_DEFECT_BETWEEN_REVISED_SIGNAL_AND_BLOCKER_TOKEN_IDENTIFIED",
+      "next_action": "EXECUTE_AUTHORITY_COUPLING_REFINEMENT_PACKET_ONCE"
+    }
+  ],
+  "decision_policy": {
+    "revised_signal_new_signal_fired_default": true,
+    "revised_signal_retained_signal_fired_default": false,
+    "specific_authority_coupling_defect_identified": false,
+    "specific_authority_coupling_defect_note": null,
+    "bounded_coupling_refinement_packet": null,
+    "default_decision": "RETAIN_REVISED_SIGNAL_AS_DIAGNOSTIC_ONLY",
+    "no_loop_rule": "ONE_POST_PILOT_DECISION_ONLY",
+    "no_further_pilot_loops_policy": "NO_FURTHER_MEASUREMENT_REGIME_PILOT_LOOPS_UNTIL_DECISION_RESOLVED"
+  },
+  "non_claim_boundary": "Repository-local post-measurement-regime pilot decision declaration only; no scientific adequacy claim."
+}

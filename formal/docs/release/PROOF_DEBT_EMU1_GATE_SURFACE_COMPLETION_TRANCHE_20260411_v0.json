@@ -1,0 +1,25 @@
+{
+  "schema_id": "PROOF_DEBT_EMU1_GATE_SURFACE_COMPLETION_TRANCHE_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T21:05:00Z",
+  "tranche_id": "PDFC-EMU1-GATE-001",
+  "cluster_id": "PDC-TRACEABILITY-EMU1-01",
+  "target_debt_object": "PD-INV-PHYS-EM-U1-MICRO21",
+  "objective": "Decide whether missing EM-U1 gate surface can be instantiated in one bounded tranche and used for one rerun on merits.",
+  "required_gate_surface": {
+    "path": "formal/python/tests/test_em_u1_micro21_distributional_lane_authorization_scaffold_gate.py",
+    "surface_doc": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_21_DISTRIBUTIONAL_LANE_AUTHORIZATION_SCAFFOLD_v0.md",
+    "inventory_row": "INV-PHYS-EM-U1-MICRO21"
+  },
+  "success_condition": "GATE_FILE_EXISTS_AND_PASSES_AND_CLUSTER_CAN_BE_RERUN_ON_MERITS",
+  "failure_condition": "GATE_SURFACE_CANNOT_BE_WIRED_WITHOUT_SCOPE_DRIFT_OR_ARCHITECTURE_VIOLATION",
+  "bounded_stop_rule": {
+    "max_attempts": 1,
+    "rule": "AFTER_ONE_GATE_COMPLETION_ATTEMPT_DECIDE_RERUN_ONCE_OR_REPRIORITIZE"
+  },
+  "decision_outputs": {
+    "success": "RERUN_CLUSTER_ONCE_ON_MERITS",
+    "failure": "REPRIORITIZE_CLUSTER_INSUFFICIENT_INFRASTRUCTURE_LEVERAGE"
+  },
+  "non_claim_boundary": "Repository-local bounded gate-surface completion tranche declaration only; no scientific adequacy claim."
+}

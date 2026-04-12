@@ -1,0 +1,35 @@
+{
+  "schema_id": "DISCOVERY_TRANCHE_RULING_CONTRACT_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T21:40:00Z",
+  "decision_scope": "DISCOVERY_TRANCHE_TERMINAL_RULING_ONLY",
+  "allowed_terminal_outcomes": [
+    "BLOCKER_MOVED",
+    "DISCRIMINATOR_PRODUCED",
+    "PATH_FALSIFIED",
+    "NONPRODUCTIVE_RETIRED"
+  ],
+  "classification_policy": {
+    "success_outcomes": [
+      "BLOCKER_MOVED",
+      "DISCRIMINATOR_PRODUCED",
+      "PATH_FALSIFIED"
+    ],
+    "retirement_outcome": "NONPRODUCTIVE_RETIRED",
+    "single_outcome_rule": "EXACTLY_ONE_ALLOWED_TERMINAL_OUTCOME_REQUIRED"
+  },
+  "ruling_policy": {
+    "blocking_rule": "MISSING_TERMINAL_OUTCOME_OR_MULTIPLE_TERMINAL_OUTCOMES_IS_HARD_FAIL",
+    "escalation_rule": "TWO_CONSECUTIVE_NONPRODUCTIVE_RETIRED_RESULTS_REQUIRE_QUEUE_RECOMPUTE",
+    "no_loop_rule": "ONE_DISCOVERY_TRANCHE_RULING_EXECUTION_ONLY"
+  },
+  "required_fields": {
+    "tranche_id": "REQUIRED",
+    "target_row": "REQUIRED",
+    "blocker_class": "REQUIRED",
+    "terminal_outcome": "REQUIRED",
+    "evidence_pointer": "REQUIRED",
+    "next_action": "REQUIRED"
+  },
+  "non_claim_boundary": "Repository-local discovery tranche ruling contract only; no scientific adequacy claim."
+}

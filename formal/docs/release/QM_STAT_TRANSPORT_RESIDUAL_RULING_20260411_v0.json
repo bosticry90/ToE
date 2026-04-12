@@ -1,0 +1,17 @@
+{
+  "schema_id": "QM_STAT_TRANSPORT_RESIDUAL_RULING_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T00:20:00Z",
+  "decision_scope": "POST_SINGLE_BOUNDED_QM_STAT_TRANSPORT_RESIDUAL_PACKET",
+  "required_inputs": {
+    "qm_stat_transport_residual_packet": "formal/docs/release/QM_STAT_TRANSPORT_RESIDUAL_PACKET_20260411_v0.json",
+    "qm_stat_transport_residual_packet_report": "formal/output/reports/qm_stat_transport_residual_packet_20260411_v0.json"
+  },
+  "ruling_policy": {
+    "moving_rule": "PACKET_CLASSIFICATION_EQ_QM_STAT_TRANSPORT_RESIDUAL_MOVED",
+    "valid_but_nonmoving_rule": "PACKET_CLASSIFICATION_EQ_QM_STAT_TRANSPORT_RESIDUAL_VALID_BUT_NONMOVING",
+    "exhaustion_rule": "PACKET_CLASSIFICATION_EQ_QM_STAT_TRANSPORT_RESIDUAL_VALID_BUT_NONMOVING_AND_NO_LOOP_RULE_EQ_ONE_BOUNDED_EXECUTION_ONLY",
+    "next_action_if_exhausted": "REVIEW_POST_DIRECT_ATTACK_CLASS_DECISION_AND_DO_NOT_LOOP_QM_STAT"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT transport/residual ruling declaration only; no scientific adequacy claim."
+}

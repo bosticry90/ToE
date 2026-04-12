@@ -1,0 +1,42 @@
+{
+  "schema_id": "FUNDAMENTAL_ATTACK_STRATEGY_RETHINK_PACKET_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T20:35:00Z",
+  "attack_class": "FUNDAMENTAL_ATTACK_STRATEGY_RETHINK",
+  "packet_id": "FASR-001",
+  "question": "Why are current attack classes yielding scientific information but failing to produce blocker-facing movement?",
+  "inputs_scope": {
+    "must_include_attack_classes": [
+      "PACKET41_SEAM_LIFTING",
+      "ROW_ROTATION_QM_GR_STAT_COSMO",
+      "SIMULATION_FIRST_FALSIFICATION",
+      "BROADER_SEAM_PACKAGE_REDESIGN",
+      "EXTERNAL_DISCRIMINATIVE_BENCHMARK_PROGRAM"
+    ],
+    "decision_artifacts": [
+      "formal/output/reports/packet41_branch_decision_tranche_20260411_v0.json",
+      "formal/output/reports/theorem_gap_qm_bounded_stop_rule_decision_20260411_v0.json",
+      "formal/output/reports/theorem_gap_gr_bounded_stop_rule_decision_20260411_v0.json",
+      "formal/output/reports/theorem_gap_stat_bounded_stop_rule_decision_20260411_v0.json",
+      "formal/output/reports/theorem_gap_cosmo_bounded_stop_rule_decision_20260411_v0.json",
+      "formal/output/reports/simulation_first_falsification_campaign_decision_20260411_v3.json",
+      "formal/output/reports/broader_seam_package_redesign_decision_20260411_v0.json",
+      "formal/output/reports/external_discriminative_benchmark_decision_20260411_v0.json"
+    ]
+  },
+  "success_contract": {
+    "success": "ONE_DIFFERENT_NEXT_ATTACK_CLASS_SELECTED_WITH_EXPLICIT_HYPOTHESIS_AND_FAIL_CLOSED_CRITERIA",
+    "failure": "NO_SINGLE_REDESIGNED_ATTACK_HYPOTHESIS_OR_NEXT_CLASS_SELECTED",
+    "inconclusive": "REQUIRED_DECISION_ARTIFACTS_MISSING"
+  },
+  "bounded_stop_rule": {
+    "max_packets": 1,
+    "rule": "AFTER_ONE_SYNTHESIS_PACKET_SELECT_EXACTLY_ONE_NEXT_ATTACK_CLASS"
+  },
+  "candidate_next_classes": [
+    "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN",
+    "FOUNDATIONAL_ASSUMPTION_STRESS_TEST",
+    "OBSERVABLE_DRIVEN_REDESIGN"
+  ],
+  "non_claim_boundary": "Repository-local fundamental strategy rethink packet declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,105 @@
+{
+  "schema_id": "RECOMPUTE_OBSERVATION_DECLARATION_20260411_v0",
+  "stage": "observation_and_interpretation_layer",
+  "scope": "observe_triggered_recompute_surfaces_interpret_downstream_change",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local recompute observation and interpretation; outcomes inform next decision point but do not themselves execute further layers.",
+  "declaration": {
+    "observation_scope": "RECOMPUTE_SURFACE_OBSERVATION_POST_PROMOTION",
+    "prerequisite_layer": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+    "triggered_surfaces_to_observe": [
+      {
+        "surface_id": "qm_seam_coherence_under_revised_blocker",
+        "trigger_path": "formal/output/recompute/qm_seam_coherence_under_revised_blocker.json",
+        "observation_question": "Did QM seam coherence state change after promotion of revised blocker definition?",
+        "interpretation_criteria": [
+          "coherence_metric_movement",
+          "state_transition_velocity",
+          "correlation_with_ledger_flux"
+        ]
+      },
+      {
+        "surface_id": "ledger_artifact_transport_under_revised_blocker",
+        "trigger_path": "formal/output/recompute/ledger_artifact_transport_under_revised_blocker.json",
+        "observation_question": "Did ledger artifact transport behavior change under revised blocker authority?",
+        "interpretation_criteria": [
+          "transport_state_change",
+          "artifact_flux_magnitude",
+          "authority_to_ledger_binding_tightness"
+        ]
+      },
+      {
+        "surface_id": "blocker_authority_transport_surface",
+        "trigger_path": "formal/output/recompute/blocker_authority_transport_surface.json",
+        "observation_question": "Did blocker-to-authority transport patterns show meaningful change?",
+        "interpretation_criteria": [
+          "authority_signal_propagation",
+          "transport_state_coupling",
+          "downstream_consequence_magnitude"
+        ]
+      }
+    ],
+    "observation_interpretation_questions": [
+      {
+        "question_id": "Q1",
+        "text": "Did any triggered surface show meaningful downstream state change?",
+        "expected_answer_space": [
+          "YES_SIGNIFICANT_CHANGE",
+          "YES_MINOR_CHANGE",
+          "NO_CHANGE",
+          "CHANGE_DIRECTION_UNCLEAR"
+        ]
+      },
+      {
+        "question_id": "Q2",
+        "text": "Did the authoritative blocker-definition update alter ledger/blocker transport behavior in a way that matters?",
+        "expected_answer_space": [
+          "YES_MATERIAL_CASCADE",
+          "YES_LOCALIZED_EFFECT",
+          "NO_OBSERVABLE_CASCADE",
+          "CASCADE_STATE_AMBIGUOUS"
+        ]
+      },
+      {
+        "question_id": "Q3",
+        "text": "If surfaces show no meaningful change, is null result itself informative?",
+        "expected_answer_space": [
+          "YES_PROMOTES_SECONDARY_INTERPRETATION",
+          "YES_INDICATES_LOCAL_AUTHORITY_ONLY",
+          "INCONCLUSIVE_NEEDS_FURTHER_OBSERVATION",
+          "NO_INSUFFICIENT_SIGNAL"
+        ]
+      }
+    ],
+    "interpretation_outcomes": [
+      {
+        "outcome_id": "OUTCOME_1_CASCADE_CONFIRMED",
+        "condition": "Surfaces show significant state change AND cascade behavior observed",
+        "interpretation": "Promotion had downstream consequence; blocker authority update propagated measurably",
+        "next_decision_layer": "PROMOTE_FINDINGS_TO_NEXT_DECISION_LOOP"
+      },
+      {
+        "outcome_id": "OUTCOME_2_LOCAL_ONLY",
+        "condition": "Authority registry updated but no cascade in triggered surfaces",
+        "interpretation": "Authority surface legitimately changed but with localized effect; no broad program unblocking",
+        "next_decision_layer": "DOCUMENT_LOCAL_AUTHORITY_ONLY_RESULT"
+      },
+      {
+        "outcome_id": "OUTCOME_3_INSUFFICIENT_SIGNAL",
+        "condition": "Recompute surfaces show no change AND null result not clearly interpretable",
+        "interpretation": "Observation incomplete or signal not yet materialized; requires monitoring continuation",
+        "next_decision_layer": "DEFER_INTERPRETATION_CONTINUE_OBSERVATION"
+      }
+    ],
+    "scope_boundaries": {
+      "what_observation_does": "Check triggered recompute surfaces for state change; interpret downstream consequences",
+      "what_observation_does_not_do": "Execute new layers; make new claims about theorem gaps; extend promotion logic",
+      "observation_chain_stops_at": "Interpretation; next step determined by findings, not predetermined"
+    },
+    "fail_closed_rule": "Default to OUTCOME_3 (insufficient signal) unless surfaces clearly show change",
+    "no_loop_rule": "ONE_RECOMPUTE_OBSERVATION_AND_INTERPRETATION_EXECUTION_ONLY",
+    "observation_layer": true,
+    "layer_description": "Recompute observation and interpretation layer. Monitors triggered surfaces, interprets downstream change, determines next decision point. Does not execute beneath this layer; findings route to next phase decision."
+  },
+  "captured_at_utc": "2026-04-12T00:45:00Z"
+}

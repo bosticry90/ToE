@@ -1,0 +1,36 @@
+{
+  "schema_id": "SIMULATION_FIRST_FALSIFICATION_PACKET_20260411_v3",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T20:50:00Z",
+  "campaign_id": "SIM-FIRST-FALSIFICATION-001",
+  "packet_id": "SIM-PACKET-004",
+  "packet_type": "CONDITION_B_REGIME_BLOCKER_ATTEMPT",
+  "target_question": "Can operating strictly inside the confirmed condition_B-limited regime produce blocker-facing movement?",
+  "regime_assumption": {
+    "condition_b_regime_limiter_confirmed_required": true,
+    "minimum_boundary_sharpness_required": 0.5,
+    "source_packet_report": "formal/output/reports/simulation_first_falsification_packet_report_20260411_v2.json"
+  },
+  "blocker_target": {
+    "named_blocker_class": "THEOREM_GAP",
+    "row_target": "ROW-PILLAR-COSMO-001",
+    "target_metric": "THEOREM_GAP_DELTA_OR_ROW_SUCCESS"
+  },
+  "causal_hypothesis": "If the route is only viable inside the condition_B-limited regime, then constraining analysis to that regime should improve at least one blocker-facing metric.",
+  "result_contract": {
+    "success": "THEOREM_GAP_DELTA_LT_0_OR_ROW_SUCCESS_COUNT_GT_0_OR_NAMED_BLOCKER_CLASS_STATE_CHANGED",
+    "failure": "NO_BLOCKER_FACING_MOVEMENT_INSIDE_CONDITION_B_LIMITED_REGIME",
+    "inconclusive": "REGIME_PRECONDITION_NOT_MET_OR_REQUIRED_INPUTS_MISSING"
+  },
+  "bounded_stop_rule": {
+    "max_attempts": 1,
+    "rule": "AFTER_ONE_REGIME_CONDITIONED_BLOCKER_ATTEMPT_WITHOUT_MOVEMENT_DECLARE_OPERATIONALLY_NONPRODUCTIVE"
+  },
+  "required_inputs": {
+    "cross_anchor_mode": "numeric_only",
+    "cross_anchor_tool": "formal.python.tools.cross_anchor_bragg_vs_sound_report",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_pointer": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json"
+  },
+  "non_claim_boundary": "Repository-local regime-conditioned blocker-attempt packet declaration only; no scientific adequacy claim."
+}

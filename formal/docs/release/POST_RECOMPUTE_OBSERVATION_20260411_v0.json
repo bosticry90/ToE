@@ -1,0 +1,71 @@
+{
+  "schema_id": "POST_RECOMPUTE_OBSERVATION_DECLARATION_20260411_v0",
+  "stage": "post_recompute_observation_and_ruling_layer",
+  "scope": "observe_completed_recompute_outputs_rule_on_material_cascade",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local post-recompute observation and ruling; outcomes determine whether material cascade justified or promotion remains authority-local only.",
+  "declaration": {
+    "ruling_scope": "POST_RECOMPUTE_MATERIAL_CASCADE_RULING",
+    "prerequisite_layer": "RECOMPUTE_OBSERVATION_20260411_v0",
+    "prerequisite_condition": "trigger_propagation_confirmed AND surfaces_in_pending_recompute_state",
+    "observation_questions": [
+      {
+        "question_id": "Q1",
+        "text": "Have any recompute surfaces moved beyond PENDING_RECOMPUTE state?",
+        "expected_answer": "YES|NO|PARTIAL"
+      },
+      {
+        "question_id": "Q2",
+        "text": "For completed recompute surfaces, do completed outputs show actual state/value change vs. pre-promotion baseline?",
+        "expected_answer": "YES_SIGNIFICANT_CHANGE|YES_MINOR_CHANGE|NO_CHANGE|INSUFFICIENT_DATA"
+      },
+      {
+        "question_id": "Q3",
+        "text": "Is observed state change attributable to the revised blocker definition promotion?",
+        "expected_answer": "YES_DIRECTLY_ATTRIBUTABLE|YES_PLAUSIBLY_ATTRIBUTABLE|NO_CLEAR_ATTRIBUTION|AMBIGUOUS"
+      }
+    ],
+    "possible_rulings": [
+      {
+        "ruling_id": "MATERIAL_CASCADE_CONFIRMED",
+        "condition": "completed recompute surfaces show actual state change AND change attributable to promotion",
+        "interpretation": "Material cascade confirmed; promotion propagated from authority surface through recompute graph and produced downstream state changes",
+        "next_action": "DOCUMENT_CASCADE_CONSEQUENCE_AND_PROMOTE_FINDINGS"
+      },
+      {
+        "ruling_id": "TRIGGER_PROPAGATION_ONLY_AUTHORITY_LOCAL",
+        "condition": "recompute surfaces completed but show no measurable state change OR insufficient downstream signal",
+        "interpretation": "Promotion remains authority-local; trigger propagation confirmed but no material cascade observed in downstream outputs",
+        "next_action": "DOCUMENT_AUTHORITY_LOCAL_RESULT_WITH_PENDING_MONITOR"
+      },
+      {
+        "ruling_id": "RECOMPUTE_STILL_PENDING",
+        "condition": "surfaces still in PENDING_RECOMPUTE or incomplete; insufficient data to rule",
+        "interpretation": "Recompute not yet complete; material cascade determination deferred pending recompute completion",
+        "next_action": "DEFER_RULING_MONITOR_RECOMPUTE_COMPLETION"
+      }
+    ],
+    "cascade_assessment_criteria": [
+      {
+        "criterion": "qm_seam_coherence_output_change",
+        "description": "Did QM seam coherence metric values change post-promotion?",
+        "materiality_threshold": "measurable change > noise threshold"
+      },
+      {
+        "criterion": "ledger_artifact_transport_change",
+        "description": "Did ledger artifact transport behavior change post-promotion?",
+        "materiality_threshold": "observable flux pattern or state transition change"
+      },
+      {
+        "criterion": "blocker_authority_transport_change",
+        "description": "Did blocker-to-authority transport propagation change?",
+        "materiality_threshold": "cascade signal propagation measurably different"
+      }
+    ],
+    "fail_closed_rule": "Default to RECOMPUTE_STILL_PENDING unless completed recompute outputs are available and show measurable change",
+    "no_loop_rule": "ONE_POST_RECOMPUTE_OBSERVATION_AND_RULING_EXECUTION_ONLY",
+    "ruling_layer": true,
+    "layer_description": "Post-recompute observation and ruling layer. Checks completed recompute outputs for actual state change. Rules on whether material cascade occurred or promotion remains authority-local only. Terminal decision layer for cascade determination."
+  },
+  "captured_at_utc": "2026-04-12T00:50:00Z"
+}

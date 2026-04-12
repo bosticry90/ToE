@@ -1,0 +1,52 @@
+{
+  "schema_id": "DISCOVERY_QUEUE_REVIEW_PASS_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:59:59Z",
+  "required_inputs": {
+    "discovery_queue_transition_decision_report": "formal/output/reports/discovery_queue_transition_decision_report_20260411_v0.json",
+    "discovery_priority_queue_report": "formal/output/reports/discovery_priority_queue_report_20260411_v0.json"
+  },
+  "review_questions": [
+    {
+      "question_id": "Q1",
+      "question": "Why is rank-3 not clearly separated from the next candidate right now?",
+      "allowed_answers": [
+        "RANK3_GAP_BELOW_THRESHOLD",
+        "RUNNER_UP_SCORE_MISSING",
+        "INSUFFICIENT_ELIGIBLE_CANDIDATES"
+      ]
+    },
+    {
+      "question_id": "Q2",
+      "question": "Which queue scoring dimensions are weak or noisy for rank-3 activation?",
+      "allowed_answers": [
+        "BLOCKER_LEVERAGE_AND_EMPIRICAL_PROXIMITY_WEAK",
+        "DISCRIMINATOR_AND_FALSIFICATION_WEAK",
+        "MIXED_OR_NOISY_DIMENSIONS"
+      ]
+    },
+    {
+      "question_id": "Q3",
+      "question": "What is the minimum bounded delta to re-open next-seam activation?",
+      "allowed_answers": [
+        "INCREASE_RANK3_OVER_RANK4_GAP_TO_THRESHOLD",
+        "MATERIALIZE_RUNNER_UP_AND_REEVALUATE",
+        "INSUFFICIENT_SIGNAL_REQUIRE_BOUNDED_RESCORING_ONCE"
+      ]
+    }
+  ],
+  "decision_policy": {
+    "expected_transition_route": "EXECUTE_BOUNDED_QUEUE_REVIEW_PASS",
+    "rank3_gap_threshold": 3,
+    "default_selected_next_route": "EXECUTE_BOUNDED_QUEUE_REVIEW_PASS",
+    "allow_one_bounded_queue_rescoring": true,
+    "no_loop_rule": "ONE_BOUNDED_QUEUE_REVIEW_PASS_ONLY"
+  },
+  "terminal_outcomes": [
+    "QUEUE_REVIEW_SUPPORTS_HOLD",
+    "QUEUE_REVIEW_SUPPORTS_NEXT_SEAM_ACTIVATION",
+    "QUEUE_REVIEW_SUPPORTS_ONE_BOUNDED_QUEUE_RESCORING",
+    "QUEUE_REVIEW_INSUFFICIENT_EVIDENCE"
+  ],
+  "non_claim_boundary": "Repository-local bounded discovery queue review declaration only; no scientific adequacy claim."
+}

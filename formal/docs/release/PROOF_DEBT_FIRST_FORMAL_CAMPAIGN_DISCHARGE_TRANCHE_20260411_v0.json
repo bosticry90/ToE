@@ -1,0 +1,49 @@
+{
+  "schema_id": "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN_DISCHARGE_TRANCHE_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T20:55:00Z",
+  "attack_class": "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN",
+  "tranche_id": "PDFC-DISCHARGE-001",
+  "cluster_id": "PDC-MATH-PROOF-DEBT-BURNDOWN-01",
+  "cluster_name": "proof_debt_marker_burndown_terminal_gate_alignment",
+  "execution_mode": "single_cluster_bounded_discharge",
+  "debt_object_execution_targets": [
+    {
+      "debt_id": "PD-INV-MATH-PROOF-DEBT-BURNDOWN-c04",
+      "current_unresolved_condition": "proof-debt traceability chain not yet blocker-state effective",
+      "target_discharged_condition": "cycle05 marker stability chain and traceability witness chain pass with blocker-linked closure semantics",
+      "artifact_or_theorem_surface": "formal/output/proof_debt_burndown_checkpoint_cycle05_v0.json",
+      "witness_or_trace_required": [
+        "formal/python/tests/test_proof_debt_marker_stability_gate.py",
+        "formal/python/tests/test_proof_debt_burndown_cycle05_gate.py",
+        "formal/python/tests/test_proof_debt_witness_traceability_gate.py"
+      ],
+      "blocker_link": "THEOREM_GAP",
+      "success_token": "PD_OBJECT_PD-INV-MATH-PROOF-DEBT-BURNDOWN-c04_DISCHARGED",
+      "fail_token": "PD_OBJECT_PD-INV-MATH-PROOF-DEBT-BURNDOWN-c04_UNRESOLVED"
+    }
+  ],
+  "blocker_transition_criteria": {
+    "full_movement": "theorem_gap_delta_lt_0_or_blocker_class_state_changed",
+    "partial_movement": "formal_gap_closed_tied_to_blocker_and_no_blocker_delta",
+    "no_movement": "no_formal_gap_closed_tied_to_blocker_and_no_blocker_delta"
+  },
+  "cluster_level_state_outputs": [
+    "PROOF_DEBT_DISCHARGE_SUCCESS_BLOCKER_MOVED",
+    "PROOF_DEBT_DISCHARGE_PARTIAL_FORMAL_PROGRESS_NO_BLOCKER_MOVE",
+    "PROOF_DEBT_DISCHARGE_FAILED_NO_FORMAL_CLOSURE"
+  ],
+  "state_transition_semantics": {
+    "success": "at_least_one_debt_object_discharged_and_blocker_state_moved",
+    "partial_progress": "at_least_one_debt_object_discharged_but_blocker_state_unchanged",
+    "failure": "no_debt_object_discharged_and_blocker_state_unchanged",
+    "fail_closed_rule": "documentation_only_or_selection_only_changes_do_not_count_as_discharge"
+  },
+  "required_inputs": {
+    "campaign_packet_pointer": "formal/docs/release/PROOF_DEBT_FIRST_FORMAL_CAMPAIGN_PACKET_20260411_v0.json",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_pointer": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_pointer": "formal/output/reports/physics_progress_ledger_v0.json"
+  },
+  "non_claim_boundary": "Repository-local proof-debt-first discharge tranche declaration only; no scientific adequacy claim."
+}

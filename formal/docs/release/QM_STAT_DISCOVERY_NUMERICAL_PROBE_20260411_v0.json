@@ -1,0 +1,17 @@
+{
+  "schema_id": "QM_STAT_DISCOVERY_NUMERICAL_PROBE_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:50:00Z",
+  "required_inputs": {
+    "discovery_interpretation_report": "formal/output/reports/qm_stat_discovery_interpretation_report_20260411_v0.json",
+    "discovery_ruling_report": "formal/output/reports/qm_stat_discovery_ruling_report_20260411_v0.json",
+    "discovery_priority_queue_report": "formal/output/reports/discovery_priority_queue_report_20260411_v0.json"
+  },
+  "probe_policy": {
+    "target_row": "ROW-SEAM-QM-STAT-001",
+    "max_probe_cycles": 1,
+    "shadow_mode_required": true,
+    "paired_cycle_goal": "DERIVATION_PLUS_NUMERICAL_PROBE_ON_SAME_SEAM"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT discovery numerical probe declaration only; no scientific adequacy claim."
+}

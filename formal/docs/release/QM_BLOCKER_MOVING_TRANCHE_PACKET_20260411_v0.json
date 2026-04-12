@@ -1,0 +1,29 @@
+{
+  "schema_id": "QM_BLOCKER_MOVING_TRANCHE_PACKET_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:25:00Z",
+  "tranche_id": "QM-BLOCKER-MOVING-001",
+  "row_id": "ROW-PILLAR-QM-001",
+  "subtarget_id": "QM_PACKET04_THRESHOLD_ALIGNMENT_SUBPROBLEM_v0",
+  "objective": "Evaluate one bounded QM blocker-moving tranche using the already executed QM packet04 threshold-alignment evidence and judge it only by blocker-facing movement criteria.",
+  "required_inputs": {
+    "execution_checkpoint": "formal/output/ws10_tgc77_qm_theorem_gap_closure_increment_execution_checkpoint_20260409_v0.json",
+    "qm_rework_report": "formal/output/reports/theorem_gap_qm_rework_tranche_20260411_v0.json",
+    "qm_subtarget_report": "formal/output/reports/theorem_gap_qm_subtarget_tranche_20260411_v0.json",
+    "trend_report": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_report": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_report": "formal/output/reports/physics_progress_ledger_v0.json",
+    "linkage_registry": "formal/docs/release/THEOREM_GAP_TRANCHE_LINKAGE_REGISTRY_20260411_v0.json"
+  },
+  "movement_policy": {
+    "success_rule": "THEOREM_GAP_DELTA_LT_0_OR_TARGET_ROW_SUCCESS_INCREMENT_GT_0",
+    "failure_rule": "ALL_MOVEMENT_SIGNALS_FALSE",
+    "no_loop_rule": "ONE_BOUNDED_EXECUTION_ONLY",
+    "movement_signals": [
+      "THEOREM_GAP_DELTA_LT_0",
+      "TARGET_ROW_SUCCESS_INCREMENT_GT_0",
+      "BLOCKER_STATE_TOKEN_CHANGED"
+    ]
+  },
+  "non_claim_boundary": "Repository-local QM blocker-moving tranche packet declaration only; no scientific adequacy claim."
+}

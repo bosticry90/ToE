@@ -1,0 +1,59 @@
+{
+  "schema_id": "AUTHORITY_PROMOTION_REGISTRATION_DECLARATION_20260411_v0",
+  "stage": "promotion_registration_layer",
+  "scope": "register_revised_blocker_definition_as_authoritative",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local authority-promotion registration only; does not constitute broader scientific adequacy claim. Promotion reflects repo's own fail-closed decision contract, not external validation.",
+  "declaration": {
+    "promotion_scope": "REVISED_BLOCKER_DEFINITION_AUTHORITY_PROMOTION_REGISTRATION",
+    "prerequisite_layer": "COUPLING_REFINEMENT_RULING_20260411_v0",
+    "prerequisite_condition": "ruling_id == COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+    "promotion_target": {
+      "revised_blocker_definition_id": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "authority_category": "AUTHORITATIVE_BLOCKER_DEFINITION",
+      "registration_domain": "formal/output/authority/authoritative_blocker_definitions.json"
+    },
+    "promotion_decision": {
+      "authority_promotion_justified": true,
+      "promotion_gate_opened_by": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+      "coupling_state": "TIGHTENED",
+      "all_promotion_criteria_met": true
+    },
+    "promotion_registration_tasks": [
+      {
+        "task_id": "register_revised_definition_as_authoritative",
+        "description": "Add revised blocker definition to authoritative registry with timestamp and ruling reference",
+        "target_registry": "formal/output/authority/authoritative_blocker_definitions.json",
+        "action": "insert_or_supersede"
+      },
+      {
+        "task_id": "record_supersession_relationship",
+        "description": "Record that revised definition supersedes prior authoritative token; maintain lineage",
+        "target_registry": "formal/output/authority/blocker_definition_lineage.json",
+        "action": "link_prior_to_successive",
+        "superseded_token": "PRIOR_AUTHORITATIVE_BLOCKER_DEFINITION",
+        "new_token": "REVISED_BLOCKER_DEFINITION_20260411_v0"
+      },
+      {
+        "task_id": "trigger_recompute_surfaces",
+        "description": "Signal recompute for surfaces that depend on authoritative blocker movement",
+        "recompute_triggers": [
+          "formal/output/recompute/qm_seam_coherence_under_revised_blocker.json",
+          "formal/output/recompute/ledger_artifact_transport_under_revised_blocker.json",
+          "formal/output/recompute/blocker_authority_transport_surface.json"
+        ]
+      }
+    ],
+    "scope_boundaries": {
+      "what_is_promoted": "Revised blocker definition as authoritative",
+      "what_is_not_promoted": "Broader claims about theorem unblocking, seam convergence, or scientific completion",
+      "authority_surface_updated": true,
+      "broader_program_state_unchanged": true
+    },
+    "fail_closed_rule": "If ruling prerequisite not met, registration does not proceed",
+    "no_loop_rule": "ONE_AUTHORITY_PROMOTION_REGISTRATION_EXECUTION_ONLY",
+    "terminal_registration": true,
+    "layer_description": "Promotion registration layer. Materializes the ruling decision into authority registries and triggers recompute. Does not execute further beneath this layer. Narrow scope: revised blocker definition only."
+  },
+  "captured_at_utc": "2026-04-12T00:40:00Z"
+}

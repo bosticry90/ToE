@@ -1,0 +1,65 @@
+{
+  "schema_id": "COUPLING_REFINEMENT_RULING_DECLARATION_20260411_v0",
+  "stage": "final_decision_layer",
+  "scope": "single_ruling_on_revised_blocker_definition_authority_promotion",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local coupling-refinement ruling execution only; no scientific adequacy claim.",
+  "declaration": {
+    "ruling_scope": "COUPLED_BLOCKER_DEFINITION_AUTHORITY_PROMOTION_DECISION",
+    "ruling_target": "REVISED_BLOCKER_DEFINITION_AUTHORITY_PROMOTION",
+    "prerequisite_layer": "BOUNDED_COUPLING_REFINEMENT_PACKET_20260411_v0",
+    "prerequisite_input": "formal/output/reports/bounded_coupling_refinement_packet_20260411_v0.json",
+    "promotion_gate_criteria": {
+      "criterion_1_tightened_coupling_confirmed": {
+        "description": "Coupling state must be TIGHTENED from packet output",
+        "binding_to_establish": "TIGHT_CORRELATION_BETWEEN_SEAM_COHERENCE_CHANGE_AND_LEDGER_ARTIFACT_FLUX",
+        "required": true
+      },
+      "criterion_2_seam_coherence_fires": {
+        "description": "Seam coherence transition must be observed",
+        "required": true
+      },
+      "criterion_3_ledger_artifact_fires": {
+        "description": "Ledger artifact state change must be observed",
+        "required": true
+      },
+      "criterion_4_correlation_witness_materializes": {
+        "description": "Correlation witness must materialize between seam and ledger",
+        "required": true
+      },
+      "criterion_5_no_contradiction_with_blocker_authority_contract": {
+        "description": "Tightened coupling must not contradict the retained blocker-authority relationship",
+        "required": true,
+        "authority_contract_preserved": "If coupling tightens blocker-to-authority mapping, contract holds"
+      }
+    },
+    "possible_rulings": [
+      {
+        "ruling_id": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+        "condition": "all five criteria satisfied AND no contradiction with authority contract",
+        "interpretation": "Tightened coupling sufficient to elevate revised blocker definition to authoritative standing",
+        "promotion_gate_opens": true,
+        "next_action": "PROMOTE_REVISED_BLOCKER_DEFINITION_TO_AUTHORITATIVE"
+      },
+      {
+        "ruling_id": "COUPLING_REFINEMENT_VALID_BUT_STILL_NONAUTHORITATIVE",
+        "condition": "four or more criteria satisfied OR minor gap remains",
+        "interpretation": "Coupling improved but insufficient for full authority promotion; revised def remains secondary-strengthened",
+        "promotion_gate_opens": false,
+        "next_action": "RETAIN_REVISED_BLOCKER_DEFINITION_AS_SECONDARY_STRENGTHENED"
+      },
+      {
+        "ruling_id": "COUPLING_REFINEMENT_NOT_FIT_FOR_AUTHORITY_USE",
+        "condition": "fewer than four criteria satisfied OR contradiction with authority contract",
+        "interpretation": "Coupling refinement does not close gap sufficiently; blocker definition remains unfit for authority",
+        "promotion_gate_opens": false,
+        "next_action": "ARCHIVE_REFINED_BLOCKER_DEFINITION_AS_EXPLORATORY_ONLY"
+      }
+    ],
+    "fail_closed_rule": "Default to COUPLING_REFINEMENT_NOT_FIT_FOR_AUTHORITY_USE unless all criteria explicitly satisfied",
+    "no_loop_rule": "ONE_COUPLING_REFINEMENT_RULING_EXECUTION_ONLY",
+    "terminal_layer": true,
+    "layer_description": "This is the terminal decision layer in the 12-turn diagnostic chain. No further execution below this layer until ruling resolves."
+  },
+  "captured_at_utc": "2026-04-12T00:35:00Z"
+}

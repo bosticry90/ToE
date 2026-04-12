@@ -1,0 +1,52 @@
+{
+  "schema_id": "DIRECT_MASTER_ACTION_RESIDUAL_TRANSPORT_ATTACK_CLASS_PACKET_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:55:00Z",
+  "attack_class": "DIRECT_MASTER_ACTION_RESIDUAL_TRANSPORT_ATTACK_CLASS",
+  "packet_id": "DMART-001",
+  "objective": "Materialize one bounded post-QM post-proof-debt attack-class packet that targets blocker movement through direct master-action transport/residual closure rather than local proof cleanup or isolated row polishing.",
+  "required_inputs": {
+    "science_next_attack_class_selection_report": "formal/output/reports/science_next_attack_class_selection_20260411_v0.json",
+    "proof_debt_program_exhaustion_decision_report": "formal/output/reports/proof_debt_program_exhaustion_decision_20260411_v0.json",
+    "qm_blocker_moving_ruling_report": "formal/output/reports/qm_blocker_moving_ruling_20260411_v0.json",
+    "broader_seam_package_redesign_decision_report": "formal/output/reports/broader_seam_package_redesign_decision_20260411_v0.json",
+    "seam_registry_surface": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
+    "closure_map_report": "formal/output/reports/governance_blocker_closure_map_20260410_v0.json",
+    "current_target_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json"
+  },
+  "failure_synthesis_scope": {
+    "must_include_prior_classes": [
+      "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN",
+      "QM_BLOCKER_MOVING_TRANCHE",
+      "BROADER_SEAM_PACKAGE_REDESIGN"
+    ],
+    "shared_failure_question": "Why are locally valid routes and seam redesign work still failing to convert into blocker movement?"
+  },
+  "new_attack_hypothesis": {
+    "hypothesis_id": "HYP-DMART-001",
+    "statement": "The next blocker move is more likely to come from assembling one direct theorem transport/residual package from the master-action seam architecture than from additional local gate validation, proof-debt cleanup, or parity-surface extension.",
+    "mechanism": "Target one seam blocker whose explicit physics blocker is the absence of a unified theorem transport residual package, and judge only on blocker-facing state movement."
+  },
+  "single_bounded_target": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "blocker_class": "SEAM_INTEGRATION_GAP",
+    "owning_lane": "QM_STAT_CYCLE11",
+    "target_kind": "UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE",
+    "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "required_closure_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json",
+    "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE11_v0.md",
+    "selection_reason": "QM-STAT is a current blocker row whose seam-registry physics blocker is explicitly NO_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE."
+  },
+  "success_failure_measurement": {
+    "success_rule": "BLOCKER_DELTA_LT_0_OR_SEAM_INTEGRATION_GAP_DELTA_LT_0_OR_TARGET_ROW_SUCCESS_INCREMENT_GT_0_OR_BLOCKER_TOKEN_CHANGE_TRUE",
+    "failure_rule": "ALL_MOVEMENT_SIGNALS_FALSE",
+    "no_loop_rule": "ONE_BOUNDED_PACKET_ONLY",
+    "movement_signals": [
+      "BLOCKER_DELTA_LT_0",
+      "SEAM_INTEGRATION_GAP_DELTA_LT_0",
+      "TARGET_ROW_SUCCESS_INCREMENT_GT_0",
+      "BLOCKER_TOKEN_CHANGE_TRUE"
+    ]
+  },
+  "non_claim_boundary": "Repository-local direct master-action residual/transport attack-class packet declaration only; no scientific adequacy claim."
+}

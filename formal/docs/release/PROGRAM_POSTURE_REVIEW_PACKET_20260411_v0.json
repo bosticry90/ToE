@@ -1,0 +1,52 @@
+{
+  "schema_id": "PROGRAM_POSTURE_REVIEW_PACKET_20260411_v0",
+  "packet_id": "PPRP-001",
+  "required_inputs": {
+    "science_post_architecture_alignment_decision_report": "formal/output/reports/science_post_architecture_alignment_decision_20260411_v0.json",
+    "architecture_seam_master_action_alignment_ruling_report": "formal/output/reports/architecture_seam_master_action_alignment_ruling_20260411_v0.json",
+    "architecture_level_blocker_diagnosis_packet_report": "formal/output/reports/architecture_level_blocker_diagnosis_packet_20260411_v0.json"
+  },
+  "review_questions": [
+    {
+      "question_id": "Q1",
+      "prompt": "Is the current blocker/movement measurement regime still fit for purpose?",
+      "allowed_answers": [
+        "MEASUREMENT_REGIME_FIT_FOR_PURPOSE",
+        "MEASUREMENT_REGIME_REQUIRES_REVISION"
+      ]
+    },
+    {
+      "question_id": "Q2",
+      "prompt": "Is the project currently producing formal organization faster than scientific conversion?",
+      "allowed_answers": [
+        "FORMAL_ORGANIZATION_OUTPACING_SCIENTIFIC_CONVERSION",
+        "SCIENTIFIC_CONVERSION_PACING_ACCEPTABLE"
+      ]
+    },
+    {
+      "question_id": "Q3",
+      "prompt": "What one bounded next program mode should follow posture review?",
+      "allowed_answers": [
+        "REORIENT_MEASUREMENT_REGIME",
+        "REORIENT_ARCHITECTURE_TARGET_SELECTION",
+        "REORIENT_PROGRAM_EXECUTION_MODEL"
+      ]
+    }
+  ],
+  "posture_policy": {
+    "nonmoving_attack_class_count_threshold": 4,
+    "observed_nonmoving_attack_classes": [
+      "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN",
+      "QM_BLOCKER_MOVING_TRANCHE",
+      "DIRECT_MASTER_ACTION_RESIDUAL_TRANSPORT_ATTACK_CLASS",
+      "ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_ATTACK_CLASS"
+    ],
+    "blocker_movement_ever_observed": false,
+    "formal_organization_outpacing_conversion_default": true,
+    "measurement_regime_fit_for_purpose_default": false,
+    "default_next_program_mode": "REORIENT_MEASUREMENT_REGIME",
+    "no_loop_rule": "ONE_POSTURE_REVIEW_ONLY",
+    "no_further_attack_packets_policy": "NO_FURTHER_ATTACK_PACKETS_UNTIL_POSTURE_RESOLVED"
+  },
+  "non_claim_boundary": "Repository-local program posture review packet declaration only; no scientific adequacy claim."
+}

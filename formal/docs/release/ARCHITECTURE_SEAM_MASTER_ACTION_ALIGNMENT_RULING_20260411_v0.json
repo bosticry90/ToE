@@ -1,0 +1,17 @@
+{
+  "schema_id": "ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_RULING_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T00:00:00Z",
+  "decision_scope": "POST_SINGLE_BOUNDED_ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_PACKET",
+  "required_inputs": {
+    "architecture_seam_master_action_alignment_packet_execution": "formal/docs/release/ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_PACKET_EXECUTION_20260411_v0.json",
+    "architecture_seam_master_action_alignment_packet_execution_report": "formal/output/reports/architecture_seam_master_action_alignment_packet_execution_20260411_v0.json"
+  },
+  "ruling_policy": {
+    "moving_rule": "EXECUTION_CLASSIFICATION_EQ_ARCHITECTURE_ALIGNMENT_MOVED",
+    "valid_but_nonmoving_rule": "EXECUTION_CLASSIFICATION_EQ_ARCHITECTURE_ALIGNMENT_VALID_BUT_NONMOVING",
+    "exhaustion_rule": "EXECUTION_CLASSIFICATION_EQ_ARCHITECTURE_ALIGNMENT_VALID_BUT_NONMOVING_AND_NO_LOOP_RULE_EQ_ONE_BOUNDED_EXECUTION_ONLY",
+    "next_action_if_exhausted": "REVIEW_POST_ARCHITECTURE_ALIGNMENT_DECISION_AND_DO_NOT_LOOP_ALIGNMENT_PACKET"
+  },
+  "non_claim_boundary": "Repository-local architecture seam/master-action alignment ruling declaration only; no scientific adequacy claim."
+}

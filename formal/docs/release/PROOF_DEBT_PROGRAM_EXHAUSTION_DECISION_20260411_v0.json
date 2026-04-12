@@ -1,0 +1,32 @@
+{
+  "schema_id": "PROOF_DEBT_PROGRAM_EXHAUSTION_DECISION_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T22:45:00Z",
+  "decision_scope": "POST_PROOF_DEBT_CLUSTER_AND_SURFACE_EXHAUSTION",
+  "current_attack_class": "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN",
+  "objective": "Decide whether the proof-debt program should execute one bounded filter revision or escalate to a new attack class after surface and cluster exhaustion under the current blocker-leverage policy.",
+  "required_inputs": {
+    "current_attack_class_decision_report": "formal/output/reports/fundamental_attack_strategy_rethink_decision_20260411_v0.json",
+    "next_cluster_selection_report": "formal/output/reports/proof_debt_next_cluster_selection_report_20260411_v0.json",
+    "cluster_focus_reports": [
+      "formal/output/reports/proof_debt_active_cluster_next_tranche_focus_math_pd_burndown_20260411_v0.json",
+      "formal/output/reports/proof_debt_active_cluster_next_tranche_focus_emu1_distributional_auth_20260411_v0.json"
+    ],
+    "surface_ruling_reports": [
+      "formal/output/reports/proof_debt_active_cluster_surface_ruling_math_pd_c05_burndown_gate_20260411_v0.json",
+      "formal/output/reports/proof_debt_active_cluster_surface_ruling_math_pd_c05_marker_stability_gate_20260411_v0.json",
+      "formal/output/reports/proof_debt_active_cluster_surface_ruling_emu1_micro21_authorization_gate_20260411_v0.json",
+      "formal/output/reports/proof_debt_active_cluster_surface_ruling_emu1_micro22_semantics_mapping_gate_20260411_v0.json"
+    ]
+  },
+  "decision_policy": {
+    "default_rule": "IF_ALL_ELIGIBLE_CURRENT_CLUSTERS_ARE_EXHAUSTED_AND_NO_TESTED_SURFACE_MOVED_THEOREM_SEAM_GLOBAL_ROW_OR_BLOCKER_STATE_AND_NO_SPECIFIC_FILTER_DEFECT_IS_DECLARED_THEN_ESCALATE_TO_NEXT_ATTACK_CLASS",
+    "filter_revision_rule": "ONLY_EXECUTE_FILTER_REVISION_PACKET_ONCE_WHEN_A_SPECIFIC_FILTER_DEFECT_AND_A_BOUNDED_REVISION_PACKET_ARE_BOTH_DECLARED_IN_ADVANCE",
+    "specific_filter_defect_identified": false,
+    "specific_filter_defect_note": null,
+    "bounded_filter_revision_packet": null,
+    "next_attack_class_if_escalated": "NEW_ATTACK_CLASS_REQUIRED",
+    "surface_run_hold_policy": "NO_FURTHER_SURFACE_RUNS_UNTIL_DECISION_PACKET_RESOLVED"
+  },
+  "non_claim_boundary": "Repository-local proof-debt program exhaustion decision declaration only; no scientific adequacy claim."
+}

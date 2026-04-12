@@ -1,0 +1,8 @@
+{
+  "bridge_object_id": "SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0",
+  "minimal_upstream_unit_id": "MASTER_ACTION_RESIDUAL_EXTRACTION_BINDING_UNIT_v0",
+  "row_id": "ROW-SEAM-QM-STAT-001",
+  "status": "BOUND",
+  "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+  "witness_id": "SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0"
+}

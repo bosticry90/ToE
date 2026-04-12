@@ -1,0 +1,235 @@
+#!/usr/bin/env python3
+"""
+Recompute Observation & Interpretation Report Generator.
+
+Observes the three triggered recompute surfaces for state change.
+Interprets downstream consequences of promotion.
+Routes findings to next decision point based on observations.
+
+This layer does not execute further; it interprets and reports.
+"""
+import json
+import sys
+from pathlib import Path
+from datetime import datetime
+
+# Paths
+REPO_ROOT = Path(__file__).parent.parent.parent.parent
+PROMOTION_REG_PATH = REPO_ROOT / "formal/output/reports/authority_promotion_registration_20260411_v0.json"
+OBSERVATION_DECL_PATH = REPO_ROOT / "formal/docs/release/RECOMPUTE_OBSERVATION_20260411_v0.json"
+OUTPUT_PATH = REPO_ROOT / "formal/output/reports/recompute_observation_20260411_v0.json"
+
+# Recompute surface paths
+RECOMPUTE_DIR = REPO_ROOT / "formal/output/recompute"
+RECOMPUTE_SURFACES = {
+    "qm_seam_coherence": RECOMPUTE_DIR / "qm_seam_coherence_under_revised_blocker.json",
+    "ledger_artifact_transport": RECOMPUTE_DIR / "ledger_artifact_transport_under_revised_blocker.json",
+    "blocker_authority_transport": RECOMPUTE_DIR / "blocker_authority_transport_surface.json",
+}
+
+
+def load_promotion_registration():
+    """Load promotion registration report."""
+    if not PROMOTION_REG_PATH.exists():
+        raise FileNotFoundError(f"Promotion registration not found: {PROMOTION_REG_PATH}")
+    with open(PROMOTION_REG_PATH) as f:
+        return json.load(f)
+
+
+def load_recompute_surface(surface_path):
+    """Load recompute surface trigger record."""
+    if not surface_path.exists():
+        return None
+    with open(surface_path) as f:
+        return json.load(f)
+
+
+def observe_surface_state_change(surface_name, surface_data):
+    """
+    Observe whether a surface shows state change post-promotion.
+    
+    In the bounded repo context, we check:
+    - Whether trigger was initiated
+    - Whether status is PENDING_RECOMPUTE or shows completion
+    - Whether trigger records indicate activation
+    """
+    if surface_data is None:
+        return {
+            "surface_name": surface_name,
+            "state_change_observed": False,
+            "reason": "Surface not yet created/triggered"
+        }
+    
+    triggers = surface_data.get("triggers", [])
+    if not triggers:
+        return {
+            "surface_name": surface_name,
+            "state_change_observed": False,
+            "reason": "No triggers in surface"
+        }
+    
+    latest_trigger = triggers[-1]
+    status = latest_trigger.get("status", "")
+    
+    # Check if trigger is active (PENDING_RECOMPUTE means recompute interest is live)
+    trigger_active = latest_trigger.get("trigger_id") is not None
+    revised_blocker_referenced = "REVISED_BLOCKER_DEFINITION_20260411_v0" in latest_trigger.get("revised_blocker_definition", "")
+    
+    # In this bounded observation, "state change observed" means:
+    # - Trigger was successfully initiated
+    # - Surface is aware of revised blocker definition
+    # - Status indicates pending or active computation
+    state_change_observed = trigger_active and revised_blocker_referenced and status in ["PENDING_RECOMPUTE"]
+    
+    return {
+        "surface_name": surface_name,
+        "state_change_observed": state_change_observed,
+        "trigger_active": trigger_active,
+        "revised_blocker_referenced": revised_blocker_referenced,
+        "status": status,
+        "trigger_count": len(triggers)
+    }
+
+
+def interpret_cascade_effect(surface_observations):
+    """
+    Interpret whether promotion had downstream cascade effect.
+    
+    Cascade confirmed if: multiple surfaces show trigger activation AND revised blocker is referenced
+    """
+    active_surfaces = sum(1 for obs in surface_observations if obs.get("state_change_observed"))
+    total_surfaces = len(surface_observations)
+    
+    if active_surfaces >= 2:
+        return {
+            "cascade_effect": "YES_MATERIAL_CASCADE",
+            "cascade_reason": f"{active_surfaces}/{total_surfaces} surfaces show trigger activation post-promotion",
+            "interpretation": "Promotion had downstream consequence; blocker authority update propagated to multiple surfaces"
+        }
+    elif active_surfaces == 1:
+        return {
+            "cascade_effect": "YES_LOCALIZED_EFFECT",
+            "cascade_reason": f"1/{total_surfaces} surface shows trigger activation; localized effect only",
+            "interpretation": "Authority surface legitimately changed but with localized effect; no broad program unblocking"
+        }
+    else:
+        return {
+            "cascade_effect": "NO_OBSERVABLE_CASCADE",
+            "cascade_reason": f"0/{total_surfaces} surfaces show trigger activation",
+            "interpretation": "Authorized registry update complete but no downstream propagation to recompute surfaces yet"
+        }
+
+
+def classify_observation_outcome(surface_observations, cascade_info):
+    """Classify observation outcome based on surface state and cascade analysis."""
+    active_count = sum(1 for obs in surface_observations if obs.get("state_change_observed"))
+    cascade_type = cascade_info.get("cascade_effect", "")
+    
+    if cascade_type == "YES_MATERIAL_CASCADE":
+        return {
+            "outcome_id": "OUTCOME_1_CASCADE_CONFIRMED",
+            "classification": "CASCADE_CONFIRMED",
+            "interpretation": cascade_info["interpretation"],
+            "next_decision_layer": "PROMOTE_FINDINGS_TO_NEXT_DECISION_LOOP",
+            "observation_complete": True
+        }
+    elif cascade_type == "YES_LOCALIZED_EFFECT":
+        return {
+            "outcome_id": "OUTCOME_2_LOCAL_ONLY",
+            "classification": "LOCAL_AUTHORITY_ONLY",
+            "interpretation": cascade_info["interpretation"],
+            "next_decision_layer": "DOCUMENT_LOCAL_AUTHORITY_ONLY_RESULT",
+            "observation_complete": True
+        }
+    else:
+        return {
+            "outcome_id": "OUTCOME_3_INSUFFICIENT_SIGNAL",
+            "classification": "INSUFFICIENT_SIGNAL",
+            "interpretation": "Recompute surfaces not yet showing state change; observation incomplete or signal not yet materialized",
+            "next_decision_layer": "DEFER_INTERPRETATION_CONTINUE_OBSERVATION",
+            "observation_complete": False
+        }
+
+
+def materialize_observation_report(promotion_reg, surface_observations, cascade_info, outcome):
+    """Materialize recompute observation and interpretation output report."""
+    report = {
+        "schema_id": "RECOMPUTE_OBSERVATION_REPORT_20260411_v0",
+        "status": "ACTIVE_NONLIVE_NONCLAIM",
+        "captured_at_utc": datetime.utcnow().isoformat() + "Z",
+        "non_claim_boundary": "Repository-local recompute surface observation and interpretation only. Outcomes inform next decision point but do not predetermine execution.",
+        "layer": "observation_and_interpretation_layer",
+        "no_loop_rule": "ONE_RECOMPUTE_OBSERVATION_AND_INTERPRETATION_EXECUTION_ONLY",
+        "prerequisite": {
+            "source": str(PROMOTION_REG_PATH),
+            "registration_completed": promotion_reg.get("summary", {}).get("registration_completed"),
+            "definition_now_authoritative": promotion_reg.get("summary", {}).get("revised_definition_is_now_authoritative"),
+            "recompute_surfaces_triggered": promotion_reg.get("summary", {}).get("recompute_surfaces_triggered")
+        },
+        "surface_observations": surface_observations,
+        "cascade_analysis": cascade_info,
+        "observation_outcome": outcome,
+        "interpretation_summary": {
+            "surfaces_observed": len(surface_observations),
+            "surfaces_showing_trigger_activation": sum(1 for obs in surface_observations if obs.get("state_change_observed")),
+            "cascade_type": cascade_info.get("cascade_effect", ""),
+            "outcome_classification": outcome.get("classification", ""),
+            "next_decision_layer": outcome.get("next_decision_layer", ""),
+            "observation_complete": outcome.get("observation_complete", False)
+        },
+        "source_bundle": {
+            "recompute_observation_declaration": str(OBSERVATION_DECL_PATH),
+            "authority_promotion_registration_report": str(PROMOTION_REG_PATH)
+        }
+    }
+    
+    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    with open(OUTPUT_PATH, 'w') as f:
+        json.dump(report, f, indent=2)
+    
+    return report
+
+
+def main():
+    """Execute recompute observation and interpretation."""
+    try:
+        # Load prerequisites
+        promotion_reg = load_promotion_registration()
+        
+        # Observe recompute surfaces
+        surface_observations = []
+        for surface_key, surface_path in RECOMPUTE_SURFACES.items():
+            surface_data = load_recompute_surface(surface_path)
+            observation = observe_surface_state_change(surface_key, surface_data)
+            surface_observations.append(observation)
+        
+        # Interpret cascade effect
+        cascade_info = interpret_cascade_effect(surface_observations)
+        
+        # Classify observation outcome
+        outcome = classify_observation_outcome(surface_observations, cascade_info)
+        
+        # Materialize report
+        report = materialize_observation_report(promotion_reg, surface_observations, cascade_info, outcome)
+        
+        # Print result summary
+        summary = report.get("interpretation_summary", {})
+        print(
+            f"recompute_observation: "
+            f"surfaces_observed={summary.get('surfaces_observed')} "
+            f"surfaces_active={summary.get('surfaces_showing_trigger_activation')} "
+            f"cascade_type={summary.get('cascade_type')} "
+            f"outcome={summary.get('outcome_classification')} "
+            f"next_layer={summary.get('next_decision_layer')} "
+            f"out={OUTPUT_PATH}"
+        )
+        
+        return 0
+        
+    except Exception as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

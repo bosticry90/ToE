@@ -1,0 +1,19 @@
+{
+  "schema_id": "SCIENCE_NEXT_ATTACK_CLASS_SELECTION_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:25:00Z",
+  "decision_scope": "POST_QM_BLOCKER_MOVING_RULING_AND_PROOF_DEBT_EXHAUSTION",
+  "required_inputs": {
+    "science_global_completion_baseline_report": "formal/output/reports/science_global_completion_baseline_20260411_v0.json",
+    "proof_debt_program_exhaustion_decision_report": "formal/output/reports/proof_debt_program_exhaustion_decision_20260411_v0.json",
+    "qm_blocker_moving_ruling_report": "formal/output/reports/qm_blocker_moving_ruling_20260411_v0.json"
+  },
+  "selection_policy": {
+    "retain_qm_when_ruling": "MOVING",
+    "escalate_when": "SCIENCE_INCOMPLETE_AND_PROOF_DEBT_EXHAUSTED_AND_QM_RULING_NONMOVING_OR_EXHAUSTED",
+    "default_next_attack_class": "DIRECT_MASTER_ACTION_RESIDUAL_TRANSPORT_ATTACK_CLASS",
+    "default_next_action": "MATERIALIZE_DIRECT_MASTER_ACTION_RESIDUAL_TRANSPORT_ATTACK_CLASS_PACKET",
+    "do_not_reopen_proof_debt_in_parallel": true
+  },
+  "non_claim_boundary": "Repository-local science next attack-class selection declaration only; no scientific adequacy claim."
+}

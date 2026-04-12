@@ -1,0 +1,85 @@
+{
+  "schema_id": "PROOF_DEBT_ACTIVE_CLUSTER_NEXT_TRANCHE_FOCUS_EMU1_DISTRIBUTIONAL_AUTH_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T22:24:00Z",
+  "cluster_id": "PDC-EMU1-DISTRIBUTIONAL-AUTH-01",
+  "cluster_name": "em_u1_distributional_authorization_surface",
+  "objective": "Select the single strongest next blocker-facing surface inside the active EM-U1 distributional authorization cluster.",
+  "required_inputs": {
+    "packet_report": "formal/output/reports/proof_debt_first_formal_campaign_packet_report_20260411_v0.json",
+    "discharge_tranche_report": "formal/output/reports/proof_debt_first_formal_campaign_discharge_tranche_report_20260411_v0.json",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_pointer": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_pointer": "formal/output/reports/physics_progress_ledger_v0.json",
+    "surface_ruling_reports": [
+      "formal/output/reports/proof_debt_active_cluster_surface_ruling_emu1_micro21_authorization_gate_20260411_v0.json",
+      "formal/output/reports/proof_debt_active_cluster_surface_ruling_emu1_micro22_semantics_mapping_gate_20260411_v0.json",
+      "formal/output/reports/proof_debt_active_cluster_surface_ruling_emu1_micro23_reference_surface_gate_20260411_v0.json"
+    ]
+  },
+  "selection_policy": {
+    "required_direct_impact_signals": [
+      "plausible_theorem_gap_delta_lt_0_path",
+      "plausible_seam_integration_gap_delta_lt_0_path",
+      "plausible_global_row_success_increment_path",
+      "explicit_blocker_state_token_transition_path"
+    ],
+    "weights": {
+      "plausible_theorem_gap_delta_lt_0_path": 5,
+      "plausible_seam_integration_gap_delta_lt_0_path": 3,
+      "plausible_global_row_success_increment_path": 3,
+      "explicit_blocker_state_token_transition_path": 6,
+      "authorization_gate_coupling": 5,
+      "mapping_support_surface": -1,
+      "reference_only_support_surface": -2
+    }
+  },
+  "surface_candidates": [
+    {
+      "surface_id": "EMU1-MICRO21-AUTHORIZATION-GATE",
+      "surface_path": "formal/python/tests/test_em_u1_micro21_distributional_lane_authorization_scaffold_gate.py",
+      "surface_kind": "gate_test",
+      "priority_note": "Cycle21 authorization gate is the closest blocker-facing surface because it pins the assumption-ID authorization seam for downstream distributive route closure.",
+      "direct_impact_signals": {
+        "plausible_theorem_gap_delta_lt_0_path": true,
+        "plausible_seam_integration_gap_delta_lt_0_path": false,
+        "plausible_global_row_success_increment_path": false,
+        "explicit_blocker_state_token_transition_path": true,
+        "authorization_gate_coupling": true,
+        "mapping_support_surface": false,
+        "reference_only_support_surface": false
+      }
+    },
+    {
+      "surface_id": "EMU1-MICRO22-SEMANTICS-MAPPING-GATE",
+      "surface_path": "formal/python/tests/test_em_u1_micro22_authorized_distributional_semantics_mapping_nonclaim.py",
+      "surface_kind": "gate_test",
+      "priority_note": "Cycle22 semantics mapping strengthens the authorized route but is one step more distal than the cycle21 authorization gate.",
+      "direct_impact_signals": {
+        "plausible_theorem_gap_delta_lt_0_path": true,
+        "plausible_seam_integration_gap_delta_lt_0_path": false,
+        "plausible_global_row_success_increment_path": false,
+        "explicit_blocker_state_token_transition_path": true,
+        "authorization_gate_coupling": false,
+        "mapping_support_surface": true,
+        "reference_only_support_surface": false
+      }
+    },
+    {
+      "surface_id": "EMU1-MICRO23-REFERENCE-SURFACE-GATE",
+      "surface_path": "formal/python/tests/test_em_u1_micro23_authorized_distributional_reference_surface_nonclaim.py",
+      "surface_kind": "gate_test",
+      "priority_note": "Cycle23 reference surface is valuable for chain completeness but is the weakest immediate blocker-facing lever in this cluster.",
+      "direct_impact_signals": {
+        "plausible_theorem_gap_delta_lt_0_path": false,
+        "plausible_seam_integration_gap_delta_lt_0_path": false,
+        "plausible_global_row_success_increment_path": false,
+        "explicit_blocker_state_token_transition_path": false,
+        "authorization_gate_coupling": false,
+        "mapping_support_surface": false,
+        "reference_only_support_surface": true
+      }
+    }
+  ],
+  "non_claim_boundary": "Repository-local next-tranche focus declaration for active EM-U1 proof-debt cluster; no scientific adequacy claim."
+}

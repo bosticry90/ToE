@@ -1,0 +1,29 @@
+{
+  "schema_id": "REVISED_SIGNAL_DIAGNOSTIC_REGISTRATION_20260411_v0",
+  "registration_id": "RSDR-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "registration_basis": "POST_MEASUREMENT_REGIME_PILOT_DECISION_RETAIN_REVISED_SIGNAL_AS_DIAGNOSTIC_ONLY",
+  "required_inputs": {
+    "post_measurement_regime_pilot_decision_report": "formal/output/reports/post_measurement_regime_pilot_decision_20260411_v0.json"
+  },
+  "signal_to_register": {
+    "signal_id": "SEAM_INTEGRATION_COVERAGE_DELTA_GT_0",
+    "signal_origin": "BOUNDED_MEASUREMENT_REGIME_PILOT_20260411",
+    "signal_description": "Transport witness bound AND bridge object materialized for target seam row; fires when seam-integration coverage increases relative to prior state.",
+    "pilot_outcome": "FIRED_IN_PILOT_FOR_ROW_SEAM_QM_STAT_001"
+  },
+  "registration_policy": {
+    "signal_disposition": "DIAGNOSTIC_ONLY",
+    "promotion_to_authoritative_blocked": true,
+    "promotion_block_reason": "BLOCKER_TOKEN_CHANGE_DID_NOT_FIRE_IN_PILOT_PROMOTION_REQUIRES_BOTH_SIGNALS",
+    "authoritative_signal_unchanged": "BLOCKER_TOKEN_CHANGE_REMAINS_AUTHORITATIVE",
+    "diagnostic_use_authorized": true,
+    "diagnostic_use_scope": "SEAM_INTEGRATION_COVERAGE_TRACKING_ONLY",
+    "no_loop_rule": "ONE_DIAGNOSTIC_SIGNAL_REGISTRATION_ONLY",
+    "no_further_pilot_loops_honored": true
+  },
+  "next_program_step": {
+    "next_action": "EXECUTE_PROGRAM_STATE_CONVERSION_REVIEW",
+    "rationale": "Three upstream explanations for non-movement have been tested and exhausted. The remaining problem requires a program-state level review."
+  }
+}

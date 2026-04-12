@@ -1,5 +1,6 @@
 param(
-    [switch]$Resume
+    [switch]$Resume,
+    [switch]$ReuseGovernanceWhenUnchanged
 )
 
 $ErrorActionPreference = 'Stop'
@@ -9,6 +10,7 @@ Push-Location $repoRoot
 
 $progressPath = 'formal/output/reports/checkpoint_ladder_progress_v0.json'
 $summaryPath = 'formal/output/reports/checkpoint_ladder_acceptance_summary_v0.json'
+$governanceStampPath = 'formal/output/reports/governance_green_cache_stamp_v0.json'
 
 $generatedOutputsManifestPath = 'formal/docs/release/CHECKPOINT_LADDER_GENERATED_OUTPUTS_MANIFEST_v0.json'
 
@@ -126,6 +128,25 @@ function Write-AcceptanceSummary {
     $payload | ConvertTo-Json -Depth 8 | Set-Content -Path $Path -Encoding utf8
 }
 
+function Get-GovernanceCacheKey {
+    $cacheKeyRaw = ./py.ps1 -m formal.python.tools.governance_cache_key --print-key-only
+    if ($LASTEXITCODE -ne 0) {
+        throw 'Failed to compute governance cache key.'
+    }
+
+    if ($null -eq $cacheKeyRaw) {
+        throw 'Governance cache key output was empty.'
+    }
+
+    $cacheKey = [string]$cacheKeyRaw
+    $cacheKey = $cacheKey.Trim()
+    if ([string]::IsNullOrWhiteSpace($cacheKey)) {
+        throw 'Governance cache key resolved to empty string.'
+    }
+
+    return $cacheKey
+}
+
 $progressState = Load-ProgressState -Path $progressPath
 $stepResults = @()
 
@@ -170,7 +191,26 @@ try {
     }
 
     Invoke-Step -StepKey 'full_governance_suite' -Name '4) full governance suite' -Body {
-        pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1
+        $reuseGreen = $false
+
+        if ($ReuseGovernanceWhenUnchanged -and (Test-Path $governanceStampPath)) {
+            $stamp = Get-Content $governanceStampPath -Raw | ConvertFrom-Json
+            $stampSchema = [string]$stamp.schema_id
+            $stampStatus = [string]$stamp.status
+            $stampKey = [string]$stamp.cache_key
+
+            if ($stampSchema -eq 'GOVERNANCE_GREEN_CACHE_STAMP_v0' -and $stampStatus -eq 'GREEN' -and -not [string]::IsNullOrWhiteSpace($stampKey)) {
+                $currentKey = Get-GovernanceCacheKey
+                if ($currentKey -eq $stampKey) {
+                    $reuseGreen = $true
+                    Write-Host "Governance reuse active: cache key unchanged, skipping full governance suite." -ForegroundColor Yellow
+                }
+            }
+        }
+
+        if (-not $reuseGreen) {
+            pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1
+        }
     }
 
     if (Test-Path $progressPath) {

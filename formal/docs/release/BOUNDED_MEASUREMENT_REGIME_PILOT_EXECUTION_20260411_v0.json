@@ -1,0 +1,26 @@
+{
+  "schema_id": "BOUNDED_MEASUREMENT_REGIME_PILOT_EXECUTION_20260411_v0",
+  "execution_id": "BMRPE-001",
+  "pilot_tranche": "ONE_SEAM_ROW_RECOMPUTE_UNDER_REVISED_SIGNALS",
+  "required_inputs": {
+    "post_posture_review_program_mode_transition_report": "formal/output/reports/post_posture_review_program_mode_transition_20260411_v0.json"
+  },
+  "pilot_targets": {
+    "target_row_id": "ROW-SEAM-QM-STAT-001",
+    "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "transport_witness_artifact": "formal/output/architecture/SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0.json",
+    "bridge_object_artifact": "formal/output/architecture/SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0.json"
+  },
+  "revised_signal_spec": {
+    "new_signal": "SEAM_INTEGRATION_COVERAGE_DELTA_GT_0",
+    "retained_signal": "BLOCKER_TOKEN_CHANGE_REMAINS_AUTHORITATIVE",
+    "new_signal_pass_rule": "TRANSPORT_WITNESS_BOUND_AND_BRIDGE_OBJECT_MATERIALIZED_FOR_TARGET_ROW",
+    "retained_signal_pass_rule": "BLOCKER_TOKEN_CHANGE_OBSERVED_IN_LEDGER"
+  },
+  "execution_policy": {
+    "no_loop_rule": "ONE_BOUNDED_MEASUREMENT_REGIME_PILOT_ONLY",
+    "promotion_requires_both_signals": true,
+    "reversibility_rule": "PILOT_RESULTS_MUST_BE_ASSESSED_BEFORE_PROMOTION_OR_ROLLBACK"
+  },
+  "non_claim_boundary": "Repository-local bounded measurement-regime pilot execution declaration only; no scientific adequacy claim."
+}

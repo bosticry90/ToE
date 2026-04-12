@@ -1,0 +1,23 @@
+{
+  "schema_id": "THEOREM_GAP_SINGLE_ROW_EXECUTION_TRANCHE_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T00:00:00Z",
+  "tranche_id": "R4-SINGLE-ROW-QM-001",
+  "target_row": "ROW-PILLAR-QM-001",
+  "blocker_class": "THEOREM_GAP",
+  "expected_blocker_state_change": "NEGATIVE_THEOREM_GAP_DELTA_REQUIRED",
+  "success_threshold": "THEOREM_GAP_DELTA_LT_0_AND_ROW_SUCCESS_COUNT_GT_0",
+  "failure_threshold": "THEOREM_GAP_DELTA_GE_0_OR_ROW_SUCCESS_COUNT_EQ_0",
+  "required_evidence_bundle": {
+    "declaration_pointer": "formal/docs/release/TGC_77_DECLARATION.md",
+    "execution_checkpoint_pointer": "formal/output/ws10_tgc77_qm_theorem_gap_closure_increment_execution_checkpoint_20260409_v0.json",
+    "linkage_registry_pointer": "formal/docs/release/THEOREM_GAP_TRANCHE_LINKAGE_REGISTRY_20260411_v0.json",
+    "row_outcome_trend_pointer": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json"
+  },
+  "no_change_fail_closed_policy": {
+    "required": true,
+    "route_token": "ROUTE_TO_THEOREM_GAP_REWORK",
+    "rework_evidence_pointer": "formal/docs/release/WS_10_TGC_93_BRANCH_DECISION_PACKAGE_20260411_v0.md"
+  },
+  "non_claim_boundary": "Repository-local single-row theorem-gap execution tranche declaration only; no scientific adequacy claim."
+}

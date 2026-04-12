@@ -126,6 +126,39 @@ To avoid ambiguity between system Python and your venv Python on Windows, prefer
 - Run explicit canonical regeneration: `pwsh -NoProfile -ExecutionPolicy Bypass -File ./tooling_regen.ps1`
 - Lint mapping tuples: `./py.ps1 -m formal.python.tools.lint_mapping_tuples --fail-fast`
 
+Proof-Debt Active Cluster Runner (Default)
+- Default runner for active blocker-facing proof-debt execution: `./proof_debt_active_cluster_execution.ps1`
+- This runner executes active packet/discharge flow, refreshes next-cluster selection, and refreshes consolidated summary.
+- Historical branch-ruling regeneration is intentionally excluded from this path.
+- Regenerate historical branch-ruling artifacts only in explicit ruling workflows.
+
+Dual-Track Staged Workflow (Runtime/Closure Optimization)
+- Stage `baseline` (phase 0): pin runtime baseline metrics before optimization comparisons.
+   - `pwsh -NoProfile -ExecutionPolicy Bypass -File ./dual_track_execution.ps1 -Stage baseline -GovernanceSuiteSeconds 120 -BranchHealthFullPytestSeconds 300 -CheckpointLadderSeconds 180`
+   - Measured capture (recommended): `pwsh -NoProfile -ExecutionPolicy Bypass -File ./dual_track_execution.ps1 -Stage baseline -UseMeasuredRuntimeCapture`
+- Stage `draft` (phase 2 discipline): focused tests only while iterating.
+   - `pwsh -NoProfile -ExecutionPolicy Bypass -File ./dual_track_execution.ps1 -Stage draft -FocusedTests formal/python/tests/test_state_core_generation_integrity_gate.py`
+- Stage `preclosure` (phase 3 discipline): governance once before closure; supports optional invalidation selection.
+   - `pwsh -NoProfile -ExecutionPolicy Bypass -File ./dual_track_execution.ps1 -Stage preclosure`
+   - `pwsh -NoProfile -ExecutionPolicy Bypass -File ./dual_track_execution.ps1 -Stage preclosure -UseInvalidationSelection -InvalidationBaseRef HEAD~1`
+   - `pwsh -NoProfile -ExecutionPolicy Bypass -File ./dual_track_execution.ps1 -Stage preclosure -EnableReadOnlyParallel -ReadOnlyParallelWorkers auto`
+- Stage `final` (phase 4 discipline): checkpoint ladder once with exact-key governance reuse enabled.
+   - `pwsh -NoProfile -ExecutionPolicy Bypass -File ./dual_track_execution.ps1 -Stage final`
+- Stage `integration` (phase 10 discipline): write current runtime snapshot and cutover report against baseline.
+   - Measured capture (authoritative default): `pwsh -NoProfile -ExecutionPolicy Bypass -File ./dual_track_execution.ps1 -Stage integration -UseMeasuredRuntimeCapture -GovernanceRequiredImprovementPercent 10 -CheckpointRequiredImprovementPercent 10`
+   - Manual runtime override (non-authoritative): `pwsh -NoProfile -ExecutionPolicy Bypass -File ./dual_track_execution.ps1 -Stage integration -GovernanceSuiteSeconds 95 -BranchHealthFullPytestSeconds 300 -CheckpointLadderSeconds 140 -AllowManualIntegrationCutover -GovernanceRequiredImprovementPercent 10 -CheckpointRequiredImprovementPercent 10`
+
+Notes:
+- Invalidation selection falls back to full governance automatically when changes are broader than safe test-only subsets.
+- Invalidation selection supports bounded non-test families (for example selected governance/release docs) and still falls back to full governance when unmapped changes are detected.
+- Governance reuse in `final` only applies when the cached GREEN stamp key exactly matches current key material.
+- Read-only parallel mode applies only to governance lane C and is opt-in via `-EnableReadOnlyParallel`.
+- Governance now enforces tranche progress semantics and generates a canonical physics progress ledger during governance runs.
+   - Tranche semantics tool: `./py.ps1 -m formal.python.tools.tranche_progress_semantics_check`
+   - Ledger generator: `./py.ps1 -m formal.python.tools.physics_progress_ledger_generate`
+   - Parallel capability probe: `./py.ps1 -m formal.python.tools.governance_parallel_capability_probe`
+   - Dual-track hardening closeout report: `./py.ps1 -m formal.python.tools.dual_track_hardening_closeout`
+
 Troubleshooting (Windows)
 - If `powershell` is not recognized, you are likely already in PowerShell 7 (`pwsh`). Just run `./py.ps1 ...` directly from your current session.
 

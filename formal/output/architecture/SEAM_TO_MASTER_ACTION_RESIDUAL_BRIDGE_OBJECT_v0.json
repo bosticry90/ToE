@@ -1,0 +1,6 @@
+{
+  "object_id": "SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0",
+  "row_id": "ROW-SEAM-QM-STAT-001",
+  "status": "MATERIALIZED",
+  "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0"
+}

@@ -1,0 +1,60 @@
+{
+  "schema_id": "ARCHITECTURE_LEVEL_BLOCKER_DIAGNOSIS_PACKET_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:59:00Z",
+  "attack_class": "ARCHITECTURE_LEVEL_BLOCKER_DIAGNOSIS",
+  "packet_id": "ALBD-001",
+  "objective": "Diagnose why repeated bounded local attack classes are non-moving under the current filter and identify one architecture-level redesigned next attack class.",
+  "required_inputs": {
+    "science_post_direct_attack_class_decision_report": "formal/output/reports/science_post_direct_attack_class_decision_20260411_v0.json",
+    "proof_debt_program_exhaustion_decision_report": "formal/output/reports/proof_debt_program_exhaustion_decision_20260411_v0.json",
+    "qm_blocker_moving_ruling_report": "formal/output/reports/qm_blocker_moving_ruling_20260411_v0.json",
+    "qm_stat_transport_residual_ruling_report": "formal/output/reports/qm_stat_transport_residual_ruling_20260411_v0.json",
+    "direct_master_action_residual_transport_attack_class_packet_report": "formal/output/reports/direct_master_action_residual_transport_attack_class_packet_20260411_v0.json"
+  },
+  "diagnosis_questions": [
+    {
+      "question_id": "Q1",
+      "prompt": "Where is blocker conversion actually failing?",
+      "allowed_answers": [
+        "TARGET_SELECTION",
+        "SEAM_TRANSPORT_DEFINITION",
+        "ROW_SEAM_COUPLING",
+        "SUCCESS_METRIC_DEFINITION",
+        "MASTER_ACTION_RESIDUAL_EXTRACTION"
+      ]
+    },
+    {
+      "question_id": "Q2",
+      "prompt": "What is the smallest upstream unit that could plausibly move state?"
+    },
+    {
+      "question_id": "Q3",
+      "prompt": "Is the current movement filter wrong, or is the architecture underpowered?"
+    },
+    {
+      "question_id": "Q4",
+      "prompt": "What is the one redesigned next attack class after diagnosis?"
+    }
+  ],
+  "diagnosis_policy": {
+    "required_prior_nonmoving_attack_classes": [
+      "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN",
+      "QM_BLOCKER_MOVING_TRANCHE",
+      "DIRECT_MASTER_ACTION_RESIDUAL_TRANSPORT_ATTACK_CLASS"
+    ],
+    "local_attack_hold_policy": "NO_FURTHER_LOCAL_ATTACK_PACKETS_UNTIL_DECISION_RESOLVED",
+    "default_blocker_conversion_failure_location": "MASTER_ACTION_RESIDUAL_EXTRACTION",
+    "default_upstream_missing_unit": "ARCHITECTURE_LEVEL_BLOCKER_CONVERSION_UNIT",
+    "default_selected_redesigned_attack_class": "ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_ATTACK_CLASS",
+    "next_action_if_complete": "MATERIALIZE_ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_ATTACK_CLASS_PACKET"
+  },
+  "required_outputs": [
+    "blocker_conversion_failure_location",
+    "movement_filter_defect_identified",
+    "upstream_missing_unit_identified",
+    "selected_redesigned_attack_class",
+    "next_action"
+  ],
+  "non_claim_boundary": "Repository-local architecture-level blocker diagnosis packet declaration only; no scientific adequacy claim."
+}

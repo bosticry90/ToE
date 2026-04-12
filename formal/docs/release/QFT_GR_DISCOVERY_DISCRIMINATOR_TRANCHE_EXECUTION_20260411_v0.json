@@ -1,0 +1,19 @@
+{
+  "schema_id": "QFT_GR_DISCOVERY_DISCRIMINATOR_TRANCHE_EXECUTION_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:59:58Z",
+  "required_inputs": {
+    "tranche_declaration": "formal/docs/release/QFT_GR_DISCOVERY_DISCRIMINATOR_TRANCHE_20260411_v0.json",
+    "next_route_decision_report": "formal/output/reports/qm_stat_discovery_next_route_decision_report_20260411_v0.json",
+    "discovery_tranche_ruling_contract": "formal/docs/release/DISCOVERY_TRANCHE_RULING_CONTRACT_20260411_v0.json"
+  },
+  "execution_policy": {
+    "required_selected_route": "ACTIVATE_NEXT_RANKED_SEAM",
+    "required_next_ranked_row": "ROW-SEAM-QFT-GR-001",
+    "single_cycle_only": true,
+    "evidence_required": true,
+    "terminal_outcome_source": "TRANCHE_DECLARATION",
+    "probe_lane_allowed": false
+  },
+  "non_claim_boundary": "Repository-local QFT-GR discovery discriminator tranche execution declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,31 @@
+{
+  "schema_id": "SIMULATION_FIRST_FALSIFICATION_PACKET_20260411_v1",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T20:10:00Z",
+  "campaign_id": "SIM-FIRST-FALSIFICATION-001",
+  "packet_id": "SIM-PACKET-002",
+  "target_question": "Does the Bragg-vs-Sound fail/pass split indicate a truly nonviable route or a route viable only in a narrower regime?",
+  "simulation_target": "OV-BR-SND-03_REGIME_DISCRIMINATION",
+  "falsifiable_outcome": "CONDITION_B_FULL_FAILURE_WITH_CONDITION_A_FULL_PASS_IMPLIES_NARROWER_REGIME_ONLY",
+  "result_contract": {
+    "success": "NARROWER_REGIME_VIABILITY_OR_NONVIABILITY_DECIDED",
+    "failure": "NO_DISCRIMINATIVE_SIGNAL_PRESENT",
+    "inconclusive": "INSUFFICIENT_OR_CONTRADICTORY_COMPARISON_ROWS"
+  },
+  "discriminator": {
+    "route_truly_nonviable_rule": "ALL_CONDITIONS_FAIL_TOLERANCE",
+    "route_narrower_regime_rule": "CONDITION_A_ALL_PASS_AND_CONDITION_B_ALL_FAIL"
+  },
+  "blocker_facing_recompute_required_after_packet": true,
+  "required_inputs": {
+    "cross_anchor_mode": "numeric_only",
+    "cross_anchor_tool": "formal.python.tools.cross_anchor_bragg_vs_sound_report",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_pointer": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json"
+  },
+  "bounded_stop_rule": {
+    "max_packets_without_blocker_movement": 1,
+    "rule": "AFTER_ONE_DECISIVE_PACKET_WITHOUT_BLOCKER_MOVEMENT_DECIDE_CONTINUE_OR_ESCALATE"
+  },
+  "non_claim_boundary": "Repository-local simulation-first falsification packet declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,49 @@
+{
+  "schema_id": "COUPLING_REFINEMENT_RULING_REPORT_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T00:35:00Z",
+  "non_claim_boundary": "Repository-local coupling-refinement ruling only; no scientific adequacy claim.",
+  "layer": "terminal_decision_layer",
+  "no_loop_rule": "ONE_COUPLING_REFINEMENT_RULING_EXECUTION_ONLY",
+  "prerequisite": {
+    "source": "C:\\Users\\psboy\\Documents\\ToE\\formal\\formal\\output\\reports\\bounded_coupling_refinement_packet_20260411_v0.json",
+    "execution_classification": "EXECUTION_VALID_BINDING_TIGHTENED",
+    "prerequisite_satisfied": true
+  },
+  "criteria_evaluation": {
+    "criterion_1_tightened_coupling_confirmed": true,
+    "criterion_2_seam_coherence_fires": true,
+    "criterion_3_ledger_artifact_fires": true,
+    "criterion_4_correlation_witness_materializes": true,
+    "criterion_5_no_contradiction_with_blocker_authority_contract": true,
+    "total_criteria_met": 5,
+    "all_criteria_met": true
+  },
+  "ruling": {
+    "ruling_id": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+    "classification": "PROMOTION_SUPPORTED",
+    "promotion_gate_opens": true,
+    "next_action": "PROMOTE_REVISED_BLOCKER_DEFINITION_TO_AUTHORITATIVE",
+    "justification": "All five promotion gate criteria satisfied; tightened coupling supports authority elevation",
+    "target_row_id": "ROW-SEAM-QM-STAT-001"
+  },
+  "authority_promotion_decision": {
+    "revised_blocker_definition_promoted_to_authoritative": true,
+    "coupling_state_confirmation": "TIGHTENED",
+    "seam_coherence_fires": true,
+    "ledger_artifact_fires": true,
+    "correlation_witness_materializes": true
+  },
+  "summary": {
+    "ruling_id": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+    "classification": "PROMOTION_SUPPORTED",
+    "promotion_gate_opens": true,
+    "criteria_count_met": "5/5",
+    "next_action": "PROMOTE_REVISED_BLOCKER_DEFINITION_TO_AUTHORITATIVE",
+    "terminal_layer": true
+  },
+  "source_bundle": {
+    "coupling_refinement_ruling_declaration": "C:\\Users\\psboy\\Documents\\ToE\\formal\\formal\\docs\\release\\COUPLING_REFINEMENT_RULING_20260411_v0.json",
+    "bounded_coupling_refinement_packet_report": "C:\\Users\\psboy\\Documents\\ToE\\formal\\formal\\output\\reports\\bounded_coupling_refinement_packet_20260411_v0.json"
+  }
+}

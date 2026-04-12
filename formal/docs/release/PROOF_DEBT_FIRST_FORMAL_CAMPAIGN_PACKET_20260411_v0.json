@@ -1,0 +1,61 @@
+{
+  "schema_id": "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN_PACKET_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T20:45:00Z",
+  "attack_class": "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN",
+  "packet_id": "PDFC-001",
+  "campaign_objective": "Retire the highest-leverage proof-debt cluster that blocks blocker-state transitions.",
+  "top_proof_debt_cluster_selection": {
+    "cluster_id": "PDC-MATH-PROOF-DEBT-BURNDOWN-01",
+    "cluster_name": "proof_debt_marker_burndown_terminal_gate_alignment",
+    "selection_rule": "MAX_BLOCKER_LEVERAGE_SCORE_WITH_DIRECT_GATE_LINKAGE",
+    "bounded_scope": "single_cluster_only"
+  },
+  "proof_debt_objects": [
+    {
+      "debt_id": "PD-INV-MATH-PROOF-DEBT-BURNDOWN-c04",
+      "affected_claim_or_gate": "formal/python/tests/test_toe_complete_v1_terminal_gate.py",
+      "authority_lane_affected": "MATH_PROOF_DEBT_BURNDOWN",
+      "blocker_linkage": "THEOREM_GAP",
+      "discharge_criterion": "CYCLE05_MARKER_STABILITY_AND_TERMINAL_GATE_CONSISTENCY_RECONFIRMED_WITH_NO_REOPEN_DRIFT",
+      "evidence_needed_for_retirement": [
+        "formal/output/proof_debt_burndown_checkpoint_cycle05_v0.json",
+        "formal/python/tests/test_proof_debt_marker_stability_gate.py",
+        "formal/python/tests/test_proof_debt_burndown_cycle05_gate.py"
+      ],
+      "failure_consequence_if_unresolved": "BLOCKER_STATE_TRANSITION_REMAINS_DECOUPLED_FROM_FORMAL_DEBT_STATUS"
+    }
+  ],
+  "blocker_to_proof_debt_mapping": {
+    "THEOREM_GAP": [
+      "PD-INV-MATH-PROOF-DEBT-BURNDOWN-c04"
+    ],
+    "SEAM_INTEGRATION_GAP": []
+  },
+  "bounded_execution_plan": {
+    "execution_id": "PDFC-EXEC-001",
+    "max_debt_clusters_this_packet": 1,
+    "discharge_tests": [
+      "formal/python/tests/test_proof_debt_marker_stability_gate.py",
+      "formal/python/tests/test_proof_debt_burndown_cycle05_gate.py",
+      "formal/python/tests/test_proof_debt_witness_traceability_gate.py"
+    ],
+    "acceptance_criteria": [
+      "formal_gap_closed_tied_to_blocker_or_blocker_state_changed",
+      "or_explicit_route_falsification_of_current_blocker-removal_path"
+    ]
+  },
+  "state_transition_semantics": {
+    "success": "BLOCKER_CLASS_STATE_CHANGED_OR_THEOREM_GAP_DELTA_LT_0_OR_FORMAL_GAP_CLOSED_TIED_TO_BLOCKER",
+    "partial_progress": "DISCHARGE_TESTS_PASS_BUT_NO_BLOCKER_STATE_CHANGE",
+    "failure": "NO_BLOCKER_STATE_CHANGE_AND_NO_FORMAL_GAP_CLOSURE_TIED_TO_BLOCKER",
+    "fail_closed_rule": "NO_PROOF_ACTIVITY_COUNTS_AS_PRODUCTIVE_WITHOUT_BLOCKER_LINKED_STATE_EFFECT"
+  },
+  "required_inputs": {
+    "inventory_pointer": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "ledger_pointer": "formal/output/reports/physics_progress_ledger_v0.json",
+    "fundamental_rethink_decision_pointer": "formal/output/reports/fundamental_attack_strategy_rethink_decision_20260411_v0.json"
+  },
+  "non_claim_boundary": "Repository-local proof-debt-first campaign packet declaration only; no scientific adequacy claim."
+}

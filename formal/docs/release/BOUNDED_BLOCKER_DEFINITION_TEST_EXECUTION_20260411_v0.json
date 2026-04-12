@@ -1,0 +1,33 @@
+{
+  "schema_id": "BOUNDED_BLOCKER_DEFINITION_TEST_EXECUTION_20260411_v0",
+  "execution_id": "BBDTE-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "execution_basis": "DEEPER_BLOCKER_DEFINITION_REVIEW_PRESCRIBED_ONE_SEAM_ROW_TEST",
+  "required_inputs": {
+    "deeper_blocker_definition_review_report": "formal/output/reports/deeper_blocker_definition_review_20260411_v0.json"
+  },
+  "test_target": {
+    "target_row_id": "ROW-SEAM-QM-STAT-001",
+    "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "transport_witness_artifact": "formal/output/architecture/SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0.json",
+    "bridge_object_artifact": "formal/output/architecture/SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0.json"
+  },
+  "blocker_definition_under_test": {
+    "candidate_blocker_definition": "REVISED_BLOCKER_DEF_SEAM_ROW_STATE_TRANSITION_WITH_TRANSPORT_COHERENCE_CHECK",
+    "definition_description": "Blocker movement is measured when: (1) transport witness is bound AND bridge object is materialized for target row, AND (2) those events demonstrate coherent state transition under QM-stat theoretical framework.",
+    "definition_scope": "SEAM_ROW_SPECIFIC_STATE_TRANSITION",
+    "strictness_relative_to_diagnostic": "STRICTER_THAN_DIAGNOSTIC_SEAM_COVERAGE"
+  },
+  "retained_authoritative_guard": {
+    "retained_authoritative_signal": "BLOCKER_TOKEN_CHANGE_REMAINS_AUTHORITATIVE",
+    "tracking_policy": "BLOCKER_TOKEN_CHANGE_TRACKED_IN_PARALLEL_BUT_NOT_PROMOTION_BEARING_IN_THIS_TEST",
+    "monitoring_note": "Authoritative signal still never fires in prior executions; retained purely for diagnostic comparison."
+  },
+  "execution_policy": {
+    "test_scope": "SINGLE_ROW_SINGLE_DEFINITION_ONCE",
+    "promotion_requires_explicit_revised_def_movement": true,
+    "authoritative_blocker_token_not_required_for_success": true,
+    "no_loop_rule": "ONE_BOUNDED_BLOCKER_DEFINITION_TEST_EXECUTION_ONLY",
+    "reversibility_rule": "TEST_RESULTS_MUST_BE_ASSESSED_BEFORE_PROMOTION_OR_ROLLBACK"
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "schema_id": "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN_PACKET_EMU1_DISTRIBUTIONAL_AUTH_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T22:20:00Z",
+  "attack_class": "PROOF_DEBT_FIRST_FORMAL_CAMPAIGN",
+  "packet_id": "PDFC-EMU1-001",
+  "campaign_objective": "Retire the highest-leverage EM-U1 proof-debt cluster that blocks blocker-state transitions.",
+  "top_proof_debt_cluster_selection": {
+    "cluster_id": "PDC-EMU1-DISTRIBUTIONAL-AUTH-01",
+    "cluster_name": "em_u1_distributional_authorization_surface",
+    "selection_rule": "NEXT_CLUSTER_SELECTED_BY_BLOCKER_LEVERAGE_FILTER",
+    "bounded_scope": "single_cluster_only"
+  },
+  "proof_debt_objects": [
+    {
+      "debt_id": "PD-INV-PHYS-EM-U1-MICRO21",
+      "affected_claim_or_gate": "formal/python/tests/test_em_u1_micro21_distributional_lane_authorization_scaffold_gate.py",
+      "authority_lane_affected": "EM_U1_DISTRIBUTIONAL_AUTHORIZATION",
+      "blocker_linkage": "THEOREM_GAP",
+      "discharge_criterion": "CYCLE21_AUTHORIZATION_CHAIN_AND_AUTHORIZED_DISTRIBUTIONAL_REFERENCE_SURFACES_RECONFIRMED_WITHOUT_PROMOTION_DRIFT",
+      "evidence_needed_for_retirement": [
+        "formal/python/tests/test_em_u1_micro21_distributional_lane_authorization_scaffold_gate.py",
+        "formal/python/tests/test_em_u1_micro22_authorized_distributional_semantics_mapping_nonclaim.py",
+        "formal/python/tests/test_em_u1_micro23_authorized_distributional_reference_surface_nonclaim.py"
+      ],
+      "failure_consequence_if_unresolved": "BLOCKER_STATE_TRANSITION_REMAINS_DECOUPLED_FROM_EM_U1_DISTRIBUTIONAL_AUTHORIZATION_SURFACES"
+    }
+  ],
+  "blocker_to_proof_debt_mapping": {
+    "THEOREM_GAP": [
+      "PD-INV-PHYS-EM-U1-MICRO21"
+    ],
+    "SEAM_INTEGRATION_GAP": []
+  },
+  "bounded_execution_plan": {
+    "execution_id": "PDFC-EMU1-EXEC-001",
+    "max_debt_clusters_this_packet": 1,
+    "discharge_tests": [
+      "formal/python/tests/test_em_u1_micro21_distributional_lane_authorization_scaffold_gate.py",
+      "formal/python/tests/test_em_u1_micro22_authorized_distributional_semantics_mapping_nonclaim.py",
+      "formal/python/tests/test_em_u1_micro23_authorized_distributional_reference_surface_nonclaim.py"
+    ],
+    "acceptance_criteria": [
+      "formal_gap_closed_tied_to_blocker_or_blocker_state_changed",
+      "or_explicit_route_falsification_of_current_blocker-removal_path"
+    ]
+  },
+  "state_transition_semantics": {
+    "success": "BLOCKER_CLASS_STATE_CHANGED_OR_THEOREM_GAP_DELTA_LT_0_OR_FORMAL_GAP_CLOSED_TIED_TO_BLOCKER",
+    "partial_progress": "DISCHARGE_TESTS_PASS_BUT_NO_BLOCKER_STATE_CHANGE",
+    "failure": "NO_BLOCKER_STATE_CHANGE_AND_NO_FORMAL_GAP_CLOSURE_TIED_TO_BLOCKER",
+    "fail_closed_rule": "NO_PROOF_ACTIVITY_COUNTS_AS_PRODUCTIVE_WITHOUT_BLOCKER_LINKED_STATE_EFFECT"
+  },
+  "required_inputs": {
+    "inventory_pointer": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "ledger_pointer": "formal/output/reports/physics_progress_ledger_v0.json",
+    "fundamental_rethink_decision_pointer": "formal/output/reports/fundamental_attack_strategy_rethink_decision_20260411_v0.json"
+  },
+  "non_claim_boundary": "Repository-local proof-debt-first campaign packet declaration only; no scientific adequacy claim."
+}

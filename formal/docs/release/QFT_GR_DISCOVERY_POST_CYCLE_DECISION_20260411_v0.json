@@ -1,0 +1,35 @@
+{
+  "schema_id": "QFT_GR_DISCOVERY_POST_CYCLE_DECISION_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:59:59Z",
+  "required_inputs": {
+    "discovery_interpretation_report": "formal/output/reports/qft_gr_discovery_interpretation_report_20260411_v0.json",
+    "discovery_ruling_report": "formal/output/reports/qft_gr_discovery_ruling_report_20260411_v0.json"
+  },
+  "candidate_routes": [
+    {
+      "route_id": "KEEP_INTERNAL_LANE",
+      "route_name": "KEEP_QFT_GR_AS_INTERNAL_DISCRIMINATOR_LANE",
+      "next_action": "HOLD_QFT_GR_INTERNAL_AND_BLOCK_PROBE_EXPANSION"
+    },
+    {
+      "route_id": "REFINE_COMPARATOR_ONCE",
+      "route_name": "REFINE_QFT_GR_COMPARATOR_ONCE_BOUNDED",
+      "next_action": "MATERIALIZE_ONE_QFT_GR_STRONGER_COMPARATOR_PACKET"
+    },
+    {
+      "route_id": "RETIRE_PATH",
+      "route_name": "RETIRE_THIS_QFT_GR_DISCOVERY_PATH_NONPRODUCTIVE",
+      "next_action": "ADVANCE_DISCOVERY_QUEUE_TO_NEXT_SEAM"
+    }
+  ],
+  "decision_policy": {
+    "stronger_comparator_identified": false,
+    "stronger_comparator_note": null,
+    "bounded_comparator_refinement_packet": null,
+    "default_decision": "KEEP_QFT_GR_AS_INTERNAL_DISCRIMINATOR_LANE",
+    "no_probe_expansion_without_interpretation_rule": "PROBE_LANE_REMAINS_BLOCKED_UNLESS_INTERPRETATION_IS_PROBE_READY",
+    "no_loop_rule": "ONE_POST_QFT_GR_CYCLE_DECISION_ONLY"
+  },
+  "non_claim_boundary": "Repository-local QFT-GR post-cycle decision declaration only; no scientific adequacy claim."
+}

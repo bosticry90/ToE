@@ -1,0 +1,28 @@
+{
+  "schema_id": "AUTHORITATIVE_BLOCKER_DEFINITIONS",
+  "entries": [
+    {
+      "definition_id": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "authority_category": "AUTHORITATIVE_BLOCKER_DEFINITION",
+      "registered_at_utc": "2026-04-12T00:36:32.021203Z",
+      "ruling_reference": "coupling_refinement_ruling_20260411_v0.json",
+      "promotion_ruling": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+      "coupling_state": "TIGHTENED",
+      "target_row_id": "ROW-SEAM-QM-STAT-001",
+      "criteria_met": "5/5",
+      "status": "ACTIVE"
+    },
+    {
+      "definition_id": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "authority_category": "AUTHORITATIVE_BLOCKER_DEFINITION",
+      "registered_at_utc": "2026-04-12T00:36:36.139491Z",
+      "ruling_reference": "coupling_refinement_ruling_20260411_v0.json",
+      "promotion_ruling": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+      "coupling_state": "TIGHTENED",
+      "target_row_id": "ROW-SEAM-QM-STAT-001",
+      "criteria_met": "5/5",
+      "status": "ACTIVE"
+    }
+  ],
+  "last_updated": "2026-04-12T00:36:36.139491Z"
+}

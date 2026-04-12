@@ -1,0 +1,36 @@
+{
+  "schema_id": "DISCOVERY_QUEUE_TRANSITION_DECISION_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:59:59Z",
+  "required_inputs": {
+    "discovery_priority_queue_report": "formal/output/reports/discovery_priority_queue_report_20260411_v0.json",
+    "qm_stat_post_cycle_decision_report": "formal/output/reports/qm_stat_discovery_post_derivation_probe_decision_report_20260411_v0.json",
+    "qft_gr_post_cycle_decision_report": "formal/output/reports/qft_gr_discovery_post_cycle_decision_report_20260411_v0.json"
+  },
+  "candidate_routes": [
+    {
+      "route_id": "ACTIVATE_NEXT_RANKED_SEAM_BOUNDED_SHADOW",
+      "route_name": "ACTIVATE_NEXT_RANKED_SEAM_BOUNDED_SHADOW",
+      "next_action": "ACTIVATE_NEXT_RANKED_SEAM_UNDER_SHADOW_SINGLE_CYCLE"
+    },
+    {
+      "route_id": "EXECUTE_BOUNDED_QUEUE_REVIEW_PASS",
+      "route_name": "EXECUTE_BOUNDED_QUEUE_REVIEW_PASS",
+      "next_action": "GENERATE_QUEUE_REVIEW_PASS_PACKET_AND_REVALIDATE_RANKING"
+    }
+  ],
+  "decision_policy": {
+    "current_internal_discriminator_rows": [
+      "ROW-SEAM-QM-STAT-001",
+      "ROW-SEAM-QFT-GR-001"
+    ],
+    "require_two_internal_only_seam_decisions": true,
+    "require_distinct_rank3_candidate": true,
+    "min_rank3_score_gap_over_rank4_for_activation": 3,
+    "default_route_when_ranking_weak_or_noisy": "EXECUTE_BOUNDED_QUEUE_REVIEW_PASS",
+    "activation_mode": "SHADOW_BOUNDED_SINGLE_CYCLE",
+    "max_new_seam_activations_per_cycle": 1,
+    "no_probe_expansion_rule": "PROBE_LANES_REMAIN_BLOCKED_UNTIL_EXPLICIT_PROBE_READY_INTERPRETATION"
+  },
+  "non_claim_boundary": "Repository-local discovery queue transition decision declaration only; no scientific adequacy claim."
+}

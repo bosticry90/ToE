@@ -1,0 +1,17 @@
+{
+  "schema_id": "QM_STAT_DISCOVERY_DISCRIMINATOR_TRANCHE_EXECUTION_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:25:00Z",
+  "required_inputs": {
+    "tranche_declaration": "formal/docs/release/QM_STAT_DISCOVERY_DISCRIMINATOR_TRANCHE_20260411_v0.json",
+    "discovery_priority_queue_report": "formal/output/reports/discovery_priority_queue_report_20260411_v0.json",
+    "discovery_tranche_ruling_contract": "formal/docs/release/DISCOVERY_TRANCHE_RULING_CONTRACT_20260411_v0.json"
+  },
+  "execution_policy": {
+    "top_rank_required": "ROW-SEAM-QM-STAT-001",
+    "single_cycle_only": true,
+    "evidence_required": true,
+    "terminal_outcome_source": "TRANCHE_DECLARATION"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT discovery discriminator tranche execution declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,20 @@
+{
+  "schema_id": "QM_STAT_DISCOVERY_INTERPRETATION_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:45:00Z",
+  "required_inputs": {
+    "discovery_ruling_report": "formal/output/reports/qm_stat_discovery_ruling_report_20260411_v0.json",
+    "discovery_execution_report": "formal/output/reports/qm_stat_discovery_discriminator_tranche_report_20260411_v0.json"
+  },
+  "interpretation_policy": {
+    "categories": [
+      "INTERNAL_DISCRIMINATIVE_ONLY",
+      "EXTERNALLY_COMPARABLE",
+      "NUMERICAL_PROBE_READY"
+    ],
+    "default_category": "INTERNAL_DISCRIMINATIVE_ONLY",
+    "shadow_mode_required": true,
+    "single_target_row": "ROW-SEAM-QM-STAT-001"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT discovery interpretation declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,46 @@
+{
+  "schema_id": "ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_ATTACK_CLASS_PACKET_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:59:30Z",
+  "attack_class": "ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_ATTACK_CLASS",
+  "packet_id": "ASMAA-001",
+  "objective": "Materialize one bounded architecture-level seam/master-action alignment packet that converts the diagnosis of master-action residual extraction failure into one executable upstream unit.",
+  "required_inputs": {
+    "architecture_level_blocker_diagnosis_packet_report": "formal/output/reports/architecture_level_blocker_diagnosis_packet_20260411_v0.json",
+    "science_post_direct_attack_class_decision_report": "formal/output/reports/science_post_direct_attack_class_decision_20260411_v0.json",
+    "direct_master_action_residual_transport_attack_class_packet_report": "formal/output/reports/direct_master_action_residual_transport_attack_class_packet_20260411_v0.json",
+    "qm_stat_transport_residual_ruling_report": "formal/output/reports/qm_stat_transport_residual_ruling_20260411_v0.json"
+  },
+  "bounded_alignment_scope": {
+    "single_alignment_obligation": "SEAM_TO_MASTER_ACTION_RESIDUAL_EXTRACTION_BINDING",
+    "single_residual_extraction_interface": "MASTER_ACTION_RESIDUAL_EXTRACTION_INTERFACE_QM_STAT_v0",
+    "single_transport_witness": "SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0",
+    "target_row_id": "ROW-SEAM-QM-STAT-001",
+    "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "selection_reason": "Direct packet and diagnosis both localize non-movement at master-action residual extraction on the same bounded seam row."
+  },
+  "alignment_policy": {
+    "required_diagnosis_outcome": "ARCHITECTURE_LEVEL_BLOCKER_DIAGNOSIS_PACKET_COMPLETE",
+    "required_failure_location": "MASTER_ACTION_RESIDUAL_EXTRACTION",
+    "required_redesigned_attack_class": "ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_ATTACK_CLASS",
+    "required_hold_policy": "NO_FURTHER_LOCAL_ATTACK_PACKETS_UNTIL_DECISION_RESOLVED",
+    "default_missing_bridge_object": "SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0",
+    "default_minimal_upstream_unit": "MASTER_ACTION_RESIDUAL_EXTRACTION_BINDING_UNIT_v0",
+    "next_action_if_complete": "EXECUTE_ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_PACKET_ONCE"
+  },
+  "success_failure_measurement": {
+    "success_rule": "ALIGNMENT_WITNESS_BOUND_AND_BRIDGE_OBJECT_MATERIALIZED_AND_TARGET_ROW_RECOMPUTE_TRIGGERED",
+    "failure_rule": "ALIGNMENT_WITNESS_UNBOUND_OR_BRIDGE_OBJECT_UNMATERIALIZED",
+    "no_loop_failure_rule": "ONE_BOUNDED_ARCHITECTURE_PACKET_ONLY"
+  },
+  "required_outputs": [
+    "alignment_failure_mode",
+    "missing_bridge_object",
+    "minimal_upstream_unit_to_materialize",
+    "one_bounded_execution_target",
+    "success_rule",
+    "no-loop failure rule",
+    "next_action"
+  ],
+  "non_claim_boundary": "Repository-local architecture seam/master-action alignment attack-class packet declaration only; no scientific adequacy claim."
+}

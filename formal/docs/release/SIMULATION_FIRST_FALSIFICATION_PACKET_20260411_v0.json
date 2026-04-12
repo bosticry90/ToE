@@ -1,0 +1,28 @@
+{
+  "schema_id": "SIMULATION_FIRST_FALSIFICATION_PACKET_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T19:55:00Z",
+  "campaign_id": "SIM-FIRST-FALSIFICATION-001",
+  "packet_id": "SIM-PACKET-001",
+  "target_question": "Does Bragg-vs-Sound cross-anchor low-k consistency show tolerance failures that falsify or materially weaken the current route assumptions?",
+  "simulation_target": "OV-BR-SND-03_RELERR_TOLERANCE_CONSISTENCY",
+  "falsifiable_outcome": "AT_LEAST_ONE_TOLERANCE_FAIL_WEAKENS_OR_FALSIFIES_CURRENT_ROUTE_ASSUMPTIONS",
+  "result_contract": {
+    "success": "NO_TOLERANCE_FAILS_AND_ROUTE_VIABILITY_STRENGTHENED",
+    "failure": "ONE_OR_MORE_TOLERANCE_FAILS_AND_ROUTE_ASSUMPTIONS_WEAKENED_OR_FALSIFIED",
+    "inconclusive": "INSUFFICIENT_COMPARISONS_OR_MISSING_TOLERANCE_EVIDENCE"
+  },
+  "blocker_facing_recompute_required_after_packet": true,
+  "required_inputs": {
+    "cross_anchor_mode": "numeric_only",
+    "cross_anchor_tool": "formal.python.tools.cross_anchor_bragg_vs_sound_report",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_pointer": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json"
+  },
+  "bounded_stop_rule": {
+    "max_packets_without_scientific_state_change": 1,
+    "rule": "AFTER_ONE_INCONCLUSIVE_PACKET_ESCALATE_TO_NEXT_ATTACK_CLASS"
+  },
+  "next_attack_class_if_no_state_change": "BROADER_SEAM_PACKAGE_REDESIGN",
+  "non_claim_boundary": "Repository-local simulation-first falsification packet declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,39 @@
+{
+  "schema_id": "SCIENCE_POST_ARCHITECTURE_ALIGNMENT_DECISION_20260411_v0",
+  "decision_id": "SPAAD-001",
+  "current_attack_class": "ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_ATTACK_CLASS",
+  "required_inputs": {
+    "architecture_seam_master_action_alignment_ruling_report": "formal/output/reports/architecture_seam_master_action_alignment_ruling_20260411_v0.json",
+    "architecture_seam_master_action_alignment_packet_execution_report": "formal/output/reports/architecture_seam_master_action_alignment_packet_execution_20260411_v0.json",
+    "architecture_level_blocker_diagnosis_packet_report": "formal/output/reports/architecture_level_blocker_diagnosis_packet_20260411_v0.json"
+  },
+  "candidate_routes": [
+    {
+      "route_id": "MOVEMENT_METRIC_DEFECT_ROUTE",
+      "activation_condition": "MOVEMENT_METRIC_DEFECT_IDENTIFIED_AND_BOUNDED",
+      "next_action": "EXECUTE_MOVEMENT_METRIC_REVISION_PACKET_ONCE"
+    },
+    {
+      "route_id": "ARCHITECTURE_UNIT_SELECTION_DEFECT_ROUTE",
+      "activation_condition": "ARCHITECTURE_UNIT_SELECTION_DEFECT_IDENTIFIED_AND_BOUNDED",
+      "next_action": "EXECUTE_ARCHITECTURE_UNIT_SELECTION_REVISION_PACKET_ONCE"
+    },
+    {
+      "route_id": "PROGRAM_POSTURE_REVIEW_ROUTE",
+      "activation_condition": "NO_SPECIFIC_BOUNDED_DEFECT_AND_NON_MOVING_ACROSS_ALL_ATTACK_LAYERS",
+      "next_action": "MATERIALIZE_PROGRAM_POSTURE_REVIEW_PACKET"
+    }
+  ],
+  "decision_policy": {
+    "movement_metric_defect_identified": false,
+    "movement_metric_defect_note": null,
+    "bounded_metric_revision_packet": null,
+    "architecture_unit_selection_defect_identified": false,
+    "architecture_unit_selection_defect_note": null,
+    "bounded_unit_selection_revision_packet": null,
+    "program_posture_review_next_action": "MATERIALIZE_PROGRAM_POSTURE_REVIEW_PACKET",
+    "no_loop_rule": "ONE_POST_ARCHITECTURE_DECISION_ONLY",
+    "no_further_architecture_attack_packets_policy": "NO_FURTHER_ARCHITECTURE_ATTACK_PACKETS_UNTIL_DECISION_RESOLVED"
+  },
+  "non_claim_boundary": "Repository-local post-architecture-alignment decision declaration only; no scientific adequacy claim."
+}

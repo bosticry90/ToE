@@ -1,0 +1,79 @@
+{
+  "schema_id": "DISCOVERY_PRIORITY_QUEUE_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T21:35:00Z",
+  "tranche_id": "DQ-001",
+  "ranking_policy": {
+    "score_formula": "4x_DISCRIMINATOR_POTENTIAL_PLUS3x_FALSIFICATION_VALUE_PLUS2x_BLOCKER_LEVERAGE_PLUS1x_EMPIRICAL_PROXIMITY",
+    "tie_breaker": "HIGHER_FALSIFICATION_VALUE_THEN_HIGHER_BLOCKER_LEVERAGE",
+    "queue_size": 5
+  },
+  "required_evidence_bundle": {
+    "declaration_pointer": "formal/docs/release/DISCOVERY_PRIORITY_QUEUE_20260411_v0.json",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "closure_map_pointer": "formal/output/reports/governance_blocker_closure_map_20260410_v0.json",
+    "ledger_pointer": "formal/output/reports/physics_progress_ledger_v0.json"
+  },
+  "candidates": [
+    {
+      "rank": 1,
+      "row_id": "ROW-SEAM-QM-STAT-001",
+      "lane": "QM_STAT_CYCLE11",
+      "blocker_class": "SEAM_INTEGRATION_GAP",
+      "discriminator_potential": 5,
+      "falsification_value": 4,
+      "blocker_leverage": 5,
+      "empirical_proximity": 3,
+      "rationale": "Highest seam discriminator leverage and direct blocker conversion potential."
+    },
+    {
+      "rank": 2,
+      "row_id": "ROW-SEAM-QFT-GR-001",
+      "lane": "QFT_GR_REACTIVATION",
+      "blocker_class": "SEAM_INTEGRATION_GAP",
+      "discriminator_potential": 4,
+      "falsification_value": 5,
+      "blocker_leverage": 4,
+      "empirical_proximity": 2,
+      "rationale": "High falsification value on seam viability under bounded reactivation objective."
+    },
+    {
+      "rank": 3,
+      "row_id": "ROW-PILLAR-GR-001",
+      "lane": "GR_DERIVATION_CHAIN",
+      "blocker_class": "THEOREM_GAP",
+      "discriminator_potential": 4,
+      "falsification_value": 4,
+      "blocker_leverage": 4,
+      "empirical_proximity": 3,
+      "rationale": "Weak-field closure has cross-pillar leverage and high blocker conversion utility."
+    },
+    {
+      "rank": 4,
+      "row_id": "ROW-PILLAR-QFT-001",
+      "lane": "QFT_DERIVATION_CHAIN",
+      "blocker_class": "THEOREM_GAP",
+      "discriminator_potential": 4,
+      "falsification_value": 4,
+      "blocker_leverage": 3,
+      "empirical_proximity": 2,
+      "rationale": "QFT route discriminates scope boundaries and supports seam decisions."
+    },
+    {
+      "rank": 5,
+      "row_id": "ROW-PILLAR-STAT-001",
+      "lane": "STAT_DERIVATION_CHAIN",
+      "blocker_class": "THEOREM_GAP",
+      "discriminator_potential": 3,
+      "falsification_value": 4,
+      "blocker_leverage": 3,
+      "empirical_proximity": 3,
+      "rationale": "STAT closure improves residual-law extraction and baseline comparisons."
+    }
+  ],
+  "bounded_stop_rule": {
+    "max_no_conversion_cycles": 1,
+    "rule": "AFTER_ONE_NONCONVERTING_CYCLE_ROUTE_TO_PATH_FALSIFICATION_OR_RETIREMENT"
+  },
+  "non_claim_boundary": "Repository-local ranked discovery priority queue only; no scientific adequacy claim."
+}

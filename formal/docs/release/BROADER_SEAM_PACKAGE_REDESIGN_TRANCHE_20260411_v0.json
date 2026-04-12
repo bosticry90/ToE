@@ -1,0 +1,35 @@
+{
+  "schema_id": "BROADER_SEAM_PACKAGE_REDESIGN_TRANCHE_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T20:05:00Z",
+  "attack_class": "BROADER_SEAM_PACKAGE_REDESIGN",
+  "tranche_id": "SEAM-REDESIGN-001",
+  "target_seam_package": {
+    "name": "QFT_GR_REACTIVATION_PACKAGE",
+    "row_id": "ROW-SEAM-QFT-GR-001",
+    "blocker_class": "SEAM_INTEGRATION_GAP",
+    "closure_gate": "formal/python/tests/test_toe_qft_gr_seam_reactivation_objective_gate.py",
+    "required_closure_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json"
+  },
+  "structural_redesign_hypothesis": {
+    "statement": "The current seam package under-couples QFT-GR reactivation to blocker-facing closure; introducing a tighter bridge contract between seam artifact production and closure-gate discharge should improve blocker-facing movement.",
+    "proposed_structural_change": "Promote seam package from lane-local evidence tracking to a closure-coupled package contract with explicit blocker delta coupling and fail-closed discharge checks.",
+    "expected_behavior_change": "If coupling is corrected, at least one blocker-facing metric should move within one bounded tranche."
+  },
+  "blocker_facing_success_contract": {
+    "success": "SEAM_INTEGRATION_GAP_DELTA_LT_0_OR_THEOREM_GAP_DELTA_LT_0_OR_ROW_SUCCESS_COUNT_GT_0_OR_NAMED_BLOCKER_CLASS_STATE_CHANGED",
+    "failure": "NO_BLOCKER_FACING_MOVEMENT_AFTER_ONE_BOUNDED_SEAM_REDESIGN_ATTEMPT",
+    "inconclusive": "REQUIRED_SEAM_PACKAGE_INPUTS_MISSING"
+  },
+  "bounded_stop_rule": {
+    "max_attempts": 1,
+    "rule": "AFTER_ONE_SEAM_REDESIGN_ATTEMPT_WITHOUT_BLOCKER_MOVEMENT_ESCALATE_ATTACK_CLASS"
+  },
+  "required_inputs": {
+    "blocker_closure_map_pointer": "formal/output/reports/governance_blocker_closure_map_20260410_v0.json",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_pointer": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_pointer": "formal/output/reports/physics_progress_ledger_v0.json"
+  },
+  "non_claim_boundary": "Repository-local broader seam package redesign declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,63 @@
+{
+  "schema_id": "MONITORING_PROTOCOL_20260411_v0",
+  "stage": "monitoring_and_continuation_protocol",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "purpose": "Establish monitoring protocol for recompute surface completion and next-step decision rule",
+  "current_state": {
+    "authority_promotion": "COMPLETED_AND_REGISTERED",
+    "trigger_propagation": "CONFIRMED_ACROSS_3_SURFACES",
+    "recompute_completion": "PENDING_ALL_3_SURFACES",
+    "cascade_materiality": "UNDECIDED_AWAITING_OUTPUTS",
+    "correct_posture": "MONITOR_OBSERVE_THEN_RULE"
+  },
+  "monitoring_targets": [
+    {
+      "surface_id": "qm_seam_coherence_under_revised_blocker",
+      "monitor_path": "formal/output/recompute/qm_seam_coherence_under_revised_blocker.json",
+      "current_status": "PENDING_RECOMPUTE",
+      "completion_signal": "status changes from PENDING_RECOMPUTE to COMPLETED or trigger shows computed_state",
+      "materiality_indicator": "qm_coherence_metric values show measurable change vs. pre-promotion baseline"
+    },
+    {
+      "surface_id": "ledger_artifact_transport_under_revised_blocker",
+      "monitor_path": "formal/output/recompute/ledger_artifact_transport_under_revised_blocker.json",
+      "current_status": "PENDING_RECOMPUTE",
+      "completion_signal": "status changes or computed transport outputs appear",
+      "materiality_indicator": "ledger transport state/flux patterns differ from prior state"
+    },
+    {
+      "surface_id": "blocker_authority_transport_surface",
+      "monitor_path": "formal/output/recompute/blocker_authority_transport_surface.json",
+      "current_status": "PENDING_RECOMPUTE",
+      "completion_signal": "triggers show completed status or computed transport results",
+      "materiality_indicator": "blocker-to-authority propagation patterns or timing changed"
+    }
+  ],
+  "continuation_decision_rule": {
+    "trigger_event": "ANY recompute surface leaves PENDING_RECOMPUTE state OR any surface shows computed_state/outputs",
+    "continuation_action": "Rerun POST_RECOMPUTE_OBSERVATION_20260411_v0 (Turn 15) generator against updated surface state",
+    "decision_tree": [
+      {
+        "condition": "At least one surface completed AND has computed outputs showing state change",
+        "assessment": "Rerun Turn 15 ruling logic",
+        "expected_outcome": "MATERIAL_CASCADE_CONFIRMED (if outputs show measurable downstream consequence)",
+        "next_layer": "Document cascade consequence, promote findings to broader analysis"
+      },
+      {
+        "condition": "All surfaces completed AND none show computed outputs or show completion with no state change",
+        "assessment": "Rerun Turn 15 ruling logic",
+        "expected_outcome": "TRIGGER_PROPAGATION_ONLY_AUTHORITY_LOCAL",
+        "next_layer": "Document authority-local result, confirm promotion remains bounded"
+      },
+      {
+        "condition": "Mixed: some surfaces completed, others still pending",
+        "assessment": "Partial recompute completion; insufficient for final ruling",
+        "expected_outcome": "RECOMPUTE_PARTIALLY_COMPLETE_CONTINUE_MONITORING",
+        "next_layer": "Continue monitoring until all surfaces reach terminal state"
+      }
+    ]
+  },
+  "no_execution_until": "At least one recompute surface moves beyond PENDING_RECOMPUTE state",
+  "monitoring_frequency": "As-needed observation; no polling schedule required",
+  "layer_description": "Monitoring protocol establishing observation posture and decision rule for when recompute outputs become available. No execution layers beneath this point until completion signal arrives. Clean wait-and-observe discipline."
+}

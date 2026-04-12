@@ -1,0 +1,62 @@
+{
+  "schema_id": "DEEPER_BLOCKER_DEFINITION_REVIEW_20260411_v0",
+  "review_id": "DBDR-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "review_basis": "PROGRAM_STATE_CONVERSION_REVIEW_PRESCRIBED_DEEPER_BLOCKER_DEFINITION_REVIEW",
+  "required_inputs": {
+    "program_state_conversion_review_report": "formal/output/reports/program_state_conversion_review_20260411_v0.json"
+  },
+  "current_blocker_regime": {
+    "authoritative_signal": "BLOCKER_TOKEN_CHANGE_REMAINS_AUTHORITATIVE",
+    "signal_status": "NEVER_FIRED_IN_ANY_EXECUTION",
+    "blocker_definition_implicit": "LEDGER_STATE_CHANGE_ATTRIBUTABLE_TO_SINGLE_BLOCKER_TOKEN_FLUX",
+    "defect_assessment": "CURRENT_DEFINITION_TOO_STRICT_OR_WRONG_ARTIFACT_MONITORED"
+  },
+  "diagnostic_signal_available": {
+    "diagnostic_signal": "SEAM_INTEGRATION_COVERAGE_DELTA_GT_0",
+    "signal_status": "FIRED_IN_BOUNDED_PILOT",
+    "blocker_definition_implicit": "TRANSPORT_WITNESS_BOUND_AND_BRIDGE_OBJECT_MATERIALIZED_FOR_SEAM_ROW"
+  },
+  "review_questions": [
+    {
+      "question_id": "Q1",
+      "question": "What exact blocker definition is currently failing to register meaningful state conversion?",
+      "default_answer": "BLOCKER_TOKEN_CHANGE_DEFINITION_TOO_STRICT_OR_MONITORING_WRONG_ARTIFACT",
+      "rationale": "BLOCKER_TOKEN_CHANGE never fired; must review whether definition or artifact is at fault."
+    },
+    {
+      "question_id": "Q2",
+      "question": "Which measurable event should count as blocker movement that is stricter than the diagnostic signal but broader than the currently never-triggered authoritative signal?",
+      "default_answer": "REVISED_BLOCKER_DEF_SEAM_ROW_STATE_TRANSITION_WITH_TRANSPORT_COHERENCE_CHECK",
+      "rationale": "Need middle ground between diagnostic (too loose) and authoritative (never fires)."
+    },
+    {
+      "question_id": "Q3",
+      "question": "What one bounded follow-on packet would test that revised blocker definition once?",
+      "default_answer": "ONE_SEAM_ROW_BLOCKER_DEFINITION_TEST_UNDER_REVISED_CRITERIA",
+      "rationale": "Single bounded test of revised definition before any regime-wide promotion."
+    }
+  ],
+  "review_policy": {
+    "eligible_q1_answers": [
+      "BLOCKER_TOKEN_CHANGE_DEFINITION_TOO_STRICT_OR_MONITORING_WRONG_ARTIFACT",
+      "BLOCKER_TOKEN_CHANGE_DEFINITION_WRONG",
+      "BLOCKER_MONITORING_TARGETING_WRONG_ARTIFACT"
+    ],
+    "eligible_q2_answers": [
+      "REVISED_BLOCKER_DEF_SEAM_ROW_STATE_TRANSITION_WITH_TRANSPORT_COHERENCE_CHECK",
+      "REVISED_BLOCKER_DEF_BRIDGING_EVENT_WITH_LEDGER_CORRELATION",
+      "REVISED_BLOCKER_DEF_QM_STAT_UNIFIED_THEOREM_SURFACE_DELTA"
+    ],
+    "eligible_q3_answers": [
+      "ONE_SEAM_ROW_BLOCKER_DEFINITION_TEST_UNDER_REVISED_CRITERIA",
+      "SUBSYSTEM_BLOCKER_DEFINITION_TEST_BOUNDED_ONCE",
+      "BOUNDED_MULTIPLE_ROW_BLOCKER_DEFINITION_COMPARISON_TEST"
+    ],
+    "default_q1_answer": "BLOCKER_TOKEN_CHANGE_DEFINITION_TOO_STRICT_OR_MONITORING_WRONG_ARTIFACT",
+    "default_q2_answer": "REVISED_BLOCKER_DEF_SEAM_ROW_STATE_TRANSITION_WITH_TRANSPORT_COHERENCE_CHECK",
+    "default_q3_answer": "ONE_SEAM_ROW_BLOCKER_DEFINITION_TEST_UNDER_REVISED_CRITERIA",
+    "no_loop_rule": "ONE_DEEPER_BLOCKER_DEFINITION_REVIEW_ONLY",
+    "bounded_follow_on_once_only_policy": true
+  }
+}

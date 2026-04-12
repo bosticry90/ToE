@@ -1,0 +1,29 @@
+{
+  "schema_id": "PROOF_DEBT_CLUSTER_BRANCH_RULING_PDC_TRACEABILITY_EMU1_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T21:15:00Z",
+  "cluster_id": "PDC-TRACEABILITY-EMU1-01",
+  "ruling_scope": "POST_GATE_COMPLETION_PLUS_SINGLE_MERITS_RERUN",
+  "required_preconditions": {
+    "gate_surface_completion_tranche": "formal/output/reports/proof_debt_emu1_gate_surface_completion_tranche_report_20260411_v0.json",
+    "discharge_tranche_report": "formal/output/reports/proof_debt_first_formal_campaign_discharge_tranche_report_20260411_v0.json",
+    "discharge_decision_report": "formal/output/reports/proof_debt_first_formal_campaign_discharge_decision_20260411_v0.json",
+    "single_rerun_policy": "SATISFIED"
+  },
+  "branch_ruling_contract": {
+    "ruling_if_full_discharge_no_blocker_move": "CLUSTER_FULLY_DISCHARGED_NO_BLOCKER_MOVE",
+    "allocation_decision": "REPRIORITIZE_CLUSTER_FOR_BLOCKER_FACING_WORK",
+    "retention_role": "RETAIN_AS_SUPPORTING_FORMAL_HYGIENE_SURFACE",
+    "rerun_policy": "NO_FURTHER_RERUNS_FOR_THIS_CLUSTER_UNDER_CURRENT_CAMPAIGN"
+  },
+  "next_cluster_selection_filter": {
+    "required_direct_impact_signals": [
+      "plausible_theorem_gap_delta_lt_0_path",
+      "or_plausible_seam_integration_gap_delta_lt_0_path",
+      "or_plausible_global_row_success_increment_path",
+      "or_explicit_blocker_state_token_transition_path"
+    ],
+    "deprioritized_signal": "traceability_cleanup_only_without_state_transition_plausibility"
+  },
+  "non_claim_boundary": "Repository-local branch ruling declaration only; no scientific adequacy claim."
+}

@@ -35,6 +35,9 @@ Every tranche record must include:
 - `mode`
 - `scientific_delta_class`
 - `scientific_delta_summary`
+- `target_blocker_state_change`
+- `actual_blocker_state_change`
+- `progress_classification`
 - `predecessor`
 - `stop_condition`
 - `non_claim_boundary`
@@ -66,6 +69,17 @@ Allowed transition posture values:
 - `DONE`
 - `PAUSED`
 
+## Progress Classification Semantics
+Allowed `progress_classification` values:
+- `PROGRESS`
+- `MAINTENANCE`
+- `REWORK_ROUTED`
+
+Classification rule:
+- `PROGRESS` requires blocker-state movement evidence in `actual_blocker_state_change`.
+- `MAINTENANCE` is valid when governance/control work is complete without blocker movement.
+- `REWORK_ROUTED` is required when branch policy routes to theorem-gap or blocker-facing rework.
+
 ## Compatibility Rule
 Existing WS/T-cycle artifacts remain valid while migration is in progress, but any newly opened tranche must be represented as a Unified Tranche record.
 
@@ -74,6 +88,8 @@ A tranche is execution-eligible only if:
 - its mode is one of the four allowed values,
 - all required fields are present,
 - `scientific_delta_class` is one of the allowed scientific classes,
+- `target_blocker_state_change` and `actual_blocker_state_change` are explicit,
+- `progress_classification` is one of `PROGRESS`, `MAINTENANCE`, or `REWORK_ROUTED`,
 - `gate_test` and `evidence_artifact` paths exist,
 - `non_claim_boundary` is explicit.
 

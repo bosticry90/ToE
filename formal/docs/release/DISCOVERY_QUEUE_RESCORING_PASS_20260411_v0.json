@@ -1,0 +1,38 @@
+{
+  "schema_id": "DISCOVERY_QUEUE_RESCORING_PASS_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:59:59Z",
+  "required_inputs": {
+    "discovery_queue_review_pass_report": "formal/output/reports/discovery_queue_review_pass_report_20260411_v0.json",
+    "discovery_priority_queue_report": "formal/output/reports/discovery_priority_queue_report_20260411_v0.json"
+  },
+  "rescoring_policy": {
+    "expected_review_route": "EXECUTE_ONE_BOUNDED_QUEUE_RESCORING",
+    "rank_gap_threshold": 3,
+    "max_total_gap_adjustment_points": 2,
+    "bounded_factor_adjustments": {
+      "BLOCKER_LEVERAGE_NOT_DOMINANT": {
+        "mode": "REWEIGHT",
+        "gap_adjustment": 1,
+        "evidence_rule": "RANK3_BLOCKER_LEVERAGE_PRESENT"
+      },
+      "EMPIRICAL_PROXIMITY_MODERATE": {
+        "mode": "CLARIFY",
+        "gap_adjustment": 1,
+        "evidence_rule": "RANK3_EMPIRICAL_PROXIMITY_PRESENT"
+      },
+      "RANK3_RANK4_NEAR_TIE": {
+        "mode": "CLARIFY",
+        "gap_adjustment": 0,
+        "evidence_rule": "RANK3_AND_RANK4_SCORES_PRESENT"
+      }
+    },
+    "no_loop_rule": "ONE_BOUNDED_QUEUE_RESCORING_PASS_ONLY"
+  },
+  "terminal_routes": [
+    "ACTIVATE_NEXT_RANKED_SEAM",
+    "HOLD_QUEUE_AFTER_RESCORING",
+    "QUEUE_RESCORING_INSUFFICIENT"
+  ],
+  "non_claim_boundary": "Repository-local bounded queue rescoring declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,35 @@
+{
+  "schema_id": "EXTERNAL_DISCRIMINATIVE_BENCHMARK_PACKET_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T20:20:00Z",
+  "attack_class": "EXTERNAL_DISCRIMINATIVE_BENCHMARK_PROGRAM",
+  "packet_id": "EXT-BENCH-001",
+  "external_benchmark": {
+    "benchmark_id": "OV-BM-02",
+    "benchmark_name": "linewidth_quadrature_composition_benchmark",
+    "benchmark_tool": "formal.python.tools.ovbm02_linewidth_quadrature_composition_benchmark",
+    "benchmark_lock_path": "formal/markdown/locks/benchmarks/OV-BM-02_linewidth_quadrature_composition.md"
+  },
+  "comparison_question": "Does the current condition_B-limited surviving route remain structurally credible when compared against the external quadrature-separation benchmark, in a way that changes blocker-facing posture?",
+  "structural_hypothesis": {
+    "statement": "If route credibility survives external benchmark discrimination, then blocker-facing posture should improve or a dead-end should be decisively eliminated.",
+    "comparison_focus": "condition_B-limited survival versus external mechanism-separation benchmark",
+    "expected_effect": "material posture update reflected in blocker-facing metrics"
+  },
+  "blocker_facing_success_contract": {
+    "success": "BLOCKER_CLASS_STATE_CHANGED_OR_THEOREM_GAP_DELTA_LT_0_OR_ROW_SUCCESS_COUNT_GT_0_OR_DECISIVE_ROUTE_ELIMINATION_OR_MATERIAL_ROUTE_CREDIBILITY_GAIN",
+    "failure": "NO_BLOCKER_FACING_MOVEMENT_AND_NO_MATERIAL_EXTERNAL_DISCRIMINATIVE_EFFECT",
+    "inconclusive": "BENCHMARK_ARTIFACT_MISSING_OR_COMPARISON_INPUTS_INCOMPLETE"
+  },
+  "required_inputs": {
+    "simulation_packet_v3_pointer": "formal/output/reports/simulation_first_falsification_packet_report_20260411_v3.json",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_pointer": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_pointer": "formal/output/reports/physics_progress_ledger_v0.json"
+  },
+  "bounded_stop_rule": {
+    "max_attempts": 1,
+    "rule": "AFTER_ONE_EXTERNAL_BENCHMARK_PACKET_WITHOUT_BLOCKER_MOVEMENT_REQUIRE_FUNDAMENTAL_STRATEGY_RETHINK"
+  },
+  "non_claim_boundary": "Repository-local external discriminative benchmark packet declaration only; no scientific adequacy claim."
+}

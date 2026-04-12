@@ -1,0 +1,30 @@
+{
+  "schema_id": "PROOF_DEBT_ACTIVE_CLUSTER_SURFACE_TRANCHE_EMU1_MICRO21_AUTHORIZATION_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T22:25:00Z",
+  "cluster_id": "PDC-EMU1-DISTRIBUTIONAL-AUTH-01",
+  "cluster_name": "em_u1_distributional_authorization_surface",
+  "tranche_id": "PDFC-EMU1-SURFACE-TRANCHE-001",
+  "target_surface": {
+    "surface_id": "EMU1-MICRO21-AUTHORIZATION-GATE",
+    "surface_path": "formal/python/tests/test_em_u1_micro21_distributional_lane_authorization_scaffold_gate.py",
+    "surface_kind": "gate_test"
+  },
+  "required_inputs": {
+    "focus_report": "formal/output/reports/proof_debt_active_cluster_next_tranche_focus_report_20260411_v0.json",
+    "packet_report": "formal/output/reports/proof_debt_first_formal_campaign_packet_report_20260411_v0.json",
+    "discharge_tranche_report": "formal/output/reports/proof_debt_first_formal_campaign_discharge_tranche_report_20260411_v0.json",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_pointer": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_pointer": "formal/output/reports/physics_progress_ledger_v0.json"
+  },
+  "movement_judgment_policy": {
+    "theorem_gap_state_change_signal": "theorem_gap_delta_lt_0",
+    "seam_integration_state_change_signal": "seam_integration_gap_delta_lt_0",
+    "global_row_success_state_change_signal": "global_row_success_count_gt_0",
+    "blocker_state_token_signal": "progress_classification_equals_PROGRESS",
+    "composite_success_rule": "any_movement_signal_true",
+    "no_change_rule": "all_movement_signals_false"
+  },
+  "non_claim_boundary": "Repository-local bounded active-surface tranche declaration; no scientific adequacy claim."
+}

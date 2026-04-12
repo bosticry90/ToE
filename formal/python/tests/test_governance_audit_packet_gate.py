@@ -20,6 +20,107 @@ STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
 CHECKLIST_PATH = REPO_ROOT / "Canonical Verification Checklist.md"
 DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_AUDIT_PACKET_20260410_v0.md"
 PACKET_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_audit_packet_20260410_v0.json"
+EXEC_PROGRAM_DECLARATION_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "TOE_ENFORCED_EXECUTION_PROGRAM_20260411_v0.md"
+)
+EXEC_PROGRAM_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "toe_enforced_execution_program_20260411_v0.json"
+)
+RUNTIME_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "RUNTIME_MEASUREMENT_INTEGRITY_POLICY_20260411_v0.md"
+)
+RUNTIME_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "runtime_measurement_integrity_20260411_v0.json"
+)
+PACKET41_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "PACKET41_SUCCESSOR_DECISION_ENFORCEMENT_20260411_v0.md"
+)
+PACKET41_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "packet41_successor_decision_enforcement_20260411_v0.json"
+)
+D_CONSOLIDATION_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_SINGLE_SOURCE_CONSOLIDATION_POLICY_20260411_v0.md"
+)
+D_CONSOLIDATION_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "governance_single_source_consolidation_20260411_v0.json"
+)
+OBS_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_SCALE_OBSERVABILITY_POLICY_20260411_v0.md"
+)
+OBS_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "governance_scale_observability_20260411_v0.json"
+)
+PARITY_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_CROSS_PLATFORM_PARITY_POLICY_20260411_v0.md"
+)
+PARITY_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "governance_cross_platform_parity_20260411_v0.json"
+)
+SCIENCE_BASELINE_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "SCIENCE_GLOBAL_COMPLETION_BASELINE_20260411_v0.md"
+)
+SCIENCE_BASELINE_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "science_global_completion_baseline_20260411_v0.json"
+)
+THEOREM_WAVE_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "THEOREM_GAP_REDUCTION_WAVE_20260411_v0.md"
+)
+THEOREM_WAVE_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "theorem_gap_reduction_wave_20260411_v0.json"
+)
+THEOREM_LINKAGE_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "THEOREM_GAP_EXECUTION_LINKAGE_20260411_v0.md"
+)
+THEOREM_LINKAGE_REGISTRY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "THEOREM_GAP_TRANCHE_LINKAGE_REGISTRY_20260411_v0.json"
+)
+THEOREM_LINKAGE_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "theorem_gap_execution_linkage_20260411_v0.json"
+)
+THEOREM_ROW_TREND_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "THEOREM_GAP_ROW_OUTCOME_TREND_20260411_v0.md"
+)
+THEOREM_ROW_TREND_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "theorem_gap_row_outcome_trend_20260411_v0.json"
+)
+THEOREM_SINGLE_ROW_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "THEOREM_GAP_SINGLE_ROW_EXECUTION_20260411_v0.md"
+)
+THEOREM_SINGLE_ROW_TRANCHE_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "THEOREM_GAP_SINGLE_ROW_EXECUTION_TRANCHE_20260411_v0.json"
+)
+THEOREM_SINGLE_ROW_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "theorem_gap_single_row_execution_20260411_v0.json"
+)
+THEOREM_QM_REWORK_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "THEOREM_GAP_QM_REWORK_TRANCHE_20260411_v0.md"
+)
+THEOREM_QM_REWORK_TRANCHE_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "THEOREM_GAP_QM_REWORK_TRANCHE_20260411_v0.json"
+)
+THEOREM_QM_REWORK_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "theorem_gap_qm_rework_tranche_20260411_v0.json"
+)
+THEOREM_QM_SUBTARGET_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "THEOREM_GAP_QM_SUBTARGET_TRANCHE_20260411_v0.md"
+)
+THEOREM_QM_SUBTARGET_TRANCHE_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "THEOREM_GAP_QM_SUBTARGET_TRANCHE_20260411_v0.json"
+)
+THEOREM_QM_SUBTARGET_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "theorem_gap_qm_subtarget_tranche_20260411_v0.json"
+)
+R0_R6_CLOSEOUT_POLICY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "R0_R6_OBJECTIVE_QUALITY_CLOSEOUT_20260411_v0.md"
+)
+R0_R6_CLOSEOUT_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "r0_r6_objective_quality_closeout_20260411_v0.json"
+)
+CLOSEOUT_REPORT_PATH = (
+    REPO_ROOT / "formal" / "output" / "reports" / "toe_enforced_execution_closeout_20260411_v0.json"
+)
+GOVERNANCE_SUITE_PATH = REPO_ROOT / "governance_suite.ps1"
+CI_PATH = REPO_ROOT / ".github" / "workflows" / "ci.yml"
 
 REQUIRED_BLOCKER_CLASSES = {
     "THEOREM_GAP",
@@ -28,6 +129,23 @@ REQUIRED_BLOCKER_CLASSES = {
     "GOVERNANCE_GUARDRAIL",
     "EVIDENCE_ALIGNMENT_GAP",
 }
+
+REQUIRED_EXECUTION_RISK_CLASSES = {
+    "packet41_seam_closure_blocker",
+    "runtime_measurement_fidelity_gap",
+    "governance_dual_source_drift",
+    "governance_scale_operational_mass",
+}
+
+REQUIRED_EXECUTION_PHASE_ORDER = [
+    "PHASE_A_PROGRAM_LOCK",
+    "PHASE_B_RUNTIME_MEASUREMENT_INTEGRITY",
+    "PHASE_C_PACKET41_SUCCESSOR_DECISION_ENFORCEMENT",
+    "PHASE_D_GOVERNANCE_SINGLE_SOURCE_CONSOLIDATION",
+    "PHASE_E_SCALE_OBSERVABILITY_AND_COST_CONTROL",
+    "PHASE_F_CROSS_PLATFORM_PARITY",
+    "PHASE_G_CLOSEOUT_AND_AUTHORITY_SYNC",
+]
 
 
 def _read(path: Path) -> str:
@@ -47,6 +165,403 @@ def _json(path: Path) -> dict:
 def test_governance_audit_packet_files_exist() -> None:
     assert DECLARATION_PATH.exists(), "Missing governance audit packet declaration."
     assert PACKET_PATH.exists(), "Missing governance audit packet JSON."
+
+
+def test_toe_enforced_execution_program_files_exist() -> None:
+    assert EXEC_PROGRAM_DECLARATION_PATH.exists(), "Missing enforced execution program declaration."
+    assert EXEC_PROGRAM_REPORT_PATH.exists(), "Missing enforced execution program report JSON."
+
+
+def test_toe_enforced_execution_program_contract() -> None:
+    declaration_text = _read(EXEC_PROGRAM_DECLARATION_PATH)
+    report_payload = _json(EXEC_PROGRAM_REPORT_PATH)
+
+    assert "TOE_ENFORCED_EXECUTION_PROGRAM_20260411_v0" in declaration_text
+    assert "ACTIVE_NONLIVE_NONCLAIM" in declaration_text
+    assert (
+        "formal/output/reports/toe_enforced_execution_program_20260411_v0.json"
+        in declaration_text
+    )
+    assert (
+        "formal/python/tests/test_governance_audit_packet_gate.py"
+        in declaration_text
+    )
+
+    assert report_payload.get("schema_id") == "TOE_ENFORCED_EXECUTION_PROGRAM_20260411_v0"
+    assert report_payload.get("status") == "ACTIVE_NONLIVE_NONCLAIM"
+
+    risk_classes = set(report_payload.get("critical_risk_classes", []))
+    assert risk_classes == REQUIRED_EXECUTION_RISK_CLASSES
+
+    phase_order = report_payload.get("phase_order", [])
+    assert phase_order == REQUIRED_EXECUTION_PHASE_ORDER
+
+    gate_requirements = report_payload.get("phase_gate_requirements", {})
+    required_gate_flags = {
+        "machine_checkable_artifact_required",
+        "explicit_pass_fail_required",
+        "fail_closed_on_missing_or_contradictory_evidence",
+        "runtime_claim_requires_measured_quality",
+        "promotion_requires_blocker_state_change_evidence",
+        "authority_update_requires_all_phase_gates",
+    }
+    assert set(gate_requirements.keys()) == required_gate_flags
+    assert all(gate_requirements.values()), "All phase-gate enforcement flags must be true."
+
+    required_pointers = report_payload.get("required_pointers", {})
+    assert required_pointers.get("declaration_pointer") == (
+        "formal/docs/release/TOE_ENFORCED_EXECUTION_PROGRAM_20260411_v0.md"
+    )
+    assert required_pointers.get("governance_gate_pointer") == (
+        "formal/python/tests/test_governance_audit_packet_gate.py"
+    )
+
+    summary = report_payload.get("summary", {})
+    assert summary.get("program_lock_active") is True
+    assert summary.get("next_phase") == "PHASE_B_RUNTIME_MEASUREMENT_INTEGRITY"
+    assert summary.get("execution_mode") == "ENFORCE_THEN_ADVANCE"
+
+
+def test_toe_enforced_execution_phase_reports_and_closeout() -> None:
+    for path in [
+        RUNTIME_POLICY_PATH,
+        RUNTIME_REPORT_PATH,
+        PACKET41_POLICY_PATH,
+        PACKET41_REPORT_PATH,
+        D_CONSOLIDATION_POLICY_PATH,
+        D_CONSOLIDATION_REPORT_PATH,
+        OBS_POLICY_PATH,
+        OBS_REPORT_PATH,
+        PARITY_POLICY_PATH,
+        PARITY_REPORT_PATH,
+        SCIENCE_BASELINE_POLICY_PATH,
+        SCIENCE_BASELINE_REPORT_PATH,
+        THEOREM_WAVE_POLICY_PATH,
+        THEOREM_WAVE_REPORT_PATH,
+        THEOREM_LINKAGE_POLICY_PATH,
+        THEOREM_LINKAGE_REGISTRY_PATH,
+        THEOREM_LINKAGE_REPORT_PATH,
+        THEOREM_ROW_TREND_POLICY_PATH,
+        THEOREM_ROW_TREND_REPORT_PATH,
+        THEOREM_SINGLE_ROW_POLICY_PATH,
+        THEOREM_SINGLE_ROW_TRANCHE_PATH,
+        THEOREM_SINGLE_ROW_REPORT_PATH,
+        THEOREM_QM_REWORK_POLICY_PATH,
+        THEOREM_QM_REWORK_TRANCHE_PATH,
+        THEOREM_QM_REWORK_REPORT_PATH,
+        THEOREM_QM_SUBTARGET_POLICY_PATH,
+        THEOREM_QM_SUBTARGET_TRANCHE_PATH,
+        THEOREM_QM_SUBTARGET_REPORT_PATH,
+        R0_R6_CLOSEOUT_POLICY_PATH,
+        R0_R6_CLOSEOUT_REPORT_PATH,
+        CLOSEOUT_REPORT_PATH,
+    ]:
+        assert path.exists(), f"Missing required phase artifact: {path}"
+
+    runtime_payload = _json(RUNTIME_REPORT_PATH)
+    assert runtime_payload.get("schema_id") == "RUNTIME_MEASUREMENT_INTEGRITY_20260411_v0"
+    assert runtime_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    runtime_objective = runtime_payload.get("objective_quality", {})
+    assert runtime_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
+    assert set(runtime_objective.get("criteria", {}).keys()) == {
+        "sample_count_threshold_satisfied",
+        "command_hash_stability_satisfied",
+        "runtime_key_coverage_satisfied",
+        "runtime_drift_threshold_satisfied",
+        "runtime_history_pointer_consistency_satisfied",
+    }
+    runtime_inputs = runtime_objective.get("inputs", {})
+    assert runtime_inputs.get("minimum_sample_count_required") == 3
+    assert runtime_inputs.get("maximum_runtime_drift_percent_allowed") == 25.0
+    assert isinstance(runtime_inputs.get("runtime_history_pointer"), str)
+
+    packet41_payload = _json(PACKET41_REPORT_PATH)
+    assert packet41_payload.get("schema_id") == "PACKET41_SUCCESSOR_DECISION_ENFORCEMENT_20260411_v0"
+    assert packet41_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    packet41_objective = packet41_payload.get("objective_quality", {})
+    assert packet41_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
+    assert set(packet41_objective.get("criteria", {}).keys()) == {
+        "cycle_outcome_transition_evidenced",
+        "cycle02_numeric_values_materialized",
+        "cycle02_threshold_profile_consistent",
+        "hold_alignment_with_review_failure",
+        "cycle01_to_cycle02_admissibility_improved",
+    }
+    packet41_inputs = packet41_objective.get("inputs", {})
+    assert packet41_inputs.get("cycle01_outcome") == "HOLD_RETAINED_DUE_TO_MISSING_ADMISSIBLE_NUMERIC_INPUTS_v0"
+    assert packet41_inputs.get("cycle02_outcome") == "HOLD_RETAINED_DUE_TO_REVIEW_LAYER_FAILURE_v0"
+    assert isinstance(packet41_inputs.get("cycle02_required_value_keys"), list)
+
+    consolidation_payload = _json(D_CONSOLIDATION_REPORT_PATH)
+    assert consolidation_payload.get("schema_id") == "GOVERNANCE_SINGLE_SOURCE_CONSOLIDATION_20260411_v0"
+    assert consolidation_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    consolidation_objective = consolidation_payload.get("objective_quality", {})
+    assert consolidation_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
+    assert set(consolidation_objective.get("criteria", {}).keys()) == {
+        "selector_count_matches_manifest_expected",
+        "selector_hash_matches_manifest_expected",
+        "manifest_group_equals_selector_output",
+        "selector_output_has_no_duplicates",
+    }
+    consolidation_inputs = consolidation_objective.get("inputs", {})
+    assert isinstance(consolidation_inputs.get("observed_count"), int)
+    assert isinstance(consolidation_inputs.get("observed_sha256"), str)
+
+    obs_payload = _json(OBS_REPORT_PATH)
+    assert obs_payload.get("schema_id") == "GOVERNANCE_SCALE_OBSERVABILITY_20260411_v0"
+    assert obs_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    obs_objective = obs_payload.get("objective_quality", {})
+    assert obs_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
+    assert set(obs_objective.get("criteria", {}).keys()) == {
+        "runtime_history_multi_sample_satisfied",
+        "percentile_metrics_materialized",
+        "budget_breach_analysis_materialized",
+        "invalidation_telemetry_quality_satisfied",
+        "runtime_flake_proxy_within_bound",
+    }
+    obs_inputs = obs_objective.get("inputs", {})
+    assert obs_inputs.get("minimum_history_samples_required") == 3
+    assert isinstance(obs_inputs.get("runtime_cv"), dict)
+    assert isinstance(obs_inputs.get("budget_breach_analysis"), dict)
+
+    parity_payload = _json(PARITY_REPORT_PATH)
+    assert parity_payload.get("schema_id") == "GOVERNANCE_CROSS_PLATFORM_PARITY_20260411_v0"
+    assert parity_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    parity_objective = parity_payload.get("objective_quality", {})
+    assert parity_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
+    parity_inputs = parity_objective.get("inputs", {})
+    assert parity_inputs.get("minimum_parity_tests_required") == 10
+    assert isinstance(parity_inputs.get("parity_scope_count"), int)
+
+    science_baseline_payload = _json(SCIENCE_BASELINE_REPORT_PATH)
+    assert science_baseline_payload.get("schema_id") == "SCIENCE_GLOBAL_COMPLETION_BASELINE_20260411_v0"
+    assert science_baseline_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    science_objective = science_baseline_payload.get("objective_quality", {})
+    assert science_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
+    assert set(science_objective.get("criteria", {}).keys()) == {
+        "ledger_trend_blocker_counts_consistent",
+        "theorem_gap_positive",
+        "seam_integration_gap_positive",
+        "parity_drift_positive",
+        "roadmap_release_gate_truth_pinned",
+    }
+    completion_assessment = science_baseline_payload.get("completion_assessment", {})
+    assert completion_assessment.get("governance_objective_complete") is True
+    assert completion_assessment.get("science_global_complete") in {True, False}
+    assert completion_assessment.get("global_objective_complete") in {True, False}
+
+    theorem_wave_payload = _json(THEOREM_WAVE_REPORT_PATH)
+    assert theorem_wave_payload.get("schema_id") == "THEOREM_GAP_REDUCTION_WAVE_20260411_v0"
+    assert theorem_wave_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    theorem_objective = theorem_wave_payload.get("objective_quality", {})
+    assert theorem_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
+    assert set(theorem_objective.get("criteria", {}).keys()) == {
+        "theorem_gap_count_reduced",
+        "theorem_gap_delta_negative",
+        "trend_net_delta_negative",
+        "ledger_progress_classification_true_progress",
+        "theorem_gap_rows_have_artifact_and_gate_coverage",
+    }
+    theorem_inputs = theorem_objective.get("inputs", {})
+    assert isinstance(theorem_inputs.get("theorem_gap_prior"), int)
+    assert isinstance(theorem_inputs.get("theorem_gap_current"), int)
+    assert isinstance(theorem_inputs.get("theorem_gap_delta"), int)
+    assert isinstance(theorem_inputs.get("theorem_gap_row_ids"), list)
+
+    theorem_linkage_registry = _json(THEOREM_LINKAGE_REGISTRY_PATH)
+    assert theorem_linkage_registry.get("schema_id") == "THEOREM_GAP_TRANCHE_LINKAGE_REGISTRY_20260411_v0"
+    registry_entries = theorem_linkage_registry.get("entries", [])
+    assert isinstance(registry_entries, list)
+    assert len(registry_entries) >= 1
+    for entry in registry_entries:
+        assert isinstance(entry.get("tranche_id"), str) and entry["tranche_id"]
+        assert isinstance(entry.get("target_row"), str) and entry["target_row"]
+        assert entry.get("expected_blocker_state_change") == "NEGATIVE_THEOREM_GAP_DELTA_REQUIRED"
+        assert entry.get("success_threshold") == "THEOREM_GAP_DELTA_LT_0"
+        assert entry.get("actual_blocker_state_change") in {
+            "NEGATIVE_THEOREM_GAP_DELTA_OBSERVED",
+            "NO_CHANGE_OBSERVED",
+            "POSITIVE_THEOREM_GAP_DELTA_OBSERVED",
+        }
+        assert entry.get("outcome_status") in {"SUCCESS", "FAILURE", "NO_CHANGE"}
+        if entry.get("outcome_status") == "NO_CHANGE":
+            assert entry.get("no_change_rework_route") == "ROUTE_TO_THEOREM_GAP_REWORK"
+            assert isinstance(entry.get("rework_evidence_pointer"), str) and entry["rework_evidence_pointer"]
+        assert isinstance(entry.get("declaration_pointer"), str) and entry["declaration_pointer"]
+        assert isinstance(entry.get("evidence_pointer"), str) and entry["evidence_pointer"]
+
+    tranche_ids = [entry.get("tranche_id") for entry in registry_entries]
+    assert len(tranche_ids) == len(set(tranche_ids)), "Each tranche must map to exactly one linkage entry."
+    assert "R5-QM-REWORK-001" in tranche_ids
+    assert "R6-QM-SUBTARGET-001" in tranche_ids
+
+    theorem_linkage_payload = _json(THEOREM_LINKAGE_REPORT_PATH)
+    assert theorem_linkage_payload.get("schema_id") == "THEOREM_GAP_EXECUTION_LINKAGE_20260411_v0"
+    assert theorem_linkage_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    theorem_linkage_objective = theorem_linkage_payload.get("objective_quality", {})
+    assert theorem_linkage_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
+    assert theorem_linkage_payload.get("criteria", {}).get("single_target_row_per_tranche_enforced") is True
+    assert theorem_linkage_payload.get("criteria", {}).get("no_change_requires_rework_route") is True
+    assert set(theorem_linkage_objective.get("criteria", {}).keys()) == {
+        "at_least_one_tranche_success_recorded",
+        "theorem_gap_count_reduced",
+        "theorem_gap_delta_negative",
+        "trend_net_delta_negative",
+        "ledger_progress_classification_true_progress",
+    }
+    theorem_linkage_inputs = theorem_linkage_objective.get("inputs", {})
+    assert isinstance(theorem_linkage_inputs.get("registry_entry_count"), int)
+    assert isinstance(theorem_linkage_inputs.get("covered_theorem_gap_rows"), list)
+    assert isinstance(theorem_linkage_inputs.get("success_count"), int)
+    assert isinstance(theorem_linkage_inputs.get("failure_count"), int)
+    assert isinstance(theorem_linkage_inputs.get("no_change_count"), int)
+
+    theorem_row_trend_payload = _json(THEOREM_ROW_TREND_REPORT_PATH)
+    assert theorem_row_trend_payload.get("schema_id") == "THEOREM_GAP_ROW_OUTCOME_TREND_20260411_v0"
+    assert theorem_row_trend_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    theorem_row_trend_objective = theorem_row_trend_payload.get("objective_quality", {})
+    assert theorem_row_trend_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
+    assert set(theorem_row_trend_objective.get("criteria", {}).keys()) == {
+        "at_least_one_row_has_success",
+        "stagnation_rows_empty",
+        "all_rows_have_activity",
+    }
+    theorem_row_trend_inputs = theorem_row_trend_objective.get("inputs", {})
+    assert isinstance(theorem_row_trend_inputs.get("row_outcome_counts"), dict)
+    assert isinstance(theorem_row_trend_inputs.get("stagnation_rows"), list)
+    assert isinstance(theorem_row_trend_inputs.get("rows_with_success"), list)
+
+    theorem_single_row_tranche = _json(THEOREM_SINGLE_ROW_TRANCHE_PATH)
+    assert theorem_single_row_tranche.get("schema_id") == "THEOREM_GAP_SINGLE_ROW_EXECUTION_TRANCHE_20260411_v0"
+    assert theorem_single_row_tranche.get("target_row") == "ROW-PILLAR-QM-001"
+    assert theorem_single_row_tranche.get("expected_blocker_state_change") == "NEGATIVE_THEOREM_GAP_DELTA_REQUIRED"
+    assert theorem_single_row_tranche.get("success_threshold") == "THEOREM_GAP_DELTA_LT_0_AND_ROW_SUCCESS_COUNT_GT_0"
+    assert theorem_single_row_tranche.get("failure_threshold") == "THEOREM_GAP_DELTA_GE_0_OR_ROW_SUCCESS_COUNT_EQ_0"
+    assert theorem_single_row_tranche.get("no_change_fail_closed_policy", {}).get("required") is True
+    assert theorem_single_row_tranche.get("no_change_fail_closed_policy", {}).get("route_token") == "ROUTE_TO_THEOREM_GAP_REWORK"
+
+    theorem_single_row_payload = _json(THEOREM_SINGLE_ROW_REPORT_PATH)
+    assert theorem_single_row_payload.get("schema_id") == "THEOREM_GAP_SINGLE_ROW_EXECUTION_20260411_v0"
+    assert theorem_single_row_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    theorem_single_row_objective = theorem_single_row_payload.get("objective_quality", {})
+    assert theorem_single_row_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
+    assert set(theorem_single_row_objective.get("criteria", {}).keys()) == {
+        "target_row_success_observed",
+        "theorem_gap_delta_negative",
+        "target_row_row_success_count_positive",
+        "no_change_fail_closed_route_satisfied",
+        "ledger_progress_classification_true_progress",
+    }
+    theorem_single_row_inputs = theorem_single_row_objective.get("inputs", {})
+    assert theorem_single_row_inputs.get("target_row") == "ROW-PILLAR-QM-001"
+    assert isinstance(theorem_single_row_inputs.get("target_row_success_count"), int)
+    assert isinstance(theorem_single_row_inputs.get("theorem_gap_delta"), int)
+
+    theorem_qm_rework_tranche = _json(THEOREM_QM_REWORK_TRANCHE_PATH)
+    assert theorem_qm_rework_tranche.get("schema_id") == "THEOREM_GAP_QM_REWORK_TRANCHE_20260411_v0"
+    assert theorem_qm_rework_tranche.get("tranche_id") == "R5-QM-REWORK-001"
+    assert theorem_qm_rework_tranche.get("target_row") == "ROW-PILLAR-QM-001"
+    assert theorem_qm_rework_tranche.get("expected_blocker_state_change") == "NEGATIVE_THEOREM_GAP_DELTA_REQUIRED"
+
+    theorem_qm_rework_payload = _json(THEOREM_QM_REWORK_REPORT_PATH)
+    assert theorem_qm_rework_payload.get("schema_id") == "THEOREM_GAP_QM_REWORK_TRANCHE_20260411_v0"
+    assert theorem_qm_rework_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    theorem_qm_rework_objective = theorem_qm_rework_payload.get("objective_quality", {})
+    assert theorem_qm_rework_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
+    assert set(theorem_qm_rework_objective.get("criteria", {}).keys()) == {
+        "qm_target_row_success_observed",
+        "theorem_gap_delta_negative",
+        "target_row_success_count_positive",
+        "no_change_fail_closed_route_satisfied",
+        "ledger_progress_classification_true_progress",
+    }
+    theorem_qm_rework_inputs = theorem_qm_rework_objective.get("inputs", {})
+    assert theorem_qm_rework_inputs.get("tranche_id") == "R5-QM-REWORK-001"
+    assert theorem_qm_rework_inputs.get("target_row") == "ROW-PILLAR-QM-001"
+    assert isinstance(theorem_qm_rework_inputs.get("target_row_success_count"), int)
+    assert isinstance(theorem_qm_rework_inputs.get("theorem_gap_delta"), int)
+
+    theorem_qm_subtarget_tranche = _json(THEOREM_QM_SUBTARGET_TRANCHE_PATH)
+    assert theorem_qm_subtarget_tranche.get("schema_id") == "THEOREM_GAP_QM_SUBTARGET_TRANCHE_20260411_v0"
+    assert theorem_qm_subtarget_tranche.get("tranche_id") == "R6-QM-SUBTARGET-001"
+    assert theorem_qm_subtarget_tranche.get("target_row") == "ROW-PILLAR-QM-001"
+    assert theorem_qm_subtarget_tranche.get("sub_problem") == "QM_PACKET04_THRESHOLD_ALIGNMENT_SUBPROBLEM_v0"
+    assert theorem_qm_subtarget_tranche.get("measurable_success_criterion") == (
+        "THEOREM_GAP_DELTA_NE_0_OR_TARGET_ROW_SUCCESS_COUNT_INCREMENT"
+    )
+    assert theorem_qm_subtarget_tranche.get("expected_blocker_transition") == (
+        "THEOREM_GAP_REDUCED_BY_AT_LEAST_ONE_OR_ROW_SUCCESS_INCREMENTED"
+    )
+    assert isinstance(theorem_qm_subtarget_tranche.get("failure_diagnosis"), str)
+    assert theorem_qm_subtarget_tranche["failure_diagnosis"]
+
+    theorem_qm_subtarget_payload = _json(THEOREM_QM_SUBTARGET_REPORT_PATH)
+    assert theorem_qm_subtarget_payload.get("schema_id") == "THEOREM_GAP_QM_SUBTARGET_TRANCHE_20260411_v0"
+    assert theorem_qm_subtarget_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    theorem_qm_subtarget_objective = theorem_qm_subtarget_payload.get("objective_quality", {})
+    assert theorem_qm_subtarget_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
+    assert set(theorem_qm_subtarget_objective.get("criteria", {}).keys()) == {
+        "qm_subtarget_success_observed",
+        "theorem_gap_delta_changed",
+        "target_row_success_count_incremented",
+        "no_change_fail_closed_route_satisfied",
+        "ledger_progress_classification_true_progress",
+    }
+    theorem_qm_subtarget_inputs = theorem_qm_subtarget_objective.get("inputs", {})
+    assert theorem_qm_subtarget_inputs.get("tranche_id") == "R6-QM-SUBTARGET-001"
+    assert theorem_qm_subtarget_inputs.get("target_row") == "ROW-PILLAR-QM-001"
+    assert isinstance(theorem_qm_subtarget_inputs.get("theorem_gap_delta"), int)
+    assert isinstance(theorem_qm_subtarget_inputs.get("target_row_success_count_incremented"), bool)
+    assert isinstance(theorem_qm_subtarget_inputs.get("failure_diagnosis"), str)
+
+    r0_r6_closeout_payload = _json(R0_R6_CLOSEOUT_REPORT_PATH)
+    assert r0_r6_closeout_payload.get("schema_id") == "R0_R6_OBJECTIVE_QUALITY_CLOSEOUT_20260411_v0"
+    assert r0_r6_closeout_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    assert set(r0_r6_closeout_payload.get("criteria", {}).keys()) == {
+        "all_r0_r6_reports_present",
+        "all_r0_r6_reports_have_objective_surface",
+        "all_r0_r6_contract_surfaces_complete",
+        "r2_no_change_fail_closed_route_satisfied",
+        "r3_row_stagnation_visibility_materialized",
+        "r4_single_row_fail_closed_route_satisfied",
+        "r5_qm_rework_fail_closed_route_satisfied",
+        "r6_qm_subtarget_failure_diagnosis_materialized",
+    }
+    completion_assessment = r0_r6_closeout_payload.get("completion_assessment", {})
+    assert completion_assessment.get("control_stack_objective_complete") is True
+    assert completion_assessment.get("scientific_objective_complete") in {True, False}
+    assert completion_assessment.get("global_objective_complete") in {True, False}
+
+    closeout_payload = _json(CLOSEOUT_REPORT_PATH)
+    assert closeout_payload.get("schema_id") == "TOE_ENFORCED_EXECUTION_CLOSEOUT_20260411_v0"
+    assert closeout_payload.get("summary", {}).get("closeout_status") == "COMPLETE"
+    assert closeout_payload.get("summary", {}).get("objective_closeout_status") in {"COMPLETE", "INCOMPLETE"}
+    phase_completion = closeout_payload.get("phase_completion", {})
+    objective_phase_completion = closeout_payload.get("objective_phase_completion", {})
+    required_phases = {
+        "PHASE_A_PROGRAM_LOCK",
+        "PHASE_B_RUNTIME_MEASUREMENT_INTEGRITY",
+        "PHASE_C_PACKET41_SUCCESSOR_DECISION_ENFORCEMENT",
+        "PHASE_D_GOVERNANCE_SINGLE_SOURCE_CONSOLIDATION",
+        "PHASE_E_SCALE_OBSERVABILITY_AND_COST_CONTROL",
+        "PHASE_F_CROSS_PLATFORM_PARITY",
+        "PHASE_G_CLOSEOUT_AND_AUTHORITY_SYNC",
+    }
+    assert set(phase_completion.keys()) == required_phases
+    assert set(objective_phase_completion.keys()) == required_phases
+    assert all(bool(v) for v in phase_completion.values())
+
+
+def test_phase_d_and_f_enforcement_surfaces_present() -> None:
+    suite_text = _read(GOVERNANCE_SUITE_PATH)
+    assert "$governanceGateTokenRegistry" not in suite_text
+    assert "manifest-authoritative only" in suite_text
+
+    ci_text = _read(CI_PATH)
+    assert "python-governance-linux-parity" in ci_text
+    assert "runs-on: ubuntu-latest" in ci_text
+    assert "governance_manifest_select --manifest formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json --group critical_gates" in ci_text
+    assert "governance_manifest_select --manifest formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json --group integrity_gates" in ci_text
 
 
 def test_governance_audit_packet_shape() -> None:

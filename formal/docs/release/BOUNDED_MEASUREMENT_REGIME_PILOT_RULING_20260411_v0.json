@@ -1,0 +1,18 @@
+{
+  "schema_id": "BOUNDED_MEASUREMENT_REGIME_PILOT_RULING_20260411_v0",
+  "ruling_id": "BMRPR-001",
+  "required_inputs": {
+    "bounded_measurement_regime_pilot_execution_report": "formal/output/reports/bounded_measurement_regime_pilot_execution_20260411_v0.json"
+  },
+  "ruling_policy": {
+    "moved_rule": "EXECUTION_CLASSIFICATION_EQ_PILOT_MOVED",
+    "valid_but_nonmoving_rule": "EXECUTION_CLASSIFICATION_EQ_PILOT_VALID_BUT_NONMOVING",
+    "not_fit_rule": "EXECUTION_CLASSIFICATION_EQ_PILOT_SIGNAL_NOT_FIT",
+    "promotion_requires_both_signals": true,
+    "no_loop_rule": "ONE_BOUNDED_MEASUREMENT_REGIME_PILOT_ONLY",
+    "next_action_if_moved": "PROMOTE_REVISED_MEASUREMENT_REGIME_AND_EXECUTE_NEXT_SEAM_TRANCHE",
+    "next_action_if_nonmoving": "ASSESS_PILOT_RESULT_AND_DECIDE_ROLLBACK_OR_HOLD",
+    "next_action_if_not_fit": "ROLLBACK_REVISED_MEASUREMENT_REGIME_AND_HOLD"
+  },
+  "non_claim_boundary": "Repository-local bounded measurement-regime pilot ruling declaration only; no scientific adequacy claim."
+}

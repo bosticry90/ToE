@@ -1,0 +1,39 @@
+{
+  "schema_id": "DISCOVERY_ENGINE_TRANSITION_PACKET_20260411_v0",
+  "packet_id": "DET-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T21:30:00Z",
+  "mode_transition": {
+    "from": "CONTROL_MODE_PRIMARY",
+    "to": "CONTROL_PLUS_DISCOVERY_OVERLAY",
+    "path": "PATH_A_CONSERVATIVE"
+  },
+  "primary_optimization_target": {
+    "metric_name": "DISCOVERY_YIELD",
+    "metric_formula": "FALSIFIABLE_OUTPUT_COUNT_PLUS_DISCRIMINATOR_OUTPUT_COUNT_PLUS_BLOCKER_MOVING_OUTPUT_COUNT_PER_BOUNDED_CYCLE",
+    "metric_priority_rule": "DISCOVERY_YIELD_OVERRIDES_ARTIFACT_COUNT_AND_GATE_PASS_COUNT_AS_TOP_LEVEL_SIGNAL"
+  },
+  "strict_definitions": {
+    "falsification": "A bounded tranche outcome that demonstrates current path inconsistency, contradiction, or baseline-indistinguishability under declared criteria and retires or reroutes that path.",
+    "discriminator": "A bounded output that yields a unique differentiator versus baseline or competing pathway with explicit comparison criteria.",
+    "state_conversion": "A measurable transition in blocker class/row state or parity state with explicit evidence pointer."
+  },
+  "required_evidence_bundle": {
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "closure_map_pointer": "formal/output/reports/governance_blocker_closure_map_20260410_v0.json",
+    "ledger_pointer": "formal/output/reports/physics_progress_ledger_v0.json"
+  },
+  "phase_outcomes_only": [
+    "BLOCKER_MOVED",
+    "DISCRIMINATOR_PRODUCED",
+    "PATH_FALSIFIED",
+    "NONPRODUCTIVE_RETIRED"
+  ],
+  "transition_policy": {
+    "no_loop_rule": "ONE_DISCOVERY_ENGINE_TRANSITION_PACKET_EXECUTION_ONLY",
+    "enforcement_start": "SHADOW_THEN_HARDEN",
+    "first_discriminator_target": "ROW-SEAM-QM-STAT-001",
+    "hard_kill_scope": "STATE_DAG_OR_SCHEMA_INTEGRITY_FAILURE_ONLY"
+  },
+  "non_claim_boundary": "Repository-local discovery-engine transition packet only; no scientific adequacy claim."
+}

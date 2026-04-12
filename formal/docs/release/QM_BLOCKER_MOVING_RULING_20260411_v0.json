@@ -1,0 +1,17 @@
+{
+  "schema_id": "QM_BLOCKER_MOVING_RULING_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:25:00Z",
+  "decision_scope": "POST_SINGLE_BOUNDED_QM_BLOCKER_MOVING_TRANCHE",
+  "required_inputs": {
+    "qm_blocker_moving_packet": "formal/docs/release/QM_BLOCKER_MOVING_TRANCHE_PACKET_20260411_v0.json",
+    "qm_blocker_moving_tranche_report": "formal/output/reports/qm_blocker_moving_tranche_20260411_v0.json"
+  },
+  "ruling_policy": {
+    "moving_rule": "TRANCHE_CLASSIFICATION_EQ_QM_BLOCKER_MOVED",
+    "valid_but_nonmoving_rule": "TRANCHE_CLASSIFICATION_EQ_QM_VALID_BUT_NONMOVING",
+    "exhaustion_rule": "TRANCHE_CLASSIFICATION_EQ_QM_VALID_BUT_NONMOVING_AND_NO_LOOP_RULE_EQ_ONE_BOUNDED_EXECUTION_ONLY",
+    "next_action_if_exhausted": "REFRESH_ATTACK_CLASS_SELECTION_AND_DO_NOT_LOOP_QM"
+  },
+  "non_claim_boundary": "Repository-local QM blocker-moving ruling declaration only; no scientific adequacy claim."
+}

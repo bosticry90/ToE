@@ -1,0 +1,58 @@
+{
+  "schema_id": "PROGRAM_STATE_CONVERSION_REVIEW_20260411_v0",
+  "review_id": "PSCR-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "review_basis": "THREE_UPSTREAM_EXPLANATIONS_EXHAUSTED_NON_MOVEMENT_PERSISTS",
+  "required_inputs": {
+    "revised_signal_diagnostic_registration_report": "formal/output/reports/revised_signal_diagnostic_registration_20260411_v0.json"
+  },
+  "exhausted_explanations": [
+    {
+      "explanation_class": "LOCAL_PACKET_SELECTION",
+      "status": "EXHAUSTED_UNDER_CURRENT_FILTER",
+      "reference": "SCIENCE_POST_ARCHITECTURE_ALIGNMENT_DECISION_20260411_v0"
+    },
+    {
+      "explanation_class": "ARCHITECTURE_AND_UNIT_SELECTION",
+      "status": "EXHAUSTED_UNDER_CURRENT_FILTER",
+      "reference": "POST_POSTURE_REVIEW_PROGRAM_MODE_TRANSITION_20260411_v0"
+    },
+    {
+      "explanation_class": "MOVEMENT_SIGNAL_BLINDNESS",
+      "status": "INFORMATIVE_BUT_NOT_PROMOTION_BEARING",
+      "reference": "BOUNDED_MEASUREMENT_REGIME_PILOT_RULING_20260411_v0",
+      "diagnostic_signal_registered": "SEAM_INTEGRATION_COVERAGE_DELTA_GT_0"
+    }
+  ],
+  "review_questions": [
+    {
+      "question_id": "Q1",
+      "question": "Does the repo require a deeper blocker-definition review?",
+      "default_answer": "DEEPER_BLOCKER_DEFINITION_REVIEW_REQUIRED",
+      "rationale": "Three tiers of upstream explanation exhausted; remaining problem is not signal-selection level."
+    },
+    {
+      "question_id": "Q2",
+      "question": "Does the repo require a theory-posture review?",
+      "default_answer": "THEORY_POSTURE_REVIEW_NOT_YET_REQUIRED",
+      "rationale": "Blocker-definition review is the prior step; theory-posture is the escalation path if that also exhausts."
+    },
+    {
+      "question_id": "Q3",
+      "question": "Does the repo require a pause and reframe on what counts as executable scientific leverage?",
+      "default_answer": "PAUSE_REFRAME_NOT_YET_REQUIRED",
+      "rationale": "Blocker-definition review is the bounded next step. Pause/reframe is a wider move reserved for later."
+    }
+  ],
+  "review_policy": {
+    "eligible_outcomes": [
+      "DEEPER_BLOCKER_DEFINITION_REVIEW_REQUIRED",
+      "THEORY_POSTURE_REVIEW_REQUIRED",
+      "PAUSE_REFRAME_ON_EXECUTABLE_LEVERAGE_REQUIRED"
+    ],
+    "default_outcome": "DEEPER_BLOCKER_DEFINITION_REVIEW_REQUIRED",
+    "default_next_action": "EXECUTE_DEEPER_BLOCKER_DEFINITION_REVIEW",
+    "no_loop_rule": "ONE_PROGRAM_STATE_CONVERSION_REVIEW_ONLY",
+    "no_further_pilot_loops_honored": true
+  }
+}

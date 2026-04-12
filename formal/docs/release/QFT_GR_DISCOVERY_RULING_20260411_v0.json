@@ -1,0 +1,15 @@
+{
+  "schema_id": "QFT_GR_DISCOVERY_RULING_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:59:59Z",
+  "required_inputs": {
+    "execution_report": "formal/output/reports/qft_gr_discovery_discriminator_tranche_report_20260411_v0.json",
+    "discovery_tranche_ruling_contract": "formal/docs/release/DISCOVERY_TRANCHE_RULING_CONTRACT_20260411_v0.json"
+  },
+  "ruling_policy": {
+    "single_terminal_outcome_required": true,
+    "allowed_outcomes_source": "DISCOVERY_TRANCHE_RULING_CONTRACT",
+    "no_loop_rule": "ONE_DISCOVERY_RULING_EXECUTION_ONLY"
+  },
+  "non_claim_boundary": "Repository-local QFT-GR discovery ruling declaration only; no scientific adequacy claim."
+}

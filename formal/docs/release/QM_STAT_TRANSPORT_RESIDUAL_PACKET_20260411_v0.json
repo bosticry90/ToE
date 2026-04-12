@@ -1,0 +1,33 @@
+{
+  "schema_id": "QM_STAT_TRANSPORT_RESIDUAL_PACKET_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T00:20:00Z",
+  "packet_id": "QMSTAT-TR-001",
+  "parent_attack_class": "DIRECT_MASTER_ACTION_RESIDUAL_TRANSPORT_ATTACK_CLASS",
+  "row_id": "ROW-SEAM-QM-STAT-001",
+  "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+  "execution_basis": "CURRENT_QM_STAT_CYCLE11_ARTIFACT_AND_GATE",
+  "required_inputs": {
+    "direct_attack_class_packet_report": "formal/output/reports/direct_master_action_residual_transport_attack_class_packet_20260411_v0.json",
+    "current_target_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json",
+    "prior_target_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle10_v0.json",
+    "target_gate_path": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle11_gate.py",
+    "trend_report": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_report": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_report": "formal/output/reports/physics_progress_ledger_v0.json",
+    "closure_map_report": "formal/output/reports/governance_blocker_closure_map_20260410_v0.json"
+  },
+  "movement_policy": {
+    "success_rule": "SEAM_INTEGRATION_GAP_DELTA_LT_0_OR_THEOREM_GAP_DELTA_LT_0_OR_TARGET_ROW_SUCCESS_INCREMENT_GT_0_OR_BLOCKER_TOKEN_CHANGE_TRUE",
+    "failure_rule": "ALL_MOVEMENT_SIGNALS_FALSE",
+    "no_loop_rule": "ONE_BOUNDED_EXECUTION_ONLY",
+    "immediate_ruling_required": true,
+    "movement_signals": [
+      "SEAM_INTEGRATION_GAP_DELTA_LT_0",
+      "THEOREM_GAP_DELTA_LT_0",
+      "TARGET_ROW_SUCCESS_INCREMENT_GT_0",
+      "BLOCKER_TOKEN_CHANGE_TRUE"
+    ]
+  },
+  "non_claim_boundary": "Repository-local QM-STAT transport/residual packet declaration only; no scientific adequacy claim."
+}

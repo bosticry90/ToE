@@ -1,0 +1,29 @@
+{
+  "schema_id": "THEOREM_GAP_QM_SUBTARGET_TRANCHE_20260411_v1",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T18:46:31Z",
+  "tranche_id": "R6-QM-SUBTARGET-002",
+  "target_row": "ROW-PILLAR-QM-001",
+  "blocker_class": "THEOREM_GAP",
+  "sub_problem": "QM_PACKET04_THRESHOLD_ALIGNMENT_SUBPROBLEM_v1_NARROW",
+  "measurable_success_criterion": "THEOREM_GAP_DELTA_LT_0_OR_TARGET_ROW_SUCCESS_COUNT_INCREMENT",
+  "expected_blocker_transition": "THEOREM_GAP_REDUCED_BY_AT_LEAST_ONE_OR_ROW_SUCCESS_INCREMENTED",
+  "required_evidence_bundle": {
+    "declaration_pointer": "formal/docs/release/TGC_77_DECLARATION.md",
+    "execution_checkpoint_pointer": "formal/output/ws10_tgc77_qm_theorem_gap_closure_increment_execution_checkpoint_20260409_v0.json",
+    "linkage_registry_pointer": "formal/docs/release/THEOREM_GAP_TRANCHE_LINKAGE_REGISTRY_20260411_v0.json",
+    "row_outcome_trend_pointer": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "r6_prior_report_pointer": "formal/output/reports/theorem_gap_qm_subtarget_tranche_20260411_v0.json"
+  },
+  "success_acceptance_rule": "SUCCESS_ONLY_IF_THEOREM_GAP_DELTA_LT_0_OR_TARGET_ROW_SUCCESS_COUNT_INCREMENTED",
+  "fail_closed_route": {
+    "route_token": "ROUTE_TO_THEOREM_GAP_REWORK",
+    "rework_evidence_pointer": "formal/docs/release/WS_10_TGC_93_BRANCH_DECISION_PACKAGE_20260411_v0.md"
+  },
+  "bounded_stop_rule": {
+    "max_no_change_attempts_for_row": 4,
+    "current_no_change_streak_before_this_tranche": 3,
+    "rule": "AFTER_NEXT_NO_CHANGE_FORCE_QM_LANE_BRANCH_DECISION"
+  },
+  "non_claim_boundary": "Repository-local narrowed QM subtarget tranche declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,47 @@
+{
+  "schema_id": "POST_BLOCKER_DEFINITION_TEST_DECISION_20260411_v0",
+  "decision_id": "PBDTD-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "decision_basis": "BOUNDED_BLOCKER_DEFINITION_TEST_RULING_VALID_BUT_NONMOVING",
+  "required_inputs": {
+    "bounded_blocker_definition_test_ruling_report": "formal/output/reports/bounded_blocker_definition_test_ruling_20260411_v0.json"
+  },
+  "test_result_summary": {
+    "test_ruling": "REVISED_BLOCKER_DEF_VALID_BUT_NONMOVING",
+    "revised_blocker_def_fires": true,
+    "authoritative_fires": false,
+    "interpretation": "Revised blocker definition is stronger than diagnostic signal and fires validly, but does not establish authoritative blocker movement."
+  },
+  "candidate_routes": [
+    {
+      "route_id": "HOLD_ROUTE",
+      "route_name": "HOLD_REVISED_BLOCKER_DEF_AS_SECONDARY_REQUIRE_AUTHORITY_COUPLING_REVIEW",
+      "activation_condition": "TEST_RULING_IS_VALID_BUT_NONMOVING_AND_NO_COUPLING_DEFECT_IDENTIFIED",
+      "next_action": "REQUIRE_ONE_BOUNDED_AUTHORITY_COUPLING_REVIEW",
+      "rationale": "Revised definition is meaningful progress but not authoritative. Hold as secondary signal and require explicit coupling analysis before further execution."
+    },
+    {
+      "route_id": "COUPLING_REFINEMENT_ROUTE",
+      "route_name": "EXECUTE_AUTHORITY_COUPLING_REFINEMENT_BOUNDED_ONCE",
+      "activation_condition": "SPECIFIC_AUTHORITY_COUPLING_DEFECT_IDENTIFIED_AND_REFINEMENT_PACKET_DEFINED",
+      "next_action": "EXECUTE_AUTHORITY_COUPLING_REFINEMENT_PACKET_ONCE",
+      "rationale": "If a specific authority-coupling defect can be named and bounded, execute one refinement test before escalating."
+    },
+    {
+      "route_id": "ESCALATE_ROUTE",
+      "route_name": "ESCALATE_TO_THEORY_POSTURE_OR_PROGRAM_PAUSE_REVIEW",
+      "activation_condition": "COUPLING_DEFECT_NOT_ADDRESSABLE_AT_BLOCKER_DEFINITION_LAYER",
+      "next_action": "ESCALATE_TO_THEORY_POSTURE_OR_PROGRAM_PAUSE_REVIEW",
+      "rationale": "If authority-coupling cannot be resolved at this layer, escalate to broader posture review or program pause/reframe."
+    }
+  ],
+  "decision_policy": {
+    "specific_authority_coupling_defect_identified": false,
+    "specific_authority_coupling_defect_note": null,
+    "authority_coupling_refinement_packet": null,
+    "default_decision": "HOLD_REVISED_BLOCKER_DEF_AS_SECONDARY_REQUIRE_AUTHORITY_COUPLING_REVIEW",
+    "default_next_action": "REQUIRE_ONE_BOUNDED_AUTHORITY_COUPLING_REVIEW",
+    "no_loop_rule": "ONE_POST_BLOCKER_DEFINITION_TEST_DECISION_ONLY",
+    "no_further_blocker_definition_testing_until_routing_resolved": true
+  }
+}

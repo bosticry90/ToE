@@ -436,9 +436,14 @@ def _render_ws10_snippet(state_core: dict[str, Any]) -> str:
     )
 
 
-def _write_output(output_dir: Path, filename: str, content: str) -> None:
+def _write_output(output_dir: Path, filename: str, content: str) -> bool:
     output_dir.mkdir(parents=True, exist_ok=True)
-    (output_dir / filename).write_text(content + "\n", encoding="utf-8")
+    target = output_dir / filename
+    rendered = content + "\n"
+    if target.exists() and target.read_text(encoding="utf-8") == rendered:
+        return False
+    target.write_text(rendered, encoding="utf-8")
+    return True
 
 
 def _replace_generated_block(text: str, marker_id: str, replacement: str) -> str:
@@ -452,13 +457,17 @@ def _replace_generated_block(text: str, marker_id: str, replacement: str) -> str
     return pattern.sub(replacement, text, count=1)
 
 
-def _apply_mirror_targets(state_core: dict[str, Any], snippets_by_marker: dict[str, str]) -> None:
+def _apply_mirror_targets(state_core: dict[str, Any], snippets_by_marker: dict[str, str]) -> int:
+    changed = 0
     for target in state_core["mirror_targets"]:
         marker_id = target["marker_id"]
         path = REPO_ROOT / target["path"]
         text = path.read_text(encoding="utf-8")
         updated = _replace_generated_block(text, marker_id, snippets_by_marker[marker_id])
-        path.write_text(updated, encoding="utf-8")
+        if updated != text:
+            path.write_text(updated, encoding="utf-8")
+            changed += 1
+    return changed
 
 
 def _verify_mirror_targets(state_core: dict[str, Any], snippets_by_marker: dict[str, str]) -> None:
@@ -503,11 +512,14 @@ def main() -> None:
     if args.output_dir is None:
         args.output_dir = REPO_ROOT / "formal" / "output" / "state_core_generated"
 
+    generated_writes = 0
     for filename, content in snippets.items():
-        _write_output(args.output_dir, filename, content)
+        if _write_output(args.output_dir, filename, content):
+            generated_writes += 1
 
+    mirror_writes = 0
     if args.apply_mirrors:
-        _apply_mirror_targets(state_core, snippets_by_marker)
+        mirror_writes = _apply_mirror_targets(state_core, snippets_by_marker)
 
     if args.verify_mirrors:
         _verify_mirror_targets(state_core, snippets_by_marker)
@@ -516,6 +528,12 @@ def main() -> None:
         for filename, content in snippets.items():
             print(f"## {filename}")
             print(content)
+
+    print(
+        "render_state_core_mirrors: "
+        f"generated_writes={generated_writes} "
+        f"mirror_writes={mirror_writes}"
+    )
 
 
 if __name__ == "__main__":

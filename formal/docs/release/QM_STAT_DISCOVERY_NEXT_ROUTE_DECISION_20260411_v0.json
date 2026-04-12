@@ -1,0 +1,33 @@
+{
+  "schema_id": "QM_STAT_DISCOVERY_NEXT_ROUTE_DECISION_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T23:59:55Z",
+  "required_inputs": {
+    "post_derivation_probe_decision_report": "formal/output/reports/qm_stat_discovery_post_derivation_probe_decision_report_20260411_v0.json",
+    "discovery_priority_queue_report": "formal/output/reports/discovery_priority_queue_report_20260411_v0.json"
+  },
+  "current_seam": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "lane": "QM_STAT_CYCLE11"
+  },
+  "candidate_routes": [
+    {
+      "route_id": "REFINE_COMPARATOR_ONCE",
+      "route_name": "REFINE_PROBE_COMPARATOR_ONCE_BOUNDED",
+      "next_action": "MATERIALIZE_ONE_STRONGER_COMPARATOR_PACKET"
+    },
+    {
+      "route_id": "ACTIVATE_NEXT_RANKED_SEAM",
+      "route_name": "ACTIVATE_NEXT_RANKED_SEAM",
+      "next_action": "ADVANCE_DISCOVERY_QUEUE_TO_NEXT_SEAM"
+    }
+  ],
+  "decision_policy": {
+    "allow_only_two_routes": true,
+    "prefer_next_ranked_when_no_sharper_comparator": true,
+    "max_comparator_refinement_cycles": 1,
+    "no_same_shape_qm_stat_autorerun": true,
+    "default_route": "ACTIVATE_NEXT_RANKED_SEAM"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT next-route decision declaration only; no scientific adequacy claim."
+}

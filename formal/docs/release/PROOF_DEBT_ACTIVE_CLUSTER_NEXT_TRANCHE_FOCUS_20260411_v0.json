@@ -1,0 +1,94 @@
+{
+  "schema_id": "PROOF_DEBT_ACTIVE_CLUSTER_NEXT_TRANCHE_FOCUS_20260411_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-11T21:20:00Z",
+  "cluster_id": "PDC-MATH-PROOF-DEBT-BURNDOWN-01",
+  "cluster_name": "proof_debt_marker_burndown_terminal_gate_alignment",
+  "objective": "Select the single strongest next blocker-facing surface inside the active math proof-debt cluster.",
+  "required_inputs": {
+    "packet_report": "formal/output/reports/proof_debt_first_formal_campaign_packet_report_20260411_v0.json",
+    "discharge_tranche_report": "formal/output/reports/proof_debt_first_formal_campaign_discharge_tranche_report_20260411_v0.json",
+    "trend_pointer": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_pointer": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_pointer": "formal/output/reports/physics_progress_ledger_v0.json",
+    "surface_ruling_reports": [
+      "formal/output/reports/proof_debt_active_cluster_surface_ruling_math_pd_c05_burndown_gate_20260411_v0.json",
+      "formal/output/reports/proof_debt_active_cluster_surface_ruling_math_pd_c05_marker_stability_gate_20260411_v0.json"
+    ]
+  },
+  "selection_policy": {
+    "required_direct_impact_signals": [
+      "plausible_theorem_gap_delta_lt_0_path",
+      "plausible_seam_integration_gap_delta_lt_0_path",
+      "plausible_global_row_success_increment_path",
+      "explicit_blocker_state_token_transition_path"
+    ],
+    "weights": {
+      "plausible_theorem_gap_delta_lt_0_path": 5,
+      "plausible_seam_integration_gap_delta_lt_0_path": 3,
+      "plausible_global_row_success_increment_path": 4,
+      "explicit_blocker_state_token_transition_path": 6,
+      "terminal_gate_coupling": 5,
+      "traceability_only_surface": -3
+    }
+  },
+  "surface_candidates": [
+    {
+      "surface_id": "MATH-PD-C05-BURNDOWN-GATE",
+      "surface_path": "formal/python/tests/test_proof_debt_burndown_cycle05_gate.py",
+      "surface_kind": "gate_test",
+      "priority_note": "Cycle05 burndown gate is directly coupled to marker-state closure semantics and terminal blocker-state token discipline.",
+      "direct_impact_signals": {
+        "plausible_theorem_gap_delta_lt_0_path": true,
+        "plausible_seam_integration_gap_delta_lt_0_path": false,
+        "plausible_global_row_success_increment_path": true,
+        "explicit_blocker_state_token_transition_path": true,
+        "terminal_gate_coupling": true,
+        "traceability_only_surface": false
+      }
+    },
+    {
+      "surface_id": "MATH-PD-C05-MARKER-STABILITY-GATE",
+      "surface_path": "formal/python/tests/test_proof_debt_marker_stability_gate.py",
+      "surface_kind": "gate_test",
+      "priority_note": "Marker stability is necessary hygiene and may strengthen closure confidence, but has weaker direct state-transition leverage than the cycle05 burndown gate.",
+      "direct_impact_signals": {
+        "plausible_theorem_gap_delta_lt_0_path": true,
+        "plausible_seam_integration_gap_delta_lt_0_path": false,
+        "plausible_global_row_success_increment_path": false,
+        "explicit_blocker_state_token_transition_path": true,
+        "terminal_gate_coupling": false,
+        "traceability_only_surface": false
+      }
+    },
+    {
+      "surface_id": "MATH-PD-C05-WITNESS-TRACE-GATE",
+      "surface_path": "formal/python/tests/test_proof_debt_witness_traceability_gate.py",
+      "surface_kind": "gate_test",
+      "priority_note": "Traceability witness gate is high-confidence support evidence but weakest direct blocker-moving lever.",
+      "direct_impact_signals": {
+        "plausible_theorem_gap_delta_lt_0_path": false,
+        "plausible_seam_integration_gap_delta_lt_0_path": false,
+        "plausible_global_row_success_increment_path": false,
+        "explicit_blocker_state_token_transition_path": false,
+        "terminal_gate_coupling": false,
+        "traceability_only_surface": true
+      }
+    },
+    {
+      "surface_id": "MATH-PD-TERMINAL-GATE",
+      "surface_path": "formal/python/tests/test_toe_complete_v1_terminal_gate.py",
+      "surface_kind": "terminal_gate",
+      "priority_note": "Terminal gate is globally authoritative for blocker-state token boundary checks; use as validation surface after burndown gate adjustments.",
+      "direct_impact_signals": {
+        "plausible_theorem_gap_delta_lt_0_path": true,
+        "plausible_seam_integration_gap_delta_lt_0_path": false,
+        "plausible_global_row_success_increment_path": true,
+        "explicit_blocker_state_token_transition_path": true,
+        "terminal_gate_coupling": true,
+        "traceability_only_surface": false
+      }
+    }
+  ],
+  "non_claim_boundary": "Repository-local next-tranche focus declaration for active proof-debt cluster; no scientific adequacy claim."
+}
