@@ -1,0 +1,33 @@
+{
+  "schema_id": "GR_MASTER_ACTION_TRANSPORT_OBLIGATION_DECLARATION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T18:40:00Z",
+  "declaration_id": "GR-MAT-OBL-001",
+  "required_inputs": {
+    "gr_master_action_transport_attack_packet_report": "formal/output/reports/gr_master_action_transport_attack_packet_20260412_v0.json",
+    "gr_master_action_transport_attack_packet_declaration": "formal/docs/release/GR_MASTER_ACTION_TRANSPORT_ATTACK_PACKET_20260412_v0.json",
+    "gr_next_attack_class_selection_report": "formal/output/reports/gr_next_attack_class_selection_20260412_v0.json"
+  },
+  "obligation_policy": {
+    "target_row": "ROW-PILLAR-GR-001",
+    "missing_obligation_id": "GR_MASTER_ACTION_TO_REGIME_LIMIT_TRANSPORT_OBLIGATION_v0",
+    "missing_obligation_statement": "Declare one explicit master-action transport obligation mapping GR master-action residual terms into the bounded regime-limit closure criterion for ROW-PILLAR-GR-001 without adding undeclared bridge assumptions.",
+    "obligation_type": "THEOREM_LINKED",
+    "scope_violation_detected": false,
+    "requires_higher_level_policy": false,
+    "obligation_justified": true,
+    "obligation_declared": true
+  },
+  "declaration_contract": {
+    "allowed_outcomes": [
+      "GR_TRANSPORT_OBLIGATION_DECLARED",
+      "GR_TRANSPORT_OBLIGATION_REQUIRES_HIGHER_LEVEL_POLICY",
+      "GR_TRANSPORT_OBLIGATION_OUT_OF_SCOPE",
+      "GR_TRANSPORT_OBLIGATION_NOT_JUSTIFIED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_GR_TRANSPORT_OBLIGATION_DECLARATION_OUTCOME",
+    "no_loop_rule": "ONE_GR_TRANSPORT_OBLIGATION_DECLARATION_ONLY",
+    "default_outcome": "GR_TRANSPORT_OBLIGATION_NOT_JUSTIFIED"
+  },
+  "non_claim_boundary": "Repository-local GR master-action transport obligation declaration only; no scientific adequacy claim."
+}
