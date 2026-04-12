@@ -1,0 +1,31 @@
+{
+  "schema_id": "DISCOVERY_ENGINE_SCORING_ROUTING_REVIEW_20260411_v0",
+  "review_id": "DESRR-001",
+  "required_inputs": {
+    "discovery_priority_queue_declaration": "formal/docs/release/DISCOVERY_PRIORITY_QUEUE_20260411_v0.json",
+    "discovery_priority_queue_report": "formal/output/reports/discovery_priority_queue_report_20260411_v0.json",
+    "discovery_queue_transition_declaration": "formal/docs/release/DISCOVERY_QUEUE_TRANSITION_DECISION_20260411_v0.json",
+    "discovery_queue_transition_decision_report": "formal/output/reports/discovery_queue_transition_decision_report_20260411_v0.json",
+    "discovery_queue_review_pass_report": "formal/output/reports/discovery_queue_review_pass_report_20260411_v0.json",
+    "discovery_queue_rescoring_pass_report": "formal/output/reports/discovery_queue_rescoring_pass_report_20260411_v0.json",
+    "discovery_engine_review_checkpoint_report": "formal/output/reports/discovery_engine_review_checkpoint_20260411_v0.json",
+    "qm_stat_discovery_interpretation_report": "formal/output/reports/qm_stat_discovery_interpretation_report_20260411_v0.json",
+    "qft_gr_discovery_interpretation_report": "formal/output/reports/qft_gr_discovery_interpretation_report_20260411_v0.json"
+  },
+  "review_questions": [
+    "REASSESS_DISCOVERY_SCORING_WEIGHTS",
+    "REASSESS_DISCOVERY_ROUTING_THRESHOLDS",
+    "DEFINE_CREDIBLE_EXTERNAL_PATH_SIGNAL",
+    "DEFINE_EXACT_LANE_EXPANSION_REOPEN_CONDITION"
+  ],
+  "review_policy": {
+    "retain_base_score_formula_when_queue_behavior_is_coherent": true,
+    "require_external_path_signal_for_lane_expansion_reopen": true,
+    "rank_gap_threshold_for_reopen": 3,
+    "hold_when_internal_only_accumulation_persists_without_external_path": true,
+    "default_hold_next_action": "MAINTAIN_DISCOVERY_HOLD_AND_REASSESS_SCORING_ROUTING_RULES_ONLY",
+    "default_reopen_next_action": "AUTHORIZE_ONE_BOUNDED_LANE_EXPANSION",
+    "default_repair_next_action": "RESTORE_REVIEW_INPUTS_AND_REEVALUATE_DISCOVERY_SCORING_ROUTING_ONCE"
+  },
+  "non_claim_boundary": "Repository-local bounded discovery scoring and routing review declaration only; no scientific adequacy claim."
+}
