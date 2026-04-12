@@ -1,0 +1,38 @@
+{
+  "schema_id": "QM_STAT_RL10_SIGMA_DB_TRANSFORMATION_PACKET_20260411_v0",
+  "packet_id": "QMSTAT-RL10-SIGDB-001",
+  "target_seam": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "lane": "QM_STAT_CYCLE11",
+    "source_signature_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json"
+  },
+  "required_inputs": {
+    "qm_stat_rl10_interface_transformation_report": "formal/output/reports/qm_stat_rl10_interface_transformation_20260411_v0.json",
+    "qm_stat_external_path_signal_execution_report": "formal/output/reports/qm_stat_external_path_signal_execution_20260411_v0.json"
+  },
+  "transformation_targets": {
+    "sigma_proxy_target": "RL10_ENTROPY_PRODUCTION_PROXY_SIGMA",
+    "db_residual_target": "RL10_DETAILED_BALANCE_RESIDUAL",
+    "stationary_pi_source_rule": "USE_BLOCKER_DISCHARGE_CRITERIA.stat_probability_mass_AS_DISCRETE_STATIONARY_PI_INPUT",
+    "sigma_proxy_dependency_rule": "REQUIRES_DECLARED_TRANSITION_DYNAMICS_OPERATOR_OR_TRANSITION_MATRIX_TO_COMPUTE_DIRECTIONAL_FLOWS",
+    "db_residual_dependency_rule": "REQUIRES_DECLARED_BIDIRECTIONAL_TRANSITION_RATES_OR_TRANSITION_MATRIX_TO_COMPUTE_FLOW_IMBALANCE"
+  },
+  "assumption_contract": {
+    "required_transition_assumptions": [
+      "DECLARED_DISCRETE_TRANSITION_DYNAMICS_OPERATOR_OR_MARKOV_KERNEL",
+      "DECLARED_BIDIRECTIONAL_TRANSITION_RATES_OR_EQUIVALENT_TRANSITION_MATRIX",
+      "DECLARED_FLOW_CONSTRUCTION_LINKING_STATIONARY_PI_TO_TRANSITION_STRUCTURE"
+    ],
+    "forbidden_scope_expansion": "NO_BROAD_RL10_MODELING_BEYOND_SIGMA_PROXY_AND_DB_RESIDUAL"
+  },
+  "execution_contract": {
+    "allowed_outcomes": [
+      "SIGMA_DB_INTERFACE_DEFINED",
+      "SIGMA_DB_INTERFACE_PARTIAL_HOLD",
+      "QM_STAT_EXTERNALIZATION_PATH_FALSIFIED"
+    ],
+    "no_loop_rule": "ONE_QM_STAT_RL10_SIGMA_DB_TRANSFORMATION_PACKET_ONLY",
+    "rerun_policy": "NO_QM_STAT_EXTERNAL_PATH_RERUN_UNLESS_SIGMA_DB_INTERFACE_DEFINED"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT RL10 sigma/db transformation declaration only; no scientific adequacy claim."
+}
