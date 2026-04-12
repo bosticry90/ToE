@@ -1,0 +1,34 @@
+{
+  "schema_id": "QM_STAT_RL10_OBSERVABLE_MAPPING_REVIEW_20260411_v0",
+  "review_id": "QMSTAT-RL10-MAP-001",
+  "target_seam": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "lane": "QM_STAT_CYCLE11",
+    "source_signature_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json"
+  },
+  "required_inputs": {
+    "qm_stat_single_baseline_comparator_report": "formal/output/reports/qm_stat_single_baseline_comparator_20260411_v0.json",
+    "qm_stat_external_path_signal_execution_report": "formal/output/reports/qm_stat_external_path_signal_execution_20260411_v0.json"
+  },
+  "mapping_target": {
+    "baseline_id": "OV-RL-10",
+    "baseline_name": "RL10_ENTROPY_BALANCE",
+    "exact_rl10_observable_quantity": "RL10_STATIONARY_PI_PLUS_ENTROPY_BALANCE_DIAGNOSTICS_INTERFACE",
+    "required_candidate_fields": [
+      "stationary_pi",
+      "sigma_proxy",
+      "db_residual"
+    ],
+    "proposed_transform_question": "Can the QM-STAT finite-support mass and higher-moment parity signature be transformed into a stationary-distribution-plus-entropy-balance interface without introducing undeclared dynamics?"
+  },
+  "review_contract": {
+    "allowed_outcomes": [
+      "RL10_MAPPING_ESTABLISHED",
+      "RL10_MAPPING_NOT_YET_DEFINED",
+      "QM_STAT_EXTERNALIZATION_PATH_FALSIFIED"
+    ],
+    "rerun_policy": "NO_QM_STAT_EXTERNAL_PATH_RERUN_UNLESS_RL10_MAPPING_ESTABLISHED",
+    "no_loop_rule": "ONE_QM_STAT_RL10_OBSERVABLE_MAPPING_REVIEW_ONLY"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT RL10 observable mapping review declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_id": "QM_STAT_RL10_INTERFACE_TRANSFORMATION_PACKET_20260411_v0",
+  "packet_id": "QMSTAT-RL10-IT-001",
+  "target_seam": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "lane": "QM_STAT_CYCLE11",
+    "source_signature_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json"
+  },
+  "required_inputs": {
+    "qm_stat_rl10_observable_mapping_review_report": "formal/output/reports/qm_stat_rl10_observable_mapping_review_20260411_v0.json",
+    "qm_stat_single_baseline_comparator_report": "formal/output/reports/qm_stat_single_baseline_comparator_20260411_v0.json",
+    "qm_stat_external_path_signal_execution_report": "formal/output/reports/qm_stat_external_path_signal_execution_20260411_v0.json"
+  },
+  "interface_target": {
+    "baseline_id": "OV-RL-10",
+    "baseline_name": "RL10_ENTROPY_BALANCE",
+    "required_observables": [
+      "stationary_pi",
+      "sigma_proxy",
+      "db_residual"
+    ],
+    "stationary_pi_rule": "MAP_BLOCKER_DISCHARGE_CRITERIA.stat_probability_mass_TO_DISCRETE_STATIONARY_PI_CANDIDATE_ON_SHARED_SUPPORT",
+    "sigma_proxy_rule": "REQUIRES_DECLARED_TRANSITION_DYNAMICS_OR_GENERATOR_NOT_PRESENT_IN_CURRENT_QM_STAT_SURFACES",
+    "db_residual_rule": "REQUIRES_DECLARED_BIDIRECTIONAL_TRANSITION_MATRIX_OR_FLOW_RATES_NOT_PRESENT_IN_CURRENT_QM_STAT_SURFACES"
+  },
+  "execution_contract": {
+    "allowed_outcomes": [
+      "RL10_INTERFACE_DEFINED",
+      "RL10_INTERFACE_PARTIAL_HOLD",
+      "QM_STAT_EXTERNALIZATION_PATH_FALSIFIED"
+    ],
+    "no_loop_rule": "ONE_QM_STAT_RL10_INTERFACE_TRANSFORMATION_PACKET_ONLY",
+    "rerun_policy": "NO_QM_STAT_EXTERNAL_PATH_RERUN_UNLESS_FULL_RL10_INTERFACE_DEFINED"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT RL10 interface transformation declaration only; no scientific adequacy claim."
+}
