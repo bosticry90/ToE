@@ -1,0 +1,43 @@
+{
+  "schema_id": "SCIENCE_NEW_UNTOUCHED_LANE_SELECTION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T00:05:00Z",
+  "objective": "Select exactly one genuinely new untouched science lane for the next bounded first-test packet, honoring the preserved frontier and excluding all structurally exhausted lanes.",
+  "required_inputs": {
+    "science_frontier_preservation_record_report": "formal/output/reports/science_frontier_preservation_record_20260412_v0.json",
+    "shared_model_class_post_refinement_decision_report": "formal/output/reports/shared_model_class_post_refinement_decision_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "em_qft_higher_level_structure_review_report": "formal/output/reports/em_qft_higher_level_structure_review_20260412_v0.json",
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json"
+  },
+  "selection_policy": {
+    "required_preservation_outcome": "FRONTIER_PRESERVED_AT_CANONICAL_COMMIT",
+    "required_post_refinement_outcome": "HOLD_SHARED_MODEL_CLASS_AS_EXTERNALLY_COMPARABLE_BUT_NOT_PROBE_READY",
+    "qm_stat_required_review_outcome": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+    "gr_required_outcome": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "em_qft_required_outcome": "EM_QFT_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "excluded_lanes": [
+      "QM-STAT",
+      "GR-ROW-001",
+      "EM-QFT",
+      "SHARED-MODEL-CLASS"
+    ],
+    "qft_gr_untouched": true,
+    "cosmo_sr_untouched": true,
+    "no_genuinely_untouched_lane": false,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "selection_contract": {
+    "allowed_outcomes": [
+      "ACTIVATE_QFT_GR_UNTOUCHED_FIRST_TEST",
+      "ACTIVATE_COSMO_SR_UNTOUCHED_FIRST_TEST",
+      "ACTIVATE_OTHER_UNTOUCHED_LANE",
+      "NO_GENUINELY_UNTOUCHED_LANE_AVAILABLE"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_NEW_UNTOUCHED_LANE_SELECTION_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_NEW_UNTOUCHED_LANE_SELECTION_LAYER_ONLY",
+    "default_outcome": "ACTIVATE_QFT_GR_UNTOUCHED_FIRST_TEST"
+  },
+  "non_claim_boundary": "Repository-local science new-untouched-lane selection declaration only; no scientific adequacy claim."
+}
