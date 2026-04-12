@@ -1,0 +1,68 @@
+{
+  "schema_id": "SCIENCE_PHASE_N_FUTURE_LANE_CANDIDATE_SCREEN_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T00:45:00Z",
+  "objective": "Screen future untouched-lane candidates against Phase M activation criteria and authorize at most one candidate lane, or none, without opening any packet execution.",
+  "canonical_antecedent_commits": {
+    "phase_m_activation_commit": "e4b075b",
+    "phase_l_policy_lock_commit": "4a579dd",
+    "phase_k_tranche_commit": "15cee75",
+    "phase_j_stop_state_commit": "e1eb7fd"
+  },
+  "required_inputs": {
+    "science_phase_m_selection_policy_activation_criteria_report": "formal/output/reports/science_phase_m_selection_policy_activation_criteria_20260412_v0.json",
+    "science_phase_l_higher_level_selection_policy_report": "formal/output/reports/science_phase_l_higher_level_selection_policy_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "candidate_screen_contract": {
+    "required_phase_m_outcome": "SELECTION_POLICY_ACTIVATION_CRITERIA_DEFINED_AND_LOCKED",
+    "required_phase_m_authorize_packet": false,
+    "required_phase_l_outcome": "HIGHER_LEVEL_SELECTION_POLICY_DEFINED_AND_LOCKED",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "forbid_closed_or_held_lane_reopen": true,
+    "authorize_at_most_one_candidate": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "candidate_lanes": [
+      {
+        "lane_id": "LANE-THERMAL-BOUNDARY-001",
+        "discriminativity_prerequisites_satisfied": true,
+        "attack_class_admissibility_satisfied": true,
+        "observable_interface_specificity_satisfied": true,
+        "anti_alias_confidence_satisfied": true,
+        "closed_lane_alias_risk": "LOW",
+        "authorization_decision": "AUTHORIZE"
+      },
+      {
+        "lane_id": "LANE-GEOMETRIC-PHASE-001",
+        "discriminativity_prerequisites_satisfied": true,
+        "attack_class_admissibility_satisfied": false,
+        "observable_interface_specificity_satisfied": true,
+        "anti_alias_confidence_satisfied": true,
+        "closed_lane_alias_risk": "MEDIUM",
+        "authorization_decision": "DENY"
+      },
+      {
+        "lane_id": "LANE-COUPLING-TRACE-001",
+        "discriminativity_prerequisites_satisfied": false,
+        "attack_class_admissibility_satisfied": false,
+        "observable_interface_specificity_satisfied": true,
+        "anti_alias_confidence_satisfied": false,
+        "closed_lane_alias_risk": "HIGH",
+        "authorization_decision": "DENY"
+      }
+    ]
+  },
+  "candidate_screen_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_N_FUTURE_LANE_CANDIDATE_SCREEN_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_N_FUTURE_LANE_CANDIDATE_SCREEN_LAYER_ONLY",
+    "allowed_outcomes": [
+      "FUTURE_LANE_CANDIDATE_SCREEN_COMPLETE_ONE_AUTHORIZED",
+      "FUTURE_LANE_CANDIDATE_SCREEN_COMPLETE_NONE_AUTHORIZED",
+      "FUTURE_LANE_CANDIDATE_SCREEN_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_FUTURE_LANE_SCREEN_REPAIR"
+    ],
+    "default_outcome": "FUTURE_LANE_CANDIDATE_SCREEN_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local future lane candidate screening declaration only; no scientific adequacy claim."
+}
