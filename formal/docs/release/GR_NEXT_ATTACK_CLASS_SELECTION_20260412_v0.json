@@ -1,0 +1,36 @@
+{
+  "schema_id": "GR_NEXT_ATTACK_CLASS_SELECTION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T17:35:00Z",
+  "decision_scope": "POST_SINGLE_GR_BLOCKER_TRANCHE_RESELECTION",
+  "required_inputs": {
+    "gr_subtarget_declaration": "formal/docs/release/THEOREM_GAP_GR_SUBTARGET_TRANCHE_20260411_v0.json",
+    "gr_subtarget_report": "formal/output/reports/theorem_gap_gr_subtarget_tranche_20260411_v0.json",
+    "gr_stop_rule_decision_report": "formal/output/reports/theorem_gap_gr_bounded_stop_rule_decision_20260411_v0.json",
+    "row_outcome_trend_report": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_report": "formal/output/reports/physics_progress_ledger_v0.json"
+  },
+  "selection_policy": {
+    "target_row": "ROW-PILLAR-GR-001",
+    "require_stop_rule_reclassification_signal": true,
+    "require_gr_tranche_no_delta_signal": true,
+    "prefer_master_action_transport_when_no_delta_and_reclassification": true,
+    "prefer_weak_field_when_row_success_incremented": true,
+    "prefer_regime_limit_when_blocker_state_changed_without_gap_delta": true,
+    "fallback_to_seam_interface_when_scope_conflict": true,
+    "default_attack_class": "GR_MASTER_ACTION_TRANSPORT_ATTACK",
+    "default_next_action": "OPEN_SINGLE_GR_MASTER_ACTION_TRANSPORT_ATTACK_PACKET"
+  },
+  "selection_contract": {
+    "allowed_outcomes": [
+      "GR_WEAK_FIELD_CLOSURE_ATTACK",
+      "GR_MASTER_ACTION_TRANSPORT_ATTACK",
+      "GR_REGIME_LIMIT_ALIGNMENT_ATTACK",
+      "GR_SEAM_INTERFACE_ATTACK"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_GR_NEXT_ATTACK_CLASS",
+    "no_loop_rule": "ONE_GR_ATTACK_CLASS_SELECTION_ONLY",
+    "default_outcome": "GR_MASTER_ACTION_TRANSPORT_ATTACK"
+  },
+  "non_claim_boundary": "Repository-local GR next attack-class selection declaration only; no scientific adequacy claim."
+}
