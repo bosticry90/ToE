@@ -455,6 +455,14 @@ Phase I untouched lane signal-refinement packet checkpoint (P55-A, 2026-04-12):
 - `SCIENCE_PHASE_I_UNTOUCHED_LANE_SIGNAL_REFINEMENT_PACKET_GATE_v0: formal/python/tests/test_science_phase_i_untouched_lane_signal_refinement_packet_report.py`
 - `SCIENCE_PHASE_I_UNTOUCHED_LANE_SIGNAL_REFINEMENT_PACKET_RESULT_v0: UNTOUCHED_LANE_VALID_BUT_NONMOVING`
 
+Phase J untouched lane post-refinement decision checkpoint (P56-A, 2026-04-12):
+- `SCIENCE_PHASE_J_UNTOUCHED_LANE_POST_REFINEMENT_DECISION_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `SCIENCE_PHASE_J_UNTOUCHED_LANE_POST_REFINEMENT_DECISION_DECLARATION_v0: formal/docs/release/SCIENCE_PHASE_J_UNTOUCHED_LANE_POST_REFINEMENT_DECISION_20260412_v0.json`
+- `SCIENCE_PHASE_J_UNTOUCHED_LANE_POST_REFINEMENT_DECISION_REPORT_TOOL_v0: formal/python/tools/science_phase_j_untouched_lane_post_refinement_decision_report.py`
+- `SCIENCE_PHASE_J_UNTOUCHED_LANE_POST_REFINEMENT_DECISION_REPORT_JSON_v0: formal/output/reports/science_phase_j_untouched_lane_post_refinement_decision_20260412_v0.json`
+- `SCIENCE_PHASE_J_UNTOUCHED_LANE_POST_REFINEMENT_DECISION_GATE_v0: formal/python/tests/test_science_phase_j_untouched_lane_post_refinement_decision_report.py`
+- `SCIENCE_PHASE_J_UNTOUCHED_LANE_POST_REFINEMENT_DECISION_RESULT_v0: HOLD_UNTOUCHED_LANE_AS_VALID_BUT_NONMOVING`
+
 Governance audit packet checkpoint (A1-A, 2026-04-10):
 - `GOVERNANCE_AUDIT_PACKET_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
 - `GOVERNANCE_AUDIT_PACKET_DECLARATION_v0: formal/docs/release/GOVERNANCE_AUDIT_PACKET_20260410_v0.md`
