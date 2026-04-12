@@ -1,0 +1,49 @@
+{
+  "schema_id": "SCIENCE_PHASE_T_RESIDUAL_AUTHORIZATION_FIELD_CLOSURE_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T03:05:00Z",
+  "objective": "Resolve residual authorization-readiness fields for the thermal-boundary candidate and issue one bounded packet-authorization readiness verdict without opening execution.",
+  "canonical_antecedent_commits": {
+    "phase_s_readiness_commit": "f0d9342",
+    "phase_r_threshold_closure_commit": "5681325",
+    "phase_q_signal_definition_commit": "327180e",
+    "phase_j_stop_state_commit": "e1eb7fd"
+  },
+  "required_inputs": {
+    "science_phase_s_authorization_readiness_closure_report": "formal/output/reports/science_phase_s_authorization_readiness_closure_20260412_v0.json",
+    "science_phase_o_authorized_candidate_next_step_selection_report": "formal/output/reports/science_phase_o_authorized_candidate_next_step_selection_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "residual_field_contract": {
+    "required_phase_s_outcome": "AUTHORIZATION_READINESS_PARTIAL_HOLD",
+    "required_phase_s_authorized_lane_id": "LANE-THERMAL-BOUNDARY-001",
+    "required_phase_s_packet_authorization": false,
+    "required_phase_o_outcome": "HOLD_AUTHORIZED_CANDIDATE_AND_DO_NOT_OPEN_PACKET",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "residual_authorization_fields": {
+      "phase_o_field_observable_contract_closed": true,
+      "phase_o_field_attack_class_contract_closed": true,
+      "phase_o_field_execution_guard_binding_closed": false,
+      "authorization_review_ready": false,
+      "packet_execution_still_separate": true,
+      "policy_escalation_required": false
+    }
+  },
+  "residual_field_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_T_RESIDUAL_AUTHORIZATION_FIELD_CLOSURE_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_T_RESIDUAL_AUTHORIZATION_FIELD_CLOSURE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "AUTHORIZATION_REVIEW_READY_AND_PACKET_AUTHORIZED",
+      "RESIDUAL_FIELD_PARTIAL_HOLD",
+      "REQUIRES_HIGHER_LEVEL_POLICY",
+      "CANDIDATE_WITHDRAWN",
+      "RESIDUAL_FIELD_CLOSURE_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_RESIDUAL_FIELD_REPAIR"
+    ],
+    "default_outcome": "RESIDUAL_FIELD_CLOSURE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local residual authorization field closure declaration only; no scientific adequacy claim."
+}
