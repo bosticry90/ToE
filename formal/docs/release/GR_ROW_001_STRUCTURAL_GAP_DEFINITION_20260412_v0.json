@@ -1,0 +1,33 @@
+{
+  "schema_id": "GR_ROW_001_STRUCTURAL_GAP_DEFINITION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T19:20:00Z",
+  "objective": "Define the higher-level structural gap shared by GR transport and GR regime-limit alignment failures for ROW-PILLAR-GR-001 and decide row hold posture.",
+  "required_inputs": {
+    "gr_master_action_transport_attack_retry_packet_report": "formal/output/reports/gr_master_action_transport_attack_retry_packet_20260412_v0.json",
+    "gr_regime_limit_alignment_attack_retry_packet_report": "formal/output/reports/gr_regime_limit_alignment_attack_retry_packet_20260412_v0.json",
+    "gr_master_action_transport_obligation_declaration_report": "formal/output/reports/gr_master_action_transport_obligation_declaration_20260412_v0.json",
+    "gr_regime_limit_alignment_obligation_declaration_report": "formal/output/reports/gr_regime_limit_alignment_obligation_declaration_20260412_v0.json"
+  },
+  "structural_gap_policy": {
+    "target_row": "ROW-PILLAR-GR-001",
+    "freeze_attack_class_cycling_for_row": true,
+    "declareable_within_current_gr_scope": false,
+    "requires_new_gr_seam_or_model_class": true,
+    "requires_higher_level_policy": false,
+    "single_review_only": true,
+    "single_outcome_only": true
+  },
+  "review_contract": {
+    "allowed_outcomes": [
+      "GR_HIGHER_LEVEL_STRUCTURE_DECLARABLE",
+      "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+      "GR_REQUIRES_HIGHER_LEVEL_POLICY",
+      "HOLD_ROW_001_UNTIL_NEW_STRUCTURE_EXISTS"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_GR_ROW_001_STRUCTURAL_GAP_OUTCOME",
+    "no_loop_rule": "ONE_GR_ROW_001_STRUCTURAL_GAP_DEFINITION_ONLY",
+    "default_outcome": "HOLD_ROW_001_UNTIL_NEW_STRUCTURE_EXISTS"
+  },
+  "non_claim_boundary": "Repository-local GR row 001 structural-gap definition only; no scientific adequacy claim."
+}
