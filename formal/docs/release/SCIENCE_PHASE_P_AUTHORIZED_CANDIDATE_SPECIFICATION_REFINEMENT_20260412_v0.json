@@ -1,0 +1,48 @@
+{
+  "schema_id": "SCIENCE_PHASE_P_AUTHORIZED_CANDIDATE_SPECIFICATION_REFINEMENT_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T01:30:00Z",
+  "objective": "Refine the specification of the Phase O held authorized candidate so the repository can issue one bounded post-refinement packet-authorization judgment without opening execution.",
+  "canonical_antecedent_commits": {
+    "phase_o_authorized_candidate_hold_commit": "8dcbc62",
+    "phase_n_candidate_screen_commit": "21a9fe4",
+    "phase_m_activation_commit": "e4b075b",
+    "phase_j_stop_state_commit": "e1eb7fd"
+  },
+  "required_inputs": {
+    "science_phase_o_authorized_candidate_next_step_selection_report": "formal/output/reports/science_phase_o_authorized_candidate_next_step_selection_20260412_v0.json",
+    "science_phase_m_selection_policy_activation_criteria_report": "formal/output/reports/science_phase_m_selection_policy_activation_criteria_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "candidate_specification_contract": {
+    "required_phase_o_outcome": "HOLD_AUTHORIZED_CANDIDATE_AND_DO_NOT_OPEN_PACKET",
+    "required_phase_o_authorized_lane_id": "LANE-THERMAL-BOUNDARY-001",
+    "required_phase_o_packet_authorization": false,
+    "required_phase_m_outcome": "SELECTION_POLICY_ACTIVATION_CRITERIA_DEFINED_AND_LOCKED",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "refined_specification": {
+      "observable_interface_target_named": true,
+      "first_attack_class_admissible_and_named": true,
+      "minimum_discriminative_signal_defined": false,
+      "anti_alias_evidence_bundle_complete": true,
+      "missing_phase_o_fields_resolved": false
+    }
+  },
+  "candidate_specification_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_P_AUTHORIZED_CANDIDATE_SPECIFICATION_REFINEMENT_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_P_AUTHORIZED_CANDIDATE_SPECIFICATION_REFINEMENT_LAYER_ONLY",
+    "allowed_outcomes": [
+      "CANDIDATE_SPECIFICATION_COMPLETE_PACKET_AUTHORIZATION_JUSTIFIED",
+      "CANDIDATE_SPECIFICATION_PARTIAL_HOLD_REQUIRES_MORE_DEFINITION",
+      "CANDIDATE_REQUIRES_DIFFERENT_CANDIDATE_CLASS",
+      "CANDIDATE_WITHDRAWN",
+      "AUTHORIZED_CANDIDATE_SPECIFICATION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_AUTHORIZED_CANDIDATE_SPECIFICATION_REPAIR"
+    ],
+    "default_outcome": "AUTHORIZED_CANDIDATE_SPECIFICATION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local authorized-candidate specification refinement declaration only; no scientific adequacy claim."
+}
