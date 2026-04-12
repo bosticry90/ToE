@@ -1,0 +1,33 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_PROBE_SIGNIFICANCE_ADJUDICATION_20260412_v0",
+  "adjudication_id": "QM-STAT-RL10-BRIDGE-PROBE-SIGNIFICANCE-ADJUDICATION-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_probe_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_execution_20260412_v0.json",
+    "bridge_probe_ruling_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_ruling_20260412_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "significance_policy": {
+    "external_path_success_signal_margin_min": 0.05,
+    "confirmed_but_limited_signal_margin_min": 0.02,
+    "one_more_cycle_signal_margin_min": 0.0,
+    "comparator_repeatability_confirmed": false,
+    "cross_probe_consistency_confirmed": false
+  },
+  "adjudication_contract": {
+    "allowed_outcomes": [
+      "PROBE_SIGNAL_EXTERNAL_PATH_SUCCESS_CANDIDATE",
+      "PROBE_SIGNAL_CONFIRMED_BUT_LIMITED",
+      "PROBE_SIGNAL_REQUIRES_ONE_MORE_BOUNDED_COMPARATOR_CYCLE",
+      "PROBE_SIGNAL_PATH_HOLD"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_PROBE_SIGNIFICANCE_ADJUDICATION_OUTCOME",
+    "no_loop_rule": "ONE_BRIDGE_PROBE_SIGNIFICANCE_ADJUDICATION_ONLY",
+    "default_outcome": "PROBE_SIGNAL_CONFIRMED_BUT_LIMITED"
+  },
+  "non_claim_boundary": "Repository-local bridge probe significance adjudication declaration only; no scientific adequacy claim."
+}
