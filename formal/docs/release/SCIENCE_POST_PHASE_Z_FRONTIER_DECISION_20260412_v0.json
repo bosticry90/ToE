@@ -1,0 +1,48 @@
+{
+  "schema_id": "SCIENCE_POST_PHASE_Z_FRONTIER_DECISION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T08:00:00Z",
+  "objective": "Issue one bounded project-level frontier decision after Phase Z without reopening any lane or authorizing any new packet under current standards.",
+  "canonical_antecedent_commits": {
+    "phase_z_stronger_candidate_discovery_commit": "bc1edc7",
+    "phase_y_post_comparative_decision_commit": "ee619a2",
+    "phase_x_comparative_synthesis_commit": "b72da16"
+  },
+  "required_inputs": {
+    "science_phase_z_stronger_candidate_class_discovery_report": "formal/output/reports/science_phase_z_stronger_candidate_class_discovery_20260412_v0.json",
+    "science_phase_y_post_comparative_synthesis_decision_report": "formal/output/reports/science_phase_y_post_comparative_synthesis_decision_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "post_phase_z_frontier_decision_contract": {
+    "required_phase_z_outcome": "NO_STRONGER_CANDIDATE_CLASS_IDENTIFIED_YET",
+    "required_phase_y_outcome": "WAIT_FOR_STRONGER_CANDIDATE_CLASS",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "required_thermal_lane_status": "PRESERVED_INACTIVE_NEAR_READY_NOT_EXECUTABLE",
+    "required_thermal_no_further_closure_authorized": true,
+    "required_thermal_packet_authorized": false,
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "frontier_signals": {
+      "preserve_current_governed_stop_state": true,
+      "revise_higher_level_policy": false,
+      "open_candidate_generation_framework_redesign": false,
+      "wait_for_external_evidence_inputs": false,
+      "force_policy_escalation_now": false
+    }
+  },
+  "post_phase_z_frontier_decision_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_POST_PHASE_Z_FRONTIER_DECISION_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_POST_PHASE_Z_FRONTIER_DECISION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "PRESERVE_CURRENT_GOVERNED_STOP_STATE",
+      "REVISE_HIGHER_LEVEL_POLICY",
+      "OPEN_CANDIDATE_GENERATION_FRAMEWORK_REDESIGN",
+      "WAIT_FOR_EXTERNAL_EVIDENCE_INPUTS",
+      "POST_PHASE_Z_FRONTIER_DECISION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PHASE_Z_FRONTIER_DECISION_REPAIR"
+    ],
+    "default_outcome": "POST_PHASE_Z_FRONTIER_DECISION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-Phase-Z frontier decision declaration only; no scientific adequacy claim."
+}
