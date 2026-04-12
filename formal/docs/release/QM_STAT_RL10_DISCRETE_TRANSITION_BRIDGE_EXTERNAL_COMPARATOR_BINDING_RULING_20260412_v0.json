@@ -1,0 +1,20 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_EXTERNAL_COMPARATOR_BINDING_RULING_20260412_v0",
+  "ruling_id": "QM-STAT-RL10-BRIDGE-EXTERNAL-COMPARATOR-BINDING-RULING-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_external_comparator_binding_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_external_comparator_binding_execution_20260412_v0.json"
+  },
+  "ruling_contract": {
+    "allowed_outcomes": [
+      "EXTERNAL_COMPARATOR_BINDING_CONFIRMED",
+      "BRIDGE_SIGNAL_PROBE_READY",
+      "COMPARATOR_BINDING_PARTIAL_HOLD",
+      "BRIDGE_SIGNAL_PATH_FALSIFIED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_BINDING_RULING_OUTCOME",
+    "no_loop_rule": "ONE_EXTERNAL_COMPARATOR_BINDING_RULING_ONLY",
+    "default_outcome": "COMPARATOR_BINDING_PARTIAL_HOLD"
+  },
+  "non_claim_boundary": "Repository-local bridge external comparator binding ruling declaration only; no scientific adequacy claim."
+}
