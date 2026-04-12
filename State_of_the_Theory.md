@@ -415,6 +415,14 @@ Phase D untouched lane first-test packet checkpoint (P50-A, 2026-04-12):
 - `SCIENCE_PHASE_D_UNTOUCHED_LANE_FIRST_TEST_PACKET_GATE_v0: formal/python/tests/test_science_phase_d_untouched_lane_first_test_packet_report.py`
 - `SCIENCE_PHASE_D_UNTOUCHED_LANE_FIRST_TEST_PACKET_RESULT_v0: UNTOUCHED_LANE_FIRST_TEST_NONDISCRIMINATIVE_HOLD`
 
+Phase E untouched lane post-first-test decision checkpoint (P51-A, 2026-04-12):
+- `SCIENCE_PHASE_E_UNTOUCHED_LANE_POST_FIRST_TEST_DECISION_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `SCIENCE_PHASE_E_UNTOUCHED_LANE_POST_FIRST_TEST_DECISION_DECLARATION_v0: formal/docs/release/SCIENCE_PHASE_E_UNTOUCHED_LANE_POST_FIRST_TEST_DECISION_20260412_v0.json`
+- `SCIENCE_PHASE_E_UNTOUCHED_LANE_POST_FIRST_TEST_DECISION_REPORT_TOOL_v0: formal/python/tools/science_phase_e_untouched_lane_post_first_test_decision_report.py`
+- `SCIENCE_PHASE_E_UNTOUCHED_LANE_POST_FIRST_TEST_DECISION_REPORT_JSON_v0: formal/output/reports/science_phase_e_untouched_lane_post_first_test_decision_20260412_v0.json`
+- `SCIENCE_PHASE_E_UNTOUCHED_LANE_POST_FIRST_TEST_DECISION_GATE_v0: formal/python/tests/test_science_phase_e_untouched_lane_post_first_test_decision_report.py`
+- `SCIENCE_PHASE_E_UNTOUCHED_LANE_POST_FIRST_TEST_DECISION_RESULT_v0: UNTOUCHED_LANE_REQUIRES_DIFFERENT_ATTACK_CLASS`
+
 Governance audit packet checkpoint (A1-A, 2026-04-10):
 - `GOVERNANCE_AUDIT_PACKET_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
 - `GOVERNANCE_AUDIT_PACKET_DECLARATION_v0: formal/docs/release/GOVERNANCE_AUDIT_PACKET_20260410_v0.md`
