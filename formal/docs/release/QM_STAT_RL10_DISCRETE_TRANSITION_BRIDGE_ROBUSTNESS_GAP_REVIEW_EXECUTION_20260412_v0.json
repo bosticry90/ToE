@@ -1,0 +1,34 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_ROBUSTNESS_GAP_REVIEW_EXECUTION_20260412_v0",
+  "execution_id": "QM-STAT-RL10-BRIDGE-ROBUSTNESS-GAP-REVIEW-EXEC-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_probe_readiness_robustness_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_readiness_robustness_execution_20260412_v0.json",
+    "bridge_probe_readiness_robustness_ruling_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_readiness_robustness_ruling_20260412_v0.json",
+    "bridge_external_comparator_binding_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_external_comparator_binding_execution_20260412_v0.json"
+  },
+  "gap_review_spec": {
+    "review_axes": [
+      "THRESHOLD_STRICTNESS",
+      "SIGNAL_FRAGILITY",
+      "UNDERDECLARED_BRIDGE_STRUCTURE",
+      "COMPARATOR_BINDING_LIMITS"
+    ],
+    "threshold_strictness_indicator": 0.02,
+    "fragility_indicator": 0.04,
+    "underdeclared_structure_detected": false,
+    "comparator_binding_limit_detected": false,
+    "path_falsification_observed": false
+  },
+  "execution_contract": {
+    "allowed_outcomes": [
+      "ONE_BOUNDED_ROBUSTNESS_REFINEMENT_JUSTIFIED",
+      "COMPARATOR_BOUND_HOLD_RETAINED",
+      "BRIDGE_SIGNAL_PATH_FALSIFIED",
+      "PROBE_READINESS_CRITERIA_REQUIRE_REVISION"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_ROBUSTNESS_GAP_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_BRIDGE_ROBUSTNESS_GAP_REVIEW_ONLY"
+  },
+  "non_claim_boundary": "Repository-local bridge robustness-gap review execution declaration only; no scientific adequacy claim."
+}

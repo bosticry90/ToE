@@ -1,0 +1,20 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_ROBUSTNESS_GAP_REVIEW_RULING_20260412_v0",
+  "ruling_id": "QM-STAT-RL10-BRIDGE-ROBUSTNESS-GAP-REVIEW-RULING-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_robustness_gap_review_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_robustness_gap_review_execution_20260412_v0.json"
+  },
+  "ruling_contract": {
+    "allowed_outcomes": [
+      "ONE_BOUNDED_ROBUSTNESS_REFINEMENT_JUSTIFIED",
+      "COMPARATOR_BOUND_HOLD_RETAINED",
+      "BRIDGE_SIGNAL_PATH_FALSIFIED",
+      "PROBE_READINESS_CRITERIA_REQUIRE_REVISION"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_ROBUSTNESS_GAP_RULING_OUTCOME",
+    "no_loop_rule": "ONE_BRIDGE_ROBUSTNESS_GAP_RULING_ONLY",
+    "default_outcome": "COMPARATOR_BOUND_HOLD_RETAINED"
+  },
+  "non_claim_boundary": "Repository-local bridge robustness-gap review ruling declaration only; no scientific adequacy claim."
+}
