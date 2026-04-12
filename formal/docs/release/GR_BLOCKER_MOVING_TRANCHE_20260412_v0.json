@@ -1,0 +1,37 @@
+{
+  "schema_id": "GR_BLOCKER_MOVING_TRANCHE_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T17:20:00Z",
+  "tranche_id": "GR-BLOCKER-MOVING-001",
+  "target_row": "ROW-PILLAR-GR-001",
+  "blocker_class": "THEOREM_GAP",
+  "subtarget_id": "GR_PACKET05_THRESHOLD_ALIGNMENT_SUBPROBLEM_v0",
+  "objective": "Execute one bounded GR blocker-moving tranche selected by post-QM-STAT rebalancing and classify it only by blocker movement outcomes.",
+  "required_inputs": {
+    "science_rebalance_report": "formal/output/reports/science_post_qm_stat_rebalance_20260412_v0.json",
+    "execution_checkpoint": "formal/output/ws10_tgc10_gr_packet05_increment_execution_checkpoint_20260408_v0.json",
+    "gr_subtarget_report": "formal/output/reports/theorem_gap_gr_subtarget_tranche_20260411_v0.json",
+    "gr_stop_rule_decision_report": "formal/output/reports/theorem_gap_gr_bounded_stop_rule_decision_20260411_v0.json",
+    "trend_report": "formal/output/reports/governance_blocker_trend_window_20260410_v0.json",
+    "row_outcome_trend_report": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "ledger_report": "formal/output/reports/physics_progress_ledger_v0.json"
+  },
+  "movement_policy": {
+    "success_rule": "THEOREM_GAP_DELTA_LT_0_OR_TARGET_ROW_SUCCESS_INCREMENT_GT_0_OR_BLOCKER_STATE_TOKEN_CHANGED",
+    "nonmoving_rule": "ALL_MOVEMENT_SIGNALS_FALSE_AND_NO_ATTACK_CLASS_MISMATCH",
+    "different_attack_class_rule": "STOP_RULE_TRIGGERED_AND_DECISION_DEFER_OR_RECLASSIFY",
+    "falsification_rule": "EXECUTION_PRECONDITIONS_BROKEN_OR_SCOPE_MISMATCH",
+    "no_loop_rule": "ONE_BOUNDED_EXECUTION_ONLY"
+  },
+  "classification_contract": {
+    "allowed_outcomes": [
+      "GR_BLOCKER_MOVED",
+      "GR_VALID_BUT_NONMOVING",
+      "GR_PATH_FALSIFIED",
+      "GR_REQUIRES_DIFFERENT_ATTACK_CLASS"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_GR_BLOCKER_OUTCOME",
+    "default_outcome": "GR_VALID_BUT_NONMOVING"
+  },
+  "non_claim_boundary": "Repository-local GR blocker-moving tranche declaration only; no scientific adequacy claim."
+}
