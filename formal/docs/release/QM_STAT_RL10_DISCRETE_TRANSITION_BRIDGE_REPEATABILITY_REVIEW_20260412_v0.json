@@ -1,0 +1,32 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_REPEATABILITY_REVIEW_20260412_v0",
+  "review_id": "QM-STAT-RL10-BRIDGE-REPEATABILITY-REVIEW-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_limitation_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_review_20260412_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "repeatability_policy": {
+    "required_limitation_cause": "comparator_repeatability_or_cross_probe_consistency_not_yet_confirmed",
+    "required_local_and_refinable": true,
+    "repeatability_check_named": false,
+    "cross_probe_consistency_check_named": false,
+    "path_falsification_observed": false
+  },
+  "review_contract": {
+    "allowed_outcomes": [
+      "REPEATABILITY_CHECK_JUSTIFIED",
+      "CROSS_PROBE_CONSISTENCY_CHECK_JUSTIFIED",
+      "LIMITED_HOLD_RETAINED",
+      "PATH_FALSIFIED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_REPEATABILITY_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_BRIDGE_REPEATABILITY_REVIEW_ONLY",
+    "default_outcome": "LIMITED_HOLD_RETAINED"
+  },
+  "non_claim_boundary": "Repository-local bridge repeatability review declaration only; no scientific adequacy claim."
+}
