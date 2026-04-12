@@ -1,0 +1,27 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_FIRST_TEST_EXECUTION_20260412_v0",
+  "execution_id": "QM-STAT-RL10-BRIDGE-FIRST-TEST-EXEC-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_first_test_packet_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_first_test_packet_20260412_v0.json",
+    "qm_stat_single_baseline_comparator_report": "formal/output/reports/qm_stat_single_baseline_comparator_20260411_v0.json"
+  },
+  "execution_payload": {
+    "test_observable_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0",
+    "signal_threshold": 0.05,
+    "observed_signal_strength": 0.12,
+    "falsification_observed": false,
+    "undeclared_structure_needed": []
+  },
+  "execution_contract": {
+    "allowed_outcomes": [
+      "BRIDGE_SEAM_SIGNAL_PRODUCED",
+      "BRIDGE_SEAM_INTERNAL_ONLY",
+      "BRIDGE_SEAM_PATH_FALSIFIED",
+      "BRIDGE_SEAM_REQUIRES_FURTHER_DECLARED_STRUCTURE"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_TERMINAL_OUTCOME",
+    "no_loop_rule": "ONE_BRIDGE_SEAM_FIRST_TEST_EXECUTION_ONLY"
+  },
+  "non_claim_boundary": "Repository-local bridge seam first-test execution declaration only; no scientific adequacy claim."
+}

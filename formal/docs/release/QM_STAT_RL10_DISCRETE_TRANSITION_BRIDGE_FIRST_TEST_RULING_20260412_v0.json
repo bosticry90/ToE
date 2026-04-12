@@ -1,0 +1,20 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_FIRST_TEST_RULING_20260412_v0",
+  "ruling_id": "QM-STAT-RL10-BRIDGE-FIRST-TEST-RULING-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "required_inputs": {
+    "bridge_first_test_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_first_test_execution_20260412_v0.json"
+  },
+  "ruling_contract": {
+    "allowed_outcomes": [
+      "BRIDGE_SEAM_SIGNAL_PRODUCED",
+      "BRIDGE_SEAM_INTERNAL_ONLY",
+      "BRIDGE_SEAM_PATH_FALSIFIED",
+      "BRIDGE_SEAM_REQUIRES_FURTHER_DECLARED_STRUCTURE"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_TERMINAL_OUTCOME",
+    "no_loop_rule": "ONE_BRIDGE_SEAM_FIRST_TEST_RULING_ONLY",
+    "default_ruling": "BRIDGE_SEAM_INTERNAL_ONLY"
+  },
+  "non_claim_boundary": "Repository-local bridge seam first-test ruling declaration only; no scientific adequacy claim."
+}
