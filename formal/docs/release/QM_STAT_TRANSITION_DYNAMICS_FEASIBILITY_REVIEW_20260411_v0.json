@@ -1,0 +1,38 @@
+{
+  "schema_id": "QM_STAT_TRANSITION_DYNAMICS_FEASIBILITY_REVIEW_20260411_v0",
+  "review_id": "QMSTAT-TRANSITION-DYNAMICS-FEASIBILITY-001",
+  "target_seam": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "lane": "QM_STAT_CYCLE11",
+    "source_signature_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json",
+    "derivation_target_artifact": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE11_v0.md"
+  },
+  "required_inputs": {
+    "qm_stat_rl10_sigma_db_transformation_report": "formal/output/reports/qm_stat_rl10_sigma_db_transformation_20260411_v0.json"
+  },
+  "feasibility_questions": {
+    "transition_operator_question": "CAN_A_DISCRETE_TRANSITION_OPERATOR_OR_MARKOV_KERNEL_BE_DECLARED_WITHOUT_VIOLATING_CURRENT_QM_STAT_SCOPE",
+    "bidirectional_rate_question": "CAN_BIDIRECTIONAL_TRANSITION_RATES_BE_INTRODUCED_WITHOUT_COLLAPSING_THE_CURRENT_INTERPRETATION_BOUNDARY",
+    "model_class_question": "WOULD_ADDING_TRANSITION_STRUCTURE_REMAIN_WITHIN_QM_STAT_OR_REQUIRE_A_NEW_SEAM_OR_MODEL_CLASS"
+  },
+  "assumption_targets": {
+    "sigma_proxy_required_assumptions": [
+      "DECLARE_DISCRETE_TRANSITION_DYNAMICS_OPERATOR_OR_MARKOV_KERNEL",
+      "DECLARE_DIRECTIONAL_STATE_TO_STATE_FLOW_CONSTRUCTION"
+    ],
+    "db_residual_required_assumptions": [
+      "DECLARE_BIDIRECTIONAL_TRANSITION_RATES_OR_EQUIVALENT_TRANSITION_MATRIX",
+      "DECLARE_DETAILED_BALANCE_RESIDUAL_CONSTRUCTION_FROM_STATIONARY_FLOW_DIFFERENCE"
+    ]
+  },
+  "review_contract": {
+    "allowed_outcomes": [
+      "TRANSITION_DYNAMICS_EXTENSION_JUSTIFIED",
+      "TRANSITION_DYNAMICS_EXTENSION_OUT_OF_SCOPE",
+      "QM_STAT_RL10_EXTERNALIZATION_PATH_FALSIFIED"
+    ],
+    "no_loop_rule": "ONE_QM_STAT_TRANSITION_DYNAMICS_FEASIBILITY_REVIEW_ONLY",
+    "rerun_policy": "NO_QM_STAT_EXTERNAL_PATH_OR_SIGMA_DB_RERUN_UNLESS_TRANSITION_DYNAMICS_EXTENSION_JUSTIFIED"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT transition-dynamics feasibility review declaration only; no scientific adequacy claim."
+}
