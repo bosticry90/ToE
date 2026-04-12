@@ -1,0 +1,39 @@
+{
+  "schema_id": "QFT_GR_FIRST_TEST_PACKET_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T00:15:00Z",
+  "objective": "Run one bounded QFT-GR first-test packet on the single target seam QFT-GR using one attack class and one execution only.",
+  "required_inputs": {
+    "science_new_untouched_lane_selection_report": "formal/output/reports/science_new_untouched_lane_selection_20260412_v0.json",
+    "science_frontier_preservation_record_report": "formal/output/reports/science_frontier_preservation_record_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "em_qft_higher_level_structure_review_report": "formal/output/reports/em_qft_higher_level_structure_review_20260412_v0.json",
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json"
+  },
+  "test_policy": {
+    "required_lane_selection_outcome": "ACTIVATE_QFT_GR_UNTOUCHED_FIRST_TEST",
+    "required_selected_lane": "QFT-GR",
+    "required_preservation_outcome": "FRONTIER_PRESERVED_AT_CANONICAL_COMMIT",
+    "qm_stat_required_review_outcome": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+    "gr_required_outcome": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "em_qft_required_outcome": "EM_QFT_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "target_seam": "QFT-GR",
+    "single_attack_class": "qft_gr_covariant_bridge_consistency",
+    "lane_borrows_no_authority_from_frozen_lanes": true,
+    "movement_signal_detected": true,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "test_contract": {
+    "allowed_outcomes": [
+      "QFT_GR_SEAM_SIGNAL_PRODUCED",
+      "QFT_GR_SEAM_VALID_BUT_NONMOVING",
+      "QFT_GR_SEAM_REQUIRES_UNDECLARED_STRUCTURE",
+      "QFT_GR_SEAM_PATH_FALSIFIED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QFT_GR_FIRST_TEST_PACKET_OUTCOME",
+    "no_loop_rule": "ONE_QFT_GR_FIRST_TEST_PACKET_LAYER_ONLY",
+    "default_outcome": "QFT_GR_SEAM_SIGNAL_PRODUCED"
+  },
+  "non_claim_boundary": "Repository-local QFT-GR first-test packet declaration only; no scientific adequacy claim."
+}
