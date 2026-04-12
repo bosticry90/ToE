@@ -1,0 +1,46 @@
+{
+  "schema_id": "SCIENCE_PHASE_G_UNTOUCHED_LANE_INTERFACE_ALIGNMENT_PACKET_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T06:05:00Z",
+  "objective": "Execute exactly one bounded interface-alignment packet for LANE-NEUTRINO-INTERFACE-001 under the Phase F selected attack class, then issue exactly one immediate ruling.",
+  "required_inputs": {
+    "science_phase_d_untouched_lane_selection_report": "formal/output/reports/science_phase_d_untouched_lane_selection_20260412_v0.json",
+    "science_phase_f_untouched_lane_attack_class_reselection_report": "formal/output/reports/science_phase_f_untouched_lane_attack_class_reselection_20260412_v0.json",
+    "science_closed_lane_non_reopen_reason_summary_report": "formal/output/reports/science_closed_lane_non_reopen_reason_summary_20260412_v0.json"
+  },
+  "packet_policy": {
+    "required_phase_d_selection_outcome": "UNTOUCHED_LANE_SELECTED_FOR_BOUNDED_FIRST_TEST",
+    "required_phase_f_reselection_outcome": "UNTOUCHED_LANE_INTERFACE_ALIGNMENT_ATTACK",
+    "required_non_reopen_summary_outcome": "CLOSED_LANE_NON_REOPEN_REASON_SUMMARY_LOCKED",
+    "required_selected_untouched_lane": "LANE-NEUTRINO-INTERFACE-001",
+    "required_selected_attack_class": "neutrino_interface_alignment_boundary_probe",
+    "target_lane": "LANE-NEUTRINO-INTERFACE-001",
+    "selected_attack_class": "neutrino_interface_alignment_boundary_probe",
+    "one_execution_only": true,
+    "one_immediate_ruling_only": true,
+    "signal_detected": false,
+    "alignment_valid_without_movement": true,
+    "undeclared_structure_detected": false,
+    "anti_alias_checks": {
+      "QM-STAT": true,
+      "GR-ROW-001": true,
+      "EM-QFT": true,
+      "SHARED-MODEL-CLASS": true,
+      "QFT-GR": true
+    },
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "packet_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_PHASE_G_UNTOUCHED_LANE_INTERFACE_ALIGNMENT_PACKET_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_PHASE_G_UNTOUCHED_LANE_INTERFACE_ALIGNMENT_PACKET_LAYER_ONLY",
+    "allowed_outcomes": [
+      "UNTOUCHED_LANE_SIGNAL_PRODUCED",
+      "UNTOUCHED_LANE_VALID_BUT_NONMOVING",
+      "UNTOUCHED_LANE_REQUIRES_UNDECLARED_STRUCTURE",
+      "UNTOUCHED_LANE_PATH_FALSIFIED"
+    ],
+    "default_outcome": "UNTOUCHED_LANE_PATH_FALSIFIED"
+  },
+  "non_claim_boundary": "Repository-local untouched-lane interface-alignment packet declaration only; no scientific adequacy claim."
+}
