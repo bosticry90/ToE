@@ -1,0 +1,20 @@
+{
+  "schema_id": "DISCOVERY_EXTERNAL_PATH_ROUTING_REFRESH_20260411_v0",
+  "refresh_id": "DISCOVERY-EXTERNAL-PATH-ROUTING-REFRESH-001",
+  "required_inputs": {
+    "discovery_priority_queue_report": "formal/output/reports/discovery_priority_queue_report_20260411_v0.json",
+    "discovery_engine_scoring_routing_review_report": "formal/output/reports/discovery_engine_scoring_routing_review_20260411_v0.json",
+    "qm_stat_cycle11_lane_status_report": "formal/output/reports/qm_stat_cycle11_lane_status_20260411_v0.json",
+    "qft_gr_discovery_interpretation_report": "formal/output/reports/qft_gr_discovery_interpretation_report_20260411_v0.json"
+  },
+  "refresh_contract": {
+    "allowed_outcomes": [
+      "QM_STAT_EXCLUDED_NO_EXTERNAL_PATH_CANDIDATE_REMAINS",
+      "QM_STAT_EXCLUDED_NEXT_EXTERNAL_PATH_CANDIDATE_AVAILABLE",
+      "ROUTING_INPUTS_INCOMPLETE"
+    ],
+    "no_loop_rule": "ONE_DISCOVERY_EXTERNAL_PATH_ROUTING_REFRESH_ONLY",
+    "routing_goal": "CONTINUE_DISCOVERY_ROUTING_WITHOUT_COUNTING_QM_STAT_AS_A_CURRENT_EXTERNAL_PATH_REOPEN_CANDIDATE"
+  },
+  "non_claim_boundary": "Repository-local discovery external-path routing refresh declaration only; no scientific adequacy claim."
+}
