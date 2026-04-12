@@ -1,0 +1,35 @@
+{
+  "schema_id": "SCIENCE_POST_SHARED_MODEL_CLASS_FRONTIER_DECISION_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-12T23:45:00Z",
+  "objective": "Run one bounded post-frontier routing decision for the science program after the shared model-class lane reached its justified stopping point.",
+  "required_inputs": {
+    "shared_model_class_post_refinement_decision_report": "formal/output/reports/shared_model_class_post_refinement_decision_20260412_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "em_qft_higher_level_structure_review_report": "formal/output/reports/em_qft_higher_level_structure_review_20260412_v0.json",
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json"
+  },
+  "routing_policy": {
+    "required_post_refinement_decision_outcome": "HOLD_SHARED_MODEL_CLASS_AS_EXTERNALLY_COMPARABLE_BUT_NOT_PROBE_READY",
+    "qm_stat_required_review_outcome": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+    "gr_required_outcome": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "em_qft_required_outcome": "EM_QFT_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "reopen_discovery_queue_for_new_untouched_lane": false,
+    "open_higher_level_policy_evidence_standard_lane": false,
+    "require_architecture_review": false,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "routing_contract": {
+    "allowed_outcomes": [
+      "PRESERVE_CURRENT_FRONTIER_AND_STOP_ACTIVE_EXECUTION",
+      "REOPEN_DISCOVERY_QUEUE_FOR_NEW_UNTOUCHED_LANE",
+      "OPEN_HIGHER_LEVEL_POLICY_EVIDENCE_STANDARD_LANE",
+      "HOLD_AND_REQUIRE_ARCHITECTURE_REVIEW"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_POST_SHARED_MODEL_CLASS_FRONTIER_DECISION_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_POST_SHARED_MODEL_CLASS_FRONTIER_DECISION_LAYER_ONLY",
+    "default_outcome": "PRESERVE_CURRENT_FRONTIER_AND_STOP_ACTIVE_EXECUTION"
+  },
+  "non_claim_boundary": "Repository-local science post-shared-model-class frontier routing decision declaration only; no scientific adequacy claim."
+}
