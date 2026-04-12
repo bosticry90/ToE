@@ -1,0 +1,32 @@
+{
+  "schema_id": "SCIENCE_POST_QM_STAT_REBALANCE_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "decision_scope": "POST_QM_STAT_LIMITED_HOLD_SCIENCE_PROGRAM_REBALANCE",
+  "required_inputs": {
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json",
+    "bridge_admissibility_standard_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_admissibility_standard_review_20260412_v0.json",
+    "bridge_repeatability_check_naming_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_repeatability_check_naming_review_20260412_v0.json"
+  },
+  "selection_policy": {
+    "qm_stat_bridge_hold_required_outcome": "EXTERNAL_VALIDATION_POLICY_INCOMPLETE_HOLD",
+    "qm_stat_admissibility_hold_required_outcome": "LIMITED_HOLD_RETAINED",
+    "qm_stat_naming_hold_required_outcome": "NO_SPECIFIC_CHECK_JUSTIFIED_YET",
+    "gr_blocker_moving_ready": true,
+    "em_qft_first_test_ready": true,
+    "qft_gr_discovery_only_enforced": true,
+    "require_rescoring_before_activation": false,
+    "default_next_action": "OPEN_SINGLE_GR_BLOCKER_MOVING_TRANCHE_PACKET"
+  },
+  "selection_contract": {
+    "allowed_outcomes": [
+      "ACTIVATE_GR_BLOCKER_MOVING_TRANCHE",
+      "ACTIVATE_EM_QFT_SEAM_FIRST_TEST",
+      "KEEP_QFT_GR_DISCOVERY_ONLY",
+      "HOLD_AND_REQUIRE_RESCORING"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_REBALANCE_OUTCOME",
+    "no_loop_rule": "ONE_POST_QM_STAT_REBALANCE_ONLY",
+    "default_outcome": "HOLD_AND_REQUIRE_RESCORING"
+  },
+  "non_claim_boundary": "Repository-local post-QM-STAT science rebalancing declaration only; no scientific adequacy claim."
+}
