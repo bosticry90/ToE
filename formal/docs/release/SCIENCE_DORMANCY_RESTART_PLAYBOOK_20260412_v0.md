@@ -11,6 +11,15 @@ Canonical anchors:
 - Frontier stop-state summary commit: f8fc4bd
 - Restart trigger contract commit: ba04a71
 - Controlled dormancy protocol commit: e190f98
+- Dormancy preservation audit and playbook commit: 92f33e3
+
+Standard restart package order:
+1. SCIENCE_FRONTIER_STOP_STATE_SUMMARY_20260412_v0.md
+2. State_of_the_Theory.md
+3. SCIENCE_RESTART_TRIGGER_CONTRACT_20260412_v0.json
+4. SCIENCE_CONTROLLED_DORMANCY_PROTOCOL_20260412_v0.json
+5. SCIENCE_DORMANCY_RESTART_PLAYBOOK_20260412_v0.md
+6. SCIENCE_DORMANCY_PRESERVATION_AUDIT_20260412_v0.json
 
 Dormancy operating rule:
 - No active lane work.
@@ -22,8 +31,9 @@ Restart sequencing rule:
 1. Start at P75 restart trigger contract.
 2. Ask: is there a valid trigger family?
 3. If no, remain in governed stop-state and preserve dormancy.
-4. If yes, open at most one bounded pre-screening gate with no direct execution authorization.
-5. Lane reopen decisions can only occur after trigger-family legality is established through the restart front door.
+4. Run the dormancy preservation audit before any restart escalation.
+5. If yes, open at most one bounded pre-screening gate with no direct execution authorization.
+6. Lane reopen decisions can only occur after trigger-family legality is established through the restart front door.
 
 Forbidden sequencing:
 - Do not start restart by selecting a lane.
