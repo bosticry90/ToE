@@ -1,0 +1,62 @@
+{
+  "captured_at_utc": "2026-04-13T00:28:31Z",
+  "criteria": {
+    "dormancy_policy_shape_ok": true,
+    "forbid_closed_or_held_lane_reopen": true,
+    "lane_reopen_authorized_match": true,
+    "new_lane_or_packet_authorized_now_match": true,
+    "no_loop_rule_declared": true,
+    "post_phase_z_outcome_match": true,
+    "restart_trigger_outcome_match": true,
+    "single_terminal_outcome_rule_declared": true,
+    "summary_doc_semantics_ok": true
+  },
+  "dormancy_policy": {
+    "candidate_class_ideation_allowed": true,
+    "external_evidence_monitoring_allowed": true,
+    "lane_execution_disallowed": true,
+    "new_packet_execution_disallowed": true,
+    "restart_front_door_required": true,
+    "taxonomy_stability_required": true
+  },
+  "non_claim_boundary": "Repository-local controlled dormancy protocol report only; no scientific adequacy claim.",
+  "objective_quality": {
+    "criteria": {
+      "allowed_outcome_materialized": true,
+      "controlled_dormancy_preconditions_satisfied": true,
+      "single_outcome_materialized": true
+    },
+    "inputs": {
+      "lane_reopen_authorized": false,
+      "new_lane_or_packet_authorized_now": false,
+      "post_phase_z_outcome": "PRESERVE_CURRENT_GOVERNED_STOP_STATE",
+      "required_lane_reopen_authorized": false,
+      "required_new_lane_or_packet_authorized_now": false,
+      "required_post_phase_z_outcome": "PRESERVE_CURRENT_GOVERNED_STOP_STATE",
+      "required_restart_trigger_outcome": "REMAIN_IN_GOVERNED_STOP_STATE",
+      "restart_trigger_outcome": "REMAIN_IN_GOVERNED_STOP_STATE"
+    },
+    "summary": {
+      "all_criteria_satisfied": true,
+      "next_action": "PRESERVE_STOP_STATE_AND_ROUTE_ANY_RESTART_REQUEST_THROUGH_RESTART_TRIGGER_CONTRACT",
+      "phase_status": "COMPLETE"
+    }
+  },
+  "schema_id": "SCIENCE_CONTROLLED_DORMANCY_PROTOCOL_REPORT_20260412_v0",
+  "source_bundle": {
+    "declaration": "formal/docs/release/SCIENCE_CONTROLLED_DORMANCY_PROTOCOL_20260412_v0.json",
+    "science_frontier_stop_state_summary_doc": "formal/docs/release/SCIENCE_FRONTIER_STOP_STATE_SUMMARY_20260412_v0.md",
+    "science_post_phase_z_frontier_decision_report": "formal/output/reports/science_post_phase_z_frontier_decision_20260412_v0.json",
+    "science_restart_trigger_contract_report": "formal/output/reports/science_restart_trigger_contract_20260412_v0.json"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "summary": {
+    "direct_execution_authorized_now": false,
+    "lane_specific_reopen_authorized": false,
+    "new_lane_or_packet_authorized_now": false,
+    "next_action": "PRESERVE_STOP_STATE_AND_ROUTE_ANY_RESTART_REQUEST_THROUGH_RESTART_TRIGGER_CONTRACT",
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "terminal_outcome": "CONTROLLED_DORMANCY_PROTOCOL_ACTIVE"
+  }
+}

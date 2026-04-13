@@ -1,0 +1,44 @@
+{
+  "schema_id": "SCIENCE_CONTROLLED_DORMANCY_PROTOCOL_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T10:00:00Z",
+  "objective": "Activate a bounded controlled-dormancy operating protocol after restart-trigger contract defaulted to governed stop-state.",
+  "canonical_antecedent_commits": {
+    "restart_trigger_contract_commit": "ba04a71",
+    "frontier_stop_state_summary_commit": "f8fc4bd",
+    "post_phase_z_frontier_decision_commit": "1a2c1ac"
+  },
+  "required_inputs": {
+    "science_restart_trigger_contract_report": "formal/output/reports/science_restart_trigger_contract_20260412_v0.json",
+    "science_post_phase_z_frontier_decision_report": "formal/output/reports/science_post_phase_z_frontier_decision_20260412_v0.json",
+    "science_frontier_stop_state_summary_doc": "formal/docs/release/SCIENCE_FRONTIER_STOP_STATE_SUMMARY_20260412_v0.md"
+  },
+  "controlled_dormancy_contract": {
+    "required_restart_trigger_outcome": "REMAIN_IN_GOVERNED_STOP_STATE",
+    "required_post_phase_z_outcome": "PRESERVE_CURRENT_GOVERNED_STOP_STATE",
+    "required_lane_reopen_authorized": false,
+    "required_new_lane_or_packet_authorized_now": false,
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "dormancy_policy": {
+      "lane_execution_disallowed": true,
+      "new_packet_execution_disallowed": true,
+      "restart_front_door_required": true,
+      "taxonomy_stability_required": true,
+      "external_evidence_monitoring_allowed": true,
+      "candidate_class_ideation_allowed": true
+    }
+  },
+  "controlled_dormancy_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_CONTROLLED_DORMANCY_PROTOCOL_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_CONTROLLED_DORMANCY_PROTOCOL_LAYER_ONLY",
+    "allowed_outcomes": [
+      "CONTROLLED_DORMANCY_PROTOCOL_ACTIVE",
+      "CONTROLLED_DORMANCY_PROTOCOL_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_CONTROLLED_DORMANCY_PROTOCOL_REPAIR"
+    ],
+    "default_outcome": "CONTROLLED_DORMANCY_PROTOCOL_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local controlled dormancy protocol declaration only; no scientific adequacy claim."
+}
