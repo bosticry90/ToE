@@ -1,0 +1,64 @@
+{
+  "captured_at_utc": "2026-04-13T00:17:59Z",
+  "criteria": {
+    "forbid_closed_or_held_lane_reopen": true,
+    "lane_reopen_authorized_match": true,
+    "new_lane_or_packet_authorized_now_match": true,
+    "no_loop_rule_declared": true,
+    "phase_z_outcome_match": true,
+    "post_phase_z_outcome_match": true,
+    "restart_trigger_family_signal_shape_ok": true,
+    "single_terminal_outcome_rule_declared": true,
+    "summary_doc_semantics_ok": true,
+    "thermal_lane_status_match": true
+  },
+  "non_claim_boundary": "Repository-local restart trigger contract report only; no scientific adequacy claim.",
+  "objective_quality": {
+    "criteria": {
+      "allowed_outcome_materialized": true,
+      "restart_trigger_preconditions_satisfied": true,
+      "single_outcome_materialized": true
+    },
+    "inputs": {
+      "lane_reopen_authorized": false,
+      "new_lane_or_packet_authorized_now": false,
+      "phase_z_outcome": "NO_STRONGER_CANDIDATE_CLASS_IDENTIFIED_YET",
+      "post_phase_z_outcome": "PRESERVE_CURRENT_GOVERNED_STOP_STATE",
+      "required_lane_reopen_authorized": false,
+      "required_new_lane_or_packet_authorized_now": false,
+      "required_phase_z_outcome": "NO_STRONGER_CANDIDATE_CLASS_IDENTIFIED_YET",
+      "required_post_phase_z_outcome": "PRESERVE_CURRENT_GOVERNED_STOP_STATE",
+      "required_thermal_lane_status": "PRESERVED_INACTIVE_NEAR_READY_NOT_EXECUTABLE",
+      "thermal_lane_status": "PRESERVED_INACTIVE_NEAR_READY_NOT_EXECUTABLE"
+    },
+    "summary": {
+      "all_criteria_satisfied": true,
+      "next_action": "PRESERVE_GOVERNED_STOP_STATE_UNTIL_VALID_RESTART_TRIGGER_FAMILY_IS_PROVEN",
+      "phase_status": "COMPLETE"
+    }
+  },
+  "restart_trigger_families": {
+    "anti_alias_proof_for_new_candidate_declared": false,
+    "force_policy_escalation_now": false,
+    "higher_level_policy_revision_authorized": false,
+    "material_new_external_evidence_class": false,
+    "stronger_candidate_class_identified": false
+  },
+  "schema_id": "SCIENCE_RESTART_TRIGGER_CONTRACT_REPORT_20260412_v0",
+  "source_bundle": {
+    "declaration": "formal/docs/release/SCIENCE_RESTART_TRIGGER_CONTRACT_20260412_v0.json",
+    "science_frontier_stop_state_summary_doc": "formal/docs/release/SCIENCE_FRONTIER_STOP_STATE_SUMMARY_20260412_v0.md",
+    "science_phase_z_stronger_candidate_class_discovery_report": "formal/output/reports/science_phase_z_stronger_candidate_class_discovery_20260412_v0.json",
+    "science_post_phase_z_frontier_decision_report": "formal/output/reports/science_post_phase_z_frontier_decision_20260412_v0.json"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "summary": {
+    "direct_execution_authorized_now": false,
+    "lane_specific_reopen_authorized": false,
+    "new_lane_or_packet_authorized_now": false,
+    "next_action": "PRESERVE_GOVERNED_STOP_STATE_UNTIL_VALID_RESTART_TRIGGER_FAMILY_IS_PROVEN",
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "terminal_outcome": "REMAIN_IN_GOVERNED_STOP_STATE"
+  }
+}

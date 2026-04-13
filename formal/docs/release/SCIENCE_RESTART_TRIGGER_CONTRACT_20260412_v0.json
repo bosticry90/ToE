@@ -1,0 +1,45 @@
+{
+  "schema_id": "SCIENCE_RESTART_TRIGGER_CONTRACT_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T09:00:00Z",
+  "objective": "Encode machine-checkable restart trigger eligibility after canonical frontier stop-state with exactly one outcome and no direct execution authorization.",
+  "canonical_antecedent_commits": {
+    "post_phase_z_frontier_decision_commit": "1a2c1ac",
+    "frontier_stop_state_summary_commit": "f8fc4bd",
+    "phase_z_discovery_commit": "bc1edc7"
+  },
+  "required_inputs": {
+    "science_post_phase_z_frontier_decision_report": "formal/output/reports/science_post_phase_z_frontier_decision_20260412_v0.json",
+    "science_phase_z_stronger_candidate_class_discovery_report": "formal/output/reports/science_phase_z_stronger_candidate_class_discovery_20260412_v0.json",
+    "science_frontier_stop_state_summary_doc": "formal/docs/release/SCIENCE_FRONTIER_STOP_STATE_SUMMARY_20260412_v0.md"
+  },
+  "restart_trigger_contract": {
+    "required_post_phase_z_outcome": "PRESERVE_CURRENT_GOVERNED_STOP_STATE",
+    "required_phase_z_outcome": "NO_STRONGER_CANDIDATE_CLASS_IDENTIFIED_YET",
+    "required_lane_reopen_authorized": false,
+    "required_new_lane_or_packet_authorized_now": false,
+    "required_thermal_lane_status": "PRESERVED_INACTIVE_NEAR_READY_NOT_EXECUTABLE",
+    "forbid_closed_or_held_lane_reopen": true,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "restart_trigger_families": {
+      "stronger_candidate_class_identified": false,
+      "higher_level_policy_revision_authorized": false,
+      "material_new_external_evidence_class": false,
+      "anti_alias_proof_for_new_candidate_declared": false,
+      "force_policy_escalation_now": false
+    }
+  },
+  "restart_trigger_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_RESTART_TRIGGER_CONTRACT_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_RESTART_TRIGGER_CONTRACT_LAYER_ONLY",
+    "allowed_outcomes": [
+      "REMAIN_IN_GOVERNED_STOP_STATE",
+      "OPEN_ONE_BOUNDED_PRE_SCREENING_RESTART_GATE",
+      "RESTART_TRIGGER_CONTRACT_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_RESTART_TRIGGER_CONTRACT_REPAIR"
+    ],
+    "default_outcome": "RESTART_TRIGGER_CONTRACT_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local restart trigger contract declaration only; no scientific adequacy claim."
+}
