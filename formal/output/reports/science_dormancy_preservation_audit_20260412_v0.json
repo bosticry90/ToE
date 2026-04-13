@@ -1,0 +1,57 @@
+{
+  "captured_at_utc": "2026-04-13T00:33:26Z",
+  "criteria": {
+    "controlled_dormancy_outcome_match": true,
+    "direct_execution_authorized_now_match": true,
+    "lane_reopen_authorized_match": true,
+    "new_lane_or_packet_authorized_now_match": true,
+    "no_loop_rule_declared": true,
+    "playbook_forbid_lane_first_present": true,
+    "playbook_restart_sequence_anchor_present": true,
+    "playbook_trigger_phrase_present": true,
+    "restart_trigger_outcome_match": true,
+    "single_terminal_outcome_rule_declared": true
+  },
+  "non_claim_boundary": "Repository-local dormancy preservation audit report only; no scientific adequacy claim.",
+  "objective_quality": {
+    "criteria": {
+      "allowed_outcome_materialized": true,
+      "dormancy_preservation_preconditions_satisfied": true,
+      "single_outcome_materialized": true
+    },
+    "inputs": {
+      "controlled_dormancy_outcome": "CONTROLLED_DORMANCY_PROTOCOL_ACTIVE",
+      "direct_execution_authorized_now": false,
+      "lane_reopen_authorized": false,
+      "new_lane_or_packet_authorized_now": false,
+      "required_controlled_dormancy_outcome": "CONTROLLED_DORMANCY_PROTOCOL_ACTIVE",
+      "required_direct_execution_authorized_now": false,
+      "required_lane_reopen_authorized": false,
+      "required_new_lane_or_packet_authorized_now": false,
+      "required_restart_trigger_outcome": "REMAIN_IN_GOVERNED_STOP_STATE",
+      "restart_trigger_outcome": "REMAIN_IN_GOVERNED_STOP_STATE"
+    },
+    "summary": {
+      "all_criteria_satisfied": true,
+      "next_action": "PRESERVE_CONTROLLED_DORMANCY_AND_ENFORCE_TRIGGER_FIRST_RESTART_SEQUENCING",
+      "phase_status": "COMPLETE"
+    }
+  },
+  "schema_id": "SCIENCE_DORMANCY_PRESERVATION_AUDIT_REPORT_20260412_v0",
+  "source_bundle": {
+    "declaration": "formal/docs/release/SCIENCE_DORMANCY_PRESERVATION_AUDIT_20260412_v0.json",
+    "science_controlled_dormancy_protocol_report": "formal/output/reports/science_controlled_dormancy_protocol_20260412_v0.json",
+    "science_dormancy_restart_playbook": "formal/docs/release/SCIENCE_DORMANCY_RESTART_PLAYBOOK_20260412_v0.md",
+    "science_restart_trigger_contract_report": "formal/output/reports/science_restart_trigger_contract_20260412_v0.json"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "summary": {
+    "direct_execution_authorized_now": false,
+    "lane_specific_reopen_authorized": false,
+    "new_lane_or_packet_authorized_now": false,
+    "next_action": "PRESERVE_CONTROLLED_DORMANCY_AND_ENFORCE_TRIGGER_FIRST_RESTART_SEQUENCING",
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "terminal_outcome": "DORMANCY_PRESERVATION_AUDIT_PASS"
+  }
+}

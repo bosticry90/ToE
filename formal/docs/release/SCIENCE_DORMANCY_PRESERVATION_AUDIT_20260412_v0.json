@@ -1,0 +1,38 @@
+{
+  "schema_id": "SCIENCE_DORMANCY_PRESERVATION_AUDIT_20260412_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T12:00:00Z",
+  "objective": "Verify that controlled dormancy remains canonical and that future restart sequencing is trigger-first via P75.",
+  "canonical_antecedent_commits": {
+    "restart_trigger_contract_commit": "ba04a71",
+    "controlled_dormancy_protocol_commit": "e190f98"
+  },
+  "required_inputs": {
+    "science_restart_trigger_contract_report": "formal/output/reports/science_restart_trigger_contract_20260412_v0.json",
+    "science_controlled_dormancy_protocol_report": "formal/output/reports/science_controlled_dormancy_protocol_20260412_v0.json",
+    "science_dormancy_restart_playbook": "formal/docs/release/SCIENCE_DORMANCY_RESTART_PLAYBOOK_20260412_v0.md"
+  },
+  "dormancy_preservation_contract": {
+    "required_restart_trigger_outcome": "REMAIN_IN_GOVERNED_STOP_STATE",
+    "required_controlled_dormancy_outcome": "CONTROLLED_DORMANCY_PROTOCOL_ACTIVE",
+    "required_lane_reopen_authorized": false,
+    "required_new_lane_or_packet_authorized_now": false,
+    "required_direct_execution_authorized_now": false,
+    "required_playbook_phrase": "is there a valid trigger family?",
+    "required_restart_sequence_anchor": "Start at P75 restart trigger contract.",
+    "forbid_lane_first_restart_sequencing": true,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "dormancy_preservation_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_DORMANCY_PRESERVATION_AUDIT_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_DORMANCY_PRESERVATION_AUDIT_LAYER_ONLY",
+    "allowed_outcomes": [
+      "DORMANCY_PRESERVATION_AUDIT_PASS",
+      "DORMANCY_PRESERVATION_AUDIT_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_DORMANCY_PRESERVATION_REPAIR"
+    ],
+    "default_outcome": "DORMANCY_PRESERVATION_AUDIT_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local dormancy preservation audit declaration only; no scientific adequacy claim."
+}
