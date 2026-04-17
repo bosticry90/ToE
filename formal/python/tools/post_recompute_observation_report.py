@@ -118,12 +118,16 @@ def assess_cascade_materiality(completion_statuses):
 def classify_post_recompute_ruling(completion_statuses, cascade_assessment):
     """Classify post-recompute ruling based on completion and cascade assessment."""
     cascade_type = cascade_assessment.get("cascade_materiality", "")
+    cascade_assessment_text = cascade_assessment.get(
+        "assessment",
+        "Cascade materiality classified from bounded recompute completion state.",
+    )
     
     if cascade_type == "MATERIAL_CASCADE_OBSERVABLE":
         return {
             "ruling_id": "MATERIAL_CASCADE_CONFIRMED",
             "classification": "MATERIAL_CASCADE_CONFIRMED",
-            "interpretation": cascade_assessment["assessment"],
+            "interpretation": cascade_assessment_text,
             "next_action": "DOCUMENT_CASCADE_CONSEQUENCE_AND_PROMOTE_FINDINGS",
             "promotion_consequence_material": True
         }
@@ -131,7 +135,7 @@ def classify_post_recompute_ruling(completion_statuses, cascade_assessment):
         return {
             "ruling_id": "RECOMPUTE_STILL_PENDING",
             "classification": "INSUFFICIENT_DATA_PENDING_COMPLETION",
-            "interpretation": cascade_assessment["assessment"],
+            "interpretation": cascade_assessment_text,
             "next_action": "DEFER_RULING_MONITOR_RECOMPUTE_COMPLETION",
             "promotion_consequence_material": None
         }

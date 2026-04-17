@@ -20,6 +20,11 @@
     "required_direct_execution_authorized_now": false,
     "required_playbook_phrase": "is there a valid trigger family?",
     "required_restart_sequence_anchor": "Start at P75 restart trigger contract.",
+    "required_minimum_restart_entry_phrase": "Minimum restart-entry sequence:",
+    "required_dual_clearance_phrase": "Require both P75 trigger-family legality and P77 dormancy-preservation audit clearance before any lane reopen or packet authorization.",
+    "required_canonical_package_phrase": "The current P77 playbook plus audit declaration, audit tool, audit gate, and canonical audit report form the canonical dormancy enforcement package.",
+    "required_operational_capstone_commit": "92f33e3",
+    "required_latest_clarification_checkpoint_commit": "7729065",
     "forbid_lane_first_restart_sequencing": true,
     "single_layer_only": true,
     "single_outcome_only": true

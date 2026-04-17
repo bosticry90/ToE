@@ -1,0 +1,50 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_20260414_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-14T16:35:00Z",
+  "objective": "Define one bounded repository-local procedure object for recording RL10 bridge policy standard approval without implying restart authorization and with default state unexecuted.",
+  "required_inputs": {
+    "bridge_external_validation_policy_standard_formalization_report": "formal/output/reports/bridge_external_validation_policy_standard_formalization_20260413_v0.json",
+    "bridge_policy_standard_approval_record_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_record_20260414_v0.json",
+    "science_restart_trigger_contract_report": "formal/output/reports/science_restart_trigger_contract_20260412_v0.json",
+    "policy_standard_approval_recording_procedure_note": "formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_v0.md"
+  },
+  "policy_standard_approval_recording_procedure_policy": {
+    "required_bridge_external_validation_policy_standard_formalization_outcome": "EXTERNAL_VALIDATION_POLICY_STANDARD_FORMALLY_DEFINED_BUT_NOT_APPROVED",
+    "required_policy_standard_approval_record_outcome": "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_DECLARED",
+    "required_current_restart_blocker": "policy_standard_approval_not_recorded",
+    "required_restart_terminal_outcome": "REMAIN_IN_GOVERNED_STOP_STATE",
+    "required_note_tokens": [
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_ID_v0: RL10_BRIDGE_EXTERNAL_VALIDATION_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_SCOPE_v0: ONE_DECLARED_REPOSITORY_LOCAL_APPROVAL_RECORDATION_PATH_ONLY",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_PRECONDITION_v0: BRIDGE_POLICY_STANDARD_FORMALIZATION_DEFINED_PLUS_APPROVAL_RECORD_OBJECT_DECLARED_PLUS_RESTART_STOP_STATE_ACTIVE",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_REQUIRED_FIELDS_v0: APPROVAL_DECISION_ID_PLUS_APPROVAL_DECISION_TIMESTAMP_UTC_PLUS_APPROVAL_AUTHORITY_ID_PLUS_APPROVAL_ATTESTATION_REFERENCE",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_NON_EQUIVALENCE_RULE_v0: RECORDING_APPROVAL_DOES_NOT_ITSELF_AUTHORIZE_RESTART_OR_OPEN_QM_STAT_EXECUTION",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_FAIL_CLOSED_RULE_v0: IF_ANY_REQUIRED_FIELD_OR_ATTESTATION_IS_MISSING_APPROVAL_REMAINS_UNRECORDED_AND_RESTART_STAYS_CLOSED",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_STATUS_v0: PROCEDURE_DEFINED_BUT_NOT_EXECUTED"
+    ],
+    "approval_recording_procedure_defined": true,
+    "required_execution_fields": [
+      "approval_decision_id",
+      "approval_decision_timestamp_utc",
+      "approval_authority_id",
+      "approval_attestation_reference"
+    ],
+    "approval_recording_procedure_executed": false,
+    "policy_standard_approval_recorded": false,
+    "require_restart_authorization_distinct_from_approval_recording": true,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "policy_standard_approval_recording_procedure_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_OUTCOME",
+    "no_loop_rule": "ONE_RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_DEFINED",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_REPAIR"
+    ],
+    "default_outcome": "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local RL10 bridge policy standard approval-recording procedure declaration only; no scientific adequacy claim."
+}

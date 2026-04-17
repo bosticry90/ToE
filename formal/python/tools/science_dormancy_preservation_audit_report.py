@@ -78,10 +78,30 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     )
     required_playbook_phrase = str(contract.get("required_playbook_phrase", "")).strip()
     required_restart_sequence_anchor = str(contract.get("required_restart_sequence_anchor", "")).strip()
+    required_minimum_restart_entry_phrase = str(
+        contract.get("required_minimum_restart_entry_phrase", "")
+    ).strip()
+    required_dual_clearance_phrase = str(contract.get("required_dual_clearance_phrase", "")).strip()
+    required_canonical_package_phrase = str(
+        contract.get("required_canonical_package_phrase", "")
+    ).strip()
+    required_operational_capstone_commit = str(
+        contract.get("required_operational_capstone_commit", "")
+    ).strip()
+    required_latest_clarification_checkpoint_commit = str(
+        contract.get("required_latest_clarification_checkpoint_commit", "")
+    ).strip()
     forbid_lane_first_restart_sequencing = bool(contract.get("forbid_lane_first_restart_sequencing", False))
 
     playbook_phrase_present = required_playbook_phrase in playbook
     restart_sequence_anchor_present = required_restart_sequence_anchor in playbook
+    minimum_restart_entry_phrase_present = required_minimum_restart_entry_phrase in playbook
+    dual_clearance_phrase_present = required_dual_clearance_phrase in playbook
+    canonical_package_phrase_present = required_canonical_package_phrase in playbook
+    operational_capstone_commit_present = required_operational_capstone_commit in playbook
+    latest_clarification_checkpoint_present = (
+        required_latest_clarification_checkpoint_commit in playbook
+    )
     playbook_forbid_lane_first_present = "Do not start restart by selecting a lane." in playbook
 
     preconditions_ok = (
@@ -92,6 +112,11 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         and direct_execution_authorized_now == required_direct_execution_authorized_now
         and playbook_phrase_present
         and restart_sequence_anchor_present
+        and minimum_restart_entry_phrase_present
+        and dual_clearance_phrase_present
+        and canonical_package_phrase_present
+        and operational_capstone_commit_present
+        and latest_clarification_checkpoint_present
         and (not forbid_lane_first_restart_sequencing or playbook_forbid_lane_first_present)
     )
 
@@ -105,6 +130,11 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
             "required_direct_execution_authorized_now",
             "required_playbook_phrase",
             "required_restart_sequence_anchor",
+            "required_minimum_restart_entry_phrase",
+            "required_dual_clearance_phrase",
+            "required_canonical_package_phrase",
+            "required_operational_capstone_commit",
+            "required_latest_clarification_checkpoint_commit",
             "forbid_lane_first_restart_sequencing",
             "single_layer_only",
             "single_outcome_only",
@@ -143,6 +173,11 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
             == required_direct_execution_authorized_now,
             "playbook_trigger_phrase_present": playbook_phrase_present,
             "playbook_restart_sequence_anchor_present": restart_sequence_anchor_present,
+            "playbook_minimum_restart_entry_phrase_present": minimum_restart_entry_phrase_present,
+            "playbook_dual_clearance_phrase_present": dual_clearance_phrase_present,
+            "playbook_canonical_package_phrase_present": canonical_package_phrase_present,
+            "playbook_operational_capstone_commit_present": operational_capstone_commit_present,
+            "playbook_latest_clarification_checkpoint_present": latest_clarification_checkpoint_present,
             "playbook_forbid_lane_first_present": playbook_forbid_lane_first_present,
             "single_terminal_outcome_rule_declared": str(
                 outcome_contract.get("single_terminal_outcome_rule", "")

@@ -1,0 +1,47 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_OUTCOME_20260414_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-14T15:10:00Z",
+  "objective": "Declare one bounded approval-eligible policy-review outcome package for the RL10 bridge repeatability path without recording approval or authorizing restart.",
+  "required_inputs": {
+    "bridge_first_named_repeatability_check_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_first_named_repeatability_check_20260414_v0.json",
+    "bridge_minimum_second_cycle_evidence_object_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_minimum_second_cycle_evidence_object_20260414_v0.json",
+    "bridge_material_repeatability_admissibility_criteria_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_material_repeatability_admissibility_criteria_20260414_v0.json",
+    "bridge_policy_standard_approval_criteria_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_criteria_20260414_v0.json",
+    "approval_eligible_policy_review_outcome_note": "formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_OUTCOME_v0.md"
+  },
+  "approval_eligible_policy_review_outcome_policy": {
+    "required_named_repeatability_check_outcome": "RL10_BRIDGE_FIRST_NAMED_REPEATABILITY_CHECK_DECLARED",
+    "required_minimum_second_cycle_evidence_object_outcome": "RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_OBJECT_DECLARED",
+    "required_material_repeatability_admissibility_criteria_outcome": "RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_DECLARED",
+    "required_policy_standard_approval_criteria_outcome": "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_CRITERIA_DECLARED",
+    "required_note_tokens": [
+      "RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_OUTCOME_ID_v0: RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_OUTCOME",
+      "RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_SCOPE_v0: ONE_NAMED_REPEATABILITY_PATH_ONLY",
+      "RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_REQUIRED_SURFACES_v0: NAMED_REPEATABILITY_CHECK_PLUS_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_PLUS_MINIMUM_SECOND_CYCLE_EVIDENCE_OBJECT_PLUS_POLICY_STANDARD_APPROVAL_CRITERIA",
+      "RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_ELIGIBILITY_RULE_v0: REVIEW_ELIGIBILITY_REQUIRES_DECLARED_SURFACES_AND_A_NAMED_ADMISSIBLE_REPEATABILITY_CHECK",
+      "RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_PROHIBITION_RULE_v0: ELIGIBILITY_MUST_NOT_RECORD_APPROVAL_OR_AUTHORIZE_RESTART",
+      "RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_DISTINCTION_RULE_v0: ELIGIBILITY_ONLY_PERMITS_POLICY_REVIEW_TO_EMIT_AN_APPROVAL_ELIGIBLE_OUTCOME_APPROVAL_REMAINS_SEPARATELY_RECORDED",
+      "RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_STATUS_v0: ELIGIBILITY_SURFACE_DECLARED_BUT_APPROVAL_STILL_UNRECORDED"
+    ],
+    "approval_eligible_repeatability_review_outcome_defined": true,
+    "require_named_bounded_repeatability_check_only": true,
+    "require_material_repeatability_admissibility_criteria_defined": true,
+    "require_minimum_second_cycle_evidence_object_declared": true,
+    "require_policy_standard_approval_criteria_defined": true,
+    "require_approval_record_distinct_from_review_eligibility": true,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "approval_eligible_policy_review_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_OUTCOME_LAYER_ONLY",
+    "allowed_outcomes": [
+      "RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_OUTCOME_DECLARED",
+      "RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_OUTCOME_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_OUTCOME_REPAIR"
+    ],
+    "default_outcome": "RL10_BRIDGE_APPROVAL_ELIGIBLE_POLICY_REVIEW_OUTCOME_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local RL10 bridge approval-eligible policy-review outcome declaration only; no scientific adequacy claim."
+}

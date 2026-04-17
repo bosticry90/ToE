@@ -1,0 +1,42 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_20260414_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-14T14:05:00Z",
+  "objective": "Declare one bounded material repeatability admissibility-criteria object for the RL10 bridge external-validation policy chain without approving the policy standard or authorizing restart.",
+  "required_inputs": {
+    "bridge_first_named_repeatability_check_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_first_named_repeatability_check_20260414_v0.json",
+    "bridge_policy_standard_approval_criteria_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_criteria_20260414_v0.json",
+    "material_repeatability_admissibility_criteria_note": "formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_v0.md"
+  },
+  "material_repeatability_admissibility_policy": {
+    "required_named_repeatability_check_outcome": "RL10_BRIDGE_FIRST_NAMED_REPEATABILITY_CHECK_DECLARED",
+    "required_policy_standard_approval_criteria_outcome": "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_CRITERIA_DECLARED",
+    "required_note_tokens": [
+      "RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_ID_v0: RL10_BRIDGE_REPEATABILITY_ADMISSIBILITY_CRITERIA",
+      "RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_SCOPE_v0: ONE_DECLARED_NAMED_REPEATABILITY_CHECK_ON_ONE_DECLARED_BRIDGE_SURFACE",
+      "RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_COMPARATOR_v0: OV-RL-10",
+      "RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_QUANTITY_v0: RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0",
+      "RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_RULE_v0: A_NAMED_REPEATABILITY_CHECK_MUST_BIND_ONE_DECLARED_COMPARATOR_ONE_DECLARED_QUANTITY_AND_ONE_DECLARED_WINDOW",
+      "RL10_BRIDGE_MATERIAL_REPEATABILITY_NONEXPANSION_RULE_v0: CRITERIA_MUST_NOT_REQUIRE_A_SECOND_FULL_CYCLE_OR_SCOPE_EXPANSION_TO_BE_DEFINED",
+      "RL10_BRIDGE_MATERIAL_REPEATABILITY_POLICY_EFFECT_v0: DEFINES_REPEATABILITY_ADMISSIBILITY_CRITERIA_WITHOUT_SATISFYING_MINIMUM_SECOND_CYCLE_EVIDENCE",
+      "RL10_BRIDGE_MATERIAL_REPEATABILITY_STATUS_v0: CRITERIA_DECLARED_BUT_NOT_APPROVAL_SUFFICIENT"
+    ],
+    "repeatability_admissibility_criteria_defined": true,
+    "criteria_nonexpansive": true,
+    "criteria_scoped_to_named_check": true,
+    "criteria_approval_sufficient": false,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "material_repeatability_admissibility_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_OUTCOME",
+    "no_loop_rule": "ONE_RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_LAYER_ONLY",
+    "allowed_outcomes": [
+      "RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_DECLARED",
+      "RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_REPAIR"
+    ],
+    "default_outcome": "RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local RL10 bridge material repeatability admissibility-criteria declaration only; no scientific adequacy claim."
+}

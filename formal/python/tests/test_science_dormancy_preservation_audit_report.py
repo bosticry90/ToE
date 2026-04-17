@@ -25,6 +25,11 @@ def _write_declaration(path: Path, *, include_full_contract_shape: bool = True) 
         "required_direct_execution_authorized_now": False,
         "required_playbook_phrase": "is there a valid trigger family?",
         "required_restart_sequence_anchor": "Start at P75 restart trigger contract.",
+        "required_minimum_restart_entry_phrase": "Minimum restart-entry sequence:",
+        "required_dual_clearance_phrase": "Require both P75 trigger-family legality and P77 dormancy-preservation audit clearance before any lane reopen or packet authorization.",
+        "required_canonical_package_phrase": "The current P77 playbook plus audit declaration, audit tool, audit gate, and canonical audit report form the canonical dormancy enforcement package.",
+        "required_operational_capstone_commit": "92f33e3",
+        "required_latest_clarification_checkpoint_commit": "7729065",
         "forbid_lane_first_restart_sequencing": True,
         "single_layer_only": True,
         "single_outcome_only": True,
@@ -78,8 +83,13 @@ def _seed_inputs(
     )
     _write_text(
         root / "formal" / "docs" / "release" / "SCIENCE_DORMANCY_RESTART_PLAYBOOK_20260412_v0.md",
+        "Dormancy preservation audit operational capstone commit: 92f33e3\n"
+        "Latest clarification checkpoint commit: 7729065\n"
+        "The current P77 playbook plus audit declaration, audit tool, audit gate, and canonical audit report form the canonical dormancy enforcement package.\n"
+        "Minimum restart-entry sequence:\n"
         "Start at P75 restart trigger contract.\n"
         "is there a valid trigger family?\n"
+        "Require both P75 trigger-family legality and P77 dormancy-preservation audit clearance before any lane reopen or packet authorization.\n"
         "Do not start restart by selecting a lane.\n",
     )
 

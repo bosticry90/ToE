@@ -1,0 +1,34 @@
+{
+  "artifact_id": "qm_stat_rl10_computational_analysis_packet_01_v0",
+  "payload": {
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "authorization_class": "AUXILIARY_NONCLAIM_COMPUTATIONAL_ANALYSIS",
+    "decision": "INCONCLUSIVE_v0",
+    "execution_report_pointer": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_20260416_v0.json",
+    "decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_DECISION_RECORD_v0.md",
+    "assumptions": [
+      "DECLARED_DISCRETE_SUPPORT_S0_S1_S2_ONLY",
+      "DECLARED_RL10_BRIDGE_KERNEL_AND_RATE_MATRIX_ONLY",
+      "FIXED_BASELINE_COMPARATOR_OV_RL_10_ONLY",
+      "NO_EXTERNAL_SDK_OR_UNDECLARED_SECOND_CYCLE_STRUCTURE"
+    ],
+    "model_object_pointer": "formal/docs/release/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_FIRST_TEST_PACKET_20260412_v0.json",
+    "interface_pointer": "formal/docs/release/QM_STAT_RL10_INTERFACE_TRANSFORMATION_PACKET_20260411_v0.json",
+    "observable_bundle": [
+      "stationary_pi",
+      "sigma_proxy",
+      "db_residual"
+    ],
+    "discriminator": "BOUND_ONE_PASS_OPERATOR_STABILITY_AND_COMPARATOR_SENSITIVITY_CLASSIFIER",
+    "stop_condition": "TERMINATE_AFTER_ONE_DETERMINISTIC_LOCAL_PASS_OR_ON_UNDECLARED_STRUCTURE_REQUIREMENT",
+    "classification_rule": {
+      "retain_rule": "RETAIN_IF_INTERNAL_STABILITY_IS_PRESERVED_AND_OBSERVABLE_ORDERING_REMAINS_BOUNDED_UNDER_OV_RL_10",
+      "prune_rule": "PRUNE_IF_DECLARED_KERNEL_OR_RATE_SURROGATE_BREAKS_STATIONARY_OR_DB_RESIDUAL_COHERENCE_ON_SHARED_SUPPORT",
+      "inconclusive_rule": "ALWAYS_RECORD_PACKET_01_AS_INCONCLUSIVE_V0_WITH_SUBORDINATE_CLASSIFICATION_NOTES_ONLY"
+    },
+    "stability_classification": "COMPARATOR_SENSITIVE_v0",
+    "discriminator_classification": "NONDISCRIMINATIVE_v0",
+    "bounded_output_note": "Packet-01 is auxiliary, nonlive, non-promotional, and cannot imply lane reopen, restart readiness, or blocker movement.",
+    "evidence_tier": "SCAFFOLD_v0"
+  }
+}

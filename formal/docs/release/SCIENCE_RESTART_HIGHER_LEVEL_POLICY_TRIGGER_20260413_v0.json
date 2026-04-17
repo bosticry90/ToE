@@ -1,0 +1,37 @@
+{
+  "schema_id": "SCIENCE_RESTART_HIGHER_LEVEL_POLICY_TRIGGER_20260413_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T18:10:00Z",
+  "objective": "Qualify whether a higher-level policy or evidence standard has been defined strongly enough to count as a restart trigger family input under governed dormancy.",
+  "required_inputs": {
+    "science_frontier_preservation_record_report": "formal/output/reports/science_frontier_preservation_record_20260412_v0.json",
+    "bridge_external_validation_policy_review_report": "formal/output/reports/bridge_external_validation_policy_review_20260412_v0.json",
+    "bridge_external_validation_policy_standard_formalization_report": "formal/output/reports/bridge_external_validation_policy_standard_formalization_20260413_v0.json"
+  },
+  "higher_level_policy_trigger_contract": {
+    "required_frontier_preservation_outcome": "FRONTIER_PRESERVED_AT_CANONICAL_COMMIT",
+    "required_frontier_next_action": "NO_FURTHER_ACTIVE_EXECUTION_AUTHORIZED_RESUME_FROM_NEW_STANDARD_OR_NEW_LANE",
+    "required_restart_condition_token": "new_higher_level_policy_or_evidence_standard",
+    "required_policy_standard_formalization_outcome": "EXTERNAL_VALIDATION_POLICY_STANDARD_FORMALLY_DEFINED_BUT_NOT_APPROVED",
+    "required_policy_standard_approved": false,
+    "allowed_policy_review_outcomes_for_authorization": [
+      "ADMISSIBLE_REPEATABILITY_STANDARD_DEFINED",
+      "ADMISSIBLE_CROSS_PROBE_STANDARD_DEFINED"
+    ],
+    "require_policy_standard_defined": true,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "higher_level_policy_trigger_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_HIGHER_LEVEL_POLICY_TRIGGER_OUTCOME",
+    "no_loop_rule": "ONE_HIGHER_LEVEL_POLICY_TRIGGER_LAYER_ONLY",
+    "allowed_outcomes": [
+      "HIGHER_LEVEL_POLICY_REVISION_AUTHORIZED",
+      "HIGHER_LEVEL_POLICY_REVISION_NOT_AUTHORIZED",
+      "HIGHER_LEVEL_POLICY_REVISION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_HIGHER_LEVEL_POLICY_REVISION_REPAIR"
+    ],
+    "default_outcome": "HIGHER_LEVEL_POLICY_REVISION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local higher-level policy restart trigger declaration only; no scientific adequacy claim."
+}

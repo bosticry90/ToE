@@ -4,7 +4,10 @@
   "status": "ACTIVE_NONLIVE_NONCLAIM",
   "required_inputs": {
     "bridge_admissibility_standard_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_admissibility_standard_review_20260412_v0.json",
-    "bridge_repeatability_check_naming_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_repeatability_check_naming_review_20260412_v0.json"
+    "bridge_repeatability_check_naming_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_repeatability_check_naming_review_20260412_v0.json",
+    "bridge_minimum_second_cycle_evidence_object_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_minimum_second_cycle_evidence_object_20260414_v0.json",
+    "bridge_material_repeatability_admissibility_criteria_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_material_repeatability_admissibility_criteria_20260414_v0.json",
+    "bridge_approval_eligible_policy_review_outcome_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_approval_eligible_policy_review_outcome_20260414_v0.json"
   },
   "seam_scope": {
     "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
@@ -12,6 +15,7 @@
     "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
   },
   "external_validation_policy": {
+    "approval_eligible_repeatability_review_outcome_defined": false,
     "repeatability_admissibility_criteria_defined": false,
     "cross_probe_admissibility_criteria_defined": false,
     "second_cycle_minimum_evidence_defined": false,

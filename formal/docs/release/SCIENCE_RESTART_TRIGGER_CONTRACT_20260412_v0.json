@@ -11,7 +11,8 @@
   "required_inputs": {
     "science_post_phase_z_frontier_decision_report": "formal/output/reports/science_post_phase_z_frontier_decision_20260412_v0.json",
     "science_phase_z_stronger_candidate_class_discovery_report": "formal/output/reports/science_phase_z_stronger_candidate_class_discovery_20260412_v0.json",
-    "science_frontier_stop_state_summary_doc": "formal/docs/release/SCIENCE_FRONTIER_STOP_STATE_SUMMARY_20260412_v0.md"
+    "science_frontier_stop_state_summary_doc": "formal/docs/release/SCIENCE_FRONTIER_STOP_STATE_SUMMARY_20260412_v0.md",
+    "science_restart_higher_level_policy_trigger_report": "formal/output/reports/science_restart_higher_level_policy_trigger_20260413_v0.json"
   },
   "restart_trigger_contract": {
     "required_post_phase_z_outcome": "PRESERVE_CURRENT_GOVERNED_STOP_STATE",
@@ -19,6 +20,10 @@
     "required_lane_reopen_authorized": false,
     "required_new_lane_or_packet_authorized_now": false,
     "required_thermal_lane_status": "PRESERVED_INACTIVE_NEAR_READY_NOT_EXECUTABLE",
+    "required_higher_level_policy_trigger_outcome": "HIGHER_LEVEL_POLICY_REVISION_NOT_AUTHORIZED",
+    "required_higher_level_policy_revision_authorized": false,
+    "auxiliary_nonclaim_computational_analysis_not_a_trigger_family": true,
+    "auxiliary_nonclaim_computational_analysis_not_direct_execution": true,
     "forbid_closed_or_held_lane_reopen": true,
     "single_layer_only": true,
     "single_outcome_only": true,

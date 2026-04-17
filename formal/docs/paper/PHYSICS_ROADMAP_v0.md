@@ -60,6 +60,15 @@ Repository-wide governance and physics status audit checkpoint (2026-03-15):
 - Scalar submission support checkpoint pointer: `formal/output/toe_qft_scalar_route_submission_support_package_checkpoint_v0.json`.
 - Scalar submission support gate pointer: `formal/python/tests/test_toe_qft_scalar_route_submission_support_package_gate.py`.
 
+Live seam contradiction control checkpoint (2026-04-16):
+- Seam SLA policy pointer: `formal/docs/release/SEAM_RESOLUTION_SLA_POLICY_20260416_v0.md`.
+- Seam SLA live ledger pointer: `formal/output/reports/seam_resolution_sla_ledger_20260416_v0.json`.
+- Seam SLA live gate pointer: `formal/python/tests/test_seam_resolution_sla_live_gate.py`.
+- Contradiction policy pointer: `formal/docs/release/SCIENCE_MATURITY_CONTRADICTION_REPORT_POLICY_20260416_v0.md`.
+- Contradiction report pointer: `formal/output/reports/science_maturity_contradiction_report_20260416_v0.json`.
+- Contradiction gate pointer: `formal/python/tests/test_science_maturity_contradiction_report_live_gate.py`.
+- Contradiction rule: fail closed when bounded maturity reads disagree with live blocker or seam truth.
+
 Architecture consolidation governance checkpoint (2026-03-18):
 - Program tracker pointer: `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md`.
 - State surface mirror pointer: `State_of_the_Theory.md`.
@@ -705,6 +714,12 @@ No-deviation sequencing rule:
   - `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`
   - `formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean`
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_DECISION_RECORD_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_CLOSEOUT_DECISION_RECORD_v0.md`
+  - `formal/docs/paper/QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_FAMILY_PRESERVATION_NOTE_v0.md`
+  - `formal/output/qm_stat_rl10_computational_analysis_packet_01_v0.json`
   - `formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md`
   - `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`
   - `formal/docs/release/PREDICTION_FIRST_HYPOTHESIS_TEMPLATE_v0.md`
@@ -779,6 +794,11 @@ No-deviation sequencing rule:
   - `formal/python/tests/test_toe_master_action_seam_registry_gate.py`
   - `formal/python/tests/test_toe_master_action_assumption_classification_gate.py`
   - `formal/python/tests/test_toe_master_action_shadow_numerics_cycle01_gate.py`
+  - `formal/python/tests/test_qm_stat_rl10_computational_analysis_packet_01_gate.py`
+  - `formal/python/tests/test_qm_stat_rl10_computational_analysis_packet_01_decision_record_gate.py`
+  - `formal/python/tests/test_qm_stat_rl10_computational_analysis_packet_01_refinement_01_gate.py`
+  - `formal/python/tests/test_qm_stat_rl10_computational_analysis_packet_01_refinement_closeout_decision_record_gate.py`
+  - `formal/python/tests/test_qm_stat_rl10_computational_analysis_packet_01_family_preservation_note_gate.py`
   - `formal/python/tests/test_foundational_prediction_scaffold_coverage_gate.py`
   - `formal/python/tests/test_toe_empirical_comparison_packet_01_gate.py`
   - `formal/python/tests/test_toe_empirical_packet_01_evidence_promotion_gate.py`
@@ -915,6 +935,84 @@ No-deviation sequencing rule:
   - `formal/docs/paper/DERIVATION_TARGET_QM_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
   - `formal/output/qm_empirical_comparison_packet_04_v0.json`
   - `formal/python/tests/test_qm_empirical_comparison_packet_04_gate.py`
+  - `formal/output/reports/qm_blocker_moving_tranche_20260411_v0.json`
+  - `formal/output/reports/qm_blocker_moving_ruling_20260411_v0.json`
+  - `formal/output/reports/science_next_attack_class_selection_20260411_v0.json`
+  - `formal/output/reports/direct_master_action_residual_transport_attack_class_packet_20260411_v0.json`
+  - `formal/python/tests/test_qm_blocker_moving_control_stack_gate.py`
+  - `formal/output/reports/qm_stat_transport_residual_packet_20260411_v0.json`
+  - `formal/output/reports/qm_stat_transport_residual_ruling_20260411_v0.json`
+  - `formal/output/reports/science_post_direct_attack_class_decision_20260411_v0.json`
+  - `formal/python/tests/test_qm_stat_transport_residual_live_control_stack_gate.py`
+  - `formal/docs/release/ARCHITECTURE_LEVEL_BLOCKER_DIAGNOSIS_PACKET_20260411_v0.json`
+  - `formal/output/reports/architecture_level_blocker_diagnosis_packet_20260411_v0.json`
+  - `formal/python/tests/test_architecture_level_blocker_diagnosis_live_gate.py`
+  - `formal/docs/release/ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_ATTACK_CLASS_PACKET_20260411_v0.json`
+  - `formal/output/reports/architecture_seam_master_action_alignment_attack_class_packet_20260411_v0.json`
+  - `formal/python/tests/test_architecture_seam_master_action_alignment_live_gate.py`
+  - `formal/docs/release/ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_PACKET_EXECUTION_20260411_v0.json`
+  - `formal/output/reports/architecture_seam_master_action_alignment_packet_execution_20260411_v0.json`
+  - `formal/docs/release/ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_RULING_20260411_v0.json`
+  - `formal/output/reports/architecture_seam_master_action_alignment_ruling_20260411_v0.json`
+  - `formal/docs/release/SCIENCE_POST_ARCHITECTURE_ALIGNMENT_DECISION_20260411_v0.json`
+  - `formal/output/reports/science_post_architecture_alignment_decision_20260411_v0.json`
+  - `formal/python/tests/test_architecture_seam_master_action_alignment_execution_live_gate.py`
+  - `formal/docs/release/PROGRAM_POSTURE_REVIEW_PACKET_20260411_v0.json`
+  - `formal/output/reports/program_posture_review_packet_20260411_v0.json`
+  - `formal/python/tests/test_program_posture_review_live_gate.py`
+  - `formal/docs/release/POST_POSTURE_REVIEW_PROGRAM_MODE_TRANSITION_20260411_v0.json`
+  - `formal/output/reports/post_posture_review_program_mode_transition_20260411_v0.json`
+  - `formal/python/tests/test_post_posture_review_program_mode_transition_live_gate.py`
+  - `formal/docs/release/BOUNDED_MEASUREMENT_REGIME_PILOT_EXECUTION_20260411_v0.json`
+  - `formal/output/reports/bounded_measurement_regime_pilot_execution_20260411_v0.json`
+  - `formal/docs/release/BOUNDED_MEASUREMENT_REGIME_PILOT_RULING_20260411_v0.json`
+  - `formal/output/reports/bounded_measurement_regime_pilot_ruling_20260411_v0.json`
+  - `formal/docs/release/POST_MEASUREMENT_REGIME_PILOT_DECISION_20260411_v0.json`
+  - `formal/output/reports/post_measurement_regime_pilot_decision_20260411_v0.json`
+  - `formal/python/tests/test_bounded_measurement_regime_pilot_live_gate.py`
+  - `formal/docs/release/REVISED_SIGNAL_DIAGNOSTIC_REGISTRATION_20260411_v0.json`
+  - `formal/output/reports/revised_signal_diagnostic_registration_20260411_v0.json`
+  - `formal/python/tests/test_revised_signal_diagnostic_registration_live_gate.py`
+  - `formal/docs/release/PROGRAM_STATE_CONVERSION_REVIEW_20260411_v0.json`
+  - `formal/output/reports/program_state_conversion_review_20260411_v0.json`
+  - `formal/python/tests/test_program_state_conversion_review_live_gate.py`
+  - `formal/docs/release/DEEPER_BLOCKER_DEFINITION_REVIEW_20260411_v0.json`
+  - `formal/output/reports/deeper_blocker_definition_review_20260411_v0.json`
+  - `formal/python/tests/test_deeper_blocker_definition_review_live_gate.py`
+  - `formal/docs/release/BLOCKER_BURN_DASHBOARD_POLICY_20260416_v0.md`
+  - `formal/output/reports/blocker_burn_dashboard_20260416_v0.json`
+  - `formal/python/tests/test_blocker_burn_dashboard_live_gate.py`
+  - `formal/docs/release/SCIENCE_GOVERNANCE_BUDGET_POLICY_20260416_v0.md`
+  - `formal/output/reports/science_governance_budget_20260416_v0.json`
+  - `formal/python/tests/test_science_governance_budget_live_gate.py`
+  - `formal/docs/release/SEAM_RESOLUTION_SLA_POLICY_20260416_v0.md`
+  - `formal/output/reports/seam_resolution_sla_ledger_20260416_v0.json`
+  - `formal/python/tests/test_seam_resolution_sla_live_gate.py`
+  - `formal/docs/release/BOUNDED_BLOCKER_DEFINITION_TEST_EXECUTION_20260411_v0.json`
+  - `formal/output/reports/bounded_blocker_definition_test_execution_20260411_v0.json`
+  - `formal/docs/release/BOUNDED_BLOCKER_DEFINITION_TEST_RULING_20260411_v0.json`
+  - `formal/output/reports/bounded_blocker_definition_test_ruling_20260411_v0.json`
+  - `formal/python/tests/test_bounded_blocker_definition_test_live_gate.py`
+  - `formal/docs/release/POST_BLOCKER_DEFINITION_TEST_DECISION_20260411_v0.json`
+  - `formal/output/reports/post_blocker_definition_test_decision_20260411_v0.json`
+  - `formal/python/tests/test_post_blocker_definition_test_decision_live_gate.py`
+  - `formal/docs/release/AUTHORITY_COUPLING_REVIEW_20260411_v0.json`
+  - `formal/output/reports/authority_coupling_review_20260411_v0.json`
+  - `formal/python/tests/test_authority_coupling_review_live_gate.py`
+  - `formal/docs/release/BOUNDED_COUPLING_REFINEMENT_PACKET_20260411_v0.json`
+  - `formal/output/reports/bounded_coupling_refinement_packet_20260411_v0.json`
+  - `formal/python/tests/test_bounded_coupling_refinement_packet_live_gate.py`
+  - `formal/docs/release/COUPLING_REFINEMENT_RULING_20260411_v0.json`
+  - `formal/output/reports/coupling_refinement_ruling_20260411_v0.json`
+  - `formal/python/tests/test_coupling_refinement_ruling_live_gate.py`
+  - `formal/docs/release/AUTHORITY_PROMOTION_REGISTRATION_20260411_v0.json`
+  - `formal/output/reports/authority_promotion_registration_20260411_v0.json`
+  - `formal/python/tests/test_authority_promotion_registration_live_gate.py`
+  - `formal/docs/release/RECOMPUTE_OBSERVATION_20260411_v0.json`
+  - `formal/output/reports/recompute_observation_20260411_v0.json`
+  - `formal/docs/release/POST_RECOMPUTE_OBSERVATION_20260411_v0.json`
+  - `formal/output/reports/post_recompute_observation_20260411_v0.json`
+  - `formal/python/tests/test_recompute_monitoring_live_gate.py`
   - `formal/docs/paper/DERIVATION_TARGET_GR_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
   - `formal/output/gr_empirical_comparison_packet_04_v0.json`
   - `formal/python/tests/test_gr_empirical_comparison_packet_04_gate.py`

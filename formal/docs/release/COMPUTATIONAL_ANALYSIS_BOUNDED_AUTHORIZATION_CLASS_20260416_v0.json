@@ -1,0 +1,38 @@
+{
+  "schema_id": "COMPUTATIONAL_ANALYSIS_BOUNDED_AUTHORIZATION_CLASS_20260416_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-16T00:00:00Z",
+  "objective": "Declare one additive bounded authorization class for auxiliary non-claim computational analysis under dormancy without reopening lanes, authorizing packets, or satisfying restart-trigger families.",
+  "required_inputs": {
+    "grounded_speculation_posture_standard": "formal/docs/release/GROUNDED_SPECULATION_POSTURE_STANDARD_v0.md",
+    "science_controlled_dormancy_protocol": "formal/docs/release/SCIENCE_CONTROLLED_DORMANCY_PROTOCOL_20260412_v0.json",
+    "science_restart_trigger_contract": "formal/docs/release/SCIENCE_RESTART_TRIGGER_CONTRACT_20260412_v0.json",
+    "foundational_derivation_chain_execution_plan": "formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_EXECUTION_PLAN_v0.md"
+  },
+  "bounded_authorization_class": {
+    "authorization_class_id": "AUXILIARY_NONCLAIM_COMPUTATIONAL_ANALYSIS",
+    "required_output_status": "RUN_BOUNDED_v0_NONCLAIM",
+    "allowed_actions": [
+      "bounded_shadow_numerics",
+      "stability_summaries",
+      "sensitivity_scans",
+      "regime_limit_scans",
+      "comparator_ranking",
+      "design_only_discriminator_support"
+    ],
+    "forbidden_effects": [
+      "lane_reopen",
+      "new_packet_authorization",
+      "restart_trigger_satisfaction",
+      "blocker_movement_claim",
+      "physics_status_promotion",
+      "external_truth_claim"
+    ],
+    "dormancy_non_equivalence_rule": "AUXILIARY_COMPUTATIONAL_ANALYSIS_IS_NOT_LANE_REOPEN_AND_NOT_NEW_PACKET_EXECUTION",
+    "packet_non_equivalence_rule": "STRUCTURED_OUTPUTS_REMAIN_AUXILIARY_ANALYSIS_ARTIFACTS_UNLESS_SEPARATELY_AUTHORIZED_AS_PACKETS",
+    "restart_non_equivalence_rule": "AUXILIARY_COMPUTATIONAL_ANALYSIS_CANNOT_BY_ITSELF_ACTIVATE_ANY_RESTART_TRIGGER_FAMILY",
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "non_claim_boundary": "Repository-local bounded authorization-class declaration only; no scientific adequacy claim."
+}

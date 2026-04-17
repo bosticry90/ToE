@@ -50,14 +50,29 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     naming_path = REPO_ROOT / str(
         required_inputs.get("bridge_repeatability_check_naming_review_report", "")
     ).strip()
+    minimum_evidence_path = REPO_ROOT / str(
+        required_inputs.get("bridge_minimum_second_cycle_evidence_object_report", "")
+    ).strip()
+    material_repeatability_criteria_path = REPO_ROOT / str(
+        required_inputs.get("bridge_material_repeatability_admissibility_criteria_report", "")
+    ).strip()
+    approval_eligible_review_outcome_path = REPO_ROOT / str(
+        required_inputs.get("bridge_approval_eligible_policy_review_outcome_report", "")
+    ).strip()
 
     admissibility = _read_json(admissibility_path)
     naming = _read_json(naming_path)
+    minimum_evidence = _read_json(minimum_evidence_path)
+    material_repeatability_criteria = _read_json(material_repeatability_criteria_path)
+    approval_eligible_review_outcome = _read_json(approval_eligible_review_outcome_path)
 
     admissibility_summary = dict(admissibility.get("summary", {}))
     admissibility_inputs = dict(dict(admissibility.get("objective_quality", {})).get("inputs", {}))
     naming_summary = dict(naming.get("summary", {}))
     naming_inputs = dict(dict(naming.get("objective_quality", {})).get("inputs", {}))
+    minimum_evidence_summary = dict(minimum_evidence.get("summary", {}))
+    material_repeatability_criteria_summary = dict(material_repeatability_criteria.get("summary", {}))
+    approval_eligible_review_outcome_summary = dict(approval_eligible_review_outcome.get("summary", {}))
 
     admissibility_outcome = str(admissibility_summary.get("review_outcome", "")).strip()
     naming_outcome = str(naming_summary.get("review_outcome", "")).strip()
@@ -76,10 +91,25 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         and naming_observed_quantity_id == expected_quantity_id
     )
 
-    repeatability_criteria_defined = bool(policy.get("repeatability_admissibility_criteria_defined", False))
+    repeatability_criteria_defined = bool(
+        policy.get("repeatability_admissibility_criteria_defined", False)
+        or material_repeatability_criteria_summary.get("repeatability_admissibility_criteria_defined", False)
+    )
+    approval_eligible_repeatability_review_outcome_defined = bool(
+        policy.get("approval_eligible_repeatability_review_outcome_defined", False)
+        or approval_eligible_review_outcome_summary.get(
+            "approval_eligible_repeatability_review_outcome_defined", False
+        )
+    )
     cross_probe_criteria_defined = bool(policy.get("cross_probe_admissibility_criteria_defined", False))
-    second_cycle_minimum_evidence_defined = bool(policy.get("second_cycle_minimum_evidence_defined", False))
-    second_cycle_minimum_evidence_satisfied = bool(policy.get("second_cycle_minimum_evidence_satisfied", False))
+    second_cycle_minimum_evidence_defined = bool(
+        policy.get("second_cycle_minimum_evidence_defined", False)
+        or minimum_evidence_summary.get("second_cycle_minimum_evidence_defined", False)
+    )
+    second_cycle_minimum_evidence_satisfied = bool(
+        policy.get("second_cycle_minimum_evidence_satisfied", False)
+        or minimum_evidence_summary.get("second_cycle_minimum_evidence_satisfied", False)
+    )
     no_further_external_validation_path_triggered = bool(
         policy.get("no_further_external_validation_path_triggered", False)
     )
@@ -92,8 +122,7 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         next_action = "RETAIN_HOLD_AND_DO_NOT_OPEN_NEW_EXTERNAL_VALIDATION_PATH"
     elif (
         repeatability_criteria_defined
-        and second_cycle_minimum_evidence_defined
-        and second_cycle_minimum_evidence_satisfied
+        and approval_eligible_repeatability_review_outcome_defined
         and admissibility_outcome in {
             "ADMISSIBILITY_STANDARD_READY_FOR_BOUNDED_CHECK_NAMING",
             "LIMITED_HOLD_RETAINED",
@@ -156,9 +185,19 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
                 "observed_quantity_id": observed_quantity_id,
                 "naming_observed_quantity_id": naming_observed_quantity_id,
                 "repeatability_admissibility_criteria_defined": repeatability_criteria_defined,
+                "approval_eligible_repeatability_review_outcome_defined": approval_eligible_repeatability_review_outcome_defined,
                 "cross_probe_admissibility_criteria_defined": cross_probe_criteria_defined,
                 "second_cycle_minimum_evidence_defined": second_cycle_minimum_evidence_defined,
                 "second_cycle_minimum_evidence_satisfied": second_cycle_minimum_evidence_satisfied,
+                "minimum_second_cycle_evidence_object_outcome": str(
+                    minimum_evidence_summary.get("terminal_outcome", "")
+                ).strip(),
+                "material_repeatability_admissibility_criteria_outcome": str(
+                    material_repeatability_criteria_summary.get("terminal_outcome", "")
+                ).strip(),
+                "approval_eligible_policy_review_outcome": str(
+                    approval_eligible_review_outcome_summary.get("terminal_outcome", "")
+                ).strip(),
                 "no_further_external_validation_path_triggered": no_further_external_validation_path_triggered,
             },
             "summary": {
@@ -182,6 +221,9 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
             "declaration": _ptr(declaration_path),
             "bridge_admissibility_standard_review_report": _ptr(admissibility_path),
             "bridge_repeatability_check_naming_review_report": _ptr(naming_path),
+            "bridge_minimum_second_cycle_evidence_object_report": _ptr(minimum_evidence_path),
+            "bridge_material_repeatability_admissibility_criteria_report": _ptr(material_repeatability_criteria_path),
+            "bridge_approval_eligible_policy_review_outcome_report": _ptr(approval_eligible_review_outcome_path),
         },
         "non_claim_boundary": "Repository-local bridge external-validation policy review report only; no scientific adequacy claim.",
     }

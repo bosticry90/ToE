@@ -3,7 +3,8 @@
   "review_id": "QM-STAT-RL10-BRIDGE-REPEATABILITY-CHECK-NAMING-REVIEW-001",
   "status": "ACTIVE_NONLIVE_NONCLAIM",
   "required_inputs": {
-    "bridge_repeatability_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_repeatability_review_20260412_v0.json"
+    "bridge_repeatability_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_repeatability_review_20260412_v0.json",
+    "bridge_first_named_repeatability_check_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_first_named_repeatability_check_20260414_v0.json"
   },
   "seam_scope": {
     "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",

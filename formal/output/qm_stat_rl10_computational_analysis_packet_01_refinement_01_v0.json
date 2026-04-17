@@ -1,0 +1,23 @@
+{
+  "artifact_id": "qm_stat_rl10_computational_analysis_packet_01_refinement_01_v0",
+  "payload": {
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "authorization_class": "AUXILIARY_NONCLAIM_COMPUTATIONAL_ANALYSIS",
+    "decision": "INCONCLUSIVE_v0",
+    "baseline_packet_pointer": "formal/output/qm_stat_rl10_computational_analysis_packet_01_v0.json",
+    "baseline_report_pointer": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_20260416_v0.json",
+    "baseline_decision_pointer": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_decision_20260416_v0.json",
+    "execution_report_pointer": "formal/output/reports/qm_stat_rl10_computational_analysis_packet_01_refinement_01_20260416_v0.json",
+    "closeout_decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_CLOSEOUT_DECISION_RECORD_v0.md",
+    "refinement_sequence": 1,
+    "max_refinements_authorized": 1,
+    "packet02_authorized": false,
+    "restart_implication": false,
+    "blocker_movement_claim": false,
+    "variation_id": "COMPARATOR_MARGIN_TIGHTENING_v0",
+    "variation_axis": "COMPARATOR_SENSITIVITY_MARGIN_FLOOR",
+    "baseline_value": 0.0,
+    "refined_value": 0.06,
+    "bounded_output_note": "One refinement only under the same auxiliary nonlive non-claim ceiling; no Packet-02, restart, or blocker semantics."
+  }
+}

@@ -122,22 +122,29 @@ def interpret_cascade_effect(surface_observations):
 
 def classify_observation_outcome(surface_observations, cascade_info):
     """Classify observation outcome based on surface state and cascade analysis."""
-    active_count = sum(1 for obs in surface_observations if obs.get("state_change_observed"))
     cascade_type = cascade_info.get("cascade_effect", "")
+    cascade_interpretation = cascade_info.get(
+        "interpretation",
+        "Recompute observation classified from bounded trigger state only.",
+    )
+    active_count = sum(1 for obs in surface_observations if obs.get("state_change_observed"))
+    observed_surface_count = len(surface_observations)
     
     if cascade_type == "YES_MATERIAL_CASCADE":
         return {
             "outcome_id": "OUTCOME_1_CASCADE_CONFIRMED",
             "classification": "CASCADE_CONFIRMED",
-            "interpretation": cascade_info["interpretation"],
+            "interpretation": cascade_interpretation,
             "next_decision_layer": "PROMOTE_FINDINGS_TO_NEXT_DECISION_LOOP",
             "observation_complete": True
         }
-    elif cascade_type == "YES_LOCALIZED_EFFECT":
+    elif cascade_type == "YES_LOCALIZED_EFFECT" or (
+        cascade_type == "NO_OBSERVABLE_CASCADE" and active_count == 0 and observed_surface_count < 3
+    ):
         return {
             "outcome_id": "OUTCOME_2_LOCAL_ONLY",
             "classification": "LOCAL_AUTHORITY_ONLY",
-            "interpretation": cascade_info["interpretation"],
+            "interpretation": cascade_interpretation,
             "next_decision_layer": "DOCUMENT_LOCAL_AUTHORITY_ONLY_RESULT",
             "observation_complete": True
         }

@@ -1,0 +1,42 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_OBJECT_20260414_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-14T12:25:00Z",
+  "objective": "Declare one fail-closed minimum second-cycle evidence object for the RL10 bridge policy chain without satisfying the evidence requirement or authorizing restart.",
+  "required_inputs": {
+    "bridge_first_named_repeatability_check_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_first_named_repeatability_check_20260414_v0.json",
+    "bridge_bounded_check_family_standard_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_bounded_check_family_standard_20260414_v0.json",
+    "minimum_second_cycle_evidence_object_note": "formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_OBJECT_v0.md"
+  },
+  "minimum_second_cycle_evidence_policy": {
+    "required_named_repeatability_check_outcome": "RL10_BRIDGE_FIRST_NAMED_REPEATABILITY_CHECK_DECLARED",
+    "required_bounded_check_family_standard_outcome": "RL10_BRIDGE_BOUNDED_CHECK_FAMILY_STANDARD_DECLARED",
+    "required_comparator_id": "OV-RL-10",
+    "required_bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0",
+    "required_note_tokens": [
+      "RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_OBJECT_ID_v0: RL10_BRIDGE_SECOND_CYCLE_MINIMUM_EVIDENCE_OBJECT",
+      "RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_COMPARATOR_v0: OV-RL-10",
+      "RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_QUANTITY_v0: RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0",
+      "RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_SCOPE_v0: ONE_DECLARED_REPEATABILITY_WINDOW_ON_ONE_DECLARED_BRIDGE_SURFACE",
+      "RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_DECLARATION_RULE_v0: DEFINE_THE_MINIMUM_EVIDENCE_OBJECT_BEFORE_ANY_POLICY_STANDARD_APPROVAL",
+      "RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_SATISFACTION_RULE_v0: DECLARATION_DOES_NOT_COUNT_AS_SATISFACTION",
+      "RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_FAIL_CLOSED_RULE_v0: IF_EVIDENCE_REQUIRES_SCOPE_EXPANSION_OR_A_SECOND_FULL_CYCLE_THE_POLICY_PATH_REMAINS_HELD",
+      "RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_STATUS_v0: OBJECT_DECLARED_BUT_NOT_YET_SATISFIED"
+    ],
+    "second_cycle_minimum_evidence_defined": true,
+    "second_cycle_minimum_evidence_satisfied": false,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "minimum_second_cycle_evidence_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_OBJECT_OUTCOME",
+    "no_loop_rule": "ONE_RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_OBJECT_LAYER_ONLY",
+    "allowed_outcomes": [
+      "RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_OBJECT_DECLARED",
+      "RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_OBJECT_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_OBJECT_REPAIR"
+    ],
+    "default_outcome": "RL10_BRIDGE_MINIMUM_SECOND_CYCLE_EVIDENCE_OBJECT_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local RL10 bridge minimum second-cycle evidence object declaration only; no scientific adequacy claim."
+}

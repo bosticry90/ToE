@@ -86,10 +86,12 @@ Row schema:
 | `INV-PHYS-COSMO-BG-OBJECT-v0` | `physics` | `object_surfaces` | Cosmology background object surface | `BACKGROUND` | `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md` | `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json` | `formal/python/tests/test_cosmo_background_kickoff_gate.py` | `USED` | `P-POLICY` | `INV-PHYS-DEEP-MATURITY-PROGRAM-v0` | COSMO route anchor with active checkpoint chain. |
 | `INV-PHYS-SEAM-CLASSB-INVENTORY-v0` | `physics` | `seams` | Class-B seam inventory | `CURRENT` | `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py` | `VALIDATED` | `P-POLICY` | `INV-MATH-SEAM-WITNESS-PACKAGE` | Primary seam status and promotion-readiness surface. |
 | `INV-PHYS-SEAM-CONSTRAINT-REGISTRY-v0` | `physics` | `seams` | Seam constraint registry | `CURRENT` | `formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_toe_master_action_seam_registry_gate.py` | `VALIDATED` | `P-POLICY` | `INV-PHYS-SEAM-CLASSB-INVENTORY-v0` | Constraint-level seam policy and class wiring. |
+| `INV-PHYS-SEAM-LIVE-CONTRADICTION-v0` | `physics` | `seams` | Live seam contradiction surface | `CURRENT` | `formal/docs/release/SCIENCE_MATURITY_CONTRADICTION_REPORT_POLICY_20260416_v0.md` | `formal/output/reports/science_maturity_contradiction_report_20260416_v0.json` | `formal/python/tests/test_science_maturity_contradiction_report_live_gate.py` | `VALIDATED` | `P-POLICY` | `INV-PHYS-SEAM-CLASSB-INVENTORY-v0` | Fail-closed surface exposing maturity-vs-live blocker and seam-status contradictions. |
 | `INV-PHYS-PREDICTION-SCOREBOARD-v0` | `physics` | `evidence_lanes` | Prediction-first scoreboard | `CURRENT` | `formal/output/prediction_first_scoreboard_v0.json` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_prediction_first_scoreboard_gate.py` | `VALIDATED` | `E-REPRO` | `INV-PHYS-ROADMAP-v0` | Prediction/evidence lane decision surface. |
 | `INV-PHYS-EMPIRICAL-PROTOCOL-v0` | `physics` | `evidence_lanes` | Foundational empirical comparison protocol | `CURRENT` | `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md` | `formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET05_MATRIX_v0.json` | `formal/python/tests/test_foundational_empirical_packet05_progression_policy_gate.py` | `VALIDATED` | `P-POLICY` | `INV-PHYS-ROADMAP-v0` | Packet progression and falsification protocol anchor. |
 | `INV-PHYS-QFT-GR-PACKET41-HOLD` | `physics` | `hold_controls` | QFT-GR Packet41 hold posture | `CURRENT` | `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_HOLD_FORK_DECISION_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` | `BOUNDED_NONCLAIM` | `P-POLICY` | `INV-PHYS-SEAM-CONSTRAINT-REGISTRY-v0` | Explicit hold-retained state under missing numeric inputs. |
 | `INV-PHYS-QFT-GR-PACKET41-SUCCESSOR-PACKAGE-v0` | `physics` | `hold_controls` | QFT-GR Packet41 successor discriminator package | `CURRENT` | `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md` | `formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json` | `formal/python/tests/test_toe_qft_gr_seam_packet41_successor_discriminator_package_gate.py` | `BOUNDED_NONCLAIM` | `P-POLICY` | `INV-PHYS-QFT-GR-PACKET41-HOLD` | Concrete successor package pinned while hold remains active pending admissible numeric clearance. |
+| `INV-PHYS-QM-STAT-RL10-COMP-ANALYSIS-PACKET01-v0` | `physics` | `evidence_lanes` | QM-STAT RL10 computational-analysis Packet-01 | `CURRENT` | `formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md` | `formal/output/qm_stat_rl10_computational_analysis_packet_01_v0.json` | `formal/python/tests/test_qm_stat_rl10_computational_analysis_packet_01_gate.py` | `BOUNDED_NONCLAIM` | `P-POLICY` | `INV-PHYS-SEAM-CONSTRAINT-REGISTRY-v0` | Auxiliary computational-analysis packet under `AUXILIARY_NONCLAIM_COMPUTATIONAL_ANALYSIS`, tied to declared RL10 bridge surfaces only; fixed to `INCONCLUSIVE_v0`, closed after one authorized refinement, and preserved via `formal/docs/paper/QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_FAMILY_PRESERVATION_NOTE_v0.md` as a bounded success-without-escalation result; Packet-02 and restart implication remain disallowed. |
 | `INV-PHYS-QFT-GR-SLICEB-INC15-v0` | `physics` | `seams` | QFT-GR Slice B Increment15 bounded authority package | `CURRENT` | `formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT15_EXECUTION_PACKET_v0.md` | `formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT01_TO_15_SYNTHESIS_NOTE_v0.md` | `formal/python/tests/test_qft_gr_seam_reactivation_sliceb_increment15_authority_mirror_gate.py` | `VALIDATED` | `P-POLICY` | `INV-PHYS-SEAM-CLASSB-INVENTORY-v0` | Increment15 semantic-delta decision, execution, assessment, and synthesis bundle mirrored under authority hold invariance. |
 | `INV-PHYS-SCALAR-SUBMISSION-SUPPORT-v0` | `physics` | `publication_support` | Scalar Paper 1 submission support package | `CURRENT` | `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_SUPPORT_PACKAGE_v0.md` | `formal/output/toe_qft_scalar_route_submission_support_package_checkpoint_v0.json` | `formal/python/tests/test_toe_qft_scalar_route_submission_support_package_gate.py` | `VALIDATED` | `P-POLICY` | `INV-PHYS-ROADMAP-v0` | Support-bundle coherence layer with explicit owner-confirmation blocker tracking. |
 | `INV-PHYS-WORK-EQ-COMPENDIUM-v0` | `physics` | `synthesis_surface` | Centralized math/physics work and equations compendium | `CURRENT` | `formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_repo_status_audit_20260315_gate.py` | `USED` | `P-POLICY` | `INV-PHYS-ROADMAP-v0` | Physics-facing entrypoint to unified equations/work ledger. |
@@ -137,6 +139,7 @@ Packaging/publication debt:
 | `INV-PHYS-DEEP-MATURITY-PROGRAM-v0` | `formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md` | `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json` | `formal/python/tests/test_pillar_deep_maturity_program_gate.py` |
 | `INV-PHYS-SEAM-CLASSB-INVENTORY-v0` | `formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py` |
 | `INV-PHYS-QFT-GR-PACKET41-SUCCESSOR-PACKAGE-v0` | `formal/docs/paper/TOE_QFT_GR_SEAM_PACKET41_SUCCESSOR_DISCRIMINATOR_PACKAGE_v0.md` | `formal/output/toe_qft_gr_seam_packet41_successor_discriminator_package_checkpoint_v0.json` | `formal/python/tests/test_toe_qft_gr_seam_packet41_successor_discriminator_package_gate.py` |
+| `INV-PHYS-QM-STAT-RL10-COMP-ANALYSIS-PACKET01-v0` | `formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md` | `formal/output/qm_stat_rl10_computational_analysis_packet_01_v0.json` | `formal/python/tests/test_qm_stat_rl10_computational_analysis_packet_01_gate.py` |
 | `INV-PHYS-QFT-GR-SLICEB-INC15-v0` | `formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT15_EXECUTION_PACKET_v0.md` | `formal/docs/release/QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT01_TO_15_SYNTHESIS_NOTE_v0.md` | `formal/python/tests/test_qft_gr_seam_reactivation_sliceb_increment15_authority_mirror_gate.py` |
 | `INV-PHYS-SCALAR-SUBMISSION-SUPPORT-v0` | `formal/docs/paper/TOE_QFT_SCALAR_ROUTE_SUBMISSION_SUPPORT_PACKAGE_v0.md` | `formal/output/toe_qft_scalar_route_submission_support_package_checkpoint_v0.json` | `formal/python/tests/test_toe_qft_scalar_route_submission_support_package_gate.py` |
 | `INV-PHYS-PREDICTION-SCOREBOARD-v0` | `formal/output/prediction_first_scoreboard_v0.json` | `formal/output/repo_status_audit_20260315_checkpoint_v0.json` | `formal/python/tests/test_prediction_first_scoreboard_gate.py` |
@@ -146,6 +149,10 @@ Packaging/publication debt:
 
 - Compact authority surface pointer: `State_of_the_Theory.md`
 - Centralized math/physics/equations compendium pointer: `formal/docs/paper/TOE_MATH_PHYSICS_WORK_AND_EQUATIONS_COMPENDIUM_v0.md`
+- Live seam SLA policy pointer: `formal/docs/release/SEAM_RESOLUTION_SLA_POLICY_20260416_v0.md`
+- Live seam contradiction policy pointer: `formal/docs/release/SCIENCE_MATURITY_CONTRADICTION_REPORT_POLICY_20260416_v0.md`
+- Live seam contradiction report pointer: `formal/output/reports/science_maturity_contradiction_report_20260416_v0.json`
+- Live seam contradiction gate pointer: `formal/python/tests/test_science_maturity_contradiction_report_live_gate.py`
 - Changelog archive summary pointer: `archive/docs/release/TOE_CHANGELOG_ARCHIVE_v0.md`
 - Packet history archive summary pointer: `archive/docs/release/TOE_PACKET_HISTORY_ARCHIVE_v0.md`
 - Seam history archive summary pointer: `archive/docs/release/TOE_SEAM_HISTORY_ARCHIVE_v0.md`
@@ -329,6 +336,84 @@ Packaging/publication debt:
 - `formal/docs/paper/DERIVATION_TARGET_QFT_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
 - `formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_04_v0.md`
 - `formal/python/tests/test_qm_empirical_comparison_packet_04_gate.py`
+- `formal/output/reports/qm_blocker_moving_tranche_20260411_v0.json`
+- `formal/output/reports/qm_blocker_moving_ruling_20260411_v0.json`
+- `formal/output/reports/science_next_attack_class_selection_20260411_v0.json`
+- `formal/output/reports/direct_master_action_residual_transport_attack_class_packet_20260411_v0.json`
+- `formal/python/tests/test_qm_blocker_moving_control_stack_gate.py`
+- `formal/output/reports/qm_stat_transport_residual_packet_20260411_v0.json`
+- `formal/output/reports/qm_stat_transport_residual_ruling_20260411_v0.json`
+- `formal/output/reports/science_post_direct_attack_class_decision_20260411_v0.json`
+- `formal/python/tests/test_qm_stat_transport_residual_live_control_stack_gate.py`
+- `formal/docs/release/ARCHITECTURE_LEVEL_BLOCKER_DIAGNOSIS_PACKET_20260411_v0.json`
+- `formal/output/reports/architecture_level_blocker_diagnosis_packet_20260411_v0.json`
+- `formal/python/tests/test_architecture_level_blocker_diagnosis_live_gate.py`
+- `formal/docs/release/ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_ATTACK_CLASS_PACKET_20260411_v0.json`
+- `formal/output/reports/architecture_seam_master_action_alignment_attack_class_packet_20260411_v0.json`
+- `formal/python/tests/test_architecture_seam_master_action_alignment_live_gate.py`
+- `formal/docs/release/ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_PACKET_EXECUTION_20260411_v0.json`
+- `formal/output/reports/architecture_seam_master_action_alignment_packet_execution_20260411_v0.json`
+- `formal/docs/release/ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_RULING_20260411_v0.json`
+- `formal/output/reports/architecture_seam_master_action_alignment_ruling_20260411_v0.json`
+- `formal/docs/release/SCIENCE_POST_ARCHITECTURE_ALIGNMENT_DECISION_20260411_v0.json`
+- `formal/output/reports/science_post_architecture_alignment_decision_20260411_v0.json`
+- `formal/python/tests/test_architecture_seam_master_action_alignment_execution_live_gate.py`
+- `formal/docs/release/PROGRAM_POSTURE_REVIEW_PACKET_20260411_v0.json`
+- `formal/output/reports/program_posture_review_packet_20260411_v0.json`
+- `formal/python/tests/test_program_posture_review_live_gate.py`
+- `formal/docs/release/POST_POSTURE_REVIEW_PROGRAM_MODE_TRANSITION_20260411_v0.json`
+- `formal/output/reports/post_posture_review_program_mode_transition_20260411_v0.json`
+- `formal/python/tests/test_post_posture_review_program_mode_transition_live_gate.py`
+- `formal/docs/release/BOUNDED_MEASUREMENT_REGIME_PILOT_EXECUTION_20260411_v0.json`
+- `formal/output/reports/bounded_measurement_regime_pilot_execution_20260411_v0.json`
+- `formal/docs/release/BOUNDED_MEASUREMENT_REGIME_PILOT_RULING_20260411_v0.json`
+- `formal/output/reports/bounded_measurement_regime_pilot_ruling_20260411_v0.json`
+- `formal/docs/release/POST_MEASUREMENT_REGIME_PILOT_DECISION_20260411_v0.json`
+- `formal/output/reports/post_measurement_regime_pilot_decision_20260411_v0.json`
+- `formal/python/tests/test_bounded_measurement_regime_pilot_live_gate.py`
+- `formal/docs/release/REVISED_SIGNAL_DIAGNOSTIC_REGISTRATION_20260411_v0.json`
+- `formal/output/reports/revised_signal_diagnostic_registration_20260411_v0.json`
+- `formal/python/tests/test_revised_signal_diagnostic_registration_live_gate.py`
+- `formal/docs/release/PROGRAM_STATE_CONVERSION_REVIEW_20260411_v0.json`
+- `formal/output/reports/program_state_conversion_review_20260411_v0.json`
+- `formal/python/tests/test_program_state_conversion_review_live_gate.py`
+- `formal/docs/release/DEEPER_BLOCKER_DEFINITION_REVIEW_20260411_v0.json`
+- `formal/output/reports/deeper_blocker_definition_review_20260411_v0.json`
+- `formal/python/tests/test_deeper_blocker_definition_review_live_gate.py`
+- `formal/docs/release/BLOCKER_BURN_DASHBOARD_POLICY_20260416_v0.md`
+- `formal/output/reports/blocker_burn_dashboard_20260416_v0.json`
+- `formal/python/tests/test_blocker_burn_dashboard_live_gate.py`
+- `formal/docs/release/SCIENCE_GOVERNANCE_BUDGET_POLICY_20260416_v0.md`
+- `formal/output/reports/science_governance_budget_20260416_v0.json`
+- `formal/python/tests/test_science_governance_budget_live_gate.py`
+- `formal/docs/release/SEAM_RESOLUTION_SLA_POLICY_20260416_v0.md`
+- `formal/output/reports/seam_resolution_sla_ledger_20260416_v0.json`
+- `formal/python/tests/test_seam_resolution_sla_live_gate.py`
+- `formal/docs/release/BOUNDED_BLOCKER_DEFINITION_TEST_EXECUTION_20260411_v0.json`
+- `formal/output/reports/bounded_blocker_definition_test_execution_20260411_v0.json`
+- `formal/docs/release/BOUNDED_BLOCKER_DEFINITION_TEST_RULING_20260411_v0.json`
+- `formal/output/reports/bounded_blocker_definition_test_ruling_20260411_v0.json`
+- `formal/python/tests/test_bounded_blocker_definition_test_live_gate.py`
+- `formal/docs/release/POST_BLOCKER_DEFINITION_TEST_DECISION_20260411_v0.json`
+- `formal/output/reports/post_blocker_definition_test_decision_20260411_v0.json`
+- `formal/python/tests/test_post_blocker_definition_test_decision_live_gate.py`
+- `formal/docs/release/AUTHORITY_COUPLING_REVIEW_20260411_v0.json`
+- `formal/output/reports/authority_coupling_review_20260411_v0.json`
+- `formal/python/tests/test_authority_coupling_review_live_gate.py`
+- `formal/docs/release/BOUNDED_COUPLING_REFINEMENT_PACKET_20260411_v0.json`
+- `formal/output/reports/bounded_coupling_refinement_packet_20260411_v0.json`
+- `formal/python/tests/test_bounded_coupling_refinement_packet_live_gate.py`
+- `formal/docs/release/COUPLING_REFINEMENT_RULING_20260411_v0.json`
+- `formal/output/reports/coupling_refinement_ruling_20260411_v0.json`
+- `formal/python/tests/test_coupling_refinement_ruling_live_gate.py`
+- `formal/docs/release/AUTHORITY_PROMOTION_REGISTRATION_20260411_v0.json`
+- `formal/output/reports/authority_promotion_registration_20260411_v0.json`
+- `formal/python/tests/test_authority_promotion_registration_live_gate.py`
+- `formal/docs/release/RECOMPUTE_OBSERVATION_20260411_v0.json`
+- `formal/output/reports/recompute_observation_20260411_v0.json`
+- `formal/docs/release/POST_RECOMPUTE_OBSERVATION_20260411_v0.json`
+- `formal/output/reports/post_recompute_observation_20260411_v0.json`
+- `formal/python/tests/test_recompute_monitoring_live_gate.py`
 - `formal/python/tests/test_gr_empirical_comparison_packet_04_gate.py`
 - `formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py`
 - `formal/python/tests/test_cosmo_empirical_comparison_packet_04_gate.py`

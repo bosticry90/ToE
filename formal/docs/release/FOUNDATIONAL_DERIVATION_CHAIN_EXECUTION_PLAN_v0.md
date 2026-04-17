@@ -77,16 +77,34 @@ Action items:
 1. Create bounded shadow-lane target:
 - add `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_v0.md`
 - enforce `RUN_BOUNDED_v0_NONCLAIM` posture and no promotion semantics.
+- bind Track B to:
+	- `formal/docs/release/GROUNDED_SPECULATION_POSTURE_STANDARD_v0.md`
+	- `formal/docs/release/COMPUTATIONAL_ANALYSIS_BOUNDED_AUTHORIZATION_CLASS_20260416_v0.json`
+	- `formal/docs/release/COMPUTATIONAL_ANALYSIS_LANE_EXECUTION_POLICY_20260416_v0.md`
+	- `formal/python/tests/test_computational_analysis_lane_policy_gate.py`
+- treat Track B outputs as auxiliary computational-analysis artifacts, not lane reopen or packet authorization.
 
-2. Add first-run artifact contract:
+2. Pin first concrete computational-analysis packet:
+- add `formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md`
+- add `formal/output/qm_stat_rl10_computational_analysis_packet_01_v0.json`
+- bind the packet to declared RL10 bridge surfaces only:
+	- `formal/docs/release/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_FIRST_TEST_PACKET_20260412_v0.json`
+	- `formal/docs/release/QM_STAT_RL10_INTERFACE_TRANSFORMATION_PACKET_20260411_v0.json`
+- constrain Packet-01 to `INCONCLUSIVE_v0` only with retain/prune notes treated as subordinate classificatory annotations.
+- add `formal/python/tests/test_qm_stat_rl10_computational_analysis_packet_01_gate.py`
+
+3. Add first-run artifact contract:
 - add `formal/output/toe_master_action_shadow_numerics_cycle01_v0.json` schema contract doc.
 
-3. Add numerical gate scaffold:
+4. Add numerical gate scaffold:
 - add `formal/python/tests/test_toe_master_action_shadow_numerics_cycle01_gate.py`
 
 Acceptance criteria:
 - artifact includes operator stability summary, residual stability summary, regime-limit scan summary.
+- first concrete packet is tied to one existing declared seam/model need and remains deterministic/local.
+- Packet-01 remains `INCONCLUSIVE_v0` with no probe-readiness, comparator-binding confirmation, or restart drift.
 - no promotion/adjudication token drift.
+- no restart, blocker-movement, or live packet authorization drift.
 
 ### Track C (concurrent with stabilization): Prediction scaffolding aligned to M3
 

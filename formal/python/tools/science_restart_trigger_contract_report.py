@@ -54,16 +54,24 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     summary_doc_path = REPO_ROOT / str(
         required_inputs.get("science_frontier_stop_state_summary_doc", "")
     ).strip()
+    policy_trigger_path = REPO_ROOT / str(
+        required_inputs.get("science_restart_higher_level_policy_trigger_report", "")
+    ).strip()
 
     post_z = _read_json(post_z_path)
     phase_z = _read_json(phase_z_path)
     summary_doc = _read_text(summary_doc_path)
+    policy_trigger = _read_json(policy_trigger_path)
 
     post_z_summary = dict(post_z.get("summary", {}))
     phase_z_summary = dict(phase_z.get("summary", {}))
+    policy_trigger_summary = dict(policy_trigger.get("summary", {}))
 
     post_z_outcome = str(post_z_summary.get("terminal_outcome", "")).strip()
     phase_z_outcome = str(phase_z_summary.get("terminal_outcome", "")).strip()
+    higher_level_policy_trigger_outcome = str(
+        policy_trigger_summary.get("terminal_outcome", "")
+    ).strip()
 
     lane_reopen_authorized = bool(post_z_summary.get("lane_specific_reopen_authorized", True))
     new_lane_or_packet_authorized_now = bool(post_z_summary.get("new_lane_or_packet_authorized_now", True))
@@ -76,6 +84,12 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         contract.get("required_new_lane_or_packet_authorized_now", False)
     )
     required_thermal_lane_status = str(contract.get("required_thermal_lane_status", "")).strip()
+    required_higher_level_policy_trigger_outcome = str(
+        contract.get("required_higher_level_policy_trigger_outcome", "")
+    ).strip()
+    required_higher_level_policy_revision_authorized = bool(
+        contract.get("required_higher_level_policy_revision_authorized", False)
+    )
     forbid_reopen = bool(contract.get("forbid_closed_or_held_lane_reopen", False))
 
     restart_trigger_families = dict(contract.get("restart_trigger_families", {}))
@@ -83,7 +97,10 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         restart_trigger_families.get("stronger_candidate_class_identified", False)
     )
     higher_level_policy_revision_authorized = bool(
-        restart_trigger_families.get("higher_level_policy_revision_authorized", False)
+        policy_trigger_summary.get(
+            "higher_level_policy_revision_authorized",
+            restart_trigger_families.get("higher_level_policy_revision_authorized", False),
+        )
     )
     material_new_external_evidence_class = bool(
         restart_trigger_families.get("material_new_external_evidence_class", False)
@@ -124,6 +141,8 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         and lane_reopen_authorized == required_lane_reopen_authorized
         and new_lane_or_packet_authorized_now == required_new_lane_or_packet_authorized_now
         and thermal_lane_status == required_thermal_lane_status
+        and higher_level_policy_trigger_outcome == required_higher_level_policy_trigger_outcome
+        and higher_level_policy_revision_authorized == required_higher_level_policy_revision_authorized
         and forbid_reopen
         and signals_shape_ok
         and summary_doc_semantics_ok
@@ -164,6 +183,10 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
             "new_lane_or_packet_authorized_now_match": new_lane_or_packet_authorized_now
             == required_new_lane_or_packet_authorized_now,
             "thermal_lane_status_match": thermal_lane_status == required_thermal_lane_status,
+            "higher_level_policy_trigger_outcome_match": higher_level_policy_trigger_outcome
+            == required_higher_level_policy_trigger_outcome,
+            "higher_level_policy_revision_authorized_match": higher_level_policy_revision_authorized
+            == required_higher_level_policy_revision_authorized,
             "forbid_closed_or_held_lane_reopen": forbid_reopen,
             "restart_trigger_family_signal_shape_ok": signals_shape_ok,
             "summary_doc_semantics_ok": summary_doc_semantics_ok,
@@ -191,6 +214,10 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
                 "required_new_lane_or_packet_authorized_now": required_new_lane_or_packet_authorized_now,
                 "thermal_lane_status": thermal_lane_status,
                 "required_thermal_lane_status": required_thermal_lane_status,
+                "higher_level_policy_trigger_outcome": higher_level_policy_trigger_outcome,
+                "required_higher_level_policy_trigger_outcome": required_higher_level_policy_trigger_outcome,
+                "higher_level_policy_revision_authorized": higher_level_policy_revision_authorized,
+                "required_higher_level_policy_revision_authorized": required_higher_level_policy_revision_authorized,
             },
             "summary": {
                 "all_criteria_satisfied": terminal_outcome in allowed_outcomes,
@@ -212,6 +239,7 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
             "declaration": _ptr(declaration_path),
             "science_post_phase_z_frontier_decision_report": _ptr(post_z_path),
             "science_phase_z_stronger_candidate_class_discovery_report": _ptr(phase_z_path),
+            "science_restart_higher_level_policy_trigger_report": _ptr(policy_trigger_path),
             "science_frontier_stop_state_summary_doc": _ptr(summary_doc_path),
         },
         "non_claim_boundary": "Repository-local restart trigger contract report only; no scientific adequacy claim.",

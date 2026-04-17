@@ -49,8 +49,13 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     repeatability_review_path = REPO_ROOT / str(
         required_inputs.get("bridge_repeatability_review_report", "")
     ).strip()
+    named_check_path = REPO_ROOT / str(
+        required_inputs.get("bridge_first_named_repeatability_check_report", "")
+    ).strip()
     repeatability_review = _read_json(repeatability_review_path)
+    named_check = _read_json(named_check_path)
     repeatability_summary = dict(repeatability_review.get("summary", {}))
+    named_check_summary = dict(named_check.get("summary", {}))
 
     repeatability_review_outcome = str(repeatability_summary.get("review_outcome", "")).strip()
     bounded_check_possible_without_full_cycle = bool(
@@ -66,13 +71,26 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         and observed_quantity_id == expected_quantity_id
     )
 
-    proposed_check_kind = str(naming_policy.get("proposed_check_kind", "NONE")).strip().upper()
-    proposed_check_name = str(naming_policy.get("proposed_check_name", "")).strip()
-    bounded_scope_declared = bool(naming_policy.get("bounded_scope_declared", False))
-    not_disguised_second_full_cycle_declared = bool(
-        naming_policy.get("not_disguised_second_full_cycle_declared", False)
+    named_check_declared = (
+        str(named_check_summary.get("terminal_outcome", "")).strip()
+        == "RL10_BRIDGE_FIRST_NAMED_REPEATABILITY_CHECK_DECLARED"
     )
-    path_hold_triggered = bool(naming_policy.get("path_hold_triggered", False))
+    if named_check_declared:
+        proposed_check_kind = str(named_check_summary.get("proposed_check_kind", "NONE")).strip().upper()
+        proposed_check_name = str(named_check_summary.get("proposed_check_name", "")).strip()
+        bounded_scope_declared = bool(named_check_summary.get("bounded_scope_declared", False))
+        not_disguised_second_full_cycle_declared = bool(
+            named_check_summary.get("not_disguised_second_full_cycle_declared", False)
+        )
+        path_hold_triggered = bool(named_check_summary.get("path_hold_triggered", False))
+    else:
+        proposed_check_kind = str(naming_policy.get("proposed_check_kind", "NONE")).strip().upper()
+        proposed_check_name = str(naming_policy.get("proposed_check_name", "")).strip()
+        bounded_scope_declared = bool(naming_policy.get("bounded_scope_declared", False))
+        not_disguised_second_full_cycle_declared = bool(
+            naming_policy.get("not_disguised_second_full_cycle_declared", False)
+        )
+        path_hold_triggered = bool(naming_policy.get("path_hold_triggered", False))
 
     named_check_admissible = (
         bool(proposed_check_name)
@@ -143,9 +161,11 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
                 "observed_quantity_id": observed_quantity_id,
                 "proposed_check_kind": proposed_check_kind,
                 "proposed_check_name": proposed_check_name,
+                "named_check_admissible": named_check_admissible,
                 "bounded_scope_declared": bounded_scope_declared,
                 "not_disguised_second_full_cycle_declared": not_disguised_second_full_cycle_declared,
                 "path_hold_triggered": path_hold_triggered,
+                "named_check_package_declared": named_check_declared,
             },
             "summary": {
                 "all_criteria_satisfied": review_outcome
@@ -168,6 +188,7 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         "source_bundle": {
             "declaration": _ptr(declaration_path),
             "bridge_repeatability_review_report": _ptr(repeatability_review_path),
+            "bridge_first_named_repeatability_check_report": _ptr(named_check_path),
         },
         "non_claim_boundary": "Repository-local bridge repeatability-check naming review report only; no scientific adequacy claim.",
     }

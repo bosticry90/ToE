@@ -1,12 +1,17 @@
 {
-  "captured_at_utc": "2026-04-13T00:33:26Z",
+  "captured_at_utc": "2026-04-15T02:59:07Z",
   "criteria": {
     "controlled_dormancy_outcome_match": true,
     "direct_execution_authorized_now_match": true,
     "lane_reopen_authorized_match": true,
     "new_lane_or_packet_authorized_now_match": true,
     "no_loop_rule_declared": true,
+    "playbook_canonical_package_phrase_present": true,
+    "playbook_dual_clearance_phrase_present": true,
     "playbook_forbid_lane_first_present": true,
+    "playbook_latest_clarification_checkpoint_present": true,
+    "playbook_minimum_restart_entry_phrase_present": true,
+    "playbook_operational_capstone_commit_present": true,
     "playbook_restart_sequence_anchor_present": true,
     "playbook_trigger_phrase_present": true,
     "restart_trigger_outcome_match": true,

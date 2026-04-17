@@ -7,6 +7,8 @@ Current work is in the discriminative science phase: evidence-only runs, candida
 Governance status is TERMINAL_SATISFIED_v0_NONCLAIM under pinned policy scope.
 Physics status is MIXED_PROGRESS_v0 with seam-level physics closure still incomplete.
 This is NOT a physics-complete ToE claim.
+A bounded auxiliary computational-analysis lane is authorized for shadow numerics, sensitivity scans, stability summaries, and comparator design only.
+This does not reopen dormant lanes or authorize new packets.
 
 PHYSICS-FIRST EXECUTION POLICY CHECKPOINT (WS-10-T07B, 2026-03-26)
 - Physics-closure blockers are prioritized ahead of governance expansion work.
@@ -59,6 +61,7 @@ What This Project Is (Right Now)
  A disciplined investigation into whether a consistency-driven field idea can exist without collapsing.
  A test of whether simple rules can generate meaningful structure on their own.
  A sandbox where ideas are allowed to fail cleanly.
+ A bounded auxiliary computational-analysis lane for grounded speculation under explicit non-claim and dormancy-safe policy surfaces.
 This project does not assert:
  that it describes reality,
  that it replaces existing physics,

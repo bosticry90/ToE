@@ -3,14 +3,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+from formal.python.meta.repo_environment import find_repo_root
 
 
 REPO_ROOT = find_repo_root(Path(__file__))

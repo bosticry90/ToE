@@ -1,0 +1,53 @@
+{
+  "schema_id": "QM_STAT_SEAM_AUTHORIZATION_READINESS_DOSSIER_20260414_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Pin a machine-checkable readiness dossier for the top-ranked QM-STAT seam row that identifies the exact current restart-family blocker, the governing closure artifact and gate, and the minimum bounded post-authorization tranche without opening execution.",
+  "target_seam": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "lane": "QM_STAT_CYCLE11",
+    "blocker_class": "SEAM_INTEGRATION_GAP",
+    "domain": "seam"
+  },
+  "required_inputs": {
+    "discovery_priority_queue_report": "formal/output/reports/discovery_priority_queue_report_20260411_v0.json",
+    "physics_progress_ledger_report": "formal/output/reports/physics_progress_ledger_v0.json",
+    "bridge_external_validation_policy_standard_formalization_report": "formal/output/reports/bridge_external_validation_policy_standard_formalization_20260413_v0.json",
+    "science_restart_higher_level_policy_trigger_report": "formal/output/reports/science_restart_higher_level_policy_trigger_20260413_v0.json",
+    "science_restart_trigger_contract_report": "formal/output/reports/science_restart_trigger_contract_20260412_v0.json",
+    "science_dormancy_preservation_audit_report": "formal/output/reports/science_dormancy_preservation_audit_20260412_v0.json"
+  },
+  "authorization_dossier_contract": {
+    "required_discovery_queue_top_rank_row": "ROW-SEAM-QM-STAT-001",
+    "required_progress_classification": "REWORK_ROUTED",
+    "required_current_restart_blocker": "policy_standard_approval_not_recorded",
+    "require_policy_standard_defined": true,
+    "require_policy_standard_approved": false,
+    "require_higher_level_policy_revision_authorized": false,
+    "required_restart_terminal_outcome": "REMAIN_IN_GOVERNED_STOP_STATE",
+    "required_dormancy_terminal_outcome": "DORMANCY_PRESERVATION_AUDIT_PASS",
+    "required_direct_execution_authorized_now": false,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "minimum_post_authorization_tranche": {
+      "target_row_id": "ROW-SEAM-QM-STAT-001",
+      "target_lane": "QM_STAT_CYCLE11",
+      "current_status": "NEXT_BOUNDED_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_PINNED",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE11_v0.md",
+      "required_closure_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json",
+      "required_closure_gate": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle11_gate.py",
+      "required_exit_criterion": "CYCLE_GATE_AND_SYNTHESIS_GATE_PASS",
+      "bounded_scope": "SINGLE_ROW_SINGLE_SEAM_QM_STAT_CYCLE11_CONTINUATION_ONLY"
+    }
+  },
+  "authorization_dossier_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QM_STAT_SEAM_AUTHORIZATION_READINESS_DOSSIER_OUTCOME",
+    "no_loop_rule": "ONE_QM_STAT_SEAM_AUTHORIZATION_READINESS_DOSSIER_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_BUT_RESTART_BLOCKED",
+      "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_QM_STAT_SEAM_AUTHORIZATION_DOSSIER_REPAIR"
+    ],
+    "default_outcome": "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT seam authorization readiness dossier declaration only; no scientific adequacy claim."
+}

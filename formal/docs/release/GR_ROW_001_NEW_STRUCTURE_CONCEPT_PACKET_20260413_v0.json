@@ -1,0 +1,46 @@
+{
+  "schema_id": "GR_ROW_001_NEW_STRUCTURE_CONCEPT_PACKET_20260413_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T12:30:00Z",
+  "objective": "Lock one bounded non-executing concept packet for a new GR seam or model class that could unblock ROW-PILLAR-GR-001 after attack-class cycling froze.",
+  "required_inputs": {
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "toe_global_completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "gr_empirical_comparison_packet_05_artifact": "formal/output/gr_empirical_comparison_packet_05_v0.json",
+    "concept_note": "formal/docs/paper/GR_ROW_001_NEW_STRUCTURE_CONCEPT_NOTE_v0.md"
+  },
+  "concept_policy": {
+    "target_row": "ROW-PILLAR-GR-001",
+    "required_structural_gap_outcome": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "required_packet05_decision": "RETAIN_v0",
+    "required_packet05_status": "RUN_BOUNDED_v0_NONCLAIM",
+    "required_note_tokens": [
+      "GR_ROW_001_NEW_STRUCTURE_STATUS_v0: CONCEPT_PACKET_LOCKED_NONEXECUTING",
+      "GR_ROW_001_NEW_STRUCTURE_TARGET_ROW_v0: ROW-PILLAR-GR-001",
+      "GR_ROW_001_NEW_STRUCTURE_FAMILY_v0: CROSS_REGIME_TRANSPORT_INTERFACE_MODEL_CLASS",
+      "GR_ROW_001_NEW_STRUCTURE_SUCCESS_CRITERION_v0: NEW_STRUCTURE_MUST_ENABLE_BLOCKER_DELTA_OR_ROW_SUCCESS_INCREMENT",
+      "GR_ROW_001_NEW_STRUCTURE_FAILURE_CRITERION_v0: IF_NO_SHARED_INTERFACE_OBSERVABLE_EXISTS_ROUTE_TO_PATH_FALSIFICATION_OR_REWORK",
+      "GR_ROW_001_NEW_STRUCTURE_EXECUTION_POLICY_v0: NONEXECUTING_DESIGN_ONLY_UNTIL_P75_AND_P77_CLEAR"
+    ],
+    "concept_family": "CROSS_REGIME_TRANSPORT_INTERFACE_MODEL_CLASS",
+    "concept_axes": [
+      "shared_state_carrier",
+      "cross_regime_transport_interface_map",
+      "single_interface_observable",
+      "fail_closed_falsification_hook"
+    ],
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "concept_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_GR_ROW_001_NEW_STRUCTURE_CONCEPT_OUTCOME",
+    "no_loop_rule": "ONE_GR_ROW_001_NEW_STRUCTURE_CONCEPT_LAYER_ONLY",
+    "allowed_outcomes": [
+      "GR_ROW_001_NEW_STRUCTURE_CONCEPT_PACKET_LOCKED",
+      "GR_ROW_001_NEW_STRUCTURE_CONCEPT_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_GR_ROW_001_CONCEPT_REPAIR"
+    ],
+    "default_outcome": "GR_ROW_001_NEW_STRUCTURE_CONCEPT_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local GR row 001 new-structure concept packet declaration only; no scientific adequacy claim."
+}

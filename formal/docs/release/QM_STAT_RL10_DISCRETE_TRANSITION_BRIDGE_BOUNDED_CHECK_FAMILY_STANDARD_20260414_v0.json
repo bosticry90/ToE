@@ -1,0 +1,48 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_BOUNDED_CHECK_FAMILY_STANDARD_20260414_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-14T09:10:00Z",
+  "objective": "Declare the first bounded external-validation check-family surface and declaration standard for the RL10 bridge without converting the restart front door into a permissive path.",
+  "required_inputs": {
+    "bridge_repeatability_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_repeatability_review_20260412_v0.json",
+    "bridge_repeatability_check_naming_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_repeatability_check_naming_review_20260412_v0.json",
+    "qm_stat_single_baseline_comparator_report": "formal/output/reports/qm_stat_single_baseline_comparator_20260411_v0.json",
+    "bounded_check_family_standard_note": "formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_BOUNDED_CHECK_FAMILY_STANDARD_v0.md"
+  },
+  "bounded_check_family_policy": {
+    "required_repeatability_review_outcome": "LIMITED_HOLD_RETAINED",
+    "allowed_naming_review_outcomes": [
+      "NO_SPECIFIC_CHECK_JUSTIFIED_YET",
+      "BOUNDED_REPEATABILITY_CHECK_NAMED",
+      "BOUNDED_CROSS_PROBE_CHECK_NAMED"
+    ],
+    "required_baseline_comparator_id": "OV-RL-10",
+    "required_bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0",
+    "required_note_tokens": [
+      "RL10_BRIDGE_BOUNDED_CHECK_DECLARATION_STANDARD_v0: DECLARE_ONE_SINGLE_SURFACE_SINGLE_COMPARATOR_SINGLE_QUANTITY_CHECK_FAMILY",
+      "RL10_BRIDGE_EXTERNAL_VALIDATION_POLICY_SURFACE_v0: OV_RL10_TO_RL10_BRIDGE_SIGMA_DB_SINGLE_SURFACE",
+      "RL10_BRIDGE_FIRST_BOUNDED_CHECK_FAMILY_v0: REPEATABILITY_STABILITY_WINDOW_FAMILY",
+      "RL10_BRIDGE_BOUNDED_CHECK_SCOPE_RULE_v0: ONE_BOUNDED_WINDOW_OR_ONE_BOUNDED_CROSS_PROBE_SLICE_ONLY",
+      "RL10_BRIDGE_NON_DISGUISED_SECOND_CYCLE_RULE_v0: NO_FULL_SECOND_EXECUTION_CYCLE_MAY_BE_RELABELED_AS_A_BOUNDED_CHECK",
+      "RL10_BRIDGE_FAIL_CLOSED_RULE_v0: IF_SINGLE_SURFACE_OR_SINGLE_COMPARATOR_BREAKS_HOLD_THE_POLICY_PATH_CLOSED",
+      "RL10_BRIDGE_NEXT_REQUIRED_OBJECT_v0: NAME_ONE_ADMISSIBLE_CHECK_WITHIN_THE_DECLARED_REPEATABILITY_FAMILY",
+      "RL10_BRIDGE_NEXT_REQUIRED_EVIDENCE_v0: DEFINE_MINIMUM_SECOND_CYCLE_EVIDENCE_BEFORE_ANY_STANDARD_APPROVAL"
+    ],
+    "declaration_standard_id": "RL10_BRIDGE_BOUNDED_CHECK_DECLARATION_STANDARD_v0",
+    "policy_surface_id": "OV_RL10_TO_RL10_BRIDGE_SIGMA_DB_SINGLE_SURFACE",
+    "first_bounded_check_family_id": "REPEATABILITY_STABILITY_WINDOW_FAMILY",
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "bounded_check_family_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_RL10_BRIDGE_BOUNDED_CHECK_FAMILY_STANDARD_OUTCOME",
+    "no_loop_rule": "ONE_RL10_BRIDGE_BOUNDED_CHECK_FAMILY_STANDARD_LAYER_ONLY",
+    "allowed_outcomes": [
+      "RL10_BRIDGE_BOUNDED_CHECK_FAMILY_STANDARD_DECLARED",
+      "RL10_BRIDGE_BOUNDED_CHECK_FAMILY_STANDARD_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_RL10_BRIDGE_BOUNDED_CHECK_FAMILY_STANDARD_REPAIR"
+    ],
+    "default_outcome": "RL10_BRIDGE_BOUNDED_CHECK_FAMILY_STANDARD_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local RL10 bridge bounded check family standard declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,36 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_SURFACE_20260414_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-14T14:25:00Z",
+  "objective": "Declare one bounded approval-record surface for the RL10 bridge external-validation policy standard without recording approval or authorizing restart.",
+  "required_inputs": {
+    "bridge_policy_standard_approval_criteria_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_criteria_20260414_v0.json",
+    "policy_standard_approval_record_surface_note": "formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_SURFACE_v0.md"
+  },
+  "policy_standard_approval_record_surface_policy": {
+    "required_policy_standard_approval_criteria_outcome": "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_CRITERIA_DECLARED",
+    "required_note_tokens": [
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_SURFACE_ID_v0: RL10_BRIDGE_EXTERNAL_VALIDATION_POLICY_STANDARD_APPROVAL_RECORD_SURFACE",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_LOCATION_v0: BRIDGE_EXTERNAL_VALIDATION_POLICY_STANDARD_FORMALIZATION_REPORT_SUMMARY",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_TOKEN_v0: policy_standard_approval_recorded",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_PRECONDITION_v0: RECORDING_REQUIRES_A_DECLARED_APPROVAL_CRITERIA_OBJECT",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_FAIL_CLOSED_RULE_v0: IF_NO_EXPLICIT_REPOSITORY_LOCAL_RECORD_EXISTS_THEN_APPROVAL_REMAINS_UNRECORDED",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_STATUS_v0: SURFACE_DECLARED_BUT_APPROVAL_NOT_RECORDED"
+    ],
+    "policy_standard_approval_record_surface_defined": true,
+    "policy_standard_approval_recorded": false,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "policy_standard_approval_record_surface_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_SURFACE_OUTCOME",
+    "no_loop_rule": "ONE_RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_SURFACE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_SURFACE_DECLARED",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_SURFACE_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_SURFACE_REPAIR"
+    ],
+    "default_outcome": "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_SURFACE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local RL10 bridge policy standard approval-record surface declaration only; no scientific adequacy claim."
+}

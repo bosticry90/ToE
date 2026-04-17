@@ -41,6 +41,7 @@ def _write_declaration(
                 "science_post_phase_z_frontier_decision_report": "formal/output/reports/science_post_phase_z_frontier_decision_20260412_v0.json",
                 "science_phase_z_stronger_candidate_class_discovery_report": "formal/output/reports/science_phase_z_stronger_candidate_class_discovery_20260412_v0.json",
                 "science_frontier_stop_state_summary_doc": "formal/docs/release/SCIENCE_FRONTIER_STOP_STATE_SUMMARY_20260412_v0.md",
+                "science_restart_higher_level_policy_trigger_report": "formal/output/reports/science_restart_higher_level_policy_trigger_20260413_v0.json",
             },
             "restart_trigger_contract": {
                 "required_post_phase_z_outcome": "PRESERVE_CURRENT_GOVERNED_STOP_STATE",
@@ -48,6 +49,8 @@ def _write_declaration(
                 "required_lane_reopen_authorized": False,
                 "required_new_lane_or_packet_authorized_now": False,
                 "required_thermal_lane_status": "PRESERVED_INACTIVE_NEAR_READY_NOT_EXECUTABLE",
+                "required_higher_level_policy_trigger_outcome": "HIGHER_LEVEL_POLICY_REVISION_NOT_AUTHORIZED",
+                "required_higher_level_policy_revision_authorized": False,
                 "forbid_closed_or_held_lane_reopen": True,
                 "single_layer_only": True,
                 "single_outcome_only": True,
@@ -72,6 +75,8 @@ def _seed_inputs(
     root: Path,
     *,
     phase_z_outcome: str = "NO_STRONGER_CANDIDATE_CLASS_IDENTIFIED_YET",
+    higher_level_policy_trigger_outcome: str = "HIGHER_LEVEL_POLICY_REVISION_NOT_AUTHORIZED",
+    higher_level_policy_revision_authorized: bool = False,
 ) -> None:
     _write_json(
         root / "formal" / "output" / "reports" / "science_post_phase_z_frontier_decision_20260412_v0.json",
@@ -92,6 +97,15 @@ def _seed_inputs(
         root / "formal" / "docs" / "release" / "SCIENCE_FRONTIER_STOP_STATE_SUMMARY_20260412_v0.md",
         "No currently governed lane is authorized to reopen.\n"
         "No currently screened future candidate is authorized for active execution.\n",
+    )
+    _write_json(
+        root / "formal" / "output" / "reports" / "science_restart_higher_level_policy_trigger_20260413_v0.json",
+        {
+            "summary": {
+                "terminal_outcome": higher_level_policy_trigger_outcome,
+                "higher_level_policy_revision_authorized": higher_level_policy_revision_authorized,
+            }
+        },
     )
 
 

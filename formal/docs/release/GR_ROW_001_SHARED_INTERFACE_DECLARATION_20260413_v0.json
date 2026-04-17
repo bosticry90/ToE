@@ -1,0 +1,49 @@
+{
+  "schema_id": "GR_ROW_001_SHARED_INTERFACE_DECLARATION_20260413_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-13T13:15:00Z",
+  "objective": "Declare one bounded shared-interface object and one comparison surface for ROW-PILLAR-GR-001 without reopening execution.",
+  "required_inputs": {
+    "gr_row_001_new_structure_concept_packet_report": "formal/output/reports/gr_row_001_new_structure_concept_packet_20260413_v0.json",
+    "gr_row_001_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "gr_empirical_comparison_packet_05_artifact": "formal/output/gr_empirical_comparison_packet_05_v0.json",
+    "shared_interface_note": "formal/docs/paper/GR_ROW_001_SHARED_INTERFACE_DECLARATION_v0.md"
+  },
+  "shared_interface_policy": {
+    "target_row": "ROW-PILLAR-GR-001",
+    "required_concept_outcome": "GR_ROW_001_NEW_STRUCTURE_CONCEPT_PACKET_LOCKED",
+    "required_structural_gap_outcome": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "required_packet05_decision": "RETAIN_v0",
+    "required_packet05_status": "RUN_BOUNDED_v0_NONCLAIM",
+    "required_note_tokens": [
+      "GR_ROW_001_SHARED_INTERFACE_STATUS_v0: DECLARED_NONEXECUTING_DESIGN_PACKET",
+      "GR_ROW_001_SHARED_INTERFACE_TARGET_ROW_v0: ROW-PILLAR-GR-001",
+      "GR_ROW_001_SHARED_INTERFACE_OBJECT_v0: XI_GR_TRANSPORT_ALIGNMENT_INTERFACE",
+      "GR_ROW_001_SHARED_INTERFACE_DOMAIN_v0: WEAK_FIELD_TRANSPORT_RESIDUAL_CLASS",
+      "GR_ROW_001_SHARED_INTERFACE_CODOMAIN_v0: REGIME_LIMIT_ALIGNMENT_DEFECT_CLASS",
+      "GR_ROW_001_SHARED_INTERFACE_MAP_v0: XI_MAP_TRANSPORT_TO_ALIGNMENT_DEFECT",
+      "GR_ROW_001_SHARED_INTERFACE_OBSERVABLE_v0: DELTA_XI_GR_INTERFACE_SIGNED_RESIDUAL",
+      "GR_ROW_001_SHARED_INTERFACE_COMPARISON_SURFACE_v0: SINGLE_SHARED_SCALAR_RESIDUAL_SURFACE",
+      "GR_ROW_001_SHARED_INTERFACE_FAILURE_RULE_v0: FAIL_IF_NO_SINGLE_SIGNED_RESIDUAL_CAN_BE_DECLARED_FOR_BOTH_VIEWS",
+      "GR_ROW_001_SHARED_INTERFACE_EXECUTION_POLICY_v0: NONEXECUTING_DECLARATION_ONLY_UNTIL_P75_AND_P77_CLEAR"
+    ],
+    "required_formula_phrase": "Delta_Xi_GR = r_a - M(r_t)",
+    "interface_object": "XI_GR_TRANSPORT_ALIGNMENT_INTERFACE",
+    "interface_domain": "WEAK_FIELD_TRANSPORT_RESIDUAL_CLASS",
+    "interface_codomain": "REGIME_LIMIT_ALIGNMENT_DEFECT_CLASS",
+    "comparison_surface": "SINGLE_SHARED_SCALAR_RESIDUAL_SURFACE",
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "shared_interface_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_GR_ROW_001_SHARED_INTERFACE_DECLARATION_OUTCOME",
+    "no_loop_rule": "ONE_GR_ROW_001_SHARED_INTERFACE_DECLARATION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "GR_ROW_001_SHARED_INTERFACE_DECLARED",
+      "GR_ROW_001_SHARED_INTERFACE_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_GR_ROW_001_SHARED_INTERFACE_REPAIR"
+    ],
+    "default_outcome": "GR_ROW_001_SHARED_INTERFACE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local GR row 001 shared-interface declaration only; no scientific adequacy claim."
+}

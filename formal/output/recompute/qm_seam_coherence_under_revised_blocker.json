@@ -18,6 +18,42 @@
       "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
       "status": "PENDING_RECOMPUTE",
       "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260417_032210",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-17T03:22:10.708213Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260417_032538",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-17T03:25:38.723493Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260417_032603",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-17T03:26:03.734367Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260417_032622",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-17T03:26:22.560844Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
     }
   ]
 }
