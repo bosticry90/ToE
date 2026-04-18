@@ -3885,6 +3885,12 @@ EM Cycle-027 binding-assumptions discharge-from-smoothness checkpoint (2026-02-1
   - `em_u1_cycle027_build_binding_assumptions_v0`
   - `em_u1_cycle027_double_divergence_zero_via_built_binding_v0`
   - gate test: `formal/python/tests/test_em_u1_micro27_binding_assumptions_discharge_from_smoothness.py`
+- Cycle-027 authorization decision surface is now explicit:
+  - authorization decision generator: `formal/python/tools/em_u1_micro27_authorization_decision_report.py`
+  - authorization decision artifact: `formal/output/reports/em_u1_micro27_authorization_decision_20260418_v0.json`
+  - authorization decision: `KEEP_MICRO27_CLOSED_v0`
+  - authorization status: `NOT_AUTHORIZED_PENDING_DISTINCT_MICRO27_DECISION_v0`
+  - bounded next action: `OPEN_DISTINCT_MICRO27_AUTHORIZATION_SURFACE_IF_EM_IS_NEXT_BLOCKER_FACING_LANE`
 - Cycle-027 remains handoff-ready only and is not opened by default while Cycle-026 is preserved as the retained bounded endpoint.
 - Scope boundary remains strict:
   - bounded theorem-binding-assumption discharge attempt statements only, non-claim, no theorem/discharge/full-derivation promotion claim, and no distributional math or curved-space import claims.

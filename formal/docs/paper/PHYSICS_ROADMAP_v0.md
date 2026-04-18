@@ -3753,6 +3753,14 @@ QFT full-derivation pre-discharge closure pin (cycle-27/cycle-50):
 | `PILLAR-STAT` | `ACTIVE` | `TARGET-TH-ENTROPY-PLAN` | `formal/docs/paper/DERIVATION_TARGET_THERMO_ENTROPY_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN` | Entropy-balance/thermodynamic closure target with explicit regime and non-equilibrium assumptions. |
 | `PILLAR-COSMO` | `CLOSED` | `TARGET-COSMO-BG-PLAN` | `formal/docs/paper/DERIVATION_TARGET_COSMOLOGY_BACKGROUND_OBJECT_v0.md` | `TARGET-GR01-DERIV-CHECKLIST-PLAN;TARGET-SR-COV-PLAN` | Background-cosmology target with explicit metric/expansion assumptions and falsifiable hooks. |
 
+EM Micro-27 authorization decision checkpoint (2026-04-18):
+- target remains bounded: `TARGET-EM-U1-MICRO-27-BINDING-ASSUMPTIONS-DISCHARGE-FROM-SMOOTHNESS-v0`
+- authorization decision generator: `formal/python/tools/em_u1_micro27_authorization_decision_report.py`
+- authorization decision artifact: `formal/output/reports/em_u1_micro27_authorization_decision_20260418_v0.json`
+- explicit closed decision: `KEEP_MICRO27_CLOSED_v0`
+- authorization status: `NOT_AUTHORIZED_PENDING_DISTINCT_MICRO27_DECISION_v0`
+- no activation is inferred from global `PROGRESS` while `ROW-PILLAR-EM-001` remains a live theorem-gap contradiction.
+
 ## Promotion Attempt Log
 
 | Pillar / Blocker | Target ID | Promotion hypothesis | Promotion mechanism | Promotion attempt cycle | Attempt status | Discharge path defined | Discharge scaffold module | Next promotion objective (token) | Result |
