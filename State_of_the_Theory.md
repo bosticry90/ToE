@@ -3834,6 +3834,15 @@ EM Cycle-026 double-divergence binding theorem-closure attempt checkpoint (2026-
   - `em_u1_cycle026_double_divergence_zero_for_field_strength_v0`
   - `em_u1_cycle026_double_divergence_zero_for_potential_field_strength_v0`
   - gate test: `formal/python/tests/test_em_u1_micro26_double_divergence_binding_theorem_closure_attempt.py`
+- Cycle-026 bounded execution and closeout surfaces are now pinned:
+  - execution-surface generator: `formal/python/tools/em_u1_micro26_double_divergence_binding_theorem_closure_attempt_execution_surface.py`
+  - execution-surface artifact: `formal/output/em_u1_micro26_double_divergence_binding_theorem_closure_attempt_execution_surface_v0.json`
+  - closeout decision generator: `formal/python/tools/em_u1_micro26_double_divergence_binding_theorem_closeout_decision_report.py`
+  - closeout decision artifact: `formal/output/reports/em_u1_micro26_double_divergence_binding_theorem_closeout_decision_20260417_v0.json`
+  - bounded endpoint decision: `RETAIN_MICRO26_BOUNDED_ENDPOINT_v0`
+  - handoff status: `READY_FOR_NEXT_AUTHORIZED_LANE_ONLY_v0`
+  - next action remains bounded: `STOP_AT_MICRO26_CLOSEOUT_PENDING_EXPLICIT_MICRO27_AUTHORIZATION`
+  - Packet-01 remains frozen out of scope and is not reopened by this cycle closeout.
 - Scope boundary remains strict:
   - bounded theorem-binding attempt statements only, non-claim, no theorem/discharge/full-derivation promotion claim, and no distributional math or curved-space import claims.
 
@@ -3876,6 +3885,7 @@ EM Cycle-027 binding-assumptions discharge-from-smoothness checkpoint (2026-02-1
   - `em_u1_cycle027_build_binding_assumptions_v0`
   - `em_u1_cycle027_double_divergence_zero_via_built_binding_v0`
   - gate test: `formal/python/tests/test_em_u1_micro27_binding_assumptions_discharge_from_smoothness.py`
+- Cycle-027 remains handoff-ready only and is not opened by default while Cycle-026 is preserved as the retained bounded endpoint.
 - Scope boundary remains strict:
   - bounded theorem-binding-assumption discharge attempt statements only, non-claim, no theorem/discharge/full-derivation promotion claim, and no distributional math or curved-space import claims.
 

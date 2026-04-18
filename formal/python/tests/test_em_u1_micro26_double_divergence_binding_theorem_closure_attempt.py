@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 import re
 from pathlib import Path
 
@@ -26,6 +27,33 @@ EM_MICRO26_PATH = (
 )
 EM_ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 EM_OBJECT_SCAFFOLD_LEAN_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal" / "EM" / "U1" / "ObjectScaffold.lean"
+EM_MICRO26_TOOL_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "python"
+    / "tools"
+    / "em_u1_micro26_double_divergence_binding_theorem_closure_attempt_execution_surface.py"
+)
+EM_MICRO26_OUTPUT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "em_u1_micro26_double_divergence_binding_theorem_closure_attempt_execution_surface_v0.json"
+)
+EM_MICRO26_CLOSEOUT_TOOL_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "python"
+    / "tools"
+    / "em_u1_micro26_double_divergence_binding_theorem_closeout_decision_report.py"
+)
+EM_MICRO26_CLOSEOUT_REPORT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "output"
+    / "reports"
+    / "em_u1_micro26_double_divergence_binding_theorem_closeout_decision_20260417_v0.json"
+)
 
 SOURCE_ASSUMPTION_ID = "ASM-EM-U1-PHY-SOURCE-01"
 SMOOTHNESS_ASSUMPTION_ID = "ASM-EM-U1-MATH-SMOOTH-01"
@@ -83,6 +111,10 @@ def test_em_cycle026_artifacts_exist() -> None:
     assert EM_MICRO26_PATH.exists(), "Missing EM U1 Cycle-026 document."
     assert EM_ROADMAP_PATH.exists(), "Missing physics roadmap document."
     assert EM_OBJECT_SCAFFOLD_LEAN_PATH.exists(), "Missing EM U1 object scaffold Lean module."
+    assert EM_MICRO26_TOOL_PATH.exists(), "Missing EM U1 Cycle-026 execution-surface generator tool."
+    assert EM_MICRO26_OUTPUT_PATH.exists(), "Missing EM U1 Cycle-026 execution-surface report."
+    assert EM_MICRO26_CLOSEOUT_TOOL_PATH.exists(), "Missing EM U1 Cycle-026 closeout decision generator tool."
+    assert EM_MICRO26_CLOSEOUT_REPORT_PATH.exists(), "Missing EM U1 Cycle-026 closeout decision report."
 
 
 def test_em_micro26_contains_required_tokens_and_localized_theorem_binding_statements() -> None:
@@ -295,3 +327,115 @@ def test_cycle026_is_attempt_only_and_blocks_promotion_or_new_physics_selection_
         "Forbidden pattern(s) found: "
         + ", ".join(violations)
     )
+
+
+def test_cycle026_execution_surface_report_is_pinned_and_bounded() -> None:
+    report = json.loads(_read(EM_MICRO26_OUTPUT_PATH))
+
+    assert report["report_id"] == "EM_U1_MICRO26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSURE_EXECUTION_SURFACE_v0"
+    assert report["spec_id"] == "DERIVATION_TARGET_EM_U1_MICRO_26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSURE_ATTEMPT_v0"
+    assert report["target_id"] == "TARGET-EM-U1-MICRO-26-DOUBLE-DIVERGENCE-BINDING-THEOREM-CLOSURE-ATTEMPT-v0"
+    assert report["adjudication"] == "EM_U1_MICRO26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSURE_ADJUDICATION: NOT_YET_DISCHARGED"
+    assert report["packet_01_scope_status"] == "frozen_out_of_scope"
+    assert report["verification_tranche_status"] == "complete_green"
+    assert report["bounded_scope"] == "cycle26_only_attempt_only"
+    assert report["execution_surface_status"] == "bounded_execution_surface_pinned"
+    assert report["missing"] == []
+
+    assert report["inputs"]["target_doc"] == (
+        "formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSURE_ATTEMPT_v0.md"
+    )
+    assert report["inputs"]["direct_prerequisite_doc"] == (
+        "formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_25_DOUBLE_DIVERGENCE_THEOREM_CLOSURE_ATTEMPT_v0.md"
+    )
+    assert report["inputs"]["lean_module"] == "formal/toe_formal/ToeFormal/EM/U1/ObjectScaffold.lean"
+    assert report["inputs"]["gate"] == (
+        "formal/python/tests/test_em_u1_micro26_double_divergence_binding_theorem_closure_attempt.py"
+    )
+    assert report["inputs"]["generator"] == (
+        "formal/python/tools/em_u1_micro26_double_divergence_binding_theorem_closure_attempt_execution_surface.py"
+    )
+    assert report["inputs"]["output_report"] == (
+        "formal/output/em_u1_micro26_double_divergence_binding_theorem_closure_attempt_execution_surface_v0.json"
+    )
+
+    assert report["assumption_ids"] == [SOURCE_ASSUMPTION_ID, SMOOTHNESS_ASSUMPTION_ID, DISTRIB_ASSUMPTION_ID]
+    assert report["theorem_names"] == [
+        "em_u1_cycle026_dd_symmetry_from_commuting_partials_v0",
+        "em_u1_cycle026_dd_antisymmetry_from_F_antisym_v0",
+        "em_u1_cycle026_double_divergence_zero_for_field_strength_v0",
+        "em_u1_cycle026_double_divergence_zero_for_potential_field_strength_v0",
+    ]
+    assert report["direct_prerequisites"]["cycle25_kernel_theorem_name"] == (
+        "em_u1_cycle025_double_divergence_zero_of_antisymmetry_and_commuting_partials_v0"
+    )
+    assert all(report["checks"].values()), "Cycle-026 execution-surface report contains failed checks."
+
+
+def test_cycle026_execution_surface_tool_pins_output_contract() -> None:
+    text = _read(EM_MICRO26_TOOL_PATH)
+    required_tokens = [
+        "EM_U1_MICRO26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSURE_EXECUTION_SURFACE_v0",
+        "formal/output/em_u1_micro26_double_divergence_binding_theorem_closure_attempt_execution_surface_v0.json",
+        "frozen_out_of_scope",
+        "complete_green",
+        "bounded_execution_surface_pinned",
+        "em_u1_cycle026_dd_symmetry_from_commuting_partials_v0",
+        "em_u1_cycle026_dd_antisymmetry_from_F_antisym_v0",
+        "em_u1_cycle026_double_divergence_zero_for_field_strength_v0",
+        "em_u1_cycle026_double_divergence_zero_for_potential_field_strength_v0",
+        "em_u1_cycle025_double_divergence_zero_of_antisymmetry_and_commuting_partials_v0",
+    ]
+    missing = [token for token in required_tokens if token not in text]
+    assert not missing, "Cycle-026 execution-surface tool is missing required token(s): " + ", ".join(missing)
+
+
+def test_cycle026_closeout_decision_report_is_pinned_and_bounded() -> None:
+    report = json.loads(_read(EM_MICRO26_CLOSEOUT_REPORT_PATH))
+
+    assert report["schema_id"] == "EM_U1_MICRO26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSEOUT_DECISION_20260417_v0"
+    assert report["report_id"] == "EM_U1_MICRO26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSEOUT_DECISION_REPORT_v0"
+    assert report["status"] == "ACTIVE_NONLIVE_NONCLAIM"
+    assert report["criteria"]["execution_surface_green"] is True
+    assert report["criteria"]["packet01_frozen_out_of_scope"] is True
+    assert report["criteria"]["verification_tranche_green"] is True
+    assert report["criteria"]["bounded_scope_preserved"] is True
+    assert report["criteria"]["attempt_only_preserved"] is True
+    assert report["criteria"]["direct_prerequisite_pinned"] is True
+    assert report["criteria"]["bounded_closeout_decision_materialized"] is True
+
+    assert report["summary"]["decision"] == "RETAIN_MICRO26_BOUNDED_ENDPOINT_v0"
+    assert report["summary"]["decision_basis"] == "EXECUTION_SURFACE_GREEN_AND_BOUNDARY_GUARDS_PRESERVED"
+    assert report["summary"]["handoff_status"] == "READY_FOR_NEXT_AUTHORIZED_LANE_ONLY_v0"
+    assert report["summary"]["next_action"] == "STOP_AT_MICRO26_CLOSEOUT_PENDING_EXPLICIT_MICRO27_AUTHORIZATION"
+    assert report["summary"]["authorized_follow_on"] == "MICRO27_ONLY_IF_EXPLICITLY_AUTHORIZED"
+    assert report["summary"]["packet01_reopened"] is False
+
+    assert report["source_bundle"]["execution_surface_report"] == (
+        "formal/output/em_u1_micro26_double_divergence_binding_theorem_closure_attempt_execution_surface_v0.json"
+    )
+    assert report["source_bundle"]["target_doc"] == (
+        "formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSURE_ATTEMPT_v0.md"
+    )
+    assert report["source_bundle"]["gate"] == (
+        "formal/python/tests/test_em_u1_micro26_double_divergence_binding_theorem_closure_attempt.py"
+    )
+
+
+def test_cycle026_closeout_tool_pins_retained_endpoint_contract() -> None:
+    text = _read(EM_MICRO26_CLOSEOUT_TOOL_PATH)
+    required_tokens = [
+        "EM_U1_MICRO26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSEOUT_DECISION_20260417_v0",
+        "EM_U1_MICRO26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSEOUT_DECISION_REPORT_v0",
+        "formal/output/reports/em_u1_micro26_double_divergence_binding_theorem_closeout_decision_20260417_v0.json",
+        "RETAIN_MICRO26_BOUNDED_ENDPOINT_v0",
+        "READY_FOR_NEXT_AUTHORIZED_LANE_ONLY_v0",
+        "STOP_AT_MICRO26_CLOSEOUT_PENDING_EXPLICIT_MICRO27_AUTHORIZATION",
+        "MICRO27_ONLY_IF_EXPLICITLY_AUTHORIZED",
+        "frozen_out_of_scope",
+        "complete_green",
+        "cycle26_only_attempt_only",
+        "NOT_YET_DISCHARGED",
+    ]
+    missing = [token for token in required_tokens if token not in text]
+    assert not missing, "Cycle-026 closeout decision tool is missing required token(s): " + ", ".join(missing)
