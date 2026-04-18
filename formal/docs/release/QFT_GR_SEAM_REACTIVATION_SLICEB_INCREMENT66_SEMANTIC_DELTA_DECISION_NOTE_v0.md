@@ -49,3 +49,8 @@ Validation pointers:
 - `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
 - `formal/python/tests/test_pillar_status_matrix_consistency_gate.py`
 - `formal/python/tests/test_pillar_adjudication_legacy_retirement_gate.py`
+- `formal/python/tests/test_qft_gr_seam_reactivation_sliceb_science_first_enforcement_gate.py`
+- `formal/python/tests/test_qft_gr_seam_reactivation_sliceb_derivation_completeness_enforcement_gate.py`
+
+- `QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT66_SCIENCE_OPEN_CONDITION_v0: SATISFIED_BY_PHYSICS_EVIDENCE_ARTIFACT_PASS`
+- `QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT66_DERIVATION_OPEN_CONDITION_v0: SATISFIED_BY_BOUNDED_DERIVATION_COMPLETENESS_PASS`
