@@ -77,6 +77,9 @@ def _parse_completion_rows(matrix_path: Path) -> list[dict[str, str]]:
                 "primary_target": cells[5],
                 "primary_artifact": cells[6],
                 "primary_gate": cells[7],
+                "governance_checkpoint_status": cells[8] if len(cells) > 8 else "UNSPECIFIED",
+                "physics_checkpoint_status": cells[9] if len(cells) > 9 else "UNSPECIFIED",
+                "gate_runtime_status": cells[10] if len(cells) > 10 else "UNSPECIFIED",
             }
         )
     return [row for row in rows if row["domain"] == "seam"]
@@ -157,29 +160,48 @@ def _parse_policy_tokens(policy_text: str) -> dict[str, Any]:
     }
 
 
-def _classify_row(*, row: dict[str, str], dashboard: dict[str, Any]) -> tuple[str, int, str]:
+def _classify_row(*, row: dict[str, str], dashboard: dict[str, Any], seam_class_entry: dict[str, Any], seam_split_entry: dict[str, Any]) -> tuple[str, int, str, str, bool]:
     movement_status = str(dashboard.get("blocker_scoreboard", {}).get("movement_status", "UNKNOWN"))
     exception_required = bool(dashboard.get("blocker_scoreboard", {}).get("exception_required", False))
     stale_inputs = bool(dashboard.get("source_freshness", {}).get("stale_input_warning", False))
+    witness_route_status = str(seam_class_entry.get("witness_route_status", "")).strip()
+    seam_status_read = str(seam_split_entry.get("status_read", "")).strip()
+    governance_complete = bool(seam_split_entry.get("governance_complete"))
+    physics_complete = bool(seam_split_entry.get("physics_complete"))
 
-    if row["blocker_class"] == "PARITY_DRIFT":
+    is_external_hold = witness_route_status == "HOLD_FOR_SCALAR_PUBLICATION_v0" or "HELD_FOR_SCALAR_PUBLICATION" in seam_status_read
+
+    if is_external_hold:
+        state = "HOLD_RETAINED_EXTERNAL_HOLD_RELEASE_REQUIRED"
+        cadence_hours = HELD_LANE_REVIEW_HOURS
+        row_activity_classification = "HELD_EXTERNAL"
+    elif row["blocker_class"] == "PARITY_DRIFT":
         state = "HOLD_RETAINED_PARITY_RESTORE_REQUIRED"
         cadence_hours = HELD_LANE_REVIEW_HOURS
+        row_activity_classification = "HELD_PARITY_RESTORE"
+    elif governance_complete and not physics_complete:
+        state = "ACTIVE_TRACK_GOVERNANCE_COMPLETE_PHYSICS_INCOMPLETE"
+        cadence_hours = ACTIVE_LANE_REVIEW_HOURS
+        row_activity_classification = "ACTIVE_SPLIT_COMPLETE"
     elif movement_status == "DECREASING":
         state = "BOUNDED_CONTINUATION_REVIEW_ELIGIBLE"
         cadence_hours = ACTIVE_LANE_REVIEW_HOURS
+        row_activity_classification = "ACTIVE_ELIGIBLE"
     elif movement_status == "INCREASING":
         state = "SCOPE_REDUCTION_REMEDIATION_REVIEW_REQUIRED"
         cadence_hours = ACTIVE_LANE_REVIEW_HOURS
+        row_activity_classification = "ACTIVE_REMEDIATION"
     elif exception_required:
-        state = "HOLD_RETAINED_PENDING_BRANCH_EXCEPTION_DECISION"
+        state = "ACTIVE_TRACK_PENDING_BRANCH_EXCEPTION_DECISION"
         cadence_hours = ACTIVE_LANE_REVIEW_HOURS
+        row_activity_classification = "ACTIVE_TRACKED"
     else:
-        state = "HOLD_RETAINED_AWAITING_EVIDENCE_REVIEW"
+        state = "ACTIVE_TRACK_AWAITING_EVIDENCE_REVIEW"
         cadence_hours = HELD_LANE_REVIEW_HOURS
+        row_activity_classification = "ACTIVE_TRACKED"
 
     freshness_status = "STALE_INPUTS_PRESENT" if stale_inputs else "INPUTS_CURRENT_ENOUGH_FOR_REVIEW"
-    return state, cadence_hours, freshness_status
+    return state, cadence_hours, freshness_status, row_activity_classification, is_external_hold
 
 
 def build_seam_sla_ledger(*, output_path: Path, captured_at_utc: str | None) -> dict[str, Any]:
@@ -210,7 +232,12 @@ def build_seam_sla_ledger(*, output_path: Path, captured_at_utc: str | None) -> 
         if not seam_class_entry or not seam_split_entry:
             seam_status_resolution = "MISSING_CANONICAL_SEAM_STATUS"
             missing_seam_status_rows.append(row["row_id"])
-        decision_state, cadence_hours, freshness_status = _classify_row(row=row, dashboard=dashboard)
+        decision_state, cadence_hours, freshness_status, row_activity_classification, is_external_hold = _classify_row(
+            row=row,
+            dashboard=dashboard,
+            seam_class_entry=seam_class_entry,
+            seam_split_entry=seam_split_entry,
+        )
         next_review = review_timestamp + timedelta(hours=cadence_hours)
         escalation_due = review_timestamp + timedelta(hours=cadence_hours * policy["escalation_after_windows"])
         if cadence_hours == ACTIVE_LANE_REVIEW_HOURS:
@@ -222,6 +249,8 @@ def build_seam_sla_ledger(*, output_path: Path, captured_at_utc: str | None) -> 
                 "row_id": row["row_id"],
                 "seam_id": seam_id,
                 "seam_class": str(seam_class_entry.get("class", "")).strip() or "UNSPECIFIED",
+                "witness_route_status": str(seam_class_entry.get("witness_route_status", "")).strip() or None,
+                "promotion_candidate": str(seam_class_entry.get("promotion_candidate", "")).strip() or None,
                 "governance_complete": seam_split_entry.get("governance_complete"),
                 "physics_complete": seam_split_entry.get("physics_complete"),
                 "seam_status_read": str(seam_split_entry.get("status_read", "")).strip() or None,
@@ -229,6 +258,11 @@ def build_seam_sla_ledger(*, output_path: Path, captured_at_utc: str | None) -> 
                 "lane": row["lane"],
                 "blocker_class": row["blocker_class"],
                 "current_status": row["current_status"],
+                "governance_checkpoint_status": row.get("governance_checkpoint_status"),
+                "physics_checkpoint_status": row.get("physics_checkpoint_status"),
+                "gate_runtime_status": row.get("gate_runtime_status"),
+                "row_activity_classification": row_activity_classification,
+                "is_external_hold": is_external_hold,
                 "decision_owner_role": policy["decision_owner_role"],
                 "primary_owner": str(owner_entry.get("primary_owner", "")).strip() or None,
                 "secondary_owner": str(owner_entry.get("secondary_owner", "")).strip() or None,
@@ -272,6 +306,10 @@ def build_seam_sla_ledger(*, output_path: Path, captured_at_utc: str | None) -> 
             "seam_rows_total": len(entries),
             "active_review_rows": active_rows,
             "held_review_rows": held_rows,
+            "external_hold_rows": sum(1 for entry in entries if entry["is_external_hold"]),
+            "split_completion_rows": sum(
+                1 for entry in entries if entry["governance_complete"] is True and entry["physics_complete"] is False
+            ),
             "decision_states_present": sorted({entry["decision_state"] for entry in entries}),
             "missing_owner_rows": sorted(missing_owner_rows),
             "owner_completion_rate": owner_completion_rate,

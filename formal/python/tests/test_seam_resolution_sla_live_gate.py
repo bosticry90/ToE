@@ -48,16 +48,22 @@ def test_seam_resolution_sla_live_report_is_consistent() -> None:
 
     summary = payload.get("summary", {})
     assert summary.get("seam_rows_total") == 4
-    assert summary.get("active_review_rows") == 3
-    assert summary.get("held_review_rows") == 1
+    assert summary.get("active_review_rows") == 2
+    assert summary.get("held_review_rows") == 2
+    assert summary.get("external_hold_rows") == 1
+    assert summary.get("split_completion_rows") == 0
     assert summary.get("missing_owner_rows") == []
     assert summary.get("owner_completion_rate") == 1.0
     assert summary.get("missing_seam_status_rows") == []
     assert summary.get("seam_status_coverage_rate") == 1.0
 
     entries = {entry["row_id"]: entry for entry in payload.get("entries", [])}
-    assert entries["ROW-SEAM-QFT-GR-001"]["decision_state"] == "HOLD_RETAINED_PENDING_BRANCH_EXCEPTION_DECISION"
+    assert entries["ROW-SEAM-QFT-GR-001"]["decision_state"] == "HOLD_RETAINED_EXTERNAL_HOLD_RELEASE_REQUIRED"
+    assert entries["ROW-SEAM-QFT-GR-001"]["row_activity_classification"] == "HELD_EXTERNAL"
+    assert entries["ROW-SEAM-QFT-GR-001"]["is_external_hold"] is True
+    assert entries["ROW-SEAM-QFT-GR-001"]["gate_runtime_status"] == "PATH_PINNED_RUNTIME_PENDING_BRANCH_EXCEPTION"
     assert entries["ROW-SEAM-GR-QM-001"]["decision_state"] == "HOLD_RETAINED_PARITY_RESTORE_REQUIRED"
+    assert entries["ROW-SEAM-GR-QM-001"]["row_activity_classification"] == "HELD_PARITY_RESTORE"
     assert entries["ROW-SEAM-GR-QM-001"]["seam_id"] == "SEAM-GR-QM"
     assert entries["ROW-SEAM-GR-QM-001"]["seam_class"] == "A"
     assert entries["ROW-SEAM-GR-QM-001"]["governance_complete"] is True
@@ -65,10 +71,13 @@ def test_seam_resolution_sla_live_report_is_consistent() -> None:
     assert entries["ROW-SEAM-GR-QM-001"]["seam_status_resolution"] == "CANONICAL_SEAM_STATUS_PINNED"
     assert entries["ROW-SEAM-QM-STAT-001"]["seam_class"] == "B"
     assert entries["ROW-SEAM-QM-STAT-001"]["governance_complete"] is False
+    assert entries["ROW-SEAM-QM-STAT-001"]["decision_state"] == "ACTIVE_TRACK_PENDING_BRANCH_EXCEPTION_DECISION"
+    assert entries["ROW-SEAM-QM-STAT-001"]["row_activity_classification"] == "ACTIVE_TRACKED"
     assert entries["ROW-SEAM-QFT-GR-001"]["primary_owner"] == "TEAM_SEAM_QFT_GR"
     assert entries["ROW-SEAM-QFT-GR-001"]["secondary_owner"] == "TEAM_GOVERNANCE_CORE"
     assert entries["ROW-SEAM-QFT-GR-001"]["seam_id"] == "SEAM-QFT-GR"
     assert entries["ROW-SEAM-QFT-GR-001"]["seam_class"] == "B"
+    assert entries["ROW-SEAM-QFT-GR-001"]["witness_route_status"] == "HOLD_FOR_SCALAR_PUBLICATION_v0"
     assert entries["ROW-SEAM-QFT-GR-001"]["governance_complete"] is False
     assert entries["ROW-SEAM-QFT-GR-001"]["physics_complete"] is False
     assert entries["ROW-SEAM-QFT-GR-001"]["seam_status_read"] == "CLASS_B_HELD_FOR_SCALAR_PUBLICATION_NOT_GOVERNANCE_COMPLETE_NOT_PHYSICS_COMPLETE"

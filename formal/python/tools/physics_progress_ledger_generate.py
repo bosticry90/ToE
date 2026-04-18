@@ -14,6 +14,13 @@ REPO_ROOT = find_repo_root(Path(__file__))
 SCHEMA_ID = "PHYSICS_PROGRESS_LEDGER_v0"
 
 MATRIX_PATH = REPO_ROOT / "formal" / "docs" / "release" / "TOE_GLOBAL_COMPLETION_MATRIX_v0.md"
+PROGRAM_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "WS_10_GLOBAL_COMPLETION_EXECUTION_PROGRAM_20260408_v0.md"
+)
 TGC92_PATH = (
     REPO_ROOT
     / "formal"
@@ -145,14 +152,21 @@ def _resolve_timestamp(captured_at_utc: str | None) -> str:
 
 def build_payload(captured_at_utc: str | None) -> dict[str, Any]:
     matrix_text = _read(MATRIX_PATH)
+    program_text = _read(PROGRAM_PATH)
     tgc92_text = _read(TGC92_PATH)
     tgc93_text = _read(TGC93_PATH)
     trend_window = _read_json(TREND_WINDOW_REPORT_PATH)
     closure_map = _read_json(CLOSURE_MAP_REPORT_PATH)
 
     blocker_counts = _parse_blocker_counts(matrix_text)
+    active_routing_decision_pointer = _extract_token(program_text, "CURRENT_ACTIVE_ROUTING_DECISION_POINTER_v0")
     tgc92_evidence = _extract_token(tgc92_text, "TGC92_BLOCKER_REDUCING_CLOSURE_EVIDENCE_v0")
     tgc93_decision = _extract_token(tgc93_text, "TGC93_BRANCH_DECISION_v0")
+    expected_tgc93_pointer = str(TGC93_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
+    if active_routing_decision_pointer != expected_tgc93_pointer:
+        raise ValueError(
+            "Global completion execution program active routing pointer does not match canonical TGC-93 decision."
+        )
     trend_delta = int(trend_window.get("blocker_counts", {}).get("net_delta", 0))
     trend_movement_status = str(trend_window.get("trend_summary", {}).get("movement_status", "UNKNOWN"))
     row_level_evidence = _row_level_evidence(closure_map)
@@ -172,8 +186,10 @@ def build_payload(captured_at_utc: str | None) -> dict[str, Any]:
         "schema_id": SCHEMA_ID,
         "captured_at_utc": _resolve_timestamp(captured_at_utc),
         "matrix_pointer": str(MATRIX_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+        "program_pointer": str(PROGRAM_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
         "tgc92_pointer": str(TGC92_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
         "tgc93_pointer": str(TGC93_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
+        "active_routing_decision_source": active_routing_decision_pointer,
         "trend_window_pointer": trend_pointer,
         "closure_map_pointer": closure_pointer,
         "blocker_counts": blocker_counts,
@@ -195,6 +211,7 @@ def build_payload(captured_at_utc: str | None) -> dict[str, Any]:
             "tgc_tokens": {
                 "tgc92_blocker_reducing_closure_evidence": tgc92_evidence,
                 "tgc93_branch_decision": tgc93_decision,
+                "active_routing_decision_source": active_routing_decision_pointer,
             },
             "consistency": {
                 "status": "CONSISTENT",

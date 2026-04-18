@@ -27,6 +27,9 @@ Out of scope:
 ## Canonical completion matrix pointer
 - formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md
 
+## Current active routing decision pointer
+- `CURRENT_ACTIVE_ROUTING_DECISION_POINTER_v0: formal/docs/release/WS_10_TGC_93_BRANCH_DECISION_PACKAGE_20260411_v0.md`
+
 ## Packet hold policy pointer
 - formal/docs/release/WS_10_PACKET41_PACKET42_HOLD_RECONSIDERATION_POLICY_20260408_v0.md
 - formal/output/ws10_packet41_packet42_hold_reconsideration_checkpoint_20260408_v0.json

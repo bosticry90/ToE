@@ -57,6 +57,9 @@ def _parse_completion_rows(matrix_path: Path) -> list[dict[str, str]]:
                 "primary_target": cells[5],
                 "primary_artifact": cells[6],
                 "primary_gate": cells[7],
+                "governance_checkpoint_status": cells[8] if len(cells) > 8 else "UNSPECIFIED",
+                "physics_checkpoint_status": cells[9] if len(cells) > 9 else "UNSPECIFIED",
+                "gate_runtime_status": cells[10] if len(cells) > 10 else "UNSPECIFIED",
             }
         )
     return rows
@@ -85,6 +88,19 @@ def _maturity_rows_by_pillar(payload: dict[str, Any]) -> dict[str, dict[str, Any
 
 def _severity_rank(value: str) -> int:
     return {"LOW": 1, "MEDIUM": 2, "HIGH": 3}.get(value, 0)
+
+
+def _is_active_row_for_stale_readiness(row: dict[str, Any]) -> bool:
+    if not isinstance(row, dict):
+        return False
+    if str(row.get("promotion_readiness_status", "")).startswith("PATHS_PINNED") is False:
+        return False
+    if bool(row.get("is_external_hold", False)):
+        return False
+    runtime_state = str(row.get("gate_runtime_status", "")).strip()
+    if runtime_state == "GATE_RUNTIME_RECOMPUTE_MONITORING_REQUIRED":
+        return False
+    return True
 
 
 def build_science_maturity_contradiction_report(*, output_path: Path, captured_at_utc: str | None) -> dict[str, Any]:
@@ -123,6 +139,19 @@ def build_science_maturity_contradiction_report(*, output_path: Path, captured_a
     for entry in seam_entries:
         if not isinstance(entry, dict):
             continue
+        if entry.get("governance_complete") is True and entry.get("physics_complete") is False:
+            contradictions.append(
+                {
+                    "contradiction_id": f"CONTRA-SEAM-{entry['row_id']}-GOVERNANCE-COMPLETE-PHYSICS-INCOMPLETE",
+                    "contradiction_type": "SEAM_GOVERNANCE_COMPLETE_VS_PHYSICS_INCOMPLETE",
+                    "severity": "MEDIUM",
+                    "row_id": entry["row_id"],
+                    "seam_id": entry.get("seam_id"),
+                    "decision_state": entry.get("decision_state"),
+                    "governance_complete": entry.get("governance_complete"),
+                    "physics_complete": entry.get("physics_complete"),
+                }
+            )
         if entry.get("physics_complete") is True and (
             str(entry.get("decision_state", "")).startswith("HOLD_RETAINED")
             or str(entry.get("blocker_class", "")) in {"PARITY_DRIFT", "SEAM_INTEGRATION_GAP"}
@@ -154,12 +183,18 @@ def build_science_maturity_contradiction_report(*, output_path: Path, captured_a
             )
 
     readiness_rows = dashboard.get("row_promotion_readiness", {}).get("rows", [])
-    stale_ready_rows = [
-        row.get("row_id")
-        for row in readiness_rows
-        if isinstance(row, dict)
-        and str(row.get("promotion_readiness_status", "")).startswith("PATHS_PINNED")
-    ]
+    seam_entries_by_row = {
+        str(entry.get("row_id", "")): entry for entry in seam_entries if isinstance(entry, dict) and entry.get("row_id")
+    }
+    stale_ready_rows = []
+    for row in readiness_rows:
+        if not _is_active_row_for_stale_readiness(row):
+            continue
+        row_id = str(row.get("row_id", ""))
+        seam_entry = seam_entries_by_row.get(row_id)
+        if seam_entry is not None and str(seam_entry.get("row_activity_classification", "")).startswith("HELD_"):
+            continue
+        stale_ready_rows.append(row_id)
     if bool(dashboard.get("blocker_scoreboard", {}).get("exception_required", False)) and bool(
         dashboard.get("source_freshness", {}).get("stale_input_warning", False)
     ) and stale_ready_rows:
@@ -198,6 +233,7 @@ def build_science_maturity_contradiction_report(*, output_path: Path, captured_a
             "matrix_rows_evaluated": len(matrix_rows),
             "pillar_rows_evaluated": len([row for row in matrix_rows if row["domain"] == "pillar"]),
             "seam_rows_evaluated": len(seam_entries),
+            "active_stale_ready_rows": len(stale_ready_rows),
             "live_blocker_state_change": physics_progress.get("actual_blocker_state_change"),
             "live_progress_classification": physics_progress.get("progress_classification"),
         },

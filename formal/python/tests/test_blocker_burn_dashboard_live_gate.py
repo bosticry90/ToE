@@ -52,7 +52,19 @@ def test_blocker_burn_dashboard_live_report_is_consistent() -> None:
     readiness = payload.get("row_promotion_readiness", {})
     assert readiness.get("rows_total") == 11
     assert readiness.get("rows_with_all_paths_pinned") == 11
+    assert readiness.get("rows_with_runtime_state_visible") == 11
     assert readiness.get("rows_missing_canonical_path") == 0
+    assert readiness.get("report_scope_boundary") == (
+        "DASHBOARD_REPORTS_PATH_AND_RUNTIME_STATE_READINESS_ONLY_AND_DOES_NOT_ASSERT_GATE_PASSING"
+    )
+
+    readiness_rows = {entry["row_id"]: entry for entry in readiness.get("rows", [])}
+    assert readiness_rows["ROW-SEAM-GR-QM-001"]["governance_checkpoint_status"] == "GOVERNANCE_COMPLETE"
+    assert readiness_rows["ROW-SEAM-GR-QM-001"]["physics_checkpoint_status"] == "PHYSICS_COMPLETE"
+    assert readiness_rows["ROW-SEAM-GR-QM-001"]["gate_runtime_status"] == "GATE_RUNTIME_RECOMPUTE_MONITORING_REQUIRED"
+    assert readiness_rows["ROW-PILLAR-EM-001"]["governance_checkpoint_status"] == "NOT_APPLICABLE_PILLAR_ROW"
+    assert readiness_rows["ROW-PILLAR-EM-001"]["physics_checkpoint_status"] == "THEOREM_GAP_OPEN"
+    assert readiness_rows["ROW-PILLAR-EM-001"]["gate_runtime_status"] == "PATH_PINNED_RUNTIME_NOT_YET_RECORDED"
 
     closure_linkage = payload.get("closure_map_linkage", {})
     assert closure_linkage.get("rows_total") == 11

@@ -37,3 +37,9 @@ def test_physics_progress_ledger_emits_consistency_metadata() -> None:
     consistency = payload["evidence_bundle"]["consistency"]
     assert consistency["status"] == "CONSISTENT"
     assert consistency["rule"] == "FAIL_CLOSED_ON_TREND_DELTA_AND_TGC93_ROUTE_CONTRADICTION"
+    assert payload["active_routing_decision_source"] == (
+        "formal/docs/release/WS_10_TGC_93_BRANCH_DECISION_PACKAGE_20260411_v0.md"
+    )
+    assert payload["evidence_bundle"]["tgc_tokens"]["active_routing_decision_source"] == (
+        "formal/docs/release/WS_10_TGC_93_BRANCH_DECISION_PACKAGE_20260411_v0.md"
+    )

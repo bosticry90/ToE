@@ -38,12 +38,14 @@ def test_science_maturity_contradiction_report_live_surface_is_consistent() -> N
     summary = payload.get("summary", {})
     assert summary.get("contradictions_total") == 9
     assert summary.get("highest_severity") == "HIGH"
+    assert summary.get("active_stale_ready_rows") == 9
     assert summary.get("live_blocker_state_change") == "NO_DELTA_DETECTED_ROUTE_TO_REWORK"
     assert summary.get("live_progress_classification") == "REWORK_ROUTED"
 
     contradiction_types = set(summary.get("contradiction_types_present", []))
     assert "PILLAR_M4_COMPLETE_VS_LIVE_THEOREM_GAP" in contradiction_types
     assert "SEAM_PHYSICS_COMPLETE_VS_LIVE_HOLD_OR_PARITY" in contradiction_types
+    assert "SEAM_GOVERNANCE_COMPLETE_VS_PHYSICS_INCOMPLETE" not in contradiction_types
     assert "LIVE_SEAM_ROW_MISSING_CANONICAL_STATUS" not in contradiction_types
     assert "STALE_READINESS_SIGNAL_WITH_PATHS_PINNED" in contradiction_types
 
@@ -52,8 +54,15 @@ def test_science_maturity_contradiction_report_live_surface_is_consistent() -> N
     assert len(pillar_rows) == 7
     seam_rows = [entry for entry in contradictions if entry.get("contradiction_type") == "SEAM_PHYSICS_COMPLETE_VS_LIVE_HOLD_OR_PARITY"]
     assert len(seam_rows) == 1
+    split_rows = [entry for entry in contradictions if entry.get("contradiction_type") == "SEAM_GOVERNANCE_COMPLETE_VS_PHYSICS_INCOMPLETE"]
+    assert split_rows == []
     missing_rows = [entry for entry in contradictions if entry.get("contradiction_type") == "LIVE_SEAM_ROW_MISSING_CANONICAL_STATUS"]
     assert missing_rows == []
+
+    stale_rows = [entry for entry in contradictions if entry.get("contradiction_type") == "STALE_READINESS_SIGNAL_WITH_PATHS_PINNED"]
+    assert len(stale_rows) == 1
+    assert "ROW-SEAM-QFT-GR-001" not in stale_rows[0]["row_ids"]
+    assert "ROW-SEAM-GR-QM-001" not in stale_rows[0]["row_ids"]
 
 
 def test_science_maturity_contradiction_authority_pointers_are_pinned() -> None:

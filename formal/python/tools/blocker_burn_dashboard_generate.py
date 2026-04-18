@@ -68,6 +68,9 @@ def _parse_completion_rows(matrix_path: Path) -> list[dict[str, str]]:
                 "primary_target": cells[5],
                 "primary_artifact": cells[6],
                 "primary_gate": cells[7],
+                "governance_checkpoint_status": cells[8] if len(cells) > 8 else "UNSPECIFIED",
+                "physics_checkpoint_status": cells[9] if len(cells) > 9 else "UNSPECIFIED",
+                "gate_runtime_status": cells[10] if len(cells) > 10 else "UNSPECIFIED",
             }
         )
     if not rows:
@@ -127,6 +130,7 @@ def _row_promotion_readiness(rows: list[dict[str, str]]) -> dict[str, Any]:
         artifact_exists = artifact_path.exists()
         gate_exists = gate_path.exists()
         all_paths_pinned = target_exists and artifact_exists and gate_exists
+        runtime_state_visible = str(row.get("gate_runtime_status", "")).strip() not in {"", "UNSPECIFIED"}
 
         readiness_rows.append(
             {
@@ -135,11 +139,16 @@ def _row_promotion_readiness(rows: list[dict[str, str]]) -> dict[str, Any]:
                 "lane": row["lane"],
                 "blocker_class": row["blocker_class"],
                 "current_status": row["current_status"],
+                "governance_checkpoint_status": row.get("governance_checkpoint_status"),
+                "physics_checkpoint_status": row.get("physics_checkpoint_status"),
+                "gate_runtime_status": row.get("gate_runtime_status"),
                 "target_surface_pinned": target_exists,
                 "artifact_pinned": artifact_exists,
                 "gate_path_pinned": gate_exists,
                 "promotion_readiness_status": (
-                    "PATHS_PINNED_PENDING_GATE_RUNTIME_AND_PARITY_EVIDENCE"
+                    "PATHS_PINNED_RUNTIME_STATE_VISIBLE_PENDING_GATE_RUNTIME_AND_PARITY_EVIDENCE"
+                    if all_paths_pinned and runtime_state_visible
+                    else "PATHS_PINNED_PENDING_GATE_RUNTIME_AND_PARITY_EVIDENCE"
                     if all_paths_pinned
                     else "BLOCKED_MISSING_CANONICAL_PATH"
                 ),
@@ -151,15 +160,19 @@ def _row_promotion_readiness(rows: list[dict[str, str]]) -> dict[str, Any]:
         for row in readiness_rows
         if row["target_surface_pinned"] and row["artifact_pinned"] and row["gate_path_pinned"]
     )
+    runtime_visible_count = sum(
+        1 for row in readiness_rows if str(row.get("gate_runtime_status", "")).strip() not in {"", "UNSPECIFIED"}
+    )
 
     return {
         "rows_total": len(readiness_rows),
         "rows_with_all_paths_pinned": pinned_count,
+        "rows_with_runtime_state_visible": runtime_visible_count,
         "rows_pending_gate_runtime_or_parity": pinned_count,
         "rows_missing_canonical_path": len(readiness_rows) - pinned_count,
         "rows": readiness_rows,
         "promotion_rule_reference": "PROMOTED_ONLY_WHEN_TARGET_ARTIFACT_GATE_AND_PARITY_ARE_ALL_SATISFIED",
-        "report_scope_boundary": "DASHBOARD_REPORTS_PATH_READINESS_ONLY_AND_DOES_NOT_ASSERT_GATE_PASSING",
+        "report_scope_boundary": "DASHBOARD_REPORTS_PATH_AND_RUNTIME_STATE_READINESS_ONLY_AND_DOES_NOT_ASSERT_GATE_PASSING",
     }
 
 
