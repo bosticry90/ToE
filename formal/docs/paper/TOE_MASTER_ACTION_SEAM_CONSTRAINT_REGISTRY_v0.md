@@ -221,8 +221,8 @@ Cycle01 pilot lock:
 - `SEAM_QFT_GR_GOVERNANCE_BLOCKER_v0: HOLD_FOR_SCALAR_PUBLICATION_v0`
 - `SEAM_QFT_GR_PHYSICS_BLOCKER_v0: SEAM_REACTIVATION_OBJECTIVE_REMAINS_BOUNDED_AND_NONPROMOTED`
 
-- Legacy compatibility token (transition-only, non-authoritative for active status):
-	- `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO`
+- Legacy compatibility token retirement checkpoint:
+	- `SEAM_GR_QM_LEGACY_TRANSITION_TOKEN_RETIRED_v0: YES`
 
 - `SEAM_QM_STAT_GOVERNANCE_COMPLETE_v0: NO`
 - `SEAM_QM_STAT_PHYSICS_COMPLETE_v0: NO`

@@ -4905,8 +4905,8 @@ Seam governance-vs-physics completion closeout checkpoint (2026-03-19):
   - `SEAM_STATUS_INTERPRETATION_RULE_v0: GOVERNANCE_COMPLETE_DOES_NOT_IMPLY_PHYSICS_COMPLETE`
   - `SEAM_PHYSICS_COMPLETION_SCOPE_RULE_v0: PHYSICS_COMPLETE_REQUIRES_EXPLICIT_BLOCKER_DISCHARGE_BASIS`
   - `SEAM_STATUS_HELD_CLASS_B_CANONICAL_TRACKING_ALLOWED_v0: TRUE`
-- transition compatibility token retained as non-authoritative legacy string for split-gate continuity:
-  - `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO`
+- transition compatibility token retirement is explicit in the active closeout surfaces:
+  - `SEAM_GR_QM_LEGACY_TRANSITION_TOKEN_RETIRED_v0: YES`
 
 Packet-05 decision-ledger and falsification checkpoint (2026-03-12):
 - active packet-05 lanes now pin explicit decision and falsification surfaces:

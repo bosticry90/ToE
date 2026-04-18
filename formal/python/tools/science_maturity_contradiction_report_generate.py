@@ -152,7 +152,7 @@ def build_science_maturity_contradiction_report(*, output_path: Path, captured_a
                     "physics_complete": entry.get("physics_complete"),
                 }
             )
-        if entry.get("physics_complete") is True and (
+        if entry.get("physics_complete") is True and str(entry.get("row_activity_classification", "")) != "CLOSED_MONITORING" and (
             str(entry.get("decision_state", "")).startswith("HOLD_RETAINED")
             or str(entry.get("blocker_class", "")) in {"PARITY_DRIFT", "SEAM_INTEGRATION_GAP"}
         ):

@@ -47,7 +47,7 @@ def test_seam_status_standard_and_snapshot_are_cross_pinned() -> None:
         "SEAM_EM_QFT_GOVERNANCE_COMPLETE_v0: YES",
         "SEAM_EM_QFT_PHYSICS_COMPLETE_v0: NO",
         "SEAM_GR_QM_GOVERNANCE_COMPLETE_v0: YES",
-        "SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO",
+        "SEAM_GR_QM_PHYSICS_COMPLETE_v0: YES",
         "SEAM_QFT_GR_GOVERNANCE_COMPLETE_v0: NO",
         "SEAM_QFT_GR_PHYSICS_COMPLETE_v0: NO",
         "SEAM_QM_STAT_GOVERNANCE_COMPLETE_v0: NO",
@@ -64,7 +64,7 @@ def test_seam_status_standard_and_snapshot_are_cross_pinned() -> None:
         "SEAM_EM_QFT_GOVERNANCE_COMPLETE_v0: YES",
         "SEAM_EM_QFT_PHYSICS_COMPLETE_v0: NO",
         "SEAM_GR_QM_GOVERNANCE_COMPLETE_v0: YES",
-        "SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO",
+        "SEAM_GR_QM_PHYSICS_COMPLETE_v0: YES",
         "SEAM_QFT_GR_GOVERNANCE_COMPLETE_v0: NO",
         "SEAM_QFT_GR_PHYSICS_COMPLETE_v0: NO",
         "SEAM_QM_STAT_GOVERNANCE_COMPLETE_v0: NO",
@@ -78,6 +78,9 @@ def test_seam_status_standard_and_snapshot_are_cross_pinned() -> None:
     ):
         assert token in registry_text
         assert token in inventory_text
+
+    assert "SEAM_GR_QM_LEGACY_TRANSITION_TOKEN_RETIRED_v0: YES" in registry_text
+    assert "SEAM_GR_QM_LEGACY_TRANSITION_TOKEN_RETIRED_v0: YES" in inventory_text
 
     for text in (roadmap_text,):
         assert "formal/docs/release/TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0.md" in text

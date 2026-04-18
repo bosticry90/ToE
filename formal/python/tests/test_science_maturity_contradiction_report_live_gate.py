@@ -36,7 +36,7 @@ def test_science_maturity_contradiction_report_live_surface_is_consistent() -> N
     assert payload.get("contradiction_status") == "FAIL_CLOSED_CONTRADICTIONS_PRESENT"
 
     summary = payload.get("summary", {})
-    assert summary.get("contradictions_total") == 9
+    assert summary.get("contradictions_total") == 8
     assert summary.get("highest_severity") == "HIGH"
     assert summary.get("active_stale_ready_rows") == 9
     assert summary.get("live_blocker_state_change") == "NO_DELTA_DETECTED_ROUTE_TO_REWORK"
@@ -44,7 +44,7 @@ def test_science_maturity_contradiction_report_live_surface_is_consistent() -> N
 
     contradiction_types = set(summary.get("contradiction_types_present", []))
     assert "PILLAR_M4_COMPLETE_VS_LIVE_THEOREM_GAP" in contradiction_types
-    assert "SEAM_PHYSICS_COMPLETE_VS_LIVE_HOLD_OR_PARITY" in contradiction_types
+    assert "SEAM_PHYSICS_COMPLETE_VS_LIVE_HOLD_OR_PARITY" not in contradiction_types
     assert "SEAM_GOVERNANCE_COMPLETE_VS_PHYSICS_INCOMPLETE" not in contradiction_types
     assert "LIVE_SEAM_ROW_MISSING_CANONICAL_STATUS" not in contradiction_types
     assert "STALE_READINESS_SIGNAL_WITH_PATHS_PINNED" in contradiction_types
@@ -53,7 +53,7 @@ def test_science_maturity_contradiction_report_live_surface_is_consistent() -> N
     pillar_rows = [entry for entry in contradictions if entry.get("contradiction_type") == "PILLAR_M4_COMPLETE_VS_LIVE_THEOREM_GAP"]
     assert len(pillar_rows) == 7
     seam_rows = [entry for entry in contradictions if entry.get("contradiction_type") == "SEAM_PHYSICS_COMPLETE_VS_LIVE_HOLD_OR_PARITY"]
-    assert len(seam_rows) == 1
+    assert seam_rows == []
     split_rows = [entry for entry in contradictions if entry.get("contradiction_type") == "SEAM_GOVERNANCE_COMPLETE_VS_PHYSICS_INCOMPLETE"]
     assert split_rows == []
     missing_rows = [entry for entry in contradictions if entry.get("contradiction_type") == "LIVE_SEAM_ROW_MISSING_CANONICAL_STATUS"]

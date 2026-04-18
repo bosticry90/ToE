@@ -171,7 +171,11 @@ def _classify_row(*, row: dict[str, str], dashboard: dict[str, Any], seam_class_
 
     is_external_hold = witness_route_status == "HOLD_FOR_SCALAR_PUBLICATION_v0" or "HELD_FOR_SCALAR_PUBLICATION" in seam_status_read
 
-    if is_external_hold:
+    if governance_complete and physics_complete and row.get("gate_runtime_status") == "GATE_RUNTIME_RECOMPUTE_MONITORING_REQUIRED":
+        state = "CLOSED_RECOMPUTE_MONITORING_REQUIRED"
+        cadence_hours = HELD_LANE_REVIEW_HOURS
+        row_activity_classification = "CLOSED_MONITORING"
+    elif is_external_hold:
         state = "HOLD_RETAINED_EXTERNAL_HOLD_RELEASE_REQUIRED"
         cadence_hours = HELD_LANE_REVIEW_HOURS
         row_activity_classification = "HELD_EXTERNAL"

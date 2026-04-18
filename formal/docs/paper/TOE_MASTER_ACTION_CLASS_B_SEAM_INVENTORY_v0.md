@@ -94,8 +94,8 @@ Seam governance-vs-physics completion split (v0)
 - `SEAM_SR_COSMO_GOVERNANCE_COMPLETE_v0: NO`
 - `SEAM_SR_COSMO_PHYSICS_COMPLETE_v0: NO`
 
-- Legacy compatibility token (transition-only, non-authoritative for active status):
-	- `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO`
+- Legacy compatibility token retirement checkpoint:
+  - `SEAM_GR_QM_LEGACY_TRANSITION_TOKEN_RETIRED_v0: YES`
 
 Pilot promotion lock (cycle01)
 - `TOE_CLASS_B_PROMOTION_PILOT_SEAM_v0: SEAM-EM-QFT`

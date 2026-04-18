@@ -62,8 +62,8 @@ def test_seam_resolution_sla_live_report_is_consistent() -> None:
     assert entries["ROW-SEAM-QFT-GR-001"]["row_activity_classification"] == "HELD_EXTERNAL"
     assert entries["ROW-SEAM-QFT-GR-001"]["is_external_hold"] is True
     assert entries["ROW-SEAM-QFT-GR-001"]["gate_runtime_status"] == "PATH_PINNED_RUNTIME_PENDING_BRANCH_EXCEPTION"
-    assert entries["ROW-SEAM-GR-QM-001"]["decision_state"] == "HOLD_RETAINED_PARITY_RESTORE_REQUIRED"
-    assert entries["ROW-SEAM-GR-QM-001"]["row_activity_classification"] == "HELD_PARITY_RESTORE"
+    assert entries["ROW-SEAM-GR-QM-001"]["decision_state"] == "CLOSED_RECOMPUTE_MONITORING_REQUIRED"
+    assert entries["ROW-SEAM-GR-QM-001"]["row_activity_classification"] == "CLOSED_MONITORING"
     assert entries["ROW-SEAM-GR-QM-001"]["seam_id"] == "SEAM-GR-QM"
     assert entries["ROW-SEAM-GR-QM-001"]["seam_class"] == "A"
     assert entries["ROW-SEAM-GR-QM-001"]["governance_complete"] is True

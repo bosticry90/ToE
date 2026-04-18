@@ -369,7 +369,7 @@ Program intent: execute a strict truth-restoration sequence before any new theor
 - Closeout mirror surfaces: `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md`, `State_of_the_Theory.md`, `formal/docs/paper/PHYSICS_ROADMAP_v0.md`, and `formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md`
 - Closeout seam result: `SEAM_GR_QM_GOVERNANCE_COMPLETE_v0: YES`, `SEAM_GR_QM_PHYSICS_COMPLETE_v0: YES`, `SEAM_GR_QM_STATUS_READ_v0: GOVERNANCE_COMPLETE_AND_PHYSICS_COMPLETE`
 - Closeout blocker result: `SEAM_GR_QM_PHYSICS_BLOCKER_v0: NONE_BLOCKER_REMAINING_IN_SCOPE` with explicit discharge target resolution pinned from cycle03 blocker package theorem surfaces.
-- Transition compatibility note: legacy `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO` token retained as transition-only, non-authoritative parity string for split-gate continuity.
+- Transition compatibility note retired: `SEAM_GR_QM_LEGACY_TRANSITION_TOKEN_RETIRED_v0: YES`; the old `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO` compatibility string is no longer required for active split-gate continuity.
 - Closeout validation ladder: `formal/python/tests/test_gr_qm_seam_promotion_cycle01_theorem_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle02_discharge_gate.py`, `formal/python/tests/test_gr_qm_seam_promotion_cycle03_class_flip_gate.py`, `formal/python/tests/test_toe_master_action_class_b_inventory_gate.py`, `formal/python/tests/test_toe_master_action_seam_registry_gate.py`, `formal/python/tests/test_toe_seam_status_split_gate.py`, `formal/python/tests/test_state_theory_dag.py`, `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`
 - Closeout validation result: `11_PASSED_IN_5_23S`
 - Next boundary: GR-QM completion lane is closed; the next bounded task is a post-completion handoff decision boundary and must not reopen GR-QM completion semantics work.
@@ -380,7 +380,7 @@ Program intent: execute a strict truth-restoration sequence before any new theor
 - Activated slice: `WS-10-T06_GR_QM_POST_COMPLETION_HANDOFF_BOUNDARY`
 - Activation scope: control-surface semantics only in tracker/state/roadmap/WS-10 plan; no GR-QM theorem-surface edits.
 - Activation objective: record GR-QM seam completion as closed, keep legacy compatibility text explicitly non-authoritative, and pin the next-target decision boundary outside the completed GR-QM completion lane.
-- Legacy token technical-debt status: retained `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO` compatibility text is accepted only as transition debt and must be retired once split-gate continuity dependency is removed.
+- Legacy token technical-debt status: resolved via `SEAM_GR_QM_LEGACY_TRANSITION_TOKEN_RETIRED_v0: YES` after split-gate continuity dependency removal.
 - Activation validation ladder: `formal/python/tests/test_state_theory_dag.py`, `formal/python/tests/test_pillar_matrix_roadmap_coverage_gate.py`, `formal/python/tests/test_toe_seam_status_split_gate.py`, plus unchanged GR-QM five-gate regression baseline.
 - Activation validation result: `11 passed in 5.03s`
 - Next boundary: either (a) publish a bounded GR-QM completion handoff packet as CLOSED evidence for T06 or (b) select and activate a non-GR-QM-completion scientific target by explicit control-surface decision.
