@@ -27,6 +27,7 @@ DEFAULT_DECLARATION_PATH = REPO_ROOT / "formal" / "docs" / "release" / "DISCOVER
 DEFAULT_TREND_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_blocker_trend_window_20260410_v0.json"
 DEFAULT_CLOSURE_MAP_PATH = REPO_ROOT / "formal" / "output" / "reports" / "governance_blocker_closure_map_20260410_v0.json"
 DEFAULT_LEDGER_PATH = REPO_ROOT / "formal" / "output" / "reports" / "physics_progress_ledger_v0.json"
+DEFAULT_GR_FREEZE_MAP_PATH = REPO_ROOT / "formal" / "docs" / "release" / "GR_ROW_001_NEW_STRUCTURE_BLOCKER_FILE_MAP_20260418_v0.json"
 DEFAULT_OUT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "discovery_priority_queue_report_20260411_v0.json"
 
 BOOSTS: dict[str, dict[str, int]] = {
@@ -83,6 +84,19 @@ def _score(parts: dict[str, int]) -> int:
     return 4 * parts["discriminator_potential"] + 3 * parts["falsification_value"] + 2 * parts["blocker_leverage"] + parts["empirical_proximity"]
 
 
+def _load_frozen_rows(path: Path | None) -> set[str]:
+    if path is None or not path.exists():
+        return set()
+    payload = _read_json(path)
+    target_row = str(payload.get("target_row", "")).strip()
+    current_lane_class = str(
+        payload.get("authoritative_branch_classification", {}).get("current_lane_class", "")
+    ).strip()
+    if target_row and current_lane_class == "FROZEN_NEW_STRUCTURE_BRANCH":
+        return {target_row}
+    return set()
+
+
 def _defaults_for_row(row_id: str, blocker_class: str, domain: str) -> dict[str, int]:
     if blocker_class == "SEAM_INTEGRATION_GAP":
         return {
@@ -107,11 +121,20 @@ def _defaults_for_row(row_id: str, blocker_class: str, domain: str) -> dict[str,
     }
 
 
-def build_report(*, declaration_path: Path, trend_path: Path, closure_map_path: Path, ledger_path: Path, captured_at_utc: str | None) -> dict[str, Any]:
+def build_report(
+    *,
+    declaration_path: Path,
+    trend_path: Path,
+    closure_map_path: Path,
+    ledger_path: Path,
+    captured_at_utc: str | None,
+    gr_freeze_map_path: Path | None = DEFAULT_GR_FREEZE_MAP_PATH,
+) -> dict[str, Any]:
     declaration = _read_json(declaration_path)
     trend = _read_json(trend_path)
     closure_map = _read_json(closure_map_path)
     ledger = _read_json(ledger_path)
+    frozen_rows = _load_frozen_rows(gr_freeze_map_path)
 
     ranking_policy = dict(declaration.get("ranking_policy", {}))
     queue_size = int(ranking_policy.get("queue_size", 5))
@@ -124,6 +147,8 @@ def build_report(*, declaration_path: Path, trend_path: Path, closure_map_path: 
         lane = str(mapping.get("owning_lane", "")).strip()
 
         if not row_id or not blocker_class:
+            continue
+        if row_id in frozen_rows:
             continue
 
         dimensions = dict(_defaults_for_row(row_id, blocker_class, domain))
@@ -193,6 +218,7 @@ def build_report(*, declaration_path: Path, trend_path: Path, closure_map_path: 
             "trend": _ptr(trend_path),
             "closure_map": _ptr(closure_map_path),
             "ledger": _ptr(ledger_path),
+            "gr_freeze_map": _ptr(gr_freeze_map_path) if gr_freeze_map_path and gr_freeze_map_path.exists() else None,
         },
         "non_claim_boundary": "Repository-local discovery priority queue report only; no scientific adequacy claim.",
     }

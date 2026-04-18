@@ -47,9 +47,9 @@ def _write_declaration(path: Path) -> None:
 def _seed_inputs(
     root: Path,
     *,
-    transport_retry_outcome: str = "GR_MASTER_ACTION_TRANSPORT_OBLIGATION_DECLARED_BUT_STILL_INSUFFICIENT",
+    transport_retry_outcome: str = "GR_TRANSPORT_OBLIGATION_DECLARED_BUT_STILL_INSUFFICIENT",
     alignment_retry_outcome: str = "GR_REGIME_LIMIT_ALIGNMENT_OBLIGATION_DECLARED_BUT_STILL_INSUFFICIENT",
-    transport_obligation_outcome: str = "GR_MASTER_ACTION_TRANSPORT_OBLIGATION_DECLARED",
+    transport_obligation_outcome: str = "GR_TRANSPORT_OBLIGATION_DECLARED",
     alignment_obligation_outcome: str = "GR_REGIME_LIMIT_ALIGNMENT_OBLIGATION_DECLARED",
 ) -> None:
     _write_json(
@@ -103,8 +103,9 @@ def test_reports_hold_when_convergent_insufficient(tmp_path: Path, monkeypatch) 
     _seed_inputs(tmp_path)
 
     report = tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
-    assert report["summary"]["terminal_outcome"] == "HOLD_ROW_001_AND_STOP_ATTACK_CLASS_CYCLING"
+    assert report["summary"]["terminal_outcome"] == "HIGHER_LEVEL_GR_STRUCTURE_REQUIRES_NEW_SEAM_OR_MODEL_CLASS"
     assert report["summary"]["convergent_insufficient_detected"] is True
+    assert report["summary"]["next_action"] == "FREEZE_ROW_001_ATTACK_CLASS_CYCLING_AND_DEFINE_NEW_GR_SEAM_OR_MODEL_CLASS"
 
 
 def test_reports_hold_when_transport_not_insufficient(tmp_path: Path, monkeypatch) -> None:
@@ -154,4 +155,4 @@ def test_reports_row_structure_status_requires_analysis(tmp_path: Path, monkeypa
     _seed_inputs(tmp_path)
 
     report = tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
-    assert report["objective_quality"]["summary"]["row_structure_status"] == "REQUIRES_HIGHER_LEVEL_ANALYSIS"
+    assert report["objective_quality"]["summary"]["row_structure_status"] == "FROZEN_REQUIRES_NEW_SEAM_OR_MODEL_CLASS"

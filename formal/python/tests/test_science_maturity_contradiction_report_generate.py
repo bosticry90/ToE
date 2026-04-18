@@ -32,7 +32,11 @@ def test_science_maturity_contradiction_report_builds_expected_families(tmp_path
         tool.MATURITY_REGISTRY_PATH,
         {
             "program_status": {"PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0": "COMPLETE_BOUNDED_v0"},
-            "pillars": [{"pillar_id": "PILLAR-QM", "m4_status": "COMPLETE_BOUNDED_v0"}],
+            "pillars": [{
+                "pillar_id": "PILLAR-QM",
+                "m4_status": "COMPLETE_BOUNDED_v0",
+                "m4_live_blocker_qualifier": "LIVE_THEOREM_GAP_OPEN_v0",
+            }],
         },
     )
     _write_json(
@@ -86,10 +90,13 @@ def test_science_maturity_contradiction_report_builds_expected_families(tmp_path
         captured_at_utc="2026-04-16T00:00:00Z",
     )
     assert report["contradiction_status"] == "FAIL_CLOSED_CONTRADICTIONS_PRESENT"
-    assert report["summary"]["contradictions_total"] == 4
+    assert report["summary"]["contradictions_total"] == 3
+    assert report["summary"]["modeled_observations_total"] == 1
     assert report["summary"]["highest_severity"] == "HIGH"
     types = {entry["contradiction_type"] for entry in report["contradictions"]}
-    assert "PILLAR_M4_COMPLETE_VS_LIVE_THEOREM_GAP" in types
+    assert "PILLAR_M4_COMPLETE_VS_LIVE_THEOREM_GAP" not in types
     assert "SEAM_PHYSICS_COMPLETE_VS_LIVE_HOLD_OR_PARITY" in types
     assert "LIVE_SEAM_ROW_MISSING_CANONICAL_STATUS" in types
     assert "STALE_READINESS_SIGNAL_WITH_PATHS_PINNED" in types
+    observations = {entry["observation_type"] for entry in report["modeled_observations"]}
+    assert "PILLAR_M4_QUALIFIED_BY_LIVE_THEOREM_GAP" in observations

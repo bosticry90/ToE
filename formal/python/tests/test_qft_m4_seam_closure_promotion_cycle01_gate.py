@@ -71,6 +71,7 @@ def test_qft_m4_seam_closure_promotion_cycle01_gate() -> None:
     qft_row = next((row for row in registry.get("pillars", []) if row.get("pillar_id") == "PILLAR-QFT"), None)
     assert qft_row is not None, "Missing PILLAR-QFT row in deep maturity registry."
     assert qft_row.get("m4_status") == "COMPLETE_BOUNDED_v0"
+    assert qft_row.get("m4_live_blocker_qualifier") == "LIVE_THEOREM_GAP_OPEN_v0"
 
     m4_completion = qft_row.get("m4_completion", {})
     assert m4_completion.get("target_id") == "TARGET-QFT-M4-SEAM-CLOSURE-PROMOTION-v0"
@@ -85,9 +86,14 @@ def test_qft_m4_seam_closure_promotion_cycle01_gate() -> None:
         assert _extract_token(text, "QFT_M4_SEAM_CLOSURE_GATE_v0") == EXPECTED_GATE
         assert _extract_token(text, "QFT_M4_PROMOTION_READINESS_v0") == "CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0"
 
+    assert _extract_token(roadmap_text, "QFT_M4_LIVE_BLOCKER_QUALIFIER_v0") == "LIVE_THEOREM_GAP_OPEN_v0"
+
     assert _extract_token_from_compact_state_or_inventory(
         state_text, central_inventory_text, "QFT_M4_STATUS_v0"
     ) == "COMPLETE_BOUNDED_v0"
+    assert _extract_token_from_compact_state_or_inventory(
+        state_text, central_inventory_text, "QFT_M4_LIVE_BLOCKER_QUALIFIER_v0"
+    ) == "LIVE_THEOREM_GAP_OPEN_v0"
     assert _extract_token_from_compact_state_or_inventory(
         state_text, central_inventory_text, "QFT_M4_SEAM_CLOSURE_ARTIFACT_v0"
     ) == EXPECTED_ARTIFACT_ID

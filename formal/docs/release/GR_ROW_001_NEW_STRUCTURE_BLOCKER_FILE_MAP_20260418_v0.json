@@ -1,0 +1,69 @@
+{
+  "schema_id": "GR_ROW_001_NEW_STRUCTURE_BLOCKER_FILE_MAP_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "captured_at_utc": "2026-04-18T15:05:00Z",
+  "objective": "Pin one authoritative blocker-to-file map for the frozen GR row 001 new-structure branch so future work resumes from the dormant design package rather than retry-era attack packets.",
+  "target_row": "ROW-PILLAR-GR-001",
+  "authoritative_branch_classification": {
+    "current_lane_class": "FROZEN_NEW_STRUCTURE_BRANCH",
+    "retry_path_status": "EXHAUSTED_AND_NONAUTHORITATIVE_FOR_NEXT_STEP_SELECTION",
+    "authoritative_next_step": "RESUME_FROM_P78_P79_P80_DORMANT_PACKAGE_ONLY",
+    "authoritative_next_action": "KEEP_GR_ROW_001_FROZEN_AND_PREPARE_ONE_BOUNDED_SHARED_INTERFACE_DECLARATION_IF_RESTART_AUTHORIZED",
+    "required_freeze_basis": [
+      "HIGHER_LEVEL_GR_STRUCTURE_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+      "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS"
+    ]
+  },
+  "active_authority_chain": {
+    "freeze_basis": [
+      "formal/output/reports/gr_row_001_higher_level_structure_review_20260412_v0.json",
+      "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json"
+    ],
+    "dormant_design_package": [
+      "formal/docs/release/GR_ROW_001_NEW_STRUCTURE_CONCEPT_PACKET_20260413_v0.json",
+      "formal/output/reports/gr_row_001_new_structure_concept_packet_20260413_v0.json",
+      "formal/docs/paper/GR_ROW_001_NEW_STRUCTURE_CONCEPT_NOTE_v0.md",
+      "formal/docs/release/GR_ROW_001_SHARED_INTERFACE_DECLARATION_20260413_v0.json",
+      "formal/output/reports/gr_row_001_shared_interface_declaration_20260413_v0.json",
+      "formal/docs/paper/GR_ROW_001_SHARED_INTERFACE_DECLARATION_v0.md",
+      "formal/docs/release/GR_ROW_001_COMPARATOR_SPECIFICATION_20260413_v0.json",
+      "formal/output/reports/gr_row_001_comparator_specification_20260413_v0.json",
+      "formal/docs/paper/GR_ROW_001_COMPARATOR_SPECIFICATION_v0.md"
+    ],
+    "state_mirror": [
+      "State_of_the_Theory.md"
+    ],
+    "matrix_anchor": [
+      "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md"
+    ]
+  },
+  "historical_exhausted_retry_chain": [
+    "formal/docs/release/GR_MASTER_ACTION_TRANSPORT_ATTACK_PACKET_20260412_v0.json",
+    "formal/output/reports/gr_master_action_transport_attack_packet_20260412_v0.json",
+    "formal/docs/release/GR_MASTER_ACTION_TRANSPORT_OBLIGATION_DECLARATION_20260412_v0.json",
+    "formal/output/reports/gr_master_action_transport_obligation_declaration_20260412_v0.json",
+    "formal/docs/release/GR_MASTER_ACTION_TRANSPORT_ATTACK_RETRY_PACKET_20260412_v0.json",
+    "formal/output/reports/gr_master_action_transport_attack_retry_packet_20260412_v0.json",
+    "formal/docs/release/GR_POST_TRANSPORT_RETRY_DECISION_20260412_v0.json",
+    "formal/output/reports/gr_post_transport_retry_decision_20260412_v0.json",
+    "formal/docs/release/GR_REGIME_LIMIT_ALIGNMENT_ATTACK_PACKET_20260412_v0.json",
+    "formal/output/reports/gr_regime_limit_alignment_attack_packet_20260412_v0.json",
+    "formal/docs/release/GR_REGIME_LIMIT_ALIGNMENT_OBLIGATION_DECLARATION_20260412_v0.json",
+    "formal/output/reports/gr_regime_limit_alignment_obligation_declaration_20260412_v0.json",
+    "formal/docs/release/GR_REGIME_LIMIT_ALIGNMENT_ATTACK_RETRY_PACKET_20260412_v0.json",
+    "formal/output/reports/gr_regime_limit_alignment_attack_retry_packet_20260412_v0.json"
+  ],
+  "focused_gate_bundle": [
+    "formal/python/tests/test_gr_row_001_higher_level_structure_review_report.py",
+    "formal/python/tests/test_gr_row_001_structural_gap_definition_report.py",
+    "formal/python/tests/test_gr_row_001_new_structure_concept_packet_report.py",
+    "formal/python/tests/test_gr_row_001_shared_interface_declaration_report.py",
+    "formal/python/tests/test_gr_row_001_comparator_specification_report.py",
+    "formal/python/tests/test_gr_row_001_new_structure_blocker_file_map.py"
+  ],
+  "active_retry_language_audit": {
+    "state_and_dormant_package_surfaces": "NO_RETRY_PATH_LANGUAGE_DETECTED_IN_ACTIVE_NEXT_STEP_MIRRORS",
+    "historical_retry_documents": "RETAINED_AS_HISTORY_ONLY_AND_NOT_PART_OF_ACTIVE_NEXT_STEP_CHAIN"
+  },
+  "non_claim_boundary": "Repository-local GR row 001 blocker-to-file map only; no scientific adequacy claim and no row-state promotion claim."
+}

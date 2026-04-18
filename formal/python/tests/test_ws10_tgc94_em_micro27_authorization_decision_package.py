@@ -44,7 +44,7 @@ def test_tgc94_decision_package_structure() -> None:
         "TGC94_EM_MICRO27_DECISION_v0: KEEP_MICRO27_CLOSED_v0",
         "TGC94_EM_MICRO27_AUTHORIZATION_STATUS_v0: NOT_AUTHORIZED_PENDING_DISTINCT_MICRO27_DECISION_v0",
         "TGC94_EM_MICRO27_PROGRESS_AUTOMATION_v0: GLOBAL_PROGRESS_DOES_NOT_AUTHORIZE_EM_FOLLOW_ON",
-        "TGC94_EM_LIVE_ROW_CONTRADICTION_v0: ROW_PILLAR_EM_001_REMAINS_LIVE_THEOREM_GAP",
+        "TGC94_EM_LIVE_ROW_THEOREM_GAP_SIGNAL_v0: ROW_PILLAR_EM_001_REMAINS_LIVE_THEOREM_GAP",
         "## Validation Bundle",
         "formal/python/tests/test_ws10_tgc94_em_micro27_authorization_decision_package.py",
     ]
@@ -69,7 +69,7 @@ def test_tgc94_decision_package_matches_live_report() -> None:
         "TGC94_EM_MICRO27_DECISION_v0: KEEP_MICRO27_CLOSED_v0",
         "TGC94_EM_MICRO27_AUTHORIZATION_STATUS_v0: NOT_AUTHORIZED_PENDING_DISTINCT_MICRO27_DECISION_v0",
         "TGC94_EM_MICRO27_REQUIRED_AUTHORIZATION_BASIS_v0: EM_LOCAL_BLOCKER_EVENT_OR_EXPLICIT_MICRO27_AUTHORIZATION_TRANCHE",
-        "TGC94_EM_LIVE_ROW_CONTRADICTION_v0: ROW_PILLAR_EM_001_REMAINS_LIVE_THEOREM_GAP",
+        "TGC94_EM_LIVE_ROW_THEOREM_GAP_SIGNAL_v0: ROW_PILLAR_EM_001_REMAINS_LIVE_THEOREM_GAP",
     ]
     missing = [token for token in mirrored_tokens if token not in text]
     assert not missing, "TGC-94 decision package failed to mirror live report token(s): " + ", ".join(missing)

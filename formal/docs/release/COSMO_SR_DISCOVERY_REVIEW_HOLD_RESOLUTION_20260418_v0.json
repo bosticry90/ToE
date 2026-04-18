@@ -1,0 +1,45 @@
+{
+  "schema_id": "COSMO_SR_DISCOVERY_REVIEW_HOLD_RESOLUTION_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Resolve whether the current discovery-review hold blocks all Phase 2 COSMO-SR progress or only blocks further discovery lane expansion, so the single TGC-93-authorized non-frozen candidate can be converted into bounded activation authorization if the hold is scope-local rather than candidate-disqualifying.",
+  "target_seam": {
+    "row_id": "ROW-SEAM-COSMO-SR-001",
+    "lane": "COSMO_SR_CYCLE07",
+    "blocker_class": "SEAM_INTEGRATION_GAP",
+    "domain": "seam"
+  },
+  "required_inputs": {
+    "tgc93_branch_decision_package": "formal/docs/release/WS_10_TGC_93_BRANCH_DECISION_PACKAGE_20260411_v0.md",
+    "cosmo_sr_seam_authorization_activation_decision_report": "formal/output/reports/cosmo_sr_seam_authorization_activation_decision_20260418_v0.json",
+    "discovery_queue_transition_decision_report": "formal/output/reports/discovery_queue_transition_decision_report_20260411_v0.json",
+    "discovery_engine_review_checkpoint_report": "formal/output/reports/discovery_engine_review_checkpoint_20260411_v0.json",
+    "discovery_engine_scoring_routing_review_report": "formal/output/reports/discovery_engine_scoring_routing_review_20260411_v0.json"
+  },
+  "hold_resolution_contract": {
+    "required_tgc93_branch_decision": "AUTHORIZE_SINGLE_SEAM_REENTRY",
+    "required_tgc93_seam_reentry_authorization": "AUTHORIZED",
+    "required_phase2_decision_outcome": "COSMO_SR_SINGLE_ACTIVE_CANDIDATE_ACTIVATION_HELD",
+    "required_transition_next_ranked_row": "ROW-SEAM-COSMO-SR-001",
+    "required_transition_next_ranked_lane": "COSMO_SR_CYCLE07",
+    "required_single_activation_cap": 1,
+    "required_checkpoint_hold_decision": "PAUSE_FOR_DISCOVERY_ENGINE_REVIEW_CHECKPOINT",
+    "required_scoring_review_disposition": "HOLD_EXPANSION_REASSESS_SCORING_ROUTING_ONLY",
+    "required_credible_external_path_signal_present": false,
+    "hold_scope_rule": "NO_FURTHER_LANE_EXPANSION_UNTIL_REVIEW_CHECKPOINT_RESOLVED",
+    "hold_scope_interpretation": "CHECKPOINT_HOLD_GOVERNS_FURTHER_DISCOVERY_EXPANSION_NOT_CONVERSION_OF_THE_ALREADY_SELECTED_SINGLE_NONFROZEN_TGC93_CANDIDATE",
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "hold_resolution_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_COSMO_SR_DISCOVERY_REVIEW_HOLD_RESOLUTION_OUTCOME",
+    "no_loop_rule": "ONE_COSMO_SR_DISCOVERY_REVIEW_HOLD_RESOLUTION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "COSMO_SR_SINGLE_CANDIDATE_HOLD_RESOLVED_FOR_AUTHORIZATION_CONVERSION",
+      "COSMO_SR_DISCOVERY_REVIEW_HOLD_REMAINS_ACTIVE",
+      "COSMO_SR_DISCOVERY_REVIEW_HOLD_RESOLUTION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_COSMO_SR_DISCOVERY_REVIEW_HOLD_RESOLUTION_REPAIR"
+    ],
+    "default_outcome": "COSMO_SR_DISCOVERY_REVIEW_HOLD_RESOLUTION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local COSMO-SR discovery-review hold resolution declaration only; no scientific adequacy claim."
+}

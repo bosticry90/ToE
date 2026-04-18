@@ -58,6 +58,7 @@ def test_deep_maturity_program_pointers_and_tokens_are_pinned() -> None:
         "PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_COMPLETION_CLOSED_v0",
         "PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-PHASE5-SR-M5-CONTROLLED-v0",
         "PILLAR_DEEP_MATURITY_NEXT_TARGET_v0: TARGET-PHASE5-SR-M5-CONTROLLED-v0",
+        "PILLAR_DEEP_MATURITY_M4_LIVE_BLOCKER_RULE_v0: M4_BOUNDED_ARTIFACTS_REQUIRE_EXPLICIT_LIVE_BLOCKER_QUALIFIER_v0",
         "PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_STATUS_v0: COMPLETE_BOUNDED_v0",
         "PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_ARTIFACT_v0: phase5_m5_completion_closeout_checkpoint_v0",
         "PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_SHA256_v0:",
@@ -118,6 +119,13 @@ def test_deep_maturity_program_pointers_and_tokens_are_pinned() -> None:
         GATE_REL,
     ):
         assert token in program_text, f"Deep maturity program missing token `{token}`."
+
+    for token in (
+        "Bounded `M4_STATUS_v0: COMPLETE_*` records artifact-level seam-promotion closure only and do not clear live theorem-gap accounting by themselves.",
+        "All pillars have `M4_STATUS_v0: COMPLETE_*` with explicit live-blocker qualifier disclosure until theorem-gap rows close.",
+        "QFT M4 seam-closure promotion tranche is complete under non-claim boundaries; live theorem-gap qualifier remains explicit.",
+    ):
+        assert token in program_text, f"Deep maturity program missing qualified M4 summary token `{token}`."
 
     for surface_text, label in ((roadmap_text, "roadmap"), (inventory_text, "inventory")):
         assert PROGRAM_REL in surface_text, f"{label} must pin deep maturity program pointer."
@@ -354,6 +362,9 @@ def test_deep_maturity_registry_covers_all_matrix_pillars() -> None:
         )
 
         if str(row.get("m4_status", "")).startswith("COMPLETE"):
+            assert row.get("m4_live_blocker_qualifier") == "LIVE_THEOREM_GAP_OPEN_v0", (
+                f"{row.get('pillar_id')}: complete bounded M4 rows must disclose live theorem-gap qualifier."
+            )
             assert str(row.get("m3_status", "")).startswith("COMPLETE"), (
                 f"{row.get('pillar_id')}: M4 completion requires M3 completion."
             )

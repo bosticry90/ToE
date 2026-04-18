@@ -22,10 +22,10 @@ Mirror the already-materialized EM Micro-27 authorization-control result into a 
 - `TGC94_EM_MICRO27_AUTHORIZATION_STATUS_v0: NOT_AUTHORIZED_PENDING_DISTINCT_MICRO27_DECISION_v0`
 - `TGC94_EM_MICRO27_PROGRESS_AUTOMATION_v0: GLOBAL_PROGRESS_DOES_NOT_AUTHORIZE_EM_FOLLOW_ON`
 - `TGC94_EM_MICRO27_REQUIRED_AUTHORIZATION_BASIS_v0: EM_LOCAL_BLOCKER_EVENT_OR_EXPLICIT_MICRO27_AUTHORIZATION_TRANCHE`
-- `TGC94_EM_LIVE_ROW_CONTRADICTION_v0: ROW_PILLAR_EM_001_REMAINS_LIVE_THEOREM_GAP`
+- `TGC94_EM_LIVE_ROW_THEOREM_GAP_SIGNAL_v0: ROW_PILLAR_EM_001_REMAINS_LIVE_THEOREM_GAP`
 
 ## Decision rule
-- If the Micro-26 closeout surface still requires explicit Micro-27 authorization and `ROW-PILLAR-EM-001` remains a live theorem-gap contradiction, then:
+- If the Micro-26 closeout surface still requires explicit Micro-27 authorization and `ROW-PILLAR-EM-001` remains under a live theorem-gap signal, then:
   - `TGC94_EM_MICRO27_DECISION_v0` must be `KEEP_MICRO27_CLOSED_v0`.
   - `TGC94_EM_MICRO27_AUTHORIZATION_STATUS_v0` must be `NOT_AUTHORIZED_PENDING_DISTINCT_MICRO27_DECISION_v0`.
 - `PROGRESS` in the global physics ledger is insufficient on its own to authorize EM follow-on.

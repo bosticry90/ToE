@@ -22,9 +22,10 @@ def test_discovery_queue_transition_defaults_to_queue_review_when_gap_is_not_cle
     summary = payload["summary"]
     assert summary["selected_route"] == "EXECUTE_BOUNDED_QUEUE_REVIEW_PASS"
     assert summary["selected_route_id"] == "EXECUTE_BOUNDED_QUEUE_REVIEW_PASS"
-    assert summary["next_ranked_row_id"] == "ROW-PILLAR-GR-001"
+    assert summary["next_ranked_row_id"] == "ROW-SEAM-COSMO-SR-001"
+    assert summary["next_ranked_lane"] == "COSMO_SR_CYCLE07"
     assert summary["next_ranked_rank"] == 3
-    assert summary["rank3_over_rank4_score_gap"] == 1
+    assert summary["rank3_over_rank4_score_gap"] == 2
     assert summary["qm_stat_internal_only_confirmed"] is True
     assert summary["qft_gr_internal_only_confirmed"] is True
     assert summary["external_discriminative_leverage_established"] is False

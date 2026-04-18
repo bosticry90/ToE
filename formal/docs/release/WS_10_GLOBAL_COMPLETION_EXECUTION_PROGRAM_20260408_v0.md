@@ -205,6 +205,8 @@ Out of scope:
 - TGC-86 checkpoint JSON: formal/output/ws10_tgc86_post_closure_blocker_burn_delta_reevaluation_checkpoint_20260410_v0.json
 - TGC-87 checkpoint: formal/docs/release/WS_10_TGC_87_ROW_PROMOTION_BLOCKER_BURN_REVIEW_REFRESH_20260410_v0.md
 - TGC-87 checkpoint JSON: formal/output/ws10_tgc87_row_promotion_blocker_burn_review_refresh_20260410_v0.json
+- TGC-93 decision: formal/docs/release/WS_10_TGC_93_BRANCH_DECISION_PACKAGE_20260411_v0.md
+- TGC-94 decision: formal/docs/release/WS_10_TGC_94_EM_MICRO27_AUTHORIZATION_DECISION_PACKAGE_20260418_v0.md
 
 ## Execution runbook pointers
 - TGC-05 seam runbook: formal/docs/release/WS_10_TGC_05_SEAM_INCREMENT_EXECUTION_RUNBOOK_20260408_v0.md
@@ -326,7 +328,8 @@ Out of scope:
 90. TGC-90: Publish bounded resume reconsideration trigger review checkpoint before any seam/STAT execution tranche (DONE).
 91. TGC-91: Publish bounded blocked-posture continuity and trigger-watch checkpoint before any further resume reconsideration attempt (DONE).
 92. TGC-92: Publish closure-to-blocker traceability decision package before any additional resume reconsideration attempt (DONE).
-93. TGC-93: Publish bounded branch decision package: authorize one seam reentry only with new blocker-reducing exception basis, else route to theorem-gap rework (NEXT).
+93. TGC-93: Publish bounded branch decision package: authorize one seam reentry only with new blocker-reducing exception basis, else route to theorem-gap rework (DONE).
+94. TGC-94: Publish EM-local Micro-27 authorization decision package to preserve the bounded hold boundary under the qualified live theorem-gap model (DONE).
 
 ## Verification contract
 - Governance prerequisite lane must stay green:

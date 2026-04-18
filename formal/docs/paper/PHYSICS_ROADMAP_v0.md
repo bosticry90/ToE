@@ -67,7 +67,65 @@ Live seam contradiction control checkpoint (2026-04-16):
 - Contradiction policy pointer: `formal/docs/release/SCIENCE_MATURITY_CONTRADICTION_REPORT_POLICY_20260416_v0.md`.
 - Contradiction report pointer: `formal/output/reports/science_maturity_contradiction_report_20260416_v0.json`.
 - Contradiction gate pointer: `formal/python/tests/test_science_maturity_contradiction_report_live_gate.py`.
-- Contradiction rule: fail closed when bounded maturity reads disagree with live blocker or seam truth.
+- Contradiction rule: fail closed when bounded maturity reads disagree with live blocker or seam truth without an explicit live-blocker qualifier.
+
+Phase 2 COSMO-SR seam authorization checkpoint (2026-04-18):
+- Decision declaration pointer: `formal/docs/release/COSMO_SR_SEAM_AUTHORIZATION_ACTIVATION_DECISION_20260418_v0.json`.
+- Decision report pointer: `formal/output/reports/cosmo_sr_seam_authorization_activation_decision_20260418_v0.json`.
+- Decision gate pointer: `formal/python/tests/test_cosmo_sr_seam_authorization_activation_decision_report.py`.
+- Current non-frozen candidate: `ROW-SEAM-COSMO-SR-001` / `COSMO_SR_CYCLE07`.
+- Current outcome: `COSMO_SR_SINGLE_ACTIVE_CANDIDATE_ACTIVATION_HELD`.
+- Hold rule: do not activate COSMO-SR until the discovery-review hold resolves and the declared external-path reopen condition is satisfied once.
+
+Phase 2 COSMO-SR hold-resolution and activation authorization checkpoint (2026-04-18):
+- Hold-resolution declaration pointer: `formal/docs/release/COSMO_SR_DISCOVERY_REVIEW_HOLD_RESOLUTION_20260418_v0.json`.
+- Hold-resolution report pointer: `formal/output/reports/cosmo_sr_discovery_review_hold_resolution_20260418_v0.json`.
+- Hold-resolution gate pointer: `formal/python/tests/test_cosmo_sr_discovery_review_hold_resolution_report.py`.
+- Activation authorization declaration pointer: `formal/docs/release/COSMO_SR_BOUNDED_ACTIVATION_AUTHORIZATION_20260418_v0.json`.
+- Activation authorization report pointer: `formal/output/reports/cosmo_sr_bounded_activation_authorization_20260418_v0.json`.
+- Activation authorization gate pointer: `formal/python/tests/test_cosmo_sr_bounded_activation_authorization_report.py`.
+- Hold-resolution outcome: `COSMO_SR_SINGLE_CANDIDATE_HOLD_RESOLVED_FOR_AUTHORIZATION_CONVERSION`.
+- Authorized Phase 2 path: `COSMO_SR_CYCLE07_SINGLE_LANE_ACTIVATION_AUTHORIZED_NONLIVE_v0`.
+- Boundary: one bounded non-live COSMO-SR seam authorization only; no second lane and no execution-live token introduction.
+
+Phase 3 seam executable-path normalization checkpoint (2026-04-18):
+- Normalization declaration pointer: `formal/docs/release/SEAM_EXECUTABLE_PATH_NORMALIZATION_20260418_v0.json`.
+- Normalization report pointer: `formal/output/reports/seam_executable_path_normalization_20260418_v0.json`.
+- Normalization gate pointer: `formal/python/tests/test_seam_executable_path_normalization_report.py`.
+- Canonical executable path result: `SEAM-COSMO-SR` is the single authorized non-live executable seam path.
+- Canonical blocked path result: `SEAM-QM-STAT` remains policy-blocked pending approval recordation.
+- Canonical external hold result: `SEAM-QFT-GR` remains externally held for scalar publication release.
+- Canonical mirror-only results: `SEAM-STAT-QM` and `SEAM-SR-COSMO` remain non-executable mirror seams until canonical row and authorization surfaces exist.
+
+Phase 4 master-action Packet-01 transport-binding recovery checkpoint (2026-04-18):
+- Recovery declaration pointer: `formal/docs/release/MASTER_ACTION_PACKET_01_TRANSPORT_BINDING_RECOVERY_20260418_v0.json`.
+- Recovery report pointer: `formal/output/reports/master_action_packet_01_transport_binding_recovery_20260418_v0.json`.
+- Recovery gate pointer: `formal/python/tests/test_master_action_packet_01_transport_binding_recovery_report.py`.
+- Canonical upstream baseline: the preserved master-action Packet-01 family endpoint remains `formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_01_20260417_v0.json`.
+- Canonical transport read: Packet-01 preserved baseline plus `SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0` plus `MASTER_ACTION_RESIDUAL_EXTRACTION_BINDING_UNIT_v0` plus explicit blocker token.
+- Explicit transport-binding blocker: `ROW-SEAM-QM-STAT-001` remains fail-closed on `NO_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE` under a policy-blocked seam path.
+- Phase 5 handoff: use the canonical master-action transport read for derivation-chain standardization instead of fragmented Packet-01 and transport-seam reads.
+
+Phase 5 derivation-chain transport standardization checkpoint (2026-04-18):
+- Standardization declaration pointer: `formal/docs/release/DERIVATION_CHAIN_TRANSPORT_STANDARDIZATION_20260418_v0.json`.
+- Standardization report pointer: `formal/output/reports/derivation_chain_transport_standardization_20260418_v0.json`.
+- Standardization gate pointer: `formal/python/tests/test_derivation_chain_transport_standardization_report.py`.
+- Admitted pillar set result: the seven admitted pillars are standardized under one derivation-chain grammar bundle.
+- Canonical transport read result: all admitted derivation-chain standardization reads are bound to `PACKET01_PRESERVED_BASELINE_PLUS_WITNESS_BINDING_PLUS_MINIMAL_UPSTREAM_UNIT_PLUS_EXPLICIT_BLOCKER`.
+- Standardization handoff: use the standardized grammar plus the canonical transport read for the final non-claim integration gate.
+
+Phase 6 final non-claim integration and promotion gate checkpoint (2026-04-18):
+- Gate declaration pointer: `formal/docs/release/FINAL_NONCLAIM_INTEGRATION_PROMOTION_GATE_20260418_v0.json`.
+- Gate report pointer: `formal/output/reports/final_nonclaim_integration_promotion_gate_20260418_v0.json`.
+- Gate test pointer: `formal/python/tests/test_final_nonclaim_integration_promotion_gate_report.py`.
+- Aggregate result: Phase 3 normalization, Phase 4 recovery, and Phase 5 standardization are synchronized under one fail-closed non-claim integration gate.
+- Boundary: no external-truth promotion and no live authorization are opened by this gate.
+
+Post-plan consolidation memo checkpoint (2026-04-18):
+- Consolidation memo pointer: `formal/docs/release/POST_PLAN_CONSOLIDATION_MEMO_20260418_v0.md`.
+- Canonical posture rule: Phase 3 through Phase 6 surfaces govern current repo-grounded reads.
+- Historical posture rule: WS-10 restart surfaces remain traceability artifacts and should not be read as the active execution posture.
+- Next-work rule: open either a new explicit post-plan program or continue repository consolidation, but do not treat restart-era selectors as active by default.
 
 Architecture consolidation governance checkpoint (2026-03-18):
 - Program tracker pointer: `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md`.
@@ -75,18 +133,20 @@ Architecture consolidation governance checkpoint (2026-03-18):
 - Consolidation charter pointer: `formal/docs/release/ARCHITECTURE_CONSOLIDATION_PHASE_v0.md`.
 - Anti-regrowth guardrail authority pointer: `formal/docs/release/CE_06_ANTI_REGROWTH_GUARDRAILS_v0.md`.
 - `ARCHITECTURE_CONSOLIDATION_PHASE_v0: ACTIVE`
-- `THEORY_WORK_POSTURE_v0: RESTART_AUTHORIZED_POST_CONSOLIDATION_EXIT_GATE`
-- `ROADMAP_EXECUTION_POSTURE_v0: POST_CONSOLIDATION_RESTART_AUTHORIZED`
+- Historical-status note: this checkpoint remains part of the historical sequence only and is superseded for current posture reads by `formal/docs/release/POST_PLAN_CONSOLIDATION_MEMO_20260418_v0.md` plus the Phase 3 through Phase 6 stack.
+- `THEORY_WORK_POSTURE_v0: HISTORICAL_RESTART_AUTHORIZED_POST_CONSOLIDATION_EXIT_GATE_SUPERSEDED_BY_PHASE3_TO_PHASE6_STACK`
+- `ROADMAP_EXECUTION_POSTURE_v0: HISTORICAL_POST_CONSOLIDATION_RESTART_AUTHORIZED_SUPERSEDED_BY_PHASE3_TO_PHASE6_STACK`
 - `THEORY_RESTART_CONDITION_v0: ALL_EXIT_ROWS_CE-01_TO_CE-06_SATISFIED`
 - `CONSOLIDATION_EXIT_GATE_CE06_STATUS_v0: DONE`
 - `CONSOLIDATION_EXIT_GATE_STATUS_v0: SATISFIED`
 
-Immediate bounded theory restart slice (2026-03-19):
+Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - Restart slice authority pointer: `formal/docs/release/WS_10_THEORY_RESTART_PILOT_PLAN_v0.md`.
-- `THEORY_RESTART_SLICE_v0: WS-10-T07_QFT_GR_SEAM_REACTIVATION_AUTHORIZATION_BOUNDARY`
-- `THEORY_RESTART_ACTIVE_PILLAR_v0: SEAM-QFT-GR`
-- `THEORY_RESTART_ACTIVE_TARGET_v0: QFT_GR_SEAM_REACTIVATION_AUTHORIZATION_BOUNDARY_v0`
-- `THEORY_RESTART_ACTIVE_STATUS_v0: ACTIVE_BOUNDED_v0`
+- Historical-status note: retained to document the earlier restart program; it is no longer the active roadmap selector after the 2026-04-18 Phase 3 through Phase 6 consolidation.
+- `THEORY_RESTART_SLICE_v0: HISTORICAL_WS-10-T07_QFT_GR_SEAM_REACTIVATION_AUTHORIZATION_BOUNDARY`
+- `THEORY_RESTART_ACTIVE_PILLAR_v0: HISTORICAL_SEAM-QFT-GR`
+- `THEORY_RESTART_ACTIVE_TARGET_v0: HISTORICAL_QFT_GR_SEAM_REACTIVATION_AUTHORIZATION_BOUNDARY_v0`
+- `THEORY_RESTART_ACTIVE_STATUS_v0: HISTORICAL_SUPERSEDED_BY_PHASE3_TO_PHASE6_STACK_v0`
 - `THEORY_RESTART_ACTIVE_VERIFICATION_v0: STATE_ROADMAP_SEAM_STATUS_PARITY_PLUS_GR_QM_FIVE_GATE_REGRESSION_BASELINE_PLUS_QFT_GR_OBJECTIVE_GATE_v0`
 - `THEORY_RESTART_ACTIVATION_VALIDATION_v0: 5_PASSED_IN_2_54S`
 - `THEORY_RESTART_PILOT_PHASE1_STATUS_v0: CLOSED_WITH_BOUNDED_EVIDENCE`
@@ -2145,6 +2205,7 @@ No-deviation sequencing rule:
   - `PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-PHASE5-SR-M5-CONTROLLED-v0`
   - `PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0: COMPLETE_BOUNDED_v0`
   - `PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_COMPLETION_CLOSED_v0`
+  - `PILLAR_DEEP_MATURITY_M4_LIVE_BLOCKER_RULE_v0: M4_BOUNDED_ARTIFACTS_REQUIRE_EXPLICIT_LIVE_BLOCKER_QUALIFIER_v0`
   - `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_STATUS_v0: COMPLETE_BOUNDED_v0`
   - `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_ARTIFACT_v0: phase5_m5_completion_closeout_checkpoint_v0`
   - `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_SHA256_v0: e78f7b123d8ea1311d5616e8f6de85af6423281403ff683de58b0fda3bf21c00`
@@ -2152,26 +2213,31 @@ No-deviation sequencing rule:
   - `PHASE3_M3_CONSOLIDATION_READINESS_v0: READY_FOR_M4_SEAM_CLOSURE_PROMOTION_v0`
   - `PHASE3_M3_CONSOLIDATION_ARTIFACT_v0: phase3_m3_consolidation_promotion_cycle01_v0`
   - `STAT_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
+  - `STAT_M4_LIVE_BLOCKER_QUALIFIER_v0: LIVE_THEOREM_GAP_OPEN_v0`
   - `STAT_M4_PROMOTION_READINESS_v0: CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0`
   - `COSMO_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
+  - `COSMO_M4_LIVE_BLOCKER_QUALIFIER_v0: LIVE_THEOREM_GAP_OPEN_v0`
   - `COSMO_M4_PROMOTION_READINESS_v0: CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0`
   - `COSMO_M4_SEAM_CLOSURE_ARTIFACT_v0: cosmo_m4_seam_closure_promotion_cycle01_v0`
   - `COSMO_M4_SEAM_CLOSURE_SHA256_v0: 4fcb9fe42b680f2eab2d95ed63f853c18e2b415367cd08cac8af96d66a994d40`
   - `COSMO_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/cosmo_m4_seam_closure_promotion_cycle01_v0.json`
   - `EM_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
+  - `EM_M4_LIVE_BLOCKER_QUALIFIER_v0: LIVE_THEOREM_GAP_OPEN_v0`
   - `EM_M4_PROMOTION_READINESS_v0: CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0`
   - `EM_M4_SEAM_CLOSURE_ARTIFACT_v0: em_m4_seam_closure_promotion_cycle01_v0`
   - `EM_M4_SEAM_CLOSURE_SHA256_v0: 9c8847356275b63c5c6bd7814092afe0efc851a241030f98c18a230862b866d1`
   - `EM_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/em_m4_seam_closure_promotion_cycle01_v0.json`
   - `QFT_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
+  - `QFT_M4_LIVE_BLOCKER_QUALIFIER_v0: LIVE_THEOREM_GAP_OPEN_v0`
   - `QFT_M4_PROMOTION_READINESS_v0: CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0`
   - `QFT_M4_SEAM_CLOSURE_ARTIFACT_v0: qft_m4_seam_closure_promotion_cycle01_v0`
   - `QFT_M4_SEAM_CLOSURE_SHA256_v0: 5f01e0e528c0c46748f0059994f026142c29f51103ea0a30afb9ddf51af6fbd4`
   - `QFT_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/qft_m4_seam_closure_promotion_cycle01_v0.json`
   - `SR_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
+  - `SR_M4_LIVE_BLOCKER_QUALIFIER_v0: LIVE_THEOREM_GAP_OPEN_v0`
   - `SR_M4_PROMOTION_READINESS_v0: CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0`
   - `SR_M4_SEAM_CLOSURE_ARTIFACT_v0: sr_m4_seam_closure_promotion_cycle01_v0`
   - `SR_M4_SEAM_CLOSURE_SHA256_v0: 10e6a8c286f2beba41cdb55b6c58a4e894fcfc2e3166a6e317646d0dca27982d`
@@ -2235,12 +2301,14 @@ No-deviation sequencing rule:
   - `SR_M3_COMPLETION_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/sr_m3_completion_promotion_cycle01_v0.json`
   - `QM_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
+  - `QM_M4_LIVE_BLOCKER_QUALIFIER_v0: LIVE_THEOREM_GAP_OPEN_v0`
   - `QM_M4_PROMOTION_READINESS_v0: CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0`
   - `QM_M4_SEAM_CLOSURE_ARTIFACT_v0: qm_m4_seam_closure_promotion_cycle01_v0`
   - `QM_M4_SEAM_CLOSURE_SHA256_v0: 6958fd41d0e8a413c0cbe304d17a4ec06807bb799f4d606fd41b86dc1436c3ad`
   - `QM_M4_SEAM_CLOSURE_GATE_v0: ARTIFACT_HASH_AND_CROSS_SURFACE_POINTERS_REQUIRED`
   - `formal/output/qm_m4_seam_closure_promotion_cycle01_v0.json`
   - `GR_M4_STATUS_v0: COMPLETE_BOUNDED_v0`
+  - `GR_M4_LIVE_BLOCKER_QUALIFIER_v0: LIVE_THEOREM_GAP_OPEN_v0`
   - `GR_M4_PROMOTION_READINESS_v0: CROSS_PILLAR_SEAM_BUNDLE_PINNED_v0`
   - `GR_M4_SEAM_CLOSURE_ARTIFACT_v0: gr_m4_seam_closure_promotion_cycle01_v0`
   - `GR_M4_SEAM_CLOSURE_SHA256_v0: 6c8640b3ace4aed1e9b5f13fe77d7b227a28eae7a7430728ccb98e407fb55857`
@@ -3759,7 +3827,7 @@ EM Micro-27 authorization decision checkpoint (2026-04-18):
 - authorization decision artifact: `formal/output/reports/em_u1_micro27_authorization_decision_20260418_v0.json`
 - explicit closed decision: `KEEP_MICRO27_CLOSED_v0`
 - authorization status: `NOT_AUTHORIZED_PENDING_DISTINCT_MICRO27_DECISION_v0`
-- no activation is inferred from global `PROGRESS` while `ROW-PILLAR-EM-001` remains a live theorem-gap contradiction.
+- no activation is inferred from global `PROGRESS` while `ROW-PILLAR-EM-001` remains under a live theorem-gap signal.
 
 ## Promotion Attempt Log
 

@@ -1,0 +1,44 @@
+{
+  "schema_id": "MASTER_ACTION_PACKET_01_TRANSPORT_BINDING_RECOVERY_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize one machine-checkable Phase 4 recovery surface that preserves the closed master-action Packet-01 family as the canonical upstream baseline, binds the current transport witness and minimal upstream unit into one canonical transport read, and makes the remaining transport-binding blocker explicit without implying blocker movement, Packet-02 authorization, or seam restart.",
+  "required_inputs": {
+    "packet01_family_preservation_note": "formal/docs/paper/TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_FAMILY_PRESERVATION_NOTE_v0.md",
+    "packet01_refinement_closeout_report": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_closeout_20260417_v0.json",
+    "packet01_refinement_report": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_01_20260417_v0.json",
+    "direct_master_action_transport_attack_class_report": "formal/output/reports/direct_master_action_residual_transport_attack_class_packet_20260411_v0.json",
+    "architecture_alignment_execution_report": "formal/output/reports/architecture_seam_master_action_alignment_packet_execution_20260411_v0.json",
+    "architecture_alignment_ruling_report": "formal/output/reports/architecture_seam_master_action_alignment_ruling_20260411_v0.json",
+    "seam_transport_witness_binding_artifact": "formal/output/architecture/SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0.json",
+    "master_action_residual_extraction_binding_unit_artifact": "formal/output/architecture/MASTER_ACTION_RESIDUAL_EXTRACTION_BINDING_UNIT_v0.json",
+    "seam_constraint_registry": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
+    "seam_executable_path_normalization_report": "formal/output/reports/seam_executable_path_normalization_20260418_v0.json"
+  },
+  "recovery_policy": {
+    "target_row": "ROW-SEAM-QM-STAT-001",
+    "target_seam": "SEAM-QM-STAT",
+    "target_transport_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "required_packet01_family_status": "PRESERVED_CLOSED_SUCCESS_WITHOUT_ESCALATION",
+    "required_packet01_family_outcome": "RETAIN_REFINEMENT_v0",
+    "required_closeout_next_action": "STOP_PACKET01_FAMILY_AND_PRESERVE_REFINED_BASELINE",
+    "required_alignment_execution_classification": "ARCHITECTURE_ALIGNMENT_VALID_BUT_NONMOVING",
+    "required_alignment_ruling": "EXHAUSTED_UNDER_CURRENT_FILTER",
+    "required_transport_blocker": "NO_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE",
+    "required_qm_stat_path_class": "POLICY_BLOCKED_NONEXECUTABLE_PATH",
+    "canonical_transport_read_token": "PACKET01_PRESERVED_BASELINE_PLUS_WITNESS_BINDING_PLUS_MINIMAL_UPSTREAM_UNIT_PLUS_EXPLICIT_BLOCKER",
+    "no_packet02_rule": "NO_PACKET02_OR_PACKET01_FAMILY_REOPEN_IMPLICATION",
+    "no_live_restart_rule": "NO_LIVE_RESTART_OR_SEAM_REOPEN_IMPLICATION",
+    "phase4_boundary": "RECOVERY_SURFACE_ONLY_CANONICALIZE_TRANSPORT_READS_AND_BLOCKER_EXPLICATURE_WITHOUT_CLAIMING_BLOCKER_MOVEMENT"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_MASTER_ACTION_PACKET01_TRANSPORT_BINDING_RECOVERY_OUTCOME",
+    "no_loop_rule": "ONE_MASTER_ACTION_PACKET01_TRANSPORT_BINDING_RECOVERY_LAYER_ONLY",
+    "allowed_outcomes": [
+      "MASTER_ACTION_PACKET01_TRANSPORT_BINDING_RECOVERY_STATE_MATERIALIZED",
+      "MASTER_ACTION_PACKET01_TRANSPORT_BINDING_RECOVERY_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_MASTER_ACTION_PACKET01_TRANSPORT_BINDING_REPAIR"
+    ],
+    "default_outcome": "MASTER_ACTION_PACKET01_TRANSPORT_BINDING_RECOVERY_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local master-action Packet-01 transport-binding recovery declaration only; no scientific adequacy claim."
+}

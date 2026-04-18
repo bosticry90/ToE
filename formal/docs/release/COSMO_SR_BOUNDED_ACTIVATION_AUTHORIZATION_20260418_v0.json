@@ -1,0 +1,53 @@
+{
+  "schema_id": "COSMO_SR_BOUNDED_ACTIVATION_AUTHORIZATION_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Convert the resolved COSMO-SR Phase 2 held-decision state into one explicit bounded non-live activation authorization for the single TGC-93-allowed seam path without opening any second lane or introducing execution-live tokens.",
+  "target_seam": {
+    "row_id": "ROW-SEAM-COSMO-SR-001",
+    "lane": "COSMO_SR_CYCLE07",
+    "blocker_class": "SEAM_INTEGRATION_GAP",
+    "domain": "seam"
+  },
+  "required_inputs": {
+    "tgc93_branch_decision_package": "formal/docs/release/WS_10_TGC_93_BRANCH_DECISION_PACKAGE_20260411_v0.md",
+    "cosmo_sr_seam_authorization_activation_decision_report": "formal/output/reports/cosmo_sr_seam_authorization_activation_decision_20260418_v0.json",
+    "cosmo_sr_discovery_review_hold_resolution_report": "formal/output/reports/cosmo_sr_discovery_review_hold_resolution_20260418_v0.json",
+    "seam_resolution_sla_ledger_report": "formal/output/reports/seam_resolution_sla_ledger_20260416_v0.json"
+  },
+  "bounded_activation_authorization_contract": {
+    "required_tgc93_branch_decision": "AUTHORIZE_SINGLE_SEAM_REENTRY",
+    "required_tgc93_seam_reentry_authorization": "AUTHORIZED",
+    "required_phase2_decision_outcome": "COSMO_SR_SINGLE_ACTIVE_CANDIDATE_ACTIVATION_HELD",
+    "required_hold_resolution_outcome": "COSMO_SR_SINGLE_CANDIDATE_HOLD_RESOLVED_FOR_AUTHORIZATION_CONVERSION",
+    "required_sla_decision_state": "ACTIVE_TRACK_PENDING_BRANCH_EXCEPTION_DECISION",
+    "required_sla_gate_runtime_status": "PATH_PINNED_RUNTIME_AWAITING_AUTHORITY_DECISION",
+    "authorization_scope_token": "CONTROL_SURFACE_COSMO_SR_CYCLE07_BOUNDED_ACTIVATION_AUTHORIZATION_NONLIVE",
+    "authorization_result_token": "COSMO_SR_CYCLE07_SINGLE_LANE_ACTIVATION_AUTHORIZED_NONLIVE_v0",
+    "branch_chain_status": "UNAMBIGUOUS_SINGLE_ACTIVE_SEAM_PATH",
+    "execution_live_token_count": 0,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "minimum_bounded_activation_tranche": {
+      "target_row_id": "ROW-SEAM-COSMO-SR-001",
+      "target_lane": "COSMO_SR_CYCLE07",
+      "current_status": "NEXT_BOUNDED_DUAL_SEAM_CONTINUATION_EXECUTION_CHECKPOINT_PINNED",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE07_v0.md",
+      "required_closure_artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle07_v0.json",
+      "required_closure_gate": "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle07_gate.py",
+      "required_exit_criterion": "CYCLE_GATE_AND_SYNTHESIS_GATE_PASS",
+      "bounded_scope": "SINGLE_ROW_SINGLE_SEAM_COSMO_SR_CYCLE07_ACTIVATION_AUTHORIZATION_ONLY"
+    }
+  },
+  "bounded_activation_authorization_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_COSMO_SR_BOUNDED_ACTIVATION_AUTHORIZATION_OUTCOME",
+    "no_loop_rule": "ONE_COSMO_SR_BOUNDED_ACTIVATION_AUTHORIZATION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "COSMO_SR_CYCLE07_SINGLE_LANE_ACTIVATION_AUTHORIZED_NONLIVE_v0",
+      "COSMO_SR_BOUNDED_ACTIVATION_AUTHORIZATION_BLOCKED",
+      "COSMO_SR_BOUNDED_ACTIVATION_AUTHORIZATION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_COSMO_SR_BOUNDED_ACTIVATION_AUTHORIZATION_REPAIR"
+    ],
+    "default_outcome": "COSMO_SR_BOUNDED_ACTIVATION_AUTHORIZATION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local COSMO-SR bounded activation authorization declaration only; no scientific adequacy claim."
+}

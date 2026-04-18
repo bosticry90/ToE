@@ -83,6 +83,7 @@ Program status tokens:
 - `PILLAR_DEEP_MATURITY_CURRENT_PHASE_v0: PHASE_5_M5_COMPLETION_CLOSED_v0`
 - `PILLAR_DEEP_MATURITY_ACTIVE_TARGET_v0: TARGET-PHASE5-SR-M5-CONTROLLED-v0`
 - `PILLAR_DEEP_MATURITY_NEXT_TARGET_v0: TARGET-PHASE5-SR-M5-CONTROLLED-v0`
+- `PILLAR_DEEP_MATURITY_M4_LIVE_BLOCKER_RULE_v0: M4_BOUNDED_ARTIFACTS_REQUIRE_EXPLICIT_LIVE_BLOCKER_QUALIFIER_v0`
 - `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_STATUS_v0: COMPLETE_BOUNDED_v0`
 - `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_ARTIFACT_v0: phase5_m5_completion_closeout_checkpoint_v0`
 - `PILLAR_DEEP_MATURITY_PHASE5_CLOSEOUT_SHA256_v0: e78f7b123d8ea1311d5616e8f6de85af6423281403ff683de58b0fda3bf21c00`
@@ -100,6 +101,8 @@ Definitions:
 Rule:
 - A pillar may be considered deep-mature only when M1-M5 are all complete in bounded scope.
 - Matrix `CLOSED` is necessary but not sufficient for deep maturity.
+- Bounded `M4_STATUS_v0: COMPLETE_*` records artifact-level seam-promotion closure only and do not clear live theorem-gap accounting by themselves.
+- Live blocker qualifiers remain authoritative until the matching completion-matrix theorem-gap rows close.
 
 ## Program Phases
 
@@ -128,13 +131,13 @@ Current execution status:
 - QFT M3 completion-promotion tranche is complete under non-claim boundaries.
 - SR M3 completion-promotion tranche is complete under non-claim boundaries.
 - phase-level M3 consolidation checkpoint is complete under non-claim boundaries.
-- QM M4 seam-closure promotion tranche is complete under non-claim boundaries.
-- GR M4 seam-closure promotion tranche is complete under non-claim boundaries.
-- STAT M4 seam-closure promotion tranche is complete under non-claim boundaries.
-- COSMO M4 seam-closure promotion tranche is complete under non-claim boundaries.
-- EM M4 seam-closure promotion tranche is complete under non-claim boundaries.
-- QFT M4 seam-closure promotion tranche is complete under non-claim boundaries.
-- SR M4 seam-closure promotion tranche is complete under non-claim boundaries.
+- QM M4 seam-closure promotion tranche is complete under non-claim boundaries; live theorem-gap qualifier remains explicit.
+- GR M4 seam-closure promotion tranche is complete under non-claim boundaries; live theorem-gap qualifier remains explicit.
+- STAT M4 seam-closure promotion tranche is complete under non-claim boundaries; live theorem-gap qualifier remains explicit.
+- COSMO M4 seam-closure promotion tranche is complete under non-claim boundaries; live theorem-gap qualifier remains explicit.
+- EM M4 seam-closure promotion tranche is complete under non-claim boundaries; live theorem-gap qualifier remains explicit.
+- QFT M4 seam-closure promotion tranche is complete under non-claim boundaries; live theorem-gap qualifier remains explicit.
+- SR M4 seam-closure promotion tranche is complete under non-claim boundaries; live theorem-gap qualifier remains explicit.
 - SR M5 theory-parity-link targeting is complete and transitioned to terminal bounded posture.
 
 Scope:
@@ -165,7 +168,7 @@ Scope:
 
 Exit criteria:
 - Seam packages are synchronized and non-contradictory.
-- All pillars have `M4_STATUS_v0: COMPLETE_*`.
+- All pillars have `M4_STATUS_v0: COMPLETE_*` with explicit live-blocker qualifier disclosure until theorem-gap rows close.
 
 ### Phase 5: M5 theory-parity-link execution
 

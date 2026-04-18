@@ -86,7 +86,8 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         str(transition_summary.get("selected_route", "")).strip() == "EXECUTE_BOUNDED_QUEUE_REVIEW_PASS"
         and str(review_pass_summary.get("selected_next_route", "")).strip() == "EXECUTE_ONE_BOUNDED_QUEUE_RESCORING"
         and str(rescoring_summary.get("terminal_route", "")).strip() == "ACTIVATE_NEXT_RANKED_SEAM"
-        and rank_gap_after_rescoring == rank_gap_threshold
+        and rank_gap_after_rescoring is not None
+        and rank_gap_after_rescoring >= rank_gap_threshold
     )
 
     external_discriminative_leverage_established = bool(

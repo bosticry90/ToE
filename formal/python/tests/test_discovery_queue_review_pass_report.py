@@ -19,13 +19,13 @@ def test_discovery_queue_review_pass_reports_weak_rank3_and_bounded_rescore_rout
 
     assert payload["schema_id"] == "DISCOVERY_QUEUE_REVIEW_PASS_REPORT_20260411_v0"
     summary = payload["summary"]
-    assert summary["rank3_candidate"] == "ROW-PILLAR-GR-001"
+    assert summary["rank3_candidate"] == "ROW-SEAM-COSMO-SR-001"
     assert summary["rank_separation_status"] == "WEAK_OR_NOISY"
     assert summary["review_outcome"] == "QUEUE_REVIEW_SUPPORTS_ONE_BOUNDED_QUEUE_RESCORING"
     assert summary["selected_next_route"] == "EXECUTE_ONE_BOUNDED_QUEUE_RESCORING"
     assert summary["minimum_activation_delta"]["required_rank3_over_rank4_gap"] == 3
-    assert summary["minimum_activation_delta"]["current_rank3_over_rank4_gap"] == 1
-    assert summary["minimum_activation_delta"]["additional_gap_needed"] == 2
+    assert summary["minimum_activation_delta"]["current_rank3_over_rank4_gap"] == 2
+    assert summary["minimum_activation_delta"]["additional_gap_needed"] == 1
 
     criteria = payload["criteria"]
     assert criteria["transition_route_matches_expected_queue_review"] is True

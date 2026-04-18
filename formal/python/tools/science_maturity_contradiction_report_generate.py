@@ -90,6 +90,10 @@ def _severity_rank(value: str) -> int:
     return {"LOW": 1, "MEDIUM": 2, "HIGH": 3}.get(value, 0)
 
 
+def _is_qualified_live_theorem_gap(pillar: dict[str, Any]) -> bool:
+    return str(pillar.get("m4_live_blocker_qualifier", "")).strip() == "LIVE_THEOREM_GAP_OPEN_v0"
+
+
 def _is_active_row_for_stale_readiness(row: dict[str, Any]) -> bool:
     if not isinstance(row, dict):
         return False
@@ -112,6 +116,7 @@ def build_science_maturity_contradiction_report(*, output_path: Path, captured_a
 
     maturity_rows = _maturity_rows_by_pillar(maturity_registry)
     contradictions: list[dict[str, Any]] = []
+    modeled_observations: list[dict[str, Any]] = []
 
     for row in matrix_rows:
         if row["domain"] != "pillar" or row["blocker_class"] != "THEOREM_GAP":
@@ -121,19 +126,32 @@ def build_science_maturity_contradiction_report(*, output_path: Path, captured_a
         if not pillar:
             continue
         if str(pillar.get("m4_status", "")).strip() == "COMPLETE_BOUNDED_v0":
-            contradictions.append(
-                {
-                    "contradiction_id": f"CONTRA-PILLAR-{pillar_id}-M4-THEOREM-GAP",
-                    "contradiction_type": "PILLAR_M4_COMPLETE_VS_LIVE_THEOREM_GAP",
-                    "severity": "HIGH",
-                    "row_id": row["row_id"],
-                    "pillar_id": pillar_id,
-                    "live_blocker_class": row["blocker_class"],
-                    "live_current_status": row["current_status"],
-                    "m4_status": pillar.get("m4_status"),
-                    "maturity_program_status": maturity_registry.get("program_status", {}).get("PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0"),
-                }
-            )
+            entry = {
+                "row_id": row["row_id"],
+                "pillar_id": pillar_id,
+                "live_blocker_class": row["blocker_class"],
+                "live_current_status": row["current_status"],
+                "m4_status": pillar.get("m4_status"),
+                "m4_live_blocker_qualifier": pillar.get("m4_live_blocker_qualifier"),
+                "maturity_program_status": maturity_registry.get("program_status", {}).get("PILLAR_DEEP_MATURITY_PROGRAM_STATUS_v0"),
+            }
+            if _is_qualified_live_theorem_gap(pillar):
+                modeled_observations.append(
+                    {
+                        "observation_id": f"OBS-PILLAR-{pillar_id}-M4-QUALIFIED-LIVE-THEOREM-GAP",
+                        "observation_type": "PILLAR_M4_QUALIFIED_BY_LIVE_THEOREM_GAP",
+                        **entry,
+                    }
+                )
+            else:
+                contradictions.append(
+                    {
+                        "contradiction_id": f"CONTRA-PILLAR-{pillar_id}-M4-THEOREM-GAP",
+                        "contradiction_type": "PILLAR_M4_COMPLETE_VS_LIVE_THEOREM_GAP",
+                        "severity": "HIGH",
+                        **entry,
+                    }
+                )
 
     seam_entries = seam_ledger.get("entries", [])
     for entry in seam_entries:
@@ -228,6 +246,7 @@ def build_science_maturity_contradiction_report(*, output_path: Path, captured_a
         ],
         "summary": {
             "contradictions_total": len(contradictions),
+            "modeled_observations_total": len(modeled_observations),
             "contradiction_types_present": contradiction_types,
             "highest_severity": highest_severity,
             "matrix_rows_evaluated": len(matrix_rows),
@@ -238,6 +257,7 @@ def build_science_maturity_contradiction_report(*, output_path: Path, captured_a
             "live_progress_classification": physics_progress.get("progress_classification"),
         },
         "contradictions": contradictions,
+        "modeled_observations": modeled_observations,
         "source_bundle": {
             "completion_matrix": _ptr(COMPLETION_MATRIX_PATH),
             "maturity_registry": _ptr(MATURITY_REGISTRY_PATH),

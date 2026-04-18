@@ -172,6 +172,31 @@ def test_scoring_routing_review_reopens_when_external_path_signal_is_present(
     assert report["summary"]["next_action"] == "AUTHORIZE_ONE_BOUNDED_LANE_EXPANSION"
 
 
+def test_scoring_routing_review_keeps_queue_coherent_when_rescored_gap_exceeds_threshold(
+    tmp_path: Path,
+    monkeypatch,
+) -> None:
+    monkeypatch.setattr(review_tool, "REPO_ROOT", tmp_path)
+
+    declaration_path = (
+        tmp_path / "formal" / "docs" / "release" / "DISCOVERY_ENGINE_SCORING_ROUTING_REVIEW_20260411_v0.json"
+    )
+    reports_dir = tmp_path / "formal" / "output" / "reports"
+    release_dir = tmp_path / "formal" / "docs" / "release"
+
+    _write_declaration(declaration_path)
+    _write_common_inputs(reports_dir, release_dir)
+    _write_json(
+        reports_dir / "discovery_queue_rescoring_pass_report_20260411_v0.json",
+        {"summary": {"terminal_route": "ACTIVATE_NEXT_RANKED_SEAM", "rank_gap_after_rescoring": 4}},
+    )
+
+    report = review_tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
+
+    assert report["summary"]["scoring_weight_assessment"] == "KEEP_BASE_WEIGHTS_ADD_EXTERNAL_PATH_GATING_OVERLAY"
+    assert report["summary"]["selected_review_disposition"] == "HOLD_EXPANSION_REASSESS_SCORING_ROUTING_ONLY"
+
+
 def test_scoring_routing_review_requires_repair_when_queue_behavior_is_not_coherent(
     tmp_path: Path,
     monkeypatch,

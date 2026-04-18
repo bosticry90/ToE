@@ -1,0 +1,31 @@
+{
+  "schema_id": "FINAL_NONCLAIM_INTEGRATION_PROMOTION_GATE_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Aggregate the Phase 3 seam executable-path normalization surface, the Phase 4 master-action transport-binding recovery surface, and the Phase 5 derivation-chain transport standardization surface under one fail-closed final non-claim integration and promotion gate.",
+  "required_inputs": {
+    "seam_executable_path_normalization_report": "formal/output/reports/seam_executable_path_normalization_20260418_v0.json",
+    "master_action_packet01_transport_binding_recovery_report": "formal/output/reports/master_action_packet_01_transport_binding_recovery_20260418_v0.json",
+    "derivation_chain_transport_standardization_report": "formal/output/reports/derivation_chain_transport_standardization_20260418_v0.json"
+  },
+  "gate_policy": {
+    "required_phase3_terminal_outcome": "SEAM_EXECUTABLE_PATHS_NORMALIZED",
+    "required_phase4_terminal_outcome": "MASTER_ACTION_PACKET01_TRANSPORT_BINDING_RECOVERY_STATE_MATERIALIZED",
+    "required_phase5_terminal_outcome": "DERIVATION_CHAIN_TRANSPORT_STANDARDIZATION_MATERIALIZED",
+    "required_single_executable_seam": "SEAM-COSMO-SR",
+    "required_phase4_blocker": "NO_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE",
+    "required_phase5_admitted_pillar_count": 7,
+    "required_phase5_transport_read_token": "PACKET01_PRESERVED_BASELINE_PLUS_WITNESS_BINDING_PLUS_MINIMAL_UPSTREAM_UNIT_PLUS_EXPLICIT_BLOCKER",
+    "gate_boundary": "FINAL_NONCLAIM_INTEGRATION_ONLY_NO_EXTERNAL_TRUTH_PROMOTION_NO_LIVE_AUTHORIZATION"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_FINAL_NONCLAIM_INTEGRATION_PROMOTION_GATE_OUTCOME",
+    "no_loop_rule": "ONE_FINAL_NONCLAIM_INTEGRATION_PROMOTION_GATE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "FINAL_NONCLAIM_INTEGRATION_PROMOTION_GATE_SATISFIED",
+      "FINAL_NONCLAIM_INTEGRATION_PROMOTION_GATE_BLOCKED",
+      "HOLD_PENDING_FINAL_NONCLAIM_INTEGRATION_REPAIR"
+    ],
+    "default_outcome": "FINAL_NONCLAIM_INTEGRATION_PROMOTION_GATE_BLOCKED"
+  },
+  "non_claim_boundary": "Repository-local final non-claim integration and promotion gate declaration only; no scientific adequacy claim."
+}

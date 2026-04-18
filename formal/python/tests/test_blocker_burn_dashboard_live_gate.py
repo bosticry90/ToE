@@ -62,9 +62,19 @@ def test_blocker_burn_dashboard_live_report_is_consistent() -> None:
     assert readiness_rows["ROW-SEAM-GR-QM-001"]["governance_checkpoint_status"] == "GOVERNANCE_COMPLETE"
     assert readiness_rows["ROW-SEAM-GR-QM-001"]["physics_checkpoint_status"] == "PHYSICS_COMPLETE"
     assert readiness_rows["ROW-SEAM-GR-QM-001"]["gate_runtime_status"] == "GATE_RUNTIME_RECOMPUTE_MONITORING_REQUIRED"
-    assert readiness_rows["ROW-PILLAR-EM-001"]["governance_checkpoint_status"] == "NOT_APPLICABLE_PILLAR_ROW"
-    assert readiness_rows["ROW-PILLAR-EM-001"]["physics_checkpoint_status"] == "THEOREM_GAP_OPEN"
-    assert readiness_rows["ROW-PILLAR-EM-001"]["gate_runtime_status"] == "PATH_PINNED_RUNTIME_NOT_YET_RECORDED"
+    theorem_gap_rows_with_recorded_runtime = (
+        "ROW-PILLAR-QM-001",
+        "ROW-PILLAR-GR-001",
+        "ROW-PILLAR-STAT-001",
+        "ROW-PILLAR-COSMO-001",
+        "ROW-PILLAR-EM-001",
+        "ROW-PILLAR-QFT-001",
+        "ROW-PILLAR-SR-001",
+    )
+    for row_id in theorem_gap_rows_with_recorded_runtime:
+        assert readiness_rows[row_id]["governance_checkpoint_status"] == "NOT_APPLICABLE_PILLAR_ROW"
+        assert readiness_rows[row_id]["physics_checkpoint_status"] == "THEOREM_GAP_OPEN"
+        assert readiness_rows[row_id]["gate_runtime_status"] == "PATH_PINNED_RUNTIME_RECORDED"
 
     closure_linkage = payload.get("closure_map_linkage", {})
     assert closure_linkage.get("rows_total") == 11
@@ -80,6 +90,49 @@ def test_blocker_burn_dashboard_live_report_is_consistent() -> None:
     stale_sources = set(freshness.get("stale_sources", []))
     assert "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md" in stale_sources
     assert "formal/output/reports/convergence_baseline_pack_20260409_v0.json" in stale_sources
+
+
+def test_theorem_gap_runtime_status_matches_execution_checkpoints() -> None:
+    matrix_text = _read(REPO_ROOT / "formal" / "docs" / "release" / "TOE_GLOBAL_COMPLETION_MATRIX_v0.md")
+    checkpoint_paths = (
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_06_GR_PILLAR_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_10_GR_PACKET05_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_22_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_26_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_30_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_34_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_38_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_42_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_46_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_50_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_59_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_63_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_70_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_74_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_77_QM_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260409_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_78_COSMO_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260409_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_81_EM_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260410_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_83_QFT_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260410_v0.md",
+        REPO_ROOT / "formal" / "docs" / "release" / "WS_10_TGC_85_SR_THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_20260410_v0.md",
+    )
+
+    for checkpoint_path in checkpoint_paths:
+        checkpoint_text = _read(checkpoint_path)
+        assert "passed in" in checkpoint_text
+
+    expected_rows = (
+        "ROW-PILLAR-QM-001",
+        "ROW-PILLAR-GR-001",
+        "ROW-PILLAR-STAT-001",
+        "ROW-PILLAR-COSMO-001",
+        "ROW-PILLAR-EM-001",
+        "ROW-PILLAR-QFT-001",
+        "ROW-PILLAR-SR-001",
+    )
+    for row_id in expected_rows:
+        assert f"| {row_id} |" in matrix_text
+
+    assert matrix_text.count("PATH_PINNED_RUNTIME_RECORDED") >= len(expected_rows)
 
 
 def test_blocker_burn_dashboard_authority_pointers_are_pinned() -> None:

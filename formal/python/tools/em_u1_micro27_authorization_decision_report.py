@@ -51,13 +51,16 @@ def _ptr(path: Path) -> str:
     return str(path.relative_to(REPO_ROOT)).replace("\\", "/")
 
 
-def _em_theorem_gap_contradiction_entry(contradictions: list[dict[str, Any]]) -> dict[str, Any]:
-    for entry in contradictions:
+def _em_live_theorem_gap_entry(entries: list[dict[str, Any]], key: str) -> dict[str, Any]:
+    for entry in entries:
         if not isinstance(entry, dict):
             continue
         if str(entry.get("row_id", "")).strip() != "ROW-PILLAR-EM-001":
             continue
-        if str(entry.get("contradiction_type", "")).strip() != "PILLAR_M4_COMPLETE_VS_LIVE_THEOREM_GAP":
+        if str(entry.get(key, "")).strip() not in {
+            "PILLAR_M4_COMPLETE_VS_LIVE_THEOREM_GAP",
+            "PILLAR_M4_QUALIFIED_BY_LIVE_THEOREM_GAP",
+        }:
             continue
         return entry
     return {}
@@ -73,6 +76,9 @@ def build_report(*, captured_at_utc: str | None) -> dict[str, Any]:
     contradictions = contradiction_report.get("contradictions", [])
     if not isinstance(contradictions, list):
         contradictions = []
+    modeled_observations = contradiction_report.get("modeled_observations", [])
+    if not isinstance(modeled_observations, list):
+        modeled_observations = []
 
     micro27_target_pinned = MICRO27_TARGET_DOC_PATH.exists()
     progress_classification = str(physics_progress.get("progress_classification", "")).strip()
@@ -83,7 +89,9 @@ def build_report(*, captured_at_utc: str | None) -> dict[str, Any]:
         == "STOP_AT_MICRO26_CLOSEOUT_PENDING_EXPLICIT_MICRO27_AUTHORIZATION"
         and str(micro26_summary.get("authorized_follow_on", "")).strip() == "MICRO27_ONLY_IF_EXPLICITLY_AUTHORIZED"
     )
-    em_theorem_gap_entry = _em_theorem_gap_contradiction_entry(contradictions)
+    em_theorem_gap_entry = _em_live_theorem_gap_entry(contradictions, "contradiction_type")
+    if not em_theorem_gap_entry:
+        em_theorem_gap_entry = _em_live_theorem_gap_entry(modeled_observations, "observation_type")
     em_row_still_live_theorem_gap = bool(em_theorem_gap_entry)
 
     if closeout_requires_explicit_authorization and em_row_still_live_theorem_gap:
@@ -127,7 +135,7 @@ def build_report(*, captured_at_utc: str | None) -> dict[str, Any]:
         "target_context": {
             "target_id": "TARGET-EM-U1-MICRO-27-BINDING-ASSUMPTIONS-DISCHARGE-FROM-SMOOTHNESS-v0",
             "target_doc": _ptr(MICRO27_TARGET_DOC_PATH),
-            "live_em_contradiction": em_theorem_gap_entry,
+            "live_em_theorem_gap_entry": em_theorem_gap_entry,
             "contradictions_total": contradiction_summary.get("contradictions_total"),
         },
         "source_bundle": {

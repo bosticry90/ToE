@@ -8,6 +8,8 @@
 ## Objective
 Define one fail-closed contradiction surface that makes maturity-surface claims and live blocker/seam truth disagreements explicit without changing any underlying authority source.
 
+Qualified maturity rows are modeled, not contradictory, when the maturity registry explicitly declares that a bounded M4 artifact remains subject to a live theorem-gap qualifier.
+
 ## Required source bundle
 - `formal/docs/release/PILLAR_DEEP_MATURITY_REGISTRY_v0.json`
 - `formal/docs/release/PILLAR_DEEP_MATURITY_PROGRAM_v0.md`
@@ -28,7 +30,7 @@ Define one fail-closed contradiction surface that makes maturity-surface claims 
 
 ## Exact fail conditions
 - `PILLAR_M4_COMPLETE_VS_LIVE_THEOREM_GAP`
-  Trigger: a pillar row is live in the completion matrix with blocker class `THEOREM_GAP` while the maturity registry marks the same pillar `m4_status: COMPLETE_BOUNDED_v0`.
+  Trigger: a pillar row is live in the completion matrix with blocker class `THEOREM_GAP` while the maturity registry marks the same pillar `m4_status: COMPLETE_BOUNDED_v0` and does not supply the explicit qualifier `m4_live_blocker_qualifier: LIVE_THEOREM_GAP_OPEN_v0`.
 - `SEAM_PHYSICS_COMPLETE_VS_LIVE_HOLD_OR_PARITY`
   Trigger: a live seam ledger row has `physics_complete: true` while the same row still carries a held decision state or blocker class `PARITY_DRIFT` or `SEAM_INTEGRATION_GAP`.
 - `LIVE_SEAM_ROW_MISSING_CANONICAL_STATUS`
@@ -39,6 +41,7 @@ Define one fail-closed contradiction surface that makes maturity-surface claims 
 ## Interpretation rules
 - This report is additive and does not override the maturity registry, completion matrix, dashboard, or seam ledger.
 - Presence of any contradiction forces `contradiction_status: FAIL_CLOSED_CONTRADICTIONS_PRESENT`.
+- Qualified M4 rows with `m4_live_blocker_qualifier: LIVE_THEOREM_GAP_OPEN_v0` must be emitted as modeled observations so downstream tooling can still bind to the live blocker fact.
 - The report exists to expose inconsistent reads, not to normalize or average them.
 
 ## Verification entry point

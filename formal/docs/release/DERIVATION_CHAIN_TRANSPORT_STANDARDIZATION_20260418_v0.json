@@ -1,0 +1,32 @@
+{
+  "schema_id": "DERIVATION_CHAIN_TRANSPORT_STANDARDIZATION_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Bind the admitted derivation-chain pillar grammar to the canonical Phase 4 master-action transport read and standardize that read across the admitted derivation surfaces under one machine-checkable non-claim surface.",
+  "required_inputs": {
+    "foundational_derivation_chain_standard": "formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_STANDARD_v0.md",
+    "foundational_derivation_chain_execution_plan": "formal/docs/release/FOUNDATIONAL_DERIVATION_CHAIN_EXECUTION_PLAN_v0.md",
+    "foundational_derivation_chain_matrix": "formal/docs/paper/FOUNDATIONAL_DERIVATION_CHAIN_MATRIX_v0.json",
+    "master_action_packet01_transport_binding_recovery_report": "formal/output/reports/master_action_packet_01_transport_binding_recovery_20260418_v0.json"
+  },
+  "standardization_policy": {
+    "required_phase4_terminal_outcome": "MASTER_ACTION_PACKET01_TRANSPORT_BINDING_RECOVERY_STATE_MATERIALIZED",
+    "required_phase4_transport_read_token": "PACKET01_PRESERVED_BASELINE_PLUS_WITNESS_BINDING_PLUS_MINIMAL_UPSTREAM_UNIT_PLUS_EXPLICIT_BLOCKER",
+    "required_next_action": "USE_CANONICAL_MASTER_ACTION_TRANSPORT_READ_FOR_PHASE5_DERIVATION_CHAIN_STANDARDIZATION",
+    "required_matrix_version": 3,
+    "required_admitted_pillar_count": 7,
+    "required_phase_status": "COMPLETE_BOUNDED_v0",
+    "required_m3_stage_status": "COMPLETE_BOUNDED_v0",
+    "phase5_boundary": "STANDARDIZE_DERIVATION_CHAIN_GRAMMAR_AND_CANONICAL_TRANSPORT_READ_ONLY_NO_LIVE_PROMOTION_NO_SEAM_REOPEN"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_DERIVATION_CHAIN_TRANSPORT_STANDARDIZATION_OUTCOME",
+    "no_loop_rule": "ONE_DERIVATION_CHAIN_TRANSPORT_STANDARDIZATION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "DERIVATION_CHAIN_TRANSPORT_STANDARDIZATION_MATERIALIZED",
+      "DERIVATION_CHAIN_TRANSPORT_STANDARDIZATION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_DERIVATION_CHAIN_TRANSPORT_STANDARDIZATION_REPAIR"
+    ],
+    "default_outcome": "DERIVATION_CHAIN_TRANSPORT_STANDARDIZATION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local derivation-chain transport standardization declaration only; no scientific adequacy claim."
+}

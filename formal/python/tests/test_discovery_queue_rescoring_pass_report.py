@@ -19,9 +19,9 @@ def test_discovery_queue_rescoring_pass_supports_activation_after_bounded_adjust
 
     assert payload["schema_id"] == "DISCOVERY_QUEUE_RESCORING_PASS_REPORT_20260411_v0"
     summary = payload["summary"]
-    assert summary["rank3_candidate"] == "ROW-PILLAR-GR-001"
-    assert summary["rank_gap_before_rescoring"] == 1
-    assert summary["rank_gap_after_rescoring"] == 3
+    assert summary["rank3_candidate"] == "ROW-SEAM-COSMO-SR-001"
+    assert summary["rank_gap_before_rescoring"] == 2
+    assert summary["rank_gap_after_rescoring"] == 4
     assert summary["rank_gap_threshold"] == 3
     assert summary["activation_now_justified"] is True
     assert summary["selected_next_route"] == "ACTIVATE_NEXT_RANKED_SEAM"

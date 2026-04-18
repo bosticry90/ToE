@@ -54,9 +54,9 @@ def test_em_micro27_authorization_report_is_pinned_and_closed() -> None:
         "EM_LOCAL_BLOCKER_EVENT_OR_EXPLICIT_MICRO27_AUTHORIZATION_TRANCHE"
     )
 
-    contradiction = report["target_context"]["live_em_contradiction"]
-    assert contradiction["row_id"] == "ROW-PILLAR-EM-001"
-    assert contradiction["contradiction_type"] == "PILLAR_M4_COMPLETE_VS_LIVE_THEOREM_GAP"
+    theorem_gap_entry = report["target_context"]["live_em_theorem_gap_entry"]
+    assert theorem_gap_entry["row_id"] == "ROW-PILLAR-EM-001"
+    assert theorem_gap_entry.get("contradiction_type") == "PILLAR_M4_COMPLETE_VS_LIVE_THEOREM_GAP" or theorem_gap_entry.get("observation_type") == "PILLAR_M4_QUALIFIED_BY_LIVE_THEOREM_GAP"
 
 
 def test_em_micro27_authorization_tool_and_authority_surfaces_pin_closed_decision() -> None:

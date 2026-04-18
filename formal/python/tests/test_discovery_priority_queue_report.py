@@ -26,4 +26,6 @@ def test_build_report_ranks_qm_stat_first() -> None:
     assert payload["ranked_candidates"][0]["rank"] == 1
     assert payload["ranked_candidates"][0]["row_id"] == "ROW-SEAM-QM-STAT-001"
     assert payload["ranked_candidates"][0]["score"] >= payload["ranked_candidates"][1]["score"]
-    assert payload["blocker_context"]["net_delta"] == 0
+    assert "ROW-PILLAR-GR-001" not in {row["row_id"] for row in payload["ranked_candidates"]}
+    assert payload["ranked_candidates"][2]["row_id"] == "ROW-SEAM-COSMO-SR-001"
+    assert payload["blocker_context"]["net_delta"] == -1

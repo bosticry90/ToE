@@ -77,21 +77,24 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     default_outcome = str(review_contract.get("default_outcome", "HOLD_ROW_001_AND_STOP_ATTACK_CLASS_CYCLING")).strip()
 
     convergent_insufficient = (
-        transport_retry_outcome == "GR_MASTER_ACTION_TRANSPORT_OBLIGATION_DECLARED_BUT_STILL_INSUFFICIENT"
+        transport_retry_outcome == "GR_TRANSPORT_OBLIGATION_DECLARED_BUT_STILL_INSUFFICIENT"
         and alignment_retry_outcome == "GR_REGIME_LIMIT_ALIGNMENT_OBLIGATION_DECLARED_BUT_STILL_INSUFFICIENT"
     )
 
     both_obligations_declared = (
-        transport_obligation_outcome == "GR_MASTER_ACTION_TRANSPORT_OBLIGATION_DECLARED"
+        transport_obligation_outcome == "GR_TRANSPORT_OBLIGATION_DECLARED"
         and alignment_obligation_outcome == "GR_REGIME_LIMIT_ALIGNMENT_OBLIGATION_DECLARED"
     )
 
-    if not (convergent_insufficient and both_obligations_declared):
+    if convergent_insufficient and both_obligations_declared:
+        terminal_outcome = "HIGHER_LEVEL_GR_STRUCTURE_REQUIRES_NEW_SEAM_OR_MODEL_CLASS"
+        next_action = "FREEZE_ROW_001_ATTACK_CLASS_CYCLING_AND_DEFINE_NEW_GR_SEAM_OR_MODEL_CLASS"
+    elif not convergent_insufficient:
         terminal_outcome = "HOLD_ROW_001_AND_STOP_ATTACK_CLASS_CYCLING"
         next_action = "VERIFY_CONVERGENT_FAILURE_PATTERN_AND_RETRY"
-    elif convergent_insufficient and both_obligations_declared:
+    elif not both_obligations_declared:
         terminal_outcome = "HOLD_ROW_001_AND_STOP_ATTACK_CLASS_CYCLING"
-        next_action = "ESCALATE_ROW_001_STRUCTURAL_REVIEW_BEYOND_ATTACK_CLASS_SELECTION"
+        next_action = "RESTORE_DECLARED_OBLIGATION_PARITY_BEFORE_ANY_RETRY"
     else:
         terminal_outcome = default_outcome
         next_action = "ASSESS_ROW_001_READINESS_FOR_HIGHER_LEVEL_ANALYSIS"
@@ -138,7 +141,9 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
                 },
                 "phase_status": "COMPLETE",
                 "next_action": next_action,
-                "row_structure_status": "REQUIRES_HIGHER_LEVEL_ANALYSIS"
+                "row_structure_status": "FROZEN_REQUIRES_NEW_SEAM_OR_MODEL_CLASS"
+                if convergent_insufficient and both_obligations_declared
+                else "REQUIRES_HIGHER_LEVEL_ANALYSIS"
                 if convergent_insufficient
                 else "ATTACK_CLASS_SELECTION_AVAILABLE",
             },

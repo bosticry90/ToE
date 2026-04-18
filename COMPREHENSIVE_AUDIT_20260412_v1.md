@@ -58,7 +58,7 @@ The Theory of Everything (ToE) repository represents a sophisticated, formally-g
 | **GR (Full)** | M2 | SCAFFOLD_PHASE | Action-RAC weak-field transport (1 THEOREM_GAP) |
 | **QM (Full)** | M2 | CONTRACT_BRIDGE | Unitary recovery derivation (1 THEOREM_GAP) |
 | **QFT** | M2 | GAUGE_DEFINITION | Scattering amplitude routes out-of-scope (1 THEOREM_GAP) |
-| **SR (Covariance)** | M4 | CYCLE75_LOCKED | Lorentz covariance residuals bounded (0 active gaps) |
+| **SR (Covariance)** | M4 | CYCLE75_LOCKED | Lorentz covariance residuals bounded; bounded M4 label remains qualified by live theorem-gap accounting (1 THEOREM_GAP) |
 | **STAT** | M3 | CYCLE15_ACTIVE | Probability measure consistency (1 THEOREM_GAP) |
 | **COSMO** | M1 | EMPIRICAL_PILOT | Evidence diversification in progress (2 THEOREM_GAP) |
 
@@ -444,7 +444,7 @@ The Theory of Everything (ToE) repository represents a sophisticated, formally-g
 - Formalize seam decision process — current 14-day latency prevents progress
 - Initiate numerical validation pipeline (optional but recommended for credibility)
 
-**Physics Rating Justification**: Good local structure (SR/EM locked), incomplete global integration (seam gaps), limited empirical grounding. Effective ceiling is M2-M3 per pillar; M4-M5 requires seam resolution.
+**Physics Rating Justification**: Good local structure (SR/EM locked), incomplete global integration (seam gaps), limited empirical grounding. Bounded M4 labels remain qualifier-controlled until live theorem-gap rows close. Effective ceiling is M2-M3 per pillar; M4-M5 requires seam resolution.
 
 ---
 
