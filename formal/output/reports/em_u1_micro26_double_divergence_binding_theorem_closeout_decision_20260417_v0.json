@@ -1,0 +1,29 @@
+{
+  "captured_at_utc": "2026-04-18T02:17:37Z",
+  "criteria": {
+    "attempt_only_preserved": true,
+    "bounded_closeout_decision_materialized": true,
+    "bounded_scope_preserved": true,
+    "direct_prerequisite_pinned": true,
+    "execution_surface_green": true,
+    "packet01_frozen_out_of_scope": true,
+    "verification_tranche_green": true
+  },
+  "non_claim_boundary": "Repository-local EM U1 Micro-26 closeout decision report only; bounded attempt-only family status, no Micro-27 activation, no Packet-01 reopen, no theorem discharge, and no external-truth claim.",
+  "report_id": "EM_U1_MICRO26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSEOUT_DECISION_REPORT_v0",
+  "schema_id": "EM_U1_MICRO26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSEOUT_DECISION_20260417_v0",
+  "source_bundle": {
+    "execution_surface_report": "formal/output/em_u1_micro26_double_divergence_binding_theorem_closure_attempt_execution_surface_v0.json",
+    "gate": "formal/python/tests/test_em_u1_micro26_double_divergence_binding_theorem_closure_attempt.py",
+    "target_doc": "formal/docs/paper/DERIVATION_TARGET_EM_U1_MICRO_26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSURE_ATTEMPT_v0.md"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "summary": {
+    "authorized_follow_on": "MICRO27_ONLY_IF_EXPLICITLY_AUTHORIZED",
+    "decision": "RETAIN_MICRO26_BOUNDED_ENDPOINT_v0",
+    "decision_basis": "EXECUTION_SURFACE_GREEN_AND_BOUNDARY_GUARDS_PRESERVED",
+    "handoff_status": "READY_FOR_NEXT_AUTHORIZED_LANE_ONLY_v0",
+    "next_action": "STOP_AT_MICRO26_CLOSEOUT_PENDING_EXPLICIT_MICRO27_AUTHORIZATION",
+    "packet01_reopened": false
+  }
+}
