@@ -52,8 +52,8 @@ def test_seam_resolution_sla_live_report_is_consistent() -> None:
     assert summary.get("held_review_rows") == 1
     assert summary.get("missing_owner_rows") == []
     assert summary.get("owner_completion_rate") == 1.0
-    assert summary.get("missing_seam_status_rows") == ["ROW-SEAM-QFT-GR-001"]
-    assert summary.get("seam_status_coverage_rate") == 0.75
+    assert summary.get("missing_seam_status_rows") == []
+    assert summary.get("seam_status_coverage_rate") == 1.0
 
     entries = {entry["row_id"]: entry for entry in payload.get("entries", [])}
     assert entries["ROW-SEAM-QFT-GR-001"]["decision_state"] == "HOLD_RETAINED_PENDING_BRANCH_EXCEPTION_DECISION"
@@ -68,10 +68,11 @@ def test_seam_resolution_sla_live_report_is_consistent() -> None:
     assert entries["ROW-SEAM-QFT-GR-001"]["primary_owner"] == "TEAM_SEAM_QFT_GR"
     assert entries["ROW-SEAM-QFT-GR-001"]["secondary_owner"] == "TEAM_GOVERNANCE_CORE"
     assert entries["ROW-SEAM-QFT-GR-001"]["seam_id"] == "SEAM-QFT-GR"
-    assert entries["ROW-SEAM-QFT-GR-001"]["seam_class"] == "UNSPECIFIED"
-    assert entries["ROW-SEAM-QFT-GR-001"]["governance_complete"] is None
-    assert entries["ROW-SEAM-QFT-GR-001"]["physics_complete"] is None
-    assert entries["ROW-SEAM-QFT-GR-001"]["seam_status_resolution"] == "MISSING_CANONICAL_SEAM_STATUS"
+    assert entries["ROW-SEAM-QFT-GR-001"]["seam_class"] == "B"
+    assert entries["ROW-SEAM-QFT-GR-001"]["governance_complete"] is False
+    assert entries["ROW-SEAM-QFT-GR-001"]["physics_complete"] is False
+    assert entries["ROW-SEAM-QFT-GR-001"]["seam_status_read"] == "CLASS_B_HELD_FOR_SCALAR_PUBLICATION_NOT_GOVERNANCE_COMPLETE_NOT_PHYSICS_COMPLETE"
+    assert entries["ROW-SEAM-QFT-GR-001"]["seam_status_resolution"] == "CANONICAL_SEAM_STATUS_PINNED"
     assert entries["ROW-SEAM-QFT-GR-001"]["required_evidence_surface"] == "formal/docs/paper/TOE_QFT_GR_SEAM_REACTIVATION_OBJECTIVE_v0.md"
     assert entries["ROW-SEAM-QFT-GR-001"]["next_review_due_utc"]
     assert entries["ROW-SEAM-QFT-GR-001"]["escalation_due_utc"]

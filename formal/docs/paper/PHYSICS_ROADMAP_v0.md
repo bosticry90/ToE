@@ -714,6 +714,22 @@ No-deviation sequencing rule:
   - `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`
   - `formal/toe_formal/ToeFormal/Bridges/EM_QFT_SeamPromotion.lean`
   - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_v0.md`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md`
+  - `formal/output/toe_master_action_computational_analysis_packet_01_v0.json`
+  - `formal/output/reports/toe_master_action_computational_analysis_packet_01_20260417_v0.json`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_DECISION_RECORD_v0.md`
+  - `formal/output/reports/toe_master_action_computational_analysis_packet_01_decision_20260417_v0.json`
+  - `formal/python/tests/test_toe_master_action_computational_analysis_packet_01_gate.py`
+  - `formal/python/tests/test_toe_master_action_computational_analysis_packet_01_decision_record_gate.py`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md`
+  - `formal/output/toe_master_action_computational_analysis_packet_01_refinement_01_v0.json`
+  - `formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_01_20260417_v0.json`
+  - `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_CLOSEOUT_DECISION_RECORD_v0.md`
+  - `formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_closeout_20260417_v0.json`
+  - `formal/docs/paper/TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_FAMILY_PRESERVATION_NOTE_v0.md`
+  - `formal/python/tests/test_toe_master_action_computational_analysis_packet_01_refinement_01_gate.py`
+  - `formal/python/tests/test_toe_master_action_computational_analysis_packet_01_refinement_closeout_decision_record_gate.py`
+  - `formal/python/tests/test_toe_master_action_computational_analysis_packet_01_family_preservation_note_gate.py`
   - `formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_DECISION_RECORD_v0.md`
   - `formal/docs/paper/DERIVATION_TARGET_QM_STAT_RL10_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md`

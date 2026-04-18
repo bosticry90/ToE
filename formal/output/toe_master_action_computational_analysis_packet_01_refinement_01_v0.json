@@ -1,0 +1,61 @@
+{
+  "artifact_id": "toe_master_action_computational_analysis_packet_01_refinement_01_v0",
+  "payload": {
+    "status": "RUN_BOUNDED_v0_NONCLAIM",
+    "authorization_class": "AUXILIARY_NONCLAIM_COMPUTATIONAL_ANALYSIS",
+    "decision": "INCONCLUSIVE_v0",
+    "baseline_artifact_pointer": "formal/output/toe_master_action_computational_analysis_packet_01_v0.json",
+    "baseline_execution_report_pointer": "formal/output/reports/toe_master_action_computational_analysis_packet_01_20260417_v0.json",
+    "baseline_decision_report_pointer": "formal/output/reports/toe_master_action_computational_analysis_packet_01_decision_20260417_v0.json",
+    "execution_report_pointer": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_01_20260417_v0.json",
+    "closeout_decision_record_pointer": "formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_CLOSEOUT_DECISION_RECORD_v0.md",
+    "closeout_decision_report_pointer": "formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_closeout_20260417_v0.json",
+    "assumptions": [
+      "ONE_FROZEN_WORKING_MASTER_ACTION_SURROGATE_ONLY",
+      "THREE_STATE_LOCAL_SUPPORT_ONLY",
+      "ONE_BOUNDED_PERTURBATION_SCHEDULE_ONLY",
+      "NUMPY_FIRST_REFERENCE_IMPLEMENTATION_ONLY",
+      "NO_GPU_OR_QUANTUM_NATIVE_BACKEND",
+      "NO_PACKET02_OR_LANE_REOPEN_IMPLICATION"
+    ],
+    "model_object_pointer": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+    "local_state_support": [
+      "MA-S0",
+      "MA-S1",
+      "MA-S2"
+    ],
+    "operator_matrix": [
+      [0.92, -0.08, 0.02],
+      [-0.08, 0.87, -0.05],
+      [0.02, -0.05, 0.81]
+    ],
+    "state_vector": [1.0, 0.55, 0.21],
+    "residual_target": [0.8602, 0.36, 0.15],
+    "perturbation_schedule": [0.0, 0.01, 0.02],
+    "observable_bundle": [
+      "operator_stability_observable_v0",
+      "residual_consistency_observable_v0",
+      "regime_limit_sensitivity_observable_v0"
+    ],
+    "discriminator": "BOUND_ONE_PASS_MASTER_ACTION_COHERENCE_CLASSIFIER",
+    "stop_condition": "TERMINATE_AFTER_ONE_LOCAL_REFINEMENT_AND_ROUTE_TO_PACKET01_CLOSEOUT_ONLY",
+    "classification_rule": {
+      "retain_rule": "RETAIN_REFINEMENT_IF_REGIME_DISCIPLINE_IMPROVES_WITHOUT_BREAKING_OPERATOR_OR_RESIDUAL_SIGNAL",
+      "baseline_rule": "RETAIN_BASELINE_IF_REFINEMENT_DOES_NOT_IMPROVE_BOUNDED_REGIME_DISCIPLINE",
+      "retire_rule": "RETIRE_REFINEMENT_IF_SIGNAL_BOUNDARY_FAILS_OR_NONCLAIM_GUARD_BREAKS",
+      "stop_rule": "STOP_PACKET01_FAMILY_AFTER_SINGLE_AUTHORIZED_REFINEMENT_WITH_NO_PACKET02"
+    },
+    "implementation_stack": "NUMPY_FIRST_REFERENCE_IMPLEMENTATION_ONLY",
+    "refinement_sequence": 1,
+    "max_refinements_authorized": 1,
+    "variation_id": "PERTURBATION_WINDOW_TIGHTENING_v0",
+    "variation_axis": "MAX_PERTURBATION_MAGNITUDE",
+    "baseline_value": 0.03,
+    "refined_value": 0.02,
+    "packet02_authorized": false,
+    "gpu_backend_authorized": false,
+    "lane_reopen_implication": false,
+    "blocker_movement_claim": false,
+    "bounded_output_note": "The single authorized refinement tightens the perturbation window only; Packet-01 remains bounded, nonlive, and non-promotional and closes after this refinement."
+  }
+}

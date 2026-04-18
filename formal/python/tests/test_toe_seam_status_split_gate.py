@@ -6,10 +6,10 @@ from pathlib import Path
 def find_repo_root(start: Path) -> Path:
     p = start.resolve()
     while p != p.parent:
-        if (p / "formal").exists():
+        if (p / "formal").exists() and (p / "README.md").exists():
             return p
         p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -38,6 +38,8 @@ def test_seam_status_standard_and_snapshot_are_cross_pinned() -> None:
         "TOE_SEAM_STATUS_SEMANTICS_STANDARD_v0",
         "TOE_SEAM_STATUS_SEMANTICS_STATUS_v0: CANONICAL_PINNED",
         "SEAM_STATUS_CLASS_A_NOT_PHYSICS_COMPLETE_v0: TRUE",
+        "SEAM_STATUS_HELD_CLASS_B_CANONICAL_TRACKING_ALLOWED_v0: TRUE",
+        "SEAM_STATUS_HELD_STATUS_READ_TOKEN_v0: CLASS_B_HELD_FOR_SCALAR_PUBLICATION_NOT_GOVERNANCE_COMPLETE_NOT_PHYSICS_COMPLETE",
     ):
         assert token in standard_text
 
@@ -46,6 +48,8 @@ def test_seam_status_standard_and_snapshot_are_cross_pinned() -> None:
         "SEAM_EM_QFT_PHYSICS_COMPLETE_v0: NO",
         "SEAM_GR_QM_GOVERNANCE_COMPLETE_v0: YES",
         "SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO",
+        "SEAM_QFT_GR_GOVERNANCE_COMPLETE_v0: NO",
+        "SEAM_QFT_GR_PHYSICS_COMPLETE_v0: NO",
         "SEAM_QM_STAT_GOVERNANCE_COMPLETE_v0: NO",
         "SEAM_QM_STAT_PHYSICS_COMPLETE_v0: NO",
         "SEAM_STAT_QM_GOVERNANCE_COMPLETE_v0: NO",
@@ -61,6 +65,8 @@ def test_seam_status_standard_and_snapshot_are_cross_pinned() -> None:
         "SEAM_EM_QFT_PHYSICS_COMPLETE_v0: NO",
         "SEAM_GR_QM_GOVERNANCE_COMPLETE_v0: YES",
         "SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO",
+        "SEAM_QFT_GR_GOVERNANCE_COMPLETE_v0: NO",
+        "SEAM_QFT_GR_PHYSICS_COMPLETE_v0: NO",
         "SEAM_QM_STAT_GOVERNANCE_COMPLETE_v0: NO",
         "SEAM_QM_STAT_PHYSICS_COMPLETE_v0: NO",
         "SEAM_STAT_QM_GOVERNANCE_COMPLETE_v0: NO",

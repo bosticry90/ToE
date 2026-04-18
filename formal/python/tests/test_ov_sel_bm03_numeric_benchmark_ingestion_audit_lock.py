@@ -12,10 +12,10 @@ from formal.python.toe.observables.ovselbm03_numeric_benchmark_ingestion_audit_o
 def find_repo_root(start: Path) -> Path:
     p = start.resolve()
     while p != p.parent:
-        if (p / "formal").exists():
+        if (p / "formal").exists() and (p / "README.md").exists():
             return p
         p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
 
 
 REPO_ROOT = find_repo_root(Path(__file__))

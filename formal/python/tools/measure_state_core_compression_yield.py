@@ -10,15 +10,16 @@ from typing import Any
 def find_repo_root(start: Path) -> Path:
     p = start.resolve()
     while p != p.parent:
-        if (p / "formal").exists():
+        if (p / "formal").exists() and (p / "README.md").exists():
             return p
         p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
 DEFAULT_STATE_CORE = REPO_ROOT / "formal" / "docs" / "release" / "state_core_v0.json"
 DEFAULT_GOV_SUITE = REPO_ROOT / "governance_suite.ps1"
+DEFAULT_GOV_MANIFEST = REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_TEST_MANIFEST_v1.json"
 DEFAULT_OUTPUT = REPO_ROOT / "formal" / "output" / "state_core_compression_yield_report_v0.json"
 
 
@@ -32,7 +33,7 @@ def _read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
-def _measure(state_core: dict[str, Any], governance_suite_text: str) -> dict[str, Any]:
+def _measure(state_core: dict[str, Any], governance_suite_text: str, governance_manifest_text: str) -> dict[str, Any]:
     active_lane = state_core["active_lane"]
     active_tranche_id = state_core["active_tranche_id"]
     mirror_target_count = len(state_core["mirror_targets"])
@@ -62,7 +63,8 @@ def _measure(state_core: dict[str, Any], governance_suite_text: str) -> dict[str
     total_migrated_family_entries = total_control_family_entries + total_scientific_family_entries
 
     governance_gate_default_enforced = all(
-        token in governance_suite_text for token in REQUIRED_GOVERNANCE_GATE_TOKENS
+        token in governance_suite_text or token in governance_manifest_text
+        for token in REQUIRED_GOVERNANCE_GATE_TOKENS
     )
 
     return {
@@ -115,14 +117,16 @@ def main() -> None:
     parser = argparse.ArgumentParser(description="Measure state-core cutover compression and operational yield.")
     parser.add_argument("--state-core", type=Path, default=DEFAULT_STATE_CORE)
     parser.add_argument("--governance-suite", type=Path, default=DEFAULT_GOV_SUITE)
+    parser.add_argument("--governance-manifest", type=Path, default=DEFAULT_GOV_MANIFEST)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--print", dest="print_mode", action="store_true")
     args = parser.parse_args()
 
     state_core = _read_json(args.state_core)
     governance_text = args.governance_suite.read_text(encoding="utf-8")
+    governance_manifest_text = args.governance_manifest.read_text(encoding="utf-8")
 
-    result = _measure(state_core, governance_text)
+    result = _measure(state_core, governance_text, governance_manifest_text)
 
     args.output.parent.mkdir(parents=True, exist_ok=True)
     args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")

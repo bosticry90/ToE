@@ -12,10 +12,10 @@ def _repo_root_from_test_file(p: Path) -> Path:
     if p.is_file():
         p = p.parent
     while p != p.parent:
-        if (p / "formal").exists():
+        if (p / "formal").exists() and (p / "README.md").exists():
             return p
         p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
+    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
 
 
 def test_bridge_program_orthogonality_nonredundancy_robustness_guard() -> None:

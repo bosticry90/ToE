@@ -2072,6 +2072,22 @@ Weak-lane science increment checkpoint (2026-03-25):
 - Master action seam-constraint registry pointer: `formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md`.
 - Seam witness package schema pointer: `formal/toe_formal/ToeFormal/Constraints/SeamWitnessPackages.lean`.
 - Master action shadow numerics target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_SHADOW_NUMERICS_v0.md`.
+- Master action Packet-01 contract pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_v0.md`.
+- Master action Packet-01 artifact pointer: `formal/output/toe_master_action_computational_analysis_packet_01_v0.json`.
+- Master action Packet-01 report pointer: `formal/output/reports/toe_master_action_computational_analysis_packet_01_20260417_v0.json`.
+- Master action Packet-01 decision record pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_DECISION_RECORD_v0.md`.
+- Master action Packet-01 decision report pointer: `formal/output/reports/toe_master_action_computational_analysis_packet_01_decision_20260417_v0.json`.
+- Master action Packet-01 gate pointer: `formal/python/tests/test_toe_master_action_computational_analysis_packet_01_gate.py`.
+- Master action Packet-01 decision gate pointer: `formal/python/tests/test_toe_master_action_computational_analysis_packet_01_decision_record_gate.py`.
+- Master action Packet-01 refinement target pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_01_v0.md`.
+- Master action Packet-01 refinement artifact pointer: `formal/output/toe_master_action_computational_analysis_packet_01_refinement_01_v0.json`.
+- Master action Packet-01 refinement report pointer: `formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_01_20260417_v0.json`.
+- Master action Packet-01 refinement closeout record pointer: `formal/docs/paper/DERIVATION_TARGET_TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_REFINEMENT_CLOSEOUT_DECISION_RECORD_v0.md`.
+- Master action Packet-01 refinement closeout report pointer: `formal/output/reports/toe_master_action_computational_analysis_packet_01_refinement_closeout_20260417_v0.json`.
+- Master action Packet-01 refinement gate pointer: `formal/python/tests/test_toe_master_action_computational_analysis_packet_01_refinement_01_gate.py`.
+- Master action Packet-01 refinement closeout gate pointer: `formal/python/tests/test_toe_master_action_computational_analysis_packet_01_refinement_closeout_decision_record_gate.py`.
+- Master action Packet-01 family preservation note pointer: `formal/docs/paper/TOE_MASTER_ACTION_COMPUTATIONAL_ANALYSIS_PACKET_01_FAMILY_PRESERVATION_NOTE_v0.md`.
+- Master action Packet-01 family preservation gate pointer: `formal/python/tests/test_toe_master_action_computational_analysis_packet_01_family_preservation_note_gate.py`.
 - Foundational prediction scaffold plan pointer: `formal/docs/release/FOUNDATIONAL_PREDICTION_SCAFFOLD_PLAN_v0.md`.
 - Foundational empirical comparison protocol pointer: `formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md`.
 - Packet-02 decision ledger pointer: `formal/output/empirical_packet02_decision_ledger_v0.json`.
@@ -4856,6 +4872,9 @@ Seam governance-vs-physics completion split checkpoint (2026-03-12):
   - `SEAM_EM_QFT_PHYSICS_COMPLETE_v0: NO`
   - `SEAM_GR_QM_GOVERNANCE_COMPLETE_v0: YES`
   - `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO`
+  - `SEAM_QFT_GR_GOVERNANCE_COMPLETE_v0: NO`
+  - `SEAM_QFT_GR_PHYSICS_COMPLETE_v0: NO`
+  - `SEAM_QFT_GR_STATUS_READ_v0: CLASS_B_HELD_FOR_SCALAR_PUBLICATION_NOT_GOVERNANCE_COMPLETE_NOT_PHYSICS_COMPLETE`
   - `SEAM_QM_STAT_GOVERNANCE_COMPLETE_v0: NO`
   - `SEAM_QM_STAT_PHYSICS_COMPLETE_v0: NO`
   - `SEAM_STAT_QM_GOVERNANCE_COMPLETE_v0: NO`
@@ -4875,6 +4894,7 @@ Seam governance-vs-physics completion closeout checkpoint (2026-03-19):
 - seam interpretation rule remains explicit:
   - `SEAM_STATUS_INTERPRETATION_RULE_v0: GOVERNANCE_COMPLETE_DOES_NOT_IMPLY_PHYSICS_COMPLETE`
   - `SEAM_PHYSICS_COMPLETION_SCOPE_RULE_v0: PHYSICS_COMPLETE_REQUIRES_EXPLICIT_BLOCKER_DISCHARGE_BASIS`
+  - `SEAM_STATUS_HELD_CLASS_B_CANONICAL_TRACKING_ALLOWED_v0: TRUE`
 - transition compatibility token retained as non-authoritative legacy string for split-gate continuity:
   - `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO`
 
