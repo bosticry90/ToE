@@ -1,0 +1,38 @@
+{
+  "schema_id": "POST_PLAN_PHYSICS_ADVANCEMENT_TARGET_MAP_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize one authoritative post-plan target map that resolves every currently active pillar and seam row to exactly one live next-step route using the completion matrix, blocker dashboard, seam SLA ledger, seam executable-path normalization report, and the GR row 001 blocker file map.",
+  "required_inputs": {
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "blocker_burn_dashboard_report": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json",
+    "seam_resolution_sla_ledger_report": "formal/output/reports/seam_resolution_sla_ledger_20260416_v0.json",
+    "seam_executable_path_normalization_report": "formal/output/reports/seam_executable_path_normalization_20260418_v0.json",
+    "gr_row_001_blocker_file_map": "formal/docs/release/GR_ROW_001_NEW_STRUCTURE_BLOCKER_FILE_MAP_20260418_v0.json"
+  },
+  "target_map_policy": {
+    "required_single_executable_row": "ROW-SEAM-COSMO-SR-001",
+    "required_blocked_authority_row": "ROW-SEAM-QM-STAT-001",
+    "required_external_hold_row": "ROW-SEAM-QFT-GR-001",
+    "required_closed_monitoring_row": "ROW-SEAM-GR-QM-001",
+    "required_gr_row_001": "ROW-PILLAR-GR-001",
+    "required_gr_row_001_next_step": "RESUME_FROM_P78_P79_P80_DORMANT_PACKAGE_ONLY",
+    "required_progress_rule": "ONLY_LIVE_BLOCKER_OR_SEAM_STATE_MOVEMENT_COUNTS_AS_ADVANCEMENT",
+    "theorem_gap_route_class": "THEOREM_GAP_PROGRAM",
+    "frozen_new_structure_route_class": "FROZEN_NEW_STRUCTURE_BRANCH",
+    "blocked_authority_route_class": "BLOCKED_PENDING_AUTHORITY",
+    "external_hold_route_class": "EXTERNAL_HOLD",
+    "closed_monitoring_route_class": "CLOSED_MONITORING",
+    "executable_now_route_class": "EXECUTABLE_NOW"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_PHYSICS_ADVANCEMENT_TARGET_MAP_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_PHYSICS_ADVANCEMENT_TARGET_MAP_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_PHYSICS_ADVANCEMENT_TARGET_MAP_MATERIALIZED",
+      "POST_PLAN_PHYSICS_ADVANCEMENT_TARGET_MAP_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_PHYSICS_ADVANCEMENT_TARGET_MAP_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_PHYSICS_ADVANCEMENT_TARGET_MAP_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan physics advancement target map declaration only; no scientific adequacy claim."
+}

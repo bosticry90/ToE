@@ -1,0 +1,35 @@
+{
+  "schema_id": "POST_PLAN_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_CHAIN_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize the post-plan bounded blocker-definition test packet and ruling chain after the deeper blocker-definition review successor tranche, and classify whether the packet reveals meaningful movement, remains valid but nonmoving, or fails fit-for-authority use under the existing ruling and post-decision chain.",
+  "required_inputs": {
+    "post_plan_successor_tranche_report": "formal/output/reports/post_plan_deeper_blocker_definition_review_successor_tranche_20260418_v0.json",
+    "bounded_blocker_definition_test_execution_report": "formal/output/reports/bounded_blocker_definition_test_execution_20260411_v0.json",
+    "bounded_blocker_definition_test_ruling_report": "formal/output/reports/bounded_blocker_definition_test_ruling_20260411_v0.json",
+    "post_blocker_definition_test_decision_report": "formal/output/reports/post_blocker_definition_test_decision_20260411_v0.json",
+    "authority_coupling_review_declaration": "formal/docs/release/AUTHORITY_COUPLING_REVIEW_20260411_v0.json"
+  },
+  "execution_policy": {
+    "required_successor_outcome": "POST_PLAN_DEEPER_BLOCKER_DEFINITION_REVIEW_SUCCESSOR_TRANCHE_MATERIALIZED",
+    "required_successor_next_action": "EXECUTE_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_ONCE",
+    "required_execution_classification": "EXECUTION_VALID_REVISED_DEF_FIRES_AUTHORITATIVE_BLOCKED",
+    "required_ruling": "REVISED_BLOCKER_DEF_VALID_BUT_NONMOVING",
+    "required_post_decision": "HOLD_REVISED_BLOCKER_DEF_AS_SECONDARY_REQUIRE_AUTHORITY_COUPLING_REVIEW",
+    "required_post_next_action": "REQUIRE_ONE_BOUNDED_AUTHORITY_COUPLING_REVIEW",
+    "required_authority_review_basis": "POST_BLOCKER_DEFINITION_TEST_DECISION_HOLD_SECONDARY_REQUIRE_COUPLING_REVIEW"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_CHAIN_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_CHAIN_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_CHAIN_REVEALS_MEANINGFUL_MOVEMENT",
+      "POST_PLAN_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_CHAIN_VALID_BUT_NONMOVING",
+      "POST_PLAN_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_CHAIN_NOT_FIT_FOR_AUTHORITY_USE",
+      "POST_PLAN_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_CHAIN_BLOCKED",
+      "POST_PLAN_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_CHAIN_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_CHAIN_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_CHAIN_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan bounded blocker-definition test packet chain only; no scientific adequacy claim."
+}

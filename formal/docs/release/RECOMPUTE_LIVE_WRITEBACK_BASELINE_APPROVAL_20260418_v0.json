@@ -1,0 +1,93 @@
+{
+  "schema_id": "RECOMPUTE_LIVE_WRITEBACK_BASELINE_APPROVAL_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Define the explicit canonical baseline and approval boundary that must be satisfied before one authorized live recompute writeback may mutate canonical surfaces, using the completed dry-run inspection result as the immediate upstream prerequisite.",
+  "required_inputs": {
+    "recompute_live_writeback_contract_report": "formal/output/reports/recompute_live_writeback_contract_20260418_v0.json",
+    "recompute_dry_run_execution_inspection_report": "formal/output/reports/recompute_dry_run_execution_inspection_20260418_v0.json",
+    "post_plan_recompute_monitoring_path_report": "formal/output/reports/post_plan_recompute_monitoring_path_20260418_v0.json",
+    "recompute_baseline_snapshot_tool": "formal/python/tools/recompute_baseline_snapshot.py",
+    "recompute_execute_all_tool": "formal/python/tools/recompute_execute_all.py",
+    "state_mirror": "State_of_the_Theory.md",
+    "roadmap_mirror": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+    "inventory_mirror": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md"
+  },
+  "phase_plan": [
+    {
+      "phase_id": 0,
+      "phase_name": "UPSTREAM_CONTRACT_VERIFY",
+      "requirement": "Require the live-writeback contract to remain dry-run-ready and explicitly live-guarded"
+    },
+    {
+      "phase_id": 1,
+      "phase_name": "DRY_RUN_EVIDENCE_VERIFY",
+      "requirement": "Require the dry-run execution inspection checkpoint to confirm non-canonical output materialization while canonical surfaces remain pending"
+    },
+    {
+      "phase_id": 2,
+      "phase_name": "MONITORING_PENDING_VERIFY",
+      "requirement": "Require the canonical post-plan recompute monitoring path to still read as pending completion before live execution"
+    },
+    {
+      "phase_id": 3,
+      "phase_name": "CANONICAL_SURFACE_INVARIANCE_VERIFY",
+      "requirement": "All canonical recompute surfaces must still have pending latest triggers and no computed outputs before live writeback"
+    },
+    {
+      "phase_id": 4,
+      "phase_name": "BASELINE_CAPTURE_TOOL_VERIFY",
+      "requirement": "The canonical baseline snapshot tool must be present to capture the live pre-writeback baseline immediately before execution"
+    },
+    {
+      "phase_id": 5,
+      "phase_name": "EXPLICIT_APPROVAL_FLAGS_VERIFY",
+      "requirement": "Live execution must require execution-mode live-writeback plus explicit allow-live-writeback opt-in"
+    },
+    {
+      "phase_id": 6,
+      "phase_name": "SINGLE_USE_APPROVAL_VERIFY",
+      "requirement": "Approval is bounded to one canonical live writeback followed immediately by recompute observation, post-recompute observation, and post-plan monitoring reruns"
+    },
+    {
+      "phase_id": 7,
+      "phase_name": "MIRROR_DISCIPLINE_VERIFY",
+      "requirement": "Authority mirrors may register the live baseline and approval checkpoint without claiming canonical completion before execution occurs"
+    },
+    {
+      "phase_id": 8,
+      "phase_name": "NEXT_ACTION_PIN_VERIFY",
+      "requirement": "The next action must be exactly one authorized live writeback followed by the downstream observation chain rerun"
+    }
+  ],
+  "execution_policy": {
+    "required_live_writeback_contract_outcome": "RECOMPUTE_LIVE_WRITEBACK_CONTRACT_DRY_RUN_READY_LIVE_LOCKED",
+    "required_dry_run_inspection_outcome": "RECOMPUTE_DRY_RUN_EXECUTION_INSPECTION_MATERIALIZED_CANONICAL_PENDING",
+    "required_monitoring_outcome": "POST_PLAN_RECOMPUTE_MONITORING_PATH_PENDING_COMPLETION",
+    "required_execution_mode": "live-writeback",
+    "required_allow_live_writeback": true,
+    "required_latest_trigger_status": "PENDING_RECOMPUTE",
+    "required_next_action": "EXECUTE_ONE_AUTHORIZED_LIVE_WRITEBACK_AND_RERUN_OBSERVATION_CHAIN"
+  },
+  "approval_contract": {
+    "approval_scope": "ONE_CANONICAL_LIVE_WRITEBACK_ONLY",
+    "approval_guard": "EXPLICIT_ALLOW_LIVE_WRITEBACK_TRUE",
+    "approval_followthrough": [
+      "RERUN_RECOMPUTE_OBSERVATION_REPORT",
+      "RERUN_POST_RECOMPUTE_OBSERVATION_REPORT",
+      "RERUN_POST_PLAN_RECOMPUTE_MONITORING_PATH_REPORT"
+    ],
+    "approval_non_claim_boundary": "Approval defines execution permission only and does not itself claim canonical recompute completion."
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_RECOMPUTE_LIVE_WRITEBACK_BASELINE_APPROVAL_OUTCOME",
+    "no_loop_rule": "ONE_RECOMPUTE_LIVE_WRITEBACK_BASELINE_APPROVAL_ONLY",
+    "allowed_outcomes": [
+      "RECOMPUTE_LIVE_WRITEBACK_BASELINE_APPROVAL_READY",
+      "RECOMPUTE_LIVE_WRITEBACK_BASELINE_APPROVAL_BLOCKED",
+      "RECOMPUTE_LIVE_WRITEBACK_BASELINE_APPROVAL_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_RECOMPUTE_LIVE_WRITEBACK_BASELINE_APPROVAL_REPAIR"
+    ],
+    "default_outcome": "RECOMPUTE_LIVE_WRITEBACK_BASELINE_APPROVAL_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local live-writeback baseline and approval contract only; no scientific adequacy claim and no implied canonical recompute completion."
+}

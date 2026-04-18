@@ -1,0 +1,35 @@
+{
+  "schema_id": "POST_PLAN_COSMO_SR_FIRST_LIVE_SEAM_TRANCHE_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Measure the first post-plan live seam tranche by executing the bounded COSMO-SR Cycle07 path already authorized by the target map and record whether that execution earns live row-state movement or leaves the seam in the current non-promoted state.",
+  "required_inputs": {
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "cosmo_sr_bounded_activation_authorization_report": "formal/output/reports/cosmo_sr_bounded_activation_authorization_20260418_v0.json",
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "blocker_burn_dashboard_report": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json",
+    "cosmo_sr_target_doc": "formal/docs/paper/DERIVATION_TARGET_COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE07_v0.md",
+    "cosmo_sr_cycle07_artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle07_v0.json",
+    "cosmo_sr_cycle07_gate": "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle07_gate.py"
+  },
+  "execution_policy": {
+    "required_target_row": "ROW-SEAM-COSMO-SR-001",
+    "required_target_seam": "SEAM-COSMO-SR",
+    "required_target_route_class": "EXECUTABLE_NOW",
+    "required_authorization_outcome": "COSMO_SR_CYCLE07_SINGLE_LANE_ACTIVATION_AUTHORIZED_NONLIVE_v0",
+    "required_authorization_next_action": "EXECUTE_ONE_BOUNDED_COSMO_SR_CYCLE07_ACTIVATION_ONLY",
+    "required_artifact_adjudication": "NOT_YET_DISCHARGED",
+    "required_row_blocker_class": "SEAM_INTEGRATION_GAP"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_COSMO_SR_TRANCHE_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_COSMO_SR_TRANCHE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_COSMO_SR_FIRST_LIVE_SEAM_TRANCHE_EXECUTED_NONPROMOTED",
+      "POST_PLAN_COSMO_SR_FIRST_LIVE_SEAM_TRANCHE_EXECUTED_AND_PROMOTED",
+      "POST_PLAN_COSMO_SR_FIRST_LIVE_SEAM_TRANCHE_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_COSMO_SR_TRANCHE_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_COSMO_SR_FIRST_LIVE_SEAM_TRANCHE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan COSMO-SR first live seam tranche measurement only; no scientific adequacy claim."
+}

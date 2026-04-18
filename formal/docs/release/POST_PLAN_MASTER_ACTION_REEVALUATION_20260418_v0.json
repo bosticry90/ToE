@@ -1,0 +1,29 @@
+{
+  "schema_id": "POST_PLAN_MASTER_ACTION_REEVALUATION_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Reevaluate whether master action has become blocker-moving under the post-plan program only if upstream pillar or seam evidence changed materially.",
+  "required_inputs": {
+    "post_plan_qm_theorem_gap_tranche_report": "formal/output/reports/post_plan_qm_first_theorem_gap_tranche_20260418_v0.json",
+    "post_plan_seam_reroute_reassessment_report": "formal/output/reports/post_plan_seam_reroute_reassessment_20260418_v0.json",
+    "master_action_packet01_transport_binding_recovery_report": "formal/output/reports/master_action_packet_01_transport_binding_recovery_20260418_v0.json",
+    "derivation_chain_transport_standardization_report": "formal/output/reports/derivation_chain_transport_standardization_20260418_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json"
+  },
+  "reevaluation_policy": {
+    "required_upstream_movement_rule": "MASTER_ACTION_ONLY_AFTER_MATERIAL_UPSTREAM_ROW_MOVEMENT",
+    "required_one_recompute_limit_rule": "ONE_RECOMPUTE_LIMIT_PRESERVED",
+    "required_support_only_read": "PACKET01_PRESERVED_BASELINE_PLUS_WITNESS_BINDING_PLUS_MINIMAL_UPSTREAM_UNIT_PLUS_EXPLICIT_BLOCKER"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_MASTER_ACTION_REEVALUATION_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_MASTER_ACTION_REEVALUATION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_MASTER_ACTION_REEVALUATION_MATERIALIZED",
+      "POST_PLAN_MASTER_ACTION_REEVALUATION_NOT_ELIGIBLE_NO_UPSTREAM_MOVEMENT",
+      "POST_PLAN_MASTER_ACTION_REEVALUATION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_MASTER_ACTION_REEVALUATION_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_MASTER_ACTION_REEVALUATION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan master-action reevaluation only; no scientific adequacy claim."
+}

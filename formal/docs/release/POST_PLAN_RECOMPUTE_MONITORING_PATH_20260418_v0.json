@@ -1,0 +1,33 @@
+{
+  "schema_id": "POST_PLAN_RECOMPUTE_MONITORING_PATH_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize the recompute-monitoring handoff after the post-plan bounded coupling-refinement packet chain registers authority promotion, bind the trigger-propagation observation and post-recompute ruling into one post-plan monitoring path, and keep seam reroute and master-action reevaluation closed unless completed recompute outputs later justify a stronger downstream consequence.",
+  "required_inputs": {
+    "post_plan_bounded_coupling_refinement_packet_chain_report": "formal/output/reports/post_plan_bounded_coupling_refinement_packet_chain_20260418_v0.json",
+    "recompute_observation_report": "formal/output/reports/recompute_observation_20260411_v0.json",
+    "post_recompute_observation_report": "formal/output/reports/post_recompute_observation_20260411_v0.json"
+  },
+  "execution_policy": {
+    "required_packet_chain_outcome": "POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_PROMOTION_REGISTERED",
+    "required_packet_chain_next_action": "MONITOR_RECOMPUTE_SURFACES",
+    "required_trigger_propagation_confirmed": true,
+    "required_recompute_observation_next_layer": "AWAIT_POST_RECOMPUTE_OBSERVATION",
+    "required_post_recompute_ruling_id": "RECOMPUTE_STILL_PENDING",
+    "required_post_recompute_next_action": "DEFER_RULING_MONITOR_RECOMPUTE_COMPLETION",
+    "required_cascade_determination": "STILL_PENDING"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_RECOMPUTE_MONITORING_PATH_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_RECOMPUTE_MONITORING_PATH_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_RECOMPUTE_MONITORING_PATH_PENDING_COMPLETION",
+      "POST_PLAN_RECOMPUTE_MONITORING_PATH_MATERIAL_CASCADE_CONFIRMED",
+      "POST_PLAN_RECOMPUTE_MONITORING_PATH_AUTHORITY_LOCAL_ONLY",
+      "POST_PLAN_RECOMPUTE_MONITORING_PATH_BLOCKED",
+      "POST_PLAN_RECOMPUTE_MONITORING_PATH_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_RECOMPUTE_MONITORING_PATH_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_RECOMPUTE_MONITORING_PATH_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan recompute-monitoring path only; no scientific adequacy claim."
+}

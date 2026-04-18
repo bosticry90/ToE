@@ -76,25 +76,28 @@ def test_recompute_monitoring_live_route_is_consistent() -> None:
         assert surface.get("state_change_observed") is True
         assert surface.get("trigger_active") is True
         assert surface.get("revised_blocker_referenced") is True
-        assert surface.get("status") == "PENDING_RECOMPUTE"
+        assert surface.get("status") == "COMPLETED"
         assert surface.get("trigger_count", 0) >= 1
+        assert surface.get("has_computed_outputs") is True
 
     assert cascade_analysis.get("trigger_propagation_confirmed") is True
     assert cascade_analysis.get("trigger_propagation_scope") == "3/3 surfaces"
-    assert cascade_analysis.get("recompute_status_all_surfaces") == "PENDING_RECOMPUTE"
-    assert cascade_analysis.get("material_cascade_status") == "NOT_YET_CONFIRMED"
+    assert cascade_analysis.get("recompute_status_all_surfaces") == "COMPLETED"
+    assert cascade_analysis.get("material_cascade_status") == "CONFIRMED_BY_CANONICAL_OUTPUTS"
+    assert cascade_analysis.get("surfaces_with_completed_outputs") == 3
 
-    assert observation_outcome.get("outcome_id") == "OUTCOME_1_TRIGGER_PROPAGATION_CONFIRMED"
-    assert observation_outcome.get("classification") == "TRIGGER_PROPAGATION_CONFIRMED"
+    assert observation_outcome.get("outcome_id") == "OUTCOME_2_CANONICAL_OUTPUTS_MATERIALIZED"
+    assert observation_outcome.get("classification") == "TRIGGER_PROPAGATION_CONFIRMED_MATERIAL_OUTPUTS"
     assert observation_outcome.get("next_decision_layer") == "AWAIT_POST_RECOMPUTE_OBSERVATION"
-    assert observation_outcome.get("observation_complete") is False
+    assert observation_outcome.get("observation_complete") is True
 
     assert observation_summary.get("surfaces_observed") == 3
     assert observation_summary.get("surfaces_triggering_recompute") == 3
-    assert observation_summary.get("surfaces_in_pending_recompute_state") == 3
+    assert observation_summary.get("surfaces_in_pending_recompute_state") == 0
+    assert observation_summary.get("surfaces_with_completed_outputs") == 3
     assert observation_summary.get("trigger_propagation_confirmed") is True
-    assert observation_summary.get("material_cascade_confirmed") is False
-    assert observation_summary.get("cascade_type") == "TRIGGER_PROPAGATION_CONFIRMED_PENDING_STATE_CHANGE"
+    assert observation_summary.get("material_cascade_confirmed") is True
+    assert observation_summary.get("cascade_type") == "TRIGGER_PROPAGATION_CONFIRMED_CANONICAL_OUTPUTS_MATERIALIZED"
     assert observation_summary.get("next_decision_layer") == "AWAIT_POST_RECOMPUTE_OBSERVATION"
 
     post_prereq = post_recompute_observation.get("prerequisite", {})
@@ -104,31 +107,32 @@ def test_recompute_monitoring_live_route_is_consistent() -> None:
     cascade_materiality = post_recompute_observation.get("cascade_materiality_assessment", {})
 
     assert post_prereq.get("trigger_propagation_confirmed") is True
-    assert post_prereq.get("surfaces_in_pending_recompute") == 3
+    assert post_prereq.get("surfaces_in_pending_recompute") == 0
     assert post_prereq.get("prerequisite_satisfied") is True
 
     assessments = completion_status.get("completion_assessments", [])
     assert completion_status.get("surfaces_checked") == 3
     assert len(assessments) == 3
     for assessment in assessments:
-        assert assessment.get("completion_status") == "PENDING_RECOMPUTE"
-        assert assessment.get("last_trigger_status") == "PENDING_RECOMPUTE"
-        assert assessment.get("has_computed_outputs") is False
-        assert assessment.get("data_available") is False
+        assert assessment.get("completion_status") == "COMPLETED"
+        assert assessment.get("last_trigger_status") == "COMPLETED"
+        assert assessment.get("has_computed_outputs") is True
+        assert assessment.get("data_available") is True
 
-    assert cascade_materiality.get("cascade_materiality") == "STILL_PENDING"
-    assert cascade_materiality.get("completed_surfaces") == 0
-    assert cascade_materiality.get("pending_surfaces") == 3
+    assert cascade_materiality.get("cascade_materiality") == "MATERIAL_CASCADE_OBSERVABLE"
+    assert cascade_materiality.get("completed_surfaces") == 3
+    assert cascade_materiality.get("pending_surfaces") == 0
+    assert cascade_materiality.get("surfaces_with_outputs") == 3
 
-    assert post_ruling.get("ruling_id") == "RECOMPUTE_STILL_PENDING"
-    assert post_ruling.get("classification") == "INSUFFICIENT_DATA_PENDING_COMPLETION"
-    assert post_ruling.get("next_action") == "DEFER_RULING_MONITOR_RECOMPUTE_COMPLETION"
-    assert post_ruling.get("promotion_consequence_material") is None
+    assert post_ruling.get("ruling_id") == "MATERIAL_CASCADE_CONFIRMED"
+    assert post_ruling.get("classification") == "MATERIAL_CASCADE_CONFIRMED"
+    assert post_ruling.get("next_action") == "DOCUMENT_CASCADE_CONSEQUENCE_AND_PROMOTE_FINDINGS"
+    assert post_ruling.get("promotion_consequence_material") is True
 
-    assert post_summary.get("ruling_id") == "RECOMPUTE_STILL_PENDING"
-    assert post_summary.get("classification") == "INSUFFICIENT_DATA_PENDING_COMPLETION"
-    assert post_summary.get("next_action") == "DEFER_RULING_MONITOR_RECOMPUTE_COMPLETION"
-    assert post_summary.get("cascade_determination") == "STILL_PENDING"
+    assert post_summary.get("ruling_id") == "MATERIAL_CASCADE_CONFIRMED"
+    assert post_summary.get("classification") == "MATERIAL_CASCADE_CONFIRMED"
+    assert post_summary.get("next_action") == "DOCUMENT_CASCADE_CONSEQUENCE_AND_PROMOTE_FINDINGS"
+    assert post_summary.get("cascade_determination") == "MATERIAL_CASCADE_OBSERVABLE"
 
     for doc, surface_name in (
         (qm_recompute, "qm_seam_coherence_under_revised_blocker"),
@@ -141,7 +145,7 @@ def test_recompute_monitoring_live_route_is_consistent() -> None:
         assert latest.get("surface_name") == surface_name
         assert latest.get("triggered_by") == "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0"
         assert latest.get("revised_blocker_definition") == "REVISED_BLOCKER_DEFINITION_20260411_v0"
-        assert latest.get("status") == "PENDING_RECOMPUTE"
+        assert latest.get("status") == "COMPLETED"
 
 
 def test_recompute_monitoring_authority_pointers_are_pinned() -> None:

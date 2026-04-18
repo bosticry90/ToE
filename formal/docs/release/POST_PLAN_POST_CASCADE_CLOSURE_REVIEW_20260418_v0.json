@@ -1,0 +1,35 @@
+{
+  "schema_id": "POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Consume the material-cascade-confirmed recompute outcome and decide whether the post-plan program has earned seam reroute reopening, master-action reevaluation reopening, downstream integration advancement eligibility, or an explicit bounded hold.",
+  "required_inputs": {
+    "post_plan_recompute_monitoring_path_report": "formal/output/reports/post_plan_recompute_monitoring_path_20260418_v0.json",
+    "post_plan_seam_reroute_reassessment_report": "formal/output/reports/post_plan_seam_reroute_reassessment_20260418_v0.json",
+    "post_plan_master_action_reevaluation_report": "formal/output/reports/post_plan_master_action_reevaluation_20260418_v0.json",
+    "post_plan_final_integration_review_report": "formal/output/reports/post_plan_final_integration_review_20260418_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json"
+  },
+  "closure_policy": {
+    "required_monitoring_outcome": "POST_PLAN_RECOMPUTE_MONITORING_PATH_MATERIAL_CASCADE_CONFIRMED",
+    "required_monitoring_post_ruling": "MATERIAL_CASCADE_CONFIRMED",
+    "required_single_executable_row": "ROW-SEAM-COSMO-SR-001",
+    "required_blocked_row": "ROW-SEAM-QM-STAT-001",
+    "required_external_hold_row": "ROW-SEAM-QFT-GR-001",
+    "required_closed_monitoring_row": "ROW-SEAM-GR-QM-001",
+    "required_bounded_hold_rule": "MATERIAL_CASCADE_ALONE_DOES_NOT_RECLASSIFY_DOWNSTREAM_ROUTES_WITHOUT_ROW_OR_ROUTE_MOVEMENT"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_REOPEN_SEAM_REROUTE",
+      "POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_REOPEN_MASTER_ACTION",
+      "POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_ADVANCEMENT_ELIGIBLE",
+      "POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_BOUNDED_HOLD_RECORDED",
+      "POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_POST_CASCADE_CLOSURE_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-cascade closure review only; no scientific adequacy claim."
+}

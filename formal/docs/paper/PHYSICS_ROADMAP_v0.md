@@ -127,6 +127,154 @@ Post-plan consolidation memo checkpoint (2026-04-18):
 - Historical posture rule: WS-10 restart surfaces remain traceability artifacts and should not be read as the active execution posture.
 - Next-work rule: open either a new explicit post-plan program or continue repository consolidation, but do not treat restart-era selectors as active by default.
 
+Post-plan physics advancement program checkpoint (2026-04-18):
+- Program pointer: `formal/docs/release/POST_PLAN_PHYSICS_ADVANCEMENT_PROGRAM_20260418_v0.md`.
+- Advancement rule: only live blocker reduction, seam-path improvement, or justified master-action reclassification after upstream row movement counts as advancement.
+- Current routing rule: `SEAM-COSMO-SR` is the only executable seam, `SEAM-QM-STAT` remains policy-blocked, and `SEAM-QFT-GR` remains external-hold.
+- GR routing rule: `ROW-PILLAR-GR-001` remains pinned to `RESUME_FROM_P78_P79_P80_DORMANT_PACKAGE_ONLY`.
+- Master-action rule: reevaluate only after upstream row movement and within the existing one-recompute limit.
+
+Post-plan physics advancement target-map checkpoint (2026-04-18):
+- Target-map declaration pointer: `formal/docs/release/POST_PLAN_PHYSICS_ADVANCEMENT_TARGET_MAP_20260418_v0.json`.
+- Target-map report pointer: `formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json`.
+- Target-map gate pointer: `formal/python/tests/test_post_plan_physics_advancement_target_map_report.py`.
+- Authoritative route result: `ROW-SEAM-COSMO-SR-001` is the sole executable-now row; `ROW-SEAM-QM-STAT-001` remains blocked pending authority; `ROW-SEAM-QFT-GR-001` remains external-hold.
+- GR row result: `ROW-PILLAR-GR-001` is explicitly routed to the frozen new-structure branch under `RESUME_FROM_P78_P79_P80_DORMANT_PACKAGE_ONLY`.
+- Phase handoff: execute the first live seam tranche through COSMO-SR only after the Phase 1 target map remains current.
+
+Post-plan COSMO-SR first live seam tranche checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_COSMO_SR_FIRST_LIVE_SEAM_TRANCHE_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_cosmo_sr_first_live_seam_tranche_20260418_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_cosmo_sr_first_live_seam_tranche_report.py`.
+- Execution result: the bounded COSMO-SR Cycle07 tranche was executed against the authorized sole executable seam path and remained `NOT_YET_DISCHARGED`, so no row promotion was earned.
+- Routing consequence: COSMO-SR remains the sole executable seam; no reroute, no seam expansion, and no master-action reclassification is justified from this tranche alone.
+- Next posture: require new row movement before any reroute or downstream master-action reconsideration.
+
+Post-plan QM first theorem-gap tranche checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_QM_FIRST_THEOREM_GAP_TRANCHE_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_qm_first_theorem_gap_tranche_20260418_v0.json`.
+- Continuation gate pointer: `formal/python/tests/test_post_plan_phase3_to_phase6_reports.py`.
+- Execution result: the QM packet-04 theorem-gap tranche is measured against the current target map and remains non-promoted because `ROW-PILLAR-QM-001` still carries `THEOREM_GAP` and `THEOREM_GAP_OPEN` live row truth.
+
+Post-plan seam reroute reassessment checkpoint (2026-04-18):
+- Reassessment declaration pointer: `formal/docs/release/POST_PLAN_SEAM_REROUTE_REASSESSMENT_20260418_v0.json`.
+- Reassessment report pointer: `formal/output/reports/post_plan_seam_reroute_reassessment_20260418_v0.json`.
+- Reassessment result: no seam reroute is eligible because neither the first COSMO-SR seam tranche nor the first QM theorem-gap tranche produced material upstream row movement.
+
+Post-plan master-action reevaluation checkpoint (2026-04-18):
+- Reevaluation declaration pointer: `formal/docs/release/POST_PLAN_MASTER_ACTION_REEVALUATION_20260418_v0.json`.
+- Reevaluation report pointer: `formal/output/reports/post_plan_master_action_reevaluation_20260418_v0.json`.
+- Reevaluation result: master action remains support-only and nonmoving because the post-plan program has not yet produced the upstream blocker movement required for bounded reactivation.
+
+Post-plan final integration review checkpoint (2026-04-18):
+- Review declaration pointer: `formal/docs/release/POST_PLAN_FINAL_INTEGRATION_REVIEW_20260418_v0.json`.
+- Review report pointer: `formal/output/reports/post_plan_final_integration_review_20260418_v0.json`.
+- Review result: the existing non-claim integration posture remains held, but no new post-plan advancement eligibility has been earned yet.
+
+Post-plan objective-quality physics completion program checkpoint (2026-04-18):
+- Program pointer: `formal/docs/release/POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PROGRAM_20260418_v0.md`.
+- Completion rule: a route is complete only when it is advanced, explicitly exhausted, authority-blocked, or externally held with current machine-checkable evidence.
+- Queue rule: theorem-gap rows now lead execution, with `ROW-PILLAR-COSMO-001` first, `ROW-PILLAR-STAT-001` second, and `ROW-PILLAR-GR-001` retained as the first heavy structural dormant-package row.
+- Exhaustion rule: `ROW-PILLAR-QM-001` is excluded from immediate reuse under the current post-plan no-loop read, and three consecutive nonmoving row families route to `formal/docs/release/PROGRAM_STATE_CONVERSION_REVIEW_20260411_v0.json`.
+- Current tranche result: the first queued COSMO theorem-gap completion tranche is now materialized and currently measures as non-promoted under unchanged live row truth.
+- Current tranche result: the second queued STAT theorem-gap completion tranche is now materialized and currently also measures as non-promoted under unchanged live row truth.
+- Current tranche result: the first heavy structural GR dormant new-structure completion tranche is now materialized and currently measures as explicitly exhausted because the frozen branch capstone package is complete while live GR row truth remains unchanged.
+- Current tranche result: the deeper blocker-definition review successor tranche is now materialized off the GR exhaustion result and points next to one bounded blocker-definition test packet once.
+- Current tranche result: the bounded blocker-definition test packet chain is now materialized and currently lands as valid but nonmoving, so the next path is authority-coupling review rather than blocker-definition packet reuse.
+- Current tranche result: the authority-coupling review path is now materialized and currently justifies one bounded coupling-refinement packet once rather than a broader escalation or indefinite hold.
+- Current tranche result: the bounded coupling-refinement packet chain is now materialized and currently lands on authority-promotion registration complete, so the next path is recompute monitoring rather than seam reroute or master-action reevaluation.
+- Current tranche result: the recompute-monitoring path is now materialized and currently remains pending, because trigger propagation is confirmed across the recompute surfaces but completed recompute outputs are not yet available to close the downstream ruling.
+
+Post-plan objective-quality physics completion queue checkpoint (2026-04-18):
+- Queue declaration pointer: `formal/docs/release/POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_20260418_v0.json`.
+- Queue report pointer: `formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json`.
+- Queue gate pointer: `formal/python/tests/test_post_plan_objective_quality_physics_completion_queue_report.py`.
+- Queue result: the live completion queue is theorem-gap-first, keeps `SEAM-COSMO-SR` as the sole executable seam for downstream reassessment only, and opens the next tranche through COSMO rather than through another immediate seam reroute.
+
+Post-plan COSMO theorem-gap completion tranche checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_COSMO_THEOREM_GAP_COMPLETION_TRANCHE_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_cosmo_theorem_gap_completion_tranche_20260418_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_cosmo_theorem_gap_completion_tranche_report.py`.
+- Execution result: the first queued COSMO theorem-gap completion tranche is measured against `ROW-PILLAR-COSMO-001` and remains non-promoted because the live completion matrix still carries `THEOREM_GAP` and `THEOREM_GAP_OPEN` for the row.
+- Next posture: preserve current seam and master-action classes and prepare the queued STAT tranche unless COSMO row truth changes.
+
+Post-plan STAT theorem-gap completion tranche checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_STAT_THEOREM_GAP_COMPLETION_TRANCHE_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_stat_theorem_gap_completion_tranche_20260418_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_stat_theorem_gap_completion_tranche_report.py`.
+- Execution result: the second queued STAT theorem-gap completion tranche is measured against `ROW-PILLAR-STAT-001` and remains non-promoted because the live completion matrix still carries `THEOREM_GAP` and `THEOREM_GAP_OPEN` for the row.
+- Next posture: preserve current seam and master-action classes and prepare the GR dormant new-structure completion package unless STAT row truth changes.
+
+Post-plan GR dormant new-structure completion tranche checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_gr_dormant_new_structure_completion_tranche_20260418_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_gr_dormant_new_structure_completion_tranche_report.py`.
+- Execution result: the first heavy structural GR dormant new-structure completion tranche is measured against `ROW-PILLAR-GR-001` and lands as explicitly exhausted because the frozen branch is already reduced to a canonical dormant capstone package with retry-era attack paths marked exhausted while the live completion matrix still carries `THEOREM_GAP` and `THEOREM_GAP_OPEN` for the row.
+- Next posture: open the deeper blocker-definition review path with GR dormant-package exhaustion recorded rather than reopening seams, master-action reevaluation, or retry-era GR packets.
+
+Post-plan deeper blocker-definition review successor tranche checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_DEEPER_BLOCKER_DEFINITION_REVIEW_SUCCESSOR_TRANCHE_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_deeper_blocker_definition_review_successor_tranche_20260418_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_deeper_blocker_definition_review_successor_tranche_report.py`.
+- Execution result: the successor tranche confirms that GR explicit exhaustion now legitimately triggers the existing deeper blocker-definition review path, and the underlying review materializes with a bounded follow-on packet of `ONE_SEAM_ROW_BLOCKER_DEFINITION_TEST_UNDER_REVISED_CRITERIA`.
+- Next posture: execute one bounded blocker-definition test packet once, rather than reopening seam routing, master-action reevaluation, or GR retry-era packets.
+
+Post-plan bounded blocker-definition test packet chain checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_CHAIN_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_bounded_blocker_definition_test_packet_chain_20260418_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_bounded_blocker_definition_test_packet_chain_report.py`.
+- Execution result: the bounded blocker-definition test packet executes on `ROW-SEAM-QM-STAT-001`, the revised blocker definition fires, the ruling remains `REVISED_BLOCKER_DEF_VALID_BUT_NONMOVING`, and the post-test decision holds the revised definition as secondary while requiring one bounded authority-coupling review.
+- Next posture: open the bounded authority-coupling review path rather than reopening the blocker-definition packet chain or promoting revised blocker movement prematurely.
+
+Post-plan authority-coupling review path checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_AUTHORITY_COUPLING_REVIEW_PATH_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_authority_coupling_review_path_20260418_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_authority_coupling_review_path_report.py`.
+- Execution result: the authority-coupling review path confirms that the valid-but-nonmoving blocker-definition packet chain legitimately opens the bounded authority-coupling review, and the live review materializes as `BOUNDED_COUPLING_REFINEMENT_JUSTIFIED` with next action `EXECUTE_BOUNDED_COUPLING_REFINEMENT_PACKET_ONCE`.
+- Next posture: execute one bounded coupling-refinement packet once rather than recycling blocker-definition packets or escalating prematurely.
+
+Post-plan bounded coupling-refinement packet chain checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_bounded_coupling_refinement_packet_chain_20260418_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_bounded_coupling_refinement_packet_chain_report.py`.
+- Execution result: the bounded coupling-refinement packet now executes on `ROW-SEAM-QM-STAT-001` with `EXECUTION_VALID_BINDING_TIGHTENED`, the live ruling lands as `COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION`, and the follow-through registers the revised blocker definition as authoritative with recompute triggers opened.
+- Next posture: monitor recompute surfaces rather than spending seam reroute or master-action reevaluation before recompute propagation is observed.
+
+Post-plan recompute-monitoring path checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_RECOMPUTE_MONITORING_PATH_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_recompute_monitoring_path_20260418_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_recompute_monitoring_path_report.py`.
+- Execution result: after one authorized canonical live writeback, recompute monitoring now confirms trigger propagation across all three monitored surfaces, the canonical recompute outputs are materially present, and the current post-recompute ruling is `MATERIAL_CASCADE_CONFIRMED`.
+- Next posture: document the canonical cascade consequence and promote the findings instead of keeping the recompute family in pending-monitoring posture.
+
+Recompute live-writeback contract checkpoint (2026-04-18):
+- Contract declaration pointer: `formal/docs/release/RECOMPUTE_LIVE_WRITEBACK_CONTRACT_20260418_v0.json`.
+- Contract report pointer: `formal/output/reports/recompute_live_writeback_contract_20260418_v0.json`.
+- Contract gate pointer: `formal/python/tests/test_recompute_live_writeback_contract_report.py`.
+- Execution result: the recompute execution family is now governed by an explicit nine-phase writeback contract that verifies the pending post-plan monitoring state, captures a baseline before execution, defaults orchestration to a copied dry-run workspace, and requires explicit opt-in before any canonical recompute surface may be mutated.
+- Next posture: use the dry-run bundle or define canonical baseline semantics for live writeback, then rerun recompute observation and post-recompute ruling only after a deliberate canonical execution path is chosen.
+
+Recompute dry-run execution inspection checkpoint (2026-04-18):
+- Inspection declaration pointer: `formal/docs/release/RECOMPUTE_DRY_RUN_EXECUTION_INSPECTION_20260418_v0.json`.
+- Inspection report pointer: `formal/output/reports/recompute_dry_run_execution_inspection_20260418_v0.json`.
+- Inspection gate pointer: `formal/python/tests/test_recompute_dry_run_execution_inspection_report.py`.
+- Execution result: one bounded dry-run recompute bundle now materializes non-canonical outputs under the copied dry-run workspace while the canonical recompute surfaces remain pending with no computed outputs, preserving the current post-plan monitoring posture.
+- Next posture: define canonical live baseline and approval conditions before any live writeback, then rerun recompute observation and post-recompute ruling only after a deliberate canonical execution path is chosen.
+
+Recompute live-writeback baseline approval checkpoint (2026-04-18):
+- Approval declaration pointer: `formal/docs/release/RECOMPUTE_LIVE_WRITEBACK_BASELINE_APPROVAL_20260418_v0.json`.
+- Approval report pointer: `formal/output/reports/recompute_live_writeback_baseline_approval_20260418_v0.json`.
+- Approval gate pointer: `formal/python/tests/test_recompute_live_writeback_baseline_approval_report.py`.
+- Execution result: the repo now pins a single-use canonical live-writeback approval boundary that requires the dry-run inspection checkpoint, preserves explicit live opt-in, and authorizes exactly one canonical writeback followed immediately by the downstream observation chain rerun.
+- Next posture: use the approved one-shot live path only through the canonical observation refresh chain and treat the approval surface itself as non-claim pre-execution control.
+
+Post-cascade closure review checkpoint (2026-04-18):
+- Review declaration pointer: `formal/docs/release/POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_20260418_v0.json`.
+- Review report pointer: `formal/output/reports/post_plan_post_cascade_closure_review_20260418_v0.json`.
+- Review gate pointer: `formal/python/tests/test_post_plan_post_cascade_closure_review_report.py`.
+- Execution result: the repo now consumes the material-cascade-confirmed recompute outcome against the already materialized seam reroute, master-action, and final integration reports and records an explicit bounded hold because the downstream live row and seam route classes remain unchanged.
+- Next posture: return to theorem-gap continuation or explicit exhaustion work with the stronger post-cascade hold recorded, rather than treating the pre-cascade downstream hold state as still sufficient.
+
 Architecture consolidation governance checkpoint (2026-03-18):
 - Program tracker pointer: `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md`.
 - State surface mirror pointer: `State_of_the_Theory.md`.

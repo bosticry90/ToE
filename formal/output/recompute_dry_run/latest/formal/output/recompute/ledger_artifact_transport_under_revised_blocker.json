@@ -1,12 +1,12 @@
 {
-  "captured_at_utc": "2026-04-18T20:59:47Z",
+  "captured_at_utc": "2026-04-18T20:49:58Z",
   "computed_state": {
     "artifact_flux_before": 0.475,
     "artifact_flux_magnitude": 0.507063,
     "attribution": "REVISED_BLOCKER_DEFINITION_PROMOTION_DELTA",
     "authority_to_ledger_binding_tightness": 0.504238,
     "authority_to_ledger_binding_tightness_before": 0.48,
-    "baseline_report": "formal/output/reports/recompute_baseline_snapshot_20260418_v0.json",
+    "baseline_report": "formal/output/recompute_dry_run/latest/formal/output/reports/recompute_baseline_snapshot_20260418_v0.json",
     "state_change_from_baseline": 0.032063,
     "surface_id": "ledger_artifact_transport",
     "transport_state": 0.38765,
@@ -77,7 +77,7 @@
       "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0"
     },
     {
-      "completed_at_utc": "2026-04-18T20:59:47Z",
+      "completed_at_utc": "2026-04-18T20:49:58Z",
       "completion_note": "Ledger artifact transport recompute output materialized",
       "dependency": "authoritative_blocker_definition_movement",
       "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",

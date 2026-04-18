@@ -1,0 +1,83 @@
+{
+  "schema_id": "RECOMPUTE_DRY_RUN_EXECUTION_INSPECTION_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize one bounded inspection surface for the default recompute dry-run execution path after the live-writeback contract is complete, confirming that non-canonical outputs exist in the copied dry-run workspace while the canonical recompute surfaces remain pending and unchanged.",
+  "required_inputs": {
+    "recompute_live_writeback_contract_report": "formal/output/reports/recompute_live_writeback_contract_20260418_v0.json",
+    "recompute_execute_all_tool": "formal/python/tools/recompute_execute_all.py",
+    "dry_run_bundle_report": "formal/output/recompute_dry_run/latest/formal/output/reports/recompute_execution_bundle_20260418_v0.json",
+    "dry_run_baseline_report": "formal/output/recompute_dry_run/latest/formal/output/reports/recompute_baseline_snapshot_20260418_v0.json",
+    "state_mirror": "State_of_the_Theory.md",
+    "roadmap_mirror": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+    "inventory_mirror": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md"
+  },
+  "phase_plan": [
+    {
+      "phase_id": 0,
+      "phase_name": "DRY_RUN_PERMISSION_VERIFY",
+      "requirement": "Confirm the live-writeback contract report classifies the repo as dry-run ready and live locked before executing the bundle"
+    },
+    {
+      "phase_id": 1,
+      "phase_name": "BUNDLE_MATERIALIZATION_VERIFY",
+      "requirement": "Require one materialized dry-run recompute execution bundle report under the non-canonical dry-run workspace"
+    },
+    {
+      "phase_id": 2,
+      "phase_name": "BASELINE_CAPTURE_VERIFY",
+      "requirement": "Require the dry-run workspace baseline report to exist for the same bounded execution family"
+    },
+    {
+      "phase_id": 3,
+      "phase_name": "DRY_RUN_SURFACE_COMPLETION_VERIFY",
+      "requirement": "All three dry-run recompute surfaces must show computed outputs and completed latest triggers"
+    },
+    {
+      "phase_id": 4,
+      "phase_name": "CANONICAL_PENDING_INVARIANCE_VERIFY",
+      "requirement": "The canonical recompute surfaces must remain without computed outputs and keep their latest triggers pending"
+    },
+    {
+      "phase_id": 5,
+      "phase_name": "NO_LIVE_WRITEBACK_VERIFY",
+      "requirement": "The dry-run execution bundle must explicitly report that no live writeback was performed"
+    },
+    {
+      "phase_id": 6,
+      "phase_name": "OBSERVATION_CHAIN_PENDING_VERIFY",
+      "requirement": "The post-plan recompute-monitoring path may remain pending because canonical surfaces were not mutated"
+    },
+    {
+      "phase_id": 7,
+      "phase_name": "MIRROR_DISCIPLINE_VERIFY",
+      "requirement": "Authority mirrors may register dry-run execution readiness and inspection outcome, but must not claim canonical recompute completion"
+    },
+    {
+      "phase_id": 8,
+      "phase_name": "LIVE_BASELINE_DEFER_VERIFY",
+      "requirement": "The next action after inspection must remain defining canonical live baseline semantics or approval conditions before any live writeback"
+    }
+  ],
+  "execution_policy": {
+    "required_contract_outcome": "RECOMPUTE_LIVE_WRITEBACK_CONTRACT_DRY_RUN_READY_LIVE_LOCKED",
+    "required_bundle_execution_mode": "dry-run",
+    "required_bundle_surfaces_completed": 3,
+    "required_live_writeback_performed": false,
+    "required_bundle_next_action": "RERUN_RECOMPUTE_OBSERVATION_REPORT",
+    "required_canonical_trigger_status": "PENDING_RECOMPUTE",
+    "required_dry_run_trigger_status": "COMPLETED",
+    "required_next_action": "DEFINE_CANONICAL_LIVE_WRITEBACK_BASELINE_OR_APPROVAL_CONDITIONS"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_RECOMPUTE_DRY_RUN_EXECUTION_INSPECTION_OUTCOME",
+    "no_loop_rule": "ONE_RECOMPUTE_DRY_RUN_EXECUTION_INSPECTION_ONLY",
+    "allowed_outcomes": [
+      "RECOMPUTE_DRY_RUN_EXECUTION_INSPECTION_MATERIALIZED_CANONICAL_PENDING",
+      "RECOMPUTE_DRY_RUN_EXECUTION_INSPECTION_BLOCKED",
+      "RECOMPUTE_DRY_RUN_EXECUTION_INSPECTION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_RECOMPUTE_DRY_RUN_EXECUTION_INSPECTION_REPAIR"
+    ],
+    "default_outcome": "RECOMPUTE_DRY_RUN_EXECUTION_INSPECTION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local recompute dry-run execution inspection only; no scientific adequacy claim and no implied canonical recompute completion."
+}

@@ -1,0 +1,33 @@
+{
+  "schema_id": "POST_PLAN_AUTHORITY_COUPLING_REVIEW_PATH_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize the bounded authority-coupling review path after the post-plan bounded blocker-definition packet chain lands valid-but-nonmoving, and bind the resulting next action to the existing bounded coupling-refinement packet path rather than to further blocker-definition packet reuse or broader escalation.",
+  "required_inputs": {
+    "post_plan_bounded_blocker_definition_packet_chain_report": "formal/output/reports/post_plan_bounded_blocker_definition_test_packet_chain_20260418_v0.json",
+    "authority_coupling_review_declaration": "formal/docs/release/AUTHORITY_COUPLING_REVIEW_20260411_v0.json",
+    "authority_coupling_review_report": "formal/output/reports/authority_coupling_review_20260411_v0.json",
+    "post_blocker_definition_test_decision_report": "formal/output/reports/post_blocker_definition_test_decision_20260411_v0.json"
+  },
+  "execution_policy": {
+    "required_packet_chain_outcome": "POST_PLAN_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_CHAIN_VALID_BUT_NONMOVING",
+    "required_packet_chain_next_action": "REQUIRE_ONE_BOUNDED_AUTHORITY_COUPLING_REVIEW",
+    "required_authority_review_basis": "POST_BLOCKER_DEFINITION_TEST_DECISION_HOLD_SECONDARY_REQUIRE_COUPLING_REVIEW",
+    "required_post_decision": "HOLD_REVISED_BLOCKER_DEF_AS_SECONDARY_REQUIRE_AUTHORITY_COUPLING_REVIEW",
+    "required_authority_review_outcome": "BOUNDED_COUPLING_REFINEMENT_JUSTIFIED",
+    "required_authority_review_next_action": "EXECUTE_BOUNDED_COUPLING_REFINEMENT_PACKET_ONCE"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_AUTHORITY_COUPLING_REVIEW_PATH_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_AUTHORITY_COUPLING_REVIEW_PATH_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_AUTHORITY_COUPLING_REVIEW_PATH_MATERIALIZED",
+      "POST_PLAN_AUTHORITY_COUPLING_REVIEW_PATH_HOLD_AWAITING_THEORY",
+      "POST_PLAN_AUTHORITY_COUPLING_REVIEW_PATH_ESCALATED",
+      "POST_PLAN_AUTHORITY_COUPLING_REVIEW_PATH_BLOCKED",
+      "POST_PLAN_AUTHORITY_COUPLING_REVIEW_PATH_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_AUTHORITY_COUPLING_REVIEW_PATH_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_AUTHORITY_COUPLING_REVIEW_PATH_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan authority-coupling review path only; no scientific adequacy claim."
+}

@@ -1,0 +1,25 @@
+{
+  "captured_at_utc": "2026-04-18T20:49:58Z",
+  "dry_run_workspace": {
+    "copied_surfaces": [
+      "formal/output/recompute/qm_seam_coherence_under_revised_blocker.json",
+      "formal/output/recompute/ledger_artifact_transport_under_revised_blocker.json",
+      "formal/output/recompute/blocker_authority_transport_surface.json"
+    ],
+    "workspace_root": "formal/output/recompute_dry_run/latest"
+  },
+  "schema_id": "RECOMPUTE_EXECUTION_BUNDLE_REPORT_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "summary": {
+    "baseline_report": "formal/output/reports/recompute_baseline_snapshot_20260418_v0.json",
+    "execution_mode": "dry-run",
+    "live_writeback_performed": false,
+    "next_action": "RERUN_RECOMPUTE_OBSERVATION_REPORT",
+    "surfaces_completed": 3
+  },
+  "surface_outputs": {
+    "blocker_authority_transport": "RECOMPUTE_TRIGGER_20260418_195138",
+    "ledger_artifact_transport": "RECOMPUTE_TRIGGER_20260418_195138",
+    "qm_seam_coherence": "RECOMPUTE_TRIGGER_20260418_195138"
+  }
+}

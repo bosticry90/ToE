@@ -1,0 +1,32 @@
+{
+  "schema_id": "POST_PLAN_SEAM_REROUTE_REASSESSMENT_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Reassess whether any seam route should change after the first post-plan theorem-gap tranche, while preserving the rule that no seam may be rerouted by narrative interpretation alone.",
+  "required_inputs": {
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "post_plan_cosmo_sr_tranche_report": "formal/output/reports/post_plan_cosmo_sr_first_live_seam_tranche_20260418_v0.json",
+    "post_plan_qm_theorem_gap_tranche_report": "formal/output/reports/post_plan_qm_first_theorem_gap_tranche_20260418_v0.json",
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "seam_resolution_sla_ledger_report": "formal/output/reports/seam_resolution_sla_ledger_20260416_v0.json",
+    "seam_executable_path_normalization_report": "formal/output/reports/seam_executable_path_normalization_20260418_v0.json"
+  },
+  "reroute_policy": {
+    "required_single_executable_row": "ROW-SEAM-COSMO-SR-001",
+    "required_blocked_row": "ROW-SEAM-QM-STAT-001",
+    "required_external_hold_row": "ROW-SEAM-QFT-GR-001",
+    "required_closed_monitoring_row": "ROW-SEAM-GR-QM-001",
+    "required_upstream_movement_rule": "REROUTE_ONLY_AFTER_MATERIAL_UPSTREAM_ROW_MOVEMENT"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_SEAM_REROUTE_REASSESSMENT_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_SEAM_REROUTE_REASSESSMENT_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_SEAM_REROUTE_REASSESSMENT_MATERIALIZED",
+      "POST_PLAN_SEAM_REROUTE_REASSESSMENT_NOT_ELIGIBLE_NO_UPSTREAM_MOVEMENT",
+      "POST_PLAN_SEAM_REROUTE_REASSESSMENT_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_SEAM_REROUTE_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_SEAM_REROUTE_REASSESSMENT_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan seam reroute reassessment only; no scientific adequacy claim."
+}

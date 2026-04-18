@@ -1,0 +1,45 @@
+{
+  "schema_id": "POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize the first objective-quality physics completion queue by ranking theorem-gap rows for closure-plus-exhaustion work while preserving the post-plan seam and master-action hold constraints.",
+  "required_inputs": {
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "post_plan_qm_tranche_report": "formal/output/reports/post_plan_qm_first_theorem_gap_tranche_20260418_v0.json",
+    "theorem_gap_row_outcome_trend_report": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "theorem_gap_tranche_linkage_registry": "formal/docs/release/THEOREM_GAP_TRANCHE_LINKAGE_REGISTRY_20260411_v0.json",
+    "seam_executable_path_normalization_report": "formal/output/reports/seam_executable_path_normalization_20260418_v0.json",
+    "program_state_conversion_review": "formal/docs/release/PROGRAM_STATE_CONVERSION_REVIEW_20260411_v0.json"
+  },
+  "queue_policy": {
+    "eligible_route_classes": [
+      "THEOREM_GAP_PROGRAM",
+      "FROZEN_NEW_STRUCTURE_BRANCH"
+    ],
+    "required_exhausted_row": "ROW-PILLAR-QM-001",
+    "preferred_queue_order": [
+      "ROW-PILLAR-COSMO-001",
+      "ROW-PILLAR-STAT-001",
+      "ROW-PILLAR-GR-001",
+      "ROW-PILLAR-QFT-001",
+      "ROW-PILLAR-EM-001",
+      "ROW-PILLAR-SR-001"
+    ],
+    "required_first_active_row": "ROW-PILLAR-COSMO-001",
+    "required_second_active_row": "ROW-PILLAR-STAT-001",
+    "required_heavy_structural_row": "ROW-PILLAR-GR-001",
+    "required_primary_executable_seam": "SEAM-COSMO-SR",
+    "required_gr_route_class": "FROZEN_NEW_STRUCTURE_BRANCH",
+    "nonmoving_family_trigger_count": 3
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_MATERIALIZED",
+      "POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local completion queue materialization only; no scientific adequacy claim."
+}

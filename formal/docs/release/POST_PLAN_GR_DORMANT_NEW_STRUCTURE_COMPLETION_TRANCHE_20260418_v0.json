@@ -1,0 +1,46 @@
+{
+  "schema_id": "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Execute and measure the first queued heavy structural objective-quality completion tranche by binding the post-plan queue to the frozen GR row 001 dormant new-structure branch and recording whether the canonical dormant package changes row truth, ends in explicit exhaustion, or remains non-promoted while justifying the deeper blocker-definition review path.",
+  "required_inputs": {
+    "completion_queue_report": "formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json",
+    "post_plan_stat_tranche_report": "formal/output/reports/post_plan_stat_theorem_gap_completion_tranche_20260418_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "blocker_burn_dashboard_report": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json",
+    "science_maturity_contradiction_report": "formal/output/reports/science_maturity_contradiction_report_20260416_v0.json",
+    "gr_new_structure_blocker_file_map": "formal/docs/release/GR_ROW_001_NEW_STRUCTURE_BLOCKER_FILE_MAP_20260418_v0.json",
+    "gr_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "gr_new_structure_concept_packet_report": "formal/output/reports/gr_row_001_new_structure_concept_packet_20260413_v0.json",
+    "gr_shared_interface_declaration_report": "formal/output/reports/gr_row_001_shared_interface_declaration_20260413_v0.json",
+    "gr_comparator_specification_report": "formal/output/reports/gr_row_001_comparator_specification_20260413_v0.json",
+    "deeper_blocker_definition_review": "formal/docs/release/DEEPER_BLOCKER_DEFINITION_REVIEW_20260411_v0.json"
+  },
+  "execution_policy": {
+    "required_target_row": "ROW-PILLAR-GR-001",
+    "required_target_route_class": "FROZEN_NEW_STRUCTURE_BRANCH",
+    "required_target_blocker_class": "THEOREM_GAP",
+    "required_queue_outcome": "POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_MATERIALIZED",
+    "required_queue_heavy_structural_row": "ROW-PILLAR-GR-001",
+    "required_stat_outcome": "POST_PLAN_STAT_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED",
+    "required_gr_rule": "RESUME_FROM_P78_P79_P80_DORMANT_PACKAGE_ONLY",
+    "required_retry_path_status": "EXHAUSTED_AND_NONAUTHORITATIVE_FOR_NEXT_STEP_SELECTION",
+    "required_structural_gap_outcome": "GR_REQUIRES_NEW_SEAM_OR_MODEL_CLASS",
+    "required_concept_outcome": "GR_ROW_001_NEW_STRUCTURE_CONCEPT_PACKET_LOCKED",
+    "required_shared_interface_outcome": "GR_ROW_001_SHARED_INTERFACE_DECLARED",
+    "required_comparator_outcome": "GR_ROW_001_COMPARATOR_SPEC_DECLARED"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_EXECUTED_AND_PROMOTED",
+      "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED",
+      "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_EXPLICITLY_EXHAUSTED",
+      "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan GR dormant new-structure completion tranche measurement only; no scientific adequacy claim."
+}

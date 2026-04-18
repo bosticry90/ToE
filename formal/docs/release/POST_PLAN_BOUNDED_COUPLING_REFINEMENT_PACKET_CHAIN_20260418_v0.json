@@ -1,0 +1,36 @@
+{
+  "schema_id": "POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize the bounded coupling-refinement packet path after the post-plan authority-coupling review path lands on bounded refinement, bind the resulting ruling and authority-promotion registration follow-through into one post-plan chain, and route next execution toward recompute monitoring rather than seam reroute or master-action reevaluation.",
+  "required_inputs": {
+    "post_plan_authority_coupling_review_path_report": "formal/output/reports/post_plan_authority_coupling_review_path_20260418_v0.json",
+    "bounded_coupling_refinement_packet_report": "formal/output/reports/bounded_coupling_refinement_packet_20260411_v0.json",
+    "coupling_refinement_ruling_report": "formal/output/reports/coupling_refinement_ruling_20260411_v0.json",
+    "authority_promotion_registration_report": "formal/output/reports/authority_promotion_registration_20260411_v0.json"
+  },
+  "execution_policy": {
+    "required_authority_review_path_outcome": "POST_PLAN_AUTHORITY_COUPLING_REVIEW_PATH_MATERIALIZED",
+    "required_authority_review_path_next_action": "EXECUTE_BOUNDED_COUPLING_REFINEMENT_PACKET_ONCE",
+    "required_execution_classification": "EXECUTION_VALID_BINDING_TIGHTENED",
+    "required_packet_next_action": "EMIT_COUPLING_REFINEMENT_RULING",
+    "required_ruling_id": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+    "required_ruling_next_action": "PROMOTE_REVISED_BLOCKER_DEFINITION_TO_AUTHORITATIVE",
+    "required_registration_completed": true,
+    "required_registration_authoritative": true,
+    "required_registration_next_action": "MONITOR_RECOMPUTE_SURFACES"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_PROMOTION_REGISTERED",
+      "POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_VALID_BUT_NONAUTHORITATIVE",
+      "POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_NOT_FIT_FOR_AUTHORITY_USE",
+      "POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_BLOCKED",
+      "POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan bounded coupling-refinement packet chain only; no scientific adequacy claim."
+}

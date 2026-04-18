@@ -71,15 +71,21 @@ def observe_surface_state_change(surface_name, surface_data):
     latest_trigger = triggers[-1]
     status = latest_trigger.get("status", "")
     
-    # Check if trigger is active (PENDING_RECOMPUTE means recompute interest is live)
+    computed_state = surface_data.get("computed_state")
+    execution_summary = surface_data.get("execution_summary")
+
+    # Check if trigger is active (PENDING_RECOMPUTE or COMPLETED means recompute interest propagated)
     trigger_active = latest_trigger.get("trigger_id") is not None
     revised_blocker_referenced = "REVISED_BLOCKER_DEFINITION_20260411_v0" in latest_trigger.get("revised_blocker_definition", "")
+    has_computed_outputs = computed_state is not None or execution_summary is not None
     
     # In this bounded observation, "state change observed" means:
     # - Trigger was successfully initiated
     # - Surface is aware of revised blocker definition
-    # - Status indicates pending or active computation
-    state_change_observed = trigger_active and revised_blocker_referenced and status in ["PENDING_RECOMPUTE"]
+    # - Status indicates pending recompute or completed recompute with canonical outputs
+    state_change_observed = trigger_active and revised_blocker_referenced and (
+        status in ["PENDING_RECOMPUTE", "COMPLETED"] or has_computed_outputs
+    )
     
     return {
         "surface_name": surface_name,
@@ -87,7 +93,8 @@ def observe_surface_state_change(surface_name, surface_data):
         "trigger_active": trigger_active,
         "revised_blocker_referenced": revised_blocker_referenced,
         "status": status,
-        "trigger_count": len(triggers)
+        "trigger_count": len(triggers),
+        "has_computed_outputs": has_computed_outputs,
     }
 
 
@@ -99,25 +106,56 @@ def interpret_cascade_effect(surface_observations):
     """
     active_surfaces = sum(1 for obs in surface_observations if obs.get("state_change_observed"))
     total_surfaces = len(surface_observations)
-    
+    pending_surfaces = sum(1 for obs in surface_observations if obs.get("status") == "PENDING_RECOMPUTE")
+    completed_surfaces = sum(1 for obs in surface_observations if obs.get("status") == "COMPLETED")
+    surfaces_with_outputs = sum(1 for obs in surface_observations if obs.get("has_computed_outputs"))
+    trigger_propagation_confirmed = total_surfaces > 0 and active_surfaces == total_surfaces
+
     if active_surfaces >= 2:
-        return {
+        cascade = {
             "cascade_effect": "YES_MATERIAL_CASCADE",
             "cascade_reason": f"{active_surfaces}/{total_surfaces} surfaces show trigger activation post-promotion",
             "interpretation": "Promotion had downstream consequence; blocker authority update propagated to multiple surfaces"
         }
     elif active_surfaces == 1:
-        return {
+        cascade = {
             "cascade_effect": "YES_LOCALIZED_EFFECT",
             "cascade_reason": f"1/{total_surfaces} surface shows trigger activation; localized effect only",
             "interpretation": "Authority surface legitimately changed but with localized effect; no broad program unblocking"
         }
     else:
-        return {
+        cascade = {
             "cascade_effect": "NO_OBSERVABLE_CASCADE",
             "cascade_reason": f"0/{total_surfaces} surfaces show trigger activation",
             "interpretation": "Authorized registry update complete but no downstream propagation to recompute surfaces yet"
         }
+
+    if surfaces_with_outputs == total_surfaces and total_surfaces > 0:
+        recompute_status_all_surfaces = "COMPLETED"
+    elif pending_surfaces == total_surfaces and total_surfaces > 0:
+        recompute_status_all_surfaces = "PENDING_RECOMPUTE"
+    else:
+        recompute_status_all_surfaces = "MIXED"
+
+    if surfaces_with_outputs > 0:
+        material_cascade_status = "CONFIRMED_BY_CANONICAL_OUTPUTS"
+    elif trigger_propagation_confirmed:
+        material_cascade_status = "NOT_YET_CONFIRMED"
+    else:
+        material_cascade_status = "NOT_OBSERVED"
+
+    cascade.update(
+        {
+            "trigger_propagation_confirmed": trigger_propagation_confirmed,
+            "trigger_propagation_scope": f"{active_surfaces}/{total_surfaces} surfaces",
+            "recompute_status_all_surfaces": recompute_status_all_surfaces,
+            "material_cascade_status": material_cascade_status,
+            "completed_surface_count": completed_surfaces,
+            "pending_surface_count": pending_surfaces,
+            "surfaces_with_completed_outputs": surfaces_with_outputs,
+        }
+    )
+    return cascade
 
 
 def classify_observation_outcome(surface_observations, cascade_info):
@@ -130,7 +168,26 @@ def classify_observation_outcome(surface_observations, cascade_info):
     active_count = sum(1 for obs in surface_observations if obs.get("state_change_observed"))
     observed_surface_count = len(surface_observations)
     
-    if cascade_type == "YES_MATERIAL_CASCADE":
+    material_cascade_status = cascade_info.get("material_cascade_status", "")
+    trigger_propagation_confirmed = cascade_info.get("trigger_propagation_confirmed")
+
+    if material_cascade_status == "CONFIRMED_BY_CANONICAL_OUTPUTS":
+        return {
+            "outcome_id": "OUTCOME_2_CANONICAL_OUTPUTS_MATERIALIZED",
+            "classification": "TRIGGER_PROPAGATION_CONFIRMED_MATERIAL_OUTPUTS",
+            "interpretation": "Canonical recompute outputs are now materialized on the observed surfaces; route to the post-recompute ruling layer.",
+            "next_decision_layer": "AWAIT_POST_RECOMPUTE_OBSERVATION",
+            "observation_complete": True
+        }
+    elif trigger_propagation_confirmed is True and material_cascade_status == "NOT_YET_CONFIRMED":
+        return {
+            "outcome_id": "OUTCOME_1_TRIGGER_PROPAGATION_CONFIRMED",
+            "classification": "TRIGGER_PROPAGATION_CONFIRMED",
+            "interpretation": "Trigger propagation is confirmed across the observed recompute surfaces, but canonical outputs are not yet materialized.",
+            "next_decision_layer": "AWAIT_POST_RECOMPUTE_OBSERVATION",
+            "observation_complete": False
+        }
+    elif cascade_type == "YES_MATERIAL_CASCADE":
         return {
             "outcome_id": "OUTCOME_1_CASCADE_CONFIRMED",
             "classification": "CASCADE_CONFIRMED",
@@ -160,6 +217,8 @@ def classify_observation_outcome(surface_observations, cascade_info):
 
 def materialize_observation_report(promotion_reg, surface_observations, cascade_info, outcome):
     """Materialize recompute observation and interpretation output report."""
+    pending_surfaces = sum(1 for obs in surface_observations if obs.get("status") == "PENDING_RECOMPUTE")
+    completed_output_surfaces = sum(1 for obs in surface_observations if obs.get("has_computed_outputs"))
     report = {
         "schema_id": "RECOMPUTE_OBSERVATION_REPORT_20260411_v0",
         "status": "ACTIVE_NONLIVE_NONCLAIM",
@@ -179,7 +238,18 @@ def materialize_observation_report(promotion_reg, surface_observations, cascade_
         "interpretation_summary": {
             "surfaces_observed": len(surface_observations),
             "surfaces_showing_trigger_activation": sum(1 for obs in surface_observations if obs.get("state_change_observed")),
-            "cascade_type": cascade_info.get("cascade_effect", ""),
+            "surfaces_triggering_recompute": sum(1 for obs in surface_observations if obs.get("trigger_active")),
+            "surfaces_in_pending_recompute_state": pending_surfaces,
+            "surfaces_with_completed_outputs": completed_output_surfaces,
+            "trigger_propagation_confirmed": cascade_info.get("trigger_propagation_confirmed", False),
+            "material_cascade_confirmed": cascade_info.get("material_cascade_status") == "CONFIRMED_BY_CANONICAL_OUTPUTS",
+            "cascade_type": (
+                "TRIGGER_PROPAGATION_CONFIRMED_CANONICAL_OUTPUTS_MATERIALIZED"
+                if cascade_info.get("material_cascade_status") == "CONFIRMED_BY_CANONICAL_OUTPUTS"
+                else "TRIGGER_PROPAGATION_CONFIRMED_PENDING_STATE_CHANGE"
+                if cascade_info.get("trigger_propagation_confirmed")
+                else cascade_info.get("cascade_effect", "")
+            ),
             "outcome_classification": outcome.get("classification", ""),
             "next_decision_layer": outcome.get("next_decision_layer", ""),
             "observation_complete": outcome.get("observation_complete", False)
@@ -224,7 +294,7 @@ def main():
         print(
             f"recompute_observation: "
             f"surfaces_observed={summary.get('surfaces_observed')} "
-            f"surfaces_active={summary.get('surfaces_showing_trigger_activation')} "
+            f"surfaces_active={summary.get('surfaces_triggering_recompute')} "
             f"cascade_type={summary.get('cascade_type')} "
             f"outcome={summary.get('outcome_classification')} "
             f"next_layer={summary.get('next_decision_layer')} "

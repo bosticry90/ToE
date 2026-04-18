@@ -44,6 +44,27 @@ class TestRecomputeObservation:
         assert observation["trigger_active"] is True
         assert observation["revised_blocker_referenced"] is True
         assert observation["status"] == "PENDING_RECOMPUTE"
+        assert observation["has_computed_outputs"] is False
+
+    def test_surface_state_change_when_completed_outputs_materialize(self):
+        surface_data = {
+            "triggers": [
+                {
+                    "trigger_id": "RECOMPUTE_TRIGGER_20260418_195138",
+                    "surface_name": "qm_seam_coherence_under_revised_blocker",
+                    "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+                    "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+                    "status": "COMPLETED",
+                }
+            ],
+            "computed_state": {"state_change_from_baseline": 1.0},
+        }
+
+        observation = observe_surface_state_change("qm_seam_coherence", surface_data)
+
+        assert observation["state_change_observed"] is True
+        assert observation["status"] == "COMPLETED"
+        assert observation["has_computed_outputs"] is True
 
     def test_surface_no_state_change_when_not_triggered(self):
         """
@@ -83,6 +104,22 @@ class TestRecomputeObservation:
         
         assert cascade_info["cascade_effect"] == "YES_MATERIAL_CASCADE"
         assert "2/3 surfaces" in cascade_info["cascade_reason"]
+        assert cascade_info["trigger_propagation_confirmed"] is False
+        assert cascade_info["material_cascade_status"] == "NOT_OBSERVED"
+
+    def test_cascade_effect_completed_outputs_all_surfaces(self):
+        surface_observations = [
+            {"state_change_observed": True, "status": "COMPLETED", "has_computed_outputs": True},
+            {"state_change_observed": True, "status": "COMPLETED", "has_computed_outputs": True},
+            {"state_change_observed": True, "status": "COMPLETED", "has_computed_outputs": True},
+        ]
+
+        cascade_info = interpret_cascade_effect(surface_observations)
+
+        assert cascade_info["trigger_propagation_confirmed"] is True
+        assert cascade_info["recompute_status_all_surfaces"] == "COMPLETED"
+        assert cascade_info["material_cascade_status"] == "CONFIRMED_BY_CANONICAL_OUTPUTS"
+        assert cascade_info["surfaces_with_completed_outputs"] == 3
 
     def test_cascade_effect_localized_single_surface(self):
         """
@@ -150,6 +187,38 @@ class TestRecomputeObservation:
         assert outcome["outcome_id"] == "OUTCOME_2_LOCAL_ONLY"
         assert outcome["classification"] == "LOCAL_AUTHORITY_ONLY"
         assert outcome["next_decision_layer"] == "DOCUMENT_LOCAL_AUTHORITY_ONLY_RESULT"
+
+    def test_outcome_trigger_propagation_confirmed_pending_outputs(self):
+        surface_observations = [
+            {"state_change_observed": True, "surface_name": "qm"},
+            {"state_change_observed": True, "surface_name": "ledger"},
+            {"state_change_observed": True, "surface_name": "transport"},
+        ]
+        cascade_info = {
+            "trigger_propagation_confirmed": True,
+            "material_cascade_status": "NOT_YET_CONFIRMED",
+        }
+
+        outcome = classify_observation_outcome(surface_observations, cascade_info)
+
+        assert outcome["outcome_id"] == "OUTCOME_1_TRIGGER_PROPAGATION_CONFIRMED"
+        assert outcome["classification"] == "TRIGGER_PROPAGATION_CONFIRMED"
+        assert outcome["next_decision_layer"] == "AWAIT_POST_RECOMPUTE_OBSERVATION"
+        assert outcome["observation_complete"] is False
+
+    def test_outcome_completed_outputs_materialized(self):
+        surface_observations = [{"state_change_observed": True}] * 3
+        cascade_info = {
+            "trigger_propagation_confirmed": True,
+            "material_cascade_status": "CONFIRMED_BY_CANONICAL_OUTPUTS",
+        }
+
+        outcome = classify_observation_outcome(surface_observations, cascade_info)
+
+        assert outcome["outcome_id"] == "OUTCOME_2_CANONICAL_OUTPUTS_MATERIALIZED"
+        assert outcome["classification"] == "TRIGGER_PROPAGATION_CONFIRMED_MATERIAL_OUTPUTS"
+        assert outcome["next_decision_layer"] == "AWAIT_POST_RECOMPUTE_OBSERVATION"
+        assert outcome["observation_complete"] is True
 
     def test_outcome_insufficient_signal(self):
         """

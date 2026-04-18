@@ -1,32 +1,32 @@
 {
-  "captured_at_utc": "2026-04-18T20:59:47Z",
+  "captured_at_utc": "2026-04-18T20:49:58Z",
   "computed_state": {
-    "artifact_flux_before": 0.475,
-    "artifact_flux_magnitude": 0.507063,
     "attribution": "REVISED_BLOCKER_DEFINITION_PROMOTION_DELTA",
-    "authority_to_ledger_binding_tightness": 0.504238,
-    "authority_to_ledger_binding_tightness_before": 0.48,
-    "baseline_report": "formal/output/reports/recompute_baseline_snapshot_20260418_v0.json",
-    "state_change_from_baseline": 0.032063,
-    "surface_id": "ledger_artifact_transport",
-    "transport_state": 0.38765,
-    "transport_state_before": 0.367,
+    "baseline_report": "formal/output/recompute_dry_run/latest/formal/output/reports/recompute_baseline_snapshot_20260418_v0.json",
+    "downstream_consequence_magnitude": 0.313089,
+    "downstream_consequence_magnitude_before": 0.276,
+    "propagation_latency": 0.518506,
+    "propagation_latency_before": 0.543,
+    "state_change_from_baseline": 0.024494,
+    "surface_id": "blocker_authority_transport",
+    "transport_state_coupling": 0.437988,
+    "transport_state_coupling_before": 0.399,
     "trigger_id": "RECOMPUTE_TRIGGER_20260418_195138"
   },
   "execution_summary": {
     "classification": "RECOMPUTE_COMPLETED_WITH_OUTPUTS",
     "next_action": "RERUN_RECOMPUTE_OBSERVATION_REPORT",
-    "surface_id": "ledger_artifact_transport"
+    "surface_id": "blocker_authority_transport"
   },
   "last_completed_trigger_id": "RECOMPUTE_TRIGGER_20260418_195138",
-  "schema_id": "LEDGER_ARTIFACT_TRANSPORT_UNDER_REVISED_BLOCKER",
+  "schema_id": "BLOCKER_AUTHORITY_TRANSPORT_SURFACE",
   "status": "ACTIVE_NONLIVE_NONCLAIM",
   "triggers": [
     {
       "dependency": "authoritative_blocker_definition_movement",
       "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
       "status": "PENDING_RECOMPUTE",
-      "surface_name": "ledger_artifact_transport_under_revised_blocker",
+      "surface_name": "blocker_authority_transport_surface",
       "trigger_id": "RECOMPUTE_TRIGGER_20260412_003632",
       "triggered_at_utc": "2026-04-12T00:36:32.028234Z",
       "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0"
@@ -35,7 +35,7 @@
       "dependency": "authoritative_blocker_definition_movement",
       "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
       "status": "PENDING_RECOMPUTE",
-      "surface_name": "ledger_artifact_transport_under_revised_blocker",
+      "surface_name": "blocker_authority_transport_surface",
       "trigger_id": "RECOMPUTE_TRIGGER_20260412_003636",
       "triggered_at_utc": "2026-04-12T00:36:36.139491Z",
       "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0"
@@ -44,47 +44,47 @@
       "dependency": "authoritative_blocker_definition_movement",
       "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
       "status": "PENDING_RECOMPUTE",
-      "surface_name": "ledger_artifact_transport_under_revised_blocker",
+      "surface_name": "blocker_authority_transport_surface",
       "trigger_id": "RECOMPUTE_TRIGGER_20260417_032210",
-      "triggered_at_utc": "2026-04-17T03:22:10.708213Z",
+      "triggered_at_utc": "2026-04-17T03:22:10.709646Z",
       "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0"
     },
     {
       "dependency": "authoritative_blocker_definition_movement",
       "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
       "status": "PENDING_RECOMPUTE",
-      "surface_name": "ledger_artifact_transport_under_revised_blocker",
+      "surface_name": "blocker_authority_transport_surface",
       "trigger_id": "RECOMPUTE_TRIGGER_20260417_032538",
-      "triggered_at_utc": "2026-04-17T03:25:38.724677Z",
+      "triggered_at_utc": "2026-04-17T03:25:38.725966Z",
       "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0"
     },
     {
       "dependency": "authoritative_blocker_definition_movement",
       "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
       "status": "PENDING_RECOMPUTE",
-      "surface_name": "ledger_artifact_transport_under_revised_blocker",
+      "surface_name": "blocker_authority_transport_surface",
       "trigger_id": "RECOMPUTE_TRIGGER_20260417_032603",
-      "triggered_at_utc": "2026-04-17T03:26:03.735677Z",
+      "triggered_at_utc": "2026-04-17T03:26:03.736675Z",
       "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0"
     },
     {
       "dependency": "authoritative_blocker_definition_movement",
       "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
       "status": "PENDING_RECOMPUTE",
-      "surface_name": "ledger_artifact_transport_under_revised_blocker",
+      "surface_name": "blocker_authority_transport_surface",
       "trigger_id": "RECOMPUTE_TRIGGER_20260417_032622",
       "triggered_at_utc": "2026-04-17T03:26:22.562210Z",
       "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0"
     },
     {
-      "completed_at_utc": "2026-04-18T20:59:47Z",
-      "completion_note": "Ledger artifact transport recompute output materialized",
+      "completed_at_utc": "2026-04-18T20:49:58Z",
+      "completion_note": "Blocker authority transport recompute output materialized",
       "dependency": "authoritative_blocker_definition_movement",
       "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
       "status": "COMPLETED",
-      "surface_name": "ledger_artifact_transport_under_revised_blocker",
+      "surface_name": "blocker_authority_transport_surface",
       "trigger_id": "RECOMPUTE_TRIGGER_20260418_195138",
-      "triggered_at_utc": "2026-04-18T19:51:38.914815Z",
+      "triggered_at_utc": "2026-04-18T19:51:38.916772Z",
       "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0"
     }
   ]

@@ -1,0 +1,31 @@
+{
+  "schema_id": "POST_PLAN_DEEPER_BLOCKER_DEFINITION_REVIEW_SUCCESSOR_TRANCHE_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize the post-plan deeper blocker-definition review successor tranche after the GR dormant new-structure branch exhausts, and bind the resulting next action to the existing bounded blocker-definition test path rather than to seam reroute, master-action reevaluation, or retry-era GR packet reuse.",
+  "required_inputs": {
+    "post_plan_gr_tranche_report": "formal/output/reports/post_plan_gr_dormant_new_structure_completion_tranche_20260418_v0.json",
+    "deeper_blocker_definition_review_declaration": "formal/docs/release/DEEPER_BLOCKER_DEFINITION_REVIEW_20260411_v0.json",
+    "deeper_blocker_definition_review_report": "formal/output/reports/deeper_blocker_definition_review_20260411_v0.json",
+    "program_state_conversion_review_report": "formal/output/reports/program_state_conversion_review_20260411_v0.json"
+  },
+  "execution_policy": {
+    "required_gr_outcome": "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_EXPLICITLY_EXHAUSTED",
+    "required_gr_next_action": "OPEN_DEEPER_BLOCKER_DEFINITION_REVIEW_PATH_WITH_GR_DORMANT_PACKAGE_EXHAUSTION_RECORDED",
+    "required_review_basis": "PROGRAM_STATE_CONVERSION_REVIEW_PRESCRIBED_DEEPER_BLOCKER_DEFINITION_REVIEW",
+    "required_conversion_review_outcome": "DEEPER_BLOCKER_DEFINITION_REVIEW_REQUIRED",
+    "required_deeper_review_outcome": "DEEPER_BLOCKER_DEFINITION_REVIEW_MATERIALIZED",
+    "required_successor_next_action": "EXECUTE_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_ONCE"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_DEEPER_BLOCKER_DEFINITION_REVIEW_SUCCESSOR_TRANCHE_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_DEEPER_BLOCKER_DEFINITION_REVIEW_SUCCESSOR_TRANCHE_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_DEEPER_BLOCKER_DEFINITION_REVIEW_SUCCESSOR_TRANCHE_MATERIALIZED",
+      "POST_PLAN_DEEPER_BLOCKER_DEFINITION_REVIEW_SUCCESSOR_TRANCHE_BLOCKED",
+      "POST_PLAN_DEEPER_BLOCKER_DEFINITION_REVIEW_SUCCESSOR_TRANCHE_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_DEEPER_BLOCKER_DEFINITION_REVIEW_SUCCESSOR_TRANCHE_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_DEEPER_BLOCKER_DEFINITION_REVIEW_SUCCESSOR_TRANCHE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan deeper blocker-definition review successor tranche only; no scientific adequacy claim."
+}

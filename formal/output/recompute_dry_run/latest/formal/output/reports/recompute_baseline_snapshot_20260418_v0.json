@@ -1,0 +1,50 @@
+{
+  "captured_at_utc": "2026-04-18T20:49:58Z",
+  "non_claim_boundary": "Repository-local recompute baseline snapshot only; no scientific adequacy claim.",
+  "schema_id": "RECOMPUTE_BASELINE_SNAPSHOT_REPORT_20260418_v0",
+  "source_bundle": {
+    "authority_promotion_registration_report": "formal/output/reports/authority_promotion_registration_20260411_v0.json",
+    "post_plan_bounded_coupling_refinement_packet_chain_report": "formal/output/reports/post_plan_bounded_coupling_refinement_packet_chain_20260418_v0.json"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "summary": {
+    "authority_registration_completed": true,
+    "baseline_surfaces": 3,
+    "packet_chain_outcome": "POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_PROMOTION_REGISTERED"
+  },
+  "surface_baselines": {
+    "blocker_authority_transport": {
+      "baseline_values": {
+        "downstream_consequence_magnitude": 0.276,
+        "propagation_latency": 0.543,
+        "transport_coupling": 0.399
+      },
+      "latest_trigger_id": "RECOMPUTE_TRIGGER_20260418_195138",
+      "surface_id": "blocker_authority_transport",
+      "surface_path": "formal/output/recompute/blocker_authority_transport_surface.json",
+      "trigger_count": 7
+    },
+    "ledger_artifact_transport": {
+      "baseline_values": {
+        "artifact_flux": 0.475,
+        "binding_tightness": 0.48,
+        "transport_state": 0.367
+      },
+      "latest_trigger_id": "RECOMPUTE_TRIGGER_20260418_195138",
+      "surface_id": "ledger_artifact_transport",
+      "surface_path": "formal/output/recompute/ledger_artifact_transport_under_revised_blocker.json",
+      "trigger_count": 7
+    },
+    "qm_seam_coherence": {
+      "baseline_values": {
+        "coherence_metric": 0.69,
+        "ledger_flux_reference": 0.394,
+        "state_transition_velocity": 0.175
+      },
+      "latest_trigger_id": "RECOMPUTE_TRIGGER_20260418_195138",
+      "surface_id": "qm_seam_coherence",
+      "surface_path": "formal/output/recompute/qm_seam_coherence_under_revised_blocker.json",
+      "trigger_count": 7
+    }
+  }
+}
