@@ -43,9 +43,20 @@ def _parse_completion_rows(matrix_path: Path) -> list[dict[str, str]]:
                 "primary_target": cells[5],
                 "primary_artifact": cells[6],
                 "primary_gate": cells[7],
+                "governance_checkpoint_status": cells[8] if len(cells) > 8 else "UNSPECIFIED",
+                "physics_checkpoint_status": cells[9] if len(cells) > 9 else "UNSPECIFIED",
+                "gate_runtime_status": cells[10] if len(cells) > 10 else "UNSPECIFIED",
             }
         )
     return rows
+
+
+def _is_closed_monitoring_row(row: dict[str, str]) -> bool:
+    return (
+        row.get("governance_checkpoint_status") == "GOVERNANCE_COMPLETE"
+        and row.get("physics_checkpoint_status") == "PHYSICS_COMPLETE"
+        and row.get("gate_runtime_status") == "GATE_RUNTIME_RECOMPUTE_MONITORING_REQUIRED"
+    )
 
 
 def _owner_rows_by_id(owner_map: dict[str, Any]) -> dict[str, dict[str, Any]]:
@@ -82,9 +93,14 @@ def build_blocker_closure_map(*, output_path: Path, captured_at_utc: str | None)
             missing_owner_rows.append(row["row_id"])
             owner_row = {}
 
+        counts_as_active_blocker = not _is_closed_monitoring_row(row)
+        blocker_status = "ACTIVE_BLOCKER" if counts_as_active_blocker else "CLOSED_RECOMPUTE_MONITORING"
+
         mappings.append(
             {
                 "blocker_class": row["blocker_class"],
+                "blocker_status": blocker_status,
+                "counts_as_active_blocker": counts_as_active_blocker,
                 "domain": row["domain"],
                 "row_id": row["row_id"],
                 "owning_lane": row["lane"],
@@ -92,6 +108,9 @@ def build_blocker_closure_map(*, output_path: Path, captured_at_utc: str | None)
                 "required_evidence_surface": owner_row.get("required_evidence_surface", row["primary_target"]),
                 "exit_criterion": owner_row.get("exit_criterion", "UNSPECIFIED"),
                 "closure_gate": row["primary_gate"],
+                "governance_checkpoint_status": row["governance_checkpoint_status"],
+                "physics_checkpoint_status": row["physics_checkpoint_status"],
+                "gate_runtime_status": row["gate_runtime_status"],
             }
         )
 
@@ -104,6 +123,7 @@ def build_blocker_closure_map(*, output_path: Path, captured_at_utc: str | None)
             "closure_owner_map": str(CLOSURE_OWNER_MAP_PATH.relative_to(REPO_ROOT)).replace("\\", "/"),
         },
         "rows_total": len(mappings),
+        "active_rows_total": sum(1 for mapping in mappings if mapping["counts_as_active_blocker"]),
         "missing_owner_rows": sorted(missing_owner_rows),
         "mappings": mappings,
         "non_claim_boundary": "This blocker-to-closure map is a repository-local governance control artifact and does not assert scientific adequacy.",

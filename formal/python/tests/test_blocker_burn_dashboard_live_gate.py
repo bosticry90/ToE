@@ -38,16 +38,16 @@ def test_blocker_burn_dashboard_live_report_is_consistent() -> None:
     scoreboard = payload.get("blocker_scoreboard", {})
     assert scoreboard.get("current", {}).get("THEOREM_GAP") == 7
     assert scoreboard.get("current", {}).get("SEAM_INTEGRATION_GAP") == 3
-    assert scoreboard.get("current", {}).get("PARITY_DRIFT") == 1
-    assert scoreboard.get("net_delta") == 0
-    assert scoreboard.get("movement_status") == "FLAT"
-    assert scoreboard.get("exception_required") is True
+    assert scoreboard.get("current", {}).get("PARITY_DRIFT") == 0
+    assert scoreboard.get("net_delta") == -1
+    assert scoreboard.get("movement_status") == "DECREASING"
+    assert scoreboard.get("exception_required") is False
 
     row_contrib = payload.get("row_blocker_contributions", {})
-    assert row_contrib.get("rows_total") == 11
+    assert row_contrib.get("rows_total") == 10
     assert row_contrib.get("blocker_classes", {}).get("THEOREM_GAP", {}).get("row_count") == 7
     assert row_contrib.get("blocker_classes", {}).get("SEAM_INTEGRATION_GAP", {}).get("row_count") == 3
-    assert row_contrib.get("blocker_classes", {}).get("PARITY_DRIFT", {}).get("row_count") == 1
+    assert row_contrib.get("blocker_classes", {}).get("PARITY_DRIFT", {}).get("row_count") == 0
 
     readiness = payload.get("row_promotion_readiness", {})
     assert readiness.get("rows_total") == 11
@@ -73,7 +73,7 @@ def test_blocker_burn_dashboard_live_report_is_consistent() -> None:
     timeline = payload.get("tranche_timeline", {})
     assert timeline.get("current_tranche_id") == "TGC-76"
     assert timeline.get("row_promotion_count") == 0
-    assert timeline.get("ledger_progress_classification") == "REWORK_ROUTED"
+    assert timeline.get("ledger_progress_classification") == "PROGRESS"
 
     freshness = payload.get("source_freshness", {})
     assert freshness.get("stale_input_warning") is True

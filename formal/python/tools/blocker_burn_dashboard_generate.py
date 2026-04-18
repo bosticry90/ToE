@@ -100,21 +100,30 @@ def _movement_status(net_delta: int) -> str:
     return "INCREASING"
 
 
-def _row_blocker_contributions(rows: list[dict[str, str]]) -> dict[str, Any]:
+def _row_blocker_contributions(closure_map: dict[str, Any]) -> dict[str, Any]:
     contributions: dict[str, dict[str, Any]] = {
         blocker_class: {"row_count": 0, "row_ids": []} for blocker_class in BLOCKER_CLASSES
     }
-    for row in rows:
-        blocker_class = row["blocker_class"]
+    active_rows = 0
+    mappings = closure_map.get("mappings", [])
+    if not isinstance(mappings, list):
+        mappings = []
+    for row in mappings:
+        if not isinstance(row, dict):
+            continue
+        if bool(row.get("counts_as_active_blocker", True)) is False:
+            continue
+        blocker_class = str(row.get("blocker_class", ""))
         entry = contributions.setdefault(blocker_class, {"row_count": 0, "row_ids": []})
         entry["row_count"] += 1
-        entry["row_ids"].append(row["row_id"])
+        entry["row_ids"].append(str(row.get("row_id", "")))
+        active_rows += 1
 
     for blocker_class in contributions:
         contributions[blocker_class]["row_ids"] = sorted(contributions[blocker_class]["row_ids"])
 
     return {
-        "rows_total": len(rows),
+        "rows_total": active_rows,
         "blocker_classes": contributions,
     }
 
@@ -280,7 +289,7 @@ def build_dashboard(*, output_path: Path, captured_at_utc: str | None) -> dict[s
             "exception_artifact_pointer": exception_requirement.get("exception_artifact_pointer"),
             "movement_authority": _ptr(TREND_WINDOW_REPORT_PATH),
         },
-        "row_blocker_contributions": _row_blocker_contributions(rows),
+        "row_blocker_contributions": _row_blocker_contributions(closure_map),
         "row_promotion_readiness": _row_promotion_readiness(rows),
         "closure_map_linkage": closure_linkage,
         "tranche_timeline": {

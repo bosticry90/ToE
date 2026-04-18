@@ -36,6 +36,30 @@ def _movement_status(net_delta: int) -> str:
     return "INCREASING"
 
 
+def _current_counts_from_closure_map(blocker_map: dict[str, Any]) -> dict[str, int]:
+    counts = {
+        "THEOREM_GAP": 0,
+        "SEAM_INTEGRATION_GAP": 0,
+        "PARITY_DRIFT": 0,
+        "GOVERNANCE_GUARDRAIL": 0,
+        "EVIDENCE_ALIGNMENT_GAP": 0,
+    }
+    mappings = blocker_map.get("mappings", [])
+    if not isinstance(mappings, list):
+        return counts
+
+    for mapping in mappings:
+        if not isinstance(mapping, dict):
+            continue
+        if bool(mapping.get("counts_as_active_blocker", True)) is False:
+            continue
+        blocker_class = str(mapping.get("blocker_class", "")).strip()
+        if blocker_class not in counts:
+            continue
+        counts[blocker_class] += 1
+    return counts
+
+
 def build_blocker_trend_window(*, output_path: Path, captured_at_utc: str | None) -> dict[str, Any]:
     blocker_review = _read_json(BLOCKER_BURN_REVIEW_PATH)
     blocker_map = _read_json(BLOCKER_CLOSURE_MAP_REPORT_PATH)
@@ -50,8 +74,9 @@ def build_blocker_trend_window(*, output_path: Path, captured_at_utc: str | None
     if not isinstance(current, dict):
         current = {}
 
-    net_delta_raw = blocker_counts.get("net_delta", 0)
-    net_delta = int(net_delta_raw) if isinstance(net_delta_raw, int) else 0
+    current = _current_counts_from_closure_map(blocker_map)
+
+    net_delta = sum(int(current.get(key, 0) or 0) - int(prior.get(key, 0) or 0) for key in current)
     movement_status = _movement_status(net_delta)
 
     ccg02_exception = blocker_review.get("ccg02_exception", {})
@@ -76,6 +101,7 @@ def build_blocker_trend_window(*, output_path: Path, captured_at_utc: str | None
             "movement_status": movement_status,
             "movement_rule": "NET_DELTA_LT_0_IS_PROGRESS_NET_DELTA_GE_0_REQUIRES_EXCEPTION",
             "row_coverage_count": int(blocker_map.get("rows_total", 0)),
+            "active_blocker_row_count": int(blocker_map.get("active_rows_total", 0)),
         },
         "exception_requirement": {
             "exception_required": exception_required,

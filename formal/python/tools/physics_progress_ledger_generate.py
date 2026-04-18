@@ -129,6 +129,8 @@ def _row_level_evidence(closure_map: dict[str, Any]) -> list[dict[str, str]]:
     rows = closure_map.get("mappings", [])
     evidence: list[dict[str, str]] = []
     for row in rows:
+        if bool(row.get("counts_as_active_blocker", True)) is False:
+            continue
         blocker_class = str(row.get("blocker_class", ""))
         if blocker_class not in {"THEOREM_GAP", "SEAM_INTEGRATION_GAP", "PARITY_DRIFT"}:
             continue

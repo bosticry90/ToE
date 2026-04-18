@@ -40,15 +40,15 @@ A row is considered promoted only when all of the following are true:
 | ROW-PILLAR-SR-001 | pillar | SR_DERIVATION_CHAIN | THEOREM_GAP_CLOSURE_INCREMENT_EXECUTION_CHECKPOINT_PINNED | THEOREM_GAP | formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md | formal/output/sr_empirical_comparison_packet_05_v0.json | formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py | NOT_APPLICABLE_PILLAR_ROW | THEOREM_GAP_OPEN | PATH_PINNED_RUNTIME_NOT_YET_RECORDED |
 
 ## Throughput queue ordering
-1. Publish bounded branch decision package that authorizes single seam reentry only with new blocker-reducing exception basis, else routes to theorem-gap rework.
-2. Keep seam/STAT resume tranches halted while closure traceability remains non-reducing and blocker trend net delta remains unchanged.
-3. Reauthorize any resume tranche only via a newly pinned bounded exception scope that explicitly supersedes TGC-88 through TGC-92 and preserves negative blocker-delta requirements.
+1. Preserve the bounded GR-QM closed-under-recompute-monitoring posture and keep active blocker accounting pinned to rows that still carry unresolved blocker burden.
+2. Treat any further seam reentry as bounded and explicitly authorized via the active TGC-93 branch decision rather than as a default route.
+3. Keep theorem-gap closure sequencing focused on the residual pillar and seam rows that still contribute active blocker counts.
 
 ## Blocker-burn scoreboard (rolling 8-tranche window)
 - Baseline counts (current snapshot):
 	- `THEOREM_GAP: 7`
 	- `SEAM_INTEGRATION_GAP: 3`
-	- `PARITY_DRIFT: 1`
+	- `PARITY_DRIFT: 0`
 	- `GOVERNANCE_GUARDRAIL: 0`
 	- `EVIDENCE_ALIGNMENT_GAP: 0`
 - Window gate:
