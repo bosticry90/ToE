@@ -1,0 +1,38 @@
+{
+  "schema_id": "SANDBOX_PROMOTION_POST_PILOT_DECISION_COSMO_SR_CYCLE07_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Formalize one post-pilot decision surface for the bounded COSMO-SR Cycle07 governed hold outcome before any widening, retirement, or authority-hardening implementation is attempted.",
+  "required_inputs": {
+    "governed_review_report": "formal/output/reports/sandbox_promotion_governed_review_wrapper_cosmo_sr_cycle07_20260419_v0.json",
+    "governed_review_wrapper": "formal/docs/release/SANDBOX_PROMOTION_GOVERNED_REVIEW_WRAPPER_COSMO_SR_CYCLE07_20260419_v0.json",
+    "pilot_binding": "formal/docs/release/SANDBOX_PROMOTION_BOUNDED_PILOT_BINDING_COSMO_SR_CYCLE07_20260419_v0.json",
+    "phase2_phase6_declaration": "formal/docs/release/SANDBOX_PROMOTION_MIGRATION_PHASE2_PHASE6_DECLARATION_20260419_v0.md"
+  },
+  "candidate_routes": [
+    {
+      "route_id": "HOLD_NONWIDENED_ROUTE",
+      "activation_condition": "GOVERNED_REVIEW_HOLD_WITH_NO_CANONICAL_MUTATION_EMITTED",
+      "next_action": "IMPLEMENT_AUTHORITY_OWNERSHIP_HARDENING_TRANCHE_BEFORE_ANY_WIDENING_OR_RETIREMENT"
+    },
+    {
+      "route_id": "WIDEN_PROMOTION_ROUTE",
+      "activation_condition": "GOVERNED_PROMOTE_DECISION_EMITTED_WITH_CANONICAL_MUTATION_INSTRUCTION",
+      "next_action": "DECLARE_NEXT_BOUNDED_PROMOTION_WIDENING_TRANCHE"
+    },
+    {
+      "route_id": "RETIRE_TO_SANDBOX_ONLY_ROUTE",
+      "activation_condition": "GOVERNED_REJECT_DECISION_EMITTED_OR_PILOT_DEEMED_NONPROMOTION_BEARING",
+      "next_action": "RETURN_PILOT_TO_SANDBOX_ONLY_STATUS_AND_DECLARE_RETIREMENT_REVIEW_IF_NEEDED"
+    }
+  ],
+  "decision_policy": {
+    "default_decision": "RETAIN_BOUNDED_PILOT_NONWIDENED_AFTER_GOVERNED_HOLD",
+    "required_hold_decision": "hold",
+    "required_hold_terminal_outcome": "SANDBOX_PROMOTION_GOVERNED_REVIEW_HOLD_DECISION_EMITTED",
+    "required_no_mutation_for_hold": true,
+    "required_artifact_adjudication_for_nonwidened_hold": "NOT_YET_DISCHARGED",
+    "no_loop_rule": "ONE_SANDBOX_PROMOTION_POST_PILOT_DECISION_ONLY",
+    "no_further_widening_policy": "NO_WIDENING_OR_RETIREMENT_BEFORE_POST_PILOT_DECISION_IS_FORMALIZED"
+  },
+  "non_claim_boundary": "Repository-local post-pilot decision declaration only; no scientific adequacy, canonical promotion, or widening claim by itself."
+}

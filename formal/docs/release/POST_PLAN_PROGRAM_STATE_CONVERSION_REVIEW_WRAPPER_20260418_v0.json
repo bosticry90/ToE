@@ -1,0 +1,33 @@
+{
+  "schema_id": "POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize the post-plan wrapper that consumes the newly non-promoted SR theorem-gap tranche and binds the queue terminus to the existing one-shot program-state conversion review plus its already materialized downstream successor path, rather than opening another lookalike theorem-gap row.",
+  "required_inputs": {
+    "post_plan_sr_theorem_gap_completion_tranche_report": "formal/output/reports/post_plan_sr_theorem_gap_completion_tranche_20260418_v0.json",
+    "program_state_conversion_review_declaration": "formal/docs/release/PROGRAM_STATE_CONVERSION_REVIEW_20260411_v0.json",
+    "program_state_conversion_review_report": "formal/output/reports/program_state_conversion_review_20260411_v0.json",
+    "post_plan_deeper_blocker_definition_review_successor_tranche_report": "formal/output/reports/post_plan_deeper_blocker_definition_review_successor_tranche_20260418_v0.json"
+  },
+  "execution_policy": {
+    "required_sr_outcome": "POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED",
+    "required_sr_next_action": "ROUTE_TO_PROGRAM_STATE_CONVERSION_REVIEW_WITH_QFT_EM_SR_NONMOVING_FAMILIES_RECORDED",
+    "required_conversion_review_basis": "THREE_UPSTREAM_EXPLANATIONS_EXHAUSTED_NON_MOVEMENT_PERSISTS",
+    "required_conversion_review_outcome": "DEEPER_BLOCKER_DEFINITION_REVIEW_REQUIRED",
+    "required_conversion_review_next_action": "EXECUTE_DEEPER_BLOCKER_DEFINITION_REVIEW",
+    "required_successor_outcome": "POST_PLAN_DEEPER_BLOCKER_DEFINITION_REVIEW_SUCCESSOR_TRANCHE_MATERIALIZED",
+    "required_successor_next_action": "EXECUTE_BOUNDED_BLOCKER_DEFINITION_TEST_PACKET_ONCE",
+    "required_wrapper_next_action": "REUSE_EXISTING_PROGRAM_STATE_CONVERSION_REVIEW_DOWNSTREAM_PATH_AND_KEEP_THEOREM_GAP_QUEUE_CLOSED"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_MATERIALIZED",
+      "POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_BLOCKED",
+      "POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan program-state conversion review wrapper only; no scientific adequacy claim."
+}

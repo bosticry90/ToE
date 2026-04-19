@@ -1,0 +1,57 @@
+{
+  "schema_id": "WS10_T42_REDTEAM_BASELINE_FREEZE_REPORT_20260418_v0",
+  "artifact_id": "ws10_t42_redteam_baseline_freeze_checkpoint_20260418_v0",
+  "status": "ACTIVE_REDTEAM_BASELINE_FREEZE_NONLIVE_v0",
+  "anchored_commit": "a6f3764",
+  "captured_at_utc": "2026-04-18T22:07:41Z",
+  "baseline_metrics": {
+    "release_surface_file_count": 910,
+    "governance_surface_file_count": 405,
+    "governed_pytests_expected_count": 341,
+    "active_theorem_gap_count": 7,
+    "active_seam_gap_count": 3,
+    "active_parity_drift_count": 0,
+    "blocker_net_delta": -1,
+    "blocker_movement_status": "DECREASING",
+    "seam_rows_total": 4,
+    "active_review_rows": 2,
+    "external_hold_rows": 1,
+    "held_review_rows": 2
+  },
+  "freeze_contract": {
+    "primary_metrics": [
+      "active_theorem_gap_count",
+      "active_seam_gap_count",
+      "blocker_net_delta"
+    ],
+    "release_surface_growth_rule": "NO_NEW_RELEASE_FAMILY_GROWTH_WITHOUT_RETIREMENT_OR_CANONICAL_BLOCKER_CLOSURE",
+    "governed_pytest_growth_rule": "NO_NEW_GOVERNED_PYTEST_GROWTH_WITHOUT_MANIFEST_JUSTIFIED_RETIREMENT_OR_CANONICAL_BLOCKER_CLOSURE",
+    "authority_residency_rule": "NO_NEW_DUPLICATED_AUTHORITY_RESIDENCY_WITHOUT_EXPLICIT_DECISION_ARTIFACT",
+    "active_lane_rule": "ONLY_ONE_ACTIVE_SEAM_CAMPAIGN_PLUS_ONE_THEOREM_GAP_FAMILY_AT_A_TIME",
+    "operator_pack_rule": "EXECUTION_REVIEW_MUST_READ_MATRIX_DASHBOARD_SEAM_SLA_ROADMAP_AND_INVENTORY_ONLY"
+  },
+  "invariance": {
+    "release_gate_truth_invariance": "ENFORCED",
+    "packet42_policy_invariance": "ENFORCED",
+    "nonclaim_boundary_invariance": "ENFORCED",
+    "scalar_freeze_policy_invariance": "ENFORCED"
+  },
+  "source_pointers": {
+    "blocker_burn_dashboard": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json",
+    "seam_resolution_sla_ledger": "formal/output/reports/seam_resolution_sla_ledger_20260416_v0.json",
+    "governance_manifest": "formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json",
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "compact_state": "State_of_the_Theory.md",
+    "roadmap": "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+    "inventory": "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+    "architecture_schema": "ARCHITECTURE_SCHEMA_v1.json"
+  },
+  "summary": {
+    "terminal_outcome": "REDTEAM_BASELINE_FREEZE_MATERIALIZED",
+    "next_action": "START_PHASE2_CONSOLIDATION_WITH_ONE_GATE_FAMILY_AND_ONE_RELEASE_FAMILY_BASELINE",
+    "single_executable_seam_reference": "SEAM-COSMO-SR",
+    "blocked_seam_reference": "SEAM-QM-STAT",
+    "external_hold_seam_reference": "SEAM-QFT-GR"
+  },
+  "non_claim_boundary": "This checkpoint is a repository-local remediation baseline and freeze artifact. It does not assert scientific adequacy, row promotion, or physics completion by itself."
+}

@@ -127,6 +127,52 @@ Post-plan consolidation memo checkpoint (2026-04-18):
 - Historical posture rule: WS-10 restart surfaces remain traceability artifacts and should not be read as the active execution posture.
 - Next-work rule: open either a new explicit post-plan program or continue repository consolidation, but do not treat restart-era selectors as active by default.
 
+Sandbox-first promotion-gated governance checkpoint (2026-04-18):
+- Sandbox policy pointer: `formal/docs/release/SANDBOX_PHYSICS_LANE_EXECUTION_POLICY_20260418_v0.md`.
+- Promotion policy pointer: `formal/docs/release/PROMOTION_GOVERNANCE_LANE_POLICY_20260418_v0.md`.
+- Gate pointer: `formal/python/tests/test_sandbox_promotion_lane_policy_gate.py`.
+- `SANDBOX_PROMOTION_ARCHITECTURE_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `SANDBOX_PROMOTION_ARCHITECTURE_MODEL_v0: SANDBOX_FIRST_PROMOTION_GATED_GOVERNANCE`
+- `SANDBOX_PROMOTION_ARTIFACT_CLASSIFICATION_SCHEMA_v0: formal/docs/release/SANDBOX_ARTIFACT_CLASSIFICATION_METADATA_SCHEMA_20260419_v0.md`
+- `SANDBOX_PROMOTION_PAYLOAD_REQUIREMENTS_v0: formal/docs/release/SANDBOX_PROMOTION_PAYLOAD_REQUIREMENTS_20260419_v0.md`
+- `SANDBOX_PROMOTION_BOUNDED_PILOT_BINDING_v0: formal/docs/release/SANDBOX_PROMOTION_BOUNDED_PILOT_BINDING_COSMO_SR_CYCLE07_20260419_v0.json`
+- `SANDBOX_PROMOTION_PHASE2_PHASE4_GATE_v0: formal/python/tests/test_sandbox_promotion_phase2_phase4_contract_gate.py`
+- `SANDBOX_PROMOTION_PHASE2_PHASE6_DECLARATION_v0: formal/docs/release/SANDBOX_PROMOTION_MIGRATION_PHASE2_PHASE6_DECLARATION_20260419_v0.md`
+- `SANDBOX_PROMOTION_CANONICAL_MUTATION_PROTOCOL_v0: formal/docs/release/SANDBOX_PROMOTION_CANONICAL_MUTATION_PROTOCOL_20260419_v0.md`
+- `SANDBOX_PROMOTION_PILOT_PAYLOAD_RECORD_v0: formal/output/reports/sandbox_promotion_cosmo_sr_cycle07_payload_record_20260419_v0.json`
+- `SANDBOX_PROMOTION_GOVERNED_REVIEW_WRAPPER_v0: formal/docs/release/SANDBOX_PROMOTION_GOVERNED_REVIEW_WRAPPER_COSMO_SR_CYCLE07_20260419_v0.json`
+- `SANDBOX_PROMOTION_GOVERNED_REVIEW_TOOL_v0: formal/python/tools/sandbox_promotion_governed_review_wrapper_cosmo_sr_cycle07_report.py`
+- `SANDBOX_PROMOTION_GOVERNED_REVIEW_REPORT_v0: formal/output/reports/sandbox_promotion_governed_review_wrapper_cosmo_sr_cycle07_20260419_v0.json`
+- `SANDBOX_PROMOTION_PHASE2_PHASE6_GATE_v0: formal/python/tests/test_sandbox_promotion_governed_review_wrapper_cosmo_sr_cycle07_report.py`
+- `SANDBOX_PROMOTION_POST_PILOT_DECISION_DECLARATION_v0: formal/docs/release/SANDBOX_PROMOTION_POST_PILOT_DECISION_COSMO_SR_CYCLE07_20260419_v0.json`
+- `SANDBOX_PROMOTION_POST_PILOT_DECISION_TOOL_v0: formal/python/tools/sandbox_promotion_post_pilot_decision_cosmo_sr_cycle07_report.py`
+- `SANDBOX_PROMOTION_POST_PILOT_DECISION_REPORT_v0: formal/output/reports/sandbox_promotion_post_pilot_decision_cosmo_sr_cycle07_20260419_v0.json`
+- `SANDBOX_PROMOTION_MIGRATION_PHASE3_DECLARATION_v0: formal/docs/release/SANDBOX_PROMOTION_MIGRATION_PHASE3_AUTHORITY_OWNERSHIP_HARDENING_DECLARATION_20260419_v0.md`
+- `SANDBOX_PROMOTION_PHASE3_IMPLEMENTATION_DECLARATION_v0: formal/docs/release/SANDBOX_PROMOTION_MIGRATION_PHASE3_IMPLEMENTATION_20260419_v0.md`
+- `SANDBOX_PROMOTION_AUTHORITY_OWNERSHIP_MATRIX_v0: formal/docs/release/SANDBOX_PROMOTION_AUTHORITY_OWNERSHIP_MATRIX_20260419_v0.md`
+- `SANDBOX_PROMOTION_AUTHORITY_CUTOVER_GATE_v0: formal/python/tests/test_sandbox_promotion_authority_ownership_cutover_gate.py`
+- `SANDBOX_PROMOTION_PHASE5_IMPLEMENTATION_DECLARATION_v0: formal/docs/release/SANDBOX_PROMOTION_MIGRATION_PHASE5_IMPLEMENTATION_20260419_v0.md`
+- `SANDBOX_PROMOTION_BOUNDARY_ENFORCEMENT_FAMILY_v0: formal/docs/release/SANDBOX_PROMOTION_BOUNDARY_ENFORCEMENT_FAMILY_20260419_v0.md`
+- `SANDBOX_PROMOTION_BOUNDARY_ENFORCEMENT_REPORT_TOOL_v0: formal/python/tools/sandbox_promotion_boundary_enforcement_family_report.py`
+- `SANDBOX_PROMOTION_BOUNDARY_ENFORCEMENT_REPORT_v0: formal/output/reports/sandbox_promotion_boundary_enforcement_family_20260419_v0.json`
+- `SANDBOX_PROMOTION_PHASE5_CLOSEOUT_GATE_v0: formal/python/tests/test_sandbox_promotion_boundary_enforcement_family_gate.py`
+- `SANDBOX_PROMOTION_PHASE7_PHASE3_GATE_v0: formal/python/tests/test_sandbox_promotion_post_pilot_decision_phase3_followthrough_gate.py`
+- `SANDBOX_PROMOTION_MIGRATION_PHASE0_STATUS_v0: FORMAL_TRANCHE_OPEN_AND_BASELINE_DOSSIER_PINNED`
+- `SANDBOX_PROMOTION_MIGRATION_PHASE0_DECLARATION_v0: formal/docs/release/SANDBOX_PROMOTION_MIGRATION_PHASE0_DECLARATION_20260419_v0.md`
+- `SANDBOX_PROMOTION_MIGRATION_PHASE0_BASELINE_DOSSIER_v0: formal/output/reports/sandbox_promotion_migration_phase0_baseline_dossier_20260419_v0.json`
+- `SANDBOX_PROMOTION_MIGRATION_PHASE0_GATE_v0: formal/python/tests/test_sandbox_promotion_migration_phase0_baseline_gate.py`
+- `SANDBOX_PROMOTION_MIGRATION_PHASE1_STATUS_v0: OBJECTIVELY_COMPLETE_POLICY_SPLIT_AND_MIRROR_BINDING_PINNED`
+- `SANDBOX_PROMOTION_MIGRATION_PHASE2_STATUS_v0: OBJECTIVELY_COMPLETE_PROMOTION_PAYLOAD_WRAPPER_AND_CANONICAL_MUTATION_PROTOCOL_PINNED`
+- `SANDBOX_PROMOTION_MIGRATION_PHASE3_STATUS_v0: OBJECTIVELY_COMPLETE_AUTHORITY_OWNER_MATRIX_AND_FAIL_CLOSED_CUTOVER_GATE_PINNED`
+- `SANDBOX_PROMOTION_MIGRATION_PHASE4_STATUS_v0: OBJECTIVELY_COMPLETE_ARTIFACT_CLASSIFICATION_AND_METADATA_SCHEMA_PINNED`
+- `SANDBOX_PROMOTION_MIGRATION_PHASE5_STATUS_v0: OBJECTIVELY_COMPLETE_BOUNDARY_ENFORCEMENT_FAMILY_AND_FAIL_CLOSED_CLOSEOUT_GATE_PINNED`
+- `SANDBOX_PROMOTION_MIGRATION_PHASE6_STATUS_v0: OBJECTIVELY_COMPLETE_BOUNDED_PROMOTION_AUDIT_RUN_AND_GOVERNED_HOLD_OUTCOME_PINNED`
+- `SANDBOX_PROMOTION_MIGRATION_PHASE7_STATUS_v0: OBJECTIVELY_COMPLETE_POST_PILOT_DECISION_PINNED_NONWIDENED_AFTER_GOVERNED_HOLD`
+- `SANDBOX_PROMOTION_ARCHITECTURE_SANDBOX_RULE_v0: MINIMAL_LIVE_GUARDRAILS_AND_SANDBOX_ONLY_OUTPUTS_UNTIL_PROMOTION_REVIEW`
+- `SANDBOX_PROMOTION_ARCHITECTURE_PROMOTION_RULE_v0: CANONICAL_ROW_AND_SEAM_STATE_CHANGE_ONLY_AFTER_GOVERNED_PROMOTION_PASS`
+- `SANDBOX_PROMOTION_ARCHITECTURE_PHYSICS_FIRST_RULE_v0: SANDBOX_OUTPUTS_REQUIRE_DELTA_CLASS_FOR_ACTIVE_PROMOTION_ELIGIBILITY`
+- `SANDBOX_PROMOTION_ARCHITECTURE_NEXT_ACTION_v0: ROUTE_FUTURE_BOUNDED_WORK_THROUGH_COMPLETED_SANDBOX_PROMOTION_GOVERNANCE_STACK`
+
 Post-plan physics advancement program checkpoint (2026-04-18):
 - Program pointer: `formal/docs/release/POST_PLAN_PHYSICS_ADVANCEMENT_PROGRAM_20260418_v0.md`.
 - Advancement rule: only live blocker reduction, seam-path improvement, or justified master-action reclassification after upstream row movement counts as advancement.
@@ -273,7 +319,35 @@ Post-cascade closure review checkpoint (2026-04-18):
 - Review report pointer: `formal/output/reports/post_plan_post_cascade_closure_review_20260418_v0.json`.
 - Review gate pointer: `formal/python/tests/test_post_plan_post_cascade_closure_review_report.py`.
 - Execution result: the repo now consumes the material-cascade-confirmed recompute outcome against the already materialized seam reroute, master-action, and final integration reports and records an explicit bounded hold because the downstream live row and seam route classes remain unchanged.
-- Next posture: return to theorem-gap continuation or explicit exhaustion work with the stronger post-cascade hold recorded, rather than treating the pre-cascade downstream hold state as still sufficient.
+- Next posture: hand the stronger post-cascade bounded hold into the cascade-informed theorem-gap continuation family beginning with the QFT tranche; the currently pinned follow-through has now consumed the QFT, EM, and SR tranches and routes the queue terminus through the existing program-state conversion review wrapper rather than another lookalike theorem-gap row.
+
+Post-plan QFT theorem-gap completion tranche checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_QFT_THEOREM_GAP_COMPLETION_TRANCHE_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_qft_theorem_gap_completion_tranche_20260418_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_qft_theorem_gap_completion_tranche_report.py`.
+- Execution result: the first cascade-informed follow-on theorem-gap completion tranche is measured against `ROW-PILLAR-QFT-001` and remains non-promoted because the live completion matrix still carries `THEOREM_GAP` and `THEOREM_GAP_OPEN` for the row.
+- Next posture: preserve the post-cascade hold as background context, keep seam and master-action classes unchanged, and prepare the queued EM theorem-gap tranche unless QFT row truth changes.
+
+Post-plan EM theorem-gap completion tranche checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_EM_THEOREM_GAP_COMPLETION_TRANCHE_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_em_theorem_gap_completion_tranche_20260418_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_em_theorem_gap_completion_tranche_report.py`.
+- Execution result: the second cascade-informed follow-on theorem-gap completion tranche is measured against `ROW-PILLAR-EM-001` and remains non-promoted because the live completion matrix still carries `THEOREM_GAP` and `THEOREM_GAP_OPEN` for the row while QFT nonmoving history is preserved as an explicit upstream prerequisite.
+- Next posture: keep seam and master-action classes unchanged and prepare the queued SR theorem-gap tranche unless EM row truth changes.
+
+Post-plan SR theorem-gap completion tranche checkpoint (2026-04-18):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_20260418_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_sr_theorem_gap_completion_tranche_20260418_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_sr_theorem_gap_completion_tranche_report.py`.
+- Execution result: the third cascade-informed follow-on theorem-gap completion tranche is measured against `ROW-PILLAR-SR-001` on the live SR packet-05 route and remains non-promoted because the completion matrix still carries `THEOREM_GAP` and `THEOREM_GAP_OPEN` for the row while EM nonmoving history is preserved as an explicit upstream prerequisite.
+- Next posture: do not open another theorem-gap tranche; route to `formal/docs/release/PROGRAM_STATE_CONVERSION_REVIEW_20260411_v0.json` because QFT, EM, and SR now satisfy the declared three-consecutive-nonmoving-family trigger.
+
+Post-plan program-state conversion review wrapper checkpoint (2026-04-18):
+- Wrapper declaration pointer: `formal/docs/release/POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_20260418_v0.json`.
+- Wrapper report pointer: `formal/output/reports/post_plan_program_state_conversion_review_wrapper_20260418_v0.json`.
+- Wrapper gate pointer: `formal/python/tests/test_post_plan_program_state_conversion_review_wrapper_report.py`.
+- Execution result: the post-plan queue now terminates at the existing one-shot program-state conversion review because the SR tranche ended non-promoted after QFT and EM also remained nonmoving, and the wrapper confirms that the older conversion-review downstream successor path is still materially pinned.
+- Next posture: keep the theorem-gap queue closed against another lookalike row and reuse the existing downstream path already registered by `formal/output/reports/post_plan_deeper_blocker_definition_review_successor_tranche_20260418_v0.json`.
 
 Architecture consolidation governance checkpoint (2026-03-18):
 - Program tracker pointer: `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md`.
@@ -828,6 +902,121 @@ Historical bounded theory restart slice (2026-03-19, superseded posture block):
 - `THEORY_RESTART_T41_EXECUTION_PHASE_O_STOP_CONDITION_v0: HALT_ON_EXECUTION_CONTROL_DRIFT_OR_DUAL_LANE_OR_LIVE_TOKEN`
 - `THEORY_RESTART_T41_EXECUTION_PHASE_O_ROLLBACK_ANCHOR_v0: 522eedb`
 - `THEORY_RESTART_T41_EXECUTION_PACKET42_POLICY_INVARIANCE_v0: ENFORCED`
+- `THEORY_RESTART_T42_REMEDIATION_PHASE_P_STATUS_v0: ACTIVE_REDTEAM_BASELINE_FREEZE_NONLIVE_v0`
+- `THEORY_RESTART_T42_REMEDIATION_PHASE_P_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_42_DECLARATION_20260418_v0.md`
+- `THEORY_RESTART_T42_REMEDIATION_PHASE_P_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T42_REMEDIATION_PHASE_P_REPORT_TOOL_v0: formal/python/tools/ws10_t42_redteam_baseline_freeze_report.py`
+- `THEORY_RESTART_T42_REMEDIATION_PHASE_P_CHECKPOINT_JSON_v0: formal/output/ws10_t42_redteam_baseline_freeze_checkpoint_20260418_v0.json`
+- `THEORY_RESTART_T42_REMEDIATION_PHASE_P_GATE_v0: formal/python/tests/test_ws10_t42_redteam_baseline_freeze_gate.py`
+- `THEORY_RESTART_T42_REMEDIATION_PHASE_P_ENTRY_CRITERIA_v0: REFRESH_BASELINE_COUNTS_AND_PIN_FREEZE_RULES_WITHOUT_LIVE_EXECUTION_CHANGE`
+- `THEORY_RESTART_T42_REMEDIATION_PHASE_P_PRIMARY_METRICS_v0: THEOREM_GAP_PLUS_SEAM_GAP_PLUS_BLOCKER_NET_DELTA`
+- `THEORY_RESTART_T42_REMEDIATION_PHASE_P_RELEASE_SURFACE_RULE_v0: NO_NEW_RELEASE_FAMILY_GROWTH_WITHOUT_RETIREMENT_OR_CANONICAL_BLOCKER_CLOSURE`
+- `THEORY_RESTART_T42_REMEDIATION_PHASE_P_GOVERNED_PYTEST_RULE_v0: NO_NEW_GOVERNED_PYTEST_GROWTH_WITHOUT_MANIFEST_JUSTIFIED_RETIREMENT_OR_CANONICAL_BLOCKER_CLOSURE`
+- `THEORY_RESTART_T42_REMEDIATION_PHASE_P_ACTIVE_LANE_RULE_v0: ONLY_ONE_ACTIVE_SEAM_CAMPAIGN_PLUS_ONE_THEOREM_GAP_FAMILY_AT_A_TIME`
+- `THEORY_RESTART_T42_REMEDIATION_PHASE_P_OPERATOR_PACK_RULE_v0: EXECUTION_REVIEW_MUST_READ_MATRIX_DASHBOARD_SEAM_SLA_ROADMAP_AND_INVENTORY_ONLY`
+- `THEORY_RESTART_T42_REMEDIATION_PACKET42_POLICY_INVARIANCE_v0: ENFORCED`
+- `THEORY_RESTART_T43_REMEDIATION_PHASE_Q_STATUS_v0: ACTIVE_MAINTENANCE_SELECTION_AND_INDEXING_NONLIVE_v0`
+- `THEORY_RESTART_T43_REMEDIATION_PHASE_Q_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_43_DECLARATION_20260418_v0.md`
+- `THEORY_RESTART_T43_REMEDIATION_PHASE_Q_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T43_REMEDIATION_PHASE_Q_REPORT_TOOL_v0: formal/python/tools/ws10_t43_maintenance_selection_report.py`
+- `THEORY_RESTART_T43_REMEDIATION_PHASE_Q_CHECKPOINT_JSON_v0: formal/output/ws10_t43_maintenance_selection_checkpoint_20260418_v0.json`
+- `THEORY_RESTART_T43_REMEDIATION_PHASE_Q_RELEASE_REGISTRY_v0: formal/output/reports/qft_gr_sliceb_increment_family_registry_20260418_v0.json`
+- `THEORY_RESTART_T43_REMEDIATION_PHASE_Q_GATE_v0: formal/python/tests/test_ws10_t43_maintenance_selection_gate.py`
+- `THEORY_RESTART_T43_REMEDIATION_PHASE_Q_ENTRY_CRITERIA_v0: SELECT_ONE_GATE_FAMILY_AND_INDEX_ONE_RELEASE_FAMILY_AGAINST_T42_BASELINE`
+- `THEORY_RESTART_T43_REMEDIATION_PHASE_Q_GATE_FAMILY_v0: QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_GATE_STACK`
+- `THEORY_RESTART_T43_REMEDIATION_PHASE_Q_RELEASE_FAMILY_v0: QFT_GR_SLICEB_INCREMENT_RELEASE_NOTES`
+- `THEORY_RESTART_T43_REMEDIATION_PHASE_Q_NEXT_ACTION_v0: START_QM_STAT_DIRECT_CYCLE_GATE_CONSOLIDATION_AND_OPERATOR_PACK_GENERATION`
+- `THEORY_RESTART_T44_REMEDIATION_PHASE_R_STATUS_v0: ACTIVE_QM_STAT_DIRECT_CYCLE_CONSOLIDATION_NONLIVE_v0`
+- `THEORY_RESTART_T44_REMEDIATION_PHASE_R_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_44_DECLARATION_20260418_v0.md`
+- `THEORY_RESTART_T44_REMEDIATION_PHASE_R_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T44_REMEDIATION_PHASE_R_REPORT_TOOL_v0: formal/python/tools/ws10_t44_qm_stat_direct_cycle_consolidation_report.py`
+- `THEORY_RESTART_T44_REMEDIATION_PHASE_R_CHECKPOINT_JSON_v0: formal/output/ws10_t44_qm_stat_direct_cycle_consolidation_checkpoint_20260418_v0.json`
+- `THEORY_RESTART_T44_REMEDIATION_PHASE_R_HELPER_v0: formal/python/tests/qm_stat_class_b_cycle_gate_family_helper.py`
+- `THEORY_RESTART_T44_REMEDIATION_PHASE_R_GATE_v0: formal/python/tests/test_ws10_t44_qm_stat_direct_cycle_consolidation_gate.py`
+- `THEORY_RESTART_T44_REMEDIATION_PHASE_R_ENTRY_CRITERIA_v0: COLLAPSE_QM_STAT_DIRECT_CYCLE_GATES_WITHOUT_TOUCHING_SYNTHESIS_OR_BESPOKE_BOUNDARIES`
+- `THEORY_RESTART_T44_REMEDIATION_PHASE_R_REDUCTION_BASELINE_v0: T43_SELECTED_QM_STAT_DIRECT_CYCLE_FAMILY`
+- `THEORY_RESTART_T44_REMEDIATION_PHASE_R_NEXT_ACTION_v0: GENERATE_OPERATOR_TRUTH_PACK_FROM_T42_T43_T44_AND_BLOCKER_SURFACES`
+- `THEORY_RESTART_T45_REMEDIATION_PHASE_S_STATUS_v0: ACTIVE_OPERATOR_TRUTH_PACK_NONLIVE_v0`
+- `THEORY_RESTART_T45_REMEDIATION_PHASE_S_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_45_DECLARATION_20260418_v0.md`
+- `THEORY_RESTART_T45_REMEDIATION_PHASE_S_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T45_REMEDIATION_PHASE_S_REPORT_TOOL_v0: formal/python/tools/ws10_t45_operator_truth_pack_report.py`
+- `THEORY_RESTART_T45_REMEDIATION_PHASE_S_PACK_JSON_v0: formal/output/reports/ws10_operator_truth_pack_20260418_v0.json`
+- `THEORY_RESTART_T45_REMEDIATION_PHASE_S_GATE_v0: formal/python/tests/test_ws10_t45_operator_truth_pack_gate.py`
+- `THEORY_RESTART_T45_REMEDIATION_PHASE_S_ENTRY_CRITERIA_v0: SUMMARIZE_T42_T43_T44_AND_CONTROL_SURFACES_WITHOUT_REPLACING_AUTHORITY`
+- `THEORY_RESTART_T45_REMEDIATION_PHASE_S_NEXT_ACTION_v0: CONSOLIDATE_QM_STAT_SYNTHESIS_GATES_AND_EXTEND_RELEASE_FAMILY_SUMMARY_VIEWS`
+- `THEORY_RESTART_T46_REMEDIATION_PHASE_T_STATUS_v0: ACTIVE_QM_STAT_SYNTHESIS_GATE_CONSOLIDATION_NONLIVE_v0`
+- `THEORY_RESTART_T46_REMEDIATION_PHASE_T_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_46_DECLARATION_20260418_v0.md`
+- `THEORY_RESTART_T46_REMEDIATION_PHASE_T_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T46_REMEDIATION_PHASE_T_REPORT_TOOL_v0: formal/python/tools/ws10_t46_qm_stat_synthesis_gate_consolidation_report.py`
+- `THEORY_RESTART_T46_REMEDIATION_PHASE_T_CHECKPOINT_JSON_v0: formal/output/ws10_t46_qm_stat_synthesis_gate_consolidation_checkpoint_20260418_v0.json`
+- `THEORY_RESTART_T46_REMEDIATION_PHASE_T_HELPER_v0: formal/python/tests/qm_stat_class_b_synthesis_gate_family_helper.py`
+- `THEORY_RESTART_T46_REMEDIATION_PHASE_T_GATE_v0: formal/python/tests/test_ws10_t46_qm_stat_synthesis_gate_consolidation_gate.py`
+- `THEORY_RESTART_T46_REMEDIATION_PHASE_T_ENTRY_CRITERIA_v0: COLLAPSE_QM_STAT_SYNTHESIS_GATES_WITHOUT_TOUCHING_BOOTSTRAP_BOUNDARY_OR_RELEASE_AUTHORITY`
+- `THEORY_RESTART_T46_REMEDIATION_PHASE_T_REDUCTION_BASELINE_v0: T43_SELECTED_QM_STAT_SYNTHESIS_FAMILY`
+- `THEORY_RESTART_T46_REMEDIATION_PHASE_T_NEXT_ACTION_v0: EXTEND_QFT_GR_SLICEB_RELEASE_FAMILY_SUMMARY_VIEWS_WITH_T43_REGISTRY_AS_ACTIVE_REVIEW_SURFACE`
+- `THEORY_RESTART_T47_REMEDIATION_PHASE_U_STATUS_v0: ACTIVE_QFT_GR_RELEASE_FAMILY_SUMMARY_VIEWS_NONLIVE_v0`
+- `THEORY_RESTART_T47_REMEDIATION_PHASE_U_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_47_DECLARATION_20260418_v0.md`
+- `THEORY_RESTART_T47_REMEDIATION_PHASE_U_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T47_REMEDIATION_PHASE_U_REPORT_TOOL_v0: formal/python/tools/ws10_t47_qft_gr_release_family_summary_views_report.py`
+- `THEORY_RESTART_T47_REMEDIATION_PHASE_U_SUMMARY_JSON_v0: formal/output/reports/qft_gr_sliceb_increment_family_summary_views_20260418_v0.json`
+- `THEORY_RESTART_T47_REMEDIATION_PHASE_U_GATE_v0: formal/python/tests/test_ws10_t47_qft_gr_release_family_summary_views_gate.py`
+- `THEORY_RESTART_T47_REMEDIATION_PHASE_U_ENTRY_CRITERIA_v0: DERIVE_QFT_GR_SLICEB_SUMMARY_VIEWS_FROM_T43_REGISTRY_WITHOUT_CREATING_NEW_AUTHORITY`
+- `THEORY_RESTART_T47_REMEDIATION_PHASE_U_NEXT_ACTION_v0: USE_QFT_GR_SUMMARY_VIEWS_AS_ACTIVE_REVIEW_SURFACE_AND_DEFER_RAW_CHAIN_TO_ARCHIVAL_TRACEABILITY`
+- `THEORY_RESTART_T48_REMEDIATION_PHASE_V_STATUS_v0: ACTIVE_MAINTENANCE_ROLLUP_AND_REVIEW_DEFAULTS_NONLIVE_v0`
+- `THEORY_RESTART_T48_REMEDIATION_PHASE_V_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_48_DECLARATION_20260418_v0.md`
+- `THEORY_RESTART_T48_REMEDIATION_PHASE_V_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T48_REMEDIATION_PHASE_V_REPORT_TOOL_v0: formal/python/tools/ws10_t48_maintenance_reduction_rollup_report.py`
+- `THEORY_RESTART_T48_REMEDIATION_PHASE_V_ROLLUP_JSON_v0: formal/output/reports/ws10_maintenance_reduction_rollup_20260418_v0.json`
+- `THEORY_RESTART_T48_REMEDIATION_PHASE_V_GATE_v0: formal/python/tests/test_ws10_t48_maintenance_reduction_rollup_gate.py`
+- `THEORY_RESTART_T48_REMEDIATION_PHASE_V_ENTRY_CRITERIA_v0: PIN_CUMULATIVE_T44_T46_REDUCTION_AND_DEFAULT_T45_T47_REVIEW_SURFACES_WITH_ENDPOINT06_ADJUDICATION`
+- `THEORY_RESTART_T48_REMEDIATION_PHASE_V_NEXT_ACTION_v0: SHIFT_BACK_TO_BLOCKER_MOVING_WORK_UNLESS_ANOTHER_LOW_RISK_REPETITIVE_FAMILY_CLEARLY_MEETS_THE_T44_T46_PATTERN`
+- `THEORY_RESTART_T49_POST_MAINTENANCE_PHASE_W_STATUS_v0: ACTIVE_POST_MAINTENANCE_HANDOFF_NONLIVE_v0`
+- `THEORY_RESTART_T49_POST_MAINTENANCE_PHASE_W_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_49_DECLARATION_20260418_v0.md`
+- `THEORY_RESTART_T49_POST_MAINTENANCE_PHASE_W_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T49_POST_MAINTENANCE_PHASE_W_HANDOFF_PROGRAM_v0: formal/docs/release/POST_PLAN_PHYSICS_ADVANCEMENT_PROGRAM_20260418_v0.md`
+- `THEORY_RESTART_T49_POST_MAINTENANCE_PHASE_W_REPORT_TOOL_v0: formal/python/tools/ws10_t49_post_maintenance_handoff_report.py`
+- `THEORY_RESTART_T49_POST_MAINTENANCE_PHASE_W_REPORT_JSON_v0: formal/output/reports/ws10_t49_post_maintenance_handoff_20260418_v0.json`
+- `THEORY_RESTART_T49_POST_MAINTENANCE_PHASE_W_GATE_v0: formal/python/tests/test_ws10_t49_post_maintenance_handoff_gate.py`
+- `THEORY_RESTART_T49_POST_MAINTENANCE_PHASE_W_ENTRY_CRITERIA_v0: CONFIRM_T48_REVIEW_DEFAULTS_AND_HAND_OFF_TO_POST_PLAN_TARGET_MAP_AND_COSMO_SR_TRANCHE`
+- `THEORY_RESTART_T49_POST_MAINTENANCE_PHASE_W_SOLE_EXECUTABLE_ROW_v0: ROW-SEAM-COSMO-SR-001`
+- `THEORY_RESTART_T49_POST_MAINTENANCE_PHASE_W_BLOCKED_AUTHORITY_ROW_v0: ROW-SEAM-QM-STAT-001`
+- `THEORY_RESTART_T49_POST_MAINTENANCE_PHASE_W_NEXT_ACTION_v0: RETAIN_COSMO_SR_AS_SOLE_EXECUTABLE_ROW_AND_REQUIRE_NEW_ROW_MOVEMENT_BEFORE_REROUTE`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_STATUS_v0: ACTIVE_POST_PLAN_PHASE3_TO_PHASE6_ALIGNMENT_NONLIVE_v0`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_50_DECLARATION_20260418_v0.md`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_SOURCE_PROGRAM_v0: formal/docs/release/POST_PLAN_PHYSICS_ADVANCEMENT_PROGRAM_20260418_v0.md`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_REPORT_TOOL_v0: formal/python/tools/ws10_t50_post_plan_phase3_to_phase6_alignment_report.py`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_REPORT_JSON_v0: formal/output/reports/ws10_t50_post_plan_phase3_to_phase6_alignment_20260418_v0.json`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_GATE_v0: formal/python/tests/test_ws10_t50_post_plan_phase3_to_phase6_alignment_gate.py`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_ENTRY_CRITERIA_v0: ALIGN_EXISTING_POST_PLAN_PHASE3_TO_PHASE6_OUTCOMES_WITH_ACTIVE_WS10_CHAIN`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_PHASE3_QM_OUTCOME_v0: POST_PLAN_QM_FIRST_THEOREM_GAP_TRANCHE_EXECUTED_NONPROMOTED`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_PHASE4_SEAM_OUTCOME_v0: POST_PLAN_SEAM_REROUTE_REASSESSMENT_NOT_ELIGIBLE_NO_UPSTREAM_MOVEMENT`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_PHASE5_MASTER_ACTION_OUTCOME_v0: POST_PLAN_MASTER_ACTION_REEVALUATION_NOT_ELIGIBLE_NO_UPSTREAM_MOVEMENT`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_PHASE6_INTEGRATION_OUTCOME_v0: POST_PLAN_FINAL_INTEGRATION_REVIEW_HELD_PENDING_FURTHER_BLOCKER_MOVEMENT`
+- `THEORY_RESTART_T50_POST_PLAN_PHASE_X_NEXT_ACTION_v0: EXECUTE_NEXT_THEOREM_GAP_TRANCHE_OR_EXPLICIT_EXHAUSTION_READ_BEFORE_ANY_DOWNSTREAM_RECLASSIFICATION`
+- `THEORY_RESTART_T51_POST_PLAN_PHASE_Y_STATUS_v0: ACTIVE_POST_PLAN_AUTHORITY_SOURCE_CUTOVER_NONLIVE_v0`
+- `THEORY_RESTART_T51_POST_PLAN_PHASE_Y_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_51_DECLARATION_20260419_v0.md`
+- `THEORY_RESTART_T51_POST_PLAN_PHASE_Y_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T51_POST_PLAN_PHASE_Y_CONSOLIDATION_MEMO_v0: formal/docs/release/POST_PLAN_CONSOLIDATION_MEMO_20260418_v0.md`
+- `THEORY_RESTART_T51_POST_PLAN_PHASE_Y_REPORT_TOOL_v0: formal/python/tools/ws10_t51_post_plan_authority_source_cutover_report.py`
+- `THEORY_RESTART_T51_POST_PLAN_PHASE_Y_REPORT_JSON_v0: formal/output/reports/ws10_t51_post_plan_authority_source_cutover_20260419_v0.json`
+- `THEORY_RESTART_T51_POST_PLAN_PHASE_Y_GATE_v0: formal/python/tests/test_ws10_t51_post_plan_authority_source_cutover_gate.py`
+- `THEORY_RESTART_T51_POST_PLAN_PHASE_Y_ENTRY_CRITERIA_v0: REQUIRE_T50_ALIGNMENT_PLUS_CONSOLIDATION_MEMO_SINGLE_SOURCE_GOVERNANCE_READ`
+- `THEORY_RESTART_T51_POST_PLAN_PHASE_Y_CUTOVER_RESULT_v0: PHASE3_TO_PHASE6_CONTROL_STACK_GOVERNS_CURRENT_REPO_READS`
+- `THEORY_RESTART_T51_POST_PLAN_PHASE_Y_LEGACY_RESTART_STATUS_v0: WS10_RESTART_SURFACES_RETAINED_FOR_TRACEABILITY_ONLY`
+- `THEORY_RESTART_T51_POST_PLAN_PHASE_Y_NEXT_ACTION_v0: RUN_WHOLE_PROGRAM_ACCEPTANCE_REVIEW_AGAINST_POST_PLAN_AUTHORITY_CUTOVER`
+- `THEORY_RESTART_T52_POST_PLAN_PHASE_Z_STATUS_v0: ACTIVE_WHOLE_PROGRAM_ACCEPTANCE_REVIEW_NONLIVE_v0`
+- `THEORY_RESTART_T52_POST_PLAN_PHASE_Z_DECLARATION_v0: formal/docs/release/WS_10_IMPLEMENTATION_TRANCHE_52_DECLARATION_20260419_v0.md`
+- `THEORY_RESTART_T52_POST_PLAN_PHASE_Z_PROGRAM_DOC_v0: formal/docs/release/WS_10_REMEDIATION_EXECUTION_PROGRAM_20260404_v0.md`
+- `THEORY_RESTART_T52_POST_PLAN_PHASE_Z_T51_REPORT_v0: formal/output/reports/ws10_t51_post_plan_authority_source_cutover_20260419_v0.json`
+- `THEORY_RESTART_T52_POST_PLAN_PHASE_Z_REPORT_TOOL_v0: formal/python/tools/ws10_t52_whole_program_acceptance_review_report.py`
+- `THEORY_RESTART_T52_POST_PLAN_PHASE_Z_REPORT_JSON_v0: formal/output/reports/ws10_t52_whole_program_acceptance_review_20260419_v0.json`
+- `THEORY_RESTART_T52_POST_PLAN_PHASE_Z_GATE_v0: formal/python/tests/test_ws10_t52_whole_program_acceptance_review_gate.py`
+- `THEORY_RESTART_T52_POST_PLAN_PHASE_Z_ENTRY_CRITERIA_v0: REQUIRE_T51_CUTOVER_PLUS_CHECKPOINT_LADDER_AND_GOVERNANCE_ACCEPTANCE_SURFACES_PLUS_POST_PLAN_PHASE6_HOLD_REVIEW`
+- `THEORY_RESTART_T52_POST_PLAN_PHASE_Z_LADDER_SURFACE_v0: formal/output/reports/checkpoint_ladder_acceptance_summary_v0.json`
+- `THEORY_RESTART_T52_POST_PLAN_PHASE_Z_CUTOVER_SURFACE_v0: formal/output/reports/dual_track_cutover_report_v0.json`
+- `THEORY_RESTART_T52_POST_PLAN_PHASE_Z_WHOLE_PROGRAM_OUTCOME_v0: WS10_WHOLE_PROGRAM_ACCEPTANCE_REVIEW_HELD_PENDING_FURTHER_BLOCKER_MOVEMENT_v0`
+- `THEORY_RESTART_T52_POST_PLAN_PHASE_Z_NEXT_ACTION_v0: KEEP_PHASE6_HELD_AND_REQUIRE_NEW_BLOCKER_MOVEMENT_BEFORE_WHOLE_PROGRAM_ACCEPT_OR_REJECT_CLOSEOUT`
 - Restart scope note: the first bounded GR01 theorem-deepening slice is closed, GR-QM completion closeout is canonically pinned, and the active bounded follow-up is now post-completion handoff/next-target boundary control work rather than further GR-QM completion-lane theorem increments.
 
 Execution reset checkpoint (2026-03-24):

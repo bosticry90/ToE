@@ -1,0 +1,36 @@
+{
+  "schema_id": "SANDBOX_PROMOTION_BOUNDED_PILOT_BINDING_COSMO_SR_CYCLE07_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Bind one bounded pilot track to the sandbox artifact classification schema and promotion payload requirements before a governed promotion review wrapper is declared.",
+  "required_inputs": {
+    "artifact_classification_schema": "formal/docs/release/SANDBOX_ARTIFACT_CLASSIFICATION_METADATA_SCHEMA_20260419_v0.md",
+    "promotion_payload_requirements": "formal/docs/release/SANDBOX_PROMOTION_PAYLOAD_REQUIREMENTS_20260419_v0.md",
+    "post_plan_cosmo_sr_tranche_declaration": "formal/docs/release/POST_PLAN_COSMO_SR_FIRST_LIVE_SEAM_TRANCHE_20260418_v0.json",
+    "post_plan_cosmo_sr_tranche_report": "formal/output/reports/post_plan_cosmo_sr_first_live_seam_tranche_20260418_v0.json",
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "cosmo_sr_target_doc": "formal/docs/paper/DERIVATION_TARGET_COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE07_v0.md",
+    "cosmo_sr_artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle07_v0.json",
+    "cosmo_sr_gate": "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle07_gate.py"
+  },
+  "pilot_binding": {
+    "pilot_track_id": "SANDBOX_PROMOTION_PILOT_COSMO_SR_CYCLE07",
+    "target_row_id": "ROW-SEAM-COSMO-SR-001",
+    "target_seam_id": "SEAM-COSMO-SR",
+    "required_route_class": "EXECUTABLE_NOW",
+    "required_artifact_class": "SCIENTIFIC_DELTA_SANDBOX_ARTIFACT",
+    "required_delta_class": "SEAM_DELTA_CLASS",
+    "required_promotion_readiness_transition": "PROMOTION_CANDIDATE_ONLY_AFTER_METADATA_AND_CONTRADICTION_CHECK_PASS",
+    "required_decision_boundary": "GOVERNED_PROMOTION_REVIEW_REQUIRED_BEFORE_CANONICAL_MUTATION"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SANDBOX_PROMOTION_PILOT_BINDING_OUTCOME",
+    "no_loop_rule": "ONE_BOUNDED_PILOT_BINDING_ONLY_BEFORE_WRAPPER_DECLARATION",
+    "allowed_outcomes": [
+      "SANDBOX_PROMOTION_PILOT_BOUND_TO_SCHEMA_AND_PAYLOAD_RULES",
+      "SANDBOX_PROMOTION_PILOT_BINDING_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_SANDBOX_PROMOTION_PILOT_BINDING_REPAIR"
+    ],
+    "default_outcome": "SANDBOX_PROMOTION_PILOT_BINDING_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local pilot binding only; no canonical mutation, promotion, or scientific adequacy claim."
+}

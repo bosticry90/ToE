@@ -1,0 +1,31 @@
+{
+  "schema_id": "WS10_T46_QM_STAT_SYNTHESIS_GATE_CONSOLIDATION_REPORT_20260418_v0",
+  "artifact_id": "ws10_t46_qm_stat_synthesis_gate_consolidation_checkpoint_20260418_v0",
+  "status": "ACTIVE_QM_STAT_SYNTHESIS_GATE_CONSOLIDATION_NONLIVE_v0",
+  "captured_at_utc": "2026-04-18T22:53:26Z",
+  "baseline_reference": {
+    "t43_checkpoint": "formal/output/ws10_t43_maintenance_selection_checkpoint_20260418_v0.json",
+    "t43_selected_gate_family": "QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_GATE_STACK",
+    "t43_synthesis_gate_count": 10,
+    "pre_refactor_helperizable_synthesis_gate_count": 9,
+    "pre_refactor_helperizable_synthesis_gate_lines": 1457
+  },
+  "consolidation_metrics": {
+    "helper_path": "formal/python/tests/qm_stat_class_b_synthesis_gate_family_helper.py",
+    "helper_lines": 228,
+    "helper_backed_wrapper_count": 9,
+    "helper_backed_wrapper_lines": 292,
+    "post_refactor_total_lines": 520,
+    "net_line_reduction": 937,
+    "reduction_ratio": 0.643102,
+    "preserved_bespoke_synthesis_boundaries": [
+      "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle01_to_02_synthesis_gate.py"
+    ]
+  },
+  "summary": {
+    "terminal_outcome": "QM_STAT_SYNTHESIS_GATES_CONSOLIDATED_ON_SHARED_HELPER",
+    "next_action": "EXTEND_QFT_GR_SLICEB_RELEASE_FAMILY_SUMMARY_VIEWS_WITH_T43_REGISTRY_AS_ACTIVE_REVIEW_SURFACE",
+    "preserved_bespoke_boundary": "CYCLE01_TO_02_BOOTSTRAP_SYNTHESIS_REMAINS_UNCHANGED"
+  },
+  "non_claim_boundary": "This checkpoint records executable maintenance reduction only. It does not change theorem status, seam status, or live scientific authority by itself."
+}

@@ -1,0 +1,32 @@
+{
+  "schema_id": "WS10_T44_QM_STAT_DIRECT_CYCLE_CONSOLIDATION_REPORT_20260418_v0",
+  "artifact_id": "ws10_t44_qm_stat_direct_cycle_consolidation_checkpoint_20260418_v0",
+  "status": "ACTIVE_QM_STAT_DIRECT_CYCLE_CONSOLIDATION_NONLIVE_v0",
+  "captured_at_utc": "2026-04-18T22:37:10Z",
+  "baseline_reference": {
+    "t43_checkpoint": "formal/output/ws10_t43_maintenance_selection_checkpoint_20260418_v0.json",
+    "t43_selected_gate_family": "QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_GATE_STACK",
+    "t43_direct_cycle_gate_count": 12,
+    "pre_refactor_helperizable_direct_cycle_count": 10,
+    "pre_refactor_helperizable_direct_cycle_lines": 1741
+  },
+  "consolidation_metrics": {
+    "helper_path": "formal/python/tests/qm_stat_class_b_cycle_gate_family_helper.py",
+    "helper_lines": 219,
+    "helper_backed_wrapper_count": 10,
+    "helper_backed_wrapper_lines": 211,
+    "post_refactor_total_lines": 430,
+    "net_line_reduction": 1311,
+    "reduction_ratio": 0.753016,
+    "preserved_bespoke_direct_cycles": [
+      "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle01_gate.py",
+      "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py"
+    ]
+  },
+  "summary": {
+    "terminal_outcome": "QM_STAT_DIRECT_CYCLE_GATES_CONSOLIDATED_ON_SHARED_HELPER",
+    "next_action": "GENERATE_OPERATOR_TRUTH_PACK_FROM_T42_T43_T44_AND_BLOCKER_SURFACES",
+    "preserved_bespoke_boundary": "CYCLE01_BOOTSTRAP_AND_CYCLE12_CANDIDATE_REMAIN_UNCHANGED"
+  },
+  "non_claim_boundary": "This checkpoint records executable maintenance reduction only. It does not change theorem status, seam status, or live scientific authority by itself."
+}

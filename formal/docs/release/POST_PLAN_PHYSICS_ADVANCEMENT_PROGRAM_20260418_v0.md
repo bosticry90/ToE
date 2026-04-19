@@ -48,6 +48,9 @@ Canonical pointers:
 - Phase 7 post-cascade closure review report: `formal/output/reports/post_plan_post_cascade_closure_review_20260418_v0.json`
 - Phase 7 post-cascade closure review tool: `formal/python/tools/post_plan_post_cascade_closure_review_report.py`
 - Phase 7 post-cascade closure review gate: `formal/python/tests/test_post_plan_post_cascade_closure_review_report.py`
+- Downstream objective-quality completion program: `formal/docs/release/POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PROGRAM_20260418_v0.md`
+- Downstream objective-quality completion queue: `formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json`
+- Downstream conversion-review wrapper report: `formal/output/reports/post_plan_program_state_conversion_review_wrapper_20260418_v0.json`
 - Phase 3-6 continuation gate: `formal/python/tests/test_post_plan_phase3_to_phase6_reports.py`
 - Compact authority mirror: `State_of_the_Theory.md`
 - Roadmap mirror: `formal/docs/paper/PHYSICS_ROADMAP_v0.md`
@@ -78,6 +81,8 @@ Program status tokens:
 - `POST_PLAN_PHYSICS_ADVANCEMENT_PHASE6_FINAL_INTEGRATION_v0: POST_PLAN_FINAL_INTEGRATION_REVIEW_HELD_PENDING_FURTHER_BLOCKER_MOVEMENT`
 - `POST_PLAN_PHYSICS_ADVANCEMENT_PHASE7_POST_CASCADE_REVIEW_v0: POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_BOUNDED_HOLD_RECORDED`
 - `POST_PLAN_PHYSICS_ADVANCEMENT_NEXT_ACTION_v0: EXECUTE_NEXT_THEOREM_GAP_TRANCHE_OR_EXPLICIT_EXHAUSTION_READ_WITH_POST_CASCADE_HOLD_RECORDED`
+- `POST_PLAN_PHYSICS_ADVANCEMENT_HANDOFF_PROGRAM_v0: formal/docs/release/POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PROGRAM_20260418_v0.md`
+- `POST_PLAN_PHYSICS_ADVANCEMENT_HANDOFF_RESULT_v0: POST_PLAN_POST_CASCADE_BOUNDED_HOLD_CONSUMED_BY_QFT_EM_SR_AND_CONVERSION_REVIEW_WRAPPER`
 - `POST_PLAN_PHYSICS_ADVANCEMENT_PRIMARY_EXECUTABLE_SEAM_v0: SEAM-COSMO-SR`
 - `POST_PLAN_PHYSICS_ADVANCEMENT_BLOCKED_SEAM_v0: SEAM-QM-STAT`
 - `POST_PLAN_PHYSICS_ADVANCEMENT_EXTERNAL_HOLD_SEAM_v0: SEAM-QFT-GR`
@@ -202,6 +207,7 @@ Exit criteria:
 - The repo has one canonical post-cascade closure review declaration, report, tool, and gate.
 - A single downstream outcome is materialized: seam reroute reopening, master-action reopening, integration advancement eligibility, or bounded hold.
 - The next action after recompute completion is explicit rather than inferred from older pre-cascade reports.
+- If the downstream outcome is bounded hold, the handoff into the objective-quality completion queue is explicit and machine-pinned rather than left as a generic continuation note.
 
 ## Current routing rules
 
@@ -229,7 +235,7 @@ Exit criteria:
 - Excluded scope: restart-era narrative restoration, additional nonmoving package proliferation, and claims that bounded maturity alone equals advancement.
 - Recommended first execution family: COSMO-SR bounded seam execution under the new advancement contract.
 - Recommended second execution family: one fast theorem-gap tranche with clean blocker readability, followed by GR row 001 dormant new-structure work.
-- Recommended post-recompute execution family: if recompute confirms a material cascade but no downstream row or seam route class changes, record an explicit post-cascade bounded hold and return to theorem-gap continuation or explicit exhaustion work.
+- Recommended post-recompute execution family: if recompute confirms a material cascade but no downstream row or seam route class changes, record an explicit post-cascade bounded hold and hand off to the objective-quality theorem-gap continuation queue beginning with the QFT tranche; the currently pinned downstream chain has since consumed the QFT, EM, and SR follow-on tranches and terminates at the existing program-state conversion review wrapper.
 
 ## Further considerations
 

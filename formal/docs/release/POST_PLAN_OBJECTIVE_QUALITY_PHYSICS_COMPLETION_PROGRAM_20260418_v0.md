@@ -83,6 +83,22 @@ Canonical pointers:
 - Phase 8 post-cascade closure review report: `formal/output/reports/post_plan_post_cascade_closure_review_20260418_v0.json`
 - Phase 8 post-cascade closure review tool: `formal/python/tools/post_plan_post_cascade_closure_review_report.py`
 - Phase 8 post-cascade closure review gate: `formal/python/tests/test_post_plan_post_cascade_closure_review_report.py`
+- Phase 9 QFT theorem-gap completion tranche declaration: `formal/docs/release/POST_PLAN_QFT_THEOREM_GAP_COMPLETION_TRANCHE_20260418_v0.json`
+- Phase 9 QFT theorem-gap completion tranche report: `formal/output/reports/post_plan_qft_theorem_gap_completion_tranche_20260418_v0.json`
+- Phase 9 QFT theorem-gap completion tranche tool: `formal/python/tools/post_plan_qft_theorem_gap_completion_tranche_report.py`
+- Phase 9 QFT theorem-gap completion tranche gate: `formal/python/tests/test_post_plan_qft_theorem_gap_completion_tranche_report.py`
+- Phase 10 EM theorem-gap completion tranche declaration: `formal/docs/release/POST_PLAN_EM_THEOREM_GAP_COMPLETION_TRANCHE_20260418_v0.json`
+- Phase 10 EM theorem-gap completion tranche report: `formal/output/reports/post_plan_em_theorem_gap_completion_tranche_20260418_v0.json`
+- Phase 10 EM theorem-gap completion tranche tool: `formal/python/tools/post_plan_em_theorem_gap_completion_tranche_report.py`
+- Phase 10 EM theorem-gap completion tranche gate: `formal/python/tests/test_post_plan_em_theorem_gap_completion_tranche_report.py`
+- Phase 11 SR theorem-gap completion tranche declaration: `formal/docs/release/POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_20260418_v0.json`
+- Phase 11 SR theorem-gap completion tranche report: `formal/output/reports/post_plan_sr_theorem_gap_completion_tranche_20260418_v0.json`
+- Phase 11 SR theorem-gap completion tranche tool: `formal/python/tools/post_plan_sr_theorem_gap_completion_tranche_report.py`
+- Phase 11 SR theorem-gap completion tranche gate: `formal/python/tests/test_post_plan_sr_theorem_gap_completion_tranche_report.py`
+- Phase 12 program-state conversion review wrapper declaration: `formal/docs/release/POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_20260418_v0.json`
+- Phase 12 program-state conversion review wrapper report: `formal/output/reports/post_plan_program_state_conversion_review_wrapper_20260418_v0.json`
+- Phase 12 program-state conversion review wrapper tool: `formal/python/tools/post_plan_program_state_conversion_review_wrapper_report.py`
+- Phase 12 program-state conversion review wrapper gate: `formal/python/tests/test_post_plan_program_state_conversion_review_wrapper_report.py`
 - Completion matrix: `formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md`
 - Compact authority mirror: `State_of_the_Theory.md`
 - Roadmap mirror: `formal/docs/paper/PHYSICS_ROADMAP_v0.md`
@@ -91,9 +107,9 @@ Canonical pointers:
 Program status tokens:
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PROGRAM_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PROGRAM_CLASS_v0: POST_PLAN_CLOSURE_PLUS_EXHAUSTION_COMPLETION`
-- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_CURRENT_PHASE_v0: PHASE8_POST_CASCADE_CLOSURE_REVIEW_BOUNDED_HOLD_RECORDED`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_CURRENT_PHASE_v0: PHASE12_POST_SR_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_MATERIALIZED`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_ACTIVE_TARGET_v0: TARGET-POST-PLAN-OBJECTIVE-QUALITY-PHYSICS-COMPLETION-v0`
-- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_NEXT_TARGET_v0: TARGET-POST-PLAN-CASCADE-INFORMED-CLOSURE-CONTINUATION-v0`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_NEXT_TARGET_v0: TARGET-POST-PLAN-CONVERSION-REVIEW-DOWNSTREAM-PATH-REUSE-v0`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_v0: POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_MATERIALIZED`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE2_COSMO_TRANCHE_v0: POST_PLAN_COSMO_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE2_STAT_TRANCHE_v0: POST_PLAN_STAT_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED`
@@ -104,6 +120,10 @@ Program status tokens:
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE6_COUPLING_REFINEMENT_v0: POST_PLAN_BOUNDED_COUPLING_REFINEMENT_PACKET_CHAIN_PROMOTION_REGISTERED`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE7_RECOMPUTE_MONITORING_v0: POST_PLAN_RECOMPUTE_MONITORING_PATH_MATERIAL_CASCADE_CONFIRMED`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE8_POST_CASCADE_REVIEW_v0: POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_BOUNDED_HOLD_RECORDED`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE9_QFT_TRANCHE_v0: POST_PLAN_QFT_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE10_EM_TRANCHE_v0: POST_PLAN_EM_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE11_SR_TRANCHE_v0: POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE12_CONVERSION_REVIEW_WRAPPER_v0: POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_MATERIALIZED`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_FIRST_ACTIVE_ROW_v0: ROW-PILLAR-COSMO-001`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_SECOND_ACTIVE_ROW_v0: ROW-PILLAR-STAT-001`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_HEAVY_STRUCTURAL_ROW_v0: ROW-PILLAR-GR-001`
@@ -114,7 +134,7 @@ Program status tokens:
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_GR_RULE_v0: RESUME_FROM_P78_P79_P80_DORMANT_PACKAGE_ONLY`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_MASTER_ACTION_RULE_v0: REEVALUATE_ONLY_AFTER_UPSTREAM_ROW_MOVEMENT_AND_WITHIN_ONE_RECOMPUTE_LIMIT`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_EXHAUSTION_TRIGGER_v0: THREE_CONSECUTIVE_NONMOVING_ROW_FAMILIES_ROUTE_TO_PROGRAM_STATE_CONVERSION_REVIEW`
-- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_NEXT_ACTION_v0: EXECUTE_NEXT_THEOREM_GAP_TRANCHE_OR_EXPLICIT_EXHAUSTION_READ_WITH_POST_CASCADE_HOLD_RECORDED`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_NEXT_ACTION_v0: REUSE_EXISTING_PROGRAM_STATE_CONVERSION_REVIEW_DOWNSTREAM_PATH_AND_KEEP_THEOREM_GAP_QUEUE_CLOSED`
 
 ## Completion contract
 
@@ -215,6 +235,11 @@ Exit criteria:
 - Recommended next execution after the live-writeback contract classifies dry-run readiness: run one bounded dry-run recompute bundle, inspect the non-canonical outputs while verifying canonical recompute surfaces remain pending, then define canonical live baseline and approval conditions before any live writeback.
 - Recommended next execution after the dry-run execution inspection confirms canonical pending invariance: materialize the single-use live baseline and approval contract, execute one authorized canonical live writeback, and rerun the recompute observation, post-recompute ruling, and post-plan monitoring chain.
 - Recommended next execution after recompute monitoring confirms a material cascade: materialize one post-cascade closure review wrapper that consumes the canonical recompute outcome together with the seam reroute, master-action, and final integration reports, then either reopen the earned downstream route or record an explicit bounded hold when no row or route class changed.
+- Recommended next execution after the post-cascade closure review records a bounded hold: materialize one QFT theorem-gap completion tranche against `ROW-PILLAR-QFT-001` so the queue resumes through the next highest-ranked non-heavy theorem-gap row rather than leaving the hold as the terminal operator state.
+- Recommended next execution after a non-promoted QFT theorem-gap completion tranche: materialize one EM theorem-gap completion tranche against `ROW-PILLAR-EM-001` with the QFT nonmoving history recorded explicitly.
+- Recommended next execution after a non-promoted EM theorem-gap completion tranche: materialize one SR theorem-gap completion tranche against `ROW-PILLAR-SR-001` with the EM nonmoving history recorded explicitly.
+- Recommended next execution after a non-promoted SR theorem-gap completion tranche: materialize one wrapper against `formal/docs/release/PROGRAM_STATE_CONVERSION_REVIEW_20260411_v0.json` and its already pinned downstream successor path because QFT, EM, and SR now satisfy the declared three-consecutive-nonmoving-family trigger.
+- Recommended next execution after the post-plan program-state conversion review wrapper materializes: reuse the existing downstream path already pinned by `formal/output/reports/post_plan_deeper_blocker_definition_review_successor_tranche_20260418_v0.json` and do not open another lookalike theorem-gap row.
 
 ## Further considerations
 

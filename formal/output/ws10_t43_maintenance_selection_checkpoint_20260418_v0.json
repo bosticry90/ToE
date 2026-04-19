@@ -1,0 +1,42 @@
+{
+  "schema_id": "WS10_T43_MAINTENANCE_SELECTION_REPORT_20260418_v0",
+  "artifact_id": "ws10_t43_maintenance_selection_checkpoint_20260418_v0",
+  "status": "ACTIVE_MAINTENANCE_SELECTION_AND_INDEXING_NONLIVE_v0",
+  "captured_at_utc": "2026-04-18T22:24:33Z",
+  "baseline_reference": {
+    "t42_checkpoint": "formal/output/ws10_t42_redteam_baseline_freeze_checkpoint_20260418_v0.json",
+    "t42_release_surface_file_count": 910,
+    "t42_governed_pytests_expected_count": 341,
+    "t42_active_theorem_gap_count": 7,
+    "t42_active_seam_gap_count": 3
+  },
+  "selected_gate_family": {
+    "family_id": "QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_GATE_STACK",
+    "direct_cycle_gate_count": 12,
+    "synthesis_gate_count": 10,
+    "selected_direct_family_pattern": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycleNN_gate.py",
+    "selected_synthesis_family_pattern": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycleNN_to_NN_synthesis_gate.py",
+    "proposed_helper_path": "formal/python/tests/qm_stat_class_b_cycle_gate_family_helper.py",
+    "phase2a_next_action": "CONSOLIDATE_DIRECT_CYCLE_GATES_FIRST_THEN_SYNTHESIS_GATES"
+  },
+  "selected_release_family": {
+    "family_id": "QFT_GR_SLICEB_INCREMENT_RELEASE_NOTES",
+    "file_count": 279,
+    "registry_pointer": "formal/output/reports/qft_gr_sliceb_increment_family_registry_20260418_v0.json",
+    "counts_by_kind": {
+      "ASSESSMENT_NOTE": 68,
+      "EXECUTION_PACKET": 68,
+      "SCIENCE_VALIDATION_NOTE": 19,
+      "SEMANTIC_DELTA_DECISION_NOTE": 64,
+      "SYNTHESIS_NOTE": 60
+    },
+    "phase2b_next_action": "USE_REGISTRY_AS_ACTIVE_REVIEW_SURFACE_AND_DEFER_RAW_INCREMENT_CHAIN_TO_ARCHIVAL_TRACEABILITY"
+  },
+  "summary": {
+    "terminal_outcome": "MAINTENANCE_FAMILIES_SELECTED_AND_QFT_GR_RELEASE_FAMILY_INDEXED",
+    "next_action": "START_QM_STAT_DIRECT_CYCLE_GATE_CONSOLIDATION_AND_OPERATOR_PACK_GENERATION",
+    "selected_phase2a_lane": "QM_STAT_GATE_FAMILY",
+    "selected_phase2b_lane": "QFT_GR_SLICEB_INCREMENT_RELEASE_NOTES"
+  },
+  "non_claim_boundary": "This checkpoint selects maintenance-reduction targets and indexes an existing release-note family. It does not change theorem status, seam status, or live scientific authority by itself."
+}

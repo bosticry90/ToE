@@ -1,0 +1,43 @@
+{
+  "schema_id": "SANDBOX_PROMOTION_GOVERNED_REVIEW_WRAPPER_COSMO_SR_CYCLE07_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Consume one schema-compliant payload for the bounded COSMO-SR Cycle07 pilot, issue a governed promote/hold/reject decision, and emit a canonical mutation envelope only if promote is explicitly earned.",
+  "required_inputs": {
+    "payload_record": "formal/output/reports/sandbox_promotion_cosmo_sr_cycle07_payload_record_20260419_v0.json",
+    "payload_requirements": "formal/docs/release/SANDBOX_PROMOTION_PAYLOAD_REQUIREMENTS_20260419_v0.md",
+    "pilot_binding": "formal/docs/release/SANDBOX_PROMOTION_BOUNDED_PILOT_BINDING_COSMO_SR_CYCLE07_20260419_v0.json",
+    "sandbox_execution_report": "formal/output/reports/post_plan_cosmo_sr_first_live_seam_tranche_20260418_v0.json",
+    "canonical_mutation_protocol": "formal/docs/release/SANDBOX_PROMOTION_CANONICAL_MUTATION_PROTOCOL_20260419_v0.md",
+    "promotion_lane_policy": "formal/docs/release/PROMOTION_GOVERNANCE_LANE_POLICY_20260418_v0.md",
+    "canonical_action_promotion_standard": "formal/docs/release/TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0.md"
+  },
+  "execution_policy": {
+    "required_pilot_track_id": "SANDBOX_PROMOTION_PILOT_COSMO_SR_CYCLE07",
+    "required_target_row": "ROW-SEAM-COSMO-SR-001",
+    "required_target_seam": "SEAM-COSMO-SR",
+    "required_sandbox_terminal_outcome": "POST_PLAN_COSMO_SR_FIRST_LIVE_SEAM_TRANCHE_EXECUTED_NONPROMOTED",
+    "required_payload_decision_boundary": "PROMOTE_PLUS_HOLD_PLUS_REJECT_ONLY",
+    "required_payload_artifact_class": "PROMOTION_CANDIDATE_SANDBOX_ARTIFACT",
+    "required_delta_class": "SEAM_DELTA_CLASS",
+    "required_promotion_readiness": "READY_FOR_PROMOTION_REVIEW",
+    "required_artifact_adjudication_for_promote": "DISCHARGED",
+    "hold_reason_if_not_discharged": "ARTIFACT_NOT_YET_DISCHARGED_OR_CANONICAL_ROW_TRUTH_CHANGE_NOT_YET_EARNED",
+    "reject_reason_if_payload_ineligible": "PAYLOAD_NOT_PROMOTION_CANDIDATE_OR_CONTRADICTION_CHECK_NOT_PASSING",
+    "required_wrapper_next_action_on_promote": "EMIT_CANONICAL_MUTATION_PROTOCOL_AND_UPDATE_ROW_STATE",
+    "required_wrapper_next_action_on_hold": "REPAIR_OR_EXTEND_COSMO_SR_SANDBOX_EVIDENCE_BEFORE_ANY_CANONICAL_MUTATION",
+    "required_wrapper_next_action_on_reject": "RETURN_ARTIFACT_TO_SANDBOX_SUPPORT_ONLY_OR_REPAIR_METADATA"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SANDBOX_PROMOTION_GOVERNED_REVIEW_WRAPPER_OUTCOME",
+    "no_loop_rule": "ONE_SANDBOX_PROMOTION_GOVERNED_REVIEW_WRAPPER_LAYER_ONLY",
+    "allowed_outcomes": [
+      "SANDBOX_PROMOTION_GOVERNED_REVIEW_PROMOTE_DECISION_EMITTED",
+      "SANDBOX_PROMOTION_GOVERNED_REVIEW_HOLD_DECISION_EMITTED",
+      "SANDBOX_PROMOTION_GOVERNED_REVIEW_REJECT_DECISION_EMITTED",
+      "SANDBOX_PROMOTION_GOVERNED_REVIEW_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_SANDBOX_PROMOTION_GOVERNED_REVIEW_REPAIR"
+    ],
+    "default_outcome": "SANDBOX_PROMOTION_GOVERNED_REVIEW_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local governed promotion review wrapper only; no scientific adequacy or external truth claim."
+}

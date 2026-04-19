@@ -1,0 +1,42 @@
+{
+  "schema_id": "POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_20260418_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Execute and measure the next cascade-informed queued theorem-gap completion tranche by binding the recorded EM nonmoving post-cascade continuation state to the SR packet-05 row and recording whether the tranche changes live row truth, produces an explicit exhaustion read, or leaves the SR theorem-gap row non-promoted before routing the queue terminus through the declared program-state conversion review trigger.",
+  "required_inputs": {
+    "completion_queue_report": "formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json",
+    "post_plan_em_theorem_gap_completion_tranche_report": "formal/output/reports/post_plan_em_theorem_gap_completion_tranche_20260418_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "blocker_burn_dashboard_report": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json",
+    "science_maturity_contradiction_report": "formal/output/reports/science_maturity_contradiction_report_20260416_v0.json",
+    "program_state_conversion_review": "formal/docs/release/PROGRAM_STATE_CONVERSION_REVIEW_20260411_v0.json",
+    "sr_target_doc": "formal/docs/paper/DERIVATION_TARGET_SR_EMPIRICAL_COMPARISON_PACKET_05_v0.md",
+    "sr_artifact": "formal/output/sr_empirical_comparison_packet_05_v0.json",
+    "sr_gate": "formal/python/tests/test_sr_empirical_comparison_packet_05_gate.py"
+  },
+  "execution_policy": {
+    "required_target_row": "ROW-PILLAR-SR-001",
+    "required_target_route_class": "THEOREM_GAP_PROGRAM",
+    "required_target_blocker_class": "THEOREM_GAP",
+    "required_queue_outcome": "POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_MATERIALIZED",
+    "required_queue_follow_on_row": "ROW-PILLAR-SR-001",
+    "required_prior_em_outcome": "POST_PLAN_EM_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED",
+    "required_program_state_conversion_review_basis": "THREE_UPSTREAM_EXPLANATIONS_EXHAUSTED_NON_MOVEMENT_PERSISTS",
+    "required_target_decision": "RETAIN_v0",
+    "required_target_status": "RUN_BOUNDED_v0_NONCLAIM",
+    "required_target_evidence_tier": "INTERMEDIATE_v0"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_AND_PROMOTED",
+      "POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED",
+      "POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_EXPLICITLY_EXHAUSTED",
+      "POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan SR theorem-gap completion tranche measurement only; no scientific adequacy claim."
+}
