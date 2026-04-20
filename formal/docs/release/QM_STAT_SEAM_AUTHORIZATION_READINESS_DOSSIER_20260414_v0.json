@@ -18,12 +18,12 @@
   },
   "authorization_dossier_contract": {
     "required_discovery_queue_top_rank_row": "ROW-SEAM-QM-STAT-001",
-    "required_progress_classification": "REWORK_ROUTED",
-    "required_current_restart_blocker": "policy_standard_approval_not_recorded",
+    "required_progress_classification": "PROGRESS",
+    "required_current_restart_blocker": "",
     "require_policy_standard_defined": true,
-    "require_policy_standard_approved": false,
-    "require_higher_level_policy_revision_authorized": false,
-    "required_restart_terminal_outcome": "REMAIN_IN_GOVERNED_STOP_STATE",
+    "require_policy_standard_approved": true,
+    "require_higher_level_policy_revision_authorized": true,
+    "required_restart_terminal_outcome": "OPEN_ONE_BOUNDED_PRE_SCREENING_RESTART_GATE",
     "required_dormancy_terminal_outcome": "DORMANCY_PRESERVATION_AUDIT_PASS",
     "required_direct_execution_authorized_now": false,
     "single_layer_only": true,
@@ -43,7 +43,7 @@
     "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QM_STAT_SEAM_AUTHORIZATION_READINESS_DOSSIER_OUTCOME",
     "no_loop_rule": "ONE_QM_STAT_SEAM_AUTHORIZATION_READINESS_DOSSIER_LAYER_ONLY",
     "allowed_outcomes": [
-      "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_BUT_RESTART_BLOCKED",
+      "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_FOR_BOUNDED_PRE_SCREENING",
       "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_EVIDENCE_INCOMPLETE",
       "HOLD_PENDING_QM_STAT_SEAM_AUTHORIZATION_DOSSIER_REPAIR"
     ],

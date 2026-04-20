@@ -16,6 +16,12 @@ def _write_declaration(
     *,
     tranche_overrides: dict | None = None,
     include_full_tranche_shape: bool = True,
+    required_progress_classification: str = "REWORK_ROUTED",
+    required_current_restart_blocker: str = "policy_standard_approval_not_recorded",
+    require_policy_standard_approved: bool = False,
+    require_higher_level_policy_revision_authorized: bool = False,
+    required_restart_terminal_outcome: str = "REMAIN_IN_GOVERNED_STOP_STATE",
+    allowed_primary_outcome: str = "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_BUT_RESTART_BLOCKED",
 ) -> None:
     minimum_post_authorization_tranche = {
         "target_row_id": "ROW-SEAM-QM-STAT-001",
@@ -51,12 +57,12 @@ def _write_declaration(
             },
             "authorization_dossier_contract": {
                 "required_discovery_queue_top_rank_row": "ROW-SEAM-QM-STAT-001",
-                "required_progress_classification": "REWORK_ROUTED",
-                "required_current_restart_blocker": "policy_standard_approval_not_recorded",
+                "required_progress_classification": required_progress_classification,
+                "required_current_restart_blocker": required_current_restart_blocker,
                 "require_policy_standard_defined": True,
-                "require_policy_standard_approved": False,
-                "require_higher_level_policy_revision_authorized": False,
-                "required_restart_terminal_outcome": "REMAIN_IN_GOVERNED_STOP_STATE",
+                "require_policy_standard_approved": require_policy_standard_approved,
+                "require_higher_level_policy_revision_authorized": require_higher_level_policy_revision_authorized,
+                "required_restart_terminal_outcome": required_restart_terminal_outcome,
                 "required_dormancy_terminal_outcome": "DORMANCY_PRESERVATION_AUDIT_PASS",
                 "required_direct_execution_authorized_now": False,
                 "single_layer_only": True,
@@ -67,7 +73,7 @@ def _write_declaration(
                 "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QM_STAT_SEAM_AUTHORIZATION_READINESS_DOSSIER_OUTCOME",
                 "no_loop_rule": "ONE_QM_STAT_SEAM_AUTHORIZATION_READINESS_DOSSIER_LAYER_ONLY",
                 "allowed_outcomes": [
-                    "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_BUT_RESTART_BLOCKED",
+                    allowed_primary_outcome,
                     "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_EVIDENCE_INCOMPLETE",
                     "HOLD_PENDING_QM_STAT_SEAM_AUTHORIZATION_DOSSIER_REPAIR"
                 ],
@@ -82,13 +88,18 @@ def _seed_inputs(
     *,
     top_rank_row: str = "ROW-SEAM-QM-STAT-001",
     include_restart_blocker: bool = True,
+    ledger_progress_classification: str = "REWORK_ROUTED",
+    policy_standard_approved: bool = False,
+    higher_level_policy_revision_authorized: bool = False,
+    restart_terminal_outcome: str = "REMAIN_IN_GOVERNED_STOP_STATE",
+    restart_next_action: str = "",
 ) -> None:
     _write_json(
         root / "formal" / "output" / "reports" / "discovery_priority_queue_report_20260411_v0.json",
         {
             "summary": {
                 "top_rank_row": top_rank_row,
-                "progress_classification": "REWORK_ROUTED"
+                "progress_classification": ledger_progress_classification
             },
             "ranked_candidates": [
                 {
@@ -105,7 +116,7 @@ def _seed_inputs(
     _write_json(
         root / "formal" / "output" / "reports" / "physics_progress_ledger_v0.json",
         {
-            "progress_classification": "REWORK_ROUTED",
+            "progress_classification": ledger_progress_classification,
             "evidence_bundle": {
                 "closure_map": {
                     "row_level_evidence": [
@@ -126,7 +137,7 @@ def _seed_inputs(
         {
             "criteria": {
                 "policy_standard_defined": True,
-                "policy_standard_approved": False
+                "policy_standard_approved": policy_standard_approved
             },
             "summary": {
                 "remaining_blockers_to_authorization": ["policy_standard_approval_not_recorded"]
@@ -139,7 +150,7 @@ def _seed_inputs(
         root / "formal" / "output" / "reports" / "science_restart_higher_level_policy_trigger_20260413_v0.json",
         {
             "summary": {
-                "higher_level_policy_revision_authorized": False,
+                "higher_level_policy_revision_authorized": higher_level_policy_revision_authorized,
                 "terminal_outcome": "HIGHER_LEVEL_POLICY_REVISION_NOT_AUTHORIZED"
             }
         }
@@ -149,7 +160,8 @@ def _seed_inputs(
         {
             "summary": {
                 "direct_execution_authorized_now": False,
-                "terminal_outcome": "REMAIN_IN_GOVERNED_STOP_STATE"
+                "terminal_outcome": restart_terminal_outcome,
+                "next_action": restart_next_action,
             }
         }
     )
@@ -209,6 +221,73 @@ def test_reports_qm_stat_authorization_dossier_evidence_incomplete_when_restart_
     report = tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
 
     assert report["summary"]["terminal_outcome"] == "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_EVIDENCE_INCOMPLETE"
+
+
+def test_reports_qm_stat_authorization_dossier_ready_but_restart_blocked_on_post_approval_anti_alias_gap(
+    tmp_path: Path, monkeypatch
+) -> None:
+    monkeypatch.setattr(tool, "REPO_ROOT", tmp_path)
+    declaration_path = (
+        tmp_path / "formal" / "docs" / "release" / "QM_STAT_SEAM_AUTHORIZATION_READINESS_DOSSIER_20260414_v0.json"
+    )
+    _write_declaration(
+        declaration_path,
+        required_progress_classification="PROGRESS",
+        required_current_restart_blocker="anti_alias_proof_for_new_candidate_not_declared",
+        require_policy_standard_approved=True,
+        require_higher_level_policy_revision_authorized=True,
+        required_restart_terminal_outcome="RESTART_TRIGGER_CONTRACT_EVIDENCE_INCOMPLETE",
+    )
+    _seed_inputs(
+        tmp_path,
+        include_restart_blocker=False,
+        ledger_progress_classification="PROGRESS",
+        policy_standard_approved=True,
+        higher_level_policy_revision_authorized=True,
+        restart_terminal_outcome="RESTART_TRIGGER_CONTRACT_EVIDENCE_INCOMPLETE",
+        restart_next_action="DECLARE_ANTI_ALIAS_PROOF_BEFORE_OPENING_PRE_SCREENING_GATE",
+    )
+
+    report = tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
+
+    assert report["summary"]["terminal_outcome"] == "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_BUT_RESTART_BLOCKED"
+    assert report["summary"]["current_restart_blocker"] == "anti_alias_proof_for_new_candidate_not_declared"
+    assert report["summary"]["next_action"] == "DECLARE_ANTI_ALIAS_PROOF_BEFORE_OPENING_PRE_SCREENING_GATE"
+
+
+def test_reports_qm_stat_authorization_dossier_ready_for_bounded_pre_screening_on_post_gate_state(
+    tmp_path: Path, monkeypatch
+) -> None:
+    monkeypatch.setattr(tool, "REPO_ROOT", tmp_path)
+    declaration_path = (
+        tmp_path / "formal" / "docs" / "release" / "QM_STAT_SEAM_AUTHORIZATION_READINESS_DOSSIER_20260414_v0.json"
+    )
+    _write_declaration(
+        declaration_path,
+        required_progress_classification="PROGRESS",
+        required_current_restart_blocker="",
+        require_policy_standard_approved=True,
+        require_higher_level_policy_revision_authorized=True,
+        required_restart_terminal_outcome="OPEN_ONE_BOUNDED_PRE_SCREENING_RESTART_GATE",
+        allowed_primary_outcome="QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_FOR_BOUNDED_PRE_SCREENING",
+    )
+    _seed_inputs(
+        tmp_path,
+        include_restart_blocker=False,
+        ledger_progress_classification="PROGRESS",
+        policy_standard_approved=True,
+        higher_level_policy_revision_authorized=True,
+        restart_terminal_outcome="OPEN_ONE_BOUNDED_PRE_SCREENING_RESTART_GATE",
+        restart_next_action="OPEN_ONE_BOUNDED_PRE_SCREENING_GATE_WITH_NO_DIRECT_EXECUTION_AUTHORIZATION",
+    )
+
+    report = tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
+
+    assert report["summary"]["terminal_outcome"] == "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_FOR_BOUNDED_PRE_SCREENING"
+    assert report["summary"]["current_restart_blocker"] == ""
+    assert report["summary"]["next_action"] == (
+        "EXECUTE_ONE_BOUNDED_QM_STAT_CYCLE11_PRE_SCREENING_STEP_WITH_NO_DIRECT_EXECUTION_AUTHORIZATION"
+    )
 
 
 def test_reports_hold_pending_qm_stat_authorization_dossier_repair(tmp_path: Path, monkeypatch) -> None:

@@ -1,0 +1,47 @@
+{
+  "schema_id": "POST_PLAN_THEOREM_GAP_FRESH_MOVEMENT_QUALIFICATION_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Evaluate whether fresh blocker-facing movement has been machine-pinned after the exhausted post-cascade family, and if so select exactly one reopen candidate row under the repo-native theorem-gap reactivation policy.",
+  "required_inputs": {
+    "completion_queue_report": "formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "blocker_burn_dashboard_report": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json",
+    "theorem_gap_row_outcome_trend_report": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "post_plan_post_cascade_explicit_exhaustion_decision_report": "formal/output/reports/post_plan_post_cascade_explicit_exhaustion_decision_20260419_v0.json",
+    "post_plan_post_cascade_successor_family_eligibility_review_report": "formal/output/reports/post_plan_post_cascade_successor_family_eligibility_review_20260419_v0.json",
+    "post_plan_cosmo_sr_selected_continuation_execution_report": "formal/output/reports/post_plan_cosmo_sr_selected_continuation_execution_20260419_v0.json"
+  },
+  "selection_policy": {
+    "required_stop_outcome": "POST_PLAN_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_NONE_ELIGIBLE",
+    "required_exhaustion_outcome": "POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_EXHAUSTED_UNDER_CURRENT_DECLARED_FAMILY",
+    "default_selected_row": "ROW-PILLAR-STAT-001",
+    "alternate_selected_row": "ROW-PILLAR-COSMO-001",
+    "blocked_row": "ROW-PILLAR-QM-001",
+    "dormant_only_row": "ROW-PILLAR-GR-001",
+    "reserve_rows": [
+      "ROW-PILLAR-QFT-001",
+      "ROW-PILLAR-EM-001",
+      "ROW-PILLAR-SR-001"
+    ],
+    "required_primary_executable_seam": "SEAM-COSMO-SR",
+    "cosmo_override_row": "ROW-SEAM-COSMO-SR-001",
+    "cosmo_override_target_row": "ROW-PILLAR-COSMO-001",
+    "cosmo_override_requires_seam_delta_negative": true,
+    "cosmo_override_requires_row_truth_change": true,
+    "stat_execution_surface_declaration": "formal/docs/release/POST_PLAN_STAT_THEOREM_GAP_REACTIVATION_TRANCHE_20260419_v0.json",
+    "cosmo_execution_surface_declaration": "formal/docs/release/POST_PLAN_COSMO_THEOREM_GAP_REACTIVATION_TRANCHE_20260419_v0.json"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_THEOREM_GAP_FRESH_MOVEMENT_QUALIFICATION_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_THEOREM_GAP_FRESH_MOVEMENT_QUALIFICATION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_THEOREM_GAP_FRESH_MOVEMENT_QUALIFICATION_STAT_DEFAULT_SELECTED",
+      "POST_PLAN_THEOREM_GAP_FRESH_MOVEMENT_QUALIFICATION_COSMO_OVERRIDE_SELECTED",
+      "POST_PLAN_THEOREM_GAP_FRESH_MOVEMENT_QUALIFICATION_NO_ROW_SELECTED",
+      "POST_PLAN_THEOREM_GAP_FRESH_MOVEMENT_QUALIFICATION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_THEOREM_GAP_FRESH_MOVEMENT_QUALIFICATION_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_THEOREM_GAP_FRESH_MOVEMENT_QUALIFICATION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local theorem-gap reactivation qualification only; no scientific adequacy claim."
+}

@@ -1,0 +1,37 @@
+{
+  "schema_id": "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_REACTIVATION_TRANCHE_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Execute the refreshed GR dormant new-structure reactivation tranche only through the dormant package branch after successor-family authorization, allowing blocker reduction, explicit exhaustion, or repair hold but never falling back to the old empirical packet route.",
+  "required_inputs": {
+    "successor_family_authorization_review_report": "formal/output/reports/post_plan_theorem_gap_successor_family_authorization_review_20260419_v0.json",
+    "fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "gr_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_gr_20260419_v0.json",
+    "prior_gr_completion_tranche_report": "formal/output/reports/post_plan_gr_dormant_new_structure_completion_tranche_20260418_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "blocker_burn_dashboard_report": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json",
+    "science_maturity_contradiction_report": "formal/output/reports/science_maturity_contradiction_report_20260416_v0.json",
+    "gr_new_structure_blocker_file_map": "formal/docs/release/GR_ROW_001_NEW_STRUCTURE_BLOCKER_FILE_MAP_20260418_v0.json"
+  },
+  "execution_policy": {
+    "required_authorization_outcome": "POST_PLAN_THEOREM_GAP_SUCCESSOR_FAMILY_AUTHORIZATION_REVIEW_ONE_ROW_AUTHORIZED",
+    "required_selected_row": "ROW-PILLAR-GR-001",
+    "required_target_row": "ROW-PILLAR-GR-001",
+    "required_target_route_class": "FROZEN_NEW_STRUCTURE_BRANCH",
+    "required_target_blocker_class": "THEOREM_GAP",
+    "required_prior_outcome": "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_EXPLICITLY_EXHAUSTED",
+    "required_gr_rule": "RESUME_FROM_P78_P79_P80_DORMANT_PACKAGE_ONLY"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_GR_DORMANT_NEW_STRUCTURE_REACTIVATION_TRANCHE_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_GR_DORMANT_NEW_STRUCTURE_REACTIVATION_TRANCHE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_REACTIVATION_TRANCHE_EXECUTED_AND_PROMOTED",
+      "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_REACTIVATION_TRANCHE_EXPLICITLY_EXHAUSTED",
+      "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_REACTIVATION_TRANCHE_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_GR_DORMANT_NEW_STRUCTURE_REACTIVATION_TRANCHE_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_REACTIVATION_TRANCHE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local refreshed GR dormant new-structure reactivation tranche only; no scientific adequacy claim."
+}

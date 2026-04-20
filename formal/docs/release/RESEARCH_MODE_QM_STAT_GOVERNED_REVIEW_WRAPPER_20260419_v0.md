@@ -1,0 +1,12 @@
+# Research Mode QM-STAT Governed Review Wrapper (2026-04-19)
+
+- `RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_WRAPPER_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_WRAPPER_SCOPE_v0: ONE_QM_STAT_PAYLOAD_PLUS_ONE_HARDER_TARGET_COMPARISON_BUNDLE_ONLY`
+- `RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_WRAPPER_DECLARATION_v0: formal/docs/release/RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_WRAPPER_20260419_v0.json`
+- `RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_WRAPPER_TOOL_v0: formal/python/tools/research_mode_qm_stat_governed_review_wrapper_report.py`
+- `RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_WRAPPER_GATE_v0: formal/python/tests/test_research_mode_qm_stat_governed_review_wrapper_report.py`
+- `RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_WRAPPER_REPORT_v0: formal/output/reports/research_mode_qm_stat_governed_review_wrapper_20260419_v0.json`
+- `RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_WRAPPER_RULE_v0: PAYLOAD_IS_PRIMARY_OBJECT_COMPARISON_IS_SUPPORTING_EVIDENCE_NONCANONICAL_STATUS_PERSISTS_UNLESS_EXPLICIT_PROMOTION_PASS_OCCURS`
+- `RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_WRAPPER_READY_OUTCOME_v0: QM_STAT_GOVERNED_REVIEW_WRAPPER_READY_FOR_BOUNDED_SANDBOX_REVIEW`
+
+This wrapper tests whether the research-mode QM-STAT candidate bundle can enter the governance lane without distorting authority boundaries. It does not emit canonical mutation and it does not claim a governed promotion pass.

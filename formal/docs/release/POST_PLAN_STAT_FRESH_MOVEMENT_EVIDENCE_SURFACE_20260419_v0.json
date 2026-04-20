@@ -1,0 +1,48 @@
+{
+  "schema_id": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Measure whether the currently pinned STAT packet-04 chain now carries fresh blocker-facing movement strong enough to support the top-ranked STAT reopen dossier, without authorizing the row by analogy while theorem-gap delta remains flat.",
+  "required_inputs": {
+    "stat_dossier_declaration": "formal/docs/release/POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_STAT_20260419_v0.json",
+    "fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "stat_reactivation_tranche_report": "formal/output/reports/post_plan_stat_theorem_gap_reactivation_tranche_20260419_v0.json",
+    "prior_stat_completion_tranche_report": "formal/output/reports/post_plan_stat_theorem_gap_completion_tranche_20260418_v0.json",
+    "blocker_burn_dashboard_report": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json",
+    "theorem_gap_row_outcome_trend_report": "formal/output/reports/theorem_gap_row_outcome_trend_20260411_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "stat_target_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+    "stat_artifact": "formal/output/stat_empirical_comparison_packet_04_v0.json",
+    "stat_gate": "formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py",
+    "historical_stat_candidate_decision_doc": "formal/docs/release/WS_10_TGC_72_STAT_PACKET04_CONTINUATION_CANDIDATE_DECISION_20260408_v0.md",
+    "historical_stat_checkpoint_doc": "formal/docs/release/WS_10_TGC_74_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_20260408_v0.md"
+  },
+  "evidence_policy": {
+    "required_dossier_outcome": "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_MATERIALIZED",
+    "required_reactivation_outcome": "POST_PLAN_STAT_THEOREM_GAP_REACTIVATION_TRANCHE_EVIDENCE_INCOMPLETE",
+    "required_prior_completion_outcome": "POST_PLAN_STAT_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED",
+    "required_target_row": "ROW-PILLAR-STAT-001",
+    "required_target_route_class": "THEOREM_GAP_PROGRAM",
+    "required_target_next_action": "EXECUTE_PINNED_THEOREM_GAP_PROGRAM_AND_REQUIRE_BLOCKER_DELTA_NEGATIVE",
+    "required_default_selected_row": "ROW-PILLAR-STAT-001",
+    "required_measurable_blocker_delta_criterion": "NEGATIVE_THEOREM_GAP_DELTA_ATTRIBUTABLE_TO_STAT_REACTIVATION_FAMILY",
+    "required_artifact_id": "stat_empirical_comparison_packet_04_v0",
+    "required_artifact_status": "RUN_BOUNDED_v0_NONCLAIM",
+    "required_artifact_decision": "INCONCLUSIVE_v0",
+    "required_artifact_evidence_tier": "INTERMEDIATE_v0",
+    "required_candidate_state_token": "TGC72_CONTINUATION_CANDIDATE_STATE_v0: NEXT_STAT_PACKET04_CONTINUATION_PACKAGE_PINNED",
+    "required_checkpoint_state_token": "TGC74_EXECUTION_STATE_v0: NEXT_BOUNDED_STAT_PACKET04_CONTINUATION_INCREMENT_EXECUTION_CHECKPOINT_PINNED",
+    "freshness_trigger_rule": "NEGATIVE_THEOREM_GAP_DELTA_PLUS_STAT_DEFAULT_SELECTION_REQUIRED_BEFORE_AUTHORIZATION"
+  },
+  "evidence_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+      "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_FRESH_MOVEMENT_MACHINE_PINNED",
+      "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_CONTRACT_VIOLATION",
+      "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_EVIDENCE_INCOMPLETE"
+    ],
+    "default_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local STAT fresh-movement evidence surface only; no scientific adequacy claim."
+}

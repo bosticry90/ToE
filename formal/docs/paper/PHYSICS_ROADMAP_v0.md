@@ -97,6 +97,35 @@ Phase 3 seam executable-path normalization checkpoint (2026-04-18):
 - Canonical external hold result: `SEAM-QFT-GR` remains externally held for scalar publication release.
 - Canonical mirror-only results: `SEAM-STAT-QM` and `SEAM-SR-COSMO` remain non-executable mirror seams until canonical row and authorization surfaces exist.
 
+QM-STAT approval-recordation execution checkpoint (2026-04-19):
+- Recordation execution declaration pointer: `formal/docs/release/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_20260419_v0.json`.
+- Recordation execution report pointer: `formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_recordation_execution_20260419_v0.json`.
+- Recordation execution gate pointer: `formal/python/tests/test_qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_recordation_execution_report.py`.
+- Execution result: the repo records one bounded write surface for QM-STAT policy-standard approval recordation, and that surface has now been exercised with a complete four-field approval tuple without auto-authorizing execution.
+- Next posture: keep direct execution closed while carrying QM-STAT through one bounded Cycle11 pre-screening step under the opened pre-screening gate.
+
+Restart anti-alias proof declaration checkpoint (2026-04-19):
+- Anti-alias proof declaration pointer: `formal/docs/release/SCIENCE_RESTART_ANTI_ALIAS_PROOF_DECLARATION_20260419_v0.json`.
+- Anti-alias proof summary pointer: `formal/docs/paper/SCIENCE_RESTART_ANTI_ALIAS_PROOF_SUMMARY_20260419_v0.md`.
+- Anti-alias proof report pointer: `formal/output/reports/science_restart_anti_alias_proof_declaration_20260419_v0.json`.
+- Anti-alias proof gate pointer: `formal/python/tests/test_science_restart_anti_alias_proof_declaration_report.py`.
+- Execution result: the repo now records one bounded anti-alias proof declaration surface for the next new candidate, ties it to a repository-local summary for `LANE-THERMAL-BOUNDARY-001`, and the live anti-alias outcome is now declared without direct execution authorization.
+- Next posture: treat the anti-alias blocker as cleared, carry the restart-trigger contract at the bounded pre-screening gate, and execute one bounded QM-STAT Cycle11 pre-screening step with no direct execution authorization.
+
+QM-STAT post-gate readiness checkpoint (2026-04-19):
+- QM-STAT readiness declaration pointer: `formal/docs/release/QM_STAT_SEAM_AUTHORIZATION_READINESS_DOSSIER_20260414_v0.json`.
+- QM-STAT readiness report pointer: `formal/output/reports/qm_stat_seam_authorization_readiness_dossier_20260414_v0.json`.
+- QM-STAT readiness gate pointer: `formal/python/tests/test_qm_stat_seam_authorization_readiness_dossier_report.py`.
+- Live outcome: `QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_FOR_BOUNDED_PRE_SCREENING` with no active restart blocker and no direct execution authorization.
+- Bounded next action: `EXECUTE_ONE_BOUNDED_QM_STAT_CYCLE11_PRE_SCREENING_STEP_WITH_NO_DIRECT_EXECUTION_AUTHORIZATION` against the pinned Cycle11 artifact and gate.
+
+QM-STAT Cycle12 continuation execution checkpoint (2026-04-19):
+- Cycle12 continuation execution declaration pointer: `formal/docs/release/QM_STAT_CYCLE12_CONTINUATION_EXECUTION_20260419_v0.json`.
+- Cycle12 continuation execution report pointer: `formal/output/reports/qm_stat_cycle12_continuation_execution_20260419_v0.json`.
+- Cycle12 continuation execution gate pointer: `formal/python/tests/test_qm_stat_cycle12_continuation_execution_report.py`.
+- Execution result: the repo now records one bounded Cycle12 continuation execution surface against the already-authorized Cycle12 artifact and narrow gate while preserving single-lane non-live constraints and leaving downstream families unopened.
+- Bounded next action: `STOP_AT_QM_STAT_CYCLE12_CONTINUATION_EXECUTION_TOKEN_PENDING_ANY_FURTHER_DOWNSTREAM_AUTHORIZATION`.
+
 Phase 4 master-action Packet-01 transport-binding recovery checkpoint (2026-04-18):
 - Recovery declaration pointer: `formal/docs/release/MASTER_ACTION_PACKET_01_TRANSPORT_BINDING_RECOVERY_20260418_v0.json`.
 - Recovery report pointer: `formal/output/reports/master_action_packet_01_transport_binding_recovery_20260418_v0.json`.
@@ -151,6 +180,103 @@ Sandbox-first promotion-gated governance checkpoint (2026-04-18):
 - `SANDBOX_PROMOTION_PHASE3_IMPLEMENTATION_DECLARATION_v0: formal/docs/release/SANDBOX_PROMOTION_MIGRATION_PHASE3_IMPLEMENTATION_20260419_v0.md`
 - `SANDBOX_PROMOTION_AUTHORITY_OWNERSHIP_MATRIX_v0: formal/docs/release/SANDBOX_PROMOTION_AUTHORITY_OWNERSHIP_MATRIX_20260419_v0.md`
 - `SANDBOX_PROMOTION_AUTHORITY_CUTOVER_GATE_v0: formal/python/tests/test_sandbox_promotion_authority_ownership_cutover_gate.py`
+
+Research-first discovery checkpoint (2026-04-19):
+- Research policy pointer: `formal/docs/release/RESEARCH_MODE_EXECUTION_POLICY_20260419_v0.md`.
+- Research metadata schema pointer: `formal/docs/release/RESEARCH_ARTIFACT_CLASSIFICATION_METADATA_SCHEMA_20260419_v0.md`.
+- Research retention policy pointer: `formal/docs/release/RESEARCH_ARTIFACT_RETENTION_POLICY_20260419_v0.md`.
+- Research authority matrix pointer: `formal/docs/release/RESEARCH_MODE_AUTHORITY_OWNERSHIP_MATRIX_20260419_v0.md`.
+- Research pilot pack pointer: `formal/docs/release/RESEARCH_MODE_PILOT_PACK_20260419_v0.md`.
+- Step 14 acceptance review pointer: `formal/docs/release/RESEARCH_MODE_STEP14_ACCEPTANCE_REVIEW_20260419_v0.md`.
+- Gate pointer: `formal/python/tests/test_research_mode_lane_policy_gate.py`.
+- Metadata gate pointer: `formal/python/tests/test_research_mode_metadata_schema_gate.py`.
+- Pilot gate pointer: `formal/python/tests/test_research_mode_pilot_pack_report.py`.
+- Step 14 acceptance gate pointer: `formal/python/tests/test_research_mode_step14_acceptance_review_report.py`.
+- Runner pointer: `research_mode_execution.ps1`.
+- Namespace pointer: `formal/python/research`.
+- Pilot module pointer: `formal/python/research/pilot_pack.py`.
+- Step 14 acceptance module pointer: `formal/python/research/acceptance_review.py`.
+- Pilot report pointer: `formal/output/reports/research_mode_pilot_pack_20260419_v0.json`.
+- Step 14 acceptance report pointer: `formal/output/reports/research_mode_step14_acceptance_review_20260419_v0.json`.
+- Rollout completion note pointer: `formal/docs/release/RESEARCH_MODE_ROLLOUT_COMPLETION_20260419_v0.md`.
+- Sandbox candidacy review pointer: `formal/docs/release/RESEARCH_MODE_SANDBOX_CANDIDACY_REVIEW_20260419_v0.md`.
+- Sandbox candidacy module pointer: `formal/python/research/sandbox_candidacy_review.py`.
+- Sandbox candidacy gate pointer: `formal/python/tests/test_research_mode_sandbox_candidacy_review_report.py`.
+- Sandbox candidacy report pointer: `formal/output/reports/research_mode_sandbox_candidacy_review_20260419_v0.json`.
+- Harder live target note pointer: `formal/docs/release/RESEARCH_MODE_HARDER_QM_STAT_TARGET_20260419_v0.md`.
+- Harder live target module pointer: `formal/python/research/harder_qm_stat_target.py`.
+- Harder live target gate pointer: `formal/python/tests/test_research_mode_harder_qm_stat_target_report.py`.
+- Harder live target artifact pointer: `formal/output/research/research_qm_stat_transport_moment_stack_probe_20260419_v0.json`.
+- Harder live target report pointer: `formal/output/reports/research_mode_harder_qm_stat_target_20260419_v0.json`.
+- QM-STAT sandbox payload note pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_SANDBOX_PAYLOAD_RECORD_20260419_v0.md`.
+- QM-STAT sandbox payload module pointer: `formal/python/research/qm_stat_sandbox_payload_record.py`.
+- QM-STAT sandbox payload gate pointer: `formal/python/tests/test_research_mode_qm_stat_sandbox_payload_record_report.py`.
+- QM-STAT sandbox payload artifact pointer: `formal/output/sandbox/qm_stat_transport_witness_sandbox_artifact_20260419_v0.json`.
+- QM-STAT sandbox payload report pointer: `formal/output/reports/research_mode_qm_stat_sandbox_payload_record_20260419_v0.json`.
+- QM-STAT sandbox candidate comparison note pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_SANDBOX_CANDIDATE_COMPARISON_20260419_v0.md`.
+- QM-STAT sandbox candidate comparison module pointer: `formal/python/research/qm_stat_sandbox_candidate_comparison.py`.
+- QM-STAT sandbox candidate comparison gate pointer: `formal/python/tests/test_research_mode_qm_stat_sandbox_candidate_comparison_report.py`.
+- QM-STAT sandbox candidate comparison report pointer: `formal/output/reports/research_mode_qm_stat_sandbox_candidate_comparison_20260419_v0.json`.
+- QM-STAT governed review wrapper note pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_WRAPPER_20260419_v0.md`.
+- QM-STAT governed review wrapper declaration pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_WRAPPER_20260419_v0.json`.
+- QM-STAT governed review wrapper tool pointer: `formal/python/tools/research_mode_qm_stat_governed_review_wrapper_report.py`.
+- QM-STAT governed review wrapper gate pointer: `formal/python/tests/test_research_mode_qm_stat_governed_review_wrapper_report.py`.
+- QM-STAT governed review wrapper report pointer: `formal/output/reports/research_mode_qm_stat_governed_review_wrapper_20260419_v0.json`.
+- QM-STAT sandbox governed intake execution note pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_EXECUTION_20260419_v0.md`.
+- QM-STAT sandbox governed intake execution declaration pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_EXECUTION_20260419_v0.json`.
+- QM-STAT sandbox governed intake execution tool pointer: `formal/python/tools/research_mode_qm_stat_sandbox_governed_intake_execution_report.py`.
+- QM-STAT sandbox governed intake execution gate pointer: `formal/python/tests/test_research_mode_qm_stat_sandbox_governed_intake_execution_report.py`.
+- QM-STAT sandbox governed intake execution report pointer: `formal/output/reports/research_mode_qm_stat_sandbox_governed_intake_execution_20260419_v0.json`.
+- QM-STAT sandbox review execution packet pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_SANDBOX_REVIEW_EXECUTION_PACKET_20260419_v0.md`.
+- QM-STAT sandbox review execution packet tool pointer: `formal/python/tools/research_mode_qm_stat_sandbox_review_execution_packet_report.py`.
+- QM-STAT sandbox review execution packet gate pointer: `formal/python/tests/test_research_mode_qm_stat_sandbox_review_execution_packet_report.py`.
+- QM-STAT sandbox review execution packet report pointer: `formal/output/reports/research_mode_qm_stat_sandbox_review_execution_packet_20260419_v0.json`.
+- QM-STAT sandbox review execution tool pointer: `formal/python/tools/research_mode_qm_stat_sandbox_review_execution_report.py`.
+- QM-STAT sandbox review execution gate pointer: `formal/python/tests/test_research_mode_qm_stat_sandbox_review_execution_report.py`.
+- QM-STAT sandbox review execution report pointer: `formal/output/reports/research_mode_qm_stat_sandbox_review_execution_20260419_v0.json`.
+- QM-STAT post-review adjudication declaration pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_POST_REVIEW_ADJUDICATION_20260419_v0.json`.
+- QM-STAT post-review adjudication tool pointer: `formal/python/tools/research_mode_qm_stat_post_review_adjudication_report.py`.
+- QM-STAT post-review adjudication gate pointer: `formal/python/tests/test_research_mode_qm_stat_post_review_adjudication_report.py`.
+- QM-STAT post-review adjudication report pointer: `formal/output/reports/research_mode_qm_stat_post_review_adjudication_20260419_v0.json`.
+- QM-STAT stronger live-target or authority evidence tool pointer: `formal/python/tools/research_mode_qm_stat_live_authority_evidence_report.py`.
+- QM-STAT stronger live-target or authority evidence gate pointer: `formal/python/tests/test_research_mode_qm_stat_live_authority_evidence_report.py`.
+- QM-STAT stronger live-target or authority evidence report pointer: `formal/output/reports/research_mode_qm_stat_live_authority_evidence_20260419_v0.json`.
+- QM-STAT re-entry support artifact declaration pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_SUPPORT_ARTIFACT_20260419_v0.json`.
+- QM-STAT re-entry support artifact tool pointer: `formal/python/tools/research_mode_qm_stat_reentry_support_artifact_report.py`.
+- QM-STAT re-entry support artifact gate pointer: `formal/python/tests/test_research_mode_qm_stat_reentry_support_artifact_report.py`.
+- QM-STAT re-entry support artifact report pointer: `formal/output/reports/research_mode_qm_stat_reentry_support_artifact_20260419_v0.json`.
+- QM-STAT re-entry support artifact object pointer: `formal/output/support/qm_stat_reentry_support_artifact_20260419_v0.json`.
+- QM-STAT re-entry eligibility review declaration pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_ELIGIBILITY_REVIEW_20260419_v0.json`.
+- QM-STAT re-entry eligibility review tool pointer: `formal/python/tools/research_mode_qm_stat_reentry_eligibility_review_report.py`.
+- QM-STAT re-entry eligibility review gate pointer: `formal/python/tests/test_research_mode_qm_stat_reentry_eligibility_review_report.py`.
+- QM-STAT re-entry eligibility review report pointer: `formal/output/reports/research_mode_qm_stat_reentry_eligibility_review_20260419_v0.json`.
+- QM-STAT re-entry review-cycle queue declaration pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_REVIEW_CYCLE_QUEUE_20260419_v0.json`.
+- QM-STAT re-entry review-cycle queue tool pointer: `formal/python/tools/research_mode_qm_stat_reentry_review_cycle_queue_report.py`.
+- QM-STAT re-entry review-cycle queue gate pointer: `formal/python/tests/test_research_mode_qm_stat_reentry_review_cycle_queue_report.py`.
+- QM-STAT re-entry review-cycle queue report pointer: `formal/output/reports/research_mode_qm_stat_reentry_review_cycle_queue_20260419_v0.json`.
+- QM-STAT re-entry review-cycle queue object pointer: `formal/output/queue/qm_stat_reentry_review_cycle_queue_20260419_v0.json`.
+- Pillar pilot output pointer: `formal/output/research/research_stat_entropy_balance_probe_20260419_v0.json`.
+- Seam pilot output pointer: `formal/output/research/research_qm_stat_transport_witness_probe_20260419_v0.json`.
+- Master-action pilot output pointer: `formal/output/research/research_master_action_transport_binding_probe_20260419_v0.json`.
+- `RESEARCH_MODE_ARCHITECTURE_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `RESEARCH_MODE_ARCHITECTURE_MODEL_v0: RESEARCH_FIRST_SANDBOX_PROMOTION_GATED_GOVERNANCE`
+- `RESEARCH_MODE_ROLLOUT_STATUS_v0: COMPLETE_BOUNDED_v0_NONCLAIM`
+- `RESEARCH_MODE_SANDBOX_CANDIDACY_STATUS_v0: ACCEPTED_BOUNDED_v0_NONCLAIM`
+- `RESEARCH_MODE_HARDER_QM_STAT_TARGET_STATUS_v0: COMPLETE_BOUNDED_v0_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_PAYLOAD_STATUS_v0: READY_FOR_COMPARISON_BUNDLE_v0_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_CANDIDATE_COMPARISON_STATUS_v0: ALIGNED_BOUNDED_v0_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_STATUS_v0: READY_FOR_BOUNDED_SANDBOX_REVIEW_v0_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_STATUS_v0: ACCEPTED_FOR_BOUNDED_SANDBOX_REVIEW_v0_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_REVIEW_EXECUTION_PACKET_STATUS_v0: READY_BOUNDED_v0_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_REVIEW_EXECUTION_STATUS_v0: COMPLETE_NO_CANONICAL_ACTION_v0_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_POST_REVIEW_ADJUDICATION_STATUS_v0: RETAIN_BOUNDED_REVIEWED_CANDIDATE_v0_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_LIVE_AUTHORITY_EVIDENCE_STATUS_v0: MATERIALIZED_REENTRY_SUPPORT_v0_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_REENTRY_SUPPORT_ARTIFACT_STATUS_v0: QUEUE_AUTHORIZATION_READY_v0_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_REENTRY_ELIGIBILITY_STATUS_v0: MET_FOR_BOUNDED_REENTRY_v0_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_REENTRY_QUEUE_STATUS_v0: QUEUED_FOR_ONE_BOUNDED_REENTRY_REVIEW_CYCLE_v0_NONCLAIM`
+- `RESEARCH_MODE_PILOT_STATUS_v0: COMPLETE_BOUNDED_v0_NONCLAIM`
+- `RESEARCH_MODE_STEP14_ACCEPTANCE_STATUS_v0: COMPLETE_BOUNDED_v0_NONCLAIM`
+- Next posture: the QM-STAT bundle is now queued for exactly one bounded re-entry review cycle under an explicit non-canonical queue surface, and the next move is to author one bounded queue packet rather than jump directly into review execution.
 - `SANDBOX_PROMOTION_PHASE5_IMPLEMENTATION_DECLARATION_v0: formal/docs/release/SANDBOX_PROMOTION_MIGRATION_PHASE5_IMPLEMENTATION_20260419_v0.md`
 - `SANDBOX_PROMOTION_BOUNDARY_ENFORCEMENT_FAMILY_v0: formal/docs/release/SANDBOX_PROMOTION_BOUNDARY_ENFORCEMENT_FAMILY_20260419_v0.md`
 - `SANDBOX_PROMOTION_BOUNDARY_ENFORCEMENT_REPORT_TOOL_v0: formal/python/tools/sandbox_promotion_boundary_enforcement_family_report.py`
@@ -236,6 +362,30 @@ Post-plan objective-quality physics completion queue checkpoint (2026-04-18):
 - Queue report pointer: `formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json`.
 - Queue gate pointer: `formal/python/tests/test_post_plan_objective_quality_physics_completion_queue_report.py`.
 - Queue result: the live completion queue is theorem-gap-first, keeps `SEAM-COSMO-SR` as the sole executable seam for downstream reassessment only, and opens the next tranche through COSMO rather than through another immediate seam reroute.
+
+Post-plan remaining physics execution-order checkpoint (2026-04-19):
+- Ordering declaration pointer: `formal/docs/release/POST_PLAN_REMAINING_PHYSICS_EXECUTION_ORDER_20260419_v0.json`.
+- Ordering report pointer: `formal/output/reports/post_plan_remaining_physics_execution_order_20260419_v0.json`.
+- Ordering gate pointer: `formal/python/tests/test_post_plan_remaining_physics_execution_order_report.py`.
+- Ordering result: the current remaining-work order is now pinned explicitly as one declared machine-pinned COSMO-SR continuation family first, the existing objective-quality queue second as downstream-only, and post-cascade successor reopening third only after fresh blocker-facing movement is machine-pinned.
+
+Post-plan COSMO-SR selected continuation family checkpoint (2026-04-19):
+- Family declaration pointer: `formal/docs/release/POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_FAMILY_20260419_v0.json`.
+- Family report pointer: `formal/output/reports/post_plan_cosmo_sr_selected_continuation_family_20260419_v0.json`.
+- Family gate pointer: `formal/python/tests/test_post_plan_cosmo_sr_selected_continuation_family_report.py`.
+- Family result: the next post-plan execution tranche is now started canonically by binding the unlocked Cycle08 doc-artifact-gate tuple into one single-use COSMO-SR continuation family with next action `EXECUTE_DECLARED_COSMO_SR_CONTINUATION_PAYLOAD_ONCE`.
+
+Post-plan COSMO-SR selected continuation execution checkpoint (2026-04-19):
+- Execution declaration pointer: `formal/docs/release/POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_EXECUTION_20260419_v0.json`.
+- Execution report pointer: `formal/output/reports/post_plan_cosmo_sr_selected_continuation_execution_20260419_v0.json`.
+- Execution gate pointer: `formal/python/tests/test_post_plan_cosmo_sr_selected_continuation_execution_report.py`.
+- Execution result: the single-use Cycle08 continuation execution is now recorded as a bounded nonpromoted closeout under the current live seam row, and downstream handoff advances to `PREPARE_POST_PLAN_STAT_THEOREM_GAP_COMPLETION_TRANCHE_AND_RETAIN_CURRENT_SEAM_CLASSES`.
+
+Post-plan ordered theorem-gap continuation tranche checkpoint (2026-04-19):
+- Tranche declaration pointer: `formal/docs/release/POST_PLAN_ORDERED_THEOREM_GAP_CONTINUATION_TRANCHE_20260419_v0.json`.
+- Tranche report pointer: `formal/output/reports/post_plan_ordered_theorem_gap_continuation_tranche_20260419_v0.json`.
+- Tranche gate pointer: `formal/python/tests/test_post_plan_ordered_theorem_gap_continuation_tranche_report.py`.
+- Tranche result: the STAT theorem-gap tranche is now the explicitly selected canonical theorem-gap continuation under the April 19 ordering, and its downstream handoff advances to the GR dormant package because the higher-priority COSMO-SR continuation execution has already closed out.
 
 Post-plan COSMO theorem-gap completion tranche checkpoint (2026-04-18):
 - Tranche declaration pointer: `formal/docs/release/POST_PLAN_COSMO_THEOREM_GAP_COMPLETION_TRANCHE_20260418_v0.json`.
@@ -347,7 +497,67 @@ Post-plan program-state conversion review wrapper checkpoint (2026-04-18):
 - Wrapper report pointer: `formal/output/reports/post_plan_program_state_conversion_review_wrapper_20260418_v0.json`.
 - Wrapper gate pointer: `formal/python/tests/test_post_plan_program_state_conversion_review_wrapper_report.py`.
 - Execution result: the post-plan queue now terminates at the existing one-shot program-state conversion review because the SR tranche ended non-promoted after QFT and EM also remained nonmoving, and the wrapper confirms that the older conversion-review downstream successor path is still materially pinned.
-- Next posture: keep the theorem-gap queue closed against another lookalike row and reuse the existing downstream path already registered by `formal/output/reports/post_plan_deeper_blocker_definition_review_successor_tranche_20260418_v0.json`.
+- Next posture: materialize an explicit exhaustion decision for the current post-cascade continuation family instead of implying another runnable theorem-gap step from the already consumed QFT/EM/SR chain.
+
+Post-plan post-cascade explicit exhaustion decision checkpoint (2026-04-19):
+- Exhaustion declaration pointer: `formal/docs/release/POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_20260419_v0.json`.
+- Exhaustion report pointer: `formal/output/reports/post_plan_post_cascade_explicit_exhaustion_decision_20260419_v0.json`.
+- Exhaustion gate pointer: `formal/python/tests/test_post_plan_post_cascade_explicit_exhaustion_decision_report.py`.
+- Execution result: the repo now records that the currently declared post-cascade QFT/EM/SR continuation family is explicitly exhausted under current surfaces because the bounded hold remained stable, the three follow-on theorem-gap tranches all ended non-promoted, and the conversion-review wrapper closed the queue against another lookalike row.
+- Next posture: author a newly declared successor family only if a fresh bounded blocker-facing continuation is actually pinned; otherwise stop at the explicit exhaustion read for this route family.
+
+Post-plan post-cascade successor-family eligibility review checkpoint (2026-04-19):
+- Eligibility declaration pointer: `formal/docs/release/POST_PLAN_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_REVIEW_20260419_v0.json`.
+- Eligibility report pointer: `formal/output/reports/post_plan_post_cascade_successor_family_eligibility_review_20260419_v0.json`.
+- Eligibility gate pointer: `formal/python/tests/test_post_plan_post_cascade_successor_family_eligibility_review_report.py`.
+- Execution result: the repo now records that no fresh blocker-facing movement has been machine-pinned in theorem-gap or seam-integration classes for the exhausted post-cascade continuation family, so no successor route is currently authorized.
+- Next posture: keep the branch terminally exhausted until exactly one fresh bounded reopen route is machine-pinned and explicitly declared.
+
+Post-plan theorem-gap reduction reactivation checkpoint (2026-04-19):
+- Reactivation program pointer: `formal/docs/release/POST_PLAN_THEOREM_GAP_REDUCTION_REACTIVATION_PROGRAM_20260419_v0.md`.
+- Fresh-movement qualification pointer: `formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json`.
+- Successor-family authorization pointer: `formal/output/reports/post_plan_theorem_gap_successor_family_authorization_review_20260419_v0.json`.
+- Reranking pointer: `formal/output/reports/post_plan_theorem_gap_reranking_20260419_v0.json`.
+- Row dossier family tool/gate: `formal/python/tools/post_plan_theorem_gap_row_reopen_dossier_report.py` / `formal/python/tests/test_post_plan_theorem_gap_row_reopen_dossier_report.py`.
+- Execution result: the repo now records a fresh-movement qualification layer, a seven-row reopen dossier family, a single-row authorization review, and a reranking surface that keeps `ROW-PILLAR-STAT-001` as the default first reopen candidate, allows `ROW-PILLAR-COSMO-001` to overtake only through a machine-pinned COSMO-SR seam-linked delta, keeps `ROW-PILLAR-GR-001` dormant-package-only, leaves QFT/EM/SR in reserve, and keeps QM excluded pending non-QM movement.
+- Refreshed tranche pointers: `formal/output/reports/post_plan_stat_theorem_gap_reactivation_tranche_20260419_v0.json`, `formal/output/reports/post_plan_cosmo_theorem_gap_reactivation_tranche_20260419_v0.json`, and `formal/output/reports/post_plan_gr_dormant_new_structure_reactivation_tranche_20260419_v0.json`.
+- Current live result: no row is authorized yet, the refreshed STAT/COSMO/GR reactivation tranches all fail closed on evidence-incomplete state, and the reranking remains `STAT -> COSMO -> GR -> QFT -> EM -> SR -> QM`.
+- Next posture: maintain the terminal hold until fresh theorem-gap or seam-integration movement is machine-pinned, then authorize exactly one row family once.
+
+Post-plan STAT fresh-movement evidence surface checkpoint (2026-04-19):
+- Evidence declaration pointer: `formal/docs/release/POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0.json`.
+- Evidence report pointer: `formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json`.
+- Evidence gate pointer: `formal/python/tests/test_post_plan_stat_fresh_movement_evidence_surface_report.py`.
+- Execution result: the repo now records that the existing STAT packet-04 tuple and its historical continuation chain are still visible and pinned, but the theorem-gap delta remains flat, so the top-ranked STAT dossier stays fail-closed without reopening the row by analogy.
+- Next posture: pin exactly one fresh STAT-attributable theorem-gap delta before rerunning qualification and successor authorization.
+
+Post-plan STAT theorem-gap delta-source review checkpoint (2026-04-19):
+- Delta-source declaration pointer: `formal/docs/release/POST_PLAN_STAT_THEOREM_GAP_DELTA_SOURCE_REVIEW_20260419_v0.json`.
+- Delta-source report pointer: `formal/output/reports/post_plan_stat_theorem_gap_delta_source_review_20260419_v0.json`.
+- Delta-source gate pointer: `formal/python/tests/test_post_plan_stat_theorem_gap_delta_source_review_report.py`.
+- Execution result: the repo now records that the active STAT packet-04 chain is still baseline-capped by the foundational empirical comparison protocol, because packet-04 remains `INCONCLUSIVE_v0` at `INTERMEDIATE_v0` evidence while the selective packet-05 bootstrap matrix still enables only `GR` and `SR`.
+- Next posture: retain the STAT packet-04 fail-closed posture and refresh the packet-05 lane-eligibility review only if the bootstrap matrix or ledger changes.
+
+Post-plan STAT packet-05 lane-eligibility review checkpoint (2026-04-20):
+- Eligibility declaration pointer: `formal/docs/release/POST_PLAN_STAT_PACKET05_LANE_ELIGIBILITY_REVIEW_20260420_v0.json`.
+- Eligibility report pointer: `formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json`.
+- Eligibility gate pointer: `formal/python/tests/test_post_plan_stat_packet05_lane_eligibility_review_report.py`.
+- Execution result: the repo now records that the live packet-05 bootstrap remains `GR`/`SR` only, with no STAT row declared in the packet-05 matrix and no STAT entry in the packet-05 decision ledger, so STAT is not eligible for one bounded packet-05 lane expansion under the current bootstrap.
+- Next posture: rerun the STAT delta-source review and retain the fail-closed reopen posture unless the packet-05 bootstrap bindings change.
+
+Post-plan COSMO-SR bounded continuation family checkpoint (2026-04-19):
+- Continuation declaration pointer: `formal/docs/release/POST_PLAN_COSMO_SR_BOUNDED_CONTINUATION_FAMILY_20260419_v0.json`.
+- Continuation report pointer: `formal/output/reports/post_plan_cosmo_sr_bounded_continuation_family_20260419_v0.json`.
+- Continuation gate pointer: `formal/python/tests/test_post_plan_cosmo_sr_bounded_continuation_family_report.py`.
+- Execution result: the repo now records one separate bounded COSMO-SR continuation family that consumes the already nonpromoted first-live tranche together with the Cycle06-to-07 synthesis boundary and the historical Cycle08 candidate, and closes explicitly because no machine-pinned Cycle08 target, artifact, or gate exists while QM-STAT remains blocked.
+- Next posture: do not reopen COSMO-SR by analogy; require a newly machine-pinned Cycle08-or-later payload before authoring any further COSMO-SR continuation family.
+
+Post-plan COSMO-SR Cycle08-or-later payload unlock surface checkpoint (2026-04-19):
+- Unlock declaration pointer: `formal/docs/release/POST_PLAN_COSMO_SR_CYCLE08_OR_LATER_PAYLOAD_UNLOCK_SURFACE_20260419_v0.json`.
+- Unlock report pointer: `formal/output/reports/post_plan_cosmo_sr_cycle08_or_later_payload_unlock_surface_20260419_v0.json`.
+- Unlock gate pointer: `formal/python/tests/test_post_plan_cosmo_sr_cycle08_or_later_payload_unlock_surface_report.py`.
+- Execution result: the repo now records one prerequisite-only unlock surface for future COSMO-SR continuation readiness, and it remains locked because no Cycle08-or-later doc, artifact, and gate tuple has been machine-pinned yet.
+- Next posture: wait for exactly one newly machine-pinned Cycle08-or-later payload before authoring any further COSMO-SR continuation family.
 
 Architecture consolidation governance checkpoint (2026-03-18):
 - Program tracker pointer: `formal/docs/release/REPO_REMEDIATION_MASTER_TRACKER_v0.md`.

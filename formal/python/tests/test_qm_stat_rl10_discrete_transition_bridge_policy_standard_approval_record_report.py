@@ -55,6 +55,7 @@ def _write_declaration(path: Path, *, include_full_shape: bool = True) -> None:
                 "bridge_policy_standard_approval_criteria_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_criteria_20260414_v0.json",
                 "bridge_approval_eligible_policy_review_outcome_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_approval_eligible_policy_review_outcome_20260414_v0.json",
                 "bridge_policy_standard_approval_record_surface_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_record_surface_20260414_v0.json",
+                "bridge_policy_standard_approval_recordation_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_recordation_execution_20260419_v0.json",
                 "policy_standard_approval_record_note": "formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_v0.md",
             },
             "policy_standard_approval_record_policy": policy,
@@ -102,6 +103,35 @@ def _seed_inputs(
     )
 
 
+def _seed_execution_report(
+    root: Path,
+    *,
+    terminal_outcome: str = "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_READY_BUT_UNRECORDED",
+    approval_decision_id: str | None = None,
+    approval_decision_timestamp_utc: str | None = None,
+    approval_authority_id: str | None = None,
+    approval_attestation_reference: str | None = None,
+    policy_standard_approval_recorded: bool = False,
+) -> None:
+    _write_json(
+        root
+        / "formal"
+        / "output"
+        / "reports"
+        / "qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_recordation_execution_20260419_v0.json",
+        {
+            "summary": {
+                "terminal_outcome": terminal_outcome,
+                "approval_decision_id": approval_decision_id,
+                "approval_decision_timestamp_utc": approval_decision_timestamp_utc,
+                "approval_authority_id": approval_authority_id,
+                "approval_attestation_reference": approval_attestation_reference,
+                "policy_standard_approval_recorded": policy_standard_approval_recorded,
+            }
+        },
+    )
+
+
 def test_reports_policy_standard_approval_record_declared(tmp_path: Path, monkeypatch) -> None:
     monkeypatch.setattr(tool, "REPO_ROOT", tmp_path)
     declaration_path = tmp_path / "formal" / "docs" / "release" / "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_20260414_v0.json"
@@ -111,6 +141,30 @@ def test_reports_policy_standard_approval_record_declared(tmp_path: Path, monkey
     report = tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
     assert report["summary"]["terminal_outcome"] == "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_DECLARED"
     assert report["summary"]["policy_standard_approval_recorded"] is False
+
+
+def test_reports_policy_standard_approval_record_declared_when_execution_surface_reports_recorded_approval(
+    tmp_path: Path, monkeypatch
+) -> None:
+    monkeypatch.setattr(tool, "REPO_ROOT", tmp_path)
+    declaration_path = tmp_path / "formal" / "docs" / "release" / "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_20260414_v0.json"
+    _write_declaration(declaration_path)
+    _seed_inputs(tmp_path)
+    _seed_execution_report(
+        tmp_path,
+        terminal_outcome="RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_RECORDED",
+        approval_decision_id="RL10-POLICY-APPROVAL-001",
+        approval_decision_timestamp_utc="2026-04-19T16:14:52Z",
+        approval_authority_id="LOCAL_REPOSITORY_AUTHORITY_PSBOY",
+        approval_attestation_reference="formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_ATTESTATION_REFERENCE_v0.md",
+        policy_standard_approval_recorded=True,
+    )
+
+    report = tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
+
+    assert report["summary"]["terminal_outcome"] == "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_DECLARED"
+    assert report["summary"]["approval_record_fields_present"] is True
+    assert report["summary"]["policy_standard_approval_recorded"] is True
 
 
 def test_reports_policy_standard_approval_record_evidence_incomplete(tmp_path: Path, monkeypatch) -> None:

@@ -1,0 +1,35 @@
+{
+  "schema_id": "POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_FAMILY_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Declare the next post-plan COSMO-SR continuation tranche against the selected machine-pinned Cycle08 payload so the first-ranked remaining-work family becomes explicitly execution-ready once, without reopening the exhausted pre-unlock continuation family by analogy.",
+  "required_inputs": {
+    "post_plan_cosmo_sr_bounded_continuation_family_report": "formal/output/reports/post_plan_cosmo_sr_bounded_continuation_family_20260419_v0.json",
+    "post_plan_cosmo_sr_cycle08_or_later_payload_unlock_surface_report": "formal/output/reports/post_plan_cosmo_sr_cycle08_or_later_payload_unlock_surface_20260419_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "selected_continuation_target_doc": "formal/docs/paper/DERIVATION_TARGET_COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE08_v0.md",
+    "selected_continuation_artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle08_v0.json",
+    "selected_continuation_gate": "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle08_gate.py"
+  },
+  "execution_policy": {
+    "required_prior_continuation_outcome": "POST_PLAN_COSMO_SR_BOUNDED_CONTINUATION_FAMILY_EXPLICITLY_EXHAUSTED_UNDER_CURRENT_SEAM_ARCHITECTURE",
+    "required_unlock_outcome": "POST_PLAN_COSMO_SR_CYCLE08_OR_LATER_PAYLOAD_UNLOCK_SURFACE_ONE_PAYLOAD_UNLOCKED",
+    "required_unlock_next_action": "AUTHOR_NEW_COSMO_SR_CONTINUATION_FAMILY_AGAINST_SELECTED_MACHINE_PINNED_PAYLOAD",
+    "required_target_row": "ROW-SEAM-COSMO-SR-001",
+    "required_target_route_class": "EXECUTABLE_NOW",
+    "required_selected_lane": "COSMO_SR_CYCLE08",
+    "required_selected_machine_pinned": true,
+    "required_selected_declared_nonredundant": true,
+    "single_use_execution_mode": "EXECUTE_DECLARED_COSMO_SR_CONTINUATION_PAYLOAD_ONCE"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_FAMILY_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_FAMILY_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_FAMILY_MATERIALIZED_READY_FOR_SINGLE_EXECUTION",
+      "POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_FAMILY_CONTRACT_VIOLATION",
+      "POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_FAMILY_EVIDENCE_INCOMPLETE"
+    ],
+    "default_outcome": "POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_FAMILY_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan COSMO-SR selected continuation family only; no scientific adequacy claim."
+}

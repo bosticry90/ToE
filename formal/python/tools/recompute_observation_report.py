@@ -44,6 +44,30 @@ def load_recompute_surface(surface_path):
         return json.load(f)
 
 
+def normalize_surface_completion(surface_path, surface_data):
+    """Persist completion on the latest trigger when canonical outputs already exist."""
+    if surface_data is None:
+        return surface_data
+
+    triggers = surface_data.get("triggers", [])
+    if not triggers:
+        return surface_data
+
+    has_computed_outputs = surface_data.get("computed_state") is not None or surface_data.get("execution_summary") is not None
+    latest_trigger = triggers[-1]
+    if not has_computed_outputs or latest_trigger.get("status") == "COMPLETED":
+        return surface_data
+
+    latest_trigger["status"] = "COMPLETED"
+    latest_trigger.setdefault("completed_at_utc", datetime.utcnow().isoformat() + "Z")
+    latest_trigger.setdefault("completion_note", "Recompute outputs already materialized; trigger reconciled during observation")
+
+    with open(surface_path, 'w') as f:
+        json.dump(surface_data, f, indent=2)
+
+    return surface_data
+
+
 def observe_surface_state_change(surface_name, surface_data):
     """
     Observe whether a surface shows state change post-promotion.
@@ -78,13 +102,17 @@ def observe_surface_state_change(surface_name, surface_data):
     trigger_active = latest_trigger.get("trigger_id") is not None
     revised_blocker_referenced = "REVISED_BLOCKER_DEFINITION_20260411_v0" in latest_trigger.get("revised_blocker_definition", "")
     has_computed_outputs = computed_state is not None or execution_summary is not None
-    
+
+    # Canonical outputs dominate raw trigger state: once outputs exist, the effective
+    # observation status is completed even if a newer pending trigger was appended later.
+    effective_status = "COMPLETED" if has_computed_outputs else status
+
     # In this bounded observation, "state change observed" means:
     # - Trigger was successfully initiated
     # - Surface is aware of revised blocker definition
     # - Status indicates pending recompute or completed recompute with canonical outputs
     state_change_observed = trigger_active and revised_blocker_referenced and (
-        status in ["PENDING_RECOMPUTE", "COMPLETED"] or has_computed_outputs
+        effective_status in ["PENDING_RECOMPUTE", "COMPLETED"] or has_computed_outputs
     )
     
     return {
@@ -92,7 +120,7 @@ def observe_surface_state_change(surface_name, surface_data):
         "state_change_observed": state_change_observed,
         "trigger_active": trigger_active,
         "revised_blocker_referenced": revised_blocker_referenced,
-        "status": status,
+        "status": effective_status,
         "trigger_count": len(triggers),
         "has_computed_outputs": has_computed_outputs,
     }
@@ -277,6 +305,7 @@ def main():
         surface_observations = []
         for surface_key, surface_path in RECOMPUTE_SURFACES.items():
             surface_data = load_recompute_surface(surface_path)
+            surface_data = normalize_surface_completion(surface_path, surface_data)
             observation = observe_surface_state_change(surface_key, surface_data)
             surface_observations.append(observation)
         

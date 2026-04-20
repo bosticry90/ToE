@@ -1,0 +1,40 @@
+{
+  "schema_id": "RESEARCH_QM_STAT_TRANSPORT_WITNESS_PROBE_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "artifact_path": "formal/output/research/research_qm_stat_transport_witness_probe_20260419_v0.json",
+  "artifact_class": "SCIENTIFIC_DELTA_RESEARCH_ARTIFACT",
+  "metadata": {
+    "artifact_id": "research_qm_stat_transport_witness_probe_20260419_v0",
+    "research_object": "rigid-translation Gaussian density/current ansatz",
+    "research_question": "Can the QM-STAT seam blocker be reduced to a bounded local transport witness with zero continuity residual on a declared ansatz?",
+    "test_type": "REDUCTION_CHECK",
+    "output_kind": "RESULT_SUMMARY",
+    "target_kind": "SEAM",
+    "target_binding": "ROW-SEAM-QM-STAT-001",
+    "delta_class": "LOCAL_TRANSPORT_WITNESS",
+    "contradiction_context": "formal/output/architecture/SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0.json",
+    "provenance_family": "research_mode_pilot_pack_20260419_v0",
+    "nonclaim_boundary": "Repository-local research artifact only; no seam-state flip or transport-package promotion.",
+    "promotability": "NOT_READY"
+  },
+  "math_context": {
+    "object_equation_v0": "rho(x,t) = A^2 exp(-(x - vt)^2 / sigma^2), j(x,t) = v rho(x,t)",
+    "identity_tested_v0": "partial_t rho + partial_x j = 0",
+    "regime_v0": "bounded rigid-translation continuity witness"
+  },
+  "metrics": {
+    "amplitude": 1.2,
+    "sigma": 0.9,
+    "velocity": 1.75,
+    "time_value": 0.4,
+    "sample_count": 17,
+    "peak_density": 1.435562407215,
+    "continuity_residual_sup_abs": 0.0,
+    "continuity_residual_l1": 0.0
+  },
+  "research_outcome": {
+    "result_v0": "RETAIN_LOCAL_TRANSPORT_WITNESS_AND_KEEP_SEAM_BOUNDARY_FAIL_CLOSED",
+    "direct_math_artifact_v0": true,
+    "canonical_mutation_attempted_v0": false
+  }
+}

@@ -91,7 +91,7 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
 
     top_rank_row = str(queue_summary.get("top_rank_row", "")).strip()
     progress_classification = str(ledger.get("progress_classification", "")).strip()
-    current_restart_blocker = str(dossier_contract.get("required_current_restart_blocker", "")).strip()
+    required_current_restart_blocker = str(dossier_contract.get("required_current_restart_blocker", "")).strip()
 
     p82_summary = dict(p82.get("summary", {}))
     p82_criteria = dict(p82.get("criteria", {}))
@@ -107,6 +107,13 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     )
     restart_direct_execution_authorized_now = bool(p75_summary.get("direct_execution_authorized_now", True))
     dormancy_direct_execution_authorized_now = bool(p77_summary.get("direct_execution_authorized_now", True))
+    restart_next_action = str(p75_summary.get("next_action", "")).strip()
+
+    active_restart_blocker = ""
+    if approval_blockers:
+        active_restart_blocker = str(approval_blockers[0]).strip()
+    elif restart_next_action == "DECLARE_ANTI_ALIAS_PROOF_BEFORE_OPENING_PRE_SCREENING_GATE":
+        active_restart_blocker = "anti_alias_proof_for_new_candidate_not_declared"
 
     queue_alignment = bool(queue_entry) and all(
         [
@@ -139,7 +146,7 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
             ledger_alignment,
             tranche_shape_ok,
             progress_classification == str(dossier_contract.get("required_progress_classification", "")).strip(),
-            current_restart_blocker in approval_blockers,
+            required_current_restart_blocker == active_restart_blocker,
             policy_standard_defined == bool(dossier_contract.get("require_policy_standard_defined", False)),
             policy_standard_approved == bool(dossier_contract.get("require_policy_standard_approved", False)),
             higher_level_policy_revision_authorized
@@ -164,8 +171,18 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         terminal_outcome = "HOLD_PENDING_QM_STAT_SEAM_AUTHORIZATION_DOSSIER_REPAIR"
         next_action = "REPAIR_MINIMUM_POST_AUTHORIZATION_TRANCHE_SHAPE"
     elif preconditions_ok:
-        terminal_outcome = "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_BUT_RESTART_BLOCKED"
-        next_action = "RECORD_POLICY_STANDARD_APPROVAL_BEFORE_ANY_QM_STAT_RESTART_AUTHORIZATION"
+        if active_restart_blocker == "anti_alias_proof_for_new_candidate_not_declared":
+            terminal_outcome = "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_BUT_RESTART_BLOCKED"
+            next_action = "DECLARE_ANTI_ALIAS_PROOF_BEFORE_OPENING_PRE_SCREENING_GATE"
+        elif active_restart_blocker:
+            terminal_outcome = "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_BUT_RESTART_BLOCKED"
+            next_action = "RECORD_POLICY_STANDARD_APPROVAL_BEFORE_ANY_QM_STAT_RESTART_AUTHORIZATION"
+        elif str(p75_summary.get("terminal_outcome", "")).strip() == "OPEN_ONE_BOUNDED_PRE_SCREENING_RESTART_GATE":
+            terminal_outcome = "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_FOR_BOUNDED_PRE_SCREENING"
+            next_action = "EXECUTE_ONE_BOUNDED_QM_STAT_CYCLE11_PRE_SCREENING_STEP_WITH_NO_DIRECT_EXECUTION_AUTHORIZATION"
+        else:
+            terminal_outcome = "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_EVIDENCE_INCOMPLETE"
+            next_action = "RESTORE_QM_STAT_SEAM_AUTHORIZATION_DOSSIER_PRECONDITIONS_AND_RERUN"
     else:
         terminal_outcome = "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_EVIDENCE_INCOMPLETE"
         next_action = "RESTORE_QM_STAT_SEAM_AUTHORIZATION_DOSSIER_PRECONDITIONS_AND_RERUN"
@@ -184,7 +201,7 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
             "ledger_alignment_ok": ledger_alignment,
             "progress_classification_match": progress_classification
             == str(dossier_contract.get("required_progress_classification", "")).strip(),
-            "current_restart_blocker_match": current_restart_blocker in approval_blockers,
+            "current_restart_blocker_match": required_current_restart_blocker == active_restart_blocker,
             "policy_standard_defined_match": policy_standard_defined
             == bool(dossier_contract.get("require_policy_standard_defined", False)),
             "policy_standard_approved_match": policy_standard_approved
@@ -218,10 +235,13 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
                 "discovery_queue_top_rank_row": top_rank_row,
                 "progress_classification": progress_classification,
                 "approval_blockers": approval_blockers,
+                "required_current_restart_blocker": required_current_restart_blocker or None,
+                "active_restart_blocker": active_restart_blocker or None,
                 "policy_standard_defined": policy_standard_defined,
                 "policy_standard_approved": policy_standard_approved,
                 "higher_level_policy_revision_authorized": higher_level_policy_revision_authorized,
                 "restart_terminal_outcome": p75_summary.get("terminal_outcome"),
+                "restart_next_action": restart_next_action or None,
                 "dormancy_terminal_outcome": p77_summary.get("terminal_outcome"),
                 "direct_execution_authorized_now": restart_direct_execution_authorized_now,
             },
@@ -236,14 +256,14 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
             "discovery_priority_entry": queue_entry,
             "ledger_row_evidence": ledger_row_entry,
             "minimum_post_authorization_tranche": minimum_tranche,
-            "current_restart_blocker": current_restart_blocker,
+            "current_restart_blocker": active_restart_blocker,
         },
         "summary": {
             "terminal_outcome": terminal_outcome,
             "target_row_id": target_row_id,
             "target_lane": target_lane,
-            "current_restart_blocker": current_restart_blocker,
-            "current_restart_blocker_still_active": current_restart_blocker in approval_blockers,
+            "current_restart_blocker": active_restart_blocker,
+            "current_restart_blocker_still_active": bool(active_restart_blocker),
             "first_bounded_post_authorization_artifact": minimum_tranche.get("required_closure_artifact"),
             "first_bounded_post_authorization_gate": minimum_tranche.get("required_closure_gate"),
             "next_action": next_action,

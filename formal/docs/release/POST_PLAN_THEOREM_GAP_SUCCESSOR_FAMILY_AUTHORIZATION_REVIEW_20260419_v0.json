@@ -1,0 +1,38 @@
+{
+  "schema_id": "POST_PLAN_THEOREM_GAP_SUCCESSOR_FAMILY_AUTHORIZATION_REVIEW_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Authorize at most one theorem-gap reactivation family from the row dossiers after fresh-movement qualification, while fail-closing any selection that reuses stale exhausted-family evidence or violates the fixed row policy.",
+  "required_inputs": {
+    "fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "qm_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_qm_20260419_v0.json",
+    "stat_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_stat_20260419_v0.json",
+    "cosmo_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_cosmo_20260419_v0.json",
+    "gr_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_gr_20260419_v0.json",
+    "qft_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_qft_20260419_v0.json",
+    "em_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_em_20260419_v0.json",
+    "sr_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_sr_20260419_v0.json"
+  },
+  "authorization_policy": {
+    "default_selected_row": "ROW-PILLAR-STAT-001",
+    "alternate_selected_row": "ROW-PILLAR-COSMO-001",
+    "authorization_mode": "AT_MOST_ONE",
+    "qft_em_sr_reserve_gate": "BLOCK_UNTIL_SELECTED_FAMILY_RESOLVES",
+    "qm_requires_non_qm_movement": true,
+    "cosmo_override_requires_machine_pinned_seam_linked_delta": true,
+    "tie_rule": "LOWER_HISTORICAL_NO_CHANGE_COUNT_WINS",
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_THEOREM_GAP_SUCCESSOR_FAMILY_AUTHORIZATION_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_THEOREM_GAP_SUCCESSOR_FAMILY_AUTHORIZATION_REVIEW_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_THEOREM_GAP_SUCCESSOR_FAMILY_AUTHORIZATION_REVIEW_ONE_ROW_AUTHORIZED",
+      "POST_PLAN_THEOREM_GAP_SUCCESSOR_FAMILY_AUTHORIZATION_REVIEW_NO_ROW_AUTHORIZED",
+      "POST_PLAN_THEOREM_GAP_SUCCESSOR_FAMILY_AUTHORIZATION_REVIEW_CONTRACT_VIOLATION",
+      "POST_PLAN_THEOREM_GAP_SUCCESSOR_FAMILY_AUTHORIZATION_REVIEW_EVIDENCE_INCOMPLETE"
+    ],
+    "default_outcome": "POST_PLAN_THEOREM_GAP_SUCCESSOR_FAMILY_AUTHORIZATION_REVIEW_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local theorem-gap successor-family authorization only; no scientific adequacy claim."
+}

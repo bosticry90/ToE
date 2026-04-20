@@ -130,7 +130,10 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
             next_action = str(cosmo_summary.get("next_action", "")).strip()
             executable_rows.append(seam_id)
             evidence = _ptr(cosmo_path)
-        elif seam_id == "SEAM-QM-STAT" and str(qm_summary.get("terminal_outcome", "")).strip() == "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_BUT_RESTART_BLOCKED":
+        elif seam_id == "SEAM-QM-STAT" and str(qm_summary.get("terminal_outcome", "")).strip() in {
+            "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_BUT_RESTART_BLOCKED",
+            "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_FOR_BOUNDED_PRE_SCREENING",
+        }:
             path_class = str(normalization_policy.get("policy_blocked_path_class", "")).strip()
             next_action = str(qm_summary.get("next_action", "")).strip()
             evidence = _ptr(qm_stat_path)

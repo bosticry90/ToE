@@ -1,0 +1,38 @@
+{
+  "schema_id": "POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_EXECUTION_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Measure exactly one bounded execution of the declared COSMO-SR selected continuation family against the machine-pinned Cycle08 payload and record whether that single-use seam continuation earns row-truth movement or closes nonpromoted under the current live seam state.",
+  "required_inputs": {
+    "post_plan_cosmo_sr_selected_continuation_family_report": "formal/output/reports/post_plan_cosmo_sr_selected_continuation_family_20260419_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "blocker_burn_dashboard_report": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json",
+    "selected_continuation_target_doc": "formal/docs/paper/DERIVATION_TARGET_COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE08_v0.md",
+    "selected_continuation_artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle08_v0.json",
+    "selected_continuation_gate": "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle08_gate.py"
+  },
+  "execution_policy": {
+    "required_selected_family_outcome": "POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_FAMILY_MATERIALIZED_READY_FOR_SINGLE_EXECUTION",
+    "required_selected_family_next_action": "EXECUTE_DECLARED_COSMO_SR_CONTINUATION_PAYLOAD_ONCE",
+    "required_target_row": "ROW-SEAM-COSMO-SR-001",
+    "required_target_seam": "SEAM-COSMO-SR",
+    "required_target_route_class": "EXECUTABLE_NOW",
+    "required_row_blocker_class": "SEAM_INTEGRATION_GAP",
+    "required_artifact_status": "CRITERIA_AND_TETRADECIC_EXCLUSION_PINNED_NONCLAIM",
+    "required_artifact_adjudication": "NOT_YET_DISCHARGED",
+    "nonpromoted_closeout_next_action": "PREPARE_POST_PLAN_STAT_THEOREM_GAP_COMPLETION_TRANCHE_AND_RETAIN_CURRENT_SEAM_CLASSES",
+    "promoted_next_action": "RERUN_TARGET_MAP_AND_REEVALUATE_SEAM_REROUTE_AND_MASTER_ACTION"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_EXECUTION_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_EXECUTION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_EXECUTION_EXECUTED_NONPROMOTED_CLOSEOUT",
+      "POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_EXECUTION_EXECUTED_AND_PROMOTED",
+      "POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_EXECUTION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_EXECUTION_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_COSMO_SR_SELECTED_CONTINUATION_EXECUTION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan COSMO-SR selected continuation execution only; no scientific adequacy claim."
+}

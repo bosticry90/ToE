@@ -1,0 +1,11 @@
+# Research Mode QM-STAT Sandbox Candidate Comparison (2026-04-19)
+
+- `RESEARCH_MODE_QM_STAT_SANDBOX_CANDIDATE_COMPARISON_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_CANDIDATE_COMPARISON_SCOPE_v0: COMPARE_ACCEPTED_QM_STAT_SANDBOX_PAYLOAD_RECORD_AGAINST_ONE_HARDER_LIVE_ROW_LOCAL_TARGET_ONLY`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_CANDIDATE_COMPARISON_REPORT_v0: formal/output/reports/research_mode_qm_stat_sandbox_candidate_comparison_20260419_v0.json`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_CANDIDATE_COMPARISON_MODULE_v0: formal/python/research/qm_stat_sandbox_candidate_comparison.py`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_CANDIDATE_COMPARISON_GATE_v0: formal/python/tests/test_research_mode_qm_stat_sandbox_candidate_comparison_report.py`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_CANDIDATE_COMPARISON_RULE_v0: PAYLOAD_REMAINS_PRIMARY_GOVERNED_ENTRY_OBJECT_HARDER_TARGET_REMAINS_BOUND_SUPPORTING_EVIDENCE`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_CANDIDATE_COMPARISON_LIMIT_v0: NO_GOVERNED_REVIEW_PASS_NO_CANONICAL_MUTATION_NO_SEAM_CLOSURE`
+
+This surface compares the accepted QM-STAT sandbox-facing witness against the harder live row-local target. It is intended to sharpen a future governed entry bundle, not to silently replace the payload object or claim seam closure.

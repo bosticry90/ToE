@@ -44,6 +44,7 @@ _ORDINAL_NAMES = {
     14: "fourteenth",
     16: "sixteenth",
     18: "eighteenth",
+    20: "twentieth",
 }
 
 

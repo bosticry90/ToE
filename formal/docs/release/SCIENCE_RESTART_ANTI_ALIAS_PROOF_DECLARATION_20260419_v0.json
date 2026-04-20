@@ -1,0 +1,46 @@
+{
+  "schema_id": "SCIENCE_RESTART_ANTI_ALIAS_PROOF_DECLARATION_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Declare one bounded repository-local anti-alias proof declaration surface for the next new candidate so the pre-screening restart gate remains fail-closed until proof is explicitly declared without direct execution authorization.",
+  "required_inputs": {
+    "science_restart_higher_level_policy_trigger_report": "formal/output/reports/science_restart_higher_level_policy_trigger_20260413_v0.json",
+    "science_restart_anti_alias_proof_note": "formal/docs/paper/SCIENCE_RESTART_ANTI_ALIAS_PROOF_DECLARATION_v0.md"
+  },
+  "anti_alias_proof_policy": {
+    "required_higher_level_policy_trigger_outcome": "HIGHER_LEVEL_POLICY_REVISION_AUTHORIZED",
+    "required_higher_level_policy_revision_authorized": true,
+    "required_trigger_family": "HIGHER_LEVEL_POLICY_OR_EVIDENCE_STANDARD",
+    "required_note_tokens": [
+      "SCIENCE_RESTART_ANTI_ALIAS_PROOF_DECLARATION_ID_v0: SCIENCE_RESTART_ANTI_ALIAS_PROOF_DECLARATION",
+      "SCIENCE_RESTART_ANTI_ALIAS_PROOF_SCOPE_v0: ONE_NEXT_NEW_CANDIDATE_ONLY_NO_DIRECT_EXECUTION_AUTHORIZATION",
+      "SCIENCE_RESTART_ANTI_ALIAS_PROOF_REQUIRED_FIELDS_v0: ANTI_ALIAS_PROOF_DECLARATION_ID_PLUS_ANTI_ALIAS_PROOF_SUMMARY_REFERENCE",
+      "SCIENCE_RESTART_ANTI_ALIAS_PROOF_NON_EQUIVALENCE_RULE_v0: ANTI_ALIAS_PROOF_DECLARATION_DOES_NOT_ITSELF_AUTHORIZE_DIRECT_EXECUTION",
+      "SCIENCE_RESTART_ANTI_ALIAS_PROOF_FAIL_CLOSED_RULE_v0: IF_PROOF_IS_NOT_EXPLICITLY_DECLARED_PRE_SCREENING_GATE_REMAINS_CLOSED",
+      "SCIENCE_RESTART_ANTI_ALIAS_PROOF_STATUS_v0: DECLARATION_SURFACE_DEFINED_DEFAULT_UNDECLARED"
+    ],
+    "required_proof_fields": [
+      "anti_alias_proof_declaration_id",
+      "anti_alias_proof_summary_reference"
+    ],
+    "anti_alias_proof_surface_defined": true,
+    "anti_alias_proof_declaration_id": "ANTI_ALIAS_PROOF_LANE_THERMAL_BOUNDARY_001_20260419",
+    "anti_alias_proof_summary_reference": "formal/docs/paper/SCIENCE_RESTART_ANTI_ALIAS_PROOF_SUMMARY_20260419_v0.md",
+    "anti_alias_proof_for_new_candidate_declared": true,
+    "direct_execution_authorized_now": false,
+    "require_restart_contract_rerun_after_declaration": true,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "anti_alias_proof_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SCIENCE_RESTART_ANTI_ALIAS_PROOF_DECLARATION_OUTCOME",
+    "no_loop_rule": "ONE_SCIENCE_RESTART_ANTI_ALIAS_PROOF_DECLARATION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "SCIENCE_RESTART_ANTI_ALIAS_PROOF_READY_BUT_UNDECLARED",
+      "SCIENCE_RESTART_ANTI_ALIAS_PROOF_DECLARED",
+      "SCIENCE_RESTART_ANTI_ALIAS_PROOF_CONTRACT_VIOLATION",
+      "SCIENCE_RESTART_ANTI_ALIAS_PROOF_EVIDENCE_INCOMPLETE"
+    ],
+    "default_outcome": "SCIENCE_RESTART_ANTI_ALIAS_PROOF_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local anti-alias proof declaration surface only; no scientific adequacy claim."
+}

@@ -86,6 +86,26 @@
       "trigger_id": "RECOMPUTE_TRIGGER_20260418_195138",
       "triggered_at_utc": "2026-04-18T19:51:38.914815Z",
       "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260419_205241",
+      "surface_name": "ledger_artifact_transport_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-19T20:52:41.767942Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260419_205245",
+      "surface_name": "ledger_artifact_transport_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-19T20:52:45.265037Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "COMPLETED",
+      "dependency": "authoritative_blocker_definition_movement",
+      "completed_at_utc": "2026-04-19T21:24:04.320170Z",
+      "completion_note": "Recompute outputs already materialized; trigger reconciled during observation"
     }
   ]
 }

@@ -28,6 +28,10 @@ Canonical pointers:
 - Completion queue report: `formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json`
 - Completion queue tool: `formal/python/tools/post_plan_objective_quality_physics_completion_queue_report.py`
 - Completion queue gate: `formal/python/tests/test_post_plan_objective_quality_physics_completion_queue_report.py`
+- Ordered theorem-gap continuation tranche declaration: `formal/docs/release/POST_PLAN_ORDERED_THEOREM_GAP_CONTINUATION_TRANCHE_20260419_v0.json`
+- Ordered theorem-gap continuation tranche report: `formal/output/reports/post_plan_ordered_theorem_gap_continuation_tranche_20260419_v0.json`
+- Ordered theorem-gap continuation tranche tool: `formal/python/tools/post_plan_ordered_theorem_gap_continuation_tranche_report.py`
+- Ordered theorem-gap continuation tranche gate: `formal/python/tests/test_post_plan_ordered_theorem_gap_continuation_tranche_report.py`
 - COSMO tranche declaration: `formal/docs/release/POST_PLAN_COSMO_THEOREM_GAP_COMPLETION_TRANCHE_20260418_v0.json`
 - COSMO tranche report: `formal/output/reports/post_plan_cosmo_theorem_gap_completion_tranche_20260418_v0.json`
 - COSMO tranche tool: `formal/python/tools/post_plan_cosmo_theorem_gap_completion_tranche_report.py`
@@ -99,6 +103,14 @@ Canonical pointers:
 - Phase 12 program-state conversion review wrapper report: `formal/output/reports/post_plan_program_state_conversion_review_wrapper_20260418_v0.json`
 - Phase 12 program-state conversion review wrapper tool: `formal/python/tools/post_plan_program_state_conversion_review_wrapper_report.py`
 - Phase 12 program-state conversion review wrapper gate: `formal/python/tests/test_post_plan_program_state_conversion_review_wrapper_report.py`
+- Phase 13 post-cascade explicit exhaustion decision declaration: `formal/docs/release/POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_20260419_v0.json`
+- Phase 13 post-cascade explicit exhaustion decision report: `formal/output/reports/post_plan_post_cascade_explicit_exhaustion_decision_20260419_v0.json`
+- Phase 13 post-cascade explicit exhaustion decision tool: `formal/python/tools/post_plan_post_cascade_explicit_exhaustion_decision_report.py`
+- Phase 13 post-cascade explicit exhaustion decision gate: `formal/python/tests/test_post_plan_post_cascade_explicit_exhaustion_decision_report.py`
+- Phase 14 post-cascade successor-family eligibility review declaration: `formal/docs/release/POST_PLAN_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_REVIEW_20260419_v0.json`
+- Phase 14 post-cascade successor-family eligibility review report: `formal/output/reports/post_plan_post_cascade_successor_family_eligibility_review_20260419_v0.json`
+- Phase 14 post-cascade successor-family eligibility review tool: `formal/python/tools/post_plan_post_cascade_successor_family_eligibility_review_report.py`
+- Phase 14 post-cascade successor-family eligibility review gate: `formal/python/tests/test_post_plan_post_cascade_successor_family_eligibility_review_report.py`
 - Completion matrix: `formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md`
 - Compact authority mirror: `State_of_the_Theory.md`
 - Roadmap mirror: `formal/docs/paper/PHYSICS_ROADMAP_v0.md`
@@ -107,10 +119,13 @@ Canonical pointers:
 Program status tokens:
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PROGRAM_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PROGRAM_CLASS_v0: POST_PLAN_CLOSURE_PLUS_EXHAUSTION_COMPLETION`
-- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_CURRENT_PHASE_v0: PHASE12_POST_SR_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_MATERIALIZED`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_CURRENT_PHASE_v0: PHASE14_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_REVIEW_MATERIALIZED`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_ACTIVE_TARGET_v0: TARGET-POST-PLAN-OBJECTIVE-QUALITY-PHYSICS-COMPLETION-v0`
-- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_NEXT_TARGET_v0: TARGET-POST-PLAN-CONVERSION-REVIEW-DOWNSTREAM-PATH-REUSE-v0`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_NEXT_TARGET_v0: TARGET-POST-PLAN-POST-CASCADE-SUCCESSOR-AUTHORIZATION-OR-STOP-v0`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_v0: POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_MATERIALIZED`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_ORDERED_CONTINUATION_v0: POST_PLAN_ORDERED_THEOREM_GAP_CONTINUATION_TRANCHE_MATERIALIZED`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_ORDERED_CONTINUATION_TARGET_ROW_v0: ROW-PILLAR-STAT-001`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_ORDERED_CONTINUATION_ACTIVATION_STATE_v0: HIGHER_PRIORITY_CLOSEOUT_RECORDED`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE2_COSMO_TRANCHE_v0: POST_PLAN_COSMO_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE2_STAT_TRANCHE_v0: POST_PLAN_STAT_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE2_GR_TRANCHE_v0: POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_EXPLICITLY_EXHAUSTED`
@@ -124,17 +139,21 @@ Program status tokens:
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE10_EM_TRANCHE_v0: POST_PLAN_EM_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE11_SR_TRANCHE_v0: POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE12_CONVERSION_REVIEW_WRAPPER_v0: POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_MATERIALIZED`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE13_EXHAUSTION_DECISION_v0: POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_EXHAUSTED_UNDER_CURRENT_DECLARED_FAMILY`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PHASE14_SUCCESSOR_ELIGIBILITY_REVIEW_v0: POST_PLAN_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_NONE_ELIGIBLE`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_FIRST_ACTIVE_ROW_v0: ROW-PILLAR-COSMO-001`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_SECOND_ACTIVE_ROW_v0: ROW-PILLAR-STAT-001`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_HEAVY_STRUCTURAL_ROW_v0: ROW-PILLAR-GR-001`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_EXHAUSTED_ROW_v0: ROW-PILLAR-QM-001`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_EXHAUSTION_SCOPE_v0: POST_CASCADE_QFT_EM_SR_CONTINUATION_CHAIN_ONLY`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_SUCCESSOR_ELIGIBILITY_SCOPE_v0: POST_CASCADE_SUCCESSOR_AUTHORIZATION_REQUIRES_FRESH_BLOCKER_FACING_MOVEMENT`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_PRIMARY_EXECUTABLE_SEAM_v0: SEAM-COSMO-SR`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_BLOCKED_SEAM_v0: SEAM-QM-STAT`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_EXTERNAL_HOLD_SEAM_v0: SEAM-QFT-GR`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_GR_RULE_v0: RESUME_FROM_P78_P79_P80_DORMANT_PACKAGE_ONLY`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_MASTER_ACTION_RULE_v0: REEVALUATE_ONLY_AFTER_UPSTREAM_ROW_MOVEMENT_AND_WITHIN_ONE_RECOMPUTE_LIMIT`
 - `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_EXHAUSTION_TRIGGER_v0: THREE_CONSECUTIVE_NONMOVING_ROW_FAMILIES_ROUTE_TO_PROGRAM_STATE_CONVERSION_REVIEW`
-- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_NEXT_ACTION_v0: REUSE_EXISTING_PROGRAM_STATE_CONVERSION_REVIEW_DOWNSTREAM_PATH_AND_KEEP_THEOREM_GAP_QUEUE_CLOSED`
+- `POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_NEXT_ACTION_v0: PREPARE_GR_DORMANT_NEW_STRUCTURE_COMPLETION_PACKAGE_AND_RETAIN_CURRENT_SEAM_CLASSES`
 
 ## Completion contract
 
@@ -218,6 +237,8 @@ Exit criteria:
 3. If three consecutive row families remain nonmoving, route to program-state conversion review instead of opening another lookalike theorem-gap packet.
 4. Reassess seams only after row-truth change is recorded.
 5. Reassess master action only after row-truth or seam-route change is recorded.
+6. Do not open another lookalike post-cascade theorem-gap row after the QFT/EM/SR chain unless a newly declared successor family is first pinned.
+7. Do not authorize a successor family after post-cascade exhaustion unless fresh blocker-facing movement is recorded in theorem-gap or seam-integration classes and exactly one selected reopen route is machine-pinned.
 
 ## Decisions
 
@@ -239,7 +260,10 @@ Exit criteria:
 - Recommended next execution after a non-promoted QFT theorem-gap completion tranche: materialize one EM theorem-gap completion tranche against `ROW-PILLAR-EM-001` with the QFT nonmoving history recorded explicitly.
 - Recommended next execution after a non-promoted EM theorem-gap completion tranche: materialize one SR theorem-gap completion tranche against `ROW-PILLAR-SR-001` with the EM nonmoving history recorded explicitly.
 - Recommended next execution after a non-promoted SR theorem-gap completion tranche: materialize one wrapper against `formal/docs/release/PROGRAM_STATE_CONVERSION_REVIEW_20260411_v0.json` and its already pinned downstream successor path because QFT, EM, and SR now satisfy the declared three-consecutive-nonmoving-family trigger.
-- Recommended next execution after the post-plan program-state conversion review wrapper materializes: reuse the existing downstream path already pinned by `formal/output/reports/post_plan_deeper_blocker_definition_review_successor_tranche_20260418_v0.json` and do not open another lookalike theorem-gap row.
+- Recommended next execution after the post-plan program-state conversion review wrapper materializes: materialize one explicit exhaustion decision against the post-cascade bounded hold, the completed QFT/EM/SR nonmoving chain, and the wrapper closeout so the current continuation family terminates honestly under current declared surfaces.
+- Recommended next execution after the explicit exhaustion decision records exhaustion under the current declared family: materialize one successor-family eligibility review against the blocker dashboard and target map so the branch either remains terminally exhausted or authorizes exactly one machine-pinned successor route.
+- Recommended next execution after the successor-family eligibility review records no eligible route: stop at the terminal exhaustion read until fresh blocker-facing movement is machine-pinned.
+- Recommended next execution after the successor-family eligibility review authorizes one route: author and execute exactly one newly declared successor family once.
 
 ## Further considerations
 

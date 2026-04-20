@@ -1,0 +1,12 @@
+# Research Mode QM-STAT Sandbox Payload Record (2026-04-19)
+
+- `RESEARCH_MODE_QM_STAT_SANDBOX_PAYLOAD_RECORD_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_PAYLOAD_RECORD_SCOPE_v0: ONE_ACCEPTED_QM_STAT_TRANSPORT_WITNESS_HANDOFF_ONLY`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_PAYLOAD_RECORD_ARTIFACT_v0: formal/output/sandbox/qm_stat_transport_witness_sandbox_artifact_20260419_v0.json`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_PAYLOAD_RECORD_REPORT_v0: formal/output/reports/research_mode_qm_stat_sandbox_payload_record_20260419_v0.json`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_PAYLOAD_RECORD_MODULE_v0: formal/python/research/qm_stat_sandbox_payload_record.py`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_PAYLOAD_RECORD_GATE_v0: formal/python/tests/test_research_mode_qm_stat_sandbox_payload_record_report.py`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_PAYLOAD_RECORD_RULE_v0: CAST_THE_ACCEPTED_RESEARCH_WITNESS_INTO_SANDBOX_PAYLOAD_GRAMMAR_WITHOUT_ENTERING_GOVERNED_REVIEW`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_PAYLOAD_RECORD_LIMIT_v0: NO_GOVERNED_REVIEW_ENTRY_NO_PROMOTION_PASS_NO_CANONICAL_MUTATION`
+
+This surface turns the accepted QM-STAT seam witness into a schema-shaped sandbox payload record. It does not itself execute governed review, promotion, or canonical writeback.

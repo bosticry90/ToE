@@ -1,0 +1,46 @@
+{
+  "schema_id": "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_GR_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize the GR row reopen dossier under the theorem-gap reactivation program.",
+  "required_inputs": {
+    "fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "latest_row_report": "formal/output/reports/post_plan_gr_dormant_new_structure_completion_tranche_20260418_v0.json",
+    "gr_new_structure_blocker_file_map": "formal/docs/release/GR_ROW_001_NEW_STRUCTURE_BLOCKER_FILE_MAP_20260418_v0.json",
+    "gr_structural_gap_definition_report": "formal/output/reports/gr_row_001_structural_gap_definition_20260412_v0.json",
+    "gr_new_structure_concept_packet_report": "formal/output/reports/gr_row_001_new_structure_concept_packet_20260413_v0.json",
+    "gr_shared_interface_declaration_report": "formal/output/reports/gr_row_001_shared_interface_declaration_20260413_v0.json",
+    "gr_comparator_specification_report": "formal/output/reports/gr_row_001_comparator_specification_20260413_v0.json"
+  },
+  "row_policy": {
+    "row_id": "ROW-PILLAR-GR-001",
+    "required_route_class": "FROZEN_NEW_STRUCTURE_BRANCH",
+    "default_rank": 3,
+    "policy_class": "DORMANT_PACKAGE_ONLY_HEAVY_CANDIDATE",
+    "historical_no_change_count": 1,
+    "exhausted_family_history": [
+      "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_EXPLICITLY_EXHAUSTED"
+    ],
+    "fresh_movement_hypothesis": "Reopen GR only through a refreshed dormant new-structure package that preserves the blocker file map, structural-gap definition, concept packet, shared interface, and comparator bundle.",
+    "measurable_blocker_delta_criterion": "NEGATIVE_THEOREM_GAP_DELTA_OR_ROW_TRUTH_CHANGE_FROM_REFRESHED_DORMANT_PACKAGE_ONLY",
+    "bounded_execution_surface_declaration": "formal/docs/release/POST_PLAN_GR_DORMANT_NEW_STRUCTURE_REACTIVATION_TRANCHE_20260419_v0.json",
+    "bounded_execution_surface_gate": "formal/python/tests/test_post_plan_gr_dormant_new_structure_reactivation_tranche_report.py",
+    "explicit_exhaustion_fallback": "EXPLICITLY_EXHAUST_REFRESHED_GR_DORMANT_PACKAGE_BEFORE_ANY_GR-SPECIFIC_BLOCKER-DEFINITION_ESCALATION",
+    "requires_non_qm_movement": false,
+    "seam_linked_override_only": false,
+    "dormant_package_only": true,
+    "reserve_until_first_selected_family_resolution": false
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_OUTCOME",
+    "no_loop_rule": "ONE_ROW_DOSSIER_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_MATERIALIZED",
+      "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local GR row reopen dossier only; no scientific adequacy claim."
+}

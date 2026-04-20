@@ -1,0 +1,48 @@
+{
+  "schema_id": "QM_STAT_CYCLE11_PRE_SCREENING_STEP_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize exactly one repository-local QM-STAT Cycle11 pre-screening execution read from the already-authorized bounded pre-screening state without opening direct execution, external-path reopening, or any downstream continuation family.",
+  "target_lane": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "lane": "QM_STAT_CYCLE11",
+    "blocker_class": "SEAM_INTEGRATION_GAP",
+    "domain": "seam"
+  },
+  "required_inputs": {
+    "qm_stat_seam_authorization_readiness_dossier_report": "formal/output/reports/qm_stat_seam_authorization_readiness_dossier_20260414_v0.json",
+    "qm_stat_cycle11_lane_status_report": "formal/output/reports/qm_stat_cycle11_lane_status_20260411_v0.json",
+    "cycle11_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle11_v0.json",
+    "cycle11_target_doc": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE11_v0.md"
+  },
+  "pre_screening_execution_contract": {
+    "required_readiness_outcome": "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_FOR_BOUNDED_PRE_SCREENING",
+    "required_readiness_next_action": "EXECUTE_ONE_BOUNDED_QM_STAT_CYCLE11_PRE_SCREENING_STEP_WITH_NO_DIRECT_EXECUTION_AUTHORIZATION",
+    "required_current_restart_blocker": "",
+    "required_lane_internal_status": "RETAINED",
+    "required_lane_externalization_status": "OUT_OF_SCOPE_UNDER_CYCLE11",
+    "required_lane_routing_implication": "DO_NOT_COUNT_QM_STAT_AS_CURRENT_EXTERNAL_PATH_SIGNAL",
+    "required_artifact_status": "CRITERIA_AND_EIGHTEENTH_MOMENT_EXCLUSION_PINNED_NONCLAIM",
+    "required_adjudication": "NOT_YET_DISCHARGED",
+    "required_target_doc_tokens": [
+      "QM_STAT_CYCLE11_STATUS_v0: EIGHTEENTH_CENTRAL_MOMENT_PARITY_AND_EXCLUSION_PINNED_NONCLAIM",
+      "QM_STAT_CYCLE11_BLOCKER_DISCHARGE_CRITERIA_v0: MASS_MEAN_VARIANCE_THIRD_FOURTH_SIXTH_EIGHTH_TENTH_TWELFTH_FOURTEENTH_SIXTEENTH_AND_EIGHTEENTH_MOMENT_PARITY_REQUIRED",
+      "QM_STAT_CYCLE11_SCOPE_v0: FINITE_STATE_DISCRETE_HIGHER_MOMENT_AUDIT_ONLY_NONCLAIM"
+    ],
+    "execution_scope_token": "QM_STAT_CYCLE11_SINGLE_PRE_SCREENING_STEP_ONLY_NONLIVE",
+    "execution_live_token_count": 0,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "pre_screening_execution_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QM_STAT_CYCLE11_PRE_SCREENING_STEP_OUTCOME",
+    "no_loop_rule": "ONE_QM_STAT_CYCLE11_PRE_SCREENING_STEP_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QM_STAT_CYCLE11_PRE_SCREENING_STEP_EXECUTED_NONLIVE",
+      "QM_STAT_CYCLE11_PRE_SCREENING_STEP_BLOCKED",
+      "QM_STAT_CYCLE11_PRE_SCREENING_STEP_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_QM_STAT_CYCLE11_PRE_SCREENING_STEP_REPAIR"
+    ],
+    "default_outcome": "QM_STAT_CYCLE11_PRE_SCREENING_STEP_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT Cycle11 pre-screening step declaration only; no scientific adequacy claim."
+}

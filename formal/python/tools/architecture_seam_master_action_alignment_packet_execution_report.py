@@ -42,6 +42,38 @@ def _write_json(path: Path, payload: dict[str, Any]) -> None:
     path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
 
 
+def _is_row_local_blocker_change(
+    token: str,
+    *,
+    row_id: str,
+    target_package_id: str,
+    bridge_object_id: str,
+    minimal_upstream_unit_id: str,
+    alignment_witness_id: str,
+) -> bool:
+    normalized = token.strip().upper()
+    if normalized in {
+        "",
+        "NO_DELTA_DETECTED",
+        "NO_DELTA_DETECTED_ROUTE_TO_REWORK",
+        "NEGATIVE_DELTA_DETECTED",
+        "NEGATIVE_DELTA_DETECTED_ROUTE_TO_REWORK",
+        "POSITIVE_DELTA_DETECTED",
+        "POSITIVE_DELTA_DETECTED_ROUTE_TO_REWORK",
+    }:
+        return False
+
+    local_markers = {
+        row_id.strip().upper(),
+        target_package_id.strip().upper(),
+        bridge_object_id.strip().upper(),
+        minimal_upstream_unit_id.strip().upper(),
+        alignment_witness_id.strip().upper(),
+    }
+    local_markers.discard("")
+    return any(marker in normalized for marker in local_markers)
+
+
 def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict[str, Any]:
     declaration = _read_json(declaration_path)
     required_inputs = dict(declaration.get("required_inputs", {}))
@@ -128,10 +160,15 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     seam_current = int(current_counts.get("SEAM_INTEGRATION_GAP", seam_prior) or seam_prior)
 
     target_row_success_count = int(dict(row_counts.get(target_row_id, {})).get("success", 0) or 0)
-    blocker_token_changed = str(ledger.get("actual_blocker_state_change", "")).strip() not in {
-        "",
-        "NO_DELTA_DETECTED_ROUTE_TO_REWORK",
-    }
+    actual_blocker_state_change = str(ledger.get("actual_blocker_state_change", "")).strip()
+    blocker_token_changed = _is_row_local_blocker_change(
+        actual_blocker_state_change,
+        row_id=target_row_id,
+        target_package_id=target_package_id,
+        bridge_object_id=bridge_object_id,
+        minimal_upstream_unit_id=minimal_upstream_unit_id,
+        alignment_witness_id=alignment_witness_id,
+    )
 
     movement_signals = {
         "theorem_gap_delta_lt_0": (theorem_current - theorem_prior) < 0,

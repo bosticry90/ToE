@@ -1,0 +1,39 @@
+{
+  "schema_id": "POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "decision_scope": "POST_CASCADE_QFT_EM_SR_CONTINUATION_CHAIN_ONLY",
+  "objective": "Decide whether the currently declared post-cascade theorem-gap continuation family is explicitly exhausted under current repo-native surfaces or reopened by a newly declared successor family.",
+  "required_inputs": {
+    "post_plan_post_cascade_closure_review_report": "formal/output/reports/post_plan_post_cascade_closure_review_20260418_v0.json",
+    "post_plan_qft_theorem_gap_completion_tranche_report": "formal/output/reports/post_plan_qft_theorem_gap_completion_tranche_20260418_v0.json",
+    "post_plan_em_theorem_gap_completion_tranche_report": "formal/output/reports/post_plan_em_theorem_gap_completion_tranche_20260418_v0.json",
+    "post_plan_sr_theorem_gap_completion_tranche_report": "formal/output/reports/post_plan_sr_theorem_gap_completion_tranche_20260418_v0.json",
+    "post_plan_program_state_conversion_review_wrapper_report": "formal/output/reports/post_plan_program_state_conversion_review_wrapper_20260418_v0.json"
+  },
+  "decision_policy": {
+    "required_post_cascade_outcome": "POST_PLAN_POST_CASCADE_CLOSURE_REVIEW_BOUNDED_HOLD_RECORDED",
+    "required_qft_outcome": "POST_PLAN_QFT_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED",
+    "required_em_outcome": "POST_PLAN_EM_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED",
+    "required_sr_outcome": "POST_PLAN_SR_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED",
+    "required_wrapper_outcome": "POST_PLAN_PROGRAM_STATE_CONVERSION_REVIEW_WRAPPER_MATERIALIZED",
+    "required_wrapper_next_action": "REUSE_EXISTING_PROGRAM_STATE_CONVERSION_REVIEW_DOWNSTREAM_PATH_AND_KEEP_THEOREM_GAP_QUEUE_CLOSED",
+    "required_current_family_scope": "POST_CASCADE_QFT_EM_SR_CONTINUATION_CHAIN_ONLY",
+    "successor_reopen_rule": "ONLY_IF_NEW_DECLARED_SUCCESSOR_POINTER_IS_PRESENT_AND_MACHINE_PINNED",
+    "lookalike_row_no_loop_rule": "NO_ADDITIONAL_LOOKALIKE_THEOREM_GAP_ROW_WITHOUT_NEW_DECLARED_SUCCESSOR_FAMILY",
+    "new_declared_successor_declaration": "",
+    "new_declared_successor_gate": "",
+    "successor_next_action_if_declared": "EXECUTE_DECLARED_SUCCESSOR_FAMILY_ONCE"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_EXHAUSTED_UNDER_CURRENT_DECLARED_FAMILY",
+      "POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_REOPENED_BY_NEW_DECLARED_SUCCESSOR",
+      "POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-cascade explicit exhaustion decision only; no scientific adequacy claim."
+}

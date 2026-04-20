@@ -7,6 +7,7 @@
     "bridge_policy_standard_approval_criteria_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_criteria_20260414_v0.json",
     "bridge_approval_eligible_policy_review_outcome_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_approval_eligible_policy_review_outcome_20260414_v0.json",
     "bridge_policy_standard_approval_record_surface_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_record_surface_20260414_v0.json",
+    "bridge_policy_standard_approval_recordation_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_recordation_execution_20260419_v0.json",
     "policy_standard_approval_record_note": "formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_v0.md"
   },
   "policy_standard_approval_record_policy": {

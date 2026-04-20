@@ -1,0 +1,42 @@
+{
+  "schema_id": "RESEARCH_MODE_QM_STAT_GOVERNED_REVIEW_WRAPPER_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Consume the QM-STAT sandbox payload record as the primary governed-entry object, cite the harder-target comparison report as bounded supporting evidence, and emit one bounded intake decision without canonical mutation.",
+  "required_inputs": {
+    "payload_record": "formal/output/reports/research_mode_qm_stat_sandbox_payload_record_20260419_v0.json",
+    "comparison_report": "formal/output/reports/research_mode_qm_stat_sandbox_candidate_comparison_20260419_v0.json",
+    "witness_binding": "formal/output/architecture/SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0.json",
+    "blocker_definitions": "formal/output/authority/authoritative_blocker_definitions.json",
+    "payload_requirements": "formal/docs/release/SANDBOX_PROMOTION_PAYLOAD_REQUIREMENTS_20260419_v0.md",
+    "promotion_lane_policy": "formal/docs/release/PROMOTION_GOVERNANCE_LANE_POLICY_20260418_v0.md",
+    "canonical_mutation_protocol": "formal/docs/release/SANDBOX_PROMOTION_CANONICAL_MUTATION_PROTOCOL_20260419_v0.md"
+  },
+  "execution_policy": {
+    "required_target_row": "ROW-SEAM-QM-STAT-001",
+    "required_target_seam": "SEAM-QM-STAT",
+    "required_target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "required_payload_decision_boundary": "PROMOTE_PLUS_HOLD_PLUS_REJECT_ONLY",
+    "required_payload_artifact_class": "PROMOTION_CANDIDATE_SANDBOX_ARTIFACT",
+    "required_primary_delta_class": "LOCAL_TRANSPORT_WITNESS",
+    "required_promotion_readiness": "READY_FOR_PROMOTION_REVIEW",
+    "required_blocker_definition_id": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+    "required_coupling_state": "TIGHTENED",
+    "required_promotion_ruling": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+    "required_wrapper_next_action_on_ready": "DECLARE_OR_EXECUTE_ONE_BOUNDED_QM_STAT_SANDBOX_GOVERNED_REVIEW_INTAKE",
+    "required_wrapper_next_action_on_additional_support": "ADD_ONE_MORE_BOUNDED_GOVERNANCE_SUPPORT_SURFACE_BEFORE_GOVERNED_INTAKE",
+    "required_wrapper_next_action_on_comparison_block": "REPAIR_QM_STAT_COMPARISON_MISMATCH_BEFORE_GOVERNED_INTAKE",
+    "required_wrapper_next_action_on_not_ready": "REPAIR_QM_STAT_GOVERNED_REVIEW_WRAPPER_INPUTS_AND_RERUN"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QM_STAT_GOVERNED_REVIEW_WRAPPER_OUTCOME",
+    "no_loop_rule": "ONE_QM_STAT_GOVERNED_REVIEW_WRAPPER_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QM_STAT_GOVERNED_REVIEW_WRAPPER_NOT_READY",
+      "QM_STAT_GOVERNED_REVIEW_WRAPPER_READY_FOR_BOUNDED_SANDBOX_REVIEW",
+      "QM_STAT_GOVERNED_REVIEW_WRAPPER_REQUIRES_ADDITIONAL_SUPPORT",
+      "QM_STAT_GOVERNED_REVIEW_WRAPPER_BLOCKED_BY_COMPARISON_MISMATCH"
+    ],
+    "default_outcome": "QM_STAT_GOVERNED_REVIEW_WRAPPER_NOT_READY"
+  },
+  "non_claim_boundary": "Repository-local governed intake wrapper only; no governed promotion pass, canonical mutation, or seam-closure claim."
+}

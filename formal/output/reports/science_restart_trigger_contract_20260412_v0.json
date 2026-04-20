@@ -1,5 +1,5 @@
 {
-  "captured_at_utc": "2026-04-15T02:59:06Z",
+  "captured_at_utc": "2026-04-19T18:05:43Z",
   "criteria": {
     "forbid_closed_or_held_lane_reopen": true,
     "higher_level_policy_revision_authorized_match": true,
@@ -22,14 +22,15 @@
       "single_outcome_materialized": true
     },
     "inputs": {
-      "higher_level_policy_revision_authorized": false,
-      "higher_level_policy_trigger_outcome": "HIGHER_LEVEL_POLICY_REVISION_NOT_AUTHORIZED",
+      "anti_alias_proof_declaration_outcome": "SCIENCE_RESTART_ANTI_ALIAS_PROOF_DECLARED",
+      "higher_level_policy_revision_authorized": true,
+      "higher_level_policy_trigger_outcome": "HIGHER_LEVEL_POLICY_REVISION_AUTHORIZED",
       "lane_reopen_authorized": false,
       "new_lane_or_packet_authorized_now": false,
       "phase_z_outcome": "NO_STRONGER_CANDIDATE_CLASS_IDENTIFIED_YET",
       "post_phase_z_outcome": "PRESERVE_CURRENT_GOVERNED_STOP_STATE",
-      "required_higher_level_policy_revision_authorized": false,
-      "required_higher_level_policy_trigger_outcome": "HIGHER_LEVEL_POLICY_REVISION_NOT_AUTHORIZED",
+      "required_higher_level_policy_revision_authorized": true,
+      "required_higher_level_policy_trigger_outcome": "HIGHER_LEVEL_POLICY_REVISION_AUTHORIZED",
       "required_lane_reopen_authorized": false,
       "required_new_lane_or_packet_authorized_now": false,
       "required_phase_z_outcome": "NO_STRONGER_CANDIDATE_CLASS_IDENTIFIED_YET",
@@ -39,14 +40,14 @@
     },
     "summary": {
       "all_criteria_satisfied": true,
-      "next_action": "PRESERVE_GOVERNED_STOP_STATE_UNTIL_VALID_RESTART_TRIGGER_FAMILY_IS_PROVEN",
+      "next_action": "OPEN_ONE_BOUNDED_PRE_SCREENING_GATE_WITH_NO_DIRECT_EXECUTION_AUTHORIZATION",
       "phase_status": "COMPLETE"
     }
   },
   "restart_trigger_families": {
     "anti_alias_proof_for_new_candidate_declared": false,
     "force_policy_escalation_now": false,
-    "higher_level_policy_revision_authorized": false,
+    "higher_level_policy_revision_authorized": true,
     "material_new_external_evidence_class": false,
     "stronger_candidate_class_identified": false
   },
@@ -56,6 +57,7 @@
     "science_frontier_stop_state_summary_doc": "formal/docs/release/SCIENCE_FRONTIER_STOP_STATE_SUMMARY_20260412_v0.md",
     "science_phase_z_stronger_candidate_class_discovery_report": "formal/output/reports/science_phase_z_stronger_candidate_class_discovery_20260412_v0.json",
     "science_post_phase_z_frontier_decision_report": "formal/output/reports/science_post_phase_z_frontier_decision_20260412_v0.json",
+    "science_restart_anti_alias_proof_declaration_report": "formal/output/reports/science_restart_anti_alias_proof_declaration_20260419_v0.json",
     "science_restart_higher_level_policy_trigger_report": "formal/output/reports/science_restart_higher_level_policy_trigger_20260413_v0.json"
   },
   "status": "ACTIVE_NONLIVE_NONCLAIM",
@@ -63,9 +65,9 @@
     "direct_execution_authorized_now": false,
     "lane_specific_reopen_authorized": false,
     "new_lane_or_packet_authorized_now": false,
-    "next_action": "PRESERVE_GOVERNED_STOP_STATE_UNTIL_VALID_RESTART_TRIGGER_FAMILY_IS_PROVEN",
+    "next_action": "OPEN_ONE_BOUNDED_PRE_SCREENING_GATE_WITH_NO_DIRECT_EXECUTION_AUTHORIZATION",
     "single_layer_only": true,
     "single_outcome_only": true,
-    "terminal_outcome": "REMAIN_IN_GOVERNED_STOP_STATE"
+    "terminal_outcome": "OPEN_ONE_BOUNDED_PRE_SCREENING_RESTART_GATE"
   }
 }

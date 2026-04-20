@@ -1,0 +1,41 @@
+{
+  "schema_id": "RESEARCH_STAT_ENTROPY_BALANCE_PROBE_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "artifact_path": "formal/output/research/research_stat_entropy_balance_probe_20260419_v0.json",
+  "artifact_class": "SCIENTIFIC_DELTA_RESEARCH_ARTIFACT",
+  "metadata": {
+    "artifact_id": "research_stat_entropy_balance_probe_20260419_v0",
+    "research_object": "1D Gaussian diffusion entropy functional",
+    "research_question": "Does the declared STAT entropy plan admit a bounded local de Bruijn identity check with a direct analytic artifact?",
+    "test_type": "DERIVATION",
+    "output_kind": "DERIVATION_NOTE",
+    "target_kind": "PILLAR",
+    "target_binding": "TARGET-TH-ENTROPY-PLAN",
+    "delta_class": "ENTROPY_BALANCE_LOCAL_IDENTITY",
+    "contradiction_context": "NONE",
+    "provenance_family": "research_mode_pilot_pack_20260419_v0",
+    "nonclaim_boundary": "Repository-local research artifact only; no pillar activation or canonical promotion.",
+    "promotability": "NOT_READY"
+  },
+  "math_context": {
+    "object_equation_v0": "H(t) = 0.5 log(4 pi e D t)",
+    "identity_tested_v0": "dH/dt = D I",
+    "regime_v0": "bounded Gaussian diffusion probe"
+  },
+  "metrics": {
+    "diffusion_coefficient": 0.5,
+    "time_value": 1.25,
+    "entropy_value": 1.530510308862,
+    "analytic_entropy_rate": 0.4,
+    "fisher_information": 0.8,
+    "de_bruijn_rhs": 0.4,
+    "centered_difference_rate": 0.3999999999,
+    "de_bruijn_gap_abs": 0.0,
+    "finite_difference_gap_abs": 1e-10
+  },
+  "research_outcome": {
+    "result_v0": "RETAIN_LOCAL_ENTROPY_BALANCE_IDENTITY",
+    "direct_math_artifact_v0": true,
+    "canonical_mutation_attempted_v0": false
+  }
+}

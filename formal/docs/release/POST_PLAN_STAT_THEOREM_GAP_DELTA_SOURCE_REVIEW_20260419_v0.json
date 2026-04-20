@@ -1,0 +1,51 @@
+{
+  "schema_id": "POST_PLAN_STAT_THEOREM_GAP_DELTA_SOURCE_REVIEW_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Identify the concrete repo-native source that could produce one fresh STAT-attributable theorem-gap delta, and fail closed if the current packet-04 chain remains protocol-capped without a higher-packet path.",
+  "required_inputs": {
+    "stat_fresh_movement_evidence_surface_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "stat_packet05_lane_eligibility_review_report": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json",
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "foundational_empirical_protocol": "formal/docs/release/FOUNDATIONAL_EMPIRICAL_COMPARISON_PROTOCOL_v0.md",
+    "foundational_empirical_packet04_matrix": "formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET04_MATRIX_v0.json",
+    "foundational_empirical_packet05_progression_policy": "formal/docs/release/FOUNDATIONAL_EMPIRICAL_PACKET05_PROGRESSION_POLICY_v0.md",
+    "foundational_empirical_packet05_matrix": "formal/docs/paper/FOUNDATIONAL_EMPIRICAL_COMPARISON_PACKET05_MATRIX_v0.json",
+    "empirical_packet05_decision_ledger": "formal/output/empirical_packet05_decision_ledger_v0.json",
+    "stat_target_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+    "stat_artifact": "formal/output/stat_empirical_comparison_packet_04_v0.json",
+    "stat_gate": "formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py"
+  },
+  "delta_source_policy": {
+    "required_evidence_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+    "required_target_row": "ROW-PILLAR-STAT-001",
+    "required_lane_key": "STAT",
+    "required_blocker_class": "THEOREM_GAP",
+    "required_physics_checkpoint_status": "THEOREM_GAP_OPEN",
+    "required_artifact_id": "stat_empirical_comparison_packet_04_v0",
+    "required_artifact_status": "RUN_BOUNDED_v0_NONCLAIM",
+    "required_artifact_decision": "INCONCLUSIVE_v0",
+    "required_artifact_evidence_tier": "INTERMEDIATE_v0",
+    "required_protocol_packet04_cap_token": "FOUNDATIONAL_EMPIRICAL_PACKET_04_BASELINE_DECISION_v0: INCONCLUSIVE_ONLY_UNTIL_PACKET05_OR_HIGHER",
+    "required_protocol_packet05_enablement_token": "FOUNDATIONAL_EMPIRICAL_PACKET_05_ENABLEMENT_v0: SELECTIVE_LANE_ENABLEMENT_ALLOWED_WITH_PACKET04_INCONCLUSIVE_AND_INTERMEDIATE_EVIDENCE",
+    "required_protocol_packet05_ledger_token": "FOUNDATIONAL_EMPIRICAL_PACKET_05_DECISION_LEDGER_REQUIREMENT_v0: EXPLICIT_LEDGER_REQUIRED",
+    "required_progression_bootstrap_token": "FOUNDATIONAL_EMPIRICAL_PACKET_05_ALLOWED_LANE_BOOTSTRAP_v0: GR_SR_CYCLE01",
+    "required_progression_non_enabled_clause": "non-enabled lanes remain governed by packet-04 baseline policy.",
+    "required_packet05_review_not_eligible_outcome": "POST_PLAN_STAT_PACKET05_LANE_ELIGIBILITY_REVIEW_NOT_ELIGIBLE_UNDER_CURRENT_BOOTSTRAP",
+    "required_packet05_review_eligible_outcome": "POST_PLAN_STAT_PACKET05_LANE_ELIGIBILITY_REVIEW_ELIGIBLE_FOR_PACKET05_BOOTSTRAP",
+    "required_packet05_bootstrap_lanes": [
+      "GR",
+      "SR"
+    ]
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_STAT_THEOREM_GAP_DELTA_SOURCE_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_STAT_THEOREM_GAP_DELTA_SOURCE_REVIEW_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_STAT_THEOREM_GAP_DELTA_SOURCE_REVIEW_PACKET04_CAP_CONFIRMED",
+      "POST_PLAN_STAT_THEOREM_GAP_DELTA_SOURCE_REVIEW_HIGHER_PACKET_PATH_VISIBLE",
+      "POST_PLAN_STAT_THEOREM_GAP_DELTA_SOURCE_REVIEW_EVIDENCE_INCOMPLETE"
+    ],
+    "default_outcome": "POST_PLAN_STAT_THEOREM_GAP_DELTA_SOURCE_REVIEW_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local STAT theorem-gap delta-source review only; no scientific adequacy claim."
+}

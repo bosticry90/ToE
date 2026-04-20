@@ -8,4 +8,4 @@ Please fully review the ToE repo in it's entirety and provide a comprehensive ri
 
 Please review, evaluate, and interpret these results, and provide recommendations:
 
-Please update GitHub to synch with the current ToE repo state.
+Please update GitHub main branch to synch with the current ToE repo state.

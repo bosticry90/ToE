@@ -16,6 +16,23 @@ def _write_text(path: Path, text: str) -> None:
     path.write_text(text, encoding="utf-8")
 
 
+def _seed_anti_alias_report(
+    root: Path,
+    *,
+    terminal_outcome: str = "SCIENCE_RESTART_ANTI_ALIAS_PROOF_READY_BUT_UNDECLARED",
+    anti_alias_proof_for_new_candidate_declared: bool = False,
+) -> None:
+    _write_json(
+        root / "formal" / "output" / "reports" / "science_restart_anti_alias_proof_declaration_20260419_v0.json",
+        {
+            "summary": {
+                "terminal_outcome": terminal_outcome,
+                "anti_alias_proof_for_new_candidate_declared": anti_alias_proof_for_new_candidate_declared,
+            }
+        },
+    )
+
+
 def _write_declaration(
     path: Path,
     *,
@@ -42,6 +59,7 @@ def _write_declaration(
                 "science_phase_z_stronger_candidate_class_discovery_report": "formal/output/reports/science_phase_z_stronger_candidate_class_discovery_20260412_v0.json",
                 "science_frontier_stop_state_summary_doc": "formal/docs/release/SCIENCE_FRONTIER_STOP_STATE_SUMMARY_20260412_v0.md",
                 "science_restart_higher_level_policy_trigger_report": "formal/output/reports/science_restart_higher_level_policy_trigger_20260413_v0.json",
+                "science_restart_anti_alias_proof_declaration_report": "formal/output/reports/science_restart_anti_alias_proof_declaration_20260419_v0.json",
             },
             "restart_trigger_contract": {
                 "required_post_phase_z_outcome": "PRESERVE_CURRENT_GOVERNED_STOP_STATE",
@@ -116,6 +134,7 @@ def test_reports_remain_in_governed_stop_state(tmp_path: Path, monkeypatch) -> N
     )
     _write_declaration(declaration_path)
     _seed_inputs(tmp_path)
+    _seed_anti_alias_report(tmp_path)
 
     report = tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
     assert report["summary"]["terminal_outcome"] == "REMAIN_IN_GOVERNED_STOP_STATE"
@@ -130,10 +149,15 @@ def test_reports_open_one_bounded_pre_screening_restart_gate(tmp_path: Path, mon
         declaration_path,
         trigger_overrides={
             "stronger_candidate_class_identified": True,
-            "anti_alias_proof_for_new_candidate_declared": True,
+            "anti_alias_proof_for_new_candidate_declared": False,
         },
     )
     _seed_inputs(tmp_path)
+    _seed_anti_alias_report(
+        tmp_path,
+        terminal_outcome="SCIENCE_RESTART_ANTI_ALIAS_PROOF_DECLARED",
+        anti_alias_proof_for_new_candidate_declared=True,
+    )
 
     report = tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
     assert report["summary"]["terminal_outcome"] == "OPEN_ONE_BOUNDED_PRE_SCREENING_RESTART_GATE"
@@ -146,6 +170,7 @@ def test_reports_hold_pending_restart_trigger_contract_repair(tmp_path: Path, mo
     )
     _write_declaration(declaration_path, include_full_signal_shape=False)
     _seed_inputs(tmp_path)
+    _seed_anti_alias_report(tmp_path)
 
     report = tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
     assert report["summary"]["terminal_outcome"] == "HOLD_PENDING_RESTART_TRIGGER_CONTRACT_REPAIR"
@@ -161,6 +186,38 @@ def test_reports_restart_trigger_contract_evidence_incomplete(tmp_path: Path, mo
         trigger_overrides={"material_new_external_evidence_class": True},
     )
     _seed_inputs(tmp_path, phase_z_outcome="STRONGER_CANDIDATE_CLASS_DISCOVERY_EVIDENCE_INCOMPLETE")
+    _seed_anti_alias_report(tmp_path)
 
     report = tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
     assert report["summary"]["terminal_outcome"] == "RESTART_TRIGGER_CONTRACT_EVIDENCE_INCOMPLETE"
+
+
+def test_reports_restart_trigger_contract_evidence_incomplete_pending_anti_alias_after_policy_authorization(
+    tmp_path: Path, monkeypatch
+) -> None:
+    monkeypatch.setattr(tool, "REPO_ROOT", tmp_path)
+    declaration_path = (
+        tmp_path / "formal" / "docs" / "release" / "SCIENCE_RESTART_TRIGGER_CONTRACT_20260412_v0.json"
+    )
+    _write_declaration(
+        declaration_path,
+        trigger_overrides={
+            "higher_level_policy_revision_authorized": True,
+            "anti_alias_proof_for_new_candidate_declared": False,
+        },
+    )
+    payload = json.loads(declaration_path.read_text(encoding="utf-8"))
+    payload["restart_trigger_contract"]["required_higher_level_policy_trigger_outcome"] = "HIGHER_LEVEL_POLICY_REVISION_AUTHORIZED"
+    payload["restart_trigger_contract"]["required_higher_level_policy_revision_authorized"] = True
+    declaration_path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
+    _seed_inputs(
+        tmp_path,
+        higher_level_policy_trigger_outcome="HIGHER_LEVEL_POLICY_REVISION_AUTHORIZED",
+        higher_level_policy_revision_authorized=True,
+    )
+    _seed_anti_alias_report(tmp_path)
+
+    report = tool.build_report(declaration_path=declaration_path, captured_at_utc=None)
+
+    assert report["summary"]["terminal_outcome"] == "RESTART_TRIGGER_CONTRACT_EVIDENCE_INCOMPLETE"
+    assert report["objective_quality"]["summary"]["next_action"] == "DECLARE_ANTI_ALIAS_PROOF_BEFORE_OPENING_PRE_SCREENING_GATE"

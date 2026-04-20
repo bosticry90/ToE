@@ -1,0 +1,38 @@
+{
+  "schema_id": "RESEARCH_MODE_QM_STAT_REENTRY_REVIEW_CYCLE_QUEUE_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Consume the QM-STAT bounded re-entry eligibility pass and place exactly one authorized candidate target into a bounded re-entry review-cycle queue without executing the review cycle or mutating canonical state.",
+  "required_inputs": {
+    "reentry_eligibility_review_report": "formal/output/reports/research_mode_qm_stat_reentry_eligibility_review_20260419_v0.json",
+    "reentry_support_artifact_report": "formal/output/reports/research_mode_qm_stat_reentry_support_artifact_20260419_v0.json"
+  },
+  "queue_contract": {
+    "required_eligibility_outcome": "QM_STAT_REENTRY_ELIGIBILITY_MET_FOR_BOUNDED_REENTRY",
+    "required_reentry_condition_status": "MET_FOR_BOUNDED_REENTRY",
+    "required_eligibility_next_action": "QUEUE_ONE_BOUNDED_QM_STAT_REENTRY_REVIEW_CYCLE",
+    "required_support_artifact_outcome": "QM_STAT_REENTRY_SUPPORT_ARTIFACT_MATERIALIZED_AND_QUEUE_AUTHORIZED",
+    "required_support_authorization_status": "AUTHORIZED_FOR_ONE_BOUNDED_REENTRY_QUEUE_DECISION",
+    "required_authorized_candidate_target": "ROW-SEAM-QM-STAT-001::QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "required_target_row": "ROW-SEAM-QM-STAT-001",
+    "required_target_seam": "SEAM-QM-STAT",
+    "required_target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "queue_scope_token": "ONE_BOUNDED_QM_STAT_REENTRY_REVIEW_CYCLE_ONLY",
+    "queue_status_on_ready": "QUEUED_FOR_ONE_BOUNDED_REENTRY_REVIEW_CYCLE",
+    "queue_packet_status_on_ready": "PENDING_REENTRY_QUEUE_PACKET_AUTHORING",
+    "next_action_on_ready": "AUTHOR_ONE_BOUNDED_QM_STAT_REENTRY_REVIEW_QUEUE_PACKET",
+    "next_action_on_blocked": "REPAIR_QM_STAT_REENTRY_REVIEW_CYCLE_QUEUE_CONTRACT",
+    "next_action_on_hold": "HOLD_QM_STAT_REENTRY_QUEUE_PENDING_QUEUE_PACKET"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_RESEARCH_MODE_QM_STAT_REENTRY_REVIEW_CYCLE_QUEUE_OUTCOME",
+    "no_loop_rule": "ONE_RESEARCH_MODE_QM_STAT_REENTRY_REVIEW_CYCLE_QUEUE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QM_STAT_REENTRY_REVIEW_CYCLE_QUEUED_FOR_ONE_BOUNDED_REVIEW",
+      "QM_STAT_REENTRY_REVIEW_CYCLE_QUEUE_BLOCKED_BY_MISSING_QUEUE_CONTRACT",
+      "QM_STAT_REENTRY_REVIEW_CYCLE_QUEUE_HELD_PENDING_QUEUE_PACKET",
+      "QM_STAT_REENTRY_REVIEW_CYCLE_QUEUE_EVIDENCE_INCOMPLETE"
+    ],
+    "default_outcome": "QM_STAT_REENTRY_REVIEW_CYCLE_QUEUE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT re-entry review-cycle queue only; no canonical promotion, canonical mutation, or seam-closure claim."
+}

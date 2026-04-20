@@ -1,0 +1,38 @@
+{
+  "artifact_class": "BOUNDED_REENTRY_SUPPORT_ARTIFACT",
+  "artifact_id": "qm_stat_reentry_support_artifact_20260419_v0",
+  "authority_chain": {
+    "authoritative_blocker_definition_id": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+    "bridge_object_id": "SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0",
+    "coupling_state": "TIGHTENED",
+    "promotion_ruling": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+    "witness_id": "SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0"
+  },
+  "authorization": {
+    "authorization_status": "AUTHORIZED_FOR_ONE_BOUNDED_REENTRY_QUEUE_DECISION",
+    "authorized_candidate_target": "ROW-SEAM-QM-STAT-001::QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "next_action": "QUEUE_ONE_BOUNDED_QM_STAT_REENTRY_REVIEW_CYCLE"
+  },
+  "captured_at_utc": "2026-04-20T02:53:29Z",
+  "non_claim_boundary": "Repository-local QM-STAT re-entry support artifact only; no canonical promotion, canonical mutation, or seam-closure claim.",
+  "source_bundle": {
+    "blocker_definitions": "formal/output/authority/authoritative_blocker_definitions.json",
+    "bridge_object": "formal/output/architecture/SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0.json",
+    "live_authority_evidence_report": "formal/output/reports/research_mode_qm_stat_live_authority_evidence_20260419_v0.json",
+    "post_review_adjudication_report": "formal/output/reports/research_mode_qm_stat_post_review_adjudication_20260419_v0.json",
+    "reentry_eligibility_review_report": "formal/output/reports/research_mode_qm_stat_reentry_eligibility_review_20260419_v0.json",
+    "witness_binding": "formal/output/architecture/SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0.json"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "support_scope": {
+    "authorization_scope_token": "ONE_BOUNDED_QM_STAT_REENTRY_QUEUE_ONLY",
+    "gap_token": "DIRECT_QUEUE_AUTHORIZATION_MISSING",
+    "support_role": "NARROW_QUEUE_AUTHORIZATION_SUPPORT_ONLY"
+  },
+  "target_binding": {
+    "authorized_candidate_target": "ROW-SEAM-QM-STAT-001::QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "seam_id": "SEAM-QM-STAT",
+    "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0"
+  }
+}

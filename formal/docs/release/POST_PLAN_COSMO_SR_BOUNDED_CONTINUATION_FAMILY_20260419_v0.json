@@ -1,0 +1,47 @@
+{
+  "schema_id": "POST_PLAN_COSMO_SR_BOUNDED_CONTINUATION_FAMILY_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Measure exactly one newly declared bounded COSMO-SR continuation family after the consumed first-live seam tranche so the lane either records blocker-facing movement, closes nonpromoted against a machine-pinned continuation payload, or terminates explicitly under the current seam architecture without reopening the prior tranche by analogy.",
+  "required_inputs": {
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "post_plan_cosmo_sr_first_live_seam_tranche_report": "formal/output/reports/post_plan_cosmo_sr_first_live_seam_tranche_20260418_v0.json",
+    "blocker_burn_dashboard_report": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json",
+    "cosmo_sr_cycle07_artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle07_v0.json",
+    "cosmo_sr_cycle06_to_07_synthesis_doc": "formal/docs/paper/DERIVATION_TARGET_COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE06_TO_07_SYNTHESIS_v0.md",
+    "historical_cycle08_candidate_doc": "formal/docs/release/WS_10_T12_COSMO_SR_CYCLE08_ADDITIVE_CANDIDATE_v0.md"
+  },
+  "execution_policy": {
+    "required_target_row": "ROW-SEAM-COSMO-SR-001",
+    "required_target_seam": "SEAM-COSMO-SR",
+    "required_target_route_class": "EXECUTABLE_NOW",
+    "required_row_blocker_class": "SEAM_INTEGRATION_GAP",
+    "required_prior_outcome": "POST_PLAN_COSMO_SR_FIRST_LIVE_SEAM_TRANCHE_EXECUTED_NONPROMOTED",
+    "required_prior_next_action": "RETAIN_COSMO_SR_AS_SOLE_EXECUTABLE_ROW_AND_REQUIRE_NEW_ROW_MOVEMENT_BEFORE_REROUTE",
+    "required_prior_row_truth_change": false,
+    "required_decision_rule": "COSMO_SR_NEXT_DECISION_RULE_v0: IF_ONE_BOUNDED_ADDITIVE_COSMO_SR_PAYLOAD_IS_READY_THEN_CYCLE08_ELSE_OPEN_QM_STAT_CYCLE08",
+    "required_decision_boundary_status": "COSMO_SR_DECISION_BOUNDARY_STATUS_v0: SYNTHESIS_CHECKPOINT_READY",
+    "required_alternate_blocked_row": "ROW-SEAM-QM-STAT-001",
+    "required_alternate_blocked_route_class": "BLOCKED_PENDING_AUTHORITY",
+    "expected_cycle08_target_doc": "formal/docs/paper/DERIVATION_TARGET_COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE08_v0.md",
+    "expected_cycle08_artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle08_v0.json",
+    "expected_cycle08_gate": "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle08_gate.py",
+    "selected_continuation_lane": "NONE",
+    "selected_continuation_target_doc": "",
+    "selected_continuation_artifact": "",
+    "selected_continuation_gate": "",
+    "selected_continuation_machine_pinned": false
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_COSMO_SR_BOUNDED_CONTINUATION_FAMILY_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_COSMO_SR_BOUNDED_CONTINUATION_FAMILY_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_COSMO_SR_BOUNDED_CONTINUATION_FAMILY_BLOCKER_MOVEMENT_RECORDED",
+      "POST_PLAN_COSMO_SR_BOUNDED_CONTINUATION_FAMILY_EXECUTED_NONPROMOTED_CLOSEOUT",
+      "POST_PLAN_COSMO_SR_BOUNDED_CONTINUATION_FAMILY_EXPLICITLY_EXHAUSTED_UNDER_CURRENT_SEAM_ARCHITECTURE",
+      "POST_PLAN_COSMO_SR_BOUNDED_CONTINUATION_FAMILY_CONTRACT_VIOLATION",
+      "POST_PLAN_COSMO_SR_BOUNDED_CONTINUATION_FAMILY_EVIDENCE_INCOMPLETE"
+    ],
+    "default_outcome": "POST_PLAN_COSMO_SR_BOUNDED_CONTINUATION_FAMILY_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan COSMO-SR bounded continuation family only; no scientific adequacy claim."
+}

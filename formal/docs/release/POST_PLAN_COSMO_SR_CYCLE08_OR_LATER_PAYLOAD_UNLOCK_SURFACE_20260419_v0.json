@@ -1,0 +1,41 @@
+{
+  "schema_id": "POST_PLAN_COSMO_SR_CYCLE08_OR_LATER_PAYLOAD_UNLOCK_SURFACE_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Declare one fail-closed unlock surface for future COSMO-SR Cycle08-or-later payload readiness so the exhausted seam stays closed until exactly one machine-pinned payload tuple is present and eligible for a newly declared continuation family.",
+  "required_inputs": {
+    "post_plan_cosmo_sr_bounded_continuation_family_report": "formal/output/reports/post_plan_cosmo_sr_bounded_continuation_family_20260419_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "cosmo_sr_cycle06_to_07_synthesis_doc": "formal/docs/paper/DERIVATION_TARGET_COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE06_TO_07_SYNTHESIS_v0.md",
+    "historical_cycle08_candidate_doc": "formal/docs/release/WS_10_T12_COSMO_SR_CYCLE08_ADDITIVE_CANDIDATE_v0.md"
+  },
+  "unlock_policy": {
+    "required_continuation_outcome": "POST_PLAN_COSMO_SR_BOUNDED_CONTINUATION_FAMILY_EXPLICITLY_EXHAUSTED_UNDER_CURRENT_SEAM_ARCHITECTURE",
+    "required_continuation_next_action": "DO_NOT_REOPEN_COSMO_SR_UNTIL_NEW_MACHINE_PINNED_CYCLE08_OR_LATER_PAYLOAD_EXISTS",
+    "required_target_row": "ROW-SEAM-COSMO-SR-001",
+    "required_target_route_class": "EXECUTABLE_NOW",
+    "required_decision_rule": "COSMO_SR_NEXT_DECISION_RULE_v0: IF_ONE_BOUNDED_ADDITIVE_COSMO_SR_PAYLOAD_IS_READY_THEN_CYCLE08_ELSE_OPEN_QM_STAT_CYCLE08",
+    "required_decision_boundary_status": "COSMO_SR_DECISION_BOUNDARY_STATUS_v0: SYNTHESIS_CHECKPOINT_READY",
+    "required_candidate_status": "WS_10_T12_COSMO_SR_CYCLE08_ADDITIVE_CANDIDATE_STATUS_v0: DECLARED_BOUNDED_NONREDUNDANT_PAYLOAD_v0",
+    "required_candidate_payload_type": "Candidate payload type: `ONE_DOC_ONE_ARTIFACT_ONE_GATE`.",
+    "authorization_mode": "AT_MOST_ONE",
+    "minimum_allowed_cycle_index": 8,
+    "selected_unlock_payload_lane": "COSMO_SR_CYCLE08",
+    "selected_unlock_payload_target_doc": "formal/docs/paper/DERIVATION_TARGET_COSMO_SR_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE08_v0.md",
+    "selected_unlock_payload_artifact": "formal/output/cosmo_sr_class_b_seam_physics_pilot_cycle08_v0.json",
+    "selected_unlock_payload_gate": "formal/python/tests/test_cosmo_sr_class_b_seam_physics_pilot_cycle08_gate.py",
+    "selected_unlock_payload_machine_pinned": true,
+    "selected_unlock_payload_declared_nonredundant": true
+  },
+  "unlock_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_COSMO_SR_CYCLE08_OR_LATER_PAYLOAD_UNLOCK_SURFACE_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_COSMO_SR_CYCLE08_OR_LATER_PAYLOAD_UNLOCK_SURFACE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_COSMO_SR_CYCLE08_OR_LATER_PAYLOAD_UNLOCK_SURFACE_LOCKED_PENDING_MACHINE_PINNED_PAYLOAD",
+      "POST_PLAN_COSMO_SR_CYCLE08_OR_LATER_PAYLOAD_UNLOCK_SURFACE_ONE_PAYLOAD_UNLOCKED",
+      "POST_PLAN_COSMO_SR_CYCLE08_OR_LATER_PAYLOAD_UNLOCK_SURFACE_CONTRACT_VIOLATION",
+      "POST_PLAN_COSMO_SR_CYCLE08_OR_LATER_PAYLOAD_UNLOCK_SURFACE_EVIDENCE_INCOMPLETE"
+    ],
+    "default_outcome": "POST_PLAN_COSMO_SR_CYCLE08_OR_LATER_PAYLOAD_UNLOCK_SURFACE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan COSMO-SR Cycle08-or-later payload unlock surface only; no scientific adequacy claim."
+}

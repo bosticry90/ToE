@@ -1,0 +1,39 @@
+{
+  "schema_id": "RESEARCH_MODE_QM_STAT_REENTRY_ELIGIBILITY_REVIEW_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Consume the retained reviewed-candidate disposition and stronger live-authority evidence surface, then decide whether QM-STAT re-entry conditions are not met, partially met, or met for one bounded re-entry queue action without canonical mutation.",
+  "required_inputs": {
+    "post_review_adjudication_report": "formal/output/reports/research_mode_qm_stat_post_review_adjudication_20260419_v0.json",
+    "live_authority_evidence_report": "formal/output/reports/research_mode_qm_stat_live_authority_evidence_20260419_v0.json",
+    "reentry_support_artifact_report": "formal/output/reports/research_mode_qm_stat_reentry_support_artifact_20260419_v0.json"
+  },
+  "eligibility_policy": {
+    "required_post_review_adjudication": "RETAIN_AS_BOUNDED_REVIEWED_CANDIDATE",
+    "required_candidate_disposition": "RETAIN_BOUNDED_REVIEWED_CANDIDATE",
+    "required_evidence_terminal_outcome": "QM_STAT_STRONGER_LIVE_AUTHORITY_EVIDENCE_MATERIALIZED",
+    "required_evidence_ready_flag": true,
+    "required_target_row": "ROW-SEAM-QM-STAT-001",
+    "required_target_seam": "SEAM-QM-STAT",
+    "required_target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "required_conditional_reentry_next_action": "REENTER_QM_STAT_BOUNDED_REVIEW_ONLY_IF_NEW_SUPPORTING_EVIDENCE_MATERIALIZES",
+    "required_support_artifact_outcome": "QM_STAT_REENTRY_SUPPORT_ARTIFACT_MATERIALIZED_AND_QUEUE_AUTHORIZED",
+    "required_support_artifact_authorization_status": "AUTHORIZED_FOR_ONE_BOUNDED_REENTRY_QUEUE_DECISION",
+    "required_authorized_candidate_target": "ROW-SEAM-QM-STAT-001::QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "next_action_on_not_met": "REMAIN_ON_HOLD_AS_RETAINED_BOUNDED_REVIEWED_CANDIDATE",
+    "next_action_on_partially_met": "AUTHOR_ONE_MORE_QM_STAT_SUPPORT_ARTIFACT_BEFORE_QUEUEING_BOUNDED_REENTRY",
+    "next_action_on_met": "QUEUE_ONE_BOUNDED_QM_STAT_REENTRY_REVIEW_CYCLE",
+    "next_action_on_incomplete": "REPAIR_QM_STAT_REENTRY_ELIGIBILITY_INPUTS_AND_RERUN"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_RESEARCH_MODE_QM_STAT_REENTRY_ELIGIBILITY_OUTCOME",
+    "no_loop_rule": "ONE_RESEARCH_MODE_QM_STAT_REENTRY_ELIGIBILITY_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QM_STAT_REENTRY_ELIGIBILITY_NOT_MET",
+      "QM_STAT_REENTRY_ELIGIBILITY_PARTIALLY_MET",
+      "QM_STAT_REENTRY_ELIGIBILITY_MET_FOR_BOUNDED_REENTRY",
+      "QM_STAT_REENTRY_ELIGIBILITY_EVIDENCE_INCOMPLETE"
+    ],
+    "default_outcome": "QM_STAT_REENTRY_ELIGIBILITY_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT re-entry eligibility review only; no canonical promotion, canonical mutation, or seam-closure claim."
+}

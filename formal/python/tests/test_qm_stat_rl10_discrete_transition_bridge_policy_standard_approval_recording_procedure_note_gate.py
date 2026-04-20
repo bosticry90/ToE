@@ -66,14 +66,18 @@ def test_qm_stat_rl10_policy_standard_approval_recording_procedure_note_gate() -
         assert boundary in note_text
 
     assert "policy_standard_approval_not_recorded" in note_text
-    assert "policy_standard_approval_not_recorded" in stop_state_text
+    assert "QM_STAT_CYCLE12_CONTINUATION_EXECUTED_NONLIVE" in stop_state_text
     assert (
-        "Canonical stop-state layer: P93 approval-recording procedure declared, unexecuted, "
-        "and fail-closed pending a real approval record"
+        "Canonical stop-state layer: QM-STAT bounded restart chain is closed at the Cycle12 "
+        "nonlive continuation-execution stop token pending any further downstream authorization"
     ) in stop_state_text
     assert "- approval-recording procedure definition" in stop_state_text
-    assert "- approval-recording procedure exists and is unexecuted" in stop_state_text
+    assert "- approval record has been recorded through the bounded execution surface" in stop_state_text
     assert (
-        "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_NEXT_ACTION_v0: "
-        "WAIT_FOR_REAL_APPROVAL_THEN_RECORD_ON_DECLARED_SURFACE_AND_RERUN_RESTART_CHAIN"
+        "- the current live next action is "
+        "`STOP_AT_QM_STAT_CYCLE12_CONTINUATION_EXECUTION_TOKEN_PENDING_ANY_FURTHER_DOWNSTREAM_AUTHORIZATION`"
+    ) in stop_state_text
+    assert (
+        "RESTART_GOVERNANCE_STOP_STATE_CANONICAL_LAYER_v0: "
+        "POST_APPROVAL_RESTART_TRIGGER_GATE_OPEN_FOR_ONE_BOUNDED_PRE_SCREENING_STEP"
     ) in state_text

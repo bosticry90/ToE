@@ -1,0 +1,94 @@
+{
+  "schema_id": "RESEARCH_QM_STAT_TRANSPORT_MOMENT_STACK_PROBE_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "artifact_path": "formal/output/research/research_qm_stat_transport_moment_stack_probe_20260419_v0.json",
+  "artifact_class": "SCIENTIFIC_DELTA_RESEARCH_ARTIFACT",
+  "metadata": {
+    "artifact_id": "research_qm_stat_transport_moment_stack_probe_20260419_v0",
+    "research_object": "multi-time QM-STAT transport moment stack anchored to the live residual bridge object",
+    "research_question": "Can the live QM-STAT transport-residual blocker be compressed into a bounded three-time moment-stack witness that preserves continuity and first/second-moment transport identities?",
+    "test_type": "REDUCTION_CHECK",
+    "output_kind": "RESULT_SUMMARY",
+    "target_kind": "SEAM",
+    "target_binding": "ROW-SEAM-QM-STAT-001",
+    "delta_class": "ROW_LOCAL_TRANSPORT_MOMENT_STACK",
+    "contradiction_context": "formal/output/architecture/SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0.json",
+    "provenance_family": "research_mode_harder_qm_stat_target_20260419_v0",
+    "nonclaim_boundary": "Repository-local harder live research artifact only; no seam-state flip, sandbox payload emission, or canonical mutation.",
+    "promotability": "NOT_READY"
+  },
+  "live_anchor": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "bridge_object_id": "SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0",
+    "witness_id": "SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0",
+    "minimal_upstream_unit_id": "MASTER_ACTION_RESIDUAL_EXTRACTION_BINDING_UNIT_v0",
+    "authoritative_blocker_definition_id": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+    "authoritative_coupling_state": "TIGHTENED",
+    "authoritative_promotion_ruling": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION"
+  },
+  "math_context": {
+    "object_equation_v0": "rho(x,t) = A^2 exp(-(x-vt)^2 / sigma^2), j(x,t) = v rho(x,t)",
+    "identity_stack_v0": [
+      "partial_t rho + partial_x j = 0",
+      "d/dt int x rho dx = int j dx",
+      "d/dt int x^2 rho dx = 2 int x j dx"
+    ],
+    "regime_v0": "bounded three-time transport-moment stack witness anchored to the live QM-STAT residual package"
+  },
+  "metrics": {
+    "amplitude": 1.2,
+    "sigma": 0.9,
+    "velocity": 1.75,
+    "x_sample_count": 481,
+    "time_values": [
+      0.2,
+      0.4,
+      0.6
+    ],
+    "continuity_residual_sup_abs_max": 4.440892098500626e-16,
+    "mass_drift_abs_max": 1.7763568394002505e-15,
+    "first_moment_transport_gap_abs_max": 6.217248937900877e-15,
+    "second_moment_transport_gap_abs_max": 2.6645352591003757e-15
+  },
+  "snapshots": [
+    {
+      "time_value": 0.2,
+      "mass": 2.2971001907735498,
+      "continuity_residual_sup_abs": 4.440892098500626e-16,
+      "first_moment": 0.803985066770742,
+      "first_moment_rate_closed_form": 4.019925333853712,
+      "first_moment_rate_transport": 4.01992533385371,
+      "second_moment": 1.2117203506330472,
+      "second_moment_rate_closed_form": 2.813947733697597,
+      "second_moment_rate_transport": 2.8139477336975998
+    },
+    {
+      "time_value": 0.4,
+      "mass": 2.2971001907735507,
+      "continuity_residual_sup_abs": 4.440892098500626e-16,
+      "first_moment": 1.607970133541484,
+      "first_moment_rate_closed_form": 4.019925333853713,
+      "first_moment_rate_transport": 4.019925333853709,
+      "second_moment": 2.055904670742326,
+      "second_moment_rate_closed_form": 5.627895467395194,
+      "second_moment_rate_transport": 5.627895467395196
+    },
+    {
+      "time_value": 0.6,
+      "mass": 2.2971001907735515,
+      "continuity_residual_sup_abs": 4.440892098500626e-16,
+      "first_moment": 2.411955200312226,
+      "first_moment_rate_closed_form": 4.019925333853715,
+      "first_moment_rate_transport": 4.019925333853709,
+      "second_moment": 3.4628785375911266,
+      "second_moment_rate_closed_form": 8.44184320109279,
+      "second_moment_rate_transport": 8.441843201092793
+    }
+  ],
+  "research_outcome": {
+    "result_v0": "RETAIN_ROW_LOCAL_TRANSPORT_MOMENT_STACK_WITNESS_AND_KEEP_SEAM_BOUNDARY_FAIL_CLOSED",
+    "direct_math_artifact_v0": true,
+    "canonical_mutation_attempted_v0": false
+  }
+}

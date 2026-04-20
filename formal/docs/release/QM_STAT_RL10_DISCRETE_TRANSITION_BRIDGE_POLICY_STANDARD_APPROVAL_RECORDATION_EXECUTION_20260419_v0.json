@@ -1,0 +1,53 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Declare one bounded repository-local execution surface for RL10 bridge policy standard approval recordation so approval can later be recorded without implying restart authorization and with default state unrecorded.",
+  "required_inputs": {
+    "bridge_policy_standard_approval_record_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_record_20260414_v0.json",
+    "bridge_policy_standard_approval_recording_procedure_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_policy_standard_approval_recording_procedure_20260414_v0.json",
+    "qm_stat_seam_authorization_readiness_dossier_report": "formal/output/reports/qm_stat_seam_authorization_readiness_dossier_20260414_v0.json",
+    "policy_standard_approval_recordation_execution_note": "formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_v0.md"
+  },
+  "approval_recordation_execution_policy": {
+    "required_policy_standard_approval_record_outcome": "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORD_DECLARED",
+    "required_policy_standard_approval_recording_procedure_outcome": "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDING_PROCEDURE_DEFINED",
+    "required_qm_stat_readiness_dossier_outcome": "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_FOR_BOUNDED_PRE_SCREENING",
+    "required_current_restart_blocker": "",
+    "required_note_tokens": [
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_ID_v0: RL10_BRIDGE_EXTERNAL_VALIDATION_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_SCOPE_v0: ONE_REPOSITORY_LOCAL_APPROVAL_RECORD_WRITE_PATH_ONLY",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_REQUIRED_FIELDS_v0: APPROVAL_DECISION_ID_PLUS_APPROVAL_DECISION_TIMESTAMP_UTC_PLUS_APPROVAL_AUTHORITY_ID_PLUS_APPROVAL_ATTESTATION_REFERENCE",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_NON_EQUIVALENCE_RULE_v0: RECORDING_APPROVAL_DOES_NOT_ITSELF_AUTHORIZE_RESTART_OR_OPEN_QM_STAT_EXECUTION",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_FAIL_CLOSED_RULE_v0: IF_ANY_REQUIRED_FIELD_IS_MISSING_OR_PARTIAL_APPROVAL_REMAINS_UNRECORDED",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_STATUS_v0: EXECUTION_SURFACE_DECLARED_DEFAULT_UNRECORDED"
+    ],
+    "required_execution_fields": [
+      "approval_decision_id",
+      "approval_decision_timestamp_utc",
+      "approval_authority_id",
+      "approval_attestation_reference"
+    ],
+    "approval_recordation_execution_defined": true,
+    "approval_decision_id": "RL10-POLICY-APPROVAL-20260419T161452Z",
+    "approval_decision_timestamp_utc": "2026-04-19T16:14:52Z",
+    "approval_authority_id": "LOCAL_REPOSITORY_AUTHORITY_PSBOY",
+    "approval_attestation_reference": "formal/docs/paper/QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POLICY_STANDARD_APPROVAL_ATTESTATION_REFERENCE_v0.md",
+    "approval_recordation_executed": true,
+    "policy_standard_approval_recorded": true,
+    "require_restart_rerun_after_recordation": true,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "approval_recordation_execution_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_OUTCOME",
+    "no_loop_rule": "ONE_RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_READY_BUT_UNRECORDED",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_RECORDED",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_CONTRACT_VIOLATION",
+      "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_EVIDENCE_INCOMPLETE"
+    ],
+    "default_outcome": "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local RL10 bridge policy standard approval-recordation execution declaration only; no scientific adequacy claim."
+}

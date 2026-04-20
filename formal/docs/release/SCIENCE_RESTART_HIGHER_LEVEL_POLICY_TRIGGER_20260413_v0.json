@@ -12,8 +12,8 @@
     "required_frontier_preservation_outcome": "FRONTIER_PRESERVED_AT_CANONICAL_COMMIT",
     "required_frontier_next_action": "NO_FURTHER_ACTIVE_EXECUTION_AUTHORIZED_RESUME_FROM_NEW_STANDARD_OR_NEW_LANE",
     "required_restart_condition_token": "new_higher_level_policy_or_evidence_standard",
-    "required_policy_standard_formalization_outcome": "EXTERNAL_VALIDATION_POLICY_STANDARD_FORMALLY_DEFINED_BUT_NOT_APPROVED",
-    "required_policy_standard_approved": false,
+    "required_policy_standard_formalization_outcome": "EXTERNAL_VALIDATION_POLICY_STANDARD_APPROVED_AND_TRIGGER_AUTHORIZED",
+    "required_policy_standard_approved": true,
     "allowed_policy_review_outcomes_for_authorization": [
       "ADMISSIBLE_REPEATABILITY_STANDARD_DEFINED",
       "ADMISSIBLE_CROSS_PROBE_STANDARD_DEFINED"

@@ -1,0 +1,12 @@
+# Research Mode QM-STAT Sandbox Governed Intake Execution (2026-04-19)
+
+- `RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_EXECUTION_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_EXECUTION_SCOPE_v0: ONE_QM_STAT_INTAKE_READY_PAYLOAD_PLUS_ONE_SUPPORTING_COMPARISON_BUNDLE_ONLY`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_EXECUTION_DECLARATION_v0: formal/docs/release/RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_EXECUTION_20260419_v0.json`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_EXECUTION_TOOL_v0: formal/python/tools/research_mode_qm_stat_sandbox_governed_intake_execution_report.py`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_EXECUTION_GATE_v0: formal/python/tests/test_research_mode_qm_stat_sandbox_governed_intake_execution_report.py`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_EXECUTION_REPORT_v0: formal/output/reports/research_mode_qm_stat_sandbox_governed_intake_execution_20260419_v0.json`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_EXECUTION_ACCEPT_OUTCOME_v0: QM_STAT_SANDBOX_GOVERNED_INTAKE_ACCEPTED_FOR_BOUNDED_SANDBOX_REVIEW`
+- `RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_EXECUTION_LIMIT_v0: NO_GOVERNED_PROMOTION_PASS_NO_CANONICAL_MUTATION_NO_SEAM_CLOSURE`
+
+This surface is the first execution-stage handoff from the QM-STAT governed-review wrapper into the bounded sandbox governance lane. It preserves the payload as the primary object, keeps the harder-target comparison as support-only evidence, and still withholds canonical mutation.

@@ -1,0 +1,61 @@
+{
+  "schema_id": "QM_STAT_CYCLE12_CONTINUATION_EXECUTION_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize exactly one repository-local QM-STAT Cycle12 continuation execution surface from the already-authorized single-lane non-live Cycle12 continuation without opening any downstream continuation family, second lane, or live execution token.",
+  "target_surface": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "source_lane": "QM_STAT_CYCLE11",
+    "authorized_candidate_target": "CYCLE12",
+    "blocker_class": "SEAM_INTEGRATION_GAP",
+    "domain": "seam"
+  },
+  "required_inputs": {
+    "qm_stat_cycle11_explicit_downstream_authorization_report": "formal/output/reports/qm_stat_cycle11_explicit_downstream_authorization_20260419_v0.json",
+    "cycle12_candidate_doc": "formal/docs/release/WS_10_T20_QM_STAT_CYCLE12_ADDITIVE_CANDIDATE_v0.md",
+    "cycle12_target_doc": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE12_v0.md",
+    "cycle12_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle12_v0.json",
+    "cycle12_gate": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py"
+  },
+  "continuation_execution_contract": {
+    "required_authorization_outcome": "QM_STAT_CYCLE12_SINGLE_LANE_AUTHORIZED_NONLIVE_v0",
+    "required_authorization_next_action": "EXECUTE_ONE_BOUNDED_QM_STAT_CYCLE12_CONTINUATION_ONLY",
+    "required_authorization_scope_token": "CONTROL_SURFACE_QM_STAT_CYCLE12_BOUNDED_AUTHORIZATION_NONLIVE",
+    "required_branch_chain_status": "UNAMBIGUOUS_SINGLE_ACTIVE_LANE",
+    "required_candidate_tokens": [
+      "WS10_T20_QM_STAT_CYCLE12_STATUS_v0: DECLARED_BOUNDED_NONCLAIM",
+      "WS10_T20_QM_STAT_CYCLE12_LANE_v0: QM_STAT",
+      "WS10_T20_QM_STAT_CYCLE12_TARGET_v0: CYCLE12",
+      "WS10_T20_QM_STAT_CYCLE12_ARTIFACT_v0: formal/output/qm_stat_class_b_seam_physics_pilot_cycle12_v0.json",
+      "WS10_T20_QM_STAT_CYCLE12_GATE_v0: formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py"
+    ],
+    "required_target_doc_tokens": [
+      "QM_STAT_CYCLE12_STATUS_v0: TWENTIETH_CENTRAL_MOMENT_PARITY_AND_EXCLUSION_PINNED_NONCLAIM",
+      "QM_STAT_CYCLE12_BLOCKER_DISCHARGE_CRITERIA_v0: MASS_MEAN_VARIANCE_THIRD_FOURTH_SIXTH_EIGHTH_TENTH_TWELFTH_FOURTEENTH_SIXTEENTH_EIGHTEENTH_AND_TWENTIETH_MOMENT_PARITY_REQUIRED",
+      "QM_STAT_CYCLE12_SCOPE_v0: FINITE_STATE_DISCRETE_HIGHER_MOMENT_AUDIT_ONLY_NONCLAIM",
+      "QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE12_STATUS_v0: CRITERIA_AND_TWENTIETH_MOMENT_EXCLUSION_PINNED_NONCLAIM"
+    ],
+    "required_gate_tokens": [
+      "cycle=12,",
+      "QM_STAT_CYCLE12_STATUS_v0: TWENTIETH_CENTRAL_MOMENT_PARITY_AND_EXCLUSION_PINNED_NONCLAIM",
+      "QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE12_STATUS_v0: CRITERIA_AND_TWENTIETH_MOMENT_EXCLUSION_PINNED_NONCLAIM"
+    ],
+    "required_artifact_status": "CRITERIA_AND_TWENTIETH_MOMENT_EXCLUSION_PINNED_NONCLAIM",
+    "required_adjudication": "NOT_YET_DISCHARGED",
+    "execution_scope_token": "QM_STAT_CYCLE12_SINGLE_BOUNDED_CONTINUATION_EXECUTION_ONLY_NONLIVE",
+    "execution_live_token_count": 0,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "continuation_execution_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QM_STAT_CYCLE12_CONTINUATION_EXECUTION_OUTCOME",
+    "no_loop_rule": "ONE_QM_STAT_CYCLE12_CONTINUATION_EXECUTION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QM_STAT_CYCLE12_CONTINUATION_EXECUTED_NONLIVE",
+      "QM_STAT_CYCLE12_CONTINUATION_BLOCKED",
+      "QM_STAT_CYCLE12_CONTINUATION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_QM_STAT_CYCLE12_CONTINUATION_EXECUTION_REPAIR"
+    ],
+    "default_outcome": "QM_STAT_CYCLE12_CONTINUATION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT Cycle12 continuation execution declaration only; no scientific adequacy claim."
+}

@@ -1,0 +1,47 @@
+{
+  "schema_id": "RESEARCH_MODE_QM_STAT_POST_REVIEW_ADJUDICATION_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Adjudicate the completed non-canonical QM-STAT sandbox review result into one bounded resting-state decision without canonical promotion.",
+  "required_inputs": {
+    "review_execution_report": "formal/output/reports/research_mode_qm_stat_sandbox_review_execution_20260419_v0.json",
+    "review_packet_report": "formal/output/reports/research_mode_qm_stat_sandbox_review_execution_packet_20260419_v0.json",
+    "intake_execution_report": "formal/output/reports/research_mode_qm_stat_sandbox_governed_intake_execution_20260419_v0.json",
+    "payload_record": "formal/output/reports/research_mode_qm_stat_sandbox_payload_record_20260419_v0.json",
+    "comparison_report": "formal/output/reports/research_mode_qm_stat_sandbox_candidate_comparison_20260419_v0.json"
+  },
+  "adjudication_policy": {
+    "required_review_terminal_outcome": "QM_STAT_SANDBOX_REVIEW_COMPLETED_WITH_NO_CANONICAL_ACTION",
+    "required_review_decision": "bounded_review_completed_with_no_canonical_action",
+    "required_target_row": "ROW-SEAM-QM-STAT-001",
+    "required_target_seam": "SEAM-QM-STAT",
+    "required_target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "required_prior_next_action": "AUTHOR_POST_REVIEW_QM_STAT_ADJUDICATION_SURFACE_WITHOUT_CANONICAL_PROMOTION",
+    "required_next_action_on_retain": "HOLD_QM_STAT_AS_BOUNDED_REVIEWED_CANDIDATE_PENDING_STRONGER_LIVE_OR_AUTHORITY_EVIDENCE",
+    "required_next_action_on_hold": "AUTHOR_ONE_ADDITIONAL_LIVE_TARGET_SUPPORT_SURFACE_BEFORE_REENTRY",
+    "required_next_action_on_prune": "REMOVE_QM_STAT_FROM_NEAR_TERM_GOVERNED_QUEUE_AND_KEEP_REENTRY_NOTE_ONLY",
+    "required_next_action_on_reentry": "REENTER_QM_STAT_BOUNDED_REVIEW_ONLY_IF_NEW_SUPPORTING_EVIDENCE_MATERIALIZES"
+  },
+  "candidate_routes": [
+    {
+      "route_id": "RETAIN_BOUNDED_REVIEWED_CANDIDATE_ROUTE",
+      "activation_condition": "REVIEW_COMPLETED_WITH_NO_CANONICAL_ACTION_AND_AUTHORITY_SPLIT_PRESERVED",
+      "next_action": "HOLD_QM_STAT_AS_BOUNDED_REVIEWED_CANDIDATE_PENDING_STRONGER_LIVE_OR_AUTHORITY_EVIDENCE"
+    },
+    {
+      "route_id": "HOLD_FOR_STRONGER_SUPPORT_ROUTE",
+      "activation_condition": "REVIEW_COMPLETED_BUT_SUPPORT_ROLE_OR_ALIGNMENT_WEAKENS",
+      "next_action": "AUTHOR_ONE_ADDITIONAL_LIVE_TARGET_SUPPORT_SURFACE_BEFORE_REENTRY"
+    },
+    {
+      "route_id": "PRUNE_NEAR_TERM_ROUTE",
+      "activation_condition": "PAYLOAD_AUTHORITY_OR_TARGET_BINDING_BREAKS",
+      "next_action": "REMOVE_QM_STAT_FROM_NEAR_TERM_GOVERNED_QUEUE_AND_KEEP_REENTRY_NOTE_ONLY"
+    },
+    {
+      "route_id": "REENTRY_ELIGIBLE_ROUTE",
+      "activation_condition": "NONCANONICAL_REVIEW_COMPLETES_AND_NEW_EVIDENCE_APPEARS_LATER",
+      "next_action": "REENTER_QM_STAT_BOUNDED_REVIEW_ONLY_IF_NEW_SUPPORTING_EVIDENCE_MATERIALIZES"
+    }
+  ],
+  "non_claim_boundary": "Repository-local post-review adjudication only; no canonical promotion, canonical mutation, or seam-closure claim."
+}

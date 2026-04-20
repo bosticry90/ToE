@@ -43,6 +43,10 @@ def _ptr(path: Path) -> str:
     return str(path.relative_to(REPO_ROOT)).replace("\\", "/")
 
 
+def _maybe_text(raw: Any) -> str:
+    return str(raw).strip() if raw is not None else ""
+
+
 def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict[str, Any]:
     declaration = _read_json(declaration_path)
     required_inputs = dict(declaration.get("required_inputs", {}))
@@ -58,16 +62,27 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     approval_record_surface_path = REPO_ROOT / str(
         required_inputs.get("bridge_policy_standard_approval_record_surface_report", "")
     ).strip()
+    execution_report_relpath = str(
+        required_inputs.get("bridge_policy_standard_approval_recordation_execution_report", "")
+    ).strip()
     note_path = REPO_ROOT / str(required_inputs.get("policy_standard_approval_record_note", "")).strip()
 
     approval_criteria = _read_json(approval_criteria_path)
     approval_eligible_review = _read_json(approval_eligible_review_path)
     approval_record_surface = _read_json(approval_record_surface_path)
+    execution_report = None
+    execution_report_path = None
+    if execution_report_relpath:
+        candidate_execution_report_path = REPO_ROOT / execution_report_relpath
+        if candidate_execution_report_path.exists():
+            execution_report_path = candidate_execution_report_path
+            execution_report = _read_json(candidate_execution_report_path)
     note_text = _read_text(note_path)
 
     approval_criteria_summary = dict(approval_criteria.get("summary", {}))
     approval_eligible_review_summary = dict(approval_eligible_review.get("summary", {}))
     approval_record_surface_summary = dict(approval_record_surface.get("summary", {}))
+    execution_summary = dict(execution_report.get("summary", {})) if execution_report else {}
 
     approval_criteria_outcome = str(approval_criteria_summary.get("terminal_outcome", "")).strip()
     approval_eligible_review_outcome = str(
@@ -89,11 +104,30 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     required_note_tokens = list(policy.get("required_note_tokens", []))
     required_approval_record_fields = list(policy.get("required_approval_record_fields", []))
 
-    policy_standard_approval_record_defined = bool(
-        policy.get("policy_standard_approval_record_defined", False)
+    policy_standard_approval_record_defined = bool(policy.get("policy_standard_approval_record_defined", False))
+    declared_approval_record_fields_present = bool(policy.get("approval_record_fields_present", False))
+    declared_policy_standard_approval_recorded = bool(policy.get("policy_standard_approval_recorded", False))
+
+    execution_terminal_outcome = _maybe_text(execution_summary.get("terminal_outcome"))
+    execution_field_values = [_maybe_text(execution_summary.get(field)) for field in required_approval_record_fields]
+    execution_approval_record_fields_present = bool(required_approval_record_fields) and all(
+        execution_field_values
     )
-    approval_record_fields_present = bool(policy.get("approval_record_fields_present", False))
-    policy_standard_approval_recorded = bool(policy.get("policy_standard_approval_recorded", False))
+    execution_policy_standard_approval_recorded = bool(
+        execution_summary.get("policy_standard_approval_recorded", False)
+    )
+    execution_surface_usable = execution_terminal_outcome in {
+        "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_READY_BUT_UNRECORDED",
+        "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_RECORDED",
+        "",
+    }
+
+    if execution_report is not None:
+        approval_record_fields_present = execution_approval_record_fields_present
+        policy_standard_approval_recorded = execution_policy_standard_approval_recorded
+    else:
+        approval_record_fields_present = declared_approval_record_fields_present
+        policy_standard_approval_recorded = declared_policy_standard_approval_recorded
 
     note_tokens_present = all(token in note_text for token in required_note_tokens)
     policy_shape_ok = all(
@@ -112,6 +146,16 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         ]
     )
 
+    record_state_valid = (
+        (not approval_record_fields_present and not policy_standard_approval_recorded)
+        or (
+            approval_record_fields_present
+            and policy_standard_approval_recorded
+            and execution_terminal_outcome
+            == "RL10_BRIDGE_POLICY_STANDARD_APPROVAL_RECORDATION_EXECUTION_RECORDED"
+        )
+    )
+
     preconditions_ok = (
         approval_criteria_outcome == required_policy_standard_approval_criteria_outcome
         and approval_eligible_review_outcome == required_approval_eligible_policy_review_outcome
@@ -119,8 +163,8 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         and note_tokens_present
         and policy_standard_approval_record_defined
         and bool(required_approval_record_fields)
-        and not approval_record_fields_present
-        and not policy_standard_approval_recorded
+        and execution_surface_usable
+        and record_state_valid
     )
 
     allowed_outcomes = set(contract.get("allowed_outcomes", []))
@@ -176,6 +220,7 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
                 "policy_standard_approval_criteria_outcome": approval_criteria_outcome,
                 "approval_eligible_policy_review_outcome": approval_eligible_review_outcome,
                 "policy_standard_approval_record_surface_outcome": approval_record_surface_outcome,
+                "approval_recordation_execution_outcome": execution_terminal_outcome or None,
                 "policy_standard_approval_record_defined": policy_standard_approval_record_defined,
                 "required_approval_record_fields": required_approval_record_fields,
                 "approval_record_fields_present": approval_record_fields_present,
@@ -202,6 +247,9 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
             "bridge_policy_standard_approval_criteria_report": _ptr(approval_criteria_path),
             "bridge_approval_eligible_policy_review_outcome_report": _ptr(approval_eligible_review_path),
             "bridge_policy_standard_approval_record_surface_report": _ptr(approval_record_surface_path),
+            "bridge_policy_standard_approval_recordation_execution_report": (
+                _ptr(execution_report_path) if execution_report_path is not None else None
+            ),
             "policy_standard_approval_record_note": _ptr(note_path),
         },
         "non_claim_boundary": "Repository-local RL10 bridge policy standard approval-record report only; no scientific adequacy claim.",

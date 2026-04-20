@@ -1,0 +1,56 @@
+{
+  "schema_id": "POST_PLAN_THEOREM_GAP_RERANKING_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Republish the remaining theorem-gap row order after fresh-movement qualification, row authorization, blocker reduction, or explicit exhaustion, while keeping QM last and reserve rows closed until the first selected family resolves.",
+  "required_inputs": {
+    "fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "successor_family_authorization_review_report": "formal/output/reports/post_plan_theorem_gap_successor_family_authorization_review_20260419_v0.json",
+    "blocker_burn_dashboard_report": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json",
+    "stat_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_stat_20260419_v0.json",
+    "cosmo_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_cosmo_20260419_v0.json",
+    "gr_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_gr_20260419_v0.json",
+    "qft_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_qft_20260419_v0.json",
+    "em_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_em_20260419_v0.json",
+    "sr_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_sr_20260419_v0.json",
+    "qm_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_qm_20260419_v0.json",
+    "stat_reactivation_tranche_report": "formal/output/reports/post_plan_stat_theorem_gap_reactivation_tranche_20260419_v0.json",
+    "cosmo_reactivation_tranche_report": "formal/output/reports/post_plan_cosmo_theorem_gap_reactivation_tranche_20260419_v0.json",
+    "gr_reactivation_tranche_report": "formal/output/reports/post_plan_gr_dormant_new_structure_reactivation_tranche_20260419_v0.json"
+  },
+  "reranking_policy": {
+    "default_order": [
+      "ROW-PILLAR-STAT-001",
+      "ROW-PILLAR-COSMO-001",
+      "ROW-PILLAR-GR-001",
+      "ROW-PILLAR-QFT-001",
+      "ROW-PILLAR-EM-001",
+      "ROW-PILLAR-SR-001",
+      "ROW-PILLAR-QM-001"
+    ],
+    "qm_last_row": "ROW-PILLAR-QM-001",
+    "cosmo_override_row": "ROW-PILLAR-COSMO-001",
+    "gr_dormant_only_row": "ROW-PILLAR-GR-001",
+    "reserve_rows": [
+      "ROW-PILLAR-QFT-001",
+      "ROW-PILLAR-EM-001",
+      "ROW-PILLAR-SR-001"
+    ],
+    "update_triggers": [
+      "NEGATIVE_THEOREM_GAP_DELTA",
+      "SELECTED_ROW_PROMOTED",
+      "SELECTED_ROW_EXPLICITLY_EXHAUSTED"
+    ]
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_THEOREM_GAP_RERANKING_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_THEOREM_GAP_RERANKING_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_THEOREM_GAP_RERANKING_RETAINED",
+      "POST_PLAN_THEOREM_GAP_RERANKING_UPDATED",
+      "POST_PLAN_THEOREM_GAP_RERANKING_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_THEOREM_GAP_RERANKING_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_THEOREM_GAP_RERANKING_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local theorem-gap reranking only; no scientific adequacy claim."
+}

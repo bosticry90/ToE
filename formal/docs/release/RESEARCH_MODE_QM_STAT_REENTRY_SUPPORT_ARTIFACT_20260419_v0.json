@@ -1,0 +1,33 @@
+{
+  "schema_id": "RESEARCH_MODE_QM_STAT_REENTRY_SUPPORT_ARTIFACT_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize one narrow QM-STAT support artifact that targets only the remaining bounded re-entry queue-authorization deficiency while preserving the retained reviewed-candidate and non-canonical boundary.",
+  "required_inputs": {
+    "post_review_adjudication_report": "formal/output/reports/research_mode_qm_stat_post_review_adjudication_20260419_v0.json",
+    "live_authority_evidence_report": "formal/output/reports/research_mode_qm_stat_live_authority_evidence_20260419_v0.json",
+    "reentry_eligibility_review_report": "formal/output/reports/research_mode_qm_stat_reentry_eligibility_review_20260419_v0.json",
+    "bridge_object": "formal/output/architecture/SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0.json",
+    "witness_binding": "formal/output/architecture/SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0.json",
+    "blocker_definitions": "formal/output/authority/authoritative_blocker_definitions.json"
+  },
+  "support_artifact_contract": {
+    "required_post_review_adjudication": "RETAIN_AS_BOUNDED_REVIEWED_CANDIDATE",
+    "required_candidate_disposition": "RETAIN_BOUNDED_REVIEWED_CANDIDATE",
+    "required_evidence_terminal_outcome": "QM_STAT_STRONGER_LIVE_AUTHORITY_EVIDENCE_MATERIALIZED",
+    "required_partial_eligibility_outcome": "QM_STAT_REENTRY_ELIGIBILITY_PARTIALLY_MET",
+    "required_partial_next_action": "AUTHOR_ONE_MORE_QM_STAT_SUPPORT_ARTIFACT_BEFORE_QUEUEING_BOUNDED_REENTRY",
+    "required_target_row": "ROW-SEAM-QM-STAT-001",
+    "required_target_seam": "SEAM-QM-STAT",
+    "required_target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "required_blocker_definition_id": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+    "required_coupling_state": "TIGHTENED",
+    "required_promotion_ruling": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+    "authorized_candidate_target": "ROW-SEAM-QM-STAT-001::QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "authorization_status_on_ready": "AUTHORIZED_FOR_ONE_BOUNDED_REENTRY_QUEUE_DECISION",
+    "authorization_scope_token": "ONE_BOUNDED_QM_STAT_REENTRY_QUEUE_ONLY",
+    "required_gap_token": "DIRECT_QUEUE_AUTHORIZATION_MISSING",
+    "next_action_on_ready": "QUEUE_ONE_BOUNDED_QM_STAT_REENTRY_REVIEW_CYCLE",
+    "next_action_on_incomplete": "REMAIN_ON_HOLD_PENDING_REENTRY_SUPPORT_REPAIR"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT re-entry support artifact only; no canonical promotion, canonical mutation, or seam-closure claim."
+}

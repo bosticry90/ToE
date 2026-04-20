@@ -98,7 +98,35 @@
         "coupling_state": "TIGHTENED"
       },
       "lineage_notes": "Promotion via bounded coupling refinement; tightened seam-to-ledger binding"
+    },
+    {
+      "supersession_id": "SUPERSESSION_20260419_205241",
+      "prior_authoritative_token": "PRIOR_AUTHORITATIVE_BLOCKER_DEFINITION",
+      "new_authoritative_token": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "supersession_date": "2026-04-19T20:52:41.764987Z",
+      "supersession_justified_by": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+      "coupling_evidence": {
+        "seam_coherence_fires": true,
+        "ledger_artifact_fires": true,
+        "correlation_witness_materializes": true,
+        "coupling_state": "TIGHTENED"
+      },
+      "lineage_notes": "Promotion via bounded coupling refinement; tightened seam-to-ledger binding"
+    },
+    {
+      "supersession_id": "SUPERSESSION_20260419_205245",
+      "prior_authoritative_token": "PRIOR_AUTHORITATIVE_BLOCKER_DEFINITION",
+      "new_authoritative_token": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "supersession_date": "2026-04-19T20:52:45.249458Z",
+      "supersession_justified_by": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+      "coupling_evidence": {
+        "seam_coherence_fires": true,
+        "ledger_artifact_fires": true,
+        "correlation_witness_materializes": true,
+        "coupling_state": "TIGHTENED"
+      },
+      "lineage_notes": "Promotion via bounded coupling refinement; tightened seam-to-ledger binding"
     }
   ],
-  "last_updated": "2026-04-18T19:51:38.911507Z"
+  "last_updated": "2026-04-19T20:52:45.249458Z"
 }

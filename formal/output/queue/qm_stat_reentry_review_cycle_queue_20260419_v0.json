@@ -1,0 +1,20 @@
+{
+  "authorized_candidate_target": "ROW-SEAM-QM-STAT-001::QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+  "captured_at_utc": "2026-04-20T02:53:29Z",
+  "non_claim_boundary": "Repository-local QM-STAT re-entry review-cycle queue only; no canonical promotion, canonical mutation, or seam-closure claim.",
+  "queue_class": "BOUNDED_REENTRY_REVIEW_CYCLE_QUEUE",
+  "queue_id": "qm_stat_reentry_review_cycle_queue_20260419_v0",
+  "queue_packet_status": "PENDING_REENTRY_QUEUE_PACKET_AUTHORING",
+  "queue_scope_token": "ONE_BOUNDED_QM_STAT_REENTRY_REVIEW_CYCLE_ONLY",
+  "queue_status": "QUEUED_FOR_ONE_BOUNDED_REENTRY_REVIEW_CYCLE",
+  "source_bundle": {
+    "reentry_eligibility_review_report": "formal/output/reports/research_mode_qm_stat_reentry_eligibility_review_20260419_v0.json",
+    "reentry_support_artifact_report": "formal/output/reports/research_mode_qm_stat_reentry_support_artifact_20260419_v0.json"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "target_binding": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "seam_id": "SEAM-QM-STAT",
+    "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0"
+  }
+}

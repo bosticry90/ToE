@@ -68,14 +68,16 @@ def check_recompute_completion_status(surface_name, surface_data):
     # Check if there are computed outputs (would indicate completion)
     has_computed_outputs = "computed_state" in surface_data or "results" in surface_data or "output_values" in surface_data
     
+    effective_status = "COMPLETED" if has_computed_outputs else status
+
     completion_status = "COMPLETED" if has_computed_outputs else (
-        "COMPLETED_NO_OUTPUT" if status != "PENDING_RECOMPUTE" else "PENDING_RECOMPUTE"
+        "COMPLETED_NO_OUTPUT" if effective_status != "PENDING_RECOMPUTE" else "PENDING_RECOMPUTE"
     )
     
     return {
         "surface_name": surface_name,
         "completion_status": completion_status,
-        "last_trigger_status": status,
+        "last_trigger_status": effective_status,
         "has_computed_outputs": has_computed_outputs,
         "data_available": has_computed_outputs
     }

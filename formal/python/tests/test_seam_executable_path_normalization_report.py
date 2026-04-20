@@ -71,7 +71,7 @@ def _write_declaration(path: Path) -> None:
             },
             "expected_rows": {
                 "SEAM-QFT-GR": {"required_path_class": "EXTERNAL_HOLD_NONEXECUTABLE_PATH", "required_next_action": "WAIT_FOR_SCALAR_PUBLICATION_RELEASE_ONLY"},
-                "SEAM-QM-STAT": {"required_path_class": "POLICY_BLOCKED_NONEXECUTABLE_PATH", "required_next_action": "RECORD_POLICY_STANDARD_APPROVAL_BEFORE_ANY_QM_STAT_RESTART_AUTHORIZATION"},
+                "SEAM-QM-STAT": {"required_path_class": "POLICY_BLOCKED_NONEXECUTABLE_PATH", "required_next_action": "EXECUTE_ONE_BOUNDED_QM_STAT_CYCLE11_PRE_SCREENING_STEP_WITH_NO_DIRECT_EXECUTION_AUTHORIZATION"},
                 "SEAM-COSMO-SR": {"required_path_class": "SINGLE_AUTHORIZED_NONLIVE_EXECUTABLE_PATH", "required_next_action": "EXECUTE_ONE_BOUNDED_COSMO_SR_CYCLE07_ACTIVATION_ONLY"},
                 "SEAM-STAT-QM": {"required_path_class": "COUNTERFACTUAL_MIRROR_ONLY_NONEXECUTABLE_PATH", "required_next_action": "REMAIN_MIRROR_ONLY_UNTIL_A_CANONICAL_ROW_AND_AUTHORIZATION_SURFACE_EXIST"},
                 "SEAM-SR-COSMO": {"required_path_class": "COUNTERFACTUAL_MIRROR_ONLY_NONEXECUTABLE_PATH", "required_next_action": "REMAIN_MIRROR_ONLY_UNTIL_A_CANONICAL_ROW_AND_AUTHORIZATION_SURFACE_EXIST"},
@@ -106,7 +106,7 @@ def _seed_inputs(root: Path, *, cosmo_outcome: str = "COSMO_SR_CYCLE07_SINGLE_LA
     )
     _write_json(
         root / "formal" / "output" / "reports" / "qm_stat_seam_authorization_readiness_dossier_20260414_v0.json",
-        {"summary": {"terminal_outcome": "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_BUT_RESTART_BLOCKED", "next_action": "RECORD_POLICY_STANDARD_APPROVAL_BEFORE_ANY_QM_STAT_RESTART_AUTHORIZATION"}}
+        {"summary": {"terminal_outcome": "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_FOR_BOUNDED_PRE_SCREENING", "next_action": "EXECUTE_ONE_BOUNDED_QM_STAT_CYCLE11_PRE_SCREENING_STEP_WITH_NO_DIRECT_EXECUTION_AUTHORIZATION"}}
     )
     _write_json(
         root / "formal" / "output" / "reports" / "cosmo_sr_bounded_activation_authorization_20260418_v0.json",

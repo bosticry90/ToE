@@ -39,6 +39,10 @@ def _ptr(path: Path) -> str:
     return str(path.relative_to(REPO_ROOT)).replace("\\", "/")
 
 
+def _maybe_text(raw: Any) -> str:
+    return str(raw).strip() if raw is not None else ""
+
+
 def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict[str, Any]:
     declaration = _read_json(declaration_path)
     required_inputs = dict(declaration.get("required_inputs", {}))
@@ -57,15 +61,26 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     policy_trigger_path = REPO_ROOT / str(
         required_inputs.get("science_restart_higher_level_policy_trigger_report", "")
     ).strip()
+    anti_alias_report_relpath = str(
+        required_inputs.get("science_restart_anti_alias_proof_declaration_report", "")
+    ).strip()
 
     post_z = _read_json(post_z_path)
     phase_z = _read_json(phase_z_path)
     summary_doc = _read_text(summary_doc_path)
     policy_trigger = _read_json(policy_trigger_path)
+    anti_alias_report = None
+    anti_alias_report_path = None
+    if anti_alias_report_relpath:
+        candidate_anti_alias_report_path = REPO_ROOT / anti_alias_report_relpath
+        if candidate_anti_alias_report_path.exists():
+            anti_alias_report_path = candidate_anti_alias_report_path
+            anti_alias_report = _read_json(candidate_anti_alias_report_path)
 
     post_z_summary = dict(post_z.get("summary", {}))
     phase_z_summary = dict(phase_z.get("summary", {}))
     policy_trigger_summary = dict(policy_trigger.get("summary", {}))
+    anti_alias_report_summary = dict(anti_alias_report.get("summary", {})) if anti_alias_report else {}
 
     post_z_outcome = str(post_z_summary.get("terminal_outcome", "")).strip()
     phase_z_outcome = str(phase_z_summary.get("terminal_outcome", "")).strip()
@@ -105,9 +120,15 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     material_new_external_evidence_class = bool(
         restart_trigger_families.get("material_new_external_evidence_class", False)
     )
-    anti_alias_proof_for_new_candidate_declared = bool(
-        restart_trigger_families.get("anti_alias_proof_for_new_candidate_declared", False)
-    )
+    anti_alias_report_outcome = _maybe_text(anti_alias_report_summary.get("terminal_outcome"))
+    if anti_alias_report is not None:
+        anti_alias_proof_for_new_candidate_declared = bool(
+            anti_alias_report_summary.get("anti_alias_proof_for_new_candidate_declared", False)
+        )
+    else:
+        anti_alias_proof_for_new_candidate_declared = bool(
+            restart_trigger_families.get("anti_alias_proof_for_new_candidate_declared", False)
+        )
     force_policy_escalation_now = bool(restart_trigger_families.get("force_policy_escalation_now", False))
 
     signals_shape_ok = all(
@@ -120,6 +141,12 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
             "force_policy_escalation_now",
         ]
     )
+
+    anti_alias_report_usable = anti_alias_report is None or anti_alias_report_outcome in {
+        "SCIENCE_RESTART_ANTI_ALIAS_PROOF_READY_BUT_UNDECLARED",
+        "SCIENCE_RESTART_ANTI_ALIAS_PROOF_DECLARED",
+        "",
+    }
 
     trigger_selected = any(
         [
@@ -144,6 +171,7 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         and higher_level_policy_trigger_outcome == required_higher_level_policy_trigger_outcome
         and higher_level_policy_revision_authorized == required_higher_level_policy_revision_authorized
         and forbid_reopen
+        and anti_alias_report_usable
         and signals_shape_ok
         and summary_doc_semantics_ok
     )
@@ -218,6 +246,7 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
                 "required_higher_level_policy_trigger_outcome": required_higher_level_policy_trigger_outcome,
                 "higher_level_policy_revision_authorized": higher_level_policy_revision_authorized,
                 "required_higher_level_policy_revision_authorized": required_higher_level_policy_revision_authorized,
+                "anti_alias_proof_declaration_outcome": anti_alias_report_outcome or None,
             },
             "summary": {
                 "all_criteria_satisfied": terminal_outcome in allowed_outcomes,
@@ -240,6 +269,9 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
             "science_post_phase_z_frontier_decision_report": _ptr(post_z_path),
             "science_phase_z_stronger_candidate_class_discovery_report": _ptr(phase_z_path),
             "science_restart_higher_level_policy_trigger_report": _ptr(policy_trigger_path),
+            "science_restart_anti_alias_proof_declaration_report": (
+                _ptr(anti_alias_report_path) if anti_alias_report_path is not None else None
+            ),
             "science_frontier_stop_state_summary_doc": _ptr(summary_doc_path),
         },
         "non_claim_boundary": "Repository-local restart trigger contract report only; no scientific adequacy claim.",

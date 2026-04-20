@@ -1,0 +1,38 @@
+{
+  "schema_id": "POST_PLAN_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_REVIEW_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Evaluate whether the exhausted post-cascade QFT/EM/SR continuation family has any fresh blocker-facing movement logic that justifies authoring exactly one newly declared successor family, or whether the branch must remain terminally exhausted under current declared surfaces.",
+  "required_inputs": {
+    "post_plan_post_cascade_explicit_exhaustion_decision_report": "formal/output/reports/post_plan_post_cascade_explicit_exhaustion_decision_20260419_v0.json",
+    "blocker_burn_dashboard_report": "formal/output/reports/blocker_burn_dashboard_20260416_v0.json",
+    "post_plan_physics_advancement_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json"
+  },
+  "eligibility_policy": {
+    "required_exhaustion_outcome": "POST_PLAN_POST_CASCADE_EXPLICIT_EXHAUSTION_DECISION_EXHAUSTED_UNDER_CURRENT_DECLARED_FAMILY",
+    "required_successor_declared": false,
+    "required_fresh_movement_blocker_classes": [
+      "THEOREM_GAP",
+      "SEAM_INTEGRATION_GAP"
+    ],
+    "authorization_mode": "AT_MOST_ONE",
+    "selected_reopen_route": "NONE",
+    "selected_reopen_route_class": "",
+    "selected_reopen_route_family_declaration": "",
+    "selected_reopen_route_family_gate": "",
+    "selected_reopen_route_machine_pinned": false,
+    "single_layer_only": true,
+    "single_outcome_only": true
+  },
+  "eligibility_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_REVIEW_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_NONE_ELIGIBLE",
+      "POST_PLAN_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_ONE_ROUTE_AUTHORIZED",
+      "POST_PLAN_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_CONTRACT_VIOLATION",
+      "POST_PLAN_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_EVIDENCE_INCOMPLETE"
+    ],
+    "default_outcome": "POST_PLAN_POST_CASCADE_SUCCESSOR_FAMILY_ELIGIBILITY_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-cascade successor-family eligibility review only; no scientific adequacy claim."
+}

@@ -1,0 +1,44 @@
+{
+  "schema_id": "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_QM_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize the QM row reopen dossier under the theorem-gap reactivation program.",
+  "required_inputs": {
+    "fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "latest_row_report": "formal/output/reports/post_plan_qm_first_theorem_gap_tranche_20260418_v0.json"
+  },
+  "row_policy": {
+    "row_id": "ROW-PILLAR-QM-001",
+    "required_route_class": "THEOREM_GAP_PROGRAM",
+    "default_rank": 7,
+    "policy_class": "EXCLUDED_PENDING_NON_QM_MOVEMENT",
+    "historical_no_change_count": 4,
+    "exhausted_family_history": [
+      "TGC-77",
+      "R5-QM-REWORK-001",
+      "R6-QM-SUBTARGET-001",
+      "POST_PLAN_QM_FIRST_THEOREM_GAP_TRANCHE_EXECUTED_NONPROMOTED"
+    ],
+    "fresh_movement_hypothesis": "Require non-QM theorem-gap or seam-integration movement plus a distinct non-replay QM theorem surface before any reopen.",
+    "measurable_blocker_delta_criterion": "NEGATIVE_THEOREM_GAP_DELTA_AFTER_NON_QM_MOVEMENT_WITH_DISTINCT_QM_SURFACE",
+    "bounded_execution_surface_declaration": "formal/docs/release/THEOREM_GAP_QM_REWORK_TRANCHE_20260411_v0.json",
+    "bounded_execution_surface_gate": "formal/python/tests/test_governance_audit_packet_gate.py",
+    "explicit_exhaustion_fallback": "KEEP_QM_CLOSED_UNTIL_NON_QM_MOVEMENT_AND_DISTINCT_QM_SURFACE_ARE_BOTH_MACHINE_PINNED",
+    "requires_non_qm_movement": true,
+    "seam_linked_override_only": false,
+    "dormant_package_only": false,
+    "reserve_until_first_selected_family_resolution": false
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_OUTCOME",
+    "no_loop_rule": "ONE_ROW_DOSSIER_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_MATERIALIZED",
+      "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local QM row reopen dossier only; no scientific adequacy claim."
+}

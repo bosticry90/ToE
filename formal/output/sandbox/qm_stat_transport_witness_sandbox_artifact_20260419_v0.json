@@ -1,0 +1,63 @@
+{
+  "schema_id": "QM_STAT_TRANSPORT_WITNESS_SANDBOX_ARTIFACT_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "artifact_path": "formal/output/sandbox/qm_stat_transport_witness_sandbox_artifact_20260419_v0.json",
+  "artifact_class": "PROMOTION_CANDIDATE_SANDBOX_ARTIFACT",
+  "metadata_record": {
+    "artifact_id": "qm_stat_transport_witness_sandbox_artifact_20260419_v0",
+    "artifact_class": "PROMOTION_CANDIDATE_SANDBOX_ARTIFACT",
+    "delta_class": "LOCAL_TRANSPORT_WITNESS",
+    "provenance_family": "research_mode_qm_stat_sandbox_payload_record_20260419_v0",
+    "declared_scope": "SINGLE_ROW_SINGLE_SEAM_QM_STAT_TRANSPORT_WITNESS_NONLIVE",
+    "target_binding": {
+      "row_id": "ROW-SEAM-QM-STAT-001",
+      "seam_id": "SEAM-QM-STAT",
+      "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0"
+    },
+    "contradiction_check": {
+      "surface": "formal/output/reports/research_mode_sandbox_candidacy_review_20260419_v0.json",
+      "result": "PASS_NO_ACTIVE_CANONICAL_CONTRADICTION_RESEARCH_WITNESS_REMAINS_NONPROMOTED",
+      "rationale": "The accepted research witness is aligned to the live QM-STAT residual bridge object while ROW-SEAM-QM-STAT-001 remains policy-blocked and canonically unchanged."
+    },
+    "nonclaim_boundary": "Repository-local sandbox-facing witness only; no governed review pass, canonical mutation, or physics closure claim.",
+    "promotion_readiness": "READY_FOR_PROMOTION_REVIEW"
+  },
+  "source_research_artifact": {
+    "artifact_id": "research_qm_stat_transport_witness_probe_20260419_v0",
+    "artifact_path": "formal/output/research/research_qm_stat_transport_witness_probe_20260419_v0.json",
+    "source_candidacy_review": "formal/output/reports/research_mode_sandbox_candidacy_review_20260419_v0.json"
+  },
+  "target_binding": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "seam_id": "SEAM-QM-STAT",
+    "target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0"
+  },
+  "live_anchor": {
+    "bridge_object_id": "SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0",
+    "witness_id": "SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0",
+    "minimal_upstream_unit_id": "MASTER_ACTION_RESIDUAL_EXTRACTION_BINDING_UNIT_v0",
+    "authoritative_blocker_definition_id": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+    "authoritative_coupling_state": "TIGHTENED",
+    "authoritative_promotion_ruling": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION"
+  },
+  "math_context": {
+    "object_equation_v0": "rho(x,t) = A^2 exp(-(x - vt)^2 / sigma^2), j(x,t) = v rho(x,t)",
+    "identity_tested_v0": "partial_t rho + partial_x j = 0",
+    "regime_v0": "bounded rigid-translation continuity witness"
+  },
+  "metrics": {
+    "amplitude": 1.2,
+    "sigma": 0.9,
+    "velocity": 1.75,
+    "time_value": 0.4,
+    "sample_count": 17,
+    "peak_density": 1.435562407215,
+    "continuity_residual_sup_abs": 0.0,
+    "continuity_residual_l1": 0.0
+  },
+  "sandbox_outcome": {
+    "result_v0": "RETAIN_QM_STAT_TRANSPORT_WITNESS_AS_BOUNDED_SANDBOX_PROMOTION_INPUT_ONLY",
+    "direct_math_artifact_v0": true,
+    "canonical_mutation_attempted_v0": false
+  }
+}

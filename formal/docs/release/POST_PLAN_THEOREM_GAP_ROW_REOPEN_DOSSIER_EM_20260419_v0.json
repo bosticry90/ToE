@@ -1,0 +1,42 @@
+{
+  "schema_id": "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_EM_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize the EM row reopen dossier under the theorem-gap reactivation program.",
+  "required_inputs": {
+    "fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "post_plan_target_map_report": "formal/output/reports/post_plan_physics_advancement_target_map_20260418_v0.json",
+    "completion_matrix": "formal/docs/release/TOE_GLOBAL_COMPLETION_MATRIX_v0.md",
+    "latest_row_report": "formal/output/reports/post_plan_em_theorem_gap_completion_tranche_20260418_v0.json"
+  },
+  "row_policy": {
+    "row_id": "ROW-PILLAR-EM-001",
+    "required_route_class": "THEOREM_GAP_PROGRAM",
+    "default_rank": 5,
+    "policy_class": "POST_CASCADE_RESERVE_CANDIDATE",
+    "historical_no_change_count": 2,
+    "exhausted_family_history": [
+      "TGC-81",
+      "POST_PLAN_EM_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED"
+    ],
+    "fresh_movement_hypothesis": "Keep EM as a reserve reopen row that remains blocked until the first selected family resolves and reranking republishes EM as the next live row.",
+    "measurable_blocker_delta_criterion": "NEGATIVE_THEOREM_GAP_DELTA_AFTER_FIRST_SELECTED_FAMILY_RESOLVES",
+    "bounded_execution_surface_declaration": "formal/docs/release/POST_PLAN_EM_THEOREM_GAP_COMPLETION_TRANCHE_20260418_v0.json",
+    "bounded_execution_surface_gate": "formal/python/tests/test_post_plan_em_theorem_gap_completion_tranche_report.py",
+    "explicit_exhaustion_fallback": "KEEP_EM_CLOSED_UNTIL_FIRST_SELECTED_FAMILY_RESOLUTION_OR_NEW_FRESH_MOVEMENT_REORDERING",
+    "requires_non_qm_movement": false,
+    "seam_linked_override_only": false,
+    "dormant_package_only": false,
+    "reserve_until_first_selected_family_resolution": true
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_OUTCOME",
+    "no_loop_rule": "ONE_ROW_DOSSIER_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_MATERIALIZED",
+      "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_REPAIR"
+    ],
+    "default_outcome": "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local EM row reopen dossier only; no scientific adequacy claim."
+}

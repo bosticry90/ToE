@@ -1,0 +1,37 @@
+{
+  "schema_id": "POST_PLAN_ORDERED_THEOREM_GAP_CONTINUATION_TRANCHE_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Materialize one explicitly canonical theorem-gap continuation tranche that binds the already pinned STAT theorem-gap tranche to the April 19 remaining-work ordering once the selected COSMO-SR continuation execution has closed out, preserving theorem-gap work as the second family and advancing the downstream handoff to the next bounded row package.",
+  "required_inputs": {
+    "post_plan_remaining_physics_execution_order_report": "formal/output/reports/post_plan_remaining_physics_execution_order_20260419_v0.json",
+    "post_plan_objective_quality_physics_completion_queue_report": "formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json",
+    "post_plan_stat_theorem_gap_completion_tranche_report": "formal/output/reports/post_plan_stat_theorem_gap_completion_tranche_20260418_v0.json"
+  },
+  "execution_policy": {
+    "required_remaining_order_outcome": "POST_PLAN_REMAINING_PHYSICS_EXECUTION_ORDER_MATERIALIZED",
+    "required_first_family": "COSMO_SR_SELECTED_CONTINUATION_FAMILY",
+    "required_second_family": "OBJECTIVE_QUALITY_QUEUE_DOWNSTREAM",
+    "required_remaining_order_next_action": "PREPARE_POST_PLAN_STAT_THEOREM_GAP_COMPLETION_TRANCHE_AND_RETAIN_CURRENT_SEAM_CLASSES",
+    "required_queue_outcome": "POST_PLAN_OBJECTIVE_QUALITY_PHYSICS_COMPLETION_QUEUE_MATERIALIZED",
+    "required_queue_first_row": "ROW-PILLAR-COSMO-001",
+    "required_queue_second_row": "ROW-PILLAR-STAT-001",
+    "required_primary_executable_seam": "SEAM-COSMO-SR",
+    "required_stat_tranche_outcome": "POST_PLAN_STAT_THEOREM_GAP_COMPLETION_TRANCHE_EXECUTED_NONPROMOTED",
+    "required_stat_tranche_next_action": "PREPARE_GR_DORMANT_NEW_STRUCTURE_COMPLETION_PACKAGE_AND_RETAIN_CURRENT_SEAM_CLASSES",
+    "selected_tranche_family": "POST_PLAN_STAT_THEOREM_GAP_COMPLETION_TRANCHE",
+    "selected_tranche_target_row": "ROW-PILLAR-STAT-001",
+    "selected_tranche_activation_state": "HIGHER_PRIORITY_CLOSEOUT_RECORDED",
+    "defer_until_family": "COSMO_SR_SELECTED_CONTINUATION_FAMILY"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_PLAN_ORDERED_THEOREM_GAP_CONTINUATION_TRANCHE_OUTCOME",
+    "no_loop_rule": "ONE_POST_PLAN_ORDERED_THEOREM_GAP_CONTINUATION_TRANCHE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "POST_PLAN_ORDERED_THEOREM_GAP_CONTINUATION_TRANCHE_MATERIALIZED",
+      "POST_PLAN_ORDERED_THEOREM_GAP_CONTINUATION_TRANCHE_EVIDENCE_INCOMPLETE",
+      "POST_PLAN_ORDERED_THEOREM_GAP_CONTINUATION_TRANCHE_CONTRACT_VIOLATION"
+    ],
+    "default_outcome": "POST_PLAN_ORDERED_THEOREM_GAP_CONTINUATION_TRANCHE_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local post-plan ordered theorem-gap continuation tranche only; no scientific adequacy claim."
+}

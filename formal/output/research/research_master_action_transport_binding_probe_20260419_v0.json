@@ -1,0 +1,39 @@
+{
+  "schema_id": "RESEARCH_MASTER_ACTION_TRANSPORT_BINDING_PROBE_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "artifact_path": "formal/output/research/research_master_action_transport_binding_probe_20260419_v0.json",
+  "artifact_class": "SCIENTIFIC_DELTA_RESEARCH_ARTIFACT",
+  "metadata": {
+    "artifact_id": "research_master_action_transport_binding_probe_20260419_v0",
+    "research_object": "single-parameter transport-binding surrogate for a traveling-wave probe",
+    "research_question": "Can a one-parameter local transport-binding surrogate collapse the master-action advisory residual on a declared wave probe without mutating canonical state?",
+    "test_type": "DERIVATION",
+    "output_kind": "RESULT_SUMMARY",
+    "target_kind": "MASTER_ACTION",
+    "target_binding": "MASTER_ACTION_PACKET_01_TRANSPORT_BINDING_RECOVERY_20260418_v0",
+    "delta_class": "LOCAL_TRANSPORT_BINDING_SURROGATE",
+    "contradiction_context": "formal/output/reports/master_action_packet_01_transport_binding_recovery_20260418_v0.json",
+    "provenance_family": "research_mode_pilot_pack_20260419_v0",
+    "nonclaim_boundary": "Repository-local advisory research artifact only; no master-action reclassification or canonical mutation.",
+    "promotability": "NOT_READY"
+  },
+  "math_context": {
+    "object_equation_v0": "phi_tt - lambda phi_xx = 0 on phi(x,t) = sin(k x - omega t)",
+    "identity_tested_v0": "lambda* = (omega / k)^2 minimizes the local Euler-Lagrange residual amplitude",
+    "regime_v0": "bounded advisory transport-binding surrogate"
+  },
+  "metrics": {
+    "wave_number": 1.4,
+    "frequency": 2.1,
+    "baseline_lambda": 1.0,
+    "optimized_lambda": 2.25,
+    "baseline_residual_amplitude_abs": 2.45,
+    "optimized_residual_amplitude_abs": 0.0,
+    "optimized_stationarity_recovered": true
+  },
+  "research_outcome": {
+    "result_v0": "RETAIN_LOCAL_BINDING_MINIMIZER_AS_ADVISORY_ONLY",
+    "direct_math_artifact_v0": true,
+    "canonical_mutation_attempted_v0": false
+  }
+}

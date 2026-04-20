@@ -33,6 +33,38 @@ def _ptr(path: Path) -> str:
     return str(path.relative_to(REPO_ROOT)).replace("\\", "/")
 
 
+def _is_row_local_blocker_change(
+    token: str,
+    *,
+    row_id: str,
+    target_package_id: str,
+    blocker_class: str,
+    owning_lane: str,
+    seam_id: str,
+) -> bool:
+    normalized = token.strip().upper()
+    if normalized in {
+        "",
+        "NO_DELTA_DETECTED",
+        "NO_DELTA_DETECTED_ROUTE_TO_REWORK",
+        "NEGATIVE_DELTA_DETECTED",
+        "NEGATIVE_DELTA_DETECTED_ROUTE_TO_REWORK",
+        "POSITIVE_DELTA_DETECTED",
+        "POSITIVE_DELTA_DETECTED_ROUTE_TO_REWORK",
+    }:
+        return False
+
+    local_markers = {
+        row_id.strip().upper(),
+        target_package_id.strip().upper(),
+        blocker_class.strip().upper(),
+        owning_lane.strip().upper(),
+        seam_id.strip().upper(),
+    }
+    local_markers.discard("")
+    return any(marker in normalized for marker in local_markers)
+
+
 def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict[str, Any]:
     declaration = _read_json(declaration_path)
     required_inputs = dict(declaration.get("required_inputs", {}))
@@ -66,6 +98,8 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
 
     mappings = list(closure_map_report.get("mappings", []))
     target_mapping = next((m for m in mappings if str(m.get("row_id", "")).strip() == row_id), None)
+    blocker_class = str((target_mapping or {}).get("blocker_class", "")).strip()
+    owning_lane = str((target_mapping or {}).get("owning_lane", "")).strip()
 
     prior = dict(trend_report.get("blocker_counts", {}).get("prior", {}))
     current = dict(trend_report.get("blocker_counts", {}).get("current", {}))
@@ -83,13 +117,21 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
 
     current_adjudication = str(current_target_artifact.get("adjudication", {}).get("value", "")).strip()
     prior_adjudication = str(prior_target_artifact.get("adjudication", {}).get("value", "")).strip()
+    seam_id = str(current_target_artifact.get("seam_id", "")).strip()
     target_row_success_increment_gt_0 = (
         current_adjudication not in {"", "NOT_YET_DISCHARGED"}
         and current_adjudication != prior_adjudication
     )
 
     actual_blocker_state_change = str(ledger_report.get("actual_blocker_state_change", "")).strip()
-    blocker_token_changed = actual_blocker_state_change not in {"", "NO_DELTA_DETECTED_ROUTE_TO_REWORK"}
+    blocker_token_changed = _is_row_local_blocker_change(
+        actual_blocker_state_change,
+        row_id=row_id,
+        target_package_id=target_package_id,
+        blocker_class=blocker_class,
+        owning_lane=owning_lane,
+        seam_id=seam_id,
+    )
     blocker_token_delta = 1 if blocker_token_changed else 0
 
     seam_integration_gap_delta_lt_0 = seam_delta < 0

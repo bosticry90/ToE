@@ -1,0 +1,34 @@
+{
+  "schema_id": "RESEARCH_MODE_QM_STAT_SANDBOX_GOVERNED_INTAKE_EXECUTION_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Consume the QM-STAT governed-review wrapper result, preserve the payload record as primary and the comparison report as bounded support, and emit one bounded sandbox governed-intake execution result without canonical mutation.",
+  "required_inputs": {
+    "governed_review_wrapper_report": "formal/output/reports/research_mode_qm_stat_governed_review_wrapper_20260419_v0.json",
+    "payload_record": "formal/output/reports/research_mode_qm_stat_sandbox_payload_record_20260419_v0.json",
+    "comparison_report": "formal/output/reports/research_mode_qm_stat_sandbox_candidate_comparison_20260419_v0.json",
+    "witness_binding": "formal/output/architecture/SEAM_QM_STAT_TRANSPORT_WITNESS_BINDING_v0.json",
+    "promotion_lane_policy": "formal/docs/release/PROMOTION_GOVERNANCE_LANE_POLICY_20260418_v0.md",
+    "payload_requirements": "formal/docs/release/SANDBOX_PROMOTION_PAYLOAD_REQUIREMENTS_20260419_v0.md"
+  },
+  "execution_policy": {
+    "required_wrapper_terminal_outcome": "QM_STAT_GOVERNED_REVIEW_WRAPPER_READY_FOR_BOUNDED_SANDBOX_REVIEW",
+    "required_wrapper_decision": "ready_for_bounded_sandbox_review",
+    "required_target_row": "ROW-SEAM-QM-STAT-001",
+    "required_target_seam": "SEAM-QM-STAT",
+    "required_target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "required_next_action_on_accept": "AUTHOR_ONE_BOUNDED_QM_STAT_SANDBOX_REVIEW_EXECUTION_PACKET_WITHOUT_CANONICAL_MUTATION",
+    "required_next_action_on_hold": "ADD_ONE_MORE_BOUNDED_QM_STAT_SUPPORT_SURFACE_BEFORE_SANDBOX_REVIEW_EXECUTION",
+    "required_next_action_on_reject": "REPAIR_QM_STAT_INTAKE_BINDINGS_OR_SUFFICIENCY_GAPS_BEFORE_RETRY"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QM_STAT_SANDBOX_GOVERNED_INTAKE_OUTCOME",
+    "no_loop_rule": "ONE_QM_STAT_SANDBOX_GOVERNED_INTAKE_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QM_STAT_SANDBOX_GOVERNED_INTAKE_ACCEPTED_FOR_BOUNDED_SANDBOX_REVIEW",
+      "QM_STAT_SANDBOX_GOVERNED_INTAKE_HELD_PENDING_ADDED_SUPPORT",
+      "QM_STAT_SANDBOX_GOVERNED_INTAKE_REJECTED_DUE_TO_MISMATCH_OR_INSUFFICIENCY"
+    ],
+    "default_outcome": "QM_STAT_SANDBOX_GOVERNED_INTAKE_HELD_PENDING_ADDED_SUPPORT"
+  },
+  "non_claim_boundary": "Repository-local sandbox governed-intake execution only; no governed promotion pass, canonical mutation, or seam-closure claim."
+}

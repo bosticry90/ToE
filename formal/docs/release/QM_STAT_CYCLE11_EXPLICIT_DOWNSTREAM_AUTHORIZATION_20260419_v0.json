@@ -1,0 +1,76 @@
+{
+  "schema_id": "QM_STAT_CYCLE11_EXPLICIT_DOWNSTREAM_AUTHORIZATION_20260419_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Convert the executed QM-STAT Cycle11 pre-screening stop token into one explicit bounded non-live downstream authorization for the already declared Cycle12 additive candidate without opening any second lane or introducing execution-live tokens.",
+  "target_seam": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "lane": "QM_STAT_CYCLE11",
+    "blocker_class": "SEAM_INTEGRATION_GAP",
+    "domain": "seam"
+  },
+  "required_inputs": {
+    "qm_stat_cycle11_pre_screening_step_report": "formal/output/reports/qm_stat_cycle11_pre_screening_step_20260419_v0.json",
+    "qm_stat_seam_authorization_readiness_dossier_report": "formal/output/reports/qm_stat_seam_authorization_readiness_dossier_20260414_v0.json",
+    "qm_stat_cycle11_lane_status_report": "formal/output/reports/qm_stat_cycle11_lane_status_20260411_v0.json",
+    "physics_progress_ledger_report": "formal/output/reports/physics_progress_ledger_v0.json",
+    "seam_resolution_sla_ledger_report": "formal/output/reports/seam_resolution_sla_ledger_20260416_v0.json",
+    "cycle12_candidate_doc": "formal/docs/release/WS_10_T20_QM_STAT_CYCLE12_ADDITIVE_CANDIDATE_v0.md",
+    "cycle12_target_doc": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE12_v0.md",
+    "cycle12_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle12_v0.json",
+    "cycle12_gate": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py"
+  },
+  "downstream_authorization_contract": {
+    "required_pre_screening_outcome": "QM_STAT_CYCLE11_PRE_SCREENING_STEP_EXECUTED_NONLIVE",
+    "required_pre_screening_next_action": "STOP_AT_QM_STAT_CYCLE11_PRE_SCREENING_TOKEN_PENDING_EXPLICIT_DOWNSTREAM_AUTHORIZATION",
+    "required_readiness_outcome": "QM_STAT_SEAM_AUTHORIZATION_DOSSIER_READY_FOR_BOUNDED_PRE_SCREENING",
+    "required_lane_internal_status": "RETAINED",
+    "required_lane_externalization_status": "OUT_OF_SCOPE_UNDER_CYCLE11",
+    "required_progress_classification": "PROGRESS",
+    "required_sla_decision_state": "ACTIVE_TRACK_PENDING_BRANCH_EXCEPTION_DECISION",
+    "required_sla_gate_runtime_status": "PATH_PINNED_RUNTIME_AWAITING_AUTHORITY_DECISION",
+    "required_candidate_tokens": [
+      "WS10_T20_QM_STAT_CYCLE12_STATUS_v0: DECLARED_BOUNDED_NONCLAIM",
+      "WS10_T20_QM_STAT_CYCLE12_LANE_v0: QM_STAT",
+      "WS10_T20_QM_STAT_CYCLE12_TARGET_v0: CYCLE12",
+      "WS10_T20_QM_STAT_CYCLE12_ARTIFACT_v0: formal/output/qm_stat_class_b_seam_physics_pilot_cycle12_v0.json",
+      "WS10_T20_QM_STAT_CYCLE12_GATE_v0: formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py"
+    ],
+    "required_target_doc_tokens": [
+      "QM_STAT_CYCLE12_STATUS_v0: TWENTIETH_CENTRAL_MOMENT_PARITY_AND_EXCLUSION_PINNED_NONCLAIM",
+      "QM_STAT_CYCLE12_BLOCKER_DISCHARGE_CRITERIA_v0: MASS_MEAN_VARIANCE_THIRD_FOURTH_SIXTH_EIGHTH_TENTH_TWELFTH_FOURTEENTH_SIXTEENTH_EIGHTEENTH_AND_TWENTIETH_MOMENT_PARITY_REQUIRED",
+      "QM_STAT_CYCLE12_SCOPE_v0: FINITE_STATE_DISCRETE_HIGHER_MOMENT_AUDIT_ONLY_NONCLAIM",
+      "QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE12_STATUS_v0: CRITERIA_AND_TWENTIETH_MOMENT_EXCLUSION_PINNED_NONCLAIM"
+    ],
+    "required_artifact_status": "CRITERIA_AND_TWENTIETH_MOMENT_EXCLUSION_PINNED_NONCLAIM",
+    "required_adjudication": "NOT_YET_DISCHARGED",
+    "authorization_scope_token": "CONTROL_SURFACE_QM_STAT_CYCLE12_BOUNDED_AUTHORIZATION_NONLIVE",
+    "authorization_result_token": "QM_STAT_CYCLE12_SINGLE_LANE_AUTHORIZED_NONLIVE_v0",
+    "branch_chain_status": "UNAMBIGUOUS_SINGLE_ACTIVE_LANE",
+    "execution_live_token_count": 0,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "minimum_bounded_downstream_tranche": {
+      "target_row_id": "ROW-SEAM-QM-STAT-001",
+      "source_lane": "QM_STAT_CYCLE11",
+      "authorized_candidate_target": "CYCLE12",
+      "current_status": "PATH_PINNED_RUNTIME_AWAITING_AUTHORITY_DECISION",
+      "required_evidence_surface": "formal/docs/paper/DERIVATION_TARGET_QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_CYCLE12_v0.md",
+      "required_closure_artifact": "formal/output/qm_stat_class_b_seam_physics_pilot_cycle12_v0.json",
+      "required_closure_gate": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py",
+      "required_exit_criterion": "CYCLE_GATE_AND_SYNTHESIS_GATE_PASS",
+      "bounded_scope": "SINGLE_ROW_SINGLE_SEAM_QM_STAT_CYCLE12_CONTINUATION_AUTHORIZATION_ONLY"
+    }
+  },
+  "downstream_authorization_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QM_STAT_CYCLE11_EXPLICIT_DOWNSTREAM_AUTHORIZATION_OUTCOME",
+    "no_loop_rule": "ONE_QM_STAT_CYCLE11_EXPLICIT_DOWNSTREAM_AUTHORIZATION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QM_STAT_CYCLE12_SINGLE_LANE_AUTHORIZED_NONLIVE_v0",
+      "QM_STAT_EXPLICIT_DOWNSTREAM_AUTHORIZATION_BLOCKED",
+      "QM_STAT_EXPLICIT_DOWNSTREAM_AUTHORIZATION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_QM_STAT_EXPLICIT_DOWNSTREAM_AUTHORIZATION_REPAIR"
+    ],
+    "default_outcome": "QM_STAT_EXPLICIT_DOWNSTREAM_AUTHORIZATION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT explicit downstream authorization declaration only; no scientific adequacy claim."
+}
