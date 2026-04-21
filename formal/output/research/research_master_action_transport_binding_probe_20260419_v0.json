@@ -14,6 +14,18 @@
     "delta_class": "LOCAL_TRANSPORT_BINDING_SURROGATE",
     "contradiction_context": "formal/output/reports/master_action_packet_01_transport_binding_recovery_20260418_v0.json",
     "provenance_family": "research_mode_pilot_pack_20260419_v0",
+    "assumptions": [
+      "single-parameter surrogate remains advisory-only and bounded to the declared wave probe",
+      "residual minimization does not by itself stabilize a theorem-grade structural statement"
+    ],
+    "regime_scope": "bounded advisory transport-binding surrogate",
+    "numerical_provenance": "CLOSED_FORM_PARAMETER_SWEEP_ON_DECLARED_WAVE_PROBE",
+    "assumption_stability": "MEDIUM",
+    "artifact_nature": "NUMERICAL",
+    "formalization_route": "PYTHON_FIRST",
+    "route_justification": "The surrogate remains numerical and exploratory; it should stay in Python until a stable structural claim exists.",
+    "lean_candidate_target": "NONE",
+    "lean_module_target": "NONE",
     "nonclaim_boundary": "Repository-local advisory research artifact only; no master-action reclassification or canonical mutation.",
     "promotability": "NOT_READY"
   },

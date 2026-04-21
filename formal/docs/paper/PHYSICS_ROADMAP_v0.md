@@ -255,6 +255,41 @@ Research-first discovery checkpoint (2026-04-19):
 - QM-STAT re-entry review-cycle queue gate pointer: `formal/python/tests/test_research_mode_qm_stat_reentry_review_cycle_queue_report.py`.
 - QM-STAT re-entry review-cycle queue report pointer: `formal/output/reports/research_mode_qm_stat_reentry_review_cycle_queue_20260419_v0.json`.
 - QM-STAT re-entry review-cycle queue object pointer: `formal/output/queue/qm_stat_reentry_review_cycle_queue_20260419_v0.json`.
+- QM-STAT re-entry review queue packet pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_REVIEW_QUEUE_PACKET_20260420_v0.md`.
+- QM-STAT re-entry review queue packet tool pointer: `formal/python/tools/research_mode_qm_stat_reentry_review_queue_packet_report.py`.
+- QM-STAT re-entry review queue packet gate pointer: `formal/python/tests/test_research_mode_qm_stat_reentry_review_queue_packet_report.py`.
+- QM-STAT re-entry review queue packet report pointer: `formal/output/reports/research_mode_qm_stat_reentry_review_queue_packet_20260420_v0.json`.
+- QM-STAT re-entry review queue packet object pointer: `formal/output/queue/qm_stat_reentry_review_queue_packet_20260420_v0.json`.
+- QM-STAT re-entry downstream intake decision pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_DOWNSTREAM_INTAKE_DECISION_20260420_v0.md`.
+- QM-STAT re-entry downstream intake declaration pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_DOWNSTREAM_INTAKE_DECISION_20260420_v0.json`.
+- QM-STAT re-entry downstream intake tool pointer: `formal/python/tools/research_mode_qm_stat_reentry_downstream_intake_decision_report.py`.
+- QM-STAT re-entry downstream intake gate pointer: `formal/python/tests/test_research_mode_qm_stat_reentry_downstream_intake_decision_report.py`.
+- QM-STAT re-entry downstream intake report pointer: `formal/output/reports/research_mode_qm_stat_reentry_downstream_intake_decision_20260420_v0.json`.
+- QM-STAT re-entry review execution packet pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_REVIEW_EXECUTION_PACKET_20260420_v0.md`.
+- QM-STAT re-entry review execution packet tool pointer: `formal/python/tools/research_mode_qm_stat_reentry_review_execution_packet_report.py`.
+- QM-STAT re-entry review execution packet gate pointer: `formal/python/tests/test_research_mode_qm_stat_reentry_review_execution_packet_report.py`.
+- QM-STAT re-entry review execution packet report pointer: `formal/output/reports/research_mode_qm_stat_reentry_review_execution_packet_20260420_v0.json`.
+- QM-STAT re-entry review execution tool pointer: `formal/python/tools/research_mode_qm_stat_reentry_review_execution_report.py`.
+- QM-STAT re-entry review execution gate pointer: `formal/python/tests/test_research_mode_qm_stat_reentry_review_execution_report.py`.
+- QM-STAT re-entry review execution report pointer: `formal/output/reports/research_mode_qm_stat_reentry_review_execution_20260420_v0.json`.
+- QM-STAT re-entry post-review adjudication declaration pointer: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_POST_REVIEW_ADJUDICATION_20260420_v0.json`.
+- QM-STAT re-entry post-review adjudication tool pointer: `formal/python/tools/research_mode_qm_stat_reentry_post_review_adjudication_report.py`.
+- QM-STAT re-entry post-review adjudication gate pointer: `formal/python/tests/test_research_mode_qm_stat_reentry_post_review_adjudication_report.py`.
+- QM-STAT re-entry post-review adjudication report pointer: `formal/output/reports/research_mode_qm_stat_reentry_post_review_adjudication_20260420_v0.json`.
+- QM-STAT re-entry downstream governance authorization declaration pointer: `formal/docs/release/QM_STAT_REENTRY_EXPLICIT_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_20260420_v0.json`.
+- QM-STAT re-entry downstream governance authorization tool pointer: `formal/python/tools/qm_stat_reentry_explicit_downstream_governance_authorization_report.py`.
+- QM-STAT re-entry downstream governance authorization gate pointer: `formal/python/tests/test_qm_stat_reentry_explicit_downstream_governance_authorization_report.py`.
+- QM-STAT re-entry downstream governance authorization report pointer: `formal/output/reports/qm_stat_reentry_explicit_downstream_governance_authorization_20260420_v0.json`.
+- QM-STAT downstream governed review packet pointer: `formal/docs/release/QM_STAT_REENTRY_DOWNSTREAM_GOVERNED_REVIEW_PACKET_20260420_v0.md`.
+- QM-STAT downstream governed review packet tool pointer: `formal/python/tools/qm_stat_reentry_downstream_governed_review_packet_report.py`.
+- QM-STAT downstream governed review packet gate pointer: `formal/python/tests/test_qm_stat_reentry_downstream_governed_review_packet_report.py`.
+- QM-STAT downstream governed review packet report pointer: `formal/output/reports/qm_stat_reentry_downstream_governed_review_packet_20260420_v0.json`.
+- QM-STAT downstream governed review execution declaration pointer: `formal/docs/release/QM_STAT_REENTRY_DOWNSTREAM_GOVERNED_REVIEW_EXECUTION_20260420_v0.json`.
+- QM-STAT downstream governed review execution tool pointer: `formal/python/tools/qm_stat_reentry_downstream_governed_review_execution_report.py`.
+- QM-STAT downstream governed review execution gate pointer: `formal/python/tests/test_qm_stat_reentry_downstream_governed_review_execution_report.py`.
+- QM-STAT downstream governed review execution report pointer: `formal/output/reports/qm_stat_reentry_downstream_governed_review_execution_20260420_v0.json`.
+- Research formalization routing contract pointer: `formal/docs/release/RESEARCH_FORMALIZATION_ROUTING_CONTRACT_20260420_v0.md`.
+- Research formalization routing gate pointer: `formal/python/tests/test_research_mode_formalization_routing_contract_gate.py`.
 - Pillar pilot output pointer: `formal/output/research/research_stat_entropy_balance_probe_20260419_v0.json`.
 - Seam pilot output pointer: `formal/output/research/research_qm_stat_transport_witness_probe_20260419_v0.json`.
 - Master-action pilot output pointer: `formal/output/research/research_master_action_transport_binding_probe_20260419_v0.json`.

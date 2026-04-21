@@ -13,7 +13,7 @@
     "authorized_candidate_target": "ROW-SEAM-QM-STAT-001::QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
     "next_action": "QUEUE_ONE_BOUNDED_QM_STAT_REENTRY_REVIEW_CYCLE"
   },
-  "captured_at_utc": "2026-04-20T02:53:29Z",
+  "captured_at_utc": "2026-04-21T02:54:28Z",
   "non_claim_boundary": "Repository-local QM-STAT re-entry support artifact only; no canonical promotion, canonical mutation, or seam-closure claim.",
   "source_bundle": {
     "blocker_definitions": "formal/output/authority/authoritative_blocker_definitions.json",

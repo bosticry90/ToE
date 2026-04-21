@@ -7,7 +7,7 @@ from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
 from formal.python.research import acceptance_review, pilot_pack
-from formal.python.research.metadata import ResearchArtifactMetadata, classify_research_artifact
+from formal.python.research.metadata import ResearchArtifactMetadata, classify_research_artifact, ensure_valid_research_metadata
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -43,9 +43,19 @@ def build_sandbox_candidacy_review() -> dict[str, Any]:
         delta_class=str(seam_metadata["delta_class"]),
         contradiction_context=str(seam_metadata["contradiction_context"]),
         provenance_family=str(seam_metadata["provenance_family"]),
+        assumptions=tuple(seam_metadata["assumptions"]),
+        regime_scope=str(seam_metadata["regime_scope"]),
+        numerical_provenance=str(seam_metadata["numerical_provenance"]),
+        assumption_stability=str(seam_metadata["assumption_stability"]),
+        artifact_nature=str(seam_metadata["artifact_nature"]),
+        formalization_route=str(seam_metadata["formalization_route"]),
+        route_justification=str(seam_metadata["route_justification"]),
+        lean_candidate_target=str(seam_metadata["lean_candidate_target"]),
+        lean_module_target=str(seam_metadata["lean_module_target"]),
         nonclaim_boundary=str(seam_metadata["nonclaim_boundary"]),
         promotability="READY_FOR_SANDBOX_REVIEW",
     )
+    ensure_valid_research_metadata(candidate_metadata)
     candidate_class = classify_research_artifact(candidate_metadata)
 
     sandbox_policy_path = Path("formal/docs/release/SANDBOX_PHYSICS_LANE_EXECUTION_POLICY_20260418_v0.md")

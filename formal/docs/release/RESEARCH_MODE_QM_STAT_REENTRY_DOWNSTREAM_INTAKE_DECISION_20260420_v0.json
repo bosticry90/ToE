@@ -1,0 +1,39 @@
+{
+  "schema_id": "RESEARCH_MODE_QM_STAT_REENTRY_DOWNSTREAM_INTAKE_DECISION_20260420_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Consume the authored QM-STAT re-entry review queue packet and emit one bounded downstream intake decision that either accepts, holds, or rejects authoring a single bounded re-entry review execution packet without executing the review cycle or mutating canonical state.",
+  "required_inputs": {
+    "queue_packet_note": "formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_REVIEW_QUEUE_PACKET_20260420_v0.md",
+    "queue_packet_report": "formal/output/reports/research_mode_qm_stat_reentry_review_queue_packet_20260420_v0.json",
+    "queue_packet_object": "formal/output/queue/qm_stat_reentry_review_queue_packet_20260420_v0.json",
+    "queue_report": "formal/output/reports/research_mode_qm_stat_reentry_review_cycle_queue_20260419_v0.json"
+  },
+  "intake_policy": {
+    "required_packet_terminal_outcome": "QM_STAT_REENTRY_REVIEW_QUEUE_PACKET_AUTHORED_FOR_BOUNDED_HANDOFF",
+    "required_handoff_status": "READY_FOR_DOWNSTREAM_INTAKE_DECISION",
+    "required_packet_status": "AUTHORED_BOUNDED_v0_NONCLAIM",
+    "required_handoff_next_action": "HAND_OFF_ONE_BOUNDED_QM_STAT_REENTRY_REVIEW_QUEUE_PACKET_FOR_DOWNSTREAM_INTAKE_DECISION",
+    "required_queue_terminal_outcome": "QM_STAT_REENTRY_REVIEW_CYCLE_QUEUED_FOR_ONE_BOUNDED_REVIEW",
+    "required_queue_status": "QUEUED_FOR_ONE_BOUNDED_REENTRY_REVIEW_CYCLE",
+    "required_scope_token": "ONE_BOUNDED_QM_STAT_REENTRY_REVIEW_CYCLE_ONLY",
+    "required_packet_handoff_rule": "DOWNSTREAM_INTAKE_DECISION_REQUIRED_BEFORE_ANY_REENTRY_REVIEW_EXECUTION",
+    "required_target_row": "ROW-SEAM-QM-STAT-001",
+    "required_target_seam": "SEAM-QM-STAT",
+    "required_target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "required_authorized_candidate_target": "ROW-SEAM-QM-STAT-001::QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "next_action_on_accept": "AUTHOR_ONE_BOUNDED_QM_STAT_REENTRY_REVIEW_EXECUTION_PACKET_WITHOUT_CANONICAL_MUTATION",
+    "next_action_on_hold": "HOLD_QM_STAT_REENTRY_PACKET_PENDING_ADDED_INTAKE_SUPPORT",
+    "next_action_on_reject": "REPAIR_QM_STAT_REENTRY_PACKET_BINDINGS_OR_HANDOFF_RULES_BEFORE_RETRY"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QM_STAT_REENTRY_DOWNSTREAM_INTAKE_DECISION_OUTCOME",
+    "no_loop_rule": "ONE_QM_STAT_REENTRY_DOWNSTREAM_INTAKE_DECISION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QM_STAT_REENTRY_DOWNSTREAM_INTAKE_ACCEPTED_FOR_BOUNDED_EXECUTION_PACKET_AUTHORING",
+      "QM_STAT_REENTRY_DOWNSTREAM_INTAKE_HELD_PENDING_ADDED_SUPPORT",
+      "QM_STAT_REENTRY_DOWNSTREAM_INTAKE_REJECTED_DUE_TO_MISMATCH_OR_RULE_BREAK"
+    ],
+    "default_outcome": "QM_STAT_REENTRY_DOWNSTREAM_INTAKE_HELD_PENDING_ADDED_SUPPORT"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT re-entry downstream intake decision only; no re-entry review execution, canonical mutation, or seam-closure claim."
+}

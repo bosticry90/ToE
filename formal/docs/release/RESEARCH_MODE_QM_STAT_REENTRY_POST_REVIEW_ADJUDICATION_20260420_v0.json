@@ -1,0 +1,47 @@
+{
+  "schema_id": "RESEARCH_MODE_QM_STAT_REENTRY_POST_REVIEW_ADJUDICATION_20260420_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Adjudicate the completed non-canonical QM-STAT re-entry review result into one bounded resting-state decision without opening canonical mutation or promotion follow-through.",
+  "required_inputs": {
+    "review_execution_report": "formal/output/reports/research_mode_qm_stat_reentry_review_execution_20260420_v0.json",
+    "review_packet_report": "formal/output/reports/research_mode_qm_stat_reentry_review_execution_packet_20260420_v0.json",
+    "intake_decision_report": "formal/output/reports/research_mode_qm_stat_reentry_downstream_intake_decision_20260420_v0.json",
+    "queue_packet_report": "formal/output/reports/research_mode_qm_stat_reentry_review_queue_packet_20260420_v0.json",
+    "queue_report": "formal/output/reports/research_mode_qm_stat_reentry_review_cycle_queue_20260419_v0.json"
+  },
+  "adjudication_policy": {
+    "required_review_terminal_outcome": "QM_STAT_REENTRY_REVIEW_COMPLETED_WITH_NO_CANONICAL_ACTION",
+    "required_review_decision": "bounded_reentry_review_completed_with_no_canonical_action",
+    "required_target_row": "ROW-SEAM-QM-STAT-001",
+    "required_target_seam": "SEAM-QM-STAT",
+    "required_target_package_id": "QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
+    "required_prior_next_action": "AUTHOR_ONE_BOUNDED_QM_STAT_REENTRY_POST_REVIEW_ADJUDICATION_SURFACE_WITHOUT_CANONICAL_MUTATION",
+    "required_next_action_on_retain": "HOLD_QM_STAT_AS_BOUNDED_REENTRY_REVIEWED_CANDIDATE_PENDING_EXPLICIT_DOWNSTREAM_GOVERNANCE_AUTHORIZATION",
+    "required_next_action_on_hold": "AUTHOR_ONE_ADDITIONAL_REENTRY_SUPPORT_SURFACE_BEFORE_ANY_DOWNSTREAM_GOVERNANCE_DECISION",
+    "required_next_action_on_prune": "REMOVE_QM_STAT_FROM_ACTIVE_REENTRY_PATH_AND_PRESERVE_NONCANONICAL_HISTORY_ONLY",
+    "required_next_action_on_governance_hold": "REQUIRE_EXPLICIT_AUTHORIZATION_BEFORE_OPENING_ANY_CANONICAL_OR_PROMOTION_PATH"
+  },
+  "candidate_routes": [
+    {
+      "route_id": "RETAIN_BOUNDED_REENTRY_REVIEWED_CANDIDATE_ROUTE",
+      "activation_condition": "REENTRY_REVIEW_COMPLETED_WITH_NO_CANONICAL_ACTION_AND_BINDING_PRESERVED",
+      "next_action": "HOLD_QM_STAT_AS_BOUNDED_REENTRY_REVIEWED_CANDIDATE_PENDING_EXPLICIT_DOWNSTREAM_GOVERNANCE_AUTHORIZATION"
+    },
+    {
+      "route_id": "HOLD_FOR_ADDITIONAL_REENTRY_SUPPORT_ROUTE",
+      "activation_condition": "REENTRY_REVIEW_COMPLETED_BUT_DOWNSTREAM_PACKET_OR_INTAKE_ALIGNMENT_WEAKENS",
+      "next_action": "AUTHOR_ONE_ADDITIONAL_REENTRY_SUPPORT_SURFACE_BEFORE_ANY_DOWNSTREAM_GOVERNANCE_DECISION"
+    },
+    {
+      "route_id": "PRUNE_ACTIVE_REENTRY_ROUTE",
+      "activation_condition": "TARGET_BINDING_OR_EXECUTION_AUTHORITY_BREAKS",
+      "next_action": "REMOVE_QM_STAT_FROM_ACTIVE_REENTRY_PATH_AND_PRESERVE_NONCANONICAL_HISTORY_ONLY"
+    },
+    {
+      "route_id": "EXPLICIT_GOVERNANCE_HOLD_ROUTE",
+      "activation_condition": "REENTRY_REVIEW_COMPLETES_NONCANONICALLY_AND_ANY_FURTHER_MOVEMENT_REQUIRES_EXPLICIT_AUTHORIZATION",
+      "next_action": "REQUIRE_EXPLICIT_AUTHORIZATION_BEFORE_OPENING_ANY_CANONICAL_OR_PROMOTION_PATH"
+    }
+  ],
+  "non_claim_boundary": "Repository-local re-entry post-review adjudication only; no canonical promotion, canonical mutation, or seam-closure claim."
+}

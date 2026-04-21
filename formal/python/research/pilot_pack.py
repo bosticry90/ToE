@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
-from formal.python.research.metadata import ResearchArtifactMetadata, classify_research_artifact
+from formal.python.research.metadata import ResearchArtifactMetadata, classify_research_artifact, ensure_valid_research_metadata
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -62,9 +62,22 @@ def build_pillar_pilot() -> dict[str, Any]:
         delta_class="ENTROPY_BALANCE_LOCAL_IDENTITY",
         contradiction_context="NONE",
         provenance_family="research_mode_pilot_pack_20260419_v0",
+        assumptions=(
+            "positive diffusion coefficient on a bounded local probe window",
+            "closed-form Gaussian entropy identity remains the primary analytical reference",
+        ),
+        regime_scope="bounded Gaussian diffusion probe",
+        numerical_provenance="ANALYTIC_CLOSED_FORM_WITH_FINITE_DIFFERENCE_CHECK",
+        assumption_stability="HIGH",
+        artifact_nature="MIXED",
+        formalization_route="PYTHON_THEN_LEAN4",
+        route_justification="The identity is analytically crisp but is retained here with a finite-difference spot-check before any Lean-facing obligation is declared.",
+        lean_candidate_target="STAT_ENTROPY_LOCAL_DE_BRUIJN_IDENTITY",
+        lean_module_target="NONE",
         nonclaim_boundary="Repository-local research artifact only; no pillar activation or canonical promotion.",
         promotability="NOT_READY",
     )
+    ensure_valid_research_metadata(metadata)
 
     return {
         "schema_id": "RESEARCH_STAT_ENTROPY_BALANCE_PROBE_20260419_v0",
@@ -125,9 +138,22 @@ def build_seam_pilot() -> dict[str, Any]:
         delta_class="LOCAL_TRANSPORT_WITNESS",
         contradiction_context="formal/output/architecture/SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0.json",
         provenance_family="research_mode_pilot_pack_20260419_v0",
+        assumptions=(
+            "rigid-translation Gaussian ansatz is treated as a bounded local witness only",
+            "continuity closure on sampled support does not authorize seam-state mutation",
+        ),
+        regime_scope="bounded rigid-translation continuity witness",
+        numerical_provenance="ANALYTIC_IDENTITY_WITH_GRID_SAMPLED_RESIDUAL_CHECK",
+        assumption_stability="MEDIUM",
+        artifact_nature="MIXED",
+        formalization_route="PYTHON_THEN_LEAN4",
+        route_justification="The witness begins as an exploratory transport reduction, but a retained successful witness naturally matures into a theorem-style obligation if later tightened.",
+        lean_candidate_target="QM_STAT_LOCAL_TRANSPORT_WITNESS",
+        lean_module_target="NONE",
         nonclaim_boundary="Repository-local research artifact only; no seam-state flip or transport-package promotion.",
         promotability="NOT_READY",
     )
+    ensure_valid_research_metadata(metadata)
 
     return {
         "schema_id": "RESEARCH_QM_STAT_TRANSPORT_WITNESS_PROBE_20260419_v0",
@@ -177,9 +203,22 @@ def build_master_action_pilot() -> dict[str, Any]:
         delta_class="LOCAL_TRANSPORT_BINDING_SURROGATE",
         contradiction_context="formal/output/reports/master_action_packet_01_transport_binding_recovery_20260418_v0.json",
         provenance_family="research_mode_pilot_pack_20260419_v0",
+        assumptions=(
+            "single-parameter surrogate remains advisory-only and bounded to the declared wave probe",
+            "residual minimization does not by itself stabilize a theorem-grade structural statement",
+        ),
+        regime_scope="bounded advisory transport-binding surrogate",
+        numerical_provenance="CLOSED_FORM_PARAMETER_SWEEP_ON_DECLARED_WAVE_PROBE",
+        assumption_stability="MEDIUM",
+        artifact_nature="NUMERICAL",
+        formalization_route="PYTHON_FIRST",
+        route_justification="The surrogate remains numerical and exploratory; it should stay in Python until a stable structural claim exists.",
+        lean_candidate_target="NONE",
+        lean_module_target="NONE",
         nonclaim_boundary="Repository-local advisory research artifact only; no master-action reclassification or canonical mutation.",
         promotability="NOT_READY",
     )
+    ensure_valid_research_metadata(metadata)
 
     return {
         "schema_id": "RESEARCH_MASTER_ACTION_TRANSPORT_BINDING_PROBE_20260419_v0",

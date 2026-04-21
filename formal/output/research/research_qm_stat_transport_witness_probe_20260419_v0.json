@@ -14,6 +14,18 @@
     "delta_class": "LOCAL_TRANSPORT_WITNESS",
     "contradiction_context": "formal/output/architecture/SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0.json",
     "provenance_family": "research_mode_pilot_pack_20260419_v0",
+    "assumptions": [
+      "rigid-translation Gaussian ansatz is treated as a bounded local witness only",
+      "continuity closure on sampled support does not authorize seam-state mutation"
+    ],
+    "regime_scope": "bounded rigid-translation continuity witness",
+    "numerical_provenance": "ANALYTIC_IDENTITY_WITH_GRID_SAMPLED_RESIDUAL_CHECK",
+    "assumption_stability": "MEDIUM",
+    "artifact_nature": "MIXED",
+    "formalization_route": "PYTHON_THEN_LEAN4",
+    "route_justification": "The witness begins as an exploratory transport reduction, but a retained successful witness naturally matures into a theorem-style obligation if later tightened.",
+    "lean_candidate_target": "QM_STAT_LOCAL_TRANSPORT_WITNESS",
+    "lean_module_target": "NONE",
     "nonclaim_boundary": "Repository-local research artifact only; no seam-state flip or transport-package promotion.",
     "promotability": "NOT_READY"
   },

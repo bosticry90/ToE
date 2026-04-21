@@ -8,7 +8,7 @@ from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
 from formal.python.research import acceptance_review
-from formal.python.research.metadata import ResearchArtifactMetadata, classify_research_artifact
+from formal.python.research.metadata import ResearchArtifactMetadata, classify_research_artifact, ensure_valid_research_metadata
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -150,9 +150,22 @@ def build_harder_qm_stat_target_artifact() -> dict[str, Any]:
         delta_class="ROW_LOCAL_TRANSPORT_MOMENT_STACK",
         contradiction_context=_ptr(BRIDGE_OBJECT_PATH),
         provenance_family="research_mode_harder_qm_stat_target_20260419_v0",
+        assumptions=(
+            "the three-time moment-stack witness remains a bounded local compression of the live residual bridge",
+            "moment closure on the declared ansatz does not by itself authorize seam-state mutation",
+        ),
+        regime_scope="bounded three-time transport-moment stack witness anchored to the live QM-STAT residual package",
+        numerical_provenance="ANALYTIC_IDENTITIES_WITH_MULTI_TIME_GRID_EVALUATION",
+        assumption_stability="MEDIUM",
+        artifact_nature="MIXED",
+        formalization_route="PYTHON_THEN_LEAN4",
+        route_justification="The retained moment-stack witness is exploratory but naturally points toward a later Lean-facing obligation if the transport identities remain stable.",
+        lean_candidate_target="QM_STAT_TRANSPORT_MOMENT_STACK_LOCAL_IDENTITIES",
+        lean_module_target="NONE",
         nonclaim_boundary="Repository-local harder live research artifact only; no seam-state flip, sandbox payload emission, or canonical mutation.",
         promotability="NOT_READY",
     )
+    ensure_valid_research_metadata(metadata)
 
     return {
         "schema_id": "RESEARCH_QM_STAT_TRANSPORT_MOMENT_STACK_PROBE_20260419_v0",

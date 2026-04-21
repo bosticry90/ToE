@@ -31,6 +31,7 @@ REQUIRED_POLICY_TOKENS = (
     "RESEARCH_MODE_MINIMUM_METADATA_SCHEMA_v0: formal/docs/release/RESEARCH_ARTIFACT_CLASSIFICATION_METADATA_SCHEMA_20260419_v0.md",
     "RESEARCH_MODE_RETENTION_POLICY_v0: formal/docs/release/RESEARCH_ARTIFACT_RETENTION_POLICY_20260419_v0.md",
     "RESEARCH_MODE_AUTHORITY_MATRIX_v0: formal/docs/release/RESEARCH_MODE_AUTHORITY_OWNERSHIP_MATRIX_20260419_v0.md",
+    "RESEARCH_MODE_FORMALIZATION_ROUTING_CONTRACT_v0: formal/docs/release/RESEARCH_FORMALIZATION_ROUTING_CONTRACT_20260420_v0.md",
     "RESEARCH_MODE_NAMESPACE_v0: formal/python/research",
     "RESEARCH_MODE_RUNNER_v0: research_mode_execution.ps1",
     "RESEARCH_MODE_GATE_v0: formal/python/tests/test_research_mode_lane_policy_gate.py",
@@ -72,8 +73,10 @@ def test_research_mode_mirrors_and_runner_are_cross_pinned() -> None:
         "formal/docs/release/RESEARCH_ARTIFACT_CLASSIFICATION_METADATA_SCHEMA_20260419_v0.md",
         "formal/docs/release/RESEARCH_ARTIFACT_RETENTION_POLICY_20260419_v0.md",
         "formal/docs/release/RESEARCH_MODE_AUTHORITY_OWNERSHIP_MATRIX_20260419_v0.md",
+        "formal/docs/release/RESEARCH_FORMALIZATION_ROUTING_CONTRACT_20260420_v0.md",
         "formal/python/tests/test_research_mode_lane_policy_gate.py",
         "formal/python/tests/test_research_mode_metadata_schema_gate.py",
+        "formal/python/tests/test_research_mode_formalization_routing_contract_gate.py",
         "research_mode_execution.ps1",
         "formal/python/research",
     ):

@@ -14,6 +14,18 @@
     "delta_class": "ROW_LOCAL_TRANSPORT_MOMENT_STACK",
     "contradiction_context": "formal/output/architecture/SEAM_TO_MASTER_ACTION_RESIDUAL_BRIDGE_OBJECT_v0.json",
     "provenance_family": "research_mode_harder_qm_stat_target_20260419_v0",
+    "assumptions": [
+      "the three-time moment-stack witness remains a bounded local compression of the live residual bridge",
+      "moment closure on the declared ansatz does not by itself authorize seam-state mutation"
+    ],
+    "regime_scope": "bounded three-time transport-moment stack witness anchored to the live QM-STAT residual package",
+    "numerical_provenance": "ANALYTIC_IDENTITIES_WITH_MULTI_TIME_GRID_EVALUATION",
+    "assumption_stability": "MEDIUM",
+    "artifact_nature": "MIXED",
+    "formalization_route": "PYTHON_THEN_LEAN4",
+    "route_justification": "The retained moment-stack witness is exploratory but naturally points toward a later Lean-facing obligation if the transport identities remain stable.",
+    "lean_candidate_target": "QM_STAT_TRANSPORT_MOMENT_STACK_LOCAL_IDENTITIES",
+    "lean_module_target": "NONE",
     "nonclaim_boundary": "Repository-local harder live research artifact only; no seam-state flip, sandbox payload emission, or canonical mutation.",
     "promotability": "NOT_READY"
   },

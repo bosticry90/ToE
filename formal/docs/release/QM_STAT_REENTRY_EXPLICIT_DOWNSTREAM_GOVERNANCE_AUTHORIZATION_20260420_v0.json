@@ -1,0 +1,68 @@
+{
+  "schema_id": "QM_STAT_REENTRY_EXPLICIT_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_20260420_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Convert the retained bounded QM-STAT reentry-reviewed candidate into one explicit bounded non-live downstream governance authorization for a single governed review path without opening canonical mutation.",
+  "target_seam": {
+    "row_id": "ROW-SEAM-QM-STAT-001",
+    "seam_id": "SEAM-QM-STAT",
+    "lane": "QM_STAT_REENTRY",
+    "blocker_class": "SEAM_INTEGRATION_GAP",
+    "domain": "seam"
+  },
+  "required_inputs": {
+    "reentry_post_review_adjudication_report": "formal/output/reports/research_mode_qm_stat_reentry_post_review_adjudication_20260420_v0.json",
+    "reentry_review_execution_report": "formal/output/reports/research_mode_qm_stat_reentry_review_execution_20260420_v0.json",
+    "reentry_review_execution_packet_report": "formal/output/reports/research_mode_qm_stat_reentry_review_execution_packet_20260420_v0.json",
+    "promotion_governance_lane_policy": "formal/docs/release/PROMOTION_GOVERNANCE_LANE_POLICY_20260418_v0.md",
+    "canonical_action_promotion_standard": "formal/docs/release/TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0.md",
+    "state_surface": "State_of_the_Theory.md"
+  },
+  "downstream_governance_authorization_contract": {
+    "required_post_review_adjudication": "RETAIN_AS_BOUNDED_REENTRY_REVIEWED_CANDIDATE",
+    "required_candidate_disposition": "RETAIN_BOUNDED_REENTRY_REVIEWED_CANDIDATE",
+    "required_post_review_next_action": "HOLD_QM_STAT_AS_BOUNDED_REENTRY_REVIEWED_CANDIDATE_PENDING_EXPLICIT_DOWNSTREAM_GOVERNANCE_AUTHORIZATION",
+    "required_review_terminal_outcome": "QM_STAT_REENTRY_REVIEW_COMPLETED_WITH_NO_CANONICAL_ACTION",
+    "required_review_decision": "bounded_reentry_review_completed_with_no_canonical_action",
+    "required_packet_terminal_outcome": "QM_STAT_REENTRY_REVIEW_EXECUTION_PACKET_READY",
+    "required_packet_decision": "reentry_review_execution_packet_ready",
+    "required_state_next_action_token": "RESEARCH_MODE_NEXT_ACTION_v0: HOLD_QM_STAT_AS_BOUNDED_REENTRY_REVIEWED_CANDIDATE_PENDING_EXPLICIT_DOWNSTREAM_GOVERNANCE_AUTHORIZATION",
+    "authorized_next_action": "AUTHOR_ONE_BOUNDED_QM_STAT_DOWNSTREAM_GOVERNED_REVIEW_PACKET_WITHOUT_CANONICAL_MUTATION",
+    "required_promotion_policy_tokens": [
+      "PROMOTION_GOVERNANCE_LANE_HARD_BOUNDARY_v0: NO_CANONICAL_PROMOTION_WITHOUT_PROMOTION_REVIEW",
+      "PROMOTION_GOVERNANCE_LANE_PROMOTION_RULE_v0: CANONICAL_ROW_AND_SEAM_STATE_CHANGE_ONLY_AFTER_GOVERNED_PROMOTION_PASS",
+      "PROMOTION_GOVERNANCE_LANE_FAILURE_RULE_v0: FAIL_CLOSED_ON_MISSING_PROVENANCE_SCOPE_OR_CONTRADICTION_EVIDENCE"
+    ],
+    "required_canonical_action_tokens": [
+      "TOE_CANONICAL_ACTION_PROMOTION_STATUS_v0: BLOCKED_PENDING_CRITERIA",
+      "TOE_CANONICAL_ACTION_PROMOTION_REQUIRES_v0: THEOREM_TRANSPORT_REGIME_AND_GOVERNANCE_ALIGNMENT"
+    ],
+    "authorization_scope_token": "CONTROL_SURFACE_QM_STAT_REENTRY_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_NONLIVE",
+    "authorization_result_token": "QM_STAT_REENTRY_SINGLE_GOVERNED_REVIEW_PATH_AUTHORIZED_NONLIVE_v0",
+    "branch_chain_status": "UNAMBIGUOUS_SINGLE_ACTIVE_GOVERNANCE_PATH",
+    "execution_live_token_count": 0,
+    "single_layer_only": true,
+    "single_outcome_only": true,
+    "minimum_bounded_downstream_tranche": {
+      "target_row_id": "ROW-SEAM-QM-STAT-001",
+      "target_seam_id": "SEAM-QM-STAT",
+      "source_lane": "QM_STAT_REENTRY",
+      "authorized_candidate_target": "REENTRY_GOVERNED_REVIEW_PATH",
+      "required_governance_policy": "formal/docs/release/PROMOTION_GOVERNANCE_LANE_POLICY_20260418_v0.md",
+      "required_boundary_standard": "formal/docs/release/TOE_CANONICAL_ACTION_PROMOTION_STANDARD_v0.md",
+      "required_exit_criterion": "DOWNSTREAM_GOVERNED_REVIEW_PACKET_AUTHORED_WITHOUT_CANONICAL_MUTATION",
+      "bounded_scope": "SINGLE_ROW_SINGLE_SEAM_QM_STAT_REENTRY_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_ONLY"
+    }
+  },
+  "downstream_governance_authorization_outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QM_STAT_REENTRY_EXPLICIT_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_OUTCOME",
+    "no_loop_rule": "ONE_QM_STAT_REENTRY_EXPLICIT_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QM_STAT_REENTRY_SINGLE_GOVERNED_REVIEW_PATH_AUTHORIZED_NONLIVE_v0",
+      "QM_STAT_REENTRY_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_BLOCKED",
+      "QM_STAT_REENTRY_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_QM_STAT_REENTRY_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_REPAIR"
+    ],
+    "default_outcome": "QM_STAT_REENTRY_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_EVIDENCE_INCOMPLETE"
+  },
+  "non_claim_boundary": "Repository-local QM-STAT reentry explicit downstream governance authorization declaration only; no canonical mutation or seam-closure claim."
+}

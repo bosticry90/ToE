@@ -21,7 +21,8 @@ Research Mode (2026-04-19)
 - Research outputs remain non-claim and non-canonical until they pass through sandbox and promotion governance.
 - Research mode runner: `pwsh -NoProfile -ExecutionPolicy Bypass -File ./research_mode_execution.ps1`
 - Research namespace: `formal/python/research`
-- Policy artifacts: `formal/docs/release/RESEARCH_MODE_EXECUTION_POLICY_20260419_v0.md`, `formal/docs/release/RESEARCH_ARTIFACT_CLASSIFICATION_METADATA_SCHEMA_20260419_v0.md`, `formal/docs/release/RESEARCH_ARTIFACT_RETENTION_POLICY_20260419_v0.md`, and `formal/docs/release/RESEARCH_MODE_AUTHORITY_OWNERSHIP_MATRIX_20260419_v0.md`.
+- Policy artifacts: `formal/docs/release/RESEARCH_MODE_EXECUTION_POLICY_20260419_v0.md`, `formal/docs/release/RESEARCH_ARTIFACT_CLASSIFICATION_METADATA_SCHEMA_20260419_v0.md`, `formal/docs/release/RESEARCH_ARTIFACT_RETENTION_POLICY_20260419_v0.md`, `formal/docs/release/RESEARCH_MODE_AUTHORITY_OWNERSHIP_MATRIX_20260419_v0.md`, and `formal/docs/release/RESEARCH_FORMALIZATION_ROUTING_CONTRACT_20260420_v0.md`.
+- Research formalization routing gate: `formal/python/tests/test_research_mode_formalization_routing_contract_gate.py`.
 - Pilot pack: `formal/docs/release/RESEARCH_MODE_PILOT_PACK_20260419_v0.md`.
 - Pilot implementation: `formal/python/research/pilot_pack.py` and `formal/python/tests/test_research_mode_pilot_pack_report.py`.
 - Step 14 acceptance review: `formal/docs/release/RESEARCH_MODE_STEP14_ACCEPTANCE_REVIEW_20260419_v0.md`.
@@ -47,6 +48,14 @@ Research Mode (2026-04-19)
 - QM-STAT re-entry support artifact: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_SUPPORT_ARTIFACT_20260419_v0.json`, `formal/python/tools/research_mode_qm_stat_reentry_support_artifact_report.py`, and `formal/python/tests/test_research_mode_qm_stat_reentry_support_artifact_report.py`.
 - QM-STAT re-entry eligibility review: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_ELIGIBILITY_REVIEW_20260419_v0.json`, `formal/python/tools/research_mode_qm_stat_reentry_eligibility_review_report.py`, and `formal/python/tests/test_research_mode_qm_stat_reentry_eligibility_review_report.py`.
 - QM-STAT re-entry review-cycle queue: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_REVIEW_CYCLE_QUEUE_20260419_v0.json`, `formal/python/tools/research_mode_qm_stat_reentry_review_cycle_queue_report.py`, and `formal/python/tests/test_research_mode_qm_stat_reentry_review_cycle_queue_report.py`.
+- QM-STAT re-entry review queue packet: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_REVIEW_QUEUE_PACKET_20260420_v0.md`, `formal/python/tools/research_mode_qm_stat_reentry_review_queue_packet_report.py`, and `formal/python/tests/test_research_mode_qm_stat_reentry_review_queue_packet_report.py`.
+- QM-STAT re-entry downstream intake decision: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_DOWNSTREAM_INTAKE_DECISION_20260420_v0.md`, `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_DOWNSTREAM_INTAKE_DECISION_20260420_v0.json`, `formal/python/tools/research_mode_qm_stat_reentry_downstream_intake_decision_report.py`, and `formal/python/tests/test_research_mode_qm_stat_reentry_downstream_intake_decision_report.py`.
+- QM-STAT re-entry review execution packet: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_REVIEW_EXECUTION_PACKET_20260420_v0.md`, `formal/python/tools/research_mode_qm_stat_reentry_review_execution_packet_report.py`, and `formal/python/tests/test_research_mode_qm_stat_reentry_review_execution_packet_report.py`.
+- QM-STAT re-entry review execution: `formal/python/tools/research_mode_qm_stat_reentry_review_execution_report.py` and `formal/python/tests/test_research_mode_qm_stat_reentry_review_execution_report.py`.
+- QM-STAT re-entry post-review adjudication: `formal/docs/release/RESEARCH_MODE_QM_STAT_REENTRY_POST_REVIEW_ADJUDICATION_20260420_v0.json`, `formal/python/tools/research_mode_qm_stat_reentry_post_review_adjudication_report.py`, and `formal/python/tests/test_research_mode_qm_stat_reentry_post_review_adjudication_report.py`.
+- QM-STAT re-entry downstream governance authorization: `formal/docs/release/QM_STAT_REENTRY_EXPLICIT_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_20260420_v0.json`, `formal/python/tools/qm_stat_reentry_explicit_downstream_governance_authorization_report.py`, and `formal/python/tests/test_qm_stat_reentry_explicit_downstream_governance_authorization_report.py`.
+- QM-STAT downstream governed review packet: `formal/docs/release/QM_STAT_REENTRY_DOWNSTREAM_GOVERNED_REVIEW_PACKET_20260420_v0.md`, `formal/python/tools/qm_stat_reentry_downstream_governed_review_packet_report.py`, and `formal/python/tests/test_qm_stat_reentry_downstream_governed_review_packet_report.py`.
+- QM-STAT downstream governed review execution: `formal/docs/release/QM_STAT_REENTRY_DOWNSTREAM_GOVERNED_REVIEW_EXECUTION_20260420_v0.json`, `formal/python/tools/qm_stat_reentry_downstream_governed_review_execution_report.py`, and `formal/python/tests/test_qm_stat_reentry_downstream_governed_review_execution_report.py`.
 - Retained pilot outputs: `formal/output/research/research_stat_entropy_balance_probe_20260419_v0.json`, `formal/output/research/research_qm_stat_transport_witness_probe_20260419_v0.json`, `formal/output/research/research_master_action_transport_binding_probe_20260419_v0.json`, and `formal/output/reports/research_mode_pilot_pack_20260419_v0.json`.
 - Acceptance report: `formal/output/reports/research_mode_step14_acceptance_review_20260419_v0.json`.
 - Sandbox candidacy report: `formal/output/reports/research_mode_sandbox_candidacy_review_20260419_v0.json`.
@@ -64,6 +73,15 @@ Research Mode (2026-04-19)
 - QM-STAT re-entry eligibility review report: `formal/output/reports/research_mode_qm_stat_reentry_eligibility_review_20260419_v0.json`.
 - QM-STAT re-entry review-cycle queue report: `formal/output/reports/research_mode_qm_stat_reentry_review_cycle_queue_20260419_v0.json`.
 - QM-STAT re-entry review-cycle queue object: `formal/output/queue/qm_stat_reentry_review_cycle_queue_20260419_v0.json`.
+- QM-STAT re-entry review queue packet report: `formal/output/reports/research_mode_qm_stat_reentry_review_queue_packet_20260420_v0.json`.
+- QM-STAT re-entry review queue packet object: `formal/output/queue/qm_stat_reentry_review_queue_packet_20260420_v0.json`.
+- QM-STAT re-entry downstream intake decision report: `formal/output/reports/research_mode_qm_stat_reentry_downstream_intake_decision_20260420_v0.json`.
+- QM-STAT re-entry review execution packet report: `formal/output/reports/research_mode_qm_stat_reentry_review_execution_packet_20260420_v0.json`.
+- QM-STAT re-entry review execution report: `formal/output/reports/research_mode_qm_stat_reentry_review_execution_20260420_v0.json`.
+- QM-STAT re-entry post-review adjudication report: `formal/output/reports/research_mode_qm_stat_reentry_post_review_adjudication_20260420_v0.json`.
+- QM-STAT re-entry downstream governance authorization report: `formal/output/reports/qm_stat_reentry_explicit_downstream_governance_authorization_20260420_v0.json`.
+- QM-STAT downstream governed review packet report: `formal/output/reports/qm_stat_reentry_downstream_governed_review_packet_20260420_v0.json`.
+- QM-STAT downstream governed review execution report: `formal/output/reports/qm_stat_reentry_downstream_governed_review_execution_20260420_v0.json`.
 
 STATE-CORE GENERATED-FIRST CUTOVER (2026-03-26)
 - Canonical control-plane edit path for migrated WS families is generated-first.

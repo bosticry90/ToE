@@ -14,6 +14,18 @@
     "delta_class": "ENTROPY_BALANCE_LOCAL_IDENTITY",
     "contradiction_context": "NONE",
     "provenance_family": "research_mode_pilot_pack_20260419_v0",
+    "assumptions": [
+      "positive diffusion coefficient on a bounded local probe window",
+      "closed-form Gaussian entropy identity remains the primary analytical reference"
+    ],
+    "regime_scope": "bounded Gaussian diffusion probe",
+    "numerical_provenance": "ANALYTIC_CLOSED_FORM_WITH_FINITE_DIFFERENCE_CHECK",
+    "assumption_stability": "HIGH",
+    "artifact_nature": "MIXED",
+    "formalization_route": "PYTHON_THEN_LEAN4",
+    "route_justification": "The identity is analytically crisp but is retained here with a finite-difference spot-check before any Lean-facing obligation is declared.",
+    "lean_candidate_target": "STAT_ENTROPY_LOCAL_DE_BRUIJN_IDENTITY",
+    "lean_module_target": "NONE",
     "nonclaim_boundary": "Repository-local research artifact only; no pillar activation or canonical promotion.",
     "promotability": "NOT_READY"
   },

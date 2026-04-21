@@ -1,6 +1,6 @@
 {
   "authorized_candidate_target": "ROW-SEAM-QM-STAT-001::QM_STAT_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE_v0",
-  "captured_at_utc": "2026-04-20T02:53:29Z",
+  "captured_at_utc": "2026-04-21T02:54:28Z",
   "non_claim_boundary": "Repository-local QM-STAT re-entry review-cycle queue only; no canonical promotion, canonical mutation, or seam-closure claim.",
   "queue_class": "BOUNDED_REENTRY_REVIEW_CYCLE_QUEUE",
   "queue_id": "qm_stat_reentry_review_cycle_queue_20260419_v0",
