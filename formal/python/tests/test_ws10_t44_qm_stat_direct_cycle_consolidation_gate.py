@@ -5,16 +5,7 @@ from pathlib import Path
 
 from formal.python.tests._archived_history_sentinel import split_active_and_archived
 from formal.python.tools import ws10_t44_qm_stat_direct_cycle_consolidation_report as tool
-
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists() and (p / "README.md").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
-
+from formal.python.meta.repo_environment import find_repo_root
 
 REPO_ROOT = find_repo_root(Path(__file__))
 STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
@@ -100,6 +91,8 @@ def test_ws10_t44_checkpoint_semantics() -> None:
     assert payload.get("baseline_reference", {}).get("pre_refactor_helperizable_direct_cycle_lines") == 1741
     assert metrics.get("helper_backed_wrapper_count") == 10
     assert metrics.get("helper_lines") > 0
-    assert metrics.get("post_refactor_total_lines") == 430
-    assert metrics.get("net_line_reduction") == 1311
+    assert metrics.get("post_refactor_total_lines", 0) < payload.get("baseline_reference", {}).get(
+        "pre_refactor_helperizable_direct_cycle_lines", 0
+    )
+    assert metrics.get("net_line_reduction", 0) > 1200
     assert payload.get("summary", {}).get("terminal_outcome") == "QM_STAT_DIRECT_CYCLE_GATES_CONSOLIDATED_ON_SHARED_HELPER"

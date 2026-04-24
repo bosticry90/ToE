@@ -4,21 +4,13 @@ import hashlib
 import json
 import re
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 
 
 CLOSEOUT_GATE_PATH = "formal/python/tests/test_phase5_m5_completion_closeout_gate.py"
 CLOSEOUT_ARTIFACT_PATH = "formal/output/phase5_m5_completion_closeout_checkpoint_v0.json"
 CLOSEOUT_ARTIFACT_ID = "phase5_m5_completion_closeout_checkpoint_v0"
 TERMINAL_TARGET = "TARGET-PHASE5-SR-M5-CONTROLLED-v0"
-
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists() and (p / "README.md").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
 
 
 REPO_ROOT = find_repo_root(Path(__file__))

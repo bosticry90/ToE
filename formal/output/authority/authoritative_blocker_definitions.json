@@ -165,7 +165,40 @@
       "target_row_id": "ROW-SEAM-QM-STAT-001",
       "criteria_met": "5/5",
       "status": "ACTIVE"
+    },
+    {
+      "definition_id": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "authority_category": "AUTHORITATIVE_BLOCKER_DEFINITION",
+      "registered_at_utc": "2026-04-24T02:08:31.577693Z",
+      "ruling_reference": "coupling_refinement_ruling_20260411_v0.json",
+      "promotion_ruling": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+      "coupling_state": "TIGHTENED",
+      "target_row_id": "ROW-SEAM-QM-STAT-001",
+      "criteria_met": "5/5",
+      "status": "ACTIVE"
+    },
+    {
+      "definition_id": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "authority_category": "AUTHORITATIVE_BLOCKER_DEFINITION",
+      "registered_at_utc": "2026-04-24T02:27:09.514182Z",
+      "ruling_reference": "coupling_refinement_ruling_20260411_v0.json",
+      "promotion_ruling": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+      "coupling_state": "TIGHTENED",
+      "target_row_id": "ROW-SEAM-QM-STAT-001",
+      "criteria_met": "5/5",
+      "status": "ACTIVE"
+    },
+    {
+      "definition_id": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "authority_category": "AUTHORITATIVE_BLOCKER_DEFINITION",
+      "registered_at_utc": "2026-04-24T02:36:17.669891Z",
+      "ruling_reference": "coupling_refinement_ruling_20260411_v0.json",
+      "promotion_ruling": "COUPLING_REFINEMENT_SUPPORTS_AUTHORITY_PROMOTION",
+      "coupling_state": "TIGHTENED",
+      "target_row_id": "ROW-SEAM-QM-STAT-001",
+      "criteria_met": "5/5",
+      "status": "ACTIVE"
     }
   ],
-  "last_updated": "2026-04-22T02:26:59.693434Z"
+  "last_updated": "2026-04-24T02:36:17.669891Z"
 }

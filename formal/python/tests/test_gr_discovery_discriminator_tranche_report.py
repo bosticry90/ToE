@@ -19,9 +19,9 @@ def test_gr_discovery_discriminator_tranche_report_is_executable() -> None:
 
     assert payload["schema_id"] == "GR_DISCOVERY_DISCRIMINATOR_TRANCHE_REPORT_20260411_v0"
     summary = payload["summary"]
-    assert summary["target_row"] == "ROW-PILLAR-GR-001"
+    assert summary["target_row"] == "ROW-SEAM-COSMO-SR-001"
     assert summary["selected_route"] == "ACTIVATE_NEXT_RANKED_SEAM"
-    assert summary["rank3_candidate"] == "ROW-PILLAR-GR-001"
+    assert summary["rank3_candidate"] == "ROW-SEAM-COSMO-SR-001"
     assert summary["next_route_alignment"] is True
     assert summary["terminal_outcome"] == "DISCRIMINATOR_PRODUCED"
     assert summary["terminal_outcome_allowed"] is True

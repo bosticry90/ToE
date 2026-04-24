@@ -145,7 +145,15 @@ def test_recompute_monitoring_live_route_is_consistent() -> None:
         assert latest.get("surface_name") == surface_name
         assert latest.get("triggered_by") == "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0"
         assert latest.get("revised_blocker_definition") == "REVISED_BLOCKER_DEFINITION_20260411_v0"
-        assert latest.get("status") == "COMPLETED"
+        assert latest.get("status") in {"PENDING_RECOMPUTE", "COMPLETED"}
+        completed = [
+            trigger
+            for trigger in triggers
+            if trigger.get("triggered_by") == "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0"
+            and trigger.get("status") == "COMPLETED"
+        ]
+        assert completed, f"Expected at least one completed recompute trigger for {surface_name}."
+        assert doc.get("last_completed_trigger_id") == completed[-1].get("trigger_id")
 
 
 def test_recompute_monitoring_authority_pointers_are_pinned() -> None:

@@ -1,4 +1,4 @@
-Please fully audit the ToE repo in it's entirety and provide a comprehensive rigorously in-depth and detailed assessment regarding architecture, automation, effectiveness, efficiency, governance, integration, maintenance, science, physics, and mathematics for the ToE project.
+Please fully audit the ToE repo in it's entirety and provide a comprehensive rigorously in-depth and detailed assessment regarding architecture, automation, effectiveness, efficiency, governance, integration/compatibility, maintenance, science, physics, and mathematics for the ToE project.
 
 Objective-quality completion | Standardization and optimization: prune consolidate integrate while preserving work and results
 

@@ -18,7 +18,7 @@
     "next_action": "RERUN_RECOMPUTE_OBSERVATION_REPORT",
     "surface_id": "qm_seam_coherence"
   },
-  "last_completed_trigger_id": "RECOMPUTE_TRIGGER_20260418_195138",
+  "last_completed_trigger_id": "RECOMPUTE_TRIGGER_20260424_022709",
   "schema_id": "QM_SEAM_COHERENCE_UNDER_REVISED_BLOCKER",
   "status": "ACTIVE_NONLIVE_NONCLAIM",
   "triggers": [
@@ -157,6 +157,37 @@
       "surface_name": "qm_seam_coherence_under_revised_blocker",
       "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
       "triggered_at_utc": "2026-04-22T02:26:59.709025Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260424_020831",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-24T02:08:31.590742Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "COMPLETED",
+      "dependency": "authoritative_blocker_definition_movement",
+      "completed_at_utc": "2026-04-24T02:24:09.526696Z",
+      "completion_note": "Recompute outputs already materialized; trigger reconciled during observation"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260424_022709",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-24T02:27:09.525559Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "COMPLETED",
+      "dependency": "authoritative_blocker_definition_movement",
+      "completed_at_utc": "2026-04-24T02:35:58.363213Z",
+      "completion_note": "Recompute outputs already materialized; trigger reconciled during observation"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260424_023617",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-24T02:36:17.682211Z",
       "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
       "status": "PENDING_RECOMPUTE",
       "dependency": "authoritative_blocker_definition_movement"

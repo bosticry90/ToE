@@ -2,16 +2,7 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
-
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
-
+from formal.python.meta.repo_environment import find_repo_root
 
 REPO_ROOT = find_repo_root(Path(__file__))
 T08_PATH = REPO_ROOT / "formal" / "output" / "reports" / "physics_math_throughput_phase3_t08_theorem_depth_execution_packet_20260407_v0.json"

@@ -27,8 +27,8 @@ def test_gr_discovery_tranche_terminal_outcome_gate() -> None:
     ruling_contract = _read_json(ruling_contract_path)
 
     assert tranche.get("schema_id") == "GR_DISCOVERY_DISCRIMINATOR_TRANCHE_20260411_v0"
-    assert tranche.get("target_row") == "ROW-PILLAR-GR-001"
-    assert tranche.get("blocker_class") == "THEOREM_GAP"
+    assert tranche.get("target_row") == "ROW-SEAM-COSMO-SR-001"
+    assert tranche.get("blocker_class") == "SEAM_INTEGRATION_GAP"
     assert tranche.get("bounded_execution_policy", {}).get("probe_lane_enabled") is False
 
     rescoring_summary = rescoring.get("summary", {})

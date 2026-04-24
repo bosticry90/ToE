@@ -125,7 +125,7 @@ def test_authority_promotion_registration_live_route_is_consistent() -> None:
             and entry.get("triggered_by") == "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
         )
         assert trigger.get("revised_blocker_definition") == "REVISED_BLOCKER_DEFINITION_20260411_v0"
-        assert trigger.get("status") == "PENDING_RECOMPUTE"
+        assert trigger.get("status") in {"PENDING_RECOMPUTE", "COMPLETED"}
 
     assert summary.get("registration_completed") is True
     assert summary.get("revised_definition_is_now_authoritative") is True

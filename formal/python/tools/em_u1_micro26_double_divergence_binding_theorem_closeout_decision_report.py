@@ -5,16 +5,7 @@ import json
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
-
-
-def find_repo_root(start: Path) -> Path:
-    current = start.resolve()
-    while current != current.parent:
-        if (current / "formal").exists() and (current / "README.md").exists():
-            return current
-        current = current.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
-
+from formal.python.meta.repo_environment import find_repo_root
 
 REPO_ROOT = find_repo_root(Path(__file__))
 SCHEMA_ID = "EM_U1_MICRO26_DOUBLE_DIVERGENCE_BINDING_THEOREM_CLOSEOUT_DECISION_20260417_v0"

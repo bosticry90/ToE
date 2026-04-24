@@ -9,6 +9,7 @@ from formal.python.toe.observables.ovbrfn00_fn01_metric_residual_prediction_decl
     ovbrfn00_metric_residual_prediction_declarations_record,
     render_ovbrfn00_lock_markdown,
 )
+from formal.python.meta.repo_environment import find_repo_root
 from formal.python.toe.observables.ovbrfn01_fn01_metric_residual_pruning_table_record import (
     ovbrfn01_metric_residual_pruning_table_record,
     render_ovbrfn01_lock_markdown,
@@ -24,15 +25,6 @@ from formal.python.toe.observables.ovfnwt00_fn01_weight_policy_declarations_reco
 from formal.python.toe.observables.ovfnwt01_fn01_weight_policy_pruning_table_record import (
     ovfnwt01_weight_policy_pruning_table_record,
 )
-
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists() and (p / "README.md").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
 
 
 REPO_ROOT = find_repo_root(Path(__file__))

@@ -7,17 +7,9 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any, Iterable
 
+from formal.python.meta.repo_environment import find_repo_root
 
 ENV_MANIFEST_PATH = "TOE_ADMISSIBILITY_MANIFEST"
-
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
 
 
 def default_manifest_path(repo_root: Path) -> Path:

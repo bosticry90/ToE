@@ -4,15 +4,7 @@ import re
 from pathlib import Path
 from typing import Iterable
 
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
-
+from formal.python.meta.repo_environment import find_repo_root
 
 def read_text(path: Path) -> str:
     if not path.exists():

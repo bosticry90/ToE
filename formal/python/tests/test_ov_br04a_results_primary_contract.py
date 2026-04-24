@@ -6,15 +6,7 @@ from formal.python.toe.observables.ovbr04a_bragg_lowk_slope_conditionA_record im
     _apply_results_primary_contract,
     ovbr04a_bragg_lowk_slope_conditionA_record,
 )
-
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists() and (p / "README.md").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
+from formal.python.meta.repo_environment import find_repo_root
 
 
 REPO_ROOT = find_repo_root(Path(__file__))

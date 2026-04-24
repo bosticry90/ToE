@@ -4,6 +4,7 @@ from __future__ import annotations
 import json
 import re
 from typing import Any, Dict
+from formal.python.meta.repo_environment import find_repo_root
 
 _JSON_BLOCK_RE = re.compile(r"```json\s*(\{.*?\})\s*```", re.DOTALL)
 
@@ -36,15 +37,6 @@ from formal.python.toe.observables.ovbrfn01_fn01_metric_residual_pruning_table_r
     render_ovbrfn01_lock_markdown,
 )
 from formal.python.toe.observables.ovdrbr01_candidate_pruning_table_record import ovdrbr01_candidate_pruning_table_record
-
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists() and (p / "README.md").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
 
 
 REPO_ROOT = find_repo_root(Path(__file__))

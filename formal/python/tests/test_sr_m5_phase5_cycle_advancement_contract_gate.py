@@ -3,22 +3,13 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 
 
 PHASE5_CONTRACT_GATE_PATH = "formal/python/tests/test_sr_m5_phase5_cycle_advancement_contract_gate.py"
 CONTRACT_TOKEN_NAME = "SR_M5_PHASE5_ADVANCEMENT_DELTA_TOKEN_v0"
 CONTRACT_GATE_TOKEN_NAME = "SR_M5_PHASE5_ADVANCEMENT_CONTRACT_GATE_v0"
 INTRO_CYCLE = 40
-
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists() and (p / "README.md").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
-
 
 REPO_ROOT = find_repo_root(Path(__file__))
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "PILLAR_DEEP_MATURITY_REGISTRY_v0.json"

@@ -7,15 +7,7 @@ from pathlib import Path
 from formal.python.toe.observables.ovdq02_dq01_v2_threshold_update_record import (
     ovdq02_dq01_v2_threshold_update_record,
 )
-
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists() and (p / "README.md").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
+from formal.python.meta.repo_environment import find_repo_root
 
 
 REPO_ROOT = find_repo_root(Path(__file__))

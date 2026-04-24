@@ -13,7 +13,7 @@
   "selected_gate_family": {
     "family_id": "QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_GATE_STACK",
     "direct_cycle_gate_count": 12,
-    "synthesis_gate_count": 10,
+    "synthesis_gate_count": 11,
     "selected_direct_family_pattern": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycleNN_gate.py",
     "selected_synthesis_family_pattern": "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycleNN_to_NN_synthesis_gate.py",
     "proposed_helper_path": "formal/python/tests/qm_stat_class_b_cycle_gate_family_helper.py",

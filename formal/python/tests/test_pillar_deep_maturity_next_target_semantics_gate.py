@@ -2,19 +2,11 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 
 
 TERMINAL_TOKEN = "TARGET-PHASE5-SR-M5-CONTROLLED-v0"
 SR_ACTIVE_TOKEN = "TARGET-SR-M5-THEORY-PARITY-LINK-v0"
-
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists() and (p / "README.md").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
 
 
 REPO_ROOT = find_repo_root(Path(__file__))

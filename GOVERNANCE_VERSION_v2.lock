@@ -2,7 +2,7 @@
   "lock_id": "GOVERNANCE_VERSION_v2",
   "governance_version": 2,
   "tracked_hashes": {
-    "ARCHITECTURE_SCHEMA_v1.json": "12bdb1eef37aa430297bcee06be168226625686d95e48d31e3445a2f1cf4e67a",
+    "ARCHITECTURE_SCHEMA_v1.json": "9157799165171f0a55c84018400e61942c79f0095511c77b2d0d0a988a0e7cd3",
     "formal/docs/paper/ASSUMPTION_REGISTRY_v1.md": "6e830af33e5e0936b0c9a0cbfbdd689fe472b4f978afdbe4936c5b04b8d3d19d"
   },
   "adjudication_class_list": [
@@ -10,12 +10,13 @@
     "DISCHARGED_CONDITIONAL_v0",
     "DISCHARGED_v0",
     "LOCKED",
+    "NOT_YET_",
     "PUBLISHED_POLICY_BASELINE_2026Q1",
     "SATISFIED_v0_DISCRETE",
     "T-CONDITIONAL",
     "T-PROVED"
   ],
-  "adjudication_class_list_sha256": "3855e3c69cf291e3ac11086cb99089691340ecae2fd33fa4168f86441420e16e",
+  "adjudication_class_list_sha256": "bfbbd6d69cc5ff0de753819bf44ed8e5d11c8df6706cbb830184310eb13cb538",
   "baseline": {
     "cycle": 74,
     "assumption_taxonomy_classes": [
@@ -55,7 +56,7 @@
       "NOT_YET_*"
     ],
     "governance_surface_counts": {
-      "governance_docs": 397,
+      "governance_docs": 408,
       "token_categories": 7,
       "adjudication_types": 12
     }

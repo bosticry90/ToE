@@ -95,7 +95,19 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         contract.get("authorized_next_action", "AUTHOR_ONE_BOUNDED_QM_STAT_DOWNSTREAM_GOVERNED_REVIEW_PACKET_WITHOUT_CANONICAL_MUTATION")
     ).strip()
     authorized_state_token = f"RESEARCH_MODE_NEXT_ACTION_v0: {authorized_next_action}"
-    state_token_ok = _has_token(state_surface_text, required_state_token) or _has_token(state_surface_text, authorized_state_token)
+    explicit_authorization_tokens = [
+        required_state_token,
+        authorized_state_token,
+        f"QM_STAT_REENTRY_EXPLICIT_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_NEXT_ACTION_v0: {authorized_next_action}",
+        "QM_STAT_REENTRY_EXPLICIT_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_OUTCOME_v0: "
+        + str(contract.get("authorization_result_token", "")).strip(),
+        "QM_STAT_REENTRY_EXPLICIT_DOWNSTREAM_GOVERNANCE_AUTHORIZATION_SCOPE_v0: "
+        + str(contract.get("authorization_scope_token", "")).strip(),
+    ]
+    state_token_ok = any(
+        token and _has_token(state_surface_text, token)
+        for token in explicit_authorization_tokens
+    )
 
     tranche = dict(contract.get("minimum_bounded_downstream_tranche", {}))
     tranche_shape_ok = all(

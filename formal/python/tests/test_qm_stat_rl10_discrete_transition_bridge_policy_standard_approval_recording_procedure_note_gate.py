@@ -1,15 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-
-
-def find_repo_root(start: Path) -> Path:
-    path = start.resolve()
-    while path != path.parent:
-        if (path / "formal").exists() and (path / "README.md").exists():
-            return path
-        path = path.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
+from formal.python.meta.repo_environment import find_repo_root
 
 
 REPO_ROOT = find_repo_root(Path(__file__))

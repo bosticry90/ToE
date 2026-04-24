@@ -12,6 +12,7 @@ from formal.python.meta.repo_environment import find_repo_root
 
 REPO_ROOT = find_repo_root(Path(__file__))
 SCHEMA_ID = "PHYS_MATH_THROUGHPUT_BASELINE_v0"
+DEFAULT_REPORT_PATH = REPO_ROOT / "formal" / "output" / "reports" / "physics_math_throughput_baseline_20260407_v0.json"
 
 METADATA_REGEXES = [
     re.compile(r"_extract_token\("),
@@ -64,7 +65,7 @@ def _load_manifest() -> dict[str, Any]:
     return json.loads(_read_text(manifest_path))
 
 
-def build_snapshot(report_path: Path) -> dict[str, Any]:
+def build_snapshot_payload(*, generated_at_utc: str | None = None) -> dict[str, Any]:
     files = _iter_test_files()
 
     metadata_file_count, metadata_line_count = _match_counts(files, METADATA_REGEXES)
@@ -76,7 +77,7 @@ def build_snapshot(report_path: Path) -> dict[str, Any]:
 
     output = {
         "schema_id": SCHEMA_ID,
-        "generated_at_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "generated_at_utc": generated_at_utc or datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "status": "BASELINE_CAPTURED_NONCLAIM",
         "baseline_context": {
             "goal": "Quantify governance-overhead vs science-signal mix before refactors.",
@@ -114,7 +115,11 @@ def build_snapshot(report_path: Path) -> dict[str, Any]:
             "manifest_group": "governance_pytests",
         },
     }
+    return output
 
+
+def build_snapshot(report_path: Path, *, generated_at_utc: str | None = None) -> dict[str, Any]:
+    output = build_snapshot_payload(generated_at_utc=generated_at_utc)
     report_path.parent.mkdir(parents=True, exist_ok=True)
     report_path.write_text(json.dumps(output, indent=2) + "\n", encoding="utf-8")
     return output
@@ -127,8 +132,13 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
     parser.add_argument(
         "--report",
         type=Path,
-        default=REPO_ROOT / "formal" / "output" / "reports" / "physics_math_throughput_baseline_20260407_v0.json",
+        default=DEFAULT_REPORT_PATH,
         help="Output report path.",
+    )
+    parser.add_argument(
+        "--generated-at-utc",
+        default=None,
+        help="Override generated_at_utc for deterministic refreshes.",
     )
     return parser.parse_args(argv)
 
@@ -136,7 +146,7 @@ def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
 def main(argv: list[str] | None = None) -> int:
     ns = _parse_args(argv)
     report_path = (REPO_ROOT / ns.report).resolve() if not ns.report.is_absolute() else ns.report
-    payload = build_snapshot(report_path)
+    payload = build_snapshot(report_path, generated_at_utc=ns.generated_at_utc)
     counts = payload["counts"]
     print(
         "throughput_baseline: "

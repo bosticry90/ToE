@@ -9,7 +9,7 @@
   },
   "execution_policy": {
     "required_selected_route": "ACTIVATE_NEXT_RANKED_SEAM",
-    "required_rank3_candidate": "ROW-PILLAR-GR-001",
+    "required_rank3_candidate": "ROW-SEAM-COSMO-SR-001",
     "single_cycle_only": true,
     "evidence_required": true,
     "terminal_outcome_source": "TRANCHE_DECLARATION",

@@ -2,19 +2,18 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
 
+if __name__ == "__main__" and (__package__ is None or __package__ == ""):
+    for candidate in Path(__file__).resolve().parents:
+        if (candidate / "formal" / "python").exists() and (candidate / "State_of_the_Theory.md").exists():
+            sys.path.insert(0, str(candidate))
+            break
 
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists() and (p / "README.md").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
-
+from formal.python.meta.repo_environment import find_repo_root
 
 REPO_ROOT = find_repo_root(Path(__file__))
 DEFAULT_STATE_CORE = REPO_ROOT / "formal" / "docs" / "release" / "state_core_v0.json"

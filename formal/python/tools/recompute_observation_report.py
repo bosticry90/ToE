@@ -61,6 +61,7 @@ def normalize_surface_completion(surface_path, surface_data):
     latest_trigger["status"] = "COMPLETED"
     latest_trigger.setdefault("completed_at_utc", datetime.utcnow().isoformat() + "Z")
     latest_trigger.setdefault("completion_note", "Recompute outputs already materialized; trigger reconciled during observation")
+    surface_data["last_completed_trigger_id"] = latest_trigger.get("trigger_id")
 
     with open(surface_path, 'w') as f:
         json.dump(surface_data, f, indent=2)

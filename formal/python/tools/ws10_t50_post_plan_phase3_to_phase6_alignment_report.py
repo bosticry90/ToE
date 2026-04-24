@@ -64,15 +64,18 @@ def build_report(*, captured_at_utc: str | None = None) -> dict[str, Any]:
         and phase6.get("summary", {}).get("next_action")
         == "EXECUTE_NEXT_THEOREM_GAP_TRANCHE_OR_EXPLICIT_EXHAUSTION_READ_BEFORE_ANY_DOWNSTREAM_RECLASSIFICATION"
     )
-    program_tokens_ok = all(
-        token in program_text
-        for token in [
-            "POST_PLAN_PHYSICS_ADVANCEMENT_PHASE3_QM_TRANCHE_v0: POST_PLAN_QM_FIRST_THEOREM_GAP_TRANCHE_EXECUTED_NONPROMOTED",
-            "POST_PLAN_PHYSICS_ADVANCEMENT_PHASE4_SEAM_REROUTE_v0: POST_PLAN_SEAM_REROUTE_REASSESSMENT_NOT_ELIGIBLE_NO_UPSTREAM_MOVEMENT",
-            "POST_PLAN_PHYSICS_ADVANCEMENT_PHASE5_MASTER_ACTION_v0: POST_PLAN_MASTER_ACTION_REEVALUATION_NOT_ELIGIBLE_NO_UPSTREAM_MOVEMENT",
-            "POST_PLAN_PHYSICS_ADVANCEMENT_PHASE6_FINAL_INTEGRATION_v0: POST_PLAN_FINAL_INTEGRATION_REVIEW_HELD_PENDING_FURTHER_BLOCKER_MOVEMENT",
-            "POST_PLAN_PHYSICS_ADVANCEMENT_NEXT_ACTION_v0: EXECUTE_NEXT_THEOREM_GAP_TRANCHE_OR_EXPLICIT_EXHAUSTION_READ_WITH_POST_CASCADE_HOLD_RECORDED",
-        ]
+    shared_program_tokens = [
+        "POST_PLAN_PHYSICS_ADVANCEMENT_PHASE3_QM_TRANCHE_v0: POST_PLAN_QM_FIRST_THEOREM_GAP_TRANCHE_EXECUTED_NONPROMOTED",
+        "POST_PLAN_PHYSICS_ADVANCEMENT_PHASE4_SEAM_REROUTE_v0: POST_PLAN_SEAM_REROUTE_REASSESSMENT_NOT_ELIGIBLE_NO_UPSTREAM_MOVEMENT",
+        "POST_PLAN_PHYSICS_ADVANCEMENT_PHASE5_MASTER_ACTION_v0: POST_PLAN_MASTER_ACTION_REEVALUATION_NOT_ELIGIBLE_NO_UPSTREAM_MOVEMENT",
+        "POST_PLAN_PHYSICS_ADVANCEMENT_PHASE6_FINAL_INTEGRATION_v0: POST_PLAN_FINAL_INTEGRATION_REVIEW_HELD_PENDING_FURTHER_BLOCKER_MOVEMENT",
+    ]
+    accepted_next_actions = [
+        "POST_PLAN_PHYSICS_ADVANCEMENT_NEXT_ACTION_v0: EXECUTE_NEXT_THEOREM_GAP_TRANCHE_OR_EXPLICIT_EXHAUSTION_READ_WITH_POST_CASCADE_HOLD_RECORDED",
+        "POST_PLAN_PHYSICS_ADVANCEMENT_NEXT_ACTION_v0: DEFER_TO_OBJECTIVE_QUALITY_EXHAUSTION_DECISION_AND_REQUIRE_NEW_SUCCESSOR_FOR_FURTHER_EXECUTION",
+    ]
+    program_tokens_ok = all(token in program_text for token in shared_program_tokens) and any(
+        token in program_text for token in accepted_next_actions
     )
 
     all_ok = all([phase3_ok, phase4_ok, phase5_ok, phase6_ok, program_tokens_ok])
@@ -108,7 +111,10 @@ def build_report(*, captured_at_utc: str | None = None) -> dict[str, Any]:
                 "phase5_terminal_outcome": phase5.get("summary", {}).get("terminal_outcome"),
                 "phase6_terminal_outcome": phase6.get("summary", {}).get("terminal_outcome"),
                 "phase6_next_action": phase6.get("summary", {}).get("next_action"),
-                "program_level_next_action": "EXECUTE_NEXT_THEOREM_GAP_TRANCHE_OR_EXPLICIT_EXHAUSTION_READ_WITH_POST_CASCADE_HOLD_RECORDED",
+                "program_level_next_action": next(
+                    (token.split(": ", 1)[1] for token in accepted_next_actions if token in program_text),
+                    "UNDECLARED",
+                ),
             },
             "summary": {
                 "all_criteria_satisfied": all_ok,

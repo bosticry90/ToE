@@ -9,15 +9,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Iterable
 
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory).")
-
+from formal.python.meta.repo_environment import find_repo_root
 
 _JSON_BLOCK_RE = re.compile(r"```json\s*(\{.*?\})\s*```", flags=re.DOTALL)
 

@@ -12,15 +12,14 @@
   },
   "consolidation_metrics": {
     "helper_path": "formal/python/tests/qm_stat_class_b_cycle_gate_family_helper.py",
-    "helper_lines": 219,
+    "helper_lines": 212,
     "helper_backed_wrapper_count": 10,
     "helper_backed_wrapper_lines": 211,
-    "post_refactor_total_lines": 430,
-    "net_line_reduction": 1311,
-    "reduction_ratio": 0.753016,
+    "post_refactor_total_lines": 423,
+    "net_line_reduction": 1318,
+    "reduction_ratio": 0.757036,
     "preserved_bespoke_direct_cycles": [
-      "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle01_gate.py",
-      "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle12_gate.py"
+      "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle01_gate.py"
     ]
   },
   "summary": {

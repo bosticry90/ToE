@@ -6,18 +6,18 @@
   "baseline_reference": {
     "t43_checkpoint": "formal/output/ws10_t43_maintenance_selection_checkpoint_20260418_v0.json",
     "t43_selected_gate_family": "QM_STAT_CLASS_B_SEAM_PHYSICS_PILOT_GATE_STACK",
-    "t43_synthesis_gate_count": 10,
+    "t43_synthesis_gate_count": 11,
     "pre_refactor_helperizable_synthesis_gate_count": 9,
     "pre_refactor_helperizable_synthesis_gate_lines": 1457
   },
   "consolidation_metrics": {
     "helper_path": "formal/python/tests/qm_stat_class_b_synthesis_gate_family_helper.py",
-    "helper_lines": 228,
+    "helper_lines": 221,
     "helper_backed_wrapper_count": 9,
     "helper_backed_wrapper_lines": 292,
-    "post_refactor_total_lines": 520,
-    "net_line_reduction": 937,
-    "reduction_ratio": 0.643102,
+    "post_refactor_total_lines": 513,
+    "net_line_reduction": 944,
+    "reduction_ratio": 0.647907,
     "preserved_bespoke_synthesis_boundaries": [
       "formal/python/tests/test_qm_stat_class_b_seam_physics_pilot_cycle01_to_02_synthesis_gate.py"
     ]

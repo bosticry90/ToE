@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from formal.python.meta.repo_environment import find_repo_root
 
 
 REQUIRED_PHASES = [
@@ -15,16 +16,6 @@ REQUIRED_PHASES = [
     "DRIFT_GATES",
     "ADJUDICATION_SYNC",
 ]
-
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists() and (p / "README.md").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
-
 
 REPO_ROOT = find_repo_root(Path(__file__))
 CHARTER_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "DERIVATION_TARGET_TOE_QFT_SCALAR_ROUTE_v0.md"

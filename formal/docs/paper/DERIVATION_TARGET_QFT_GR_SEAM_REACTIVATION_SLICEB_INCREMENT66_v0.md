@@ -24,6 +24,9 @@ Pinned parents:
 - `formal/docs/paper/DERIVATION_TARGET_QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT65_TO_66_SYNTHESIS_v0.md`
 - `formal/docs/paper/PILLAR_STATUS_MATRIX_v1.json`
 
+Counterfactual boundary note:
+- Counterfactual failure conditions are declared before any discharge read and are expanded in the `COUNTERFACTUAL` section below.
+
 Increment66 core tokens:
 - `QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT66_STATUS_v0: T-CONDITIONAL_BOUNDED_NONCLAIM`
 - `QFT_GR_SEAM_REACTIVATION_SLICEB_INCREMENT66_OBJECTIVE_v0: STRESS_ENERGY_TO_WEAK_CURVATURE_HANDOFF_STRENGTHENING`

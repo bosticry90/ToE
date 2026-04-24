@@ -158,8 +158,8 @@ Validation interpretation:
 - `OPEN_PROOF_DEBT` rows may have valid checkpoint/gate pointers while still carrying unresolved discharge obligations.
 
 Validation rollup (v0 draft):
-- `validated_rows`: 13
-- `used_rows`: 12
+- `validated_rows`: 64
+- `used_rows`: 14
 - `open_proof_debt_rows`: 2
 - `bounded_nonclaim_rows`: 5
 

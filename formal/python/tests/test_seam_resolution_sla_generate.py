@@ -69,7 +69,7 @@ def test_seam_resolution_sla_ledger_builds_expected_states(tmp_path: Path, monke
     assert report["summary"]["seam_status_coverage_rate"] == 1.0
     assert report["policy"]["decision_owner_assignment_status"] == "NAMED_OWNERS_ASSIGNED"
     states = {entry["row_id"]: entry["decision_state"] for entry in report["entries"]}
-    assert states["ROW-SEAM-QM-STAT-001"] == "HOLD_RETAINED_PENDING_BRANCH_EXCEPTION_DECISION"
+    assert states["ROW-SEAM-QM-STAT-001"] == "ACTIVE_TRACK_PENDING_BRANCH_EXCEPTION_DECISION"
     assert states["ROW-SEAM-GR-QM-001"] == "HOLD_RETAINED_PARITY_RESTORE_REQUIRED"
     owners = {entry["row_id"]: entry["primary_owner"] for entry in report["entries"]}
     assert owners["ROW-SEAM-QM-STAT-001"] == "TEAM_A"

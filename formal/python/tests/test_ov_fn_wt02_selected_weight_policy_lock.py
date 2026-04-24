@@ -3,15 +3,7 @@ from __future__ import annotations
 import json
 import re
 from pathlib import Path
-
-
-def find_repo_root(start: Path) -> Path:
-    p = start.resolve()
-    while p != p.parent:
-        if (p / "formal").exists() and (p / "README.md").exists():
-            return p
-        p = p.parent
-    raise RuntimeError("Could not locate repo root (expected a 'formal' directory and README.md).")
+from formal.python.meta.repo_environment import find_repo_root
 
 
 def extract_json_block(md_text: str) -> dict:
