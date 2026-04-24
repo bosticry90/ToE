@@ -1,0 +1,47 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_INTERPRETATION_SCOPE_UPLIFT_GATE_SINGLE_RUN_EXECUTION_20260422_v0",
+  "run_id": "QM-STAT-RL10-BRIDGE-INTERPRETATION-SCOPE-UPLIFT-GATE-SINGLE-RUN-EXECUTION-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local interpretation-scope uplift gate single-run execution declaration only; no scientific adequacy claim.",
+  "objective": "Execute exactly one declared bounded uplift-gate run under the authorized execution packet, then record whether a declared scope-change signal was observed while keeping branch execution frozen unless explicitly changed by the run itself.",
+  "required_inputs": {
+    "bridge_interpretation_scope_uplift_gate_execution_packet_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_interpretation_scope_uplift_gate_execution_packet_20260422_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "single_run_policy": {
+    "required_execution_packet_outcome": "INTERPRETATION_SCOPE_UPLIFT_GATE_EXECUTION_PACKET_DECLARED_AND_SINGLE_RUN_AUTHORIZED",
+    "required_execution_packet_id": "RL10_INTERPRETATION_SCOPE_UPLIFT_GATE_EXECUTION_PACKET_v0",
+    "required_execution_mode": "SINGLE_BOUNDED_UPLIFT_GATE_RUN_ONCE",
+    "required_admissible_evidence_class": "INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT",
+    "required_admissible_evidence_object_id": "RL10_INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT_v0",
+    "required_uplift_gate_id": "rl10_interpretation_scope_uplift_evidence_gate_v0",
+    "required_uplift_gate_contract": "SINGLE_BOUNDED_GATE_EXECUTION_ONLY",
+    "single_run_executed": true,
+    "scope_change_signal_observed": false,
+    "branch_execution_reopened_by_run": false,
+    "single_bounded_run_only": true,
+    "no_expansion_no_rollout_guard": true,
+    "implicitly_authorizes_promotion": false,
+    "implicitly_authorizes_multi_lane_expansion": false,
+    "implicitly_authorizes_rollout": false,
+    "non_promotion_non_closure_boundary": true,
+    "falsification_condition": "SINGLE_RUN_FAILS_OR_RETURNS_NO_DECLARED_SCOPE_CHANGE_SIGNAL",
+    "stop_condition_if_not_met": "REMAIN_FROZEN_AND_DO_NOT_REOPEN_BRANCH_EXECUTION"
+  },
+  "single_run_contract": {
+    "allowed_outcomes": [
+      "INTERPRETATION_SCOPE_UPLIFT_GATE_SINGLE_RUN_EXECUTED_NO_SCOPE_CHANGE_REMAIN_FROZEN",
+      "INTERPRETATION_SCOPE_UPLIFT_GATE_SINGLE_RUN_EXECUTED_SCOPE_CHANGE_SIGNAL_OBSERVED",
+      "INTERPRETATION_SCOPE_UPLIFT_GATE_SINGLE_RUN_PRECONDITION_FAILED",
+      "INTERPRETATION_SCOPE_UPLIFT_GATE_SINGLE_RUN_SCOPE_VIOLATION"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_INTERPRETATION_SCOPE_UPLIFT_GATE_SINGLE_RUN_OUTCOME",
+    "no_loop_rule": "ONE_DECLARED_SINGLE_RUN_EXECUTION_ONLY",
+    "default_outcome": "INTERPRETATION_SCOPE_UPLIFT_GATE_SINGLE_RUN_PRECONDITION_FAILED",
+    "stop_after": "SINGLE_RUN_REPORT_GATE_AND_TOKEN_READ_ONLY"
+  }
+}

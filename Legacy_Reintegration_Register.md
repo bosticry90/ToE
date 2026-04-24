@@ -2,7 +2,7 @@ LEGACY REINTEGRATION REGISTER (BOOKKEEPING)
 
 Project: ToE
 
-Last updated: 2026-02-01
+Last updated: 2026-04-23
 
 
 Purpose
@@ -14,6 +14,11 @@ Reincorporate prior work from archive/ as conditionally admissible input without
 - status discipline in State_of_the_Theory.md
 
 This register does not promote any legacy claim. It records what exists, what is a candidate to revalidate, and the intended (safe) migration path.
+
+Current-state verification note (2026-04-23)
+
+- Legacy reintegration posture remains bookkeeping-only and non-promotive.
+- Active authority for live program state is [State_of_the_Theory.md](State_of_the_Theory.md), including queue-reconstruction checkpoints through P167.
 
 
 Triage artifacts (generated)

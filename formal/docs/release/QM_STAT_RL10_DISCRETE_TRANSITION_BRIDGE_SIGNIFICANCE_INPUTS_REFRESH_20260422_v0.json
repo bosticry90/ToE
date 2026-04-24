@@ -1,0 +1,34 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SIGNIFICANCE_INPUTS_REFRESH_20260422_v0",
+  "refresh_id": "QM-STAT-RL10-BRIDGE-SIGNIFICANCE-INPUTS-REFRESH-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local bounded significance inputs refresh declaration only; no scientific adequacy claim.",
+  "objective": "Produce a refreshed significance inputs record that inherits the existing significance adjudication and applies the now-confirmed comparator repeatability status, so the limitation review can be re-executed against the actual current machine state.",
+  "required_inputs": {
+    "bridge_probe_significance_adjudication_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_significance_adjudication_20260412_v0.json",
+    "bridge_comparator_repeatability_confirmation_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_comparator_repeatability_confirmation_20260422_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "refresh_policy": {
+    "required_significance_outcome": "PROBE_SIGNAL_CONFIRMED_BUT_LIMITED",
+    "required_repeatability_confirmation_outcome": "COMPARATOR_REPEATABILITY_CONFIRMED",
+    "cross_probe_consistency_confirmed": false,
+    "not_a_new_adjudication_cycle": true,
+    "no_scope_expansion": true
+  },
+  "refresh_contract": {
+    "allowed_outcomes": [
+      "SIGNIFICANCE_INPUTS_REFRESHED",
+      "SIGNIFICANCE_INPUTS_UNCHANGED",
+      "SIGNIFICANCE_INPUTS_REFRESH_PRECONDITION_FAILED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SIGNIFICANCE_INPUTS_REFRESH_OUTCOME",
+    "no_loop_rule": "ONE_SIGNIFICANCE_INPUTS_REFRESH_ONLY",
+    "default_outcome": "SIGNIFICANCE_INPUTS_UNCHANGED",
+    "stop_after": "SIGNIFICANCE_INPUTS_REFRESH_RULING_LIMITATION_REVIEW_RERUN_TOKEN_READ"
+  }
+}

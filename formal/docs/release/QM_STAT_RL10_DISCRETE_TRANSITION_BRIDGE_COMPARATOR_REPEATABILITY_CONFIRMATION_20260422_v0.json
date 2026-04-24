@@ -1,0 +1,44 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_COMPARATOR_REPEATABILITY_CONFIRMATION_20260422_v0",
+  "confirmation_id": "QM-STAT-RL10-BRIDGE-COMPARATOR-REPEATABILITY-CONFIRMATION-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local bridge comparator-repeatability confirmation declaration only; no scientific adequacy claim.",
+  "objective": "Execute one bounded check against the named repeatability-window check to determine whether comparator_repeatability_confirmed can be set to true, directly targeting the 0.01 signal-margin deficit.",
+  "required_inputs": {
+    "bridge_limitation_characterization_packet_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_characterization_packet_20260422_v0.json",
+    "bridge_repeatability_check_naming_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_repeatability_check_naming_review_20260412_v0.json",
+    "bridge_material_repeatability_admissibility_criteria_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_material_repeatability_admissibility_criteria_20260414_v0.json",
+    "bridge_sigma_db_repeatability_window_check_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_sigma_db_repeatability_window_check_20260422_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0",
+    "named_check_id": "rl10_bridge_sigma_db_repeatability_window_check_v0"
+  },
+  "confirmation_policy": {
+    "required_limitation_class": "COMPARATOR_BOUND_LIMITATION_CONFIRMED",
+    "required_naming_review_outcome": "BOUNDED_REPEATABILITY_CHECK_NAMED",
+    "required_proposed_check_kind": "REPEATABILITY",
+    "required_admissibility_criteria_outcome": "RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_DECLARED",
+    "window_check_executed": true,
+    "window_check_comparator_stable": true,
+    "window_check_within_admissible_scope": true,
+    "not_a_full_second_cycle": true,
+    "no_scope_expansion": true,
+    "signal_margin_gap_targeted": 0.01,
+    "signal_margin_threshold": 0.05
+  },
+  "confirmation_contract": {
+    "allowed_outcomes": [
+      "COMPARATOR_REPEATABILITY_CONFIRMED",
+      "COMPARATOR_REPEATABILITY_NOT_YET_CONFIRMED",
+      "WINDOW_CHECK_SCOPE_VIOLATION",
+      "ADMISSIBILITY_PRECONDITION_FAILED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_COMPARATOR_REPEATABILITY_CONFIRMATION_OUTCOME",
+    "no_loop_rule": "ONE_COMPARATOR_REPEATABILITY_CONFIRMATION_ONLY",
+    "default_outcome": "COMPARATOR_REPEATABILITY_NOT_YET_CONFIRMED",
+    "stop_after": "EXECUTION_RULING_FOCUSED_GATES_REFRESHED_TOKEN_READ"
+  }
+}

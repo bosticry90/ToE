@@ -1,0 +1,37 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SIGNAL_MARGIN_LIMITATION_ACCEPTANCE_REVIEW_20260422_v0",
+  "review_id": "QM-STAT-RL10-BRIDGE-SIGNAL-MARGIN-LIMITATION-ACCEPTANCE-REVIEW-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local bridge signal-margin limitation acceptance review declaration only; no scientific adequacy claim.",
+  "objective": "Perform one bounded acceptance review that records whether the seam remains primary-but-margin-limited at the current bounded hardening ceiling.",
+  "required_inputs": {
+    "bridge_signal_margin_hardening_cycle_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_signal_margin_hardening_cycle_20260422_v0.json",
+    "bridge_limitation_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_review_20260422_v2.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "acceptance_policy": {
+    "required_cycle_outcome": "SIGNAL_MARGIN_HARDENING_CYCLE_EXECUTED_MARGIN_ADVANCED_TO_THRESHOLD",
+    "required_limitation_outcome": "LIMITATION_SIGNAL_MARGIN_CONFIRMED_SIGNAL_HOLD",
+    "required_limitation_primary_cause": "signal_margin_below_external_path_success_threshold",
+    "allow_acceptance_at_current_margin_ceiling": true,
+    "not_a_multi_cycle": true,
+    "no_scope_expansion": true,
+    "margin_ceiling_tolerance": 1e-9
+  },
+  "acceptance_contract": {
+    "allowed_outcomes": [
+      "SIGNAL_MARGIN_LIMITATION_ACCEPTED_AT_CURRENT_CEILING",
+      "SIGNAL_MARGIN_LIMITATION_NOT_ACCEPTED_CONTINUE_BOUNDED_HARDENING",
+      "SIGNAL_MARGIN_LIMITATION_ACCEPTANCE_PRECONDITION_FAILED",
+      "SIGNAL_MARGIN_LIMITATION_ACCEPTANCE_SCOPE_VIOLATION"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SIGNAL_MARGIN_LIMITATION_ACCEPTANCE_OUTCOME",
+    "no_loop_rule": "ONE_SIGNAL_MARGIN_LIMITATION_ACCEPTANCE_REVIEW_ONLY",
+    "default_outcome": "SIGNAL_MARGIN_LIMITATION_ACCEPTANCE_PRECONDITION_FAILED",
+    "stop_after": "EXECUTION_RULING_FOCUSED_GATES_REFRESHED_TOKEN_READ"
+  }
+}

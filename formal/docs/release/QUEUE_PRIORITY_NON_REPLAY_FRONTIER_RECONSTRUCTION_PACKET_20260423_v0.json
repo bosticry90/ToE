@@ -1,0 +1,55 @@
+{
+  "schema_id": "QUEUE_PRIORITY_NON_REPLAY_FRONTIER_RECONSTRUCTION_PACKET_20260423_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Declaration-only reconstruction of queue priority surfaces to enable a fresh non-replay frontier selection without reopening consumed families or executing any branch.",
+  "predecessor_context": {
+    "reassessment_checkpoint": "P160-A",
+    "reassessment_outcome": "NO_GENUINELY_NON_REPLAY_LIVE_FRONTIER_EXISTS_IN_CURRENT_QUEUE",
+    "rl10_branch_state": "FROZEN_NO_REOPEN",
+    "gr_replay_state": "DOWNSTREAM_CHAIN_ALREADY_MATERIALIZED"
+  },
+  "required_inputs": {
+    "completion_queue_report": "formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json",
+    "gr_refresh_report": "formal/output/reports/post_plan_gr_dormant_new_structure_completion_tranche_20260418_v0.json",
+    "theory_ledger": "State_of_the_Theory.md",
+    "theorem_gap_tranche_linkage_registry": "formal/docs/release/THEOREM_GAP_TRANCHE_LINKAGE_REGISTRY_20260411_v0.json"
+  },
+  "reconstruction_policy": {
+    "mode": "DECLARATION_ONLY",
+    "execution_authorization": "NONE",
+    "no_execution_rule": "NO_BRANCH_EXECUTION_OR_GATE_RUN_ALLOWED_UNDER_THIS_PACKET",
+    "exclusion_rules": [
+      "EXCLUDE_RL10_UPLIFT_BRANCH_UNTIL_EXPLICIT_UNFREEZE_DECLARATION",
+      "EXCLUDE_GR_DOWNSTREAM_REPLAY_CHAIN_WHEN_ALREADY_MATERIALIZED",
+      "EXCLUDE_ANY_ROW_WITH_MATERIALIZED_EXECUTED_NONPROMOTED_OR_EXPLICITLY_EXHAUSTED_POST_PLAN_COMPLETION_TRANCHE_IN_CURRENT_BRANCH_CONTEXT"
+    ],
+    "admissibility_requirements": [
+      "FRONTIER_MUST_BE_REPO_VISIBLE_AND_DECLARED",
+      "FRONTIER_MUST_NOT_BE_TERMINAL_FROZEN",
+      "FRONTIER_MUST_NOT_BE_REPLAY_CONSUMED_DOWNSTREAM",
+      "FRONTIER_MUST_INCLUDE_CLEAR_PRIMARY_GATE_POINTER_AND_DECLARATION_CHAIN",
+      "FRONTIER_MUST_DEFINE_BOUNDED_STOP_RULE_BEFORE_ANY_EXECUTION_AUTHORIZATION"
+    ],
+    "selection_contract": {
+      "single_selection_rule": "SELECT_EXACTLY_ONE_FRONTIER_OR_EXPLICIT_NONE",
+      "default_selection": "NONE",
+      "tie_breaker": "LOWEST_REPLAY_RISK_THEN_HIGHEST_INFORMATION_GAIN",
+      "output_token": "QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_v0"
+    }
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QUEUE_RECONSTRUCTION_DECLARATION_OUTCOME",
+    "allowed_outcomes": [
+      "QUEUE_RECONSTRUCTION_DECLARATION_AUTHORED_PENDING_FILTER_ADJUDICATION",
+      "QUEUE_RECONSTRUCTION_DECLARATION_AUTHORED_WITH_ELIGIBLE_FRONTIER_NONE",
+      "HOLD_PENDING_QUEUE_RECONSTRUCTION_INPUT_REPAIR"
+    ],
+    "default_outcome": "QUEUE_RECONSTRUCTION_DECLARATION_AUTHORED_PENDING_FILTER_ADJUDICATION"
+  },
+  "next_action_contract": {
+    "primary": "AUTHOR_STRICT_ELIGIBILITY_FILTER_ARTIFACT_IF_RECONSTRUCTION_REMAINS_AMBIGUOUS",
+    "secondary": "AUTHOR_NEW_NON_REPLAY_FRONTIER_DEFINITION_PACKET_WITHOUT_EXECUTION",
+    "execution_guard": "DO_NOT_EXECUTE_ANY_FRONTIER_UNTIL_DECLARATION_CHAIN_SELECTS_ADMISSIBLE_NON_REPLAY_TARGET"
+  },
+  "non_claim_boundary": "Declaration-only queue reconstruction policy packet; no execution, promotion, or scientific adequacy claim."
+}

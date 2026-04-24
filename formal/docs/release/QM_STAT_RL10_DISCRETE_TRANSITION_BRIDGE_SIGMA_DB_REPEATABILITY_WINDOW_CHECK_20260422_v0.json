@@ -1,0 +1,47 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SIGMA_DB_REPEATABILITY_WINDOW_CHECK_20260422_v0",
+  "check_id": "rl10_bridge_sigma_db_repeatability_window_check_v0",
+  "check_kind": "REPEATABILITY",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local bounded repeatability window check declaration only; no scientific adequacy claim.",
+  "objective": "Execute the single named bounded repeatability-window check to determine whether the RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0 signal margin is stable across a declared perturbation window, directly testing whether comparator_repeatability_confirmed can be set to true.",
+  "required_inputs": {
+    "bridge_probe_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_execution_20260412_v0.json",
+    "bridge_repeatability_check_naming_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_repeatability_check_naming_review_20260412_v0.json",
+    "bridge_material_repeatability_admissibility_criteria_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_material_repeatability_admissibility_criteria_20260414_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0",
+    "named_check_id": "rl10_bridge_sigma_db_repeatability_window_check_v0",
+    "check_family_id": "REPEATABILITY_STABILITY_WINDOW_FAMILY"
+  },
+  "window_parameters": {
+    "window_half_width": 0.02,
+    "stability_floor": 0.02,
+    "n_sample_points": 3,
+    "sample_perturbations": [0.0, 0.01, 0.02],
+    "comment": "Sample perturbations are adverse (positive = margin reduced). window_half_width=0.02 < existing robustness perturbation_delta=0.03, guaranteeing this is a strictly bounded sub-window."
+  },
+  "check_policy": {
+    "required_naming_review_outcome": "BOUNDED_REPEATABILITY_CHECK_NAMED",
+    "required_naming_check_id": "rl10_bridge_sigma_db_repeatability_window_check_v0",
+    "required_admissibility_criteria_outcome": "RL10_BRIDGE_MATERIAL_REPEATABILITY_ADMISSIBILITY_CRITERIA_DECLARED",
+    "not_a_full_second_cycle": true,
+    "no_scope_expansion": true,
+    "single_declared_surface_only": true
+  },
+  "check_contract": {
+    "allowed_outcomes": [
+      "WINDOW_CHECK_COMPARATOR_STABLE",
+      "WINDOW_CHECK_COMPARATOR_NOT_STABLE",
+      "WINDOW_CHECK_SCOPE_VIOLATION",
+      "WINDOW_CHECK_PRECONDITION_FAILED"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_WINDOW_CHECK_OUTCOME",
+    "no_loop_rule": "ONE_SIGMA_DB_REPEATABILITY_WINDOW_CHECK_ONLY",
+    "default_outcome": "WINDOW_CHECK_COMPARATOR_NOT_STABLE",
+    "stop_after": "WINDOW_CHECK_RULING_FOCUSED_GATES_REFRESHED_TOKEN_READ"
+  }
+}

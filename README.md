@@ -1,7 +1,7 @@
 README.md
 A Formal Research Hypothesis Toward a Unified Physical Framework
 
-PROJECT STATUS (2026-03-15)
+PROJECT STATUS (2026-04-23)
 Tooling is frozen except for bugfixes that preserve existing contracts.
 Current work is in the discriminative science phase: evidence-only runs, candidate pruning, and inventory updates.
 Governance status is TERMINAL_SATISFIED_v0_NONCLAIM under pinned policy scope.
@@ -9,6 +9,7 @@ Physics status is MIXED_PROGRESS_v0 with seam-level physics closure still incomp
 This is NOT a physics-complete ToE claim.
 A bounded auxiliary computational-analysis lane is authorized for shadow numerics, sensitivity scans, stability summaries, and comparator design only.
 This does not reopen dormant lanes or authorize new packets.
+Queue-priority non-replay frontier reconstruction is active in declaration-only mode; execution authorization remains none until fresh-delta emergence conditions are machine-pinned.
 
 PHYSICS-FIRST EXECUTION POLICY CHECKPOINT (WS-10-T07B, 2026-03-26)
 - Physics-closure blockers are prioritized ahead of governance expansion work.

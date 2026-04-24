@@ -1,0 +1,31 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_LIMITATION_REVIEW_20260422_v1",
+  "review_id": "QM-STAT-RL10-BRIDGE-LIMITATION-REVIEW-003",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local bridge limitation review declaration (refreshed, post-cross-probe-consistency-confirmation) only; no scientific adequacy claim.",
+  "required_inputs": {
+    "bridge_probe_significance_adjudication_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_cross_probe_consistency_confirmation_20260422_v0.json",
+    "bridge_probe_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_execution_20260412_v0.json",
+    "bridge_probe_ruling_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_ruling_20260412_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "diagnosis_policy": {
+    "external_path_success_signal_margin_min": 0.05,
+    "auto_authorize_additional_cycle": false
+  },
+  "review_contract": {
+    "allowed_outcomes": [
+      "LIMITATION_LOCAL_REFINABLE_ONE_MORE_BOUNDED_COMPARATOR_CYCLE_JUSTIFIED",
+      "LIMITATION_COMPARATOR_BOUND_CONFIRMED_SIGNAL_HOLD",
+      "LIMITATION_SIGNAL_MARGIN_CONFIRMED_SIGNAL_HOLD",
+      "LIMITATION_INTERPRETATION_SCOPE_HOLD"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_LIMITATION_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_BRIDGE_LIMITATION_REVIEW_ONLY",
+    "default_outcome": "LIMITATION_COMPARATOR_BOUND_CONFIRMED_SIGNAL_HOLD"
+  }
+}

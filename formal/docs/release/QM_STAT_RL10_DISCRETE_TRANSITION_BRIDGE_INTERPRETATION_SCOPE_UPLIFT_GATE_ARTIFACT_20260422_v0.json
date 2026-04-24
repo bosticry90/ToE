@@ -1,0 +1,46 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_INTERPRETATION_SCOPE_UPLIFT_GATE_ARTIFACT_20260422_v0",
+  "review_id": "QM-STAT-RL10-BRIDGE-INTERPRETATION-SCOPE-UPLIFT-GATE-ARTIFACT-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local interpretation-scope uplift gate artifact declaration only; no scientific adequacy claim.",
+  "objective": "Declare one bounded uplift-gate artifact that can be run once against the admitted evidence object surface without authorizing branch execution reopen, promotion, closure, rollout, or expansion.",
+  "required_inputs": {
+    "bridge_interpretation_scope_uplift_evidence_object_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_interpretation_scope_uplift_evidence_object_20260422_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "uplift_gate_artifact_policy": {
+    "required_evidence_object_outcome": "INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT_DECLARED_AND_GATE_READY",
+    "required_admissible_evidence_class": "INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT",
+    "required_admissible_evidence_object_id": "RL10_INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT_v0",
+    "required_uplift_gate_id": "rl10_interpretation_scope_uplift_evidence_gate_v0",
+    "required_uplift_gate_contract": "SINGLE_BOUNDED_GATE_EXECUTION_ONLY",
+    "uplift_gate_artifact_id": "RL10_INTERPRETATION_SCOPE_UPLIFT_GATE_ARTIFACT_v0",
+    "uplift_gate_artifact_question": "What single bounded uplift-gate run can test for post-acceptance interpretation-scope uplift without reopening branch execution?",
+    "uplift_gate_run_mode": "ONE_BOUNDED_UPLIFT_GATE_RUN_ONLY",
+    "uplift_gate_success_condition": "DECLARED_SINGLE_RUN_RETURNS_DECLARED_POST_ACCEPTANCE_UPLIFT_STATE_CHANGE_SIGNAL",
+    "falsification_condition": "UPLIFT_GATE_RUN_FAILS_OR_REPRODUCES_ACCEPTED_CURRENT_CEILING_WITH_NO_SCOPE_CHANGE",
+    "stop_condition_if_not_met": "REMAIN_FROZEN_AND_DO_NOT_REOPEN_BRANCH_EXECUTION",
+    "single_bounded_run_only": true,
+    "no_expansion_no_rollout_guard": true,
+    "implicitly_authorizes_promotion": false,
+    "implicitly_authorizes_multi_lane_expansion": false,
+    "implicitly_authorizes_rollout": false,
+    "non_promotion_non_closure_boundary": true,
+    "branch_execution_reopened": false
+  },
+  "uplift_gate_artifact_contract": {
+    "allowed_outcomes": [
+      "INTERPRETATION_SCOPE_UPLIFT_GATE_ARTIFACT_DECLARED_AND_SINGLE_RUN_READY",
+      "INTERPRETATION_SCOPE_UPLIFT_GATE_ARTIFACT_DECLARATION_INVALID",
+      "INTERPRETATION_SCOPE_UPLIFT_GATE_ARTIFACT_SCOPE_VIOLATION"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_INTERPRETATION_SCOPE_UPLIFT_GATE_ARTIFACT_OUTCOME",
+    "no_loop_rule": "DECLARATION_ONLY_NO_EXECUTION_REOPEN_IN_THIS_PACKET",
+    "default_outcome": "INTERPRETATION_SCOPE_UPLIFT_GATE_ARTIFACT_DECLARATION_INVALID",
+    "stop_after": "DECLARATION_GATE_AND_TOKEN_READ_ONLY"
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "schema_id": "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_AUTHORIZATION_CONVERSION_20260423_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Consume the P163 strict-eligibility-filter result and answer one narrow declaration-only question: can the selected admissible STAT candidate cross into one bounded fresh-delta generation authorization, or must it remain execution-held under current repo-native constraints.",
+  "required_inputs": {
+    "selected_frontier_strict_eligibility_filter_surface": "formal/docs/release/QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_STRICT_ELIGIBILITY_FILTER_20260423_v0.json",
+    "selected_frontier_surface": "formal/docs/release/QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_20260423_v0.json",
+    "selected_frontier_declaration": "formal/docs/release/POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0.json",
+    "selected_frontier_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "selected_frontier_reactivation_report": "formal/output/reports/post_plan_stat_theorem_gap_reactivation_tranche_20260419_v0.json",
+    "selected_frontier_delta_source_review_report": "formal/output/reports/post_plan_stat_theorem_gap_delta_source_review_20260419_v0.json",
+    "selected_frontier_packet05_lane_eligibility_review_report": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json",
+    "selected_frontier_successor_authorization_review_report": "formal/output/reports/post_plan_theorem_gap_successor_family_authorization_review_20260419_v0.json",
+    "theory_ledger": "State_of_the_Theory.md"
+  },
+  "conversion_scope": {
+    "question_id": "CAN_ADMISSIBLE_STAT_CANDIDATE_CROSS_TO_ONE_BOUNDED_FRESH_DELTA_GENERATION_AUTHORIZATION",
+    "selected_frontier_id": "ROW-PILLAR-STAT-001::POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0",
+    "single_candidate_only": true,
+    "single_question_only": true,
+    "single_outcome_only": true
+  },
+  "conversion_policy": {
+    "required_strict_filter_outcome": "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_STRICT_ELIGIBILITY_FILTER_DECLARATION_ONLY_ADMISSIBLE_EXECUTION_HELD",
+    "required_selected_frontier_id": "ROW-PILLAR-STAT-001::POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0",
+    "required_selected_frontier_class": "DECLARATION_ONLY_EVIDENCE_SURFACE",
+    "required_selected_frontier_execution_authorization": "NONE",
+    "required_selected_frontier_stop_rule": "PIN_ONE_FRESH_STAT_ATTRIBUTABLE_THEOREM_GAP_DELTA_BEFORE_AUTHORIZATION",
+    "required_selected_frontier_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+    "required_reactivation_outcome": "POST_PLAN_STAT_THEOREM_GAP_REACTIVATION_TRANCHE_EVIDENCE_INCOMPLETE",
+    "required_delta_source_outcome": "POST_PLAN_STAT_THEOREM_GAP_DELTA_SOURCE_REVIEW_PACKET04_CAP_CONFIRMED",
+    "required_packet05_eligibility_outcome": "POST_PLAN_STAT_PACKET05_LANE_ELIGIBILITY_REVIEW_NOT_ELIGIBLE_UNDER_CURRENT_BOOTSTRAP",
+    "required_successor_authorization_outcome": "POST_PLAN_THEOREM_GAP_SUCCESSOR_FAMILY_AUTHORIZATION_REVIEW_NO_ROW_AUTHORIZED",
+    "bounded_fresh_delta_generation_target_row": "ROW-PILLAR-STAT-001",
+    "bounded_fresh_delta_generation_target_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+    "bounded_fresh_delta_generation_target_artifact": "formal/output/stat_empirical_comparison_packet_04_v0.json",
+    "bounded_fresh_delta_generation_primary_gate": "formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py",
+    "bounded_fresh_delta_generation_authorization_requirements": [
+      "FRESH_STAT_DELTA_ROUTE_MUST_BE_MACHINE_PINNED",
+      "PACKET04_CAP_MUST_BE_CLEARED_OR_ONE_HIGHER_PACKET_ROUTE_MUST_BE_VISIBLE",
+      "STAT_MUST_BE_ELIGIBLE_FOR_REQUIRED_GENERATION_PROTOCOL",
+      "SUCCESSOR_FAMILY_AUTHORIZATION_MUST_PERMIT_STAT",
+      "ONE_BOUNDED_STOP_RULE_MUST_BE_DECLARED_BEFORE_ANY_LIVE_STAT_EXECUTION_PACKET"
+    ],
+    "authorization_grant_conditions": {
+      "fresh_stat_delta_machine_pinned": false,
+      "higher_packet_route_visible": false,
+      "stat_generation_protocol_eligible": false,
+      "successor_family_authorized_for_stat": false
+    },
+    "execution_authorization_on_grant": "AUTHORIZED_FOR_ONE_BOUNDED_FRESH_DELTA_GENERATION_STEP_ONLY",
+    "execution_authorization_on_hold": "NONE",
+    "next_action_on_grant": "AUTHOR_ONE_BOUNDED_STAT_FRESH_DELTA_GENERATION_EXECUTION_PACKET_WITH_SINGLE_USE_SCOPE",
+    "next_action_on_hold": "RETAIN_SELECTED_STAT_EVIDENCE_SURFACE_AS_FILTERED_NON_REPLAY_FRONTIER_PENDING_FRESH_DELTA",
+    "next_action_on_incomplete": "REPAIR_FRESH_DELTA_AUTHORIZATION_CONVERSION_INPUTS_AND_RERUN"
+  },
+  "adjudication_summary": {
+    "selected_frontier_id": "ROW-PILLAR-STAT-001::POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0",
+    "conversion_question_answer": "NO",
+    "bounded_fresh_delta_generation_authorized": false,
+    "execution_authorization_changed": false,
+    "execution_authorization_after_conversion": "NONE",
+    "adjudicated_outcome": "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_AUTHORIZATION_CONVERSION_REMAINS_EXECUTION_HELD",
+    "hold_basis": [
+      "NO_MACHINE_PINNED_FRESH_STAT_DELTA",
+      "STAT_PACKET04_CAP_REMAINS_ACTIVE",
+      "STAT_HAS_NO_PACKET05_BOOTSTRAP_ELIGIBILITY",
+      "NO_SUCCESSOR_FAMILY_AUTHORIZATION_FOR_STAT"
+    ],
+    "next_action": "RETAIN_SELECTED_STAT_EVIDENCE_SURFACE_AS_FILTERED_NON_REPLAY_FRONTIER_PENDING_FRESH_DELTA"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_AUTHORIZATION_CONVERSION_OUTCOME",
+    "no_loop_rule": "ONE_QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_AUTHORIZATION_CONVERSION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_AUTHORIZATION_CONVERSION_ONE_BOUNDED_GENERATION_STEP_AUTHORIZED",
+      "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_AUTHORIZATION_CONVERSION_REMAINS_EXECUTION_HELD",
+      "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_AUTHORIZATION_CONVERSION_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_AUTHORIZATION_CONVERSION_REPAIR"
+    ],
+    "default_outcome": "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_AUTHORIZATION_CONVERSION_EVIDENCE_INCOMPLETE"
+  },
+  "next_action_contract": {
+    "primary": "RETAIN_SELECTED_STAT_EVIDENCE_SURFACE_AS_FILTERED_NON_REPLAY_FRONTIER_PENDING_FRESH_DELTA",
+    "secondary": "ONLY_REVISIT_FRESH_DELTA_AUTHORIZATION_CONVERSION_IF_STAT_ROUTE_AND_AUTHORIZATION_PREREQUISITES_CHANGE",
+    "live_execution_packet_guard": "NO_LIVE_STAT_EXECUTION_PACKET_MAY_OPEN_UNLESS_THIS_CONVERSION_DECISION_EXPLICITLY_AUTHORIZES_ONE_BOUNDED_FRESH_DELTA_GENERATION_STEP"
+  },
+  "non_claim_boundary": "Declaration-only fresh-delta authorization conversion decision only; no live STAT execution packet, row reopen, promotion, or scientific adequacy claim."
+}

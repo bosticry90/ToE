@@ -1,0 +1,38 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_CROSS_PROBE_CONSISTENCY_CONFIRMATION_20260422_v0",
+  "confirmation_id": "QM-STAT-RL10-BRIDGE-CROSS-PROBE-CONSISTENCY-CONFIRMATION-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local bridge cross-probe consistency confirmation declaration only; no scientific adequacy claim.",
+  "objective": "Execute one bounded confirmation slice for cross-probe consistency using existing bridge probe execution and ruling outcomes, without promotion, closure, or scope expansion.",
+  "required_inputs": {
+    "bridge_significance_inputs_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_significance_inputs_refresh_20260422_v0.json",
+    "bridge_probe_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_execution_20260412_v0.json",
+    "bridge_probe_ruling_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_ruling_20260412_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "confirmation_policy": {
+    "required_significance_outcome": "PROBE_SIGNAL_CONFIRMED_BUT_LIMITED",
+    "required_execution_terminal_outcome": "PROBE_SIGNAL_CONFIRMED",
+    "required_ruling_terminal_outcome": "PROBE_SIGNAL_CONFIRMED",
+    "required_ruling_status": "TERMINAL_OUTCOME_CONFIRMED",
+    "require_comparator_repeatability_confirmed": true,
+    "not_a_new_probe_cycle": true,
+    "no_scope_expansion": true
+  },
+  "confirmation_contract": {
+    "allowed_outcomes": [
+      "CROSS_PROBE_CONSISTENCY_CONFIRMED",
+      "CROSS_PROBE_CONSISTENCY_UNCHANGED",
+      "CROSS_PROBE_CONSISTENCY_PRECONDITION_FAILED",
+      "CROSS_PROBE_CONSISTENCY_SCOPE_VIOLATION"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_CROSS_PROBE_CONSISTENCY_CONFIRMATION_OUTCOME",
+    "no_loop_rule": "ONE_CROSS_PROBE_CONSISTENCY_CONFIRMATION_ONLY",
+    "default_outcome": "CROSS_PROBE_CONSISTENCY_UNCHANGED",
+    "stop_after": "EXECUTION_RULING_FOCUSED_GATES_REFRESHED_TOKEN_READ"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_LIMITATION_CHARACTERIZATION_PACKET_20260422_v0",
+  "packet_id": "QM-STAT-RL10-BRIDGE-LIMITATION-CHARACTERIZATION-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local bridge limitation-characterization packet declaration only; no scientific adequacy claim.",
+  "single_question": "What is the dominant limiting factor behind PROBE_SIGNAL_CONFIRMED_BUT_LIMITED?",
+  "required_inputs": {
+    "bridge_limitation_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_review_20260412_v0.json",
+    "bridge_probe_significance_adjudication_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_significance_adjudication_20260412_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "limitation_class_policy": {
+    "admitted_classes": [
+      "signal_stability_limitation",
+      "comparator_bound_limitation",
+      "robustness_margin_limitation",
+      "probe_sensitivity_limitation"
+    ],
+    "single_dominant_class_required": true,
+    "external_path_success_signal_margin_min": 0.05,
+    "no_promotion_claim": true,
+    "no_seam_closure": true
+  },
+  "packet_contract": {
+    "allowed_outcomes": [
+      "COMPARATOR_BOUND_LIMITATION_CONFIRMED",
+      "SIGNAL_STABILITY_LIMITATION_CONFIRMED",
+      "ROBUSTNESS_MARGIN_LIMITATION_CONFIRMED",
+      "PROBE_SENSITIVITY_LIMITATION_CONFIRMED",
+      "LIMITATION_CLASS_INDETERMINATE"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_LIMITATION_CHARACTERIZATION_OUTCOME",
+    "no_loop_rule": "ONE_LIMITATION_CHARACTERIZATION_PACKET_ONLY",
+    "default_outcome": "COMPARATOR_BOUND_LIMITATION_CONFIRMED",
+    "stop_after": "EXECUTION_RULING_FOCUSED_GATES_REFRESHED_TOKEN_READ"
+  }
+}

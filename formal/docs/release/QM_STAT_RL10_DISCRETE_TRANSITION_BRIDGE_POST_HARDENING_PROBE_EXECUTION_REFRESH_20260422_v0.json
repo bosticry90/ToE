@@ -1,0 +1,34 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_POST_HARDENING_PROBE_EXECUTION_REFRESH_20260422_v0",
+  "refresh_id": "QM-STAT-RL10-BRIDGE-POST-HARDENING-PROBE-EXECUTION-REFRESH-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local bridge post-hardening probe execution refresh declaration only; no scientific adequacy claim.",
+  "objective": "Refresh probe execution state using the one bounded signal-margin hardening cycle output so downstream significance and limitation checks can evaluate the updated margin state.",
+  "required_inputs": {
+    "bridge_signal_margin_hardening_cycle_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_signal_margin_hardening_cycle_20260422_v0.json",
+    "bridge_probe_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_execution_20260412_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "refresh_policy": {
+    "required_cycle_outcome": "SIGNAL_MARGIN_HARDENING_CYCLE_EXECUTED_MARGIN_ADVANCED_TO_THRESHOLD",
+    "required_cycle_executed": true,
+    "not_a_multi_cycle": true,
+    "no_scope_expansion": true
+  },
+  "refresh_contract": {
+    "allowed_outcomes": [
+      "POST_HARDENING_PROBE_EXECUTION_REFRESHED",
+      "POST_HARDENING_PROBE_EXECUTION_UNCHANGED",
+      "POST_HARDENING_PROBE_EXECUTION_REFRESH_PRECONDITION_FAILED",
+      "POST_HARDENING_PROBE_EXECUTION_REFRESH_SCOPE_VIOLATION"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_POST_HARDENING_PROBE_EXECUTION_REFRESH_OUTCOME",
+    "no_loop_rule": "ONE_POST_HARDENING_PROBE_EXECUTION_REFRESH_ONLY",
+    "default_outcome": "POST_HARDENING_PROBE_EXECUTION_REFRESH_PRECONDITION_FAILED",
+    "stop_after": "EXECUTION_RULING_FOCUSED_GATES_REFRESHED_TOKEN_READ"
+  }
+}

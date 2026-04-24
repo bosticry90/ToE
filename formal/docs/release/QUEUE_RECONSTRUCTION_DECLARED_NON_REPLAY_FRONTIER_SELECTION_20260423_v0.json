@@ -1,0 +1,70 @@
+{
+  "schema_id": "QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_20260423_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Consume the queue-priority non-replay frontier reconstruction packet and declare exactly one bounded, declaration-only frontier candidate for strict eligibility filter adjudication without reopening execution, replaying a consumed family, or promoting any row.",
+  "required_inputs": {
+    "reconstruction_packet": "formal/docs/release/QUEUE_PRIORITY_NON_REPLAY_FRONTIER_RECONSTRUCTION_PACKET_20260423_v0.json",
+    "completion_queue_report": "formal/output/reports/post_plan_objective_quality_physics_completion_queue_20260418_v0.json",
+    "theorem_gap_reranking_report": "formal/output/reports/post_plan_theorem_gap_reranking_20260419_v0.json",
+    "stat_row_reopen_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_stat_20260419_v0.json",
+    "cosmo_row_reopen_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_cosmo_20260419_v0.json",
+    "gr_row_reopen_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_gr_20260419_v0.json",
+    "stat_fresh_movement_evidence_surface_declaration": "formal/docs/release/POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0.json",
+    "stat_fresh_movement_evidence_surface_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "stat_packet05_lane_eligibility_review_report": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json",
+    "stat_theorem_gap_delta_source_review_report": "formal/output/reports/post_plan_stat_theorem_gap_delta_source_review_20260419_v0.json",
+    "theory_ledger": "State_of_the_Theory.md"
+  },
+  "selection_policy": {
+    "required_reconstruction_mode": "DECLARATION_ONLY",
+    "required_reconstruction_execution_authorization": "NONE",
+    "required_reconstruction_output_token": "QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_v0",
+    "required_queue_state": "NO_GENUINELY_NON_REPLAY_LIVE_FRONTIER_EXISTS_IN_CURRENT_QUEUE",
+    "single_selection_rule": "SELECT_EXACTLY_ONE_FRONTIER_CANDIDATE_FOR_FILTER_ADJUDICATION",
+    "tie_breaker": "LOWEST_REPLAY_RISK_THEN_HIGHEST_INFORMATION_GAIN",
+    "candidate_pool": [
+      "ROW-PILLAR-STAT-001::POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0",
+      "ROW-PILLAR-COSMO-001::POST_PLAN_COSMO_THEOREM_GAP_REACTIVATION_TRANCHE_20260419_v0",
+      "ROW-PILLAR-GR-001::POST_PLAN_GR_DORMANT_NEW_STRUCTURE_REACTIVATION_TRANCHE_20260419_v0"
+    ],
+    "selected_frontier_candidate_id": "ROW-PILLAR-STAT-001::POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0",
+    "selected_frontier_class": "DECLARATION_ONLY_EVIDENCE_SURFACE",
+    "selected_frontier_row": "ROW-PILLAR-STAT-001",
+    "selected_frontier_declaration": "formal/docs/release/POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0.json",
+    "selected_frontier_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "selected_frontier_primary_gate": "formal/python/tests/test_post_plan_stat_fresh_movement_evidence_surface_report.py",
+    "selected_frontier_target_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_EMPIRICAL_COMPARISON_PACKET_04_v0.md",
+    "selected_frontier_target_artifact": "formal/output/stat_empirical_comparison_packet_04_v0.json",
+    "selected_frontier_stop_rule": "PIN_ONE_FRESH_STAT_ATTRIBUTABLE_THEOREM_GAP_DELTA_BEFORE_AUTHORIZATION",
+    "selection_basis": [
+      "STAT remains the top reranked non-QM theorem-gap row under the retained post-plan ordering.",
+      "STAT has one complete additional bound evidence-surface chain that remains declaration-only and fail-closed rather than a reopened execution family.",
+      "COSMO still requires a machine-pinned seam-linked override delta that is not yet present.",
+      "GR remains a heavier dormant-package branch with frozen-branch ancestry and higher replay-risk under the reconstruction packet tie-breaker."
+    ],
+    "non_selection_reasons": {
+      "ROW-PILLAR-COSMO-001": "Do not select because the COSMO override condition remains unmet and the live seam-linked movement requirement is not machine-pinned.",
+      "ROW-PILLAR-GR-001": "Do not select because the refreshed GR candidate remains anchored to frozen dormant-package ancestry and carries higher replay and freeze risk than STAT.",
+      "ROW-PILLAR-QFT-001": "Do not select because QFT remains a reserve row inside the already exhausted post-cascade continuation chain.",
+      "ROW-PILLAR-EM-001": "Do not select because EM remains a reserve row inside the already exhausted post-cascade continuation chain.",
+      "ROW-PILLAR-SR-001": "Do not select because SR remains a reserve row inside the already exhausted post-cascade continuation chain.",
+      "ROW-PILLAR-QM-001": "Do not select because QM remains explicitly excluded pending non-QM movement."
+    }
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_OUTCOME",
+    "no_loop_rule": "ONE_QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_STAT_EVIDENCE_SURFACE_PENDING_FILTER_ADJUDICATION",
+      "QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_NONE_ELIGIBLE",
+      "HOLD_PENDING_QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_REPAIR"
+    ],
+    "default_outcome": "HOLD_PENDING_QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_REPAIR"
+  },
+  "next_action_contract": {
+    "primary": "AUTHOR_STRICT_ELIGIBILITY_FILTER_ARTIFACT_FOR_SELECTED_STAT_EVIDENCE_SURFACE",
+    "execution_guard": "DO_NOT_REOPEN_STAT_REACTIVATION_OR_EXECUTE_STAT_PACKET04_CHAIN_UNTIL_FILTER_ADJUDICATION_COMPLETES",
+    "downstream_scope": "FILTER_ADJUDICATION_ONLY"
+  },
+  "non_claim_boundary": "Declaration-only queue reconstruction frontier selection surface only; no row reopen, execution authorization, promotion, or scientific adequacy claim."
+}

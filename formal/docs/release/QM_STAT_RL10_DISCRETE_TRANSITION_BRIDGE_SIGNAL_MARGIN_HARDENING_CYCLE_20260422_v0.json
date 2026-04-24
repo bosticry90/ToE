@@ -1,0 +1,35 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SIGNAL_MARGIN_HARDENING_CYCLE_20260422_v0",
+  "cycle_id": "QM-STAT-RL10-BRIDGE-SIGNAL-MARGIN-HARDENING-CYCLE-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local bridge signal-margin hardening cycle declaration only; no scientific adequacy claim.",
+  "objective": "Execute exactly one bounded signal-margin hardening cycle that consumes a prepared hardening slice without opening multi-cycle or promotion surfaces.",
+  "required_inputs": {
+    "bridge_signal_margin_hardening_slice_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_signal_margin_hardening_slice_20260422_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "execution_policy": {
+    "required_slice_outcome": "SIGNAL_MARGIN_HARDENING_SLICE_READY",
+    "required_hardening_ready": true,
+    "not_a_multi_cycle": true,
+    "no_scope_expansion": true,
+    "planned_margin_uplift": 0.01,
+    "max_single_cycle_margin_uplift": 0.01
+  },
+  "execution_contract": {
+    "allowed_outcomes": [
+      "SIGNAL_MARGIN_HARDENING_CYCLE_EXECUTED_MARGIN_ADVANCED_TO_THRESHOLD",
+      "SIGNAL_MARGIN_HARDENING_CYCLE_EXECUTED_MARGIN_ADVANCED_PARTIAL",
+      "SIGNAL_MARGIN_HARDENING_CYCLE_PRECONDITION_FAILED",
+      "SIGNAL_MARGIN_HARDENING_CYCLE_SCOPE_VIOLATION"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SIGNAL_MARGIN_HARDENING_CYCLE_OUTCOME",
+    "no_loop_rule": "ONE_SIGNAL_MARGIN_HARDENING_CYCLE_ONLY",
+    "default_outcome": "SIGNAL_MARGIN_HARDENING_CYCLE_PRECONDITION_FAILED",
+    "stop_after": "EXECUTION_RULING_FOCUSED_GATES_REFRESHED_TOKEN_READ"
+  }
+}

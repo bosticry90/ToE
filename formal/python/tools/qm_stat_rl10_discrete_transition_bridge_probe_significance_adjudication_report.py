@@ -13,6 +13,7 @@ REPO_ROOT = find_repo_root(Path(__file__))
 SCHEMA_ID = (
     "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_PROBE_SIGNIFICANCE_ADJUDICATION_REPORT_20260412_v0"
 )
+_FP_TOLERANCE = 1e-9
 
 DEFAULT_DECLARATION_PATH = (
     REPO_ROOT
@@ -90,7 +91,7 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     elif (
         execution_outcome == "PROBE_SIGNAL_CONFIRMED"
         and ruling_outcome == "PROBE_SIGNAL_CONFIRMED"
-        and signal_margin >= success_margin_min
+        and signal_margin >= success_margin_min - _FP_TOLERANCE
         and comparator_repeatability_confirmed
         and cross_probe_consistency_confirmed
     ):
@@ -99,14 +100,14 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
     elif (
         execution_outcome == "PROBE_SIGNAL_CONFIRMED"
         and ruling_outcome == "PROBE_SIGNAL_CONFIRMED"
-        and signal_margin >= limited_margin_min
+        and signal_margin >= limited_margin_min - _FP_TOLERANCE
     ):
         adjudication_outcome = "PROBE_SIGNAL_CONFIRMED_BUT_LIMITED"
         next_action = "KEEP_BRIDGE_SEAM_PRIMARY_WITH_BOUNDED_LIMITATION_DISCIPLINE"
     elif (
         execution_outcome in {"PROBE_SIGNAL_NONDISCRIMINATIVE", "PROBE_SIGNAL_INCONCLUSIVE"}
         and ruling_outcome in {"PROBE_SIGNAL_NONDISCRIMINATIVE", "PROBE_SIGNAL_INCONCLUSIVE"}
-        and signal_margin >= one_more_cycle_margin_min
+        and signal_margin >= one_more_cycle_margin_min - _FP_TOLERANCE
     ):
         adjudication_outcome = "PROBE_SIGNAL_REQUIRES_ONE_MORE_BOUNDED_COMPARATOR_CYCLE"
         next_action = "AUTHORIZE_ONE_ADDITIONAL_BOUNDED_COMPARATOR_CYCLE"

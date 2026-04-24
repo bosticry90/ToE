@@ -1,0 +1,37 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_LIMITATION_MAPPING_NORMALIZATION_REVIEW_20260422_v0",
+  "review_id": "QM-STAT-RL10-BRIDGE-LIMITATION-MAPPING-NORMALIZATION-REVIEW-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local limitation mapping normalization review declaration only; no scientific adequacy claim.",
+  "objective": "Execute one bounded normalization slice to align limitation-review outcome mapping with persisted interpretation-scope state before any acceptance rerun.",
+  "required_inputs": {
+    "bridge_probe_significance_adjudication_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_significance_adjudication_20260422_v1.json",
+    "bridge_limitation_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_review_20260422_v2.json",
+    "bridge_interpretation_scope_reconciliation_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_interpretation_scope_reconciliation_review_20260422_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "normalization_policy": {
+    "required_reconciliation_outcome": "INTERPRETATION_SCOPE_DECLARATION_INPUT_MISMATCH_CONFIRMED",
+    "required_significance_outcome": "PROBE_SIGNAL_EXTERNAL_PATH_SUCCESS_CANDIDATE",
+    "required_limitation_outcome": "LIMITATION_INTERPRETATION_SCOPE_HOLD",
+    "required_limitation_primary_cause": "interpretation_scope_or_path_validity_not_sufficient_for_advancement",
+    "not_a_new_hardening_cycle": true,
+    "no_scope_expansion": true
+  },
+  "normalization_contract": {
+    "allowed_outcomes": [
+      "LIMITATION_MAPPING_NORMALIZATION_COMPLETED",
+      "LIMITATION_MAPPING_NORMALIZATION_NOT_REQUIRED",
+      "LIMITATION_MAPPING_NORMALIZATION_PRECONDITION_FAILED",
+      "LIMITATION_MAPPING_NORMALIZATION_SCOPE_VIOLATION"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_LIMITATION_MAPPING_NORMALIZATION_OUTCOME",
+    "no_loop_rule": "ONE_LIMITATION_MAPPING_NORMALIZATION_REVIEW_ONLY",
+    "default_outcome": "LIMITATION_MAPPING_NORMALIZATION_PRECONDITION_FAILED",
+    "stop_after": "EXECUTION_RULING_FOCUSED_GATES_REFRESHED_TOKEN_READ"
+  }
+}

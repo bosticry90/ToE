@@ -1,0 +1,84 @@
+{
+  "schema_id": "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_EVENT_MATERIALIZATION_REVIEW_20260423_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Consume the P165 fresh-delta emergence-condition declaration and determine whether the declared STAT_FRESH_DELTA_EMERGENCE_EVENT_v0 has materialized under current machine-pinned evidence, without authorizing execution.",
+  "required_inputs": {
+    "selected_frontier_fresh_delta_emergence_condition_surface": "formal/docs/release/QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_EMERGENCE_CONDITION_20260423_v0.json",
+    "selected_frontier_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "selected_frontier_delta_source_review_report": "formal/output/reports/post_plan_stat_theorem_gap_delta_source_review_20260419_v0.json",
+    "selected_frontier_packet05_lane_eligibility_review_report": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json",
+    "selected_frontier_successor_authorization_review_report": "formal/output/reports/post_plan_theorem_gap_successor_family_authorization_review_20260419_v0.json",
+    "theory_ledger": "State_of_the_Theory.md"
+  },
+  "review_scope": {
+    "question_id": "HAS_THE_DECLARED_STAT_FRESH_DELTA_EMERGENCE_EVENT_MATERIALIZED_UNDER_CURRENT_MACHINE_PINNED_EVIDENCE",
+    "selected_frontier_id": "ROW-PILLAR-STAT-001::POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0",
+    "emergence_event_id": "STAT_FRESH_DELTA_EMERGENCE_EVENT_v0",
+    "single_candidate_only": true,
+    "single_question_only": true,
+    "single_review_only": true,
+    "single_outcome_only": true
+  },
+  "materialization_review_policy": {
+    "required_p165_outcome": "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_EMERGENCE_CONDITION_DECLARED_PENDING_EVENT_MATERIALIZATION",
+    "required_p165_execution_authorization": "NONE",
+    "required_selected_frontier_id": "ROW-PILLAR-STAT-001::POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0",
+    "required_emergence_event_id": "STAT_FRESH_DELTA_EMERGENCE_EVENT_v0",
+    "required_emergence_event_rule": "ALL_REQUIRED_COMPONENTS_MUST_BE_TRUE_IN_ONE_MACHINE_PINNED_CONDITION_BUNDLE"
+  },
+  "current_evidence_review": {
+    "fresh_movement_component": {
+      "observed_terminal_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+      "observed_fresh_movement_machine_pinned": false,
+      "observed_theorem_gap_delta": 0,
+      "component_satisfied": false
+    },
+    "packet04_cap_resolution_component": {
+      "observed_terminal_outcome": "POST_PLAN_STAT_THEOREM_GAP_DELTA_SOURCE_REVIEW_PACKET04_CAP_CONFIRMED",
+      "observed_higher_packet_path_visible": false,
+      "component_satisfied": false
+    },
+    "generation_protocol_eligibility_component": {
+      "observed_terminal_outcome": "POST_PLAN_STAT_PACKET05_LANE_ELIGIBILITY_REVIEW_NOT_ELIGIBLE_UNDER_CURRENT_BOOTSTRAP",
+      "observed_eligible_for_packet05_bootstrap": false,
+      "observed_stat_packet05_lane_enabled": false,
+      "observed_stat_packet05_ledger_visible": false,
+      "observed_stat_packet05_row_declared": false,
+      "component_satisfied": false
+    },
+    "successor_authorization_component": {
+      "observed_terminal_outcome": "POST_PLAN_THEOREM_GAP_SUCCESSOR_FAMILY_AUTHORIZATION_REVIEW_NO_ROW_AUTHORIZED",
+      "observed_selected_row": "NONE",
+      "component_satisfied": false
+    },
+    "all_required_components_satisfied": false,
+    "emergence_event_materialized": false
+  },
+  "adjudication_summary": {
+    "selected_frontier_id": "ROW-PILLAR-STAT-001::POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0",
+    "emergence_event_id": "STAT_FRESH_DELTA_EMERGENCE_EVENT_v0",
+    "event_materialization_answer": "NO",
+    "emergence_event_materialized": false,
+    "execution_authorization_changed": false,
+    "execution_authorization_after_review": "NONE",
+    "adjudicated_outcome": "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_EVENT_MATERIALIZATION_REVIEW_NOT_MATERIALIZED_EXECUTION_HELD",
+    "next_action": "WAIT_FOR_ANY_DECLARED_COMPONENT_TO_BECOME_MACHINE_PINNED_BEFORE_RERUNNING_EVENT_MATERIALIZATION_REVIEW"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_EVENT_MATERIALIZATION_REVIEW_OUTCOME",
+    "no_loop_rule": "ONE_QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_EVENT_MATERIALIZATION_REVIEW_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_EVENT_MATERIALIZATION_REVIEW_NOT_MATERIALIZED_EXECUTION_HELD",
+      "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_EVENT_MATERIALIZATION_REVIEW_MATERIALIZED_PENDING_REFRESHED_CONVERSION_REVIEW",
+      "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_EVENT_MATERIALIZATION_REVIEW_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_EVENT_MATERIALIZATION_REVIEW_REPAIR"
+    ],
+    "default_outcome": "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_EVENT_MATERIALIZATION_REVIEW_EVIDENCE_INCOMPLETE"
+  },
+  "next_action_contract": {
+    "primary": "WAIT_FOR_ANY_DECLARED_COMPONENT_TO_BECOME_MACHINE_PINNED_BEFORE_RERUNNING_EVENT_MATERIALIZATION_REVIEW",
+    "secondary": "IF_ALL_DECLARED_COMPONENTS_MATERIALIZE_IN_ONE_BUNDLE_AUTHOR_A_REFRESHED_STAT_FRESH_DELTA_AUTHORIZATION_CONVERSION_SURFACE_BEFORE_ANY_EXECUTION_PACKET",
+    "execution_guard": "EXECUTION_AUTHORIZATION_REMAINS_NONE_UNTIL_A_REFRESHED_CONVERSION_REVIEW_EXPLICITLY_CHANGES_IT"
+  },
+  "non_claim_boundary": "Declaration-only STAT fresh-delta event-materialization review only; no live STAT execution packet, row reopen, promotion, or scientific adequacy claim."
+}

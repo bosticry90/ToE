@@ -1,0 +1,49 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT_20260422_v0",
+  "review_id": "QM-STAT-RL10-BRIDGE-INTERPRETATION-SCOPE-UPLIFT-EVIDENCE-OBJECT-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local interpretation-scope uplift evidence object declaration only; no scientific adequacy claim.",
+  "objective": "Declare one bounded evidence object that can be gated once to attempt post-acceptance uplift beyond accepted-at-current-ceiling without implying promotion, closure, rollout, or expansion.",
+  "required_inputs": {
+    "bridge_post_acceptance_uplift_surface_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_post_acceptance_uplift_surface_20260422_v0.json",
+    "bridge_interpretation_scope_reconciliation_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_interpretation_scope_reconciliation_review_20260422_v0.json",
+    "bridge_limitation_mapping_normalization_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_mapping_normalization_review_20260422_v0.json",
+    "bridge_signal_margin_limitation_acceptance_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_signal_margin_limitation_acceptance_review_20260422_v1.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "evidence_object_policy": {
+    "required_uplift_surface_outcome": "POST_ACCEPTANCE_UPLIFT_SURFACE_DECLARATION_READY_FOR_BOUNDED_EVIDENCE_OBJECT",
+    "required_admissible_evidence_class": "INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT",
+    "required_admissible_evidence_object_id": "RL10_INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT_v0",
+    "required_reconciliation_outcome": "INTERPRETATION_SCOPE_DECLARATION_INPUT_MISMATCH_CONFIRMED",
+    "required_normalization_outcome": "LIMITATION_MAPPING_NORMALIZATION_COMPLETED",
+    "required_acceptance_outcome": "SIGNAL_MARGIN_LIMITATION_ACCEPTED_AT_CURRENT_CEILING",
+    "evidence_object_question": "What bounded evidence could replace LIMITATION_INTERPRETATION_SCOPE_HOLD with a declared post-acceptance uplift state?",
+    "uplift_gate_id": "rl10_interpretation_scope_uplift_evidence_gate_v0",
+    "uplift_gate_contract": "SINGLE_BOUNDED_GATE_EXECUTION_ONLY",
+    "falsification_condition": "EVIDENCE_OBJECT_GATE_FAILS_OR_NO_SCOPE_CHANGE_FROM_ACCEPTED_CURRENT_CEILING",
+    "stop_condition_if_not_met": "REMAIN_FROZEN_AND_DO_NOT_REOPEN_BRANCH_EXECUTION",
+    "single_bounded_execution_object_only": true,
+    "no_expansion_no_rollout_guard": true,
+    "implicitly_authorizes_promotion": false,
+    "implicitly_authorizes_multi_lane_expansion": false,
+    "implicitly_authorizes_rollout": false,
+    "non_promotion_non_closure_boundary": true,
+    "branch_execution_reopened": false
+  },
+  "evidence_object_contract": {
+    "allowed_outcomes": [
+      "INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT_DECLARED_AND_GATE_READY",
+      "INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT_DECLARATION_INVALID",
+      "INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT_SCOPE_VIOLATION"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT_OUTCOME",
+    "no_loop_rule": "DECLARATION_ONLY_NO_EXECUTION_REOPEN_IN_THIS_PACKET",
+    "default_outcome": "INTERPRETATION_SCOPE_UPLIFT_EVIDENCE_OBJECT_DECLARATION_INVALID",
+    "stop_after": "DECLARATION_GATE_AND_TOKEN_READ_ONLY"
+  }
+}

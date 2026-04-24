@@ -106,6 +106,60 @@
       "dependency": "authoritative_blocker_definition_movement",
       "completed_at_utc": "2026-04-19T21:24:04.320170Z",
       "completion_note": "Recompute outputs already materialized; trigger reconciled during observation"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260422_011206",
+      "surface_name": "blocker_authority_transport_surface",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-22T01:12:06.159760Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260422_011217",
+      "surface_name": "blocker_authority_transport_surface",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-22T01:12:17.313513Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260422_012945",
+      "surface_name": "blocker_authority_transport_surface",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-22T01:29:45.446843Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260422_013002",
+      "surface_name": "blocker_authority_transport_surface",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-22T01:30:02.517880Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260422_022643",
+      "surface_name": "blocker_authority_transport_surface",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-22T02:26:43.663557Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260422_022659",
+      "surface_name": "blocker_authority_transport_surface",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-04-22T02:26:59.713999Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
     }
   ]
 }

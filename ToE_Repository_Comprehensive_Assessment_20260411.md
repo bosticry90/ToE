@@ -1,5 +1,7 @@
 # ToE Repository Comprehensive Assessment
 
+Snapshot status: Historical point-in-time assessment (superseded for live posture by [State_of_the_Theory.md](State_of_the_Theory.md)).
+
 **Date:** April 11, 2026 | **Status:** Active Development | **Governance Posture:** STRONG_BOUNDED_NONCLAIM
 
 ---

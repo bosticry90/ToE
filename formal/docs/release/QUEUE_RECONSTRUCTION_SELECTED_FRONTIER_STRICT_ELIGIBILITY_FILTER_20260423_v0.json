@@ -1,0 +1,77 @@
+{
+  "schema_id": "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_STRICT_ELIGIBILITY_FILTER_20260423_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "objective": "Apply one strict declaration-only admissibility filter to the single P162-selected non-replay frontier candidate and decide whether that candidate remains admissible only as a held non-executing frontier, without reopening any row or replaying a consumed family.",
+  "required_inputs": {
+    "reconstruction_packet": "formal/docs/release/QUEUE_PRIORITY_NON_REPLAY_FRONTIER_RECONSTRUCTION_PACKET_20260423_v0.json",
+    "selected_frontier_surface": "formal/docs/release/QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_20260423_v0.json",
+    "selected_frontier_declaration": "formal/docs/release/POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0.json",
+    "selected_frontier_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "selected_frontier_row_dossier_report": "formal/output/reports/post_plan_theorem_gap_row_reopen_dossier_stat_20260419_v0.json",
+    "selected_frontier_reactivation_report": "formal/output/reports/post_plan_stat_theorem_gap_reactivation_tranche_20260419_v0.json",
+    "selected_frontier_packet05_lane_eligibility_review_report": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json",
+    "selected_frontier_delta_source_review_report": "formal/output/reports/post_plan_stat_theorem_gap_delta_source_review_20260419_v0.json",
+    "selected_frontier_successor_authorization_review_report": "formal/output/reports/post_plan_theorem_gap_successor_family_authorization_review_20260419_v0.json",
+    "theory_ledger": "State_of_the_Theory.md"
+  },
+  "strict_filter_policy": {
+    "required_selection_outcome": "QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_STAT_EVIDENCE_SURFACE_PENDING_FILTER_ADJUDICATION",
+    "required_selected_frontier_id": "ROW-PILLAR-STAT-001::POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0",
+    "required_selected_frontier_class": "DECLARATION_ONLY_EVIDENCE_SURFACE",
+    "required_selected_frontier_row": "ROW-PILLAR-STAT-001",
+    "required_selected_frontier_status": "ACTIVE_NONLIVE_NONCLAIM",
+    "required_selected_frontier_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+    "required_selected_frontier_stop_rule": "PIN_ONE_FRESH_STAT_ATTRIBUTABLE_THEOREM_GAP_DELTA_BEFORE_AUTHORIZATION",
+    "required_selected_frontier_primary_gate": "formal/python/tests/test_post_plan_stat_fresh_movement_evidence_surface_report.py",
+    "required_selected_frontier_target_gate": "formal/python/tests/test_stat_empirical_comparison_packet_04_gate.py",
+    "required_row_dossier_outcome": "POST_PLAN_THEOREM_GAP_ROW_REOPEN_DOSSIER_MATERIALIZED",
+    "required_row_policy_class": "DEFAULT_FIRST_REOPEN_CANDIDATE",
+    "required_reactivation_outcome": "POST_PLAN_STAT_THEOREM_GAP_REACTIVATION_TRANCHE_EVIDENCE_INCOMPLETE",
+    "required_delta_source_outcome": "POST_PLAN_STAT_THEOREM_GAP_DELTA_SOURCE_REVIEW_PACKET04_CAP_CONFIRMED",
+    "required_packet05_eligibility_outcome": "POST_PLAN_STAT_PACKET05_LANE_ELIGIBILITY_REVIEW_NOT_ELIGIBLE_UNDER_CURRENT_BOOTSTRAP",
+    "required_successor_authorization_outcome": "POST_PLAN_THEOREM_GAP_SUCCESSOR_FAMILY_AUTHORIZATION_REVIEW_NO_ROW_AUTHORIZED",
+    "declaration_only_admissibility_requirements": [
+      "SELECTED_FRONTIER_MUST_BE_REPO_VISIBLE_AND_DECLARED",
+      "SELECTED_FRONTIER_MUST_BE_DISTINCT_FROM_PRIOR_EXECUTED_NONPROMOTED_STAT_REACTIVATION_FAMILY",
+      "SELECTED_FRONTIER_MUST_NOT_BE_TERMINAL_FROZEN",
+      "SELECTED_FRONTIER_MUST_INCLUDE_CLEAR_PRIMARY_GATE_POINTER_AND_DECLARATION_CHAIN",
+      "SELECTED_FRONTIER_MUST_DEFINE_BOUNDED_STOP_RULE_BEFORE_ANY_EXECUTION_AUTHORIZATION"
+    ],
+    "execution_authorization_denial_conditions": [
+      "FRESH_STAT_DELTA_NOT_MACHINE_PINNED",
+      "STAT_PACKET04_BASELINE_CAP_REMAINS_ACTIVE",
+      "STAT_PACKET05_LANE_NOT_ELIGIBLE_UNDER_CURRENT_BOOTSTRAP",
+      "NO_ROW_AUTHORIZED_UNDER_SUCCESSOR_FAMILY_REVIEW"
+    ],
+    "selected_frontier_admissibility_class": "DECLARATION_ONLY_NON_REPLAY_FRONTIER_HELD",
+    "selected_frontier_execution_authorization": "NONE",
+    "selected_frontier_next_action_on_pass": "RETAIN_SELECTED_STAT_EVIDENCE_SURFACE_AS_FILTERED_NON_REPLAY_FRONTIER_PENDING_FRESH_DELTA",
+    "selected_frontier_next_action_on_fail": "DROP_SELECTED_STAT_EVIDENCE_SURFACE_AND_RETURN_TO_EXPLICIT_NONE",
+    "selected_frontier_next_action_on_incomplete": "REPAIR_SELECTED_STAT_FILTER_INPUTS_AND_RERUN"
+  },
+  "adjudication_summary": {
+    "selected_frontier_id": "ROW-PILLAR-STAT-001::POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0",
+    "strict_filter_passed_at_declaration_only_layer": true,
+    "execution_authorization_changed": false,
+    "execution_authorization_after_filter": "NONE",
+    "adjudicated_outcome": "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_STRICT_ELIGIBILITY_FILTER_DECLARATION_ONLY_ADMISSIBLE_EXECUTION_HELD",
+    "next_action": "RETAIN_SELECTED_STAT_EVIDENCE_SURFACE_AS_FILTERED_NON_REPLAY_FRONTIER_PENDING_FRESH_DELTA"
+  },
+  "outcome_contract": {
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_STRICT_ELIGIBILITY_FILTER_OUTCOME",
+    "no_loop_rule": "ONE_QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_STRICT_ELIGIBILITY_FILTER_LAYER_ONLY",
+    "allowed_outcomes": [
+      "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_STRICT_ELIGIBILITY_FILTER_DECLARATION_ONLY_ADMISSIBLE_EXECUTION_HELD",
+      "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_STRICT_ELIGIBILITY_FILTER_NOT_ADMISSIBLE",
+      "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_STRICT_ELIGIBILITY_FILTER_EVIDENCE_INCOMPLETE",
+      "HOLD_PENDING_QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_STRICT_ELIGIBILITY_FILTER_REPAIR"
+    ],
+    "default_outcome": "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_STRICT_ELIGIBILITY_FILTER_EVIDENCE_INCOMPLETE"
+  },
+  "next_action_contract": {
+    "primary": "RETAIN_SELECTED_STAT_EVIDENCE_SURFACE_AS_FILTERED_NON_REPLAY_FRONTIER_PENDING_FRESH_DELTA",
+    "secondary": "ONLY_REVISIT_EXECUTION_AUTHORIZATION_IF_FRESH_STAT_DELTA_IS_MACHINE_PINNED_AND_SUCCESSOR_AUTHORIZATION_STATE_CHANGES",
+    "execution_guard": "DO_NOT_REOPEN_STAT_REACTIVATION_OR_EXECUTE_STAT_PACKET04_CHAIN_UNDER_THIS_FILTER_LAYER"
+  },
+  "non_claim_boundary": "Declaration-only strict eligibility filter and admissibility adjudication surface only; no row reopen, execution authorization, promotion, or scientific adequacy claim."
+}

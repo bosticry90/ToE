@@ -1,0 +1,37 @@
+{
+  "schema_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SIGNAL_MARGIN_HARDENING_SLICE_20260422_v0",
+  "slice_id": "QM-STAT-RL10-BRIDGE-SIGNAL-MARGIN-HARDENING-SLICE-001",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "non_claim_boundary": "Repository-local bridge signal-margin hardening slice declaration only; no scientific adequacy claim.",
+  "objective": "Characterize and authorize exactly one bounded signal-margin hardening slice after comparator-bound branches are cleared.",
+  "required_inputs": {
+    "bridge_limitation_review_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_review_20260422_v1.json",
+    "bridge_probe_execution_report": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_probe_execution_20260412_v0.json"
+  },
+  "seam_scope": {
+    "seam_id": "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_SEAM_v0",
+    "external_comparator_id": "OV-RL-10",
+    "bridge_quantity_id": "RL10_BRIDGE_SIGMA_DB_OBSERVABLE_v0"
+  },
+  "hardening_policy": {
+    "required_limitation_review_outcome": "LIMITATION_SIGNAL_MARGIN_CONFIRMED_SIGNAL_HOLD",
+    "required_limitation_primary_cause": "signal_margin_below_external_path_success_threshold",
+    "require_comparator_repeatability_confirmed": true,
+    "require_cross_probe_consistency_confirmed": true,
+    "not_a_new_comparator_cycle": true,
+    "no_scope_expansion": true,
+    "signal_margin_gap_target": 0.01
+  },
+  "hardening_contract": {
+    "allowed_outcomes": [
+      "SIGNAL_MARGIN_HARDENING_SLICE_READY",
+      "SIGNAL_MARGIN_HARDENING_SLICE_NOT_REQUIRED",
+      "SIGNAL_MARGIN_HARDENING_SLICE_PRECONDITION_FAILED",
+      "SIGNAL_MARGIN_HARDENING_SLICE_SCOPE_VIOLATION"
+    ],
+    "single_terminal_outcome_rule": "EXACTLY_ONE_ALLOWED_SIGNAL_MARGIN_HARDENING_SLICE_OUTCOME",
+    "no_loop_rule": "ONE_SIGNAL_MARGIN_HARDENING_SLICE_ONLY",
+    "default_outcome": "SIGNAL_MARGIN_HARDENING_SLICE_PRECONDITION_FAILED",
+    "stop_after": "EXECUTION_RULING_FOCUSED_GATES_REFRESHED_TOKEN_READ"
+  }
+}

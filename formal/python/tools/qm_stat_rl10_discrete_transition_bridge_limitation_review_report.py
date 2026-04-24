@@ -11,6 +11,7 @@ from formal.python.meta.repo_environment import find_repo_root
 
 REPO_ROOT = find_repo_root(Path(__file__))
 SCHEMA_ID = "QM_STAT_RL10_DISCRETE_TRANSITION_BRIDGE_LIMITATION_REVIEW_REPORT_20260412_v0"
+_FP_TOLERANCE = 1e-9
 
 DEFAULT_DECLARATION_PATH = (
     REPO_ROOT
@@ -115,7 +116,7 @@ def build_report(*, declaration_path: Path, captured_at_utc: str | None) -> dict
         and ruling_status == "TERMINAL_OUTCOME_CONFIRMED"
         and execution_outcome == "PROBE_SIGNAL_CONFIRMED"
         and ruling_outcome == "PROBE_SIGNAL_CONFIRMED"
-        and signal_margin < success_margin_min
+        and signal_margin < success_margin_min - _FP_TOLERANCE
     ):
         review_outcome = "LIMITATION_SIGNAL_MARGIN_CONFIRMED_SIGNAL_HOLD"
         limitation_primary_cause = "signal_margin_below_external_path_success_threshold"
