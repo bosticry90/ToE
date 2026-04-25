@@ -1,0 +1,213 @@
+{
+  "artifact_id": "stat_der02_bounded_discharge_attempt_execution_packet_v0",
+  "artifact_version": "v0",
+  "placeholder_template": false,
+  "payload": {
+    "artifact_id": "stat_der02_bounded_discharge_attempt_execution_packet_v0",
+    "cycle_id": "POST_RECOVERY_DER02_BOUNDED_DISCHARGE_ATTEMPT_EXECUTION",
+    "pillar_id": "PILLAR-STAT",
+    "target_id": "TARGET-TH-ENTROPY-PLAN",
+    "target_row_id": "ROW-PILLAR-STAT-001",
+    "results_row_id": "TOE-STAT-DER-02",
+    "results_row_expected_label": "T-PROVED",
+    "status": "bounded_discharge_attempt_executed_blocker_unchanged",
+    "execution_packet_id": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_EXECUTION_PACKET_v0",
+    "execution_packet_result": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_BLOCKER_UNCHANGED",
+    "execution_packet_scope": "ONE_BOUNDED_DER02_THEOREM_BODY_TO_DISCHARGE_ATTEMPT",
+    "authorization_consumed": {
+      "authorization_report": "formal/output/reports/post_recovery_stat_der02_discharge_attempt_authorization_readiness_review_20260424_v0.json",
+      "authorization_id": "STAT_DER02_ONE_BOUNDED_DISCHARGE_ATTEMPT_AUTHORIZATION_v0",
+      "authorization_state_before_packet": "AUTHORIZED_ONE_FUTURE_BOUNDED_ATTEMPT_ONLY",
+      "authorized_next_packet": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_EXECUTION_PACKET_v0",
+      "authorized_attempt_count": 1,
+      "consumed_attempt_count": 1,
+      "authorization_remaining_after_packet": 0,
+      "authorization_state_after_packet": "CONSUMED_NO_REMAINING_DER02_DISCHARGE_ATTEMPT_AUTHORIZATION"
+    },
+    "consumed_inputs": [
+      {
+        "input_id": "DER02_PINNED_REGIME_CLOSURE_CONSISTENCY_WITNESS",
+        "artifact": "formal/output/stat_der02_regime_closure_consistency_witness_binding_v0.json",
+        "expected_payload_sha256": "23a36ab450bbd66a2aa13bc13df4fbfcc458cdfc8be50d8490720490fa008b6e",
+        "consumed": true
+      },
+      {
+        "input_id": "DER02_BOUNDED_DISCHARGE_ATTEMPT_SURFACE",
+        "artifact": "formal/output/stat_der02_bounded_discharge_attempt_surface_v0.json",
+        "expected_payload_sha256": "14eba225c712beaeb0844a7cf90a862e0a5acc9a9e7d1fa33aaf6fda460c6b16",
+        "consumed": true
+      },
+      {
+        "input_id": "DER02_THEOREM_BODY_SCAFFOLD",
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "expected_payload_sha256": "e52d2741f1b2568c67614ec0d2a4cdc318b7235e6ea0fd89a2916c393e30690f",
+        "observed_status": "regime_closure_theorem_body_scaffold_placeholder_nonclaim",
+        "consumed": true
+      },
+      {
+        "input_id": "DER02_DISCHARGE_SCAFFOLD",
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "expected_payload_sha256": "6f7410efedac6801950dcbd4f8a90cbc57c185b337a5e75859abec29ec6bac65",
+        "observed_status": "regime_closure_discharge_scaffold_placeholder_nonclaim",
+        "consumed": true
+      },
+      {
+        "input_id": "DER02_OBJECT_SURFACE_SCAFFOLD",
+        "artifact": "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+        "expected_payload_sha256": "cedc32ae0b69b03fb138c89bfa990b3cc09059612387392e6f206bf1f52ab35a",
+        "observed_status": "regime_closure_object_surface_scaffold_placeholder_nonclaim",
+        "consumed": true
+      },
+      {
+        "input_id": "DER02_REGIME_CLOSURE_COUPLING_SCAFFOLD",
+        "artifact": "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+        "expected_payload_sha256": "24b5f514b435f03fa8355d3941d222b14a2c2c1142c059ff3208fc739fa7b046",
+        "observed_status": "regime_validity_closure_coupling_scaffold_placeholder_nonclaim",
+        "consumed": true
+      },
+      {
+        "input_id": "DER02_SCOPE_BOUNDARY_SCAFFOLD",
+        "artifact": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+        "expected_payload_sha256": "e0185996ae2b365da2ff6759dee04af5c2b8ab2697101c9cd7d805c36f11c56c",
+        "observed_status": "theorem_body_scope_boundary_placeholder_nonclaim",
+        "consumed": true
+      }
+    ],
+    "pre_attempt_state": {
+      "witness_status": "regime_closure_consistency_witness_binding_pinned_nonclaim",
+      "witness_result": "REGIME_CLOSURE_CONSISTENCY_WITNESS_PINNED_NONCLAIM",
+      "bounded_discharge_attempt_surface_status": "bounded_discharge_attempt_surface_pinned_nonclaim",
+      "bounded_discharge_attempt_surface_result": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_SURFACE_PINNED_NONCLAIM_NOT_EXECUTED",
+      "theorem_body_status": "regime_closure_theorem_body_scaffold_placeholder_nonclaim",
+      "discharge_status": "regime_closure_discharge_scaffold_placeholder_nonclaim",
+      "theorem_body_closure_coupling_constraint_slot_placeholder_present": true,
+      "discharge_closure_coupling_consistency_slot_placeholder_present": true,
+      "stat_fresh_movement_evidence_surface_terminal_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+      "fresh_movement_machine_pinned": false,
+      "theorem_gap_delta": 0
+    },
+    "attempt_execution": {
+      "attempt_number": 1,
+      "attempt_executed_now": true,
+      "surface_success_discriminator_consumed": true,
+      "surface_failure_discriminator_consumed": true,
+      "witness_artifact_consumed": true,
+      "theorem_body_closure_coupling_constraint_slot_replaced": false,
+      "discharge_closure_coupling_consistency_slot_replaced": false,
+      "claim_checkable_derivation_payload_materialized": false,
+      "assumption_freeze_or_regime_reference_handle_mismatch_detected": false,
+      "scope_boundary_preservation_for_delta_declared": false,
+      "success_event_materialized": false,
+      "failure_event_materialized": true,
+      "failure_triggered_conditions": [
+        "theorem_body_closure_constraint_slot_still_unreplaced_after_attempt",
+        "discharge_closure_consistency_slot_still_unreplaced_after_attempt",
+        "fresh_movement_surface_remains_unpinned"
+      ],
+      "contract_violation_detected": false
+    },
+    "attempt_readout": {
+      "terminal_outcome": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_BLOCKER_UNCHANGED",
+      "allowed_outcome_from_authorization": true,
+      "machine_pinned_negative_theorem_gap_delta": false,
+      "theorem_gap_delta": 0,
+      "theorem_gap_delta_counted": 0,
+      "fresh_movement_machine_pinned": false,
+      "blocker_reduction_counted_now": false,
+      "der02_discharge_claimed": false,
+      "row_truth_change_detected": false,
+      "promotion_earned": false,
+      "packet05_dependency_used": false,
+      "seam_dependency_used": false,
+      "master_action_dependency_used": false
+    },
+    "post_attempt_state": {
+      "execution_authorization_before_packet": "ONE_BOUNDED_DER02_DISCHARGE_ATTEMPT_ONLY",
+      "execution_authorization_after_packet": "CONSUMED_NO_REMAINING_DER02_DISCHARGE_ATTEMPT_AUTHORIZATION",
+      "selected_row": "NONE",
+      "theorem_gap_delta": 0,
+      "theorem_gap_delta_counted": 0,
+      "fresh_movement_machine_pinned": false,
+      "stat_evidence_surface_terminal_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+      "blocker_reduction_counted_now": false,
+      "further_der02_discharge_attempt_authorization": "NONE"
+    },
+    "forbidden_dependencies": {
+      "packet05_dependency": false,
+      "seam_dependency": false,
+      "gr_dependency": false,
+      "rl10_dependency": false,
+      "master_action_dependency": false,
+      "m3_m4_promotion_dependency": false,
+      "nonflip_custody_ladder_dependency": false
+    },
+    "allowed_next_post_attempt_actions": [
+      "record_blocker_unchanged_baseline_for_stat_der02_bounded_discharge_attempt",
+      "stop_der02_execution_until_a_materially_new_machine_pinnable_der02_delta_hypothesis_exists",
+      "return_to_declaration_only_design_if_no_new_der02_delta_hypothesis_exists"
+    ],
+    "disallowed_next_actions": [
+      "rerun_this_der02_discharge_attempt_without_new_authorization",
+      "count_theorem_gap_delta_from_this_attempt",
+      "claim_der02_discharge",
+      "promote_toe_stat_der_02",
+      "open_packet05",
+      "open_seam_work",
+      "open_gr_work",
+      "open_rl10_work",
+      "invoke_master_action"
+    ],
+    "gate_contract": {
+      "gate_id": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_EXECUTION_PACKET_GATE_v0",
+      "gate_path": "formal/python/tests/test_stat_der02_bounded_discharge_attempt_execution_packet_gate.py",
+      "passing_this_gate_counts_theorem_gap_delta": false,
+      "passing_this_gate_claims_der02_discharge": false,
+      "passing_this_gate_authorizes_another_attempt": false,
+      "passing_this_gate_flips_stat_evidence_surface": false
+    },
+    "expected_new_artifacts_for_next_commit_bundle": [
+      "formal/output/stat_der02_regime_closure_consistency_witness_binding_v0.json",
+      "formal/python/tests/test_stat_der02_regime_closure_consistency_witness_binding_gate.py",
+      "formal/output/stat_der02_bounded_discharge_attempt_surface_v0.json",
+      "formal/python/tests/test_stat_der02_bounded_discharge_attempt_surface_gate.py",
+      "formal/output/stat_der02_bounded_discharge_attempt_execution_packet_v0.json",
+      "formal/python/tests/test_stat_der02_bounded_discharge_attempt_execution_packet_gate.py"
+    ],
+    "non_claim_boundary": [
+      "single_bounded_der02_discharge_attempt_readout_only",
+      "no_success_event_materialized",
+      "no_machine_pinned_negative_theorem_gap_delta",
+      "no_theorem_gap_delta_counted",
+      "no_fresh_movement_machine_pinned_claim",
+      "no_der02_discharge_claim",
+      "no_toe_stat_der_02_label_promotion",
+      "no_additional_der02_attempt_authorization",
+      "no_packet05_bootstrap",
+      "no_seam_work",
+      "no_gr_work",
+      "no_rl10_work",
+      "no_master_action",
+      "no_external_truth_claim"
+    ],
+    "cross_surface_pointers": [
+      "formal/output/reports/post_recovery_stat_der02_discharge_attempt_authorization_readiness_review_20260424_v0.json",
+      "formal/output/stat_der02_bounded_discharge_attempt_surface_v0.json",
+      "formal/python/tests/test_stat_der02_bounded_discharge_attempt_surface_gate.py",
+      "formal/output/stat_der02_regime_closure_consistency_witness_binding_v0.json",
+      "formal/python/tests/test_stat_der02_regime_closure_consistency_witness_binding_gate.py",
+      "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+      "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+      "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+      "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json",
+      "formal/python/tests/test_stat_der02_bounded_discharge_attempt_execution_packet_gate.py"
+    ],
+    "artifact_sha256": "TOP_LEVEL_payload_sha256",
+    "generated_on": "2026-04-24",
+    "materialized_at_utc": "2026-04-25T06:20:00Z"
+  },
+  "payload_sha256": "b0732778fbaa61fae9bf6d122d2b697ba56d25231a2f63327706fd6030056561"
+}

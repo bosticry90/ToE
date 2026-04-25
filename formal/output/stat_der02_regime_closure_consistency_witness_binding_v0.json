@@ -1,0 +1,181 @@
+{
+  "artifact_id": "stat_der02_regime_closure_consistency_witness_binding_v0",
+  "artifact_version": "v0",
+  "placeholder_template": false,
+  "payload": {
+    "artifact_id": "stat_der02_regime_closure_consistency_witness_binding_v0",
+    "cycle_id": "POST_RECOVERY_DER02_WITNESS_BINDING",
+    "pillar_id": "PILLAR-STAT",
+    "target_id": "TARGET-TH-ENTROPY-PLAN",
+    "target_row_id": "ROW-PILLAR-STAT-001",
+    "results_row_id": "TOE-STAT-DER-02",
+    "results_row_expected_label": "T-PROVED",
+    "status": "regime_closure_consistency_witness_binding_pinned_nonclaim",
+    "regime_closure_consistency_witness_result": "REGIME_CLOSURE_CONSISTENCY_WITNESS_PINNED_NONCLAIM",
+    "witness_object_id": "STAT_DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_BINDING_OBJECT_v0",
+    "isolated_gap_id": "STAT_DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_BINDING_v0",
+    "witness_scope": [
+      "bind_der02_regime_closure_surface_to_theorem_body_closure_constraint_slot",
+      "bind_der02_theorem_body_closure_constraint_to_discharge_regime_validity_slot",
+      "bind_der02_theorem_body_closure_constraint_to_discharge_closure_consistency_slot",
+      "bind_der02_object_surface_closure_carrier_to_the_same_witness_interpretation",
+      "bind_der02_assumption_freeze_regime_scope_and_der01_dependency_handles_to_the_witness_scope",
+      "nonclaim_witness_binding_only_no_theorem_gap_delta_counted"
+    ],
+    "slot_bindings": {
+      "regime_closure_surface_slot": {
+        "artifact": "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+        "slot": "future_coupling_gate_expansion_slot"
+      },
+      "theorem_body_constraint_slot": {
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "slot": "closure_coupling_constraint_slot_placeholder"
+      },
+      "theorem_body_regime_slot": {
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "slot": "regime_validity_predicate_slot_placeholder"
+      },
+      "discharge_regime_validity_slot": {
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "slot": "regime_validity_closure_statement_slot_placeholder"
+      },
+      "discharge_closure_consistency_slot": {
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "slot": "closure_coupling_consistency_slot_placeholder"
+      },
+      "object_surface_closure_slot": {
+        "artifact": "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+        "slot": "closure_coupling_object_symbol_surface"
+      }
+    },
+    "assumption_bindings": [
+      {
+        "handle": "ASSUMPTION_FREEZE_LINKAGE_SLOT",
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "slot": "assumption_freeze_linkage_slot_placeholder",
+        "binding": "explicit_assumption_freeze_handle_required_before_any_delta_count"
+      },
+      {
+        "handle": "REGIME_VALIDITY_PREDICATE_SLOT",
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "slot": "regime_validity_predicate_slot_placeholder",
+        "binding": "same_regime_validity_predicate_must_be_used_by_theorem_body_and_discharge_witness"
+      },
+      {
+        "handle": "REGIME_REFERENCE_SLOT",
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "slot": "assumption_freeze_and_regime_reference_slot_placeholder",
+        "binding": "same_assumption_freeze_and_regime_reference_handle_must_be_used_by_discharge_witness"
+      },
+      {
+        "handle": "DER02_SCOPE_BOUNDARY_SLOT",
+        "artifact": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+        "slot": "results_row_label_persistence",
+        "binding": "row_local_scope_and_label_persistence_must_be_preserved_without_promotion"
+      },
+      {
+        "handle": "DER01_DEPENDENCY_SLOT",
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "slot": "der01_entropy_balance_dependency_slot_placeholder",
+        "binding": "retained_der01_dependency_must_be_explicit_bound_input_not_substitute_witness_source"
+      }
+    ],
+    "required_inputs": [
+      {
+        "input_id": "DER02_REGIME_CLOSURE_SURFACE",
+        "artifact": "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+        "required_slot": "future_coupling_gate_expansion_slot"
+      },
+      {
+        "input_id": "DER02_THEOREM_BODY_CONSTRAINT",
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "required_slot": "closure_coupling_constraint_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_THEOREM_BODY_REGIME",
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "required_slot": "regime_validity_predicate_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_DISCHARGE_REGIME_VALIDITY",
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "required_slot": "regime_validity_closure_statement_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_DISCHARGE_CLOSURE_CONSISTENCY",
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "required_slot": "closure_coupling_consistency_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_DISCHARGE_REGIME_REFERENCE",
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "required_slot": "assumption_freeze_and_regime_reference_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_OBJECT_SURFACE_CLOSURE_CARRIER",
+        "artifact": "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+        "required_slot": "closure_coupling_object_symbol_surface"
+      },
+      {
+        "input_id": "DER02_SCOPE_BOUNDARY",
+        "artifact": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+        "required_slot": "results_row_label_persistence"
+      }
+    ],
+    "source_reports": [
+      "formal/output/reports/post_recovery_stat_der02_regime_closure_consistency_witness_binding_design_20260424_v0.json",
+      "formal/output/reports/post_recovery_stat_der02_theorem_body_discharge_gap_isolation_20260424_v0.json",
+      "formal/output/reports/post_recovery_stat_der02_machine_pinnability_preflight_20260424_v0.json"
+    ],
+    "gate_contract": {
+      "gate_id": "STAT_DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_BINDING_GATE_v0",
+      "gate_path": "formal/python/tests/test_stat_der02_regime_closure_consistency_witness_binding_gate.py",
+      "passing_this_gate_authorizes_execution": false,
+      "passing_this_gate_counts_theorem_gap_delta": false,
+      "passing_this_gate_claims_der02_discharge": false
+    },
+    "current_delta_boundary": {
+      "selected_row": "NONE",
+      "theorem_gap_delta": 0,
+      "fresh_movement_machine_pinned": false,
+      "stat_evidence_surface_terminal_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+      "theorem_gap_delta_counted": 0,
+      "blocker_reduction_counted_now": false,
+      "execution_authorization": "NONE"
+    },
+    "forbidden_dependencies": {
+      "packet05_dependency": false,
+      "seam_dependency": false,
+      "master_action_dependency": false,
+      "m3_m4_promotion_dependency": false,
+      "nonflip_custody_ladder_dependency": false
+    },
+    "non_claim_boundary": [
+      "witness_binding_nonclaim_only",
+      "no_toe_stat_der_02_label_promotion",
+      "no_der02_discharge_claim",
+      "no_theorem_gap_delta_counted",
+      "no_fresh_movement_machine_pinned_claim",
+      "no_stat_execution_authorization",
+      "no_packet05_bootstrap",
+      "no_seam_work",
+      "no_master_action",
+      "no_external_truth_claim"
+    ],
+    "cross_surface_pointers": [
+      "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "formal/docs/paper/RESULTS_TABLE_v0.md",
+      "formal/output/reports/post_recovery_stat_der02_regime_closure_consistency_witness_binding_design_20260424_v0.json",
+      "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+      "formal/python/tests/test_stat_der02_regime_closure_consistency_witness_binding_gate.py"
+    ],
+    "artifact_sha256": "TOP_LEVEL_payload_sha256",
+    "generated_on": "2026-04-24",
+    "materialized_at_utc": "2026-04-25T04:30:00Z"
+  },
+  "payload_sha256": "23a36ab450bbd66a2aa13bc13df4fbfcc458cdfc8be50d8490720490fa008b6e"
+}

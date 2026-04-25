@@ -1,0 +1,190 @@
+{
+  "artifact_id": "stat_der02_bounded_discharge_attempt_surface_v0",
+  "artifact_version": "v0",
+  "placeholder_template": false,
+  "payload": {
+    "artifact_id": "stat_der02_bounded_discharge_attempt_surface_v0",
+    "cycle_id": "POST_RECOVERY_DER02_BOUNDED_DISCHARGE_ATTEMPT_SURFACE",
+    "pillar_id": "PILLAR-STAT",
+    "target_id": "TARGET-TH-ENTROPY-PLAN",
+    "target_row_id": "ROW-PILLAR-STAT-001",
+    "results_row_id": "TOE-STAT-DER-02",
+    "results_row_expected_label": "T-PROVED",
+    "status": "bounded_discharge_attempt_surface_pinned_nonclaim",
+    "surface_id": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_SURFACE_v0",
+    "surface_result": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_SURFACE_PINNED_NONCLAIM_NOT_EXECUTED",
+    "source_missing_component_id": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_SURFACE_v0",
+    "discharge_attempt_object": {
+      "object_id": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_OBJECT_v0",
+      "object_class": "DECLARATION_ONLY_THEOREM_BODY_TO_DISCHARGE_ATTEMPT_BOUNDARY",
+      "attempt_scope": "THEOREM_BODY_TO_DISCHARGE_ONLY",
+      "attempt_question": "Can the pinned DER02 regime-closure consistency witness be converted into a future claim-checkable replacement for the theorem-body closure-coupling constraint slot and the discharge-side closure consistency slot under a single frozen regime reference?",
+      "attempt_executed_now": false,
+      "attempt_authorized_now": false
+    },
+    "allowed_inputs": [
+      {
+        "input_id": "DER02_PINNED_REGIME_CLOSURE_CONSISTENCY_WITNESS",
+        "artifact": "formal/output/stat_der02_regime_closure_consistency_witness_binding_v0.json",
+        "required_status": "regime_closure_consistency_witness_binding_pinned_nonclaim",
+        "required_result": "REGIME_CLOSURE_CONSISTENCY_WITNESS_PINNED_NONCLAIM"
+      },
+      {
+        "input_id": "DER02_THEOREM_BODY_CLOSURE_CONSTRAINT_SLOT",
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "required_slot": "closure_coupling_constraint_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_THEOREM_BODY_REGIME_PREDICATE_SLOT",
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "required_slot": "regime_validity_predicate_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_THEOREM_BODY_ASSUMPTION_FREEZE_SLOT",
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "required_slot": "assumption_freeze_linkage_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_DISCHARGE_REGIME_VALIDITY_STATEMENT_SLOT",
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "required_slot": "regime_validity_closure_statement_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_DISCHARGE_CLOSURE_CONSISTENCY_SLOT",
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "required_slot": "closure_coupling_consistency_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_DISCHARGE_ASSUMPTION_REGIME_REFERENCE_SLOT",
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "required_slot": "assumption_freeze_and_regime_reference_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_OBJECT_SURFACE_CLOSURE_CARRIER_SLOT",
+        "artifact": "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+        "required_slot": "closure_coupling_object_symbol_surface"
+      },
+      {
+        "input_id": "DER02_OBJECT_SURFACE_ASSUME_FREEZE_REFERENCE",
+        "artifact": "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+        "required_slot": "assumption_freeze_reference_surface"
+      },
+      {
+        "input_id": "DER02_REGIME_CLOSURE_COUPLING_GATE_SLOT",
+        "artifact": "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+        "required_slot": "future_coupling_gate_expansion_slot"
+      },
+      {
+        "input_id": "DER02_SCOPE_BOUNDARY_PERSISTENCE_SLOT",
+        "artifact": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+        "required_slot": "results_row_label_persistence"
+      }
+    ],
+    "required_gate_inputs": [
+      "formal/output/reports/post_recovery_stat_der02_post_witness_discharge_readiness_review_20260424_v0.json",
+      "formal/output/stat_der02_regime_closure_consistency_witness_binding_v0.json",
+      "formal/python/tests/test_stat_der02_regime_closure_consistency_witness_binding_gate.py",
+      "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json"
+    ],
+    "success_discriminator": {
+      "success_event_id": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_SUCCESS_EVENT_v0",
+      "evaluated_now": false,
+      "future_success_requires": [
+        "same_pinned_der02_witness_artifact_consumed",
+        "theorem_body_closure_coupling_constraint_slot_replaced_by_claim_checkable_witness_binding",
+        "discharge_closure_coupling_consistency_slot_replaced_by_matching_claim_checkable_derivation",
+        "single_assumption_freeze_and_regime_reference_handle_matches_theorem_body_discharge_and_object_surfaces",
+        "scope_boundary_results_row_label_persistence_preserved",
+        "stat_fresh_movement_evidence_surface_flips_to_POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_FRESH_MOVEMENT_MACHINE_PINNED",
+        "theorem_gap_delta_less_than_zero_is_machine_pinned_by_a_later_authorized_surface"
+      ],
+      "current_success_state": false
+    },
+    "failure_discriminator": {
+      "failure_event_id": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_FAILURE_EVENT_v0",
+      "evaluated_now": false,
+      "future_failure_conditions": [
+        "pinned_der02_witness_artifact_missing_or_hash_mismatched",
+        "witness_not_status_regime_closure_consistency_witness_binding_pinned_nonclaim",
+        "theorem_body_closure_constraint_slot_still_unreplaced_after_attempt",
+        "discharge_closure_consistency_slot_still_unreplaced_after_attempt",
+        "assumption_freeze_or_regime_reference_handle_mismatch_between_theorem_body_discharge_and_object_surfaces",
+        "attempt_requires_packet05_seam_master_action_or_promotion_surface",
+        "fresh_movement_surface_remains_unpinned"
+      ],
+      "current_failure_state": false
+    },
+    "authorization_boundary": {
+      "execution_authorization": "NONE",
+      "stat_execution_packet_authored": false,
+      "bounded_discharge_attempt_executed_now": false,
+      "authorization_conversion_required_before_execution": true,
+      "passing_this_surface_gate_authorizes_execution": false
+    },
+    "current_delta_boundary": {
+      "selected_row": "NONE",
+      "theorem_gap_delta": 0,
+      "fresh_movement_machine_pinned": false,
+      "stat_evidence_surface_terminal_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+      "theorem_gap_delta_counted": 0,
+      "blocker_reduction_counted_now": false,
+      "execution_authorization": "NONE"
+    },
+    "forbidden_dependencies": {
+      "packet05_dependency": false,
+      "seam_dependency": false,
+      "master_action_dependency": false,
+      "m3_m4_promotion_dependency": false,
+      "nonflip_custody_ladder_dependency": false
+    },
+    "gate_contract": {
+      "gate_id": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_SURFACE_GATE_v0",
+      "gate_path": "formal/python/tests/test_stat_der02_bounded_discharge_attempt_surface_gate.py",
+      "passing_this_gate_authorizes_execution": false,
+      "passing_this_gate_counts_theorem_gap_delta": false,
+      "passing_this_gate_claims_der02_discharge": false,
+      "passing_this_gate_flips_stat_evidence_surface": false
+    },
+    "expected_new_artifacts_for_next_commit_bundle": [
+      "formal/output/stat_der02_regime_closure_consistency_witness_binding_v0.json",
+      "formal/python/tests/test_stat_der02_regime_closure_consistency_witness_binding_gate.py",
+      "formal/output/stat_der02_bounded_discharge_attempt_surface_v0.json",
+      "formal/python/tests/test_stat_der02_bounded_discharge_attempt_surface_gate.py"
+    ],
+    "terminal_outcome": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_SURFACE_AUTHORED_NONCLAIM_NOT_EXECUTED",
+    "non_claim_boundary": [
+      "bounded_discharge_attempt_surface_only",
+      "no_bounded_discharge_attempt_execution",
+      "no_toe_stat_der_02_label_promotion",
+      "no_der02_discharge_claim",
+      "no_theorem_gap_delta_counted",
+      "no_fresh_movement_machine_pinned_claim",
+      "no_stat_execution_authorization",
+      "no_packet05_bootstrap",
+      "no_seam_work",
+      "no_master_action",
+      "no_external_truth_claim"
+    ],
+    "cross_surface_pointers": [
+      "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+      "formal/docs/paper/RESULTS_TABLE_v0.md",
+      "formal/output/reports/post_recovery_stat_der02_post_witness_discharge_readiness_review_20260424_v0.json",
+      "formal/output/stat_der02_regime_closure_consistency_witness_binding_v0.json",
+      "formal/python/tests/test_stat_der02_regime_closure_consistency_witness_binding_gate.py",
+      "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+      "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+      "formal/python/tests/test_stat_der02_bounded_discharge_attempt_surface_gate.py"
+    ],
+    "artifact_sha256": "TOP_LEVEL_payload_sha256",
+    "generated_on": "2026-04-24",
+    "materialized_at_utc": "2026-04-25T05:20:00Z"
+  },
+  "payload_sha256": "14eba225c712beaeb0844a7cf90a862e0a5acc9a9e7d1fa33aaf6fda460c6b16"
+}

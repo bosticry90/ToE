@@ -1,0 +1,184 @@
+{
+  "schema_id": "POST_RECOVERY_STAT_DER02_MACHINE_PINNABILITY_PREFLIGHT_20260424_v0",
+  "artifact_id": "post_recovery_stat_der02_machine_pinnability_preflight_20260424_v0",
+  "captured_at_utc": "2026-04-25T03:05:00Z",
+  "status": "DECLARATION_ONLY_DER02_MACHINE_PINNABILITY_PREFLIGHT_NONCLAIM",
+  "trigger": {
+    "source": "POST_RECOVERY_STAT_DER02_DECLARATION_ONLY_RESERVE_SOURCE_REASSESSMENT_PACKET",
+    "source_report": "formal/output/reports/post_recovery_stat_der02_declaration_only_reserve_source_reassessment_packet_20260424_v0.json",
+    "selected_candidate_source_id": "STAT_DER02_REGIME_CLOSURE_COUPLING_DELTA_SOURCE_v0",
+    "reason": "The DER02 declaration-only reserve-source reassessment selected TOE-STAT-DER-02 as the next candidate source; this packet preflights whether the current DER02 tuple is close enough to support a future machine-pinnable negative theorem-gap delta event."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_FRONTIER_DESIGN",
+    "target_row_id": "ROW-PILLAR-STAT-001",
+    "theorem_row_linkage": "TOE-STAT-DER-02",
+    "blocker_class": "THEOREM_GAP",
+    "execution_authorization": "NONE",
+    "advancement_claim_allowed": false,
+    "stat_execution_packet_allowed": false,
+    "stat_packet05_bootstrap_allowed": false,
+    "der02_execution_allowed_now": false,
+    "seam_execution_allowed": false,
+    "master_action_allowed": false,
+    "broad_seam_expansion_allowed": false
+  },
+  "source_bundle": {
+    "der02_reassessment_packet": "formal/output/reports/post_recovery_stat_der02_declaration_only_reserve_source_reassessment_packet_20260424_v0.json",
+    "der02_reassessment_gate": "formal/python/tests/test_post_recovery_stat_der02_declaration_only_reserve_source_reassessment_packet_gate.py",
+    "stat_fresh_movement_evidence_surface_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "theorem_gap_fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "stat_packet05_lane_eligibility_review_report": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json",
+    "stat_entropy_plan_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+    "results_table": "formal/docs/paper/RESULTS_TABLE_v0.md"
+  },
+  "preflight_question": {
+    "question_id": "CAN_DER02_CURRENT_TUPLE_SUPPORT_FUTURE_MACHINE_PINNED_STAT_THEOREM_GAP_DELTA",
+    "question": "Given DER-01 nonmovement closeout and DER-02 reserve-source selection, can TOE-STAT-DER-02 serve as a future machine-pinnable STAT theorem-gap delta source?",
+    "answer": "YES_AS_DECLARATION_ONLY_FUTURE_SOURCE_CANDIDATE_NOT_MACHINE_PINNED_NOW",
+    "interpretation": "DER02 has the row-local doc/artifact/gate structure needed to remain the selected declaration-only future source candidate, but the current artifacts are placeholder non-claim scaffolds and do not themselves machine-pin a negative theorem-gap delta."
+  },
+  "der02_tuple_under_review": {
+    "selected_candidate_source_id": "STAT_DER02_REGIME_CLOSURE_COUPLING_DELTA_SOURCE_v0",
+    "candidate_source_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+    "theorem_row_linkage": "TOE-STAT-DER-02",
+    "target_id": "TARGET-TH-ENTROPY-PLAN",
+    "required_candidate_artifacts": [
+      {
+        "role": "REGIME_CLOSURE_COUPLING",
+        "artifact": "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+        "artifact_id": "stat_der02_regime_closure_coupling_scaffold_cycle01_v0",
+        "status": "regime_validity_closure_coupling_scaffold_placeholder_nonclaim",
+        "payload_sha256": "24b5f514b435f03fa8355d3941d222b14a2c2c1142c059ff3208fc739fa7b046",
+        "gate": "formal/python/tests/test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate.py"
+      },
+      {
+        "role": "THEOREM_BODY",
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "artifact_id": "stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0",
+        "status": "regime_closure_theorem_body_scaffold_placeholder_nonclaim",
+        "payload_sha256": "e52d2741f1b2568c67614ec0d2a4cdc318b7235e6ea0fd89a2916c393e30690f",
+        "gate": "formal/python/tests/test_stat_der02_theorem_body_scaffold_coupling_cycle01_gate.py"
+      },
+      {
+        "role": "DISCHARGE",
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "artifact_id": "stat_der02_regime_closure_discharge_scaffold_cycle01_v0",
+        "status": "regime_closure_discharge_scaffold_placeholder_nonclaim",
+        "payload_sha256": "6f7410efedac6801950dcbd4f8a90cbc57c185b337a5e75859abec29ec6bac65",
+        "gate": "formal/python/tests/test_stat_der02_discharge_scaffold_coupling_cycle01_gate.py"
+      },
+      {
+        "role": "OBJECT_SURFACE",
+        "artifact": "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+        "artifact_id": "stat_der02_regime_closure_object_surface_scaffold_cycle01_v0",
+        "status": "regime_closure_object_surface_scaffold_placeholder_nonclaim",
+        "payload_sha256": "cedc32ae0b69b03fb138c89bfa990b3cc09059612387392e6f206bf1f52ab35a",
+        "gate": "formal/python/tests/test_stat_der02_object_surface_scaffold_coupling_cycle01_gate.py"
+      }
+    ],
+    "supporting_candidate_artifacts": [
+      {
+        "role": "THEOREM_BODY_SCOPE_BOUNDARY",
+        "artifact": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+        "status": "theorem_body_scope_boundary_placeholder_nonclaim",
+        "payload_sha256": "e0185996ae2b365da2ff6759dee04af5c2b8ab2697101c9cd7d805c36f11c56c",
+        "gate": "formal/python/tests/test_stat_der02_theorem_body_scope_boundary_cycle01_gate.py"
+      }
+    ]
+  },
+  "closeness_preflight": {
+    "closeness_to_future_source_candidate": true,
+    "machine_pinnable_now": false,
+    "criteria": {
+      "row_local_der02_tuple_present": true,
+      "doc_artifact_gate_tuple_present": true,
+      "regime_closure_slots_present": true,
+      "theorem_body_slots_present": true,
+      "discharge_slots_present": true,
+      "object_surface_slots_present": true,
+      "scope_boundary_slots_present": true,
+      "anti_replay_basis_preserved": true,
+      "no_packet05_dependency": true,
+      "no_seam_dependency": true,
+      "no_master_action_dependency": true,
+      "current_payload_selected_row_stat": false,
+      "current_payload_theorem_gap_delta_negative": false,
+      "current_payload_fresh_movement_machine_pinned": false
+    },
+    "supporting_evidence": {
+      "regime_closure_required_components_count": 8,
+      "theorem_body_required_components_count": 5,
+      "discharge_required_components_count": 5,
+      "object_surface_required_components_count": 5,
+      "scope_boundary_required_dependency_slots_count": 7,
+      "all_required_der02_artifacts_placeholder_nonclaim": true,
+      "all_required_der02_artifacts_link_to_toe_stat_der_02": true
+    },
+    "blocking_gaps_before_machine_pin": [
+      "DER02 regime-closure coupling artifact is still regime_validity_closure_coupling_scaffold_placeholder_nonclaim.",
+      "DER02 theorem-body artifact is still regime_closure_theorem_body_scaffold_placeholder_nonclaim.",
+      "DER02 discharge artifact is still regime_closure_discharge_scaffold_placeholder_nonclaim.",
+      "DER02 object-surface artifact is still regime_closure_object_surface_scaffold_placeholder_nonclaim.",
+      "Current DER02 tuple forbids regime-validity discharge, closure-coupling discharge, label promotion, adequacy, and adjudication claims.",
+      "Current STAT evidence surface still records selected_row=NONE, theorem_gap_delta=0, and fresh_movement_machine_pinned=false."
+    ]
+  },
+  "future_machine_pinning_requirements": {
+    "required_payload": {
+      "selected_row": "ROW-PILLAR-STAT-001",
+      "theorem_gap_delta": "NEGATIVE_INTEGER",
+      "fresh_movement_machine_pinned": true,
+      "stat_evidence_surface_terminal_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_FRESH_MOVEMENT_MACHINE_PINNED"
+    },
+    "der02_specific_required_delta_evidence": [
+      "A machine-checkable replacement or extension of the DER02 regime-validity/closure-coupling placeholders with a concrete theorem-gap delta witness.",
+      "A machine-checkable DER02 theorem-body and discharge witness that closes at least one currently open theorem-gap condition without invoking Packet05, seam work, or master action.",
+      "A refreshed STAT evidence surface that attributes the negative theorem-gap delta to STAT/DER02 and flips fresh_movement_machine_pinned to true.",
+      "A refreshed theorem-gap fresh-movement qualification surface selecting ROW-PILLAR-STAT-001."
+    ],
+    "conversion_guard": "Even after such evidence appears, execution authorization remains NONE until a refreshed authorization-conversion surface explicitly changes it."
+  },
+  "current_machine_pinnability_state": {
+    "selected_row": "NONE",
+    "theorem_gap_delta": 0,
+    "fresh_movement_machine_pinned": false,
+    "stat_evidence_surface_terminal_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+    "candidate_validated_now": false,
+    "theorem_gap_delta_counted": 0,
+    "blocker_reduction_counted_now": false,
+    "event_materialization_review_allowed_now": false,
+    "authorization_conversion_review_allowed_now": false,
+    "execution_authorization": "NONE"
+  },
+  "explicit_exclusions": {
+    "stat_execution_authorization": "NONE",
+    "der02_execution_allowed": false,
+    "theorem_gap_delta_counted": 0,
+    "packet05_allowed": false,
+    "seam_work_allowed": false,
+    "master_action_allowed": false,
+    "advancement_claim_allowed": false,
+    "promotion_or_closure_claim_allowed": false
+  },
+  "preflight_decision": {
+    "terminal_outcome": "STAT_DER02_DELTA_PREFLIGHT_FUTURE_SOURCE_USABLE_NOT_MACHINE_PINNED",
+    "der02_retained_as_selected_source_candidate": true,
+    "close_enough_for_future_machine_pinnable_delta_search": true,
+    "machine_pinned_now": false,
+    "candidate_validated_now": false,
+    "theorem_gap_delta_counted": 0,
+    "new_execution_packet_authored": false,
+    "execution_authorization": "NONE",
+    "next_action": "DESIGN_OR_WAIT_FOR_A_DER02_SPECIFIC_MACHINE_CHECKABLE_NEGATIVE_THEOREM_GAP_DELTA_WITNESS_WITHOUT_OPENING_STAT_EXECUTION",
+    "stop_condition": "IF_NO_DER02_SPECIFIC_WITNESS_CAN_BE_DECLARED_RETAIN_DER02_AS_UNPINNED_SOURCE_CANDIDATE_AND_DO_NOT_OPEN_EXECUTION"
+  },
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_post_plan_stat_fresh_movement_evidence_surface_report.py formal/python/tests/test_post_plan_theorem_gap_fresh_movement_qualification_report.py formal/python/tests/test_post_plan_stat_packet05_lane_eligibility_review_report.py formal/python/tests/test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate.py formal/python/tests/test_stat_der02_theorem_body_scope_boundary_cycle01_gate.py formal/python/tests/test_stat_der02_theorem_body_scaffold_coupling_cycle01_gate.py formal/python/tests/test_stat_der02_discharge_scaffold_coupling_cycle01_gate.py formal/python/tests/test_stat_der02_object_surface_scaffold_coupling_cycle01_gate.py formal/python/tests/test_post_recovery_stat_der02_declaration_only_reserve_source_reassessment_packet_gate.py formal/python/tests/test_post_recovery_stat_der02_machine_pinnability_preflight_gate.py formal/python/tests/test_repo_recovery_program_gate.py -q",
+    "targeted_gate_result": "GREEN_21_PASSED",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local declaration-only DER02 machine-pinnability preflight. Retains DER02 as the selected future source candidate but makes no machine-pinned negative theorem-gap delta claim, no DER02 execution, no theorem-gap delta count, no Packet05 bootstrap, no seam work, no master action, no promotion or closure claim, and no external-truth claim.",
+  "payload_sha256": "7446dae11590c9cbae82ce93690b0c99ed3c73f4920f8d76f0fd28fab845639f"
+}

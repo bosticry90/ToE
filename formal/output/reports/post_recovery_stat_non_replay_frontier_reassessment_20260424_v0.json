@@ -1,0 +1,106 @@
+{
+  "schema_id": "POST_RECOVERY_STAT_NON_REPLAY_FRONTIER_REASSESSMENT_20260424_v0",
+  "artifact_id": "post_recovery_stat_non_replay_frontier_reassessment_20260424_v0",
+  "captured_at_utc": "2026-04-25T07:35:00Z",
+  "status": "DECLARATION_ONLY_STAT_NON_REPLAY_FRONTIER_REASSESSMENT_NONCLAIM",
+  "trigger": {
+    "source": "POST_RECOVERY_STAT_POST_DER_CYCLE_EXHAUSTION_READOUT_REVIEW",
+    "source_report": "formal/output/reports/post_recovery_stat_post_der_cycle_exhaustion_readout_review_20260424_v0.json",
+    "reason": "After DER01 and DER02 attempt-cycle exhaustion is recorded, reassess whether any non-replay frontier is currently admissible and whether a new non-DER STAT theorem-row candidate is already declared."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_FRONTIER_REASSESSMENT",
+    "execution_authorization": "NONE",
+    "target_row_id": "ROW-PILLAR-STAT-001",
+    "blocker_class": "THEOREM_GAP",
+    "records_readout_only": true,
+    "review_counts_theorem_gap_delta": false,
+    "advancement_claim_allowed": false,
+    "packet05_bootstrap_allowed": false,
+    "seam_execution_allowed": false,
+    "gr_work_allowed": false,
+    "rl10_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false
+  },
+  "source_bundle": {
+    "post_der_cycle_exhaustion_readout_review": "formal/output/reports/post_recovery_stat_post_der_cycle_exhaustion_readout_review_20260424_v0.json",
+    "der01_post_attempt_closeout": "formal/output/reports/post_recovery_stat_der01_post_attempt_nonmovement_closeout_review_20260424_v0.json",
+    "der02_post_attempt_closeout": "formal/output/reports/post_recovery_stat_der02_post_attempt_nonmovement_closeout_review_20260424_v0.json",
+    "stat_candidate_delta_object_report": "formal/output/reports/post_recovery_stat_candidate_theorem_gap_delta_object_20260424_v0.json",
+    "stat_declaration_only_evidence_acquisition_route_report": "formal/output/reports/post_recovery_stat_declaration_only_evidence_acquisition_route_20260424_v0.json",
+    "stat_fresh_movement_evidence_surface_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "theorem_gap_fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "stat_packet05_lane_eligibility_review_report": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json"
+  },
+  "exhaustion_checkpoint": {
+    "der01_cycle_closed_nonmoving": true,
+    "der02_cycle_closed_nonmoving": true,
+    "remaining_der_attempt_authorization": 0,
+    "theorem_gap_delta": 0,
+    "theorem_gap_delta_counted": 0,
+    "fresh_movement_machine_pinned": false,
+    "stat_execution_posture": "EXECUTION_HELD"
+  },
+  "non_replay_frontier_assessment": {
+    "question": "Is any non-replay execution frontier currently admissible under the existing STAT evidence surfaces?",
+    "answer": "NO_NON_REPLAY_EXECUTION_FRONTIER_ADMISSIBLE_NOW",
+    "basis": [
+      "Both DER attempt cycles are consumed with BLOCKER_UNCHANGED.",
+      "No machine-pinned negative theorem-gap delta is present.",
+      "Fresh movement remains unpinned and selected_row remains NONE.",
+      "Packet05 lane remains not eligible under current bootstrap."
+    ],
+    "execution_authorization_now": "NONE"
+  },
+  "new_stat_candidate_search": {
+    "question": "Is there a new declared STAT theorem-row candidate outside DER-01/DER-02 that can be admitted without replay?",
+    "search_scope": "DECLARED_REPO_LOCAL_STAT_THEOREM_ROW_CANDIDATES",
+    "known_consumed_candidates": [
+      "TOE-STAT-DER-01",
+      "TOE-STAT-DER-02"
+    ],
+    "new_declared_candidate_found": false,
+    "new_candidate_id": "NONE",
+    "new_candidate_requires_separate_declaration_packet": true,
+    "admissible_now": false
+  },
+  "disallowed_next_actions": [
+    "rerun_der01_attempt_without_new_authorization",
+    "rerun_der02_attempt_without_new_authorization",
+    "count_theorem_gap_delta_from_nonmoving_der_attempts",
+    "open_packet05",
+    "open_seam_work",
+    "open_gr_work",
+    "open_rl10_work",
+    "invoke_master_action",
+    "claim_promotion_or_closure"
+  ],
+  "decision": {
+    "terminal_outcome": "STAT_NON_REPLAY_FRONTIER_REASSESSMENT_EXECUTION_HELD_NO_NEW_CANDIDATE_DECLARED",
+    "execution_held": true,
+    "non_replay_execution_frontier_opened": false,
+    "new_stat_theorem_row_candidate_declared": false,
+    "next_action": "AUTHOR_DECLARATION_ONLY_NEW_STAT_CANDIDATE_DECLARATION_PACKET_IF_AND_ONLY_IF_A_DISTINCT_NON_DER_CANDIDATE_CAN_BE_SPECIFIED",
+    "alternate_next_action": "AUTHOR_DECLARATION_ONLY_GENUINELY_NEW_STAT_SOURCE_EVIDENCE_INTAKE_PACKET_IF_NEW_EVIDENCE_EXISTS",
+    "stop_condition": "STOP_EXECUTION_EXPANSION_UNTIL_A_NEW_DECLARED_CANDIDATE_OR_NEW_SOURCE_EVIDENCE_IS_FORMALLY_MATERIALIZED"
+  },
+  "explicit_exclusions": {
+    "packet05_allowed": false,
+    "seam_work_allowed": false,
+    "gr_work_allowed": false,
+    "rl10_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false,
+    "advancement_claim_allowed": false,
+    "theorem_gap_delta_counted": 0
+  },
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_post_recovery_stat_non_replay_frontier_reassessment_gate.py -q",
+    "targeted_gate_result": "PENDING",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local post-recovery STAT non-replay frontier reassessment only. No discharge execution, theorem-gap delta counting, Packet05 authorization, seam/GR/RL10/master-action work, promotion/closure claim, or external-truth claim is made.",
+  "payload_sha256": "aaf0cca242da0658f6b35740fab73101092d8126c1e1c2feddb4812a4533aaa3"
+}

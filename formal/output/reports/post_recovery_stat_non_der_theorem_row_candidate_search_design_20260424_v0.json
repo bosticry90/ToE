@@ -1,0 +1,123 @@
+{
+  "schema_id": "POST_RECOVERY_STAT_NON_DER_THEOREM_ROW_CANDIDATE_SEARCH_DESIGN_20260424_v0",
+  "artifact_id": "post_recovery_stat_non_der_theorem_row_candidate_search_design_20260424_v0",
+  "captured_at_utc": "2026-04-25T08:05:00Z",
+  "status": "DECLARATION_ONLY_STAT_NON_DER_CANDIDATE_SEARCH_DESIGN_NONCLAIM",
+  "trigger": {
+    "source": "POST_RECOVERY_STAT_NON_REPLAY_FRONTIER_REASSESSMENT",
+    "source_report": "formal/output/reports/post_recovery_stat_non_replay_frontier_reassessment_20260424_v0.json",
+    "reason": "No non-replay execution frontier is admissible and no non-DER STAT theorem-row candidate is currently declared; define declaration-only search/design protocol for a distinct non-DER candidate."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_CANDIDATE_SEARCH_DESIGN",
+    "execution_authorization": "NONE",
+    "target_row_id": "ROW-PILLAR-STAT-001",
+    "blocker_class": "THEOREM_GAP",
+    "search_only": true,
+    "review_counts_theorem_gap_delta": false,
+    "advancement_claim_allowed": false,
+    "packet05_bootstrap_allowed": false,
+    "seam_execution_allowed": false,
+    "gr_work_allowed": false,
+    "rl10_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false
+  },
+  "source_bundle": {
+    "non_replay_frontier_reassessment_report": "formal/output/reports/post_recovery_stat_non_replay_frontier_reassessment_20260424_v0.json",
+    "post_der_cycle_exhaustion_readout_review": "formal/output/reports/post_recovery_stat_post_der_cycle_exhaustion_readout_review_20260424_v0.json",
+    "der01_post_attempt_closeout": "formal/output/reports/post_recovery_stat_der01_post_attempt_nonmovement_closeout_review_20260424_v0.json",
+    "der02_post_attempt_closeout": "formal/output/reports/post_recovery_stat_der02_post_attempt_nonmovement_closeout_review_20260424_v0.json",
+    "stat_candidate_delta_object_report": "formal/output/reports/post_recovery_stat_candidate_theorem_gap_delta_object_20260424_v0.json",
+    "stat_declaration_only_evidence_acquisition_route_report": "formal/output/reports/post_recovery_stat_declaration_only_evidence_acquisition_route_20260424_v0.json",
+    "stat_fresh_movement_evidence_surface_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "theorem_gap_fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "stat_packet05_lane_eligibility_review_report": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json"
+  },
+  "search_question": {
+    "question_id": "STAT_NON_DER_THEOREM_ROW_CANDIDATE_SEARCH",
+    "question": "Can a distinct non-DER STAT theorem-row candidate be declared under current repository constraints without replaying DER01/DER02?",
+    "answer": "NO_CANDIDATE_DECLARED_NOW_SEARCH_PROTOCOL_DEFINED",
+    "interpretation": "No new non-DER candidate is declared in current artifacts. This packet defines admissible declaration-only search/design criteria for future candidate declaration."
+  },
+  "known_state_checkpoint": {
+    "der01_cycle_closed_nonmoving": true,
+    "der02_cycle_closed_nonmoving": true,
+    "remaining_der_attempt_authorization": 0,
+    "theorem_gap_delta": 0,
+    "theorem_gap_delta_counted": 0,
+    "fresh_movement_machine_pinned": false,
+    "non_replay_execution_frontier_opened": false,
+    "execution_authorization": "NONE"
+  },
+  "candidate_search_protocol": {
+    "candidate_must_be_non_der": true,
+    "candidate_must_target_row": "ROW-PILLAR-STAT-001",
+    "candidate_must_declare_theorem_row_linkage": true,
+    "candidate_must_specify_blocker_class": "THEOREM_GAP",
+    "candidate_must_include_minimal_machine_check_tuple": [
+      "candidate_id",
+      "theorem_row_linkage",
+      "target_row_id",
+      "attribution_family=STAT",
+      "required_delta_relation=theorem_gap_delta<0",
+      "anti_replay_basis",
+      "machine_check_surface"
+    ],
+    "candidate_must_not_require": [
+      "packet05_bootstrap",
+      "seam_dependency",
+      "gr_dependency",
+      "rl10_dependency",
+      "master_action_dependency",
+      "promotion_or_closure_claim"
+    ],
+    "candidate_admissibility_gate": "DECLARATION_ONLY_CANDIDATE_SPEC_PRESENT_AND_NON_DER_DISTINCT_FROM_TOE-STAT-DER-01_AND_TOE-STAT-DER-02",
+    "execution_authorization_after_candidate_declaration": "NONE_UNTIL_SEPARATE_AUTHORIZATION_REVIEW"
+  },
+  "current_search_readout": {
+    "new_non_der_candidate_declared": false,
+    "new_candidate_id": "NONE",
+    "admissible_now": false,
+    "reason": "No repository-local declaration packet currently specifies a distinct non-DER STAT theorem-row candidate satisfying the search protocol.",
+    "next_action": "AUTHOR_DECLARATION_ONLY_STAT_NON_DER_CANDIDATE_DECLARATION_PACKET_IF_A_DISTINCT_CANDIDATE_SPEC_CAN_BE_WRITTEN"
+  },
+  "disallowed_next_actions": [
+    "rerun_der01_attempt_without_new_authorization",
+    "rerun_der02_attempt_without_new_authorization",
+    "open_packet05",
+    "open_seam_work",
+    "open_gr_work",
+    "open_rl10_work",
+    "invoke_master_action",
+    "claim_promotion_or_closure",
+    "count_theorem_gap_delta_without_machine_pinned_negative_delta"
+  ],
+  "decision": {
+    "terminal_outcome": "STAT_NON_DER_CANDIDATE_SEARCH_DESIGN_DEFINED_NO_CANDIDATE_DECLARED",
+    "search_protocol_defined": true,
+    "new_non_der_candidate_declared": false,
+    "execution_held": true,
+    "next_action": "WAIT_FOR_OR_AUTHOR_DECLARATION_ONLY_NON_DER_CANDIDATE_SPEC_PACKET",
+    "alternate_next_action": "IF_GENUINELY_NEW_STAT_SOURCE_EVIDENCE_ARISES_AUTHOR_DECLARATION_ONLY_EVIDENCE_INTAKE_PACKET",
+    "stop_condition": "NO_EXECUTION_OR_DELTA_COUNT_UNTIL_NEW_CANDIDATE_DECLARATION_OR_NEW_SOURCE_EVIDENCE_IS_FORMALLY_MATERIALIZED"
+  },
+  "explicit_exclusions": {
+    "packet05_allowed": false,
+    "seam_work_allowed": false,
+    "gr_work_allowed": false,
+    "rl10_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false,
+    "advancement_claim_allowed": false,
+    "theorem_gap_delta_counted": 0
+  },
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_post_recovery_stat_non_der_theorem_row_candidate_search_design_gate.py -q",
+    "targeted_gate_result": "PENDING",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local declaration-only STAT non-DER theorem-row candidate search/design packet. No execution authorization, theorem-gap delta counting, Packet05, seam/GR/RL10/master-action work, promotion/closure claim, or external-truth claim is made.",
+  "payload_sha256": "f7a3869fa14483e89cb093d7547c4470fd77376ea9c351f0e457fc80b1df31d2"
+}

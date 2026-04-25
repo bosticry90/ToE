@@ -1,0 +1,125 @@
+{
+  "schema_id": "POST_RECOVERY_STAT_DER02_DECLARATION_ONLY_RESERVE_SOURCE_REASSESSMENT_PACKET_20260424_v0",
+  "artifact_id": "post_recovery_stat_der02_declaration_only_reserve_source_reassessment_packet_20260424_v0",
+  "captured_at_utc": "2026-04-25T02:20:00Z",
+  "status": "POST_RECOVERY_STAT_DER02_DECLARATION_ONLY_RESERVE_SOURCE_REASSESSMENT_PACKET_NONCLAIM",
+  "trigger": {
+    "source": "DER01_POST_ATTEMPT_NONMOVEMENT_CLOSEOUT",
+    "closeout_report": "formal/output/reports/post_recovery_stat_der01_post_attempt_nonmovement_closeout_review_20260424_v0.json",
+    "required_terminal_outcome": "STAT_DER01_POST_ATTEMPT_NONMOVEMENT_CLOSEOUT_DER01_CLOSED_DER02_DECLARATION_REASSESSMENT_NEXT",
+    "reason": "DER01 consumed its single authorized bounded attempt with BLOCKER_UNCHANGED and no machine-pinned movement; author declaration-only DER02 reserve-source reassessment as the next bounded move."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_RESERVE_SOURCE_REASSESSMENT",
+    "target_row_id": "ROW-PILLAR-STAT-001",
+    "theorem_row_linkage": "TOE-STAT-DER-02",
+    "execution_authorization": "NONE",
+    "der02_execution_allowed": false,
+    "theorem_gap_delta_counted": 0,
+    "packet05_allowed": false,
+    "seam_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_claim_allowed": false
+  },
+  "source_bundle": {
+    "der01_closeout_report": "formal/output/reports/post_recovery_stat_der01_post_attempt_nonmovement_closeout_review_20260424_v0.json",
+    "der01_execution_packet": "formal/output/stat_der01_bounded_discharge_attempt_execution_packet_v0.json",
+    "der01_execution_gate": "formal/python/tests/test_stat_der01_bounded_discharge_attempt_execution_packet_gate.py",
+    "der02_regime_closure_coupling_scaffold": "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+    "der02_regime_closure_coupling_gate": "formal/python/tests/test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate.py",
+    "der02_theorem_body_scaffold": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+    "der02_theorem_body_gate": "formal/python/tests/test_stat_der02_theorem_body_scaffold_coupling_cycle01_gate.py",
+    "der02_discharge_scaffold": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+    "der02_discharge_gate": "formal/python/tests/test_stat_der02_discharge_scaffold_coupling_cycle01_gate.py",
+    "der02_object_surface_scaffold": "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+    "der02_object_surface_gate": "formal/python/tests/test_stat_der02_object_surface_scaffold_coupling_cycle01_gate.py",
+    "der02_theorem_body_scope_boundary": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+    "der02_theorem_body_scope_boundary_gate": "formal/python/tests/test_stat_der02_theorem_body_scope_boundary_cycle01_gate.py",
+    "stat_fresh_movement_evidence_surface_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "theorem_gap_fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "stat_packet05_lane_eligibility_review_report": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json"
+  },
+  "reassessment_question": {
+    "question_id": "DER02_RESERVE_SOURCE_REASSESSMENT_AFTER_DER01_NONMOVEMENT",
+    "question": "Given DER01 nonmovement closeout, should TOE-STAT-DER-02 become the next STAT-attributable theorem-gap delta source candidate?",
+    "answer": "YES_DECLARATION_ONLY_DER02_NEXT_SOURCE_CANDIDATE",
+    "interpretation": "DER02 becomes the next declaration-only reserve-source candidate for STAT theorem-gap delta search, with no execution authorization and no delta count by this packet."
+  },
+  "candidate_assessment": {
+    "candidate_source_id": "STAT_DER02_REGIME_CLOSURE_COUPLING_DELTA_SOURCE_v0",
+    "candidate_class": "STAT_THEOREM_ROW_SOURCE_CANDIDATE_RESERVE_PROMOTION",
+    "theorem_row_linkage": "TOE-STAT-DER-02",
+    "selected_as_next_candidate_now": true,
+    "candidate_validated_now": false,
+    "machine_pinned_negative_theorem_gap_delta": false,
+    "theorem_gap_delta": 0,
+    "theorem_gap_delta_counted": 0,
+    "fresh_movement_machine_pinned": false,
+    "known_der02_scaffold_tuple": [
+      {
+        "artifact": "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+        "status": "regime_validity_closure_coupling_scaffold_placeholder_nonclaim",
+        "gate": "formal/python/tests/test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate.py"
+      },
+      {
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "status": "regime_closure_theorem_body_scaffold_placeholder_nonclaim",
+        "gate": "formal/python/tests/test_stat_der02_theorem_body_scaffold_coupling_cycle01_gate.py"
+      },
+      {
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "status": "regime_closure_discharge_scaffold_placeholder_nonclaim",
+        "gate": "formal/python/tests/test_stat_der02_discharge_scaffold_coupling_cycle01_gate.py"
+      },
+      {
+        "artifact": "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+        "status": "regime_closure_object_surface_scaffold_placeholder_nonclaim",
+        "gate": "formal/python/tests/test_stat_der02_object_surface_scaffold_coupling_cycle01_gate.py"
+      },
+      {
+        "artifact": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+        "status": "theorem_body_scope_boundary_placeholder_nonclaim",
+        "gate": "formal/python/tests/test_stat_der02_theorem_body_scope_boundary_cycle01_gate.py"
+      }
+    ],
+    "disallowed_actions_in_this_packet": [
+      "execute_der02",
+      "count_theorem_gap_delta",
+      "open_packet05",
+      "open_seam_work",
+      "open_gr_work",
+      "open_rl10_work",
+      "invoke_master_action",
+      "claim_der02_discharge",
+      "promote_toe_stat_der_02",
+      "claim_pillar_or_theory_closure"
+    ]
+  },
+  "decision": {
+    "terminal_outcome": "STAT_DER02_DECLARATION_ONLY_RESERVE_SOURCE_REASSESSMENT_SELECTED_NEXT_CANDIDATE_NO_EXECUTION",
+    "der02_selected_as_next_candidate_now": true,
+    "der02_execution_authorization": "NONE",
+    "der02_execution_allowed": false,
+    "theorem_gap_delta_counted": 0,
+    "fresh_movement_machine_pinned": false,
+    "next_action": "AUTHOR_DER02_DECLARATION_ONLY_SOURCE_QUALIFICATION_SURFACE_OR_RETURN_TO_DER01_IF_MATERIALLY_NEW_MACHINE_PINNABLE_HYPOTHESIS_APPEARS"
+  },
+  "expected_new_artifacts_for_next_commit_bundle": [
+    "formal/output/stat_der01_entropy_production_sign_definiteness_witness_binding_v0.json",
+    "formal/python/tests/test_stat_der01_entropy_production_sign_definiteness_witness_binding_gate.py",
+    "formal/output/stat_der01_bounded_discharge_attempt_surface_v0.json",
+    "formal/python/tests/test_stat_der01_bounded_discharge_attempt_surface_gate.py",
+    "formal/output/stat_der01_bounded_discharge_attempt_execution_packet_v0.json",
+    "formal/python/tests/test_stat_der01_bounded_discharge_attempt_execution_packet_gate.py",
+    "formal/output/reports/post_recovery_stat_der02_declaration_only_reserve_source_reassessment_packet_20260424_v0.json",
+    "formal/python/tests/test_post_recovery_stat_der02_declaration_only_reserve_source_reassessment_packet_gate.py"
+  ],
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_stat_der01_bounded_discharge_attempt_execution_packet_gate.py formal/python/tests/test_stat_der01_bounded_discharge_attempt_surface_gate.py formal/python/tests/test_stat_der01_entropy_production_sign_definiteness_witness_binding_gate.py formal/python/tests/test_post_plan_stat_fresh_movement_evidence_surface_report.py formal/python/tests/test_post_plan_theorem_gap_fresh_movement_qualification_report.py formal/python/tests/test_post_plan_stat_packet05_lane_eligibility_review_report.py formal/python/tests/test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate.py formal/python/tests/test_stat_der02_theorem_body_scope_boundary_cycle01_gate.py formal/python/tests/test_stat_der02_theorem_body_scaffold_coupling_cycle01_gate.py formal/python/tests/test_stat_der02_discharge_scaffold_coupling_cycle01_gate.py formal/python/tests/test_stat_der02_object_surface_scaffold_coupling_cycle01_gate.py formal/python/tests/test_post_recovery_stat_der02_declaration_only_reserve_source_reassessment_packet_gate.py formal/python/tests/test_repo_recovery_program_gate.py -q",
+    "targeted_gate_result": "GREEN_23_PASSED",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local declaration-only DER02 reserve-source reassessment packet. Selects DER02 as next source candidate after DER01 nonmovement closeout, with no DER02 execution, no theorem-gap delta count, no Packet05, no seam/GR/RL10/master-action work, no promotion or closure claim, and no external-truth claim.",
+  "payload_sha256": "9cc69aba944122fc6f4de8122d92cef6b024a17afb99bcfe602dbae6cda22852"
+}

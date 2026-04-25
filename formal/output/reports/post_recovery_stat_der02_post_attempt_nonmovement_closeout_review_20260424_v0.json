@@ -1,0 +1,131 @@
+{
+  "schema_id": "POST_RECOVERY_STAT_DER02_POST_ATTEMPT_NONMOVEMENT_CLOSEOUT_REVIEW_20260424_v0",
+  "artifact_id": "post_recovery_stat_der02_post_attempt_nonmovement_closeout_review_20260424_v0",
+  "captured_at_utc": "2026-04-25T06:40:00Z",
+  "status": "POST_RECOVERY_DER02_POST_ATTEMPT_NONMOVEMENT_CLOSEOUT_REVIEW_NONCLAIM",
+  "trigger": {
+    "source": "DER02_ONE_BOUNDED_DISCHARGE_ATTEMPT_CONSUMED",
+    "execution_packet": "formal/output/stat_der02_bounded_discharge_attempt_execution_packet_v0.json",
+    "execution_gate": "formal/python/tests/test_stat_der02_bounded_discharge_attempt_execution_packet_gate.py",
+    "reason": "The single authorized bounded DER02 discharge attempt was executed and produced BLOCKER_UNCHANGED; close out the DER02 attempt cycle."
+  },
+  "frontier_boundary": {
+    "mode": "POST_ATTEMPT_NONMOVEMENT_CLOSEOUT",
+    "target_row_id": "ROW-PILLAR-STAT-001",
+    "theorem_row_linkage": "TOE-STAT-DER-02",
+    "blocker_class": "THEOREM_GAP",
+    "additional_der02_attempt_authorized": false,
+    "new_execution_packet_authored_by_this_review": false,
+    "theorem_gap_delta_counted": 0,
+    "advancement_claim_allowed": false,
+    "stat_packet05_bootstrap_allowed": false,
+    "seam_execution_allowed": false,
+    "gr_work_allowed": false,
+    "rl10_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false
+  },
+  "source_bundle": {
+    "execution_packet": "formal/output/stat_der02_bounded_discharge_attempt_execution_packet_v0.json",
+    "execution_gate": "formal/python/tests/test_stat_der02_bounded_discharge_attempt_execution_packet_gate.py",
+    "authorization_readiness_review": "formal/output/reports/post_recovery_stat_der02_discharge_attempt_authorization_readiness_review_20260424_v0.json",
+    "bounded_discharge_attempt_surface": "formal/output/stat_der02_bounded_discharge_attempt_surface_v0.json",
+    "bounded_discharge_attempt_surface_gate": "formal/python/tests/test_stat_der02_bounded_discharge_attempt_surface_gate.py",
+    "witness_artifact": "formal/output/stat_der02_regime_closure_consistency_witness_binding_v0.json",
+    "witness_gate": "formal/python/tests/test_stat_der02_regime_closure_consistency_witness_binding_gate.py",
+    "stat_fresh_movement_evidence_surface_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "theorem_gap_fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "stat_packet05_lane_eligibility_review_report": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json",
+    "der02_theorem_body_artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+    "der02_discharge_artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+    "der02_object_surface_artifact": "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+    "der02_regime_closure_artifact": "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+    "der02_scope_boundary_artifact": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json"
+  },
+  "closeout_question": {
+    "question_id": "DER02_POST_ATTEMPT_NONMOVEMENT_CLOSEOUT",
+    "question": "After consuming the single authorized bounded DER02 discharge attempt, does DER02 reduce the STAT theorem-gap blocker or remain a future source only?",
+    "answer": "DER02_ATTEMPT_CYCLE_CLOSED_BLOCKER_UNCHANGED_FUTURE_SOURCE_ONLY",
+    "interpretation": "DER02 remains a row-local future source candidate with a pinned witness, bounded attempt surface, and consumed execution packet, but this attempt cycle did not machine-pin a negative theorem-gap delta and cannot be replayed without a materially new authorization surface."
+  },
+  "attempt_cycle_state": {
+    "selected_candidate_source_id": "STAT_DER02_REGIME_CLOSURE_COUPLING_DELTA_SOURCE_v0",
+    "theorem_row_linkage": "TOE-STAT-DER-02",
+    "witness_authored": true,
+    "witness_gate_present": true,
+    "bounded_discharge_attempt_surface_authored": true,
+    "bounded_discharge_attempt_surface_gate_present": true,
+    "one_bounded_attempt_authorized": true,
+    "one_bounded_attempt_executed": true,
+    "authorized_attempt_consumed": true,
+    "remaining_der02_discharge_attempt_authorization": 0,
+    "terminal_outcome": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_BLOCKER_UNCHANGED",
+    "failure_conditions_recorded": [
+      "theorem_body_closure_constraint_slot_still_unreplaced_after_attempt",
+      "discharge_closure_consistency_slot_still_unreplaced_after_attempt",
+      "fresh_movement_surface_remains_unpinned"
+    ]
+  },
+  "nonmovement_readout": {
+    "blocker_reduction_counted_now": false,
+    "machine_pinned_negative_theorem_gap_delta": false,
+    "theorem_gap_delta": 0,
+    "theorem_gap_delta_counted": 0,
+    "fresh_movement_machine_pinned": false,
+    "der02_discharge_claimed": false,
+    "row_truth_change_detected": false,
+    "promotion_earned": false,
+    "stat_evidence_surface_terminal_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+    "theorem_gap_fresh_movement_qualification_selected_row": "NONE",
+    "packet05_eligible_for_bootstrap": false
+  },
+  "der02_posture_after_closeout": {
+    "der02_status": "FUTURE_SOURCE_ONLY_NONMOVING_FOR_THIS_ATTEMPT_CYCLE",
+    "der02_replay_allowed": false,
+    "der02_new_attempt_allowed_without_new_evidence": false,
+    "der02_reopen_condition": "Only a materially new machine-pinnable DER02 theorem-gap delta hypothesis plus a fresh authorization surface may reopen a DER02 bounded attempt.",
+    "der02_execution_authorization": "NONE",
+    "der02_attempt_cycle_closeout_complete": true
+  },
+  "explicit_exclusions": {
+    "additional_der02_attempt_authorized": false,
+    "packet05_allowed": false,
+    "seam_work_allowed": false,
+    "gr_work_allowed": false,
+    "rl10_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false,
+    "advancement_claim_allowed": false,
+    "theorem_gap_delta_counted": 0
+  },
+  "expected_new_artifacts_for_next_commit_bundle": [
+    "formal/output/stat_der02_regime_closure_consistency_witness_binding_v0.json",
+    "formal/python/tests/test_stat_der02_regime_closure_consistency_witness_binding_gate.py",
+    "formal/output/stat_der02_bounded_discharge_attempt_surface_v0.json",
+    "formal/python/tests/test_stat_der02_bounded_discharge_attempt_surface_gate.py",
+    "formal/output/stat_der02_bounded_discharge_attempt_execution_packet_v0.json",
+    "formal/python/tests/test_stat_der02_bounded_discharge_attempt_execution_packet_gate.py"
+  ],
+  "closeout_decision": {
+    "terminal_outcome": "STAT_DER02_POST_ATTEMPT_NONMOVEMENT_CLOSEOUT_DER02_CLOSED",
+    "authorized_attempt_consumed": true,
+    "remaining_der02_discharge_attempt_authorization": 0,
+    "blocker_movement": "UNCHANGED",
+    "machine_pinned_now": false,
+    "fresh_movement_machine_pinned": false,
+    "theorem_gap_delta_counted": 0,
+    "der02_future_source_only": true,
+    "der02_replay_allowed": false,
+    "new_execution_packet_authored_by_this_review": false,
+    "next_action": "STOP_DER02_EXECUTION_AND_RETURN_TO_DECLARATION_ONLY_SOURCE_REASSESSMENT_IF_A_NEW_CANDIDATE_OR_NEW_DER02_HYPOTHESIS_EXISTS",
+    "stop_condition": "STOP_DER02_EXECUTION_AND_DO_NOT_RERUN_THE_ATTEMPT_WITHOUT_NEW_EVIDENCE_AND_NEW_AUTHORIZATION"
+  },
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_stat_der02_bounded_discharge_attempt_execution_packet_gate.py formal/python/tests/test_post_recovery_stat_der02_post_attempt_nonmovement_closeout_review_gate.py -q",
+    "targeted_gate_result": "PENDING",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local DER02 post-attempt nonmovement closeout only. Records that one authorized DER02 attempt was consumed and BLOCKER_UNCHANGED, with no theorem-gap delta, no fresh movement, no DER02 discharge, no row promotion, no additional DER02 attempt authorization, no Packet05, no seam/GR/RL10/master-action work, no closure claim, and no external-truth claim.",
+  "payload_sha256": "24c1ce68e39d338134ed3eb94555051e03e7ca2c50473605d4e3d37555915a25"
+}

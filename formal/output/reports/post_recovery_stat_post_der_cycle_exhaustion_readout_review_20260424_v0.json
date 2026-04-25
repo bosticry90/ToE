@@ -1,0 +1,112 @@
+{
+  "schema_id": "POST_RECOVERY_STAT_POST_DER_CYCLE_EXHAUSTION_READOUT_REVIEW_20260424_v0",
+  "artifact_id": "post_recovery_stat_post_der_cycle_exhaustion_readout_review_20260424_v0",
+  "captured_at_utc": "2026-04-25T07:10:00Z",
+  "status": "DECLARATION_ONLY_STAT_POST_DER_CYCLE_EXHAUSTION_READOUT_REVIEW_NONCLAIM",
+  "trigger": {
+    "source": "DER01_AND_DER02_POST_ATTEMPT_NONMOVEMENT_CLOSEOUTS_AVAILABLE",
+    "der01_closeout_review": "formal/output/reports/post_recovery_stat_der01_post_attempt_nonmovement_closeout_review_20260424_v0.json",
+    "der02_closeout_review": "formal/output/reports/post_recovery_stat_der02_post_attempt_nonmovement_closeout_review_20260424_v0.json",
+    "reason": "Both bounded STAT DER attempt cycles have been consumed and closed nonmoving; record exhaustion/readout state and hold STAT execution until genuinely new source evidence or a new declared theorem-row candidate appears."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_POST_DER_CYCLE_EXHAUSTION_READOUT",
+    "target_row_id": "ROW-PILLAR-STAT-001",
+    "blocker_class": "THEOREM_GAP",
+    "records_readout_only": true,
+    "review_executes_discharge": false,
+    "review_counts_theorem_gap_delta": false,
+    "advancement_claim_allowed": false,
+    "packet05_bootstrap_allowed": false,
+    "seam_execution_allowed": false,
+    "gr_work_allowed": false,
+    "rl10_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false
+  },
+  "source_bundle": {
+    "der01_closeout_review": "formal/output/reports/post_recovery_stat_der01_post_attempt_nonmovement_closeout_review_20260424_v0.json",
+    "der01_execution_packet": "formal/output/stat_der01_bounded_discharge_attempt_execution_packet_v0.json",
+    "der01_execution_gate": "formal/python/tests/test_stat_der01_bounded_discharge_attempt_execution_packet_gate.py",
+    "der02_closeout_review": "formal/output/reports/post_recovery_stat_der02_post_attempt_nonmovement_closeout_review_20260424_v0.json",
+    "der02_execution_packet": "formal/output/stat_der02_bounded_discharge_attempt_execution_packet_v0.json",
+    "der02_execution_gate": "formal/python/tests/test_stat_der02_bounded_discharge_attempt_execution_packet_gate.py",
+    "stat_fresh_movement_evidence_surface_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "theorem_gap_fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "stat_packet05_lane_eligibility_review_report": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json"
+  },
+  "exhaustion_readout": {
+    "der01_attempt_cycle_closed_nonmoving": true,
+    "der02_attempt_cycle_closed_nonmoving": true,
+    "der01_terminal_outcome": "STAT_DER01_BOUNDED_DISCHARGE_ATTEMPT_BLOCKER_UNCHANGED",
+    "der02_terminal_outcome": "STAT_DER02_BOUNDED_DISCHARGE_ATTEMPT_BLOCKER_UNCHANGED",
+    "theorem_gap_delta": 0,
+    "theorem_gap_delta_counted": 0,
+    "fresh_movement_machine_pinned": false,
+    "der01_remaining_attempt_authorization": 0,
+    "der02_remaining_attempt_authorization": 0,
+    "any_remaining_der_attempt_authorization": false,
+    "stat_fresh_movement_terminal_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+    "selected_row": "NONE",
+    "packet05_eligible_for_bootstrap": false
+  },
+  "execution_hold_state": {
+    "stat_execution_state": "HELD_POST_DER_ATTEMPT_EXHAUSTION",
+    "hold_reason": "No machine-pinned negative theorem-gap delta was produced by the consumed DER01 or DER02 bounded attempts.",
+    "replay_allowed_for_der01": false,
+    "replay_allowed_for_der02": false,
+    "der_execution_authorization_available_now": "NONE",
+    "requires_new_source_evidence_or_new_declared_candidate": true
+  },
+  "non_replay_frontier_reassessment": {
+    "question": "Is there a non-replay frontier left outside STAT that can be opened by this readout?",
+    "answer": "NO_NEW_FRONTIER_OPENED_BY_THIS_READOUT",
+    "interpretation": "This readout records bounded STAT DER-cycle exhaustion only. It does not authorize any non-STAT lane. Any next frontier must come from a separately declared and independently authorized candidate outside this artifact.",
+    "outside_stat_frontier_authorized_now": false
+  },
+  "allowed_next_actions": [
+    "maintain_stat_execution_hold",
+    "author_declaration_only_new_source_evidence_intake_if_genuinely_new_machine_pinnable_source_materializes",
+    "author_declaration_only_new_theorem_row_candidate_packet_if_a_distinct_candidate_is_declared"
+  ],
+  "disallowed_next_actions": [
+    "rerun_der01_attempt_without_new_authorization",
+    "rerun_der02_attempt_without_new_authorization",
+    "count_theorem_gap_delta_from_nonmoving_der_attempts",
+    "open_packet05",
+    "open_seam_work",
+    "open_gr_work",
+    "open_rl10_work",
+    "invoke_master_action",
+    "claim_promotion_or_closure"
+  ],
+  "explicit_exclusions": {
+    "packet05_allowed": false,
+    "seam_work_allowed": false,
+    "gr_work_allowed": false,
+    "rl10_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false,
+    "advancement_claim_allowed": false,
+    "theorem_gap_delta_counted": 0
+  },
+  "readout_decision": {
+    "terminal_outcome": "STAT_POST_DER_CYCLE_EXHAUSTION_RECORDED_EXECUTION_HELD",
+    "der01_cycle_closed_nonmoving": true,
+    "der02_cycle_closed_nonmoving": true,
+    "any_remaining_der_attempt_authorization": false,
+    "theorem_gap_delta_counted": 0,
+    "fresh_movement_machine_pinned": false,
+    "stat_execution_held": true,
+    "next_action": "STOP_AND_REASSESS_FOR_GENUINELY_NEW_SOURCE_EVIDENCE_OR_NEW_DECLARED_THEOREM_ROW_CANDIDATE",
+    "stop_condition": "NO_REPLAY_OR_EXECUTION_EXPANSION_UNTIL_NEW_EVIDENCE_OR_NEW_DECLARED_CANDIDATE_IS_FORMALLY_AUTHORIZED"
+  },
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_post_recovery_stat_post_der_cycle_exhaustion_readout_review_gate.py -q",
+    "targeted_gate_result": "PENDING",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local STAT post-DER-cycle exhaustion/readout review only. Records DER01 and DER02 nonmoving closeouts, confirms no remaining DER attempt authorization, keeps theorem-gap delta at zero, keeps fresh movement unpinned, and holds STAT execution. Does not authorize Packet05, seam/GR/RL10/master-action work, promotion, closure, or any external-truth claim.",
+  "payload_sha256": "add2093a3b7e2f3c77521bbe0fff7a2910a8de915370d09c89d78b259c2e54e9"
+}

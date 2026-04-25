@@ -1,0 +1,225 @@
+{
+  "schema_id": "POST_RECOVERY_STAT_DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_BINDING_DESIGN_20260424_v0",
+  "artifact_id": "post_recovery_stat_der02_regime_closure_consistency_witness_binding_design_20260424_v0",
+  "captured_at_utc": "2026-04-25T04:10:00Z",
+  "status": "DECLARATION_ONLY_WITNESS_BINDING_DESIGN_NONCLAIM",
+  "trigger": {
+    "source": "POST_RECOVERY_STAT_DER02_THEOREM_BODY_DISCHARGE_GAP_ISOLATION",
+    "source_report": "formal/output/reports/post_recovery_stat_der02_theorem_body_discharge_gap_isolation_20260424_v0.json",
+    "isolated_gap_id": "STAT_DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_BINDING_v0",
+    "reason": "The DER02 gap-isolation packet identified the missing theorem-body/discharge witness binding as the smallest blocker to future machine-pinnability."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_FRONTIER_DESIGN",
+    "target_row_id": "ROW-PILLAR-STAT-001",
+    "theorem_row_linkage": "TOE-STAT-DER-02",
+    "blocker_class": "THEOREM_GAP",
+    "execution_authorization": "NONE",
+    "theorem_gap_delta_counted": 0,
+    "advancement_claim_allowed": false,
+    "stat_execution_packet_allowed": false,
+    "stat_packet05_bootstrap_allowed": false,
+    "der02_execution_allowed_now": false,
+    "seam_execution_allowed": false,
+    "master_action_allowed": false,
+    "broad_seam_expansion_allowed": false
+  },
+  "source_bundle": {
+    "gap_isolation_report": "formal/output/reports/post_recovery_stat_der02_theorem_body_discharge_gap_isolation_20260424_v0.json",
+    "der02_machine_pinnability_preflight_report": "formal/output/reports/post_recovery_stat_der02_machine_pinnability_preflight_20260424_v0.json",
+    "der02_reassessment_packet": "formal/output/reports/post_recovery_stat_der02_declaration_only_reserve_source_reassessment_packet_20260424_v0.json",
+    "stat_fresh_movement_evidence_surface_report": "formal/output/reports/post_plan_stat_fresh_movement_evidence_surface_20260419_v0.json",
+    "theorem_gap_fresh_movement_qualification_report": "formal/output/reports/post_plan_theorem_gap_fresh_movement_qualification_20260419_v0.json",
+    "stat_packet05_lane_eligibility_review_report": "formal/output/reports/post_plan_stat_packet05_lane_eligibility_review_20260420_v0.json",
+    "stat_entropy_plan_doc": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+    "der02_regime_closure_coupling_artifact": "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+    "der02_theorem_body_scope_boundary_artifact": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+    "der02_theorem_body_artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+    "der02_discharge_artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+    "der02_object_surface_artifact": "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json"
+  },
+  "design_question": {
+    "question_id": "DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_BINDING_OBJECT_REQUIREMENTS",
+    "question": "What exact witness object, assumptions, inputs, and gate would be required to bind the DER-02 closure-coupling theorem-body constraint to discharge-side regime-validity and closure-consistency slots?",
+    "answer": "STAT_DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_BINDING_OBJECT_v0",
+    "interpretation": "A future witness object must bind the DER02 regime-closure coupling surface, theorem-body closure-coupling constraint slot, discharge-side regime-validity and closure-consistency slots, and object-surface closure carrier under explicit assumption-freeze and regime references. This record only designs that object and gate; it does not author or validate the witness."
+  },
+  "witness_object_design": {
+    "witness_object_id": "STAT_DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_BINDING_OBJECT_v0",
+    "witness_status_now": "DESIGNED_NOT_AUTHORED_NOT_PINNED",
+    "future_artifact_path": "formal/output/stat_der02_regime_closure_consistency_witness_binding_v0.json",
+    "future_gate_path": "formal/python/tests/test_stat_der02_regime_closure_consistency_witness_binding_gate.py",
+    "future_doc_pointer": "formal/docs/paper/DERIVATION_TARGET_STAT_ENTROPY_PLAN_v0.md",
+    "target_row_id": "ROW-PILLAR-STAT-001",
+    "theorem_row_linkage": "TOE-STAT-DER-02",
+    "target_id": "TARGET-TH-ENTROPY-PLAN",
+    "binds": {
+      "regime_closure_surface_slot": "future_coupling_gate_expansion_slot",
+      "theorem_body_constraint_slot": "closure_coupling_constraint_slot_placeholder",
+      "theorem_body_regime_slot": "regime_validity_predicate_slot_placeholder",
+      "discharge_regime_validity_slot": "regime_validity_closure_statement_slot_placeholder",
+      "discharge_closure_consistency_slot": "closure_coupling_consistency_slot_placeholder",
+      "object_surface_closure_slot": "closure_coupling_object_symbol_surface"
+    },
+    "required_result_field": "regime_closure_consistency_witness_result",
+    "allowed_result_values": [
+      "REGIME_CLOSURE_CONSISTENCY_WITNESS_PINNED_NONCLAIM",
+      "REGIME_CLOSURE_CONSISTENCY_WITNESS_NOT_PINNED",
+      "REGIME_CLOSURE_CONSISTENCY_WITNESS_INCOMPLETE"
+    ],
+    "required_for_machine_pinned_delta": "REGIME_CLOSURE_CONSISTENCY_WITNESS_PINNED_NONCLAIM",
+    "current_result_value": "REGIME_CLOSURE_CONSISTENCY_WITNESS_NOT_AUTHORED"
+  },
+  "required_assumptions": {
+    "assumption_set_id": "STAT_DER02_REGIME_CLOSURE_CONSISTENCY_ASSUMPTIONS_v0",
+    "must_be_explicit_and_machine_checkable": true,
+    "required_assumption_handles": [
+      {
+        "handle": "ASSUMPTION_FREEZE_LINKAGE_SLOT",
+        "source_artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "source_slot": "assumption_freeze_linkage_slot_placeholder",
+        "requirement": "The future witness must identify the exact assumption-freeze handle under which the DER02 closure-coupling constraint is asserted."
+      },
+      {
+        "handle": "REGIME_VALIDITY_PREDICATE_SLOT",
+        "source_artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "source_slot": "regime_validity_predicate_slot_placeholder",
+        "requirement": "The future witness must pin the regime-validity predicate used in the theorem-body closure statement."
+      },
+      {
+        "handle": "REGIME_REFERENCE_SLOT",
+        "source_artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "source_slot": "assumption_freeze_and_regime_reference_slot_placeholder",
+        "requirement": "The future witness must reference the same assumption-freeze and regime handle used by the discharge scaffold."
+      },
+      {
+        "handle": "DER02_SCOPE_BOUNDARY_SLOT",
+        "source_artifact": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+        "source_slot": "results_row_label_persistence",
+        "requirement": "The future witness must preserve DER02 row-local scope and label persistence without widening into promotion or closure claims."
+      },
+      {
+        "handle": "DER01_DEPENDENCY_SLOT",
+        "source_artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "source_slot": "der01_entropy_balance_dependency_slot_placeholder",
+        "requirement": "The future witness must state any retained DER01 dependency explicitly as a bound input, not as a substitute witness source."
+      }
+    ],
+    "forbidden_assumption_shortcuts": [
+      "implicit closure completion",
+      "Packet05 bootstrap assumption",
+      "seam-linked override",
+      "master-action compensation",
+      "promotion-by-consistency assertion",
+      "external-truth assertion"
+    ]
+  },
+  "required_inputs": {
+    "input_set_id": "STAT_DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_INPUTS_v0",
+    "must_all_be_present_before_witness_can_pin": true,
+    "inputs": [
+      {
+        "input_id": "DER02_REGIME_CLOSURE_SURFACE",
+        "artifact": "formal/output/stat_der02_regime_closure_coupling_scaffold_cycle01_v0.json",
+        "required_slot": "future_coupling_gate_expansion_slot"
+      },
+      {
+        "input_id": "DER02_THEOREM_BODY_CONSTRAINT",
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "required_slot": "closure_coupling_constraint_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_THEOREM_BODY_REGIME",
+        "artifact": "formal/output/stat_der02_regime_closure_theorem_body_scaffold_cycle01_v0.json",
+        "required_slot": "regime_validity_predicate_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_DISCHARGE_REGIME_VALIDITY",
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "required_slot": "regime_validity_closure_statement_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_DISCHARGE_CLOSURE_CONSISTENCY",
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "required_slot": "closure_coupling_consistency_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_DISCHARGE_REGIME_REFERENCE",
+        "artifact": "formal/output/stat_der02_regime_closure_discharge_scaffold_cycle01_v0.json",
+        "required_slot": "assumption_freeze_and_regime_reference_slot_placeholder"
+      },
+      {
+        "input_id": "DER02_OBJECT_SURFACE_CLOSURE_CARRIER",
+        "artifact": "formal/output/stat_der02_regime_closure_object_surface_scaffold_cycle01_v0.json",
+        "required_slot": "closure_coupling_object_symbol_surface"
+      },
+      {
+        "input_id": "DER02_SCOPE_BOUNDARY",
+        "artifact": "formal/output/stat_der02_theorem_body_scope_boundary_cycle01_v0.json",
+        "required_slot": "results_row_label_persistence"
+      }
+    ]
+  },
+  "future_gate_design": {
+    "gate_id": "STAT_DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_BINDING_GATE_v0",
+    "future_gate_path": "formal/python/tests/test_stat_der02_regime_closure_consistency_witness_binding_gate.py",
+    "gate_authored_now": false,
+    "gate_execution_authorization": "NONE",
+    "minimum_gate_assertions": [
+      "future artifact_id equals stat_der02_regime_closure_consistency_witness_binding_v0",
+      "future artifact target_row_id equals ROW-PILLAR-STAT-001",
+      "future artifact theorem_row_linkage equals TOE-STAT-DER-02",
+      "future artifact binds regime_closure_surface_slot, theorem_body_constraint_slot, theorem_body_regime_slot, discharge_regime_validity_slot, discharge_closure_consistency_slot, and object_surface_closure_slot",
+      "future artifact includes explicit assumption-freeze, regime-reference, scope-boundary, and DER01-dependency assumptions",
+      "future artifact result is one allowed regime_closure_consistency_witness_result value",
+      "future artifact declares no Packet05, seam, or master-action dependency",
+      "future artifact preserves non-claim boundary unless and until separate evidence surfaces machine-pin theorem_gap_delta<0"
+    ],
+    "pass_condition_for_future_machine_pinnability": "The future gate may pass only when regime_closure_consistency_witness_result=REGIME_CLOSURE_CONSISTENCY_WITNESS_PINNED_NONCLAIM and all slot bindings, assumptions, and exclusions are present.",
+    "passing_this_future_gate_alone_would_authorize_execution": false
+  },
+  "current_state": {
+    "witness_object_authored_now": false,
+    "future_gate_authored_now": false,
+    "machine_pinned_now": false,
+    "selected_row": "NONE",
+    "theorem_gap_delta": 0,
+    "fresh_movement_machine_pinned": false,
+    "stat_evidence_surface_terminal_outcome": "POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_PACKET04_CHAIN_READY_DELTA_PENDING",
+    "theorem_gap_delta_counted": 0,
+    "blocker_reduction_counted_now": false,
+    "execution_authorization": "NONE"
+  },
+  "explicit_exclusions": {
+    "stat_execution_authorization": "NONE",
+    "theorem_gap_delta_counted": 0,
+    "packet05_allowed": false,
+    "der02_execution_allowed": false,
+    "seam_work_allowed": false,
+    "master_action_allowed": false,
+    "advancement_claim_allowed": false,
+    "m3_m4_promotion_allowed": false,
+    "nonflip_custody_ladder_allowed": false
+  },
+  "design_decision": {
+    "terminal_outcome": "STAT_DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_BINDING_OBJECT_DESIGNED_NOT_AUTHORED",
+    "witness_object_id": "STAT_DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_BINDING_OBJECT_v0",
+    "required_future_artifact_path": "formal/output/stat_der02_regime_closure_consistency_witness_binding_v0.json",
+    "required_future_gate_path": "formal/python/tests/test_stat_der02_regime_closure_consistency_witness_binding_gate.py",
+    "machine_pinned_now": false,
+    "candidate_validated_now": false,
+    "theorem_gap_delta_counted": 0,
+    "new_execution_packet_authored": false,
+    "execution_authorization": "NONE",
+    "next_action": "AUTHOR_NO_EXECUTION_DER02_REGIME_CLOSURE_CONSISTENCY_WITNESS_BINDING_OBJECT_ONLY_IF_A_CONCRETE_MACHINE_CHECKABLE_WITNESS_PAYLOAD_IS_READY",
+    "stop_condition": "IF_NO_CONCRETE_WITNESS_PAYLOAD_IS_READY_RETAIN_DESIGN_ONLY_AND_DO_NOT_OPEN_DER02_EXECUTION"
+  },
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_post_recovery_stat_der02_regime_closure_consistency_witness_binding_design_gate.py formal/python/tests/test_post_recovery_stat_der02_theorem_body_discharge_gap_isolation_gate.py formal/python/tests/test_post_recovery_stat_der02_machine_pinnability_preflight_gate.py formal/python/tests/test_post_recovery_stat_der02_declaration_only_reserve_source_reassessment_packet_gate.py formal/python/tests/test_stat_der02_regime_closure_coupling_scaffold_coupling_cycle01_gate.py formal/python/tests/test_stat_der02_theorem_body_scope_boundary_cycle01_gate.py formal/python/tests/test_stat_der02_theorem_body_scaffold_coupling_cycle01_gate.py formal/python/tests/test_stat_der02_discharge_scaffold_coupling_cycle01_gate.py formal/python/tests/test_stat_der02_object_surface_scaffold_coupling_cycle01_gate.py formal/python/tests/test_post_plan_stat_fresh_movement_evidence_surface_report.py formal/python/tests/test_post_plan_theorem_gap_fresh_movement_qualification_report.py formal/python/tests/test_post_plan_stat_packet05_lane_eligibility_review_report.py formal/python/tests/test_repo_recovery_program_gate.py -q",
+    "targeted_gate_result": "GREEN_23_PASSED",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local declaration-only DER02 regime-closure consistency witness-binding design. Defines the future witness object, assumptions, inputs, and gate requirements but creates no witness artifact or gate, makes no theorem discharge, machine-pinned negative theorem-gap delta claim, row promotion, blocker-reduction count, DER02 execution authorization, Packet05 bootstrap, seam work, master action, physics-complete claim, or external-truth claim.",
+  "payload_sha256": "dd8be6d6d330b2e0529cdba8920d3ee430760831b3550a0a802cae3851624be9"
+}
