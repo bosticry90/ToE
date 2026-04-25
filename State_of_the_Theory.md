@@ -11322,3 +11322,24 @@ Notes: Empirical anchor remains gated by EA-04a robust evidence constraints.
 - `STATE_CORE_BRANCH_BOUNDARY_ACTIVE_STATUS_v0: STOPPED_AT_CYCLE10_TO_11_SYNTHESIS_BOUNDARY_v0`
 <!-- /GENERATED: STATE_CORE_ACTIVE_LANE_v0 -->
 
+## POST_RECOVERY_NON_STAT_FRONTIER_PUBLICATION_20260424_v1
+
+- Published range: `dff314d..1b80613`
+- Published branch: `main -> origin/main`
+- Commit message: `Add post-recovery non-STAT frontier phase 1-8 and COSMO-SR unlock/rerun declaration-only gates`
+- Posture: `HOLD_NO_ADMISSIBLE_NON_STAT_FRONTIER`
+- Execution authorization: `NONE`
+- Selected lane: `NONE`
+- COSMO-SR fresh-hypothesis authorization: `false`
+
+Declaration-only continuation:
+- Added first unlock-prerequisite definition packet:
+  - `formal/output/reports/post_recovery_non_stat_frontier_seam_cosmo_sr_materially_different_discriminator_definition_20260424_v0.json`
+- Added focused gate:
+  - `formal/python/tests/test_post_recovery_non_stat_frontier_seam_cosmo_sr_materially_different_discriminator_definition_gate.py`
+
+Boundary note:
+- No seam execution opened.
+- No packet05 opening authorized.
+- No promotion or closure claim language introduced.
+

@@ -1,0 +1,79 @@
+{
+  "schema_id": "POST_RECOVERY_NON_STAT_FRONTIER_SEAM_COSMO_SR_MATERIALLY_DIFFERENT_DISCRIMINATOR_DEFINITION_20260424_v0",
+  "artifact_id": "post_recovery_non_stat_frontier_seam_cosmo_sr_materially_different_discriminator_definition_20260424_v0",
+  "captured_at_utc": "2026-04-24T23:45:00Z",
+  "status": "DECLARATION_ONLY_NON_STAT_FRONTIER_SEAM_COSMO_SR_MATERIALLY_DIFFERENT_DISCRIMINATOR_DEFINITION_NONCLAIM",
+  "trigger": {
+    "source": "POST_RECOVERY_NON_STAT_FRONTIER_STRICT_ADMISSIBILITY_FILTER_RERUN",
+    "source_report": "formal/output/reports/post_recovery_non_stat_frontier_strict_admissibility_filter_rerun_20260424_v0.json",
+    "reason": "Define the first unlock prerequisite as an explicit declaration-only discriminator contract without opening any execution path."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_SEAM_MATERIAL_DIFFERENT_DISCRIMINATOR_DEFINITION",
+    "execution_authorization": "NONE",
+    "definition_only": true,
+    "seam_execution_allowed": false,
+    "packet05_bootstrap_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false
+  },
+  "discriminator_definition": {
+    "target_lane": "COSMO-SR",
+    "target_row_id": "ROW-SEAM-COSMO-SR-001",
+    "baseline_reference": "COSMO_SR_CYCLE08_NEGATIVE_BASELINE",
+    "baseline_discriminator_id": "COSMOSR_CYCLE08_BASELINE_DSCRIM_v0",
+    "proposed_new_discriminator_id": "COSMOSR_MATERIAL_DIFFERENCE_DSCRIM_CANDIDATE_A_v0",
+    "material_difference_axes": [
+      "SELECTION_CRITERION_NOT_PRESENT_IN_CYCLE08_BASELINE",
+      "OBSERVABLE_BINDING_DOMAIN_EXTENSION_BEYOND_CYCLE08",
+      "NON_REPLAY_INFERENCE_PATH_DIFFERENT_FROM_CYCLE08"
+    ],
+    "observable_binding_contract": {
+      "machine_pinned_observable_binding_present": false,
+      "binding_artifact_pointer": "NONE_DECLARED",
+      "binding_reproducibility_contract_declared": false
+    },
+    "non_replay_basis_contract": {
+      "explicit_non_replay_basis_declared": false,
+      "comparison_against_cycle08_declared": false,
+      "fresh_hypothesis_discriminator_link_declared": false
+    },
+    "acceptance_criteria_for_unlock_consumption": [
+      "MATERIAL_DIFFERENCE_AXES_ARE_DECLARED_AND_MACHINE_CHECKABLE",
+      "MACHINE_PINNED_OBSERVABLE_BINDING_IS_PRESENT_AND_REPRODUCIBLE",
+      "NON_REPLAY_BASIS_EXPLICITLY_BLOCKS_CYCLE08_REPLAY",
+      "STRICT_FILTER_CONSUMPTION_CRITERIA_DECLARED_BEFORE_ANY_RERUN"
+    ],
+    "current_definition_readout": {
+      "materially_different_discriminator_declared": false,
+      "observable_binding_contract_ready": false,
+      "non_replay_basis_ready": false,
+      "definition_ready_for_strict_filter_consumption": false
+    }
+  },
+  "definition_decision": {
+    "terminal_outcome": "SEAM_COSMO_SR_MATERIALLY_DIFFERENT_DISCRIMINATOR_DEFINED_NOT_READY",
+    "unlock_element_satisfied": false,
+    "execution_authorization": "NONE",
+    "next_action": "AUTHOR_DECLARATION_ONLY_OBSERVABLE_BINDING_PACKET_FOR_NEW_DISCRIMINATOR",
+    "alternate_next_action": "MAINTAIN_HOLD_AND_CONTINUE_FRONTIER_REDESIGN"
+  },
+  "disallowed_next_actions": [
+    "author_cosmo_sr_fresh_hypothesis_execution_packet",
+    "authorize_cosmo_sr_execution",
+    "open_packet05",
+    "open_seam_work",
+    "open_gr_work",
+    "open_rl10_work",
+    "invoke_master_action",
+    "claim_promotion_or_closure"
+  ],
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_post_recovery_non_stat_frontier_seam_cosmo_sr_materially_different_discriminator_definition_gate.py -q",
+    "targeted_gate_result": "PENDING",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local declaration-only discriminator-definition surface only. No execution authorization, no lane activation, and no external-truth claim is made.",
+  "payload_sha256": "30293a52af2b0bd6b059f2c0d39b4143205e56851f4d4df621e06e9a37a4ea17"
+}
