@@ -1,0 +1,89 @@
+{
+  "schema_id": "POST_RECOVERY_NON_STAT_FRONTIER_PHASE4_DECISION_PACKET_20260424_v0",
+  "artifact_id": "post_recovery_non_stat_frontier_phase4_decision_packet_20260424_v0",
+  "captured_at_utc": "2026-04-25T00:00:30Z",
+  "status": "DECLARATION_ONLY_NON_STAT_FRONTIER_PHASE4_DECISION_PACKET_NONCLAIM",
+  "trigger": {
+    "source": "POST_RECOVERY_NON_STAT_FRONTIER_PHASE3_STRICT_ADMISSIBILITY_FILTER",
+    "source_report": "formal/output/reports/post_recovery_non_stat_frontier_phase3_strict_admissibility_filter_20260424_v0.json",
+    "reason": "Materialize the bounded Phase4 frontier decision from strict admissibility results while preserving execution hold posture."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_PHASE4_FRONTIER_DECISION",
+    "execution_authorization": "NONE",
+    "decision_only": true,
+    "records_readout_only": true,
+    "review_counts_theorem_gap_delta": false,
+    "packet05_bootstrap_allowed": false,
+    "seam_execution_allowed": false,
+    "gr_work_allowed": false,
+    "rl10_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false
+  },
+  "source_bundle": {
+    "phase1_baseline_lock_report": "formal/output/reports/post_recovery_non_stat_frontier_phase1_baseline_lock_20260424_v0.json",
+    "phase2_candidate_intake_report": "formal/output/reports/post_recovery_non_stat_frontier_phase2_candidate_intake_20260424_v0.json",
+    "phase3_strict_filter_report": "formal/output/reports/post_recovery_non_stat_frontier_phase3_strict_admissibility_filter_20260424_v0.json",
+    "post_recovery_stat_non_replay_frontier_reassessment": "formal/output/reports/post_recovery_stat_non_replay_frontier_reassessment_20260424_v0.json"
+  },
+  "baseline_token_carryforward": {
+    "required_entry_condition": "EXACT_MATCH_WITH_LOCKED_BASELINE_INVARIANTS",
+    "phase1_token_set": [
+      "EXECUTION_AUTHORIZATION_NONE",
+      "DER_ATTEMPT_AUTHORIZATION_ZERO",
+      "STAT_NON_REPLAY_FRONTIER_CLOSED",
+      "COSMO_SR_CYCLE08_NEGATIVE_BASELINE_LOCKED",
+      "RL10_LIMITATION_SCOPE_HOLD_LOCKED",
+      "GR_DORMANT_RETRY_PATH_EXHAUSTED_LOCKED",
+      "THEOREM_GAP_DELTA_COUNT_ZERO",
+      "FRESH_MOVEMENT_MACHINE_PINNED_FALSE"
+    ],
+    "token_set_match_phase1": true,
+    "baseline_drift_detected": false
+  },
+  "phase3_summary_import": {
+    "lanes_evaluated": 3,
+    "lanes_passed": 0,
+    "lanes_failed": 3,
+    "admissible_lane_ids": [],
+    "primary_lane_cosmo_sr_admissible": false,
+    "fallback_lane_rl10_admissible": false,
+    "fallback_lane_gr_admissible": false,
+    "phase3_terminal_outcome": "POST_RECOVERY_NON_STAT_FRONTIER_PHASE3_STRICT_FILTER_COMPLETE_NO_ADMISSIBLE_LANE"
+  },
+  "frontier_decision": {
+    "terminal_outcome": "HOLD_NO_ADMISSIBLE_NON_STAT_FRONTIER",
+    "decision_class": "HOLD",
+    "selected_lane": "NONE",
+    "execution_authorization": "NONE",
+    "admissible_non_stat_lane_exists": false,
+    "hold_reason": "Phase3 strict filter returned zero admissible non-STAT lanes under bounded non-replay criteria.",
+    "next_action": "AUTHOR_DECLARATION_ONLY_PHASE5_COSMO_SR_FRESH_HYPOTHESIS_DESIGN_PACKET_ONLY_IF_MATERIALLY_DIFFERENT_MACHINE_PINNED_DISCRIMINATOR_IS_DECLARED",
+    "alternate_next_action": "AUTHOR_DECLARATION_ONLY_BOUNDED_FALLBACK_REASSESSMENT_PACKET_FOR_RL10_OR_GR_IF_NEW_NON_REPLAY_PREREQUISITES_ARE_MATERIALIZED"
+  },
+  "allowed_next_actions": [
+    "maintain_hold_state",
+    "author_declaration_only_phase5_cosmo_sr_fresh_hypothesis_design_packet_when_prerequisites_exist",
+    "author_declaration_only_bounded_fallback_reassessment_packet_when_new_non_replay_prerequisites_exist"
+  ],
+  "disallowed_next_actions": [
+    "rerun_der01_attempt_without_new_authorization",
+    "rerun_der02_attempt_without_new_authorization",
+    "count_theorem_gap_delta_without_machine_pinned_negative_delta",
+    "open_packet05",
+    "open_seam_work",
+    "open_gr_work",
+    "open_rl10_work",
+    "invoke_master_action",
+    "claim_promotion_or_closure"
+  ],
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_post_recovery_non_stat_frontier_phase4_decision_packet_gate.py -q",
+    "targeted_gate_result": "PENDING",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local declaration-only post-recovery non-STAT Phase4 frontier decision packet only. No execution authorization, theorem discharge, Packet05/seam/GR/RL10/master-action expansion, promotion/closure claim, or external-truth claim is made.",
+  "payload_sha256": "be883cd50c29d73fcbab98e8e1202e83617488fb93b836276ac412a59aa15eeb"
+}

@@ -1,0 +1,62 @@
+{
+  "schema_id": "POST_RECOVERY_NON_STAT_FRONTIER_SEAM_COSMO_SR_ADMISSIBILITY_UNLOCK_DESIGN_20260424_v0",
+  "artifact_id": "post_recovery_non_stat_frontier_seam_cosmo_sr_admissibility_unlock_design_20260424_v0",
+  "captured_at_utc": "2026-04-25T00:03:00Z",
+  "status": "DECLARATION_ONLY_NON_STAT_FRONTIER_SEAM_COSMO_SR_ADMISSIBILITY_UNLOCK_DESIGN_NONCLAIM",
+  "trigger": {
+    "source": "POST_RECOVERY_NON_STAT_FRONTIER_PHASE8_STAGING_FINAL_READOUT",
+    "source_report": "formal/output/reports/post_recovery_non_stat_frontier_phase8_staging_final_readout_20260424_v0.json",
+    "reason": "Hold posture requires a materially different non-replay COSMO-SR hypothesis discriminator before any future admissibility change can be considered."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_SEAM_ADMISSIBILITY_UNLOCK_DESIGN",
+    "execution_authorization": "NONE",
+    "design_only": true,
+    "seam_execution_allowed": false,
+    "packet05_bootstrap_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false
+  },
+  "unlock_contract": {
+    "target_lane": "COSMO-SR",
+    "target_row_id": "ROW-SEAM-COSMO-SR-001",
+    "baseline_reference": "COSMO_SR_CYCLE08_NEGATIVE_BASELINE",
+    "required_unlock_elements": [
+      "ONE_MATERIALLY_DIFFERENT_DISCRIMINATOR_FROM_CYCLE08",
+      "MACHINE_PINNED_OBSERVABLE_BINDING_FOR_NEW_DISCRIMINATOR",
+      "EXPLICIT_NON_REPLAY_BASIS_LINKING_NEW_DISCRIMINATOR_TO_FRESH_HYPOTHESIS",
+      "PREDECLARED_SUCCESS_FAILURE_CRITERIA_FOR_STRICT_FILTER_CONSUMPTION"
+    ],
+    "current_unlock_readout": {
+      "materially_different_discriminator_declared": false,
+      "machine_pinned_observable_binding_present": false,
+      "non_replay_basis_declared": false,
+      "strict_filter_ready": false
+    }
+  },
+  "design_decision": {
+    "terminal_outcome": "SEAM_COSMO_SR_ADMISSIBILITY_UNLOCK_DESIGN_DEFINED_NOT_READY",
+    "unlock_ready": false,
+    "execution_authorization": "NONE",
+    "next_action": "AUTHOR_DECLARATION_ONLY_STRICT_FILTER_RERUN_PACKET_WITH_UNLOCK_STATUS_SURFACE",
+    "alternate_next_action": "AUTHOR_BROADER_FRONTIER_REDESIGN_PACKET_IF_UNLOCK_ELEMENTS_REMAIN_UNMATERIALIZED"
+  },
+  "disallowed_next_actions": [
+    "author_cosmo_sr_fresh_hypothesis_execution_packet",
+    "authorize_cosmo_sr_execution",
+    "open_packet05",
+    "open_seam_work",
+    "open_gr_work",
+    "open_rl10_work",
+    "invoke_master_action",
+    "claim_promotion_or_closure"
+  ],
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_post_recovery_non_stat_frontier_seam_cosmo_sr_admissibility_unlock_design_gate.py -q",
+    "targeted_gate_result": "PENDING",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local declaration-only seam admissibility-unlock design surface only. No execution authorization, no lane activation, and no external-truth claim is made.",
+  "payload_sha256": "7be3855db2a7e1137e9016451c6352da2009a3e5c0be4f539efa29b360efc0ac"
+}

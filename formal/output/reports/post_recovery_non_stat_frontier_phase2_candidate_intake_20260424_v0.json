@@ -1,0 +1,136 @@
+{
+  "schema_id": "POST_RECOVERY_NON_STAT_FRONTIER_PHASE2_CANDIDATE_INTAKE_20260424_v0",
+  "artifact_id": "post_recovery_non_stat_frontier_phase2_candidate_intake_20260424_v0",
+  "captured_at_utc": "2026-04-24T23:59:30Z",
+  "status": "DECLARATION_ONLY_NON_STAT_FRONTIER_PHASE2_CANDIDATE_INTAKE_NONCLAIM",
+  "trigger": {
+    "source": "POST_RECOVERY_NON_STAT_FRONTIER_PHASE1_BASELINE_LOCK",
+    "source_report": "formal/output/reports/post_recovery_non_stat_frontier_phase1_baseline_lock_20260424_v0.json",
+    "reason": "Carry forward locked post-recovery baseline tokens and materialize a bounded non-STAT candidate intake surface before strict admissibility filtering."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_PHASE2_NON_STAT_CANDIDATE_INTAKE",
+    "execution_authorization": "NONE",
+    "records_readout_only": true,
+    "candidate_intake_only": true,
+    "review_counts_theorem_gap_delta": false,
+    "packet05_bootstrap_allowed": false,
+    "seam_execution_allowed": false,
+    "gr_work_allowed": false,
+    "rl10_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false
+  },
+  "source_bundle": {
+    "phase1_baseline_lock_report": "formal/output/reports/post_recovery_non_stat_frontier_phase1_baseline_lock_20260424_v0.json",
+    "post_der_cycle_exhaustion_readout_review": "formal/output/reports/post_recovery_stat_post_der_cycle_exhaustion_readout_review_20260424_v0.json",
+    "stat_non_replay_frontier_reassessment": "formal/output/reports/post_recovery_stat_non_replay_frontier_reassessment_20260424_v0.json",
+    "cosmo_sr_negative_baseline_stop": "formal/output/reports/post_recovery_cosmo_sr_negative_baseline_frontier_stop_20260424_v0.json",
+    "rl10_limitation_review": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_review_20260422_v2.json",
+    "gr_dormant_completion_tranche": "formal/output/reports/post_plan_gr_dormant_new_structure_completion_tranche_20260418_v0.json",
+    "queue_reconstruction_packet": "formal/docs/release/QUEUE_PRIORITY_NON_REPLAY_FRONTIER_RECONSTRUCTION_PACKET_20260423_v0.json",
+    "queue_reconstruction_selection": "formal/docs/release/QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_20260423_v0.json",
+    "post_recovery_pillar_frontier_reassessment": "formal/output/reports/post_recovery_pillar_frontier_reassessment_20260424_v0.json"
+  },
+  "baseline_token_carryforward": {
+    "phase1_entry_condition": "EXACT_MATCH_WITH_LOCKED_BASELINE_INVARIANTS",
+    "phase1_token_set": [
+      "EXECUTION_AUTHORIZATION_NONE",
+      "DER_ATTEMPT_AUTHORIZATION_ZERO",
+      "STAT_NON_REPLAY_FRONTIER_CLOSED",
+      "COSMO_SR_CYCLE08_NEGATIVE_BASELINE_LOCKED",
+      "RL10_LIMITATION_SCOPE_HOLD_LOCKED",
+      "GR_DORMANT_RETRY_PATH_EXHAUSTED_LOCKED",
+      "THEOREM_GAP_DELTA_COUNT_ZERO",
+      "FRESH_MOVEMENT_MACHINE_PINNED_FALSE"
+    ],
+    "token_set_match_phase1": true,
+    "baseline_drift_detected": false
+  },
+  "candidate_intake_scope": {
+    "intake_pool_class": "NON_STAT_ONLY",
+    "bounded_fallback_cap": 2,
+    "primary_lane_preference": "COSMO-SR",
+    "candidates": [
+      {
+        "candidate_id": "SEAM-COSMO-SR::POST_RECOVERY_FRESH_HYPOTHESIS_DESIGN",
+        "lane_id": "SEAM-COSMO-SR",
+        "target_row_id": "ROW-SEAM-COSMO-SR-001",
+        "lane_class": "PRIMARY_NON_STAT_FRONTIER",
+        "intake_priority": 1,
+        "admissibility_prerequisite": "MACHINE_PIN_MATERIALLY_DIFFERENT_DISCRIMINATOR_FROM_CYCLE08",
+        "current_readiness": "NOT_READY_MATERIAL_DIFFERENCE_UNPINNED",
+        "fallback_role": "PRIMARY"
+      },
+      {
+        "candidate_id": "ROW-PILLAR-QM-001::RL10_BRIDGE_SCOPE_REASSESSMENT",
+        "lane_id": "RL10",
+        "target_row_id": "ROW-PILLAR-QM-001",
+        "lane_class": "BOUNDED_FALLBACK_NON_STAT_FRONTIER",
+        "intake_priority": 2,
+        "admissibility_prerequisite": "UPLIFT_PRECONDITION_AND_ANTI_ALIAS_PROOF_READINESS",
+        "current_readiness": "HOLD_LIMITATION_SCOPE",
+        "fallback_role": "FALLBACK_1"
+      },
+      {
+        "candidate_id": "ROW-PILLAR-GR-001::DORMANT_NEW_STRUCTURE_NON_REPLAY_REASSESSMENT",
+        "lane_id": "GR",
+        "target_row_id": "ROW-PILLAR-GR-001",
+        "lane_class": "BOUNDED_FALLBACK_NON_STAT_FRONTIER",
+        "intake_priority": 3,
+        "admissibility_prerequisite": "FRESH_NON_REPLAY_SIGNAL_BEYOND_EXHAUSTED_DORMANT_PACKAGE",
+        "current_readiness": "EXHAUSTED_RETRY_PATH_NONAUTHORITATIVE",
+        "fallback_role": "FALLBACK_2"
+      }
+    ]
+  },
+  "candidate_exclusions": {
+    "excluded_from_phase2_non_stat_pool": [
+      {
+        "candidate_id": "ROW-PILLAR-STAT-001::POST_PLAN_STAT_FRESH_MOVEMENT_EVIDENCE_SURFACE_20260419_v0",
+        "reason": "Phase2 scope is non-STAT only and Phase1 lock requires no STAT replay or execution reopening."
+      }
+    ],
+    "global_exclusions": [
+      "PACKET05_BOOTSTRAP",
+      "SEAM_EXPANSION",
+      "MASTER_ACTION",
+      "PROMOTION_OR_CLOSURE_CLAIMS",
+      "THEOREM_GAP_DELTA_COUNTING_WITHOUT_MACHINE_PINNED_NEGATIVE_DELTA"
+    ]
+  },
+  "intake_decision": {
+    "terminal_outcome": "POST_RECOVERY_NON_STAT_FRONTIER_PHASE2_CANDIDATE_INTAKE_COMPLETE",
+    "phase2_candidate_intake_complete": true,
+    "selected_primary_lane": "COSMO-SR",
+    "fallback_lane_order": [
+      "RL10",
+      "GR"
+    ],
+    "execution_authorization": "NONE",
+    "next_action": "AUTHOR_DECLARATION_ONLY_PHASE3_NON_STAT_STRICT_ADMISSIBILITY_FILTER"
+  },
+  "allowed_next_actions": [
+    "author_declaration_only_phase3_non_stat_strict_admissibility_filter",
+    "carry_forward_phase1_token_set_into_phase3"
+  ],
+  "disallowed_next_actions": [
+    "rerun_der01_attempt_without_new_authorization",
+    "rerun_der02_attempt_without_new_authorization",
+    "count_theorem_gap_delta_without_machine_pinned_negative_delta",
+    "open_packet05",
+    "open_seam_work",
+    "open_gr_work",
+    "open_rl10_work",
+    "invoke_master_action",
+    "claim_promotion_or_closure"
+  ],
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_post_recovery_non_stat_frontier_phase2_candidate_intake_gate.py -q",
+    "targeted_gate_result": "PENDING",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local declaration-only post-recovery non-STAT Phase 2 candidate intake surface only. No execution authorization, theorem discharge, Packet05/seam/GR/RL10/master-action expansion, promotion/closure claim, or external-truth claim is made.",
+  "payload_sha256": "c3338e7e13b87147ff24364c68417794fef08ee34eb76b0df4bd32a439250124"
+}

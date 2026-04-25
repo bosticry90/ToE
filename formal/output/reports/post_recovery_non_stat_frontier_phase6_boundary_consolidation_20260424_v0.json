@@ -1,0 +1,77 @@
+{
+  "schema_id": "POST_RECOVERY_NON_STAT_FRONTIER_PHASE6_BOUNDARY_CONSOLIDATION_20260424_v0",
+  "artifact_id": "post_recovery_non_stat_frontier_phase6_boundary_consolidation_20260424_v0",
+  "captured_at_utc": "2026-04-25T00:01:30Z",
+  "status": "DECLARATION_ONLY_NON_STAT_FRONTIER_PHASE6_BOUNDARY_CONSOLIDATION_NONCLAIM",
+  "trigger": {
+    "source": "POST_RECOVERY_NON_STAT_FRONTIER_PHASE5_FALLBACK_HOLD_DESIGN_PACKET",
+    "source_report": "formal/output/reports/post_recovery_non_stat_frontier_phase5_fallback_hold_design_packet_20260424_v0.json",
+    "reason": "Consolidate the bounded Phase1-Phase5 decision family into one verification surface without duplicating prior focused gates."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_PHASE6_BOUNDARY_CONSOLIDATION",
+    "execution_authorization": "NONE",
+    "consolidation_only": true,
+    "review_counts_theorem_gap_delta": false,
+    "packet05_bootstrap_allowed": false,
+    "seam_execution_allowed": false,
+    "gr_work_allowed": false,
+    "rl10_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false
+  },
+  "source_bundle": {
+    "phase1_baseline_lock_report": "formal/output/reports/post_recovery_non_stat_frontier_phase1_baseline_lock_20260424_v0.json",
+    "phase2_candidate_intake_report": "formal/output/reports/post_recovery_non_stat_frontier_phase2_candidate_intake_20260424_v0.json",
+    "phase3_strict_filter_report": "formal/output/reports/post_recovery_non_stat_frontier_phase3_strict_admissibility_filter_20260424_v0.json",
+    "phase4_decision_packet": "formal/output/reports/post_recovery_non_stat_frontier_phase4_decision_packet_20260424_v0.json",
+    "phase5_fallback_hold_design_packet": "formal/output/reports/post_recovery_non_stat_frontier_phase5_fallback_hold_design_packet_20260424_v0.json",
+    "post_recovery_stat_non_replay_frontier_reassessment": "formal/output/reports/post_recovery_stat_non_replay_frontier_reassessment_20260424_v0.json"
+  },
+  "chain_consumption_checks": {
+    "baseline_carried_forward": true,
+    "candidate_intake_consumed_baseline": true,
+    "admissibility_filter_consumed_intake": true,
+    "decision_packet_consumed_filter": true,
+    "fallback_hold_consumed_decision": true,
+    "phase1_to_phase5_chain_unbroken": true
+  },
+  "boundary_invariant_consolidation": {
+    "execution_authorization": "NONE",
+    "selected_lane": "NONE",
+    "cosmo_sr_fresh_hypothesis_authorized": false,
+    "all_disallowed_actions_blocked": true,
+    "disallowed_action_set": [
+      "rerun_der01_attempt_without_new_authorization",
+      "rerun_der02_attempt_without_new_authorization",
+      "count_theorem_gap_delta_without_machine_pinned_negative_delta",
+      "open_packet05",
+      "open_seam_work",
+      "open_gr_work",
+      "open_rl10_work",
+      "invoke_master_action",
+      "claim_promotion_or_closure"
+    ],
+    "phase5_additional_disallowed_actions": [
+      "author_cosmo_sr_fresh_hypothesis_design_packet_under_current_hold",
+      "authorize_cosmo_sr_hypothesis_execution",
+      "select_lane_without_new_admissible_filter_pass"
+    ]
+  },
+  "decision": {
+    "terminal_outcome": "POST_RECOVERY_NON_STAT_FRONTIER_PHASE6_BOUNDARY_CONSOLIDATION_COMPLETE",
+    "phase6_consolidation_complete": true,
+    "execution_authorization": "NONE",
+    "selected_lane": "NONE",
+    "cosmo_sr_fresh_hypothesis_authorized": false,
+    "next_action": "AUTHOR_PHASE7_COMPATIBILITY_VALIDATION_READOUT_FOR_PHASE1_TO_PHASE6_CHAIN"
+  },
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_post_recovery_non_stat_frontier_phase6_boundary_consolidation_gate.py -q",
+    "targeted_gate_result": "PENDING",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local declaration-only Phase6 boundary consolidation only. No execution authorization, theorem discharge, lane-specific hypothesis authorization, Packet05/seam/GR/RL10/master-action expansion, promotion/closure claim, or external-truth claim is made.",
+  "payload_sha256": "d90cf2b8d97645241940fa472b950530a468e04fd9487e9a679af568d7a0671a"
+}

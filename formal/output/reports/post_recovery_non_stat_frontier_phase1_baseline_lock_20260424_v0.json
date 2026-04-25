@@ -1,0 +1,99 @@
+{
+  "schema_id": "POST_RECOVERY_NON_STAT_FRONTIER_PHASE1_BASELINE_LOCK_20260424_v0",
+  "artifact_id": "post_recovery_non_stat_frontier_phase1_baseline_lock_20260424_v0",
+  "captured_at_utc": "2026-04-24T23:59:00Z",
+  "status": "DECLARATION_ONLY_NON_STAT_FRONTIER_PHASE1_BASELINE_LOCK_NONCLAIM",
+  "trigger": {
+    "source": "POST_RECOVERY_STAT_NON_DER_THEOREM_ROW_CANDIDATE_SEARCH_DESIGN",
+    "source_report": "formal/output/reports/post_recovery_stat_non_der_theorem_row_candidate_search_design_20260424_v0.json",
+    "reason": "Before any non-STAT frontier design begins, lock deterministic post-recovery invariants so Phase 2 candidate intake cannot drift execution posture or replay boundaries."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_PHASE1_BASELINE_LOCK",
+    "execution_authorization": "NONE",
+    "records_readout_only": true,
+    "review_counts_theorem_gap_delta": false,
+    "packet05_bootstrap_allowed": false,
+    "seam_execution_allowed": false,
+    "gr_work_allowed": false,
+    "rl10_work_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false
+  },
+  "source_bundle": {
+    "post_der_cycle_exhaustion_readout_review": "formal/output/reports/post_recovery_stat_post_der_cycle_exhaustion_readout_review_20260424_v0.json",
+    "stat_non_replay_frontier_reassessment": "formal/output/reports/post_recovery_stat_non_replay_frontier_reassessment_20260424_v0.json",
+    "stat_non_der_candidate_search_design": "formal/output/reports/post_recovery_stat_non_der_theorem_row_candidate_search_design_20260424_v0.json",
+    "cosmo_sr_negative_baseline_stop": "formal/output/reports/post_recovery_cosmo_sr_negative_baseline_frontier_stop_20260424_v0.json",
+    "rl10_limitation_review": "formal/output/reports/qm_stat_rl10_discrete_transition_bridge_limitation_review_20260422_v2.json",
+    "gr_dormant_completion_tranche": "formal/output/reports/post_plan_gr_dormant_new_structure_completion_tranche_20260418_v0.json",
+    "queue_reconstruction_packet": "formal/docs/release/QUEUE_PRIORITY_NON_REPLAY_FRONTIER_RECONSTRUCTION_PACKET_20260423_v0.json",
+    "queue_reconstruction_selection": "formal/docs/release/QUEUE_RECONSTRUCTION_DECLARED_NON_REPLAY_FRONTIER_SELECTION_20260423_v0.json"
+  },
+  "baseline_locked_invariants": {
+    "der01_cycle_closed_nonmoving": true,
+    "der02_cycle_closed_nonmoving": true,
+    "remaining_der_attempt_authorization": 0,
+    "stat_execution_held": true,
+    "stat_execution_authorization": "NONE",
+    "stat_non_replay_frontier_opened": false,
+    "stat_new_non_der_candidate_declared": false,
+    "cosmo_sr_cycle08_negative_baseline_locked": true,
+    "cosmo_sr_materially_different_machine_pinned_candidate_present": false,
+    "rl10_branch_state": "LIMITATION_INTERPRETATION_SCOPE_HOLD",
+    "rl10_one_more_bounded_comparator_cycle_justified": false,
+    "gr_branch_state": "POST_PLAN_GR_DORMANT_NEW_STRUCTURE_COMPLETION_TRANCHE_EXPLICITLY_EXHAUSTED",
+    "gr_retry_path_status": "EXHAUSTED_AND_NONAUTHORITATIVE_FOR_NEXT_STEP_SELECTION",
+    "theorem_gap_delta_counted": 0,
+    "fresh_movement_machine_pinned": false,
+    "packet05_bootstrap_authorized": false,
+    "seam_execution_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false
+  },
+  "phase_lock_contract": {
+    "phase": "PHASE_1_BASELINE_LOCK",
+    "baseline_token_set": [
+      "EXECUTION_AUTHORIZATION_NONE",
+      "DER_ATTEMPT_AUTHORIZATION_ZERO",
+      "STAT_NON_REPLAY_FRONTIER_CLOSED",
+      "COSMO_SR_CYCLE08_NEGATIVE_BASELINE_LOCKED",
+      "RL10_LIMITATION_SCOPE_HOLD_LOCKED",
+      "GR_DORMANT_RETRY_PATH_EXHAUSTED_LOCKED",
+      "THEOREM_GAP_DELTA_COUNT_ZERO",
+      "FRESH_MOVEMENT_MACHINE_PINNED_FALSE"
+    ],
+    "required_for_phase2_candidate_intake": true,
+    "phase2_entry_condition": "EXACT_MATCH_WITH_LOCKED_BASELINE_INVARIANTS"
+  },
+  "allowed_next_actions": [
+    "author_declaration_only_non_stat_candidate_intake_packet",
+    "carry_forward_locked_baseline_tokens_into_phase2"
+  ],
+  "disallowed_next_actions": [
+    "rerun_der01_attempt_without_new_authorization",
+    "rerun_der02_attempt_without_new_authorization",
+    "count_theorem_gap_delta_without_machine_pinned_negative_delta",
+    "open_packet05",
+    "open_seam_work",
+    "open_gr_work",
+    "open_rl10_work",
+    "invoke_master_action",
+    "claim_promotion_or_closure"
+  ],
+  "decision": {
+    "terminal_outcome": "POST_RECOVERY_NON_STAT_FRONTIER_PHASE1_BASELINE_LOCK_COMPLETE",
+    "phase1_baseline_lock_complete": true,
+    "execution_authorization": "NONE",
+    "baseline_drift_detected": false,
+    "next_action": "AUTHOR_DECLARATION_ONLY_PHASE2_NON_STAT_CANDIDATE_INTAKE_PACKET"
+  },
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_post_recovery_non_stat_frontier_phase1_baseline_lock_gate.py -q",
+    "targeted_gate_result": "PENDING",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local declaration-only post-recovery non-STAT frontier Phase 1 baseline lock only. No execution authorization, theorem discharge, theorem-gap delta counting beyond locked zero, Packet05/seam/GR/RL10/master-action expansion, promotion/closure claim, or external-truth claim is made.",
+  "payload_sha256": "32471ec1da3533cf11986db17622f6c6a7cc483caa05b0a14e962c3fe0e3002e"
+}

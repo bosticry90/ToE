@@ -1,0 +1,66 @@
+{
+  "schema_id": "POST_RECOVERY_NON_STAT_FRONTIER_STRICT_ADMISSIBILITY_FILTER_RERUN_20260424_v0",
+  "artifact_id": "post_recovery_non_stat_frontier_strict_admissibility_filter_rerun_20260424_v0",
+  "captured_at_utc": "2026-04-25T00:03:30Z",
+  "status": "DECLARATION_ONLY_NON_STAT_FRONTIER_STRICT_ADMISSIBILITY_FILTER_RERUN_NONCLAIM",
+  "trigger": {
+    "source": "POST_RECOVERY_NON_STAT_FRONTIER_SEAM_COSMO_SR_ADMISSIBILITY_UNLOCK_DESIGN",
+    "source_report": "formal/output/reports/post_recovery_non_stat_frontier_seam_cosmo_sr_admissibility_unlock_design_20260424_v0.json",
+    "reason": "Consume the seam unlock status surface in a strict filter rerun packet without opening execution authorization."
+  },
+  "frontier_boundary": {
+    "mode": "DECLARATION_ONLY_STRICT_ADMISSIBILITY_FILTER_RERUN",
+    "execution_authorization": "NONE",
+    "filter_only": true,
+    "seam_execution_allowed": false,
+    "packet05_bootstrap_allowed": false,
+    "master_action_allowed": false,
+    "promotion_or_closure_language_allowed": false
+  },
+  "source_bundle": {
+    "phase8_final_readout_report": "formal/output/reports/post_recovery_non_stat_frontier_phase8_staging_final_readout_20260424_v0.json",
+    "seam_unlock_design_report": "formal/output/reports/post_recovery_non_stat_frontier_seam_cosmo_sr_admissibility_unlock_design_20260424_v0.json",
+    "prior_strict_filter_report": "formal/output/reports/post_recovery_non_stat_frontier_phase3_strict_admissibility_filter_20260424_v0.json"
+  },
+  "rerun_inputs": {
+    "cosmo_sr_unlock_ready": false,
+    "materially_different_discriminator_declared": false,
+    "machine_pinned_observable_binding_present": false,
+    "non_replay_basis_declared": false,
+    "rl10_ready": false,
+    "gr_ready": false
+  },
+  "rerun_result": {
+    "lanes_evaluated": 3,
+    "admissible_lane_ids": [],
+    "admissible_non_stat_lane_exists": false,
+    "selected_lane": "NONE",
+    "execution_authorization": "NONE",
+    "terminal_outcome": "STRICT_ADMISSIBILITY_FILTER_RERUN_COMPLETE_NO_ADMISSIBLE_NON_STAT_LANE",
+    "next_action": "MAINTAIN_HOLD_AND_RETURN_TO_BROADER_FRONTIER_DESIGN_OR_MATERIALIZE_UNLOCK_ELEMENTS"
+  },
+  "posture": {
+    "terminal_posture": "HOLD_NO_ADMISSIBLE_NON_STAT_FRONTIER",
+    "execution_authorization": "NONE",
+    "selected_lane": "NONE",
+    "cosmo_sr_fresh_hypothesis_authorized": false
+  },
+  "disallowed_next_actions": [
+    "author_cosmo_sr_fresh_hypothesis_execution_packet",
+    "authorize_cosmo_sr_execution",
+    "open_packet05",
+    "open_seam_work",
+    "open_gr_work",
+    "open_rl10_work",
+    "invoke_master_action",
+    "claim_promotion_or_closure"
+  ],
+  "validation": {
+    "source_consistency_check": "GREEN",
+    "targeted_gate_command": "./py.ps1 -m pytest formal/python/tests/test_post_recovery_non_stat_frontier_strict_admissibility_filter_rerun_gate.py -q",
+    "targeted_gate_result": "PENDING",
+    "governance_growth_added_by_this_record": false
+  },
+  "non_claim_boundary": "Repository-local declaration-only strict admissibility rerun readout only. No execution authorization, no lane activation, and no external-truth claim is made.",
+  "payload_sha256": "978768122ea663558a808f55be3ce6725fb7b50a54b4d1baf23b7a4a0e9cd7e4"
+}
