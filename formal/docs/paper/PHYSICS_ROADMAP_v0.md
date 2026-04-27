@@ -41,6 +41,18 @@ Repo recovery and throughput reset checkpoint (R7-A, 2026-04-23):
 - `REPO_RECOVERY_ADVANCEMENT_CONTRACT_v0: ADVANCEMENT_REQUIRES_BLOCKER_REDUCTION_WITH_GREEN_FULL_SUITE_AND_NO_GOVERNANCE_GROWTH`
 - `REPO_RECOVERY_ACTIVE_LANE_ORDER_v0: SEAM-COSMO-SR_THEN_ONE_THEOREM_GAP_FAMILY_QM-STAT_BLOCKED_QFT-GR_EXTERNAL_HOLD`
 
+Strict scalar/QFT derivation synchronization checkpoint (2026-04-27):
+- Strict-physics map pointer: `formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md`.
+- Phase 0 acceptance contract pointer: `formal/docs/lanes/SCALAR_QFT_PHASE0_BASELINE_ACCEPTANCE_CONTRACT_v0.md`.
+- Phase 0 gate pointer: `formal/python/tests/test_scalar_qft_phase0_baseline_acceptance_contract_gate.py`.
+- Phase 0 report pointer: `formal/output/reports/scalar_qft_phase0_baseline_acceptance_contract_v0.json`.
+- Current baseline: theorem gaps `7`, seam gaps `3`, retained scalar-lane assumption rows `6`.
+- Current formal increment: strict scalar/QFT analytic blocker split plus finite QM-STAT transport surface.
+- Lean aggregate pointer: `formal/toe_formal/ToeFormal.lean`; `lake build ToeFormal` is green as of 2026-04-27 with existing warnings only.
+- External benchmark registry pointer: `formal/docs/lanes/EXTERNAL_PHYSICS_BENCHMARK_REGISTRY_v0.md`.
+- External benchmark gate pointer: `formal/python/tests/test_external_physics_benchmark_registry_gate.py`.
+- Boundary: this checkpoint does not alter the recovery freeze, does not enroll new governed pytests by itself, does not authorize Phase 2, does not promote the master action, and does not claim empirical validation.
+
 R6 consolidation checkpoint (R6-CLOSEOUT, 2026-03-20):
 - R6 post-truth consolidation completed across three bounded duplicate families.
 - Consolidation helper surfaces:

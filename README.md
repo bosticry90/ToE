@@ -1,15 +1,19 @@
 README.md
 A Formal Research Hypothesis Toward a Unified Physical Framework
 
-PROJECT STATUS (2026-04-23)
+PROJECT STATUS (2026-04-27)
 Tooling is frozen except for bugfixes that preserve existing contracts.
-Current work is in the discriminative science phase: evidence-only runs, candidate pruning, and inventory updates.
+Current work is in the discriminative science phase, with a strict scalar/QFT derivation lane now synchronized as the active proof-facing status surface.
 Governance status is TERMINAL_SATISFIED_v0_NONCLAIM under pinned policy scope.
 Physics status is MIXED_PROGRESS_v0 with seam-level physics closure still incomplete.
 This is NOT a physics-complete ToE claim.
 A bounded auxiliary computational-analysis lane is authorized for shadow numerics, sensitivity scans, stability summaries, and comparator design only.
 This does not reopen dormant lanes or authorize new packets.
 Queue-priority non-replay frontier reconstruction is active in declaration-only mode; execution authorization remains none until fresh-delta emergence conditions are machine-pinned.
+Strict scalar/QFT Phase 0 baseline acceptance is GREEN, with theorem-gap baseline 7, seam-gap baseline 3, and retained scalar-lane assumption rows 6.
+The current Lean aggregate imports the strict scalar/QFT analytic surfaces and `ToeFormal.Bridges.QM_STAT_Transport`; `lake build ToeFormal` is green as of 2026-04-27, with existing lint/style warnings only.
+The external physics benchmark registry is active as contextual non-claim pressure only: no theorem discharge, blocker movement, Phase 2 authorization, master-action promotion, or empirical validation is claimed.
+The governance test manifest remains under the recovery freeze; the new strict-physics gates are focused validation surfaces unless separately promoted under that policy.
 
 PHYSICS-FIRST EXECUTION POLICY CHECKPOINT (WS-10-T07B, 2026-03-26)
 - Physics-closure blockers are prioritized ahead of governance expansion work.
