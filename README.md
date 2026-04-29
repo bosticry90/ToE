@@ -1,7 +1,7 @@
 README.md
 A Formal Research Hypothesis Toward a Unified Physical Framework
 
-PROJECT STATUS (2026-04-27)
+PROJECT STATUS (2026-04-29)
 Tooling is frozen except for bugfixes that preserve existing contracts.
 Current work is in the discriminative science phase, with a strict scalar/QFT derivation lane now synchronized as the active proof-facing status surface.
 Governance status is TERMINAL_SATISFIED_v0_NONCLAIM under pinned policy scope.
@@ -11,7 +11,8 @@ A bounded auxiliary computational-analysis lane is authorized for shadow numeric
 This does not reopen dormant lanes or authorize new packets.
 Queue-priority non-replay frontier reconstruction is active in declaration-only mode; execution authorization remains none until fresh-delta emergence conditions are machine-pinned.
 Strict scalar/QFT Phase 0 baseline acceptance is GREEN, with theorem-gap baseline 7, seam-gap baseline 3, and retained scalar-lane assumption rows 6.
-The current Lean aggregate imports the strict scalar/QFT analytic surfaces and `ToeFormal.Bridges.QM_STAT_Transport`; `lake build ToeFormal` is green as of 2026-04-27, with existing lint/style warnings only.
+The current Lean aggregate imports the strict scalar/QFT analytic blocker split, A2A15 raw-IBP and analytic interval-lift channel surfaces, A2A15A1A graph-Laplacian stencil/Taylor/mathlib endpoint-package retained surfaces through A2A15A1A9, and `ToeFormal.Bridges.QM_STAT_Transport`; `lake build ToeFormal` is green as of 2026-04-29, with existing lint/style warnings only.
+A2A15A1 remains retained under the post-capstone anti-loop rule: further child splits require a proof, falsification, or concrete obstruction, and Phase 2 is not authorized.
 The external physics benchmark registry is active as contextual non-claim pressure only: no theorem discharge, blocker movement, Phase 2 authorization, master-action promotion, or empirical validation is claimed.
 The governance test manifest remains under the recovery freeze; the new strict-physics gates are focused validation surfaces unless separately promoted under that policy.
 

@@ -327,7 +327,9 @@ def test_toe_enforced_execution_phase_reports_and_closeout() -> None:
 
     science_baseline_payload = _json(SCIENCE_BASELINE_REPORT_PATH)
     assert science_baseline_payload.get("schema_id") == "SCIENCE_GLOBAL_COMPLETION_BASELINE_20260411_v0"
-    assert science_baseline_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    science_summary = science_baseline_payload.get("summary", {})
+    assert science_summary.get("phase_status") == "INCOMPLETE"
+    assert science_summary.get("next_action") == "RESTORE_BASELINE_SURFACE_PARITY"
     science_objective = science_baseline_payload.get("objective_quality", {})
     assert science_objective.get("summary", {}).get("phase_status") in {"COMPLETE", "INCOMPLETE"}
     assert set(science_objective.get("criteria", {}).keys()) == {
@@ -339,8 +341,8 @@ def test_toe_enforced_execution_phase_reports_and_closeout() -> None:
     }
     completion_assessment = science_baseline_payload.get("completion_assessment", {})
     assert completion_assessment.get("governance_objective_complete") is True
-    assert completion_assessment.get("science_global_complete") in {True, False}
-    assert completion_assessment.get("global_objective_complete") in {True, False}
+    assert completion_assessment.get("science_global_complete") is False
+    assert completion_assessment.get("global_objective_complete") is False
 
     theorem_wave_payload = _json(THEOREM_WAVE_REPORT_PATH)
     assert theorem_wave_payload.get("schema_id") == "THEOREM_GAP_REDUCTION_WAVE_20260411_v0"
@@ -508,7 +510,9 @@ def test_toe_enforced_execution_phase_reports_and_closeout() -> None:
 
     r0_r6_closeout_payload = _json(R0_R6_CLOSEOUT_REPORT_PATH)
     assert r0_r6_closeout_payload.get("schema_id") == "R0_R6_OBJECTIVE_QUALITY_CLOSEOUT_20260411_v0"
-    assert r0_r6_closeout_payload.get("summary", {}).get("phase_status") == "COMPLETE"
+    r0_r6_summary = r0_r6_closeout_payload.get("summary", {})
+    assert r0_r6_summary.get("phase_status") == "INCOMPLETE"
+    assert r0_r6_summary.get("next_action") == "RESTORE_R0_R6_CONTROL_STACK_SURFACE"
     assert set(r0_r6_closeout_payload.get("criteria", {}).keys()) == {
         "all_r0_r6_reports_present",
         "all_r0_r6_reports_have_objective_surface",
@@ -520,9 +524,9 @@ def test_toe_enforced_execution_phase_reports_and_closeout() -> None:
         "r6_qm_subtarget_failure_diagnosis_materialized",
     }
     completion_assessment = r0_r6_closeout_payload.get("completion_assessment", {})
-    assert completion_assessment.get("control_stack_objective_complete") is True
-    assert completion_assessment.get("scientific_objective_complete") in {True, False}
-    assert completion_assessment.get("global_objective_complete") in {True, False}
+    assert completion_assessment.get("control_stack_objective_complete") is False
+    assert completion_assessment.get("scientific_objective_complete") is False
+    assert completion_assessment.get("global_objective_complete") is False
 
     closeout_payload = _json(CLOSEOUT_REPORT_PATH)
     assert closeout_payload.get("schema_id") == "TOE_ENFORCED_EXECUTION_CLOSEOUT_20260411_v0"

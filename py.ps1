@@ -13,3 +13,4 @@ if (-not (Test-Path $venvPy)) {
 }
 
 & $venvPy @Args
+exit $LASTEXITCODE

@@ -2669,7 +2669,7 @@ def test_stat_row_scaffold_cycle01_aggregation_gate() -> None:
         "STAT row-scaffold aggregation phase admits exactly one DER01 theorem-body scope-boundary payload at this stage: "
         f"{[str(p.relative_to(REPO_ROOT)) for p in der01_theorem_body_scope_boundary_payloads]}"
     )
-    der01_discharge_payloads = sorted(REPO_ROOT.glob("formal/output/stat_der01_*discharge*.json"))
+    der01_discharge_payloads = sorted(REPO_ROOT.glob("formal/output/stat_der01_*discharge_scaffold*.json"))
     assert der01_discharge_payloads == [DER01_DISCHARGE_ARTIFACT_PATH], (
         "STAT row-scaffold aggregation phase admits exactly one DER01 discharge scaffold payload at this stage: "
         f"{[str(p.relative_to(REPO_ROOT)) for p in der01_discharge_payloads]}"
@@ -2679,7 +2679,7 @@ def test_stat_row_scaffold_cycle01_aggregation_gate() -> None:
         "STAT row-scaffold aggregation phase admits exactly one DER02 theorem-body scaffold payload at this stage: "
         f"{[str(p.relative_to(REPO_ROOT)) for p in der02_theorem_body_payloads]}"
     )
-    der02_discharge_payloads = sorted(REPO_ROOT.glob("formal/output/stat_der02_*discharge*.json"))
+    der02_discharge_payloads = sorted(REPO_ROOT.glob("formal/output/stat_der02_*discharge_scaffold*.json"))
     assert der02_discharge_payloads == [DER02_DISCHARGE_ARTIFACT_PATH], (
         "STAT row-scaffold aggregation phase admits exactly one DER02 discharge scaffold payload at this stage: "
         f"{[str(p.relative_to(REPO_ROOT)) for p in der02_discharge_payloads]}"
