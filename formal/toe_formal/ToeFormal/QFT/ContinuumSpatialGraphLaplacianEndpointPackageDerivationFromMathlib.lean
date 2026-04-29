@@ -14,13 +14,15 @@ Scope:
 - prove the reflected-left endpoint expansion/bound route and isolate the
   remaining coefficient-orientation equalities needed to identify it with the
   original centered left endpoint package
+- define the exact centered endpoint coefficient-alignment object whose
+  supplied proof now feeds the endpoint package route
 - feed that derived package through the already-proved symmetric Taylor and
   TaylorRemainderControl route
 - record the next strict endpoint-package targets before uniform mesh
   convergence may become the active theorem target
-- retain the unsupplied scalar `taylorWithinEval` coefficient formula,
-  centered two-sided package derivation, left endpoint orientation, uniform
-  mesh convergence, full A1A closure, A2A15A1 closure, Phase 2 authorization,
+- retain centered endpoint coefficient alignment from mathlib, centered
+  two-sided package derivation, uniform mesh convergence, full A1A closure,
+  A2A15A1 closure, Phase 2 authorization,
   continuum closure, seam closure, empirical validation, and master-action
   promotion
 -/
@@ -59,10 +61,16 @@ def phase1Blocker003A2A15A1A9LeftEndpointOrientationRetainedId :
     String :=
   "PHASE1-BLOCKER-003A2A15A1A9_LEFT_ENDPOINT_ORIENTATION_RETAINED"
 
+/-- Retained blocker for deriving centered endpoint coefficient alignment. -/
+def phase1Blocker003A2A15A1A9CenteredEndpointCoefficientAlignmentRetainedId :
+    String :=
+  "PHASE1-BLOCKER-003A2A15A1A9_CENTERED_ENDPOINT_COEFFICIENT_" ++
+    "ALIGNMENT_RETAINED"
+
 /-- Outcome id for this endpoint-package derivation slice. -/
 def graphLaplacianEndpointPackageDerivationFromMathlibOutcomeId : String :=
   "RIGHT_ENDPOINT_AND_SCALAR_COEFFICIENTS_DERIVED_" ++
-    "LEFT_REFLECTED_EXPANSION_BOUND_ROUTE_PROVED_PACKAGE_RETAINED"
+    "LEFT_REFLECTED_AND_CENTERED_ALIGNMENT_ROUTES_PROVED_PACKAGE_RETAINED"
 
 /-- Scalar order-three Taylor polynomial shape expected by the stencil route. -/
 def scalarOrderThreeTaylorPolynomial
@@ -232,6 +240,62 @@ theorem reflected_scalar_polynomial_orientation_eq_left
   rw [hfirst, hsecond, hthird]
   unfold scalarOrderThreeTaylorPolynomial
   ring
+
+/--
+Exact coefficient-orientation object needed to identify the reflected-left
+Taylor polynomial with the centered two-sided endpoint package.
+-/
+structure CenteredEndpointCoefficientAlignment
+    (f : Real -> Real)
+    (x h : Real) where
+  first_reflected_matches_centered :
+    iteratedDerivWithin 1 (fun z => f (-z))
+        (Set.Icc (-x) (-x + h)) (-x) =
+      -iteratedDerivWithin 1 f (Set.Icc x (x + h)) x
+  second_reflected_matches_centered :
+    iteratedDerivWithin 2 (fun z => f (-z))
+        (Set.Icc (-x) (-x + h)) (-x) =
+      iteratedDerivWithin 2 f (Set.Icc x (x + h)) x
+  third_reflected_matches_centered :
+    iteratedDerivWithin 3 (fun z => f (-z))
+        (Set.Icc (-x) (-x + h)) (-x) =
+      -iteratedDerivWithin 3 f (Set.Icc x (x + h)) x
+
+/-- A centered endpoint coefficient-alignment object gives the polynomial identity. -/
+theorem centered_endpoint_coefficient_alignment_polynomial_identity
+    {f : Real -> Real}
+    {x h : Real}
+    (alignment : CenteredEndpointCoefficientAlignment f x h) :
+    scalarOrderThreeTaylorPolynomial
+        (f x)
+        (iteratedDerivWithin 1 (fun z => f (-z))
+          (Set.Icc (-x) (-x + h)) (-x))
+        (iteratedDerivWithin 2 (fun z => f (-z))
+          (Set.Icc (-x) (-x + h)) (-x))
+        (iteratedDerivWithin 3 (fun z => f (-z))
+          (Set.Icc (-x) (-x + h)) (-x))
+        h =
+      scalarOrderThreeTaylorPolynomial
+        (f x)
+        (iteratedDerivWithin 1 f (Set.Icc x (x + h)) x)
+        (iteratedDerivWithin 2 f (Set.Icc x (x + h)) x)
+        (iteratedDerivWithin 3 f (Set.Icc x (x + h)) x)
+        (-h) :=
+  reflected_scalar_polynomial_orientation_eq_left
+    (f x)
+    (iteratedDerivWithin 1 f (Set.Icc x (x + h)) x)
+    (iteratedDerivWithin 2 f (Set.Icc x (x + h)) x)
+    (iteratedDerivWithin 3 f (Set.Icc x (x + h)) x)
+    h
+    (iteratedDerivWithin 1 (fun z => f (-z))
+      (Set.Icc (-x) (-x + h)) (-x))
+    (iteratedDerivWithin 2 (fun z => f (-z))
+      (Set.Icc (-x) (-x + h)) (-x))
+    (iteratedDerivWithin 3 (fun z => f (-z))
+      (Set.Icc (-x) (-x + h)) (-x))
+    alignment.first_reflected_matches_centered
+    alignment.second_reflected_matches_centered
+    alignment.third_reflected_matches_centered
 
 /--
 Data still needed to derive the A1A8 endpoint package from mathlib endpoint
@@ -725,6 +789,123 @@ def taylorRemainderControlOfLeftOrientationEndpointPackage
     h_nonzero refinementParameter refinementParameterPositive
     (symmetricTaylorStencilBridgeOfLeftOrientationEndpointPackage data)
 
+/--
+Endpoint-package data with the centered endpoint coefficient alignment made
+explicit as one theorem object.
+-/
+structure EndpointPackageDerivationWithCenteredCoefficientAlignmentData
+    (f : Real -> Real)
+    (x h C : Real) where
+  h_nonnegative : 0 ≤ h
+  right_contDiffOn_center_to_endpoint :
+    ContDiffOn Real (3 + 1) f (Set.Icc x (x + h))
+  right_fourth_derivative_bound :
+    ∀ y ∈ Set.Icc x (x + h),
+      ‖iteratedDerivWithin (3 + 1) f (Set.Icc x (x + h)) y‖ ≤ C
+  reflected_left_contDiffOn :
+    ContDiffOn Real (3 + 1) (fun z => f (-z))
+      (Set.Icc (-x) (-x + h))
+  reflected_left_fourth_derivative_bound :
+    ∀ y ∈ Set.Icc (-x) (-x + h),
+      ‖iteratedDerivWithin (3 + 1) (fun z => f (-z))
+        (Set.Icc (-x) (-x + h)) y‖ ≤ C
+  fourth_derivative_bound_nonnegative : 0 ≤ C
+  c4_smoothness_on_symmetric_interval : Prop
+  c4_smoothness_on_symmetric_interval_supplied :
+    c4_smoothness_on_symmetric_interval
+  two_sided_interval_model : Prop
+  two_sided_interval_model_supplied :
+    two_sided_interval_model
+  sample_reconstruction_matches_stencil : Prop
+  sample_reconstruction_matches_stencil_supplied :
+    sample_reconstruction_matches_stencil
+  centered_coefficient_alignment :
+    CenteredEndpointCoefficientAlignment f x h
+
+/-- The explicit centered-alignment object supplies the prior left-orientation data. -/
+def leftOrientationDataOfCenteredCoefficientAlignmentData
+    {f : Real -> Real}
+    {x h C : Real}
+    (data :
+      EndpointPackageDerivationWithCenteredCoefficientAlignmentData f x h C) :
+    LeftEndpointOrientationFromMathlibData f x h C where
+  h_nonnegative := data.h_nonnegative
+  right_contDiffOn_center_to_endpoint :=
+    data.right_contDiffOn_center_to_endpoint
+  right_fourth_derivative_bound := data.right_fourth_derivative_bound
+  reflected_left_contDiffOn := data.reflected_left_contDiffOn
+  reflected_left_fourth_derivative_bound :=
+    data.reflected_left_fourth_derivative_bound
+  fourth_derivative_bound_nonnegative :=
+    data.fourth_derivative_bound_nonnegative
+  c4_smoothness_on_symmetric_interval :=
+    data.c4_smoothness_on_symmetric_interval
+  c4_smoothness_on_symmetric_interval_supplied :=
+    data.c4_smoothness_on_symmetric_interval_supplied
+  two_sided_interval_model := data.two_sided_interval_model
+  two_sided_interval_model_supplied :=
+    data.two_sided_interval_model_supplied
+  sample_reconstruction_matches_stencil :=
+    data.sample_reconstruction_matches_stencil
+  sample_reconstruction_matches_stencil_supplied :=
+    data.sample_reconstruction_matches_stencil_supplied
+  centered_coefficient_alignment_across_endpoint_intervals := True
+  centered_coefficient_alignment_across_endpoint_intervals_supplied :=
+    True.intro
+  first_reflected_coefficient_orientation :=
+    data.centered_coefficient_alignment.first_reflected_matches_centered
+  second_reflected_coefficient_orientation :=
+    data.centered_coefficient_alignment.second_reflected_matches_centered
+  third_reflected_coefficient_orientation :=
+    data.centered_coefficient_alignment.third_reflected_matches_centered
+
+/-- Explicit centered-alignment data constructs the endpoint package. -/
+def mathlibEndpointPackageOfCenteredCoefficientAlignmentData
+    {f : Real -> Real}
+    {x h C : Real}
+    (data :
+      EndpointPackageDerivationWithCenteredCoefficientAlignmentData f x h C) :
+    MathlibEndpointTaylorExpansionPackage f x h C :=
+  mathlibEndpointPackageOfLeftOrientationData
+    (leftOrientationDataOfCenteredCoefficientAlignmentData data)
+
+/-- The centered-alignment package uses the reflected-left remainder. -/
+theorem centered_alignment_endpoint_package_left_remainder_field_v0
+    {f : Real -> Real}
+    {x h C : Real}
+    (data :
+      EndpointPackageDerivationWithCenteredCoefficientAlignmentData f x h C) :
+    (mathlibEndpointPackageOfCenteredCoefficientAlignmentData data).left_remainder =
+      leftEndpointReflectedTaylorRemainder f x h := by
+  rfl
+
+/-- Explicit centered-alignment data feeds the symmetric Taylor bridge. -/
+def symmetricTaylorStencilBridgeOfCenteredCoefficientAlignmentData
+    {f : Real -> Real}
+    {x h C : Real}
+    (data :
+      EndpointPackageDerivationWithCenteredCoefficientAlignmentData f x h C) :
+    SymmetricTaylorStencilBridge f x h (4 * C) :=
+  symmetricTaylorStencilBridgeOfMathlibEndpointAlignment
+    (mathlibEndpointPackageOfCenteredCoefficientAlignmentData data)
+
+/-- Explicit centered-alignment data feeds the prior TaylorRemainderControl route. -/
+def taylorRemainderControlOfCenteredCoefficientAlignmentData
+    {f : Real -> Real}
+    {x h C : Real}
+    (h_nonzero : h * h ≠ 0)
+    (refinementParameter : Nat)
+    (refinementParameterPositive : 0 < refinementParameter)
+    (data :
+      EndpointPackageDerivationWithCenteredCoefficientAlignmentData f x h C) :
+    TaylorRemainderControl h
+      (symmetricTaylorBridgeRemainderField
+        (symmetricTaylorStencilBridgeOfCenteredCoefficientAlignmentData data))
+      (fourthDerivativeStencilTolerance (4 * C) h) :=
+  taylorRemainderControlOfSymmetricTaylorStencilBridge
+    h_nonzero refinementParameter refinementParameterPositive
+    (symmetricTaylorStencilBridgeOfCenteredCoefficientAlignmentData data)
+
 /-- The constructed package uses the theorem-derived right mathlib remainder. -/
 theorem mathlib_endpoint_package_derivation_right_remainder_field_v0
     {f : Real -> Real}
@@ -842,6 +1023,7 @@ def endpointPackageDerivationCompletedSubtargetIdsV0 : List String :=
   [ "A2A15A1A9_SUBTARGET_TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA"
   , "A2A15A1A9_SUBTARGET_REFLECTED_LEFT_ENDPOINT_EXPANSION_AND_BOUND"
   , "A2A15A1A9_SUBTARGET_LEFT_ORIENTATION_DATA_TO_ENDPOINT_PACKAGE_ROUTE"
+  , "A2A15A1A9_SUBTARGET_CENTERED_ENDPOINT_COEFFICIENT_ALIGNMENT_OBJECT_AND_PACKAGE_ROUTE"
   ]
 
 /-- Endpoint-package prerequisites that remain after the scalar formula proof. -/
@@ -873,6 +1055,7 @@ theorem endpoint_package_derivation_completed_subtarget_ids_v0_expected :
       [ "A2A15A1A9_SUBTARGET_TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA"
       , "A2A15A1A9_SUBTARGET_REFLECTED_LEFT_ENDPOINT_EXPANSION_AND_BOUND"
       , "A2A15A1A9_SUBTARGET_LEFT_ORIENTATION_DATA_TO_ENDPOINT_PACKAGE_ROUTE"
+      , "A2A15A1A9_SUBTARGET_CENTERED_ENDPOINT_COEFFICIENT_ALIGNMENT_OBJECT_AND_PACKAGE_ROUTE"
       ] := by
   rfl
 
@@ -931,6 +1114,12 @@ structure EndpointPackageDerivationFromMathlibStatus where
   left_orientation_data_to_taylor_control_proved : Prop
   left_orientation_data_to_taylor_control_proved_supplied :
     left_orientation_data_to_taylor_control_proved
+  centered_coefficient_alignment_object_and_route_proved : Prop
+  centered_coefficient_alignment_object_and_route_proved_supplied :
+    centered_coefficient_alignment_object_and_route_proved
+  centered_coefficient_alignment_derived_from_mathlib : Prop
+  centered_coefficient_alignment_not_derived_from_mathlib :
+    Not centered_coefficient_alignment_derived_from_mathlib
   left_endpoint_orientation_proved : Prop
   left_endpoint_orientation_not_proved :
     Not left_endpoint_orientation_proved
@@ -940,6 +1129,7 @@ structure EndpointPackageDerivationFromMathlibStatus where
   prior_mathlib_alignment_retained_blocker_id : String
   retained_blocker_id : String
   left_endpoint_orientation_retained_blocker_id : String
+  centered_endpoint_coefficient_alignment_retained_blocker_id : String
   outcome_id : String
   anti_loop_rule_id : String
   successor_kinds : List A2A15A1SuccessorKind
@@ -956,10 +1146,10 @@ structure EndpointPackageDerivationFromMathlibStatus where
   phase2_not_authorized : Not phase2Authorized
 
 /--
-Current status: the right endpoint, scalar coefficient formula, and reflected
-left endpoint expansion/bound are theorem-derived from mathlib-facing data,
-but the full two-sided endpoint package still depends on original
-left-coefficient orientation facts.
+Current status: the right endpoint, scalar coefficient formula, reflected
+left endpoint expansion/bound, and explicit centered-alignment package route
+are theorem-derived/formalized from mathlib-facing data, but the centered
+endpoint coefficient alignment theorem itself remains retained.
 -/
 def endpointPackageDerivationFromMathlibStatusV0 :
     EndpointPackageDerivationFromMathlibStatus where
@@ -987,6 +1177,12 @@ def endpointPackageDerivationFromMathlibStatusV0 :
   left_orientation_data_to_endpoint_package_proved_supplied := True.intro
   left_orientation_data_to_taylor_control_proved := True
   left_orientation_data_to_taylor_control_proved_supplied := True.intro
+  centered_coefficient_alignment_object_and_route_proved := True
+  centered_coefficient_alignment_object_and_route_proved_supplied := True.intro
+  centered_coefficient_alignment_derived_from_mathlib := False
+  centered_coefficient_alignment_not_derived_from_mathlib := by
+    intro h
+    exact h
   left_endpoint_orientation_proved := False
   left_endpoint_orientation_not_proved := by
     intro h
@@ -1003,6 +1199,8 @@ def endpointPackageDerivationFromMathlibStatusV0 :
     phase1Blocker003A2A15A1A9EndpointPackageDerivationFromMathlibRetainedId
   left_endpoint_orientation_retained_blocker_id :=
     phase1Blocker003A2A15A1A9LeftEndpointOrientationRetainedId
+  centered_endpoint_coefficient_alignment_retained_blocker_id :=
+    phase1Blocker003A2A15A1A9CenteredEndpointCoefficientAlignmentRetainedId
   outcome_id := graphLaplacianEndpointPackageDerivationFromMathlibOutcomeId
   anti_loop_rule_id := analyticIntervalLiftNoMoreChildSplitsRuleId
   successor_kinds := endpointPackageDerivationFromMathlibSuccessorKindsV0
@@ -1098,6 +1296,18 @@ theorem endpoint_package_derivation_left_orientation_data_to_taylor_control_prov
   exact
     ePkgDerivStatusV0.left_orientation_data_to_taylor_control_proved_supplied
 
+/-- The centered coefficient-alignment object and package route are explicit. -/
+theorem endpoint_package_derivation_centered_alignment_object_and_route_proved_v0 :
+    ePkgDerivStatusV0.centered_coefficient_alignment_object_and_route_proved := by
+  exact
+    ePkgDerivStatusV0.centered_coefficient_alignment_object_and_route_proved_supplied
+
+/-- The centered coefficient alignment theorem from mathlib remains retained. -/
+theorem endpoint_package_derivation_centered_alignment_not_derived_v0 :
+    Not ePkgDerivStatusV0.centered_coefficient_alignment_derived_from_mathlib := by
+  exact
+    ePkgDerivStatusV0.centered_coefficient_alignment_not_derived_from_mathlib
+
 /-- Left endpoint orientation remains retained. -/
 theorem endpoint_package_derivation_left_orientation_not_proved_v0 :
     Not ePkgDerivStatusV0.left_endpoint_orientation_proved := by
@@ -1130,6 +1340,12 @@ theorem endpoint_package_derivation_retained_id_v0 :
 theorem endpoint_package_derivation_left_orientation_retained_id_v0 :
     ePkgDerivStatusV0.left_endpoint_orientation_retained_blocker_id =
       phase1Blocker003A2A15A1A9LeftEndpointOrientationRetainedId := by
+  rfl
+
+/-- The centered coefficient alignment retained blocker remains exposed. -/
+theorem endpoint_package_derivation_centered_alignment_retained_id_v0 :
+    ePkgDerivStatusV0.centered_endpoint_coefficient_alignment_retained_blocker_id =
+      phase1Blocker003A2A15A1A9CenteredEndpointCoefficientAlignmentRetainedId := by
   rfl
 
 /-- The theorem-facing surface exposes its outcome id. -/
