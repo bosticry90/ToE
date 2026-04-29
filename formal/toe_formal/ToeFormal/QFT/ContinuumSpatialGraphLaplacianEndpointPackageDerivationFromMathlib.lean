@@ -11,6 +11,9 @@ Scope:
 - prove that supplied scalar coefficient alignment plus the right mathlib
   bound and a supplied left-orientation bound constructs the A1A8 endpoint
   package
+- prove the reflected-left endpoint expansion/bound route and isolate the
+  remaining coefficient-orientation equalities needed to identify it with the
+  original centered left endpoint package
 - feed that derived package through the already-proved symmetric Taylor and
   TaylorRemainderControl route
 - record the next strict endpoint-package targets before uniform mesh
@@ -51,10 +54,15 @@ def phase1Blocker003A2A15A1A9EndpointPackageDerivationFromMathlibRetainedId :
   "PHASE1-BLOCKER-003A2A15A1A9_ENDPOINT_PACKAGE_DERIVATION_" ++
     "FROM_MATHLIB_RETAINED"
 
+/-- Retained blocker for the original left endpoint orientation step. -/
+def phase1Blocker003A2A15A1A9LeftEndpointOrientationRetainedId :
+    String :=
+  "PHASE1-BLOCKER-003A2A15A1A9_LEFT_ENDPOINT_ORIENTATION_RETAINED"
+
 /-- Outcome id for this endpoint-package derivation slice. -/
 def graphLaplacianEndpointPackageDerivationFromMathlibOutcomeId : String :=
-  "RIGHT_ENDPOINT_BOUND_AND_SCALAR_COEFFICIENTS_DERIVED_" ++
-    "LEFT_REFLECTED_BOUND_EXPOSED_ENDPOINT_PACKAGE_RETAINED"
+  "RIGHT_ENDPOINT_AND_SCALAR_COEFFICIENTS_DERIVED_" ++
+    "LEFT_REFLECTED_EXPANSION_BOUND_ROUTE_PROVED_PACKAGE_RETAINED"
 
 /-- Scalar order-three Taylor polynomial shape expected by the stencil route. -/
 def scalarOrderThreeTaylorPolynomial
@@ -141,12 +149,12 @@ def leftEndpointReflectedTaylorRemainder
     (f : Real -> Real)
     (x h : Real) : Real :=
   mathlibEndpointTaylorRemainder
-    (fun z => f (-z)) (-x) (h - x) (h - x)
+    (fun z => f (-z)) (-x) (-x + h) (-x + h)
 
 /-- The reflected-left tolerance has the same fourth-order size as the target left tolerance. -/
 theorem reflected_left_endpoint_tolerance_matches_original
     (C x h : Real) :
-    mathlibEndpointTaylorTolerance C (-x) (h - x) =
+    mathlibEndpointTaylorTolerance C (-x) (-x + h) =
       mathlibEndpointTaylorTolerance C x (x - h) := by
   unfold mathlibEndpointTaylorTolerance
   norm_num [Nat.factorial]
@@ -162,27 +170,68 @@ theorem left_endpoint_reflected_remainder_bound_from_mathlib
     (h_nonnegative : 0 ≤ h)
     (hf :
       ContDiffOn Real (3 + 1) (fun z => f (-z))
-        (Set.Icc (-x) (h - x)))
+        (Set.Icc (-x) (-x + h)))
     (hC :
-      ∀ y ∈ Set.Icc (-x) (h - x),
+      ∀ y ∈ Set.Icc (-x) (-x + h),
         ‖iteratedDerivWithin (3 + 1) (fun z => f (-z))
-          (Set.Icc (-x) (h - x)) y‖ ≤ C) :
+          (Set.Icc (-x) (-x + h)) y‖ ≤ C) :
     |leftEndpointReflectedTaylorRemainder f x h| ≤
       mathlibEndpointTaylorTolerance C x (x - h) := by
-  have hbase_upper : -x ≤ h - x := by
+  have hbase_upper : -x ≤ -x + h := by
     linarith
-  have hendpoint : h - x ∈ Set.Icc (-x) (h - x) := by
+  have hendpoint : -x + h ∈ Set.Icc (-x) (-x + h) := by
     exact ⟨hbase_upper, le_rfl⟩
   calc
     |leftEndpointReflectedTaylorRemainder f x h| ≤
-        mathlibEndpointTaylorTolerance C (-x) (h - x) := by
+        mathlibEndpointTaylorTolerance C (-x) (-x + h) := by
           exact
             mathlib_endpoint_taylor_remainder_bound
-              (f := fun z => f (-z)) (base := -x) (upper := h - x)
-              (C := C) (endpoint := h - x)
+              (f := fun z => f (-z)) (base := -x) (upper := -x + h)
+              (C := C) (endpoint := -x + h)
               hbase_upper hf hendpoint hC
     _ = mathlibEndpointTaylorTolerance C x (x - h) := by
           rw [reflected_left_endpoint_tolerance_matches_original]
+
+/--
+The reflected coordinate gives an actual left endpoint expansion with
+coefficients of `z ↦ f (-z)` on the reflected interval.
+-/
+theorem left_endpoint_reflected_expansion_from_scalar_coefficients
+    {f : Real -> Real}
+    {x h : Real} :
+    f (x - h) =
+      scalarOrderThreeTaylorPolynomial
+        (f x)
+        (iteratedDerivWithin 1 (fun z => f (-z))
+          (Set.Icc (-x) (-x + h)) (-x))
+        (iteratedDerivWithin 2 (fun z => f (-z))
+          (Set.Icc (-x) (-x + h)) (-x))
+        (iteratedDerivWithin 3 (fun z => f (-z))
+          (Set.Icc (-x) (-x + h)) (-x))
+        h +
+        leftEndpointReflectedTaylorRemainder f x h := by
+  unfold leftEndpointReflectedTaylorRemainder
+    mathlibEndpointTaylorRemainder
+  have hneg : -(-x + h) = x - h := by
+    ring
+  simp only
+  rw [hneg]
+  rw [taylorWithinEval_order_three_scalar_coefficients_right
+    (fun z => f (-z)) (Set.Icc (-x) (-x + h)) (-x) h]
+  ring_nf
+
+/-- Reflected coefficients with alternating signs match the centered left polynomial. -/
+theorem reflected_scalar_polynomial_orientation_eq_left
+    (value first second third h reflectedFirst reflectedSecond reflectedThird : Real)
+    (hfirst : reflectedFirst = -first)
+    (hsecond : reflectedSecond = second)
+    (hthird : reflectedThird = -third) :
+    scalarOrderThreeTaylorPolynomial
+        value reflectedFirst reflectedSecond reflectedThird h =
+      scalarOrderThreeTaylorPolynomial value first second third (-h) := by
+  rw [hfirst, hsecond, hthird]
+  unfold scalarOrderThreeTaylorPolynomial
+  ring
 
 /--
 Data still needed to derive the A1A8 endpoint package from mathlib endpoint
@@ -485,6 +534,197 @@ def taylorRemainderControlOfScalarCoefficientEndpointPackage
     h_nonzero refinementParameter refinementParameterPositive
     (symmetricTaylorStencilBridgeOfScalarCoefficientEndpointPackage data)
 
+/--
+Left-orientation data after the reflected endpoint expansion/bound is
+theorem-derived.  The remaining supplied facts are the coefficient-orientation
+equalities that identify the reflected Taylor coefficients with the centered
+coefficients used by the right endpoint package.
+-/
+structure LeftEndpointOrientationFromMathlibData
+    (f : Real -> Real)
+    (x h C : Real) where
+  h_nonnegative : 0 ≤ h
+  right_contDiffOn_center_to_endpoint :
+    ContDiffOn Real (3 + 1) f (Set.Icc x (x + h))
+  right_fourth_derivative_bound :
+    ∀ y ∈ Set.Icc x (x + h),
+      ‖iteratedDerivWithin (3 + 1) f (Set.Icc x (x + h)) y‖ ≤ C
+  reflected_left_contDiffOn :
+    ContDiffOn Real (3 + 1) (fun z => f (-z))
+      (Set.Icc (-x) (-x + h))
+  reflected_left_fourth_derivative_bound :
+    ∀ y ∈ Set.Icc (-x) (-x + h),
+      ‖iteratedDerivWithin (3 + 1) (fun z => f (-z))
+        (Set.Icc (-x) (-x + h)) y‖ ≤ C
+  fourth_derivative_bound_nonnegative : 0 ≤ C
+  c4_smoothness_on_symmetric_interval : Prop
+  c4_smoothness_on_symmetric_interval_supplied :
+    c4_smoothness_on_symmetric_interval
+  two_sided_interval_model : Prop
+  two_sided_interval_model_supplied :
+    two_sided_interval_model
+  sample_reconstruction_matches_stencil : Prop
+  sample_reconstruction_matches_stencil_supplied :
+    sample_reconstruction_matches_stencil
+  centered_coefficient_alignment_across_endpoint_intervals : Prop
+  centered_coefficient_alignment_across_endpoint_intervals_supplied :
+    centered_coefficient_alignment_across_endpoint_intervals
+  first_reflected_coefficient_orientation :
+    iteratedDerivWithin 1 (fun z => f (-z))
+        (Set.Icc (-x) (-x + h)) (-x) =
+      -iteratedDerivWithin 1 f (Set.Icc x (x + h)) x
+  second_reflected_coefficient_orientation :
+    iteratedDerivWithin 2 (fun z => f (-z))
+        (Set.Icc (-x) (-x + h)) (-x) =
+      iteratedDerivWithin 2 f (Set.Icc x (x + h)) x
+  third_reflected_coefficient_orientation :
+    iteratedDerivWithin 3 (fun z => f (-z))
+        (Set.Icc (-x) (-x + h)) (-x) =
+      -iteratedDerivWithin 3 f (Set.Icc x (x + h)) x
+
+/--
+Reflected-left orientation data constructs the endpoint package without a
+supplied left expansion or supplied left remainder bound.
+-/
+def mathlibEndpointPackageOfLeftOrientationData
+    {f : Real -> Real}
+    {x h C : Real}
+    (data : LeftEndpointOrientationFromMathlibData f x h C) :
+    MathlibEndpointTaylorExpansionPackage f x h C where
+  value := f x
+  first_derivative :=
+    iteratedDerivWithin 1 f (Set.Icc x (x + h)) x
+  second_derivative :=
+    iteratedDerivWithin 2 f (Set.Icc x (x + h)) x
+  third_derivative :=
+    iteratedDerivWithin 3 f (Set.Icc x (x + h)) x
+  left_remainder := leftEndpointReflectedTaylorRemainder f x h
+  right_remainder :=
+    mathlibEndpointTaylorRemainder f x (x + h) (x + h)
+  fourth_derivative_bound_nonnegative :=
+    data.fourth_derivative_bound_nonnegative
+  c4_smoothness_on_symmetric_interval :=
+    data.c4_smoothness_on_symmetric_interval
+  c4_smoothness_on_symmetric_interval_supplied :=
+    data.c4_smoothness_on_symmetric_interval_supplied
+  two_sided_interval_model := data.two_sided_interval_model
+  two_sided_interval_model_supplied :=
+    data.two_sided_interval_model_supplied
+  sample_reconstruction_matches_stencil :=
+    data.sample_reconstruction_matches_stencil
+  sample_reconstruction_matches_stencil_supplied :=
+    data.sample_reconstruction_matches_stencil_supplied
+  right_mathlib_endpoint_bound_available := True
+  right_mathlib_endpoint_bound_available_supplied := True.intro
+  left_mathlib_endpoint_bound_available := True
+  left_mathlib_endpoint_bound_available_supplied := True.intro
+  right_centered_basepoint_alignment := True
+  right_centered_basepoint_alignment_supplied := True.intro
+  left_centered_basepoint_alignment :=
+    data.centered_coefficient_alignment_across_endpoint_intervals
+  left_centered_basepoint_alignment_supplied :=
+    data.centered_coefficient_alignment_across_endpoint_intervals_supplied
+  right_taylor_within_eval_coefficient_alignment := True
+  right_taylor_within_eval_coefficient_alignment_supplied := True.intro
+  left_taylor_within_eval_coefficient_alignment :=
+    data.centered_coefficient_alignment_across_endpoint_intervals
+  left_taylor_within_eval_coefficient_alignment_supplied :=
+    data.centered_coefficient_alignment_across_endpoint_intervals_supplied
+  center_expansion := rfl
+  right_expansion := by
+    rw [right_endpoint_expansion_from_scalar_coefficients (f := f) (x := x) (h := h)]
+    unfold scalarOrderThreeTaylorPolynomial
+    ring
+  left_expansion := by
+    calc
+      f (x - h) =
+          scalarOrderThreeTaylorPolynomial
+            (f x)
+            (iteratedDerivWithin 1 (fun z => f (-z))
+              (Set.Icc (-x) (-x + h)) (-x))
+            (iteratedDerivWithin 2 (fun z => f (-z))
+              (Set.Icc (-x) (-x + h)) (-x))
+            (iteratedDerivWithin 3 (fun z => f (-z))
+              (Set.Icc (-x) (-x + h)) (-x))
+            h +
+            leftEndpointReflectedTaylorRemainder f x h :=
+              left_endpoint_reflected_expansion_from_scalar_coefficients
+      _ =
+          scalarOrderThreeTaylorPolynomial
+            (f x)
+            (iteratedDerivWithin 1 f (Set.Icc x (x + h)) x)
+            (iteratedDerivWithin 2 f (Set.Icc x (x + h)) x)
+            (iteratedDerivWithin 3 f (Set.Icc x (x + h)) x)
+            (-h) +
+            leftEndpointReflectedTaylorRemainder f x h := by
+              rw [reflected_scalar_polynomial_orientation_eq_left
+                (f x)
+                (iteratedDerivWithin 1 f (Set.Icc x (x + h)) x)
+                (iteratedDerivWithin 2 f (Set.Icc x (x + h)) x)
+                (iteratedDerivWithin 3 f (Set.Icc x (x + h)) x)
+                h
+                (iteratedDerivWithin 1 (fun z => f (-z))
+                  (Set.Icc (-x) (-x + h)) (-x))
+                (iteratedDerivWithin 2 (fun z => f (-z))
+                  (Set.Icc (-x) (-x + h)) (-x))
+                (iteratedDerivWithin 3 (fun z => f (-z))
+                  (Set.Icc (-x) (-x + h)) (-x))
+                data.first_reflected_coefficient_orientation
+                data.second_reflected_coefficient_orientation
+                data.third_reflected_coefficient_orientation]
+      _ =
+          f x -
+            iteratedDerivWithin 1 f (Set.Icc x (x + h)) x * h +
+            iteratedDerivWithin 2 f (Set.Icc x (x + h)) x * h * h / 2 -
+            iteratedDerivWithin 3 f (Set.Icc x (x + h)) x * h * h * h / 6 +
+            leftEndpointReflectedTaylorRemainder f x h := by
+              unfold scalarOrderThreeTaylorPolynomial
+              ring
+  right_remainder_bound_from_mathlib :=
+    right_endpoint_remainder_bound_from_mathlib
+      data.h_nonnegative
+      data.right_contDiffOn_center_to_endpoint
+      data.right_fourth_derivative_bound
+  left_remainder_bound_from_mathlib :=
+    left_endpoint_reflected_remainder_bound_from_mathlib
+      data.h_nonnegative
+      data.reflected_left_contDiffOn
+      data.reflected_left_fourth_derivative_bound
+
+/-- The left-orientation route uses the reflected remainder field. -/
+theorem left_orientation_endpoint_package_left_remainder_field_v0
+    {f : Real -> Real}
+    {x h C : Real}
+    (data : LeftEndpointOrientationFromMathlibData f x h C) :
+    (mathlibEndpointPackageOfLeftOrientationData data).left_remainder =
+      leftEndpointReflectedTaylorRemainder f x h := by
+  rfl
+
+/-- Left-orientation data feeds the symmetric Taylor bridge. -/
+def symmetricTaylorStencilBridgeOfLeftOrientationEndpointPackage
+    {f : Real -> Real}
+    {x h C : Real}
+    (data : LeftEndpointOrientationFromMathlibData f x h C) :
+    SymmetricTaylorStencilBridge f x h (4 * C) :=
+  symmetricTaylorStencilBridgeOfMathlibEndpointAlignment
+    (mathlibEndpointPackageOfLeftOrientationData data)
+
+/-- Left-orientation data feeds the prior TaylorRemainderControl route. -/
+def taylorRemainderControlOfLeftOrientationEndpointPackage
+    {f : Real -> Real}
+    {x h C : Real}
+    (h_nonzero : h * h ≠ 0)
+    (refinementParameter : Nat)
+    (refinementParameterPositive : 0 < refinementParameter)
+    (data : LeftEndpointOrientationFromMathlibData f x h C) :
+    TaylorRemainderControl h
+      (symmetricTaylorBridgeRemainderField
+        (symmetricTaylorStencilBridgeOfLeftOrientationEndpointPackage data))
+      (fourthDerivativeStencilTolerance (4 * C) h) :=
+  taylorRemainderControlOfSymmetricTaylorStencilBridge
+    h_nonzero refinementParameter refinementParameterPositive
+    (symmetricTaylorStencilBridgeOfLeftOrientationEndpointPackage data)
+
 /-- The constructed package uses the theorem-derived right mathlib remainder. -/
 theorem mathlib_endpoint_package_derivation_right_remainder_field_v0
     {f : Real -> Real}
@@ -597,6 +837,13 @@ def endpointPackageDerivationCompletedPrerequisiteIdsV0 : List String :=
   [ "A2A15A1A9_PREREQUISITE_TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA"
   ]
 
+/-- Concrete theorem subtargets discharged inside the endpoint-package route. -/
+def endpointPackageDerivationCompletedSubtargetIdsV0 : List String :=
+  [ "A2A15A1A9_SUBTARGET_TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA"
+  , "A2A15A1A9_SUBTARGET_REFLECTED_LEFT_ENDPOINT_EXPANSION_AND_BOUND"
+  , "A2A15A1A9_SUBTARGET_LEFT_ORIENTATION_DATA_TO_ENDPOINT_PACKAGE_ROUTE"
+  ]
+
 /-- Endpoint-package prerequisites that remain after the scalar formula proof. -/
 def endpointPackageDerivationRemainingPrerequisiteIdsV0 : List String :=
   [ "A2A15A1A9_PREREQUISITE_LEFT_ENDPOINT_TAYLOR_ORIENTATION"
@@ -617,6 +864,15 @@ theorem endpoint_package_derivation_prerequisite_ids_v0_expected :
 theorem endpoint_package_derivation_completed_prerequisite_ids_v0_expected :
     endpointPackageDerivationCompletedPrerequisiteIdsV0 =
       [ "A2A15A1A9_PREREQUISITE_TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA"
+      ] := by
+  rfl
+
+/-- The completed endpoint-package theorem subtarget inventory is stable. -/
+theorem endpoint_package_derivation_completed_subtarget_ids_v0_expected :
+    endpointPackageDerivationCompletedSubtargetIdsV0 =
+      [ "A2A15A1A9_SUBTARGET_TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA"
+      , "A2A15A1A9_SUBTARGET_REFLECTED_LEFT_ENDPOINT_EXPANSION_AND_BOUND"
+      , "A2A15A1A9_SUBTARGET_LEFT_ORIENTATION_DATA_TO_ENDPOINT_PACKAGE_ROUTE"
       ] := by
   rfl
 
@@ -666,6 +922,15 @@ structure EndpointPackageDerivationFromMathlibStatus where
   reflected_left_endpoint_bound_from_mathlib_proved : Prop
   reflected_left_endpoint_bound_from_mathlib_proved_supplied :
     reflected_left_endpoint_bound_from_mathlib_proved
+  reflected_left_endpoint_expansion_proved : Prop
+  reflected_left_endpoint_expansion_proved_supplied :
+    reflected_left_endpoint_expansion_proved
+  left_orientation_data_to_endpoint_package_proved : Prop
+  left_orientation_data_to_endpoint_package_proved_supplied :
+    left_orientation_data_to_endpoint_package_proved
+  left_orientation_data_to_taylor_control_proved : Prop
+  left_orientation_data_to_taylor_control_proved_supplied :
+    left_orientation_data_to_taylor_control_proved
   left_endpoint_orientation_proved : Prop
   left_endpoint_orientation_not_proved :
     Not left_endpoint_orientation_proved
@@ -674,6 +939,7 @@ structure EndpointPackageDerivationFromMathlibStatus where
   parent_channel_retained_blocker_id : String
   prior_mathlib_alignment_retained_blocker_id : String
   retained_blocker_id : String
+  left_endpoint_orientation_retained_blocker_id : String
   outcome_id : String
   anti_loop_rule_id : String
   successor_kinds : List A2A15A1SuccessorKind
@@ -681,6 +947,7 @@ structure EndpointPackageDerivationFromMathlibStatus where
   next_strict_target_id : String
   endpoint_package_prerequisite_ids : List String
   endpoint_package_completed_prerequisite_ids : List String
+  endpoint_package_completed_subtarget_ids : List String
   endpoint_package_remaining_prerequisite_ids : List String
   uniform_mesh_convergence_downstream_until_endpoint_package : Prop
   uniform_mesh_convergence_downstream_until_endpoint_package_supplied :
@@ -689,9 +956,10 @@ structure EndpointPackageDerivationFromMathlibStatus where
   phase2_not_authorized : Not phase2Authorized
 
 /--
-Current status: the right endpoint is theorem-derived from mathlib, but the
-full two-sided endpoint package still depends on scalar coefficient alignment
-and left endpoint orientation facts.
+Current status: the right endpoint, scalar coefficient formula, and reflected
+left endpoint expansion/bound are theorem-derived from mathlib-facing data,
+but the full two-sided endpoint package still depends on original
+left-coefficient orientation facts.
 -/
 def endpointPackageDerivationFromMathlibStatusV0 :
     EndpointPackageDerivationFromMathlibStatus where
@@ -713,6 +981,12 @@ def endpointPackageDerivationFromMathlibStatusV0 :
   taylor_within_eval_scalar_coefficients_proved_supplied := True.intro
   reflected_left_endpoint_bound_from_mathlib_proved := True
   reflected_left_endpoint_bound_from_mathlib_proved_supplied := True.intro
+  reflected_left_endpoint_expansion_proved := True
+  reflected_left_endpoint_expansion_proved_supplied := True.intro
+  left_orientation_data_to_endpoint_package_proved := True
+  left_orientation_data_to_endpoint_package_proved_supplied := True.intro
+  left_orientation_data_to_taylor_control_proved := True
+  left_orientation_data_to_taylor_control_proved_supplied := True.intro
   left_endpoint_orientation_proved := False
   left_endpoint_orientation_not_proved := by
     intro h
@@ -727,6 +1001,8 @@ def endpointPackageDerivationFromMathlibStatusV0 :
     phase1Blocker003A2A15A1A8MathlibEndpointTaylorAlignmentRetainedId
   retained_blocker_id :=
     phase1Blocker003A2A15A1A9EndpointPackageDerivationFromMathlibRetainedId
+  left_endpoint_orientation_retained_blocker_id :=
+    phase1Blocker003A2A15A1A9LeftEndpointOrientationRetainedId
   outcome_id := graphLaplacianEndpointPackageDerivationFromMathlibOutcomeId
   anti_loop_rule_id := analyticIntervalLiftNoMoreChildSplitsRuleId
   successor_kinds := endpointPackageDerivationFromMathlibSuccessorKindsV0
@@ -738,6 +1014,8 @@ def endpointPackageDerivationFromMathlibStatusV0 :
     endpointPackageDerivationPrerequisiteIdsV0
   endpoint_package_completed_prerequisite_ids :=
     endpointPackageDerivationCompletedPrerequisiteIdsV0
+  endpoint_package_completed_subtarget_ids :=
+    endpointPackageDerivationCompletedSubtargetIdsV0
   endpoint_package_remaining_prerequisite_ids :=
     endpointPackageDerivationRemainingPrerequisiteIdsV0
   uniform_mesh_convergence_downstream_until_endpoint_package := True
@@ -803,6 +1081,23 @@ theorem endpoint_package_derivation_reflected_left_bound_proved_v0 :
   exact
     ePkgDerivStatusV0.reflected_left_endpoint_bound_from_mathlib_proved_supplied
 
+/-- The reflected left endpoint expansion is now theorem-derived. -/
+theorem endpoint_package_derivation_reflected_left_expansion_proved_v0 :
+    ePkgDerivStatusV0.reflected_left_endpoint_expansion_proved := by
+  exact ePkgDerivStatusV0.reflected_left_endpoint_expansion_proved_supplied
+
+/-- Supplied orientation equalities now construct the endpoint package. -/
+theorem endpoint_package_derivation_left_orientation_data_to_endpoint_package_proved_v0 :
+    ePkgDerivStatusV0.left_orientation_data_to_endpoint_package_proved := by
+  exact
+    ePkgDerivStatusV0.left_orientation_data_to_endpoint_package_proved_supplied
+
+/-- Supplied orientation equalities now feed the TaylorRemainderControl route. -/
+theorem endpoint_package_derivation_left_orientation_data_to_taylor_control_proved_v0 :
+    ePkgDerivStatusV0.left_orientation_data_to_taylor_control_proved := by
+  exact
+    ePkgDerivStatusV0.left_orientation_data_to_taylor_control_proved_supplied
+
 /-- Left endpoint orientation remains retained. -/
 theorem endpoint_package_derivation_left_orientation_not_proved_v0 :
     Not ePkgDerivStatusV0.left_endpoint_orientation_proved := by
@@ -829,6 +1124,12 @@ theorem endpoint_package_derivation_prior_a1a8_retained_id_v0 :
 theorem endpoint_package_derivation_retained_id_v0 :
     endpointPackageDerivationFromMathlibStatusReadoutV0.retained_blocker_id =
       phase1Blocker003A2A15A1A9EndpointPackageDerivationFromMathlibRetainedId := by
+  rfl
+
+/-- The left endpoint orientation retained blocker remains exposed. -/
+theorem endpoint_package_derivation_left_orientation_retained_id_v0 :
+    ePkgDerivStatusV0.left_endpoint_orientation_retained_blocker_id =
+      phase1Blocker003A2A15A1A9LeftEndpointOrientationRetainedId := by
   rfl
 
 /-- The theorem-facing surface exposes its outcome id. -/
@@ -865,6 +1166,12 @@ theorem endpoint_package_derivation_prerequisite_ids_v0 :
 theorem endpoint_package_derivation_completed_prerequisite_ids_v0 :
     ePkgDerivStatusV0.endpoint_package_completed_prerequisite_ids =
       endpointPackageDerivationCompletedPrerequisiteIdsV0 := by
+  rfl
+
+/-- The status readout exposes completed theorem subtargets. -/
+theorem endpoint_package_derivation_completed_subtarget_ids_v0 :
+    ePkgDerivStatusV0.endpoint_package_completed_subtarget_ids =
+      endpointPackageDerivationCompletedSubtargetIdsV0 := by
   rfl
 
 /-- The status readout exposes the remaining endpoint-package prerequisites. -/
