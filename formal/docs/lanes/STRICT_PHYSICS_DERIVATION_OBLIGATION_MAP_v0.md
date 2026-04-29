@@ -34,6 +34,21 @@ Governance-manifest boundary:
 - These focused gates are not enrolled into `formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json` by this map.
 - Governance-manifest promotion remains subject to the recovery freeze policy.
 
+Phase 0-5 objective-quality plan status:
+- `SCALAR_QFT_PHASE0_5_OBJECTIVE_QUALITY_COMPLETION_STATUS_v0: NO_FULL_PLAN_COMPLETION_CLAIM_PHASE0_COMPLETE_PHASE1_ADVANCED_PARTIAL_PHASE2_OPEN_PHASE2B_OPEN_PHASE3_PARTIAL_PHASE4_PARTIAL_PHASE5_OPEN`
+- `SCALAR_QFT_PHASE0_5_DECISIVE_OPEN_ITEMS_v0: A1A_A2A15A1_ENDPOINT_PACKAGE_AND_UNIFORM_CONVERGENCE_OPEN_PHASE2_UNAUTHORIZED_PHASE2B_TERM_LEVEL_NEUTRALIZATION_OPEN`
+- Phase 0 baseline/acceptance contract is complete.
+- Phase 1 structured-source/scalar-witness hardening is advanced but partial.
+- Phase 2 continuum obligation discharge is not complete because A1A/A2A15A1 analytic lift remains retained.
+- Phase 2B neutralization reduction is not complete because free-scalar block neutralization still relies on regime assumptions rather than term-level neutralization lemmas.
+- Phase 3 doc sync and Phase 4 blocker-movement/KPI discipline are partial/ongoing rather than final.
+- Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
+
+Next strict scalar/QFT target:
+- `SCALAR_QFT_NEXT_STRICT_TARGET_v0: A2A15A1A9_ENDPOINT_PACKAGE_DERIVATION_LEFT_ENDPOINT_TAYLOR_ORIENTATION_PLUS_TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA_PLUS_TWO_SIDED_ENDPOINT_PACKAGE`
+- `SCALAR_QFT_UNIFORM_MESH_CONVERGENCE_ORDERING_v0: DOWNSTREAM_UNTIL_ENDPOINT_PACKAGE_DERIVED_OR_EXPLICITLY_BLOCKED`
+- Uniform mesh convergence work must remain downstream until the endpoint package is fully derived or the endpoint package derivation is explicitly blocked.
+
 ## Current Formal Physics Increment
 
 New mechanically checked proof surface:

@@ -13,6 +13,8 @@ Scope:
   package
 - feed that derived package through the already-proved symmetric Taylor and
   TaylorRemainderControl route
+- record the next strict endpoint-package targets before uniform mesh
+  convergence may become the active theorem target
 - retain the unsupplied scalar `taylorWithinEval` coefficient formula,
   centered two-sided package derivation, left endpoint orientation, uniform
   mesh convergence, full A1A closure, A2A15A1 closure, Phase 2 authorization,
@@ -321,6 +323,26 @@ theorem endpoint_package_derivation_from_mathlib_obstructions_v0_expected :
       ] := by
   rfl
 
+/-- Next strict target after the current A1A9 right-endpoint slice. -/
+def endpointPackageDerivationNextStrictTargetId : String :=
+  "A2A15A1A9_NEXT_STRICT_TARGET_FINISH_ENDPOINT_PACKAGE_DERIVATION"
+
+/-- Endpoint-package prerequisites that must precede uniform mesh convergence. -/
+def endpointPackageDerivationPrerequisiteIdsV0 : List String :=
+  [ "A2A15A1A9_PREREQUISITE_LEFT_ENDPOINT_TAYLOR_ORIENTATION"
+  , "A2A15A1A9_PREREQUISITE_TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA"
+  , "A2A15A1A9_PREREQUISITE_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION"
+  ]
+
+/-- The endpoint-package prerequisite inventory is stable. -/
+theorem endpoint_package_derivation_prerequisite_ids_v0_expected :
+    endpointPackageDerivationPrerequisiteIdsV0 =
+      [ "A2A15A1A9_PREREQUISITE_LEFT_ENDPOINT_TAYLOR_ORIENTATION"
+      , "A2A15A1A9_PREREQUISITE_TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA"
+      , "A2A15A1A9_PREREQUISITE_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION"
+      ] := by
+  rfl
+
 /-- This theorem-facing slice records concrete obstruction. -/
 def endpointPackageDerivationFromMathlibSuccessorKindsV0 :
     List A2A15A1SuccessorKind :=
@@ -361,6 +383,11 @@ structure EndpointPackageDerivationFromMathlibStatus where
   anti_loop_rule_id : String
   successor_kinds : List A2A15A1SuccessorKind
   obstruction_ids : List String
+  next_strict_target_id : String
+  endpoint_package_prerequisite_ids : List String
+  uniform_mesh_convergence_downstream_until_endpoint_package : Prop
+  uniform_mesh_convergence_downstream_until_endpoint_package_supplied :
+    uniform_mesh_convergence_downstream_until_endpoint_package
   phase2Authorized : Prop
   phase2_not_authorized : Not phase2Authorized
 
@@ -405,6 +432,12 @@ def endpointPackageDerivationFromMathlibStatusV0 :
   obstruction_ids :=
     endpointPackageDerivationFromMathlibObstructionsV0.map
       endpointPackageDerivationFromMathlibObstructionId
+  next_strict_target_id := endpointPackageDerivationNextStrictTargetId
+  endpoint_package_prerequisite_ids :=
+    endpointPackageDerivationPrerequisiteIdsV0
+  uniform_mesh_convergence_downstream_until_endpoint_package := True
+  uniform_mesh_convergence_downstream_until_endpoint_package_supplied :=
+    True.intro
   phase2Authorized := False
   phase2_not_authorized := by
     intro h
@@ -492,6 +525,26 @@ theorem endpoint_package_derivation_successor_kinds_v0 :
     endpointPackageDerivationFromMathlibStatusReadoutV0.successor_kinds =
       endpointPackageDerivationFromMathlibSuccessorKindsV0 := by
   rfl
+
+/-- The next strict target is finishing the endpoint package. -/
+theorem endpoint_package_derivation_next_strict_target_id_v0 :
+    endpointPackageDerivationFromMathlibStatusReadoutV0.next_strict_target_id =
+      endpointPackageDerivationNextStrictTargetId := by
+  rfl
+
+/-- The endpoint-package prerequisites are the active ordered target set. -/
+theorem endpoint_package_derivation_prerequisite_ids_v0 :
+    endpointPackageDerivationFromMathlibStatusReadoutV0.endpoint_package_prerequisite_ids =
+      endpointPackageDerivationPrerequisiteIdsV0 := by
+  rfl
+
+/--
+Uniform mesh convergence remains downstream until the endpoint package is
+derived or explicitly blocked.
+-/
+theorem endpoint_package_derivation_uniform_mesh_convergence_downstream_v0 :
+    ePkgDerivStatusV0.uniform_mesh_convergence_downstream_until_endpoint_package := by
+  exact ePkgDerivStatusV0.uniform_mesh_convergence_downstream_until_endpoint_package_supplied
 
 /-- Phase 2 remains unauthorized after this theorem-facing A1A slice. -/
 theorem endpoint_package_derivation_phase2_not_authorized_v0 :

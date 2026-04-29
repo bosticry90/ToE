@@ -13,6 +13,8 @@ Queue-priority non-replay frontier reconstruction is active in declaration-only 
 Strict scalar/QFT Phase 0 baseline acceptance is GREEN, with theorem-gap baseline 7, seam-gap baseline 3, and retained scalar-lane assumption rows 6.
 The current Lean aggregate imports the strict scalar/QFT analytic blocker split, A2A15 raw-IBP and analytic interval-lift channel surfaces, A2A15A1A graph-Laplacian stencil/Taylor/mathlib endpoint-package retained surfaces through A2A15A1A9, and `ToeFormal.Bridges.QM_STAT_Transport`; `lake build ToeFormal` is green as of 2026-04-29, with existing lint/style warnings only.
 A2A15A1 remains retained under the post-capstone anti-loop rule: further child splits require a proof, falsification, or concrete obstruction, and Phase 2 is not authorized.
+Objective-quality completion for the full scalar/QFT Phase 0-5 plan is NO: Phase 0 is complete; Phase 1 is advanced but partial; Phase 2 and Phase 2B are not complete; Phase 3 and Phase 4 remain partial; Phase 5 is not complete.
+The next strict scalar/QFT target is the A1A9 endpoint-package derivation: left-endpoint Taylor orientation, scalar `taylorWithinEval` coefficient formula, and two-sided endpoint package construction. Uniform mesh convergence remains downstream until that endpoint package is derived or explicitly blocked.
 The external physics benchmark registry is active as contextual non-claim pressure only: no theorem discharge, blocker movement, Phase 2 authorization, master-action promotion, or empirical validation is claimed.
 The governance test manifest remains under the recovery freeze; the new strict-physics gates are focused validation surfaces unless separately promoted under that policy.
 
