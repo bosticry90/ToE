@@ -21,10 +21,11 @@ Scope:
   derivative signs, under `0 < h` and global `C^3` smoothness
 - feed that derived package through the already-proved symmetric Taylor and
   TaylorRemainderControl route
+- name the resulting full two-sided endpoint package construction and feed
+  it through the local stencil error-bound route
 - record the next strict endpoint-package targets before uniform mesh
   convergence may become the active theorem target
-- retain centered two-sided package derivation, uniform mesh convergence,
-  full A1A closure,
+- retain uniform mesh convergence, full A1A closure,
   A2A15A1 closure, Phase 2 authorization,
   continuum closure, seam closure, empirical validation, and master-action
   promotion
@@ -72,9 +73,7 @@ def phase1Blocker003A2A15A1A9CenteredEndpointCoefficientAlignmentRetainedId :
 
 /-- Outcome id for this endpoint-package derivation slice. -/
 def graphLaplacianEndpointPackageDerivationFromMathlibOutcomeId : String :=
-  "RIGHT_ENDPOINT_AND_SCALAR_COEFFICIENTS_DERIVED_" ++
-    "LEFT_REFLECTED_AND_CENTERED_ALIGNMENT_FROM_MATHLIB_PROVED_" ++
-    "TWO_SIDED_PACKAGE_RETAINED"
+  "TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTED_UNIFORM_MESH_CONVERGENCE_RETAINED"
 
 /-- Scalar order-three Taylor polynomial shape expected by the stencil route. -/
 def scalarOrderThreeTaylorPolynomial
@@ -1112,6 +1111,119 @@ def taylorRemainderControlOfGlobalCenteredAlignmentData
     h_nonzero refinementParameter refinementParameterPositive
     (symmetricTaylorStencilBridgeOfGlobalCenteredAlignmentData data)
 
+/--
+The full two-sided endpoint package obtained from the right endpoint route,
+the reflected-left endpoint route, the discharged centered alignment, and the
+two endpoint remainder bounds.
+-/
+def twoSidedEndpointPackageOfGlobalCenteredAlignmentData
+    {f : Real -> Real}
+    {x h C : Real}
+    (data :
+      EndpointPackageDerivationWithGlobalCenteredAlignmentData f x h C) :
+    MathlibEndpointTaylorExpansionPackage f x h C :=
+  mathlibEndpointPackageOfGlobalCenteredAlignmentData data
+
+/-- The two-sided package has the theorem-derived right remainder field. -/
+theorem two_sided_endpoint_package_right_remainder_field_v0
+    {f : Real -> Real}
+    {x h C : Real}
+    (data :
+      EndpointPackageDerivationWithGlobalCenteredAlignmentData f x h C) :
+    (twoSidedEndpointPackageOfGlobalCenteredAlignmentData data).right_remainder =
+      mathlibEndpointTaylorRemainder f x (x + h) (x + h) := by
+  rfl
+
+/-- The two-sided package has the reflected-left remainder field. -/
+theorem two_sided_endpoint_package_left_remainder_field_v0
+    {f : Real -> Real}
+    {x h C : Real}
+    (data :
+      EndpointPackageDerivationWithGlobalCenteredAlignmentData f x h C) :
+    (twoSidedEndpointPackageOfGlobalCenteredAlignmentData data).left_remainder =
+      leftEndpointReflectedTaylorRemainder f x h := by
+  rfl
+
+/-- The constructed two-sided package feeds the symmetric Taylor bridge. -/
+def symmetricTaylorStencilBridgeOfTwoSidedEndpointPackage
+    {f : Real -> Real}
+    {x h C : Real}
+    (data :
+      EndpointPackageDerivationWithGlobalCenteredAlignmentData f x h C) :
+    SymmetricTaylorStencilBridge f x h (4 * C) :=
+  symmetricTaylorStencilBridgeOfMathlibEndpointAlignment
+    (twoSidedEndpointPackageOfGlobalCenteredAlignmentData data)
+
+/-- The two-sided endpoint package supplies the scaled stencil remainder bound. -/
+theorem two_sided_endpoint_package_supplies_scaled_stencil_bound
+    {f : Real -> Real}
+    {x h C : Real}
+    (h_nonzero : h * h ≠ 0)
+    (data :
+      EndpointPackageDerivationWithGlobalCenteredAlignmentData f x h C) :
+    scaledStencilRemainderErrorBound h
+      (symmetricTaylorBridgeRemainderField
+        (symmetricTaylorStencilBridgeOfTwoSidedEndpointPackage data))
+      (fourthDerivativeStencilTolerance (4 * C) h) := by
+  exact
+    symmetric_taylor_bridge_supplies_scaled_stencil_bound
+      h_nonzero
+      (symmetricTaylorStencilBridgeOfTwoSidedEndpointPackage data)
+
+/-- The constructed two-sided package feeds the TaylorRemainderControl route. -/
+def taylorRemainderControlOfTwoSidedEndpointPackage
+    {f : Real -> Real}
+    {x h C : Real}
+    (h_nonzero : h * h ≠ 0)
+    (refinementParameter : Nat)
+    (refinementParameterPositive : 0 < refinementParameter)
+    (data :
+      EndpointPackageDerivationWithGlobalCenteredAlignmentData f x h C) :
+    TaylorRemainderControl h
+      (symmetricTaylorBridgeRemainderField
+        (symmetricTaylorStencilBridgeOfTwoSidedEndpointPackage data))
+      (fourthDerivativeStencilTolerance (4 * C) h) :=
+  taylorRemainderControlOfSymmetricTaylorStencilBridge
+    h_nonzero refinementParameter refinementParameterPositive
+    (symmetricTaylorStencilBridgeOfTwoSidedEndpointPackage data)
+
+/--
+The two-sided endpoint package reaches the local stencil error-bound theorem
+with the Taylor coefficients associated to the package.
+-/
+theorem two_sided_endpoint_package_feeds_local_stencil_error_bound
+    {f : Real -> Real}
+    {x h C : Real}
+    (h_nonzero : h * h ≠ 0)
+    (refinementParameter : Nat)
+    (refinementParameterPositive : 0 < refinementParameter)
+    (data :
+      EndpointPackageDerivationWithGlobalCenteredAlignmentData f x h C) :
+    |centeredScaledGraphLaplacianAtCenter h
+        (sampledQuadraticCubicRemainderField
+          ((twoSidedEndpointPackageOfGlobalCenteredAlignmentData data).second_derivative / 2)
+          (twoSidedEndpointPackageOfGlobalCenteredAlignmentData data).first_derivative
+          (twoSidedEndpointPackageOfGlobalCenteredAlignmentData data).value
+          ((twoSidedEndpointPackageOfGlobalCenteredAlignmentData data).third_derivative / 6)
+          h
+          (symmetricTaylorBridgeRemainderField
+            (symmetricTaylorStencilBridgeOfTwoSidedEndpointPackage data))) -
+      quadraticContinuumSecondDerivative
+        ((twoSidedEndpointPackageOfGlobalCenteredAlignmentData data).second_derivative / 2)| ≤
+      fourthDerivativeStencilTolerance (4 * C) h := by
+  exact
+    taylor_remainder_control_feeds_local_stencil_error_bound
+      ((twoSidedEndpointPackageOfGlobalCenteredAlignmentData data).second_derivative / 2)
+      (twoSidedEndpointPackageOfGlobalCenteredAlignmentData data).first_derivative
+      (twoSidedEndpointPackageOfGlobalCenteredAlignmentData data).value
+      ((twoSidedEndpointPackageOfGlobalCenteredAlignmentData data).third_derivative / 6)
+      h (fourthDerivativeStencilTolerance (4 * C) h)
+      (symmetricTaylorBridgeRemainderField
+        (symmetricTaylorStencilBridgeOfTwoSidedEndpointPackage data))
+      h_nonzero
+      (taylorRemainderControlOfTwoSidedEndpointPackage
+        h_nonzero refinementParameter refinementParameterPositive data)
+
 /-- The constructed package uses the theorem-derived right mathlib remainder. -/
 theorem mathlib_endpoint_package_derivation_right_remainder_field_v0
     {f : Real -> Real}
@@ -1184,8 +1296,7 @@ def endpointPackageDerivationFromMathlibObstructionId :
 /-- Exact obstruction inventory for the endpoint package derivation slice. -/
 def endpointPackageDerivationFromMathlibObstructionsV0 :
     List EndpointPackageDerivationFromMathlibObstruction :=
-  [ .noTwoSidedEndpointPackageFromSingleMathlibTheorem
-  , .noUniformMeshConvergence
+  [ .noUniformMeshConvergence
   , .noSampleReconstructionCompatibility
   , .noContinuumLaplacianSemantics
   , .noOperatorDomainClosure
@@ -1195,8 +1306,7 @@ def endpointPackageDerivationFromMathlibObstructionsV0 :
 /-- The endpoint package derivation obstruction inventory is stable. -/
 theorem endpoint_package_derivation_from_mathlib_obstructions_v0_expected :
     endpointPackageDerivationFromMathlibObstructionsV0 =
-      [ .noTwoSidedEndpointPackageFromSingleMathlibTheorem
-      , .noUniformMeshConvergence
+      [ .noUniformMeshConvergence
       , .noSampleReconstructionCompatibility
       , .noContinuumLaplacianSemantics
       , .noOperatorDomainClosure
@@ -1204,9 +1314,9 @@ theorem endpoint_package_derivation_from_mathlib_obstructions_v0_expected :
       ] := by
   rfl
 
-/-- Next strict target after deriving centered coefficient alignment. -/
+/-- Next strict target after constructing the two-sided endpoint package. -/
 def endpointPackageDerivationNextStrictTargetId : String :=
-  "A2A15A1A9_NEXT_STRICT_TARGET_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION"
+  "A2A15A1A9_NEXT_STRICT_TARGET_UNIFORM_MESH_CONVERGENCE_DOWNSTREAM"
 
 /-- Endpoint-package prerequisites that must precede uniform mesh convergence. -/
 def endpointPackageDerivationPrerequisiteIdsV0 : List String :=
@@ -1221,6 +1331,7 @@ def endpointPackageDerivationCompletedPrerequisiteIdsV0 : List String :=
   [ "A2A15A1A9_PREREQUISITE_TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA"
   , "A2A15A1A9_PREREQUISITE_REFLECTED_LEFT_ENDPOINT_EXPANSION_AND_BOUND"
   , "A2A15A1A9_PREREQUISITE_CENTERED_COEFFICIENT_ALIGNMENT_ACROSS_ENDPOINT_INTERVALS"
+  , "A2A15A1A9_PREREQUISITE_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION"
   ]
 
 /-- Concrete theorem subtargets discharged inside the endpoint-package route. -/
@@ -1230,12 +1341,13 @@ def endpointPackageDerivationCompletedSubtargetIdsV0 : List String :=
   , "A2A15A1A9_SUBTARGET_LEFT_ORIENTATION_DATA_TO_ENDPOINT_PACKAGE_ROUTE"
   , "A2A15A1A9_SUBTARGET_CENTERED_ENDPOINT_COEFFICIENT_ALIGNMENT_OBJECT_AND_PACKAGE_ROUTE"
   , "A2A15A1A9_SUBTARGET_CENTERED_ENDPOINT_COEFFICIENT_ALIGNMENT_FROM_GLOBAL_CONDIFF"
+  , "A2A15A1A9_SUBTARGET_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION"
+  , "A2A15A1A9_SUBTARGET_TWO_SIDED_ENDPOINT_PACKAGE_TO_LOCAL_STENCIL_BOUND_ROUTE"
   ]
 
 /-- Endpoint-package prerequisites that remain after deriving centered alignment. -/
 def endpointPackageDerivationRemainingPrerequisiteIdsV0 : List String :=
-  [ "A2A15A1A9_PREREQUISITE_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION"
-  ]
+  []
 
 /-- The endpoint-package prerequisite inventory is stable. -/
 theorem endpoint_package_derivation_prerequisite_ids_v0_expected :
@@ -1253,6 +1365,7 @@ theorem endpoint_package_derivation_completed_prerequisite_ids_v0_expected :
       [ "A2A15A1A9_PREREQUISITE_TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA"
       , "A2A15A1A9_PREREQUISITE_REFLECTED_LEFT_ENDPOINT_EXPANSION_AND_BOUND"
       , "A2A15A1A9_PREREQUISITE_CENTERED_COEFFICIENT_ALIGNMENT_ACROSS_ENDPOINT_INTERVALS"
+      , "A2A15A1A9_PREREQUISITE_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION"
       ] := by
   rfl
 
@@ -1264,14 +1377,14 @@ theorem endpoint_package_derivation_completed_subtarget_ids_v0_expected :
       , "A2A15A1A9_SUBTARGET_LEFT_ORIENTATION_DATA_TO_ENDPOINT_PACKAGE_ROUTE"
       , "A2A15A1A9_SUBTARGET_CENTERED_ENDPOINT_COEFFICIENT_ALIGNMENT_OBJECT_AND_PACKAGE_ROUTE"
       , "A2A15A1A9_SUBTARGET_CENTERED_ENDPOINT_COEFFICIENT_ALIGNMENT_FROM_GLOBAL_CONDIFF"
+      , "A2A15A1A9_SUBTARGET_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION"
+      , "A2A15A1A9_SUBTARGET_TWO_SIDED_ENDPOINT_PACKAGE_TO_LOCAL_STENCIL_BOUND_ROUTE"
       ] := by
   rfl
 
 /-- The remaining endpoint-package prerequisite inventory is stable. -/
 theorem endpoint_package_derivation_remaining_prerequisite_ids_v0_expected :
-    endpointPackageDerivationRemainingPrerequisiteIdsV0 =
-      [ "A2A15A1A9_PREREQUISITE_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION"
-      ] := by
+    endpointPackageDerivationRemainingPrerequisiteIdsV0 = [] := by
   rfl
 
 /-- This theorem-facing slice records concrete obstruction. -/
@@ -1303,8 +1416,8 @@ structure EndpointPackageDerivationFromMathlibStatus where
   scalar_coefficient_data_to_taylor_control_proved_supplied :
     scalar_coefficient_data_to_taylor_control_proved
   endpoint_package_from_mathlib_fully_derived : Prop
-  endpoint_package_from_mathlib_not_fully_derived :
-    Not endpoint_package_from_mathlib_fully_derived
+  endpoint_package_from_mathlib_fully_derived_supplied :
+    endpoint_package_from_mathlib_fully_derived
   taylor_within_eval_scalar_coefficients_proved : Prop
   taylor_within_eval_scalar_coefficients_proved_supplied :
     taylor_within_eval_scalar_coefficients_proved
@@ -1332,6 +1445,15 @@ structure EndpointPackageDerivationFromMathlibStatus where
   global_smooth_data_to_taylor_control_proved : Prop
   global_smooth_data_to_taylor_control_proved_supplied :
     global_smooth_data_to_taylor_control_proved
+  two_sided_endpoint_package_constructed : Prop
+  two_sided_endpoint_package_constructed_supplied :
+    two_sided_endpoint_package_constructed
+  two_sided_endpoint_package_to_taylor_control_proved : Prop
+  two_sided_endpoint_package_to_taylor_control_proved_supplied :
+    two_sided_endpoint_package_to_taylor_control_proved
+  two_sided_endpoint_package_to_local_stencil_bound_proved : Prop
+  two_sided_endpoint_package_to_local_stencil_bound_proved_supplied :
+    two_sided_endpoint_package_to_local_stencil_bound_proved
   left_endpoint_orientation_proved : Prop
   left_endpoint_orientation_proved_supplied :
     left_endpoint_orientation_proved
@@ -1339,7 +1461,7 @@ structure EndpointPackageDerivationFromMathlibStatus where
   full_a1a_channel_not_closed : Not full_a1a_channel_closed
   parent_channel_retained_blocker_id : String
   prior_mathlib_alignment_retained_blocker_id : String
-  retained_blocker_id : String
+  endpoint_package_derivation_discharged_blocker_id : String
   left_endpoint_orientation_discharged_blocker_id : String
   centered_endpoint_coefficient_alignment_discharged_blocker_id : String
   outcome_id : String
@@ -1362,8 +1484,9 @@ Current status: the right endpoint, scalar coefficient formula, reflected
 left endpoint expansion/bound, and explicit centered-alignment package route
 are theorem-derived/formalized from mathlib-facing data.  The centered
 endpoint coefficient alignment is derived from global smoothness plus the
-nondegenerate endpoint interval, while the full two-sided endpoint package
-from smooth data remains retained.
+nondegenerate endpoint interval, and the two-sided endpoint package now feeds
+the symmetric bridge, Taylor control, and local stencil-bound route.  Uniform
+mesh convergence and full A1A closure remain retained.
 -/
 def endpointPackageDerivationFromMathlibStatusV0 :
     EndpointPackageDerivationFromMathlibStatus where
@@ -1377,10 +1500,8 @@ def endpointPackageDerivationFromMathlibStatusV0 :
   supplied_alignment_data_to_taylor_control_proved_supplied := True.intro
   scalar_coefficient_data_to_taylor_control_proved := True
   scalar_coefficient_data_to_taylor_control_proved_supplied := True.intro
-  endpoint_package_from_mathlib_fully_derived := False
-  endpoint_package_from_mathlib_not_fully_derived := by
-    intro h
-    exact h
+  endpoint_package_from_mathlib_fully_derived := True
+  endpoint_package_from_mathlib_fully_derived_supplied := True.intro
   taylor_within_eval_scalar_coefficients_proved := True
   taylor_within_eval_scalar_coefficients_proved_supplied := True.intro
   reflected_left_endpoint_bound_from_mathlib_proved := True
@@ -1399,6 +1520,12 @@ def endpointPackageDerivationFromMathlibStatusV0 :
   global_smooth_data_to_endpoint_package_proved_supplied := True.intro
   global_smooth_data_to_taylor_control_proved := True
   global_smooth_data_to_taylor_control_proved_supplied := True.intro
+  two_sided_endpoint_package_constructed := True
+  two_sided_endpoint_package_constructed_supplied := True.intro
+  two_sided_endpoint_package_to_taylor_control_proved := True
+  two_sided_endpoint_package_to_taylor_control_proved_supplied := True.intro
+  two_sided_endpoint_package_to_local_stencil_bound_proved := True
+  two_sided_endpoint_package_to_local_stencil_bound_proved_supplied := True.intro
   left_endpoint_orientation_proved := True
   left_endpoint_orientation_proved_supplied := True.intro
   full_a1a_channel_closed := False
@@ -1409,7 +1536,7 @@ def endpointPackageDerivationFromMathlibStatusV0 :
     phase1Blocker003A2A15A1AGraphLaplacianToContinuumLaplacianRetainedId
   prior_mathlib_alignment_retained_blocker_id :=
     phase1Blocker003A2A15A1A8MathlibEndpointTaylorAlignmentRetainedId
-  retained_blocker_id :=
+  endpoint_package_derivation_discharged_blocker_id :=
     phase1Blocker003A2A15A1A9EndpointPackageDerivationFromMathlibRetainedId
   left_endpoint_orientation_discharged_blocker_id :=
     phase1Blocker003A2A15A1A9LeftEndpointOrientationRetainedId
@@ -1477,10 +1604,10 @@ theorem endpoint_package_derivation_scalar_coefficient_data_to_taylor_control_pr
   exact
     ePkgDerivStatusV0.scalar_coefficient_data_to_taylor_control_proved_supplied
 
-/-- The full endpoint package is not yet derived from mathlib alone. -/
-theorem endpoint_package_derivation_from_mathlib_not_fully_derived_v0 :
-    Not ePkgDerivStatusV0.endpoint_package_from_mathlib_fully_derived := by
-  exact ePkgDerivStatusV0.endpoint_package_from_mathlib_not_fully_derived
+/-- The bounded two-sided endpoint package route is now derived. -/
+theorem endpoint_package_derivation_from_mathlib_fully_derived_v0 :
+    ePkgDerivStatusV0.endpoint_package_from_mathlib_fully_derived := by
+  exact ePkgDerivStatusV0.endpoint_package_from_mathlib_fully_derived_supplied
 
 /-- Scalar coefficient alignment for `taylorWithinEval` is now theorem-derived. -/
 theorem endpoint_package_derivation_scalar_coefficients_proved_v0 :
@@ -1534,6 +1661,24 @@ theorem endpoint_package_derivation_global_smooth_data_to_taylor_control_proved_
   exact
     ePkgDerivStatusV0.global_smooth_data_to_taylor_control_proved_supplied
 
+/-- The full two-sided endpoint package is constructed. -/
+theorem endpoint_package_derivation_two_sided_endpoint_package_constructed_v0 :
+    ePkgDerivStatusV0.two_sided_endpoint_package_constructed := by
+  exact
+    ePkgDerivStatusV0.two_sided_endpoint_package_constructed_supplied
+
+/-- The two-sided endpoint package feeds the TaylorRemainderControl route. -/
+theorem endpoint_package_derivation_two_sided_endpoint_package_to_taylor_control_proved_v0 :
+    ePkgDerivStatusV0.two_sided_endpoint_package_to_taylor_control_proved := by
+  exact
+    ePkgDerivStatusV0.two_sided_endpoint_package_to_taylor_control_proved_supplied
+
+/-- The two-sided endpoint package feeds the local stencil error-bound route. -/
+theorem endpoint_package_derivation_two_sided_endpoint_package_to_local_stencil_bound_proved_v0 :
+    ePkgDerivStatusV0.two_sided_endpoint_package_to_local_stencil_bound_proved := by
+  exact
+    ePkgDerivStatusV0.two_sided_endpoint_package_to_local_stencil_bound_proved_supplied
+
 /-- The reflected/global left orientation route is now proved. -/
 theorem endpoint_package_derivation_left_orientation_proved_v0 :
     ePkgDerivStatusV0.left_endpoint_orientation_proved := by
@@ -1556,9 +1701,9 @@ theorem endpoint_package_derivation_prior_a1a8_retained_id_v0 :
       phase1Blocker003A2A15A1A8MathlibEndpointTaylorAlignmentRetainedId := by
   rfl
 
-/-- The theorem-facing surface exposes its retained blocker id. -/
-theorem endpoint_package_derivation_retained_id_v0 :
-    endpointPackageDerivationFromMathlibStatusReadoutV0.retained_blocker_id =
+/-- The theorem-facing surface exposes its discharged endpoint-package blocker id. -/
+theorem endpoint_package_derivation_discharged_id_v0 :
+    ePkgDerivStatusV0.endpoint_package_derivation_discharged_blocker_id =
       phase1Blocker003A2A15A1A9EndpointPackageDerivationFromMathlibRetainedId := by
   rfl
 
