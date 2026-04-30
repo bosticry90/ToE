@@ -36,7 +36,7 @@ Governance-manifest boundary:
 
 Phase 0-5 objective-quality plan status:
 - `SCALAR_QFT_PHASE0_5_OBJECTIVE_QUALITY_COMPLETION_STATUS_v0: NO_FULL_PLAN_COMPLETION_CLAIM_PHASE0_COMPLETE_PHASE1_ADVANCED_PARTIAL_PHASE2_OPEN_PHASE2B_OPEN_PHASE3_PARTIAL_PHASE4_PARTIAL_PHASE5_OPEN`
-- `SCALAR_QFT_PHASE0_5_DECISIVE_OPEN_ITEMS_v0: A1A_A2A15A1_ENDPOINT_PACKAGE_AND_UNIFORM_CONVERGENCE_OPEN_PHASE2_UNAUTHORIZED_PHASE2B_TERM_LEVEL_NEUTRALIZATION_OPEN`
+- `SCALAR_QFT_PHASE0_5_DECISIVE_OPEN_ITEMS_v0: A1A_A2A15A1_UNIFORM_MESH_CONVERGENCE_OPEN_PHASE2_UNAUTHORIZED_PHASE2B_TERM_LEVEL_NEUTRALIZATION_OPEN`
 - Phase 0 baseline/acceptance contract is complete.
 - Phase 1 structured-source/scalar-witness hardening is advanced but partial.
 - Phase 2 continuum obligation discharge is not complete because A1A/A2A15A1 analytic lift remains retained.
@@ -45,15 +45,18 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict scalar/QFT target:
-- `SCALAR_QFT_NEXT_STRICT_TARGET_v0: A2A15A1A9_UNIFORM_MESH_CONVERGENCE_DOWNSTREAM_AFTER_ENDPOINT_PACKAGE`
+- `SCALAR_QFT_NEXT_STRICT_TARGET_v0: A2A15A1A10_UNIFORM_MESH_CONVERGENCE_THEOREM`
 - `A2A15A1A9_COMPLETED_PREREQUISITE_v0: TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA_PLUS_REFLECTED_LEFT_ENDPOINT_EXPANSION_AND_BOUND_PLUS_CENTERED_COEFFICIENT_ALIGNMENT_ACROSS_ENDPOINT_INTERVALS_PLUS_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION`
 - `A2A15A1A9_COMPLETED_SUBTARGETS_v0: TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA_PLUS_REFLECTED_LEFT_ENDPOINT_EXPANSION_AND_BOUND_PLUS_LEFT_ORIENTATION_DATA_TO_ENDPOINT_PACKAGE_ROUTE_PLUS_CENTERED_ENDPOINT_COEFFICIENT_ALIGNMENT_OBJECT_AND_PACKAGE_ROUTE_PLUS_CENTERED_ENDPOINT_COEFFICIENT_ALIGNMENT_FROM_GLOBAL_CONDIFF_PLUS_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION_PLUS_TWO_SIDED_ENDPOINT_PACKAGE_TO_LOCAL_STENCIL_BOUND_ROUTE`
 - `A2A15A1A9_REMAINING_PREREQUISITES_v0: NONE_ENDPOINT_PACKAGE_SUBBRANCH_CLOSED_UNIFORM_MESH_CONVERGENCE_DOWNSTREAM`
 - `A2A15A1A9_ENDPOINT_PACKAGE_DERIVATION_DISCHARGED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A9_ENDPOINT_PACKAGE_DERIVATION_FROM_MATHLIB_RETAINED`
 - `A2A15A1A9_LEFT_ENDPOINT_ORIENTATION_DISCHARGED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A9_LEFT_ENDPOINT_ORIENTATION_RETAINED`
 - `A2A15A1A9_CENTERED_ENDPOINT_COEFFICIENT_ALIGNMENT_DISCHARGED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A9_CENTERED_ENDPOINT_COEFFICIENT_ALIGNMENT_RETAINED`
-- `SCALAR_QFT_UNIFORM_MESH_CONVERGENCE_ORDERING_v0: DOWNSTREAM_UNTIL_ENDPOINT_PACKAGE_DERIVED_OR_EXPLICITLY_BLOCKED`
-- The scalar `taylorWithinEval` coefficient formula, reflected-left expansion/bound route, centered-alignment theorem from the global smoothness/nondegenerate-interval mathlib route, and two-sided endpoint package into the local stencil-bound route are now theorem-derived/formalized. Uniform mesh convergence is now the downstream active theorem frontier and remains unproved.
+- `A2A15A1A10_UNIFORM_MESH_CONVERGENCE_STATUS_v0: CONTRACT_RECORDED_CONDITIONAL_WIRING_PROVED_UNIFORM_THEOREM_RETAINED`
+- `A2A15A1A10_CONTRACT_FIELDS_v0: REFINEMENT_FAMILY_MESH_SIZE_MESH_TO_ZERO_UNIFORM_FOURTH_DERIVATIVE_OR_REMAINDER_BOUND_UNIFORM_STENCIL_ERROR_BOUND_GRAPH_LAPLACIAN_CHANNEL_RELATION`
+- `A2A15A1A10_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A10_UNIFORM_MESH_CONVERGENCE_RETAINED`
+- `SCALAR_QFT_UNIFORM_MESH_CONVERGENCE_ORDERING_v0: CONTRACT_RECORDED_ENDPOINT_PACKAGE_DERIVED_THEOREM_RETAINED`
+- The scalar `taylorWithinEval` coefficient formula, reflected-left expansion/bound route, centered-alignment theorem from the global smoothness/nondegenerate-interval mathlib route, and two-sided endpoint package into the local stencil-bound route are now theorem-derived/formalized. The A1A10 uniform mesh convergence contract is now explicit and conditionally wired into the smooth Taylor/refinement and graph-channel routes. The actual uniform mesh convergence theorem remains unproved.
 
 ## Current Formal Physics Increment
 
@@ -97,6 +100,7 @@ New mechanically checked proof surface:
 - `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianSymmetricTaylorStencilBridge.lean`
 - `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianMathlibEndpointTaylorAlignment.lean`
 - `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianEndpointPackageDerivationFromMathlib.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianUniformMeshConvergence.lean`
 - `formal/toe_formal/ToeFormal/QFT/ContinuumDifferentiableFunctionSpace.lean`
 - `formal/toe_formal/ToeFormal/QFT/ContinuumConcreteCalculusSemantics.lean`
 - `formal/toe_formal/ToeFormal/QFT/ContinuumBaseSpaceIntegralModel.lean`
@@ -1275,6 +1279,7 @@ A result does not count as derivational if it only supplies:
    - 003A2A15A1A7 symmetric Taylor-to-centered-stencil bridge landed in `ContinuumSpatialGraphLaplacianSymmetricTaylorStencilBridge.lean`; odd terms cancel, the centered residual is reduced to the endpoint-remainder sum, and endpoint fourth-derivative remainder bounds feed the existing scaled-stencil/Taylor-control route, while the concrete endpoint expansion package and uniform mesh-convergence theorem remain retained.
    - 003A2A15A1A8 mathlib endpoint Taylor alignment landed in `ContinuumSpatialGraphLaplacianMathlibEndpointTaylorAlignment.lean`; the mathlib endpoint remainder bound is exposed, the `4 * C` normalization into the symmetric endpoint tolerance is proved, and supplied endpoint package data feeds the prior symmetric bridge, while coefficient/basepoint/orientation alignment and uniform mesh convergence remain retained.
    - 003A2A15A1A9 endpoint package derivation from mathlib landed in `ContinuumSpatialGraphLaplacianEndpointPackageDerivationFromMathlib.lean`; the right endpoint bound, scalar `taylorWithinEval` coefficient formula, reflected-left expansion/bound route, centered coefficient-alignment object, centered-alignment-to-package route, centered alignment from the global smoothness/nondegenerate mathlib route, full two-sided endpoint package construction, and local stencil-bound route are theorem-facing, while uniform mesh convergence remains retained.
+   - 003A2A15A1A10 uniform mesh convergence contract landed in `ContinuumSpatialGraphLaplacianUniformMeshConvergence.lean`; the contract now names the refinement family, mesh-size function, mesh-to-zero requirement, uniform fourth-derivative/remainder bound, uniform stencil-error bound, graph-channel relation, sample/reconstruction compatibility, continuum Laplacian semantics, and operator-domain closure. Lean proves conditional wiring from supplied uniform-mesh evidence into the existing smooth Taylor/refinement evidence and A1A graph-channel package. The uniform mesh convergence theorem itself remains retained as `PHASE1-BLOCKER-003A2A15A1A10_UNIFORM_MESH_CONVERGENCE_RETAINED`.
    - 003A1 witness surface landed in `ContinuumDifferentiableFunctionSpace.lean`; the selected field space, test-variation space, regularity, compact-support/decay, trace-existence, and variation-closure obligations now supply the differentiability portion of the Green-identity assumption bundle when a witness is provided.
    - 003A1 concrete-calculus adapter landed in `ContinuumConcreteCalculusSemantics.lean`; supplied semantics now build the 003A1 witness, while the missing concrete source is recorded as `PHASE1-BLOCKER-003A1A_CONCRETE_CALCULUS_SEMANTICS_RETAINED`.
    - 003A1A1 base-space/integral model surface landed in `ContinuumBaseSpaceIntegralModel.lean`; supplied base/integral data now constructs the selected scalar kinetic pair and feeds the concrete-calculus semantics adapter when the remaining interpretation package is supplied.
