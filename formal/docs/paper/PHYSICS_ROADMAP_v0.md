@@ -62,7 +62,11 @@ Strict scalar/QFT derivation synchronization checkpoint (2026-05-01):
 - Lean aggregate pointer: `formal/toe_formal/ToeFormal.lean`; `lake build ToeFormal` is green as of 2026-05-01 with existing warnings only.
 - External benchmark registry pointer: `formal/docs/lanes/EXTERNAL_PHYSICS_BENCHMARK_REGISTRY_v0.md`.
 - External benchmark gate pointer: `formal/python/tests/test_external_physics_benchmark_registry_gate.py`.
+- `STRICT_PHYSICS_NONCLAIM_BOUNDARY_v0: NO_PHASE2_AUTHORIZATION_NO_MASTER_ACTION_PROMOTION_NO_SEAM_CLOSURE_NO_EMPIRICAL_CLAIM`
 - Boundary: this checkpoint does not alter the recovery freeze, does not enroll new governed pytests by itself, does not authorize Phase 2, does not promote the master action, and does not claim empirical validation.
+- Loop-control registry pointer: `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`.
+- Loop-control focused gate pointer: `formal/python/tests/test_loop_control_registry_v0_gate.py`.
+- Loop-control authority boundary: focused validation only; no governance-manifest enrollment, Phase 2 authorization, seam closure, master-action promotion, or empirical claim.
 
 R6 consolidation checkpoint (R6-CLOSEOUT, 2026-03-20):
 - R6 post-truth consolidation completed across three bounded duplicate families.

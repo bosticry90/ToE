@@ -32,6 +32,8 @@ def test_physics_first_rule_contains_required_classes_and_constraints() -> None:
         "one active scientific lane at a time",
         "at most one queued lane",
         "governance prerequisite plus full pytest",
+        "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+        "Support-only governance work cannot become active science",
     ]
     missing = [token for token in required_tokens if token not in text]
     assert not missing, "Physics-first rule doc missing required token(s): " + ", ".join(missing)

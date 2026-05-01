@@ -27,6 +27,11 @@ Allowed support-only categories:
 
 Support-only work can proceed only if it directly unblocks the current active scientific tranche or protects non-claim boundary integrity.
 
+## Authority-Growth Budget Binding
+Authority-growth budget enforcement is pinned by `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`.
+Support-only governance work cannot become active science unless it declares an allowed scientific delta class and passes the promotion gate.
+Registry or gate additions remain support work unless they directly protect non-claim boundary integrity or unblock the active scientific tranche.
+
 ## Promotion Gate
 A tranche promotion must fail when any of these are true:
 1. missing scientific delta class,

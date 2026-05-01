@@ -18,6 +18,7 @@ The scalar route now carries theorem-derived/formalized endpoint-package, unifor
 The cross-pillar queue has advanced two retained seam-facing interfaces: QM-STAT unified transport residual package under `PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED`, and QFT-GR stress-energy expectation source map under `PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED`. These are bounded conditional/residual packages, not seam closures or empirical claims.
 The external physics benchmark registry is active as contextual non-claim pressure only: no theorem discharge, blocker movement, Phase 2 authorization, master-action promotion, or empirical validation is claimed.
 The governance test manifest remains under the recovery freeze; the new strict-physics gates are focused validation surfaces unless separately promoted under that policy.
+The loop-control plane is pinned at `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json` with focused gate `formal/python/tests/test_loop_control_registry_v0_gate.py`; it centralizes loop/freeze/fresh-delta/attempt-budget/dependency-cycle/promotion-escrow controls without enrolling the governance manifest or authorizing scientific promotion.
 
 PHYSICS-FIRST EXECUTION POLICY CHECKPOINT (WS-10-T07B, 2026-03-26)
 - Physics-closure blockers are prioritized ahead of governance expansion work.

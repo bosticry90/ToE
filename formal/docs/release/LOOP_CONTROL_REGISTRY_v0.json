@@ -1,0 +1,573 @@
+{
+  "schema_id": "LOOP_CONTROL_REGISTRY_v0",
+  "schema_version": 0,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "classification": "P-POLICY",
+  "authority_boundary": "Focused validation surface only; not enrolled in GOVERNANCE_TEST_MANIFEST_v1.json until promotion escrow passes.",
+  "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
+  "allowed_statuses": [
+    "active",
+    "retained",
+    "paused",
+    "deferred",
+    "blocked",
+    "authorized_reopen",
+    "not_authorized",
+    "archived"
+  ],
+  "legal_transitions": {
+    "active": [
+      "retained",
+      "paused",
+      "blocked",
+      "archived"
+    ],
+    "retained": [
+      "paused",
+      "authorized_reopen",
+      "archived"
+    ],
+    "paused": [
+      "authorized_reopen",
+      "archived"
+    ],
+    "authorized_reopen": [
+      "active",
+      "paused"
+    ],
+    "blocked": [
+      "paused",
+      "authorized_reopen",
+      "archived"
+    ]
+  },
+  "fresh_delta_kinds": [
+    "new_theorem",
+    "counterexample",
+    "dependency_graph_change",
+    "stronger_evidence_object",
+    "failed_assumption_refutation"
+  ],
+  "defaults": {
+    "max_consecutive_slices_per_retained_blocker": 2,
+    "queue_cap": 3,
+    "default_no_fresh_delta_action": "rotate_or_defer",
+    "default_cycle_policy": "fail_unless_archived_or_waived_with_evidence",
+    "default_promotion_policy": "declaration_commit_then_independent_validation_commit"
+  },
+  "token_sources": [
+    "README.md",
+    "State_of_the_Theory.md",
+    "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+    "formal/docs/release/BOUNDED_SLICE_OPERATIONAL_PROTOCOL_v0.md",
+    "formal/docs/release/PHYSICS_FIRST_EXECUTION_RULE_v0.md"
+  ],
+  "token_family_coverage": [
+    {
+      "family_id": "all_no_loop_rule_tokens",
+      "pattern": "^[A-Z0-9_]+_NO_LOOP_RULE_v0$",
+      "scope": "one-shot execution and review layers",
+      "status": "active",
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
+    },
+    {
+      "family_id": "all_anti_loop_rule_tokens",
+      "pattern": "^[A-Z0-9_]+_ANTI_LOOP_RULE_v0$",
+      "scope": "lane-specific anti-loop brakes",
+      "status": "active",
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
+    },
+    {
+      "family_id": "all_freeze_rule_tokens",
+      "pattern": "^[A-Z0-9_]+_FREEZE_RULE_v0$",
+      "scope": "freeze and recovery-hold policies",
+      "status": "active",
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
+    }
+  ],
+  "controls": [
+    {
+      "control_id": "scalar_post_capstone_anti_loop",
+      "control_type": "anti_loop",
+      "scope": "Scalar/QFT A2A15A1 post-capstone lane",
+      "status": "paused",
+      "source_tokens": [
+        "A2A15A1_POST_CAPSTONE_ANTI_LOOP_RULE_v0"
+      ],
+      "max_attempts": 0,
+      "allowed_reopen_conditions": [
+        "dependency_graph_change"
+      ],
+      "fresh_delta_required": true,
+      "current_blocker_ids": [
+        "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED"
+      ],
+      "next_action": "rotate_to_qm_stat_transport_residual_semantics",
+      "validation_command": "cd formal/toe_formal; lake build ToeFormal"
+    },
+    {
+      "control_id": "strict_nonclaim_boundary",
+      "control_type": "no_promotion_boundary",
+      "scope": "strict physics current-state boundary",
+      "status": "active",
+      "source_tokens": [
+        "STRICT_PHYSICS_NONCLAIM_BOUNDARY_v0"
+      ],
+      "max_attempts": 0,
+      "allowed_reopen_conditions": [],
+      "fresh_delta_required": false,
+      "forbidden_promotions": [
+        "phase2_authorization",
+        "seam_closure",
+        "empirical_claim",
+        "master_action_promotion"
+      ],
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
+    },
+    {
+      "control_id": "post_sweep_queue_discipline",
+      "control_type": "queue_cap",
+      "scope": "PostSweepTheoremQueue.lean",
+      "status": "active",
+      "source_tokens": [
+        "POST_SWEEP_NEXT_THREE_THEOREM_SLICES_v0"
+      ],
+      "max_attempts": 3,
+      "allowed_reopen_conditions": [
+        "new_theorem",
+        "counterexample",
+        "stronger_evidence_object"
+      ],
+      "fresh_delta_required": true,
+      "queue_cap": 3,
+      "one_blocker_per_slice": true,
+      "one_validation_target_per_slice": true,
+      "validation_command": "cd formal/toe_formal; lake build ToeFormal"
+    },
+    {
+      "control_id": "cross_pillar_protocol",
+      "control_type": "methodology_loop_brake",
+      "scope": "CrossPillarDerivationProtocol.lean",
+      "status": "active",
+      "source_tokens": [
+        "CROSS_PILLAR_DERIVATION_PROTOCOL_STATUS_v0"
+      ],
+      "max_attempts": 1,
+      "allowed_reopen_conditions": [
+        "new_theorem",
+        "counterexample",
+        "stronger_evidence_object",
+        "failed_assumption_refutation"
+      ],
+      "fresh_delta_required": true,
+      "required_route": [
+        "target",
+        "evidence_package",
+        "conditional_bridge",
+        "obstruction_counterexample",
+        "retained_blocker",
+        "next_strict_target"
+      ],
+      "allowed_derivation_statuses": [
+        "proved",
+        "conditional",
+        "retained",
+        "refuted",
+        "not_authorized"
+      ],
+      "validation_command": "cd formal/toe_formal; lake build ToeFormal"
+    },
+    {
+      "control_id": "bounded_slice_stop_conditions",
+      "control_type": "bounded_slice",
+      "scope": "ordinary bounded execution slices",
+      "status": "active",
+      "source_tokens": [
+        "BOUNDED_SLICE_OPERATIONAL_PROTOCOL_v0"
+      ],
+      "max_attempts": 1,
+      "allowed_reopen_conditions": [
+        "new_theorem",
+        "counterexample",
+        "stronger_evidence_object"
+      ],
+      "fresh_delta_required": true,
+      "stop_conditions": [
+        "file_envelope_widening",
+        "gate_family_growth",
+        "broad_refactor_required",
+        "control_growth_exceeds_science_gain"
+      ],
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
+    },
+    {
+      "control_id": "recovery_freeze",
+      "control_type": "freeze",
+      "scope": "repo recovery and throughput reset",
+      "status": "active",
+      "source_tokens": [
+        "REPO_RECOVERY_FREEZE_RULE_v0"
+      ],
+      "max_attempts": 0,
+      "allowed_reopen_conditions": [
+        "full_suite_green"
+      ],
+      "fresh_delta_required": false,
+      "blocked_actions": [
+        "new_release_family_docs",
+        "new_governed_pytests",
+        "duplicate_status_surfaces"
+      ],
+      "validation_command": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1"
+    },
+    {
+      "control_id": "generated_first_controls",
+      "control_type": "generated_first",
+      "scope": "migrated state-core families",
+      "status": "active",
+      "source_tokens": [
+        "STATE_CORE_GENERATED_FIRST_CUTOVER"
+      ],
+      "max_attempts": 1,
+      "allowed_reopen_conditions": [
+        "generated_source_json_change"
+      ],
+      "fresh_delta_required": false,
+      "required_route": [
+        "edit_state_core_json",
+        "regenerate_mirrors",
+        "verify_mirrors",
+        "run_governance"
+      ],
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_state_core_generation_integrity_gate.py formal/python/tests/test_state_core_generated_block_manual_edit_prohibition_gate.py -q"
+    },
+    {
+      "control_id": "admissibility_manifest_blocked_by_default",
+      "control_type": "admissibility_manifest",
+      "scope": "manifest-gated computation outputs",
+      "status": "active",
+      "source_tokens": [
+        "admissibility_manifest"
+      ],
+      "max_attempts": 1,
+      "allowed_reopen_conditions": [
+        "manifest_gate_enabled",
+        "stronger_evidence_object"
+      ],
+      "fresh_delta_required": true,
+      "blocked_output_is_first_class": true,
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_admissibility_manifest.py -q"
+    },
+    {
+      "control_id": "checkpoint_ladder_hygiene",
+      "control_type": "ladder_hygiene",
+      "scope": "post-tranche checkpoint ladder",
+      "status": "active",
+      "source_tokens": [
+        "checkpoint_ladder"
+      ],
+      "max_attempts": 1,
+      "allowed_reopen_conditions": [
+        "branch_health_green"
+      ],
+      "fresh_delta_required": false,
+      "required_properties": [
+        "restore_generated_outputs",
+        "exit_nonzero_on_failure",
+        "fail_on_new_drift_after_restore"
+      ],
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_checkpoint_ladder_contract_gate.py -q"
+    },
+    {
+      "control_id": "release_gate_truth",
+      "control_type": "release_gate",
+      "scope": "branch readiness",
+      "status": "active",
+      "source_tokens": [
+        "RELEASE_GATE_POLICY_v0"
+      ],
+      "max_attempts": 1,
+      "allowed_reopen_conditions": [
+        "governance_green",
+        "full_pytest_green",
+        "lean_build_green"
+      ],
+      "fresh_delta_required": false,
+      "required_lanes": [
+        "governance",
+        "full_pytest_branch_health",
+        "lean_build"
+      ],
+      "validation_command": "pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1 && ./py.ps1 -m pytest formal/python/tests -q && cd formal/toe_formal; lake build ToeFormal"
+    },
+    {
+      "control_id": "fresh_delta_gate",
+      "control_type": "fresh_delta_gate",
+      "scope": "retained blocker continuation",
+      "status": "active",
+      "source_tokens": [
+        "QUEUE_RECONSTRUCTION_SELECTED_FRONTIER_FRESH_DELTA_EMERGENCE_CONDITION_EVENT_RULE_v0"
+      ],
+      "max_attempts": 1,
+      "allowed_reopen_conditions": [
+        "new_theorem",
+        "counterexample",
+        "dependency_graph_change",
+        "stronger_evidence_object",
+        "failed_assumption_refutation"
+      ],
+      "fresh_delta_required": true,
+      "no_delta_action": "rotate_or_defer",
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
+    },
+    {
+      "control_id": "workstream_state_machine",
+      "control_type": "state_machine",
+      "scope": "workstream reopen discipline",
+      "status": "active",
+      "source_tokens": [
+        "LOOP_CONTROL_WORKSTREAM_STATE_MACHINE_v0"
+      ],
+      "max_attempts": 1,
+      "allowed_reopen_conditions": [
+        "authorized_reopen"
+      ],
+      "fresh_delta_required": true,
+      "transition_policy": "registry_legal_transitions_only",
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
+    },
+    {
+      "control_id": "dependency_cycle_detector",
+      "control_type": "cycle_detector",
+      "scope": "frontier and inventory dependency rows",
+      "status": "active",
+      "source_tokens": [
+        "LOOP_CONTROL_DEPENDENCY_CYCLE_DETECTOR_v0"
+      ],
+      "max_attempts": 1,
+      "allowed_reopen_conditions": [
+        "archived_edge",
+        "waived_edge_with_evidence"
+      ],
+      "fresh_delta_required": false,
+      "cycle_policy": "fail_unless_archived_or_waived_with_evidence",
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
+    },
+    {
+      "control_id": "attempt_budget",
+      "control_type": "attempt_budget",
+      "scope": "retained blockers and lanes",
+      "status": "active",
+      "source_tokens": [
+        "LOOP_CONTROL_ATTEMPT_BUDGET_v0"
+      ],
+      "max_attempts": 2,
+      "allowed_reopen_conditions": [
+        "fresh_delta_gate_passed",
+        "cross_pillar_review"
+      ],
+      "fresh_delta_required": true,
+      "forced_action_on_exhaustion": "pause_and_cross_pillar_review",
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
+    },
+    {
+      "control_id": "authority_growth_budget",
+      "control_type": "authority_growth_budget",
+      "scope": "control-surface growth vs proof/evidence movement",
+      "status": "active",
+      "source_tokens": [
+        "LOOP_CONTROL_AUTHORITY_GROWTH_BUDGET_v0"
+      ],
+      "max_attempts": 1,
+      "allowed_reopen_conditions": [
+        "science_core_gain_exceeds_control_growth",
+        "nonclaim_boundary_integrity_fix"
+      ],
+      "fresh_delta_required": false,
+      "budget": {
+        "max_new_governed_pytests": 0,
+        "max_generated_output_edits": 0,
+        "support_work_class": "governance_hygiene",
+        "cannot_become_active_science": true
+      },
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_physics_first_execution_rule_v0_gate.py formal/python/tests/test_loop_control_registry_v0_gate.py -q"
+    },
+    {
+      "control_id": "promotion_escrow",
+      "control_type": "promotion_escrow",
+      "scope": "Phase 2, seam closure, master-action promotion, and governance-manifest enrollment",
+      "status": "active",
+      "source_tokens": [
+        "LOOP_CONTROL_PROMOTION_ESCROW_v0"
+      ],
+      "max_attempts": 2,
+      "allowed_reopen_conditions": [
+        "declaration_commit",
+        "independent_validation_commit"
+      ],
+      "fresh_delta_required": true,
+      "escrow_targets": [
+        "phase2_authorization",
+        "seam_closure",
+        "master_action_promotion",
+        "governance_manifest_enrollment"
+      ],
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_sandbox_promotion_lane_policy_gate.py formal/python/tests/test_sandbox_promotion_phase2_phase4_contract_gate.py -q"
+    },
+    {
+      "control_id": "existing_one_shot_no_loop_family",
+      "control_type": "no_loop_family",
+      "scope": "legacy one-shot review and execution checkpoints",
+      "status": "active",
+      "source_tokens": [
+        "ARCHITECTURE_SEAM_MASTER_ACTION_ALIGNMENT_NO_LOOP_RULE_v0",
+        "PROGRAM_POSTURE_REVIEW_NO_LOOP_RULE_v0",
+        "POST_POSTURE_REVIEW_PROGRAM_MODE_TRANSITION_NO_LOOP_RULE_v0",
+        "REVISED_SIGNAL_DIAGNOSTIC_REGISTRATION_NO_LOOP_RULE_v0",
+        "PROGRAM_STATE_CONVERSION_REVIEW_NO_LOOP_RULE_v0",
+        "DEEPER_BLOCKER_DEFINITION_REVIEW_NO_LOOP_RULE_v0",
+        "BOUNDED_BLOCKER_DEFINITION_TEST_NO_LOOP_RULE_v0",
+        "POST_BLOCKER_DEFINITION_TEST_DECISION_NO_LOOP_RULE_v0",
+        "AUTHORITY_COUPLING_REVIEW_NO_LOOP_RULE_v0",
+        "BOUNDED_COUPLING_REFINEMENT_PACKET_NO_LOOP_RULE_v0",
+        "COUPLING_REFINEMENT_RULING_NO_LOOP_RULE_v0",
+        "AUTHORITY_PROMOTION_REGISTRATION_NO_LOOP_RULE_v0"
+      ],
+      "max_attempts": 1,
+      "allowed_reopen_conditions": [
+        "fresh_delta_gate_passed",
+        "explicit_authorized_reopen"
+      ],
+      "fresh_delta_required": true,
+      "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
+    }
+  ],
+  "retained_blocker_coverage": [
+    "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
+    "qm_evolution_contract_to_schrodinger_unitary_recovery_retained",
+    "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED",
+    "sr_covariance_to_cosmology_regime_residual_retained",
+    "gr01_continuum_limit_source_identification_retained",
+    "cosmo_background_reduction_and_expansion_observable_retained",
+    "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED",
+    "gr_qm_master_action_citation_scope_boundary_retained",
+    "SEAM_EM_QFT_PHYSICS_COMPLETE_v0:NO",
+    "master_action_dependency_frontier_retained_no_promotion"
+  ],
+  "next_strict_target_coverage": [
+    "rotate_to_qm_stat_transport_residual_semantics",
+    "derive_or_refute_evolution_map_to_transport_hypotheses",
+    "derive_qm_stat_source_target_transport_semantics",
+    "transport_local_sr_covariance_through_cosmo_regime",
+    "state_continuum_limit_and_source_map_obligations",
+    "tie_background_regime_to_sr_covariance_residual",
+    "derive_qft_stress_energy_expectation_source_semantics",
+    "record_allowed_master_action_citation_scope",
+    "extract_em_qft_physics_blocker_into_protocol_row",
+    "cite_only_bounded_retained_assumptions"
+  ],
+  "citation_boundary_coverage": [
+    "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
+    "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED",
+    "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED",
+    "sr_covariance_to_cosmology_regime_residual_retained",
+    "gr01_continuum_limit_source_identification_retained",
+    "cosmo_background_reduction_and_expansion_observable_retained",
+    "SEAM_EM_QFT_PHYSICS_COMPLETE_v0:NO",
+    "gr_qm_master_action_citation_scope_boundary_retained"
+  ],
+  "dependency_edges": [
+    {
+      "from": "post_sweep_theorem_queue",
+      "to": "master_action_dependency_frontier",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/PostSweepTheoremQueue.lean"
+    },
+    {
+      "from": "master_action_dependency_frontier",
+      "to": "cross_pillar_closure_frontier",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionDependencyFrontier.lean"
+    },
+    {
+      "from": "cross_pillar_closure_frontier",
+      "to": "cross_pillar_derivation_protocol",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean"
+    },
+    {
+      "from": "scalar_qft_a2a15a1",
+      "to": "qm_stat_transport_residual",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/PostSweepTheoremQueue.lean"
+    },
+    {
+      "from": "qm_stat_transport_residual",
+      "to": "qm_evolution_contract",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean"
+    },
+    {
+      "from": "qft_gr_source_map",
+      "to": "master_action_dependency_frontier",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean"
+    }
+  ],
+  "cycle_waivers": [],
+  "workstreams": [
+    {
+      "workstream_id": "scalar_qft_a2a15a1",
+      "status": "paused",
+      "retained_blocker": "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
+      "consecutive_slices_after_retention": 0,
+      "allowed_reopen_conditions": [
+        "dependency_graph_change"
+      ]
+    },
+    {
+      "workstream_id": "qm_stat_transport_residual",
+      "status": "retained",
+      "retained_blocker": "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED",
+      "consecutive_slices_after_retention": 1,
+      "allowed_reopen_conditions": [
+        "new_theorem",
+        "counterexample",
+        "stronger_evidence_object"
+      ]
+    },
+    {
+      "workstream_id": "qft_gr_source_map",
+      "status": "retained",
+      "retained_blocker": "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED",
+      "consecutive_slices_after_retention": 1,
+      "allowed_reopen_conditions": [
+        "new_theorem",
+        "counterexample",
+        "stronger_evidence_object"
+      ]
+    }
+  ],
+  "promotion_escrow": {
+    "status": "active",
+    "required_steps": [
+      "declaration_commit",
+      "independent_validation_commit"
+    ],
+    "targets": [
+      "phase2_authorization",
+      "seam_closure",
+      "master_action_promotion",
+      "governance_manifest_enrollment"
+    ],
+    "current_tranche_governance_manifest_enrollment": "not_authorized"
+  },
+  "non_promotion_assertions": {
+    "phase2_authorized": false,
+    "seam_closure_claimed": false,
+    "master_action_promoted": false,
+    "empirical_claimed": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "focused_gate": "formal/python/tests/test_loop_control_registry_v0_gate.py"
+}

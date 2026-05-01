@@ -176,7 +176,7 @@ Validation interpretation:
 
 Validation rollup (v0 draft):
 - `validated_rows`: 66
-- `used_rows`: 17
+- `used_rows`: 29
 - `open_proof_debt_rows`: 2
 - `bounded_nonclaim_rows`: 5
 
