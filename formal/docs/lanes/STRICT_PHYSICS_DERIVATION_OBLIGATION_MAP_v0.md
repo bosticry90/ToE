@@ -29,6 +29,16 @@ Phase 0 baseline acceptance surface:
 Lean aggregate status:
 - `formal/toe_formal/ToeFormal.lean`
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260429_v0: GREEN_WITH_EXISTING_WARNINGS`
+- `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260430_v0: GREEN_WITH_EXISTING_WARNINGS`
+- `STRICT_PHYSICS_CROSS_PILLAR_HANDOFF_INCREMENT_20260430_v0: A2A15A1A25_ENDPOINT_SOURCE_OBLIGATION_SPLIT_PLUS_SCALAR_HANDOFF_CAPSTONE_PLUS_CROSS_PILLAR_DERIVATION_PROTOCOL_PLUS_CLOSURE_FRONTIER_PLUS_MASTER_ACTION_DEPENDENCY_FRONTIER_PLUS_POST_SWEEP_THEOREM_QUEUE`
+- `STRICT_PHYSICS_QMSTAT_RESIDUAL_PACKAGE_INCREMENT_20260501_v0: QM_STAT_UNIFIED_TRANSPORT_RESIDUAL_PACKAGE_INTERFACE_PLUS_FINITE_TRANSPORT_THEOREM_CONNECTION_PLUS_RETAINED_SEMANTICS_BLOCKER`
+- `STRICT_PHYSICS_QFTGR_SOURCE_MAP_INCREMENT_20260501_v0: QFT_GR_STRESS_ENERGY_EXPECTATION_SOURCE_MAP_INTERFACE_PLUS_SUPPLIED_ALIGNMENT_ZERO_RESIDUAL_PACKAGE_PLUS_RETAINED_SEMANTICS_BLOCKER`
+- `STRICT_PHYSICS_SCALAR_A1A26_INCREMENT_20260501_v0: ENDPOINT_REPRESENTATION_SEMANTICS_OBLIGATION_INTERFACE_PLUS_A1A25_PACKAGE_CONSTRUCTOR_PLUS_RETAINED_ENDPOINT_SOURCE_BLOCKER`
+- `STRICT_PHYSICS_SCALAR_A1A27_INCREMENT_20260501_v0: ENDPOINT_CONVERGENCE_CONSISTENCY_OBLIGATION_INTERFACE_PLUS_A1A25_PACKAGE_CONSTRUCTOR_PLUS_CONDITIONAL_ENDPOINT_FIELD_BRIDGE`
+- `STRICT_PHYSICS_SCALAR_A1A28_INCREMENT_20260501_v0: ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_OBLIGATION_INTERFACE_PLUS_A1A25_PACKAGE_CONSTRUCTOR_PLUS_PARENT_ORIENTATION_TRACE_FIELD_BRIDGES`
+- `STRICT_PHYSICS_SCALAR_A1A29_INCREMENT_20260501_v0: REFINED_ENDPOINT_SOURCE_ASSEMBLY_FROM_A1A26_A1A27_A1A28_PLUS_REMAINING_NONENDPOINT_OBLIGATIONS_RETAINED`
+- `STRICT_PHYSICS_SCALAR_A1A30_INCREMENT_20260501_v0: REMAINING_NONENDPOINT_OBLIGATION_SPLIT_INTO_DOMAIN_RAW_IBP_PAIRING_SEPARATION_AND_TARGET_SEMANTICS`
+- `STRICT_PHYSICS_SCALAR_A1A31_INCREMENT_20260501_v0: RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_CONDITIONAL_BRIDGE_PLUS_SCALAR_DRILLING_PAUSE`
 
 Governance-manifest boundary:
 - These focused gates are not enrolled into `formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json` by this map.
@@ -44,8 +54,48 @@ Phase 0-5 objective-quality plan status:
 - Phase 3 doc sync and Phase 4 blocker-movement/KPI discipline are partial/ongoing rather than final.
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
-Next strict scalar/QFT target:
-- `SCALAR_QFT_NEXT_STRICT_TARGET_v0: A2A15A1A16_PARENT_INTERFACE_MAP_FROM_ACTUAL_GRAPH_ERROR`
+Next strict architecture target:
+- `SCALAR_QFT_NEXT_STRICT_TARGET_v0: ROTATE_TO_QM_STAT_TRANSPORT_RESIDUAL_SEMANTICS`
+- `SCALAR_QFT_HANDOFF_STATUS_v0: SCALAR_QFT_ADVANCED_RETAINED_HANDOFF_READY`
+- `A2A15A1A25_ENDPOINT_SOURCE_OBLIGATION_SPLIT_STATUS_v0: REPRESENTATION_SEMANTICS_CONVERGENCE_CONSISTENCY_ORIENTATION_TRACE_PACKAGES_DEFINED_SPLIT_PACKAGES_CONSTRUCT_A1A24_SOURCE_ENDPOINT_DERIVATION_RETAINED`
+- `A2A15A1A25_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A25_ENDPOINT_SOURCE_OBLIGATIONS_RETAINED`
+- `A2A15A1A25_OUTCOME_v0: ENDPOINT_SOURCE_OBLIGATIONS_RETAINED`
+- `A2A15A1A26_ENDPOINT_REPRESENTATION_SEMANTICS_STATUS_v0: REPRESENTATION_THEOREM_TRACE_NORMAL_SEMANTICS_AND_PARENT_TRACE_NORMAL_BRIDGE_INTERFACES_DEFINED_SUPPLIED_PIECES_CONSTRUCT_A1A25_REPRESENTATION_PACKAGE_DERIVATION_RETAINED`
+- `A2A15A1A26_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A26_ENDPOINT_REPRESENTATION_SEMANTICS_RETAINED`
+- `A2A15A1A26_OUTCOME_v0: ENDPOINT_REPRESENTATION_SEMANTICS_RETAINED`
+- `A2A15A1A27_ENDPOINT_CONVERGENCE_CONSISTENCY_STATUS_v0: BOUNDARY_RECONSTRUCTION_FLUX_CONVERGENCE_MODE_FINITE_ENDPOINT_CONSISTENCY_AND_PARENT_ENDPOINT_BRIDGE_INTERFACES_DEFINED_SUPPLIED_PIECES_CONSTRUCT_A1A25_CONVERGENCE_PACKAGE_DERIVATION_RETAINED`
+- `A2A15A1A27_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A27_ENDPOINT_CONVERGENCE_CONSISTENCY_RETAINED`
+- `A2A15A1A27_OUTCOME_v0: ENDPOINT_CONVERGENCE_CONSISTENCY_RETAINED`
+- `A2A15A1A28_ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_STATUS_v0: ORIENTATION_CONVENTION_TRACE_NORMAL_CONVERGENCE_ORIENTATION_COMPATIBILITY_AND_PARENT_ORIENTATION_TRACE_BRIDGES_DEFINED_SUPPLIED_PIECES_CONSTRUCT_A1A25_ORIENTATION_PACKAGE_DERIVATION_RETAINED`
+- `A2A15A1A28_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A28_ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_RETAINED`
+- `A2A15A1A28_OUTCOME_v0: ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_RETAINED`
+- `A2A15A1A29_REFINED_ENDPOINT_SOURCE_ASSEMBLY_STATUS_v0: A1A26_A1A27_A1A28_SUPPLIED_PACKAGES_ASSEMBLE_A1A25_ENDPOINT_SOURCE_INTERFACE_MISMATCH_NOT_REACHED_ENDPOINT_CHANNEL_EVIDENCE_AVAILABLE_REMAINING_NONENDPOINT_OBLIGATIONS_RETAINED`
+- `A2A15A1A29_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A29_REMAINING_NONENDPOINT_OBLIGATIONS_RETAINED`
+- `A2A15A1A29_OUTCOME_v0: REFINED_ENDPOINT_SOURCE_ASSEMBLED_A2A15A1_REMAINING_NONENDPOINT_OBLIGATIONS_RETAINED`
+- `A2A15A1A29_INTERFACE_MISMATCH_OUTCOME_NOT_REACHED_v0: REFINED_ENDPOINT_SOURCE_ASSEMBLY_RETAINED_INTERFACE_MISMATCH`
+- `A2A15A1A30_REMAINING_NONENDPOINT_OBLIGATION_SPLIT_STATUS_v0: DOMAIN_REGULARITY_RAW_IBP_TO_GREEN_CONVERGENCE_PAIRING_CONVERGENCE_SEPARATING_TEST_CLASS_AND_TARGET_CONTINUUM_SEMANTICS_PACKAGES_DEFINED_CONDITIONAL_RECONSTRUCTION_PROVED`
+- `A2A15A1A30_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A30_REMAINING_NONENDPOINT_OBLIGATIONS_SPLIT_RETAINED`
+- `A2A15A1A30_OUTCOME_v0: A2A15A1_REMAINING_NONENDPOINT_OBLIGATIONS_SPLIT_RETAINED`
+- `A2A15A1A30_NEXT_THEOREM_TARGET_v0: ATTEMPT_RAW_IBP_TO_GREEN_CONVERGENCE_NONENDPOINT_OBLIGATION`
+- `A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_STATUS_v0: SUPPLIED_A2A15A1C_CHANNEL_EVIDENCE_CONDITIONALLY_FILLS_A1A30_RAW_PACKAGE_AND_RECONSTRUCTS_NONENDPOINT_PACKAGE_EVIDENCE_FREE_RAW_PACKAGE_REFUTED_CHANNEL_EVIDENCE_RETAINED`
+- `A2A15A1A31_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED`
+- `A2A15A1A31_OUTCOME_v0: RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_CONDITIONAL_BRIDGE_RETAINED`
+- `A2A15A1A31_NEXT_ARCHITECTURE_TARGET_v0: ROTATE_TO_QM_STAT_TRANSPORT_RESIDUAL_SEMANTICS`
+- `SCALAR_QFT_HANDOFF_BOUNDARY_v0: HANDOFF_REMAINS_RETAINED_A1A31_LOCAL_PROOF_DEBT_ENDPOINT_SOURCE_ASSEMBLED_RAW_IBP_GREEN_CONDITIONAL_BRIDGE_RETAINED_NO_A2A15A1_WITNESS_NO_A2A15_PARENT_CLOSURE_NO_PHASE2_AUTHORIZATION`
+- `CROSS_PILLAR_DERIVATION_PROTOCOL_STATUS_v0: TARGET_EVIDENCE_PACKAGE_CONDITIONAL_BRIDGE_OBSTRUCTION_COUNTEREXAMPLE_RETAINED_BLOCKER_NEXT_STRICT_TARGET_STANDARDIZED`
+- `CROSS_PILLAR_FRONTIER_ROWS_v0: SCALAR_QFT_PLUS_QM_EVOLUTION_PLUS_QM_STAT_PLUS_SR_COVARIANCE_PLUS_GR01_PLUS_COSMOLOGY_PLUS_QFT_GR_PLUS_GR_QM_PLUS_EM_QFT_PLUS_MASTER_ACTION`
+- `MASTER_ACTION_DEPENDENCY_FRONTIER_STATUS_v0: CITATION_BOUNDARIES_ONLY_REQUIRED_FOR_COHERENCE_REQUIRED_FOR_CLOSURE_PUBLICATION_GRADE_ONLY_LOCAL_PROOF_DEBT_CLASSES_RECORDED_NO_PROMOTION`
+- `POST_SWEEP_NEXT_THREE_THEOREM_SLICES_v0: QM_STAT_UNIFIED_TRANSPORT_RESIDUAL_PACKAGE_THEN_QFT_GR_STRESS_ENERGY_SOURCE_MAP_THEN_SCALAR_PAUSED_AFTER_A1A31`
+- `QM_STAT_TRANSPORT_RESIDUAL_PACKAGE_STATUS_v0: SOURCE_QM_EVOLUTION_TARGET_STAT_ENTROPY_TRANSPORT_MAP_PRESERVED_QUANTITIES_AND_RESIDUAL_OBJECT_INTERFACE_DEFINED_FINITE_EQUIV_TRANSPORT_SUPPLIES_ZERO_RESIDUAL_CONDITIONAL_PACKAGE`
+- `QM_STAT_TRANSPORT_RESIDUAL_PRIOR_BLOCKER_v0: NO_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE`
+- `QM_STAT_TRANSPORT_RESIDUAL_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED`
+- `QM_STAT_TRANSPORT_RESIDUAL_OUTCOME_v0: QM_STAT_TRANSPORT_RESIDUAL_PACKAGE_RETAINED`
+- `QM_STAT_TRANSPORT_RESIDUAL_BOUNDARY_v0: NO_QM_STAT_SEAM_CLOSURE_NO_STAT_MECHANICS_DERIVATION_CLAIM_NO_MASTER_ACTION_PROMOTION_NO_EMPIRICAL_CLAIM`
+- `QFT_GR_STRESS_ENERGY_SOURCE_MAP_STATUS_v0: QFT_STRESS_ENERGY_OBJECT_EXPECTATION_FUNCTIONAL_GR_SOURCE_OBJECT_COVARIANCE_CONSERVATION_ASSUMPTIONS_AND_RESIDUAL_OBJECT_INTERFACE_DEFINED_SUPPLIED_ALIGNMENT_CONSTRUCTS_ZERO_RESIDUAL_PACKAGE`
+- `QFT_GR_STRESS_ENERGY_SOURCE_MAP_PRIOR_BLOCKER_v0: qft_gr_stress_energy_expectation_source_map_retained`
+- `QFT_GR_STRESS_ENERGY_SOURCE_MAP_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED`
+- `QFT_GR_STRESS_ENERGY_SOURCE_MAP_OUTCOME_v0: QFT_GR_STRESS_ENERGY_EXPECTATION_SOURCE_MAP_RETAINED`
+- `QFT_GR_STRESS_ENERGY_SOURCE_MAP_BOUNDARY_v0: no_qft_gr_seam_closure_no_semiclassical_gravity_claim_no_einstein_equation_derivation_claim_no_master_action_promotion_no_empirical_claim`
 - `A2A15A1A9_COMPLETED_PREREQUISITE_v0: TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA_PLUS_REFLECTED_LEFT_ENDPOINT_EXPANSION_AND_BOUND_PLUS_CENTERED_COEFFICIENT_ALIGNMENT_ACROSS_ENDPOINT_INTERVALS_PLUS_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION`
 - `A2A15A1A9_COMPLETED_SUBTARGETS_v0: TAYLOR_WITHIN_EVAL_SCALAR_COEFFICIENT_FORMULA_PLUS_REFLECTED_LEFT_ENDPOINT_EXPANSION_AND_BOUND_PLUS_LEFT_ORIENTATION_DATA_TO_ENDPOINT_PACKAGE_ROUTE_PLUS_CENTERED_ENDPOINT_COEFFICIENT_ALIGNMENT_OBJECT_AND_PACKAGE_ROUTE_PLUS_CENTERED_ENDPOINT_COEFFICIENT_ALIGNMENT_FROM_GLOBAL_CONDIFF_PLUS_TWO_SIDED_ENDPOINT_PACKAGE_CONSTRUCTION_PLUS_TWO_SIDED_ENDPOINT_PACKAGE_TO_LOCAL_STENCIL_BOUND_ROUTE`
 - `A2A15A1A9_REMAINING_PREREQUISITES_v0: NONE_ENDPOINT_PACKAGE_SUBBRANCH_CLOSED_UNIFORM_MESH_CONVERGENCE_DOWNSTREAM`
@@ -80,8 +130,64 @@ Next strict scalar/QFT target:
 - `A1A_GRAPH_CHANNEL_SEMANTIC_CLOSURE_REVIEW_OUTCOME_v0: GRAPH_CHANNEL_SEMANTIC_CLOSURE_RETAINED`
 - `A1A_GRAPH_CHANNEL_CLOSED_OUTCOME_NOT_REACHED_v0: GRAPH_CHANNEL_CLOSED_A2A15A1_READY_FOR_REVIEW`
 - `A1A_GRAPH_CHANNEL_SEMANTIC_CLOSURE_REVIEW_OBSTRUCTIONS_v0: NO_PARENT_INTERFACE_MAP_NO_CONTINUUM_LAPLACIAN_SEMANTICS_NO_OPERATOR_DOMAIN_CLOSURE_NO_PARENT_GRAPH_RELATION_NO_A2A15A1_ASSEMBLY_REVIEW_NO_PHASE2_AUTHORIZATION`
-- `SCALAR_QFT_UNIFORM_MESH_CONVERGENCE_ORDERING_v0: CONTRACT_AND_CONDITIONAL_EVIDENCE_THEOREM_RECORDED_ORDER_H2_TO_ZERO_LIMIT_PROVED_CONCRETE_MESH_ZERO_ERROR_NORMAL_FORM_INSTANTIATED_NONZERO_NORMAL_FORM_BOUND_PROVED_ENDPOINT_PACKAGE_STENCIL_ERROR_ORDER_H2_BOUND_PROVED_ACTUAL_GRAPH_ERROR_IDENTIFIED_CLOSURE_REVIEW_RETAINED`
-- The scalar `taylorWithinEval` coefficient formula, reflected-left endpoint expansion/bound route, centered-alignment theorem from the global smoothness/nondegenerate-interval mathlib route, and two-sided endpoint package into the local stencil-bound route are now theorem-derived/formalized. The A1A10 uniform mesh convergence contract is explicit, A1A11 proves the conditional theorem from supplied uniform-mesh evidence to the graph-channel route, A1A12 proves that the chosen real-filter mesh-to-zero plus eventual order-`h^2` stencil-error bound supplies the stencil-error-to-zero field and constructs A1A11 evidence, A1A13 instantiates a concrete `1 / (n + 1)` mesh plus zero-error normal form, A1A14 proves a nonzero `h_n^2` stencil-error normal-form order-`h^2` bound, A1A15 proves the endpoint-package stencil-error sequence has an order-`h^2` bound and tends to zero, A1A16 identifies the actual graph-action stencil-error sequence with that endpoint-package sequence while transferring the A1A12 mode and A1A11 evidence, and the A1A graph-channel semantic closure review proves the conditional parent-field bridge. The parent interface map is still not derived from A1A16 alone, so graph-channel semantic closure remains retained.
+- `A2A15A1A17_PARENT_INTERFACE_MAP_STATUS_v0: ACTUAL_ERROR_EVIDENCE_ONLY_STENCIL_LIMIT_AVAILABLE_SEMANTIC_MAP_FREE_COUNTEREXAMPLE_RECORDED_PARENT_INTERFACE_MAP_RETAINED`
+- `A2A15A1A17_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A17_PARENT_GRAPH_CHANNEL_INTERFACE_MAP_RETAINED`
+- `A2A15A1A17_OUTCOME_v0: PARENT_GRAPH_CHANNEL_INTERFACE_MAP_RETAINED`
+- `A2A15A1A17_OBSTRUCTIONS_v0: PARENT_GRAPH_CHANNEL_FIELD_UNINTERPRETED_NO_SEMANTIC_MAP_FROM_ACTUAL_ERROR_EVIDENCE_NO_CONTINUUM_LAPLACIAN_SEMANTIC_CLOSURE_NO_OPERATOR_DOMAIN_CLOSURE_FROM_ACTUAL_ERROR_NO_PARENT_GRAPH_RELATION_NO_A2A15A1_ASSEMBLY_REVIEW_NO_PHASE2_AUTHORIZATION`
+- `A2A15A1A18_RESTRICTED_PARENT_GRAPH_CHANNEL_INTERFACE_STATUS_v0: RESTRICTED_INTERFACE_DEFINED_GRAPH_FIELD_EQUALS_ACTUAL_ERROR_CONVERGENCE_A1A16_SATISFIES_RESTRICTED_INTERFACE_BRIDGE_CONDITION_STATED_ARBITRARY_PARENT_RETAINED`
+- `A2A15A1A18_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A18_RESTRICTED_PARENT_GRAPH_CHANNEL_INTERFACE_RETAINED`
+- `A2A15A1A18_OUTCOME_v0: RESTRICTED_PARENT_GRAPH_CHANNEL_INTERFACE_RETAINED`
+- `A2A15A1A18_OBSTRUCTIONS_v0: NO_RESTRICTED_TO_ARBITRARY_PARENT_BRIDGE_NO_CONTINUUM_LAPLACIAN_SEMANTIC_CLOSURE_NO_OPERATOR_DOMAIN_CLOSURE_FROM_ACTUAL_ERROR_NO_PARENT_GRAPH_RELATION_NO_A2A15A1_ASSEMBLY_REVIEW_NO_PHASE2_AUTHORIZATION`
+- `A2A15A1A19_PARENT_INTERFACE_EQUIVALENCE_STATUS_v0: EXACT_EQUIVALENCE_AND_EQUALITY_BRIDGE_CONDITIONS_DEFINED_EQUALITY_OR_THEOREM_EQUIVALENCE_SUPPLIES_PARENT_GRAPH_FIELD_PARENT_INTERFACE_EQUIVALENCE_RETAINED`
+- `A2A15A1A19_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A19_PARENT_INTERFACE_EQUIVALENCE_RETAINED`
+- `A2A15A1A19_OUTCOME_v0: PARENT_INTERFACE_EQUIVALENCE_RETAINED`
+- `A2A15A1A19_OBSTRUCTIONS_v0: NO_PARENT_INTERFACE_EQUIVALENCE_NO_DEFINITIONAL_OR_THEOREM_EQUIVALENCE_NO_CONTINUUM_LAPLACIAN_SEMANTIC_CLOSURE_NO_OPERATOR_DOMAIN_CLOSURE_FROM_ACTUAL_ERROR_NO_PARENT_GRAPH_RELATION_NO_A2A15A1_ASSEMBLY_REVIEW_NO_PHASE2_AUTHORIZATION`
+- `A2A15A1A20_PARENT_INTERFACE_TOO_ABSTRACT_STATUS_v0: PARENT_GRAPH_CHANNEL_FIELD_ACCEPTS_ARBITRARY_PROP_FALSE_PARENT_CONTRACT_LEGAL_UNIVERSAL_EQUALITY_AND_EQUIVALENCE_REFUTED_INTERFACE_REFACTOR_OR_SUPPLIED_EQUIVALENCE_REQUIRED`
+- `A2A15A1A20_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A20_PARENT_INTERFACE_TOO_ABSTRACT_RETAINED`
+- `A2A15A1A20_OUTCOME_v0: PARENT_INTERFACE_TOO_ABSTRACT_RETAINED`
+- `A2A15A1A20_OBSTRUCTIONS_v0: PARENT_GRAPH_CHANNEL_FIELD_IS_ARBITRARY_PROP_FALSE_PARENT_GRAPH_CHANNEL_CONTRACT_LEGAL_NO_UNIVERSAL_PARENT_INTERFACE_EQUIVALENCE_NO_UNIVERSAL_PARENT_INTERFACE_EQUALITY_INTERFACE_REFACTOR_OR_SUPPLIED_EQUIVALENCE_REQUIRED_NO_CONTINUUM_LAPLACIAN_SEMANTIC_CLOSURE_NO_OPERATOR_DOMAIN_CLOSURE_FROM_ACTUAL_ERROR_NO_PARENT_GRAPH_RELATION_NO_A2A15A1_ASSEMBLY_REVIEW_NO_PHASE2_AUTHORIZATION`
+- `A2A15A1A21_PARENT_GRAPH_CHANNEL_INTERFACE_REFACTOR_STATUS_v0: SPECIALIZED_PARENT_GRAPH_CHANNEL_INTERFACE_DEFINED_GRAPH_FIELD_DEFINITIONALLY_ACTUAL_ERROR_LEGACY_VIEW_EXPORTS_SPECIALIZED_FIELD_A1A16_SUPPLIES_SPECIALIZED_FIELD_A1A19_EQUALITY_AUTOMATIC_GLOBAL_MIGRATION_RETAINED`
+- `A2A15A1A21_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A21_PARENT_GRAPH_CHANNEL_INTERFACE_REFACTOR_RETAINED`
+- `A2A15A1A21_OUTCOME_v0: PARENT_GRAPH_CHANNEL_INTERFACE_REFACTOR_RETAINED`
+- `A2A15A1A21_OBSTRUCTIONS_v0: NO_GLOBAL_MIGRATION_OF_PARENT_INTERFACE_CURRENT_PARENT_INTERFACE_STILL_AVAILABLE_NO_SPECIALIZED_A2A15A1_WITNESS_NO_FINITE_ENDPOINT_FLUX_CLOSURE_NO_FINITE_RAW_IBP_GREEN_IDENTITY_CLOSURE_NO_CONTINUUM_LAPLACIAN_SEMANTIC_CLOSURE_NO_OPERATOR_DOMAIN_CLOSURE_FROM_ACTUAL_ERROR_NO_PARENT_GRAPH_RELATION_NO_A2A15A1_ASSEMBLY_REVIEW_NO_PHASE2_AUTHORIZATION`
+- `A2A15A1A22_SPECIALIZED_A2A15A1_WITNESS_STATUS_v0: CONDITIONAL_SPECIALIZED_WITNESS_CONSTRUCTOR_DEFINED_A1A16_A1A21_FILL_GRAPH_SLOT_EVIDENCE_FREE_WITNESS_REFUTED_REMAINING_NON_GRAPH_EVIDENCE_RETAINED`
+- `A2A15A1A22_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A22_SPECIALIZED_A2A15A1_WITNESS_RETAINED`
+- `A2A15A1A22_OUTCOME_v0: SPECIALIZED_A2A15A1_WITNESS_RETAINED`
+- `A2A15A1A22_OBSTRUCTIONS_v0: NO_REMAINING_NON_GRAPH_EVIDENCE_PACKAGE_NO_FINITE_ENDPOINT_FLUX_CLOSURE_NO_FINITE_RAW_IBP_GREEN_IDENTITY_CLOSURE_NO_FINITE_PAIRING_CONVERGENCE_NO_TRACE_NORMAL_DERIVATIVE_CONVERGENCE_NO_DOMAIN_REGULARITY_FOR_LIMIT_PASSAGE_NO_ORIENTATION_COMPATIBILITY_NO_SEPARATING_TEST_CLASS_FOR_LIMIT_NO_TARGET_CONTINUUM_SEMANTICS_PACKAGE_NO_A2A15_BOUNDARY_FLUX_CLOSURE_NO_PHASE2_AUTHORIZATION`
+- `A2A15A1A23_SPECIALIZED_ENDPOINT_FLUX_EVIDENCE_STATUS_v0: ENDPOINT_FLUX_EVIDENCE_CONNECTOR_DEFINED_SUPPLIED_ENDPOINT_EVIDENCE_FILLS_SPECIALIZED_ENDPOINT_TRACE_ORIENTATION_FIELDS_EVIDENCE_FREE_ENDPOINT_FIELD_REFUTED_ENDPOINT_EVIDENCE_DERIVATION_RETAINED`
+- `A2A15A1A23_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A23_SPECIALIZED_ENDPOINT_FLUX_EVIDENCE_RETAINED`
+- `A2A15A1A23_OUTCOME_v0: SPECIALIZED_ENDPOINT_FLUX_EVIDENCE_RETAINED`
+- `A2A15A1A23_OBSTRUCTIONS_v0: NO_ENDPOINT_FLUX_EVIDENCE_PACKAGE_NO_ENDPOINT_FLUX_REPRESENTATION_NO_CONTINUUM_BOUNDARY_TRACE_SEMANTICS_NO_CONTINUUM_NORMAL_DERIVATIVE_SEMANTICS_NO_BOUNDARY_RECONSTRUCTION_COMPATIBILITY_NO_FLUX_TERM_CONVERGENCE_MODE_NO_FINITE_ENDPOINT_FLUX_CONSISTENCY_THEOREM_NO_TRACE_NORMAL_DERIVATIVE_CONVERGENCE_NO_ORIENTATION_COMPATIBILITY_NO_REMAINING_NON_ENDPOINT_A2A15A1_EVIDENCE_NO_A2A15A1_CLOSURE_NO_A2A15_BOUNDARY_FLUX_CLOSURE_NO_PHASE2_AUTHORIZATION`
+- `A2A15A1A24_ENDPOINT_FLUX_EVIDENCE_DERIVATION_STATUS_v0: CONCRETE_ENDPOINT_FLUX_SOURCE_SHAPE_DEFINED_REQUIRED_ENDPOINT_OBLIGATIONS_STATED_SOURCE_TO_A1A23_PACKAGE_BRIDGE_PROVED_FALSE_ENDPOINT_SOURCE_REFUTED_SOURCE_DERIVATION_RETAINED`
+- `A2A15A1A24_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A24_ENDPOINT_FLUX_EVIDENCE_DERIVATION_RETAINED`
+- `A2A15A1A24_OUTCOME_v0: ENDPOINT_FLUX_EVIDENCE_DERIVATION_RETAINED`
+- `A2A15A1A24_OBSTRUCTIONS_v0: NO_CONCRETE_ENDPOINT_FLUX_EVIDENCE_SOURCE_NO_ENDPOINT_FLUX_REPRESENTATION_THEOREM_NO_BOUNDARY_TRACE_SEMANTICS_NO_NORMAL_DERIVATIVE_SEMANTICS_NO_BOUNDARY_RECONSTRUCTION_COMPATIBILITY_NO_FLUX_TERM_CONVERGENCE_MODE_NO_FINITE_ENDPOINT_FLUX_CONSISTENCY_THEOREM_NO_TRACE_NORMAL_DERIVATIVE_CONVERGENCE_THEOREM_NO_ORIENTATION_CONVENTION_NO_ORIENTATION_COMPATIBILITY_THEOREM_NO_REMAINING_NON_ENDPOINT_A2A15A1_EVIDENCE_NO_A2A15A1_CLOSURE_NO_A2A15_BOUNDARY_FLUX_CLOSURE_NO_PHASE2_AUTHORIZATION`
+- `A2A15A1A25_ENDPOINT_SOURCE_OBLIGATION_SPLIT_STATUS_v0: REPRESENTATION_SEMANTICS_CONVERGENCE_CONSISTENCY_ORIENTATION_TRACE_PACKAGES_DEFINED_SPLIT_PACKAGES_CONSTRUCT_A1A24_SOURCE_ENDPOINT_DERIVATION_RETAINED`
+- `A2A15A1A25_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A25_ENDPOINT_SOURCE_OBLIGATIONS_RETAINED`
+- `A2A15A1A25_OUTCOME_v0: ENDPOINT_SOURCE_OBLIGATIONS_RETAINED`
+- `A2A15A1A26_ENDPOINT_REPRESENTATION_SEMANTICS_STATUS_v0: REPRESENTATION_THEOREM_TRACE_NORMAL_SEMANTICS_AND_PARENT_TRACE_NORMAL_BRIDGE_INTERFACES_DEFINED_SUPPLIED_PIECES_CONSTRUCT_A1A25_REPRESENTATION_PACKAGE_DERIVATION_RETAINED`
+- `A2A15A1A26_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A26_ENDPOINT_REPRESENTATION_SEMANTICS_RETAINED`
+- `A2A15A1A26_OUTCOME_v0: ENDPOINT_REPRESENTATION_SEMANTICS_RETAINED`
+- `A2A15A1A27_ENDPOINT_CONVERGENCE_CONSISTENCY_STATUS_v0: BOUNDARY_RECONSTRUCTION_FLUX_CONVERGENCE_MODE_FINITE_ENDPOINT_CONSISTENCY_AND_PARENT_ENDPOINT_BRIDGE_INTERFACES_DEFINED_SUPPLIED_PIECES_CONSTRUCT_A1A25_CONVERGENCE_PACKAGE_DERIVATION_RETAINED`
+- `A2A15A1A27_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A27_ENDPOINT_CONVERGENCE_CONSISTENCY_RETAINED`
+- `A2A15A1A27_OUTCOME_v0: ENDPOINT_CONVERGENCE_CONSISTENCY_RETAINED`
+- `A2A15A1A28_ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_STATUS_v0: ORIENTATION_CONVENTION_TRACE_NORMAL_CONVERGENCE_ORIENTATION_COMPATIBILITY_AND_PARENT_ORIENTATION_TRACE_BRIDGES_DEFINED_SUPPLIED_PIECES_CONSTRUCT_A1A25_ORIENTATION_PACKAGE_DERIVATION_RETAINED`
+- `A2A15A1A28_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A28_ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_RETAINED`
+- `A2A15A1A28_OUTCOME_v0: ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_RETAINED`
+- `A2A15A1A29_REFINED_ENDPOINT_SOURCE_ASSEMBLY_STATUS_v0: A1A26_A1A27_A1A28_SUPPLIED_PACKAGES_ASSEMBLE_A1A25_ENDPOINT_SOURCE_INTERFACE_MISMATCH_NOT_REACHED_ENDPOINT_CHANNEL_EVIDENCE_AVAILABLE_REMAINING_NONENDPOINT_OBLIGATIONS_RETAINED`
+- `A2A15A1A29_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A29_REMAINING_NONENDPOINT_OBLIGATIONS_RETAINED`
+- `A2A15A1A29_OUTCOME_v0: REFINED_ENDPOINT_SOURCE_ASSEMBLED_A2A15A1_REMAINING_NONENDPOINT_OBLIGATIONS_RETAINED`
+- `A2A15A1A29_INTERFACE_MISMATCH_OUTCOME_NOT_REACHED_v0: REFINED_ENDPOINT_SOURCE_ASSEMBLY_RETAINED_INTERFACE_MISMATCH`
+- `A2A15A1A30_REMAINING_NONENDPOINT_OBLIGATION_SPLIT_STATUS_v0: DOMAIN_REGULARITY_RAW_IBP_TO_GREEN_CONVERGENCE_PAIRING_CONVERGENCE_SEPARATING_TEST_CLASS_AND_TARGET_CONTINUUM_SEMANTICS_PACKAGES_DEFINED_CONDITIONAL_RECONSTRUCTION_PROVED`
+- `A2A15A1A30_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A30_REMAINING_NONENDPOINT_OBLIGATIONS_SPLIT_RETAINED`
+- `A2A15A1A30_OUTCOME_v0: A2A15A1_REMAINING_NONENDPOINT_OBLIGATIONS_SPLIT_RETAINED`
+- `A2A15A1A30_NEXT_THEOREM_TARGET_v0: ATTEMPT_RAW_IBP_TO_GREEN_CONVERGENCE_NONENDPOINT_OBLIGATION`
+- `A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_STATUS_v0: SUPPLIED_A2A15A1C_CHANNEL_EVIDENCE_CONDITIONALLY_FILLS_A1A30_RAW_PACKAGE_AND_RECONSTRUCTS_NONENDPOINT_PACKAGE_EVIDENCE_FREE_RAW_PACKAGE_REFUTED_CHANNEL_EVIDENCE_RETAINED`
+- `A2A15A1A31_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED`
+- `A2A15A1A31_OUTCOME_v0: RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_CONDITIONAL_BRIDGE_RETAINED`
+- `A2A15A1A31_NEXT_ARCHITECTURE_TARGET_v0: ROTATE_TO_QM_STAT_TRANSPORT_RESIDUAL_SEMANTICS`
+- `SCALAR_QFT_UNIFORM_MESH_CONVERGENCE_ORDERING_v0: CONTRACT_AND_CONDITIONAL_EVIDENCE_THEOREM_RECORDED_ORDER_H2_TO_ZERO_LIMIT_PROVED_CONCRETE_MESH_ZERO_ERROR_NORMAL_FORM_INSTANTIATED_NONZERO_NORMAL_FORM_BOUND_PROVED_ENDPOINT_PACKAGE_STENCIL_ERROR_ORDER_H2_BOUND_PROVED_ACTUAL_GRAPH_ERROR_IDENTIFIED_CLOSURE_REVIEW_RETAINED_PARENT_INTERFACE_MAP_RETAINED_RESTRICTED_INTERFACE_RETAINED_PARENT_INTERFACE_EQUIVALENCE_RETAINED_PARENT_INTERFACE_TOO_ABSTRACT_RETAINED_PARENT_GRAPH_CHANNEL_INTERFACE_REFACTOR_RETAINED_SPECIALIZED_A2A15A1_WITNESS_RETAINED_SPECIALIZED_ENDPOINT_FLUX_EVIDENCE_RETAINED_ENDPOINT_FLUX_EVIDENCE_DERIVATION_RETAINED_ENDPOINT_SOURCE_OBLIGATION_SPLIT_RETAINED_ENDPOINT_REPRESENTATION_SEMANTICS_RETAINED_ENDPOINT_CONVERGENCE_CONSISTENCY_RETAINED_ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_RETAINED_REFINED_ENDPOINT_SOURCE_ASSEMBLED_REMAINING_NONENDPOINT_RETAINED_REMAINING_NONENDPOINT_OBLIGATION_SPLIT_RETAINED_RAW_IBP_GREEN_CONDITIONAL_BRIDGE_RETAINED_SCALAR_HANDOFF_READY`
+- The scalar `taylorWithinEval` coefficient formula, reflected-left endpoint expansion/bound route, centered-alignment theorem from the global smoothness/nondegenerate-interval mathlib route, and two-sided endpoint package into the local stencil-bound route are now theorem-derived/formalized. The A1A10 uniform mesh convergence contract is explicit, A1A11 proves the conditional theorem from supplied uniform-mesh evidence to the graph-channel route, A1A12 proves that the chosen real-filter mesh-to-zero plus eventual order-`h^2` stencil-error bound supplies the stencil-error-to-zero field and constructs A1A11 evidence, A1A13 instantiates a concrete `1 / (n + 1)` mesh plus zero-error normal form, A1A14 proves a nonzero `h_n^2` stencil-error normal-form order-`h^2` bound, A1A15 proves the endpoint-package stencil-error sequence has an order-`h^2` bound and tends to zero, A1A16 identifies the actual graph-action stencil-error sequence with that endpoint-package sequence while transferring the A1A12 mode and A1A11 evidence, the A1A graph-channel semantic closure review proves the conditional parent-field bridge, A1A17 records a counterexample to semantic-map-free parent-interface closure, A1A18 proves A1A16 satisfies the restricted parent graph-channel interface, A1A19 proves equality or theorem-equivalence with the arbitrary parent graph-channel proposition supplies the restricted-to-arbitrary bridge, A1A20 proves the current parent field is too abstract for a universal equality/equivalence derivation, A1A21 defines the specialized parent graph-channel interface whose legacy view makes the A1A19 equality automatic, A1A22 constructs the specialized A2A15A1 witness conditionally on the remaining non-graph evidence while refuting evidence-free specialized witness closure, A1A23 connects supplied endpoint-flux channel evidence into the specialized witness package while refuting graph-evidence-only endpoint-field closure, A1A24 defines the concrete endpoint-flux source shape whose supplied evidence builds the A1A23 package while refuting source existence for a false endpoint contract, A1A25 splits the endpoint source into representation/semantics, convergence/consistency, and orientation/trace subpackages, A1A26 refines the representation/semantics interface, A1A27 refines the convergence/consistency interface, A1A28 refines the orientation/trace interface, A1A29 assembles the refined endpoint source from A1A26-A1A28, A1A30 splits the remaining non-endpoint evidence into five packages, and A1A31 conditionally bridges supplied A2A15A1C raw-IBP/Green channel evidence into the raw package. Scalar drilling is paused unless the master dependency graph changes; the next architecture target is QM-STAT transport residual semantics.
 
 ## Current Formal Physics Increment
 
@@ -133,6 +239,22 @@ New mechanically checked proof surface:
 - `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianEndpointPackageStencilErrorUniformBound.lean`
 - `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianActualGraphStencilErrorIdentification.lean`
 - `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianGraphChannelSemanticClosureReview.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianParentInterfaceMapFromActualGraphError.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianRestrictedParentGraphChannelInterface.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianParentInterfaceEquivalenceBridge.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianParentInterfaceTooAbstractReview.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianParentGraphChannelInterfaceRefactor.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianSpecializedA2A15A1Witness.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianSpecializedEndpointFluxEvidence.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianEndpointFluxEvidenceDerivation.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianEndpointSourceObligationSplit.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianEndpointRepresentationSemanticsObligation.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianEndpointConvergenceConsistencyObligation.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianEndpointOrientationTraceCompatibilityObligation.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianRefinedEndpointSourceAssembly.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianRemainingNonEndpointObligationSplit.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianRawIBPGreenConvergencePackage.lean`
+- `formal/toe_formal/ToeFormal/QFT/ContinuumSpatialGraphLaplacianScalarHandoffCapstone.lean`
 - `formal/toe_formal/ToeFormal/QFT/ContinuumDifferentiableFunctionSpace.lean`
 - `formal/toe_formal/ToeFormal/QFT/ContinuumConcreteCalculusSemantics.lean`
 - `formal/toe_formal/ToeFormal/QFT/ContinuumBaseSpaceIntegralModel.lean`
@@ -169,6 +291,8 @@ New mechanically checked proof surface:
 - `formal/toe_formal/ToeFormal/QFT/ScalarPotentialDecomposition.lean`
 - `formal/toe_formal/ToeFormal/QFT/ToeCandidateFreeScalarWitness.lean`
 - `formal/toe_formal/ToeFormal/Bridges/QM_STAT_Transport.lean`
+- `formal/toe_formal/ToeFormal/Bridges/QM_STAT_TransportResidualPackage.lean`
+- `formal/toe_formal/ToeFormal/Bridges/QFT_GR_StressEnergyExpectationSourceMap.lean`
 
 Strict-physics fidelity audit surface:
 - `formal/docs/lanes/TOE_CANDIDATE_FREE_SCALAR_WITNESS_FIDELITY_AUDIT_v0.md`
@@ -569,6 +693,14 @@ What is proved:
 - The 003A2A15A1A16 actual graph stencil-error identification slice is now explicit in `ContinuumSpatialGraphLaplacianActualGraphStencilErrorIdentification.lean`. It defines the actual graph-action stencil-error object from the sampled symmetric stencil, proves the sampled field equals the endpoint-package reconstruction, identifies the actual graph-action error with the endpoint-package stencil-error value, transfers the order-`h^2` bound and convergence proof, and constructs the A1A12 mode plus A1A11 evidence object for the actual graph-action sequence. It does not by itself close parent graph-channel semantics, continuum Laplacian semantic closure, operator-domain closure, or the full A1A channel. The retained blocker is `PHASE1-BLOCKER-003A2A15A1A16_GRAPH_CHANNEL_SEMANTIC_CLOSURE_RETAINED`.
 
 - The A1A graph-channel semantic closure review is now explicit in `ContinuumSpatialGraphLaplacianGraphChannelSemanticClosureReview.lean`. It proves that the A1A16 actual-error evidence fills the parent graph-channel field if the remaining parent semantic bridge is supplied, and records the retained result `GRAPH_CHANNEL_SEMANTIC_CLOSURE_RETAINED`. The exact remaining mismatch is the parent interface map from actual graph error evidence into the `AnalyticIntervalLiftConvergenceContract` graph-channel field, plus continuum Laplacian semantics, operator-domain closure, parent graph relation, A2A15A1 assembly review, and Phase 2 authorization.
+- The 003A2A15A1A17 parent-interface-map review is now explicit in `ContinuumSpatialGraphLaplacianParentInterfaceMapFromActualGraphError.lean`. It isolates the A1A16 actual-error evidence-only package, verifies the actual stencil-error limit remains available, and records a concrete counterexample to semantic-map-free closure: the parent graph-channel field is an uninterpreted proposition and can be `False` in a legal parent contract. Therefore actual graph-error evidence alone does not satisfy the arbitrary parent A1A graph-channel interface; the retained blocker is `PHASE1-BLOCKER-003A2A15A1A17_PARENT_GRAPH_CHANNEL_INTERFACE_MAP_RETAINED`.
+- The 003A2A15A1A18 restricted parent graph-channel interface is now explicit in `ContinuumSpatialGraphLaplacianRestrictedParentGraphChannelInterface.lean`. It defines a restricted parent graph-channel field to be exactly the A1A16 actual graph-error stencil-limit proposition, proves the actual graph-error evidence satisfies that restricted field, and states the bridge condition needed to move from this restricted interface to an arbitrary parent `AnalyticIntervalLiftConvergenceContract`. That bridge is not derived here; the retained blocker is `PHASE1-BLOCKER-003A2A15A1A18_RESTRICTED_PARENT_GRAPH_CHANNEL_INTERFACE_RETAINED`.
+- The 003A2A15A1A19 parent-interface equivalence bridge is now explicit in `ContinuumSpatialGraphLaplacianParentInterfaceEquivalenceBridge.lean`. It defines the exact theorem-equivalence and proposition-equality bridge conditions between the A1A18 restricted proposition and the arbitrary parent `graph_laplacian_action_to_continuum_laplacian` field, proves equality implies theorem-equivalence, proves either condition manufactures the A1A18 restricted-to-arbitrary bridge, and proves A1A16 actual-error evidence fills the arbitrary parent field when the actual-error equivalence is supplied. The equivalence/equality itself is not derived here; the retained blocker is `PHASE1-BLOCKER-003A2A15A1A19_PARENT_INTERFACE_EQUIVALENCE_RETAINED`.
+- The 003A2A15A1A20 parent-interface abstraction review is now explicit in `ContinuumSpatialGraphLaplacianParentInterfaceTooAbstractReview.lean`. It inspects the current parent graph-channel field as a freely supplied proposition, constructs a legal parent contract whose graph-channel field is any chosen `Prop`, specializes that contract to `False`, and proves this legal false parent field refutes both universal theorem-equivalence and universal proposition-equality from A1A16 actual-error evidence. Therefore the current arbitrary parent interface cannot be closed by actual-error evidence alone; the retained blocker is `PHASE1-BLOCKER-003A2A15A1A20_PARENT_INTERFACE_TOO_ABSTRACT_RETAINED`.
+- The 003A2A15A1A21 parent graph-channel interface refactor is now explicit in `ContinuumSpatialGraphLaplacianParentGraphChannelInterfaceRefactor.lean`. It defines a specialized parent graph-channel contract shape whose graph field is definitionally the A1A16 actual-error stencil-limit proposition, exports a legacy `AnalyticIntervalLiftConvergenceContract` view with that specialized graph slot, proves A1A16 actual-error evidence supplies the legacy parent field, and proves the A1A19 proposition-equality bridge is automatic for that legacy view. Global migration of the parent interface and construction of a full specialized A2A15A1 witness remain retained as `PHASE1-BLOCKER-003A2A15A1A21_PARENT_GRAPH_CHANNEL_INTERFACE_REFACTOR_RETAINED`.
+- The 003A2A15A1A22 specialized A2A15A1 witness attempt is now explicit in `ContinuumSpatialGraphLaplacianSpecializedA2A15A1Witness.lean`. It defines the remaining non-graph evidence package needed after A1A21, constructs an `AnalyticIntervalLiftWitness` for the specialized legacy view when that evidence is supplied, proves the resulting witness feeds raw spatial IBP and A2A14, and records a false-endpoint-flux specialized contract showing that the graph-slot refactor alone cannot manufacture the full witness. The remaining non-graph evidence package is retained as `PHASE1-BLOCKER-003A2A15A1A22_SPECIALIZED_A2A15A1_WITNESS_RETAINED`.
+- The 003A2A15A1A23 specialized endpoint-flux evidence connector is now explicit in `ContinuumSpatialGraphLaplacianSpecializedEndpointFluxEvidence.lean`. It isolates the non-endpoint fields still required after supplied A2A15A1B endpoint-flux channel evidence, proves supplied endpoint evidence fills the specialized endpoint-flux, boundary-trace/normal, trace-normal convergence, target-orientation, and orientation-compatibility fields, and constructs the A1A22 remaining-evidence package conditionally from endpoint evidence plus the remaining non-endpoint obligations. A false-endpoint specialized contract still refutes graph-evidence-only endpoint closure, so endpoint evidence derivation remains retained as `PHASE1-BLOCKER-003A2A15A1A23_SPECIALIZED_ENDPOINT_FLUX_EVIDENCE_RETAINED`.
+- The 003A2A15A1A24 endpoint-flux evidence derivation attempt is now explicit in `ContinuumSpatialGraphLaplacianEndpointFluxEvidenceDerivation.lean`. It defines the concrete endpoint-flux source shape, naming the endpoint representation theorem, boundary trace semantics, normal derivative semantics, orientation convention, reconstruction compatibility, flux convergence mode, finite endpoint consistency theorem, trace-normal convergence theorem, and orientation-compatibility theorem. Lean proves that a supplied source builds the A1A23 endpoint package and feeds the specialized remaining-evidence constructor, while a false-endpoint specialized contract refutes source existence. The source derivation remains retained as `PHASE1-BLOCKER-003A2A15A1A24_ENDPOINT_FLUX_EVIDENCE_DERIVATION_RETAINED`.
 - The 003A1 differentiable-function-space witness surface now defines the selected field space, test-variation space, differentiability/regularity predicate, compact-support/decay predicate, trace-existence predicate, and closure under allowed variations.
 - A supplied 003A1 witness mechanically provides the differentiability portion of the scalar kinetic Green-identity assumption bundle, and proves that allowed variations remain in the selected field space and decay implies trace vanishing for the selected boundary problem.
 - The 003A1 increment does not construct concrete calculus semantics for a real differentiable function space; that semantic instantiation remains retained alongside closed boundary universe, integration regularity, and operator-domain closure.
@@ -639,6 +771,24 @@ What is proved:
 - The nonrelativistic energy-envelope relation follows algebraically from the KG dispersion relation, with the quadratic remainder assumption stated explicitly.
 - In a finite-state QM-STAT transport model, invertible state transport preserves entropy-like sums when the target probability is the transported source probability.
 - In the same finite transport model, transported observables and transported probabilities preserve moments, and preserved first/second moments preserve variance.
+- `QM_STAT_TransportResidualPackage.lean` now defines the unified QM-STAT transport residual package interface: source QM evolution structure, target STAT/entropy structure, transport map, preserved quantities, and residual/error object.
+- The existing finite-state transport theorems are sufficient to construct a zero-residual package only when the finite source, target, transport equivalence, probability alignment, and observable alignments are supplied.
+- Full QM-STAT theorem transport remains retained as `PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED` because the current repo still does not derive the QM evolution probability source, STAT entropy target, transport map from QM evolution to STAT data, coarse-graining/irreversibility law, or seam-level closure semantics.
+- `QFT_GR_StressEnergyExpectationSourceMap.lean` now defines the bounded QFT-GR stress-energy expectation source-map interface: QFT stress-energy object, expectation/state functional, GR source object, covariance/conservation assumptions, and pointwise residual/error objects.
+- Supplied expectation/source and weak-curvature/source alignments construct a zero-residual package, but the current repo still does not derive the stress-energy operator/domain, QFT state expectation functional, renormalized expectation semantics, GR weak-curvature source identification, or covariance/conservation theorem needed for seam semantics.
+- Full QFT-GR source-map semantics remain retained as `PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED`; this surface makes no QFT-GR seam closure, semiclassical gravity, Einstein-equation derivation, master-action promotion, or empirical claim.
+- `ContinuumSpatialGraphLaplacianEndpointRepresentationSemanticsObligation.lean` now refines the A1A25 representation/semantics endpoint subpackage into supplied endpoint-flux representation, supplied boundary-trace/normal-derivative semantics, and a supplied bridge into the parent trace/normal field.
+- Those supplied A1A26 pieces construct the A1A25 representation/semantics package, but the representation theorem, trace/normal semantics derivation, convergence/consistency package, orientation/trace package, full endpoint source, final A2A15A1 witness, and Phase 2 remain retained under `PHASE1-BLOCKER-003A2A15A1A26_ENDPOINT_REPRESENTATION_SEMANTICS_RETAINED`.
+- `ContinuumSpatialGraphLaplacianEndpointConvergenceConsistencyObligation.lean` now refines the A1A25 convergence/consistency endpoint subpackage into supplied boundary reconstruction compatibility, supplied flux-term convergence mode, supplied finite endpoint-flux consistency, and a supplied bridge into the parent endpoint-flux field.
+- Those supplied A1A27 pieces construct the A1A25 convergence/consistency package and conditionally supply the parent endpoint field once an orientation convention is supplied. Orientation/trace compatibility, the full endpoint source, final A2A15A1 witness, and Phase 2 remain retained under `PHASE1-BLOCKER-003A2A15A1A27_ENDPOINT_CONVERGENCE_CONSISTENCY_RETAINED`.
+- `ContinuumSpatialGraphLaplacianEndpointOrientationTraceCompatibilityObligation.lean` now refines the A1A25 orientation/trace endpoint subpackage into supplied orientation convention, supplied trace-normal convergence statement, supplied orientation compatibility statement, and supplied parent orientation/trace bridges.
+- Those supplied A1A28 pieces construct the A1A25 orientation/trace package and route to the parent orientation, trace-normal convergence, and orientation-compatibility fields. The actual orientation/trace derivation, refined endpoint-source assembly, full endpoint source, final A2A15A1 witness, and Phase 2 remain retained under `PHASE1-BLOCKER-003A2A15A1A28_ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_RETAINED`.
+- `ContinuumSpatialGraphLaplacianRefinedEndpointSourceAssembly.lean` now assembles the A1A26 representation/semantics package, A1A27 convergence/consistency package, and A1A28 orientation/trace package through the A1A25 endpoint-source constructor.
+- The refined endpoint source supplies endpoint-channel evidence and the specialized endpoint field. The interface-mismatch branch is not reached; remaining non-endpoint A2A15A1 evidence, final A2A15A1 witness, parent A2A15 route, and Phase 2 remain retained under `PHASE1-BLOCKER-003A2A15A1A29_REMAINING_NONENDPOINT_OBLIGATIONS_RETAINED`.
+- `ContinuumSpatialGraphLaplacianRemainingNonEndpointObligationSplit.lean` now splits that residual A2A15A1 evidence into domain/regularity, raw-IBP-to-Green convergence, pairing convergence, separating test-class semantics, and target continuum semantics packages.
+- Those five supplied packages reconstruct the existing non-endpoint evidence object. A1A30 selected raw-IBP-to-Green convergence as the bounded theorem-facing target consumed by A1A31, while final A2A15A1 witness construction, parent A2A15 route, and Phase 2 remain retained under `PHASE1-BLOCKER-003A2A15A1A30_REMAINING_NONENDPOINT_OBLIGATIONS_SPLIT_RETAINED`.
+- `ContinuumSpatialGraphLaplacianRawIBPGreenConvergencePackage.lean` now tests the selected A1A30 raw-IBP-to-Green package. Supplied A2A15A1C channel evidence fills the A1A30 raw package and, with analytic-interval plus separating-test supplements, reconstructs the whole non-endpoint evidence object.
+- A legal false raw-field specialized contract refutes evidence-free raw-package construction. The A2A15A1C channel evidence itself is still not constructed here, so scalar drilling pauses under `PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED` and the next architecture target rotates to QM-STAT transport residual semantics.
 
 What remains open:
 - Proving the retained continuum assumptions from concrete analysis: smoothness class, compact support or decay, admissible variation space, operator domain, boundary-term vanishing, mass/operator sign convention, and residual-separation principle.
@@ -1265,11 +1415,42 @@ A result does not count as derivational if it only supplies:
 | --- | --- | --- | --- | --- | --- |
 | `ROW-SEAM-QM-STAT-001` | Prove a theorem-transport result from QM evolution data to the required statistical/entropy structure, or prove the transport cannot close under current assumptions. | Shared state space, time evolution compatibility, probability measure, moment/entropy functional, coarse-graining map. | `formal/python/research/harder_qm_stat_target.py`; `formal/output/research/research_qm_stat_transport_moment_stack_probe_20260419_v0.json`; `formal/output/sandbox/qm_stat_transport_witness_sandbox_artifact_20260419_v0.json` | Unified theorem transport residual package; entropy balance closure; moment-stack preservation theorem. | If authorization remains blocked, switch to COSMO-SR. |
 | `ROW-SEAM-COSMO-SR-001` | Prove compatibility between local SR covariance and the cosmological background/regime map, including the approximation residual. | Local-to-global chart map, scale-factor regime, metric compatibility, bounded residual. | COSMO-SR class-B seam pilot artifacts. | Regime transport theorem; covariance-to-expansion compatibility; residual bound. | Use only if QM-STAT is blocked. |
-| `ROW-SEAM-QFT-GR-001` | Prove covariant QFT-to-GR stress-energy coupling under a bounded regime or record the exact obstruction. | Stress-energy operator/domain, semiclassical expectation map, covariance, renormalization assumptions. | QFT-GR seam reactivation objective artifacts. | Stress-energy construction; expectation-value source theorem; covariance preservation. | Remain on external hold unless explicitly unblocked. |
+| `ROW-SEAM-QFT-GR-001` | Prove covariant QFT-to-GR stress-energy coupling under a bounded regime or record the exact obstruction. | Stress-energy operator/domain, expectation/state functional, renormalized expectation semantics, weak-curvature source identification, covariance and conservation assumptions. | `formal/toe_formal/ToeFormal/Bridges/QFT_GR_StressEnergyExpectationSourceMap.lean`; QFT-GR seam reactivation objective artifacts. | Derive the source-map semantics now retained as `PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED`; then prove covariance/conservation preservation. | Remain on external hold unless explicitly unblocked. |
+
+## Cross-Pillar Frontier Sweep
+
+Protocol surface:
+- Lean surface: `formal/toe_formal/ToeFormal/Derivation/CrossPillarDerivationProtocol.lean`
+- Standard method: `target -> evidence package -> conditional bridge -> obstruction/counterexample -> retained blocker -> next strict target`.
+- Uniform statuses: `proved`, `conditional`, `retained`, `refuted`, `not_authorized`.
+
+Frontier map surface:
+- Lean surface: `formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
+- Rows: Scalar/QFT, QM evolution, QM-STAT, SR covariance, GR01, Cosmology, QFT-GR seam, GR-QM seam, EM-QFT seam, master action.
+- Each row records strongest surface, retained blocker, proof-debt scope, master-action dependency, and next strict slice.
+
+Master-action dependency frontier:
+- Lean surface: `formal/toe_formal/ToeFormal/Derivation/MasterActionDependencyFrontier.lean`
+- Dependency classes: `required_for_coherence`, `required_for_closure`, `publication_grade_only`, `local_proof_debt`.
+- Output is citation-boundary only: the master action may cite retained assumptions under their listed scope boundaries, but this map does not promote the master action.
+
+Post-sweep theorem queue:
+- Lean surface: `formal/toe_formal/ToeFormal/Derivation/PostSweepTheoremQueue.lean`
+- Next three slices: QM-STAT unified theorem transport residual package; QFT-GR stress-energy expectation source map; scalar paused after A1A31.
+- Each queued slice has exactly one retained blocker and one validation target.
 
 ## Active Priority Order
 
-1. Continue the scalar derivational backbone from `FreeScalarDerivation.lean`.
+1. QM-STAT residual package is advanced but retained.
+   - Current retained blocker: `PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED`.
+   - Validation target: focused `ToeFormal.Bridges.QM_STAT_TransportResidualPackage` build plus the existing QM-STAT/authority parity gates.
+2. QFT-GR stress-energy expectation source-map package is advanced but retained.
+   - Current retained blocker: `PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED`.
+   - Validation target: focused `ToeFormal.Bridges.QFT_GR_StressEnergyExpectationSourceMap` build plus existing QFT-GR objective/authority gates.
+3. Scalar raw-IBP-to-Green convergence has a conditional bridge and is paused as local proof debt.
+   - Current retained blocker: `PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED`.
+   - Validation target: focused `ToeFormal.QFT.ContinuumSpatialGraphLaplacianRawIBPGreenConvergencePackage` build.
+4. Historical scalar backbone context remains:
    - Finite first-variation theorem component landed in `ScalarFirstVariation.lean`.
    - Continuum theorem target landed in `ContinuumFirstVariation.lean`.
    - Scalar-slice extraction bridge landed in `ScalarSliceExtraction.lean` as a bounded conditional theorem target.
@@ -1329,6 +1510,14 @@ A result does not count as derivational if it only supplies:
    - 003A2A15A1A15 endpoint-package stencil-error uniform-bound bridge landed in `ContinuumSpatialGraphLaplacianEndpointPackageStencilErrorUniformBound.lean`; it defines the endpoint-package local error sequence, proves its order-`h^2` bound and convergence, and constructs the A1A12 mode plus A1A11 evidence object for that sequence. Its graph-action identification blocker is now prior to A1A16: `PHASE1-BLOCKER-003A2A15A1A15_ACTUAL_GRAPH_STENCIL_ERROR_IDENTIFICATION_RETAINED`.
    - 003A2A15A1A16 actual graph stencil-error identification landed in `ContinuumSpatialGraphLaplacianActualGraphStencilErrorIdentification.lean`; it defines the actual graph-action error object, proves the endpoint reconstruction equality, identifies the actual error with the endpoint-package error, transfers the order-`h^2` bound and convergence proof, and constructs the A1A12 mode plus A1A11 evidence object. The remaining blocker is parent graph-channel semantic closure: `PHASE1-BLOCKER-003A2A15A1A16_GRAPH_CHANNEL_SEMANTIC_CLOSURE_RETAINED`.
    - A1A graph-channel semantic closure review landed in `ContinuumSpatialGraphLaplacianGraphChannelSemanticClosureReview.lean`; it proves the conditional bridge from A1A16 actual-error evidence to the parent graph-channel field when the parent semantic map is supplied. The review outcome is `GRAPH_CHANNEL_SEMANTIC_CLOSURE_RETAINED`; the closed outcome `GRAPH_CHANNEL_CLOSED_A2A15A1_READY_FOR_REVIEW` is not reached.
+   - 003A2A15A1A17 parent-interface-map review landed in `ContinuumSpatialGraphLaplacianParentInterfaceMapFromActualGraphError.lean`; it proves the evidence-only package still gives the actual stencil-limit evidence but cannot fill arbitrary parent graph-channel fields without a semantic map. The retained blocker is `PHASE1-BLOCKER-003A2A15A1A17_PARENT_GRAPH_CHANNEL_INTERFACE_MAP_RETAINED`.
+   - 003A2A15A1A18 restricted parent graph-channel interface landed in `ContinuumSpatialGraphLaplacianRestrictedParentGraphChannelInterface.lean`; it proves actual graph-error evidence satisfies the restricted interface and retains the restricted-to-arbitrary parent bridge as `PHASE1-BLOCKER-003A2A15A1A18_RESTRICTED_PARENT_GRAPH_CHANNEL_INTERFACE_RETAINED`.
+   - 003A2A15A1A19 parent-interface equivalence bridge landed in `ContinuumSpatialGraphLaplacianParentInterfaceEquivalenceBridge.lean`; it proves proposition equality or theorem-equivalence supplies the arbitrary parent graph-channel field and retains the equivalence derivation as `PHASE1-BLOCKER-003A2A15A1A19_PARENT_INTERFACE_EQUIVALENCE_RETAINED`.
+   - 003A2A15A1A20 parent-interface abstraction review landed in `ContinuumSpatialGraphLaplacianParentInterfaceTooAbstractReview.lean`; it proves the current parent graph-channel field can legally be any proposition, including `False`, and retains the required interface refactor or supplied equivalence as `PHASE1-BLOCKER-003A2A15A1A20_PARENT_INTERFACE_TOO_ABSTRACT_RETAINED`.
+   - 003A2A15A1A21 parent graph-channel interface refactor landed in `ContinuumSpatialGraphLaplacianParentGraphChannelInterfaceRefactor.lean`; it defines the specialized graph-channel contract and legacy view with automatic A1A19 equality, retaining global migration as `PHASE1-BLOCKER-003A2A15A1A21_PARENT_GRAPH_CHANNEL_INTERFACE_REFACTOR_RETAINED`.
+   - 003A2A15A1A22 specialized A2A15A1 witness attempt landed in `ContinuumSpatialGraphLaplacianSpecializedA2A15A1Witness.lean`; it constructs the specialized lift witness conditionally on the remaining non-graph evidence and refutes evidence-free closure via a false endpoint-flux specialized contract. The retained blocker is `PHASE1-BLOCKER-003A2A15A1A22_SPECIALIZED_A2A15A1_WITNESS_RETAINED`.
+   - 003A2A15A1A23 specialized endpoint-flux evidence connector landed in `ContinuumSpatialGraphLaplacianSpecializedEndpointFluxEvidence.lean`; it plugs supplied endpoint-flux channel evidence into the specialized A1A22 witness package, isolates the still-independent non-endpoint fields, and retains endpoint evidence derivation as `PHASE1-BLOCKER-003A2A15A1A23_SPECIALIZED_ENDPOINT_FLUX_EVIDENCE_RETAINED`.
+   - 003A2A15A1A24 endpoint-flux evidence derivation attempt landed in `ContinuumSpatialGraphLaplacianEndpointFluxEvidenceDerivation.lean`; it defines the concrete endpoint source shape and proves source-to-package wiring, retaining source obligation discharge as `PHASE1-BLOCKER-003A2A15A1A24_ENDPOINT_FLUX_EVIDENCE_DERIVATION_RETAINED`.
    - 003A1 witness surface landed in `ContinuumDifferentiableFunctionSpace.lean`; the selected field space, test-variation space, regularity, compact-support/decay, trace-existence, and variation-closure obligations now supply the differentiability portion of the Green-identity assumption bundle when a witness is provided.
    - 003A1 concrete-calculus adapter landed in `ContinuumConcreteCalculusSemantics.lean`; supplied semantics now build the 003A1 witness, while the missing concrete source is recorded as `PHASE1-BLOCKER-003A1A_CONCRETE_CALCULUS_SEMANTICS_RETAINED`.
    - 003A1A1 base-space/integral model surface landed in `ContinuumBaseSpaceIntegralModel.lean`; supplied base/integral data now constructs the selected scalar kinetic pair and feeds the concrete-calculus semantics adapter when the remaining interpretation package is supplied.
