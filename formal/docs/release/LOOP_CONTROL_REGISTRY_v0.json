@@ -529,12 +529,16 @@
       "workstream_id": "qm_stat_transport_residual",
       "status": "retained",
       "retained_blocker": "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED",
-      "consecutive_slices_after_retention": 1,
+      "consecutive_slices_after_retention": 2,
       "allowed_reopen_conditions": [
         "new_theorem",
         "counterexample",
         "stronger_evidence_object"
-      ]
+      ],
+      "last_fresh_delta_kind": "stronger_evidence_object",
+      "last_fresh_delta_id": "QM_STAT_TRANSPORT_RESIDUAL_COMPONENT_EVIDENCE_FRESH_DELTA_v0",
+      "last_fresh_delta_evidence": "formal/toe_formal/ToeFormal/Bridges/QM_STAT_TransportResidualPackage.lean",
+      "next_action_after_budget_exhaustion": "pause_and_cross_pillar_review_before_further_local_qm_stat_slices"
     },
     {
       "workstream_id": "qft_gr_source_map",

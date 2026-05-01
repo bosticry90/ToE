@@ -33,6 +33,7 @@ Lean aggregate status:
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260501_v0: GREEN_WITH_EXISTING_WARNINGS`
 - `STRICT_PHYSICS_CROSS_PILLAR_HANDOFF_INCREMENT_20260430_v0: A2A15A1A25_ENDPOINT_SOURCE_OBLIGATION_SPLIT_PLUS_SCALAR_HANDOFF_CAPSTONE_PLUS_CROSS_PILLAR_DERIVATION_PROTOCOL_PLUS_CLOSURE_FRONTIER_PLUS_MASTER_ACTION_DEPENDENCY_FRONTIER_PLUS_POST_SWEEP_THEOREM_QUEUE`
 - `STRICT_PHYSICS_QMSTAT_RESIDUAL_PACKAGE_INCREMENT_20260501_v0: QM_STAT_UNIFIED_TRANSPORT_RESIDUAL_PACKAGE_INTERFACE_PLUS_FINITE_TRANSPORT_THEOREM_CONNECTION_PLUS_RETAINED_SEMANTICS_BLOCKER`
+- `STRICT_PHYSICS_QMSTAT_COMPONENT_RESIDUAL_EVIDENCE_INCREMENT_20260501_v0: COMPONENTWISE_ENTROPY_MEAN_SECOND_MOMENT_VARIANCE_AND_UNIFIED_RESIDUAL_ZERO_EVIDENCE_FROM_FINITE_TRANSPORT`
 - `STRICT_PHYSICS_QFTGR_SOURCE_MAP_INCREMENT_20260501_v0: QFT_GR_STRESS_ENERGY_EXPECTATION_SOURCE_MAP_INTERFACE_PLUS_SUPPLIED_ALIGNMENT_ZERO_RESIDUAL_PACKAGE_PLUS_RETAINED_SEMANTICS_BLOCKER`
 - `STRICT_PHYSICS_SCALAR_A1A26_INCREMENT_20260501_v0: ENDPOINT_REPRESENTATION_SEMANTICS_OBLIGATION_INTERFACE_PLUS_A1A25_PACKAGE_CONSTRUCTOR_PLUS_RETAINED_ENDPOINT_SOURCE_BLOCKER`
 - `STRICT_PHYSICS_SCALAR_A1A27_INCREMENT_20260501_v0: ENDPOINT_CONVERGENCE_CONSISTENCY_OBLIGATION_INTERFACE_PLUS_A1A25_PACKAGE_CONSTRUCTOR_PLUS_CONDITIONAL_ENDPOINT_FIELD_BRIDGE`
@@ -87,7 +88,10 @@ Next strict architecture target:
 - `CROSS_PILLAR_FRONTIER_ROWS_v0: SCALAR_QFT_PLUS_QM_EVOLUTION_PLUS_QM_STAT_PLUS_SR_COVARIANCE_PLUS_GR01_PLUS_COSMOLOGY_PLUS_QFT_GR_PLUS_GR_QM_PLUS_EM_QFT_PLUS_MASTER_ACTION`
 - `MASTER_ACTION_DEPENDENCY_FRONTIER_STATUS_v0: CITATION_BOUNDARIES_ONLY_REQUIRED_FOR_COHERENCE_REQUIRED_FOR_CLOSURE_PUBLICATION_GRADE_ONLY_LOCAL_PROOF_DEBT_CLASSES_RECORDED_NO_PROMOTION`
 - `POST_SWEEP_NEXT_THREE_THEOREM_SLICES_v0: QM_STAT_UNIFIED_TRANSPORT_RESIDUAL_PACKAGE_THEN_QFT_GR_STRESS_ENERGY_SOURCE_MAP_THEN_SCALAR_PAUSED_AFTER_A1A31`
-- `QM_STAT_TRANSPORT_RESIDUAL_PACKAGE_STATUS_v0: SOURCE_QM_EVOLUTION_TARGET_STAT_ENTROPY_TRANSPORT_MAP_PRESERVED_QUANTITIES_AND_RESIDUAL_OBJECT_INTERFACE_DEFINED_FINITE_EQUIV_TRANSPORT_SUPPLIES_ZERO_RESIDUAL_CONDITIONAL_PACKAGE`
+- `QM_STAT_TRANSPORT_RESIDUAL_PACKAGE_STATUS_v0: SOURCE_QM_EVOLUTION_TARGET_STAT_ENTROPY_TRANSPORT_MAP_PRESERVED_QUANTITIES_RESIDUAL_OBJECT_AND_COMPONENT_RESIDUAL_EVIDENCE_DEFINED_FINITE_EQUIV_TRANSPORT_SUPPLIES_ZERO_RESIDUAL_CONDITIONAL_PACKAGE`
+- `QM_STAT_TRANSPORT_RESIDUAL_FRESH_DELTA_KIND_v0: STRONGER_EVIDENCE_OBJECT_PLUS_NEW_THEOREM`
+- `QM_STAT_TRANSPORT_RESIDUAL_FRESH_DELTA_ID_v0: QM_STAT_TRANSPORT_RESIDUAL_COMPONENT_EVIDENCE_FRESH_DELTA_v0`
+- `QM_STAT_TRANSPORT_RESIDUAL_ATTEMPT_BUDGET_STATUS_v0: TWO_CONSECUTIVE_RETAINED_SLICES_REACHED_FURTHER_LOCAL_QM_STAT_DRILLING_REQUIRES_PAUSE_AND_CROSS_PILLAR_REVIEW`
 - `QM_STAT_TRANSPORT_RESIDUAL_PRIOR_BLOCKER_v0: NO_UNIFIED_THEOREM_TRANSPORT_RESIDUAL_PACKAGE`
 - `QM_STAT_TRANSPORT_RESIDUAL_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED`
 - `QM_STAT_TRANSPORT_RESIDUAL_OUTCOME_v0: QM_STAT_TRANSPORT_RESIDUAL_PACKAGE_RETAINED`
@@ -772,8 +776,9 @@ What is proved:
 - The nonrelativistic energy-envelope relation follows algebraically from the KG dispersion relation, with the quadratic remainder assumption stated explicitly.
 - In a finite-state QM-STAT transport model, invertible state transport preserves entropy-like sums when the target probability is the transported source probability.
 - In the same finite transport model, transported observables and transported probabilities preserve moments, and preserved first/second moments preserve variance.
-- `QM_STAT_TransportResidualPackage.lean` now defines the unified QM-STAT transport residual package interface: source QM evolution structure, target STAT/entropy structure, transport map, preserved quantities, and residual/error object.
-- The existing finite-state transport theorems are sufficient to construct a zero-residual package only when the finite source, target, transport equivalence, probability alignment, and observable alignments are supplied.
+- `QM_STAT_TransportResidualPackage.lean` now defines the unified QM-STAT transport residual package interface and component residual evidence interface: source QM evolution structure, target STAT/entropy structure, transport map, preserved quantities, residual/error object, and entropy/mean/second-moment/variance/unified residual-zero evidence.
+- The existing finite-state transport theorems are sufficient to construct a zero-residual package and componentwise residual-zero evidence only when the finite source, target, transport equivalence, probability alignment, and observable alignments are supplied.
+- The component residual evidence slice is the current fresh delta under `QM_STAT_TRANSPORT_RESIDUAL_COMPONENT_EVIDENCE_FRESH_DELTA_v0` (`stronger_evidence_object` plus theorem-facing connection) and reaches the two-slice retained-blocker attempt budget, so another local QM-STAT slice requires pause/cross-pillar review first.
 - Full QM-STAT theorem transport remains retained as `PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED` because the current repo still does not derive the QM evolution probability source, STAT entropy target, transport map from QM evolution to STAT data, coarse-graining/irreversibility law, or seam-level closure semantics.
 - `QFT_GR_StressEnergyExpectationSourceMap.lean` now defines the bounded QFT-GR stress-energy expectation source-map interface: QFT stress-energy object, expectation/state functional, GR source object, covariance/conservation assumptions, and pointwise residual/error objects.
 - Supplied expectation/source and weak-curvature/source alignments construct a zero-residual package, but the current repo still does not derive the stress-energy operator/domain, QFT state expectation functional, renormalized expectation semantics, GR weak-curvature source identification, or covariance/conservation theorem needed for seam semantics.
@@ -1437,14 +1442,15 @@ Master-action dependency frontier:
 
 Post-sweep theorem queue:
 - Lean surface: `formal/toe_formal/ToeFormal/Derivation/PostSweepTheoremQueue.lean`
-- Next three slices: QM-STAT unified theorem transport residual package; QFT-GR stress-energy expectation source map; scalar paused after A1A31.
+- Next three slices from the post-sweep queue: QM-STAT unified theorem transport residual package; QFT-GR stress-energy expectation source map; scalar paused after A1A31. The QM-STAT route has now landed the component residual evidence fresh delta and is at the retained-blocker attempt budget boundary.
 - Each queued slice has exactly one retained blocker and one validation target.
 
 ## Active Priority Order
 
-1. QM-STAT residual package is advanced but retained.
+1. QM-STAT residual package is advanced to component residual evidence but retained.
    - Current retained blocker: `PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED`.
    - Validation target: focused `ToeFormal.Bridges.QM_STAT_TransportResidualPackage` build plus the existing QM-STAT/authority parity gates.
+   - Attempt-budget status: two consecutive retained slices reached; further local QM-STAT drilling requires pause/cross-pillar review before another same-lane slice.
 2. QFT-GR stress-energy expectation source-map package is advanced but retained.
    - Current retained blocker: `PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED`.
    - Validation target: focused `ToeFormal.Bridges.QFT_GR_StressEnergyExpectationSourceMap` build plus existing QFT-GR objective/authority gates.

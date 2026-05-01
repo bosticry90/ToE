@@ -42,6 +42,10 @@ def phase1BlockerQMSTATTransportResidualPackageRetainedId : String :=
 def qmStatTransportResidualPackageRetainedOutcomeId : String :=
   "QM_STAT_TRANSPORT_RESIDUAL_PACKAGE_RETAINED"
 
+/-- Fresh-delta id for the componentwise residual-evidence slice. -/
+def qmStatTransportResidualComponentEvidenceFreshDeltaId : String :=
+  "QM_STAT_TRANSPORT_RESIDUAL_COMPONENT_EVIDENCE_FRESH_DELTA_v0"
+
 /-- Entropy residual: target entropy-like sum minus source entropy-like sum. -/
 def entropyResidual {State : Type} [Fintype State]
     (weight : Real → Real)
@@ -194,6 +198,54 @@ structure QMSTATUnifiedTransportResidualPackage
   residual_vanishes : residual_error_object = 0
 
 /--
+Componentwise residual evidence for the current finite QM-STAT transport slice.
+
+The fields expose the entropy, mean, second-moment, variance, and unified
+residual zeros separately. They still depend on supplied source/target/transport
+semantics and do not close the QM-STAT seam.
+-/
+structure QMSTATComponentResidualEvidence
+    (State : Type) [Fintype State]
+    (source : SourceQMEvolutionStructure State)
+    (target : TargetSTATEntropyStructure State)
+    (transportMap : QMSTATTransportMapStructure State source target) where
+  entropy_residual_zero :
+    entropyResidual
+      target.entropy_weight
+      source.source_probability
+      target.target_probability = 0
+  mean_residual_zero :
+    momentResidual
+      source.source_probability
+      target.target_probability
+      transportMap.mean_observable_source
+      target.mean_observable = 0
+  second_moment_residual_zero :
+    momentResidual
+      source.source_probability
+      target.target_probability
+      transportMap.second_observable_source
+      target.second_moment_observable = 0
+  variance_residual_zero :
+    varianceResidual
+      (Moment transportMap.mean_observable_source source.source_probability)
+      (Moment target.mean_observable target.target_probability)
+      (Moment transportMap.second_observable_source source.source_probability)
+      (Moment target.second_moment_observable target.target_probability) = 0
+  unified_residual_zero :
+    unifiedTransportResidual
+      target.entropy_weight
+      source.source_probability
+      target.target_probability
+      transportMap.mean_observable_source
+      target.mean_observable
+      transportMap.second_observable_source
+      target.second_moment_observable = 0
+  source_semantics_supplied : source.qm_evolution_semantics
+  target_semantics_supplied : target.stat_entropy_semantics
+  transport_semantics_supplied : transportMap.transport_semantics
+
+/--
 The existing finite equivalence transport lemmas preserve entropy, mean moment,
 second moment, and variance for the supplied finite alignment data.
 -/
@@ -318,6 +370,68 @@ theorem finite_transport_theorems_construct_residual_package_v0
     Nonempty (QMSTATUnifiedTransportResidualPackage State) := by
   exact ⟨unifiedTransportResidualPackageOfFiniteEquiv source target transportMap⟩
 
+/--
+The finite transport theorems separately zero each component residual under the
+same supplied finite equivalence/alignment hypotheses.
+-/
+def componentResidualEvidenceOfFiniteEquiv
+    {State : Type} [Fintype State]
+    (source : SourceQMEvolutionStructure State)
+    (target : TargetSTATEntropyStructure State)
+    (transportMap : QMSTATTransportMapStructure State source target) :
+    QMSTATComponentResidualEvidence State source target transportMap where
+  entropy_residual_zero := by
+    simpa [entropyResidual] using
+      sub_eq_zero.mpr
+        (preservedQuantitiesOfFiniteEquiv source target transportMap
+          |>.entropy_preserved_supplied)
+  mean_residual_zero := by
+    simpa [momentResidual] using
+      sub_eq_zero.mpr
+        (preservedQuantitiesOfFiniteEquiv source target transportMap
+          |>.mean_moment_preserved_supplied)
+  second_moment_residual_zero := by
+    simpa [momentResidual] using
+      sub_eq_zero.mpr
+        (preservedQuantitiesOfFiniteEquiv source target transportMap
+          |>.second_moment_preserved_supplied)
+  variance_residual_zero := by
+    simpa [varianceResidual] using
+      sub_eq_zero.mpr
+        (preservedQuantitiesOfFiniteEquiv source target transportMap
+          |>.variance_preserved_supplied)
+  unified_residual_zero :=
+    unified_transport_residual_zero_of_preservation
+      target.entropy_weight
+      source.source_probability
+      target.target_probability
+      transportMap.mean_observable_source
+      target.mean_observable
+      transportMap.second_observable_source
+      target.second_moment_observable
+      (preservedQuantitiesOfFiniteEquiv source target transportMap
+        |>.entropy_preserved_supplied)
+      (preservedQuantitiesOfFiniteEquiv source target transportMap
+        |>.mean_moment_preserved_supplied)
+      (preservedQuantitiesOfFiniteEquiv source target transportMap
+        |>.second_moment_preserved_supplied)
+  source_semantics_supplied := source.qm_evolution_semantics_supplied
+  target_semantics_supplied := target.stat_entropy_semantics_supplied
+  transport_semantics_supplied := transportMap.transport_semantics_supplied
+
+/--
+Fresh-delta theorem: current finite transport results construct componentwise
+QM-STAT residual evidence, while the seam semantics remain retained.
+-/
+theorem finite_transport_theorems_construct_component_residual_evidence_v0
+    {State : Type} [Fintype State]
+    (source : SourceQMEvolutionStructure State)
+    (target : TargetSTATEntropyStructure State)
+    (transportMap : QMSTATTransportMapStructure State source target) :
+    Nonempty
+      (QMSTATComponentResidualEvidence State source target transportMap) := by
+  exact ⟨componentResidualEvidenceOfFiniteEquiv source target transportMap⟩
+
 /-- Remaining obstructions after the bounded QM-STAT residual package slice. -/
 inductive QMSTATTransportResidualObstruction where
   | noDerivedQMEvolutionToProbabilitySource
@@ -369,6 +483,12 @@ structure QMSTATTransportResidualPackageStatus where
   finite_transport_theorems_connect : Prop
   finite_transport_theorems_connect_supplied :
     finite_transport_theorems_connect
+  component_residual_evidence_defined : Prop
+  component_residual_evidence_defined_supplied :
+    component_residual_evidence_defined
+  component_residual_evidence_connects : Prop
+  component_residual_evidence_connects_supplied :
+    component_residual_evidence_connects
   full_qm_stat_seam_closure_supplied : Prop
   full_qm_stat_seam_closure_not_supplied :
     Not full_qm_stat_seam_closure_supplied
@@ -382,6 +502,8 @@ structure QMSTATTransportResidualPackageStatus where
   prior_blocker_id : String
   retained_blocker_id : String
   outcome_id : String
+  fresh_delta_kind : String
+  fresh_delta_id : String
   status : DerivationStatus
   surface_id : String
   obstruction_ids : List String
@@ -393,6 +515,10 @@ def qmStatTransportResidualPackageStatusV0 :
   residual_interface_defined_supplied := True.intro
   finite_transport_theorems_connect := True
   finite_transport_theorems_connect_supplied := True.intro
+  component_residual_evidence_defined := True
+  component_residual_evidence_defined_supplied := True.intro
+  component_residual_evidence_connects := True
+  component_residual_evidence_connects_supplied := True.intro
   full_qm_stat_seam_closure_supplied := False
   full_qm_stat_seam_closure_not_supplied := by
     intro h
@@ -412,6 +538,8 @@ def qmStatTransportResidualPackageStatusV0 :
   prior_blocker_id := noUnifiedTheoremTransportResidualPackageId
   retained_blocker_id := phase1BlockerQMSTATTransportResidualPackageRetainedId
   outcome_id := qmStatTransportResidualPackageRetainedOutcomeId
+  fresh_delta_kind := "stronger_evidence_object_plus_new_theorem"
+  fresh_delta_id := qmStatTransportResidualComponentEvidenceFreshDeltaId
   status := .retained
   surface_id := qmStatUnifiedTransportResidualPackageSurfaceId
   obstruction_ids :=
@@ -438,6 +566,29 @@ theorem qm_stat_finite_transport_theorems_connect_v0 :
   exact
     qmStatTransportResidualPackageStatusReadoutV0
       |>.finite_transport_theorems_connect_supplied
+
+/-- The component residual evidence object is defined. -/
+theorem qm_stat_component_residual_evidence_defined_v0 :
+    qmStatTransportResidualPackageStatusReadoutV0
+      |>.component_residual_evidence_defined := by
+  exact
+    qmStatTransportResidualPackageStatusReadoutV0
+      |>.component_residual_evidence_defined_supplied
+
+/-- The finite transport theorems connect to componentwise residual evidence. -/
+theorem qm_stat_component_residual_evidence_connects_v0 :
+    qmStatTransportResidualPackageStatusReadoutV0
+      |>.component_residual_evidence_connects := by
+  exact
+    qmStatTransportResidualPackageStatusReadoutV0
+      |>.component_residual_evidence_connects_supplied
+
+/-- The fresh-delta id remains explicit for loop-control accounting. -/
+theorem qm_stat_transport_residual_fresh_delta_id_v0 :
+    (qmStatTransportResidualPackageStatusReadoutV0
+      |>.fresh_delta_id) =
+      qmStatTransportResidualComponentEvidenceFreshDeltaId := by
+  rfl
 
 /-- The current bounded package does not close the QM-STAT seam. -/
 theorem qm_stat_transport_residual_no_seam_closure_v0 :
