@@ -112,7 +112,7 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qmSTAT
       current_strongest_surface :=
-        "finite-state transport residual package with conditional zero residual"
+        "finite-state transport residual package with component residual evidence"
       retained_blocker :=
         "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED"
       proof_debt_scope := .fatalToMultipleSeams

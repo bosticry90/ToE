@@ -508,6 +508,12 @@
       "evidence": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean"
     },
     {
+      "from": "qm_stat_transport_residual",
+      "to": "qft_gr_source_map",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATPostBudgetCrossPillarReview.lean"
+    },
+    {
       "from": "qft_gr_source_map",
       "to": "master_action_dependency_frontier",
       "status": "active",
@@ -527,29 +533,35 @@
     },
     {
       "workstream_id": "qm_stat_transport_residual",
-      "status": "retained",
+      "status": "paused",
       "retained_blocker": "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED",
       "consecutive_slices_after_retention": 2,
       "allowed_reopen_conditions": [
-        "new_theorem",
+        "authorized_reopen_after_cross_pillar_review",
         "counterexample",
-        "stronger_evidence_object"
+        "dependency_graph_change"
       ],
       "last_fresh_delta_kind": "stronger_evidence_object",
       "last_fresh_delta_id": "QM_STAT_TRANSPORT_RESIDUAL_COMPONENT_EVIDENCE_FRESH_DELTA_v0",
       "last_fresh_delta_evidence": "formal/toe_formal/ToeFormal/Bridges/QM_STAT_TransportResidualPackage.lean",
-      "next_action_after_budget_exhaustion": "pause_and_cross_pillar_review_before_further_local_qm_stat_slices"
+      "post_budget_review_status": "completed",
+      "post_budget_review_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATPostBudgetCrossPillarReview.lean",
+      "post_budget_review_decision": "rotate_to_qft_gr_stress_energy_source_map",
+      "same_lane_continuation": "not_authorized",
+      "next_action_after_budget_exhaustion": "qft_gr_source_map_authorized_reopen"
     },
     {
       "workstream_id": "qft_gr_source_map",
-      "status": "retained",
+      "status": "authorized_reopen",
       "retained_blocker": "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED",
       "consecutive_slices_after_retention": 1,
       "allowed_reopen_conditions": [
         "new_theorem",
         "counterexample",
         "stronger_evidence_object"
-      ]
+      ],
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATPostBudgetCrossPillarReview.lean",
+      "authorized_next_slice": "qft_gr_stress_energy_source_map_slice_v0"
     }
   ],
   "promotion_escrow": {

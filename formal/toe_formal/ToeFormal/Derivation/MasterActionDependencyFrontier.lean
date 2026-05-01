@@ -53,7 +53,7 @@ def masterActionCitationBoundariesV0 :
         "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED"
       dependency_kind := .required_for_coherence
       allowed_citation_scope :=
-        "qm_stat_finite_zero_residual_package_under_supplied_alignment"
+        "qm_stat_finite_zero_residual_package_and_component_evidence_under_supplied_alignment"
       forbidden_promotion_scope :=
         "no_qm_stat_seam_closure_or_stat_mechanics_derivation_from_finite_transport_alone"
       status := .retained }
