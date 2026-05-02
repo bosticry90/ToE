@@ -24,6 +24,14 @@ PRIORITIZATION_REVIEW_PATH = (
     / "Derivation"
     / "MasterActionRetainedBlockerPrioritizationReview.lean"
 )
+PROTOCOL_ROW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "QMSTATTransportSemanticsRetainedBlockerProtocolRow.lean"
+)
 AUDIT_PATH = (
     REPO_ROOT
     / "formal"
@@ -63,12 +71,14 @@ MATH_PHYSICS_INVENTORY_PATH = (
 
 CONSUMED_TARGET = "review_master_action_dependency_graph_after_citation_language_audit"
 PRIORITIZATION_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
-LIVE_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
+PROTOCOL_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
+LIVE_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
 SURFACE_ID = "master_action_dependency_graph_review_v0"
 REVIEW_EVIDENCE = str(REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 PRIORITIZATION_EVIDENCE = str(PRIORITIZATION_REVIEW_PATH.relative_to(REPO_ROOT)).replace(
     "\\", "/"
 )
+PROTOCOL_EVIDENCE = str(PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 
 
 def _read(path: Path) -> str:
@@ -131,10 +141,14 @@ def test_frontier_and_aggregate_rotate_to_retained_blocker_prioritization() -> N
         "import ToeFormal.Derivation.MasterActionRetainedBlockerPrioritizationReview"
         in aggregate_text
     )
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{PRIORITIZATION_TARGET}"' in frontier_text
+    assert (
+        "import ToeFormal.Derivation.QMSTATTransportSemanticsRetainedBlockerProtocolRow"
+        in aggregate_text
+    )
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{PROTOCOL_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
-    assert "master-action retained-blocker prioritization review" in frontier_text
+    assert "QM-STAT transport semantics retained-blocker protocol row" in frontier_text
     assert "master_action_citation_language_audit_frontier_target_v0" in audit_text
 
 
@@ -142,20 +156,20 @@ def test_loop_registry_tracks_dependency_graph_review_as_current_surface() -> No
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == PRIORITIZATION_TARGET
+    assert state["previous_live_next_target"] == PROTOCOL_TARGET
     assert state["live_next_target"] == LIVE_TARGET
-    assert state["live_next_target_evidence"] == PRIORITIZATION_EVIDENCE
+    assert state["live_next_target_evidence"] == PROTOCOL_EVIDENCE
     assert state["active_lane"] == "master_action_dependency_frontier"
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
     assert [item["workstream_id"] for item in active] == ["master_action_dependency_frontier"]
     workstream = active[0]
-    assert workstream["authorization_evidence"] == PRIORITIZATION_EVIDENCE
-    assert workstream["consumed_target"] == PRIORITIZATION_TARGET
-    assert workstream["prior_consumed_target"] == CONSUMED_TARGET
-    assert workstream["prior_surface"] == SURFACE_ID
-    assert workstream["latest_surface"] == "master_action_retained_blocker_prioritization_review_v0"
+    assert workstream["authorization_evidence"] == PROTOCOL_EVIDENCE
+    assert workstream["consumed_target"] == PROTOCOL_TARGET
+    assert workstream["prior_consumed_target"] == PRIORITIZATION_TARGET
+    assert workstream["prior_surface"] == "master_action_retained_blocker_prioritization_review_v0"
+    assert workstream["latest_surface"] == "qm_stat_transport_semantics_retained_blocker_protocol_row_v0"
     assert workstream["dependency_graph_review_status"] == "completed"
     assert workstream["retained_blocker_prioritization_status"] == "completed"
     assert workstream["dependency_graph_changed"] == "no"
@@ -164,7 +178,8 @@ def test_loop_registry_tracks_dependency_graph_review_as_current_surface() -> No
     assert workstream["promotion_authorized"] == "no"
     assert workstream["theorem_work_authorized"] == "no"
     assert workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert workstream["same_lane_continuation"] == "protocol_row_preparation_only"
+    assert workstream["qm_stat_transport_semantics_protocol_row_status"] == "prepared"
+    assert workstream["same_lane_continuation"] == "protocol_readiness_review_only"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
     assert (
@@ -174,6 +189,10 @@ def test_loop_registry_tracks_dependency_graph_review_as_current_surface() -> No
     assert (
         "master_action_dependency_graph_review",
         "master_action_retained_blocker_prioritization_review",
+    ) in edges
+    assert (
+        "master_action_retained_blocker_prioritization_review",
+        "qm_stat_transport_semantics_retained_blocker_protocol_row",
     ) in edges
 
 
@@ -185,12 +204,15 @@ def test_public_surfaces_expose_review_and_manifest_remains_unchanged() -> None:
     for path in [STATE_PATH, STRICT_MAP_PATH, SEAM_REGISTRY_PATH, SEAM_INVENTORY_PATH]:
         assert "MasterActionDependencyGraphReview.lean" in _read(path)
         assert "MasterActionRetainedBlockerPrioritizationReview.lean" in _read(path)
+        assert "QMSTATTransportSemanticsRetainedBlockerProtocolRow.lean" in _read(path)
 
     inventory_text = _read(MATH_PHYSICS_INVENTORY_PATH)
     assert "INV-MATH-MASTER-ACTION-DEPENDENCY-GRAPH-REVIEW-v0" in inventory_text
     assert "INV-MATH-MASTER-ACTION-RETAINED-BLOCKER-PRIORITIZATION-REVIEW-v0" in inventory_text
+    assert "INV-MATH-QMSTAT-TRANSPORT-SEMANTICS-PROTOCOL-ROW-v0" in inventory_text
     assert REVIEW_EVIDENCE in inventory_text
     assert PRIORITIZATION_EVIDENCE in inventory_text
+    assert PROTOCOL_EVIDENCE in inventory_text
     assert "test_master_action_dependency_graph_review_gate.py" not in _read(
         GOVERNANCE_MANIFEST_PATH
     )

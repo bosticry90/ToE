@@ -311,12 +311,14 @@ theorem em_qft_post_budget_selected_strict_target_v0 :
   rfl
 
 /--
-The selected citation target is now recorded as the previous live target after
-the citation-usage tranche consumes it.
+The master-action frontier has advanced beyond the selected citation target
+through the retained-blocker protocol-row tranche.
 -/
 theorem em_qft_post_budget_master_action_frontier_target_v0 :
-    previousLiveNextStrictTargetV0 = masterActionCitationBoundaryTargetId := by
-  rfl
+    Option.map (fun entry => entry.next_strict_slice)
+      (crossPillarFrontierEntryByRow? .masterAction) =
+      some "review_qm_stat_transport_semantics_protocol_row_readiness" := by
+  decide
 
 /-- The EM-QFT frontier row now rotates to the selected citation target. -/
 theorem em_qft_post_budget_em_qft_frontier_row_rotates_to_master_action_v0 :

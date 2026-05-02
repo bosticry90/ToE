@@ -184,22 +184,22 @@ def retainedBlockerPrioritizationStatusReadoutV0 :
 theorem retained_blocker_prioritization_consumes_live_target_v0 :
     (retainedBlockerPrioritizationStatusReadoutV0
       |>.consumed_target) =
-      previousLiveNextStrictTargetV0 := by
+      retainedBlockerPrioritizationConsumedTargetId := by
   rfl
 
 /-- The review selects protocol-row preparation, not theorem work. -/
 theorem retained_blocker_prioritization_selected_next_target_v0 :
     (retainedBlockerPrioritizationStatusReadoutV0
       |>.selected_next_strict_target) =
-      currentLiveNextStrictTargetV0 := by
+      qmStatTransportProtocolRowPreparationTargetId := by
   rfl
 
-/-- The master-action frontier row records the protocol-row preparation target. -/
+/-- The master-action frontier row has advanced beyond protocol-row preparation. -/
 theorem retained_blocker_prioritization_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some qmStatTransportProtocolRowPreparationTargetId := by
-  rfl
+      some "review_qm_stat_transport_semantics_protocol_row_readiness" := by
+  decide
 
 /-- The prioritization review is complete. -/
 theorem retained_blocker_prioritization_completed_v0 :

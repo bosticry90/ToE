@@ -154,13 +154,13 @@ theorem master_action_citation_usage_selected_next_target_v0 :
 
 /--
 The master-action frontier has advanced beyond this tranche to QM-STAT
-protocol-row preparation.
+protocol-row readiness review.
 -/
 theorem master_action_citation_usage_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row" := by
-  rfl
+      some "review_qm_stat_transport_semantics_protocol_row_readiness" := by
+  decide
 
 /-- The citation usage tranche reuses the existing dependency frontier ids. -/
 theorem master_action_citation_usage_reuses_frontier_ids_v0 :

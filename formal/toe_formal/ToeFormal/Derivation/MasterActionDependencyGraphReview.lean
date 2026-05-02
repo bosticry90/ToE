@@ -175,23 +175,24 @@ theorem master_action_dependency_graph_review_consumes_live_target_v0 :
   rfl
 
 /--
-The selected prioritization target is now recorded as the previous live target
-after the prioritization review consumes it.
+The dependency-graph review selected retained-blocker prioritization as its
+local successor.
 -/
 theorem master_action_dependency_graph_review_selected_next_target_v0 :
-    previousLiveNextStrictTargetV0 =
+    (masterActionDependencyGraphReviewStatusReadoutV0
+      |>.selected_next_strict_target) =
       retainedBlockerPrioritizationReviewTargetId := by
   rfl
 
 /--
 The master-action frontier has advanced beyond this review to QM-STAT protocol
-row preparation.
+row readiness review.
 -/
 theorem master_action_dependency_graph_review_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row" := by
-  rfl
+      some "review_qm_stat_transport_semantics_protocol_row_readiness" := by
+  decide
 
 /-- The review preserves the dependency class ids from the dependency frontier. -/
 theorem master_action_dependency_graph_review_preserves_dependency_kind_ids_v0 :

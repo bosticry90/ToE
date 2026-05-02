@@ -218,13 +218,13 @@ theorem master_action_citation_language_audit_selected_next_target_v0 :
 
 /--
 The master-action frontier has advanced beyond this audit to QM-STAT
-protocol-row preparation.
+protocol-row readiness review.
 -/
 theorem master_action_citation_language_audit_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row" := by
-  rfl
+      some "review_qm_stat_transport_semantics_protocol_row_readiness" := by
+  decide
 
 /-- The audit preserves the retained assumption ids from citation usage. -/
 theorem master_action_citation_language_audit_preserves_usage_ids_v0 :

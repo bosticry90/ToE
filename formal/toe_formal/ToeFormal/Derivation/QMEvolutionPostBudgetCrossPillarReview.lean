@@ -299,8 +299,8 @@ theorem qm_evolution_post_budget_selected_target_is_em_qft_extraction_v0 :
 theorem qm_evolution_post_budget_em_qft_frontier_row_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .emQFTSeam) =
-      some currentLiveNextStrictTargetV0 := by
-  rfl
+      some "cite_only_bounded_retained_assumptions" := by
+  decide
 
 /-- This review does not authorize Phase 2. -/
 theorem qm_evolution_post_budget_phase2_not_authorized_v0 :
