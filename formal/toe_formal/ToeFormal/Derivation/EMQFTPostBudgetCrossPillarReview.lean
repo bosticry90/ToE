@@ -310,11 +310,12 @@ theorem em_qft_post_budget_selected_strict_target_v0 :
       masterActionCitationBoundaryTargetId := by
   rfl
 
-/-- The master-action frontier row records the selected citation target. -/
+/--
+The selected citation target is now recorded as the previous live target after
+the citation-usage tranche consumes it.
+-/
 theorem em_qft_post_budget_master_action_frontier_target_v0 :
-    Option.map (fun entry => entry.next_strict_slice)
-      (crossPillarFrontierEntryByRow? .masterAction) =
-      some masterActionCitationBoundaryTargetId := by
+    previousLiveNextStrictTargetV0 = masterActionCitationBoundaryTargetId := by
   rfl
 
 /-- The EM-QFT frontier row now rotates to the selected citation target. -/

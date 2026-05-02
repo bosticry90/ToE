@@ -87,9 +87,9 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "em_qft_post_budget_cross_pillar_review",
-    "live_next_target": "cite_only_bounded_retained_assumptions",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/EMQFTPostBudgetCrossPillarReview.lean",
+    "previous_live_next_target": "cite_only_bounded_retained_assumptions",
+    "live_next_target": "audit_master_action_citation_language_against_retained_boundaries",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionRetainedAssumptionCitationUsage.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
@@ -505,7 +505,8 @@
     "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge",
     "derive_or_refute_em_qft_interface_alignment_semantic_bridge",
     "em_qft_post_budget_cross_pillar_review",
-    "cite_only_bounded_retained_assumptions"
+    "cite_only_bounded_retained_assumptions",
+    "audit_master_action_citation_language_against_retained_boundaries"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -628,6 +629,12 @@
       "to": "master_action_dependency_frontier",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Derivation/EMQFTPostBudgetCrossPillarReview.lean"
+    },
+    {
+      "from": "master_action_dependency_frontier",
+      "to": "master_action_retained_assumption_citation_usage",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionRetainedAssumptionCitationUsage.lean"
     }
   ],
   "cycle_waivers": [],
@@ -801,11 +808,17 @@
         "dependency_graph_change",
         "stronger_evidence_object"
       ],
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/EMQFTPostBudgetCrossPillarReview.lean",
-      "consumed_target": "em_qft_post_budget_cross_pillar_review",
-      "latest_surface": "em_qft_post_budget_cross_pillar_review_v0",
-      "authorized_next_strict_target": "cite_only_bounded_retained_assumptions",
-      "same_lane_continuation": "citation_boundary_only",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionRetainedAssumptionCitationUsage.lean",
+      "consumed_target": "cite_only_bounded_retained_assumptions",
+      "prior_consumed_target": "em_qft_post_budget_cross_pillar_review",
+      "prior_surface": "em_qft_post_budget_cross_pillar_review_v0",
+      "latest_surface": "master_action_retained_assumption_citation_usage_v0",
+      "citation_usage_status": "completed",
+      "citation_usage_scope": "retained_assumptions_only_under_allowed_scope_and_forbidden_promotion_boundaries",
+      "boundary_count": 10,
+      "dependency_classes_changed": "no",
+      "authorized_next_strict_target": "audit_master_action_citation_language_against_retained_boundaries",
+      "same_lane_continuation": "citation_language_audit_only",
       "non_promotion_boundary": "no_phase2_no_master_action_promotion_no_seam_closure_no_empirical_claim_no_governance_manifest_enrollment"
     }
   ],

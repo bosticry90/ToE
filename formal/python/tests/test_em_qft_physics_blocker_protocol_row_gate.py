@@ -48,6 +48,14 @@ POST_BUDGET_REVIEW_PATH = (
     / "Derivation"
     / "EMQFTPostBudgetCrossPillarReview.lean"
 )
+MASTER_ACTION_CITATION_USAGE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "MasterActionRetainedAssumptionCitationUsage.lean"
+)
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 GOVERNANCE_MANIFEST_PATH = (
     REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_TEST_MANIFEST_v1.json"
@@ -63,7 +71,8 @@ CONSUMED_TARGET = "extract_em_qft_physics_blocker_into_protocol_row"
 PROTOCOL_SUCCESSOR_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
-LIVE_TARGET = "cite_only_bounded_retained_assumptions"
+CITATION_USAGE_TARGET = "cite_only_bounded_retained_assumptions"
+LIVE_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
 PRIMARY_BLOCKER = "shared_dynamics_and_residual_unification"
 SECONDARY_BLOCKER = "interface_alignment_semantic_bridge"
 REQUIRED_EVIDENCE = {
@@ -120,7 +129,7 @@ def test_frontier_uses_row_lookup_and_exposes_successor_target() -> None:
     frontier_text = _read(CROSS_PILLAR_FRONTIER_PATH)
 
     assert "def crossPillarFrontierEntryByRow?" in frontier_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{POST_BUDGET_TARGET}"' in frontier_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{CITATION_USAGE_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
 
@@ -139,21 +148,22 @@ def test_loop_registry_and_public_surfaces_follow_em_qft_successor() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == POST_BUDGET_TARGET
+    assert state["previous_live_next_target"] == CITATION_USAGE_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        POST_BUDGET_REVIEW_PATH.relative_to(REPO_ROOT)
+        MASTER_ACTION_CITATION_USAGE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
+    assert CITATION_USAGE_TARGET in payload["next_strict_target_coverage"]
     assert PROTOCOL_SUCCESSOR_TARGET in payload["next_strict_target_coverage"]
     assert INTERFACE_TARGET in payload["next_strict_target_coverage"]
     assert POST_BUDGET_TARGET in payload["next_strict_target_coverage"]
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
     assert [item["workstream_id"] for item in active] == ["master_action_dependency_frontier"]
-    assert active[0]["consumed_target"] == POST_BUDGET_TARGET
+    assert active[0]["consumed_target"] == CITATION_USAGE_TARGET
     assert active[0]["authorized_next_strict_target"] == LIVE_TARGET
-    assert active[0]["latest_surface"] == "em_qft_post_budget_cross_pillar_review_v0"
+    assert active[0]["latest_surface"] == "master_action_retained_assumption_citation_usage_v0"
 
     em_qft = next(
         item for item in payload["workstreams"]
@@ -162,7 +172,7 @@ def test_loop_registry_and_public_surfaces_follow_em_qft_successor() -> None:
     assert em_qft["status"] == "paused"
     assert em_qft["prior_consumed_target"] == PROTOCOL_SUCCESSOR_TARGET
     assert em_qft["consumed_target"] == INTERFACE_TARGET
-    assert em_qft["authorized_next_strict_target"] == LIVE_TARGET
+    assert em_qft["authorized_next_strict_target"] == CITATION_USAGE_TARGET
     assert em_qft["latest_surface"] == "EM_QFT_INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_v0"
     assert em_qft["last_fresh_delta_kind"] == "counterexample"
     assert em_qft["primary_blocker"] == PRIMARY_BLOCKER
@@ -187,6 +197,10 @@ def test_loop_registry_and_public_surfaces_follow_em_qft_successor() -> None:
         "em_qft_post_budget_review",
         "master_action_dependency_frontier",
     ) in edges
+    assert (
+        "master_action_dependency_frontier",
+        "master_action_retained_assumption_citation_usage",
+    ) in edges
 
     for path in [REPO_ROOT / "README.md", REPO_ROOT / "State_of_the_Theory.md"]:
         assert f"CURRENT_LIVE_NEXT_TARGET_v0: {LIVE_TARGET}" in _read(path)
@@ -201,7 +215,8 @@ def test_em_qft_seam_registry_names_blocker_and_boundary() -> None:
         assert "SEAM_EM_QFT_SECONDARY_PHYSICS_BLOCKER_v0: INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_NOT_DISCHARGED" in text
         assert "SEAM_EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_STATUS_v0: GOVERNANCE_WITNESS_AND_ZERO_RESIDUAL_ONLY_REFUTED_SUPPLIED_BRIDGE_PACKAGE_ROUTE_RETAINED" in text
         assert "SEAM_EM_QFT_INTERFACE_ALIGNMENT_STATUS_v0: INTERFACE_ALIGNMENT_ONLY_SOURCE_CURRENT_AND_GAUGE_QUANTIZATION_REFUTED_POST_BUDGET_REVIEW_REQUIRED" in text
-        assert f"SEAM_EM_QFT_CURRENT_PHYSICS_BLOCKER_TARGET_v0: {LIVE_TARGET}" in text
+        assert "SEAM_EM_QFT_CURRENT_PHYSICS_BLOCKER_TARGET_v0: PAUSED_AFTER_POST_BUDGET_REVIEW_NO_SAME_LANE_TARGET" in text
+        assert f"MASTER_ACTION_CURRENT_CITATION_TARGET_v0: {LIVE_TARGET}" in text
         assert "NO_EM_QFT_SEAM_CLOSURE_NO_MASTER_ACTION_PROMOTION" in text
 
 

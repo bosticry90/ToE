@@ -178,12 +178,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "master-action dependency frontier, citation-only"
+        "master-action retained-assumption citation usage, citation-only"
       retained_blocker :=
         "master_action_dependency_frontier_retained_no_promotion"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
-      next_strict_slice := "cite_only_bounded_retained_assumptions"
+      next_strict_slice :=
+        "audit_master_action_citation_language_against_retained_boundaries"
       status := .retained }
   ]
 
@@ -201,13 +202,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the EM-QFT post-budget review. -/
+/-- Previous live target consumed by the master-action citation usage tranche. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "em_qft_post_budget_cross_pillar_review"
-
-/-- Current live target after the EM-QFT post-budget review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "cite_only_bounded_retained_assumptions"
+
+/-- Current live target after the master-action citation usage tranche. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "audit_master_action_citation_language_against_retained_boundaries"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

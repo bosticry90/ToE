@@ -1,0 +1,168 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from typing import Any
+
+from formal.python.meta.repo_environment import find_repo_root
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+USAGE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "MasterActionRetainedAssumptionCitationUsage.lean"
+)
+AGGREGATE_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
+FRONTIER_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "CrossPillarClosureFrontier.lean"
+)
+MASTER_ACTION_FRONTIER_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "MasterActionDependencyFrontier.lean"
+)
+REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
+GOVERNANCE_MANIFEST_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_TEST_MANIFEST_v1.json"
+)
+README_PATH = REPO_ROOT / "README.md"
+STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+STRICT_MAP_PATH = (
+    REPO_ROOT / "formal" / "docs" / "lanes" / "STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
+)
+SEAM_REGISTRY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md"
+)
+SEAM_INVENTORY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md"
+)
+MATH_PHYSICS_INVENTORY_PATH = (
+    REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
+)
+
+CONSUMED_TARGET = "cite_only_bounded_retained_assumptions"
+LIVE_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
+SURFACE_ID = "master_action_retained_assumption_citation_usage_v0"
+USAGE_EVIDENCE = str(USAGE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
+
+
+def _read(path: Path) -> str:
+    assert path.exists(), f"Missing required file: {path}"
+    return path.read_text(encoding="utf-8")
+
+
+def _registry() -> dict[str, Any]:
+    return json.loads(_read(REGISTRY_PATH))
+
+
+def _workstream(payload: dict[str, Any], workstream_id: str) -> dict[str, Any]:
+    for workstream in payload["workstreams"]:
+        if workstream["workstream_id"] == workstream_id:
+            return workstream
+    raise AssertionError(f"Missing workstream: {workstream_id}")
+
+
+def test_master_action_citation_usage_records_bounded_usage_only() -> None:
+    text = _read(USAGE_PATH)
+
+    for token in {
+        SURFACE_ID,
+        CONSUMED_TARGET,
+        LIVE_TARGET,
+        "masterActionCitationBoundariesV0",
+        "master_action_citation_usage_consumes_live_target_v0",
+        "master_action_citation_usage_selected_next_target_v0",
+        "master_action_citation_usage_frontier_target_v0",
+        "master_action_citation_usage_reuses_frontier_ids_v0",
+        "master_action_citation_usage_boundary_count_v0",
+        "master_action_citation_usage_boundaries_reused_v0",
+        "master_action_citation_usage_only_bounded_retained_assumptions_v0",
+        "master_action_citation_usage_forbidden_scopes_carried_v0",
+        "master_action_citation_usage_dependency_classes_not_changed_v0",
+    }:
+        assert token in text
+
+    for token in {
+        "master_action_citation_usage_no_seam_closure_v0",
+        "master_action_citation_usage_phase2_not_authorized_v0",
+        "master_action_citation_usage_master_action_not_promoted_v0",
+        "master_action_citation_usage_no_empirical_claim_v0",
+        "master_action_citation_usage_governance_manifest_not_enrolled_v0",
+    }:
+        assert token in text
+
+
+def test_frontier_and_aggregate_rotate_to_citation_language_audit() -> None:
+    aggregate_text = _read(AGGREGATE_PATH)
+    frontier_text = _read(FRONTIER_PATH)
+    master_action_text = _read(MASTER_ACTION_FRONTIER_PATH)
+
+    assert "import ToeFormal.Derivation.MasterActionRetainedAssumptionCitationUsage" in aggregate_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{CONSUMED_TARGET}"' in frontier_text
+    assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
+    assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
+    assert "master-action retained-assumption citation usage, citation-only" in frontier_text
+    assert "def masterActionCitationBoundariesV0" in master_action_text
+    assert "theorem master_action_citation_boundaries_length_v0" in master_action_text
+
+
+def test_loop_registry_tracks_citation_usage_as_current_master_action_lane() -> None:
+    payload = _registry()
+    state = payload["current_target_state"]
+
+    assert state["previous_live_next_target"] == CONSUMED_TARGET
+    assert state["live_next_target"] == LIVE_TARGET
+    assert state["live_next_target_evidence"] == USAGE_EVIDENCE
+    assert state["active_lane"] == "master_action_dependency_frontier"
+    assert LIVE_TARGET in payload["next_strict_target_coverage"]
+
+    active = [item for item in payload["workstreams"] if item.get("status") == "active"]
+    assert [item["workstream_id"] for item in active] == ["master_action_dependency_frontier"]
+    workstream = active[0]
+    assert workstream["authorization_evidence"] == USAGE_EVIDENCE
+    assert workstream["consumed_target"] == CONSUMED_TARGET
+    assert workstream["latest_surface"] == SURFACE_ID
+    assert workstream["citation_usage_status"] == "completed"
+    assert workstream["boundary_count"] == 10
+    assert workstream["dependency_classes_changed"] == "no"
+    assert workstream["authorized_next_strict_target"] == LIVE_TARGET
+    assert workstream["same_lane_continuation"] == "citation_language_audit_only"
+
+    edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
+    assert (
+        "master_action_dependency_frontier",
+        "master_action_retained_assumption_citation_usage",
+    ) in edges
+
+
+def test_public_surfaces_expose_usage_and_manifest_remains_unchanged() -> None:
+    for path in [README_PATH, STATE_PATH, ROADMAP_PATH, STRICT_MAP_PATH]:
+        text = _read(path)
+        assert LIVE_TARGET in text, f"{path} missing live target"
+
+    for path in [README_PATH, ROADMAP_PATH]:
+        text = _read(path)
+        assert "retained-assumption citation usage" in text.lower()
+
+    for path in [STATE_PATH, STRICT_MAP_PATH, SEAM_REGISTRY_PATH, SEAM_INVENTORY_PATH]:
+        assert "MasterActionRetainedAssumptionCitationUsage.lean" in _read(path)
+
+    inventory_text = _read(MATH_PHYSICS_INVENTORY_PATH)
+    assert "INV-MATH-MASTER-ACTION-RETAINED-ASSUMPTION-CITATION-USAGE-v0" in inventory_text
+    assert USAGE_EVIDENCE in inventory_text
+    assert "test_master_action_retained_assumption_citation_usage_gate.py" not in _read(
+        GOVERNANCE_MANIFEST_PATH
+    )

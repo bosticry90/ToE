@@ -60,9 +60,19 @@ EM_QFT_POST_BUDGET_REVIEW_PATH = (
     / "Derivation"
     / "EMQFTPostBudgetCrossPillarReview.lean"
 )
+MASTER_ACTION_CITATION_USAGE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "MasterActionRetainedAssumptionCitationUsage.lean"
+)
 
-LIVE_TARGET = "cite_only_bounded_retained_assumptions"
-PREVIOUS_TARGET = "em_qft_post_budget_cross_pillar_review"
+CITATION_USAGE_TARGET = "cite_only_bounded_retained_assumptions"
+LIVE_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
+PREVIOUS_TARGET = CITATION_USAGE_TARGET
+EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
 EXTRACTION_TARGET = "extract_em_qft_physics_blocker_into_protocol_row"
@@ -139,7 +149,7 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        EM_QFT_POST_BUDGET_REVIEW_PATH.relative_to(REPO_ROOT)
+        MASTER_ACTION_CITATION_USAGE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     assert set(state["paused_lanes"]) == PAUSED_LANES
@@ -153,8 +163,8 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     ]
     assert active_workstreams[0]["authorized_next_strict_target"] == LIVE_TARGET
     assert active_workstreams[0]["consumed_target"] == PREVIOUS_TARGET
-    assert active_workstreams[0]["latest_surface"] == "em_qft_post_budget_cross_pillar_review_v0"
-    assert active_workstreams[0]["same_lane_continuation"] == "citation_boundary_only"
+    assert active_workstreams[0]["latest_surface"] == "master_action_retained_assumption_citation_usage_v0"
+    assert active_workstreams[0]["same_lane_continuation"] == "citation_language_audit_only"
 
     active_targets = {state["live_next_target"], active_workstreams[0]["authorized_next_strict_target"]}
     assert active_targets == {LIVE_TARGET}
@@ -169,6 +179,7 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     shared_bridge_text = _read(EM_QFT_SHARED_DYNAMICS_BRIDGE_PATH)
     interface_bridge_text = _read(EM_QFT_INTERFACE_ALIGNMENT_BRIDGE_PATH)
     em_qft_review_text = _read(EM_QFT_POST_BUDGET_REVIEW_PATH)
+    citation_usage_text = _read(MASTER_ACTION_CITATION_USAGE_PATH)
 
     assert CURRENT_TARGET_TOKEN in readme_text
     assert f'"live_next_target": "{LIVE_TARGET}"' in _read(REGISTRY_PATH)
@@ -194,12 +205,20 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     ) in shared_bridge_text
     assert (
         'def emQFTPostBudgetCrossPillarReviewTargetId : String :=\n'
-        f'  "{PREVIOUS_TARGET}"'
+        f'  "{EM_QFT_POST_BUDGET_TARGET}"'
     ) in interface_bridge_text
     assert (
         'def masterActionCitationBoundaryTargetId : String :=\n'
-        f'  "{LIVE_TARGET}"'
+        f'  "{CITATION_USAGE_TARGET}"'
     ) in em_qft_review_text
+    assert (
+        'def masterActionCitationUsageConsumedTargetId : String :=\n'
+        f'  "{CITATION_USAGE_TARGET}"'
+    ) in citation_usage_text
+    assert (
+        'def masterActionCitationLanguageAuditTargetId : String :=\n'
+        f'  "{LIVE_TARGET}"'
+    ) in citation_usage_text
     assert payload["current_target_state"]["live_next_target"] == LIVE_TARGET
 
 
@@ -240,9 +259,10 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert master_action["status"] == "active"
     assert master_action["authorized_next_strict_target"] == LIVE_TARGET
     assert master_action["authorization_evidence"] == str(
-        EM_QFT_POST_BUDGET_REVIEW_PATH.relative_to(REPO_ROOT)
+        MASTER_ACTION_CITATION_USAGE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert master_action["latest_surface"] == "em_qft_post_budget_cross_pillar_review_v0"
+    assert master_action["latest_surface"] == "master_action_retained_assumption_citation_usage_v0"
+    assert master_action["citation_usage_status"] == "completed"
 
 
 def test_paused_lanes_do_not_advertise_active_continuation() -> None:
@@ -281,6 +301,7 @@ def test_historical_post_sweep_queue_cannot_override_live_target() -> None:
     assert historical_targets
     assert LIVE_TARGET not in historical_targets
     assert PREVIOUS_TARGET not in historical_targets
+    assert EM_QFT_POST_BUDGET_TARGET not in historical_targets
     assert INTERFACE_TARGET not in historical_targets
     assert SHARED_DYNAMICS_TARGET not in historical_targets
     assert EXTRACTION_TARGET not in historical_targets
@@ -306,6 +327,7 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
     shared_bridge_text = _read(EM_QFT_SHARED_DYNAMICS_BRIDGE_PATH)
     interface_bridge_text = _read(EM_QFT_INTERFACE_ALIGNMENT_BRIDGE_PATH)
     em_qft_review_text = _read(EM_QFT_POST_BUDGET_REVIEW_PATH)
+    citation_usage_text = _read(MASTER_ACTION_CITATION_USAGE_PATH)
     for theorem_name in [
         "em_qft_protocol_row_phase2_not_authorized_v0",
         "em_qft_protocol_row_seam_not_closed_v0",
@@ -338,6 +360,14 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
         "em_qft_post_budget_governance_manifest_not_enrolled_v0",
     ]:
         assert theorem_name in em_qft_review_text
+    for theorem_name in [
+        "master_action_citation_usage_no_seam_closure_v0",
+        "master_action_citation_usage_phase2_not_authorized_v0",
+        "master_action_citation_usage_master_action_not_promoted_v0",
+        "master_action_citation_usage_no_empirical_claim_v0",
+        "master_action_citation_usage_governance_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in citation_usage_text
 
 
 def test_current_target_gate_is_not_governance_manifest_enrolled() -> None:
