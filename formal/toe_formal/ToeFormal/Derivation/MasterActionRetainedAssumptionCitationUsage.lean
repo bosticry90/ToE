@@ -153,13 +153,13 @@ theorem master_action_citation_usage_selected_next_target_v0 :
   rfl
 
 /--
-The master-action frontier has advanced beyond this tranche to retained-blocker
-prioritization review.
+The master-action frontier has advanced beyond this tranche to QM-STAT
+protocol-row preparation.
 -/
 theorem master_action_citation_usage_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "prioritize_retained_blockers_after_master_action_dependency_graph_review" := by
+      some "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row" := by
   rfl
 
 /-- The citation usage tranche reuses the existing dependency frontier ids. -/

@@ -209,23 +209,21 @@ theorem master_action_citation_language_audit_consumes_live_target_v0 :
       masterActionCitationLanguageAuditConsumedTargetId := by
   rfl
 
-/--
-The selected dependency-graph review target is now recorded as the previous live
-target after the dependency-graph review consumes it.
--/
+/-- The audit selected the dependency-graph review target. -/
 theorem master_action_citation_language_audit_selected_next_target_v0 :
-    previousLiveNextStrictTargetV0 =
+    (masterActionCitationLanguageAuditStatusReadoutV0
+      |>.selected_next_strict_target) =
       masterActionPostCitationAuditReviewTargetId := by
   rfl
 
 /--
-The master-action frontier has advanced beyond this audit to retained-blocker
-prioritization review.
+The master-action frontier has advanced beyond this audit to QM-STAT
+protocol-row preparation.
 -/
 theorem master_action_citation_language_audit_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "prioritize_retained_blockers_after_master_action_dependency_graph_review" := by
+      some "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row" := by
   rfl
 
 /-- The audit preserves the retained assumption ids from citation usage. -/

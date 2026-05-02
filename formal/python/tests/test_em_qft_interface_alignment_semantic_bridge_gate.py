@@ -56,6 +56,14 @@ MASTER_ACTION_DEPENDENCY_GRAPH_REVIEW_PATH = (
     / "Derivation"
     / "MasterActionDependencyGraphReview.lean"
 )
+MASTER_ACTION_RETAINED_BLOCKER_PRIORITIZATION_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "MasterActionRetainedBlockerPrioritizationReview.lean"
+)
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 GOVERNANCE_MANIFEST_PATH = (
     REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_TEST_MANIFEST_v1.json"
@@ -78,7 +86,8 @@ POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 CITATION_USAGE_TARGET = "cite_only_bounded_retained_assumptions"
 AUDIT_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
 REVIEW_TARGET = "review_master_action_dependency_graph_after_citation_language_audit"
-LIVE_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
+PRIORITIZATION_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
+LIVE_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
 SURFACE_ID = "EM_QFT_INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_v0"
 FRESH_DELTA_ID = "EM_QFT_INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_COUNTEREXAMPLE_FRESH_DELTA_v0"
 RETAINED_BLOCKER = "PHASE1-BLOCKER-EMQFT-INTERFACE-ALIGNMENT-SEMANTIC-BRIDGE-RETAINED"
@@ -141,7 +150,7 @@ def test_frontier_and_aggregate_advance_after_em_qft_post_budget_review() -> Non
     assert "import ToeFormal.Derivation.MasterActionRetainedAssumptionCitationUsage" in aggregate_text
     assert "import ToeFormal.Derivation.MasterActionCitationLanguageAudit" in aggregate_text
     assert "import ToeFormal.Derivation.MasterActionDependencyGraphReview" in aggregate_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{REVIEW_TARGET}"' in frontier_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{PRIORITIZATION_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
     assert RETAINED_BLOCKER in frontier_text
@@ -151,10 +160,10 @@ def test_registry_tracks_interface_alignment_slice_and_completed_post_budget_rev
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == REVIEW_TARGET
+    assert state["previous_live_next_target"] == PRIORITIZATION_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        MASTER_ACTION_DEPENDENCY_GRAPH_REVIEW_PATH.relative_to(REPO_ROOT)
+        MASTER_ACTION_RETAINED_BLOCKER_PRIORITIZATION_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
 
     assert RETAINED_BLOCKER in payload["retained_blocker_coverage"]
@@ -167,10 +176,10 @@ def test_registry_tracks_interface_alignment_slice_and_completed_post_budget_rev
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
     assert [item["workstream_id"] for item in active] == ["master_action_dependency_frontier"]
-    assert active[0]["consumed_target"] == REVIEW_TARGET
-    assert active[0]["prior_consumed_target"] == AUDIT_TARGET
+    assert active[0]["consumed_target"] == PRIORITIZATION_TARGET
+    assert active[0]["prior_consumed_target"] == REVIEW_TARGET
     assert active[0]["authorized_next_strict_target"] == LIVE_TARGET
-    assert active[0]["latest_surface"] == "master_action_dependency_graph_review_v0"
+    assert active[0]["latest_surface"] == "master_action_retained_blocker_prioritization_review_v0"
 
     em_qft = next(
         item for item in payload["workstreams"]

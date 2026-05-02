@@ -167,25 +167,30 @@ def masterActionDependencyGraphReviewStatusReadoutV0 :
     MasterActionDependencyGraphReviewStatus :=
   masterActionDependencyGraphReviewStatusV0
 
-/-- The dependency-graph review consumes the prior live target. -/
+/-- The dependency-graph review consumed its target. -/
 theorem master_action_dependency_graph_review_consumes_live_target_v0 :
     (masterActionDependencyGraphReviewStatusReadoutV0
       |>.consumed_target) =
-      previousLiveNextStrictTargetV0 := by
+      masterActionDependencyGraphReviewConsumedTargetId := by
   rfl
 
-/-- The review rotates only to retained-blocker prioritization review. -/
+/--
+The selected prioritization target is now recorded as the previous live target
+after the prioritization review consumes it.
+-/
 theorem master_action_dependency_graph_review_selected_next_target_v0 :
-    (masterActionDependencyGraphReviewStatusReadoutV0
-      |>.selected_next_strict_target) =
-      currentLiveNextStrictTargetV0 := by
+    previousLiveNextStrictTargetV0 =
+      retainedBlockerPrioritizationReviewTargetId := by
   rfl
 
-/-- The master-action frontier row records the prioritization-review target. -/
+/--
+The master-action frontier has advanced beyond this review to QM-STAT protocol
+row preparation.
+-/
 theorem master_action_dependency_graph_review_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some retainedBlockerPrioritizationReviewTargetId := by
+      some "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row" := by
   rfl
 
 /-- The review preserves the dependency class ids from the dependency frontier. -/

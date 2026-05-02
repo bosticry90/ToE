@@ -87,9 +87,9 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "review_master_action_dependency_graph_after_citation_language_audit",
-    "live_next_target": "prioritize_retained_blockers_after_master_action_dependency_graph_review",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionDependencyGraphReview.lean",
+    "previous_live_next_target": "prioritize_retained_blockers_after_master_action_dependency_graph_review",
+    "live_next_target": "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionRetainedBlockerPrioritizationReview.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
@@ -508,7 +508,8 @@
     "cite_only_bounded_retained_assumptions",
     "audit_master_action_citation_language_against_retained_boundaries",
     "review_master_action_dependency_graph_after_citation_language_audit",
-    "prioritize_retained_blockers_after_master_action_dependency_graph_review"
+    "prioritize_retained_blockers_after_master_action_dependency_graph_review",
+    "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -649,6 +650,12 @@
       "to": "master_action_dependency_graph_review",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionDependencyGraphReview.lean"
+    },
+    {
+      "from": "master_action_dependency_graph_review",
+      "to": "master_action_retained_blocker_prioritization_review",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionRetainedBlockerPrioritizationReview.lean"
     }
   ],
   "cycle_waivers": [],
@@ -822,11 +829,11 @@
         "dependency_graph_change",
         "stronger_evidence_object"
       ],
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionDependencyGraphReview.lean",
-      "consumed_target": "review_master_action_dependency_graph_after_citation_language_audit",
-      "prior_consumed_target": "audit_master_action_citation_language_against_retained_boundaries",
-      "prior_surface": "master_action_citation_language_audit_v0",
-      "latest_surface": "master_action_dependency_graph_review_v0",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionRetainedBlockerPrioritizationReview.lean",
+      "consumed_target": "prioritize_retained_blockers_after_master_action_dependency_graph_review",
+      "prior_consumed_target": "review_master_action_dependency_graph_after_citation_language_audit",
+      "prior_surface": "master_action_dependency_graph_review_v0",
+      "latest_surface": "master_action_retained_blocker_prioritization_review_v0",
       "citation_usage_status": "completed",
       "citation_usage_scope": "retained_assumptions_only_under_allowed_scope_and_forbidden_promotion_boundaries",
       "citation_language_audit_status": "completed",
@@ -834,13 +841,19 @@
       "dependency_graph_review_status": "completed",
       "dependency_graph_changed": "no",
       "dependency_class_reclassification": "none",
+      "retained_blocker_prioritization_status": "completed",
+      "top_retained_blocker": "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED",
+      "top_retained_blocker_dependency_class": "required_for_coherence",
+      "top_retained_blocker_proof_debt_scope": "fatal_to_multiple_seams",
+      "next_action_scope": "protocol_row_preparation_only_no_theorem_work",
       "lane_unblocked": "no",
       "promotion_authorized": "no",
+      "theorem_work_authorized": "no",
       "forbidden_language_class_count": 7,
       "boundary_count": 10,
       "dependency_classes_changed": "no",
-      "authorized_next_strict_target": "prioritize_retained_blockers_after_master_action_dependency_graph_review",
-      "same_lane_continuation": "retained_blocker_prioritization_review_only",
+      "authorized_next_strict_target": "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row",
+      "same_lane_continuation": "protocol_row_preparation_only",
       "non_promotion_boundary": "no_phase2_no_master_action_promotion_no_seam_closure_no_empirical_claim_no_governance_manifest_enrollment"
     }
   ],

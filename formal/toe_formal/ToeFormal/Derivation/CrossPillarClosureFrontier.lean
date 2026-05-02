@@ -178,13 +178,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "master-action dependency graph review after citation-language audit"
+        "master-action retained-blocker prioritization review"
       retained_blocker :=
         "master_action_dependency_frontier_retained_no_promotion"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prioritize_retained_blockers_after_master_action_dependency_graph_review"
+        "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
       status := .retained }
   ]
 
@@ -202,13 +202,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the master-action dependency-graph review. -/
+/-- Previous live target consumed by the retained-blocker prioritization review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_master_action_dependency_graph_after_citation_language_audit"
-
-/-- Current live target after the master-action dependency-graph review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prioritize_retained_blockers_after_master_action_dependency_graph_review"
+
+/-- Current live target after the retained-blocker prioritization review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
