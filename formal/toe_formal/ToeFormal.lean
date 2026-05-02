@@ -118,6 +118,7 @@ import ToeFormal.QFT.ToeCandidateFreeScalarWitness
 import ToeFormal.Bridges.QM_STAT_Transport
 import ToeFormal.Bridges.QM_STAT_TransportResidualPackage
 import ToeFormal.Bridges.QFT_GR_StressEnergyExpectationSourceMap
+import ToeFormal.Bridges.QFT_GR_StressEnergySourceMapResidualOnlyObstruction
 import ToeFormal.Derivation.CrossPillarClosureFrontier
 import ToeFormal.Derivation.MasterActionDependencyFrontier
 import ToeFormal.Derivation.PostSweepTheoremQueue

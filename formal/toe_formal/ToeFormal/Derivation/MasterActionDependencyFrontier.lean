@@ -61,7 +61,7 @@ def masterActionCitationBoundariesV0 :
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED"
       dependency_kind := .required_for_coherence
       allowed_citation_scope :=
-        "qft_gr_zero_residual_source_map_under_supplied_alignment"
+        "qft_gr_zero_residual_source_map_and_residual_only_semantic_obstruction"
       forbidden_promotion_scope :=
         "no_semiclassical_gr_source_theorem_or_qft_gr_seam_promotion"
       status := .retained }

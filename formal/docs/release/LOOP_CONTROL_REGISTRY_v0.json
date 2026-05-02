@@ -462,6 +462,7 @@
     "state_continuum_limit_and_source_map_obligations",
     "tie_background_regime_to_sr_covariance_residual",
     "derive_qft_stress_energy_expectation_source_semantics",
+    "qft_gr_post_budget_cross_pillar_review_required",
     "record_allowed_master_action_citation_scope",
     "extract_em_qft_physics_blocker_into_protocol_row",
     "cite_only_bounded_retained_assumptions"
@@ -517,7 +518,7 @@
       "from": "qft_gr_source_map",
       "to": "master_action_dependency_frontier",
       "status": "active",
-      "evidence": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean"
+      "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StressEnergySourceMapResidualOnlyObstruction.lean"
     }
   ],
   "cycle_waivers": [],
@@ -552,16 +553,21 @@
     },
     {
       "workstream_id": "qft_gr_source_map",
-      "status": "authorized_reopen",
+      "status": "paused",
       "retained_blocker": "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED",
-      "consecutive_slices_after_retention": 1,
+      "consecutive_slices_after_retention": 2,
       "allowed_reopen_conditions": [
         "new_theorem",
         "counterexample",
         "stronger_evidence_object"
       ],
       "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATPostBudgetCrossPillarReview.lean",
-      "authorized_next_slice": "qft_gr_stress_energy_source_map_slice_v0"
+      "authorized_next_slice": "qft_gr_stress_energy_source_map_slice_v0",
+      "last_fresh_delta_kind": "counterexample",
+      "last_fresh_delta_id": "QFT_GR_SOURCE_MAP_RESIDUAL_ONLY_SEMANTIC_OBSTRUCTION_FRESH_DELTA_v0",
+      "last_fresh_delta_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StressEnergySourceMapResidualOnlyObstruction.lean",
+      "same_lane_continuation": "not_authorized_until_cross_pillar_review",
+      "next_action_after_budget_exhaustion": "qft_gr_post_budget_cross_pillar_review_required"
     }
   ],
   "promotion_escrow": {
