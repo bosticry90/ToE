@@ -138,25 +138,30 @@ def masterActionRetainedAssumptionCitationUsageStatusReadoutV0 :
     MasterActionRetainedAssumptionCitationUsageStatus :=
   masterActionRetainedAssumptionCitationUsageStatusV0
 
-/-- This tranche consumes the prior live citation-only target. -/
+/-- This tranche consumed the prior citation-only target. -/
 theorem master_action_citation_usage_consumes_live_target_v0 :
     (masterActionRetainedAssumptionCitationUsageStatusReadoutV0
       |>.consumed_target) =
-      previousLiveNextStrictTargetV0 := by
+      masterActionCitationUsageConsumedTargetId := by
   rfl
 
-/-- The next target remains inside the master-action citation-boundary lane. -/
+/--
+The selected audit target is now recorded as the previous live target after the
+citation-language audit consumes it.
+-/
 theorem master_action_citation_usage_selected_next_target_v0 :
-    (masterActionRetainedAssumptionCitationUsageStatusReadoutV0
-      |>.selected_next_strict_target) =
-      currentLiveNextStrictTargetV0 := by
+    previousLiveNextStrictTargetV0 =
+      masterActionCitationLanguageAuditTargetId := by
   rfl
 
-/-- The master-action frontier row now points to the citation-language audit. -/
+/--
+The master-action frontier has advanced beyond this tranche to post-audit
+dependency-graph review.
+-/
 theorem master_action_citation_usage_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some masterActionCitationLanguageAuditTargetId := by
+      some "review_master_action_dependency_graph_after_citation_language_audit" := by
   rfl
 
 /-- The citation usage tranche reuses the existing dependency frontier ids. -/

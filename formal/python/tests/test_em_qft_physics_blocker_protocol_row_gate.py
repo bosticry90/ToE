@@ -56,6 +56,14 @@ MASTER_ACTION_CITATION_USAGE_PATH = (
     / "Derivation"
     / "MasterActionRetainedAssumptionCitationUsage.lean"
 )
+MASTER_ACTION_CITATION_AUDIT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "MasterActionCitationLanguageAudit.lean"
+)
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 GOVERNANCE_MANIFEST_PATH = (
     REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_TEST_MANIFEST_v1.json"
@@ -72,7 +80,8 @@ PROTOCOL_SUCCESSOR_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_un
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 CITATION_USAGE_TARGET = "cite_only_bounded_retained_assumptions"
-LIVE_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
+AUDIT_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
+LIVE_TARGET = "review_master_action_dependency_graph_after_citation_language_audit"
 PRIMARY_BLOCKER = "shared_dynamics_and_residual_unification"
 SECONDARY_BLOCKER = "interface_alignment_semantic_bridge"
 REQUIRED_EVIDENCE = {
@@ -129,7 +138,7 @@ def test_frontier_uses_row_lookup_and_exposes_successor_target() -> None:
     frontier_text = _read(CROSS_PILLAR_FRONTIER_PATH)
 
     assert "def crossPillarFrontierEntryByRow?" in frontier_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{CITATION_USAGE_TARGET}"' in frontier_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{AUDIT_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
 
@@ -148,12 +157,13 @@ def test_loop_registry_and_public_surfaces_follow_em_qft_successor() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == CITATION_USAGE_TARGET
+    assert state["previous_live_next_target"] == AUDIT_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        MASTER_ACTION_CITATION_USAGE_PATH.relative_to(REPO_ROOT)
+        MASTER_ACTION_CITATION_AUDIT_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
+    assert AUDIT_TARGET in payload["next_strict_target_coverage"]
     assert CITATION_USAGE_TARGET in payload["next_strict_target_coverage"]
     assert PROTOCOL_SUCCESSOR_TARGET in payload["next_strict_target_coverage"]
     assert INTERFACE_TARGET in payload["next_strict_target_coverage"]
@@ -161,9 +171,10 @@ def test_loop_registry_and_public_surfaces_follow_em_qft_successor() -> None:
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
     assert [item["workstream_id"] for item in active] == ["master_action_dependency_frontier"]
-    assert active[0]["consumed_target"] == CITATION_USAGE_TARGET
+    assert active[0]["consumed_target"] == AUDIT_TARGET
+    assert active[0]["prior_consumed_target"] == CITATION_USAGE_TARGET
     assert active[0]["authorized_next_strict_target"] == LIVE_TARGET
-    assert active[0]["latest_surface"] == "master_action_retained_assumption_citation_usage_v0"
+    assert active[0]["latest_surface"] == "master_action_citation_language_audit_v0"
 
     em_qft = next(
         item for item in payload["workstreams"]
