@@ -26,11 +26,20 @@ def CosmoBackgroundClosureBundle : Prop :=
       ∧ D.regime_declared
       ∧ D.falsifiability_declared
 
+/-- Placeholder proposition for the existing authorized-unlock scaffold. -/
+def CosmoAuthorizedUnlockChecklistComplete : Prop := True
+
+/-- Placeholder proposition for the existing transition dryrun scaffold. -/
+def CosmoTransitionDryrunReconciliationComplete : Prop := True
+
+/-- Placeholder proposition for the existing anti-shortcut boundary scaffold. -/
+def CosmoAntiShortcutPromotionBoundaryPreserved : Prop := True
+
 def CosmoGovernanceClosureBundle : Prop :=
   CosmoBackgroundClosureBundle
-    ∧ Prop -- authorized unlock checklist complete
-    ∧ Prop -- transition dryrun reconciliation complete
-    ∧ Prop -- anti-shortcut promotion boundary preserved
+    ∧ CosmoAuthorizedUnlockChecklistComplete
+    ∧ CosmoTransitionDryrunReconciliationComplete
+    ∧ CosmoAntiShortcutPromotionBoundaryPreserved
 
 /-- COSMO background object micro-01 theorem surface scaffold token. -/
 theorem cosmo_bg_micro01_object_surface_cycle01_v0
@@ -123,7 +132,11 @@ theorem cosmo_der01_object_surface_scaffold_cycle01_v0
 
 /-- COSMO DER-02 theorem-body scope-boundary scaffold token. -/
 theorem cosmo_der02_theorem_body_scope_boundary_cycle01_v0
-    (hder02 : CosmoBackgroundObjectSurface ∧ Prop ∧ Prop ∧ Prop) :
+    (hder02 :
+      CosmoBackgroundObjectSurface
+        ∧ CosmoAuthorizedUnlockChecklistComplete
+        ∧ CosmoTransitionDryrunReconciliationComplete
+        ∧ CosmoAntiShortcutPromotionBoundaryPreserved) :
     CosmoGovernanceClosureBundle := by
   rcases hder02 with ⟨hsurface, hunlock, hdryrun, hboundary⟩
   rcases hsurface with ⟨A, hmetric, hexpansion, hsource, hregime⟩

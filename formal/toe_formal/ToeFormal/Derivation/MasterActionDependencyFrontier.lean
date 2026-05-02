@@ -69,7 +69,7 @@ def masterActionCitationBoundariesV0 :
         "sr_covariance_to_cosmology_regime_residual_retained"
       dependency_kind := .required_for_coherence
       allowed_citation_scope :=
-        "local_sr_covariance_and_cosmology_regime_residual_as_bridge_target"
+        "local_sr_covariance_cosmology_regime_transport_zero_residual_package_under_supplied_alignment"
       forbidden_promotion_scope :=
         "no_global_cosmology_sr_bridge_from_local_covariance_alone"
       status := .retained }

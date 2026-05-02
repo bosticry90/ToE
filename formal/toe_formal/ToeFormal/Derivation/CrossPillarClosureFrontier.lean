@@ -121,12 +121,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .srCovariance
       current_strongest_surface :=
-        "SR covariance object and bounded theorem-surface package"
+        "SR covariance object plus bounded SR/COSMO regime-transport zero-residual package"
       retained_blocker :=
         "sr_covariance_to_cosmology_regime_residual_retained"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
-      next_strict_slice := "transport_local_sr_covariance_through_cosmo_regime"
+      next_strict_slice :=
+        "derive_or_refute_global_sr_cosmo_bridge_from_transport_package"
       status := .retained }
   , { row := .gr01
       current_strongest_surface :=
@@ -139,12 +140,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .cosmology
       current_strongest_surface :=
-        "bounded cosmology background object and regime surface"
+        "bounded cosmology background/regime surface feeding SR/COSMO transport residual package"
       retained_blocker :=
         "cosmo_background_reduction_and_expansion_observable_retained"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
-      next_strict_slice := "tie_background_regime_to_sr_covariance_residual"
+      next_strict_slice :=
+        "derive_or_refute_global_sr_cosmo_bridge_from_transport_package"
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=

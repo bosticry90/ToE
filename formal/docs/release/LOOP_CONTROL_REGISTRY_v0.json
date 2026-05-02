@@ -459,6 +459,7 @@
     "derive_or_refute_evolution_map_to_transport_hypotheses",
     "derive_qm_stat_source_target_transport_semantics",
     "transport_local_sr_covariance_through_cosmo_regime",
+    "derive_or_refute_global_sr_cosmo_bridge_from_transport_package",
     "state_continuum_limit_and_source_map_obligations",
     "tie_background_regime_to_sr_covariance_residual",
     "derive_qft_stress_energy_expectation_source_semantics",
@@ -525,6 +526,12 @@
       "to": "sr_covariance_cosmology_regime_transport",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRPostBudgetCrossPillarReview.lean"
+    },
+    {
+      "from": "sr_covariance_cosmology_regime_transport",
+      "to": "cosmology_background_regime",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Bridges/SR_CosmologyRegimeTransport.lean"
     }
   ],
   "cycle_waivers": [],
@@ -580,9 +587,9 @@
     },
     {
       "workstream_id": "sr_covariance_cosmology_regime_transport",
-      "status": "authorized_reopen",
+      "status": "active",
       "retained_blocker": "sr_covariance_to_cosmology_regime_residual_retained",
-      "consecutive_slices_after_retention": 0,
+      "consecutive_slices_after_retention": 1,
       "allowed_reopen_conditions": [
         "authorized_reopen_after_cross_pillar_review",
         "new_theorem",
@@ -592,7 +599,12 @@
       "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRPostBudgetCrossPillarReview.lean",
       "authorized_next_slice": "sr_covariance_cosmology_regime_transport_slice_v0",
       "authorized_next_strict_target": "transport_local_sr_covariance_through_cosmo_regime",
-      "same_lane_continuation": "authorized_by_qft_gr_post_budget_review",
+      "last_fresh_delta_kind": "new_theorem",
+      "last_fresh_delta_id": "SR_COSMOLOGY_REGIME_TRANSPORT_ZERO_RESIDUAL_FRESH_DELTA_v0",
+      "last_fresh_delta_evidence": "formal/toe_formal/ToeFormal/Bridges/SR_CosmologyRegimeTransport.lean",
+      "latest_surface": "SR_COSMOLOGY_REGIME_TRANSPORT_v0",
+      "same_lane_continuation": "authorized_until_attempt_budget",
+      "next_strict_target": "derive_or_refute_global_sr_cosmo_bridge_from_transport_package",
       "next_action_after_budget_exhaustion": "pause_and_cross_pillar_review"
     }
   ],

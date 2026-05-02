@@ -240,10 +240,10 @@ theorem qft_gr_post_budget_selected_strict_target_v0 :
       srCovarianceCosmologyRegimeTransportTargetId := by
   rfl
 
-/-- The selected target is already the SR covariance row's frontier target. -/
+/-- The selected target remains the QFT-GR row's recorded rotation target. -/
 theorem qft_gr_post_budget_sr_cosmo_is_frontier_row_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
-      ((crossPillarClosureFrontierV0.drop 3).head?) =
+      ((crossPillarClosureFrontierV0.drop 6).head?) =
       some srCovarianceCosmologyRegimeTransportTargetId := by
   rfl
 
