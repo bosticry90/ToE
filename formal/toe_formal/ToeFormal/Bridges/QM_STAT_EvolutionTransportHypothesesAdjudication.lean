@@ -51,6 +51,10 @@ def qmStatEvolutionTransportHypothesesFreshDeltaKind : String :=
 def qmStatEvolutionToTransportSemanticBridgeTargetId : String :=
   "derive_or_refute_evolution_to_transport_semantic_bridge"
 
+/-- Live frontier target after the semantic-bridge slice reaches budget. -/
+def qmStatEvolutionPostBudgetReviewTargetId : String :=
+  "qm_evolution_post_budget_cross_pillar_review"
+
 /--
 Semantic requirements needed before a QM evolution map can be used as the
 finite transport data consumed by the QM-STAT residual package.
@@ -401,11 +405,11 @@ theorem qm_stat_evolution_transport_selected_next_target_v0 :
       qmStatEvolutionToTransportSemanticBridgeTargetId := by
   rfl
 
-/-- The QM evolution row records the next semantic-bridge target. -/
-theorem qm_stat_evolution_transport_frontier_target_v0 :
+/-- The QM evolution row has advanced to the post-budget review target. -/
+theorem qm_stat_evolution_transport_frontier_advanced_to_post_budget_review_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       ((crossPillarClosureFrontierV0.drop 1).head?) =
-      some qmStatEvolutionToTransportSemanticBridgeTargetId := by
+      some qmStatEvolutionPostBudgetReviewTargetId := by
   rfl
 
 /-- This adjudication does not close the QM-STAT seam. -/

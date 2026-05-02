@@ -104,12 +104,12 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qmEvolution
       current_strongest_surface :=
-        "QM evolution contract plus transport-hypotheses semantic-bridge obstruction"
+        "QM evolution contract plus supplied evolution-to-transport semantic bridge theorem"
       retained_blocker :=
-        "PHASE1-BLOCKER-QMSTAT-EVOLUTION-MAP-TO-TRANSPORT-HYPOTHESES-RETAINED"
+        "PHASE1-BLOCKER-QMSTAT-EVOLUTION-TO-TRANSPORT-SEMANTIC-BRIDGE-RETAINED"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
-      next_strict_slice := "derive_or_refute_evolution_to_transport_semantic_bridge"
+      next_strict_slice := "qm_evolution_post_budget_cross_pillar_review"
       status := .retained }
   , { row := .qmSTAT
       current_strongest_surface :=

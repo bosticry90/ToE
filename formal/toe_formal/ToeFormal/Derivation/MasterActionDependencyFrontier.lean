@@ -66,6 +66,14 @@ def masterActionCitationBoundariesV0 :
         "no_qm_stat_transport_hypotheses_or_qm_stat_seam_closure_from_qm_evolution_contract_alone"
       status := .retained }
   , { retained_assumption_id :=
+        "PHASE1-BLOCKER-QMSTAT-EVOLUTION-TO-TRANSPORT-SEMANTIC-BRIDGE-RETAINED"
+      dependency_kind := .required_for_coherence
+      allowed_citation_scope :=
+        "supplied_qm_evolution_to_transport_semantic_bridge_constructs_qm_stat_transport_hypotheses"
+      forbidden_promotion_scope :=
+        "no_derivation_of_bridge_from_qm_evolution_contract_alone_no_qm_stat_seam_closure"
+      status := .retained }
+  , { retained_assumption_id :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED"
       dependency_kind := .required_for_coherence
       allowed_citation_scope :=
@@ -116,7 +124,7 @@ def masterActionCitationBoundariesV0 :
 
 /-- The master-action citation-boundary list is stable. -/
 theorem master_action_citation_boundaries_length_v0 :
-    masterActionCitationBoundariesV0.length = 9 := by
+    masterActionCitationBoundariesV0.length = 10 := by
   rfl
 
 /-- Status readout for the master-action dependency frontier. -/
