@@ -288,18 +288,18 @@ theorem qm_evolution_post_budget_selected_next_target_v0 :
       emQFTPhysicsBlockerExtractionTargetId := by
   rfl
 
-/-- The frontier exposes the same current live target. -/
-theorem qm_evolution_post_budget_current_frontier_target_v0 :
+/-- The frontier records the QM review's selected target as the consumed target. -/
+theorem qm_evolution_post_budget_frontier_previous_target_v0 :
     (crossPillarClosureFrontierStatusReadoutV0
-      |>.current_live_next_target) =
+      |>.previous_live_next_target) =
       emQFTPhysicsBlockerExtractionTargetId := by
   rfl
 
-/-- The EM-QFT frontier row carries the selected strict target. -/
+/-- The EM-QFT frontier row now carries the successor bridge target. -/
 theorem qm_evolution_post_budget_em_qft_frontier_row_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
-      ((crossPillarClosureFrontierV0.drop 8).head?) =
-      some emQFTPhysicsBlockerExtractionTargetId := by
+      (crossPillarFrontierEntryByRow? .emQFTSeam) =
+      some currentLiveNextStrictTargetV0 := by
   rfl
 
 /-- This review does not authorize Phase 2. -/

@@ -130,3 +130,4 @@ import ToeFormal.Derivation.QMSTATPostBudgetCrossPillarReview
 import ToeFormal.Derivation.QFTGRPostBudgetCrossPillarReview
 import ToeFormal.Derivation.SRCosmologyPostBudgetCrossPillarReview
 import ToeFormal.Derivation.QMEvolutionPostBudgetCrossPillarReview
+import ToeFormal.Derivation.EMQFTPhysicsBlockerProtocolRow

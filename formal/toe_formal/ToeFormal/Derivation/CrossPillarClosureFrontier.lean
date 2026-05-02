@@ -169,11 +169,12 @@ def crossPillarClosureFrontierV0 :
       status := .conditional }
   , { row := .emQFTSeam
       current_strongest_surface :=
-        "EM-QFT governance surface with physics blocker still retained"
+        "EM-QFT physics-blocker protocol row with shared-dynamics and residual-unification bridge retained"
       retained_blocker := "SEAM_EM_QFT_PHYSICS_COMPLETE_v0:NO"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
-      next_strict_slice := "extract_em_qft_physics_blocker_into_protocol_row"
+      next_strict_slice :=
+        "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
@@ -191,17 +192,22 @@ theorem cross_pillar_closure_frontier_length_v0 :
     crossPillarClosureFrontierV0.length = 10 := by
   rfl
 
+/-- Stable row lookup for frontier consumers; avoids relying on row position. -/
+def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
+    Option CrossPillarFrontierEntry :=
+  crossPillarClosureFrontierV0.find? (fun entry => entry.row == row)
+
 /-- Surface id for the all-pillar frontier map. -/
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QM evolution post-budget review. -/
+/-- Previous live target consumed by the EM-QFT blocker extraction row. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "qm_evolution_post_budget_cross_pillar_review"
-
-/-- Current live target after QM evolution post-budget review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "extract_em_qft_physics_blocker_into_protocol_row"
+
+/-- Current live target after EM-QFT blocker extraction. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

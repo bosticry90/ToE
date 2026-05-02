@@ -243,7 +243,7 @@ theorem qft_gr_post_budget_selected_strict_target_v0 :
 /-- The selected target remains the QFT-GR row's recorded rotation target. -/
 theorem qft_gr_post_budget_sr_cosmo_is_frontier_row_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
-      ((crossPillarClosureFrontierV0.drop 6).head?) =
+      (crossPillarFrontierEntryByRow? .qftGRSeam) =
       some srCovarianceCosmologyRegimeTransportTargetId := by
   rfl
 

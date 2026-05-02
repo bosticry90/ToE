@@ -28,13 +28,24 @@ QM_EVOLUTION_REVIEW_PATH = (
     / "Derivation"
     / "QMEvolutionPostBudgetCrossPillarReview.lean"
 )
+EM_QFT_PROTOCOL_ROW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "EMQFTPhysicsBlockerProtocolRow.lean"
+)
 
-LIVE_TARGET = "extract_em_qft_physics_blocker_into_protocol_row"
-PREVIOUS_TARGET = "qm_evolution_post_budget_cross_pillar_review"
+LIVE_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
+PREVIOUS_TARGET = "extract_em_qft_physics_blocker_into_protocol_row"
+QM_REVIEW_TARGET = "qm_evolution_post_budget_cross_pillar_review"
 STALE_SCALAR_ACTION = "derive_or_refute_evolution_to_transport_semantic_bridge"
 SCALAR_PAUSED_ACTION = "paused_no_scalar_reopen_until_dependency_graph_change"
 HISTORICAL_QUEUE_TOKEN = "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0"
 CURRENT_TARGET_TOKEN = f"CURRENT_LIVE_NEXT_TARGET_v0: {LIVE_TARGET}"
+EM_QFT_PRIMARY_BLOCKER = "shared_dynamics_and_residual_unification"
+EM_QFT_SECONDARY_BLOCKER = "interface_alignment_semantic_bridge"
 
 PAUSED_LANES = {
     "scalar_qft_a2a15a1",
@@ -97,7 +108,7 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        QM_EVOLUTION_REVIEW_PATH.relative_to(REPO_ROOT)
+        EM_QFT_PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     assert set(state["paused_lanes"]) == PAUSED_LANES
@@ -110,6 +121,10 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
         "em_qft_physics_blocker_extraction"
     ]
     assert active_workstreams[0]["authorized_next_strict_target"] == LIVE_TARGET
+    assert active_workstreams[0]["consumed_target"] == PREVIOUS_TARGET
+    assert active_workstreams[0]["latest_surface"] == "EM_QFT_PHYSICS_BLOCKER_PROTOCOL_ROW_v0"
+    assert active_workstreams[0]["primary_blocker"] == EM_QFT_PRIMARY_BLOCKER
+    assert active_workstreams[0]["secondary_blocker"] == EM_QFT_SECONDARY_BLOCKER
 
     active_targets = {state["live_next_target"], active_workstreams[0]["authorized_next_strict_target"]}
     assert active_targets == {LIVE_TARGET}
@@ -120,6 +135,7 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     readme_text = _read(README_PATH)
     frontier_text = _read(CROSS_PILLAR_FRONTIER_PATH)
     review_text = _read(QM_EVOLUTION_REVIEW_PATH)
+    protocol_text = _read(EM_QFT_PROTOCOL_ROW_PATH)
 
     assert CURRENT_TARGET_TOKEN in readme_text
     assert f'"live_next_target": "{LIVE_TARGET}"' in _read(REGISTRY_PATH)
@@ -133,8 +149,12 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     ) in frontier_text
     assert (
         'def emQFTPhysicsBlockerExtractionTargetId : String :=\n'
-        f'  "{LIVE_TARGET}"'
+        f'  "{PREVIOUS_TARGET}"'
     ) in review_text
+    assert (
+        'def emQFTSharedDynamicsResidualUnificationBridgeTargetId : String :=\n'
+        f'  "{LIVE_TARGET}"'
+    ) in protocol_text
     assert payload["current_target_state"]["live_next_target"] == LIVE_TARGET
 
 
@@ -157,9 +177,16 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     qm_evolution = _workstream(payload, "qm_evolution_contract")
     assert qm_evolution["post_budget_review_status"] == "completed"
     assert qm_evolution["same_lane_continuation"] == "not_authorized"
-    assert qm_evolution["next_strict_target"] == LIVE_TARGET
-    assert qm_evolution["next_action_after_retention"] == LIVE_TARGET
+    assert qm_evolution["next_strict_target"] == PREVIOUS_TARGET
+    assert qm_evolution["next_action_after_retention"] == PREVIOUS_TARGET
     assert qm_evolution["stronger_qm_dynamics_bridge_derivation"] == "not_supplied"
+
+    em_qft = _workstream(payload, "em_qft_physics_blocker_extraction")
+    assert em_qft["status"] == "active"
+    assert em_qft["authorized_next_strict_target"] == LIVE_TARGET
+    assert em_qft["authorization_evidence"] == str(
+        EM_QFT_PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
 
 
 def test_paused_lanes_do_not_advertise_active_continuation() -> None:
@@ -198,6 +225,7 @@ def test_historical_post_sweep_queue_cannot_override_live_target() -> None:
     assert historical_targets
     assert LIVE_TARGET not in historical_targets
     assert PREVIOUS_TARGET not in historical_targets
+    assert QM_REVIEW_TARGET not in historical_targets
 
 
 def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
@@ -215,15 +243,15 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
         "governance_manifest_enrollment",
     }
 
-    review_text = _read(QM_EVOLUTION_REVIEW_PATH)
+    protocol_text = _read(EM_QFT_PROTOCOL_ROW_PATH)
     for theorem_name in [
-        "qm_evolution_post_budget_phase2_not_authorized_v0",
-        "qm_evolution_post_budget_seam_closure_not_promoted_v0",
-        "qm_evolution_post_budget_master_action_not_promoted_v0",
-        "qm_evolution_post_budget_no_empirical_claim_v0",
-        "qm_evolution_post_budget_governance_manifest_not_enrolled_v0",
+        "em_qft_protocol_row_phase2_not_authorized_v0",
+        "em_qft_protocol_row_seam_not_closed_v0",
+        "em_qft_protocol_row_master_action_not_promoted_v0",
+        "em_qft_protocol_row_no_empirical_claim_v0",
+        "em_qft_protocol_row_governance_manifest_not_enrolled_v0",
     ]:
-        assert theorem_name in review_text
+        assert theorem_name in protocol_text
 
 
 def test_current_target_gate_is_not_governance_manifest_enrolled() -> None:

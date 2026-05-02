@@ -304,21 +304,21 @@ theorem sr_cosmo_post_budget_selected_strict_target_v0 :
 /-- The QM evolution row has advanced to post-budget review after the bridge slice. -/
 theorem sr_cosmo_post_budget_qm_evolution_frontier_advanced_to_post_budget_review_v0 :
     Option.map (fun entry => entry.next_strict_slice)
-      ((crossPillarClosureFrontierV0.drop 1).head?) =
+      (crossPillarFrontierEntryByRow? .qmEvolution) =
       some qmEvolutionPostBudgetReviewTargetId := by
   rfl
 
 /-- The SR row now records the review rotation to QM evolution work. -/
 theorem sr_cosmo_post_budget_sr_row_rotates_to_qm_evolution_v0 :
     Option.map (fun entry => entry.next_strict_slice)
-      ((crossPillarClosureFrontierV0.drop 3).head?) =
+      (crossPillarFrontierEntryByRow? .srCovariance) =
       some qmEvolutionTransportHypothesesTargetId := by
   rfl
 
 /-- The cosmology row follows the same post-review rotation target. -/
 theorem sr_cosmo_post_budget_cosmology_row_rotates_to_qm_evolution_v0 :
     Option.map (fun entry => entry.next_strict_slice)
-      ((crossPillarClosureFrontierV0.drop 5).head?) =
+      (crossPillarFrontierEntryByRow? .cosmology) =
       some qmEvolutionTransportHypothesesTargetId := by
   rfl
 

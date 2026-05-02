@@ -87,9 +87,9 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "qm_evolution_post_budget_cross_pillar_review",
-    "live_next_target": "extract_em_qft_physics_blocker_into_protocol_row",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QMEvolutionPostBudgetCrossPillarReview.lean",
+    "previous_live_next_target": "extract_em_qft_physics_blocker_into_protocol_row",
+    "live_next_target": "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/EMQFTPhysicsBlockerProtocolRow.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
@@ -499,6 +499,7 @@
     "sr_covariance_cosmology_regime_transport_slice_v0",
     "record_allowed_master_action_citation_scope",
     "extract_em_qft_physics_blocker_into_protocol_row",
+    "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge",
     "cite_only_bounded_retained_assumptions"
   ],
   "citation_boundary_coverage": [
@@ -598,6 +599,12 @@
       "to": "em_qft_physics_blocker_extraction",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Derivation/QMEvolutionPostBudgetCrossPillarReview.lean"
+    },
+    {
+      "from": "em_qft_physics_blocker_extraction",
+      "to": "em_qft_shared_dynamics_residual_unification_bridge",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/EMQFTPhysicsBlockerProtocolRow.lean"
     }
   ],
   "cycle_waivers": [],
@@ -606,7 +613,7 @@
       "workstream_id": "scalar_qft_a2a15a1",
       "status": "paused",
       "retained_blocker": "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
-      "consecutive_slices_after_retention": 0,
+      "consecutive_slices_after_retention": 1,
       "allowed_reopen_conditions": [
         "dependency_graph_change"
       ]
@@ -724,10 +731,20 @@
         "counterexample",
         "stronger_evidence_object"
       ],
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QMEvolutionPostBudgetCrossPillarReview.lean",
-      "authorized_next_strict_target": "extract_em_qft_physics_blocker_into_protocol_row",
-      "same_lane_continuation": "not_yet_applicable",
-      "non_promotion_boundary": "no_em_qft_seam_closure_no_phase2_no_master_action_promotion_no_empirical_claim"
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/EMQFTPhysicsBlockerProtocolRow.lean",
+      "consumed_target": "extract_em_qft_physics_blocker_into_protocol_row",
+      "latest_surface": "EM_QFT_PHYSICS_BLOCKER_PROTOCOL_ROW_v0",
+      "primary_blocker": "shared_dynamics_and_residual_unification",
+      "secondary_blocker": "interface_alignment_semantic_bridge",
+      "required_evidence": [
+        "EM_QFT_INTERFACE_ALIGNMENT_BRIDGE_OBLIGATION_v0",
+        "EM_QFT_SHARED_DYNAMICS_WITNESS_REQUIRED_v0",
+        "EM_QFT_RESIDUAL_UNIFICATION_SEMANTIC_BRIDGE_REQUIRED_v0"
+      ],
+      "minimum_closure_condition": "theorem_linked_shared_dynamics_residual_unification_and_interface_alignment_discharge",
+      "authorized_next_strict_target": "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge",
+      "same_lane_continuation": "authorized_bounded_derivation_or_refutation",
+      "non_promotion_boundary": "no_em_qft_seam_closure_no_phase2_no_master_action_promotion_no_empirical_claim_no_governance_manifest_enrollment"
     }
   ],
   "promotion_escrow": {
