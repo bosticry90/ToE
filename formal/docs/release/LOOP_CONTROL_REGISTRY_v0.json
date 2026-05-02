@@ -102,7 +102,7 @@
       "current_blocker_ids": [
         "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED"
       ],
-      "next_action": "rotate_to_qm_stat_transport_residual_semantics",
+      "next_action": "sr_cosmo_post_budget_cross_pillar_review",
       "validation_command": "cd formal/toe_formal; lake build ToeFormal"
     },
     {
@@ -447,6 +447,7 @@
     "qm_evolution_contract_to_schrodinger_unitary_recovery_retained",
     "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED",
     "sr_covariance_to_cosmology_regime_residual_retained",
+    "PHASE1-BLOCKER-SR-COSMO-GLOBAL-BRIDGE-SEMANTIC-MAP-RETAINED",
     "gr01_continuum_limit_source_identification_retained",
     "cosmo_background_reduction_and_expansion_observable_retained",
     "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED",
@@ -460,6 +461,7 @@
     "derive_qm_stat_source_target_transport_semantics",
     "transport_local_sr_covariance_through_cosmo_regime",
     "derive_or_refute_global_sr_cosmo_bridge_from_transport_package",
+    "sr_cosmo_post_budget_cross_pillar_review",
     "state_continuum_limit_and_source_map_obligations",
     "tie_background_regime_to_sr_covariance_residual",
     "derive_qft_stress_energy_expectation_source_semantics",
@@ -473,6 +475,7 @@
     "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED",
     "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED",
     "sr_covariance_to_cosmology_regime_residual_retained",
+    "PHASE1-BLOCKER-SR-COSMO-GLOBAL-BRIDGE-SEMANTIC-MAP-RETAINED",
     "gr01_continuum_limit_source_identification_retained",
     "cosmo_background_reduction_and_expansion_observable_retained",
     "SEAM_EM_QFT_PHYSICS_COMPLETE_v0:NO",
@@ -532,6 +535,12 @@
       "to": "cosmology_background_regime",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Bridges/SR_CosmologyRegimeTransport.lean"
+    },
+    {
+      "from": "sr_covariance_cosmology_regime_transport",
+      "to": "sr_cosmo_global_bridge_semantic_map",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Bridges/SR_CosmologyGlobalBridgeSemanticMapObstruction.lean"
     }
   ],
   "cycle_waivers": [],
@@ -587,9 +596,9 @@
     },
     {
       "workstream_id": "sr_covariance_cosmology_regime_transport",
-      "status": "active",
-      "retained_blocker": "sr_covariance_to_cosmology_regime_residual_retained",
-      "consecutive_slices_after_retention": 1,
+      "status": "paused",
+      "retained_blocker": "PHASE1-BLOCKER-SR-COSMO-GLOBAL-BRIDGE-SEMANTIC-MAP-RETAINED",
+      "consecutive_slices_after_retention": 2,
       "allowed_reopen_conditions": [
         "authorized_reopen_after_cross_pillar_review",
         "new_theorem",
@@ -597,15 +606,16 @@
         "stronger_evidence_object"
       ],
       "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRPostBudgetCrossPillarReview.lean",
-      "authorized_next_slice": "sr_covariance_cosmology_regime_transport_slice_v0",
-      "authorized_next_strict_target": "transport_local_sr_covariance_through_cosmo_regime",
-      "last_fresh_delta_kind": "new_theorem",
-      "last_fresh_delta_id": "SR_COSMOLOGY_REGIME_TRANSPORT_ZERO_RESIDUAL_FRESH_DELTA_v0",
-      "last_fresh_delta_evidence": "formal/toe_formal/ToeFormal/Bridges/SR_CosmologyRegimeTransport.lean",
-      "latest_surface": "SR_COSMOLOGY_REGIME_TRANSPORT_v0",
-      "same_lane_continuation": "authorized_until_attempt_budget",
-      "next_strict_target": "derive_or_refute_global_sr_cosmo_bridge_from_transport_package",
-      "next_action_after_budget_exhaustion": "pause_and_cross_pillar_review"
+      "authorized_next_slice": "sr_cosmo_global_bridge_semantic_map_obstruction_slice_v0",
+      "authorized_next_strict_target": "derive_or_refute_global_sr_cosmo_bridge_from_transport_package",
+      "last_fresh_delta_kind": "counterexample",
+      "last_fresh_delta_id": "SR_COSMOLOGY_GLOBAL_BRIDGE_SEMANTIC_MAP_COUNTEREXAMPLE_FRESH_DELTA_v0",
+      "last_fresh_delta_evidence": "formal/toe_formal/ToeFormal/Bridges/SR_CosmologyGlobalBridgeSemanticMapObstruction.lean",
+      "latest_surface": "SR_COSMOLOGY_GLOBAL_BRIDGE_SEMANTIC_MAP_OBSTRUCTION_v0",
+      "same_lane_continuation": "not_authorized",
+      "post_budget_review_status": "pending",
+      "next_strict_target": "sr_cosmo_post_budget_cross_pillar_review",
+      "next_action_after_budget_exhaustion": "sr_cosmo_post_budget_cross_pillar_review"
     }
   ],
   "promotion_escrow": {

@@ -66,12 +66,12 @@ def masterActionCitationBoundariesV0 :
         "no_semiclassical_gr_source_theorem_or_qft_gr_seam_promotion"
       status := .retained }
   , { retained_assumption_id :=
-        "sr_covariance_to_cosmology_regime_residual_retained"
+        "PHASE1-BLOCKER-SR-COSMO-GLOBAL-BRIDGE-SEMANTIC-MAP-RETAINED"
       dependency_kind := .required_for_coherence
       allowed_citation_scope :=
-        "local_sr_covariance_cosmology_regime_transport_zero_residual_package_under_supplied_alignment"
+        "bounded_sr_cosmo_transport_zero_residual_package_and_global_semantic_map_obstruction"
       forbidden_promotion_scope :=
-        "no_global_cosmology_sr_bridge_from_local_covariance_alone"
+        "no_global_sr_cosmo_bridge_without_additional_global_alignment_semantic_map"
       status := .retained }
   , { retained_assumption_id :=
         "gr01_continuum_limit_source_identification_retained"
