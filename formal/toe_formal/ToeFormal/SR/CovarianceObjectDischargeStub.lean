@@ -18,6 +18,7 @@ namespace SR
 noncomputable section
 set_option autoImplicit false
 set_option linter.style.nativeDecide false
+set_option linter.style.longLine false
 
 structure InertialFrame where
   label : String

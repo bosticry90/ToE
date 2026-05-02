@@ -568,7 +568,7 @@ theorem differenceQuotientRep32_cubic_deviation_expand
             ε^2 * cubicRemainder₃ g δ ψ +
             ε^3 * cubicRemainder₄ g δ ψ) -
           pairingRep32' (P_cubic_rep32_def g ψ) (δ ψ) := by
-            simpa [hexp]
+            simp [hexp]
     _ =
         cubicLinearDeviation g δ ψ +
           ε * cubicRemainder₂ g δ ψ +

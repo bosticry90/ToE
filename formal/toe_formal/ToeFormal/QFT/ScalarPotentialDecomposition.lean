@@ -152,14 +152,14 @@ theorem certificate_from_structured_source_valid
     calc
       classifyDocumentTerm source.quadraticToken =
           classifyDocumentTerm DocumentTermToken.scalarPotentialQuadratic := by
-            simpa [hQuadraticToken]
+            simp [hQuadraticToken]
       _ = DocumentTermClass.scalarMass := rfl
   have hRemainderClass :
       classifyDocumentTerm source.remainderToken = DocumentTermClass.interaction := by
     calc
       classifyDocumentTerm source.remainderToken =
           classifyDocumentTerm DocumentTermToken.scalarInteractionRemainder := by
-            simpa [hRemainderToken]
+            simp [hRemainderToken]
       _ = DocumentTermClass.interaction := rfl
   refine ⟨hQuadraticClass, hRemainderClass, ?_, ?_⟩
   · rfl
@@ -179,14 +179,14 @@ theorem valid_structured_source_generates_valid_assignment
       (certificateGeneratedAssignment (certificateFromStructuredSource source)).quadraticToken =
       classifyDocumentTerm source.quadraticToken := rfl
     _ = classifyDocumentTerm DocumentTermToken.scalarPotentialQuadratic := by
-      simpa [hQuadraticToken]
+      simp [hQuadraticToken]
     _ = DocumentTermClass.scalarMass := rfl
   · calc
     classifyDocumentTerm
       (certificateGeneratedAssignment (certificateFromStructuredSource source)).remainderToken =
       classifyDocumentTerm source.remainderToken := rfl
     _ = classifyDocumentTerm DocumentTermToken.scalarInteractionRemainder := by
-      simpa [hRemainderToken]
+      simp [hRemainderToken]
     _ = DocumentTermClass.interaction := rfl
 
 /-- A valid certificate generates a valid document potential assignment. -/

@@ -363,8 +363,7 @@ theorem toe_candidate_scalar_potential_assignment_audit_gate_valid
   ⟨hCertId, hPayloadValid, hSourceSpecId, hNoPromotion, hNoGlobal,
     hRemainderDisposition, hSeamDisposition⟩
   refine ⟨?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_, ?_⟩
-  · simpa [toeCandidateScalarPotentialAssignmentAuditGateV0,
-    toeCandidateStructuredScalarPotentialAuditSource] using hCertId
+  · exact hCertId
   · simpa [toeCandidateScalarPotentialAssignmentAuditGateV0,
     toeCandidateStructuredScalarPotentialAuditSource] using hSourceSpecId
   · rfl
@@ -372,11 +371,9 @@ theorem toe_candidate_scalar_potential_assignment_audit_gate_valid
   · rfl
   · rfl
   · rfl
-  · simpa [toeCandidateFreeScalarDisposition] using hSeamDisposition
-  · simpa [toeCandidateScalarPotentialAssignmentAuditGateV0,
-    toeCandidateStructuredScalarPotentialAuditSource] using hNoPromotion
-  · simpa [toeCandidateScalarPotentialAssignmentAuditGateV0,
-    toeCandidateStructuredScalarPotentialAuditSource] using hNoGlobal
+  · rfl
+  · exact hNoPromotion
+  · exact hNoGlobal
   · simpa [toeCandidateScalarPotentialAssignmentAuditGateV0,
     toeCandidateStructuredScalarPotentialAuditSource]
     using (certificate_from_structured_source_valid
