@@ -107,6 +107,7 @@ theorem em_qft_seam_cycle03_class_flip_authorization
   have h_cycle01 : classBCompatibilitySurface witness ctx potential := h_discharge.left
   exact And.intro h_discharge h_cycle01.right
 
+end
 end EMQFT
 end Bridges
 end ToeFormal

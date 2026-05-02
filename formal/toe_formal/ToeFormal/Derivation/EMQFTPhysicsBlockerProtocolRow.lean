@@ -226,25 +226,21 @@ theorem em_qft_protocol_row_successor_target_v0 :
       emQFTSharedDynamicsResidualUnificationBridgeTargetId := by
   rfl
 
-/-- The all-pillar frontier exposes the successor as the current live target. -/
-theorem em_qft_protocol_row_frontier_current_target_v0 :
+/--
+After the successor slice executes, the all-pillar frontier records this row's
+successor as the consumed previous target.
+-/
+theorem em_qft_protocol_row_successor_consumed_by_frontier_v0 :
     (crossPillarClosureFrontierStatusReadoutV0
-      |>.current_live_next_target) =
+      |>.previous_live_next_target) =
       emQFTSharedDynamicsResidualUnificationBridgeTargetId := by
   rfl
 
-/-- The all-pillar frontier records this row's consumed target as previous. -/
-theorem em_qft_protocol_row_frontier_previous_target_v0 :
-    (crossPillarClosureFrontierStatusReadoutV0
-      |>.previous_live_next_target) =
-      emQFTPhysicsBlockerProtocolRowConsumedTargetId := by
-  rfl
-
-/-- The EM-QFT frontier row carries the successor target by row lookup. -/
-theorem em_qft_protocol_row_frontier_row_target_v0 :
+/-- The EM-QFT frontier row has advanced beyond this row's successor target. -/
+theorem em_qft_protocol_row_frontier_row_advanced_after_successor_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .emQFTSeam) =
-      some emQFTSharedDynamicsResidualUnificationBridgeTargetId := by
+      some "derive_or_refute_em_qft_interface_alignment_semantic_bridge" := by
   rfl
 
 /-- This row does not close the EM-QFT seam. -/
