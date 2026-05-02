@@ -462,7 +462,7 @@
     "state_continuum_limit_and_source_map_obligations",
     "tie_background_regime_to_sr_covariance_residual",
     "derive_qft_stress_energy_expectation_source_semantics",
-    "qft_gr_post_budget_cross_pillar_review_required",
+    "sr_covariance_cosmology_regime_transport_slice_v0",
     "record_allowed_master_action_citation_scope",
     "extract_em_qft_physics_blocker_into_protocol_row",
     "cite_only_bounded_retained_assumptions"
@@ -519,6 +519,12 @@
       "to": "master_action_dependency_frontier",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StressEnergySourceMapResidualOnlyObstruction.lean"
+    },
+    {
+      "from": "qft_gr_source_map",
+      "to": "sr_covariance_cosmology_regime_transport",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRPostBudgetCrossPillarReview.lean"
     }
   ],
   "cycle_waivers": [],
@@ -566,8 +572,28 @@
       "last_fresh_delta_kind": "counterexample",
       "last_fresh_delta_id": "QFT_GR_SOURCE_MAP_RESIDUAL_ONLY_SEMANTIC_OBSTRUCTION_FRESH_DELTA_v0",
       "last_fresh_delta_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StressEnergySourceMapResidualOnlyObstruction.lean",
-      "same_lane_continuation": "not_authorized_until_cross_pillar_review",
-      "next_action_after_budget_exhaustion": "qft_gr_post_budget_cross_pillar_review_required"
+      "post_budget_review_status": "completed",
+      "post_budget_review_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRPostBudgetCrossPillarReview.lean",
+      "post_budget_review_decision": "rotate_to_sr_covariance_cosmology_regime_transport",
+      "same_lane_continuation": "not_authorized",
+      "next_action_after_budget_exhaustion": "rotate_to_sr_covariance_cosmology_regime_transport"
+    },
+    {
+      "workstream_id": "sr_covariance_cosmology_regime_transport",
+      "status": "authorized_reopen",
+      "retained_blocker": "sr_covariance_to_cosmology_regime_residual_retained",
+      "consecutive_slices_after_retention": 0,
+      "allowed_reopen_conditions": [
+        "authorized_reopen_after_cross_pillar_review",
+        "new_theorem",
+        "counterexample",
+        "stronger_evidence_object"
+      ],
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRPostBudgetCrossPillarReview.lean",
+      "authorized_next_slice": "sr_covariance_cosmology_regime_transport_slice_v0",
+      "authorized_next_strict_target": "transport_local_sr_covariance_through_cosmo_regime",
+      "same_lane_continuation": "authorized_by_qft_gr_post_budget_review",
+      "next_action_after_budget_exhaustion": "pause_and_cross_pillar_review"
     }
   ],
   "promotion_escrow": {

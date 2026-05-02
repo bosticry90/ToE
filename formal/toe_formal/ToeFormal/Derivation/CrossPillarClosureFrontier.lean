@@ -148,12 +148,12 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR source-map zero-residual package plus residual-only semantic obstruction"
+        "QFT-GR source-map zero-residual package plus residual-only semantic obstruction and post-budget review"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
-      next_strict_slice := "qft_gr_post_budget_cross_pillar_review_required"
+      next_strict_slice := "transport_local_sr_covariance_through_cosmo_regime"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
