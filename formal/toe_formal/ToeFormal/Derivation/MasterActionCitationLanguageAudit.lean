@@ -202,25 +202,30 @@ def masterActionCitationLanguageAuditStatusReadoutV0 :
     MasterActionCitationLanguageAuditStatus :=
   masterActionCitationLanguageAuditStatusV0
 
-/-- This audit consumes the prior live citation-language audit target. -/
+/-- This audit consumed the citation-language audit target. -/
 theorem master_action_citation_language_audit_consumes_live_target_v0 :
     (masterActionCitationLanguageAuditStatusReadoutV0
       |>.consumed_target) =
-      previousLiveNextStrictTargetV0 := by
+      masterActionCitationLanguageAuditConsumedTargetId := by
   rfl
 
-/-- The audit rotates only to bounded post-audit dependency-graph review. -/
+/--
+The selected dependency-graph review target is now recorded as the previous live
+target after the dependency-graph review consumes it.
+-/
 theorem master_action_citation_language_audit_selected_next_target_v0 :
-    (masterActionCitationLanguageAuditStatusReadoutV0
-      |>.selected_next_strict_target) =
-      currentLiveNextStrictTargetV0 := by
+    previousLiveNextStrictTargetV0 =
+      masterActionPostCitationAuditReviewTargetId := by
   rfl
 
-/-- The master-action frontier row records the post-audit review target. -/
+/--
+The master-action frontier has advanced beyond this audit to retained-blocker
+prioritization review.
+-/
 theorem master_action_citation_language_audit_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some masterActionPostCitationAuditReviewTargetId := by
+      some "prioritize_retained_blockers_after_master_action_dependency_graph_review" := by
   rfl
 
 /-- The audit preserves the retained assumption ids from citation usage. -/

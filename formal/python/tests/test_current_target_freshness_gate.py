@@ -76,11 +76,20 @@ MASTER_ACTION_CITATION_AUDIT_PATH = (
     / "Derivation"
     / "MasterActionCitationLanguageAudit.lean"
 )
+MASTER_ACTION_DEPENDENCY_GRAPH_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "MasterActionDependencyGraphReview.lean"
+)
 
 CITATION_USAGE_TARGET = "cite_only_bounded_retained_assumptions"
 AUDIT_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
-LIVE_TARGET = "review_master_action_dependency_graph_after_citation_language_audit"
-PREVIOUS_TARGET = AUDIT_TARGET
+REVIEW_TARGET = "review_master_action_dependency_graph_after_citation_language_audit"
+LIVE_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
+PREVIOUS_TARGET = REVIEW_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -158,7 +167,7 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        MASTER_ACTION_CITATION_AUDIT_PATH.relative_to(REPO_ROOT)
+        MASTER_ACTION_DEPENDENCY_GRAPH_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     assert set(state["paused_lanes"]) == PAUSED_LANES
@@ -172,8 +181,8 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     ]
     assert active_workstreams[0]["authorized_next_strict_target"] == LIVE_TARGET
     assert active_workstreams[0]["consumed_target"] == PREVIOUS_TARGET
-    assert active_workstreams[0]["latest_surface"] == "master_action_citation_language_audit_v0"
-    assert active_workstreams[0]["same_lane_continuation"] == "post_audit_dependency_graph_review_only"
+    assert active_workstreams[0]["latest_surface"] == "master_action_dependency_graph_review_v0"
+    assert active_workstreams[0]["same_lane_continuation"] == "retained_blocker_prioritization_review_only"
 
     active_targets = {state["live_next_target"], active_workstreams[0]["authorized_next_strict_target"]}
     assert active_targets == {LIVE_TARGET}
@@ -190,6 +199,7 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     em_qft_review_text = _read(EM_QFT_POST_BUDGET_REVIEW_PATH)
     citation_usage_text = _read(MASTER_ACTION_CITATION_USAGE_PATH)
     citation_audit_text = _read(MASTER_ACTION_CITATION_AUDIT_PATH)
+    dependency_graph_review_text = _read(MASTER_ACTION_DEPENDENCY_GRAPH_REVIEW_PATH)
 
     assert CURRENT_TARGET_TOKEN in readme_text
     assert f'"live_next_target": "{LIVE_TARGET}"' in _read(REGISTRY_PATH)
@@ -235,8 +245,16 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     ) in citation_audit_text
     assert (
         'def masterActionPostCitationAuditReviewTargetId : String :=\n'
-        f'  "{LIVE_TARGET}"'
+        f'  "{REVIEW_TARGET}"'
     ) in citation_audit_text
+    assert (
+        'def masterActionDependencyGraphReviewConsumedTargetId : String :=\n'
+        f'  "{REVIEW_TARGET}"'
+    ) in dependency_graph_review_text
+    assert (
+        'def retainedBlockerPrioritizationReviewTargetId : String :=\n'
+        f'  "{LIVE_TARGET}"'
+    ) in dependency_graph_review_text
     assert payload["current_target_state"]["live_next_target"] == LIVE_TARGET
 
 
@@ -277,11 +295,15 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert master_action["status"] == "active"
     assert master_action["authorized_next_strict_target"] == LIVE_TARGET
     assert master_action["authorization_evidence"] == str(
-        MASTER_ACTION_CITATION_AUDIT_PATH.relative_to(REPO_ROOT)
+        MASTER_ACTION_DEPENDENCY_GRAPH_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert master_action["latest_surface"] == "master_action_citation_language_audit_v0"
+    assert master_action["latest_surface"] == "master_action_dependency_graph_review_v0"
     assert master_action["citation_usage_status"] == "completed"
     assert master_action["citation_language_audit_status"] == "completed"
+    assert master_action["dependency_graph_review_status"] == "completed"
+    assert master_action["dependency_graph_changed"] == "no"
+    assert master_action["lane_unblocked"] == "no"
+    assert master_action["promotion_authorized"] == "no"
 
 
 def test_paused_lanes_do_not_advertise_active_continuation() -> None:
@@ -349,6 +371,7 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
     em_qft_review_text = _read(EM_QFT_POST_BUDGET_REVIEW_PATH)
     citation_usage_text = _read(MASTER_ACTION_CITATION_USAGE_PATH)
     citation_audit_text = _read(MASTER_ACTION_CITATION_AUDIT_PATH)
+    dependency_graph_review_text = _read(MASTER_ACTION_DEPENDENCY_GRAPH_REVIEW_PATH)
     for theorem_name in [
         "em_qft_protocol_row_phase2_not_authorized_v0",
         "em_qft_protocol_row_seam_not_closed_v0",
@@ -397,6 +420,14 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
         "master_action_citation_language_audit_governance_manifest_not_enrolled_v0",
     ]:
         assert theorem_name in citation_audit_text
+    for theorem_name in [
+        "master_action_dependency_graph_review_no_seam_closure_v0",
+        "master_action_dependency_graph_review_phase2_not_authorized_v0",
+        "master_action_dependency_graph_review_master_action_not_promoted_v0",
+        "master_action_dependency_graph_review_no_empirical_claim_v0",
+        "master_action_dependency_graph_review_governance_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in dependency_graph_review_text
 
 
 def test_current_target_gate_is_not_governance_manifest_enrolled() -> None:

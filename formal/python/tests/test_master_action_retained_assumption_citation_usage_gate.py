@@ -24,6 +24,14 @@ AUDIT_PATH = (
     / "Derivation"
     / "MasterActionCitationLanguageAudit.lean"
 )
+REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "MasterActionDependencyGraphReview.lean"
+)
 AGGREGATE_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
 FRONTIER_PATH = (
     REPO_ROOT
@@ -63,10 +71,12 @@ MATH_PHYSICS_INVENTORY_PATH = (
 
 CONSUMED_TARGET = "cite_only_bounded_retained_assumptions"
 AUDIT_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
-LIVE_TARGET = "review_master_action_dependency_graph_after_citation_language_audit"
+REVIEW_TARGET = "review_master_action_dependency_graph_after_citation_language_audit"
+LIVE_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 SURFACE_ID = "master_action_retained_assumption_citation_usage_v0"
 USAGE_EVIDENCE = str(USAGE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 AUDIT_EVIDENCE = str(AUDIT_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
+REVIEW_EVIDENCE = str(REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 
 
 def _read(path: Path) -> str:
@@ -122,10 +132,11 @@ def test_frontier_and_aggregate_advance_after_citation_language_audit() -> None:
 
     assert "import ToeFormal.Derivation.MasterActionRetainedAssumptionCitationUsage" in aggregate_text
     assert "import ToeFormal.Derivation.MasterActionCitationLanguageAudit" in aggregate_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{AUDIT_TARGET}"' in frontier_text
+    assert "import ToeFormal.Derivation.MasterActionDependencyGraphReview" in aggregate_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{REVIEW_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
-    assert "master-action citation-language audit over retained assumptions" in frontier_text
+    assert "master-action dependency graph review after citation-language audit" in frontier_text
     assert "def masterActionCitationBoundariesV0" in master_action_text
     assert "theorem master_action_citation_boundaries_length_v0" in master_action_text
 
@@ -134,24 +145,26 @@ def test_loop_registry_tracks_citation_usage_as_current_master_action_lane() -> 
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == AUDIT_TARGET
+    assert state["previous_live_next_target"] == REVIEW_TARGET
     assert state["live_next_target"] == LIVE_TARGET
-    assert state["live_next_target_evidence"] == AUDIT_EVIDENCE
+    assert state["live_next_target_evidence"] == REVIEW_EVIDENCE
     assert state["active_lane"] == "master_action_dependency_frontier"
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
     assert [item["workstream_id"] for item in active] == ["master_action_dependency_frontier"]
     workstream = active[0]
-    assert workstream["authorization_evidence"] == AUDIT_EVIDENCE
-    assert workstream["consumed_target"] == AUDIT_TARGET
-    assert workstream["latest_surface"] == "master_action_citation_language_audit_v0"
+    assert workstream["authorization_evidence"] == REVIEW_EVIDENCE
+    assert workstream["consumed_target"] == REVIEW_TARGET
+    assert workstream["prior_consumed_target"] == AUDIT_TARGET
+    assert workstream["latest_surface"] == "master_action_dependency_graph_review_v0"
     assert workstream["citation_usage_status"] == "completed"
     assert workstream["citation_language_audit_status"] == "completed"
+    assert workstream["dependency_graph_review_status"] == "completed"
     assert workstream["boundary_count"] == 10
     assert workstream["dependency_classes_changed"] == "no"
     assert workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert workstream["same_lane_continuation"] == "post_audit_dependency_graph_review_only"
+    assert workstream["same_lane_continuation"] == "retained_blocker_prioritization_review_only"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
     assert (
@@ -161,6 +174,10 @@ def test_loop_registry_tracks_citation_usage_as_current_master_action_lane() -> 
     assert (
         "master_action_retained_assumption_citation_usage",
         "master_action_citation_language_audit",
+    ) in edges
+    assert (
+        "master_action_citation_language_audit",
+        "master_action_dependency_graph_review",
     ) in edges
 
 
@@ -176,6 +193,7 @@ def test_public_surfaces_expose_usage_and_manifest_remains_unchanged() -> None:
     for path in [STATE_PATH, STRICT_MAP_PATH, SEAM_REGISTRY_PATH, SEAM_INVENTORY_PATH]:
         assert "MasterActionRetainedAssumptionCitationUsage.lean" in _read(path)
         assert "MasterActionCitationLanguageAudit.lean" in _read(path)
+        assert "MasterActionDependencyGraphReview.lean" in _read(path)
 
     inventory_text = _read(MATH_PHYSICS_INVENTORY_PATH)
     assert "INV-MATH-MASTER-ACTION-RETAINED-ASSUMPTION-CITATION-USAGE-v0" in inventory_text

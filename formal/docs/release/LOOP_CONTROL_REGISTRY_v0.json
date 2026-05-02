@@ -87,9 +87,9 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "audit_master_action_citation_language_against_retained_boundaries",
-    "live_next_target": "review_master_action_dependency_graph_after_citation_language_audit",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionCitationLanguageAudit.lean",
+    "previous_live_next_target": "review_master_action_dependency_graph_after_citation_language_audit",
+    "live_next_target": "prioritize_retained_blockers_after_master_action_dependency_graph_review",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionDependencyGraphReview.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
@@ -507,7 +507,8 @@
     "em_qft_post_budget_cross_pillar_review",
     "cite_only_bounded_retained_assumptions",
     "audit_master_action_citation_language_against_retained_boundaries",
-    "review_master_action_dependency_graph_after_citation_language_audit"
+    "review_master_action_dependency_graph_after_citation_language_audit",
+    "prioritize_retained_blockers_after_master_action_dependency_graph_review"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -642,6 +643,12 @@
       "to": "master_action_citation_language_audit",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionCitationLanguageAudit.lean"
+    },
+    {
+      "from": "master_action_citation_language_audit",
+      "to": "master_action_dependency_graph_review",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionDependencyGraphReview.lean"
     }
   ],
   "cycle_waivers": [],
@@ -815,20 +822,25 @@
         "dependency_graph_change",
         "stronger_evidence_object"
       ],
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionCitationLanguageAudit.lean",
-      "consumed_target": "audit_master_action_citation_language_against_retained_boundaries",
-      "prior_consumed_target": "cite_only_bounded_retained_assumptions",
-      "prior_surface": "master_action_retained_assumption_citation_usage_v0",
-      "latest_surface": "master_action_citation_language_audit_v0",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/MasterActionDependencyGraphReview.lean",
+      "consumed_target": "review_master_action_dependency_graph_after_citation_language_audit",
+      "prior_consumed_target": "audit_master_action_citation_language_against_retained_boundaries",
+      "prior_surface": "master_action_citation_language_audit_v0",
+      "latest_surface": "master_action_dependency_graph_review_v0",
       "citation_usage_status": "completed",
       "citation_usage_scope": "retained_assumptions_only_under_allowed_scope_and_forbidden_promotion_boundaries",
       "citation_language_audit_status": "completed",
       "citation_language_scope": "no_closure_no_phase2_no_seam_completion_no_empirical_validation_no_proof_complete_beyond_retained_no_master_action_promotion",
+      "dependency_graph_review_status": "completed",
+      "dependency_graph_changed": "no",
+      "dependency_class_reclassification": "none",
+      "lane_unblocked": "no",
+      "promotion_authorized": "no",
       "forbidden_language_class_count": 7,
       "boundary_count": 10,
       "dependency_classes_changed": "no",
-      "authorized_next_strict_target": "review_master_action_dependency_graph_after_citation_language_audit",
-      "same_lane_continuation": "post_audit_dependency_graph_review_only",
+      "authorized_next_strict_target": "prioritize_retained_blockers_after_master_action_dependency_graph_review",
+      "same_lane_continuation": "retained_blocker_prioritization_review_only",
       "non_promotion_boundary": "no_phase2_no_master_action_promotion_no_seam_closure_no_empirical_claim_no_governance_manifest_enrollment"
     }
   ],
