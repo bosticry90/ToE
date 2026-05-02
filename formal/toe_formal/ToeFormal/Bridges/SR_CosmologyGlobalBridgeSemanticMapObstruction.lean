@@ -396,11 +396,11 @@ theorem sr_cosmo_global_bridge_fresh_delta_kind_v0 :
       |>.fresh_delta_kind) = "counterexample" := by
   rfl
 
-/-- The SR row now points to the post-budget review target. -/
-theorem sr_cosmo_global_bridge_post_budget_review_is_frontier_target_v0 :
-    Option.map (fun entry => entry.next_strict_slice)
-      ((crossPillarClosureFrontierV0.drop 3).head?) =
-      some srCosmologyPostBudgetCrossPillarReviewTargetId := by
+/-- The obstruction slice itself points to the post-budget review target. -/
+theorem sr_cosmo_global_bridge_status_selects_post_budget_review_v0 :
+    (srCosmologyGlobalBridgeSemanticMapObstructionStatusReadoutV0
+      |>.next_strict_action) =
+      srCosmologyPostBudgetCrossPillarReviewTargetId := by
   rfl
 
 end

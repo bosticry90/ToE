@@ -102,7 +102,7 @@
       "current_blocker_ids": [
         "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED"
       ],
-      "next_action": "sr_cosmo_post_budget_cross_pillar_review",
+      "next_action": "derive_or_refute_evolution_map_to_transport_hypotheses",
       "validation_command": "cd formal/toe_formal; lake build ToeFormal"
     },
     {
@@ -462,6 +462,7 @@
     "transport_local_sr_covariance_through_cosmo_regime",
     "derive_or_refute_global_sr_cosmo_bridge_from_transport_package",
     "sr_cosmo_post_budget_cross_pillar_review",
+    "qm_evolution_transport_hypotheses_slice_v0",
     "state_continuum_limit_and_source_map_obligations",
     "tie_background_regime_to_sr_covariance_residual",
     "derive_qft_stress_energy_expectation_source_semantics",
@@ -541,6 +542,12 @@
       "to": "sr_cosmo_global_bridge_semantic_map",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Bridges/SR_CosmologyGlobalBridgeSemanticMapObstruction.lean"
+    },
+    {
+      "from": "sr_cosmo_global_bridge_semantic_map",
+      "to": "qm_evolution_contract",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/SRCosmologyPostBudgetCrossPillarReview.lean"
     }
   ],
   "cycle_waivers": [],
@@ -613,9 +620,30 @@
       "last_fresh_delta_evidence": "formal/toe_formal/ToeFormal/Bridges/SR_CosmologyGlobalBridgeSemanticMapObstruction.lean",
       "latest_surface": "SR_COSMOLOGY_GLOBAL_BRIDGE_SEMANTIC_MAP_OBSTRUCTION_v0",
       "same_lane_continuation": "not_authorized",
-      "post_budget_review_status": "pending",
-      "next_strict_target": "sr_cosmo_post_budget_cross_pillar_review",
-      "next_action_after_budget_exhaustion": "sr_cosmo_post_budget_cross_pillar_review"
+      "post_budget_review_status": "completed",
+      "post_budget_review_evidence": "formal/toe_formal/ToeFormal/Derivation/SRCosmologyPostBudgetCrossPillarReview.lean",
+      "post_budget_review_decision": "rotate_to_qm_evolution_transport_hypotheses",
+      "semantic_map_slice_continuation": "not_authorized",
+      "master_dependency_class_change": "not_authorized",
+      "next_strict_target": "derive_or_refute_evolution_map_to_transport_hypotheses",
+      "next_action_after_budget_exhaustion": "rotate_to_qm_evolution_transport_hypotheses"
+    },
+    {
+      "workstream_id": "qm_evolution_contract",
+      "status": "authorized_reopen",
+      "retained_blocker": "qm_evolution_contract_to_schrodinger_unitary_recovery_retained",
+      "consecutive_slices_after_retention": 0,
+      "allowed_reopen_conditions": [
+        "authorized_reopen_after_cross_pillar_review",
+        "new_theorem",
+        "counterexample",
+        "stronger_evidence_object"
+      ],
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/SRCosmologyPostBudgetCrossPillarReview.lean",
+      "authorized_next_slice": "qm_evolution_transport_hypotheses_slice_v0",
+      "authorized_next_strict_target": "derive_or_refute_evolution_map_to_transport_hypotheses",
+      "same_lane_continuation": "authorized_until_attempt_budget",
+      "non_promotion_boundary": "no_qm_seam_closure_no_qm_stat_seam_closure_no_phase2_no_master_action_promotion_no_empirical_claim"
     }
   ],
   "promotion_escrow": {

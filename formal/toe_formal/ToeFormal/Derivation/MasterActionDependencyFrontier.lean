@@ -69,7 +69,7 @@ def masterActionCitationBoundariesV0 :
         "PHASE1-BLOCKER-SR-COSMO-GLOBAL-BRIDGE-SEMANTIC-MAP-RETAINED"
       dependency_kind := .required_for_coherence
       allowed_citation_scope :=
-        "bounded_sr_cosmo_transport_zero_residual_package_and_global_semantic_map_obstruction"
+        "bounded_sr_cosmo_transport_zero_residual_package_global_semantic_map_obstruction_and_post_budget_review"
       forbidden_promotion_scope :=
         "no_global_sr_cosmo_bridge_without_additional_global_alignment_semantic_map"
       status := .retained }

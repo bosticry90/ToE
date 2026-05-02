@@ -40,6 +40,7 @@ Lean aggregate status:
 - `STRICT_PHYSICS_QFTGR_RESIDUAL_ONLY_OBSTRUCTION_INCREMENT_20260501_v0: ZERO_RESIDUAL_ONLY_EVIDENCE_DOES_NOT_CLOSE_FULL_SOURCE_MAP_SEMANTICS_COUNTEREXAMPLE_QFT_GR_ATTEMPT_BUDGET_REACHED_PAUSED`
 - `STRICT_PHYSICS_QFTGR_POST_BUDGET_REVIEW_INCREMENT_20260502_v0: ATTEMPT_BUDGET_REACHED_QFT_GR_PAUSED_SR_COSMO_REGIME_TRANSPORT_SELECTED_NO_QFT_GR_SAME_LANE_CONTINUATION_NO_SCALAR_OR_QMSTAT_REOPEN_NO_MASTER_ACTION_PROMOTION`
 - `STRICT_PHYSICS_SR_COSMO_REGIME_TRANSPORT_INCREMENT_20260502_v0: SUPPLIED_LOCAL_SR_COVARIANCE_AND_COSMOLOGY_REGIME_ALIGNMENT_CONSTRUCT_ZERO_INTERVAL_REGIME_SCALE_AND_UNIFIED_RESIDUAL_PACKAGE_NEW_THEOREM_RETAINED`
+- `STRICT_PHYSICS_SR_COSMO_POST_BUDGET_REVIEW_INCREMENT_20260502_v0: ATTEMPT_BUDGET_REACHED_SR_COSMO_PAUSED_QM_EVOLUTION_TRANSPORT_HYPOTHESES_SELECTED_NO_SR_COSMO_SAME_LANE_CONTINUATION_NO_SCALAR_QMSTAT_QFTGR_REOPEN_NO_MASTER_ACTION_PROMOTION`
 - `STRICT_PHYSICS_SCALAR_A1A26_INCREMENT_20260501_v0: ENDPOINT_REPRESENTATION_SEMANTICS_OBLIGATION_INTERFACE_PLUS_A1A25_PACKAGE_CONSTRUCTOR_PLUS_RETAINED_ENDPOINT_SOURCE_BLOCKER`
 - `STRICT_PHYSICS_SCALAR_A1A27_INCREMENT_20260501_v0: ENDPOINT_CONVERGENCE_CONSISTENCY_OBLIGATION_INTERFACE_PLUS_A1A25_PACKAGE_CONSTRUCTOR_PLUS_CONDITIONAL_ENDPOINT_FIELD_BRIDGE`
 - `STRICT_PHYSICS_SCALAR_A1A28_INCREMENT_20260501_v0: ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_OBLIGATION_INTERFACE_PLUS_A1A25_PACKAGE_CONSTRUCTOR_PLUS_PARENT_ORIENTATION_TRACE_FIELD_BRIDGES`
@@ -62,7 +63,7 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict architecture target:
-- `SCALAR_QFT_NEXT_STRICT_TARGET_v0: SR_COSMO_POST_BUDGET_CROSS_PILLAR_REVIEW`
+- `SCALAR_QFT_NEXT_STRICT_TARGET_v0: DERIVE_OR_REFUTE_EVOLUTION_MAP_TO_TRANSPORT_HYPOTHESES`
 - `SCALAR_QFT_HANDOFF_STATUS_v0: SCALAR_QFT_ADVANCED_RETAINED_HANDOFF_READY`
 - `A2A15A1A25_ENDPOINT_SOURCE_OBLIGATION_SPLIT_STATUS_v0: REPRESENTATION_SEMANTICS_CONVERGENCE_CONSISTENCY_ORIENTATION_TRACE_PACKAGES_DEFINED_SPLIT_PACKAGES_CONSTRUCT_A1A24_SOURCE_ENDPOINT_DERIVATION_RETAINED`
 - `A2A15A1A25_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-003A2A15A1A25_ENDPOINT_SOURCE_OBLIGATIONS_RETAINED`
@@ -115,7 +116,9 @@ Next strict architecture target:
 - `SR_COSMOLOGY_GLOBAL_BRIDGE_SEMANTIC_MAP_OBSTRUCTION_STATUS_v0: ZERO_RESIDUAL_TRANSPORT_PACKAGE_DOES_NOT_FORCE_GLOBAL_BRIDGE_SEMANTICS_ADDITIONAL_GLOBAL_ALIGNMENT_SEMANTIC_MAP_REQUIRED`
 - `SR_COSMOLOGY_GLOBAL_BRIDGE_SEMANTIC_MAP_OBSTRUCTION_FRESH_DELTA_KIND_v0: COUNTEREXAMPLE`
 - `SR_COSMOLOGY_GLOBAL_BRIDGE_SEMANTIC_MAP_OBSTRUCTION_FRESH_DELTA_ID_v0: SR_COSMOLOGY_GLOBAL_BRIDGE_SEMANTIC_MAP_COUNTEREXAMPLE_FRESH_DELTA_v0`
-- `SR_COSMOLOGY_REGIME_TRANSPORT_ATTEMPT_BUDGET_STATUS_v0: TWO_RETAINED_SLICES_RECORDED_SR_COSMO_PAUSED_PENDING_POST_BUDGET_REVIEW`
+- `SR_COSMOLOGY_REGIME_TRANSPORT_ATTEMPT_BUDGET_STATUS_v0: TWO_RETAINED_SLICES_RECORDED_POST_BUDGET_REVIEW_COMPLETED_SR_COSMO_PAUSED`
+- `SR_COSMOLOGY_POST_BUDGET_CROSS_PILLAR_REVIEW_STATUS_v0: COMPLETED_SELECTED_QM_EVOLUTION_TRANSPORT_HYPOTHESES_NO_SR_COSMO_SAME_LANE_CONTINUATION_NO_SCALAR_REOPEN_NO_QMSTAT_REOPEN_NO_QFTGR_REOPEN_NO_MASTER_ACTION_PROMOTION`
+- `SR_COSMOLOGY_POST_BUDGET_SELECTED_NEXT_STRICT_SLICE_v0: QM_EVOLUTION_TRANSPORT_HYPOTHESES`
 - `SR_COSMOLOGY_REGIME_TRANSPORT_RETAINED_BLOCKER_v0: PHASE1-BLOCKER-SR-COSMO-GLOBAL-BRIDGE-SEMANTIC-MAP-RETAINED`
 - `SR_COSMOLOGY_REGIME_TRANSPORT_BOUNDARY_v0: NO_GLOBAL_SR_COSMO_BRIDGE_CLOSURE_NO_COSMOLOGY_PILLAR_CLOSURE_NO_SR_PILLAR_PROMOTION_NO_PHASE2_NO_MASTER_ACTION_PROMOTION_NO_EMPIRICAL_CLAIM`
 - `QFT_GR_STRESS_ENERGY_SOURCE_MAP_PRIOR_BLOCKER_v0: qft_gr_stress_energy_expectation_source_map_retained`
@@ -808,7 +811,8 @@ What is proved:
 - `QFT_GR_StressEnergySourceMapResidualOnlyObstruction.lean` proves a residual-only counterexample: zero expectation/source and weak-curvature/source residual evidence does not close full source-map semantics when the required semantic fields are false.
 - Full QFT-GR source-map semantics remain retained as `PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED`; this surface makes no QFT-GR seam closure, semiclassical gravity, Einstein-equation derivation, master-action promotion, or empirical claim. QFT-GR has reached two retained slices; `QFTGRPostBudgetCrossPillarReview.lean` completes the required review, keeps same-lane QFT-GR continuation blocked, and selected SR covariance through cosmology regime transport.
 - `SR_CosmologyRegimeTransport.lean` now defines the bounded SR/COSMO regime-transport package: supplied local SR covariance, supplied cosmology background/regime evidence, supplied local/regime alignment, transported interval residual, regime-scale residual, and unified residual. It proves that supplied alignment constructs interval/regime-scale/unified zero-residual evidence, recorded as `new_theorem` fresh delta `SR_COSMOLOGY_REGIME_TRANSPORT_ZERO_RESIDUAL_FRESH_DELTA_v0`, while global SR/COSMO bridge closure remains retained.
-- `SR_CosmologyGlobalBridgeSemanticMapObstruction.lean` defines the stricter global SR/COSMO bridge interface and proves a counterexample: zero-residual transport package evidence alone does not close global bridge semantics when the required global semantic-map fields are false. The retained blocker is `PHASE1-BLOCKER-SR-COSMO-GLOBAL-BRIDGE-SEMANTIC-MAP-RETAINED`, SR/COSMO has reached its two-slice attempt budget, and same-lane continuation pauses pending post-budget review.
+- `SR_CosmologyGlobalBridgeSemanticMapObstruction.lean` defines the stricter global SR/COSMO bridge interface and proves a counterexample: zero-residual transport package evidence alone does not close global bridge semantics when the required global semantic-map fields are false. The retained blocker is `PHASE1-BLOCKER-SR-COSMO-GLOBAL-BRIDGE-SEMANTIC-MAP-RETAINED`, and SR/COSMO has reached its two-slice attempt budget.
+- `SRCosmologyPostBudgetCrossPillarReview.lean` completes the required review: same-lane SR/COSMO semantic-map continuation is not authorized, scalar/QM-STAT/QFT-GR reopening is not authorized, the master-action dependency class remains unchanged, and QM evolution transport-hypotheses work is selected as the next bounded slice.
 - `ContinuumSpatialGraphLaplacianEndpointRepresentationSemanticsObligation.lean` now refines the A1A25 representation/semantics endpoint subpackage into supplied endpoint-flux representation, supplied boundary-trace/normal-derivative semantics, and a supplied bridge into the parent trace/normal field.
 - Those supplied A1A26 pieces construct the A1A25 representation/semantics package, but the representation theorem, trace/normal semantics derivation, convergence/consistency package, orientation/trace package, full endpoint source, final A2A15A1 witness, and Phase 2 remain retained under `PHASE1-BLOCKER-003A2A15A1A26_ENDPOINT_REPRESENTATION_SEMANTICS_RETAINED`.
 - `ContinuumSpatialGraphLaplacianEndpointConvergenceConsistencyObligation.lean` now refines the A1A25 convergence/consistency endpoint subpackage into supplied boundary reconstruction compatibility, supplied flux-term convergence mode, supplied finite endpoint-flux consistency, and a supplied bridge into the parent endpoint-flux field.
@@ -1446,7 +1450,7 @@ A result does not count as derivational if it only supplies:
 | Row | Closing theorem target | Retained assumptions to discharge or surface | Current anchors | Missing lemmas | Fallback |
 | --- | --- | --- | --- | --- | --- |
 | `ROW-SEAM-QM-STAT-001` | Prove a theorem-transport result from QM evolution data to the required statistical/entropy structure, or prove the transport cannot close under current assumptions. | Shared state space, time evolution compatibility, probability measure, moment/entropy functional, coarse-graining map. | `formal/python/research/harder_qm_stat_target.py`; `formal/output/research/research_qm_stat_transport_moment_stack_probe_20260419_v0.json`; `formal/output/sandbox/qm_stat_transport_witness_sandbox_artifact_20260419_v0.json` | Unified theorem transport residual package; entropy balance closure; moment-stack preservation theorem. | If authorization remains blocked, switch to COSMO-SR. |
-| `ROW-SEAM-COSMO-SR-001` | Prove compatibility between local SR covariance and the cosmological background/regime map, including the approximation residual. | Local-to-global chart map, scale-factor regime, metric compatibility, bounded residual, global semantic map. | `formal/toe_formal/ToeFormal/Bridges/SR_CosmologyRegimeTransport.lean`; `formal/toe_formal/ToeFormal/Bridges/SR_CosmologyGlobalBridgeSemanticMapObstruction.lean`; COSMO-SR class-B seam pilot artifacts. | Supplied local SR covariance and cosmology-regime alignment construct interval/regime-scale/unified zero residuals, but residual package evidence alone does not close global bridge semantics without the semantic map. | Pause for SR/COSMO post-budget review; no same-lane continuation before review. |
+| `ROW-SEAM-COSMO-SR-001` | Prove compatibility between local SR covariance and the cosmological background/regime map, including the approximation residual. | Local-to-global chart map, scale-factor regime, metric compatibility, bounded residual, global semantic map. | `formal/toe_formal/ToeFormal/Bridges/SR_CosmologyRegimeTransport.lean`; `formal/toe_formal/ToeFormal/Bridges/SR_CosmologyGlobalBridgeSemanticMapObstruction.lean`; `formal/toe_formal/ToeFormal/Derivation/SRCosmologyPostBudgetCrossPillarReview.lean`; COSMO-SR class-B seam pilot artifacts. | Supplied local SR covariance and cosmology-regime alignment construct interval/regime-scale/unified zero residuals, but residual package evidence alone does not close global bridge semantics without the semantic map. The post-budget review keeps same-lane SR/COSMO paused and selects QM evolution transport-hypotheses work. | Remain paused unless explicit fresh-delta reopen is authorized. |
 | `ROW-SEAM-QFT-GR-001` | Prove covariant QFT-to-GR stress-energy coupling under a bounded regime or record the exact obstruction. | Stress-energy operator/domain, expectation/state functional, renormalized expectation semantics, weak-curvature source identification, covariance and conservation assumptions. | `formal/toe_formal/ToeFormal/Bridges/QFT_GR_StressEnergyExpectationSourceMap.lean`; `formal/toe_formal/ToeFormal/Bridges/QFT_GR_StressEnergySourceMapResidualOnlyObstruction.lean`; `formal/toe_formal/ToeFormal/Derivation/QFTGRPostBudgetCrossPillarReview.lean`; QFT-GR seam reactivation objective artifacts. | Residual-only zero evidence is refuted as sufficient for full source-map semantics; post-budget review keeps same-lane QFT-GR blocked and has rotated to SR/COSMO transport. | Remain on hold unless explicit fresh-delta reopen is authorized. |
 
 ## Cross-Pillar Frontier Sweep
@@ -1467,19 +1471,20 @@ Master-action dependency frontier:
 - Output is citation-boundary only: the master action may cite retained assumptions under their listed scope boundaries, but this map does not promote the master action.
 - QM-STAT citation scope now includes the component residual evidence under supplied finite alignment; the dependency class remains `required_for_coherence` and does not promote the master action.
 - QFT-GR citation scope now includes the zero-residual source-map package plus residual-only semantic obstruction; the dependency class remains `required_for_coherence` and does not promote the master action.
+- SR/COSMO citation scope now includes the zero-residual regime-transport package plus global semantic-map obstruction and completed post-budget review; the dependency class remains `required_for_coherence` and does not promote the master action.
 
 Post-sweep theorem queue:
 - Lean surface: `formal/toe_formal/ToeFormal/Derivation/PostSweepTheoremQueue.lean`
 - Post-budget review surface: `formal/toe_formal/ToeFormal/Derivation/QMSTATPostBudgetCrossPillarReview.lean`
-- Next three slices from the post-sweep queue: QM-STAT unified theorem transport residual package; QFT-GR stress-energy expectation source map; scalar paused after A1A31. The QM-STAT route landed the component residual evidence fresh delta and selected QFT-GR source-map work; QFT-GR landed the residual-only semantic obstruction counterexample, reached the attempt-budget boundary, completed review, and selected SR covariance through cosmology regime transport; SR/COSMO now has a bounded zero-residual package plus semantic-map obstruction and is paused at attempt budget.
+- Next three slices from the post-sweep queue: QM-STAT unified theorem transport residual package; QFT-GR stress-energy expectation source map; scalar paused after A1A31. The QM-STAT route landed the component residual evidence fresh delta and selected QFT-GR source-map work; QFT-GR landed the residual-only semantic obstruction counterexample, reached the attempt-budget boundary, completed review, and selected SR covariance through cosmology regime transport; SR/COSMO has a bounded zero-residual package plus semantic-map obstruction, reached the attempt-budget boundary, completed review, and selected QM evolution map-to-transport-hypotheses work.
 - Each queued slice has exactly one retained blocker and one validation target.
 
 ## Active Priority Order
 
-1. Execute the SR/COSMO post-budget cross-pillar review.
-   - Current retained blocker: `PHASE1-BLOCKER-SR-COSMO-GLOBAL-BRIDGE-SEMANTIC-MAP-RETAINED`.
-   - Validation target: focused `ToeFormal.Bridges.SR_CosmologyGlobalBridgeSemanticMapObstruction` and loop-control gates.
-   - Attempt-budget status: two retained SR/COSMO slices recorded; same-lane continuation is paused pending review.
+1. Derive or refute the QM evolution map to transport hypotheses.
+   - Current retained blocker: `qm_evolution_contract_to_schrodinger_unitary_recovery_retained`.
+   - Validation target: focused `ToeFormal.QM.EvolutionContract`, `ToeFormal.Derivation.SRCosmologyPostBudgetCrossPillarReview`, and loop-control gates.
+   - Authorization source: SR/COSMO post-budget review completed; scalar, QM-STAT, QFT-GR, and same-lane SR/COSMO remain paused.
 2. QM-STAT residual package is advanced to component residual evidence but paused after review.
    - Current retained blocker: `PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED`.
    - Validation target: focused `ToeFormal.Derivation.QMSTATPostBudgetCrossPillarReview` and `ToeFormal.Bridges.QM_STAT_TransportResidualPackage` builds plus the existing QM-STAT/authority parity gates.

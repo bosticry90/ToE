@@ -121,13 +121,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .srCovariance
       current_strongest_surface :=
-        "SR covariance object plus SR/COSMO transport package and global semantic-map obstruction"
+        "SR covariance object plus SR/COSMO transport package, global semantic-map obstruction, and post-budget review"
       retained_blocker :=
         "PHASE1-BLOCKER-SR-COSMO-GLOBAL-BRIDGE-SEMANTIC-MAP-RETAINED"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "sr_cosmo_post_budget_cross_pillar_review"
+        "derive_or_refute_evolution_map_to_transport_hypotheses"
       status := .retained }
   , { row := .gr01
       current_strongest_surface :=
@@ -140,13 +140,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .cosmology
       current_strongest_surface :=
-        "bounded cosmology background/regime surface plus SR/COSMO global semantic-map obstruction"
+        "bounded cosmology background/regime surface plus SR/COSMO global semantic-map obstruction and post-budget review"
       retained_blocker :=
         "cosmo_background_reduction_and_expansion_observable_retained"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "sr_cosmo_post_budget_cross_pillar_review"
+        "derive_or_refute_evolution_map_to_transport_hypotheses"
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
