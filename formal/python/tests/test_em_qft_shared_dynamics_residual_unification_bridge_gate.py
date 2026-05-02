@@ -105,7 +105,9 @@ AUDIT_TARGET = "audit_master_action_citation_language_against_retained_boundarie
 REVIEW_TARGET = "review_master_action_dependency_graph_after_citation_language_audit"
 PRIORITIZATION_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 PROTOCOL_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
-LIVE_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
+READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
+LIVE_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
+READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean"
 SURFACE_ID = "EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_BRIDGE_v0"
 FRESH_DELTA_ID = (
     "EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_BRIDGE_COUNTEREXAMPLE_FRESH_DELTA_v0"
@@ -172,7 +174,7 @@ def test_frontier_and_aggregate_advance_after_post_budget_review() -> None:
     assert "import ToeFormal.Derivation.MasterActionRetainedAssumptionCitationUsage" in aggregate_text
     assert "import ToeFormal.Derivation.MasterActionCitationLanguageAudit" in aggregate_text
     assert "import ToeFormal.Derivation.MasterActionDependencyGraphReview" in aggregate_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{PROTOCOL_TARGET}"' in frontier_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{READINESS_REVIEW_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
     assert "PHASE1-BLOCKER-EMQFT-INTERFACE-ALIGNMENT-SEMANTIC-BRIDGE-RETAINED" in frontier_text
@@ -182,11 +184,9 @@ def test_registry_tracks_focused_em_qft_bridge_slice() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == PROTOCOL_TARGET
+    assert state["previous_live_next_target"] == READINESS_REVIEW_TARGET
     assert state["live_next_target"] == LIVE_TARGET
-    assert state["live_next_target_evidence"] == str(
-        PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
+    assert state["live_next_target_evidence"] == READINESS_EVIDENCE
 
     assert RETAINED_BLOCKER in payload["retained_blocker_coverage"]
     assert CONSUMED_TARGET in payload["next_strict_target_coverage"]
@@ -198,11 +198,10 @@ def test_registry_tracks_focused_em_qft_bridge_slice() -> None:
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
-    assert [item["workstream_id"] for item in active] == ["master_action_dependency_frontier"]
-    assert active[0]["consumed_target"] == PROTOCOL_TARGET
-    assert active[0]["prior_consumed_target"] == PRIORITIZATION_TARGET
+    assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
+    assert active[0]["consumed_target"] == READINESS_REVIEW_TARGET
     assert active[0]["authorized_next_strict_target"] == LIVE_TARGET
-    assert active[0]["latest_surface"] == "qm_stat_transport_semantics_retained_blocker_protocol_row_v0"
+    assert active[0]["latest_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
 
     workstream = next(
         item for item in payload["workstreams"]
@@ -210,7 +209,6 @@ def test_registry_tracks_focused_em_qft_bridge_slice() -> None:
     )
     assert workstream["status"] == "paused"
     assert workstream["retained_blocker"] == "PHASE1-BLOCKER-EMQFT-INTERFACE-ALIGNMENT-SEMANTIC-BRIDGE-RETAINED"
-    assert workstream["prior_consumed_target"] == CONSUMED_TARGET
     assert workstream["consumed_target"] == INTERFACE_TARGET
     assert workstream["authorized_next_strict_target"] == CITATION_USAGE_TARGET
     assert workstream["latest_surface"] == "EM_QFT_INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_v0"

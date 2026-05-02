@@ -33,6 +33,14 @@ RESIDUAL_PACKAGE_PATH = (
     / "QM_STAT_TransportResidualPackage.lean"
 )
 AGGREGATE_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
+READINESS_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "QMSTATTransportSemanticsProtocolRowReadinessReview.lean"
+)
 FRONTIER_PATH = (
     REPO_ROOT
     / "formal"
@@ -62,12 +70,14 @@ MATH_PHYSICS_INVENTORY_PATH = (
 )
 
 CONSUMED_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
-LIVE_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
+READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
+LIVE_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
 SURFACE_ID = "qm_stat_transport_semantics_retained_blocker_protocol_row_v0"
 RETAINED_BLOCKER = "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED"
 AUTHORITY_ROW = "ROW-SEAM-QM-STAT-001"
 SEAM_ID = "SEAM-QM-STAT"
 PROTOCOL_EVIDENCE = str(PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
+READINESS_EVIDENCE = str(READINESS_REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 
 
 def _read(path: Path) -> str:
@@ -92,7 +102,7 @@ def test_protocol_row_records_qm_stat_blocker_and_obligations() -> None:
     for token in {
         SURFACE_ID,
         CONSUMED_TARGET,
-        LIVE_TARGET,
+        READINESS_REVIEW_TARGET,
         AUTHORITY_ROW,
         SEAM_ID,
         "phase1BlockerQMSTATTransportResidualPackageRetainedId",
@@ -130,7 +140,7 @@ def test_protocol_row_preserves_fail_closed_boundaries() -> None:
         assert theorem in text
 
 
-def test_frontier_and_aggregate_rotate_to_readiness_review() -> None:
+def test_frontier_and_aggregate_rotate_past_readiness_review() -> None:
     aggregate_text = _read(AGGREGATE_PATH)
     frontier_text = _read(FRONTIER_PATH)
     prioritization_text = _read(PRIORITIZATION_REVIEW_PATH)
@@ -139,10 +149,11 @@ def test_frontier_and_aggregate_rotate_to_readiness_review() -> None:
         "import ToeFormal.Derivation.QMSTATTransportSemanticsRetainedBlockerProtocolRow"
         in aggregate_text
     )
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{CONSUMED_TARGET}"' in frontier_text
+    assert "import ToeFormal.Derivation.QMSTATTransportSemanticsProtocolRowReadinessReview" in aggregate_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{READINESS_REVIEW_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
-    assert f'next_strict_slice := "review_qm_stat_transport_semantics_protocol_row_readiness"' in frontier_text
-    assert "QM-STAT transport semantics retained-blocker protocol row" in frontier_text
+    assert f'next_strict_slice := "{LIVE_TARGET}"' in frontier_text
+    assert "QM-STAT transport semantics protocol-row readiness review" in frontier_text
     assert f'  "{CONSUMED_TARGET}"' in prioritization_text
 
 
@@ -150,51 +161,47 @@ def test_loop_registry_tracks_protocol_row_as_current_surface() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
+    assert state["previous_live_next_target"] == READINESS_REVIEW_TARGET
     assert state["live_next_target"] == LIVE_TARGET
-    assert state["live_next_target_evidence"] == PROTOCOL_EVIDENCE
-    assert state["active_lane"] == "master_action_dependency_frontier"
+    assert state["live_next_target_evidence"] == READINESS_EVIDENCE
+    assert state["active_lane"] == "qm_stat_transport_residual"
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
-    assert [item["workstream_id"] for item in active] == ["master_action_dependency_frontier"]
+    assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
     workstream = active[0]
-    assert workstream["authorization_evidence"] == PROTOCOL_EVIDENCE
-    assert workstream["consumed_target"] == CONSUMED_TARGET
-    assert workstream["prior_consumed_target"] == (
-        "prioritize_retained_blockers_after_master_action_dependency_graph_review"
-    )
-    assert workstream["prior_surface"] == "master_action_retained_blocker_prioritization_review_v0"
-    assert workstream["latest_surface"] == SURFACE_ID
-    assert workstream["qm_stat_transport_semantics_protocol_row_status"] == "prepared"
-    assert workstream["protocol_row_authority_row"] == AUTHORITY_ROW
-    assert workstream["protocol_row_seam"] == SEAM_ID
-    assert workstream["protocol_row_retained_blocker"] == RETAINED_BLOCKER
-    assert workstream["protocol_row_next_review"] == LIVE_TARGET
-    assert workstream["next_action_scope"] == "protocol_readiness_review_only_no_theorem_work"
-    assert workstream["theorem_work_authorized"] == "no"
-    assert workstream["lane_unblocked"] == "no"
-    assert workstream["dependency_classes_changed"] == "no"
-    assert workstream["promotion_authorized"] == "no"
+    assert workstream["authorization_evidence"] == READINESS_EVIDENCE
+    assert workstream["consumed_target"] == READINESS_REVIEW_TARGET
+    assert workstream["prior_surface"] == SURFACE_ID
+    assert workstream["latest_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
+    assert workstream["readiness_review_status"] == "completed"
+    assert workstream["bounded_source_probability_slice_authorized"] == "yes"
     assert workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert workstream["same_lane_continuation"] == "protocol_readiness_review_only"
+    assert workstream["same_lane_continuation"] == "authorized_bounded_source_probability_extraction_slice"
 
     qm_stat = _workstream(payload, "qm_stat_transport_residual")
-    assert qm_stat["status"] == "paused"
-    assert qm_stat["same_lane_continuation"] == "not_authorized"
+    assert qm_stat["status"] == "active"
     assert qm_stat["protocol_row_status"] == "prepared_from_master_action_prioritization"
     assert qm_stat["protocol_row_evidence"] == PROTOCOL_EVIDENCE
-    assert qm_stat["protocol_row_next_review"] == LIVE_TARGET
-    assert qm_stat["theorem_work_authorized"] == "no"
-    assert qm_stat["source_probability_extraction_obligation"] == "still_required"
+    assert qm_stat["protocol_row_next_review"] == READINESS_REVIEW_TARGET
+    assert qm_stat["theorem_work_authorized"] == "bounded_source_probability_extraction_only"
+    assert qm_stat["source_probability_extraction_obligation"] == "authorized_next_slice"
     assert qm_stat["target_stat_entropy_semantics_obligation"] == "still_required"
     assert qm_stat["transport_semantic_map_obligation"] == "still_required"
     assert qm_stat["coarse_graining_irreversibility_obligation"] == "still_required"
+    assert qm_stat["target_entropy_semantics_authorized"] == "no"
+    assert qm_stat["transport_map_semantics_authorized"] == "no"
+    assert qm_stat["coarse_graining_irreversibility_authorized"] == "no"
+    assert qm_stat["residual_package_semantic_closure_authorized"] == "no"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
     assert (
         "master_action_retained_blocker_prioritization_review",
         "qm_stat_transport_semantics_retained_blocker_protocol_row",
+    ) in edges
+    assert (
+        "qm_stat_transport_semantics_retained_blocker_protocol_row",
+        "qm_stat_transport_semantics_protocol_row_readiness_review",
     ) in edges
 
 
@@ -203,6 +210,7 @@ def test_public_surfaces_expose_protocol_row_and_manifest_remains_unchanged() ->
         text = _read(path)
         assert LIVE_TARGET in text, f"{path} missing live target"
         assert "QMSTATTransportSemanticsRetainedBlockerProtocolRow.lean" in text
+        assert "QMSTATTransportSemanticsProtocolRowReadinessReview.lean" in text
 
     for path in [STATE_PATH, STRICT_MAP_PATH, SEAM_REGISTRY_PATH, SEAM_INVENTORY_PATH]:
         text = _read(path)

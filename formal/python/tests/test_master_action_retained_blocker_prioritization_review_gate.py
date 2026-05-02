@@ -63,9 +63,11 @@ MATH_PHYSICS_INVENTORY_PATH = (
 
 CONSUMED_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 PROTOCOL_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
-LIVE_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
+READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
+LIVE_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
+READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean"
 SURFACE_ID = "master_action_retained_blocker_prioritization_review_v0"
-PROTOCOL_SURFACE_ID = "qm_stat_transport_semantics_retained_blocker_protocol_row_v0"
+PROTOCOL_SURFACE_ID = "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
 TOP_BLOCKER = "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED"
 REVIEW_EVIDENCE = str(REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 PROTOCOL_EVIDENCE = str(PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
@@ -133,10 +135,10 @@ def test_frontier_and_aggregate_rotate_to_qm_stat_protocol_row_preparation() -> 
         "import ToeFormal.Derivation.QMSTATTransportSemanticsRetainedBlockerProtocolRow"
         in aggregate_text
     )
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{PROTOCOL_TARGET}"' in frontier_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{READINESS_REVIEW_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
-    assert "QM-STAT transport semantics retained-blocker protocol row" in frontier_text
+    assert "QM-STAT transport semantics protocol-row readiness review" in frontier_text
     assert "retainedBlockerPrioritizationReviewTargetId" in dependency_graph_text
 
 
@@ -144,33 +146,22 @@ def test_loop_registry_tracks_prioritization_as_current_surface() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == PROTOCOL_TARGET
+    assert state["previous_live_next_target"] == READINESS_REVIEW_TARGET
     assert state["live_next_target"] == LIVE_TARGET
-    assert state["live_next_target_evidence"] == PROTOCOL_EVIDENCE
-    assert state["active_lane"] == "master_action_dependency_frontier"
+    assert state["live_next_target_evidence"] == READINESS_EVIDENCE
+    assert state["active_lane"] == "qm_stat_transport_residual"
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
     assert PROTOCOL_TARGET in payload["next_strict_target_coverage"]
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
-    assert [item["workstream_id"] for item in active] == ["master_action_dependency_frontier"]
+    assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
     workstream = active[0]
-    assert workstream["authorization_evidence"] == PROTOCOL_EVIDENCE
-    assert workstream["consumed_target"] == PROTOCOL_TARGET
-    assert workstream["prior_consumed_target"] == CONSUMED_TARGET
-    assert workstream["prior_surface"] == SURFACE_ID
+    assert workstream["authorization_evidence"] == READINESS_EVIDENCE
+    assert workstream["consumed_target"] == READINESS_REVIEW_TARGET
+    assert workstream["prior_surface"] == "qm_stat_transport_semantics_retained_blocker_protocol_row_v0"
     assert workstream["latest_surface"] == PROTOCOL_SURFACE_ID
-    assert workstream["retained_blocker_prioritization_status"] == "completed"
-    assert workstream["top_retained_blocker"] == TOP_BLOCKER
-    assert workstream["top_retained_blocker_dependency_class"] == "required_for_coherence"
-    assert workstream["top_retained_blocker_proof_debt_scope"] == "fatal_to_multiple_seams"
-    assert workstream["qm_stat_transport_semantics_protocol_row_status"] == "prepared"
-    assert workstream["next_action_scope"] == "protocol_readiness_review_only_no_theorem_work"
-    assert workstream["theorem_work_authorized"] == "no"
-    assert workstream["lane_unblocked"] == "no"
-    assert workstream["dependency_classes_changed"] == "no"
-    assert workstream["promotion_authorized"] == "no"
     assert workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert workstream["same_lane_continuation"] == "protocol_readiness_review_only"
+    assert workstream["same_lane_continuation"] == "authorized_bounded_source_probability_extraction_slice"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
     assert (

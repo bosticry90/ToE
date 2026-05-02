@@ -191,7 +191,7 @@ row readiness review.
 theorem master_action_dependency_graph_review_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "review_qm_stat_transport_semantics_protocol_row_readiness" := by
+      some "derive_or_refute_qm_stat_source_probability_extraction_semantics" := by
   decide
 
 /-- The review preserves the dependency class ids from the dependency frontier. -/

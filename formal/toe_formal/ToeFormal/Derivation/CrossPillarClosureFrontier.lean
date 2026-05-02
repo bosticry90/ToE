@@ -113,12 +113,12 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qmSTAT
       current_strongest_surface :=
-        "finite-state transport residual package with component residual evidence plus retained-blocker protocol row"
+        "finite-state transport residual package with component residual evidence, retained-blocker protocol row, and readiness review"
       retained_blocker :=
         "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
-      next_strict_slice := "review_qm_stat_transport_semantics_protocol_row_readiness"
+      next_strict_slice := "derive_or_refute_qm_stat_source_probability_extraction_semantics"
       status := .retained }
   , { row := .srCovariance
       current_strongest_surface :=
@@ -178,13 +178,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QM-STAT transport semantics retained-blocker protocol row"
+        "QM-STAT transport semantics protocol-row readiness review"
       retained_blocker :=
         "master_action_dependency_frontier_retained_no_promotion"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_qm_stat_transport_semantics_protocol_row_readiness"
+        "derive_or_refute_qm_stat_source_probability_extraction_semantics"
       status := .retained }
   ]
 
@@ -202,13 +202,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QM-STAT protocol row. -/
+/-- Previous live target consumed by the QM-STAT readiness review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
-
-/-- Current live target after the QM-STAT protocol row. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_qm_stat_transport_semantics_protocol_row_readiness"
+
+/-- Current live target after the QM-STAT readiness review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "derive_or_refute_qm_stat_source_probability_extraction_semantics"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

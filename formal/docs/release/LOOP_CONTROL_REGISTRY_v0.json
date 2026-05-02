@@ -87,20 +87,20 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row",
-    "live_next_target": "review_qm_stat_transport_semantics_protocol_row_readiness",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsRetainedBlockerProtocolRow.lean",
+    "previous_live_next_target": "review_qm_stat_transport_semantics_protocol_row_readiness",
+    "live_next_target": "derive_or_refute_qm_stat_source_probability_extraction_semantics",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
       "scalar_qft_a2a15a1",
-      "qm_stat_transport_residual",
       "qft_gr_source_map",
       "sr_covariance_cosmology_regime_transport",
       "qm_evolution_contract",
-      "em_qft_physics_blocker_extraction"
+      "em_qft_physics_blocker_extraction",
+      "master_action_dependency_frontier"
     ],
-    "active_lane": "master_action_dependency_frontier",
+    "active_lane": "qm_stat_transport_residual",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -510,7 +510,8 @@
     "review_master_action_dependency_graph_after_citation_language_audit",
     "prioritize_retained_blockers_after_master_action_dependency_graph_review",
     "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row",
-    "review_qm_stat_transport_semantics_protocol_row_readiness"
+    "review_qm_stat_transport_semantics_protocol_row_readiness",
+    "derive_or_refute_qm_stat_source_probability_extraction_semantics"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -663,6 +664,18 @@
       "to": "qm_stat_transport_semantics_retained_blocker_protocol_row",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsRetainedBlockerProtocolRow.lean"
+    },
+    {
+      "from": "qm_stat_transport_semantics_retained_blocker_protocol_row",
+      "to": "qm_stat_transport_semantics_protocol_row_readiness_review",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean"
+    },
+    {
+      "from": "qm_stat_transport_semantics_protocol_row_readiness_review",
+      "to": "qm_stat_source_probability_extraction_semantics",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean"
     }
   ],
   "cycle_waivers": [],
@@ -678,7 +691,7 @@
     },
     {
       "workstream_id": "qm_stat_transport_residual",
-      "status": "paused",
+      "status": "active",
       "retained_blocker": "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED",
       "consecutive_slices_after_retention": 2,
       "allowed_reopen_conditions": [
@@ -692,15 +705,29 @@
       "post_budget_review_status": "completed",
       "post_budget_review_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATPostBudgetCrossPillarReview.lean",
       "post_budget_review_decision": "rotate_to_qft_gr_stress_energy_source_map",
-      "same_lane_continuation": "not_authorized",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean",
+      "consumed_target": "review_qm_stat_transport_semantics_protocol_row_readiness",
+      "prior_surface": "qm_stat_transport_semantics_retained_blocker_protocol_row_v0",
+      "latest_surface": "qm_stat_transport_semantics_protocol_row_readiness_review_v0",
+      "authorized_next_strict_target": "derive_or_refute_qm_stat_source_probability_extraction_semantics",
+      "same_lane_continuation": "authorized_bounded_source_probability_extraction_slice",
       "protocol_row_status": "prepared_from_master_action_prioritization",
       "protocol_row_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsRetainedBlockerProtocolRow.lean",
       "protocol_row_next_review": "review_qm_stat_transport_semantics_protocol_row_readiness",
-      "theorem_work_authorized": "no",
-      "source_probability_extraction_obligation": "still_required",
+      "readiness_review_status": "completed",
+      "readiness_review_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean",
+      "bounded_source_probability_slice_authorized": "yes",
+      "theorem_work_authorized": "bounded_source_probability_extraction_only",
+      "source_probability_extraction_obligation": "authorized_next_slice",
       "target_stat_entropy_semantics_obligation": "still_required",
       "transport_semantic_map_obligation": "still_required",
       "coarse_graining_irreversibility_obligation": "still_required",
+      "residual_package_semantic_closure_obligation": "still_required",
+      "target_entropy_semantics_authorized": "no",
+      "transport_map_semantics_authorized": "no",
+      "coarse_graining_irreversibility_authorized": "no",
+      "residual_package_semantic_closure_authorized": "no",
+      "non_promotion_boundary": "no_qm_stat_seam_closure_no_statistical_mechanics_derivation_no_phase2_no_master_action_promotion_no_empirical_claim_no_governance_manifest_enrollment",
       "next_action_after_budget_exhaustion": "qft_gr_source_map_authorized_reopen"
     },
     {
@@ -837,18 +864,18 @@
     },
     {
       "workstream_id": "master_action_dependency_frontier",
-      "status": "active",
+      "status": "paused",
       "retained_blocker": "master_action_dependency_frontier_retained_no_promotion",
       "consecutive_slices_after_retention": 0,
       "allowed_reopen_conditions": [
         "dependency_graph_change",
         "stronger_evidence_object"
       ],
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsRetainedBlockerProtocolRow.lean",
-      "consumed_target": "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean",
+      "consumed_target": "review_qm_stat_transport_semantics_protocol_row_readiness",
       "prior_consumed_target": "prioritize_retained_blockers_after_master_action_dependency_graph_review",
-      "prior_surface": "master_action_retained_blocker_prioritization_review_v0",
-      "latest_surface": "qm_stat_transport_semantics_retained_blocker_protocol_row_v0",
+      "prior_surface": "qm_stat_transport_semantics_retained_blocker_protocol_row_v0",
+      "latest_surface": "qm_stat_transport_semantics_protocol_row_readiness_review_v0",
       "citation_usage_status": "completed",
       "citation_usage_scope": "retained_assumptions_only_under_allowed_scope_and_forbidden_promotion_boundaries",
       "citation_language_audit_status": "completed",
@@ -865,15 +892,18 @@
       "protocol_row_seam": "SEAM-QM-STAT",
       "protocol_row_retained_blocker": "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED",
       "protocol_row_next_review": "review_qm_stat_transport_semantics_protocol_row_readiness",
-      "next_action_scope": "protocol_readiness_review_only_no_theorem_work",
+      "readiness_review_status": "completed",
+      "readiness_review_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean",
+      "readiness_review_decision": "authorize_bounded_source_probability_extraction",
+      "next_action_scope": "bounded_qm_stat_source_probability_extraction_only",
       "lane_unblocked": "no",
       "promotion_authorized": "no",
-      "theorem_work_authorized": "no",
+      "theorem_work_authorized": "bounded_source_probability_extraction_only",
       "forbidden_language_class_count": 7,
       "boundary_count": 10,
       "dependency_classes_changed": "no",
-      "authorized_next_strict_target": "review_qm_stat_transport_semantics_protocol_row_readiness",
-      "same_lane_continuation": "protocol_readiness_review_only",
+      "authorized_next_strict_target": "derive_or_refute_qm_stat_source_probability_extraction_semantics",
+      "same_lane_continuation": "rotated_to_qm_stat_bounded_source_probability_extraction_slice",
       "non_promotion_boundary": "no_phase2_no_master_action_promotion_no_seam_closure_no_empirical_claim_no_governance_manifest_enrollment"
     }
   ],

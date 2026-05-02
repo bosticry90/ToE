@@ -234,7 +234,9 @@ Cycle01 pilot lock:
 - `MASTER_ACTION_RETAINED_BLOCKER_PRIORITIZATION_STATUS_v0: QMSTAT_TRANSPORT_TOP_PRIORITY_PROTOCOL_ROW_ONLY_NO_THEOREM_WORK`
 - `QM_STAT_TRANSPORT_SEMANTICS_PROTOCOL_ROW_v0: formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsRetainedBlockerProtocolRow.lean`
 - `QM_STAT_TRANSPORT_SEMANTICS_PROTOCOL_ROW_STATUS_v0: PREPARED_NO_THEOREM_WORK_NO_QMSTAT_REOPEN`
-- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: review_qm_stat_transport_semantics_protocol_row_readiness`
+- `QM_STAT_TRANSPORT_SEMANTICS_READINESS_REVIEW_v0: formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean`
+- `QM_STAT_TRANSPORT_SEMANTICS_READINESS_REVIEW_STATUS_v0: COMPLETED_AUTHORIZED_BOUNDED_SOURCE_PROBABILITY_EXTRACTION_ONLY`
+- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: derive_or_refute_qm_stat_source_probability_extraction_semantics`
 
 - `SEAM_QFT_GR_GOVERNANCE_COMPLETE_v0: NO`
 - `SEAM_QFT_GR_PHYSICS_COMPLETE_v0: NO`
@@ -254,6 +256,8 @@ Cycle01 pilot lock:
 - `SEAM_QM_STAT_PHYSICS_BLOCKER_v0: PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED`
 - `SEAM_QM_STAT_TRANSPORT_SEMANTICS_PROTOCOL_ROW_v0: formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsRetainedBlockerProtocolRow.lean`
 - `SEAM_QM_STAT_TRANSPORT_SEMANTICS_NEXT_REVIEW_v0: review_qm_stat_transport_semantics_protocol_row_readiness`
+- `SEAM_QM_STAT_TRANSPORT_SEMANTICS_READINESS_REVIEW_v0: formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean`
+- `SEAM_QM_STAT_SOURCE_PROBABILITY_EXTRACTION_TARGET_v0: derive_or_refute_qm_stat_source_probability_extraction_semantics`
 
 - `SEAM_STAT_QM_GOVERNANCE_COMPLETE_v0: NO`
 - `SEAM_STAT_QM_PHYSICS_COMPLETE_v0: NO`

@@ -100,14 +100,23 @@ QM_STAT_TRANSPORT_SEMANTICS_PROTOCOL_ROW_PATH = (
     / "Derivation"
     / "QMSTATTransportSemanticsRetainedBlockerProtocolRow.lean"
 )
+QM_STAT_TRANSPORT_SEMANTICS_READINESS_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "QMSTATTransportSemanticsProtocolRowReadinessReview.lean"
+)
 
 CITATION_USAGE_TARGET = "cite_only_bounded_retained_assumptions"
 AUDIT_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
 REVIEW_TARGET = "review_master_action_dependency_graph_after_citation_language_audit"
 PRIORITIZATION_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 PROTOCOL_PREPARATION_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
-LIVE_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-PREVIOUS_TARGET = PROTOCOL_PREPARATION_TARGET
+READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
+LIVE_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
+PREVIOUS_TARGET = READINESS_REVIEW_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -125,11 +134,11 @@ EM_QFT_FRESH_DELTA_ID = (
 
 PAUSED_LANES = {
     "scalar_qft_a2a15a1",
-    "qm_stat_transport_residual",
     "qft_gr_source_map",
     "sr_covariance_cosmology_regime_transport",
     "qm_evolution_contract",
     "em_qft_physics_blocker_extraction",
+    "master_action_dependency_frontier",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -185,25 +194,28 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        QM_STAT_TRANSPORT_SEMANTICS_PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)
+        QM_STAT_TRANSPORT_SEMANTICS_READINESS_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     assert set(state["paused_lanes"]) == PAUSED_LANES
-    assert state["active_lane"] == "master_action_dependency_frontier"
+    assert state["active_lane"] == "qm_stat_transport_residual"
 
     active_workstreams = [
         item for item in payload["workstreams"] if item.get("status") == "active"
     ]
     assert [item["workstream_id"] for item in active_workstreams] == [
-        "master_action_dependency_frontier"
+        "qm_stat_transport_residual"
     ]
     assert active_workstreams[0]["authorized_next_strict_target"] == LIVE_TARGET
     assert active_workstreams[0]["consumed_target"] == PREVIOUS_TARGET
     assert (
         active_workstreams[0]["latest_surface"]
-        == "qm_stat_transport_semantics_retained_blocker_protocol_row_v0"
+        == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
     )
-    assert active_workstreams[0]["same_lane_continuation"] == "protocol_readiness_review_only"
+    assert (
+        active_workstreams[0]["same_lane_continuation"]
+        == "authorized_bounded_source_probability_extraction_slice"
+    )
 
     active_targets = {state["live_next_target"], active_workstreams[0]["authorized_next_strict_target"]}
     assert active_targets == {LIVE_TARGET}
@@ -294,8 +306,17 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     ) in protocol_row_text
     assert (
         'def qmStatTransportSemanticsReadinessReviewTargetId : String :=\n'
-        f'  "{LIVE_TARGET}"'
+        f'  "{READINESS_REVIEW_TARGET}"'
     ) in protocol_row_text
+    readiness_review_text = _read(QM_STAT_TRANSPORT_SEMANTICS_READINESS_REVIEW_PATH)
+    assert (
+        'def qmStatTransportSemanticsReadinessReviewConsumedTargetId : String :=\n'
+        "  qmStatTransportSemanticsReadinessReviewTargetId"
+    ) in readiness_review_text
+    assert (
+        'def qmStatSourceProbabilityExtractionSemanticsTargetId : String :=\n'
+        f'  "{LIVE_TARGET}"'
+    ) in readiness_review_text
     assert payload["current_target_state"]["live_next_target"] == LIVE_TARGET
 
 
@@ -332,17 +353,26 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert em_qft["source_current_bridge_slice_authorized"] == "not_authorized"
     assert em_qft["gauge_quantization_bridge_slice_authorized"] == "not_authorized"
 
-    master_action = _workstream(payload, "master_action_dependency_frontier")
-    assert master_action["status"] == "active"
-    assert master_action["authorized_next_strict_target"] == LIVE_TARGET
-    assert master_action["authorization_evidence"] == str(
-        QM_STAT_TRANSPORT_SEMANTICS_PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)
+    qm_stat = _workstream(payload, "qm_stat_transport_residual")
+    assert qm_stat["status"] == "active"
+    assert qm_stat["authorized_next_strict_target"] == LIVE_TARGET
+    assert qm_stat["authorization_evidence"] == str(
+        QM_STAT_TRANSPORT_SEMANTICS_READINESS_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert master_action["latest_surface"] == "qm_stat_transport_semantics_retained_blocker_protocol_row_v0"
+    assert qm_stat["latest_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
+    assert qm_stat["bounded_source_probability_slice_authorized"] == "yes"
+    assert qm_stat["target_entropy_semantics_authorized"] == "no"
+    assert qm_stat["transport_map_semantics_authorized"] == "no"
+    assert qm_stat["coarse_graining_irreversibility_authorized"] == "no"
+    assert qm_stat["residual_package_semantic_closure_authorized"] == "no"
+
+    master_action = _workstream(payload, "master_action_dependency_frontier")
+    assert master_action["status"] == "paused"
     assert master_action["citation_usage_status"] == "completed"
     assert master_action["citation_language_audit_status"] == "completed"
     assert master_action["dependency_graph_review_status"] == "completed"
     assert master_action["qm_stat_transport_semantics_protocol_row_status"] == "prepared"
+    assert master_action["readiness_review_status"] == "completed"
     assert master_action["dependency_graph_changed"] == "no"
     assert master_action["lane_unblocked"] == "no"
     assert master_action["promotion_authorized"] == "no"
@@ -419,6 +449,7 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
         MASTER_ACTION_RETAINED_BLOCKER_PRIORITIZATION_REVIEW_PATH
     )
     protocol_row_text = _read(QM_STAT_TRANSPORT_SEMANTICS_PROTOCOL_ROW_PATH)
+    readiness_review_text = _read(QM_STAT_TRANSPORT_SEMANTICS_READINESS_REVIEW_PATH)
     for theorem_name in [
         "em_qft_protocol_row_phase2_not_authorized_v0",
         "em_qft_protocol_row_seam_not_closed_v0",
@@ -491,6 +522,15 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
         "qm_stat_transport_semantics_protocol_row_governance_manifest_not_enrolled_v0",
     ]:
         assert theorem_name in protocol_row_text
+    for theorem_name in [
+        "qm_stat_transport_semantics_readiness_review_no_seam_closure_v0",
+        "qm_stat_transport_semantics_readiness_review_no_stat_mechanics_claim_v0",
+        "qm_stat_transport_semantics_readiness_review_phase2_not_authorized_v0",
+        "qm_stat_transport_semantics_readiness_review_master_action_not_promoted_v0",
+        "qm_stat_transport_semantics_readiness_review_no_empirical_claim_v0",
+        "qm_stat_transport_semantics_readiness_review_governance_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in readiness_review_text
 
 
 def test_current_target_gate_is_not_governance_manifest_enrolled() -> None:

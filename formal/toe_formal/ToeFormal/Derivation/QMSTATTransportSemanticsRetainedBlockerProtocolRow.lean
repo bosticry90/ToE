@@ -354,11 +354,11 @@ theorem qm_stat_transport_semantics_protocol_row_minimum_readiness_v0 :
       ] := by
   rfl
 
-/-- The frontier now points to the readiness review target. -/
+/-- The frontier has advanced past the readiness review to source probability. -/
 theorem qm_stat_transport_semantics_protocol_row_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some qmStatTransportSemanticsReadinessReviewTargetId := by
+      some "derive_or_refute_qm_stat_source_probability_extraction_semantics" := by
   decide
 
 /-- This row does not authorize theorem work. -/
