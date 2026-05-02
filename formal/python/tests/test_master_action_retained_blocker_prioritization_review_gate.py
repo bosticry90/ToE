@@ -64,10 +64,11 @@ MATH_PHYSICS_INVENTORY_PATH = (
 CONSUMED_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 PROTOCOL_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
 READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-LIVE_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
-READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean"
+SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
+LIVE_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
+READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Bridges/QM_STAT_SourceProbabilityExtractionSemantics.lean"
 SURFACE_ID = "master_action_retained_blocker_prioritization_review_v0"
-PROTOCOL_SURFACE_ID = "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
+PROTOCOL_SURFACE_ID = "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
 TOP_BLOCKER = "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED"
 REVIEW_EVIDENCE = str(REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 PROTOCOL_EVIDENCE = str(PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
@@ -135,10 +136,10 @@ def test_frontier_and_aggregate_rotate_to_qm_stat_protocol_row_preparation() -> 
         "import ToeFormal.Derivation.QMSTATTransportSemanticsRetainedBlockerProtocolRow"
         in aggregate_text
     )
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{READINESS_REVIEW_TARGET}"' in frontier_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
-    assert "QM-STAT transport semantics protocol-row readiness review" in frontier_text
+    assert "source-probability extraction supplied route and contract-only obstruction" in frontier_text
     assert "retainedBlockerPrioritizationReviewTargetId" in dependency_graph_text
 
 
@@ -146,7 +147,7 @@ def test_loop_registry_tracks_prioritization_as_current_surface() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == READINESS_REVIEW_TARGET
+    assert state["previous_live_next_target"] == SOURCE_PROBABILITY_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == READINESS_EVIDENCE
     assert state["active_lane"] == "qm_stat_transport_residual"
@@ -157,11 +158,11 @@ def test_loop_registry_tracks_prioritization_as_current_surface() -> None:
     assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
     workstream = active[0]
     assert workstream["authorization_evidence"] == READINESS_EVIDENCE
-    assert workstream["consumed_target"] == READINESS_REVIEW_TARGET
-    assert workstream["prior_surface"] == "qm_stat_transport_semantics_retained_blocker_protocol_row_v0"
+    assert workstream["consumed_target"] == SOURCE_PROBABILITY_TARGET
+    assert workstream["prior_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
     assert workstream["latest_surface"] == PROTOCOL_SURFACE_ID
     assert workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert workstream["same_lane_continuation"] == "authorized_bounded_source_probability_extraction_slice"
+    assert workstream["same_lane_continuation"] == "post_source_probability_slice_review_only"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
     assert (

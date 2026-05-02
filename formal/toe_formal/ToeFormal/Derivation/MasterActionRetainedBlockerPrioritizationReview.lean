@@ -198,7 +198,7 @@ theorem retained_blocker_prioritization_selected_next_target_v0 :
 theorem retained_blocker_prioritization_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "derive_or_refute_qm_stat_source_probability_extraction_semantics" := by
+      some "review_qm_stat_source_probability_extraction_semantics_result" := by
   decide
 
 /-- The prioritization review is complete. -/

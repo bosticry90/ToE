@@ -85,8 +85,9 @@ REVIEW_TARGET = "review_master_action_dependency_graph_after_citation_language_a
 PRIORITIZATION_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 PROTOCOL_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
 READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-LIVE_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
-READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean"
+SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
+LIVE_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
+READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Bridges/QM_STAT_SourceProbabilityExtractionSemantics.lean"
 SURFACE_ID = "master_action_citation_language_audit_v0"
 AUDIT_EVIDENCE = str(AUDIT_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 REVIEW_EVIDENCE = str(REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
@@ -174,10 +175,10 @@ def test_frontier_aggregate_and_usage_surface_rotate_to_post_audit_review() -> N
         "import ToeFormal.Derivation.QMSTATTransportSemanticsRetainedBlockerProtocolRow"
         in aggregate_text
     )
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{READINESS_REVIEW_TARGET}"' in frontier_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
-    assert "QM-STAT transport semantics protocol-row readiness review" in frontier_text
+    assert "source-probability extraction supplied route and contract-only obstruction" in frontier_text
     assert "master_action_citation_usage_selected_next_target_v0" in usage_text
     assert "master_action_citation_usage_frontier_target_v0" in usage_text
     assert "master_action_dependency_graph_review_consumes_live_target_v0" in review_text
@@ -187,7 +188,7 @@ def test_loop_registry_tracks_citation_language_audit_as_current_surface() -> No
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == READINESS_REVIEW_TARGET
+    assert state["previous_live_next_target"] == SOURCE_PROBABILITY_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == READINESS_EVIDENCE
     assert state["active_lane"] == "qm_stat_transport_residual"
@@ -197,11 +198,11 @@ def test_loop_registry_tracks_citation_language_audit_as_current_surface() -> No
     assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
     workstream = active[0]
     assert workstream["authorization_evidence"] == READINESS_EVIDENCE
-    assert workstream["consumed_target"] == READINESS_REVIEW_TARGET
-    assert workstream["prior_surface"] == "qm_stat_transport_semantics_retained_blocker_protocol_row_v0"
-    assert workstream["latest_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
+    assert workstream["consumed_target"] == SOURCE_PROBABILITY_TARGET
+    assert workstream["prior_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
+    assert workstream["latest_surface"] == "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
     assert workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert workstream["same_lane_continuation"] == "authorized_bounded_source_probability_extraction_slice"
+    assert workstream["same_lane_continuation"] == "post_source_probability_slice_review_only"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
     assert (

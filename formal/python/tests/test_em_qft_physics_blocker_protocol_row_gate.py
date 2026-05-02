@@ -109,8 +109,9 @@ REVIEW_TARGET = "review_master_action_dependency_graph_after_citation_language_a
 PRIORITIZATION_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 PROTOCOL_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
 READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-LIVE_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
-READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean"
+SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
+LIVE_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
+READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Bridges/QM_STAT_SourceProbabilityExtractionSemantics.lean"
 PRIMARY_BLOCKER = "shared_dynamics_and_residual_unification"
 SECONDARY_BLOCKER = "interface_alignment_semantic_bridge"
 REQUIRED_EVIDENCE = {
@@ -167,7 +168,7 @@ def test_frontier_uses_row_lookup_and_exposes_successor_target() -> None:
     frontier_text = _read(CROSS_PILLAR_FRONTIER_PATH)
 
     assert "def crossPillarFrontierEntryByRow?" in frontier_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{READINESS_REVIEW_TARGET}"' in frontier_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
 
@@ -186,7 +187,7 @@ def test_loop_registry_and_public_surfaces_follow_em_qft_successor() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == READINESS_REVIEW_TARGET
+    assert state["previous_live_next_target"] == SOURCE_PROBABILITY_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == READINESS_EVIDENCE
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
@@ -199,9 +200,9 @@ def test_loop_registry_and_public_surfaces_follow_em_qft_successor() -> None:
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
     assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
-    assert active[0]["consumed_target"] == READINESS_REVIEW_TARGET
+    assert active[0]["consumed_target"] == SOURCE_PROBABILITY_TARGET
     assert active[0]["authorized_next_strict_target"] == LIVE_TARGET
-    assert active[0]["latest_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
+    assert active[0]["latest_surface"] == "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
 
     em_qft = next(
         item for item in payload["workstreams"]

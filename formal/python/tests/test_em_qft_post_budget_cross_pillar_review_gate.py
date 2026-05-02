@@ -100,8 +100,9 @@ REVIEW_TARGET = "review_master_action_dependency_graph_after_citation_language_a
 PRIORITIZATION_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 PROTOCOL_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
 READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-LIVE_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
-READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean"
+SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
+LIVE_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
+READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Bridges/QM_STAT_SourceProbabilityExtractionSemantics.lean"
 SURFACE_ID = "em_qft_post_budget_cross_pillar_review_v0"
 REVIEW_EVIDENCE = str(REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 USAGE_EVIDENCE = str(MASTER_ACTION_CITATION_USAGE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
@@ -177,7 +178,7 @@ def test_frontier_aggregate_and_master_dependency_surface_follow_review() -> Non
         "import ToeFormal.Derivation.QMSTATTransportSemanticsRetainedBlockerProtocolRow"
         in aggregate_text
     )
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{READINESS_REVIEW_TARGET}"' in frontier_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
     assert "EM-QFT interface-alignment semantic bridge obstruction plus post-budget review" in frontier_text
@@ -191,7 +192,7 @@ def test_registry_rotates_to_master_action_dependency_frontier() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == READINESS_REVIEW_TARGET
+    assert state["previous_live_next_target"] == SOURCE_PROBABILITY_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == READINESS_EVIDENCE
     assert state["active_lane"] == "qm_stat_transport_residual"
@@ -200,10 +201,10 @@ def test_registry_rotates_to_master_action_dependency_frontier() -> None:
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
     assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
     assert active[0]["authorization_evidence"] == READINESS_EVIDENCE
-    assert active[0]["consumed_target"] == READINESS_REVIEW_TARGET
-    assert active[0]["latest_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
+    assert active[0]["consumed_target"] == SOURCE_PROBABILITY_TARGET
+    assert active[0]["latest_surface"] == "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
     assert active[0]["authorized_next_strict_target"] == LIVE_TARGET
-    assert active[0]["same_lane_continuation"] == "authorized_bounded_source_probability_extraction_slice"
+    assert active[0]["same_lane_continuation"] == "post_source_probability_slice_review_only"
 
     em_qft = _workstream(payload, "em_qft_physics_blocker_extraction")
     assert em_qft["status"] == "paused"

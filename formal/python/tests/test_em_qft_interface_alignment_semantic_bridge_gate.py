@@ -97,8 +97,9 @@ REVIEW_TARGET = "review_master_action_dependency_graph_after_citation_language_a
 PRIORITIZATION_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 PROTOCOL_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
 READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-LIVE_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
-READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Derivation/QMSTATTransportSemanticsProtocolRowReadinessReview.lean"
+SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
+LIVE_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
+READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Bridges/QM_STAT_SourceProbabilityExtractionSemantics.lean"
 SURFACE_ID = "EM_QFT_INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_v0"
 FRESH_DELTA_ID = "EM_QFT_INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_COUNTEREXAMPLE_FRESH_DELTA_v0"
 RETAINED_BLOCKER = "PHASE1-BLOCKER-EMQFT-INTERFACE-ALIGNMENT-SEMANTIC-BRIDGE-RETAINED"
@@ -161,7 +162,7 @@ def test_frontier_and_aggregate_advance_after_em_qft_post_budget_review() -> Non
     assert "import ToeFormal.Derivation.MasterActionRetainedAssumptionCitationUsage" in aggregate_text
     assert "import ToeFormal.Derivation.MasterActionCitationLanguageAudit" in aggregate_text
     assert "import ToeFormal.Derivation.MasterActionDependencyGraphReview" in aggregate_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{READINESS_REVIEW_TARGET}"' in frontier_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
     assert RETAINED_BLOCKER in frontier_text
@@ -171,7 +172,7 @@ def test_registry_tracks_interface_alignment_slice_and_completed_post_budget_rev
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == READINESS_REVIEW_TARGET
+    assert state["previous_live_next_target"] == SOURCE_PROBABILITY_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == READINESS_EVIDENCE
 
@@ -185,9 +186,9 @@ def test_registry_tracks_interface_alignment_slice_and_completed_post_budget_rev
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
     assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
-    assert active[0]["consumed_target"] == READINESS_REVIEW_TARGET
+    assert active[0]["consumed_target"] == SOURCE_PROBABILITY_TARGET
     assert active[0]["authorized_next_strict_target"] == LIVE_TARGET
-    assert active[0]["latest_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
+    assert active[0]["latest_surface"] == "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
 
     em_qft = next(
         item for item in payload["workstreams"]

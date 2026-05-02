@@ -8,6 +8,14 @@ from formal.python.meta.repo_environment import find_repo_root
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
+SOURCE_PROBABILITY_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QM_STAT_SourceProbabilityExtractionSemantics.lean"
+)
 READINESS_REVIEW_PATH = (
     REPO_ROOT
     / "formal"
@@ -15,14 +23,6 @@ READINESS_REVIEW_PATH = (
     / "ToeFormal"
     / "Derivation"
     / "QMSTATTransportSemanticsProtocolRowReadinessReview.lean"
-)
-PROTOCOL_ROW_PATH = (
-    REPO_ROOT
-    / "formal"
-    / "toe_formal"
-    / "ToeFormal"
-    / "Derivation"
-    / "QMSTATTransportSemanticsRetainedBlockerProtocolRow.lean"
 )
 AGGREGATE_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
 FRONTIER_PATH = (
@@ -53,16 +53,19 @@ MATH_PHYSICS_INVENTORY_PATH = (
     REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 )
 
-READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
+SOURCE_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
 LIVE_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
-SURFACE_ID = "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
-SOURCE_PROBABILITY_SURFACE_ID = "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
-PROTOCOL_SURFACE_ID = "qm_stat_transport_semantics_retained_blocker_protocol_row_v0"
-RETAINED_BLOCKER = "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED"
-SOURCE_PROBABILITY_EVIDENCE = (
-    "formal/toe_formal/ToeFormal/Bridges/QM_STAT_SourceProbabilityExtractionSemantics.lean"
+SURFACE_ID = "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
+FRESH_DELTA_ID = (
+    "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_CONTRACT_ONLY_COUNTEREXAMPLE_FRESH_DELTA_v0"
 )
+RETAINED_BLOCKER = (
+    "PHASE1-BLOCKER-QMSTAT-SOURCE-PROBABILITY-EXTRACTION-SEMANTICS-RETAINED"
+)
+SOURCE_PROBABILITY_EVIDENCE = str(SOURCE_PROBABILITY_PATH.relative_to(REPO_ROOT)).replace(
+    "\\", "/"
+)
+READINESS_EVIDENCE = str(READINESS_REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 
 
 def _read(path: Path) -> str:
@@ -81,78 +84,88 @@ def _workstream(payload: dict[str, Any], workstream_id: str) -> dict[str, Any]:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_readiness_review_records_bounded_source_probability_authorization() -> None:
-    text = _read(READINESS_REVIEW_PATH)
+def test_source_probability_semantics_surface_records_route_and_counterexample() -> None:
+    text = _read(SOURCE_PROBABILITY_PATH)
 
     for token in {
         SURFACE_ID,
-        READINESS_REVIEW_TARGET,
-        SOURCE_PROBABILITY_TARGET,
-        "authorize_bounded_source_probability_extraction",
-        "authorizeBoundedSourceProbabilityExtraction",
-        ".sourceProbabilityExtraction",
-        "qm_stat_transport_semantics_readiness_review_authorizes_source_probability_v0",
-        "qm_stat_transport_semantics_readiness_review_selected_next_target_v0",
-        "qm_stat_transport_semantics_readiness_review_frontier_target_v0",
+        SOURCE_TARGET,
+        LIVE_TARGET,
+        RETAINED_BLOCKER,
+        FRESH_DELTA_ID,
+        "counterexample",
+        "QMEvolutionSourceProbabilityExtractionData",
+        "sourceStructureOfQMEvolutionSourceProbabilityExtraction",
+        "supplied_source_probability_extraction_constructs_source_structure_v0",
+        "qm_evolution_contract_does_not_force_source_probability_extraction_v0",
+        "qm_stat_source_probability_extraction_supplied_route_available_v0",
+        "qm_stat_source_probability_extraction_contract_only_refuted_v0",
+        "qm_stat_source_probability_extraction_not_contract_only_v0",
+        "qm_stat_source_probability_extraction_retained_as_supplied_v0",
+        "qm_stat_source_probability_extraction_selected_next_target_v0",
+        "qm_stat_source_probability_extraction_frontier_target_v0",
     }:
         assert token in text
 
-    protocol_text = _read(PROTOCOL_ROW_PATH)
-    assert PROTOCOL_SURFACE_ID in protocol_text
-    assert "qmStatTransportSemanticsReadinessReviewTargetId" in protocol_text
 
-
-def test_readiness_review_preserves_fail_closed_boundaries() -> None:
-    text = _read(READINESS_REVIEW_PATH)
+def test_source_probability_slice_preserves_fail_closed_boundaries() -> None:
+    text = _read(SOURCE_PROBABILITY_PATH)
 
     for theorem in {
-        "qm_stat_transport_semantics_readiness_review_no_broader_theorem_work_v0",
-        "qm_stat_transport_semantics_readiness_review_target_entropy_not_authorized_v0",
-        "qm_stat_transport_semantics_readiness_review_transport_map_not_authorized_v0",
-        "qm_stat_transport_semantics_readiness_review_coarse_graining_not_authorized_v0",
-        "qm_stat_transport_semantics_readiness_review_residual_closure_not_authorized_v0",
-        "qm_stat_transport_semantics_readiness_review_no_seam_closure_v0",
-        "qm_stat_transport_semantics_readiness_review_no_stat_mechanics_claim_v0",
-        "qm_stat_transport_semantics_readiness_review_phase2_not_authorized_v0",
-        "qm_stat_transport_semantics_readiness_review_master_action_not_promoted_v0",
-        "qm_stat_transport_semantics_readiness_review_no_empirical_claim_v0",
-        "qm_stat_transport_semantics_readiness_review_governance_manifest_not_enrolled_v0",
+        "qm_stat_source_probability_extraction_target_entropy_not_authorized_v0",
+        "qm_stat_source_probability_extraction_transport_map_not_authorized_v0",
+        "qm_stat_source_probability_extraction_coarse_graining_not_authorized_v0",
+        "qm_stat_source_probability_extraction_residual_closure_not_authorized_v0",
+        "qm_stat_source_probability_extraction_no_seam_closure_v0",
+        "qm_stat_source_probability_extraction_no_stat_mechanics_claim_v0",
+        "qm_stat_source_probability_extraction_phase2_not_authorized_v0",
+        "qm_stat_source_probability_extraction_master_action_not_promoted_v0",
+        "qm_stat_source_probability_extraction_no_empirical_claim_v0",
+        "qm_stat_source_probability_extraction_governance_manifest_not_enrolled_v0",
     }:
         assert theorem in text
 
 
-def test_frontier_and_aggregate_point_to_source_probability_target() -> None:
+def test_frontier_and_aggregate_rotate_to_source_probability_result_review() -> None:
     aggregate_text = _read(AGGREGATE_PATH)
     frontier_text = _read(FRONTIER_PATH)
 
-    assert "import ToeFormal.Derivation.QMSTATTransportSemanticsProtocolRowReadinessReview" in aggregate_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
+    assert "import ToeFormal.Bridges.QM_STAT_SourceProbabilityExtractionSemantics" in aggregate_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice := "{LIVE_TARGET}"' in frontier_text
     assert "source-probability extraction supplied route and contract-only obstruction" in frontier_text
 
 
-def test_loop_registry_rotates_active_lane_to_qm_stat_bounded_slice() -> None:
+def test_loop_registry_tracks_source_probability_result_review_only() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == SOURCE_PROBABILITY_TARGET
+    assert state["previous_live_next_target"] == SOURCE_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == SOURCE_PROBABILITY_EVIDENCE
     assert state["active_lane"] == "qm_stat_transport_residual"
-    assert "qm_stat_transport_residual" not in state["paused_lanes"]
-    assert "master_action_dependency_frontier" in state["paused_lanes"]
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
+    assert RETAINED_BLOCKER in payload["retained_blocker_coverage"]
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
     assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
     qm_stat = active[0]
+    assert qm_stat["retained_blocker"] == RETAINED_BLOCKER
     assert qm_stat["authorization_evidence"] == SOURCE_PROBABILITY_EVIDENCE
-    assert qm_stat["consumed_target"] == SOURCE_PROBABILITY_TARGET
-    assert qm_stat["prior_surface"] == SURFACE_ID
-    assert qm_stat["latest_surface"] == SOURCE_PROBABILITY_SURFACE_ID
+    assert qm_stat["consumed_target"] == SOURCE_TARGET
+    assert qm_stat["prior_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
+    assert qm_stat["latest_surface"] == SURFACE_ID
     assert qm_stat["authorized_next_strict_target"] == LIVE_TARGET
+    assert qm_stat["same_lane_continuation"] == "post_source_probability_slice_review_only"
     assert qm_stat["bounded_source_probability_slice_authorized"] == "completed"
+    assert (
+        qm_stat["source_probability_extraction_semantics_status"]
+        == "supplied_route_available_contract_only_refuted_retained_as_semantic_assumption"
+    )
+    assert qm_stat["source_probability_extraction_supplied_route_available"] == "yes"
+    assert qm_stat["source_probability_extraction_contract_only_refuted"] == "yes"
+    assert qm_stat["source_probability_extraction_derived_from_contract_alone"] == "no"
     assert qm_stat["theorem_work_authorized"] == "no_pending_source_probability_result_review"
     assert (
         qm_stat["source_probability_extraction_obligation"]
@@ -165,18 +178,15 @@ def test_loop_registry_rotates_active_lane_to_qm_stat_bounded_slice() -> None:
 
     master_action = _workstream(payload, "master_action_dependency_frontier")
     assert master_action["status"] == "paused"
-    assert master_action["readiness_review_status"] == "completed"
+    assert master_action["source_probability_extraction_evidence"] == SOURCE_PROBABILITY_EVIDENCE
     assert master_action["source_probability_extraction_status"] == (
         "completed_supplied_route_available_contract_only_refuted"
     )
     assert master_action["authorized_next_strict_target"] == LIVE_TARGET
-    assert master_action["promotion_authorized"] == "no"
+    assert master_action["same_lane_continuation"] == "post_source_probability_slice_review_only"
+    assert master_action["theorem_work_authorized"] == "no_pending_source_probability_result_review"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
-    assert (
-        "qm_stat_transport_semantics_retained_blocker_protocol_row",
-        "qm_stat_transport_semantics_protocol_row_readiness_review",
-    ) in edges
     assert (
         "qm_stat_transport_semantics_protocol_row_readiness_review",
         "qm_stat_source_probability_extraction_semantics",
@@ -191,17 +201,18 @@ def test_public_surfaces_and_manifest_boundary_are_synchronized() -> None:
     for path in [README_PATH, STATE_PATH, ROADMAP_PATH, STRICT_MAP_PATH]:
         text = _read(path)
         assert LIVE_TARGET in text, f"{path} missing live target"
-        assert "QMSTATTransportSemanticsProtocolRowReadinessReview.lean" in text
         assert "QM_STAT_SourceProbabilityExtractionSemantics.lean" in text
+        assert "CONTRACT_ONLY" in text or "contract-only" in text
 
     for path in [SEAM_REGISTRY_PATH, SEAM_INVENTORY_PATH]:
         text = _read(path)
-        assert "QM_STAT_TRANSPORT_SEMANTICS_READINESS_REVIEW" in text
+        assert "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0" in text
         assert LIVE_TARGET in text
 
     inventory_text = _read(MATH_PHYSICS_INVENTORY_PATH)
-    assert "INV-MATH-QMSTAT-TRANSPORT-SEMANTICS-READINESS-REVIEW-v0" in inventory_text
+    assert "INV-MATH-QMSTAT-SOURCE-PROBABILITY-EXTRACTION-SEMANTICS-v0" in inventory_text
     assert SOURCE_PROBABILITY_EVIDENCE in inventory_text
-    assert "test_qm_stat_transport_semantics_protocol_row_readiness_review_gate.py" not in _read(
+    assert READINESS_EVIDENCE in inventory_text
+    assert "test_qm_stat_source_probability_extraction_semantics_gate.py" not in _read(
         GOVERNANCE_MANIFEST_PATH
     )
