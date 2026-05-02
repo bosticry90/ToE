@@ -24,6 +24,14 @@ FRONTIER_PATH = (
     / "Derivation"
     / "CrossPillarClosureFrontier.lean"
 )
+POST_BUDGET_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "EMQFTPostBudgetCrossPillarReview.lean"
+)
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 GOVERNANCE_MANIFEST_PATH = (
     REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_TEST_MANIFEST_v1.json"
@@ -42,7 +50,8 @@ SEAM_INVENTORY_PATH = (
 )
 
 CONSUMED_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
-LIVE_TARGET = "em_qft_post_budget_cross_pillar_review"
+POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
+LIVE_TARGET = "cite_only_bounded_retained_assumptions"
 SURFACE_ID = "EM_QFT_INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_v0"
 FRESH_DELTA_ID = "EM_QFT_INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_COUNTEREXAMPLE_FRESH_DELTA_v0"
 RETAINED_BLOCKER = "PHASE1-BLOCKER-EMQFT-INTERFACE-ALIGNMENT-SEMANTIC-BRIDGE-RETAINED"
@@ -63,7 +72,7 @@ def test_interface_alignment_bridge_surface_records_counterexample_and_package_r
     for token in {
         SURFACE_ID,
         CONSUMED_TARGET,
-        LIVE_TARGET,
+        POST_BUDGET_TARGET,
         FRESH_DELTA_ID,
         RETAINED_BLOCKER,
         "counterexample",
@@ -96,45 +105,58 @@ def test_interface_alignment_bridge_preserves_nonpromotion_boundaries() -> None:
         assert token in text
 
 
-def test_frontier_and_aggregate_rotate_to_em_qft_post_budget_review() -> None:
+def test_frontier_and_aggregate_advance_after_em_qft_post_budget_review() -> None:
     aggregate_text = _read(AGGREGATE_PATH)
     frontier_text = _read(FRONTIER_PATH)
 
     assert "import ToeFormal.Bridges.EM_QFT_InterfaceAlignmentSemanticBridge" in aggregate_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{CONSUMED_TARGET}"' in frontier_text
+    assert "import ToeFormal.Derivation.EMQFTPostBudgetCrossPillarReview" in aggregate_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{POST_BUDGET_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
     assert RETAINED_BLOCKER in frontier_text
 
 
-def test_registry_tracks_interface_alignment_slice_and_attempt_budget() -> None:
+def test_registry_tracks_interface_alignment_slice_and_completed_post_budget_review() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
+    assert state["previous_live_next_target"] == POST_BUDGET_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        BRIDGE_PATH.relative_to(REPO_ROOT)
+        POST_BUDGET_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
 
     assert RETAINED_BLOCKER in payload["retained_blocker_coverage"]
     assert CONSUMED_TARGET in payload["next_strict_target_coverage"]
+    assert POST_BUDGET_TARGET in payload["next_strict_target_coverage"]
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
-    assert [item["workstream_id"] for item in active] == ["em_qft_physics_blocker_extraction"]
-    workstream = active[0]
-    assert workstream["retained_blocker"] == RETAINED_BLOCKER
-    assert workstream["consumed_target"] == CONSUMED_TARGET
-    assert workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert workstream["latest_surface"] == SURFACE_ID
-    assert workstream["last_fresh_delta_kind"] == "counterexample"
-    assert workstream["last_fresh_delta_id"] == FRESH_DELTA_ID
-    assert workstream["interface_alignment_only_source_current_closure"] == "refuted"
-    assert workstream["interface_alignment_only_gauge_quantization_closure"] == "refuted"
-    assert workstream["attempt_budget_status"] == "two_consecutive_retained_slices_reached_post_budget_review_required"
-    assert workstream["same_lane_continuation"] == "not_authorized_attempt_budget_reached"
-    assert workstream["post_budget_review_status"] == "pending"
+    assert [item["workstream_id"] for item in active] == ["master_action_dependency_frontier"]
+    assert active[0]["consumed_target"] == POST_BUDGET_TARGET
+    assert active[0]["authorized_next_strict_target"] == LIVE_TARGET
+    assert active[0]["latest_surface"] == "em_qft_post_budget_cross_pillar_review_v0"
+
+    em_qft = next(
+        item for item in payload["workstreams"]
+        if item["workstream_id"] == "em_qft_physics_blocker_extraction"
+    )
+    assert em_qft["status"] == "paused"
+    assert em_qft["retained_blocker"] == RETAINED_BLOCKER
+    assert em_qft["consumed_target"] == CONSUMED_TARGET
+    assert em_qft["authorized_next_strict_target"] == LIVE_TARGET
+    assert em_qft["latest_surface"] == SURFACE_ID
+    assert em_qft["last_fresh_delta_kind"] == "counterexample"
+    assert em_qft["last_fresh_delta_id"] == FRESH_DELTA_ID
+    assert em_qft["interface_alignment_only_source_current_closure"] == "refuted"
+    assert em_qft["interface_alignment_only_gauge_quantization_closure"] == "refuted"
+    assert em_qft["attempt_budget_status"] == "two_consecutive_retained_slices_reached_post_budget_review_completed"
+    assert em_qft["same_lane_continuation"] == "not_authorized_attempt_budget_reached"
+    assert em_qft["post_budget_review_status"] == "completed"
+    assert em_qft["post_budget_review_evidence"] == str(
+        POST_BUDGET_REVIEW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
 
 
 def test_docs_expose_post_budget_target_without_manifest_enrollment() -> None:

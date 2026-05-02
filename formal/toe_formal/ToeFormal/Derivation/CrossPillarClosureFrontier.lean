@@ -169,12 +169,12 @@ def crossPillarClosureFrontierV0 :
       status := .conditional }
   , { row := .emQFTSeam
       current_strongest_surface :=
-        "EM-QFT interface-alignment semantic bridge obstruction; post-budget review required"
+        "EM-QFT interface-alignment semantic bridge obstruction plus post-budget review"
       retained_blocker := "PHASE1-BLOCKER-EMQFT-INTERFACE-ALIGNMENT-SEMANTIC-BRIDGE-RETAINED"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "em_qft_post_budget_cross_pillar_review"
+        "cite_only_bounded_retained_assumptions"
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
@@ -201,13 +201,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the EM-QFT interface-alignment slice. -/
+/-- Previous live target consumed by the EM-QFT post-budget review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
-
-/-- Current live target after EM-QFT reached its same-lane attempt budget. -/
-def currentLiveNextStrictTargetV0 : String :=
   "em_qft_post_budget_cross_pillar_review"
+
+/-- Current live target after the EM-QFT post-budget review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "cite_only_bounded_retained_assumptions"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

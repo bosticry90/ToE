@@ -226,21 +226,17 @@ theorem em_qft_protocol_row_successor_target_v0 :
       emQFTSharedDynamicsResidualUnificationBridgeTargetId := by
   rfl
 
-/--
-After the successor slice executes, the all-pillar frontier records this row's
-successor as the consumed previous target.
--/
-theorem em_qft_protocol_row_successor_consumed_by_frontier_v0 :
-    (crossPillarClosureFrontierStatusReadoutV0
-      |>.previous_live_next_target) =
+/-- The row's successor remains pinned on the protocol row itself. -/
+theorem em_qft_protocol_row_successor_remains_protocol_local_v0 :
+    (emQFTPhysicsBlockerProtocolRowReadoutV0 |>.successor_target) =
       emQFTSharedDynamicsResidualUnificationBridgeTargetId := by
   rfl
 
 /-- The EM-QFT frontier row has advanced beyond this row's successor target. -/
-theorem em_qft_protocol_row_frontier_row_advanced_after_successor_v0 :
+theorem em_qft_protocol_row_frontier_row_advanced_after_post_budget_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .emQFTSeam) =
-      some "derive_or_refute_em_qft_interface_alignment_semantic_bridge" := by
+      some "cite_only_bounded_retained_assumptions" := by
   rfl
 
 /-- This row does not close the EM-QFT seam. -/

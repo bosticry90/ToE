@@ -87,9 +87,9 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "derive_or_refute_em_qft_interface_alignment_semantic_bridge",
-    "live_next_target": "em_qft_post_budget_cross_pillar_review",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Bridges/EM_QFT_InterfaceAlignmentSemanticBridge.lean",
+    "previous_live_next_target": "em_qft_post_budget_cross_pillar_review",
+    "live_next_target": "cite_only_bounded_retained_assumptions",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/EMQFTPostBudgetCrossPillarReview.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
@@ -97,9 +97,10 @@
       "qm_stat_transport_residual",
       "qft_gr_source_map",
       "sr_covariance_cosmology_regime_transport",
-      "qm_evolution_contract"
+      "qm_evolution_contract",
+      "em_qft_physics_blocker_extraction"
     ],
-    "active_lane": "em_qft_physics_blocker_extraction",
+    "active_lane": "master_action_dependency_frontier",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -621,6 +622,12 @@
       "to": "em_qft_post_budget_review",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Bridges/EM_QFT_InterfaceAlignmentSemanticBridge.lean"
+    },
+    {
+      "from": "em_qft_post_budget_review",
+      "to": "master_action_dependency_frontier",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/EMQFTPostBudgetCrossPillarReview.lean"
     }
   ],
   "cycle_waivers": [],
@@ -738,7 +745,7 @@
     },
     {
       "workstream_id": "em_qft_physics_blocker_extraction",
-      "status": "active",
+      "status": "paused",
       "retained_blocker": "PHASE1-BLOCKER-EMQFT-INTERFACE-ALIGNMENT-SEMANTIC-BRIDGE-RETAINED",
       "consecutive_slices_after_retention": 2,
       "allowed_reopen_conditions": [
@@ -773,11 +780,33 @@
         "EM_QFT_GAUGE_QUANTIZATION_SEMANTICS_BRIDGE_REQUIRED_v0"
       ],
       "minimum_closure_condition": "theorem_linked_shared_dynamics_residual_unification_and_interface_alignment_discharge",
-      "authorized_next_strict_target": "em_qft_post_budget_cross_pillar_review",
+      "authorized_next_strict_target": "cite_only_bounded_retained_assumptions",
       "same_lane_continuation": "not_authorized_attempt_budget_reached",
-      "attempt_budget_status": "two_consecutive_retained_slices_reached_post_budget_review_required",
-      "post_budget_review_status": "pending",
+      "attempt_budget_status": "two_consecutive_retained_slices_reached_post_budget_review_completed",
+      "post_budget_review_status": "completed",
+      "post_budget_review_evidence": "formal/toe_formal/ToeFormal/Derivation/EMQFTPostBudgetCrossPillarReview.lean",
+      "post_budget_review_decision": "pause_same_lane_and_rotate_to_master_action_citation_boundary",
+      "source_current_bridge_slice_authorized": "not_authorized",
+      "gauge_quantization_bridge_slice_authorized": "not_authorized",
+      "master_dependency_class_changed": "no",
+      "master_action_dependency_class": "required_for_coherence",
       "non_promotion_boundary": "no_em_qft_seam_closure_no_phase2_no_master_action_promotion_no_empirical_claim_no_governance_manifest_enrollment"
+    },
+    {
+      "workstream_id": "master_action_dependency_frontier",
+      "status": "active",
+      "retained_blocker": "master_action_dependency_frontier_retained_no_promotion",
+      "consecutive_slices_after_retention": 0,
+      "allowed_reopen_conditions": [
+        "dependency_graph_change",
+        "stronger_evidence_object"
+      ],
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/EMQFTPostBudgetCrossPillarReview.lean",
+      "consumed_target": "em_qft_post_budget_cross_pillar_review",
+      "latest_surface": "em_qft_post_budget_cross_pillar_review_v0",
+      "authorized_next_strict_target": "cite_only_bounded_retained_assumptions",
+      "same_lane_continuation": "citation_boundary_only",
+      "non_promotion_boundary": "no_phase2_no_master_action_promotion_no_seam_closure_no_empirical_claim_no_governance_manifest_enrollment"
     }
   ],
   "promotion_escrow": {

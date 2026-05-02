@@ -52,9 +52,18 @@ EM_QFT_INTERFACE_ALIGNMENT_BRIDGE_PATH = (
     / "Bridges"
     / "EM_QFT_InterfaceAlignmentSemanticBridge.lean"
 )
+EM_QFT_POST_BUDGET_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "EMQFTPostBudgetCrossPillarReview.lean"
+)
 
-LIVE_TARGET = "em_qft_post_budget_cross_pillar_review"
-PREVIOUS_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
+LIVE_TARGET = "cite_only_bounded_retained_assumptions"
+PREVIOUS_TARGET = "em_qft_post_budget_cross_pillar_review"
+INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
 EXTRACTION_TARGET = "extract_em_qft_physics_blocker_into_protocol_row"
 QM_REVIEW_TARGET = "qm_evolution_post_budget_cross_pillar_review"
@@ -74,6 +83,7 @@ PAUSED_LANES = {
     "qft_gr_source_map",
     "sr_covariance_cosmology_regime_transport",
     "qm_evolution_contract",
+    "em_qft_physics_blocker_extraction",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -129,28 +139,22 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        EM_QFT_INTERFACE_ALIGNMENT_BRIDGE_PATH.relative_to(REPO_ROOT)
+        EM_QFT_POST_BUDGET_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     assert set(state["paused_lanes"]) == PAUSED_LANES
-    assert state["active_lane"] == "em_qft_physics_blocker_extraction"
+    assert state["active_lane"] == "master_action_dependency_frontier"
 
     active_workstreams = [
         item for item in payload["workstreams"] if item.get("status") == "active"
     ]
     assert [item["workstream_id"] for item in active_workstreams] == [
-        "em_qft_physics_blocker_extraction"
+        "master_action_dependency_frontier"
     ]
     assert active_workstreams[0]["authorized_next_strict_target"] == LIVE_TARGET
     assert active_workstreams[0]["consumed_target"] == PREVIOUS_TARGET
-    assert active_workstreams[0]["prior_consumed_target"] == SHARED_DYNAMICS_TARGET
-    assert active_workstreams[0]["latest_surface"] == "EM_QFT_INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_v0"
-    assert active_workstreams[0]["last_fresh_delta_kind"] == "counterexample"
-    assert active_workstreams[0]["last_fresh_delta_id"] == EM_QFT_FRESH_DELTA_ID
-    assert active_workstreams[0]["primary_blocker"] == EM_QFT_PRIMARY_BLOCKER
-    assert active_workstreams[0]["secondary_blocker"] == EM_QFT_SECONDARY_BLOCKER
-    assert active_workstreams[0]["same_lane_continuation"] == "not_authorized_attempt_budget_reached"
-    assert active_workstreams[0]["post_budget_review_status"] == "pending"
+    assert active_workstreams[0]["latest_surface"] == "em_qft_post_budget_cross_pillar_review_v0"
+    assert active_workstreams[0]["same_lane_continuation"] == "citation_boundary_only"
 
     active_targets = {state["live_next_target"], active_workstreams[0]["authorized_next_strict_target"]}
     assert active_targets == {LIVE_TARGET}
@@ -164,6 +168,7 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     protocol_text = _read(EM_QFT_PROTOCOL_ROW_PATH)
     shared_bridge_text = _read(EM_QFT_SHARED_DYNAMICS_BRIDGE_PATH)
     interface_bridge_text = _read(EM_QFT_INTERFACE_ALIGNMENT_BRIDGE_PATH)
+    em_qft_review_text = _read(EM_QFT_POST_BUDGET_REVIEW_PATH)
 
     assert CURRENT_TARGET_TOKEN in readme_text
     assert f'"live_next_target": "{LIVE_TARGET}"' in _read(REGISTRY_PATH)
@@ -185,12 +190,16 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     ) in protocol_text
     assert (
         'def emQFTInterfaceAlignmentSemanticBridgeTargetId : String :=\n'
-        f'  "{PREVIOUS_TARGET}"'
+        f'  "{INTERFACE_TARGET}"'
     ) in shared_bridge_text
     assert (
         'def emQFTPostBudgetCrossPillarReviewTargetId : String :=\n'
-        f'  "{LIVE_TARGET}"'
+        f'  "{PREVIOUS_TARGET}"'
     ) in interface_bridge_text
+    assert (
+        'def masterActionCitationBoundaryTargetId : String :=\n'
+        f'  "{LIVE_TARGET}"'
+    ) in em_qft_review_text
     assert payload["current_target_state"]["live_next_target"] == LIVE_TARGET
 
 
@@ -218,14 +227,22 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert qm_evolution["stronger_qm_dynamics_bridge_derivation"] == "not_supplied"
 
     em_qft = _workstream(payload, "em_qft_physics_blocker_extraction")
-    assert em_qft["status"] == "active"
-    assert em_qft["authorized_next_strict_target"] == LIVE_TARGET
-    assert em_qft["authorization_evidence"] == str(
-        EM_QFT_PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)
+    assert em_qft["status"] == "paused"
+    assert em_qft["post_budget_review_status"] == "completed"
+    assert em_qft["post_budget_review_evidence"] == str(
+        EM_QFT_POST_BUDGET_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert em_qft["last_fresh_delta_evidence"] == str(
-        EM_QFT_INTERFACE_ALIGNMENT_BRIDGE_PATH.relative_to(REPO_ROOT)
+    assert em_qft["same_lane_continuation"] == "not_authorized_attempt_budget_reached"
+    assert em_qft["source_current_bridge_slice_authorized"] == "not_authorized"
+    assert em_qft["gauge_quantization_bridge_slice_authorized"] == "not_authorized"
+
+    master_action = _workstream(payload, "master_action_dependency_frontier")
+    assert master_action["status"] == "active"
+    assert master_action["authorized_next_strict_target"] == LIVE_TARGET
+    assert master_action["authorization_evidence"] == str(
+        EM_QFT_POST_BUDGET_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
+    assert master_action["latest_surface"] == "em_qft_post_budget_cross_pillar_review_v0"
 
 
 def test_paused_lanes_do_not_advertise_active_continuation() -> None:
@@ -264,6 +281,7 @@ def test_historical_post_sweep_queue_cannot_override_live_target() -> None:
     assert historical_targets
     assert LIVE_TARGET not in historical_targets
     assert PREVIOUS_TARGET not in historical_targets
+    assert INTERFACE_TARGET not in historical_targets
     assert SHARED_DYNAMICS_TARGET not in historical_targets
     assert EXTRACTION_TARGET not in historical_targets
     assert QM_REVIEW_TARGET not in historical_targets
@@ -287,6 +305,7 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
     protocol_text = _read(EM_QFT_PROTOCOL_ROW_PATH)
     shared_bridge_text = _read(EM_QFT_SHARED_DYNAMICS_BRIDGE_PATH)
     interface_bridge_text = _read(EM_QFT_INTERFACE_ALIGNMENT_BRIDGE_PATH)
+    em_qft_review_text = _read(EM_QFT_POST_BUDGET_REVIEW_PATH)
     for theorem_name in [
         "em_qft_protocol_row_phase2_not_authorized_v0",
         "em_qft_protocol_row_seam_not_closed_v0",
@@ -311,6 +330,14 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
         "em_qft_interface_alignment_governance_manifest_not_enrolled_v0",
     ]:
         assert theorem_name in interface_bridge_text
+    for theorem_name in [
+        "em_qft_post_budget_phase2_not_authorized_v0",
+        "em_qft_post_budget_em_qft_seam_not_closed_v0",
+        "em_qft_post_budget_master_action_not_promoted_v0",
+        "em_qft_post_budget_no_empirical_claim_v0",
+        "em_qft_post_budget_governance_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in em_qft_review_text
 
 
 def test_current_target_gate_is_not_governance_manifest_enrolled() -> None:

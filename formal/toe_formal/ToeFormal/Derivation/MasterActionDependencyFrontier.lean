@@ -108,9 +108,9 @@ def masterActionCitationBoundariesV0 :
   , { retained_assumption_id := "SEAM_EM_QFT_PHYSICS_COMPLETE_v0:NO"
       dependency_kind := .required_for_coherence
       allowed_citation_scope :=
-        "em_qft_governance_surface_with_physics_blocker_retained_next_extraction_target"
+        "em_qft_governance_complete_physics_incomplete_with_shared_dynamics_residual_unification_and_interface_alignment_obstructions_post_budget_retained"
       forbidden_promotion_scope :=
-        "no_em_qft_physics_completion_or_master_action_support"
+        "no_em_qft_physics_completion_no_source_current_or_gauge_quantization_closure_no_master_action_support"
       status := .retained }
   , { retained_assumption_id :=
         "gr_qm_master_action_citation_scope_boundary_retained"

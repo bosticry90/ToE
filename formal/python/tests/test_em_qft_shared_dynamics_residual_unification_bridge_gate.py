@@ -32,6 +32,14 @@ FRONTIER_PATH = (
     / "Derivation"
     / "CrossPillarClosureFrontier.lean"
 )
+POST_BUDGET_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "EMQFTPostBudgetCrossPillarReview.lean"
+)
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 GOVERNANCE_MANIFEST_PATH = (
     REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_TEST_MANIFEST_v1.json"
@@ -51,7 +59,8 @@ SEAM_INVENTORY_PATH = (
 
 CONSUMED_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
-LIVE_TARGET = "em_qft_post_budget_cross_pillar_review"
+POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
+LIVE_TARGET = "cite_only_bounded_retained_assumptions"
 SURFACE_ID = "EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_BRIDGE_v0"
 FRESH_DELTA_ID = (
     "EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_BRIDGE_COUNTEREXAMPLE_FRESH_DELTA_v0"
@@ -108,13 +117,14 @@ def test_shared_dynamics_bridge_preserves_nonpromotion_boundaries() -> None:
         assert token in text
 
 
-def test_frontier_and_aggregate_advance_after_interface_alignment_slice() -> None:
+def test_frontier_and_aggregate_advance_after_post_budget_review() -> None:
     aggregate_text = _read(AGGREGATE_PATH)
     frontier_text = _read(FRONTIER_PATH)
 
     assert "import ToeFormal.Bridges.EM_QFT_SharedDynamicsResidualUnificationBridge" in aggregate_text
     assert "import ToeFormal.Bridges.EM_QFT_InterfaceAlignmentSemanticBridge" in aggregate_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{INTERFACE_TARGET}"' in frontier_text
+    assert "import ToeFormal.Derivation.EMQFTPostBudgetCrossPillarReview" in aggregate_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{POST_BUDGET_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
     assert "PHASE1-BLOCKER-EMQFT-INTERFACE-ALIGNMENT-SEMANTIC-BRIDGE-RETAINED" in frontier_text
@@ -124,20 +134,29 @@ def test_registry_tracks_focused_em_qft_bridge_slice() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == INTERFACE_TARGET
+    assert state["previous_live_next_target"] == POST_BUDGET_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        INTERFACE_BRIDGE_PATH.relative_to(REPO_ROOT)
+        POST_BUDGET_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
 
     assert RETAINED_BLOCKER in payload["retained_blocker_coverage"]
     assert CONSUMED_TARGET in payload["next_strict_target_coverage"]
     assert INTERFACE_TARGET in payload["next_strict_target_coverage"]
+    assert POST_BUDGET_TARGET in payload["next_strict_target_coverage"]
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
-    assert [item["workstream_id"] for item in active] == ["em_qft_physics_blocker_extraction"]
-    workstream = active[0]
+    assert [item["workstream_id"] for item in active] == ["master_action_dependency_frontier"]
+    assert active[0]["consumed_target"] == POST_BUDGET_TARGET
+    assert active[0]["authorized_next_strict_target"] == LIVE_TARGET
+    assert active[0]["latest_surface"] == "em_qft_post_budget_cross_pillar_review_v0"
+
+    workstream = next(
+        item for item in payload["workstreams"]
+        if item["workstream_id"] == "em_qft_physics_blocker_extraction"
+    )
+    assert workstream["status"] == "paused"
     assert workstream["retained_blocker"] == "PHASE1-BLOCKER-EMQFT-INTERFACE-ALIGNMENT-SEMANTIC-BRIDGE-RETAINED"
     assert workstream["prior_consumed_target"] == CONSUMED_TARGET
     assert workstream["consumed_target"] == INTERFACE_TARGET
@@ -148,6 +167,7 @@ def test_registry_tracks_focused_em_qft_bridge_slice() -> None:
     assert workstream["governance_witness_only_bridge_closure"] == "refuted"
     assert workstream["zero_residual_only_bridge_closure"] == "refuted"
     assert workstream["interface_alignment_only_source_current_closure"] == "refuted"
+    assert workstream["post_budget_review_status"] == "completed"
 
 
 def test_docs_expose_next_target_without_manifest_enrollment() -> None:
