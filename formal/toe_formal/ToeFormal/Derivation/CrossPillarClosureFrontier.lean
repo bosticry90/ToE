@@ -103,12 +103,13 @@ def crossPillarClosureFrontierV0 :
         "rotate_to_qm_stat_transport_residual_semantics"
       status := .retained }
   , { row := .qmEvolution
-      current_strongest_surface := "QM evolution contract-only surface"
+      current_strongest_surface :=
+        "QM evolution contract plus transport-hypotheses semantic-bridge obstruction"
       retained_blocker :=
-        "qm_evolution_contract_to_schrodinger_unitary_recovery_retained"
+        "PHASE1-BLOCKER-QMSTAT-EVOLUTION-MAP-TO-TRANSPORT-HYPOTHESES-RETAINED"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
-      next_strict_slice := "derive_or_refute_evolution_map_to_transport_hypotheses"
+      next_strict_slice := "derive_or_refute_evolution_to_transport_semantic_bridge"
       status := .retained }
   , { row := .qmSTAT
       current_strongest_surface :=

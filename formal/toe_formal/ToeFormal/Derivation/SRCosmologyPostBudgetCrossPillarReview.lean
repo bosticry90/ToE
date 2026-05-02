@@ -65,6 +65,10 @@ def qmEvolutionTransportHypothesesSelectedSliceId : String :=
 def qmEvolutionTransportHypothesesTargetId : String :=
   "derive_or_refute_evolution_map_to_transport_hypotheses"
 
+/-- Live QM evolution target after the selected transport-hypotheses slice lands. -/
+def qmEvolutionToTransportSemanticBridgeTargetId : String :=
+  "derive_or_refute_evolution_to_transport_semantic_bridge"
+
 /-- Validation target for the selected QM evolution transport-hypotheses slice. -/
 def qmEvolutionTransportHypothesesValidationTarget : String :=
   "lake_build_ToeFormal.QM.EvolutionContract"
@@ -293,11 +297,11 @@ theorem sr_cosmo_post_budget_selected_strict_target_v0 :
       qmEvolutionTransportHypothesesTargetId := by
   rfl
 
-/-- The selected target is the QM evolution row's recorded frontier target. -/
-theorem sr_cosmo_post_budget_qm_evolution_is_frontier_row_target_v0 :
+/-- The QM evolution row has advanced to the retained semantic-bridge target. -/
+theorem sr_cosmo_post_budget_qm_evolution_frontier_advanced_to_semantic_bridge_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       ((crossPillarClosureFrontierV0.drop 1).head?) =
-      some qmEvolutionTransportHypothesesTargetId := by
+      some qmEvolutionToTransportSemanticBridgeTargetId := by
   rfl
 
 /-- The SR row now records the review rotation to QM evolution work. -/
