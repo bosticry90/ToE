@@ -69,9 +69,9 @@ def masterActionCitationBoundariesV0 :
         "PHASE1-BLOCKER-QMSTAT-EVOLUTION-TO-TRANSPORT-SEMANTIC-BRIDGE-RETAINED"
       dependency_kind := .required_for_coherence
       allowed_citation_scope :=
-        "supplied_qm_evolution_to_transport_semantic_bridge_constructs_qm_stat_transport_hypotheses"
+        "supplied_qm_evolution_to_transport_semantic_bridge_constructs_qm_stat_transport_hypotheses_post_budget_review_retained"
       forbidden_promotion_scope :=
-        "no_derivation_of_bridge_from_qm_evolution_contract_alone_no_qm_stat_seam_closure"
+        "no_stronger_qm_dynamics_derivation_no_same_lane_qm_evolution_continuation_no_qm_stat_seam_closure"
       status := .retained }
   , { retained_assumption_id :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED"
@@ -108,7 +108,7 @@ def masterActionCitationBoundariesV0 :
   , { retained_assumption_id := "SEAM_EM_QFT_PHYSICS_COMPLETE_v0:NO"
       dependency_kind := .required_for_coherence
       allowed_citation_scope :=
-        "em_qft_governance_surface_with_physics_blocker_retained"
+        "em_qft_governance_surface_with_physics_blocker_retained_next_extraction_target"
       forbidden_promotion_scope :=
         "no_em_qft_physics_completion_or_master_action_support"
       status := .retained }

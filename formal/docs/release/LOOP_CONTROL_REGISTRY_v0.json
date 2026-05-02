@@ -85,6 +85,30 @@
       "validation_command": "./py.ps1 -m pytest formal/python/tests/test_loop_control_registry_v0_gate.py -q"
     }
   ],
+  "current_target_state": {
+    "schema_id": "CURRENT_TARGET_STATE_v0",
+    "previous_live_next_target": "qm_evolution_post_budget_cross_pillar_review",
+    "live_next_target": "extract_em_qft_physics_blocker_into_protocol_row",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QMEvolutionPostBudgetCrossPillarReview.lean",
+    "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
+    "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
+    "paused_lanes": [
+      "scalar_qft_a2a15a1",
+      "qm_stat_transport_residual",
+      "qft_gr_source_map",
+      "sr_covariance_cosmology_regime_transport",
+      "qm_evolution_contract"
+    ],
+    "active_lane": "em_qft_physics_blocker_extraction",
+    "forbidden_promotions": [
+      "phase2_authorization",
+      "seam_closure",
+      "empirical_claim",
+      "master_action_promotion",
+      "governance_manifest_enrollment"
+    ],
+    "focused_gate": "formal/python/tests/test_current_target_freshness_gate.py"
+  },
   "controls": [
     {
       "control_id": "scalar_post_capstone_anti_loop",
@@ -102,7 +126,7 @@
       "current_blocker_ids": [
         "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED"
       ],
-      "next_action": "derive_or_refute_evolution_to_transport_semantic_bridge",
+      "next_action": "paused_no_scalar_reopen_until_dependency_graph_change",
       "validation_command": "cd formal/toe_formal; lake build ToeFormal"
     },
     {
@@ -128,7 +152,7 @@
       "control_id": "post_sweep_queue_discipline",
       "control_type": "queue_cap",
       "scope": "PostSweepTheoremQueue.lean",
-      "status": "active",
+      "status": "archived",
       "source_tokens": [
         "POST_SWEEP_NEXT_THREE_THEOREM_SLICES_v0"
       ],
@@ -142,6 +166,8 @@
       "queue_cap": 3,
       "one_blocker_per_slice": true,
       "one_validation_target_per_slice": true,
+      "authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
+      "live_next_target_authority": false,
       "validation_command": "cd formal/toe_formal; lake build ToeFormal"
     },
     {
@@ -492,7 +518,7 @@
     {
       "from": "post_sweep_theorem_queue",
       "to": "master_action_dependency_frontier",
-      "status": "active",
+      "status": "archived",
       "evidence": "formal/toe_formal/ToeFormal/Derivation/PostSweepTheoremQueue.lean"
     },
     {
@@ -566,6 +592,12 @@
       "to": "qm_evolution_post_budget_review",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Bridges/QM_STAT_EvolutionTransportSemanticBridge.lean"
+    },
+    {
+      "from": "qm_evolution_post_budget_review",
+      "to": "em_qft_physics_blocker_extraction",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QMEvolutionPostBudgetCrossPillarReview.lean"
     }
   ],
   "cycle_waivers": [],
@@ -668,11 +700,34 @@
       "last_fresh_delta_evidence": "formal/toe_formal/ToeFormal/Bridges/QM_STAT_EvolutionTransportSemanticBridge.lean",
       "latest_surface": "QM_STAT_EVOLUTION_TRANSPORT_SEMANTIC_BRIDGE_v0",
       "same_lane_continuation": "not_authorized",
-      "next_strict_target": "qm_evolution_post_budget_cross_pillar_review",
-      "next_action_after_retention": "qm_evolution_post_budget_cross_pillar_review",
-      "attempt_budget_status": "two_consecutive_retained_slices_reached_post_budget_review_required",
-      "post_budget_review_status": "pending",
+      "next_strict_target": "extract_em_qft_physics_blocker_into_protocol_row",
+      "next_action_after_retention": "extract_em_qft_physics_blocker_into_protocol_row",
+      "attempt_budget_status": "two_consecutive_retained_slices_reached_post_budget_review_completed",
+      "post_budget_review_status": "completed",
+      "post_budget_review_evidence": "formal/toe_formal/ToeFormal/Derivation/QMEvolutionPostBudgetCrossPillarReview.lean",
+      "post_budget_review_decision": "retain_semantic_bridge_and_rotate_to_em_qft_physics_blocker_extraction",
+      "stronger_qm_dynamics_bridge_derivation": "not_supplied",
+      "scalar_reopen": "not_authorized",
+      "qm_stat_reopen": "not_authorized",
+      "qft_gr_reopen": "not_authorized",
+      "sr_cosmo_reopen": "not_authorized",
       "non_promotion_boundary": "no_qm_seam_closure_no_qm_stat_seam_closure_no_phase2_no_master_action_promotion_no_empirical_claim"
+    },
+    {
+      "workstream_id": "em_qft_physics_blocker_extraction",
+      "status": "active",
+      "retained_blocker": "SEAM_EM_QFT_PHYSICS_COMPLETE_v0:NO",
+      "consecutive_slices_after_retention": 0,
+      "allowed_reopen_conditions": [
+        "authorized_reopen_after_cross_pillar_review",
+        "new_theorem",
+        "counterexample",
+        "stronger_evidence_object"
+      ],
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QMEvolutionPostBudgetCrossPillarReview.lean",
+      "authorized_next_strict_target": "extract_em_qft_physics_blocker_into_protocol_row",
+      "same_lane_continuation": "not_yet_applicable",
+      "non_promotion_boundary": "no_em_qft_seam_closure_no_phase2_no_master_action_promotion_no_empirical_claim"
     }
   ],
   "promotion_escrow": {

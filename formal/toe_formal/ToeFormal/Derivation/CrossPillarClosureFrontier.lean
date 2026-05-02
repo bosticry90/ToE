@@ -195,6 +195,14 @@ theorem cross_pillar_closure_frontier_length_v0 :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
+/-- Previous live target consumed by the QM evolution post-budget review. -/
+def previousLiveNextStrictTargetV0 : String :=
+  "qm_evolution_post_budget_cross_pillar_review"
+
+/-- Current live target after QM evolution post-budget review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "extract_em_qft_physics_blocker_into_protocol_row"
+
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
   all_pillar_rows_recorded : Prop
@@ -211,6 +219,8 @@ structure CrossPillarClosureFrontierStatus where
   master_action_promoted : Prop
   master_action_not_promoted : Not master_action_promoted
   surface_id : String
+  previous_live_next_target : String
+  current_live_next_target : String
   row_ids : List String
   retained_blockers : List String
   next_strict_slices : List String
@@ -237,6 +247,8 @@ def crossPillarClosureFrontierStatusV0 :
     intro h
     exact h
   surface_id := crossPillarClosureFrontierSurfaceId
+  previous_live_next_target := previousLiveNextStrictTargetV0
+  current_live_next_target := currentLiveNextStrictTargetV0
   row_ids := crossPillarClosureFrontierV0.map
     (fun entry => crossPillarFrontierRowId entry.row)
   retained_blockers := crossPillarClosureFrontierV0.map
@@ -299,6 +311,20 @@ theorem cross_pillar_frontier_master_action_not_promoted_v0 :
   exact
     crossPillarClosureFrontierStatusReadoutV0
       |>.master_action_not_promoted
+
+/-- The frontier exposes exactly one live current target for schedulers. -/
+theorem cross_pillar_frontier_current_live_target_v0 :
+    (crossPillarClosureFrontierStatusReadoutV0
+      |>.current_live_next_target) =
+      currentLiveNextStrictTargetV0 := by
+  rfl
+
+/-- The previous live target remains recorded only as the consumed review. -/
+theorem cross_pillar_frontier_previous_live_target_v0 :
+    (crossPillarClosureFrontierStatusReadoutV0
+      |>.previous_live_next_target) =
+      previousLiveNextStrictTargetV0 := by
+  rfl
 
 end CrossPillarClosureFrontier
 end Derivation

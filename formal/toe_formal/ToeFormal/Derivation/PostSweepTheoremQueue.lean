@@ -1,13 +1,14 @@
 /-
 ToeFormal/Derivation/PostSweepTheoremQueue.lean
 
-First theorem-slice queue after the cross-pillar frontier sweep.
+Historical first theorem-slice queue after the cross-pillar frontier sweep.
 
 Scope:
-- rank the next three theorem slices by cross-pillar leverage
+- keep the first-wave three-slice queue available for traceability only
 - assign one retained blocker and one validation target to each slice
 - keep scalar endpoint-flux closure as local proof debt, not the only active
   workstream
+- expose that this surface is not the live next-target scheduler
 - make no Phase 2, seam, or master-action promotion claim
 -/
 
@@ -44,7 +45,7 @@ structure PostSweepTheoremSlice where
   validation_target : String
   status : DerivationStatus
 
-/-- The next three theorem slices after the cross-pillar sweep. -/
+/-- Historical first-wave theorem slices after the cross-pillar sweep. -/
 def postSweepNextThreeTheoremSlicesV0 :
     List PostSweepTheoremSlice :=
   [ { rank := 1
@@ -79,7 +80,7 @@ def postSweepNextThreeTheoremSlicesV0 :
       status := .retained }
   ]
 
-/-- The post-sweep theorem queue has exactly three bounded slices. -/
+/-- The historical post-sweep theorem queue has exactly three bounded slices. -/
 theorem post_sweep_next_three_theorem_slices_length_v0 :
     postSweepNextThreeTheoremSlicesV0.length = 3 := by
   rfl
@@ -87,6 +88,10 @@ theorem post_sweep_next_three_theorem_slices_length_v0 :
 /-- Surface id for the post-sweep queue. -/
 def postSweepTheoremQueueSurfaceId : String :=
   "post_sweep_theorem_queue_v0"
+
+/-- Exposed marker: this first-wave queue is historical, not live authority. -/
+def postSweepTheoremQueueAuthorityStatusId : String :=
+  "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0"
 
 /-- Status readout for the post-sweep queue. -/
 structure PostSweepTheoremQueueStatus where
@@ -102,12 +107,15 @@ structure PostSweepTheoremQueueStatus where
   phase2_not_authorized : Not phase2Authorized
   master_action_promoted : Prop
   master_action_not_promoted : Not master_action_promoted
+  live_next_target_source : Prop
+  live_next_target_source_not_authorized : Not live_next_target_source
   surface_id : String
+  authority_status_id : String
   slice_ids : List String
   retained_blockers : List String
   validation_targets : List String
 
-/-- Current queue result: three ranked theorem slices, no promotion. -/
+/-- Historical queue result: three ranked slices, no live target authority. -/
 def postSweepTheoremQueueStatusV0 :
     PostSweepTheoremQueueStatus where
   next_three_slices_recorded := True
@@ -124,7 +132,12 @@ def postSweepTheoremQueueStatusV0 :
   master_action_not_promoted := by
     intro h
     exact h
+  live_next_target_source := False
+  live_next_target_source_not_authorized := by
+    intro h
+    exact h
   surface_id := postSweepTheoremQueueSurfaceId
+  authority_status_id := postSweepTheoremQueueAuthorityStatusId
   slice_ids :=
     postSweepNextThreeTheoremSlicesV0.map
       (fun item => item.slice_id)
@@ -181,6 +194,22 @@ theorem post_sweep_theorem_queue_master_action_not_promoted_v0 :
   exact
     postSweepTheoremQueueStatusReadoutV0
       |>.master_action_not_promoted
+
+/-- The first-wave queue is explicitly historical/non-live. -/
+theorem post_sweep_queue_historical_nonlive_v0 :
+    (postSweepTheoremQueueStatusReadoutV0
+      |>.authority_status_id) =
+      postSweepTheoremQueueAuthorityStatusId := by
+  rfl
+
+/-- The historical queue cannot supply or override the live next target. -/
+theorem post_sweep_queue_not_live_target_source_v0 :
+    Not
+      (postSweepTheoremQueueStatusReadoutV0
+        |>.live_next_target_source) := by
+  exact
+    postSweepTheoremQueueStatusReadoutV0
+      |>.live_next_target_source_not_authorized
 
 end PostSweepTheoremQueue
 end Derivation

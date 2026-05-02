@@ -32,6 +32,11 @@ Authority-growth budget enforcement is pinned by `formal/docs/release/LOOP_CONTR
 Support-only governance work cannot become active science unless it declares an allowed scientific delta class and passes the promotion gate.
 Registry or gate additions remain support work unless they directly protect non-claim boundary integrity or unblock the active scientific tranche.
 
+## Current-Target Freshness Binding
+The single live next target is read from `CURRENT_TARGET_STATE_v0` in `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`.
+Focused validation for current-target freshness lives at `formal/python/tests/test_current_target_freshness_gate.py`.
+Historical queue surfaces, including `HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0`, cannot override the live target.
+
 ## Promotion Gate
 A tranche promotion must fail when any of these are true:
 1. missing scientific delta class,
