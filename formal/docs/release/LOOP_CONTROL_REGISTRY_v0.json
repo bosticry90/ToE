@@ -87,9 +87,9 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge",
-    "live_next_target": "derive_or_refute_em_qft_interface_alignment_semantic_bridge",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Bridges/EM_QFT_SharedDynamicsResidualUnificationBridge.lean",
+    "previous_live_next_target": "derive_or_refute_em_qft_interface_alignment_semantic_bridge",
+    "live_next_target": "em_qft_post_budget_cross_pillar_review",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Bridges/EM_QFT_InterfaceAlignmentSemanticBridge.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
@@ -482,6 +482,7 @@
     "gr_qm_master_action_citation_scope_boundary_retained",
     "SEAM_EM_QFT_PHYSICS_COMPLETE_v0:NO",
     "PHASE1-BLOCKER-EMQFT-SHARED-DYNAMICS-RESIDUAL-UNIFICATION-BRIDGE-RETAINED",
+    "PHASE1-BLOCKER-EMQFT-INTERFACE-ALIGNMENT-SEMANTIC-BRIDGE-RETAINED",
     "master_action_dependency_frontier_retained_no_promotion"
   ],
   "next_strict_target_coverage": [
@@ -502,6 +503,7 @@
     "extract_em_qft_physics_blocker_into_protocol_row",
     "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge",
     "derive_or_refute_em_qft_interface_alignment_semantic_bridge",
+    "em_qft_post_budget_cross_pillar_review",
     "cite_only_bounded_retained_assumptions"
   ],
   "citation_boundary_coverage": [
@@ -613,6 +615,12 @@
       "to": "em_qft_interface_alignment_semantic_bridge",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Bridges/EM_QFT_SharedDynamicsResidualUnificationBridge.lean"
+    },
+    {
+      "from": "em_qft_interface_alignment_semantic_bridge",
+      "to": "em_qft_post_budget_review",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Bridges/EM_QFT_InterfaceAlignmentSemanticBridge.lean"
     }
   ],
   "cycle_waivers": [],
@@ -731,8 +739,8 @@
     {
       "workstream_id": "em_qft_physics_blocker_extraction",
       "status": "active",
-      "retained_blocker": "PHASE1-BLOCKER-EMQFT-SHARED-DYNAMICS-RESIDUAL-UNIFICATION-BRIDGE-RETAINED",
-      "consecutive_slices_after_retention": 1,
+      "retained_blocker": "PHASE1-BLOCKER-EMQFT-INTERFACE-ALIGNMENT-SEMANTIC-BRIDGE-RETAINED",
+      "consecutive_slices_after_retention": 2,
       "allowed_reopen_conditions": [
         "authorized_reopen_after_cross_pillar_review",
         "new_theorem",
@@ -740,27 +748,35 @@
         "stronger_evidence_object"
       ],
       "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/EMQFTPhysicsBlockerProtocolRow.lean",
-      "consumed_target": "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge",
-      "prior_consumed_target": "extract_em_qft_physics_blocker_into_protocol_row",
-      "prior_surface": "EM_QFT_PHYSICS_BLOCKER_PROTOCOL_ROW_v0",
-      "latest_surface": "EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_BRIDGE_v0",
+      "consumed_target": "derive_or_refute_em_qft_interface_alignment_semantic_bridge",
+      "prior_consumed_target": "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge",
+      "prior_surface": "EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_BRIDGE_v0",
+      "latest_surface": "EM_QFT_INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_v0",
       "last_fresh_delta_kind": "counterexample",
-      "last_fresh_delta_id": "EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_BRIDGE_COUNTEREXAMPLE_FRESH_DELTA_v0",
-      "last_fresh_delta_evidence": "formal/toe_formal/ToeFormal/Bridges/EM_QFT_SharedDynamicsResidualUnificationBridge.lean",
+      "last_fresh_delta_id": "EM_QFT_INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_COUNTEREXAMPLE_FRESH_DELTA_v0",
+      "last_fresh_delta_evidence": "formal/toe_formal/ToeFormal/Bridges/EM_QFT_InterfaceAlignmentSemanticBridge.lean",
       "primary_blocker": "shared_dynamics_and_residual_unification",
       "secondary_blocker": "interface_alignment_semantic_bridge",
       "shared_dynamics_residual_unification_route": "supplied_bridge_package_route_available",
       "governance_witness_only_bridge_closure": "refuted",
       "zero_residual_only_bridge_closure": "refuted",
+      "interface_alignment_route": "supplied_interface_alignment_package_route_available",
+      "interface_alignment_only_source_current_closure": "refuted",
+      "interface_alignment_only_gauge_quantization_closure": "refuted",
+      "source_current_semantics": "still_required",
+      "gauge_quantization_semantics": "still_required",
       "required_evidence": [
         "EM_QFT_INTERFACE_ALIGNMENT_BRIDGE_OBLIGATION_v0",
         "EM_QFT_SHARED_DYNAMICS_WITNESS_REQUIRED_v0",
-        "EM_QFT_RESIDUAL_UNIFICATION_SEMANTIC_BRIDGE_REQUIRED_v0"
+        "EM_QFT_RESIDUAL_UNIFICATION_SEMANTIC_BRIDGE_REQUIRED_v0",
+        "EM_QFT_SOURCE_CURRENT_SEMANTICS_BRIDGE_REQUIRED_v0",
+        "EM_QFT_GAUGE_QUANTIZATION_SEMANTICS_BRIDGE_REQUIRED_v0"
       ],
       "minimum_closure_condition": "theorem_linked_shared_dynamics_residual_unification_and_interface_alignment_discharge",
-      "authorized_next_strict_target": "derive_or_refute_em_qft_interface_alignment_semantic_bridge",
-      "same_lane_continuation": "authorized_bounded_interface_alignment_derivation_or_refutation",
-      "attempt_budget_status": "one_consecutive_retained_slice_after_blocker_extraction",
+      "authorized_next_strict_target": "em_qft_post_budget_cross_pillar_review",
+      "same_lane_continuation": "not_authorized_attempt_budget_reached",
+      "attempt_budget_status": "two_consecutive_retained_slices_reached_post_budget_review_required",
+      "post_budget_review_status": "pending",
       "non_promotion_boundary": "no_em_qft_seam_closure_no_phase2_no_master_action_promotion_no_empirical_claim_no_governance_manifest_enrollment"
     }
   ],

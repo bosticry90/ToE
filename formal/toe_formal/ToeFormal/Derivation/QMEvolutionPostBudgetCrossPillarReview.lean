@@ -288,10 +288,10 @@ theorem qm_evolution_post_budget_selected_next_target_v0 :
       emQFTPhysicsBlockerExtractionTargetId := by
   rfl
 
-/-- The frontier records the QM review's selected target as the consumed target. -/
-theorem qm_evolution_post_budget_frontier_previous_target_v0 :
-    (crossPillarClosureFrontierStatusReadoutV0
-      |>.previous_live_next_target) =
+/-- The review records EM-QFT blocker extraction as its selected target. -/
+theorem qm_evolution_post_budget_selected_target_is_em_qft_extraction_v0 :
+    (qmEvolutionPostBudgetCrossPillarReviewStatusReadoutV0
+      |>.selected_next_strict_target) =
       emQFTPhysicsBlockerExtractionTargetId := by
   rfl
 

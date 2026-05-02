@@ -32,6 +32,14 @@ SHARED_DYNAMICS_BRIDGE_PATH = (
     / "Bridges"
     / "EM_QFT_SharedDynamicsResidualUnificationBridge.lean"
 )
+INTERFACE_ALIGNMENT_BRIDGE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "EM_QFT_InterfaceAlignmentSemanticBridge.lean"
+)
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 GOVERNANCE_MANIFEST_PATH = (
     REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_TEST_MANIFEST_v1.json"
@@ -45,13 +53,18 @@ SEAM_INVENTORY_PATH = (
 
 CONSUMED_TARGET = "extract_em_qft_physics_blocker_into_protocol_row"
 PROTOCOL_SUCCESSOR_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
-LIVE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
+INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
+LIVE_TARGET = "em_qft_post_budget_cross_pillar_review"
 PRIMARY_BLOCKER = "shared_dynamics_and_residual_unification"
 SECONDARY_BLOCKER = "interface_alignment_semantic_bridge"
 REQUIRED_EVIDENCE = {
     "EM_QFT_INTERFACE_ALIGNMENT_BRIDGE_OBLIGATION_v0",
     "EM_QFT_SHARED_DYNAMICS_WITNESS_REQUIRED_v0",
     "EM_QFT_RESIDUAL_UNIFICATION_SEMANTIC_BRIDGE_REQUIRED_v0",
+}
+REGISTRY_REQUIRED_EVIDENCE = REQUIRED_EVIDENCE | {
+    "EM_QFT_SOURCE_CURRENT_SEMANTICS_BRIDGE_REQUIRED_v0",
+    "EM_QFT_GAUGE_QUANTIZATION_SEMANTICS_BRIDGE_REQUIRED_v0",
 }
 
 
@@ -71,7 +84,7 @@ def test_em_qft_protocol_row_records_blocker_without_promotion() -> None:
         "em_qft_physics_blocker_protocol_row_v0",
         "SEAM-EM-QFT",
         CONSUMED_TARGET,
-        LIVE_TARGET,
+        INTERFACE_TARGET,
         PRIMARY_BLOCKER,
         SECONDARY_BLOCKER,
         "theorem_linked_shared_dynamics_discharge",
@@ -98,7 +111,7 @@ def test_frontier_uses_row_lookup_and_exposes_successor_target() -> None:
     frontier_text = _read(CROSS_PILLAR_FRONTIER_PATH)
 
     assert "def crossPillarFrontierEntryByRow?" in frontier_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{PROTOCOL_SUCCESSOR_TARGET}"' in frontier_text
+    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{INTERFACE_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
 
@@ -117,24 +130,25 @@ def test_loop_registry_and_public_surfaces_follow_em_qft_successor() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == PROTOCOL_SUCCESSOR_TARGET
+    assert state["previous_live_next_target"] == INTERFACE_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        SHARED_DYNAMICS_BRIDGE_PATH.relative_to(REPO_ROOT)
+        INTERFACE_ALIGNMENT_BRIDGE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
     assert PROTOCOL_SUCCESSOR_TARGET in payload["next_strict_target_coverage"]
+    assert INTERFACE_TARGET in payload["next_strict_target_coverage"]
 
     active = [item for item in payload["workstreams"] if item.get("status") == "active"]
     assert [item["workstream_id"] for item in active] == ["em_qft_physics_blocker_extraction"]
-    assert active[0]["prior_consumed_target"] == CONSUMED_TARGET
-    assert active[0]["consumed_target"] == PROTOCOL_SUCCESSOR_TARGET
+    assert active[0]["prior_consumed_target"] == PROTOCOL_SUCCESSOR_TARGET
+    assert active[0]["consumed_target"] == INTERFACE_TARGET
     assert active[0]["authorized_next_strict_target"] == LIVE_TARGET
-    assert active[0]["latest_surface"] == "EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_BRIDGE_v0"
+    assert active[0]["latest_surface"] == "EM_QFT_INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_v0"
     assert active[0]["last_fresh_delta_kind"] == "counterexample"
     assert active[0]["primary_blocker"] == PRIMARY_BLOCKER
     assert active[0]["secondary_blocker"] == SECONDARY_BLOCKER
-    assert set(active[0]["required_evidence"]) == REQUIRED_EVIDENCE
+    assert set(active[0]["required_evidence"]) == REGISTRY_REQUIRED_EVIDENCE
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
     assert (
@@ -144,6 +158,10 @@ def test_loop_registry_and_public_surfaces_follow_em_qft_successor() -> None:
     assert (
         "em_qft_shared_dynamics_residual_unification_bridge",
         "em_qft_interface_alignment_semantic_bridge",
+    ) in edges
+    assert (
+        "em_qft_interface_alignment_semantic_bridge",
+        "em_qft_post_budget_review",
     ) in edges
 
     for path in [REPO_ROOT / "README.md", REPO_ROOT / "State_of_the_Theory.md"]:
@@ -158,6 +176,7 @@ def test_em_qft_seam_registry_names_blocker_and_boundary() -> None:
         assert "SEAM_EM_QFT_PHYSICS_BLOCKER_v0: SHARED_DYNAMICS_AND_RESIDUAL_UNIFICATION_NOT_DISCHARGED" in text
         assert "SEAM_EM_QFT_SECONDARY_PHYSICS_BLOCKER_v0: INTERFACE_ALIGNMENT_SEMANTIC_BRIDGE_NOT_DISCHARGED" in text
         assert "SEAM_EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_STATUS_v0: GOVERNANCE_WITNESS_AND_ZERO_RESIDUAL_ONLY_REFUTED_SUPPLIED_BRIDGE_PACKAGE_ROUTE_RETAINED" in text
+        assert "SEAM_EM_QFT_INTERFACE_ALIGNMENT_STATUS_v0: INTERFACE_ALIGNMENT_ONLY_SOURCE_CURRENT_AND_GAUGE_QUANTIZATION_REFUTED_POST_BUDGET_REVIEW_REQUIRED" in text
         assert f"SEAM_EM_QFT_CURRENT_PHYSICS_BLOCKER_TARGET_v0: {LIVE_TARGET}" in text
         assert "NO_EM_QFT_SEAM_CLOSURE_NO_MASTER_ACTION_PROMOTION" in text
 
