@@ -4,6 +4,13 @@ import json
 from pathlib import Path
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tests.strict_physics_state_helpers import (
+    assert_current_target_consistent,
+    assert_focused_gate_not_manifest_enrolled,
+    assert_frontier_matches_registry,
+    assert_public_surfaces_match_registry,
+    current_target_state,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -109,9 +116,9 @@ REVIEW_TARGET = "review_master_action_dependency_graph_after_citation_language_a
 PRIORITIZATION_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 PROTOCOL_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
 READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
-LIVE_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
-READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Bridges/QM_STAT_SourceProbabilityExtractionSemantics.lean"
+SOURCE_PROBABILITY_TARGET = current_target_state()["previous_live_next_target"]
+LIVE_TARGET = current_target_state()["live_next_target"]
+READINESS_EVIDENCE = current_target_state()["live_next_target_evidence"]
 PRIMARY_BLOCKER = "shared_dynamics_and_residual_unification"
 SECONDARY_BLOCKER = "interface_alignment_semantic_bridge"
 REQUIRED_EVIDENCE = {
@@ -165,6 +172,8 @@ def test_em_qft_protocol_row_records_blocker_without_promotion() -> None:
 
 
 def test_frontier_uses_row_lookup_and_exposes_successor_target() -> None:
+    assert_frontier_matches_registry()
+
     frontier_text = _read(CROSS_PILLAR_FRONTIER_PATH)
 
     assert "def crossPillarFrontierEntryByRow?" in frontier_text
@@ -184,6 +193,9 @@ def test_frontier_uses_row_lookup_and_exposes_successor_target() -> None:
 
 
 def test_loop_registry_and_public_surfaces_follow_em_qft_successor() -> None:
+    assert_current_target_consistent()
+    assert_public_surfaces_match_registry()
+
     payload = _registry()
     state = payload["current_target_state"]
 
@@ -260,5 +272,6 @@ def test_em_qft_seam_registry_names_blocker_and_boundary() -> None:
 
 
 def test_em_qft_protocol_gate_is_focused_not_manifest_enrolled() -> None:
-    manifest_text = _read(GOVERNANCE_MANIFEST_PATH)
-    assert "test_em_qft_physics_blocker_protocol_row_gate.py" not in manifest_text
+    assert_focused_gate_not_manifest_enrolled(
+        "test_em_qft_physics_blocker_protocol_row_gate.py"
+    )

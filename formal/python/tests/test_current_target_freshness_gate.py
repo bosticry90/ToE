@@ -1,18 +1,23 @@
 from __future__ import annotations
 
-import json
 import re
 from pathlib import Path
 from typing import Any
 
-from formal.python.meta.repo_environment import find_repo_root
-
-
-REPO_ROOT = find_repo_root(Path(__file__))
-README_PATH = REPO_ROOT / "README.md"
-REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
-GOVERNANCE_MANIFEST_PATH = (
-    REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_TEST_MANIFEST_v1.json"
+from formal.python.tests.strict_physics_state_helpers import (
+    GOVERNANCE_MANIFEST_PATH,
+    README_PATH,
+    REGISTRY_PATH,
+    REPO_ROOT,
+    active_workstream,
+    assert_current_target_consistent,
+    assert_focused_gate_not_manifest_enrolled,
+    assert_forbidden_promotions_closed,
+    assert_frontier_matches_registry,
+    assert_public_surfaces_match_registry,
+    loop_registry,
+    read_text,
+    workstream,
 )
 CROSS_PILLAR_FRONTIER_PATH = (
     REPO_ROOT / "formal" / "toe_formal" / "ToeFormal" / "Derivation" / "CrossPillarClosureFrontier.lean"
@@ -159,12 +164,11 @@ FORBIDDEN_ASSERTIONS = {
 
 
 def _read(path: Path) -> str:
-    assert path.exists(), f"Missing required file: {path}"
-    return path.read_text(encoding="utf-8")
+    return read_text(path)
 
 
 def _registry() -> dict[str, Any]:
-    return json.loads(_read(REGISTRY_PATH))
+    return loop_registry()
 
 
 def _control(payload: dict[str, Any], control_id: str) -> dict[str, Any]:
@@ -175,10 +179,7 @@ def _control(payload: dict[str, Any], control_id: str) -> dict[str, Any]:
 
 
 def _workstream(payload: dict[str, Any], workstream_id: str) -> dict[str, Any]:
-    for workstream in payload["workstreams"]:
-        if workstream["workstream_id"] == workstream_id:
-            return workstream
-    raise AssertionError(f"Missing workstream: {workstream_id}")
+    return workstream(workstream_id, payload)
 
 
 def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple[str, ...], Any]]:
@@ -196,6 +197,7 @@ def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple
 
 
 def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
+    assert_current_target_consistent()
     payload = _registry()
     state = payload["current_target_state"]
 
@@ -209,28 +211,26 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     assert set(state["paused_lanes"]) == PAUSED_LANES
     assert state["active_lane"] == "qm_stat_transport_residual"
 
-    active_workstreams = [
-        item for item in payload["workstreams"] if item.get("status") == "active"
-    ]
-    assert [item["workstream_id"] for item in active_workstreams] == [
-        "qm_stat_transport_residual"
-    ]
-    assert active_workstreams[0]["authorized_next_strict_target"] == LIVE_TARGET
-    assert active_workstreams[0]["consumed_target"] == SOURCE_PROBABILITY_TARGET
+    current_active_workstream = active_workstream(payload)
+    assert current_active_workstream["workstream_id"] == "qm_stat_transport_residual"
+    assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
+    assert current_active_workstream["consumed_target"] == SOURCE_PROBABILITY_TARGET
     assert (
-        active_workstreams[0]["latest_surface"]
+        current_active_workstream["latest_surface"]
         == "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
     )
     assert (
-        active_workstreams[0]["same_lane_continuation"]
+        current_active_workstream["same_lane_continuation"]
         == "post_source_probability_slice_review_only"
     )
 
-    active_targets = {state["live_next_target"], active_workstreams[0]["authorized_next_strict_target"]}
+    active_targets = {state["live_next_target"], current_active_workstream["authorized_next_strict_target"]}
     assert active_targets == {LIVE_TARGET}
 
 
 def test_readme_registry_and_frontier_agree_on_live_target() -> None:
+    assert_frontier_matches_registry()
+    assert_public_surfaces_match_registry()
     payload = _registry()
     readme_text = _read(README_PATH)
     frontier_text = _read(CROSS_PILLAR_FRONTIER_PATH)
@@ -444,6 +444,7 @@ def test_historical_post_sweep_queue_cannot_override_live_target() -> None:
 
 
 def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
+    assert_forbidden_promotions_closed()
     payload = _registry()
     assertions = payload["non_promotion_assertions"]
     assert set(assertions) == FORBIDDEN_ASSERTIONS
@@ -564,5 +565,4 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
 
 
 def test_current_target_gate_is_not_governance_manifest_enrolled() -> None:
-    manifest_text = _read(GOVERNANCE_MANIFEST_PATH)
-    assert "test_current_target_freshness_gate.py" not in manifest_text
+    assert_focused_gate_not_manifest_enrolled("test_current_target_freshness_gate.py")

@@ -57,6 +57,11 @@ Governance-manifest boundary:
 - These focused gates are not enrolled into `formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json` by this map.
 - Governance-manifest promotion remains subject to the recovery freeze policy.
 
+Focused validation ladder:
+- Default validation order is changed Lean module, direct dependent Lean module, changed focused Python gate, current-target and loop-registry gates, then the relevant doc or inventory gate when public surfaces changed.
+- Full `lake build ToeFormal` and full pytest are escalation-only checks, reserved for broad shared-surface changes, contradictory focused results, or an explicit checkpoint/release confidence requirement.
+- Historical focused gates protect their own artifact tokens and non-promotion boundaries while reading the moving live-target state from `formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`; `test_current_target_freshness_gate.py` remains the exact live-target pin.
+
 Phase 0-5 objective-quality plan status:
 - `SCALAR_QFT_PHASE0_5_OBJECTIVE_QUALITY_COMPLETION_STATUS_v0: NO_FULL_PLAN_COMPLETION_CLAIM_PHASE0_COMPLETE_PHASE1_ADVANCED_PARTIAL_PHASE2_OPEN_PHASE2B_OPEN_PHASE3_PARTIAL_PHASE4_PARTIAL_PHASE5_OPEN`
 - `SCALAR_QFT_PHASE0_5_DECISIVE_OPEN_ITEMS_v0: A1A_A2A15A1_GRAPH_CHANNEL_SEMANTIC_CLOSURE_OPEN_PHASE2_UNAUTHORIZED_PHASE2B_TERM_LEVEL_NEUTRALIZATION_OPEN`

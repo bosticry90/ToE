@@ -5,6 +5,13 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tests.strict_physics_state_helpers import (
+    assert_current_target_consistent,
+    assert_focused_gate_not_manifest_enrolled,
+    assert_frontier_matches_registry,
+    assert_public_surfaces_match_registry,
+    current_target_state,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -100,9 +107,9 @@ REVIEW_TARGET = "review_master_action_dependency_graph_after_citation_language_a
 PRIORITIZATION_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 PROTOCOL_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
 READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
-LIVE_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
-READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Bridges/QM_STAT_SourceProbabilityExtractionSemantics.lean"
+SOURCE_PROBABILITY_TARGET = current_target_state()["previous_live_next_target"]
+LIVE_TARGET = current_target_state()["live_next_target"]
+READINESS_EVIDENCE = current_target_state()["live_next_target_evidence"]
 SURFACE_ID = "em_qft_post_budget_cross_pillar_review_v0"
 REVIEW_EVIDENCE = str(REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 USAGE_EVIDENCE = str(MASTER_ACTION_CITATION_USAGE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
@@ -166,6 +173,8 @@ def test_em_qft_post_budget_review_records_pause_and_rotation_decision() -> None
 
 
 def test_frontier_aggregate_and_master_dependency_surface_follow_review() -> None:
+    assert_frontier_matches_registry()
+
     aggregate_text = _read(AGGREGATE_PATH)
     frontier_text = _read(FRONTIER_PATH)
     master_action_text = _read(MASTER_ACTION_FRONTIER_PATH)
@@ -189,6 +198,8 @@ def test_frontier_aggregate_and_master_dependency_surface_follow_review() -> Non
 
 
 def test_registry_rotates_to_master_action_dependency_frontier() -> None:
+    assert_current_target_consistent()
+
     payload = _registry()
     state = payload["current_target_state"]
 
@@ -224,6 +235,8 @@ def test_registry_rotates_to_master_action_dependency_frontier() -> None:
 
 
 def test_public_surfaces_expose_citation_target_without_manifest_enrollment() -> None:
+    assert_public_surfaces_match_registry()
+
     for path in [
         README_PATH,
         STATE_PATH,
@@ -245,6 +258,6 @@ def test_public_surfaces_expose_citation_target_without_manifest_enrollment() ->
     assert REVIEW_EVIDENCE in inventory_text
     assert "EM_QFT_POST_BUDGET_CROSS_PILLAR_REVIEW_v0" in _read(STATE_PATH)
     assert "SEAM_EM_QFT_POST_BUDGET_STATUS_v0" in _read(SEAM_REGISTRY_PATH)
-    assert "test_em_qft_post_budget_cross_pillar_review_gate.py" not in _read(
-        GOVERNANCE_MANIFEST_PATH
+    assert_focused_gate_not_manifest_enrolled(
+        "test_em_qft_post_budget_cross_pillar_review_gate.py"
     )

@@ -4,6 +4,13 @@ import json
 from pathlib import Path
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tests.strict_physics_state_helpers import (
+    assert_current_target_consistent,
+    assert_focused_gate_not_manifest_enrolled,
+    assert_frontier_matches_registry,
+    assert_public_surfaces_match_registry,
+    current_target_state,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -106,9 +113,9 @@ REVIEW_TARGET = "review_master_action_dependency_graph_after_citation_language_a
 PRIORITIZATION_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 PROTOCOL_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
 READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
-LIVE_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
-READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Bridges/QM_STAT_SourceProbabilityExtractionSemantics.lean"
+SOURCE_PROBABILITY_TARGET = current_target_state()["previous_live_next_target"]
+LIVE_TARGET = current_target_state()["live_next_target"]
+READINESS_EVIDENCE = current_target_state()["live_next_target_evidence"]
 SURFACE_ID = "EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_BRIDGE_v0"
 FRESH_DELTA_ID = (
     "EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_BRIDGE_COUNTEREXAMPLE_FRESH_DELTA_v0"
@@ -166,6 +173,8 @@ def test_shared_dynamics_bridge_preserves_nonpromotion_boundaries() -> None:
 
 
 def test_frontier_and_aggregate_advance_after_post_budget_review() -> None:
+    assert_frontier_matches_registry()
+
     aggregate_text = _read(AGGREGATE_PATH)
     frontier_text = _read(FRONTIER_PATH)
 
@@ -182,6 +191,8 @@ def test_frontier_and_aggregate_advance_after_post_budget_review() -> None:
 
 
 def test_registry_tracks_focused_em_qft_bridge_slice() -> None:
+    assert_current_target_consistent()
+
     payload = _registry()
     state = payload["current_target_state"]
 
@@ -222,6 +233,8 @@ def test_registry_tracks_focused_em_qft_bridge_slice() -> None:
 
 
 def test_docs_expose_next_target_without_manifest_enrollment() -> None:
+    assert_public_surfaces_match_registry()
+
     for path in [
         README_PATH,
         STATE_PATH,
@@ -237,6 +250,6 @@ def test_docs_expose_next_target_without_manifest_enrollment() -> None:
     assert SURFACE_ID in _read(STRICT_MAP_PATH)
     assert "SEAM_EM_QFT_SHARED_DYNAMICS_RESIDUAL_UNIFICATION_STATUS_v0" in _read(SEAM_REGISTRY_PATH)
     assert "SEAM_EM_QFT_INTERFACE_ALIGNMENT_STATUS_v0" in _read(SEAM_REGISTRY_PATH)
-    assert "test_em_qft_shared_dynamics_residual_unification_bridge_gate.py" not in _read(
-        GOVERNANCE_MANIFEST_PATH
+    assert_focused_gate_not_manifest_enrolled(
+        "test_em_qft_shared_dynamics_residual_unification_bridge_gate.py"
     )

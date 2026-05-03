@@ -5,6 +5,13 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tests.strict_physics_state_helpers import (
+    assert_current_target_consistent,
+    assert_focused_gate_not_manifest_enrolled,
+    assert_frontier_matches_registry,
+    assert_public_surfaces_match_registry,
+    workstream,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -54,7 +61,7 @@ MATH_PHYSICS_INVENTORY_PATH = (
 )
 
 SOURCE_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
-LIVE_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
+RESULT_REVIEW_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
 SURFACE_ID = "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
 FRESH_DELTA_ID = (
     "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_CONTRACT_ONLY_COUNTEREXAMPLE_FRESH_DELTA_v0"
@@ -90,7 +97,7 @@ def test_source_probability_semantics_surface_records_route_and_counterexample()
     for token in {
         SURFACE_ID,
         SOURCE_TARGET,
-        LIVE_TARGET,
+        RESULT_REVIEW_TARGET,
         RETAINED_BLOCKER,
         FRESH_DELTA_ID,
         "counterexample",
@@ -127,36 +134,28 @@ def test_source_probability_slice_preserves_fail_closed_boundaries() -> None:
 
 
 def test_frontier_and_aggregate_rotate_to_source_probability_result_review() -> None:
+    assert_frontier_matches_registry()
     aggregate_text = _read(AGGREGATE_PATH)
     frontier_text = _read(FRONTIER_PATH)
 
     assert "import ToeFormal.Bridges.QM_STAT_SourceProbabilityExtractionSemantics" in aggregate_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_TARGET}"' in frontier_text
-    assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
-    assert f'next_strict_slice := "{LIVE_TARGET}"' in frontier_text
     assert "source-probability extraction supplied route and contract-only obstruction" in frontier_text
 
 
 def test_loop_registry_tracks_source_probability_result_review_only() -> None:
+    assert_current_target_consistent()
     payload = _registry()
-    state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == SOURCE_TARGET
-    assert state["live_next_target"] == LIVE_TARGET
-    assert state["live_next_target_evidence"] == SOURCE_PROBABILITY_EVIDENCE
-    assert state["active_lane"] == "qm_stat_transport_residual"
-    assert LIVE_TARGET in payload["next_strict_target_coverage"]
+    assert RESULT_REVIEW_TARGET in payload["next_strict_target_coverage"]
     assert RETAINED_BLOCKER in payload["retained_blocker_coverage"]
 
-    active = [item for item in payload["workstreams"] if item.get("status") == "active"]
-    assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
-    qm_stat = active[0]
+    qm_stat = workstream("qm_stat_transport_residual", payload)
     assert qm_stat["retained_blocker"] == RETAINED_BLOCKER
     assert qm_stat["authorization_evidence"] == SOURCE_PROBABILITY_EVIDENCE
     assert qm_stat["consumed_target"] == SOURCE_TARGET
     assert qm_stat["prior_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
     assert qm_stat["latest_surface"] == SURFACE_ID
-    assert qm_stat["authorized_next_strict_target"] == LIVE_TARGET
+    assert qm_stat["authorized_next_strict_target"] == RESULT_REVIEW_TARGET
     assert qm_stat["same_lane_continuation"] == "post_source_probability_slice_review_only"
     assert qm_stat["bounded_source_probability_slice_authorized"] == "completed"
     assert (
@@ -182,7 +181,7 @@ def test_loop_registry_tracks_source_probability_result_review_only() -> None:
     assert master_action["source_probability_extraction_status"] == (
         "completed_supplied_route_available_contract_only_refuted"
     )
-    assert master_action["authorized_next_strict_target"] == LIVE_TARGET
+    assert master_action["authorized_next_strict_target"] == RESULT_REVIEW_TARGET
     assert master_action["same_lane_continuation"] == "post_source_probability_slice_review_only"
     assert master_action["theorem_work_authorized"] == "no_pending_source_probability_result_review"
 
@@ -198,21 +197,21 @@ def test_loop_registry_tracks_source_probability_result_review_only() -> None:
 
 
 def test_public_surfaces_and_manifest_boundary_are_synchronized() -> None:
+    assert_public_surfaces_match_registry()
     for path in [README_PATH, STATE_PATH, ROADMAP_PATH, STRICT_MAP_PATH]:
         text = _read(path)
-        assert LIVE_TARGET in text, f"{path} missing live target"
         assert "QM_STAT_SourceProbabilityExtractionSemantics.lean" in text
         assert "CONTRACT_ONLY" in text or "contract-only" in text
 
     for path in [SEAM_REGISTRY_PATH, SEAM_INVENTORY_PATH]:
         text = _read(path)
         assert "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0" in text
-        assert LIVE_TARGET in text
+        assert RESULT_REVIEW_TARGET in text
 
     inventory_text = _read(MATH_PHYSICS_INVENTORY_PATH)
     assert "INV-MATH-QMSTAT-SOURCE-PROBABILITY-EXTRACTION-SEMANTICS-v0" in inventory_text
     assert SOURCE_PROBABILITY_EVIDENCE in inventory_text
     assert READINESS_EVIDENCE in inventory_text
-    assert "test_qm_stat_source_probability_extraction_semantics_gate.py" not in _read(
-        GOVERNANCE_MANIFEST_PATH
+    assert_focused_gate_not_manifest_enrolled(
+        "test_qm_stat_source_probability_extraction_semantics_gate.py"
     )

@@ -5,6 +5,13 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tests.strict_physics_state_helpers import (
+    assert_current_target_consistent,
+    assert_focused_gate_not_manifest_enrolled,
+    assert_frontier_matches_registry,
+    assert_public_surfaces_match_registry,
+    current_target_state,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -73,9 +80,9 @@ CONSUMED_TARGET = "review_master_action_dependency_graph_after_citation_language
 PRIORITIZATION_TARGET = "prioritize_retained_blockers_after_master_action_dependency_graph_review"
 PROTOCOL_TARGET = "prepare_qm_stat_transport_semantics_retained_blocker_protocol_row"
 READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
-LIVE_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
-READINESS_EVIDENCE = "formal/toe_formal/ToeFormal/Bridges/QM_STAT_SourceProbabilityExtractionSemantics.lean"
+SOURCE_PROBABILITY_TARGET = current_target_state()["previous_live_next_target"]
+LIVE_TARGET = current_target_state()["live_next_target"]
+READINESS_EVIDENCE = current_target_state()["live_next_target_evidence"]
 SURFACE_ID = "master_action_dependency_graph_review_v0"
 REVIEW_EVIDENCE = str(REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 PRIORITIZATION_EVIDENCE = str(PRIORITIZATION_REVIEW_PATH.relative_to(REPO_ROOT)).replace(
@@ -135,6 +142,8 @@ def test_review_preserves_lane_and_nonpromotion_boundaries() -> None:
 
 
 def test_frontier_and_aggregate_rotate_to_retained_blocker_prioritization() -> None:
+    assert_frontier_matches_registry()
+
     aggregate_text = _read(AGGREGATE_PATH)
     frontier_text = _read(FRONTIER_PATH)
     audit_text = _read(AUDIT_PATH)
@@ -156,6 +165,8 @@ def test_frontier_and_aggregate_rotate_to_retained_blocker_prioritization() -> N
 
 
 def test_loop_registry_tracks_dependency_graph_review_as_current_surface() -> None:
+    assert_current_target_consistent()
+
     payload = _registry()
     state = payload["current_target_state"]
 
@@ -191,6 +202,8 @@ def test_loop_registry_tracks_dependency_graph_review_as_current_surface() -> No
 
 
 def test_public_surfaces_expose_review_and_manifest_remains_unchanged() -> None:
+    assert_public_surfaces_match_registry()
+
     for path in [README_PATH, STATE_PATH, ROADMAP_PATH, STRICT_MAP_PATH]:
         text = _read(path)
         assert LIVE_TARGET in text, f"{path} missing live target"
@@ -207,6 +220,6 @@ def test_public_surfaces_expose_review_and_manifest_remains_unchanged() -> None:
     assert REVIEW_EVIDENCE in inventory_text
     assert PRIORITIZATION_EVIDENCE in inventory_text
     assert PROTOCOL_EVIDENCE in inventory_text
-    assert "test_master_action_dependency_graph_review_gate.py" not in _read(
-        GOVERNANCE_MANIFEST_PATH
+    assert_focused_gate_not_manifest_enrolled(
+        "test_master_action_dependency_graph_review_gate.py"
     )

@@ -5,6 +5,14 @@ from pathlib import Path
 from typing import Any
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tests.strict_physics_state_helpers import (
+    assert_current_target_consistent,
+    assert_focused_gate_not_manifest_enrolled,
+    assert_frontier_matches_registry,
+    assert_public_surfaces_match_registry,
+    current_target_state,
+    workstream,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -54,15 +62,13 @@ MATH_PHYSICS_INVENTORY_PATH = (
 )
 
 READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
-LIVE_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
+SOURCE_PROBABILITY_TARGET = current_target_state()["previous_live_next_target"]
+LIVE_TARGET = current_target_state()["live_next_target"]
 SURFACE_ID = "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
 SOURCE_PROBABILITY_SURFACE_ID = "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
 PROTOCOL_SURFACE_ID = "qm_stat_transport_semantics_retained_blocker_protocol_row_v0"
 RETAINED_BLOCKER = "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED"
-SOURCE_PROBABILITY_EVIDENCE = (
-    "formal/toe_formal/ToeFormal/Bridges/QM_STAT_SourceProbabilityExtractionSemantics.lean"
-)
+SOURCE_PROBABILITY_EVIDENCE = current_target_state()["live_next_target_evidence"]
 
 
 def _read(path: Path) -> str:
@@ -122,31 +128,21 @@ def test_readiness_review_preserves_fail_closed_boundaries() -> None:
 
 
 def test_frontier_and_aggregate_point_to_source_probability_target() -> None:
+    assert_frontier_matches_registry()
     aggregate_text = _read(AGGREGATE_PATH)
     frontier_text = _read(FRONTIER_PATH)
 
     assert "import ToeFormal.Derivation.QMSTATTransportSemanticsProtocolRowReadinessReview" in aggregate_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
-    assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
-    assert f'next_strict_slice := "{LIVE_TARGET}"' in frontier_text
     assert "source-probability extraction supplied route and contract-only obstruction" in frontier_text
 
 
 def test_loop_registry_rotates_active_lane_to_qm_stat_bounded_slice() -> None:
+    assert_current_target_consistent()
     payload = _registry()
-    state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == SOURCE_PROBABILITY_TARGET
-    assert state["live_next_target"] == LIVE_TARGET
-    assert state["live_next_target_evidence"] == SOURCE_PROBABILITY_EVIDENCE
-    assert state["active_lane"] == "qm_stat_transport_residual"
-    assert "qm_stat_transport_residual" not in state["paused_lanes"]
-    assert "master_action_dependency_frontier" in state["paused_lanes"]
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
 
-    active = [item for item in payload["workstreams"] if item.get("status") == "active"]
-    assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
-    qm_stat = active[0]
+    qm_stat = workstream("qm_stat_transport_residual", payload)
     assert qm_stat["authorization_evidence"] == SOURCE_PROBABILITY_EVIDENCE
     assert qm_stat["consumed_target"] == SOURCE_PROBABILITY_TARGET
     assert qm_stat["prior_surface"] == SURFACE_ID
@@ -163,7 +159,7 @@ def test_loop_registry_rotates_active_lane_to_qm_stat_bounded_slice() -> None:
     assert qm_stat["coarse_graining_irreversibility_authorized"] == "no"
     assert qm_stat["residual_package_semantic_closure_authorized"] == "no"
 
-    master_action = _workstream(payload, "master_action_dependency_frontier")
+    master_action = workstream("master_action_dependency_frontier", payload)
     assert master_action["status"] == "paused"
     assert master_action["readiness_review_status"] == "completed"
     assert master_action["source_probability_extraction_status"] == (
@@ -188,9 +184,9 @@ def test_loop_registry_rotates_active_lane_to_qm_stat_bounded_slice() -> None:
 
 
 def test_public_surfaces_and_manifest_boundary_are_synchronized() -> None:
+    assert_public_surfaces_match_registry()
     for path in [README_PATH, STATE_PATH, ROADMAP_PATH, STRICT_MAP_PATH]:
         text = _read(path)
-        assert LIVE_TARGET in text, f"{path} missing live target"
         assert "QMSTATTransportSemanticsProtocolRowReadinessReview.lean" in text
         assert "QM_STAT_SourceProbabilityExtractionSemantics.lean" in text
 
@@ -202,6 +198,6 @@ def test_public_surfaces_and_manifest_boundary_are_synchronized() -> None:
     inventory_text = _read(MATH_PHYSICS_INVENTORY_PATH)
     assert "INV-MATH-QMSTAT-TRANSPORT-SEMANTICS-READINESS-REVIEW-v0" in inventory_text
     assert SOURCE_PROBABILITY_EVIDENCE in inventory_text
-    assert "test_qm_stat_transport_semantics_protocol_row_readiness_review_gate.py" not in _read(
-        GOVERNANCE_MANIFEST_PATH
+    assert_focused_gate_not_manifest_enrolled(
+        "test_qm_stat_transport_semantics_protocol_row_readiness_review_gate.py"
     )
