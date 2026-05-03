@@ -188,8 +188,13 @@ def test_frontier_uses_row_lookup_and_exposes_successor_target() -> None:
     ]
     for path in review_files:
         text = _read(path)
-        assert "crossPillarFrontierEntryByRow?" in text
         assert "crossPillarClosureFrontierV0.drop" not in text
+
+    for path in [
+        DERIVATION_DIR / "QMEvolutionPostBudgetCrossPillarReview.lean",
+        DERIVATION_DIR / "SRCosmologyPostBudgetCrossPillarReview.lean",
+    ]:
+        assert "crossPillarFrontierEntryByRow?" in _read(path)
 
 
 def test_loop_registry_and_public_surfaces_follow_em_qft_successor() -> None:
