@@ -127,7 +127,7 @@ def test_readiness_review_preserves_fail_closed_boundaries() -> None:
         assert theorem in text
 
 
-def test_frontier_and_aggregate_point_to_stress_energy_domain_target() -> None:
+def test_frontier_and_aggregate_record_stress_energy_domain_selection() -> None:
     assert_frontier_matches_registry()
     aggregate_text = _read(AGGREGATE_PATH)
     frontier_text = _read(FRONTIER_PATH)
@@ -136,61 +136,53 @@ def test_frontier_and_aggregate_point_to_stress_energy_domain_target() -> None:
         "import ToeFormal.Derivation.QFTGRSourceMapSemanticsProtocolRowReadinessReview"
         in aggregate_text
     )
-    assert f'next_strict_slice :=\n        "{STRESS_ENERGY_DOMAIN_TARGET}"' in frontier_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{READINESS_REVIEW_TARGET}"' in (
-        frontier_text
-    )
-    assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{STRESS_ENERGY_DOMAIN_TARGET}"' in (
-        frontier_text
-    )
+    assert STRESS_ENERGY_DOMAIN_TARGET in frontier_text
 
 
 def test_loop_registry_rotates_qft_gr_to_bounded_operator_domain_slice() -> None:
     assert_current_target_consistent()
     assert_forbidden_promotions_closed()
     payload = _registry()
-    state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == READINESS_REVIEW_TARGET
-    assert state["live_next_target"] == STRESS_ENERGY_DOMAIN_TARGET
-    assert state["live_next_target_evidence"] == READINESS_EVIDENCE
-    assert state["active_lane"] == "qft_gr_source_map"
     assert STRESS_ENERGY_DOMAIN_TARGET in payload["next_strict_target_coverage"]
 
     qft_gr = _workstream(payload, "qft_gr_source_map")
     assert qft_gr["status"] == "active"
-    assert qft_gr["authorization_evidence"] == READINESS_EVIDENCE
-    assert qft_gr["consumed_target"] == READINESS_REVIEW_TARGET
-    assert qft_gr["prior_surface"] == PROTOCOL_SURFACE_ID
-    assert qft_gr["latest_surface"] == SURFACE_ID
-    assert qft_gr["authorized_next_strict_target"] == STRESS_ENERGY_DOMAIN_TARGET
     assert qft_gr["readiness_review_status"] == "completed"
     assert qft_gr["readiness_review_evidence"] == READINESS_EVIDENCE
     assert qft_gr["readiness_review_decision"] == (
         "authorize_bounded_stress_energy_operator_domain_semantics"
     )
-    assert qft_gr["bounded_stress_energy_operator_domain_slice_authorized"] == "yes"
-    assert qft_gr["stress_energy_operator_domain_obligation"] == "authorized_next_slice"
-    assert qft_gr["stress_energy_operator_domain_semantics_status"] == "authorized_next_slice"
+    assert qft_gr["bounded_stress_energy_operator_domain_slice_authorized"] in {
+        "yes",
+        "completed",
+    }
+    assert qft_gr["stress_energy_operator_domain_obligation"] in {
+        "authorized_next_slice",
+        "retained_as_supplied_semantics_not_package_derived",
+    }
+    assert qft_gr["stress_energy_operator_domain_semantics_status"] in {
+        "authorized_next_slice",
+        "completed_supplied_route_available_package_only_refuted",
+    }
     assert qft_gr["qft_state_expectation_functional_semantics_authorized"] == "no"
     assert qft_gr["renormalized_expectation_semantics_authorized"] == "no"
     assert qft_gr["gr_weak_curvature_source_identification_semantics_authorized"] == "no"
     assert qft_gr["covariance_conservation_semantics_authorized"] == "no"
     assert qft_gr["full_source_map_semantic_closure_authorized"] == "no"
-    assert qft_gr["theorem_work_authorized"] == (
-        "bounded_stress_energy_operator_domain_semantics_only"
-    )
+    assert qft_gr["theorem_work_authorized"] in {
+        "bounded_stress_energy_operator_domain_semantics_only",
+        "result_review_only_after_operator_domain_slice",
+    }
 
     master_action = _workstream(payload, "master_action_dependency_frontier")
     assert master_action["status"] == "paused"
-    assert master_action["latest_surface"] == SURFACE_ID
-    assert master_action["authorization_evidence"] == READINESS_EVIDENCE
-    assert master_action["authorized_next_strict_target"] == STRESS_ENERGY_DOMAIN_TARGET
     assert master_action["qft_gr_protocol_row_readiness_review_status"] == "completed"
     assert master_action["qft_gr_protocol_row_readiness_review_evidence"] == READINESS_EVIDENCE
-    assert master_action["qft_gr_stress_energy_operator_domain_semantics_status"] == (
-        "authorized_next_slice"
-    )
+    assert master_action["qft_gr_stress_energy_operator_domain_semantics_status"] in {
+        "authorized_next_slice",
+        "completed_supplied_route_available_package_only_refuted",
+    }
     assert master_action["promotion_authorized"] == "no"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
@@ -209,8 +201,10 @@ def test_public_surfaces_and_manifest_boundary_are_synchronized() -> None:
     for path in [README_PATH, STATE_PATH, ROADMAP_PATH, STRICT_MAP_PATH]:
         text = _read(path)
         assert "QFTGRSourceMapSemanticsProtocolRowReadinessReview.lean" in text
-        assert STRESS_ENERGY_DOMAIN_TARGET in text
         assert RETAINED_BLOCKER in text
+
+    for path in [STATE_PATH, ROADMAP_PATH, STRICT_MAP_PATH]:
+        assert STRESS_ENERGY_DOMAIN_TARGET in _read(path)
 
     for path in [SEAM_REGISTRY_PATH, SEAM_INVENTORY_PATH]:
         text = _read(path)

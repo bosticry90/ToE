@@ -151,12 +151,12 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR source-map zero-residual package, residual-only obstruction, protocol row, and readiness review"
+        "QFT-GR source-map protocol row plus supplied stress-energy operator-domain semantics and package-only obstruction"
       retained_blocker :=
-        "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED"
+        "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-OPERATOR-DOMAIN-SEMANTICS-RETAINED"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
-      next_strict_slice := "derive_or_refute_qft_gr_stress_energy_operator_domain_semantics"
+      next_strict_slice := "review_qft_gr_stress_energy_operator_domain_semantics_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -178,13 +178,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR source-map semantics protocol-row readiness review"
+        "QFT-GR stress-energy operator-domain semantics slice"
       retained_blocker :=
         "master_action_dependency_frontier_retained_no_promotion"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "derive_or_refute_qft_gr_stress_energy_operator_domain_semantics"
+        "review_qft_gr_stress_energy_operator_domain_semantics_result"
       status := .retained }
   ]
 
@@ -202,13 +202,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR readiness review. -/
+/-- Previous live target consumed by the QFT-GR operator-domain slice. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_source_map_semantics_protocol_row_readiness"
-
-/-- Current live target after the QFT-GR readiness review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "derive_or_refute_qft_gr_stress_energy_operator_domain_semantics"
+
+/-- Current live target after the QFT-GR operator-domain slice. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_stress_energy_operator_domain_semantics_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

@@ -153,6 +153,14 @@ QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_PATH = (
     / "Derivation"
     / "QFTGRSourceMapSemanticsProtocolRowReadinessReview.lean"
 )
+QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_StressEnergyOperatorDomainSemantics.lean"
+)
 
 CITATION_USAGE_TARGET = "cite_only_bounded_retained_assumptions"
 AUDIT_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
@@ -176,8 +184,11 @@ QFT_GR_PROTOCOL_ROW_READINESS_REVIEW_TARGET = (
 QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_TARGET = (
     "derive_or_refute_qft_gr_stress_energy_operator_domain_semantics"
 )
-LIVE_TARGET = QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_TARGET
-PREVIOUS_TARGET = QFT_GR_PROTOCOL_ROW_READINESS_REVIEW_TARGET
+QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_stress_energy_operator_domain_semantics_result"
+)
+LIVE_TARGET = QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_TARGET
+PREVIOUS_TARGET = QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -252,7 +263,7 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_PATH.relative_to(REPO_ROOT)
+        QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     assert set(state["paused_lanes"]) == PAUSED_LANES
@@ -264,11 +275,11 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_source_map_semantics_protocol_row_readiness_review_v0"
+        == "QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_v0"
     )
     assert (
         current_active_workstream["same_lane_continuation"]
-        == "authorized_bounded_stress_energy_operator_domain_semantics_slice"
+        == "result_review_only_after_operator_domain_slice"
     )
 
     active_targets = {state["live_next_target"], current_active_workstream["authorized_next_strict_target"]}
@@ -300,6 +311,7 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     )
     qft_gr_protocol_row_text = _read(QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_PATH)
     qft_gr_readiness_review_text = _read(QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_PATH)
+    qft_gr_operator_domain_text = _read(QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_PATH)
 
     assert CURRENT_TARGET_TOKEN in readme_text
     assert f'"live_next_target": "{LIVE_TARGET}"' in _read(REGISTRY_PATH)
@@ -406,7 +418,7 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     ) in qft_gr_protocol_row_text
     assert (
         'def qftGRSourceMapSemanticsReadinessReviewTargetId : String :=\n'
-        f'  "{PREVIOUS_TARGET}"'
+        f'  "{QFT_GR_PROTOCOL_ROW_READINESS_REVIEW_TARGET}"'
     ) in qft_gr_protocol_row_text
     assert (
         'def qftGRSourceMapSemanticsReadinessReviewConsumedTargetId : String :=\n'
@@ -414,8 +426,16 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     ) in qft_gr_readiness_review_text
     assert (
         'def qftGRStressEnergyOperatorDomainSemanticsTargetId : String :=\n'
-        f'  "{LIVE_TARGET}"'
+        f'  "{PREVIOUS_TARGET}"'
     ) in qft_gr_readiness_review_text
+    assert (
+        'def qftGRStressEnergyOperatorDomainSemanticsConsumedTargetId : String :=\n'
+        "  qftGRStressEnergyOperatorDomainSemanticsTargetId"
+    ) in qft_gr_operator_domain_text
+    assert (
+        'def qftGRStressEnergyOperatorDomainResultReviewTargetId : String :=\n'
+        f'  "{LIVE_TARGET}"'
+    ) in qft_gr_operator_domain_text
     assert payload["current_target_state"]["live_next_target"] == LIVE_TARGET
 
 
@@ -464,10 +484,18 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert qft_gr["protocol_row_evidence"] == str(
         QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert qft_gr["protocol_row_next_review"] == PREVIOUS_TARGET
+    assert qft_gr["protocol_row_next_review"] == QFT_GR_PROTOCOL_ROW_READINESS_REVIEW_TARGET
     assert qft_gr["source_map_semantics_primary_blocker"] == "full_source_map_semantic_closure"
-    assert qft_gr["stress_energy_operator_domain_obligation"] == "authorized_next_slice"
-    assert qft_gr["stress_energy_operator_domain_semantics_status"] == "authorized_next_slice"
+    assert (
+        qft_gr["stress_energy_operator_domain_obligation"]
+        == "retained_as_supplied_semantics_not_package_derived"
+    )
+    assert qft_gr["stress_energy_operator_domain_semantics_status"] == (
+        "completed_supplied_route_available_package_only_refuted"
+    )
+    assert qft_gr["stress_energy_operator_domain_supplied_route_available"] == "yes"
+    assert qft_gr["stress_energy_operator_domain_package_only_refuted"] == "yes"
+    assert qft_gr["stress_energy_operator_domain_derived_from_source_map_package_alone"] == "no"
     assert qft_gr["qft_state_expectation_functional_obligation"] == "still_required"
     assert qft_gr["renormalized_expectation_obligation"] == "still_required"
     assert qft_gr["gr_weak_curvature_source_identification_obligation"] == "still_required"
@@ -484,9 +512,11 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert qft_gr["readiness_review_decision"] == (
         "authorize_bounded_stress_energy_operator_domain_semantics"
     )
-    assert qft_gr["bounded_stress_energy_operator_domain_slice_authorized"] == "yes"
+    assert qft_gr["bounded_stress_energy_operator_domain_slice_authorized"] == "completed"
+    assert qft_gr["stress_energy_operator_domain_result_review_status"] == "pending"
+    assert qft_gr["stress_energy_operator_domain_result_review_target"] == LIVE_TARGET
     assert qft_gr["theorem_work_authorized"] == (
-        "bounded_stress_energy_operator_domain_semantics_only"
+        "result_review_only_after_operator_domain_slice"
     )
 
     qm_stat = _workstream(payload, "qm_stat_transport_residual")
@@ -550,7 +580,10 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert master_action["qft_gr_source_map_protocol_row_status"] == "prepared"
     assert master_action["qft_gr_protocol_row_authority_row"] == "ROW-SEAM-QFT-GR-001"
     assert master_action["qft_gr_protocol_row_seam"] == "SEAM-QFT-GR"
-    assert master_action["qft_gr_protocol_row_next_review"] == PREVIOUS_TARGET
+    assert (
+        master_action["qft_gr_protocol_row_next_review"]
+        == QFT_GR_PROTOCOL_ROW_READINESS_REVIEW_TARGET
+    )
     assert master_action["qft_gr_protocol_row_evidence"] == str(
         QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
@@ -565,10 +598,16 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
         "authorize_bounded_stress_energy_operator_domain_semantics"
     )
     assert master_action["qft_gr_stress_energy_operator_domain_semantics_status"] == (
-        "authorized_next_slice"
+        "completed_supplied_route_available_package_only_refuted"
+    )
+    assert master_action["qft_gr_stress_energy_operator_domain_semantics_evidence"] == str(
+        QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert master_action["qft_gr_stress_energy_operator_domain_result_review_status"] == (
+        "pending"
     )
     assert master_action["theorem_work_authorized"] == (
-        "bounded_stress_energy_operator_domain_semantics_only"
+        "result_review_only_after_operator_domain_slice"
     )
     assert master_action["authorized_next_strict_target"] == LIVE_TARGET
     assert master_action["dependency_graph_changed"] == "no"
@@ -657,6 +696,7 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
     )
     qft_gr_protocol_row_text = _read(QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_PATH)
     qft_gr_readiness_review_text = _read(QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_PATH)
+    qft_gr_operator_domain_text = _read(QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_PATH)
     for theorem_name in [
         "em_qft_protocol_row_phase2_not_authorized_v0",
         "em_qft_protocol_row_seam_not_closed_v0",
@@ -786,6 +826,16 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
         "qft_gr_source_map_semantics_readiness_review_governance_manifest_not_enrolled_v0",
     ]:
         assert theorem_name in qft_gr_readiness_review_text
+    for theorem_name in [
+        "qft_gr_stress_energy_operator_domain_no_seam_closure_v0",
+        "qft_gr_stress_energy_operator_domain_no_semiclassical_gravity_claim_v0",
+        "qft_gr_stress_energy_operator_domain_no_einstein_equation_claim_v0",
+        "qft_gr_stress_energy_operator_domain_phase2_not_authorized_v0",
+        "qft_gr_stress_energy_operator_domain_master_action_not_promoted_v0",
+        "qft_gr_stress_energy_operator_domain_no_empirical_claim_v0",
+        "qft_gr_stress_energy_operator_domain_governance_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_operator_domain_text
 
 
 def test_current_target_gate_is_not_governance_manifest_enrolled() -> None:
