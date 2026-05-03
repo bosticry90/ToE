@@ -42,7 +42,8 @@ def qmStatSourceProbabilityExtractionSemanticsTargetId : String :=
 
 /-- Focused validation target for this readiness review. -/
 def qmStatTransportSemanticsReadinessReviewValidationTarget : String :=
-  "python -m pytest formal/python/tests/test_qm_stat_transport_semantics_protocol_row_readiness_review_gate.py -q"
+  "python -m pytest formal/python/tests/" ++
+    "test_qm_stat_transport_semantics_protocol_row_readiness_review_gate.py -q"
 
 /-- Readiness decision for the prepared protocol row. -/
 inductive QMSTATTransportSemanticsReadinessDecision where
