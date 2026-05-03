@@ -251,7 +251,7 @@ theorem qm_stat_transport_semantics_readiness_review_retained_blocker_v0 :
 theorem qm_stat_transport_semantics_readiness_review_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .qmSTAT) =
-      some currentLiveNextStrictTargetV0 := by
+      some "prioritize_retained_blockers_after_qm_stat_source_probability_result_review" := by
   decide
 
 /-- Broader QM-STAT theorem work is not authorized by this review. -/

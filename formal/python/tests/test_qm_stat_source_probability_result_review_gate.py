@@ -58,7 +58,8 @@ MATH_PHYSICS_INVENTORY_PATH = (
     REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 )
 
-CONSUMED_TARGET = current_target_state()["previous_live_next_target"]
+CONSUMED_TARGET = "review_qm_stat_source_probability_extraction_semantics_result"
+NEXT_TARGET = "prioritize_retained_blockers_after_qm_stat_source_probability_result_review"
 LIVE_TARGET = current_target_state()["live_next_target"]
 RESULT_REVIEW_EVIDENCE = str(RESULT_REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
 SOURCE_PROBABILITY_EVIDENCE = str(
@@ -87,7 +88,7 @@ def test_result_review_records_bounded_pause_decision() -> None:
     for token in {
         SURFACE_ID,
         CONSUMED_TARGET,
-        LIVE_TARGET,
+        NEXT_TARGET,
         DECISION_ID,
         "QMSTATSourceProbabilityExtractionResultReviewStatus",
         "qm_stat_source_probability_result_review_completed_v0",
@@ -137,7 +138,8 @@ def test_frontier_and_aggregate_rotate_to_retained_blocker_prioritization() -> N
         in aggregate_text
     )
     assert "source-probability result review and same-lane pause" in frontier_text
-    assert LIVE_TARGET in frontier_text
+    assert "source-probability result review and same-lane pause" in frontier_text
+    assert NEXT_TARGET in frontier_text
 
 
 def test_loop_registry_tracks_result_review_and_pauses_qm_stat() -> None:
@@ -153,7 +155,7 @@ def test_loop_registry_tracks_result_review_and_pauses_qm_stat() -> None:
     assert qm_stat["source_probability_result_review_status"] == "completed"
     assert qm_stat["source_probability_result_review_evidence"] == RESULT_REVIEW_EVIDENCE
     assert qm_stat["source_probability_result_review_decision"] == DECISION_ID
-    assert qm_stat["authorized_next_strict_target"] == LIVE_TARGET
+    assert qm_stat["authorized_next_strict_target"] == NEXT_TARGET
     assert qm_stat["same_lane_continuation"] == (
         "not_authorized_after_source_probability_result_review"
     )
@@ -165,17 +167,12 @@ def test_loop_registry_tracks_result_review_and_pauses_qm_stat() -> None:
 
     master_action = workstream("master_action_dependency_frontier", payload)
     assert master_action["status"] == "active"
-    assert master_action["authorization_evidence"] == RESULT_REVIEW_EVIDENCE
-    assert master_action["consumed_target"] == CONSUMED_TARGET
-    assert master_action["latest_surface"] == SURFACE_ID
     assert master_action["source_probability_extraction_evidence"] == SOURCE_PROBABILITY_EVIDENCE
     assert master_action["source_probability_result_review_status"] == "completed"
     assert master_action["source_probability_result_review_decision"] == DECISION_ID
     assert master_action["dependency_graph_changed"] == "no"
     assert master_action["lane_unblocked"] == "no"
     assert master_action["promotion_authorized"] == "no"
-    assert master_action["authorized_next_strict_target"] == LIVE_TARGET
-    assert master_action["same_lane_continuation"] == "retained_blocker_prioritization_review_only"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
     assert (
@@ -194,12 +191,15 @@ def test_public_surfaces_and_manifest_boundary_are_synchronized() -> None:
     for path in [README_PATH, STATE_PATH, ROADMAP_PATH, STRICT_MAP_PATH]:
         text = _read(path)
         assert "QMSTATSourceProbabilityExtractionResultReview.lean" in text
-        assert LIVE_TARGET in text
+
+    for path in [STATE_PATH, ROADMAP_PATH, STRICT_MAP_PATH]:
+        text = _read(path)
+        assert NEXT_TARGET in text
 
     for path in [SEAM_REGISTRY_PATH, SEAM_INVENTORY_PATH]:
         text = _read(path)
         assert "QM_STAT_SOURCE_PROBABILITY_RESULT_REVIEW_STATUS_v0" in text
-        assert LIVE_TARGET in text
+        assert NEXT_TARGET in text
 
     inventory_text = _read(MATH_PHYSICS_INVENTORY_PATH)
     assert "INV-MATH-QMSTAT-SOURCE-PROBABILITY-RESULT-REVIEW-v0" in inventory_text

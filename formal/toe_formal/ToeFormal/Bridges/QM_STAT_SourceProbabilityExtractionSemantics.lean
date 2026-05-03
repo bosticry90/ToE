@@ -355,11 +355,11 @@ theorem qm_stat_source_probability_extraction_fresh_delta_kind_v0 :
       "counterexample" := by
   rfl
 
-/-- The frontier rotates to source-probability result review. -/
+/-- The QM-STAT frontier records the later post-result prioritization target. -/
 theorem qm_stat_source_probability_extraction_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .qmSTAT) =
-      some currentLiveNextStrictTargetV0 := by
+      some "prioritize_retained_blockers_after_qm_stat_source_probability_result_review" := by
   decide
 
 /-- Target entropy semantics is not authorized by this slice. -/

@@ -129,6 +129,14 @@ QM_STAT_SOURCE_PROBABILITY_RESULT_REVIEW_PATH = (
     / "Derivation"
     / "QMSTATSourceProbabilityExtractionResultReview.lean"
 )
+MASTER_ACTION_POST_QMSTAT_PRIORITIZATION_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "MasterActionPostQMSTATRetainedBlockerPrioritizationReview.lean"
+)
 
 CITATION_USAGE_TARGET = "cite_only_bounded_retained_assumptions"
 AUDIT_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
@@ -140,8 +148,14 @@ SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extract
 SOURCE_PROBABILITY_RESULT_REVIEW_TARGET = (
     "review_qm_stat_source_probability_extraction_semantics_result"
 )
-LIVE_TARGET = "prioritize_retained_blockers_after_qm_stat_source_probability_result_review"
-PREVIOUS_TARGET = SOURCE_PROBABILITY_RESULT_REVIEW_TARGET
+POST_QMSTAT_PRIORITIZATION_TARGET = (
+    "prioritize_retained_blockers_after_qm_stat_source_probability_result_review"
+)
+QFT_GR_PROTOCOL_ROW_PREPARATION_TARGET = (
+    "prepare_qft_gr_source_map_semantics_retained_blocker_protocol_row"
+)
+LIVE_TARGET = QFT_GR_PROTOCOL_ROW_PREPARATION_TARGET
+PREVIOUS_TARGET = POST_QMSTAT_PRIORITIZATION_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -216,7 +230,7 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        QM_STAT_SOURCE_PROBABILITY_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)
+        MASTER_ACTION_POST_QMSTAT_PRIORITIZATION_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     assert set(state["paused_lanes"]) == PAUSED_LANES
@@ -225,14 +239,14 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     current_active_workstream = active_workstream(payload)
     assert current_active_workstream["workstream_id"] == "master_action_dependency_frontier"
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert current_active_workstream["consumed_target"] == SOURCE_PROBABILITY_RESULT_REVIEW_TARGET
+    assert current_active_workstream["consumed_target"] == POST_QMSTAT_PRIORITIZATION_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "qm_stat_source_probability_extraction_result_review_v0"
+        == "master_action_post_qm_stat_retained_blocker_prioritization_review_v0"
     )
     assert (
         current_active_workstream["same_lane_continuation"]
-        == "retained_blocker_prioritization_review_only"
+        == "qft_gr_protocol_row_preparation_only"
     )
 
     active_targets = {state["live_next_target"], current_active_workstream["authorized_next_strict_target"]}
@@ -259,6 +273,9 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     protocol_row_text = _read(QM_STAT_TRANSPORT_SEMANTICS_PROTOCOL_ROW_PATH)
     source_probability_text = _read(QM_STAT_SOURCE_PROBABILITY_EXTRACTION_PATH)
     source_probability_review_text = _read(QM_STAT_SOURCE_PROBABILITY_RESULT_REVIEW_PATH)
+    post_qm_stat_prioritization_text = _read(
+        MASTER_ACTION_POST_QMSTAT_PRIORITIZATION_REVIEW_PATH
+    )
 
     assert CURRENT_TARGET_TOKEN in readme_text
     assert f'"live_next_target": "{LIVE_TARGET}"' in _read(REGISTRY_PATH)
@@ -349,8 +366,16 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     ) in source_probability_review_text
     assert (
         'def qmStatPostSourceProbabilityRetainedBlockerPrioritizationTargetId : String :=\n'
-        f'  "{LIVE_TARGET}"'
+        f'  "{POST_QMSTAT_PRIORITIZATION_TARGET}"'
     ) in source_probability_review_text
+    assert (
+        'def postQMSTATRetainedBlockerPrioritizationConsumedTargetId : String :=\n'
+        "  qmStatPostSourceProbabilityRetainedBlockerPrioritizationTargetId"
+    ) in post_qm_stat_prioritization_text
+    assert (
+        'def qftGRSourceMapProtocolRowPreparationTargetId : String :=\n'
+        f'  "{LIVE_TARGET}"'
+    ) in post_qm_stat_prioritization_text
     assert payload["current_target_state"]["live_next_target"] == LIVE_TARGET
 
 
@@ -387,9 +412,18 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert em_qft["source_current_bridge_slice_authorized"] == "not_authorized"
     assert em_qft["gauge_quantization_bridge_slice_authorized"] == "not_authorized"
 
+    qft_gr = _workstream(payload, "qft_gr_source_map")
+    assert qft_gr["status"] == "paused"
+    assert qft_gr["protocol_row_preparation_target"] == LIVE_TARGET
+    assert (
+        qft_gr["protocol_row_preparation_status"]
+        == "selected_by_post_qm_stat_retained_blocker_prioritization"
+    )
+    assert qft_gr["protocol_row_preparation_authorized"] == "preparation_only_no_theorem_work"
+
     qm_stat = _workstream(payload, "qm_stat_transport_residual")
     assert qm_stat["status"] == "paused"
-    assert qm_stat["authorized_next_strict_target"] == LIVE_TARGET
+    assert qm_stat["authorized_next_strict_target"] == POST_QMSTAT_PRIORITIZATION_TARGET
     assert qm_stat["authorization_evidence"] == str(
         QM_STAT_SOURCE_PROBABILITY_EXTRACTION_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
@@ -428,6 +462,19 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert (
         master_action["source_probability_result_review_decision"]
         == "pause_qm_stat_and_prioritize_retained_blockers"
+    )
+    assert master_action["post_qm_stat_retained_blocker_prioritization_status"] == "completed"
+    assert master_action["post_qm_stat_retained_blocker_prioritization_evidence"] == str(
+        MASTER_ACTION_POST_QMSTAT_PRIORITIZATION_REVIEW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert (
+        master_action["post_qm_stat_top_retained_blocker"]
+        == "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED"
+    )
+    assert master_action["qft_gr_source_map_protocol_row_preparation_target"] == LIVE_TARGET
+    assert (
+        master_action["qft_gr_source_map_protocol_row_preparation_status"]
+        == "selected_preparation_only"
     )
     assert master_action["dependency_graph_changed"] == "no"
     assert master_action["lane_unblocked"] == "no"
@@ -510,6 +557,9 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
     readiness_review_text = _read(QM_STAT_TRANSPORT_SEMANTICS_READINESS_REVIEW_PATH)
     source_probability_text = _read(QM_STAT_SOURCE_PROBABILITY_EXTRACTION_PATH)
     source_probability_review_text = _read(QM_STAT_SOURCE_PROBABILITY_RESULT_REVIEW_PATH)
+    post_qm_stat_prioritization_text = _read(
+        MASTER_ACTION_POST_QMSTAT_PRIORITIZATION_REVIEW_PATH
+    )
     for theorem_name in [
         "em_qft_protocol_row_phase2_not_authorized_v0",
         "em_qft_protocol_row_seam_not_closed_v0",
@@ -609,6 +659,16 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
         "qm_stat_source_probability_result_review_governance_manifest_not_enrolled_v0",
     ]:
         assert theorem_name in source_probability_review_text
+    for theorem_name in [
+        "post_qm_stat_retained_blocker_prioritization_no_qft_gr_seam_closure_v0",
+        "post_qm_stat_retained_blocker_prioritization_no_semiclassical_gravity_claim_v0",
+        "post_qm_stat_retained_blocker_prioritization_no_einstein_equation_claim_v0",
+        "post_qm_stat_retained_blocker_prioritization_phase2_not_authorized_v0",
+        "post_qm_stat_retained_blocker_prioritization_master_action_not_promoted_v0",
+        "post_qm_stat_retained_blocker_prioritization_no_empirical_claim_v0",
+        "post_qm_stat_retained_blocker_prioritization_governance_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in post_qm_stat_prioritization_text
 
 
 def test_current_target_gate_is_not_governance_manifest_enrolled() -> None:

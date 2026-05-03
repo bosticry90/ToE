@@ -63,6 +63,9 @@ MATH_PHYSICS_INVENTORY_PATH = (
 
 READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
 SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
+POST_QMSTAT_PRIORITIZATION_TARGET = (
+    "prioritize_retained_blockers_after_qm_stat_source_probability_result_review"
+)
 LIVE_TARGET = current_target_state()["live_next_target"]
 SURFACE_ID = "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
 SOURCE_PROBABILITY_SURFACE_ID = "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
@@ -149,7 +152,7 @@ def test_loop_registry_rotates_active_lane_to_qm_stat_bounded_slice() -> None:
     assert qm_stat["consumed_target"] == SOURCE_PROBABILITY_TARGET
     assert qm_stat["prior_surface"] == SURFACE_ID
     assert qm_stat["latest_surface"] == SOURCE_PROBABILITY_SURFACE_ID
-    assert qm_stat["authorized_next_strict_target"] == LIVE_TARGET
+    assert qm_stat["authorized_next_strict_target"] == POST_QMSTAT_PRIORITIZATION_TARGET
     assert qm_stat["bounded_source_probability_slice_authorized"] == "completed"
     assert qm_stat["source_probability_result_review_status"] == "completed"
     assert (
@@ -167,7 +170,6 @@ def test_loop_registry_rotates_active_lane_to_qm_stat_bounded_slice() -> None:
     assert master_action["source_probability_extraction_status"] == (
         "completed_supplied_route_available_contract_only_refuted"
     )
-    assert master_action["authorized_next_strict_target"] == LIVE_TARGET
     assert master_action["promotion_authorized"] == "no"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
@@ -195,7 +197,7 @@ def test_public_surfaces_and_manifest_boundary_are_synchronized() -> None:
     for path in [SEAM_REGISTRY_PATH, SEAM_INVENTORY_PATH]:
         text = _read(path)
         assert "QM_STAT_TRANSPORT_SEMANTICS_READINESS_REVIEW" in text
-        assert LIVE_TARGET in text
+        assert POST_QMSTAT_PRIORITIZATION_TARGET in text
 
     inventory_text = _read(MATH_PHYSICS_INVENTORY_PATH)
     assert "INV-MATH-QMSTAT-TRANSPORT-SEMANTICS-READINESS-REVIEW-v0" in inventory_text
