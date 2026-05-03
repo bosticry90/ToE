@@ -11,3 +11,5 @@ Please review, evaluate, and interpret these results, and provide recommendation
 Please update GitHub main branch to synch with the current ToE repo state.
 
 Please update all authoritative and necessary files to reflect the project's current state.
+
+Please run full tests from the ToE repo.
