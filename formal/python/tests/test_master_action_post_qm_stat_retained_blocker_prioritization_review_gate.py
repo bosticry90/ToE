@@ -74,7 +74,10 @@ MATH_PHYSICS_INVENTORY_PATH = (
     REPO_ROOT / "formal" / "docs" / "paper" / "TOE_MATH_PHYSICS_INVENTORY_v0.md"
 )
 
-CONSUMED_TARGET = current_target_state()["previous_live_next_target"]
+CONSUMED_TARGET = "prioritize_retained_blockers_after_qm_stat_source_probability_result_review"
+QFT_GR_PROTOCOL_PREPARATION_TARGET = (
+    "prepare_qft_gr_source_map_semantics_retained_blocker_protocol_row"
+)
 LIVE_TARGET = current_target_state()["live_next_target"]
 SURFACE_ID = "master_action_post_qm_stat_retained_blocker_prioritization_review_v0"
 TOP_BLOCKER = "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED"
@@ -103,7 +106,7 @@ def test_post_qm_stat_prioritization_surface_records_qft_gr_protocol_selection()
     for token in {
         SURFACE_ID,
         CONSUMED_TARGET,
-        LIVE_TARGET,
+        QFT_GR_PROTOCOL_PREPARATION_TARGET,
         TOP_BLOCKER,
         "postQMSTATRetainedBlockerPriorityIdsV0",
         "post_qm_stat_retained_blocker_prioritization_count_v0",
@@ -149,7 +152,7 @@ def test_frontier_and_aggregate_rotate_to_qft_gr_protocol_row_preparation() -> N
         "import ToeFormal.Derivation.MasterActionPostQMSTATRetainedBlockerPrioritizationReview"
         in aggregate_text
     )
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{CONSUMED_TARGET}"' in frontier_text
+    assert f'"{QFT_GR_PROTOCOL_PREPARATION_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
 
@@ -164,23 +167,20 @@ def test_loop_registry_tracks_post_qm_stat_prioritization_as_current_surface() -
     qft_gr = _workstream(payload, "qft_gr_source_map")
     qm_stat = _workstream(payload, "qm_stat_transport_residual")
 
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
     assert state["live_next_target"] == LIVE_TARGET
-    assert state["live_next_target_evidence"] == REVIEW_EVIDENCE
     assert state["active_lane"] == "master_action_dependency_frontier"
 
-    assert active["latest_surface"] == SURFACE_ID
-    assert active["consumed_target"] == CONSUMED_TARGET
     assert active["authorized_next_strict_target"] == LIVE_TARGET
     assert active["post_qm_stat_retained_blocker_prioritization_status"] == "completed"
     assert active["post_qm_stat_top_retained_blocker"] == TOP_BLOCKER
-    assert active["qft_gr_source_map_protocol_row_preparation_target"] == LIVE_TARGET
-    assert active["theorem_work_authorized"] == (
-        "no_post_qm_stat_prioritization_completed_protocol_preparation_only"
+    assert (
+        active["qft_gr_source_map_protocol_row_preparation_target"]
+        == QFT_GR_PROTOCOL_PREPARATION_TARGET
     )
+    assert active["qft_gr_source_map_protocol_row_status"] == "prepared"
 
     assert qft_gr["status"] == "paused"
-    assert qft_gr["protocol_row_preparation_target"] == LIVE_TARGET
+    assert qft_gr["protocol_row_preparation_target"] == QFT_GR_PROTOCOL_PREPARATION_TARGET
     assert qft_gr["protocol_row_preparation_authorized"] == "preparation_only_no_theorem_work"
 
     assert qm_stat["status"] == "paused"
@@ -188,6 +188,7 @@ def test_loop_registry_tracks_post_qm_stat_prioritization_as_current_surface() -
     assert qm_stat["target_entropy_semantics_authorized"] == "no"
     assert qm_stat["transport_map_semantics_authorized"] == "no"
 
+    assert QFT_GR_PROTOCOL_PREPARATION_TARGET in payload["next_strict_target_coverage"]
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
     assert (
@@ -201,14 +202,13 @@ def test_public_surfaces_expose_post_qm_stat_prioritization() -> None:
 
     for path in [README_PATH, STATE_PATH, ROADMAP_PATH, STRICT_MAP_PATH]:
         text = _read(path)
-        assert LIVE_TARGET in text, f"{path} missing live target"
         assert "MasterActionPostQMSTATRetainedBlockerPrioritizationReview.lean" in text
         assert TOP_BLOCKER in text
 
     for path in [SEAM_REGISTRY_PATH, SEAM_INVENTORY_PATH]:
         text = _read(path)
         assert "MASTER_ACTION_POST_QMSTAT_RETAINED_BLOCKER_PRIORITIZATION" in text
-        assert LIVE_TARGET in text
+        assert QFT_GR_PROTOCOL_PREPARATION_TARGET in text
 
     inventory_text = _read(MATH_PHYSICS_INVENTORY_PATH)
     assert (

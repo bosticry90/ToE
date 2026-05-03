@@ -225,12 +225,12 @@ theorem post_qm_stat_retained_blocker_prioritization_selected_next_target_v0 :
       qftGRSourceMapProtocolRowPreparationTargetId := by
   rfl
 
-/-- The master-action frontier row advances to QFT-GR protocol-row preparation. -/
+/-- The review records QFT-GR protocol-row preparation as its selected target. -/
 theorem post_qm_stat_retained_blocker_prioritization_frontier_target_v0 :
-    Option.map (fun entry => entry.next_strict_slice)
-      (crossPillarFrontierEntryByRow? .masterAction) =
-      some currentLiveNextStrictTargetV0 := by
-  decide
+    (postQMSTATRetainedBlockerPrioritizationStatusReadoutV0
+      |>.selected_next_strict_target) =
+      qftGRSourceMapProtocolRowPreparationTargetId := by
+  rfl
 
 /-- The prioritization review is complete. -/
 theorem post_qm_stat_retained_blocker_prioritization_completed_v0 :

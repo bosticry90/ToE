@@ -178,13 +178,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "post-QM-STAT retained-blocker prioritization selects QFT-GR protocol-row preparation"
+        "QFT-GR source-map semantics protocol row prepared, readiness review next"
       retained_blocker :=
         "master_action_dependency_frontier_retained_no_promotion"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_source_map_semantics_retained_blocker_protocol_row"
+        "review_qft_gr_source_map_semantics_protocol_row_readiness"
       status := .retained }
   ]
 
@@ -202,13 +202,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the post-QM-STAT prioritization review. -/
+/-- Previous live target consumed by the QFT-GR protocol row. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prioritize_retained_blockers_after_qm_stat_source_probability_result_review"
-
-/-- Current live target after the post-QM-STAT prioritization review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_source_map_semantics_retained_blocker_protocol_row"
+
+/-- Current live target after the QFT-GR protocol row. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_source_map_semantics_protocol_row_readiness"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
