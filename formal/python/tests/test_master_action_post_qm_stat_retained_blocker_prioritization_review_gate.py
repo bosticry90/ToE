@@ -152,7 +152,6 @@ def test_frontier_and_aggregate_rotate_to_qft_gr_protocol_row_preparation() -> N
         "import ToeFormal.Derivation.MasterActionPostQMSTATRetainedBlockerPrioritizationReview"
         in aggregate_text
     )
-    assert f'"{QFT_GR_PROTOCOL_PREPARATION_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
 
@@ -163,25 +162,26 @@ def test_loop_registry_tracks_post_qm_stat_prioritization_as_current_surface() -
 
     payload = _registry()
     state = payload["current_target_state"]
-    active = _workstream(payload, "master_action_dependency_frontier")
+    master_action = _workstream(payload, "master_action_dependency_frontier")
     qft_gr = _workstream(payload, "qft_gr_source_map")
     qm_stat = _workstream(payload, "qm_stat_transport_residual")
 
     assert state["live_next_target"] == LIVE_TARGET
-    assert state["active_lane"] == "master_action_dependency_frontier"
+    assert state["active_lane"] == "qft_gr_source_map"
 
-    assert active["authorized_next_strict_target"] == LIVE_TARGET
-    assert active["post_qm_stat_retained_blocker_prioritization_status"] == "completed"
-    assert active["post_qm_stat_top_retained_blocker"] == TOP_BLOCKER
+    assert master_action["post_qm_stat_retained_blocker_prioritization_status"] == "completed"
+    assert master_action["post_qm_stat_top_retained_blocker"] == TOP_BLOCKER
     assert (
-        active["qft_gr_source_map_protocol_row_preparation_target"]
+        master_action["qft_gr_source_map_protocol_row_preparation_target"]
         == QFT_GR_PROTOCOL_PREPARATION_TARGET
     )
-    assert active["qft_gr_source_map_protocol_row_status"] == "prepared"
+    assert master_action["qft_gr_source_map_protocol_row_status"] == "prepared"
 
-    assert qft_gr["status"] == "paused"
+    assert qft_gr["status"] == "active"
     assert qft_gr["protocol_row_preparation_target"] == QFT_GR_PROTOCOL_PREPARATION_TARGET
     assert qft_gr["protocol_row_preparation_authorized"] == "preparation_only_no_theorem_work"
+    assert qft_gr["readiness_review_status"] == "completed"
+    assert qft_gr["authorized_next_strict_target"] == LIVE_TARGET
 
     assert qm_stat["status"] == "paused"
     assert qm_stat["source_probability_result_review_status"] == "completed"

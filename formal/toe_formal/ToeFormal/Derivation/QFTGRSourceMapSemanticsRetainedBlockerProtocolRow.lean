@@ -385,7 +385,7 @@ theorem qft_gr_source_map_semantics_protocol_row_minimum_readiness_v0 :
       ] := by
   rfl
 
-/-- The frontier advances to the QFT-GR readiness review. -/
+/-- The frontier carries the current live target after downstream review. -/
 theorem qft_gr_source_map_semantics_protocol_row_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =

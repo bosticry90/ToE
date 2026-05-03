@@ -75,6 +75,9 @@ MATH_PHYSICS_INVENTORY_PATH = (
 
 CONSUMED_TARGET = "prepare_qft_gr_source_map_semantics_retained_blocker_protocol_row"
 READINESS_REVIEW_TARGET = "review_qft_gr_source_map_semantics_protocol_row_readiness"
+STRESS_ENERGY_DOMAIN_TARGET = (
+    "derive_or_refute_qft_gr_stress_energy_operator_domain_semantics"
+)
 SURFACE_ID = "qft_gr_source_map_semantics_retained_blocker_protocol_row_v0"
 RETAINED_BLOCKER = "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED"
 AUTHORITY_ROW = "ROW-SEAM-QFT-GR-001"
@@ -157,17 +160,15 @@ def test_frontier_and_aggregate_rotate_to_readiness_review() -> None:
     aggregate_text = _read(AGGREGATE_PATH)
     frontier_text = _read(FRONTIER_PATH)
     post_qmstat_text = _read(POST_QMSTAT_PRIORITIZATION_REVIEW_PATH)
+    protocol_text = _read(PROTOCOL_ROW_PATH)
 
     assert (
         "import ToeFormal.Derivation.QFTGRSourceMapSemanticsRetainedBlockerProtocolRow"
         in aggregate_text
     )
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{CONSUMED_TARGET}"' in frontier_text
-    assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{READINESS_REVIEW_TARGET}"' in (
-        frontier_text
-    )
-    assert f'next_strict_slice :=\n        "{READINESS_REVIEW_TARGET}"' in frontier_text
+    assert f'next_strict_slice :=\n        "{STRESS_ENERGY_DOMAIN_TARGET}"' in frontier_text
     assert f'  "{CONSUMED_TARGET}"' in post_qmstat_text
+    assert f'  "{READINESS_REVIEW_TARGET}"' in protocol_text
 
 
 def test_loop_registry_tracks_protocol_row_as_current_surface() -> None:
@@ -176,35 +177,31 @@ def test_loop_registry_tracks_protocol_row_as_current_surface() -> None:
     payload = _registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
-    assert state["live_next_target"] == READINESS_REVIEW_TARGET
-    assert state["live_next_target_evidence"] == PROTOCOL_EVIDENCE
-    assert state["active_lane"] == "master_action_dependency_frontier"
+    assert state["live_next_target"] == STRESS_ENERGY_DOMAIN_TARGET
+    assert state["active_lane"] == "qft_gr_source_map"
     assert READINESS_REVIEW_TARGET in payload["next_strict_target_coverage"]
 
     qft_gr = _workstream(payload, "qft_gr_source_map")
-    assert qft_gr["status"] == "paused"
+    assert qft_gr["status"] == "active"
     assert qft_gr["protocol_row_preparation_target"] == CONSUMED_TARGET
     assert qft_gr["protocol_row_preparation_status"] == "completed_protocol_row_prepared"
     assert qft_gr["protocol_row_status"] == "prepared_from_post_qm_stat_prioritization"
     assert qft_gr["protocol_row_evidence"] == PROTOCOL_EVIDENCE
     assert qft_gr["protocol_row_next_review"] == READINESS_REVIEW_TARGET
     assert qft_gr["source_map_semantics_primary_blocker"] == "full_source_map_semantic_closure"
-    assert qft_gr["stress_energy_operator_domain_obligation"] == "still_required"
+    assert qft_gr["stress_energy_operator_domain_obligation"] == "authorized_next_slice"
     assert qft_gr["qft_state_expectation_functional_obligation"] == "still_required"
     assert qft_gr["renormalized_expectation_obligation"] == "still_required"
     assert qft_gr["gr_weak_curvature_source_identification_obligation"] == "still_required"
     assert qft_gr["covariance_conservation_obligation"] == "still_required"
-    assert qft_gr["readiness_review_status"] == "pending"
+    assert qft_gr["readiness_review_status"] == "completed"
+    assert qft_gr["bounded_stress_energy_operator_domain_slice_authorized"] == "yes"
     assert qft_gr["theorem_work_authorized"] == (
-        "no_protocol_row_prepared_readiness_review_pending"
+        "bounded_stress_energy_operator_domain_semantics_only"
     )
 
     master_action = _workstream(payload, "master_action_dependency_frontier")
-    assert master_action["latest_surface"] == SURFACE_ID
-    assert master_action["consumed_target"] == CONSUMED_TARGET
-    assert master_action["authorization_evidence"] == PROTOCOL_EVIDENCE
-    assert master_action["authorized_next_strict_target"] == READINESS_REVIEW_TARGET
+    assert master_action["qft_gr_source_map_protocol_row_status"] == "prepared"
     assert master_action["qft_gr_protocol_row_authority_row"] == AUTHORITY_ROW
     assert master_action["qft_gr_protocol_row_seam"] == SEAM_ID
     assert master_action["qft_gr_protocol_row_retained_blocker"] == RETAINED_BLOCKER
@@ -227,7 +224,6 @@ def test_public_surfaces_expose_protocol_row_and_manifest_remains_unchanged() ->
     for path in [README_PATH, STATE_PATH, ROADMAP_PATH, STRICT_MAP_PATH]:
         text = _read(path)
         assert "QFTGRSourceMapSemanticsRetainedBlockerProtocolRow.lean" in text
-        assert READINESS_REVIEW_TARGET in text
         assert RETAINED_BLOCKER in text
 
     for path in [STATE_PATH, STRICT_MAP_PATH, SEAM_REGISTRY_PATH, SEAM_INVENTORY_PATH]:

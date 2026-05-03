@@ -245,7 +245,10 @@ Cycle01 pilot lock:
 - `QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsRetainedBlockerProtocolRow.lean`
 - `QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_STATUS_v0: PREPARED_NO_THEOREM_WORK_NO_QFTGR_REOPEN`
 - `QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_NEXT_REVIEW_v0: review_qft_gr_source_map_semantics_protocol_row_readiness`
-- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: review_qft_gr_source_map_semantics_protocol_row_readiness`
+- `QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsProtocolRowReadinessReview.lean`
+- `QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_STATUS_v0: COMPLETED_AUTHORIZED_BOUNDED_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_ONLY`
+- `QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_NEXT_TARGET_v0: derive_or_refute_qft_gr_stress_energy_operator_domain_semantics`
+- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: derive_or_refute_qft_gr_stress_energy_operator_domain_semantics`
 
 - `SEAM_QFT_GR_GOVERNANCE_COMPLETE_v0: NO`
 - `SEAM_QFT_GR_PHYSICS_COMPLETE_v0: NO`
@@ -255,6 +258,8 @@ Cycle01 pilot lock:
 - `SEAM_QFT_GR_PHYSICS_BLOCKER_v0: PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED`
 - `SEAM_QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsRetainedBlockerProtocolRow.lean`
 - `SEAM_QFT_GR_SOURCE_MAP_SEMANTICS_NEXT_REVIEW_v0: review_qft_gr_source_map_semantics_protocol_row_readiness`
+- `SEAM_QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_v0: formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsProtocolRowReadinessReview.lean`
+- `SEAM_QFT_GR_SOURCE_MAP_STRESS_ENERGY_OPERATOR_DOMAIN_TARGET_v0: derive_or_refute_qft_gr_stress_energy_operator_domain_semantics`
 
 - Legacy compatibility token retirement checkpoint:
 	- `SEAM_GR_QM_LEGACY_TRANSITION_TOKEN_RETIRED_v0: YES`
@@ -277,6 +282,7 @@ Cycle01 pilot lock:
 - `SEAM_QM_STAT_SOURCE_PROBABILITY_RESULT_REVIEW_NEXT_TARGET_v0: prioritize_retained_blockers_after_qm_stat_source_probability_result_review`
 - `MASTER_ACTION_POST_QMSTAT_RETAINED_BLOCKER_PRIORITIZATION_NEXT_TARGET_v0: prepare_qft_gr_source_map_semantics_retained_blocker_protocol_row`
 - `QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_NEXT_TARGET_v0: review_qft_gr_source_map_semantics_protocol_row_readiness`
+- `QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_NEXT_TARGET_v0: derive_or_refute_qft_gr_stress_energy_operator_domain_semantics`
 
 - `SEAM_STAT_QM_GOVERNANCE_COMPLETE_v0: NO`
 - `SEAM_STAT_QM_PHYSICS_COMPLETE_v0: NO`

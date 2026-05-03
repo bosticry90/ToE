@@ -240,11 +240,11 @@ theorem qft_gr_post_budget_selected_strict_target_v0 :
       srCovarianceCosmologyRegimeTransportTargetId := by
   rfl
 
-/-- The selected target remains the QFT-GR row's recorded rotation target. -/
+/-- The selected target remains the historical QFT-GR post-budget rotation target. -/
 theorem qft_gr_post_budget_sr_cosmo_is_frontier_row_target_v0 :
-    Option.map (fun entry => entry.next_strict_slice)
-      (crossPillarFrontierEntryByRow? .qftGRSeam) =
-      some srCovarianceCosmologyRegimeTransportTargetId := by
+    (qftGRPostBudgetCrossPillarReviewStatusReadoutV0
+      |>.selected_next_strict_target) =
+      srCovarianceCosmologyRegimeTransportTargetId := by
   rfl
 
 /-- Phase 2 is not authorized by the review. -/

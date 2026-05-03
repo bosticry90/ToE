@@ -175,7 +175,7 @@ def test_loop_registry_tracks_source_probability_result_review_only() -> None:
     assert qm_stat["residual_package_semantic_closure_authorized"] == "no"
 
     master_action = _workstream(payload, "master_action_dependency_frontier")
-    assert master_action["status"] == "active"
+    assert master_action["status"] == "paused"
     assert master_action["source_probability_extraction_evidence"] == SOURCE_PROBABILITY_EVIDENCE
     assert master_action["source_probability_extraction_status"] == (
         "completed_supplied_route_available_contract_only_refuted"

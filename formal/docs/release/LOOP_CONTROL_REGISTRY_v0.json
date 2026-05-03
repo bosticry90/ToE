@@ -87,20 +87,20 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "prepare_qft_gr_source_map_semantics_retained_blocker_protocol_row",
-    "live_next_target": "review_qft_gr_source_map_semantics_protocol_row_readiness",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsRetainedBlockerProtocolRow.lean",
+    "previous_live_next_target": "review_qft_gr_source_map_semantics_protocol_row_readiness",
+    "live_next_target": "derive_or_refute_qft_gr_stress_energy_operator_domain_semantics",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsProtocolRowReadinessReview.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
       "scalar_qft_a2a15a1",
-      "qft_gr_source_map",
       "sr_covariance_cosmology_regime_transport",
       "qm_evolution_contract",
       "em_qft_physics_blocker_extraction",
-      "qm_stat_transport_residual"
+      "qm_stat_transport_residual",
+      "master_action_dependency_frontier"
     ],
-    "active_lane": "master_action_dependency_frontier",
+    "active_lane": "qft_gr_source_map",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -516,7 +516,8 @@
     "review_qm_stat_source_probability_extraction_semantics_result",
     "prioritize_retained_blockers_after_qm_stat_source_probability_result_review",
     "prepare_qft_gr_source_map_semantics_retained_blocker_protocol_row",
-    "review_qft_gr_source_map_semantics_protocol_row_readiness"
+    "review_qft_gr_source_map_semantics_protocol_row_readiness",
+    "derive_or_refute_qft_gr_stress_energy_operator_domain_semantics"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -705,6 +706,12 @@
       "to": "qft_gr_source_map_semantics_protocol_row_readiness_review",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsRetainedBlockerProtocolRow.lean"
+    },
+    {
+      "from": "qft_gr_source_map_semantics_protocol_row_readiness_review",
+      "to": "qft_gr_stress_energy_operator_domain_semantics",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsProtocolRowReadinessReview.lean"
     }
   ],
   "cycle_waivers": [],
@@ -768,7 +775,7 @@
     },
     {
       "workstream_id": "qft_gr_source_map",
-      "status": "paused",
+      "status": "active",
       "retained_blocker": "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED",
       "consecutive_slices_after_retention": 2,
       "allowed_reopen_conditions": [
@@ -776,8 +783,12 @@
         "counterexample",
         "stronger_evidence_object"
       ],
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QMSTATPostBudgetCrossPillarReview.lean",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsProtocolRowReadinessReview.lean",
       "authorized_next_slice": "qft_gr_stress_energy_source_map_slice_v0",
+      "authorized_next_strict_target": "derive_or_refute_qft_gr_stress_energy_operator_domain_semantics",
+      "consumed_target": "review_qft_gr_source_map_semantics_protocol_row_readiness",
+      "prior_surface": "qft_gr_source_map_semantics_retained_blocker_protocol_row_v0",
+      "latest_surface": "qft_gr_source_map_semantics_protocol_row_readiness_review_v0",
       "last_fresh_delta_kind": "counterexample",
       "last_fresh_delta_id": "QFT_GR_SOURCE_MAP_RESIDUAL_ONLY_SEMANTIC_OBSTRUCTION_FRESH_DELTA_v0",
       "last_fresh_delta_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StressEnergySourceMapResidualOnlyObstruction.lean",
@@ -790,16 +801,25 @@
       "protocol_row_status": "prepared_from_post_qm_stat_prioritization",
       "protocol_row_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsRetainedBlockerProtocolRow.lean",
       "protocol_row_next_review": "review_qft_gr_source_map_semantics_protocol_row_readiness",
-      "source_map_semantics_status": "protocol_row_prepared_requirements_retained",
+      "source_map_semantics_status": "readiness_review_completed_stress_energy_operator_domain_slice_authorized",
       "source_map_semantics_primary_blocker": "full_source_map_semantic_closure",
-      "stress_energy_operator_domain_obligation": "still_required",
+      "stress_energy_operator_domain_obligation": "authorized_next_slice",
+      "stress_energy_operator_domain_semantics_status": "authorized_next_slice",
       "qft_state_expectation_functional_obligation": "still_required",
       "renormalized_expectation_obligation": "still_required",
       "gr_weak_curvature_source_identification_obligation": "still_required",
       "covariance_conservation_obligation": "still_required",
-      "readiness_review_status": "pending",
-      "theorem_work_authorized": "no_protocol_row_prepared_readiness_review_pending",
-      "same_lane_continuation": "not_authorized",
+      "qft_state_expectation_functional_semantics_authorized": "no",
+      "renormalized_expectation_semantics_authorized": "no",
+      "gr_weak_curvature_source_identification_semantics_authorized": "no",
+      "covariance_conservation_semantics_authorized": "no",
+      "full_source_map_semantic_closure_authorized": "no",
+      "readiness_review_status": "completed",
+      "readiness_review_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsProtocolRowReadinessReview.lean",
+      "readiness_review_decision": "authorize_bounded_stress_energy_operator_domain_semantics",
+      "bounded_stress_energy_operator_domain_slice_authorized": "yes",
+      "theorem_work_authorized": "bounded_stress_energy_operator_domain_semantics_only",
+      "same_lane_continuation": "authorized_bounded_stress_energy_operator_domain_semantics_slice",
       "next_action_after_budget_exhaustion": "rotate_to_sr_covariance_cosmology_regime_transport"
     },
     {
@@ -915,18 +935,18 @@
     },
     {
       "workstream_id": "master_action_dependency_frontier",
-      "status": "active",
+      "status": "paused",
       "retained_blocker": "master_action_dependency_frontier_retained_no_promotion",
       "consecutive_slices_after_retention": 0,
       "allowed_reopen_conditions": [
         "dependency_graph_change",
         "stronger_evidence_object"
       ],
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsRetainedBlockerProtocolRow.lean",
-      "consumed_target": "prepare_qft_gr_source_map_semantics_retained_blocker_protocol_row",
-      "prior_consumed_target": "prioritize_retained_blockers_after_qm_stat_source_probability_result_review",
-      "prior_surface": "master_action_post_qm_stat_retained_blocker_prioritization_review_v0",
-      "latest_surface": "qft_gr_source_map_semantics_retained_blocker_protocol_row_v0",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsProtocolRowReadinessReview.lean",
+      "consumed_target": "review_qft_gr_source_map_semantics_protocol_row_readiness",
+      "prior_consumed_target": "prepare_qft_gr_source_map_semantics_retained_blocker_protocol_row",
+      "prior_surface": "qft_gr_source_map_semantics_retained_blocker_protocol_row_v0",
+      "latest_surface": "qft_gr_source_map_semantics_protocol_row_readiness_review_v0",
       "citation_usage_status": "completed",
       "citation_usage_scope": "retained_assumptions_only_under_allowed_scope_and_forbidden_promotion_boundaries",
       "citation_language_audit_status": "completed",
@@ -965,15 +985,19 @@
       "qft_gr_protocol_row_next_review": "review_qft_gr_source_map_semantics_protocol_row_readiness",
       "qft_gr_protocol_row_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsRetainedBlockerProtocolRow.lean",
       "qft_gr_protocol_row_primary_blocker": "full_source_map_semantic_closure",
-      "next_action_scope": "qft_gr_source_map_protocol_row_readiness_review_only",
+      "qft_gr_protocol_row_readiness_review_status": "completed",
+      "qft_gr_protocol_row_readiness_review_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapSemanticsProtocolRowReadinessReview.lean",
+      "qft_gr_protocol_row_readiness_review_decision": "authorize_bounded_stress_energy_operator_domain_semantics",
+      "qft_gr_stress_energy_operator_domain_semantics_status": "authorized_next_slice",
+      "next_action_scope": "bounded_qft_gr_stress_energy_operator_domain_semantics_only",
       "lane_unblocked": "no",
       "promotion_authorized": "no",
-      "theorem_work_authorized": "no_qft_gr_protocol_row_prepared_readiness_review_pending",
+      "theorem_work_authorized": "bounded_stress_energy_operator_domain_semantics_only",
       "forbidden_language_class_count": 7,
       "boundary_count": 10,
       "dependency_classes_changed": "no",
-      "authorized_next_strict_target": "review_qft_gr_source_map_semantics_protocol_row_readiness",
-      "same_lane_continuation": "qft_gr_protocol_row_readiness_review_only",
+      "authorized_next_strict_target": "derive_or_refute_qft_gr_stress_energy_operator_domain_semantics",
+      "same_lane_continuation": "rotated_to_qft_gr_bounded_stress_energy_operator_domain_semantics_slice",
       "non_promotion_boundary": "no_phase2_no_master_action_promotion_no_seam_closure_no_empirical_claim_no_governance_manifest_enrollment"
     }
   ],

@@ -165,7 +165,7 @@ def test_loop_registry_rotates_active_lane_to_qm_stat_bounded_slice() -> None:
     assert qm_stat["residual_package_semantic_closure_authorized"] == "no"
 
     master_action = workstream("master_action_dependency_frontier", payload)
-    assert master_action["status"] == "active"
+    assert master_action["status"] == "paused"
     assert master_action["readiness_review_status"] == "completed"
     assert master_action["source_probability_extraction_status"] == (
         "completed_supplied_route_available_contract_only_refuted"

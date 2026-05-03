@@ -145,6 +145,14 @@ QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_PATH = (
     / "Derivation"
     / "QFTGRSourceMapSemanticsRetainedBlockerProtocolRow.lean"
 )
+QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "QFTGRSourceMapSemanticsProtocolRowReadinessReview.lean"
+)
 
 CITATION_USAGE_TARGET = "cite_only_bounded_retained_assumptions"
 AUDIT_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
@@ -165,8 +173,11 @@ QFT_GR_PROTOCOL_ROW_PREPARATION_TARGET = (
 QFT_GR_PROTOCOL_ROW_READINESS_REVIEW_TARGET = (
     "review_qft_gr_source_map_semantics_protocol_row_readiness"
 )
-LIVE_TARGET = QFT_GR_PROTOCOL_ROW_READINESS_REVIEW_TARGET
-PREVIOUS_TARGET = QFT_GR_PROTOCOL_ROW_PREPARATION_TARGET
+QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_TARGET = (
+    "derive_or_refute_qft_gr_stress_energy_operator_domain_semantics"
+)
+LIVE_TARGET = QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_TARGET
+PREVIOUS_TARGET = QFT_GR_PROTOCOL_ROW_READINESS_REVIEW_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -184,11 +195,11 @@ EM_QFT_FRESH_DELTA_ID = (
 
 PAUSED_LANES = {
     "scalar_qft_a2a15a1",
-    "qft_gr_source_map",
     "sr_covariance_cosmology_regime_transport",
     "qm_evolution_contract",
     "em_qft_physics_blocker_extraction",
     "qm_stat_transport_residual",
+    "master_action_dependency_frontier",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -241,23 +252,23 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)
+        QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     assert set(state["paused_lanes"]) == PAUSED_LANES
-    assert state["active_lane"] == "master_action_dependency_frontier"
+    assert state["active_lane"] == "qft_gr_source_map"
 
     current_active_workstream = active_workstream(payload)
-    assert current_active_workstream["workstream_id"] == "master_action_dependency_frontier"
+    assert current_active_workstream["workstream_id"] == "qft_gr_source_map"
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_source_map_semantics_retained_blocker_protocol_row_v0"
+        == "qft_gr_source_map_semantics_protocol_row_readiness_review_v0"
     )
     assert (
         current_active_workstream["same_lane_continuation"]
-        == "qft_gr_protocol_row_readiness_review_only"
+        == "authorized_bounded_stress_energy_operator_domain_semantics_slice"
     )
 
     active_targets = {state["live_next_target"], current_active_workstream["authorized_next_strict_target"]}
@@ -288,6 +299,7 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
         MASTER_ACTION_POST_QMSTAT_PRIORITIZATION_REVIEW_PATH
     )
     qft_gr_protocol_row_text = _read(QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_PATH)
+    qft_gr_readiness_review_text = _read(QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_PATH)
 
     assert CURRENT_TARGET_TOKEN in readme_text
     assert f'"live_next_target": "{LIVE_TARGET}"' in _read(REGISTRY_PATH)
@@ -386,7 +398,7 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     ) in post_qm_stat_prioritization_text
     assert (
         'def qftGRSourceMapProtocolRowPreparationTargetId : String :=\n'
-        f'  "{PREVIOUS_TARGET}"'
+        f'  "{QFT_GR_PROTOCOL_ROW_PREPARATION_TARGET}"'
     ) in post_qm_stat_prioritization_text
     assert (
         'def qftGRSourceMapSemanticsProtocolRowConsumedTargetId : String :=\n'
@@ -394,8 +406,16 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     ) in qft_gr_protocol_row_text
     assert (
         'def qftGRSourceMapSemanticsReadinessReviewTargetId : String :=\n'
-        f'  "{LIVE_TARGET}"'
+        f'  "{PREVIOUS_TARGET}"'
     ) in qft_gr_protocol_row_text
+    assert (
+        'def qftGRSourceMapSemanticsReadinessReviewConsumedTargetId : String :=\n'
+        "  qftGRSourceMapSemanticsReadinessReviewTargetId"
+    ) in qft_gr_readiness_review_text
+    assert (
+        'def qftGRStressEnergyOperatorDomainSemanticsTargetId : String :=\n'
+        f'  "{LIVE_TARGET}"'
+    ) in qft_gr_readiness_review_text
     assert payload["current_target_state"]["live_next_target"] == LIVE_TARGET
 
 
@@ -433,8 +453,8 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert em_qft["gauge_quantization_bridge_slice_authorized"] == "not_authorized"
 
     qft_gr = _workstream(payload, "qft_gr_source_map")
-    assert qft_gr["status"] == "paused"
-    assert qft_gr["protocol_row_preparation_target"] == PREVIOUS_TARGET
+    assert qft_gr["status"] == "active"
+    assert qft_gr["protocol_row_preparation_target"] == QFT_GR_PROTOCOL_ROW_PREPARATION_TARGET
     assert (
         qft_gr["protocol_row_preparation_status"]
         == "completed_protocol_row_prepared"
@@ -444,16 +464,29 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert qft_gr["protocol_row_evidence"] == str(
         QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert qft_gr["protocol_row_next_review"] == LIVE_TARGET
+    assert qft_gr["protocol_row_next_review"] == PREVIOUS_TARGET
     assert qft_gr["source_map_semantics_primary_blocker"] == "full_source_map_semantic_closure"
-    assert qft_gr["stress_energy_operator_domain_obligation"] == "still_required"
+    assert qft_gr["stress_energy_operator_domain_obligation"] == "authorized_next_slice"
+    assert qft_gr["stress_energy_operator_domain_semantics_status"] == "authorized_next_slice"
     assert qft_gr["qft_state_expectation_functional_obligation"] == "still_required"
     assert qft_gr["renormalized_expectation_obligation"] == "still_required"
     assert qft_gr["gr_weak_curvature_source_identification_obligation"] == "still_required"
     assert qft_gr["covariance_conservation_obligation"] == "still_required"
-    assert qft_gr["readiness_review_status"] == "pending"
+    assert qft_gr["qft_state_expectation_functional_semantics_authorized"] == "no"
+    assert qft_gr["renormalized_expectation_semantics_authorized"] == "no"
+    assert qft_gr["gr_weak_curvature_source_identification_semantics_authorized"] == "no"
+    assert qft_gr["covariance_conservation_semantics_authorized"] == "no"
+    assert qft_gr["full_source_map_semantic_closure_authorized"] == "no"
+    assert qft_gr["readiness_review_status"] == "completed"
+    assert qft_gr["readiness_review_evidence"] == str(
+        QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert qft_gr["readiness_review_decision"] == (
+        "authorize_bounded_stress_energy_operator_domain_semantics"
+    )
+    assert qft_gr["bounded_stress_energy_operator_domain_slice_authorized"] == "yes"
     assert qft_gr["theorem_work_authorized"] == (
-        "no_protocol_row_prepared_readiness_review_pending"
+        "bounded_stress_energy_operator_domain_semantics_only"
     )
 
     qm_stat = _workstream(payload, "qm_stat_transport_residual")
@@ -481,7 +514,7 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert qm_stat["residual_package_semantic_closure_authorized"] == "no"
 
     master_action = _workstream(payload, "master_action_dependency_frontier")
-    assert master_action["status"] == "active"
+    assert master_action["status"] == "paused"
     assert master_action["citation_usage_status"] == "completed"
     assert master_action["citation_language_audit_status"] == "completed"
     assert master_action["dependency_graph_review_status"] == "completed"
@@ -506,7 +539,10 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
         master_action["post_qm_stat_top_retained_blocker"]
         == "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-EXPECTATION-SOURCE-MAP-RETAINED"
     )
-    assert master_action["qft_gr_source_map_protocol_row_preparation_target"] == PREVIOUS_TARGET
+    assert (
+        master_action["qft_gr_source_map_protocol_row_preparation_target"]
+        == QFT_GR_PROTOCOL_ROW_PREPARATION_TARGET
+    )
     assert (
         master_action["qft_gr_source_map_protocol_row_preparation_status"]
         == "completed_protocol_row_prepared"
@@ -514,16 +550,27 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert master_action["qft_gr_source_map_protocol_row_status"] == "prepared"
     assert master_action["qft_gr_protocol_row_authority_row"] == "ROW-SEAM-QFT-GR-001"
     assert master_action["qft_gr_protocol_row_seam"] == "SEAM-QFT-GR"
-    assert master_action["qft_gr_protocol_row_next_review"] == LIVE_TARGET
+    assert master_action["qft_gr_protocol_row_next_review"] == PREVIOUS_TARGET
     assert master_action["qft_gr_protocol_row_evidence"] == str(
         QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert master_action["qft_gr_protocol_row_primary_blocker"] == (
         "full_source_map_semantic_closure"
     )
-    assert master_action["theorem_work_authorized"] == (
-        "no_qft_gr_protocol_row_prepared_readiness_review_pending"
+    assert master_action["qft_gr_protocol_row_readiness_review_status"] == "completed"
+    assert master_action["qft_gr_protocol_row_readiness_review_evidence"] == str(
+        QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert master_action["qft_gr_protocol_row_readiness_review_decision"] == (
+        "authorize_bounded_stress_energy_operator_domain_semantics"
     )
+    assert master_action["qft_gr_stress_energy_operator_domain_semantics_status"] == (
+        "authorized_next_slice"
+    )
+    assert master_action["theorem_work_authorized"] == (
+        "bounded_stress_energy_operator_domain_semantics_only"
+    )
+    assert master_action["authorized_next_strict_target"] == LIVE_TARGET
     assert master_action["dependency_graph_changed"] == "no"
     assert master_action["lane_unblocked"] == "no"
     assert master_action["promotion_authorized"] == "no"
@@ -609,6 +656,7 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
         MASTER_ACTION_POST_QMSTAT_PRIORITIZATION_REVIEW_PATH
     )
     qft_gr_protocol_row_text = _read(QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_PATH)
+    qft_gr_readiness_review_text = _read(QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_PATH)
     for theorem_name in [
         "em_qft_protocol_row_phase2_not_authorized_v0",
         "em_qft_protocol_row_seam_not_closed_v0",
@@ -728,6 +776,16 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
         "qft_gr_source_map_semantics_protocol_row_governance_manifest_not_enrolled_v0",
     ]:
         assert theorem_name in qft_gr_protocol_row_text
+    for theorem_name in [
+        "qft_gr_source_map_semantics_readiness_review_no_seam_closure_v0",
+        "qft_gr_source_map_semantics_readiness_review_no_semiclassical_gravity_claim_v0",
+        "qft_gr_source_map_semantics_readiness_review_no_einstein_equation_claim_v0",
+        "qft_gr_source_map_semantics_readiness_review_phase2_not_authorized_v0",
+        "qft_gr_source_map_semantics_readiness_review_master_action_not_promoted_v0",
+        "qft_gr_source_map_semantics_readiness_review_no_empirical_claim_v0",
+        "qft_gr_source_map_semantics_readiness_review_governance_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_readiness_review_text
 
 
 def test_current_target_gate_is_not_governance_manifest_enrolled() -> None:
