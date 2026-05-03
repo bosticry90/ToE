@@ -195,12 +195,6 @@ def test_registry_tracks_interface_alignment_slice_and_completed_post_budget_rev
     assert REVIEW_TARGET in payload["next_strict_target_coverage"]
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
 
-    active = [item for item in payload["workstreams"] if item.get("status") == "active"]
-    assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
-    assert active[0]["consumed_target"] == SOURCE_PROBABILITY_TARGET
-    assert active[0]["authorized_next_strict_target"] == LIVE_TARGET
-    assert active[0]["latest_surface"] == "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
-
     em_qft = next(
         item for item in payload["workstreams"]
         if item["workstream_id"] == "em_qft_physics_blocker_extraction"

@@ -178,7 +178,6 @@ def test_frontier_and_aggregate_advance_after_citation_language_audit() -> None:
     assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_PROBABILITY_TARGET}"' in frontier_text
     assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
     assert f'next_strict_slice :=\n        "{LIVE_TARGET}"' in frontier_text
-    assert "source-probability extraction supplied route and contract-only obstruction" in frontier_text
     assert "def masterActionCitationBoundariesV0" in master_action_text
     assert "theorem master_action_citation_boundaries_length_v0" in master_action_text
 
@@ -187,23 +186,7 @@ def test_loop_registry_tracks_citation_usage_as_current_master_action_lane() -> 
     assert_current_target_consistent()
 
     payload = _registry()
-    state = payload["current_target_state"]
-
-    assert state["previous_live_next_target"] == SOURCE_PROBABILITY_TARGET
-    assert state["live_next_target"] == LIVE_TARGET
-    assert state["live_next_target_evidence"] == READINESS_EVIDENCE
-    assert state["active_lane"] == "qm_stat_transport_residual"
     assert LIVE_TARGET in payload["next_strict_target_coverage"]
-
-    active = [item for item in payload["workstreams"] if item.get("status") == "active"]
-    assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
-    workstream = active[0]
-    assert workstream["authorization_evidence"] == READINESS_EVIDENCE
-    assert workstream["consumed_target"] == SOURCE_PROBABILITY_TARGET
-    assert workstream["prior_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
-    assert workstream["latest_surface"] == "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
-    assert workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert workstream["same_lane_continuation"] == "post_source_probability_slice_review_only"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
     assert (

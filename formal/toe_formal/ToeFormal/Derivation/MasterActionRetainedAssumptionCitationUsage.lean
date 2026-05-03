@@ -159,7 +159,7 @@ protocol-row readiness review.
 theorem master_action_citation_usage_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "review_qm_stat_source_probability_extraction_semantics_result" := by
+      some currentLiveNextStrictTargetV0 := by
   decide
 
 /-- The citation usage tranche reuses the existing dependency frontier ids. -/

@@ -62,13 +62,15 @@ MATH_PHYSICS_INVENTORY_PATH = (
 )
 
 READINESS_REVIEW_TARGET = "review_qm_stat_transport_semantics_protocol_row_readiness"
-SOURCE_PROBABILITY_TARGET = current_target_state()["previous_live_next_target"]
+SOURCE_PROBABILITY_TARGET = "derive_or_refute_qm_stat_source_probability_extraction_semantics"
 LIVE_TARGET = current_target_state()["live_next_target"]
 SURFACE_ID = "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
 SOURCE_PROBABILITY_SURFACE_ID = "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
 PROTOCOL_SURFACE_ID = "qm_stat_transport_semantics_retained_blocker_protocol_row_v0"
 RETAINED_BLOCKER = "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED"
-SOURCE_PROBABILITY_EVIDENCE = current_target_state()["live_next_target_evidence"]
+SOURCE_PROBABILITY_EVIDENCE = (
+    "formal/toe_formal/ToeFormal/Bridges/QM_STAT_SourceProbabilityExtractionSemantics.lean"
+)
 
 
 def _read(path: Path) -> str:
@@ -133,7 +135,7 @@ def test_frontier_and_aggregate_point_to_source_probability_target() -> None:
     frontier_text = _read(FRONTIER_PATH)
 
     assert "import ToeFormal.Derivation.QMSTATTransportSemanticsProtocolRowReadinessReview" in aggregate_text
-    assert "source-probability extraction supplied route and contract-only obstruction" in frontier_text
+    assert "source-probability result review and same-lane pause" in frontier_text
 
 
 def test_loop_registry_rotates_active_lane_to_qm_stat_bounded_slice() -> None:
@@ -149,7 +151,7 @@ def test_loop_registry_rotates_active_lane_to_qm_stat_bounded_slice() -> None:
     assert qm_stat["latest_surface"] == SOURCE_PROBABILITY_SURFACE_ID
     assert qm_stat["authorized_next_strict_target"] == LIVE_TARGET
     assert qm_stat["bounded_source_probability_slice_authorized"] == "completed"
-    assert qm_stat["theorem_work_authorized"] == "no_pending_source_probability_result_review"
+    assert qm_stat["source_probability_result_review_status"] == "completed"
     assert (
         qm_stat["source_probability_extraction_obligation"]
         == "retained_as_supplied_semantics_not_contract_derived"
@@ -160,7 +162,7 @@ def test_loop_registry_rotates_active_lane_to_qm_stat_bounded_slice() -> None:
     assert qm_stat["residual_package_semantic_closure_authorized"] == "no"
 
     master_action = workstream("master_action_dependency_frontier", payload)
-    assert master_action["status"] == "paused"
+    assert master_action["status"] == "active"
     assert master_action["readiness_review_status"] == "completed"
     assert master_action["source_probability_extraction_status"] == (
         "completed_supplied_route_available_contract_only_refuted"

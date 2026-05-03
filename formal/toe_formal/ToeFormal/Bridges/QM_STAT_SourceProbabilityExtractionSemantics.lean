@@ -359,7 +359,7 @@ theorem qm_stat_source_probability_extraction_fresh_delta_kind_v0 :
 theorem qm_stat_source_probability_extraction_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .qmSTAT) =
-      some qmStatSourceProbabilityExtractionResultReviewTargetId := by
+      some currentLiveNextStrictTargetV0 := by
   decide
 
 /-- Target entropy semantics is not authorized by this slice. -/

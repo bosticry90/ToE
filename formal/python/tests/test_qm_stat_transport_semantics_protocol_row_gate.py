@@ -162,7 +162,7 @@ def test_frontier_and_aggregate_rotate_past_readiness_review() -> None:
         in aggregate_text
     )
     assert "import ToeFormal.Derivation.QMSTATTransportSemanticsProtocolRowReadinessReview" in aggregate_text
-    assert "source-probability extraction supplied route and contract-only obstruction" in frontier_text
+    assert "source-probability result review and same-lane pause" in frontier_text
     assert f'  "{CONSUMED_TARGET}"' in prioritization_text
 
 
@@ -176,7 +176,7 @@ def test_loop_registry_tracks_protocol_row_as_current_surface() -> None:
     assert qm_stat["protocol_row_status"] == "prepared_from_master_action_prioritization"
     assert qm_stat["protocol_row_evidence"] == PROTOCOL_EVIDENCE
     assert qm_stat["protocol_row_next_review"] == READINESS_REVIEW_TARGET
-    assert qm_stat["theorem_work_authorized"] == "no_pending_source_probability_result_review"
+    assert qm_stat["source_probability_result_review_status"] == "completed"
     assert (
         qm_stat["source_probability_extraction_obligation"]
         == "retained_as_supplied_semantics_not_contract_derived"

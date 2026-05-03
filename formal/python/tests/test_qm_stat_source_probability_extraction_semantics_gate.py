@@ -139,7 +139,7 @@ def test_frontier_and_aggregate_rotate_to_source_probability_result_review() -> 
     frontier_text = _read(FRONTIER_PATH)
 
     assert "import ToeFormal.Bridges.QM_STAT_SourceProbabilityExtractionSemantics" in aggregate_text
-    assert "source-probability extraction supplied route and contract-only obstruction" in frontier_text
+    assert "source-probability result review and same-lane pause" in frontier_text
 
 
 def test_loop_registry_tracks_source_probability_result_review_only() -> None:
@@ -155,8 +155,7 @@ def test_loop_registry_tracks_source_probability_result_review_only() -> None:
     assert qm_stat["consumed_target"] == SOURCE_TARGET
     assert qm_stat["prior_surface"] == "qm_stat_transport_semantics_protocol_row_readiness_review_v0"
     assert qm_stat["latest_surface"] == SURFACE_ID
-    assert qm_stat["authorized_next_strict_target"] == RESULT_REVIEW_TARGET
-    assert qm_stat["same_lane_continuation"] == "post_source_probability_slice_review_only"
+    assert qm_stat["source_probability_result_review_status"] == "completed"
     assert qm_stat["bounded_source_probability_slice_authorized"] == "completed"
     assert (
         qm_stat["source_probability_extraction_semantics_status"]
@@ -165,7 +164,7 @@ def test_loop_registry_tracks_source_probability_result_review_only() -> None:
     assert qm_stat["source_probability_extraction_supplied_route_available"] == "yes"
     assert qm_stat["source_probability_extraction_contract_only_refuted"] == "yes"
     assert qm_stat["source_probability_extraction_derived_from_contract_alone"] == "no"
-    assert qm_stat["theorem_work_authorized"] == "no_pending_source_probability_result_review"
+    assert qm_stat["theorem_work_authorized"] == "no_result_review_completed_same_lane_paused"
     assert (
         qm_stat["source_probability_extraction_obligation"]
         == "retained_as_supplied_semantics_not_contract_derived"
@@ -176,14 +175,12 @@ def test_loop_registry_tracks_source_probability_result_review_only() -> None:
     assert qm_stat["residual_package_semantic_closure_authorized"] == "no"
 
     master_action = _workstream(payload, "master_action_dependency_frontier")
-    assert master_action["status"] == "paused"
+    assert master_action["status"] == "active"
     assert master_action["source_probability_extraction_evidence"] == SOURCE_PROBABILITY_EVIDENCE
     assert master_action["source_probability_extraction_status"] == (
         "completed_supplied_route_available_contract_only_refuted"
     )
-    assert master_action["authorized_next_strict_target"] == RESULT_REVIEW_TARGET
-    assert master_action["same_lane_continuation"] == "post_source_probability_slice_review_only"
-    assert master_action["theorem_work_authorized"] == "no_pending_source_probability_result_review"
+    assert master_action["source_probability_result_review_status"] == "completed"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
     assert (

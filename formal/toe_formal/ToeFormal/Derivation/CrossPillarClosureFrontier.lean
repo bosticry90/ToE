@@ -113,12 +113,12 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qmSTAT
       current_strongest_surface :=
-        "finite-state transport residual package with source-probability extraction supplied route and contract-only obstruction"
+        "finite-state transport residual package with source-probability result review and same-lane pause"
       retained_blocker :=
         "PHASE1-BLOCKER-QMSTAT-SOURCE-PROBABILITY-EXTRACTION-SEMANTICS-RETAINED"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
-      next_strict_slice := "review_qm_stat_source_probability_extraction_semantics_result"
+      next_strict_slice := "prioritize_retained_blockers_after_qm_stat_source_probability_result_review"
       status := .retained }
   , { row := .srCovariance
       current_strongest_surface :=
@@ -184,7 +184,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_qm_stat_source_probability_extraction_semantics_result"
+        "prioritize_retained_blockers_after_qm_stat_source_probability_result_review"
       status := .retained }
   ]
 
@@ -202,13 +202,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QM-STAT source-probability slice. -/
+/-- Previous live target consumed by the QM-STAT source-probability result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "derive_or_refute_qm_stat_source_probability_extraction_semantics"
-
-/-- Current live target after the QM-STAT source-probability slice. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_qm_stat_source_probability_extraction_semantics_result"
+
+/-- Current live target after the QM-STAT source-probability result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prioritize_retained_blockers_after_qm_stat_source_probability_result_review"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

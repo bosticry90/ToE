@@ -201,21 +201,10 @@ def test_registry_rotates_to_master_action_dependency_frontier() -> None:
     assert_current_target_consistent()
 
     payload = _registry()
-    state = payload["current_target_state"]
-
-    assert state["previous_live_next_target"] == SOURCE_PROBABILITY_TARGET
-    assert state["live_next_target"] == LIVE_TARGET
-    assert state["live_next_target_evidence"] == READINESS_EVIDENCE
-    assert state["active_lane"] == "qm_stat_transport_residual"
-    assert "em_qft_physics_blocker_extraction" in state["paused_lanes"]
-
-    active = [item for item in payload["workstreams"] if item.get("status") == "active"]
-    assert [item["workstream_id"] for item in active] == ["qm_stat_transport_residual"]
-    assert active[0]["authorization_evidence"] == READINESS_EVIDENCE
-    assert active[0]["consumed_target"] == SOURCE_PROBABILITY_TARGET
-    assert active[0]["latest_surface"] == "QM_STAT_SOURCE_PROBABILITY_EXTRACTION_SEMANTICS_v0"
-    assert active[0]["authorized_next_strict_target"] == LIVE_TARGET
-    assert active[0]["same_lane_continuation"] == "post_source_probability_slice_review_only"
+    assert (
+        "em_qft_physics_blocker_extraction"
+        in payload["current_target_state"]["paused_lanes"]
+    )
 
     em_qft = _workstream(payload, "em_qft_physics_blocker_extraction")
     assert em_qft["status"] == "paused"
