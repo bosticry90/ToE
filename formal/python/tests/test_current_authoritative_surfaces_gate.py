@@ -41,6 +41,14 @@ POST_HYGIENE_SELECTOR_PATH = (
     / "Derivation"
     / "PostReadOnlyValidationHygieneBoundedAttackSelection.lean"
 )
+AFTER_HYGIENE_FULL_PILLAR_SELECTOR_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "FullPillarTargetMapNextLaneSelectionAfterReadOnlyHygiene.lean"
+)
 LEDGER_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md"
 
 
@@ -54,14 +62,15 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-        "CURRENT_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_read_only_validation_hygiene_result",
-        "ACTIVE_LANE_v0: post_read_only_validation_hygiene_bounded_attack_selection",
+        "CURRENT_LIVE_NEXT_TARGET_v0: prepare_artifact_retention_enforcement_plan",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection",
+        "ACTIVE_LANE_v0: full_pillar_target_map_next_lane_selection_after_read_only_hygiene",
         "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
         "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostReadOnlyValidationHygieneBoundedAttackSelection.lean",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterReadOnlyHygiene.lean",
         "READ_ONLY_VALIDATION_HYGIENE_ENFORCED",
         "POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED",
+        "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE",
     }:
         assert token in text
 
@@ -70,6 +79,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         FRONTIER_PATH,
         HYGIENE_SURFACE_PATH,
         POST_HYGIENE_SELECTOR_PATH,
+        AFTER_HYGIENE_FULL_PILLAR_SELECTOR_PATH,
         LEDGER_PATH,
     }:
         assert str(path.relative_to(REPO_ROOT)).replace("\\", "/") in text
@@ -108,6 +118,7 @@ def test_current_authoritative_surfaces_index_records_validation_and_historical_
         "backup",
         "REPOSITORY_ARTIFACT_RETENTION_POLICY_20260505_v0",
         "POST_READ_ONLY_VALIDATION_HYGIENE_BOUNDED_ATTACK_SELECTION_20260505_v0",
+        "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_READ_ONLY_HYGIENE_20260505_v0",
         "TOE_ALLOW_TRACKED_OUTPUT_WRITES=1",
     }:
         assert token in text

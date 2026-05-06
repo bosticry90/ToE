@@ -32,7 +32,7 @@ Lean aggregate status:
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260430_v0: GREEN_WITH_EXISTING_WARNINGS`
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260501_v0: GREEN_WITH_EXISTING_WARNINGS`
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260502_v0: GREEN_NO_WARNINGS`
-- `STRICT_PHYSICS_LEAN_BUILD_DETAIL_20260506_v0: lake build ToeFormal GREEN_7975_JOBS_NO_WARNINGS`
+- `STRICT_PHYSICS_LEAN_BUILD_DETAIL_20260506_v0: lake build ToeFormal GREEN_7976_JOBS_NO_WARNINGS`
 - `STRICT_PHYSICS_FULL_PYTEST_STATUS_20260505_v0: GREEN_6536_PASSED_230_SKIPPED`
 - `STRICT_PHYSICS_CROSS_PILLAR_HANDOFF_INCREMENT_20260430_v0: A2A15A1A25_ENDPOINT_SOURCE_OBLIGATION_SPLIT_PLUS_SCALAR_HANDOFF_CAPSTONE_PLUS_CROSS_PILLAR_DERIVATION_PROTOCOL_PLUS_CLOSURE_FRONTIER_PLUS_MASTER_ACTION_DEPENDENCY_FRONTIER_PLUS_POST_SWEEP_THEOREM_QUEUE`
 - `STRICT_PHYSICS_QMSTAT_RESIDUAL_PACKAGE_INCREMENT_20260501_v0: QM_STAT_UNIFIED_TRANSPORT_RESIDUAL_PACKAGE_INTERFACE_PLUS_FINITE_TRANSPORT_THEOREM_CONNECTION_PLUS_RETAINED_SEMANTICS_BLOCKER`
@@ -75,7 +75,7 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict architecture target:
-- `CURRENT_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_artifact_retention_enforcement_plan`
 - `AXIOM_LEDGER_AUDIT_REFRESH_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefresh.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_20260503_v0.json`
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS_v0: AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS`
@@ -134,6 +134,11 @@ Next strict architecture target:
 - `POST_READ_ONLY_VALIDATION_HYGIENE_BOUNDED_ATTACK_SELECTION_REPORT_v0: formal/docs/release/POST_READ_ONLY_VALIDATION_HYGIENE_BOUNDED_ATTACK_SELECTION_20260505_v0.json`
 - `POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED_v0: POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED`
 - `POST_READ_ONLY_VALIDATION_HYGIENE_SELECTED_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
+- `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_READ_ONLY_HYGIENE_v0: formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterReadOnlyHygiene.lean`
+- `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_READ_ONLY_HYGIENE_REPORT_v0: formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_READ_ONLY_HYGIENE_20260505_v0.json`
+- `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE_v0: FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE`
+- `FULL_PILLAR_TARGET_MAP_NEXT_LANE_AFTER_READ_ONLY_HYGIENE_SELECTED_LANE_v0: ARTIFACT_RETENTION_ENFORCEMENT_PLAN`
+- `FULL_PILLAR_TARGET_MAP_NEXT_TARGET_AFTER_READ_ONLY_HYGIENE_v0: prepare_artifact_retention_enforcement_plan`
 - `REPOSITORY_ARTIFACT_RETENTION_POLICY_v0: formal/docs/release/REPOSITORY_ARTIFACT_RETENTION_POLICY_20260505_v0.md`
 - `CURRENT_AUTHORITATIVE_SURFACES_v0: formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md`
 - `POST_QFT_GR_LADDER_BOUNDED_ATTACK_SELECTION_v0: formal/toe_formal/ToeFormal/Bridges/PostQFTGRLadderBoundedAttackSelection.lean`
@@ -1824,3 +1829,4 @@ Post-sweep theorem queue:
 - Full-pillar target-map next-lane selection after gap-packet review status: `formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterGapPacketReview.lean` and `formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_GAP_PACKET_REVIEW_20260505_v0.json` consume `return_to_full_pillar_target_map_next_lane_selection` and `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`, compare proof-debt discharge, QM-STAT re-entry, SR/COSMO follow-up, QFT-GR witness-search planning, master-action gap reduction, artifact-retention policy, and read-only validation hygiene lanes, emit `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`, and select exactly one next lane `READ_ONLY_VALIDATION_HYGIENE` with target `prepare_read_only_validation_hygiene_packet` while no scientific promotion or closure claim is authorized.
 - Read-only validation hygiene status: `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean` and `formal/docs/release/READ_ONLY_VALIDATION_HYGIENE_20260505_v0.json` consume `prepare_read_only_validation_hygiene_packet` and `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`, enforce ordinary pytest as read-only for canonical tracked outputs, require `TOE_ALLOW_TRACKED_OUTPUT_WRITES=1` plus explicit write mode for tracked `formal/output` regeneration, record `formal/docs/release/REPOSITORY_ARTIFACT_RETENTION_POLICY_20260505_v0.md` and `formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md`, emit `READ_ONLY_VALIDATION_HYGIENE_ENFORCED`, and select next target `review_read_only_validation_hygiene_result` while preserving the 60-real-axiom, QFT-GR closure-not-authorized, and master-action non-promotional boundaries.
 - Post-read-only validation hygiene bounded attack selection status: `formal/toe_formal/ToeFormal/Derivation/PostReadOnlyValidationHygieneBoundedAttackSelection.lean` and `formal/docs/release/POST_READ_ONLY_VALIDATION_HYGIENE_BOUNDED_ATTACK_SELECTION_20260505_v0.json` consume `review_read_only_validation_hygiene_result` and `READ_ONLY_VALIDATION_HYGIENE_ENFORCED`, record the `6536 passed, 230 skipped` read-only validation proof with clean `git diff --exit-code`, emit `POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED`, and select exactly one next bounded target `return_to_full_pillar_target_map_next_lane_selection` while not selecting proof-debt discharge, artifact-retention enforcement, QM-STAT re-entry, SR/COSMO follow-up, QFT-GR witness search, or master-action gap reduction directly and authorizing no promotion or closure claim.
+- Full-pillar target-map next-lane selection after read-only hygiene status: `formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterReadOnlyHygiene.lean` and `formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_READ_ONLY_HYGIENE_20260505_v0.json` consume `return_to_full_pillar_target_map_next_lane_selection` and `POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED`, compare proof-debt discharge, artifact-retention enforcement, QM-STAT re-entry, SR/COSMO follow-up, QFT-GR witness-search planning, master-action gap reduction, and stale-target synchronization candidates, emit `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE`, and select exactly one next lane `ARTIFACT_RETENTION_ENFORCEMENT_PLAN` with target `prepare_artifact_retention_enforcement_plan` while preserving the prior full-pytest checkpoint and authorizing no promotion or closure claim.

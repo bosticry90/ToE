@@ -1,0 +1,103 @@
+{
+  "schema_id": "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_READ_ONLY_HYGIENE_20260505_v0",
+  "schema_version": 0,
+  "date": "2026-05-05",
+  "classification": "P-POLICY/nonclaim",
+  "selection_status": "completed_selection_only",
+  "current_target": "return_to_full_pillar_target_map_next_lane_selection",
+  "consumed_selector_token": "POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED",
+  "result_token": "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE",
+  "selected_lane": "ARTIFACT_RETENTION_ENFORCEMENT_PLAN",
+  "selected_next_target": "prepare_artifact_retention_enforcement_plan",
+  "selected_next_target_kind": "artifact_retention_enforcement_plan_preparation_only",
+  "selection_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterReadOnlyHygiene.lean",
+  "post_read_only_selection_surface": "formal/toe_formal/ToeFormal/Derivation/PostReadOnlyValidationHygieneBoundedAttackSelection.lean",
+  "post_read_only_selection_report": "formal/docs/release/POST_READ_ONLY_VALIDATION_HYGIENE_BOUNDED_ATTACK_SELECTION_20260505_v0.json",
+  "target_map_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapRebase.lean",
+  "target_map_document": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+  "artifact_retention_policy": "formal/docs/release/REPOSITORY_ARTIFACT_RETENTION_POLICY_20260505_v0.md",
+  "focused_gate": "formal/python/tests/test_full_pillar_target_map_next_lane_selection_after_read_only_hygiene_gate.py",
+  "authorized_effect": "SELECT_EXACTLY_ONE_NEXT_BOUNDED_LANE",
+  "selection_executes_lane": false,
+  "selection_count": 1,
+  "candidate_lane_count": 7,
+  "selection_reason": "Read-only validation now separates verification from canonical-output mutation; the next bounded global move is to prepare artifact-retention enforcement that freezes new large tracked snapshots and defines future migration rules without deleting or migrating existing snapshots here.",
+  "validation_checkpoint": {
+    "full_pytest_passed": 6536,
+    "full_pytest_skipped": 230,
+    "full_pytest_is_prior_checkpoint_not_fresh_for_this_selector": true,
+    "read_only_proof": "full pytest from clean commit followed by git diff --exit-code",
+    "read_only_proof_passed": true,
+    "lean_build_target": "ToeFormal",
+    "lean_build_jobs": 7976,
+    "governance_suite_passed": true
+  },
+  "candidate_classes": [
+    {
+      "class_id": "PROOF_DEBT_LEDGER_DISCHARGE_LANE",
+      "candidate_target": "prepare_next_proof_debt_ledger_discharge_item",
+      "selection": "not_selected",
+      "reason": "Proof-debt discharge remains eligible but the next maintenance risk after read-only validation is repository artifact growth."
+    },
+    {
+      "class_id": "ARTIFACT_RETENTION_ENFORCEMENT_PLAN",
+      "candidate_target": "prepare_artifact_retention_enforcement_plan",
+      "selection": "selected",
+      "reason": "The artifact-retention policy exists; a bounded enforcement plan can freeze new large tracked snapshots and define future migration rules without deleting or migrating existing snapshots."
+    },
+    {
+      "class_id": "QM_STAT_THEOREM_GAP_RE_ENTRY_LANE",
+      "candidate_target": "prepare_qm_stat_theorem_gap_reentry",
+      "selection": "not_selected",
+      "reason": "QM-STAT theorem-gap re-entry remains eligible but is deferred until the artifact-retention enforcement plan is prepared."
+    },
+    {
+      "class_id": "SR_COSMO_GLOBAL_OBSTRUCTION_FOLLOW_UP",
+      "candidate_target": "prepare_sr_cosmo_global_obstruction_followup",
+      "selection": "not_selected",
+      "reason": "SR/COSMO follow-up remains eligible but is not the lowest-risk next global move after hygiene."
+    },
+    {
+      "class_id": "QFT_GR_WITNESS_SEARCH_PLAN",
+      "candidate_target": "prepare_qft_gr_witness_search_plan",
+      "selection": "not_selected",
+      "reason": "QFT-GR witness search remains higher-risk while source-map closure is unauthorized."
+    },
+    {
+      "class_id": "MASTER_ACTION_DEPENDENCY_GAP_REDUCTION_PLAN",
+      "candidate_target": "prepare_master_action_dependency_gap_reduction_plan",
+      "selection": "not_selected",
+      "reason": "Master-action gap reduction remains eligible but does not address the immediate tracked-artifact growth risk."
+    },
+    {
+      "class_id": "STALE_TARGET_SYNCHRONIZATION_SWEEP",
+      "candidate_target": "prepare_stale_target_synchronization_sweep",
+      "selection": "not_selected",
+      "reason": "Stale-target synchronization remains eligible but no stale live-target contradiction is selected here."
+    }
+  ],
+  "preserved_posture": {
+    "ordinary_validation_mode": "read_only_by_default",
+    "tracked_output_write_authorization": "TOE_ALLOW_TRACKED_OUTPUT_WRITES=1 plus explicit write mode",
+    "qft_gr": "ladder_only_closure_not_authorized",
+    "qft_gr_source_map_witness_chain_absent": true,
+    "qft_gr_source_map_closure_authorized": false,
+    "real_axiom_count": 60,
+    "defaultNonAlias": "absent_from_unresolved_axiom_debt_and_lean_backed",
+    "sampleRep32": "retained_spec_backed_axiom",
+    "master_action": "citation_bound_not_promoted"
+  },
+  "nonclaim_boundaries": {
+    "qft_gr_witness_search_selected": false,
+    "master_action_gap_reduction_selected": false,
+    "master_action_promotion_authorized": false,
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The full-pillar selector consumes the post-read-only hygiene selector result, compares eligible scientific and maintenance lanes, selects exactly one next bounded lane for artifact-retention enforcement planning, preserves the latest validation posture without claiming fresh full pytest for this selector, and preserves that no master-action promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, or QFT-GR source-map closure is authorized.",
+  "next_action_after_selection_packet": "prepare_artifact_retention_enforcement_plan"
+}

@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "Post-read-only validation hygiene selector consumes the hygiene checkpoint, records full pytest plus clean diff proof, and returns to full-pillar target-map selection without promotion"
+        "After-hygiene full-pillar selector consumes the post-read-only selector, compares global candidates, and selects artifact-retention enforcement planning without promotion"
       retained_blocker :=
-        "post_read_only_validation_hygiene_selector_return_pending_no_promotion"
+        "after_hygiene_artifact_retention_enforcement_plan_pending_no_promotion"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "return_to_full_pillar_target_map_next_lane_selection"
+        "prepare_artifact_retention_enforcement_plan"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the read-only validation hygiene packet. -/
+/-- Previous live target consumed by the after-hygiene full-pillar selector. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_read_only_validation_hygiene_result"
-
-/-- Current live target after the post-read-only validation hygiene selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "return_to_full_pillar_target_map_next_lane_selection"
+
+/-- Current live target after the after-hygiene full-pillar selector. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_artifact_retention_enforcement_plan"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
