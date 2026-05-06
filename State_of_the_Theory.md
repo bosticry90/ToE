@@ -195,7 +195,7 @@ Strict scalar/QFT current-state synchronization checkpoint (2026-05-02):
 - `QFT_GR_STRESS_ENERGY_SOURCE_MAP_BOUNDARY_v0: no_qft_gr_seam_closure_no_semiclassical_gravity_claim_no_einstein_equation_derivation_claim_no_master_action_promotion_no_empirical_claim`
 - `SCALAR_QFT_PHASE0_5_OBJECTIVE_QUALITY_COMPLETION_STATUS_v0: NO_FULL_PLAN_COMPLETION_CLAIM_PHASE0_COMPLETE_PHASE1_ADVANCED_PARTIAL_PHASE2_OPEN_PHASE2B_OPEN_PHASE3_PARTIAL_PHASE4_PARTIAL_PHASE5_OPEN`
 - `SCALAR_QFT_PHASE0_5_DECISIVE_OPEN_ITEMS_v0: A1A_A2A15A1_GRAPH_CHANNEL_SEMANTIC_CLOSURE_OPEN_PHASE2_UNAUTHORIZED_PHASE2B_TERM_LEVEL_NEUTRALIZATION_OPEN`
-- `CURRENT_LIVE_NEXT_TARGET_v0: review_read_only_validation_hygiene_result`
+- `CURRENT_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
 - `AXIOM_LEDGER_AUDIT_REFRESH_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefresh.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_20260503_v0.json`
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS_v0: AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS`
@@ -250,6 +250,10 @@ Strict scalar/QFT current-state synchronization checkpoint (2026-05-02):
 - `READ_ONLY_VALIDATION_HYGIENE_REPORT_v0: formal/docs/release/READ_ONLY_VALIDATION_HYGIENE_20260505_v0.json`
 - `READ_ONLY_VALIDATION_HYGIENE_ENFORCED_v0: READ_ONLY_VALIDATION_HYGIENE_ENFORCED`
 - `READ_ONLY_VALIDATION_HYGIENE_RESULT_REVIEW_TARGET_v0: review_read_only_validation_hygiene_result`
+- `POST_READ_ONLY_VALIDATION_HYGIENE_BOUNDED_ATTACK_SELECTION_v0: formal/toe_formal/ToeFormal/Derivation/PostReadOnlyValidationHygieneBoundedAttackSelection.lean`
+- `POST_READ_ONLY_VALIDATION_HYGIENE_BOUNDED_ATTACK_SELECTION_REPORT_v0: formal/docs/release/POST_READ_ONLY_VALIDATION_HYGIENE_BOUNDED_ATTACK_SELECTION_20260505_v0.json`
+- `POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED_v0: POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED`
+- `POST_READ_ONLY_VALIDATION_HYGIENE_SELECTED_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
 - `REPOSITORY_ARTIFACT_RETENTION_POLICY_v0: formal/docs/release/REPOSITORY_ARTIFACT_RETENTION_POLICY_20260505_v0.md`
 - `CURRENT_AUTHORITATIVE_SURFACES_INDEX_v0: formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md`
 - `POST_QFT_GR_LADDER_BOUNDED_ATTACK_SELECTION_v0: formal/toe_formal/ToeFormal/Bridges/PostQFTGRLadderBoundedAttackSelection.lean`
@@ -409,7 +413,7 @@ QFT_GR_EINSTEIN_COUPLING_OBLIGATION_RESULT_REVIEW_TARGET_v0: review_qft_gr_einst
 - `QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_TARGET_v0: review_qft_gr_source_map_eligibility_ladder_summary`
 - `LEAN_AXIOM_SPEC_BACKED_LEDGER_v0: formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md`
 - `LEAN_AXIOM_SPEC_BACKED_LEDGER_BASELINE_v0: 60_REAL_AXIOMS_0_SORRY_OR_ADMIT_15_FILES`
-- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: review_read_only_validation_hygiene_result`
+- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
 - `SCALAR_QFT_UNIFORM_MESH_CONVERGENCE_ORDERING_v0: CONTRACT_AND_CONDITIONAL_EVIDENCE_THEOREM_RECORDED_ORDER_H2_TO_ZERO_LIMIT_PROVED_CONCRETE_MESH_ZERO_ERROR_NORMAL_FORM_INSTANTIATED_NONZERO_NORMAL_FORM_BOUND_PROVED_ENDPOINT_PACKAGE_STENCIL_ERROR_ORDER_H2_BOUND_PROVED_ACTUAL_GRAPH_ERROR_IDENTIFIED_CLOSURE_REVIEW_RETAINED_PARENT_INTERFACE_MAP_RETAINED_RESTRICTED_INTERFACE_RETAINED_PARENT_INTERFACE_EQUIVALENCE_RETAINED_PARENT_INTERFACE_TOO_ABSTRACT_RETAINED_PARENT_GRAPH_CHANNEL_INTERFACE_REFACTOR_RETAINED_SPECIALIZED_A2A15A1_WITNESS_RETAINED_SPECIALIZED_ENDPOINT_FLUX_EVIDENCE_RETAINED_ENDPOINT_FLUX_EVIDENCE_DERIVATION_RETAINED_ENDPOINT_SOURCE_OBLIGATION_SPLIT_RETAINED_ENDPOINT_REPRESENTATION_SEMANTICS_RETAINED_ENDPOINT_CONVERGENCE_CONSISTENCY_RETAINED_ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_RETAINED_REFINED_ENDPOINT_SOURCE_ASSEMBLED_REMAINING_NONENDPOINT_RETAINED_REMAINING_NONENDPOINT_OBLIGATION_SPLIT_RETAINED_RAW_IBP_GREEN_CONDITIONAL_BRIDGE_RETAINED_SCALAR_HANDOFF_READY`
 - `SCALAR_QFT_PHASE0_BASELINE_ACCEPTANCE_STATUS_v0: GREEN`
 - `SCALAR_QFT_PHASE0_BASELINE_ACCEPTANCE_CONTRACT_v0: formal/docs/lanes/SCALAR_QFT_PHASE0_BASELINE_ACCEPTANCE_CONTRACT_v0.md`
@@ -427,7 +431,7 @@ QFT_GR_EINSTEIN_COUPLING_OBLIGATION_RESULT_REVIEW_TARGET_v0: review_qft_gr_einst
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260430_v0: GREEN_WITH_EXISTING_WARNINGS`
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260501_v0: GREEN_WITH_EXISTING_WARNINGS`
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260502_v0: GREEN_NO_WARNINGS`
-- `STRICT_PHYSICS_LEAN_BUILD_DETAIL_20260505_v0: lake build ToeFormal GREEN_7974_JOBS_NO_WARNINGS`
+- `STRICT_PHYSICS_LEAN_BUILD_DETAIL_20260506_v0: lake build ToeFormal GREEN_7975_JOBS_NO_WARNINGS`
 - `STRICT_PHYSICS_FULL_PYTEST_STATUS_20260505_v0: GREEN_6536_PASSED_230_SKIPPED`
 - `STRICT_PHYSICS_NONCLAIM_BOUNDARY_v0: NO_PHASE2_AUTHORIZATION_NO_MASTER_ACTION_PROMOTION_NO_SEAM_CLOSURE_NO_EMPIRICAL_CLAIM`
 - `LOOP_CONTROL_REGISTRY_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
@@ -6817,7 +6821,7 @@ Seam governance-vs-physics completion split checkpoint (2026-03-12):
 - `QFT_GR_RENORMALIZED_EXPECTATION_VALUE_NEXT_TARGET_v0: review_qft_gr_renormalized_expectation_value_semantics_result`
 - `LEAN_AXIOM_SPEC_BACKED_LEDGER_v0: formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md`
   - `LEAN_AXIOM_SPEC_BACKED_LEDGER_BASELINE_v0: 60_REAL_AXIOMS_0_SORRY_OR_ADMIT_15_FILES`
-  - `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: review_read_only_validation_hygiene_result`
+  - `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
   - `SEAM_GR_QM_GOVERNANCE_COMPLETE_v0: YES`
   - `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO`
   - `SEAM_QFT_GR_GOVERNANCE_COMPLETE_v0: NO`
@@ -11848,3 +11852,4 @@ Boundary note:
 - Post-master-action gap-packet bounded attack selection status: `formal/toe_formal/ToeFormal/Derivation/PostMasterActionGapPacketBoundedAttackSelection.lean` and `formal/docs/release/POST_MASTER_ACTION_GAP_PACKET_BOUNDED_ATTACK_SELECTION_20260505_v0.json` consume `select_next_post_master_action_gap_packet_bounded_attack` and `MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED`, emit `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`, and select exactly one next bounded target `return_to_full_pillar_target_map_next_lane_selection` while preserving the non-promotional gap-map posture and authorizing no master-action promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE claim, QFT-GR source-map closure, or governance-manifest enrollment.
 - Full-pillar target-map next-lane selection after gap-packet review status: `formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterGapPacketReview.lean` and `formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_GAP_PACKET_REVIEW_20260505_v0.json` consume `return_to_full_pillar_target_map_next_lane_selection` and `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`, compare proof-debt discharge, QM-STAT re-entry, SR/COSMO follow-up, QFT-GR witness-search planning, master-action gap reduction, artifact-retention policy, and read-only validation hygiene lanes, emit `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`, and select exactly one next lane `READ_ONLY_VALIDATION_HYGIENE` with target `prepare_read_only_validation_hygiene_packet` while no scientific promotion or closure claim is authorized.
 - Read-only validation hygiene status: `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean` and `formal/docs/release/READ_ONLY_VALIDATION_HYGIENE_20260505_v0.json` consume `prepare_read_only_validation_hygiene_packet` and `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`, enforce ordinary pytest as read-only for canonical tracked outputs, require `TOE_ALLOW_TRACKED_OUTPUT_WRITES=1` plus explicit write mode for tracked `formal/output` regeneration, record `formal/docs/release/REPOSITORY_ARTIFACT_RETENTION_POLICY_20260505_v0.md` and `formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md`, emit `READ_ONLY_VALIDATION_HYGIENE_ENFORCED`, and select next target `review_read_only_validation_hygiene_result` while preserving the 60-real-axiom, QFT-GR closure-not-authorized, and master-action non-promotional boundaries.
+- Post-read-only validation hygiene bounded attack selection status: `formal/toe_formal/ToeFormal/Derivation/PostReadOnlyValidationHygieneBoundedAttackSelection.lean` and `formal/docs/release/POST_READ_ONLY_VALIDATION_HYGIENE_BOUNDED_ATTACK_SELECTION_20260505_v0.json` consume `review_read_only_validation_hygiene_result` and `READ_ONLY_VALIDATION_HYGIENE_ENFORCED`, record the `6536 passed, 230 skipped` read-only validation proof with clean `git diff --exit-code`, emit `POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED`, and select exactly one next bounded target `return_to_full_pillar_target_map_next_lane_selection` while not selecting proof-debt discharge, artifact-retention enforcement, QM-STAT re-entry, SR/COSMO follow-up, QFT-GR witness search, or master-action gap reduction directly and authorizing no promotion or closure claim.

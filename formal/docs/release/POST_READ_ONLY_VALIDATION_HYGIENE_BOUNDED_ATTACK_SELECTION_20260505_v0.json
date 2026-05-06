@@ -1,0 +1,90 @@
+{
+  "schema_id": "POST_READ_ONLY_VALIDATION_HYGIENE_BOUNDED_ATTACK_SELECTION_20260505_v0",
+  "schema_version": 0,
+  "date": "2026-05-05",
+  "classification": "P-POLICY/nonclaim",
+  "selection_status": "completed_selection_only",
+  "current_target": "review_read_only_validation_hygiene_result",
+  "consumed_hygiene_token": "READ_ONLY_VALIDATION_HYGIENE_ENFORCED",
+  "result_token": "POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED",
+  "selected_next_target": "return_to_full_pillar_target_map_next_lane_selection",
+  "selected_next_target_kind": "full_pillar_target_map_selection_only",
+  "selector_surface": "formal/toe_formal/ToeFormal/Derivation/PostReadOnlyValidationHygieneBoundedAttackSelection.lean",
+  "source_hygiene_surface": "formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean",
+  "source_hygiene_report": "formal/docs/release/READ_ONLY_VALIDATION_HYGIENE_20260505_v0.json",
+  "focused_gate": "formal/python/tests/test_post_read_only_validation_hygiene_bounded_attack_selection_gate.py",
+  "authorized_effect": "SELECT_EXACTLY_ONE_NEXT_BOUNDED_TARGET",
+  "selection_executes_target": false,
+  "selection_count": 1,
+  "candidate_target_count": 7,
+  "selection_reason": "Read-only validation hygiene closed the validation-mutates-output risk; the next bounded move should return to the global full-pillar target map so proof debt, artifact-retention enforcement, and physics re-entry candidates are compared deliberately.",
+  "validation_checkpoint": {
+    "full_pytest_passed": 6536,
+    "full_pytest_skipped": 230,
+    "read_only_proof": "full pytest from clean commit followed by git diff --exit-code",
+    "read_only_proof_passed": true,
+    "lean_build_target": "ToeFormal",
+    "lean_build_jobs": 7975,
+    "governance_suite_passed": true
+  },
+  "candidate_targets": [
+    {
+      "target": "return_to_full_pillar_target_map_next_lane_selection",
+      "selection": "selected",
+      "reason": "This keeps the next move selection-only and compares maintenance, proof-debt, and physics re-entry candidates globally after the read-only hygiene checkpoint."
+    },
+    {
+      "target": "prepare_next_proof_debt_ledger_discharge_item",
+      "selection": "not_selected",
+      "reason": "Proof-debt discharge remains eligible but should be selected through the global target map after the validation hygiene checkpoint."
+    },
+    {
+      "target": "prepare_artifact_retention_enforcement_plan",
+      "selection": "not_selected",
+      "reason": "Artifact-retention enforcement remains a strong maintenance candidate but is not executed by this selector packet."
+    },
+    {
+      "target": "prepare_qm_stat_theorem_gap_reentry",
+      "selection": "not_selected",
+      "reason": "QM-STAT theorem-gap re-entry remains eligible but is not selected directly by this post-hygiene selector."
+    },
+    {
+      "target": "prepare_sr_cosmo_global_obstruction_followup",
+      "selection": "not_selected",
+      "reason": "SR/COSMO obstruction follow-up remains eligible but is not selected directly by this post-hygiene selector."
+    },
+    {
+      "target": "prepare_qft_gr_witness_search_plan",
+      "selection": "not_selected",
+      "reason": "QFT-GR witness search remains higher risk while source-map closure is unauthorized."
+    },
+    {
+      "target": "prepare_master_action_dependency_gap_reduction_plan",
+      "selection": "not_selected",
+      "reason": "Master-action gap reduction remains eligible but no specific low-risk gap-reduction item is selected here."
+    }
+  ],
+  "preserved_posture": {
+    "ordinary_validation_mode": "read_only_by_default",
+    "tracked_output_write_authorization": "TOE_ALLOW_TRACKED_OUTPUT_WRITES=1 plus explicit write mode",
+    "repository_artifact_retention_policy": "formal/docs/release/REPOSITORY_ARTIFACT_RETENTION_POLICY_20260505_v0.md",
+    "current_authoritative_surfaces_index": "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+    "qft_gr": "ladder_only_closure_not_authorized",
+    "qft_gr_source_map_closure_authorized": false,
+    "real_axiom_count": 60,
+    "defaultNonAlias": "absent_from_unresolved_axiom_debt_and_lean_backed",
+    "sampleRep32": "retained_spec_backed_axiom",
+    "master_action": "citation_bound_not_promoted"
+  },
+  "nonclaim_boundaries": {
+    "master_action_promotion_authorized": false,
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The post-read-only validation hygiene selector consumes the hygiene checkpoint, records the read-only validation proof, selects exactly one next bounded target, and does not infer master-action promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, or QFT-GR source-map closure.",
+  "next_action_after_selection_packet": "return_to_full_pillar_target_map_next_lane_selection"
+}
