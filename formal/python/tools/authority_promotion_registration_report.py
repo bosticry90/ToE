@@ -11,8 +11,17 @@ No further execution beneath this layer.
 """
 import json
 import sys
+import argparse
 from pathlib import Path
 from datetime import datetime
+
+_REPO_ROOT_FOR_IMPORT = Path(__file__).resolve().parents[3]
+if str(_REPO_ROOT_FOR_IMPORT) not in sys.path:
+    sys.path.insert(0, str(_REPO_ROOT_FOR_IMPORT))
+
+from formal.python.tools.tracked_output_write_guard import (
+    assert_tracked_output_writes_allowed,
+)
 
 # Paths
 REPO_ROOT = Path(__file__).parent.parent.parent.parent
@@ -56,15 +65,17 @@ def check_promotion_prerequisite(ruling_report):
     return True
 
 
-def register_revised_definition_as_authoritative(ruling_report):
+def register_revised_definition_as_authoritative(
+    ruling_report,
+    *,
+    registry_path=AUTHORITY_BLOCKER_REGISTRY,
+    write=False,
+):
     """
     Register revised blocker definition as authoritative.
     Add to authority registry with timestamp and ruling reference.
     """
-    blocker_registry = load_or_create_registry(AUTHORITY_BLOCKER_REGISTRY)
-    
     target_row_id = ruling_report.get("ruling", {}).get("target_row_id", "")
-    ruling_date = ruling_report.get("captured_at_utc", "")
     
     authoritative_entry = {
         "definition_id": "REVISED_BLOCKER_DEFINITION_20260411_v0",
@@ -77,24 +88,29 @@ def register_revised_definition_as_authoritative(ruling_report):
         "criteria_met": "5/5",
         "status": "ACTIVE"
     }
-    
-    blocker_registry["entries"].append(authoritative_entry)
-    blocker_registry["last_updated"] = datetime.utcnow().isoformat() + "Z"
-    
-    AUTHORITY_BLOCKER_REGISTRY.parent.mkdir(parents=True, exist_ok=True)
-    with open(AUTHORITY_BLOCKER_REGISTRY, 'w') as f:
-        json.dump(blocker_registry, f, indent=2)
+
+    if write:
+        blocker_registry = load_or_create_registry(registry_path)
+        blocker_registry["entries"].append(authoritative_entry)
+        blocker_registry["last_updated"] = datetime.utcnow().isoformat() + "Z"
+
+        registry_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(registry_path, 'w') as f:
+            json.dump(blocker_registry, f, indent=2)
     
     return authoritative_entry
 
 
-def record_supersession_relationship(ruling_report):
+def record_supersession_relationship(
+    ruling_report,
+    *,
+    registry_path=BLOCKER_LINEAGE_REGISTRY,
+    write=False,
+):
     """
     Record that revised definition supersedes prior authoritative token.
     Maintain lineage chain in blocker definition lineage registry.
     """
-    lineage_registry = load_or_create_registry(BLOCKER_LINEAGE_REGISTRY)
-    
     lineage_entry = {
         "supersession_id": f"SUPERSESSION_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}",
         "prior_authoritative_token": "PRIOR_AUTHORITATIVE_BLOCKER_DEFINITION",
@@ -109,18 +125,20 @@ def record_supersession_relationship(ruling_report):
         },
         "lineage_notes": "Promotion via bounded coupling refinement; tightened seam-to-ledger binding"
     }
-    
-    lineage_registry["entries"].append(lineage_entry)
-    lineage_registry["last_updated"] = datetime.utcnow().isoformat() + "Z"
-    
-    BLOCKER_LINEAGE_REGISTRY.parent.mkdir(parents=True, exist_ok=True)
-    with open(BLOCKER_LINEAGE_REGISTRY, 'w') as f:
-        json.dump(lineage_registry, f, indent=2)
+
+    if write:
+        lineage_registry = load_or_create_registry(registry_path)
+        lineage_registry["entries"].append(lineage_entry)
+        lineage_registry["last_updated"] = datetime.utcnow().isoformat() + "Z"
+
+        registry_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(registry_path, 'w') as f:
+            json.dump(lineage_registry, f, indent=2)
     
     return lineage_entry
 
 
-def trigger_recompute_surfaces(ruling_report):
+def trigger_recompute_surfaces(ruling_report, *, recompute_dir=None, write=False):
     """
     Signal recompute for surfaces that depend on authoritative blocker movement.
     Create trigger records in recompute registry.
@@ -131,13 +149,14 @@ def trigger_recompute_surfaces(ruling_report):
         "blocker_authority_transport_surface.json"
     ]
     
-    recompute_dir = REPO_ROOT / "formal/output/recompute"
-    recompute_dir.mkdir(parents=True, exist_ok=True)
+    effective_recompute_dir = recompute_dir or REPO_ROOT / "formal/output/recompute"
+    if write:
+        effective_recompute_dir.mkdir(parents=True, exist_ok=True)
     
     triggered_surfaces = []
     
     for trigger_name in recompute_triggers:
-        trigger_path = recompute_dir / trigger_name
+        trigger_path = effective_recompute_dir / trigger_name
         trigger_record = {
             "trigger_id": f"RECOMPUTE_TRIGGER_{datetime.utcnow().strftime('%Y%m%d_%H%M%S')}",
             "surface_name": trigger_name.replace(".json", ""),
@@ -148,22 +167,23 @@ def trigger_recompute_surfaces(ruling_report):
             "dependency": "authoritative_blocker_definition_movement"
         }
         
-        # Initialize or append to trigger record
-        if trigger_path.exists():
-            with open(trigger_path) as f:
-                existing = json.load(f)
-            if isinstance(existing, dict) and "triggers" not in existing:
-                existing = {"schema_id": trigger_name.replace(".json", "").upper(), "triggers": [existing]}
-            existing.get("triggers", []).append(trigger_record)
-            with open(trigger_path, 'w') as f:
-                json.dump(existing, f, indent=2)
-        else:
-            trigger_doc = {
-                "schema_id": trigger_name.replace(".json", "").upper(),
-                "triggers": [trigger_record]
-            }
-            with open(trigger_path, 'w') as f:
-                json.dump(trigger_doc, f, indent=2)
+        if write:
+            # Initialize or append to trigger record
+            if trigger_path.exists():
+                with open(trigger_path) as f:
+                    existing = json.load(f)
+                if isinstance(existing, dict) and "triggers" not in existing:
+                    existing = {"schema_id": trigger_name.replace(".json", "").upper(), "triggers": [existing]}
+                existing.get("triggers", []).append(trigger_record)
+                with open(trigger_path, 'w') as f:
+                    json.dump(existing, f, indent=2)
+            else:
+                trigger_doc = {
+                    "schema_id": trigger_name.replace(".json", "").upper(),
+                    "triggers": [trigger_record]
+                }
+                with open(trigger_path, 'w') as f:
+                    json.dump(trigger_doc, f, indent=2)
         
         triggered_surfaces.append({
             "surface_name": trigger_name.replace(".json", ""),
@@ -174,7 +194,15 @@ def trigger_recompute_surfaces(ruling_report):
     return triggered_surfaces
 
 
-def materialize_promotion_registration_report(ruling_report, auth_entry, lineage_entry, triggered_surfaces):
+def materialize_promotion_registration_report(
+    ruling_report,
+    auth_entry,
+    lineage_entry,
+    triggered_surfaces,
+    *,
+    output_path=OUTPUT_PATH,
+    write=False,
+):
     """Materialize authority promotion registration output report."""
     report = {
         "schema_id": "AUTHORITY_PROMOTION_REGISTRATION_REPORT_20260411_v0",
@@ -224,36 +252,64 @@ def materialize_promotion_registration_report(ruling_report, auth_entry, lineage
         }
     }
     
-    OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    with open(OUTPUT_PATH, 'w') as f:
-        json.dump(report, f, indent=2)
+    if write:
+        output_path.parent.mkdir(parents=True, exist_ok=True)
+        with open(output_path, 'w') as f:
+            json.dump(report, f, indent=2)
     
     return report
 
 
 def main():
     """Execute authority promotion registration."""
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--write",
+        action="store_true",
+        help=(
+            "Rewrite canonical authority outputs. Tracked formal/output writes "
+            "also require TOE_ALLOW_TRACKED_OUTPUT_WRITES=1."
+        ),
+    )
+    args = parser.parse_args()
+
     try:
         # Load inputs
         ruling_report = load_ruling_report()
         
         # Verify prerequisite
         check_promotion_prerequisite(ruling_report)
+
+        if args.write:
+            assert_tracked_output_writes_allowed(
+                [
+                    AUTHORITY_BLOCKER_REGISTRY,
+                    BLOCKER_LINEAGE_REGISTRY,
+                    OUTPUT_PATH,
+                    REPO_ROOT / "formal/output/recompute/qm_seam_coherence_under_revised_blocker.json",
+                    REPO_ROOT / "formal/output/recompute/ledger_artifact_transport_under_revised_blocker.json",
+                    REPO_ROOT / "formal/output/recompute/blocker_authority_transport_surface.json",
+                ],
+                repo_root=REPO_ROOT,
+            )
         
         # Execute promotion registration tasks
-        auth_entry = register_revised_definition_as_authoritative(ruling_report)
-        lineage_entry = record_supersession_relationship(ruling_report)
-        triggered_surfaces = trigger_recompute_surfaces(ruling_report)
+        auth_entry = register_revised_definition_as_authoritative(
+            ruling_report, write=args.write
+        )
+        lineage_entry = record_supersession_relationship(ruling_report, write=args.write)
+        triggered_surfaces = trigger_recompute_surfaces(ruling_report, write=args.write)
         
         # Materialize report
         report = materialize_promotion_registration_report(
-            ruling_report, auth_entry, lineage_entry, triggered_surfaces
+            ruling_report, auth_entry, lineage_entry, triggered_surfaces, write=args.write
         )
         
         # Print result summary
         summary = report.get("summary", {})
         print(
             f"authority_promotion_registration: "
+            f"write={args.write} "
             f"registration_completed={summary.get('registration_completed')} "
             f"definition_now_authoritative={summary.get('revised_definition_is_now_authoritative')} "
             f"recompute_surfaces_triggered={summary.get('recompute_surfaces_triggered')} "

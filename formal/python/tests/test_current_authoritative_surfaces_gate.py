@@ -1,0 +1,103 @@
+from __future__ import annotations
+
+from pathlib import Path
+
+from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tests.strict_physics_state_helpers import (
+    assert_focused_gate_not_manifest_enrolled,
+)
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+INDEX_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "CURRENT_AUTHORITATIVE_SURFACES_v0.md"
+)
+REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
+FRONTIER_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "CrossPillarClosureFrontier.lean"
+)
+HYGIENE_SURFACE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "ReadOnlyValidationHygiene.lean"
+)
+LEDGER_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md"
+
+
+def _read(path: Path) -> str:
+    assert path.exists(), f"Missing required file: {path}"
+    return path.read_text(encoding="utf-8")
+
+
+def test_current_authoritative_surfaces_index_records_live_authority_chain() -> None:
+    text = _read(INDEX_PATH)
+
+    for token in {
+        "CURRENT_AUTHORITATIVE_SURFACES_v0",
+        "CURRENT_LIVE_NEXT_TARGET_v0: review_read_only_validation_hygiene_result",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_read_only_validation_hygiene_packet",
+        "ACTIVE_LANE_v0: read_only_validation_hygiene",
+        "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+        "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean",
+        "READ_ONLY_VALIDATION_HYGIENE_ENFORCED",
+    }:
+        assert token in text
+
+    for path in {REGISTRY_PATH, FRONTIER_PATH, HYGIENE_SURFACE_PATH, LEDGER_PATH}:
+        assert str(path.relative_to(REPO_ROOT)).replace("\\", "/") in text
+
+
+def test_current_authoritative_surfaces_index_records_current_axiom_and_nonclaim_state() -> None:
+    text = _read(INDEX_PATH)
+
+    for token in {
+        "REAL_AXIOM_COUNT_v0: 60",
+        "REAL_SORRY_OR_ADMIT_COUNT_v0: 0",
+        "defaultNonAlias: absent_from_unresolved_axiom_debt_and_lean_backed",
+        "sampleRep32: retained_spec_backed_axiom",
+        "QFT_GR_SOURCE_MAP_CLOSURE_AUTHORIZED_v0: false",
+        "MASTER_ACTION_PROMOTION_AUTHORIZED_v0: false",
+        "PILLAR_COMPLETION_INFERRED_v0: false",
+        "SEAM_CLOSURE_CLAIM_v0: false",
+        "PHASE2_READINESS_CLAIM_v0: false",
+        "EMPIRICAL_ADEQUACY_CLAIM_v0: false",
+        "CANONICAL_TOE_CLAIM_v0: false",
+    }:
+        assert token in text
+
+
+def test_current_authoritative_surfaces_index_records_validation_and_historical_classes() -> None:
+    text = _read(INDEX_PATH)
+
+    for token in {
+        "pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1",
+        "./py.ps1 -m pytest formal/python/tests -q",
+        "Push-Location formal/toe_formal; lake build ToeFormal; Pop-Location",
+        "git diff --exit-code",
+        "formal/tooling_snapshots",
+        "scratch",
+        "archive",
+        "backup",
+        "REPOSITORY_ARTIFACT_RETENTION_POLICY_20260505_v0",
+        "TOE_ALLOW_TRACKED_OUTPUT_WRITES=1",
+    }:
+        assert token in text
+
+
+def test_current_authoritative_surfaces_gate_not_manifest_enrolled() -> None:
+    assert_focused_gate_not_manifest_enrolled(
+        "formal/python/tests/test_current_authoritative_surfaces_gate.py"
+    )

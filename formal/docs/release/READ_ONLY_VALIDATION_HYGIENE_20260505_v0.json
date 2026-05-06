@@ -1,0 +1,59 @@
+{
+  "schema_id": "READ_ONLY_VALIDATION_HYGIENE_20260505_v0",
+  "schema_version": 0,
+  "date": "2026-05-05",
+  "classification": "P-POLICY/nonclaim",
+  "hygiene_status": "enforced",
+  "current_target": "prepare_read_only_validation_hygiene_packet",
+  "consumed_selector_token": "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW",
+  "result_token": "READ_ONLY_VALIDATION_HYGIENE_ENFORCED",
+  "selected_next_target": "review_read_only_validation_hygiene_result",
+  "hygiene_surface": "formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean",
+  "selector_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterGapPacketReview.lean",
+  "selector_report": "formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_GAP_PACKET_REVIEW_20260505_v0.json",
+  "focused_gate": "formal/python/tests/test_read_only_validation_hygiene_gate.py",
+  "authorized_effect": "ENFORCE_READ_ONLY_VALIDATION_HYGIENE",
+  "tracked_write_guard": {
+    "module": "formal/python/tools/tracked_output_write_guard.py",
+    "required_env_var": "TOE_ALLOW_TRACKED_OUTPUT_WRITES",
+    "required_env_value": "1",
+    "scope": "tracked canonical outputs under formal/output",
+    "plain_validation_writes_tracked_outputs": false
+  },
+  "refactored_surfaces": {
+    "authority_promotion_registration_report": {
+      "path": "formal/python/tools/authority_promotion_registration_report.py",
+      "ordinary_tests_use_pure_builders_or_temp_paths": true,
+      "canonical_write_requires_env_guard": true
+    },
+    "state_core_compression_yield": {
+      "path": "formal/python/tools/measure_state_core_compression_yield.py",
+      "default_mode": "check_existing_report_without_writing",
+      "canonical_write_requires_explicit_write_mode_and_env_guard": true
+    }
+  },
+  "policy_artifacts": {
+    "repository_artifact_retention_policy": "formal/docs/release/REPOSITORY_ARTIFACT_RETENTION_POLICY_20260505_v0.md",
+    "current_authoritative_surfaces_index": "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md"
+  },
+  "preserved_posture": {
+    "qft_gr": "ladder_only_closure_not_authorized",
+    "qft_gr_source_map_witness_chain_absent": true,
+    "qft_gr_source_map_closure_authorized": false,
+    "real_axiom_count": 60,
+    "defaultNonAlias": "absent_from_unresolved_axiom_debt_and_lean_backed",
+    "sampleRep32": "retained_spec_backed_axiom",
+    "master_action": "candidate_dependency_surface_only"
+  },
+  "nonclaim_boundaries": {
+    "master_action_promotion_authorized": false,
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The hygiene packet consumes the full-pillar selector result, enforces read-only validation for ordinary pytest, requires TOE_ALLOW_TRACKED_OUTPUT_WRITES=1 for tracked-output regeneration, records repository artifact-retention and authoritative-surface policy artifacts, and preserves all nonclaim boundaries.",
+  "next_action_after_hygiene_packet": "review_read_only_validation_hygiene_result"
+}

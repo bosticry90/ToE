@@ -11,7 +11,7 @@ TOOL_PATH = REPO_ROOT / "formal" / "python" / "tools" / "measure_state_core_comp
 REPORT_PATH = REPO_ROOT / "formal" / "output" / "state_core_compression_yield_report_v0.json"
 
 
-def _run_report_generation() -> None:
+def _run_report_check() -> None:
     cmd = [
         sys.executable,
         str(TOOL_PATH),
@@ -35,8 +35,10 @@ def test_state_core_compression_yield_gate_assets_exist() -> None:
 
 
 def test_state_core_compression_yield_gate_report_generation_and_contract() -> None:
-    _run_report_generation()
+    before = REPORT_PATH.read_text(encoding="utf-8")
+    _run_report_check()
     assert REPORT_PATH.exists(), "Missing generated compression/yield report artifact."
+    assert REPORT_PATH.read_text(encoding="utf-8") == before
 
     report = json.loads(REPORT_PATH.read_text(encoding="utf-8"))
     assert report["artifact_id"] == "state_core_compression_yield_report_v0"

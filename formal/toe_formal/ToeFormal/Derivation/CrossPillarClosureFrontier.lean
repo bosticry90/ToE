@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "Master-action dependency gap-packet result review consumes the non-promotional gap map, confirms active blockers remain, preserves the 60-axiom ledger posture, and keeps the master action citation-bound without promotion"
+        "Read-only validation hygiene consumes the post-gap full-pillar selector, enforces tracked-output write authorization, preserves the 60-axiom ledger posture, and keeps the master action citation-bound without promotion"
       retained_blocker :=
         "master_action_dependency_frontier_retained_no_promotion"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "select_next_post_master_action_gap_packet_bounded_attack"
+        "review_read_only_validation_hygiene_result"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the master-action gap-packet result review. -/
+/-- Previous live target consumed by the read-only validation hygiene packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_master_action_dependency_gap_packet_result"
+  "prepare_read_only_validation_hygiene_packet"
 
-/-- Current live target after the master-action gap-packet result review. -/
+/-- Current live target after the read-only validation hygiene packet. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "select_next_post_master_action_gap_packet_bounded_attack"
+  "review_read_only_validation_hygiene_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

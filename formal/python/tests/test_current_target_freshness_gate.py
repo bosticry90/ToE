@@ -494,8 +494,12 @@ MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_TARGET = (
 POST_MASTER_ACTION_GAP_PACKET_BOUNDED_ATTACK_SELECTION_TARGET = (
     "select_next_post_master_action_gap_packet_bounded_attack"
 )
-LIVE_TARGET = POST_MASTER_ACTION_GAP_PACKET_BOUNDED_ATTACK_SELECTION_TARGET
-PREVIOUS_TARGET = MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_TARGET
+READ_ONLY_VALIDATION_HYGIENE_TARGET = "prepare_read_only_validation_hygiene_packet"
+READ_ONLY_VALIDATION_HYGIENE_RESULT_REVIEW_TARGET = (
+    "review_read_only_validation_hygiene_result"
+)
+LIVE_TARGET = READ_ONLY_VALIDATION_HYGIENE_RESULT_REVIEW_TARGET
+PREVIOUS_TARGET = READ_ONLY_VALIDATION_HYGIENE_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -584,7 +588,7 @@ def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple
     return [(path, value)]
 
 
-def test_single_live_target_is_machine_pinned_after_gap_packet_review() -> None:
+def test_single_live_target_is_machine_pinned_after_read_only_validation_hygiene() -> None:
     assert_current_target_consistent()
     payload = _registry()
     state = payload["current_target_state"]
@@ -592,42 +596,47 @@ def test_single_live_target_is_machine_pinned_after_gap_packet_review() -> None:
     assert state["schema_id"] == "CURRENT_TARGET_STATE_v0"
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
-    assert state["live_next_target_evidence"] == str(
-        MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
+    assert state["live_next_target_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean"
+    )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
         item["workstream_id"] for item in payload["workstreams"] if item["status"] == "paused"
     }
     assert set(state["paused_lanes"]) == paused_ids
-    assert state["active_lane"] == "master_action_dependency_gap_packet_result_review"
+    assert state["active_lane"] == "read_only_validation_hygiene"
 
     current_active_workstream = active_workstream(payload)
-    assert (
-        current_active_workstream["workstream_id"]
-        == "master_action_dependency_gap_packet_result_review"
-    )
+    assert current_active_workstream["workstream_id"] == "read_only_validation_hygiene"
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
-    assert (
-        current_active_workstream["latest_surface"]
-        == "master_action_dependency_gap_packet_result_review_v0"
+    assert current_active_workstream["latest_surface"] == "read_only_validation_hygiene_v0"
+    assert current_active_workstream["consumed_selector_token"] == (
+        "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW"
     )
-    assert current_active_workstream["consumed_result_token"] == (
-        "MASTER_ACTION_DEPENDENCY_GAP_PACKET_PREPARED"
-    )
-    assert current_active_workstream["review_token"] == (
-        "MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED"
+    assert current_active_workstream["result_token"] == (
+        "READ_ONLY_VALIDATION_HYGIENE_ENFORCED"
     )
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert current_active_workstream["recommended_selector_choice"] == (
-        "return_to_full_pillar_target_map_next_lane_selection"
+    assert current_active_workstream["tracked_output_write_guard"] == (
+        "formal/python/tools/tracked_output_write_guard.py"
     )
-    assert current_active_workstream["listed_missing_dependencies_remain_active_blockers"] == "yes"
+    assert current_active_workstream["tracked_output_write_env_var"] == (
+        "TOE_ALLOW_TRACKED_OUTPUT_WRITES=1"
+    )
+    assert current_active_workstream["plain_pytest_tracked_output_mutation_allowed"] == "no"
+    assert (
+        current_active_workstream["state_core_compression_yield_default_mode"]
+        == "read_only_check"
+    )
+    assert (
+        current_active_workstream[
+            "authority_promotion_registration_tests_write_canonical_outputs"
+        ]
+        == "no"
+    )
     assert current_active_workstream["real_axiom_count"] == 60
     assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
-    assert current_active_workstream["selector_choice_executed"] == "no"
-    assert current_active_workstream["gap_reduction_plan_prepared"] == "no"
     assert current_active_workstream["seam_closure_claim"] == "no"
     assert current_active_workstream["phase2_readiness_claim"] == "no"
     assert current_active_workstream["empirical_adequacy_claim"] == "no"
@@ -1389,7 +1398,7 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert master_action["authorized_next_strict_target"] == LIVE_TARGET
     assert (
         master_action["next_action_scope"]
-        == "post_master_action_gap_packet_bounded_attack_selection"
+        == "read_only_validation_hygiene_result_review"
     )
     assert master_action["qft_gr_source_map_eligibility_ladder_summary_status"] == (
         "completed"

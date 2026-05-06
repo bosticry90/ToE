@@ -14,6 +14,9 @@ if __name__ == "__main__" and (__package__ is None or __package__ == ""):
             break
 
 from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.tracked_output_write_guard import (
+    assert_tracked_output_write_allowed,
+)
 
 REPO_ROOT = find_repo_root(Path(__file__))
 DEFAULT_STATE_CORE = REPO_ROOT / "formal" / "docs" / "release" / "state_core_v0.json"
@@ -30,6 +33,12 @@ REQUIRED_GOVERNANCE_GATE_TOKENS = [
 
 def _read_json(path: Path) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _normalise_for_check(payload: dict[str, Any]) -> dict[str, Any]:
+    normalised = json.loads(json.dumps(payload))
+    normalised.pop("generated_at_utc", None)
+    return normalised
 
 
 def _measure(state_core: dict[str, Any], governance_suite_text: str, governance_manifest_text: str) -> dict[str, Any]:
@@ -119,6 +128,11 @@ def main() -> None:
     parser.add_argument("--governance-manifest", type=Path, default=DEFAULT_GOV_MANIFEST)
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
     parser.add_argument("--print", dest="print_mode", action="store_true")
+    parser.add_argument(
+        "--write",
+        action="store_true",
+        help="Rewrite the output report. Tracked formal/output writes require TOE_ALLOW_TRACKED_OUTPUT_WRITES=1.",
+    )
     args = parser.parse_args()
 
     state_core = _read_json(args.state_core)
@@ -127,8 +141,17 @@ def main() -> None:
 
     result = _measure(state_core, governance_text, governance_manifest_text)
 
-    args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    if args.write:
+        assert_tracked_output_write_allowed(args.output, repo_root=REPO_ROOT)
+        args.output.parent.mkdir(parents=True, exist_ok=True)
+        args.output.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    else:
+        existing = _read_json(args.output)
+        if _normalise_for_check(existing) != _normalise_for_check(result):
+            raise SystemExit(
+                "state_core_compression_yield: existing report is stale; "
+                "rerun with --write and TOE_ALLOW_TRACKED_OUTPUT_WRITES=1 to refresh"
+            )
 
     if args.print_mode:
         print(json.dumps(result, indent=2))

@@ -1,0 +1,74 @@
+{
+  "schema_id": "POST_MASTER_ACTION_GAP_PACKET_BOUNDED_ATTACK_SELECTION_20260505_v0",
+  "schema_version": 0,
+  "date": "2026-05-05",
+  "classification": "P-POLICY/nonclaim",
+  "selection_status": "completed_selection_only",
+  "current_target": "select_next_post_master_action_gap_packet_bounded_attack",
+  "consumed_review_token": "MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED",
+  "result_token": "POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED",
+  "selected_next_target": "return_to_full_pillar_target_map_next_lane_selection",
+  "selected_next_target_kind": "full_pillar_target_map_selection_only",
+  "selector_surface": "formal/toe_formal/ToeFormal/Derivation/PostMasterActionGapPacketBoundedAttackSelection.lean",
+  "source_review_surface": "formal/toe_formal/ToeFormal/Derivation/MasterActionDependencyGapPacketResultReview.lean",
+  "source_review_report": "formal/docs/release/MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_20260503_v0.json",
+  "focused_gate": "formal/python/tests/test_post_master_action_gap_packet_bounded_attack_selection_gate.py",
+  "authorized_effect": "SELECT_EXACTLY_ONE_NEXT_BOUNDED_TARGET",
+  "selection_executes_target": false,
+  "selection_count": 1,
+  "candidate_target_count": 6,
+  "selection_reason": "The gap packet has been consumed as a nonpromotional dependency-gap map and no specific low-risk gap-reduction item has been selected here; the next bounded move returns to the full-pillar target map.",
+  "candidate_targets": [
+    {
+      "target": "return_to_full_pillar_target_map_next_lane_selection",
+      "selection": "selected",
+      "reason": "The gap packet result review recommended a selector return to the full target map."
+    },
+    {
+      "target": "prepare_next_proof_debt_ledger_discharge_item",
+      "selection": "not_selected",
+      "reason": "Proof-debt discharge remains eligible but should be selected through the global target map."
+    },
+    {
+      "target": "prepare_qm_stat_theorem_gap_reentry",
+      "selection": "not_selected",
+      "reason": "QM-STAT re-entry remains eligible but is not selected by this post-gap selector."
+    },
+    {
+      "target": "prepare_sr_cosmo_global_obstruction_followup",
+      "selection": "not_selected",
+      "reason": "SR/COSMO follow-up remains eligible but is not selected by this post-gap selector."
+    },
+    {
+      "target": "prepare_qft_gr_witness_search_plan",
+      "selection": "not_selected",
+      "reason": "QFT-GR witness search remains premature while source-map closure is unauthorized."
+    },
+    {
+      "target": "prepare_master_action_dependency_gap_reduction_plan",
+      "selection": "not_selected",
+      "reason": "No specific low-risk gap-reduction item is selected here."
+    }
+  ],
+  "preserved_posture": {
+    "qft_gr": "ladder_only_closure_not_authorized",
+    "qft_gr_source_map_witness_chain_absent": true,
+    "qft_gr_source_map_closure_authorized": false,
+    "real_axiom_count": 60,
+    "defaultNonAlias": "absent_from_unresolved_axiom_debt_and_lean_backed",
+    "sampleRep32": "retained_spec_backed_axiom",
+    "master_action": "candidate_dependency_surface_only",
+    "gap_map_interpretation": "nonpromotional_dependency_gap_map"
+  },
+  "nonclaim_boundaries": {
+    "master_action_promotion_authorized": false,
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The post-gap selector consumes the master-action dependency gap-packet review, selects exactly one next bounded target, preserves the updated nonpromotional dependency-gap posture, and does not infer master-action promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, or QFT-GR source-map closure.",
+  "next_action_after_selection_packet": "return_to_full_pillar_target_map_next_lane_selection"
+}
