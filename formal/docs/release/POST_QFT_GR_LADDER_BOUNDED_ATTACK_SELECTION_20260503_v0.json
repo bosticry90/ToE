@@ -1,0 +1,59 @@
+{
+  "schema_id": "POST_QFT_GR_LADDER_BOUNDED_ATTACK_SELECTION_20260503_v0",
+  "schema_version": 0,
+  "date": "2026-05-03",
+  "classification": "P-POLICY/nonclaim",
+  "selection_status": "completed_selection_only",
+  "current_target": "select_next_post_qft_gr_ladder_bounded_attack",
+  "consumed_review_target": "review_qft_gr_source_map_eligibility_ladder_summary",
+  "consumed_review_token": "QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_CONSUMED_CLOSURE_NOT_AUTHORIZED",
+  "output_token": "POST_QFT_GR_LADDER_NEXT_ATTACK_SELECTED",
+  "review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SourceMapEligibilityLadderSummaryResultReview.lean",
+  "review_report": "formal/docs/release/QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_20260503_v0.json",
+  "summary_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SourceMapEligibilityLadderSummary.lean",
+  "selection_surface": "formal/toe_formal/ToeFormal/Bridges/PostQFTGRLadderBoundedAttackSelection.lean",
+  "focused_gate": "formal/python/tests/test_post_qft_gr_ladder_bounded_attack_selection_gate.py",
+  "authorized_effect": "SELECT_EXACTLY_ONE_NEXT_BOUNDED_TARGET",
+  "selection_executes_target": false,
+  "selection_count": 1,
+  "candidate_next_targets": [
+    {
+      "target_id": "return_to_full_pillar_target_map_next_lane_selection",
+      "selection": "selected",
+      "target_kind": "cross_pillar_priority_selection_return",
+      "reason": "QFT-GR has just received a long dependency/obligation ladder; a cross-pillar selector should decide whether QFT-GR still outranks other lanes before any witness-search plan is prepared."
+    },
+    {
+      "target_id": "prepare_qft_gr_witness_search_plan",
+      "selection": "not_selected",
+      "target_kind": "same_lane_witness_search_planning",
+      "reason": "Not selected because immediate witness-search planning would move from safe obligation semantics toward speculative proof construction without a fresh cross-pillar priority check."
+    }
+  ],
+  "selected_next_target": "return_to_full_pillar_target_map_next_lane_selection",
+  "selected_next_target_kind": "cross_pillar_priority_selection_return",
+  "selected_decision": "return_to_full_pillar_target_map_next_lane_selection",
+  "review_interpretation": "source_map_eligibility_ladder_result_review_consumed_as_dependency_obligation_map_only",
+  "source_map_eligibility_ladder_constructed": true,
+  "witness_chain_status": "absent",
+  "forbidden_effects": [
+    "QFT_GR_WITNESS_SEARCH_PLAN_SELECTION",
+    "SOURCE_MAP_CLOSURE",
+    "SEAM_CLOSURE",
+    "PHASE_2_READINESS",
+    "EMPIRICAL_ADEQUACY",
+    "MASTER_ACTION_PROMOTION",
+    "SELECTED_TARGET_EXECUTION"
+  ],
+  "nonclaim_boundaries": {
+    "qft_gr_witness_search_plan_selected": false,
+    "source_map_closure_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "master_action_promotion_authorized": false,
+    "selection_executes_target": false
+  },
+  "acceptance_condition": "The post-QFT-GR ladder selector consumes the ladder result review, selects exactly one next bounded target, and does not infer source-map closure, seam closure, Phase 2 readiness, empirical adequacy, or master-action promotion.",
+  "next_action_after_selection_packet": "return_to_full_pillar_target_map_next_lane_selection"
+}

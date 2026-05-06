@@ -1,0 +1,76 @@
+{
+  "schema_id": "POST_REBASE_NEXT_BOUNDED_ATTACK_SELECTION_20260503_v0",
+  "schema_version": 0,
+  "date": "2026-05-03",
+  "classification": "P-POLICY/nonclaim",
+  "selection_status": "prepared_for_live_selection",
+  "current_target": "review_full_pillar_target_map_rebase_result",
+  "selection_target": "select_next_post_rebase_bounded_attack",
+  "review_result": "FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_CONSUMED",
+  "review_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapRebaseResultReview.lean",
+  "selection_surface": "formal/toe_formal/ToeFormal/Derivation/PostRebaseNextBoundedAttackSelection.lean",
+  "full_target_map": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+  "proof_debt_ledger": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+  "focused_gate": "formal/python/tests/test_post_rebase_next_bounded_attack_selection_gate.py",
+  "authorized_effect": "SELECT_EXACTLY_ONE_NEXT_BOUNDED_ATTACK",
+  "selection_executes_attack": false,
+  "acceptance_condition": "post_rebase_review_consumed_exactly_one_next_bounded_attack_class_selected_no_closure_inferred",
+  "candidate_classes": [
+    {
+      "class_id": "PROOF_DEBT_DISCHARGE_LANE",
+      "readiness": "medium",
+      "proof_debt_severity": "medium",
+      "potential_payoff": "local",
+      "selection": "not_selected",
+      "reason": "Ledger has compact nonblocking/spec-backed rows, but most blocking rows cluster in scalar/master-action surfaces and do not follow the immediate post-QFT-GR seam progression."
+    },
+    {
+      "class_id": "QFT_GR_SOURCE_MAP_CLOSURE_ELIGIBILITY_LANE",
+      "readiness": "high",
+      "proof_debt_severity": "high",
+      "potential_payoff": "high",
+      "selection": "selected",
+      "source_row": "FULL_SEAM_QFT_GR_TARGET_MAP_v0",
+      "selected_next_target": "prepare_qft_gr_state_expectation_functional_semantics_bounded_attack",
+      "selected_next_obligation": "qft_state_expectation_functional_semantics",
+      "reason": "The operator-domain result review left an ordered semantic ladder; the next bounded missing bridge is expectation-functional semantics before renormalized expectation, weak-curvature source identification, covariance/conservation, or full source-map closure."
+    },
+    {
+      "class_id": "PILLAR_SYNCHRONIZATION_STALE_TARGET_AUDIT_LANE",
+      "readiness": "high",
+      "proof_debt_severity": "low",
+      "potential_payoff": "governance",
+      "selection": "not_selected",
+      "reason": "Focused gates and full Lean checkpoint already covered the immediate synchronization risk; this remains available if later drift appears."
+    },
+    {
+      "class_id": "SEAM_REOPENING_ELIGIBILITY_LANE",
+      "readiness": "medium",
+      "proof_debt_severity": "high",
+      "potential_payoff": "high",
+      "selection": "not_selected",
+      "reason": "Too broad as a class for the next move; QFT-GR expectation-functional preparation is the more precise seam-reentry candidate."
+    }
+  ],
+  "selected_class": "QFT_GR_SOURCE_MAP_CLOSURE_ELIGIBILITY_LANE",
+  "selected_next_target": "prepare_qft_gr_state_expectation_functional_semantics_bounded_attack",
+  "selected_next_target_kind": "preparation_only_before_theorem_attack",
+  "selection_count": 1,
+  "forbidden_effects": [
+    "FULL_PILLAR_COMPLETION",
+    "SEAM_CLOSURE",
+    "PHASE_2_AUTHORIZATION",
+    "MASTER_ACTION_PROMOTION",
+    "EMPIRICAL_CLAIM",
+    "DIRECT_PHYSICS_ATTACK_EXECUTION"
+  ],
+  "nonclaim_boundaries": {
+    "full_pillar_completion_claim": false,
+    "seam_closure_claim": false,
+    "phase2_authorized": false,
+    "master_action_promotion_authorized": false,
+    "empirical_claim": false,
+    "selection_executes_attack": false
+  },
+  "next_action_after_selection_packet": "prepare_qft_gr_state_expectation_functional_semantics_bounded_attack"
+}

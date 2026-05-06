@@ -1,0 +1,71 @@
+{
+  "schema_id": "AXIOM_LEDGER_AUDIT_REFRESH_20260503_v0",
+  "schema_version": 0,
+  "date": "2026-05-03",
+  "classification": "P-POLICY/nonclaim",
+  "audit_status": "completed_audit_refresh",
+  "current_target": "prepare_axiom_ledger_audit_refresh",
+  "consumed_selector_target": "select_next_post_proof_debt_discharge_bounded_attack",
+  "consumed_selector_token": "POST_PROOF_DEBT_DISCHARGE_NEXT_ATTACK_SELECTED",
+  "consumed_review_target": "review_fnrep_nonalias_default_nonalias_discharge_result",
+  "consumed_review_token": "FNREP_NONALIAS_DEFAULT_NONALIAS_DISCHARGE_RESULT_REVIEW_CONSUMED_LEAN_BACKED",
+  "result_token": "AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS",
+  "selected_next_target": "review_axiom_ledger_audit_refresh_result",
+  "audit_surface": "formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefresh.lean",
+  "selector_surface": "formal/toe_formal/ToeFormal/Derivation/PostProofDebtDischargeBoundedAttackSelection.lean",
+  "selector_report": "formal/docs/release/POST_PROOF_DEBT_DISCHARGE_BOUNDED_ATTACK_SELECTION_20260503_v0.json",
+  "review_surface": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01DischargeResultReview.lean",
+  "review_report": "formal/docs/release/PROOF_DEBT_DISCHARGE_FNREP_NONALIAS_RESULT_REVIEW_20260503_v0.json",
+  "discharge_surface": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01Discharge.lean",
+  "discharge_report": "formal/docs/release/PROOF_DEBT_DISCHARGE_FNREP_NONALIAS_20260503_v0.json",
+  "proof_debt_ledger": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+  "focused_gate": "formal/python/tests/test_axiom_ledger_audit_refresh_gate.py",
+  "ledger_posture": {
+    "real_axiom_count": 60,
+    "real_sorry_or_admit_count": 0,
+    "real_axiom_file_count": 15,
+    "defaultNonAlias": "absent_from_unresolved_axiom_debt_and_lean_backed",
+    "sampleRep32": "retained_spec_backed_axiom",
+    "recent_discharge_result_referenced": true
+  },
+  "audit_findings": {
+    "post_proof_debt_selector_result_consumed": true,
+    "fnrep_discharge_review_token_consumed": true,
+    "real_axiom_count_confirmed": true,
+    "defaultNonAlias_absent_from_axiom_ledger": true,
+    "sampleRep32_retained_with_correct_authority_status": true,
+    "active_docs_and_gates_have_no_stale_61_count_posture": true,
+    "review_result_target_selected": true
+  },
+  "active_surfaces_audited_for_stale_61_count": [
+    "README.md",
+    "State_of_the_Theory.md",
+    "formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md",
+    "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+    "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md",
+    "formal/python/tests/test_lean_axiom_spec_backed_ledger_gate.py"
+  ],
+  "allowed_historical_61_references": [
+    "real_axiom_count_before",
+    "61_to_60_discharge_delta",
+    "full_pillar_target_map_rebase_historical_pre_discharge_snapshot"
+  ],
+  "forbidden_effects": [
+    "PILLAR_COMPLETION",
+    "SEAM_CLOSURE",
+    "PHASE_2_READINESS",
+    "EMPIRICAL_ADEQUACY",
+    "MASTER_ACTION_PROMOTION",
+    "GOVERNANCE_MANIFEST_ENROLLMENT"
+  ],
+  "nonclaim_boundaries": {
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "master_action_promotion_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The audit refresh consumes the post-proof-debt selector result, confirms the active ledger posture at 60 real axioms, verifies defaultNonAlias is absent from unresolved axiom debt, verifies sampleRep32 remains honestly retained, checks no active docs/gates still assert the stale 61-count posture, and preserves that no pillar completion, seam closure, Phase 2 readiness, empirical adequacy, or master-action promotion is inferred.",
+  "next_action_after_audit_refresh": "review_axiom_ledger_audit_refresh_result"
+}

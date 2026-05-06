@@ -1,0 +1,77 @@
+{
+  "schema_id": "POST_PROOF_DEBT_DISCHARGE_BOUNDED_ATTACK_SELECTION_20260503_v0",
+  "schema_version": 0,
+  "date": "2026-05-03",
+  "classification": "P-POLICY/nonclaim",
+  "selection_status": "completed_selection_only",
+  "current_target": "select_next_post_proof_debt_discharge_bounded_attack",
+  "consumed_review_target": "review_fnrep_nonalias_default_nonalias_discharge_result",
+  "consumed_review_token": "FNREP_NONALIAS_DEFAULT_NONALIAS_DISCHARGE_RESULT_REVIEW_CONSUMED_LEAN_BACKED",
+  "output_token": "POST_PROOF_DEBT_DISCHARGE_NEXT_ATTACK_SELECTED",
+  "review_surface": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01DischargeResultReview.lean",
+  "review_report": "formal/docs/release/PROOF_DEBT_DISCHARGE_FNREP_NONALIAS_RESULT_REVIEW_20260503_v0.json",
+  "discharge_surface": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01Discharge.lean",
+  "discharge_report": "formal/docs/release/PROOF_DEBT_DISCHARGE_FNREP_NONALIAS_20260503_v0.json",
+  "proof_debt_ledger": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+  "selection_surface": "formal/toe_formal/ToeFormal/Derivation/PostProofDebtDischargeBoundedAttackSelection.lean",
+  "focused_gate": "formal/python/tests/test_post_proof_debt_discharge_bounded_attack_selection_gate.py",
+  "authorized_effect": "SELECT_EXACTLY_ONE_NEXT_BOUNDED_TARGET",
+  "selection_executes_target": false,
+  "selection_count": 1,
+  "candidate_next_targets": [
+    {
+      "target_id": "prepare_next_proof_debt_ledger_discharge_item",
+      "selection": "not_selected",
+      "target_kind": "same_lane_proof_debt_continuation",
+      "reason": "Not selected until the changed axiom/debt posture is refreshed and public/control-plane surfaces agree on the retained proof-debt rows."
+    },
+    {
+      "target_id": "return_to_full_pillar_target_map_next_lane_selection",
+      "selection": "not_selected",
+      "target_kind": "cross_pillar_priority_selection_return",
+      "reason": "Not selected because the immediate material change is local to the axiom ledger, so a ledger audit refresh should precede another cross-pillar priority decision."
+    },
+    {
+      "target_id": "prepare_axiom_ledger_audit_refresh",
+      "selection": "selected",
+      "target_kind": "ledger_audit_refresh_preparation",
+      "reason": "The FNRep discharge reduced the real axiom count to 60, removed defaultNonAlias from the axiom ledger, and retained sampleRep32; the next bounded target should lock that posture before another attack is selected."
+    }
+  ],
+  "selected_next_target": "prepare_axiom_ledger_audit_refresh",
+  "selected_next_target_kind": "ledger_audit_refresh_preparation",
+  "selected_decision": "prepare_axiom_ledger_audit_refresh",
+  "review_interpretation": "fnrep_nonalias_default_discharge_result_review_consumed_as_lean_backed_discharge_with_ledger_delta",
+  "authority_posture": {
+    "defaultNonAlias": "LEAN_BACKED_DEFINITION_AND_THEOREM",
+    "sampleRep32": "RETAINED_SPEC_BACKED_AXIOM",
+    "real_axiom_count": 60
+  },
+  "audit_refresh_target_expectations": {
+    "result_token": "AXIOM_LEDGER_AUDIT_REFRESH_PREPARED",
+    "real_axiom_count": 60,
+    "defaultNonAlias_absent_from_axiom_ledger": true,
+    "sampleRep32_retained_with_correct_authority_status": true,
+    "recent_discharge_result_referenced": true,
+    "no_stale_61_count_references_in_active_docs_or_gates": true
+  },
+  "forbidden_effects": [
+    "PILLAR_COMPLETION",
+    "SEAM_CLOSURE",
+    "PHASE_2_READINESS",
+    "EMPIRICAL_ADEQUACY",
+    "MASTER_ACTION_PROMOTION",
+    "SELECTED_TARGET_EXECUTION"
+  ],
+  "nonclaim_boundaries": {
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "master_action_promotion_authorized": false,
+    "governance_manifest_enrollment_authorized": false,
+    "selection_executes_target": false
+  },
+  "acceptance_condition": "The selector consumes the FNRep discharge result review, selects exactly one next bounded target, and does not infer pillar completion, seam closure, Phase 2 readiness, empirical adequacy, or master-action promotion.",
+  "next_action_after_selection_packet": "prepare_axiom_ledger_audit_refresh"
+}

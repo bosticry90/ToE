@@ -1,0 +1,61 @@
+{
+  "schema_id": "QFT_GR_POISSON_RECOVERY_OBLIGATION_SEMANTICS_RESULT_REVIEW_20260503_v0",
+  "schema_version": 0,
+  "date": "2026-05-03",
+  "classification": "P-POLICY/nonclaim",
+  "current_target": "review_qft_gr_poisson_recovery_obligation_semantics_result",
+  "consumed_result_token": "QFT_GR_POISSON_RECOVERY_OBLIGATION_SEMANTICS_SUPPLIED_ONLY",
+  "review_result_token": "QFT_GR_POISSON_RECOVERY_OBLIGATION_SEMANTICS_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY",
+  "review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_PoissonRecoveryObligationSemanticsResultReview.lean",
+  "source_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_PoissonRecoveryObligationSemantics.lean",
+  "source_report": "formal/docs/release/QFT_GR_POISSON_RECOVERY_OBLIGATION_SEMANTICS_BOUNDED_ATTACK_20260503_v0.json",
+  "selected_next_target": "prepare_qft_gr_source_map_eligibility_ladder_summary",
+  "selected_decision": "accept_supplied_only_and_prepare_source_map_eligibility_ladder_summary",
+  "review_result": "supplied_only_poisson_recovery_obligation_result_consumed",
+  "accepted_result": {
+    "supplied_object": "QFTGRPoissonRecoveryObligationSemanticPackage",
+    "scope": "poisson_recovery_obligation_surface_only",
+    "distinction": "has_poisson_recovery_obligation_does_not_imply_has_poisson_recovery_witness_or_satisfaction"
+  },
+  "retained_blocker": "PHASE1-BLOCKER-QFTGR-SOURCE-MAP-ELIGIBILITY-LADDER-SUMMARY-RETAINED",
+  "refutation_confirmed": {
+    "status": "weak_curvature_source_identification_obligation_only_poisson_recovery_witness_derivation_refuted",
+    "lean_theorem": "qft_gr_weak_curvature_source_identification_obligation_semantics_does_not_force_poisson_recovery_witness_v0"
+  },
+  "selected_summary_scope": "source_map_eligibility_ladder_summary_only",
+  "summary_packet": {
+    "authorized": "preparation_only",
+    "constructed": false,
+    "expected_result_token": "QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_CONSTRUCTED_CLOSURE_NOT_AUTHORIZED"
+  },
+  "nonclaim_boundaries": {
+    "renormalization_scheme_validity": false,
+    "finite_stress_energy_tensor_proof": false,
+    "hadamard_state_adequacy": false,
+    "operator_self_adjointness": false,
+    "domain_density_proof": false,
+    "conservation_witness": false,
+    "actual_covariant_conservation": false,
+    "bianchi_compatibility_witness": false,
+    "actual_bianchi_compatibility": false,
+    "einstein_coupling_witness": false,
+    "actual_einstein_equation_coupling": false,
+    "weak_curvature_source_identification_witness": false,
+    "actual_weak_curvature_source_identification": false,
+    "poisson_recovery_witness": false,
+    "actual_poisson_recovery": false,
+    "poisson_limit_recovery": false,
+    "newtonian_limit_recovery": false,
+    "weak_field_recovery_proof": false,
+    "semiclassical_einstein_equation": false,
+    "qft_gr_source_map_closure": false,
+    "qft_gr_seam_closure": false,
+    "phase2_authorization": false,
+    "empirical_adequacy": false,
+    "master_action_promotion": false,
+    "governance_manifest_enrollment": false,
+    "source_map_eligibility_ladder_summary_constructed": false
+  },
+  "acceptance_condition": "The supplied Poisson-recovery obligation surface is consumed as obligation-only semantics, with no Poisson witness, Newtonian recovery, weak-field proof, semiclassical Einstein equation, or QFT-GR source-map closure inferred.",
+  "next_action": "prepare_qft_gr_source_map_eligibility_ladder_summary"
+}

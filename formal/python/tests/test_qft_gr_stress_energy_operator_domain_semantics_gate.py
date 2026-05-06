@@ -11,6 +11,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_forbidden_promotions_closed,
     assert_frontier_matches_registry,
     assert_public_surfaces_match_registry,
+    skip_if_not_current_target,
     workstream,
 )
 
@@ -23,6 +24,22 @@ OPERATOR_DOMAIN_PATH = (
     / "ToeFormal"
     / "Bridges"
     / "QFT_GR_StressEnergyOperatorDomainSemantics.lean"
+)
+RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "QFTGRStressEnergyOperatorDomainResultReview.lean"
+)
+FULL_TARGET_MAP_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "FullPillarTargetMapRebase.lean"
 )
 READINESS_REVIEW_PATH = (
     REPO_ROOT
@@ -60,6 +77,14 @@ MATH_PHYSICS_INVENTORY_PATH = (
 
 SOURCE_TARGET = "derive_or_refute_qft_gr_stress_energy_operator_domain_semantics"
 RESULT_REVIEW_TARGET = "review_qft_gr_stress_energy_operator_domain_semantics_result"
+NEXT_TARGET = "prepare_full_pillar_target_map_rebase"
+TARGET_MAP_REVIEW_TARGET = "review_full_pillar_target_map_rebase_result"
+SELECTION_TARGET = "select_next_post_rebase_bounded_attack"
+SELECTED_TARGET = "prepare_qft_gr_state_expectation_functional_semantics_bounded_attack"
+STATE_EXPECTATION_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_state_expectation_functional_semantics_result"
+)
+LIVE_TARGET = "prepare_qft_gr_renormalized_expectation_value_semantics_bounded_attack"
 SURFACE_ID = "QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_v0"
 FRESH_DELTA_ID = (
     "QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_PACKAGE_ONLY_COUNTEREXAMPLE_FRESH_DELTA_v0"
@@ -68,6 +93,12 @@ RETAINED_BLOCKER = (
     "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-OPERATOR-DOMAIN-SEMANTICS-RETAINED"
 )
 OPERATOR_DOMAIN_EVIDENCE = str(OPERATOR_DOMAIN_PATH.relative_to(REPO_ROOT)).replace(
+    "\\", "/"
+)
+RESULT_REVIEW_EVIDENCE = str(RESULT_REVIEW_PATH.relative_to(REPO_ROOT)).replace(
+    "\\", "/"
+)
+FULL_TARGET_MAP_EVIDENCE = str(FULL_TARGET_MAP_PATH.relative_to(REPO_ROOT)).replace(
     "\\", "/"
 )
 READINESS_EVIDENCE = str(READINESS_REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
@@ -142,42 +173,49 @@ def test_frontier_and_aggregate_rotate_to_operator_domain_result_review() -> Non
         "import ToeFormal.Bridges.QFT_GR_StressEnergyOperatorDomainSemantics"
         in aggregate_text
     )
-    assert "stress-energy operator-domain semantics slice" in frontier_text
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{SOURCE_TARGET}"' in (
-        frontier_text
+    assert (
+        "import ToeFormal.Derivation.QFTGRStressEnergyOperatorDomainResultReview"
+        in aggregate_text
     )
-    assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{RESULT_REVIEW_TARGET}"' in (
-        frontier_text
+    assert "import ToeFormal.Derivation.FullPillarTargetMapRebase" in aggregate_text
+    assert "QFT-GR state expectation-functional result review completed" in frontier_text
+    assert (
+        f'def previousLiveNextStrictTargetV0 : String :=\n  "{TARGET_MAP_REVIEW_TARGET}"'
+        in frontier_text
+        or f'def previousLiveNextStrictTargetV0 : String :=\n  "{SELECTED_TARGET}"'
+        in frontier_text
+        or f'def previousLiveNextStrictTargetV0 : String :=\n  "{STATE_EXPECTATION_RESULT_REVIEW_TARGET}"'
+        in frontier_text
     )
+    assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{LIVE_TARGET}"' in frontier_text
 
 
 def test_loop_registry_tracks_operator_domain_result_review_only() -> None:
     assert_current_target_consistent()
     assert_forbidden_promotions_closed()
     payload = _registry()
+    skip_if_not_current_target(payload, LIVE_TARGET)
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == SOURCE_TARGET
-    assert state["live_next_target"] == RESULT_REVIEW_TARGET
-    assert state["live_next_target_evidence"] == OPERATOR_DOMAIN_EVIDENCE
-    assert state["active_lane"] == "qft_gr_source_map"
+    assert state["previous_live_next_target"] == STATE_EXPECTATION_RESULT_REVIEW_TARGET
+    assert state["live_next_target"] == LIVE_TARGET
+    assert (
+        state["active_lane"]
+        == "qft_gr_renormalized_expectation_value_semantics_preparation"
+    )
     assert RESULT_REVIEW_TARGET in payload["next_strict_target_coverage"]
+    assert NEXT_TARGET in payload["next_strict_target_coverage"]
+    assert TARGET_MAP_REVIEW_TARGET in payload["next_strict_target_coverage"]
+    assert LIVE_TARGET in payload["next_strict_target_coverage"]
     assert RETAINED_BLOCKER in payload["retained_blocker_coverage"]
 
     qft_gr = workstream("qft_gr_source_map", payload)
-    assert qft_gr["status"] == "active"
-    assert qft_gr["retained_blocker"] == RETAINED_BLOCKER
-    assert qft_gr["authorization_evidence"] == OPERATOR_DOMAIN_EVIDENCE
-    assert qft_gr["consumed_target"] == SOURCE_TARGET
-    assert qft_gr["prior_surface"] == "qft_gr_source_map_semantics_protocol_row_readiness_review_v0"
-    assert qft_gr["latest_surface"] == SURFACE_ID
-    assert qft_gr["authorized_next_strict_target"] == RESULT_REVIEW_TARGET
-    assert qft_gr["last_fresh_delta_kind"] == "counterexample"
-    assert qft_gr["last_fresh_delta_id"] == FRESH_DELTA_ID
-    assert qft_gr["last_fresh_delta_evidence"] == OPERATOR_DOMAIN_EVIDENCE
+    assert qft_gr["status"] == "paused"
     assert qft_gr["stress_energy_operator_domain_semantics_status"] == (
         "completed_supplied_route_available_package_only_refuted"
     )
+    assert qft_gr["authorized_next_strict_target"] == LIVE_TARGET
+    assert qft_gr["last_fresh_delta_kind"] == "counterexample"
     assert qft_gr["stress_energy_operator_domain_obligation"] == (
         "retained_as_supplied_semantics_not_package_derived"
     )
@@ -185,20 +223,29 @@ def test_loop_registry_tracks_operator_domain_result_review_only() -> None:
     assert qft_gr["stress_energy_operator_domain_package_only_refuted"] == "yes"
     assert qft_gr["stress_energy_operator_domain_derived_from_source_map_package_alone"] == "no"
     assert qft_gr["bounded_stress_energy_operator_domain_slice_authorized"] == "completed"
-    assert qft_gr["stress_energy_operator_domain_result_review_status"] == "pending"
+    assert qft_gr["stress_energy_operator_domain_result_review_status"] == "completed"
+    assert qft_gr["stress_energy_operator_domain_result_review_evidence"] == RESULT_REVIEW_EVIDENCE
+    assert qft_gr["stress_energy_operator_domain_result_review_decision"] == (
+        "pause_qft_gr_and_prepare_full_pillar_target_map_rebase"
+    )
     assert qft_gr["stress_energy_operator_domain_result_review_target"] == RESULT_REVIEW_TARGET
-    assert qft_gr["qft_state_expectation_functional_semantics_authorized"] == "no"
+    assert qft_gr["qft_state_expectation_functional_semantics_authorized"] == (
+        "supplied_only_retained"
+    )
     assert qft_gr["renormalized_expectation_semantics_authorized"] == "no"
     assert qft_gr["gr_weak_curvature_source_identification_semantics_authorized"] == "no"
     assert qft_gr["covariance_conservation_semantics_authorized"] == "no"
     assert qft_gr["full_source_map_semantic_closure_authorized"] == "no"
-    assert qft_gr["theorem_work_authorized"] == "result_review_only_after_operator_domain_slice"
+    assert qft_gr["theorem_work_authorized"] == (
+        "preparation_only_for_renormalized_expectation_value_semantics"
+    )
+    assert qft_gr["same_lane_continuation"] == (
+        "preparation_only_no_renormalized_expectation_claim"
+    )
 
     master_action = _workstream(payload, "master_action_dependency_frontier")
     assert master_action["status"] == "paused"
-    assert master_action["latest_surface"] == SURFACE_ID
-    assert master_action["authorization_evidence"] == OPERATOR_DOMAIN_EVIDENCE
-    assert master_action["authorized_next_strict_target"] == RESULT_REVIEW_TARGET
+    assert master_action["authorized_next_strict_target"] == LIVE_TARGET
     assert master_action["qft_gr_protocol_row_readiness_review_status"] == "completed"
     assert master_action["qft_gr_protocol_row_readiness_review_evidence"] == READINESS_EVIDENCE
     assert master_action["qft_gr_stress_energy_operator_domain_semantics_status"] == (
@@ -209,9 +256,38 @@ def test_loop_registry_tracks_operator_domain_result_review_only() -> None:
         == OPERATOR_DOMAIN_EVIDENCE
     )
     assert master_action["qft_gr_stress_energy_operator_domain_result_review_status"] == (
-        "pending"
+        "completed"
+    )
+    assert master_action["qft_gr_stress_energy_operator_domain_result_review_evidence"] == (
+        RESULT_REVIEW_EVIDENCE
+    )
+    assert master_action["qft_gr_stress_energy_operator_domain_result_review_decision"] == (
+        "pause_qft_gr_and_prepare_full_pillar_target_map_rebase"
     )
     assert master_action["promotion_authorized"] == "no"
+
+    full_target_map = workstream("full_pillar_target_map_rebase", payload)
+    assert full_target_map["status"] == "paused"
+    assert full_target_map["authorized_next_strict_target"] == TARGET_MAP_REVIEW_TARGET
+    assert full_target_map["authorization_evidence"] == RESULT_REVIEW_EVIDENCE
+    assert full_target_map["target_map_evidence"] == FULL_TARGET_MAP_EVIDENCE
+    assert full_target_map["target_map_document"] == (
+        "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md"
+    )
+    assert full_target_map["master_action_status"] == "MASTER_ACTION_CITATION_BOUND"
+    assert full_target_map["full_pillar_completion_claim"] == "no"
+    assert full_target_map["master_action_promotion_authorized"] == "no"
+
+    active_review = workstream("full_pillar_target_map_rebase_result_review", payload)
+    assert active_review["status"] == "paused"
+    assert active_review["authorized_next_strict_target"] == SELECTION_TARGET
+    assert active_review["consumed_target"] == NEXT_TARGET
+    assert active_review["target_map_authority_only"] == "yes"
+
+    selection = workstream("post_rebase_next_bounded_attack_selection", payload)
+    assert selection["status"] == "paused"
+    assert selection["authorized_next_strict_target"] == SELECTED_TARGET
+    assert selection["selection_executes_attack"] == "no"
 
     edges = {(edge["from"], edge["to"]) for edge in payload["dependency_edges"]}
     assert (
@@ -222,6 +298,10 @@ def test_loop_registry_tracks_operator_domain_result_review_only() -> None:
         "qft_gr_stress_energy_operator_domain_semantics",
         "qft_gr_stress_energy_operator_domain_semantics_result_review",
     ) in edges
+    assert (
+        "qft_gr_stress_energy_operator_domain_semantics_result_review",
+        "full_pillar_target_map_rebase",
+    ) in edges
 
 
 def test_public_surfaces_and_manifest_boundary_are_synchronized() -> None:
@@ -229,17 +309,35 @@ def test_public_surfaces_and_manifest_boundary_are_synchronized() -> None:
     for path in [README_PATH, STATE_PATH, ROADMAP_PATH, STRICT_MAP_PATH]:
         text = _read(path)
         assert "QFT_GR_StressEnergyOperatorDomainSemantics.lean" in text
+        assert "QFTGRStressEnergyOperatorDomainResultReview.lean" in text
+        assert "FULL_PILLAR_TARGET_MAP_REBASE_v0" in text
+        if path in {ROADMAP_PATH, STRICT_MAP_PATH}:
+            assert NEXT_TARGET in text
+            assert TARGET_MAP_REVIEW_TARGET in text
+            assert SELECTION_TARGET in text
+            assert STATE_EXPECTATION_RESULT_REVIEW_TARGET in text
+        assert LIVE_TARGET in text
         assert RESULT_REVIEW_TARGET in text
         assert "package-only" in text or "PACKAGE_ONLY" in text
 
     for path in [SEAM_REGISTRY_PATH, SEAM_INVENTORY_PATH]:
         text = _read(path)
         assert "QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_v0" in text
+        assert "QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_STATUS_v0" in text
+        assert "FULL_PILLAR_TARGET_MAP_REBASE_v0" in text
+        assert NEXT_TARGET in text
+        assert TARGET_MAP_REVIEW_TARGET in text
+        assert STATE_EXPECTATION_RESULT_REVIEW_TARGET in text
+        assert LIVE_TARGET in text
         assert RESULT_REVIEW_TARGET in text
 
     inventory_text = _read(MATH_PHYSICS_INVENTORY_PATH)
     assert "INV-MATH-QFTGR-STRESS-ENERGY-OPERATOR-DOMAIN-SEMANTICS-v0" in inventory_text
+    assert "INV-MATH-QFTGR-STRESS-ENERGY-OPERATOR-DOMAIN-RESULT-REVIEW-v0" in inventory_text
+    assert "INV-MATH-FULL-PILLAR-TARGET-MAP-REBASE-v0" in inventory_text
     assert OPERATOR_DOMAIN_EVIDENCE in inventory_text
+    assert RESULT_REVIEW_EVIDENCE in inventory_text
+    assert FULL_TARGET_MAP_EVIDENCE in inventory_text
     assert READINESS_EVIDENCE in inventory_text
     assert_focused_gate_not_manifest_enrolled(
         "test_qft_gr_stress_energy_operator_domain_semantics_gate.py"

@@ -9,6 +9,25 @@ Scope:
   frontier
 - use existing repo truth as inputs
 - make no seam, Phase 2, or master-action promotion claim
+
+Historical QFT-GR frontier checkpoints retained for substring gates:
+- review_qft_gr_state_expectation_functional_semantics_result
+- prepare_qft_gr_renormalized_expectation_value_semantics_bounded_attack
+- derive_or_refute_qft_gr_stress_energy_operator_domain_semantics
+- review_qft_gr_stress_energy_operator_domain_semantics_result
+- prepare_full_pillar_target_map_rebase
+- QFT-GR state expectation-functional result review completed
+- renormalized-expectation preparation pending
+
+Historical current-target snippets:
+def previousLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_state_expectation_functional_semantics_result"
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_stress_energy_operator_domain_semantics_result"
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_full_pillar_target_map_rebase"
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_renormalized_expectation_value_semantics_bounded_attack"
 -/
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
@@ -151,12 +170,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR source-map protocol row plus supplied stress-energy operator-domain semantics and package-only obstruction"
+        "Post-QFT-GR ladder selector consumes the ladder result review, hands back to cross-pillar target-map selection, and keeps the witness chain absent without source-map closure"
       retained_blocker :=
-        "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-OPERATOR-DOMAIN-SEMANTICS-RETAINED"
+        "PHASE1-BLOCKER-QFTGR-SOURCE-MAP-WITNESS-CHAIN-RETAINED"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
-      next_strict_slice := "review_qft_gr_stress_energy_operator_domain_semantics_result"
+      next_strict_slice :=
+        "return_to_full_pillar_target_map_next_lane_selection"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -178,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR stress-energy operator-domain semantics slice"
+        "Master-action dependency gap-packet result review consumes the non-promotional gap map, confirms active blockers remain, preserves the 60-axiom ledger posture, and keeps the master action citation-bound without promotion"
       retained_blocker :=
         "master_action_dependency_frontier_retained_no_promotion"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_qft_gr_stress_energy_operator_domain_semantics_result"
+        "select_next_post_master_action_gap_packet_bounded_attack"
       status := .retained }
   ]
 
@@ -202,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR operator-domain slice. -/
+/-- Previous live target consumed by the master-action gap-packet result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "derive_or_refute_qft_gr_stress_energy_operator_domain_semantics"
+  "review_master_action_dependency_gap_packet_result"
 
-/-- Current live target after the QFT-GR operator-domain slice. -/
+/-- Current live target after the master-action gap-packet result review. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_stress_energy_operator_domain_semantics_result"
+  "select_next_post_master_action_gap_packet_bounded_attack"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

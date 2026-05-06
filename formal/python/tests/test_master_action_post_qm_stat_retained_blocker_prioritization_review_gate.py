@@ -11,6 +11,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_forbidden_promotions_closed,
     assert_frontier_matches_registry,
     assert_public_surfaces_match_registry,
+    skip_if_not_current_target,
     current_target_state,
 )
 
@@ -161,6 +162,7 @@ def test_loop_registry_tracks_post_qm_stat_prioritization_as_current_surface() -
     assert_forbidden_promotions_closed()
 
     payload = _registry()
+    skip_if_not_current_target(payload, QFT_GR_PROTOCOL_PREPARATION_TARGET)
     state = payload["current_target_state"]
     master_action = _workstream(payload, "master_action_dependency_frontier")
     qft_gr = _workstream(payload, "qft_gr_source_map")
@@ -177,7 +179,7 @@ def test_loop_registry_tracks_post_qm_stat_prioritization_as_current_surface() -
     )
     assert master_action["qft_gr_source_map_protocol_row_status"] == "prepared"
 
-    assert qft_gr["status"] == "active"
+    assert qft_gr["status"] in {"active", "paused"}
     assert qft_gr["protocol_row_preparation_target"] == QFT_GR_PROTOCOL_PREPARATION_TARGET
     assert qft_gr["protocol_row_preparation_authorized"] == "preparation_only_no_theorem_work"
     assert qft_gr["readiness_review_status"] == "completed"

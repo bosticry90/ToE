@@ -1,0 +1,63 @@
+{
+  "schema_id": "QFT_GR_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_BOUNDED_ATTACK_20260503_v0",
+  "schema_version": 0,
+  "date": "2026-05-03",
+  "classification": "P-POLICY/nonclaim",
+  "current_target": "prepare_qft_gr_state_expectation_functional_semantics_bounded_attack",
+  "consumed_selection_target": "select_next_post_rebase_bounded_attack",
+  "selected_class": "QFT_GR_SOURCE_MAP_CLOSURE_ELIGIBILITY_LANE",
+  "surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemantics.lean",
+  "selected_next_target": "review_qft_gr_state_expectation_functional_semantics_result",
+  "result_token": "QFT_GR_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_SUPPLIED_ONLY",
+  "fresh_delta_id": "QFT_GR_STATE_EXPECTATION_FUNCTIONAL_PACKAGE_ONLY_COUNTEREXAMPLE_FRESH_DELTA_v0",
+  "fresh_delta_kind": "counterexample",
+  "retained_blocker": "PHASE1-BLOCKER-QFTGR-STATE-EXPECTATION-FUNCTIONAL-SEMANTICS-RETAINED",
+  "authorized_effect": "SUPPLIED_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_RETAINED_WITH_PACKAGE_ONLY_REFUTATION",
+  "supplied_route": {
+    "status": "available",
+    "supplied_object": "QFTGRStateExpectationFunctionalSemanticPackage",
+    "acts_on": "previously_supplied_QFTStressEnergyObject_with_operator_domain_semantics",
+    "claim": "A supplied QFT state may be represented as a functional acting on the supplied stress-energy operator-domain object."
+  },
+  "refutation": {
+    "status": "package_only_derivation_refuted",
+    "refuted_claim": "source_map_package_alone_derives_qft_state_expectation_functional_semantics",
+    "lean_theorem": "qft_gr_source_map_package_does_not_force_state_expectation_functional_v0"
+  },
+  "retained_semantics": [
+    "qft_state_semantics",
+    "expectation_functional_semantics",
+    "acts_on_supplied_operator_domain_object"
+  ],
+  "forbidden_effects": [
+    "RENORMALIZED_EXPECTATION_VALUE",
+    "HADAMARD_STATE_ADEQUACY",
+    "OPERATOR_SELF_ADJOINTNESS",
+    "DOMAIN_DENSITY_PROOF",
+    "COVARIANT_CONSERVATION",
+    "SEMICLASSICAL_EINSTEIN_EQUATION",
+    "WEAK_CURVATURE_SOURCE_IDENTIFICATION",
+    "FULL_QFT_GR_SOURCE_MAP_CLOSURE",
+    "QFT_GR_SEAM_CLOSURE",
+    "PHASE_2_AUTHORIZATION",
+    "MASTER_ACTION_PROMOTION",
+    "EMPIRICAL_ADEQUACY"
+  ],
+  "nonclaim_boundaries": {
+    "renormalized_expectation_semantics_authorized": false,
+    "hadamard_state_adequacy_authorized": false,
+    "operator_self_adjointness_authorized": false,
+    "domain_density_proof_authorized": false,
+    "weak_curvature_source_identification_authorized": false,
+    "covariance_conservation_authorized": false,
+    "full_source_map_closure_authorized": false,
+    "qft_gr_seam_closed": false,
+    "semiclassical_gravity_claim": false,
+    "einstein_equation_derivation_claim": false,
+    "phase2_authorized": false,
+    "master_action_promotion_authorized": false,
+    "empirical_claim": false
+  },
+  "acceptance_condition": "supplied_expectation_functional_semantic_package_available_package_only_derivation_refuted_no_downstream_closure_claims",
+  "next_action": "review_qft_gr_state_expectation_functional_semantics_result"
+}

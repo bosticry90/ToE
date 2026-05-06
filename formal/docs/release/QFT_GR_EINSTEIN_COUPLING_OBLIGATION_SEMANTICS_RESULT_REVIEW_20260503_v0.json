@@ -1,0 +1,51 @@
+{
+  "schema_id": "QFT_GR_EINSTEIN_COUPLING_OBLIGATION_SEMANTICS_RESULT_REVIEW_20260503_v0",
+  "schema_version": 0,
+  "date": "2026-05-03",
+  "classification": "P-POLICY/nonclaim",
+  "current_target": "review_qft_gr_einstein_coupling_obligation_semantics_result",
+  "consumed_result_token": "QFT_GR_EINSTEIN_COUPLING_OBLIGATION_SEMANTICS_SUPPLIED_ONLY",
+  "review_result_token": "QFT_GR_EINSTEIN_COUPLING_OBLIGATION_SEMANTICS_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY",
+  "review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemanticsResultReview.lean",
+  "source_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemantics.lean",
+  "source_report": "formal/docs/release/QFT_GR_EINSTEIN_COUPLING_OBLIGATION_SEMANTICS_BOUNDED_ATTACK_20260503_v0.json",
+  "selected_next_target": "prepare_qft_gr_weak_curvature_source_identification_obligation_semantics_bounded_attack",
+  "selected_decision": "accept_supplied_only_and_prepare_weak_curvature_source_identification_obligation_semantics",
+  "review_result": "supplied_only_einstein_coupling_obligation_result_consumed",
+  "accepted_result": {
+    "supplied_object": "QFTGREinsteinCouplingObligationSemanticPackage",
+    "scope": "einstein_coupling_obligation_admissibility_surface_only",
+    "distinction": "has_einstein_coupling_obligation_does_not_imply_has_coupling_witness_or_satisfaction"
+  },
+  "retained_blocker": "PHASE1-BLOCKER-QFTGR-WEAK-CURVATURE-SOURCE-IDENTIFICATION-OBLIGATION-SEMANTICS-RETAINED",
+  "refutation_confirmed": {
+    "status": "bianchi_compatibility_obligation_only_einstein_coupling_witness_derivation_refuted",
+    "lean_theorem": "qft_gr_bianchi_compatibility_obligation_semantics_does_not_force_einstein_coupling_witness_v0"
+  },
+  "selected_preparation_scope": "weak_curvature_source_identification_obligation_semantics_surface_only",
+  "nonclaim_boundaries": {
+    "renormalization_scheme_validity": false,
+    "finite_stress_energy_tensor_proof": false,
+    "hadamard_state_adequacy": false,
+    "operator_self_adjointness": false,
+    "domain_density_proof": false,
+    "conservation_witness": false,
+    "actual_covariant_conservation": false,
+    "bianchi_compatibility_witness": false,
+    "actual_bianchi_compatibility": false,
+    "einstein_coupling_witness": false,
+    "actual_einstein_equation_coupling": false,
+    "weak_curvature_source_identification_obligation_semantics": false,
+    "weak_curvature_source_identification": false,
+    "poisson_limit_recovery": false,
+    "semiclassical_einstein_equation": false,
+    "qft_gr_source_map_closure": false,
+    "qft_gr_seam_closure": false,
+    "phase2_authorization": false,
+    "empirical_adequacy": false,
+    "master_action_promotion": false,
+    "governance_manifest_enrollment": false
+  },
+  "acceptance_condition": "The supplied Einstein-coupling obligation/admissibility surface is consumed as obligation-only semantics, with no coupling witness, no actual Einstein-equation coupling, no semiclassical equation, no weak-curvature source identification, no Poisson recovery, and no QFT-GR source-map closure inferred.",
+  "next_action": "prepare_qft_gr_weak_curvature_source_identification_obligation_semantics_bounded_attack"
+}

@@ -200,6 +200,60 @@
       "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
       "status": "PENDING_RECOMPUTE",
       "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260505_231831",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-05-05T23:18:31.451003Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260505_233829",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-05-05T23:38:29.187095Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260506_001029",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-05-06T00:10:29.412675Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260506_001757",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-05-06T00:17:57.211247Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260506_004734",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-05-06T00:47:34.130019Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
+    },
+    {
+      "trigger_id": "RECOMPUTE_TRIGGER_20260506_005421",
+      "surface_name": "qm_seam_coherence_under_revised_blocker",
+      "triggered_by": "AUTHORITY_PROMOTION_REGISTRATION_20260411_v0",
+      "triggered_at_utc": "2026-05-06T00:54:21.020182Z",
+      "revised_blocker_definition": "REVISED_BLOCKER_DEFINITION_20260411_v0",
+      "status": "PENDING_RECOMPUTE",
+      "dependency": "authoritative_blocker_definition_movement"
     }
   ]
 }

@@ -1,0 +1,46 @@
+{
+  "schema_id": "QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_SEMANTICS_BOUNDED_ATTACK_20260503_v0",
+  "schema_version": 0,
+  "date": "2026-05-03",
+  "classification": "P-POLICY/nonclaim",
+  "current_target": "prepare_qft_gr_classical_source_admissibility_semantics_bounded_attack",
+  "consumed_result_review_target": "review_qft_gr_renormalized_expectation_value_semantics_result",
+  "consumed_result_token": "QFT_GR_RENORMALIZED_EXPECTATION_VALUE_SEMANTICS_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY",
+  "source_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemanticsResultReview.lean",
+  "surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemantics.lean",
+  "selected_next_target": "review_qft_gr_classical_source_admissibility_semantics_result",
+  "result_token": "QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_SEMANTICS_SUPPLIED_ONLY",
+  "fresh_delta_id": "QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_SEMANTICS_COUNTEREXAMPLE_FRESH_DELTA_v0",
+  "fresh_delta_kind": "counterexample",
+  "retained_blocker": "PHASE1-BLOCKER-QFTGR-CLASSICAL-SOURCE-ADMISSIBILITY-SEMANTICS-RETAINED",
+  "supplied_route": {
+    "status": "available",
+    "supplied_object": "QFTGRClassicalSourceAdmissibilitySemanticPackage",
+    "scope": "candidate_classical_source_admissibility_semantics_only"
+  },
+  "refutation": {
+    "status": "renormalized_expectation_value_only_derivation_refuted",
+    "lean_theorem": "qft_gr_renormalized_expectation_value_semantics_does_not_force_classical_source_admissibility_v0"
+  },
+  "nonclaim_boundaries": {
+    "renormalization_scheme_validity_authorized": false,
+    "finite_stress_energy_tensor_proof_authorized": false,
+    "hadamard_state_adequacy_authorized": false,
+    "operator_self_adjointness_authorized": false,
+    "domain_density_proof_authorized": false,
+    "covariant_conservation_authorized": false,
+    "bianchi_compatible_source_proof_authorized": false,
+    "einstein_equation_coupling_authorized": false,
+    "weak_curvature_source_identification_authorized": false,
+    "poisson_limit_recovery_authorized": false,
+    "semiclassical_einstein_equation_authorized": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "qft_gr_seam_closure_authorized": false,
+    "phase2_authorized": false,
+    "empirical_claim_authorized": false,
+    "master_action_promotion_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The packet authorizes only supplied classical-source admissibility semantics over the already supplied renormalized expectation-value semantic slot, while preserving that admissibility is not conservation, not Einstein-equation coupling, not weak-curvature identification, and not source-map closure.",
+  "next_action": "review_qft_gr_classical_source_admissibility_semantics_result"
+}

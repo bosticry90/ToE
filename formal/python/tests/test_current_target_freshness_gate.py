@@ -161,6 +161,230 @@ QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_PATH = (
     / "Bridges"
     / "QFT_GR_StressEnergyOperatorDomainSemantics.lean"
 )
+QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "QFTGRStressEnergyOperatorDomainResultReview.lean"
+)
+FULL_PILLAR_TARGET_MAP_REBASE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "FullPillarTargetMapRebase.lean"
+)
+FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "FullPillarTargetMapRebaseResultReview.lean"
+)
+POST_REBASE_NEXT_BOUNDED_ATTACK_SELECTION_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "PostRebaseNextBoundedAttackSelection.lean"
+)
+QFT_GR_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_StateExpectationFunctionalSemantics.lean"
+)
+QFT_GR_STATE_EXPECTATION_FUNCTIONAL_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_StateExpectationFunctionalSemanticsResultReview.lean"
+)
+QFT_GR_RENORMALIZED_EXPECTATION_VALUE_SEMANTICS_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_RenormalizedExpectationValueSemantics.lean"
+)
+QFT_GR_RENORMALIZED_EXPECTATION_VALUE_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_RenormalizedExpectationValueSemanticsResultReview.lean"
+)
+QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_SEMANTICS_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_ClassicalSourceAdmissibilitySemantics.lean"
+)
+QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_ClassicalSourceAdmissibilitySemanticsResultReview.lean"
+)
+QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_SEMANTICS_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_CovariantConservationObligationSemantics.lean"
+)
+QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_CovariantConservationObligationSemanticsResultReview.lean"
+)
+QFT_GR_BIANCHI_COMPATIBILITY_OBLIGATION_SEMANTICS_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_BianchiCompatibilityObligationSemantics.lean"
+)
+QFT_GR_BIANCHI_COMPATIBILITY_OBLIGATION_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_BianchiCompatibilityObligationSemanticsResultReview.lean"
+)
+QFT_GR_EINSTEIN_COUPLING_OBLIGATION_SEMANTICS_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_EinsteinCouplingObligationSemantics.lean"
+)
+QFT_GR_EINSTEIN_COUPLING_OBLIGATION_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_EinsteinCouplingObligationSemanticsResultReview.lean"
+)
+QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_SEMANTICS_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_WeakCurvatureSourceIdentificationObligationSemantics.lean"
+)
+QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_WeakCurvatureSourceIdentificationObligationSemanticsResultReview.lean"
+)
+QFT_GR_POISSON_RECOVERY_OBLIGATION_SEMANTICS_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_PoissonRecoveryObligationSemantics.lean"
+)
+QFT_GR_POISSON_RECOVERY_OBLIGATION_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_PoissonRecoveryObligationSemanticsResultReview.lean"
+)
+QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_SourceMapEligibilityLadderSummary.lean"
+)
+QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_SourceMapEligibilityLadderSummaryResultReview.lean"
+)
+POST_QFT_GR_LADDER_BOUNDED_ATTACK_SELECTION_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "PostQFTGRLadderBoundedAttackSelection.lean"
+)
+FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "FullPillarTargetMapNextLaneSelection.lean"
+)
+PROOF_DEBT_LEDGER_DISCHARGE_LANE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "ProofDebtLedgerDischargeLane.lean"
+)
+FNREP_NONALIAS_DEFAULT_DISCHARGE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Variational"
+    / "FNRepNonAliasEquivalence01Discharge.lean"
+)
+FNREP_NONALIAS_DEFAULT_DISCHARGE_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Variational"
+    / "FNRepNonAliasEquivalence01DischargeResultReview.lean"
+)
+MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "MasterActionDependencyGapPacketResultReview.lean"
+)
 
 CITATION_USAGE_TARGET = "cite_only_bounded_retained_assumptions"
 AUDIT_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
@@ -187,8 +411,91 @@ QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_TARGET = (
 QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_TARGET = (
     "review_qft_gr_stress_energy_operator_domain_semantics_result"
 )
-LIVE_TARGET = QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_TARGET
-PREVIOUS_TARGET = QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_TARGET
+FULL_PILLAR_TARGET_MAP_REBASE_TARGET = "prepare_full_pillar_target_map_rebase"
+FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_TARGET = (
+    "review_full_pillar_target_map_rebase_result"
+)
+POST_REBASE_NEXT_BOUNDED_ATTACK_SELECTION_TARGET = (
+    "select_next_post_rebase_bounded_attack"
+)
+SELECTED_POST_REBASE_BOUNDED_ATTACK_TARGET = (
+    "prepare_qft_gr_state_expectation_functional_semantics_bounded_attack"
+)
+QFT_GR_STATE_EXPECTATION_FUNCTIONAL_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_state_expectation_functional_semantics_result"
+)
+QFT_GR_RENORMALIZED_EXPECTATION_VALUE_SEMANTICS_TARGET = (
+    "prepare_qft_gr_renormalized_expectation_value_semantics_bounded_attack"
+)
+QFT_GR_RENORMALIZED_EXPECTATION_VALUE_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_renormalized_expectation_value_semantics_result"
+)
+QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_SEMANTICS_TARGET = (
+    "prepare_qft_gr_classical_source_admissibility_semantics_bounded_attack"
+)
+QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_classical_source_admissibility_semantics_result"
+)
+QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_SEMANTICS_TARGET = (
+    "prepare_qft_gr_covariant_conservation_obligation_semantics_bounded_attack"
+)
+QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_covariant_conservation_obligation_semantics_result"
+)
+QFT_GR_BIANCHI_COMPATIBILITY_OBLIGATION_SEMANTICS_TARGET = (
+    "prepare_qft_gr_bianchi_compatibility_obligation_semantics_bounded_attack"
+)
+QFT_GR_BIANCHI_COMPATIBILITY_OBLIGATION_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_bianchi_compatibility_obligation_semantics_result"
+)
+QFT_GR_EINSTEIN_COUPLING_OBLIGATION_SEMANTICS_TARGET = (
+    "prepare_qft_gr_einstein_coupling_obligation_semantics_bounded_attack"
+)
+QFT_GR_EINSTEIN_COUPLING_OBLIGATION_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_einstein_coupling_obligation_semantics_result"
+)
+QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_SEMANTICS_TARGET = (
+    "prepare_qft_gr_weak_curvature_source_identification_obligation_semantics_bounded_attack"
+)
+QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_weak_curvature_source_identification_obligation_semantics_result"
+)
+QFT_GR_POISSON_RECOVERY_OBLIGATION_SEMANTICS_TARGET = (
+    "prepare_qft_gr_poisson_recovery_obligation_semantics_bounded_attack"
+)
+QFT_GR_POISSON_RECOVERY_OBLIGATION_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_poisson_recovery_obligation_semantics_result"
+)
+QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_TARGET = (
+    "prepare_qft_gr_source_map_eligibility_ladder_summary"
+)
+QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_source_map_eligibility_ladder_summary"
+)
+POST_QFT_GR_LADDER_BOUNDED_ATTACK_SELECTION_TARGET = (
+    "select_next_post_qft_gr_ladder_bounded_attack"
+)
+FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET = (
+    "return_to_full_pillar_target_map_next_lane_selection"
+)
+PROOF_DEBT_LEDGER_DISCHARGE_TARGET = "prepare_proof_debt_ledger_discharge_lane"
+SELECTED_PROOF_DEBT_DISCHARGE_ITEM_TARGET = (
+    "execute_selected_proof_debt_discharge_item"
+)
+FNREP_NONALIAS_DEFAULT_DISCHARGE_RESULT_REVIEW_TARGET = (
+    "review_fnrep_nonalias_default_nonalias_discharge_result"
+)
+POST_PROOF_DEBT_DISCHARGE_BOUNDED_ATTACK_SELECTION_TARGET = (
+    "select_next_post_proof_debt_discharge_bounded_attack"
+)
+MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_TARGET = (
+    "review_master_action_dependency_gap_packet_result"
+)
+POST_MASTER_ACTION_GAP_PACKET_BOUNDED_ATTACK_SELECTION_TARGET = (
+    "select_next_post_master_action_gap_packet_bounded_attack"
+)
+LIVE_TARGET = POST_MASTER_ACTION_GAP_PACKET_BOUNDED_ATTACK_SELECTION_TARGET
+PREVIOUS_TARGET = MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -211,6 +518,29 @@ PAUSED_LANES = {
     "em_qft_physics_blocker_extraction",
     "qm_stat_transport_residual",
     "master_action_dependency_frontier",
+    "qft_gr_source_map",
+    "full_pillar_target_map_rebase",
+    "full_pillar_target_map_rebase_result_review",
+    "post_rebase_next_bounded_attack_selection",
+    "qft_gr_state_expectation_functional_semantics_result_review",
+    "qft_gr_renormalized_expectation_value_semantics_preparation",
+    "qft_gr_renormalized_expectation_value_semantics_result_review",
+    "qft_gr_classical_source_admissibility_semantics_preparation",
+    "qft_gr_classical_source_admissibility_semantics_result_review",
+    "qft_gr_covariant_conservation_obligation_semantics_preparation",
+    "qft_gr_covariant_conservation_obligation_semantics_result_review",
+    "qft_gr_bianchi_compatibility_obligation_semantics_preparation",
+    "qft_gr_bianchi_compatibility_obligation_semantics_result_review",
+    "qft_gr_einstein_coupling_obligation_semantics_preparation",
+    "qft_gr_einstein_coupling_obligation_semantics_result_review",
+    "qft_gr_weak_curvature_source_identification_obligation_semantics_preparation",
+    "qft_gr_weak_curvature_source_identification_obligation_semantics_result_review",
+    "qft_gr_poisson_recovery_obligation_semantics_preparation",
+    "qft_gr_poisson_recovery_obligation_semantics_result_review",
+    "qft_gr_source_map_eligibility_ladder_summary_preparation",
+    "qft_gr_source_map_eligibility_ladder_summary_result_review",
+    "post_qft_gr_ladder_bounded_attack_selection",
+    "full_pillar_target_map_next_lane_selection",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -254,7 +584,7 @@ def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple
     return [(path, value)]
 
 
-def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
+def test_single_live_target_is_machine_pinned_after_gap_packet_review() -> None:
     assert_current_target_consistent()
     payload = _registry()
     state = payload["current_target_state"]
@@ -263,24 +593,45 @@ def test_single_live_target_is_machine_pinned_after_qm_review() -> None:
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_PATH.relative_to(REPO_ROOT)
+        MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
-    assert set(state["paused_lanes"]) == PAUSED_LANES
-    assert state["active_lane"] == "qft_gr_source_map"
+    paused_ids = {
+        item["workstream_id"] for item in payload["workstreams"] if item["status"] == "paused"
+    }
+    assert set(state["paused_lanes"]) == paused_ids
+    assert state["active_lane"] == "master_action_dependency_gap_packet_result_review"
 
     current_active_workstream = active_workstream(payload)
-    assert current_active_workstream["workstream_id"] == "qft_gr_source_map"
+    assert (
+        current_active_workstream["workstream_id"]
+        == "master_action_dependency_gap_packet_result_review"
+    )
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_v0"
+        == "master_action_dependency_gap_packet_result_review_v0"
     )
-    assert (
-        current_active_workstream["same_lane_continuation"]
-        == "result_review_only_after_operator_domain_slice"
+    assert current_active_workstream["consumed_result_token"] == (
+        "MASTER_ACTION_DEPENDENCY_GAP_PACKET_PREPARED"
     )
+    assert current_active_workstream["review_token"] == (
+        "MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED"
+    )
+    assert current_active_workstream["selected_next_target"] == LIVE_TARGET
+    assert current_active_workstream["recommended_selector_choice"] == (
+        "return_to_full_pillar_target_map_next_lane_selection"
+    )
+    assert current_active_workstream["listed_missing_dependencies_remain_active_blockers"] == "yes"
+    assert current_active_workstream["real_axiom_count"] == 60
+    assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
+    assert current_active_workstream["selector_choice_executed"] == "no"
+    assert current_active_workstream["gap_reduction_plan_prepared"] == "no"
+    assert current_active_workstream["seam_closure_claim"] == "no"
+    assert current_active_workstream["phase2_readiness_claim"] == "no"
+    assert current_active_workstream["empirical_adequacy_claim"] == "no"
+    assert current_active_workstream["master_action_promotion_authorized"] == "no"
 
     active_targets = {state["live_next_target"], current_active_workstream["authorized_next_strict_target"]}
     assert active_targets == {LIVE_TARGET}
@@ -312,6 +663,71 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     qft_gr_protocol_row_text = _read(QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_PATH)
     qft_gr_readiness_review_text = _read(QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_PATH)
     qft_gr_operator_domain_text = _read(QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_PATH)
+    qft_gr_result_review_text = _read(
+        QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_PATH
+    )
+    full_pillar_target_map_text = _read(FULL_PILLAR_TARGET_MAP_REBASE_PATH)
+    full_pillar_target_map_result_review_text = _read(
+        FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_PATH
+    )
+    post_rebase_selection_text = _read(POST_REBASE_NEXT_BOUNDED_ATTACK_SELECTION_PATH)
+    qft_gr_state_expectation_text = _read(
+        QFT_GR_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_PATH
+    )
+    qft_gr_renormalized_expectation_text = _read(
+        QFT_GR_RENORMALIZED_EXPECTATION_VALUE_SEMANTICS_PATH
+    )
+    qft_gr_renormalized_expectation_review_text = _read(
+        QFT_GR_RENORMALIZED_EXPECTATION_VALUE_RESULT_REVIEW_PATH
+    )
+    qft_gr_classical_source_admissibility_text = _read(
+        QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_SEMANTICS_PATH
+    )
+    qft_gr_classical_source_admissibility_review_text = _read(
+        QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_RESULT_REVIEW_PATH
+    )
+    qft_gr_covariant_conservation_obligation_text = _read(
+        QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_SEMANTICS_PATH
+    )
+    qft_gr_covariant_conservation_obligation_result_review_text = _read(
+        QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_RESULT_REVIEW_PATH
+    )
+    qft_gr_bianchi_compatibility_obligation_text = _read(
+        QFT_GR_BIANCHI_COMPATIBILITY_OBLIGATION_SEMANTICS_PATH
+    )
+    qft_gr_bianchi_compatibility_obligation_result_review_text = _read(
+        QFT_GR_BIANCHI_COMPATIBILITY_OBLIGATION_RESULT_REVIEW_PATH
+    )
+    qft_gr_einstein_coupling_obligation_text = _read(
+        QFT_GR_EINSTEIN_COUPLING_OBLIGATION_SEMANTICS_PATH
+    )
+    qft_gr_einstein_coupling_obligation_result_review_text = _read(
+        QFT_GR_EINSTEIN_COUPLING_OBLIGATION_RESULT_REVIEW_PATH
+    )
+    qft_gr_weak_curvature_source_identification_obligation_text = _read(
+        QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_SEMANTICS_PATH
+    )
+    qft_gr_weak_curvature_source_identification_obligation_result_review_text = _read(
+        QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_RESULT_REVIEW_PATH
+    )
+    qft_gr_poisson_recovery_obligation_text = _read(
+        QFT_GR_POISSON_RECOVERY_OBLIGATION_SEMANTICS_PATH
+    )
+    qft_gr_poisson_recovery_obligation_result_review_text = _read(
+        QFT_GR_POISSON_RECOVERY_OBLIGATION_RESULT_REVIEW_PATH
+    )
+    qft_gr_source_map_eligibility_ladder_summary_text = _read(
+        QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_PATH
+    )
+    qft_gr_source_map_eligibility_ladder_summary_result_review_text = _read(
+        QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_PATH
+    )
+    qft_gr_state_expectation_review_text = _read(
+        QFT_GR_STATE_EXPECTATION_FUNCTIONAL_RESULT_REVIEW_PATH
+    )
+    qft_gr_renormalized_expectation_review_text = _read(
+        QFT_GR_RENORMALIZED_EXPECTATION_VALUE_RESULT_REVIEW_PATH
+    )
 
     assert CURRENT_TARGET_TOKEN in readme_text
     assert f'"live_next_target": "{LIVE_TARGET}"' in _read(REGISTRY_PATH)
@@ -426,7 +842,7 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     ) in qft_gr_readiness_review_text
     assert (
         'def qftGRStressEnergyOperatorDomainSemanticsTargetId : String :=\n'
-        f'  "{PREVIOUS_TARGET}"'
+        f'  "{QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_TARGET}"'
     ) in qft_gr_readiness_review_text
     assert (
         'def qftGRStressEnergyOperatorDomainSemanticsConsumedTargetId : String :=\n'
@@ -434,8 +850,175 @@ def test_readme_registry_and_frontier_agree_on_live_target() -> None:
     ) in qft_gr_operator_domain_text
     assert (
         'def qftGRStressEnergyOperatorDomainResultReviewTargetId : String :=\n'
-        f'  "{LIVE_TARGET}"'
+        f'  "{QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_TARGET}"'
     ) in qft_gr_operator_domain_text
+    assert (
+        'def qftGRStressEnergyOperatorDomainResultReviewConsumedTargetId : String :=\n'
+        "  qftGRStressEnergyOperatorDomainResultReviewTargetId"
+    ) in qft_gr_result_review_text
+    assert (
+        'def fullPillarTargetMapRebasePreparationTargetId : String :=\n'
+        f'  "{FULL_PILLAR_TARGET_MAP_REBASE_TARGET}"'
+    ) in qft_gr_result_review_text
+    assert (
+        'def fullPillarTargetMapRebaseConsumedTargetId : String :=\n'
+        "  fullPillarTargetMapRebasePreparationTargetId"
+    ) in full_pillar_target_map_text
+    assert (
+        'def fullPillarTargetMapRebaseResultReviewTargetId : String :=\n'
+        f'  "{FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_TARGET}"'
+    ) in full_pillar_target_map_text
+    assert "def fullPillarTargetMapRebaseResultReviewConsumedTargetId : String :=" in (
+        full_pillar_target_map_result_review_text
+    )
+    assert (
+        'def postRebaseNextBoundedAttackSelectionTargetId : String :=\n'
+        f'  "{POST_REBASE_NEXT_BOUNDED_ATTACK_SELECTION_TARGET}"'
+    ) in full_pillar_target_map_result_review_text
+    assert (
+        'def postRebaseNextBoundedAttackSelectionConsumedTargetId : String :=\n'
+        "  postRebaseNextBoundedAttackSelectionTargetId"
+    ) in post_rebase_selection_text
+    assert (
+        'def selectedPostRebaseBoundedAttackTargetV0 : String :=\n'
+        f'  "{SELECTED_POST_REBASE_BOUNDED_ATTACK_TARGET}"'
+    ) in post_rebase_selection_text
+    assert (
+        'def qftGRStateExpectationFunctionalSemanticsConsumedTargetId : String :=\n'
+        "  qftGRStateExpectationFunctionalSemanticsTargetId"
+    ) in qft_gr_state_expectation_text
+    assert (
+        'def qftGRStateExpectationFunctionalResultReviewTargetId : String :=\n'
+        f'  "{QFT_GR_STATE_EXPECTATION_FUNCTIONAL_RESULT_REVIEW_TARGET}"'
+    ) in qft_gr_state_expectation_text
+    assert (
+        'def qftGRStateExpectationFunctionalResultReviewConsumedTargetId : String :=\n'
+        "  qftGRStateExpectationFunctionalResultReviewTargetId"
+    ) in qft_gr_state_expectation_review_text
+    assert (
+        'def qftGRRenormalizedExpectationValueSemanticsPreparationTargetId : String :=\n'
+        f'  "{QFT_GR_RENORMALIZED_EXPECTATION_VALUE_SEMANTICS_TARGET}"'
+    ) in qft_gr_state_expectation_review_text
+    assert (
+        'def qftGRRenormalizedExpectationValueSemanticsConsumedTargetId : String :=\n'
+        "  qftGRRenormalizedExpectationValueSemanticsTargetId"
+    ) in qft_gr_renormalized_expectation_text
+    assert (
+        'def qftGRRenormalizedExpectationValueResultReviewTargetId : String :=\n'
+        f'  "{QFT_GR_RENORMALIZED_EXPECTATION_VALUE_RESULT_REVIEW_TARGET}"'
+    ) in qft_gr_renormalized_expectation_text
+    assert (
+        'def qftGRRenormalizedExpectationValueResultReviewConsumedTargetId : String :=\n'
+        "  qftGRRenormalizedExpectationValueResultReviewTargetId"
+    ) in qft_gr_renormalized_expectation_review_text
+    assert (
+        'def qftGRClassicalSourceAdmissibilitySemanticsPreparationTargetId : String :=\n'
+        f'  "{QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_SEMANTICS_TARGET}"'
+    ) in qft_gr_renormalized_expectation_review_text
+    assert (
+        'def qftGRClassicalSourceAdmissibilityResultReviewTargetId : String :=\n'
+        f'  "{QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_RESULT_REVIEW_TARGET}"'
+    ) in qft_gr_classical_source_admissibility_text
+    assert (
+        'def qftGRCovariantConservationObligationSemanticsPreparationTargetId : String :=\n'
+        f'  "{QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_SEMANTICS_TARGET}"'
+    ) in qft_gr_classical_source_admissibility_review_text
+    assert (
+        'def qftGRCovariantConservationObligationSemanticsConsumedTargetId : String :=\n'
+        "  qftGRCovariantConservationObligationSemanticsTargetId"
+    ) in qft_gr_covariant_conservation_obligation_text
+    assert (
+        'def qftGRCovariantConservationObligationResultReviewTargetId : String :=\n'
+        f'  "{QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_RESULT_REVIEW_TARGET}"'
+    ) in qft_gr_covariant_conservation_obligation_text
+    assert (
+        'def qftGRCovariantConservationObligationResultReviewConsumedTargetId : String :=\n'
+        "  qftGRCovariantConservationObligationResultReviewTargetId"
+    ) in qft_gr_covariant_conservation_obligation_result_review_text
+    assert (
+        'def qftGRBianchiCompatibilityObligationSemanticsPreparationTargetId : String :=\n'
+        f'  "{QFT_GR_BIANCHI_COMPATIBILITY_OBLIGATION_SEMANTICS_TARGET}"'
+    ) in qft_gr_covariant_conservation_obligation_result_review_text
+    assert (
+        'def qftGRBianchiCompatibilityObligationResultReviewTargetId : String :=\n'
+        f'  "{QFT_GR_BIANCHI_COMPATIBILITY_OBLIGATION_RESULT_REVIEW_TARGET}"'
+    ) in qft_gr_bianchi_compatibility_obligation_text
+    assert (
+        'def qftGRBianchiCompatibilityObligationSemanticsConsumedTargetId : String :=\n'
+        "  qftGRBianchiCompatibilityObligationSemanticsTargetId"
+    ) in qft_gr_bianchi_compatibility_obligation_text
+    assert (
+        'def qftGREinsteinCouplingObligationSemanticsPreparationTargetId : String :=\n'
+        f'  "{QFT_GR_EINSTEIN_COUPLING_OBLIGATION_SEMANTICS_TARGET}"'
+    ) in qft_gr_bianchi_compatibility_obligation_result_review_text
+    assert (
+        'def qftGREinsteinCouplingObligationSemanticsConsumedTargetId : String :=\n'
+        "  qftGREinsteinCouplingObligationSemanticsTargetId"
+    ) in qft_gr_einstein_coupling_obligation_text
+    assert (
+        'def qftGREinsteinCouplingObligationResultReviewTargetId : String :=\n'
+        f'  "{QFT_GR_EINSTEIN_COUPLING_OBLIGATION_RESULT_REVIEW_TARGET}"'
+    ) in qft_gr_einstein_coupling_obligation_text
+    assert (
+        'def qftGRWeakCurvatureSourceIdentificationObligationSemanticsPreparationTargetId :\n'
+        "    String :=\n"
+        f'  "{QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_SEMANTICS_TARGET}"'
+    ) in qft_gr_einstein_coupling_obligation_result_review_text
+    assert (
+        'def qftGRWeakCurvatureSourceIdentificationObligationSemanticsConsumedTargetId :\n'
+        "    String :=\n"
+        "  qftGRWeakCurvatureSourceIdentificationObligationSemanticsTargetId"
+    ) in qft_gr_weak_curvature_source_identification_obligation_text
+    assert (
+        'def qftGRWeakCurvatureSourceIdentificationObligationResultReviewTargetId :\n'
+        "    String :=\n"
+        f'  "{QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_RESULT_REVIEW_TARGET}"'
+    ) in qft_gr_weak_curvature_source_identification_obligation_text
+    assert (
+        'def qftGRWeakCurvatureSourceIdentificationObligationResultReviewConsumedTargetId :\n'
+        "    String :=\n"
+        "  qftGRWeakCurvatureSourceIdentificationObligationResultReviewTargetId"
+    ) in qft_gr_weak_curvature_source_identification_obligation_result_review_text
+    assert (
+        'def qftGRPoissonRecoveryObligationSemanticsPreparationTargetId : String :=\n'
+        f'  "{QFT_GR_POISSON_RECOVERY_OBLIGATION_SEMANTICS_TARGET}"'
+    ) in qft_gr_weak_curvature_source_identification_obligation_result_review_text
+    assert (
+        'def qftGRPoissonRecoveryObligationSemanticsConsumedTargetId : String :=\n'
+        "  qftGRPoissonRecoveryObligationSemanticsTargetId"
+    ) in qft_gr_poisson_recovery_obligation_text
+    assert (
+        'def qftGRPoissonRecoveryObligationResultReviewTargetId : String :=\n'
+        f'  "{QFT_GR_POISSON_RECOVERY_OBLIGATION_RESULT_REVIEW_TARGET}"'
+    ) in qft_gr_poisson_recovery_obligation_text
+    assert (
+        'def qftGRPoissonRecoveryObligationResultReviewConsumedTargetId : String :=\n'
+        "  qftGRPoissonRecoveryObligationResultReviewTargetId"
+    ) in qft_gr_poisson_recovery_obligation_result_review_text
+    assert (
+        'def qftGRSourceMapEligibilityLadderSummaryPreparationTargetId : String :=\n'
+        f'  "{QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_TARGET}"'
+    ) in qft_gr_poisson_recovery_obligation_result_review_text
+    assert (
+        'def qftGRSourceMapEligibilityLadderSummaryConsumedTargetId : String :=\n'
+        "  qftGRSourceMapEligibilityLadderSummaryPreparationTargetId"
+    ) in qft_gr_source_map_eligibility_ladder_summary_text
+    assert (
+        'def qftGRSourceMapEligibilityLadderSummaryResultReviewTargetId : String :=\n'
+        f'  "{QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_TARGET}"'
+    ) in qft_gr_source_map_eligibility_ladder_summary_text
+    assert (
+        'def qftGRSourceMapEligibilityLadderSummaryResultReviewConsumedTargetId : String :=\n'
+        "  qftGRSourceMapEligibilityLadderSummaryResultReviewTargetId"
+    ) in qft_gr_source_map_eligibility_ladder_summary_result_review_text
+    assert (
+        'def qftGRPostLadderBoundedAttackSelectionTargetId : String :=\n'
+        f'  "{POST_QFT_GR_LADDER_BOUNDED_ATTACK_SELECTION_TARGET}"'
+    ) in qft_gr_source_map_eligibility_ladder_summary_result_review_text
+    assert (
+        'def qftGRClassicalSourceAdmissibilitySemanticsConsumedTargetId : String :=\n'
+        "  qftGRClassicalSourceAdmissibilitySemanticsTargetId"
+    ) in qft_gr_classical_source_admissibility_text
     assert payload["current_target_state"]["live_next_target"] == LIVE_TARGET
 
 
@@ -473,7 +1056,8 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert em_qft["gauge_quantization_bridge_slice_authorized"] == "not_authorized"
 
     qft_gr = _workstream(payload, "qft_gr_source_map")
-    assert qft_gr["status"] == "active"
+    assert qft_gr["status"] == "paused"
+    assert qft_gr["authorized_next_strict_target"] == LIVE_TARGET
     assert qft_gr["protocol_row_preparation_target"] == QFT_GR_PROTOCOL_ROW_PREPARATION_TARGET
     assert (
         qft_gr["protocol_row_preparation_status"]
@@ -496,12 +1080,54 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert qft_gr["stress_energy_operator_domain_supplied_route_available"] == "yes"
     assert qft_gr["stress_energy_operator_domain_package_only_refuted"] == "yes"
     assert qft_gr["stress_energy_operator_domain_derived_from_source_map_package_alone"] == "no"
-    assert qft_gr["qft_state_expectation_functional_obligation"] == "still_required"
-    assert qft_gr["renormalized_expectation_obligation"] == "still_required"
+    assert qft_gr["state_expectation_functional_semantics_status"] == (
+        "completed_supplied_route_available_package_only_refuted"
+    )
+    assert qft_gr["state_expectation_functional_supplied_route_available"] == "yes"
+    assert qft_gr["state_expectation_functional_package_only_refuted"] == "yes"
+    assert (
+        qft_gr["state_expectation_functional_derived_from_source_map_package_alone"]
+        == "no"
+    )
+    assert qft_gr["state_expectation_functional_result_token"] == (
+        "QFT_GR_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_SUPPLIED_ONLY"
+    )
+    assert qft_gr["state_expectation_functional_result_review_target"] == (
+        QFT_GR_STATE_EXPECTATION_FUNCTIONAL_RESULT_REVIEW_TARGET
+    )
+    assert (
+        qft_gr["state_expectation_functional_result_review_status"] == "completed"
+    )
+    assert qft_gr["state_expectation_functional_result_review_evidence"] == str(
+        QFT_GR_STATE_EXPECTATION_FUNCTIONAL_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert qft_gr["qft_state_expectation_functional_obligation"] == (
+        "retained_as_supplied_semantics_not_package_derived"
+    )
+    assert qft_gr["renormalized_expectation_obligation"] == (
+        "retained_as_supplied_semantics_not_state_expectation_derived"
+    )
     assert qft_gr["gr_weak_curvature_source_identification_obligation"] == "still_required"
     assert qft_gr["covariance_conservation_obligation"] == "still_required"
-    assert qft_gr["qft_state_expectation_functional_semantics_authorized"] == "no"
+    assert qft_gr["qft_state_expectation_functional_semantics_authorized"] == (
+        "supplied_only_retained"
+    )
     assert qft_gr["renormalized_expectation_semantics_authorized"] == "no"
+    assert qft_gr["renormalized_expectation_value_semantics_status"] == (
+        "QFT_GR_RENORMALIZED_EXPECTATION_VALUE_SEMANTICS_SUPPLIED_ONLY"
+    )
+    assert (
+        qft_gr["renormalized_expectation_value_semantics_supplied_route_available"]
+        == "yes"
+    )
+    assert (
+        qft_gr["renormalized_expectation_value_state_expectation_only_refuted"]
+        == "yes"
+    )
+    assert (
+        qft_gr["renormalized_expectation_value_derived_from_state_expectation_alone"]
+        == "no"
+    )
     assert qft_gr["gr_weak_curvature_source_identification_semantics_authorized"] == "no"
     assert qft_gr["covariance_conservation_semantics_authorized"] == "no"
     assert qft_gr["full_source_map_semantic_closure_authorized"] == "no"
@@ -513,10 +1139,140 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
         "authorize_bounded_stress_energy_operator_domain_semantics"
     )
     assert qft_gr["bounded_stress_energy_operator_domain_slice_authorized"] == "completed"
-    assert qft_gr["stress_energy_operator_domain_result_review_status"] == "pending"
-    assert qft_gr["stress_energy_operator_domain_result_review_target"] == LIVE_TARGET
+    assert qft_gr["stress_energy_operator_domain_result_review_status"] == "completed"
+    assert qft_gr["stress_energy_operator_domain_result_review_evidence"] == str(
+        QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert qft_gr["stress_energy_operator_domain_result_review_decision"] == (
+        "pause_qft_gr_and_prepare_full_pillar_target_map_rebase"
+    )
+    assert (
+        qft_gr["stress_energy_operator_domain_result_review_target"]
+        == QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_TARGET
+    )
     assert qft_gr["theorem_work_authorized"] == (
-        "result_review_only_after_operator_domain_slice"
+        "gap_packet_result_review_completed_selector_only_no_promotion_claim"
+    )
+    assert qft_gr["same_lane_continuation"] == (
+        "post_gap_packet_selector_only_no_promotion_claim"
+    )
+    assert qft_gr["einstein_coupling_obligation_semantics_surface"] == str(
+        QFT_GR_EINSTEIN_COUPLING_OBLIGATION_SEMANTICS_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert qft_gr["einstein_coupling_obligation_semantics_result_token"] == (
+        "QFT_GR_EINSTEIN_COUPLING_OBLIGATION_SEMANTICS_SUPPLIED_ONLY"
+    )
+    assert qft_gr["einstein_coupling_obligation_bianchi_only_refuted"] == "yes"
+    assert qft_gr["einstein_coupling_witness_derived_from_bianchi_obligation_alone"] == (
+        "no"
+    )
+    assert qft_gr["einstein_coupling_witness_authorized"] == "no"
+    assert qft_gr["actual_einstein_equation_coupling_authorized"] == "no"
+    assert qft_gr["einstein_coupling_obligation_semantics_result_review_status"] == (
+        "completed"
+    )
+    assert qft_gr["einstein_coupling_obligation_semantics_result_review_evidence"] == str(
+        QFT_GR_EINSTEIN_COUPLING_OBLIGATION_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert qft_gr[
+        "weak_curvature_source_identification_obligation_semantics_preparation_target"
+    ] == QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_SEMANTICS_TARGET
+    assert qft_gr[
+        "weak_curvature_source_identification_obligation_semantics_authorized"
+    ] == "supplied_only_retained"
+    assert qft_gr["weak_curvature_source_identification_obligation_semantics_surface"] == str(
+        QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_SEMANTICS_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert qft_gr[
+        "weak_curvature_source_identification_obligation_semantics_result_token"
+    ] == "QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_SEMANTICS_SUPPLIED_ONLY"
+    assert qft_gr[
+        "weak_curvature_source_identification_obligation_result_review_status"
+    ] == "completed"
+    assert qft_gr[
+        "weak_curvature_source_identification_obligation_result_review_evidence"
+    ] == str(
+        QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_RESULT_REVIEW_PATH.relative_to(
+            REPO_ROOT
+        )
+    ).replace("\\", "/")
+    assert qft_gr[
+        "weak_curvature_source_identification_obligation_result_review_token"
+    ] == (
+        "QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_SEMANTICS_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY"
+    )
+    assert qft_gr["poisson_recovery_obligation_semantics_preparation_target"] == (
+        QFT_GR_POISSON_RECOVERY_OBLIGATION_SEMANTICS_TARGET
+    )
+    assert qft_gr["poisson_recovery_obligation_semantics_authorized"] == (
+        "supplied_only_retained"
+    )
+    assert qft_gr["poisson_recovery_obligation_semantics_constructed"] == "yes"
+    assert qft_gr["poisson_recovery_obligation_semantics_surface"] == str(
+        QFT_GR_POISSON_RECOVERY_OBLIGATION_SEMANTICS_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert qft_gr["poisson_recovery_obligation_semantics_result_token"] == (
+        "QFT_GR_POISSON_RECOVERY_OBLIGATION_SEMANTICS_SUPPLIED_ONLY"
+    )
+    assert qft_gr["poisson_recovery_obligation_result_review_status"] == "completed"
+    assert qft_gr["poisson_recovery_obligation_result_review_evidence"] == str(
+        QFT_GR_POISSON_RECOVERY_OBLIGATION_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert qft_gr["source_map_eligibility_ladder_summary_preparation_target"] == (
+        QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_TARGET
+    )
+    assert qft_gr["source_map_eligibility_ladder_summary_authorized"] == (
+        "preparation_only"
+    )
+    assert qft_gr["source_map_eligibility_ladder_summary_constructed"] == (
+        "yes_obligation_ladder_only"
+    )
+    assert qft_gr["source_map_eligibility_ladder_summary_status"] == "completed"
+    assert qft_gr["source_map_eligibility_ladder_summary_evidence"] == str(
+        QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert qft_gr["source_map_eligibility_ladder_summary_result_token"] == (
+        "QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_CONSTRUCTED_CLOSURE_NOT_AUTHORIZED"
+    )
+    assert qft_gr["source_map_eligibility_ladder_summary_result_review_target"] == (
+        QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_TARGET
+    )
+    assert qft_gr[
+        "qft_gr_source_map_eligibility_ladder_summary_result_review_status"
+    ] == "completed"
+    assert qft_gr[
+        "qft_gr_source_map_eligibility_ladder_summary_result_review_evidence"
+    ] == str(
+        QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_PATH.relative_to(
+            REPO_ROOT
+        )
+    ).replace("\\", "/")
+    assert qft_gr[
+        "qft_gr_source_map_eligibility_ladder_summary_result_review_token"
+    ] == (
+        "QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_CONSUMED_CLOSURE_NOT_AUTHORIZED"
+    )
+    assert qft_gr["source_map_eligibility_ladder_constructed"] == (
+        "yes_obligation_ladder_only"
+    )
+    assert qft_gr["witness_chain_status"] == "absent"
+    assert qft_gr["witness_search_micro_lane_authorized"] == "no"
+    assert qft_gr["poisson_recovery_weak_curvature_obligation_only_refuted"] == "yes"
+    assert qft_gr[
+        "poisson_recovery_witness_derived_from_weak_curvature_obligation_alone"
+    ] == "no"
+    assert qft_gr["weak_curvature_source_identification_einstein_only_refuted"] == (
+        "yes"
+    )
+    assert qft_gr[
+        "source_identification_witness_derived_from_einstein_obligation_alone"
+    ] == "no"
+    assert qft_gr["actual_weak_curvature_source_identification_authorized"] == "no"
+    assert qft_gr["poisson_limit_recovery_authorized"] == "no"
+    assert qft_gr["newtonian_limit_recovery_authorized"] == "no"
+    assert (
+        qft_gr["full_pillar_target_map_rebase_target"]
+        == FULL_PILLAR_TARGET_MAP_REBASE_TARGET
     )
 
     qm_stat = _workstream(payload, "qm_stat_transport_residual")
@@ -604,21 +1360,283 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
         QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert master_action["qft_gr_stress_energy_operator_domain_result_review_status"] == (
-        "pending"
+        "completed"
     )
+    assert master_action["qft_gr_stress_energy_operator_domain_result_review_evidence"] == str(
+        QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert master_action["qft_gr_stress_energy_operator_domain_result_review_decision"] == (
+        "pause_qft_gr_and_prepare_full_pillar_target_map_rebase"
+    )
+    assert master_action["state_expectation_functional_semantics_status"] == (
+        "completed_supplied_route_available_package_only_refuted"
+    )
+    assert master_action["state_expectation_functional_semantics_evidence"] == str(
+        QFT_GR_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert master_action["state_expectation_functional_result_token"] == (
+        "QFT_GR_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_SUPPLIED_ONLY"
+    )
+    assert master_action["state_expectation_functional_result_review_status"] == (
+        "completed"
+    )
+    assert master_action["state_expectation_functional_result_review_evidence"] == str(
+        QFT_GR_STATE_EXPECTATION_FUNCTIONAL_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
     assert master_action["theorem_work_authorized"] == (
-        "result_review_only_after_operator_domain_slice"
+        "gap_packet_result_review_completed_selector_only_no_promotion_claim"
     )
     assert master_action["authorized_next_strict_target"] == LIVE_TARGET
+    assert (
+        master_action["next_action_scope"]
+        == "post_master_action_gap_packet_bounded_attack_selection"
+    )
+    assert master_action["qft_gr_source_map_eligibility_ladder_summary_status"] == (
+        "completed"
+    )
+    assert master_action["qft_gr_source_map_eligibility_ladder_summary_evidence"] == str(
+        QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert master_action[
+        "qft_gr_source_map_eligibility_ladder_summary_result_review_status"
+    ] == "completed"
+    assert master_action[
+        "qft_gr_source_map_eligibility_ladder_summary_result_review_evidence"
+    ] == str(
+        QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_PATH.relative_to(
+            REPO_ROOT
+        )
+    ).replace("\\", "/")
+    assert master_action["source_map_eligibility_ladder_constructed"] == (
+        "yes_obligation_ladder_only"
+    )
+    assert master_action["witness_chain_status"] == "absent"
+    assert master_action["witness_search_micro_lane_authorized"] == "no"
+    assert master_action["full_source_map_closure_authorized"] == "no"
     assert master_action["dependency_graph_changed"] == "no"
     assert master_action["lane_unblocked"] == "no"
     assert master_action["promotion_authorized"] == "no"
+    assert master_action["master_action_dependency_gap_packet_result_review_status"] == (
+        "completed"
+    )
+    assert master_action["master_action_dependency_gap_packet_result_review_token"] == (
+        "MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED"
+    )
+
+    full_target_map = _workstream(payload, "full_pillar_target_map_rebase")
+    assert full_target_map["status"] == "paused"
+    assert (
+        full_target_map["authorized_next_strict_target"]
+        == FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_TARGET
+    )
+    assert (
+        full_target_map["consumed_target"]
+        == QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_TARGET
+    )
+    assert full_target_map["latest_surface"] == "FULL_PILLAR_TARGET_MAP_REBASE_v0"
+    assert full_target_map["target_map_evidence"] == str(
+        FULL_PILLAR_TARGET_MAP_REBASE_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert full_target_map["target_map_document"] == (
+        "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md"
+    )
+    assert full_target_map["route_source_required"] == "yes"
+    assert full_target_map["completion_scale_required"] == "yes"
+    assert full_target_map["claim_posture_taxonomy_bound"] == "yes"
+    assert full_target_map["master_action_status"] == "MASTER_ACTION_CITATION_BOUND"
+    assert full_target_map["full_pillar_completion_claim"] == "no"
+    assert full_target_map["master_action_promotion_authorized"] == "no"
+    assert full_target_map["theorem_work_authorized"] == (
+        "result_review_only_after_target_map_rebase"
+    )
+    assert full_target_map["same_lane_continuation"] == (
+        "result_review_only_after_target_map_rebase"
+    )
+    assert (
+        full_target_map["target_map_result_review_target"]
+        == FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_TARGET
+    )
+    assert full_target_map["target_map_result_review_surface"] == str(
+        FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert (
+        full_target_map["target_map_result_review_report"]
+        == "formal/docs/release/FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_20260503_v0.json"
+    )
+    assert (
+        full_target_map["target_map_result_review_status"]
+        == "prepared_for_live_result_review"
+    )
+
+    full_target_map_review = _workstream(
+        payload, "full_pillar_target_map_rebase_result_review"
+    )
+    assert full_target_map_review["status"] == "paused"
+    assert (
+        full_target_map_review["authorized_next_strict_target"]
+        == POST_REBASE_NEXT_BOUNDED_ATTACK_SELECTION_TARGET
+    )
+    assert (
+        full_target_map_review["consumed_target"]
+        == FULL_PILLAR_TARGET_MAP_REBASE_TARGET
+    )
+    assert (
+        full_target_map_review["latest_surface"]
+        == "full_pillar_target_map_rebase_result_review_v0"
+    )
+    assert full_target_map_review["target_map_authority_only"] == "yes"
+    assert full_target_map_review["unauthorized_claims_introduced"] == "no"
+    assert full_target_map_review["next_physics_attack_selected"] == "no"
+    assert (
+        full_target_map_review["selection_target"]
+        == POST_REBASE_NEXT_BOUNDED_ATTACK_SELECTION_TARGET
+    )
+    assert full_target_map_review["selection_surface"] == str(
+        POST_REBASE_NEXT_BOUNDED_ATTACK_SELECTION_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+
+    post_rebase_selection = _workstream(
+        payload, "post_rebase_next_bounded_attack_selection"
+    )
+    assert post_rebase_selection["status"] == "paused"
+    assert (
+        post_rebase_selection["authorized_next_strict_target"]
+        == SELECTED_POST_REBASE_BOUNDED_ATTACK_TARGET
+    )
+    assert (
+        post_rebase_selection["consumed_target"]
+        == FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_TARGET
+    )
+    assert post_rebase_selection["selected_class"] == (
+        "QFT_GR_SOURCE_MAP_CLOSURE_ELIGIBILITY_LANE"
+    )
+    assert post_rebase_selection["selected_next_target"] == (
+        SELECTED_POST_REBASE_BOUNDED_ATTACK_TARGET
+    )
+    assert post_rebase_selection["selection_executes_attack"] == "no"
+    assert (
+        post_rebase_selection["state_expectation_functional_result_review_target"]
+        == QFT_GR_STATE_EXPECTATION_FUNCTIONAL_RESULT_REVIEW_TARGET
+    )
+
+    state_expectation_review = _workstream(
+        payload, "qft_gr_state_expectation_functional_semantics_result_review"
+    )
+    assert state_expectation_review["status"] == "paused"
+    assert state_expectation_review["authorized_next_strict_target"] == (
+        QFT_GR_RENORMALIZED_EXPECTATION_VALUE_SEMANTICS_TARGET
+    )
+    assert state_expectation_review["consumed_target"] == (
+        QFT_GR_STATE_EXPECTATION_FUNCTIONAL_RESULT_REVIEW_TARGET
+    )
+    assert state_expectation_review["latest_surface"] == (
+        "qft_gr_state_expectation_functional_semantics_result_review_v0"
+    )
+    assert state_expectation_review["result_review_status"] == (
+        "completed"
+    )
+
+    renormalized_prep = _workstream(
+        payload, "qft_gr_renormalized_expectation_value_semantics_preparation"
+    )
+    assert renormalized_prep["status"] == "paused"
+    assert renormalized_prep["authorized_next_strict_target"] == (
+        QFT_GR_RENORMALIZED_EXPECTATION_VALUE_RESULT_REVIEW_TARGET
+    )
+    assert (
+        renormalized_prep["consumed_target"]
+        == QFT_GR_RENORMALIZED_EXPECTATION_VALUE_SEMANTICS_TARGET
+    )
+    assert renormalized_prep["latest_surface"] == (
+        "QFT_GR_RENORMALIZED_EXPECTATION_VALUE_SEMANTICS_v0"
+    )
+    assert renormalized_prep["renormalized_expectation_semantics_authorized"] == "no"
+
+    renormalized_review = _workstream(
+        payload, "qft_gr_renormalized_expectation_value_semantics_result_review"
+    )
+    assert renormalized_review["status"] == "paused"
+    assert renormalized_review["authorized_next_strict_target"] == (
+        QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_SEMANTICS_TARGET
+    )
+    assert renormalized_review["consumed_target"] == (
+        QFT_GR_RENORMALIZED_EXPECTATION_VALUE_RESULT_REVIEW_TARGET
+    )
+    assert renormalized_review["latest_surface"] == (
+        "qft_gr_renormalized_expectation_value_semantics_result_review_v0"
+    )
+    assert renormalized_review["result_token"] == (
+        "QFT_GR_RENORMALIZED_EXPECTATION_VALUE_SEMANTICS_SUPPLIED_ONLY"
+    )
+    assert renormalized_review["review_result_token"] == (
+        "QFT_GR_RENORMALIZED_EXPECTATION_VALUE_SEMANTICS_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY"
+    )
+
+    classical_source_prep = _workstream(
+        payload, "qft_gr_classical_source_admissibility_semantics_preparation"
+    )
+    assert classical_source_prep["status"] == "paused"
+    assert classical_source_prep["authorized_next_strict_target"] == (
+        QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_RESULT_REVIEW_TARGET
+    )
+    assert classical_source_prep["consumed_target"] == (
+        QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_SEMANTICS_TARGET
+    )
+    assert classical_source_prep["latest_surface"] == (
+        "QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_SEMANTICS_v0"
+    )
+    assert (
+        classical_source_prep["classical_source_admissibility_semantics_authorized"]
+        == "supplied_only_retained"
+    )
+    assert classical_source_prep["result_review_status"] == (
+        "prepared_for_live_result_review"
+    )
+
+    classical_source_review = _workstream(
+        payload, "qft_gr_classical_source_admissibility_semantics_result_review"
+    )
+    assert classical_source_review["status"] == "paused"
+    assert classical_source_review["authorized_next_strict_target"] == (
+        QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_SEMANTICS_TARGET
+    )
+    assert classical_source_review["consumed_target"] == (
+        QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_RESULT_REVIEW_TARGET
+    )
+    assert classical_source_review["latest_surface"] == (
+        "qft_gr_classical_source_admissibility_semantics_result_review_v0"
+    )
+    assert classical_source_review["review_result_token"] == (
+        "QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_SEMANTICS_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY"
+    )
+
+    covariant_prep = _workstream(
+        payload, "qft_gr_covariant_conservation_obligation_semantics_preparation"
+    )
+    assert covariant_prep["status"] == "paused"
+    assert covariant_prep["authorized_next_strict_target"] == (
+        QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_RESULT_REVIEW_TARGET
+    )
+    assert covariant_prep["consumed_target"] == (
+        QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_SEMANTICS_TARGET
+    )
+    assert covariant_prep["latest_surface"] == (
+        "QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_SEMANTICS_v0"
+    )
+    assert covariant_prep["covariant_conservation_obligation_semantics_authorized"] == (
+        "supplied_only_retained"
+    )
+    assert covariant_prep["conservation_witness_authorized"] == "no"
+    assert covariant_prep["actual_covariant_conservation_authorized"] == "no"
+    assert covariant_prep["result_review_status"] == (
+        "prepared_for_live_result_review"
+    )
 
 
 def test_paused_lanes_do_not_advertise_active_continuation() -> None:
     payload = _registry()
 
-    for lane in PAUSED_LANES:
+    for lane in payload["current_target_state"]["paused_lanes"]:
         workstream = _workstream(payload, lane)
         assert workstream["status"] == "paused", lane
 
@@ -697,6 +1715,56 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
     qft_gr_protocol_row_text = _read(QFT_GR_SOURCE_MAP_SEMANTICS_PROTOCOL_ROW_PATH)
     qft_gr_readiness_review_text = _read(QFT_GR_SOURCE_MAP_SEMANTICS_READINESS_REVIEW_PATH)
     qft_gr_operator_domain_text = _read(QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_PATH)
+    qft_gr_result_review_text = _read(
+        QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_RESULT_REVIEW_PATH
+    )
+    full_pillar_target_map_text = _read(FULL_PILLAR_TARGET_MAP_REBASE_PATH)
+    full_pillar_target_map_result_review_text = _read(
+        FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_PATH
+    )
+    post_rebase_selection_text = _read(POST_REBASE_NEXT_BOUNDED_ATTACK_SELECTION_PATH)
+    qft_gr_state_expectation_text = _read(
+        QFT_GR_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_PATH
+    )
+    qft_gr_state_expectation_review_text = _read(
+        QFT_GR_STATE_EXPECTATION_FUNCTIONAL_RESULT_REVIEW_PATH
+    )
+    qft_gr_renormalized_expectation_review_text = _read(
+        QFT_GR_RENORMALIZED_EXPECTATION_VALUE_RESULT_REVIEW_PATH
+    )
+    qft_gr_classical_source_admissibility_text = _read(
+        QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_SEMANTICS_PATH
+    )
+    qft_gr_classical_source_admissibility_review_text = _read(
+        QFT_GR_CLASSICAL_SOURCE_ADMISSIBILITY_RESULT_REVIEW_PATH
+    )
+    qft_gr_covariant_conservation_obligation_text = _read(
+        QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_SEMANTICS_PATH
+    )
+    qft_gr_covariant_conservation_obligation_result_review_text = _read(
+        QFT_GR_COVARIANT_CONSERVATION_OBLIGATION_RESULT_REVIEW_PATH
+    )
+    qft_gr_bianchi_compatibility_obligation_text = _read(
+        QFT_GR_BIANCHI_COMPATIBILITY_OBLIGATION_SEMANTICS_PATH
+    )
+    qft_gr_bianchi_compatibility_obligation_result_review_text = _read(
+        QFT_GR_BIANCHI_COMPATIBILITY_OBLIGATION_RESULT_REVIEW_PATH
+    )
+    qft_gr_einstein_coupling_obligation_text = _read(
+        QFT_GR_EINSTEIN_COUPLING_OBLIGATION_SEMANTICS_PATH
+    )
+    qft_gr_einstein_coupling_obligation_result_review_text = _read(
+        QFT_GR_EINSTEIN_COUPLING_OBLIGATION_RESULT_REVIEW_PATH
+    )
+    qft_gr_weak_curvature_source_identification_obligation_text = _read(
+        QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_SEMANTICS_PATH
+    )
+    qft_gr_weak_curvature_source_identification_obligation_result_review_text = _read(
+        QFT_GR_WEAK_CURVATURE_SOURCE_IDENTIFICATION_OBLIGATION_RESULT_REVIEW_PATH
+    )
+    qft_gr_poisson_recovery_obligation_text = _read(
+        QFT_GR_POISSON_RECOVERY_OBLIGATION_SEMANTICS_PATH
+    )
     for theorem_name in [
         "em_qft_protocol_row_phase2_not_authorized_v0",
         "em_qft_protocol_row_seam_not_closed_v0",
@@ -836,7 +1904,392 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
         "qft_gr_stress_energy_operator_domain_governance_manifest_not_enrolled_v0",
     ]:
         assert theorem_name in qft_gr_operator_domain_text
+    for theorem_name in [
+        "qft_gr_stress_energy_operator_domain_result_review_no_seam_closure_v0",
+        "qft_gr_stress_energy_operator_domain_result_review_no_semiclassical_gravity_claim_v0",
+        "qft_gr_stress_energy_operator_domain_result_review_no_einstein_equation_claim_v0",
+        "qft_gr_stress_energy_operator_domain_result_review_phase2_not_authorized_v0",
+        "qft_gr_stress_energy_operator_domain_result_review_master_action_not_promoted_v0",
+        "qft_gr_stress_energy_operator_domain_result_review_no_empirical_claim_v0",
+        "qft_gr_stress_energy_operator_domain_result_review_governance_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_result_review_text
+    for theorem_name in [
+        "full_pillar_target_map_rebase_phase2_not_authorized_v0",
+        "full_pillar_target_map_rebase_no_seam_closure_claim_v0",
+        "full_pillar_target_map_rebase_no_full_pillar_completion_claim_v0",
+        "full_pillar_target_map_rebase_master_action_not_promoted_v0",
+        "full_pillar_target_map_rebase_no_empirical_claim_v0",
+    ]:
+        assert theorem_name in full_pillar_target_map_text
+    for theorem_name in [
+        "full_pillar_target_map_rebase_result_review_no_unauthorized_claims_v0",
+        "full_pillar_target_map_rebase_result_review_no_next_attack_selected_v0",
+        "full_pillar_target_map_rebase_result_review_phase2_not_authorized_v0",
+        "full_pillar_target_map_rebase_result_review_no_seam_closure_claim_v0",
+        "full_pillar_target_map_rebase_result_review_no_full_pillar_completion_v0",
+        "full_pillar_target_map_rebase_result_review_master_action_not_promoted_v0",
+        "full_pillar_target_map_rebase_result_review_no_empirical_claim_v0",
+    ]:
+        assert theorem_name in full_pillar_target_map_result_review_text
+    for theorem_name in [
+        "post_rebase_next_bounded_attack_selection_does_not_execute_attack_v0",
+        "post_rebase_next_bounded_attack_selection_no_full_pillar_completion_v0",
+        "post_rebase_next_bounded_attack_selection_no_seam_closure_v0",
+        "post_rebase_next_bounded_attack_selection_phase2_not_authorized_v0",
+        "post_rebase_next_bounded_attack_selection_master_action_not_promoted_v0",
+        "post_rebase_next_bounded_attack_selection_no_empirical_claim_v0",
+    ]:
+        assert theorem_name in post_rebase_selection_text
+    for theorem_name in [
+        "qft_gr_state_expectation_functional_semantics_renormalized_expectation_not_authorized_v0",
+        "qft_gr_state_expectation_functional_semantics_hadamard_state_not_authorized_v0",
+        "qft_gr_state_expectation_functional_semantics_self_adjointness_not_authorized_v0",
+        "qft_gr_state_expectation_functional_semantics_domain_density_not_authorized_v0",
+        "qft_gr_state_expectation_functional_semantics_weak_curvature_source_not_authorized_v0",
+        "qft_gr_state_expectation_functional_semantics_covariance_conservation_not_authorized_v0",
+        "qft_gr_state_expectation_functional_semantics_full_source_map_closure_not_authorized_v0",
+        "qft_gr_state_expectation_functional_semantics_no_seam_closure_v0",
+        "qft_gr_state_expectation_functional_semantics_no_semiclassical_gravity_claim_v0",
+        "qft_gr_state_expectation_functional_semantics_no_einstein_equation_claim_v0",
+        "qft_gr_state_expectation_functional_semantics_phase2_not_authorized_v0",
+        "qft_gr_state_expectation_functional_semantics_master_action_not_promoted_v0",
+        "qft_gr_state_expectation_functional_semantics_no_empirical_claim_v0",
+        "qft_gr_state_expectation_functional_semantics_governance_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_state_expectation_text
+    for theorem_name in [
+        "qft_gr_state_expectation_functional_result_review_source_map_package_only_not_authorized_v0",
+        "qft_gr_state_expectation_functional_result_review_renormalized_expectation_not_authorized_v0",
+        "qft_gr_state_expectation_functional_result_review_hadamard_state_not_authorized_v0",
+        "qft_gr_state_expectation_functional_result_review_self_adjointness_not_authorized_v0",
+        "qft_gr_state_expectation_functional_result_review_domain_density_not_authorized_v0",
+        "qft_gr_state_expectation_functional_result_review_weak_curvature_source_not_authorized_v0",
+        "qft_gr_state_expectation_functional_result_review_covariance_conservation_not_authorized_v0",
+        "qft_gr_state_expectation_functional_result_review_full_source_map_closure_not_authorized_v0",
+        "qft_gr_state_expectation_functional_result_review_no_seam_closure_v0",
+        "qft_gr_state_expectation_functional_result_review_no_semiclassical_gravity_claim_v0",
+        "qft_gr_state_expectation_functional_result_review_no_einstein_equation_claim_v0",
+        "qft_gr_state_expectation_functional_result_review_phase2_not_authorized_v0",
+        "qft_gr_state_expectation_functional_result_review_master_action_not_promoted_v0",
+        "qft_gr_state_expectation_functional_result_review_no_empirical_claim_v0",
+        "qft_gr_state_expectation_functional_result_review_governance_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_state_expectation_review_text
+    for theorem_name in [
+        "qft_gr_renorm_expectation_value_result_review_scheme_not_authorized_v0",
+        "qft_gr_renorm_expectation_value_result_review_hadamard_not_authorized_v0",
+        "qft_gr_renorm_expectation_value_result_review_finiteness_not_authorized_v0",
+        "qft_gr_renorm_expectation_value_result_review_self_adjoint_not_authorized_v0",
+        "qft_gr_renorm_expectation_value_result_review_domain_density_not_authorized_v0",
+        "qft_gr_renorm_expectation_value_result_review_conservation_not_authorized_v0",
+        "qft_gr_renorm_expectation_value_result_review_classical_source_not_authorized_v0",
+        "qft_gr_renorm_expectation_value_result_review_weak_source_not_authorized_v0",
+        "qft_gr_renorm_expectation_value_result_review_semiclassical_eq_not_authorized_v0",
+        "qft_gr_renorm_expectation_value_result_review_source_map_not_authorized_v0",
+        "qft_gr_renorm_expectation_value_result_review_no_seam_closure_v0",
+        "qft_gr_renorm_expectation_value_result_review_no_semiclassical_claim_v0",
+        "qft_gr_renorm_expectation_value_result_review_no_einstein_claim_v0",
+        "qft_gr_renorm_expectation_value_result_review_phase2_not_authorized_v0",
+        "qft_gr_renorm_expectation_value_result_review_master_action_not_promoted_v0",
+        "qft_gr_renorm_expectation_value_result_review_no_empirical_claim_v0",
+        "qft_gr_renorm_expectation_value_result_review_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_renormalized_expectation_review_text
+    for theorem_name in [
+        "qft_gr_classical_source_admissibility_semantics_scheme_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_finite_tensor_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_hadamard_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_self_adjoint_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_domain_density_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_conservation_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_bianchi_source_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_einstein_coupling_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_weak_source_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_poisson_limit_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_semiclassical_eq_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_source_map_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_no_seam_closure_v0",
+        "qft_gr_classical_source_admissibility_semantics_no_semiclassical_gravity_claim_v0",
+        "qft_gr_classical_source_admissibility_semantics_no_einstein_claim_v0",
+        "qft_gr_classical_source_admissibility_semantics_phase2_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_semantics_master_action_not_promoted_v0",
+        "qft_gr_classical_source_admissibility_semantics_no_empirical_claim_v0",
+        "qft_gr_classical_source_admissibility_semantics_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_classical_source_admissibility_text
+
+    for theorem_name in [
+        "qft_gr_classical_source_admissibility_result_review_scheme_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_finiteness_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_hadamard_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_self_adjoint_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_domain_density_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_conservation_obligation_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_conservation_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_bianchi_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_einstein_coupling_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_weak_source_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_poisson_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_semiclassical_eq_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_source_map_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_no_seam_closure_v0",
+        "qft_gr_classical_source_admissibility_result_review_no_semiclassical_claim_v0",
+        "qft_gr_classical_source_admissibility_result_review_no_einstein_claim_v0",
+        "qft_gr_classical_source_admissibility_result_review_phase2_not_authorized_v0",
+        "qft_gr_classical_source_admissibility_result_review_master_action_not_promoted_v0",
+        "qft_gr_classical_source_admissibility_result_review_no_empirical_claim_v0",
+        "qft_gr_classical_source_admissibility_result_review_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_classical_source_admissibility_review_text
+
+    for theorem_name in [
+        "qft_gr_covariant_conservation_obligation_semantics_scheme_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_finite_tensor_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_hadamard_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_self_adjoint_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_domain_density_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_witness_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_actual_conservation_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_bianchi_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_einstein_coupling_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_weak_source_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_poisson_limit_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_semiclassical_eq_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_source_map_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_no_seam_closure_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_no_semiclassical_gravity_claim_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_no_einstein_claim_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_phase2_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_master_action_not_promoted_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_no_empirical_claim_v0",
+        "qft_gr_covariant_conservation_obligation_semantics_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_covariant_conservation_obligation_text
+
+    for theorem_name in [
+        "qft_gr_covariant_conservation_obligation_result_review_scheme_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_finiteness_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_hadamard_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_self_adjoint_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_domain_density_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_witness_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_actual_conservation_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_bianchi_obligation_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_bianchi_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_einstein_coupling_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_weak_source_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_poisson_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_semiclassical_eq_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_source_map_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_no_seam_closure_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_no_semiclassical_claim_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_no_einstein_claim_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_phase2_not_authorized_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_master_action_not_promoted_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_no_empirical_claim_v0",
+        "qft_gr_covariant_conservation_obligation_result_review_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_covariant_conservation_obligation_result_review_text
+
+    for theorem_name in [
+        "qft_gr_bianchi_compatibility_obligation_semantics_scheme_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_finite_tensor_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_hadamard_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_self_adjoint_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_domain_density_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_conservation_witness_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_actual_conservation_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_bianchi_witness_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_actual_bianchi_compatibility_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_einstein_coupling_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_weak_source_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_poisson_limit_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_semiclassical_eq_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_source_map_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_no_seam_closure_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_no_semiclassical_gravity_claim_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_no_einstein_claim_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_phase2_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_master_action_not_promoted_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_no_empirical_claim_v0",
+        "qft_gr_bianchi_compatibility_obligation_semantics_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_bianchi_compatibility_obligation_text
+
+    for theorem_name in [
+        "qft_gr_bianchi_compatibility_obligation_result_review_scheme_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_finiteness_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_hadamard_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_self_adjoint_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_domain_density_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_conservation_witness_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_actual_conservation_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_bianchi_witness_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_actual_bianchi_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_einstein_obligation_not_constructed_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_einstein_coupling_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_weak_source_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_poisson_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_semiclassical_eq_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_source_map_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_no_seam_closure_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_no_semiclassical_claim_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_no_einstein_claim_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_phase2_not_authorized_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_master_action_not_promoted_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_no_empirical_claim_v0",
+        "qft_gr_bianchi_compatibility_obligation_result_review_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_bianchi_compatibility_obligation_result_review_text
+
+    for theorem_name in [
+        "qft_gr_einstein_coupling_obligation_semantics_scheme_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_finite_tensor_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_hadamard_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_self_adjoint_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_domain_density_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_conservation_witness_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_actual_conservation_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_bianchi_witness_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_actual_bianchi_compatibility_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_einstein_witness_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_actual_coupling_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_weak_source_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_poisson_limit_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_semiclassical_eq_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_source_map_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_no_seam_closure_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_no_semiclassical_gravity_claim_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_no_einstein_claim_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_phase2_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_master_action_not_promoted_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_no_empirical_claim_v0",
+        "qft_gr_einstein_coupling_obligation_semantics_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_einstein_coupling_obligation_text
+
+    for theorem_name in [
+        "qft_gr_einstein_coupling_obligation_result_review_same_lane_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_scheme_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_finiteness_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_hadamard_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_self_adjoint_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_domain_density_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_conservation_witness_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_actual_conservation_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_bianchi_witness_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_actual_bianchi_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_einstein_witness_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_actual_coupling_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_weak_source_obligation_not_constructed_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_weak_source_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_poisson_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_semiclassical_eq_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_source_map_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_no_seam_closure_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_no_semiclassical_claim_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_no_einstein_claim_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_phase2_not_authorized_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_master_action_not_promoted_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_no_empirical_claim_v0",
+        "qft_gr_einstein_coupling_obligation_result_review_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_einstein_coupling_obligation_result_review_text
+
+    for theorem_name in [
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_scheme_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_finite_tensor_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_hadamard_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_self_adjoint_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_domain_density_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_conservation_witness_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_actual_conservation_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_bianchi_witness_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_actual_bianchi_compatibility_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_einstein_witness_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_actual_coupling_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_source_witness_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_actual_source_identification_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_poisson_limit_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_newtonian_limit_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_semiclassical_eq_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_source_map_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_no_seam_closure_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_no_semiclassical_gravity_claim_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_no_einstein_claim_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_phase2_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_master_action_not_promoted_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_no_empirical_claim_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_semantics_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_weak_curvature_source_identification_obligation_text
+
+    for theorem_name in [
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_same_lane_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_scheme_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_finiteness_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_hadamard_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_self_adjoint_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_domain_density_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_conservation_witness_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_actual_conservation_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_bianchi_witness_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_actual_bianchi_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_einstein_witness_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_actual_coupling_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_source_witness_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_actual_source_identification_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_poisson_obligation_not_constructed_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_poisson_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_newtonian_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_semiclassical_eq_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_source_map_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_no_seam_closure_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_no_semiclassical_claim_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_no_einstein_claim_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_phase2_not_authorized_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_master_action_not_promoted_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_no_empirical_claim_v0",
+        "qft_gr_weak_curvature_source_identification_obligation_result_review_manifest_not_enrolled_v0",
+    ]:
+        assert (
+            theorem_name
+            in qft_gr_weak_curvature_source_identification_obligation_result_review_text
+        )
+
+    for theorem_name in [
+        "qft_gr_poisson_recovery_obligation_semantics_scheme_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_finite_tensor_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_hadamard_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_self_adjoint_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_domain_density_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_conservation_witness_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_actual_conservation_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_bianchi_witness_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_actual_bianchi_compatibility_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_einstein_witness_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_actual_coupling_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_source_witness_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_actual_source_identification_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_poisson_witness_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_actual_poisson_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_newtonian_limit_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_weak_field_proof_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_semiclassical_eq_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_source_map_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_no_seam_closure_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_no_semiclassical_gravity_claim_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_no_einstein_claim_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_phase2_not_authorized_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_master_action_not_promoted_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_no_empirical_claim_v0",
+        "qft_gr_poisson_recovery_obligation_semantics_manifest_not_enrolled_v0",
+    ]:
+        assert theorem_name in qft_gr_poisson_recovery_obligation_text
 
 
 def test_current_target_gate_is_not_governance_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled("test_current_target_freshness_gate.py")
+
+

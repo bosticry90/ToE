@@ -1,0 +1,99 @@
+{
+  "schema_id": "MASTER_ACTION_DEPENDENCY_GAP_PACKET_20260503_v0",
+  "schema_version": 0,
+  "date": "2026-05-03",
+  "classification": "P-POLICY/nonclaim",
+  "packet_status": "prepared_classification_only",
+  "current_target": "prepare_master_action_dependency_gap_packet",
+  "consumed_selector_token": "POST_MASTER_ACTION_DEPENDENCY_AUDIT_NEXT_ATTACK_SELECTED",
+  "result_token": "MASTER_ACTION_DEPENDENCY_GAP_PACKET_PREPARED",
+  "selected_next_target": "review_master_action_dependency_gap_packet_result",
+  "gap_packet_surface": "formal/toe_formal/ToeFormal/Derivation/MasterActionDependencyGapPacket.lean",
+  "source_selector_surface": "formal/toe_formal/ToeFormal/Derivation/PostMasterActionDependencyAuditBoundedAttackSelection.lean",
+  "source_selector_report": "formal/docs/release/POST_MASTER_ACTION_DEPENDENCY_AUDIT_BOUNDED_ATTACK_SELECTION_20260503_v0.json",
+  "focused_gate": "formal/python/tests/test_master_action_dependency_gap_packet_gate.py",
+  "authorized_effect": "CLASSIFY_MISSING_DEPENDENCIES_ONLY",
+  "solves_dependencies": false,
+  "gap_class_count": 10,
+  "gap_classes": [
+    {
+      "class_id": "qft_gr_source_map_witness_chain_absent",
+      "label": "QFT-GR source-map witness chain absent",
+      "status": "absent"
+    },
+    {
+      "class_id": "qft_gr_source_map_closure_unauthorized",
+      "label": "QFT-GR source-map closure unauthorized",
+      "status": "unauthorized"
+    },
+    {
+      "class_id": "full_pillar_completion_absent",
+      "label": "full pillar completion absent",
+      "status": "absent"
+    },
+    {
+      "class_id": "global_seam_closure_absent",
+      "label": "global seam closure absent",
+      "status": "absent"
+    },
+    {
+      "class_id": "phase2_authorization_absent",
+      "label": "Phase 2 authorization absent",
+      "status": "absent"
+    },
+    {
+      "class_id": "canonical_master_action_derivation_absent",
+      "label": "canonical master-action derivation absent",
+      "status": "absent"
+    },
+    {
+      "class_id": "empirical_adequacy_absent",
+      "label": "empirical adequacy absent",
+      "status": "absent"
+    },
+    {
+      "class_id": "remaining_proof_debt_60_real_axioms",
+      "label": "remaining proof debt: 60 real axioms",
+      "status": "retained"
+    },
+    {
+      "class_id": "sampleRep32_retained",
+      "label": "sampleRep32 retained",
+      "status": "retained"
+    },
+    {
+      "class_id": "defaultNonAlias_discharged_no_longer_unresolved_debt",
+      "label": "defaultNonAlias discharged and no longer unresolved debt",
+      "status": "discharged"
+    }
+  ],
+  "preserved_posture": {
+    "qft_gr": "ladder_only_closure_not_authorized",
+    "qft_gr_source_map_witness_chain_absent": true,
+    "qft_gr_source_map_closure_authorized": false,
+    "real_axiom_count": 60,
+    "defaultNonAlias": "absent_from_unresolved_axiom_debt_and_lean_backed",
+    "sampleRep32": "retained_spec_backed_axiom",
+    "master_action": "candidate_dependency_surface_only",
+    "dependency_audit": "nonpromotional_consumed"
+  },
+  "classification_boundaries": {
+    "solves_qft_gr_witness_chain": false,
+    "authorizes_qft_gr_source_map_closure": false,
+    "discharges_remaining_proof_debt": false,
+    "derives_canonical_master_action": false,
+    "authorizes_phase2": false,
+    "claims_empirical_adequacy": false
+  },
+  "nonclaim_boundaries": {
+    "master_action_promotion_authorized": false,
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The master-action dependency gap packet consumes the post-audit selector result, lists the missing dependency classes preventing master-action promotion, preserves the refreshed 60-real-axiom posture, records QFT-GR as ladder-only/closure-not-authorized, and does not infer master-action promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, or canonical ToE status.",
+  "next_action_after_gap_packet": "review_master_action_dependency_gap_packet_result"
+}

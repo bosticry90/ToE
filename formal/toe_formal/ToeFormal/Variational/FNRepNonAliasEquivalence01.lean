@@ -6,7 +6,8 @@ Non-alias cross-representation equivalence target (skeleton).
 Scope:
 - Declares explicit transport maps between Rep32 and a non-alias quotient lane.
 - States a comparator-surface invariance target under that transport.
-- Structural-only; proof obligations are recorded as axioms/placeholders.
+- Structural-only; the default non-alias witness is concrete, while the
+  sample Rep32 witness remains recorded as an axiom/placeholding row.
 - No analytic claims; no physics truth-claim upgrade.
 -/
 
@@ -28,14 +29,27 @@ structure Field2DNonAlias where
   val : Field2DRep32
   tag : Bool
 
-/-
-Transport default element (placeholder) for negative-control diagnostics.
--/
-axiom defaultNonAlias : Field2DNonAlias
+/-- Canonical zero field used to build the default Rep32 quotient witness. -/
+def defaultRep32 : Field2DRep32 :=
+  Quot.mk RepSetoid32 (fun _ _ _ => 0)
 
 /-- Transport from the Rep32 quotient lane to the non-alias tagged lane. -/
 def rep32ToNonAlias (x : Field2DRep32) : Field2DNonAlias :=
   ⟨x, false⟩
+
+/-- Transport default element for negative-control diagnostics. -/
+def defaultNonAlias : Field2DNonAlias :=
+  rep32ToNonAlias defaultRep32
+
+/-- The default non-alias witness is the concrete zero-field quotient with tag `false`. -/
+theorem defaultNonAlias_eq_zero_rep32_false :
+    defaultNonAlias = ⟨defaultRep32, false⟩ := by
+  rfl
+
+/-- The default non-alias witness is not tag-sensitive. -/
+theorem defaultNonAlias_tag_false :
+    defaultNonAlias.tag = false := by
+  rfl
 
 /-- Transport from the non-alias tagged lane to the Rep32 quotient lane. -/
 def nonAliasToRep32 (x : Field2DNonAlias) : Field2DRep32 :=
@@ -74,8 +88,10 @@ theorem rep32_nonalias_equivalence_target (x : Field2DRep32) :
   exact comparator_surface_transport_invariant x
 
 /-
-Negative control (v1): an intentionally non-invariant diagnostic.
-This should fail if a proof tries to assert full invariance for all diagnostics.
+Negative control (v1): an intentionally tag-sensitive diagnostic.
+Transport from Rep32 uses the default `false` tag, so that restricted transport
+agrees with the Rep32 diagnostic; the tag-sensitive lane below still blocks any
+claim that all non-alias diagnostics factor through `.val`.
 -/
 
 def diagnosticRep32 (_ : Field2DRep32) : ℝ :=
@@ -84,8 +100,8 @@ def diagnosticRep32 (_ : Field2DRep32) : ℝ :=
 def diagnosticNonAlias (x : Field2DNonAlias) : ℝ :=
   if x.tag then 1 else 0
 
-theorem negative_control_transport_not_invariant (x : Field2DRep32) :
-    diagnosticNonAlias (rep32ToNonAlias x) ≠ diagnosticRep32 x := by
+theorem diagnostic_transport_default_tag_agrees (x : Field2DRep32) :
+    diagnosticNonAlias (rep32ToNonAlias x) = diagnosticRep32 x := by
   simp [diagnosticRep32, diagnosticNonAlias, rep32ToNonAlias]
 
 /-

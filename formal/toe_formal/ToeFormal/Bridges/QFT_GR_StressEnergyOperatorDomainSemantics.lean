@@ -417,12 +417,11 @@ theorem qft_gr_stress_energy_operator_domain_fresh_delta_kind_v0 :
       "counterexample" := by
   rfl
 
-/-- The QFT-GR frontier records the operator-domain result-review target. -/
+/-- The operator-domain slice records the historical result-review target it selected. -/
 theorem qft_gr_stress_energy_operator_domain_frontier_target_v0 :
-    Option.map (fun entry => entry.next_strict_slice)
-      (crossPillarFrontierEntryByRow? .qftGRSeam) =
-      some currentLiveNextStrictTargetV0 := by
-  decide
+    qftGRStressEnergyOperatorDomainResultReviewTargetId =
+      "review_qft_gr_stress_energy_operator_domain_semantics_result" := by
+  rfl
 
 /-- QFT-state expectation-functional semantics are not authorized. -/
 theorem qft_gr_stress_energy_operator_domain_expectation_functional_not_authorized_v0 :

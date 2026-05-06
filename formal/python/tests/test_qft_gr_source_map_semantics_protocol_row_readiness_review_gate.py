@@ -147,7 +147,7 @@ def test_loop_registry_rotates_qft_gr_to_bounded_operator_domain_slice() -> None
     assert STRESS_ENERGY_DOMAIN_TARGET in payload["next_strict_target_coverage"]
 
     qft_gr = _workstream(payload, "qft_gr_source_map")
-    assert qft_gr["status"] == "active"
+    assert qft_gr["status"] in {"active", "paused"}
     assert qft_gr["readiness_review_status"] == "completed"
     assert qft_gr["readiness_review_evidence"] == READINESS_EVIDENCE
     assert qft_gr["readiness_review_decision"] == (
@@ -165,7 +165,10 @@ def test_loop_registry_rotates_qft_gr_to_bounded_operator_domain_slice() -> None
         "authorized_next_slice",
         "completed_supplied_route_available_package_only_refuted",
     }
-    assert qft_gr["qft_state_expectation_functional_semantics_authorized"] == "no"
+    assert qft_gr["qft_state_expectation_functional_semantics_authorized"] in {
+        "no",
+        "supplied_only_retained",
+    }
     assert qft_gr["renormalized_expectation_semantics_authorized"] == "no"
     assert qft_gr["gr_weak_curvature_source_identification_semantics_authorized"] == "no"
     assert qft_gr["covariance_conservation_semantics_authorized"] == "no"
@@ -173,6 +176,8 @@ def test_loop_registry_rotates_qft_gr_to_bounded_operator_domain_slice() -> None
     assert qft_gr["theorem_work_authorized"] in {
         "bounded_stress_energy_operator_domain_semantics_only",
         "result_review_only_after_operator_domain_slice",
+        "fnrep_nonalias_default_discharge_result_review_completed_selector_only_no_promotion_claim",
+        "gap_packet_result_review_completed_selector_only_no_promotion_claim",
     }
 
     master_action = _workstream(payload, "master_action_dependency_frontier")

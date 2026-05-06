@@ -4,6 +4,8 @@ import json
 from pathlib import Path
 from typing import Any
 
+import pytest
+
 from formal.python.meta.repo_environment import find_repo_root
 
 
@@ -74,6 +76,60 @@ def workstream(workstream_id: str, payload: dict[str, Any] | None = None) -> dic
         if item["workstream_id"] == workstream_id:
             return item
     raise AssertionError(f"Missing workstream: {workstream_id}")
+
+
+def assert_historical_target_recorded(
+    *,
+    payload: dict[str, Any],
+    previous_target: str | None = None,
+    live_target: str | None = None,
+    evidence: str | None = None,
+    lane: str | None = None,
+) -> bool:
+    """Validate an old live-target transition without requiring it to be current.
+
+    Historical focused gates should continue to protect their packet/workstream
+    rows after the single global live target has advanced. The return value is
+    true only when the checked transition is still the current live transition.
+    """
+    state = current_target_state(payload)
+    is_current = True
+
+    if previous_target is not None:
+        is_current = is_current and state["previous_live_next_target"] == previous_target
+    if live_target is not None:
+        is_current = is_current and state["live_next_target"] == live_target
+    if evidence is not None:
+        is_current = is_current and state["live_next_target_evidence"] == evidence
+    if lane is not None:
+        is_current = is_current and state["active_lane"] == lane
+
+    if is_current:
+        return True
+
+    coverage = set(payload["next_strict_target_coverage"])
+    if previous_target is not None:
+        assert previous_target in coverage
+    if live_target is not None:
+        assert live_target in coverage
+    if evidence is not None:
+        evidence_path = REPO_ROOT / evidence
+        assert evidence_path.exists(), f"Missing historical target evidence: {evidence_path}"
+    if lane is not None:
+        ids = {item["workstream_id"] for item in payload["workstreams"]}
+        assert lane in ids or lane in state["paused_lanes"]
+    return False
+
+
+def skip_if_not_current_target(payload: dict[str, Any], expected_live_target: str) -> None:
+    state = current_target_state(payload)
+    live_target = state["live_next_target"]
+    if live_target != expected_live_target:
+        assert expected_live_target in payload["next_strict_target_coverage"]
+        pytest.skip(
+            "historical live-target transition; current live target is "
+            f"{live_target!r}, not {expected_live_target!r}"
+        )
 
 
 def assert_current_target_consistent() -> None:

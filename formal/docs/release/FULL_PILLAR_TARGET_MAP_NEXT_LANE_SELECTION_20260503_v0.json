@@ -1,0 +1,80 @@
+{
+  "schema_id": "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_20260503_v0",
+  "schema_version": 0,
+  "date": "2026-05-03",
+  "classification": "P-POLICY/nonclaim",
+  "selection_status": "completed_selection_only",
+  "current_target": "return_to_full_pillar_target_map_next_lane_selection",
+  "consumed_selector_token": "POST_QFT_GR_LADDER_NEXT_ATTACK_SELECTED",
+  "result_token": "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED",
+  "post_qft_gr_selection_surface": "formal/toe_formal/ToeFormal/Bridges/PostQFTGRLadderBoundedAttackSelection.lean",
+  "post_qft_gr_selection_report": "formal/docs/release/POST_QFT_GR_LADDER_BOUNDED_ATTACK_SELECTION_20260503_v0.json",
+  "target_map_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapRebase.lean",
+  "target_map_document": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+  "proof_debt_ledger": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+  "selection_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelection.lean",
+  "focused_gate": "formal/python/tests/test_full_pillar_target_map_next_lane_selection_gate.py",
+  "authorized_effect": "SELECT_EXACTLY_ONE_NEXT_BOUNDED_LANE",
+  "selection_executes_lane": false,
+  "selection_count": 1,
+  "candidate_lane_count": 7,
+  "selected_lane": "PROOF_DEBT_LEDGER_DISCHARGE_LANE",
+  "selected_next_target": "prepare_proof_debt_ledger_discharge_lane",
+  "selected_next_target_kind": "proof_debt_lane_preparation_only",
+  "selected_reason": "After a long QFT-GR semantic-obligation sequence, reduce proof debt before adding another scaffold.",
+  "candidate_classes": [
+    {
+      "class_id": "QFT_GR_WITNESS_SEARCH_PLAN",
+      "candidate_target": "prepare_qft_gr_witness_search_plan",
+      "selection": "not_selected",
+      "reason": "Witness search is intentionally deferred after the QFT-GR obligation ladder."
+    },
+    {
+      "class_id": "GR_WEAK_FIELD_SOURCE_SIDE_OBLIGATION_LANE",
+      "candidate_target": "prepare_gr_weak_field_source_side_obligation_lane",
+      "selection": "not_selected",
+      "reason": "Useful but would add source-side scaffold before proof-debt reduction."
+    },
+    {
+      "class_id": "QM_STAT_THEOREM_GAP_RE_ENTRY_LANE",
+      "candidate_target": "prepare_qm_stat_theorem_gap_re_entry_lane",
+      "selection": "not_selected",
+      "reason": "Still eligible from the full pillar map, but not the lowest-risk immediate move."
+    },
+    {
+      "class_id": "SR_COSMO_GLOBAL_OBSTRUCTION_FOLLOW_UP",
+      "candidate_target": "prepare_sr_cosmo_global_obstruction_follow_up",
+      "selection": "not_selected",
+      "reason": "Still eligible, but proof-debt discharge strengthens the global ledger first."
+    },
+    {
+      "class_id": "MASTER_ACTION_DEPENDENCY_AUDIT",
+      "candidate_target": "prepare_master_action_dependency_audit",
+      "selection": "not_selected",
+      "reason": "Master-action promotion remains blocked; no promotion audit is selected here."
+    },
+    {
+      "class_id": "PROOF_DEBT_LEDGER_DISCHARGE_LANE",
+      "candidate_target": "prepare_proof_debt_ledger_discharge_lane",
+      "selection": "selected",
+      "reason": "A bounded ledger discharge can convert a small spec-backed or supplied-only item toward theorem authority without extending QFT-GR."
+    },
+    {
+      "class_id": "PILLAR_MAP_STALE_TARGET_SYNCHRONIZATION_LANE",
+      "candidate_target": "prepare_pillar_map_stale_target_synchronization_lane",
+      "selection": "not_selected",
+      "reason": "Stale-target synchronization remains eligible but is not the selected bounded lane."
+    }
+  ],
+  "nonclaim_boundaries": {
+    "qft_gr_witness_search_selected": false,
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "master_action_promotion_authorized": false,
+    "selection_executes_lane": false
+  },
+  "acceptance_condition": "The selector consumes the post-QFT-GR return target, evaluates eligible lanes from the full pillar target map, selects exactly one next bounded lane, and does not infer pillar completion, seam closure, Phase 2 readiness, empirical adequacy, or master-action promotion.",
+  "next_action_after_selection_packet": "prepare_proof_debt_ledger_discharge_lane"
+}

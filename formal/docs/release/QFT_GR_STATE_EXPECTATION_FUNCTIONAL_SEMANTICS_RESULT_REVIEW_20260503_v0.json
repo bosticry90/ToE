@@ -1,0 +1,61 @@
+{
+  "schema_id": "QFT_GR_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_RESULT_REVIEW_20260503_v0",
+  "schema_version": 0,
+  "date": "2026-05-03",
+  "classification": "P-POLICY/nonclaim",
+  "current_target": "review_qft_gr_state_expectation_functional_semantics_result",
+  "consumed_result_token": "QFT_GR_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_SUPPLIED_ONLY",
+  "review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemanticsResultReview.lean",
+  "source_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemantics.lean",
+  "source_report": "formal/docs/release/QFT_GR_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_BOUNDED_ATTACK_20260503_v0.json",
+  "selected_next_target": "prepare_qft_gr_renormalized_expectation_value_semantics_bounded_attack",
+  "selected_decision": "accept_supplied_only_and_prepare_renormalized_expectation_value_semantics",
+  "authorized_effect": "RESULT_REVIEW_ACCEPT_SUPPLIED_ONLY_EXPECTATION_FUNCTIONAL_SEMANTICS",
+  "review_result": "supplied_only_expectation_functional_result_consumed",
+  "accepted_result": {
+    "status": "supplied_only_semantic_availability_retained",
+    "supplied_object": "QFTGRStateExpectationFunctionalSemanticPackage",
+    "source_token": "QFT_GR_STATE_EXPECTATION_FUNCTIONAL_SEMANTICS_SUPPLIED_ONLY"
+  },
+  "refutation_confirmed": {
+    "status": "source_map_package_only_derivation_refuted",
+    "lean_theorem": "qft_gr_source_map_package_does_not_force_state_expectation_functional_v0"
+  },
+  "selected_preparation_scope": "renormalized_expectation_value_semantics_slot_only",
+  "nonclaim_boundaries": {
+    "source_map_package_only_derivation_authorized": false,
+    "renormalized_expectation_semantics_authorized": false,
+    "hadamard_state_adequacy_authorized": false,
+    "operator_self_adjointness_authorized": false,
+    "domain_density_proof_authorized": false,
+    "weak_curvature_source_identification_authorized": false,
+    "covariance_conservation_authorized": false,
+    "full_source_map_closure_authorized": false,
+    "qft_gr_seam_closed": false,
+    "semiclassical_gravity_claim": false,
+    "einstein_equation_derivation_claim": false,
+    "phase2_authorized": false,
+    "master_action_promotion_authorized": false,
+    "empirical_claim": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "forbidden_effects": [
+    "SOURCE_MAP_PACKAGE_ONLY_DERIVATION",
+    "RENORMALIZED_EXPECTATION_VALUE_AUTHORIZATION",
+    "HADAMARD_STATE_ADEQUACY",
+    "OPERATOR_SELF_ADJOINTNESS",
+    "DOMAIN_DENSITY_PROOF",
+    "WEAK_CURVATURE_SOURCE_IDENTIFICATION",
+    "COVARIANCE_CONSERVATION",
+    "FULL_SOURCE_MAP_CLOSURE",
+    "QFT_GR_SEAM_CLOSURE",
+    "SEMICLASSICAL_GRAVITY_CLAIM",
+    "EINSTEIN_EQUATION_DERIVATION",
+    "PHASE_2_AUTHORIZATION",
+    "MASTER_ACTION_PROMOTION",
+    "EMPIRICAL_CLAIM",
+    "GOVERNANCE_MANIFEST_ENROLLMENT"
+  ],
+  "acceptance_condition": "The QFT-GR state expectation-functional semantics result is consumed as supplied-only semantic structure, source-map derivation remains refuted, and no renormalized expectation or QFT-GR source-map closure is authorized.",
+  "next_action": "prepare_qft_gr_renormalized_expectation_value_semantics_bounded_attack"
+}
