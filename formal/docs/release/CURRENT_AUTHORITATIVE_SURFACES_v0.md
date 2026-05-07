@@ -11,12 +11,12 @@ Purpose:
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_artifact_retention_enforcement_bounded_attack`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_artifact_retention_enforcement_plan_result`
-- `ACTIVE_LANE_v0: artifact_retention_enforcement_plan_result_review`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_status_surface_canonicalization_plan`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_artifact_retention_enforcement_bounded_attack`
+- `ACTIVE_LANE_v0: post_artifact_retention_enforcement_bounded_attack_selection`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ArtifactRetentionEnforcementPlanResultReview.lean`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostArtifactRetentionEnforcementBoundedAttackSelection.lean`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
@@ -24,6 +24,7 @@ Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterReadOnlyHygiene.lean`
 - `formal/toe_formal/ToeFormal/Derivation/ArtifactRetentionEnforcementPlan.lean`
 - `formal/toe_formal/ToeFormal/Derivation/ArtifactRetentionEnforcementPlanResultReview.lean`
+- `formal/toe_formal/ToeFormal/Derivation/PostArtifactRetentionEnforcementBoundedAttackSelection.lean`
 - `MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED`
 - `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`
@@ -32,6 +33,7 @@ Current result-token chain:
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE`
 - `ARTIFACT_RETENTION_ENFORCEMENT_PLAN_PREPARED`
 - `ARTIFACT_RETENTION_ENFORCEMENT_PLAN_RESULT_REVIEW_CONSUMED`
+- `POST_ARTIFACT_RETENTION_ENFORCEMENT_NEXT_ATTACK_SELECTED`
 
 Current axiom and proof-debt authority:
 - `LEAN_AXIOM_LEDGER_AUTHORITY_v0: formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md`
@@ -74,6 +76,7 @@ Maintenance bindings:
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_READ_ONLY_HYGIENE_20260505_v0`
 - `ARTIFACT_RETENTION_ENFORCEMENT_PLAN_20260505_v0`
 - `ARTIFACT_RETENTION_ENFORCEMENT_PLAN_RESULT_REVIEW_20260505_v0`
+- `POST_ARTIFACT_RETENTION_ENFORCEMENT_BOUNDED_ATTACK_SELECTION_20260505_v0`
 - `TOE_ALLOW_TRACKED_OUTPUT_WRITES=1`
 
 Non-claim boundary:
