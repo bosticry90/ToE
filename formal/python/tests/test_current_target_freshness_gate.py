@@ -520,9 +520,15 @@ POST_READ_ONLY_VALIDATION_HYGIENE_RESULT_TOKEN = (
 FULL_PILLAR_AFTER_HYGIENE_RESULT_TOKEN = (
     "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE"
 )
+ARTIFACT_RETENTION_ENFORCEMENT_RESULT_TOKEN = (
+    "ARTIFACT_RETENTION_ENFORCEMENT_PLAN_PREPARED"
+)
 ARTIFACT_RETENTION_ENFORCEMENT_TARGET = "prepare_artifact_retention_enforcement_plan"
-LIVE_TARGET = ARTIFACT_RETENTION_ENFORCEMENT_TARGET
-PREVIOUS_TARGET = FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
+ARTIFACT_RETENTION_ENFORCEMENT_RESULT_REVIEW_TARGET = (
+    "review_artifact_retention_enforcement_plan_result"
+)
+LIVE_TARGET = ARTIFACT_RETENTION_ENFORCEMENT_RESULT_REVIEW_TARGET
+PREVIOUS_TARGET = ARTIFACT_RETENTION_ENFORCEMENT_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -571,6 +577,7 @@ PAUSED_LANES = {
     "full_pillar_target_map_next_lane_selection_after_gap_packet_review",
     "read_only_validation_hygiene",
     "post_read_only_validation_hygiene_bounded_attack_selection",
+    "full_pillar_target_map_next_lane_selection_after_read_only_hygiene",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -614,7 +621,7 @@ def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple
     return [(path, value)]
 
 
-def test_single_live_target_is_machine_pinned_after_hygiene_full_pillar_selection() -> None:
+def test_single_live_target_is_machine_pinned_after_artifact_retention_plan() -> None:
     assert_current_target_consistent()
     payload = _registry()
     state = payload["current_target_state"]
@@ -624,53 +631,85 @@ def test_single_live_target_is_machine_pinned_after_hygiene_full_pillar_selectio
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "FullPillarTargetMapNextLaneSelectionAfterReadOnlyHygiene.lean"
+        "ArtifactRetentionEnforcementPlan.lean"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
         item["workstream_id"] for item in payload["workstreams"] if item["status"] == "paused"
     }
     assert set(state["paused_lanes"]) == paused_ids
-    assert state["active_lane"] == (
-        "full_pillar_target_map_next_lane_selection_after_read_only_hygiene"
-    )
+    assert state["active_lane"] == "artifact_retention_enforcement_plan"
 
     current_active_workstream = active_workstream(payload)
-    assert current_active_workstream["workstream_id"] == (
-        "full_pillar_target_map_next_lane_selection_after_read_only_hygiene"
-    )
+    assert current_active_workstream["workstream_id"] == "artifact_retention_enforcement_plan"
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
-    assert current_active_workstream["latest_surface"] == (
-        "full_pillar_target_map_next_lane_selection_after_read_only_hygiene_v0"
-    )
+    assert current_active_workstream["latest_surface"] == "artifact_retention_enforcement_plan_v0"
     assert current_active_workstream["consumed_selector_token"] == (
-        POST_READ_ONLY_VALIDATION_HYGIENE_RESULT_TOKEN
-    )
-    assert current_active_workstream["result_token"] == (
         FULL_PILLAR_AFTER_HYGIENE_RESULT_TOKEN
     )
-    assert current_active_workstream["selected_lane"] == (
-        "ARTIFACT_RETENTION_ENFORCEMENT_PLAN"
-    )
+    assert current_active_workstream["result_token"] == ARTIFACT_RETENTION_ENFORCEMENT_RESULT_TOKEN
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
+    assert current_active_workstream["selected_next_target_kind"] == (
+        "artifact_retention_enforcement_plan_result_review"
+    )
     assert current_active_workstream["ordinary_validation_mode"] == "read_only_by_default"
     assert current_active_workstream["read_only_proof"] == "full_pytest_then_git_diff_exit_code"
     assert current_active_workstream["full_pytest_passed"] == 6536
     assert current_active_workstream["full_pytest_skipped"] == 230
     assert (
-        current_active_workstream["full_pytest_is_prior_checkpoint_not_fresh_for_this_selector"]
+        current_active_workstream["full_pytest_is_prior_checkpoint_not_fresh_for_this_plan"]
         == "yes"
     )
-    assert current_active_workstream["lean_build_jobs"] == 7976
+    assert current_active_workstream["lean_build_jobs"] == 7977
     assert current_active_workstream["governance_suite_passed"] == "yes"
-    assert current_active_workstream["proof_debt_discharge_item_selected"] == "no"
-    assert current_active_workstream["artifact_retention_enforcement_selected"] == "yes"
-    assert current_active_workstream["qm_stat_theorem_gap_reentry_selected"] == "no"
-    assert current_active_workstream["sr_cosmo_obstruction_followup_selected"] == "no"
-    assert current_active_workstream["qft_gr_witness_search_selected"] == "no"
-    assert current_active_workstream["master_action_gap_reduction_selected"] == "no"
-    assert current_active_workstream["stale_target_synchronization_sweep_selected"] == "no"
+    assert current_active_workstream["artifact_zone_count"] == 7
+    assert current_active_workstream["enforcement_rule_count"] == 5
+    assert (
+        current_active_workstream["tooling_snapshots_zone"]
+        == "legacy_tracked_snapshot_zone_frozen_by_default"
+    )
+    assert (
+        current_active_workstream["formal_output_zone"]
+        == "generated_output_zone_read_only_validation_enforced"
+    )
+    assert current_active_workstream["scratch_zone"] == "untracked_temporary_working_area"
+    assert current_active_workstream["archive_zone"] == (
+        "historical_quarantine_read_only_unless_explicit_packet"
+    )
+    assert current_active_workstream["backup_zone"] == (
+        "noncanonical_backup_should_not_grow_without_policy"
+    )
+    assert current_active_workstream["release_json_zone"] == (
+        "canonical_small_control_plane_artifacts"
+    )
+    assert current_active_workstream["lean_python_docs_zone"] == (
+        "normal_tracked_source_surfaces"
+    )
+    assert current_active_workstream["new_large_tracked_snapshots_frozen_by_default"] == "yes"
+    assert (
+        current_active_workstream[
+            "tracked_generated_output_mutation_forbidden_during_validation"
+        ]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "future_large_artifact_size_and_classification_justification_required"
+        ]
+        == "yes"
+    )
+    assert (
+        current_active_workstream["existing_tooling_snapshots_mass_acknowledged_deferred"]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "snapshot_migration_or_deletion_deferred_to_future_packet"
+        ]
+        == "yes"
+    )
+    assert current_active_workstream["plan_executes_migration_or_deletion"] == "no"
     assert current_active_workstream["real_axiom_count"] == 60
     assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
     assert current_active_workstream["seam_closure_claim"] == "no"
@@ -698,7 +737,20 @@ def test_single_live_target_is_machine_pinned_after_hygiene_full_pillar_selectio
         post_hygiene_workstream["result_token"]
         == POST_READ_ONLY_VALIDATION_HYGIENE_RESULT_TOKEN
     )
-    assert post_hygiene_workstream["selected_next_target"] == PREVIOUS_TARGET
+    assert (
+        post_hygiene_workstream["selected_next_target"]
+        == FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
+    )
+
+    after_hygiene_workstream = _workstream(
+        payload, "full_pillar_target_map_next_lane_selection_after_read_only_hygiene"
+    )
+    assert after_hygiene_workstream["status"] == "paused"
+    assert (
+        after_hygiene_workstream["result_token"]
+        == FULL_PILLAR_AFTER_HYGIENE_RESULT_TOKEN
+    )
+    assert after_hygiene_workstream["selected_next_target"] == PREVIOUS_TARGET
 
 
 def test_readme_registry_and_frontier_agree_on_live_target() -> None:
@@ -1453,7 +1505,7 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert master_action["authorized_next_strict_target"] == LIVE_TARGET
     assert (
         master_action["next_action_scope"]
-        == "artifact_retention_enforcement_plan_preparation"
+        == "artifact_retention_enforcement_plan_result_review"
     )
     assert master_action["qft_gr_source_map_eligibility_ladder_summary_status"] == (
         "completed"

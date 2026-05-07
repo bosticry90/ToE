@@ -1,0 +1,116 @@
+{
+  "schema_id": "ARTIFACT_RETENTION_ENFORCEMENT_PLAN_20260505_v0",
+  "schema_version": 0,
+  "date": "2026-05-05",
+  "classification": "P-POLICY/nonclaim",
+  "plan_status": "prepared_no_migration",
+  "current_target": "prepare_artifact_retention_enforcement_plan",
+  "consumed_selector_token": "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE",
+  "result_token": "ARTIFACT_RETENTION_ENFORCEMENT_PLAN_PREPARED",
+  "selected_next_target": "review_artifact_retention_enforcement_plan_result",
+  "selected_next_target_kind": "artifact_retention_enforcement_plan_result_review",
+  "plan_surface": "formal/toe_formal/ToeFormal/Derivation/ArtifactRetentionEnforcementPlan.lean",
+  "source_selector_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterReadOnlyHygiene.lean",
+  "source_selector_report": "formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_READ_ONLY_HYGIENE_20260505_v0.json",
+  "source_artifact_policy": "formal/docs/release/REPOSITORY_ARTIFACT_RETENTION_POLICY_20260505_v0.md",
+  "focused_gate": "formal/python/tests/test_artifact_retention_enforcement_plan_gate.py",
+  "authorized_effect": "PREPARE_ARTIFACT_RETENTION_ENFORCEMENT_PLAN_NO_MIGRATION",
+  "migration_or_deletion_executed": false,
+  "existing_snapshot_disposition": "acknowledged_and_deferred_until_future_explicit_packet",
+  "large_snapshot_default": "no_new_large_tracked_snapshots_without_explicit_retention_packet",
+  "validation_output_rule": "no_tracked_generated_output_mutation_during_validation",
+  "future_large_artifact_rule": "size_and_classification_justification_required",
+  "artifact_zones": [
+    {
+      "zone_id": "formal/tooling_snapshots",
+      "policy_class": "LEGACY_TRACKED_SNAPSHOT_ZONE",
+      "default_rule": "FROZEN_BY_DEFAULT",
+      "tracked_authority": "historical_tracked_snapshot_zone",
+      "packet_effect": "acknowledge_existing_mass_and_defer_migration"
+    },
+    {
+      "zone_id": "formal/output",
+      "policy_class": "GENERATED_OUTPUT_ZONE",
+      "default_rule": "READ_ONLY_VALIDATION_ENFORCED",
+      "tracked_authority": "canonical_only_when_explicitly_pinned",
+      "packet_effect": "forbid_validation_time_tracked_mutation"
+    },
+    {
+      "zone_id": "scratch",
+      "policy_class": "UNTRACKED_TEMPORARY_WORKING_AREA",
+      "default_rule": "UNTRACKED_BY_DEFAULT",
+      "tracked_authority": "none_without_explicit_promotion_packet",
+      "packet_effect": "use_for_large_temporary_artifacts"
+    },
+    {
+      "zone_id": "archive",
+      "policy_class": "HISTORICAL_QUARANTINE_AREA",
+      "default_rule": "READ_ONLY_UNLESS_EXPLICIT_PACKET",
+      "tracked_authority": "historical_only_unless_current_packet_cites",
+      "packet_effect": "no_new_live_authority"
+    },
+    {
+      "zone_id": "backup",
+      "policy_class": "NONCANONICAL_BACKUP_AREA",
+      "default_rule": "SHOULD_NOT_GROW_WITHOUT_POLICY",
+      "tracked_authority": "noncanonical_recovery_only",
+      "packet_effect": "no_growth_authorized_here"
+    },
+    {
+      "zone_id": "formal/docs/release/*.json",
+      "policy_class": "CANONICAL_SMALL_CONTROL_PLANE_ARTIFACTS",
+      "default_rule": "TRACKED_WHEN_REVIEWABLE_AND_SMALL",
+      "tracked_authority": "release_packet_or_registry",
+      "packet_effect": "allowed_control_plane_surface"
+    },
+    {
+      "zone_id": "Lean/Python/docs",
+      "policy_class": "NORMAL_TRACKED_SOURCE_SURFACES",
+      "default_rule": "TRACKED_SOURCE_REVIEW",
+      "tracked_authority": "normal_source_authority",
+      "packet_effect": "allowed_source_surface"
+    }
+  ],
+  "enforcement_rules": [
+    "NO_NEW_LARGE_TRACKED_SNAPSHOTS_WITHOUT_EXPLICIT_RETENTION_PACKET",
+    "NO_TRACKED_GENERATED_OUTPUT_MUTATION_DURING_VALIDATION",
+    "NO_SNAPSHOT_MIGRATION_OR_DELETION_IN_THIS_PACKET",
+    "FUTURE_LARGE_ARTIFACT_ADDITIONS_REQUIRE_SIZE_AND_CLASSIFICATION_JUSTIFICATION",
+    "EXISTING_TOOLING_SNAPSHOTS_MASS_ACKNOWLEDGED_BUT_DEFERRED"
+  ],
+  "validation_checkpoint": {
+    "full_pytest_passed": 6536,
+    "full_pytest_skipped": 230,
+    "full_pytest_is_prior_checkpoint_not_fresh_for_this_plan": true,
+    "ordinary_validation_mode": "read_only_by_default",
+    "read_only_proof": "full pytest from clean commit followed by git diff --exit-code",
+    "read_only_proof_passed": true,
+    "lean_build_target": "ToeFormal",
+    "lean_build_jobs": 7977,
+    "governance_suite_passed": true
+  },
+  "preserved_posture": {
+    "ordinary_validation_mode": "read_only_by_default",
+    "tracked_output_write_authorization": "TOE_ALLOW_TRACKED_OUTPUT_WRITES=1 plus explicit write mode",
+    "qft_gr": "ladder_only_closure_not_authorized",
+    "qft_gr_source_map_witness_chain_absent": true,
+    "qft_gr_source_map_closure_authorized": false,
+    "real_axiom_count": 60,
+    "defaultNonAlias": "absent_from_unresolved_axiom_debt_and_lean_backed",
+    "sampleRep32": "retained_spec_backed_axiom",
+    "master_action": "citation_bound_not_promoted"
+  },
+  "nonclaim_boundaries": {
+    "snapshot_migration_or_deletion_executed": false,
+    "master_action_promotion_authorized": false,
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The artifact-retention enforcement plan consumes the after-hygiene full-pillar selector result, freezes new large tracked snapshots by default, classifies tracked artifact zones, defines allowed versus disallowed future artifact additions, defers migration/deletion of existing snapshots to a later explicit packet, and preserves that no scientific promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, or QFT-GR source-map closure is inferred.",
+  "next_action_after_plan_packet": "review_artifact_retention_enforcement_plan_result"
+}

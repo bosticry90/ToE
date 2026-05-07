@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "After-hygiene full-pillar selector consumes the post-read-only selector, compares global candidates, and selects artifact-retention enforcement planning without promotion"
+        "Artifact-retention enforcement plan consumes the after-hygiene selector, freezes new large tracked snapshots by default, classifies artifact zones, and defers migration/deletion without promotion"
       retained_blocker :=
-        "after_hygiene_artifact_retention_enforcement_plan_pending_no_promotion"
+        "artifact_retention_enforcement_plan_result_review_pending_no_migration"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_artifact_retention_enforcement_plan"
+        "review_artifact_retention_enforcement_plan_result"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the after-hygiene full-pillar selector. -/
+/-- Previous live target consumed by the artifact-retention enforcement plan. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "return_to_full_pillar_target_map_next_lane_selection"
-
-/-- Current live target after the after-hygiene full-pillar selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_artifact_retention_enforcement_plan"
+
+/-- Current live target after the artifact-retention enforcement plan. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_artifact_retention_enforcement_plan_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

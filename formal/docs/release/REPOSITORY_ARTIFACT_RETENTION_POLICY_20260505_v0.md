@@ -41,8 +41,11 @@ Write policy:
 
 Canonical bindings:
 - `formal/docs/release/READ_ONLY_VALIDATION_HYGIENE_20260505_v0.json`
+- `formal/docs/release/ARTIFACT_RETENTION_ENFORCEMENT_PLAN_20260505_v0.json`
+- `formal/toe_formal/ToeFormal/Derivation/ArtifactRetentionEnforcementPlan.lean`
 - `formal/python/tools/tracked_output_write_guard.py`
 - `formal/python/tests/test_repository_artifact_retention_policy_gate.py`
+- `formal/python/tests/test_artifact_retention_enforcement_plan_gate.py`
 
 Non-claim boundary:
 - This policy governs repository-local artifact retention and validation hygiene only.
