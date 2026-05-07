@@ -45,6 +45,9 @@ def test_repository_artifact_retention_policy_records_required_tokens() -> None:
         "REPOSITORY_ARTIFACT_RETENTION_MIGRATION_AUTHORITY_v0: FUTURE_EXPLICIT_PACKET_REQUIRED",
         "REPOSITORY_ARTIFACT_RETENTION_NONCLAIM_BOUNDARY_v0: NO_SCIENTIFIC_AUTHORITY_CHANGE",
         "RESEARCH_ARTIFACT_RETENTION_POLICY_20260419_v0",
+        "formal/docs/release/ARTIFACT_RETENTION_ENFORCEMENT_PLAN_RESULT_REVIEW_20260505_v0.json",
+        "formal/toe_formal/ToeFormal/Derivation/ArtifactRetentionEnforcementPlanResultReview.lean",
+        "formal/python/tests/test_artifact_retention_enforcement_plan_result_review_gate.py",
     }:
         assert token in text
 

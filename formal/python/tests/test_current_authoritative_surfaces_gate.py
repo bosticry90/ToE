@@ -57,6 +57,14 @@ ARTIFACT_RETENTION_PLAN_PATH = (
     / "Derivation"
     / "ArtifactRetentionEnforcementPlan.lean"
 )
+ARTIFACT_RETENTION_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "ArtifactRetentionEnforcementPlanResultReview.lean"
+)
 LEDGER_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md"
 
 
@@ -70,16 +78,17 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-        "CURRENT_LIVE_NEXT_TARGET_v0: review_artifact_retention_enforcement_plan_result",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_artifact_retention_enforcement_plan",
-        "ACTIVE_LANE_v0: artifact_retention_enforcement_plan",
+        "CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_artifact_retention_enforcement_bounded_attack",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_artifact_retention_enforcement_plan_result",
+        "ACTIVE_LANE_v0: artifact_retention_enforcement_plan_result_review",
         "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
         "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ArtifactRetentionEnforcementPlan.lean",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ArtifactRetentionEnforcementPlanResultReview.lean",
         "READ_ONLY_VALIDATION_HYGIENE_ENFORCED",
         "POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE",
         "ARTIFACT_RETENTION_ENFORCEMENT_PLAN_PREPARED",
+        "ARTIFACT_RETENTION_ENFORCEMENT_PLAN_RESULT_REVIEW_CONSUMED",
     }:
         assert token in text
 
@@ -90,6 +99,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         POST_HYGIENE_SELECTOR_PATH,
         AFTER_HYGIENE_FULL_PILLAR_SELECTOR_PATH,
         ARTIFACT_RETENTION_PLAN_PATH,
+        ARTIFACT_RETENTION_RESULT_REVIEW_PATH,
         LEDGER_PATH,
     }:
         assert str(path.relative_to(REPO_ROOT)).replace("\\", "/") in text
@@ -130,6 +140,7 @@ def test_current_authoritative_surfaces_index_records_validation_and_historical_
         "POST_READ_ONLY_VALIDATION_HYGIENE_BOUNDED_ATTACK_SELECTION_20260505_v0",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_READ_ONLY_HYGIENE_20260505_v0",
         "ARTIFACT_RETENTION_ENFORCEMENT_PLAN_20260505_v0",
+        "ARTIFACT_RETENTION_ENFORCEMENT_PLAN_RESULT_REVIEW_20260505_v0",
         "TOE_ALLOW_TRACKED_OUTPUT_WRITES=1",
     }:
         assert token in text
