@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "Post-artifact-retention selector consumes the result review, selects status-surface canonicalization planning, and preserves artifact/no-migration boundaries without promotion"
+        "Status-surface canonicalization plan classifies authority/public/generated/history surfaces, defines drift rules, and preserves no-rewrite/no-promotion boundaries"
       retained_blocker :=
-        "status_surface_canonicalization_plan_pending_no_promotion"
+        "status_surface_canonicalization_plan_result_review_pending_no_rewrite"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_status_surface_canonicalization_plan"
+        "review_status_surface_canonicalization_plan_result"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the post-artifact-retention selector. -/
+/-- Previous live target consumed by the status-surface canonicalization plan. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "select_next_post_artifact_retention_enforcement_bounded_attack"
-
-/-- Current live target after the post-artifact-retention selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_status_surface_canonicalization_plan"
+
+/-- Current live target after the status-surface canonicalization plan. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_status_surface_canonicalization_plan_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

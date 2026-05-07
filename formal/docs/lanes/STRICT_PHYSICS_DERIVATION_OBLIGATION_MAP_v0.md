@@ -32,7 +32,7 @@ Lean aggregate status:
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260430_v0: GREEN_WITH_EXISTING_WARNINGS`
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260501_v0: GREEN_WITH_EXISTING_WARNINGS`
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260502_v0: GREEN_NO_WARNINGS`
-- `STRICT_PHYSICS_LEAN_BUILD_DETAIL_20260506_v0: lake build ToeFormal GREEN_7979_JOBS_NO_WARNINGS`
+- `STRICT_PHYSICS_LEAN_BUILD_DETAIL_20260506_v0: lake build ToeFormal GREEN_7980_JOBS_NO_WARNINGS`
 - `STRICT_PHYSICS_FULL_PYTEST_STATUS_20260505_v0: GREEN_6536_PASSED_230_SKIPPED`
 - `STRICT_PHYSICS_CROSS_PILLAR_HANDOFF_INCREMENT_20260430_v0: A2A15A1A25_ENDPOINT_SOURCE_OBLIGATION_SPLIT_PLUS_SCALAR_HANDOFF_CAPSTONE_PLUS_CROSS_PILLAR_DERIVATION_PROTOCOL_PLUS_CLOSURE_FRONTIER_PLUS_MASTER_ACTION_DEPENDENCY_FRONTIER_PLUS_POST_SWEEP_THEOREM_QUEUE`
 - `STRICT_PHYSICS_QMSTAT_RESIDUAL_PACKAGE_INCREMENT_20260501_v0: QM_STAT_UNIFIED_TRANSPORT_RESIDUAL_PACKAGE_INTERFACE_PLUS_FINITE_TRANSPORT_THEOREM_CONNECTION_PLUS_RETAINED_SEMANTICS_BLOCKER`
@@ -75,7 +75,7 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict architecture target:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_status_surface_canonicalization_plan`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_status_surface_canonicalization_plan_result`
 - `AXIOM_LEDGER_AUDIT_REFRESH_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefresh.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_20260503_v0.json`
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS_v0: AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS`
@@ -151,6 +151,10 @@ Next strict architecture target:
 - `POST_ARTIFACT_RETENTION_ENFORCEMENT_BOUNDED_ATTACK_SELECTION_REPORT_v0: formal/docs/release/POST_ARTIFACT_RETENTION_ENFORCEMENT_BOUNDED_ATTACK_SELECTION_20260505_v0.json`
 - `POST_ARTIFACT_RETENTION_ENFORCEMENT_NEXT_ATTACK_SELECTED_v0: POST_ARTIFACT_RETENTION_ENFORCEMENT_NEXT_ATTACK_SELECTED`
 - `STATUS_SURFACE_CANONICALIZATION_PLAN_TARGET_v0: prepare_status_surface_canonicalization_plan`
+- `STATUS_SURFACE_CANONICALIZATION_PLAN_v0: formal/toe_formal/ToeFormal/Derivation/StatusSurfaceCanonicalizationPlan.lean`
+- `STATUS_SURFACE_CANONICALIZATION_PLAN_REPORT_v0: formal/docs/release/STATUS_SURFACE_CANONICALIZATION_PLAN_20260505_v0.json`
+- `STATUS_SURFACE_CANONICALIZATION_PLAN_PREPARED_v0: STATUS_SURFACE_CANONICALIZATION_PLAN_PREPARED`
+- `STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_REVIEW_TARGET_v0: review_status_surface_canonicalization_plan_result`
 - `REPOSITORY_ARTIFACT_RETENTION_POLICY_v0: formal/docs/release/REPOSITORY_ARTIFACT_RETENTION_POLICY_20260505_v0.md`
 - `CURRENT_AUTHORITATIVE_SURFACES_v0: formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md`
 - `POST_QFT_GR_LADDER_BOUNDED_ATTACK_SELECTION_v0: formal/toe_formal/ToeFormal/Bridges/PostQFTGRLadderBoundedAttackSelection.lean`
@@ -1845,3 +1849,4 @@ Post-sweep theorem queue:
 - Artifact-retention enforcement plan status: `formal/toe_formal/ToeFormal/Derivation/ArtifactRetentionEnforcementPlan.lean` and `formal/docs/release/ARTIFACT_RETENTION_ENFORCEMENT_PLAN_20260505_v0.json` consume `prepare_artifact_retention_enforcement_plan` and `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE`, freeze new large tracked snapshots by default, classify `formal/tooling_snapshots`, `formal/output`, `scratch`, `archive`, `backup`, release JSON, and Lean/Python/docs zones, require future large artifact size/classification justification, emit `ARTIFACT_RETENTION_ENFORCEMENT_PLAN_PREPARED`, and select `review_artifact_retention_enforcement_plan_result` while no snapshot migration/deletion, scientific promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE claim, or QFT-GR source-map closure is authorized.
 - Artifact-retention enforcement plan result-review status: `formal/toe_formal/ToeFormal/Derivation/ArtifactRetentionEnforcementPlanResultReview.lean` and `formal/docs/release/ARTIFACT_RETENTION_ENFORCEMENT_PLAN_RESULT_REVIEW_20260505_v0.json` consume `review_artifact_retention_enforcement_plan_result` and `ARTIFACT_RETENTION_ENFORCEMENT_PLAN_PREPARED`, preserve the new-large-tracked-snapshot freeze, artifact-zone classification, read-only generated-output validation rule, and migration/deletion deferral, emit `ARTIFACT_RETENTION_ENFORCEMENT_PLAN_RESULT_REVIEW_CONSUMED`, and rotate to `select_next_post_artifact_retention_enforcement_bounded_attack` while making no selector choice and authorizing no snapshot migration/deletion, scientific promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE claim, or QFT-GR source-map closure.
 - Post-artifact-retention enforcement bounded attack selection status: `formal/toe_formal/ToeFormal/Derivation/PostArtifactRetentionEnforcementBoundedAttackSelection.lean` and `formal/docs/release/POST_ARTIFACT_RETENTION_ENFORCEMENT_BOUNDED_ATTACK_SELECTION_20260505_v0.json` consume `select_next_post_artifact_retention_enforcement_bounded_attack` and `ARTIFACT_RETENTION_ENFORCEMENT_PLAN_RESULT_REVIEW_CONSUMED`, compare artifact-retention migration, proof-debt discharge, full-pillar selection return, and status-surface canonicalization planning, emit `POST_ARTIFACT_RETENTION_ENFORCEMENT_NEXT_ATTACK_SELECTED`, and select exactly one next target `prepare_status_surface_canonicalization_plan` while executing no status-surface rewrite, snapshot migration/deletion, scientific promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE claim, or QFT-GR source-map closure.
+- Status-surface canonicalization plan status: `formal/toe_formal/ToeFormal/Derivation/StatusSurfaceCanonicalizationPlan.lean` and `formal/docs/release/STATUS_SURFACE_CANONICALIZATION_PLAN_20260505_v0.json` consume `prepare_status_surface_canonicalization_plan` and `POST_ARTIFACT_RETENTION_ENFORCEMENT_NEXT_ATTACK_SELECTED`, classify canonical control, public-summary, generated-output, and historical/superseded surfaces, define drift-prevention rules, emit `STATUS_SURFACE_CANONICALIZATION_PLAN_PREPARED`, and select `review_status_surface_canonicalization_plan_result` while executing no broad status-surface rewrite, generated-output mutation, historical-packet edit, snapshot migration/deletion, scientific promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE claim, or QFT-GR source-map closure.

@@ -195,7 +195,7 @@ Strict scalar/QFT current-state synchronization checkpoint (2026-05-02):
 - `QFT_GR_STRESS_ENERGY_SOURCE_MAP_BOUNDARY_v0: no_qft_gr_seam_closure_no_semiclassical_gravity_claim_no_einstein_equation_derivation_claim_no_master_action_promotion_no_empirical_claim`
 - `SCALAR_QFT_PHASE0_5_OBJECTIVE_QUALITY_COMPLETION_STATUS_v0: NO_FULL_PLAN_COMPLETION_CLAIM_PHASE0_COMPLETE_PHASE1_ADVANCED_PARTIAL_PHASE2_OPEN_PHASE2B_OPEN_PHASE3_PARTIAL_PHASE4_PARTIAL_PHASE5_OPEN`
 - `SCALAR_QFT_PHASE0_5_DECISIVE_OPEN_ITEMS_v0: A1A_A2A15A1_GRAPH_CHANNEL_SEMANTIC_CLOSURE_OPEN_PHASE2_UNAUTHORIZED_PHASE2B_TERM_LEVEL_NEUTRALIZATION_OPEN`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_status_surface_canonicalization_plan`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_status_surface_canonicalization_plan_result`
 - `AXIOM_LEDGER_AUDIT_REFRESH_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefresh.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_20260503_v0.json`
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS_v0: AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS`
@@ -271,6 +271,10 @@ Strict scalar/QFT current-state synchronization checkpoint (2026-05-02):
 - `POST_ARTIFACT_RETENTION_ENFORCEMENT_BOUNDED_ATTACK_SELECTION_REPORT_v0: formal/docs/release/POST_ARTIFACT_RETENTION_ENFORCEMENT_BOUNDED_ATTACK_SELECTION_20260505_v0.json`
 - `POST_ARTIFACT_RETENTION_ENFORCEMENT_NEXT_ATTACK_SELECTED_v0: POST_ARTIFACT_RETENTION_ENFORCEMENT_NEXT_ATTACK_SELECTED`
 - `STATUS_SURFACE_CANONICALIZATION_PLAN_TARGET_v0: prepare_status_surface_canonicalization_plan`
+- `STATUS_SURFACE_CANONICALIZATION_PLAN_v0: formal/toe_formal/ToeFormal/Derivation/StatusSurfaceCanonicalizationPlan.lean`
+- `STATUS_SURFACE_CANONICALIZATION_PLAN_REPORT_v0: formal/docs/release/STATUS_SURFACE_CANONICALIZATION_PLAN_20260505_v0.json`
+- `STATUS_SURFACE_CANONICALIZATION_PLAN_PREPARED_v0: STATUS_SURFACE_CANONICALIZATION_PLAN_PREPARED`
+- `STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_REVIEW_TARGET_v0: review_status_surface_canonicalization_plan_result`
 - `REPOSITORY_ARTIFACT_RETENTION_POLICY_v0: formal/docs/release/REPOSITORY_ARTIFACT_RETENTION_POLICY_20260505_v0.md`
 - `CURRENT_AUTHORITATIVE_SURFACES_INDEX_v0: formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md`
 - `POST_QFT_GR_LADDER_BOUNDED_ATTACK_SELECTION_v0: formal/toe_formal/ToeFormal/Bridges/PostQFTGRLadderBoundedAttackSelection.lean`
@@ -430,7 +434,7 @@ QFT_GR_EINSTEIN_COUPLING_OBLIGATION_RESULT_REVIEW_TARGET_v0: review_qft_gr_einst
 - `QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_TARGET_v0: review_qft_gr_source_map_eligibility_ladder_summary`
 - `LEAN_AXIOM_SPEC_BACKED_LEDGER_v0: formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md`
 - `LEAN_AXIOM_SPEC_BACKED_LEDGER_BASELINE_v0: 60_REAL_AXIOMS_0_SORRY_OR_ADMIT_15_FILES`
-- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: prepare_status_surface_canonicalization_plan`
+- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: review_status_surface_canonicalization_plan_result`
 - `SCALAR_QFT_UNIFORM_MESH_CONVERGENCE_ORDERING_v0: CONTRACT_AND_CONDITIONAL_EVIDENCE_THEOREM_RECORDED_ORDER_H2_TO_ZERO_LIMIT_PROVED_CONCRETE_MESH_ZERO_ERROR_NORMAL_FORM_INSTANTIATED_NONZERO_NORMAL_FORM_BOUND_PROVED_ENDPOINT_PACKAGE_STENCIL_ERROR_ORDER_H2_BOUND_PROVED_ACTUAL_GRAPH_ERROR_IDENTIFIED_CLOSURE_REVIEW_RETAINED_PARENT_INTERFACE_MAP_RETAINED_RESTRICTED_INTERFACE_RETAINED_PARENT_INTERFACE_EQUIVALENCE_RETAINED_PARENT_INTERFACE_TOO_ABSTRACT_RETAINED_PARENT_GRAPH_CHANNEL_INTERFACE_REFACTOR_RETAINED_SPECIALIZED_A2A15A1_WITNESS_RETAINED_SPECIALIZED_ENDPOINT_FLUX_EVIDENCE_RETAINED_ENDPOINT_FLUX_EVIDENCE_DERIVATION_RETAINED_ENDPOINT_SOURCE_OBLIGATION_SPLIT_RETAINED_ENDPOINT_REPRESENTATION_SEMANTICS_RETAINED_ENDPOINT_CONVERGENCE_CONSISTENCY_RETAINED_ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_RETAINED_REFINED_ENDPOINT_SOURCE_ASSEMBLED_REMAINING_NONENDPOINT_RETAINED_REMAINING_NONENDPOINT_OBLIGATION_SPLIT_RETAINED_RAW_IBP_GREEN_CONDITIONAL_BRIDGE_RETAINED_SCALAR_HANDOFF_READY`
 - `SCALAR_QFT_PHASE0_BASELINE_ACCEPTANCE_STATUS_v0: GREEN`
 - `SCALAR_QFT_PHASE0_BASELINE_ACCEPTANCE_CONTRACT_v0: formal/docs/lanes/SCALAR_QFT_PHASE0_BASELINE_ACCEPTANCE_CONTRACT_v0.md`
@@ -448,7 +452,7 @@ QFT_GR_EINSTEIN_COUPLING_OBLIGATION_RESULT_REVIEW_TARGET_v0: review_qft_gr_einst
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260430_v0: GREEN_WITH_EXISTING_WARNINGS`
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260501_v0: GREEN_WITH_EXISTING_WARNINGS`
 - `STRICT_PHYSICS_LEAN_BUILD_STATUS_20260502_v0: GREEN_NO_WARNINGS`
-- `STRICT_PHYSICS_LEAN_BUILD_DETAIL_20260506_v0: lake build ToeFormal GREEN_7979_JOBS_NO_WARNINGS`
+- `STRICT_PHYSICS_LEAN_BUILD_DETAIL_20260506_v0: lake build ToeFormal GREEN_7980_JOBS_NO_WARNINGS`
 - `STRICT_PHYSICS_FULL_PYTEST_STATUS_20260505_v0: GREEN_6536_PASSED_230_SKIPPED`
 - `STRICT_PHYSICS_NONCLAIM_BOUNDARY_v0: NO_PHASE2_AUTHORIZATION_NO_MASTER_ACTION_PROMOTION_NO_SEAM_CLOSURE_NO_EMPIRICAL_CLAIM`
 - `LOOP_CONTROL_REGISTRY_STATUS_v0: ACTIVE_NONLIVE_NONCLAIM`
@@ -6838,7 +6842,7 @@ Seam governance-vs-physics completion split checkpoint (2026-03-12):
 - `QFT_GR_RENORMALIZED_EXPECTATION_VALUE_NEXT_TARGET_v0: review_qft_gr_renormalized_expectation_value_semantics_result`
 - `LEAN_AXIOM_SPEC_BACKED_LEDGER_v0: formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md`
   - `LEAN_AXIOM_SPEC_BACKED_LEDGER_BASELINE_v0: 60_REAL_AXIOMS_0_SORRY_OR_ADMIT_15_FILES`
-  - `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: prepare_status_surface_canonicalization_plan`
+  - `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: review_status_surface_canonicalization_plan_result`
   - `SEAM_GR_QM_GOVERNANCE_COMPLETE_v0: YES`
   - `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO`
   - `SEAM_QFT_GR_GOVERNANCE_COMPLETE_v0: NO`
@@ -11874,3 +11878,4 @@ Boundary note:
 - Artifact-retention enforcement plan status: `formal/toe_formal/ToeFormal/Derivation/ArtifactRetentionEnforcementPlan.lean` and `formal/docs/release/ARTIFACT_RETENTION_ENFORCEMENT_PLAN_20260505_v0.json` consume `prepare_artifact_retention_enforcement_plan` and `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE`, freeze new large tracked snapshots by default, classify `formal/tooling_snapshots`, `formal/output`, `scratch`, `archive`, `backup`, release JSON, and Lean/Python/docs zones, require future large artifact size/classification justification, emit `ARTIFACT_RETENTION_ENFORCEMENT_PLAN_PREPARED`, and select `review_artifact_retention_enforcement_plan_result` while no snapshot migration/deletion, scientific promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE claim, or QFT-GR source-map closure is authorized.
 - Artifact-retention enforcement plan result-review status: `formal/toe_formal/ToeFormal/Derivation/ArtifactRetentionEnforcementPlanResultReview.lean` and `formal/docs/release/ARTIFACT_RETENTION_ENFORCEMENT_PLAN_RESULT_REVIEW_20260505_v0.json` consume `review_artifact_retention_enforcement_plan_result` and `ARTIFACT_RETENTION_ENFORCEMENT_PLAN_PREPARED`, preserve the new-large-tracked-snapshot freeze, artifact-zone classification, read-only generated-output validation rule, and migration/deletion deferral, emit `ARTIFACT_RETENTION_ENFORCEMENT_PLAN_RESULT_REVIEW_CONSUMED`, and rotate to `select_next_post_artifact_retention_enforcement_bounded_attack` while making no selector choice and authorizing no snapshot migration/deletion, scientific promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE claim, or QFT-GR source-map closure.
 - Post-artifact-retention enforcement bounded attack selection status: `formal/toe_formal/ToeFormal/Derivation/PostArtifactRetentionEnforcementBoundedAttackSelection.lean` and `formal/docs/release/POST_ARTIFACT_RETENTION_ENFORCEMENT_BOUNDED_ATTACK_SELECTION_20260505_v0.json` consume `select_next_post_artifact_retention_enforcement_bounded_attack` and `ARTIFACT_RETENTION_ENFORCEMENT_PLAN_RESULT_REVIEW_CONSUMED`, compare artifact-retention migration, proof-debt discharge, full-pillar selection return, and status-surface canonicalization planning, emit `POST_ARTIFACT_RETENTION_ENFORCEMENT_NEXT_ATTACK_SELECTED`, and select exactly one next target `prepare_status_surface_canonicalization_plan` while executing no status-surface rewrite, snapshot migration/deletion, scientific promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE claim, or QFT-GR source-map closure.
+- Status-surface canonicalization plan status: `formal/toe_formal/ToeFormal/Derivation/StatusSurfaceCanonicalizationPlan.lean` and `formal/docs/release/STATUS_SURFACE_CANONICALIZATION_PLAN_20260505_v0.json` consume `prepare_status_surface_canonicalization_plan` and `POST_ARTIFACT_RETENTION_ENFORCEMENT_NEXT_ATTACK_SELECTED`, classify canonical control, public-summary, generated-output, and historical/superseded surfaces, define drift-prevention rules, emit `STATUS_SURFACE_CANONICALIZATION_PLAN_PREPARED`, and select `review_status_surface_canonicalization_plan_result` while executing no broad status-surface rewrite, generated-output mutation, historical-packet edit, snapshot migration/deletion, scientific promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE claim, or QFT-GR source-map closure.

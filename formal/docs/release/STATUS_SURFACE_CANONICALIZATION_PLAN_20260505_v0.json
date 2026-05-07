@@ -1,0 +1,120 @@
+{
+  "schema_id": "STATUS_SURFACE_CANONICALIZATION_PLAN_20260505_v0",
+  "schema_version": 0,
+  "date": "2026-05-05",
+  "classification": "P-POLICY/nonclaim",
+  "plan_status": "prepared_no_rewrite",
+  "current_target": "prepare_status_surface_canonicalization_plan",
+  "consumed_selector_token": "POST_ARTIFACT_RETENTION_ENFORCEMENT_NEXT_ATTACK_SELECTED",
+  "result_token": "STATUS_SURFACE_CANONICALIZATION_PLAN_PREPARED",
+  "selected_next_target": "review_status_surface_canonicalization_plan_result",
+  "selected_next_target_kind": "status_surface_canonicalization_plan_result_review",
+  "plan_surface": "formal/toe_formal/ToeFormal/Derivation/StatusSurfaceCanonicalizationPlan.lean",
+  "source_selector_surface": "formal/toe_formal/ToeFormal/Derivation/PostArtifactRetentionEnforcementBoundedAttackSelection.lean",
+  "source_selector_report": "formal/docs/release/POST_ARTIFACT_RETENTION_ENFORCEMENT_BOUNDED_ATTACK_SELECTION_20260505_v0.json",
+  "focused_gate": "formal/python/tests/test_status_surface_canonicalization_plan_gate.py",
+  "authorized_effect": "PREPARE_STATUS_SURFACE_CANONICALIZATION_PLAN_NO_REWRITE",
+  "broad_status_surface_rewrite_executed": false,
+  "generated_output_mutation_executed": false,
+  "historical_packet_edit_executed": false,
+  "surface_classes": [
+    {
+      "class_id": "CANONICAL_CONTROL_SOURCES",
+      "authority_rule": "DETERMINE_LIVE_TARGET_AND_CURRENT_AUTHORITY",
+      "example_surfaces": [
+        "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+        "formal/docs/release/*.json",
+        "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+        "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
+        "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md"
+      ],
+      "packet_effect": "pin_authority_hierarchy_for_future_drift_gates"
+    },
+    {
+      "class_id": "PUBLIC_SUMMARY_SURFACES",
+      "authority_rule": "MIRROR_CANONICAL_CONTROL_SOURCES",
+      "example_surfaces": [
+        "README.md",
+        "State_of_the_Theory.md",
+        "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+        "formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md",
+        "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
+        "formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md",
+        "formal/docs/paper/TOE_MATH_PHYSICS_INVENTORY_v0.md"
+      ],
+      "packet_effect": "plan_public_summary_mirror_rules_no_rewrite_here"
+    },
+    {
+      "class_id": "GENERATED_OUTPUT_SURFACES",
+      "authority_rule": "READ_ONLY_DURING_NORMAL_VALIDATION",
+      "example_surfaces": [
+        "formal/output/*",
+        "formal/output/reports/*",
+        "generated validation summaries"
+      ],
+      "packet_effect": "preserve_no_manual_overwrite_during_validation"
+    },
+    {
+      "class_id": "HISTORICAL_SUPERSEDED_SURFACES",
+      "authority_rule": "IMMUTABLE_EVIDENCE_UNLESS_CURRENTLY_REFERENCED",
+      "example_surfaces": [
+        "older release packets",
+        "prior result reviews",
+        "archived reports"
+      ],
+      "packet_effect": "classify_as_history_not_current_state_authority"
+    }
+  ],
+  "drift_prevention_rules": [
+    "ONLY_CANONICAL_SURFACES_DETERMINE_LIVE_TARGET_AND_CURRENT_AUTHORITY",
+    "PUBLIC_SUMMARIES_MUST_MIRROR_CANONICAL_SURFACES",
+    "HISTORICAL_RELEASE_DOCS_ARE_IMMUTABLE_EVIDENCE_NOT_CURRENT_AUTHORITY_UNLESS_REFERENCED_BY_REGISTRY_OR_FRONTIER",
+    "NO_STALE_VALIDATION_COUNT_PROMOTION",
+    "NO_MANUAL_OVERWRITE_OF_GENERATED_OUTPUTS_DURING_NORMAL_VALIDATION"
+  ],
+  "preserved_enforcement": {
+    "new_large_tracked_snapshots_frozen_by_default": true,
+    "ordinary_validation_mode": "read_only_by_default",
+    "tracked_generated_output_mutation_forbidden_during_validation": true,
+    "snapshot_migration_or_deletion_deferred_to_future_packet": true,
+    "status_surface_rewrite_deferred_to_future_packet": true
+  },
+  "validation_checkpoint": {
+    "full_pytest_passed": 6536,
+    "full_pytest_skipped": 230,
+    "full_pytest_is_prior_checkpoint_not_fresh_for_this_plan": true,
+    "ordinary_validation_mode": "read_only_by_default",
+    "read_only_proof": "full pytest from clean commit followed by git diff --exit-code",
+    "read_only_proof_passed": true,
+    "lean_build_target": "ToeFormal",
+    "lean_build_jobs": 7980,
+    "governance_suite_passed": true
+  },
+  "preserved_posture": {
+    "ordinary_validation_mode": "read_only_by_default",
+    "tracked_output_write_authorization": "TOE_ALLOW_TRACKED_OUTPUT_WRITES=1 plus explicit write mode",
+    "qft_gr": "ladder_only_closure_not_authorized",
+    "qft_gr_source_map_witness_chain_absent": true,
+    "qft_gr_source_map_closure_authorized": false,
+    "real_axiom_count": 60,
+    "defaultNonAlias": "absent_from_unresolved_axiom_debt_and_lean_backed",
+    "sampleRep32": "retained_spec_backed_axiom",
+    "master_action": "citation_bound_not_promoted"
+  },
+  "nonclaim_boundaries": {
+    "broad_status_surface_rewrite_executed": false,
+    "generated_output_mutation_executed": false,
+    "historical_packet_edit_executed": false,
+    "snapshot_migration_or_deletion_executed": false,
+    "master_action_promotion_authorized": false,
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The status-surface canonicalization plan consumes the post-artifact-retention selector result, classifies canonical, public-summary, generated, and historical surfaces; defines drift-prevention rules; preserves artifact-freeze/read-only-validation posture; and does not infer master-action promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, or QFT-GR source-map closure.",
+  "next_action_after_plan_packet": "review_status_surface_canonicalization_plan_result"
+}

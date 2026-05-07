@@ -529,6 +529,9 @@ ARTIFACT_RETENTION_ENFORCEMENT_REVIEW_RESULT_TOKEN = (
 POST_ARTIFACT_RETENTION_ENFORCEMENT_RESULT_TOKEN = (
     "POST_ARTIFACT_RETENTION_ENFORCEMENT_NEXT_ATTACK_SELECTED"
 )
+STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_TOKEN = (
+    "STATUS_SURFACE_CANONICALIZATION_PLAN_PREPARED"
+)
 ARTIFACT_RETENTION_ENFORCEMENT_TARGET = "prepare_artifact_retention_enforcement_plan"
 ARTIFACT_RETENTION_ENFORCEMENT_RESULT_REVIEW_TARGET = (
     "review_artifact_retention_enforcement_plan_result"
@@ -539,8 +542,11 @@ POST_ARTIFACT_RETENTION_SELECTOR_TARGET = (
 STATUS_SURFACE_CANONICALIZATION_PLAN_TARGET = (
     "prepare_status_surface_canonicalization_plan"
 )
-LIVE_TARGET = STATUS_SURFACE_CANONICALIZATION_PLAN_TARGET
-PREVIOUS_TARGET = POST_ARTIFACT_RETENTION_SELECTOR_TARGET
+STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_REVIEW_TARGET = (
+    "review_status_surface_canonicalization_plan_result"
+)
+LIVE_TARGET = STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_REVIEW_TARGET
+PREVIOUS_TARGET = STATUS_SURFACE_CANONICALIZATION_PLAN_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -592,6 +598,7 @@ PAUSED_LANES = {
     "full_pillar_target_map_next_lane_selection_after_read_only_hygiene",
     "artifact_retention_enforcement_plan",
     "artifact_retention_enforcement_plan_result_review",
+    "post_artifact_retention_enforcement_bounded_attack_selection",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -635,7 +642,7 @@ def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple
     return [(path, value)]
 
 
-def test_single_live_target_is_machine_pinned_after_post_artifact_retention_selector() -> None:
+def test_single_live_target_is_machine_pinned_after_status_surface_plan() -> None:
     assert_current_target_consistent()
     payload = _registry()
     state = payload["current_target_state"]
@@ -645,7 +652,7 @@ def test_single_live_target_is_machine_pinned_after_post_artifact_retention_sele
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "PostArtifactRetentionEnforcementBoundedAttackSelection.lean"
+        "StatusSurfaceCanonicalizationPlan.lean"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -654,67 +661,74 @@ def test_single_live_target_is_machine_pinned_after_post_artifact_retention_sele
     assert set(state["paused_lanes"]) == paused_ids
     assert (
         state["active_lane"]
-        == "post_artifact_retention_enforcement_bounded_attack_selection"
+        == "status_surface_canonicalization_plan"
     )
 
     current_active_workstream = active_workstream(payload)
     assert (
         current_active_workstream["workstream_id"]
-        == "post_artifact_retention_enforcement_bounded_attack_selection"
+        == "status_surface_canonicalization_plan"
     )
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "post_artifact_retention_enforcement_bounded_attack_selection_v0"
+        == "status_surface_canonicalization_plan_v0"
     )
     assert (
         current_active_workstream["consumed_result_token"]
-        == ARTIFACT_RETENTION_ENFORCEMENT_REVIEW_RESULT_TOKEN
+        == POST_ARTIFACT_RETENTION_ENFORCEMENT_RESULT_TOKEN
     )
     assert (
         current_active_workstream["result_token"]
-        == POST_ARTIFACT_RETENTION_ENFORCEMENT_RESULT_TOKEN
+        == STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_TOKEN
     )
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
     assert current_active_workstream["selected_next_target_kind"] == (
-        "status_surface_canonicalization_plan_preparation"
+        "status_surface_canonicalization_plan_result_review"
     )
-    assert current_active_workstream["selected_target_count"] == 1
-    assert current_active_workstream["selector_executes_selected_target"] == "no"
-    assert current_active_workstream["status_surface_canonicalization_plan_selected"] == "yes"
-    assert (
-        current_active_workstream["canonicalization_plan_executes_surface_rewrite_here"]
-        == "no"
+    assert current_active_workstream["authorized_effect"] == (
+        "PREPARE_STATUS_SURFACE_CANONICALIZATION_PLAN_NO_REWRITE"
     )
-    assert current_active_workstream["canonical_sources_of_truth_to_be_planned"] == "yes"
+    assert current_active_workstream["canonical_surface_class_count"] == 4
+    assert current_active_workstream["drift_rule_count"] == 5
+    assert current_active_workstream["canonical_control_sources_classified"] == "yes"
+    assert current_active_workstream["public_summary_surfaces_classified"] == "yes"
+    assert current_active_workstream["generated_output_surfaces_classified"] == "yes"
+    assert current_active_workstream["historical_superseded_surfaces_classified"] == "yes"
     assert (
-        current_active_workstream["generated_public_summary_surfaces_to_be_planned"]
+        current_active_workstream[
+            "only_canonical_surfaces_determine_live_target_and_current_authority"
+        ]
         == "yes"
     )
-    assert current_active_workstream["historical_superseded_surfaces_to_be_planned"] == "yes"
-    assert current_active_workstream["drift_gates_to_be_planned"] == "yes"
-    assert current_active_workstream["manual_edit_boundaries_to_be_planned"] == "yes"
-    assert current_active_workstream["artifact_retention_migration_plan_selected"] == "no"
-    assert current_active_workstream["proof_debt_discharge_item_selected"] == "no"
-    assert current_active_workstream["full_pillar_target_map_return_selected"] == "no"
+    assert current_active_workstream["public_summaries_must_mirror_canonical_surfaces"] == "yes"
+    assert (
+        current_active_workstream[
+            "historical_release_docs_are_immutable_evidence_not_current_authority_unless_referenced"
+        ]
+        == "yes"
+    )
+    assert current_active_workstream["no_stale_validation_count_promotion"] == "yes"
+    assert (
+        current_active_workstream[
+            "no_manual_overwrite_of_generated_outputs_during_normal_validation"
+        ]
+        == "yes"
+    )
+    assert current_active_workstream["broad_status_surface_rewrite_executed_here"] == "no"
+    assert current_active_workstream["generated_output_mutation_executed_here"] == "no"
+    assert current_active_workstream["historical_packet_edit_executed_here"] == "no"
     assert current_active_workstream["ordinary_validation_mode"] == "read_only_by_default"
     assert current_active_workstream["read_only_proof"] == "full_pytest_then_git_diff_exit_code"
     assert current_active_workstream["full_pytest_passed"] == 6536
     assert current_active_workstream["full_pytest_skipped"] == 230
     assert (
-        current_active_workstream["full_pytest_is_prior_checkpoint_not_fresh_for_this_selector"]
+        current_active_workstream["full_pytest_is_prior_checkpoint_not_fresh_for_this_plan"]
         == "yes"
     )
-    assert current_active_workstream["lean_build_jobs"] == 7979
+    assert current_active_workstream["lean_build_jobs"] == 7980
     assert current_active_workstream["governance_suite_passed"] == "yes"
-    assert current_active_workstream["candidate_target_count"] == 4
-    assert set(current_active_workstream["candidate_targets"]) == {
-        "prepare_artifact_retention_migration_plan",
-        "prepare_next_proof_debt_ledger_discharge_item",
-        "return_to_full_pillar_target_map_next_lane_selection",
-        "prepare_status_surface_canonicalization_plan",
-    }
     assert current_active_workstream["new_large_tracked_snapshots_frozen_by_default"] == "yes"
     assert (
         current_active_workstream[
@@ -724,21 +738,11 @@ def test_single_live_target_is_machine_pinned_after_post_artifact_retention_sele
     )
     assert (
         current_active_workstream[
-            "future_large_artifact_size_and_classification_justification_required"
-        ]
-        == "yes"
-    )
-    assert (
-        current_active_workstream["existing_tooling_snapshots_mass_acknowledged_deferred"]
-        == "yes"
-    )
-    assert (
-        current_active_workstream[
             "snapshot_migration_or_deletion_deferred_to_future_packet"
         ]
         == "yes"
     )
-    assert current_active_workstream["snapshot_migration_or_deletion_executed_here"] == "no"
+    assert current_active_workstream["status_surface_rewrite_deferred_to_future_packet"] == "yes"
     assert current_active_workstream["real_axiom_count"] == 60
     assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
     assert current_active_workstream["seam_closure_claim"] == "no"
@@ -800,8 +804,22 @@ def test_single_live_target_is_machine_pinned_after_post_artifact_retention_sele
         artifact_review_workstream["result_token"]
         == ARTIFACT_RETENTION_ENFORCEMENT_REVIEW_RESULT_TOKEN
     )
-    assert artifact_review_workstream["selected_next_target"] == PREVIOUS_TARGET
+    assert (
+        artifact_review_workstream["selected_next_target"]
+        == POST_ARTIFACT_RETENTION_SELECTOR_TARGET
+    )
     assert artifact_review_workstream["review_executes_migration_or_deletion"] == "no"
+
+    post_artifact_workstream = _workstream(
+        payload, "post_artifact_retention_enforcement_bounded_attack_selection"
+    )
+    assert post_artifact_workstream["status"] == "paused"
+    assert (
+        post_artifact_workstream["result_token"]
+        == POST_ARTIFACT_RETENTION_ENFORCEMENT_RESULT_TOKEN
+    )
+    assert post_artifact_workstream["selected_next_target"] == PREVIOUS_TARGET
+    assert post_artifact_workstream["selector_executes_selected_target"] == "no"
 
 
 def test_readme_registry_and_frontier_agree_on_live_target() -> None:
@@ -1556,7 +1574,7 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert master_action["authorized_next_strict_target"] == LIVE_TARGET
     assert (
         master_action["next_action_scope"]
-        == "status_surface_canonicalization_plan_preparation"
+        == "status_surface_canonicalization_plan_result_review"
     )
     assert master_action["qft_gr_source_map_eligibility_ladder_summary_status"] == (
         "completed"
