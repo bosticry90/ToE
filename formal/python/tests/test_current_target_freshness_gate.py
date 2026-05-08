@@ -535,6 +535,12 @@ STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_TOKEN = (
 STATUS_SURFACE_CANONICALIZATION_RESULT_REVIEW_RESULT_TOKEN = (
     "STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_REVIEW_CONSUMED"
 )
+POST_STATUS_SURFACE_CANONICALIZATION_SELECTOR_RESULT_TOKEN = (
+    "POST_STATUS_SURFACE_CANONICALIZATION_NEXT_ATTACK_SELECTED"
+)
+STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_RESULT_TOKEN = (
+    "STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_PACKET_PREPARED"
+)
 ARTIFACT_RETENTION_ENFORCEMENT_TARGET = "prepare_artifact_retention_enforcement_plan"
 ARTIFACT_RETENTION_ENFORCEMENT_RESULT_REVIEW_TARGET = (
     "review_artifact_retention_enforcement_plan_result"
@@ -551,8 +557,14 @@ STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_REVIEW_TARGET = (
 POST_STATUS_SURFACE_CANONICALIZATION_SELECTOR_TARGET = (
     "select_next_post_status_surface_canonicalization_bounded_attack"
 )
-LIVE_TARGET = POST_STATUS_SURFACE_CANONICALIZATION_SELECTOR_TARGET
-PREVIOUS_TARGET = STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_REVIEW_TARGET
+STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_TARGET = (
+    "prepare_status_surface_canonicalization_enforcement_packet"
+)
+STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_RESULT_REVIEW_TARGET = (
+    "review_status_surface_canonicalization_enforcement_packet_result"
+)
+LIVE_TARGET = STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_RESULT_REVIEW_TARGET
+PREVIOUS_TARGET = STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -606,6 +618,8 @@ PAUSED_LANES = {
     "artifact_retention_enforcement_plan_result_review",
     "post_artifact_retention_enforcement_bounded_attack_selection",
     "status_surface_canonicalization_plan",
+    "status_surface_canonicalization_plan_result_review",
+    "post_status_surface_canonicalization_bounded_attack_selection",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -649,7 +663,7 @@ def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple
     return [(path, value)]
 
 
-def test_single_live_target_is_machine_pinned_after_status_surface_review() -> None:
+def test_single_live_target_is_machine_pinned_after_status_surface_enforcement() -> None:
     assert_current_target_consistent()
     payload = _registry()
     state = payload["current_target_state"]
@@ -659,7 +673,7 @@ def test_single_live_target_is_machine_pinned_after_status_surface_review() -> N
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "StatusSurfaceCanonicalizationPlanResultReview.lean"
+        "StatusSurfaceCanonicalizationEnforcementPacket.lean"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -668,105 +682,74 @@ def test_single_live_target_is_machine_pinned_after_status_surface_review() -> N
     assert set(state["paused_lanes"]) == paused_ids
     assert (
         state["active_lane"]
-        == "status_surface_canonicalization_plan_result_review"
+        == "status_surface_canonicalization_enforcement_packet"
     )
 
     current_active_workstream = active_workstream(payload)
     assert (
         current_active_workstream["workstream_id"]
-        == "status_surface_canonicalization_plan_result_review"
+        == "status_surface_canonicalization_enforcement_packet"
     )
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "status_surface_canonicalization_plan_result_review_v0"
+        == "status_surface_canonicalization_enforcement_packet_v0"
     )
     assert (
         current_active_workstream["consumed_result_token"]
-        == STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_TOKEN
+        == POST_STATUS_SURFACE_CANONICALIZATION_SELECTOR_RESULT_TOKEN
     )
     assert (
         current_active_workstream["result_token"]
-        == STATUS_SURFACE_CANONICALIZATION_RESULT_REVIEW_RESULT_TOKEN
+        == STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_RESULT_TOKEN
     )
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
     assert current_active_workstream["selected_next_target_kind"] == (
-        "post_status_surface_canonicalization_selector_only"
+        "status_surface_canonicalization_enforcement_packet_result_review"
     )
     assert current_active_workstream["authorized_effect"] == (
-        "CONSUME_STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_AND_ROTATE_TO_SELECTOR"
+        "PREPARE_STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_PACKET"
     )
-    assert current_active_workstream["planning_result_consumed_only"] == "yes"
-    assert current_active_workstream["canonical_surface_class_count"] == 4
-    assert current_active_workstream["drift_rule_count"] == 5
-    assert current_active_workstream["canonical_control_sources_remain_classified"] == "yes"
-    assert current_active_workstream["public_summary_surfaces_remain_classified"] == "yes"
-    assert current_active_workstream["generated_output_surfaces_remain_classified"] == "yes"
-    assert current_active_workstream["historical_superseded_surfaces_remain_classified"] == "yes"
+    assert current_active_workstream["enforcement_packet_prepared"] == "yes"
+    assert current_active_workstream["active_live_target_mirror_parity_required"] == "yes"
+    assert current_active_workstream["loop_registry_canonical_live_target_source"] == "yes"
+    assert current_active_workstream["active_public_mirror_field_count"] == 2
+    assert set(current_active_workstream["active_public_mirror_fields"]) == {
+        "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md::MASTER_ACTION_CURRENT_CITATION_TARGET_v0",
+        "formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md::MASTER_ACTION_CURRENT_CITATION_TARGET_v0",
+    }
+    assert set(current_active_workstream["historical_packet_history_tokens_allowed"]) == {
+        "review_read_only_validation_hygiene_result",
+        "select_next_post_status_surface_canonicalization_bounded_attack",
+        "prepare_status_surface_canonicalization_enforcement_packet",
+    }
     assert (
         current_active_workstream[
-            "only_canonical_surfaces_determine_live_target_and_current_authority"
-        ]
-        == "yes"
-    )
-    assert current_active_workstream["public_summaries_must_mirror_canonical_surfaces"] == "yes"
-    assert (
-        current_active_workstream[
-            "historical_release_docs_are_immutable_evidence_not_current_authority_unless_referenced"
-        ]
-        == "yes"
-    )
-    assert current_active_workstream["no_stale_validation_count_promotion"] == "yes"
-    assert (
-        current_active_workstream[
-            "no_manual_overwrite_of_generated_outputs_during_normal_validation"
+            "current_authoritative_surfaces_classify_sources_and_mirrors"
         ]
         == "yes"
     )
     assert current_active_workstream["broad_status_surface_rewrite_executed_here"] == "no"
     assert current_active_workstream["generated_output_mutation_executed_here"] == "no"
     assert current_active_workstream["historical_packet_edit_executed_here"] == "no"
-    assert current_active_workstream["enforcement_packet_executed_here"] == "no"
-    assert current_active_workstream["selector_choice_made_here"] == "no"
-    assert current_active_workstream["selector_candidate_count"] == 6
-    assert set(current_active_workstream["candidate_targets"]) == {
-        "prepare_status_surface_canonicalization_enforcement_packet",
-        "prepare_next_proof_debt_ledger_discharge_item",
-        "return_to_full_pillar_target_map_next_lane_selection",
-        "prepare_artifact_retention_migration_plan",
-        "prepare_qm_stat_theorem_gap_reentry",
-        "prepare_sr_cosmo_global_obstruction_followup",
-    }
-    assert current_active_workstream["recommended_selector_candidate"] == (
-        "prepare_status_surface_canonicalization_enforcement_packet"
-    )
+    assert current_active_workstream["snapshot_migration_or_deletion_executed_here"] == "no"
     assert current_active_workstream["ordinary_validation_mode"] == "read_only_by_default"
     assert current_active_workstream["read_only_proof"] == "full_pytest_then_git_diff_exit_code"
-    assert current_active_workstream["full_pytest_passed"] == 6536
+    assert current_active_workstream["full_pytest_passed"] == 6597
     assert current_active_workstream["full_pytest_skipped"] == 230
     assert (
-        current_active_workstream["full_pytest_is_prior_checkpoint_not_fresh_for_this_review"]
-        == "yes"
+        current_active_workstream["full_pytest_is_prior_checkpoint_not_fresh_for_this_packet"]
+        == "no"
     )
-    assert current_active_workstream["lean_build_jobs"] == 7981
+    assert current_active_workstream["full_pytest_fresh_for_this_packet"] == "yes"
+    assert current_active_workstream["lean_build_jobs"] == 7983
     assert current_active_workstream["governance_suite_passed"] == "yes"
     assert current_active_workstream["new_large_tracked_snapshots_frozen_by_default"] == "yes"
     assert (
         current_active_workstream[
             "tracked_generated_output_mutation_forbidden_during_validation"
         ]
-        == "yes"
-    )
-    assert (
-        current_active_workstream[
-            "snapshot_migration_or_deletion_deferred_to_future_packet"
-        ]
-        == "yes"
-    )
-    assert current_active_workstream["status_surface_rewrite_deferred_to_future_packet"] == "yes"
-    assert (
-        current_active_workstream["status_surface_enforcement_deferred_to_future_packet"]
         == "yes"
     )
     assert current_active_workstream["real_axiom_count"] == 60
@@ -861,6 +844,34 @@ def test_single_live_target_is_machine_pinned_after_status_surface_review() -> N
         == STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_REVIEW_TARGET
     )
     assert status_plan_workstream["broad_status_surface_rewrite_executed_here"] == "no"
+
+    status_review_workstream = _workstream(
+        payload, "status_surface_canonicalization_plan_result_review"
+    )
+    assert status_review_workstream["status"] == "paused"
+    assert (
+        status_review_workstream["result_token"]
+        == STATUS_SURFACE_CANONICALIZATION_RESULT_REVIEW_RESULT_TOKEN
+    )
+    assert (
+        status_review_workstream["selected_next_target"]
+        == POST_STATUS_SURFACE_CANONICALIZATION_SELECTOR_TARGET
+    )
+    assert status_review_workstream["enforcement_packet_executed_here"] == "no"
+
+    post_status_selector_workstream = _workstream(
+        payload, "post_status_surface_canonicalization_bounded_attack_selection"
+    )
+    assert post_status_selector_workstream["status"] == "paused"
+    assert (
+        post_status_selector_workstream["result_token"]
+        == POST_STATUS_SURFACE_CANONICALIZATION_SELECTOR_RESULT_TOKEN
+    )
+    assert (
+        post_status_selector_workstream["selected_next_target"]
+        == STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_TARGET
+    )
+    assert post_status_selector_workstream["selector_executes_selected_target"] == "no"
 
 
 def test_readme_registry_and_frontier_agree_on_live_target() -> None:
