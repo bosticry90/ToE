@@ -308,7 +308,7 @@ Cycle01 pilot lock:
 - `FULL_PILLAR_TARGET_MAP_REBASE_DOC_v0: formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md`
 - `FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_v0: formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapRebaseResultReview.lean`
 - `FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_REPORT_v0: formal/docs/release/FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_20260503_v0.json`
-- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: review_status_surface_canonicalization_enforcement_packet_result`
+- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: select_next_post_status_surface_enforcement_bounded_attack`
 
 - `SEAM_QFT_GR_GOVERNANCE_COMPLETE_v0: NO`
 - `SEAM_QFT_GR_PHYSICS_COMPLETE_v0: NO`

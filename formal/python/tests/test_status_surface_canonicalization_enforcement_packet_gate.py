@@ -220,10 +220,10 @@ def test_active_live_target_mirror_parity_is_enforced() -> None:
     report = _json(REPORT_PATH)
     parity = report["active_live_target_mirror_parity"]
 
-    assert live_target == NEXT_TARGET
+    assert NEXT_TARGET in registry["next_strict_target_coverage"]
     assert parity["canonical_source"] == _rel(REGISTRY_PATH)
     assert parity["canonical_json_pointer"] == "/current_target_state/live_next_target"
-    assert parity["expected_live_target_after_packet"] == live_target
+    assert parity["expected_live_target_after_packet"] == NEXT_TARGET
     assert {
         row["surface"] for row in parity["active_public_mirror_fields"]
     } == {_rel(path) for path in ACTIVE_MIRRORS}
@@ -256,11 +256,11 @@ def test_current_authoritative_surfaces_classify_sources_and_mirrors() -> None:
     assert classes["generated_output_surfaces_read_only_under_normal_validation"] is True
 
     for token in {
-        f"CURRENT_LIVE_NEXT_TARGET_v0: {NEXT_TARGET}",
-        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {CONSUMED_TARGET}",
+        "CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_status_surface_enforcement_bounded_attack",
+        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {NEXT_TARGET}",
         "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
         "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/StatusSurfaceCanonicalizationEnforcementPacket.lean",
+        "formal/toe_formal/ToeFormal/Derivation/StatusSurfaceCanonicalizationEnforcementPacket.lean",
         "CANONICAL_CONTROL_SOURCES",
         "PUBLIC_SUMMARY_SURFACES",
         "ACTIVE_TARGET_MIRROR_SURFACES",

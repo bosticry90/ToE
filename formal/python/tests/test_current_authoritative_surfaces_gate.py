@@ -105,6 +105,14 @@ STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_PATH = (
     / "Derivation"
     / "StatusSurfaceCanonicalizationEnforcementPacket.lean"
 )
+STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "StatusSurfaceCanonicalizationEnforcementPacketResultReview.lean"
+)
 LEDGER_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md"
 
 
@@ -118,12 +126,12 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-        "CURRENT_LIVE_NEXT_TARGET_v0: review_status_surface_canonicalization_enforcement_packet_result",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_status_surface_canonicalization_enforcement_packet",
-        "ACTIVE_LANE_v0: status_surface_canonicalization_enforcement_packet",
+        "CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_status_surface_enforcement_bounded_attack",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_status_surface_canonicalization_enforcement_packet_result",
+        "ACTIVE_LANE_v0: status_surface_canonicalization_enforcement_packet_result_review",
         "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
         "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/StatusSurfaceCanonicalizationEnforcementPacket.lean",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/StatusSurfaceCanonicalizationEnforcementPacketResultReview.lean",
         "READ_ONLY_VALIDATION_HYGIENE_ENFORCED",
         "POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE",
@@ -134,6 +142,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         "STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_REVIEW_CONSUMED",
         "POST_STATUS_SURFACE_CANONICALIZATION_NEXT_ATTACK_SELECTED",
         "STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_PACKET_PREPARED",
+        "STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_PACKET_RESULT_REVIEW_CONSUMED",
         "CANONICAL_CONTROL_SOURCES",
         "PUBLIC_SUMMARY_SURFACES",
         "ACTIVE_TARGET_MIRROR_SURFACES",
@@ -154,6 +163,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         STATUS_SURFACE_CANONICALIZATION_RESULT_REVIEW_PATH,
         POST_STATUS_SURFACE_CANONICALIZATION_SELECTOR_PATH,
         STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_PATH,
+        STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_RESULT_REVIEW_PATH,
         LEDGER_PATH,
     }:
         assert str(path.relative_to(REPO_ROOT)).replace("\\", "/") in text
@@ -200,6 +210,7 @@ def test_current_authoritative_surfaces_index_records_validation_and_historical_
         "STATUS_SURFACE_CANONICALIZATION_PLAN_RESULT_REVIEW_20260505_v0",
         "POST_STATUS_SURFACE_CANONICALIZATION_BOUNDED_ATTACK_SELECTION_20260505_v0",
         "STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_PACKET_20260505_v0",
+        "STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_PACKET_RESULT_REVIEW_20260505_v0",
         "TOE_ALLOW_TRACKED_OUTPUT_WRITES=1",
     }:
         assert token in text
