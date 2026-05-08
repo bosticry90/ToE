@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "Status-surface canonicalization enforcement packet result review consumes narrow drift-prevention result and rotates to selector"
+        "Post-status-surface enforcement selector consumes the reviewed drift-prevention result and returns to full-pillar target-map selection"
       retained_blocker :=
-        "post_status_surface_enforcement_selector_pending_no_rewrite"
+        "full_pillar_target_map_return_pending_no_promotion"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "select_next_post_status_surface_enforcement_bounded_attack"
+        "return_to_full_pillar_target_map_next_lane_selection"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the status-surface enforcement packet result review. -/
+/-- Previous live target consumed by the post-status-surface enforcement selector. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_status_surface_canonicalization_enforcement_packet_result"
-
-/-- Current live target after the status-surface enforcement packet result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "select_next_post_status_surface_enforcement_bounded_attack"
+
+/-- Current live target after the post-status-surface enforcement selector. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "return_to_full_pillar_target_map_next_lane_selection"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
