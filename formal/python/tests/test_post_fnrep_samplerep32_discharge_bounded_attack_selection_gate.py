@@ -13,6 +13,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_forbidden_promotions_closed,
     assert_frontier_matches_registry,
     assert_public_surfaces_match_registry,
+    skip_if_not_current_target,
     loop_registry,
     read_text,
     workstream,
@@ -258,6 +259,7 @@ def test_post_fnrep_samplerep32_selection_report_preserves_nonclaim_boundaries()
 
 def test_post_fnrep_samplerep32_selection_registry_rotates_to_audit_refresh() -> None:
     payload = loop_registry()
+    skip_if_not_current_target(payload, SELECTED_TARGET)
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_forbidden_promotions_closed()

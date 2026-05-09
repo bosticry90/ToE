@@ -11,12 +11,12 @@ Purpose:
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_axiom_ledger_audit_refresh`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_fnrep_samplerep32_discharge_bounded_attack`
-- `ACTIVE_LANE_v0: post_fnrep_samplerep32_discharge_bounded_attack_selection`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_axiom_ledger_audit_refresh_after_samplerep32_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_axiom_ledger_audit_refresh`
+- `ACTIVE_LANE_v0: axiom_ledger_audit_refresh_after_samplerep32`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostFNRepSampleRep32DischargeBoundedAttackSelection.lean`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefreshAfterSampleRep32.lean`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
@@ -36,6 +36,7 @@ Current result-token chain:
 - `formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32Discharge.lean`
 - `formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32DischargeResultReview.lean`
 - `formal/toe_formal/ToeFormal/Derivation/PostFNRepSampleRep32DischargeBoundedAttackSelection.lean`
+- `formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefreshAfterSampleRep32.lean`
 - `MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED`
 - `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`
@@ -56,6 +57,7 @@ Current result-token chain:
 - `FNREP_NONALIAS_SAMPLEREP32_DISCHARGED_LEAN_BACKED_CONSTRUCTOR`
 - `FNREP_NONALIAS_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_CONSUMED_LEAN_BACKED_CONSTRUCTOR`
 - `POST_FNREP_SAMPLEREP32_DISCHARGE_NEXT_ATTACK_SELECTED`
+- `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS`
 
 Historical live-target transition tokens retained for focused historical gates:
 - `CURRENT_LIVE_NEXT_TARGET_v0: prepare_next_proof_debt_ledger_discharge_item`
@@ -74,6 +76,10 @@ Historical live-target transition tokens retained for focused historical gates:
 - `PREVIOUS_LIVE_NEXT_TARGET_v0: review_fnrep_nonalias_samplerep32_discharge_result`
 - `ACTIVE_LANE_v0: fnrep_nonalias_samplerep32_discharge`
 - `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32DischargeResultReview.lean`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_axiom_ledger_audit_refresh`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_fnrep_samplerep32_discharge_bounded_attack`
+- `ACTIVE_LANE_v0: post_fnrep_samplerep32_discharge_bounded_attack_selection`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostFNRepSampleRep32DischargeBoundedAttackSelection.lean`
 
 Current status-surface authority classes:
 - `CANONICAL_CONTROL_SOURCES: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
@@ -141,6 +147,7 @@ Maintenance bindings:
 - `PROOF_DEBT_DISCHARGE_FNREP_SAMPLEREP32_20260505_v0`
 - `PROOF_DEBT_DISCHARGE_FNREP_SAMPLEREP32_RESULT_REVIEW_20260505_v0`
 - `POST_FNREP_SAMPLEREP32_DISCHARGE_BOUNDED_ATTACK_SELECTION_20260505_v0`
+- `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_20260505_v0`
 - `TOE_ALLOW_TRACKED_OUTPUT_WRITES=1`
 
 Non-claim boundary:

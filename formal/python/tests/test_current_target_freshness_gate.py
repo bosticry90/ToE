@@ -401,6 +401,14 @@ POST_FNREP_SAMPLEREP32_DISCHARGE_BOUNDED_ATTACK_SELECTION_PATH = (
     / "Derivation"
     / "PostFNRepSampleRep32DischargeBoundedAttackSelection.lean"
 )
+AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "AxiomLedgerAuditRefreshAfterSampleRep32.lean"
+)
 MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH = (
     REPO_ROOT
     / "formal"
@@ -626,8 +634,11 @@ POST_FNREP_SAMPLEREP32_DISCHARGE_BOUNDED_ATTACK_SELECTION_TARGET = (
 POST_FNREP_SAMPLEREP32_DISCHARGE_NEXT_ATTACK_SELECTED = (
     "POST_FNREP_SAMPLEREP32_DISCHARGE_NEXT_ATTACK_SELECTED"
 )
-LIVE_TARGET = "prepare_axiom_ledger_audit_refresh"
-PREVIOUS_TARGET = POST_FNREP_SAMPLEREP32_DISCHARGE_BOUNDED_ATTACK_SELECTION_TARGET
+AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_TOKEN = (
+    "AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS"
+)
+PREVIOUS_TARGET = "prepare_axiom_ledger_audit_refresh"
+LIVE_TARGET = "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -688,6 +699,8 @@ PAUSED_LANES = {
     "post_status_surface_enforcement_bounded_attack_selection",
     "full_pillar_target_map_next_lane_selection_after_status_surface_enforcement",
     "next_proof_debt_ledger_discharge_item",
+    "fnrep_nonalias_samplerep32_discharge",
+    "post_fnrep_samplerep32_discharge_bounded_attack_selection",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -731,7 +744,7 @@ def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple
     return [(path, value)]
 
 
-def test_single_live_target_is_machine_pinned_after_post_samplerep32_selection() -> None:
+def test_single_live_target_is_machine_pinned_after_samplerep32_audit_refresh() -> None:
     assert_current_target_consistent()
     payload = _registry()
     state = payload["current_target_state"]
@@ -740,7 +753,7 @@ def test_single_live_target_is_machine_pinned_after_post_samplerep32_selection()
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        POST_FNREP_SAMPLEREP32_DISCHARGE_BOUNDED_ATTACK_SELECTION_PATH.relative_to(REPO_ROOT)
+        AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -749,12 +762,14 @@ def test_single_live_target_is_machine_pinned_after_post_samplerep32_selection()
     assert set(state["paused_lanes"]) == paused_ids
     assert (
         state["active_lane"]
-        == "post_fnrep_samplerep32_discharge_bounded_attack_selection"
+        == "axiom_ledger_audit_refresh_after_samplerep32"
     )
 
     previous_fnrep_workstream = _workstream(payload, "fnrep_nonalias_samplerep32_discharge")
     assert previous_fnrep_workstream["status"] == "paused"
-    assert previous_fnrep_workstream["authorized_next_strict_target"] == PREVIOUS_TARGET
+    assert previous_fnrep_workstream["authorized_next_strict_target"] == (
+        POST_FNREP_SAMPLEREP32_DISCHARGE_BOUNDED_ATTACK_SELECTION_TARGET
+    )
     assert previous_fnrep_workstream["consumed_target"] == (
         FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_TARGET
     )
@@ -765,42 +780,83 @@ def test_single_live_target_is_machine_pinned_after_post_samplerep32_selection()
     assert previous_fnrep_workstream["review_result_token"] == (
         FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_TOKEN
     )
-    assert previous_fnrep_workstream["selected_next_target"] == PREVIOUS_TARGET
+    assert previous_fnrep_workstream["selected_next_target"] == (
+        POST_FNREP_SAMPLEREP32_DISCHARGE_BOUNDED_ATTACK_SELECTION_TARGET
+    )
     assert previous_fnrep_workstream["real_axiom_count_after"] == 59
     assert previous_fnrep_workstream["real_axiom_file_count_after"] == 14
     assert previous_fnrep_workstream["debt_item_discharged"] == "yes"
     assert previous_fnrep_workstream["default_nonalias_remains_discharged"] == "yes"
 
+    previous_selector_workstream = _workstream(
+        payload, "post_fnrep_samplerep32_discharge_bounded_attack_selection"
+    )
+    assert previous_selector_workstream["status"] == "paused"
+    assert previous_selector_workstream["authorized_next_strict_target"] == PREVIOUS_TARGET
+    assert previous_selector_workstream["consumed_target"] == (
+        POST_FNREP_SAMPLEREP32_DISCHARGE_BOUNDED_ATTACK_SELECTION_TARGET
+    )
+    assert (
+        previous_selector_workstream["latest_surface"]
+        == "post_fnrep_samplerep32_discharge_bounded_attack_selection_v0"
+    )
+    assert previous_selector_workstream["output_token"] == (
+        POST_FNREP_SAMPLEREP32_DISCHARGE_NEXT_ATTACK_SELECTED
+    )
+    assert previous_selector_workstream["selected_next_target"] == PREVIOUS_TARGET
+    assert previous_selector_workstream["real_axiom_count"] == 59
+    assert previous_selector_workstream["real_axiom_file_count"] == 14
+
     current_active_workstream = active_workstream(payload)
     assert (
         current_active_workstream["workstream_id"]
-        == "post_fnrep_samplerep32_discharge_bounded_attack_selection"
+        == "axiom_ledger_audit_refresh_after_samplerep32"
     )
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "post_fnrep_samplerep32_discharge_bounded_attack_selection_v0"
+        == "axiom_ledger_audit_refresh_after_samplerep32_v0"
+    )
+    assert (
+        current_active_workstream["source_selector_surface"]
+        == str(POST_FNREP_SAMPLEREP32_DISCHARGE_BOUNDED_ATTACK_SELECTION_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     )
     assert (
         current_active_workstream["source_review_surface"]
         == str(FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     )
     assert (
+        current_active_workstream["consumed_selector_token"]
+        == POST_FNREP_SAMPLEREP32_DISCHARGE_NEXT_ATTACK_SELECTED
+    )
+    assert (
         current_active_workstream["consumed_review_token"]
         == FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_TOKEN
     )
     assert (
-        current_active_workstream["output_token"]
-        == POST_FNREP_SAMPLEREP32_DISCHARGE_NEXT_ATTACK_SELECTED
+        current_active_workstream["result_token"]
+        == AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_TOKEN
+    )
+    assert current_active_workstream["audit_report"] == (
+        "formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_20260505_v0.json"
     )
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert current_active_workstream["selected_target_count"] == 1
     assert current_active_workstream["selection_executes_target"] == "no"
     assert current_active_workstream["real_axiom_count"] == 59
     assert current_active_workstream["real_axiom_file_count"] == 14
+    assert current_active_workstream["real_sorry_or_admit_count"] == 0
+    assert (
+        current_active_workstream["default_nonalias_absent_from_unresolved_axiom_debt"]
+        == "yes"
+    )
+    assert (
+        current_active_workstream["sample_rep32_absent_from_unresolved_axiom_debt"]
+        == "yes"
+    )
     assert current_active_workstream["default_nonalias_remains_discharged"] == "yes"
     assert current_active_workstream["sample_rep32_discharged"] == "yes"
+    assert current_active_workstream["stale_active_60_axiom_posture"] == "absent"
     assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
     assert current_active_workstream["seam_closure_claim"] == "no"
     assert current_active_workstream["phase2_readiness_claim"] == "no"
