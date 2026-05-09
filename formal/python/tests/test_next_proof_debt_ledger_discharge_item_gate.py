@@ -10,6 +10,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
     assert_forbidden_promotions_closed,
     assert_frontier_matches_registry,
+    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
     workstream,
 )
@@ -168,8 +169,9 @@ def test_next_proof_debt_item_report_records_selected_authority() -> None:
     assert selected[0]["current_authority"] == CURRENT_AUTHORITY
     assert selected[0]["intended_authority"] == INTENDED_AUTHORITY
 
-    assert f"| `{SELECTED_DECLARATION}` | `{SELECTED_FILE}` | `spec_backed` |" in ledger
-    assert "axiom sampleRep32 : Field2DRep32" in source
+    assert f"| `{SELECTED_DECLARATION}` | `{SELECTED_FILE}` | `spec_backed` |" not in ledger
+    assert "def sampleRep32 : Field2DRep32" in source
+    assert "axiom sampleRep32" not in source
     assert "def defaultNonAlias" in source
     assert "axiom defaultNonAlias" not in source
 
@@ -231,13 +233,13 @@ def test_registry_rotates_to_selected_proof_debt_execution() -> None:
     assert_forbidden_promotions_closed()
     assert_public_surfaces_match_registry()
     payload = _json(REGISTRY_PATH)
-    state = payload["current_target_state"]
-
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
-    assert state["live_next_target"] == NEXT_TARGET
-    assert state["live_next_target_evidence"] == SELECTION_EVIDENCE
-    assert state["active_lane"] == ACTIVE_LANE
-    assert PREVIOUS_LANE in state["paused_lanes"]
+    assert_historical_target_recorded(
+        payload=payload,
+        previous_target=CONSUMED_TARGET,
+        live_target=NEXT_TARGET,
+        evidence=SELECTION_EVIDENCE,
+        lane=ACTIVE_LANE,
+    )
 
     previous = workstream(PREVIOUS_LANE, payload)
     assert previous["status"] == "paused"
@@ -245,7 +247,7 @@ def test_registry_rotates_to_selected_proof_debt_execution() -> None:
     assert previous["selected_next_target"] == CONSUMED_TARGET
 
     active = workstream(ACTIVE_LANE, payload)
-    assert active["status"] == "active"
+    assert active["status"] == "paused"
     assert active["authorization_evidence"] == SELECTION_EVIDENCE
     assert active["authorized_next_slice"] == "selected_proof_debt_discharge_item_execution_v0"
     assert active["authorized_next_strict_target"] == NEXT_TARGET
@@ -274,15 +276,6 @@ def test_registry_rotates_to_selected_proof_debt_execution() -> None:
     assert active["empirical_adequacy_claim"] == "no"
     assert active["canonical_toe_claim"] == "no"
     assert active["governance_manifest_enrollment_authorized"] == "no"
-
-    qft_gr = workstream("qft_gr_source_map", payload)
-    assert qft_gr["authorized_next_strict_target"] == NEXT_TARGET
-    assert qft_gr["qft_gr_witness_search_plan_selected"] == "no"
-    assert qft_gr["full_source_map_closure_authorized"] == "no"
-
-    master_action = workstream("master_action_dependency_frontier", payload)
-    assert master_action["authorized_next_strict_target"] == NEXT_TARGET
-    assert master_action["master_action_promotion_authorized"] == "no"
 
 
 def test_next_proof_debt_item_gate_not_manifest_enrolled() -> None:

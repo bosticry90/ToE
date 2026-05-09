@@ -135,7 +135,7 @@ def test_selected_default_nonalias_axiom_is_replaced_by_definitions() -> None:
         "def defaultNonAlias",
         "theorem defaultNonAlias_eq_zero_rep32_false",
         "theorem defaultNonAlias_tag_false",
-        "axiom sampleRep32",
+        "def sampleRep32",
         "theorem diagnosticNonAlias_not_eligible",
     }:
         assert token in source
@@ -198,9 +198,9 @@ def test_discharge_report_and_ledger_record_axiom_count_drop() -> None:
     assert report["next_target"] == REVIEW_TARGET
     assert not any(report["nonclaim_boundaries"].values())
 
-    assert "real_axiom_count_v0: 60" in ledger
+    assert "real_axiom_count_v0: 59" in ledger
     assert f"| `defaultNonAlias` | `{SOURCE_EVIDENCE}` |" not in ledger
-    assert f"| `sampleRep32` | `{SOURCE_EVIDENCE}` | `spec_backed` |" in ledger
+    assert f"| `sampleRep32` | `{SOURCE_EVIDENCE}` |" not in ledger
 
 
 def test_registry_rotates_to_fnrep_nonalias_discharge_result_review() -> None:

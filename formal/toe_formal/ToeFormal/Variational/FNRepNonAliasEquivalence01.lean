@@ -6,8 +6,8 @@ Non-alias cross-representation equivalence target (skeleton).
 Scope:
 - Declares explicit transport maps between Rep32 and a non-alias quotient lane.
 - States a comparator-surface invariance target under that transport.
-- Structural-only; the default non-alias witness is concrete, while the
-  sample Rep32 witness remains recorded as an axiom/placeholding row.
+- Structural-only; the default non-alias witness and sample Rep32 witness are
+  concrete quotient constructors.
 - No analytic claims; no physics truth-claim upgrade.
 -/
 
@@ -108,10 +108,23 @@ theorem diagnostic_transport_default_tag_agrees (x : Field2DRep32) :
 Minimal concrete constructor (placeholder) for the tagged lane.
 This allows nontrivial construction without relying on constant transport.
 -/
-axiom sampleRep32 : Field2DRep32
+def sampleRep32 : Field2DRep32 :=
+  Quot.mk RepSetoid32 (fun _ _ _ => 0)
+
+theorem sampleRep32_eq_defaultRep32 :
+    sampleRep32 = defaultRep32 := by
+  rfl
 
 def nonAliasSample : Field2DNonAlias :=
   rep32ToNonAlias sampleRep32
+
+theorem nonAliasSample_eq_sampleRep32_false :
+    nonAliasSample = ⟨sampleRep32, false⟩ := by
+  rfl
+
+theorem nonAliasSample_tag_false :
+    nonAliasSample.tag = false := by
+  rfl
 
 theorem negative_control_tag_sensitive (x : Field2DRep32) :
     diagnosticNonAlias ⟨x, true⟩ ≠ diagnosticNonAlias ⟨x, false⟩ := by

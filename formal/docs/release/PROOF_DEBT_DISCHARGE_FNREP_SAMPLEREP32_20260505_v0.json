@@ -1,0 +1,51 @@
+{
+  "schema_id": "PROOF_DEBT_DISCHARGE_FNREP_SAMPLEREP32_20260505_v0",
+  "schema_version": 0,
+  "date": "2026-05-05",
+  "classification": "P-POLICY/nonclaim",
+  "execution_status": "completed_successful_discharge",
+  "current_target": "execute_selected_proof_debt_discharge_item",
+  "consumed_selector_token": "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_SELECTED",
+  "selected_debt_item": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean::sampleRep32",
+  "selected_declaration": "sampleRep32",
+  "source_file": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean",
+  "selector_surface": "formal/toe_formal/ToeFormal/Derivation/NextProofDebtLedgerDischargeItem.lean",
+  "selector_report": "formal/docs/release/NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_20260505_v0.json",
+  "discharge_surface": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32Discharge.lean",
+  "focused_gate": "formal/python/tests/test_proof_debt_discharge_fnrep_samplerep32_gate.py",
+  "proof_debt_ledger": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+  "result_token": "FNREP_NONALIAS_SAMPLEREP32_DISCHARGED_LEAN_BACKED_CONSTRUCTOR",
+  "fallback_token_not_used": "FNREP_NONALIAS_SAMPLEREP32_RETAINED_NOT_DISCHARGED",
+  "prior_authority": "RETAINED_SPEC_BACKED_AXIOM",
+  "resulting_authority": "LEAN_BACKED_EXPLICIT_SAMPLE_REPRESENTATION_CONSTRUCTOR",
+  "replacement_declaration": "sampleRep32_explicit_quotient_constructor",
+  "replacement_theorems": [
+    "sampleRep32_eq_defaultRep32",
+    "nonAliasSample_eq_sampleRep32_false",
+    "nonAliasSample_tag_false",
+    "sampleRep32_discharge_eq_defaultRep32",
+    "nonAliasSample_discharge_tag_false",
+    "nonAliasSample_discharge_roundtrip"
+  ],
+  "axiom_removed": true,
+  "ledger_row_removed": true,
+  "real_axiom_count_before": 60,
+  "real_axiom_count_after": 59,
+  "next_target": "review_fnrep_nonalias_samplerep32_discharge_result",
+  "validation_checkpoint": {
+    "lean_build_target": "ToeFormal",
+    "lean_build_jobs": 7988,
+    "git_diff_check_passed": true
+  },
+  "nonclaim_boundaries": {
+    "master_action_promotion_authorized": false,
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The selected sampleRep32 proof-debt item is discharged into a Lean-backed explicit sample representation constructor, lowering the real axiom count from 60 to 59, while no master-action promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE claim, QFT-GR source-map closure, or governance-manifest enrollment is inferred."
+}

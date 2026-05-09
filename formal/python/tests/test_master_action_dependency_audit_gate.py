@@ -260,18 +260,18 @@ def test_master_action_dependency_audit_live_ledger_still_matches_60_axioms() ->
     axioms, sorry_or_admit = _lean_surface_debt()
     rows = _ledger_rows()
 
-    assert len(axioms) == 60
+    assert len(axioms) == 59
     assert len(sorry_or_admit) == 0
-    assert len({file for _, file in axioms}) == 15
-    assert len(rows) == 60
-    assert "real_axiom_count_v0: 60" in ledger_text
+    assert len({file for _, file in axioms}) == 14
+    assert len(rows) == 59
+    assert "real_axiom_count_v0: 59" in ledger_text
     assert "real_sorry_or_admit_count_v0: 0" in ledger_text
-    assert "real_axiom_file_count_v0: 15" in ledger_text
+    assert "real_axiom_file_count_v0: 14" in ledger_text
 
     assert "axiom defaultNonAlias" not in source_text
     assert "def defaultNonAlias" in source_text
     assert f"| `defaultNonAlias` | `{SOURCE_EVIDENCE}` |" not in ledger_text
-    assert f"| `sampleRep32` | `{SOURCE_EVIDENCE}` | `spec_backed` |" in ledger_text
+    assert f"| `sampleRep32` | `{SOURCE_EVIDENCE}` |" not in ledger_text
 
 
 def test_report_nonclaim_boundaries_and_public_surfaces_are_synced() -> None:

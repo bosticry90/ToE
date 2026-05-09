@@ -118,7 +118,7 @@ def test_ledger_baseline_matches_real_uncommented_lean_debt() -> None:
     assert f"real_axiom_count_v0: {len(axioms)}" in text
     assert f"real_sorry_or_admit_count_v0: {len(sorry_or_admit)}" in text
     assert f"real_axiom_file_count_v0: {len({file for _, file in axioms})}" in text
-    assert len(axioms) == 60
+    assert len(axioms) == 59
     assert len(sorry_or_admit) == 0
 
 
@@ -135,7 +135,7 @@ def test_every_real_axiom_has_a_ledger_row() -> None:
 
 def test_ledger_rows_have_required_fields_and_allowed_statuses() -> None:
     rows = _ledger_rows()
-    assert len(rows) == 60
+    assert len(rows) == 59
 
     for row in rows:
         assert set(row) == set(REQUIRED_FIELDS)

@@ -87,9 +87,9 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "prepare_next_proof_debt_ledger_discharge_item",
-    "live_next_target": "execute_selected_proof_debt_discharge_item",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/NextProofDebtLedgerDischargeItem.lean",
+    "previous_live_next_target": "execute_selected_proof_debt_discharge_item",
+    "live_next_target": "review_fnrep_nonalias_samplerep32_discharge_result",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32Discharge.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
@@ -147,9 +147,10 @@
       "status_surface_canonicalization_enforcement_packet",
       "status_surface_canonicalization_enforcement_packet_result_review",
       "post_status_surface_enforcement_bounded_attack_selection",
-      "full_pillar_target_map_next_lane_selection_after_status_surface_enforcement"
+      "full_pillar_target_map_next_lane_selection_after_status_surface_enforcement",
+      "next_proof_debt_ledger_discharge_item"
     ],
-    "active_lane": "next_proof_debt_ledger_discharge_item",
+    "active_lane": "fnrep_nonalias_samplerep32_discharge",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -570,7 +571,8 @@
     "post_status_surface_enforcement_selector_pending_no_rewrite",
     "full_pillar_target_map_return_pending_no_promotion",
     "next_proof_debt_ledger_discharge_item_pending_no_promotion",
-    "sampleRep32_selected_for_bounded_proof_debt_discharge_no_promotion"
+    "sampleRep32_selected_for_bounded_proof_debt_discharge_no_promotion",
+    "sampleRep32_discharged_pending_result_review_no_promotion"
   ],
   "next_strict_target_coverage": [
     "rotate_to_qm_stat_transport_residual_semantics",
@@ -655,7 +657,8 @@
     "select_next_post_status_surface_enforcement_bounded_attack",
     "prepare_status_surface_enforcement_followup_packet",
     "prepare_qm_stat_theorem_gap_reentry",
-    "prepare_sr_cosmo_global_obstruction_followup"
+    "prepare_sr_cosmo_global_obstruction_followup",
+    "review_fnrep_nonalias_samplerep32_discharge_result"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -1079,7 +1082,7 @@
       ],
       "authorization_evidence": "formal/toe_formal/ToeFormal/Bridges/PostQFTGRLadderBoundedAttackSelection.lean",
       "authorized_next_slice": "next_proof_debt_ledger_discharge_item_preparation_v0",
-      "authorized_next_strict_target": "execute_selected_proof_debt_discharge_item",
+      "authorized_next_strict_target": "review_fnrep_nonalias_samplerep32_discharge_result",
       "consumed_target": "select_next_post_qft_gr_ladder_bounded_attack",
       "prior_surface": "qft_gr_poisson_recovery_obligation_semantics_result_review_v0",
       "latest_surface": "qft_gr_source_map_eligibility_ladder_summary_result_review_v0",
@@ -1527,7 +1530,7 @@
       "forbidden_language_class_count": 7,
       "boundary_count": 10,
       "dependency_classes_changed": "no",
-      "authorized_next_strict_target": "execute_selected_proof_debt_discharge_item",
+      "authorized_next_strict_target": "review_fnrep_nonalias_samplerep32_discharge_result",
       "same_lane_continuation": "post_status_surface_enforcement_selector_completed_return_to_full_pillar_no_promotion_claim",
       "non_promotion_boundary": "no_phase2_no_master_action_promotion_no_seam_closure_no_empirical_claim_no_governance_manifest_enrollment",
       "full_pillar_target_map_rebase_status": "prepared",
@@ -4393,10 +4396,10 @@
     },
     {
       "workstream_id": "next_proof_debt_ledger_discharge_item",
-      "status": "active",
+      "status": "paused",
       "retained_blocker": "sampleRep32_selected_for_bounded_proof_debt_discharge_no_promotion",
       "consecutive_slices_after_retention": 0,
-      "guardrail_status": "active_under_loop_control_registry_v0",
+      "guardrail_status": "paused_after_packet_completion_under_loop_control_registry_v0",
       "blocked_promotions": [
         "phase2_authorization",
         "seam_closure",
@@ -4471,6 +4474,59 @@
         "formal/toe_formal/ToeFormal/Variational/FieldRepresentationSample.lean::Rep_on_samples_delta_one",
         "formal/toe_formal/ToeFormal/Variational/FieldRepresentationSample.lean::Rep_on_samples_delta_I"
       ]
+    },
+    {
+      "workstream_id": "fnrep_nonalias_samplerep32_discharge",
+      "status": "active",
+      "retained_blocker": "sampleRep32_discharged_pending_result_review_no_promotion",
+      "consecutive_slices_after_retention": 0,
+      "guardrail_status": "active_under_loop_control_registry_v0",
+      "blocked_promotions": [
+        "phase2_authorization",
+        "seam_closure",
+        "master_action_promotion",
+        "empirical_claim",
+        "governance_manifest_enrollment"
+      ],
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32Discharge.lean",
+      "authorized_next_slice": "fnrep_nonalias_samplerep32_discharge_result_review_v0",
+      "authorized_next_strict_target": "review_fnrep_nonalias_samplerep32_discharge_result",
+      "consumed_target": "execute_selected_proof_debt_discharge_item",
+      "latest_surface": "fnrep_nonalias_samplerep32_discharge_v0",
+      "selector_surface": "formal/toe_formal/ToeFormal/Derivation/NextProofDebtLedgerDischargeItem.lean",
+      "selector_report": "formal/docs/release/NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_20260505_v0.json",
+      "execution_surface": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32Discharge.lean",
+      "execution_report": "formal/docs/release/PROOF_DEBT_DISCHARGE_FNREP_SAMPLEREP32_20260505_v0.json",
+      "proof_debt_ledger": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+      "consumed_selector_token": "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_SELECTED",
+      "result_token": "FNREP_NONALIAS_SAMPLEREP32_DISCHARGED_LEAN_BACKED_CONSTRUCTOR",
+      "fallback_token_not_used": "FNREP_NONALIAS_SAMPLEREP32_RETAINED_NOT_DISCHARGED",
+      "result_review_target": "review_fnrep_nonalias_samplerep32_discharge_result",
+      "selected_debt_item": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean::sampleRep32",
+      "selected_declaration": "sampleRep32",
+      "selected_file": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean",
+      "prior_authority": "RETAINED_SPEC_BACKED_AXIOM",
+      "resulting_authority": "LEAN_BACKED_EXPLICIT_SAMPLE_REPRESENTATION_CONSTRUCTOR",
+      "replacement_declaration": "sampleRep32_explicit_quotient_constructor",
+      "real_axiom_count_before": 60,
+      "real_axiom_count_after": 59,
+      "axiom_removed": "yes",
+      "ledger_row_removed": "yes",
+      "debt_item_discharged": "yes",
+      "active_live_target_mirror_parity_preserved": "yes",
+      "loop_registry_canonical_live_target_source": "yes",
+      "ordinary_validation_mode": "read_only_by_default",
+      "read_only_validation_preserved": "yes",
+      "artifact_freeze_preserved": "yes",
+      "lean_build_jobs": 7988,
+      "master_action_promotion_authorized": "no",
+      "pillar_completion_inferred": "no",
+      "seam_closure_claim": "no",
+      "phase2_readiness_claim": "no",
+      "empirical_adequacy_claim": "no",
+      "canonical_toe_claim": "no",
+      "qft_gr_source_map_closure_authorized": "no",
+      "governance_manifest_enrollment_authorized": "no"
     }
   ],
   "promotion_escrow": {

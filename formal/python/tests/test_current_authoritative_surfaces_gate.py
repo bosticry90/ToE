@@ -137,6 +137,14 @@ NEXT_PROOF_DEBT_ITEM_SELECTOR_PATH = (
     / "Derivation"
     / "NextProofDebtLedgerDischargeItem.lean"
 )
+SAMPLEREP32_DISCHARGE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Variational"
+    / "FNRepNonAliasEquivalence01SampleRep32Discharge.lean"
+)
 LEDGER_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md"
 
 
@@ -150,12 +158,12 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-        "CURRENT_LIVE_NEXT_TARGET_v0: execute_selected_proof_debt_discharge_item",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_next_proof_debt_ledger_discharge_item",
-        "ACTIVE_LANE_v0: next_proof_debt_ledger_discharge_item",
+        "CURRENT_LIVE_NEXT_TARGET_v0: review_fnrep_nonalias_samplerep32_discharge_result",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: execute_selected_proof_debt_discharge_item",
+        "ACTIVE_LANE_v0: fnrep_nonalias_samplerep32_discharge",
         "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
         "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/NextProofDebtLedgerDischargeItem.lean",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32Discharge.lean",
         "READ_ONLY_VALIDATION_HYGIENE_ENFORCED",
         "POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE",
@@ -170,6 +178,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         "POST_STATUS_SURFACE_ENFORCEMENT_NEXT_ATTACK_SELECTED",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_STATUS_SURFACE_ENFORCEMENT",
         "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_SELECTED",
+        "FNREP_NONALIAS_SAMPLEREP32_DISCHARGED_LEAN_BACKED_CONSTRUCTOR",
         "CANONICAL_CONTROL_SOURCES",
         "PUBLIC_SUMMARY_SURFACES",
         "ACTIVE_TARGET_MIRROR_SURFACES",
@@ -194,6 +203,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         POST_STATUS_SURFACE_ENFORCEMENT_SELECTOR_PATH,
         AFTER_STATUS_SURFACE_ENFORCEMENT_FULL_PILLAR_SELECTOR_PATH,
         NEXT_PROOF_DEBT_ITEM_SELECTOR_PATH,
+        SAMPLEREP32_DISCHARGE_PATH,
         LEDGER_PATH,
     }:
         assert str(path.relative_to(REPO_ROOT)).replace("\\", "/") in text
@@ -203,10 +213,10 @@ def test_current_authoritative_surfaces_index_records_current_axiom_and_nonclaim
     text = _read(INDEX_PATH)
 
     for token in {
-        "REAL_AXIOM_COUNT_v0: 60",
+        "REAL_AXIOM_COUNT_v0: 59",
         "REAL_SORRY_OR_ADMIT_COUNT_v0: 0",
         "defaultNonAlias: absent_from_unresolved_axiom_debt_and_lean_backed",
-        "sampleRep32: retained_spec_backed_axiom",
+        "sampleRep32: absent_from_unresolved_axiom_debt_and_lean_backed_constructor",
         "QFT_GR_SOURCE_MAP_CLOSURE_AUTHORIZED_v0: false",
         "MASTER_ACTION_PROMOTION_AUTHORIZED_v0: false",
         "PILLAR_COMPLETION_INFERRED_v0: false",
@@ -249,6 +259,7 @@ def test_current_authoritative_surfaces_index_records_validation_and_historical_
         "POST_STATUS_SURFACE_ENFORCEMENT_BOUNDED_ATTACK_SELECTION_20260505_v0",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_STATUS_SURFACE_ENFORCEMENT_20260508_v0",
         "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_20260505_v0",
+        "PROOF_DEBT_DISCHARGE_FNREP_SAMPLEREP32_20260505_v0",
         "TOE_ALLOW_TRACKED_OUTPUT_WRITES=1",
     }:
         assert token in text

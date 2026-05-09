@@ -233,7 +233,7 @@ def test_proof_debt_lane_report_records_selected_item() -> None:
 
     ledger = _read(LEDGER_PATH)
     assert f"| `{SELECTED_DECLARATION}` | `{SELECTED_FILE}` |" not in ledger
-    assert f"| `sampleRep32` | `{SELECTED_FILE}` | `spec_backed` |" in ledger
+    assert f"| `sampleRep32` | `{SELECTED_FILE}` |" not in ledger
 
 
 def test_registry_rotates_to_selected_proof_debt_item_execution() -> None:

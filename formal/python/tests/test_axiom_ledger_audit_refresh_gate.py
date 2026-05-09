@@ -216,24 +216,24 @@ def test_audit_refresh_report_confirms_selector_and_ledger_posture() -> None:
     }
 
 
-def test_live_ledger_matches_60_axiom_refresh_posture() -> None:
+def test_live_ledger_matches_current_axiom_posture() -> None:
     ledger_text = _read(LEDGER_PATH)
     source_text = _read(SOURCE_PATH)
     axioms, sorry_or_admit = _lean_surface_debt()
     rows = _ledger_rows()
 
-    assert len(axioms) == 60
+    assert len(axioms) == 59
     assert len(sorry_or_admit) == 0
-    assert len({file for _, file in axioms}) == 15
-    assert len(rows) == 60
-    assert "real_axiom_count_v0: 60" in ledger_text
+    assert len({file for _, file in axioms}) == 14
+    assert len(rows) == 59
+    assert "real_axiom_count_v0: 59" in ledger_text
     assert "real_sorry_or_admit_count_v0: 0" in ledger_text
-    assert "real_axiom_file_count_v0: 15" in ledger_text
+    assert "real_axiom_file_count_v0: 14" in ledger_text
 
     assert "axiom defaultNonAlias" not in source_text
     assert "def defaultNonAlias" in source_text
     assert f"| `defaultNonAlias` | `{SOURCE_EVIDENCE}` |" not in ledger_text
-    assert f"| `sampleRep32` | `{SOURCE_EVIDENCE}` | `spec_backed` |" in ledger_text
+    assert f"| `sampleRep32` | `{SOURCE_EVIDENCE}` |" not in ledger_text
 
 
 def test_active_docs_and_gates_do_not_assert_stale_61_posture() -> None:

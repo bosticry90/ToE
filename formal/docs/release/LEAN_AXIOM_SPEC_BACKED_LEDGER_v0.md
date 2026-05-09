@@ -38,9 +38,9 @@ Required fields:
 - `replacement_or_discharge_path`
 
 Baseline:
-- `real_axiom_count_v0: 60`
+- `real_axiom_count_v0: 59`
 - `real_sorry_or_admit_count_v0: 0`
-- `real_axiom_file_count_v0: 15`
+- `real_axiom_file_count_v0: 14`
 
 ## Ledger Rows
 
@@ -105,4 +105,3 @@ Baseline:
 | `Rep_on_samples_delta_one` | `formal/toe_formal/ToeFormal/Variational/FieldRepresentationSample.lean` | `spec_backed` | Sample representation convention for delta-one. | `SCALAR_QFT` | `no` | Replace with concrete sample representation theorem. |
 | `Rep_on_samples_delta_I` | `formal/toe_formal/ToeFormal/Variational/FieldRepresentationSample.lean` | `spec_backed` | Sample representation convention for delta-I. | `SCALAR_QFT` | `no` | Replace with concrete sample representation theorem. |
 | `P_rep` | `formal/toe_formal/ToeFormal/Variational/FirstVariationRepDefFieldRep.lean` | `retained_assumption` | Field representation polynomial remains declared. | `SCALAR_QFT` | `yes` | Derive from concrete representation selection. |
-| `sampleRep32` | `formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean` | `spec_backed` | Sample representation witness for non-alias equivalence. | `SCALAR_QFT` | `no` | Replace with concrete sample representation theorem. |

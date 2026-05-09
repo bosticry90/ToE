@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "Next proof-debt ledger item selector consumes the post-enforcement full-pillar selector and selects sampleRep32 for bounded execution"
+        "FNRep sampleRep32 discharge consumes the selected proof-debt execution target and replaces the witness axiom with an explicit quotient constructor"
       retained_blocker :=
-        "sampleRep32_selected_for_bounded_proof_debt_discharge_no_promotion"
+        "sampleRep32_discharged_pending_result_review_no_promotion"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "execute_selected_proof_debt_discharge_item"
+        "review_fnrep_nonalias_samplerep32_discharge_result"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the next proof-debt item selector. -/
+/-- Previous live target consumed by the FNRep sampleRep32 discharge. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_next_proof_debt_ledger_discharge_item"
-
-/-- Current live target after the next proof-debt item selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "execute_selected_proof_debt_discharge_item"
+
+/-- Current live target after the FNRep sampleRep32 discharge. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_fnrep_nonalias_samplerep32_discharge_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

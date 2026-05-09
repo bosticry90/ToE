@@ -587,8 +587,14 @@ POST_STATUS_SURFACE_ENFORCEMENT_SELECTOR_TARGET = (
 NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_TARGET = (
     "prepare_next_proof_debt_ledger_discharge_item"
 )
-LIVE_TARGET = SELECTED_PROOF_DEBT_DISCHARGE_ITEM_TARGET
-PREVIOUS_TARGET = NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_TARGET
+FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_TARGET = (
+    "review_fnrep_nonalias_samplerep32_discharge_result"
+)
+FNREP_SAMPLEREP32_DISCHARGE_RESULT_TOKEN = (
+    "FNREP_NONALIAS_SAMPLEREP32_DISCHARGED_LEAN_BACKED_CONSTRUCTOR"
+)
+LIVE_TARGET = FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_TARGET
+PREVIOUS_TARGET = SELECTED_PROOF_DEBT_DISCHARGE_ITEM_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -648,6 +654,7 @@ PAUSED_LANES = {
     "status_surface_canonicalization_enforcement_packet_result_review",
     "post_status_surface_enforcement_bounded_attack_selection",
     "full_pillar_target_map_next_lane_selection_after_status_surface_enforcement",
+    "next_proof_debt_ledger_discharge_item",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -691,7 +698,7 @@ def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple
     return [(path, value)]
 
 
-def test_single_live_target_is_machine_pinned_after_next_proof_debt_item_selection() -> None:
+def test_single_live_target_is_machine_pinned_after_samplerep32_discharge() -> None:
     assert_current_target_consistent()
     payload = _registry()
     state = payload["current_target_state"]
@@ -700,8 +707,8 @@ def test_single_live_target_is_machine_pinned_after_next_proof_debt_item_selecti
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == (
-        "formal/toe_formal/ToeFormal/Derivation/"
-        "NextProofDebtLedgerDischargeItem.lean"
+        "formal/toe_formal/ToeFormal/Variational/"
+        "FNRepNonAliasEquivalence01SampleRep32Discharge.lean"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -710,81 +717,58 @@ def test_single_live_target_is_machine_pinned_after_next_proof_debt_item_selecti
     assert set(state["paused_lanes"]) == paused_ids
     assert (
         state["active_lane"]
-        == "next_proof_debt_ledger_discharge_item"
+        == "fnrep_nonalias_samplerep32_discharge"
     )
 
     current_active_workstream = active_workstream(payload)
     assert (
         current_active_workstream["workstream_id"]
-        == "next_proof_debt_ledger_discharge_item"
+        == "fnrep_nonalias_samplerep32_discharge"
     )
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "next_proof_debt_ledger_discharge_item_v0"
+        == "fnrep_nonalias_samplerep32_discharge_v0"
     )
     assert (
         current_active_workstream["consumed_selector_token"]
-        == FULL_PILLAR_AFTER_STATUS_SURFACE_ENFORCEMENT_RESULT_TOKEN
+        == NEXT_PROOF_DEBT_ITEM_RESULT_TOKEN
     )
     assert (
         current_active_workstream["result_token"]
-        == NEXT_PROOF_DEBT_ITEM_RESULT_TOKEN
+        == FNREP_SAMPLEREP32_DISCHARGE_RESULT_TOKEN
     )
-    assert current_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert current_active_workstream["selected_next_target_kind"] == "proof_debt_item_execution"
-    assert current_active_workstream["authorized_effect"] == (
-        "SELECT_EXACTLY_ONE_BOUNDED_PROOF_DEBT_ITEM"
-    )
-    assert current_active_workstream["selection_executes_discharge"] == "no"
-    assert current_active_workstream["selected_lane"] == "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM"
+    assert current_active_workstream["result_review_target"] == LIVE_TARGET
     assert current_active_workstream["selected_debt_item"] == (
         "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean::sampleRep32"
     )
     assert current_active_workstream["selected_declaration"] == "sampleRep32"
-    assert current_active_workstream["current_authority"] == "RETAINED_SPEC_BACKED_AXIOM"
+    assert current_active_workstream["prior_authority"] == "RETAINED_SPEC_BACKED_AXIOM"
     assert (
-        current_active_workstream["intended_authority"]
+        current_active_workstream["resulting_authority"]
         == "LEAN_BACKED_EXPLICIT_SAMPLE_REPRESENTATION_CONSTRUCTOR"
     )
+    assert current_active_workstream["replacement_declaration"] == (
+        "sampleRep32_explicit_quotient_constructor"
+    )
+    assert current_active_workstream["real_axiom_count_before"] == 60
+    assert current_active_workstream["real_axiom_count_after"] == 59
+    assert current_active_workstream["axiom_removed"] == "yes"
+    assert current_active_workstream["ledger_row_removed"] == "yes"
+    assert current_active_workstream["debt_item_discharged"] == "yes"
     assert current_active_workstream["active_live_target_mirror_parity_preserved"] == "yes"
     assert current_active_workstream["loop_registry_canonical_live_target_source"] == "yes"
-    assert current_active_workstream["active_public_mirror_field_count"] == 2
-    assert set(current_active_workstream["active_public_mirror_fields"]) == {
-        "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md::MASTER_ACTION_CURRENT_CITATION_TARGET_v0",
-        "formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md::MASTER_ACTION_CURRENT_CITATION_TARGET_v0",
-    }
-    assert set(current_active_workstream["historical_packet_history_tokens_allowed"]) == {
-        "review_read_only_validation_hygiene_result",
-        "prepare_status_surface_canonicalization_enforcement_packet",
-        "review_status_surface_canonicalization_enforcement_packet_result",
-        "select_next_post_status_surface_enforcement_bounded_attack",
-        "return_to_full_pillar_target_map_next_lane_selection",
-        "prepare_next_proof_debt_ledger_discharge_item",
-    }
     assert current_active_workstream["ordinary_validation_mode"] == "read_only_by_default"
-    assert current_active_workstream["full_pytest_passed"] == 6625
-    assert current_active_workstream["full_pytest_skipped"] == 230
-    assert current_active_workstream["lean_build_jobs"] == 7987
-    assert current_active_workstream["governance_suite_passed"] == "yes"
-    assert current_active_workstream["new_large_tracked_snapshots_frozen_by_default"] == "yes"
-    assert (
-        current_active_workstream[
-            "tracked_generated_output_mutation_forbidden_during_validation"
-        ]
-        == "yes"
-    )
     assert current_active_workstream["read_only_validation_preserved"] == "yes"
     assert current_active_workstream["artifact_freeze_preserved"] == "yes"
-    assert current_active_workstream["selected_item_count"] == 1
-    assert current_active_workstream["candidate_item_count"] == 3
-    assert current_active_workstream["qft_gr_witness_search_selected"] == "no"
-    assert current_active_workstream["real_axiom_count"] == 60
+    assert current_active_workstream["lean_build_jobs"] == 7988
     assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
     assert current_active_workstream["seam_closure_claim"] == "no"
     assert current_active_workstream["phase2_readiness_claim"] == "no"
     assert current_active_workstream["empirical_adequacy_claim"] == "no"
+    assert current_active_workstream["canonical_toe_claim"] == "no"
+    assert current_active_workstream["governance_manifest_enrollment_authorized"] == "no"
     assert current_active_workstream["master_action_promotion_authorized"] == "no"
 
     active_targets = {state["live_next_target"], current_active_workstream["authorized_next_strict_target"]}
