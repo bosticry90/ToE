@@ -255,16 +255,24 @@ def test_post_enforcement_selector_report_preserves_boundaries() -> None:
     }
 
 
-def test_post_enforcement_selector_registry_and_active_mirrors_rotate() -> None:
+def test_post_enforcement_selector_registry_records_historical_rotation() -> None:
     registry = _json(REGISTRY_PATH)
     state = registry["current_target_state"]
     report = _json(REPORT_PATH)
     parity = report["active_live_target_mirror_parity"]
+    workstream = next(
+        item
+        for item in registry["workstreams"]
+        if item["workstream_id"] == "post_status_surface_enforcement_bounded_attack_selection"
+    )
 
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
-    assert state["live_next_target"] == SELECTED_TARGET
-    assert state["live_next_target_evidence"] == _rel(SELECTION_PATH)
-    assert state["active_lane"] == "post_status_surface_enforcement_bounded_attack_selection"
+    assert SELECTED_TARGET in registry["next_strict_target_coverage"]
+    assert state["previous_live_next_target"] == SELECTED_TARGET
+    assert state["live_next_target"] == "prepare_next_proof_debt_ledger_discharge_item"
+    assert workstream["status"] == "paused"
+    assert workstream["authorization_evidence"] == _rel(SELECTION_PATH)
+    assert workstream["selected_next_target"] == SELECTED_TARGET
+    assert workstream["result_token"] == RESULT_TOKEN
     assert parity["canonical_source"] == _rel(REGISTRY_PATH)
     assert parity["canonical_json_pointer"] == "/current_target_state/live_next_target"
     assert parity["expected_live_target_after_selection"] == SELECTED_TARGET
@@ -276,7 +284,9 @@ def test_post_enforcement_selector_registry_and_active_mirrors_rotate() -> None:
     for path in ACTIVE_MIRRORS:
         text = _read(path)
         values = _active_mirror_values(text)
-        assert values == [SELECTED_TARGET], f"{path} active mirror values: {values!r}"
+        assert values == [
+            state["live_next_target"]
+        ], f"{path} active mirror values: {values!r}"
 
 
 def test_post_enforcement_selector_gate_not_manifest_enrolled() -> None:

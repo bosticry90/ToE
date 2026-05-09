@@ -75,7 +75,7 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict architecture target:
-- `CURRENT_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_next_proof_debt_ledger_discharge_item`
 - `AXIOM_LEDGER_AUDIT_REFRESH_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefresh.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_20260503_v0.json`
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS_v0: AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS`

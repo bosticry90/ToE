@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "Post-status-surface enforcement selector consumes the reviewed drift-prevention result and returns to full-pillar target-map selection"
+        "Post-enforcement full-pillar selector consumes the status-surface return and selects the next proof-debt item preparation target"
       retained_blocker :=
-        "full_pillar_target_map_return_pending_no_promotion"
+        "next_proof_debt_ledger_discharge_item_pending_no_promotion"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "return_to_full_pillar_target_map_next_lane_selection"
+        "prepare_next_proof_debt_ledger_discharge_item"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the post-status-surface enforcement selector. -/
+/-- Previous live target consumed by the post-enforcement full-pillar selector. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "select_next_post_status_surface_enforcement_bounded_attack"
-
-/-- Current live target after the post-status-surface enforcement selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "return_to_full_pillar_target_map_next_lane_selection"
+
+/-- Current live target after the post-enforcement full-pillar selector. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_next_proof_debt_ledger_discharge_item"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

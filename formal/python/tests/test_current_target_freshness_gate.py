@@ -401,6 +401,14 @@ FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_READ_ONLY_HYGIENE_PATH = (
     / "Derivation"
     / "FullPillarTargetMapNextLaneSelectionAfterReadOnlyHygiene.lean"
 )
+FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_STATUS_SURFACE_ENFORCEMENT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "FullPillarTargetMapNextLaneSelectionAfterStatusSurfaceEnforcement.lean"
+)
 
 CITATION_USAGE_TARGET = "cite_only_bounded_retained_assumptions"
 AUDIT_TARGET = "audit_master_action_citation_language_against_retained_boundaries"
@@ -547,6 +555,9 @@ STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_RESULT_REVIEW_RESULT_TOKEN = (
 POST_STATUS_SURFACE_ENFORCEMENT_SELECTOR_RESULT_TOKEN = (
     "POST_STATUS_SURFACE_ENFORCEMENT_NEXT_ATTACK_SELECTED"
 )
+FULL_PILLAR_AFTER_STATUS_SURFACE_ENFORCEMENT_RESULT_TOKEN = (
+    "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_STATUS_SURFACE_ENFORCEMENT"
+)
 ARTIFACT_RETENTION_ENFORCEMENT_TARGET = "prepare_artifact_retention_enforcement_plan"
 ARTIFACT_RETENTION_ENFORCEMENT_RESULT_REVIEW_TARGET = (
     "review_artifact_retention_enforcement_plan_result"
@@ -572,8 +583,11 @@ STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_RESULT_REVIEW_TARGET = (
 POST_STATUS_SURFACE_ENFORCEMENT_SELECTOR_TARGET = (
     "select_next_post_status_surface_enforcement_bounded_attack"
 )
-LIVE_TARGET = FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
-PREVIOUS_TARGET = POST_STATUS_SURFACE_ENFORCEMENT_SELECTOR_TARGET
+NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_TARGET = (
+    "prepare_next_proof_debt_ledger_discharge_item"
+)
+LIVE_TARGET = NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_TARGET
+PREVIOUS_TARGET = FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -631,6 +645,7 @@ PAUSED_LANES = {
     "post_status_surface_canonicalization_bounded_attack_selection",
     "status_surface_canonicalization_enforcement_packet",
     "status_surface_canonicalization_enforcement_packet_result_review",
+    "post_status_surface_enforcement_bounded_attack_selection",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -674,7 +689,7 @@ def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple
     return [(path, value)]
 
 
-def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_review() -> None:
+def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_selection() -> None:
     assert_current_target_consistent()
     payload = _registry()
     state = payload["current_target_state"]
@@ -684,7 +699,7 @@ def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_r
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "PostStatusSurfaceEnforcementBoundedAttackSelection.lean"
+        "FullPillarTargetMapNextLaneSelectionAfterStatusSurfaceEnforcement.lean"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -693,37 +708,37 @@ def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_r
     assert set(state["paused_lanes"]) == paused_ids
     assert (
         state["active_lane"]
-        == "post_status_surface_enforcement_bounded_attack_selection"
+        == "full_pillar_target_map_next_lane_selection_after_status_surface_enforcement"
     )
 
     current_active_workstream = active_workstream(payload)
     assert (
         current_active_workstream["workstream_id"]
-        == "post_status_surface_enforcement_bounded_attack_selection"
+        == "full_pillar_target_map_next_lane_selection_after_status_surface_enforcement"
     )
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "post_status_surface_enforcement_bounded_attack_selection_v0"
+        == "full_pillar_target_map_next_lane_selection_after_status_surface_enforcement_v0"
     )
     assert (
-        current_active_workstream["consumed_result_token"]
-        == STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_RESULT_REVIEW_RESULT_TOKEN
+        current_active_workstream["consumed_selector_token"]
+        == POST_STATUS_SURFACE_ENFORCEMENT_SELECTOR_RESULT_TOKEN
     )
     assert (
         current_active_workstream["result_token"]
-        == POST_STATUS_SURFACE_ENFORCEMENT_SELECTOR_RESULT_TOKEN
+        == FULL_PILLAR_AFTER_STATUS_SURFACE_ENFORCEMENT_RESULT_TOKEN
     )
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
     assert current_active_workstream["selected_next_target_kind"] == (
-        "full_pillar_target_map_next_lane_selection"
+        "proof_debt_item_preparation_only"
     )
     assert current_active_workstream["authorized_effect"] == (
-        "SELECT_EXACTLY_ONE_NEXT_BOUNDED_TARGET"
+        "SELECT_EXACTLY_ONE_NEXT_BOUNDED_LANE"
     )
-    assert current_active_workstream["selector_executes_selected_target"] == "no"
-    assert current_active_workstream["full_pillar_target_map_return_selected"] == "yes"
+    assert current_active_workstream["selection_executes_lane"] == "no"
+    assert current_active_workstream["selected_lane"] == "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM"
     assert current_active_workstream["active_live_target_mirror_parity_preserved"] == "yes"
     assert current_active_workstream["loop_registry_canonical_live_target_source"] == "yes"
     assert current_active_workstream["active_public_mirror_field_count"] == 2
@@ -736,6 +751,7 @@ def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_r
         "prepare_status_surface_canonicalization_enforcement_packet",
         "review_status_surface_canonicalization_enforcement_packet_result",
         "select_next_post_status_surface_enforcement_bounded_attack",
+        "return_to_full_pillar_target_map_next_lane_selection",
     }
     assert (
         current_active_workstream[
@@ -746,15 +762,14 @@ def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_r
     assert current_active_workstream["ordinary_validation_mode"] == "read_only_by_default"
     assert (
         current_active_workstream["read_only_proof"]
-        == "full_pytest_from_selector_implementation_followed_by_clean_diff_checks"
+        == "prior_full_pytest_checkpoint_plus_clean_post_commit_diff_check"
     )
     assert current_active_workstream["full_pytest_passed"] == 6614
     assert current_active_workstream["full_pytest_skipped"] == 230
     assert (
         current_active_workstream["full_pytest_is_prior_checkpoint_not_fresh_for_this_selector"]
-        == "no"
+        == "yes"
     )
-    assert current_active_workstream["full_pytest_fresh_for_this_selector"] == "yes"
     assert current_active_workstream["lean_build_jobs"] == 7985
     assert current_active_workstream["governance_suite_passed"] == "yes"
     assert current_active_workstream["new_large_tracked_snapshots_frozen_by_default"] == "yes"
@@ -766,18 +781,30 @@ def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_r
     )
     assert current_active_workstream["read_only_validation_preserved"] == "yes"
     assert current_active_workstream["artifact_freeze_preserved"] == "yes"
-    assert current_active_workstream["proof_debt_discharge_item_selected"] == "no"
+    assert current_active_workstream["proof_debt_discharge_item_selected"] == "yes"
     assert current_active_workstream["artifact_retention_migration_plan_selected"] == "no"
     assert current_active_workstream["qm_stat_reentry_selected"] == "no"
     assert current_active_workstream["sr_cosmo_followup_selected"] == "no"
+    assert current_active_workstream["qft_gr_witness_search_selected"] == "no"
+    assert current_active_workstream["master_action_gap_reduction_selected"] == "no"
     assert current_active_workstream["status_surface_enforcement_followup_selected"] == "no"
-    assert current_active_workstream["candidate_target_count"] == 6
+    assert current_active_workstream["candidate_lane_count"] == 7
+    assert set(current_active_workstream["candidate_lanes"]) == {
+        "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM",
+        "QM_STAT_THEOREM_GAP_RE_ENTRY_LANE",
+        "SR_COSMO_GLOBAL_OBSTRUCTION_FOLLOW_UP",
+        "QFT_GR_WITNESS_SEARCH_PLAN",
+        "MASTER_ACTION_DEPENDENCY_GAP_REDUCTION_PLAN",
+        "ARTIFACT_RETENTION_MIGRATION_PLAN",
+        "STATUS_SURFACE_ENFORCEMENT_FOLLOWUP",
+    }
     assert set(current_active_workstream["candidate_targets"]) == {
-        FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET,
-        "prepare_next_proof_debt_ledger_discharge_item",
-        "prepare_artifact_retention_migration_plan",
+        LIVE_TARGET,
         "prepare_qm_stat_theorem_gap_reentry",
         "prepare_sr_cosmo_global_obstruction_followup",
+        "prepare_qft_gr_witness_search_plan",
+        "prepare_master_action_dependency_gap_reduction_plan",
+        "prepare_artifact_retention_migration_plan",
         "prepare_status_surface_enforcement_followup_packet",
     }
     assert current_active_workstream["real_axiom_count"] == 60
@@ -914,6 +941,20 @@ def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_r
         == STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_RESULT_REVIEW_TARGET
     )
     assert enforcement_workstream["broad_status_surface_rewrite_executed_here"] == "no"
+
+    post_enforcement_workstream = _workstream(
+        payload, "post_status_surface_enforcement_bounded_attack_selection"
+    )
+    assert post_enforcement_workstream["status"] == "paused"
+    assert (
+        post_enforcement_workstream["result_token"]
+        == POST_STATUS_SURFACE_ENFORCEMENT_SELECTOR_RESULT_TOKEN
+    )
+    assert (
+        post_enforcement_workstream["selected_next_target"]
+        == FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
+    )
+    assert post_enforcement_workstream["selector_executes_selected_target"] == "no"
 
 
 def test_readme_registry_and_frontier_agree_on_live_target() -> None:

@@ -284,12 +284,12 @@ def test_current_authoritative_surfaces_record_result_review_chain() -> None:
     assert classes["generated_output_surfaces_read_only_under_normal_validation"] is True
 
     for token in {
-        "CURRENT_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection",
-        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {NEXT_TARGET}",
-        "ACTIVE_LANE_v0: post_status_surface_enforcement_bounded_attack_selection",
+        "CURRENT_LIVE_NEXT_TARGET_v0: prepare_next_proof_debt_ledger_discharge_item",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection",
+        "ACTIVE_LANE_v0: full_pillar_target_map_next_lane_selection_after_status_surface_enforcement",
         "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
         "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostStatusSurfaceEnforcementBoundedAttackSelection.lean",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterStatusSurfaceEnforcement.lean",
         "CANONICAL_CONTROL_SOURCES",
         "PUBLIC_SUMMARY_SURFACES",
         "ACTIVE_TARGET_MIRROR_SURFACES",
