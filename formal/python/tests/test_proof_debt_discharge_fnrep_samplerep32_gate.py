@@ -11,6 +11,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_forbidden_promotions_closed,
     assert_frontier_matches_registry,
     assert_public_surfaces_match_registry,
+    skip_if_not_current_target,
     workstream,
 )
 
@@ -187,6 +188,7 @@ def test_registry_rotates_to_sample_rep32_discharge_result_review() -> None:
     assert_forbidden_promotions_closed()
     assert_public_surfaces_match_registry()
     payload = _json(REGISTRY_PATH)
+    skip_if_not_current_target(payload, REVIEW_TARGET)
     state = payload["current_target_state"]
 
     assert state["previous_live_next_target"] == EXECUTION_TARGET

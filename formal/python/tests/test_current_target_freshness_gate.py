@@ -377,6 +377,22 @@ FNREP_NONALIAS_DEFAULT_DISCHARGE_RESULT_REVIEW_PATH = (
     / "Variational"
     / "FNRepNonAliasEquivalence01DischargeResultReview.lean"
 )
+FNREP_SAMPLEREP32_DISCHARGE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Variational"
+    / "FNRepNonAliasEquivalence01SampleRep32Discharge.lean"
+)
+FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Variational"
+    / "FNRepNonAliasEquivalence01SampleRep32DischargeResultReview.lean"
+)
 MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH = (
     REPO_ROOT
     / "formal"
@@ -593,8 +609,14 @@ FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_TARGET = (
 FNREP_SAMPLEREP32_DISCHARGE_RESULT_TOKEN = (
     "FNREP_NONALIAS_SAMPLEREP32_DISCHARGED_LEAN_BACKED_CONSTRUCTOR"
 )
-LIVE_TARGET = FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_TARGET
-PREVIOUS_TARGET = SELECTED_PROOF_DEBT_DISCHARGE_ITEM_TARGET
+FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_TOKEN = (
+    "FNREP_NONALIAS_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_CONSUMED_LEAN_BACKED_CONSTRUCTOR"
+)
+POST_FNREP_SAMPLEREP32_DISCHARGE_BOUNDED_ATTACK_SELECTION_TARGET = (
+    "select_next_post_fnrep_samplerep32_discharge_bounded_attack"
+)
+LIVE_TARGET = POST_FNREP_SAMPLEREP32_DISCHARGE_BOUNDED_ATTACK_SELECTION_TARGET
+PREVIOUS_TARGET = FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -698,7 +720,7 @@ def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple
     return [(path, value)]
 
 
-def test_single_live_target_is_machine_pinned_after_samplerep32_discharge() -> None:
+def test_single_live_target_is_machine_pinned_after_samplerep32_result_review() -> None:
     assert_current_target_consistent()
     payload = _registry()
     state = payload["current_target_state"]
@@ -706,10 +728,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_discharge() -> N
     assert state["schema_id"] == "CURRENT_TARGET_STATE_v0"
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
-    assert state["live_next_target_evidence"] == (
-        "formal/toe_formal/ToeFormal/Variational/"
-        "FNRepNonAliasEquivalence01SampleRep32Discharge.lean"
-    )
+    assert state["live_next_target_evidence"] == str(
+        FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
         item["workstream_id"] for item in payload["workstreams"] if item["status"] == "paused"
@@ -729,17 +750,35 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_discharge() -> N
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "fnrep_nonalias_samplerep32_discharge_v0"
+        == "fnrep_nonalias_samplerep32_discharge_result_review_v0"
     )
     assert (
         current_active_workstream["consumed_selector_token"]
         == NEXT_PROOF_DEBT_ITEM_RESULT_TOKEN
     )
     assert (
-        current_active_workstream["result_token"]
+        current_active_workstream["discharge_result_token"]
         == FNREP_SAMPLEREP32_DISCHARGE_RESULT_TOKEN
     )
-    assert current_active_workstream["result_review_target"] == LIVE_TARGET
+    assert (
+        current_active_workstream["consumed_result_token"]
+        == FNREP_SAMPLEREP32_DISCHARGE_RESULT_TOKEN
+    )
+    assert (
+        current_active_workstream["review_result_token"]
+        == FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_TOKEN
+    )
+    assert (
+        current_active_workstream["result_token"]
+        == FNREP_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_TOKEN
+    )
+    assert current_active_workstream["result_review_target"] == PREVIOUS_TARGET
+    assert current_active_workstream["selected_next_target"] == LIVE_TARGET
+    assert (
+        current_active_workstream["recommended_selector_choice"]
+        == "prepare_axiom_ledger_audit_refresh"
+    )
+    assert current_active_workstream["review_executes_selector_choice"] == "no"
     assert current_active_workstream["selected_debt_item"] == (
         "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean::sampleRep32"
     )
@@ -754,15 +793,17 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_discharge() -> N
     )
     assert current_active_workstream["real_axiom_count_before"] == 60
     assert current_active_workstream["real_axiom_count_after"] == 59
+    assert current_active_workstream["real_axiom_file_count_after"] == 14
     assert current_active_workstream["axiom_removed"] == "yes"
     assert current_active_workstream["ledger_row_removed"] == "yes"
     assert current_active_workstream["debt_item_discharged"] == "yes"
+    assert current_active_workstream["default_nonalias_remains_discharged"] == "yes"
     assert current_active_workstream["active_live_target_mirror_parity_preserved"] == "yes"
     assert current_active_workstream["loop_registry_canonical_live_target_source"] == "yes"
     assert current_active_workstream["ordinary_validation_mode"] == "read_only_by_default"
     assert current_active_workstream["read_only_validation_preserved"] == "yes"
     assert current_active_workstream["artifact_freeze_preserved"] == "yes"
-    assert current_active_workstream["lean_build_jobs"] == 7988
+    assert current_active_workstream["lean_build_jobs"] == 7989
     assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
     assert current_active_workstream["seam_closure_claim"] == "no"
     assert current_active_workstream["phase2_readiness_claim"] == "no"

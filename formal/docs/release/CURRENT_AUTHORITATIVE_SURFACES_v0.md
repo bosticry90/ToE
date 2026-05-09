@@ -11,12 +11,12 @@ Purpose:
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: review_fnrep_nonalias_samplerep32_discharge_result`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: execute_selected_proof_debt_discharge_item`
+- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_fnrep_samplerep32_discharge_bounded_attack`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_fnrep_nonalias_samplerep32_discharge_result`
 - `ACTIVE_LANE_v0: fnrep_nonalias_samplerep32_discharge`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32Discharge.lean`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32DischargeResultReview.lean`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
@@ -34,6 +34,7 @@ Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterStatusSurfaceEnforcement.lean`
 - `formal/toe_formal/ToeFormal/Derivation/NextProofDebtLedgerDischargeItem.lean`
 - `formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32Discharge.lean`
+- `formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32DischargeResultReview.lean`
 - `MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED`
 - `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`
@@ -52,6 +53,7 @@ Current result-token chain:
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_STATUS_SURFACE_ENFORCEMENT`
 - `NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_SELECTED`
 - `FNREP_NONALIAS_SAMPLEREP32_DISCHARGED_LEAN_BACKED_CONSTRUCTOR`
+- `FNREP_NONALIAS_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_CONSUMED_LEAN_BACKED_CONSTRUCTOR`
 
 Historical live-target transition tokens retained for focused historical gates:
 - `CURRENT_LIVE_NEXT_TARGET_v0: prepare_next_proof_debt_ledger_discharge_item`
@@ -62,6 +64,10 @@ Historical live-target transition tokens retained for focused historical gates:
 - `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_next_proof_debt_ledger_discharge_item`
 - `ACTIVE_LANE_v0: next_proof_debt_ledger_discharge_item`
 - `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/NextProofDebtLedgerDischargeItem.lean`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_fnrep_nonalias_samplerep32_discharge_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: execute_selected_proof_debt_discharge_item`
+- `ACTIVE_LANE_v0: fnrep_nonalias_samplerep32_discharge`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32Discharge.lean`
 
 Current status-surface authority classes:
 - `CANONICAL_CONTROL_SOURCES: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
@@ -127,6 +133,7 @@ Maintenance bindings:
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_STATUS_SURFACE_ENFORCEMENT_20260508_v0`
 - `NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_20260505_v0`
 - `PROOF_DEBT_DISCHARGE_FNREP_SAMPLEREP32_20260505_v0`
+- `PROOF_DEBT_DISCHARGE_FNREP_SAMPLEREP32_RESULT_REVIEW_20260505_v0`
 - `TOE_ALLOW_TRACKED_OUTPUT_WRITES=1`
 
 Non-claim boundary:

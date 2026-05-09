@@ -1,0 +1,50 @@
+{
+  "schema_id": "PROOF_DEBT_DISCHARGE_FNREP_SAMPLEREP32_RESULT_REVIEW_20260505_v0",
+  "schema_version": 0,
+  "date": "2026-05-05",
+  "classification": "P-POLICY/nonclaim",
+  "review_status": "completed_result_consumed",
+  "current_target": "review_fnrep_nonalias_samplerep32_discharge_result",
+  "consumed_result_token": "FNREP_NONALIAS_SAMPLEREP32_DISCHARGED_LEAN_BACKED_CONSTRUCTOR",
+  "review_result_token": "FNREP_NONALIAS_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_CONSUMED_LEAN_BACKED_CONSTRUCTOR",
+  "review_surface": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32DischargeResultReview.lean",
+  "discharge_surface": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32Discharge.lean",
+  "discharge_report": "formal/docs/release/PROOF_DEBT_DISCHARGE_FNREP_SAMPLEREP32_20260505_v0.json",
+  "updated_source_surface": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean",
+  "proof_debt_ledger": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+  "focused_gate": "formal/python/tests/test_proof_debt_discharge_fnrep_samplerep32_result_review_gate.py",
+  "selected_debt_item": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean::sampleRep32",
+  "selected_declaration": "sampleRep32",
+  "prior_authority": "RETAINED_SPEC_BACKED_AXIOM",
+  "resulting_authority": "LEAN_BACKED_EXPLICIT_SAMPLE_REPRESENTATION_CONSTRUCTOR",
+  "review_effect": {
+    "discharge_result_consumed": true,
+    "selected_item_confirmed_discharged": true,
+    "sample_rep32_lean_backed_constructor": true,
+    "sample_rep32_axiom_removed": true,
+    "sample_rep32_ledger_row_removed": true,
+    "default_nonalias_remains_discharged": true,
+    "ledger_count_after_discharge": 59,
+    "ledger_file_count_after_discharge": 14
+  },
+  "selected_next_target": "select_next_post_fnrep_samplerep32_discharge_bounded_attack",
+  "selected_decision": "consume_lean_backed_constructor_and_select_post_discharge_selector",
+  "recommended_selector_choice": "prepare_axiom_ledger_audit_refresh",
+  "candidate_selector_targets": [
+    "prepare_axiom_ledger_audit_refresh",
+    "return_to_full_pillar_target_map_next_lane_selection",
+    "prepare_next_proof_debt_ledger_discharge_item"
+  ],
+  "review_executes_selector_choice": false,
+  "nonclaim_boundaries": {
+    "master_action_promotion_authorized": false,
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The sampleRep32 proof-debt discharge is consumed as Lean-backed explicit-constructor authority, the axiom ledger is confirmed at 59 real axioms across 14 files, defaultNonAlias remains discharged, and no master-action promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, QFT-GR source-map closure, or governance-manifest enrollment is inferred."
+}
