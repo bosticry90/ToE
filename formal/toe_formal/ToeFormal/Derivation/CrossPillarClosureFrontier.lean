@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "Post-enforcement full-pillar selector consumes the status-surface return and selects the next proof-debt item preparation target"
+        "Next proof-debt ledger item selector consumes the post-enforcement full-pillar selector and selects sampleRep32 for bounded execution"
       retained_blocker :=
-        "next_proof_debt_ledger_discharge_item_pending_no_promotion"
+        "sampleRep32_selected_for_bounded_proof_debt_discharge_no_promotion"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_next_proof_debt_ledger_discharge_item"
+        "execute_selected_proof_debt_discharge_item"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the post-enforcement full-pillar selector. -/
+/-- Previous live target consumed by the next proof-debt item selector. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "return_to_full_pillar_target_map_next_lane_selection"
-
-/-- Current live target after the post-enforcement full-pillar selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_next_proof_debt_ledger_discharge_item"
+
+/-- Current live target after the next proof-debt item selector. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "execute_selected_proof_debt_discharge_item"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

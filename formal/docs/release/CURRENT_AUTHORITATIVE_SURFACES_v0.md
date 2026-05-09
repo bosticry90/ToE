@@ -11,12 +11,12 @@ Purpose:
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_next_proof_debt_ledger_discharge_item`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
-- `ACTIVE_LANE_v0: full_pillar_target_map_next_lane_selection_after_status_surface_enforcement`
+- `CURRENT_LIVE_NEXT_TARGET_v0: execute_selected_proof_debt_discharge_item`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_next_proof_debt_ledger_discharge_item`
+- `ACTIVE_LANE_v0: next_proof_debt_ledger_discharge_item`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterStatusSurfaceEnforcement.lean`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/NextProofDebtLedgerDischargeItem.lean`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
@@ -32,6 +32,7 @@ Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/StatusSurfaceCanonicalizationEnforcementPacketResultReview.lean`
 - `formal/toe_formal/ToeFormal/Derivation/PostStatusSurfaceEnforcementBoundedAttackSelection.lean`
 - `formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterStatusSurfaceEnforcement.lean`
+- `formal/toe_formal/ToeFormal/Derivation/NextProofDebtLedgerDischargeItem.lean`
 - `MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED`
 - `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`
@@ -48,6 +49,13 @@ Current result-token chain:
 - `STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_PACKET_RESULT_REVIEW_CONSUMED`
 - `POST_STATUS_SURFACE_ENFORCEMENT_NEXT_ATTACK_SELECTED`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_STATUS_SURFACE_ENFORCEMENT`
+- `NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_SELECTED`
+
+Historical live-target transition tokens retained for focused historical gates:
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_next_proof_debt_ledger_discharge_item`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
+- `ACTIVE_LANE_v0: full_pillar_target_map_next_lane_selection_after_status_surface_enforcement`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterStatusSurfaceEnforcement.lean`
 
 Current status-surface authority classes:
 - `CANONICAL_CONTROL_SOURCES: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
@@ -105,6 +113,7 @@ Maintenance bindings:
 - `STATUS_SURFACE_CANONICALIZATION_ENFORCEMENT_PACKET_RESULT_REVIEW_20260505_v0`
 - `POST_STATUS_SURFACE_ENFORCEMENT_BOUNDED_ATTACK_SELECTION_20260505_v0`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_STATUS_SURFACE_ENFORCEMENT_20260508_v0`
+- `NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_20260505_v0`
 - `TOE_ALLOW_TRACKED_OUTPUT_WRITES=1`
 
 Non-claim boundary:

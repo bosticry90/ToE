@@ -558,6 +558,7 @@ POST_STATUS_SURFACE_ENFORCEMENT_SELECTOR_RESULT_TOKEN = (
 FULL_PILLAR_AFTER_STATUS_SURFACE_ENFORCEMENT_RESULT_TOKEN = (
     "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_STATUS_SURFACE_ENFORCEMENT"
 )
+NEXT_PROOF_DEBT_ITEM_RESULT_TOKEN = "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_SELECTED"
 ARTIFACT_RETENTION_ENFORCEMENT_TARGET = "prepare_artifact_retention_enforcement_plan"
 ARTIFACT_RETENTION_ENFORCEMENT_RESULT_REVIEW_TARGET = (
     "review_artifact_retention_enforcement_plan_result"
@@ -586,8 +587,8 @@ POST_STATUS_SURFACE_ENFORCEMENT_SELECTOR_TARGET = (
 NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_TARGET = (
     "prepare_next_proof_debt_ledger_discharge_item"
 )
-LIVE_TARGET = NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_TARGET
-PREVIOUS_TARGET = FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
+LIVE_TARGET = SELECTED_PROOF_DEBT_DISCHARGE_ITEM_TARGET
+PREVIOUS_TARGET = NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -646,6 +647,7 @@ PAUSED_LANES = {
     "status_surface_canonicalization_enforcement_packet",
     "status_surface_canonicalization_enforcement_packet_result_review",
     "post_status_surface_enforcement_bounded_attack_selection",
+    "full_pillar_target_map_next_lane_selection_after_status_surface_enforcement",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -689,7 +691,7 @@ def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple
     return [(path, value)]
 
 
-def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_selection() -> None:
+def test_single_live_target_is_machine_pinned_after_next_proof_debt_item_selection() -> None:
     assert_current_target_consistent()
     payload = _registry()
     state = payload["current_target_state"]
@@ -699,7 +701,7 @@ def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_s
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "FullPillarTargetMapNextLaneSelectionAfterStatusSurfaceEnforcement.lean"
+        "NextProofDebtLedgerDischargeItem.lean"
     )
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -708,37 +710,44 @@ def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_s
     assert set(state["paused_lanes"]) == paused_ids
     assert (
         state["active_lane"]
-        == "full_pillar_target_map_next_lane_selection_after_status_surface_enforcement"
+        == "next_proof_debt_ledger_discharge_item"
     )
 
     current_active_workstream = active_workstream(payload)
     assert (
         current_active_workstream["workstream_id"]
-        == "full_pillar_target_map_next_lane_selection_after_status_surface_enforcement"
+        == "next_proof_debt_ledger_discharge_item"
     )
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "full_pillar_target_map_next_lane_selection_after_status_surface_enforcement_v0"
+        == "next_proof_debt_ledger_discharge_item_v0"
     )
     assert (
         current_active_workstream["consumed_selector_token"]
-        == POST_STATUS_SURFACE_ENFORCEMENT_SELECTOR_RESULT_TOKEN
+        == FULL_PILLAR_AFTER_STATUS_SURFACE_ENFORCEMENT_RESULT_TOKEN
     )
     assert (
         current_active_workstream["result_token"]
-        == FULL_PILLAR_AFTER_STATUS_SURFACE_ENFORCEMENT_RESULT_TOKEN
+        == NEXT_PROOF_DEBT_ITEM_RESULT_TOKEN
     )
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert current_active_workstream["selected_next_target_kind"] == (
-        "proof_debt_item_preparation_only"
-    )
+    assert current_active_workstream["selected_next_target_kind"] == "proof_debt_item_execution"
     assert current_active_workstream["authorized_effect"] == (
-        "SELECT_EXACTLY_ONE_NEXT_BOUNDED_LANE"
+        "SELECT_EXACTLY_ONE_BOUNDED_PROOF_DEBT_ITEM"
     )
-    assert current_active_workstream["selection_executes_lane"] == "no"
+    assert current_active_workstream["selection_executes_discharge"] == "no"
     assert current_active_workstream["selected_lane"] == "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM"
+    assert current_active_workstream["selected_debt_item"] == (
+        "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean::sampleRep32"
+    )
+    assert current_active_workstream["selected_declaration"] == "sampleRep32"
+    assert current_active_workstream["current_authority"] == "RETAINED_SPEC_BACKED_AXIOM"
+    assert (
+        current_active_workstream["intended_authority"]
+        == "LEAN_BACKED_EXPLICIT_SAMPLE_REPRESENTATION_CONSTRUCTOR"
+    )
     assert current_active_workstream["active_live_target_mirror_parity_preserved"] == "yes"
     assert current_active_workstream["loop_registry_canonical_live_target_source"] == "yes"
     assert current_active_workstream["active_public_mirror_field_count"] == 2
@@ -752,25 +761,12 @@ def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_s
         "review_status_surface_canonicalization_enforcement_packet_result",
         "select_next_post_status_surface_enforcement_bounded_attack",
         "return_to_full_pillar_target_map_next_lane_selection",
+        "prepare_next_proof_debt_ledger_discharge_item",
     }
-    assert (
-        current_active_workstream[
-            "current_authoritative_surfaces_classify_sources_and_mirrors"
-        ]
-        == "yes"
-    )
     assert current_active_workstream["ordinary_validation_mode"] == "read_only_by_default"
-    assert (
-        current_active_workstream["read_only_proof"]
-        == "prior_full_pytest_checkpoint_plus_clean_post_commit_diff_check"
-    )
-    assert current_active_workstream["full_pytest_passed"] == 6614
+    assert current_active_workstream["full_pytest_passed"] == 6625
     assert current_active_workstream["full_pytest_skipped"] == 230
-    assert (
-        current_active_workstream["full_pytest_is_prior_checkpoint_not_fresh_for_this_selector"]
-        == "yes"
-    )
-    assert current_active_workstream["lean_build_jobs"] == 7985
+    assert current_active_workstream["lean_build_jobs"] == 7987
     assert current_active_workstream["governance_suite_passed"] == "yes"
     assert current_active_workstream["new_large_tracked_snapshots_frozen_by_default"] == "yes"
     assert (
@@ -781,32 +777,9 @@ def test_single_live_target_is_machine_pinned_after_status_surface_enforcement_s
     )
     assert current_active_workstream["read_only_validation_preserved"] == "yes"
     assert current_active_workstream["artifact_freeze_preserved"] == "yes"
-    assert current_active_workstream["proof_debt_discharge_item_selected"] == "yes"
-    assert current_active_workstream["artifact_retention_migration_plan_selected"] == "no"
-    assert current_active_workstream["qm_stat_reentry_selected"] == "no"
-    assert current_active_workstream["sr_cosmo_followup_selected"] == "no"
+    assert current_active_workstream["selected_item_count"] == 1
+    assert current_active_workstream["candidate_item_count"] == 3
     assert current_active_workstream["qft_gr_witness_search_selected"] == "no"
-    assert current_active_workstream["master_action_gap_reduction_selected"] == "no"
-    assert current_active_workstream["status_surface_enforcement_followup_selected"] == "no"
-    assert current_active_workstream["candidate_lane_count"] == 7
-    assert set(current_active_workstream["candidate_lanes"]) == {
-        "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM",
-        "QM_STAT_THEOREM_GAP_RE_ENTRY_LANE",
-        "SR_COSMO_GLOBAL_OBSTRUCTION_FOLLOW_UP",
-        "QFT_GR_WITNESS_SEARCH_PLAN",
-        "MASTER_ACTION_DEPENDENCY_GAP_REDUCTION_PLAN",
-        "ARTIFACT_RETENTION_MIGRATION_PLAN",
-        "STATUS_SURFACE_ENFORCEMENT_FOLLOWUP",
-    }
-    assert set(current_active_workstream["candidate_targets"]) == {
-        LIVE_TARGET,
-        "prepare_qm_stat_theorem_gap_reentry",
-        "prepare_sr_cosmo_global_obstruction_followup",
-        "prepare_qft_gr_witness_search_plan",
-        "prepare_master_action_dependency_gap_reduction_plan",
-        "prepare_artifact_retention_migration_plan",
-        "prepare_status_surface_enforcement_followup_packet",
-    }
     assert current_active_workstream["real_axiom_count"] == 60
     assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
     assert current_active_workstream["seam_closure_claim"] == "no"

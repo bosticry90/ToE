@@ -1,0 +1,91 @@
+{
+  "schema_id": "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_20260505_v0",
+  "schema_version": 0,
+  "date": "2026-05-05",
+  "classification": "P-POLICY/nonclaim",
+  "selection_status": "completed_selection_only",
+  "current_target": "prepare_next_proof_debt_ledger_discharge_item",
+  "consumed_selector_token": "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_STATUS_SURFACE_ENFORCEMENT",
+  "selected_lane": "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM",
+  "result_token": "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM_SELECTED",
+  "source_selector_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterStatusSurfaceEnforcement.lean",
+  "source_selector_report": "formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_STATUS_SURFACE_ENFORCEMENT_20260508_v0.json",
+  "proof_debt_ledger": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+  "selection_surface": "formal/toe_formal/ToeFormal/Derivation/NextProofDebtLedgerDischargeItem.lean",
+  "focused_gate": "formal/python/tests/test_next_proof_debt_ledger_discharge_item_gate.py",
+  "authorized_effect": "SELECT_EXACTLY_ONE_BOUNDED_PROOF_DEBT_ITEM",
+  "selection_executes_discharge": false,
+  "selected_item_count": 1,
+  "candidate_item_count": 3,
+  "candidate_items": [
+    {
+      "item": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean::sampleRep32",
+      "declaration": "sampleRep32",
+      "selection": "selected",
+      "ledger_status": "spec_backed",
+      "current_authority": "RETAINED_SPEC_BACKED_AXIOM",
+      "intended_authority": "LEAN_BACKED_EXPLICIT_SAMPLE_REPRESENTATION_CONSTRUCTOR",
+      "associated_pillar_or_seam": "SCALAR_QFT",
+      "blocks_full_pillar_target": "no",
+      "reason": "Retained same-file sample witness for the non-alias negative-control proof; small local scalar/QFT item with no QFT-GR witness-search dependency."
+    },
+    {
+      "item": "formal/toe_formal/ToeFormal/Variational/FieldRepresentationSample.lean::Rep_on_samples_delta_one",
+      "declaration": "Rep_on_samples_delta_one",
+      "selection": "not_selected",
+      "ledger_status": "spec_backed",
+      "reason": "Kept behind sampleRep32 so the next execution packet can focus on one same-file witness."
+    },
+    {
+      "item": "formal/toe_formal/ToeFormal/Variational/FieldRepresentationSample.lean::Rep_on_samples_delta_I",
+      "declaration": "Rep_on_samples_delta_I",
+      "selection": "not_selected",
+      "ledger_status": "spec_backed",
+      "reason": "Kept behind sampleRep32 so the next execution packet can focus on one same-file witness."
+    }
+  ],
+  "selected_debt_item": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean::sampleRep32",
+  "selected_declaration": "sampleRep32",
+  "selected_file": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01.lean",
+  "ledger_status": "spec_backed",
+  "current_authority": "RETAINED_SPEC_BACKED_AXIOM",
+  "intended_authority": "LEAN_BACKED_EXPLICIT_SAMPLE_REPRESENTATION_CONSTRUCTOR",
+  "associated_pillar_or_seam": "SCALAR_QFT",
+  "blocks_full_pillar_target": "no",
+  "selection_reason": "Select the retained same-file sampleRep32 witness because it is a small, local scalar/QFT proof-debt item with no full-pillar blocking status and no QFT-GR witness-search dependency.",
+  "next_target": "execute_selected_proof_debt_discharge_item",
+  "validation_checkpoint": {
+    "full_pytest_passed": 6625,
+    "full_pytest_skipped": 230,
+    "lean_build_target": "ToeFormal",
+    "lean_build_jobs": 7987,
+    "governance_suite_passed": true,
+    "git_diff_check_passed": true,
+    "ordinary_validation_mode": "read_only_by_default"
+  },
+  "preserved_enforcement": {
+    "read_only_validation_preserved": true,
+    "artifact_freeze_preserved": true,
+    "active_live_target_mirror_parity_preserved": true,
+    "loop_registry_canonical_source_preserved": true,
+    "tracked_generated_output_mutation_forbidden_during_validation": true
+  },
+  "preserved_posture": {
+    "real_axiom_count": 60,
+    "defaultNonAlias_absent_from_unresolved_axiom_debt": true,
+    "sampleRep32_selected_from_retained_spec_backed_axiom": true,
+    "qft_gr_source_map_closure_authorized": false
+  },
+  "nonclaim_boundaries": {
+    "discharge_executed": false,
+    "master_action_promotion_authorized": false,
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The packet consumes the full-pillar selector result, selects exactly one bounded proof-debt item, records its current authority and intended stronger authority, and preserves no master-action promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE claim, or QFT-GR source-map closure."
+}
