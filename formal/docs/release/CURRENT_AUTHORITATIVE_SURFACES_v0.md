@@ -87,10 +87,16 @@ Canonical public summaries:
 - `formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md`
 
 Current validation commands:
+- `.\run_governance.ps1`
+- `.\run_pytest.ps1`
+- `.\run_lean.ps1`
+- `git diff --check`
+- `git diff --exit-code`
+
+Manual fallback validation commands:
 - `pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1`
 - `./py.ps1 -m pytest formal/python/tests -q`
 - `Push-Location formal/toe_formal; lake build ToeFormal; Pop-Location`
-- `git diff --exit-code`
 
 Historical-only classes:
 - `formal/tooling_snapshots`: retained historical snapshots, not live target authority.

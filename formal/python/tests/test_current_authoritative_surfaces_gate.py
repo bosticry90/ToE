@@ -222,6 +222,11 @@ def test_current_authoritative_surfaces_index_records_validation_and_historical_
     text = _read(INDEX_PATH)
 
     for token in {
+        ".\\run_governance.ps1",
+        ".\\run_pytest.ps1",
+        ".\\run_lean.ps1",
+        "git diff --check",
+        "Manual fallback validation commands",
         "pwsh -NoProfile -ExecutionPolicy Bypass -File ./governance_suite.ps1",
         "./py.ps1 -m pytest formal/python/tests -q",
         "Push-Location formal/toe_formal; lake build ToeFormal; Pop-Location",
