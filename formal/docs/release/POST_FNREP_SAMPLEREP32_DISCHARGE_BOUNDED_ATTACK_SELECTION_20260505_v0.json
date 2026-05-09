@@ -1,0 +1,82 @@
+{
+  "schema_id": "POST_FNREP_SAMPLEREP32_DISCHARGE_BOUNDED_ATTACK_SELECTION_v0",
+  "date": "2026-05-05",
+  "classification": "P-POLICY/nonclaim",
+  "selection_status": "completed_selection_only",
+  "current_target": "select_next_post_fnrep_samplerep32_discharge_bounded_attack",
+  "consumed_review_target": "review_fnrep_nonalias_samplerep32_discharge_result",
+  "consumed_review_token": "FNREP_NONALIAS_SAMPLEREP32_DISCHARGE_RESULT_REVIEW_CONSUMED_LEAN_BACKED_CONSTRUCTOR",
+  "output_token": "POST_FNREP_SAMPLEREP32_DISCHARGE_NEXT_ATTACK_SELECTED",
+  "review_surface": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32DischargeResultReview.lean",
+  "review_report": "formal/docs/release/PROOF_DEBT_DISCHARGE_FNREP_SAMPLEREP32_RESULT_REVIEW_20260505_v0.json",
+  "discharge_surface": "formal/toe_formal/ToeFormal/Variational/FNRepNonAliasEquivalence01SampleRep32Discharge.lean",
+  "discharge_report": "formal/docs/release/PROOF_DEBT_DISCHARGE_FNREP_SAMPLEREP32_20260505_v0.json",
+  "selection_surface": "formal/toe_formal/ToeFormal/Derivation/PostFNRepSampleRep32DischargeBoundedAttackSelection.lean",
+  "focused_gate": "formal/python/tests/test_post_fnrep_samplerep32_discharge_bounded_attack_selection_gate.py",
+  "authorized_effect": "SELECT_EXACTLY_ONE_NEXT_BOUNDED_TARGET",
+  "selection_executes_target": false,
+  "selection_count": 1,
+  "candidate_next_targets": [
+    {
+      "target": "prepare_axiom_ledger_audit_refresh",
+      "selected": true,
+      "reason": "The sampleRep32 discharge review consumed a real axiom-ledger delta from 60 to 59 real axioms and from 15 to 14 axiom-bearing files, so refresh the authoritative axiom-ledger audit before choosing another science or proof-debt lane."
+    },
+    {
+      "target": "prepare_next_proof_debt_ledger_discharge_item",
+      "selected": false,
+      "reason": "Useful after the ledger refresh locks the updated 59-real-axiom posture."
+    },
+    {
+      "target": "return_to_full_pillar_target_map_next_lane_selection",
+      "selected": false,
+      "reason": "Useful after the ledger refresh updates authoritative surfaces that depend on the axiom count."
+    }
+  ],
+  "selected_next_target": "prepare_axiom_ledger_audit_refresh",
+  "selected_next_target_kind": "ledger_audit_refresh_preparation",
+  "selected_decision": "prepare_axiom_ledger_audit_refresh",
+  "review_interpretation": {
+    "sampleRep32_result_review_consumed": true,
+    "sampleRep32_authority": "LEAN_BACKED_EXPLICIT_SAMPLE_REPRESENTATION_CONSTRUCTOR",
+    "defaultNonAlias_authority": "LEAN_BACKED_DISCHARGED",
+    "ledger_delta_consumed": "60_to_59_real_axioms_and_15_to_14_axiom_bearing_files"
+  },
+  "authority_posture": {
+    "real_axiom_count": 59,
+    "real_axiom_file_count": 14,
+    "defaultNonAlias": "discharged_lean_backed_absent_from_unresolved_axiom_debt",
+    "sampleRep32": "discharged_lean_backed_explicit_constructor_absent_from_unresolved_axiom_debt"
+  },
+  "audit_refresh_target_expectations": {
+    "expected_result_token": "AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS",
+    "real_axiom_count": 59,
+    "real_axiom_file_count": 14,
+    "defaultNonAlias_absent_from_unresolved_axiom_debt": true,
+    "sampleRep32_absent_from_unresolved_axiom_debt": true,
+    "recent_discharge_result_review_referenced": true
+  },
+  "forbidden_effects": [
+    "PILLAR_COMPLETION",
+    "SEAM_CLOSURE",
+    "PHASE_2_READINESS",
+    "EMPIRICAL_ADEQUACY",
+    "CANONICAL_TOE_STATUS",
+    "QFT_GR_SOURCE_MAP_CLOSURE",
+    "MASTER_ACTION_PROMOTION",
+    "SELECTED_TARGET_EXECUTION"
+  ],
+  "nonclaim_boundaries": {
+    "pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "master_action_promotion_authorized": false,
+    "governance_manifest_enrollment_authorized": false,
+    "selection_executes_target": false
+  },
+  "acceptance_condition": "The selector consumes the sampleRep32 discharge review, selects exactly one next bounded target, preserves the 59-real-axiom posture, and does not infer master-action promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, or QFT-GR source-map closure.",
+  "next_action_after_selection_packet": "prepare_axiom_ledger_audit_refresh"
+}

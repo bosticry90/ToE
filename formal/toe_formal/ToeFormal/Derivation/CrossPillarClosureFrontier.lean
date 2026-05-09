@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "FNRep sampleRep32 discharge result review consumes the Lean-backed explicit-constructor discharge and confirms the 59-axiom ledger posture"
+        "Post-FNRep sampleRep32 discharge selector consumes the result-review target, selects axiom-ledger audit refresh, and preserves the 59-axiom 14-file ledger posture"
       retained_blocker :=
-        "sampleRep32_result_review_consumed_pending_post_discharge_selection_no_promotion"
+        "post_fnrep_samplerep32_discharge_bounded_attack_selection_nonclaim_boundary"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "select_next_post_fnrep_samplerep32_discharge_bounded_attack"
+        "prepare_axiom_ledger_audit_refresh"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the FNRep sampleRep32 result review. -/
+/-- Previous live target consumed by the post-FNRep sampleRep32 selector. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_fnrep_nonalias_samplerep32_discharge_result"
-
-/-- Current live target after the FNRep sampleRep32 result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "select_next_post_fnrep_samplerep32_discharge_bounded_attack"
+
+/-- Current live target after the post-FNRep sampleRep32 selector. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_axiom_ledger_audit_refresh"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

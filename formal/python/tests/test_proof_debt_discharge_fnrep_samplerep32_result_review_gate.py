@@ -11,6 +11,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_forbidden_promotions_closed,
     assert_frontier_matches_registry,
     assert_public_surfaces_match_registry,
+    skip_if_not_current_target,
     workstream,
 )
 
@@ -195,11 +196,13 @@ def test_sample_rep32_discharge_result_review_report_confirms_ledger_state() -> 
 
 
 def test_registry_rotates_to_post_sample_rep32_discharge_selector() -> None:
+    payload = _registry()
+    skip_if_not_current_target(payload, NEXT_TARGET)
+
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_forbidden_promotions_closed()
     assert_public_surfaces_match_registry()
-    payload = _registry()
     state = payload["current_target_state"]
 
     assert state["previous_live_next_target"] == CONSUMED_TARGET
