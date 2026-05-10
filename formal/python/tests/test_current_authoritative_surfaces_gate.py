@@ -201,6 +201,14 @@ QM_STAT_THEOREM_GAP_REENTRY_PATH = (
     / "Derivation"
     / "QMStatTheoremGapReentry.lean"
 )
+QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "QMStatTheoremGapReentryResultReview.lean"
+)
 LEDGER_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md"
 
 
@@ -214,12 +222,12 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-        "CURRENT_LIVE_NEXT_TARGET_v0: review_qm_stat_theorem_gap_reentry_result",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qm_stat_theorem_gap_reentry",
-        "ACTIVE_LANE_v0: qm_stat_theorem_gap_reentry",
+        "CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_target_stat_entropy_semantics_theorem_gap_bounded_attack",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_qm_stat_theorem_gap_reentry_result",
+        "ACTIVE_LANE_v0: qm_stat_theorem_gap_reentry_result_review",
         "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
         "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QMStatTheoremGapReentry.lean",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QMStatTheoremGapReentryResultReview.lean",
         "READ_ONLY_VALIDATION_HYGIENE_ENFORCED",
         "POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE",
@@ -242,6 +250,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         "POST_SAMPLEREP32_AXIOM_AUDIT_NEXT_ATTACK_SELECTED",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_SAMPLEREP32_AXIOM_AUDIT",
         "QM_STAT_THEOREM_GAP_REENTRY_PREPARED",
+        "QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_CONSUMED",
         "CANONICAL_CONTROL_SOURCES",
         "PUBLIC_SUMMARY_SURFACES",
         "ACTIVE_TARGET_MIRROR_SURFACES",
@@ -274,6 +283,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         POST_SAMPLEREP32_AXIOM_AUDIT_SELECTOR_PATH,
         AFTER_SAMPLEREP32_AXIOM_AUDIT_FULL_PILLAR_SELECTOR_PATH,
         QM_STAT_THEOREM_GAP_REENTRY_PATH,
+        QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_PATH,
         LEDGER_PATH,
     }:
         assert str(path.relative_to(REPO_ROOT)).replace("\\", "/") in text
@@ -337,6 +347,7 @@ def test_current_authoritative_surfaces_index_records_validation_and_historical_
         "POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_20260505_v0",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_SAMPLEREP32_AXIOM_AUDIT_20260510_v0",
         "QM_STAT_THEOREM_GAP_REENTRY_20260510_v0",
+        "QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_20260510_v0",
         "TOE_ALLOW_TRACKED_OUTPUT_WRITES=1",
     }:
         assert token in text

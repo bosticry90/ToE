@@ -441,6 +441,14 @@ QM_STAT_THEOREM_GAP_REENTRY_PATH = (
     / "Derivation"
     / "QMStatTheoremGapReentry.lean"
 )
+QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "QMStatTheoremGapReentryResultReview.lean"
+)
 MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH = (
     REPO_ROOT
     / "formal"
@@ -689,12 +697,21 @@ QM_STAT_THEOREM_GAP_REENTRY_SELECTED_GAP = (
 QM_STAT_THEOREM_GAP_REENTRY_SELECTED_OBLIGATION = (
     "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0"
 )
+QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_TOKEN = (
+    "QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_CONSUMED"
+)
+QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_TARGET = (
+    "review_qm_stat_theorem_gap_reentry_result"
+)
+QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_ATTACK_TARGET = (
+    "prepare_qm_stat_target_stat_entropy_semantics_theorem_gap_bounded_attack"
+)
 AUDIT_REFRESH_TARGET = "prepare_axiom_ledger_audit_refresh"
 AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
-PREVIOUS_TARGET = QM_STAT_THEOREM_GAP_REENTRY_TARGET
-LIVE_TARGET = "review_qm_stat_theorem_gap_reentry_result"
+PREVIOUS_TARGET = QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_TARGET
+LIVE_TARGET = QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_ATTACK_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -761,6 +778,7 @@ PAUSED_LANES = {
     "axiom_ledger_audit_refresh_after_samplerep32_result_review",
     "post_samplerep32_axiom_audit_bounded_attack_selection",
     "full_pillar_target_map_next_lane_selection_after_samplerep32_axiom_audit",
+    "qm_stat_theorem_gap_reentry",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -813,7 +831,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        QM_STAT_THEOREM_GAP_REENTRY_PATH.relative_to(REPO_ROOT)
+        QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -822,7 +840,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert set(state["paused_lanes"]) == paused_ids
     assert (
         state["active_lane"]
-        == "qm_stat_theorem_gap_reentry"
+        == "qm_stat_theorem_gap_reentry_result_review"
     )
 
     previous_fnrep_workstream = _workstream(payload, "fnrep_nonalias_samplerep32_discharge")
@@ -1032,25 +1050,62 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert previous_full_pillar_workstream["governance_manifest_enrollment_authorized"] == "no"
     assert previous_full_pillar_workstream["master_action_promotion_authorized"] == "no"
 
-    current_active_workstream = active_workstream(payload)
-    assert current_active_workstream["workstream_id"] == "qm_stat_theorem_gap_reentry"
-    assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
-    assert current_active_workstream["latest_surface"] == "qm_stat_theorem_gap_reentry_v0"
-    assert current_active_workstream["consumed_selector_token"] == (
+    previous_reentry_workstream = _workstream(payload, "qm_stat_theorem_gap_reentry")
+    assert previous_reentry_workstream["status"] == "paused"
+    assert previous_reentry_workstream["authorized_next_strict_target"] == (
+        QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_TARGET
+    )
+    assert previous_reentry_workstream["consumed_target"] == QM_STAT_THEOREM_GAP_REENTRY_TARGET
+    assert previous_reentry_workstream["latest_surface"] == "qm_stat_theorem_gap_reentry_v0"
+    assert previous_reentry_workstream["consumed_selector_token"] == (
         FULL_PILLAR_AFTER_SAMPLEREP32_AXIOM_AUDIT_RESULT_TOKEN
     )
-    assert current_active_workstream["result_token"] == QM_STAT_THEOREM_GAP_REENTRY_RESULT_TOKEN
+    assert previous_reentry_workstream["result_token"] == QM_STAT_THEOREM_GAP_REENTRY_RESULT_TOKEN
+    assert previous_reentry_workstream["selected_gap"] == QM_STAT_THEOREM_GAP_REENTRY_SELECTED_GAP
+    assert (
+        previous_reentry_workstream["selected_obligation"]
+        == QM_STAT_THEOREM_GAP_REENTRY_SELECTED_OBLIGATION
+    )
+    assert previous_reentry_workstream["selected_next_target"] == (
+        QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_TARGET
+    )
+    assert previous_reentry_workstream["selection_executes_gap_discharge"] == "no"
+    assert previous_reentry_workstream["target_entropy_gap_selected"] == "yes"
+    assert previous_reentry_workstream["theorem_gap_discharged"] == "no"
+    assert previous_reentry_workstream["broader_qm_stat_theorem_work_authorized"] == "no"
+    assert previous_reentry_workstream["qft_gr_source_map_closure_authorized"] == "no"
+    assert previous_reentry_workstream["seam_closure_claim"] == "no"
+    assert previous_reentry_workstream["phase2_readiness_claim"] == "no"
+    assert previous_reentry_workstream["empirical_adequacy_claim"] == "no"
+    assert previous_reentry_workstream["canonical_toe_claim"] == "no"
+    assert previous_reentry_workstream["governance_manifest_enrollment_authorized"] == "no"
+    assert previous_reentry_workstream["master_action_promotion_authorized"] == "no"
+
+    current_active_workstream = active_workstream(payload)
+    assert current_active_workstream["workstream_id"] == "qm_stat_theorem_gap_reentry_result_review"
+    assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
+    assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
+    assert (
+        current_active_workstream["latest_surface"]
+        == "qm_stat_theorem_gap_reentry_result_review_v0"
+    )
+    assert current_active_workstream["consumed_result_token"] == (
+        QM_STAT_THEOREM_GAP_REENTRY_RESULT_TOKEN
+    )
+    assert (
+        current_active_workstream["review_token"]
+        == QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_TOKEN
+    )
     assert current_active_workstream["selected_gap"] == QM_STAT_THEOREM_GAP_REENTRY_SELECTED_GAP
     assert (
         current_active_workstream["selected_obligation"]
         == QM_STAT_THEOREM_GAP_REENTRY_SELECTED_OBLIGATION
     )
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert current_active_workstream["selection_executes_gap_discharge"] == "no"
-    assert current_active_workstream["target_entropy_gap_selected"] == "yes"
+    assert current_active_workstream["bounded_attack_preparation_authorized"] == "yes"
+    assert current_active_workstream["review_executes_bounded_attack"] == "no"
+    assert current_active_workstream["entropy_semantics_theorem_claimed"] == "no"
     assert current_active_workstream["theorem_gap_discharged"] == "no"
-    assert current_active_workstream["broader_qm_stat_theorem_work_authorized"] == "no"
     assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
     assert current_active_workstream["seam_closure_claim"] == "no"
     assert current_active_workstream["phase2_readiness_claim"] == "no"

@@ -1,0 +1,53 @@
+{
+  "schema_id": "QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_20260510_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "classification": "P-POLICY",
+  "surface_id": "qm_stat_theorem_gap_reentry_result_review_v0",
+  "current_target": "review_qm_stat_theorem_gap_reentry_result",
+  "consumed_result_token": "QM_STAT_THEOREM_GAP_REENTRY_PREPARED",
+  "review_token": "QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_CONSUMED",
+  "selected_next_target": "prepare_qm_stat_target_stat_entropy_semantics_theorem_gap_bounded_attack",
+  "selected_next_target_kind": "qm_stat_target_stat_entropy_semantics_bounded_attack_preparation_only",
+  "review_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatTheoremGapReentryResultReview.lean",
+  "source_reentry_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatTheoremGapReentry.lean",
+  "source_reentry_report": "formal/docs/release/QM_STAT_THEOREM_GAP_REENTRY_20260510_v0.json",
+  "authorized_effect": "AUTHORIZE_PREPARATION_ONLY_FOR_SELECTED_QM_STAT_THEOREM_GAP_BOUNDED_ATTACK",
+  "review_executes_bounded_attack": false,
+  "selected_gap_count": 1,
+  "selected_gap": {
+    "gap_id": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0",
+    "category_id": "entropy_mean_variance_residual_bridge_gap",
+    "selected_obligation_id": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0",
+    "existing_blocker_id": "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED",
+    "current_authority_level": "RETAINED_SUPPLIED_TARGET_STAT_ENTROPY_STRUCTURE_REQUIRED_BY_RESIDUAL_PACKAGE",
+    "intended_stronger_authority": "THEOREM_LINKED_TARGET_STAT_ENTROPY_SEMANTICS_DISCHARGE_OR_EXPLICIT_OBSTRUCTION"
+  },
+  "review_basis": {
+    "prepared_packet_result_token": "QM_STAT_THEOREM_GAP_REENTRY_PREPARED",
+    "prepared_packet_selected_gap": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0",
+    "prepared_packet_selected_obligation": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0",
+    "exactly_one_theorem_gap_remains_selected": true,
+    "entropy_semantics_theorem_claimed": false,
+    "theorem_gap_discharged": false
+  },
+  "validation_checkpoint": {
+    "ordinary_validation_mode": "focused_packet_validation",
+    "focused_gate": "formal/python/tests/test_qm_stat_theorem_gap_reentry_result_review_gate.py",
+    "lean_target": "ToeFormal/Derivation/QMStatTheoremGapReentryResultReview.lean",
+    "governance_manifest_enrollment_authorized": false
+  },
+  "nonclaim_boundaries": {
+    "review_executes_bounded_attack": false,
+    "entropy_semantics_theorem_claimed": false,
+    "theorem_gap_discharged": false,
+    "qm_stat_pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "master_action_promotion_authorized": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "next_action_after_result_review": "prepare_qm_stat_target_stat_entropy_semantics_theorem_gap_bounded_attack"
+}
