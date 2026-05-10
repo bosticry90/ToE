@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "Post-sampleRep32 full-pillar selector consumes the 59-axiom audit return and selects bounded QM-STAT theorem-gap re-entry without lane execution"
+        "QM-STAT theorem-gap re-entry preparation consumes the post-sampleRep32 full-pillar selector and identifies target STAT entropy semantics as the single bounded re-entry item without discharge"
       retained_blocker :=
-        "full_pillar_target_map_next_lane_selection_after_samplerep32_axiom_audit_nonclaim_boundary"
+        "qm_stat_theorem_gap_reentry_target_entropy_semantics_nonclaim_boundary"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qm_stat_theorem_gap_reentry"
+        "review_qm_stat_theorem_gap_reentry_result"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the post-sampleRep32 full-pillar selector. -/
+/-- Previous live target consumed by the QM-STAT theorem-gap re-entry packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "return_to_full_pillar_target_map_next_lane_selection"
-
-/-- Current live target after the post-sampleRep32 full-pillar selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qm_stat_theorem_gap_reentry"
+
+/-- Current live target after the QM-STAT theorem-gap re-entry packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qm_stat_theorem_gap_reentry_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

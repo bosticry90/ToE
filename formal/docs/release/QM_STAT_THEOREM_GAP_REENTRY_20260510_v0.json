@@ -1,0 +1,88 @@
+{
+  "schema_id": "QM_STAT_THEOREM_GAP_REENTRY_20260510_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "classification": "P-POLICY",
+  "surface_id": "qm_stat_theorem_gap_reentry_v0",
+  "current_target": "prepare_qm_stat_theorem_gap_reentry",
+  "consumed_selector_token": "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_SAMPLEREP32_AXIOM_AUDIT",
+  "result_token": "QM_STAT_THEOREM_GAP_REENTRY_PREPARED",
+  "selected_next_target": "review_qm_stat_theorem_gap_reentry_result",
+  "selected_next_target_kind": "qm_stat_theorem_gap_reentry_result_review_only",
+  "selection_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatTheoremGapReentry.lean",
+  "source_selector_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterSampleRep32AxiomAudit.lean",
+  "source_selector_report": "formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_SAMPLEREP32_AXIOM_AUDIT_20260510_v0.json",
+  "source_probability_result_review_surface": "formal/toe_formal/ToeFormal/Derivation/QMSTATSourceProbabilityExtractionResultReview.lean",
+  "residual_package_surface": "formal/toe_formal/ToeFormal/Bridges/QM_STAT_TransportResidualPackage.lean",
+  "authorized_effect": "IDENTIFY_EXACTLY_ONE_BOUNDED_QM_STAT_THEOREM_GAP_ITEM",
+  "selection_executes_gap_discharge": false,
+  "selection_count": 1,
+  "candidate_category_count": 5,
+  "selected_gap": {
+    "gap_id": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0",
+    "category_id": "entropy_mean_variance_residual_bridge_gap",
+    "selected_obligation_id": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0",
+    "existing_blocker_id": "PHASE1-BLOCKER-QMSTAT-TRANSPORT-RESIDUAL-PACKAGE-RETAINED",
+    "current_authority_level": "RETAINED_SUPPLIED_TARGET_STAT_ENTROPY_STRUCTURE_REQUIRED_BY_RESIDUAL_PACKAGE",
+    "intended_stronger_authority": "THEOREM_LINKED_TARGET_STAT_ENTROPY_SEMANTICS_DISCHARGE_OR_EXPLICIT_OBSTRUCTION",
+    "current_blocker": "target STAT entropy semantics remains supplied, not theorem-derived",
+    "bounded_review_question": "Can the target STAT entropy semantics obligation be theorem-linked from the existing finite residual package context, or must the obligation be explicitly retained as an obstruction?"
+  },
+  "candidate_categories": [
+    {
+      "category_id": "finite_transport_residual_theorem_gap",
+      "selection": "not_selected"
+    },
+    {
+      "category_id": "entropy_mean_variance_residual_bridge_gap",
+      "selection": "selected",
+      "candidate_target": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0"
+    },
+    {
+      "category_id": "finite_alignment_assumption_discharge_candidate",
+      "selection": "not_selected"
+    },
+    {
+      "category_id": "qm_stat_source_target_map_admissibility_gap",
+      "selection": "not_selected"
+    },
+    {
+      "category_id": "statistical_closure_obstruction_followup",
+      "selection": "not_selected"
+    }
+  ],
+  "reentry_basis": {
+    "source_selector_selected_lane": "QM_STAT_THEOREM_GAP_RE_ENTRY_LANE",
+    "source_selector_selected_target": "prepare_qm_stat_theorem_gap_reentry",
+    "target_map_row": "FULL_SEAM_QM_STAT_TARGET_MAP_v0",
+    "target_map_next_admissible_action": "map_qm_stat_full_probability_entropy_transport_obligations",
+    "source_probability_result_review_completed": true,
+    "source_probability_retained_as_supplied": true,
+    "target_entropy_semantics_authorized_before_this_packet": false,
+    "bounded_item_ready": true
+  },
+  "validation_checkpoint": {
+    "ordinary_validation_mode": "focused_packet_validation",
+    "focused_gate": "formal/python/tests/test_qm_stat_theorem_gap_reentry_gate.py",
+    "lean_target": "ToeFormal/Derivation/QMStatTheoremGapReentry.lean",
+    "governance_manifest_enrollment_authorized": false
+  },
+  "nonclaim_boundaries": {
+    "selection_executes_gap_discharge": false,
+    "target_entropy_gap_selected": true,
+    "finite_transport_residual_gap_selected": false,
+    "finite_alignment_gap_selected": false,
+    "source_target_map_admissibility_gap_selected": false,
+    "statistical_closure_followup_selected": false,
+    "broader_qm_stat_theorem_work_authorized": false,
+    "theorem_gap_discharged": false,
+    "qm_stat_pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "master_action_promotion_authorized": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "next_action_after_reentry_packet": "review_qm_stat_theorem_gap_reentry_result"
+}
