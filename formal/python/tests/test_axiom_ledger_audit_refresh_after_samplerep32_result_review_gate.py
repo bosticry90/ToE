@@ -16,6 +16,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_public_surfaces_match_registry,
     loop_registry,
     read_text,
+    skip_if_not_current_target,
     workstream,
 )
 from formal.python.tests.test_lean_axiom_spec_backed_ledger_gate import (
@@ -255,6 +256,7 @@ def test_result_review_after_samplerep32_report_preserves_nonclaim_boundaries() 
 
 def test_result_review_after_samplerep32_registry_rotates_to_post_audit_selector() -> None:
     payload = loop_registry()
+    skip_if_not_current_target(payload, NEXT_TARGET)
     assert_current_target_consistent()
     assert_frontier_matches_registry()
     assert_forbidden_promotions_closed()

@@ -417,6 +417,14 @@ AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_PATH = (
     / "Derivation"
     / "AxiomLedgerAuditRefreshAfterSampleRep32ResultReview.lean"
 )
+POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "PostSampleRep32AxiomAuditBoundedAttackSelection.lean"
+)
 MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH = (
     REPO_ROOT
     / "formal"
@@ -648,9 +656,15 @@ AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_TOKEN = (
 AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_TOKEN = (
     "AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_CONSUMED_59_REAL_AXIOMS_CONFIRMED"
 )
+POST_SAMPLEREP32_AXIOM_AUDIT_NEXT_ATTACK_SELECTED = (
+    "POST_SAMPLEREP32_AXIOM_AUDIT_NEXT_ATTACK_SELECTED"
+)
 AUDIT_REFRESH_TARGET = "prepare_axiom_ledger_audit_refresh"
-PREVIOUS_TARGET = "review_axiom_ledger_audit_refresh_after_samplerep32_result"
-LIVE_TARGET = "select_next_post_samplerep32_axiom_audit_bounded_attack"
+AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
+    "review_axiom_ledger_audit_refresh_after_samplerep32_result"
+)
+PREVIOUS_TARGET = "select_next_post_samplerep32_axiom_audit_bounded_attack"
+LIVE_TARGET = "return_to_full_pillar_target_map_next_lane_selection"
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -714,6 +728,7 @@ PAUSED_LANES = {
     "fnrep_nonalias_samplerep32_discharge",
     "post_fnrep_samplerep32_discharge_bounded_attack_selection",
     "axiom_ledger_audit_refresh_after_samplerep32",
+    "axiom_ledger_audit_refresh_after_samplerep32_result_review",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -757,7 +772,7 @@ def _iter_key_values(value: Any, path: tuple[str, ...] = ()) -> list[tuple[tuple
     return [(path, value)]
 
 
-def test_single_live_target_is_machine_pinned_after_samplerep32_audit_review() -> None:
+def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector() -> None:
     assert_current_target_consistent()
     payload = _registry()
     state = payload["current_target_state"]
@@ -766,7 +781,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_review() -
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_PATH.relative_to(
+        POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_PATH.relative_to(
             REPO_ROOT
         )
     ).replace("\\", "/")
@@ -777,7 +792,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_review() -
     assert set(state["paused_lanes"]) == paused_ids
     assert (
         state["active_lane"]
-        == "axiom_ledger_audit_refresh_after_samplerep32_result_review"
+        == "post_samplerep32_axiom_audit_bounded_attack_selection"
     )
 
     previous_fnrep_workstream = _workstream(payload, "fnrep_nonalias_samplerep32_discharge")
@@ -826,7 +841,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_review() -
         payload, "axiom_ledger_audit_refresh_after_samplerep32"
     )
     assert previous_audit_workstream["status"] == "paused"
-    assert previous_audit_workstream["authorized_next_strict_target"] == PREVIOUS_TARGET
+    assert (
+        previous_audit_workstream["authorized_next_strict_target"]
+        == AXIOM_AUDIT_RESULT_REVIEW_TARGET
+    )
     assert previous_audit_workstream["consumed_target"] == AUDIT_REFRESH_TARGET
     assert (
         previous_audit_workstream["latest_surface"]
@@ -836,40 +854,61 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_review() -
         previous_audit_workstream["result_token"]
         == AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_TOKEN
     )
-    assert previous_audit_workstream["selected_next_target"] == PREVIOUS_TARGET
+    assert previous_audit_workstream["selected_next_target"] == AXIOM_AUDIT_RESULT_REVIEW_TARGET
     assert previous_audit_workstream["real_axiom_count"] == 59
     assert previous_audit_workstream["real_axiom_file_count"] == 14
+
+    previous_review_workstream = _workstream(
+        payload, "axiom_ledger_audit_refresh_after_samplerep32_result_review"
+    )
+    assert previous_review_workstream["status"] == "paused"
+    assert previous_review_workstream["authorized_next_strict_target"] == PREVIOUS_TARGET
+    assert previous_review_workstream["consumed_target"] == AXIOM_AUDIT_RESULT_REVIEW_TARGET
+    assert (
+        previous_review_workstream["latest_surface"]
+        == "axiom_ledger_audit_refresh_after_samplerep32_result_review_v0"
+    )
+    assert (
+        previous_review_workstream["review_token"]
+        == AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_TOKEN
+    )
+    assert previous_review_workstream["selected_next_target"] == PREVIOUS_TARGET
+    assert previous_review_workstream["real_axiom_count"] == 59
+    assert previous_review_workstream["real_axiom_file_count"] == 14
 
     current_active_workstream = active_workstream(payload)
     assert (
         current_active_workstream["workstream_id"]
-        == "axiom_ledger_audit_refresh_after_samplerep32_result_review"
+        == "post_samplerep32_axiom_audit_bounded_attack_selection"
     )
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "axiom_ledger_audit_refresh_after_samplerep32_result_review_v0"
+        == "post_samplerep32_axiom_audit_bounded_attack_selection_v0"
     )
     assert (
-        current_active_workstream["consumed_result_token"]
-        == AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_TOKEN
-    )
-    assert (
-        current_active_workstream["review_token"]
+        current_active_workstream["consumed_review_token"]
         == AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_TOKEN
     )
-    assert current_active_workstream["audit_surface"] == str(
-        AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_PATH.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
-    assert current_active_workstream["audit_report"] == (
-        "formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_20260505_v0.json"
+    assert (
+        current_active_workstream["output_token"]
+        == POST_SAMPLEREP32_AXIOM_AUDIT_NEXT_ATTACK_SELECTED
     )
-    assert current_active_workstream["review_report"] == (
+    assert current_active_workstream["source_review_surface"] == str(
+        AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_PATH.relative_to(
+            REPO_ROOT
+        )
+    ).replace("\\", "/")
+    assert current_active_workstream["source_review_report"] == (
         "formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_20260505_v0.json"
     )
+    assert current_active_workstream["selection_report"] == (
+        "formal/docs/release/POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_20260505_v0.json"
+    )
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert current_active_workstream["selector_choice_executed"] == "no"
+    assert current_active_workstream["selected_target_count"] == 1
+    assert current_active_workstream["selection_executes_target"] == "no"
     assert current_active_workstream["real_axiom_count"] == 59
     assert current_active_workstream["real_axiom_file_count"] == 14
     assert current_active_workstream["real_sorry_or_admit_count"] == 0

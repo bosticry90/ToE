@@ -177,6 +177,14 @@ AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_PATH = (
     / "Derivation"
     / "AxiomLedgerAuditRefreshAfterSampleRep32ResultReview.lean"
 )
+POST_SAMPLEREP32_AXIOM_AUDIT_SELECTOR_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "PostSampleRep32AxiomAuditBoundedAttackSelection.lean"
+)
 LEDGER_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md"
 
 
@@ -190,12 +198,12 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-        "CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_samplerep32_axiom_audit_bounded_attack",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_axiom_ledger_audit_refresh_after_samplerep32_result",
-        "ACTIVE_LANE_v0: axiom_ledger_audit_refresh_after_samplerep32_result_review",
+        "CURRENT_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_samplerep32_axiom_audit_bounded_attack",
+        "ACTIVE_LANE_v0: post_samplerep32_axiom_audit_bounded_attack_selection",
         "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
         "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefreshAfterSampleRep32ResultReview.lean",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostSampleRep32AxiomAuditBoundedAttackSelection.lean",
         "READ_ONLY_VALIDATION_HYGIENE_ENFORCED",
         "POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE",
@@ -215,6 +223,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         "POST_FNREP_SAMPLEREP32_DISCHARGE_NEXT_ATTACK_SELECTED",
         "AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS",
         "AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_CONSUMED_59_REAL_AXIOMS_CONFIRMED",
+        "POST_SAMPLEREP32_AXIOM_AUDIT_NEXT_ATTACK_SELECTED",
         "CANONICAL_CONTROL_SOURCES",
         "PUBLIC_SUMMARY_SURFACES",
         "ACTIVE_TARGET_MIRROR_SURFACES",
@@ -244,6 +253,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         POST_FNREP_SAMPLEREP32_SELECTOR_PATH,
         AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_PATH,
         AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_PATH,
+        POST_SAMPLEREP32_AXIOM_AUDIT_SELECTOR_PATH,
         LEDGER_PATH,
     }:
         assert str(path.relative_to(REPO_ROOT)).replace("\\", "/") in text

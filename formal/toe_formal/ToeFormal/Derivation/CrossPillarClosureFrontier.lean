@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "Post-sampleRep32 axiom-ledger audit refresh result review consumes the 59-axiom audit, keeps the prior 60-axiom audit historical, and rotates to post-audit selection"
+        "Post-sampleRep32 axiom-audit selector consumes the 59-axiom audit review and returns to full-pillar target-map selection without continuing FNRep by momentum"
       retained_blocker :=
-        "axiom_ledger_audit_refresh_after_samplerep32_result_review_nonclaim_boundary"
+        "post_samplerep32_axiom_audit_bounded_attack_selection_nonclaim_boundary"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "select_next_post_samplerep32_axiom_audit_bounded_attack"
+        "return_to_full_pillar_target_map_next_lane_selection"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the post-sampleRep32 audit result review. -/
+/-- Previous live target consumed by the post-sampleRep32 axiom-audit selector. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_axiom_ledger_audit_refresh_after_samplerep32_result"
-
-/-- Current live target after the post-sampleRep32 audit result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "select_next_post_samplerep32_axiom_audit_bounded_attack"
+
+/-- Current live target after the post-sampleRep32 axiom-audit selector. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "return_to_full_pillar_target_map_next_lane_selection"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
