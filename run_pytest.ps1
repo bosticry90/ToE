@@ -3,6 +3,9 @@ param(
   [int]$TimeoutSeconds = 1200,
   [switch]$LastFailed,
   [int]$MaxFail = 0,
+  [switch]$Parallel,
+  [string]$ParallelWorkers = 'auto',
+  [string]$ParallelDist = 'loadfile',
   [switch]$DryRun,
   [Parameter(ValueFromRemainingArguments = $true)]
   [string[]]$PytestArgs
@@ -29,6 +32,12 @@ if ($LastFailed) {
 }
 if ($MaxFail -gt 0) {
   $effectiveArgs += "--maxfail=$MaxFail"
+}
+if ($Parallel) {
+  $effectiveArgs += '-n'
+  $effectiveArgs += $ParallelWorkers
+  $effectiveArgs += '--dist'
+  $effectiveArgs += $ParallelDist
 }
 $effectiveArgs += '-q'
 

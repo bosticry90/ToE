@@ -55,10 +55,15 @@ def test_lean_wrapper_contract() -> None:
     for needle in [
         "[string]$Target = 'ToeFormal'",
         "[int]$TimeoutSeconds = 1800",
+        "[int]$Threads = 0",
         "validation_timeout_guard.ps1",
         "formal\\toe_formal",
         "-FilePath 'lake'",
-        "-ArgumentList @('build', $Target)",
+        "$lakeArgs = @()",
+        "if ($Threads -gt 0)",
+        '$lakeArgs += "-Kthreads=$Threads"',
+        "$lakeArgs += @('build', $Target)",
+        "-ArgumentList $lakeArgs",
         "-KillProcessNames @('lake', 'lean', 'elan')",
         "exit $exitCode",
     ]:
@@ -71,6 +76,9 @@ def test_pytest_wrapper_contract() -> None:
     for needle in [
         "[CmdletBinding(PositionalBinding = $false)]",
         "[int]$TimeoutSeconds = 1200",
+        "[switch]$Parallel",
+        "[string]$ParallelWorkers = 'auto'",
+        "[string]$ParallelDist = 'loadfile'",
         "[Parameter(ValueFromRemainingArguments = $true)]",
         "formal/python/tests",
         "py.ps1",
@@ -80,6 +88,11 @@ def test_pytest_wrapper_contract() -> None:
         "$effectiveArgs += '--lf'",
         "if ($MaxFail -gt 0)",
         '$effectiveArgs += "--maxfail=$MaxFail"',
+        "if ($Parallel)",
+        "$effectiveArgs += '-n'",
+        "$effectiveArgs += $ParallelWorkers",
+        "$effectiveArgs += '--dist'",
+        "$effectiveArgs += $ParallelDist",
         "exit $exitCode",
     ]:
         _assert_contains(content, needle)
@@ -158,3 +171,121 @@ def test_pytest_wrapper_forwards_positional_pytest_args() -> None:
     assert completed.returncode == 0, completed.stdout
     assert "formal/python/tests/test_validation_timeout_wrappers_gate.py" in completed.stdout
     assert "-k dry_run" in completed.stdout
+
+
+def test_pytest_wrapper_default_dry_run_command_is_unchanged() -> None:
+    shell = shutil.which("pwsh") or shutil.which("powershell") or shutil.which("powershell.exe")
+    if shell is None:
+        pytest.skip("PowerShell is required for wrapper dry-run validation.")
+
+    completed = subprocess.run(
+        [
+            shell,
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-File",
+            str(PYTEST_WRAPPER_PATH),
+            "-DryRun",
+        ],
+        cwd=REPO_ROOT,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        timeout=30,
+        check=False,
+    )
+
+    assert completed.returncode == 0, completed.stdout
+    assert "-m pytest formal/python/tests -q" in completed.stdout
+    assert "-n auto" not in completed.stdout
+    assert "--dist loadfile" not in completed.stdout
+
+
+def test_pytest_wrapper_parallel_dry_run_is_additive() -> None:
+    shell = shutil.which("pwsh") or shutil.which("powershell") or shutil.which("powershell.exe")
+    if shell is None:
+        pytest.skip("PowerShell is required for wrapper dry-run validation.")
+
+    completed = subprocess.run(
+        [
+            shell,
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-File",
+            str(PYTEST_WRAPPER_PATH),
+            "-DryRun",
+            "-Parallel",
+            "-ParallelWorkers",
+            "auto",
+            "-ParallelDist",
+            "loadfile",
+        ],
+        cwd=REPO_ROOT,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        timeout=30,
+        check=False,
+    )
+
+    assert completed.returncode == 0, completed.stdout
+    assert "-m pytest formal/python/tests -n auto --dist loadfile -q" in completed.stdout
+
+
+def test_lean_wrapper_default_dry_run_command_is_unchanged() -> None:
+    shell = shutil.which("pwsh") or shutil.which("powershell") or shutil.which("powershell.exe")
+    if shell is None:
+        pytest.skip("PowerShell is required for wrapper dry-run validation.")
+
+    completed = subprocess.run(
+        [
+            shell,
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-File",
+            str(LEAN_WRAPPER_PATH),
+            "-DryRun",
+        ],
+        cwd=REPO_ROOT,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        timeout=30,
+        check=False,
+    )
+
+    assert completed.returncode == 0, completed.stdout
+    assert "validation_runner.command lake build ToeFormal" in completed.stdout
+    assert "-Kthreads" not in completed.stdout
+
+
+def test_lean_wrapper_threads_dry_run_is_additive() -> None:
+    shell = shutil.which("pwsh") or shutil.which("powershell") or shutil.which("powershell.exe")
+    if shell is None:
+        pytest.skip("PowerShell is required for wrapper dry-run validation.")
+
+    completed = subprocess.run(
+        [
+            shell,
+            "-NoProfile",
+            "-ExecutionPolicy",
+            "Bypass",
+            "-File",
+            str(LEAN_WRAPPER_PATH),
+            "-DryRun",
+            "-Threads",
+            "8",
+        ],
+        cwd=REPO_ROOT,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT,
+        timeout=30,
+        check=False,
+    )
+
+    assert completed.returncode == 0, completed.stdout
+    assert "validation_runner.command lake -Kthreads=8 build ToeFormal" in completed.stdout
