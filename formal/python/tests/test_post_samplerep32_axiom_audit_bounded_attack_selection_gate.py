@@ -9,11 +9,11 @@ from formal.python.tests.strict_physics_state_helpers import (
     REPO_ROOT,
     STATE_PATH,
     STRICT_MAP_PATH,
-    active_workstream,
     assert_current_target_consistent,
     assert_focused_gate_not_manifest_enrolled,
     assert_forbidden_promotions_closed,
     assert_frontier_matches_registry,
+    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
     loop_registry,
     read_text,
@@ -308,11 +308,13 @@ def test_post_samplerep32_axiom_audit_selection_registry_rotates_to_full_pillar(
     assert_forbidden_promotions_closed()
     assert_public_surfaces_match_registry()
 
-    state = payload["current_target_state"]
-    assert state["previous_live_next_target"] == SELECTION_TARGET
-    assert state["live_next_target"] == SELECTED_TARGET
-    assert state["live_next_target_evidence"] == SELECTION_EVIDENCE
-    assert state["active_lane"] == ACTIVE_LANE
+    assert_historical_target_recorded(
+        payload=payload,
+        previous_target=SELECTION_TARGET,
+        live_target=SELECTED_TARGET,
+        evidence=SELECTION_EVIDENCE,
+        lane=ACTIVE_LANE,
+    )
 
     previous = workstream(PREVIOUS_WORKSTREAM, payload)
     assert previous["status"] == "paused"
@@ -322,8 +324,9 @@ def test_post_samplerep32_axiom_audit_selection_registry_rotates_to_full_pillar(
     assert previous["real_axiom_count"] == 59
     assert previous["real_axiom_file_count"] == 14
 
-    current = active_workstream(payload)
+    current = workstream(ACTIVE_LANE, payload)
     assert current["workstream_id"] == ACTIVE_LANE
+    assert current["status"] == "paused"
     assert current["authorized_next_strict_target"] == SELECTED_TARGET
     assert current["consumed_target"] == SELECTION_TARGET
     assert current["latest_surface"] == SURFACE_ID
@@ -353,7 +356,7 @@ def test_post_samplerep32_axiom_audit_selection_registry_rotates_to_full_pillar(
     )
     assert {
         "from": ACTIVE_LANE,
-        "to": "full_pillar_target_map_next_lane_selection",
+        "to": "full_pillar_target_map_next_lane_selection_after_samplerep32_axiom_audit",
         "status": "active",
         "evidence": SELECTION_EVIDENCE,
     } in payload["dependency_edges"]

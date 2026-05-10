@@ -11,13 +11,13 @@ Purpose:
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_samplerep32_axiom_audit_bounded_attack`
-- `ACTIVE_LANE_v0: post_samplerep32_axiom_audit_bounded_attack_selection`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_theorem_gap_reentry`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
+- `ACTIVE_LANE_v0: full_pillar_target_map_next_lane_selection_after_samplerep32_axiom_audit`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostSampleRep32AxiomAuditBoundedAttackSelection.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_20260505_v0.json`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterSampleRep32AxiomAudit.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_SAMPLEREP32_AXIOM_AUDIT_20260510_v0.json`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
@@ -40,6 +40,7 @@ Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefreshAfterSampleRep32.lean`
 - `formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefreshAfterSampleRep32ResultReview.lean`
 - `formal/toe_formal/ToeFormal/Derivation/PostSampleRep32AxiomAuditBoundedAttackSelection.lean`
+- `formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterSampleRep32AxiomAudit.lean`
 - `MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED`
 - `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`
@@ -63,8 +64,14 @@ Current result-token chain:
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS`
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_CONSUMED_59_REAL_AXIOMS_CONFIRMED`
 - `POST_SAMPLEREP32_AXIOM_AUDIT_NEXT_ATTACK_SELECTED`
+- `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_SAMPLEREP32_AXIOM_AUDIT`
 
 Historical live-target transition tokens retained for focused historical gates:
+- `CURRENT_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_samplerep32_axiom_audit_bounded_attack`
+- `ACTIVE_LANE_v0: post_samplerep32_axiom_audit_bounded_attack_selection`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostSampleRep32AxiomAuditBoundedAttackSelection.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_20260505_v0.json`
 - `CURRENT_LIVE_NEXT_TARGET_v0: prepare_next_proof_debt_ledger_discharge_item`
 - `PREVIOUS_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
 - `ACTIVE_LANE_v0: full_pillar_target_map_next_lane_selection_after_status_surface_enforcement`
@@ -164,6 +171,7 @@ Maintenance bindings:
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_20260505_v0`
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_20260505_v0`
 - `POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_20260505_v0`
+- `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_SAMPLEREP32_AXIOM_AUDIT_20260510_v0`
 - `TOE_ALLOW_TRACKED_OUTPUT_WRITES=1`
 
 Non-claim boundary:

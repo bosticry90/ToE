@@ -425,6 +425,14 @@ POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_PATH = (
     / "Derivation"
     / "PostSampleRep32AxiomAuditBoundedAttackSelection.lean"
 )
+FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_SAMPLEREP32_AXIOM_AUDIT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "FullPillarTargetMapNextLaneSelectionAfterSampleRep32AxiomAudit.lean"
+)
 MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH = (
     REPO_ROOT
     / "formal"
@@ -659,12 +667,18 @@ AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_TOKEN = (
 POST_SAMPLEREP32_AXIOM_AUDIT_NEXT_ATTACK_SELECTED = (
     "POST_SAMPLEREP32_AXIOM_AUDIT_NEXT_ATTACK_SELECTED"
 )
+POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_TARGET = (
+    "select_next_post_samplerep32_axiom_audit_bounded_attack"
+)
+FULL_PILLAR_AFTER_SAMPLEREP32_AXIOM_AUDIT_RESULT_TOKEN = (
+    "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_SAMPLEREP32_AXIOM_AUDIT"
+)
 AUDIT_REFRESH_TARGET = "prepare_axiom_ledger_audit_refresh"
 AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
-PREVIOUS_TARGET = "select_next_post_samplerep32_axiom_audit_bounded_attack"
-LIVE_TARGET = "return_to_full_pillar_target_map_next_lane_selection"
+PREVIOUS_TARGET = "return_to_full_pillar_target_map_next_lane_selection"
+LIVE_TARGET = "prepare_qm_stat_theorem_gap_reentry"
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -729,6 +743,7 @@ PAUSED_LANES = {
     "post_fnrep_samplerep32_discharge_bounded_attack_selection",
     "axiom_ledger_audit_refresh_after_samplerep32",
     "axiom_ledger_audit_refresh_after_samplerep32_result_review",
+    "post_samplerep32_axiom_audit_bounded_attack_selection",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -781,7 +796,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_PATH.relative_to(
+        FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_SAMPLEREP32_AXIOM_AUDIT_PATH.relative_to(
             REPO_ROOT
         )
     ).replace("\\", "/")
@@ -792,7 +807,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert set(state["paused_lanes"]) == paused_ids
     assert (
         state["active_lane"]
-        == "post_samplerep32_axiom_audit_bounded_attack_selection"
+        == "full_pillar_target_map_next_lane_selection_after_samplerep32_axiom_audit"
     )
 
     previous_fnrep_workstream = _workstream(payload, "fnrep_nonalias_samplerep32_discharge")
@@ -862,7 +877,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         payload, "axiom_ledger_audit_refresh_after_samplerep32_result_review"
     )
     assert previous_review_workstream["status"] == "paused"
-    assert previous_review_workstream["authorized_next_strict_target"] == PREVIOUS_TARGET
+    assert previous_review_workstream["authorized_next_strict_target"] == (
+        POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_TARGET
+    )
     assert previous_review_workstream["consumed_target"] == AXIOM_AUDIT_RESULT_REVIEW_TARGET
     assert (
         previous_review_workstream["latest_surface"]
@@ -872,58 +889,117 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         previous_review_workstream["review_token"]
         == AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_TOKEN
     )
-    assert previous_review_workstream["selected_next_target"] == PREVIOUS_TARGET
+    assert previous_review_workstream["selected_next_target"] == (
+        POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_TARGET
+    )
     assert previous_review_workstream["real_axiom_count"] == 59
     assert previous_review_workstream["real_axiom_file_count"] == 14
+
+    post_audit_selector_workstream = _workstream(
+        payload, "post_samplerep32_axiom_audit_bounded_attack_selection"
+    )
+    assert (
+        post_audit_selector_workstream["workstream_id"]
+        == "post_samplerep32_axiom_audit_bounded_attack_selection"
+    )
+    assert post_audit_selector_workstream["status"] == "paused"
+    assert (
+        post_audit_selector_workstream["authorized_next_strict_target"]
+        == FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
+    )
+    assert (
+        post_audit_selector_workstream["consumed_target"]
+        == POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_TARGET
+    )
+    assert (
+        post_audit_selector_workstream["latest_surface"]
+        == "post_samplerep32_axiom_audit_bounded_attack_selection_v0"
+    )
+    assert (
+        post_audit_selector_workstream["consumed_review_token"]
+        == AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_TOKEN
+    )
+    assert (
+        post_audit_selector_workstream["output_token"]
+        == POST_SAMPLEREP32_AXIOM_AUDIT_NEXT_ATTACK_SELECTED
+    )
+    assert post_audit_selector_workstream["source_review_surface"] == str(
+        AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_PATH.relative_to(
+            REPO_ROOT
+        )
+    ).replace("\\", "/")
+    assert post_audit_selector_workstream["source_review_report"] == (
+        "formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_20260505_v0.json"
+    )
+    assert post_audit_selector_workstream["selection_report"] == (
+        "formal/docs/release/POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_20260505_v0.json"
+    )
+    assert (
+        post_audit_selector_workstream["selected_next_target"]
+        == FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
+    )
+    assert post_audit_selector_workstream["selected_target_count"] == 1
+    assert post_audit_selector_workstream["selection_executes_target"] == "no"
+    assert post_audit_selector_workstream["real_axiom_count"] == 59
+    assert post_audit_selector_workstream["real_axiom_file_count"] == 14
+    assert post_audit_selector_workstream["real_sorry_or_admit_count"] == 0
+    assert (
+        post_audit_selector_workstream["default_nonalias_absent_from_unresolved_axiom_debt"]
+        == "yes"
+    )
+    assert (
+        post_audit_selector_workstream["sample_rep32_absent_from_unresolved_axiom_debt"]
+        == "yes"
+    )
+    assert post_audit_selector_workstream["default_nonalias_remains_discharged"] == "yes"
+    assert post_audit_selector_workstream["sample_rep32_discharged"] == "yes"
+    assert post_audit_selector_workstream["stale_active_60_axiom_posture"] == "absent"
+    assert post_audit_selector_workstream["prior_60_axiom_audit_status"] == "historical_only"
+    assert post_audit_selector_workstream["qft_gr_source_map_closure_authorized"] == "no"
+    assert post_audit_selector_workstream["seam_closure_claim"] == "no"
+    assert post_audit_selector_workstream["phase2_readiness_claim"] == "no"
+    assert post_audit_selector_workstream["empirical_adequacy_claim"] == "no"
+    assert post_audit_selector_workstream["canonical_toe_claim"] == "no"
+    assert post_audit_selector_workstream["governance_manifest_enrollment_authorized"] == "no"
+    assert post_audit_selector_workstream["master_action_promotion_authorized"] == "no"
 
     current_active_workstream = active_workstream(payload)
     assert (
         current_active_workstream["workstream_id"]
-        == "post_samplerep32_axiom_audit_bounded_attack_selection"
+        == "full_pillar_target_map_next_lane_selection_after_samplerep32_axiom_audit"
     )
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "post_samplerep32_axiom_audit_bounded_attack_selection_v0"
+        == "full_pillar_target_map_next_lane_selection_after_samplerep32_axiom_audit_v0"
     )
     assert (
-        current_active_workstream["consumed_review_token"]
-        == AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_TOKEN
-    )
-    assert (
-        current_active_workstream["output_token"]
+        current_active_workstream["consumed_selector_token"]
         == POST_SAMPLEREP32_AXIOM_AUDIT_NEXT_ATTACK_SELECTED
     )
-    assert current_active_workstream["source_review_surface"] == str(
-        AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_PATH.relative_to(
-            REPO_ROOT
-        )
-    ).replace("\\", "/")
-    assert current_active_workstream["source_review_report"] == (
-        "formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_20260505_v0.json"
+    assert (
+        current_active_workstream["result_token"]
+        == FULL_PILLAR_AFTER_SAMPLEREP32_AXIOM_AUDIT_RESULT_TOKEN
     )
-    assert current_active_workstream["selection_report"] == (
-        "formal/docs/release/POST_SAMPLEREP32_AXIOM_AUDIT_BOUNDED_ATTACK_SELECTION_20260505_v0.json"
+    assert (
+        current_active_workstream["selected_lane"]
+        == "QM_STAT_THEOREM_GAP_RE_ENTRY_LANE"
     )
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert current_active_workstream["selected_target_count"] == 1
-    assert current_active_workstream["selection_executes_target"] == "no"
+    assert current_active_workstream["selection_executes_lane"] == "no"
+    assert current_active_workstream["proof_debt_discharge_item_selected"] == "no"
+    assert current_active_workstream["qm_stat_reentry_selected"] == "yes"
+    assert current_active_workstream["qm_stat_target_map_row"] == (
+        "FULL_SEAM_QM_STAT_TARGET_MAP_v0"
+    )
+    assert current_active_workstream["qm_stat_target_map_next_admissible_action"] == (
+        "map_qm_stat_full_probability_entropy_transport_obligations"
+    )
+    assert current_active_workstream["bounded_theorem_gap_item_ready"] == "yes"
     assert current_active_workstream["real_axiom_count"] == 59
     assert current_active_workstream["real_axiom_file_count"] == 14
     assert current_active_workstream["real_sorry_or_admit_count"] == 0
-    assert (
-        current_active_workstream["default_nonalias_absent_from_unresolved_axiom_debt"]
-        == "yes"
-    )
-    assert (
-        current_active_workstream["sample_rep32_absent_from_unresolved_axiom_debt"]
-        == "yes"
-    )
-    assert current_active_workstream["default_nonalias_remains_discharged"] == "yes"
-    assert current_active_workstream["sample_rep32_discharged"] == "yes"
-    assert current_active_workstream["stale_active_60_axiom_posture"] == "absent"
-    assert current_active_workstream["prior_60_axiom_audit_status"] == "historical_only"
     assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
     assert current_active_workstream["seam_closure_claim"] == "no"
     assert current_active_workstream["phase2_readiness_claim"] == "no"
@@ -1495,7 +1571,9 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
 
     qft_gr = _workstream(payload, "qft_gr_source_map")
     assert qft_gr["status"] == "paused"
-    assert qft_gr["authorized_next_strict_target"] == LIVE_TARGET
+    assert qft_gr["authorized_next_strict_target"] == (
+        FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
+    )
     assert qft_gr["protocol_row_preparation_target"] == QFT_GR_PROTOCOL_ROW_PREPARATION_TARGET
     assert (
         qft_gr["protocol_row_preparation_status"]
@@ -1824,7 +1902,9 @@ def test_no_stale_live_next_action_survives_in_registry() -> None:
     assert master_action["theorem_work_authorized"] == (
         "gap_packet_result_review_completed_selector_only_no_promotion_claim"
     )
-    assert master_action["authorized_next_strict_target"] == LIVE_TARGET
+    assert master_action["authorized_next_strict_target"] == (
+        FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
+    )
     assert (
         master_action["next_action_scope"]
         == "return_to_full_pillar_target_map_next_lane_selection"
