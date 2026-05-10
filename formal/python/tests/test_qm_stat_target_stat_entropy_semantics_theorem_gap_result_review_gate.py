@@ -33,6 +33,14 @@ ATTACK_SURFACE_PATH = (
     / "Derivation"
     / "QMStatTargetStatEntropySemanticsTheoremGap.lean"
 )
+SELECTION_SURFACE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "PostQMStatEntropySemanticsGapBoundedAttackSelection.lean"
+)
 AGGREGATE_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 REPORT_PATH = (
@@ -53,6 +61,8 @@ REVIEW_TOKEN = (
     "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY"
 )
 NEXT_TARGET = "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack"
+FULL_PILLAR_TARGET = "return_to_full_pillar_target_map_next_lane_selection"
+SELECTION_TOKEN = "POST_QM_STAT_ENTROPY_SEMANTICS_GAP_NEXT_ATTACK_SELECTED"
 SELECTED_GAP = "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0"
 SELECTED_OBLIGATION = "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0"
 RETAINED_BLOCKER = (
@@ -164,9 +174,9 @@ def test_qm_stat_target_stat_entropy_semantics_result_review_rotates_to_selector
     payload = loop_registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
-    assert state["live_next_target"] == NEXT_TARGET
-    assert state["live_next_target_evidence"] == _rel(REVIEW_SURFACE_PATH)
+    assert state["previous_live_next_target"] == NEXT_TARGET
+    assert state["live_next_target"] == FULL_PILLAR_TARGET
+    assert state["live_next_target_evidence"] == _rel(SELECTION_SURFACE_PATH)
     assert state["active_lane"] == SELECTION_LANE
     assert REVIEW_LANE in state["paused_lanes"]
 
@@ -185,9 +195,12 @@ def test_qm_stat_target_stat_entropy_semantics_result_review_rotates_to_selector
 
     selector = workstream(SELECTION_LANE, payload)
     assert selector["status"] == "active"
-    assert selector["authorized_next_strict_target"] == NEXT_TARGET
-    assert selector["consumed_target"] == CONSUMED_TARGET
+    assert selector["authorization_evidence"] == _rel(SELECTION_SURFACE_PATH)
+    assert selector["authorized_next_strict_target"] == FULL_PILLAR_TARGET
+    assert selector["consumed_target"] == NEXT_TARGET
     assert selector["consumed_review_token"] == REVIEW_TOKEN
+    assert selector["output_token"] == SELECTION_TOKEN
+    assert selector["selected_next_target"] == FULL_PILLAR_TARGET
     assert selector["selection_executes_target"] == "no"
     assert selector["governance_manifest_enrollment_authorized"] == "no"
 

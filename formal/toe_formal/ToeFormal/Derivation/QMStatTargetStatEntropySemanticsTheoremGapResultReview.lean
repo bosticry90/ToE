@@ -296,7 +296,7 @@ theorem qm_stat_target_stat_entropy_semantics_result_review_selected_next_target
 theorem qm_stat_target_stat_entropy_semantics_result_review_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack" := by
+      some "return_to_full_pillar_target_map_next_lane_selection" := by
   decide
 
 theorem qm_stat_target_stat_entropy_semantics_result_review_no_lean_backed_discharge_v0 :

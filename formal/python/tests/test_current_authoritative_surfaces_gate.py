@@ -225,6 +225,14 @@ QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_PATH = (
     / "Derivation"
     / "QMStatTargetStatEntropySemanticsTheoremGapResultReview.lean"
 )
+POST_QM_STAT_ENTROPY_SEMANTICS_GAP_SELECTOR_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "PostQMStatEntropySemanticsGapBoundedAttackSelection.lean"
+)
 LEDGER_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md"
 
 
@@ -238,12 +246,12 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-        "CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_semantics_gap_bounded_attack",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_qm_stat_target_stat_entropy_semantics_theorem_gap_result",
+        "CURRENT_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_semantics_gap_bounded_attack",
         "ACTIVE_LANE_v0: post_qm_stat_entropy_semantics_gap_bounded_attack_selection",
         "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
         "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QMStatTargetStatEntropySemanticsTheoremGapResultReview.lean",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropySemanticsGapBoundedAttackSelection.lean",
         "READ_ONLY_VALIDATION_HYGIENE_ENFORCED",
         "POST_READ_ONLY_VALIDATION_HYGIENE_NEXT_ATTACK_SELECTED",
         "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_READ_ONLY_HYGIENE",
@@ -269,6 +277,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         "QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_CONSUMED",
         "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_SUPPLIED_ONLY",
         "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY",
+        "POST_QM_STAT_ENTROPY_SEMANTICS_GAP_NEXT_ATTACK_SELECTED",
         "CANONICAL_CONTROL_SOURCES",
         "PUBLIC_SUMMARY_SURFACES",
         "ACTIVE_TARGET_MIRROR_SURFACES",
@@ -304,6 +313,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_PATH,
         QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_PATH,
         QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_PATH,
+        POST_QM_STAT_ENTROPY_SEMANTICS_GAP_SELECTOR_PATH,
         LEDGER_PATH,
     }:
         assert str(path.relative_to(REPO_ROOT)).replace("\\", "/") in text
@@ -370,6 +380,7 @@ def test_current_authoritative_surfaces_index_records_validation_and_historical_
         "QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_20260510_v0",
         "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_BOUNDED_ATTACK_20260510_v0",
         "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_20260510_v0",
+        "POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_20260510_v0",
         "TOE_ALLOW_TRACKED_OUTPUT_WRITES=1",
     }:
         assert token in text

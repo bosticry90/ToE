@@ -75,7 +75,13 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict architecture target:
-- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_semantics_gap_bounded_attack`
+- `CURRENT_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
+- `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_TARGET_v0: select_next_post_qm_stat_entropy_semantics_gap_bounded_attack`
+- `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_v0: formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropySemanticsGapBoundedAttackSelection.lean`
+- `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_REPORT_v0: formal/docs/release/POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_20260510_v0.json`
+- `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_NEXT_ATTACK_SELECTED_v0: POST_QM_STAT_ENTROPY_SEMANTICS_GAP_NEXT_ATTACK_SELECTED`
+- `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_SELECTED_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
+- Post-QM-STAT entropy-semantics gap selector status: the selector preserves the target STAT entropy semantics gap as supplied-only and returns control to full-pillar target-map selection without authorizing Lean-backed discharge, theorem-gap closure, QM-STAT completion, seam closure, Phase 2, empirical claim, canonical ToE claim, QFT-GR source-map closure, selected-target execution, governance-manifest enrollment, or master-action promotion.
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefreshAfterSampleRep32.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_20260505_v0.json`
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS_v0: AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS`

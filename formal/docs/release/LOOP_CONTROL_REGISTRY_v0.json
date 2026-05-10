@@ -87,9 +87,9 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "review_qm_stat_target_stat_entropy_semantics_theorem_gap_result",
-    "live_next_target": "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatTargetStatEntropySemanticsTheoremGapResultReview.lean",
+    "previous_live_next_target": "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack",
+    "live_next_target": "return_to_full_pillar_target_map_next_lane_selection",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropySemanticsGapBoundedAttackSelection.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
@@ -590,7 +590,8 @@
     "full_pillar_target_map_next_lane_selection_after_samplerep32_axiom_audit_nonclaim_boundary",
     "qm_stat_theorem_gap_reentry_target_entropy_semantics_nonclaim_boundary",
     "qm_stat_theorem_gap_reentry_result_review_nonclaim_boundary",
-    "PHASE1-BLOCKER-QMSTAT-TARGET-STAT-ENTROPY-SEMANTICS-SUPPLIED-ONLY-RETAINED"
+    "PHASE1-BLOCKER-QMSTAT-TARGET-STAT-ENTROPY-SEMANTICS-SUPPLIED-ONLY-RETAINED",
+    "post_qm_stat_entropy_semantics_gap_bounded_attack_selection_nonclaim_boundary"
   ],
   "next_strict_target_coverage": [
     "rotate_to_qm_stat_transport_residual_semantics",
@@ -1076,6 +1077,12 @@
       "to": "qm_stat_theorem_gap_reentry_result_review",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatTheoremGapReentry.lean"
+    },
+    {
+      "from": "post_qm_stat_entropy_semantics_gap_bounded_attack_selection",
+      "to": "full_pillar_target_map_next_lane_selection",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropySemanticsGapBoundedAttackSelection.lean"
     }
   ],
   "cycle_waivers": [],
@@ -5060,20 +5067,26 @@
         "qft_gr_source_map_closure",
         "governance_manifest_enrollment"
       ],
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatTargetStatEntropySemanticsTheoremGapResultReview.lean",
-      "authorized_next_slice": "post_qm_stat_entropy_semantics_gap_bounded_attack_selection_v0",
-      "authorized_next_strict_target": "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack",
-      "consumed_target": "review_qm_stat_target_stat_entropy_semantics_theorem_gap_result",
-      "latest_surface": "qm_stat_target_stat_entropy_semantics_theorem_gap_result_review_v0",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropySemanticsGapBoundedAttackSelection.lean",
+      "authorized_next_slice": "full_pillar_target_map_next_lane_selection_v0",
+      "authorized_next_strict_target": "return_to_full_pillar_target_map_next_lane_selection",
+      "consumed_target": "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack",
+      "latest_surface": "post_qm_stat_entropy_semantics_gap_bounded_attack_selection_v0",
       "source_attack_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatTargetStatEntropySemanticsTheoremGap.lean",
       "source_attack_report": "formal/docs/release/QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_BOUNDED_ATTACK_20260510_v0.json",
       "source_review_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatTargetStatEntropySemanticsTheoremGapResultReview.lean",
       "source_review_report": "formal/docs/release/QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_20260510_v0.json",
+      "selection_report": "formal/docs/release/POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_20260510_v0.json",
       "consumed_result_token": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_SUPPLIED_ONLY",
       "consumed_review_token": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY",
+      "output_token": "POST_QM_STAT_ENTROPY_SEMANTICS_GAP_NEXT_ATTACK_SELECTED",
       "selected_gap": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0",
-      "selected_next_target": "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack",
-      "selected_next_target_kind": "post_qm_stat_entropy_semantics_gap_selector_only",
+      "selected_obligation": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0",
+      "selected_next_target": "return_to_full_pillar_target_map_next_lane_selection",
+      "selected_decision": "return_to_full_pillar_target_map_next_lane_selection",
+      "selected_next_target_kind": "full_pillar_target_map_return",
+      "selection_count": 1,
+      "candidate_target_count": 2,
       "selection_executes_target": "no",
       "target_stat_entropy_semantics_lean_backed": "no",
       "target_stat_entropy_semantics_supplied_only": "yes",

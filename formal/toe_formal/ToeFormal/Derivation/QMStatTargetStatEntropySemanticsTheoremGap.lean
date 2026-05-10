@@ -445,11 +445,11 @@ theorem qm_stat_target_stat_entropy_semantics_selected_next_target_v0 :
       "review_qm_stat_target_stat_entropy_semantics_theorem_gap_result" := by
   rfl
 
-/-- The master-action frontier now points at the bounded result review. -/
+/-- The master-action frontier now points at the full-pillar return selector. -/
 theorem qm_stat_target_stat_entropy_semantics_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack" := by
+      some "return_to_full_pillar_target_map_next_lane_selection" := by
   decide
 
 /-- No Lean-backed target entropy semantics theorem is claimed. -/
