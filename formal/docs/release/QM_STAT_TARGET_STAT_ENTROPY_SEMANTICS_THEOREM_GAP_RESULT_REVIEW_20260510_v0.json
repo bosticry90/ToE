@@ -1,0 +1,42 @@
+{
+  "schema_id": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_20260510_v0",
+  "schema_version": 0,
+  "date": "2026-05-10",
+  "classification": "P-POLICY/nonclaim",
+  "current_target": "review_qm_stat_target_stat_entropy_semantics_theorem_gap_result",
+  "consumed_result_token": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_SUPPLIED_ONLY",
+  "review_token": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY",
+  "source_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatTargetStatEntropySemanticsTheoremGap.lean",
+  "source_report": "formal/docs/release/QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_BOUNDED_ATTACK_20260510_v0.json",
+  "review_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatTargetStatEntropySemanticsTheoremGapResultReview.lean",
+  "selected_gap": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0",
+  "selected_obligation": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0",
+  "selected_gap_count": 1,
+  "selected_next_target": "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack",
+  "selected_decision": "consume_supplied_only_and_select_post_gap_bounded_attack",
+  "result_interpretation": "target_stat_entropy_semantics_remain_supplied_only_under_current_authority",
+  "retained_blocker": "PHASE1-BLOCKER-QMSTAT-TARGET-STAT-ENTROPY-SEMANTICS-SUPPLIED-ONLY-RETAINED",
+  "current_authority_level": "RETAINED_SUPPLIED_TARGET_STAT_ENTROPY_STRUCTURE_REQUIRED_BY_RESIDUAL_PACKAGE",
+  "resulting_authority_level": "SUPPLIED_ONLY_TARGET_STAT_ENTROPY_SEMANTICS_RETAINED",
+  "review_effect": {
+    "supplied_only_result_consumed": true,
+    "single_gap_scope_preserved": true,
+    "target_stat_entropy_semantics_supplied_only": true,
+    "target_stat_entropy_semantics_lean_backed": false,
+    "theorem_gap_discharged": false
+  },
+  "nonclaim_boundaries": {
+    "lean_backed_entropy_semantics_discharge": false,
+    "theorem_gap_closure_claim": false,
+    "qm_stat_pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "master_action_promotion_authorized": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The result review consumes QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_SUPPLIED_ONLY, confirms the theorem gap remains supplied-only rather than discharged, preserves the single-gap scope, and does not infer QM-STAT pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, master-action promotion, QFT-GR source-map closure, or governance-manifest enrollment.",
+  "next_action": "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack"
+}

@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QM-STAT target STAT entropy semantics bounded attack consumes the re-entry review and classifies the selected gap as supplied-only without claiming a Lean-backed entropy theorem"
+        "QM-STAT target STAT entropy semantics result review consumes the supplied-only classification without closing the theorem gap"
       retained_blocker :=
         "PHASE1-BLOCKER-QMSTAT-TARGET-STAT-ENTROPY-SEMANTICS-SUPPLIED-ONLY-RETAINED"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_qm_stat_target_stat_entropy_semantics_theorem_gap_result"
+        "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QM-STAT target entropy semantics attack. -/
+/-- Previous live target consumed by the QM-STAT target entropy semantics review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qm_stat_target_stat_entropy_semantics_theorem_gap_bounded_attack"
-
-/-- Current live target after the QM-STAT target entropy semantics attack. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_qm_stat_target_stat_entropy_semantics_theorem_gap_result"
+
+/-- Current live target after the QM-STAT target entropy semantics review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
