@@ -463,11 +463,11 @@ theorem qm_stat_theorem_gap_reentry_selected_next_target_v0 :
       "review_qm_stat_theorem_gap_reentry_result" := by
   rfl
 
-/-- The master-action frontier has advanced beyond the re-entry review handoff. -/
-theorem qm_stat_theorem_gap_reentry_frontier_advanced_after_result_review_v0 :
+/-- The master-action frontier has advanced beyond the target entropy attack. -/
+theorem qm_stat_theorem_gap_reentry_frontier_advanced_after_target_entropy_attack_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "prepare_qm_stat_target_stat_entropy_semantics_theorem_gap_bounded_attack" := by
+      some "review_qm_stat_target_stat_entropy_semantics_theorem_gap_result" := by
   decide
 
 theorem qm_stat_theorem_gap_reentry_does_not_execute_discharge_v0 :

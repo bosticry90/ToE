@@ -1,0 +1,60 @@
+{
+  "schema_id": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_BOUNDED_ATTACK_20260510_v0",
+  "schema_version": 0,
+  "date": "2026-05-10",
+  "classification": "P-POLICY/nonclaim",
+  "current_target": "prepare_qm_stat_target_stat_entropy_semantics_theorem_gap_bounded_attack",
+  "consumed_result_review_target": "review_qm_stat_theorem_gap_reentry_result",
+  "consumed_result_review_token": "QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_CONSUMED",
+  "source_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatTheoremGapReentryResultReview.lean",
+  "source_report": "formal/docs/release/QM_STAT_THEOREM_GAP_REENTRY_RESULT_REVIEW_20260510_v0.json",
+  "surface": "formal/toe_formal/ToeFormal/Derivation/QMStatTargetStatEntropySemanticsTheoremGap.lean",
+  "selected_gap": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0",
+  "selected_obligation": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0",
+  "selected_next_target": "review_qm_stat_target_stat_entropy_semantics_theorem_gap_result",
+  "result_token": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_SUPPLIED_ONLY",
+  "result_classification": "supplied_only",
+  "retained_blocker": "PHASE1-BLOCKER-QMSTAT-TARGET-STAT-ENTROPY-SEMANTICS-SUPPLIED-ONLY-RETAINED",
+  "fresh_delta_id": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_SUPPLIED_ONLY_FRESH_DELTA_v0",
+  "fresh_delta_kind": "supplied_only_classification",
+  "current_authority_level": "RETAINED_SUPPLIED_TARGET_STAT_ENTROPY_STRUCTURE_REQUIRED_BY_RESIDUAL_PACKAGE",
+  "resulting_authority_level": "SUPPLIED_ONLY_TARGET_STAT_ENTROPY_SEMANTICS_RETAINED",
+  "attack_scope": {
+    "addresses_selected_gap_only": true,
+    "selected_gap_count": 1,
+    "bounded_question": "Can target STAT entropy semantics be derived from existing finite QM-STAT residual/package structures, or must the target semantics remain supplied/spec-backed?",
+    "attack_executes_bounded_question": true
+  },
+  "supplied_route": {
+    "status": "available",
+    "supplied_object": "QMStatTargetSTATEntropySemanticPackage",
+    "constructor": "supplied_target_stat_entropy_semantics_constructs_package_v0",
+    "scope": "target_stat_entropy_semantic_slot_only"
+  },
+  "refutation": {
+    "status": "finite_residual_package_only_discharge_refuted",
+    "lean_theorem": "finite_residual_package_does_not_force_target_stat_entropy_semantics_v0",
+    "discharge_status": "not_lean_backed_from_existing_qm_stat_residual_package"
+  },
+  "result_matrix": {
+    "target_stat_entropy_semantics_lean_backed": false,
+    "target_stat_entropy_semantics_supplied_only": true,
+    "target_stat_entropy_semantics_still_blocked": false,
+    "theorem_gap_discharged": false
+  },
+  "nonclaim_boundaries": {
+    "full_statistical_closure_claim": false,
+    "qm_stat_pillar_completion_inferred": false,
+    "born_rule_recovery_claim": false,
+    "measurement_theory_resolution_claim": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "master_action_promotion_authorized": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The bounded attack consumes the QM-STAT theorem-gap re-entry review, addresses only QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0, records target statistical entropy semantics as supplied-only rather than Lean-backed or still blocked, and preserves all nonclaim boundaries.",
+  "next_action": "review_qm_stat_target_stat_entropy_semantics_theorem_gap_result"
+}
