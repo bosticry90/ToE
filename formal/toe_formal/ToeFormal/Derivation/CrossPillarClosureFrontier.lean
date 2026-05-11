@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "Post-QM-STAT entropy-semantics gap selector consumes the supplied-only review and returns control to full-pillar target-map selection"
+        "Full-pillar selector after QM-STAT entropy-semantics gap return selects a supporting-assumption map for the supplied-only target entropy boundary"
       retained_blocker :=
-        "post_qm_stat_entropy_semantics_gap_bounded_attack_selection_nonclaim_boundary"
+        "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap_nonclaim_boundary"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "return_to_full_pillar_target_map_next_lane_selection"
+        "prepare_qm_stat_entropy_semantics_supporting_assumption_map"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the post-QM-STAT entropy semantics selector. -/
+/-- Previous live target consumed by the post-QM-STAT full-pillar selector. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack"
-
-/-- Current live target after the post-QM-STAT entropy semantics selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "return_to_full_pillar_target_map_next_lane_selection"
+
+/-- Current live target after the post-QM-STAT full-pillar selector. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qm_stat_entropy_semantics_supporting_assumption_map"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

@@ -45,6 +45,14 @@ ATTACK_PATH = (
     / "Derivation"
     / "QMStatTargetStatEntropySemanticsTheoremGap.lean"
 )
+FULL_PILLAR_SELECTION_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "FullPillarTargetMapNextLaneSelectionAfterQMStatEntropySemanticsGap.lean"
+)
 AGGREGATE_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
 REPORT_PATH = (
     REPO_ROOT
@@ -67,6 +75,13 @@ ATTACK_REPORT_PATH = (
     / "release"
     / "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_BOUNDED_ATTACK_20260510_v0.json"
 )
+FULL_PILLAR_SELECTION_REPORT_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_20260510_v0.json"
+)
 CURRENT_AUTHORITATIVE_SURFACES_PATH = (
     REPO_ROOT / "formal" / "docs" / "release" / "CURRENT_AUTHORITATIVE_SURFACES_v0.md"
 )
@@ -74,6 +89,9 @@ CURRENT_AUTHORITATIVE_SURFACES_PATH = (
 REPORT_ID = "POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_20260510_v0"
 SURFACE_ID = "post_qm_stat_entropy_semantics_gap_bounded_attack_selection_v0"
 ACTIVE_LANE = "post_qm_stat_entropy_semantics_gap_bounded_attack_selection"
+CURRENT_ACTIVE_LANE = (
+    "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap"
+)
 PREVIOUS_WORKSTREAM = "qm_stat_target_stat_entropy_semantics_theorem_gap_result_review"
 SELECTION_TARGET = "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack"
 CONSUMED_REVIEW_TARGET = "review_qm_stat_target_stat_entropy_semantics_theorem_gap_result"
@@ -82,6 +100,9 @@ CONSUMED_REVIEW_TOKEN = (
 )
 SUPPLIED_ONLY_TOKEN = "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_SUPPLIED_ONLY"
 OUTPUT_TOKEN = "POST_QM_STAT_ENTROPY_SEMANTICS_GAP_NEXT_ATTACK_SELECTED"
+FULL_PILLAR_RESULT_TOKEN = (
+    "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP"
+)
 SELECTED_TARGET = "return_to_full_pillar_target_map_next_lane_selection"
 SUPPORTING_MAP_TARGET = "prepare_qm_stat_entropy_semantics_supporting_assumption_map"
 SELECTED_GAP = "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0"
@@ -96,6 +117,12 @@ REVIEW_REPORT_EVIDENCE = str(REVIEW_REPORT_PATH.relative_to(REPO_ROOT)).replace(
 ATTACK_REPORT_EVIDENCE = str(ATTACK_REPORT_PATH.relative_to(REPO_ROOT)).replace(
     "\\", "/"
 )
+FULL_PILLAR_SELECTION_EVIDENCE = str(
+    FULL_PILLAR_SELECTION_PATH.relative_to(REPO_ROOT)
+).replace("\\", "/")
+FULL_PILLAR_SELECTION_REPORT_EVIDENCE = str(
+    FULL_PILLAR_SELECTION_REPORT_PATH.relative_to(REPO_ROOT)
+).replace("\\", "/")
 
 
 def _read(path: Path) -> str:
@@ -246,10 +273,11 @@ def test_post_qm_stat_entropy_semantics_gap_selection_registry_rotates_to_full_p
     payload = loop_registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == SELECTION_TARGET
-    assert state["live_next_target"] == SELECTED_TARGET
-    assert state["live_next_target_evidence"] == SELECTION_EVIDENCE
-    assert state["active_lane"] == ACTIVE_LANE
+    assert state["previous_live_next_target"] == SELECTED_TARGET
+    assert state["live_next_target"] == SUPPORTING_MAP_TARGET
+    assert state["live_next_target_evidence"] == FULL_PILLAR_SELECTION_EVIDENCE
+    assert state["active_lane"] == CURRENT_ACTIVE_LANE
+    assert ACTIVE_LANE in state["paused_lanes"]
 
     previous_workstream = workstream(PREVIOUS_WORKSTREAM, payload)
     assert previous_workstream["status"] == "paused"
@@ -259,24 +287,56 @@ def test_post_qm_stat_entropy_semantics_gap_selection_registry_rotates_to_full_p
     assert previous_workstream["target_stat_entropy_semantics_supplied_only"] == "yes"
     assert previous_workstream["theorem_gap_discharged"] == "no"
 
+    historical_selector = workstream(ACTIVE_LANE, payload)
+    assert historical_selector["status"] == "paused"
+    assert historical_selector["authorization_evidence"] == SELECTION_EVIDENCE
+    assert historical_selector["authorized_next_strict_target"] == SELECTED_TARGET
+    assert historical_selector["consumed_target"] == SELECTION_TARGET
+    assert historical_selector["latest_surface"] == SURFACE_ID
+    assert historical_selector["selection_report"] == REPORT_EVIDENCE
+    assert historical_selector["consumed_review_token"] == CONSUMED_REVIEW_TOKEN
+    assert historical_selector["output_token"] == OUTPUT_TOKEN
+    assert historical_selector["selected_gap"] == SELECTED_GAP
+    assert historical_selector["selected_next_target"] == SELECTED_TARGET
+    assert historical_selector["selected_decision"] == SELECTED_TARGET
+    assert historical_selector["selection_count"] == 1
+    assert historical_selector["candidate_target_count"] == 2
+    assert historical_selector["selection_executes_target"] == "no"
+    assert historical_selector["target_stat_entropy_semantics_lean_backed"] == "no"
+    assert historical_selector["target_stat_entropy_semantics_supplied_only"] == "yes"
+    assert historical_selector["theorem_gap_discharged"] == "no"
+    assert historical_selector["qm_stat_pillar_completion_inferred"] == "no"
+    assert historical_selector["qft_gr_source_map_closure_authorized"] == "no"
+    assert historical_selector["seam_closure_claim"] == "no"
+    assert historical_selector["phase2_readiness_claim"] == "no"
+    assert historical_selector["empirical_adequacy_claim"] == "no"
+    assert historical_selector["canonical_toe_claim"] == "no"
+    assert historical_selector["governance_manifest_enrollment_authorized"] == "no"
+    assert historical_selector["master_action_promotion_authorized"] == "no"
+
     current = active_workstream(payload)
-    assert current["workstream_id"] == ACTIVE_LANE
-    assert current["authorization_evidence"] == SELECTION_EVIDENCE
-    assert current["authorized_next_strict_target"] == SELECTED_TARGET
-    assert current["consumed_target"] == SELECTION_TARGET
-    assert current["latest_surface"] == SURFACE_ID
-    assert current["selection_report"] == REPORT_EVIDENCE
+    assert current["workstream_id"] == CURRENT_ACTIVE_LANE
+    assert current["authorization_evidence"] == FULL_PILLAR_SELECTION_EVIDENCE
+    assert current["authorized_next_strict_target"] == SUPPORTING_MAP_TARGET
+    assert current["consumed_target"] == SELECTED_TARGET
+    assert (
+        current["latest_surface"]
+        == "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap_v0"
+    )
+    assert current["selector_report"] == FULL_PILLAR_SELECTION_REPORT_EVIDENCE
+    assert current["consumed_selector_token"] == OUTPUT_TOKEN
+    assert current["result_token"] == FULL_PILLAR_RESULT_TOKEN
     assert current["consumed_review_token"] == CONSUMED_REVIEW_TOKEN
-    assert current["output_token"] == OUTPUT_TOKEN
     assert current["selected_gap"] == SELECTED_GAP
-    assert current["selected_next_target"] == SELECTED_TARGET
-    assert current["selected_decision"] == SELECTED_TARGET
+    assert current["selected_lane"] == "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP"
+    assert current["selected_next_target"] == SUPPORTING_MAP_TARGET
     assert current["selection_count"] == 1
-    assert current["candidate_target_count"] == 2
-    assert current["selection_executes_target"] == "no"
+    assert current["candidate_lane_count"] == 7
+    assert current["selection_executes_lane"] == "no"
     assert current["target_stat_entropy_semantics_lean_backed"] == "no"
     assert current["target_stat_entropy_semantics_supplied_only"] == "yes"
     assert current["theorem_gap_discharged"] == "no"
+    assert current["qm_stat_supporting_assumption_map_selected"] == "yes"
     assert current["qm_stat_pillar_completion_inferred"] == "no"
     assert current["qft_gr_source_map_closure_authorized"] == "no"
     assert current["seam_closure_claim"] == "no"
@@ -286,9 +346,9 @@ def test_post_qm_stat_entropy_semantics_gap_selection_registry_rotates_to_full_p
     assert current["governance_manifest_enrollment_authorized"] == "no"
     assert current["master_action_promotion_authorized"] == "no"
 
-    assert SELECTED_TARGET in payload["next_strict_target_coverage"]
+    assert SUPPORTING_MAP_TARGET in payload["next_strict_target_coverage"]
     assert (
-        "post_qm_stat_entropy_semantics_gap_bounded_attack_selection_nonclaim_boundary"
+        "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap_nonclaim_boundary"
         in payload["retained_blocker_coverage"]
     )
 
@@ -302,8 +362,9 @@ def test_post_qm_stat_entropy_semantics_gap_selection_public_surfaces_are_synchr
     }:
         text = _read(path)
         for token in {
-            f"CURRENT_LIVE_NEXT_TARGET_v0: {SELECTED_TARGET}",
+            f"CURRENT_LIVE_NEXT_TARGET_v0: {SUPPORTING_MAP_TARGET}",
             OUTPUT_TOKEN,
+            FULL_PILLAR_RESULT_TOKEN,
             "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_SUPPLIED_ONLY",
             "target STAT entropy semantics gap as supplied-only",
         }:
@@ -311,6 +372,10 @@ def test_post_qm_stat_entropy_semantics_gap_selection_public_surfaces_are_synchr
 
     index_text = _read(CURRENT_AUTHORITATIVE_SURFACES_PATH)
     for token in {
+        f"PREVIOUS_LIVE_NEXT_TARGET_v0: {SELECTED_TARGET}",
+        f"CURRENT_LIVE_TARGET_EVIDENCE_v0: {FULL_PILLAR_SELECTION_EVIDENCE}",
+        f"CURRENT_LIVE_TARGET_REPORT_v0: {FULL_PILLAR_SELECTION_REPORT_EVIDENCE}",
+        f"CURRENT_LIVE_NEXT_TARGET_v0: {SELECTED_TARGET}",
         f"PREVIOUS_LIVE_NEXT_TARGET_v0: {SELECTION_TARGET}",
         f"CURRENT_LIVE_TARGET_EVIDENCE_v0: {SELECTION_EVIDENCE}",
         f"CURRENT_LIVE_TARGET_REPORT_v0: {REPORT_EVIDENCE}",

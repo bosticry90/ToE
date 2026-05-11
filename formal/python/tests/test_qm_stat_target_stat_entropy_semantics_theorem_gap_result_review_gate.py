@@ -41,6 +41,14 @@ SELECTION_SURFACE_PATH = (
     / "Derivation"
     / "PostQMStatEntropySemanticsGapBoundedAttackSelection.lean"
 )
+FULL_PILLAR_SELECTION_SURFACE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "FullPillarTargetMapNextLaneSelectionAfterQMStatEntropySemanticsGap.lean"
+)
 AGGREGATE_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 REPORT_PATH = (
@@ -62,7 +70,11 @@ REVIEW_TOKEN = (
 )
 NEXT_TARGET = "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack"
 FULL_PILLAR_TARGET = "return_to_full_pillar_target_map_next_lane_selection"
+SUPPORTING_MAP_TARGET = "prepare_qm_stat_entropy_semantics_supporting_assumption_map"
 SELECTION_TOKEN = "POST_QM_STAT_ENTROPY_SEMANTICS_GAP_NEXT_ATTACK_SELECTED"
+FULL_PILLAR_RESULT_TOKEN = (
+    "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP"
+)
 SELECTED_GAP = "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0"
 SELECTED_OBLIGATION = "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0"
 RETAINED_BLOCKER = (
@@ -70,6 +82,9 @@ RETAINED_BLOCKER = (
 )
 REVIEW_LANE = "qm_stat_target_stat_entropy_semantics_theorem_gap_result_review"
 SELECTION_LANE = "post_qm_stat_entropy_semantics_gap_bounded_attack_selection"
+FULL_PILLAR_SELECTION_LANE = (
+    "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap"
+)
 
 
 def _read(path: Path) -> str:
@@ -174,11 +189,12 @@ def test_qm_stat_target_stat_entropy_semantics_result_review_rotates_to_selector
     payload = loop_registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == NEXT_TARGET
-    assert state["live_next_target"] == FULL_PILLAR_TARGET
-    assert state["live_next_target_evidence"] == _rel(SELECTION_SURFACE_PATH)
-    assert state["active_lane"] == SELECTION_LANE
+    assert state["previous_live_next_target"] == FULL_PILLAR_TARGET
+    assert state["live_next_target"] == SUPPORTING_MAP_TARGET
+    assert state["live_next_target_evidence"] == _rel(FULL_PILLAR_SELECTION_SURFACE_PATH)
+    assert state["active_lane"] == FULL_PILLAR_SELECTION_LANE
     assert REVIEW_LANE in state["paused_lanes"]
+    assert SELECTION_LANE in state["paused_lanes"]
 
     review = workstream(REVIEW_LANE, payload)
     assert review["status"] == "paused"
@@ -194,7 +210,7 @@ def test_qm_stat_target_stat_entropy_semantics_result_review_rotates_to_selector
     assert review["governance_manifest_enrollment_authorized"] == "no"
 
     selector = workstream(SELECTION_LANE, payload)
-    assert selector["status"] == "active"
+    assert selector["status"] == "paused"
     assert selector["authorization_evidence"] == _rel(SELECTION_SURFACE_PATH)
     assert selector["authorized_next_strict_target"] == FULL_PILLAR_TARGET
     assert selector["consumed_target"] == NEXT_TARGET
@@ -203,6 +219,25 @@ def test_qm_stat_target_stat_entropy_semantics_result_review_rotates_to_selector
     assert selector["selected_next_target"] == FULL_PILLAR_TARGET
     assert selector["selection_executes_target"] == "no"
     assert selector["governance_manifest_enrollment_authorized"] == "no"
+
+    full_pillar_selector = workstream(FULL_PILLAR_SELECTION_LANE, payload)
+    assert full_pillar_selector["status"] == "active"
+    assert full_pillar_selector["authorization_evidence"] == _rel(
+        FULL_PILLAR_SELECTION_SURFACE_PATH
+    )
+    assert full_pillar_selector["authorized_next_strict_target"] == SUPPORTING_MAP_TARGET
+    assert full_pillar_selector["consumed_target"] == FULL_PILLAR_TARGET
+    assert full_pillar_selector["consumed_selector_token"] == SELECTION_TOKEN
+    assert full_pillar_selector["result_token"] == FULL_PILLAR_RESULT_TOKEN
+    assert (
+        full_pillar_selector["selected_lane"]
+        == "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP"
+    )
+    assert full_pillar_selector["selected_next_target"] == SUPPORTING_MAP_TARGET
+    assert full_pillar_selector["selection_executes_lane"] == "no"
+    assert full_pillar_selector["target_stat_entropy_semantics_supplied_only"] == "yes"
+    assert full_pillar_selector["theorem_gap_discharged"] == "no"
+    assert full_pillar_selector["governance_manifest_enrollment_authorized"] == "no"
 
 
 def test_qm_stat_target_stat_entropy_semantics_result_review_gate_not_manifest_enrolled() -> None:

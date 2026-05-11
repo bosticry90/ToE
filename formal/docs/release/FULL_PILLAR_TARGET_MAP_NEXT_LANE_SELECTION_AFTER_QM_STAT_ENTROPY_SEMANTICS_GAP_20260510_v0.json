@@ -1,0 +1,99 @@
+{
+  "schema_id": "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_20260510_v0",
+  "schema_version": 0,
+  "date": "2026-05-10",
+  "classification": "P-POLICY/nonclaim",
+  "selection_status": "completed_selection_only",
+  "current_target": "return_to_full_pillar_target_map_next_lane_selection",
+  "consumed_selector_token": "POST_QM_STAT_ENTROPY_SEMANTICS_GAP_NEXT_ATTACK_SELECTED",
+  "result_token": "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP",
+  "selected_lane": "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP",
+  "selected_next_target": "prepare_qm_stat_entropy_semantics_supporting_assumption_map",
+  "selected_next_target_kind": "qm_stat_entropy_semantics_supporting_assumption_map_preparation_only",
+  "selection_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterQMStatEntropySemanticsGap.lean",
+  "post_qm_stat_entropy_semantics_gap_selection_surface": "formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropySemanticsGapBoundedAttackSelection.lean",
+  "post_qm_stat_entropy_semantics_gap_selection_report": "formal/docs/release/POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_20260510_v0.json",
+  "target_map_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapRebase.lean",
+  "target_map_document": "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md",
+  "focused_gate": "formal/python/tests/test_full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap_gate.py",
+  "authorized_effect": "SELECT_EXACTLY_ONE_NEXT_BOUNDED_LANE",
+  "selection_executes_lane": false,
+  "selection_count": 1,
+  "candidate_lane_count": 7,
+  "selection_reason": "The QM-STAT target STAT entropy semantics gap has been classified as supplied-only under current authority. Select a bounded supporting-assumption map so future work can identify the assumptions required to reduce or discharge that supplied-only status without claiming theorem closure now.",
+  "qm_stat_supplied_only_basis": {
+    "selected_gap": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0",
+    "source_result_token": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_SUPPLIED_ONLY",
+    "source_review_token": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY",
+    "target_stat_entropy_semantics_authority": "SUPPLIED_ONLY_TARGET_STAT_ENTROPY_SEMANTICS_RETAINED",
+    "lean_backed_entropy_semantics_discharge": false,
+    "theorem_gap_discharged": false
+  },
+  "candidate_classes": [
+    {
+      "class_id": "NEXT_PROOF_DEBT_LEDGER_DISCHARGE_ITEM",
+      "candidate_target": "prepare_next_proof_debt_ledger_discharge_item",
+      "selection": "not_selected",
+      "reason": "Proof-debt cleanup remains eligible, but the immediate supplied-only QM-STAT boundary has a bounded assumption-map follow-up."
+    },
+    {
+      "class_id": "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP",
+      "candidate_target": "prepare_qm_stat_entropy_semantics_supporting_assumption_map",
+      "selection": "selected",
+      "reason": "Maps the assumptions required for a future entropy-semantics reduction or discharge without asserting closure."
+    },
+    {
+      "class_id": "SR_COSMO_GLOBAL_OBSTRUCTION_FOLLOW_UP",
+      "candidate_target": "prepare_sr_cosmo_global_obstruction_followup",
+      "selection": "not_selected",
+      "reason": "SR/COSMO follow-up remains eligible, but the current fresh QM-STAT supplied-only classification has the narrower continuation."
+    },
+    {
+      "class_id": "GR_WEAK_FIELD_SOURCE_SIDE_OBLIGATION_LANE",
+      "candidate_target": "prepare_gr_weak_field_source_side_obligation_lane",
+      "selection": "not_selected",
+      "reason": "GR source-side planning remains eligible, with no weak-field recovery or source-map closure selected here."
+    },
+    {
+      "class_id": "MASTER_ACTION_DEPENDENCY_GAP_REDUCTION_PLAN",
+      "candidate_target": "prepare_master_action_dependency_gap_reduction_plan",
+      "selection": "not_selected",
+      "reason": "Master-action gap reduction remains eligible, but no promotion or closure move is selected here."
+    },
+    {
+      "class_id": "QFT_GR_WITNESS_SEARCH_PLAN",
+      "candidate_target": "prepare_qft_gr_witness_search_plan",
+      "selection": "not_selected",
+      "reason": "QFT-GR witness search remains higher-risk while source-map closure is unauthorized."
+    },
+    {
+      "class_id": "ARTIFACT_RETENTION_MIGRATION_PLAN",
+      "candidate_target": "prepare_artifact_retention_migration_plan",
+      "selection": "not_selected",
+      "reason": "Artifact migration remains deferred; the artifact freeze is preserved without migration or deletion here."
+    }
+  ],
+  "nonclaim_boundaries": {
+    "selection_executes_lane": false,
+    "target_stat_entropy_semantics_lean_backed": false,
+    "target_stat_entropy_semantics_supplied_only": true,
+    "theorem_gap_discharged": false,
+    "proof_debt_discharge_item_selected": false,
+    "qm_stat_supporting_assumption_map_selected": true,
+    "sr_cosmo_obstruction_followup_selected": false,
+    "gr_weak_field_source_side_selected": false,
+    "qft_gr_witness_search_selected": false,
+    "master_action_gap_reduction_selected": false,
+    "artifact_retention_migration_plan_selected": false,
+    "qm_stat_pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "master_action_promotion_authorized": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The full-pillar selector consumes the post-QM-STAT entropy-semantics gap selector result, compares the global proof-debt, QM-STAT, SR/COSMO, GR, master-action, QFT-GR, and artifact-retention lanes, selects exactly one bounded QM-STAT supporting-assumption-map preparation target, preserves the supplied-only entropy-semantics boundary, and does not infer Lean-backed entropy-semantics discharge, theorem-gap closure, QM-STAT pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, master-action promotion, QFT-GR source-map closure, governance-manifest enrollment, or lane execution.",
+  "next_action_after_selection_packet": "prepare_qm_stat_entropy_semantics_supporting_assumption_map"
+}

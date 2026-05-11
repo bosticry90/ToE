@@ -354,7 +354,7 @@ theorem post_qm_stat_entropy_semantics_gap_selection_candidate_count_v0 :
 theorem post_qm_stat_entropy_semantics_gap_selection_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "return_to_full_pillar_target_map_next_lane_selection" := by
+      some "prepare_qm_stat_entropy_semantics_supporting_assumption_map" := by
   decide
 
 theorem post_qm_stat_entropy_semantics_gap_selection_does_not_execute_target_v0 :
