@@ -435,7 +435,7 @@ theorem full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semanti
 theorem full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "prepare_qm_stat_entropy_semantics_supporting_assumption_map" := by
+      some "select_next_post_qm_stat_entropy_assumption_map_bounded_attack" := by
   decide
 
 theorem full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap_does_not_execute_lane_v0 :

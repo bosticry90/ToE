@@ -189,10 +189,9 @@ def test_qm_stat_target_stat_entropy_semantics_result_review_rotates_to_selector
     payload = loop_registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == FULL_PILLAR_TARGET
-    assert state["live_next_target"] == SUPPORTING_MAP_TARGET
-    assert state["live_next_target_evidence"] == _rel(FULL_PILLAR_SELECTION_SURFACE_PATH)
-    assert state["active_lane"] == FULL_PILLAR_SELECTION_LANE
+    assert SUPPORTING_MAP_TARGET in payload["next_strict_target_coverage"]
+    assert state["live_next_target"] != SUPPORTING_MAP_TARGET
+    assert FULL_PILLAR_SELECTION_LANE in state["paused_lanes"]
     assert REVIEW_LANE in state["paused_lanes"]
     assert SELECTION_LANE in state["paused_lanes"]
 
@@ -221,7 +220,7 @@ def test_qm_stat_target_stat_entropy_semantics_result_review_rotates_to_selector
     assert selector["governance_manifest_enrollment_authorized"] == "no"
 
     full_pillar_selector = workstream(FULL_PILLAR_SELECTION_LANE, payload)
-    assert full_pillar_selector["status"] == "active"
+    assert full_pillar_selector["status"] == "paused"
     assert full_pillar_selector["authorization_evidence"] == _rel(
         FULL_PILLAR_SELECTION_SURFACE_PATH
     )

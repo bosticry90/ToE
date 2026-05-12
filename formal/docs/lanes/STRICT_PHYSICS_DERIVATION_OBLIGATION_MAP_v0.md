@@ -75,7 +75,7 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict architecture target:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_semantics_supporting_assumption_map`
+- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_assumption_map_bounded_attack`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_TARGET_v0: select_next_post_qm_stat_entropy_semantics_gap_bounded_attack`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_v0: formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropySemanticsGapBoundedAttackSelection.lean`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_REPORT_v0: formal/docs/release/POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_20260510_v0.json`
@@ -88,6 +88,11 @@ Next strict architecture target:
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_SELECTED_LANE_v0: QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_SELECTED_TARGET_v0: prepare_qm_stat_entropy_semantics_supporting_assumption_map`
 - Full-pillar target-map next-lane selection after QM-STAT entropy-semantics gap status: the selector consumes the post-gap return token, preserves the supplied-only entropy-semantics boundary, and selects a bounded supporting-assumption map without authorizing Lean-backed discharge, theorem-gap closure, QM-STAT completion, seam closure, Phase 2, empirical claim, canonical ToE claim, QFT-GR source-map closure, governance-manifest enrollment, or master-action promotion.
+- `QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_v0: formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMap.lean`
+- `QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_v0: formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMapResultReview.lean`
+- `QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_CONSUMED_v0: QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_CONSUMED`
+- `QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_SELECTED_TARGET_v0: select_next_post_qm_stat_entropy_assumption_map_bounded_attack`
+- QM-STAT supporting-assumption map result review status: consumes the dependency map only, keeps all eight assumption classes recorded, preserves the supplied-only entropy-semantics gap without Lean-backed theorem discharge, and selects the post-map bounded selector without closure or promotion claims.
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefreshAfterSampleRep32.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_20260505_v0.json`
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS_v0: AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS`

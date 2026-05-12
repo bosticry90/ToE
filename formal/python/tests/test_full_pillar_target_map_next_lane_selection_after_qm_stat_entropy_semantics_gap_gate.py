@@ -238,10 +238,9 @@ def test_after_qm_stat_entropy_gap_full_pillar_registry_rotates_to_supporting_ma
     payload = loop_registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
-    assert state["live_next_target"] == SELECTED_TARGET
-    assert state["live_next_target_evidence"] == _rel(SELECTION_PATH)
-    assert state["active_lane"] == ACTIVE_LANE
+    assert SELECTED_TARGET in payload["next_strict_target_coverage"]
+    assert state["live_next_target"] != SELECTED_TARGET
+    assert ACTIVE_LANE in state["paused_lanes"]
     assert PREVIOUS_LANE in state["paused_lanes"]
 
     previous = workstream(PREVIOUS_LANE, payload)
@@ -252,7 +251,7 @@ def test_after_qm_stat_entropy_gap_full_pillar_registry_rotates_to_supporting_ma
     assert previous["target_stat_entropy_semantics_supplied_only"] == "yes"
 
     current = workstream(ACTIVE_LANE, payload)
-    assert current["status"] == "active"
+    assert current["status"] == "paused"
     assert current["authorization_evidence"] == _rel(SELECTION_PATH)
     assert current["authorized_next_strict_target"] == SELECTED_TARGET
     assert current["consumed_target"] == CONSUMED_TARGET

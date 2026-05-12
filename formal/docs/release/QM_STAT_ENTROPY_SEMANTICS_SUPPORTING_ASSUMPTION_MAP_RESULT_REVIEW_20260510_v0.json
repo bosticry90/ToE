@@ -1,0 +1,59 @@
+{
+  "schema_id": "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_20260510_v0",
+  "schema_version": 0,
+  "date": "2026-05-10",
+  "classification": "P-POLICY/nonclaim",
+  "current_target": "review_qm_stat_entropy_semantics_supporting_assumption_map_result",
+  "consumed_result_token": "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_PREPARED",
+  "review_token": "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_CONSUMED",
+  "source_map_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMap.lean",
+  "source_map_report": "formal/docs/release/QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_20260510_v0.json",
+  "review_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMapResultReview.lean",
+  "selected_gap": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0",
+  "selected_obligation": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0",
+  "selected_next_target": "select_next_post_qm_stat_entropy_assumption_map_bounded_attack",
+  "selected_decision": "consume_dependency_map_and_select_post_map_bounded_attack",
+  "review_interpretation": "supporting_assumption_map_consumed_as_dependency_map_only",
+  "resulting_authority_level": "SUPPLIED_ONLY_TARGET_STAT_ENTROPY_SEMANTICS_WITH_EXPLICIT_ASSUMPTION_MAP_RETAINED",
+  "review_effect": {
+    "supporting_assumption_map_result_consumed": true,
+    "dependency_map_only": true,
+    "assumption_class_count": 8,
+    "allowed_authority_classification_count": 5,
+    "target_stat_entropy_semantics_supplied_only": true,
+    "target_stat_entropy_semantics_lean_backed": false,
+    "theorem_gap_discharged": false
+  },
+  "assumption_classes_preserved": [
+    "target_entropy_functional_definition_required",
+    "statistical_state_domain_semantics_required",
+    "normalization_or_probability_mass_condition_required",
+    "finite_support_or_summability_condition_required",
+    "log_domain_zero_handling_convention_required",
+    "transport_alignment_relation_required",
+    "residual_zero_bridge_condition_required",
+    "comparison_target_semantics_required"
+  ],
+  "authority_summary_preserved": {
+    "Lean-backed": 4,
+    "spec-backed": 0,
+    "supplied-only": 2,
+    "blocked": 0,
+    "not yet represented": 2
+  },
+  "nonclaim_boundaries": {
+    "map_attempts_theorem_discharge": false,
+    "lean_backed_entropy_semantics_discharge": false,
+    "theorem_gap_closure_claim": false,
+    "qm_stat_pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "master_action_promotion_authorized": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The supporting-assumption map is consumed as a dependency map only, all 8 required assumption classes remain recorded, the entropy-semantics theorem gap remains supplied-only and undisclosed by Lean-backed theorem authority, and no QM-STAT pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, master-action promotion, or QFT-GR source-map closure is inferred.",
+  "next_action": "select_next_post_qm_stat_entropy_assumption_map_bounded_attack"
+}

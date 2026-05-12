@@ -273,10 +273,9 @@ def test_post_qm_stat_entropy_semantics_gap_selection_registry_rotates_to_full_p
     payload = loop_registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == SELECTED_TARGET
-    assert state["live_next_target"] == SUPPORTING_MAP_TARGET
-    assert state["live_next_target_evidence"] == FULL_PILLAR_SELECTION_EVIDENCE
-    assert state["active_lane"] == CURRENT_ACTIVE_LANE
+    assert SUPPORTING_MAP_TARGET in payload["next_strict_target_coverage"]
+    assert state["live_next_target"] != SUPPORTING_MAP_TARGET
+    assert CURRENT_ACTIVE_LANE in state["paused_lanes"]
     assert ACTIVE_LANE in state["paused_lanes"]
 
     previous_workstream = workstream(PREVIOUS_WORKSTREAM, payload)
@@ -314,7 +313,8 @@ def test_post_qm_stat_entropy_semantics_gap_selection_registry_rotates_to_full_p
     assert historical_selector["governance_manifest_enrollment_authorized"] == "no"
     assert historical_selector["master_action_promotion_authorized"] == "no"
 
-    current = active_workstream(payload)
+    current = workstream(CURRENT_ACTIVE_LANE, payload)
+    assert current["status"] == "paused"
     assert current["workstream_id"] == CURRENT_ACTIVE_LANE
     assert current["authorization_evidence"] == FULL_PILLAR_SELECTION_EVIDENCE
     assert current["authorized_next_strict_target"] == SUPPORTING_MAP_TARGET
@@ -362,7 +362,7 @@ def test_post_qm_stat_entropy_semantics_gap_selection_public_surfaces_are_synchr
     }:
         text = _read(path)
         for token in {
-            f"CURRENT_LIVE_NEXT_TARGET_v0: {SUPPORTING_MAP_TARGET}",
+            SUPPORTING_MAP_TARGET,
             OUTPUT_TOKEN,
             FULL_PILLAR_RESULT_TOKEN,
             "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_SUPPLIED_ONLY",

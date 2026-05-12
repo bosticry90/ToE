@@ -11,13 +11,13 @@ Purpose:
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_semantics_supporting_assumption_map`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
-- `ACTIVE_LANE_v0: full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap`
+- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_assumption_map_bounded_attack`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_qm_stat_entropy_semantics_supporting_assumption_map_result`
+- `ACTIVE_LANE_v0: qm_stat_entropy_semantics_supporting_assumption_map_result_review`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterQMStatEntropySemanticsGap.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_20260510_v0.json`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMapResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_20260510_v0.json`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
@@ -47,6 +47,8 @@ Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/QMStatTargetStatEntropySemanticsTheoremGapResultReview.lean`
 - `formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropySemanticsGapBoundedAttackSelection.lean`
 - `formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterQMStatEntropySemanticsGap.lean`
+- `formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMap.lean`
+- `formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMapResultReview.lean`
 - `MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED`
 - `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`
@@ -77,10 +79,18 @@ Current result-token chain:
 - `QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_NEXT_ATTACK_SELECTED`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP`
+- `QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_PREPARED`
+- `QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_CONSUMED`
 - Post-QM-STAT entropy-semantics selector preserves the target STAT entropy semantics gap as supplied-only and returns control to full-pillar target-map selection without closure or promotion claims.
 - After-QM-STAT full-pillar selector selects the supporting-assumption map for the supplied-only target STAT entropy semantics gap without closure or promotion claims.
+- QM-STAT supporting-assumption map result review consumes the dependency map only, keeps all eight assumption classes recorded, and selects the post-map bounded selector without closure or promotion claims.
 
 Historical live-target transition tokens retained for focused historical gates:
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_semantics_supporting_assumption_map`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
+- `ACTIVE_LANE_v0: full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterQMStatEntropySemanticsGap.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_20260510_v0.json`
 - `CURRENT_LIVE_NEXT_TARGET_v0: return_to_full_pillar_target_map_next_lane_selection`
 - `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_semantics_gap_bounded_attack`
 - `ACTIVE_LANE_v0: post_qm_stat_entropy_semantics_gap_bounded_attack_selection`

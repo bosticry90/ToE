@@ -87,9 +87,9 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "return_to_full_pillar_target_map_next_lane_selection",
-    "live_next_target": "prepare_qm_stat_entropy_semantics_supporting_assumption_map",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterQMStatEntropySemanticsGap.lean",
+    "previous_live_next_target": "review_qm_stat_entropy_semantics_supporting_assumption_map_result",
+    "live_next_target": "select_next_post_qm_stat_entropy_assumption_map_bounded_attack",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMapResultReview.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
@@ -158,9 +158,11 @@
       "qm_stat_theorem_gap_reentry",
       "qm_stat_theorem_gap_reentry_result_review",
       "qm_stat_target_stat_entropy_semantics_theorem_gap_result_review",
-      "post_qm_stat_entropy_semantics_gap_bounded_attack_selection"
+      "post_qm_stat_entropy_semantics_gap_bounded_attack_selection",
+      "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap",
+      "qm_stat_entropy_semantics_supporting_assumption_map"
     ],
-    "active_lane": "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap",
+    "active_lane": "qm_stat_entropy_semantics_supporting_assumption_map_result_review",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -593,7 +595,9 @@
     "qm_stat_theorem_gap_reentry_result_review_nonclaim_boundary",
     "PHASE1-BLOCKER-QMSTAT-TARGET-STAT-ENTROPY-SEMANTICS-SUPPLIED-ONLY-RETAINED",
     "post_qm_stat_entropy_semantics_gap_bounded_attack_selection_nonclaim_boundary",
-    "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap_nonclaim_boundary"
+    "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap_nonclaim_boundary",
+    "qm_stat_entropy_semantics_supporting_assumption_map_nonclaim_boundary",
+    "qm_stat_entropy_semantics_supporting_assumption_map_result_review_nonclaim_boundary"
   ],
   "next_strict_target_coverage": [
     "rotate_to_qm_stat_transport_residual_semantics",
@@ -685,6 +689,8 @@
     "review_qm_stat_target_stat_entropy_semantics_theorem_gap_result",
     "select_next_post_qm_stat_entropy_semantics_gap_bounded_attack",
     "prepare_qm_stat_entropy_semantics_supporting_assumption_map",
+    "review_qm_stat_entropy_semantics_supporting_assumption_map_result",
+    "select_next_post_qm_stat_entropy_assumption_map_bounded_attack",
     "prepare_sr_cosmo_global_obstruction_followup",
     "review_fnrep_nonalias_samplerep32_discharge_result",
     "select_next_post_fnrep_samplerep32_discharge_bounded_attack"
@@ -1092,6 +1098,18 @@
       "to": "qm_stat_entropy_semantics_supporting_assumption_map",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterQMStatEntropySemanticsGap.lean"
+    },
+    {
+      "from": "qm_stat_entropy_semantics_supporting_assumption_map",
+      "to": "qm_stat_entropy_semantics_supporting_assumption_map_result_review",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMap.lean"
+    },
+    {
+      "from": "qm_stat_entropy_semantics_supporting_assumption_map_result_review",
+      "to": "post_qm_stat_entropy_assumption_map_bounded_attack_selection",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMapResultReview.lean"
     }
   ],
   "cycle_waivers": [],
@@ -5112,10 +5130,10 @@
     },
     {
       "workstream_id": "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap",
-      "status": "active",
+      "status": "paused",
       "retained_blocker": "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap_nonclaim_boundary",
       "consecutive_slices_after_retention": 0,
-      "guardrail_status": "active_under_loop_control_registry_v0",
+      "guardrail_status": "paused_after_supporting_assumption_map_prepared_under_loop_control_registry_v0",
       "blocked_promotions": [
         "phase2_authorization",
         "seam_closure",
@@ -5185,6 +5203,101 @@
         "prepare_qft_gr_witness_search_plan",
         "prepare_artifact_retention_migration_plan"
       ]
+    },
+    {
+      "workstream_id": "qm_stat_entropy_semantics_supporting_assumption_map",
+      "status": "paused",
+      "retained_blocker": "qm_stat_entropy_semantics_supporting_assumption_map_nonclaim_boundary",
+      "consecutive_slices_after_retention": 0,
+      "guardrail_status": "paused_after_result_review_selected_under_loop_control_registry_v0",
+      "blocked_promotions": [
+        "phase2_authorization",
+        "seam_closure",
+        "master_action_promotion",
+        "empirical_claim",
+        "canonical_toe_claim",
+        "qft_gr_source_map_closure",
+        "governance_manifest_enrollment"
+      ],
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMap.lean",
+      "authorized_next_slice": "qm_stat_entropy_semantics_supporting_assumption_map_result_review_v0",
+      "authorized_next_strict_target": "review_qm_stat_entropy_semantics_supporting_assumption_map_result",
+      "consumed_target": "prepare_qm_stat_entropy_semantics_supporting_assumption_map",
+      "latest_surface": "qm_stat_entropy_semantics_supporting_assumption_map_v0",
+      "source_selector_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterQMStatEntropySemanticsGap.lean",
+      "source_selector_report": "formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_20260510_v0.json",
+      "assumption_map_report": "formal/docs/release/QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_20260510_v0.json",
+      "consumed_selector_token": "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP",
+      "result_token": "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_PREPARED",
+      "selected_lane": "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP",
+      "selected_gap": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0",
+      "selected_obligation": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0",
+      "selected_next_target": "review_qm_stat_entropy_semantics_supporting_assumption_map_result",
+      "authorized_effect": "PREPARE_SUPPORTING_ASSUMPTION_MAP_ONLY",
+      "assumption_class_count": 8,
+      "allowed_authority_classification_count": 5,
+      "lean_backed_assumption_count": 4,
+      "supplied_only_assumption_count": 2,
+      "not_yet_represented_assumption_count": 2,
+      "map_attempts_theorem_discharge": "no",
+      "target_stat_entropy_semantics_lean_backed": "no",
+      "target_stat_entropy_semantics_supplied_only": "yes",
+      "theorem_gap_discharged": "no",
+      "qm_stat_pillar_completion_inferred": "no",
+      "pillar_completion_inferred": "no",
+      "seam_closure_claim": "no",
+      "phase2_readiness_claim": "no",
+      "empirical_adequacy_claim": "no",
+      "canonical_toe_claim": "no",
+      "master_action_promotion_authorized": "no",
+      "qft_gr_source_map_closure_authorized": "no",
+      "governance_manifest_enrollment_authorized": "no"
+    },
+    {
+      "workstream_id": "qm_stat_entropy_semantics_supporting_assumption_map_result_review",
+      "status": "active",
+      "retained_blocker": "qm_stat_entropy_semantics_supporting_assumption_map_result_review_nonclaim_boundary",
+      "consecutive_slices_after_retention": 0,
+      "guardrail_status": "active_under_loop_control_registry_v0",
+      "blocked_promotions": [
+        "phase2_authorization",
+        "seam_closure",
+        "master_action_promotion",
+        "empirical_claim",
+        "canonical_toe_claim",
+        "qft_gr_source_map_closure",
+        "governance_manifest_enrollment"
+      ],
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMapResultReview.lean",
+      "authorized_next_slice": "post_qm_stat_entropy_assumption_map_bounded_attack_selection_v0",
+      "authorized_next_strict_target": "select_next_post_qm_stat_entropy_assumption_map_bounded_attack",
+      "consumed_target": "review_qm_stat_entropy_semantics_supporting_assumption_map_result",
+      "latest_surface": "qm_stat_entropy_semantics_supporting_assumption_map_result_review_v0",
+      "source_map_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMap.lean",
+      "source_map_report": "formal/docs/release/QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_20260510_v0.json",
+      "review_report": "formal/docs/release/QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_20260510_v0.json",
+      "consumed_result_token": "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_PREPARED",
+      "review_token": "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_CONSUMED",
+      "selected_gap": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0",
+      "selected_obligation": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0",
+      "selected_next_target": "select_next_post_qm_stat_entropy_assumption_map_bounded_attack",
+      "selected_decision": "consume_dependency_map_and_select_post_map_bounded_attack",
+      "review_interpretation": "supporting_assumption_map_consumed_as_dependency_map_only",
+      "dependency_map_only": "yes",
+      "assumption_class_count": 8,
+      "allowed_authority_classification_count": 5,
+      "target_stat_entropy_semantics_lean_backed": "no",
+      "target_stat_entropy_semantics_supplied_only": "yes",
+      "theorem_gap_discharged": "no",
+      "qm_stat_pillar_completion_inferred": "no",
+      "pillar_completion_inferred": "no",
+      "seam_closure_claim": "no",
+      "phase2_readiness_claim": "no",
+      "empirical_adequacy_claim": "no",
+      "canonical_toe_claim": "no",
+      "master_action_promotion_authorized": "no",
+      "qft_gr_source_map_closure_authorized": "no",
+      "governance_manifest_enrollment_authorized": "no"
     }
   ],
   "promotion_escrow": {

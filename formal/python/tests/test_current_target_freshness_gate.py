@@ -481,6 +481,22 @@ FULL_PILLAR_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_PATH = (
     / "Derivation"
     / "FullPillarTargetMapNextLaneSelectionAfterQMStatEntropySemanticsGap.lean"
 )
+QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "QMStatEntropySemanticsSupportingAssumptionMap.lean"
+)
+QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "QMStatEntropySemanticsSupportingAssumptionMapResultReview.lean"
+)
 MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH = (
     REPO_ROOT
     / "formal"
@@ -759,12 +775,24 @@ FULL_PILLAR_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_RESULT_TOKEN = (
 QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_TARGET = (
     "prepare_qm_stat_entropy_semantics_supporting_assumption_map"
 )
+QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_TARGET = (
+    "review_qm_stat_entropy_semantics_supporting_assumption_map_result"
+)
+QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_TOKEN = (
+    "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_PREPARED"
+)
+QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_TOKEN = (
+    "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_CONSUMED"
+)
+POST_QM_STAT_ENTROPY_ASSUMPTION_MAP_BOUNDED_ATTACK_SELECTION_TARGET = (
+    "select_next_post_qm_stat_entropy_assumption_map_bounded_attack"
+)
 AUDIT_REFRESH_TARGET = "prepare_axiom_ledger_audit_refresh"
 AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
-PREVIOUS_TARGET = FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
-LIVE_TARGET = QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_TARGET
+PREVIOUS_TARGET = QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_TARGET
+LIVE_TARGET = POST_QM_STAT_ENTROPY_ASSUMPTION_MAP_BOUNDED_ATTACK_SELECTION_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -886,7 +914,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        FULL_PILLAR_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_PATH.relative_to(REPO_ROOT)
+        QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_PATH.relative_to(
+            REPO_ROOT
+        )
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -895,7 +925,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert set(state["paused_lanes"]) == paused_ids
     assert (
         state["active_lane"]
-        == "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap"
+        == "qm_stat_entropy_semantics_supporting_assumption_map_result_review"
     )
 
     previous_fnrep_workstream = _workstream(payload, "fnrep_nonalias_samplerep32_discharge")
@@ -1255,7 +1285,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "post_qm_stat_entropy_semantics_gap_bounded_attack_selection"
     )
     assert previous_post_qm_selector_workstream["status"] == "paused"
-    assert previous_post_qm_selector_workstream["authorized_next_strict_target"] == PREVIOUS_TARGET
+    assert previous_post_qm_selector_workstream["authorized_next_strict_target"] == (
+        FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
+    )
     assert previous_post_qm_selector_workstream["consumed_target"] == (
         POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_TARGET
     )
@@ -1280,8 +1312,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         previous_post_qm_selector_workstream["output_token"]
         == POST_QM_STAT_ENTROPY_SEMANTICS_GAP_NEXT_ATTACK_SELECTED
     )
-    assert previous_post_qm_selector_workstream["selected_next_target"] == PREVIOUS_TARGET
-    assert previous_post_qm_selector_workstream["selected_decision"] == PREVIOUS_TARGET
+    assert previous_post_qm_selector_workstream["selected_next_target"] == (
+        FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
+    )
+    assert previous_post_qm_selector_workstream["selected_decision"] == (
+        FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_TARGET
+    )
     assert previous_post_qm_selector_workstream["selection_count"] == 1
     assert previous_post_qm_selector_workstream["candidate_target_count"] == 2
     assert previous_post_qm_selector_workstream["selection_executes_target"] == "no"
@@ -1302,43 +1338,32 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     current_active_workstream = active_workstream(payload)
     assert (
         current_active_workstream["workstream_id"]
-        == "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap"
+        == "qm_stat_entropy_semantics_supporting_assumption_map_result_review"
     )
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap_v0"
+        == "qm_stat_entropy_semantics_supporting_assumption_map_result_review_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
-        FULL_PILLAR_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_PATH.relative_to(REPO_ROOT)
+        QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_PATH.relative_to(
+            REPO_ROOT
+        )
     ).replace("\\", "/")
     assert current_active_workstream["consumed_result_token"] == (
-        QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_RESULT_TOKEN
+        QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_TOKEN
     )
-    assert current_active_workstream["consumed_review_token"] == (
-        QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_RESULT_REVIEW_TOKEN
-    )
-    assert current_active_workstream["consumed_selector_token"] == (
-        POST_QM_STAT_ENTROPY_SEMANTICS_GAP_NEXT_ATTACK_SELECTED
+    assert current_active_workstream["review_token"] == (
+        QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_TOKEN
     )
     assert current_active_workstream["selected_gap"] == QM_STAT_THEOREM_GAP_REENTRY_SELECTED_GAP
-    assert (
-        current_active_workstream["result_token"]
-        == FULL_PILLAR_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_RESULT_TOKEN
-    )
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert (
-        current_active_workstream["selected_lane"]
-        == "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP"
-    )
-    assert current_active_workstream["selection_count"] == 1
-    assert current_active_workstream["candidate_lane_count"] == 7
-    assert current_active_workstream["selection_executes_lane"] == "no"
+    assert current_active_workstream["dependency_map_only"] == "yes"
+    assert current_active_workstream["assumption_class_count"] == 8
     assert current_active_workstream["target_stat_entropy_semantics_lean_backed"] == "no"
     assert current_active_workstream["target_stat_entropy_semantics_supplied_only"] == "yes"
     assert current_active_workstream["theorem_gap_discharged"] == "no"
-    assert current_active_workstream["qm_stat_supporting_assumption_map_selected"] == "yes"
     assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
     assert current_active_workstream["seam_closure_claim"] == "no"
     assert current_active_workstream["phase2_readiness_claim"] == "no"
@@ -1346,6 +1371,35 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["canonical_toe_claim"] == "no"
     assert current_active_workstream["governance_manifest_enrollment_authorized"] == "no"
     assert current_active_workstream["master_action_promotion_authorized"] == "no"
+
+    previous_full_pillar_workstream = _workstream(
+        payload, "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap"
+    )
+    assert previous_full_pillar_workstream["status"] == "paused"
+    assert previous_full_pillar_workstream["authorized_next_strict_target"] == (
+        QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_TARGET
+    )
+    assert (
+        previous_full_pillar_workstream["selected_lane"]
+        == "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP"
+    )
+    assert previous_full_pillar_workstream["selection_executes_lane"] == "no"
+
+    previous_assumption_map_workstream = _workstream(
+        payload, "qm_stat_entropy_semantics_supporting_assumption_map"
+    )
+    assert previous_assumption_map_workstream["status"] == "paused"
+    assert previous_assumption_map_workstream["authorized_next_strict_target"] == (
+        QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_TARGET
+    )
+    assert previous_assumption_map_workstream["consumed_target"] == (
+        QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_TARGET
+    )
+    assert previous_assumption_map_workstream["result_token"] == (
+        QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_TOKEN
+    )
+    assert previous_assumption_map_workstream["assumption_class_count"] == 8
+    assert previous_assumption_map_workstream["map_attempts_theorem_discharge"] == "no"
 
     active_targets = {
         state["live_next_target"],
