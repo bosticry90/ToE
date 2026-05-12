@@ -75,7 +75,7 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict architecture target:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_TARGET_v0: select_next_post_qm_stat_entropy_semantics_gap_bounded_attack`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_v0: formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropySemanticsGapBoundedAttackSelection.lean`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_REPORT_v0: formal/docs/release/POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_20260510_v0.json`
@@ -99,6 +99,12 @@ Next strict architecture target:
 - `POST_QM_STAT_ENTROPY_ASSUMPTION_MAP_NEXT_ATTACK_SELECTED_v0: POST_QM_STAT_ENTROPY_ASSUMPTION_MAP_NEXT_ATTACK_SELECTED`
 - `POST_QM_STAT_ENTROPY_ASSUMPTION_MAP_SELECTED_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
 - Post-QM-STAT entropy assumption-map bounded selector status: consumes the dependency-map review only, preserves all eight assumption classes and the supplied-only entropy-semantics gap, and selects exactly one assumption-reduction candidate-selection target without executing it or claiming discharge, closure, promotion, or readiness.
+- `QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_v0: formal/toe_formal/ToeFormal/Derivation/QMStatEntropyAssumptionReductionCandidateSelection.lean`
+- `QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_REPORT_v0: formal/docs/release/QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_20260510_v0.json`
+- `QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTED_v0: QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTED`
+- `QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_SELECTED_CANDIDATE_v0: log_domain_zero_handling_convention_required`
+- `QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_SELECTED_TARGET_v0: prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack`
+- QM-STAT entropy assumption-reduction candidate selector status: evaluates all eight mapped assumptions, selects log-domain / zero-handling convention as the single bounded candidate, and does not execute the reduction or claim entropy-semantics theorem discharge, QM-STAT completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, QFT-GR source-map closure, governance-manifest enrollment, or master-action promotion.
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefreshAfterSampleRep32.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_20260505_v0.json`
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS_v0: AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS`

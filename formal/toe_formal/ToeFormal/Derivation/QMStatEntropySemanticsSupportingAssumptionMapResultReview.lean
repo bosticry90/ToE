@@ -341,7 +341,7 @@ theorem qm_stat_entropy_semantics_supporting_assumption_map_result_review_suppli
 theorem qm_stat_entropy_semantics_supporting_assumption_map_result_review_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "prepare_qm_stat_entropy_assumption_reduction_candidate_selection" := by
+      some "prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack" := by
   decide
 
 theorem qm_stat_entropy_semantics_supporting_assumption_map_result_review_does_not_attempt_discharge_v0 :

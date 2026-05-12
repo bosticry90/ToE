@@ -449,7 +449,7 @@ theorem qm_stat_target_stat_entropy_semantics_selected_next_target_v0 :
 theorem qm_stat_target_stat_entropy_semantics_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "prepare_qm_stat_entropy_assumption_reduction_candidate_selection" := by
+      some "prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack" := by
   decide
 
 /-- No Lean-backed target entropy semantics theorem is claimed. -/

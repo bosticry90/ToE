@@ -74,6 +74,7 @@ CURRENT_AUTHORITATIVE_SURFACES_PATH = (
 REPORT_ID = "POST_QM_STAT_ENTROPY_ASSUMPTION_MAP_BOUNDED_ATTACK_SELECTION_20260510_v0"
 SURFACE_ID = "post_qm_stat_entropy_assumption_map_bounded_attack_selection_v0"
 ACTIVE_LANE = "post_qm_stat_entropy_assumption_map_bounded_attack_selection"
+CANDIDATE_SELECTION_LANE = "qm_stat_entropy_assumption_reduction_candidate_selection"
 PREVIOUS_LANE = "qm_stat_entropy_semantics_supporting_assumption_map_result_review"
 SELECTION_TARGET = "select_next_post_qm_stat_entropy_assumption_map_bounded_attack"
 CONSUMED_REVIEW_TARGET = "review_qm_stat_entropy_semantics_supporting_assumption_map_result"
@@ -82,6 +83,9 @@ CONSUMED_REVIEW_TOKEN = (
 )
 OUTPUT_TOKEN = "POST_QM_STAT_ENTROPY_ASSUMPTION_MAP_NEXT_ATTACK_SELECTED"
 SELECTED_TARGET = "prepare_qm_stat_entropy_assumption_reduction_candidate_selection"
+NEXT_TARGET_AFTER_CANDIDATE_SELECTION = (
+    "prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack"
+)
 ALTERNATE_TARGET = "return_to_full_pillar_target_map_next_lane_selection"
 SELECTED_GAP = "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0"
 SELECTED_OBLIGATION = "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0"
@@ -257,10 +261,10 @@ def test_post_qm_stat_entropy_assumption_map_selection_registry_rotates_to_candi
     payload = loop_registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == SELECTION_TARGET
-    assert state["live_next_target"] == SELECTED_TARGET
-    assert state["live_next_target_evidence"] == SELECTION_EVIDENCE
-    assert state["active_lane"] == ACTIVE_LANE
+    assert state["previous_live_next_target"] == SELECTED_TARGET
+    assert state["live_next_target"] == NEXT_TARGET_AFTER_CANDIDATE_SELECTION
+    assert state["active_lane"] == CANDIDATE_SELECTION_LANE
+    assert ACTIVE_LANE in state["paused_lanes"]
     assert PREVIOUS_LANE in state["paused_lanes"]
 
     previous_workstream = workstream(PREVIOUS_LANE, payload)
@@ -273,35 +277,38 @@ def test_post_qm_stat_entropy_assumption_map_selection_registry_rotates_to_candi
     assert previous_workstream["target_stat_entropy_semantics_supplied_only"] == "yes"
     assert previous_workstream["theorem_gap_discharged"] == "no"
 
+    selector = workstream(ACTIVE_LANE, payload)
+    assert selector["status"] == "paused"
+    assert selector["authorization_evidence"] == SELECTION_EVIDENCE
+    assert selector["authorized_next_strict_target"] == SELECTED_TARGET
+    assert selector["consumed_target"] == SELECTION_TARGET
+    assert selector["latest_surface"] == SURFACE_ID
+    assert selector["selection_report"] == REPORT_EVIDENCE
+    assert selector["consumed_review_token"] == CONSUMED_REVIEW_TOKEN
+    assert selector["output_token"] == OUTPUT_TOKEN
+    assert selector["selected_gap"] == SELECTED_GAP
+    assert selector["selected_next_target"] == SELECTED_TARGET
+    assert selector["selected_decision"] == SELECTED_TARGET
+    assert selector["selection_count"] == 1
+    assert selector["candidate_target_count"] == 2
+    assert selector["selection_executes_target"] == "no"
+    assert selector["dependency_map_only"] == "yes"
+    assert selector["assumption_class_count"] == 8
+    assert selector["target_stat_entropy_semantics_lean_backed"] == "no"
+    assert selector["target_stat_entropy_semantics_supplied_only"] == "yes"
+    assert selector["theorem_gap_discharged"] == "no"
+    assert selector["assumption_discharge_claim"] == "no"
+    assert selector["qm_stat_pillar_completion_inferred"] == "no"
+    assert selector["qft_gr_source_map_closure_authorized"] == "no"
+    assert selector["seam_closure_claim"] == "no"
+    assert selector["phase2_readiness_claim"] == "no"
+    assert selector["empirical_adequacy_claim"] == "no"
+    assert selector["canonical_toe_claim"] == "no"
+    assert selector["governance_manifest_enrollment_authorized"] == "no"
+    assert selector["master_action_promotion_authorized"] == "no"
+
     current = active_workstream(payload)
-    assert current["workstream_id"] == ACTIVE_LANE
-    assert current["authorization_evidence"] == SELECTION_EVIDENCE
-    assert current["authorized_next_strict_target"] == SELECTED_TARGET
-    assert current["consumed_target"] == SELECTION_TARGET
-    assert current["latest_surface"] == SURFACE_ID
-    assert current["selection_report"] == REPORT_EVIDENCE
-    assert current["consumed_review_token"] == CONSUMED_REVIEW_TOKEN
-    assert current["output_token"] == OUTPUT_TOKEN
-    assert current["selected_gap"] == SELECTED_GAP
-    assert current["selected_next_target"] == SELECTED_TARGET
-    assert current["selected_decision"] == SELECTED_TARGET
-    assert current["selection_count"] == 1
-    assert current["candidate_target_count"] == 2
-    assert current["selection_executes_target"] == "no"
-    assert current["dependency_map_only"] == "yes"
-    assert current["assumption_class_count"] == 8
-    assert current["target_stat_entropy_semantics_lean_backed"] == "no"
-    assert current["target_stat_entropy_semantics_supplied_only"] == "yes"
-    assert current["theorem_gap_discharged"] == "no"
-    assert current["assumption_discharge_claim"] == "no"
-    assert current["qm_stat_pillar_completion_inferred"] == "no"
-    assert current["qft_gr_source_map_closure_authorized"] == "no"
-    assert current["seam_closure_claim"] == "no"
-    assert current["phase2_readiness_claim"] == "no"
-    assert current["empirical_adequacy_claim"] == "no"
-    assert current["canonical_toe_claim"] == "no"
-    assert current["governance_manifest_enrollment_authorized"] == "no"
-    assert current["master_action_promotion_authorized"] == "no"
+    assert current["workstream_id"] == CANDIDATE_SELECTION_LANE
 
     assert SELECTED_TARGET in payload["next_strict_target_coverage"]
     assert (
@@ -319,7 +326,7 @@ def test_post_qm_stat_entropy_assumption_map_selection_public_surfaces_are_synch
     }:
         text = _read(path)
         for token in {
-            f"CURRENT_LIVE_NEXT_TARGET_v0: {SELECTED_TARGET}",
+            f"CURRENT_LIVE_NEXT_TARGET_v0: {NEXT_TARGET_AFTER_CANDIDATE_SELECTION}",
             OUTPUT_TOKEN,
             CONSUMED_REVIEW_TOKEN,
             "all eight",

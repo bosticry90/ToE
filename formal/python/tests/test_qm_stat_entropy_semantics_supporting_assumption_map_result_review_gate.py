@@ -69,6 +69,10 @@ POST_MAP_SELECTOR_LANE = "post_qm_stat_entropy_assumption_map_bounded_attack_sel
 CANDIDATE_SELECTION_TARGET = (
     "prepare_qm_stat_entropy_assumption_reduction_candidate_selection"
 )
+CANDIDATE_SELECTION_LANE = "qm_stat_entropy_assumption_reduction_candidate_selection"
+NEXT_TARGET_AFTER_CANDIDATE_SELECTION = (
+    "prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack"
+)
 MAP_TARGET = "prepare_qm_stat_entropy_semantics_supporting_assumption_map"
 FULL_PILLAR_TARGET = "return_to_full_pillar_target_map_next_lane_selection"
 SELECTED_LANE = "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP"
@@ -215,9 +219,10 @@ def test_qm_stat_entropy_semantics_supporting_assumption_map_result_review_rotat
     payload = loop_registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == NEXT_TARGET
-    assert state["live_next_target"] == CANDIDATE_SELECTION_TARGET
-    assert state["active_lane"] == POST_MAP_SELECTOR_LANE
+    assert state["previous_live_next_target"] == CANDIDATE_SELECTION_TARGET
+    assert state["live_next_target"] == NEXT_TARGET_AFTER_CANDIDATE_SELECTION
+    assert state["active_lane"] == CANDIDATE_SELECTION_LANE
+    assert POST_MAP_SELECTOR_LANE in state["paused_lanes"]
     assert MAP_LANE in state["paused_lanes"]
     assert REVIEW_LANE in state["paused_lanes"]
     assert FULL_PILLAR_LANE in state["paused_lanes"]
