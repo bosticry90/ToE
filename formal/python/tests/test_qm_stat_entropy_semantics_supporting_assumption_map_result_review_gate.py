@@ -65,6 +65,10 @@ CONSUMED_TARGET = "review_qm_stat_entropy_semantics_supporting_assumption_map_re
 CONSUMED_RESULT_TOKEN = "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_PREPARED"
 REVIEW_TOKEN = "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_CONSUMED"
 NEXT_TARGET = "select_next_post_qm_stat_entropy_assumption_map_bounded_attack"
+POST_MAP_SELECTOR_LANE = "post_qm_stat_entropy_assumption_map_bounded_attack_selection"
+CANDIDATE_SELECTION_TARGET = (
+    "prepare_qm_stat_entropy_assumption_reduction_candidate_selection"
+)
 MAP_TARGET = "prepare_qm_stat_entropy_semantics_supporting_assumption_map"
 FULL_PILLAR_TARGET = "return_to_full_pillar_target_map_next_lane_selection"
 SELECTED_LANE = "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP"
@@ -211,11 +215,11 @@ def test_qm_stat_entropy_semantics_supporting_assumption_map_result_review_rotat
     payload = loop_registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
-    assert state["live_next_target"] == NEXT_TARGET
-    assert state["live_next_target_evidence"] == _rel(REVIEW_SURFACE_PATH)
-    assert state["active_lane"] == REVIEW_LANE
+    assert state["previous_live_next_target"] == NEXT_TARGET
+    assert state["live_next_target"] == CANDIDATE_SELECTION_TARGET
+    assert state["active_lane"] == POST_MAP_SELECTOR_LANE
     assert MAP_LANE in state["paused_lanes"]
+    assert REVIEW_LANE in state["paused_lanes"]
     assert FULL_PILLAR_LANE in state["paused_lanes"]
 
     full_pillar = workstream(FULL_PILLAR_LANE, payload)
@@ -240,7 +244,7 @@ def test_qm_stat_entropy_semantics_supporting_assumption_map_result_review_rotat
     assert source_map["governance_manifest_enrollment_authorized"] == "no"
 
     review = workstream(REVIEW_LANE, payload)
-    assert review["status"] == "active"
+    assert review["status"] == "paused"
     assert review["authorization_evidence"] == _rel(REVIEW_SURFACE_PATH)
     assert review["authorized_next_strict_target"] == NEXT_TARGET
     assert review["consumed_target"] == CONSUMED_TARGET

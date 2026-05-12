@@ -467,7 +467,7 @@ theorem qm_stat_theorem_gap_reentry_selected_next_target_v0 :
 theorem qm_stat_theorem_gap_reentry_frontier_advanced_after_target_entropy_attack_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "select_next_post_qm_stat_entropy_assumption_map_bounded_attack" := by
+      some "prepare_qm_stat_entropy_assumption_reduction_candidate_selection" := by
   decide
 
 theorem qm_stat_theorem_gap_reentry_does_not_execute_discharge_v0 :
