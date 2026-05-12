@@ -1,0 +1,127 @@
+{
+  "schema_id": "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_20260510_v0",
+  "schema_version": 0,
+  "date": "2026-05-10",
+  "classification": "P-POLICY/nonclaim",
+  "map_status": "prepared_assumption_map_only",
+  "current_target": "prepare_qm_stat_entropy_semantics_supporting_assumption_map",
+  "consumed_selector_token": "FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP",
+  "result_token": "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_PREPARED",
+  "selected_next_target": "review_qm_stat_entropy_semantics_supporting_assumption_map_result",
+  "selected_lane": "QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP",
+  "assumption_map_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMap.lean",
+  "source_selector_surface": "formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapNextLaneSelectionAfterQMStatEntropySemanticsGap.lean",
+  "source_selector_report": "formal/docs/release/FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTION_AFTER_QM_STAT_ENTROPY_SEMANTICS_GAP_20260510_v0.json",
+  "source_supplied_only_attack_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatTargetStatEntropySemanticsTheoremGap.lean",
+  "source_supplied_only_attack_report": "formal/docs/release/QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_BOUNDED_ATTACK_20260510_v0.json",
+  "source_supplied_only_review_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatTargetStatEntropySemanticsTheoremGapResultReview.lean",
+  "source_supplied_only_review_report": "formal/docs/release/QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_20260510_v0.json",
+  "focused_gate": "formal/python/tests/test_qm_stat_entropy_semantics_supporting_assumption_map_gate.py",
+  "authorized_effect": "PREPARE_SUPPORTING_ASSUMPTION_MAP_ONLY",
+  "map_attempts_theorem_discharge": false,
+  "allowed_authority_classifications": [
+    "Lean-backed",
+    "spec-backed",
+    "supplied-only",
+    "blocked",
+    "not yet represented"
+  ],
+  "selected_gap_basis": {
+    "selected_gap": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_v0",
+    "selected_obligation": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_OBLIGATION_v0",
+    "source_result_token": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_SUPPLIED_ONLY",
+    "source_review_token": "QM_STAT_TARGET_STAT_ENTROPY_SEMANTICS_THEOREM_GAP_RESULT_REVIEW_CONSUMED_SUPPLIED_ONLY",
+    "target_stat_entropy_semantics_authority": "SUPPLIED_ONLY_TARGET_STAT_ENTROPY_SEMANTICS_RETAINED",
+    "lean_backed_entropy_semantics_discharge": false,
+    "theorem_gap_discharged": false
+  },
+  "assumption_classes": [
+    {
+      "class_id": "target_entropy_functional_definition_required",
+      "label": "target entropy functional definition required",
+      "authority_classification": "Lean-backed",
+      "existing_surface": "ToeFormal.Bridges.QMSTATTransport.EntropyLike; TargetSTATEntropyStructure.entropy_weight",
+      "closure_requirement": "Fix the target entropy functional whose semantics are to be compared.",
+      "note": "A finite entropy-like functional is present; it is not yet a full target STAT semantics theorem."
+    },
+    {
+      "class_id": "statistical_state_domain_semantics_required",
+      "label": "statistical state/domain semantics required",
+      "authority_classification": "supplied-only",
+      "existing_surface": "SourceQMEvolutionStructure.qm_evolution_semantics; TargetSTATEntropyStructure.stat_entropy_semantics",
+      "closure_requirement": "Derive or explicitly justify the source and target state/domain semantics.",
+      "note": "The current state/domain semantics are supplied fields in the residual package."
+    },
+    {
+      "class_id": "normalization_or_probability_mass_condition_required",
+      "label": "normalization or probability-mass condition required",
+      "authority_classification": "not yet represented",
+      "existing_surface": "not represented in TargetSTATEntropyStructure",
+      "closure_requirement": "Represent nonnegativity and total probability mass, or a documented alternate mass convention.",
+      "note": "The current target probability is a Real-valued function with no mass constraint."
+    },
+    {
+      "class_id": "finite_support_or_summability_condition_required",
+      "label": "finite-support or summability condition required",
+      "authority_classification": "Lean-backed",
+      "existing_surface": "Fintype State requirements on EntropyLike, Moment, and residual-package theorems",
+      "closure_requirement": "Stay finite-support or add an explicit summability/general-domain replacement.",
+      "note": "The current path is Lean-backed for finite state spaces only."
+    },
+    {
+      "class_id": "log_domain_zero_handling_convention_required",
+      "label": "log-domain / zero-handling convention required",
+      "authority_classification": "not yet represented",
+      "existing_surface": "not represented by EntropyLike's arbitrary weight",
+      "closure_requirement": "Specify the logarithm domain and zero-probability convention for Shannon-style entropy.",
+      "note": "No log or zero-handling convention is currently encoded."
+    },
+    {
+      "class_id": "transport_alignment_relation_required",
+      "label": "transport/alignment relation required",
+      "authority_classification": "Lean-backed",
+      "existing_surface": "QMSTATTransportMapStructure and finite equivalence transport lemmas",
+      "closure_requirement": "Provide the actual transport/alignment instance for the selected QM-STAT target.",
+      "note": "The conditional transport machinery is Lean-backed; concrete target alignment remains an input."
+    },
+    {
+      "class_id": "residual_zero_bridge_condition_required",
+      "label": "residual-zero bridge condition required",
+      "authority_classification": "Lean-backed",
+      "existing_surface": "unified_transport_residual_zero_of_preservation; componentResidualEvidenceOfFiniteEquiv",
+      "closure_requirement": "Bridge zero residual evidence to the target entropy semantics claim.",
+      "note": "Residual-zero evidence is Lean-backed conditionally, but the semantics bridge itself is not discharged."
+    },
+    {
+      "class_id": "comparison_target_semantics_required",
+      "label": "comparison target semantics required",
+      "authority_classification": "supplied-only",
+      "existing_surface": "TargetSTATEntropyStructure.stat_entropy_semantics_supplied",
+      "closure_requirement": "Replace the supplied comparison target semantics with derived or otherwise stronger authority.",
+      "note": "This is the retained supplied-only gap mapped by this packet."
+    }
+  ],
+  "authority_summary": {
+    "Lean-backed": 4,
+    "spec-backed": 0,
+    "supplied-only": 2,
+    "blocked": 0,
+    "not yet represented": 2
+  },
+  "nonclaim_boundaries": {
+    "map_attempts_theorem_discharge": false,
+    "target_stat_entropy_semantics_lean_backed": false,
+    "target_stat_entropy_semantics_supplied_only": true,
+    "theorem_gap_discharged": false,
+    "qm_stat_pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "master_action_promotion_authorized": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The packet consumes the full-pillar selector result, maps the supporting assumptions required for the supplied-only QM-STAT target entropy semantics gap, preserves that no entropy-semantics theorem has been discharged, and does not infer QM-STAT pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, master-action promotion, or QFT-GR source-map closure.",
+  "next_action_after_assumption_map": "review_qm_stat_entropy_semantics_supporting_assumption_map_result"
+}
