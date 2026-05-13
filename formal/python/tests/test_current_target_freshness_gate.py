@@ -513,6 +513,14 @@ QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_PATH = (
     / "Derivation"
     / "QMStatEntropyAssumptionReductionCandidateSelection.lean"
 )
+QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "QMStatEntropyLogDomainZeroHandlingReduction.lean"
+)
 MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH = (
     REPO_ROOT
     / "formal"
@@ -818,12 +826,18 @@ SELECTED_QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_BOUNDED_ATTACK_TARGET = (
 SELECTED_QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE = (
     "log_domain_zero_handling_convention_required"
 )
+QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_TOKEN = (
+    "QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_ASSUMPTION_REDUCED_LEAN_BACKED"
+)
+QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_TARGET = (
+    "review_qm_stat_entropy_log_domain_zero_handling_reduction_result"
+)
 AUDIT_REFRESH_TARGET = "prepare_axiom_ledger_audit_refresh"
 AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
-PREVIOUS_TARGET = QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_TARGET
-LIVE_TARGET = SELECTED_QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_BOUNDED_ATTACK_TARGET
+PREVIOUS_TARGET = SELECTED_QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_BOUNDED_ATTACK_TARGET
+LIVE_TARGET = QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_TARGET
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -945,7 +959,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_PATH.relative_to(REPO_ROOT)
+        QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
@@ -954,7 +968,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert set(state["paused_lanes"]) == paused_ids
     assert (
         state["active_lane"]
-        == "qm_stat_entropy_assumption_reduction_candidate_selection"
+        == "qm_stat_entropy_log_domain_zero_handling_reduction"
     )
 
     previous_fnrep_workstream = _workstream(payload, "fnrep_nonalias_samplerep32_discharge")
@@ -1394,7 +1408,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         payload, "post_qm_stat_entropy_assumption_map_bounded_attack_selection"
     )
     assert previous_post_selector_workstream["status"] == "paused"
-    assert previous_post_selector_workstream["authorized_next_strict_target"] == PREVIOUS_TARGET
+    assert previous_post_selector_workstream["authorized_next_strict_target"] == (
+        QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_TARGET
+    )
     assert previous_post_selector_workstream["consumed_target"] == (
         POST_QM_STAT_ENTROPY_ASSUMPTION_MAP_BOUNDED_ATTACK_SELECTION_TARGET
     )
@@ -1405,7 +1421,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert previous_post_selector_workstream["output_token"] == (
         POST_QM_STAT_ENTROPY_ASSUMPTION_MAP_NEXT_ATTACK_SELECTED
     )
-    assert previous_post_selector_workstream["selected_next_target"] == PREVIOUS_TARGET
+    assert previous_post_selector_workstream["selected_next_target"] == (
+        QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_TARGET
+    )
     assert previous_post_selector_workstream["selection_count"] == 1
     assert previous_post_selector_workstream["candidate_target_count"] == 2
     assert previous_post_selector_workstream["selection_executes_target"] == "no"
@@ -1413,39 +1431,80 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert previous_post_selector_workstream["assumption_class_count"] == 8
     assert previous_post_selector_workstream["theorem_gap_discharged"] == "no"
 
+    previous_candidate_workstream = _workstream(
+        payload, "qm_stat_entropy_assumption_reduction_candidate_selection"
+    )
+    assert previous_candidate_workstream["status"] == "paused"
+    assert previous_candidate_workstream["authorized_next_strict_target"] == PREVIOUS_TARGET
+    assert previous_candidate_workstream["consumed_target"] == (
+        QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_TARGET
+    )
+    assert (
+        previous_candidate_workstream["latest_surface"]
+        == "qm_stat_entropy_assumption_reduction_candidate_selection_v0"
+    )
+    assert previous_candidate_workstream["authorization_evidence"] == str(
+        QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_PATH.relative_to(
+            REPO_ROOT
+        )
+    ).replace("\\", "/")
+    assert previous_candidate_workstream["consumed_selector_token"] == (
+        POST_QM_STAT_ENTROPY_ASSUMPTION_MAP_NEXT_ATTACK_SELECTED
+    )
+    assert previous_candidate_workstream["result_token"] == (
+        QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_RESULT_TOKEN
+    )
+    assert previous_candidate_workstream["selected_gap"] == (
+        QM_STAT_THEOREM_GAP_REENTRY_SELECTED_GAP
+    )
+    assert previous_candidate_workstream["selected_next_target"] == PREVIOUS_TARGET
+    assert previous_candidate_workstream["selected_assumption_class_id"] == (
+        SELECTED_QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE
+    )
+    assert previous_candidate_workstream["selection_count"] == 1
+    assert previous_candidate_workstream["assumption_class_count"] == 8
+    assert previous_candidate_workstream["selection_criteria_count"] == 5
+    assert previous_candidate_workstream["reduction_executed"] == "no"
+    assert previous_candidate_workstream["target_stat_entropy_semantics_lean_backed"] == "no"
+    assert previous_candidate_workstream["target_stat_entropy_semantics_supplied_only"] == "yes"
+    assert previous_candidate_workstream["theorem_gap_discharged"] == "no"
+    assert previous_candidate_workstream["assumption_discharge_claim"] == "no"
+
     current_active_workstream = active_workstream(payload)
     assert (
         current_active_workstream["workstream_id"]
-        == "qm_stat_entropy_assumption_reduction_candidate_selection"
+        == "qm_stat_entropy_log_domain_zero_handling_reduction"
     )
     assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "qm_stat_entropy_assumption_reduction_candidate_selection_v0"
+        == "qm_stat_entropy_log_domain_zero_handling_reduction_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
-        QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_PATH.relative_to(REPO_ROOT)
+        QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert current_active_workstream["consumed_selector_token"] == (
-        POST_QM_STAT_ENTROPY_ASSUMPTION_MAP_NEXT_ATTACK_SELECTED
+    assert current_active_workstream["consumed_candidate_token"] == (
+        QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_RESULT_TOKEN
     )
     assert current_active_workstream["result_token"] == (
-        QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_RESULT_TOKEN
+        QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_TOKEN
     )
     assert current_active_workstream["selected_gap"] == QM_STAT_THEOREM_GAP_REENTRY_SELECTED_GAP
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert current_active_workstream["selected_assumption_class_id"] == (
+    assert current_active_workstream["addressed_assumption_class_id"] == (
         SELECTED_QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE
     )
-    assert current_active_workstream["selection_count"] == 1
-    assert current_active_workstream["assumption_class_count"] == 8
-    assert current_active_workstream["selection_criteria_count"] == 5
-    assert current_active_workstream["reduction_executed"] == "no"
+    assert current_active_workstream["addressed_assumption_count"] == 1
+    assert current_active_workstream["source_assumption_class_count"] == 8
+    assert current_active_workstream["assumption_authority_after"] == (
+        "Lean-backed local convention"
+    )
+    assert current_active_workstream["zero_probability_uses_zero_contribution"] == "yes"
+    assert current_active_workstream["only_selected_assumption_addressed"] == "yes"
     assert current_active_workstream["target_stat_entropy_semantics_lean_backed"] == "no"
     assert current_active_workstream["target_stat_entropy_semantics_supplied_only"] == "yes"
-    assert current_active_workstream["theorem_gap_discharged"] == "no"
-    assert current_active_workstream["assumption_discharge_claim"] == "no"
+    assert current_active_workstream["entropy_semantics_theorem_discharged"] == "no"
     assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
     assert current_active_workstream["seam_closure_claim"] == "no"
     assert current_active_workstream["phase2_readiness_claim"] == "no"

@@ -10,6 +10,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
     assert_forbidden_promotions_closed,
     assert_frontier_matches_registry,
+    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
     loop_registry,
     workstream,
@@ -212,17 +213,30 @@ def test_qm_stat_entropy_semantics_supporting_assumption_map_result_review_repor
 
 def test_qm_stat_entropy_semantics_supporting_assumption_map_result_review_rotates_current_target() -> None:
     assert_current_target_consistent()
-    assert_frontier_matches_registry()
     assert_forbidden_promotions_closed()
-    assert_public_surfaces_match_registry()
 
     payload = loop_registry()
     state = payload["current_target_state"]
+    is_current = assert_historical_target_recorded(
+        payload=payload,
+        previous_target=CANDIDATE_SELECTION_TARGET,
+        live_target=NEXT_TARGET_AFTER_CANDIDATE_SELECTION,
+        lane=CANDIDATE_SELECTION_LANE,
+    )
 
-    assert state["previous_live_next_target"] == CANDIDATE_SELECTION_TARGET
-    assert state["live_next_target"] == NEXT_TARGET_AFTER_CANDIDATE_SELECTION
-    assert state["active_lane"] == CANDIDATE_SELECTION_LANE
+    if is_current:
+        assert_frontier_matches_registry()
+        assert_public_surfaces_match_registry()
+        assert state["previous_live_next_target"] == CANDIDATE_SELECTION_TARGET
+        assert state["live_next_target"] == NEXT_TARGET_AFTER_CANDIDATE_SELECTION
+        assert state["active_lane"] == CANDIDATE_SELECTION_LANE
+    else:
+        assert state["live_next_target"] == (
+            "review_qm_stat_entropy_log_domain_zero_handling_reduction_result"
+        )
+        assert state["active_lane"] == "qm_stat_entropy_log_domain_zero_handling_reduction"
     assert POST_MAP_SELECTOR_LANE in state["paused_lanes"]
+    assert CANDIDATE_SELECTION_LANE in state["paused_lanes"]
     assert MAP_LANE in state["paused_lanes"]
     assert REVIEW_LANE in state["paused_lanes"]
     assert FULL_PILLAR_LANE in state["paused_lanes"]

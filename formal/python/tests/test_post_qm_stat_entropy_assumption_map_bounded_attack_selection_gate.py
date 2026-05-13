@@ -9,11 +9,11 @@ from formal.python.tests.strict_physics_state_helpers import (
     REPO_ROOT,
     STATE_PATH,
     STRICT_MAP_PATH,
-    active_workstream,
     assert_current_target_consistent,
     assert_focused_gate_not_manifest_enrolled,
     assert_forbidden_promotions_closed,
     assert_frontier_matches_registry,
+    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
     loop_registry,
     read_text,
@@ -254,16 +254,28 @@ def test_post_qm_stat_entropy_assumption_map_selection_report_preserves_review_b
 
 def test_post_qm_stat_entropy_assumption_map_selection_registry_rotates_to_candidate_selection() -> None:
     assert_current_target_consistent()
-    assert_frontier_matches_registry()
-    assert_public_surfaces_match_registry()
     assert_forbidden_promotions_closed()
 
     payload = loop_registry()
     state = payload["current_target_state"]
+    is_current = assert_historical_target_recorded(
+        payload=payload,
+        previous_target=SELECTED_TARGET,
+        live_target=NEXT_TARGET_AFTER_CANDIDATE_SELECTION,
+        lane=CANDIDATE_SELECTION_LANE,
+    )
 
-    assert state["previous_live_next_target"] == SELECTED_TARGET
-    assert state["live_next_target"] == NEXT_TARGET_AFTER_CANDIDATE_SELECTION
-    assert state["active_lane"] == CANDIDATE_SELECTION_LANE
+    if is_current:
+        assert_frontier_matches_registry()
+        assert_public_surfaces_match_registry()
+        assert state["previous_live_next_target"] == SELECTED_TARGET
+        assert state["live_next_target"] == NEXT_TARGET_AFTER_CANDIDATE_SELECTION
+        assert state["active_lane"] == CANDIDATE_SELECTION_LANE
+    else:
+        assert state["live_next_target"] == (
+            "review_qm_stat_entropy_log_domain_zero_handling_reduction_result"
+        )
+        assert state["active_lane"] == "qm_stat_entropy_log_domain_zero_handling_reduction"
     assert ACTIVE_LANE in state["paused_lanes"]
     assert PREVIOUS_LANE in state["paused_lanes"]
 
@@ -307,8 +319,9 @@ def test_post_qm_stat_entropy_assumption_map_selection_registry_rotates_to_candi
     assert selector["governance_manifest_enrollment_authorized"] == "no"
     assert selector["master_action_promotion_authorized"] == "no"
 
-    current = active_workstream(payload)
-    assert current["workstream_id"] == CANDIDATE_SELECTION_LANE
+    candidate = workstream(CANDIDATE_SELECTION_LANE, payload)
+    assert candidate["workstream_id"] == CANDIDATE_SELECTION_LANE
+    assert candidate["status"] == "paused"
 
     assert SELECTED_TARGET in payload["next_strict_target_coverage"]
     assert (
@@ -326,7 +339,6 @@ def test_post_qm_stat_entropy_assumption_map_selection_public_surfaces_are_synch
     }:
         text = _read(path)
         for token in {
-            f"CURRENT_LIVE_NEXT_TARGET_v0: {NEXT_TARGET_AFTER_CANDIDATE_SELECTION}",
             OUTPUT_TOKEN,
             CONSUMED_REVIEW_TOKEN,
             "all eight",

@@ -354,7 +354,7 @@ theorem post_qm_stat_entropy_semantics_gap_selection_candidate_count_v0 :
 theorem post_qm_stat_entropy_semantics_gap_selection_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack" := by
+      some "review_qm_stat_entropy_log_domain_zero_handling_reduction_result" := by
   decide
 
 theorem post_qm_stat_entropy_semantics_gap_selection_does_not_execute_target_v0 :

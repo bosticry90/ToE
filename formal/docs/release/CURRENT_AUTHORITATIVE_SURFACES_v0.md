@@ -11,13 +11,13 @@ Purpose:
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
-- `ACTIVE_LANE_v0: qm_stat_entropy_assumption_reduction_candidate_selection`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_qm_stat_entropy_log_domain_zero_handling_reduction_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack`
+- `ACTIVE_LANE_v0: qm_stat_entropy_log_domain_zero_handling_reduction`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QMStatEntropyAssumptionReductionCandidateSelection.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_20260510_v0.json`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReduction.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_20260510_v0.json`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
@@ -51,6 +51,7 @@ Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/QMStatEntropySemanticsSupportingAssumptionMapResultReview.lean`
 - `formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropyAssumptionMapBoundedAttackSelection.lean`
 - `formal/toe_formal/ToeFormal/Derivation/QMStatEntropyAssumptionReductionCandidateSelection.lean`
+- `formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReduction.lean`
 - `MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED`
 - `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`
@@ -85,13 +86,20 @@ Current result-token chain:
 - `QM_STAT_ENTROPY_SEMANTICS_SUPPORTING_ASSUMPTION_MAP_RESULT_REVIEW_CONSUMED`
 - `POST_QM_STAT_ENTROPY_ASSUMPTION_MAP_NEXT_ATTACK_SELECTED`
 - `QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTED`
+- `QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_ASSUMPTION_REDUCED_LEAN_BACKED`
 - Post-QM-STAT entropy-semantics selector preserves the target STAT entropy semantics gap as supplied-only and returns control to full-pillar target-map selection without closure or promotion claims.
 - After-QM-STAT full-pillar selector selects the supporting-assumption map for the supplied-only target STAT entropy semantics gap without closure or promotion claims.
 - QM-STAT supporting-assumption map result review consumes the dependency map only, keeps all eight assumption classes recorded, and selects the post-map bounded selector without closure or promotion claims.
 - Post-QM-STAT entropy assumption-map bounded selector consumes the dependency-map review only, keeps all eight assumption classes recorded, and selects a single assumption-reduction candidate-selection target without executing it or making closure or promotion claims.
 - QM-STAT entropy assumption-reduction candidate selector evaluates all eight mapped assumptions and selects `log_domain_zero_handling_convention_required` without executing reduction or making discharge, closure, or promotion claims.
+- QM-STAT entropy log-domain zero-handling reduction consumes the selected candidate, addresses only `log_domain_zero_handling_convention_required`, reduces it to a Lean-backed local convention structure, and preserves the supplied-only target entropy-semantics theorem gap without discharge, closure, or promotion claims.
 
 Historical live-target transition tokens retained for focused historical gates:
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
+- `ACTIVE_LANE_v0: qm_stat_entropy_assumption_reduction_candidate_selection`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QMStatEntropyAssumptionReductionCandidateSelection.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_20260510_v0.json`
 - `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
 - `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_assumption_map_bounded_attack`
 - `ACTIVE_LANE_v0: post_qm_stat_entropy_assumption_map_bounded_attack_selection`

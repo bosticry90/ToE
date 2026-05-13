@@ -14,6 +14,7 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
     assert_forbidden_promotions_closed,
     assert_frontier_matches_registry,
+    assert_historical_target_recorded,
     assert_public_surfaces_match_registry,
     loop_registry,
     read_text,
@@ -260,18 +261,32 @@ def test_qm_stat_entropy_assumption_reduction_candidate_selection_report_preserv
 
 def test_qm_stat_entropy_assumption_reduction_candidate_selection_registry_rotates_to_attack() -> None:
     assert_current_target_consistent()
-    assert_frontier_matches_registry()
-    assert_public_surfaces_match_registry()
     assert_forbidden_promotions_closed()
 
     payload = loop_registry()
     state = payload["current_target_state"]
+    is_current = assert_historical_target_recorded(
+        payload=payload,
+        previous_target=CONSUMED_TARGET,
+        live_target=SELECTED_TARGET,
+        evidence=SELECTION_EVIDENCE,
+        lane=ACTIVE_LANE,
+    )
 
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
-    assert state["live_next_target"] == SELECTED_TARGET
-    assert state["live_next_target_evidence"] == SELECTION_EVIDENCE
-    assert state["active_lane"] == ACTIVE_LANE
+    if is_current:
+        assert_frontier_matches_registry()
+        assert_public_surfaces_match_registry()
+        assert state["previous_live_next_target"] == CONSUMED_TARGET
+        assert state["live_next_target"] == SELECTED_TARGET
+        assert state["live_next_target_evidence"] == SELECTION_EVIDENCE
+        assert state["active_lane"] == ACTIVE_LANE
+    else:
+        assert state["live_next_target"] == (
+            "review_qm_stat_entropy_log_domain_zero_handling_reduction_result"
+        )
+        assert state["active_lane"] == "qm_stat_entropy_log_domain_zero_handling_reduction"
     assert PREVIOUS_LANE in state["paused_lanes"]
+    assert ACTIVE_LANE in state["paused_lanes"]
 
     previous = workstream(PREVIOUS_LANE, payload)
     assert previous["status"] == "paused"
@@ -283,8 +298,9 @@ def test_qm_stat_entropy_assumption_reduction_candidate_selection_registry_rotat
     assert previous["selection_executes_target"] == "no"
     assert previous["theorem_gap_discharged"] == "no"
 
-    current = active_workstream(payload)
+    current = workstream(ACTIVE_LANE, payload)
     assert current["workstream_id"] == ACTIVE_LANE
+    assert current["status"] == "paused"
     assert current["authorization_evidence"] == SELECTION_EVIDENCE
     assert current["authorized_next_strict_target"] == SELECTED_TARGET
     assert current["consumed_target"] == CONSUMED_TARGET
@@ -327,7 +343,6 @@ def test_qm_stat_entropy_assumption_reduction_candidate_selection_public_surface
     }:
         text = _read(path)
         for token in {
-            f"CURRENT_LIVE_NEXT_TARGET_v0: {SELECTED_TARGET}",
             RESULT_TOKEN,
             SELECTED_CANDIDATE,
             "all eight",

@@ -1,0 +1,77 @@
+{
+  "schema_id": "QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_20260510_v0",
+  "schema_version": 0,
+  "date": "2026-05-10",
+  "classification": "P-POLICY/nonclaim",
+  "reduction_status": "lean_backed_local_convention_reduction_only",
+  "current_target": "prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack",
+  "consumed_candidate_token": "QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTED",
+  "result_token": "QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_ASSUMPTION_REDUCED_LEAN_BACKED",
+  "fallback_tokens_not_used": [
+    "QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_ASSUMPTION_RETAINED_SUPPLIED_ONLY",
+    "QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_ASSUMPTION_REFINED_NOT_DISCHARGED"
+  ],
+  "selected_next_target": "review_qm_stat_entropy_log_domain_zero_handling_reduction_result",
+  "source_candidate_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropyAssumptionReductionCandidateSelection.lean",
+  "source_candidate_report": "formal/docs/release/QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_20260510_v0.json",
+  "reduction_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReduction.lean",
+  "focused_gate": "formal/python/tests/test_qm_stat_entropy_log_domain_zero_handling_reduction_gate.py",
+  "authorized_effect": "REDUCE_SELECTED_LOG_DOMAIN_ZERO_HANDLING_ASSUMPTION_TO_LOCAL_LEAN_CONVENTION",
+  "selected_assumption": {
+    "assumption_class_id": "log_domain_zero_handling_convention_required",
+    "assumption_class_label": "log-domain / zero-handling convention required",
+    "authority_before_reduction": "not yet represented",
+    "authority_after_reduction": "Lean-backed local convention",
+    "addressed_assumption_count": 1,
+    "source_assumption_class_count": 8,
+    "reason": "The packet defines a local convention object that admits positive-probability cases to the log-domain path, routes zero-probability cases to a zero contribution, and leaves outside-domain cases outside the convention without asserting a target entropy theorem."
+  },
+  "local_convention": {
+    "convention_id": "qm_stat_entropy_log_domain_zero_handling_local_convention_v0",
+    "positive_probability_case": {
+      "case_id": "positive_probability",
+      "admitted_to_log_domain": true,
+      "lean_backed_theorem": "qm_stat_entropy_log_domain_positive_case_admitted_v0"
+    },
+    "zero_probability_case": {
+      "case_id": "zero_probability",
+      "admitted_to_log_domain": false,
+      "uses_zero_contribution": true,
+      "contribution_case_id": "zero_probability_contribution_0_by_convention",
+      "lean_backed_theorems": [
+        "qm_stat_entropy_log_domain_zero_case_not_admitted_v0",
+        "qm_stat_entropy_log_domain_zero_case_uses_zero_contribution_v0"
+      ]
+    },
+    "outside_domain_case": {
+      "case_id": "outside_current_local_convention",
+      "admitted_to_log_domain": false,
+      "lean_backed_theorem": "qm_stat_entropy_log_domain_outside_case_not_admitted_v0"
+    },
+    "scope": "local convention only; not a target STAT entropy theorem discharge"
+  },
+  "nonclaim_boundaries": {
+    "only_selected_assumption_addressed": true,
+    "log_domain_zero_handling_assumption_reduced_to_lean_backed_local_convention": true,
+    "target_stat_entropy_semantics_lean_backed": false,
+    "target_stat_entropy_semantics_supplied_only": true,
+    "entropy_semantics_theorem_discharged": false,
+    "qm_stat_pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "master_action_promotion_authorized": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "next_target_expectations": {
+    "target_id": "review_qm_stat_entropy_log_domain_zero_handling_reduction_result",
+    "should_review_local_convention_reduction_only": true,
+    "must_not_claim_entropy_semantics_theorem_discharge": true,
+    "must_preserve_supplied_only_qm_stat_entropy_semantics_boundary": true,
+    "must_not_reopen_other_assumption_classes": true
+  },
+  "acceptance_condition": "The packet consumes the selected QM-STAT entropy assumption-reduction candidate, addresses only `log_domain_zero_handling_convention_required`, and either reduces it to Lean-backed local convention structure or retains/refines it honestly, without claiming entropy-semantics theorem discharge, QM-STAT pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, master-action promotion, or QFT-GR source-map closure.",
+  "next_action_after_reduction_packet": "review_qm_stat_entropy_log_domain_zero_handling_reduction_result"
+}
