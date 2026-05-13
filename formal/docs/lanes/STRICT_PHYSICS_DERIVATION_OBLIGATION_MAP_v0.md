@@ -75,7 +75,7 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict architecture target:
-- `CURRENT_LIVE_NEXT_TARGET_v0: review_qm_stat_entropy_log_domain_zero_handling_reduction_result`
+- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_TARGET_v0: select_next_post_qm_stat_entropy_semantics_gap_bounded_attack`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_v0: formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropySemanticsGapBoundedAttackSelection.lean`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_REPORT_v0: formal/docs/release/POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_20260510_v0.json`
@@ -110,6 +110,11 @@ Next strict architecture target:
 - `QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_ASSUMPTION_REDUCED_LEAN_BACKED_v0: QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_ASSUMPTION_REDUCED_LEAN_BACKED`
 - `QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_SELECTED_TARGET_v0: review_qm_stat_entropy_log_domain_zero_handling_reduction_result`
 - QM-STAT entropy log-domain zero-handling reduction status: addresses only `log_domain_zero_handling_convention_required`, reduces it to a Lean-backed local convention for positive-probability log-domain admission and zero-probability zero contribution, and does not claim entropy-semantics theorem discharge, QM-STAT completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, QFT-GR source-map closure, governance-manifest enrollment, or master-action promotion.
+- `QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_v0: formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReductionResultReview.lean`
+- `QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_REPORT_v0: formal/docs/release/QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_20260510_v0.json`
+- `QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_CONSUMED_LEAN_BACKED_v0: QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_CONSUMED_LEAN_BACKED`
+- `QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_SELECTED_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
+- QM-STAT entropy log-domain zero-handling reduction result review status: consumes the local convention reduction only, keeps seven remaining supporting assumptions active, preserves the supplied-only target entropy-semantics theorem gap, and selects the post-reduction bounded selector without closure or promotion claims.
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefreshAfterSampleRep32.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_20260505_v0.json`
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS_v0: AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS`

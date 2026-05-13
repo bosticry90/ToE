@@ -87,9 +87,9 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack",
-    "live_next_target": "review_qm_stat_entropy_log_domain_zero_handling_reduction_result",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReduction.lean",
+    "previous_live_next_target": "review_qm_stat_entropy_log_domain_zero_handling_reduction_result",
+    "live_next_target": "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReductionResultReview.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
@@ -163,9 +163,10 @@
       "qm_stat_entropy_semantics_supporting_assumption_map",
       "qm_stat_entropy_semantics_supporting_assumption_map_result_review",
       "post_qm_stat_entropy_assumption_map_bounded_attack_selection",
-      "qm_stat_entropy_assumption_reduction_candidate_selection"
+      "qm_stat_entropy_assumption_reduction_candidate_selection",
+      "qm_stat_entropy_log_domain_zero_handling_reduction"
     ],
-    "active_lane": "qm_stat_entropy_log_domain_zero_handling_reduction",
+    "active_lane": "qm_stat_entropy_log_domain_zero_handling_reduction_result_review",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -603,7 +604,8 @@
     "qm_stat_entropy_semantics_supporting_assumption_map_result_review_nonclaim_boundary",
     "post_qm_stat_entropy_assumption_map_bounded_attack_selection_nonclaim_boundary",
     "qm_stat_entropy_assumption_reduction_candidate_selection_nonclaim_boundary",
-    "qm_stat_entropy_log_domain_zero_handling_reduction_nonclaim_boundary"
+    "qm_stat_entropy_log_domain_zero_handling_reduction_nonclaim_boundary",
+    "qm_stat_entropy_log_domain_zero_handling_reduction_result_review_nonclaim_boundary"
   ],
   "next_strict_target_coverage": [
     "rotate_to_qm_stat_transport_residual_semantics",
@@ -700,6 +702,7 @@
     "prepare_qm_stat_entropy_assumption_reduction_candidate_selection",
     "prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack",
     "review_qm_stat_entropy_log_domain_zero_handling_reduction_result",
+    "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack",
     "prepare_sr_cosmo_global_obstruction_followup",
     "review_fnrep_nonalias_samplerep32_discharge_result",
     "select_next_post_fnrep_samplerep32_discharge_bounded_attack"
@@ -1131,6 +1134,12 @@
       "to": "qm_stat_entropy_log_domain_zero_handling_reduction",
       "status": "active",
       "evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropyAssumptionReductionCandidateSelection.lean"
+    },
+    {
+      "from": "qm_stat_entropy_log_domain_zero_handling_reduction",
+      "to": "qm_stat_entropy_log_domain_zero_handling_reduction_result_review",
+      "status": "active",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReduction.lean"
     }
   ],
   "cycle_waivers": [],
@@ -5423,10 +5432,10 @@
     },
     {
       "workstream_id": "qm_stat_entropy_log_domain_zero_handling_reduction",
-      "status": "active",
+      "status": "paused",
       "retained_blocker": "qm_stat_entropy_log_domain_zero_handling_reduction_nonclaim_boundary",
       "consecutive_slices_after_retention": 0,
-      "guardrail_status": "active_under_loop_control_registry_v0",
+      "guardrail_status": "paused_after_result_review_consumed_local_convention_reduction",
       "blocked_promotions": [
         "phase2_authorization",
         "seam_closure",
@@ -5462,6 +5471,52 @@
       "outside_domain_case_admitted_to_log_domain": "no",
       "selected_next_target": "review_qm_stat_entropy_log_domain_zero_handling_reduction_result",
       "only_selected_assumption_addressed": "yes",
+      "target_stat_entropy_semantics_lean_backed": "no",
+      "target_stat_entropy_semantics_supplied_only": "yes",
+      "entropy_semantics_theorem_discharged": "no",
+      "qm_stat_pillar_completion_inferred": "no",
+      "pillar_completion_inferred": "no",
+      "seam_closure_claim": "no",
+      "phase2_readiness_claim": "no",
+      "empirical_adequacy_claim": "no",
+      "canonical_toe_claim": "no",
+      "master_action_promotion_authorized": "no",
+      "qft_gr_source_map_closure_authorized": "no",
+      "governance_manifest_enrollment_authorized": "no"
+    },
+    {
+      "workstream_id": "qm_stat_entropy_log_domain_zero_handling_reduction_result_review",
+      "status": "active",
+      "retained_blocker": "qm_stat_entropy_log_domain_zero_handling_reduction_result_review_nonclaim_boundary",
+      "consecutive_slices_after_retention": 0,
+      "guardrail_status": "active_under_loop_control_registry_v0",
+      "blocked_promotions": [
+        "phase2_authorization",
+        "seam_closure",
+        "master_action_promotion",
+        "empirical_claim",
+        "canonical_toe_claim",
+        "qft_gr_source_map_closure",
+        "governance_manifest_enrollment"
+      ],
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReductionResultReview.lean",
+      "authorized_next_slice": "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection_v0",
+      "authorized_next_strict_target": "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack",
+      "consumed_target": "review_qm_stat_entropy_log_domain_zero_handling_reduction_result",
+      "latest_surface": "qm_stat_entropy_log_domain_zero_handling_reduction_result_review_v0",
+      "source_reduction_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReduction.lean",
+      "source_reduction_report": "formal/docs/release/QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_20260510_v0.json",
+      "review_report": "formal/docs/release/QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_20260510_v0.json",
+      "consumed_reduction_token": "QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_ASSUMPTION_REDUCED_LEAN_BACKED",
+      "review_token": "QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_CONSUMED_LEAN_BACKED",
+      "reduced_assumption_class_id": "log_domain_zero_handling_convention_required",
+      "reduced_assumption_authority": "Lean-backed local convention",
+      "local_convention_reduction_only": "yes",
+      "remaining_assumption_class_count": 7,
+      "remaining_supporting_assumptions_active": "yes",
+      "selected_next_target": "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack",
+      "recommended_next_candidate": "normalization_or_probability_mass_condition_required",
+      "alternate_next_target": "return_to_full_pillar_target_map_next_lane_selection",
       "target_stat_entropy_semantics_lean_backed": "no",
       "target_stat_entropy_semantics_supplied_only": "yes",
       "entropy_semantics_theorem_discharged": "no",

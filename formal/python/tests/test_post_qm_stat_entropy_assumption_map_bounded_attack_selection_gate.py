@@ -273,9 +273,11 @@ def test_post_qm_stat_entropy_assumption_map_selection_registry_rotates_to_candi
         assert state["active_lane"] == CANDIDATE_SELECTION_LANE
     else:
         assert state["live_next_target"] == (
-            "review_qm_stat_entropy_log_domain_zero_handling_reduction_result"
+            "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack"
         )
-        assert state["active_lane"] == "qm_stat_entropy_log_domain_zero_handling_reduction"
+        assert state["active_lane"] == (
+            "qm_stat_entropy_log_domain_zero_handling_reduction_result_review"
+        )
     assert ACTIVE_LANE in state["paused_lanes"]
     assert PREVIOUS_LANE in state["paused_lanes"]
 

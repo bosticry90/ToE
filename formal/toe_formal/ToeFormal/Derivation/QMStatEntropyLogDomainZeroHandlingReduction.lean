@@ -443,7 +443,7 @@ theorem qm_stat_entropy_log_domain_zero_handling_reduction_next_target_v0 :
 theorem qm_stat_entropy_log_domain_zero_handling_reduction_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "review_qm_stat_entropy_log_domain_zero_handling_reduction_result" := by
+      some "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack" := by
   decide
 
 theorem qm_stat_entropy_log_domain_zero_handling_reduction_authority_after_v0 :

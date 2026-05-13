@@ -1,0 +1,63 @@
+{
+  "schema_id": "QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_20260510_v0",
+  "schema_version": 0,
+  "date": "2026-05-10",
+  "classification": "P-POLICY/nonclaim",
+  "review_status": "consumed_lean_backed_local_convention_reduction_only",
+  "current_target": "review_qm_stat_entropy_log_domain_zero_handling_reduction_result",
+  "consumed_reduction_token": "QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_ASSUMPTION_REDUCED_LEAN_BACKED",
+  "review_token": "QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_CONSUMED_LEAN_BACKED",
+  "selected_next_target": "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack",
+  "source_reduction_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReduction.lean",
+  "source_reduction_report": "formal/docs/release/QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_20260510_v0.json",
+  "review_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReductionResultReview.lean",
+  "focused_gate": "formal/python/tests/test_qm_stat_entropy_log_domain_zero_handling_reduction_result_review_gate.py",
+  "authorized_effect": "CONSUME_LEAN_BACKED_LOCAL_CONVENTION_REDUCTION_ONLY",
+  "review_interpretation": {
+    "reduced_assumption_class_id": "log_domain_zero_handling_convention_required",
+    "reduced_assumption_authority": "Lean-backed local convention",
+    "local_convention_reduction_only": true,
+    "positive_probability_case_admitted_to_log_domain": true,
+    "zero_probability_case_uses_zero_contribution": true,
+    "target_stat_entropy_semantics_theorem_gap_authority": "supplied-only",
+    "entropy_semantics_theorem_discharged": false
+  },
+  "remaining_supporting_assumptions": {
+    "remaining_assumption_class_count": 7,
+    "remaining_assumption_classes_active": true,
+    "class_ids": [
+      "target_entropy_functional_definition_required",
+      "statistical_state_domain_semantics_required",
+      "normalization_or_probability_mass_condition_required",
+      "finite_support_or_summability_condition_required",
+      "transport_alignment_relation_required",
+      "residual_zero_bridge_condition_required",
+      "comparison_target_semantics_required"
+    ]
+  },
+  "nonclaim_boundaries": {
+    "log_domain_zero_handling_reduction_consumed_as_local_convention_only": true,
+    "remaining_supporting_assumptions_active": true,
+    "target_stat_entropy_semantics_lean_backed": false,
+    "target_stat_entropy_semantics_supplied_only": true,
+    "entropy_semantics_theorem_discharged": false,
+    "qm_stat_pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "master_action_promotion_authorized": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "next_target_expectations": {
+    "target_id": "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack",
+    "should_select_one_next_bounded_target": true,
+    "recommended_candidate": "normalization_or_probability_mass_condition_required",
+    "alternate_candidate": "return_to_full_pillar_target_map_next_lane_selection",
+    "must_not_claim_entropy_semantics_theorem_discharge": true,
+    "must_preserve_supplied_only_qm_stat_entropy_semantics_boundary": true
+  },
+  "acceptance_condition": "The log-domain/zero-handling reduction is consumed as a Lean-backed local convention reduction only, the broader target STAT entropy semantics theorem gap remains supplied-only, the remaining supporting assumptions remain active, and no QM-STAT pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, master-action promotion, or QFT-GR source-map closure is inferred.",
+  "next_action_after_review_packet": "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack"
+}
