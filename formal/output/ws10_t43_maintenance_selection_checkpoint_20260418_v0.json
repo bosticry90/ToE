@@ -6,7 +6,7 @@
   "baseline_reference": {
     "t42_checkpoint": "formal/output/ws10_t42_redteam_baseline_freeze_checkpoint_20260418_v0.json",
     "t42_release_surface_file_count": 910,
-    "t42_governed_pytests_expected_count": 341,
+    "t42_governed_pytests_expected_count": 346,
     "t42_active_theorem_gap_count": 7,
     "t42_active_seam_gap_count": 3
   },

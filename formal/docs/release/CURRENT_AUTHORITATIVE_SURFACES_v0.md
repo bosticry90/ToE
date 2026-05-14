@@ -16,12 +16,14 @@ Current release-facing status:
 - `TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_SEEDED`
 - `TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_SEEDED`
 - `TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_REVIEW_CONSUMED_PRE_MANIFEST`
+- `TOE_V01_ALPHA_RELEASE_GATE_ENROLLED`
 - v0.1-alpha standard status: preparation-only full-pillar/full-seam criticizability track.
-- v0.1-alpha release gates are prepared but not manifest-enrolled; v0.1-alpha public release is not complete.
+- v0.1-alpha release gates are manifest-enrolled as governed baseline surfaces; v0.1-alpha public release is not complete.
 - Canonical v0.1-alpha release-standard sources:
   - `formal/docs/paper/CLAIM_TAXONOMY_v1.md`
   - `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_20260513_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_RESULT_REVIEW_20260513_v0.json`
+  - `formal/docs/release/V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_20260513_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json`

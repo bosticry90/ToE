@@ -7,7 +7,7 @@
   "baseline_metrics": {
     "release_surface_file_count": 910,
     "governance_surface_file_count": 409,
-    "governed_pytests_expected_count": 341,
+    "governed_pytests_expected_count": 346,
     "active_theorem_gap_count": 7,
     "active_seam_gap_count": 3,
     "active_parity_drift_count": 0,

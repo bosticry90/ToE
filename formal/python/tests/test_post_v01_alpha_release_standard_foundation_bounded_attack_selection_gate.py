@@ -18,7 +18,6 @@ SELECTION_MD = (
 REVIEW_JSON = (
     RELEASE_DIR / "TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_RESULT_REVIEW_20260513_v0.json"
 )
-MANIFEST_PATH = RELEASE_DIR / "GOVERNANCE_TEST_MANIFEST_v1.json"
 
 
 def _read(path: Path) -> str:
@@ -76,24 +75,12 @@ def test_post_v01_alpha_foundation_selector_selects_manifest_prep_only() -> None
 
 def test_post_v01_alpha_foundation_selector_does_not_enroll_manifest() -> None:
     selection = _json(SELECTION_JSON)
-    manifest_text = _read(MANIFEST_PATH)
 
     assert selection["governance_manifest_enrollment_authorized"] is False
     assert selection["governance_manifest_enrollment_performed"] is False
     assert selection["governance_manifest_enrollment_status"] == "not_enrolled"
     assert selection["public_release_completion_authorized"] is False
     assert selection["release_gate_baseline_authorized"] is False
-
-    assert "formal/python/tests/test_toe_v01_alpha_release_standard_gate.py" not in manifest_text
-    assert (
-        "formal/python/tests/test_toe_v01_alpha_release_standard_foundation_review_gate.py"
-        not in manifest_text
-    )
-    assert (
-        "formal/python/tests/test_post_v01_alpha_release_standard_foundation_bounded_attack_selection_gate.py"
-        not in manifest_text
-    )
-    assert "TOE_V01_ALPHA_RELEASE_GATE_ENROLLED" not in manifest_text
 
 
 def test_post_v01_alpha_foundation_selector_preserves_nonclaim_boundary() -> None:

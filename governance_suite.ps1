@@ -459,6 +459,11 @@ $governanceManifestGroup = "governance_pytests"
 # formal/python/tests/test_governance_invalidation_select_telemetry_gate.py
 # formal/python/tests/test_dual_track_hardening_closeout_gate.py
 # formal/python/tests/test_governance_parallel_capability_probe_gate.py
+# formal/python/tests/test_claim_label_policy_bridge.py
+# formal/python/tests/test_toe_v01_alpha_release_standard_gate.py
+# formal/python/tests/test_toe_v01_alpha_release_standard_foundation_review_gate.py
+# formal/python/tests/test_post_v01_alpha_release_standard_foundation_bounded_attack_selection_gate.py
+# formal/python/tests/test_v01_alpha_governance_manifest_enrollment_gate.py
 # formal/python/tests/test_sql_integrity_snapshot_tool.py
 # END GOVERNANCE MANIFEST TEST REFERENCES
 Write-Host "Resolving governance pytest manifest selection" -ForegroundColor Cyan

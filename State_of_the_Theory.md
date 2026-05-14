@@ -19,7 +19,8 @@ Current release-facing status (2026-05-13):
 - `TOE_V01_ALPHA_RELEASE_STANDARD_PREPARED_FULL_PILLAR_SEAM_SCOPE`: the standard requires release-facing rows for GR, QM, EM, SR, Scalar/QFT, STAT, COSMO, QFT-GR, QM-STAT, EM-QFT, SR-COSMO, GR-QM, and MASTER_ACTION.
 - Canonical release-standard artifacts: `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_20260513_v0.json`, `formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json`, `formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json`, `formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json`, and `formal/docs/release/TOE_V01_ALPHA_BLOCKER_LEDGER_v0.json`.
 - Lean release evidence index: `formal/toe_formal/ToeFormal/Release/V01Index.lean`.
-- `TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_REVIEW_CONSUMED_PRE_MANIFEST`: focused pre-manifest foundation review consumed the prepared artifacts; release gates are not manifest-enrolled and v0.1-alpha public release is not complete.
+- `TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_REVIEW_CONSUMED_PRE_MANIFEST`: focused pre-manifest foundation review consumed the prepared artifacts.
+- `TOE_V01_ALPHA_RELEASE_GATE_ENROLLED`: v0.1-alpha release-standard gates are manifest-enrolled as governed baseline surfaces; v0.1-alpha public release is still not complete.
 - Nonclaim boundary: no master-action promotion, no pillar completion, no seam closure, no Phase 2 readiness, no empirical adequacy, no canonical ToE status, and no QFT-GR source-map closure.
 
 Strict scalar/QFT current-state synchronization checkpoint (2026-05-02):

@@ -1,0 +1,56 @@
+{
+  "schema_id": "V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_v0",
+  "schema_version": 0,
+  "result_token": "TOE_V01_ALPHA_RELEASE_GATE_ENROLLED",
+  "consumed_target": "prepare_v01_alpha_governance_manifest_enrollment",
+  "consumed_selector_token": "POST_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_NEXT_ATTACK_SELECTED",
+  "consumed_selector_path": "formal/docs/release/POST_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_BOUNDED_ATTACK_SELECTION_20260513_v0.json",
+  "consumed_foundation_review_token": "TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_REVIEW_CONSUMED_PRE_MANIFEST",
+  "release_scope_confirmed": "FULL_PILLAR_FULL_SEAM_RELEASE_STANDARD",
+  "manifest_path": "formal/docs/release/GOVERNANCE_TEST_MANIFEST_v1.json",
+  "manifest_source_commit_before_enrollment": "0d6a97e",
+  "previous_governance_pytest_expected_count": 341,
+  "previous_governance_pytest_expected_sha256": "430d72b0e98a6b602b15999d57da2b8108a51d6a7b0f2bf62800a9cfdf463860",
+  "current_governance_pytest_expected_count": 346,
+  "current_governance_pytest_expected_sha256": "e5964369e2e1033b805e2838d3aa18fc22cd1b8a5deb1d0478c8000705f87dfb",
+  "enrolled_tests": [
+    "formal/python/tests/test_claim_label_policy_bridge.py",
+    "formal/python/tests/test_toe_v01_alpha_release_standard_gate.py",
+    "formal/python/tests/test_toe_v01_alpha_release_standard_foundation_review_gate.py",
+    "formal/python/tests/test_post_v01_alpha_release_standard_foundation_bounded_attack_selection_gate.py",
+    "formal/python/tests/test_v01_alpha_governance_manifest_enrollment_gate.py"
+  ],
+  "enrollment_status": "governance_manifest_enrolled",
+  "governance_manifest_enrollment_authorized": true,
+  "governance_manifest_enrollment_performed": true,
+  "release_standard_artifacts_governed_baseline": true,
+  "public_release_completion_authorized": false,
+  "scientific_status_change_authorized": false,
+  "selected_next_target": "review_v01_alpha_governance_manifest_enrollment_result",
+  "next_packet_boundary": "Review the governance manifest enrollment result only. Do not expand ledgers, migrate additional labels, alter scientific status, claim public release completion, or enroll unrelated gates.",
+  "nonclaim_ids": [
+    "NC-NO-MASTER-ACTION-PROMOTION",
+    "NC-NO-PILLAR-COMPLETION",
+    "NC-NO-SEAM-CLOSURE",
+    "NC-NO-PHASE2",
+    "NC-NO-EMPIRICAL-ADEQUACY",
+    "NC-NO-CANONICAL-TOE",
+    "NC-NO-QFT-GR-SOURCE-MAP-CLOSURE"
+  ],
+  "not_authorized_claims": [
+    "v0.1-alpha public release complete",
+    "master-action promotion",
+    "pillar completion",
+    "seam closure",
+    "Phase 2 readiness",
+    "empirical adequacy",
+    "canonical ToE status",
+    "QFT-GR source-map closure"
+  ],
+  "validation_required_before_result_review": [
+    ".\\run_governance.ps1",
+    ".\\run_pytest.ps1",
+    ".\\run_lean.ps1",
+    "git diff --check"
+  ]
+}

@@ -9,7 +9,6 @@ from formal.python.meta.repo_environment import find_repo_root
 REPO_ROOT = find_repo_root(Path(__file__))
 RELEASE_DIR = REPO_ROOT / "formal" / "docs" / "release"
 REVIEW_JSON = RELEASE_DIR / "TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_RESULT_REVIEW_20260513_v0.json"
-MANIFEST_PATH = RELEASE_DIR / "GOVERNANCE_TEST_MANIFEST_v1.json"
 
 PUBLIC_SURFACES = [
     REPO_ROOT / "README.md",
@@ -66,19 +65,10 @@ def test_v01_alpha_foundation_review_is_pre_manifest_only() -> None:
     assert review["full_suite_status"]["observed"]["run_pytest_ps1"] == "6776 passed, 235 skipped"
 
 
-def test_v01_alpha_release_gate_is_not_manifest_enrolled_yet() -> None:
-    manifest_text = _read(MANIFEST_PATH)
-
-    assert "formal/python/tests/test_toe_v01_alpha_release_standard_gate.py" not in manifest_text
-    assert "formal/python/tests/test_toe_v01_alpha_release_standard_foundation_review_gate.py" not in manifest_text
-    assert "TOE_V01_ALPHA_RELEASE_GATE_ENROLLED" not in manifest_text
-
-
-def test_public_surfaces_say_prepared_not_enrolled_not_complete() -> None:
+def test_public_surfaces_preserve_release_standard_noncompletion_posture() -> None:
     for surface in PUBLIC_SURFACES:
         text = _read(surface)
         assert "release-standard" in text or "release standard" in text
-        assert "not manifest-enrolled" in text
         assert "not complete" in text or "not as a completed release" in text
         assert "no master-action promotion" in text
         assert "no pillar completion" in text

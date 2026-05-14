@@ -96,7 +96,7 @@ def test_ws10_t43_selection_semantics() -> None:
     assert checkpoint.get("status") == "ACTIVE_MAINTENANCE_SELECTION_AND_INDEXING_NONLIVE_v0"
     assert checkpoint.get("selected_gate_family", {}).get("direct_cycle_gate_count", 0) >= 10
     assert checkpoint.get("selected_gate_family", {}).get("synthesis_gate_count", 0) >= 10
-    assert checkpoint.get("baseline_reference", {}).get("t42_governed_pytests_expected_count") == 341
+    assert checkpoint.get("baseline_reference", {}).get("t42_governed_pytests_expected_count") == 346
     assert checkpoint.get("selected_release_family", {}).get("file_count") == registry.get("file_count")
     assert checkpoint.get("summary", {}).get("terminal_outcome") == "MAINTENANCE_FAMILIES_SELECTED_AND_QFT_GR_RELEASE_FAMILY_INDEXED"
 

@@ -1,6 +1,6 @@
 {
   "schema_id": "GOVERNANCE_TEST_MANIFEST_v1",
-  "source_commit": "e2a28bf",
+  "source_commit": "0d6a97e",
   "test_tiers": {
     "formal/python/tests/test_active_dependency_baseline_lock_gate.py": "TIER_INTEGRITY",
     "formal/python/tests/test_dependency_security_scan_schedule_gate.py": "TIER_INTEGRITY",
@@ -81,8 +81,8 @@
       ]
     },
     "governance_pytests": {
-      "expected_count": 341,
-      "expected_sha256": "430d72b0e98a6b602b15999d57da2b8108a51d6a7b0f2bf62800a9cfdf463860",
+      "expected_count": 346,
+      "expected_sha256": "e5964369e2e1033b805e2838d3aa18fc22cd1b8a5deb1d0478c8000705f87dfb",
       "tests": [
         "formal/python/tests/test_active_dependency_baseline_lock_gate.py",
         "formal/python/tests/test_dependency_security_scan_schedule_gate.py",
@@ -424,6 +424,11 @@
         "formal/python/tests/test_governance_invalidation_select_telemetry_gate.py",
         "formal/python/tests/test_dual_track_hardening_closeout_gate.py",
         "formal/python/tests/test_governance_parallel_capability_probe_gate.py",
+        "formal/python/tests/test_claim_label_policy_bridge.py",
+        "formal/python/tests/test_toe_v01_alpha_release_standard_gate.py",
+        "formal/python/tests/test_toe_v01_alpha_release_standard_foundation_review_gate.py",
+        "formal/python/tests/test_post_v01_alpha_release_standard_foundation_bounded_attack_selection_gate.py",
+        "formal/python/tests/test_v01_alpha_governance_manifest_enrollment_gate.py",
         "formal/python/tests/test_sql_integrity_snapshot_tool.py"
       ]
     }

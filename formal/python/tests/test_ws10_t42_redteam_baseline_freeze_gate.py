@@ -120,7 +120,7 @@ def test_ws10_t42_checkpoint_semantics() -> None:
     metrics = payload.get("baseline_metrics", {})
     assert metrics.get("release_surface_file_count", 0) > 0
     assert metrics.get("governance_surface_file_count", 0) > 0
-    assert metrics.get("governed_pytests_expected_count") == 341
+    assert metrics.get("governed_pytests_expected_count") == 346
     assert metrics.get("active_theorem_gap_count") == 7
     assert metrics.get("active_seam_gap_count") == 3
     assert metrics.get("active_parity_drift_count") == 0
