@@ -1,0 +1,96 @@
+{
+  "schema_id": "TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_RESULT_REVIEW_v0",
+  "schema_version": 0,
+  "result_token": "TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_REVIEW_CONSUMED_PRE_MANIFEST",
+  "consumed_target": "review_toe_v01_alpha_release_standard_foundation_result",
+  "consumed_tokens": [
+    "TOE_V01_ALPHA_RELEASE_STANDARD_LANE_SELECTED",
+    "TOE_V01_ALPHA_RELEASE_STANDARD_PREPARED_FULL_PILLAR_SEAM_SCOPE",
+    "TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_SEEDED",
+    "TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_SEEDED",
+    "TOE_V01_ALPHA_LEAN_RELEASE_SPINE_PREPARED"
+  ],
+  "foundation_status": "PRE_MANIFEST_FOUNDATION_FULL_WRAPPER_VALIDATED",
+  "release_scope_confirmed": "FULL_PILLAR_FULL_SEAM_RELEASE_STANDARD",
+  "prepared_artifacts": {
+    "claim_taxonomy": "formal/docs/paper/CLAIM_TAXONOMY_v1.md",
+    "release_standard": "formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_20260513_v0.json",
+    "coverage_ledger": "formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json",
+    "claim_ledger": "formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json",
+    "equation_ledger": "formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json",
+    "blocker_ledger": "formal/docs/release/TOE_V01_ALPHA_BLOCKER_LEDGER_v0.json",
+    "lean_release_index": "formal/toe_formal/ToeFormal/Release/V01Index.lean",
+    "lean_dependency_audit": "formal/docs/release/TOE_V01_ALPHA_LEAN_DEPENDENCY_AUDIT_v0.md",
+    "schema_bridge": "formal/python/tools/claim_label_policy.py"
+  },
+  "focused_validation_summary": [
+    {
+      "command": ".\\py.ps1 -m pytest formal/python/tests/test_claim_label_policy_bridge.py formal/python/tests/test_toe_v01_alpha_release_standard_gate.py formal/python/tests/test_architecture_schema_enforcement.py formal/python/tests/test_governance_version_bump_required.py -q",
+      "status": "passed",
+      "observed": "15 passed"
+    },
+    {
+      "command": "Push-Location formal/toe_formal; lake env lean ToeFormal/Release/V01Index.lean; Pop-Location",
+      "status": "passed",
+      "observed": "Lean release index checked"
+    },
+    {
+      "command": ".\\py.ps1 -m pytest formal/python/tests/test_current_authoritative_surfaces_gate.py formal/python/tests/test_current_target_freshness_gate.py formal/python/tests/test_loop_control_registry_v0_gate.py -q",
+      "status": "passed",
+      "observed": "17 passed"
+    },
+    {
+      "command": ".\\py.ps1 -m pytest formal/python/tests/test_governance_surface_growth_guard.py formal/python/tests/test_token_proliferation_guard.py formal/python/tests/test_governance_lock_has_no_duplicate_keys.py formal/python/tests/test_governance_version_bump_required.py -q",
+      "status": "passed",
+      "observed": "6 passed"
+    },
+    {
+      "command": ".\\py.ps1 -m pytest formal/python/tests/test_formal_docs_paper_cross_reference_integrity_gate.py formal/python/tests/test_governance_suite_manifest_equivalence_gate.py -q",
+      "status": "passed",
+      "observed": "3 passed"
+    },
+    {
+      "command": "git diff --check",
+      "status": "passed",
+      "observed": "whitespace check passed"
+    }
+  ],
+  "full_suite_status": {
+    "run_governance_ps1": "passed",
+    "run_pytest_ps1": "passed",
+    "run_lean_ps1": "passed",
+    "git_diff_check": "passed",
+    "observed": {
+      "run_governance_ps1": "exit_code=0",
+      "run_pytest_ps1": "6776 passed, 235 skipped",
+      "run_lean_ps1": "Build completed successfully (8007 jobs)",
+      "git_diff_check": "exit_code=0"
+    },
+    "release_interpretation": "full wrapper validation green for the pre-manifest foundation; governance manifest enrollment remains unauthorized until a separate enrollment packet"
+  },
+  "governance_manifest_enrollment_authorized": false,
+  "governance_manifest_enrollment_status": "not_enrolled",
+  "public_release_completion_authorized": false,
+  "selected_next_target": "select_next_post_v01_alpha_release_standard_foundation_bounded_attack",
+  "next_target_boundary": "selection only; do not prepare governance manifest enrollment unless full validation is green in a later packet",
+  "nonclaim_ids": [
+    "NC-NO-MASTER-ACTION-PROMOTION",
+    "NC-NO-PILLAR-COMPLETION",
+    "NC-NO-SEAM-CLOSURE",
+    "NC-NO-PHASE2",
+    "NC-NO-EMPIRICAL-ADEQUACY",
+    "NC-NO-CANONICAL-TOE",
+    "NC-NO-QFT-GR-SOURCE-MAP-CLOSURE"
+  ],
+  "not_authorized_claims": [
+    "v0.1-alpha public release complete",
+    "GOVERNANCE_TEST_MANIFEST_v1 enrollment",
+    "master-action promotion",
+    "pillar completion",
+    "seam closure",
+    "Phase 2 readiness",
+    "empirical adequacy",
+    "canonical ToE status",
+    "QFT-GR source-map closure"
+  ]
+}

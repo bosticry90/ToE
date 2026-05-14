@@ -59,16 +59,16 @@ fn run() -> Result<(), String> {
     let matrix: PillarMatrixRoot = read_json(&matrix_path)?;
     let phase_registry: PhaseRegistryRoot = read_json(&phase_registry_path)?;
 
-    if schema.schema_id != "ARCHITECTURE_SCHEMA_v2" {
+    if schema.schema_id != "ARCHITECTURE_SCHEMA_v3" {
         return Err(format!(
-            "Unexpected schema_id '{}'; expected 'ARCHITECTURE_SCHEMA_v2'.",
+            "Unexpected schema_id '{}'; expected 'ARCHITECTURE_SCHEMA_v3'.",
             schema.schema_id
         ));
     }
 
-    if schema.schema_version != 2 {
+    if schema.schema_version != 3 {
         return Err(format!(
-            "Unexpected schema_version {}; expected 2.",
+            "Unexpected schema_version {}; expected 3.",
             schema.schema_version
         ));
     }

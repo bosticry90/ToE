@@ -1,0 +1,53 @@
+{
+  "schema_id": "TOE_V01_ALPHA_EQUATION_LEDGER_v0",
+  "schema_version": 0,
+  "result_token": "TOE_V01_ALPHA_EQUATION_LEDGER_SEEDED",
+  "context_type": "v01_alpha_ledger",
+  "rows": [
+    {
+      "equation_id": "V01-E001",
+      "equation": "S_ToE[g, psi, A, phi, rho]",
+      "meaning": "Candidate master action organizing surface.",
+      "primary_label": "H-HYP",
+      "supporting_labels": ["S-SUPPLIED"],
+      "evidence": ["formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md"],
+      "evidence_type": ["policy_doc"],
+      "assumptions": ["candidate action blocks supplied; no uniqueness derivation"],
+      "derivation_status": "hypothesis_not_promoted",
+      "known_physics_relation": "organizes geometry, field, interaction, transport, entropy, and seam blocks for later audit",
+      "failure_condition": "fails as release spine if blocks cannot be mapped to assumptions/evidence or if it implies unsupported promotion",
+      "nonclaim_ids": ["NC-NO-MASTER-ACTION-PROMOTION", "NC-NO-CANONICAL-TOE"],
+      "closure_authorized": false
+    },
+    {
+      "equation_id": "V01-E002",
+      "equation": "delta S_ToE = 0",
+      "meaning": "Stationarity condition for the candidate master-action surface.",
+      "primary_label": "H-HYP",
+      "supporting_labels": ["S-SUPPLIED"],
+      "evidence": ["formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md"],
+      "evidence_type": ["policy_doc"],
+      "assumptions": ["variation semantics and admissible field class are not globally discharged"],
+      "derivation_status": "working_form_not_canonical",
+      "known_physics_relation": "connects to variational derivation obligations where local slices are available",
+      "failure_condition": "fails if stationarity cannot be coherently specialized or if local slices require hidden assumptions",
+      "nonclaim_ids": ["NC-NO-MASTER-ACTION-PROMOTION", "NC-NO-PILLAR-COMPLETION"],
+      "closure_authorized": false
+    },
+    {
+      "equation_id": "V01-E003",
+      "equation": "boxPlusMass phi = 0",
+      "meaning": "Bounded free-scalar/KG-class residual conclusion in the scalar worked example.",
+      "primary_label": "T-LEAN-COND",
+      "supporting_labels": ["B-BLOCKED"],
+      "evidence": ["formal/toe_formal/ToeFormal/QFT/FreeScalarDerivation.lean::master_action_stationary_implies_free_scalar_kg"],
+      "evidence_type": ["lean_theorem"],
+      "assumptions": ["bounded scalar slice", "stationarity", "firstVariation_matches_boxPlusMass"],
+      "derivation_status": "Lean-backed conditional theorem",
+      "known_physics_relation": "finite bounded analogue of KG residual stationarity",
+      "failure_condition": "fails as public derivation if dependency audit exposes unstated project axioms or if scalar slice assumptions cannot be listed",
+      "nonclaim_ids": ["NC-NO-PILLAR-COMPLETION", "NC-NO-EMPIRICAL-ADEQUACY"],
+      "closure_authorized": false
+    }
+  ]
+}

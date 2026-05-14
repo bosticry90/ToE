@@ -14,6 +14,14 @@ Canonical status summary (current):
 - Scalar submission lane: READY_FOR_BOUNDED_PAPER1_SUBMISSION_PACKAGE
 - Scalar submission support package: READY_WITH_OWNER_CONFIRMATION_PENDING_v0
 
+Current release-facing status (2026-05-13):
+- `TOE_V01_ALPHA_RELEASE_STANDARD_LANE_SELECTED`: the v0.1-alpha release-standard track is selected as a bounded full-pillar/full-seam criticizability preparation lane, not as a completed release.
+- `TOE_V01_ALPHA_RELEASE_STANDARD_PREPARED_FULL_PILLAR_SEAM_SCOPE`: the standard requires release-facing rows for GR, QM, EM, SR, Scalar/QFT, STAT, COSMO, QFT-GR, QM-STAT, EM-QFT, SR-COSMO, GR-QM, and MASTER_ACTION.
+- Canonical release-standard artifacts: `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_20260513_v0.json`, `formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json`, `formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json`, `formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json`, and `formal/docs/release/TOE_V01_ALPHA_BLOCKER_LEDGER_v0.json`.
+- Lean release evidence index: `formal/toe_formal/ToeFormal/Release/V01Index.lean`.
+- `TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_REVIEW_CONSUMED_PRE_MANIFEST`: focused pre-manifest foundation review consumed the prepared artifacts; release gates are not manifest-enrolled and v0.1-alpha public release is not complete.
+- Nonclaim boundary: no master-action promotion, no pillar completion, no seam closure, no Phase 2 readiness, no empirical adequacy, no canonical ToE status, and no QFT-GR source-map closure.
+
 Strict scalar/QFT current-state synchronization checkpoint (2026-05-02):
 - `STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_STATUS_v0: ACTIVE_CURRENT_STRICT_PHYSICS_MAP`
 - `STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0: formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md`
@@ -195,7 +203,7 @@ Strict scalar/QFT current-state synchronization checkpoint (2026-05-02):
 - `QFT_GR_STRESS_ENERGY_SOURCE_MAP_BOUNDARY_v0: no_qft_gr_seam_closure_no_semiclassical_gravity_claim_no_einstein_equation_derivation_claim_no_master_action_promotion_no_empirical_claim`
 - `SCALAR_QFT_PHASE0_5_OBJECTIVE_QUALITY_COMPLETION_STATUS_v0: NO_FULL_PLAN_COMPLETION_CLAIM_PHASE0_COMPLETE_PHASE1_ADVANCED_PARTIAL_PHASE2_OPEN_PHASE2B_OPEN_PHASE3_PARTIAL_PHASE4_PARTIAL_PHASE5_OPEN`
 - `SCALAR_QFT_PHASE0_5_DECISIVE_OPEN_ITEMS_v0: A1A_A2A15A1_GRAPH_CHANNEL_SEMANTIC_CLOSURE_OPEN_PHASE2_UNAUTHORIZED_PHASE2B_TERM_LEVEL_NEUTRALIZATION_OPEN`
-- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefreshAfterSampleRep32.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_20260505_v0.json`
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS_v0: AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS`
@@ -274,6 +282,13 @@ Strict scalar/QFT current-state synchronization checkpoint (2026-05-02):
 - `QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_CONSUMED_LEAN_BACKED_v0: QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_CONSUMED_LEAN_BACKED`
 - `QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_SELECTED_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
 - QM-STAT entropy log-domain zero-handling reduction result-review status: the review consumes the reduction as Lean-backed local convention authority only, keeps the broader target STAT entropy semantics theorem gap supplied-only, records seven remaining supporting assumptions active, and selects `select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack` without claiming QM-STAT completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, QFT-GR source-map closure, governance-manifest enrollment, or master-action promotion.
+- `POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_BOUNDED_ATTACK_SELECTION_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
+- `POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_BOUNDED_ATTACK_SELECTION_v0: formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropyLogDomainReductionBoundedAttackSelection.lean`
+- `POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_BOUNDED_ATTACK_SELECTION_REPORT_v0: formal/docs/release/POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_BOUNDED_ATTACK_SELECTION_20260510_v0.json`
+- `POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_NEXT_ATTACK_SELECTED_v0: POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_NEXT_ATTACK_SELECTED`
+- `POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_SELECTED_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
+- `POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_RECOMMENDED_NEXT_CANDIDATE_v0: normalization_or_probability_mass_condition_required`
+- QM-STAT entropy post-log-domain reduction selector status: the selector consumes the log-domain reduction review as Lean-backed local convention authority only, keeps seven remaining supporting assumptions active, preserves the supplied-only entropy-semantics theorem gap, recommends `normalization_or_probability_mass_condition_required` as the next likely local candidate, and selects `prepare_qm_stat_entropy_assumption_reduction_candidate_selection` without executing that target or claiming QM-STAT completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, QFT-GR source-map closure, governance-manifest enrollment, or master-action promotion.
 - `AXIOM_LEDGER_AUDIT_REFRESH_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefresh.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_20260503_v0.json`
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS_v0: AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_60_REAL_AXIOMS`
@@ -516,7 +531,7 @@ QFT_GR_EINSTEIN_COUPLING_OBLIGATION_RESULT_REVIEW_TARGET_v0: review_qft_gr_einst
 - `QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_SUMMARY_RESULT_REVIEW_TARGET_v0: review_qft_gr_source_map_eligibility_ladder_summary`
 - `LEAN_AXIOM_SPEC_BACKED_LEDGER_v0: formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md`
 - `LEAN_AXIOM_SPEC_BACKED_LEDGER_BASELINE_v0: 60_REAL_AXIOMS_0_SORRY_OR_ADMIT_15_FILES`
-- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
+- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
 - `SCALAR_QFT_UNIFORM_MESH_CONVERGENCE_ORDERING_v0: CONTRACT_AND_CONDITIONAL_EVIDENCE_THEOREM_RECORDED_ORDER_H2_TO_ZERO_LIMIT_PROVED_CONCRETE_MESH_ZERO_ERROR_NORMAL_FORM_INSTANTIATED_NONZERO_NORMAL_FORM_BOUND_PROVED_ENDPOINT_PACKAGE_STENCIL_ERROR_ORDER_H2_BOUND_PROVED_ACTUAL_GRAPH_ERROR_IDENTIFIED_CLOSURE_REVIEW_RETAINED_PARENT_INTERFACE_MAP_RETAINED_RESTRICTED_INTERFACE_RETAINED_PARENT_INTERFACE_EQUIVALENCE_RETAINED_PARENT_INTERFACE_TOO_ABSTRACT_RETAINED_PARENT_GRAPH_CHANNEL_INTERFACE_REFACTOR_RETAINED_SPECIALIZED_A2A15A1_WITNESS_RETAINED_SPECIALIZED_ENDPOINT_FLUX_EVIDENCE_RETAINED_ENDPOINT_FLUX_EVIDENCE_DERIVATION_RETAINED_ENDPOINT_SOURCE_OBLIGATION_SPLIT_RETAINED_ENDPOINT_REPRESENTATION_SEMANTICS_RETAINED_ENDPOINT_CONVERGENCE_CONSISTENCY_RETAINED_ENDPOINT_ORIENTATION_TRACE_COMPATIBILITY_RETAINED_REFINED_ENDPOINT_SOURCE_ASSEMBLED_REMAINING_NONENDPOINT_RETAINED_REMAINING_NONENDPOINT_OBLIGATION_SPLIT_RETAINED_RAW_IBP_GREEN_CONDITIONAL_BRIDGE_RETAINED_SCALAR_HANDOFF_READY`
 - `SCALAR_QFT_PHASE0_BASELINE_ACCEPTANCE_STATUS_v0: GREEN`
 - `SCALAR_QFT_PHASE0_BASELINE_ACCEPTANCE_CONTRACT_v0: formal/docs/lanes/SCALAR_QFT_PHASE0_BASELINE_ACCEPTANCE_CONTRACT_v0.md`
@@ -6924,7 +6939,7 @@ Seam governance-vs-physics completion split checkpoint (2026-03-12):
 - `QFT_GR_RENORMALIZED_EXPECTATION_VALUE_NEXT_TARGET_v0: review_qft_gr_renormalized_expectation_value_semantics_result`
 - `LEAN_AXIOM_SPEC_BACKED_LEDGER_v0: formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md`
   - `LEAN_AXIOM_SPEC_BACKED_LEDGER_BASELINE_v0: 60_REAL_AXIOMS_0_SORRY_OR_ADMIT_15_FILES`
-  - `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
+  - `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
   - `SEAM_GR_QM_GOVERNANCE_COMPLETE_v0: YES`
   - `SEAM_GR_QM_PHYSICS_COMPLETE_v0: NO`
   - `SEAM_QFT_GR_GOVERNANCE_COMPLETE_v0: NO`

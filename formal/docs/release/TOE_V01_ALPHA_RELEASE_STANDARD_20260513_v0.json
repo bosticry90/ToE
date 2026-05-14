@@ -1,0 +1,72 @@
+{
+  "schema_id": "TOE_V01_ALPHA_RELEASE_STANDARD_v0",
+  "schema_version": 0,
+  "result_token": "TOE_V01_ALPHA_RELEASE_STANDARD_PREPARED_FULL_PILLAR_SEAM_SCOPE",
+  "release_scope": "FULL_PILLAR_FULL_SEAM_RELEASE_STANDARD",
+  "release_claim_definition": "claims appearing in v0.1-alpha release artifacts, ledgers, dependency audits, or current release-facing public summary sections",
+  "current_claim_labels": [
+    "T-LEAN-UNCOND",
+    "T-LEAN-COND",
+    "T-LEAN-AXIOMED",
+    "E-REPRO",
+    "S-SUPPLIED",
+    "B-BLOCKED",
+    "P-POLICY",
+    "H-HYP"
+  ],
+  "legacy_labels": [
+    "T-PROVED",
+    "T-CONDITIONAL",
+    "DISCHARGED_v0",
+    "LOCKED"
+  ],
+  "context_types": [
+    "active_release",
+    "active_public_summary",
+    "v01_alpha_ledger",
+    "historical",
+    "archived_packet",
+    "unmigrated_nonrelease"
+  ],
+  "pillar_seam_row_set": [
+    "GR",
+    "QM",
+    "EM",
+    "SR",
+    "SCALAR_QFT",
+    "STAT",
+    "COSMO",
+    "QFT_GR",
+    "QM_STAT",
+    "EM_QFT",
+    "SR_COSMO",
+    "GR_QM",
+    "MASTER_ACTION"
+  ],
+  "required_ledgers": [
+    "formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json",
+    "formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json",
+    "formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json",
+    "formal/docs/release/TOE_V01_ALPHA_BLOCKER_LEDGER_v0.json"
+  ],
+  "stable_nonclaim_ids": [
+    "NC-NO-MASTER-ACTION-PROMOTION",
+    "NC-NO-PILLAR-COMPLETION",
+    "NC-NO-SEAM-CLOSURE",
+    "NC-NO-PHASE2",
+    "NC-NO-EMPIRICAL-ADEQUACY",
+    "NC-NO-CANONICAL-TOE",
+    "NC-NO-QFT-GR-SOURCE-MAP-CLOSURE"
+  ],
+  "not_authorized_claims": [
+    "master action promotion",
+    "pillar completion",
+    "seam closure",
+    "Phase 2 readiness",
+    "empirical adequacy",
+    "canonical ToE status",
+    "QFT-GR source-map closure"
+  ],
+  "governance_manifest_enrollment_authorized": false,
+  "release_completion_claim_authorized": false
+}

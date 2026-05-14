@@ -1,0 +1,87 @@
+{
+  "schema_id": "POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_BOUNDED_ATTACK_SELECTION_20260510_v0",
+  "schema_version": 0,
+  "date": "2026-05-10",
+  "classification": "P-POLICY/nonclaim",
+  "selection_status": "completed_selection_only",
+  "current_target": "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack",
+  "consumed_review_target": "review_qm_stat_entropy_log_domain_zero_handling_reduction_result",
+  "consumed_review_token": "QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_CONSUMED_LEAN_BACKED",
+  "output_token": "POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_NEXT_ATTACK_SELECTED",
+  "selected_next_target": "prepare_qm_stat_entropy_assumption_reduction_candidate_selection",
+  "selected_decision": "prepare_qm_stat_entropy_assumption_reduction_candidate_selection",
+  "recommended_next_candidate": "normalization_or_probability_mass_condition_required",
+  "source_review_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReductionResultReview.lean",
+  "source_review_report": "formal/docs/release/QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_20260510_v0.json",
+  "source_reduction_surface": "formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReduction.lean",
+  "source_reduction_report": "formal/docs/release/QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_20260510_v0.json",
+  "selection_surface": "formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropyLogDomainReductionBoundedAttackSelection.lean",
+  "focused_gate": "formal/python/tests/test_post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection_gate.py",
+  "authorized_effect": "SELECT_EXACTLY_ONE_NEXT_BOUNDED_TARGET",
+  "selection_executes_target": false,
+  "selection_count": 1,
+  "candidate_next_targets": [
+    {
+      "target_id": "prepare_qm_stat_entropy_assumption_reduction_candidate_selection",
+      "selection": "selected",
+      "reason": "After the log-domain convention reduction, seven supporting assumptions remain active; a second bounded candidate-selection pass can rank the remaining surface before any attempted refinement."
+    },
+    {
+      "target_id": "return_to_full_pillar_target_map_next_lane_selection",
+      "selection": "not_selected",
+      "reason": "A second local reduction cycle is still available without widening the theorem authority boundary, so immediate full-pillar return is deferred."
+    }
+  ],
+  "review_interpretation": {
+    "log_domain_zero_handling_reduction_result_review_consumed": true,
+    "reduced_assumption_class_id": "log_domain_zero_handling_convention_required",
+    "reduced_assumption_authority": "Lean-backed local convention",
+    "local_convention_reduction_only": true,
+    "remaining_assumption_class_count": 7,
+    "remaining_supporting_assumptions_active": true,
+    "target_stat_entropy_semantics_theorem_gap_authority": "supplied-only",
+    "target_stat_entropy_semantics_lean_backed": false,
+    "entropy_semantics_theorem_discharged": false
+  },
+  "next_target_expectations": {
+    "target_id": "prepare_qm_stat_entropy_assumption_reduction_candidate_selection",
+    "candidate_selection_should_rank_remaining_assumptions": true,
+    "candidate_selection_should_select_exactly_one_assumption": true,
+    "recommended_candidate": "normalization_or_probability_mass_condition_required",
+    "selector_executes_selected_target": false,
+    "must_preserve_supplied_only_qm_stat_entropy_semantics_boundary": true
+  },
+  "forbidden_effects": [
+    "LEAN_BACKED_ENTROPY_SEMANTICS_DISCHARGE",
+    "ASSUMPTION_DISCHARGE",
+    "THEOREM_GAP_CLOSURE",
+    "QM_STAT_PILLAR_COMPLETION",
+    "SEAM_CLOSURE",
+    "PHASE_2_READINESS",
+    "EMPIRICAL_ADEQUACY",
+    "CANONICAL_TOE_STATUS",
+    "MASTER_ACTION_PROMOTION",
+    "QFT_GR_SOURCE_MAP_CLOSURE",
+    "SELECTED_TARGET_EXECUTION",
+    "GOVERNANCE_MANIFEST_ENROLLMENT"
+  ],
+  "nonclaim_boundaries": {
+    "log_domain_zero_handling_reduction_consumed_as_local_convention_only": true,
+    "remaining_supporting_assumptions_active": true,
+    "remaining_assumption_class_count": 7,
+    "target_stat_entropy_semantics_lean_backed": false,
+    "target_stat_entropy_semantics_supplied_only": true,
+    "entropy_semantics_theorem_discharged": false,
+    "assumption_discharge_claim": false,
+    "qm_stat_pillar_completion_inferred": false,
+    "seam_closure_claim": false,
+    "phase2_readiness_claim": false,
+    "empirical_adequacy_claim": false,
+    "canonical_toe_claim": false,
+    "master_action_promotion_authorized": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "governance_manifest_enrollment_authorized": false
+  },
+  "acceptance_condition": "The selector consumes the QM-STAT entropy log-domain zero-handling reduction result review as Lean-backed local convention authority only, preserves seven remaining supporting assumptions, selects exactly one next bounded target for another assumption-reduction candidate-selection pass, records normalization_or_probability_mass_condition_required as the likely next local candidate without executing it, and does not infer Lean-backed entropy-semantics discharge, assumption discharge, theorem-gap closure, QM-STAT pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, master-action promotion, QFT-GR source-map closure, selected-target execution, or governance-manifest enrollment.",
+  "next_action_after_selection_packet": "prepare_qm_stat_entropy_assumption_reduction_candidate_selection"
+}

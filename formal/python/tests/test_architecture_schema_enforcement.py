@@ -35,6 +35,26 @@ EXPECTED_ALLOWED_ADJUDICATION_PREFIXES = [
     "T-CONDITIONAL",
     "LOCKED",
 ]
+EXPECTED_RELEASE_LABELS = [
+    "T-LEAN-UNCOND",
+    "T-LEAN-COND",
+    "T-LEAN-AXIOMED",
+    "E-REPRO",
+    "S-SUPPLIED",
+    "B-BLOCKED",
+    "P-POLICY",
+    "H-HYP",
+]
+EXPECTED_ACTIVE_RELEASE_CONTEXTS = [
+    "active_release",
+    "active_public_summary",
+    "v01_alpha_ledger",
+]
+EXPECTED_LEGACY_ALLOWED_CONTEXTS = [
+    "historical",
+    "archived_packet",
+    "unmigrated_nonrelease",
+]
 
 
 def _read(path: Path) -> str:
@@ -86,11 +106,17 @@ def _matches_any_pattern(name: str, patterns: list[str]) -> bool:
 def test_architecture_schema_shape_is_frozen() -> None:
     schema = _read_json(ARCHITECTURE_SCHEMA_PATH)
 
-    assert schema.get("schema_id") == "ARCHITECTURE_SCHEMA_v2"
-    assert schema.get("schema_version") == 2
+    assert schema.get("schema_id") == "ARCHITECTURE_SCHEMA_v3"
+    assert schema.get("schema_version") == 3
     assert schema.get("pillar_required_phases") == EXPECTED_REQUIRED_PHASES
     assert schema.get("allowed_token_classes") == EXPECTED_ALLOWED_TOKEN_CLASSES
     assert schema.get("allowed_adjudication_prefixes") == EXPECTED_ALLOWED_ADJUDICATION_PREFIXES
+
+    release_policy = schema.get("release_label_policy_v1", {})
+    assert release_policy.get("current_release_labels") == EXPECTED_RELEASE_LABELS
+    assert release_policy.get("active_context_types") == EXPECTED_ACTIVE_RELEASE_CONTEXTS
+    assert release_policy.get("legacy_allowed_context_types") == EXPECTED_LEGACY_ALLOWED_CONTEXTS
+    assert release_policy.get("policy_source") == "formal/python/tools/claim_label_policy.py"
 
 
 def test_known_derivation_target_files_exist() -> None:

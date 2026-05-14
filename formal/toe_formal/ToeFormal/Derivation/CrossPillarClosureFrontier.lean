@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QM-STAT entropy log-domain zero-handling reduction review consumes the Lean-backed local convention only and keeps remaining assumptions active"
+        "Post-QM-STAT entropy log-domain reduction selector consumes the local review, preserves the supplied-only target entropy gap, and selects another assumption-reduction candidate-selection cycle"
       retained_blocker :=
-        "qm_stat_entropy_log_domain_zero_handling_reduction_result_review_nonclaim_boundary"
+        "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection_nonclaim_boundary"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack"
+        "prepare_qm_stat_entropy_assumption_reduction_candidate_selection"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QM-STAT log-domain reduction review. -/
+/-- Previous live target consumed by the post-log-domain reduction selector. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qm_stat_entropy_log_domain_zero_handling_reduction_result"
-
-/-- Current live target after the QM-STAT log-domain reduction review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack"
+
+/-- Current live target after the post-log-domain reduction selector. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qm_stat_entropy_assumption_reduction_candidate_selection"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

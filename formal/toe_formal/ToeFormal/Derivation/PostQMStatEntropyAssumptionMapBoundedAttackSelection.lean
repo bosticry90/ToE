@@ -366,7 +366,7 @@ theorem post_qm_stat_entropy_assumption_map_selection_selected_obligation_v0 :
 theorem post_qm_stat_entropy_assumption_map_selection_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack" := by
+      some "prepare_qm_stat_entropy_assumption_reduction_candidate_selection" := by
   decide
 
 theorem post_qm_stat_entropy_assumption_map_selection_does_not_execute_target_v0 :

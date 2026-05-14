@@ -10,14 +10,34 @@ Purpose:
 - Provide a human-facing index for the current live authority chain.
 - Identify canonical sources for live target, axiom posture, result tokens, nonclaim boundaries, validation commands, and historical-only artifacts.
 
+Current release-facing status:
+- `TOE_V01_ALPHA_RELEASE_STANDARD_LANE_SELECTED`
+- `TOE_V01_ALPHA_RELEASE_STANDARD_PREPARED_FULL_PILLAR_SEAM_SCOPE`
+- `TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_SEEDED`
+- `TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_SEEDED`
+- `TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_REVIEW_CONSUMED_PRE_MANIFEST`
+- v0.1-alpha standard status: preparation-only full-pillar/full-seam criticizability track.
+- v0.1-alpha release gates are prepared but not manifest-enrolled; v0.1-alpha public release is not complete.
+- Canonical v0.1-alpha release-standard sources:
+  - `formal/docs/paper/CLAIM_TAXONOMY_v1.md`
+  - `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_20260513_v0.json`
+  - `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_RESULT_REVIEW_20260513_v0.json`
+  - `formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json`
+  - `formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json`
+  - `formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json`
+  - `formal/docs/release/TOE_V01_ALPHA_BLOCKER_LEDGER_v0.json`
+  - `formal/toe_formal/ToeFormal/Release/V01Index.lean`
+- Stable nonclaim boundary: no master-action promotion, no pillar completion, no seam closure, no Phase 2 readiness, no empirical adequacy, no canonical ToE status, and no QFT-GR source-map closure.
+- This release-standard track does not alter the current live scientific target by itself.
+
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_qm_stat_entropy_log_domain_zero_handling_reduction_result`
-- `ACTIVE_LANE_v0: qm_stat_entropy_log_domain_zero_handling_reduction_result_review`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
+- `ACTIVE_LANE_v0: post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReductionResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_20260510_v0.json`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropyLogDomainReductionBoundedAttackSelection.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_BOUNDED_ATTACK_SELECTION_20260510_v0.json`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
@@ -53,6 +73,7 @@ Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/QMStatEntropyAssumptionReductionCandidateSelection.lean`
 - `formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReduction.lean`
 - `formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReductionResultReview.lean`
+- `formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropyLogDomainReductionBoundedAttackSelection.lean`
 - `MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED`
 - `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`
@@ -89,6 +110,7 @@ Current result-token chain:
 - `QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTED`
 - `QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_ASSUMPTION_REDUCED_LEAN_BACKED`
 - `QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_CONSUMED_LEAN_BACKED`
+- `POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_NEXT_ATTACK_SELECTED`
 - Post-QM-STAT entropy-semantics selector preserves the target STAT entropy semantics gap as supplied-only and returns control to full-pillar target-map selection without closure or promotion claims.
 - After-QM-STAT full-pillar selector selects the supporting-assumption map for the supplied-only target STAT entropy semantics gap without closure or promotion claims.
 - QM-STAT supporting-assumption map result review consumes the dependency map only, keeps all eight assumption classes recorded, and selects the post-map bounded selector without closure or promotion claims.
@@ -96,8 +118,14 @@ Current result-token chain:
 - QM-STAT entropy assumption-reduction candidate selector evaluates all eight mapped assumptions and selects `log_domain_zero_handling_convention_required` without executing reduction or making discharge, closure, or promotion claims.
 - QM-STAT entropy log-domain zero-handling reduction consumes the selected candidate, addresses only `log_domain_zero_handling_convention_required`, reduces it to a Lean-backed local convention structure, and preserves the supplied-only target entropy-semantics theorem gap without discharge, closure, or promotion claims.
 - QM-STAT entropy log-domain zero-handling reduction result review consumes that Lean-backed local convention reduction only, keeps seven remaining supporting assumptions active, and selects the post-reduction bounded selector without discharge, closure, or promotion claims.
+- Post-QM-STAT entropy log-domain reduction bounded selector consumes the local review only, keeps seven remaining supporting assumptions active, recommends `normalization_or_probability_mass_condition_required` for a later candidate-selection pass, and selects `prepare_qm_stat_entropy_assumption_reduction_candidate_selection` without executing it or making discharge, closure, or promotion claims.
 
 Historical live-target transition tokens retained for focused historical gates:
+- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_qm_stat_entropy_log_domain_zero_handling_reduction_result`
+- `ACTIVE_LANE_v0: qm_stat_entropy_log_domain_zero_handling_reduction_result_review`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReductionResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_20260510_v0.json`
 - `CURRENT_LIVE_NEXT_TARGET_v0: review_qm_stat_entropy_log_domain_zero_handling_reduction_result`
 - `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_selected_qm_stat_entropy_assumption_reduction_bounded_attack`
 - `ACTIVE_LANE_v0: qm_stat_entropy_log_domain_zero_handling_reduction`

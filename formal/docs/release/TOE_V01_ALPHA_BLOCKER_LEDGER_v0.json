@@ -1,0 +1,56 @@
+{
+  "schema_id": "TOE_V01_ALPHA_BLOCKER_LEDGER_v0",
+  "schema_version": 0,
+  "result_token": "TOE_V01_ALPHA_BLOCKER_LEDGER_SEEDED",
+  "context_type": "v01_alpha_ledger",
+  "rows": [
+    {
+      "blocker_id": "V01-B001",
+      "affected_claim_or_equation": "V01-C001 / V01-E001",
+      "reason_blocked": "candidate master action remains citation-bound and non-promoted",
+      "missing_witness_or_assumption": "global dependency discharge and term-to-pillar/seam closure map",
+      "current_evidence": ["formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md", "formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md"],
+      "evidence_type": ["policy_doc", "policy_doc"],
+      "primary_label": "B-BLOCKED",
+      "supporting_labels": ["H-HYP", "S-SUPPLIED"],
+      "nonclaim_ids": ["NC-NO-MASTER-ACTION-PROMOTION", "NC-NO-CANONICAL-TOE"],
+      "next_reduction_target": "master-action dependency gap reduction"
+    },
+    {
+      "blocker_id": "V01-B002",
+      "affected_claim_or_equation": "V01-C003",
+      "reason_blocked": "QFT-GR source-map eligibility ladder lacks witness chain",
+      "missing_witness_or_assumption": "conservation, Bianchi, Einstein coupling, source identification, Poisson, and weak-field witness chain",
+      "current_evidence": ["formal/toe_formal/ToeFormal/Bridges/QFT_GR_SourceMapEligibilityLadderSummary.lean"],
+      "evidence_type": ["lean_theorem"],
+      "primary_label": "B-BLOCKED",
+      "supporting_labels": ["S-SUPPLIED"],
+      "nonclaim_ids": ["NC-NO-SEAM-CLOSURE", "NC-NO-QFT-GR-SOURCE-MAP-CLOSURE"],
+      "next_reduction_target": "witness-search planning only if globally selected"
+    },
+    {
+      "blocker_id": "V01-B003",
+      "affected_claim_or_equation": "V01-C004",
+      "reason_blocked": "QM-STAT target entropy semantics remain supplied-only with remaining supporting assumptions",
+      "missing_witness_or_assumption": "normalization/probability mass condition and other active supporting assumptions after log-domain zero-handling",
+      "current_evidence": ["formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md"],
+      "evidence_type": ["policy_doc"],
+      "primary_label": "B-BLOCKED",
+      "supporting_labels": ["S-SUPPLIED"],
+      "nonclaim_ids": ["NC-NO-SEAM-CLOSURE", "NC-NO-PILLAR-COMPLETION"],
+      "next_reduction_target": "remaining QM-STAT entropy assumption reductions"
+    },
+    {
+      "blocker_id": "V01-B004",
+      "affected_claim_or_equation": "V01-C002 / V01-E003",
+      "reason_blocked": "scalar worked example does not imply full scalar QFT or interacting QFT",
+      "missing_witness_or_assumption": "quantization, commutators, mode expansion, vacuum/particles, propagator package, interactions, and empirical adequacy",
+      "current_evidence": ["formal/toe_formal/ToeFormal/QFT/FreeScalarDerivation.lean"],
+      "evidence_type": ["lean_theorem"],
+      "primary_label": "B-BLOCKED",
+      "supporting_labels": ["T-LEAN-COND"],
+      "nonclaim_ids": ["NC-NO-PILLAR-COMPLETION", "NC-NO-EMPIRICAL-ADEQUACY"],
+      "next_reduction_target": "scalar/QFT dependency audit and full scalar target obligation mapping"
+    }
+  ]
+}

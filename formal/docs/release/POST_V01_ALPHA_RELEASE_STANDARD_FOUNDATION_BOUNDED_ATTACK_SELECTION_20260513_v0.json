@@ -1,0 +1,59 @@
+{
+  "schema_id": "POST_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_BOUNDED_ATTACK_SELECTION_v0",
+  "schema_version": 0,
+  "result_token": "POST_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_NEXT_ATTACK_SELECTED",
+  "consumed_target": "select_next_post_v01_alpha_release_standard_foundation_bounded_attack",
+  "consumed_review_token": "TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_REVIEW_CONSUMED_PRE_MANIFEST",
+  "consumed_review_path": "formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_RESULT_REVIEW_20260513_v0.json",
+  "required_foundation_status": "PRE_MANIFEST_FOUNDATION_FULL_WRAPPER_VALIDATED",
+  "required_release_scope": "FULL_PILLAR_FULL_SEAM_RELEASE_STANDARD",
+  "required_full_suite_status": {
+    "run_governance_ps1": "passed",
+    "run_pytest_ps1": "passed",
+    "run_lean_ps1": "passed",
+    "git_diff_check": "passed"
+  },
+  "selection_status": "selected_one_next_bounded_target",
+  "selected_next_target": "prepare_v01_alpha_governance_manifest_enrollment",
+  "selected_next_target_kind": "manifest_enrollment_preparation_only",
+  "selection_count": 1,
+  "candidate_targets": [
+    {
+      "target": "prepare_v01_alpha_governance_manifest_enrollment",
+      "decision": "selected",
+      "reason": "The pre-manifest v0.1-alpha foundation review records full wrapper validation green while preserving not-enrolled status."
+    },
+    {
+      "target": "return_to_full_pillar_target_map_next_lane_selection",
+      "decision": "deferred",
+      "reason": "Release-standard manifest enrollment is the bounded next administrative step now that full-wrapper validation is green."
+    }
+  ],
+  "selection_executes_target": "no",
+  "governance_manifest_enrollment_authorized": false,
+  "governance_manifest_enrollment_performed": false,
+  "governance_manifest_enrollment_status": "not_enrolled",
+  "public_release_completion_authorized": false,
+  "release_gate_baseline_authorized": false,
+  "next_packet_boundary": "The next packet may prepare governance manifest enrollment only. It must not expand ledgers, migrate additional labels, alter scientific status, claim public release completion, or enroll unrelated gates.",
+  "nonclaim_ids": [
+    "NC-NO-MASTER-ACTION-PROMOTION",
+    "NC-NO-PILLAR-COMPLETION",
+    "NC-NO-SEAM-CLOSURE",
+    "NC-NO-PHASE2",
+    "NC-NO-EMPIRICAL-ADEQUACY",
+    "NC-NO-CANONICAL-TOE",
+    "NC-NO-QFT-GR-SOURCE-MAP-CLOSURE"
+  ],
+  "not_authorized_claims": [
+    "v0.1-alpha public release complete",
+    "GOVERNANCE_TEST_MANIFEST_v1 enrollment",
+    "master-action promotion",
+    "pillar completion",
+    "seam closure",
+    "Phase 2 readiness",
+    "empirical adequacy",
+    "canonical ToE status",
+    "QFT-GR source-map closure"
+  ]
+}

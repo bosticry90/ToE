@@ -6,7 +6,7 @@
   "captured_at_utc": "2026-04-18T22:07:41Z",
   "baseline_metrics": {
     "release_surface_file_count": 910,
-    "governance_surface_file_count": 408,
+    "governance_surface_file_count": 409,
     "governed_pytests_expected_count": 341,
     "active_theorem_gap_count": 7,
     "active_seam_gap_count": 3,

@@ -1,6 +1,6 @@
 {
-  "schema_id": "ARCHITECTURE_SCHEMA_v2",
-  "schema_version": 2,
+  "schema_id": "ARCHITECTURE_SCHEMA_v3",
+  "schema_version": 3,
   "pillar_required_phases": [
     "TARGET_DEFINITION",
     "ASSUMPTION_FREEZE",
@@ -33,6 +33,41 @@
     "PUBLISHED_POLICY_BASELINE_2026Q1",
     "NOT_YET_"
   ],
+  "release_label_policy_v1": {
+    "current_release_labels": [
+      "T-LEAN-UNCOND",
+      "T-LEAN-COND",
+      "T-LEAN-AXIOMED",
+      "E-REPRO",
+      "S-SUPPLIED",
+      "B-BLOCKED",
+      "P-POLICY",
+      "H-HYP"
+    ],
+    "legacy_release_labels": [
+      "T-PROVED",
+      "T-CONDITIONAL",
+      "DISCHARGED_v0",
+      "DISCHARGED_CONDITIONAL_PUBLISH_v0",
+      "DISCHARGED_CONDITIONAL_v0",
+      "SATISFIED_v0_DISCRETE",
+      "PUBLISHED_POLICY_BASELINE_2026Q1",
+      "NOT_YET_",
+      "LOCKED"
+    ],
+    "active_context_types": [
+      "active_release",
+      "active_public_summary",
+      "v01_alpha_ledger"
+    ],
+    "legacy_allowed_context_types": [
+      "historical",
+      "archived_packet",
+      "unmigrated_nonrelease"
+    ],
+    "policy_source": "formal/python/tools/claim_label_policy.py",
+    "standard_source": "formal/docs/paper/CLAIM_TAXONOMY_v1.md"
+  },
   "pillar_target_files": [
     "DERIVATION_TARGET_EM_U1_MAXWELL_OBJECT_v0.md",
     "DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md",
