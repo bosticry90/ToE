@@ -537,6 +537,14 @@ POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_SELECTOR_PATH = (
     / "Derivation"
     / "PostQMStatEntropyLogDomainReductionBoundedAttackSelection.lean"
 )
+V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "V01AlphaGovernanceManifestEnrollmentResultReview.lean"
+)
 MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH = (
     REPO_ROOT
     / "formal"
@@ -860,12 +868,27 @@ POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_NEXT_ATTACK_SELECTED = (
 POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_RECOMMENDED_NEXT_CANDIDATE = (
     "normalization_or_probability_mass_condition_required"
 )
+V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_TARGET = (
+    "review_v01_alpha_governance_manifest_enrollment_result"
+)
+POST_V01_ALPHA_MANIFEST_ENROLLMENT_BOUNDED_ATTACK_SELECTION_TARGET = (
+    "select_next_post_v01_alpha_manifest_enrollment_bounded_attack"
+)
+V01_ALPHA_RELEASE_GATE_ENROLLED_TOKEN = "TOE_V01_ALPHA_RELEASE_GATE_ENROLLED"
+V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_TOKEN = (
+    "TOE_V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_CONSUMED"
+)
+V01_ALPHA_RELEASE_PACKET_GAP_REVIEW_TARGET = (
+    "prepare_v01_alpha_release_packet_gap_review"
+)
 AUDIT_REFRESH_TARGET = "prepare_axiom_ledger_audit_refresh"
 AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
-PREVIOUS_TARGET = POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_BOUNDED_ATTACK_SELECTION_TARGET
-LIVE_TARGET = QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_TARGET
+ACTIVE_LANE = "v01_alpha_governance_manifest_enrollment_result_review"
+PREVIOUS_TARGET = V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_TARGET
+LIVE_TARGET = POST_V01_ALPHA_MANIFEST_ENROLLMENT_BOUNDED_ATTACK_SELECTION_TARGET
+LIVE_TARGET_EVIDENCE_PATH = V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_PATH
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
 SHARED_DYNAMICS_TARGET = "derive_or_refute_em_qft_shared_dynamics_residual_unification_bridge"
@@ -987,19 +1010,14 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert state["previous_live_next_target"] == PREVIOUS_TARGET
     assert state["live_next_target"] == LIVE_TARGET
     assert state["live_next_target_evidence"] == str(
-        POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_SELECTOR_PATH.relative_to(
-            REPO_ROOT
-        )
+        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert state["post_sweep_queue_authority_status"] == HISTORICAL_QUEUE_TOKEN
     paused_ids = {
         item["workstream_id"] for item in payload["workstreams"] if item["status"] == "paused"
     }
     assert set(state["paused_lanes"]) == paused_ids
-    assert (
-        state["active_lane"]
-        == "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection"
-    )
+    assert state["active_lane"] == ACTIVE_LANE
 
     previous_fnrep_workstream = _workstream(payload, "fnrep_nonalias_samplerep32_discharge")
     assert previous_fnrep_workstream["status"] == "paused"
@@ -1590,50 +1608,131 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "entropy_semantics_theorem_discharged"
     ] == "no"
 
-    current_active_workstream = active_workstream(payload)
+    previous_log_domain_selector_workstream = _workstream(
+        payload, "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection"
+    )
     assert (
-        current_active_workstream["workstream_id"]
+        previous_log_domain_selector_workstream["workstream_id"]
         == "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection"
     )
-    assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
+    assert previous_log_domain_selector_workstream["status"] == "paused"
+    assert previous_log_domain_selector_workstream["authorized_next_strict_target"] == (
+        QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_TARGET
+    )
+    assert previous_log_domain_selector_workstream["consumed_target"] == (
+        POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_BOUNDED_ATTACK_SELECTION_TARGET
+    )
     assert (
-        current_active_workstream["latest_surface"]
+        previous_log_domain_selector_workstream["latest_surface"]
         == "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection_v0"
     )
-    assert current_active_workstream["authorization_evidence"] == str(
+    assert previous_log_domain_selector_workstream["authorization_evidence"] == str(
         POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_SELECTOR_PATH.relative_to(
             REPO_ROOT
         )
     ).replace("\\", "/")
-    assert current_active_workstream["consumed_review_token"] == (
+    assert previous_log_domain_selector_workstream["consumed_review_token"] == (
         QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_TOKEN
     )
-    assert current_active_workstream["output_token"] == (
+    assert previous_log_domain_selector_workstream["output_token"] == (
         POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_NEXT_ATTACK_SELECTED
     )
-    assert current_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert current_active_workstream["selected_decision"] == LIVE_TARGET
-    assert current_active_workstream["recommended_next_candidate"] == (
+    assert previous_log_domain_selector_workstream["selected_next_target"] == (
+        QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_TARGET
+    )
+    assert previous_log_domain_selector_workstream["selected_decision"] == (
+        QM_STAT_ENTROPY_ASSUMPTION_REDUCTION_CANDIDATE_SELECTION_TARGET
+    )
+    assert previous_log_domain_selector_workstream["recommended_next_candidate"] == (
         POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_RECOMMENDED_NEXT_CANDIDATE
     )
-    assert current_active_workstream["selection_count"] == 1
-    assert current_active_workstream["candidate_target_count"] == 2
-    assert current_active_workstream["selection_executes_target"] == "no"
-    assert current_active_workstream["local_convention_reduction_only"] == "yes"
-    assert current_active_workstream["remaining_assumption_class_count"] == 7
-    assert current_active_workstream["remaining_supporting_assumptions_active"] == "yes"
-    assert current_active_workstream["target_stat_entropy_semantics_lean_backed"] == "no"
-    assert current_active_workstream["target_stat_entropy_semantics_supplied_only"] == "yes"
-    assert current_active_workstream["entropy_semantics_theorem_discharged"] == "no"
-    assert current_active_workstream["assumption_discharge_claim"] == "no"
-    assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
+    assert previous_log_domain_selector_workstream["selection_count"] == 1
+    assert previous_log_domain_selector_workstream["candidate_target_count"] == 2
+    assert previous_log_domain_selector_workstream["selection_executes_target"] == "no"
+    assert (
+        previous_log_domain_selector_workstream["local_convention_reduction_only"]
+        == "yes"
+    )
+    assert previous_log_domain_selector_workstream["remaining_assumption_class_count"] == 7
+    assert (
+        previous_log_domain_selector_workstream["remaining_supporting_assumptions_active"]
+        == "yes"
+    )
+    assert (
+        previous_log_domain_selector_workstream["target_stat_entropy_semantics_lean_backed"]
+        == "no"
+    )
+    assert (
+        previous_log_domain_selector_workstream["target_stat_entropy_semantics_supplied_only"]
+        == "yes"
+    )
+    assert (
+        previous_log_domain_selector_workstream["entropy_semantics_theorem_discharged"]
+        == "no"
+    )
+    assert previous_log_domain_selector_workstream["assumption_discharge_claim"] == "no"
+    assert (
+        previous_log_domain_selector_workstream["qft_gr_source_map_closure_authorized"]
+        == "no"
+    )
+    assert previous_log_domain_selector_workstream["seam_closure_claim"] == "no"
+    assert previous_log_domain_selector_workstream["phase2_readiness_claim"] == "no"
+    assert previous_log_domain_selector_workstream["empirical_adequacy_claim"] == "no"
+    assert previous_log_domain_selector_workstream["canonical_toe_claim"] == "no"
+    assert (
+        previous_log_domain_selector_workstream[
+            "governance_manifest_enrollment_authorized"
+        ]
+        == "no"
+    )
+    assert (
+        previous_log_domain_selector_workstream["master_action_promotion_authorized"]
+        == "no"
+    )
+
+    current_active_workstream = active_workstream(payload)
+    assert current_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert current_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
+    assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
+    assert (
+        current_active_workstream["latest_surface"]
+        == "v01_alpha_governance_manifest_enrollment_result_review_v0"
+    )
+    assert current_active_workstream["authorization_evidence"] == str(
+        V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_PATH.relative_to(
+            REPO_ROOT
+        )
+    ).replace("\\", "/")
+    assert current_active_workstream["consumed_enrollment_token"] == (
+        V01_ALPHA_RELEASE_GATE_ENROLLED_TOKEN
+    )
+    assert current_active_workstream["review_token"] == (
+        V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_TOKEN
+    )
+    assert current_active_workstream["enrollment_status_confirmed"] == (
+        "governance_manifest_enrolled"
+    )
+    assert current_active_workstream["governed_pytest_count"] == 346
+    assert (
+        current_active_workstream["governed_pytest_sha256"]
+        == "e5964369e2e1033b805e2838d3aa18fc22cd1b8a5deb1d0478c8000705f87dfb"
+    )
+    assert current_active_workstream["release_standard_artifacts_governed_baseline"] == "yes"
+    assert current_active_workstream["selected_next_target"] == LIVE_TARGET
+    assert current_active_workstream["recommended_selector_choice"] == (
+        V01_ALPHA_RELEASE_PACKET_GAP_REVIEW_TARGET
+    )
+    assert current_active_workstream["selector_choice_executed"] == "no"
+    assert current_active_workstream["release_packet_assembled"] == "no"
+    assert current_active_workstream["public_release_completion_authorized"] == "no"
+    assert current_active_workstream["master_action_promotion_authorized"] == "no"
+    assert current_active_workstream["pillar_completion_inferred"] == "no"
     assert current_active_workstream["seam_closure_claim"] == "no"
     assert current_active_workstream["phase2_readiness_claim"] == "no"
     assert current_active_workstream["empirical_adequacy_claim"] == "no"
     assert current_active_workstream["canonical_toe_claim"] == "no"
-    assert current_active_workstream["governance_manifest_enrollment_authorized"] == "no"
-    assert current_active_workstream["master_action_promotion_authorized"] == "no"
+    assert current_active_workstream["qft_gr_source_map_closure_authorized"] == "no"
+    assert current_active_workstream["unrelated_gate_enrollment_authorized"] == "no"
 
     previous_full_pillar_workstream = _workstream(
         payload, "full_pillar_target_map_next_lane_selection_after_qm_stat_entropy_semantics_gap"

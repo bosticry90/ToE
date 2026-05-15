@@ -231,12 +231,14 @@ def test_qm_stat_entropy_semantics_supporting_assumption_map_result_review_rotat
         assert state["live_next_target"] == NEXT_TARGET_AFTER_CANDIDATE_SELECTION
         assert state["active_lane"] == CANDIDATE_SELECTION_LANE
     else:
-        assert state["live_next_target"] == (
-            "prepare_qm_stat_entropy_assumption_reduction_candidate_selection"
-        )
-        assert state["active_lane"] == (
-            "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection"
-        )
+        assert state["live_next_target"] in {
+            "prepare_qm_stat_entropy_assumption_reduction_candidate_selection",
+            "select_next_post_v01_alpha_manifest_enrollment_bounded_attack",
+        }
+        assert state["active_lane"] in {
+            "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection",
+            "v01_alpha_governance_manifest_enrollment_result_review",
+        }
     assert POST_MAP_SELECTOR_LANE in state["paused_lanes"]
     assert CANDIDATE_SELECTION_LANE in state["paused_lanes"]
     assert MAP_LANE in state["paused_lanes"]

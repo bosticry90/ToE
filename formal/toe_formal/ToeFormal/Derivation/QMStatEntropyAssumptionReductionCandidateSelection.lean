@@ -543,7 +543,7 @@ theorem qm_stat_entropy_assumption_reduction_candidate_selection_selected_rank_v
 theorem qm_stat_entropy_assumption_reduction_candidate_selection_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "prepare_qm_stat_entropy_assumption_reduction_candidate_selection" := by
+      some currentLiveNextStrictTargetV0 := by
   decide
 
 theorem qm_stat_entropy_assumption_reduction_candidate_selection_does_not_execute_reduction_v0 :

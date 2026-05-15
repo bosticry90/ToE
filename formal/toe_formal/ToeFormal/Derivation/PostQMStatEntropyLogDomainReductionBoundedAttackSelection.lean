@@ -405,7 +405,7 @@ theorem post_qm_stat_entropy_log_domain_reduction_selection_candidate_count_v0 :
 theorem post_qm_stat_entropy_log_domain_reduction_selection_frontier_target_v0 :
     Option.map (fun entry => entry.next_strict_slice)
       (crossPillarFrontierEntryByRow? .masterAction) =
-      some "prepare_qm_stat_entropy_assumption_reduction_candidate_selection" := by
+      some currentLiveNextStrictTargetV0 := by
   decide
 
 theorem post_qm_stat_entropy_log_domain_reduction_selection_does_not_execute_target_v0 :

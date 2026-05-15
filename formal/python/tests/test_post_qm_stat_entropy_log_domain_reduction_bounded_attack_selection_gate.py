@@ -269,10 +269,16 @@ def test_post_qm_stat_entropy_log_domain_reduction_selection_registry_rotates_to
     payload = loop_registry()
     state = payload["current_target_state"]
 
-    assert state["previous_live_next_target"] == SELECTION_TARGET
-    assert state["live_next_target"] == SELECTED_TARGET
-    assert state["live_next_target_evidence"] == SELECTION_EVIDENCE
-    assert state["active_lane"] == ACTIVE_LANE
+    is_current = state["live_next_target"] == SELECTED_TARGET
+    if is_current:
+        assert state["previous_live_next_target"] == SELECTION_TARGET
+        assert state["live_next_target_evidence"] == SELECTION_EVIDENCE
+        assert state["active_lane"] == ACTIVE_LANE
+    else:
+        assert state["live_next_target"] in {
+            SELECTED_TARGET,
+            "select_next_post_v01_alpha_manifest_enrollment_bounded_attack",
+        }
     assert PREVIOUS_LANE in state["paused_lanes"]
     assert REDUCTION_LANE in state["paused_lanes"]
 
@@ -290,9 +296,9 @@ def test_post_qm_stat_entropy_log_domain_reduction_selection_registry_rotates_to
     assert previous["target_stat_entropy_semantics_supplied_only"] == "yes"
     assert previous["entropy_semantics_theorem_discharged"] == "no"
 
-    current = active_workstream(payload)
+    current = active_workstream(payload) if is_current else workstream(ACTIVE_LANE, payload)
     assert current["workstream_id"] == ACTIVE_LANE
-    assert current["status"] == "active"
+    assert current["status"] == ("active" if is_current else "paused")
     assert current["authorization_evidence"] == SELECTION_EVIDENCE
     assert current["authorized_next_strict_target"] == SELECTED_TARGET
     assert current["consumed_target"] == SELECTION_TARGET

@@ -17,29 +17,32 @@ Current release-facing status:
 - `TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_SEEDED`
 - `TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_REVIEW_CONSUMED_PRE_MANIFEST`
 - `TOE_V01_ALPHA_RELEASE_GATE_ENROLLED`
+- `TOE_V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_CONSUMED`
 - v0.1-alpha standard status: preparation-only full-pillar/full-seam criticizability track.
 - v0.1-alpha release gates are manifest-enrolled as governed baseline surfaces; v0.1-alpha public release is not complete.
+- v0.1-alpha enrollment result review confirms the governed count/hash baseline and selects `select_next_post_v01_alpha_manifest_enrollment_bounded_attack`; the recommended selector choice is `prepare_v01_alpha_release_packet_gap_review`, not release packet assembly.
 - Canonical v0.1-alpha release-standard sources:
   - `formal/docs/paper/CLAIM_TAXONOMY_v1.md`
   - `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_20260513_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_RESULT_REVIEW_20260513_v0.json`
   - `formal/docs/release/V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_20260513_v0.json`
+  - `formal/docs/release/V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_20260513_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_BLOCKER_LEDGER_v0.json`
   - `formal/toe_formal/ToeFormal/Release/V01Index.lean`
 - Stable nonclaim boundary: no master-action promotion, no pillar completion, no seam closure, no Phase 2 readiness, no empirical adequacy, no canonical ToE status, and no QFT-GR source-map closure.
-- This release-standard track does not alter the current live scientific target by itself.
+- The result review advances the live control target to a release-track selector only; it does not alter physics frontier rows or infer pillar/seam closure.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
-- `ACTIVE_LANE_v0: post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection`
+- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_v01_alpha_manifest_enrollment_bounded_attack`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_v01_alpha_governance_manifest_enrollment_result`
+- `ACTIVE_LANE_v0: v01_alpha_governance_manifest_enrollment_result_review`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropyLogDomainReductionBoundedAttackSelection.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_BOUNDED_ATTACK_SELECTION_20260510_v0.json`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/V01AlphaGovernanceManifestEnrollmentResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_20260513_v0.json`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
@@ -76,6 +79,7 @@ Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReduction.lean`
 - `formal/toe_formal/ToeFormal/Derivation/QMStatEntropyLogDomainZeroHandlingReductionResultReview.lean`
 - `formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropyLogDomainReductionBoundedAttackSelection.lean`
+- `formal/toe_formal/ToeFormal/Derivation/V01AlphaGovernanceManifestEnrollmentResultReview.lean`
 - `MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED`
 - `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`
@@ -123,6 +127,11 @@ Current result-token chain:
 - Post-QM-STAT entropy log-domain reduction bounded selector consumes the local review only, keeps seven remaining supporting assumptions active, recommends `normalization_or_probability_mass_condition_required` for a later candidate-selection pass, and selects `prepare_qm_stat_entropy_assumption_reduction_candidate_selection` without executing it or making discharge, closure, or promotion claims.
 
 Historical live-target transition tokens retained for focused historical gates:
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
+- `ACTIVE_LANE_v0: post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropyLogDomainReductionBoundedAttackSelection.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_BOUNDED_ATTACK_SELECTION_20260510_v0.json`
 - `CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack`
 - `PREVIOUS_LIVE_NEXT_TARGET_v0: review_qm_stat_entropy_log_domain_zero_handling_reduction_result`
 - `ACTIVE_LANE_v0: qm_stat_entropy_log_domain_zero_handling_reduction_result_review`

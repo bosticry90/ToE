@@ -229,12 +229,14 @@ def test_qm_stat_entropy_log_domain_zero_handling_reduction_registry_rotates_to_
         assert state["live_next_target_evidence"] == REDUCTION_EVIDENCE
         assert state["active_lane"] == ACTIVE_LANE
     else:
-        assert state["live_next_target"] == (
-            "prepare_qm_stat_entropy_assumption_reduction_candidate_selection"
-        )
-        assert state["active_lane"] == (
-            "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection"
-        )
+        assert state["live_next_target"] in {
+            "prepare_qm_stat_entropy_assumption_reduction_candidate_selection",
+            "select_next_post_v01_alpha_manifest_enrollment_bounded_attack",
+        }
+        assert state["active_lane"] in {
+            "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection",
+            "v01_alpha_governance_manifest_enrollment_result_review",
+        }
     assert PREVIOUS_LANE in state["paused_lanes"]
     assert ACTIVE_LANE in state["paused_lanes"]
 

@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "Post-QM-STAT entropy log-domain reduction selector consumes the local review, preserves the supplied-only target entropy gap, and selects another assumption-reduction candidate-selection cycle"
+        "v0.1-alpha governance manifest enrollment result review confirms the manifest-enrolled release-standard baseline and selects a post-enrollment bounded attack"
       retained_blocker :=
-        "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection_nonclaim_boundary"
+        "v01_alpha_governance_manifest_enrollment_result_review_nonclaim_boundary"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qm_stat_entropy_assumption_reduction_candidate_selection"
+        "select_next_post_v01_alpha_manifest_enrollment_bounded_attack"
       status := .retained }
   ]
 
@@ -222,13 +222,26 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the post-log-domain reduction selector. -/
+/-- Previous live target consumed by the v0.1-alpha enrollment result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack"
+  "review_v01_alpha_governance_manifest_enrollment_result"
 
-/-- Current live target after the post-log-domain reduction selector. -/
+/-- Current live target after the v0.1-alpha enrollment result review. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "prepare_qm_stat_entropy_assumption_reduction_candidate_selection"
+  "select_next_post_v01_alpha_manifest_enrollment_bounded_attack"
+
+/-- Administrative current-target mirror for release-standard control packets. -/
+structure ReleaseTrackAdministrativeTargetMirror where
+  next_strict_slice : String
+
+/--
+Release-track administrative mirror used by loop-control freshness gates. This
+does not alter the physics frontier rows or infer pillar/seam closure.
+-/
+def releaseTrackAdministrativeTargetMirrorV0 :
+    ReleaseTrackAdministrativeTargetMirror where
+  next_strict_slice :=
+        "select_next_post_v01_alpha_manifest_enrollment_bounded_attack"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

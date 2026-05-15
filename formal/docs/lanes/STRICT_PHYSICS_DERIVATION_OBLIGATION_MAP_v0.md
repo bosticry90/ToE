@@ -81,7 +81,7 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict architecture target:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
+- `CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_v01_alpha_manifest_enrollment_bounded_attack`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_TARGET_v0: select_next_post_qm_stat_entropy_semantics_gap_bounded_attack`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_v0: formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropySemanticsGapBoundedAttackSelection.lean`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_REPORT_v0: formal/docs/release/POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_20260510_v0.json`
@@ -127,6 +127,7 @@ Next strict architecture target:
 - `POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_NEXT_ATTACK_SELECTED_v0: POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_NEXT_ATTACK_SELECTED`
 - `POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_SELECTED_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
 - `POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_RECOMMENDED_NEXT_CANDIDATE_v0: normalization_or_probability_mass_condition_required`
+- `POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_HISTORICAL_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection`
 - QM-STAT entropy post-log-domain reduction selector status: consumes the local convention review only, keeps seven remaining supporting assumptions active, preserves the supplied-only target entropy-semantics theorem gap, and selects another candidate-selection target without executing it or claiming discharge, closure, or promotion.
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefreshAfterSampleRep32.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_20260505_v0.json`
