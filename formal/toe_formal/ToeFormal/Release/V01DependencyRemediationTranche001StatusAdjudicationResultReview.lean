@@ -1,0 +1,34 @@
+/-
+ToeFormal/Release/V01DependencyRemediationTranche001StatusAdjudicationResultReview.lean
+
+Lean-side release index marker for the v0.1-alpha dependency-remediation
+tranche 001 status adjudication result-review surface. This records acceptance
+of the documented nonblocking status candidate and authorizes only preparation
+of a blocker-movement registration packet.
+-/
+
+namespace ToeFormal
+namespace Release
+namespace V01DependencyRemediationTranche001StatusAdjudicationResultReview
+
+def tranche001StatusAdjudicationResultReviewToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_001_STATUS_ADJUDICATION_RESULT_REVIEW_v0"
+
+def tranche001StatusAdjudicationResultReviewOutcomeToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_001_STATUS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_DOCUMENTED_NONBLOCKING_STATUS_CANDIDATE_AND_AUTHORIZES_BLOCKER_MOVEMENT_REGISTRATION_PREPARATION_ONLY"
+
+def selectedNextTarget : String :=
+  "prepare_v01_alpha_dependency_remediation_tranche_001_blocker_movement_registration_packet"
+
+theorem v01_dependency_remediation_tranche_001_status_adjudication_result_review_accepts_candidate_only : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_001_status_adjudication_result_review_does_not_move_blocker : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_001_status_adjudication_result_review_does_not_promote_release : True := by
+  trivial
+
+end V01DependencyRemediationTranche001StatusAdjudicationResultReview
+end Release
+end ToeFormal

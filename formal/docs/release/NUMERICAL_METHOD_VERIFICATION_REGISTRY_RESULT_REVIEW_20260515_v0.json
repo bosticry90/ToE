@@ -1,0 +1,71 @@
+{
+  "acceptance_criteria": {
+    "all_promotion_allowed_false": true,
+    "authorization_class_preserved": true,
+    "comparator_report_count_exact": true,
+    "consumes_numerical_method_registry": true,
+    "forbidden_effects_all_false": true,
+    "formal_governance_count_exact": true,
+    "no_method_completion_claims": true,
+    "no_numerical_credibility_score": true,
+    "numerical_method_applicable_count_exact": true,
+    "primary_method_gap_preserved": true,
+    "promotion_allowed_count_zero": true,
+    "registry_row_count_exact": true,
+    "registry_status_nonclaim": true,
+    "source_audit_row_count_exact": true,
+    "validation_upgrade_count_zero": true
+  },
+  "accepted": true,
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_registry": {
+    "registry_id": "NUMERICAL_METHOD_VERIFICATION_REGISTRY_v0",
+    "registry_path": "formal/docs/release/NUMERICAL_METHOD_VERIFICATION_REGISTRY_20260515_v0.json",
+    "registry_preparation_result": "NUMERICAL_METHOD_VERIFICATION_REGISTRY_PREPARED_FROM_VVUQ_REVIEW_WITH_NONCLAIM_METHOD_VERIFICATION_CEILINGS",
+    "registry_row_count": 8,
+    "registry_schema_id": "NUMERICAL_METHOD_VERIFICATION_REGISTRY_20260515_v0"
+  },
+  "forbidden_effect_status": {
+    "blocker_movement": false,
+    "empirical_validation_claim": false,
+    "external_truth_claim": false,
+    "lane_reopen": false,
+    "master_action_promotion": false,
+    "phase2_authorization": false,
+    "seam_closure": false,
+    "theorem_discharge": false
+  },
+  "method_gap_confirmation": {
+    "convergence_not_registered_count": 2,
+    "manufactured_solution_not_passed_count": 2,
+    "method_applicability_counts": {
+      "comparator_or_report_surface": 5,
+      "formal_or_governance_surface": 1,
+      "numerical_method_applicable": 2
+    },
+    "method_verification_scope": "REGISTER_VERIFICATION_DEPTH_ONLY_NO_COMPLETION_CLAIM",
+    "primary_method_gap": "CONVERGENCE_MMS_EXACT_SOLUTION_AND_SOLVER_CROSSCHECK_DEPTH_NOT_REGISTERED_V0",
+    "solver_crosscheck_not_performed_count": 2,
+    "verification_depth_counts": {
+      "gated_but_not_convergence_verified": 2,
+      "not_applicable": 6
+    }
+  },
+  "next_action": "PREPARE_REGIME_RECOVERY_MATRIX_AFTER_NUMERICAL_METHOD_REGISTRY_REVIEW",
+  "next_packet": "REGIME_RECOVERY_MATRIX_v0",
+  "next_packet_authorization_scope": "PREPARATION_ONLY",
+  "non_claim_boundary": "Result review accepts nonclaim numerical-method verification debt registration only; it authorizes regime-recovery matrix preparation only and does not authorize convergence completion, MMS completion, exact-solution benchmark completion, solver-crosscheck completion, theorem discharge, blocker movement, lane reopen, Phase 2 authorization, empirical validation claim, seam closure, master-action promotion, or external-truth claim.",
+  "outcome_id": "NUMERICAL_METHOD_VERIFICATION_REGISTRY_RESULT_REVIEW_ACCEPTS_NONCLAIM_METHOD_DEBT_REGISTRATION_AND_AUTHORIZES_REGIME_RECOVERY_MATRIX_PREPARATION_ONLY",
+  "review_id": "NUMERICAL_METHOD_VERIFICATION_REGISTRY_RESULT_REVIEW_v0",
+  "roadmap_update_required": true,
+  "schema_id": "NUMERICAL_METHOD_VERIFICATION_REGISTRY_RESULT_REVIEW_20260515_v0",
+  "scope_confirmation": {
+    "all_promotion_allowed_false": true,
+    "method_completion_claim_count": 0,
+    "method_completion_claims": [],
+    "numerical_score_present": false,
+    "promotion_allowed_count": 0,
+    "validation_upgrade_count": 0
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM"
+}

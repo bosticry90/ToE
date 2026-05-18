@@ -278,6 +278,7 @@ def test_post_qm_stat_entropy_log_domain_reduction_selection_registry_rotates_to
         assert state["live_next_target"] in {
             SELECTED_TARGET,
             "select_next_post_v01_alpha_manifest_enrollment_bounded_attack",
+            "review_v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet_result",
         }
     assert PREVIOUS_LANE in state["paused_lanes"]
     assert REDUCTION_LANE in state["paused_lanes"]

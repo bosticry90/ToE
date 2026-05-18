@@ -1,0 +1,109 @@
+{
+  "acceptance_criteria": {
+    "all_comparison_execution_status_not_executed_v0": true,
+    "all_promotion_allowed_false": true,
+    "authorization_class_preserved": true,
+    "c6_c7_method_debt_visible": true,
+    "comparison_execution_counts_expected": true,
+    "consumes_referent_registry": true,
+    "empirical_validation_claim_count_zero": true,
+    "forbidden_effects_all_false": true,
+    "no_numerical_credibility_score": true,
+    "primary_referent_gap_preserved": true,
+    "promotion_allowed_count_zero": true,
+    "referent_comparison_execution_claim_count_zero": true,
+    "registry_row_count_exact": true,
+    "registry_scope_preserved": true,
+    "registry_status_nonclaim": true,
+    "row_ids_match_prior_lineage": true,
+    "uq_limitations_visible": true,
+    "validation_upgrade_count_zero": true
+  },
+  "accepted": true,
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_registry": {
+    "registry_id": "REFERENT_REGISTRY_v0",
+    "registry_path": "formal/docs/release/REFERENT_REGISTRY_20260515_v0.json",
+    "registry_preparation_result": "REFERENT_REGISTRY_PREPARED_FROM_SENSITIVITY_ROBUSTNESS_REVIEW_WITH_NONCLAIM_REFERENT_CEILINGS",
+    "registry_row_count": 8,
+    "registry_schema_id": "REFERENT_REGISTRY_20260515_v0"
+  },
+  "forbidden_effect_status": {
+    "blocker_movement": false,
+    "empirical_validation_claim": false,
+    "external_truth_claim": false,
+    "lane_reopen": false,
+    "master_action_promotion": false,
+    "phase2_authorization": false,
+    "seam_closure": false,
+    "theorem_discharge": false
+  },
+  "next_action": "PREPARE_SIMULATION_MODEL_CARD_TEMPLATE_AFTER_REFERENT_REGISTRY_REVIEW",
+  "next_packet": "SIMULATION_MODEL_CARD_TEMPLATE_v0",
+  "next_packet_authorization_scope": "PREPARATION_ONLY",
+  "non_claim_boundary": "Result review accepts nonclaim referent registration bookkeeping only; it authorizes simulation model card template preparation only and does not authorize referent comparison execution, empirical validation claims, theorem discharge, blocker movement, lane reopen, Phase 2 authorization, seam closure, master-action promotion, or external-truth claim.",
+  "outcome_id": "REFERENT_REGISTRY_RESULT_REVIEW_ACCEPTS_NONCLAIM_REFERENT_REGISTRATION_AND_AUTHORIZES_SIMULATION_MODEL_CARD_TEMPLATE_PREPARATION_ONLY",
+  "referent_gap_confirmation": {
+    "allowed_use_counts": {
+      "benchmark_pressure_or_falsifier_design_only": 1,
+      "blocker_context_only": 1,
+      "known_limit_context_only": 2,
+      "mismatch_classification_context_only": 1,
+      "sanity_check_context_only": 1,
+      "sanity_check_or_known_limit_context_only": 1,
+      "structural_comparator_context_only": 1
+    },
+    "c6_c7_method_debt_visible": true,
+    "comparison_execution_status_counts": {
+      "not_executed_v0": 8
+    },
+    "primary_referent_gap": "REFERENT_IDENTIFICATION_ALLOWED_USE_AND_UNCERTAINTY_REGISTRATION_INCOMPLETE_V0",
+    "referent_applicability_counts": {
+      "empirical_or_literature_comparator_relevant": 1,
+      "formal_governance_referent_blocked": 1,
+      "known_limit_or_literature_referent_relevant": 2,
+      "seam_or_mismatch_referent_relevant": 1,
+      "simulation_internal_or_analytic_referent_relevant": 2,
+      "structural_or_internal_referent_relevant": 1
+    },
+    "referent_type_counts": {
+      "analytic_or_formal_requirement_candidate": 1,
+      "analytic_or_internal_candidate": 2,
+      "analytic_or_literature_candidate": 2,
+      "empirical_or_literature_candidate": 1,
+      "internal_or_literature_candidate": 1,
+      "internal_report_or_comparator_candidate": 1
+    },
+    "referent_uncertainty_status_counts": {
+      "not_registered_v0": 8
+    },
+    "registry_scope": "REGISTER_REFERENTS_ONLY_NO_COMPARISON_OR_VALIDATION_EXECUTION_CLAIM",
+    "uq_dependency_counts": {
+      "uq_not_quantified": 5,
+      "uq_partial_quantitative": 1,
+      "uq_qualitative": 2
+    },
+    "uq_limitations_visible": true
+  },
+  "review_id": "REFERENT_REGISTRY_RESULT_REVIEW_v0",
+  "roadmap_update_required": true,
+  "schema_id": "REFERENT_REGISTRY_RESULT_REVIEW_20260515_v0",
+  "scope_confirmation": {
+    "all_comparison_execution_status_not_executed_v0": true,
+    "all_promotion_allowed_false": true,
+    "empirical_validation_claim_count": 0,
+    "numerical_score_present": false,
+    "promotion_allowed_count": 0,
+    "referent_comparison_execution_claim_count": 0,
+    "validation_upgrade_count": 0
+  },
+  "source_lineage": {
+    "row_ids_match_prior_lineage": true,
+    "source_audit": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+    "source_matrix": "REGIME_RECOVERY_MATRIX_v0",
+    "source_numerical_registry": "NUMERICAL_METHOD_VERIFICATION_REGISTRY_v0",
+    "source_protocol": "SENSITIVITY_ROBUSTNESS_PROTOCOL_v0",
+    "source_vvuq_ledger": "VVUQ_CREDIBILITY_LEDGER_v0"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM"
+}

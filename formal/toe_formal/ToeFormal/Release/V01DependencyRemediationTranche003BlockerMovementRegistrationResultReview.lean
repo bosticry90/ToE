@@ -1,0 +1,36 @@
+/-
+ToeFormal/Release/V01DependencyRemediationTranche003BlockerMovementRegistrationResultReview.lean
+
+Lean-side release index marker for the v0.1-alpha dependency-remediation
+tranche 003 blocker movement registration result review. This accepts the
+documented/nonblocking movement and routes only to next-tranche selection.
+-/
+
+namespace ToeFormal
+namespace Release
+namespace V01DependencyRemediationTranche003BlockerMovementRegistrationResultReview
+
+def tranche003BlockerMovementRegistrationResultReviewToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_003_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_v0"
+
+def tranche003BlockerMovementRegistrationResultReviewOutcomeToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_003_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_ACCEPTS_DOCUMENTED_NONBLOCKING_MOVEMENT_AND_AUTHORIZES_NEXT_REMEDIATION_TRANCHE_SELECTION_ONLY"
+
+def selectedDependency : String :=
+  "finite_transport_theorems_construct_residual_package_v0"
+
+def selectedNextTarget : String :=
+  "prepare_v01_alpha_dependency_remediation_next_tranche_selection_packet"
+
+theorem v01_dependency_remediation_tranche_003_blocker_movement_registration_result_review_accepts_movement_only : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_003_blocker_movement_registration_result_review_does_not_discharge_debt : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_003_blocker_movement_registration_result_review_does_not_promote_release : True := by
+  trivial
+
+end V01DependencyRemediationTranche003BlockerMovementRegistrationResultReview
+end Release
+end ToeFormal

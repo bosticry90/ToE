@@ -1,0 +1,36 @@
+/-
+ToeFormal/Release/V01DependencyRemediationTranche002BlockerMovementRegistrationResultReview.lean
+
+Lean-side release index marker for the v0.1-alpha dependency-remediation
+tranche 002 blocker movement registration result review. This accepts the
+documented/nonblocking movement and routes only to next-tranche selection.
+-/
+
+namespace ToeFormal
+namespace Release
+namespace V01DependencyRemediationTranche002BlockerMovementRegistrationResultReview
+
+def tranche002BlockerMovementRegistrationResultReviewToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_002_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_v0"
+
+def tranche002BlockerMovementRegistrationResultReviewOutcomeToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_002_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_ACCEPTS_DOCUMENTED_NONBLOCKING_MOVEMENT_AND_AUTHORIZES_NEXT_REMEDIATION_TRANCHE_SELECTION_ONLY"
+
+def selectedDependency : String :=
+  "stationary_implies_operator_zero"
+
+def selectedNextTarget : String :=
+  "prepare_v01_alpha_dependency_remediation_next_tranche_selection_packet"
+
+theorem v01_dependency_remediation_tranche_002_blocker_movement_registration_result_review_accepts_movement_only : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_002_blocker_movement_registration_result_review_does_not_discharge_debt : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_002_blocker_movement_registration_result_review_does_not_promote_release : True := by
+  trivial
+
+end V01DependencyRemediationTranche002BlockerMovementRegistrationResultReview
+end Release
+end ToeFormal

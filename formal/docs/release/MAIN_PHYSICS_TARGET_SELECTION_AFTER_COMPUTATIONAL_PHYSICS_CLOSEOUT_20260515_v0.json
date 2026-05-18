@@ -1,0 +1,103 @@
+{
+  "acceptance_criteria": {
+    "closeout_result_review_accepted": true,
+    "closeout_review_returns_to_main_selection": true,
+    "computational_physics_execution_surface_closed": true,
+    "computational_physics_stack_closed": true,
+    "consumes_closeout_result_review": true,
+    "exactly_one_main_target_selected": true,
+    "forbidden_effects_all_false": true,
+    "loop_registry_active_lane_matches": true,
+    "loop_registry_live_selector_matches": true,
+    "selected_target_not_release_assembly": true,
+    "selected_target_outside_computational_physics_stack": true,
+    "v01_review_recommends_gap_review": true,
+    "v01_review_selector_choice_unexecuted": true,
+    "workstream_recommends_gap_review": true
+  },
+  "accepted": true,
+  "candidate_target_count": 3,
+  "candidate_targets": [
+    {
+      "decision": "selected",
+      "reason": "The release-standard gates are now manifest-enrolled, so the next bounded packet should audit remaining release-packet gaps before any assembly decision.",
+      "source_recommendation": "recommended",
+      "target": "prepare_v01_alpha_release_packet_gap_review"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Public release assembly is not authorized before a gap review checks ledgers, Lean index rows, public summaries, expert review readiness, and remaining draft or deferred rows.",
+      "source_recommendation": "deferred",
+      "target": "assemble_v01_alpha_public_release_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "The post-enrollment release-standard track still has a bounded gap-review step before returning control.",
+      "source_recommendation": "deferred",
+      "target": "return_to_full_pillar_target_map_next_lane_selection"
+    }
+  ],
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "computational_physics_stack_status": "CLOSED_BOUNDED_NONCLAIM",
+  "consumes_result_review": "COMPUTATIONAL_PHYSICS_INTEGRATION_CLOSEOUT_RESULT_REVIEW_v0",
+  "consumes_result_review_pointer": "formal/docs/release/COMPUTATIONAL_PHYSICS_INTEGRATION_CLOSEOUT_RESULT_REVIEW_20260515_v0.json",
+  "current_repo_live_target_readout": {
+    "loop_registry_active_lane": "v01_alpha_governance_manifest_enrollment_result_review",
+    "loop_registry_live_next_target": "select_next_post_v01_alpha_manifest_enrollment_bounded_attack",
+    "selector_choice_executed": false,
+    "selector_review_recommended_choice": "prepare_v01_alpha_release_packet_gap_review",
+    "selector_review_selected_next_target": "select_next_post_v01_alpha_manifest_enrollment_bounded_attack",
+    "workstream_recommended_selector_choice": "prepare_v01_alpha_release_packet_gap_review",
+    "workstream_selected_next_target": "select_next_post_v01_alpha_manifest_enrollment_bounded_attack",
+    "workstream_selector_choice_executed": "no"
+  },
+  "forbidden_effect_status": {
+    "blocker_movement_authorized": false,
+    "claim_promotion_authorized": false,
+    "computational_physics_execution_surface_opened": false,
+    "empirical_validation_authorized": false,
+    "falsifier_execution_authorized": false,
+    "lane_reopen_authorized": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "prediction_execution_authorized": false,
+    "public_release_completion_authorized": false,
+    "referent_comparison_execution_authorized": false,
+    "release_packet_assembly_authorized": false,
+    "robustness_scan_execution_authorized": false,
+    "seam_closure_authorized": false,
+    "theorem_discharge_authorized": false,
+    "theory_validation_authorized": false
+  },
+  "gap_review_required_checks": [
+    "pillar/seam coverage ledger completeness",
+    "claim/evidence ledger completeness",
+    "equation ledger completeness",
+    "blocker ledger completeness",
+    "Lean release index audit rows",
+    "public summary readiness",
+    "expert review packet readiness",
+    "remaining unmigrated release-facing labels",
+    "remaining draft/deferred rows"
+  ],
+  "next_action": "prepare_v01_alpha_release_packet_gap_review",
+  "next_action_scope": "MAIN_PROJECT_TARGET_PREPARATION_ONLY_NO_COMPUTATIONAL_PHYSICS_EXECUTION",
+  "non_claim_boundary": "Main physics target selection after computational-physics closeout is a routing packet only. It consumes the closed nonclaim computational-physics stack, opens no computational-physics execution surface, and selects one main governance target for later preparation. It does not authorize theory validation, empirical validation, referent comparison execution, robustness scan execution, prediction execution, falsifier execution, theorem discharge, blocker movement, lane reopen, seam closure, Phase 2 authorization, release packet assembly, public release completion, master-action promotion, claim promotion, or external-truth claim.",
+  "outcome_id": "MAIN_PHYSICS_TARGET_SELECTION_RESUMED_AFTER_COMPUTATIONAL_PHYSICS_NONCLAIM_STACK_CLOSEOUT",
+  "roadmap_update_required": true,
+  "schema_id": "MAIN_PHYSICS_TARGET_SELECTION_AFTER_COMPUTATIONAL_PHYSICS_CLOSEOUT_20260515_v0",
+  "selected_target": "prepare_v01_alpha_release_packet_gap_review",
+  "selected_target_execution_status": "not_executed_by_this_packet",
+  "selected_target_kind": "main_release_gap_review_preparation_only",
+  "selected_target_outside_computational_physics_stack": true,
+  "selected_target_source": "formal/docs/release/V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_20260513_v0.json",
+  "selection_count": 1,
+  "selection_executes_target": false,
+  "selection_id": "MAIN_PHYSICS_TARGET_SELECTION_AFTER_COMPUTATIONAL_PHYSICS_CLOSEOUT_v0",
+  "selection_status": "selected_one_main_target_nonclaim",
+  "source_loop_registry": "LOOP_CONTROL_REGISTRY_v0",
+  "source_loop_registry_pointer": "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+  "source_selector_review": "V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_v0",
+  "source_selector_review_pointer": "formal/docs/release/V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_20260513_v0.json",
+  "status": "ACTIVE_NONLIVE_NONCLAIM"
+}

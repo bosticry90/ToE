@@ -1,0 +1,49 @@
+/-
+ToeFormal/Release/V01DependencyRemediationNextTrancheSelectionPacketAfterTranche004RetainedBlockerDeclarationResultReview.lean
+
+Lean-side release index marker for the v0.1-alpha dependency-remediation
+next-tranche selection packet result review after tranche 004 was carried as a
+retained source-map release blocker. This accepts tranche 005 selection and
+authorizes only execution-packet preparation.
+-/
+
+namespace ToeFormal
+namespace Release
+namespace V01DependencyRemediationNextTrancheSelectionPacketAfterTranche004RetainedBlockerDeclarationResultReview
+
+def nextTrancheSelectionPacketAfterTranche004RetainedBlockerDeclarationResultReviewToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_NEXT_TRANCHE_SELECTION_PACKET_AFTER_TRANCHE_004_RETAINED_BLOCKER_DECLARATION_RESULT_REVIEW_v0"
+
+def nextTrancheSelectionPacketAfterTranche004RetainedBlockerDeclarationResultReviewOutcomeToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_NEXT_TRANCHE_SELECTION_AFTER_TRANCHE_004_RETAINED_BLOCKER_RESULT_REVIEW_ACCEPTS_TRANCHE_005_SELECTION_AND_AUTHORIZES_TRANCHE_005_EXECUTION_PACKET_PREPARATION_ONLY"
+
+def retainedTranche004Status : String :=
+  "retained_release_blocking_source_map_blocker"
+
+def selectedNextTranche : String :=
+  "V01-ALPHA-DEP-REM-TRANCHE-005"
+
+def selectedDependency : String :=
+  "supplied_interface_alignment_semantics_construct_bridge_package_v0"
+
+def selectedNextTarget : String :=
+  "prepare_v01_alpha_dependency_remediation_tranche_005_execution_packet"
+
+theorem v01_dependency_remediation_next_tranche_selection_packet_after_tranche_004_retained_blocker_result_review_accepts_tranche_005_selection : True := by
+  trivial
+
+theorem v01_dependency_remediation_next_tranche_selection_packet_after_tranche_004_retained_blocker_result_review_carries_tranche_004 : True := by
+  trivial
+
+theorem v01_dependency_remediation_next_tranche_selection_packet_after_tranche_004_retained_blocker_result_review_authorizes_tranche_005_execution_packet_preparation_only : True := by
+  trivial
+
+theorem v01_dependency_remediation_next_tranche_selection_packet_after_tranche_004_retained_blocker_result_review_does_not_execute_remediation : True := by
+  trivial
+
+theorem v01_dependency_remediation_next_tranche_selection_packet_after_tranche_004_retained_blocker_result_review_does_not_promote_release : True := by
+  trivial
+
+end V01DependencyRemediationNextTrancheSelectionPacketAfterTranche004RetainedBlockerDeclarationResultReview
+end Release
+end ToeFormal

@@ -1,0 +1,209 @@
+{
+  "acceptance_criteria": {
+    "all_six_blockers_remain_tracked": true,
+    "consumes_expected_result_review": true,
+    "exactly_one_bounded_tranche_prepared": true,
+    "exactly_one_next_target_selected": true,
+    "forbidden_effects_all_false": true,
+    "no_axiom_spec_backed_debt_reduction": true,
+    "no_lean_theorem_debt_discharge": true,
+    "no_phase2_seam_empirical_or_master_action_authorization": true,
+    "no_release_packet_assembly": true,
+    "no_remediation_execution": true,
+    "no_retained_assumption_discharge": true,
+    "no_v01_readiness_marking": true,
+    "post_execution_adjudication_target_defined": true,
+    "result_review_accepted": true,
+    "result_review_authorized_execution_packet_preparation_only": true,
+    "result_review_outcome_expected": true,
+    "result_review_selected_this_packet": true,
+    "selected_finding_has_execution_inputs": true,
+    "success_and_failure_criteria_defined": true
+  },
+  "accepted": true,
+  "axiom_spec_backed_debt_reduced": false,
+  "axiom_spec_backed_debt_reduced_by_documentation": false,
+  "bounded_remediation_tranche_count": 1,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The prepared execution packet must be reviewed before any remediation tranche can execute.",
+      "target": "review_v01_alpha_dependency_remediation_execution_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Execution remains blocked until the execution packet result review authorizes it.",
+      "target": "execute_v01_alpha_dependency_remediation_tranche"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Readiness adjudication remains blocked until remediation execution evidence is produced and reviewed.",
+      "target": "prepare_v01_alpha_release_readiness_adjudication_packet"
+    }
+  ],
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_result_review_schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_PACKET_RESULT_REVIEW_20260515_v0",
+  "consumes_result_review": "V01_ALPHA_DEPENDENCY_REMEDIATION_PACKET_RESULT_REVIEW_v0",
+  "consumes_result_review_pointer": "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_PACKET_RESULT_REVIEW_20260515_v0.json",
+  "execution_packet_count": 1,
+  "forbidden_effect_status": {
+    "axiom_spec_backed_debt_reduced": false,
+    "axiom_spec_backed_debt_reduced_by_documentation": false,
+    "blocker_movement_authorized": false,
+    "claim_promotion_authorized": false,
+    "computational_physics_execution_surface_opened": false,
+    "dependency_remediation_executed": false,
+    "empirical_validation_authorized": false,
+    "lane_reopen_authorized": false,
+    "lean_theorem_debt_discharged": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "proof_debt_reduced": false,
+    "release_packet_assembled": false,
+    "retained_assumptions_discharged": false,
+    "seam_closure_authorized": false,
+    "theorem_discharge_authorized": false,
+    "v01_alpha_marked_ready": false
+  },
+  "forbidden_promotions": [
+    "remediation execution by this packet",
+    "release packet assembly",
+    "v0.1-alpha readiness marking",
+    "Lean theorem debt discharge",
+    "axiom/spec-backed proof-debt reduction",
+    "retained-assumption discharge",
+    "Phase 2 authorization",
+    "seam closure",
+    "empirical validation",
+    "master-action promotion",
+    "claim promotion"
+  ],
+  "lean_theorem_debt_discharged": false,
+  "next_action_scope": "REVIEW_DEPENDENCY_REMEDIATION_EXECUTION_PACKET_RESULT_ONLY_NO_REMEDIATION_EXECUTION",
+  "non_claim_boundary": "The v0.1-alpha dependency remediation execution packet prepares one bounded remediation execution tranche only. It does not execute remediation, assemble the release packet, mark v0.1-alpha readiness, discharge Lean theorem debt, reduce axiom/spec-backed proof debt, discharge retained assumptions, authorize Phase 2, close seams, validate empirically, promote the master action, promote claims, or make an external-truth claim.",
+  "outcome_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_EXECUTION_PACKET_PREPARED_FOR_ONE_BOUNDED_REMEDIATION_TRANCHE_WITH_NO_REMEDIATION_EXECUTION_OR_RELEASE_PROMOTION",
+  "packet_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_EXECUTION_PACKET_v0",
+  "packet_scope": "PREPARE_ONE_BOUNDED_DEPENDENCY_REMEDIATION_EXECUTION_PACKET_ONLY_NO_REMEDIATION_EXECUTION_OR_RELEASE_PROMOTION",
+  "post_execution_adjudication_target": "review_v01_alpha_dependency_remediation_execution_result",
+  "post_packet_result_review_target": "execute_v01_alpha_dependency_remediation_tranche",
+  "prepared_execution_tranche": {
+    "documentation_sufficient_for_remediation": false,
+    "documentation_work_required": true,
+    "execution_scope": "PREPARE_EXECUTION_FOR_ONE_RELEASE_BLOCKING_LEAN_DEPENDENCY_REMEDIATION_ONLY",
+    "execution_tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-001",
+    "expert_re_review_trigger": "After bounded remediation execution evidence is produced, run expert re-review before any blocker movement, debt-discharge claim, release-readiness adjudication, or release assembly.",
+    "failure_criteria": [
+      "Exact Lean dependency evidence for the selected theorem is missing.",
+      "A required evidence surface cannot be read, classified, or tied to the selected finding.",
+      "The remediation attempt relies on documentation alone for a Lean/proof-debt blocker.",
+      "The execution output attempts to discharge theorem/proof debt or retained assumptions without a separate formal proof/adjudication layer.",
+      "The execution output attempts release assembly, readiness marking, Phase 2 authorization, seam closure, empirical validation, or master-action promotion."
+    ],
+    "lean_work_required": true,
+    "post_execution_adjudication_target": "review_v01_alpha_dependency_remediation_execution_result",
+    "required_evidence_surfaces": [
+      "#print axioms ToeFormal.QFT.FreeScalarDerivation.master_action_stationary_implies_free_scalar_kg",
+      "formal/toe_formal/ToeFormal/QFT/FreeScalarDerivation.lean",
+      "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md"
+    ],
+    "selected_dependencies": [
+      "master_action_stationary_implies_free_scalar_kg"
+    ],
+    "selected_remediation_finding_ids": [
+      "V01-ALPHA-DEP-REM-001"
+    ],
+    "success_criteria": [
+      "Exact Lean dependency evidence is captured for the selected theorem.",
+      "Project axiom/spec-backed dependency posture is classified against the ledger surface.",
+      "Proof-debt impact is recorded for later result review without claiming discharge by this packet.",
+      "The execution result packet remains scoped to the selected remediation finding only.",
+      "No release, readiness, theorem-debt, proof-debt, retained-assumption, seam, empirical, or master-action promotion is claimed."
+    ]
+  },
+  "proof_debt_reduced": false,
+  "release_packet_assembled": false,
+  "remediation_executed": false,
+  "remediation_execution_authorized": false,
+  "retained_assumptions_discharged": false,
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_EXECUTION_PACKET_20260515_v0",
+  "selected_next_target": "review_v01_alpha_dependency_remediation_execution_packet_result",
+  "selected_next_target_kind": "result_review_only",
+  "selected_remediation_finding_count": 1,
+  "selected_remediation_findings": [
+    {
+      "blocking_reason": "Accepted expert-review evidence says this dependency remains release-blocking until exact dependency posture and proof-debt remediation are separately adjudicated.",
+      "dependency": "master_action_stationary_implies_free_scalar_kg",
+      "dependency_class": "lean_theorem_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-001",
+      "documentation_sufficient": false,
+      "expert_re_review_required": true,
+      "lean_work_required": true,
+      "next_bounded_action": "prepare_remediation_tranche_for_master_action_stationary_implies_free_scalar_kg",
+      "remediation_execution_status": "not_executed_v0",
+      "required_evidence_surface": [
+        "#print axioms ToeFormal.QFT.FreeScalarDerivation.master_action_stationary_implies_free_scalar_kg",
+        "formal/toe_formal/ToeFormal/QFT/FreeScalarDerivation.lean",
+        "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md"
+      ],
+      "required_remediation_type": "exact_lean_dependency_and_proof_debt_adjudication"
+    }
+  ],
+  "selection_count": 1,
+  "source_dependency_remediation_packet": "V01_ALPHA_DEPENDENCY_REMEDIATION_PACKET_v0",
+  "source_expert_review_execution": "V01_ALPHA_EXPERT_REVIEW_EXECUTION_v0",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "tracked_release_blocking_finding_count": 6,
+  "tracked_release_blocking_findings": [
+    {
+      "dependency": "master_action_stationary_implies_free_scalar_kg",
+      "dependency_class": "lean_theorem_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-001",
+      "next_bounded_action": "prepare_remediation_tranche_for_master_action_stationary_implies_free_scalar_kg",
+      "remediation_execution_status": "not_executed_v0",
+      "selection_status": "selected_for_tranche_001"
+    },
+    {
+      "dependency": "stationary_implies_operator_zero",
+      "dependency_class": "lean_theorem_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-002",
+      "next_bounded_action": "prepare_remediation_tranche_for_stationary_implies_operator_zero",
+      "remediation_execution_status": "not_executed_v0",
+      "selection_status": "tracked_not_selected_for_tranche_001"
+    },
+    {
+      "dependency": "finite_transport_theorems_construct_residual_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-003",
+      "next_bounded_action": "prepare_remediation_tranche_for_finite_transport_theorems_construct_residual_package_v0",
+      "remediation_execution_status": "not_executed_v0",
+      "selection_status": "tracked_not_selected_for_tranche_001"
+    },
+    {
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "dependency_class": "blocked_bridge_authorization_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+      "next_bounded_action": "prepare_remediation_tranche_for_qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "remediation_execution_status": "not_executed_v0",
+      "selection_status": "tracked_not_selected_for_tranche_001"
+    },
+    {
+      "dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-005",
+      "next_bounded_action": "prepare_remediation_tranche_for_supplied_interface_alignment_semantics_construct_bridge_package_v0",
+      "remediation_execution_status": "not_executed_v0",
+      "selection_status": "tracked_not_selected_for_tranche_001"
+    },
+    {
+      "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-006",
+      "next_bounded_action": "prepare_remediation_tranche_for_supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "remediation_execution_status": "not_executed_v0",
+      "selection_status": "tracked_not_selected_for_tranche_001"
+    }
+  ],
+  "v01_alpha_marked_ready": false,
+  "validation_claim_authorized": false
+}

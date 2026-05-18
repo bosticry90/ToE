@@ -1,0 +1,285 @@
+{
+  "acceptance_criteria": {
+    "all_required_gap_checks_reviewed": true,
+    "computational_physics_stack_closed": true,
+    "consumes_main_selection": true,
+    "coverage_row_count_thirteen": true,
+    "exactly_one_next_target_selected": true,
+    "forbidden_effects_all_false": true,
+    "lean_dependency_audit_has_pending_rows": true,
+    "main_selection_accepted": true,
+    "main_selection_selected_gap_review": true,
+    "release_packet_assembly_not_authorized": true,
+    "release_scope_full_pillar_full_seam": true,
+    "v01_alpha_completion_not_authorized": true
+  },
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The seeded Lean dependency audit is the sharpest current release-packet blocker because every audit row still has pending captured output and pending project-axiom classification.",
+      "target": "prepare_v01_alpha_lean_dependency_audit_capture_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Expert review packet preparation should follow dependency-audit capture so reviewer-facing theorem dependency posture is not underspecified.",
+      "target": "prepare_v01_alpha_expert_review_packet_readiness_audit"
+    },
+    {
+      "decision": "blocked",
+      "reason": "Release packet assembly remains blocked until the gap review's dependency-audit and review-readiness debts are reduced.",
+      "target": "assemble_v01_alpha_public_release_packet"
+    }
+  ],
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "classification": "P-POLICY/nonclaim",
+  "computational_physics_stack_status": "CLOSED_BOUNDED_NONCLAIM",
+  "consumed_target": "prepare_v01_alpha_release_packet_gap_review",
+  "consumes_selection": "MAIN_PHYSICS_TARGET_SELECTION_AFTER_COMPUTATIONAL_PHYSICS_CLOSEOUT_v0",
+  "consumes_selection_pointer": "formal/docs/release/MAIN_PHYSICS_TARGET_SELECTION_AFTER_COMPUTATIONAL_PHYSICS_CLOSEOUT_20260515_v0.json",
+  "forbidden_effect_status": {
+    "canonical_toe_claim_authorized": false,
+    "claim_promotion_authorized": false,
+    "computational_physics_execution_surface_opened": false,
+    "empirical_adequacy_claim_authorized": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "pillar_completion_authorized": false,
+    "qft_gr_source_map_closure_authorized": false,
+    "release_packet_assembly_authorized": false,
+    "seam_closure_authorized": false,
+    "theorem_discharge_authorized": false,
+    "v01_alpha_completion_authorized": false
+  },
+  "gap_review_scope": "REVIEW_RELEASE_PACKET_GAPS_ONLY_NO_RELEASE_PACKET_ASSEMBLY",
+  "gap_rows": [
+    {
+      "blocks_release_packet_assembly": true,
+      "check_id": "pillar_seam_coverage_ledger_completeness",
+      "evidence": [
+        "formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json"
+      ],
+      "gap": "coverage rows are present, but dependency audits remain pending across release-facing rows",
+      "observed": {
+        "all_required_domains_present": true,
+        "closure_authorized_count": 0,
+        "required_domain_count": 13,
+        "row_count": 13
+      },
+      "source_check": "pillar/seam coverage ledger completeness",
+      "status": "seeded_structurally_complete"
+    },
+    {
+      "blocks_release_packet_assembly": true,
+      "check_id": "claim_evidence_ledger_completeness",
+      "evidence": [
+        "formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json"
+      ],
+      "gap": "claim evidence is seeded, but dependency-audit status is not sufficiently captured for release packet assembly",
+      "observed": {
+        "closure_authorized_count": 0,
+        "dependency_audit_status_counts": {
+          "not_applicable": 1,
+          "pending": 17
+        },
+        "row_count": 5
+      },
+      "source_check": "claim/evidence ledger completeness",
+      "status": "seeded_with_current_release_labels"
+    },
+    {
+      "blocks_release_packet_assembly": true,
+      "check_id": "equation_ledger_completeness",
+      "evidence": [
+        "formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json"
+      ],
+      "gap": "equation rows are present, but public derivation readiness depends on the pending Lean dependency audit",
+      "observed": {
+        "closure_authorized_count": 0,
+        "row_count": 3
+      },
+      "source_check": "equation ledger completeness",
+      "status": "seeded_minimal_equation_surface"
+    },
+    {
+      "blocks_release_packet_assembly": true,
+      "check_id": "blocker_ledger_completeness",
+      "evidence": [
+        "formal/docs/release/TOE_V01_ALPHA_BLOCKER_LEDGER_v0.json"
+      ],
+      "gap": "blockers remain explicit; release packet may summarize them, but cannot claim completion while they remain active",
+      "observed": {
+        "blocker_ids": [
+          "V01-B001",
+          "V01-B002",
+          "V01-B003",
+          "V01-B004"
+        ],
+        "row_count": 4
+      },
+      "source_check": "blocker ledger completeness",
+      "status": "seeded_active_blockers_visible"
+    },
+    {
+      "blocks_release_packet_assembly": true,
+      "check_id": "lean_release_index_audit_rows",
+      "evidence": [
+        "formal/toe_formal/ToeFormal/Release/V01Index.lean",
+        "formal/docs/release/TOE_V01_ALPHA_LEAN_DEPENDENCY_AUDIT_v0.md"
+      ],
+      "gap": "Lean audit rows still need captured dependency output and project-axiom/supplied-structure classification",
+      "observed": {
+        "lean_dependency_audit_pending_row_count": 6,
+        "lean_dependency_audit_row_count": 6,
+        "lean_index_check_count": 8
+      },
+      "source_check": "Lean release index audit rows",
+      "status": "index_present_audit_rows_pending"
+    },
+    {
+      "blocks_release_packet_assembly": true,
+      "check_id": "public_summary_readiness",
+      "evidence": [
+        "README.md",
+        "State_of_the_Theory.md",
+        "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+        "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+        "formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
+      ],
+      "gap": "public summaries state the bounded release-track posture, but no final release-packet summary has been assembled",
+      "observed": {
+        "manifest_enrolled_signal_count": 3,
+        "not_complete_signal_count": 9
+      },
+      "source_check": "public summary readiness",
+      "status": "partial_manifest_enrolled_not_complete_language_present"
+    },
+    {
+      "blocks_release_packet_assembly": true,
+      "check_id": "expert_review_packet_readiness",
+      "evidence": [],
+      "gap": "external/expert review packet is not prepared",
+      "observed": {
+        "expert_review_packet_present": false
+      },
+      "source_check": "expert review packet readiness",
+      "status": "not_prepared_v0"
+    },
+    {
+      "blocks_release_packet_assembly": true,
+      "check_id": "remaining_unmigrated_release_facing_labels",
+      "evidence": [
+        "README.md",
+        "State_of_the_Theory.md",
+        "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+        "formal/docs/paper/PHYSICS_ROADMAP_v0.md",
+        "formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
+      ],
+      "gap": "legacy labels appear on broad public/historical surfaces and need scoped release-facing exception review before packet assembly",
+      "observed": {
+        "legacy_label_signal_counts_on_public_surfaces": {
+          "DISCHARGED_v0": 73,
+          "LOCKED": 165,
+          "T-CONDITIONAL": 0,
+          "T-PROVED": 13
+        },
+        "release_standard_legacy_labels_declared": [
+          "T-PROVED",
+          "T-CONDITIONAL",
+          "DISCHARGED_v0",
+          "LOCKED"
+        ]
+      },
+      "source_check": "remaining unmigrated release-facing labels",
+      "status": "requires_scoped_exception_audit_v0"
+    },
+    {
+      "blocks_release_packet_assembly": true,
+      "check_id": "remaining_draft_deferred_rows",
+      "evidence": [
+        "formal/docs/release/V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_20260513_v0.json"
+      ],
+      "gap": "release assembly remains deferred until the dependency-audit and review-packet gaps are reduced",
+      "observed": {
+        "release_packet_assembly_deferred": true,
+        "selection_candidate_targets": [
+          {
+            "decision": "selected",
+            "reason": "The release-standard gates are now manifest-enrolled, so the next bounded packet should audit remaining release-packet gaps before any assembly decision.",
+            "source_recommendation": "recommended",
+            "target": "prepare_v01_alpha_release_packet_gap_review"
+          },
+          {
+            "decision": "deferred",
+            "reason": "Public release assembly is not authorized before a gap review checks ledgers, Lean index rows, public summaries, expert review readiness, and remaining draft or deferred rows.",
+            "source_recommendation": "deferred",
+            "target": "assemble_v01_alpha_public_release_packet"
+          },
+          {
+            "decision": "deferred",
+            "reason": "The post-enrollment release-standard track still has a bounded gap-review step before returning control.",
+            "source_recommendation": "deferred",
+            "target": "return_to_full_pillar_target_map_next_lane_selection"
+          }
+        ]
+      },
+      "source_check": "remaining draft/deferred rows",
+      "status": "deferred_release_assembly_and_review_packet_gaps_remain"
+    }
+  ],
+  "non_claim_boundary": "The v0.1-alpha release packet gap review audits release-packet readiness gaps only. It does not assemble the release packet, mark v0.1-alpha complete, promote the master action, close pillars or seams, authorize Phase 2, claim empirical adequacy, discharge theorems, open computational-physics execution, or promote any claim.",
+  "nonclaim_ids": [
+    "NC-NO-MASTER-ACTION-PROMOTION",
+    "NC-NO-PILLAR-COMPLETION",
+    "NC-NO-SEAM-CLOSURE",
+    "NC-NO-PHASE2",
+    "NC-NO-EMPIRICAL-ADEQUACY",
+    "NC-NO-CANONICAL-TOE",
+    "NC-NO-QFT-GR-SOURCE-MAP-CLOSURE"
+  ],
+  "not_authorized_claims": [
+    "v0.1-alpha public release completion",
+    "release packet assembly",
+    "master-action promotion",
+    "pillar completion",
+    "seam closure",
+    "Phase 2 readiness",
+    "empirical adequacy",
+    "canonical ToE status",
+    "QFT-GR source-map closure",
+    "computational-physics execution"
+  ],
+  "outcome_id": "V01_ALPHA_RELEASE_PACKET_GAP_REVIEW_PREPARED_AFTER_COMPUTATIONAL_PHYSICS_STACK_CLOSEOUT_WITH_NO_RELEASE_PROMOTION",
+  "prepared": true,
+  "release_packet_assembled": false,
+  "release_packet_assembly_authorized": false,
+  "release_scope_confirmed": "FULL_PILLAR_FULL_SEAM_RELEASE_STANDARD",
+  "review_id": "V01_ALPHA_RELEASE_PACKET_GAP_REVIEW_v0",
+  "review_summary": {
+    "blocker_row_count": 4,
+    "claim_evidence_row_count": 5,
+    "coverage_row_count": 13,
+    "equation_row_count": 3,
+    "gap_row_count": 9,
+    "lean_dependency_audit_pending_row_count": 6,
+    "lean_dependency_audit_row_count": 6,
+    "lean_release_index_check_count": 8,
+    "primary_gap": "LEAN_DEPENDENCY_AUDIT_CAPTURE_AND_EXPERT_REVIEW_PACKET_NOT_READY",
+    "release_packet_review_ready": false
+  },
+  "reviewed_release_artifacts": {
+    "blocker_ledger": "formal/docs/release/TOE_V01_ALPHA_BLOCKER_LEDGER_v0.json",
+    "claim_evidence_ledger": "formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json",
+    "equation_ledger": "formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json",
+    "lean_dependency_audit": "formal/docs/release/TOE_V01_ALPHA_LEAN_DEPENDENCY_AUDIT_v0.md",
+    "lean_release_index": "formal/toe_formal/ToeFormal/Release/V01Index.lean",
+    "pillar_seam_coverage_ledger": "formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json",
+    "release_standard": "formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_20260513_v0.json"
+  },
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_RELEASE_PACKET_GAP_REVIEW_20260515_v0",
+  "selected_next_target": "prepare_v01_alpha_lean_dependency_audit_capture_packet",
+  "selected_next_target_kind": "lean_dependency_audit_capture_preparation_only",
+  "selection_count": 1,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "v01_alpha_public_release_completion_authorized": false
+}

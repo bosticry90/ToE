@@ -284,10 +284,12 @@ def test_qm_stat_entropy_assumption_reduction_candidate_selection_registry_rotat
         assert state["live_next_target"] in {
             "prepare_qm_stat_entropy_assumption_reduction_candidate_selection",
             "select_next_post_v01_alpha_manifest_enrollment_bounded_attack",
+            "review_v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet_result",
         }
         assert state["active_lane"] in {
             "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection",
             "v01_alpha_governance_manifest_enrollment_result_review",
+            "v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet",
         }
     assert PREVIOUS_LANE in state["paused_lanes"]
     assert ACTIVE_LANE in state["paused_lanes"]

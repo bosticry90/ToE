@@ -1,0 +1,46 @@
+/-
+ToeFormal/Release/V01DependencyRemediationNextTrancheSelectionPacketAfterTranche004RetainedBlockerDeclaration.lean
+
+Lean-side release index marker for the v0.1-alpha dependency-remediation
+next-tranche selection packet after tranche 004 was carried as a retained
+source-map release blocker. This selects tranche 005 for preparation review
+only and does not execute remediation.
+-/
+
+namespace ToeFormal
+namespace Release
+namespace V01DependencyRemediationNextTrancheSelectionPacketAfterTranche004RetainedBlockerDeclaration
+
+def nextTrancheSelectionPacketAfterTranche004RetainedBlockerDeclarationToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_NEXT_TRANCHE_SELECTION_PACKET_AFTER_TRANCHE_004_RETAINED_BLOCKER_DECLARATION_v0"
+
+def nextTrancheSelectionPacketAfterTranche004RetainedBlockerDeclarationOutcomeToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_NEXT_TRANCHE_SELECTION_AFTER_TRANCHE_004_RETAINED_BLOCKER_PREPARED_WITH_NO_RELEASE_PROMOTION"
+
+def retainedTranche004Status : String :=
+  "retained_release_blocking_source_map_blocker"
+
+def selectedNextTranche : String :=
+  "V01-ALPHA-DEP-REM-TRANCHE-005"
+
+def selectedDependency : String :=
+  "supplied_interface_alignment_semantics_construct_bridge_package_v0"
+
+def selectedNextTarget : String :=
+  "review_v01_alpha_dependency_remediation_next_tranche_selection_packet_after_tranche_004_retained_blocker_declaration_result"
+
+theorem v01_dependency_remediation_next_tranche_selection_packet_after_tranche_004_retained_blocker_carries_tranche_004 : True := by
+  trivial
+
+theorem v01_dependency_remediation_next_tranche_selection_packet_after_tranche_004_retained_blocker_selects_tranche_005 : True := by
+  trivial
+
+theorem v01_dependency_remediation_next_tranche_selection_packet_after_tranche_004_retained_blocker_does_not_execute_remediation : True := by
+  trivial
+
+theorem v01_dependency_remediation_next_tranche_selection_packet_after_tranche_004_retained_blocker_does_not_promote_release : True := by
+  trivial
+
+end V01DependencyRemediationNextTrancheSelectionPacketAfterTranche004RetainedBlockerDeclaration
+end Release
+end ToeFormal

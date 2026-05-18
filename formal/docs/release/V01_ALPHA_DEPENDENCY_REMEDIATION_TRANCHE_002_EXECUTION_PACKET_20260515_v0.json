@@ -1,0 +1,260 @@
+{
+  "acceptance_criteria": {
+    "all_five_release_blockers_carried_forward": true,
+    "consumes_expected_selection_result_review": true,
+    "documentation_requirement_defined": true,
+    "exactly_one_next_target_selected": true,
+    "execution_scope_defined": true,
+    "expert_re_review_requirement_defined": true,
+    "forbidden_effects_all_false": true,
+    "lean_audit_target_defined": true,
+    "no_phase2_seam_empirical_or_master_action_authorization": true,
+    "no_release_packet_assembly": true,
+    "no_retained_assumption_discharge": true,
+    "no_theorem_or_proof_debt_discharge": true,
+    "no_v01_readiness_marking": true,
+    "packet_prepares_without_execution": true,
+    "selected_dependency_class_expected": true,
+    "selected_dependency_expected": true,
+    "selected_finding_expected": true,
+    "selection_result_review_accepted": true,
+    "selection_result_review_outcome_expected": true,
+    "selection_result_review_selected_this_packet": true,
+    "success_and_failure_criteria_defined": true,
+    "tranche_001_documented_nonblocking_preserved": true,
+    "tranche_002_selected_only": true
+  },
+  "accepted": true,
+  "axiom_spec_backed_debt_reduced": false,
+  "axiom_spec_backed_debt_reduced_by_documentation": false,
+  "blocker_fully_remediated": false,
+  "blocker_movement_registered": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The tranche 002 execution packet must be reviewed before remediation execution can be authorized.",
+      "target": "review_v01_alpha_dependency_remediation_tranche_002_execution_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Actual tranche 002 execution is deferred until this packet is reviewed and accepted.",
+      "target": "execute_v01_alpha_dependency_remediation_tranche_002"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Release-readiness adjudication remains blocked by the five tracked release-blocking obligations.",
+      "target": "prepare_v01_alpha_release_readiness_adjudication_packet"
+    }
+  ],
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_selection_result_review_schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_NEXT_TRANCHE_SELECTION_PACKET_RESULT_REVIEW_20260515_v0",
+  "consumes_selection_result_review": "V01_ALPHA_DEPENDENCY_REMEDIATION_NEXT_TRANCHE_SELECTION_PACKET_RESULT_REVIEW_v0",
+  "consumes_selection_result_review_pointer": "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_NEXT_TRANCHE_SELECTION_PACKET_RESULT_REVIEW_20260515_v0.json",
+  "documentation_prepared": false,
+  "documentation_requirement": {
+    "condition": "Required if the captured dependency posture is policy-acceptable but needs release-facing documentation, or if any project-local axiom posture needs explanation.",
+    "prepared_by_this_packet": false,
+    "required": "conditional_after_execution_result_review"
+  },
+  "execution_packet_prepared": true,
+  "execution_scope": {
+    "allowed_execution_actions": [
+      "run_the_pinned_lean_axiom_audit_command_for_the_selected_target",
+      "record_raw_lean_axiom_output_for_the_selected_target",
+      "parse_standard_lean_axioms_and_project_local_axioms_for_the_selected_target",
+      "carry_forward_all_nonselected_release_blockers_without_modification"
+    ],
+    "forbidden_execution_actions": [
+      "execute_any_nonselected_remediation_tranche",
+      "claim_theorem_or_proof_debt_discharge_from_audit_text",
+      "register_blocker_movement",
+      "assemble_release_packet",
+      "mark_v01_alpha_ready",
+      "authorize_phase2_or_seam_or_empirical_or_master_action_movement"
+    ],
+    "scope_kind": "LEAN_DEPENDENCY_AUDIT_CAPTURE_FOR_SELECTED_TRANCHE_ONLY",
+    "selected_dependency": "stationary_implies_operator_zero",
+    "selected_dependency_class": "lean_theorem_dependency",
+    "selected_dependency_finding_id": "V01-ALPHA-DEP-REM-002",
+    "selected_tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-002"
+  },
+  "expert_re_review_executed": false,
+  "expert_re_review_requirement": {
+    "executed_by_this_packet": false,
+    "required": "conditional_after_execution_result_review",
+    "trigger": "Triggered by project-local axioms, unexpected nonstandard axioms, target mismatch, or evidence ambiguity in the execution result."
+  },
+  "failure_criteria": [
+    "execution_targets_a_dependency_other_than_stationary_implies_operator_zero",
+    "lean_audit_output_is_missing_or_not_parseable",
+    "project_local_axioms_are_detected_without_escalation",
+    "execution_claims_release_readiness_or_theorem_debt_discharge",
+    "nonselected_release_blockers_are_modified"
+  ],
+  "forbidden_effect_status": {
+    "axiom_spec_backed_debt_reduced": false,
+    "axiom_spec_backed_debt_reduced_by_documentation": false,
+    "blocker_fully_remediated": false,
+    "blocker_movement_registered": false,
+    "claim_promotion_authorized": false,
+    "computational_physics_execution_surface_opened": false,
+    "documentation_prepared": false,
+    "empirical_validation_authorized": false,
+    "expert_re_review_executed": false,
+    "lane_reopen_authorized": false,
+    "lean_dependency_audit_executed": false,
+    "lean_dependency_evidence_captured": false,
+    "lean_theorem_debt_discharged": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "proof_debt_reduced": false,
+    "release_packet_assembled": false,
+    "remediation_executed": false,
+    "remediation_execution_authorized": false,
+    "retained_assumptions_discharged": false,
+    "seam_closure_authorized": false,
+    "theorem_discharge_authorized": false,
+    "v01_alpha_marked_ready": false
+  },
+  "global_release_readiness_still_blocked": true,
+  "lean_dependency_audit_executed": false,
+  "lean_dependency_audit_target": {
+    "audit_command": "#print axioms ToeFormal.QFT.FreeScalarDerivation.stationary_implies_operator_zero",
+    "executed_by_this_packet": false,
+    "lean_source": "formal/toe_formal/ToeFormal/QFT/FreeScalarDerivation.lean",
+    "lean_target": "ToeFormal.QFT.FreeScalarDerivation.stationary_implies_operator_zero"
+  },
+  "lean_dependency_evidence_captured": false,
+  "lean_theorem_debt_discharged": false,
+  "next_action_scope": "REVIEW_TRANCHE_002_EXECUTION_PACKET_RESULT_ONLY_NO_REMEDIATION_EXECUTION_OR_RELEASE_PROMOTION",
+  "non_claim_boundary": "The v0.1-alpha dependency remediation tranche 002 execution packet prepares only a bounded Lean dependency-audit execution scope for V01-ALPHA-DEP-REM-002 / stationary_implies_operator_zero. It does not execute remediation, run the Lean audit, capture dependency evidence, prepare documentation, execute expert re-review, register blocker movement, assemble the release packet, mark v0.1-alpha readiness, discharge Lean theorem debt, reduce axiom/spec-backed proof debt, discharge retained assumptions, authorize Phase 2, close seams, validate empirically, promote the master action, promote claims, or make an external-truth claim.",
+  "nonselected_release_blocking_obligation_count": 4,
+  "nonselected_release_blocking_obligations": [
+    {
+      "dependency": "finite_transport_theorems_construct_residual_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-003",
+      "modified_by_tranche_001": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_executed_in_tranche_001"
+    },
+    {
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "dependency_class": "blocked_bridge_authorization_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+      "modified_by_tranche_001": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_executed_in_tranche_001"
+    },
+    {
+      "dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-005",
+      "modified_by_tranche_001": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_executed_in_tranche_001"
+    },
+    {
+      "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-006",
+      "modified_by_tranche_001": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_executed_in_tranche_001"
+    }
+  ],
+  "outcome_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_002_EXECUTION_PACKET_PREPARED_FOR_STATIONARY_IMPLIES_OPERATOR_ZERO_WITH_NO_REMEDIATION_EXECUTION_OR_RELEASE_PROMOTION",
+  "packet_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_002_EXECUTION_PACKET_v0",
+  "packet_scope": "PREPARE_TRANCHE_002_EXECUTION_PACKET_ONLY_NO_REMEDIATION_EXECUTION_OR_RELEASE_PROMOTION",
+  "post_execution_adjudication_target": "review_v01_alpha_dependency_remediation_tranche_002_execution_result",
+  "post_packet_review_target": "review_v01_alpha_dependency_remediation_tranche_002_execution_packet_result",
+  "proof_debt_reduced": false,
+  "release_blocking_obligation_count": 5,
+  "release_blocking_obligations_carry_forward": [
+    {
+      "dependency": "stationary_implies_operator_zero",
+      "dependency_class": "lean_theorem_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-002",
+      "modified_by_tranche_001": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_executed_in_tranche_001"
+    },
+    {
+      "dependency": "finite_transport_theorems_construct_residual_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-003",
+      "modified_by_tranche_001": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_executed_in_tranche_001"
+    },
+    {
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "dependency_class": "blocked_bridge_authorization_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+      "modified_by_tranche_001": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_executed_in_tranche_001"
+    },
+    {
+      "dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-005",
+      "modified_by_tranche_001": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_executed_in_tranche_001"
+    },
+    {
+      "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-006",
+      "modified_by_tranche_001": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_executed_in_tranche_001"
+    }
+  ],
+  "release_packet_assembled": false,
+  "remediation_executed": false,
+  "remediation_execution_authorized": false,
+  "required_evidence_surface": {
+    "audit_command": "#print axioms ToeFormal.QFT.FreeScalarDerivation.stationary_implies_operator_zero",
+    "execution_status": "prepared_not_executed_v0",
+    "lean_source": "formal/toe_formal/ToeFormal/QFT/FreeScalarDerivation.lean",
+    "lean_target": "ToeFormal.QFT.FreeScalarDerivation.stationary_implies_operator_zero",
+    "parsed_axioms_required": true,
+    "project_axioms_used_required": true,
+    "raw_output_required": true,
+    "surface_kind": "lean_axiom_audit_readout"
+  },
+  "retained_assumptions_discharged": false,
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_002_EXECUTION_PACKET_20260515_v0",
+  "selected_dependency": "stationary_implies_operator_zero",
+  "selected_dependency_class": "lean_theorem_dependency",
+  "selected_next_target": "review_v01_alpha_dependency_remediation_tranche_002_execution_packet_result",
+  "selected_next_target_kind": "tranche_002_execution_packet_result_review_only",
+  "selected_release_blocking_obligation": {
+    "dependency": "stationary_implies_operator_zero",
+    "dependency_class": "lean_theorem_dependency",
+    "dependency_finding_id": "V01-ALPHA-DEP-REM-002",
+    "modified_by_tranche_001": false,
+    "remediation_execution_status": "not_executed_v0",
+    "status_carry_forward": "tracked_unmodified_not_executed_in_tranche_001"
+  },
+  "selected_remediation_finding_id": "V01-ALPHA-DEP-REM-002",
+  "selected_tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-002",
+  "selection_count": 1,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "success_criteria": [
+    "execution_consumes_this_packet_and_targets_only_stationary_implies_operator_zero",
+    "raw_lean_axiom_output_is_recorded_for_the_pinned_audit_command",
+    "parsed_axioms_and_project_axioms_used_are_recorded",
+    "nonselected_release_blockers_are_carried_forward_unmodified",
+    "no_release_readiness_or_debt_discharge_is_claimed_by_execution_text"
+  ],
+  "tranche_001_cleared_for_global_release_readiness": false,
+  "tranche_001_formal_movement_accepted": true,
+  "tranche_001_status": "documented_dependency_nonblocking",
+  "tranche_002_execution_packet_prepared": true,
+  "v01_alpha_marked_ready": false,
+  "validation_claim_authorized": false
+}

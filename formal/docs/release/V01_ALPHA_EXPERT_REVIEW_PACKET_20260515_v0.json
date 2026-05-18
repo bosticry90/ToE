@@ -1,0 +1,523 @@
+{
+  "acceptance_criteria": {
+    "capture_gap_preserved": true,
+    "capture_result_review_accepted": true,
+    "capture_result_review_preserves_gap": true,
+    "capture_result_review_scope_preparation_only": true,
+    "capture_result_review_selected_this_packet": true,
+    "consumes_capture_result_review": true,
+    "dependency_review_rows_prepared": true,
+    "documentation_only_dependencies_prepared": true,
+    "exactly_one_next_target_selected": true,
+    "expert_review_required_dependencies_prepared": true,
+    "forbidden_effects_all_false": true,
+    "no_axiom_spec_backed_debt_reduction": true,
+    "no_expert_review_execution": true,
+    "no_lean_theorem_debt_discharge": true,
+    "no_release_packet_assembly": true,
+    "no_v01_readiness_marking": true,
+    "proof_debt_classes_available": true,
+    "release_blocking_dependencies_prepared": true,
+    "retained_assumptions_available": true,
+    "source_capture_packet_matches": true
+  },
+  "axiom_spec_backed_debt_reduced": false,
+  "axiom_spec_backed_debt_reduced_by_documentation": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The prepared expert-review packet should be reviewed before any expert review execution packet or release-readiness adjudication.",
+      "target": "review_v01_alpha_expert_review_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Expert review execution requires acceptance of this prepared packet first.",
+      "target": "prepare_v01_alpha_expert_review_execution_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Dependency-gap adjudication should consume the expert-review packet result review.",
+      "target": "prepare_v01_alpha_release_readiness_dependency_gap_adjudication"
+    }
+  ],
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "classification": "P-POLICY/nonclaim",
+  "consumed_target": "prepare_v01_alpha_expert_review_packet",
+  "consumes_result_review": "V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_RESULT_REVIEW_v0",
+  "consumes_result_review_pointer": "formal/docs/release/V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_RESULT_REVIEW_20260515_v0.json",
+  "dependency_review_rows": [
+    {
+      "audit_command": "#print axioms ToeFormal.QFT.FreeScalarDerivation.master_action_stationary_implies_free_scalar_kg",
+      "audit_status": "pending",
+      "expert_review_required": true,
+      "linked_assumptions": "bounded scalar slice; stationarity",
+      "observed_dependency_result": "pending captured output",
+      "project_axioms_used": "pending",
+      "proof_debt_discharge_claim": false,
+      "release_dependency_class": "release_blocking_pending_capture",
+      "release_label": "T-LEAN-COND",
+      "review_execution_status": "not_executed_v0",
+      "reviewer_assessment_status": "prepared_not_assessed",
+      "source_file": "formal/toe_formal/ToeFormal/QFT/FreeScalarDerivation.lean",
+      "supplied_structures_used": "`MasterActionScalarSlice.firstVariation_matches_boxPlusMass`",
+      "theorem": "master_action_stationary_implies_free_scalar_kg"
+    },
+    {
+      "audit_command": "#print axioms ToeFormal.QFT.FreeScalarDerivation.stationary_implies_operator_zero",
+      "audit_status": "pending",
+      "expert_review_required": true,
+      "linked_assumptions": "separating variations",
+      "observed_dependency_result": "pending captured output",
+      "project_axioms_used": "pending",
+      "proof_debt_discharge_claim": false,
+      "release_dependency_class": "release_blocking_pending_capture",
+      "release_label": "T-LEAN-COND",
+      "review_execution_status": "not_executed_v0",
+      "reviewer_assessment_status": "prepared_not_assessed",
+      "source_file": "formal/toe_formal/ToeFormal/QFT/FreeScalarDerivation.lean",
+      "supplied_structures_used": "none beyond finite test-field model",
+      "theorem": "stationary_implies_operator_zero"
+    },
+    {
+      "audit_command": "#print axioms ToeFormal.Bridges.QMSTATTransportResidualPackage.finite_transport_theorems_construct_residual_package_v0",
+      "audit_status": "pending",
+      "expert_review_required": true,
+      "linked_assumptions": "finite transport equivalence/alignment",
+      "observed_dependency_result": "pending captured output",
+      "project_axioms_used": "pending",
+      "proof_debt_discharge_claim": false,
+      "release_dependency_class": "release_blocking_pending_capture",
+      "release_label": "T-LEAN-COND",
+      "review_execution_status": "not_executed_v0",
+      "reviewer_assessment_status": "prepared_not_assessed",
+      "source_file": "formal/toe_formal/ToeFormal/Bridges/QM_STAT_TransportResidualPackage.lean",
+      "supplied_structures_used": "source, target, transport structures",
+      "theorem": "finite_transport_theorems_construct_residual_package_v0"
+    },
+    {
+      "audit_command": "#print axioms ToeFormal.Bridges.QFTGRSourceMapEligibilityLadderSummary.qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "audit_status": "pending",
+      "expert_review_required": true,
+      "linked_assumptions": "missing witness chain",
+      "observed_dependency_result": "pending captured output",
+      "project_axioms_used": "pending",
+      "proof_debt_discharge_claim": false,
+      "release_dependency_class": "release_blocking_pending_capture",
+      "release_label": "B-BLOCKED",
+      "review_execution_status": "not_executed_v0",
+      "reviewer_assessment_status": "prepared_not_assessed",
+      "source_file": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SourceMapEligibilityLadderSummary.lean",
+      "supplied_structures_used": "supplied-only eligibility ladder layers",
+      "theorem": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0"
+    },
+    {
+      "audit_command": "#print axioms ToeFormal.Bridges.EMQFTInterfaceAlignmentSemanticBridge.supplied_interface_alignment_semantics_construct_bridge_package_v0",
+      "audit_status": "pending",
+      "expert_review_required": true,
+      "linked_assumptions": "source-current/gauge obligations remain open",
+      "observed_dependency_result": "pending captured output",
+      "project_axioms_used": "pending",
+      "proof_debt_discharge_claim": false,
+      "release_dependency_class": "release_blocking_pending_capture",
+      "release_label": "T-LEAN-COND",
+      "review_execution_status": "not_executed_v0",
+      "reviewer_assessment_status": "prepared_not_assessed",
+      "source_file": "formal/toe_formal/ToeFormal/Bridges/EM_QFT_InterfaceAlignmentSemanticBridge.lean",
+      "supplied_structures_used": "supplied interface alignment semantics",
+      "theorem": "supplied_interface_alignment_semantics_construct_bridge_package_v0"
+    },
+    {
+      "audit_command": "#print axioms ToeFormal.Bridges.SRCosmologyRegimeTransport.supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "audit_status": "pending",
+      "expert_review_required": true,
+      "linked_assumptions": "global semantic map remains open",
+      "observed_dependency_result": "pending captured output",
+      "project_axioms_used": "pending",
+      "proof_debt_discharge_claim": false,
+      "release_dependency_class": "release_blocking_pending_capture",
+      "release_label": "T-LEAN-COND",
+      "review_execution_status": "not_executed_v0",
+      "reviewer_assessment_status": "prepared_not_assessed",
+      "source_file": "formal/toe_formal/ToeFormal/Bridges/SR_CosmologyRegimeTransport.lean",
+      "supplied_structures_used": "supplied local/regime alignment",
+      "theorem": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0"
+    }
+  ],
+  "expert_review_executed": false,
+  "forbidden_effect_status": {
+    "axiom_spec_backed_debt_reduced": false,
+    "axiom_spec_backed_debt_reduced_by_documentation": false,
+    "blocker_movement_authorized": false,
+    "claim_promotion_authorized": false,
+    "computational_physics_execution_surface_opened": false,
+    "empirical_validation_authorized": false,
+    "expert_review_executed": false,
+    "lane_reopen_authorized": false,
+    "lean_theorem_debt_discharged": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "proof_debt_reduced": false,
+    "release_packet_assembled": false,
+    "seam_closure_authorized": false,
+    "theorem_discharge_authorized": false,
+    "v01_alpha_marked_ready": false
+  },
+  "lean_theorem_debt_discharged": false,
+  "non_claim_boundary": "The v0.1-alpha expert review packet prepares reviewer scope only. It does not execute expert review, assemble the release packet, mark v0.1-alpha readiness, discharge Lean theorem debt, reduce axiom/spec-backed proof debt, authorize Phase 2, close seams, validate empirically, promote the master action, promote claims, or make an external-truth claim.",
+  "outcome_id": "V01_ALPHA_EXPERT_REVIEW_PACKET_PREPARED_FROM_LEAN_DEPENDENCY_AUDIT_CAPTURE_WITH_NO_REVIEW_EXECUTION_OR_RELEASE_PROMOTION",
+  "packet_id": "V01_ALPHA_EXPERT_REVIEW_PACKET_v0",
+  "packet_scope": "PREPARE_EXPERT_REVIEW_PACKET_ONLY_NO_REVIEW_EXECUTION_OR_RELEASE_ASSEMBLY",
+  "packet_summary": {
+    "dependency_review_row_count": 6,
+    "documentation_only_dependency_count": 3,
+    "expert_review_required_dependency_count": 6,
+    "primary_packet_gap": "EXPERT_REVIEW_PACKET_PREPARED_BUT_REVIEW_NOT_EXECUTED_V0",
+    "proof_debt_class_count": 3,
+    "release_blocking_dependency_count": 6,
+    "retained_assumption_count": 22
+  },
+  "prepared": true,
+  "proof_debt_reduced": false,
+  "release_packet_assembled": false,
+  "review_execution_status": "not_executed_v0",
+  "review_scope": {
+    "axiom_spec_backed_ledger_posture": {
+      "pointer": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+      "posture": {
+        "blocks_full_pillar_target_count": 22,
+        "defaultNonAlias": "absent_from_unresolved_axiom_debt_and_lean_backed",
+        "documentation_discharge_claim": false,
+        "real_axiom_count": 59,
+        "real_axiom_file_count": 14,
+        "real_sorry_or_admit_count": 0,
+        "retained_assumption_count": 22,
+        "sampleRep32": "absent_from_unresolved_axiom_debt_and_lean_backed_constructor",
+        "spec_backed_count": 37
+      },
+      "reviewer_task": "Assess whether retained assumptions and spec-backed rows are accurately labeled and release-blocking."
+    },
+    "documentation_only_dependencies": {
+      "dependencies": [
+        "release index import/check surface",
+        "seeded dependency-audit row table",
+        "axiom/spec-backed ledger pointer"
+      ],
+      "reviewer_task": "Confirm which surfaces are documentation or indexing support only.",
+      "row_count": 3
+    },
+    "expert_review_required_dependencies": {
+      "dependencies": [
+        "master_action_stationary_implies_free_scalar_kg",
+        "stationary_implies_operator_zero",
+        "finite_transport_theorems_construct_residual_package_v0",
+        "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+        "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+        "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0"
+      ],
+      "reviewer_task": "Prepare these dependencies for later review execution; do not execute in this packet.",
+      "row_count": 6
+    },
+    "lean_dependency_audit_posture": {
+      "dependency_row_count": 6,
+      "pointer": "formal/docs/release/TOE_V01_ALPHA_LEAN_DEPENDENCY_AUDIT_v0.md",
+      "reviewer_task": "Assess exact Lean dependency posture and project-axiom/supplied-structure classification for each release-facing row."
+    },
+    "proof_debt_categories": {
+      "classes": [
+        {
+          "class_id": "retained_assumption",
+          "release_impact": "blocks release packet assembly when tied to release-facing theorem dependency posture",
+          "row_count": 22
+        },
+        {
+          "class_id": "spec_backed",
+          "release_impact": "documentation and convention debt; does not discharge by being listed",
+          "row_count": 37
+        },
+        {
+          "class_id": "blocks_full_pillar_target",
+          "release_impact": "prevents pillar/seam or master-action promotion",
+          "row_count": 22
+        }
+      ],
+      "reviewer_task": "Classify retained, spec-backed, and full-pillar-blocking proof debt without reducing it.",
+      "row_count": 3
+    },
+    "release_blocking_dependencies": {
+      "dependencies": [
+        "master_action_stationary_implies_free_scalar_kg",
+        "stationary_implies_operator_zero",
+        "finite_transport_theorems_construct_residual_package_v0",
+        "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+        "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+        "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0"
+      ],
+      "reviewer_task": "Determine whether each dependency blocks v0.1-alpha release packet readiness.",
+      "row_count": 6
+    },
+    "retained_assumptions": {
+      "reviewer_task": "Inspect retained assumptions for release-blocking status; do not treat listing as discharge.",
+      "row_count": 22,
+      "rows": [
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "bogoliubov_linearization_from_P1_spec",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B1_P1_to_UCFF_FirstOrderDispersion.lean",
+          "reason": "Bridge-level linearization spec, not a derived theorem.",
+          "replacement_or_discharge_path": "Prove bridge from explicit P1 parent dynamics and perturbation semantics.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "P1_eom_implies_P1Residual_as_UCFF_spec",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B1_P1_to_UCFF_FirstOrderDispersion.lean",
+          "reason": "P1 equation-to-residual bridge remains spec-backed.",
+          "replacement_or_discharge_path": "Prove from parent equation semantics and residual definition.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "cubicDensity_agrees_spec",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B2_P2_to_UCFF_SecondOrderTimeDomain.lean",
+          "reason": "Cubic density agreement is bridge-spec-backed.",
+          "replacement_or_discharge_path": "Prove from concrete nonlinear density semantics.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "omega_sq_matches_P2_spec",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B3_P2_to_UCFF_SecondOrderNumerics.lean",
+          "reason": "Numeric dispersion matching is spec-backed.",
+          "replacement_or_discharge_path": "Prove from P2 dispersion relation and numerical symbol definitions.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "GR_QM",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "B4_CRFT_to_AcousticMetric_spec",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Bridges/B4_CRFT_to_AcousticMetric.lean",
+          "reason": "CRFT-to-acoustic metric bridge is a spec statement.",
+          "replacement_or_discharge_path": "Prove from CRFT dynamics plus acoustic metric construction.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "P1_rhs_matches_EFT",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P1_NLS_EFT.lean",
+          "reason": "Parent P1 RHS-to-EFT match remains supplied.",
+          "replacement_or_discharge_path": "Prove from explicit EFT parent action and residual definitions.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "P2_rhs_matches_EFT",
+          "file": "formal/toe_formal/ToeFormal/Derivation/Parents/P2_Wave_EFT.lean",
+          "reason": "Parent P2 RHS-to-EFT match remains supplied.",
+          "replacement_or_discharge_path": "Prove from explicit EFT parent action and residual definitions.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "formalFirstVariationRep32_zero_variation_at",
+          "file": "formal/toe_formal/ToeFormal/Variational/ActionToFirstVariationBridgeRep32.lean",
+          "reason": "First-variation bridge algebra is still axiomatized.",
+          "replacement_or_discharge_path": "Replace with theorem over concrete first-variation representation.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "formalFirstVariationRep32_add_variation_at",
+          "file": "formal/toe_formal/ToeFormal/Variational/ActionToFirstVariationBridgeRep32.lean",
+          "reason": "Additivity of the first-variation bridge is axiomatized.",
+          "replacement_or_discharge_path": "Replace with theorem over concrete first-variation representation.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "formalFirstVariationRep32_smul_variation_at",
+          "file": "formal/toe_formal/ToeFormal/Variational/ActionToFirstVariationBridgeRep32.lean",
+          "reason": "Scalar compatibility of the first-variation bridge is axiomatized.",
+          "replacement_or_discharge_path": "Replace with theorem over concrete first-variation representation.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "EL_toe",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "reason": "Euler-Lagrange equation of the declared action is axiomatized.",
+          "replacement_or_discharge_path": "Derive from concrete action and variation theorem.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "firstVariation",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "reason": "First variation of the declared action is axiomatized.",
+          "replacement_or_discharge_path": "Replace with concrete first-variation construction.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "declaredELAssumptions",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "reason": "EL assumptions remain declared, not derived.",
+          "replacement_or_discharge_path": "Derive from regularity, boundary, and variation assumptions.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "declaredSymmetry",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "reason": "Symmetry structure remains declared.",
+          "replacement_or_discharge_path": "Prove from action invariance.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "declaredSemigroupWithGenerator",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "reason": "Semigroup/generator structure remains declared.",
+          "replacement_or_discharge_path": "Prove from explicit transformation group.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "declaredQuantity",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "reason": "Conserved quantity remains declared.",
+          "replacement_or_discharge_path": "Derive through Noether-style theorem surface.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "declaredNoetherAssumptions",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "reason": "Noether assumptions remain declared.",
+          "replacement_or_discharge_path": "Prove or discharge against concrete symmetry/action data.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "declaredKineticInvariant",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "reason": "Kinetic invariance remains declared.",
+          "replacement_or_discharge_path": "Derive from transformation action on terms.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "declaredDispersionInvariant",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "reason": "Dispersion invariance remains declared.",
+          "replacement_or_discharge_path": "Derive from transformation action on terms.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "declaredCoherenceInvariant",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "reason": "Coherence invariance remains declared.",
+          "replacement_or_discharge_path": "Derive from transformation action on terms.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "MASTER_ACTION",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "declaredSymmetryMatchesPhase",
+          "file": "formal/toe_formal/ToeFormal/Variational/DeclaredAction.lean",
+          "reason": "Symmetry-to-phase matching remains declared.",
+          "replacement_or_discharge_path": "Prove by concrete symmetry representation.",
+          "status": "retained_assumption"
+        },
+        {
+          "associated_pillar_or_seam": "SCALAR_QFT",
+          "blocks_full_pillar_target": "yes",
+          "declaration": "P_rep",
+          "file": "formal/toe_formal/ToeFormal/Variational/FirstVariationRepDefFieldRep.lean",
+          "reason": "Field representation polynomial remains declared.",
+          "replacement_or_discharge_path": "Derive from concrete representation selection.",
+          "status": "retained_assumption"
+        }
+      ]
+    },
+    "unresolved_theorem_seam_master_action_blockers": {
+      "dependencies": [
+        {
+          "dependency": "master_action_stationary_implies_free_scalar_kg",
+          "reason": "exact #print axioms output and project-axiom classification remain pending"
+        },
+        {
+          "dependency": "stationary_implies_operator_zero",
+          "reason": "exact #print axioms output and project-axiom classification remain pending"
+        },
+        {
+          "dependency": "finite_transport_theorems_construct_residual_package_v0",
+          "reason": "exact #print axioms output and project-axiom classification remain pending"
+        },
+        {
+          "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+          "reason": "exact #print axioms output and project-axiom classification remain pending"
+        },
+        {
+          "dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+          "reason": "exact #print axioms output and project-axiom classification remain pending"
+        },
+        {
+          "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+          "reason": "exact #print axioms output and project-axiom classification remain pending"
+        }
+      ],
+      "reviewer_task": "Identify unresolved theorem, seam, and master-action blockers for later adjudication.",
+      "row_count": 6
+    }
+  },
+  "reviewer_assessment_questions": [
+    "Are the release-facing Lean dependency rows complete enough for v0.1-alpha readiness review?",
+    "Which dependencies are release-blocking rather than documentation-only?",
+    "Which retained assumptions or spec-backed rows require proof work before any stronger release claim?",
+    "Which exact Lean #print axioms outputs must be captured or verified in a later execution packet?",
+    "What evidence would be required before release packet assembly could be considered?"
+  ],
+  "reviewer_not_allowed_to_promote": [
+    "expert review execution",
+    "v0.1-alpha release packet assembly",
+    "v0.1-alpha readiness",
+    "Lean theorem debt discharge",
+    "axiom/spec-backed proof debt reduction",
+    "Phase 2 authorization",
+    "seam closure",
+    "empirical validation",
+    "master-action promotion",
+    "claim promotion"
+  ],
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_EXPERT_REVIEW_PACKET_20260515_v0",
+  "selected_next_target": "review_v01_alpha_expert_review_packet_result",
+  "selected_next_target_kind": "result_review_only",
+  "selection_count": 1,
+  "source_capture_gap": "EXACT_AXIOM_PRINT_OUTPUT_AND_EXPERT_REVIEW_NOT_EXECUTED_V0",
+  "source_capture_packet": "V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_PACKET_v0",
+  "source_capture_packet_pointer": "formal/docs/release/V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_PACKET_20260515_v0.json",
+  "source_gap_review_primary_gap": "LEAN_DEPENDENCY_AUDIT_CAPTURE_AND_EXPERT_REVIEW_PACKET_NOT_READY",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "v01_alpha_marked_ready": false
+}

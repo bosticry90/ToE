@@ -1,0 +1,267 @@
+{
+  "acceptance_criteria": {
+    "audit_requirements_defined": true,
+    "audit_targets_defined": true,
+    "consumes_expected_selection_result_review": true,
+    "documentation_requirement_defined": true,
+    "exactly_one_next_target_selected": true,
+    "execution_scope_defined": true,
+    "expert_re_review_requirement_defined": true,
+    "forbidden_effects_all_false": true,
+    "no_phase2_seam_empirical_or_master_action_authorization": true,
+    "no_release_packet_assembly": true,
+    "no_retained_assumption_discharge": true,
+    "no_theorem_or_proof_debt_discharge": true,
+    "no_v01_readiness_marking": true,
+    "packet_prepares_without_execution": true,
+    "policy_adjudication_requirement_defined": true,
+    "selected_dependency_class_expected": true,
+    "selected_dependency_expected": true,
+    "selected_finding_expected": true,
+    "selection_result_review_accepted": true,
+    "selection_result_review_outcome_expected": true,
+    "selection_result_review_selected_this_packet": true,
+    "success_and_failure_criteria_defined": true,
+    "three_release_blockers_carried_forward": true,
+    "tranche_001_documented_nonblocking_preserved": true,
+    "tranche_002_documented_nonblocking_preserved": true,
+    "tranche_003_documented_nonblocking_preserved": true,
+    "tranche_004_selected_only": true
+  },
+  "accepted": true,
+  "audit_requirements": {
+    "authorization_surface_audit_required": true,
+    "documentation_required": "conditional_after_audit_result_review",
+    "expert_re_review_required": "conditional_after_audit_result_review",
+    "lean_audit_required": true,
+    "policy_adjudication_required": "conditional_after_audit_result_review"
+  },
+  "authorization_evidence_captured": false,
+  "axiom_spec_backed_debt_reduced": false,
+  "axiom_spec_backed_debt_reduced_by_documentation": false,
+  "blocker_fully_remediated": false,
+  "blocker_movement_registered": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The tranche 004 execution packet must be reviewed before remediation execution can be authorized.",
+      "target": "review_v01_alpha_dependency_remediation_tranche_004_execution_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Actual tranche 004 audit execution is deferred until this packet is reviewed and accepted.",
+      "target": "execute_v01_alpha_dependency_remediation_tranche_004_audit"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Release-readiness adjudication remains blocked by the three tracked release-blocking obligations.",
+      "target": "prepare_v01_alpha_release_readiness_adjudication_packet"
+    }
+  ],
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_selection_result_review_schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_NEXT_TRANCHE_SELECTION_PACKET_AFTER_TRANCHE_003_MOVEMENT_RESULT_REVIEW_20260515_v0",
+  "consumes_selection_result_review": "V01_ALPHA_DEPENDENCY_REMEDIATION_NEXT_TRANCHE_SELECTION_PACKET_AFTER_TRANCHE_003_MOVEMENT_RESULT_REVIEW_v0",
+  "consumes_selection_result_review_pointer": "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_NEXT_TRANCHE_SELECTION_PACKET_AFTER_TRANCHE_003_MOVEMENT_RESULT_REVIEW_20260515_v0.json",
+  "documentation_prepared": false,
+  "documentation_requirement": {
+    "condition": "Required if tranche 004 remains a negative source-map authorization marker, if dependency posture is policy-acceptable but release-facing explanation is needed, or if project-local axioms or retained assumptions require documentation.",
+    "prepared_by_this_packet": false,
+    "required": "conditional_after_audit_result_review"
+  },
+  "execution_packet_prepared": true,
+  "execution_scope": {
+    "allowed_execution_actions": [
+      "run_the_pinned_lean_axiom_audit_command_for_the_selected_source_map_authorization_target",
+      "record_raw_lean_axiom_output_for_the_selected_target",
+      "inspect_the_qft_gr_source_map_authorization_readout_surface",
+      "record_whether_the_target_is_an_authorization_absence_marker_or_a_positive_source_map_authorization",
+      "carry_forward_all_nonselected_release_blockers_without_modification"
+    ],
+    "forbidden_execution_actions": [
+      "execute_any_nonselected_remediation_tranche",
+      "reinterpret_the_negative_authorization_marker_as_source_map_closure",
+      "claim_theorem_or_proof_debt_discharge_from_audit_text",
+      "register_blocker_movement",
+      "assemble_release_packet",
+      "mark_v01_alpha_ready",
+      "authorize_phase2_or_seam_or_empirical_or_master_action_movement"
+    ],
+    "required_remediation_type": "source_map_authorization_and_dependency_adjudication",
+    "scope_kind": "QFT_GR_SOURCE_MAP_AUTHORIZATION_AND_DEPENDENCY_AUDIT_PREPARATION_ONLY",
+    "selected_dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "selected_dependency_class": "blocked_bridge_authorization_dependency",
+    "selected_dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+    "selected_tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-004"
+  },
+  "expert_re_review_executed": false,
+  "expert_re_review_requirement": {
+    "executed_by_this_packet": false,
+    "required": "conditional_after_audit_result_review",
+    "trigger": "Triggered by a positive source-map closure claim, project-local axioms, unexpected nonstandard axioms, source-map authorization ambiguity, or any attempted blocker downgrade."
+  },
+  "failure_criteria": [
+    "execution_targets_a_dependency_other_than_qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "lean_audit_output_is_missing_or_not_parseable",
+    "source_map_authorization_status_is_missing_or_reinterpreted_without_adjudication",
+    "project_local_axioms_are_detected_without_escalation",
+    "execution_claims_release_readiness_or_theorem_debt_discharge",
+    "nonselected_release_blockers_are_modified"
+  ],
+  "forbidden_effect_status": {
+    "authorization_evidence_captured": false,
+    "axiom_spec_backed_debt_reduced": false,
+    "axiom_spec_backed_debt_reduced_by_documentation": false,
+    "blocker_fully_remediated": false,
+    "blocker_movement_registered": false,
+    "claim_promotion_authorized": false,
+    "computational_physics_execution_surface_opened": false,
+    "documentation_prepared": false,
+    "empirical_validation_authorized": false,
+    "expert_re_review_executed": false,
+    "lane_reopen_authorized": false,
+    "lean_dependency_audit_executed": false,
+    "lean_dependency_evidence_captured": false,
+    "lean_theorem_debt_discharged": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "policy_adjudication_executed": false,
+    "proof_debt_reduced": false,
+    "release_packet_assembled": false,
+    "remediation_executed": false,
+    "remediation_execution_authorized": false,
+    "retained_assumptions_discharged": false,
+    "seam_closure_authorized": false,
+    "source_map_authorization_audit_executed": false,
+    "theorem_discharge_authorized": false,
+    "v01_alpha_marked_ready": false
+  },
+  "global_release_readiness_still_blocked": true,
+  "lean_dependency_audit_executed": false,
+  "lean_dependency_audit_target": {
+    "audit_command": "#print axioms ToeFormal.Bridges.QFTGRSourceMapEligibilityLadderSummary.qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "executed_by_this_packet": false,
+    "lean_source": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SourceMapEligibilityLadderSummary.lean",
+    "lean_target": "ToeFormal.Bridges.QFTGRSourceMapEligibilityLadderSummary.qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0"
+  },
+  "lean_dependency_evidence_captured": false,
+  "lean_theorem_debt_discharged": false,
+  "next_action_scope": "REVIEW_TRANCHE_004_EXECUTION_PACKET_RESULT_ONLY_NO_REMEDIATION_EXECUTION_OR_RELEASE_PROMOTION",
+  "non_claim_boundary": "The v0.1-alpha dependency remediation tranche 004 execution packet prepares only a bounded source-map authorization and Lean dependency-audit scope for V01-ALPHA-DEP-REM-004 / qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0. It does not execute remediation, run the Lean audit, capture authorization evidence, prepare documentation, execute policy adjudication or expert re-review, register blocker movement, assemble the release packet, mark v0.1-alpha readiness, discharge Lean theorem debt, reduce axiom/spec-backed proof debt, discharge retained assumptions, authorize Phase 2, close seams, validate empirically, promote the master action, promote claims, or make an external-truth claim.",
+  "nonselected_release_blocking_obligation_count": 2,
+  "nonselected_release_blocking_obligations": [
+    {
+      "dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-005",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    },
+    {
+      "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-006",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    }
+  ],
+  "outcome_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_EXECUTION_PACKET_PREPARED_FOR_QFT_GR_SOURCE_MAP_ELIGIBILITY_LADDER_WITH_NO_REMEDIATION_EXECUTION_OR_RELEASE_PROMOTION",
+  "packet_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_EXECUTION_PACKET_v0",
+  "packet_scope": "PREPARE_TRANCHE_004_EXECUTION_PACKET_ONLY_NO_REMEDIATION_EXECUTION_OR_RELEASE_PROMOTION",
+  "policy_adjudication_executed": false,
+  "policy_adjudication_requirement": {
+    "executed_by_this_packet": false,
+    "likely_required": true,
+    "reason": "This row is a blocked bridge authorization dependency; after audit evidence is captured, release policy must adjudicate whether the negative source-map authorization marker can be documented/nonblocking or requires a different remediation path."
+  },
+  "post_execution_adjudication_target": "review_v01_alpha_dependency_remediation_tranche_004_audit_result",
+  "post_packet_review_target": "review_v01_alpha_dependency_remediation_tranche_004_execution_packet_result",
+  "proof_debt_reduced": false,
+  "release_blocking_obligation_count": 3,
+  "release_blocking_obligations_carry_forward": [
+    {
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "dependency_class": "blocked_bridge_authorization_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    },
+    {
+      "dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-005",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    },
+    {
+      "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-006",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    }
+  ],
+  "release_packet_assembled": false,
+  "remediation_executed": false,
+  "remediation_execution_authorized": false,
+  "required_evidence_surface": {
+    "audit_command": "#print axioms ToeFormal.Bridges.QFTGRSourceMapEligibilityLadderSummary.qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "authorization_status_readout_required": true,
+    "execution_status": "prepared_not_executed_v0",
+    "lean_source": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SourceMapEligibilityLadderSummary.lean",
+    "lean_target": "ToeFormal.Bridges.QFTGRSourceMapEligibilityLadderSummary.qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "ledger_surface": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+    "negative_authorization_marker_expected": true,
+    "parsed_axioms_required": true,
+    "project_axioms_used_required": true,
+    "raw_output_required": true,
+    "source_map_authorization_surface": "qftGRSourceMapEligibilityLadderSummaryStatusReadoutV0.full_source_map_semantic_closure_authorized",
+    "surface_kind": "source_map_authorization_and_lean_axiom_audit_readout"
+  },
+  "required_remediation_type": "source_map_authorization_and_dependency_adjudication",
+  "retained_assumptions_discharged": false,
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_EXECUTION_PACKET_20260515_v0",
+  "selected_dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+  "selected_dependency_class": "blocked_bridge_authorization_dependency",
+  "selected_next_target": "review_v01_alpha_dependency_remediation_tranche_004_execution_packet_result",
+  "selected_next_target_kind": "tranche_004_execution_packet_result_review_only",
+  "selected_release_blocking_obligation": {
+    "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "dependency_class": "blocked_bridge_authorization_dependency",
+    "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+    "modified_by_tranche_003": false,
+    "remediation_execution_status": "not_executed_v0",
+    "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+  },
+  "selected_remediation_finding_id": "V01-ALPHA-DEP-REM-004",
+  "selected_tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-004",
+  "selection_count": 1,
+  "source_map_authorization_audit_executed": false,
+  "source_map_authorization_audit_target": {
+    "authorization_readout": "qftGRSourceMapEligibilityLadderSummaryStatusReadoutV0.full_source_map_semantic_closure_authorized",
+    "executed_by_this_packet": false,
+    "negative_authorization_marker_expected": true
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "success_criteria": [
+    "execution_consumes_this_packet_and_targets_only_qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "raw_lean_axiom_output_is_recorded_for_the_pinned_qft_gr_source_map_audit_command",
+    "parsed_axioms_and_project_axioms_used_are_recorded",
+    "authorization_status_readout_is_preserved_as_negative_unless_separately_adjudicated",
+    "nonselected_release_blockers_are_carried_forward_unmodified",
+    "no_release_readiness_or_debt_discharge_is_claimed_by_execution_text"
+  ],
+  "tranche_001_status": "documented_dependency_nonblocking",
+  "tranche_002_status": "documented_dependency_nonblocking",
+  "tranche_003_status": "documented_dependency_nonblocking",
+  "tranche_004_cleared_for_global_release_readiness": false,
+  "tranche_004_execution_packet_prepared": true,
+  "tranche_004_status": "selected_for_execution_packet_preparation",
+  "v01_alpha_marked_ready": false,
+  "validation_claim_authorized": false
+}

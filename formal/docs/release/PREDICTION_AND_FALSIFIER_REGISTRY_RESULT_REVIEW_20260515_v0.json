@@ -1,0 +1,106 @@
+{
+  "acceptance_criteria": {
+    "all_promotion_allowed_false": true,
+    "all_rows_unexecuted": true,
+    "authorization_class_preserved": true,
+    "consumes_prediction_and_falsifier_registry": true,
+    "dependencies_visible": true,
+    "falsifier_execution_claim_count_zero": true,
+    "falsifier_result_claim_count_zero": true,
+    "falsifier_statuses_unexecuted": true,
+    "forbidden_effects_all_false": true,
+    "no_numerical_score": true,
+    "prediction_execution_claim_count_zero": true,
+    "prediction_result_claim_count_zero": true,
+    "prediction_statuses_unexecuted": true,
+    "primary_gap_preserved": true,
+    "promotion_allowed_count_zero": true,
+    "registry_scope_nonexecution": true,
+    "registry_status_nonclaim": true,
+    "row_count_exactly_eight": true,
+    "row_ids_match_full_lineage": true,
+    "validation_upgrade_count_zero": true
+  },
+  "accepted": true,
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_registry": {
+    "registry_id": "PREDICTION_AND_FALSIFIER_REGISTRY_v0",
+    "registry_path": "formal/docs/release/PREDICTION_AND_FALSIFIER_REGISTRY_20260515_v0.json",
+    "registry_preparation_result": "PREDICTION_AND_FALSIFIER_REGISTRY_PREPARED_FROM_MODEL_CARD_TEMPLATE_REVIEW_WITH_NONCLAIM_TEST_DESIGN_CEILINGS",
+    "registry_schema_id": "PREDICTION_AND_FALSIFIER_REGISTRY_20260515_v0"
+  },
+  "forbidden_effect_status": {
+    "blocker_movement": false,
+    "empirical_support_claim": false,
+    "empirical_validation_claim": false,
+    "external_truth_claim": false,
+    "falsifier_execution": false,
+    "falsifier_success_claim": false,
+    "lane_reopen": false,
+    "master_action_promotion": false,
+    "phase2_authorization": false,
+    "prediction_confirmation": false,
+    "prediction_execution": false,
+    "recovery_claim": false,
+    "seam_closure": false,
+    "theorem_discharge": false,
+    "validation_upgrade": false
+  },
+  "next_action": "PREPARE_COMPUTATIONAL_PHYSICS_INTEGRATION_CLOSEOUT_AFTER_PREDICTION_AND_FALSIFIER_REGISTRY_REVIEW",
+  "next_packet": "COMPUTATIONAL_PHYSICS_INTEGRATION_CLOSEOUT_v0",
+  "next_packet_authorization_scope": "PREPARATION_ONLY",
+  "non_claim_boundary": "Result review accepts nonclaim prediction/falsifier test-design registration only; it authorizes computational-physics integration closeout preparation only and does not authorize prediction execution, falsifier execution, prediction confirmation, falsifier success claims, validation upgrade, recovery claim, empirical support claim, theorem discharge, blocker movement, seam closure, Phase 2 authorization, master-action promotion, or external-truth claim.",
+  "outcome_id": "PREDICTION_AND_FALSIFIER_REGISTRY_RESULT_REVIEW_ACCEPTS_NONCLAIM_TEST_DESIGN_REGISTRATION_AND_AUTHORIZES_COMPUTATIONAL_PHYSICS_INTEGRATION_CLOSEOUT_PREPARATION_ONLY",
+  "review_id": "PREDICTION_AND_FALSIFIER_REGISTRY_RESULT_REVIEW_v0",
+  "roadmap_update_required": true,
+  "schema_id": "PREDICTION_AND_FALSIFIER_REGISTRY_RESULT_REVIEW_20260515_v0",
+  "scope_confirmation": {
+    "execution_status_counts": {
+      "not_executed_v0": 8
+    },
+    "falsifier_execution_claim_count": 0,
+    "falsifier_result_claim_count": 0,
+    "falsifier_status_counts": {
+      "defined_not_executed_v0": 8
+    },
+    "method_verification_dependency_counts": {
+      "method_debt_visible": 2,
+      "method_verification_not_applicable_comparator_surface": 3,
+      "method_verification_not_applicable_formal_governance_surface": 1,
+      "method_verification_not_applicable_report_surface": 2
+    },
+    "prediction_execution_claim_count": 0,
+    "prediction_result_claim_count": 0,
+    "prediction_status_counts": {
+      "candidate_not_executed_v0": 8
+    },
+    "primary_falsifier_gap": "PREDICTION_AND_FALSIFIER_PASS_FAIL_CRITERIA_REGISTERED_BUT_NOT_EXECUTED_V0",
+    "promotion_allowed_count": 0,
+    "referent_dependency_counts": {
+      "blocked_pending_governance_resolution": 1,
+      "candidate_not_registered_as_validation": 7
+    },
+    "registry_scope": "REGISTER_TEST_DESIGNS_ONLY_NO_EXECUTION_OR_RESULT_CLAIM",
+    "robustness_dependency_counts": {
+      "robustness_protocol_not_executed": 8
+    },
+    "row_count": 8,
+    "uq_dependency_counts": {
+      "uq_not_quantified": 5,
+      "uq_partial_quantitative": 1,
+      "uq_qualitative": 2
+    },
+    "validation_upgrade_count": 0
+  },
+  "source_lineage": {
+    "source_audit": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+    "source_model_card_template": "SIMULATION_MODEL_CARD_TEMPLATE_v0",
+    "source_model_card_template_result_review": "SIMULATION_MODEL_CARD_TEMPLATE_RESULT_REVIEW_v0",
+    "source_numerical_method_registry": "NUMERICAL_METHOD_VERIFICATION_REGISTRY_v0",
+    "source_referent_registry": "REFERENT_REGISTRY_v0",
+    "source_regime_recovery_matrix": "REGIME_RECOVERY_MATRIX_v0",
+    "source_sensitivity_robustness_protocol": "SENSITIVITY_ROBUSTNESS_PROTOCOL_v0",
+    "source_vvuq_ledger": "VVUQ_CREDIBILITY_LEDGER_v0"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM"
+}

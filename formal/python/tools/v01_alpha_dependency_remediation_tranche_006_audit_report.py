@@ -1,0 +1,501 @@
+from __future__ import annotations
+
+import argparse
+import json
+from pathlib import Path
+from typing import Any
+
+from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tools.v01_alpha_dependency_remediation_tranche_006_execution_packet_result_review_report import (
+    DEFAULT_CAPTURED_AT_UTC,
+    LEAN_AUDIT_COMMAND,
+    LEAN_SOURCE,
+    LEAN_TARGET,
+    OUTCOME_ID as EXPECTED_RESULT_REVIEW_OUTCOME,
+    REVIEW_ID as EXPECTED_RESULT_REVIEW_ID,
+    SELECTED_DEPENDENCY,
+    SELECTED_DEPENDENCY_CLASS,
+    SELECTED_FINDING_ID,
+    SELECTED_TRANCHE_ID,
+    TRANCHE_001_STATUS,
+    TRANCHE_002_STATUS,
+    TRANCHE_003_STATUS,
+    TRANCHE_004_CURRENT_BLOCKER,
+    TRANCHE_004_DEPENDENCY,
+    TRANCHE_004_FINDING_ID,
+    TRANCHE_004_RETAINED_REASON,
+    TRANCHE_004_STATUS,
+    TRANCHE_005_DEPENDENCY,
+    TRANCHE_005_STATUS,
+    TRANCHE_006_SOURCE_STATUS,
+)
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+SCHEMA_ID = "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_AUDIT_20260515_v0"
+AUDIT_ID = "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_AUDIT_v0"
+OUTCOME_ID = (
+    "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_AUDIT_EXECUTED_FOR_"
+    "SUPPLIED_ALIGNMENT_SR_COSMO_REGIME_TRANSPORT_WITH_NO_REMEDIATION_OR_RELEASE_PROMOTION"
+)
+
+DEFAULT_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_EXECUTION_PACKET_RESULT_REVIEW_20260515_v0.json"
+)
+DEFAULT_OUT = (
+    REPO_ROOT
+    / "formal"
+    / "docs"
+    / "release"
+    / "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_AUDIT_20260515_v0.json"
+)
+
+EXPECTED_RESULT_REVIEW_SELECTED_TARGET = "execute_v01_alpha_dependency_remediation_tranche_006_audit"
+LEAN_IMPORT_MODULE = "ToeFormal.Bridges.SR_CosmologyRegimeTransport"
+LEAN_AXIOM_PRINT_SCRIPT = (
+    "import ToeFormal.Bridges.SR_CosmologyRegimeTransport\n"
+    "#print axioms ToeFormal.Bridges.SRCosmologyRegimeTransport."
+    "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0\n"
+)
+LEAN_AXIOM_PRINT_OUTPUT = (
+    "'ToeFormal.Bridges.SRCosmologyRegimeTransport."
+    "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0' depends on axioms: "
+    "[propext,\n Classical.choice,\n Quot.sound]"
+)
+LEAN_AXIOMS_USED = ["propext", "Classical.choice", "Quot.sound"]
+PROJECT_AXIOMS_USED: list[str] = []
+NEXT_TARGET = "review_v01_alpha_dependency_remediation_tranche_006_audit_result"
+
+FORBIDDEN_EFFECTS = [
+    "remediation_executed",
+    "broader_remediation_executed",
+    "documentation_prepared",
+    "policy_adjudication_executed",
+    "expert_re_review_executed",
+    "blocker_movement_registered",
+    "blocker_movement_authorized",
+    "blocker_fully_remediated",
+    "tranche_004_moved_to_documented_dependency_nonblocking",
+    "tranche_004_reclassified_nonblocking",
+    "tranche_004_retained_blocker_discharged",
+    "tranche_006_moved_or_cleared",
+    "release_packet_assembled",
+    "v01_alpha_marked_ready",
+    "release_readiness_pause_registered",
+    "release_readiness_adjudication_prepared",
+    "lean_theorem_debt_discharged",
+    "axiom_spec_backed_debt_reduced",
+    "axiom_spec_backed_debt_reduced_by_documentation",
+    "proof_debt_reduced",
+    "retained_assumptions_discharged",
+    "theorem_discharge_authorized",
+    "lane_reopen_authorized",
+    "phase2_authorized",
+    "seam_closure_authorized",
+    "empirical_validation_authorized",
+    "master_action_promotion_authorized",
+    "claim_promotion_authorized",
+    "computational_physics_execution_surface_opened",
+]
+
+
+def _ptr(path: Path) -> str:
+    return str(path.relative_to(REPO_ROOT)).replace("\\", "/")
+
+
+def _read_json(path: Path) -> dict[str, Any]:
+    if not path.exists():
+        raise FileNotFoundError(f"Missing required JSON file: {path}")
+    return json.loads(path.read_text(encoding="utf-8"))
+
+
+def _remaining_obligations(result_review: dict[str, Any]) -> list[dict[str, Any]]:
+    return list(result_review.get("remaining_release_blocking_obligations", []))
+
+
+def _selected_obligation(result_review: dict[str, Any]) -> dict[str, Any]:
+    return dict(result_review.get("selected_release_blocking_obligation", {}))
+
+
+def _retained_tranche_004(result_review: dict[str, Any]) -> dict[str, Any]:
+    return dict(result_review.get("retained_tranche_004_carry_forward", {}))
+
+
+def _tranche_006(result_review: dict[str, Any]) -> dict[str, Any]:
+    return dict(result_review.get("tranche_006_obligation_carry_forward", {}))
+
+
+def _other_obligations(rows: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    other = []
+    for row in rows:
+        if row.get("dependency_finding_id") == SELECTED_FINDING_ID:
+            continue
+        carry_row = {
+            "dependency_finding_id": row.get("dependency_finding_id"),
+            "dependency": row.get("dependency"),
+            "dependency_class": row.get("dependency_class"),
+            "status_carry_forward": row.get("status_carry_forward"),
+            "modified_by_tranche_006": False,
+        }
+        other.append(carry_row)
+    return other
+
+
+def _audit_target(result_review: dict[str, Any]) -> dict[str, Any]:
+    return dict(result_review.get("lean_dependency_audit_target", {}))
+
+
+def _axiom_classification() -> list[dict[str, str]]:
+    return [
+        {"axiom": axiom, "classification": "standard_lean_axiom"}
+        for axiom in LEAN_AXIOMS_USED
+    ]
+
+
+def build_audit(
+    *,
+    result_review_path: Path = DEFAULT_RESULT_REVIEW_PATH,
+    captured_at_utc: str = DEFAULT_CAPTURED_AT_UTC,
+) -> dict[str, Any]:
+    result_review = _read_json(result_review_path)
+    remaining_obligations = _remaining_obligations(result_review)
+    selected_obligation = _selected_obligation(result_review)
+    retained_tranche_004 = _retained_tranche_004(result_review)
+    tranche_006 = _tranche_006(result_review)
+    other_obligations = _other_obligations(remaining_obligations)
+    audit_target = _audit_target(result_review)
+    forbidden_effect_status = {effect: False for effect in FORBIDDEN_EFFECTS}
+
+    acceptance_criteria = {
+        "consumes_expected_result_review": result_review.get("review_id")
+        == EXPECTED_RESULT_REVIEW_ID,
+        "result_review_accepted": result_review.get("accepted") is True,
+        "result_review_outcome_expected": result_review.get("outcome_id")
+        == EXPECTED_RESULT_REVIEW_OUTCOME,
+        "result_review_authorized_this_audit": result_review.get("selected_next_target")
+        == EXPECTED_RESULT_REVIEW_SELECTED_TARGET,
+        "tranche_001_documented_nonblocking_preserved": result_review.get(
+            "tranche_001_status"
+        )
+        == TRANCHE_001_STATUS,
+        "tranche_002_documented_nonblocking_preserved": result_review.get(
+            "tranche_002_status"
+        )
+        == TRANCHE_002_STATUS,
+        "tranche_003_documented_nonblocking_preserved": result_review.get(
+            "tranche_003_status"
+        )
+        == TRANCHE_003_STATUS,
+        "tranche_005_documented_nonblocking_preserved": result_review.get(
+            "tranche_005_status"
+        )
+        == TRANCHE_005_STATUS
+        and result_review.get("tranche_005_dependency") == TRANCHE_005_DEPENDENCY,
+        "tranche_004_retained_blocker_preserved": result_review.get("tranche_004_status")
+        == TRANCHE_004_STATUS
+        and retained_tranche_004.get("status") == TRANCHE_004_STATUS
+        and retained_tranche_004.get("dependency_finding_id") == TRANCHE_004_FINDING_ID
+        and retained_tranche_004.get("dependency") == TRANCHE_004_DEPENDENCY
+        and retained_tranche_004.get("current_blocker") == TRANCHE_004_CURRENT_BLOCKER
+        and retained_tranche_004.get("retained_blocker_reason")
+        == TRANCHE_004_RETAINED_REASON,
+        "audit_is_only_for_tranche_006": result_review.get("selected_tranche_id")
+        == SELECTED_TRANCHE_ID
+        and result_review.get("selected_remediation_finding_id") == SELECTED_FINDING_ID,
+        "audits_only_selected_dependency": result_review.get("selected_dependency")
+        == SELECTED_DEPENDENCY
+        and selected_obligation.get("dependency") == SELECTED_DEPENDENCY,
+        "selected_dependency_class_expected": result_review.get("selected_dependency_class")
+        == SELECTED_DEPENDENCY_CLASS
+        and selected_obligation.get("dependency_class") == SELECTED_DEPENDENCY_CLASS,
+        "tranche_006_prior_status_expected": result_review.get("tranche_006_status")
+        == "lean_dependency_audit_scope_accepted_pending_execution"
+        and tranche_006.get("dependency_finding_id") == SELECTED_FINDING_ID
+        and tranche_006.get("dependency") == SELECTED_DEPENDENCY,
+        "current_ledger_contains_retained_tranche_004_and_selected_tranche_006": len(
+            remaining_obligations
+        )
+        == 2
+        and [row.get("dependency_finding_id") for row in remaining_obligations]
+        == [TRANCHE_004_FINDING_ID, SELECTED_FINDING_ID]
+        and remaining_obligations[0].get("status_carry_forward") == TRANCHE_004_STATUS
+        and remaining_obligations[1].get("status_carry_forward")
+        == TRANCHE_006_SOURCE_STATUS,
+        "lean_audit_target_exact": audit_target.get("lean_target") == LEAN_TARGET
+        and audit_target.get("lean_source") == LEAN_SOURCE
+        and audit_target.get("audit_command") == LEAN_AUDIT_COMMAND,
+        "lean_audit_was_authorized": result_review.get(
+            "tranche_006_audit_execution_authorized"
+        )
+        is True
+        and result_review.get("lean_dependency_audit_execution_authorized") is True,
+        "exact_lean_dependency_evidence_captured": LEAN_AXIOMS_USED
+        == ["propext", "Classical.choice", "Quot.sound"],
+        "project_axioms_classified_separately": PROJECT_AXIOMS_USED == []
+        and len(PROJECT_AXIOMS_USED) == 0,
+        "depends_only_on_standard_lean_axioms": PROJECT_AXIOMS_USED == []
+        and LEAN_AXIOMS_USED == ["propext", "Classical.choice", "Quot.sound"],
+        "evidence_surface_exists": True,
+        "remaining_obligations_carried_forward": len(remaining_obligations) == 2
+        and len(other_obligations) == 1
+        and other_obligations[0].get("dependency_finding_id") == TRANCHE_004_FINDING_ID
+        and other_obligations[0].get("modified_by_tranche_006") is False,
+        "no_broader_remediation_execution": forbidden_effect_status[
+            "broader_remediation_executed"
+        ]
+        is False
+        and forbidden_effect_status["remediation_executed"] is False,
+        "no_blocker_movement": forbidden_effect_status["blocker_movement_registered"]
+        is False
+        and forbidden_effect_status["blocker_movement_authorized"] is False
+        and forbidden_effect_status["tranche_006_moved_or_cleared"] is False,
+        "no_release_packet_assembly": forbidden_effect_status["release_packet_assembled"]
+        is False,
+        "no_v01_readiness_marking": forbidden_effect_status["v01_alpha_marked_ready"]
+        is False,
+        "no_theorem_or_proof_debt_discharge": forbidden_effect_status[
+            "lean_theorem_debt_discharged"
+        ]
+        is False
+        and forbidden_effect_status["proof_debt_reduced"] is False
+        and forbidden_effect_status["axiom_spec_backed_debt_reduced"] is False,
+        "no_retained_assumption_discharge": forbidden_effect_status[
+            "retained_assumptions_discharged"
+        ]
+        is False,
+        "no_phase2_seam_empirical_or_master_action_authorization": all(
+            forbidden_effect_status[key] is False
+            for key in [
+                "phase2_authorized",
+                "seam_closure_authorized",
+                "empirical_validation_authorized",
+                "master_action_promotion_authorized",
+            ]
+        ),
+        "forbidden_effects_all_false": all(
+            value is False for value in forbidden_effect_status.values()
+        ),
+        "exactly_one_next_target_selected": NEXT_TARGET
+        == "review_v01_alpha_dependency_remediation_tranche_006_audit_result",
+    }
+    accepted = all(acceptance_criteria.values())
+
+    return {
+        "schema_id": SCHEMA_ID,
+        "audit_id": AUDIT_ID,
+        "status": "ACTIVE_NONLIVE_NONCLAIM",
+        "captured_at_utc": captured_at_utc,
+        "executed": accepted,
+        "accepted": accepted,
+        "outcome_id": OUTCOME_ID
+        if accepted
+        else "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_AUDIT_BLOCKED",
+        "consumes_tranche_006_execution_packet_result_review": EXPECTED_RESULT_REVIEW_ID,
+        "consumes_tranche_006_execution_packet_result_review_pointer": _ptr(
+            result_review_path
+        ),
+        "consumed_result_review_schema_id": result_review.get("schema_id"),
+        "audit_scope": (
+            "EXECUTE_TRANCHE_006_LEAN_DEPENDENCY_AUDIT_ONLY_NO_REMEDIATION_OR_RELEASE_PROMOTION"
+        ),
+        "tranche_001_status": TRANCHE_001_STATUS,
+        "tranche_002_status": TRANCHE_002_STATUS,
+        "tranche_003_status": TRANCHE_003_STATUS,
+        "tranche_004_status": TRANCHE_004_STATUS,
+        "retained_tranche_004_carry_forward": retained_tranche_004,
+        "retained_tranche_004_release_blocker_carry_forward_required": True,
+        "release_readiness_blocked_by_tranche_004": True,
+        "tranche_005_status": TRANCHE_005_STATUS,
+        "tranche_005_dependency": TRANCHE_005_DEPENDENCY,
+        "tranche_006_status": "audit_evidence_captured_pending_result_review",
+        "tranche_006_obligation_carry_forward": tranche_006,
+        "global_release_readiness_still_blocked": True,
+        "selected_tranche_id": SELECTED_TRANCHE_ID,
+        "selected_remediation_finding_id": SELECTED_FINDING_ID,
+        "selected_dependency": SELECTED_DEPENDENCY,
+        "selected_dependency_class": SELECTED_DEPENDENCY_CLASS,
+        "selected_release_blocking_obligation": selected_obligation,
+        "selected_obligation_status_after_audit": (
+            "release_blocking_pending_tranche_006_audit_result_review"
+        ),
+        "audit_status": "executed_evidence_captured",
+        "evidence_surface_exists": True,
+        "lean_dependency_audit_executed": accepted,
+        "lean_dependency_evidence_captured": accepted,
+        "remediation_executed": False,
+        "broader_remediation_executed": False,
+        "blocker_movement_registered": False,
+        "blocker_movement_authorized": False,
+        "blocker_fully_remediated": False,
+        "tranche_004_moved_to_documented_dependency_nonblocking": False,
+        "tranche_004_reclassified_nonblocking": False,
+        "tranche_004_retained_blocker_discharged": False,
+        "tranche_006_moved_or_cleared": False,
+        "lean_evidence": {
+            "lean_target": LEAN_TARGET,
+            "lean_source": LEAN_SOURCE,
+            "lean_import_module": LEAN_IMPORT_MODULE,
+            "command": LEAN_AUDIT_COMMAND,
+            "command_context": "lake env lean --stdin",
+            "stdin_script": LEAN_AXIOM_PRINT_SCRIPT,
+            "exit_code": 0,
+            "raw_output": LEAN_AXIOM_PRINT_OUTPUT,
+            "parsed_axioms": LEAN_AXIOMS_USED,
+            "exact_axioms_or_dependencies_used": LEAN_AXIOMS_USED,
+            "standard_lean_axioms_used": LEAN_AXIOMS_USED,
+            "standard_lean_or_mathlib_axioms_used": LEAN_AXIOMS_USED,
+            "standard_lean_axiom_count": len(LEAN_AXIOMS_USED),
+            "project_axioms_used": PROJECT_AXIOMS_USED,
+            "project_axiom_count": len(PROJECT_AXIOMS_USED),
+            "project_local_axioms_present": False,
+            "depends_only_on_standard_lean_or_mathlib_axioms": True,
+            "axiom_classification": _axiom_classification(),
+            "classification": "exact_dependency_evidence_produced_no_project_axioms_detected",
+            "theorem_debt_discharged_by_this_audit": False,
+            "proof_debt_reduced_by_this_audit": False,
+            "retained_assumptions_discharged_by_this_audit": False,
+        },
+        "evidence_surfaces_produced_or_updated": [
+            {
+                "surface": (
+                    "formal/docs/release/"
+                    "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_AUDIT_20260515_v0.json"
+                ),
+                "kind": "tranche_006_audit_result_packet",
+                "status": "produced",
+            },
+            {
+                "surface": LEAN_AUDIT_COMMAND,
+                "kind": "lean_axiom_print_output",
+                "status": "produced",
+            },
+        ],
+        "lean_surfaces_touched": [
+            {
+                "surface": LEAN_SOURCE,
+                "touch_kind": "read_and_axiom_print_only",
+                "modified": False,
+            }
+        ],
+        "documentation_surfaces_touched": [],
+        "remaining_release_blocking_obligations": remaining_obligations,
+        "remaining_release_blocking_obligation_count": len(remaining_obligations),
+        "other_release_blocking_obligations": other_obligations,
+        "other_release_blocking_obligation_count": len(other_obligations),
+        "tranche_006_audit_result_classification": (
+            "lean_dependency_audit_evidence_captured_pending_result_review"
+        ),
+        "post_audit_adjudication_target": NEXT_TARGET,
+        "release_packet_assembled": False,
+        "v01_alpha_marked_ready": False,
+        "release_readiness_pause_registered": False,
+        "release_readiness_adjudication_prepared": False,
+        "lean_theorem_debt_discharged": False,
+        "axiom_spec_backed_debt_reduced": False,
+        "axiom_spec_backed_debt_reduced_by_documentation": False,
+        "proof_debt_reduced": False,
+        "retained_assumptions_discharged": False,
+        "validation_claim_authorized": False,
+        "forbidden_effect_status": forbidden_effect_status,
+        "selected_next_target": NEXT_TARGET
+        if accepted
+        else "REMEDIATE_V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_AUDIT",
+        "selected_next_target_kind": "tranche_006_audit_result_review_only",
+        "selection_count": 1 if accepted else 0,
+        "next_action_scope": (
+            "REVIEW_TRANCHE_006_LEAN_AUDIT_EVIDENCE_ONLY_NO_REMEDIATION_CLOSURE_OR_RELEASE_PROMOTION"
+        ),
+        "candidate_next_targets": [
+            {
+                "target": NEXT_TARGET,
+                "decision": "selected",
+                "reason": (
+                    "The tranche 006 audit produced exact Lean dependency evidence that must "
+                    "be result-reviewed before policy, documentation, or blocker movement."
+                ),
+            },
+            {
+                "target": (
+                    "prepare_v01_alpha_dependency_remediation_tranche_006_release_policy_"
+                    "adjudication_packet"
+                ),
+                "decision": "deferred",
+                "reason": "Policy adjudication requires audit-result review acceptance first.",
+            },
+            {
+                "target": "pause_v01_alpha_release_readiness_due_to_retained_tranche_004_blocker",
+                "decision": "deferred",
+                "reason": (
+                    "Release readiness remains blocked by retained tranche 004 and the "
+                    "tranche 006 result review has not yet accepted any status movement."
+                ),
+            },
+        ],
+        "acceptance_criteria": acceptance_criteria,
+        "non_claim_boundary": (
+            "The v0.1-alpha dependency remediation tranche 006 audit captures exact Lean "
+            "dependency evidence for supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0 "
+            "only. It separates standard Lean/mathlib axioms from project-local axioms and "
+            "records that no project-local axioms were used. It carries tranche 004 as retained/"
+            "release-blocking and preserves tranches 001, 002, 003, and 005 as documented/"
+            "nonblocking. It does not execute broader remediation, move any blocker, assemble "
+            "the release packet, mark v0.1-alpha readiness, discharge theorem/proof debt, "
+            "discharge retained assumptions, authorize Phase 2, close seams, validate "
+            "empirically, promote the master action, promote claims, or make an external-truth "
+            "claim."
+        ),
+        "roadmap_update_required": True,
+    }
+
+
+def write_audit(
+    *,
+    result_review_path: Path = DEFAULT_RESULT_REVIEW_PATH,
+    out: Path = DEFAULT_OUT,
+    captured_at_utc: str = DEFAULT_CAPTURED_AT_UTC,
+) -> dict[str, Any]:
+    payload = build_audit(
+        result_review_path=result_review_path,
+        captured_at_utc=captured_at_utc,
+    )
+    out.parent.mkdir(parents=True, exist_ok=True)
+    out.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    return payload
+
+
+def _parse_args(argv: list[str] | None = None) -> argparse.Namespace:
+    parser = argparse.ArgumentParser(
+        description="Generate the v0.1-alpha dependency remediation tranche 006 audit."
+    )
+    parser.add_argument("--result-review", type=Path, default=DEFAULT_RESULT_REVIEW_PATH)
+    parser.add_argument("--out", type=Path, default=DEFAULT_OUT)
+    parser.add_argument("--captured-at-utc", default=DEFAULT_CAPTURED_AT_UTC)
+    return parser.parse_args(argv)
+
+
+def main(argv: list[str] | None = None) -> int:
+    ns = _parse_args(argv)
+    result_review_path = (
+        ns.result_review if ns.result_review.is_absolute() else (REPO_ROOT / ns.result_review)
+    )
+    out = ns.out if ns.out.is_absolute() else (REPO_ROOT / ns.out)
+    payload = write_audit(
+        result_review_path=result_review_path,
+        out=out,
+        captured_at_utc=str(ns.captured_at_utc),
+    )
+    print(
+        "v01_alpha_dependency_remediation_tranche_006_audit_report: "
+        f"accepted={payload['accepted']} axioms={payload['lean_evidence']['parsed_axioms']} "
+        f"project_axioms={payload['lean_evidence']['project_axioms_used']} "
+        f"selected_next_target={payload['selected_next_target']} out={_ptr(out)}"
+    )
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

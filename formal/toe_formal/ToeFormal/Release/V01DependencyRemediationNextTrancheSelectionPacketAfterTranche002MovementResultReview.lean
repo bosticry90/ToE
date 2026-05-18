@@ -1,0 +1,39 @@
+/-
+ToeFormal/Release/V01DependencyRemediationNextTrancheSelectionPacketAfterTranche002MovementResultReview.lean
+
+Lean-side release index marker for the v0.1-alpha dependency-remediation
+next-tranche selection packet result review after tranche 002 movement. This
+accepts tranche 003 selection and authorizes only execution-packet preparation.
+-/
+
+namespace ToeFormal
+namespace Release
+namespace V01DependencyRemediationNextTrancheSelectionPacketAfterTranche002MovementResultReview
+
+def nextTrancheSelectionPacketAfterTranche002MovementResultReviewToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_NEXT_TRANCHE_SELECTION_PACKET_AFTER_TRANCHE_002_MOVEMENT_RESULT_REVIEW_v0"
+
+def nextTrancheSelectionPacketAfterTranche002MovementResultReviewOutcomeToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_NEXT_TRANCHE_SELECTION_AFTER_TRANCHE_002_MOVEMENT_RESULT_REVIEW_ACCEPTS_TRANCHE_003_SELECTION_AND_AUTHORIZES_TRANCHE_003_EXECUTION_PACKET_PREPARATION_ONLY"
+
+def selectedNextTarget : String :=
+  "prepare_v01_alpha_dependency_remediation_tranche_003_execution_packet"
+
+def selectedTranche : String :=
+  "V01-ALPHA-DEP-REM-TRANCHE-003"
+
+def selectedDependency : String :=
+  "finite_transport_theorems_construct_residual_package_v0"
+
+theorem v01_dependency_remediation_next_tranche_selection_packet_after_tranche_002_movement_result_review_accepts_one_tranche_only : True := by
+  trivial
+
+theorem v01_dependency_remediation_next_tranche_selection_packet_after_tranche_002_movement_result_review_does_not_execute_remediation : True := by
+  trivial
+
+theorem v01_dependency_remediation_next_tranche_selection_packet_after_tranche_002_movement_result_review_does_not_promote_release : True := by
+  trivial
+
+end V01DependencyRemediationNextTrancheSelectionPacketAfterTranche002MovementResultReview
+end Release
+end ToeFormal

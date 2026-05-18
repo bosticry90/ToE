@@ -1,0 +1,82 @@
+{
+  "acceptance_criteria": {
+    "all_promotion_allowed_false": true,
+    "archive_quarantine_scope_absent": true,
+    "audit_status_nonclaim": true,
+    "authorization_class_preserved": true,
+    "classification_outcome_nonclaim": true,
+    "consumes_capability_audit": true,
+    "forbidden_effects_all_false": true,
+    "missing_evidence_count_zero": true,
+    "nonclaim_boundary_explicit": true,
+    "promotion_allowed_count_zero": true
+  },
+  "accepted": true,
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_audit": {
+    "audit_classification_outcome": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_CLASSIFIES_EXISTING_NONCLAIM_ANALYSIS_SURFACES_WITHOUT_PROMOTION",
+    "audit_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+    "audit_path": "formal/docs/release/COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_20260515_v0.json",
+    "audit_row_count": 8,
+    "audit_schema_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_20260515_v0"
+  },
+  "forbidden_effect_status": {
+    "blocker_movement": false,
+    "empirical_validation_claim": false,
+    "external_truth_claim": false,
+    "lane_reopen": false,
+    "master_action_promotion": false,
+    "phase2_authorization": false,
+    "seam_closure": false,
+    "theorem_discharge": false
+  },
+  "gap_readout": {
+    "falsifier_status_counts": {
+      "blocked": 1,
+      "defined": 7
+    },
+    "known_limit_status_counts": {
+      "blocked": 1,
+      "candidate": 3,
+      "none": 1,
+      "partial": 3
+    },
+    "robustness_status_counts": {
+      "partial": 6,
+      "perturbation_scanned": 2
+    },
+    "strongest_gap_pattern": "UQ_DEPTH_AND_VALIDATION_DEPTH_ARE_PRIMARY_NEXT_CREDIBILITY_GAPS",
+    "uq_status_counts": {
+      "none": 5,
+      "partial": 1,
+      "qualitative": 2
+    },
+    "validation_status_counts": {
+      "empirical_candidate": 1,
+      "internal_only": 4,
+      "known_limit_candidate": 2,
+      "none": 1
+    },
+    "verification_status_counts": {
+      "gated": 8
+    }
+  },
+  "next_action": "PREPARE_VVUQ_CREDIBILITY_LEDGER_AFTER_CAPABILITY_AUDIT_REVIEW",
+  "next_packet": "VVUQ_CREDIBILITY_LEDGER_v0",
+  "next_packet_authorization_scope": "PREPARATION_ONLY",
+  "non_claim_boundary": "Result review accepts bounded capability classification only; it authorizes VVUQ ledger preparation only and does not authorize theorem discharge, blocker movement, lane reopen, Phase 2 authorization, empirical validation claim, seam closure, master-action promotion, or external-truth claim.",
+  "outcome_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_RESULT_REVIEW_ACCEPTS_BOUNDED_NONCLAIM_CLASSIFICATION_AND_AUTHORIZES_VVUQ_LEDGER_PREPARATION_ONLY",
+  "review_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_RESULT_REVIEW_v0",
+  "roadmap_update_required": true,
+  "schema_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_RESULT_REVIEW_20260515_v0",
+  "scope_confirmation": {
+    "archive_or_quarantine_path_count": 0,
+    "archive_or_quarantine_paths": [],
+    "every_lean_file_inventory_claimed": false,
+    "every_python_test_inventory_claimed": false,
+    "missing_evidence_count": 0,
+    "promotion_allowed_count": 0,
+    "whole_repo_inventory_claimed": false
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM"
+}

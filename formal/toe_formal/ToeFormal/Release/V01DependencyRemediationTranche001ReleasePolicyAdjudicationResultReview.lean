@@ -1,0 +1,37 @@
+/-
+ToeFormal/Release/V01DependencyRemediationTranche001ReleasePolicyAdjudicationResultReview.lean
+
+Lean-side release index marker for the v0.1-alpha dependency-remediation
+tranche 001 release-policy adjudication result-review surface. This records
+acceptance of policy_acceptable_with_documentation_requirement and keeps
+blocker movement and release promotion closed.
+-/
+
+namespace ToeFormal
+namespace Release
+namespace V01DependencyRemediationTranche001ReleasePolicyAdjudicationResultReview
+
+def tranche001ReleasePolicyAdjudicationResultReviewToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_001_RELEASE_POLICY_ADJUDICATION_RESULT_REVIEW_v0"
+
+def tranche001ReleasePolicyAdjudicationResultReviewOutcomeToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_001_RELEASE_POLICY_ADJUDICATION_RESULT_REVIEW_ACCEPTS_POLICY_ACCEPTABLE_WITH_DOCUMENTATION_REQUIREMENT_AND_AUTHORIZES_DOCUMENTATION_PACKET_PREPARATION_ONLY"
+
+def resultReviewClassification : String :=
+  "policy_adjudicated_nonblocking_pending_documentation"
+
+def selectedNextTarget : String :=
+  "prepare_v01_alpha_dependency_remediation_tranche_001_documentation_packet"
+
+theorem v01_dependency_remediation_tranche_001_release_policy_adjudication_result_review_accepts_documentation_required_status : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_001_release_policy_adjudication_result_review_does_not_clear_blocker : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_001_release_policy_adjudication_result_review_does_not_promote_release : True := by
+  trivial
+
+end V01DependencyRemediationTranche001ReleasePolicyAdjudicationResultReview
+end Release
+end ToeFormal

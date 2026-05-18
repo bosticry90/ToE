@@ -1,0 +1,117 @@
+{
+  "artifact_class_rules": [
+    {
+      "artifact_class": "simulation_or_numerical_method_surface",
+      "method_documentation_requirement": "require_numerical_method_details",
+      "non_applicability_reason_required": false,
+      "required_method_fields": [
+        "equation_or_system_solved",
+        "discretization_family",
+        "time_integrator",
+        "spatial_operator",
+        "convergence_status",
+        "benchmark_status",
+        "stability_condition_status",
+        "solver_crosscheck_status"
+      ]
+    },
+    {
+      "artifact_class": "comparator_or_report_surface",
+      "method_documentation_requirement": "require_not_applicable_reason",
+      "non_applicability_reason_required": true,
+      "required_method_fields": []
+    },
+    {
+      "artifact_class": "formal_governance_surface",
+      "method_documentation_requirement": "require_not_applicable_reason",
+      "non_applicability_reason_required": true,
+      "required_method_fields": []
+    },
+    {
+      "artifact_class": "seam_or_mismatch_report_surface",
+      "method_documentation_requirement": "require_not_applicable_reason",
+      "non_applicability_reason_required": true,
+      "required_method_fields": []
+    }
+  ],
+  "authorization_class": "AUXILIARY_NONCLAIM_COMPUTATIONAL_ANALYSIS",
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "card_defaults": {
+    "claim_ceiling": "model_card_reviewability_only",
+    "comparison_execution_status": "not_executed_by_template",
+    "promotion_allowed": false,
+    "validation_upgrade_from_template": false
+  },
+  "consumes_result_review": "REFERENT_REGISTRY_RESULT_REVIEW_v0",
+  "consumes_result_review_pointer": "formal/docs/release/REFERENT_REGISTRY_RESULT_REVIEW_20260515_v0.json",
+  "forbidden_claims": [
+    "theorem_discharge",
+    "blocker_movement",
+    "lane_reopen",
+    "phase2_authorization",
+    "empirical_validation_claim",
+    "seam_closure",
+    "master_action_promotion",
+    "external_truth_claim"
+  ],
+  "instantiated_model_card_count": 0,
+  "lineage_context": {
+    "comparison_execution_status_counts": {
+      "not_executed_v0": 8
+    },
+    "referent_row_count": 8,
+    "source_method_applicability_counts": {
+      "comparator_or_report_surface": 5,
+      "formal_or_governance_surface": 1,
+      "numerical_method_applicable": 2
+    },
+    "uq_dependency_counts": {
+      "uq_not_quantified": 5,
+      "uq_partial_quantitative": 1,
+      "uq_qualitative": 2
+    },
+    "validation_status_counts": {
+      "empirical_candidate": 1,
+      "internal_only": 4,
+      "known_limit_candidate": 2,
+      "none": 1
+    }
+  },
+  "model_card_instantiation_claim_count": 0,
+  "next_recommended_action": "REVIEW_SIMULATION_MODEL_CARD_TEMPLATE_RESULT",
+  "non_applicability_handling": "Non-simulation, comparator/report, seam/mismatch, and formal/governance cards must populate numerical_method_or_not_applicable_reason with an explicit reason instead of fabricating solver details.",
+  "non_claim_boundary": "Simulation model card template only; defines required documentation fields and applicability rules without instantiating model cards, executing simulations, executing comparisons, upgrading validation, discharging theorem debt, moving blockers, reopening lanes, authorizing Phase 2, claiming empirical validation, closing seams, promoting the master action, or making external-truth claims.",
+  "preparation_result": "SIMULATION_MODEL_CARD_TEMPLATE_PREPARED_FROM_REFERENT_REGISTRY_REVIEW_WITH_NONCLAIM_MODEL_DOCUMENTATION_CEILINGS",
+  "promotion_allowed_default": false,
+  "required_model_card_fields": [
+    "model_id",
+    "artifact_id",
+    "source_path",
+    "model_family",
+    "purpose",
+    "governing_equations_or_report_logic",
+    "assumptions",
+    "inputs",
+    "outputs",
+    "numerical_method_or_not_applicable_reason",
+    "verification_status",
+    "validation_status",
+    "known_limit_or_referent_status",
+    "uq_status",
+    "robustness_status",
+    "sensitivity_protocol_status",
+    "failure_modes",
+    "claim_ceiling",
+    "promotion_allowed",
+    "forbidden_claims",
+    "upgrade_requirements"
+  ],
+  "schema_id": "SIMULATION_MODEL_CARD_TEMPLATE_20260515_v0",
+  "source_referent_registry": "REFERENT_REGISTRY_v0",
+  "source_referent_registry_pointer": "formal/docs/release/REFERENT_REGISTRY_20260515_v0.json",
+  "source_referent_registry_row_count": 8,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "template_claim_ceiling": "model_documentation_template_only",
+  "template_id": "SIMULATION_MODEL_CARD_TEMPLATE_v0",
+  "template_scope": "DEFINE_MODEL_CARD_TEMPLATE_ONLY_NO_CARD_INSTANTIATION_CLAIM"
+}

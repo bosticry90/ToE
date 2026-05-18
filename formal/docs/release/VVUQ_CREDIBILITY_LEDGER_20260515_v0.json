@@ -1,0 +1,230 @@
+{
+  "all_promotion_allowed_false": true,
+  "authorization_class": "AUXILIARY_NONCLAIM_COMPUTATIONAL_ANALYSIS",
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumes_result_review": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_RESULT_REVIEW_v0",
+  "consumes_result_review_pointer": "formal/docs/release/COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_RESULT_REVIEW_20260515_v0.json",
+  "ledger_id": "VVUQ_CREDIBILITY_LEDGER_v0",
+  "ledger_rows": [
+    {
+      "artifact_id": "C6_CP_NLSE_2D_LANE",
+      "claim_ceiling": "internal_consequence_only",
+      "claim_status": "internal_consequence",
+      "credibility_readout": "verification_present_but_uq_and_validation_depth_limited",
+      "input_pedigree": "repo_internal",
+      "management_status": "roadmap_pinned_gated",
+      "model_family": "nonlinear_field",
+      "promotion_allowed": false,
+      "results_robustness": "partial",
+      "results_uncertainty": "not_quantified",
+      "source_audit_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+      "source_audit_reference": "formal/python/crft/cp_nlse_2d.py",
+      "upgrade_requirements": [
+        "quantitative_uncertainty_estimate",
+        "resolution_or_solver_sensitivity_scan",
+        "known_limit_or_referent_comparison_where_applicable",
+        "explicit_pass_fail_known_limit_criterion",
+        "execute_defined_falsifier_or_record_blocker"
+      ],
+      "use_history": "existing_gated_lane",
+      "validation_status": "internal_only",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "C7_MT01A_ACOUSTIC_METRIC_LANE",
+      "claim_ceiling": "validation_candidate_only",
+      "claim_status": "validation_candidate",
+      "credibility_readout": "verification_present_but_uq_and_validation_depth_limited",
+      "input_pedigree": "repo_internal",
+      "management_status": "roadmap_pinned_gated",
+      "model_family": "cross_pillar",
+      "promotion_allowed": false,
+      "results_robustness": "perturbation_scanned",
+      "results_uncertainty": "not_quantified",
+      "source_audit_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+      "source_audit_reference": "formal/python/crft/acoustic_metric.py",
+      "upgrade_requirements": [
+        "quantitative_uncertainty_estimate",
+        "broaden_to_resolution_or_solver_crosscheck",
+        "known_limit_or_referent_comparison_where_applicable",
+        "explicit_pass_fail_known_limit_criterion",
+        "execute_defined_falsifier_or_record_blocker"
+      ],
+      "use_history": "existing_gated_lane",
+      "validation_status": "internal_only",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "UCFF_SPECTRAL_AUDIT_LINEAGE",
+      "claim_ceiling": "internal_consequence_only",
+      "claim_status": "internal_consequence",
+      "credibility_readout": "bounded_robustness_and_known_limit_pressure_without_promotion",
+      "input_pedigree": "repo_internal",
+      "management_status": "roadmap_pinned_gated",
+      "model_family": "nonlinear_field",
+      "promotion_allowed": false,
+      "results_robustness": "partial",
+      "results_uncertainty": "qualitative",
+      "source_audit_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+      "source_audit_reference": "formal/docs/ucff_core_front_door_spec.md",
+      "upgrade_requirements": [
+        "quantitative_uncertainty_estimate",
+        "resolution_or_solver_sensitivity_scan",
+        "known_limit_or_referent_comparison_where_applicable",
+        "explicit_pass_fail_known_limit_criterion",
+        "execute_defined_falsifier_or_record_blocker"
+      ],
+      "use_history": "existing_gated_front_door",
+      "validation_status": "internal_only",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "BRAGG_DISPERSION_ELIMINATIVE_LANE",
+      "claim_ceiling": "validation_candidate_only",
+      "claim_status": "validation_candidate",
+      "credibility_readout": "verification_present_validation_candidate_but_not_validated",
+      "input_pedigree": "mixed",
+      "management_status": "roadmap_pinned_gated",
+      "model_family": "nonlinear_field",
+      "promotion_allowed": false,
+      "results_robustness": "partial",
+      "results_uncertainty": "partial_quantitative",
+      "source_audit_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+      "source_audit_reference": "formal/docs/cv01_bec_bragg_v1_front_door_contract.md",
+      "upgrade_requirements": [
+        "resolution_or_solver_sensitivity_scan",
+        "executed_validation_comparison_with_uncertainty_and_domain",
+        "explicit_pass_fail_known_limit_criterion",
+        "execute_defined_falsifier_or_record_blocker"
+      ],
+      "use_history": "existing_gated_comparator",
+      "validation_status": "empirical_candidate",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "RL01_RELATIVISTIC_DISPERSION_LIMIT",
+      "claim_ceiling": "known_limit_relevance_only",
+      "claim_status": "known_limit_relevant",
+      "credibility_readout": "verification_present_but_uq_missing",
+      "input_pedigree": "mixed",
+      "management_status": "roadmap_pinned_gated",
+      "model_family": "SR",
+      "promotion_allowed": false,
+      "results_robustness": "partial",
+      "results_uncertainty": "not_quantified",
+      "source_audit_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+      "source_audit_reference": "formal/docs/rl01_relativistic_dispersion_v0_front_door_contract.md",
+      "upgrade_requirements": [
+        "quantitative_uncertainty_estimate",
+        "resolution_or_solver_sensitivity_scan",
+        "executed_validation_comparison_with_uncertainty_and_domain",
+        "explicit_pass_fail_known_limit_criterion",
+        "execute_defined_falsifier_or_record_blocker"
+      ],
+      "use_history": "existing_gated_comparator",
+      "validation_status": "known_limit_candidate",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "RL02_NONRELATIVISTIC_NLSE_LIMIT",
+      "claim_ceiling": "known_limit_relevance_only",
+      "claim_status": "known_limit_relevant",
+      "credibility_readout": "verification_present_but_uq_missing",
+      "input_pedigree": "mixed",
+      "management_status": "roadmap_pinned_gated",
+      "model_family": "nonlinear_field",
+      "promotion_allowed": false,
+      "results_robustness": "partial",
+      "results_uncertainty": "not_quantified",
+      "source_audit_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+      "source_audit_reference": "formal/docs/rl02_nonrelativistic_nlse_v0_front_door_contract.md",
+      "upgrade_requirements": [
+        "quantitative_uncertainty_estimate",
+        "resolution_or_solver_sensitivity_scan",
+        "executed_validation_comparison_with_uncertainty_and_domain",
+        "explicit_pass_fail_known_limit_criterion",
+        "execute_defined_falsifier_or_record_blocker"
+      ],
+      "use_history": "existing_gated_comparator",
+      "validation_status": "known_limit_candidate",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "GR01_DERIVATION_COMPLETENESS_GATE",
+      "claim_ceiling": "blocked_no_upgrade",
+      "claim_status": "blocked",
+      "credibility_readout": "blocked_or_governance_limited_no_credibility_upgrade",
+      "input_pedigree": "supplied_assumption",
+      "management_status": "roadmap_pinned_gated",
+      "model_family": "GR",
+      "promotion_allowed": false,
+      "results_robustness": "partial",
+      "results_uncertainty": "not_quantified",
+      "source_audit_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+      "source_audit_reference": "formal/docs/paper/DERIVATION_TARGET_GR01_HARDENING_v0.md",
+      "upgrade_requirements": [
+        "quantitative_uncertainty_estimate",
+        "resolution_or_solver_sensitivity_scan",
+        "known_limit_or_referent_comparison_where_applicable",
+        "resolve_falsifier_blocker_before_credibility_upgrade"
+      ],
+      "use_history": "existing_gated_derivation_governance",
+      "validation_status": "none",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "BRIDGE_PROGRAM_ORTHOGONALITY_REPORTS",
+      "claim_ceiling": "internal_consequence_only",
+      "claim_status": "internal_consequence",
+      "credibility_readout": "bounded_nonclaim_credibility_bookkeeping_only",
+      "input_pedigree": "repo_internal",
+      "management_status": "roadmap_pinned_gated",
+      "model_family": "cross_pillar",
+      "promotion_allowed": false,
+      "results_robustness": "perturbation_scanned",
+      "results_uncertainty": "qualitative",
+      "source_audit_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+      "source_audit_reference": "formal/python/tools/bridge_program_orthogonality_report_generate.py",
+      "upgrade_requirements": [
+        "quantitative_uncertainty_estimate",
+        "broaden_to_resolution_or_solver_crosscheck",
+        "known_limit_or_referent_comparison_where_applicable",
+        "execute_defined_falsifier_or_record_blocker"
+      ],
+      "use_history": "existing_gated_bridge_report",
+      "validation_status": "internal_only",
+      "verification_status": "gated"
+    }
+  ],
+  "non_claim_boundary": "Credibility bookkeeping only; no theorem discharge, blocker movement, lane reopen, Phase 2 authorization, empirical validation claim, seam closure, master-action promotion, or external-truth claim.",
+  "preparation_result": "VVUQ_CREDIBILITY_LEDGER_PREPARED_FROM_CAPABILITY_AUDIT_WITH_NONCLAIM_CREDIBILITY_CEILINGS",
+  "primary_gap_pattern": "UQ_DEPTH_AND_VALIDATION_DEPTH_ARE_PRIMARY_NEXT_CREDIBILITY_GAPS",
+  "promotion_allowed_count": 0,
+  "schema_id": "VVUQ_CREDIBILITY_LEDGER_20260515_v0",
+  "scoring_policy": "NO_NUMERICAL_CREDIBILITY_SCORE_IN_V0",
+  "source_audit": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+  "source_audit_pointer": "formal/docs/release/COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_20260515_v0.json",
+  "source_audit_row_count": 8,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "summary": {
+    "claim_ceiling_counts": {
+      "blocked_no_upgrade": 1,
+      "internal_consequence_only": 3,
+      "known_limit_relevance_only": 2,
+      "validation_candidate_only": 2
+    },
+    "next_recommended_action": "REVIEW_VVUQ_CREDIBILITY_LEDGER_RESULT",
+    "results_uncertainty_counts": {
+      "not_quantified": 5,
+      "partial_quantitative": 1,
+      "qualitative": 2
+    },
+    "row_count": 8,
+    "validation_status_counts": {
+      "empirical_candidate": 1,
+      "internal_only": 4,
+      "known_limit_candidate": 2,
+      "none": 1
+    }
+  }
+}

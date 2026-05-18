@@ -1,0 +1,372 @@
+{
+  "acceptance_criteria": {
+    "consumes_expert_review_packet_result_review": true,
+    "dependency_rows_preserved": true,
+    "dependency_rows_still_unexecuted": true,
+    "documentation_only_dependencies_preserved": true,
+    "exactly_one_next_target_selected": true,
+    "execution_packet_sections_present": true,
+    "execution_schema_defined": true,
+    "expert_review_required_dependencies_preserved": true,
+    "forbidden_effects_all_false": true,
+    "no_axiom_spec_backed_debt_reduction": true,
+    "no_expert_review_execution": true,
+    "no_expert_review_execution_authorization": true,
+    "no_lean_theorem_debt_discharge": true,
+    "no_phase2_seam_empirical_or_master_action_authorization": true,
+    "no_release_packet_assembly": true,
+    "no_retained_assumption_discharge": true,
+    "no_v01_readiness_marking": true,
+    "primary_packet_gap_preserved": true,
+    "proof_debt_class_count_preserved": true,
+    "release_blocking_dependencies_preserved": true,
+    "result_review_accepted": true,
+    "result_review_outcome_expected": true,
+    "result_review_pointer_matches": true,
+    "result_review_scope_preparation_only": true,
+    "result_review_selected_this_packet": true,
+    "retained_assumption_count_preserved": true,
+    "retained_assumptions_remain_retained": true,
+    "review_conclusions_not_produced": true,
+    "source_expert_packet_matches": true,
+    "source_expert_packet_prepared": true
+  },
+  "axiom_spec_backed_debt_reduced": false,
+  "axiom_spec_backed_debt_reduced_by_documentation": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The prepared execution wrapper must be reviewed before any expert review execution is authorized.",
+      "target": "review_v01_alpha_expert_review_execution_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Execution remains closed until the execution-packet result review explicitly authorizes it.",
+      "target": "execute_v01_alpha_expert_review_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Release assembly remains blocked while expert review execution and dependency adjudication are incomplete.",
+      "target": "assemble_v01_alpha_public_release_packet"
+    }
+  ],
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "classification": "P-POLICY/nonclaim",
+  "consumed_target": "prepare_v01_alpha_expert_review_execution_packet",
+  "consumes_result_review": "V01_ALPHA_EXPERT_REVIEW_PACKET_RESULT_REVIEW_v0",
+  "consumes_result_review_pointer": "formal/docs/release/V01_ALPHA_EXPERT_REVIEW_PACKET_RESULT_REVIEW_20260515_v0.json",
+  "execution_packet": {
+    "axiom_spec_backed_ledger_pointers": {
+      "ledger_pointer": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+      "posture": {
+        "blocks_full_pillar_target_count": 22,
+        "defaultNonAlias": "absent_from_unresolved_axiom_debt_and_lean_backed",
+        "documentation_discharge_claim": false,
+        "real_axiom_count": 59,
+        "real_axiom_file_count": 14,
+        "real_sorry_or_admit_count": 0,
+        "retained_assumption_count": 22,
+        "sampleRep32": "absent_from_unresolved_axiom_debt_and_lean_backed_constructor",
+        "spec_backed_count": 37
+      },
+      "refresh_result_review_pointer": "formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_20260505_v0.json",
+      "review_task": "Assess whether retained assumptions and spec-backed rows are accurately labeled and release-blocking."
+    },
+    "evidence_bundle_pointers": {
+      "axiom_refresh_result_review": "formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_RESULT_REVIEW_20260505_v0.json",
+      "axiom_spec_backed_ledger": "formal/docs/release/LEAN_AXIOM_SPEC_BACKED_LEDGER_v0.md",
+      "expert_review_packet": "formal/docs/release/V01_ALPHA_EXPERT_REVIEW_PACKET_20260515_v0.json",
+      "expert_review_packet_result_review": "formal/docs/release/V01_ALPHA_EXPERT_REVIEW_PACKET_RESULT_REVIEW_20260515_v0.json",
+      "lean_aggregate": "formal/toe_formal/ToeFormal.lean",
+      "lean_dependency_audit_capture_packet": "formal/docs/release/V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_PACKET_20260515_v0.json",
+      "lean_dependency_audit_capture_result_review": "formal/docs/release/V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_RESULT_REVIEW_20260515_v0.json",
+      "lean_dependency_audit_table": "formal/docs/release/TOE_V01_ALPHA_LEAN_DEPENDENCY_AUDIT_v0.md",
+      "lean_release_index": "formal/toe_formal/ToeFormal/Release/V01Index.lean"
+    },
+    "expert_review_output_schema": {
+      "allowed_recommended_next_targets": [
+        "execute_v01_alpha_expert_review_packet",
+        "remediate_v01_alpha_expert_review_execution_packet",
+        "hold_v01_alpha_release_readiness_chain"
+      ],
+      "conclusions_produced_by_this_packet": false,
+      "dependency_row_assessment_required_fields": [
+        "theorem",
+        "source_file",
+        "observed_dependency_result",
+        "project_axioms_used",
+        "supplied_structures_used",
+        "release_dependency_class",
+        "expert_reviewer_assessment",
+        "blocks_v01_alpha_release_packet",
+        "requires_remediation_before_release_assembly"
+      ],
+      "forbidden_output_claims": [
+        "release_ready",
+        "theorem_debt_discharged",
+        "proof_debt_reduced",
+        "retained_assumptions_discharged",
+        "phase2_authorized",
+        "seam_closed",
+        "empirical_validation_complete",
+        "master_action_promoted",
+        "claim_promoted"
+      ],
+      "output_produced_by_this_packet": false,
+      "required_fields": [
+        "review_id",
+        "reviewer_role",
+        "reviewed_input_bundle",
+        "dependency_row_assessments",
+        "retained_assumption_assessments",
+        "release_blocking_dependency_assessments",
+        "lean_dependency_audit_assessment",
+        "axiom_spec_backed_ledger_assessment",
+        "scope_boundary_attestation",
+        "forbidden_promotion_attestation",
+        "recommended_next_target"
+      ],
+      "schema_id": "V01_ALPHA_EXPERT_REVIEW_OUTPUT_SCHEMA_v0",
+      "schema_prepared": true
+    },
+    "lean_dependency_audit_posture_pointers": {
+      "dependency_audit_pointer": "formal/docs/release/TOE_V01_ALPHA_LEAN_DEPENDENCY_AUDIT_v0.md",
+      "dependency_row_count": 6,
+      "primary_capture_gap": "EXACT_AXIOM_PRINT_OUTPUT_AND_EXPERT_REVIEW_NOT_EXECUTED_V0",
+      "release_index_check_count": 8,
+      "release_index_command": "Push-Location formal/toe_formal; lake env lean ToeFormal/Release/V01Index.lean; Pop-Location",
+      "release_index_pointer": "formal/toe_formal/ToeFormal/Release/V01Index.lean",
+      "release_index_status": "passed_current_packet_validation",
+      "relevant_module_count": 5
+    },
+    "post_review_adjudication_rules": {
+      "debt_discharge_effect": "none_by_this_packet",
+      "execution_after_this_packet": "not_authorized",
+      "execution_authorization_condition": "Only review_v01_alpha_expert_review_execution_packet_result may later authorize execute_v01_alpha_expert_review_packet, and only within the packet schema.",
+      "next_review_target": "review_v01_alpha_expert_review_execution_packet_result",
+      "release_readiness_effect": "none_by_this_packet",
+      "result_review_required_before_execution": true,
+      "review_output_effect": "expert_review_output_can_inform_later_adjudication_but_cannot_directly_promote_release",
+      "rules": [
+        "A prepared execution packet must be result-reviewed before any expert review execution begins.",
+        "Expert-review execution, if later authorized, may produce review findings but still cannot assemble the release packet by itself.",
+        "Any release-readiness, theorem-debt, proof-debt, seam, Phase 2, empirical, master-action, or claim promotion requires a separate explicit adjudication artifact."
+      ]
+    },
+    "release_blocking_dependency_review_expectations": {
+      "dependency_names": [
+        "master_action_stationary_implies_free_scalar_kg",
+        "stationary_implies_operator_zero",
+        "finite_transport_theorems_construct_residual_package_v0",
+        "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+        "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+        "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0"
+      ],
+      "expected_release_dependency_class": "release_blocking_pending_capture_or_review",
+      "release_blocker_status_changes_allowed_by_this_packet": false,
+      "review_expectations": [
+        "Review each dependency against Lean audit posture and supplied-structure classification.",
+        "Record whether the dependency remains release-blocking for v0.1-alpha packet assembly.",
+        "Do not mark any dependency resolved, discharged, or release-ready in this packet."
+      ],
+      "row_count": 6
+    },
+    "retained_assumption_review_expectations": {
+      "discharge_allowed_by_this_packet": false,
+      "expected_status": "retained_assumption",
+      "remain_retained_through_this_packet": true,
+      "review_expectations": [
+        "Confirm each retained-assumption row remains accurately labeled.",
+        "Identify release-blocking retained assumptions without treating identification as discharge.",
+        "Record remediation needs for later proof work or dependency adjudication."
+      ],
+      "row_count": 22
+    },
+    "review_acceptance_criteria": [
+      {
+        "criterion_id": "inputs_complete",
+        "release_effect": "none_by_this_packet",
+        "requirement": "All required reviewer inputs and evidence bundle pointers are present and repository-local."
+      },
+      {
+        "criterion_id": "dependency_rows_classified",
+        "release_effect": "classification_only_until_separate_adjudication",
+        "requirement": "Each release-facing dependency row receives a classification and rationale in a later expert review output."
+      },
+      {
+        "criterion_id": "retained_assumptions_explicit",
+        "release_effect": "no_proof_debt_reduction",
+        "requirement": "Retained assumptions are reviewed as retained and are not treated as discharged by review text."
+      },
+      {
+        "criterion_id": "release_blockers_explicit",
+        "release_effect": "no_release_readiness_marking",
+        "requirement": "Release-blocking dependencies remain blocking unless a later separate proof/dependency adjudication authorizes otherwise."
+      },
+      {
+        "criterion_id": "forbidden_promotions_absent",
+        "release_effect": "promotion_firewall_preserved",
+        "requirement": "The future expert-review output must not mark readiness, discharge theorem debt, close seams, or promote the master action."
+      }
+    ],
+    "review_failure_criteria": [
+      {
+        "criterion_id": "missing_required_input",
+        "failure_condition": "Any required evidence pointer, dependency row, or retained-assumption row is missing.",
+        "required_response": "block_or_remediate_before_execution"
+      },
+      {
+        "criterion_id": "review_conclusion_without_execution",
+        "failure_condition": "The packet or a later result review records expert-review conclusions before authorized execution.",
+        "required_response": "invalidate_execution_packet_result"
+      },
+      {
+        "criterion_id": "premature_debt_reduction",
+        "failure_condition": "Any review text treats documentation, review, or packet preparation as theorem-debt or proof-debt discharge.",
+        "required_response": "block_release_promotion"
+      },
+      {
+        "criterion_id": "promotion_leak",
+        "failure_condition": "Any Phase 2, seam-closure, empirical-validation, master-action-promotion, claim-promotion, or release-readiness flag is set true.",
+        "required_response": "block_and_repair_packet"
+      }
+    ],
+    "review_scope_boundaries": {
+      "execution_wrapper_scope": "prepare_controlled_expert_review_execution_packet_only",
+      "in_scope": [
+        "reviewer input manifest",
+        "reviewer question set",
+        "release-facing dependency review boundaries",
+        "retained-assumption inspection expectations",
+        "release-blocking dependency inspection expectations",
+        "future expert-review output schema",
+        "post-review adjudication routing rules"
+      ],
+      "out_of_scope": [
+        "expert review execution",
+        "review conclusions",
+        "release packet assembly",
+        "v0.1-alpha readiness marking",
+        "Lean theorem debt discharge",
+        "axiom/spec-backed proof debt reduction",
+        "retained-assumption discharge",
+        "Phase 2 authorization",
+        "seam closure",
+        "empirical validation",
+        "master-action promotion",
+        "claim promotion"
+      ],
+      "this_packet_authorizes_expert_review_execution": false,
+      "this_packet_executes_expert_review": false,
+      "this_packet_produces_review_conclusions": false
+    },
+    "reviewer_inputs": [
+      {
+        "accepted": true,
+        "expected_review_id": "V01_ALPHA_EXPERT_REVIEW_PACKET_RESULT_REVIEW_v0",
+        "input_id": "expert_review_packet_result_review",
+        "pointer": "formal/docs/release/V01_ALPHA_EXPERT_REVIEW_PACKET_RESULT_REVIEW_20260515_v0.json",
+        "required": true,
+        "scope": "EXPERT_REVIEW_PACKET_RESULT_REVIEW_ONLY_NO_REVIEW_EXECUTION"
+      },
+      {
+        "expected_packet_id": "V01_ALPHA_EXPERT_REVIEW_PACKET_v0",
+        "input_id": "expert_review_packet",
+        "pointer": "formal/docs/release/V01_ALPHA_EXPERT_REVIEW_PACKET_20260515_v0.json",
+        "prepared": true,
+        "required": true,
+        "review_execution_status": "not_executed_v0"
+      },
+      {
+        "dependency_row_count": 6,
+        "input_id": "lean_dependency_audit_capture_packet",
+        "pointer": "formal/docs/release/V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_PACKET_20260515_v0.json",
+        "primary_capture_gap": "EXACT_AXIOM_PRINT_OUTPUT_AND_EXPERT_REVIEW_NOT_EXECUTED_V0",
+        "required": true
+      },
+      {
+        "expected_row_status": "not_executed_v0/prepared_not_assessed",
+        "input_id": "dependency_review_rows",
+        "pointer": "formal/docs/release/V01_ALPHA_EXPERT_REVIEW_PACKET_20260515_v0.json::dependency_review_rows",
+        "required": true,
+        "row_count": 6
+      },
+      {
+        "expected_status": "retained_assumption",
+        "input_id": "retained_assumption_rows",
+        "pointer": "formal/docs/release/V01_ALPHA_EXPERT_REVIEW_PACKET_20260515_v0.json::review_scope.retained_assumptions.rows",
+        "required": true,
+        "row_count": 22
+      }
+    ],
+    "reviewer_questions": [
+      "Are all release-facing dependency rows correctly classified as release-blocking, documentation-only, or review-required?",
+      "Do the Lean dependency-audit rows and #print axioms commands identify the exact dependency posture required for v0.1-alpha review?",
+      "Which retained assumptions remain blockers for release packet assembly, theorem-debt discharge, seam closure, or master-action promotion?",
+      "Does any dependency row require remediation before a later expert review execution can produce a valid conclusion?",
+      "What evidence bundle is sufficient for a later result review to decide whether expert review execution may proceed?"
+    ]
+  },
+  "execution_status": "not_executed_v0",
+  "expert_review_conclusions_produced": false,
+  "expert_review_executed": false,
+  "expert_review_execution_authorized": false,
+  "forbidden_effect_status": {
+    "axiom_spec_backed_debt_reduced": false,
+    "axiom_spec_backed_debt_reduced_by_documentation": false,
+    "blocker_movement_authorized": false,
+    "claim_promotion_authorized": false,
+    "computational_physics_execution_surface_opened": false,
+    "empirical_validation_authorized": false,
+    "expert_review_conclusions_produced": false,
+    "expert_review_executed": false,
+    "expert_review_execution_authorized": false,
+    "lane_reopen_authorized": false,
+    "lean_theorem_debt_discharged": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "proof_debt_reduced": false,
+    "release_packet_assembled": false,
+    "retained_assumptions_discharged": false,
+    "seam_closure_authorized": false,
+    "theorem_discharge_authorized": false,
+    "v01_alpha_marked_ready": false
+  },
+  "lean_theorem_debt_discharged": false,
+  "non_claim_boundary": "The v0.1-alpha expert review execution packet prepares a controlled execution wrapper only. It does not execute expert review, produce review conclusions, assemble the release packet, mark v0.1-alpha readiness, discharge Lean theorem debt, reduce axiom/spec-backed proof debt, discharge retained assumptions, authorize Phase 2, close seams, validate empirically, promote the master action, promote claims, or make an external-truth claim.",
+  "outcome_id": "V01_ALPHA_EXPERT_REVIEW_EXECUTION_PACKET_PREPARED_WITH_NO_EXPERT_REVIEW_EXECUTION_OR_RELEASE_PROMOTION",
+  "packet_id": "V01_ALPHA_EXPERT_REVIEW_EXECUTION_PACKET_v0",
+  "packet_scope": "PREPARE_EXPERT_REVIEW_EXECUTION_PACKET_ONLY_NO_REVIEW_EXECUTION_OR_RELEASE_PROMOTION",
+  "packet_summary": {
+    "dependency_review_row_count": 6,
+    "documentation_only_dependency_count": 3,
+    "execution_schema_defined": true,
+    "expert_review_required_dependency_count": 6,
+    "primary_packet_gap": "EXPERT_REVIEW_PACKET_PREPARED_BUT_REVIEW_NOT_EXECUTED_V0",
+    "proof_debt_class_count": 3,
+    "release_blocking_dependency_count": 6,
+    "retained_assumption_count": 22,
+    "review_conclusions_produced": false
+  },
+  "prepared": true,
+  "proof_debt_reduced": false,
+  "release_packet_assembled": false,
+  "retained_assumptions_discharged": false,
+  "review_conclusions": {
+    "items": [],
+    "produced": false,
+    "reason": "execution_packet_preparation_only"
+  },
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_EXPERT_REVIEW_EXECUTION_PACKET_20260515_v0",
+  "selected_next_target": "review_v01_alpha_expert_review_execution_packet_result",
+  "selected_next_target_kind": "result_review_only",
+  "selection_count": 1,
+  "source_expert_review_packet": "V01_ALPHA_EXPERT_REVIEW_PACKET_v0",
+  "source_expert_review_packet_pointer": "formal/docs/release/V01_ALPHA_EXPERT_REVIEW_PACKET_20260515_v0.json",
+  "source_lean_dependency_audit_capture_packet": "V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_PACKET_v0",
+  "source_lean_dependency_audit_capture_packet_pointer": "formal/docs/release/V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_PACKET_20260515_v0.json",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "v01_alpha_marked_ready": false,
+  "validation_claim_authorized": false
+}

@@ -1,0 +1,90 @@
+{
+  "acceptance_criteria": {
+    "all_promotion_allowed_false": true,
+    "all_scan_execution_status_not_executed_v0": true,
+    "authorization_class_preserved": true,
+    "c6_c7_method_debt_visible": true,
+    "consumes_sensitivity_robustness_protocol": true,
+    "forbidden_effects_all_false": true,
+    "no_numerical_credibility_score": true,
+    "primary_robustness_gap_preserved": true,
+    "promotion_allowed_count_zero": true,
+    "protocol_row_count_exact": true,
+    "protocol_scope_preserved": true,
+    "protocol_status_nonclaim": true,
+    "robustness_completion_claim_count_zero": true,
+    "row_ids_match_prior_lineage": true,
+    "scan_execution_claim_count_zero": true,
+    "scan_execution_counts_expected": true,
+    "uq_limitations_visible": true,
+    "validation_upgrade_count_zero": true
+  },
+  "accepted": true,
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_protocol": {
+    "protocol_id": "SENSITIVITY_ROBUSTNESS_PROTOCOL_v0",
+    "protocol_path": "formal/docs/release/SENSITIVITY_ROBUSTNESS_PROTOCOL_20260515_v0.json",
+    "protocol_preparation_result": "SENSITIVITY_ROBUSTNESS_PROTOCOL_PREPARED_FROM_REGIME_RECOVERY_REVIEW_WITH_NONCLAIM_ROBUSTNESS_CEILINGS",
+    "protocol_row_count": 8,
+    "protocol_schema_id": "SENSITIVITY_ROBUSTNESS_PROTOCOL_20260515_v0"
+  },
+  "forbidden_effect_status": {
+    "blocker_movement": false,
+    "empirical_validation_claim": false,
+    "external_truth_claim": false,
+    "lane_reopen": false,
+    "master_action_promotion": false,
+    "phase2_authorization": false,
+    "seam_closure": false,
+    "theorem_discharge": false
+  },
+  "next_action": "PREPARE_REFERENT_REGISTRY_AFTER_SENSITIVITY_ROBUSTNESS_PROTOCOL_REVIEW",
+  "next_packet": "REFERENT_REGISTRY_v0",
+  "next_packet_authorization_scope": "PREPARATION_ONLY",
+  "non_claim_boundary": "Result review accepts nonclaim robustness-obligation protocol bookkeeping only; it authorizes referent registry preparation only and does not authorize scan execution, robustness completion, theorem discharge, blocker movement, lane reopen, Phase 2 authorization, empirical validation claim, seam closure, master-action promotion, or external-truth claim.",
+  "outcome_id": "SENSITIVITY_ROBUSTNESS_PROTOCOL_RESULT_REVIEW_ACCEPTS_NONCLAIM_ROBUSTNESS_OBLIGATION_PROTOCOL_AND_AUTHORIZES_REFERENT_REGISTRY_PREPARATION_ONLY",
+  "review_id": "SENSITIVITY_ROBUSTNESS_PROTOCOL_RESULT_REVIEW_v0",
+  "roadmap_update_required": true,
+  "robustness_gap_confirmation": {
+    "c6_c7_method_debt_visible": true,
+    "current_robustness_status_counts": {
+      "partial": 6,
+      "perturbation_scanned": 2
+    },
+    "primary_robustness_gap": "PERTURBATION_RESOLUTION_SOLVER_TOLERANCE_AND_FAILURE_ENVELOPE_PROTOCOL_NOT_EXECUTED_V0",
+    "protocol_scope": "DEFINE_ROBUSTNESS_REQUIREMENTS_ONLY_NO_SCAN_EXECUTION_CLAIM",
+    "robustness_applicability_counts": {
+      "comparator_or_report_surface": 4,
+      "formal_governance_surface": 1,
+      "seam_or_mismatch_report_surface": 1,
+      "simulation_or_numerical_method_surface": 2
+    },
+    "scan_execution_status_counts": {
+      "not_executed_v0": 8
+    },
+    "uq_dependency_counts": {
+      "uq_not_quantified": 5,
+      "uq_partial_quantitative": 1,
+      "uq_qualitative": 2
+    },
+    "uq_limitations_visible": true
+  },
+  "schema_id": "SENSITIVITY_ROBUSTNESS_PROTOCOL_RESULT_REVIEW_20260515_v0",
+  "scope_confirmation": {
+    "all_promotion_allowed_false": true,
+    "all_scan_execution_status_not_executed_v0": true,
+    "numerical_score_present": false,
+    "promotion_allowed_count": 0,
+    "robustness_completion_claim_count": 0,
+    "scan_execution_claim_count": 0,
+    "validation_upgrade_count": 0
+  },
+  "source_lineage": {
+    "row_ids_match_prior_lineage": true,
+    "source_audit": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+    "source_matrix": "REGIME_RECOVERY_MATRIX_v0",
+    "source_registry": "NUMERICAL_METHOD_VERIFICATION_REGISTRY_v0",
+    "source_vvuq_ledger": "VVUQ_CREDIBILITY_LEDGER_v0"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM"
+}

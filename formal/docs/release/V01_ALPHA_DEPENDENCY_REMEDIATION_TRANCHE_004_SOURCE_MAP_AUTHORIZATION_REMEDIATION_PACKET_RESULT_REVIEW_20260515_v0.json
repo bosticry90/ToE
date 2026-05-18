@@ -1,0 +1,262 @@
+{
+  "acceptance_criteria": {
+    "blocker_reason_preserved": true,
+    "bounded_witness_chain_branch_available": true,
+    "consumes_expected_packet": true,
+    "current_blocker_preserved": true,
+    "documentation_alone_cannot_clear": true,
+    "exactly_one_next_target_selected": true,
+    "fail_closed_branch_available": true,
+    "forbidden_effects_all_false": true,
+    "lean_audit_no_axioms_preserved": true,
+    "no_blocker_movement": true,
+    "no_phase2_seam_empirical_or_master_action_authorization": true,
+    "no_release_packet_assembly": true,
+    "no_source_map_closure": true,
+    "no_theorem_or_proof_debt_discharge": true,
+    "no_v01_readiness_marking": true,
+    "no_witness_chain_construction": true,
+    "packet_accepted": true,
+    "packet_outcome_expected": true,
+    "packet_selected_this_review": true,
+    "project_axioms_empty": true,
+    "real_blocker_plan_accepted": true,
+    "release_blockers_remain_tracked": true,
+    "retained_blocker_branch_available": true,
+    "selected_obligation_expected": true,
+    "tranche_001_documented_nonblocking_preserved": true,
+    "tranche_002_documented_nonblocking_preserved": true,
+    "tranche_003_documented_nonblocking_preserved": true,
+    "tranche_004_only_reviewed_target": true
+  },
+  "accepted": true,
+  "authorization_conditions": [
+    "all_required_witness_chain_evidence_is_present_and_reviewed",
+    "source_map_semantic_closure_authorization_status_is_positive",
+    "negative_authorization_marker_is_replaced_only_by_reviewed_positive_evidence",
+    "lean_dependency_audit_remains_project_axiom_free",
+    "expert_re_review_accepts_any_attempted_source_map_authorization_change",
+    "result_review_accepts_evidence_before_blocker_movement_is_considered"
+  ],
+  "axiom_spec_backed_debt_reduced": false,
+  "axiom_spec_backed_debt_reduced_by_documentation": false,
+  "blocker_fully_remediated": false,
+  "blocker_movement_authorized": false,
+  "blocker_movement_registered": false,
+  "blocker_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+  "bounded_witness_chain_evidence_packet_preparation_authorized": true,
+  "branch_selection_reason": "The packet identifies a bounded witness-chain evidence branch as available, so the review selects packet preparation for that branch while keeping retained blocker and fail-closed declaration paths deferred.",
+  "branches_considered": [
+    {
+      "branch": "bounded_source_map_witness_chain_evidence_packet_preparation",
+      "decision": "selected",
+      "target": "prepare_v01_alpha_tranche_004_source_map_witness_chain_evidence_packet"
+    },
+    {
+      "branch": "retained_source_map_blocker_declaration",
+      "decision": "deferred",
+      "target": "prepare_v01_alpha_tranche_004_retained_source_map_blocker_declaration"
+    },
+    {
+      "branch": "fail_closed_release_readiness_blocker_declaration",
+      "decision": "deferred",
+      "target": "prepare_v01_alpha_release_readiness_blocker_declaration_packet"
+    }
+  ],
+  "broader_remediation_executed": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "Prepare the bounded witness-chain evidence packet; do not construct evidence or claim closure during this review.",
+      "target": "prepare_v01_alpha_tranche_004_source_map_witness_chain_evidence_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "The retained-blocker declaration remains available if witness-chain evidence preparation is not accepted or proves unavailable.",
+      "target": "prepare_v01_alpha_tranche_004_retained_source_map_blocker_declaration"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Execution requires witness-chain evidence packet preparation and result review first.",
+      "target": "execute_v01_alpha_dependency_remediation_tranche_004_bounded_source_map_witness_chain_evidence_construction"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Fail-closed release-readiness blocker declaration is not selected while a bounded evidence-packet preparation branch is available.",
+      "target": "prepare_v01_alpha_release_readiness_blocker_declaration_packet"
+    }
+  ],
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_packet_schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_20260515_v0",
+  "consumes_remediation_packet": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_v0",
+  "consumes_remediation_packet_pointer": "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_20260515_v0.json",
+  "current_blocker": "full_source_map_semantic_closure_not_authorized",
+  "documentation_alone_can_clear_blocker": false,
+  "documentation_prepared": false,
+  "expert_re_review_executed": false,
+  "fail_closed_release_readiness_blocker_declaration_preparation_authorized": false,
+  "failure_conditions": [
+    "any_required_witness_chain_evidence_remains_absent",
+    "source_map_semantic_closure_authorization_status_remains_not_authorized",
+    "documentation_only_text_is_used_to_claim_source_map_closure",
+    "project_local_axioms_are_introduced_without_escalation",
+    "expert_re_review_is_required_but_not_completed",
+    "packet_or_execution_attempts_release_readiness_or_blocker_movement"
+  ],
+  "forbidden_effect_status": {
+    "axiom_spec_backed_debt_reduced": false,
+    "axiom_spec_backed_debt_reduced_by_documentation": false,
+    "blocker_fully_remediated": false,
+    "blocker_movement_authorized": false,
+    "blocker_movement_registered": false,
+    "broader_remediation_executed": false,
+    "claim_promotion_authorized": false,
+    "computational_physics_execution_surface_opened": false,
+    "documentation_prepared": false,
+    "empirical_validation_authorized": false,
+    "expert_re_review_executed": false,
+    "lane_reopen_authorized": false,
+    "lean_theorem_debt_discharged": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "policy_adjudication_executed": false,
+    "proof_debt_reduced": false,
+    "release_packet_assembled": false,
+    "remediation_executed": false,
+    "remediation_execution_authorized": false,
+    "retained_assumptions_discharged": false,
+    "seam_closure_authorized": false,
+    "source_map_closure_claimed": false,
+    "source_map_semantic_closure_authorized": false,
+    "source_map_witness_chain_evidence_constructed": false,
+    "theorem_discharge_authorized": false,
+    "v01_alpha_marked_ready": false,
+    "witness_chain_constructed": false
+  },
+  "lean_audit_result": {
+    "classification": "no_lean_axiom_dependency_detected",
+    "depends_on_no_axioms": true,
+    "parsed_axioms": [],
+    "project_axiom_count": 0,
+    "project_axioms_used": []
+  },
+  "lean_theorem_debt_discharged": false,
+  "next_action_scope": "PREPARE_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_EVIDENCE_PACKET_ONLY_NO_EVIDENCE_CONSTRUCTION_CLOSURE_BLOCKER_MOVEMENT_OR_RELEASE_PROMOTION",
+  "non_claim_boundary": "The v0.1-alpha dependency remediation tranche 004 source-map authorization remediation packet result review accepts the remediation plan for a real source-map authorization blocker and selects only witness-chain evidence packet preparation. It preserves full_source_map_semantic_closure_not_authorized, preserves the absent witness-chain reason, preserves project_axioms_used = [], confirms documentation alone cannot clear the blocker, and does not claim source-map closure, construct the witness chain, move tranche 004, assemble release, mark readiness, discharge theorem/proof debt, authorize Phase 2, close seams, validate empirically, promote the master action, or make an external-truth claim.",
+  "other_release_blocking_obligation_count": 2,
+  "other_release_blocking_obligations": [
+    {
+      "dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-005",
+      "modified_by_tranche_004": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_004"
+    },
+    {
+      "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-006",
+      "modified_by_tranche_004": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_004"
+    }
+  ],
+  "outcome_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_RESULT_REVIEW_ACCEPTS_REAL_BLOCKER_REMEDIATION_PLAN_AND_SELECTS_BOUNDED_NEXT_ACTION_ONLY",
+  "policy_adjudication_executed": false,
+  "project_axioms_used": [],
+  "proof_debt_reduced": false,
+  "release_blocking_obligation_count": 3,
+  "release_blocking_obligations_carry_forward": [
+    {
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "dependency_class": "blocked_bridge_authorization_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    },
+    {
+      "dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-005",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    },
+    {
+      "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-006",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    }
+  ],
+  "release_packet_assembled": false,
+  "remediation_executed": false,
+  "remediation_execution_authorized": false,
+  "remediation_packet_result_review_classification": "real_source_map_authorization_remediation_plan_accepted_bounded_witness_chain_evidence_packet_preparation_selected",
+  "remediation_plan_accepted": true,
+  "required_source_map_semantic_closure_evidence": [
+    "positive_full_source_map_semantic_closure_authorization_readout",
+    "witness_chain_complete_for_all_required_qft_gr_source_map_layers",
+    "semantic_closure_proof_or_equivalent_reviewed_evidence",
+    "no_reinterpretation_of_negative_authorization_marker_as_closure",
+    "expert_review_acceptance_before_any_blocker_downgrade"
+  ],
+  "required_witness_chain_evidence": [
+    "renormalization_validity_witness",
+    "finite_stress_energy_tensor_witness",
+    "conservation_witness",
+    "bianchi_compatibility_witness",
+    "einstein_coupling_witness",
+    "weak_curvature_source_identification_witness",
+    "poisson_recovery_witness",
+    "newtonian_weak_field_recovery_witness",
+    "semiclassical_einstein_equation_witness",
+    "qft_gr_source_map_closure_witness"
+  ],
+  "retained_assumptions_discharged": false,
+  "retained_source_map_blocker_declaration_preparation_authorized": false,
+  "review_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_RESULT_REVIEW_v0",
+  "review_scope": "REVIEW_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_RESULT_ONLY_NO_CLOSURE_CONSTRUCTION_MOVEMENT_OR_RELEASE_PROMOTION",
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_RESULT_REVIEW_20260515_v0",
+  "selected_dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+  "selected_dependency_class": "blocked_bridge_authorization_dependency",
+  "selected_next_target": "prepare_v01_alpha_tranche_004_source_map_witness_chain_evidence_packet",
+  "selected_next_target_kind": "tranche_004_source_map_witness_chain_evidence_packet_preparation_only",
+  "selected_release_blocking_obligation": {
+    "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "dependency_class": "blocked_bridge_authorization_dependency",
+    "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+    "modified_by_tranche_003": false,
+    "remediation_execution_status": "not_executed_v0",
+    "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+  },
+  "selected_remediation_finding_id": "V01-ALPHA-DEP-REM-004",
+  "selected_tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-004",
+  "selection_count": 1,
+  "source_map_authorization_status": {
+    "authorization_status": "full_source_map_semantic_closure_not_authorized",
+    "full_source_map_semantic_closure_authorized": false,
+    "missing_witness_count": 10,
+    "not_authorized_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+    "retained_blocker_id": "PHASE1-BLOCKER-QFTGR-SOURCE-MAP-WITNESS-CHAIN-RETAINED",
+    "source_map_not_authorized": true,
+    "supplied_only_layer_count": 9
+  },
+  "source_map_closure_claimed": false,
+  "source_map_semantic_closure_authorized": false,
+  "source_map_witness_chain_evidence_constructed": false,
+  "source_map_witness_chain_evidence_construction_authorized": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "tranche_001_status": "documented_dependency_nonblocking",
+  "tranche_002_status": "documented_dependency_nonblocking",
+  "tranche_003_status": "documented_dependency_nonblocking",
+  "tranche_004_status": "real_source_map_authorization_blocker_remediation_plan_accepted_pending_witness_chain_evidence_packet_preparation",
+  "v01_alpha_marked_ready": false,
+  "validation_claim_authorized": false,
+  "witness_chain_constructed": false
+}

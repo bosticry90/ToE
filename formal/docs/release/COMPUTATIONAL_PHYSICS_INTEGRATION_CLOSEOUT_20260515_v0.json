@@ -1,0 +1,243 @@
+{
+  "acceptance_criteria": {
+    "all_planned_packets_exist_and_loaded": true,
+    "all_result_reviews_accepted": true,
+    "completion_claim_count_zero": true,
+    "consumes_prediction_falsifier_result_review": true,
+    "eight_row_lineage_preserved": true,
+    "execution_claim_count_zero": true,
+    "forbidden_effects_all_false": true,
+    "no_numerical_credibility_score": true,
+    "promotion_allowed_count_zero": true,
+    "source_authorizes_closeout_only": true,
+    "source_result_review_accepted": true,
+    "source_scope_preparation_only": true,
+    "validation_upgrade_count_zero": true
+  },
+  "all_result_reviews_accepted": true,
+  "authorization_class": "AUXILIARY_NONCLAIM_COMPUTATIONAL_ANALYSIS",
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "closeout_id": "COMPUTATIONAL_PHYSICS_INTEGRATION_CLOSEOUT_v0",
+  "closeout_scope": "SUMMARY_ONLY_NO_EXECUTION_OR_PROMOTION",
+  "completion_claim_count": 0,
+  "consumes_result_review": "PREDICTION_AND_FALSIFIER_REGISTRY_RESULT_REVIEW_v0",
+  "consumes_result_review_pointer": "formal/docs/release/PREDICTION_AND_FALSIFIER_REGISTRY_RESULT_REVIEW_20260515_v0.json",
+  "execution_claim_count": 0,
+  "expected_row_ids": [
+    "C6_CP_NLSE_2D_LANE",
+    "C7_MT01A_ACOUSTIC_METRIC_LANE",
+    "UCFF_SPECTRAL_AUDIT_LINEAGE",
+    "BRAGG_DISPERSION_ELIMINATIVE_LANE",
+    "RL01_RELATIVISTIC_DISPERSION_LIMIT",
+    "RL02_NONRELATIVISTIC_NLSE_LIMIT",
+    "GR01_DERIVATION_COMPLETENESS_GATE",
+    "BRIDGE_PROGRAM_ORTHOGONALITY_REPORTS"
+  ],
+  "final_non_execution_readout": {
+    "no_blocker_movement": true,
+    "no_empirical_validation": true,
+    "no_falsifier_execution": true,
+    "no_lane_reopen": true,
+    "no_master_action_promotion": true,
+    "no_phase2_authorization": true,
+    "no_prediction_execution": true,
+    "no_referent_comparison_execution": true,
+    "no_robustness_scan_execution": true,
+    "no_seam_closure": true,
+    "no_theorem_discharge": true,
+    "no_theory_validation": true
+  },
+  "forbidden_effect_status": {
+    "blocker_movement": false,
+    "claim_promotion": false,
+    "empirical_validation": false,
+    "external_truth_claim": false,
+    "falsifier_execution": false,
+    "lane_reopen": false,
+    "master_action_promotion": false,
+    "numerical_credibility_scoring": false,
+    "phase2_authorization": false,
+    "prediction_execution": false,
+    "referent_comparison_execution": false,
+    "robustness_scan_execution": false,
+    "seam_closure": false,
+    "simulation_execution": false,
+    "theorem_discharge": false,
+    "theory_validation": false,
+    "validation_upgrade": false
+  },
+  "lineage_preserved": true,
+  "lineage_row_ids": {
+    "capability_audit": [
+      "C6_CP_NLSE_2D_LANE",
+      "C7_MT01A_ACOUSTIC_METRIC_LANE",
+      "UCFF_SPECTRAL_AUDIT_LINEAGE",
+      "BRAGG_DISPERSION_ELIMINATIVE_LANE",
+      "RL01_RELATIVISTIC_DISPERSION_LIMIT",
+      "RL02_NONRELATIVISTIC_NLSE_LIMIT",
+      "GR01_DERIVATION_COMPLETENESS_GATE",
+      "BRIDGE_PROGRAM_ORTHOGONALITY_REPORTS"
+    ],
+    "numerical_method_registry": [
+      "C6_CP_NLSE_2D_LANE",
+      "C7_MT01A_ACOUSTIC_METRIC_LANE",
+      "UCFF_SPECTRAL_AUDIT_LINEAGE",
+      "BRAGG_DISPERSION_ELIMINATIVE_LANE",
+      "RL01_RELATIVISTIC_DISPERSION_LIMIT",
+      "RL02_NONRELATIVISTIC_NLSE_LIMIT",
+      "GR01_DERIVATION_COMPLETENESS_GATE",
+      "BRIDGE_PROGRAM_ORTHOGONALITY_REPORTS"
+    ],
+    "prediction_and_falsifier_registry": [
+      "C6_CP_NLSE_2D_LANE",
+      "C7_MT01A_ACOUSTIC_METRIC_LANE",
+      "UCFF_SPECTRAL_AUDIT_LINEAGE",
+      "BRAGG_DISPERSION_ELIMINATIVE_LANE",
+      "RL01_RELATIVISTIC_DISPERSION_LIMIT",
+      "RL02_NONRELATIVISTIC_NLSE_LIMIT",
+      "GR01_DERIVATION_COMPLETENESS_GATE",
+      "BRIDGE_PROGRAM_ORTHOGONALITY_REPORTS"
+    ],
+    "referent_registry": [
+      "C6_CP_NLSE_2D_LANE",
+      "C7_MT01A_ACOUSTIC_METRIC_LANE",
+      "UCFF_SPECTRAL_AUDIT_LINEAGE",
+      "BRAGG_DISPERSION_ELIMINATIVE_LANE",
+      "RL01_RELATIVISTIC_DISPERSION_LIMIT",
+      "RL02_NONRELATIVISTIC_NLSE_LIMIT",
+      "GR01_DERIVATION_COMPLETENESS_GATE",
+      "BRIDGE_PROGRAM_ORTHOGONALITY_REPORTS"
+    ],
+    "regime_recovery_matrix": [
+      "C6_CP_NLSE_2D_LANE",
+      "C7_MT01A_ACOUSTIC_METRIC_LANE",
+      "UCFF_SPECTRAL_AUDIT_LINEAGE",
+      "BRAGG_DISPERSION_ELIMINATIVE_LANE",
+      "RL01_RELATIVISTIC_DISPERSION_LIMIT",
+      "RL02_NONRELATIVISTIC_NLSE_LIMIT",
+      "GR01_DERIVATION_COMPLETENESS_GATE",
+      "BRIDGE_PROGRAM_ORTHOGONALITY_REPORTS"
+    ],
+    "sensitivity_robustness_protocol": [
+      "C6_CP_NLSE_2D_LANE",
+      "C7_MT01A_ACOUSTIC_METRIC_LANE",
+      "UCFF_SPECTRAL_AUDIT_LINEAGE",
+      "BRAGG_DISPERSION_ELIMINATIVE_LANE",
+      "RL01_RELATIVISTIC_DISPERSION_LIMIT",
+      "RL02_NONRELATIVISTIC_NLSE_LIMIT",
+      "GR01_DERIVATION_COMPLETENESS_GATE",
+      "BRIDGE_PROGRAM_ORTHOGONALITY_REPORTS"
+    ],
+    "vvuq_ledger": [
+      "C6_CP_NLSE_2D_LANE",
+      "C7_MT01A_ACOUSTIC_METRIC_LANE",
+      "UCFF_SPECTRAL_AUDIT_LINEAGE",
+      "BRAGG_DISPERSION_ELIMINATIVE_LANE",
+      "RL01_RELATIVISTIC_DISPERSION_LIMIT",
+      "RL02_NONRELATIVISTIC_NLSE_LIMIT",
+      "GR01_DERIVATION_COMPLETENESS_GATE",
+      "BRIDGE_PROGRAM_ORTHOGONALITY_REPORTS"
+    ]
+  },
+  "next_action": "REVIEW_COMPUTATIONAL_PHYSICS_INTEGRATION_CLOSEOUT_RESULT",
+  "next_packet_authorization_scope": "RESULT_REVIEW_ONLY",
+  "non_claim_boundary": "Computational-physics integration closeout summarizes prepared credibility infrastructure only. It records no theory validation, no empirical validation, no referent comparison execution, no robustness scan execution, no prediction execution, no falsifier execution, no theorem discharge, no blocker movement, no lane reopen, no seam closure, no Phase 2 authorization, no master-action promotion, and no external-truth claim.",
+  "preparation_result": "COMPUTATIONAL_PHYSICS_INTEGRATION_CLOSEOUT_PREPARED_AS_NONCLAIM_CREDIBILITY_INFRASTRUCTURE_WITH_NO_EXECUTION_OR_PROMOTION",
+  "prepared": true,
+  "promotion_allowed_count": 0,
+  "roadmap_update_required": true,
+  "row_count": 8,
+  "schema_id": "COMPUTATIONAL_PHYSICS_INTEGRATION_CLOSEOUT_20260515_v0",
+  "scoring_policy": "NO_NUMERICAL_CREDIBILITY_SCORE_IN_V0",
+  "stack_layers": [
+    {
+      "artifact_path": "formal/docs/release/COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_20260515_v0.json",
+      "artifact_status": "ACTIVE_NONLIVE_NONCLAIM",
+      "function": "identifies computational-physics roles",
+      "layer_id": "capability_audit",
+      "layer_order": 1,
+      "result_review_accepted": true,
+      "result_review_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_RESULT_REVIEW_v0",
+      "result_review_path": "formal/docs/release/COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_RESULT_REVIEW_20260515_v0.json"
+    },
+    {
+      "artifact_path": "formal/docs/release/VVUQ_CREDIBILITY_LEDGER_20260515_v0.json",
+      "artifact_status": "ACTIVE_NONLIVE_NONCLAIM",
+      "function": "records credibility posture and gaps",
+      "layer_id": "vvuq_ledger",
+      "layer_order": 2,
+      "result_review_accepted": true,
+      "result_review_id": "VVUQ_CREDIBILITY_LEDGER_RESULT_REVIEW_v0",
+      "result_review_path": "formal/docs/release/VVUQ_CREDIBILITY_LEDGER_RESULT_REVIEW_20260515_v0.json"
+    },
+    {
+      "artifact_path": "formal/docs/release/NUMERICAL_METHOD_VERIFICATION_REGISTRY_20260515_v0.json",
+      "artifact_status": "ACTIVE_NONLIVE_NONCLAIM",
+      "function": "records numerical-method verification debt",
+      "layer_id": "numerical_method_registry",
+      "layer_order": 3,
+      "result_review_accepted": true,
+      "result_review_id": "NUMERICAL_METHOD_VERIFICATION_REGISTRY_RESULT_REVIEW_v0",
+      "result_review_path": "formal/docs/release/NUMERICAL_METHOD_VERIFICATION_REGISTRY_RESULT_REVIEW_20260515_v0.json"
+    },
+    {
+      "artifact_path": "formal/docs/release/REGIME_RECOVERY_MATRIX_20260515_v0.json",
+      "artifact_status": "ACTIVE_NONLIVE_NONCLAIM",
+      "function": "records known-limit posture",
+      "layer_id": "regime_recovery_matrix",
+      "layer_order": 4,
+      "result_review_accepted": true,
+      "result_review_id": "REGIME_RECOVERY_MATRIX_RESULT_REVIEW_v0",
+      "result_review_path": "formal/docs/release/REGIME_RECOVERY_MATRIX_RESULT_REVIEW_20260515_v0.json"
+    },
+    {
+      "artifact_path": "formal/docs/release/SENSITIVITY_ROBUSTNESS_PROTOCOL_20260515_v0.json",
+      "artifact_status": "ACTIVE_NONLIVE_NONCLAIM",
+      "function": "defines required perturbation and robustness scans",
+      "layer_id": "sensitivity_robustness_protocol",
+      "layer_order": 5,
+      "result_review_accepted": true,
+      "result_review_id": "SENSITIVITY_ROBUSTNESS_PROTOCOL_RESULT_REVIEW_v0",
+      "result_review_path": "formal/docs/release/SENSITIVITY_ROBUSTNESS_PROTOCOL_RESULT_REVIEW_20260515_v0.json"
+    },
+    {
+      "artifact_path": "formal/docs/release/REFERENT_REGISTRY_20260515_v0.json",
+      "artifact_status": "ACTIVE_NONLIVE_NONCLAIM",
+      "function": "registers allowed comparison targets",
+      "layer_id": "referent_registry",
+      "layer_order": 6,
+      "result_review_accepted": true,
+      "result_review_id": "REFERENT_REGISTRY_RESULT_REVIEW_v0",
+      "result_review_path": "formal/docs/release/REFERENT_REGISTRY_RESULT_REVIEW_20260515_v0.json"
+    },
+    {
+      "artifact_path": "formal/docs/release/SIMULATION_MODEL_CARD_TEMPLATE_20260515_v0.json",
+      "artifact_status": "ACTIVE_NONLIVE_NONCLAIM",
+      "function": "standardizes future artifact documentation",
+      "layer_id": "simulation_model_card_template",
+      "layer_order": 7,
+      "result_review_accepted": true,
+      "result_review_id": "SIMULATION_MODEL_CARD_TEMPLATE_RESULT_REVIEW_v0",
+      "result_review_path": "formal/docs/release/SIMULATION_MODEL_CARD_TEMPLATE_RESULT_REVIEW_20260515_v0.json"
+    },
+    {
+      "artifact_path": "formal/docs/release/PREDICTION_AND_FALSIFIER_REGISTRY_20260515_v0.json",
+      "artifact_status": "ACTIVE_NONLIVE_NONCLAIM",
+      "function": "registers future test designs and failure conditions",
+      "layer_id": "prediction_and_falsifier_registry",
+      "layer_order": 8,
+      "result_review_accepted": true,
+      "result_review_id": "PREDICTION_AND_FALSIFIER_REGISTRY_RESULT_REVIEW_v0",
+      "result_review_path": "formal/docs/release/PREDICTION_AND_FALSIFIER_REGISTRY_RESULT_REVIEW_20260515_v0.json"
+    }
+  ],
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "summary": {
+    "next_recommended_action": "REVIEW_COMPUTATIONAL_PHYSICS_INTEGRATION_CLOSEOUT_RESULT",
+    "result_review_count": 8,
+    "row_count": 8,
+    "stack_layer_count": 8,
+    "terminal_readout": "NONCLAIM_CREDIBILITY_INFRASTRUCTURE_PREPARED_NO_EXECUTION_OR_PROMOTION"
+  },
+  "validation_upgrade_count": 0
+}

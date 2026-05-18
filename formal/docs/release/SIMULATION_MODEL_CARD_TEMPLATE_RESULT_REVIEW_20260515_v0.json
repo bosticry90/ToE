@@ -1,0 +1,125 @@
+{
+  "acceptance_criteria": {
+    "authorization_class_preserved": true,
+    "card_default_promotion_allowed_false": true,
+    "card_default_validation_upgrade_false": true,
+    "consumes_referent_registry_result_review": true,
+    "consumes_simulation_model_card_template": true,
+    "forbidden_claim_fields_present": true,
+    "forbidden_effects_all_false": true,
+    "instantiated_model_card_count_zero": true,
+    "model_card_instantiation_claim_count_zero": true,
+    "numerical_and_non_numerical_handling_present": true,
+    "promotion_allowed_default_false": true,
+    "required_model_card_fields_present": true,
+    "source_referent_review_accepted": true,
+    "source_referent_review_authorized_template_only": true,
+    "template_scope_only": true,
+    "template_status_nonclaim": true
+  },
+  "accepted": true,
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_template": {
+    "template_id": "SIMULATION_MODEL_CARD_TEMPLATE_v0",
+    "template_path": "formal/docs/release/SIMULATION_MODEL_CARD_TEMPLATE_20260515_v0.json",
+    "template_preparation_result": "SIMULATION_MODEL_CARD_TEMPLATE_PREPARED_FROM_REFERENT_REGISTRY_REVIEW_WITH_NONCLAIM_MODEL_DOCUMENTATION_CEILINGS",
+    "template_schema_id": "SIMULATION_MODEL_CARD_TEMPLATE_20260515_v0"
+  },
+  "forbidden_effect_status": {
+    "blocker_movement": false,
+    "empirical_validation_claim": false,
+    "external_truth_claim": false,
+    "lane_reopen": false,
+    "master_action_promotion": false,
+    "phase2_authorization": false,
+    "referent_comparison_execution": false,
+    "robustness_scan_execution": false,
+    "seam_closure": false,
+    "simulation_execution": false,
+    "theorem_discharge": false,
+    "validation_upgrade": false
+  },
+  "next_action": "PREPARE_PREDICTION_AND_FALSIFIER_REGISTRY_AFTER_MODEL_CARD_TEMPLATE_REVIEW",
+  "next_packet": "PREDICTION_AND_FALSIFIER_REGISTRY_v0",
+  "next_packet_authorization_scope": "PREPARATION_ONLY",
+  "non_claim_boundary": "Result review accepts nonclaim model-documentation template bookkeeping only; it authorizes prediction and falsifier registry preparation only and does not authorize model-card instantiation, simulation execution, referent comparison execution, robustness scan execution, validation upgrade, theorem discharge, seam closure, Phase 2 authorization, master-action promotion, or external-truth claim.",
+  "outcome_id": "SIMULATION_MODEL_CARD_TEMPLATE_RESULT_REVIEW_ACCEPTS_NONCLAIM_MODEL_DOCUMENTATION_TEMPLATE_AND_AUTHORIZES_PREDICTION_AND_FALSIFIER_REGISTRY_PREPARATION_ONLY",
+  "review_id": "SIMULATION_MODEL_CARD_TEMPLATE_RESULT_REVIEW_v0",
+  "roadmap_update_required": true,
+  "schema_id": "SIMULATION_MODEL_CARD_TEMPLATE_RESULT_REVIEW_20260515_v0",
+  "scope_confirmation": {
+    "card_default_promotion_allowed": false,
+    "card_default_validation_upgrade_from_template": false,
+    "instantiated_model_card_count": 0,
+    "model_card_instantiation_claim_count": 0,
+    "promotion_allowed_default": false
+  },
+  "source_lineage": {
+    "source_referent_registry_result_review": "REFERENT_REGISTRY_RESULT_REVIEW_v0",
+    "source_referent_registry_result_review_path": "formal/docs/release/REFERENT_REGISTRY_RESULT_REVIEW_20260515_v0.json",
+    "source_referent_review_accepted": true
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "template_confirmation": {
+    "artifact_class_rule_count": 4,
+    "forbidden_claims": [
+      "theorem_discharge",
+      "blocker_movement",
+      "lane_reopen",
+      "phase2_authorization",
+      "empirical_validation_claim",
+      "seam_closure",
+      "master_action_promotion",
+      "external_truth_claim"
+    ],
+    "lineage_context": {
+      "comparison_execution_status_counts": {
+        "not_executed_v0": 8
+      },
+      "referent_row_count": 8,
+      "source_method_applicability_counts": {
+        "comparator_or_report_surface": 5,
+        "formal_or_governance_surface": 1,
+        "numerical_method_applicable": 2
+      },
+      "uq_dependency_counts": {
+        "uq_not_quantified": 5,
+        "uq_partial_quantitative": 1,
+        "uq_qualitative": 2
+      },
+      "validation_status_counts": {
+        "empirical_candidate": 1,
+        "internal_only": 4,
+        "known_limit_candidate": 2,
+        "none": 1
+      }
+    },
+    "numerical_and_non_numerical_handling_present": true,
+    "required_field_count": 21,
+    "required_model_card_fields": [
+      "model_id",
+      "artifact_id",
+      "source_path",
+      "model_family",
+      "purpose",
+      "governing_equations_or_report_logic",
+      "assumptions",
+      "inputs",
+      "outputs",
+      "numerical_method_or_not_applicable_reason",
+      "verification_status",
+      "validation_status",
+      "known_limit_or_referent_status",
+      "uq_status",
+      "robustness_status",
+      "sensitivity_protocol_status",
+      "failure_modes",
+      "claim_ceiling",
+      "promotion_allowed",
+      "forbidden_claims",
+      "upgrade_requirements"
+    ],
+    "template_claim_ceiling": "model_documentation_template_only",
+    "template_scope": "DEFINE_MODEL_CARD_TEMPLATE_ONLY_NO_CARD_INSTANTIATION_CLAIM"
+  }
+}

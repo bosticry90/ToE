@@ -1,0 +1,90 @@
+{
+  "acceptance_criteria": {
+    "all_promotion_allowed_false": true,
+    "authorization_class_preserved": true,
+    "c6_c7_method_debt_visible": true,
+    "conservative_recovery_statuses_preserved": true,
+    "consumes_regime_recovery_matrix": true,
+    "forbidden_effects_all_false": true,
+    "matrix_row_count_exact": true,
+    "matrix_status_nonclaim": true,
+    "no_numerical_credibility_score": true,
+    "primary_regime_gap_preserved": true,
+    "promotion_allowed_count_zero": true,
+    "recovery_completion_claim_count_zero": true,
+    "row_ids_match_prior_lineage": true,
+    "validation_upgrade_count_zero": true
+  },
+  "accepted": true,
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_matrix": {
+    "matrix_id": "REGIME_RECOVERY_MATRIX_v0",
+    "matrix_path": "formal/docs/release/REGIME_RECOVERY_MATRIX_20260515_v0.json",
+    "matrix_preparation_result": "REGIME_RECOVERY_MATRIX_PREPARED_FROM_NUMERICAL_METHOD_REGISTRY_REVIEW_WITH_NONCLAIM_KNOWN_LIMIT_CEILINGS",
+    "matrix_row_count": 8,
+    "matrix_schema_id": "REGIME_RECOVERY_MATRIX_20260515_v0"
+  },
+  "forbidden_effect_status": {
+    "blocker_movement": false,
+    "empirical_validation_claim": false,
+    "external_truth_claim": false,
+    "lane_reopen": false,
+    "master_action_promotion": false,
+    "phase2_authorization": false,
+    "seam_closure": false,
+    "theorem_discharge": false
+  },
+  "next_action": "PREPARE_SENSITIVITY_ROBUSTNESS_PROTOCOL_AFTER_REGIME_RECOVERY_MATRIX_REVIEW",
+  "next_packet": "SENSITIVITY_ROBUSTNESS_PROTOCOL_v0",
+  "next_packet_authorization_scope": "PREPARATION_ONLY",
+  "non_claim_boundary": "Result review accepts nonclaim known-limit and regime-recovery bookkeeping only; it authorizes sensitivity/robustness protocol preparation only and does not authorize known-limit recovery completion, theorem discharge, blocker movement, lane reopen, Phase 2 authorization, empirical validation claim, seam closure, master-action promotion, or external-truth claim.",
+  "outcome_id": "REGIME_RECOVERY_MATRIX_RESULT_REVIEW_ACCEPTS_NONCLAIM_KNOWN_LIMIT_BOOKKEEPING_AND_AUTHORIZES_SENSITIVITY_ROBUSTNESS_PROTOCOL_PREPARATION_ONLY",
+  "regime_gap_confirmation": {
+    "c6_c7_method_debt_visible": true,
+    "matrix_recovery_status_counts": {
+      "blocked": 1,
+      "candidate": 3,
+      "not_applicable": 1,
+      "partial": 3
+    },
+    "pass_fail_criterion_status_counts": {
+      "blocked": 1,
+      "not_applicable": 1,
+      "not_registered_v0": 1,
+      "partial": 5
+    },
+    "primary_regime_gap": "KNOWN_LIMIT_PASS_FAIL_CRITERIA_AND_RECOVERY_EVIDENCE_DEPTH_NOT_COMPLETE_V0",
+    "referent_status_counts": {
+      "analytic_referent_candidate": 2,
+      "blocked": 1,
+      "empirical_referent_candidate": 1,
+      "literature_referent_candidate": 2,
+      "not_applicable": 1,
+      "not_registered_v0": 1
+    },
+    "regime_recovery_applicability_counts": {
+      "formal_governance_blocked": 1,
+      "known_limit_recovery_relevant": 4,
+      "regime_comparator_relevant": 2,
+      "seam_or_mismatch_relevant": 1
+    }
+  },
+  "review_id": "REGIME_RECOVERY_MATRIX_RESULT_REVIEW_v0",
+  "roadmap_update_required": true,
+  "schema_id": "REGIME_RECOVERY_MATRIX_RESULT_REVIEW_20260515_v0",
+  "scope_confirmation": {
+    "all_promotion_allowed_false": true,
+    "nonconservative_recovery_statuses": [],
+    "numerical_score_present": false,
+    "promotion_allowed_count": 0,
+    "recovery_completion_claim_count": 0,
+    "validation_upgrade_count": 0
+  },
+  "source_lineage": {
+    "row_ids_match_prior_lineage": true,
+    "source_audit": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+    "source_registry": "NUMERICAL_METHOD_VERIFICATION_REGISTRY_v0",
+    "source_vvuq_ledger": "VVUQ_CREDIBILITY_LEDGER_v0"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM"
+}

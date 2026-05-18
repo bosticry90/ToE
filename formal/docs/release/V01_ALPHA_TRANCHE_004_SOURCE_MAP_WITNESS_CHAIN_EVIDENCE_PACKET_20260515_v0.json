@@ -1,0 +1,473 @@
+{
+  "acceptance_criteria": {
+    "blocker_reason_preserved": true,
+    "consumes_expected_result_review": true,
+    "current_blocker_preserved": true,
+    "documentation_alone_cannot_clear": true,
+    "documentation_surfaces_recorded": true,
+    "exactly_one_next_target_selected": true,
+    "forbidden_effects_all_false": true,
+    "known_available_evidence_recorded": true,
+    "known_missing_evidence_recorded": true,
+    "lean_audit_no_axioms_preserved": true,
+    "lean_surfaces_recorded": true,
+    "no_blocker_movement": true,
+    "no_phase2_seam_empirical_or_master_action_authorization": true,
+    "no_release_packet_assembly": true,
+    "no_source_map_closure": true,
+    "no_theorem_or_proof_debt_discharge": true,
+    "no_v01_readiness_marking": true,
+    "no_witness_chain_construction": true,
+    "prepares_requirements_only": true,
+    "project_axioms_empty": true,
+    "release_blockers_remain_tracked": true,
+    "remains_release_blocking": true,
+    "required_source_map_semantic_closure_conditions_recorded": true,
+    "required_witness_chain_components_recorded": true,
+    "result_review_accepted": true,
+    "result_review_outcome_expected": true,
+    "result_review_selected_this_packet": true,
+    "selected_obligation_expected": true,
+    "tranche_001_documented_nonblocking_preserved": true,
+    "tranche_002_documented_nonblocking_preserved": true,
+    "tranche_003_documented_nonblocking_preserved": true,
+    "tranche_004_selected_only": true
+  },
+  "accepted": true,
+  "axiom_spec_backed_debt_reduced": false,
+  "axiom_spec_backed_debt_reduced_by_documentation": false,
+  "blocker_fully_remediated": false,
+  "blocker_movement_authorized": false,
+  "blocker_movement_registered": false,
+  "blocker_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+  "broader_remediation_executed": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "Review the prepared witness-chain evidence requirements before any bounded evidence construction branch can be considered.",
+      "target": "review_v01_alpha_tranche_004_source_map_witness_chain_evidence_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Construction is not authorized by this preparation packet.",
+      "target": "execute_v01_alpha_dependency_remediation_tranche_004_bounded_source_map_witness_chain_evidence_construction"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Retained-blocker declaration remains a later branch if evidence is unavailable.",
+      "target": "prepare_v01_alpha_tranche_004_retained_source_map_blocker_declaration"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Fail-closed release-readiness blocker declaration is not selected here.",
+      "target": "prepare_v01_alpha_release_readiness_blocker_declaration_packet"
+    }
+  ],
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_remediation_packet_result_review_schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_RESULT_REVIEW_20260515_v0",
+  "consumes_remediation_packet_result_review": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_RESULT_REVIEW_v0",
+  "consumes_remediation_packet_result_review_pointer": "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_RESULT_REVIEW_20260515_v0.json",
+  "current_blocker": "full_source_map_semantic_closure_not_authorized",
+  "documentation_alone_can_clear_blocker": false,
+  "documentation_prepared": false,
+  "documentation_surfaces_involved": [
+    "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_RESULT_REVIEW_20260515_v0.json",
+    "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_20260515_v0.json",
+    "formal/docs/release/V01_ALPHA_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_EVIDENCE_PACKET_20260515_v0.json",
+    "formal/docs/release/TOE_V01_ALPHA_LEAN_DEPENDENCY_AUDIT_v0.md",
+    "formal/docs/paper/PHYSICS_ROADMAP_v0.md"
+  ],
+  "evidence_construction_authorized": false,
+  "evidence_construction_executed": false,
+  "evidence_requirements_scope": {
+    "blocker_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+    "current_blocker": "full_source_map_semantic_closure_not_authorized",
+    "documentation_surfaces_involved": [
+      "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_RESULT_REVIEW_20260515_v0.json",
+      "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_20260515_v0.json",
+      "formal/docs/release/V01_ALPHA_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_EVIDENCE_PACKET_20260515_v0.json",
+      "formal/docs/release/TOE_V01_ALPHA_LEAN_DEPENDENCY_AUDIT_v0.md",
+      "formal/docs/paper/PHYSICS_ROADMAP_v0.md"
+    ],
+    "evidence_construction_authorized_by_this_packet": false,
+    "known_available_evidence": [
+      {
+        "evidence_id": "tranche_004_remediation_plan_result_review_accepted",
+        "source": "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_RESULT_REVIEW_20260515_v0.json",
+        "status": "available",
+        "supports": "bounded witness-chain evidence packet preparation only"
+      },
+      {
+        "authorization_status": "full_source_map_semantic_closure_not_authorized",
+        "evidence_id": "negative_source_map_authorization_readout",
+        "not_authorized_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+        "status": "available",
+        "supports": "retention of the source-map semantic-closure blocker"
+      },
+      {
+        "evidence_id": "missing_witness_chain_inventory",
+        "missing_witness_count": 10,
+        "required_components": [
+          "renormalization_validity_witness",
+          "finite_stress_energy_tensor_witness",
+          "conservation_witness",
+          "bianchi_compatibility_witness",
+          "einstein_coupling_witness",
+          "weak_curvature_source_identification_witness",
+          "poisson_recovery_witness",
+          "newtonian_weak_field_recovery_witness",
+          "semiclassical_einstein_equation_witness",
+          "qft_gr_source_map_closure_witness"
+        ],
+        "status": "available",
+        "supports": "definition of the evidence requirements"
+      },
+      {
+        "depends_on_no_axioms": true,
+        "evidence_id": "lean_dependency_audit_clean",
+        "parsed_axioms": [],
+        "project_axioms_used": [],
+        "status": "available",
+        "supports": "the blocker is not a Lean axiom dependency hygiene issue"
+      }
+    ],
+    "known_missing_evidence": [
+      {
+        "components": [
+          "renormalization_validity_witness",
+          "finite_stress_energy_tensor_witness",
+          "conservation_witness",
+          "bianchi_compatibility_witness",
+          "einstein_coupling_witness",
+          "weak_curvature_source_identification_witness",
+          "poisson_recovery_witness",
+          "newtonian_weak_field_recovery_witness",
+          "semiclassical_einstein_equation_witness",
+          "qft_gr_source_map_closure_witness"
+        ],
+        "missing_evidence_id": "required_witness_chain_components_not_constructed",
+        "status": "missing"
+      },
+      {
+        "conditions": [
+          "positive_full_source_map_semantic_closure_authorization_readout",
+          "witness_chain_complete_for_all_required_qft_gr_source_map_layers",
+          "semantic_closure_proof_or_equivalent_reviewed_evidence",
+          "no_reinterpretation_of_negative_authorization_marker_as_closure",
+          "expert_review_acceptance_before_any_blocker_downgrade"
+        ],
+        "missing_evidence_id": "positive_source_map_semantic_closure_authorization",
+        "status": "missing"
+      },
+      {
+        "missing_evidence_id": "reviewed_semantic_closure_proof_or_equivalent",
+        "status": "missing"
+      },
+      {
+        "missing_evidence_id": "expert_re_review_acceptance_for_authorization_change",
+        "status": "missing"
+      },
+      {
+        "missing_evidence_id": "result_review_accepting_any_new_evidence_before_blocker_movement",
+        "status": "missing"
+      }
+    ],
+    "lean_surfaces_involved": [
+      {
+        "kind": "audit_target",
+        "module": "ToeFormal.Bridges.QFTGRSourceMapEligibilityLadderSummary",
+        "name": "ToeFormal.Bridges.QFTGRSourceMapEligibilityLadderSummary.qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+        "path": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SourceMapEligibilityLadderSummary.lean",
+        "role": "negative source-map authorization marker and missing witness-chain readout"
+      },
+      {
+        "kind": "release_marker",
+        "module": "ToeFormal.Release.V01Tranche004SourceMapWitnessChainEvidencePacket",
+        "path": "formal/toe_formal/ToeFormal/Release/V01Tranche004SourceMapWitnessChainEvidencePacket.lean",
+        "role": "Lean-side non-claim marker for this preparation packet"
+      }
+    ],
+    "release_blocking_status_after_packet": "remains_release_blocking",
+    "required_source_map_semantic_closure_conditions": [
+      "positive_full_source_map_semantic_closure_authorization_readout",
+      "witness_chain_complete_for_all_required_qft_gr_source_map_layers",
+      "semantic_closure_proof_or_equivalent_reviewed_evidence",
+      "no_reinterpretation_of_negative_authorization_marker_as_closure",
+      "expert_review_acceptance_before_any_blocker_downgrade"
+    ],
+    "required_witness_chain_components": [
+      "renormalization_validity_witness",
+      "finite_stress_energy_tensor_witness",
+      "conservation_witness",
+      "bianchi_compatibility_witness",
+      "einstein_coupling_witness",
+      "weak_curvature_source_identification_witness",
+      "poisson_recovery_witness",
+      "newtonian_weak_field_recovery_witness",
+      "semiclassical_einstein_equation_witness",
+      "qft_gr_source_map_closure_witness"
+    ],
+    "scope_kind": "SOURCE_MAP_WITNESS_CHAIN_EVIDENCE_REQUIREMENTS_PREPARATION_ONLY",
+    "selected_dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "selected_dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+    "selected_tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-004",
+    "source_map_closure_claimed_by_this_packet": false,
+    "tranche_004_movement_authorized_by_this_packet": false
+  },
+  "expert_re_review_executed": false,
+  "forbidden_effect_status": {
+    "axiom_spec_backed_debt_reduced": false,
+    "axiom_spec_backed_debt_reduced_by_documentation": false,
+    "blocker_fully_remediated": false,
+    "blocker_movement_authorized": false,
+    "blocker_movement_registered": false,
+    "broader_remediation_executed": false,
+    "claim_promotion_authorized": false,
+    "computational_physics_execution_surface_opened": false,
+    "documentation_prepared": false,
+    "empirical_validation_authorized": false,
+    "evidence_construction_executed": false,
+    "expert_re_review_executed": false,
+    "lane_reopen_authorized": false,
+    "lean_theorem_debt_discharged": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "policy_adjudication_executed": false,
+    "proof_debt_reduced": false,
+    "release_packet_assembled": false,
+    "remediation_executed": false,
+    "remediation_execution_authorized": false,
+    "retained_assumptions_discharged": false,
+    "seam_closure_authorized": false,
+    "source_map_closure_claimed": false,
+    "source_map_semantic_closure_authorized": false,
+    "source_map_witness_chain_evidence_constructed": false,
+    "source_map_witness_chain_evidence_construction_authorized": false,
+    "theorem_discharge_authorized": false,
+    "v01_alpha_marked_ready": false,
+    "witness_chain_constructed": false
+  },
+  "known_available_evidence": [
+    {
+      "evidence_id": "tranche_004_remediation_plan_result_review_accepted",
+      "source": "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_REMEDIATION_PACKET_RESULT_REVIEW_20260515_v0.json",
+      "status": "available",
+      "supports": "bounded witness-chain evidence packet preparation only"
+    },
+    {
+      "authorization_status": "full_source_map_semantic_closure_not_authorized",
+      "evidence_id": "negative_source_map_authorization_readout",
+      "not_authorized_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+      "status": "available",
+      "supports": "retention of the source-map semantic-closure blocker"
+    },
+    {
+      "evidence_id": "missing_witness_chain_inventory",
+      "missing_witness_count": 10,
+      "required_components": [
+        "renormalization_validity_witness",
+        "finite_stress_energy_tensor_witness",
+        "conservation_witness",
+        "bianchi_compatibility_witness",
+        "einstein_coupling_witness",
+        "weak_curvature_source_identification_witness",
+        "poisson_recovery_witness",
+        "newtonian_weak_field_recovery_witness",
+        "semiclassical_einstein_equation_witness",
+        "qft_gr_source_map_closure_witness"
+      ],
+      "status": "available",
+      "supports": "definition of the evidence requirements"
+    },
+    {
+      "depends_on_no_axioms": true,
+      "evidence_id": "lean_dependency_audit_clean",
+      "parsed_axioms": [],
+      "project_axioms_used": [],
+      "status": "available",
+      "supports": "the blocker is not a Lean axiom dependency hygiene issue"
+    }
+  ],
+  "known_missing_evidence": [
+    {
+      "components": [
+        "renormalization_validity_witness",
+        "finite_stress_energy_tensor_witness",
+        "conservation_witness",
+        "bianchi_compatibility_witness",
+        "einstein_coupling_witness",
+        "weak_curvature_source_identification_witness",
+        "poisson_recovery_witness",
+        "newtonian_weak_field_recovery_witness",
+        "semiclassical_einstein_equation_witness",
+        "qft_gr_source_map_closure_witness"
+      ],
+      "missing_evidence_id": "required_witness_chain_components_not_constructed",
+      "status": "missing"
+    },
+    {
+      "conditions": [
+        "positive_full_source_map_semantic_closure_authorization_readout",
+        "witness_chain_complete_for_all_required_qft_gr_source_map_layers",
+        "semantic_closure_proof_or_equivalent_reviewed_evidence",
+        "no_reinterpretation_of_negative_authorization_marker_as_closure",
+        "expert_review_acceptance_before_any_blocker_downgrade"
+      ],
+      "missing_evidence_id": "positive_source_map_semantic_closure_authorization",
+      "status": "missing"
+    },
+    {
+      "missing_evidence_id": "reviewed_semantic_closure_proof_or_equivalent",
+      "status": "missing"
+    },
+    {
+      "missing_evidence_id": "expert_re_review_acceptance_for_authorization_change",
+      "status": "missing"
+    },
+    {
+      "missing_evidence_id": "result_review_accepting_any_new_evidence_before_blocker_movement",
+      "status": "missing"
+    }
+  ],
+  "lean_audit_result": {
+    "classification": "no_lean_axiom_dependency_detected",
+    "depends_on_no_axioms": true,
+    "parsed_axioms": [],
+    "project_axiom_count": 0,
+    "project_axioms_used": []
+  },
+  "lean_surfaces_involved": [
+    {
+      "kind": "audit_target",
+      "module": "ToeFormal.Bridges.QFTGRSourceMapEligibilityLadderSummary",
+      "name": "ToeFormal.Bridges.QFTGRSourceMapEligibilityLadderSummary.qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "path": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SourceMapEligibilityLadderSummary.lean",
+      "role": "negative source-map authorization marker and missing witness-chain readout"
+    },
+    {
+      "kind": "release_marker",
+      "module": "ToeFormal.Release.V01Tranche004SourceMapWitnessChainEvidencePacket",
+      "path": "formal/toe_formal/ToeFormal/Release/V01Tranche004SourceMapWitnessChainEvidencePacket.lean",
+      "role": "Lean-side non-claim marker for this preparation packet"
+    }
+  ],
+  "lean_theorem_debt_discharged": false,
+  "next_action_scope": "REVIEW_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_EVIDENCE_PACKET_ONLY_NO_EVIDENCE_CONSTRUCTION_CLOSURE_BLOCKER_MOVEMENT_OR_RELEASE_PROMOTION",
+  "non_claim_boundary": "The v0.1-alpha tranche 004 source-map witness-chain evidence packet prepares only the requirements surface for the retained source-map authorization blocker. It preserves full_source_map_semantic_closure_not_authorized, preserves the absent witness-chain reason, preserves project_axioms_used = [], records known available and missing evidence plus required witness-chain and semantic-closure conditions, and does not claim source-map closure, construct the witness chain, move tranche 004, assemble release, mark readiness, discharge theorem/proof debt, authorize Phase 2, close seams, validate empirically, promote the master action, or make an external-truth claim.",
+  "other_release_blocking_obligation_count": 2,
+  "other_release_blocking_obligations": [
+    {
+      "dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-005",
+      "modified_by_tranche_004": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_004"
+    },
+    {
+      "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-006",
+      "modified_by_tranche_004": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_004"
+    }
+  ],
+  "outcome_id": "V01_ALPHA_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_EVIDENCE_PACKET_PREPARED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION",
+  "packet_id": "V01_ALPHA_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_EVIDENCE_PACKET_v0",
+  "packet_scope": "PREPARE_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_EVIDENCE_REQUIREMENTS_ONLY_NO_SOURCE_MAP_CLOSURE_WITNESS_CONSTRUCTION_BLOCKER_MOVEMENT_OR_RELEASE_PROMOTION",
+  "policy_adjudication_executed": false,
+  "post_packet_review_target": "review_v01_alpha_tranche_004_source_map_witness_chain_evidence_packet_result",
+  "project_axioms_used": [],
+  "proof_debt_reduced": false,
+  "release_blocking_obligation_count": 3,
+  "release_blocking_obligations_carry_forward": [
+    {
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "dependency_class": "blocked_bridge_authorization_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    },
+    {
+      "dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-005",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    },
+    {
+      "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-006",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    }
+  ],
+  "release_packet_assembled": false,
+  "remains_release_blocking": true,
+  "remediation_executed": false,
+  "remediation_execution_authorized": false,
+  "required_source_map_semantic_closure_conditions": [
+    "positive_full_source_map_semantic_closure_authorization_readout",
+    "witness_chain_complete_for_all_required_qft_gr_source_map_layers",
+    "semantic_closure_proof_or_equivalent_reviewed_evidence",
+    "no_reinterpretation_of_negative_authorization_marker_as_closure",
+    "expert_review_acceptance_before_any_blocker_downgrade"
+  ],
+  "required_witness_chain_components": [
+    "renormalization_validity_witness",
+    "finite_stress_energy_tensor_witness",
+    "conservation_witness",
+    "bianchi_compatibility_witness",
+    "einstein_coupling_witness",
+    "weak_curvature_source_identification_witness",
+    "poisson_recovery_witness",
+    "newtonian_weak_field_recovery_witness",
+    "semiclassical_einstein_equation_witness",
+    "qft_gr_source_map_closure_witness"
+  ],
+  "retained_assumptions_discharged": false,
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_EVIDENCE_PACKET_20260515_v0",
+  "selected_dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+  "selected_dependency_class": "blocked_bridge_authorization_dependency",
+  "selected_next_target": "review_v01_alpha_tranche_004_source_map_witness_chain_evidence_packet_result",
+  "selected_next_target_kind": "tranche_004_source_map_witness_chain_evidence_packet_result_review_only",
+  "selected_release_blocking_obligation": {
+    "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "dependency_class": "blocked_bridge_authorization_dependency",
+    "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+    "modified_by_tranche_003": false,
+    "remediation_execution_status": "not_executed_v0",
+    "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+  },
+  "selected_remediation_finding_id": "V01-ALPHA-DEP-REM-004",
+  "selected_tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-004",
+  "selection_count": 1,
+  "source_map_authorization_status": {
+    "authorization_status": "full_source_map_semantic_closure_not_authorized",
+    "full_source_map_semantic_closure_authorized": false,
+    "missing_witness_count": 10,
+    "not_authorized_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+    "retained_blocker_id": "PHASE1-BLOCKER-QFTGR-SOURCE-MAP-WITNESS-CHAIN-RETAINED",
+    "source_map_not_authorized": true,
+    "supplied_only_layer_count": 9
+  },
+  "source_map_closure_claimed": false,
+  "source_map_semantic_closure_authorized": false,
+  "source_map_witness_chain_evidence_constructed": false,
+  "source_map_witness_chain_evidence_construction_authorized": false,
+  "source_map_witness_chain_evidence_packet_prepared": true,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "tranche_001_status": "documented_dependency_nonblocking",
+  "tranche_002_status": "documented_dependency_nonblocking",
+  "tranche_003_status": "documented_dependency_nonblocking",
+  "tranche_004_status": "real_source_map_authorization_blocker_witness_chain_evidence_requirements_prepared_pending_result_review",
+  "v01_alpha_marked_ready": false,
+  "validation_claim_authorized": false,
+  "witness_chain_constructed": false
+}

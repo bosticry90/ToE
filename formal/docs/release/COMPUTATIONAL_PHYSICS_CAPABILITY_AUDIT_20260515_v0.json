@@ -1,0 +1,503 @@
+{
+  "allowed_roles": [
+    "simulation",
+    "verification",
+    "validation_relevant",
+    "robustness",
+    "regime_recovery",
+    "falsifier",
+    "uq_relevant",
+    "model_comparison",
+    "governance_only"
+  ],
+  "audit_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0",
+  "audit_rows": [
+    {
+      "artifact_id": "C6_CP_NLSE_2D_LANE",
+      "artifact_path": "formal/python/crft/cp_nlse_2d.py",
+      "claim_boundary": "internal_consequence",
+      "computational_physics_role": [
+        "simulation",
+        "verification",
+        "robustness",
+        "regime_recovery",
+        "falsifier"
+      ],
+      "evidence_paths": [
+        {
+          "exists": true,
+          "path": "formal/python/crft/cp_nlse_2d.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/crft/tests/test_c6_cp_nlse_2d_dispersion.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/crft/tests/test_c6_cp_nlse_2d_dispersion_eigenfunction.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/crft/tests/test_c6_cp_nlse_2d_norm_drift.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/toe_formal/ToeFormal/CPNLSE2D/Dispersion.lean"
+        }
+      ],
+      "falsifier_status": "defined",
+      "known_limit_status": "partial",
+      "notes": "2D CP-NLSE executable lane with dispersion and norm-drift gates; safe reading is internal computational consequence plus limited known-limit pressure.",
+      "physics_domain": [
+        "nonlinear_field",
+        "QM",
+        "general"
+      ],
+      "promotion_allowed": false,
+      "robustness_status": "partial",
+      "uq_status": "none",
+      "validation_status": "internal_only",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "C7_MT01A_ACOUSTIC_METRIC_LANE",
+      "artifact_path": "formal/python/crft/acoustic_metric.py",
+      "claim_boundary": "validation_candidate",
+      "computational_physics_role": [
+        "simulation",
+        "verification",
+        "validation_relevant",
+        "robustness",
+        "falsifier"
+      ],
+      "evidence_paths": [
+        {
+          "exists": true,
+          "path": "formal/python/crft/acoustic_metric.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_mt01_acoustic_metric_lock.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_c7_acoustic_metric_inequalities.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_c7_acoustic_metric_perturbation_stability.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/toe_formal/ToeFormal/CRFT/Geom/AcousticMetric.lean"
+        }
+      ],
+      "falsifier_status": "defined",
+      "known_limit_status": "candidate",
+      "notes": "Acoustic-metric diagnostic construction with inequality and perturbation gates; safe reading is emergent-geometry candidate pressure, not geometry validation.",
+      "physics_domain": [
+        "GR",
+        "nonlinear_field",
+        "cross_pillar"
+      ],
+      "promotion_allowed": false,
+      "robustness_status": "perturbation_scanned",
+      "uq_status": "none",
+      "validation_status": "internal_only",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "UCFF_SPECTRAL_AUDIT_LINEAGE",
+      "artifact_path": "formal/docs/ucff_core_front_door_spec.md",
+      "claim_boundary": "internal_consequence",
+      "computational_physics_role": [
+        "verification",
+        "uq_relevant",
+        "model_comparison",
+        "regime_recovery"
+      ],
+      "evidence_paths": [
+        {
+          "exists": true,
+          "path": "formal/docs/ucff_core_front_door_spec.md"
+        },
+        {
+          "exists": true,
+          "path": "formal/docs/ucff_core_front_door_contract.md"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/toe/ucff/core_front_door.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_ucff_core_front_door_roundtrip.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_ucff_core_front_door_symbolic_invariant_01.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_ucff_core_front_door_symbolic_invariant_02.py"
+        }
+      ],
+      "falsifier_status": "defined",
+      "known_limit_status": "candidate",
+      "notes": "UCFF front-door and symbolic invariants support structural numerical bookkeeping; safe reading is internal structural support and future UQ relevance.",
+      "physics_domain": [
+        "QFT",
+        "nonlinear_field",
+        "general"
+      ],
+      "promotion_allowed": false,
+      "robustness_status": "partial",
+      "uq_status": "qualitative",
+      "validation_status": "internal_only",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "BRAGG_DISPERSION_ELIMINATIVE_LANE",
+      "artifact_path": "formal/docs/cv01_bec_bragg_v1_front_door_contract.md",
+      "claim_boundary": "validation_candidate",
+      "computational_physics_role": [
+        "validation_relevant",
+        "falsifier",
+        "model_comparison",
+        "uq_relevant"
+      ],
+      "evidence_paths": [
+        {
+          "exists": true,
+          "path": "formal/docs/cv01_bec_bragg_v1_front_door_contract.md"
+        },
+        {
+          "exists": true,
+          "path": "formal/docs/first_empirical_comparator_domain_bec_bragg.md"
+        },
+        {
+          "exists": true,
+          "path": "formal/markdown/locks/observables/OV-BR-03_bragg_dispersion_k_omega_digitized.md"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/toe/comparators/cv01_bec_bragg_v1.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_cv01_bec_bragg_v1_front_door.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_ov_br03n_bragg_dispersion_digitized_lock.py"
+        }
+      ],
+      "falsifier_status": "defined",
+      "known_limit_status": "candidate",
+      "notes": "Bragg/dispersion comparator lane can support pruning pressure and empirical-comparator design; safe reading remains validation-candidate, not validation complete.",
+      "physics_domain": [
+        "QM",
+        "nonlinear_field"
+      ],
+      "promotion_allowed": false,
+      "robustness_status": "partial",
+      "uq_status": "partial",
+      "validation_status": "empirical_candidate",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "RL01_RELATIVISTIC_DISPERSION_LIMIT",
+      "artifact_path": "formal/docs/rl01_relativistic_dispersion_v0_front_door_contract.md",
+      "claim_boundary": "known_limit_relevant",
+      "computational_physics_role": [
+        "verification",
+        "validation_relevant",
+        "regime_recovery",
+        "falsifier",
+        "model_comparison"
+      ],
+      "evidence_paths": [
+        {
+          "exists": true,
+          "path": "formal/docs/rl01_relativistic_dispersion_v0_front_door_contract.md"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/toe/comparators/rl01_relativistic_dispersion_v0.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_rl01_relativistic_dispersion_v0_front_door.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_rl01_relativistic_dispersion_v0_surface_contract_freeze.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/external_evidence/relativistic_dispersion_domain_01/rl01_reference_report.json"
+        },
+        {
+          "exists": true,
+          "path": "formal/external_evidence/relativistic_dispersion_domain_01/rl01_candidate_report.json"
+        }
+      ],
+      "falsifier_status": "defined",
+      "known_limit_status": "partial",
+      "notes": "Relativistic dispersion front door is a known-limit recovery candidate with deterministic checks; safe reading is conditional regime-recovery evidence only.",
+      "physics_domain": [
+        "SR",
+        "QFT",
+        "general"
+      ],
+      "promotion_allowed": false,
+      "robustness_status": "partial",
+      "uq_status": "none",
+      "validation_status": "known_limit_candidate",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "RL02_NONRELATIVISTIC_NLSE_LIMIT",
+      "artifact_path": "formal/docs/rl02_nonrelativistic_nlse_v0_front_door_contract.md",
+      "claim_boundary": "known_limit_relevant",
+      "computational_physics_role": [
+        "verification",
+        "validation_relevant",
+        "regime_recovery",
+        "falsifier",
+        "model_comparison"
+      ],
+      "evidence_paths": [
+        {
+          "exists": true,
+          "path": "formal/docs/rl02_nonrelativistic_nlse_v0_front_door_contract.md"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/toe/comparators/rl02_nonrelativistic_nlse_v0.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_rl02_nonrelativistic_nlse_v0_front_door.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_rl02_nonrelativistic_nlse_v0_surface_contract_freeze.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/external_evidence/rl02_nonrelativistic_limit_nlse_domain_01/rl02_reference_report.json"
+        },
+        {
+          "exists": true,
+          "path": "formal/external_evidence/rl02_nonrelativistic_limit_nlse_domain_01/rl02_candidate_report.json"
+        }
+      ],
+      "falsifier_status": "defined",
+      "known_limit_status": "partial",
+      "notes": "Nonrelativistic NLSE front door is a known-limit recovery candidate with deterministic checks; safe reading is conditional regime-recovery evidence only.",
+      "physics_domain": [
+        "QM",
+        "QFT",
+        "nonlinear_field"
+      ],
+      "promotion_allowed": false,
+      "robustness_status": "partial",
+      "uq_status": "none",
+      "validation_status": "known_limit_candidate",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "GR01_DERIVATION_COMPLETENESS_GATE",
+      "artifact_path": "formal/docs/paper/DERIVATION_TARGET_GR01_HARDENING_v0.md",
+      "claim_boundary": "blocked",
+      "computational_physics_role": [
+        "verification",
+        "regime_recovery",
+        "governance_only"
+      ],
+      "evidence_paths": [
+        {
+          "exists": true,
+          "path": "formal/docs/paper/DERIVATION_TARGET_GR01_HARDENING_v0.md"
+        },
+        {
+          "exists": true,
+          "path": "formal/docs/paper/DERIVATION_TARGET_GR01_FULL_DERIVATION_DISCHARGE_v0.md"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_gr01_hardening_roadmap_gate.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/toe_formal/ToeFormal/Variational/WeakFieldPoissonLimit.lean"
+        },
+        {
+          "exists": true,
+          "path": "formal/toe_formal/ToeFormal/Variational/GR01AssumptionLedger.lean"
+        }
+      ],
+      "falsifier_status": "blocked",
+      "known_limit_status": "blocked",
+      "notes": "GR01 hardening is derivation-readiness and weak-field bookkeeping; safe reading is no computational validation claim and no claim promotion.",
+      "physics_domain": [
+        "GR"
+      ],
+      "promotion_allowed": false,
+      "robustness_status": "partial",
+      "uq_status": "none",
+      "validation_status": "none",
+      "verification_status": "gated"
+    },
+    {
+      "artifact_id": "BRIDGE_PROGRAM_ORTHOGONALITY_REPORTS",
+      "artifact_path": "formal/python/tools/bridge_program_orthogonality_report_generate.py",
+      "claim_boundary": "internal_consequence",
+      "computational_physics_role": [
+        "verification",
+        "robustness",
+        "falsifier",
+        "model_comparison"
+      ],
+      "evidence_paths": [
+        {
+          "exists": true,
+          "path": "formal/python/tools/bridge_program_orthogonality_report_generate.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tools/bridge_program_orthogonality_mismatch_report_generate.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_bridge_program_orthogonality_report_generate_determinism.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_bridge_program_orthogonality_robustness_guard.py"
+        },
+        {
+          "exists": true,
+          "path": "formal/python/tests/test_bridge_program_orthogonality_mismatch_report_generate_determinism.py"
+        }
+      ],
+      "falsifier_status": "defined",
+      "known_limit_status": "none",
+      "notes": "Bridge orthogonality reports classify seam mismatch and robustness behavior; safe reading is failure/orthogonality evidence only.",
+      "physics_domain": [
+        "cross_pillar",
+        "general"
+      ],
+      "promotion_allowed": false,
+      "robustness_status": "perturbation_scanned",
+      "uq_status": "qualitative",
+      "validation_status": "internal_only",
+      "verification_status": "gated"
+    }
+  ],
+  "authorization_class": "AUXILIARY_NONCLAIM_COMPUTATIONAL_ANALYSIS",
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "classification_outcome": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_CLASSIFIES_EXISTING_NONCLAIM_ANALYSIS_SURFACES_WITHOUT_PROMOTION",
+  "non_claim_boundary": "Capability classification only; no theorem discharge, blocker movement, lane reopen, Phase 2 authorization, empirical validation claim, seam closure, master-action promotion, or external-truth claim.",
+  "policy_bindings": [
+    "formal/docs/release/GROUNDED_SPECULATION_POSTURE_STANDARD_v0.md",
+    "formal/docs/release/COMPUTATIONAL_ANALYSIS_BOUNDED_AUTHORIZATION_CLASS_20260416_v0.json",
+    "formal/docs/release/COMPUTATIONAL_ANALYSIS_LANE_EXECUTION_POLICY_20260416_v0.md",
+    "formal/docs/paper/CLAIM_TAXONOMY_v1.md"
+  ],
+  "report_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_REPORT_v0",
+  "roadmap_pointer": "formal/docs/paper/COMPUTATIONAL_PHYSICS_INTEGRATION_ROADMAP_v0.md",
+  "schema_id": "COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_20260515_v0",
+  "scope": {
+    "excluded_scope": [
+      "EVERY_PYTHON_TEST_IN_REPO",
+      "EVERY_LEAN_FILE_IN_REPO",
+      "FULL_PAPER_INVENTORY",
+      "ARCHIVE_AND_QUARANTINE_PATHS"
+    ],
+    "included_artifact_count": 8,
+    "included_lanes": [
+      "C6_CP_NLSE_2D_LANE",
+      "C7_MT01A_ACOUSTIC_METRIC_LANE",
+      "UCFF_SPECTRAL_AUDIT_LINEAGE",
+      "BRAGG_DISPERSION_ELIMINATIVE_LANE",
+      "RL01_RELATIVISTIC_DISPERSION_LIMIT",
+      "RL02_NONRELATIVISTIC_NLSE_LIMIT",
+      "GR01_DERIVATION_COMPLETENESS_GATE",
+      "BRIDGE_PROGRAM_ORTHOGONALITY_REPORTS"
+    ],
+    "scope_rule": "BOUNDED_MAJOR_EXISTING_COMPUTATIONAL_LANES_ONLY"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "status_enums": {
+    "claim_boundary": [
+      "nonclaim",
+      "internal_consequence",
+      "known_limit_relevant",
+      "validation_candidate",
+      "blocked"
+    ],
+    "falsifier_status": [
+      "absent",
+      "defined",
+      "executed_pass",
+      "executed_fail",
+      "blocked"
+    ],
+    "known_limit_status": [
+      "none",
+      "candidate",
+      "partial",
+      "passed",
+      "failed",
+      "blocked"
+    ],
+    "robustness_status": [
+      "none",
+      "partial",
+      "perturbation_scanned",
+      "resolution_scanned",
+      "solver_crosschecked"
+    ],
+    "uq_status": [
+      "none",
+      "qualitative",
+      "partial",
+      "quantitative"
+    ],
+    "validation_status": [
+      "none",
+      "internal_only",
+      "known_limit_candidate",
+      "empirical_candidate",
+      "validated_in_bounded_domain"
+    ],
+    "verification_status": [
+      "none",
+      "partial",
+      "gated",
+      "convergence_checked",
+      "independently_replicated"
+    ]
+  },
+  "summary": {
+    "all_promotion_allowed_false": true,
+    "missing_evidence": [],
+    "missing_evidence_count": 0,
+    "next_recommended_packet": "VVUQ_CREDIBILITY_LEDGER_v0_AFTER_RESULT_REVIEW",
+    "promotion_allowed_count": 0,
+    "roles_present": [
+      "falsifier",
+      "governance_only",
+      "model_comparison",
+      "regime_recovery",
+      "robustness",
+      "simulation",
+      "uq_relevant",
+      "validation_relevant",
+      "verification"
+    ],
+    "row_count": 8
+  }
+}

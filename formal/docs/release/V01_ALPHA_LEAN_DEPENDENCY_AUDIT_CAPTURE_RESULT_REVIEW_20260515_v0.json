@@ -1,0 +1,116 @@
+{
+  "acceptance_criteria": {
+    "axiom_spec_backed_debt_not_reduced_by_documentation": true,
+    "capture_forbidden_effects_all_false": true,
+    "capture_gap_preserved": true,
+    "capture_packet_nonclaim_status": true,
+    "capture_packet_outcome_expected": true,
+    "capture_packet_prepared": true,
+    "capture_packet_selected_this_review": true,
+    "consumes_capture_packet": true,
+    "dependency_audit_rows_preserved": true,
+    "exactly_one_next_target_selected": true,
+    "expert_review_not_executed": true,
+    "expert_review_required_dependencies_preserved": true,
+    "lean_theorem_debt_not_discharged": true,
+    "original_gap_readout_preserved": true,
+    "original_gap_review_consumed": true,
+    "release_blocking_dependencies_preserved": true,
+    "release_index_checks_preserved": true,
+    "release_packet_assembly_closed": true,
+    "review_forbidden_effects_all_false": true,
+    "unresolved_dependencies_preserved": true,
+    "v01_alpha_readiness_not_marked": true
+  },
+  "accepted": true,
+  "axiom_ledger_posture_reviewed": {
+    "blocks_full_pillar_target_count": 22,
+    "defaultNonAlias": "absent_from_unresolved_axiom_debt_and_lean_backed",
+    "documentation_discharge_claim": false,
+    "real_axiom_count": 59,
+    "real_axiom_file_count": 14,
+    "real_sorry_or_admit_count": 0,
+    "retained_assumption_count": 22,
+    "sampleRep32": "absent_from_unresolved_axiom_debt_and_lean_backed_constructor",
+    "spec_backed_count": 37
+  },
+  "axiom_spec_backed_debt_reduced_by_documentation": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The capture packet is accepted as capture-only, so the next bounded object is an expert-review packet preparation surface.",
+      "target": "prepare_v01_alpha_expert_review_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Expert review execution requires a prepared and reviewed packet first.",
+      "target": "execute_v01_alpha_expert_review"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Release assembly remains blocked while Lean dependency review and expert-review packet work are incomplete.",
+      "target": "assemble_v01_alpha_public_release_packet"
+    }
+  ],
+  "capture_only_acceptance": true,
+  "capture_packet_boundary_confirmed": {
+    "captured_audit_packet_is_not_release_readiness": true,
+    "captured_dependency_posture_is_not_reviewed_dependency_posture": true,
+    "documentation_is_not_proof_debt_reduction": true,
+    "documentation_is_not_theorem_discharge": true
+  },
+  "capture_summary_reviewed": {
+    "expert_review_required_dependency_count": 6,
+    "primary_capture_gap": "EXACT_AXIOM_PRINT_OUTPUT_AND_EXPERT_REVIEW_NOT_EXECUTED_V0",
+    "release_blocking_dependency_count": 6,
+    "release_index_check_count": 8,
+    "relevant_module_count": 5,
+    "unresolved_dependency_count": 6,
+    "v01_dependency_audit_row_count": 6
+  },
+  "captured_at_utc": "2026-05-15T00:00:00Z",
+  "consumed_capture_packet_schema_id": "V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_PACKET_20260515_v0",
+  "consumes_capture_packet": "V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_PACKET_v0",
+  "consumes_capture_packet_pointer": "formal/docs/release/V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_PACKET_20260515_v0.json",
+  "dependency_counts_reviewed": {
+    "documentation_only_dependency_count": 3,
+    "expert_review_required_dependency_count": 6,
+    "release_blocking_dependency_count": 6,
+    "unresolved_dependency_count": 6
+  },
+  "expert_review_executed": false,
+  "forbidden_effect_status": {
+    "axiom_spec_backed_debt_reduced_by_documentation": false,
+    "blocker_movement_authorized": false,
+    "claim_promotion_authorized": false,
+    "computational_physics_execution_surface_opened": false,
+    "empirical_validation_authorized": false,
+    "expert_review_executed": false,
+    "lane_reopen_authorized": false,
+    "lean_theorem_debt_discharged": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "proof_debt_reduced": false,
+    "release_packet_assembled": false,
+    "seam_closure_authorized": false,
+    "theorem_discharge_authorized": false,
+    "v01_alpha_marked_ready": false
+  },
+  "lean_theorem_debt_discharged": false,
+  "next_action_scope": "PREPARE_EXPERT_REVIEW_PACKET_ONLY_NO_EXPERT_REVIEW_EXECUTION",
+  "non_claim_boundary": "The Lean dependency audit capture result review accepts the prior packet as capture-only. It authorizes only expert-review packet preparation and does not execute expert review, assemble the v0.1-alpha release packet, mark readiness, discharge Lean theorem debt, reduce axiom/spec-backed proof debt by documentation, authorize Phase 2, close seams, validate empirically, promote the master action, promote claims, or make an external-truth claim.",
+  "outcome_id": "V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_RESULT_REVIEW_ACCEPTS_CAPTURE_ONLY_AND_AUTHORIZES_EXPERT_REVIEW_PACKET_PREPARATION_ONLY",
+  "release_packet_assembled": false,
+  "review_id": "V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_RESULT_REVIEW_v0",
+  "review_scope": "CAPTURE_RESULT_REVIEW_ONLY_NO_EXPERT_REVIEW_EXECUTION_OR_RELEASE_ASSEMBLY",
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_LEAN_DEPENDENCY_AUDIT_CAPTURE_RESULT_REVIEW_20260515_v0",
+  "selected_next_target": "prepare_v01_alpha_expert_review_packet",
+  "selected_next_target_kind": "expert_review_packet_preparation_only",
+  "selection_count": 1,
+  "source_gap_review": "V01_ALPHA_RELEASE_PACKET_GAP_REVIEW_v0",
+  "source_gap_review_primary_gap": "LEAN_DEPENDENCY_AUDIT_CAPTURE_AND_EXPERT_REVIEW_PACKET_NOT_READY",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "v01_alpha_marked_ready": false,
+  "validation_claim_authorized": false
+}
