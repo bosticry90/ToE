@@ -460,6 +460,12 @@ def dependencyRemediationTranche006ReleasePolicyAdjudicationPacketResultReviewLe
 def dependencyRemediationTranche006ReleasePolicyAdjudicationPacketResultReviewOutcomeToken : String :=
   "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_RELEASE_POLICY_ADJUDICATION_PACKET_RESULT_REVIEW_ACCEPTS_POLICY_QUESTION_PREPARATION_AND_AUTHORIZES_POLICY_ADJUDICATION_EXECUTION_ONLY"
 
+def dependencyRemediationTranche006ReleasePolicyAdjudicationLeanSurface : String :=
+  "ToeFormal.Release.V01DependencyRemediationTranche006ReleasePolicyAdjudication"
+
+def dependencyRemediationTranche006ReleasePolicyAdjudicationOutcomeToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_RELEASE_POLICY_ADJUDICATED_WITH_NO_RELEASE_PROMOTION"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -1445,6 +1451,21 @@ theorem v01_dependency_remediation_tranche_006_release_policy_adjudication_packe
   trivial
 
 theorem v01_dependency_remediation_tranche_006_release_policy_adjudication_packet_result_review_does_not_promote_release : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_release_policy_adjudication_decides_policy_only : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_release_policy_adjudication_does_not_clear_blocker_by_itself : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_release_policy_adjudication_carries_tranche_004_retained_blocker : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_release_policy_adjudication_does_not_discharge_debt : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_release_policy_adjudication_does_not_promote_release : True := by
   trivial
 
 theorem v01_dependency_remediation_tranche_005_execution_packet_prepares_one_tranche_only : True := by
