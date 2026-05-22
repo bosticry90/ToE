@@ -496,6 +496,12 @@ def dependencyRemediationTranche006StatusAdjudicationPacketResultReviewLeanSurfa
 def dependencyRemediationTranche006StatusAdjudicationPacketResultReviewOutcomeToken : String :=
   "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_STATUS_ADJUDICATION_PACKET_RESULT_REVIEW_ACCEPTS_STATUS_QUESTION_PREPARATION_AND_AUTHORIZES_STATUS_ADJUDICATION_EXECUTION_ONLY"
 
+def dependencyRemediationTranche006StatusAdjudicationLeanSurface : String :=
+  "ToeFormal.Release.V01DependencyRemediationTranche006StatusAdjudication"
+
+def dependencyRemediationTranche006StatusAdjudicationOutcomeToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_STATUS_ADJUDICATED_PENDING_RESULT_REVIEW_WITH_NO_RELEASE_PROMOTION"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -1571,6 +1577,21 @@ theorem v01_dependency_remediation_tranche_006_status_adjudication_packet_result
   trivial
 
 theorem v01_dependency_remediation_tranche_006_status_adjudication_packet_result_review_does_not_promote_release : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_status_adjudication_executes_status_question_only : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_status_adjudication_does_not_register_movement : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_status_adjudication_does_not_move_blocker : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_status_adjudication_carries_tranche_004_retained_blocker : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_status_adjudication_does_not_promote_release : True := by
   trivial
 
 theorem v01_dependency_remediation_tranche_005_execution_packet_prepares_one_tranche_only : True := by
