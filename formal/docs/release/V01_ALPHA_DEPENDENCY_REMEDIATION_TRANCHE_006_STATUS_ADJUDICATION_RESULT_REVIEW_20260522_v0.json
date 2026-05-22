@@ -1,0 +1,255 @@
+{
+  "acceptance_criteria": {
+    "accepted_lean_dependency_evidence_preserved_exactly": true,
+    "adjudication_executed_and_accepted": true,
+    "adjudication_outcome_expected": true,
+    "adjudication_selected_this_review": true,
+    "blocker_movement_registration_preparation_only": true,
+    "candidate_accepted_without_direct_movement": true,
+    "consumes_expected_adjudication": true,
+    "documentation_chain_preserved": true,
+    "does_not_move_or_clear_tranche_006": true,
+    "does_not_move_tranche_004": true,
+    "exactly_one_next_target_selected": true,
+    "forbidden_effects_all_false": true,
+    "lean_audit_target_preserved": true,
+    "no_phase2_seam_empirical_or_master_action_authorization": true,
+    "no_release_packet_assembly": true,
+    "no_retained_assumption_discharge": true,
+    "no_theorem_or_proof_debt_discharge": true,
+    "no_v01_readiness_marking": true,
+    "other_obligations_carried_forward": true,
+    "policy_classification_preserved": true,
+    "project_axioms_used_empty": true,
+    "release_blockers_remain_tracked": true,
+    "selected_dependency_class_expected": true,
+    "selected_dependency_expected": true,
+    "selected_finding_expected": true,
+    "selected_tranche_expected": true,
+    "status_candidate_exact": true,
+    "status_classification_exact": true,
+    "status_decision_was_bounded": true,
+    "tranche_001_documented_nonblocking_preserved": true,
+    "tranche_002_documented_nonblocking_preserved": true,
+    "tranche_003_documented_nonblocking_preserved": true,
+    "tranche_004_retained_blocker_preserved": true,
+    "tranche_005_documented_nonblocking_preserved": true,
+    "tranche_006_policy_status_preserved": true
+  },
+  "accepted": true,
+  "accepted_lean_dependency_evidence": {
+    "axiom_classification": [
+      {
+        "axiom": "propext",
+        "classification": "standard_lean_axiom"
+      },
+      {
+        "axiom": "Classical.choice",
+        "classification": "standard_lean_axiom"
+      },
+      {
+        "axiom": "Quot.sound",
+        "classification": "standard_lean_axiom"
+      }
+    ],
+    "classification": "exact_dependency_evidence_produced_no_project_axioms_detected",
+    "exact_axioms_or_dependencies_used": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "parsed_axioms": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "project_axiom_count": 0,
+    "project_axioms_used": [],
+    "project_local_axioms_present": false,
+    "raw_output": "'ToeFormal.Bridges.SRCosmologyRegimeTransport.supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0' depends on axioms: [propext,\n Classical.choice,\n Quot.sound]",
+    "standard_lean_axiom_count": 3,
+    "standard_lean_axioms_used": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "standard_lean_or_mathlib_axioms_used": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "axiom_spec_backed_debt_reduced": false,
+  "axiom_spec_backed_debt_reduced_by_documentation": false,
+  "blocker_movement_authorized": false,
+  "blocker_movement_registered": false,
+  "blocker_movement_registration_packet_preparation_authorized": true,
+  "blocker_movement_registration_packet_prepared": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The documented nonblocking status candidate is accepted, so prepare a registration packet before any formal tranche 006 blocker movement.",
+      "target": "prepare_v01_alpha_dependency_remediation_tranche_006_blocker_movement_registration_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Movement execution requires packet preparation and result review first.",
+      "target": "execute_v01_alpha_dependency_remediation_tranche_006_blocker_movement_registration"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Release readiness remains blocked by retained tranche 004 and tranche 006 movement registration still pending.",
+      "target": "pause_v01_alpha_release_readiness_due_to_retained_tranche_004_blocker"
+    }
+  ],
+  "captured_at_utc": "2026-05-22T00:00:00Z",
+  "consumed_adjudication_schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_STATUS_ADJUDICATION_20260522_v0",
+  "consumes_adjudication": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_STATUS_ADJUDICATION_v0",
+  "consumes_adjudication_pointer": "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_STATUS_ADJUDICATION_20260522_v0.json",
+  "documentation_accepted_only_as_documentation": true,
+  "documentation_result_review_classification": "documentation_accepted_pending_tranche_006_status_adjudication",
+  "documentation_surface": {
+    "accepted_as_documentation": true,
+    "documentation_text_length": 3714,
+    "exists": true,
+    "surface": "formal/docs/paper/V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_DOCUMENTATION_v0.md"
+  },
+  "documented_nonblocking_status_candidate_accepted": true,
+  "forbidden_effect_status": {
+    "axiom_spec_backed_debt_reduced": false,
+    "axiom_spec_backed_debt_reduced_by_documentation": false,
+    "blocker_fully_remediated": false,
+    "blocker_movement_authorized": false,
+    "blocker_movement_registered": false,
+    "blocker_movement_registration_packet_prepared": false,
+    "broader_remediation_executed": false,
+    "claim_promotion_authorized": false,
+    "computational_physics_execution_surface_opened": false,
+    "empirical_validation_authorized": false,
+    "lane_reopen_authorized": false,
+    "lean_theorem_debt_discharged": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "proof_debt_reduced": false,
+    "release_packet_assembled": false,
+    "release_readiness_adjudication_prepared": false,
+    "release_readiness_pause_registered": false,
+    "remediation_closure_executed": false,
+    "remediation_executed": false,
+    "retained_assumptions_discharged": false,
+    "seam_closure_authorized": false,
+    "theorem_discharge_authorized": false,
+    "tranche_004_moved_to_documented_dependency_nonblocking": false,
+    "tranche_004_reclassified_nonblocking": false,
+    "tranche_004_retained_blocker_discharged": false,
+    "tranche_006_moved_or_cleared": false,
+    "v01_alpha_marked_ready": false
+  },
+  "global_release_readiness_still_blocked": true,
+  "lean_audit_target": {
+    "command": "#print axioms ToeFormal.Bridges.SRCosmologyRegimeTransport.supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+    "exit_code": 0,
+    "lean_target": "ToeFormal.Bridges.SRCosmologyRegimeTransport.supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0"
+  },
+  "lean_theorem_debt_discharged": false,
+  "next_action_scope": "PREPARE_TRANCHE_006_BLOCKER_MOVEMENT_REGISTRATION_PACKET_ONLY_NO_DIRECT_BLOCKER_MOVEMENT_OR_RELEASE_PROMOTION",
+  "non_claim_boundary": "The v0.1-alpha dependency remediation tranche 006 status adjudication result review accepts the documented nonblocking status candidate and authorizes only blocker movement registration packet preparation. It does not itself register blocker movement, clear tranche 006, move retained tranche 004, assemble the release packet, mark v0.1-alpha readiness, discharge Lean theorem debt, reduce axiom/spec-backed proof debt, discharge retained assumptions, authorize Phase 2, close seams, validate empirically, promote the master action, promote claims, or make an external-truth claim.",
+  "other_release_blocking_obligation_count": 1,
+  "other_release_blocking_obligations": [
+    {
+      "current_blocker": "full_source_map_semantic_closure_not_authorized",
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "dependency_class": "blocked_bridge_authorization_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+      "modified_by_tranche_006_policy_adjudication": false,
+      "retained_blocker_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+      "status_carry_forward": "retained_release_blocking_source_map_blocker"
+    }
+  ],
+  "outcome_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_STATUS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_DOCUMENTED_NONBLOCKING_STATUS_CANDIDATE_AND_AUTHORIZES_BLOCKER_MOVEMENT_REGISTRATION_PACKET_PREPARATION_ONLY",
+  "policy_classification": "policy_acceptable_with_documentation_requirement",
+  "proof_debt_reduced": false,
+  "release_blocking_obligation_count": 2,
+  "release_blocking_obligations_carry_forward": [
+    {
+      "current_blocker": "full_source_map_semantic_closure_not_authorized",
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "dependency_class": "blocked_bridge_authorization_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+      "modified_by_tranche_006_policy_adjudication": false,
+      "retained_blocker_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+      "status_carry_forward": "retained_release_blocking_source_map_blocker"
+    },
+    {
+      "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-006",
+      "modified_by_tranche_006_policy_adjudication": false,
+      "status_carry_forward": "pending_result_review_policy_acceptable_with_documentation_requirement"
+    }
+  ],
+  "release_packet_assembled": false,
+  "release_readiness_adjudication_prepared": false,
+  "release_readiness_blocked_by_tranche_004": true,
+  "release_readiness_pause_registered": false,
+  "remediation_closure_authorized": false,
+  "remediation_fully_satisfied": false,
+  "retained_assumptions_discharged": false,
+  "retained_tranche_004_carry_forward": {
+    "construction_attempt_classification": "construction_attempt_failed_retained_blocker",
+    "current_blocker": "full_source_map_semantic_closure_not_authorized",
+    "declaration_classification": "retained_source_map_authorization_release_blocker_declared_after_fail_closed_attempt",
+    "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "dependency_class": "blocked_bridge_authorization_dependency",
+    "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+    "moved_to_documented_dependency_nonblocking": false,
+    "release_readiness_blocked_by_tranche_004": true,
+    "retained_blocker_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+    "source_ledger_row": {
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "dependency_class": "blocked_bridge_authorization_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    },
+    "status": "retained_release_blocking_source_map_blocker",
+    "tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-004"
+  },
+  "review_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_STATUS_ADJUDICATION_RESULT_REVIEW_v0",
+  "review_scope": "REVIEW_TRANCHE_006_STATUS_ADJUDICATION_RESULT_ONLY_AUTHORIZE_BLOCKER_MOVEMENT_REGISTRATION_PACKET_PREPARATION_NO_DIRECT_MOVEMENT",
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_STATUS_ADJUDICATION_RESULT_REVIEW_20260522_v0",
+  "selected_dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+  "selected_dependency_class": "lean_bridge_dependency",
+  "selected_next_target": "prepare_v01_alpha_dependency_remediation_tranche_006_blocker_movement_registration_packet",
+  "selected_next_target_kind": "blocker_movement_registration_packet_preparation_only",
+  "selected_remediation_finding_id": "V01-ALPHA-DEP-REM-006",
+  "selected_tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-006",
+  "selection_count": 1,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "status_adjudication_classification": "status_adjudicated_documented_dependency_pending_result_review",
+  "status_adjudication_result_review_classification": "documented_nonblocking_status_candidate_accepted_pending_blocker_movement_registration",
+  "status_candidate_reviewed": "documented_dependency_nonblocking_pending_result_review",
+  "tranche_001_status": "documented_dependency_nonblocking",
+  "tranche_002_status": "documented_dependency_nonblocking",
+  "tranche_003_status": "documented_dependency_nonblocking",
+  "tranche_004_moved_to_documented_dependency_nonblocking": false,
+  "tranche_004_reclassified_nonblocking": false,
+  "tranche_004_retained_blocker_discharged": false,
+  "tranche_004_status": "retained_release_blocking_source_map_blocker",
+  "tranche_005_dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+  "tranche_005_status": "documented_dependency_nonblocking",
+  "tranche_006_moved_or_cleared": false,
+  "tranche_006_obligation_carry_forward": {
+    "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+    "dependency_class": "lean_bridge_dependency",
+    "dependency_finding_id": "V01-ALPHA-DEP-REM-006",
+    "modified_by_tranche_005_policy_adjudication": false,
+    "status_carry_forward": "tracked_unresolved"
+  },
+  "tranche_006_release_blocker_status": "status_candidate_accepted_pending_blocker_movement_registration_packet",
+  "tranche_006_status": "policy_acceptable_with_documentation_requirement",
+  "v01_alpha_marked_ready": false,
+  "validation_claim_authorized": false
+}
