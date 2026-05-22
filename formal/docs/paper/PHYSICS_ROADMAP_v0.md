@@ -101,6 +101,10 @@ Strict scalar/QFT derivation synchronization checkpoint (2026-05-02):
 - Latest branch-health checkpoint: full pytest checkpoint is green with `6606 passed, 230 skipped`; full `lake build ToeFormal` is green with `7984` jobs and no warnings.
 - External benchmark registry pointer: `formal/docs/lanes/EXTERNAL_PHYSICS_BENCHMARK_REGISTRY_v0.md`.
 - External benchmark gate pointer: `formal/python/tests/test_external_physics_benchmark_registry_gate.py`.
+- Public-submission hygiene pointer: `formal/docs/release/PUBLIC_SUBMISSION_AI_HYGIENE_STANDARD_v0.md`.
+- External benchmark intake pointer: `formal/docs/lanes/EXTERNAL_BENCHMARK_INTAKE_QUEUE_20260522_v0.md`.
+- External benchmark source-verification pointer: `formal/docs/lanes/EXTERNAL_BENCHMARK_SOURCE_VERIFICATION_LEDGER_20260522_v0.md`.
+- Nonclaim intake/hygiene outcome: `NONCLAIM_BENCHMARK_INTAKE_AND_PUBLIC_SUBMISSION_HYGIENE_TRANCHE_PREPARED_WITH_NO_THEOREM_DISCHARGE_OR_PROMOTION`; this is pointer-only and does not alter `CURRENT_LIVE_NEXT_TARGET_v0: review_v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet_result`.
 - `STRICT_PHYSICS_NONCLAIM_BOUNDARY_v0: NO_PHASE2_AUTHORIZATION_NO_MASTER_ACTION_PROMOTION_NO_SEAM_CLOSURE_NO_EMPIRICAL_CLAIM`
 - Boundary: this checkpoint does not alter the recovery freeze, does not enroll new governed pytests by itself, does not authorize Phase 2, does not promote the master action, and does not claim empirical validation.
 - Computational-physics integration roadmap checkpoint (2026-05-15): `COMPUTATIONAL_PHYSICS_INTEGRATION_ROADMAP_v0` is pinned at `formal/docs/paper/COMPUTATIONAL_PHYSICS_INTEGRATION_ROADMAP_v0.md` with focused gate `formal/python/tests/test_computational_physics_integration_roadmap_gate.py`; the next bounded packet is `COMPUTATIONAL_PHYSICS_CAPABILITY_AUDIT_v0`, and the roadmap is planning-only under the auxiliary nonclaim computational-analysis lane with no Phase 2 authorization, seam closure, empirical validation claim, blocker movement, or master-action promotion.
