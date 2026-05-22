@@ -526,6 +526,12 @@ def dependencyRemediationTranche006BlockerMovementRegistrationLeanSurface : Stri
 def dependencyRemediationTranche006BlockerMovementRegistrationOutcomeToken : String :=
   "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_BLOCKER_MOVEMENT_REGISTERED_AS_DOCUMENTED_NONBLOCKING_WITH_NO_RELEASE_PROMOTION"
 
+def dependencyRemediationTranche006BlockerMovementRegistrationResultReviewLeanSurface : String :=
+  "ToeFormal.Release.V01DependencyRemediationTranche006BlockerMovementRegistrationResultReview"
+
+def dependencyRemediationTranche006BlockerMovementRegistrationResultReviewOutcomeToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_ACCEPTS_DOCUMENTED_NONBLOCKING_MOVEMENT_AND_AUTHORIZES_DEPENDENCY_REMEDIATION_SUMMARY_PREPARATION_ONLY"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -2114,6 +2120,18 @@ theorem v01_dependency_remediation_tranche_006_blocker_movement_registration_doe
   trivial
 
 theorem v01_dependency_remediation_tranche_006_blocker_movement_registration_does_not_promote_release : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_blocker_movement_registration_result_review_accepts_movement_only : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_blocker_movement_registration_result_review_carries_tranche_004_retained_blocker : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_blocker_movement_registration_result_review_does_not_discharge_debt : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_blocker_movement_registration_result_review_does_not_promote_release : True := by
   trivial
 
 theorem v01_release_standard_does_not_promote_master_action : True := by

@@ -1,0 +1,43 @@
+/-
+ToeFormal/Release/V01DependencyRemediationTranche006BlockerMovementRegistrationResultReview.lean
+
+Lean-side release index marker for the v0.1-alpha dependency-remediation
+tranche 006 blocker movement registration result review. This accepts the
+documented/nonblocking movement and routes only to summary preparation while
+carrying retained tranche 004.
+-/
+
+namespace ToeFormal
+namespace Release
+namespace V01DependencyRemediationTranche006BlockerMovementRegistrationResultReview
+
+def tranche006BlockerMovementRegistrationResultReviewToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_v0"
+
+def tranche006BlockerMovementRegistrationResultReviewOutcomeToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_ACCEPTS_DOCUMENTED_NONBLOCKING_MOVEMENT_AND_AUTHORIZES_DEPENDENCY_REMEDIATION_SUMMARY_PREPARATION_ONLY"
+
+def selectedDependency : String :=
+  "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0"
+
+def retainedTranche004Status : String :=
+  "retained_release_blocking_source_map_blocker"
+
+def selectedNextTarget : String :=
+  "prepare_v01_alpha_dependency_remediation_summary_after_tranche_006_movement"
+
+theorem v01_dependency_remediation_tranche_006_blocker_movement_registration_result_review_accepts_movement_only : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_blocker_movement_registration_result_review_carries_tranche_004_retained_blocker : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_blocker_movement_registration_result_review_does_not_discharge_debt : True := by
+  trivial
+
+theorem v01_dependency_remediation_tranche_006_blocker_movement_registration_result_review_does_not_promote_release : True := by
+  trivial
+
+end V01DependencyRemediationTranche006BlockerMovementRegistrationResultReview
+end Release
+end ToeFormal
