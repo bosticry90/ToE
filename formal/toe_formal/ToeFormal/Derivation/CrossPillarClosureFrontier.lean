@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "v0.1-alpha retained tranche 004 source-map witness-chain construction result review accepts witness-chain construction and authorizes source-map adjudication packet preparation only, with no closure"
+        "v0.1-alpha retained tranche 004 source-map authorization adjudication packet prepared to ask the semantic-closure authorization question, with no adjudication execution or closure"
       retained_blocker :=
         "V01-ALPHA-DEP-REM-004_RETAINED_RELEASE_BLOCKING_SOURCE_MAP_BLOCKER"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet"
+        "review_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet_result"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the retained tranche 004 construction result review. -/
+/-- Previous live target consumed by the retained tranche 004 source-map authorization adjudication packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_v01_alpha_retained_tranche_004_source_map_witness_chain_construction_from_research_candidate_result"
-
-/-- Current live target after retained tranche 004 construction result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet"
+
+/-- Current live target after retained tranche 004 source-map authorization adjudication packet preparation. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -241,7 +241,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "prepare_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet"
+        "review_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
