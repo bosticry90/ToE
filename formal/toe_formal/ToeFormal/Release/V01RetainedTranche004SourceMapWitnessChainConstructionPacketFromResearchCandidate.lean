@@ -1,0 +1,70 @@
+/-
+ToeFormal/Release/V01RetainedTranche004SourceMapWitnessChainConstructionPacketFromResearchCandidate.lean
+
+Lean-side release marker for the v0.1-alpha retained tranche 004 source-map
+witness-chain construction packet prepared from the accepted research candidate.
+This marker records packet preparation only; it does not construct witnesses or
+claim source-map closure.
+-/
+
+namespace ToeFormal
+namespace Release
+namespace V01RetainedTranche004SourceMapWitnessChainConstructionPacketFromResearchCandidate
+
+def constructionPacketFromResearchCandidateToken : String :=
+  "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_v0"
+
+def constructionPacketFromResearchCandidateOutcomeToken : String :=
+  "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
+
+def acceptedInputClassification : String :=
+  "partial_witness_chain_candidate_accepted_for_construction_packet_preparation_only"
+
+def retainedTranche004Status : String :=
+  "retained_release_blocking_source_map_blocker"
+
+def selectedNextTarget : String :=
+  "review_v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result"
+
+def constructionExecutionTarget : String :=
+  "execute_v01_alpha_retained_tranche_004_source_map_witness_chain_construction_from_research_candidate"
+
+theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_prepares_packet_only : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_consumes_partial_candidate_only : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_selects_result_review : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_does_not_execute_construction : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_does_not_construct_witness_chain : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_does_not_claim_source_map_closure : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_keeps_tranche_004_retained : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_keeps_release_unassembled : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_keeps_readiness_unmarked : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_does_not_discharge_debt : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_does_not_promote_release : True := by
+  trivial
+
+end V01RetainedTranche004SourceMapWitnessChainConstructionPacketFromResearchCandidate
+end Release
+end ToeFormal

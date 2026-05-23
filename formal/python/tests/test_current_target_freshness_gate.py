@@ -1040,6 +1040,21 @@ V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT
 V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_TARGET = (
     "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_result"
 )
+V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_TARGET = (
+    "prepare_v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate"
+)
+V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_RESULT_REVIEW_TARGET = (
+    "review_v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result"
+)
+V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_FROM_RESEARCH_CANDIDATE_EXECUTION_TARGET = (
+    "execute_v01_alpha_retained_tranche_004_source_map_witness_chain_construction_from_research_candidate"
+)
+V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_FROM_RESEARCH_CANDIDATE_RESULT_REVIEW_TARGET = (
+    "review_v01_alpha_retained_tranche_004_source_map_witness_chain_construction_from_research_candidate_result"
+)
+V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_PACKET_TARGET = (
+    "prepare_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet"
+)
 V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TOKEN = (
     "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_RELEASE_HOLD_AND_AUTHORIZES_RELEASE_HOLD_PACKET_PREPARATION_ONLY"
 )
@@ -1069,13 +1084,13 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt"
+    "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_result_review"
 )
 PREVIOUS_TARGET = (
-    V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_EXECUTION_TARGET
+    V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_FROM_RESEARCH_CANDIDATE_RESULT_REVIEW_TARGET
 )
 LIVE_TARGET = (
-    V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_TARGET
+    V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_PACKET_TARGET
 )
 LIVE_TARGET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1083,7 +1098,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Release"
-    / "V01RetainedTranche004BoundedSourceMapWitnessChainResearchAttempt.lean"
+    / "V01RetainedTranche004SourceMapWitnessChainConstructionResultReview.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1156,6 +1171,9 @@ PAUSED_LANES = {
     "post_qm_stat_entropy_semantics_gap_bounded_attack_selection",
     "v01_alpha_retained_tranche_004_future_remediation_program_result_review",
     "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet",
+    "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate",
+    "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review",
+    "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_from_research_candidate",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -1894,16 +1912,70 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_v0"
+        == "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_result_review_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
+    assert current_active_workstream["construction_packet_surface"] == (
+        "formal/toe_formal/ToeFormal/Release/"
+        "V01RetainedTranche004SourceMapWitnessChainConstructionPacketFromResearchCandidate.lean"
+    )
+    assert current_active_workstream["construction_packet_report"] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_20260523_v0.json"
+    )
     assert current_active_workstream["result_review_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
-        "V01RetainedTranche004BoundedSourceMapWitnessChainResearchAttempt.lean"
+        "V01RetainedTranche004SourceMapWitnessChainConstructionPacketFromResearchCandidateResultReview.lean"
     )
     assert current_active_workstream["result_review_report"] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_RESULT_REVIEW_20260523_v0.json"
+    )
+    assert current_active_workstream["construction_execution_surface"] == (
+        "formal/toe_formal/ToeFormal/Release/"
+        "V01RetainedTranche004SourceMapWitnessChainConstructionFromResearchCandidate.lean"
+    )
+    assert current_active_workstream["construction_execution_report"] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_FROM_RESEARCH_CANDIDATE_20260523_v0.json"
+    )
+    assert current_active_workstream["construction_result_review_surface"] == (
+        "formal/toe_formal/ToeFormal/Release/"
+        "V01RetainedTranche004SourceMapWitnessChainConstructionResultReview.lean"
+    )
+    assert current_active_workstream["construction_result_review_report"] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_RESULT_REVIEW_20260523_v0.json"
+    )
+    assert current_active_workstream["consumed_construction_execution_surface"] == (
+        "formal/toe_formal/ToeFormal/Release/"
+        "V01RetainedTranche004SourceMapWitnessChainConstructionFromResearchCandidate.lean"
+    )
+    assert current_active_workstream["consumed_construction_execution_report"] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_FROM_RESEARCH_CANDIDATE_20260523_v0.json"
+    )
+    assert current_active_workstream[
+        "consumed_construction_packet_result_review_surface"
+    ] == (
+        "formal/toe_formal/ToeFormal/Release/"
+        "V01RetainedTranche004SourceMapWitnessChainConstructionPacketFromResearchCandidateResultReview.lean"
+    )
+    assert current_active_workstream["consumed_construction_packet_result_review_report"] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_RESULT_REVIEW_20260523_v0.json"
+    )
+    assert current_active_workstream["consumed_result_review_surface"] == (
+        "formal/toe_formal/ToeFormal/Release/"
+        "V01RetainedTranche004BoundedSourceMapWitnessChainResearchAttemptResultReview.lean"
+    )
+    assert current_active_workstream["consumed_result_review_report"] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_20260523_v0.json"
+    )
+    assert current_active_workstream["research_attempt_report"] == (
         "formal/docs/release/"
         "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_20260523_v0.json"
     )
@@ -1935,14 +2007,23 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "formal/docs/release/"
         "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_20260522_v0.json"
     )
-    assert current_active_workstream["consumed_research_packet_token"] == (
-        V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_TOKEN
+    assert current_active_workstream["consumed_result_review_token"] == (
+        "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_ACCEPTS_PARTIAL_CANDIDATE_AND_AUTHORIZES_CONSTRUCTION_PACKET_PREPARATION_ONLY"
     )
     assert current_active_workstream["output_token"] == (
-        "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_EXECUTED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION"
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_RESULT_REVIEW_ACCEPTS_WITNESS_CHAIN_CONSTRUCTION_AND_AUTHORIZES_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_PACKET_PREPARATION_ONLY"
+    )
+    assert current_active_workstream["consumed_construction_execution_token"] == (
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_FROM_RESEARCH_CANDIDATE_EXECUTED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION"
+    )
+    assert current_active_workstream["consumed_construction_packet_result_review_token"] == (
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_RESULT_REVIEW_ACCEPTS_CONSTRUCTION_PACKET_AND_AUTHORIZES_BOUNDED_CONSTRUCTION_EXECUTION_ONLY"
+    )
+    assert current_active_workstream["consumed_construction_packet_token"] == (
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "bounded_source_map_witness_chain_research_attempt_result_review"
+        "source_map_authorization_adjudication_packet_preparation_only"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -1951,7 +2032,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["blocked_object"] == "QFT-GR source-map semantic closure"
     assert current_active_workstream["missing_object"] == "source-map witness chain"
-    assert current_active_workstream["carried_prior_missing_object"] == "witness-chain construction"
+    assert current_active_workstream["carried_prior_missing_object"] == "source-map witness chain"
     assert current_active_workstream["tranche_001_status"] == "documented_dependency_nonblocking"
     assert current_active_workstream["tranche_002_status"] == "documented_dependency_nonblocking"
     assert current_active_workstream["tranche_003_status"] == "documented_dependency_nonblocking"
@@ -1994,7 +2075,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["success_conditions_defined"] == "yes"
     assert current_active_workstream["current_packet_lane"] == "release_control_plane"
     assert current_active_workstream["substantive_future_work_lane"] == (
-        "bounded_qft_gr_source_map_research_mode"
+        "bounded_qft_gr_source_map_authorization_adjudication_packet_preparation"
     )
     assert current_active_workstream["source_map_witness_chain_research_packet_prepared"] == "yes"
     assert current_active_workstream["research_packet_prepared_only"] == "yes"
@@ -2039,13 +2120,166 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["result_classification_count"] == "1"
     assert current_active_workstream["partial_witness_chain_candidate_produced"] == "yes"
-    assert current_active_workstream["partial_witness_chain_candidate_pending_review"] == "yes"
-    assert current_active_workstream["witness_chain_constructed"] == "no"
-    assert current_active_workstream["source_map_witness_chain_constructed"] == "no"
+    assert current_active_workstream["research_attempt_result_reviewed"] == "yes"
+    assert current_active_workstream["research_attempt_result_review_accepted"] == "yes"
+    assert current_active_workstream["consumed_result_review_classification"] == (
+        "partial_witness_chain_candidate_accepted_for_construction_packet_preparation_only"
+    )
+    assert current_active_workstream["result_review_classification"] == (
+        "witness_chain_construction_accepted_source_map_authorization_adjudication_packet_preparation_only"
+    )
+    assert current_active_workstream["construction_packet_result_review_classification"] == (
+        "construction_packet_accepted_bounded_construction_execution_authorized_only"
+    )
+    assert (
+        current_active_workstream[
+            "partial_witness_chain_candidate_accepted_for_construction_packet_preparation_only"
+        ]
+        == "yes"
+    )
+    assert current_active_workstream["construction_packet_preparation_authorized"] == "yes"
+    assert current_active_workstream["construction_packet_preparation_only"] == "yes"
+    assert (
+        current_active_workstream["source_map_witness_chain_construction_packet_prepared"]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "source_map_witness_chain_construction_packet_prepared_from_research_candidate"
+        ]
+        == "yes"
+    )
+    assert current_active_workstream["candidate_witness_chain_components_carried"] == "yes"
+    assert current_active_workstream["required_proof_surfaces_defined"] == "yes"
+    assert current_active_workstream["required_evidence_surfaces_defined"] == "yes"
+    assert current_active_workstream["success_criteria_defined"] == "yes"
+    assert current_active_workstream["failure_criteria_defined"] == "yes"
+    assert current_active_workstream["construction_execution_boundary_defined"] == "yes"
+    assert current_active_workstream["construction_target"] == (
+        "construct_repo_local_source_map_witness_chain_for_retained_tranche_004_from_accepted_partial_research_candidate"
+    )
+    assert current_active_workstream["future_construction_execution_target"] == (
+        V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_FROM_RESEARCH_CANDIDATE_EXECUTION_TARGET
+    )
+    assert current_active_workstream["post_packet_result_review_target"] == (
+        V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_RESULT_REVIEW_TARGET
+    )
+    assert current_active_workstream["construction_execution_authorized_by_packet"] == "no"
+    assert current_active_workstream["construction_packet_result_reviewed"] == "yes"
+    assert current_active_workstream["construction_packet_result_review_accepted"] == "yes"
+    assert (
+        current_active_workstream[
+            "construction_packet_accepted_for_bounded_construction_execution_only"
+        ]
+        == "yes"
+    )
+    assert current_active_workstream["bounded_construction_execution_authorized"] == "yes"
+    assert (
+        current_active_workstream["bounded_construction_execution_authorized_by_review"]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "source_map_witness_chain_construction_execution_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "source_map_witness_chain_construction_execution_authorized_by_review"
+        ]
+        == "yes"
+    )
+    assert current_active_workstream["construction_execution_target"] == (
+        V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_FROM_RESEARCH_CANDIDATE_EXECUTION_TARGET
+    )
+    assert current_active_workstream["post_construction_result_review_target"] == PREVIOUS_TARGET
+    assert current_active_workstream["source_map_witness_chain_construction_executed"] == "yes"
+    assert (
+        current_active_workstream[
+            "source_map_witness_chain_construction_executed_from_research_candidate"
+        ]
+        == "yes"
+    )
+    assert current_active_workstream["bounded_construction_execution_executed"] == "yes"
+    assert current_active_workstream["bounded_construction_execution_only"] == "yes"
+    assert current_active_workstream["construction_result_classification"] == (
+        "witness_chain_constructed_pending_result_review"
+    )
+    assert current_active_workstream["construction_result_classification_count"] == "1"
+    assert (
+        current_active_workstream[
+            "candidate_witness_chain_constructed_pending_result_review"
+        ]
+        == "yes"
+    )
+    assert (
+        current_active_workstream["witness_chain_constructed_pending_result_review"]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "source_map_witness_chain_constructed_pending_result_review"
+        ]
+        == "yes"
+    )
+    assert current_active_workstream["construction_result_reviewed"] == "yes"
+    assert current_active_workstream["construction_result_accepted"] == "yes"
+    assert current_active_workstream["witness_chain_construction_accepted"] == "yes"
+    assert current_active_workstream["source_map_witness_chain_construction_accepted"] == "yes"
+    assert current_active_workstream["witness_chain_constructed_accepted_by_review"] == "yes"
+    assert (
+        current_active_workstream["source_map_witness_chain_constructed_accepted_by_review"]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "accepted_for_source_map_authorization_adjudication_packet_preparation_only"
+        ]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "source_map_authorization_adjudication_packet_preparation_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "source_map_authorization_adjudication_packet_preparation_only"
+        ]
+        == "yes"
+    )
+    assert current_active_workstream["source_map_authorization_adjudication_packet_prepared"] == "no"
+    assert (
+        current_active_workstream["source_map_authorization_adjudication_execution_authorized"]
+        == "no"
+    )
+    assert current_active_workstream["source_map_authorization_adjudication_executed"] == "no"
+    assert current_active_workstream["consumed_construction_result_classification"] == (
+        "witness_chain_constructed_pending_result_review"
+    )
+    assert current_active_workstream["witness_chain_constructed"] == "yes"
+    assert current_active_workstream["source_map_witness_chain_constructed"] == "yes"
+    assert current_active_workstream["witness_chain_constructed_claimed"] == "yes"
+    assert current_active_workstream["source_map_witness_chain_constructed_claimed"] == "yes"
+    assert current_active_workstream["construction_result_claimed"] == "yes"
+    assert current_active_workstream["constructed_witness_chain_component_count"] == "7"
+    assert current_active_workstream["required_witness_chain_component_count"] == "7"
     assert current_active_workstream["required_future_route_for_tranche_004"] == (
         "retained_tranche_004_source_map_witness_chain_or_governed_retained_blocker_"
         "continuation_required_before_release_assembly"
     )
+    assert current_active_workstream["tranche_004_status_moved"] == "no"
+    assert current_active_workstream["tranche_004_retained_blocker_discharged"] == "no"
+    assert current_active_workstream["source_map_closure_achieved"] == "no"
+    assert current_active_workstream["source_map_closure_requirements_adjudicated"] == "no"
+    assert current_active_workstream["source_map_closure_claimed"] == "no"
+    assert current_active_workstream["source_map_closure_authorized"] == "no"
+    assert current_active_workstream["qft_gr_seam_closed"] == "no"
+    assert current_active_workstream["qft_gr_seam_closure_authorized"] == "no"
+    assert current_active_workstream["qft_gr_seam_closure_claimed"] == "no"
+    assert current_active_workstream["tranche_004_status_moved_by_execution"] == "no"
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
     assert current_active_workstream["release_packet_assembled"] == "no"
     assert current_active_workstream["public_release_completion_authorized"] == "no"
