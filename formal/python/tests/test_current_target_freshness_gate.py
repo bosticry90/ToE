@@ -569,6 +569,14 @@ V01_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_PAT
     / "Release"
     / "V01RetainedTranche004ReleaseReadinessAdjudicationPacketResultReview.lean"
 )
+V01_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Release"
+    / "V01RetainedTranche004ReleaseReadinessAdjudication.lean"
+)
 MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH = (
     REPO_ROOT
     / "formal"
@@ -935,19 +943,27 @@ V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVI
 V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_EXECUTION_TARGET = (
     "execute_v01_alpha_retained_tranche_004_release_readiness_adjudication"
 )
+V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TARGET = (
+    "review_v01_alpha_retained_tranche_004_release_readiness_adjudication_result"
+)
+V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_TOKEN = (
+    "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_EXECUTED_RELEASE_HOLD_DUE_TO_RETAINED_SOURCE_MAP_BLOCKER_WITH_NO_PROMOTION"
+)
 AUDIT_REFRESH_TARGET = "prepare_axiom_ledger_audit_refresh"
 AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "v01_alpha_retained_tranche_004_release_readiness_adjudication_packet_result_review"
+    "v01_alpha_retained_tranche_004_release_readiness_adjudication"
 )
 PREVIOUS_TARGET = (
-    V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_TARGET
+    V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_EXECUTION_TARGET
 )
-LIVE_TARGET = V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_EXECUTION_TARGET
+LIVE_TARGET = (
+    V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TARGET
+)
 LIVE_TARGET_EVIDENCE_PATH = (
-    V01_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_PATH
+    V01_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PATH
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1756,28 +1772,28 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "v01_alpha_retained_tranche_004_release_readiness_adjudication_packet_result_review_v0"
+        == "v01_alpha_retained_tranche_004_release_readiness_adjudication_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert current_active_workstream["packet_surface"] == (
+    assert current_active_workstream["result_review_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
-        "V01RetainedTranche004ReleaseReadinessAdjudicationPacket.lean"
-    )
-    assert current_active_workstream["packet_report"] == (
-        "formal/docs/release/"
-        "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_20260522_v0.json"
+        "V01RetainedTranche004ReleaseReadinessAdjudicationPacketResultReview.lean"
     )
     assert current_active_workstream["result_review_report"] == (
         "formal/docs/release/"
         "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_20260522_v0.json"
     )
-    assert current_active_workstream["consumed_packet_token"] == (
-        V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_TOKEN
+    assert current_active_workstream["adjudication_report"] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_20260522_v0.json"
+    )
+    assert current_active_workstream["consumed_result_review_token"] == (
+        V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_TOKEN
     )
     assert current_active_workstream["output_token"] == (
-        V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_TOKEN
+        V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_TOKEN
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -1794,14 +1810,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["tranche_006_status"] == "documented_dependency_nonblocking"
     assert current_active_workstream["simple_dependency_queue_exhausted"] == "yes"
     assert current_active_workstream["retained_tranche_004_release_blocker"] == "yes"
-    assert current_active_workstream["release_readiness_adjudication_question_accepted"] == "yes"
-    assert (
-        current_active_workstream["release_readiness_adjudication_execution_authorized"]
-        == "yes"
+    assert current_active_workstream["release_readiness_adjudication_executed"] == "yes"
+    assert current_active_workstream["release_readiness_question_answered"] == "yes"
+    assert current_active_workstream["release_readiness_decision_made"] == "yes"
+    assert current_active_workstream["release_readiness_decision_status"] == (
+        "release_readiness_held_due_to_retained_tranche_004_source_map_blocker"
     )
-    assert current_active_workstream["release_readiness_adjudication_executed"] == "no"
-    assert current_active_workstream["release_readiness_question_answered"] == "no"
-    assert current_active_workstream["release_readiness_decision_made"] == "no"
+    assert current_active_workstream["release_readiness_held"] == "yes"
     assert current_active_workstream["release_readiness_proceed_authorized"] == "no"
     assert current_active_workstream["release_hold_packet_prepared"] == "no"
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
