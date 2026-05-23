@@ -1,0 +1,348 @@
+{
+  "acceptance_criteria": {
+    "blocked_and_missing_objects_preserved": true,
+    "consumes_expected_program": true,
+    "documented_dependency_queue_count_expected": true,
+    "exactly_one_next_target_selected": true,
+    "forbidden_effects_all_false": true,
+    "future_route_preserved": true,
+    "no_phase2_empirical_or_master_action_promotion": true,
+    "no_source_map_or_qft_gr_seam_closure": true,
+    "no_theorem_or_proof_debt_discharge": true,
+    "program_outcome_expected": true,
+    "program_prepared_and_accepted": true,
+    "program_requirements_carried": true,
+    "program_schema_expected": true,
+    "program_scope_is_planning_only": true,
+    "program_selected_this_review": true,
+    "release_assembly_remains_unauthorized": true,
+    "release_hold_preserved": true,
+    "selected_bounded_witness_chain_packet_preparation": true,
+    "tranche_001_documented_nonblocking_preserved": true,
+    "tranche_002_documented_nonblocking_preserved": true,
+    "tranche_003_documented_nonblocking_preserved": true,
+    "tranche_004_retained_blocker_preserved": true,
+    "tranche_005_documented_nonblocking_preserved": true,
+    "tranche_006_documented_nonblocking_preserved": true
+  },
+  "accepted": true,
+  "axiom_spec_backed_debt_reduced": false,
+  "blocked_object": "QFT-GR source-map semantic closure",
+  "bounded_source_map_witness_chain_research_packet_authorized_for_preparation": true,
+  "bounded_source_map_witness_chain_research_packet_prepared": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The remediation program is accepted as planning-only, so the next bounded route may prepare, but not execute, a source-map witness-chain research packet for retained tranche 004.",
+      "target": "prepare_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Returning to broader physics target selection remains available if the bounded witness-chain packet is rejected or paused later.",
+      "target": "return_to_main_physics_target_selection_after_v01_alpha_release_hold"
+    },
+    {
+      "decision": "superseded_by_selected_refinement",
+      "reason": "The program's generic continuation-packet route is refined into the explicit bounded source-map witness-chain research packet target.",
+      "target": "prepare_v01_alpha_retained_tranche_004_source_map_witness_chain_continuation_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "A release-hold pause summary remains available after the selected route is reviewed or declined.",
+      "target": "prepare_release_hold_summary_and_pause_v01_alpha_assembly"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Release assembly remains blocked because tranche 004 is still retained and source-map closure is not authorized.",
+      "target": "assemble_v01_alpha_release_packet"
+    }
+  ],
+  "captured_at_utc": "2026-05-22T00:00:00Z",
+  "consumed_future_remediation_program_schema_id": "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_20260522_v0",
+  "consumes_future_remediation_program": "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_v0",
+  "consumes_future_remediation_program_pointer": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_20260522_v0.json",
+  "dependency_remediation_queue_exhausted": true,
+  "documentation_alone_cannot_do": [
+    {
+      "limit": "Documentation cannot by itself construct the missing witness chain.",
+      "limit_id": "documentation_cannot_construct_witness"
+    },
+    {
+      "limit": "Documentation cannot authorize QFT-GR source-map closure without repo-local proof objects and governed result review.",
+      "limit_id": "documentation_cannot_authorize_source_map_closure"
+    },
+    {
+      "limit": "Documentation cannot move tranche 004 from retained/release-blocking to documented/nonblocking.",
+      "limit_id": "documentation_cannot_move_tranche_004"
+    },
+    {
+      "limit": "Documentation cannot reopen v0.1-alpha release assembly while tranche 004 remains retained.",
+      "limit_id": "documentation_cannot_reopen_release_assembly"
+    }
+  ],
+  "documented_dependency_nonblocking_tranche_count": 5,
+  "documented_dependency_nonblocking_tranches": [
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-001",
+      "status": "documented_dependency_nonblocking",
+      "tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-001"
+    },
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-002",
+      "status": "documented_dependency_nonblocking",
+      "tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-002"
+    },
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-003",
+      "status": "documented_dependency_nonblocking",
+      "tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-003"
+    },
+    {
+      "dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+      "finding_id": "V01-ALPHA-DEP-REM-005",
+      "status": "documented_dependency_nonblocking",
+      "tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-005"
+    },
+    {
+      "dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+      "dependency_class": "lean_bridge_dependency",
+      "finding_id": "V01-ALPHA-DEP-REM-006",
+      "status": "documented_dependency_nonblocking",
+      "tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-006"
+    }
+  ],
+  "empirical_validation_authorized": false,
+  "evidence_required_before_revisiting_tranche_004": [
+    {
+      "current_status": "missing",
+      "required_object": "A governed repo-local construction path for the QFT-GR source-map witness chain, not merely documentation or analogy.",
+      "requirement_id": "repo_local_source_map_witness_chain_design"
+    },
+    {
+      "current_status": "missing",
+      "required_object": "Explicit criteria showing when the source-map bridge is authorized rather than retained as a blocker.",
+      "requirement_id": "semantic_bridge_authorization_criteria"
+    },
+    {
+      "current_status": "not_satisfied_by_this_program",
+      "required_object": "Repo-local evidence for the QFT-GR obligation ladder components needed by source-map closure.",
+      "requirement_id": "obligation_ladder_satisfaction_evidence"
+    },
+    {
+      "current_status": "future_governed_work_required",
+      "required_object": "Future result-review and movement-registration packets before any tranche 004 status change.",
+      "requirement_id": "result_review_and_movement_registration_chain"
+    },
+    {
+      "current_status": "not_run_by_this_program",
+      "required_object": "Clean pre-release validation, including full aggregate Lean branch health where required, before any readiness claim.",
+      "requirement_id": "full_branch_health_before_release_readiness"
+    }
+  ],
+  "failure_conditions": [
+    {
+      "condition": "No repo-local witness-chain construction is produced.",
+      "condition_id": "witness_chain_absent",
+      "required_result": "tranche_004_remains_retained_release_blocking"
+    },
+    {
+      "condition": "The attempted route relies on documentation or restatement only.",
+      "condition_id": "closure_by_documentation_only",
+      "required_result": "fail_closed_no_status_movement"
+    },
+    {
+      "condition": "A required source-map ladder component remains missing or supplied-only.",
+      "condition_id": "ladder_component_missing_or_supplied_only",
+      "required_result": "source_map_closure_not_authorized"
+    },
+    {
+      "condition": "Release readiness or assembly is requested while tranche 004 remains retained.",
+      "condition_id": "release_readiness_requested_before_resolution",
+      "required_result": "release_hold_continues"
+    }
+  ],
+  "forbidden_effect_status": {
+    "axiom_spec_backed_debt_reduced": false,
+    "bounded_source_map_witness_chain_research_packet_prepared": false,
+    "claim_promotion_authorized": false,
+    "empirical_validation_authorized": false,
+    "future_remediation_program_executed": false,
+    "lean_theorem_debt_discharged": false,
+    "main_physics_target_selection_returned": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "program_accepted_as_closure_evidence": false,
+    "program_result_review_completed": false,
+    "proof_debt_reduced": false,
+    "qft_gr_seam_closed": false,
+    "qft_gr_seam_closure_claimed": false,
+    "readiness_marking_authorized": false,
+    "release_assembly_authorized": false,
+    "release_assembly_authorized_by_review": false,
+    "release_hold_summary_prepared": false,
+    "release_packet_assembled": false,
+    "retained_assumptions_discharged": false,
+    "source_map_closure_achieved": false,
+    "source_map_closure_claimed": false,
+    "source_map_research_executed_by_review": false,
+    "source_map_witness_chain_research_packet_prepared": false,
+    "tranche_004_moved_to_documented_dependency_nonblocking": false,
+    "tranche_004_retained_blocker_discharged": false,
+    "tranche_004_status_downgraded": false,
+    "tranche_004_status_moved_by_review": false,
+    "v01_alpha_marked_ready": false,
+    "witness_chain_constructed": false,
+    "witness_chain_research_started": false
+  },
+  "future_remediation_program_accepted": true,
+  "future_remediation_program_accepted_as_planning_only": true,
+  "future_remediation_program_reviewed": true,
+  "lane_classification": {
+    "computational_physics_execution_status": "not_opened",
+    "current_packet_lane": "release_control_plane",
+    "main_physics_target_selection_status": "deferred_until_program_result_review",
+    "release_assembly_status": "not_authorized",
+    "release_lane_status": "held_until_tranche_004_has_governed_resolution_or_hold_continuation",
+    "substantive_future_work_lane": "bounded_qft_gr_source_map_research_mode"
+  },
+  "lean_theorem_debt_discharged": false,
+  "main_physics_target_selection_returned": false,
+  "master_action_promotion_authorized": false,
+  "missing_object": "witness-chain construction",
+  "next_action_scope": "PREPARE_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_ONLY_NO_RESEARCH_EXECUTION_SOURCE_MAP_CLOSURE_RELEASE_ASSEMBLY_OR_PROMOTION",
+  "non_claim_boundary": "The retained-tranche-004 future remediation program result review accepts the remediation program as planning only and selects one next bounded route: preparation of a source-map witness-chain research packet. It does not prepare that packet, execute research, construct a witness chain, downgrade tranche 004, assemble release, mark readiness, discharge theorem/proof debt or retained assumptions, claim source-map or QFT-GR seam closure, authorize Phase 2, validate empirically, promote the master action, or make an external-truth claim.",
+  "outcome_id": "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_ACCEPTS_REMEDIATION_PROGRAM_AND_SELECTS_NEXT_BOUNDED_ROUTE_ONLY",
+  "phase2_authorized": false,
+  "program_accepted_as_closure_evidence": false,
+  "proof_debt_reduced": false,
+  "proof_surfaces_required_before_status_movement": [
+    {
+      "current_status": "absent",
+      "required_surface": "A future Lean/proof surface that constructs, or formally refutes, the missing source-map witness-chain path.",
+      "surface_id": "qft_gr_source_map_witness_chain_surface"
+    },
+    {
+      "current_status": "future_required",
+      "required_surface": "A result-review surface that accepts any witness-chain result without collapsing retained assumptions into closure by language alone.",
+      "surface_id": "qft_gr_source_map_authorization_result_review"
+    },
+    {
+      "current_status": "future_required",
+      "required_surface": "A governed movement-registration surface if tranche 004 ever changes status.",
+      "surface_id": "release_status_movement_surface"
+    },
+    {
+      "current_status": "future_required",
+      "required_surface": "Guardrail evidence preserving nonclosure whenever any ladder component remains supplied, missing, or merely documented.",
+      "surface_id": "qft_gr_ladder_guardrail_surface"
+    }
+  ],
+  "qft_gr_seam_closed": false,
+  "qft_gr_seam_closure_claimed": false,
+  "readiness_marking_authorized": false,
+  "release_assembly_authorized": false,
+  "release_assembly_authorized_by_review": false,
+  "release_hold_summary_prepared": false,
+  "release_packet_assembled": false,
+  "release_readiness_blocked_by_tranche_004": true,
+  "release_readiness_decision_status": "release_readiness_held_due_to_retained_tranche_004_source_map_blocker",
+  "release_readiness_held": true,
+  "release_readiness_proceed_authorized": false,
+  "release_readiness_still_blocked": true,
+  "required_future_route_for_tranche_004": "retained_tranche_004_source_map_witness_chain_or_governed_retained_blocker_continuation_required_before_release_assembly",
+  "retained_assumptions_discharged": false,
+  "retained_release_blocking_obligation_count": 1,
+  "retained_release_blocking_obligations": [
+    {
+      "current_blocker": "full_source_map_semantic_closure_not_authorized",
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "dependency_class": "blocked_bridge_authorization_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+      "modified_by_tranche_006_policy_adjudication": false,
+      "retained_blocker_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+      "status_carry_forward": "retained_release_blocking_source_map_blocker"
+    }
+  ],
+  "retained_tranche_004_carry_forward": {
+    "construction_attempt_classification": "construction_attempt_failed_retained_blocker",
+    "current_blocker": "full_source_map_semantic_closure_not_authorized",
+    "declaration_classification": "retained_source_map_authorization_release_blocker_declared_after_fail_closed_attempt",
+    "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "dependency_class": "blocked_bridge_authorization_dependency",
+    "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+    "moved_to_documented_dependency_nonblocking": false,
+    "release_readiness_blocked_by_tranche_004": true,
+    "retained_blocker_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+    "source_ledger_row": {
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "dependency_class": "blocked_bridge_authorization_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    },
+    "status": "retained_release_blocking_source_map_blocker",
+    "tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-004"
+  },
+  "review_id": "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_v0",
+  "review_scope": "REVIEW_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_ONLY_ACCEPT_PLANNING_SELECT_NEXT_BOUNDED_ROUTE_NO_SOURCE_MAP_CLOSURE_OR_PROMOTION",
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_20260522_v0",
+  "selected_dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+  "selected_dependency_class": "blocked_bridge_authorization_dependency",
+  "selected_next_target": "prepare_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet",
+  "selected_next_target_kind": "bounded_source_map_witness_chain_research_packet_preparation_only",
+  "selected_remediation_finding_id": "V01-ALPHA-DEP-REM-004",
+  "selected_tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-004",
+  "selection_count": 1,
+  "simple_dependency_remediation_queue_exhausted": true,
+  "source_map_closure_achieved": false,
+  "source_map_closure_claimed": false,
+  "source_map_research_executed_by_review": false,
+  "source_map_witness_chain_research_packet_prepared": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "success_conditions": [
+    {
+      "condition": "A governed repo-local proof surface constructs a source-map witness chain or records a precise refutation.",
+      "condition_id": "witness_chain_constructed_or_refuted",
+      "still_requires": "result_review_before_status_change"
+    },
+    {
+      "condition": "Source-map authorization criteria are explicitly satisfied by proof objects rather than rhetorical continuity.",
+      "condition_id": "authorization_criteria_satisfied",
+      "still_requires": "movement_registration_before_release_readiness"
+    },
+    {
+      "condition": "No release assembly, readiness marking, seam closure, or master-action promotion occurs before governed review.",
+      "condition_id": "all_guardrails_remain_closed_until_review",
+      "still_requires": "future_review_and_branch_health_validation"
+    }
+  ],
+  "tranche_001_status": "documented_dependency_nonblocking",
+  "tranche_002_status": "documented_dependency_nonblocking",
+  "tranche_003_status": "documented_dependency_nonblocking",
+  "tranche_004_future_route_required": {
+    "continuation_target_candidate": "prepare_v01_alpha_retained_tranche_004_source_map_witness_chain_continuation_packet",
+    "current_blocker": "full_source_map_semantic_closure_not_authorized",
+    "minimum_required_future_object": "a governed repo-local proof/policy surface that either supplies a real source-map witness-chain path or explicitly keeps release assembly held",
+    "not_satisfied_by_this_packet": true,
+    "required_before_release_assembly": true,
+    "route_id": "retained_tranche_004_source_map_witness_chain_or_governed_retained_blocker_continuation_required_before_release_assembly",
+    "selected_dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0"
+  },
+  "tranche_004_moved_to_documented_dependency_nonblocking": false,
+  "tranche_004_retained_blocker_discharged": false,
+  "tranche_004_status": "retained_release_blocking_source_map_blocker",
+  "tranche_004_status_downgraded": false,
+  "tranche_004_status_moved_by_review": false,
+  "tranche_005_dependency": "supplied_interface_alignment_semantics_construct_bridge_package_v0",
+  "tranche_005_status": "documented_dependency_nonblocking",
+  "tranche_006_dependency": "supplied_alignment_constructs_sr_cosmo_regime_transport_package_v0",
+  "tranche_006_dependency_class": "lean_bridge_dependency",
+  "tranche_006_dependency_finding_id": "V01-ALPHA-DEP-REM-006",
+  "tranche_006_status": "documented_dependency_nonblocking",
+  "v01_alpha_marked_ready": false,
+  "validation_claim_authorized": false,
+  "witness_chain_constructed": false,
+  "witness_chain_research_started": false
+}

@@ -617,6 +617,14 @@ V01_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_PATH = (
     / "Release"
     / "V01RetainedTranche004FutureRemediationProgram.lean"
 )
+V01_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Release"
+    / "V01RetainedTranche004FutureRemediationProgramResultReview.lean"
+)
 MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH = (
     REPO_ROOT
     / "formal"
@@ -1004,6 +1012,9 @@ V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_TARGET = (
 V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_TARGET = (
     "review_v01_alpha_retained_tranche_004_future_remediation_program_result"
 )
+V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_TARGET = (
+    "prepare_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet"
+)
 V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TOKEN = (
     "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_RELEASE_HOLD_AND_AUTHORIZES_RELEASE_HOLD_PACKET_PREPARATION_ONLY"
 )
@@ -1019,21 +1030,24 @@ V01_ALPHA_POST_HOLD_ROUTING_PACKET_DUE_TO_RETAINED_TRANCHE_004_TOKEN = (
 V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_TOKEN = (
     "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_PREPARED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION"
 )
+V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_TOKEN = (
+    "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_ACCEPTS_REMEDIATION_PROGRAM_AND_SELECTS_NEXT_BOUNDED_ROUTE_ONLY"
+)
 AUDIT_REFRESH_TARGET = "prepare_axiom_ledger_audit_refresh"
 AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "v01_alpha_retained_tranche_004_future_remediation_program"
+    "v01_alpha_retained_tranche_004_future_remediation_program_result_review"
 )
 PREVIOUS_TARGET = (
-    V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_TARGET
-)
-LIVE_TARGET = (
     V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_TARGET
 )
+LIVE_TARGET = (
+    V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_TARGET
+)
 LIVE_TARGET_EVIDENCE_PATH = (
-    V01_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_PATH
+    V01_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_PATH
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1842,16 +1856,20 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "v01_alpha_retained_tranche_004_future_remediation_program_v0"
+        == "v01_alpha_retained_tranche_004_future_remediation_program_result_review_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert current_active_workstream["result_review_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
-        "V01RetainedTranche004FutureRemediationProgram.lean"
+        "V01RetainedTranche004FutureRemediationProgramResultReview.lean"
     )
     assert current_active_workstream["result_review_report"] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_20260522_v0.json"
+    )
+    assert current_active_workstream["future_remediation_program_report"] == (
         "formal/docs/release/"
         "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_20260522_v0.json"
     )
@@ -1871,14 +1889,14 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "formal/docs/release/"
         "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_20260522_v0.json"
     )
-    assert current_active_workstream["consumed_post_hold_routing_packet_token"] == (
-        V01_ALPHA_POST_HOLD_ROUTING_PACKET_DUE_TO_RETAINED_TRANCHE_004_TOKEN
-    )
-    assert current_active_workstream["output_token"] == (
+    assert current_active_workstream["consumed_future_remediation_program_token"] == (
         V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_TOKEN
     )
+    assert current_active_workstream["output_token"] == (
+        V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_TOKEN
+    )
     assert current_active_workstream["selected_route"] == (
-        "future_remediation_program_result_review"
+        "bounded_source_map_witness_chain_research_packet"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -1920,7 +1938,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["future_remediation_program_prepared"] == "yes"
     assert current_active_workstream["future_remediation_program_executed"] == "no"
-    assert current_active_workstream["future_remediation_program_result_reviewed"] == "no"
+    assert current_active_workstream["future_remediation_program_result_reviewed"] == "yes"
+    assert current_active_workstream["future_remediation_program_accepted_as_planning_only"] == "yes"
     assert current_active_workstream["evidence_requirements_defined"] == "yes"
     assert current_active_workstream["proof_surface_requirements_defined"] == "yes"
     assert current_active_workstream["documentation_limits_defined"] == "yes"
@@ -1931,6 +1950,18 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "bounded_qft_gr_source_map_research_mode"
     )
     assert current_active_workstream["source_map_witness_chain_research_packet_prepared"] == "no"
+    assert (
+        current_active_workstream[
+            "bounded_source_map_witness_chain_research_packet_authorized_for_preparation"
+        ]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "bounded_source_map_witness_chain_research_packet_prepared"
+        ]
+        == "no"
+    )
     assert current_active_workstream["witness_chain_research_started"] == "no"
     assert current_active_workstream["witness_chain_constructed"] == "no"
     assert current_active_workstream["required_future_route_for_tranche_004"] == (
