@@ -577,6 +577,14 @@ V01_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PATH = (
     / "Release"
     / "V01RetainedTranche004ReleaseReadinessAdjudication.lean"
 )
+V01_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Release"
+    / "V01RetainedTranche004ReleaseReadinessAdjudicationResultReview.lean"
+)
 MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_PATH = (
     REPO_ROOT
     / "formal"
@@ -949,21 +957,27 @@ V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TARG
 V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_TOKEN = (
     "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_EXECUTED_RELEASE_HOLD_DUE_TO_RETAINED_SOURCE_MAP_BLOCKER_WITH_NO_PROMOTION"
 )
+V01_ALPHA_RELEASE_HOLD_PACKET_DUE_TO_RETAINED_TRANCHE_004_TARGET = (
+    "prepare_v01_alpha_release_hold_packet_due_to_retained_tranche_004_source_map_blocker"
+)
+V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TOKEN = (
+    "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_RELEASE_HOLD_AND_AUTHORIZES_RELEASE_HOLD_PACKET_PREPARATION_ONLY"
+)
 AUDIT_REFRESH_TARGET = "prepare_axiom_ledger_audit_refresh"
 AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "v01_alpha_retained_tranche_004_release_readiness_adjudication"
+    "v01_alpha_retained_tranche_004_release_readiness_adjudication_result_review"
 )
 PREVIOUS_TARGET = (
-    V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_EXECUTION_TARGET
-)
-LIVE_TARGET = (
     V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TARGET
 )
+LIVE_TARGET = (
+    V01_ALPHA_RELEASE_HOLD_PACKET_DUE_TO_RETAINED_TRANCHE_004_TARGET
+)
 LIVE_TARGET_EVIDENCE_PATH = (
-    V01_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PATH
+    V01_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_PATH
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1772,28 +1786,28 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "v01_alpha_retained_tranche_004_release_readiness_adjudication_v0"
+        == "v01_alpha_retained_tranche_004_release_readiness_adjudication_result_review_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert current_active_workstream["result_review_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
-        "V01RetainedTranche004ReleaseReadinessAdjudicationPacketResultReview.lean"
+        "V01RetainedTranche004ReleaseReadinessAdjudicationResultReview.lean"
     )
     assert current_active_workstream["result_review_report"] == (
         "formal/docs/release/"
-        "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_20260522_v0.json"
+        "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_20260522_v0.json"
     )
     assert current_active_workstream["adjudication_report"] == (
         "formal/docs/release/"
         "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_20260522_v0.json"
     )
-    assert current_active_workstream["consumed_result_review_token"] == (
-        V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_TOKEN
+    assert current_active_workstream["consumed_adjudication_token"] == (
+        V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_TOKEN
     )
     assert current_active_workstream["output_token"] == (
-        V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_TOKEN
+        V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TOKEN
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -1817,7 +1831,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "release_readiness_held_due_to_retained_tranche_004_source_map_blocker"
     )
     assert current_active_workstream["release_readiness_held"] == "yes"
+    assert current_active_workstream["release_readiness_hold_accepted"] == "yes"
     assert current_active_workstream["release_readiness_proceed_authorized"] == "no"
+    assert (
+        current_active_workstream["release_hold_packet_preparation_authorized"]
+        == "yes"
+    )
     assert current_active_workstream["release_hold_packet_prepared"] == "no"
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
     assert current_active_workstream["release_packet_assembled"] == "no"

@@ -87,9 +87,9 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "execute_v01_alpha_retained_tranche_004_release_readiness_adjudication",
-    "live_next_target": "review_v01_alpha_retained_tranche_004_release_readiness_adjudication_result",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004ReleaseReadinessAdjudication.lean",
+    "previous_live_next_target": "review_v01_alpha_retained_tranche_004_release_readiness_adjudication_result",
+    "live_next_target": "prepare_v01_alpha_release_hold_packet_due_to_retained_tranche_004_source_map_blocker",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004ReleaseReadinessAdjudicationResultReview.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
@@ -170,9 +170,10 @@
       "v01_alpha_governance_manifest_enrollment_result_review",
       "v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet",
       "v01_alpha_retained_tranche_004_release_readiness_adjudication_packet",
-      "v01_alpha_retained_tranche_004_release_readiness_adjudication_packet_result_review"
+      "v01_alpha_retained_tranche_004_release_readiness_adjudication_packet_result_review",
+      "v01_alpha_retained_tranche_004_release_readiness_adjudication"
     ],
-    "active_lane": "v01_alpha_retained_tranche_004_release_readiness_adjudication",
+    "active_lane": "v01_alpha_retained_tranche_004_release_readiness_adjudication_result_review",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -723,7 +724,8 @@
     "prepare_v01_alpha_retained_tranche_004_release_readiness_adjudication_packet",
     "review_v01_alpha_retained_tranche_004_release_readiness_adjudication_packet_result",
     "execute_v01_alpha_retained_tranche_004_release_readiness_adjudication",
-    "review_v01_alpha_retained_tranche_004_release_readiness_adjudication_result"
+    "review_v01_alpha_retained_tranche_004_release_readiness_adjudication_result",
+    "prepare_v01_alpha_release_hold_packet_due_to_retained_tranche_004_source_map_blocker"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -5823,10 +5825,10 @@
     },
     {
       "workstream_id": "v01_alpha_retained_tranche_004_release_readiness_adjudication",
-      "status": "active",
+      "status": "paused",
       "retained_blocker": "v01_alpha_retained_tranche_004_release_readiness_adjudication_nonclaim_boundary",
       "consecutive_slices_after_retention": 0,
-      "guardrail_status": "active_under_loop_control_registry_v0",
+      "guardrail_status": "paused_after_release_readiness_adjudication_result_review_authorization",
       "blocked_promotions": [
         "v01_alpha_public_release_completion",
         "phase2_authorization",
@@ -5876,6 +5878,64 @@
       "qft_gr_source_map_closure_authorized": "no",
       "unrelated_gate_enrollment_authorized": "no",
       "selected_next_target": "review_v01_alpha_retained_tranche_004_release_readiness_adjudication_result"
+    },
+    {
+      "workstream_id": "v01_alpha_retained_tranche_004_release_readiness_adjudication_result_review",
+      "status": "active",
+      "retained_blocker": "v01_alpha_retained_tranche_004_release_readiness_adjudication_result_review_nonclaim_boundary",
+      "consecutive_slices_after_retention": 0,
+      "guardrail_status": "active_under_loop_control_registry_v0",
+      "blocked_promotions": [
+        "v01_alpha_public_release_completion",
+        "phase2_authorization",
+        "seam_closure",
+        "master_action_promotion",
+        "empirical_claim",
+        "canonical_toe_claim",
+        "qft_gr_source_map_closure",
+        "unrelated_governance_gate_enrollment"
+      ],
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004ReleaseReadinessAdjudicationResultReview.lean",
+      "authorized_next_slice": "v01_alpha_release_hold_packet_due_to_retained_tranche_004_source_map_blocker_v0",
+      "authorized_next_strict_target": "prepare_v01_alpha_release_hold_packet_due_to_retained_tranche_004_source_map_blocker",
+      "consumed_target": "review_v01_alpha_retained_tranche_004_release_readiness_adjudication_result",
+      "latest_surface": "v01_alpha_retained_tranche_004_release_readiness_adjudication_result_review_v0",
+      "result_review_surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004ReleaseReadinessAdjudicationResultReview.lean",
+      "result_review_report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_20260522_v0.json",
+      "adjudication_report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_20260522_v0.json",
+      "consumed_adjudication_token": "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_EXECUTED_RELEASE_HOLD_DUE_TO_RETAINED_SOURCE_MAP_BLOCKER_WITH_NO_PROMOTION",
+      "output_token": "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_RELEASE_HOLD_AND_AUTHORIZES_RELEASE_HOLD_PACKET_PREPARATION_ONLY",
+      "selected_finding": "V01-ALPHA-DEP-REM-004",
+      "selected_tranche": "V01-ALPHA-DEP-REM-TRANCHE-004",
+      "selected_dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "tranche_001_status": "documented_dependency_nonblocking",
+      "tranche_002_status": "documented_dependency_nonblocking",
+      "tranche_003_status": "documented_dependency_nonblocking",
+      "tranche_004_status": "retained_release_blocking_source_map_blocker",
+      "tranche_005_status": "documented_dependency_nonblocking",
+      "tranche_006_status": "documented_dependency_nonblocking",
+      "simple_dependency_queue_exhausted": "yes",
+      "retained_tranche_004_release_blocker": "yes",
+      "release_readiness_adjudication_executed": "yes",
+      "release_readiness_question_answered": "yes",
+      "release_readiness_decision_made": "yes",
+      "release_readiness_decision_status": "release_readiness_held_due_to_retained_tranche_004_source_map_blocker",
+      "release_readiness_held": "yes",
+      "release_readiness_hold_accepted": "yes",
+      "release_readiness_proceed_authorized": "no",
+      "release_hold_packet_preparation_authorized": "yes",
+      "release_hold_packet_prepared": "no",
+      "release_packet_assembled": "no",
+      "public_release_completion_authorized": "no",
+      "master_action_promotion_authorized": "no",
+      "pillar_completion_inferred": "no",
+      "seam_closure_claim": "no",
+      "phase2_readiness_claim": "no",
+      "empirical_adequacy_claim": "no",
+      "canonical_toe_claim": "no",
+      "qft_gr_source_map_closure_authorized": "no",
+      "unrelated_gate_enrollment_authorized": "no",
+      "selected_next_target": "prepare_v01_alpha_release_hold_packet_due_to_retained_tranche_004_source_map_blocker"
     }
   ],
   "promotion_escrow": {
