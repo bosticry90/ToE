@@ -261,8 +261,8 @@ def build_packet(
             "schema_id"
         ),
         "packet_scope": (
-            "PREPARE_DEPENDENCY_REMEDIATION_SUMMARY_AFTER_TRANCHE_006_MOVEMENT_ONLY_"
-            "NO_RELEASE_ASSEMBLY_READINESS_MARKING_OR_PROMOTION"
+            "PREPARE_DEPENDENCY_REMEDIATION_SUMMARY_AFTER_TRANCHE_006_MOVEMENT_ONLY_NO_"
+            "RELEASE_ASSEMBLY_READINESS_MARKING_OR_PROMOTION"
         ),
         "dependency_remediation_summary_classification": SUMMARY_CLASSIFICATION,
         "documented_dependency_nonblocking_tranches": documented_tranches,
@@ -310,8 +310,8 @@ def build_packet(
         ),
         "selection_count": 1 if accepted else 0,
         "next_action_scope": (
-            "PREPARE_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_ONLY_"
-            "NO_RELEASE_ASSEMBLY_OR_PROMOTION"
+            "PREPARE_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_ONLY_NO_"
+            "RELEASE_ASSEMBLY_OR_PROMOTION"
         ),
         "candidate_next_targets": [
             {

@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "v0.1-alpha dependency remediation tranche 006 release-policy adjudication packet prepares the standard Lean dependency policy question while tranche 004 remains retained/release-blocking"
+        "v0.1-alpha retained tranche 004 release-readiness adjudication packet prepares the retained-blocker release question after the simple dependency queue is exhausted"
       retained_blocker :=
         "V01-ALPHA-DEP-REM-004_RETAINED_RELEASE_BLOCKING_SOURCE_MAP_BLOCKER"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet_result"
+        "review_v01_alpha_retained_tranche_004_release_readiness_adjudication_packet_result"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the tranche 006 release-policy packet. -/
+/-- Previous live target consumed by the retained tranche 004 adjudication packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet"
+  "prepare_v01_alpha_retained_tranche_004_release_readiness_adjudication_packet"
 
-/-- Current live target after the tranche 006 release-policy packet. -/
+/-- Current live target after the retained tranche 004 adjudication packet. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "review_v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet_result"
+  "review_v01_alpha_retained_tranche_004_release_readiness_adjudication_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -241,7 +241,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "review_v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet_result"
+        "review_v01_alpha_retained_tranche_004_release_readiness_adjudication_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

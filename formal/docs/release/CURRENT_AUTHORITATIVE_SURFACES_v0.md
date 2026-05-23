@@ -18,34 +18,36 @@ Current release-facing status:
 - `TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_REVIEW_CONSUMED_PRE_MANIFEST`
 - `TOE_V01_ALPHA_RELEASE_GATE_ENROLLED`
 - `TOE_V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_CONSUMED`
-- `V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_RELEASE_POLICY_ADJUDICATION_PACKET_PREPARED_WITH_NO_POLICY_DECISION_OR_RELEASE_PROMOTION`
+- `V01_ALPHA_DEPENDENCY_REMEDIATION_SUMMARY_PREPARED_AFTER_TRANCHE_006_MOVEMENT_WITH_TRANCHE_004_RETAINED_RELEASE_BLOCKER`
+- `V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_PREPARED_WITH_NO_RELEASE_ASSEMBLY_OR_READINESS_PROMOTION`
 - v0.1-alpha standard status: preparation-only full-pillar/full-seam criticizability track.
 - v0.1-alpha release gates are manifest-enrolled as governed baseline surfaces; v0.1-alpha public release is not complete.
 - v0.1-alpha enrollment result review selected historical post-enrollment target `select_next_post_v01_alpha_manifest_enrollment_bounded_attack` and recommended `prepare_v01_alpha_release_packet_gap_review` before dependency-remediation processing advanced the live target.
-- v0.1-alpha dependency remediation status: tranches 001, 002, 003, and 005 are `documented_dependency_nonblocking`; tranche 004 remains `retained_release_blocking_source_map_blocker`; tranche 006 has prepared the release-policy adjudication packet for `[propext, Classical.choice, Quot.sound]` with `project_axioms_used = []` and is pending packet-result review.
+- v0.1-alpha dependency remediation status: tranches 001, 002, 003, 005, and 006 are `documented_dependency_nonblocking`; tranche 004 remains `retained_release_blocking_source_map_blocker`; the simple dependency-remediation queue is exhausted; and the retained-tranche-004 release-readiness adjudication packet is prepared while readiness stays blocked.
 - Canonical v0.1-alpha release-standard sources:
   - `formal/docs/paper/CLAIM_TAXONOMY_v1.md`
   - `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_20260513_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_RESULT_REVIEW_20260513_v0.json`
   - `formal/docs/release/V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_20260513_v0.json`
   - `formal/docs/release/V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_20260513_v0.json`
-  - `formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_RELEASE_POLICY_ADJUDICATION_PACKET_20260515_v0.json`
+  - `formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_SUMMARY_AFTER_TRANCHE_006_MOVEMENT_20260522_v0.json`
+  - `formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_20260522_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_BLOCKER_LEDGER_v0.json`
   - `formal/toe_formal/ToeFormal/Release/V01Index.lean`
 - Stable nonclaim boundary: no master-action promotion, no pillar completion, no seam closure, no Phase 2 readiness, no empirical adequacy, no canonical ToE status, and no QFT-GR source-map closure.
-- The tranche 006 packet advances the live control target to release-policy packet result review only; it does not make the policy decision, move tranche 006, alter tranche 004, or infer pillar/seam closure.
+- The retained-tranche-004 packet advances the live control target to release-readiness adjudication packet result review only; it does not answer the retained-blocker question, downgrade tranche 004, assemble release, mark readiness, or infer pillar/seam closure.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: review_v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet_result`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet`
-- `ACTIVE_LANE_v0: v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_v01_alpha_retained_tranche_004_release_readiness_adjudication_packet_result`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_v01_alpha_retained_tranche_004_release_readiness_adjudication_packet`
+- `ACTIVE_LANE_v0: v01_alpha_retained_tranche_004_release_readiness_adjudication_packet`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Release/V01DependencyRemediationTranche006ReleasePolicyAdjudicationPacket.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_RELEASE_POLICY_ADJUDICATION_PACKET_20260515_v0.json`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Release/V01RetainedTranche004ReleaseReadinessAdjudicationPacket.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_20260522_v0.json`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
