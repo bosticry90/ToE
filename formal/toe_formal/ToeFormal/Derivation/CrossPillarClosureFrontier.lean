@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "v0.1-alpha release-hold packet result review accepts hold and routes to post-hold control"
+        "v0.1-alpha post-hold routing packet selects retained tranche 004 future remediation program"
       retained_blocker :=
         "V01-ALPHA-DEP-REM-004_RETAINED_RELEASE_BLOCKING_SOURCE_MAP_BLOCKER"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_v01_alpha_post_hold_routing_packet_due_to_retained_tranche_004"
+        "prepare_v01_alpha_retained_tranche_004_future_remediation_program"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the release-hold packet result review. -/
+/-- Previous live target consumed by the post-hold routing packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_v01_alpha_release_hold_packet_due_to_retained_tranche_004_source_map_blocker_result"
-
-/-- Current live target after the release-hold packet result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_v01_alpha_post_hold_routing_packet_due_to_retained_tranche_004"
+
+/-- Current live target after the post-hold routing packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_v01_alpha_retained_tranche_004_future_remediation_program"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -241,7 +241,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "prepare_v01_alpha_post_hold_routing_packet_due_to_retained_tranche_004"
+        "prepare_v01_alpha_retained_tranche_004_future_remediation_program"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

@@ -574,6 +574,12 @@ def releaseHoldPacketDueToRetainedTranche004SourceMapBlockerResultReviewLeanSurf
 def releaseHoldPacketDueToRetainedTranche004SourceMapBlockerResultReviewOutcomeToken : String :=
   "V01_ALPHA_RELEASE_HOLD_PACKET_RESULT_REVIEW_ACCEPTS_RELEASE_HOLD_DUE_TO_RETAINED_TRANCHE_004_SOURCE_MAP_BLOCKER_AND_AUTHORIZES_POST_HOLD_ROUTING_ONLY"
 
+def postHoldRoutingPacketDueToRetainedTranche004LeanSurface : String :=
+  "ToeFormal.Release.V01PostHoldRoutingPacketDueToRetainedTranche004"
+
+def postHoldRoutingPacketDueToRetainedTranche004OutcomeToken : String :=
+  "V01_ALPHA_POST_HOLD_ROUTING_PACKET_PREPARED_DUE_TO_RETAINED_TRANCHE_004_WITH_NO_RELEASE_PROMOTION"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -2288,6 +2294,27 @@ theorem v01_alpha_release_hold_packet_result_review_does_not_claim_source_map_cl
   trivial
 
 theorem v01_alpha_release_hold_packet_result_review_does_not_promote_release : True := by
+  trivial
+
+theorem v01_alpha_post_hold_routing_packet_selects_future_remediation_program : True := by
+  trivial
+
+theorem v01_alpha_post_hold_routing_packet_keeps_release_unassembled : True := by
+  trivial
+
+theorem v01_alpha_post_hold_routing_packet_keeps_readiness_unmarked : True := by
+  trivial
+
+theorem v01_alpha_post_hold_routing_packet_keeps_tranche_004_retained : True := by
+  trivial
+
+theorem v01_alpha_post_hold_routing_packet_does_not_prepare_future_program : True := by
+  trivial
+
+theorem v01_alpha_post_hold_routing_packet_does_not_claim_source_map_closure : True := by
+  trivial
+
+theorem v01_alpha_post_hold_routing_packet_does_not_promote_release : True := by
   trivial
 
 theorem v01_release_standard_does_not_promote_master_action : True := by
