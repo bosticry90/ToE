@@ -20,10 +20,11 @@ Current release-facing status:
 - `TOE_V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_CONSUMED`
 - `V01_ALPHA_DEPENDENCY_REMEDIATION_SUMMARY_PREPARED_AFTER_TRANCHE_006_MOVEMENT_WITH_TRANCHE_004_RETAINED_RELEASE_BLOCKER`
 - `V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_PREPARED_WITH_NO_RELEASE_ASSEMBLY_OR_READINESS_PROMOTION`
+- `V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_ACCEPTS_RETAINED_BLOCKER_ADJUDICATION_QUESTION_AND_AUTHORIZES_ADJUDICATION_EXECUTION_ONLY`
 - v0.1-alpha standard status: preparation-only full-pillar/full-seam criticizability track.
 - v0.1-alpha release gates are manifest-enrolled as governed baseline surfaces; v0.1-alpha public release is not complete.
 - v0.1-alpha enrollment result review selected historical post-enrollment target `select_next_post_v01_alpha_manifest_enrollment_bounded_attack` and recommended `prepare_v01_alpha_release_packet_gap_review` before dependency-remediation processing advanced the live target.
-- v0.1-alpha dependency remediation status: tranches 001, 002, 003, 005, and 006 are `documented_dependency_nonblocking`; tranche 004 remains `retained_release_blocking_source_map_blocker`; the simple dependency-remediation queue is exhausted; and the retained-tranche-004 release-readiness adjudication packet is prepared while readiness stays blocked.
+- v0.1-alpha dependency remediation status: tranches 001, 002, 003, 005, and 006 are `documented_dependency_nonblocking`; tranche 004 remains `retained_release_blocking_source_map_blocker`; the simple dependency-remediation queue is exhausted; and the retained-tranche-004 release-readiness adjudication packet result review accepts the retained-blocker question and authorizes adjudication execution only while readiness stays blocked.
 - Canonical v0.1-alpha release-standard sources:
   - `formal/docs/paper/CLAIM_TAXONOMY_v1.md`
   - `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_20260513_v0.json`
@@ -32,22 +33,23 @@ Current release-facing status:
   - `formal/docs/release/V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_20260513_v0.json`
   - `formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_SUMMARY_AFTER_TRANCHE_006_MOVEMENT_20260522_v0.json`
   - `formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_20260522_v0.json`
+  - `formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_20260522_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_BLOCKER_LEDGER_v0.json`
   - `formal/toe_formal/ToeFormal/Release/V01Index.lean`
 - Stable nonclaim boundary: no master-action promotion, no pillar completion, no seam closure, no Phase 2 readiness, no empirical adequacy, no canonical ToE status, and no QFT-GR source-map closure.
-- The retained-tranche-004 packet advances the live control target to release-readiness adjudication packet result review only; it does not answer the retained-blocker question, downgrade tranche 004, assemble release, mark readiness, or infer pillar/seam closure.
+- The retained-tranche-004 packet result review advances the live control target to release-readiness adjudication execution only; it does not answer the retained-blocker question, downgrade tranche 004, assemble release, mark readiness, or infer pillar/seam closure.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: review_v01_alpha_retained_tranche_004_release_readiness_adjudication_packet_result`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_v01_alpha_retained_tranche_004_release_readiness_adjudication_packet`
-- `ACTIVE_LANE_v0: v01_alpha_retained_tranche_004_release_readiness_adjudication_packet`
+- `CURRENT_LIVE_NEXT_TARGET_v0: execute_v01_alpha_retained_tranche_004_release_readiness_adjudication`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_v01_alpha_retained_tranche_004_release_readiness_adjudication_packet_result`
+- `ACTIVE_LANE_v0: v01_alpha_retained_tranche_004_release_readiness_adjudication_packet_result_review`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Release/V01RetainedTranche004ReleaseReadinessAdjudicationPacket.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_20260522_v0.json`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Release/V01RetainedTranche004ReleaseReadinessAdjudicationPacketResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_20260522_v0.json`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
@@ -86,6 +88,8 @@ Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/PostQMStatEntropyLogDomainReductionBoundedAttackSelection.lean`
 - `formal/toe_formal/ToeFormal/Derivation/V01AlphaGovernanceManifestEnrollmentResultReview.lean`
 - `formal/toe_formal/ToeFormal/Release/V01DependencyRemediationTranche006ReleasePolicyAdjudicationPacket.lean`
+- `formal/toe_formal/ToeFormal/Release/V01RetainedTranche004ReleaseReadinessAdjudicationPacket.lean`
+- `formal/toe_formal/ToeFormal/Release/V01RetainedTranche004ReleaseReadinessAdjudicationPacketResultReview.lean`
 - `MASTER_ACTION_DEPENDENCY_GAP_PACKET_RESULT_REVIEW_CONSUMED_NONPROMOTED`
 - `POST_MASTER_ACTION_GAP_PACKET_NEXT_ATTACK_SELECTED`
 - `FULL_PILLAR_TARGET_MAP_NEXT_LANE_SELECTED_AFTER_GAP_PACKET_REVIEW`
@@ -124,6 +128,8 @@ Current result-token chain:
 - `QM_STAT_ENTROPY_LOG_DOMAIN_ZERO_HANDLING_REDUCTION_RESULT_REVIEW_CONSUMED_LEAN_BACKED`
 - `POST_QM_STAT_ENTROPY_LOG_DOMAIN_REDUCTION_NEXT_ATTACK_SELECTED`
 - `V01_ALPHA_DEPENDENCY_REMEDIATION_TRANCHE_006_RELEASE_POLICY_ADJUDICATION_PACKET_PREPARED_WITH_NO_POLICY_DECISION_OR_RELEASE_PROMOTION`
+- `V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_PREPARED_WITH_NO_RELEASE_ASSEMBLY_OR_READINESS_PROMOTION`
+- `V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_ACCEPTS_RETAINED_BLOCKER_ADJUDICATION_QUESTION_AND_AUTHORIZES_ADJUDICATION_EXECUTION_ONLY`
 - Post-QM-STAT entropy-semantics selector preserves the target STAT entropy semantics gap as supplied-only and returns control to full-pillar target-map selection without closure or promotion claims.
 - After-QM-STAT full-pillar selector selects the supporting-assumption map for the supplied-only target STAT entropy semantics gap without closure or promotion claims.
 - QM-STAT supporting-assumption map result review consumes the dependency map only, keeps all eight assumption classes recorded, and selects the post-map bounded selector without closure or promotion claims.
