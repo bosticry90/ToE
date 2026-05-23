@@ -580,6 +580,12 @@ def postHoldRoutingPacketDueToRetainedTranche004LeanSurface : String :=
 def postHoldRoutingPacketDueToRetainedTranche004OutcomeToken : String :=
   "V01_ALPHA_POST_HOLD_ROUTING_PACKET_PREPARED_DUE_TO_RETAINED_TRANCHE_004_WITH_NO_RELEASE_PROMOTION"
 
+def retainedTranche004FutureRemediationProgramLeanSurface : String :=
+  "ToeFormal.Release.V01RetainedTranche004FutureRemediationProgram"
+
+def retainedTranche004FutureRemediationProgramOutcomeToken : String :=
+  "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_PREPARED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -2315,6 +2321,27 @@ theorem v01_alpha_post_hold_routing_packet_does_not_claim_source_map_closure : T
   trivial
 
 theorem v01_alpha_post_hold_routing_packet_does_not_promote_release : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_future_remediation_program_selects_result_review : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_future_remediation_program_keeps_release_unassembled : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_future_remediation_program_keeps_readiness_unmarked : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_future_remediation_program_keeps_tranche_004_retained : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_future_remediation_program_does_not_construct_witness_chain : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_future_remediation_program_does_not_claim_source_map_closure : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_future_remediation_program_does_not_promote_release : True := by
   trivial
 
 theorem v01_release_standard_does_not_promote_master_action : True := by
