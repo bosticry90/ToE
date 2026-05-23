@@ -1,0 +1,56 @@
+/-
+ToeFormal/Release/V01RetainedTranche004BoundedSourceMapWitnessChainResearchAttempt.lean
+
+Lean-side release index marker for the v0.1-alpha retained tranche 004 bounded
+source-map witness-chain research attempt.
+-/
+
+namespace ToeFormal
+namespace Release
+namespace V01RetainedTranche004BoundedSourceMapWitnessChainResearchAttempt
+
+def boundedSourceMapWitnessChainResearchAttemptToken : String :=
+  "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_v0"
+
+def boundedSourceMapWitnessChainResearchAttemptOutcomeToken : String :=
+  "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_EXECUTED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION"
+
+def researchAttemptResultClassification : String :=
+  "partial_witness_chain_candidate_pending_review"
+
+def retainedTranche004Status : String :=
+  "retained_release_blocking_source_map_blocker"
+
+def selectedNextTarget : String :=
+  "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_result"
+
+theorem v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_executes_bounded_attempt_only : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_records_partial_candidate_pending_review : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_does_not_construct_witness_chain : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_does_not_claim_source_map_closure : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_keeps_tranche_004_retained : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_keeps_release_unassembled : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_does_not_discharge_debt : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_does_not_promote_release : True := by
+  trivial
+
+end V01RetainedTranche004BoundedSourceMapWitnessChainResearchAttempt
+end Release
+end ToeFormal

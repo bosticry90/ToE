@@ -87,9 +87,9 @@
   ],
   "current_target_state": {
     "schema_id": "CURRENT_TARGET_STATE_v0",
-    "previous_live_next_target": "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet_result",
-    "live_next_target": "execute_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004BoundedSourceMapWitnessChainResearchPacketResultReview.lean",
+    "previous_live_next_target": "execute_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt",
+    "live_next_target": "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_result",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004BoundedSourceMapWitnessChainResearchAttempt.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
     "paused_lanes": [
@@ -180,7 +180,7 @@
       "v01_alpha_retained_tranche_004_future_remediation_program_result_review",
       "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet"
     ],
-    "active_lane": "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet_result_review",
+    "active_lane": "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -740,6 +740,8 @@
     "prepare_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet",
     "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet_result",
     "execute_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt"
+    ,
+    "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_result"
   ],
   "citation_boundary_coverage": [
     "PHASE1-BLOCKER-003A2A15A1A31_RAW_IBP_TO_GREEN_CONVERGENCE_PACKAGE_RETAINED",
@@ -6413,9 +6415,9 @@
       "selected_next_target": "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet_result"
     },
     {
-      "workstream_id": "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet_result_review",
+      "workstream_id": "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt",
       "status": "active",
-      "retained_blocker": "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet_result_review_nonclaim_boundary",
+      "retained_blocker": "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_nonclaim_boundary",
       "consecutive_slices_after_retention": 0,
       "guardrail_status": "active_under_loop_control_registry_v0",
       "blocked_promotions": [
@@ -6428,13 +6430,13 @@
         "qft_gr_source_map_closure",
         "unrelated_governance_gate_enrollment"
       ],
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004BoundedSourceMapWitnessChainResearchPacketResultReview.lean",
-      "authorized_next_slice": "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_execution_v0",
-      "authorized_next_strict_target": "execute_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt",
-      "consumed_target": "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet_result",
-      "latest_surface": "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet_result_review_v0",
-      "result_review_surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004BoundedSourceMapWitnessChainResearchPacketResultReview.lean",
-      "result_review_report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_RESULT_REVIEW_20260522_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004BoundedSourceMapWitnessChainResearchAttempt.lean",
+      "authorized_next_slice": "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_result_review_v0",
+      "authorized_next_strict_target": "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_result",
+      "consumed_target": "execute_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt",
+      "latest_surface": "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_v0",
+      "result_review_surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004BoundedSourceMapWitnessChainResearchAttempt.lean",
+      "result_review_report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_20260523_v0.json",
       "research_packet_report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_20260522_v0.json",
       "future_remediation_program_result_review_report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_20260522_v0.json",
       "future_remediation_program_report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_20260522_v0.json",
@@ -6443,8 +6445,8 @@
       "hold_packet_report": "formal/docs/release/V01_ALPHA_RELEASE_HOLD_PACKET_DUE_TO_RETAINED_TRANCHE_004_SOURCE_MAP_BLOCKER_20260522_v0.json",
       "adjudication_report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_20260522_v0.json",
       "consumed_research_packet_token": "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_PREPARED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION",
-      "output_token": "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_RESULT_REVIEW_ACCEPTS_RESEARCH_PACKET_AND_SELECTS_BOUNDED_NEXT_ACTION_ONLY",
-      "selected_route": "bounded_source_map_witness_chain_research_attempt_execution",
+      "output_token": "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_EXECUTED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION",
+      "selected_route": "bounded_source_map_witness_chain_research_attempt_result_review",
       "selected_finding": "V01-ALPHA-DEP-REM-004",
       "selected_tranche": "V01-ALPHA-DEP-REM-TRANCHE-004",
       "selected_dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
@@ -6500,9 +6502,13 @@
       "post_research_review_target": "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_result",
       "bounded_source_map_witness_chain_research_attempt_authorized_for_execution": "yes",
       "source_map_witness_chain_research_execution_authorized": "yes",
-      "research_executed": "no",
-      "bounded_source_map_witness_chain_research_attempt_executed": "no",
-      "witness_chain_research_started": "no",
+      "research_executed": "yes",
+      "bounded_source_map_witness_chain_research_attempt_executed": "yes",
+      "witness_chain_research_started": "yes",
+      "research_attempt_result_classification": "partial_witness_chain_candidate_pending_review",
+      "result_classification_count": "1",
+      "partial_witness_chain_candidate_produced": "yes",
+      "partial_witness_chain_candidate_pending_review": "yes",
       "witness_chain_constructed": "no",
       "source_map_witness_chain_constructed": "no",
       "required_future_route_for_tranche_004": "retained_tranche_004_source_map_witness_chain_or_governed_retained_blocker_continuation_required_before_release_assembly",
@@ -6516,7 +6522,7 @@
       "canonical_toe_claim": "no",
       "qft_gr_source_map_closure_authorized": "no",
       "unrelated_gate_enrollment_authorized": "no",
-      "selected_next_target": "execute_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt"
+      "selected_next_target": "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_result"
     }
   ],
   "promotion_escrow": {

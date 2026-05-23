@@ -1037,6 +1037,9 @@ V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_
 V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_EXECUTION_TARGET = (
     "execute_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt"
 )
+V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_TARGET = (
+    "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_result"
+)
 V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TOKEN = (
     "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_RELEASE_HOLD_AND_AUTHORIZES_RELEASE_HOLD_PACKET_PREPARATION_ONLY"
 )
@@ -1066,16 +1069,21 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet_result_review"
+    "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt"
 )
 PREVIOUS_TARGET = (
-    V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_RESULT_REVIEW_TARGET
-)
-LIVE_TARGET = (
     V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_EXECUTION_TARGET
 )
+LIVE_TARGET = (
+    V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_TARGET
+)
 LIVE_TARGET_EVIDENCE_PATH = (
-    V01_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_RESULT_REVIEW_PATH
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Release"
+    / "V01RetainedTranche004BoundedSourceMapWitnessChainResearchAttempt.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1886,18 +1894,18 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_packet_result_review_v0"
+        == "v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert current_active_workstream["result_review_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
-        "V01RetainedTranche004BoundedSourceMapWitnessChainResearchPacketResultReview.lean"
+        "V01RetainedTranche004BoundedSourceMapWitnessChainResearchAttempt.lean"
     )
     assert current_active_workstream["result_review_report"] == (
         "formal/docs/release/"
-        "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_RESULT_REVIEW_20260522_v0.json"
+        "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_20260523_v0.json"
     )
     assert current_active_workstream["research_packet_report"] == (
         "formal/docs/release/"
@@ -1931,10 +1939,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_TOKEN
     )
     assert current_active_workstream["output_token"] == (
-        V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_RESULT_REVIEW_TOKEN
+        "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_EXECUTED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION"
     )
     assert current_active_workstream["selected_route"] == (
-        "bounded_source_map_witness_chain_research_attempt_execution"
+        "bounded_source_map_witness_chain_research_attempt_result_review"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -2023,9 +2031,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "yes"
     )
     assert current_active_workstream["source_map_witness_chain_research_execution_authorized"] == "yes"
-    assert current_active_workstream["research_executed"] == "no"
-    assert current_active_workstream["bounded_source_map_witness_chain_research_attempt_executed"] == "no"
-    assert current_active_workstream["witness_chain_research_started"] == "no"
+    assert current_active_workstream["research_executed"] == "yes"
+    assert current_active_workstream["bounded_source_map_witness_chain_research_attempt_executed"] == "yes"
+    assert current_active_workstream["witness_chain_research_started"] == "yes"
+    assert current_active_workstream["research_attempt_result_classification"] == (
+        "partial_witness_chain_candidate_pending_review"
+    )
+    assert current_active_workstream["result_classification_count"] == "1"
+    assert current_active_workstream["partial_witness_chain_candidate_produced"] == "yes"
+    assert current_active_workstream["partial_witness_chain_candidate_pending_review"] == "yes"
     assert current_active_workstream["witness_chain_constructed"] == "no"
     assert current_active_workstream["source_map_witness_chain_constructed"] == "no"
     assert current_active_workstream["required_future_route_for_tranche_004"] == (

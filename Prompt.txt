@@ -12,4 +12,4 @@ Please update GitHub main branch to synch with the current ToE repo state.
 
 Please update all authoritative and necessary files to reflect the project's current state.
 
-Please run full python tests lean builds from the ToE repo.
+Please run full python tests and lean builds from the ToE repo.

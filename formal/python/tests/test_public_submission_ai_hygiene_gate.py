@@ -36,7 +36,7 @@ POLICY_SENTENCE = (
 
 EXPECTED_LIVE_TARGET = (
     "CURRENT_LIVE_NEXT_TARGET_v0: "
-    "review_v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet_result"
+    "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_result"
 )
 
 FORBIDDEN_META_MARKERS = [
