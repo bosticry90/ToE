@@ -67,7 +67,7 @@ PREPARED_TOKEN = (
 )
 EXPECTED_LIVE_TARGET = (
     "CURRENT_LIVE_NEXT_TARGET_v0: "
-    "execute_v01_alpha_retained_tranche_004_source_map_authorization_adjudication"
+    "review_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_result"
 )
 REQUIRED_ROW_TOKENS = [
     "NONCLAIM",

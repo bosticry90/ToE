@@ -1061,6 +1061,9 @@ V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_PACKET_RESU
 V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_EXECUTION_TARGET = (
     "execute_v01_alpha_retained_tranche_004_source_map_authorization_adjudication"
 )
+V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_RESULT_REVIEW_TARGET = (
+    "review_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_result"
+)
 V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TOKEN = (
     "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_RELEASE_HOLD_AND_AUTHORIZES_RELEASE_HOLD_PACKET_PREPARATION_ONLY"
 )
@@ -1090,13 +1093,13 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet_result_review"
+    "v01_alpha_retained_tranche_004_source_map_authorization_adjudication"
 )
 PREVIOUS_TARGET = (
-    V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_PACKET_RESULT_REVIEW_TARGET
+    V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_EXECUTION_TARGET
 )
 LIVE_TARGET = (
-    V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_EXECUTION_TARGET
+    V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_RESULT_REVIEW_TARGET
 )
 LIVE_TARGET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1104,7 +1107,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Release"
-    / "V01RetainedTranche004SourceMapAuthorizationAdjudicationPacketResultReview.lean"
+    / "V01RetainedTranche004SourceMapAuthorizationAdjudication.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1182,6 +1185,7 @@ PAUSED_LANES = {
     "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_from_research_candidate",
     "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_result_review",
     "v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet",
+    "v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet_result_review",
 }
 FORBIDDEN_ASSERTIONS = {
     "phase2_authorized",
@@ -1920,7 +1924,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet_result_review_v0"
+        == "v01_alpha_retained_tranche_004_source_map_authorization_adjudication_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -1981,6 +1985,38 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream[
         "source_map_authorization_adjudication_packet_result_review_report"
+    ] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_PACKET_RESULT_REVIEW_20260523_v0.json"
+    )
+    assert current_active_workstream["source_map_authorization_adjudication_surface"] == (
+        "formal/toe_formal/ToeFormal/Release/"
+        "V01RetainedTranche004SourceMapAuthorizationAdjudication.lean"
+    )
+    assert current_active_workstream["source_map_authorization_adjudication_report"] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_20260523_v0.json"
+    )
+    assert current_active_workstream[
+        "source_map_authorization_adjudication_execution_surface"
+    ] == (
+        "formal/toe_formal/ToeFormal/Release/"
+        "V01RetainedTranche004SourceMapAuthorizationAdjudication.lean"
+    )
+    assert current_active_workstream[
+        "source_map_authorization_adjudication_execution_report"
+    ] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_20260523_v0.json"
+    )
+    assert current_active_workstream[
+        "consumed_source_map_authorization_adjudication_packet_result_review_surface"
+    ] == (
+        "formal/toe_formal/ToeFormal/Release/"
+        "V01RetainedTranche004SourceMapAuthorizationAdjudicationPacketResultReview.lean"
+    )
+    assert current_active_workstream[
+        "consumed_source_map_authorization_adjudication_packet_result_review_report"
     ] == (
         "formal/docs/release/"
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_PACKET_RESULT_REVIEW_20260523_v0.json"
@@ -2059,7 +2095,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_ACCEPTS_PARTIAL_CANDIDATE_AND_AUTHORIZES_CONSTRUCTION_PACKET_PREPARATION_ONLY"
     )
     assert current_active_workstream["output_token"] == (
-        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_ADJUDICATION_EXECUTION_ONLY"
+        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_EXECUTED_REQUIREMENTS_SATISFIED_PENDING_RESULT_REVIEW_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION"
     )
     assert current_active_workstream[
         "consumed_source_map_authorization_adjudication_packet_token"
@@ -2079,7 +2115,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "bounded_source_map_authorization_adjudication_execution"
+        "source_map_authorization_adjudication_result_review"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -2345,17 +2381,46 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         ]
         == "yes"
     )
-    assert current_active_workstream["source_map_authorization_adjudication_executed"] == "no"
-    assert current_active_workstream["source_map_authorization_adjudication_result_review_authorized"] == "no"
+    assert current_active_workstream["source_map_authorization_adjudication_executed"] == "yes"
+    assert current_active_workstream["bounded_source_map_authorization_adjudication_executed"] == "yes"
+    assert (
+        current_active_workstream[
+            "bounded_source_map_authorization_adjudication_execution_only"
+        ]
+        == "yes"
+    )
+    assert current_active_workstream["source_map_authorization_adjudication_result_review_authorized"] == "yes"
+    assert current_active_workstream["source_map_authorization_adjudication_result_classification"] == (
+        "source_map_authorization_requirements_satisfied_pending_result_review_no_closure_or_release_promotion"
+    )
+    assert current_active_workstream["adjudication_result_classification_count"] == "1"
     assert current_active_workstream["adjudication_question"] == (
         "Does the accepted witness-chain construction satisfy the source-map "
         "semantic-closure authorization requirements?"
     )
-    assert current_active_workstream["adjudication_question_answered"] == "no"
+    assert current_active_workstream["adjudication_question_answered"] == "yes"
+    assert current_active_workstream["adjudication_answer"] == (
+        "yes_satisfies_source_map_semantic_closure_authorization_requirements_pending_result_review"
+    )
+    assert current_active_workstream["adjudication_answer_pending_result_review"] == "yes"
+    assert (
+        current_active_workstream[
+            "source_map_authorization_requirements_satisfied_pending_result_review"
+        ]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "source_map_semantic_closure_authorization_requirements_satisfied_pending_result_review"
+        ]
+        == "yes"
+    )
     assert current_active_workstream["adjudication_requirement_count"] == "7"
+    assert current_active_workstream["adjudicated_requirement_count"] == "7"
     assert current_active_workstream["adjudication_success_criteria_count"] == "4"
     assert current_active_workstream["adjudication_failure_criteria_count"] == "4"
     assert current_active_workstream["adjudication_execution_boundary_count"] == "5"
+    assert current_active_workstream["adjudication_execution_step_count"] == "5"
     assert current_active_workstream["future_source_map_authorization_adjudication_execution_target"] == (
         V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_EXECUTION_TARGET
     )
@@ -2363,7 +2428,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_EXECUTION_TARGET
     )
     assert current_active_workstream["post_adjudication_result_review_target"] == (
-        "review_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_result"
+        V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_RESULT_REVIEW_TARGET
     )
     assert current_active_workstream["consumed_construction_result_classification"] == (
         "witness_chain_constructed_pending_result_review"
@@ -2382,7 +2447,27 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["tranche_004_status_moved"] == "no"
     assert current_active_workstream["tranche_004_retained_blocker_discharged"] == "no"
     assert current_active_workstream["source_map_closure_achieved"] == "no"
-    assert current_active_workstream["source_map_closure_requirements_adjudicated"] == "no"
+    assert current_active_workstream["source_map_closure_requirements_adjudicated"] == "yes"
+    assert (
+        current_active_workstream[
+            "source_map_closure_authorization_requirements_decision_recorded"
+        ]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "source_map_closure_authorization_decision_accepted_by_review"
+        ]
+        == "no"
+    )
+    assert current_active_workstream["adjudication_result_accepted_by_review"] == "no"
+    assert current_active_workstream["adjudication_result_claimed_as_closure"] == "no"
+    assert (
+        current_active_workstream[
+            "source_map_closure_authorization_result_review_required"
+        ]
+        == "yes"
+    )
     assert current_active_workstream["source_map_closure_claimed"] == "no"
     assert current_active_workstream["source_map_closure_authorized"] == "no"
     assert current_active_workstream["qft_gr_seam_closed"] == "no"
