@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "v0.1-alpha retained tranche 004 blocker-movement registration packet prepared after accepted source-map closure registration, with no QFT-GR seam closure, tranche movement by packet preparation alone, release readiness, or release promotion"
+        "v0.1-alpha retained tranche 004 blocker-movement registration packet result review accepted the packet and authorized execution only, with no QFT-GR seam closure, tranche movement by review alone, release readiness, or release promotion"
       retained_blocker :=
         "V01-ALPHA-DEP-REM-004_RETAINED_RELEASE_BLOCKING_SOURCE_MAP_BLOCKER"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_result"
+        "execute_v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the retained tranche 004 blocker-movement registration packet. -/
+/-- Previous live target consumed by the retained tranche 004 blocker-movement packet result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure"
-
-/-- Current live target after retained tranche 004 blocker-movement packet preparation. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_result"
+
+/-- Current live target after retained tranche 004 blocker-movement packet result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "execute_v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -241,7 +241,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "review_v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_result"
+        "execute_v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
