@@ -1,0 +1,709 @@
+{
+  "acceptance_criteria": {
+    "accepted_authorization_and_witness_material_carried": true,
+    "all_closure_requirements_reviewed": true,
+    "classification_is_authorized_pending_review": true,
+    "closure_adjudication_outcome_expected": true,
+    "closure_adjudication_schema_expected": true,
+    "closure_adjudication_selected_this_review": true,
+    "closure_authorization_acceptance_is_explicit": true,
+    "closure_registration_packet_preparation_selected_only": true,
+    "consumes_expected_closure_adjudication_execution": true,
+    "documented_dependency_nonblocking_queue_preserved": true,
+    "forbidden_effects_all_false": true,
+    "no_final_closure_seam_or_blocker_movement_in_input": true,
+    "no_release_theorem_phase_empirical_publication_or_master_promotion": true,
+    "proof_evidence_and_boundaries_carried": true,
+    "release_hold_preserved": true,
+    "tranche_004_retained": true
+  },
+  "accepted": true,
+  "accepted_authorization_requirement_count": 7,
+  "accepted_closure_requirement_count": 7,
+  "adjudicated_closure_requirement_count": 7,
+  "adjudicated_closure_requirements": [
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemantics.lean",
+      "closure_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "component_id": "state_expectation_functional_semantics",
+      "input_packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "requirement_id": "state_expectation_functional_semantics_authorization_requirement",
+      "result_review_required_before_closure_registration": true
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemantics.lean",
+      "closure_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "component_id": "renormalized_expectation_value_semantics",
+      "input_packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "requirement_id": "renormalized_expectation_value_semantics_authorization_requirement",
+      "result_review_required_before_closure_registration": true
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemantics.lean",
+      "closure_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "component_id": "classical_source_admissibility_semantics",
+      "input_packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "requirement_id": "classical_source_admissibility_semantics_authorization_requirement",
+      "result_review_required_before_closure_registration": true
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationObligationSemantics.lean",
+      "closure_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "component_id": "covariant_conservation_obligation",
+      "input_packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "requirement_id": "covariant_conservation_obligation_authorization_requirement",
+      "result_review_required_before_closure_registration": true
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_BianchiCompatibilityObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_BianchiCompatibilityObligationSemantics.lean",
+      "closure_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "component_id": "bianchi_compatibility_obligation",
+      "input_packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "requirement_id": "bianchi_compatibility_obligation_authorization_requirement",
+      "result_review_required_before_closure_registration": true
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemantics.lean",
+      "closure_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "component_id": "einstein_coupling_obligation",
+      "input_packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "requirement_id": "einstein_coupling_obligation_authorization_requirement",
+      "result_review_required_before_closure_registration": true
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_WeakCurvatureSourceIdentificationObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_WeakCurvatureSourceIdentificationObligationSemantics.lean",
+      "closure_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "component_id": "weak_curvature_source_identification",
+      "input_packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "requirement_id": "weak_curvature_source_identification_authorization_requirement",
+      "result_review_required_before_closure_registration": true
+    }
+  ],
+  "axiom_spec_backed_debt_reduced": false,
+  "blocker_movement_authorized": false,
+  "blocker_movement_registered": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The closure adjudication result review accepts the authorization only for preparing a separate closure-registration packet.",
+      "target": "prepare_v01_alpha_retained_tranche_004_source_map_closure_registration_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Blocker movement remains unavailable until a later governed registration and movement-control step.",
+      "target": "prepare_v01_alpha_retained_tranche_004_blocker_movement_adjudication_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Refinement remains available if closure-registration packet preparation exposes a gap.",
+      "target": "prepare_refined_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Release assembly remains blocked by retained tranche 004.",
+      "target": "assemble_v01_alpha_release_packet"
+    }
+  ],
+  "captured_at_utc": "2026-05-22T00:00:00Z",
+  "closure_adjudication_answer": "yes_source_map_closure_authorized_pending_result_review",
+  "closure_adjudication_answer_accepted_by_review": true,
+  "closure_adjudication_execution_boundary": [
+    {
+      "boundary_id": "packet_preparation_only",
+      "rule": "This packet prepares closure adjudication scope; it does not execute closure adjudication."
+    },
+    {
+      "boundary_id": "review_before_execution",
+      "rule": "The prepared packet must be reviewed before closure adjudication execution can be authorized."
+    },
+    {
+      "boundary_id": "closure_question_not_answered_by_packet",
+      "rule": "The packet asks whether source-map closure can be adjudicated under release-control rules; it does not answer that question."
+    },
+    {
+      "boundary_id": "no_source_map_closure_by_preparation",
+      "rule": "Source-map closure remains unclaimed, unauthorized, and unregistered."
+    },
+    {
+      "boundary_id": "release_lane_stays_held",
+      "rule": "Release readiness remains held and release assembly remains unauthorized."
+    }
+  ],
+  "closure_adjudication_execution_boundary_count": 5,
+  "closure_adjudication_execution_step_count": 5,
+  "closure_adjudication_execution_steps": [
+    {
+      "result": "bounded_source_map_closure_adjudication_execution_authorization_consumed",
+      "step_id": "closure_adjudication_001_consume_packet_result_review"
+    },
+    {
+      "requirement_count": 7,
+      "result": "accepted_authorization_requirements_carried",
+      "step_id": "closure_adjudication_002_carry_accepted_authorization_posture"
+    },
+    {
+      "adjudicated_component_ids": [
+        "state_expectation_functional_semantics",
+        "renormalized_expectation_value_semantics",
+        "classical_source_admissibility_semantics",
+        "covariant_conservation_obligation",
+        "bianchi_compatibility_obligation",
+        "einstein_coupling_obligation",
+        "weak_curvature_source_identification"
+      ],
+      "result": "yes_source_map_closure_authorized_pending_result_review",
+      "step_id": "closure_adjudication_003_evaluate_source_map_closure_requirements"
+    },
+    {
+      "result": "source_map_closure_authorized_pending_result_review_no_release_promotion",
+      "step_id": "closure_adjudication_004_preserve_result_review_and_release_firewall"
+    },
+    {
+      "result": "source_map_closure_authorized_pending_result_review",
+      "selected_next_target": "review_v01_alpha_retained_tranche_004_source_map_closure_adjudication_result",
+      "step_id": "closure_adjudication_005_classify_result_pending_review"
+    }
+  ],
+  "closure_adjudication_failure_criteria": [
+    {
+      "condition": "An accepted source-map authorization requirement does not support source-map closure eligibility.",
+      "criterion_id": "authorization_requirement_rejected_for_closure",
+      "required_result": "source_map_closure_not_authorized_retained_blocker_continues"
+    },
+    {
+      "condition": "Packet preparation is treated as a source-map closure decision.",
+      "criterion_id": "closure_adjudication_treated_as_closure_by_preparation",
+      "required_result": "reject_closure_claim_no_status_movement"
+    },
+    {
+      "condition": "QFT-GR seam closure is inferred from source-map packet preparation.",
+      "criterion_id": "qft_gr_seam_closure_inferred",
+      "required_result": "qft_gr_seam_remains_open"
+    },
+    {
+      "condition": "Release assembly, readiness marking, or tranche 004 movement is requested before closure adjudication execution and result review.",
+      "criterion_id": "release_or_blocker_movement_requested",
+      "required_result": "release_hold_continues"
+    }
+  ],
+  "closure_adjudication_failure_criteria_count": 4,
+  "closure_adjudication_question": "Given that source-map authorization requirements were accepted, can source-map closure be adjudicated under the repo's release-control rules?",
+  "closure_adjudication_requirement_count": 7,
+  "closure_adjudication_requirements": [
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemantics.lean",
+      "component_id": "state_expectation_functional_semantics",
+      "input_closure_status": "not_source_map_closure_by_result_review_alone",
+      "input_result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only",
+      "packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "required_closure_adjudication": "Determine whether this accepted authorization requirement can support source-map closure under the repo's release-control rules or must remain retained/refined.",
+      "requirement_id": "state_expectation_functional_semantics_authorization_requirement"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemantics.lean",
+      "component_id": "renormalized_expectation_value_semantics",
+      "input_closure_status": "not_source_map_closure_by_result_review_alone",
+      "input_result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only",
+      "packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "required_closure_adjudication": "Determine whether this accepted authorization requirement can support source-map closure under the repo's release-control rules or must remain retained/refined.",
+      "requirement_id": "renormalized_expectation_value_semantics_authorization_requirement"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemantics.lean",
+      "component_id": "classical_source_admissibility_semantics",
+      "input_closure_status": "not_source_map_closure_by_result_review_alone",
+      "input_result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only",
+      "packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "required_closure_adjudication": "Determine whether this accepted authorization requirement can support source-map closure under the repo's release-control rules or must remain retained/refined.",
+      "requirement_id": "classical_source_admissibility_semantics_authorization_requirement"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationObligationSemantics.lean",
+      "component_id": "covariant_conservation_obligation",
+      "input_closure_status": "not_source_map_closure_by_result_review_alone",
+      "input_result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only",
+      "packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "required_closure_adjudication": "Determine whether this accepted authorization requirement can support source-map closure under the repo's release-control rules or must remain retained/refined.",
+      "requirement_id": "covariant_conservation_obligation_authorization_requirement"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_BianchiCompatibilityObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_BianchiCompatibilityObligationSemantics.lean",
+      "component_id": "bianchi_compatibility_obligation",
+      "input_closure_status": "not_source_map_closure_by_result_review_alone",
+      "input_result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only",
+      "packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "required_closure_adjudication": "Determine whether this accepted authorization requirement can support source-map closure under the repo's release-control rules or must remain retained/refined.",
+      "requirement_id": "bianchi_compatibility_obligation_authorization_requirement"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemantics.lean",
+      "component_id": "einstein_coupling_obligation",
+      "input_closure_status": "not_source_map_closure_by_result_review_alone",
+      "input_result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only",
+      "packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "required_closure_adjudication": "Determine whether this accepted authorization requirement can support source-map closure under the repo's release-control rules or must remain retained/refined.",
+      "requirement_id": "einstein_coupling_obligation_authorization_requirement"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_WeakCurvatureSourceIdentificationObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_WeakCurvatureSourceIdentificationObligationSemantics.lean",
+      "component_id": "weak_curvature_source_identification",
+      "input_closure_status": "not_source_map_closure_by_result_review_alone",
+      "input_result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only",
+      "packet_status": "prepared_for_future_closure_adjudication_not_answered",
+      "required_closure_adjudication": "Determine whether this accepted authorization requirement can support source-map closure under the repo's release-control rules or must remain retained/refined.",
+      "requirement_id": "weak_curvature_source_identification_authorization_requirement"
+    }
+  ],
+  "closure_adjudication_result_classification_count": 1,
+  "closure_adjudication_success_criteria": [
+    {
+      "criterion": "Every accepted source-map authorization requirement is explicitly checked for closure eligibility under release-control rules.",
+      "criterion_id": "all_accepted_authorization_requirements_checked"
+    },
+    {
+      "criterion": "Any source-map closure decision is deferred to bounded closure adjudication execution and a separate result review.",
+      "criterion_id": "closure_decision_requires_execution_and_review"
+    },
+    {
+      "criterion": "Tranche 004 movement remains separate from packet preparation and requires later governed authorization.",
+      "criterion_id": "blocker_movement_separate_from_closure_packet"
+    },
+    {
+      "criterion": "Release readiness remains held and release assembly remains unauthorized.",
+      "criterion_id": "release_hold_survives_packet"
+    }
+  ],
+  "closure_adjudication_success_criteria_count": 4,
+  "consumed_source_map_closure_adjudication_outcome_id": "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_EXECUTED_WITH_NO_RELEASE_PROMOTION",
+  "consumed_source_map_closure_adjudication_result_classification": "source_map_closure_authorized_pending_result_review",
+  "consumed_source_map_closure_adjudication_schema_id": "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_20260523_v0",
+  "consumes_source_map_closure_adjudication_execution": "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_v0",
+  "consumes_source_map_closure_adjudication_execution_pointer": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_20260523_v0.json",
+  "documented_dependency_nonblocking_tranche_count": 5,
+  "empirical_validation_authorized": false,
+  "empirical_validation_claimed": false,
+  "final_source_map_closure_authorized": false,
+  "forbidden_effect_status": {
+    "axiom_spec_backed_debt_reduced": false,
+    "blocker_movement_authorized": false,
+    "blocker_movement_registered": false,
+    "closure_registration_packet_prepared": false,
+    "empirical_validation_authorized": false,
+    "empirical_validation_claimed": false,
+    "final_source_map_closure_authorized": false,
+    "lean_theorem_debt_discharged": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "proof_debt_reduced": false,
+    "publication_authorized": false,
+    "qft_gr_seam_closed": false,
+    "qft_gr_seam_closure_authorized": false,
+    "qft_gr_seam_closure_claimed": false,
+    "qft_gr_source_map_semantic_closure_claimed": false,
+    "readiness_marking_authorized": false,
+    "release_assembly_authorized": false,
+    "release_packet_assembled": false,
+    "retained_assumptions_discharged": false,
+    "source_map_closure_achieved": false,
+    "source_map_closure_claimed": false,
+    "source_map_closure_registered": false,
+    "tranche_004_retained_blocker_discharged": false,
+    "tranche_004_status_moved": false,
+    "v01_alpha_marked_ready": false
+  },
+  "lean_theorem_debt_discharged": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "PREPARE_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_PACKET_ONLY_NO_QFT_GR_SEAM_CLOSURE_BLOCKER_MOVEMENT_OR_RELEASE_PROMOTION",
+  "non_claim_boundary": "The retained tranche 004 source-map closure adjudication result review accepts the closure authorization only for preparing a separate source-map closure-registration packet. It does not register or claim final source-map closure, close the QFT-GR seam, move tranche 004, assemble release, mark readiness, discharge theorem/proof debt or retained assumptions, authorize Phase 2, authorize empirical validation, authorize publication, promote the master action, or make an external-truth claim.",
+  "outcome_id": "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_RESULT_REVIEW_ACCEPTS_SOURCE_MAP_CLOSURE_AUTHORIZATION_AND_AUTHORIZES_CLOSURE_REGISTRATION_PREPARATION_ONLY",
+  "phase2_authorized": false,
+  "proof_debt_reduced": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_seam_closure_authorized": false,
+  "qft_gr_seam_closure_claimed": false,
+  "qft_gr_source_map_semantic_closure_claimed": false,
+  "readiness_marking_authorized": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "release_readiness_decision_status": "release_readiness_held_due_to_retained_tranche_004_source_map_blocker",
+  "release_readiness_held": true,
+  "release_readiness_proceed_authorized": false,
+  "release_readiness_still_blocked": true,
+  "required_evidence_surface_count": 6,
+  "required_evidence_surfaces": [
+    {
+      "current_packet_status": "input_consumed_only",
+      "evidence_id": "accepted_partial_candidate_input",
+      "required_evidence": "The accepted result-review packet and its exact conservative classification."
+    },
+    {
+      "current_packet_status": "required_for_future_execution",
+      "evidence_id": "component_status_matrix",
+      "required_evidence": "A per-component proved/supplied/missing/refuted status matrix."
+    },
+    {
+      "current_packet_status": "required_for_future_execution",
+      "evidence_id": "semantic_transport_link_map",
+      "required_evidence": "A link map from quantum expectation semantics to classical source admissibility."
+    },
+    {
+      "current_packet_status": "required_for_future_execution",
+      "evidence_id": "conservation_and_bianchi_compatibility_trace",
+      "required_evidence": "A trace showing conservation and Bianchi compatibility obligations are not bypassed."
+    },
+    {
+      "current_packet_status": "required_for_future_execution",
+      "evidence_id": "einstein_coupling_and_weak_curvature_trace",
+      "required_evidence": "A trace separating local coupling/source-identification candidates from closure claims."
+    },
+    {
+      "current_packet_status": "required_for_future_review",
+      "evidence_id": "result_review_and_status_movement_control",
+      "required_evidence": "A future review/control surface before execution, closure, or blocker movement can be considered."
+    }
+  ],
+  "required_future_route_for_tranche_004": "retained_tranche_004_source_map_witness_chain_or_governed_retained_blocker_continuation_required_before_release_assembly",
+  "required_proof_surface_count": 7,
+  "required_proof_surfaces": [
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemantics.lean",
+      "current_packet_status": "required_for_future_execution_not_constructed",
+      "required_future_use": "future construction must either link this candidate component into a repo-local witness chain or record the exact fail-closed reason",
+      "surface_id": "state_expectation_functional_semantics_construction_obligation"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemantics.lean",
+      "current_packet_status": "required_for_future_execution_not_constructed",
+      "required_future_use": "future construction must either link this candidate component into a repo-local witness chain or record the exact fail-closed reason",
+      "surface_id": "renormalized_expectation_value_semantics_construction_obligation"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemantics.lean",
+      "current_packet_status": "required_for_future_execution_not_constructed",
+      "required_future_use": "future construction must either link this candidate component into a repo-local witness chain or record the exact fail-closed reason",
+      "surface_id": "classical_source_admissibility_semantics_construction_obligation"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationObligationSemantics.lean",
+      "current_packet_status": "required_for_future_execution_not_constructed",
+      "required_future_use": "future construction must either link this candidate component into a repo-local witness chain or record the exact fail-closed reason",
+      "surface_id": "covariant_conservation_obligation_construction_obligation"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_BianchiCompatibilityObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_BianchiCompatibilityObligationSemantics.lean",
+      "current_packet_status": "required_for_future_execution_not_constructed",
+      "required_future_use": "future construction must either link this candidate component into a repo-local witness chain or record the exact fail-closed reason",
+      "surface_id": "bianchi_compatibility_obligation_construction_obligation"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemantics.lean",
+      "current_packet_status": "required_for_future_execution_not_constructed",
+      "required_future_use": "future construction must either link this candidate component into a repo-local witness chain or record the exact fail-closed reason",
+      "surface_id": "einstein_coupling_obligation_construction_obligation"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_WeakCurvatureSourceIdentificationObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_WeakCurvatureSourceIdentificationObligationSemantics.lean",
+      "current_packet_status": "required_for_future_execution_not_constructed",
+      "required_future_use": "future construction must either link this candidate component into a repo-local witness chain or record the exact fail-closed reason",
+      "surface_id": "weak_curvature_source_identification_construction_obligation"
+    }
+  ],
+  "result_classification_count": 1,
+  "result_review_classification": "source_map_closure_authorization_accepted_closure_registration_packet_preparation_only",
+  "retained_assumptions_discharged": false,
+  "retained_tranche_004_carry_forward": {
+    "construction_attempt_classification": "construction_attempt_failed_retained_blocker",
+    "current_blocker": "full_source_map_semantic_closure_not_authorized",
+    "declaration_classification": "retained_source_map_authorization_release_blocker_declared_after_fail_closed_attempt",
+    "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+    "dependency_class": "blocked_bridge_authorization_dependency",
+    "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+    "moved_to_documented_dependency_nonblocking": false,
+    "release_readiness_blocked_by_tranche_004": true,
+    "retained_blocker_reason": "obligation_ladder_constructed_witness_chain_absent_source_map_closure_not_authorized",
+    "source_ledger_row": {
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "dependency_class": "blocked_bridge_authorization_dependency",
+      "dependency_finding_id": "V01-ALPHA-DEP-REM-004",
+      "modified_by_tranche_003": false,
+      "remediation_execution_status": "not_executed_v0",
+      "status_carry_forward": "tracked_unmodified_not_audited_in_tranche_003"
+    },
+    "status": "retained_release_blocking_source_map_blocker",
+    "tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-004"
+  },
+  "review_id": "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_RESULT_REVIEW_v0",
+  "review_scope": "REVIEW_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_RESULT_ONLY_NO_QFT_GR_SEAM_CLOSURE_BLOCKER_MOVEMENT_OR_RELEASE_PROMOTION",
+  "reviewed_authorization_requirement_count": 7,
+  "reviewed_authorization_requirements": [
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemantics.lean",
+      "closure_adjudication_packet_preparation_authorized": true,
+      "closure_status": "not_source_map_closure_by_result_review_alone",
+      "component_id": "state_expectation_functional_semantics",
+      "execution_adjudication_status": "satisfies_source_map_authorization_requirement_pending_result_review",
+      "requirement_id": "state_expectation_functional_semantics_authorization_requirement",
+      "result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemantics.lean",
+      "closure_adjudication_packet_preparation_authorized": true,
+      "closure_status": "not_source_map_closure_by_result_review_alone",
+      "component_id": "renormalized_expectation_value_semantics",
+      "execution_adjudication_status": "satisfies_source_map_authorization_requirement_pending_result_review",
+      "requirement_id": "renormalized_expectation_value_semantics_authorization_requirement",
+      "result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemantics.lean",
+      "closure_adjudication_packet_preparation_authorized": true,
+      "closure_status": "not_source_map_closure_by_result_review_alone",
+      "component_id": "classical_source_admissibility_semantics",
+      "execution_adjudication_status": "satisfies_source_map_authorization_requirement_pending_result_review",
+      "requirement_id": "classical_source_admissibility_semantics_authorization_requirement",
+      "result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationObligationSemantics.lean",
+      "closure_adjudication_packet_preparation_authorized": true,
+      "closure_status": "not_source_map_closure_by_result_review_alone",
+      "component_id": "covariant_conservation_obligation",
+      "execution_adjudication_status": "satisfies_source_map_authorization_requirement_pending_result_review",
+      "requirement_id": "covariant_conservation_obligation_authorization_requirement",
+      "result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_BianchiCompatibilityObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_BianchiCompatibilityObligationSemantics.lean",
+      "closure_adjudication_packet_preparation_authorized": true,
+      "closure_status": "not_source_map_closure_by_result_review_alone",
+      "component_id": "bianchi_compatibility_obligation",
+      "execution_adjudication_status": "satisfies_source_map_authorization_requirement_pending_result_review",
+      "requirement_id": "bianchi_compatibility_obligation_authorization_requirement",
+      "result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemantics.lean",
+      "closure_adjudication_packet_preparation_authorized": true,
+      "closure_status": "not_source_map_closure_by_result_review_alone",
+      "component_id": "einstein_coupling_obligation",
+      "execution_adjudication_status": "satisfies_source_map_authorization_requirement_pending_result_review",
+      "requirement_id": "einstein_coupling_obligation_authorization_requirement",
+      "result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_WeakCurvatureSourceIdentificationObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_WeakCurvatureSourceIdentificationObligationSemantics.lean",
+      "closure_adjudication_packet_preparation_authorized": true,
+      "closure_status": "not_source_map_closure_by_result_review_alone",
+      "component_id": "weak_curvature_source_identification",
+      "execution_adjudication_status": "satisfies_source_map_authorization_requirement_pending_result_review",
+      "requirement_id": "weak_curvature_source_identification_authorization_requirement",
+      "result_review_status": "accepted_requirements_satisfied_for_source_map_closure_adjudication_packet_preparation_only"
+    }
+  ],
+  "reviewed_closure_requirement_count": 7,
+  "reviewed_closure_requirements": [
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemantics.lean",
+      "closure_registration_packet_preparation_authorized": true,
+      "closure_registration_status": "not_registered_by_result_review_alone",
+      "component_id": "state_expectation_functional_semantics",
+      "execution_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "requirement_id": "state_expectation_functional_semantics_authorization_requirement",
+      "result_review_status": "accepted_for_source_map_closure_registration_packet_preparation_only"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemantics.lean",
+      "closure_registration_packet_preparation_authorized": true,
+      "closure_registration_status": "not_registered_by_result_review_alone",
+      "component_id": "renormalized_expectation_value_semantics",
+      "execution_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "requirement_id": "renormalized_expectation_value_semantics_authorization_requirement",
+      "result_review_status": "accepted_for_source_map_closure_registration_packet_preparation_only"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemantics.lean",
+      "closure_registration_packet_preparation_authorized": true,
+      "closure_registration_status": "not_registered_by_result_review_alone",
+      "component_id": "classical_source_admissibility_semantics",
+      "execution_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "requirement_id": "classical_source_admissibility_semantics_authorization_requirement",
+      "result_review_status": "accepted_for_source_map_closure_registration_packet_preparation_only"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationObligationSemantics.lean",
+      "closure_registration_packet_preparation_authorized": true,
+      "closure_registration_status": "not_registered_by_result_review_alone",
+      "component_id": "covariant_conservation_obligation",
+      "execution_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "requirement_id": "covariant_conservation_obligation_authorization_requirement",
+      "result_review_status": "accepted_for_source_map_closure_registration_packet_preparation_only"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_BianchiCompatibilityObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_BianchiCompatibilityObligationSemantics.lean",
+      "closure_registration_packet_preparation_authorized": true,
+      "closure_registration_status": "not_registered_by_result_review_alone",
+      "component_id": "bianchi_compatibility_obligation",
+      "execution_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "requirement_id": "bianchi_compatibility_obligation_authorization_requirement",
+      "result_review_status": "accepted_for_source_map_closure_registration_packet_preparation_only"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemantics.lean",
+      "closure_registration_packet_preparation_authorized": true,
+      "closure_registration_status": "not_registered_by_result_review_alone",
+      "component_id": "einstein_coupling_obligation",
+      "execution_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "requirement_id": "einstein_coupling_obligation_authorization_requirement",
+      "result_review_status": "accepted_for_source_map_closure_registration_packet_preparation_only"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_WeakCurvatureSourceIdentificationObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_WeakCurvatureSourceIdentificationObligationSemantics.lean",
+      "closure_registration_packet_preparation_authorized": true,
+      "closure_registration_status": "not_registered_by_result_review_alone",
+      "component_id": "weak_curvature_source_identification",
+      "execution_adjudication_status": "satisfies_source_map_closure_requirement_pending_result_review",
+      "requirement_id": "weak_curvature_source_identification_authorization_requirement",
+      "result_review_status": "accepted_for_source_map_closure_registration_packet_preparation_only"
+    }
+  ],
+  "reviewed_witness_chain_component_count": 7,
+  "reviewed_witness_chain_components": [
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateExpectationFunctionalSemantics.lean",
+      "closure_status": "not_adjudicated_not_closure_evidence_by_review_alone",
+      "component_id": "state_expectation_functional_semantics",
+      "construction_status": "constructed_candidate_pending_result_review",
+      "review_status": "accepted_for_source_map_authorization_adjudication_input"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizedExpectationValueSemantics.lean",
+      "closure_status": "not_adjudicated_not_closure_evidence_by_review_alone",
+      "component_id": "renormalized_expectation_value_semantics",
+      "construction_status": "constructed_candidate_pending_result_review",
+      "review_status": "accepted_for_source_map_authorization_adjudication_input"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_ClassicalSourceAdmissibilitySemantics.lean",
+      "closure_status": "not_adjudicated_not_closure_evidence_by_review_alone",
+      "component_id": "classical_source_admissibility_semantics",
+      "construction_status": "constructed_candidate_pending_result_review",
+      "review_status": "accepted_for_source_map_authorization_adjudication_input"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationObligationSemantics.lean",
+      "closure_status": "not_adjudicated_not_closure_evidence_by_review_alone",
+      "component_id": "covariant_conservation_obligation",
+      "construction_status": "constructed_candidate_pending_result_review",
+      "review_status": "accepted_for_source_map_authorization_adjudication_input"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_BianchiCompatibilityObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_BianchiCompatibilityObligationSemantics.lean",
+      "closure_status": "not_adjudicated_not_closure_evidence_by_review_alone",
+      "component_id": "bianchi_compatibility_obligation",
+      "construction_status": "constructed_candidate_pending_result_review",
+      "review_status": "accepted_for_source_map_authorization_adjudication_input"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_EinsteinCouplingObligationSemantics.lean",
+      "closure_status": "not_adjudicated_not_closure_evidence_by_review_alone",
+      "component_id": "einstein_coupling_obligation",
+      "construction_status": "constructed_candidate_pending_result_review",
+      "review_status": "accepted_for_source_map_authorization_adjudication_input"
+    },
+    {
+      "candidate_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_WeakCurvatureSourceIdentificationObligationSemanticsResultReview.lean",
+      "candidate_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_WeakCurvatureSourceIdentificationObligationSemantics.lean",
+      "closure_status": "not_adjudicated_not_closure_evidence_by_review_alone",
+      "component_id": "weak_curvature_source_identification",
+      "construction_status": "constructed_candidate_pending_result_review",
+      "review_status": "accepted_for_source_map_authorization_adjudication_input"
+    }
+  ],
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_RESULT_REVIEW_20260523_v0",
+  "selected_dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+  "selected_dependency_class": "blocked_bridge_authorization_dependency",
+  "selected_next_target": "prepare_v01_alpha_retained_tranche_004_source_map_closure_registration_packet",
+  "selected_next_target_kind": "retained_tranche_004_source_map_closure_registration_packet_preparation_only",
+  "selected_remediation_finding_id": "V01-ALPHA-DEP-REM-004",
+  "selected_tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-004",
+  "selection_count": 1,
+  "source_map_authorization_adjudication_result_accepted": true,
+  "source_map_authorization_requirements_satisfied_accepted_by_review": true,
+  "source_map_closure_achieved": false,
+  "source_map_closure_adjudication_result_accepted_by_review": true,
+  "source_map_closure_adjudication_result_reviewed": true,
+  "source_map_closure_authorization_accepted_as_final_closure": false,
+  "source_map_closure_authorization_accepted_by_review": true,
+  "source_map_closure_authorization_accepted_for_registration_packet_preparation_only": true,
+  "source_map_closure_authorization_decision_accepted_by_review": true,
+  "source_map_closure_authorization_result_review_required": false,
+  "source_map_closure_authorized": false,
+  "source_map_closure_authorized_pending_result_review": true,
+  "source_map_closure_claimed": false,
+  "source_map_closure_registered": false,
+  "source_map_closure_registration_authorized": false,
+  "source_map_closure_registration_packet_preparation_authorized": true,
+  "source_map_closure_registration_packet_preparation_only": true,
+  "source_map_closure_registration_packet_prepared": false,
+  "source_map_closure_requirements_adjudicated": true,
+  "source_map_closure_result_claimed_as_final_closure": false,
+  "source_map_witness_chain_constructed": true,
+  "source_map_witness_chain_construction_accepted": true,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "tranche_001_status": "documented_dependency_nonblocking",
+  "tranche_002_status": "documented_dependency_nonblocking",
+  "tranche_003_status": "documented_dependency_nonblocking",
+  "tranche_004_moved_to_documented_dependency_nonblocking": false,
+  "tranche_004_retained_blocker_discharged": false,
+  "tranche_004_status": "retained_release_blocking_source_map_blocker",
+  "tranche_004_status_moved": false,
+  "tranche_004_status_moved_by_review": false,
+  "tranche_005_status": "documented_dependency_nonblocking",
+  "tranche_006_status": "documented_dependency_nonblocking",
+  "v01_alpha_marked_ready": false,
+  "witness_chain_constructed": true,
+  "witness_chain_construction_accepted": true
+}

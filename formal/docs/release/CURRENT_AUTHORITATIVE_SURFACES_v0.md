@@ -43,10 +43,11 @@ Current release-facing status:
 - `V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_PACKET_PREPARED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION`
 - `V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_CLOSURE_ADJUDICATION_EXECUTION_ONLY`
 - `V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_EXECUTED_WITH_NO_RELEASE_PROMOTION`
+- `V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_RESULT_REVIEW_ACCEPTS_SOURCE_MAP_CLOSURE_AUTHORIZATION_AND_AUTHORIZES_CLOSURE_REGISTRATION_PREPARATION_ONLY`
 - v0.1-alpha standard status: preparation-only full-pillar/full-seam criticizability track.
 - v0.1-alpha release gates are manifest-enrolled as governed baseline surfaces; v0.1-alpha public release is not complete.
 - v0.1-alpha enrollment result review selected historical post-enrollment target `select_next_post_v01_alpha_manifest_enrollment_bounded_attack` and recommended `prepare_v01_alpha_release_packet_gap_review` before dependency-remediation processing advanced the live target.
-- v0.1-alpha dependency remediation status: tranches 001, 002, 003, 005, and 006 are `documented_dependency_nonblocking`; tranche 004 remains `retained_release_blocking_source_map_blocker`; the simple dependency-remediation queue is exhausted; and the retained tranche 004 source-map closure adjudication packet has been prepared from the accepted source-map authorization requirements, with no source-map closure, QFT-GR seam closure, blocker movement, release readiness, release assembly, or release promotion.
+- v0.1-alpha dependency remediation status: tranches 001, 002, 003, 005, and 006 are `documented_dependency_nonblocking`; tranche 004 remains `retained_release_blocking_source_map_blocker`; the simple dependency-remediation queue is exhausted; and the retained tranche 004 source-map closure adjudication result review has accepted source-map closure authorization for closure-registration packet preparation only, with no final source-map closure, QFT-GR seam closure, blocker movement, release readiness, release assembly, or release promotion.
 - Canonical v0.1-alpha release-standard sources:
   - `formal/docs/paper/CLAIM_TAXONOMY_v1.md`
   - `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_20260513_v0.json`
@@ -78,6 +79,7 @@ Current release-facing status:
   - `formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_PACKET_20260523_v0.json`
   - `formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_PACKET_RESULT_REVIEW_20260523_v0.json`
   - `formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_20260523_v0.json`
+  - `formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_RESULT_REVIEW_20260523_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json`
@@ -88,15 +90,16 @@ Current release-facing status:
 - The retained tranche 004 source-map closure adjudication packet consumes that accepted result review, prepares only the question `Given that source-map authorization requirements were accepted, can source-map closure be adjudicated under the repo's release-control rules?`, selects `review_v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet_result`, preserves `release_readiness_held_due_to_retained_tranche_004_source_map_blocker`, preserves tranche 004 as retained/release-blocking, and does not answer the closure question, claim source-map closure, close the QFT-GR seam, move the blocker, assemble/mark release readiness, discharge theorem/proof debt, authorize Phase 2, validate empirically, authorize publication, promote the master action, or claim external truth.
 - The retained tranche 004 source-map closure adjudication packet result review consumes that packet, accepts it for bounded closure adjudication execution only, selects `execute_v01_alpha_retained_tranche_004_source_map_closure_adjudication`, preserves `release_readiness_held_due_to_retained_tranche_004_source_map_blocker`, preserves tranche 004 as retained/release-blocking, and does not answer the closure question, claim source-map closure, close the QFT-GR seam, move the blocker, assemble/mark release readiness, discharge theorem/proof debt, authorize Phase 2, validate empirically, authorize publication, promote the master action, or claim external truth.
 - The retained tranche 004 source-map closure adjudication execution consumes that packet result review, records `source_map_closure_authorized_pending_result_review`, selects `review_v01_alpha_retained_tranche_004_source_map_closure_adjudication_result`, preserves `release_readiness_held_due_to_retained_tranche_004_source_map_blocker`, preserves tranche 004 as retained/release-blocking, and does not register or claim final source-map closure, close the QFT-GR seam, move the blocker, assemble/mark release readiness, discharge theorem/proof debt, authorize Phase 2, validate empirically, authorize publication, promote the master action, or claim external truth.
+- The retained tranche 004 source-map closure adjudication result review consumes that execution artifact, accepts `source_map_closure_authorized_pending_result_review` as source-map closure authorization only for closure-registration packet preparation, selects `prepare_v01_alpha_retained_tranche_004_source_map_closure_registration_packet`, preserves `release_readiness_held_due_to_retained_tranche_004_source_map_blocker`, preserves tranche 004 as retained/release-blocking, and does not register or claim final source-map closure, close the QFT-GR seam, move the blocker, assemble/mark release readiness, discharge theorem/proof debt, authorize Phase 2, validate empirically, authorize publication, promote the master action, or claim external truth.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: review_v01_alpha_retained_tranche_004_source_map_closure_adjudication_result`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: execute_v01_alpha_retained_tranche_004_source_map_closure_adjudication`
-- `ACTIVE_LANE_v0: v01_alpha_retained_tranche_004_source_map_closure_adjudication`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_v01_alpha_retained_tranche_004_source_map_closure_registration_packet`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_v01_alpha_retained_tranche_004_source_map_closure_adjudication_result`
+- `ACTIVE_LANE_v0: v01_alpha_retained_tranche_004_source_map_closure_adjudication_result_review`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapClosureAdjudication.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_20260523_v0.json`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapClosureAdjudicationResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_RESULT_REVIEW_20260523_v0.json`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
