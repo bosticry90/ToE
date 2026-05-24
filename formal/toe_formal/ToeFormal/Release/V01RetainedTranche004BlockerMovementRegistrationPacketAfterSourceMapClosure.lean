@@ -1,0 +1,55 @@
+/-
+ToeFormal/Release/V01RetainedTranche004BlockerMovementRegistrationPacketAfterSourceMapClosure.lean
+
+Lean-side release marker for the v0.1-alpha retained tranche 004 blocker
+movement registration packet after accepted source-map closure registration.
+This marker prepares movement-registration review only. It does not move
+tranche 004, close the QFT-GR seam, or promote release.
+-/
+
+namespace ToeFormal
+namespace Release
+namespace V01RetainedTranche004BlockerMovementRegistrationPacketAfterSourceMapClosure
+
+def blockerMovementRegistrationPacketToken : String :=
+  "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_PACKET_AFTER_SOURCE_MAP_CLOSURE_v0"
+
+def blockerMovementRegistrationPacketOutcomeToken : String :=
+  "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_PACKET_AFTER_SOURCE_MAP_CLOSURE_PREPARED_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
+
+def packetClassification : String :=
+  "blocker_movement_registration_packet_prepared_after_source_map_closure_no_seam_closure_or_release_promotion"
+
+def priorTranche004Status : String :=
+  "retained_release_blocking_source_map_blocker"
+
+def proposedTranche004Status : String :=
+  "documented_source_map_closed_nonblocking"
+
+def selectedNextTarget : String :=
+  "review_v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_result"
+
+theorem v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_prepares_packet_only : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_consumes_registered_source_map_closure : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_does_not_move_tranche_004 : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_does_not_promote_release : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_does_not_discharge_debt : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_selects_result_review : True := by
+  trivial
+
+end V01RetainedTranche004BlockerMovementRegistrationPacketAfterSourceMapClosure
+end Release
+end ToeFormal
