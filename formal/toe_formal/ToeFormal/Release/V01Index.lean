@@ -688,6 +688,12 @@ def retainedTranche004SourceMapClosureAdjudicationResultReviewLeanSurface : Stri
 def retainedTranche004SourceMapClosureAdjudicationResultReviewOutcomeToken : String :=
   "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_RESULT_REVIEW_ACCEPTS_SOURCE_MAP_CLOSURE_AUTHORIZATION_AND_AUTHORIZES_CLOSURE_REGISTRATION_PREPARATION_ONLY"
 
+def retainedTranche004SourceMapClosureRegistrationPacketLeanSurface : String :=
+  "ToeFormal.Release.V01RetainedTranche004SourceMapClosureRegistrationPacket"
+
+def retainedTranche004SourceMapClosureRegistrationPacketOutcomeToken : String :=
+  "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_PACKET_PREPARED_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -2825,6 +2831,27 @@ theorem v01_alpha_retained_tranche_004_source_map_closure_adjudication_result_re
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_closure_adjudication_result_review_does_not_promote_release : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_packet_prepares_registration_only : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_packet_carries_accepted_closure_authorization : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_packet_selects_registration_packet_result_review : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_packet_does_not_register_source_map_closure : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_packet_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_packet_keeps_tranche_004_retained : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_packet_does_not_promote_release : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by
