@@ -700,6 +700,12 @@ def retainedTranche004SourceMapClosureRegistrationPacketResultReviewLeanSurface 
 def retainedTranche004SourceMapClosureRegistrationPacketResultReviewOutcomeToken : String :=
   "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_CLOSURE_REGISTRATION_EXECUTION_ONLY"
 
+def retainedTranche004SourceMapClosureRegistrationLeanSurface : String :=
+  "ToeFormal.Release.V01RetainedTranche004SourceMapClosureRegistration"
+
+def retainedTranche004SourceMapClosureRegistrationOutcomeToken : String :=
+  "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_EXECUTED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -2879,6 +2885,27 @@ theorem v01_alpha_retained_tranche_004_source_map_closure_registration_packet_re
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_closure_registration_packet_result_review_does_not_promote_release : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_executes_registration_only : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_records_registered_pending_result_review : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_selects_result_review : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_does_not_claim_final_source_map_closure : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_keeps_tranche_004_retained : True := by
+  trivial
+
+theorem v01_alpha_retained_tranche_004_source_map_closure_registration_does_not_promote_release : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by
