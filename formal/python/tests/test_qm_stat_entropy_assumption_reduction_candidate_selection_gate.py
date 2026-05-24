@@ -292,7 +292,7 @@ def test_qm_stat_entropy_assumption_reduction_candidate_selection_registry_rotat
             "review_v01_alpha_retained_tranche_004_source_map_witness_chain_construction_from_research_candidate_result",
             "prepare_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet",
             "review_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet_result",
-            "review_v01_alpha_retained_tranche_004_source_map_authorization_adjudication_result",
+            "prepare_v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
         }
         assert state["active_lane"] in {
             "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection",
@@ -305,7 +305,7 @@ def test_qm_stat_entropy_assumption_reduction_candidate_selection_registry_rotat
             "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_from_research_candidate",
             "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_result_review",
             "v01_alpha_retained_tranche_004_source_map_authorization_adjudication_packet",
-            "v01_alpha_retained_tranche_004_source_map_authorization_adjudication",
+            "v01_alpha_retained_tranche_004_source_map_authorization_adjudication_result_review",
         }
     assert PREVIOUS_LANE in state["paused_lanes"]
     assert ACTIVE_LANE in state["paused_lanes"]
