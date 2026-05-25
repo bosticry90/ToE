@@ -81,7 +81,8 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict architecture target:
-- `CURRENT_LIVE_NEXT_TARGET_v0: execute_qft_gr_stress_energy_conservation_witness_attempt`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_qft_gr_stress_energy_conservation_witness_attempt_result`
+- `PREVIOUS_QFT_GR_STRESS_ENERGY_CONSERVATION_WITNESS_ATTEMPT_TARGET_v0: execute_qft_gr_stress_energy_conservation_witness_attempt`
 - `PREVIOUS_QFT_GR_STRESS_ENERGY_CONSERVATION_WITNESS_PACKET_RESULT_REVIEW_TARGET_v0: review_qft_gr_stress_energy_conservation_witness_packet_result`
 - `PREVIOUS_QFT_GR_STRESS_ENERGY_CONSERVATION_WITNESS_PACKET_TARGET_v0: prepare_qft_gr_stress_energy_conservation_witness_packet`
 - `POST_QM_STAT_ENTROPY_SEMANTICS_GAP_BOUNDED_ATTACK_SELECTION_TARGET_v0: select_next_post_qm_stat_entropy_semantics_gap_bounded_attack`
