@@ -1103,6 +1103,9 @@ V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_TARGET = (
 V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_RESULT_REVIEW_TARGET = (
     "review_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_result"
 )
+V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_TARGET = (
+    "prepare_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout"
+)
 V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TOKEN = (
     "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_RELEASE_HOLD_AND_AUTHORIZES_RELEASE_HOLD_PACKET_PREPARATION_ONLY"
 )
@@ -1132,13 +1135,13 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "v01_alpha_dependency_remediation_closeout_after_tranche_004_movement"
+    "v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_result_review"
 )
 PREVIOUS_TARGET = (
-    V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_TARGET
+    V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_RESULT_REVIEW_TARGET
 )
 LIVE_TARGET = (
-    V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_RESULT_REVIEW_TARGET
+    V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_TARGET
 )
 LIVE_TARGET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1146,7 +1149,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Release"
-    / "V01DependencyRemediationCloseoutAfterTranche004Movement.lean"
+    / "V01DependencyRemediationCloseoutAfterTranche004MovementResultReview.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1965,7 +1968,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_v0"
+        == "v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_result_review_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2248,7 +2251,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_ACCEPTS_PARTIAL_CANDIDATE_AND_AUTHORIZES_CONSTRUCTION_PACKET_PREPARATION_ONLY"
     )
     assert current_active_workstream["output_token"] == (
-        "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARED_AFTER_TRANCHE_004_MOVEMENT_WITH_NO_RELEASE_READINESS_OR_SEAM_PROMOTION"
+        "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_ALL_TRANCHES_DOCUMENTED_NONBLOCKING_AND_AUTHORIZES_RELEASE_READINESS_ADJUDICATION_PREPARATION_ONLY"
     )
     assert current_active_workstream["source_map_closure_registration_packet_token"] == (
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_PACKET_PREPARED_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
@@ -2358,7 +2361,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "dependency_remediation_closeout_after_tranche_004_movement_result_review"
+        "release_readiness_adjudication_preparation_after_dependency_remediation_closeout"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -2378,13 +2381,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["tranche_006_status"] == "documented_dependency_nonblocking"
     assert current_active_workstream["simple_dependency_queue_exhausted"] == "yes"
     assert current_active_workstream["retained_tranche_004_release_blocker"] == (
-        "discharged_pending_dependency_remediation_closeout"
+        "discharged_after_dependency_remediation_closeout_pending_release_readiness_adjudication"
     )
     assert current_active_workstream["release_readiness_adjudication_executed"] == "yes"
     assert current_active_workstream["release_readiness_question_answered"] == "yes"
     assert current_active_workstream["release_readiness_decision_made"] == "yes"
     assert current_active_workstream["release_readiness_decision_status"] == (
-        "release_readiness_requires_dependency_remediation_closeout_result_review_and_separate_adjudication"
+        "release_readiness_adjudication_preparation_authorized_after_dependency_remediation_closeout_no_readiness_marking"
     )
     assert current_active_workstream["release_readiness_held"] == "yes"
     assert current_active_workstream["release_readiness_hold_accepted"] == "yes"
@@ -2412,7 +2415,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["success_conditions_defined"] == "yes"
     assert current_active_workstream["current_packet_lane"] == "release_control_plane"
     assert current_active_workstream["substantive_future_work_lane"] == (
-        "bounded_dependency_remediation_closeout_after_tranche_004_movement_result_review"
+        "bounded_release_readiness_adjudication_preparation_after_dependency_remediation_closeout"
     )
     assert current_active_workstream["source_map_witness_chain_research_packet_prepared"] == "yes"
     assert current_active_workstream["research_packet_prepared_only"] == "yes"
@@ -2463,7 +2466,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "partial_witness_chain_candidate_accepted_for_construction_packet_preparation_only"
     )
     assert current_active_workstream["result_review_classification"] == (
-        "source_map_closure_authorization_accepted_closure_registration_packet_preparation_only"
+        "dependency_remediation_closeout_accepted_all_tranches_documented_nonblocking_release_readiness_adjudication_preparation_only"
     )
     assert current_active_workstream["consumed_construction_result_review_classification"] == (
         "witness_chain_construction_accepted_source_map_authorization_adjudication_packet_preparation_only"
@@ -3148,9 +3151,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["dependency_remediation_closeout_preparation_authorized"] == "yes"
     assert current_active_workstream["dependency_remediation_closeout_prepared"] == "yes"
     assert current_active_workstream["dependency_remediation_closeout_packet_prepared"] == "yes"
-    assert current_active_workstream["dependency_remediation_closeout_result_review_required"] == "yes"
+    assert current_active_workstream["dependency_remediation_closeout_result_review_required"] == "no"
     assert current_active_workstream["dependency_remediation_closeout_status"] == (
-        "dependency_remediation_closeout_prepared_pending_result_review"
+        "dependency_remediation_closeout_accepted_all_tranches_documented_nonblocking"
     )
     assert current_active_workstream["dependency_remediation_closeout_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
@@ -3165,6 +3168,32 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["dependency_remediation_closeout_classification"] == (
         "dependency_remediation_closeout_prepared_all_tranches_documented_nonblocking_no_release_readiness_or_seam_promotion"
+    )
+    assert current_active_workstream["dependency_remediation_closeout_result_review_surface"] == (
+        "formal/toe_formal/ToeFormal/Release/"
+        "V01DependencyRemediationCloseoutAfterTranche004MovementResultReview.lean"
+    )
+    assert current_active_workstream["dependency_remediation_closeout_result_review_report"] == (
+        "formal/docs/release/"
+        "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_RESULT_REVIEW_20260523_v0.json"
+    )
+    assert current_active_workstream["dependency_remediation_closeout_result_review_token"] == (
+        "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_ALL_TRANCHES_DOCUMENTED_NONBLOCKING_AND_AUTHORIZES_RELEASE_READINESS_ADJUDICATION_PREPARATION_ONLY"
+    )
+    assert current_active_workstream["dependency_remediation_closeout_result_review_classification"] == (
+        "dependency_remediation_closeout_accepted_all_tranches_documented_nonblocking_release_readiness_adjudication_preparation_only"
+    )
+    assert current_active_workstream["dependency_remediation_closeout_result_reviewed"] == "yes"
+    assert current_active_workstream["dependency_remediation_closeout_result_accepted"] == "yes"
+    assert current_active_workstream["dependency_remediation_closeout_accepted"] == "yes"
+    assert current_active_workstream["dependency_remediation_queue_closed"] == "yes"
+    assert current_active_workstream["release_readiness_adjudication_preparation_authorized"] == "yes"
+    assert current_active_workstream["release_readiness_adjudication_prepared"] == "no"
+    assert current_active_workstream["release_readiness_eligible_for_adjudication"] == "yes"
+    assert current_active_workstream["release_readiness_still_requires_separate_adjudication"] == "yes"
+    assert current_active_workstream["next_action_scope"] == (
+        "PREPARE_V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_"
+        "REMEDIATION_CLOSEOUT_ONLY_NO_RELEASE_ASSEMBLY_OR_READINESS_MARKING"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
     assert current_active_workstream["closeout_criteria_count"] == "4"

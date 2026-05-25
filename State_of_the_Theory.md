@@ -22,7 +22,7 @@ Current release-facing status (2026-05-13):
 - `TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_REVIEW_CONSUMED_PRE_MANIFEST`: focused pre-manifest foundation review consumed the prepared artifacts.
 - `TOE_V01_ALPHA_RELEASE_GATE_ENROLLED`: v0.1-alpha release-standard gates are manifest-enrolled as governed baseline surfaces; v0.1-alpha public release is still not complete.
 - `TOE_V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_CONSUMED`: enrollment result review remains the governed baseline predecessor for the later dependency-remediation lane; it selected the historical post-enrollment target `select_next_post_v01_alpha_manifest_enrollment_bounded_attack` and recommended `prepare_v01_alpha_release_packet_gap_review`.
-- Current dependency-remediation posture: tranches 001, 002, 003, 005, and 006 are `documented_dependency_nonblocking`; tranche 004 blocker movement has been result-reviewed and accepted as `documented_source_map_closed_nonblocking`; the simple dependency-remediation queue is exhausted; the dependency-remediation closeout packet after tranche 004 movement is prepared for result review only, with no QFT-GR seam closure, release readiness/assembly, or release promotion; and the live target is `review_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_result`.
+- Current dependency-remediation posture: tranches 001, 002, 003, 005, and 006 are `documented_dependency_nonblocking`; tranche 004 blocker movement has been result-reviewed and accepted as `documented_source_map_closed_nonblocking`; the simple dependency-remediation queue is exhausted; the dependency-remediation closeout result review accepted all six tranches as documented nonblocking for release-readiness adjudication preparation only, with no QFT-GR seam closure, release readiness marking/assembly, or release promotion; and the live target is `prepare_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout`.
 - Nonclaim boundary: no master-action promotion, no pillar completion, no seam closure, no Phase 2 readiness, no empirical adequacy, no canonical ToE status, and no QFT-GR source-map closure.
 
 Strict scalar/QFT current-state synchronization checkpoint (2026-05-02):
@@ -206,7 +206,7 @@ Strict scalar/QFT current-state synchronization checkpoint (2026-05-02):
 - `QFT_GR_STRESS_ENERGY_SOURCE_MAP_BOUNDARY_v0: no_qft_gr_seam_closure_no_semiclassical_gravity_claim_no_einstein_equation_derivation_claim_no_master_action_promotion_no_empirical_claim`
 - `SCALAR_QFT_PHASE0_5_OBJECTIVE_QUALITY_COMPLETION_STATUS_v0: NO_FULL_PLAN_COMPLETION_CLAIM_PHASE0_COMPLETE_PHASE1_ADVANCED_PARTIAL_PHASE2_OPEN_PHASE2B_OPEN_PHASE3_PARTIAL_PHASE4_PARTIAL_PHASE5_OPEN`
 - `SCALAR_QFT_PHASE0_5_DECISIVE_OPEN_ITEMS_v0: A1A_A2A15A1_GRAPH_CHANNEL_SEMANTIC_CLOSURE_OPEN_PHASE2_UNAUTHORIZED_PHASE2B_TERM_LEVEL_NEUTRALIZATION_OPEN`
-- `CURRENT_LIVE_NEXT_TARGET_v0: review_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_result`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout`
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_v0: formal/toe_formal/ToeFormal/Derivation/AxiomLedgerAuditRefreshAfterSampleRep32.lean`
 - `AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_REPORT_v0: formal/docs/release/AXIOM_LEDGER_AUDIT_REFRESH_AFTER_SAMPLEREP32_20260505_v0.json`
 - `AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS_v0: AXIOM_LEDGER_AUDIT_REFRESH_CONFIRMED_59_REAL_AXIOMS`

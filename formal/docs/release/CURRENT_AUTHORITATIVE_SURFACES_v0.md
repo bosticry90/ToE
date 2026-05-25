@@ -53,10 +53,11 @@ Current release-facing status:
 - `V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTERED_AFTER_SOURCE_MAP_CLOSURE_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION`
 - `V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_ACCEPTS_DOCUMENTED_SOURCE_MAP_CLOSED_NONBLOCKING_STATUS_AND_AUTHORIZES_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARATION_ONLY`
 - `V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARED_AFTER_TRANCHE_004_MOVEMENT_WITH_NO_RELEASE_READINESS_OR_SEAM_PROMOTION`
+- `V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_ALL_TRANCHES_DOCUMENTED_NONBLOCKING_AND_AUTHORIZES_RELEASE_READINESS_ADJUDICATION_PREPARATION_ONLY`
 - v0.1-alpha standard status: preparation-only full-pillar/full-seam criticizability track.
 - v0.1-alpha release gates are manifest-enrolled as governed baseline surfaces; v0.1-alpha public release is not complete.
 - v0.1-alpha enrollment result review selected historical post-enrollment target `select_next_post_v01_alpha_manifest_enrollment_bounded_attack` and recommended `prepare_v01_alpha_release_packet_gap_review` before dependency-remediation processing advanced the live target.
-- v0.1-alpha dependency remediation status: tranches 001, 002, 003, 005, and 006 are `documented_dependency_nonblocking`; tranche 004 blocker movement is result-reviewed and accepted as `documented_source_map_closed_nonblocking`; the simple dependency-remediation queue is exhausted; and the dependency-remediation closeout packet after tranche 004 movement records `dependency_remediation_closeout_prepared_all_tranches_documented_nonblocking_no_release_readiness_or_seam_promotion`, with no QFT-GR seam closure, release readiness, release assembly, or release promotion.
+- v0.1-alpha dependency remediation status: tranches 001, 002, 003, 005, and 006 are `documented_dependency_nonblocking`; tranche 004 blocker movement is result-reviewed and accepted as `documented_source_map_closed_nonblocking`; the simple dependency-remediation queue is exhausted; and the dependency-remediation closeout result review records `dependency_remediation_closeout_accepted_all_tranches_documented_nonblocking_release_readiness_adjudication_preparation_only`, authorizing release-readiness adjudication preparation only, with no QFT-GR seam closure, release readiness marking, release assembly, or release promotion.
 - Canonical v0.1-alpha release-standard sources:
   - `formal/docs/paper/CLAIM_TAXONOMY_v1.md`
   - `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_20260513_v0.json`
@@ -98,6 +99,7 @@ Current release-facing status:
   - `formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_AFTER_SOURCE_MAP_CLOSURE_20260523_v0.json`
   - `formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_AFTER_SOURCE_MAP_CLOSURE_RESULT_REVIEW_20260523_v0.json`
   - `formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_20260523_v0.json`
+  - `formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_RESULT_REVIEW_20260523_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json`
@@ -118,15 +120,16 @@ Current release-facing status:
 - The retained tranche 004 blocker-movement registration after source-map closure consumes that packet result review, records `V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTERED_AFTER_SOURCE_MAP_CLOSURE_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION` and `tranche_004_blocker_movement_registered_as_documented_source_map_closed_nonblocking_pending_result_review`, selects `review_v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure_result`, preserves accepted source-map closure registration evidence, and does not close the QFT-GR seam, assemble/mark release readiness, discharge theorem/proof debt, authorize Phase 2, validate empirically, authorize publication, promote the master action, or claim external truth.
 - The retained tranche 004 blocker-movement registration result review after source-map closure consumes that execution artifact, records `V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_ACCEPTS_DOCUMENTED_SOURCE_MAP_CLOSED_NONBLOCKING_STATUS_AND_AUTHORIZES_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARATION_ONLY` and `documented_source_map_closed_nonblocking_status_accepted_dependency_remediation_closeout_preparation_only`, accepts tranche 004 as `documented_source_map_closed_nonblocking`, selects `prepare_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement`, preserves accepted source-map closure registration evidence, and does not close the QFT-GR seam, assemble/mark release readiness, discharge theorem/proof debt, authorize Phase 2, validate empirically, authorize publication, promote the master action, or claim external truth.
 - The dependency-remediation closeout packet after tranche 004 movement consumes that result review, records `V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARED_AFTER_TRANCHE_004_MOVEMENT_WITH_NO_RELEASE_READINESS_OR_SEAM_PROMOTION` and `dependency_remediation_closeout_prepared_all_tranches_documented_nonblocking_no_release_readiness_or_seam_promotion`, confirms all six dependency-remediation tranches are nonblocking at the control layer, selects `review_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_result`, and does not close the QFT-GR seam, assemble/mark release readiness, discharge theorem/proof debt, authorize Phase 2, validate empirically, authorize publication, promote the master action, or claim external truth.
+- The dependency-remediation closeout result review after tranche 004 movement consumes that closeout packet, records `V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_ALL_TRANCHES_DOCUMENTED_NONBLOCKING_AND_AUTHORIZES_RELEASE_READINESS_ADJUDICATION_PREPARATION_ONLY` and `dependency_remediation_closeout_accepted_all_tranches_documented_nonblocking_release_readiness_adjudication_preparation_only`, accepts all six dependency-remediation tranches as documented nonblocking at the control layer, selects `prepare_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout`, and does not close the QFT-GR seam, assemble/mark release readiness, discharge theorem/proof debt, authorize Phase 2, validate empirically, authorize publication, promote the master action, or claim external truth.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: review_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_result`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement`
-- `ACTIVE_LANE_v0: v01_alpha_dependency_remediation_closeout_after_tranche_004_movement`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_result`
+- `ACTIVE_LANE_v0: v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_result_review`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Release/V01DependencyRemediationCloseoutAfterTranche004Movement.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_20260523_v0.json`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Release/V01DependencyRemediationCloseoutAfterTranche004MovementResultReview.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_RESULT_REVIEW_20260523_v0.json`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
