@@ -1094,6 +1094,9 @@ V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_PACKET_AFTER_SOURCE
 V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_AFTER_SOURCE_MAP_CLOSURE_EXECUTION_TARGET = (
     "execute_v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure"
 )
+V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_AFTER_SOURCE_MAP_CLOSURE_RESULT_REVIEW_TARGET = (
+    "review_v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure_result"
+)
 V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TOKEN = (
     "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_RELEASE_HOLD_AND_AUTHORIZES_RELEASE_HOLD_PACKET_PREPARATION_ONLY"
 )
@@ -1123,13 +1126,13 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_result_review"
+    "v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure"
 )
 PREVIOUS_TARGET = (
-    V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_PACKET_AFTER_SOURCE_MAP_CLOSURE_RESULT_REVIEW_TARGET
+    V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_AFTER_SOURCE_MAP_CLOSURE_EXECUTION_TARGET
 )
 LIVE_TARGET = (
-    V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_AFTER_SOURCE_MAP_CLOSURE_EXECUTION_TARGET
+    V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_AFTER_SOURCE_MAP_CLOSURE_RESULT_REVIEW_TARGET
 )
 LIVE_TARGET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1137,7 +1140,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Release"
-    / "V01RetainedTranche004BlockerMovementRegistrationPacketAfterSourceMapClosureResultReview.lean"
+    / "V01RetainedTranche004BlockerMovementRegistrationAfterSourceMapClosure.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1956,7 +1959,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "v01_alpha_retained_tranche_004_blocker_movement_registration_packet_after_source_map_closure_result_review_v0"
+        == "v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2239,7 +2242,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_ACCEPTS_PARTIAL_CANDIDATE_AND_AUTHORIZES_CONSTRUCTION_PACKET_PREPARATION_ONLY"
     )
     assert current_active_workstream["output_token"] == (
-        "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BLOCKER_MOVEMENT_EXECUTION_ONLY"
+        "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTERED_AFTER_SOURCE_MAP_CLOSURE_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
     )
     assert current_active_workstream["source_map_closure_registration_packet_token"] == (
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_PACKET_PREPARED_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
@@ -2349,7 +2352,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "tranche_004_blocker_movement_registration_execution_after_source_map_closure"
+        "tranche_004_blocker_movement_registration_result_review_after_source_map_closure"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -2363,12 +2366,14 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["tranche_002_status"] == "documented_dependency_nonblocking"
     assert current_active_workstream["tranche_003_status"] == "documented_dependency_nonblocking"
     assert current_active_workstream["tranche_004_status"] == (
-        "retained_release_blocking_source_map_blocker"
+        "documented_source_map_closed_nonblocking_pending_result_review"
     )
     assert current_active_workstream["tranche_005_status"] == "documented_dependency_nonblocking"
     assert current_active_workstream["tranche_006_status"] == "documented_dependency_nonblocking"
     assert current_active_workstream["simple_dependency_queue_exhausted"] == "yes"
-    assert current_active_workstream["retained_tranche_004_release_blocker"] == "yes"
+    assert current_active_workstream["retained_tranche_004_release_blocker"] == (
+        "pending_result_review"
+    )
     assert current_active_workstream["release_readiness_adjudication_executed"] == "yes"
     assert current_active_workstream["release_readiness_question_answered"] == "yes"
     assert current_active_workstream["release_readiness_decision_made"] == "yes"
@@ -2401,7 +2406,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["success_conditions_defined"] == "yes"
     assert current_active_workstream["current_packet_lane"] == "release_control_plane"
     assert current_active_workstream["substantive_future_work_lane"] == (
-        "bounded_tranche_004_blocker_movement_registration_execution_after_source_map_closure"
+        "bounded_tranche_004_blocker_movement_registration_result_review_after_source_map_closure"
     )
     assert current_active_workstream["source_map_witness_chain_research_packet_prepared"] == "yes"
     assert current_active_workstream["research_packet_prepared_only"] == "yes"
@@ -2757,7 +2762,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "retained_tranche_004_source_map_witness_chain_or_governed_retained_blocker_"
         "continuation_required_before_release_assembly"
     )
-    assert current_active_workstream["tranche_004_status_moved"] == "no"
+    assert current_active_workstream["tranche_004_status_moved"] == "yes"
     assert current_active_workstream["tranche_004_retained_blocker_discharged"] == "no"
     assert current_active_workstream["source_map_closure_achieved"] == "yes"
     assert current_active_workstream["source_map_closure_requirements_adjudicated"] == "yes"
@@ -3065,25 +3070,50 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         current_active_workstream[
             "tranche_004_moved_to_documented_source_map_closed_nonblocking"
         ]
-        == "no"
+        == "yes"
     )
     assert (
         current_active_workstream[
             "post_blocker_movement_registration_packet_result_review_target"
         ]
-        == PREVIOUS_TARGET
+        == V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_PACKET_AFTER_SOURCE_MAP_CLOSURE_RESULT_REVIEW_TARGET
     )
     assert (
         current_active_workstream["blocker_movement_registration_execution_target"]
+        == PREVIOUS_TARGET
+    )
+    assert current_active_workstream["blocker_movement_registration_report"] == (
+        "formal/docs/release/"
+        "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_AFTER_SOURCE_MAP_CLOSURE_20260523_v0.json"
+    )
+    assert current_active_workstream["blocker_movement_registration_surface"] == (
+        "formal/toe_formal/ToeFormal/Release/"
+        "V01RetainedTranche004BlockerMovementRegistrationAfterSourceMapClosure.lean"
+    )
+    assert current_active_workstream["blocker_movement_registration_token"] == (
+        "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTERED_AFTER_SOURCE_MAP_CLOSURE_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
+    )
+    assert (
+        current_active_workstream["blocker_movement_registration_result_classification"]
+        == "tranche_004_blocker_movement_registered_as_documented_source_map_closed_nonblocking_pending_result_review"
+    )
+    assert current_active_workstream["blocker_movement_registration_status"] == (
+        "documented_source_map_closed_nonblocking_pending_result_review"
+    )
+    assert current_active_workstream["blocker_movement_registration_executed"] == "yes"
+    assert current_active_workstream["blocker_movement_registered"] == "yes"
+    assert (
+        current_active_workstream["blocker_movement_registration_result_review_target"]
         == LIVE_TARGET
     )
     assert current_active_workstream["movement_registration_criteria_count"] == "4"
     assert current_active_workstream["evidence_chain_count"] == "9"
+    assert current_active_workstream["blocker_movement_registration_step_count"] == "5"
     assert current_active_workstream["release_readiness_still_blocked"] == "yes"
     assert current_active_workstream["qft_gr_seam_closed"] == "no"
     assert current_active_workstream["qft_gr_seam_closure_authorized"] == "no"
     assert current_active_workstream["qft_gr_seam_closure_claimed"] == "no"
-    assert current_active_workstream["tranche_004_status_moved_by_execution"] == "no"
+    assert current_active_workstream["tranche_004_status_moved_by_execution"] == "yes"
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
     assert current_active_workstream["release_packet_assembled"] == "no"
     assert current_active_workstream["public_release_completion_authorized"] == "no"
