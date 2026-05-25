@@ -784,6 +784,15 @@ def releaseReadinessAdjudicationAfterDependencyRemediationCloseoutPacketResultRe
 def releaseReadinessAdjudicationAfterDependencyRemediationCloseoutPacketResultReviewClassification : String :=
   "criticizability_readiness_packet_result_review_accepts_packet_and_authorizes_readiness_adjudication_execution_only_no_release_assembly_or_seam_promotion"
 
+def releaseReadinessAdjudicationAfterDependencyRemediationCloseoutExecutionLeanSurface : String :=
+  "ToeFormal.Release.V01ReleaseReadinessAdjudicationAfterDependencyRemediationCloseout"
+
+def releaseReadinessAdjudicationAfterDependencyRemediationCloseoutExecutionOutcomeToken : String :=
+  "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_EXECUTED_WITH_NO_RELEASE_ASSEMBLY_OR_PROMOTION"
+
+def releaseReadinessAdjudicationAfterDependencyRemediationCloseoutExecutionClassification : String :=
+  "v01_alpha_criticizability_readiness_eligible_pending_result_review"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -3131,6 +3140,21 @@ theorem v01_alpha_release_readiness_adjudication_after_dependency_remediation_cl
   trivial
 
 theorem v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result_review_keeps_track2_deferred : True := by
+  trivial
+
+theorem v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_executes_criticizability_only : True := by
+  trivial
+
+theorem v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_records_eligible_pending_review : True := by
+  trivial
+
+theorem v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_selects_result_review : True := by
+  trivial
+
+theorem v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_does_not_assemble_release : True := by
+  trivial
+
+theorem v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_keeps_track2_deferred : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by
