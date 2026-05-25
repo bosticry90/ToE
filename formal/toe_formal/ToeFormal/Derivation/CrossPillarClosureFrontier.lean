@@ -16,6 +16,7 @@ Historical QFT-GR frontier checkpoints retained for substring gates:
 - derive_or_refute_qft_gr_stress_energy_operator_domain_semantics
 - review_qft_gr_stress_energy_operator_domain_semantics_result
 - prepare_full_pillar_target_map_rebase
+- review_qft_gr_conserved_renormalized_stress_energy_source_witness_packet_result
 - QFT-GR state expectation-functional result review completed
 - renormalized-expectation preparation pending
 
@@ -170,13 +171,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR conserved renormalized stress-energy source witness packet result review accepted the packet and authorized a bounded witness attempt only, with no witness construction, Einstein-equation derivation, empirical validation, or QFT-GR seam closure"
+        "QFT-GR conserved renormalized stress-energy source witness attempt executed and identified an obstruction requiring refinement, with no witness construction, Einstein-equation derivation, empirical validation, or QFT-GR seam closure"
       retained_blocker :=
-        "PHASE1-BLOCKER-QFTGR-CONSERVED-RENORMALIZED-SOURCE-WITNESS-ATTEMPT-AUTHORIZED-PENDING-EXECUTION"
+        "PHASE1-BLOCKER-QFTGR-CONSERVED-RENORMALIZED-SOURCE-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "execute_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt"
+        "review_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -198,13 +199,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR witness packet result review accepted the packet and authorized only the bounded witness attempt, with no release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
+        "QFT-GR witness attempt executed with obstruction identified and result review pending, with no release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
-        "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-AUTHORIZED-SEAM-HELD"
+        "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "execute_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt"
+        "review_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt_result"
       status := .retained }
   ]
 
@@ -222,13 +223,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR witness packet result review. -/
+/-- Previous live target consumed by the QFT-GR witness attempt execution. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_conserved_renormalized_stress_energy_source_witness_packet_result"
-
-/-- Current live target after QFT-GR witness packet result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "execute_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt"
+
+/-- Current live target after QFT-GR witness attempt execution. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -241,7 +242,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "execute_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt"
+        "review_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

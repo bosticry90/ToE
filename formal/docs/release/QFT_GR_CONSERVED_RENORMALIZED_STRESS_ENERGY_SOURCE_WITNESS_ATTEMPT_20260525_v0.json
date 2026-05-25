@@ -1,0 +1,105 @@
+{
+  "acceptance_criteria": {
+    "bounded_attempt_authorized": true,
+    "bounded_question_preserved": true,
+    "consumes_expected_result_review": true,
+    "exactly_one_classification_selected": true,
+    "exactly_one_next_target_selected": true,
+    "obstruction_distinguished_from_construction_and_inconclusive": true,
+    "review_classification_expected": true,
+    "review_outcome_expected": true,
+    "review_schema_expected": true,
+    "review_selected_this_execution": true
+  },
+  "accepted": true,
+  "attempt_id": "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_ATTEMPT_v0",
+  "attempt_scope": "EXECUTE_BOUNDED_QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_ATTEMPT_ONLY",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The bounded attempt result must be reviewed before any refinement or assumption-reduction route.",
+      "target": "review_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Refinement routing requires the attempt result review.",
+      "target": "prepare_qft_gr_conserved_renormalized_source_obstruction_refinement_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Assumption reduction requires the attempt result review.",
+      "target": "prepare_qft_gr_conserved_renormalized_source_assumption_reduction_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "An obstruction result does not close the QFT-GR seam.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Public submission is not authorized by this bounded attempt.",
+      "target": "authorize_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-05-22T00:00:00Z",
+  "classification_options": [
+    "qft_gr_conserved_renormalized_source_witness_constructed_pending_result_review",
+    "qft_gr_conserved_renormalized_source_witness_obstruction_identified_requires_refinement",
+    "qft_gr_conserved_renormalized_source_witness_inconclusive_requires_assumption_reduction"
+  ],
+  "classification_rows": [
+    {
+      "classification": "qft_gr_conserved_renormalized_source_witness_constructed_pending_result_review",
+      "meaning": "All bounded witness obligations are constructed pending review.",
+      "selected": false
+    },
+    {
+      "classification": "qft_gr_conserved_renormalized_source_witness_obstruction_identified_requires_refinement",
+      "meaning": "The attempt identifies missing/refined obligations before a witness can be claimed.",
+      "selected": true
+    },
+    {
+      "classification": "qft_gr_conserved_renormalized_source_witness_inconclusive_requires_assumption_reduction",
+      "meaning": "The attempt cannot decide without reducing assumptions.",
+      "selected": false
+    }
+  ],
+  "conserved_renormalized_stress_energy_source_exists_claimed": false,
+  "constructed_witness_result": false,
+  "consumed_result_review_classification": "qft_gr_conserved_renormalized_source_witness_packet_result_review_accepts_packet_and_authorizes_bounded_witness_attempt_only_no_closure_or_empirical_validation",
+  "consumed_result_review_outcome_id": "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_PACKET_RESULT_REVIEW_ACCEPTS_WITNESS_PACKET_AND_AUTHORIZES_BOUNDED_WITNESS_ATTEMPT_ONLY",
+  "consumes_qft_gr_conserved_renormalized_stress_energy_source_witness_packet_result_review": "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_PACKET_RESULT_REVIEW_v0",
+  "consumes_qft_gr_conserved_renormalized_stress_energy_source_witness_packet_result_review_pointer": "formal/docs/release/QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_PACKET_RESULT_REVIEW_20260525_v0.json",
+  "empirical_validation_claimed": false,
+  "executed": true,
+  "inconclusive_result": false,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_ATTEMPT_RESULT_ONLY_NO_CLOSURE_OR_EMPIRICAL_VALIDATION",
+  "non_claim_boundary": "This execution identifies an obstruction in the bounded witness attempt. It does not construct a conserved renormalized stress-energy source, derive the semiclassical Einstein equation, close the QFT-GR seam, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "obstruction_findings": [
+    "No repo-local object is constructed that simultaneously supplies finiteness, meaningfulness, covariant conservation, Bianchi compatibility, and classical GR source admissibility for <T_mu_nu>_ren.",
+    "The existing surfaces state prerequisite semantics and obligations, but they do not discharge the combined conserved renormalized source witness.",
+    "Einstein coupling and weak-curvature or Poisson recovery remain boundary checks, not derived semiclassical Einstein equation evidence."
+  ],
+  "obstruction_identified_result": true,
+  "outcome_id": "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_ATTEMPT_EXECUTED_WITH_NO_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION",
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "result_classification": "qft_gr_conserved_renormalized_source_witness_obstruction_identified_requires_refinement",
+  "result_classification_count": 1,
+  "schema_id": "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_ATTEMPT_20260525_v0",
+  "scientific_question": "Can the repo construct or refute a bounded witness that a renormalized QFT stress-energy expectation is finite, meaningful, conserved, Bianchi-compatible, and admissible as a GR source?",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "review_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt_result",
+  "selected_next_target_kind": "qft_gr_conserved_renormalized_source_witness_attempt_result_review",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "witness_attempt_executed": true,
+  "witness_constructed": false
+}
