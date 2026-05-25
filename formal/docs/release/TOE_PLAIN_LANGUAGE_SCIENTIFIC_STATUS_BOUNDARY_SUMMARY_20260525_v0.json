@@ -1,0 +1,65 @@
+{
+  "schema_id": "TOE_PLAIN_LANGUAGE_SCIENTIFIC_STATUS_BOUNDARY_SUMMARY_20260525_v0",
+  "schema_version": 0,
+  "packet_id": "TOE_PLAIN_LANGUAGE_SCIENTIFIC_STATUS_BOUNDARY_SUMMARY_v0",
+  "prepared_target": "prepare_toe_plain_language_scientific_status_boundary_summary_v0",
+  "classification": "P-POLICY/nonclaim/public-explanation",
+  "artifact_path": "formal/docs/release/TOE_PLAIN_LANGUAGE_SCIENTIFIC_STATUS_BOUNDARY_SUMMARY_v0.md",
+  "purpose": "Preserve a public-facing nonclaim explanation separating known physics, formal/governance novelty, release posture, and unresolved scientific closure.",
+  "audited_checkpoint": {
+    "commit": "930e9b14",
+    "commit_subject": "Review dependency remediation closeout after tranche 004 movement",
+    "status_is_time_indexed": true,
+    "live_target_at_checkpoint": "prepare_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout"
+  },
+  "current_status_reuse_policy": {
+    "not_live_control_plane": true,
+    "does_not_change_current_live_target": true,
+    "newer_status_must_be_read_from_current_authoritative_surfaces": true,
+    "required_current_surfaces": [
+      "formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md",
+      "formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
+      "README.md",
+      "State_of_the_Theory.md",
+      "latest release JSON result reviews"
+    ]
+  },
+  "public_claim_boundary": {
+    "completed_toe_claimed": false,
+    "new_confirmed_physics_claimed": false,
+    "empirical_validation_claimed": false,
+    "qft_gr_seam_closure_claimed": false,
+    "pillar_completion_claimed": false,
+    "release_readiness_marked": false,
+    "release_assembly_authorized": false,
+    "theorem_or_proof_debt_discharged": false,
+    "phase2_authorized": false,
+    "publication_authorized": false,
+    "master_action_promoted": false,
+    "canonical_toe_status_claimed": false,
+    "external_truth_claimed": false
+  },
+  "positive_claims_allowed": {
+    "known_physics_organization": true,
+    "formal_governance_framework": true,
+    "meaning_preserving_bridge_discipline": true,
+    "false_closure_prevention": true,
+    "architectural_or_methodological_novelty": true,
+    "confirmed_physics_novelty": false
+  },
+  "required_plain_language_phrases": [
+    "The project has not proven a completed Theory of Everything, and the repo's own controls prevent that interpretation.",
+    "The project has not discovered or confirmed new physics yet.",
+    "The novel part is architectural, not yet physical.",
+    "QFT-GR seam closure is not claimed."
+  ],
+  "gate_requirements": [
+    "no claim of completed ToE",
+    "no claim of new confirmed physics",
+    "no claim of empirical validation",
+    "no claim of QFT-GR seam closure unless current authoritative surfaces support it",
+    "no master-action promotion",
+    "live-status wording is time-indexed or points to current authoritative surfaces"
+  ],
+  "validation_gate": "formal/python/tests/test_toe_plain_language_scientific_status_boundary_summary_gate.py"
+}
