@@ -1,0 +1,156 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "accepted_obstruction_preserved": true,
+    "candidate_menu_preserved": true,
+    "consumes_expected_result_review": true,
+    "exactly_one_next_target_selected": true,
+    "exactly_one_primary_obstruction_selected": true,
+    "result_review_classification_expected": true,
+    "result_review_outcome_expected": true,
+    "result_review_schema_expected": true,
+    "result_review_selected_this_packet": true,
+    "row_structure_complete": true
+  },
+  "accepted": true,
+  "accepted_obstruction_classification": "qft_gr_stress_energy_conservation_obstruction_identified_requires_refinement",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The primary blocker is the missing covariant conservation statement witness.",
+      "target": "prepare_qft_gr_covariant_conservation_statement_witness_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Domain conservation may be needed after the conservation statement packet.",
+      "target": "prepare_qft_gr_renormalized_expectation_domain_conservation_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Assumption reduction is not selected before the statement witness packet.",
+      "target": "prepare_qft_gr_stress_energy_conservation_assumption_reduction_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Refinement packet preparation does not close QFT-GR.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Public submission is not authorized by this packet.",
+      "target": "authorize_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-05-25T00:00:00Z",
+  "conservation_witness_constructed": false,
+  "consumes_qft_gr_stress_energy_conservation_witness_attempt_result_review": "QFT_GR_STRESS_ENERGY_CONSERVATION_WITNESS_ATTEMPT_RESULT_REVIEW_v0",
+  "consumes_qft_gr_stress_energy_conservation_witness_attempt_result_review_pointer": "formal/docs/release/QFT_GR_STRESS_ENERGY_CONSERVATION_WITNESS_ATTEMPT_RESULT_REVIEW_20260525_v0.json",
+  "empirical_validation_claimed": false,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "missing_condition_menu": [
+    "missing_covariant_conservation_statement",
+    "weak_vs_strong_conservation_ambiguity",
+    "renormalized_expectation_not_yet_well_defined_enough",
+    "state_domain_limitation",
+    "Bianchi_compatibility_not_derivable_from_current_assumptions",
+    "classical_source_admissibility_still_conditional"
+  ],
+  "next_action_scope": "PREPARE_QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_PACKET_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This packet refines the accepted conservation obstruction by selecting the missing covariant conservation statement as the primary blocker. It does not solve the obstruction, construct a conservation witness, claim Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "outcome_id": "QFT_GR_STRESS_ENERGY_CONSERVATION_OBSTRUCTION_REFINEMENT_PACKET_PREPARED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION",
+  "packet_classification": "qft_gr_stress_energy_conservation_obstruction_refinement_packet_prepared_primary_missing_covariant_conservation_statement_no_closure_or_empirical_validation",
+  "packet_classification_count": 1,
+  "packet_id": "QFT_GR_STRESS_ENERGY_CONSERVATION_OBSTRUCTION_REFINEMENT_PACKET_v0",
+  "prepared": true,
+  "primary_missing_condition": "missing_covariant_conservation_statement",
+  "primary_obstruction_id": "qft_gr_stress_energy_conservation_missing_covariant_conservation_statement_v0",
+  "primary_obstruction_solved": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "refinement_rows": [
+    {
+      "available_repo_evidence": "attempt finding: no repo-local witness object proves covariant-divergence-zero or weak-divergence-zero for the candidate renormalized stress-energy expectation",
+      "claim_ceiling": "refinement_packet_only_no_obstruction_solution_no_conservation_witness",
+      "conservation_form_required": "covariant or weak divergence-zero statement is not yet formalized as a witness object",
+      "failure_mode_if_unresolved": "conservation remains unstated as a proof target, so no conservation witness can be constructed",
+      "missing_condition": "missing_covariant_conservation_statement",
+      "next_bounded_action": "prepare_qft_gr_covariant_conservation_statement_witness_packet",
+      "obstruction_id": "qft_gr_stress_energy_conservation_missing_covariant_conservation_statement_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_CovariantConservationObligationSemantics",
+      "required_future_proof_object": "bounded covariant-conservation statement witness for the candidate renormalized stress-energy expectation",
+      "required_physics_assumption": "a selected connection/divergence operator and state/domain scope make the conservation statement meaningful"
+    },
+    {
+      "available_repo_evidence": "packet field `covariant_or_weak_conservation_form` permits either form",
+      "claim_ceiling": "refinement_packet_only_no_obstruction_solution_no_conservation_witness",
+      "conservation_form_required": "weak and covariant conservation forms are both mentioned but not separated into a selected form",
+      "failure_mode_if_unresolved": "ambiguity prevents checking whether a later proof object satisfies the intended obligation",
+      "missing_condition": "weak_vs_strong_conservation_ambiguity",
+      "next_bounded_action": "deferred until the covariant statement packet chooses the statement form",
+      "obstruction_id": "qft_gr_stress_energy_conservation_weak_strong_ambiguity_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_CovariantConservationObligationSemantics",
+      "required_future_proof_object": "bounded form-selection packet distinguishing strong covariant divergence from weak/test-function conservation",
+      "required_physics_assumption": "the selected source domain admits the chosen conservation form"
+    },
+    {
+      "available_repo_evidence": "renormalized expectation and state-expectation semantics surfaces",
+      "claim_ceiling": "refinement_packet_only_no_obstruction_solution_no_conservation_witness",
+      "conservation_form_required": "renormalized expectation semantics remain prerequisite surfaces rather than a conservation-domain theorem",
+      "failure_mode_if_unresolved": "the conservation operator may not apply to the candidate expectation",
+      "missing_condition": "renormalized_expectation_not_yet_well_defined_enough",
+      "next_bounded_action": "deferred as a likely follow-on if the statement packet cannot bind the domain",
+      "obstruction_id": "qft_gr_stress_energy_conservation_renormalized_expectation_domain_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_RenormalizedExpectationValueSemantics",
+      "required_future_proof_object": "domain adequacy witness tying the renormalized expectation to the conservation operator",
+      "required_physics_assumption": "renormalized stress-energy expectation is defined on the same domain used by the conservation statement"
+    },
+    {
+      "available_repo_evidence": "state-expectation scope in the conservation witness packet",
+      "claim_ceiling": "refinement_packet_only_no_obstruction_solution_no_conservation_witness",
+      "conservation_form_required": "state class/domain assumptions are not narrow enough to support a conservation witness",
+      "failure_mode_if_unresolved": "the conservation claim remains too broad for the available assumptions",
+      "missing_condition": "state_domain_limitation",
+      "next_bounded_action": "deferred pending covariant statement and domain review",
+      "obstruction_id": "qft_gr_stress_energy_conservation_state_domain_limitation_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_StateExpectationFunctionalSemantics",
+      "required_future_proof_object": "bounded state-domain restriction sufficient for conservation",
+      "required_physics_assumption": "selected state class preserves the Ward/conservation identity required by the source"
+    },
+    {
+      "available_repo_evidence": "Bianchi-compatibility obligation semantics surface",
+      "claim_ceiling": "refinement_packet_only_no_obstruction_solution_no_conservation_witness",
+      "conservation_form_required": "Bianchi compatibility remains downstream and cannot be inferred from the obstruction review",
+      "failure_mode_if_unresolved": "Bianchi compatibility cannot be claimed from conservation packet preparation alone",
+      "missing_condition": "Bianchi_compatibility_not_derivable_from_current_assumptions",
+      "next_bounded_action": "deferred; no Bianchi compatibility claim authorized",
+      "obstruction_id": "qft_gr_stress_energy_conservation_bianchi_dependency_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_BianchiCompatibilityObligationSemantics",
+      "required_future_proof_object": "bounded Bianchi dependency map after conservation statement/refinement",
+      "required_physics_assumption": "accepted conservation statement can be related to the contracted Bianchi identity boundary"
+    },
+    {
+      "available_repo_evidence": "classical-source admissibility semantics surface",
+      "claim_ceiling": "refinement_packet_only_no_obstruction_solution_no_conservation_witness",
+      "conservation_form_required": "classical GR-source admissibility remains conditional on conservation and Bianchi boundaries",
+      "failure_mode_if_unresolved": "stress-energy source admissibility remains unclaimed",
+      "missing_condition": "classical_source_admissibility_still_conditional",
+      "next_bounded_action": "deferred; no source-admissibility claim authorized",
+      "obstruction_id": "qft_gr_stress_energy_conservation_classical_source_conditional_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_ClassicalSourceAdmissibilitySemantics",
+      "required_future_proof_object": "bounded source-admissibility witness after conservation and Bianchi review",
+      "required_physics_assumption": "renormalized expectation can be treated as a classical tensor source in the bounded regime"
+    }
+  ],
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "schema_id": "QFT_GR_STRESS_ENERGY_CONSERVATION_OBSTRUCTION_REFINEMENT_PACKET_20260525_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "prepare_qft_gr_covariant_conservation_statement_witness_packet",
+  "selected_next_target_kind": "qft_gr_covariant_conservation_statement_witness_packet_preparation",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false
+}
