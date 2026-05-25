@@ -73,6 +73,7 @@ Current release-facing status:
 - `QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_WITNESS_ATTEMPT_ONLY`
 - `QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_ATTEMPT_EXECUTED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION`
 - `QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_ATTEMPT_RESULT_REVIEW_ACCEPTS_OBSTRUCTION_AND_AUTHORIZES_REFINEMENT_PACKET_PREPARATION_ONLY`
+- `QFT_GR_COVARIANT_CONSERVATION_STATEMENT_OBSTRUCTION_REFINEMENT_PACKET_PREPARED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION`
 - v0.1-alpha standard status: preparation-only full-pillar/full-seam criticizability track.
 - v0.1-alpha release gates are manifest-enrolled as governed baseline surfaces; v0.1-alpha public release is not complete.
 - v0.1-alpha enrollment result review selected historical post-enrollment target `select_next_post_v01_alpha_manifest_enrollment_bounded_attack` and recommended `prepare_v01_alpha_release_packet_gap_review` before dependency-remediation processing advanced the live target.
@@ -138,6 +139,7 @@ Current release-facing status:
   - `formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_PACKET_RESULT_REVIEW_20260525_v0.json`
   - `formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_ATTEMPT_20260525_v0.json`
   - `formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_ATTEMPT_RESULT_REVIEW_20260525_v0.json`
+  - `formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_STATEMENT_OBSTRUCTION_REFINEMENT_PACKET_20260525_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json`
   - `formal/docs/release/TOE_V01_ALPHA_EQUATION_LEDGER_v0.json`
@@ -178,15 +180,16 @@ Current release-facing status:
 - The QFT-GR covariant conservation statement witness packet result review consumes that packet, records `QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_PACKET_RESULT_REVIEW_v0`, `QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_WITNESS_ATTEMPT_ONLY`, and `qft_gr_covariant_conservation_statement_witness_packet_result_review_accepts_packet_and_authorizes_bounded_witness_attempt_only`, preserves primary blocker `missing_covariant_conservation_statement`, confirms packet preparation only, selects `execute_qft_gr_covariant_conservation_statement_witness_attempt`, and does not construct the covariant conservation witness, claim stress-energy source admissibility, claim Bianchi compatibility, derive the semiclassical Einstein equation, close the QFT-GR seam, validate empirically, promote the master action, assemble release, or authorize public submission.
 - The QFT-GR covariant conservation statement witness attempt consumes that packet result review, records `QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_ATTEMPT_v0`, `QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_ATTEMPT_EXECUTED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION`, and `qft_gr_covariant_conservation_statement_obstruction_identified_requires_refinement`, executes only the bounded covariant-conservation statement witness attempt, records exactly one result classification, selects `review_qft_gr_covariant_conservation_statement_witness_attempt_result`, and does not construct the covariant conservation witness, claim full stress-energy source admissibility, claim Bianchi compatibility, derive the semiclassical Einstein equation, close the QFT-GR seam, validate empirically, promote the master action, assemble release, or authorize public submission.
 - The QFT-GR covariant conservation statement witness attempt result review consumes that attempt, records `QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_ATTEMPT_RESULT_REVIEW_v0`, `QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_ATTEMPT_RESULT_REVIEW_ACCEPTS_OBSTRUCTION_AND_AUTHORIZES_REFINEMENT_PACKET_PREPARATION_ONLY`, and `qft_gr_covariant_conservation_statement_witness_attempt_result_review_accepts_obstruction_and_authorizes_refinement_packet_preparation_only`, accepts the obstruction classification `qft_gr_covariant_conservation_statement_obstruction_identified_requires_refinement`, records the covariant-conservation obstruction class, selects `prepare_qft_gr_covariant_conservation_statement_obstruction_refinement_packet`, and does not construct the covariant conservation witness, claim stress-energy source admissibility, claim Bianchi compatibility, derive the semiclassical Einstein equation, close the QFT-GR seam, validate empirically, promote the master action, assemble release, or authorize public submission.
+- The QFT-GR covariant conservation statement obstruction refinement packet consumes that attempt result review, records `QFT_GR_COVARIANT_CONSERVATION_STATEMENT_OBSTRUCTION_REFINEMENT_PACKET_v0`, `QFT_GR_COVARIANT_CONSERVATION_STATEMENT_OBSTRUCTION_REFINEMENT_PACKET_PREPARED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION`, and `qft_gr_covariant_conservation_statement_obstruction_refinement_packet_prepared_primary_missing_covariant_derivative_operator_domain_no_closure_or_empirical_validation`, preserves the accepted obstruction classification, narrows the primary blocker to `missing_covariant_derivative_or_operator_domain`, selects `prepare_qft_gr_covariant_derivative_operator_domain_packet`, and does not solve the obstruction, construct the covariant conservation witness, claim stress-energy source admissibility, claim Bianchi compatibility, derive the semiclassical Einstein equation, close the QFT-GR seam, validate empirically, promote the master action, assemble release, or authorize public submission.
 
 Current live control state:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_covariant_conservation_statement_obstruction_refinement_packet`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_qft_gr_covariant_conservation_statement_witness_attempt_result`
-- `ACTIVE_LANE_v0: qft_gr_covariant_conservation_statement_witness_attempt_result_review`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_covariant_derivative_operator_domain_packet`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_covariant_conservation_statement_obstruction_refinement_packet`
+- `ACTIVE_LANE_v0: qft_gr_covariant_conservation_statement_obstruction_refinement_packet`
 - `CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json`
 - `CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean`
-- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationStatementWitnessAttemptResultReview.lean`
-- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_ATTEMPT_RESULT_REVIEW_20260525_v0.json`
+- `CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Bridges/QFT_GR_CovariantConservationStatementObstructionRefinementPacket.lean`
+- `CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_STATEMENT_OBSTRUCTION_REFINEMENT_PACKET_20260525_v0.json`
 
 Current result-token chain:
 - `formal/toe_formal/ToeFormal/Derivation/ReadOnlyValidationHygiene.lean`
