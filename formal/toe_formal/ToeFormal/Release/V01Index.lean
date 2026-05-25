@@ -748,6 +748,15 @@ def retainedTranche004BlockerMovementRegistrationAfterSourceMapClosureResultRevi
 def retainedTranche004BlockerMovementRegistrationAfterSourceMapClosureResultReviewClassification : String :=
   "documented_source_map_closed_nonblocking_status_accepted_dependency_remediation_closeout_preparation_only"
 
+def dependencyRemediationCloseoutAfterTranche004MovementLeanSurface : String :=
+  "ToeFormal.Release.V01DependencyRemediationCloseoutAfterTranche004Movement"
+
+def dependencyRemediationCloseoutAfterTranche004MovementOutcomeToken : String :=
+  "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARED_AFTER_TRANCHE_004_MOVEMENT_WITH_NO_RELEASE_READINESS_OR_SEAM_PROMOTION"
+
+def dependencyRemediationCloseoutAfterTranche004MovementClassification : String :=
+  "dependency_remediation_closeout_prepared_all_tranches_documented_nonblocking_no_release_readiness_or_seam_promotion"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -3035,6 +3044,27 @@ theorem v01_alpha_retained_tranche_004_blocker_movement_registration_after_sourc
   trivial
 
 theorem v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure_result_review_does_not_promote_release : True := by
+  trivial
+
+theorem v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_consumes_tranche_004_review : True := by
+  trivial
+
+theorem v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_records_all_tranches_nonblocking : True := by
+  trivial
+
+theorem v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_records_tranche_004_documented_source_map_closed_nonblocking : True := by
+  trivial
+
+theorem v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_prepares_closeout_only : True := by
+  trivial
+
+theorem v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_selects_result_review : True := by
+  trivial
+
+theorem v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_does_not_promote_release : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by

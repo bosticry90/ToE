@@ -1,0 +1,248 @@
+{
+  "acceptance_criteria": {
+    "all_six_dependency_tranches_nonblocking": true,
+    "closeout_prepares_only_no_release_or_seam": true,
+    "consumes_expected_tranche_004_movement_result_review": true,
+    "dependency_queue_exhausted_before_closeout": true,
+    "does_not_discharge_debt_or_promote_science_program": true,
+    "exactly_one_next_target_selected": true,
+    "forbidden_effects_all_false": true,
+    "result_review_accepts_tranche_004_movement": true,
+    "result_review_classification_expected": true,
+    "result_review_outcome_expected": true,
+    "result_review_schema_expected": true,
+    "result_review_selected_this_closeout_preparation": true,
+    "source_map_closure_evidence_preserved": true
+  },
+  "accepted": true,
+  "accepted_source_map_closure_registration": "registered_source_map_closure_accepted",
+  "all_dependency_tranches_nonblocking": true,
+  "axiom_spec_backed_debt_reduced": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The closeout packet is prepared; the next bounded step is result review of the closeout packet only.",
+      "target": "review_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Release-readiness adjudication remains downstream of closeout result-review acceptance.",
+      "target": "prepare_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "QFT-GR seam closure remains a separate downstream adjudication.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Release assembly remains unauthorized by closeout preparation.",
+      "target": "assemble_v01_alpha_release_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Release readiness remains unmarked until separately adjudicated.",
+      "target": "mark_v01_alpha_release_ready"
+    }
+  ],
+  "captured_at_utc": "2026-05-22T00:00:00Z",
+  "closeout_criteria": [
+    {
+      "criterion": "all_six_tranches_nonblocking",
+      "evidence": "tranches 001/002/003/005/006 documented_dependency_nonblocking and tranche 004 documented_source_map_closed_nonblocking",
+      "status": "satisfied"
+    },
+    {
+      "criterion": "tranche_004_source_map_closed_status_accepted",
+      "evidence": "retained tranche 004 blocker movement registration result review accepted documented_source_map_closed_nonblocking",
+      "status": "satisfied"
+    },
+    {
+      "criterion": "release_readiness_separate",
+      "evidence": "closeout preparation does not mark readiness or assemble release",
+      "status": "preserved"
+    },
+    {
+      "criterion": "seam_closure_separate",
+      "evidence": "closeout preparation does not close the QFT-GR seam",
+      "status": "preserved"
+    }
+  ],
+  "closeout_criteria_count": 4,
+  "consumed_tranche_004_movement_result_review_classification": "documented_source_map_closed_nonblocking_status_accepted_dependency_remediation_closeout_preparation_only",
+  "consumed_tranche_004_movement_result_review_outcome_id": "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_ACCEPTS_DOCUMENTED_SOURCE_MAP_CLOSED_NONBLOCKING_STATUS_AND_AUTHORIZES_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARATION_ONLY",
+  "consumed_tranche_004_movement_result_review_schema_id": "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_AFTER_SOURCE_MAP_CLOSURE_RESULT_REVIEW_20260523_v0",
+  "consumes_tranche_004_movement_registration_result_review": "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_AFTER_SOURCE_MAP_CLOSURE_RESULT_REVIEW_v0",
+  "consumes_tranche_004_movement_registration_result_review_pointer": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_AFTER_SOURCE_MAP_CLOSURE_RESULT_REVIEW_20260523_v0.json",
+  "dependency_remediation_blocker_queue_exhausted": true,
+  "dependency_remediation_closeout_classification": "dependency_remediation_closeout_prepared_all_tranches_documented_nonblocking_no_release_readiness_or_seam_promotion",
+  "dependency_remediation_closeout_classification_count": 1,
+  "dependency_remediation_closeout_packet_prepared": true,
+  "dependency_remediation_closeout_prepared": true,
+  "dependency_remediation_closeout_result_review_required": true,
+  "dependency_remediation_closeout_status": "dependency_remediation_closeout_prepared_pending_result_review",
+  "dependency_remediation_closeout_status_before_packet": "dependency_remediation_all_tranches_documented_nonblocking_pending_closeout",
+  "dependency_remediation_queue_exhausted": true,
+  "documented_dependency_nonblocking_tranche_count": 6,
+  "documented_dependency_nonblocking_tranches": [
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-001",
+      "status": "documented_dependency_nonblocking"
+    },
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-002",
+      "status": "documented_dependency_nonblocking"
+    },
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-003",
+      "status": "documented_dependency_nonblocking"
+    },
+    {
+      "dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
+      "finding_id": "V01-ALPHA-DEP-REM-004",
+      "status": "documented_source_map_closed_nonblocking",
+      "tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-004"
+    },
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-005",
+      "status": "documented_dependency_nonblocking"
+    },
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-006",
+      "status": "documented_dependency_nonblocking"
+    }
+  ],
+  "empirical_validation_authorized": false,
+  "empirical_validation_claimed": false,
+  "evidence_chain": [
+    {
+      "chain_id": "witness_chain_construction_packet",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_20260523_v0.json",
+      "status": "prepared_for_bounded_witness_chain_construction",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapWitnessChainConstructionPacketFromResearchCandidate.lean"
+    },
+    {
+      "chain_id": "witness_chain_construction_packet_result_review",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_RESULT_REVIEW_20260523_v0.json",
+      "status": "accepted_for_bounded_witness_chain_construction_execution",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapWitnessChainConstructionPacketFromResearchCandidateResultReview.lean"
+    },
+    {
+      "chain_id": "witness_chain_construction_execution",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_FROM_RESEARCH_CANDIDATE_20260523_v0.json",
+      "status": "witness_chain_constructed_pending_result_review",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapWitnessChainConstructionFromResearchCandidate.lean"
+    },
+    {
+      "chain_id": "witness_chain_construction_result_review",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_RESULT_REVIEW_20260523_v0.json",
+      "status": "accepted_for_source_map_authorization_adjudication_packet_preparation",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapWitnessChainConstructionResultReview.lean"
+    },
+    {
+      "chain_id": "source_map_authorization_adjudication_execution",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_20260523_v0.json",
+      "status": "requirements_satisfied_pending_result_review",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapAuthorizationAdjudication.lean"
+    },
+    {
+      "chain_id": "source_map_authorization_adjudication_result_review",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_RESULT_REVIEW_20260523_v0.json",
+      "status": "accepted_for_source_map_closure_adjudication_packet_preparation",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapAuthorizationAdjudicationResultReview.lean"
+    },
+    {
+      "chain_id": "source_map_closure_adjudication_execution",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_20260523_v0.json",
+      "status": "source_map_closure_authorized_pending_result_review",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapClosureAdjudication.lean"
+    },
+    {
+      "chain_id": "source_map_closure_adjudication_result_review",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_RESULT_REVIEW_20260523_v0.json",
+      "status": "accepted_for_source_map_closure_registration_packet_preparation",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapClosureAdjudicationResultReview.lean"
+    },
+    {
+      "chain_id": "source_map_closure_registration_result_review",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_RESULT_REVIEW_20260523_v0.json",
+      "status": "registered_source_map_closure_accepted_blocker_movement_packet_preparation_only",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapClosureRegistrationResultReview.lean"
+    }
+  ],
+  "evidence_chain_count": 9,
+  "final_source_map_closure_registered": true,
+  "forbidden_effect_status": {
+    "axiom_spec_backed_debt_reduced": false,
+    "empirical_validation_authorized": false,
+    "empirical_validation_claimed": false,
+    "lean_theorem_debt_discharged": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "proof_debt_reduced": false,
+    "publication_authorized": false,
+    "qft_gr_seam_closed": false,
+    "qft_gr_seam_closure_authorized": false,
+    "qft_gr_seam_closure_claimed": false,
+    "readiness_marking_authorized": false,
+    "release_assembly_authorized": false,
+    "release_packet_assembled": false,
+    "release_readiness_adjudication_prepared": false,
+    "release_readiness_proceed_authorized": false,
+    "retained_assumptions_discharged": false,
+    "theorem_discharge_authorized": false,
+    "v01_alpha_marked_ready": false
+  },
+  "lean_theorem_debt_discharged": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_RESULT_ONLY_NO_RELEASE_READINESS_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "The v0.1-alpha dependency-remediation closeout packet after tranche 004 movement records all six dependency-remediation tranches as nonblocking at the control layer and prepares closeout result review only. It does not close the QFT-GR seam, assemble release, mark release readiness, discharge theorem/proof debt or retained assumptions, authorize Phase 2, authorize empirical validation, authorize publication, promote the master action, or make an external-truth claim.",
+  "outcome_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARED_AFTER_TRANCHE_004_MOVEMENT_WITH_NO_RELEASE_READINESS_OR_SEAM_PROMOTION",
+  "packet_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_v0",
+  "packet_scope": "PREPARE_V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_ONLY_NO_RELEASE_READINESS_OR_QFT_GR_SEAM_CLOSURE",
+  "phase2_authorized": false,
+  "prepared": true,
+  "proof_debt_reduced": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_seam_closure_authorized": false,
+  "qft_gr_seam_closure_claimed": false,
+  "qft_gr_source_map_semantic_closure_claimed": false,
+  "readiness_marking_authorized": false,
+  "registered_source_map_closure_accepted_by_review": true,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "release_readiness_adjudication_prepared": false,
+  "release_readiness_decision_status": "release_readiness_requires_dependency_remediation_closeout_result_review_and_separate_adjudication",
+  "release_readiness_held": true,
+  "release_readiness_proceed_authorized": false,
+  "release_readiness_still_blocked": true,
+  "retained_assumptions_discharged": false,
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_20260523_v0",
+  "selected_next_target": "review_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_result",
+  "selected_next_target_kind": "dependency_remediation_closeout_after_tranche_004_movement_result_review_only",
+  "selection_count": 1,
+  "simple_dependency_remediation_queue_exhausted": true,
+  "source_map_closure_achieved": true,
+  "source_map_closure_claimed": false,
+  "source_map_closure_external_truth_claimed": false,
+  "source_map_closure_registered": true,
+  "source_map_closure_registration_status": "source_map_closure_registered_result_review_accepted",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "theorem_discharge_authorized": false,
+  "tranche_001_status": "documented_dependency_nonblocking",
+  "tranche_002_status": "documented_dependency_nonblocking",
+  "tranche_003_status": "documented_dependency_nonblocking",
+  "tranche_004_cleared_for_release_readiness": false,
+  "tranche_004_formal_movement_accepted": true,
+  "tranche_004_retained_blocker_discharged": true,
+  "tranche_004_status": "documented_source_map_closed_nonblocking",
+  "tranche_004_status_exact": "documented_source_map_closed_nonblocking",
+  "tranche_004_status_pending_result_review": false,
+  "tranche_005_status": "documented_dependency_nonblocking",
+  "tranche_006_status": "documented_dependency_nonblocking",
+  "unresolved_dependency_remediation_tranche_count": 0,
+  "unresolved_dependency_remediation_tranches": [],
+  "v01_alpha_marked_ready": false
+}

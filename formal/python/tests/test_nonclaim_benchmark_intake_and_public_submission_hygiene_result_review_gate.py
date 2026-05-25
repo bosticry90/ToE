@@ -67,7 +67,7 @@ PREPARED_TOKEN = (
 )
 EXPECTED_LIVE_TARGET = (
     "CURRENT_LIVE_NEXT_TARGET_v0: "
-    "prepare_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement"
+    "review_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement_result"
 )
 REQUIRED_ROW_TOKENS = [
     "NONCLAIM",
