@@ -1,0 +1,141 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "consumes_expected_refinement_packet": true,
+    "exactly_one_next_target_selected": true,
+    "prepares_packet_only": true,
+    "primary_blocker_preserved": true,
+    "refinement_classification_expected": true,
+    "refinement_outcome_expected": true,
+    "refinement_schema_expected": true,
+    "refinement_selected_this_packet": true,
+    "required_fields_present": true
+  },
+  "accepted": true,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "Packet preparation must be result-reviewed before any bounded witness attempt.",
+      "target": "review_qft_gr_covariant_conservation_statement_witness_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Execution requires packet result-review acceptance first.",
+      "target": "execute_qft_gr_covariant_conservation_statement_witness_attempt"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Domain refinement may follow if the statement packet review exposes a domain blocker.",
+      "target": "prepare_qft_gr_renormalized_expectation_domain_conservation_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Covariant-conservation statement packet preparation does not close QFT-GR.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Public submission is outside this scientific witness packet.",
+      "target": "authorize_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-05-25T00:00:00Z",
+  "conservation_witness_constructed": false,
+  "consumes_qft_gr_stress_energy_conservation_obstruction_refinement_packet": "QFT_GR_STRESS_ENERGY_CONSERVATION_OBSTRUCTION_REFINEMENT_PACKET_v0",
+  "consumes_qft_gr_stress_energy_conservation_obstruction_refinement_packet_pointer": "formal/docs/release/QFT_GR_STRESS_ENERGY_CONSERVATION_OBSTRUCTION_REFINEMENT_PACKET_20260525_v0.json",
+  "empirical_validation_claimed": false,
+  "future_execution_classifications": [
+    "qft_gr_covariant_conservation_statement_witness_constructed_pending_result_review",
+    "qft_gr_covariant_conservation_statement_obstruction_identified_requires_refinement",
+    "qft_gr_covariant_conservation_statement_inconclusive_requires_assumption_reduction"
+  ],
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_PACKET_RESULT_ONLY_NO_WITNESS_EXECUTION_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This packet prepares a bounded covariant-conservation statement witness target for the candidate renormalized QFT stress-energy source. It does not construct the witness, claim source admissibility or Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "outcome_id": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_PACKET_PREPARED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION",
+  "packet_classification": "qft_gr_covariant_conservation_statement_witness_packet_prepared_no_witness_construction_no_source_admissibility_or_bianchi_claim",
+  "packet_classification_count": 1,
+  "packet_fields": {
+    "candidate_stress_energy_source": "candidate_renormalized_qft_stress_energy_expectation_source",
+    "claim_ceiling": "packet_preparation_only_no_covariant_conservation_witness_no_source_admissibility_no_bianchi_compatibility_no_qft_gr_closure",
+    "conservation_form": "covariant_divergence_zero_statement_for_candidate_renormalized_stress_energy_source",
+    "covariant_derivative_operator": "repo-local covariant derivative/divergence operator must be selected or supplied for the bounded domain",
+    "current_obstruction": "missing_covariant_conservation_statement",
+    "domain_of_validity": "explicit bounded domain where the candidate source, state expectation, renormalization scope, and covariant derivative semantics are simultaneously meaningful",
+    "failure_modes": [
+      "missing_covariant_derivative_operator",
+      "renormalized_expectation_domain_mismatch",
+      "weak_vs_strong_conservation_form_ambiguity",
+      "state_domain_too_broad_for_conservation_identity",
+      "Bianchi_link_not_derivable_from_statement_preparation",
+      "source_admissibility_still_conditional"
+    ],
+    "forbidden_claims": [
+      "conservation_witness_constructed",
+      "stress_energy_source_admissibility_claimed",
+      "Bianchi_compatibility_claimed",
+      "semiclassical_einstein_equation_derived",
+      "qft_gr_seam_closed",
+      "empirical_validation_claimed",
+      "master_action_promoted",
+      "release_assembly_authorized",
+      "public_submission_authorized"
+    ],
+    "post_packet_review_target": "review_qft_gr_covariant_conservation_statement_witness_packet_result",
+    "renormalization_scope": "bounded renormalization scope inherited from the obstruction refinement packet; no global renormalization theorem is claimed",
+    "required_Bianchi_compatibility_link": "downstream dependency only; Bianchi compatibility is not claimed by packet preparation",
+    "required_Lean_surface": [
+      "ToeFormal.Bridges.QFT_GR_StressEnergyConservationObstructionRefinementPacket",
+      "ToeFormal.Bridges.QFT_GR_CovariantConservationObligationSemantics",
+      "ToeFormal.Bridges.QFT_GR_CovariantConservationStatementWitnessPacket",
+      "ToeFormal.Release.V01Index",
+      "ToeFormal.Derivation.CrossPillarClosureFrontier"
+    ],
+    "required_future_proof_object": "bounded witness statement that the covariant divergence of the candidate renormalized stress-energy source vanishes on the selected domain",
+    "required_physics_assumptions": [
+      "renormalized stress-energy expectation is meaningful on the selected state/domain scope",
+      "a compatible connection/covariant derivative operator is selected for the background regime",
+      "the candidate source admits a tensorial interpretation on the bounded domain",
+      "any Ward/conservation identity needed for the statement is explicitly scoped"
+    ],
+    "required_source_admissibility_link": "downstream dependency only; classical GR-source admissibility is not claimed by packet preparation",
+    "state_expectation_scope": "bounded state class where the renormalized expectation and the selected covariant-divergence statement can both be meaningful"
+  },
+  "packet_id": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_PACKET_v0",
+  "packet_question": "Can the repo define a bounded witness statement showing that the candidate renormalized QFT stress-energy source satisfies the required covariant conservation condition?",
+  "prepared": true,
+  "primary_blocker": "missing_covariant_conservation_statement",
+  "primary_missing_condition": "missing_covariant_conservation_statement",
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "required_packet_fields": [
+    "candidate_stress_energy_source",
+    "renormalization_scope",
+    "state_expectation_scope",
+    "conservation_form",
+    "covariant_derivative_operator",
+    "domain_of_validity",
+    "required_Bianchi_compatibility_link",
+    "required_source_admissibility_link",
+    "current_obstruction",
+    "required_future_proof_object",
+    "required_Lean_surface",
+    "required_physics_assumptions",
+    "failure_modes",
+    "claim_ceiling",
+    "forbidden_claims",
+    "post_packet_review_target"
+  ],
+  "schema_id": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITNESS_PACKET_20260525_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "review_qft_gr_covariant_conservation_statement_witness_packet_result",
+  "selected_next_target_kind": "qft_gr_covariant_conservation_statement_witness_packet_result_review",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false
+}
