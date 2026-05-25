@@ -1,0 +1,157 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "consumes_expected_result_review": true,
+    "exactly_one_next_target_selected": true,
+    "exactly_one_primary_obstruction_selected": true,
+    "refined_obstruction_preserved": true,
+    "result_review_classification_expected": true,
+    "result_review_outcome_expected": true,
+    "result_review_schema_expected": true,
+    "result_review_selected_this_packet": true,
+    "row_structure_complete": true
+  },
+  "accepted": true,
+  "available_structure": "covariant_conservation_statement_with_operator_domain",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The proof-object refinement packet must be reviewed before preparing a proof-object packet.",
+      "target": "review_qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Proof-object packet preparation requires acceptance of this refinement packet.",
+      "target": "prepare_qft_gr_covariant_conservation_proof_object_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Expectation-domain refinement is deferred unless selected after this packet review.",
+      "target": "prepare_qft_gr_renormalized_expectation_domain_conservation_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Obstruction refinement does not close QFT-GR.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Public submission is not authorized by this packet.",
+      "target": "authorize_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-05-25T00:00:00Z",
+  "claim_ceiling": "refinement_packet_only_no_conservation_witness_or_seam_closure",
+  "conservation_witness_constructed": false,
+  "consumes_qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt_result_review": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_WITNESS_ATTEMPT_RESULT_REVIEW_v0",
+  "consumes_qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt_result_review_pointer": "formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_WITNESS_ATTEMPT_RESULT_REVIEW_20260525_v0.json",
+  "covariant_conservation_statement_with_operator_domain_witness_constructed": false,
+  "empirical_validation_claimed": false,
+  "failure_mode_if_unresolved": "the operator-domain conservation statement remains formulated but unwitnessed, blocking source-admissibility and Bianchi routes",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "missing_proof_object": "conservation_proof_object_for_candidate_source_under_prepared_operator_domain",
+  "next_action_scope": "REVIEW_QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_OBSTRUCTION_REFINEMENT_PACKET_RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "next_bounded_action": "review_qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet_result",
+  "non_claim_boundary": "This packet refines the post-operator-domain obstruction to the missing conservation proof object. It defines the required theorem shape, assumptions, Lean surface, failure mode, claim ceiling, and next bounded action, but does not construct a conservation witness, claim source admissibility or Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "outcome_id": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_OBSTRUCTION_REFINEMENT_PACKET_PREPARED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION",
+  "packet_classification": "qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet_prepared_primary_missing_conservation_proof_object_no_closure_or_empirical_validation",
+  "packet_classification_count": 1,
+  "packet_id": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_OBSTRUCTION_REFINEMENT_PACKET_v0",
+  "prepared": true,
+  "prepares_refinement_only": true,
+  "primary_missing_condition": "post_operator_domain_statement_missing_conservation_proof_object",
+  "primary_obstruction_id": "qft_gr_covariant_conservation_statement_with_operator_domain_missing_conservation_proof_object_v0",
+  "primary_obstruction_solved": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "refinement_rows": [
+    {
+      "available_structure": "Covariant conservation statement with operator-domain structure is formulated and accepted, but the witness attempt found no repo-local theorem proving the statement for the candidate renormalized stress-energy source.",
+      "claim_ceiling": "refinement_packet_only_no_conservation_witness_or_seam_closure",
+      "failure_mode_if_unresolved": "the conservation statement remains formulated but unwitnessed, blocking source-admissibility and Bianchi routes",
+      "missing_condition": "post_operator_domain_statement_missing_conservation_proof_object",
+      "next_bounded_action": "prepare_qft_gr_covariant_conservation_proof_object_packet",
+      "obstruction_id": "qft_gr_covariant_conservation_statement_with_operator_domain_missing_conservation_proof_object_v0",
+      "priority": "primary",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_CovariantConservationStatementWithOperatorDomainWitnessAttempt",
+      "required_assumptions": "selected stress-energy object, state-expectation semantics, operator-domain membership, and conservation-law premise are all available under one bounded theorem statement",
+      "required_theorem_shape": "theorem: candidate stress-energy source in prepared operator domain implies covariant divergence zero under explicitly bounded assumptions"
+    },
+    {
+      "available_structure": "The operator-domain packet may still be too schematic to support the proof object required by the statement.",
+      "claim_ceiling": "refinement_packet_only_no_conservation_witness_or_seam_closure",
+      "failure_mode_if_unresolved": "the proof object cannot type-check or cannot apply to the candidate source",
+      "missing_condition": "operator_domain_still_insufficient",
+      "next_bounded_action": "deferred unless the proof-object packet exposes domain insufficiency as primary",
+      "obstruction_id": "qft_gr_covariant_conservation_statement_with_operator_domain_operator_domain_still_insufficient_v0",
+      "priority": "secondary",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_CovariantDerivativeOperatorDomainPacket",
+      "required_assumptions": "the prepared domain includes all objects used by the conservation theorem",
+      "required_theorem_shape": "domain-strengthening lemma or packet specifying exact membership/regularity predicates"
+    },
+    {
+      "available_structure": "No conservation law has been supplied over the selected domain for the candidate source.",
+      "claim_ceiling": "refinement_packet_only_no_conservation_witness_or_seam_closure",
+      "failure_mode_if_unresolved": "the theorem shape has hypotheses but no law that can discharge them",
+      "missing_condition": "missing_conservation_law_over_selected_domain",
+      "next_bounded_action": "deferred until proof-object packet chooses whether to assume or prove the law",
+      "obstruction_id": "qft_gr_covariant_conservation_statement_with_operator_domain_missing_law_v0",
+      "priority": "secondary",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_CovariantConservationObligationSemantics",
+      "required_assumptions": "the selected source satisfies a conservation identity under explicit assumptions",
+      "required_theorem_shape": "bounded conservation-law premise or obstruction packet for the selected stress-energy object"
+    },
+    {
+      "available_structure": "The renormalized expectation is not yet shown stable under the selected covariant derivative/divergence.",
+      "claim_ceiling": "refinement_packet_only_no_conservation_witness_or_seam_closure",
+      "failure_mode_if_unresolved": "divergence-zero cannot be proved for the renormalized expectation object",
+      "missing_condition": "renormalized_expectation_not_stable_under_covariant_derivative",
+      "next_bounded_action": "deferred as possible follow-on refinement",
+      "obstruction_id": "qft_gr_covariant_conservation_statement_with_operator_domain_expectation_stability_v0",
+      "priority": "secondary",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_RenormalizedExpectationValueSemantics",
+      "required_assumptions": "renormalization/state domain preserves the derivative operation used in the statement",
+      "required_theorem_shape": "stability lemma linking renormalized expectation semantics to the selected derivative"
+    },
+    {
+      "available_structure": "The theorem may need to choose strong covariant divergence or weak/distributional conservation.",
+      "claim_ceiling": "refinement_packet_only_no_conservation_witness_or_seam_closure",
+      "failure_mode_if_unresolved": "a later proof could witness the wrong conservation form",
+      "missing_condition": "weak_strong_conservation_mismatch",
+      "next_bounded_action": "deferred until proof-object theorem shape is reviewed",
+      "obstruction_id": "qft_gr_covariant_conservation_statement_with_operator_domain_weak_strong_mismatch_v0",
+      "priority": "secondary",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_CovariantConservationStatementWithOperatorDomainPacket",
+      "required_assumptions": "the selected regularity/distributional scope matches the theorem target",
+      "required_theorem_shape": "form-selection proof object distinguishing strong and weak conservation targets"
+    },
+    {
+      "available_structure": "Bianchi compatibility remains downstream even if the conservation proof object is later supplied.",
+      "claim_ceiling": "refinement_packet_only_no_conservation_witness_or_seam_closure",
+      "failure_mode_if_unresolved": "Bianchi compatibility remains unclaimed and cannot be imported into this packet",
+      "missing_condition": "Bianchi_compatibility_still_conditional",
+      "next_bounded_action": "deferred; no Bianchi compatibility claim authorized",
+      "obstruction_id": "qft_gr_covariant_conservation_statement_with_operator_domain_bianchi_conditional_v0",
+      "priority": "downstream",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_BianchiCompatibilityObligationSemantics",
+      "required_assumptions": "accepted conservation witness can be related to the contracted Bianchi identity boundary",
+      "required_theorem_shape": "Bianchi compatibility dependency packet after conservation proof-object review"
+    }
+  ],
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_CovariantConservationStatementWithOperatorDomainWitnessAttempt",
+  "required_assumptions": "selected stress-energy object, state-expectation semantics, operator-domain membership, renormalization scope, and conservation-law premise are all available under one bounded theorem statement",
+  "required_theorem_shape": "candidate_stress_energy_source_in_prepared_operator_domain -> covariant_divergence candidate_stress_energy_source = 0",
+  "schema_id": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_OBSTRUCTION_REFINEMENT_PACKET_20260525_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "review_qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet_result",
+  "selected_next_target_kind": "qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet_result_review",
+  "selected_obstruction": "post_operator_domain_statement_missing_conservation_proof_object",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false
+}
