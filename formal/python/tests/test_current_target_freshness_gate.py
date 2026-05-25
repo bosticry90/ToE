@@ -1144,13 +1144,13 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_execution"
+    "v01_alpha_criticizability_readiness_adjudication_result_review"
 )
 PREVIOUS_TARGET = (
-    V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_EXECUTION_TARGET
+    V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_RESULT_REVIEW_TARGET
 )
 LIVE_TARGET = (
-    V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_RESULT_REVIEW_TARGET
+    "prepare_qft_gr_conserved_renormalized_stress_energy_source_witness_packet"
 )
 LIVE_TARGET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1158,7 +1158,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Release"
-    / "V01ReleaseReadinessAdjudicationAfterDependencyRemediationCloseout.lean"
+    / "V01CriticizabilityReadinessAdjudicationResultReview.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1977,7 +1977,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_v0"
+        == "v01_alpha_criticizability_readiness_adjudication_result_review_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -1992,11 +1992,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["result_review_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
-        "V01RetainedTranche004SourceMapWitnessChainConstructionPacketFromResearchCandidateResultReview.lean"
+        "V01CriticizabilityReadinessAdjudicationResultReview.lean"
     )
     assert current_active_workstream["result_review_report"] == (
         "formal/docs/release/"
-        "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_RESULT_REVIEW_20260523_v0.json"
+        "V01_ALPHA_CRITICIZABILITY_READINESS_ADJUDICATION_RESULT_REVIEW_20260525_v0.json"
     )
     assert current_active_workstream["construction_execution_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
@@ -2260,9 +2260,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_ACCEPTS_PARTIAL_CANDIDATE_AND_AUTHORIZES_CONSTRUCTION_PACKET_PREPARATION_ONLY"
     )
     assert current_active_workstream["output_token"] == (
-        "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_"
-        "CLOSEOUT_PACKET_PREPARED_CRITICIZABILITY_ONLY_NO_RELEASE_ASSEMBLY_OR_"
-        "SEAM_PROMOTION"
+        "V01_ALPHA_CRITICIZABILITY_READINESS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_"
+        "ELIGIBILITY_AND_AUTHORIZES_QFT_GR_WITNESS_PACKET_PREPARATION_ONLY"
     )
     assert current_active_workstream["source_map_closure_registration_packet_token"] == (
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_PACKET_PREPARED_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
@@ -2372,7 +2371,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "criticizability_readiness_adjudication_result_review_after_execution"
+        "qft_gr_witness_packet_preparation_after_criticizability_readiness_result_review"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -2426,7 +2425,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["success_conditions_defined"] == "yes"
     assert current_active_workstream["current_packet_lane"] == "release_control_plane"
     assert current_active_workstream["substantive_future_work_lane"] == (
-        "bounded_criticizability_readiness_adjudication_result_review_after_dependency_remediation_closeout"
+        "qft_gr_conserved_renormalized_stress_energy_source_witness_packet_preparation"
     )
     assert current_active_workstream["source_map_witness_chain_research_packet_prepared"] == "yes"
     assert current_active_workstream["research_packet_prepared_only"] == "yes"
@@ -2477,7 +2476,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "partial_witness_chain_candidate_accepted_for_construction_packet_preparation_only"
     )
     assert current_active_workstream["result_review_classification"] == (
-        "dependency_remediation_closeout_accepted_all_tranches_documented_nonblocking_release_readiness_adjudication_preparation_only"
+        "v01_alpha_criticizability_readiness_result_review_accepts_eligibility_"
+        "and_authorizes_qft_gr_witness_packet_preparation_only_no_release_"
+        "assembly_or_scientific_validation"
     )
     assert current_active_workstream["consumed_construction_result_review_classification"] == (
         "witness_chain_construction_accepted_source_map_authorization_adjudication_packet_preparation_only"
@@ -3260,12 +3261,31 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["track2_control_clearance_only"] == "yes"
     assert current_active_workstream["track2_scientific_evidence_claimed_from_track1"] == "no"
-    assert current_active_workstream["track2_remains_deferred"] == "yes"
+    assert current_active_workstream["criticizability_readiness_result_reviewed"] == "yes"
+    assert current_active_workstream["criticizability_readiness_eligibility_accepted"] == "yes"
+    assert current_active_workstream["criticizability_readiness_eligibility_rejected"] == "no"
+    assert current_active_workstream["criticizability_readiness_review_decision"] == (
+        "criticizability_readiness_eligibility_accepted"
+    )
+    assert current_active_workstream["qft_gr_witness_packet_preparation_authorized"] == "yes"
+    assert current_active_workstream["qft_gr_witness_packet_prepared"] == "no"
+    assert current_active_workstream["qft_gr_witness_packet_target"] == LIVE_TARGET
+    assert current_active_workstream["qft_gr_witness_execution_authorized"] == "no"
+    assert current_active_workstream["qft_gr_witness_executed"] == "no"
+    assert current_active_workstream["track2_selected_after_result_review"] == "yes"
+    assert current_active_workstream["track2_selection_kind"] == (
+        "qft_gr_witness_packet_preparation_only"
+    )
+    assert current_active_workstream["track2_science_lane_execution_started"] == "no"
+    assert current_active_workstream["track2_remains_deferred"] == (
+        "no_packet_preparation_selected_but_execution_not_started"
+    )
     assert current_active_workstream["track2_started"] == "no"
     assert current_active_workstream["track2_selected_after_this_execution"] == "no"
     assert current_active_workstream["next_action_scope"] == (
-        "REVIEW_V01_ALPHA_CRITICIZABILITY_READINESS_ADJUDICATION_RESULT_ONLY_NO_"
-        "RELEASE_ASSEMBLY_OR_SCIENTIFIC_VALIDATION"
+        "PREPARE_QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_"
+        "PACKET_ONLY_NO_TRACK2_EXECUTION_RELEASE_ASSEMBLY_OR_SCIENTIFIC_"
+        "VALIDATION"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
     assert current_active_workstream["closeout_criteria_count"] == "4"
