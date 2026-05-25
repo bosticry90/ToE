@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR covariant conservation statement with operator-domain witness attempt executed with obstruction identified, with no conservation witness construction, source admissibility claim, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
+        "QFT-GR covariant conservation statement with operator-domain witness attempt result review accepted the obstruction and authorized only refinement packet preparation, with no conservation witness construction, source admissibility claim, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt_result"
+        "prepare_qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -226,13 +226,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR covariant conservation statement with operator-domain witness attempt executed with obstruction identified, with no conservation witness construction, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
+        "QFT-GR covariant conservation statement with operator-domain witness attempt result review accepted the obstruction and authorized only refinement packet preparation, with no conservation witness construction, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt_result"
+        "prepare_qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet"
       status := .retained }
   ]
 
@@ -250,13 +250,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR covariant conservation statement with operator-domain witness attempt. -/
+/-- Previous live target consumed by the QFT-GR covariant conservation statement with operator-domain witness attempt result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "execute_qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt"
-
-/-- Current live target after QFT-GR covariant conservation statement with operator-domain witness attempt. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt_result"
+
+/-- Current live target after QFT-GR covariant conservation statement with operator-domain witness attempt result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -269,7 +269,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "review_qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt_result"
+        "prepare_qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
