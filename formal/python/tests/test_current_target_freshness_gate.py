@@ -1144,13 +1144,13 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "qft_gr_conserved_renormalized_stress_energy_source_witness_attempt_result_review"
+    "qft_gr_conserved_renormalized_stress_energy_source_witness_obstruction_refinement_packet"
 )
 PREVIOUS_TARGET = (
-    "review_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt_result"
+    "prepare_qft_gr_conserved_renormalized_stress_energy_source_witness_obstruction_refinement_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_conserved_renormalized_stress_energy_source_witness_obstruction_refinement_packet"
+    "prepare_qft_gr_stress_energy_conservation_witness_packet"
 )
 LIVE_TARGET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1158,7 +1158,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_ConservedRenormalizedStressEnergySourceWitnessAttemptResultReview.lean"
+    / "QFT_GR_ConservedRenormalizedStressEnergySourceWitnessObstructionRefinementPacket.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1977,7 +1977,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_conserved_renormalized_stress_energy_source_witness_attempt_result_review_v0"
+        == "qft_gr_conserved_renormalized_stress_energy_source_witness_obstruction_refinement_packet_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2260,9 +2260,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_ACCEPTS_PARTIAL_CANDIDATE_AND_AUTHORIZES_CONSTRUCTION_PACKET_PREPARATION_ONLY"
     )
     assert current_active_workstream["output_token"] == (
-        "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_ATTEMPT_"
-        "RESULT_REVIEW_ACCEPTS_OBSTRUCTION_AND_AUTHORIZES_REFINEMENT_PACKET_"
-        "PREPARATION_ONLY"
+        "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_"
+        "OBSTRUCTION_REFINEMENT_PACKET_PREPARED_WITH_NO_SEAM_CLOSURE_OR_"
+        "EMPIRICAL_VALIDATION"
     )
     assert current_active_workstream["source_map_closure_registration_packet_token"] == (
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_PACKET_PREPARED_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
@@ -2372,7 +2372,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "qft_gr_conserved_renormalized_source_witness_obstruction_refinement_packet_after_attempt_result_review"
+        "qft_gr_stress_energy_conservation_witness_packet_after_obstruction_refinement"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -3282,12 +3282,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["track2_science_lane_execution_started"] == "yes_bounded_attempt_result_reviewed"
     assert current_active_workstream["track2_started"] == (
-        "obstruction_result_reviewed_refinement_packet_pending"
+        "obstruction_refinement_packet_prepared_conservation_witness_packet_pending"
     )
     assert current_active_workstream["track2_selected_after_this_execution"] == "no"
     assert current_active_workstream["next_action_scope"] == (
-        "PREPARE_QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_"
-        "OBSTRUCTION_REFINEMENT_PACKET_ONLY_NO_CLOSURE_OR_EMPIRICAL_VALIDATION"
+        "PREPARE_QFT_GR_STRESS_ENERGY_CONSERVATION_WITNESS_PACKET_ONLY_"
+        "NO_WITNESS_CONSTRUCTION_OR_SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
     assert current_active_workstream["closeout_criteria_count"] == "4"
@@ -3304,7 +3304,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["attempt_result_reviewed"] == "yes"
     assert current_active_workstream["obstruction_result_accepted"] == "yes"
     assert current_active_workstream["refinement_packet_preparation_authorized"] == "yes"
-    assert current_active_workstream["refinement_packet_prepared"] == "no"
+    assert current_active_workstream["obstruction_refinement_packet_prepared"] == "yes"
+    assert current_active_workstream["primary_missing_condition"] == "conservation"
+    assert current_active_workstream["primary_obstruction_solved"] == "no"
+    assert current_active_workstream["conservation_witness_packet_preparation_authorized"] == "yes"
+    assert current_active_workstream["conservation_witness_packet_prepared"] == "no"
     assert current_active_workstream["release_packet_assembled"] == "no"
     assert current_active_workstream["public_release_completion_authorized"] == "no"
     assert current_active_workstream["master_action_promotion_authorized"] == "no"

@@ -1,0 +1,181 @@
+{
+  "acceptance_criteria": {
+    "accepted_obstruction_preserved": true,
+    "consumes_expected_result_review": true,
+    "exactly_one_next_target_selected": true,
+    "exactly_one_primary_obstruction_selected": true,
+    "full_missing_condition_menu_preserved": true,
+    "result_review_classification_expected": true,
+    "result_review_outcome_expected": true,
+    "result_review_schema_expected": true,
+    "result_review_selected_this_packet": true,
+    "row_structure_complete": true
+  },
+  "accepted": true,
+  "accepted_obstruction_classification": "qft_gr_conserved_renormalized_source_witness_obstruction_identified_requires_refinement",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "Conservation is the primary obstruction before Bianchi compatibility and GR source admissibility can be tested.",
+      "target": "prepare_qft_gr_stress_energy_conservation_witness_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Finiteness remains on the menu but is not selected as the first bottleneck in this packet.",
+      "target": "prepare_qft_gr_renormalized_expectation_finiteness_witness_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Bianchi compatibility depends on conservation evidence.",
+      "target": "prepare_qft_gr_bianchi_compatibility_witness_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Refinement packet preparation does not close the QFT-GR seam.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Public submission is not authorized by this refinement packet.",
+      "target": "authorize_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-05-22T00:00:00Z",
+  "completed_witness_constructed": false,
+  "consumes_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt_result_review": "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_ATTEMPT_RESULT_REVIEW_v0",
+  "consumes_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt_result_review_pointer": "formal/docs/release/QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_ATTEMPT_RESULT_REVIEW_20260525_v0.json",
+  "empirical_validation_claimed": false,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "missing_condition_menu": [
+    "finiteness",
+    "renormalization_scope",
+    "state_expectation_meaning",
+    "conservation",
+    "Bianchi_compatibility",
+    "classical_source_admissibility",
+    "Einstein_coupling_boundary",
+    "weak_curvature_or_Poisson_recovery"
+  ],
+  "next_action_scope": "PREPARE_QFT_GR_STRESS_ENERGY_CONSERVATION_WITNESS_PACKET_ONLY_NO_WITNESS_CONSTRUCTION_OR_SEAM_CLOSURE",
+  "non_claim_boundary": "This packet refines the accepted QFT-GR witness obstruction by selecting conservation as the primary missing condition and authorizing only a conservation witness packet. It does not solve the obstruction, construct a conserved renormalized source, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "outcome_id": "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_OBSTRUCTION_REFINEMENT_PACKET_PREPARED_WITH_NO_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION",
+  "packet_classification": "qft_gr_conserved_renormalized_source_witness_obstruction_refinement_packet_prepared_primary_conservation_obstruction_no_closure_or_empirical_validation",
+  "packet_classification_count": 1,
+  "packet_id": "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_OBSTRUCTION_REFINEMENT_PACKET_v0",
+  "prepared": true,
+  "primary_missing_condition": "conservation",
+  "primary_obstruction_id": "qft_gr_primary_obstruction_covariant_conservation_v0",
+  "primary_obstruction_solved": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "refinement_rows": [
+    {
+      "available_repo_evidence": "renormalized-expectation semantics surface states the obligation",
+      "claim_ceiling": "obstruction_refinement_packet_only_no_witness_construction_no_qft_gr_closure",
+      "current_status": "candidate expectation finiteness not discharged",
+      "failure_mode_if_unresolved": "without finiteness, conservation and source admissibility cannot be meaningful source claims",
+      "missing_condition": "finiteness",
+      "next_bounded_action": "not selected as primary before conservation witness packet",
+      "obstruction_id": "qft_gr_obstruction_finiteness_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_RenormalizedExpectationValueSemantics",
+      "required_future_proof_object": "bounded finiteness witness for <T_mu_nu>_ren in the declared scope",
+      "required_physics_assumption": "renormalization prescription supplies finite expectation values for the selected state class"
+    },
+    {
+      "available_repo_evidence": "renormalization-scope packet fields and expectation-value semantics",
+      "claim_ceiling": "obstruction_refinement_packet_only_no_witness_construction_no_qft_gr_closure",
+      "current_status": "scope is declared but not promoted to a solved scheme",
+      "failure_mode_if_unresolved": "without scope adequacy, finiteness and conservation evidence remain scheme-relative",
+      "missing_condition": "renormalization_scope",
+      "next_bounded_action": "not selected as primary before conservation witness packet",
+      "obstruction_id": "qft_gr_obstruction_renormalization_scope_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_RenormalizedExpectationValueSemantics",
+      "required_future_proof_object": "bounded renormalization-scope adequacy witness",
+      "required_physics_assumption": "selected renormalization scope is physically meaningful for the target state class"
+    },
+    {
+      "available_repo_evidence": "state-expectation functional semantics surface",
+      "claim_ceiling": "obstruction_refinement_packet_only_no_witness_construction_no_qft_gr_closure",
+      "current_status": "state expectation semantics are prerequisites, not a completed witness",
+      "failure_mode_if_unresolved": "without meaning, the stress-energy object is not an admissible witness candidate",
+      "missing_condition": "state_expectation_meaning",
+      "next_bounded_action": "not selected as primary before conservation witness packet",
+      "obstruction_id": "qft_gr_obstruction_state_expectation_meaning_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_StateExpectationFunctionalSemantics",
+      "required_future_proof_object": "bounded state-expectation meaningfulness witness",
+      "required_physics_assumption": "state class admits the declared renormalized stress-energy expectation"
+    },
+    {
+      "available_repo_evidence": "covariant-conservation obligation semantics plus attempt obstruction findings",
+      "claim_ceiling": "obstruction_refinement_packet_only_no_witness_construction_no_qft_gr_closure",
+      "current_status": "primary obstruction selected; covariant conservation is not discharged for <T_mu_nu>_ren",
+      "failure_mode_if_unresolved": "without conservation, Bianchi compatibility and classical GR source admissibility remain blocked",
+      "missing_condition": "conservation",
+      "next_bounded_action": "prepare_qft_gr_stress_energy_conservation_witness_packet",
+      "obstruction_id": "qft_gr_primary_obstruction_covariant_conservation_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_CovariantConservationObligationSemantics",
+      "required_future_proof_object": "bounded covariant-conservation witness for the renormalized stress-energy expectation",
+      "required_physics_assumption": "renormalized expectation lies in a state/scope where covariant divergence is meaningful and can vanish"
+    },
+    {
+      "available_repo_evidence": "Bianchi-compatibility obligation semantics surface",
+      "claim_ceiling": "obstruction_refinement_packet_only_no_witness_construction_no_qft_gr_closure",
+      "current_status": "depends on conservation and remains unclosed",
+      "failure_mode_if_unresolved": "without Bianchi compatibility, Einstein coupling cannot be interpreted as a GR source bridge",
+      "missing_condition": "Bianchi_compatibility",
+      "next_bounded_action": "deferred until conservation witness packet is reviewed",
+      "obstruction_id": "qft_gr_obstruction_bianchi_compatibility_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_BianchiCompatibilityObligationSemantics",
+      "required_future_proof_object": "bounded Bianchi-compatibility witness after conservation evidence",
+      "required_physics_assumption": "candidate source can satisfy the Bianchi boundary for Einstein coupling"
+    },
+    {
+      "available_repo_evidence": "classical-source admissibility semantics surface",
+      "claim_ceiling": "obstruction_refinement_packet_only_no_witness_construction_no_qft_gr_closure",
+      "current_status": "classical admissibility remains unclaimed",
+      "failure_mode_if_unresolved": "without admissibility, the candidate cannot serve as the GR source object",
+      "missing_condition": "classical_source_admissibility",
+      "next_bounded_action": "deferred until conservation and Bianchi boundaries are review-accepted",
+      "obstruction_id": "qft_gr_obstruction_classical_source_admissibility_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_ClassicalSourceAdmissibilitySemantics",
+      "required_future_proof_object": "bounded classical-source admissibility witness",
+      "required_physics_assumption": "renormalized expectation is admissible as a classical tensor source in the target regime"
+    },
+    {
+      "available_repo_evidence": "Einstein-coupling obligation semantics surface",
+      "claim_ceiling": "obstruction_refinement_packet_only_no_witness_construction_no_qft_gr_closure",
+      "current_status": "coupling remains only a boundary check",
+      "failure_mode_if_unresolved": "without this boundary, source admissibility cannot be connected to Einstein-side interpretation",
+      "missing_condition": "Einstein_coupling_boundary",
+      "next_bounded_action": "deferred; no semiclassical Einstein equation derivation authorized",
+      "obstruction_id": "qft_gr_obstruction_einstein_coupling_boundary_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_EinsteinCouplingObligationSemantics",
+      "required_future_proof_object": "bounded Einstein-coupling boundary witness after source admissibility",
+      "required_physics_assumption": "semiclassical coupling boundary is meaningful without deriving the full equation"
+    },
+    {
+      "available_repo_evidence": "weak-curvature and Poisson-recovery obligation semantics surfaces",
+      "claim_ceiling": "obstruction_refinement_packet_only_no_witness_construction_no_qft_gr_closure",
+      "current_status": "recovery remains only a boundary check",
+      "failure_mode_if_unresolved": "without recovery evidence, the candidate lacks this limited regime check",
+      "missing_condition": "weak_curvature_or_Poisson_recovery",
+      "next_bounded_action": "deferred; no empirical validation authorized",
+      "obstruction_id": "qft_gr_obstruction_weak_curvature_poisson_recovery_v0",
+      "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_PoissonRecoveryObligationSemantics",
+      "required_future_proof_object": "bounded recovery-boundary witness after source admissibility",
+      "required_physics_assumption": "target regime admits a weak-curvature or Poisson comparison map"
+    }
+  ],
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "schema_id": "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_OBSTRUCTION_REFINEMENT_PACKET_20260525_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "prepare_qft_gr_stress_energy_conservation_witness_packet",
+  "selected_next_target_kind": "qft_gr_stress_energy_conservation_witness_packet_preparation",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "witness_constructed": false
+}
