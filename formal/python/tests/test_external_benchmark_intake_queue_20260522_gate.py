@@ -175,7 +175,7 @@ def test_authority_surfaces_have_lightweight_pointers_only_and_live_target_uncha
     ]
     expected_live = (
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "review_v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure_result"
+        "prepare_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement"
     )
 
     for path in [STATE_PATH, ROADMAP_PATH, INVENTORY_PATH]:

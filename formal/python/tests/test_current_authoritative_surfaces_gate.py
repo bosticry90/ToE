@@ -310,10 +310,10 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-        "CURRENT_LIVE_NEXT_TARGET_v0: review_v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure_result",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: execute_v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure",
-        "ACTIVE_LANE_v0: v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Release/V01RetainedTranche004BlockerMovementRegistrationAfterSourceMapClosure.lean",
+        "CURRENT_LIVE_NEXT_TARGET_v0: prepare_v01_alpha_dependency_remediation_closeout_after_tranche_004_movement",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure_result",
+        "ACTIVE_LANE_v0: v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure_result_review",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Release/V01RetainedTranche004BlockerMovementRegistrationAfterSourceMapClosureResultReview.lean",
         "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_PREPARED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION",
         "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_ACCEPTS_REMEDIATION_PROGRAM_AND_SELECTS_NEXT_BOUNDED_ROUTE_ONLY",
         "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_PREPARED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION",
@@ -339,6 +339,7 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
         "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_PACKET_AFTER_SOURCE_MAP_CLOSURE_PREPARED_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION",
         "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BLOCKER_MOVEMENT_EXECUTION_ONLY",
         "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTERED_AFTER_SOURCE_MAP_CLOSURE_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION",
+        "V01_ALPHA_RETAINED_TRANCHE_004_BLOCKER_MOVEMENT_REGISTRATION_RESULT_REVIEW_ACCEPTS_DOCUMENTED_SOURCE_MAP_CLOSED_NONBLOCKING_STATUS_AND_AUTHORIZES_DEPENDENCY_REMEDIATION_CLOSEOUT_PREPARATION_ONLY",
         "CURRENT_LIVE_NEXT_TARGET_v0: prepare_qm_stat_entropy_assumption_reduction_candidate_selection",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_qm_stat_entropy_log_domain_reduction_bounded_attack",
         "ACTIVE_LANE_v0: post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection",
