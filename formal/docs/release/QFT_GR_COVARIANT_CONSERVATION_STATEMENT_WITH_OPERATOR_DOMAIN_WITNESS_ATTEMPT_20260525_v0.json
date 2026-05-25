@@ -1,0 +1,109 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "consumes_expected_result_review": true,
+    "exactly_one_classification_selected": true,
+    "exactly_one_next_target_selected": true,
+    "obstruction_distinguished_from_construction_and_inconclusive": true,
+    "review_classification_expected": true,
+    "review_outcome_expected": true,
+    "review_schema_expected": true,
+    "review_selected_this_execution": true,
+    "statement_formulation_accepted": true
+  },
+  "accepted": true,
+  "attempt_id": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_WITNESS_ATTEMPT_v0",
+  "attempt_scope": "EXECUTE_BOUNDED_QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_WITNESS_ATTEMPT_ONLY",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The bounded witness attempt result must be reviewed before refinement or assumption reduction routing.",
+      "target": "review_qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Refinement requires acceptance of this attempt result review.",
+      "target": "prepare_qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Expectation-domain refinement is not selected before result review.",
+      "target": "prepare_qft_gr_renormalized_expectation_domain_conservation_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "A bounded witness-attempt obstruction does not close QFT-GR.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Public submission is not authorized by this bounded attempt.",
+      "target": "authorize_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-05-25T00:00:00Z",
+  "classification_options": [
+    "qft_gr_covariant_conservation_statement_with_operator_domain_witness_constructed_pending_result_review",
+    "qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_identified_requires_refinement",
+    "qft_gr_covariant_conservation_statement_with_operator_domain_inconclusive_requires_assumption_reduction"
+  ],
+  "classification_rows": [
+    {
+      "classification": "qft_gr_covariant_conservation_statement_with_operator_domain_witness_constructed_pending_result_review",
+      "meaning": "A bounded conservation witness under the accepted operator-domain structure was constructed pending result review.",
+      "selected": false
+    },
+    {
+      "classification": "qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_identified_requires_refinement",
+      "meaning": "The statement is formulated, but the repo still lacks the proof object needed to witness it for the candidate source.",
+      "selected": true
+    },
+    {
+      "classification": "qft_gr_covariant_conservation_statement_with_operator_domain_inconclusive_requires_assumption_reduction",
+      "meaning": "The attempt cannot decide the statement without reducing assumptions.",
+      "selected": false
+    }
+  ],
+  "conservation_witness_constructed": false,
+  "constructed_witness_result": false,
+  "consumed_result_review_classification": "qft_gr_covariant_conservation_statement_with_operator_domain_packet_result_review_accepts_statement_formulation_and_authorizes_bounded_conservation_witness_attempt_only",
+  "consumed_result_review_outcome_id": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_PACKET_RESULT_REVIEW_ACCEPTS_STATEMENT_FORMULATION_AND_AUTHORIZES_BOUNDED_CONSERVATION_WITNESS_ATTEMPT_ONLY",
+  "consumes_qft_gr_covariant_conservation_statement_with_operator_domain_packet_result_review": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_PACKET_RESULT_REVIEW_v0",
+  "consumes_qft_gr_covariant_conservation_statement_with_operator_domain_packet_result_review_pointer": "formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_PACKET_RESULT_REVIEW_20260525_v0.json",
+  "covariant_conservation_statement_attempted": true,
+  "covariant_conservation_statement_proved": false,
+  "covariant_conservation_statement_with_operator_domain_witness_attempt_executed": true,
+  "covariant_conservation_statement_with_operator_domain_witness_constructed": false,
+  "empirical_validation_claimed": false,
+  "executed": true,
+  "inconclusive_result": false,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_WITNESS_ATTEMPT_RESULT_ONLY_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION",
+  "non_claim_boundary": "This execution records an obstruction in the bounded witness attempt for the formulated covariant conservation statement under the accepted operator-domain structure. It does not construct a conservation witness, claim source admissibility or Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "obstruction_findings": [
+    "The accepted packet formulates a bounded covariant-divergence-zero statement under the operator-domain structure.",
+    "No repo-local theorem currently proves the formulated statement for the candidate renormalized stress-energy source.",
+    "The candidate source remains linked to source admissibility and Bianchi compatibility only as downstream dependencies, not as established consequences."
+  ],
+  "obstruction_identified_result": true,
+  "outcome_id": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_WITNESS_ATTEMPT_EXECUTED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION",
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "result_classification": "qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_identified_requires_refinement",
+  "result_classification_count": 1,
+  "schema_id": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_WITNESS_ATTEMPT_20260525_v0",
+  "scientific_question": "Can the formulated covariant conservation statement under the accepted operator-domain structure be witnessed for the candidate QFT-GR stress-energy source?",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "review_qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt_result",
+  "selected_next_target_kind": "qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt_result_review",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claim_limited_to_bounded_result": true,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false
+}
