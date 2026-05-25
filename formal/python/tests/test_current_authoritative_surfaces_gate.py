@@ -310,10 +310,11 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-        "CURRENT_LIVE_NEXT_TARGET_v0: review_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout",
-        "ACTIVE_LANE_v0: v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_preparation",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Release/V01ReleaseReadinessAdjudicationAfterDependencyRemediationCloseoutPacket.lean",
+        "CURRENT_LIVE_NEXT_TARGET_v0: execute_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result",
+        "ACTIVE_LANE_v0: v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result_review",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Release/V01ReleaseReadinessAdjudicationAfterDependencyRemediationCloseoutPacketResultReview.lean",
+        "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_ACCEPTS_CRITICIZABILITY_ONLY_PACKET_AND_AUTHORIZES_READINESS_ADJUDICATION_EXECUTION_ONLY",
         "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_PREPARED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION",
         "V01_ALPHA_RETAINED_TRANCHE_004_FUTURE_REMEDIATION_PROGRAM_RESULT_REVIEW_ACCEPTS_REMEDIATION_PROGRAM_AND_SELECTS_NEXT_BOUNDED_ROUTE_ONLY",
         "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_PREPARED_WITH_NO_SOURCE_MAP_CLOSURE_OR_RELEASE_PROMOTION",

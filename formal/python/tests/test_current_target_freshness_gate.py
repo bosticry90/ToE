@@ -1109,6 +1109,9 @@ V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_T
 V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_PACKET_RESULT_REVIEW_TARGET = (
     "review_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result"
 )
+V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_EXECUTION_TARGET = (
+    "execute_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout"
+)
 V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_TOKEN = (
     "V01_ALPHA_RETAINED_TRANCHE_004_RELEASE_READINESS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_RELEASE_HOLD_AND_AUTHORIZES_RELEASE_HOLD_PACKET_PREPARATION_ONLY"
 )
@@ -1138,13 +1141,13 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_preparation"
+    "v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result_review"
 )
 PREVIOUS_TARGET = (
-    V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_TARGET
+    V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_PACKET_RESULT_REVIEW_TARGET
 )
 LIVE_TARGET = (
-    V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_PACKET_RESULT_REVIEW_TARGET
+    V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_EXECUTION_TARGET
 )
 LIVE_TARGET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1152,7 +1155,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Release"
-    / "V01ReleaseReadinessAdjudicationAfterDependencyRemediationCloseoutPacket.lean"
+    / "V01ReleaseReadinessAdjudicationAfterDependencyRemediationCloseoutPacketResultReview.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1971,7 +1974,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_v0"
+        == "v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result_review_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2366,7 +2369,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "criticizability_readiness_packet_result_review_after_dependency_remediation_closeout"
+        "criticizability_readiness_adjudication_execution_after_packet_result_review"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -2420,7 +2423,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["success_conditions_defined"] == "yes"
     assert current_active_workstream["current_packet_lane"] == "release_control_plane"
     assert current_active_workstream["substantive_future_work_lane"] == (
-        "bounded_criticizability_readiness_packet_result_review_after_dependency_remediation_closeout"
+        "bounded_criticizability_readiness_adjudication_execution_after_dependency_remediation_closeout"
     )
     assert current_active_workstream["source_map_witness_chain_research_packet_prepared"] == "yes"
     assert current_active_workstream["research_packet_prepared_only"] == "yes"
@@ -3223,9 +3226,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["criticizability_readiness_question_answered"] == "no"
     assert current_active_workstream["criticizability_readiness_decision_made"] == "no"
     assert current_active_workstream["criticizability_readiness_status"] == (
-        "criticizability_readiness_adjudication_packet_prepared_pending_result_review"
+        "criticizability_readiness_packet_result_review_accepted_execution_authorized_only"
     )
     assert current_active_workstream["criticizability_readiness_result_review_required"] == "yes"
+    assert current_active_workstream["criticizability_readiness_packet_result_reviewed"] == "yes"
+    assert current_active_workstream["criticizability_readiness_packet_accepted"] == "yes"
+    assert (
+        current_active_workstream["criticizability_readiness_adjudication_execution_authorized"]
+        == "yes"
+    )
+    assert current_active_workstream["criticizability_readiness_adjudication_executed"] == "no"
     assert current_active_workstream["criticizability_readiness_firewall_defined"] == "yes"
     assert current_active_workstream["public_submission_authorized"] == "no"
     assert current_active_workstream["scientific_validation_claimed"] == "no"
@@ -3244,9 +3254,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["track2_control_clearance_only"] == "yes"
     assert current_active_workstream["track2_scientific_evidence_claimed_from_track1"] == "no"
+    assert current_active_workstream["track2_remains_deferred"] == "yes"
+    assert current_active_workstream["track2_selected_after_this_review"] == "no"
     assert current_active_workstream["next_action_scope"] == (
-        "REVIEW_V01_ALPHA_CRITICIZABILITY_READINESS_ADJUDICATION_PACKET_"
-        "RESULT_ONLY_NO_RELEASE_ASSEMBLY_OR_SCIENTIFIC_VALIDATION"
+        "EXECUTE_V01_ALPHA_CRITICIZABILITY_READINESS_ADJUDICATION_ONLY_NO_"
+        "RELEASE_ASSEMBLY_OR_SCIENTIFIC_VALIDATION"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
     assert current_active_workstream["closeout_criteria_count"] == "4"

@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "v0.1-alpha criticizability-readiness adjudication packet prepared after dependency-remediation closeout, with no QFT-GR seam closure, release readiness marking, release assembly, scientific validation, or release promotion"
+        "v0.1-alpha criticizability-readiness adjudication packet result review accepted after dependency-remediation closeout, with no readiness decision, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
-        "V01-ALPHA-CRITICIZABILITY-READINESS-ADJUDICATION_PACKET_PREPARED_PENDING_RESULT_REVIEW_SEAM_HELD"
+        "V01-ALPHA-CRITICIZABILITY-READINESS-ADJUDICATION_PACKET_RESULT_REVIEW_ACCEPTED_EXECUTION_ONLY_SEAM_HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result"
+        "execute_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the criticizability-readiness packet. -/
+/-- Previous live target consumed by the criticizability-readiness packet result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout"
-
-/-- Current live target after criticizability-readiness packet preparation. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result"
+
+/-- Current live target after criticizability-readiness packet result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "execute_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -241,7 +241,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "review_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result"
+        "execute_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
