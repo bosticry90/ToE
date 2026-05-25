@@ -1,0 +1,273 @@
+{
+  "acceptance_criteria": {
+    "all_six_dependency_tranches_documented_nonblocking": true,
+    "closeout_result_review_classification_expected": true,
+    "closeout_result_review_outcome_expected": true,
+    "closeout_result_review_schema_expected": true,
+    "closeout_result_review_selected_this_packet": true,
+    "consumes_expected_closeout_result_review": true,
+    "dependency_remediation_closeout_accepted": true,
+    "does_not_discharge_debt_or_promote_science_program": true,
+    "exactly_one_next_target_selected": true,
+    "forbidden_effects_all_false": true,
+    "no_release_assembly_or_qft_gr_seam_closure": true,
+    "packet_question_and_boundary_defined": true,
+    "release_readiness_preparation_authorized_but_not_marked": true
+  },
+  "accepted": true,
+  "all_dependency_tranches_nonblocking": true,
+  "axiom_spec_backed_debt_reduced": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The criticizability-readiness adjudication packet is prepared; the next bounded step is packet result review only.",
+      "target": "review_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Execution requires a separate packet result-review acceptance.",
+      "target": "execute_v01_alpha_criticizability_readiness_adjudication_after_dependency_remediation_closeout"
+    },
+    {
+      "decision": "deferred_until_result_review",
+      "reason": "The QFT-GR witness lane may be prepared only after the control packet result review, and may claim no scientific support from criticizability clearance.",
+      "target": "construct_or_refute_qft_gr_conserved_renormalized_stress_energy_source_witness"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Release assembly is outside criticizability packet preparation.",
+      "target": "assemble_v01_alpha_release_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Readiness marking requires separate adjudication and review.",
+      "target": "mark_v01_alpha_release_ready"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "QFT-GR seam closure remains scientifically separate.",
+      "target": "close_qft_gr_seam"
+    }
+  ],
+  "canonical_toe_claimed": false,
+  "captured_at_utc": "2026-05-22T00:00:00Z",
+  "consumed_dependency_remediation_closeout_result_review_classification": "dependency_remediation_closeout_accepted_all_tranches_documented_nonblocking_release_readiness_adjudication_preparation_only",
+  "consumed_dependency_remediation_closeout_result_review_outcome_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_RESULT_REVIEW_ACCEPTS_ALL_TRANCHES_DOCUMENTED_NONBLOCKING_AND_AUTHORIZES_RELEASE_READINESS_ADJUDICATION_PREPARATION_ONLY",
+  "consumed_dependency_remediation_closeout_result_review_schema_id": "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_RESULT_REVIEW_20260523_v0",
+  "consumes_dependency_remediation_closeout_result_review": "V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_RESULT_REVIEW_v0",
+  "consumes_dependency_remediation_closeout_result_review_pointer": "formal/docs/release/V01_ALPHA_DEPENDENCY_REMEDIATION_CLOSEOUT_AFTER_TRANCHE_004_MOVEMENT_RESULT_REVIEW_20260523_v0.json",
+  "criticizability_readiness_adjudication_packet_prepared": true,
+  "criticizability_readiness_adjudication_prepared": true,
+  "criticizability_readiness_decision_made": false,
+  "criticizability_readiness_firewall_defined": true,
+  "criticizability_readiness_question": "Is v0.1-alpha eligible for criticizability-readiness adjudication after dependency-remediation closeout?",
+  "criticizability_readiness_question_answered": false,
+  "criticizability_readiness_question_prepared": true,
+  "criticizability_readiness_result_review_required": true,
+  "criticizability_readiness_status": "criticizability_readiness_adjudication_packet_prepared_pending_result_review",
+  "dependency_remediation_closeout_accepted": true,
+  "dependency_remediation_closeout_status": "dependency_remediation_closeout_accepted_all_tranches_documented_nonblocking",
+  "dependency_remediation_queue_closed": true,
+  "dependency_remediation_queue_exhausted": true,
+  "documented_dependency_nonblocking_tranche_count": 6,
+  "documented_dependency_nonblocking_tranches": [
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-001",
+      "status": "documented_dependency_nonblocking"
+    },
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-002",
+      "status": "documented_dependency_nonblocking"
+    },
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-003",
+      "status": "documented_dependency_nonblocking"
+    },
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-004",
+      "status": "documented_source_map_closed_nonblocking",
+      "tranche_id": "V01-ALPHA-DEP-REM-TRANCHE-004"
+    },
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-005",
+      "status": "documented_dependency_nonblocking"
+    },
+    {
+      "finding_id": "V01-ALPHA-DEP-REM-006",
+      "status": "documented_dependency_nonblocking"
+    }
+  ],
+  "empirical_validation_authorized": false,
+  "empirical_validation_claimed": false,
+  "evidence_chain": [
+    {
+      "chain_id": "witness_chain_construction_packet",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_20260523_v0.json",
+      "status": "prepared_for_bounded_witness_chain_construction",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapWitnessChainConstructionPacketFromResearchCandidate.lean"
+    },
+    {
+      "chain_id": "witness_chain_construction_packet_result_review",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_RESULT_REVIEW_20260523_v0.json",
+      "status": "accepted_for_bounded_witness_chain_construction_execution",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapWitnessChainConstructionPacketFromResearchCandidateResultReview.lean"
+    },
+    {
+      "chain_id": "witness_chain_construction_execution",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_FROM_RESEARCH_CANDIDATE_20260523_v0.json",
+      "status": "witness_chain_constructed_pending_result_review",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapWitnessChainConstructionFromResearchCandidate.lean"
+    },
+    {
+      "chain_id": "witness_chain_construction_result_review",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_RESULT_REVIEW_20260523_v0.json",
+      "status": "accepted_for_source_map_authorization_adjudication_packet_preparation",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapWitnessChainConstructionResultReview.lean"
+    },
+    {
+      "chain_id": "source_map_authorization_adjudication_execution",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_20260523_v0.json",
+      "status": "requirements_satisfied_pending_result_review",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapAuthorizationAdjudication.lean"
+    },
+    {
+      "chain_id": "source_map_authorization_adjudication_result_review",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_AUTHORIZATION_ADJUDICATION_RESULT_REVIEW_20260523_v0.json",
+      "status": "accepted_for_source_map_closure_adjudication_packet_preparation",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapAuthorizationAdjudicationResultReview.lean"
+    },
+    {
+      "chain_id": "source_map_closure_adjudication_execution",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_20260523_v0.json",
+      "status": "source_map_closure_authorized_pending_result_review",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapClosureAdjudication.lean"
+    },
+    {
+      "chain_id": "source_map_closure_adjudication_result_review",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_ADJUDICATION_RESULT_REVIEW_20260523_v0.json",
+      "status": "accepted_for_source_map_closure_registration_packet_preparation",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapClosureAdjudicationResultReview.lean"
+    },
+    {
+      "chain_id": "source_map_closure_registration_result_review",
+      "report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_RESULT_REVIEW_20260523_v0.json",
+      "status": "registered_source_map_closure_accepted_blocker_movement_packet_preparation_only",
+      "surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapClosureRegistrationResultReview.lean"
+    }
+  ],
+  "evidence_chain_count": 9,
+  "execution_classification_option_count": 3,
+  "execution_classification_options": [
+    "v01_alpha_criticizability_readiness_eligible_pending_result_review",
+    "v01_alpha_criticizability_readiness_not_eligible_requires_refinement",
+    "v01_alpha_criticizability_readiness_inconclusive_requires_gap_review"
+  ],
+  "forbidden_effect_status": {
+    "canonical_toe_claimed": false,
+    "claim_promotion_authorized": false,
+    "empirical_validation_authorized": false,
+    "empirical_validation_claimed": false,
+    "lean_theorem_debt_discharged": false,
+    "master_action_promotion_authorized": false,
+    "phase2_authorized": false,
+    "proof_debt_reduced": false,
+    "public_submission_authorized": false,
+    "publication_authorized": false,
+    "qft_gr_seam_closed": false,
+    "qft_gr_seam_closure_authorized": false,
+    "qft_gr_seam_closure_claimed": false,
+    "qft_gr_source_map_semantic_closure_claimed": false,
+    "readiness_marking_authorized": false,
+    "release_assembly_authorized": false,
+    "release_packet_assembled": false,
+    "retained_assumptions_discharged": false,
+    "scientific_validation_claimed": false,
+    "semiclassical_einstein_equation_derivation_claimed": false,
+    "theorem_discharge_authorized": false,
+    "track2_scientific_evidence_claimed_from_track1": false,
+    "v01_alpha_marked_ready": false
+  },
+  "lean_theorem_debt_discharged": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_V01_ALPHA_CRITICIZABILITY_READINESS_ADJUDICATION_PACKET_RESULT_ONLY_NO_RELEASE_ASSEMBLY_OR_SCIENTIFIC_VALIDATION",
+  "non_claim_boundary": "The v0.1-alpha criticizability-readiness adjudication packet prepares only the question of eligibility for bounded review after dependency-remediation closeout. It does not mark release readiness, assemble release, authorize public submission, close the QFT-GR seam, derive the semiclassical Einstein equation, discharge theorem/proof debt or retained assumptions, authorize Phase 2, authorize empirical validation, authorize publication, promote the master action, make Track 2 scientific evidence from Track 1, or claim external truth.",
+  "outcome_id": "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_PACKET_PREPARED_CRITICIZABILITY_ONLY_NO_RELEASE_ASSEMBLY_OR_SEAM_PROMOTION",
+  "packet_classification": "criticizability_readiness_adjudication_packet_prepared_after_dependency_remediation_closeout_no_release_assembly_or_seam_promotion",
+  "packet_classification_count": 1,
+  "packet_id": "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_PACKET_v0",
+  "packet_scope": "PREPARE_V01_ALPHA_CRITICIZABILITY_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_ONLY_NO_RELEASE_ASSEMBLY_OR_SCIENTIFIC_VALIDATION",
+  "phase2_authorized": false,
+  "preparation_criteria": [
+    {
+      "criterion": "dependency_remediation_closeout_accepted",
+      "evidence": "The closeout result review accepted all six dependency tranches as documented nonblocking at the control layer.",
+      "status": "satisfied"
+    },
+    {
+      "criterion": "criticizability_question_scoped",
+      "evidence": "Is v0.1-alpha eligible for criticizability-readiness adjudication after dependency-remediation closeout?",
+      "status": "satisfied"
+    },
+    {
+      "criterion": "release_assembly_forbidden",
+      "evidence": "The packet prepares adjudication only and does not assemble release or mark readiness.",
+      "status": "preserved"
+    },
+    {
+      "criterion": "science_firewall_preserved",
+      "evidence": "Even if criticizability-readiness is accepted, the result authorizes only a bounded review/research next step, not public submission, release assembly, physics closure, claim promotion, or scientific validation.",
+      "status": "preserved"
+    }
+  ],
+  "preparation_criteria_count": 4,
+  "prepared": true,
+  "proof_debt_reduced": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_seam_closure_authorized": false,
+  "qft_gr_seam_closure_claimed": false,
+  "qft_gr_source_map_semantic_closure_claimed": false,
+  "readiness_marking_authorized": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "release_readiness_adjudication_packet_prepared": true,
+  "release_readiness_adjudication_preparation_authorized": true,
+  "release_readiness_adjudication_prepared": true,
+  "release_readiness_decision_status_before_packet": "release_readiness_adjudication_preparation_authorized_after_dependency_remediation_closeout_no_readiness_marking",
+  "release_readiness_eligible_for_adjudication": false,
+  "release_readiness_held": true,
+  "release_readiness_proceed_authorized": false,
+  "release_readiness_still_blocked": true,
+  "release_readiness_still_requires_separate_adjudication": true,
+  "required_boundary": "Even if criticizability-readiness is accepted, the result authorizes only a bounded review/research next step, not public submission, release assembly, physics closure, claim promotion, or scientific validation.",
+  "retained_assumptions_discharged": false,
+  "roadmap_update_required": true,
+  "schema_id": "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_PACKET_20260525_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "review_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result",
+  "selected_next_target_kind": "criticizability_readiness_packet_result_review_only",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derivation_claimed": false,
+  "source_map_closure_achieved": true,
+  "source_map_closure_external_truth_claimed": false,
+  "source_map_closure_registered": true,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "theorem_discharge_authorized": false,
+  "track2_control_clearance_only": true,
+  "track2_may_be_prepared_after_result_review": true,
+  "track2_qft_gr_witness_target": "construct_or_refute_qft_gr_conserved_renormalized_stress_energy_source_witness",
+  "track2_qft_gr_witness_target_deferred_until_result_review": true,
+  "track2_scientific_evidence_claimed_from_track1": false,
+  "tranche_001_status": "documented_dependency_nonblocking",
+  "tranche_002_status": "documented_dependency_nonblocking",
+  "tranche_003_status": "documented_dependency_nonblocking",
+  "tranche_004_cleared_for_release_readiness": false,
+  "tranche_004_status": "documented_source_map_closed_nonblocking",
+  "tranche_004_status_exact": "documented_source_map_closed_nonblocking",
+  "tranche_005_status": "documented_dependency_nonblocking",
+  "tranche_006_status": "documented_dependency_nonblocking",
+  "unresolved_dependency_remediation_tranche_count": 0,
+  "unresolved_dependency_remediation_tranches": [],
+  "v01_alpha_marked_ready": false
+}
