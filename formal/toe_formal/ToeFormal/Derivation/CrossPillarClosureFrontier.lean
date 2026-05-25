@@ -170,13 +170,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "Post-QFT-GR ladder selector consumes the ladder result review, hands back to cross-pillar target-map selection, and keeps the witness chain absent without source-map closure"
+        "QFT-GR conserved renormalized stress-energy source witness packet prepared as a bounded scientific question only, with no witness construction, Einstein-equation derivation, empirical validation, or QFT-GR seam closure"
       retained_blocker :=
-        "PHASE1-BLOCKER-QFTGR-SOURCE-MAP-WITNESS-CHAIN-RETAINED"
+        "PHASE1-BLOCKER-QFTGR-CONSERVED-RENORMALIZED-SOURCE-WITNESS-PENDING-RESULT-REVIEW"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "return_to_full_pillar_target_map_next_lane_selection"
+        "review_qft_gr_conserved_renormalized_stress_energy_source_witness_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "v0.1-alpha criticizability-readiness adjudication result review accepted eligibility and authorized QFT-GR witness packet preparation only, with no release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
+        "QFT-GR witness packet prepared after criticizability-readiness control clearance as packet preparation only, with no release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-PACKET-PREPARATION-AUTHORIZED-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_conserved_renormalized_stress_energy_source_witness_packet"
+        "review_qft_gr_conserved_renormalized_stress_energy_source_witness_packet_result"
       status := .retained }
   ]
 
@@ -222,13 +222,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the criticizability-readiness result review. -/
+/-- Previous live target consumed by the QFT-GR witness packet preparation. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_result"
-
-/-- Current live target after criticizability-readiness result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_conserved_renormalized_stress_energy_source_witness_packet"
+
+/-- Current live target after QFT-GR witness packet preparation. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_conserved_renormalized_stress_energy_source_witness_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -241,7 +241,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "prepare_qft_gr_conserved_renormalized_stress_energy_source_witness_packet"
+        "review_qft_gr_conserved_renormalized_stress_energy_source_witness_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
