@@ -1,0 +1,98 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "Bianchi_compatibility_dependency": "downstream only; Bianchi compatibility may consume an accepted conservation proof object later but is not claimed here",
+  "acceptance_criteria": {
+    "consumes_expected_result_review": true,
+    "exactly_one_next_target_selected": true,
+    "missing_proof_object_expected": true,
+    "required_fields_defined": true,
+    "result_review_classification_expected": true,
+    "result_review_outcome_expected": true,
+    "result_review_schema_expected": true,
+    "result_review_selected_this_packet": true,
+    "review_constructed_no_proof_or_witness": true,
+    "selected_obstruction_expected": true
+  },
+  "accepted": true,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The proof-object packet must be reviewed before any proof or witness attempt is authorized.",
+      "target": "review_qft_gr_covariant_conservation_proof_object_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Execution is not authorized by packet preparation.",
+      "target": "execute_qft_gr_covariant_conservation_proof_object_attempt"
+    },
+    {
+      "decision": "deferred",
+      "reason": "The broader conservation witness attempt remains blocked until proof-object packet review.",
+      "target": "execute_qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Proof-object packet preparation does not close QFT-GR.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Public submission is not authorized by this packet.",
+      "target": "authorize_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-05-25T00:00:00Z",
+  "claim_ceiling": "proof_object_packet_only_no_proof_construction_or_qft_gr_closure",
+  "conservation_proof_object_constructed": false,
+  "conservation_witness_constructed": false,
+  "consumes_qft_gr_covariant_conservation_proof_object_refinement_result_review": "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_OBSTRUCTION_REFINEMENT_PACKET_RESULT_REVIEW_v0",
+  "consumes_qft_gr_covariant_conservation_proof_object_refinement_result_review_pointer": "formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_OBSTRUCTION_REFINEMENT_PACKET_RESULT_REVIEW_20260525_v0.json",
+  "covariant_conservation_statement_to_be_proved": "candidate_stress_energy_source_in_prepared_operator_domain -> covariant_divergence candidate_stress_energy_source = 0",
+  "covariant_conservation_statement_with_operator_domain_witness_constructed": false,
+  "empirical_validation_claimed": false,
+  "failure_modes": [
+    "operator_domain_assumptions_insufficient_for_candidate_source_membership",
+    "renormalized_stress_energy_source_assumptions_do_not_stabilize_covariant_divergence",
+    "state_expectation_assumptions_do_not_support_derivative_exchange_or_weak_form",
+    "weak_strong_conservation_form_mismatch",
+    "missing_conservation_law_or_ward_identity_for_selected_source",
+    "Bianchi_compatibility_dependency_remains_unavailable_after_proof_object_review"
+  ],
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_PACKET_RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE",
+  "next_bounded_action": "review_qft_gr_covariant_conservation_proof_object_packet_result",
+  "non_claim_boundary": "This packet defines the bounded proof-object shape required for a future conservation attempt. It does not construct the proof object or conservation witness, claim source admissibility or Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "operator_domain_assumptions": "selected stress-energy object, state-expectation semantics, operator-domain membership, renormalization scope, and conservation-law premise are all available under one bounded theorem statement",
+  "outcome_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "packet_classification": "qft_gr_covariant_conservation_proof_object_packet_prepared_no_conservation_witness_or_seam_closure",
+  "packet_classification_count": 1,
+  "packet_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_PACKET_v0",
+  "prepared": true,
+  "prepares_proof_object_packet_only": true,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "renormalized_stress_energy_source_assumptions": "candidate renormalized stress-energy expectation is the selected source object and is admitted to the prepared operator domain",
+  "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_CovariantConservationStatementWithOperatorDomainWitnessAttempt",
+  "required_physics_assumptions": [
+    "renormalization prescription supports the selected source object",
+    "state-expectation semantics apply on the chosen domain",
+    "covariant derivative/divergence operator is the accepted operator-domain structure",
+    "any conservation law or Ward-identity premise is explicit and bounded"
+  ],
+  "schema_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_PACKET_20260525_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "review_qft_gr_covariant_conservation_proof_object_packet_result",
+  "selected_next_target_kind": "qft_gr_covariant_conservation_proof_object_packet_result_review",
+  "selected_obstruction": "post_operator_domain_statement_missing_conservation_proof_object",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "state_expectation_assumptions": "state expectation is meaningful on the selected state domain and compatible with the conservation statement form",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "target_proof_object": "conservation_proof_object_for_candidate_source_under_prepared_operator_domain",
+  "weak_strong_conservation_form": "bounded form selection required: strong covariant divergence zero or weak/distributional conservation must be fixed before execution"
+}
