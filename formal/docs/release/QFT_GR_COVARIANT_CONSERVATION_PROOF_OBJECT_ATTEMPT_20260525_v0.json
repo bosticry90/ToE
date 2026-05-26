@@ -1,0 +1,113 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "consumes_expected_result_review": true,
+    "exactly_one_classification_selected": true,
+    "exactly_one_next_target_selected": true,
+    "obstruction_distinguished_from_construction_and_inconclusive": true,
+    "proof_object_attempt_authorized": true,
+    "review_classification_expected": true,
+    "review_outcome_expected": true,
+    "review_schema_expected": true,
+    "review_selected_this_execution": true,
+    "selected_obstruction_preserved": true,
+    "target_proof_object_preserved": true
+  },
+  "accepted": true,
+  "attempt_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_v0",
+  "attempt_scope": "EXECUTE_BOUNDED_QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_ONLY",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The bounded proof-object attempt result must be reviewed before refinement or assumption-reduction routing.",
+      "target": "review_qft_gr_covariant_conservation_proof_object_attempt_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Refinement requires result-review acceptance of the obstruction classification.",
+      "target": "prepare_qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Assumption reduction is not selected before result review.",
+      "target": "prepare_qft_gr_covariant_conservation_proof_object_assumption_reduction_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "A bounded proof-object attempt obstruction does not close QFT-GR.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Public submission is not authorized by this bounded attempt.",
+      "target": "authorize_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-05-25T00:00:00Z",
+  "classification_options": [
+    "qft_gr_covariant_conservation_proof_object_constructed_pending_result_review",
+    "qft_gr_covariant_conservation_proof_object_obstruction_identified_requires_refinement",
+    "qft_gr_covariant_conservation_proof_object_inconclusive_requires_assumption_reduction"
+  ],
+  "classification_rows": [
+    {
+      "classification": "qft_gr_covariant_conservation_proof_object_constructed_pending_result_review",
+      "meaning": "A conservation proof object was constructed pending result review.",
+      "selected": false
+    },
+    {
+      "classification": "qft_gr_covariant_conservation_proof_object_obstruction_identified_requires_refinement",
+      "meaning": "The proof-object attempt found that the prepared theorem shape still lacks a repo-local proof object under the current assumptions.",
+      "selected": true
+    },
+    {
+      "classification": "qft_gr_covariant_conservation_proof_object_inconclusive_requires_assumption_reduction",
+      "meaning": "The attempt cannot distinguish construction from obstruction without assumption reduction.",
+      "selected": false
+    }
+  ],
+  "conservation_proof_object_constructed": false,
+  "conservation_witness_constructed": false,
+  "conservation_witness_upgraded_by_execution": false,
+  "constructed_proof_object_result": false,
+  "consumed_result_review_classification": "qft_gr_covariant_conservation_proof_object_packet_result_review_accepts_proof_object_preparation_and_authorizes_bounded_proof_object_attempt_only",
+  "consumed_result_review_outcome_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_PACKET_RESULT_REVIEW_ACCEPTS_PROOF_OBJECT_PREPARATION_AND_AUTHORIZES_BOUNDED_PROOF_OBJECT_ATTEMPT_ONLY",
+  "consumes_qft_gr_covariant_conservation_proof_object_packet_result_review": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_PACKET_RESULT_REVIEW_v0",
+  "consumes_qft_gr_covariant_conservation_proof_object_packet_result_review_pointer": "formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_PACKET_RESULT_REVIEW_20260525_v0.json",
+  "covariant_conservation_statement_to_be_proved": "candidate_stress_energy_source_in_prepared_operator_domain -> covariant_divergence candidate_stress_energy_source = 0",
+  "empirical_validation_claimed": false,
+  "executed": true,
+  "inconclusive_result": false,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This execution records an obstruction in the bounded conservation proof-object attempt. It does not construct a proof object or conservation witness, claim source admissibility or Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "obstruction_findings": [
+    "The result review authorizes a bounded proof-object attempt only.",
+    "The target theorem shape is available as a prepared statement, not as a constructed proof object.",
+    "No repo-local Lean theorem currently proves the covariant-divergence-zero statement for the candidate source under the prepared operator-domain assumptions.",
+    "A conservation witness, source admissibility route, and Bianchi compatibility route remain downstream of a reviewed proof-object result."
+  ],
+  "obstruction_identified_result": true,
+  "outcome_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_EXECUTED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION",
+  "proof_object_attempt_executed": true,
+  "proof_object_constructed_pending_result_review": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "result_classification": "qft_gr_covariant_conservation_proof_object_obstruction_identified_requires_refinement",
+  "result_classification_count": 1,
+  "schema_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_20260525_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "review_qft_gr_covariant_conservation_proof_object_attempt_result",
+  "selected_next_target_kind": "qft_gr_covariant_conservation_proof_object_attempt_result_review",
+  "selected_obstruction": "post_operator_domain_statement_missing_conservation_proof_object",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "target_proof_object": "conservation_proof_object_for_candidate_source_under_prepared_operator_domain"
+}

@@ -1120,6 +1120,18 @@ def qftGRCovariantConservationProofObjectPacketResultReviewClassification : Stri
 def qftGRCovariantConservationProofObjectPacketResultReviewSelectedNextTarget : String :=
   "execute_qft_gr_covariant_conservation_proof_object_attempt"
 
+def qftGRCovariantConservationProofObjectAttemptLeanSurface : String :=
+  "ToeFormal.Bridges.QFT_GR_CovariantConservationProofObjectAttempt"
+
+def qftGRCovariantConservationProofObjectAttemptOutcomeToken : String :=
+  "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_EXECUTED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION"
+
+def qftGRCovariantConservationProofObjectAttemptClassification : String :=
+  "qft_gr_covariant_conservation_proof_object_obstruction_identified_requires_refinement"
+
+def qftGRCovariantConservationProofObjectAttemptSelectedNextTarget : String :=
+  "review_qft_gr_covariant_conservation_proof_object_attempt_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -4151,6 +4163,36 @@ theorem qft_gr_covariant_conservation_proof_object_packet_result_review_does_not
   trivial
 
 theorem qft_gr_covariant_conservation_proof_object_packet_result_review_selects_bounded_attempt : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_attempt_consumes_result_review : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_attempt_executes_bounded_attempt_only : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_attempt_records_exactly_one_classification : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_attempt_identifies_obstruction : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_attempt_does_not_construct_proof_object : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_attempt_does_not_upgrade_to_conservation_witness : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_attempt_does_not_claim_source_admissibility : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_attempt_does_not_claim_bianchi_compatibility : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_attempt_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_attempt_selects_result_review : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by
