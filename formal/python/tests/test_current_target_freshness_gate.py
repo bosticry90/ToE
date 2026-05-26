@@ -1144,13 +1144,13 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_result_review"
+    "qft_gr_covariant_conservation_assumption_reduction_packet"
 )
 PREVIOUS_TARGET = (
-    "review_qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_result"
+    "prepare_qft_gr_covariant_conservation_assumption_reduction_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_covariant_conservation_assumption_reduction_packet"
+    "review_qft_gr_covariant_conservation_assumption_reduction_packet_result"
 )
 LIVE_TARGET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1158,7 +1158,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_CovariantConservationProofObjectObstructionRefinementPacketResultReview.lean"
+    / "QFT_GR_CovariantConservationAssumptionReductionPacket.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1977,7 +1977,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_result_review_v0"
+        == "qft_gr_covariant_conservation_assumption_reduction_packet_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2260,7 +2260,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_ACCEPTS_PARTIAL_CANDIDATE_AND_AUTHORIZES_CONSTRUCTION_PACKET_PREPARATION_ONLY"
     )
     assert current_active_workstream["output_token"] == (
-        "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_OBSTRUCTION_REFINEMENT_RESULT_REVIEW_ACCEPTS_INSUFFICIENT_ASSUMPTIONS_BLOCKER_AND_AUTHORIZES_ASSUMPTION_REDUCTION_PACKET_PREPARATION_ONLY"
+        "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_"
+        "NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
     )
     assert current_active_workstream["source_map_closure_registration_packet_token"] == (
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_PACKET_PREPARED_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
@@ -2370,7 +2371,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "qft_gr_covariant_conservation_assumption_reduction_packet_preparation_after_insufficient_assumptions_blocker_review"
+        "qft_gr_covariant_conservation_assumption_reduction_packet_result_review_after_packet_preparation"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -2475,9 +2476,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "partial_witness_chain_candidate_accepted_for_construction_packet_preparation_only"
     )
     assert current_active_workstream["result_review_classification"] == (
-        "qft_gr_covariant_conservation_proof_object_obstruction_refinement_result_review_"
-        "accepts_insufficient_assumptions_blocker_and_authorizes_assumption_reduction_"
-        "packet_preparation_only"
+        "qft_gr_covariant_conservation_assumption_reduction_packet_prepared_"
+        "insufficient_assumptions_classified_no_conservation_witness_or_seam_closure"
     )
     assert current_active_workstream["consumed_construction_result_review_classification"] == (
         "witness_chain_construction_accepted_source_map_authorization_adjudication_packet_preparation_only"
@@ -2719,9 +2719,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "source_map_closure_adjudication_packet_prepared_no_source_map_closure_or_release_promotion"
     )
     assert current_active_workstream["packet_classification"] == (
-        "qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_"
-        "prepared_primary_insufficient_assumptions_for_conservation_no_closure_or_"
-        "empirical_validation"
+        "qft_gr_covariant_conservation_assumption_reduction_packet_prepared_"
+        "insufficient_assumptions_classified_no_conservation_witness_or_seam_closure"
     )
     assert current_active_workstream["packet_classification_count"] == "1"
     assert current_active_workstream["source_map_closure_adjudication_question_prepared"] == "yes"
@@ -3281,12 +3280,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["track2_science_lane_execution_started"] == "yes_bounded_attempt_result_reviewed"
     assert current_active_workstream["track2_started"] == (
-        "covariant_conservation_assumption_reduction_packet_authorized_after_insufficient_assumptions_blocker_review"
+        "covariant_conservation_assumption_reduction_packet_prepared_result_review_pending"
     )
     assert current_active_workstream["track2_selected_after_this_execution"] == "no"
     assert current_active_workstream["next_action_scope"] == (
-        "PREPARE_QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_"
-        "ONLY_NO_PROOF_OBJECT_OR_QFT_GR_SEAM_CLOSURE"
+        "REVIEW_QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_"
+        "RESULT_ONLY_NO_ASSUMPTION_DISCHARGE_OR_QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
     assert current_active_workstream["closeout_criteria_count"] == "4"
@@ -3427,6 +3426,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "accepts_insufficient_assumptions_blocker_and_authorizes_assumption_reduction_"
         "packet_preparation_only"
     )
+    assert current_active_workstream["qft_gr_covariant_conservation_assumption_reduction_packet_classification"] == (
+        "qft_gr_covariant_conservation_assumption_reduction_packet_prepared_"
+        "insufficient_assumptions_classified_no_conservation_witness_or_seam_closure"
+    )
+    assert current_active_workstream["assumption_reduction_analysis_prepared"] == "yes"
+    assert current_active_workstream["assumption_class_count"] == "6"
+    assert current_active_workstream["reduces_or_discharges_assumptions_by_preparation"] == "no"
     assert current_active_workstream["primary_blocker"] == (
         "insufficient_assumptions_for_conservation"
     )

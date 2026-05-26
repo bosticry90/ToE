@@ -1,0 +1,180 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "consumes_expected_result_review": true,
+    "does_not_claim_source_or_bianchi": true,
+    "does_not_close_or_validate": true,
+    "does_not_construct_conservation_witness": true,
+    "does_not_construct_proof_object": true,
+    "does_not_reduce_or_discharge_assumptions": true,
+    "exactly_one_next_target_selected": true,
+    "no_release_or_public_submission": true,
+    "preserves_insufficient_assumptions_blocker": true,
+    "result_review_authorized_this_packet": true,
+    "result_review_classification_expected": true,
+    "result_review_outcome_expected": true,
+    "six_assumption_classes_classified": true
+  },
+  "accepted": true,
+  "assumption_class_count": 6,
+  "assumption_classes": [
+    "mathematical_regularity_assumptions",
+    "renormalization_assumptions",
+    "operator_domain_assumptions",
+    "state_domain_assumptions",
+    "geometric_Bianchi_assumptions",
+    "physical_source_admissibility_assumptions"
+  ],
+  "assumption_reduction_analysis_prepared": true,
+  "assumption_rows": [
+    {
+      "assumption_class": "mathematical_regularity_assumptions",
+      "blocking_role": "regularity needed for derivative exchange and weak/strong conservation comparison is not yet pinned.",
+      "candidate_reducible": true,
+      "derivable": false,
+      "missing": true,
+      "not_reducible_in_current_lane": false,
+      "required": true,
+      "supplied": "partial",
+      "too_strong": "unknown"
+    },
+    {
+      "assumption_class": "renormalization_assumptions",
+      "blocking_role": "renormalized expectation compatibility with the covariant derivative remains unproved.",
+      "candidate_reducible": true,
+      "derivable": false,
+      "missing": true,
+      "not_reducible_in_current_lane": false,
+      "required": true,
+      "supplied": "partial",
+      "too_strong": "unknown"
+    },
+    {
+      "assumption_class": "operator_domain_assumptions",
+      "blocking_role": "prepared operator-domain structure does not yet provide the conservation proof object.",
+      "candidate_reducible": true,
+      "derivable": false,
+      "missing": true,
+      "not_reducible_in_current_lane": false,
+      "required": true,
+      "supplied": "prepared_at_domain_statement_level",
+      "too_strong": "possibly"
+    },
+    {
+      "assumption_class": "state_domain_assumptions",
+      "blocking_role": "state-domain stability under the derivative and expectation operations remains unavailable.",
+      "candidate_reducible": true,
+      "derivable": false,
+      "missing": true,
+      "not_reducible_in_current_lane": false,
+      "required": true,
+      "supplied": "partial",
+      "too_strong": "unknown"
+    },
+    {
+      "assumption_class": "geometric_Bianchi_assumptions",
+      "blocking_role": "Bianchi compatibility is downstream and cannot be claimed by conservation assumption reduction alone.",
+      "candidate_reducible": false,
+      "derivable": false,
+      "missing": true,
+      "not_reducible_in_current_lane": true,
+      "required": true,
+      "supplied": "boundary_only",
+      "too_strong": "possibly"
+    },
+    {
+      "assumption_class": "physical_source_admissibility_assumptions",
+      "blocking_role": "source admissibility remains conditional until conservation and Bianchi dependencies are separately supported.",
+      "candidate_reducible": false,
+      "derivable": false,
+      "missing": true,
+      "not_reducible_in_current_lane": true,
+      "required": true,
+      "supplied": "boundary_only",
+      "too_strong": "unknown"
+    }
+  ],
+  "assumption_status_vocabulary": [
+    "required",
+    "supplied",
+    "derivable",
+    "missing",
+    "too_strong",
+    "candidate_reducible",
+    "not_reducible_in_current_lane"
+  ],
+  "blocker": "insufficient_assumptions_for_conservation",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The assumption-reduction packet must be reviewed before selecting a narrow reduction target.",
+      "target": "review_qft_gr_covariant_conservation_assumption_reduction_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Operator-domain reduction is plausible but not selected until this packet is reviewed.",
+      "target": "prepare_qft_gr_operator_domain_assumption_reduction_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "State-domain reduction is plausible but not selected until this packet is reviewed.",
+      "target": "prepare_qft_gr_state_domain_assumption_reduction_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "A proof-object attempt remains blocked until assumption reduction is reviewed.",
+      "target": "execute_qft_gr_covariant_conservation_proof_object_attempt"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Assumption-reduction packet preparation does not close QFT-GR.",
+      "target": "close_qft_gr_seam"
+    }
+  ],
+  "candidate_reducible_assumption_classes": [
+    "mathematical_regularity_assumptions",
+    "renormalization_assumptions",
+    "operator_domain_assumptions",
+    "state_domain_assumptions"
+  ],
+  "captured_at_utc": "2026-05-25T00:00:00Z",
+  "conservation_proof_object_constructed": false,
+  "conservation_witness_constructed": false,
+  "consumed_result_review_classification": "qft_gr_covariant_conservation_proof_object_obstruction_refinement_result_review_accepts_insufficient_assumptions_blocker_and_authorizes_assumption_reduction_packet_preparation_only",
+  "consumed_result_review_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_OBSTRUCTION_REFINEMENT_PACKET_RESULT_REVIEW_v0",
+  "consumed_result_review_outcome_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_OBSTRUCTION_REFINEMENT_RESULT_REVIEW_ACCEPTS_INSUFFICIENT_ASSUMPTIONS_BLOCKER_AND_AUTHORIZES_ASSUMPTION_REDUCTION_PACKET_PREPARATION_ONLY",
+  "consumes_qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_result_review": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_OBSTRUCTION_REFINEMENT_PACKET_RESULT_REVIEW_20260525_v0",
+  "consumes_qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_result_review_pointer": "formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_OBSTRUCTION_REFINEMENT_PACKET_RESULT_REVIEW_20260525_v0.json",
+  "empirical_validation_claimed": false,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_NO_ASSUMPTION_DISCHARGE_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This packet prepares assumption-reduction analysis only. It classifies assumptions blocking the conservation proof object and does not reduce or discharge assumptions, construct a proof object or conservation witness, claim source admissibility or Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "not_reducible_in_current_lane_classes": [
+    "geometric_Bianchi_assumptions",
+    "physical_source_admissibility_assumptions"
+  ],
+  "outcome_id": "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "packet_classification": "qft_gr_covariant_conservation_assumption_reduction_packet_prepared_insufficient_assumptions_classified_no_conservation_witness_or_seam_closure",
+  "packet_classification_count": 1,
+  "packet_id": "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_v0",
+  "prepared": true,
+  "proof_object_constructed": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "reduces_or_discharges_assumptions_by_preparation": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "schema_id": "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_20260525_v0",
+  "scientific_validation_claimed": false,
+  "selected_blocker": "insufficient_assumptions_for_conservation",
+  "selected_next_target": "review_qft_gr_covariant_conservation_assumption_reduction_packet_result",
+  "selected_next_target_kind": "qft_gr_covariant_conservation_assumption_reduction_packet_result_review",
+  "selected_route": "qft_gr_covariant_conservation_assumption_reduction_packet_result_review_after_packet_preparation",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false
+}
