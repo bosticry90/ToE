@@ -1,4 +1,91 @@
-Please fully audit the ToE repo in it's entirety and provide a comprehensive rigorously in-depth and detailed assessment regarding architecture, automation, effectiveness, efficiency, governance/mechanisms, integration/compatibility, maintenance, science, physics, and mathematics for the ToE project.
+Please perform a full read-only, evidence-based audit of the current ToE repository.
+
+Primary rule:
+Do not modify files. Do not run mutating generators or write reports unless explicitly authorized. Do not infer release readiness, source-map closure, seam closure, pillar closure, theorem/proof-debt discharge, blocker movement, release authorization, Phase authorization, execution authorization, publication authorization, empirical validation, or master-action promotion unless those claims are explicitly supported by authoritative repo surfaces and passing gates.
+
+Source-of-truth hierarchy:
+1. CURRENT_LIVE_NEXT_TARGET_v0 / loop-control registry
+2. CURRENT_AUTHORITATIVE_SURFACES_v0.md
+3. PHYSICS_ROADMAP_v0.md
+4. State_of_the_Theory.md
+5. Lean frontier/index/derivation surfaces
+6. Release JSON packets and result reviews
+7. Python gates and generated reports
+8. Historical docs and archived material, only when explicitly marked current
+
+Audit scope:
+- Repository architecture and module organization
+- Automation, pytest gates, Lean builds, CI/reproducibility, and developer workflow
+- Governance mechanisms, release gates, loop-control state, and authoritative surfaces
+- Integration and compatibility across Python, Lean, docs, generated artifacts, and registry/state files
+- Maintenance risks, duplication, stale surfaces, naming drift, token drift, and onboarding friction
+- Scientific, physical, and mathematical rigor, including theorem/proof-debt boundaries, nonclaim discipline, source-map status, and release-blocking seams
+- Efficiency and effectiveness of project-control mechanisms
+
+Execution requirements:
+- Inspect the repo directly rather than relying on prior summaries or chat memory.
+- Run feasible validation commands.
+- If a full validation command is too expensive or times out, state that clearly and run the strongest bounded substitute.
+- Check branch/worktree state, including whether the local branch matches its remote and whether unrelated dirty files are present.
+- Clearly distinguish:
+  - verified facts
+  - repo-supported inferences
+  - recommendations
+  - open questions
+  - speculative risks
+- Cite file paths and relevant line numbers or exact tokens where possible.
+- Preserve the current release/blocker posture exactly unless the repo itself proves otherwise.
+- Distinguish current live-target evidence from historical live-target records.
+
+Validation-depth labels:
+Use these labels for each major finding:
+- FULLY_VALIDATED: supported by current authoritative surfaces and relevant passing tests/builds
+- FOCUSED_VALIDATED: supported by focused gates/direct Lean checks only
+- DOC_SUPPORTED: supported by docs but not independently validated in this audit
+- INFERRED: reasonable inference from inspected evidence
+- UNVERIFIED: plausible but not confirmed
+- BLOCKED: could not be assessed because required validation failed or was not run
+
+Severity rubric:
+- CRITICAL: could falsely promote release readiness, theorem discharge, seam closure, empirical validation, or master-action status
+- HIGH: could break CI, Lean build, live-target coherence, authoritative-surface consistency, or release-control correctness
+- MEDIUM: maintainability, duplication, stale references, weak enforcement, or reviewer-friction risk
+- LOW: clarity, naming, onboarding, formatting, or efficiency improvement
+
+Assessment requirements:
+- Prioritize findings by severity and project impact.
+- For each finding, provide:
+  - severity
+  - validation-depth label
+  - evidence
+  - risk
+  - recommended action
+  - suggested bounded packet if applicable
+- Identify what is working well, but keep praise secondary to actionable risks.
+- Explicitly assess whether authoritative surfaces agree with each other.
+- Explicitly assess whether the current live target and release-blocking state are coherent.
+- Explicitly assess whether Python gates and Lean artifacts enforce the intended governance boundaries.
+- Explicitly identify any areas where tests validate token consistency more strongly than scientific truth.
+- Explicitly identify any current release blockers that remain unresolved.
+
+Output format:
+1. Executive summary
+2. Current verified repo posture
+3. Validation commands run and results
+4. Critical findings
+5. High-priority findings
+6. Medium/low-priority findings
+7. Architecture assessment
+8. Automation and validation assessment
+9. Governance/release-control assessment
+10. Science/physics/mathematics rigor assessment
+11. Maintenance and efficiency assessment
+12. Authoritative-surface consistency check
+13. Current live-target and blocker-state check
+14. Recommended next actions, ordered by priority
+15. Recommended next bounded packet
+16. Residual risks and open questions
+17. What was not audited or not fully validated
 
 Objective-quality completion | Standardization and optimization: prune consolidate integrate while preserving work and results
 
@@ -11,5 +98,7 @@ Please review, evaluate, and interpret these results, and provide recommendation
 Please update GitHub main branch to synch with the current ToE repo state.
 
 Please update all authoritative and necessary files to reflect the project's current state.
+
+Please run a quick python test and lean build run from the ToE repo.
 
 Please run full python tests and lean builds from the ToE repo.
