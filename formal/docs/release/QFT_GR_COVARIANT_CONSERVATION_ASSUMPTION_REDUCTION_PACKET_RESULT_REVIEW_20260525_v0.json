@@ -1,0 +1,94 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "all_six_assumption_families_present": true,
+    "consumes_expected_packet": true,
+    "exactly_one_next_target_selected": true,
+    "no_assumption_reduced_or_discharged": true,
+    "no_conservation_witness_constructed": true,
+    "no_einstein_or_qft_gr_closure": true,
+    "no_empirical_master_release_or_public_submission": true,
+    "no_proof_object_constructed": true,
+    "no_source_or_bianchi_claim": true,
+    "packet_classification_expected": true,
+    "packet_outcome_expected": true,
+    "packet_schema_expected": true,
+    "packet_selected_this_review": true,
+    "preserves_insufficient_assumptions_blocker": true
+  },
+  "accepted": true,
+  "assumption_class_count": 6,
+  "assumption_classes": [
+    "mathematical_regularity_assumptions",
+    "renormalization_assumptions",
+    "operator_domain_assumptions",
+    "state_domain_assumptions",
+    "geometric_Bianchi_assumptions",
+    "physical_source_admissibility_assumptions"
+  ],
+  "assumption_family_classification_accepted": true,
+  "assumptions_reduced_or_discharged_by_review": false,
+  "blocker": "insufficient_assumptions_for_conservation",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The prior missing covariant-derivative/operator-domain blocker makes operator-domain assumption reduction the coherent first target.",
+      "target": "prepare_qft_gr_operator_domain_assumption_reduction_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "State-domain reduction remains plausible after operator-domain assumptions are reviewed.",
+      "target": "prepare_qft_gr_state_domain_assumption_reduction_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Renormalization reduction remains downstream of the primary operator-domain target.",
+      "target": "prepare_qft_gr_renormalization_assumption_reduction_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Bianchi compatibility is downstream and not selected as the first reduction target.",
+      "target": "prepare_qft_gr_bianchi_compatibility_assumption_reduction_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Reviewing assumption classification does not close QFT-GR.",
+      "target": "close_qft_gr_seam"
+    }
+  ],
+  "captured_at_utc": "2026-05-25T00:00:00Z",
+  "conservation_proof_object_constructed": false,
+  "conservation_witness_constructed": false,
+  "consumed_packet_classification": "qft_gr_covariant_conservation_assumption_reduction_packet_prepared_insufficient_assumptions_classified_no_conservation_witness_or_seam_closure",
+  "consumed_packet_outcome_id": "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "consumes_qft_gr_covariant_conservation_assumption_reduction_packet": "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_v0",
+  "consumes_qft_gr_covariant_conservation_assumption_reduction_packet_pointer": "formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_20260525_v0.json",
+  "empirical_validation_claimed": false,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "PREPARE_QFT_GR_OPERATOR_DOMAIN_ASSUMPTION_REDUCTION_PACKET_ONLY_NO_ASSUMPTION_DISCHARGE_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This result review accepts only the six-family assumption classification and selects the primary operator-domain assumption reduction target. It does not reduce or discharge assumptions, construct a proof object or conservation witness, claim source admissibility or Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "outcome_id": "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_ACCEPTS_ASSUMPTION_FAMILY_CLASSIFICATION_AND_AUTHORIZES_PRIMARY_ASSUMPTION_REDUCTION_TARGET_SELECTION_ONLY",
+  "primary_assumption_reduction_family": "operator_domain_assumptions",
+  "primary_assumption_reduction_target": "prepare_qft_gr_operator_domain_assumption_reduction_packet",
+  "proof_object_constructed": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "result_review_classification": "qft_gr_covariant_conservation_assumption_reduction_packet_result_review_accepts_assumption_family_classification_and_authorizes_primary_assumption_reduction_target_selection_only",
+  "result_review_classification_count": 1,
+  "review_id": "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0",
+  "schema_id": "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_20260525_v0",
+  "scientific_validation_claimed": false,
+  "selected_blocker": "insufficient_assumptions_for_conservation",
+  "selected_next_target": "prepare_qft_gr_operator_domain_assumption_reduction_packet",
+  "selected_next_target_kind": "qft_gr_operator_domain_assumption_reduction_packet_preparation",
+  "selected_route": "qft_gr_operator_domain_assumption_reduction_packet_preparation_after_assumption_family_classification_review",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false
+}
