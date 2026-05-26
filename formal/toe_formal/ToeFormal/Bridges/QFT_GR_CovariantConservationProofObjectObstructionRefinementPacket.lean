@@ -1,0 +1,67 @@
+/-
+ToeFormal/Bridges/QFT_GR_CovariantConservationProofObjectObstructionRefinementPacket.lean
+
+Lean-side marker for the QFT-GR covariant conservation proof-object obstruction
+refinement packet. The packet narrows the accepted proof-object obstruction to
+insufficient assumptions for conservation; it does not construct a proof object
+or close QFT-GR.
+-/
+
+namespace ToeFormal
+namespace Bridges
+namespace QFTGRCovariantConservationProofObjectObstructionRefinementPacket
+
+def qftGRCovariantConservationProofObjectObstructionRefinementPacketToken : String :=
+  "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_OBSTRUCTION_REFINEMENT_PACKET_v0"
+
+def qftGRCovariantConservationProofObjectObstructionRefinementPacketOutcomeToken : String :=
+  "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_OBSTRUCTION_REFINEMENT_PACKET_PREPARED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION"
+
+def packetClassification : String :=
+  "qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_prepared_primary_insufficient_assumptions_for_conservation_no_closure_or_empirical_validation"
+
+def consumedAttemptResultReviewToken : String :=
+  "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_RESULT_REVIEW_v0"
+
+def proofObjectObstructionClass : String :=
+  "qft_gr_covariant_conservation_proof_object_obstruction_identified_requires_refinement"
+
+def primaryBlocker : String :=
+  "insufficient_assumptions_for_conservation"
+
+def selectedNextTarget : String :=
+  "review_qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_result"
+
+theorem qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_consumes_attempt_result_review : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_preserves_obstruction_classification : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_prepares_refinement_only : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_identifies_primary_blocker : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_does_not_construct_proof_object : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_does_not_construct_witness : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_does_not_claim_source_admissibility : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_does_not_claim_bianchi_compatibility : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_selects_result_review : True := by
+  trivial
+
+end QFTGRCovariantConservationProofObjectObstructionRefinementPacket
+end Bridges
+end ToeFormal

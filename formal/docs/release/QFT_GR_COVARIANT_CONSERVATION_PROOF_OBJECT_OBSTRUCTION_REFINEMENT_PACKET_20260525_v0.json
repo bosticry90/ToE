@@ -1,0 +1,108 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "consumes_expected_attempt_result_review": true,
+    "does_not_claim_source_or_bianchi": true,
+    "does_not_close_or_validate": true,
+    "does_not_construct_conservation_witness": true,
+    "does_not_construct_proof_object": true,
+    "exactly_one_next_target_selected": true,
+    "no_release_or_public_submission": true,
+    "preserves_proof_object_obstruction_class": true,
+    "refines_to_one_primary_blocker": true,
+    "result_review_authorized_this_packet": true,
+    "result_review_classification_expected": true,
+    "result_review_outcome_expected": true
+  },
+  "accepted": true,
+  "available_repo_evidence": [
+    "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_PACKET_v0",
+    "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_v0",
+    "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_RESULT_REVIEW_v0"
+  ],
+  "blocker_menu": [
+    "missing_theorem_shape",
+    "insufficient_assumptions_for_conservation",
+    "operator_domain_still_too_weak",
+    "renormalized_expectation_not_compatible_with_derivative_action",
+    "state_domain_limitation",
+    "weak_strong_conservation_mismatch",
+    "Bianchi_compatibility_dependency_still_unresolved"
+  ],
+  "blocker_menu_count": 7,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The proof-object obstruction refinement packet must be reviewed before any narrower proof-object or assumption-reduction work is authorized.",
+      "target": "review_qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Assumption refinement is plausible but requires acceptance of this obstruction-refinement packet.",
+      "target": "prepare_qft_gr_covariant_conservation_assumptions_packet"
+    },
+    {
+      "decision": "deferred",
+      "reason": "A new proof-object attempt remains unauthorized until the blocker refinement is reviewed.",
+      "target": "execute_qft_gr_covariant_conservation_proof_object_attempt"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "A narrowed proof-object obstruction does not close the QFT-GR seam.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Public submission is not authorized by obstruction refinement.",
+      "target": "authorize_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-05-25T00:00:00Z",
+  "claim_ceiling": "obstruction_refinement_packet_only_no_proof_object_or_qft_gr_closure",
+  "conservation_proof_object_constructed": false,
+  "conservation_witness_constructed": false,
+  "consumed_result_review_classification": "qft_gr_covariant_conservation_proof_object_attempt_result_review_accepts_proof_object_obstruction_and_authorizes_refinement_packet_preparation_only",
+  "consumed_result_review_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_RESULT_REVIEW_v0",
+  "consumed_result_review_outcome_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_RESULT_REVIEW_ACCEPTS_PROOF_OBJECT_OBSTRUCTION_AND_AUTHORIZES_REFINEMENT_PACKET_PREPARATION_ONLY",
+  "consumes_qft_gr_covariant_conservation_proof_object_attempt_result_review": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_RESULT_REVIEW_20260525_v0",
+  "consumes_qft_gr_covariant_conservation_proof_object_attempt_result_review_pointer": "formal/docs/release/QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_RESULT_REVIEW_20260525_v0.json",
+  "covariant_conservation_statement_to_be_proved": "candidate_stress_energy_source_in_prepared_operator_domain -> covariant_divergence candidate_stress_energy_source = 0",
+  "empirical_validation_claimed": false,
+  "failure_mode_if_unresolved": "without sufficient conservation assumptions, the proof object cannot be constructed and conservation witness, source admissibility, and Bianchi-compatible QFT-GR source claims remain blocked",
+  "identifies_proof_object_obstruction_more_narrowly": true,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_OBSTRUCTION_REFINEMENT_PACKET_RESULT_ONLY_NO_PROOF_OBJECT_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This packet refines the proof-object obstruction only. It identifies insufficient assumptions for conservation as the primary blocker and does not construct a proof object or conservation witness, claim source admissibility or Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "outcome_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_OBSTRUCTION_REFINEMENT_PACKET_PREPARED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION",
+  "packet_classification": "qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_prepared_primary_insufficient_assumptions_for_conservation_no_closure_or_empirical_validation",
+  "packet_classification_count": 1,
+  "packet_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_OBSTRUCTION_REFINEMENT_PACKET_v0",
+  "prepared": true,
+  "prepares_refinement_only": true,
+  "primary_blocker": "insufficient_assumptions_for_conservation",
+  "primary_blocker_selection_rationale": "The theorem shape and operator-domain statement have been prepared, but the repo still lacks explicit assumptions such as a conservation law, Ward identity, derivative-exchange principle, or state-domain stability sufficient to prove covariant divergence zero.",
+  "proof_object_constructed": false,
+  "proof_object_obstruction_class": "qft_gr_covariant_conservation_proof_object_obstruction_identified_requires_refinement",
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "required_Lean_surface": "ToeFormal.Bridges.QFT_GR_CovariantConservationProofObjectAttempt",
+  "required_assumption_refinement": "bounded assumptions tying the candidate source, renormalized expectation, state domain, derivative action, and weak/strong conservation form to covariant divergence zero",
+  "required_future_proof_object": "conservation_proof_object_requires_explicit_conservation_law_or_Ward_identity_and_derivative_compatibility_assumptions",
+  "schema_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_OBSTRUCTION_REFINEMENT_PACKET_20260525_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "review_qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_result",
+  "selected_next_target_kind": "qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_result_review",
+  "selected_obstruction": "post_operator_domain_statement_missing_conservation_proof_object",
+  "selected_primary_blocker": "insufficient_assumptions_for_conservation",
+  "selected_route": "qft_gr_covariant_conservation_proof_object_obstruction_refinement_packet_result_review_after_packet_preparation",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "target_proof_object": "conservation_proof_object_for_candidate_source_under_prepared_operator_domain"
+}
