@@ -261,10 +261,11 @@ Validation interpretation:
 - `OPEN_PROOF_DEBT` rows may have valid checkpoint/gate pointers while still carrying unresolved discharge obligations.
 
 Validation rollup (v0 draft):
-- `validated_rows`: 92
+- `validated_rows`: 113
 - `used_rows`: 58
 - `open_proof_debt_rows`: 3
 - `bounded_nonclaim_rows`: 5
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_operator_domain_assumption_reduction_packet`
 
 Unresolved dependency highlights:
 - `INV-PHYS-EM-U1-MICRO21` depends on distributional authorization closure in downstream EM U1 route closure attempts.
