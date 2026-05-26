@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR covariant conservation proof-object packet prepared the bounded theorem/proof-object shape for the post-operator-domain conservation obstruction, with no proof object construction, conservation witness construction, source admissibility claim, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
+        "QFT-GR covariant conservation proof-object packet result review accepted proof-object preparation and authorized only the bounded proof-object attempt, with no proof object construction, conservation witness construction, source admissibility claim, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_qft_gr_covariant_conservation_proof_object_packet_result"
+        "execute_qft_gr_covariant_conservation_proof_object_attempt"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -226,13 +226,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR covariant conservation proof-object packet prepared the bounded proof-object shape and authorized only result review, with no proof object construction, conservation witness construction, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
+        "QFT-GR covariant conservation proof-object packet result review accepted preparation and authorized only a bounded proof-object attempt, with no proof object construction, conservation witness construction, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_qft_gr_covariant_conservation_proof_object_packet_result"
+        "execute_qft_gr_covariant_conservation_proof_object_attempt"
       status := .retained }
   ]
 
@@ -250,13 +250,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR covariant conservation proof-object packet. -/
+/-- Previous live target consumed by the QFT-GR covariant conservation proof-object packet result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_covariant_conservation_proof_object_packet"
-
-/-- Current live target after QFT-GR covariant conservation proof-object packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_qft_gr_covariant_conservation_proof_object_packet_result"
+
+/-- Current live target after QFT-GR covariant conservation proof-object packet result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "execute_qft_gr_covariant_conservation_proof_object_attempt"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -269,7 +269,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "review_qft_gr_covariant_conservation_proof_object_packet_result"
+        "execute_qft_gr_covariant_conservation_proof_object_attempt"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

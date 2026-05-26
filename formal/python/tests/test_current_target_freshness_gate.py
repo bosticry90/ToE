@@ -1144,13 +1144,13 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "qft_gr_covariant_conservation_proof_object_packet"
+    "qft_gr_covariant_conservation_proof_object_packet_result_review"
 )
 PREVIOUS_TARGET = (
-    "prepare_qft_gr_covariant_conservation_proof_object_packet"
+    "review_qft_gr_covariant_conservation_proof_object_packet_result"
 )
 LIVE_TARGET = (
-    "review_qft_gr_covariant_conservation_proof_object_packet_result"
+    "execute_qft_gr_covariant_conservation_proof_object_attempt"
 )
 LIVE_TARGET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1158,7 +1158,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_CovariantConservationProofObjectPacket.lean"
+    / "QFT_GR_CovariantConservationProofObjectPacketResultReview.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1977,7 +1977,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_covariant_conservation_proof_object_packet_v0"
+        == "qft_gr_covariant_conservation_proof_object_packet_result_review_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2260,8 +2260,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_ACCEPTS_PARTIAL_CANDIDATE_AND_AUTHORIZES_CONSTRUCTION_PACKET_PREPARATION_ONLY"
     )
     assert current_active_workstream["output_token"] == (
-        "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_PACKET_PREPARED_WITH_NO_"
-        "CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+        "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_PACKET_RESULT_REVIEW_ACCEPTS_"
+        "PROOF_OBJECT_PREPARATION_AND_AUTHORIZES_BOUNDED_PROOF_OBJECT_ATTEMPT_ONLY"
     )
     assert current_active_workstream["source_map_closure_registration_packet_token"] == (
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_PACKET_PREPARED_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
@@ -2371,7 +2371,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "qft_gr_covariant_conservation_proof_object_packet_result_review_after_packet_preparation"
+        "qft_gr_covariant_conservation_proof_object_attempt_execution_after_packet_result_review"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -2476,8 +2476,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "partial_witness_chain_candidate_accepted_for_construction_packet_preparation_only"
     )
     assert current_active_workstream["result_review_classification"] == (
-        "qft_gr_covariant_conservation_proof_object_packet_prepared_no_"
-        "conservation_witness_or_seam_closure"
+        "qft_gr_covariant_conservation_proof_object_packet_result_review_accepts_"
+        "proof_object_preparation_and_authorizes_bounded_proof_object_attempt_only"
     )
     assert current_active_workstream["consumed_construction_result_review_classification"] == (
         "witness_chain_construction_accepted_source_map_authorization_adjudication_packet_preparation_only"
@@ -3280,11 +3280,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["track2_science_lane_execution_started"] == "yes_bounded_attempt_result_reviewed"
     assert current_active_workstream["track2_started"] == (
-        "covariant_conservation_proof_object_packet_prepared_result_review_pending"
+        "covariant_conservation_proof_object_packet_result_reviewed_bounded_attempt_authorized"
     )
     assert current_active_workstream["track2_selected_after_this_execution"] == "no"
     assert current_active_workstream["next_action_scope"] == (
-        "REVIEW_QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_PACKET_RESULT_ONLY_"
+        "EXECUTE_QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_ONLY_"
         "NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
@@ -3379,9 +3379,6 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "candidate_stress_energy_source_in_prepared_operator_domain -> "
         "covariant_divergence candidate_stress_energy_source = 0"
     )
-    assert current_active_workstream["claim_ceiling"] == (
-        "proof_object_packet_only_no_proof_construction_or_qft_gr_closure"
-    )
     assert current_active_workstream["next_bounded_action"] == LIVE_TARGET
 
     assert current_active_workstream["qft_gr_covariant_conservation_statement_with_operator_domain_obstruction_refinement_packet_result_review_classification"] == (
@@ -3404,6 +3401,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "covariant_divergence candidate_stress_energy_source = 0"
     )
     assert current_active_workstream["prepares_proof_object_packet_only"] == "yes"
+    assert current_active_workstream["proof_object_packet_preparation_accepted"] == "yes"
+    assert current_active_workstream["bounded_proof_object_attempt_authorized"] == "yes"
+    assert current_active_workstream["proof_object_packet_prepared_only"] == "yes"
+    assert current_active_workstream["qft_gr_covariant_conservation_proof_object_packet_result_review_classification"] == (
+        "qft_gr_covariant_conservation_proof_object_packet_result_review_accepts_"
+        "proof_object_preparation_and_authorizes_bounded_proof_object_attempt_only"
+    )
     assert current_active_workstream["statement_component_count"] == "6"
     assert current_active_workstream["primary_blocker_addressed_at_preparation_level"] == "yes"
     assert current_active_workstream["qft_gr_covariant_conservation_statement_obstruction_refinement_packet_classification"] == (
