@@ -36,7 +36,7 @@ POLICY_SENTENCE = (
 
 EXPECTED_LIVE_TARGET = (
     "CURRENT_LIVE_NEXT_TARGET_v0: "
-    "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result"
+    "prepare_qft_gr_candidate_source_domain_membership_assumption_reduction_packet"
 )
 
 FORBIDDEN_META_MARKERS = [
