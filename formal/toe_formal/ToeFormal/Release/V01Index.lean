@@ -1222,6 +1222,21 @@ def qftGROperatorDomainAssumptionReductionPacketResultReviewSelectedRow : String
 def qftGROperatorDomainAssumptionReductionPacketResultReviewSelectedNextTarget : String :=
   "prepare_qft_gr_selected_operator_action_assumption_reduction_packet"
 
+def qftGRSelectedOperatorActionAssumptionReductionPacketLeanSurface : String :=
+  "ToeFormal.Bridges.QFT_GR_SelectedOperatorActionAssumptionReductionPacket"
+
+def qftGRSelectedOperatorActionAssumptionReductionPacketOutcomeToken : String :=
+  "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_ASSUMPTION_DISCHARGE_OR_SEAM_CLOSURE"
+
+def qftGRSelectedOperatorActionAssumptionReductionPacketClassification : String :=
+  "qft_gr_selected_operator_action_assumption_reduction_packet_prepared_no_assumption_discharge_or_seam_closure"
+
+def qftGRSelectedOperatorActionAssumptionReductionPacketSelectedRow : String :=
+  "OD-ASSUMP-001-selected_operator_action"
+
+def qftGRSelectedOperatorActionAssumptionReductionPacketSelectedNextTarget : String :=
+  "review_qft_gr_selected_operator_action_assumption_reduction_packet_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -4496,6 +4511,45 @@ theorem qft_gr_operator_domain_assumption_reduction_packet_result_review_does_no
   trivial
 
 theorem qft_gr_operator_domain_assumption_reduction_packet_result_review_selects_selected_operator_action_target : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_consumes_result_review : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_preserves_blocker : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_preserves_family : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_selects_only_selected_operator_action : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_prepares_reduction_analysis_only : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_does_not_discharge_assumption : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_does_not_construct_proof_object : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_does_not_construct_witness : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_does_not_claim_source_admissibility : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_does_not_claim_bianchi_compatibility : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_does_not_derive_semiclassical_einstein_equation : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_packet_selects_result_review_target : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by

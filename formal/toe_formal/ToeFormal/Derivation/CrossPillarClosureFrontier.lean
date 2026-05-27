@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR operator-domain assumption-reduction packet result review accepted the prepared analysis and selected OD-ASSUMP-001 selected operator/action as the next bounded assumption target, with no assumption discharge, proof object construction, conservation witness construction, source admissibility claim, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
+        "QFT-GR selected-operator/action assumption-reduction packet prepared only OD-ASSUMP-001 analysis and selected its result review, with no assumption discharge, proof object construction, conservation witness construction, source admissibility claim, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_selected_operator_action_assumption_reduction_packet"
+        "review_qft_gr_selected_operator_action_assumption_reduction_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -226,13 +226,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR operator-domain assumption-reduction packet result review selected the bounded selected-operator-action assumption target, with no assumption discharge, proof object construction, conservation witness construction, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
+        "QFT-GR selected-operator/action assumption-reduction packet prepared only the selected row and selected result review, with no assumption discharge, proof object construction, conservation witness construction, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_selected_operator_action_assumption_reduction_packet"
+        "review_qft_gr_selected_operator_action_assumption_reduction_packet_result"
       status := .retained }
   ]
 
@@ -250,13 +250,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR operator-domain assumption-reduction packet result review. -/
+/-- Previous live target consumed by the QFT-GR selected-operator/action assumption-reduction packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_operator_domain_assumption_reduction_packet_result"
-
-/-- Current live target after QFT-GR operator-domain assumption-reduction packet result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_selected_operator_action_assumption_reduction_packet"
+
+/-- Current live target after QFT-GR selected-operator/action assumption-reduction packet preparation. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_selected_operator_action_assumption_reduction_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -269,7 +269,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "prepare_qft_gr_selected_operator_action_assumption_reduction_packet"
+        "review_qft_gr_selected_operator_action_assumption_reduction_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
