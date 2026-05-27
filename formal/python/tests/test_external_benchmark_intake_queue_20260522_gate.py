@@ -175,7 +175,7 @@ def test_authority_surfaces_have_lightweight_pointers_only_and_live_target_uncha
     ]
     expected_live = (
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "review_qft_gr_selected_operator_action_assumption_reduction_packet_result"
+        "execute_qft_gr_selected_operator_action_assumption_reduction_attempt"
     )
 
     for path in [STATE_PATH, ROADMAP_PATH, INVENTORY_PATH]:
