@@ -384,7 +384,7 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "qft_gr_selected_operator_action_assumption_reduction_packet_result_review",
+    "active_lane": "qft_gr_selected_operator_action_assumption_reduction_attempt_execution",
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet_result_review",
@@ -403,7 +403,8 @@
       "prepare_qft_gr_operator_domain_assumption_reduction_packet",
       "review_qft_gr_operator_domain_assumption_reduction_packet_result",
       "prepare_qft_gr_selected_operator_action_assumption_reduction_packet",
-      "review_qft_gr_selected_operator_action_assumption_reduction_packet_result"
+      "review_qft_gr_selected_operator_action_assumption_reduction_packet_result",
+      "execute_qft_gr_selected_operator_action_assumption_reduction_attempt"
     ],
     "focused_gate": "formal/python/tests/test_current_target_freshness_gate.py",
     "forbidden_promotions": [
@@ -413,8 +414,8 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "execute_qft_gr_selected_operator_action_assumption_reduction_attempt",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SelectedOperatorActionAssumptionReductionPacketResultReview.lean",
+    "live_next_target": "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SelectedOperatorActionAssumptionReductionAttempt.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "next_strict_target_coverage": {
       "execute_qft_gr_covariant_conservation_proof_object_attempt": {
@@ -430,8 +431,8 @@
         "status": "consumed_by_qft_gr_covariant_conservation_statement_witness_attempt"
       },
       "execute_qft_gr_selected_operator_action_assumption_reduction_attempt": {
-        "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SelectedOperatorActionAssumptionReductionPacketResultReview.lean",
-        "status": "active_live_next_target"
+        "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SelectedOperatorActionAssumptionReductionAttempt.lean",
+        "status": "consumed_by_qft_gr_selected_operator_action_assumption_reduction_attempt"
       },
       "execute_qft_gr_stress_energy_conservation_witness_attempt": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StressEnergyConservationWitnessAttempt.lean",
@@ -524,6 +525,10 @@
       "review_qft_gr_operator_domain_assumption_reduction_packet_result": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_OperatorDomainAssumptionReductionPacketResultReview.lean",
         "status": "consumed_by_qft_gr_operator_domain_assumption_reduction_packet_result_review"
+      },
+      "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result": {
+        "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SelectedOperatorActionAssumptionReductionAttempt.lean",
+        "status": "active_live_next_target"
       },
       "review_qft_gr_selected_operator_action_assumption_reduction_packet_result": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SelectedOperatorActionAssumptionReductionPacketResultReview.lean",
@@ -658,7 +663,7 @@
       "qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "review_qft_gr_selected_operator_action_assumption_reduction_packet_result",
+    "previous_live_next_target": "execute_qft_gr_selected_operator_action_assumption_reduction_attempt",
     "schema_id": "CURRENT_TARGET_STATE_v0"
   },
   "cycle_waivers": [],
@@ -1316,7 +1321,8 @@
     "review_qft_gr_operator_domain_assumption_reduction_packet_result",
     "prepare_qft_gr_selected_operator_action_assumption_reduction_packet",
     "review_qft_gr_selected_operator_action_assumption_reduction_packet_result",
-    "execute_qft_gr_selected_operator_action_assumption_reduction_attempt"
+    "execute_qft_gr_selected_operator_action_assumption_reduction_attempt",
+    "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -32428,21 +32434,23 @@
         "geometric_Bianchi_assumptions",
         "physical_source_admissibility_assumptions"
       ],
+      "assumption_discharge_claimed": "no",
       "assumption_family_classification_accepted": "yes",
       "assumption_reduction_analysis_prepared": "yes",
       "assumption_reduction_packet_preparation_authorized": "yes",
       "assumptions_discharged_by_preparation": "no",
       "assumptions_discharged_by_review": "no",
+      "assumptions_reduced_or_discharged_by_implication": "no",
       "assumptions_reduced_or_discharged_by_preparation": "no",
       "assumptions_reduced_or_discharged_by_review": "no",
       "attempt_id": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_v0",
       "attempt_result_reviewed": "yes",
       "attempt_token": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_EXECUTED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SelectedOperatorActionAssumptionReductionPacketResultReview.lean",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SelectedOperatorActionAssumptionReductionAttempt.lean",
       "authorized_attempt_result_classification_count": "3",
       "authorized_attempt_result_classifications": "qft_gr_selected_operator_action_assumption_reduced_pending_result_review|qft_gr_selected_operator_action_assumption_obstruction_identified_requires_refinement|qft_gr_selected_operator_action_assumption_inconclusive_requires_assumption_reduction",
-      "authorized_next_slice": "execute_qft_gr_selected_operator_action_assumption_reduction_attempt",
-      "authorized_next_strict_target": "execute_qft_gr_selected_operator_action_assumption_reduction_attempt",
+      "authorized_next_slice": "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result",
+      "authorized_next_strict_target": "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result",
       "available_structure": "covariant_conservation_statement_with_operator_domain",
       "axiom_spec_backed_debt_reduced": "no",
       "blocked_object": "QFT-GR source-map semantic closure",
@@ -32664,6 +32672,11 @@
       "consumed_qft_gr_selected_operator_action_assumption_reduction_packet_classification": "qft_gr_selected_operator_action_assumption_reduction_packet_prepared_no_assumption_discharge_or_seam_closure",
       "consumed_qft_gr_selected_operator_action_assumption_reduction_packet_id": "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_PACKET_v0",
       "consumed_qft_gr_selected_operator_action_assumption_reduction_packet_report": "formal/docs/release/QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_PACKET_20260526_v0.json",
+      "consumed_qft_gr_selected_operator_action_assumption_reduction_packet_result_review_classification": "qft_gr_selected_operator_action_assumption_reduction_packet_result_review_accepts_selected_operator_action_analysis_and_authorizes_bounded_reduction_attempt_only",
+      "consumed_qft_gr_selected_operator_action_assumption_reduction_packet_result_review_id": "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0",
+      "consumed_qft_gr_selected_operator_action_assumption_reduction_packet_result_review_report": "formal/docs/release/QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_20260526_v0.json",
+      "consumed_qft_gr_selected_operator_action_assumption_reduction_packet_result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SelectedOperatorActionAssumptionReductionPacketResultReview.lean",
+      "consumed_qft_gr_selected_operator_action_assumption_reduction_packet_result_review_token": "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_ACCEPTS_SELECTED_OPERATOR_ACTION_ANALYSIS_AND_AUTHORIZES_BOUNDED_REDUCTION_ATTEMPT_ONLY",
       "consumed_qft_gr_selected_operator_action_assumption_reduction_packet_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SelectedOperatorActionAssumptionReductionPacket.lean",
       "consumed_qft_gr_selected_operator_action_assumption_reduction_packet_token": "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_ASSUMPTION_DISCHARGE_OR_SEAM_CLOSURE",
       "consumed_result_review_classification": "partial_witness_chain_candidate_accepted_for_construction_packet_preparation_only",
@@ -32714,7 +32727,7 @@
       "consumed_source_map_closure_registration_result_review_report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_RESULT_REVIEW_20260523_v0.json",
       "consumed_source_map_closure_registration_result_review_surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapClosureRegistrationResultReview.lean",
       "consumed_source_map_closure_registration_result_review_token": "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_RESULT_REVIEW_ACCEPTS_REGISTERED_SOURCE_MAP_CLOSURE_AND_AUTHORIZES_TRANCHE_004_BLOCKER_MOVEMENT_PACKET_PREPARATION_ONLY",
-      "consumed_target": "review_qft_gr_selected_operator_action_assumption_reduction_packet_result",
+      "consumed_target": "execute_qft_gr_selected_operator_action_assumption_reduction_attempt",
       "control_lane_clearance_only": "yes",
       "covariant_conservation_obstruction_result_accepted": "yes",
       "covariant_conservation_statement_attempted": "yes",
@@ -32817,7 +32830,7 @@
       "identifies_proof_object_obstruction_more_narrowly": "yes",
       "inconclusive_result": "no",
       "insufficient_assumptions_blocker_accepted": "yes",
-      "latest_surface": "qft_gr_selected_operator_action_assumption_reduction_packet_result_review_v0",
+      "latest_surface": "qft_gr_selected_operator_action_assumption_reduction_attempt_v0",
       "lean_theorem_debt_discharged": "no",
       "master_action_promoted": "no",
       "master_action_promotion_authorized": "no",
@@ -32828,8 +32841,8 @@
       "missing_proof_object": "conservation_proof_object_for_candidate_source_under_prepared_operator_domain",
       "movement_registration_criteria_count": "4",
       "movement_registration_result_review_classification_count": "1",
-      "next_action_scope": "EXECUTE_QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_ATTEMPT_ONLY_NO_CONSERVATION_PROOF_OR_QFT_GR_SEAM_CLOSURE",
-      "next_bounded_action": "execute_qft_gr_selected_operator_action_assumption_reduction_attempt",
+      "next_action_scope": "REVIEW_QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_ONLY_NO_ASSUMPTION_DISCHARGE_OR_QFT_GR_SEAM_CLOSURE",
+      "next_bounded_action": "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result",
       "not_reducible_in_current_lane_class_count": "2",
       "not_reducible_in_current_lane_operator_assumptions_recorded": "yes",
       "obstruction_class": "qft_gr_covariant_conservation_statement_obstruction_identified_requires_refinement",
@@ -32840,6 +32853,9 @@
       "operational_position_material_in_scope": "no",
       "operator_action_assumption_discharged": "no",
       "operator_action_assumption_discharged_by_review": "no",
+      "operator_action_assumption_inconclusive": "no",
+      "operator_action_assumption_obstruction_identified": "no",
+      "operator_action_assumption_reduced_pending_result_review": "yes",
       "operator_domain_assumption_inventory_prepared": "yes",
       "operator_domain_assumption_reduction_analysis_prepared": "yes",
       "operator_domain_assumption_required_vs_supplied_recorded": "yes",
@@ -33083,6 +33099,13 @@
       "qft_gr_seam_closed": "no",
       "qft_gr_seam_closure_authorized": "no",
       "qft_gr_seam_closure_claimed": "no",
+      "qft_gr_selected_operator_action_assumption_reduction_attempt_classification": "qft_gr_selected_operator_action_assumption_reduced_pending_result_review",
+      "qft_gr_selected_operator_action_assumption_reduction_attempt_id": "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_ATTEMPT_v0",
+      "qft_gr_selected_operator_action_assumption_reduction_attempt_report": "formal/docs/release/QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_ATTEMPT_20260526_v0.json",
+      "qft_gr_selected_operator_action_assumption_reduction_attempt_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_SelectedOperatorActionAssumptionReductionAttempt.lean",
+      "qft_gr_selected_operator_action_assumption_reduction_attempt_test": "formal/python/tests/test_qft_gr_selected_operator_action_assumption_reduction_attempt_gate.py",
+      "qft_gr_selected_operator_action_assumption_reduction_attempt_token": "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+      "qft_gr_selected_operator_action_assumption_reduction_attempt_tool": "formal/python/tools/qft_gr_selected_operator_action_assumption_reduction_attempt_report.py",
       "qft_gr_selected_operator_action_assumption_reduction_packet_classification": "qft_gr_selected_operator_action_assumption_reduction_packet_prepared_no_assumption_discharge_or_seam_closure",
       "qft_gr_selected_operator_action_assumption_reduction_packet_id": "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_PACKET_v0",
       "qft_gr_selected_operator_action_assumption_reduction_packet_report": "formal/docs/release/QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_PACKET_20260526_v0.json",
@@ -33234,9 +33257,9 @@
       "selected_dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
       "selected_finding": "V01-ALPHA-DEP-REM-004",
       "selected_next_action_scope": "REVIEW_QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_PACKET_RESULT_ONLY_NO_WITNESS_EXECUTION_OR_CLOSURE",
-      "selected_next_target": "execute_qft_gr_selected_operator_action_assumption_reduction_attempt",
+      "selected_next_target": "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result",
       "selected_next_target_count": "1",
-      "selected_next_target_kind": "qft_gr_selected_operator_action_assumption_reduction_attempt_execution",
+      "selected_next_target_kind": "qft_gr_selected_operator_action_assumption_reduction_attempt_result_review",
       "selected_obstruction": "post_operator_domain_statement_missing_conservation_proof_object",
       "selected_operator_action_analysis_accepted_by_review": "yes",
       "selected_operator_action_assumption_available_repo_evidence_recorded": "yes",
@@ -33244,11 +33267,18 @@
       "selected_operator_action_assumption_claim_ceiling_recorded": "yes",
       "selected_operator_action_assumption_failure_mode_recorded": "yes",
       "selected_operator_action_assumption_reduction_analysis_prepared": "yes",
+      "selected_operator_action_assumption_reduction_attempt_executed": "yes",
       "selected_operator_action_assumption_reduction_attempt_target": "execute_qft_gr_selected_operator_action_assumption_reduction_attempt",
       "selected_operator_action_assumption_required_future_proof_object_recorded": "yes",
       "selected_operator_action_assumption_row": "OD-ASSUMP-001-selected_operator_action",
       "selected_operator_action_assumption_status_tokens": "required|supplied|missing|candidate_reducible",
+      "selected_operator_action_attempt_result_classification": "qft_gr_selected_operator_action_assumption_reduced_pending_result_review",
+      "selected_operator_action_attempt_result_classification_count": "1",
+      "selected_operator_action_attempt_result_review_target": "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result",
+      "selected_operator_action_attempt_selected_row": "OD-ASSUMP-001-selected_operator_action",
       "selected_operator_action_bounded_reduction_attempt_authorized": "yes",
+      "selected_operator_action_contract_id": "OD-ASSUMP-001-selected_operator_action_contract_v0",
+      "selected_operator_action_contract_pinned_pending_result_review": "yes",
       "selected_operator_action_result_review_preserves_blocker": "insufficient_assumptions_for_conservation",
       "selected_operator_action_result_review_preserves_family": "operator_domain_assumptions",
       "selected_operator_action_result_review_selected_row": "OD-ASSUMP-001-selected_operator_action",
@@ -33257,7 +33287,7 @@
       "selected_operator_domain_assumption_row_reason": "selected operator/action precedes candidate source-domain membership, state-expectation linkage, and renormalized-expectation linkage",
       "selected_operator_domain_assumption_row_status": "required|supplied|missing|candidate_reducible",
       "selected_primary_blocker": "insufficient_assumptions_for_conservation",
-      "selected_route": "qft_gr_selected_operator_action_assumption_reduction_attempt_after_packet_result_review",
+      "selected_route": "qft_gr_selected_operator_action_assumption_reduction_attempt_result_review_after_execution",
       "selected_row_count": "1",
       "selected_row_only_confirmed": "yes",
       "selected_target_count": "1",
@@ -33420,14 +33450,14 @@
       "track2_control_clearance_only": "yes",
       "track2_qft_gr_witness_target": "construct_or_refute_qft_gr_conserved_renormalized_stress_energy_source_witness",
       "track2_qft_gr_witness_target_deferred_until_result_review": "yes",
-      "track2_remains_deferred": "no_attempt_executed_pending_selected_operator_action_reduction_attempt",
+      "track2_remains_deferred": "pending_selected_operator_action_reduction_attempt_result_review",
       "track2_science_lane_execution_started": "yes_bounded_attempt_result_reviewed",
       "track2_scientific_evidence_claimed_from_track1": "no",
       "track2_selected_after_result_review": "yes",
-      "track2_selected_after_this_execution": "yes_selected_operator_action_reduction_attempt_selected",
-      "track2_selected_after_this_review": "yes_selected_operator_action_reduction_attempt_selected",
-      "track2_selection_kind": "qft_gr_selected_operator_action_assumption_reduction_attempt_execution_only",
-      "track2_started": "selected_operator_action_assumption_reduction_packet_result_reviewed_pending_attempt",
+      "track2_selected_after_this_execution": "yes_selected_operator_action_attempt_result_review_selected",
+      "track2_selected_after_this_review": "no",
+      "track2_selection_kind": "qft_gr_selected_operator_action_assumption_reduction_attempt_result_review_only",
+      "track2_started": "selected_operator_action_assumption_reduction_attempt_executed_pending_result_review",
       "tranche_001_status": "documented_dependency_nonblocking",
       "tranche_002_status": "documented_dependency_nonblocking",
       "tranche_003_status": "documented_dependency_nonblocking",
@@ -33460,7 +33490,7 @@
       "witness_constructed": "no",
       "witness_packet_accepted": "yes",
       "witness_packet_result_reviewed": "yes",
-      "workstream_id": "qft_gr_selected_operator_action_assumption_reduction_packet_result_review"
+      "workstream_id": "qft_gr_selected_operator_action_assumption_reduction_attempt_execution"
     }
   ]
 }

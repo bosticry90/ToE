@@ -1,0 +1,140 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "blocker_preserved": true,
+    "bounded_reduction_attempt_authorized": true,
+    "classification_authorized": true,
+    "consumes_expected_result_review": true,
+    "exactly_one_classification_selected": true,
+    "exactly_one_next_target_selected": true,
+    "no_conservation_proof_object_constructed": true,
+    "no_conservation_witness_constructed": true,
+    "no_empirical_validation": true,
+    "no_master_action_promotion": true,
+    "no_qft_gr_seam_closure": true,
+    "no_release_or_public_submission": true,
+    "no_semiclassical_einstein_derivation": true,
+    "no_source_admissibility_or_bianchi_claim": true,
+    "reduction_distinguished_from_discharge": true,
+    "review_classification_expected": true,
+    "review_outcome_expected": true,
+    "review_schema_expected": true,
+    "review_selected_this_execution": true,
+    "selected_family_preserved": true,
+    "selected_row_preserved": true
+  },
+  "accepted": true,
+  "assumption_discharge_claimed": false,
+  "assumptions_reduced_or_discharged_by_implication": false,
+  "attempt_id": "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_ATTEMPT_v0",
+  "attempt_scope": "EXECUTE_BOUNDED_QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_ATTEMPT_ONLY",
+  "blocker": "insufficient_assumptions_for_conservation",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The bounded selected-operator/action reduction attempt must be reviewed before any downstream assumption target is prepared.",
+      "target": "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Candidate source-domain membership remains downstream of result review acceptance for the selected-operator/action attempt.",
+      "target": "prepare_qft_gr_candidate_source_domain_membership_assumption_reduction_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The selected-operator/action reduction attempt does not authorize a conservation proof-object attempt.",
+      "target": "execute_qft_gr_covariant_conservation_proof_object_attempt"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No bounded assumption-reduction attempt closes QFT-GR.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Public submission is not authorized by this bounded attempt.",
+      "target": "authorize_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-05-26T00:00:00Z",
+  "classification_options": [
+    "qft_gr_selected_operator_action_assumption_reduced_pending_result_review",
+    "qft_gr_selected_operator_action_assumption_obstruction_identified_requires_refinement",
+    "qft_gr_selected_operator_action_assumption_inconclusive_requires_assumption_reduction"
+  ],
+  "classification_rows": [
+    {
+      "classification": "qft_gr_selected_operator_action_assumption_reduced_pending_result_review",
+      "meaning": "The selected operator/action assumption has been reduced to a bounded contract pending result review, without discharging the assumption or proving conservation.",
+      "selected": true
+    },
+    {
+      "classification": "qft_gr_selected_operator_action_assumption_obstruction_identified_requires_refinement",
+      "meaning": "The attempt found an obstruction requiring refinement before the selected operator/action could be reduced.",
+      "selected": false
+    },
+    {
+      "classification": "qft_gr_selected_operator_action_assumption_inconclusive_requires_assumption_reduction",
+      "meaning": "The attempt could not determine reduction status without further assumption reduction.",
+      "selected": false
+    }
+  ],
+  "conservation_proof_object_constructed": false,
+  "conservation_witness_constructed": false,
+  "consumed_result_review_classification": "qft_gr_selected_operator_action_assumption_reduction_packet_result_review_accepts_selected_operator_action_analysis_and_authorizes_bounded_reduction_attempt_only",
+  "consumed_result_review_outcome_id": "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_ACCEPTS_SELECTED_OPERATOR_ACTION_ANALYSIS_AND_AUTHORIZES_BOUNDED_REDUCTION_ATTEMPT_ONLY",
+  "consumes_qft_gr_selected_operator_action_assumption_reduction_packet_result_review": "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0",
+  "consumes_qft_gr_selected_operator_action_assumption_reduction_packet_result_review_pointer": "formal/docs/release/QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_20260526_v0.json",
+  "empirical_validation_claimed": false,
+  "executed": true,
+  "execution_findings": [
+    "The attempt consumes the selected-operator/action packet result review and keeps OD-ASSUMP-001 as the only executed row.",
+    "The selected action is pinned as a bounded covariant-divergence operator action on the candidate renormalized stress-energy source for later conservation-statement work.",
+    "The reduction is pending result review and does not discharge the selected-operator/action assumption by implication.",
+    "Candidate source-domain membership, state-expectation linkage, renormalized-expectation linkage, conservation proof objects, and QFT-GR seam closure remain downstream."
+  ],
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_ONLY_NO_ASSUMPTION_DISCHARGE_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This execution reduces only the selected-operator/action assumption to a bounded contract pending result review. It does not discharge the assumption by implication, construct a conservation proof object or conservation witness, claim source admissibility or Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "operator_action_assumption_discharged": false,
+  "operator_action_assumption_inconclusive": false,
+  "operator_action_assumption_obstruction_identified": false,
+  "operator_action_assumption_reduced_pending_result_review": true,
+  "outcome_id": "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "primary_assumption_reduction_family": "operator_domain_assumptions",
+  "proof_object_constructed": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "result_classification": "qft_gr_selected_operator_action_assumption_reduced_pending_result_review",
+  "result_classification_count": 1,
+  "schema_id": "QFT_GR_SELECTED_OPERATOR_ACTION_ASSUMPTION_REDUCTION_ATTEMPT_20260526_v0",
+  "scientific_validation_claimed": false,
+  "selected_assumption_family": "operator_domain_assumptions",
+  "selected_blocker": "insufficient_assumptions_for_conservation",
+  "selected_next_target": "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result",
+  "selected_next_target_kind": "qft_gr_selected_operator_action_assumption_reduction_attempt_result_review",
+  "selected_operator_action_assumption_reduction_attempt_executed": true,
+  "selected_operator_action_reduction_contract": {
+    "assumption_family": "operator_domain_assumptions",
+    "assumption_id": "OD-ASSUMP-001-selected_operator_action",
+    "available_repo_evidence": [
+      "QFT_GR_COVARIANT_DERIVATIVE_OPERATOR_DOMAIN_PACKET_v0",
+      "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0"
+    ],
+    "claim_ceiling": "selected_operator_action_reduced_pending_result_review_only_no_assumption_discharge_no_conservation_witness_no_qft_gr_seam_closure",
+    "contract_id": "OD-ASSUMP-001-selected_operator_action_contract_v0",
+    "required_future_proof_object": "operator_action_selected_and_typed_for_candidate_source_conservation_statement",
+    "selected_operator_action": "covariant_divergence_operator_action_on_candidate_renormalized_stress_energy_source",
+    "typed_scope": "bounded_operator_domain_contract_for_later_candidate_source_conservation_statement"
+  },
+  "selected_operator_domain_assumption_row": "OD-ASSUMP-001-selected_operator_action",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false
+}

@@ -300,6 +300,7 @@ def test_qm_stat_entropy_assumption_reduction_candidate_selection_registry_rotat
             "prepare_qft_gr_selected_operator_action_assumption_reduction_packet",
             "review_qft_gr_selected_operator_action_assumption_reduction_packet_result",
             "execute_qft_gr_selected_operator_action_assumption_reduction_attempt",
+            "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result",
         }
         assert state["active_lane"] in {
             "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection",
@@ -320,6 +321,7 @@ def test_qm_stat_entropy_assumption_reduction_candidate_selection_registry_rotat
             "qft_gr_operator_domain_assumption_reduction_packet_result_review",
             "qft_gr_selected_operator_action_assumption_reduction_packet_preparation",
             "qft_gr_selected_operator_action_assumption_reduction_packet_result_review",
+            "qft_gr_selected_operator_action_assumption_reduction_attempt_execution",
         }
     assert PREVIOUS_LANE in state["paused_lanes"]
     assert ACTIVE_LANE in state["paused_lanes"]
