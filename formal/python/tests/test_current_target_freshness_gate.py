@@ -1144,13 +1144,13 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "qft_gr_covariant_conservation_assumption_reduction_packet_result_review"
+    "qft_gr_operator_domain_assumption_reduction_packet_preparation"
 )
 PREVIOUS_TARGET = (
-    "review_qft_gr_covariant_conservation_assumption_reduction_packet_result"
+    "prepare_qft_gr_operator_domain_assumption_reduction_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_operator_domain_assumption_reduction_packet"
+    "review_qft_gr_operator_domain_assumption_reduction_packet_result"
 )
 LIVE_TARGET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1158,7 +1158,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_CovariantConservationAssumptionReductionPacketResultReview.lean"
+    / "QFT_GR_OperatorDomainAssumptionReductionPacket.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1977,7 +1977,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_covariant_conservation_assumption_reduction_packet_result_review_v0"
+        == "qft_gr_operator_domain_assumption_reduction_packet_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2372,7 +2372,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "qft_gr_operator_domain_assumption_reduction_packet_preparation_after_assumption_family_classification_review"
+        "qft_gr_operator_domain_assumption_reduction_packet_result_review_after_preparation"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -3278,15 +3278,17 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["qft_gr_witness_executed"] == "yes"
     assert current_active_workstream["track2_selected_after_result_review"] == "yes"
     assert current_active_workstream["track2_selection_kind"] == (
-        "qft_gr_witness_packet_preparation_only"
+        "qft_gr_operator_domain_assumption_reduction_packet_result_review_only"
     )
     assert current_active_workstream["track2_science_lane_execution_started"] == "yes_bounded_attempt_result_reviewed"
     assert current_active_workstream["track2_started"] == (
-        "operator_domain_assumption_reduction_packet_authorized_after_assumption_family_classification_review"
+        "operator_domain_assumption_reduction_packet_prepared_pending_result_review"
     )
-    assert current_active_workstream["track2_selected_after_this_execution"] == "no"
+    assert current_active_workstream["track2_selected_after_this_execution"] == (
+        "yes_packet_result_review_selected"
+    )
     assert current_active_workstream["next_action_scope"] == (
-        "PREPARE_QFT_GR_OPERATOR_DOMAIN_ASSUMPTION_REDUCTION_PACKET_ONLY_"
+        "REVIEW_QFT_GR_OPERATOR_DOMAIN_ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_"
         "NO_ASSUMPTION_DISCHARGE_OR_QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
@@ -3448,6 +3450,19 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["assumption_reduction_analysis_prepared"] == "yes"
     assert current_active_workstream["assumption_class_count"] == "6"
     assert current_active_workstream["reduces_or_discharges_assumptions_by_preparation"] == "no"
+    assert current_active_workstream["qft_gr_operator_domain_assumption_reduction_packet_classification"] == (
+        "qft_gr_operator_domain_assumption_reduction_packet_prepared_no_"
+        "conservation_witness_or_seam_closure"
+    )
+    assert current_active_workstream["operator_domain_assumption_inventory_prepared"] == "yes"
+    assert current_active_workstream["operator_domain_assumption_reduction_analysis_prepared"] == "yes"
+    assert current_active_workstream["operator_domain_assumption_row_count"] == "6"
+    assert current_active_workstream["selected_assumption_family"] == (
+        "operator_domain_assumptions"
+    )
+    assert current_active_workstream["assumptions_reduced_or_discharged_by_preparation"] == "no"
+    assert current_active_workstream["result_review_target_selected"] == "yes"
+    assert current_active_workstream["operational_position_material_in_scope"] == "no"
     assert current_active_workstream["primary_blocker"] == (
         "insufficient_assumptions_for_conservation"
     )

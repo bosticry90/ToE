@@ -290,6 +290,7 @@ def test_post_qm_stat_entropy_log_domain_reduction_selection_registry_rotates_to
             "review_v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet_result",
             "review_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result",
             "prepare_qft_gr_operator_domain_assumption_reduction_packet",
+            "review_qft_gr_operator_domain_assumption_reduction_packet_result",
         }
     assert PREVIOUS_LANE in state["paused_lanes"]
     assert REDUCTION_LANE in state["paused_lanes"]

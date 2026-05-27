@@ -247,6 +247,7 @@ def test_qm_stat_entropy_log_domain_zero_handling_reduction_result_review_regist
             "review_v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet_result",
             "review_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_result",
             "prepare_qft_gr_operator_domain_assumption_reduction_packet",
+            "review_qft_gr_operator_domain_assumption_reduction_packet_result",
         }
         assert state["active_lane"] in {
             "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection",
@@ -263,6 +264,7 @@ def test_qm_stat_entropy_log_domain_zero_handling_reduction_result_review_regist
             "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
             "v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout_packet_preparation",
             "qft_gr_covariant_conservation_assumption_reduction_packet_result_review",
+            "qft_gr_operator_domain_assumption_reduction_packet_preparation",
         }
     assert PREVIOUS_LANE in state["paused_lanes"]
     assert ACTIVE_LANE in state["paused_lanes"]
