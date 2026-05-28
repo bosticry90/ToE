@@ -198,13 +198,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR candidate source-domain membership assumption-reduction packet prepared OD-ASSUMP-002 analysis only after the accepted OD-ASSUMP-001 bounded operator/action contract, with no source admissibility claim, proof object construction, conservation witness construction, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
+        "QFT-GR candidate source-domain membership assumption-reduction packet result review accepted OD-ASSUMP-002 preparation only and authorized a bounded reduction attempt only, with no source admissibility claim, proof object construction, conservation witness construction, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
+        "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -226,13 +226,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR candidate source-domain membership assumption-reduction packet prepared OD-ASSUMP-002 analysis only and authorized packet result review, with no source admissibility, final assumption discharge, proof object construction, conservation witness construction, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
+        "QFT-GR candidate source-domain membership assumption-reduction packet result review accepted OD-ASSUMP-002 packet preparation only and authorized a bounded reduction attempt, with no source admissibility, final assumption discharge, proof object construction, conservation witness construction, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
+        "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
       status := .retained }
   ]
 
@@ -250,13 +250,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR candidate source-domain membership packet. -/
+/-- Previous live target consumed by the QFT-GR candidate source-domain membership packet result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_candidate_source_domain_membership_assumption_reduction_packet"
-
-/-- Current live target after QFT-GR candidate source-domain membership packet preparation. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
+
+/-- Current live target after QFT-GR candidate source-domain membership packet result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -269,7 +269,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
+        "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

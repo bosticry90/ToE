@@ -67,7 +67,7 @@ PREPARED_TOKEN = (
 )
 EXPECTED_LIVE_TARGET = (
     "CURRENT_LIVE_NEXT_TARGET_v0: "
-    "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
+    "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
 REQUIRED_ROW_TOKENS = [
     "NONCLAIM",
