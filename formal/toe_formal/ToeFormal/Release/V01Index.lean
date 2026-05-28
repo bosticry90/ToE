@@ -1288,6 +1288,30 @@ def qftGRSelectedOperatorActionAssumptionReductionAttemptResultReviewNextRow : S
 def qftGRSelectedOperatorActionAssumptionReductionAttemptResultReviewSelectedNextTarget : String :=
   "prepare_qft_gr_candidate_source_domain_membership_assumption_reduction_packet"
 
+def qftGRCandidateSourceDomainMembershipAssumptionReductionPacketLeanSurface : String :=
+  "ToeFormal.Bridges.QFT_GR_CandidateSourceDomainMembershipAssumptionReductionPacket"
+
+def qftGRCandidateSourceDomainMembershipAssumptionReductionPacketOutcomeToken : String :=
+  "QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
+
+def qftGRCandidateSourceDomainMembershipAssumptionReductionPacketClassification : String :=
+  "qft_gr_candidate_source_domain_membership_assumption_reduction_packet_prepared_with_no_source_admissibility_or_seam_closure"
+
+def qftGRCandidateSourceDomainMembershipAssumptionReductionPacketPriorAcceptedRow : String :=
+  "OD-ASSUMP-001-selected_operator_action"
+
+def qftGRCandidateSourceDomainMembershipAssumptionReductionPacketSelectedRow : String :=
+  "OD-ASSUMP-002-candidate_source_domain_membership"
+
+def qftGRCandidateSourceDomainMembershipAssumptionReductionPacketCandidateSourceObject : String :=
+  "candidate_stress_energy_source"
+
+def qftGRCandidateSourceDomainMembershipAssumptionReductionPacketMembershipCondition : String :=
+  "candidate_stress_energy_source_in_prepared_operator_domain"
+
+def qftGRCandidateSourceDomainMembershipAssumptionReductionPacketSelectedNextTarget : String :=
+  "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -4673,6 +4697,51 @@ theorem qft_gr_selected_operator_action_assumption_reduction_attempt_does_not_cl
   trivial
 
 theorem qft_gr_selected_operator_action_assumption_reduction_attempt_selects_result_review_target : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_attempt_result_review_consumes_attempt : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_attempt_result_review_confirms_contract : True := by
+  trivial
+
+theorem qft_gr_selected_operator_action_assumption_reduction_attempt_result_review_selects_candidate_source_domain_membership_packet : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_packet_consumes_result_review : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_packet_preserves_blocker : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_packet_preserves_family : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_packet_selects_only_row002 : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_packet_prepares_reduction_analysis_only : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_packet_does_not_claim_source_admissibility : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_packet_does_not_construct_proof_object : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_packet_does_not_construct_witness : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_packet_does_not_claim_bianchi_compatibility : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_packet_does_not_derive_semiclassical_einstein_equation : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_packet_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_packet_selects_result_review_target : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by

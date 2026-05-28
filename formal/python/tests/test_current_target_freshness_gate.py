@@ -1144,13 +1144,13 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "qft_gr_selected_operator_action_assumption_reduction_attempt_result_review"
+    "qft_gr_candidate_source_domain_membership_assumption_reduction_packet_preparation"
 )
 PREVIOUS_TARGET = (
-    "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result"
+    "prepare_qft_gr_candidate_source_domain_membership_assumption_reduction_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_candidate_source_domain_membership_assumption_reduction_packet"
+    "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
 )
 LIVE_TARGET_EVIDENCE_PATH = (
     REPO_ROOT
@@ -1158,7 +1158,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_SelectedOperatorActionAssumptionReductionAttemptResultReview.lean"
+    / "QFT_GR_CandidateSourceDomainMembershipAssumptionReductionPacket.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1977,7 +1977,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["consumed_target"] == PREVIOUS_TARGET
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_selected_operator_action_assumption_reduction_attempt_result_review_v0"
+        == "qft_gr_candidate_source_domain_membership_assumption_reduction_packet_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2373,7 +2373,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["selected_route"] == (
         "qft_gr_candidate_source_domain_membership_assumption_reduction_packet_"
-        "after_selected_operator_action_result_review"
+        "result_review_after_preparation"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -3280,19 +3280,19 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["track2_selected_after_result_review"] == "yes"
     assert current_active_workstream["track2_selection_kind"] == (
         "qft_gr_candidate_source_domain_membership_assumption_reduction_packet_"
-        "preparation_only"
+        "result_review_only"
     )
-    assert current_active_workstream["track2_science_lane_execution_started"] == "yes_bounded_attempt_result_reviewed"
+    assert current_active_workstream["track2_science_lane_execution_started"] == "yes_candidate_source_domain_membership_packet_prepared"
     assert current_active_workstream["track2_started"] == (
-        "selected_operator_action_assumption_reduction_attempt_result_review_"
-        "accepted_pending_candidate_source_domain_membership_packet"
+        "candidate_source_domain_membership_assumption_reduction_packet_"
+        "prepared_pending_result_review"
     )
     assert current_active_workstream["track2_selected_after_this_execution"] == (
-        "yes_selected_operator_action_attempt_result_review_selected"
+        "no_packet_preparation_selected_result_review_only"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "PREPARE_QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_"
-        "REDUCTION_PACKET_ONLY_NO_ASSUMPTION_DISCHARGE_OR_QFT_GR_SEAM_CLOSURE"
+        "REVIEW_QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_"
+        "REDUCTION_PACKET_RESULT_ONLY_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
     assert current_active_workstream["closeout_criteria_count"] == "4"
@@ -3474,13 +3474,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["operator_domain_assumption_rows_confirmed_by_review"] == "yes"
     assert current_active_workstream["operator_domain_assumption_row_count_confirmed_by_review"] == "6"
     assert current_active_workstream["selected_operator_domain_assumption_row"] == (
-        "OD-ASSUMP-001-selected_operator_action"
+        "OD-ASSUMP-002-candidate_source_domain_membership"
     )
     assert current_active_workstream["selected_operator_domain_assumption_row_status"] == (
-        "required|supplied|missing|candidate_reducible"
+        "required|missing|candidate_reducible"
     )
     assert current_active_workstream["selected_operator_domain_assumption_reduction_target"] == (
-        "prepare_qft_gr_selected_operator_action_assumption_reduction_packet"
+        "prepare_qft_gr_candidate_source_domain_membership_assumption_reduction_packet"
     )
     assert current_active_workstream["packet_preparation_only_confirmed_by_review"] == "yes"
     assert current_active_workstream["assumptions_discharged_by_review"] == "no"
@@ -3541,7 +3541,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["assumptions_reduced_or_discharged_by_implication"] == "no"
     assert (
         current_active_workstream["selected_operator_action_attempt_result_review_target"]
-        == PREVIOUS_TARGET
+        == "review_qft_gr_selected_operator_action_assumption_reduction_attempt_result"
     )
     assert current_active_workstream["selected_operator_action_result_reviewed"] == "yes"
     assert (
@@ -3561,6 +3561,43 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "OD-ASSUMP-002-candidate_source_domain_membership"
     )
     assert current_active_workstream["next_operator_domain_assumption_reduction_target"] == LIVE_TARGET
+    assert current_active_workstream["qft_gr_candidate_source_domain_membership_assumption_reduction_packet_classification"] == (
+        "qft_gr_candidate_source_domain_membership_assumption_reduction_packet_"
+        "prepared_with_no_source_admissibility_or_seam_closure"
+    )
+    assert current_active_workstream["candidate_source_domain_membership_packet_prepared"] == "yes"
+    assert current_active_workstream["candidate_source_domain_membership_packet_preparation_only"] == "yes"
+    assert (
+        current_active_workstream[
+            "candidate_source_domain_membership_assumption_reduction_analysis_prepared"
+        ]
+        == "yes"
+    )
+    assert current_active_workstream["candidate_source_domain_membership_assumption_row"] == (
+        "OD-ASSUMP-002-candidate_source_domain_membership"
+    )
+    assert current_active_workstream["candidate_source_domain_membership_status_tokens"] == (
+        "required|missing|candidate_reducible"
+    )
+    assert current_active_workstream["candidate_source_object"] == (
+        "candidate_stress_energy_source"
+    )
+    assert current_active_workstream["operator_domain_membership_condition"] == (
+        "candidate_stress_energy_source_in_prepared_operator_domain"
+    )
+    assert (
+        current_active_workstream[
+            "candidate_source_domain_membership_packet_result_review_target"
+        ]
+        == LIVE_TARGET
+    )
+    assert current_active_workstream["source_admissibility_claimed"] == "no"
+    assert (
+        current_active_workstream[
+            "candidate_source_domain_membership_assumption_discharged"
+        ]
+        == "no"
+    )
     assert current_active_workstream["primary_blocker"] == (
         "insufficient_assumptions_for_conservation"
     )
