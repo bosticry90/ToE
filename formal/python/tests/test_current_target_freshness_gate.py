@@ -1144,7 +1144,7 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "qft_gr_state_expectation_domain_link_assumption_reduction_attempt_result_review"
+    "qft_gr_renormalized_expectation_domain_link_assumption_reduction_packet_preparation"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1164,9 +1164,12 @@ STATE_EXPECTATION_ATTEMPT_TARGET = (
 STATE_EXPECTATION_ATTEMPT_RESULT_REVIEW_TARGET = (
     "review_qft_gr_state_expectation_domain_link_assumption_reduction_attempt_result"
 )
-PREVIOUS_TARGET = STATE_EXPECTATION_ATTEMPT_RESULT_REVIEW_TARGET
-LIVE_TARGET = (
+RENORMALIZED_EXPECTATION_DOMAIN_LINK_PACKET_TARGET = (
     "prepare_qft_gr_renormalized_expectation_domain_link_assumption_reduction_packet"
+)
+PREVIOUS_TARGET = RENORMALIZED_EXPECTATION_DOMAIN_LINK_PACKET_TARGET
+LIVE_TARGET = (
+    "review_qft_gr_renormalized_expectation_domain_link_assumption_reduction_packet_result"
 )
 PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
@@ -1177,7 +1180,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_StateExpectationDomainLinkAssumptionReductionAttemptResultReview.lean"
+    / "QFT_GR_RenormalizedExpectationDomainLinkAssumptionReductionPacket.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1997,8 +2000,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert (
         current_active_workstream["latest_surface"]
         == (
-            "qft_gr_state_expectation_domain_link_assumption_reduction_"
-            "attempt_result_review_v0"
+            "qft_gr_renormalized_expectation_domain_link_assumption_reduction_"
+            "packet_v0"
         )
     )
     assert current_active_workstream["authorization_evidence"] == str(
@@ -2395,7 +2398,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["selected_route"] == (
         "qft_gr_renormalized_expectation_domain_link_assumption_reduction_packet_"
-        "after_state_expectation_domain_link_attempt_result_review"
+        "result_review_after_preparation"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -3301,25 +3304,26 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["qft_gr_witness_executed"] == "yes"
     assert current_active_workstream["track2_selected_after_result_review"] == "yes"
     assert current_active_workstream["track2_selection_kind"] == (
-        "qft_gr_state_expectation_domain_link_assumption_reduction_attempt_"
-        "result_review_only"
+        "qft_gr_renormalized_expectation_domain_link_assumption_reduction_"
+        "packet_preparation"
     )
     assert current_active_workstream["track2_science_lane_execution_started"] == (
-        "yes_state_expectation_domain_link_assumption_reduction_attempt_result_review_accepted"
+        "yes_renormalized_expectation_domain_link_packet_prepared"
     )
     assert current_active_workstream["track2_started"] == (
-        "state_expectation_domain_link_assumption_reduction_attempt_result_reviewed_"
-        "next_row_packet_preparation_pending"
+        "renormalized_expectation_domain_link_assumption_reduction_packet_"
+        "prepared_pending_result_review"
     )
     assert current_active_workstream["track2_selected_after_this_execution"] == (
-        "yes_state_expectation_domain_link_attempt_result_review_selected"
+        "no_packet_preparation_selected_result_review_only"
     )
     assert current_active_workstream["track2_selected_after_this_review"] == (
-        "yes_renormalized_expectation_domain_link_packet_selected"
+        "yes_renormalized_expectation_domain_link_packet_result_review_selected"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "PREPARE_QFT_GR_RENORMALIZED_EXPECTATION_DOMAIN_LINK_ASSUMPTION_"
-        "REDUCTION_PACKET_ONLY_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_SEAM_CLOSURE"
+        "REVIEW_QFT_GR_RENORMALIZED_EXPECTATION_DOMAIN_LINK_ASSUMPTION_"
+        "REDUCTION_PACKET_RESULT_ONLY_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_"
+        "SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
     assert current_active_workstream["closeout_criteria_count"] == "4"
@@ -3910,7 +3914,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         current_active_workstream[
             "state_expectation_domain_link_assumption_reduction_attempt_result_review_target"
         ]
-        == PREVIOUS_TARGET
+        == STATE_EXPECTATION_ATTEMPT_RESULT_REVIEW_TARGET
     )
     assert (
         current_active_workstream[
@@ -3961,9 +3965,41 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "yes"
     assert current_active_workstream[
         "renormalized_expectation_domain_link_assumption_reduction_packet_target"
-    ] == LIVE_TARGET
+    ] == PREVIOUS_TARGET
     assert current_active_workstream[
         "renormalized_expectation_domain_link_assumption_reduction_packet_prepared"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalized_expectation_domain_link_packet_result_review_target"
+    ] == LIVE_TARGET
+    assert current_active_workstream[
+        "renormalized_expectation_domain_link_assumption_reduction_packet_classification"
+    ] == (
+        "qft_gr_renormalized_expectation_domain_link_assumption_reduction_"
+        "packet_prepared_with_no_source_admissibility_or_seam_closure"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_domain_link_assumption_reduction_packet_token"
+    ] == (
+        "QFT_GR_RENORMALIZED_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_"
+        "PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
+    )
+    assert current_active_workstream["renormalized_expectation_object"] == (
+        "candidate_renormalized_qft_stress_energy_expectation_object"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_domain_link_operator_domain_link_condition"
+    ] == (
+        "renormalized_expectation_value_admitted_to_operator_domain"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_domain_link_packet_preparation_only"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalized_expectation_domain_link_assumption_discharged"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalization_compatibility_with_conservation_claimed"
     ] == "no"
     assert (
         current_active_workstream[
