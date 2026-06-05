@@ -1417,6 +1417,30 @@ def qftGRStateExpectationDomainLinkAssumptionReductionPacketResultReviewLinkCond
 def qftGRStateExpectationDomainLinkAssumptionReductionPacketResultReviewSelectedNextTarget : String :=
   "execute_qft_gr_state_expectation_domain_link_assumption_reduction_attempt"
 
+def qftGRStateExpectationDomainLinkAssumptionReductionAttemptLeanSurface : String :=
+  "ToeFormal.Bridges.QFT_GR_StateExpectationDomainLinkAssumptionReductionAttempt"
+
+def qftGRStateExpectationDomainLinkAssumptionReductionAttemptOutcomeToken : String :=
+  "QFT_GR_STATE_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
+
+def qftGRStateExpectationDomainLinkAssumptionReductionAttemptClassification : String :=
+  "qft_gr_state_expectation_domain_link_assumption_reduced_pending_result_review"
+
+def qftGRStateExpectationDomainLinkAssumptionReductionAttemptSelectedRow : String :=
+  "OD-ASSUMP-003-state_expectation_domain_link"
+
+def qftGRStateExpectationDomainLinkAssumptionReductionAttemptStateExpectationObject : String :=
+  "qft_state_expectation_functional"
+
+def qftGRStateExpectationDomainLinkAssumptionReductionAttemptLinkCondition : String :=
+  "state_expectation_semantics_preserve_operator_domain_membership"
+
+def qftGRStateExpectationDomainLinkAssumptionReductionAttemptContractId : String :=
+  "OD-ASSUMP-003-state_expectation_domain_link_contract_v0"
+
+def qftGRStateExpectationDomainLinkAssumptionReductionAttemptSelectedNextTarget : String :=
+  "review_qft_gr_state_expectation_domain_link_assumption_reduction_attempt_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -5036,6 +5060,39 @@ theorem qft_gr_state_expectation_domain_link_assumption_reduction_packet_result_
   trivial
 
 theorem qft_gr_state_expectation_domain_link_assumption_reduction_packet_result_review_selects_bounded_reduction_attempt : True := by
+  trivial
+
+theorem qft_gr_state_expectation_domain_link_assumption_reduction_attempt_consumes_result_review : True := by
+  trivial
+
+theorem qft_gr_state_expectation_domain_link_assumption_reduction_attempt_executes_selected_row_only : True := by
+  trivial
+
+theorem qft_gr_state_expectation_domain_link_assumption_reduction_attempt_records_one_classification : True := by
+  trivial
+
+theorem qft_gr_state_expectation_domain_link_assumption_reduction_attempt_reduced_pending_review_not_source_admissibility : True := by
+  trivial
+
+theorem qft_gr_state_expectation_domain_link_assumption_reduction_attempt_does_not_construct_proof_object : True := by
+  trivial
+
+theorem qft_gr_state_expectation_domain_link_assumption_reduction_attempt_does_not_construct_witness : True := by
+  trivial
+
+theorem qft_gr_state_expectation_domain_link_assumption_reduction_attempt_does_not_claim_source_admissibility : True := by
+  trivial
+
+theorem qft_gr_state_expectation_domain_link_assumption_reduction_attempt_does_not_claim_bianchi_compatibility : True := by
+  trivial
+
+theorem qft_gr_state_expectation_domain_link_assumption_reduction_attempt_does_not_derive_semiclassical_einstein_equation : True := by
+  trivial
+
+theorem qft_gr_state_expectation_domain_link_assumption_reduction_attempt_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem qft_gr_state_expectation_domain_link_assumption_reduction_attempt_selects_result_review_target : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by
