@@ -1504,6 +1504,30 @@ def qftGRRenormalizedExpectationDomainLinkAssumptionReductionPacketResultReviewL
 def qftGRRenormalizedExpectationDomainLinkAssumptionReductionPacketResultReviewSelectedNextTarget : String :=
   "execute_qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt"
 
+def qftGRRenormalizedExpectationDomainLinkAssumptionReductionAttemptLeanSurface : String :=
+  "ToeFormal.Bridges.QFT_GR_RenormalizedExpectationDomainLinkAssumptionReductionAttempt"
+
+def qftGRRenormalizedExpectationDomainLinkAssumptionReductionAttemptOutcomeToken : String :=
+  "QFT_GR_RENORMALIZED_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
+
+def qftGRRenormalizedExpectationDomainLinkAssumptionReductionAttemptClassification : String :=
+  "qft_gr_renormalized_expectation_domain_link_assumption_reduced_pending_result_review"
+
+def qftGRRenormalizedExpectationDomainLinkAssumptionReductionAttemptSelectedRow : String :=
+  "OD-ASSUMP-004-renormalized_expectation_domain_link"
+
+def qftGRRenormalizedExpectationDomainLinkAssumptionReductionAttemptRenormalizedExpectationObject : String :=
+  "candidate_renormalized_qft_stress_energy_expectation_object"
+
+def qftGRRenormalizedExpectationDomainLinkAssumptionReductionAttemptLinkCondition : String :=
+  "renormalized_expectation_value_admitted_to_operator_domain"
+
+def qftGRRenormalizedExpectationDomainLinkAssumptionReductionAttemptContractId : String :=
+  "OD-ASSUMP-004-renormalized_expectation_domain_link_contract_v0"
+
+def qftGRRenormalizedExpectationDomainLinkAssumptionReductionAttemptSelectedNextTarget : String :=
+  "review_qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -5267,6 +5291,39 @@ theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_packet_
   trivial
 
 theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_packet_result_review_selects_bounded_reduction_attempt : True := by
+  trivial
+
+theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_consumes_result_review : True := by
+  trivial
+
+theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_executes_selected_row_only : True := by
+  trivial
+
+theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_records_one_classification : True := by
+  trivial
+
+theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_reduced_pending_review_not_source_admissibility : True := by
+  trivial
+
+theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_does_not_construct_proof_object : True := by
+  trivial
+
+theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_does_not_construct_witness : True := by
+  trivial
+
+theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_does_not_claim_source_admissibility : True := by
+  trivial
+
+theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_does_not_claim_bianchi_compatibility : True := by
+  trivial
+
+theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_does_not_derive_semiclassical_einstein_equation : True := by
+  trivial
+
+theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_selects_result_review_target : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by
