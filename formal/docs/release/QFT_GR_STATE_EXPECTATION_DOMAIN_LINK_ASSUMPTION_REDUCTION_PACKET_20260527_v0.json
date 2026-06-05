@@ -1,0 +1,151 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "consumes_expected_result_review": true,
+    "does_not_claim_bianchi_compatibility": true,
+    "does_not_claim_source_admissibility": true,
+    "does_not_close_qft_gr_seam": true,
+    "does_not_construct_conservation_proof_object": true,
+    "does_not_construct_conservation_witness": true,
+    "does_not_derive_semiclassical_einstein_equation": true,
+    "does_not_validate_or_promote": true,
+    "exactly_one_next_target_selected": true,
+    "no_release_or_public_submission": true,
+    "operator_domain_link_condition_recorded": true,
+    "operator_domain_packet_available": true,
+    "prepares_reduction_analysis_only": true,
+    "preserves_insufficient_assumptions_blocker": true,
+    "preserves_operator_domain_family": true,
+    "prior_candidate_source_domain_contract_accepted": true,
+    "result_review_accepts_prior_row_only": true,
+    "result_review_authorized_this_packet": true,
+    "result_review_classification_expected": true,
+    "result_review_outcome_expected": true,
+    "result_review_schema_expected": true,
+    "selected_row_status_tokens_current": true,
+    "selected_row_status_values_valid": true,
+    "selects_only_state_expectation_domain_link_row": true,
+    "state_expectation_object_recorded": true
+  },
+  "accepted": true,
+  "assumptions_reduced_or_discharged_by_preparation": false,
+  "blocker": "insufficient_assumptions_for_conservation",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The state-expectation domain-link packet must be reviewed before any bounded reduction attempt or downstream row selection.",
+      "target": "review_qft_gr_state_expectation_domain_link_assumption_reduction_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "Renormalized-expectation domain linkage is OD-ASSUMP-004 and requires this row's result review first.",
+      "target": "prepare_qft_gr_renormalized_expectation_domain_link_assumption_reduction_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Preparing state-expectation domain linkage does not authorize full source admissibility.",
+      "target": "prepare_qft_gr_source_admissibility_assumption_reduction_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Preparing this packet does not authorize a conservation proof-object attempt.",
+      "target": "execute_qft_gr_covariant_conservation_proof_object_attempt"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No operator-domain row packet closes QFT-GR.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Public submission is outside this bounded packet.",
+      "target": "authorize_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-05-27T00:00:00Z",
+  "claim_ceiling": "state_expectation_domain_link_assumption_reduction_packet_only_no_conservation_witness_no_source_admissibility_no_qft_gr_seam_closure",
+  "conservation_proof_object_constructed": false,
+  "conservation_witness_constructed": false,
+  "consumed_result_review_classification": "qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_accepts_reduced_source_domain_membership_assumption_and_authorizes_next_operator_domain_row_selection_only",
+  "consumed_result_review_outcome_id": "QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_AND_AUTHORIZES_NEXT_OPERATOR_DOMAIN_ROW_SELECTION_ONLY",
+  "consumes_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review": "QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_v0",
+  "consumes_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_pointer": "formal/docs/release/QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260527_v0.json",
+  "current_family": "operator_domain_assumptions",
+  "empirical_validation_claimed": false,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_QFT_GR_STATE_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This packet prepares only OD-ASSUMP-003 state-expectation domain-link reduction analysis. It does not claim source admissibility, construct a conservation proof object or conservation witness, claim Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "operator_domain_link_condition": "state_expectation_semantics_preserve_operator_domain_membership",
+  "outcome_id": "QFT_GR_STATE_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "packet_classification": "qft_gr_state_expectation_domain_link_assumption_reduction_packet_prepared_with_no_conservation_witness_or_seam_closure",
+  "packet_classification_count": 1,
+  "packet_id": "QFT_GR_STATE_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_PACKET_v0",
+  "prepared": true,
+  "primary_assumption_reduction_family": "operator_domain_assumptions",
+  "prior_accepted_candidate_source_domain_membership_contract": "OD-ASSUMP-002-candidate_source_domain_membership_contract_v0",
+  "prior_accepted_operator_domain_assumption_rows": [
+    "OD-ASSUMP-001-selected_operator_action",
+    "OD-ASSUMP-002-candidate_source_domain_membership"
+  ],
+  "prior_accepted_selected_operator_action_contract": "OD-ASSUMP-001-selected_operator_action_contract_v0",
+  "proof_object_constructed": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "row_status_enum": [
+    "required",
+    "supplied",
+    "derivable",
+    "missing",
+    "candidate_reducible",
+    "not_reducible_in_current_lane"
+  ],
+  "schema_id": "QFT_GR_STATE_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_PACKET_20260527_v0",
+  "scientific_validation_claimed": false,
+  "selected_assumption_family": "operator_domain_assumptions",
+  "selected_blocker": "insufficient_assumptions_for_conservation",
+  "selected_next_target": "review_qft_gr_state_expectation_domain_link_assumption_reduction_packet_result",
+  "selected_next_target_kind": "qft_gr_state_expectation_domain_link_assumption_reduction_packet_result_review",
+  "selected_operator_domain_assumption_row": "OD-ASSUMP-003-state_expectation_domain_link",
+  "selected_route": "qft_gr_state_expectation_domain_link_assumption_reduction_packet_result_review_after_preparation",
+  "selected_row_count": 1,
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "source_operator_domain_assumption_reduction_packet": "QFT_GR_OPERATOR_DOMAIN_ASSUMPTION_REDUCTION_PACKET_v0",
+  "source_operator_domain_assumption_reduction_packet_pointer": "formal/docs/release/QFT_GR_OPERATOR_DOMAIN_ASSUMPTION_REDUCTION_PACKET_20260526_v0.json",
+  "state_expectation_domain_link_assumption": {
+    "assumption_family": "operator_domain_assumptions",
+    "assumption_id": "OD-ASSUMP-003-state_expectation_domain_link",
+    "available_repo_evidence": [
+      "QFT_GR_StateExpectationFunctionalSemantics",
+      "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_PACKET_v0"
+    ],
+    "candidate_reduction_route": "bind state-expectation semantics to the prepared operator domain without claiming conservation or source admissibility",
+    "claim_ceiling": "state_expectation_domain_link_packet_only_no_conservation_witness_no_source_admissibility",
+    "current_status": [
+      "required",
+      "missing",
+      "candidate_reducible"
+    ],
+    "failure_mode_if_unresolved": "state expectations may be meaningful while still outside the selected operator domain",
+    "operator_domain_link_condition": "state_expectation_semantics_preserve_operator_domain_membership",
+    "required_future_proof_object": "state_expectation_semantics_preserve_operator_domain_membership",
+    "state_expectation_object": "qft_state_expectation_functional"
+  },
+  "state_expectation_domain_link_assumption_discharged": false,
+  "state_expectation_domain_link_assumption_reduction_analysis_prepared": true,
+  "state_expectation_domain_link_claimed_as_operator_domain_closed": false,
+  "state_expectation_domain_link_status_tokens": [
+    "required",
+    "missing",
+    "candidate_reducible"
+  ],
+  "state_expectation_object": "qft_state_expectation_functional",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false
+}

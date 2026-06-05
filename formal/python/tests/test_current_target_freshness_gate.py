@@ -1144,16 +1144,17 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review"
+    "qft_gr_state_expectation_domain_link_assumption_reduction_packet_preparation"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
-PREVIOUS_TARGET = (
+CANDIDATE_SOURCE_ATTEMPT_REVIEW_TARGET = (
     "review_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result"
 )
+PREVIOUS_TARGET = "prepare_qft_gr_state_expectation_domain_link_assumption_reduction_packet"
 LIVE_TARGET = (
-    "prepare_qft_gr_state_expectation_domain_link_assumption_reduction_packet"
+    "review_qft_gr_state_expectation_domain_link_assumption_reduction_packet_result"
 )
 PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
@@ -1164,7 +1165,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_CandidateSourceDomainMembershipAssumptionReductionAttemptResultReview.lean"
+    / "QFT_GR_StateExpectationDomainLinkAssumptionReductionPacket.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -1984,8 +1985,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert (
         current_active_workstream["latest_surface"]
         == (
-            "qft_gr_candidate_source_domain_membership_assumption_reduction_"
-            "attempt_result_review_v0"
+            "qft_gr_state_expectation_domain_link_assumption_reduction_"
+            "packet_v0"
         )
     )
     assert current_active_workstream["authorization_evidence"] == str(
@@ -2381,8 +2382,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "qft_gr_state_expectation_domain_link_assumption_reduction_packet_after_"
-        "candidate_source_domain_membership_attempt_result_review"
+        "qft_gr_state_expectation_domain_link_assumption_reduction_packet_"
+        "result_review_after_preparation"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -3292,18 +3293,18 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "preparation_only"
     )
     assert current_active_workstream["track2_science_lane_execution_started"] == (
-        "yes_candidate_source_domain_membership_attempt_result_review_accepted"
+        "yes_state_expectation_domain_link_assumption_reduction_packet_prepared"
     )
     assert current_active_workstream["track2_started"] == (
-        "candidate_source_domain_membership_attempt_result_review_accepted_pending_"
-        "state_expectation_domain_link_packet"
+        "state_expectation_domain_link_assumption_reduction_packet_prepared_"
+        "pending_result_review"
     )
     assert current_active_workstream["track2_selected_after_this_execution"] == (
-        "no_attempt_result_review_selected_state_expectation_domain_link_packet_only"
+        "no_packet_preparation_selected_result_review_only"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "PREPARE_QFT_GR_STATE_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_PACKET_"
-        "ONLY_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_SEAM_CLOSURE"
+        "REVIEW_QFT_GR_STATE_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_PACKET_"
+        "RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
     assert current_active_workstream["closeout_criteria_count"] == "4"
@@ -3691,7 +3692,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         current_active_workstream[
             "candidate_source_domain_membership_assumption_reduction_attempt_result_review_target"
         ]
-        == PREVIOUS_TARGET
+        == CANDIDATE_SOURCE_ATTEMPT_REVIEW_TARGET
     )
     assert (
         current_active_workstream[
@@ -3735,10 +3736,49 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         current_active_workstream[
             "state_expectation_domain_link_assumption_reduction_packet_target"
         ]
-        == LIVE_TARGET
+        == PREVIOUS_TARGET
     )
     assert current_active_workstream["state_expectation_domain_link_assumption_row"] == (
         "OD-ASSUMP-003-state_expectation_domain_link"
+    )
+    assert (
+        current_active_workstream[
+            "state_expectation_domain_link_assumption_reduction_packet_classification"
+        ]
+        == (
+            "qft_gr_state_expectation_domain_link_assumption_reduction_packet_"
+            "prepared_with_no_conservation_witness_or_seam_closure"
+        )
+    )
+    assert (
+        current_active_workstream[
+            "state_expectation_domain_link_assumption_reduction_packet_token"
+        ]
+        == (
+            "QFT_GR_STATE_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_PACKET_"
+            "PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+        )
+    )
+    assert (
+        current_active_workstream[
+            "state_expectation_domain_link_packet_result_review_target"
+        ]
+        == LIVE_TARGET
+    )
+    assert current_active_workstream["state_expectation_object"] == (
+        "qft_state_expectation_functional"
+    )
+    assert current_active_workstream["operator_domain_link_condition"] == (
+        "state_expectation_semantics_preserve_operator_domain_membership"
+    )
+    assert current_active_workstream["state_expectation_domain_link_packet_prepared"] == "yes"
+    assert (
+        current_active_workstream["state_expectation_domain_link_packet_preparation_only"]
+        == "yes"
+    )
+    assert (
+        current_active_workstream["state_expectation_domain_link_claimed_as_operator_domain_closed"]
+        == "no"
     )
     assert (
         current_active_workstream[
