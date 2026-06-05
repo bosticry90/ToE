@@ -1,0 +1,87 @@
+/-
+ToeFormal/Bridges/QFT_GR_CandidateSourceDomainMembershipAssumptionReductionAttemptResultReview.lean
+
+Lean-side marker for the QFT-GR candidate source-domain membership
+assumption-reduction attempt result review. The review accepts the
+OD-ASSUMP-002 bounded operator-domain membership contract and authorizes the
+next operator-domain row packet preparation only; it does not claim source
+admissibility, construct a conservation proof object or witness, or close
+QFT-GR.
+-/
+
+namespace ToeFormal
+namespace Bridges
+namespace QFTGRCandidateSourceDomainMembershipAssumptionReductionAttemptResultReview
+
+def qftGRCandidateSourceDomainMembershipAssumptionReductionAttemptResultReviewToken : String :=
+  "QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_v0"
+
+def qftGRCandidateSourceDomainMembershipAssumptionReductionAttemptResultReviewOutcomeToken : String :=
+  "QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_AND_AUTHORIZES_NEXT_OPERATOR_DOMAIN_ROW_SELECTION_ONLY"
+
+def resultReviewClassification : String :=
+  "qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_accepts_reduced_source_domain_membership_assumption_and_authorizes_next_operator_domain_row_selection_only"
+
+def consumedAttemptToken : String :=
+  "QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_REDUCTION_ATTEMPT_v0"
+
+def consumedAttemptClassification : String :=
+  "qft_gr_candidate_source_domain_membership_assumption_reduced_pending_result_review"
+
+def candidateSourceDomainMembershipContractId : String :=
+  "OD-ASSUMP-002-candidate_source_domain_membership_contract_v0"
+
+def completedOperatorDomainAssumptionRow : String :=
+  "OD-ASSUMP-002-candidate_source_domain_membership"
+
+def candidateSourceObject : String :=
+  "candidate_stress_energy_source"
+
+def operatorDomainMembershipCondition : String :=
+  "candidate_stress_energy_source_in_prepared_operator_domain"
+
+def nextOperatorDomainAssumptionRow : String :=
+  "OD-ASSUMP-003-state_expectation_domain_link"
+
+def selectedNextTarget : String :=
+  "prepare_qft_gr_state_expectation_domain_link_assumption_reduction_packet"
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_consumes_attempt : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_confirms_classification : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_confirms_contract : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_accepts_reduction_only : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_does_not_discharge_assumption : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_does_not_claim_source_admissibility : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_does_not_construct_proof_object : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_does_not_construct_witness : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_does_not_claim_bianchi_compatibility : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_does_not_derive_semiclassical_einstein_equation : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem qft_gr_candidate_source_domain_membership_assumption_reduction_attempt_result_review_selects_next_operator_domain_row : True := by
+  trivial
+
+end QFTGRCandidateSourceDomainMembershipAssumptionReductionAttemptResultReview
+end Bridges
+end ToeFormal
