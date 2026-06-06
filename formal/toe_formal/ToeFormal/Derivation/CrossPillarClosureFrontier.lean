@@ -248,13 +248,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR RN-ASSUMP-001 renormalized stress-energy object attempt result review accepted the bounded candidate object contract and selected RN-ASSUMP-002 renormalization-scope packet preparation, with no final object definition, assumption discharge, conservation proof object, conservation witness, source admissibility, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
+        "QFT-GR RN-ASSUMP-002 renormalization-scope packet prepared bounded scope analysis and selected packet result review, with no renormalization assumption discharge, conservation proof object, conservation witness, source admissibility, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_renormalization_scope_assumption_reduction_packet"
+        "review_qft_gr_renormalization_scope_assumption_reduction_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -276,13 +276,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR RN-ASSUMP-001 attempt result review accepted reduced-pending-review object reduction and selects only RN-ASSUMP-002 renormalization-scope packet preparation next, with no final object definition, conservation proof, source admissibility, renormalization assumption discharge, proof object construction, conservation witness construction, Bianchi compatibility, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
+        "QFT-GR RN-ASSUMP-002 renormalization-scope packet prepared scope analysis only and selects packet result review next, with no conservation proof, source admissibility, renormalization assumption discharge, proof object construction, conservation witness construction, Bianchi compatibility, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_renormalization_scope_assumption_reduction_packet"
+        "review_qft_gr_renormalization_scope_assumption_reduction_packet_result"
       status := .retained }
   ]
 
@@ -300,13 +300,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR RN-ASSUMP-001 result review. -/
+/-- Previous live target consumed by the QFT-GR RN-ASSUMP-002 packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_renormalized_stress_energy_object_assumption_reduction_attempt_result"
-
-/-- Current live target after the QFT-GR RN-ASSUMP-001 result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_renormalization_scope_assumption_reduction_packet"
+
+/-- Current live target after the QFT-GR RN-ASSUMP-002 packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_renormalization_scope_assumption_reduction_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -319,7 +319,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "prepare_qft_gr_renormalization_scope_assumption_reduction_packet"
+        "review_qft_gr_renormalization_scope_assumption_reduction_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

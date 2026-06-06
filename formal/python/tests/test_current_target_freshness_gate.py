@@ -1227,16 +1227,27 @@ RENORMALIZED_STRESS_ENERGY_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TAR
 RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET = (
     "prepare_qft_gr_renormalization_scope_assumption_reduction_packet"
 )
+RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_renormalization_scope_assumption_reduction_packet_result"
+)
 PREVIOUS_TARGET = (
-    RENORMALIZED_STRESS_ENERGY_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+    RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET
 )
 LIVE_TARGET = (
-    RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET
+    RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
 )
 PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
 )
 LIVE_TARGET_EVIDENCE_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Bridges"
+    / "QFT_GR_RenormalizationScopeAssumptionReductionPacket.lean"
+)
+RN001_RESULT_REVIEW_AUTHORIZATION_EVIDENCE_PATH = (
     REPO_ROOT
     / "formal"
     / "toe_formal"
@@ -2065,11 +2076,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert (
         current_active_workstream["latest_surface"]
         == (
-            "qft_gr_renormalized_stress_energy_object_assumption_reduction_attempt_result_review_v0"
+            "qft_gr_renormalization_scope_assumption_reduction_packet_v0"
         )
     )
     assert current_active_workstream["authorization_evidence"] == str(
-        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
+        RN001_RESULT_REVIEW_AUTHORIZATION_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert current_active_workstream["construction_packet_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
@@ -3385,8 +3396,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "renormalization_scope_assumption_reduction_packet_selected"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "PREPARE_QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_ONLY_"
-        "NO_FINAL_OBJECT_DEFINITION_CONSERVATION_WITNESS_"
+        "REVIEW_QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_"
+        "NO_RENORMALIZATION_SCOPE_DISCHARGE_CONSERVATION_WITNESS_"
         "OR_QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
@@ -4693,10 +4704,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream[
         "renormalized_stress_energy_object_assumption_reduction_attempt_result_review_target"
-    ] == PREVIOUS_TARGET
+    ] == RENORMALIZED_STRESS_ENERGY_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
     assert current_active_workstream[
         "renormalized_stress_energy_object_assumption_reduction_attempt_selected_next_target"
-    ] == PREVIOUS_TARGET
+    ] == RENORMALIZED_STRESS_ENERGY_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
     assert current_active_workstream[
         "renormalized_stress_energy_object_assumption_reduction_attempt_result_review_accepted"
     ] == "yes"
@@ -4749,7 +4760,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "RN-ASSUMP-002-renormalization_scope"
     assert current_active_workstream[
         "renormalized_stress_energy_object_assumption_reduction_attempt_result_review_selected_next_target"
-    ] == LIVE_TARGET
+    ] == RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET
     assert current_active_workstream[
         "renormalized_stress_energy_object_authorized_attempt_result_classification_count"
     ] == "3"
