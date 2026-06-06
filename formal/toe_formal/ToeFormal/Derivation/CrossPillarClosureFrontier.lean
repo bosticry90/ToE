@@ -53,10 +53,12 @@ Historical QFT-GR frontier checkpoints retained for substring gates:
 - execute_qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt
 - review_qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_result
 - prepare_qft_gr_conservation_form_scope_assumption_reduction_packet
+- review_qft_gr_conservation_form_scope_assumption_reduction_packet_result
 - QFT-GR state expectation-functional result review completed
 - renormalized-expectation domain-link packet result review accepted
 - renormalized-expectation domain-link assumption reduction attempt executed
 - renormalized-expectation domain-link assumption reduction attempt result review accepted
+- conservation-form-scope assumption reduction packet prepared
 
 Historical current-target snippets:
 def previousLiveNextStrictTargetV0 : String :=
@@ -117,6 +119,7 @@ Historical current target:
 - execute_qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt
 - review_qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_result
 - prepare_qft_gr_conservation_form_scope_assumption_reduction_packet
+- review_qft_gr_conservation_form_scope_assumption_reduction_packet_result
 -/
 
 /-- Fatal-vs-local proof-debt scope for each frontier row. -/
@@ -222,13 +225,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR renormalized-expectation domain-link assumption-reduction attempt result review accepted the OD-ASSUMP-004 bounded operator-domain link contract and authorized OD-ASSUMP-005 conservation-form-scope packet preparation only, with no source admissibility claim, proof object construction, conservation witness construction, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
+        "QFT-GR conservation-form-scope assumption-reduction packet prepared OD-ASSUMP-005 by selecting a bounded weak operator-domain covariant-divergence-zero form for future proof-object work, with no conservation proof, source admissibility claim, proof object construction, conservation witness construction, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_conservation_form_scope_assumption_reduction_packet"
+        "review_qft_gr_conservation_form_scope_assumption_reduction_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -250,13 +253,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR renormalized-expectation domain-link assumption-reduction attempt result review accepted OD-ASSUMP-004 as a bounded contract and selected OD-ASSUMP-005 conservation-form-scope packet preparation only, with no source admissibility, final assumption discharge, proof object construction, conservation witness construction, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
+        "QFT-GR conservation-form-scope assumption-reduction packet prepared OD-ASSUMP-005 as a bounded weak operator-domain conservation-form selection for future proof-object work, with no conservation proof, source admissibility, final assumption discharge, proof object construction, conservation witness construction, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_conservation_form_scope_assumption_reduction_packet"
+        "review_qft_gr_conservation_form_scope_assumption_reduction_packet_result"
       status := .retained }
   ]
 
@@ -274,13 +277,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR renormalized-expectation domain-link attempt result review. -/
+/-- Previous live target consumed by the QFT-GR conservation-form-scope packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_result"
-
-/-- Current live target after the QFT-GR renormalized-expectation domain-link attempt result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_conservation_form_scope_assumption_reduction_packet"
+
+/-- Current live target after the QFT-GR conservation-form-scope packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_conservation_form_scope_assumption_reduction_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -293,7 +296,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "prepare_qft_gr_conservation_form_scope_assumption_reduction_packet"
+        "review_qft_gr_conservation_form_scope_assumption_reduction_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

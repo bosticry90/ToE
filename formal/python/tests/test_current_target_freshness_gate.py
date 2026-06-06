@@ -1144,7 +1144,7 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_result_review"
+    "qft_gr_conservation_form_scope_assumption_reduction_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1176,8 +1176,14 @@ RENORMALIZED_EXPECTATION_DOMAIN_LINK_ATTEMPT_TARGET = (
 RENORMALIZED_EXPECTATION_DOMAIN_LINK_ATTEMPT_RESULT_REVIEW_TARGET = (
     "review_qft_gr_renormalized_expectation_domain_link_assumption_reduction_attempt_result"
 )
-PREVIOUS_TARGET = RENORMALIZED_EXPECTATION_DOMAIN_LINK_ATTEMPT_RESULT_REVIEW_TARGET
-LIVE_TARGET = "prepare_qft_gr_conservation_form_scope_assumption_reduction_packet"
+CONSERVATION_FORM_SCOPE_PACKET_TARGET = (
+    "prepare_qft_gr_conservation_form_scope_assumption_reduction_packet"
+)
+CONSERVATION_FORM_SCOPE_PACKET_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_conservation_form_scope_assumption_reduction_packet_result"
+)
+PREVIOUS_TARGET = CONSERVATION_FORM_SCOPE_PACKET_TARGET
+LIVE_TARGET = CONSERVATION_FORM_SCOPE_PACKET_RESULT_REVIEW_TARGET
 PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
 )
@@ -1187,7 +1193,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_RenormalizedExpectationDomainLinkAssumptionReductionAttemptResultReview.lean"
+    / "QFT_GR_ConservationFormScopeAssumptionReductionPacket.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -2007,8 +2013,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert (
         current_active_workstream["latest_surface"]
         == (
-            "qft_gr_renormalized_expectation_domain_link_assumption_reduction_"
-            "attempt_result_review_v0"
+            "qft_gr_conservation_form_scope_assumption_reduction_packet_v0"
         )
     )
     assert current_active_workstream["authorization_evidence"] == str(
@@ -2404,8 +2409,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "qft_gr_conservation_form_scope_assumption_reduction_packet_after_"
-        "renormalized_expectation_domain_link_attempt_result_review"
+        "qft_gr_conservation_form_scope_assumption_reduction_packet_result_"
+        "review_after_preparation"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -2754,8 +2759,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "source_map_closure_adjudication_packet_prepared_no_source_map_closure_or_release_promotion"
     )
     assert current_active_workstream["packet_classification"] == (
-        "qft_gr_covariant_conservation_assumption_reduction_packet_prepared_"
-        "insufficient_assumptions_classified_no_conservation_witness_or_seam_closure"
+        "qft_gr_conservation_form_scope_assumption_reduction_packet_prepared_"
+        "with_no_conservation_witness_or_seam_closure"
     )
     assert current_active_workstream["packet_classification_count"] == "1"
     assert current_active_workstream["source_map_closure_adjudication_question_prepared"] == "yes"
@@ -3311,25 +3316,24 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["qft_gr_witness_executed"] == "yes"
     assert current_active_workstream["track2_selected_after_result_review"] == "yes"
     assert current_active_workstream["track2_selection_kind"] == (
-        "qft_gr_renormalized_expectation_domain_link_assumption_reduction_"
-        "attempt_result_review_only"
+        "qft_gr_conservation_form_scope_assumption_reduction_packet_preparation_only"
     )
     assert current_active_workstream["track2_science_lane_execution_started"] == (
-        "yes_renormalized_expectation_domain_link_attempt_result_review_accepted"
+        "yes_conservation_form_scope_packet_prepared"
     )
     assert current_active_workstream["track2_started"] == (
-        "renormalized_expectation_domain_link_assumption_reduction_attempt_"
-        "result_reviewed_conservation_form_scope_packet_pending"
+        "conservation_form_scope_assumption_reduction_packet_prepared_pending_"
+        "result_review"
     )
     assert current_active_workstream["track2_selected_after_this_execution"] == (
-        "no_attempt_result_review_selected_packet_preparation_only"
+        "no_packet_preparation_selected_result_review_only"
     )
     assert current_active_workstream["track2_selected_after_this_review"] == (
-        "yes_conservation_form_scope_packet_selected"
+        "no_packet_result_review_pending"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "PREPARE_QFT_GR_CONSERVATION_FORM_SCOPE_ASSUMPTION_REDUCTION_"
-        "PACKET_ONLY_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_"
+        "REVIEW_QFT_GR_CONSERVATION_FORM_SCOPE_ASSUMPTION_REDUCTION_PACKET_"
+        "RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_"
         "SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
@@ -4032,7 +4036,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "OD-ASSUMP-004-renormalized_expectation_domain_link_contract_v0"
     assert current_active_workstream[
         "renormalized_expectation_domain_link_assumption_reduction_attempt_result_review_target"
-    ] == PREVIOUS_TARGET
+    ] == RENORMALIZED_EXPECTATION_DOMAIN_LINK_ATTEMPT_RESULT_REVIEW_TARGET
     assert current_active_workstream[
         "renormalized_expectation_domain_link_assumption_reduction_attempt_result_review_accepted"
     ] == "yes"
@@ -4061,10 +4065,53 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "OD-ASSUMP-005-conservation_form_scope"
     assert current_active_workstream[
         "conservation_form_scope_assumption_reduction_packet_target"
-    ] == LIVE_TARGET
+    ] == PREVIOUS_TARGET
     assert current_active_workstream[
         "conservation_form_scope_packet_preparation_authorized"
     ] == "yes"
+    assert current_active_workstream[
+        "conservation_form_scope_assumption_reduction_packet_prepared"
+    ] == "yes"
+    assert current_active_workstream[
+        "conservation_form_scope_assumption_reduction_packet_classification"
+    ] == (
+        "qft_gr_conservation_form_scope_assumption_reduction_packet_prepared_"
+        "with_no_conservation_witness_or_seam_closure"
+    )
+    assert current_active_workstream[
+        "conservation_form_scope_assumption_reduction_packet_token"
+    ] == (
+        "QFT_GR_CONSERVATION_FORM_SCOPE_ASSUMPTION_REDUCTION_PACKET_PREPARED_"
+        "WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+    )
+    assert current_active_workstream[
+        "conservation_form_scope_assumption_reduction_packet_result_review_target"
+    ] == LIVE_TARGET
+    assert current_active_workstream[
+        "conservation_form_scope_selected_operator_domain_assumption_row"
+    ] == "OD-ASSUMP-005-conservation_form_scope"
+    assert current_active_workstream["conservation_form_scope_options"] == (
+        "weak|strong|distributional"
+    )
+    assert current_active_workstream[
+        "conservation_form_scope_selected_bounded_conservation_form"
+    ] == "weak_operator_domain_covariant_divergence_zero_form"
+    assert current_active_workstream[
+        "conservation_form_scope_required_future_proof_object"
+    ] == "bounded_weak_operator_domain_conservation_form_selected_for_future_proof_object"
+    assert current_active_workstream["conservation_form_scope_conservation_proved"] == "no"
+    assert (
+        current_active_workstream[
+            "conservation_form_scope_conservation_proof_object_constructed"
+        ]
+        == "no"
+    )
+    assert (
+        current_active_workstream[
+            "conservation_form_scope_conservation_witness_constructed"
+        ]
+        == "no"
+    )
     assert current_active_workstream[
         "renormalized_expectation_domain_link_assumption_reduced_by_attempt"
     ] == "yes"
