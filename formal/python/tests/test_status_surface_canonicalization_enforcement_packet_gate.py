@@ -256,12 +256,12 @@ def test_current_authoritative_surfaces_classify_sources_and_mirrors() -> None:
     assert classes["generated_output_surfaces_read_only_under_normal_validation"] is True
 
     for token in {
-        "CURRENT_LIVE_NEXT_TARGET_v0: review_qft_gr_renormalization_assumption_reduction_packet_result",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_renormalization_assumption_reduction_packet",
-        "ACTIVE_LANE_v0: qft_gr_renormalization_assumption_reduction_packet",
+        "CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_renormalized_stress_energy_object_assumption_reduction_packet",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_qft_gr_renormalization_assumption_reduction_packet_result",
+        "ACTIVE_LANE_v0: qft_gr_renormalization_assumption_reduction_packet_result_review",
         "CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json",
         "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizationAssumptionReductionPacket.lean",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizationAssumptionReductionPacketResultReview.lean",
         "formal/toe_formal/ToeFormal/Derivation/StatusSurfaceCanonicalizationEnforcementPacket.lean",
         "CANONICAL_CONTROL_SOURCES",
         "PUBLIC_SUMMARY_SURFACES",

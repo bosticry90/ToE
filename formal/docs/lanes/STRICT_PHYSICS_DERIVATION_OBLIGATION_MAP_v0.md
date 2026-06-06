@@ -24,8 +24,8 @@ Current release-facing status:
 - v0.1-alpha release-standard preparation is a criticizability track layered over the active physics program; it classifies all active pillars/seams without claiming that the strict physics obligations are solved.
 - Release-standard evidence pointers: `formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json`, `formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json`, and `formal/toe_formal/ToeFormal/Release/V01Index.lean`.
 - Nonclaim boundary remains: no master-action promotion, no pillar completion, no seam closure, no Phase 2 readiness, no empirical adequacy, no canonical ToE status, and no QFT-GR source-map closure.
-- Current QFT-GR assumption-reduction queue: OD-ASSUMP-001 through OD-ASSUMP-006 are accepted at row level and the operator-domain closeout packet result review is accepted for this lane only; the renormalization assumption-reduction packet is prepared as analysis only, with live target `review_qft_gr_renormalization_assumption_reduction_packet_result`.
-- Renormalization assumption-reduction packet: `QFT_GR_RENORMALIZATION_ASSUMPTION_REDUCTION_PACKET_v0` consumes `QFT_GR_OPERATOR_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_v0`, preserves blocker `insufficient_assumptions_for_conservation`, records prior completed family `operator_domain_assumptions`, selects only `renormalization_assumptions`, and authorizes exactly one next target, `review_qft_gr_renormalization_assumption_reduction_packet_result`, without discharging renormalization assumptions, proving conservation, constructing a conservation proof object or witness, claiming source admissibility or Bianchi compatibility, closing QFT-GR, validating empirically, promoting the master action, assembling release, or authorizing public submission.
+- Current QFT-GR assumption-reduction queue: OD-ASSUMP-001 through OD-ASSUMP-006 are accepted at row level and the operator-domain closeout packet result review is accepted for this lane only; the renormalization assumption-reduction packet result review accepts the family analysis only and selects `RN-ASSUMP-001-renormalized_stress_energy_object`, with live target `prepare_qft_gr_renormalized_stress_energy_object_assumption_reduction_packet`.
+- Renormalization assumption-reduction packet result review: `QFT_GR_RENORMALIZATION_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0` consumes `QFT_GR_RENORMALIZATION_ASSUMPTION_REDUCTION_PACKET_v0`, preserves blocker `insufficient_assumptions_for_conservation`, confirms selected family `renormalization_assumptions`, and authorizes exactly one next target, `prepare_qft_gr_renormalized_stress_energy_object_assumption_reduction_packet`, without discharging renormalization assumptions, proving conservation, constructing a conservation proof object or witness, claiming source admissibility or Bianchi compatibility, closing QFT-GR, validating empirically, promoting the master action, assembling release, or authorizing public submission.
 
 Phase 0 baseline acceptance surface:
 - `formal/docs/lanes/SCALAR_QFT_PHASE0_BASELINE_ACCEPTANCE_CONTRACT_v0.md`
@@ -83,9 +83,9 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict architecture target:
-- `CURRENT_LIVE_NEXT_TARGET_v0: review_qft_gr_renormalization_assumption_reduction_packet_result`
-- `PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_renormalization_assumption_reduction_packet`
-- `ACTIVE_LANE_v0: qft_gr_renormalization_assumption_reduction_packet`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_renormalized_stress_energy_object_assumption_reduction_packet`
+- `PREVIOUS_LIVE_NEXT_TARGET_v0: review_qft_gr_renormalization_assumption_reduction_packet_result`
+- `ACTIVE_LANE_v0: qft_gr_renormalization_assumption_reduction_packet_result_review`
 - `QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_REDUCTION_ATTEMPT_OUTCOME_v0: QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE`
 - `QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_OUTCOME_v0: QFT_GR_CANDIDATE_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_SOURCE_DOMAIN_MEMBERSHIP_ASSUMPTION_AND_AUTHORIZES_NEXT_OPERATOR_DOMAIN_ROW_SELECTION_ONLY`
 - `QFT_GR_STATE_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_PACKET_OUTCOME_v0: QFT_GR_STATE_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE`
