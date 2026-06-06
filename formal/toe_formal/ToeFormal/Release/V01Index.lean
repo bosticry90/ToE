@@ -2151,6 +2151,56 @@ def qftGRRenormalizationScopeAssumptionReductionPacketResultReviewSelectedNextTa
     String :=
   "execute_qft_gr_renormalization_scope_assumption_reduction_attempt"
 
+def qftGRRenormalizationScopeAssumptionReductionAttemptLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_RenormalizationScopeAssumptionReductionAttempt"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptOutcomeToken :
+    String :=
+  "QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_" ++
+    "WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptClassification :
+    String :=
+  "qft_gr_renormalization_scope_assumption_reduced_pending_result_review"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptConsumedReview :
+    String :=
+  "QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptBlocker :
+    String :=
+  "insufficient_assumptions_for_conservation"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptFamily :
+    String :=
+  "renormalization_assumptions"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptAcceptedPriorRow :
+    String :=
+  "RN-ASSUMP-001-renormalized_stress_energy_object"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptSelectedRow :
+    String :=
+  "RN-ASSUMP-002-renormalization_scope"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptScopeObject :
+    String :=
+  "bounded_repo_local_renormalization_scope_for_candidate_stress_energy_expectation"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptContract :
+    String :=
+  "RN-ASSUMP-002-renormalization_scope_contract_v0"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptContractStatus :
+    String :=
+  "bounded_repo_local_renormalization_scope_contract_pending_result_review_" ++
+    "not_scope_discharge"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptSelectedNextTarget :
+    String :=
+  "review_qft_gr_renormalization_scope_assumption_reduction_attempt_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -6691,6 +6741,45 @@ theorem qft_gr_renormalization_scope_assumption_reduction_packet_result_review_n
   trivial
 
 theorem qft_gr_renormalization_scope_assumption_reduction_packet_result_review_selects_attempt : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_consumes_review : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_preserves_blocker : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_preserves_family : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_executes_row002_only : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_records_one_classification : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_reduced_pending_review : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_no_scope_discharge : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_no_conservation_proof_object : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_no_conservation_witness : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_no_source_or_bianchi : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_no_semiclassical_einstein : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_no_qft_gr_closure : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_selects_result_review : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by

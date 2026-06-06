@@ -1233,11 +1233,14 @@ RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET = (
 RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
     "execute_qft_gr_renormalization_scope_assumption_reduction_attempt"
 )
+RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_renormalization_scope_assumption_reduction_attempt_result"
+)
 PREVIOUS_TARGET = (
-    RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
+    RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_TARGET
 )
 LIVE_TARGET = (
-    RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_TARGET
+    RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
 )
 PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
@@ -1248,15 +1251,15 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_RenormalizationScopeAssumptionReductionPacketResultReview.lean"
+    / "QFT_GR_RenormalizationScopeAssumptionReductionAttempt.lean"
 )
-RN002_PACKET_RESULT_REVIEW_AUTHORIZATION_EVIDENCE_PATH = (
+RN002_ATTEMPT_AUTHORIZATION_EVIDENCE_PATH = (
     REPO_ROOT
     / "formal"
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_RenormalizationScopeAssumptionReductionPacketResultReview.lean"
+    / "QFT_GR_RenormalizationScopeAssumptionReductionAttempt.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -2079,11 +2082,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert (
         current_active_workstream["latest_surface"]
         == (
-            "qft_gr_renormalization_scope_assumption_reduction_packet_result_review_v0"
+            "qft_gr_renormalization_scope_assumption_reduction_attempt_v0"
         )
     )
     assert current_active_workstream["authorization_evidence"] == str(
-        RN002_PACKET_RESULT_REVIEW_AUTHORIZATION_EVIDENCE_PATH.relative_to(REPO_ROOT)
+        RN002_ATTEMPT_AUTHORIZATION_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert current_active_workstream["construction_packet_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
@@ -3399,7 +3402,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "renormalization_scope_assumption_reduction_packet_selected"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "EXECUTE_QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_ONLY_"
+        "REVIEW_QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_ONLY_"
         "NO_RENORMALIZATION_SCOPE_DISCHARGE_CONSERVATION_WITNESS_"
         "OR_QFT_GR_SEAM_CLOSURE"
     )
@@ -4834,6 +4837,69 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream[
         "renormalized_stress_energy_object_required_future_proof_object"
     ] == "renormalized_stress_energy_object_selected_for_candidate_source"
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduction_packet_result_review_accepted"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduction_packet_result_review_selected_next_target"
+    ] == RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_TARGET
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduction_attempt_authorized"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduction_attempt_target"
+    ] == RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_TARGET
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduction_attempt_executed"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduction_attempt_classification"
+    ] == "qft_gr_renormalization_scope_assumption_reduced_pending_result_review"
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduction_attempt_token"
+    ] == (
+        "QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_"
+        "WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+    )
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduction_attempt_contract_id"
+    ] == "RN-ASSUMP-002-renormalization_scope_contract_v0"
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduction_attempt_contract_status"
+    ] == (
+        "bounded_repo_local_renormalization_scope_contract_pending_result_review_"
+        "not_scope_discharge"
+    )
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduction_attempt_result_review_target"
+    ] == RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduction_attempt_selected_next_target"
+    ] == RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduced_pending_result_review"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalization_scope_assumption_obstruction_identified"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalization_scope_assumption_inconclusive"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalization_scope_assumption_reduced_by_attempt"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalization_scope_assumption_discharged_by_attempt"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalization_scope_assumption_discharged_by_implication"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalization_scope_claims_source_admissibility"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalization_scope_claims_bianchi_compatibility"
+    ] == "no"
     assert current_active_workstream[
         "operator_domain_assumptions_reduced_for_this_lane"
     ] == "yes"
