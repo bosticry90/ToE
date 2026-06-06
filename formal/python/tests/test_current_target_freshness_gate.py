@@ -1230,11 +1230,14 @@ RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET = (
 RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_renormalization_scope_assumption_reduction_packet_result"
 )
+RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
+    "execute_qft_gr_renormalization_scope_assumption_reduction_attempt"
+)
 PREVIOUS_TARGET = (
-    RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET
+    RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
 )
 LIVE_TARGET = (
-    RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
+    RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_TARGET
 )
 PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
@@ -1245,15 +1248,15 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_RenormalizationScopeAssumptionReductionPacket.lean"
+    / "QFT_GR_RenormalizationScopeAssumptionReductionPacketResultReview.lean"
 )
-RN001_RESULT_REVIEW_AUTHORIZATION_EVIDENCE_PATH = (
+RN002_PACKET_RESULT_REVIEW_AUTHORIZATION_EVIDENCE_PATH = (
     REPO_ROOT
     / "formal"
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_RenormalizedStressEnergyObjectAssumptionReductionAttemptResultReview.lean"
+    / "QFT_GR_RenormalizationScopeAssumptionReductionPacketResultReview.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -2076,11 +2079,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert (
         current_active_workstream["latest_surface"]
         == (
-            "qft_gr_renormalization_scope_assumption_reduction_packet_v0"
+            "qft_gr_renormalization_scope_assumption_reduction_packet_result_review_v0"
         )
     )
     assert current_active_workstream["authorization_evidence"] == str(
-        RN001_RESULT_REVIEW_AUTHORIZATION_EVIDENCE_PATH.relative_to(REPO_ROOT)
+        RN002_PACKET_RESULT_REVIEW_AUTHORIZATION_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert current_active_workstream["construction_packet_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
@@ -3396,7 +3399,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "renormalization_scope_assumption_reduction_packet_selected"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "REVIEW_QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_"
+        "EXECUTE_QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_ONLY_"
         "NO_RENORMALIZATION_SCOPE_DISCHARGE_CONSERVATION_WITNESS_"
         "OR_QFT_GR_SEAM_CLOSURE"
     )
