@@ -24,6 +24,7 @@ Current release-facing status:
 - v0.1-alpha release-standard preparation is a criticizability track layered over the active physics program; it classifies all active pillars/seams without claiming that the strict physics obligations are solved.
 - Release-standard evidence pointers: `formal/docs/release/TOE_V01_ALPHA_PILLAR_SEAM_COVERAGE_LEDGER_v0.json`, `formal/docs/release/TOE_V01_ALPHA_CLAIM_EVIDENCE_LEDGER_v0.json`, and `formal/toe_formal/ToeFormal/Release/V01Index.lean`.
 - Nonclaim boundary remains: no master-action promotion, no pillar completion, no seam closure, no Phase 2 readiness, no empirical adequacy, no canonical ToE status, and no QFT-GR source-map closure.
+- Current QFT-GR operator-domain assumption row: `OD-ASSUMP-006-metric_connection_scope` packet prepared only, with live target `review_qft_gr_metric_connection_scope_assumption_reduction_packet_result`.
 
 Phase 0 baseline acceptance surface:
 - `formal/docs/lanes/SCALAR_QFT_PHASE0_BASELINE_ACCEPTANCE_CONTRACT_v0.md`
