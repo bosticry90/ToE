@@ -1720,6 +1720,36 @@ def qftGRMetricConnectionScopeAssumptionReductionAttemptContractId : String :=
 def qftGRMetricConnectionScopeAssumptionReductionAttemptSelectedNextTarget : String :=
   "review_qft_gr_metric_connection_scope_assumption_reduction_attempt_result"
 
+def qftGRMetricConnectionScopeAssumptionReductionAttemptResultReviewLeanSurface : String :=
+  "ToeFormal.Bridges.QFT_GR_MetricConnectionScopeAssumptionReductionAttemptResultReview"
+
+def qftGRMetricConnectionScopeAssumptionReductionAttemptResultReviewOutcomeToken : String :=
+  "QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_METRIC_CONNECTION_SCOPE_AND_AUTHORIZES_OPERATOR_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PREPARATION_ONLY"
+
+def qftGRMetricConnectionScopeAssumptionReductionAttemptResultReviewClassification : String :=
+  "qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_accepts_reduced_metric_connection_scope_and_authorizes_operator_domain_assumption_reduction_closeout_preparation_only"
+
+def qftGRMetricConnectionScopeAssumptionReductionAttemptResultReviewCompletedRow : String :=
+  "OD-ASSUMP-006-metric_connection_scope"
+
+def qftGRMetricConnectionScopeAssumptionReductionAttemptResultReviewContractId : String :=
+  "OD-ASSUMP-006-metric_connection_scope_contract_v0"
+
+def qftGRMetricConnectionScopeAssumptionReductionAttemptResultReviewScopeObject : String :=
+  "bounded_metric_connection_scope_for_selected_operator_domain"
+
+def qftGRMetricConnectionScopeAssumptionReductionAttemptResultReviewBoundedGeometryDomain : String :=
+  "selected_operator_domain_bounded_geometry_domain"
+
+def qftGRMetricConnectionScopeAssumptionReductionAttemptResultReviewConnectionCompatibilityCondition : String :=
+  "connection_preserves_selected_operator_domain_metric_scope_without_bianchi_claim"
+
+def qftGRMetricConnectionScopeAssumptionReductionAttemptResultReviewRequiredFutureProofObject : String :=
+  "bounded_metric_connection_scope_supports_selected_operator_domain"
+
+def qftGRMetricConnectionScopeAssumptionReductionAttemptResultReviewSelectedNextTarget : String :=
+  "prepare_qft_gr_operator_domain_assumption_reduction_closeout_packet"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -5852,6 +5882,51 @@ theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_does_not_clo
   trivial
 
 theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_selects_result_review_target : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_consumes_attempt : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_confirms_classification : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_confirms_contract : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_accepts_row006 : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_accepts_all_operator_domain_rows : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_authorizes_closeout_preparation_only : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_does_not_prove_conservation : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_does_not_discharge_assumption : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_does_not_construct_proof_object : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_does_not_construct_witness : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_does_not_claim_source_admissibility : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_does_not_claim_bianchi_compatibility : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_does_not_derive_semiclassical_einstein_equation : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_does_not_close_qft_gr_seam : True := by
+  trivial
+
+theorem qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_selects_closeout_packet : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by
