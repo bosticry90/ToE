@@ -1,0 +1,225 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": [
+    {
+      "criterion": "consumes_expected_attempt_artifact",
+      "satisfied": true
+    },
+    {
+      "criterion": "confirms_expected_attempt_classification",
+      "satisfied": true
+    },
+    {
+      "criterion": "attempt_selected_this_result_review_target",
+      "satisfied": true
+    },
+    {
+      "criterion": "preserves_blocker_family_and_row",
+      "satisfied": true
+    },
+    {
+      "criterion": "confirms_rn_assump_001_remains_accepted",
+      "satisfied": true
+    },
+    {
+      "criterion": "confirms_reduced_pending_result_review_classification",
+      "satisfied": true
+    },
+    {
+      "criterion": "preserves_bounded_scope_contract",
+      "satisfied": true
+    },
+    {
+      "criterion": "does_not_discharge_scope",
+      "satisfied": true
+    },
+    {
+      "criterion": "preserves_nonclaim_boundary",
+      "satisfied": true
+    },
+    {
+      "criterion": "selects_exactly_one_next_target",
+      "satisfied": true
+    }
+  ],
+  "accepted": true,
+  "accepted_contract_id": "RN-ASSUMP-002-renormalization_scope_contract_v0",
+  "accepted_prior_renormalization_assumption_row": "RN-ASSUMP-001-renormalized_stress_energy_object",
+  "accepted_renormalization_assumption_row": "RN-ASSUMP-002-renormalization_scope",
+  "accepted_renormalization_assumption_rows": [
+    "RN-ASSUMP-001-renormalized_stress_energy_object",
+    "RN-ASSUMP-002-renormalization_scope"
+  ],
+  "blocker": "insufficient_assumptions_for_conservation",
+  "bounded_scope_contract_status": "bounded_repo_local_renormalization_scope_contract_pending_result_review_not_scope_discharge",
+  "candidate_next_targets": [
+    {
+      "reason": "RN-ASSUMP-003 is the next repo-authoritative renormalization row after accepting the bounded RN-ASSUMP-002 scope reduction.",
+      "status": "selected",
+      "target": "prepare_qft_gr_renormalized_expectation_domain_assumption_reduction_packet"
+    },
+    {
+      "reason": "Finiteness and regularity are tracked downstream as RN-ASSUMP-004-finiteness_regular_boundary in the current row map.",
+      "status": "deferred",
+      "target": "prepare_qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet"
+    },
+    {
+      "reason": "The result review accepts a bounded reduction only, not final renormalization-scope discharge.",
+      "status": "not_authorized",
+      "target": "discharge_qft_gr_renormalization_scope_assumption"
+    },
+    {
+      "reason": "The conservation blocker remains insufficient_assumptions_for_conservation.",
+      "status": "not_authorized",
+      "target": "construct_qft_gr_conservation_proof_object"
+    },
+    {
+      "reason": "No conservation witness is constructed or authorized by this review.",
+      "status": "not_authorized",
+      "target": "construct_qft_gr_conservation_witness"
+    },
+    {
+      "reason": "The accepted scope reduction is not a source-admissibility claim.",
+      "status": "not_authorized",
+      "target": "claim_qft_gr_source_admissibility"
+    },
+    {
+      "reason": "Bianchi compatibility remains a future proof obligation.",
+      "status": "not_authorized",
+      "target": "claim_qft_gr_bianchi_compatibility"
+    },
+    {
+      "reason": "The semiclassical Einstein equation is not derived here.",
+      "status": "not_authorized",
+      "target": "derive_semiclassical_einstein_equation"
+    },
+    {
+      "reason": "QFT-GR seam closure remains outside this bounded review.",
+      "status": "not_authorized",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "reason": "Release assembly and public submission remain unauthorized.",
+      "status": "not_authorized",
+      "target": "authorize_release_assembly_or_public_submission"
+    }
+  ],
+  "candidate_stress_energy_object": "candidate_renormalized_qft_stress_energy_expectation_object",
+  "captured_at_utc": "2026-06-06T00:00:00Z",
+  "claim_ceiling": [
+    "no renormalization-scope discharge",
+    "no conservation proof object",
+    "no conservation witness",
+    "no source admissibility",
+    "no Bianchi compatibility",
+    "no semiclassical Einstein equation",
+    "no QFT-GR seam closure",
+    "no empirical validation",
+    "no master-action promotion",
+    "no release assembly",
+    "no public submission"
+  ],
+  "conservation_proof_object_constructed": false,
+  "conservation_witness_constructed": false,
+  "consumed_attempt_id": "QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_v0",
+  "consumed_attempt_outcome_id": "QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "consumed_attempt_result_classification": "qft_gr_renormalization_scope_assumption_reduced_pending_result_review",
+  "consumed_attempt_schema_id": "QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_20260606_v0",
+  "consumed_target": "review_qft_gr_renormalization_scope_assumption_reduction_attempt_result",
+  "consumes_qft_gr_renormalization_scope_assumption_reduction_attempt": "QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_v0",
+  "consumes_qft_gr_renormalization_scope_assumption_reduction_attempt_pointer": "formal/docs/release/QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_20260606_v0.json",
+  "current_family": "renormalization_assumptions",
+  "downstream_finiteness_regular_boundary_object": "finite_regular_renormalized_expectation_required_before_conservation_proof_object",
+  "downstream_finiteness_regular_boundary_row": "RN-ASSUMP-004-finiteness_regular_boundary",
+  "empirical_validation_claimed": false,
+  "failure_mode_if_unresolved": "renormalization-family progress remains blocked before the renormalized expectation-domain row can be prepared",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "PREPARE_QFT_GR_RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_PACKET_ONLY_NO_RENORMALIZATION_SCOPE_DISCHARGE_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE",
+  "next_renormalization_assumption_row": "RN-ASSUMP-003-renormalized_expectation_domain",
+  "next_renormalization_assumption_row_object": "renormalized_expectation_value_admitted_to_selected_operator_domain",
+  "next_renormalization_assumption_row_required_future_proof_object": "renormalized_expectation_value_admitted_to_selected_operator_domain",
+  "non_claim_boundary": {
+    "Bianchi_compatibility_claimed": false,
+    "conservation_proof_object_constructed": false,
+    "conservation_witness_constructed": false,
+    "empirical_validation_claimed": false,
+    "master_action_promoted": false,
+    "master_action_promotion_authorized": false,
+    "public_submission_authorized": false,
+    "publication_authorized": false,
+    "qft_gr_seam_closed": false,
+    "release_assembly_authorized": false,
+    "release_packet_assembled": false,
+    "renormalization_scope_assumption_discharged": false,
+    "renormalization_scope_assumption_discharged_by_review": false,
+    "renormalization_scope_discharged_by_implication": false,
+    "semiclassical_einstein_equation_derived": false,
+    "source_admissibility_claimed": false
+  },
+  "outcome_id": "QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_RENORMALIZATION_SCOPE_AND_AUTHORIZES_NEXT_RENORMALIZATION_ROW_SELECTION_ONLY",
+  "prior_completed_family": "operator_domain_assumptions",
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "renormalization_scope": "bounded_repo_local_renormalization_scope_for_candidate_stress_energy_expectation",
+  "renormalization_scope_assumption_discharged": false,
+  "renormalization_scope_assumption_discharged_by_review": false,
+  "renormalization_scope_assumption_reduced_or_discharged_by_implication": false,
+  "renormalization_scope_assumption_reduced_or_discharged_by_review": false,
+  "renormalization_scope_assumption_reduced_pending_result_review_accepted": true,
+  "renormalization_scope_assumption_reduction_accepted": true,
+  "renormalization_scope_assumption_reduction_attempt_result_reviewed": true,
+  "renormalization_scope_assumption_reduction_rejected": false,
+  "renormalization_scope_discharged_by_implication": false,
+  "renormalization_scope_object": "bounded_repo_local_renormalization_scope_for_candidate_stress_energy_expectation",
+  "renormalization_scope_reduction_contract": {
+    "assumption_family": "renormalization_assumptions",
+    "assumption_id": "RN-ASSUMP-002-renormalization_scope",
+    "available_repo_evidence": [
+      "required",
+      "missing",
+      "candidate_reducible"
+    ],
+    "candidate_reduction_route": "separate the bounded repo-local renormalization scope from scheme-independence, source admissibility, Bianchi compatibility, and conservation",
+    "candidate_stress_energy_object": "candidate_renormalized_qft_stress_energy_expectation_object",
+    "claim_ceiling": "renormalization_scope_contract_pending_result_review_only_no_scope_discharge_no_conservation_proof_no_conservation_witness_no_source_admissibility_no_bianchi_compatibility_no_qft_gr_seam_closure",
+    "contract_id": "RN-ASSUMP-002-renormalization_scope_contract_v0",
+    "contract_status": "bounded_repo_local_renormalization_scope_contract_pending_result_review_not_scope_discharge",
+    "renormalization_scope": "bounded_repo_local_renormalization_scope_for_candidate_stress_energy_expectation",
+    "renormalization_scope_object": "bounded_repo_local_renormalization_scope_for_candidate_stress_energy_expectation",
+    "required_future_proof_object": "bounded_renormalization_scope_defined_for_candidate_source",
+    "scope_boundaries": [
+      "repo_local_candidate_stress_energy_expectation_scope_only",
+      "no_scheme_independence_claim",
+      "no_source_admissibility_claim",
+      "no_conservation_claim",
+      "no_bianchi_compatibility_claim",
+      "no_qft_gr_seam_closure"
+    ],
+    "source_packet_scope_status": "bounded_repo_local_scope_selected_for_reduction_analysis_not_renormalization_assumption_discharge"
+  },
+  "required_future_proof_object": "bounded_renormalization_scope_defined_for_candidate_source",
+  "result_review_classification": "qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_accepts_reduced_renormalization_scope_and_authorizes_next_renormalization_row_selection_only",
+  "review_decision": "accept",
+  "review_id": "QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_v0",
+  "schema_id": "QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260606_v0",
+  "scope_boundaries": [
+    "repo_local_candidate_stress_energy_expectation_scope_only",
+    "no_scheme_independence_claim",
+    "no_source_admissibility_claim",
+    "no_conservation_claim",
+    "no_bianchi_compatibility_claim",
+    "no_qft_gr_seam_closure"
+  ],
+  "selected_assumption_family": "renormalization_assumptions",
+  "selected_blocker": "insufficient_assumptions_for_conservation",
+  "selected_next_target": "prepare_qft_gr_renormalized_expectation_domain_assumption_reduction_packet",
+  "selected_next_target_kind": "qft_gr_renormalized_expectation_domain_assumption_reduction_packet_preparation",
+  "selected_renormalization_assumption_row": "RN-ASSUMP-002-renormalization_scope",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false
+}

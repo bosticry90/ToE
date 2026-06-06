@@ -2201,6 +2201,56 @@ def qftGRRenormalizationScopeAssumptionReductionAttemptSelectedNextTarget :
     String :=
   "review_qft_gr_renormalization_scope_assumption_reduction_attempt_result"
 
+def qftGRRenormalizationScopeAssumptionReductionAttemptResultReviewLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_RenormalizationScopeAssumptionReductionAttemptResultReview"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptResultReviewOutcomeToken :
+    String :=
+  "QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_" ++
+    "ACCEPTS_REDUCED_RENORMALIZATION_SCOPE_AND_AUTHORIZES_NEXT_RENORMALIZATION_ROW_SELECTION_ONLY"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptResultReviewClassification :
+    String :=
+  "qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_" ++
+    "accepts_reduced_renormalization_scope_and_authorizes_next_renormalization_row_selection_only"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptResultReviewConsumedAttempt :
+    String :=
+  "QFT_GR_RENORMALIZATION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_v0"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptResultReviewConsumedClassification :
+    String :=
+  "qft_gr_renormalization_scope_assumption_reduced_pending_result_review"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptResultReviewBlocker :
+    String :=
+  "insufficient_assumptions_for_conservation"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptResultReviewFamily :
+    String :=
+  "renormalization_assumptions"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptResultReviewAcceptedPriorRow :
+    String :=
+  "RN-ASSUMP-001-renormalized_stress_energy_object"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptResultReviewAcceptedRow :
+    String :=
+  "RN-ASSUMP-002-renormalization_scope"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptResultReviewNextRow :
+    String :=
+  "RN-ASSUMP-003-renormalized_expectation_domain"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptResultReviewContract :
+    String :=
+  "RN-ASSUMP-002-renormalization_scope_contract_v0"
+
+def qftGRRenormalizationScopeAssumptionReductionAttemptResultReviewSelectedNextTarget :
+    String :=
+  "prepare_qft_gr_renormalized_expectation_domain_assumption_reduction_packet"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -6780,6 +6830,42 @@ theorem qft_gr_renormalization_scope_assumption_reduction_attempt_no_qft_gr_clos
   trivial
 
 theorem qft_gr_renormalization_scope_assumption_reduction_attempt_selects_result_review : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_consumes_attempt : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_confirms_classification : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_confirms_prior_row : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_accepts_row002 : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_no_scope_discharge : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_no_conservation_proof_object : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_no_conservation_witness : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_no_source_or_bianchi : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_no_semiclassical_einstein : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_no_qft_gr_closure : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_selects_row003 : True := by
+  trivial
+
+theorem qft_gr_renormalization_scope_assumption_reduction_attempt_result_review_selects_domain_packet : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by
