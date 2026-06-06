@@ -1143,9 +1143,7 @@ AUDIT_REFRESH_TARGET = "prepare_axiom_ledger_audit_refresh"
 AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
-ACTIVE_LANE = (
-    "qft_gr_metric_connection_scope_assumption_reduction_packet_result_review"
-)
+ACTIVE_LANE = "qft_gr_metric_connection_scope_assumption_reduction_attempt"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1197,8 +1195,11 @@ METRIC_CONNECTION_SCOPE_PACKET_RESULT_REVIEW_TARGET = (
 METRIC_CONNECTION_SCOPE_ATTEMPT_TARGET = (
     "execute_qft_gr_metric_connection_scope_assumption_reduction_attempt"
 )
-PREVIOUS_TARGET = METRIC_CONNECTION_SCOPE_PACKET_RESULT_REVIEW_TARGET
-LIVE_TARGET = METRIC_CONNECTION_SCOPE_ATTEMPT_TARGET
+METRIC_CONNECTION_SCOPE_ATTEMPT_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_metric_connection_scope_assumption_reduction_attempt_result"
+)
+PREVIOUS_TARGET = METRIC_CONNECTION_SCOPE_ATTEMPT_TARGET
+LIVE_TARGET = METRIC_CONNECTION_SCOPE_ATTEMPT_RESULT_REVIEW_TARGET
 PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
 )
@@ -1208,7 +1209,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_MetricConnectionScopeAssumptionReductionPacketResultReview.lean"
+    / "QFT_GR_MetricConnectionScopeAssumptionReductionAttempt.lean"
 )
 EM_QFT_POST_BUDGET_TARGET = "em_qft_post_budget_cross_pillar_review"
 INTERFACE_TARGET = "derive_or_refute_em_qft_interface_alignment_semantic_bridge"
@@ -2028,7 +2029,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert (
         current_active_workstream["latest_surface"]
         == (
-            "qft_gr_metric_connection_scope_assumption_reduction_packet_result_review_v0"
+            "qft_gr_metric_connection_scope_assumption_reduction_attempt_v0"
         )
     )
     assert current_active_workstream["authorization_evidence"] == str(
@@ -2424,8 +2425,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "qft_gr_metric_connection_scope_assumption_reduction_attempt_after_packet_"
-        "result_review"
+        "qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_"
+        "after_execution"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -3330,24 +3331,24 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["qft_gr_witness_executed"] == "yes"
     assert current_active_workstream["track2_selected_after_result_review"] == "yes"
     assert current_active_workstream["track2_selection_kind"] == (
-        "qft_gr_metric_connection_scope_assumption_reduction_packet_result_review_only"
+        "qft_gr_metric_connection_scope_assumption_reduction_attempt_execution_only"
     )
     assert current_active_workstream["track2_science_lane_execution_started"] == (
-        "yes_metric_connection_scope_packet_result_reviewed"
+        "yes_metric_connection_scope_attempt_executed"
     )
     assert current_active_workstream["track2_started"] == (
-        "metric_connection_scope_assumption_reduction_attempt_authorized_"
-        "pending_execution"
+        "metric_connection_scope_assumption_reduction_attempt_executed_pending_"
+        "result_review"
     )
     assert current_active_workstream["track2_selected_after_this_execution"] == (
-        "no_execution_pending"
+        "yes_metric_connection_scope_attempt_result_review_only"
     )
     assert current_active_workstream["track2_selected_after_this_review"] == (
-        "yes_metric_connection_scope_bounded_attempt_only"
+        "no_attempt_result_review_pending"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "EXECUTE_QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_"
-        "ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
+        "REVIEW_QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_"
+        "RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
     assert current_active_workstream["closeout_criteria_count"] == "4"
@@ -3355,8 +3356,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
     assert current_active_workstream["witness_attempt_executed"] == "yes"
     assert current_active_workstream["result_classification"] == (
-        "qft_gr_metric_connection_scope_assumption_reduction_packet_result_"
-        "review_accepts_packet_and_authorizes_bounded_reduction_attempt_only"
+        "qft_gr_metric_connection_scope_assumption_reduced_pending_result_review"
     )
     assert current_active_workstream["result_classification_count"] == "1"
     assert current_active_workstream["constructed_witness_result"] == "no"
@@ -4184,10 +4184,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["metric_connection_scope_packet_prepared"] == "yes"
     assert current_active_workstream[
         "metric_connection_scope_assumption_reduction_packet_result_review_target"
-    ] == PREVIOUS_TARGET
+    ] == METRIC_CONNECTION_SCOPE_PACKET_RESULT_REVIEW_TARGET
     assert current_active_workstream[
         "metric_connection_scope_assumption_reduction_packet_selected_next_target"
-    ] == PREVIOUS_TARGET
+    ] == METRIC_CONNECTION_SCOPE_PACKET_RESULT_REVIEW_TARGET
     assert current_active_workstream[
         "metric_connection_scope_assumption_reduction_packet_token"
     ] == (
@@ -4239,7 +4239,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream[
         "metric_connection_scope_assumption_reduction_packet_result_review_selected_next_target"
-    ] == LIVE_TARGET
+    ] == PREVIOUS_TARGET
     assert current_active_workstream[
         "metric_connection_scope_assumption_reduction_packet_result_review_token"
     ] == (
@@ -4284,10 +4284,82 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "yes"
     assert current_active_workstream[
         "metric_connection_scope_assumption_reduction_attempt_target"
-    ] == LIVE_TARGET
+    ] == PREVIOUS_TARGET
     assert current_active_workstream[
         "metric_connection_scope_assumption_reduction_attempt_executed"
+    ] == "yes"
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_classification"
+    ] == "qft_gr_metric_connection_scope_assumption_reduced_pending_result_review"
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_token"
+    ] == (
+        "QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_"
+        "EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+    )
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_contract_id"
+    ] == "OD-ASSUMP-006-metric_connection_scope_contract_v0"
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_report"
+    ] == (
+        "formal/docs/release/QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_"
+        "ATTEMPT_20260527_v0.json"
+    )
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_surface"
+    ] == (
+        "formal/toe_formal/ToeFormal/Bridges/"
+        "QFT_GR_MetricConnectionScopeAssumptionReductionAttempt.lean"
+    )
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_tool"
+    ] == (
+        "formal/python/tools/"
+        "qft_gr_metric_connection_scope_assumption_reduction_attempt_report.py"
+    )
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_gate"
+    ] == (
+        "formal/python/tests/test_qft_gr_metric_connection_scope_assumption_"
+        "reduction_attempt_gate.py"
+    )
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_selected_next_target"
+    ] == LIVE_TARGET
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_result_review_target"
+    ] == LIVE_TARGET
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_result_reviewed"
     ] == "no"
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_result_review_authorized"
+    ] == "yes"
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_result_review_accepted"
+    ] == "no"
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduction_attempt_result_review_classification"
+    ] == "pending_result_review"
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduced_pending_result_review"
+    ] == "yes"
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_obstruction_identified"
+    ] == "no"
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_inconclusive"
+    ] == "no"
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_reduced_by_attempt"
+    ] == "yes"
+    assert current_active_workstream[
+        "metric_connection_scope_assumption_discharged_by_attempt"
+    ] == "no"
+    assert current_active_workstream[
+        "metric_connection_scope_contract_id"
+    ] == "OD-ASSUMP-006-metric_connection_scope_contract_v0"
     assert current_active_workstream[
         "authorized_metric_connection_scope_attempt_result_classification_count"
     ] == "3"

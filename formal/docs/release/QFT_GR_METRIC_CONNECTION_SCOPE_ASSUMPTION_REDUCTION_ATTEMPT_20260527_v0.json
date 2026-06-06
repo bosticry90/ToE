@@ -1,0 +1,188 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "blocker_preserved": true,
+    "bounded_geometry_domain_preserved": true,
+    "bounded_reduction_attempt_authorized": true,
+    "classification_authorized": true,
+    "connection_compatibility_condition_preserved": true,
+    "consumes_expected_packet_result_review": true,
+    "exactly_one_classification_selected": true,
+    "exactly_one_next_target_selected": true,
+    "metric_connection_scope_object_preserved": true,
+    "no_bianchi_compatibility_claim": true,
+    "no_conservation_proof": true,
+    "no_conservation_proof_object_constructed": true,
+    "no_conservation_witness_constructed": true,
+    "no_empirical_validation": true,
+    "no_master_action_promotion": true,
+    "no_qft_gr_seam_closure": true,
+    "no_release_or_public_submission": true,
+    "no_semiclassical_einstein_derivation": true,
+    "no_source_admissibility_claim": true,
+    "prior_rows001_002_003_004_005_preserved": true,
+    "prior_rows001_002_003_004_005_remain_accepted": true,
+    "reduction_distinguished_from_conservation_proof": true,
+    "required_future_proof_object_preserved": true,
+    "review_classification_expected": true,
+    "review_outcome_expected": true,
+    "review_schema_expected": true,
+    "review_selected_this_execution": true,
+    "selected_family_preserved": true,
+    "selected_row_preserved": true
+  },
+  "accepted": true,
+  "actual_conservation_claimed": false,
+  "assumption_discharge_claimed": false,
+  "assumptions_reduced_or_discharged_by_implication": false,
+  "attempt_id": "QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_v0",
+  "attempt_scope": "EXECUTE_BOUNDED_QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_ONLY",
+  "blocker": "insufficient_assumptions_for_conservation",
+  "bounded_geometry_domain": "selected_operator_domain_bounded_geometry_domain",
+  "bounded_geometry_domain_claimed_as_bianchi_compatibility": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The bounded OD-ASSUMP-006 metric/connection-scope attempt must be result-reviewed before any conservation proof object, conservation witness, source admissibility, Bianchi compatibility, or seam-closure action.",
+      "target": "review_qft_gr_metric_connection_scope_assumption_reduction_attempt_result"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Reducing metric/connection scope does not authorize a conservation proof-object attempt.",
+      "target": "execute_qft_gr_covariant_conservation_proof_object_attempt"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No conservation witness is constructed or authorized by this bounded assumption-row attempt.",
+      "target": "construct_qft_gr_conservation_witness"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Reducing metric/connection scope does not authorize source admissibility.",
+      "target": "prepare_qft_gr_source_admissibility_assumption_reduction_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The bounded metric/connection-scope contract is not a Bianchi compatibility claim.",
+      "target": "claim_qft_gr_bianchi_compatibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No bounded assumption-reduction attempt closes QFT-GR.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Public submission is not authorized by this bounded attempt.",
+      "target": "authorize_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-05-27T00:00:00Z",
+  "classification_options": [
+    "qft_gr_metric_connection_scope_assumption_reduced_pending_result_review",
+    "qft_gr_metric_connection_scope_assumption_obstruction_identified_requires_refinement",
+    "qft_gr_metric_connection_scope_assumption_inconclusive_requires_assumption_reduction"
+  ],
+  "classification_rows": [
+    {
+      "classification": "qft_gr_metric_connection_scope_assumption_reduced_pending_result_review",
+      "meaning": "The metric/connection-scope assumption has been reduced to a bounded operator-domain metric/connection contract pending result review, without proving conservation.",
+      "selected": true
+    },
+    {
+      "classification": "qft_gr_metric_connection_scope_assumption_obstruction_identified_requires_refinement",
+      "meaning": "The attempt found an obstruction requiring refinement before metric/connection scope could be reduced.",
+      "selected": false
+    },
+    {
+      "classification": "qft_gr_metric_connection_scope_assumption_inconclusive_requires_assumption_reduction",
+      "meaning": "The attempt could not determine reduction status without further assumption reduction.",
+      "selected": false
+    }
+  ],
+  "connection_compatibility_claimed_as_bianchi_compatibility": false,
+  "connection_compatibility_condition": "connection_preserves_selected_operator_domain_metric_scope_without_bianchi_claim",
+  "conservation_proof_object_constructed": false,
+  "conservation_proved": false,
+  "conservation_witness_constructed": false,
+  "consumed_result_review_classification": "qft_gr_metric_connection_scope_assumption_reduction_packet_result_review_accepts_packet_and_authorizes_bounded_reduction_attempt_only",
+  "consumed_result_review_outcome_id": "QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_REDUCTION_ATTEMPT_ONLY",
+  "consumes_qft_gr_metric_connection_scope_assumption_reduction_packet_result_review": "QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0",
+  "consumes_qft_gr_metric_connection_scope_assumption_reduction_packet_result_review_pointer": "formal/docs/release/QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_20260527_v0.json",
+  "covariant_conservation_statement_proved": false,
+  "current_family": "operator_domain_assumptions",
+  "empirical_validation_claimed": false,
+  "executed": true,
+  "execution_findings": [
+    "The attempt consumes the OD-ASSUMP-006 packet result review and keeps metric/connection scope as the only executed row.",
+    "The bounded geometry domain is fixed for the selected operator domain without claiming source admissibility.",
+    "The connection compatibility condition is scoped to the selected operator domain and is not a Bianchi compatibility claim.",
+    "The reduction is pending result review and does not prove conservation or construct a conservation proof object."
+  ],
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "metric_connection_scope_assumption_discharged": false,
+  "metric_connection_scope_assumption_inconclusive": false,
+  "metric_connection_scope_assumption_obstruction_identified": false,
+  "metric_connection_scope_assumption_reduced_by_attempt": true,
+  "metric_connection_scope_assumption_reduced_pending_result_review": true,
+  "metric_connection_scope_assumption_reduction_attempt_executed": true,
+  "metric_connection_scope_claimed_as_bianchi_compatibility": false,
+  "metric_connection_scope_claimed_as_conservation_proof": false,
+  "metric_connection_scope_claimed_as_source_admissibility": false,
+  "metric_connection_scope_object": "bounded_metric_connection_scope_for_selected_operator_domain",
+  "metric_connection_scope_reduction_contract": {
+    "assumption_family": "operator_domain_assumptions",
+    "assumption_id": "OD-ASSUMP-006-metric_connection_scope",
+    "available_repo_evidence": [
+      "QFT_GR_COVARIANT_DERIVATIVE_OPERATOR_DOMAIN_PACKET_v0",
+      "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0"
+    ],
+    "bounded_geometry_domain": "selected_operator_domain_bounded_geometry_domain",
+    "claim_ceiling": "metric_connection_scope_reduced_pending_result_review_only_no_conservation_proof_no_conservation_witness_no_source_admissibility_no_bianchi_compatibility_no_qft_gr_seam_closure",
+    "connection_compatibility_condition": "connection_preserves_selected_operator_domain_metric_scope_without_bianchi_claim",
+    "contract_id": "OD-ASSUMP-006-metric_connection_scope_contract_v0",
+    "metric_connection_scope_object": "bounded_metric_connection_scope_for_selected_operator_domain",
+    "required_future_proof_object": "bounded_metric_connection_scope_supports_selected_operator_domain",
+    "typed_scope": "bounded_metric_connection_scope_contract_for_selected_operator_domain_future_proof_object_only"
+  },
+  "next_action_scope": "REVIEW_QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This execution reduces only OD-ASSUMP-006 metric/connection scope to a bounded operator-domain metric/connection contract pending result review. It does not prove conservation, construct a conservation proof object or conservation witness, claim source admissibility, claim Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "outcome_id": "QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "primary_assumption_reduction_family": "operator_domain_assumptions",
+  "prior_accepted_candidate_source_domain_membership_contract": "OD-ASSUMP-002-candidate_source_domain_membership_contract_v0",
+  "prior_accepted_conservation_form_scope_contract": "OD-ASSUMP-005-conservation_form_scope_contract_v0",
+  "prior_accepted_operator_domain_assumption_rows": [
+    "OD-ASSUMP-001-selected_operator_action",
+    "OD-ASSUMP-002-candidate_source_domain_membership",
+    "OD-ASSUMP-003-state_expectation_domain_link",
+    "OD-ASSUMP-004-renormalized_expectation_domain_link",
+    "OD-ASSUMP-005-conservation_form_scope"
+  ],
+  "prior_accepted_renormalized_expectation_domain_link_contract": "OD-ASSUMP-004-renormalized_expectation_domain_link_contract_v0",
+  "prior_accepted_selected_operator_action_contract": "OD-ASSUMP-001-selected_operator_action_contract_v0",
+  "prior_accepted_state_expectation_domain_link_contract": "OD-ASSUMP-003-state_expectation_domain_link_contract_v0",
+  "proof_object_constructed": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "required_future_proof_object": "bounded_metric_connection_scope_supports_selected_operator_domain",
+  "result_classification": "qft_gr_metric_connection_scope_assumption_reduced_pending_result_review",
+  "result_classification_count": 1,
+  "schema_id": "QFT_GR_METRIC_CONNECTION_SCOPE_ASSUMPTION_REDUCTION_ATTEMPT_20260527_v0",
+  "scientific_validation_claimed": false,
+  "selected_assumption_family": "operator_domain_assumptions",
+  "selected_blocker": "insufficient_assumptions_for_conservation",
+  "selected_next_target": "review_qft_gr_metric_connection_scope_assumption_reduction_attempt_result",
+  "selected_next_target_kind": "qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review",
+  "selected_operator_domain_assumption_row": "OD-ASSUMP-006-metric_connection_scope",
+  "selected_route": "qft_gr_metric_connection_scope_assumption_reduction_attempt_result_review_after_execution",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false
+}
