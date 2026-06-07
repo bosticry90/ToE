@@ -1144,7 +1144,7 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "qft_gr_renormalized_expectation_domain_assumption_reduction_attempt"
+    "qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_result_review"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1248,11 +1248,14 @@ RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET = (
     "review_qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_result"
 )
+RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_TARGET = (
+    "prepare_qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet"
+)
 PREVIOUS_TARGET = (
-    RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_TARGET
+    RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
 )
 LIVE_TARGET = (
-    RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+    RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_TARGET
 )
 PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
@@ -1263,7 +1266,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_RenormalizedExpectationDomainAssumptionReductionAttempt.lean"
+    / "QFT_GR_RenormalizedExpectationDomainAssumptionReductionAttemptResultReview.lean"
 )
 RN002_ATTEMPT_RESULT_REVIEW_EVIDENCE_PATH = (
     REPO_ROOT
@@ -2094,7 +2097,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert (
         current_active_workstream["latest_surface"]
         == (
-            "qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_v0"
+            "qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_result_review_v0"
         )
     )
     assert current_active_workstream["authorization_evidence"] == str(
@@ -2110,12 +2113,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["result_review_surface"] == (
         "formal/toe_formal/ToeFormal/Bridges/"
-        "QFT_GR_RenormalizedExpectationDomainAssumptionReductionAttempt.lean"
+        "QFT_GR_RenormalizedExpectationDomainAssumptionReductionAttemptResultReview.lean"
     )
     assert current_active_workstream["result_review_report"] == (
         "formal/docs/release/"
         "QFT_GR_RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_"
-        "20260606_v0.json"
+        "RESULT_REVIEW_20260606_v0.json"
     )
     assert current_active_workstream["construction_execution_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
@@ -2596,7 +2599,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "partial_witness_chain_candidate_accepted_for_construction_packet_preparation_only"
     )
     assert current_active_workstream["result_review_classification"] == (
-        "qft_gr_renormalized_expectation_domain_assumption_reduced_pending_result_review"
+        "qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_"
+        "result_review_accepts_reduced_renormalized_expectation_domain_and_"
+        "authorizes_next_renormalization_row_selection_only"
     )
     assert current_active_workstream["consumed_construction_result_review_classification"] == (
         "witness_chain_construction_accepted_source_map_authorization_adjudication_packet_preparation_only"
@@ -3403,7 +3408,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "yes_operator_domain_closeout_result_review_accepted"
     )
     assert current_active_workstream["track2_started"] == (
-        "renormalized_expectation_domain_assumption_reduction_attempt_executed_pending_result_review"
+        "renormalized_expectation_domain_assumption_reduction_attempt_result_review_accepted_finiteness_packet_selected"
     )
     assert current_active_workstream["track2_selected_after_this_execution"] == (
         "no_execution_pending_attempt_result_review_completed"
@@ -3412,8 +3417,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "renormalization_scope_assumption_reduction_packet_selected"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "REVIEW_QFT_GR_RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_"
-        "ATTEMPT_RESULT_ONLY_NO_DOMAIN_DISCHARGE_CONSERVATION_WITNESS_OR_"
+        "PREPARE_QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_"
+        "REDUCTION_PACKET_ONLY_NO_DOMAIN_DISCHARGE_CONSERVATION_WITNESS_OR_"
         "QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
@@ -3422,7 +3427,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
     assert current_active_workstream["witness_attempt_executed"] == "yes"
     assert current_active_workstream["result_classification"] == (
-        "qft_gr_renormalized_expectation_domain_assumption_reduced_pending_result_review"
+        "qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_"
+        "result_review_accepts_reduced_renormalized_expectation_domain_and_"
+        "authorizes_next_renormalization_row_selection_only"
     )
     assert current_active_workstream["result_classification_count"] == "1"
     assert current_active_workstream["constructed_witness_result"] == "no"
@@ -4977,7 +4984,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "no"
     assert current_active_workstream[
         "next_renormalization_assumption_row"
-    ] == "RN-ASSUMP-003-renormalized_expectation_domain"
+    ] == "RN-ASSUMP-004-finiteness_regular_boundary"
     assert current_active_workstream[
         "renormalized_expectation_domain_assumption_reduction_packet_prepared"
     ] == "yes"
@@ -5133,13 +5140,64 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream[
         "renormalized_expectation_domain_assumption_reduction_attempt_selected_next_target"
-    ] == LIVE_TARGET
+    ] == PREVIOUS_TARGET
     assert current_active_workstream[
         "renormalized_expectation_domain_assumption_reduction_attempt_result_review_target"
-    ] == LIVE_TARGET
+    ] == PREVIOUS_TARGET
     assert current_active_workstream[
         "renormalized_expectation_domain_assumption_reduction_attempt_result_classification_count"
     ] == "1"
+    assert current_active_workstream[
+        "renormalized_expectation_domain_assumption_reduction_attempt_result_review_accepted"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalized_expectation_domain_assumption_reduction_attempt_result_reviewed"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalized_expectation_domain_assumption_reduction_attempt_result_review_report"
+    ] == (
+        "formal/docs/release/"
+        "QFT_GR_RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_"
+        "RESULT_REVIEW_20260606_v0.json"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_domain_assumption_reduction_attempt_result_review_surface"
+    ] == (
+        "formal/toe_formal/ToeFormal/Bridges/"
+        "QFT_GR_RenormalizedExpectationDomainAssumptionReductionAttemptResultReview.lean"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_domain_assumption_reduction_attempt_result_review_tool"
+    ] == (
+        "formal/python/tools/"
+        "qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_result_review_report.py"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_domain_assumption_reduction_attempt_result_review_gate"
+    ] == (
+        "formal/python/tests/"
+        "test_qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_result_review_gate.py"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_domain_assumption_reduction_attempt_result_review_token"
+    ] == (
+        "QFT_GR_RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_"
+        "RESULT_REVIEW_ACCEPTS_REDUCED_RENORMALIZED_EXPECTATION_DOMAIN_AND_"
+        "AUTHORIZES_NEXT_RENORMALIZATION_ROW_SELECTION_ONLY"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_domain_assumption_reduction_attempt_result_review_classification"
+    ] == (
+        "qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_"
+        "result_review_accepts_reduced_renormalized_expectation_domain_and_"
+        "authorizes_next_renormalization_row_selection_only"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_domain_assumption_reduction_attempt_result_review_selected_next_row"
+    ] == "RN-ASSUMP-004-finiteness_regular_boundary"
+    assert current_active_workstream[
+        "renormalized_expectation_domain_assumption_reduction_attempt_result_review_selected_next_target"
+    ] == LIVE_TARGET
     assert current_active_workstream[
         "renormalized_expectation_domain_assumption_reduced_pending_result_review"
     ] == "yes"

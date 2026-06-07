@@ -36,7 +36,7 @@ POLICY_SENTENCE = (
 
 EXPECTED_LIVE_TARGET = (
     "CURRENT_LIVE_NEXT_TARGET_v0: "
-    "review_qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_result"
+    "prepare_qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet"
 )
 
 FORBIDDEN_META_MARKERS = [
