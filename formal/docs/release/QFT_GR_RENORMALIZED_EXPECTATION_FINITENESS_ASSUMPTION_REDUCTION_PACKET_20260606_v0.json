@@ -1,0 +1,199 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "consumes_expected_rn_assump_003_result_review": true,
+    "does_not_claim_bianchi_compatibility": true,
+    "does_not_claim_source_admissibility": true,
+    "does_not_close_qft_gr_seam": true,
+    "does_not_construct_conservation_proof_object": true,
+    "does_not_construct_conservation_witness": true,
+    "does_not_derive_semiclassical_einstein_equation": true,
+    "does_not_discharge_finiteness_regular_boundary": true,
+    "does_not_discharge_renormalization_assumptions": true,
+    "exactly_one_next_target_selected": true,
+    "finiteness_regular_boundary_condition_recorded": true,
+    "no_release_or_public_submission": true,
+    "prepares_reduction_analysis_only": true,
+    "preserves_insufficient_assumptions_blocker": true,
+    "preserves_renormalization_family": true,
+    "prior_operator_domain_family_accepted": true,
+    "prior_rn_rows_accepted": true,
+    "result_review_authorized_this_packet": true,
+    "result_review_classification_expected": true,
+    "result_review_outcome_expected": true,
+    "result_review_schema_expected": true,
+    "scope_boundaries_recorded": true,
+    "selected_row_status_tokens_current": true,
+    "selects_only_finiteness_regular_boundary_row": true
+  },
+  "accepted": true,
+  "accepted_prior_renormalization_assumption_rows": [
+    "RN-ASSUMP-001-renormalized_stress_energy_object",
+    "RN-ASSUMP-002-renormalization_scope",
+    "RN-ASSUMP-003-renormalized_expectation_domain"
+  ],
+  "accepted_prior_row_count": 3,
+  "actual_conservation_claimed": false,
+  "assumptions_reduced_or_discharged_by_preparation": false,
+  "available_repo_evidence": [
+    "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_PACKET_v0",
+    "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_v0"
+  ],
+  "blocker": "insufficient_assumptions_for_conservation",
+  "blocker_remains": "insufficient_assumptions_for_conservation",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The prepared RN-ASSUMP-004 finiteness/regularity packet must be result-reviewed before any bounded reduction attempt.",
+      "target": "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "A bounded reduction attempt requires packet result review first.",
+      "target": "execute_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Packet preparation does not discharge finiteness or regularity.",
+      "target": "discharge_qft_gr_renormalized_expectation_finiteness_assumption"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Packet preparation does not construct a conservation proof object.",
+      "target": "construct_qft_gr_conservation_proof_object"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Packet preparation does not construct a conservation witness.",
+      "target": "construct_qft_gr_conservation_witness"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The finiteness packet does not claim source admissibility.",
+      "target": "claim_qft_gr_source_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Bianchi compatibility remains downstream and unclaimed.",
+      "target": "claim_qft_gr_bianchi_compatibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The semiclassical Einstein equation is not derived here.",
+      "target": "derive_semiclassical_einstein_equation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "QFT-GR seam closure remains outside this packet.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Release assembly and public submission remain unauthorized.",
+      "target": "authorize_release_assembly_or_public_submission"
+    }
+  ],
+  "candidate_reduction_route": "bound the finiteness and regularity preconditions needed before testing covariant-divergence compatibility",
+  "candidate_stress_energy_object": "candidate_renormalized_qft_stress_energy_expectation_object",
+  "captured_at_utc": "2026-06-06T00:00:00Z",
+  "claim_ceiling": "renormalized_expectation_finiteness_assumption_reduction_packet_preparation_only_no_assumption_discharge_no_conservation_witness_no_qft_gr_seam_closure",
+  "conservation_blocker_remains": true,
+  "conservation_proof_object_constructed": false,
+  "conservation_proved": false,
+  "conservation_witness_constructed": false,
+  "consumed_result_review_classification": "qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_result_review_accepts_reduced_renormalized_expectation_domain_and_authorizes_next_renormalization_row_selection_only",
+  "consumed_result_review_outcome_id": "QFT_GR_RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_RENORMALIZED_EXPECTATION_DOMAIN_AND_AUTHORIZES_NEXT_RENORMALIZATION_ROW_SELECTION_ONLY",
+  "consumed_target": "prepare_qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet",
+  "consumes_qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_result_review": "QFT_GR_RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_v0",
+  "consumes_qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_result_review_pointer": "formal/docs/release/QFT_GR_RENORMALIZED_EXPECTATION_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260606_v0.json",
+  "covariant_conservation_statement_proved": false,
+  "empirical_validation_claimed": false,
+  "failure_mode_if_unresolved": "the conservation blocker remains mixed with finiteness or regularity failures",
+  "finiteness_regular_boundary": "finite_regular_renormalized_expectation_required_before_conservation_proof_object",
+  "finiteness_regular_boundary_condition": "finite_regular_renormalized_expectation_required_before_conservation_proof_object",
+  "finiteness_regular_boundary_discharged": false,
+  "finiteness_regular_boundary_reduced_or_discharged_by_preparation": false,
+  "finiteness_regular_boundary_status": "finiteness_regular_boundary_selected_for_reduction_analysis_not_renormalization_assumption_discharge",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This packet prepares only RN-ASSUMP-004 finiteness/regularity reduction analysis. It does not discharge finiteness or regularity assumptions, construct a conservation proof object or conservation witness, claim source admissibility or Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "outcome_id": "QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "packet_classification": "qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet_prepared_with_no_conservation_witness_or_seam_closure",
+  "packet_classification_count": 1,
+  "packet_id": "QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_v0",
+  "prepared": true,
+  "prepares_reduction_analysis_only": true,
+  "primary_assumption_reduction_family": "renormalization_assumptions",
+  "prior_completed_family": "operator_domain_assumptions",
+  "prior_operator_domain_assumptions_accepted": true,
+  "proof_object_constructed": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "renormalization_assumptions_discharged": false,
+  "renormalized_expectation_domain": "renormalized_expectation_value_admitted_to_selected_operator_domain",
+  "renormalized_expectation_finiteness_assumption": {
+    "assumption_family": "renormalization_assumptions",
+    "assumption_id": "RN-ASSUMP-004-finiteness_regular_boundary",
+    "available_repo_evidence": [
+      "QFT_GR_CONSERVED_RENORMALIZED_STRESS_ENERGY_SOURCE_WITNESS_PACKET_v0",
+      "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_v0"
+    ],
+    "candidate_reduction_route": "bound the finiteness and regularity preconditions needed before testing covariant-divergence compatibility",
+    "claim_ceiling": "renormalized_expectation_finiteness_packet_only_no_assumption_discharge_no_conservation_witness_no_qft_gr_seam_closure",
+    "current_status": [
+      "required",
+      "missing",
+      "candidate_reducible"
+    ],
+    "failure_mode_if_unresolved": "the conservation blocker remains mixed with finiteness or regularity failures",
+    "finiteness_regular_boundary_condition": "finite_regular_renormalized_expectation_required_before_conservation_proof_object",
+    "finiteness_regular_boundary_status": "finiteness_regular_boundary_selected_for_reduction_analysis_not_renormalization_assumption_discharge",
+    "required_future_proof_object": "finite_regular_renormalized_expectation_boundary_for_future_conservation_statement",
+    "scope_boundaries": [
+      "repo_local_finiteness_regular_boundary_only",
+      "accepted_renormalized_expectation_domain_contract_only",
+      "no_finiteness_regular_boundary_discharge",
+      "no_conservation_claim",
+      "no_source_admissibility_claim",
+      "no_bianchi_compatibility_claim",
+      "no_qft_gr_seam_closure"
+    ]
+  },
+  "renormalized_expectation_finiteness_assumption_reduction_analysis_prepared": true,
+  "renormalized_expectation_finiteness_status_tokens": [
+    "required",
+    "missing",
+    "candidate_reducible"
+  ],
+  "required_future_proof_object": "finite_regular_renormalized_expectation_boundary_for_future_conservation_statement",
+  "schema_id": "QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_20260606_v0",
+  "scientific_validation_claimed": false,
+  "scope_boundaries": [
+    "repo_local_finiteness_regular_boundary_only",
+    "accepted_renormalized_expectation_domain_contract_only",
+    "no_finiteness_regular_boundary_discharge",
+    "no_conservation_claim",
+    "no_source_admissibility_claim",
+    "no_bianchi_compatibility_claim",
+    "no_qft_gr_seam_closure"
+  ],
+  "selected_assumption_family": "renormalization_assumptions",
+  "selected_blocker": "insufficient_assumptions_for_conservation",
+  "selected_next_target": "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet_result",
+  "selected_next_target_kind": "qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet_result_review",
+  "selected_renormalization_assumption_row": "RN-ASSUMP-004-finiteness_regular_boundary",
+  "selected_route": "qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet_result_review_after_preparation",
+  "selected_row_count": 1,
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "source_renormalization_assumption_reduction_packet": "QFT_GR_RENORMALIZATION_ASSUMPTION_REDUCTION_PACKET_v0",
+  "source_renormalization_assumption_reduction_packet_pointer": "formal/docs/release/QFT_GR_RENORMALIZATION_ASSUMPTION_REDUCTION_PACKET_20260606_v0.json",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false
+}
