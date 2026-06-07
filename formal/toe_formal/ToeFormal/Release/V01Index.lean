@@ -2493,6 +2493,32 @@ def qftGRRenormalizedExpectationFinitenessAssumptionReductionPacketSelectedNextT
     String :=
   "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet_result"
 
+def qftGRRenormalizedExpectationFinitenessAssumptionReductionPacketResultReviewLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_RenormalizedExpectationFinitenessAssumptionReductionPacketResultReview"
+
+def qftGRRenormalizedExpectationFinitenessAssumptionReductionPacketResultReviewOutcomeToken :
+    String :=
+  "QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_" ++
+    "RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_REDUCTION_ATTEMPT_ONLY"
+
+def qftGRRenormalizedExpectationFinitenessAssumptionReductionPacketResultReviewClassification :
+    String :=
+  "qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet_" ++
+    "result_review_accepts_packet_and_authorizes_bounded_reduction_attempt_only"
+
+def qftGRRenormalizedExpectationFinitenessAssumptionReductionPacketResultReviewConsumedPacket :
+    String :=
+  "QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_v0"
+
+def qftGRRenormalizedExpectationFinitenessAssumptionReductionPacketResultReviewSelectedRow :
+    String :=
+  "RN-ASSUMP-004-finiteness_regular_boundary"
+
+def qftGRRenormalizedExpectationFinitenessAssumptionReductionPacketResultReviewSelectedNextTarget :
+    String :=
+  "execute_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
