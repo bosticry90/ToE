@@ -20,7 +20,7 @@ CLASSIFICATION = (
     "no_live_target_mutation"
 )
 CURRENT_LIVE_NEXT_TARGET = (
-    "execute_qft_gr_renormalized_expectation_domain_assumption_reduction_attempt"
+    "review_qft_gr_renormalized_expectation_domain_assumption_reduction_attempt_result"
 )
 SOURCE_ATTACHMENT = "Physics Imps and Sigs.txt"
 LEDGER_TARGET = "prepare_physics_implications_source_verification_ledger_packet"
