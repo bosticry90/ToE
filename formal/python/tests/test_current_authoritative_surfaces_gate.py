@@ -310,12 +310,12 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-        "CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_renormalization_assumption_reduction_closeout_packet",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_result",
-        "ACTIVE_LANE_v0: qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_result_review",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptResultReview.lean",
-        "CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260606_v0.json",
-        "CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_OPERATOR_DOMAIN_COMPATIBILITY_AND_AUTHORIZES_RENORMALIZATION_ASSUMPTION_REDUCTION_CLOSEOUT_PREPARATION_ONLY",
+        "CURRENT_LIVE_NEXT_TARGET_v0: review_qft_gr_renormalization_assumption_reduction_closeout_packet_result",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_renormalization_assumption_reduction_closeout_packet",
+        "ACTIVE_LANE_v0: qft_gr_renormalization_assumption_reduction_closeout_packet",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Bridges/QFT_GR_RenormalizationAssumptionReductionCloseoutPacket.lean",
+        "CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_RENORMALIZATION_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_20260606_v0.json",
+        "CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_RENORMALIZATION_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
         "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_ACCEPTS_CRITICIZABILITY_ONLY_PACKET_AND_AUTHORIZES_READINESS_ADJUDICATION_EXECUTION_ONLY",
         "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_EXECUTED_WITH_NO_RELEASE_ASSEMBLY_OR_PROMOTION",
         "V01_ALPHA_CRITICIZABILITY_READINESS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_ELIGIBILITY_AND_AUTHORIZES_QFT_GR_WITNESS_PACKET_PREPARATION_ONLY",

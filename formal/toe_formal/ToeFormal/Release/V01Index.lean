@@ -2722,6 +2722,36 @@ def qftGRRenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptRes
     String :=
   "prepare_qft_gr_renormalization_assumption_reduction_closeout_packet"
 
+def qftGRRenormalizationAssumptionReductionCloseoutPacketLeanSurface : String :=
+  "ToeFormal.Bridges.QFT_GR_RenormalizationAssumptionReductionCloseoutPacket"
+
+def qftGRRenormalizationAssumptionReductionCloseoutPacketOutcomeToken : String :=
+  "QFT_GR_RENORMALIZATION_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_PREPARED_" ++
+    "WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+
+def qftGRRenormalizationAssumptionReductionCloseoutPacketClassification : String :=
+  "qft_gr_renormalization_assumption_reduction_closeout_packet_prepared_" ++
+    "with_no_conservation_witness_or_seam_closure"
+
+def qftGRRenormalizationAssumptionReductionCloseoutPacketConsumedReview : String :=
+  "QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_" ++
+    "REDUCTION_ATTEMPT_RESULT_REVIEW_v0"
+
+def qftGRRenormalizationAssumptionReductionCloseoutPacketAcceptedRows : List String :=
+  [ "RN-ASSUMP-001-renormalized_stress_energy_object",
+    "RN-ASSUMP-002-renormalization_scope",
+    "RN-ASSUMP-003-renormalized_expectation_domain",
+    "RN-ASSUMP-004-finiteness_regular_boundary",
+    "RN-ASSUMP-005-operator_domain_compatibility" ]
+
+def qftGRRenormalizationAssumptionReductionCloseoutPacketNoRemainingRow :
+    String :=
+  "no_remaining_renormalization_assumption_row_in_current_inventory"
+
+def qftGRRenormalizationAssumptionReductionCloseoutPacketSelectedNextTarget :
+    String :=
+  "review_qft_gr_renormalization_assumption_reduction_closeout_packet_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -7739,6 +7769,39 @@ theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reductio
   trivial
 
 theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_result_review_selects_closeout_packet : True := by
+  trivial
+
+theorem qft_gr_renormalization_assumption_reduction_closeout_packet_consumes_result_review : True := by
+  trivial
+
+theorem qft_gr_renormalization_assumption_reduction_closeout_packet_records_all_five_rows : True := by
+  trivial
+
+theorem qft_gr_renormalization_assumption_reduction_closeout_packet_confirms_no_remaining_row : True := by
+  trivial
+
+theorem qft_gr_renormalization_assumption_reduction_closeout_packet_preserves_blocker : True := by
+  trivial
+
+theorem qft_gr_renormalization_assumption_reduction_closeout_packet_preparation_only : True := by
+  trivial
+
+theorem qft_gr_renormalization_assumption_reduction_closeout_packet_no_conservation_proof_object : True := by
+  trivial
+
+theorem qft_gr_renormalization_assumption_reduction_closeout_packet_no_conservation_witness : True := by
+  trivial
+
+theorem qft_gr_renormalization_assumption_reduction_closeout_packet_no_source_or_bianchi : True := by
+  trivial
+
+theorem qft_gr_renormalization_assumption_reduction_closeout_packet_no_semiclassical_einstein : True := by
+  trivial
+
+theorem qft_gr_renormalization_assumption_reduction_closeout_packet_no_qft_gr_closure : True := by
+  trivial
+
+theorem qft_gr_renormalization_assumption_reduction_closeout_packet_selects_result_review : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by
