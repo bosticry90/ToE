@@ -170,8 +170,8 @@ Seam governance-vs-physics completion split (v0)
 - `FULL_PILLAR_TARGET_MAP_REBASE_DOC_v0: formal/docs/paper/FULL_PILLAR_TARGET_MAP_REBASE_v0.md`
 - `FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_v0: formal/toe_formal/ToeFormal/Derivation/FullPillarTargetMapRebaseResultReview.lean`
 - `FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_REPORT_v0: formal/docs/release/FULL_PILLAR_TARGET_MAP_REBASE_RESULT_REVIEW_20260503_v0.json`
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_state_domain_object_assumption_reduction_packet`
-- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: prepare_qft_gr_state_domain_object_assumption_reduction_packet`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_qft_gr_state_domain_object_assumption_reduction_packet_result`
+- `MASTER_ACTION_CURRENT_CITATION_TARGET_v0: review_qft_gr_state_domain_object_assumption_reduction_packet_result`
 - `SEAM_GR_QM_GOVERNANCE_COMPLETE_v0: YES`
 - `SEAM_GR_QM_PHYSICS_COMPLETE_v0: YES`
 - `SEAM_GR_QM_STATUS_READ_v0: GOVERNANCE_COMPLETE_AND_PHYSICS_COMPLETE`

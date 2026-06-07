@@ -73,6 +73,9 @@ STATE_DOMAIN_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET = (
 STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_object_assumption_reduction_packet"
 )
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_state_domain_object_assumption_reduction_packet_result"
+)
 RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
     "QFT_GR_RenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptResultReview.lean"
@@ -181,6 +184,29 @@ STATE_DOMAIN_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TOKEN = (
 STATE_DOMAIN_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_CLASSIFICATION = (
     "qft_gr_state_domain_assumption_reduction_packet_result_review_accepts_"
     "packet_and_authorizes_bounded_state_domain_row_selection_only"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_SURFACE = (
+    "formal/toe_formal/ToeFormal/Bridges/"
+    "QFT_GR_StateDomainObjectAssumptionReductionPacket.lean"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_REPORT = (
+    "formal/docs/release/"
+    "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_20260607_v0.json"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_TOOL = (
+    "formal/python/tools/"
+    "qft_gr_state_domain_object_assumption_reduction_packet_report.py"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_TOKEN = (
+    "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_"
+    "CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_CLASSIFICATION = (
+    "qft_gr_state_domain_object_assumption_reduction_packet_prepared_with_no_"
+    "conservation_witness_or_seam_closure"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_PENDING_CLASSIFICATION = (
+    "qft_gr_state_domain_object_assumption_reduction_packet_result_review_pending"
 )
 
 EXPECTED_ALLOWED_STATUSES = [
@@ -741,6 +767,81 @@ def test_active_result_review_target_is_pending_and_latest_surface_matches_execu
             live_target
         )
         assert workstream["state_domain_object_assumption_packet_pending"] == "yes"
+
+    if live_target == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET:
+        assert workstream["consumed_target"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_TARGET
+        )
+        assert workstream["latest_surface"] == (
+            "qft_gr_state_domain_object_assumption_reduction_packet_v0"
+        )
+        assert workstream["latest_surface_evidence"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_SURFACE
+        )
+        assert workstream["latest_surface_report"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_REPORT
+        )
+        assert workstream["latest_surface_token"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_TOKEN
+        )
+        assert workstream["latest_surface_tool"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_TOOL
+        )
+        assert workstream["result_classification"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_CLASSIFICATION
+        )
+        assert workstream["result_review_accepted"] == "no"
+        assert workstream["result_review_completed"] == "no"
+        assert workstream["result_review_pending"] == "yes"
+        assert workstream["result_review_target"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
+        )
+        assert workstream["result_review_surface"] == ""
+        assert workstream["result_review_report"] == ""
+        assert workstream["result_review_token"] == ""
+        assert workstream["result_review_tool"] == ""
+        assert workstream["result_review_classification"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_PENDING_CLASSIFICATION
+        )
+        assert workstream["result_surface"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_SURFACE
+        )
+        assert workstream["result_report"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_REPORT
+        )
+        assert workstream["result_token"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_TOKEN
+        )
+        assert workstream["selected_next_target"] == live_target
+        assert workstream["selected_next_target_kind"] == (
+            "qft_gr_state_domain_object_assumption_reduction_packet_result_review"
+        )
+        assert workstream["selected_next_authorization_token"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_TOKEN
+        )
+        assert workstream[
+            "state_domain_assumption_reduction_packet_result_review_selected_next_target"
+        ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_TARGET
+        assert workstream[
+            "state_domain_object_assumption_reduction_packet_selected_next_target"
+        ] == live_target
+        assert workstream["selected_state_domain_assumption_row"] == (
+            "SD-ASSUMP-001-state_domain_object"
+        )
+        assert (
+            workstream["state_domain_object_assumption_reduction_packet_prepared"]
+            == "yes"
+        )
+        assert (
+            workstream["state_domain_object_assumption_result_review_pending"]
+            == "yes"
+        )
+        assert (
+            workstream[
+                "state_domain_object_assumption_reduction_packet_result_review_classification"
+            ]
+            == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_PENDING_CLASSIFICATION
+        )
 
 
 def test_loop_control_gate_is_focused_not_governance_manifest_enrolled() -> None:

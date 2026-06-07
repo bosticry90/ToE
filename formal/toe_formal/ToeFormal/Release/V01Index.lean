@@ -2819,6 +2819,32 @@ def qftGRStateDomainAssumptionReductionPacketResultReviewSelectedNextTarget :
     String :=
   "prepare_qft_gr_state_domain_object_assumption_reduction_packet"
 
+def qftGRStateDomainObjectAssumptionReductionPacketLeanSurface : String :=
+  "ToeFormal.Bridges.QFT_GR_StateDomainObjectAssumptionReductionPacket"
+
+def qftGRStateDomainObjectAssumptionReductionPacketOutcomeToken : String :=
+  "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_" ++
+    "CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+
+def qftGRStateDomainObjectAssumptionReductionPacketClassification : String :=
+  "qft_gr_state_domain_object_assumption_reduction_packet_prepared_with_no_" ++
+    "conservation_witness_or_seam_closure"
+
+def qftGRStateDomainObjectAssumptionReductionPacketSelectedRow : String :=
+  "SD-ASSUMP-001-state_domain_object"
+
+def qftGRStateDomainObjectAssumptionReductionPacketStateDomainObject : String :=
+  "bounded_qft_state_domain_for_candidate_renormalized_stress_energy_expectation"
+
+def qftGRStateDomainObjectAssumptionReductionPacketCompatibilityCondition :
+    String :=
+  "bounded_qft_state_domain_object_compatible_with_candidate_renormalized_" ++
+    "stress_energy_expectation_without_source_admissibility_claim"
+
+def qftGRStateDomainObjectAssumptionReductionPacketSelectedNextTarget :
+    String :=
+  "review_qft_gr_state_domain_object_assumption_reduction_packet_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
