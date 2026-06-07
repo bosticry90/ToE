@@ -248,13 +248,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR RN-ASSUMP-004 finiteness/regularity reduction attempt result review accepts the bounded reduction and selects RN-ASSUMP-005 operator-domain compatibility packet preparation, with no finiteness discharge, conservation proof object, conservation witness, source admissibility, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
+        "QFT-GR RN-ASSUMP-005 operator-domain compatibility packet prepares reduction analysis only and selects packet result review, with no operator-domain compatibility discharge, conservation proof object, conservation witness, source admissibility, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet"
+        "review_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -276,13 +276,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR RN-ASSUMP-004 finiteness/regularity reduction attempt result review accepts the bounded row only and authorizes RN-ASSUMP-005 operator-domain compatibility packet preparation, with no conservation proof, source admissibility, finiteness discharge, proof object construction, conservation witness construction, Bianchi compatibility, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
+        "QFT-GR RN-ASSUMP-005 operator-domain compatibility packet prepares the bounded row only and authorizes packet result review, with no conservation proof, source admissibility, operator-domain compatibility discharge, proof object construction, conservation witness construction, Bianchi compatibility, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet"
+        "review_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet_result"
       status := .retained }
   ]
 
@@ -300,13 +300,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR RN-ASSUMP-004 attempt result review. -/
+/-- Previous live target consumed by the QFT-GR RN-ASSUMP-005 packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result"
-
-/-- Current live target after the QFT-GR RN-ASSUMP-004 attempt result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet"
+
+/-- Current live target after the QFT-GR RN-ASSUMP-005 packet preparation. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -319,7 +319,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "prepare_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet"
+        "review_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

@@ -1144,7 +1144,7 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result_review"
+    "qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1263,11 +1263,14 @@ RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_T
 RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_PACKET_TARGET = (
     "prepare_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet"
 )
+RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet_result"
+)
 PREVIOUS_TARGET = (
-    RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+    RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_PACKET_TARGET
 )
 LIVE_TARGET = (
-    RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_PACKET_TARGET
+    RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
 )
 PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
@@ -1278,7 +1281,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_RenormalizedExpectationFinitenessAssumptionReductionAttemptResultReview.lean"
+    / "QFT_GR_RenormalizationOperatorDomainCompatibilityAssumptionReductionPacket.lean"
 )
 RN002_ATTEMPT_RESULT_REVIEW_EVIDENCE_PATH = (
     REPO_ROOT
@@ -2108,7 +2111,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result_review_v0"
+        == "qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2392,8 +2395,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_ATTEMPT_RESULT_REVIEW_ACCEPTS_PARTIAL_CANDIDATE_AND_AUTHORIZES_CONSTRUCTION_PACKET_PREPARATION_ONLY"
     )
     assert current_active_workstream["output_token"] == (
-        "QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_"
-        "RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_REDUCTION_ATTEMPT_ONLY"
+        "QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_"
+        "REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
     )
     assert current_active_workstream["source_map_closure_registration_packet_token"] == (
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_PACKET_PREPARED_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
@@ -2504,7 +2507,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["selected_route"] == (
         "qft_gr_renormalization_operator_domain_compatibility_assumption_"
-        "reduction_packet_after_finiteness_result_review"
+        "reduction_packet_result_review_after_preparation"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -2853,8 +2856,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "source_map_closure_adjudication_packet_prepared_no_source_map_closure_or_release_promotion"
     )
     assert current_active_workstream["packet_classification"] == (
-        "qft_gr_conservation_form_scope_assumption_reduction_packet_prepared_"
-        "with_no_conservation_witness_or_seam_closure"
+        "qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_"
+        "packet_prepared_with_no_conservation_witness_or_seam_closure"
     )
     assert current_active_workstream["packet_classification_count"] == "1"
     assert current_active_workstream["source_map_closure_adjudication_question_prepared"] == "yes"
@@ -3418,19 +3421,19 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "yes_operator_domain_closeout_result_review_accepted"
     )
     assert current_active_workstream["track2_started"] == (
-        "renormalized_expectation_finiteness_assumption_reduction_attempt_"
-        "result_reviewed_next_operator_domain_compatibility_packet_selected"
+        "renormalization_operator_domain_compatibility_assumption_reduction_"
+        "packet_prepared_pending_result_review"
     )
     assert current_active_workstream["track2_selected_after_this_execution"] == (
-        "operator_domain_compatibility_assumption_reduction_packet_selected_after_attempt_result_review"
+        "no_execution_packet_prepared_pending_result_review"
     )
     assert current_active_workstream["track2_selected_after_this_review"] == (
-        "operator_domain_compatibility_assumption_reduction_packet_selected"
+        "operator_domain_compatibility_packet_result_review_selected"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "PREPARE_QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_"
-        "ASSUMPTION_REDUCTION_PACKET_ONLY_NO_FINITENESS_REGULARITY_"
-        "DISCHARGE_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
+        "REVIEW_QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_"
+        "ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_NO_CONSERVATION_WITNESS_"
+        "OR_QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
     assert current_active_workstream["closeout_criteria_count"] == "4"
@@ -5382,10 +5385,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_attempt_result_review_target"
-    ] == PREVIOUS_TARGET
+    ] == RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_attempt_selected_next_target"
-    ] == PREVIOUS_TARGET
+    ] == RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_attempt_result_review_id"
     ] == "QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_v0"
@@ -5421,7 +5424,80 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "RN-ASSUMP-005-operator_domain_compatibility"
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_attempt_result_review_selected_next_target"
+    ] == PREVIOUS_TARGET
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_prepared"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_target"
+    ] == PREVIOUS_TARGET
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_report"
+    ] == (
+        "formal/docs/release/"
+        "QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_"
+        "REDUCTION_PACKET_20260606_v0.json"
+    )
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_surface"
+    ] == (
+        "formal/toe_formal/ToeFormal/Bridges/"
+        "QFT_GR_RenormalizationOperatorDomainCompatibilityAssumptionReductionPacket.lean"
+    )
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_tool"
+    ] == (
+        "formal/python/tools/"
+        "qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet_report.py"
+    )
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_gate"
+    ] == (
+        "formal/python/tests/"
+        "test_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet_gate.py"
+    )
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_token"
+    ] == (
+        "QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_"
+        "REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+    )
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_classification"
+    ] == (
+        "qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_"
+        "packet_prepared_with_no_conservation_witness_or_seam_closure"
+    )
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_selected_row"
+    ] == "RN-ASSUMP-005-operator_domain_compatibility"
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_selected_next_target"
     ] == LIVE_TARGET
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_result_review_target"
+    ] == LIVE_TARGET
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_prepares_reduction_analysis_only"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_assumption_reduction_packet_discharged"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_constructs_conservation_proof_object"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_constructs_conservation_witness"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_claims_source_admissibility"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_claims_bianchi_compatibility"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalization_operator_domain_compatibility_closes_qft_gr_seam"
+    ] == "no"
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_attempt_contract"
     ] == "RN-ASSUMP-004-finiteness_regular_boundary_contract_v0"

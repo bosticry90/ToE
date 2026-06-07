@@ -20,8 +20,8 @@ CLASSIFICATION = (
     "no_live_target_mutation"
 )
 CURRENT_LIVE_NEXT_TARGET = (
-    "prepare_qft_gr_renormalization_operator_domain_compatibility_assumption_"
-    "reduction_packet"
+    "review_qft_gr_renormalization_operator_domain_compatibility_assumption_"
+    "reduction_packet_result"
 )
 SOURCE_ATTACHMENT = "Physics Imps and Sigs.txt"
 LEDGER_TARGET = "prepare_physics_implications_source_verification_ledger_packet"
