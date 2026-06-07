@@ -2916,6 +2916,32 @@ def qftGRStateDomainObjectAssumptionReductionAttemptResultReviewSelectedNextTarg
     String :=
   "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet"
 
+def qftGRStateAdmissibilityBoundaryAssumptionReductionPacketLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacket"
+
+def qftGRStateAdmissibilityBoundaryAssumptionReductionPacketOutcomeToken :
+    String :=
+  "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_" ++
+    "WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
+
+def qftGRStateAdmissibilityBoundaryAssumptionReductionPacketClassification :
+    String :=
+  "qft_gr_state_admissibility_boundary_assumption_reduction_packet_prepared_" ++
+    "with_no_source_admissibility_or_seam_closure"
+
+def qftGRStateAdmissibilityBoundaryAssumptionReductionPacketAcceptedPriorRow :
+    String :=
+  "SD-ASSUMP-001-state_domain_object"
+
+def qftGRStateAdmissibilityBoundaryAssumptionReductionPacketSelectedRow :
+    String :=
+  "SD-ASSUMP-002-state_admissibility_boundary"
+
+def qftGRStateAdmissibilityBoundaryAssumptionReductionPacketSelectedNextTarget :
+    String :=
+  "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 

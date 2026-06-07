@@ -265,13 +265,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR SD-ASSUMP-001 state-domain object assumption-reduction attempt result review accepts the bounded row reduction, records qft_gr_state_domain_object_assumption_reduction_attempt_result_review_accepts_reduced_state_domain_object_and_authorizes_next_state_domain_row_selection_only, preserves insufficient_assumptions_for_conservation and state_domain_assumptions, selects SD-ASSUMP-002 state-admissibility-boundary packet preparation only, and does not discharge state-domain assumptions by implication, discharge state admissibility, construct a conservation proof object or witness, claim source admissibility, claim Bianchi compatibility, derive the semiclassical Einstein equation, validate empirically, promote the master action, assemble release, authorize public submission, or close the QFT-GR seam"
+        "QFT-GR SD-ASSUMP-002 state-admissibility-boundary assumption-reduction packet is prepared after the accepted SD-ASSUMP-001 result review, records qft_gr_state_admissibility_boundary_assumption_reduction_packet_prepared_with_no_source_admissibility_or_seam_closure, preserves insufficient_assumptions_for_conservation and state_domain_assumptions, selects only SD-ASSUMP-002 for packet result review, and does not claim state admissibility, claim source admissibility, construct a conservation proof object or witness, claim Bianchi compatibility, derive the semiclassical Einstein equation, validate empirically, promote the master action, assemble release, authorize public submission, or close the QFT-GR seam"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet"
+        "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -293,13 +293,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR SD-ASSUMP-001 state-domain object bounded attempt result review accepts the reduced row and selects only SD-ASSUMP-002 state-admissibility-boundary packet preparation, with no state admissibility discharge, conservation proof, source admissibility, proof object construction, conservation witness construction, Bianchi compatibility, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
+        "QFT-GR SD-ASSUMP-002 state-admissibility-boundary packet prepares reduction analysis only after SD-ASSUMP-001 acceptance and selects packet result review, with no state admissibility claim, source admissibility, conservation proof, proof object construction, conservation witness construction, Bianchi compatibility, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet"
+        "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result"
       status := .retained }
   ]
 
@@ -317,13 +317,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR state-domain object attempt result review. -/
+/-- Previous live target consumed by the QFT-GR state-admissibility-boundary packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_state_domain_object_assumption_reduction_attempt_result"
-
-/-- Current live target after the QFT-GR state-domain object attempt result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet"
+
+/-- Current live target after the QFT-GR state-admissibility-boundary packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -336,7 +336,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet"
+        "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

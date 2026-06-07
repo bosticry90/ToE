@@ -33,7 +33,8 @@
     "review_qft_gr_state_domain_assumption_reduction_packet_result",
     "prepare_qft_gr_state_domain_object_assumption_reduction_packet",
     "execute_qft_gr_state_domain_object_assumption_reduction_attempt",
-    "review_qft_gr_state_domain_object_assumption_reduction_attempt_result"
+    "review_qft_gr_state_domain_object_assumption_reduction_attempt_result",
+    "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet"
   ],
   "controls": [
     {
@@ -395,9 +396,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "qft_gr_state_domain_object_assumption_reduction_attempt_result_review",
+    "active_lane": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_preparation",
     "candidate_live_next_targets": [
-      "review_qft_gr_state_domain_object_assumption_reduction_attempt_result"
+      "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet"
     ],
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
@@ -471,16 +472,10 @@
       "prepare_qft_gr_state_domain_object_assumption_reduction_packet",
       "review_qft_gr_state_domain_object_assumption_reduction_packet_result",
       "execute_qft_gr_state_domain_object_assumption_reduction_attempt",
-      "review_qft_gr_state_domain_object_assumption_reduction_attempt_result"
+      "review_qft_gr_state_domain_object_assumption_reduction_attempt_result",
+      "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet"
     ],
     "current_target_coverage": [
-      {
-        "report": "formal/docs/release/QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_20260607_v0.json",
-        "status": "completed",
-        "surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateDomainObjectAssumptionReductionAttempt.lean",
-        "target": "execute_qft_gr_state_domain_object_assumption_reduction_attempt",
-        "token": "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
-      },
       {
         "report": "formal/docs/release/QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260607_v0.json",
         "status": "completed",
@@ -489,11 +484,18 @@
         "token": "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_STATE_DOMAIN_OBJECT_AND_AUTHORIZES_NEXT_STATE_DOMAIN_ROW_SELECTION_ONLY"
       },
       {
-        "report": "formal/docs/release/QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260607_v0.json",
-        "status": "active",
-        "surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateDomainObjectAssumptionReductionAttemptResultReview.lean",
+        "report": "formal/docs/release/QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_20260607_v0.json",
+        "status": "completed",
+        "surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacket.lean",
         "target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
-        "token": "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_STATE_DOMAIN_OBJECT_AND_AUTHORIZES_NEXT_STATE_DOMAIN_ROW_SELECTION_ONLY"
+        "token": "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
+      },
+      {
+        "report": "formal/docs/release/QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_20260607_v0.json",
+        "status": "active",
+        "surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacket.lean",
+        "target": "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result",
+        "token": "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
       }
     ],
     "focused_gate": "formal/python/tests/test_current_target_freshness_gate.py",
@@ -504,8 +506,8 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateDomainObjectAssumptionReductionAttemptResultReview.lean",
+    "live_next_target": "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacket.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
     "next_strict_target_coverage": {
       "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt": {
@@ -666,10 +668,10 @@
         "status": "consumed_by_qft_gr_selected_operator_action_assumption_reduction_packet"
       },
       "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet": {
-        "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateDomainObjectAssumptionReductionAttemptResultReview.lean",
-        "report": "formal/docs/release/QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260607_v0.json",
-        "status": "active_after_qft_gr_state_domain_object_assumption_reduction_attempt_result_review",
-        "token": "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_STATE_DOMAIN_OBJECT_AND_AUTHORIZES_NEXT_STATE_DOMAIN_ROW_SELECTION_ONLY"
+        "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacket.lean",
+        "report": "formal/docs/release/QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_20260607_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
       },
       "prepare_qft_gr_state_domain_assumption_reduction_packet": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateDomainAssumptionReductionPacket.lean",
@@ -851,6 +853,12 @@
       "review_qft_gr_stress_energy_conservation_witness_attempt_result": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StressEnergyConservationWitnessAttemptResultReview.lean",
         "status": "consumed_by_qft_gr_stress_energy_conservation_witness_attempt_result_review"
+      },
+      "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result": {
+        "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacket.lean",
+        "report": "formal/docs/release/QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_20260607_v0.json",
+        "status": "active_pending_result_review",
+        "token": "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
       }
     },
     "paused_lanes": [
@@ -980,7 +988,7 @@
       "qft_gr_operator_domain_assumption_reduction_closeout_packet_preparation"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "review_qft_gr_state_domain_object_assumption_reduction_attempt_result",
+    "previous_live_next_target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
     "schema_id": "CURRENT_TARGET_STATE_v0"
   },
   "cycle_waivers": [],
@@ -1692,7 +1700,8 @@
     "state_continuum_limit_and_source_map_obligations",
     "tie_background_regime_to_sr_covariance_residual",
     "transport_local_sr_covariance_through_cosmo_regime",
-    "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet"
+    "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
+    "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -2069,7 +2078,7 @@
       "next_state_domain_assumption_row": "SD-ASSUMP-002-state_admissibility_boundary",
       "report": "formal/docs/release/QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260607_v0.json",
       "selected_next_target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
-      "status": "accepted_next_state_domain_row_packet_preparation"
+      "status": "accepted_next_state_domain_row_packet_prepared"
     },
     "qft_gr_state_expectation_domain_link_assumption_reduction_attempt_result_review_v0": {
       "classification": "qft_gr_state_expectation_domain_link_assumption_reduction_attempt_result_review_accepts_reduced_state_expectation_domain_link_and_authorizes_next_operator_domain_row_selection_only",
@@ -2084,6 +2093,17 @@
       "report": "formal/docs/release/QFT_GR_STATE_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_ATTEMPT_20260527_v0.json",
       "selected_next_target": "review_qft_gr_state_expectation_domain_link_assumption_reduction_attempt_result",
       "status": "executed_result_reviewed"
+    },
+    "qft_gr_state_admissibility_boundary_assumption_reduction_packet_v0": {
+      "accepted_prior_state_domain_assumption_row": "SD-ASSUMP-001-state_domain_object",
+      "classification": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_prepared_with_no_source_admissibility_or_seam_closure",
+      "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacket.lean",
+      "outcome": "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE",
+      "report": "formal/docs/release/QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_20260607_v0.json",
+      "selected_next_target": "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result",
+      "selected_state_domain_assumption_row": "SD-ASSUMP-002-state_admissibility_boundary",
+      "state_admissibility_boundary": "state_admissibility_boundary_for_meaningful_renormalized_expectation_not_source_admissibility",
+      "status": "prepared_pending_result_review"
     }
   },
   "retained_blocker_coverage": [
@@ -2175,7 +2195,9 @@
     "prepare_qft_gr_state_domain_object_assumption_reduction_packet",
     "review_qft_gr_state_domain_object_assumption_reduction_packet_result",
     "execute_qft_gr_state_domain_object_assumption_reduction_attempt",
-    "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet"
+    "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
+    "review_qft_gr_state_domain_object_assumption_reduction_attempt_result",
+    "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result"
   ],
   "token_family_coverage": [
     {
@@ -36996,7 +37018,7 @@
       "accepted_state_domain_assumption_row_count": "1",
       "accepted_state_domain_assumption_rows": "SD-ASSUMP-001-state_domain_object",
       "accepted_tranche_004_status": "documented_source_map_closed_nonblocking",
-      "active_lane": "qft_gr_state_domain_object_assumption_reduction_attempt",
+      "active_lane": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_preparation",
       "actual_conservation_claimed": "no",
       "adjudicated_closure_requirement_count": "7",
       "adjudicated_requirement_count": "7",
@@ -37043,7 +37065,7 @@
       "attempt_result_review_accepted": "yes",
       "attempt_result_reviewed": "yes",
       "attempt_token": "QFT_GR_COVARIANT_CONSERVATION_PROOF_OBJECT_ATTEMPT_EXECUTED_WITH_NO_QFT_GR_SEAM_CLOSURE_OR_EMPIRICAL_VALIDATION",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateDomainObjectAssumptionReductionAttemptResultReview.lean",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacket.lean",
       "authorized_attempt_result_classification_count": "3",
       "authorized_attempt_result_classifications": "qft_gr_state_domain_object_assumption_reduced_pending_result_review|qft_gr_state_domain_object_assumption_obstruction_identified_requires_refinement|qft_gr_state_domain_object_assumption_inconclusive_requires_assumption_reduction",
       "authorized_attempt_scope": "state_domain_object_assumption_reduction_attempt_only_no_state_admissibility_discharge_no_conservation_witness_no_qft_gr_seam_closure",
@@ -37053,15 +37075,15 @@
       "authorized_conservation_form_scope_attempt_result_classifications": "qft_gr_conservation_form_scope_assumption_reduced_pending_result_review|qft_gr_conservation_form_scope_assumption_obstruction_identified_requires_refinement|qft_gr_conservation_form_scope_assumption_inconclusive_requires_assumption_reduction",
       "authorized_metric_connection_scope_attempt_result_classification_count": "3",
       "authorized_metric_connection_scope_attempt_result_classifications": "qft_gr_metric_connection_scope_assumption_reduced_pending_result_review|qft_gr_metric_connection_scope_assumption_obstruction_identified_requires_refinement|qft_gr_metric_connection_scope_assumption_inconclusive_requires_assumption_reduction",
-      "authorized_next_slice": "review_qft_gr_state_domain_object_assumption_reduction_attempt_result",
-      "authorized_next_strict_target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
+      "authorized_next_slice": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
+      "authorized_next_strict_target": "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result",
       "authorized_operator_domain_compatibility_attempt_result_classification_count": "3",
       "authorized_operator_domain_compatibility_attempt_result_classifications": "qft_gr_renormalization_operator_domain_compatibility_assumption_reduced_pending_result_review|qft_gr_renormalization_operator_domain_compatibility_assumption_obstruction_identified_requires_refinement|qft_gr_renormalization_operator_domain_compatibility_assumption_inconclusive_requires_assumption_reduction",
       "authorized_renormalized_expectation_domain_link_attempt_result_classification_count": "3",
       "authorized_renormalized_expectation_domain_link_attempt_result_classifications": "qft_gr_renormalized_expectation_domain_link_assumption_reduced_pending_result_review|qft_gr_renormalized_expectation_domain_link_assumption_obstruction_identified_requires_refinement|qft_gr_renormalized_expectation_domain_link_assumption_inconclusive_requires_assumption_reduction",
       "authorized_state_expectation_domain_link_attempt_result_classification_count": "3",
       "authorized_state_expectation_domain_link_attempt_result_classifications": "qft_gr_state_expectation_domain_link_assumption_reduced_pending_result_review|qft_gr_state_expectation_domain_link_assumption_obstruction_identified_requires_refinement|qft_gr_state_expectation_domain_link_assumption_inconclusive_requires_assumption_reduction",
-      "authorized_target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
+      "authorized_target": "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result",
       "available_structure": "covariant_conservation_statement_with_operator_domain",
       "axiom_spec_backed_debt_reduced": "no",
       "blocked_object": "QFT-GR source-map semantic closure",
@@ -37511,7 +37533,7 @@
       "consumed_source_map_closure_registration_result_review_report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_RESULT_REVIEW_20260523_v0.json",
       "consumed_source_map_closure_registration_result_review_surface": "formal/toe_formal/ToeFormal/Release/V01RetainedTranche004SourceMapClosureRegistrationResultReview.lean",
       "consumed_source_map_closure_registration_result_review_token": "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_RESULT_REVIEW_ACCEPTS_REGISTERED_SOURCE_MAP_CLOSURE_AND_AUTHORIZES_TRANCHE_004_BLOCKER_MOVEMENT_PACKET_PREPARATION_ONLY",
-      "consumed_target": "review_qft_gr_state_domain_object_assumption_reduction_attempt_result",
+      "consumed_target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
       "control_lane_clearance_only": "yes",
       "covariant_conservation_obstruction_result_accepted": "yes",
       "covariant_conservation_statement_attempted": "yes",
@@ -37552,9 +37574,9 @@
       "criticizability_readiness_review_decision": "criticizability_readiness_eligibility_accepted",
       "criticizability_readiness_status": "v01_alpha_criticizability_readiness_eligible_pending_result_review",
       "criticizability_readiness_treated_as_scientific_evidence": "no",
-      "current_live_next_target": "review_qft_gr_state_domain_object_assumption_reduction_attempt_result",
+      "current_live_next_target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
       "current_packet_lane": "release_control_plane",
-      "current_target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
+      "current_target": "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result",
       "dependency_remediation_blocker_queue_exhausted": "yes",
       "dependency_remediation_closeout_accepted": "yes",
       "dependency_remediation_closeout_classification": "dependency_remediation_closeout_prepared_all_tranches_documented_nonblocking_no_release_readiness_or_seam_promotion",
@@ -37635,15 +37657,15 @@
       "latest_attempt_report": "formal/docs/release/QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_20260607_v0.json",
       "latest_attempt_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateDomainObjectAssumptionReductionAttempt.lean",
       "latest_attempt_token": "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
-      "latest_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateDomainObjectAssumptionReductionAttemptResultReview.lean",
-      "latest_report": "formal/docs/release/QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260607_v0.json",
-      "latest_surface": "qft_gr_state_domain_object_assumption_reduction_attempt_result_review_v0",
-      "latest_surface_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateDomainObjectAssumptionReductionAttemptResultReview.lean",
-      "latest_surface_report": "formal/docs/release/QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260607_v0.json",
-      "latest_surface_token": "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_STATE_DOMAIN_OBJECT_AND_AUTHORIZES_NEXT_STATE_DOMAIN_ROW_SELECTION_ONLY",
-      "latest_surface_tool": "formal/python/tools/qft_gr_state_domain_object_assumption_reduction_attempt_result_review_report.py",
-      "latest_token": "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_STATE_DOMAIN_OBJECT_AND_AUTHORIZES_NEXT_STATE_DOMAIN_ROW_SELECTION_ONLY",
-      "latest_tool": "formal/python/tools/qft_gr_state_domain_object_assumption_reduction_attempt_result_review_report.py",
+      "latest_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacket.lean",
+      "latest_report": "formal/docs/release/QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_20260607_v0.json",
+      "latest_surface": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_v0",
+      "latest_surface_evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacket.lean",
+      "latest_surface_report": "formal/docs/release/QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_20260607_v0.json",
+      "latest_surface_token": "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE",
+      "latest_surface_tool": "formal/python/tools/qft_gr_state_admissibility_boundary_assumption_reduction_packet_report.py",
+      "latest_token": "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE",
+      "latest_tool": "formal/python/tools/qft_gr_state_admissibility_boundary_assumption_reduction_packet_report.py",
       "lean_theorem_debt_discharged": "no",
       "master_action_promoted": "no",
       "master_action_promotion_authorized": "no",
@@ -37739,7 +37761,7 @@
       "missing_proof_object": "conservation_proof_object_for_candidate_source_under_prepared_operator_domain",
       "movement_registration_criteria_count": "4",
       "movement_registration_result_review_classification_count": "1",
-      "next_action_scope": "PREPARE_QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_ONLY_NO_STATE_ADMISSIBILITY_DISCHARGE_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE",
+      "next_action_scope": "REVIEW_QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_NO_STATE_ADMISSIBILITY_CLAIM_SOURCE_ADMISSIBILITY_OR_QFT_GR_SEAM_CLOSURE",
       "next_assumption_family": "state_domain_assumptions",
       "next_assumption_family_selection_only": "yes",
       "next_bounded_action": "review_qft_gr_operator_domain_assumption_reduction_closeout_packet_result",
@@ -38848,24 +38870,24 @@
       "research_packet_prepared_only": "yes",
       "research_packet_report": "formal/docs/release/V01_ALPHA_RETAINED_TRANCHE_004_BOUNDED_SOURCE_MAP_WITNESS_CHAIN_RESEARCH_PACKET_20260522_v0.json",
       "research_packet_result_reviewed": "yes",
-      "result_classification": "qft_gr_state_domain_object_assumption_reduction_attempt_result_review_accepts_reduced_state_domain_object_and_authorizes_next_state_domain_row_selection_only",
+      "result_classification": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_prepared_with_no_source_admissibility_or_seam_closure",
       "result_classification_count": "1",
-      "result_report": "formal/docs/release/QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260607_v0.json",
-      "result_review_accepted": "yes",
-      "result_review_classification": "qft_gr_state_domain_object_assumption_reduction_attempt_result_review_accepts_reduced_state_domain_object_and_authorizes_next_state_domain_row_selection_only",
+      "result_report": "formal/docs/release/QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_20260607_v0.json",
+      "result_review_accepted": "no",
+      "result_review_classification": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_result_review_pending",
       "result_review_classification_count": "1",
-      "result_review_completed": "yes",
-      "result_review_id": "QFT_GR_STATE_DOMAIN_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0",
-      "result_review_pending": "no",
-      "result_review_report": "formal/docs/release/QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260607_v0.json",
-      "result_review_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateDomainObjectAssumptionReductionAttemptResultReview.lean",
-      "result_review_target": "review_qft_gr_state_domain_object_assumption_reduction_attempt_result",
+      "result_review_completed": "no",
+      "result_review_id": "",
+      "result_review_pending": "yes",
+      "result_review_report": "",
+      "result_review_surface": "",
+      "result_review_target": "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result",
       "result_review_target_selected": "yes",
-      "result_review_token": "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_STATE_DOMAIN_OBJECT_AND_AUTHORIZES_NEXT_STATE_DOMAIN_ROW_SELECTION_ONLY",
-      "result_review_tool": "formal/python/tools/qft_gr_state_domain_object_assumption_reduction_attempt_result_review_report.py",
-      "result_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateDomainObjectAssumptionReductionAttemptResultReview.lean",
-      "result_token": "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_STATE_DOMAIN_OBJECT_AND_AUTHORIZES_NEXT_STATE_DOMAIN_ROW_SELECTION_ONLY",
-      "result_tool": "formal/python/tools/qft_gr_state_domain_object_assumption_reduction_attempt_result_review_report.py",
+      "result_review_token": "",
+      "result_review_tool": "",
+      "result_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacket.lean",
+      "result_token": "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE",
+      "result_tool": "formal/python/tools/qft_gr_state_admissibility_boundary_assumption_reduction_packet_report.py",
       "retained_assumptions_discharged": "no",
       "retained_blocker": "v01_alpha_retained_tranche_004_blocker_movement_registration_after_source_map_closure_result_review_nonclaim_boundary",
       "retained_tranche_004_release_blocker": "discharged_after_dependency_remediation_closeout_pending_release_readiness_adjudication",
@@ -38903,11 +38925,11 @@
       "selected_bounded_state_domain_assumption_target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
       "selected_dependency": "qft_gr_source_map_eligibility_ladder_summary_source_map_not_authorized_v0",
       "selected_finding": "V01-ALPHA-DEP-REM-004",
-      "selected_next_action_scope": "PREPARE_QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_ONLY_NO_STATE_ADMISSIBILITY_DISCHARGE_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE",
-      "selected_next_authorization_token": "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_STATE_DOMAIN_OBJECT_AND_AUTHORIZES_NEXT_STATE_DOMAIN_ROW_SELECTION_ONLY",
-      "selected_next_target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
+      "selected_next_action_scope": "REVIEW_QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_NO_STATE_ADMISSIBILITY_CLAIM_SOURCE_ADMISSIBILITY_OR_QFT_GR_SEAM_CLOSURE",
+      "selected_next_authorization_token": "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE",
+      "selected_next_target": "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result",
       "selected_next_target_count": "1",
-      "selected_next_target_kind": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_preparation",
+      "selected_next_target_kind": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_result_review",
       "selected_next_target_status": "active_live_next_target",
       "selected_obstruction": "post_operator_domain_statement_missing_conservation_proof_object",
       "selected_operator_action_analysis_accepted_by_review": "yes",
@@ -39102,7 +39124,7 @@
       "source_object": "candidate_renormalized_qft_stress_energy_source",
       "state_admissibility_boundary": "state_admissibility_boundary_for_meaningful_renormalized_expectation_not_source_admissibility",
       "state_admissibility_boundary_assumption_packet_deferred": "yes",
-      "state_admissibility_boundary_assumption_packet_pending": "yes",
+      "state_admissibility_boundary_assumption_packet_pending": "no",
       "state_admissibility_boundary_assumption_packet_preparation_authorized": "yes",
       "state_admissibility_boundary_assumption_packet_target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
       "state_admissibility_claimed_as_source_admissibility": "no",
@@ -39295,11 +39317,11 @@
       "track2_remains_deferred": "pending_state_domain_object_assumption_reduction_attempt_execution",
       "track2_science_lane_execution_started": "yes_operator_domain_closeout_result_review_accepted",
       "track2_scientific_evidence_claimed_from_track1": "no",
-      "track2_selected_after_result_review": "state_domain_object_assumption_reduction_attempt_executed_pending_result_review",
-      "track2_selected_after_this_execution": "state_domain_object_assumption_reduction_attempt_result_review_accepted",
-      "track2_selected_after_this_review": "state_domain_object_assumption_reduction_attempt_result_review_accepted",
-      "track2_selection_kind": "qft_gr_state_domain_object_assumption_reduction_attempt_result_review",
-      "track2_started": "state_domain_object_assumption_reduction_attempt_result_review_accepted",
+      "track2_selected_after_result_review": "state_admissibility_boundary_assumption_reduction_packet_prepared",
+      "track2_selected_after_this_execution": "state_admissibility_boundary_assumption_reduction_packet_prepared",
+      "track2_selected_after_this_review": "state_admissibility_boundary_assumption_reduction_packet_prepared",
+      "track2_selection_kind": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_preparation",
+      "track2_started": "state_admissibility_boundary_assumption_reduction_packet_prepared",
       "tranche_001_status": "documented_dependency_nonblocking",
       "tranche_002_status": "documented_dependency_nonblocking",
       "tranche_003_status": "documented_dependency_nonblocking",
@@ -39332,7 +39354,34 @@
       "witness_constructed": "no",
       "witness_packet_accepted": "yes",
       "witness_packet_result_reviewed": "yes",
-      "workstream_id": "qft_gr_state_domain_object_assumption_reduction_attempt_result_review"
+      "workstream_id": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_preparation",
+      "state_admissibility_boundary_assumption_reduction_packet_prepared": "yes",
+      "state_admissibility_boundary_assumption_reduction_packet_classification": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_prepared_with_no_source_admissibility_or_seam_closure",
+      "state_admissibility_boundary_assumption_reduction_packet_report": "formal/docs/release/QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_20260607_v0.json",
+      "state_admissibility_boundary_assumption_reduction_packet_surface": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacket.lean",
+      "state_admissibility_boundary_assumption_reduction_packet_tool": "formal/python/tools/qft_gr_state_admissibility_boundary_assumption_reduction_packet_report.py",
+      "state_admissibility_boundary_assumption_reduction_packet_token": "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE",
+      "state_admissibility_boundary_assumption_reduction_packet_target": "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet",
+      "state_admissibility_boundary_assumption_reduction_packet_selected_next_target": "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result",
+      "state_admissibility_boundary_assumption_reduction_packet_selected_next_target_kind": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_result_review",
+      "state_admissibility_boundary_assumption_reduction_packet_selected_next_authorization_token": "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE",
+      "state_admissibility_boundary_assumption_reduction_packet_selection_count": "1",
+      "state_admissibility_boundary_assumption_reduction_packet_result_review_target": "review_qft_gr_state_admissibility_boundary_assumption_reduction_packet_result",
+      "state_admissibility_boundary_assumption_reduction_packet_result_review_pending": "yes",
+      "state_admissibility_boundary_assumption_reduction_packet_result_review_accepted": "no",
+      "state_admissibility_boundary_assumption_reduction_packet_result_review_completed": "no",
+      "state_admissibility_boundary_assumption_reduction_packet_result_review_classification": "qft_gr_state_admissibility_boundary_assumption_reduction_packet_result_review_pending",
+      "state_admissibility_boundary_assumption_reduction_packet_result_review_report": "",
+      "state_admissibility_boundary_assumption_reduction_packet_result_review_surface": "",
+      "state_admissibility_boundary_assumption_reduction_packet_result_review_tool": "",
+      "state_admissibility_boundary_assumption_reduction_packet_result_review_token": "",
+      "state_admissibility_boundary_assumption_reduction_analysis_prepared": "yes",
+      "state_admissibility_boundary_required_future_proof_object": "state_admissibility_boundary_for_meaningful_expectation_functional",
+      "state_admissibility_boundary_candidate_reduction_route": "separate state admissibility for expectation-meaningfulness from stress-energy source admissibility and Bianchi compatibility",
+      "state_admissibility_boundary_failure_mode_if_unresolved": "state-domain admissibility remains conflated with downstream source-admissibility and conservation obligations",
+      "state_admissibility_claimed": "no",
+      "state_admissibility_boundary_satisfied": "no",
+      "state_admissibility_boundary_discharged": "no"
     }
   ]
 }
