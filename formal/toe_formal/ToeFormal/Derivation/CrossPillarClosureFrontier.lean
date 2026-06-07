@@ -248,13 +248,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR RN-ASSUMP-004 finiteness/regularity packet result review accepts packet preparation only and authorizes a bounded reduction attempt, with no finiteness discharge, conservation proof object, conservation witness, source admissibility, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
+        "QFT-GR RN-ASSUMP-004 finiteness/regularity reduction attempt executes with classification qft_gr_renormalized_expectation_finiteness_assumption_reduced_pending_result_review, with no finiteness discharge, conservation proof object, conservation witness, source admissibility, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "execute_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt"
+        "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -276,13 +276,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR RN-ASSUMP-004 finiteness/regularity packet result review accepts the packet and authorizes bounded execution only, with no conservation proof, source admissibility, finiteness discharge, proof object construction, conservation witness construction, Bianchi compatibility, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
+        "QFT-GR RN-ASSUMP-004 finiteness/regularity reduction attempt executes pending result review only, with no conservation proof, source admissibility, finiteness discharge, proof object construction, conservation witness construction, Bianchi compatibility, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "execute_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt"
+        "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result"
       status := .retained }
   ]
 
@@ -300,13 +300,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR RN-ASSUMP-004 packet result review. -/
+/-- Previous live target consumed by the QFT-GR RN-ASSUMP-004 attempt. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet_result"
-
-/-- Current live target after the QFT-GR RN-ASSUMP-004 packet result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "execute_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt"
+
+/-- Current live target after the QFT-GR RN-ASSUMP-004 attempt. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -319,7 +319,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "execute_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt"
+        "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

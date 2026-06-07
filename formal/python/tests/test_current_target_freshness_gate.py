@@ -1144,7 +1144,7 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet_result_review"
+    "qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1257,11 +1257,14 @@ RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TA
 RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
     "execute_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt"
 )
+RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_result"
+)
 PREVIOUS_TARGET = (
-    RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
+    RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_TARGET
 )
 LIVE_TARGET = (
-    RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_TARGET
+    RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
 )
 PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
@@ -1272,7 +1275,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_RenormalizedExpectationFinitenessAssumptionReductionPacketResultReview.lean"
+    / "QFT_GR_RenormalizedExpectationFinitenessAssumptionReductionAttempt.lean"
 )
 RN002_ATTEMPT_RESULT_REVIEW_EVIDENCE_PATH = (
     REPO_ROOT
@@ -2102,7 +2105,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet_result_review_v0"
+        == "qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_v0"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2498,7 +2501,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["selected_route"] == (
         "qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_"
-        "after_packet_result_review"
+        "result_review_after_execution"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -2603,8 +2606,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "partial_witness_chain_candidate_accepted_for_construction_packet_preparation_only"
     )
     assert current_active_workstream["result_review_classification"] == (
-        "qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet_"
-        "result_review_accepts_packet_and_authorizes_bounded_reduction_attempt_only"
+        "qft_gr_renormalized_expectation_finiteness_assumption_reduced_pending_result_review"
     )
     assert current_active_workstream["consumed_construction_result_review_classification"] == (
         "witness_chain_construction_accepted_source_map_authorization_adjudication_packet_preparation_only"
@@ -3411,7 +3413,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "yes_operator_domain_closeout_result_review_accepted"
     )
     assert current_active_workstream["track2_started"] == (
-        "renormalized_expectation_finiteness_assumption_reduction_packet_result_review_accepted_attempt_selected"
+        "renormalized_expectation_finiteness_assumption_reduction_attempt_executed_pending_result_review"
     )
     assert current_active_workstream["track2_selected_after_this_execution"] == (
         "no_execution_pending_attempt_result_review_completed"
@@ -3420,8 +3422,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "renormalization_scope_assumption_reduction_packet_selected"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "EXECUTE_QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_"
-        "REDUCTION_ATTEMPT_ONLY_NO_FINITENESS_REGULARITY_DISCHARGE_"
+        "REVIEW_QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_"
+        "REDUCTION_ATTEMPT_RESULT_ONLY_NO_FINITENESS_REGULARITY_DISCHARGE_"
         "CONSERVATION_WITNESS_OR_"
         "QFT_GR_SEAM_CLOSURE"
     )
@@ -3431,14 +3433,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
     assert current_active_workstream["witness_attempt_executed"] == "yes"
     assert current_active_workstream["result_classification"] == (
-        "qft_gr_renormalized_expectation_finiteness_assumption_reduction_packet_"
-        "result_review_accepts_packet_and_authorizes_bounded_reduction_attempt_only"
+        "qft_gr_renormalized_expectation_finiteness_assumption_reduced_pending_result_review"
     )
     assert current_active_workstream["result_classification_count"] == "1"
     assert current_active_workstream["constructed_witness_result"] == "no"
     assert current_active_workstream["obstruction_identified_result"] == "yes"
     assert current_active_workstream["inconclusive_result"] == "no"
-    assert current_active_workstream["attempt_result_reviewed"] == "yes"
+    assert current_active_workstream["attempt_result_reviewed"] == "no"
     assert current_active_workstream["covariant_conservation_obstruction_result_accepted"] == "yes"
     assert current_active_workstream["refinement_packet_preparation_authorized"] == "yes"
     assert current_active_workstream["refinement_packet_prepared"] == "yes"
@@ -5249,10 +5250,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "RN-ASSUMP-004-finiteness_regular_boundary"
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_packet_selected_next_target"
-    ] == PREVIOUS_TARGET
+    ] == RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_packet_result_review_target"
-    ] == PREVIOUS_TARGET
+    ] == RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_packet_status"
     ] == (
@@ -5294,7 +5295,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "yes"
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_packet_result_review_target"
-    ] == PREVIOUS_TARGET
+    ] == RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_packet_result_review_report"
     ] == (
@@ -5325,18 +5326,108 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "RN-ASSUMP-004-finiteness_regular_boundary"
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_packet_result_review_selected_next_target"
-    ] == LIVE_TARGET
+    ] == PREVIOUS_TARGET
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_packet_result_review_bounded_attempt_authorized"
     ] == "yes"
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_attempt_target"
-    ] == LIVE_TARGET
+    ] == PREVIOUS_TARGET
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_attempt_authorized"
     ] == "yes"
     assert current_active_workstream[
         "renormalized_expectation_finiteness_assumption_reduction_attempt_executed"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduction_attempt_report"
+    ] == (
+        "formal/docs/release/"
+        "QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_"
+        "20260606_v0.json"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduction_attempt_surface"
+    ] == (
+        "formal/toe_formal/ToeFormal/Bridges/"
+        "QFT_GR_RenormalizedExpectationFinitenessAssumptionReductionAttempt.lean"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduction_attempt_tool"
+    ] == (
+        "formal/python/tools/"
+        "qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_report.py"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduction_attempt_gate"
+    ] == (
+        "formal/python/tests/"
+        "test_qft_gr_renormalized_expectation_finiteness_assumption_reduction_attempt_gate.py"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduction_attempt_token"
+    ] == (
+        "QFT_GR_RENORMALIZED_EXPECTATION_FINITE_REGULARITY_ASSUMPTION_REDUCTION_"
+        "ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduction_attempt_classification"
+    ] == (
+        "qft_gr_renormalized_expectation_finiteness_assumption_reduced_pending_result_review"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduction_attempt_result_review_target"
+    ] == LIVE_TARGET
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduction_attempt_selected_next_target"
+    ] == LIVE_TARGET
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduction_attempt_contract"
+    ] == "RN-ASSUMP-004-finiteness_regular_boundary_contract_v0"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduction_attempt_contract_status"
+    ] == (
+        "bounded_repo_local_finiteness_regular_boundary_contract_pending_result_"
+        "review_not_finiteness_regular_boundary_discharge"
+    )
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduced_pending_result_review"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_obstruction_identified"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_inconclusive"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduced_by_attempt"
+    ] == "yes"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_discharged_by_attempt"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduced_or_discharged_by_attempt"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_assumption_reduced_or_discharged_by_implication"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_claims_source_admissibility"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_claims_bianchi_compatibility"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_constructs_conservation_proof_object"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_constructs_conservation_witness"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_derives_semiclassical_einstein_equation"
+    ] == "no"
+    assert current_active_workstream[
+        "renormalized_expectation_finiteness_closes_qft_gr_seam"
     ] == "no"
     assert current_active_workstream[
         "renormalized_expectation_domain_assumption_reduced_pending_result_review"
