@@ -32,6 +32,28 @@ MASTER_ACTION_FRONTIER_PATH = (
 POST_SWEEP_QUEUE_PATH = (
     REPO_ROOT / "formal" / "toe_formal" / "ToeFormal" / "Derivation" / "PostSweepTheoremQueue.lean"
 )
+RN_ASSUMP_005_ATTEMPT_LIVE_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_renormalization_operator_domain_compatibility_assumption_"
+    "reduction_attempt_result"
+)
+RN_ASSUMP_005_ATTEMPT_SURFACE = (
+    "formal/toe_formal/ToeFormal/Bridges/"
+    "QFT_GR_RenormalizationOperatorDomainCompatibilityAssumptionReductionAttempt.lean"
+)
+RN_ASSUMP_005_ATTEMPT_REPORT = (
+    "formal/docs/release/"
+    "QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_"
+    "REDUCTION_ATTEMPT_20260606_v0.json"
+)
+RN_ASSUMP_005_ATTEMPT_TOOL = (
+    "formal/python/tools/"
+    "qft_gr_renormalization_operator_domain_compatibility_assumption_"
+    "reduction_attempt_report.py"
+)
+RN_ASSUMP_005_ATTEMPT_TOKEN = (
+    "QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_"
+    "REDUCTION_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+)
 
 EXPECTED_ALLOWED_STATUSES = [
     "active",
@@ -309,6 +331,35 @@ def test_post_sweep_queue_cap_and_nonpromotion_boundary_remain_pinned() -> None:
         assert "NO_PHASE2_AUTHORIZATION_NO_MASTER_ACTION_PROMOTION_NO_SEAM_CLOSURE_NO_EMPIRICAL_CLAIM" in text
     assert "no theorem discharge" in readme_text
     assert "Phase 2 is not authorized" in readme_text
+
+
+def test_active_result_review_target_is_pending_and_latest_surface_matches_execution_layer() -> None:
+    payload = _registry()
+    live_target = payload["current_target_state"]["live_next_target"]
+    active = [item for item in payload["workstreams"] if item["status"] == "active"]
+    assert len(active) == 1
+    workstream = active[0]
+
+    if "_result" in live_target and workstream.get("result_review_target") == live_target:
+        assert workstream.get("result_review_accepted") != "yes"
+        assert workstream.get("result_review_completed") != "yes"
+        assert workstream.get("result_review_pending") == "yes"
+
+    if live_target == RN_ASSUMP_005_ATTEMPT_LIVE_RESULT_REVIEW_TARGET:
+        assert workstream["latest_surface"] == (
+            "qft_gr_renormalization_operator_domain_compatibility_assumption_"
+            "reduction_attempt_v0"
+        )
+        assert workstream["latest_surface_evidence"] == RN_ASSUMP_005_ATTEMPT_SURFACE
+        assert workstream["latest_surface_report"] == RN_ASSUMP_005_ATTEMPT_REPORT
+        assert workstream["latest_surface_token"] == RN_ASSUMP_005_ATTEMPT_TOKEN
+        assert workstream["latest_surface_tool"] == RN_ASSUMP_005_ATTEMPT_TOOL
+        assert workstream["result_surface"] == RN_ASSUMP_005_ATTEMPT_SURFACE
+        assert workstream["result_report"] == RN_ASSUMP_005_ATTEMPT_REPORT
+        assert workstream["result_token"] == RN_ASSUMP_005_ATTEMPT_TOKEN
+        assert workstream["selected_next_target"] == live_target
+        assert workstream["selected_next_target_kind"] == "result_review"
+        assert workstream["selected_next_authorization_token"] == RN_ASSUMP_005_ATTEMPT_TOKEN
 
 
 def test_loop_control_gate_is_focused_not_governance_manifest_enrolled() -> None:

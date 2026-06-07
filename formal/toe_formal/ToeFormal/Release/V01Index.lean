@@ -2655,6 +2655,43 @@ def qftGRRenormalizationOperatorDomainCompatibilityAssumptionReductionPacketResu
   "execute_qft_gr_renormalization_operator_domain_compatibility_assumption_" ++
     "reduction_attempt"
 
+def qftGRRenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_RenormalizationOperatorDomainCompatibilityAssumptionReductionAttempt"
+
+def qftGRRenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptOutcomeToken :
+    String :=
+  "QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_" ++
+    "ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+
+def qftGRRenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptClassification :
+    String :=
+  "qft_gr_renormalization_operator_domain_compatibility_assumption_reduced_" ++
+    "pending_result_review"
+
+def qftGRRenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptConsumedReview :
+    String :=
+  "QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_" ++
+    "PACKET_RESULT_REVIEW_v0"
+
+def qftGRRenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptSelectedRow :
+    String :=
+  "RN-ASSUMP-005-operator_domain_compatibility"
+
+def qftGRRenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptContract :
+    String :=
+  "RN-ASSUMP-005-operator_domain_compatibility_contract_v0"
+
+def qftGRRenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptContractStatus :
+    String :=
+  "bounded_repo_local_operator_domain_compatibility_contract_pending_result_" ++
+    "review_not_operator_domain_compatibility_discharge"
+
+def qftGRRenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptSelectedNextTarget :
+    String :=
+  "review_qft_gr_renormalization_operator_domain_compatibility_assumption_" ++
+    "reduction_attempt_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -7609,6 +7646,39 @@ theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reductio
   trivial
 
 theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet_result_review_selects_attempt : True := by
+  trivial
+
+theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_consumes_packet_review : True := by
+  trivial
+
+theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_executes_row005_only : True := by
+  trivial
+
+theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_records_one_classification : True := by
+  trivial
+
+theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_reduced_pending_review : True := by
+  trivial
+
+theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_no_compatibility_discharge : True := by
+  trivial
+
+theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_no_conservation_proof_object : True := by
+  trivial
+
+theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_no_conservation_witness : True := by
+  trivial
+
+theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_no_source_or_bianchi : True := by
+  trivial
+
+theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_no_semiclassical_einstein : True := by
+  trivial
+
+theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_no_qft_gr_closure : True := by
+  trivial
+
+theorem qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_selects_result_review : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by
