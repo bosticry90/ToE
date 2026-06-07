@@ -2845,6 +2845,28 @@ def qftGRStateDomainObjectAssumptionReductionPacketSelectedNextTarget :
     String :=
   "review_qft_gr_state_domain_object_assumption_reduction_packet_result"
 
+def qftGRStateDomainObjectAssumptionReductionPacketResultReviewLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_StateDomainObjectAssumptionReductionPacketResultReview"
+
+def qftGRStateDomainObjectAssumptionReductionPacketResultReviewOutcomeToken :
+    String :=
+  "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_ACCEPTS_" ++
+    "PACKET_AND_AUTHORIZES_BOUNDED_REDUCTION_ATTEMPT_ONLY"
+
+def qftGRStateDomainObjectAssumptionReductionPacketResultReviewClassification :
+    String :=
+  "qft_gr_state_domain_object_assumption_reduction_packet_result_review_accepts_" ++
+    "packet_and_authorizes_bounded_reduction_attempt_only"
+
+def qftGRStateDomainObjectAssumptionReductionPacketResultReviewSelectedRow :
+    String :=
+  "SD-ASSUMP-001-state_domain_object"
+
+def qftGRStateDomainObjectAssumptionReductionPacketResultReviewSelectedNextTarget :
+    String :=
+  "execute_qft_gr_state_domain_object_assumption_reduction_attempt"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
