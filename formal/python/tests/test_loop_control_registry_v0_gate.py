@@ -314,6 +314,32 @@ STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_CLASSIFICATION = (
 STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_PENDING_CLASSIFICATION = (
     "qft_gr_state_admissibility_boundary_assumption_reduction_packet_result_review_pending"
 )
+STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_SURFACE = (
+    "formal/toe_formal/ToeFormal/Bridges/"
+    "QFT_GR_StateAdmissibilityBoundaryAssumptionReductionPacketResultReview.lean"
+)
+STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_"
+    "RESULT_REVIEW_20260607_v0.json"
+)
+STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TOOL = (
+    "formal/python/tools/"
+    "qft_gr_state_admissibility_boundary_assumption_reduction_packet_"
+    "result_review_report.py"
+)
+STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TOKEN = (
+    "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_"
+    "RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_REDUCTION_"
+    "ATTEMPT_ONLY"
+)
+STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_CLASSIFICATION = (
+    "qft_gr_state_admissibility_boundary_assumption_reduction_packet_"
+    "result_review_accepts_packet_and_authorizes_bounded_reduction_attempt_only"
+)
+STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
+    "execute_qft_gr_state_admissibility_boundary_assumption_reduction_attempt"
+)
 
 EXPECTED_ALLOWED_STATUSES = [
     "active",
@@ -1332,6 +1358,99 @@ def test_active_result_review_target_is_pending_and_latest_surface_matches_execu
         assert workstream["state_admissibility_claimed"] == "no"
         assert workstream["state_admissibility_discharged"] == "no"
         assert workstream["state_domain_assumptions_discharged"] == "no"
+        assert workstream["source_admissibility_claimed"] == "no"
+        assert workstream["Bianchi_compatibility_claimed"] == "no"
+        assert workstream["conservation_proof_object_constructed"] == "no"
+        assert workstream["conservation_witness_constructed"] == "no"
+        assert workstream["qft_gr_seam_closed"] == "no"
+
+    if live_target == STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET:
+        assert workstream["consumed_target"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
+        )
+        assert workstream["latest_surface"] == (
+            "qft_gr_state_admissibility_boundary_assumption_reduction_packet_result_review_v0"
+        )
+        assert workstream["latest_surface_evidence"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_SURFACE
+        )
+        assert workstream["latest_surface_report"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_REPORT
+        )
+        assert workstream["latest_surface_token"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["latest_surface_tool"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TOOL
+        )
+        assert workstream["result_classification"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_CLASSIFICATION
+        )
+        assert workstream["result_review_accepted"] == "yes"
+        assert workstream["result_review_completed"] == "yes"
+        assert workstream["result_review_pending"] == "no"
+        assert workstream["result_review_target"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
+        )
+        assert workstream["result_review_surface"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_SURFACE
+        )
+        assert workstream["result_review_report"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_REPORT
+        )
+        assert workstream["result_review_token"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["result_review_tool"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TOOL
+        )
+        assert workstream["result_review_classification"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_CLASSIFICATION
+        )
+        assert workstream["result_surface"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_SURFACE
+        )
+        assert workstream["result_report"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_REPORT
+        )
+        assert workstream["result_token"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["selected_next_target"] == live_target
+        assert workstream["selected_next_target_kind"] == (
+            "qft_gr_state_admissibility_boundary_assumption_reduction_attempt_execution"
+        )
+        assert workstream["selected_next_authorization_token"] == (
+            STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TOKEN
+        )
+        assert workstream[
+            "state_admissibility_boundary_assumption_reduction_packet_selected_next_target"
+        ] == STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
+        assert workstream[
+            "state_admissibility_boundary_assumption_reduction_packet_result_review_selected_next_target"
+        ] == live_target
+        assert workstream[
+            "state_admissibility_boundary_assumption_reduction_packet_selected_next_target"
+        ] != workstream[
+            "state_admissibility_boundary_assumption_reduction_packet_result_review_selected_next_target"
+        ]
+        assert workstream[
+            "state_admissibility_boundary_assumption_reduction_packet_result_review_accepted"
+        ] == "yes"
+        assert workstream[
+            "state_admissibility_boundary_assumption_reduction_packet_result_review_completed"
+        ] == "yes"
+        assert workstream[
+            "state_admissibility_boundary_assumption_reduction_packet_result_review_pending"
+        ] == "no"
+        assert workstream[
+            "state_admissibility_boundary_assumption_reduction_attempt_authorized"
+        ] == "yes"
+        assert workstream[
+            "state_admissibility_boundary_assumption_reduction_attempt_executed"
+        ] == "no"
+        assert workstream["state_admissibility_claimed"] == "no"
+        assert workstream["state_admissibility_discharged"] == "no"
         assert workstream["source_admissibility_claimed"] == "no"
         assert workstream["Bianchi_compatibility_claimed"] == "no"
         assert workstream["conservation_proof_object_constructed"] == "no"
