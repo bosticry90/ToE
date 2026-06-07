@@ -54,6 +54,38 @@ RN_ASSUMP_005_ATTEMPT_TOKEN = (
     "QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_"
     "REDUCTION_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
 )
+RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_renormalization_operator_domain_compatibility_assumption_"
+    "reduction_attempt_result"
+)
+RN_ASSUMP_005_CLOSEOUT_PREPARATION_TARGET = (
+    "prepare_qft_gr_renormalization_assumption_reduction_closeout_packet"
+)
+RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_SURFACE = (
+    "formal/toe_formal/ToeFormal/Bridges/"
+    "QFT_GR_RenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptResultReview.lean"
+)
+RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_"
+    "REDUCTION_ATTEMPT_RESULT_REVIEW_20260606_v0.json"
+)
+RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_TOOL = (
+    "formal/python/tools/"
+    "qft_gr_renormalization_operator_domain_compatibility_assumption_"
+    "reduction_attempt_result_review_report.py"
+)
+RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_TOKEN = (
+    "QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_"
+    "REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_OPERATOR_DOMAIN_"
+    "COMPATIBILITY_AND_AUTHORIZES_RENORMALIZATION_ASSUMPTION_REDUCTION_"
+    "CLOSEOUT_PREPARATION_ONLY"
+)
+RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_CLASSIFICATION = (
+    "qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_"
+    "attempt_result_review_accepts_reduced_operator_domain_compatibility_and_"
+    "authorizes_renormalization_assumption_reduction_closeout_preparation_only"
+)
 
 EXPECTED_ALLOWED_STATUSES = [
     "active",
@@ -360,6 +392,46 @@ def test_active_result_review_target_is_pending_and_latest_surface_matches_execu
         assert workstream["selected_next_target"] == live_target
         assert workstream["selected_next_target_kind"] == "result_review"
         assert workstream["selected_next_authorization_token"] == RN_ASSUMP_005_ATTEMPT_TOKEN
+
+    if live_target == RN_ASSUMP_005_CLOSEOUT_PREPARATION_TARGET:
+        assert workstream["consumed_target"] == RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_TARGET
+        assert workstream["latest_surface"] == (
+            "qft_gr_renormalization_operator_domain_compatibility_assumption_"
+            "reduction_attempt_result_review_v0"
+        )
+        assert workstream["latest_surface_evidence"] == (
+            RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_SURFACE
+        )
+        assert workstream["latest_surface_report"] == (
+            RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_REPORT
+        )
+        assert workstream["latest_surface_token"] == (
+            RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["latest_surface_tool"] == RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_TOOL
+        assert workstream["result_review_accepted"] == "yes"
+        assert workstream["result_review_completed"] == "yes"
+        assert workstream["result_review_pending"] == "no"
+        assert workstream["result_review_target"] == RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_TARGET
+        assert workstream["result_review_surface"] == (
+            RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_SURFACE
+        )
+        assert workstream["result_review_report"] == (
+            RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_REPORT
+        )
+        assert workstream["result_review_token"] == (
+            RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["result_review_classification"] == (
+            RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_CLASSIFICATION
+        )
+        assert workstream["selected_next_target"] == live_target
+        assert workstream["selected_next_target_kind"] == (
+            "qft_gr_renormalization_assumption_reduction_closeout_packet_preparation"
+        )
+        assert workstream["selected_next_authorization_token"] == (
+            RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_TOKEN
+        )
 
 
 def test_loop_control_gate_is_focused_not_governance_manifest_enrolled() -> None:

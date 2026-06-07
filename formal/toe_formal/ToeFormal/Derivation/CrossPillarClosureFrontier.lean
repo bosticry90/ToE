@@ -63,6 +63,9 @@ Historical QFT-GR frontier checkpoints retained for substring gates:
 - prepare_qft_gr_operator_domain_assumption_reduction_closeout_packet
 - review_qft_gr_operator_domain_assumption_reduction_closeout_packet_result
 - prepare_qft_gr_renormalization_assumption_reduction_packet
+- review_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_result
+- QFT_GR_RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_OPERATOR_DOMAIN_COMPATIBILITY_AND_AUTHORIZES_RENORMALIZATION_ASSUMPTION_REDUCTION_CLOSEOUT_PREPARATION_ONLY
+- prepare_qft_gr_renormalization_assumption_reduction_closeout_packet
 - QFT-GR state expectation-functional result review completed
 - renormalized-expectation domain-link packet result review accepted
 - renormalized-expectation domain-link assumption reduction attempt executed
@@ -248,13 +251,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR RN-ASSUMP-005 operator-domain compatibility attempt executes with reduced-pending-result-review classification only, with no operator-domain compatibility discharge, conservation proof object, conservation witness, source admissibility, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
+        "QFT-GR RN-ASSUMP-005 operator-domain compatibility attempt result review accepts the bounded reduction contract only, confirms the renormalization row inventory is exhausted after RN-ASSUMP-005, and authorizes renormalization assumption-reduction closeout packet preparation, with no operator-domain compatibility discharge, conservation proof object, conservation witness, source admissibility, Bianchi compatibility, empirical validation, or QFT-GR seam closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_result"
+        "prepare_qft_gr_renormalization_assumption_reduction_closeout_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -276,13 +279,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR RN-ASSUMP-005 operator-domain compatibility attempt executes the bounded reduction pending result review only, with no conservation proof, source admissibility, operator-domain compatibility discharge, proof object construction, conservation witness construction, Bianchi compatibility, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
+        "QFT-GR RN-ASSUMP-005 operator-domain compatibility attempt result review accepts the bounded reduction contract and selects renormalization assumption-reduction closeout packet preparation only, with no conservation proof, source admissibility, operator-domain compatibility discharge, proof object construction, conservation witness construction, Bianchi compatibility, release readiness marking, QFT-GR seam closure, release assembly, public submission, scientific validation, or release promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_result"
+        "prepare_qft_gr_renormalization_assumption_reduction_closeout_packet"
       status := .retained }
   ]
 
@@ -300,13 +303,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR RN-ASSUMP-005 bounded attempt. -/
+/-- Previous live target consumed by the QFT-GR RN-ASSUMP-005 result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "execute_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt"
-
-/-- Current live target after the QFT-GR RN-ASSUMP-005 bounded attempt. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_result"
+
+/-- Current live target after the QFT-GR RN-ASSUMP-005 result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_renormalization_assumption_reduction_closeout_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -319,7 +322,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-        "review_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_attempt_result"
+        "prepare_qft_gr_renormalization_assumption_reduction_closeout_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
