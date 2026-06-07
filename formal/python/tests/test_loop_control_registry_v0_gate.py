@@ -64,6 +64,9 @@ RN_ASSUMP_005_CLOSEOUT_PREPARATION_TARGET = (
 RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_TARGET = (
     "review_qft_gr_renormalization_assumption_reduction_closeout_packet_result"
 )
+STATE_DOMAIN_ASSUMPTION_REDUCTION_PACKET_TARGET = (
+    "prepare_qft_gr_state_domain_assumption_reduction_packet"
+)
 RN_ASSUMP_005_ATTEMPT_RESULT_REVIEW_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
     "QFT_GR_RenormalizationOperatorDomainCompatibilityAssumptionReductionAttemptResultReview.lean"
@@ -108,6 +111,29 @@ RN_ASSUMP_005_CLOSEOUT_PACKET_TOKEN = (
 RN_ASSUMP_005_CLOSEOUT_PACKET_CLASSIFICATION = (
     "qft_gr_renormalization_assumption_reduction_closeout_packet_prepared_"
     "with_no_conservation_witness_or_seam_closure"
+)
+RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_SURFACE = (
+    "formal/toe_formal/ToeFormal/Bridges/"
+    "QFT_GR_RenormalizationAssumptionReductionCloseoutPacketResultReview.lean"
+)
+RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "QFT_GR_RENORMALIZATION_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_"
+    "20260606_v0.json"
+)
+RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_TOOL = (
+    "formal/python/tools/"
+    "qft_gr_renormalization_assumption_reduction_closeout_packet_result_review_report.py"
+)
+RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_TOKEN = (
+    "QFT_GR_RENORMALIZATION_ASSUMPTION_REDUCTION_CLOSEOUT_RESULT_REVIEW_"
+    "ACCEPTS_RENORMALIZATION_ROWS_AND_AUTHORIZES_NEXT_ASSUMPTION_FAMILY_"
+    "SELECTION_ONLY"
+)
+RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_CLASSIFICATION = (
+    "qft_gr_renormalization_assumption_reduction_closeout_result_review_"
+    "accepts_renormalization_rows_and_authorizes_next_assumption_family_"
+    "selection_only"
 )
 
 EXPECTED_ALLOWED_STATUSES = [
@@ -482,6 +508,62 @@ def test_active_result_review_target_is_pending_and_latest_surface_matches_execu
         assert workstream["selected_next_authorization_token"] == (
             RN_ASSUMP_005_CLOSEOUT_PACKET_TOKEN
         )
+
+    if live_target == STATE_DOMAIN_ASSUMPTION_REDUCTION_PACKET_TARGET:
+        assert workstream["consumed_target"] == RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_TARGET
+        assert workstream["latest_surface"] == (
+            "qft_gr_renormalization_assumption_reduction_closeout_packet_"
+            "result_review_v0"
+        )
+        assert workstream["latest_surface_evidence"] == (
+            RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_SURFACE
+        )
+        assert workstream["latest_surface_report"] == (
+            RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_REPORT
+        )
+        assert workstream["latest_surface_token"] == (
+            RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["latest_surface_tool"] == (
+            RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_TOOL
+        )
+        assert workstream["result_review_accepted"] == "yes"
+        assert workstream["result_review_completed"] == "yes"
+        assert workstream["result_review_pending"] == "no"
+        assert workstream["result_review_target"] == (
+            RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_TARGET
+        )
+        assert workstream["result_review_surface"] == (
+            RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_SURFACE
+        )
+        assert workstream["result_review_report"] == (
+            RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_REPORT
+        )
+        assert workstream["result_review_token"] == (
+            RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["result_review_classification"] == (
+            RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_CLASSIFICATION
+        )
+        assert workstream[
+            "renormalization_assumption_reduction_closeout_packet_selected_next_target"
+        ] == RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_TARGET
+        assert workstream[
+            "renormalization_assumption_reduction_closeout_packet_result_review_selected_next_target"
+        ] == live_target
+        assert workstream[
+            "renormalization_assumption_reduction_closeout_packet_selected_next_target"
+        ] != workstream[
+            "renormalization_assumption_reduction_closeout_packet_result_review_selected_next_target"
+        ]
+        assert workstream["selected_next_target"] == live_target
+        assert workstream["selected_next_target_kind"] == (
+            "qft_gr_state_domain_assumption_reduction_packet_preparation"
+        )
+        assert workstream["selected_next_authorization_token"] == (
+            RN_ASSUMP_005_CLOSEOUT_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["state_domain_assumption_reduction_packet_authorized"] == "yes"
 
 
 def test_loop_control_gate_is_focused_not_governance_manifest_enrolled() -> None:

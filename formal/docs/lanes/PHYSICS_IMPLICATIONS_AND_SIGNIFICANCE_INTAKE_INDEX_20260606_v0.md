@@ -20,7 +20,7 @@ Purpose:
 
 Live-target control:
 - `live_target_mutation_allowed = false`
-- `CURRENT_LIVE_NEXT_TARGET_v0: review_qft_gr_renormalization_assumption_reduction_closeout_packet_result`
+- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_state_domain_assumption_reduction_packet`
 - `CURRENT_LIVE_NEXT_TARGET_UNCHANGED_ASSERTION_v0: CURRENT_LIVE_NEXT_TARGET_v0 remains unchanged by this supplemental intake packet.`
 
 Ceiling statements:
