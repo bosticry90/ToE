@@ -1143,7 +1143,7 @@ AUDIT_REFRESH_TARGET = "prepare_axiom_ledger_audit_refresh"
 AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
-ACTIVE_LANE = "qft_gr_state_domain_object_assumption_reduction_attempt"
+ACTIVE_LANE = "qft_gr_state_domain_object_assumption_reduction_attempt_result_review"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1294,11 +1294,14 @@ STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET = (
     "review_qft_gr_state_domain_object_assumption_reduction_attempt_result"
 )
+STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_TARGET = (
+    "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet"
+)
 PREVIOUS_TARGET = (
-    STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TARGET
+    STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
 )
 LIVE_TARGET = (
-    STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+    STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_TARGET
 )
 PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result"
@@ -1309,7 +1312,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_StateDomainObjectAssumptionReductionAttempt.lean"
+    / "QFT_GR_StateDomainObjectAssumptionReductionAttemptResultReview.lean"
 )
 RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -1507,6 +1510,35 @@ STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_CONTRACT = (
 STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_CONTRACT_STATUS = (
     "bounded_repo_local_state_domain_object_contract_pending_result_review_not_"
     "state_admissibility_source_admissibility_or_conservation_discharge"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE = (
+    "formal/toe_formal/ToeFormal/Bridges/"
+    "QFT_GR_StateDomainObjectAssumptionReductionAttemptResultReview.lean"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_"
+    "20260607_v0.json"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL = (
+    "formal/python/tools/"
+    "qft_gr_state_domain_object_assumption_reduction_attempt_result_review_report.py"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN = (
+    "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_"
+    "ACCEPTS_REDUCED_STATE_DOMAIN_OBJECT_AND_AUTHORIZES_NEXT_STATE_DOMAIN_ROW_"
+    "SELECTION_ONLY"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION = (
+    "qft_gr_state_domain_object_assumption_reduction_attempt_result_review_"
+    "accepts_reduced_state_domain_object_and_authorizes_next_state_domain_row_"
+    "selection_only"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTED_ROW = (
+    "SD-ASSUMP-001-state_domain_object"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_NEXT_ROW = (
+    "SD-ASSUMP-002-state_admissibility_boundary"
 )
 RN002_ATTEMPT_RESULT_REVIEW_EVIDENCE_PATH = (
     REPO_ROOT
@@ -2336,19 +2368,19 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_state_domain_object_assumption_reduction_attempt_v0"
+        == "qft_gr_state_domain_object_assumption_reduction_attempt_result_review_v0"
     )
     assert current_active_workstream["latest_surface_evidence"] == (
-        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE
     )
     assert current_active_workstream["latest_surface_report"] == (
-        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_REPORT
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT
     )
     assert current_active_workstream["latest_surface_token"] == (
-        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TOKEN
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
     )
     assert current_active_workstream["latest_surface_tool"] == (
-        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TOOL
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2362,19 +2394,19 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_20260523_v0.json"
     )
     assert current_active_workstream["result_review_surface"] == (
-        ""
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE
     )
     assert current_active_workstream["result_review_report"] == (
-        ""
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT
     )
     assert current_active_workstream["result_surface"] == (
-        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE
     )
     assert current_active_workstream["result_report"] == (
-        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_REPORT
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT
     )
     assert current_active_workstream["result_token"] == (
-        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TOKEN
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
     )
     assert current_active_workstream["construction_execution_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
@@ -2748,7 +2780,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "qft_gr_state_domain_object_assumption_reduction_attempt_result_review_after_execution"
+        "qft_gr_state_admissibility_boundary_assumption_reduction_packet_"
+        "preparation_after_sd_assump_001_result_review"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -2853,7 +2886,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "partial_witness_chain_candidate_accepted_for_construction_packet_preparation_only"
     )
     assert current_active_workstream["result_review_classification"] == (
-        "qft_gr_state_domain_object_assumption_reduction_attempt_result_review_pending"
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION
     )
     assert current_active_workstream["consumed_construction_result_review_classification"] == (
         "witness_chain_construction_accepted_source_map_authorization_adjudication_packet_preparation_only"
@@ -3660,16 +3693,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "yes_operator_domain_closeout_result_review_accepted"
     )
     assert current_active_workstream["track2_started"] == (
-        "state_domain_object_assumption_reduction_attempt_executed_pending_result_review"
+        "state_domain_object_assumption_reduction_attempt_result_review_accepted"
     )
     assert current_active_workstream["track2_selected_after_this_execution"] == (
-        "state_domain_object_assumption_reduction_attempt_executed_pending_result_review"
+        "state_domain_object_assumption_reduction_attempt_result_review_accepted"
     )
     assert current_active_workstream["track2_selected_after_this_review"] == (
-        "state_domain_object_assumption_reduction_attempt_executed_pending_result_review"
+        "state_domain_object_assumption_reduction_attempt_result_review_accepted"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "REVIEW_QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_"
+        "PREPARE_QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_"
         "ONLY_NO_STATE_ADMISSIBILITY_DISCHARGE_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
@@ -3677,33 +3710,33 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["documented_dependency_nonblocking_tranche_count"] == "6"
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
     assert current_active_workstream["selected_next_target_kind"] == (
-        "result_review"
+        "qft_gr_state_admissibility_boundary_assumption_reduction_packet_preparation"
     )
     assert current_active_workstream["selected_next_action_scope"] == (
-        "REVIEW_QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_"
+        "PREPARE_QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_"
         "ONLY_NO_STATE_ADMISSIBILITY_DISCHARGE_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["selected_next_authorization_token"] == (
-        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TOKEN
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
     )
-    assert current_active_workstream["result_review_accepted"] == "no"
-    assert current_active_workstream["result_review_completed"] == "no"
-    assert current_active_workstream["result_review_pending"] == "yes"
+    assert current_active_workstream["result_review_accepted"] == "yes"
+    assert current_active_workstream["result_review_completed"] == "yes"
+    assert current_active_workstream["result_review_pending"] == "no"
     assert current_active_workstream["result_review_target"] == (
         STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
     )
     assert current_active_workstream["witness_attempt_executed"] == "yes"
     assert current_active_workstream["result_classification"] == (
-        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_CLASSIFICATION
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION
     )
     assert current_active_workstream["result_review_classification"] == (
-        "qft_gr_state_domain_object_assumption_reduction_attempt_result_review_pending"
+        STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION
     )
     assert current_active_workstream["result_classification_count"] == "1"
     assert current_active_workstream["constructed_witness_result"] == "no"
     assert current_active_workstream["obstruction_identified_result"] == "no"
     assert current_active_workstream["inconclusive_result"] == "no"
-    assert current_active_workstream["attempt_result_reviewed"] == "no"
+    assert current_active_workstream["attempt_result_reviewed"] == "yes"
     assert current_active_workstream["covariant_conservation_obstruction_result_accepted"] == "yes"
     assert current_active_workstream["refinement_packet_preparation_authorized"] == "yes"
     assert current_active_workstream["refinement_packet_prepared"] == "yes"
@@ -3884,9 +3917,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["packet_preparation_only_confirmed_by_review"] == "yes"
     assert current_active_workstream["assumptions_discharged_by_review"] == "no"
-    assert current_active_workstream["result_review_accepted"] == "no"
-    assert current_active_workstream["result_review_completed"] == "no"
-    assert current_active_workstream["result_review_pending"] == "yes"
+    assert current_active_workstream["result_review_accepted"] == "yes"
+    assert current_active_workstream["result_review_completed"] == "yes"
+    assert current_active_workstream["result_review_pending"] == "no"
     assert current_active_workstream["qft_gr_selected_operator_action_assumption_reduction_packet_classification"] == (
         "qft_gr_selected_operator_action_assumption_reduction_packet_prepared_no_"
         "assumption_discharge_or_seam_closure"
@@ -5992,14 +6025,14 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "state_domain_assumption_reduction_packet_result_review_selected_next_target"
     ]
     assert current_active_workstream["selected_bounded_state_domain_assumption_row"] == (
-        "SD-ASSUMP-001-state_domain_object"
+        "SD-ASSUMP-002-state_admissibility_boundary"
     )
     assert current_active_workstream[
         "selected_bounded_state_domain_assumption_row_status"
     ] == "candidate_reducible|pending_row_packet"
     assert current_active_workstream[
         "selected_bounded_state_domain_assumption_target"
-    ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_TARGET
+    ] == STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_TARGET
     assert current_active_workstream["state_domain_object_assumption_row"] == (
         "SD-ASSUMP-001-state_domain_object"
     )
@@ -6101,13 +6134,37 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
     assert current_active_workstream[
         "state_domain_object_assumption_reduction_attempt_result_review_pending"
-    ] == "yes"
+    ] == "no"
     assert current_active_workstream[
         "state_domain_object_assumption_reduction_attempt_result_review_accepted"
-    ] == "no"
+    ] == "yes"
     assert current_active_workstream[
         "state_domain_object_assumption_reduction_attempt_result_review_completed"
-    ] == "no"
+    ] == "yes"
+    assert current_active_workstream[
+        "state_domain_object_assumption_reduction_attempt_result_review_classification"
+    ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION
+    assert current_active_workstream[
+        "state_domain_object_assumption_reduction_attempt_result_review_report"
+    ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT
+    assert current_active_workstream[
+        "state_domain_object_assumption_reduction_attempt_result_review_surface"
+    ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE
+    assert current_active_workstream[
+        "state_domain_object_assumption_reduction_attempt_result_review_tool"
+    ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL
+    assert current_active_workstream[
+        "state_domain_object_assumption_reduction_attempt_result_review_token"
+    ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
+    assert current_active_workstream[
+        "state_domain_object_assumption_reduction_attempt_result_review_selected_next_target"
+    ] == LIVE_TARGET
+    assert current_active_workstream[
+        "state_domain_object_assumption_reduction_attempt_result_review_accepted_row"
+    ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTED_ROW
+    assert current_active_workstream[
+        "state_domain_object_assumption_reduction_attempt_result_review_next_row"
+    ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_NEXT_ROW
     assert current_active_workstream[
         "state_domain_object_assumption_reduced_pending_result_review"
     ] == "yes"
@@ -6117,12 +6174,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream[
         "state_domain_object_assumption_inconclusive"
     ] == "no"
-    assert current_active_workstream["selected_state_domain_assumption_row"] == (
+    assert current_active_workstream["accepted_state_domain_assumption_row"] == (
         "SD-ASSUMP-001-state_domain_object"
+    )
+    assert current_active_workstream["selected_state_domain_assumption_row"] == (
+        "SD-ASSUMP-002-state_admissibility_boundary"
     )
     assert current_active_workstream[
         "selected_state_domain_assumption_row_status"
-    ] == "required|supplied|candidate_reducible"
+    ] == "required|missing|candidate_reducible"
     assert current_active_workstream["state_domain_object_definition_status"] == (
         "candidate_state_domain_object_selected_for_reduction_analysis_not_final_"
         "state_admissibility_or_conservation_discharge"
@@ -6146,7 +6206,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "state_domain_object_assumption_reduction_attempt_executed"
     ] == "yes"
     assert current_active_workstream["bounded_reduction_attempt_authorized"] == "yes"
-    assert current_active_workstream["bounded_reduction_attempt_executed"] == "no"
+    assert current_active_workstream["bounded_reduction_attempt_executed"] == "yes"
+    assert current_active_workstream[
+        "state_admissibility_boundary_assumption_packet_preparation_authorized"
+    ] == "yes"
+    assert current_active_workstream[
+        "state_admissibility_boundary_assumption_packet_target"
+    ] == LIVE_TARGET
+    assert current_active_workstream[
+        "state_admissibility_boundary_assumption_packet_pending"
+    ] == "yes"
     assert current_active_workstream[
         "state_domain_assumption_reduction_analysis_prepared"
     ] == "yes"

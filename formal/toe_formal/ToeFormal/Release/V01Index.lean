@@ -2888,6 +2888,34 @@ def qftGRStateDomainObjectAssumptionReductionAttemptSelectedNextTarget :
     String :=
   "review_qft_gr_state_domain_object_assumption_reduction_attempt_result"
 
+def qftGRStateDomainObjectAssumptionReductionAttemptResultReviewLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_StateDomainObjectAssumptionReductionAttemptResultReview"
+
+def qftGRStateDomainObjectAssumptionReductionAttemptResultReviewOutcomeToken :
+    String :=
+  "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_" ++
+    "ACCEPTS_REDUCED_STATE_DOMAIN_OBJECT_AND_AUTHORIZES_NEXT_STATE_DOMAIN_ROW_" ++
+    "SELECTION_ONLY"
+
+def qftGRStateDomainObjectAssumptionReductionAttemptResultReviewClassification :
+    String :=
+  "qft_gr_state_domain_object_assumption_reduction_attempt_result_review_" ++
+    "accepts_reduced_state_domain_object_and_authorizes_next_state_domain_row_" ++
+    "selection_only"
+
+def qftGRStateDomainObjectAssumptionReductionAttemptResultReviewAcceptedRow :
+    String :=
+  "SD-ASSUMP-001-state_domain_object"
+
+def qftGRStateDomainObjectAssumptionReductionAttemptResultReviewNextRow :
+    String :=
+  "SD-ASSUMP-002-state_admissibility_boundary"
+
+def qftGRStateDomainObjectAssumptionReductionAttemptResultReviewSelectedNextTarget :
+    String :=
+  "prepare_qft_gr_state_admissibility_boundary_assumption_reduction_packet"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
