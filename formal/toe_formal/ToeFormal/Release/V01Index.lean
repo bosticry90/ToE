@@ -2780,6 +2780,27 @@ def qftGRRenormalizationAssumptionReductionCloseoutPacketResultReviewSelectedNex
     String :=
   "prepare_qft_gr_state_domain_assumption_reduction_packet"
 
+def qftGRStateDomainAssumptionReductionPacketLeanSurface : String :=
+  "ToeFormal.Bridges.QFT_GR_StateDomainAssumptionReductionPacket"
+
+def qftGRStateDomainAssumptionReductionPacketOutcomeToken : String :=
+  "QFT_GR_STATE_DOMAIN_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_" ++
+    "CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+
+def qftGRStateDomainAssumptionReductionPacketClassification : String :=
+  "qft_gr_state_domain_assumption_reduction_packet_prepared_with_no_" ++
+    "conservation_witness_or_seam_closure"
+
+def qftGRStateDomainAssumptionReductionPacketSelectedFamily : String :=
+  "state_domain_assumptions"
+
+def qftGRStateDomainAssumptionReductionPacketPriorFamilies : List String :=
+  [ "operator_domain_assumptions",
+    "renormalization_assumptions" ]
+
+def qftGRStateDomainAssumptionReductionPacketSelectedNextTarget : String :=
+  "review_qft_gr_state_domain_assumption_reduction_packet_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
