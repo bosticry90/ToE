@@ -232,6 +232,35 @@ STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_CLASSIFICATION = (
     "qft_gr_state_domain_object_assumption_reduction_packet_result_review_"
     "accepts_packet_and_authorizes_bounded_reduction_attempt_only"
 )
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
+    "formal/toe_formal/ToeFormal/Bridges/"
+    "QFT_GR_StateDomainObjectAssumptionReductionAttempt.lean"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_REPORT = (
+    "formal/docs/release/"
+    "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_20260607_v0.json"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TOOL = (
+    "formal/python/tools/"
+    "qft_gr_state_domain_object_assumption_reduction_attempt_report.py"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TOKEN = (
+    "QFT_GR_STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_"
+    "CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_CLASSIFICATION = (
+    "qft_gr_state_domain_object_assumption_reduced_pending_result_review"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_CONTRACT = (
+    "SD-ASSUMP-001-state_domain_object_contract_v0"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_CONTRACT_STATUS = (
+    "bounded_repo_local_state_domain_object_contract_pending_result_review_not_"
+    "state_admissibility_source_admissibility_or_conservation_discharge"
+)
+STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_state_domain_object_assumption_reduction_attempt_result"
+)
 
 EXPECTED_ALLOWED_STATUSES = [
     "active",
@@ -953,6 +982,99 @@ def test_active_result_review_target_is_pending_and_latest_surface_matches_execu
             "no"
         )
         assert workstream["state_domain_object_assumption_reduced_by_review"] == "no"
+
+    if live_target == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET:
+        assert workstream["consumed_target"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TARGET
+        )
+        assert workstream["latest_surface"] == (
+            "qft_gr_state_domain_object_assumption_reduction_attempt_v0"
+        )
+        assert workstream["latest_evidence"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE
+        )
+        assert workstream["latest_report"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_REPORT
+        )
+        assert workstream["latest_token"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TOKEN
+        )
+        assert workstream["latest_tool"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TOOL
+        )
+        assert workstream["result_classification"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_CLASSIFICATION
+        )
+        assert workstream["result_review_accepted"] == "no"
+        assert workstream["result_review_completed"] == "no"
+        assert workstream["result_review_pending"] == "yes"
+        assert workstream["result_review_target"] == live_target
+        assert workstream["result_surface"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE
+        )
+        assert workstream["result_report"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_REPORT
+        )
+        assert workstream["result_token"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TOKEN
+        )
+        assert workstream["result_tool"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TOOL
+        )
+        assert workstream["selected_next_target"] == live_target
+        assert workstream["selected_next_target_kind"] == "result_review"
+        assert workstream["selected_next_authorization_token"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TOKEN
+        )
+        assert workstream[
+            "state_domain_object_assumption_reduction_packet_selected_next_target"
+        ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
+        assert workstream[
+            "state_domain_object_assumption_reduction_packet_result_review_selected_next_target"
+        ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_TARGET
+        assert workstream[
+            "state_domain_object_assumption_reduction_attempt_selected_next_target"
+        ] == live_target
+        assert workstream[
+            "state_domain_object_assumption_reduction_attempt_result_review_pending"
+        ] == "yes"
+        assert workstream[
+            "state_domain_object_assumption_reduction_attempt_result_review_accepted"
+        ] == "no"
+        assert workstream[
+            "state_domain_object_assumption_reduction_attempt_result_review_completed"
+        ] == "no"
+        assert workstream["state_domain_object_assumption_reduction_attempt_authorized"] == (
+            "yes"
+        )
+        assert workstream["state_domain_object_assumption_reduction_attempt_executed"] == (
+            "yes"
+        )
+        assert workstream["state_domain_object_assumption_reduction_attempt_contract"] == (
+            STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_CONTRACT
+        )
+        assert workstream[
+            "state_domain_object_assumption_reduction_attempt_contract_status"
+        ] == STATE_DOMAIN_OBJECT_ASSUMPTION_REDUCTION_ATTEMPT_CONTRACT_STATUS
+        assert workstream["state_domain_object_assumption_reduced_pending_result_review"] == (
+            "yes"
+        )
+        assert workstream["state_domain_object_assumption_obstruction_identified"] == "no"
+        assert workstream["state_domain_object_assumption_inconclusive"] == "no"
+        assert workstream["state_domain_object_assumption_discharged"] == "no"
+        assert workstream["state_domain_assumptions_discharged_by_attempt"] == "no"
+        assert (
+            workstream[
+                "state_domain_assumptions_reduced_or_discharged_by_implication"
+            ]
+            == "no"
+        )
+        assert workstream["state_admissibility_discharged"] == "no"
+        assert workstream["source_admissibility_claimed"] == "no"
+        assert workstream["Bianchi_compatibility_claimed"] == "no"
+        assert workstream["conservation_proof_object_constructed"] == "no"
+        assert workstream["conservation_witness_constructed"] == "no"
+        assert workstream["qft_gr_seam_closed"] == "no"
 
 
 def test_loop_control_gate_is_focused_not_governance_manifest_enrolled() -> None:
