@@ -3114,6 +3114,34 @@ def qftGRStateExpectationCompatibilityAssumptionReductionAttemptSelectedNextTarg
     String :=
   "review_qft_gr_state_expectation_compatibility_assumption_reduction_attempt_result"
 
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptResultReviewLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_StateExpectationCompatibilityAssumptionReductionAttemptResultReview"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptResultReviewOutcomeToken :
+    String :=
+  "QFT_GR_STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_" ++
+    "RESULT_REVIEW_ACCEPTS_REDUCED_STATE_EXPECTATION_COMPATIBILITY_AND_" ++
+    "AUTHORIZES_STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PREPARATION_ONLY"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptResultReviewClassification :
+    String :=
+  "qft_gr_state_expectation_compatibility_assumption_reduction_attempt_" ++
+    "result_review_accepts_reduced_state_expectation_compatibility_and_" ++
+    "authorizes_state_domain_assumption_reduction_closeout_preparation_only"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptResultReviewAcceptedRow :
+    String :=
+  "SD-ASSUMP-003-state_expectation_compatibility"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptResultReviewNoNextRow :
+    String :=
+  "no_next_state_domain_assumption_row_available_after_SD_ASSUMP_003"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptResultReviewSelectedNextTarget :
+    String :=
+  "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 

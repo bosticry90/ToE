@@ -402,6 +402,9 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET = (
     "review_qft_gr_state_expectation_compatibility_assumption_reduction_attempt_result"
 )
+STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
+    "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
+)
 STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_PACKET_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
     "QFT_GR_StateExpectationCompatibilityAssumptionReductionPacket.lean"
@@ -471,6 +474,33 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_CONTRACT = (
 STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_CONTRACT_STATUS = (
     "bounded_repo_local_state_expectation_compatibility_contract_pending_result_"
     "review_not_state_admissibility_source_admissibility_or_conservation_discharge"
+)
+STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE = (
+    "formal/toe_formal/ToeFormal/Bridges/"
+    "QFT_GR_StateExpectationCompatibilityAssumptionReductionAttemptResultReview.lean"
+)
+STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "QFT_GR_STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_"
+    "RESULT_REVIEW_20260607_v0.json"
+)
+STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL = (
+    "formal/python/tools/"
+    "qft_gr_state_expectation_compatibility_assumption_reduction_attempt_"
+    "result_review_report.py"
+)
+STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN = (
+    "QFT_GR_STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_"
+    "RESULT_REVIEW_ACCEPTS_REDUCED_STATE_EXPECTATION_COMPATIBILITY_AND_"
+    "AUTHORIZES_STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PREPARATION_ONLY"
+)
+STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION = (
+    "qft_gr_state_expectation_compatibility_assumption_reduction_attempt_"
+    "result_review_accepts_reduced_state_expectation_compatibility_and_"
+    "authorizes_state_domain_assumption_reduction_closeout_preparation_only"
+)
+STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET_KIND = (
+    "qft_gr_state_domain_assumption_reduction_closeout_packet_preparation"
 )
 
 EXPECTED_ALLOWED_STATUSES = [
@@ -1695,6 +1725,92 @@ def test_active_result_review_target_is_pending_and_latest_surface_matches_execu
         assert workstream[
             "state_expectation_compatibility_assumption_reduction_attempt_result_review_completed"
         ] == "no"
+        assert workstream["state_admissibility_claimed"] == "no"
+        assert workstream["state_admissibility_discharged"] == "no"
+        assert workstream["source_admissibility_claimed"] == "no"
+        assert workstream["Bianchi_compatibility_claimed"] == "no"
+        assert workstream["conservation_proof_object_constructed"] == "no"
+        assert workstream["conservation_witness_constructed"] == "no"
+        assert workstream["qft_gr_seam_closed"] == "no"
+
+    if live_target == STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET:
+        assert workstream["consumed_target"] == (
+            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+        )
+        assert workstream["latest_surface"] == (
+            "qft_gr_state_expectation_compatibility_assumption_reduction_attempt_"
+            "result_review_v0"
+        )
+        assert workstream["latest_surface_evidence"] == (
+            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE
+        )
+        assert workstream["latest_surface_report"] == (
+            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT
+        )
+        assert workstream["latest_surface_token"] == (
+            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["latest_surface_tool"] == (
+            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL
+        )
+        assert workstream["result_review_accepted"] == "yes"
+        assert workstream["result_review_completed"] == "yes"
+        assert workstream["result_review_pending"] == "no"
+        assert workstream["result_review_target"] == (
+            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+        )
+        assert workstream["result_review_surface"] == (
+            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE
+        )
+        assert workstream["result_review_report"] == (
+            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT
+        )
+        assert workstream["result_review_tool"] == (
+            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL
+        )
+        assert workstream["result_review_token"] == (
+            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["result_review_classification"] == (
+            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION
+        )
+        assert workstream[
+            "state_expectation_compatibility_assumption_reduction_attempt_selected_next_target"
+        ] == STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+        assert workstream[
+            "state_expectation_compatibility_assumption_reduction_attempt_result_review_accepted"
+        ] == "yes"
+        assert workstream[
+            "state_expectation_compatibility_assumption_reduction_attempt_result_review_completed"
+        ] == "yes"
+        assert workstream[
+            "state_expectation_compatibility_assumption_reduction_attempt_result_review_pending"
+        ] == "no"
+        assert workstream[
+            "state_expectation_compatibility_assumption_reduction_attempt_result_review_accepted_row"
+        ] == "SD-ASSUMP-003-state_expectation_compatibility"
+        assert workstream[
+            "state_expectation_compatibility_assumption_reduction_attempt_result_review_row_inventory_exhausted"
+        ] == "yes"
+        assert workstream[
+            "state_expectation_compatibility_assumption_reduction_attempt_result_review_no_next_row"
+        ] == "yes"
+        assert workstream[
+            "state_expectation_compatibility_assumption_reduction_attempt_result_review_selected_next_target"
+        ] == live_target
+        assert workstream[
+            "state_expectation_compatibility_assumption_reduction_attempt_result_review_selected_next_target_kind"
+        ] == STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET_KIND
+        assert workstream["selected_next_target"] == live_target
+        assert workstream["selected_next_target_kind"] == (
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET_KIND
+        )
+        assert workstream["selected_next_authorization_token"] == (
+            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["state_domain_assumption_reduction_closeout_packet_authorized"] == "yes"
+        assert workstream["state_domain_assumption_reduction_closeout_preparation_only"] == "yes"
+        assert workstream["state_domain_assumption_reduction_closeout_target"] == live_target
         assert workstream["state_admissibility_claimed"] == "no"
         assert workstream["state_admissibility_discharged"] == "no"
         assert workstream["source_admissibility_claimed"] == "no"
