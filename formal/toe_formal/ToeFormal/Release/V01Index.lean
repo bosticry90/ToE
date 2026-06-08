@@ -2994,6 +2994,34 @@ def qftGRStateAdmissibilityBoundaryAssumptionReductionAttemptSelectedNextTarget 
     String :=
   "review_qft_gr_state_admissibility_boundary_assumption_reduction_attempt_result"
 
+def qftGRStateAdmissibilityBoundaryAssumptionReductionAttemptResultReviewLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_StateAdmissibilityBoundaryAssumptionReductionAttemptResultReview"
+
+def qftGRStateAdmissibilityBoundaryAssumptionReductionAttemptResultReviewOutcomeToken :
+    String :=
+  "QFT_GR_STATE_ADMISSIBILITY_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_" ++
+    "RESULT_REVIEW_ACCEPTS_REDUCED_STATE_ADMISSIBILITY_BOUNDARY_AND_" ++
+    "AUTHORIZES_NEXT_STATE_DOMAIN_ROW_SELECTION_ONLY"
+
+def qftGRStateAdmissibilityBoundaryAssumptionReductionAttemptResultReviewClassification :
+    String :=
+  "qft_gr_state_admissibility_boundary_assumption_reduction_attempt_" ++
+    "result_review_accepts_reduced_state_admissibility_boundary_and_" ++
+    "authorizes_next_state_domain_row_selection_only"
+
+def qftGRStateAdmissibilityBoundaryAssumptionReductionAttemptResultReviewAcceptedRow :
+    String :=
+  "SD-ASSUMP-002-state_admissibility_boundary"
+
+def qftGRStateAdmissibilityBoundaryAssumptionReductionAttemptResultReviewNextRow :
+    String :=
+  "SD-ASSUMP-003-state_expectation_compatibility"
+
+def qftGRStateAdmissibilityBoundaryAssumptionReductionAttemptResultReviewSelectedNextTarget :
+    String :=
+  "prepare_qft_gr_state_expectation_compatibility_assumption_reduction_packet"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
