@@ -3079,6 +3079,41 @@ def qftGRStateExpectationCompatibilityAssumptionReductionPacketResultReviewSelec
     String :=
   "execute_qft_gr_state_expectation_compatibility_assumption_reduction_attempt"
 
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_StateExpectationCompatibilityAssumptionReductionAttempt"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptOutcomeToken :
+    String :=
+  "QFT_GR_STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_" ++
+    "EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptClassification :
+    String :=
+  "qft_gr_state_expectation_compatibility_assumption_reduced_pending_result_review"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptAcceptedPriorRows :
+    String :=
+  "SD-ASSUMP-001-state_domain_object|SD-ASSUMP-002-state_admissibility_boundary"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptSelectedRow :
+    String :=
+  "SD-ASSUMP-003-state_expectation_compatibility"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptContractId :
+    String :=
+  "SD-ASSUMP-003-state_expectation_compatibility_contract_v0"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptContractStatus :
+    String :=
+  "bounded_repo_local_state_expectation_compatibility_contract_pending_result_" ++
+    "review_not_state_admissibility_source_admissibility_or_conservation_" ++
+    "discharge"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionAttemptSelectedNextTarget :
+    String :=
+  "review_qft_gr_state_expectation_compatibility_assumption_reduction_attempt_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
