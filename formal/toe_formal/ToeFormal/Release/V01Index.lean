@@ -3022,6 +3022,37 @@ def qftGRStateAdmissibilityBoundaryAssumptionReductionAttemptResultReviewSelecte
     String :=
   "prepare_qft_gr_state_expectation_compatibility_assumption_reduction_packet"
 
+def qftGRStateExpectationCompatibilityAssumptionReductionPacketLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_StateExpectationCompatibilityAssumptionReductionPacket"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionPacketOutcomeToken :
+    String :=
+  "QFT_GR_STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_PACKET_" ++
+    "PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionPacketClassification :
+    String :=
+  "qft_gr_state_expectation_compatibility_assumption_reduction_packet_" ++
+    "prepared_with_no_source_admissibility_or_seam_closure"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionPacketAcceptedPriorRows :
+    String :=
+  "SD-ASSUMP-001-state_domain_object|SD-ASSUMP-002-state_admissibility_boundary"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionPacketSelectedRow :
+    String :=
+  "SD-ASSUMP-003-state_expectation_compatibility"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionPacketCompatibilityCondition :
+    String :=
+  "state_expectation_functional_compatible_with_operator_domain_and_" ++
+    "renormalized_expectation_domain"
+
+def qftGRStateExpectationCompatibilityAssumptionReductionPacketSelectedNextTarget :
+    String :=
+  "review_qft_gr_state_expectation_compatibility_assumption_reduction_packet_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
