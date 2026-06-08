@@ -3142,6 +3142,28 @@ def qftGRStateExpectationCompatibilityAssumptionReductionAttemptResultReviewSele
     String :=
   "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 
+def qftGRStateDomainAssumptionReductionCloseoutPacketLeanSurface : String :=
+  "ToeFormal.Bridges.QFT_GR_StateDomainAssumptionReductionCloseoutPacket"
+
+def qftGRStateDomainAssumptionReductionCloseoutPacketOutcomeToken : String :=
+  "QFT_GR_STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_PREPARED_" ++
+    "WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+
+def qftGRStateDomainAssumptionReductionCloseoutPacketClassification : String :=
+  "qft_gr_state_domain_assumption_reduction_closeout_packet_prepared_" ++
+    "with_no_conservation_witness_or_seam_closure"
+
+def qftGRStateDomainAssumptionReductionCloseoutPacketAcceptedRows : List String :=
+  [ "SD-ASSUMP-001-state_domain_object",
+    "SD-ASSUMP-002-state_admissibility_boundary",
+    "SD-ASSUMP-003-state_expectation_compatibility" ]
+
+def qftGRStateDomainAssumptionReductionCloseoutPacketNoNextRow : String :=
+  "no_remaining_state_domain_assumption_row_in_current_inventory"
+
+def qftGRStateDomainAssumptionReductionCloseoutPacketSelectedNextTarget : String :=
+  "review_qft_gr_state_domain_assumption_reduction_closeout_packet_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
