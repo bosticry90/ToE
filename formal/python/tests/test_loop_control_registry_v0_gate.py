@@ -408,6 +408,9 @@ STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_state_domain_assumption_reduction_closeout_packet_result"
 )
+MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TARGET = (
+    "prepare_qft_gr_mathematical_regularity_assumption_reduction_packet"
+)
 STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_PACKET_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
     "QFT_GR_StateExpectationCompatibilityAssumptionReductionPacket.lean"
@@ -508,6 +511,9 @@ STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET_KIND = (
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_KIND = (
     "qft_gr_state_domain_assumption_reduction_closeout_packet_result_review"
 )
+MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TARGET_KIND = (
+    "qft_gr_mathematical_regularity_assumption_reduction_packet_preparation"
+)
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
     "QFT_GR_StateDomainAssumptionReductionCloseoutPacket.lean"
@@ -527,6 +533,29 @@ STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TOKEN = (
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_CLASSIFICATION = (
     "qft_gr_state_domain_assumption_reduction_closeout_packet_prepared_"
     "with_no_conservation_witness_or_seam_closure"
+)
+STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_SURFACE = (
+    "formal/toe_formal/ToeFormal/Bridges/"
+    "QFT_GR_StateDomainAssumptionReductionCloseoutPacketResultReview.lean"
+)
+STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "QFT_GR_STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_"
+    "20260608_v0.json"
+)
+STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TOOL = (
+    "formal/python/tools/"
+    "qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_report.py"
+)
+STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TOKEN = (
+    "QFT_GR_STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_"
+    "ACCEPTS_STATE_DOMAIN_FAMILY_CLOSEOUT_AND_AUTHORIZES_NEXT_ASSUMPTION_"
+    "FAMILY_SELECTION_ONLY"
+)
+STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_CLASSIFICATION = (
+    "qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_"
+    "accepts_state_domain_family_closeout_and_authorizes_next_assumption_"
+    "family_selection_only"
 )
 
 EXPECTED_ALLOWED_STATUSES = [
@@ -1759,45 +1788,45 @@ def test_active_result_review_target_is_pending_and_latest_surface_matches_execu
         assert workstream["conservation_witness_constructed"] == "no"
         assert workstream["qft_gr_seam_closed"] == "no"
 
-    if live_target == STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TARGET:
+    if live_target == MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TARGET:
         assert workstream["consumed_target"] == (
-            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TARGET
         )
         assert workstream["latest_surface"] == (
-            "qft_gr_state_domain_assumption_reduction_closeout_packet_v0"
+            "qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_v0"
         )
         assert workstream["latest_surface_evidence"] == (
-            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_SURFACE
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_SURFACE
         )
         assert workstream["latest_surface_report"] == (
-            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_REPORT
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_REPORT
         )
         assert workstream["latest_surface_token"] == (
-            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TOKEN
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TOKEN
         )
         assert workstream["latest_surface_tool"] == (
-            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TOOL
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TOOL
         )
         assert workstream["result_review_accepted"] == "yes"
         assert workstream["result_review_completed"] == "yes"
         assert workstream["result_review_pending"] == "no"
         assert workstream["result_review_target"] == (
-            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TARGET
         )
         assert workstream["result_review_surface"] == (
-            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_SURFACE
         )
         assert workstream["result_review_report"] == (
-            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_REPORT
         )
         assert workstream["result_review_tool"] == (
-            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TOOL
         )
         assert workstream["result_review_token"] == (
-            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TOKEN
         )
         assert workstream["result_review_classification"] == (
-            STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_CLASSIFICATION
         )
         assert workstream[
             "state_expectation_compatibility_assumption_reduction_attempt_selected_next_target"
@@ -1828,10 +1857,10 @@ def test_active_result_review_target_is_pending_and_latest_surface_matches_execu
         ] == STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET_KIND
         assert workstream["selected_next_target"] == live_target
         assert workstream["selected_next_target_kind"] == (
-            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_KIND
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TARGET_KIND
         )
         assert workstream["selected_next_authorization_token"] == (
-            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TOKEN
+            STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TOKEN
         )
         assert workstream["state_domain_assumption_reduction_closeout_packet_authorized"] == "yes"
         assert workstream["state_domain_assumption_reduction_closeout_preparation_only"] == "yes"
@@ -1847,13 +1876,31 @@ def test_active_result_review_target_is_pending_and_latest_surface_matches_execu
             workstream[
                 "state_domain_assumption_reduction_closeout_packet_selected_next_target"
             ]
-            == live_target
+            == STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TARGET
         )
         assert (
             workstream[
                 "state_domain_assumption_reduction_closeout_result_review_required"
             ]
             == "yes"
+        )
+        assert (
+            workstream[
+                "state_domain_assumption_reduction_closeout_packet_result_review_selected_next_target"
+            ]
+            == live_target
+        )
+        assert (
+            workstream[
+                "state_domain_assumption_reduction_closeout_packet_result_review_token"
+            ]
+            == STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["state_domain_assumption_reduction_closeout_result_accepted"] == "yes"
+        assert workstream["next_assumption_family"] == "mathematical_regularity_assumptions"
+        assert (
+            workstream["mathematical_regularity_assumption_reduction_packet_target"]
+            == live_target
         )
         assert workstream["state_admissibility_claimed"] == "no"
         assert workstream["state_admissibility_discharged"] == "no"
