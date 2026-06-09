@@ -1144,7 +1144,7 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "prepare_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet"
+    "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1312,10 +1312,10 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
     "execute_qft_gr_state_expectation_compatibility_assumption_reduction_attempt"
 )
 PREVIOUS_TARGET = (
-    "review_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_result"
+    "prepare_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet"
+    "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1332,7 +1332,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_DerivativeExchangeRegularBoundaryAssumptionReductionAttemptResultReview.lean"
+    / "QFT_GR_WeakStrongConservationComparisonScopeAssumptionReductionPacket.lean"
 )
 RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -1894,6 +1894,9 @@ DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_
 WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET_KIND = (
     "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_preparation"
 )
+WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET_KIND = (
+    "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result_review"
+)
 DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
     "QFT_GR_DerivativeExchangeRegularBoundaryAssumptionReductionAttempt.lean"
@@ -1951,6 +1954,34 @@ DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_
     "qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_"
     "result_review_accepts_reduced_mr_assump_001_and_authorizes_next_"
     "mathematical_regularity_row_selection_only"
+)
+WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_SURFACE = (
+    "formal/toe_formal/ToeFormal/Bridges/"
+    "QFT_GR_WeakStrongConservationComparisonScopeAssumptionReductionPacket.lean"
+)
+WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_REPORT = (
+    "formal/docs/release/"
+    "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_"
+    "PACKET_20260608_v0.json"
+)
+WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TOOL = (
+    "formal/python/tools/"
+    "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_"
+    "packet_report.py"
+)
+WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TOKEN = (
+    "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_"
+    "PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+)
+WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_CLASSIFICATION = (
+    "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_"
+    "packet_prepared_with_no_conservation_witness_or_seam_closure"
+)
+WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_SELECTED_ROW = (
+    "MR-ASSUMP-002-weak_strong_conservation_comparison_scope"
+)
+WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_PENDING_CLASSIFICATION = (
+    "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result_review_pending"
 )
 RN002_ATTEMPT_RESULT_REVIEW_EVIDENCE_PATH = (
     REPO_ROOT
@@ -2781,19 +2812,19 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_v0"
+        == "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_v0"
     )
     assert current_active_workstream["latest_surface_evidence"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_SURFACE
     )
     assert current_active_workstream["latest_surface_report"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_REPORT
     )
     assert current_active_workstream["latest_surface_token"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TOKEN
     )
     assert current_active_workstream["latest_surface_tool"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TOOL
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2807,16 +2838,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_20260523_v0.json"
     )
     assert current_active_workstream["result_surface"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_SURFACE
     )
     assert current_active_workstream["result_report"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_REPORT
     )
     assert current_active_workstream["result_token"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TOKEN
     )
     assert current_active_workstream["result_tool"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TOOL
     )
     assert current_active_workstream["construction_execution_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
@@ -3084,7 +3115,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
     )
     assert current_active_workstream["output_token"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TOKEN
     )
     assert current_active_workstream["source_map_closure_registration_packet_token"] == (
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_PACKET_PREPARED_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
@@ -3194,8 +3225,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_WITNESS_CHAIN_CONSTRUCTION_PACKET_FROM_RESEARCH_CANDIDATE_PREPARED_WITH_NO_WITNESS_CONSTRUCTION_OR_SOURCE_MAP_CLOSURE"
     )
     assert current_active_workstream["selected_route"] == (
-        "qft_gr_weak_strong_conservation_comparison_scope_packet_after_"
-        "mr_assump_001_result_review"
+        "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_"
+        "packet_result_review_after_preparation"
     )
     assert current_active_workstream["selected_finding"] == "V01-ALPHA-DEP-REM-004"
     assert current_active_workstream["selected_tranche"] == "V01-ALPHA-DEP-REM-TRANCHE-004"
@@ -3300,7 +3331,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION
     )
     assert current_active_workstream["result_review_classification"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_PENDING_CLASSIFICATION
     )
     assert current_active_workstream["consumed_construction_result_review_classification"] == (
         "witness_chain_construction_accepted_source_map_authorization_adjudication_packet_preparation_only"
@@ -4082,7 +4113,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
     assert current_active_workstream["track2_remains_deferred"] == (
-        "pending_mr_assump_002_weak_strong_conservation_comparison_scope_assumption_reduction_packet_preparation"
+        "pending_mr_assump_002_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result_review"
     )
     assert current_active_workstream["track2_control_clearance_only"] == "yes"
     assert current_active_workstream["track2_scientific_evidence_claimed_from_track1"] == "no"
@@ -4100,10 +4131,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["qft_gr_witness_execution_authorized"] == "yes"
     assert current_active_workstream["qft_gr_witness_executed"] == "yes"
     assert current_active_workstream["track2_selected_after_result_review"] == (
-        "weak_strong_conservation_comparison_scope_packet_preparation"
+        "weak_strong_conservation_comparison_scope_packet_result_review"
     )
     assert current_active_workstream["track2_selection_kind"] == (
-        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET_KIND
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET_KIND
     )
     assert current_active_workstream["track2_science_lane_execution_started"] == (
         "yes_operator_domain_closeout_result_review_accepted"
@@ -4118,8 +4149,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "state_domain_assumption_reduction_closeout_packet_preparation"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "PREPARE_QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_"
-        "ASSUMPTION_REDUCTION_PACKET_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
+        "REVIEW_QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_"
+        "ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
     assert current_active_workstream["closeout_criteria_count"] == "4"
@@ -4127,31 +4158,32 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
     assert (
         current_active_workstream["selected_next_target_kind"]
-        == WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET_KIND
+        == WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET_KIND
     )
     assert current_active_workstream["selected_next_action_scope"] == (
-        "PREPARE_QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_"
-        "ASSUMPTION_REDUCTION_PACKET_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
+        "REVIEW_QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_"
+        "ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
     )
     assert current_active_workstream["selected_next_authorization_token"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TOKEN
     )
-    assert current_active_workstream["result_review_accepted"] == "yes"
-    assert current_active_workstream["result_review_completed"] == "yes"
-    assert current_active_workstream["result_review_pending"] == "no"
+    assert current_active_workstream["result_review_accepted"] == "no"
+    assert current_active_workstream["result_review_completed"] == "no"
+    assert current_active_workstream["result_review_pending"] == "yes"
     assert current_active_workstream["result_review_id"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ID
+        "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_"
+        "PACKET_RESULT_REVIEW_v0"
     )
-    assert current_active_workstream["review_decision"] == "accept"
+    assert current_active_workstream["review_decision"] == "pending_result_review"
     assert current_active_workstream["result_review_target"] == (
-        PREVIOUS_TARGET
+        LIVE_TARGET
     )
     assert current_active_workstream["witness_attempt_executed"] == "yes"
     assert current_active_workstream["result_classification"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_CLASSIFICATION
     )
     assert current_active_workstream["result_review_classification"] == (
-        DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION
+        WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_PENDING_CLASSIFICATION
     )
     assert current_active_workstream["result_classification_count"] == "1"
     assert current_active_workstream["constructed_witness_result"] == "no"
@@ -4170,11 +4202,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["next_mathematical_regularity_assumption_row_object"] == (
         "weak_strong_conservation_comparison_scope_for_future_conservation_proof_object"
     )
+    assert current_active_workstream["selected_mathematical_regularity_assumption_row"] == (
+        "MR-ASSUMP-002-weak_strong_conservation_comparison_scope"
+    )
+    assert current_active_workstream["selected_row_is_repo_authoritative_next_row"] == "yes"
     assert (
         current_active_workstream[
             "weak_strong_conservation_comparison_scope_assumption_reduction_packet_target"
         ]
-        == LIVE_TARGET
+        == PREVIOUS_TARGET
     )
     assert (
         current_active_workstream[
@@ -4186,7 +4222,43 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         current_active_workstream[
             "weak_strong_conservation_comparison_scope_assumption_reduction_packet_prepared"
         ]
-        == "no"
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "weak_strong_conservation_comparison_scope_assumption_reduction_packet_result_review_pending"
+        ]
+        == "yes"
+    )
+    assert (
+        current_active_workstream[
+            "weak_strong_conservation_comparison_scope_assumption_reduction_packet_result_review_target"
+        ]
+        == LIVE_TARGET
+    )
+    assert (
+        current_active_workstream[
+            "weak_strong_conservation_comparison_scope_assumption_reduction_packet_report"
+        ]
+        == WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_REPORT
+    )
+    assert (
+        current_active_workstream[
+            "weak_strong_conservation_comparison_scope_assumption_reduction_packet_token"
+        ]
+        == WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TOKEN
+    )
+    assert (
+        current_active_workstream[
+            "weak_strong_conservation_comparison_scope_assumption_reduction_packet_tool"
+        ]
+        == WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TOOL
+    )
+    assert (
+        current_active_workstream[
+            "weak_strong_conservation_comparison_scope_assumption_reduction_packet_selected_row"
+        ]
+        == WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_SELECTED_ROW
     )
     assert current_active_workstream["covariant_conservation_obstruction_result_accepted"] == "yes"
     assert current_active_workstream["refinement_packet_preparation_authorized"] == "yes"
@@ -4368,9 +4440,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["packet_preparation_only_confirmed_by_review"] == "yes"
     assert current_active_workstream["assumptions_discharged_by_review"] == "no"
-    assert current_active_workstream["result_review_accepted"] == "yes"
-    assert current_active_workstream["result_review_completed"] == "yes"
-    assert current_active_workstream["result_review_pending"] == "no"
+    assert current_active_workstream["result_review_accepted"] == "no"
+    assert current_active_workstream["result_review_completed"] == "no"
+    assert current_active_workstream["result_review_pending"] == "yes"
     assert current_active_workstream["qft_gr_selected_operator_action_assumption_reduction_packet_classification"] == (
         "qft_gr_selected_operator_action_assumption_reduction_packet_prepared_no_"
         "assumption_discharge_or_seam_closure"

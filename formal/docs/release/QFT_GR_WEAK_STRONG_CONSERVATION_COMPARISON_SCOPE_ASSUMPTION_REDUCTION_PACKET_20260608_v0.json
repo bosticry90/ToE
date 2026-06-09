@@ -1,0 +1,233 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "accepted_mr001_before_this_packet": true,
+    "candidate_reduction_route_recorded": true,
+    "comparison_boundaries_recorded": true,
+    "consumes_expected_mr001_result_review": true,
+    "distinguishes_weak_and_strong_conservation_scope": true,
+    "does_not_claim_bianchi_compatibility": true,
+    "does_not_claim_either_conservation_form": true,
+    "does_not_claim_state_or_source_admissibility": true,
+    "does_not_close_qft_gr_seam": true,
+    "does_not_construct_conservation_proof_object": true,
+    "does_not_construct_conservation_witness": true,
+    "does_not_derive_semiclassical_einstein_equation": true,
+    "exactly_one_next_target_selected": true,
+    "mr001_result_review_authorized_this_packet": true,
+    "mr001_result_review_classification_expected": true,
+    "mr001_result_review_outcome_expected": true,
+    "mr001_result_review_schema_expected": true,
+    "no_release_or_public_submission": true,
+    "prepares_reduction_analysis_only": true,
+    "preserves_insufficient_assumptions_blocker": true,
+    "preserves_mathematical_regularity_family": true,
+    "prior_assumption_families_remain_completed": true,
+    "required_future_proof_object_recorded": true,
+    "selected_row_object_expected": true,
+    "selected_row_status_tokens_current": true,
+    "selects_only_mr002": true
+  },
+  "accepted": true,
+  "accepted_mathematical_regularity_assumption_row_count": 1,
+  "accepted_mathematical_regularity_assumption_rows": [
+    "MR-ASSUMP-001-derivative_exchange_regular_boundary"
+  ],
+  "accepted_prior_mathematical_regularity_assumption_row": "MR-ASSUMP-001-derivative_exchange_regular_boundary",
+  "actual_conservation_claimed": false,
+  "available_repo_evidence": [
+    "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_PACKET_v0",
+    "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_v0"
+  ],
+  "blocker": "insufficient_assumptions_for_conservation",
+  "blocker_remains": "insufficient_assumptions_for_conservation",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The prepared MR-ASSUMP-002 weak/strong conservation comparison scope packet must be result-reviewed before any bounded reduction attempt is authorized.",
+      "target": "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "A bounded MR-ASSUMP-002 attempt requires packet result review first.",
+      "target": "execute_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt"
+    },
+    {
+      "decision": "deferred",
+      "reason": "MR-ASSUMP-003 remains downstream of MR-ASSUMP-002 packet review.",
+      "target": "prepare_qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Packet preparation records scope only; weak conservation is not proved.",
+      "target": "prove_qft_gr_weak_conservation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Packet preparation records scope only; strong conservation is not proved.",
+      "target": "prove_qft_gr_strong_conservation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Packet preparation does not construct a conservation proof object.",
+      "target": "construct_qft_gr_conservation_proof_object"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Packet preparation does not construct a conservation witness.",
+      "target": "construct_qft_gr_conservation_witness"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Weak/strong comparison scope is not state admissibility.",
+      "target": "claim_qft_gr_state_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Weak/strong comparison scope is not source admissibility.",
+      "target": "claim_qft_gr_source_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Bianchi compatibility remains downstream and unclaimed.",
+      "target": "claim_qft_gr_bianchi_compatibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The semiclassical Einstein equation is not derived here.",
+      "target": "derive_semiclassical_einstein_equation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "QFT-GR seam closure remains outside this packet.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Release assembly and public submission remain unauthorized.",
+      "target": "authorize_release_assembly_or_public_submission"
+    }
+  ],
+  "candidate_reduction_route": "separate strong, weak, and distributional comparison requirements before any conservation proof-object attempt",
+  "captured_at_utc": "2026-06-08T00:00:00Z",
+  "claim_ceiling": "weak_strong_conservation_comparison_scope_assumption_reduction_packet_preparation_only_no_weak_or_strong_conservation_proof_no_conservation_proof_object_no_conservation_witness_no_state_or_source_admissibility_no_bianchi_no_qft_gr_seam_closure",
+  "comparison_scope_boundaries": [
+    "weak_conservation_scope_recorded_for_future_distributional_or_test_pairing",
+    "strong_conservation_scope_recorded_for_future_covariant_divergence_form",
+    "comparison_scope_only_no_weak_conservation_proof",
+    "comparison_scope_only_no_strong_conservation_proof",
+    "no_weak_strong_equivalence_claim_without_future_proof_object",
+    "no_source_admissibility_claim",
+    "no_bianchi_compatibility_claim",
+    "no_qft_gr_seam_closure"
+  ],
+  "completed_prior_assumption_families": [
+    "operator_domain_assumptions",
+    "renormalization_assumptions",
+    "state_domain_assumptions"
+  ],
+  "completed_prior_assumption_family_count": 3,
+  "conservation_blocker_remains": true,
+  "conservation_proof_object_constructed": false,
+  "conservation_proved": false,
+  "conservation_witness_constructed": false,
+  "consumed_result_review_classification": "qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_accepts_reduced_mr_assump_001_and_authorizes_next_mathematical_regularity_row_selection_only",
+  "consumed_result_review_outcome_id": "QFT_GR_DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_MR_ASSUMP_001_AND_AUTHORIZES_NEXT_MATHEMATICAL_REGULARITY_ROW_SELECTION_ONLY",
+  "consumed_result_review_schema_id": "QFT_GR_DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260608_v0",
+  "consumed_target": "prepare_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet",
+  "consumes_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review": "QFT_GR_DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_v0",
+  "consumes_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_pointer": "formal/docs/release/QFT_GR_DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260608_v0.json",
+  "covariant_conservation_statement_proved": false,
+  "empirical_validation_claimed": false,
+  "failure_mode_if_unresolved": "the project may conflate weak and strong conservation forms without the regularity needed to compare them",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_regularity_assumptions_discharged": false,
+  "mathematical_regularity_assumptions_reduced_or_discharged_by_preparation": false,
+  "next_action_scope": "REVIEW_QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This packet prepares only MR-ASSUMP-002 weak/strong conservation comparison scope reduction analysis. It distinguishes weak and strong conservation scopes for a future proof object, preserves insufficient_assumptions_for_conservation, and does not prove either conservation form, construct a conservation proof object or witness, claim state/source admissibility or Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, assemble release, or authorize public submission.",
+  "outcome_id": "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "packet_classification": "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_prepared_with_no_conservation_witness_or_seam_closure",
+  "packet_classification_count": 1,
+  "packet_id": "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_v0",
+  "prepared": true,
+  "prepares_reduction_analysis_only": true,
+  "primary_assumption_reduction_family": "mathematical_regularity_assumptions",
+  "proof_object_constructed": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "required_future_proof_object": "weak_strong_conservation_comparison_regular_scope",
+  "schema_id": "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_20260608_v0",
+  "scientific_validation_claimed": false,
+  "selected_assumption_family": "mathematical_regularity_assumptions",
+  "selected_blocker": "insufficient_assumptions_for_conservation",
+  "selected_bounded_mathematical_regularity_assumption_row": "MR-ASSUMP-002-weak_strong_conservation_comparison_scope",
+  "selected_mathematical_regularity_assumption_row": "MR-ASSUMP-002-weak_strong_conservation_comparison_scope",
+  "selected_next_authorization_token": "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "selected_next_target": "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result",
+  "selected_next_target_count": 1,
+  "selected_next_target_kind": "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result_review",
+  "selected_route": "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result_review_after_preparation",
+  "selected_row_count": 1,
+  "selected_row_is_repo_authoritative_next_row": true,
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "source_mathematical_regularity_assumption_reduction_packet": "QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_v0",
+  "source_mathematical_regularity_assumption_reduction_packet_pointer": "formal/docs/release/QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_20260608_v0.json",
+  "state_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "strong_conservation_claimed": false,
+  "strong_conservation_proved": false,
+  "strong_conservation_scope": "strong_covariant_divergence_scope_for_operator_domain_or_pointwise_regular_source",
+  "weak_conservation_claimed": false,
+  "weak_conservation_proved": false,
+  "weak_conservation_scope": "weak_or_distributional_conservation_scope_for_test_pairing_and_expectation_pairing",
+  "weak_strong_comparison_boundary": "weak_strong_conservation_comparison_scope_for_future_conservation_proof_object",
+  "weak_strong_conservation_comparison_scope": "weak_strong_conservation_comparison_scope_for_future_conservation_proof_object",
+  "weak_strong_conservation_comparison_scope_assumption": {
+    "assumption_family": "mathematical_regularity_assumptions",
+    "assumption_id": "MR-ASSUMP-002-weak_strong_conservation_comparison_scope",
+    "available_repo_evidence": [
+      "QFT_GR_COVARIANT_CONSERVATION_STATEMENT_WITH_OPERATOR_DOMAIN_PACKET_v0",
+      "QFT_GR_COVARIANT_CONSERVATION_ASSUMPTION_REDUCTION_PACKET_v0"
+    ],
+    "candidate_reduction_route": "separate strong, weak, and distributional comparison requirements before any conservation proof-object attempt",
+    "claim_ceiling": "weak_strong_conservation_comparison_scope_packet_only_no_weak_conservation_proof_no_strong_conservation_proof_no_conservation_witness_no_qft_gr_seam_closure",
+    "comparison_boundary": "weak_strong_conservation_comparison_scope_for_future_conservation_proof_object",
+    "comparison_scope_boundaries": [
+      "weak_conservation_scope_recorded_for_future_distributional_or_test_pairing",
+      "strong_conservation_scope_recorded_for_future_covariant_divergence_form",
+      "comparison_scope_only_no_weak_conservation_proof",
+      "comparison_scope_only_no_strong_conservation_proof",
+      "no_weak_strong_equivalence_claim_without_future_proof_object",
+      "no_source_admissibility_claim",
+      "no_bianchi_compatibility_claim",
+      "no_qft_gr_seam_closure"
+    ],
+    "current_status": [
+      "required",
+      "missing",
+      "candidate_reducible"
+    ],
+    "failure_mode_if_unresolved": "the project may conflate weak and strong conservation forms without the regularity needed to compare them",
+    "regularity_condition": "weak_strong_conservation_comparison_scope_for_future_conservation_proof_object",
+    "required_future_proof_object": "weak_strong_conservation_comparison_regular_scope",
+    "strong_conservation_scope": "strong_covariant_divergence_scope_for_operator_domain_or_pointwise_regular_source",
+    "weak_conservation_scope": "weak_or_distributional_conservation_scope_for_test_pairing_and_expectation_pairing"
+  },
+  "weak_strong_conservation_comparison_scope_assumption_reduction_analysis_prepared": true,
+  "weak_strong_conservation_comparison_scope_discharged": false,
+  "weak_strong_conservation_comparison_scope_reduced_or_discharged_by_preparation": false,
+  "weak_strong_conservation_comparison_scope_status_tokens": [
+    "required",
+    "missing",
+    "candidate_reducible"
+  ],
+  "weak_strong_conservation_equivalence_claimed": false
+}

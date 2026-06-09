@@ -6195,7 +6195,7 @@ This recap is non-hallucinatory because it keeps four levels separate.
 Examples:
 
 * The project is not a physics-complete ToE claim. 
-* The current live target is `prepare_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet`.
+* The current live target is `review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result`.
 * The axiom ledger records 59 real axioms, 0 `sorry`/`admit`, and 14 axiom-bearing files. 
 * The compendium pins key equations like Poisson, Maxwell, Klein-Gordon class, and Schrödinger-form targets. 
 * The seam inventory separates governance completion from physics completion. 
@@ -8833,7 +8833,7 @@ It has:
 The loop registry currently pins:
 
 ```text
-live_next_target = prepare_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet
+live_next_target = review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result
 ```
 
 and marks forbidden promotions such as Phase 2 authorization, seam closure, empirical claim, master-action promotion, and governance-manifest enrollment. 
