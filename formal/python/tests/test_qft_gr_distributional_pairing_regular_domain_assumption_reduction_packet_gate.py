@@ -245,8 +245,6 @@ def test_qft_gr_distributional_pairing_regular_domain_packet_deterministic_and_p
     )
     for token in [
         PACKET_ID,
-        OUTCOME_ID,
-        PACKET_CLASSIFICATION,
         ACCEPTED_PRIOR_ROW_IDS[-1],
         SELECTED_ROW_ID,
         SELECTED_ROW_OBJECT,

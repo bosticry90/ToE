@@ -3428,6 +3428,34 @@ def qftGRDistributionalPairingRegularDomainAssumptionReductionPacketSelectedNext
   "review_qft_gr_distributional_pairing_regular_domain_assumption_reduction_" ++
     "packet_result"
 
+def qftGRDistributionalPairingRegularDomainAssumptionReductionPacketResultReviewLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_DistributionalPairingRegularDomainAssumptionReductionPacketResultReview"
+
+def qftGRDistributionalPairingRegularDomainAssumptionReductionPacketResultReviewOutcomeToken :
+    String :=
+  "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_PACKET_" ++
+    "RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_MR_ASSUMP_003_" ++
+    "ATTEMPT_ONLY"
+
+def qftGRDistributionalPairingRegularDomainAssumptionReductionPacketResultReviewClassification :
+    String :=
+  "qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet_" ++
+    "result_review_accepts_packet_and_authorizes_bounded_mr_assump_003_attempt_only"
+
+def qftGRDistributionalPairingRegularDomainAssumptionReductionPacketResultReviewConsumedPacket :
+    String :=
+  "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_PACKET_v0"
+
+def qftGRDistributionalPairingRegularDomainAssumptionReductionPacketResultReviewSelectedRow :
+    String :=
+  "MR-ASSUMP-003-distributional_pairing_regular_domain"
+
+def qftGRDistributionalPairingRegularDomainAssumptionReductionPacketResultReviewSelectedNextTarget :
+    String :=
+  "execute_qft_gr_distributional_pairing_regular_domain_assumption_reduction_" ++
+    "attempt"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
