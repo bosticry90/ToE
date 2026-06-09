@@ -411,6 +411,9 @@ STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_TARGET = (
 MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TARGET = (
     "prepare_qft_gr_mathematical_regularity_assumption_reduction_packet"
 )
+MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET = (
+    "review_qft_gr_mathematical_regularity_assumption_reduction_packet_result"
+)
 STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_PACKET_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
     "QFT_GR_StateExpectationCompatibilityAssumptionReductionPacket.lean"
@@ -514,6 +517,15 @@ STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_KIND = (
 MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TARGET_KIND = (
     "qft_gr_mathematical_regularity_assumption_reduction_packet_preparation"
 )
+MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET_KIND = (
+    "qft_gr_mathematical_regularity_assumption_reduction_packet_result_review"
+)
+MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_ID = (
+    "QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0"
+)
+MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_PENDING_REVIEW_DECISION = (
+    "mathematical_regularity_assumption_reduction_packet_prepared_pending_result_review"
+)
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
     "QFT_GR_StateDomainAssumptionReductionCloseoutPacket.lean"
@@ -556,6 +568,27 @@ STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_CLASSIFICATION =
     "qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_"
     "accepts_state_domain_family_closeout_and_authorizes_next_assumption_"
     "family_selection_only"
+)
+MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_SURFACE = (
+    "formal/toe_formal/ToeFormal/Bridges/"
+    "QFT_GR_MathematicalRegularityAssumptionReductionPacket.lean"
+)
+MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_REPORT = (
+    "formal/docs/release/"
+    "QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_"
+    "20260608_v0.json"
+)
+MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TOOL = (
+    "formal/python/tools/"
+    "qft_gr_mathematical_regularity_assumption_reduction_packet_report.py"
+)
+MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TOKEN = (
+    "QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_PREPARED_"
+    "WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+)
+MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_CLASSIFICATION = (
+    "qft_gr_mathematical_regularity_assumption_reduction_packet_prepared_"
+    "with_no_conservation_witness_or_seam_closure"
 )
 
 EXPECTED_ALLOWED_STATUSES = [
@@ -1904,6 +1937,86 @@ def test_active_result_review_target_is_pending_and_latest_surface_matches_execu
         )
         assert workstream["state_admissibility_claimed"] == "no"
         assert workstream["state_admissibility_discharged"] == "no"
+        assert workstream["source_admissibility_claimed"] == "no"
+        assert workstream["Bianchi_compatibility_claimed"] == "no"
+        assert workstream["conservation_proof_object_constructed"] == "no"
+        assert workstream["conservation_witness_constructed"] == "no"
+        assert workstream["qft_gr_seam_closed"] == "no"
+
+    if live_target == MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET:
+        assert workstream["consumed_target"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TARGET
+        )
+        assert workstream["latest_surface"] == (
+            "qft_gr_mathematical_regularity_assumption_reduction_packet_v0"
+        )
+        assert workstream["latest_surface_evidence"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_SURFACE
+        )
+        assert workstream["latest_surface_report"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_REPORT
+        )
+        assert workstream["latest_surface_token"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TOKEN
+        )
+        assert workstream["latest_surface_tool"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TOOL
+        )
+        assert workstream["result_classification"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_CLASSIFICATION
+        )
+        assert workstream["result_review_accepted"] == "no"
+        assert workstream["result_review_completed"] == "no"
+        assert workstream["result_review_pending"] == "yes"
+        assert workstream["result_review_id"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_ID
+        )
+        assert workstream["review_decision"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_PENDING_REVIEW_DECISION
+        )
+        assert workstream["result_review_target"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
+        )
+        assert workstream["result_surface"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_SURFACE
+        )
+        assert workstream["result_report"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_REPORT
+        )
+        assert workstream["result_token"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TOKEN
+        )
+        assert workstream["selected_next_target"] == live_target
+        assert workstream["selected_next_target_kind"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET_KIND
+        )
+        assert workstream["selected_next_authorization_token"] == (
+            MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TOKEN
+        )
+        assert workstream["mathematical_regularity_assumption_reduction_packet_prepared"] == "yes"
+        assert (
+            workstream["mathematical_regularity_assumption_reduction_packet_target"]
+            == MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_TARGET
+        )
+        assert (
+            workstream["mathematical_regularity_assumption_reduction_packet_selected_next_target"]
+            == live_target
+        )
+        assert (
+            workstream["mathematical_regularity_assumption_reduction_packet_result_review_id"]
+            == MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_ID
+        )
+        assert (
+            workstream["mathematical_regularity_assumption_reduction_packet_result_review_completed"]
+            == "no"
+        )
+        assert (
+            workstream["selected_bounded_mathematical_regularity_assumption_row"]
+            == "MR-ASSUMP-001-derivative_exchange_regular_boundary"
+        )
+        assert workstream["selected_row_is_first_repo_authoritative_row"] == "yes"
+        assert workstream["next_assumption_family"] == "mathematical_regularity_assumptions"
+        assert workstream["state_admissibility_claimed"] == "no"
         assert workstream["source_admissibility_claimed"] == "no"
         assert workstream["Bianchi_compatibility_claimed"] == "no"
         assert workstream["conservation_proof_object_constructed"] == "no"

@@ -310,12 +310,12 @@ def test_current_authoritative_surfaces_index_records_live_authority_chain() -> 
 
     for token in {
         "CURRENT_AUTHORITATIVE_SURFACES_v0",
-        "CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_mathematical_regularity_assumption_reduction_packet",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_qft_gr_state_domain_assumption_reduction_closeout_packet_result",
+        "CURRENT_LIVE_NEXT_TARGET_v0: review_qft_gr_mathematical_regularity_assumption_reduction_packet_result",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_qft_gr_mathematical_regularity_assumption_reduction_packet",
         "ACTIVE_LANE_v0: qft_gr_state_expectation_compatibility_assumption_reduction_attempt",
-        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateDomainAssumptionReductionCloseoutPacketResultReview.lean",
-        "CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_20260608_v0.json",
-        "CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_ACCEPTS_STATE_DOMAIN_FAMILY_CLOSEOUT_AND_AUTHORIZES_NEXT_ASSUMPTION_FAMILY_SELECTION_ONLY",
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Bridges/QFT_GR_MathematicalRegularityAssumptionReductionPacket.lean",
+        "CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_20260608_v0.json",
+        "CURRENT_LIVE_TARGET_OUTCOME_v0: QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
         "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_PACKET_RESULT_REVIEW_ACCEPTS_CRITICIZABILITY_ONLY_PACKET_AND_AUTHORIZES_READINESS_ADJUDICATION_EXECUTION_ONLY",
         "V01_ALPHA_RELEASE_READINESS_ADJUDICATION_AFTER_DEPENDENCY_REMEDIATION_CLOSEOUT_EXECUTED_WITH_NO_RELEASE_ASSEMBLY_OR_PROMOTION",
         "V01_ALPHA_CRITICIZABILITY_READINESS_ADJUDICATION_RESULT_REVIEW_ACCEPTS_ELIGIBILITY_AND_AUTHORIZES_QFT_GR_WITNESS_PACKET_PREPARATION_ONLY",
