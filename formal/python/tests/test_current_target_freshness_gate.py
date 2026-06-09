@@ -1144,7 +1144,7 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "execute_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt"
+    "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1312,13 +1312,16 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
     "execute_qft_gr_state_expectation_compatibility_assumption_reduction_attempt"
 )
 PREVIOUS_LIVE_TARGET = (
+    "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_result"
+)
+CONSUMED_TARGET = (
     "execute_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt"
 )
 PREVIOUS_TARGET = (
     "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result"
 )
 LIVE_TARGET = (
-    "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_result"
+    "prepare_qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1335,7 +1338,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_WeakStrongConservationComparisonScopeAssumptionReductionAttempt.lean"
+    / "QFT_GR_WeakStrongConservationComparisonScopeAssumptionReductionAttemptResultReview.lean"
 )
 RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2811,29 +2814,30 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["authorized_target"] == LIVE_TARGET
     assert (
         current_active_workstream["consumed_target"]
-        == PREVIOUS_LIVE_TARGET
+        == CONSUMED_TARGET
     )
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_v0"
+        == "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_result_review_v0"
     )
     assert current_active_workstream["latest_surface_evidence"] == (
         "formal/toe_formal/ToeFormal/Bridges/"
-        "QFT_GR_WeakStrongConservationComparisonScopeAssumptionReductionAttempt.lean"
+        "QFT_GR_WeakStrongConservationComparisonScopeAssumptionReductionAttemptResultReview.lean"
     )
     assert current_active_workstream["latest_surface_report"] == (
         "formal/docs/release/"
         "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_"
-        "ATTEMPT_20260609_v0.json"
+        "ATTEMPT_RESULT_REVIEW_20260609_v0.json"
     )
     assert current_active_workstream["latest_surface_token"] == (
         "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_"
-        "ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+        "ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_MR_ASSUMP_002_AND_AUTHORIZES_"
+        "NEXT_MATHEMATICAL_REGULARITY_ROW_SELECTION_ONLY"
     )
     assert current_active_workstream["latest_surface_tool"] == (
         "formal/python/tools/"
         "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_"
-        "attempt_report.py"
+        "attempt_result_review_report.py"
     )
     assert current_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
@@ -2848,21 +2852,22 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["result_surface"] == (
         "formal/toe_formal/ToeFormal/Bridges/"
-        "QFT_GR_WeakStrongConservationComparisonScopeAssumptionReductionAttempt.lean"
+        "QFT_GR_WeakStrongConservationComparisonScopeAssumptionReductionAttemptResultReview.lean"
     )
     assert current_active_workstream["result_report"] == (
         "formal/docs/release/"
         "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_"
-        "ATTEMPT_20260609_v0.json"
+        "ATTEMPT_RESULT_REVIEW_20260609_v0.json"
     )
     assert current_active_workstream["result_token"] == (
         "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_"
-        "ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+        "ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_MR_ASSUMP_002_AND_AUTHORIZES_"
+        "NEXT_MATHEMATICAL_REGULARITY_ROW_SELECTION_ONLY"
     )
     assert current_active_workstream["result_tool"] == (
         "formal/python/tools/"
         "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_"
-        "attempt_report.py"
+        "attempt_result_review_report.py"
     )
     assert current_active_workstream["construction_execution_surface"] == (
         "formal/toe_formal/ToeFormal/Release/"
@@ -3131,7 +3136,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["output_token"] == (
         "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_"
-        "ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+        "ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_MR_ASSUMP_002_AND_AUTHORIZES_"
+        "NEXT_MATHEMATICAL_REGULARITY_ROW_SELECTION_ONLY"
     )
     assert current_active_workstream["source_map_closure_registration_packet_token"] == (
         "V01_ALPHA_RETAINED_TRANCHE_004_SOURCE_MAP_CLOSURE_REGISTRATION_PACKET_PREPARED_WITH_NO_SEAM_CLOSURE_OR_RELEASE_PROMOTION"
@@ -4165,8 +4171,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "state_domain_assumption_reduction_closeout_packet_preparation"
     )
     assert current_active_workstream["next_action_scope"] == (
-        "REVIEW_QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_"
-        "REDUCTION_ATTEMPT_RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_"
+        "PREPARE_QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_"
+        "REDUCTION_PACKET_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_"
         "SEAM_CLOSURE"
     )
     assert current_active_workstream["all_dependency_tranches_nonblocking"] == "yes"
@@ -4195,7 +4201,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert current_active_workstream["review_decision"] == "pending_result_review"
     assert current_active_workstream["result_review_target"] == (
-        LIVE_TARGET
+        "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_"
+        "attempt_result"
     )
     assert current_active_workstream["witness_attempt_executed"] == "yes"
     assert current_active_workstream["result_classification"] == (
@@ -4216,10 +4223,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "MR-ASSUMP-001-derivative_exchange_regular_boundary"
     )
     assert current_active_workstream["next_mathematical_regularity_assumption_row"] == (
-        "MR-ASSUMP-002-weak_strong_conservation_comparison_scope"
+        "MR-ASSUMP-003-distributional_pairing_regular_domain"
     )
     assert current_active_workstream["next_mathematical_regularity_assumption_row_object"] == (
-        "weak_strong_conservation_comparison_scope_for_future_conservation_proof_object"
+        "distributional_pairing_regular_domain_for_candidate_renormalized_stress_energy_"
+        "expectation"
     )
     assert current_active_workstream["selected_mathematical_regularity_assumption_row"] == (
         "MR-ASSUMP-002-weak_strong_conservation_comparison_scope"

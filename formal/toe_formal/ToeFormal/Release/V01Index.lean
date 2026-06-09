@@ -3366,6 +3366,40 @@ def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptSelected
   "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_" ++
     "reduction_attempt_result"
 
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptResultReviewLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_WeakStrongConservationComparisonScopeAssumptionReductionAttemptResultReview"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptResultReviewOutcomeToken :
+    String :=
+  "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_" ++
+    "ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_MR_ASSUMP_002_AND_AUTHORIZES_" ++
+    "NEXT_MATHEMATICAL_REGULARITY_ROW_SELECTION_ONLY"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptResultReviewClassification :
+    String :=
+  "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_" ++
+    "attempt_result_review_accepts_reduced_mr_assump_002_and_authorizes_next_" ++
+    "mathematical_regularity_row_selection_only"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptResultReviewConsumedAttempt :
+    String :=
+  "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_" ++
+    "ATTEMPT_v0"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptResultReviewAcceptedRow :
+    String :=
+  "MR-ASSUMP-002-weak_strong_conservation_comparison_scope"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptResultReviewNextRow :
+    String :=
+  "MR-ASSUMP-003-distributional_pairing_regular_domain"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptResultReviewSelectedNextTarget :
+    String :=
+  "prepare_qft_gr_distributional_pairing_regular_domain_assumption_" ++
+    "reduction_packet"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
