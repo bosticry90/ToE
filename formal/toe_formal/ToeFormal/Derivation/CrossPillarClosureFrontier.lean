@@ -350,11 +350,11 @@ def crossPillarClosureFrontierSurfaceId : String :=
 
 /-- Previous live target consumed by the QFT-GR MR-ASSUMP-002 packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_result"
+  "prepare_qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet"
 
 /-- Current live target after the QFT-GR MR-ASSUMP-002 packet. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet"
+  "review_qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -366,8 +366,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 -/
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
-  next_strict_slice :=
-  "prepare_qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet"
+  next_strict_slice := "review_qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

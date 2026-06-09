@@ -100,7 +100,7 @@ Phase 0-5 objective-quality plan status:
 - Phase 5 final acceptance sweep is blocked while A1A/A2A15A1, Phase 2, and Phase 2B remain open.
 
 Next strict architecture target:
-- `CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet`
+- `CURRENT_LIVE_NEXT_TARGET_v0: review_qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet_result`
 - `PREVIOUS_LIVE_NEXT_TARGET_v0: review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_result`
 - `ACTIVE_LANE_v0: review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_result`
 - `QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_OUTCOME_v0: QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE`
