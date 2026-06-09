@@ -5096,7 +5096,7 @@ Latest preserved commit before this local packet-preparation delta is `1655a09a 
 
 **Current Status**
 Authoritative live target:
-`review_qft_gr_mathematical_regularity_assumption_reduction_packet_result`
+`execute_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt`
 
 Active lane:
 `qft_gr_state_expectation_compatibility_assumption_reduction_attempt`
@@ -5432,7 +5432,7 @@ That is the right distinction.
 The current live target is:
 
 ```text
-review_qft_gr_mathematical_regularity_assumption_reduction_packet_result
+execute_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt
 ```
 
 The active lane is:
@@ -6195,7 +6195,7 @@ This recap is non-hallucinatory because it keeps four levels separate.
 Examples:
 
 * The project is not a physics-complete ToE claim. 
-* The current live target is `review_qft_gr_mathematical_regularity_assumption_reduction_packet_result`.
+* The current live target is `execute_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt`.
 * The axiom ledger records 59 real axioms, 0 `sorry`/`admit`, and 14 axiom-bearing files. 
 * The compendium pins key equations like Poisson, Maxwell, Klein-Gordon class, and Schrödinger-form targets. 
 * The seam inventory separates governance completion from physics completion. 
@@ -6309,7 +6309,7 @@ then it cannot honestly become the source side of Einstein-like gravity.
 So the current target is narrow but important:
 
 ```text
-review_qft_gr_mathematical_regularity_assumption_reduction_packet_result
+execute_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt
 ```
 
 Plain meaning:
@@ -6486,7 +6486,7 @@ Right now, the project should not randomly reopen every pillar.
 The current live target is:
 
 ```text
-review_qft_gr_mathematical_regularity_assumption_reduction_packet_result
+execute_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt
 ```
 
 The repo says the current QFT-GR state-domain chain accepted SD-ASSUMP-001, SD-ASSUMP-002, and SD-ASSUMP-003 at bounded row-reduction level, closed the state-domain family for this lane, and prepared the mathematical-regularity packet by selecting only MR-ASSUMP-001. This does not claim state/source admissibility, conservation, Bianchi compatibility, or QFT-GR closure.
@@ -8833,7 +8833,7 @@ It has:
 The loop registry currently pins:
 
 ```text
-live_next_target = review_qft_gr_mathematical_regularity_assumption_reduction_packet_result
+live_next_target = execute_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt
 ```
 
 and marks forbidden promotions such as Phase 2 authorization, seam closure, empirical claim, master-action promotion, and governance-manifest enrollment. 
@@ -8921,7 +8921,7 @@ current allowed action
 Right now:
 
 ```text
-review_qft_gr_mathematical_regularity_assumption_reduction_packet_result
+execute_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt
 ```
 
 ## Long-term memory
@@ -13667,7 +13667,7 @@ A generic agent might try to “solve” QFT-GR.
 A ToE SKILL-first agent would know the target is narrower:
 
 ```text
-review_qft_gr_mathematical_regularity_assumption_reduction_packet_result
+execute_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt
 ```
 
 So it would do something like:
@@ -14261,7 +14261,7 @@ A generic agent might try to “solve” QFT-GR.
 A ToE SKILL-first agent would know the target is narrower:
 
 ```text
-review_qft_gr_mathematical_regularity_assumption_reduction_packet_result
+execute_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt
 ```
 
 So it would do something like:
@@ -14957,7 +14957,7 @@ The second pattern is how repo drift happens.
 Your current repo frontier is:
 
 ```text
-review_qft_gr_mathematical_regularity_assumption_reduction_packet_result
+execute_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt
 ```
 
 A terminal agent could help by:
