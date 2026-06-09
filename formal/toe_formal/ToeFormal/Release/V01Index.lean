@@ -3338,6 +3338,34 @@ def qftGRWeakStrongConservationComparisonScopeAssumptionReductionPacketResultRev
   "execute_qft_gr_weak_strong_conservation_comparison_scope_assumption_" ++
     "reduction_attempt"
 
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_WeakStrongConservationComparisonScopeAssumptionReductionAttempt"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptOutcomeToken :
+    String :=
+  "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_" ++
+    "ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptClassification :
+    String :=
+  "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduced_pending_" ++
+    "result_review"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptContractId :
+    String :=
+  "MR-ASSUMP-002-weak_strong_conservation_comparison_scope_contract_v0"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptContractStatus :
+    String :=
+  "bounded_repo_local_weak_strong_comparison_scope_contract_pending_result_" ++
+    "review_not_global_weak_or_strong_conservation_discharge"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionAttemptSelectedNextTarget :
+    String :=
+  "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_" ++
+    "reduction_attempt_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
@@ -8592,6 +8620,30 @@ theorem qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_pa
   trivial
 
 theorem qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_selects_result_review : True := by
+  trivial
+
+theorem qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_consumes_packet_result_review : True := by
+  trivial
+
+theorem qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_reduces_mr_assump_002_pending_review : True := by
+  trivial
+
+theorem qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_no_weak_or_strong_conservation_proof : True := by
+  trivial
+
+theorem qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_no_state_or_source_admissibility : True := by
+  trivial
+
+theorem qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_no_conservation_proof_object_or_witness : True := by
+  trivial
+
+theorem qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_no_bianchi_or_semiclassical_einstein : True := by
+  trivial
+
+theorem qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_no_qft_gr_closure : True := by
+  trivial
+
+theorem qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt_selects_result_review : True := by
   trivial
 
 theorem v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review_does_not_execute_construction : True := by
