@@ -277,7 +277,7 @@ def test_post_qm_stat_entropy_log_domain_reduction_selection_registry_rotates_to
     else:
         assert state["live_next_target"] in {
             SELECTED_TARGET,
-            "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result",
+            "execute_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt",
             "select_next_post_v01_alpha_manifest_enrollment_bounded_attack",
             "review_v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet_result",
             "review_v01_alpha_retained_tranche_004_bounded_source_map_witness_chain_research_attempt_result",

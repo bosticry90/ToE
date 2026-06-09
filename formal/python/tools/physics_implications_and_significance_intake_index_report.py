@@ -20,7 +20,7 @@ CLASSIFICATION = (
     "no_live_target_mutation"
 )
 CURRENT_LIVE_NEXT_TARGET = (
-    "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result"
+    "execute_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt"
 )
 SOURCE_ATTACHMENT = "Physics Imps and Sigs.txt"
 LEDGER_TARGET = "prepare_physics_implications_source_verification_ledger_packet"

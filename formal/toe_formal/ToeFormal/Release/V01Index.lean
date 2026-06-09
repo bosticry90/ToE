@@ -3317,6 +3317,27 @@ def qftGRWeakStrongConservationComparisonScopeAssumptionReductionPacketSelectedN
   "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_" ++
     "reduction_packet_result"
 
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionPacketResultReviewLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_WeakStrongConservationComparisonScopeAssumptionReductionPacketResultReview"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionPacketResultReviewOutcomeToken :
+    String :=
+  "QFT_GR_WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_" ++
+    "REDUCTION_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_" ++
+    "MR_ASSUMP_002_ATTEMPT_ONLY"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionPacketResultReviewClassification :
+    String :=
+  "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_" ++
+    "packet_result_review_accepts_packet_and_authorizes_bounded_mr_assump_002_" ++
+    "attempt_only"
+
+def qftGRWeakStrongConservationComparisonScopeAssumptionReductionPacketResultReviewSelectedNextTarget :
+    String :=
+  "execute_qft_gr_weak_strong_conservation_comparison_scope_assumption_" ++
+    "reduction_attempt"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
