@@ -1,0 +1,263 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "blocker_preserved": true,
+    "classification_authorized": true,
+    "consumes_expected_packet_result_review": true,
+    "distributional_attempt_authorized": true,
+    "distributional_attempt_not_previously_executed": true,
+    "distributional_fields_preserved": true,
+    "exactly_one_classification_selected": true,
+    "exactly_one_next_target_selected": true,
+    "family_preserved": true,
+    "no_bianchi_compatibility_claim": true,
+    "no_conservation_proof": true,
+    "no_conservation_proof_object_constructed": true,
+    "no_conservation_witness_constructed": true,
+    "no_distributional_domain_proof": true,
+    "no_empirical_validation": true,
+    "no_master_action_promotion": true,
+    "no_mathematical_regularity_family_discharge": true,
+    "no_qft_gr_seam_closure": true,
+    "no_release_or_public_submission": true,
+    "no_semiclassical_einstein_derivation": true,
+    "no_source_admissibility_claim": true,
+    "no_state_admissibility_claim": true,
+    "prior_completed_families_preserved": true,
+    "review_classification_expected": true,
+    "review_outcome_expected": true,
+    "review_schema_expected": true,
+    "review_selected_this_execution": true,
+    "selected_row_preserved": true
+  },
+  "accepted": true,
+  "accepted_prior_mathematical_regularity_assumption_row_count": 2,
+  "accepted_prior_mathematical_regularity_assumption_rows": [
+    "MR-ASSUMP-001-derivative_exchange_regular_boundary",
+    "MR-ASSUMP-002-weak_strong_conservation_comparison_scope"
+  ],
+  "actual_conservation_claimed": false,
+  "assumption_discharge_claimed": false,
+  "assumptions_reduced_or_discharged_by_implication": false,
+  "attempt_id": "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_v0",
+  "attempt_scope": "EXECUTE_BOUNDED_QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_ONLY",
+  "blocker": "insufficient_assumptions_for_conservation",
+  "blocker_remains": "insufficient_assumptions_for_conservation",
+  "bounded_distributional_pairing_regular_domain_contract_status": "bounded_repo_local_distributional_pairing_regular_domain_contract_pending_result_review_not_distributional_domain_proof_or_conservation_discharge",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The bounded MR-ASSUMP-003 distributional-pairing regular-domain attempt must be result-reviewed before any downstream mathematical-regularity row or conservation work.",
+      "target": "review_qft_gr_distributional_pairing_regular_domain_assumption_reduction_attempt_result"
+    },
+    {
+      "decision": "not_authorized_current_row",
+      "reason": "MR-ASSUMP-004 remains downstream of MR-ASSUMP-003 result review.",
+      "target": "prepare_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "This bounded attempt does not prove distributional-pairing regularity.",
+      "target": "prove_qft_gr_distributional_pairing_regularity"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "This bounded attempt does not prove weak conservation.",
+      "target": "prove_qft_gr_weak_conservation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "This bounded attempt does not prove strong conservation.",
+      "target": "prove_qft_gr_strong_conservation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No conservation proof object is constructed or authorized here.",
+      "target": "construct_qft_gr_conservation_proof_object"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No conservation witness is constructed or authorized here.",
+      "target": "construct_qft_gr_conservation_witness"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "MR-ASSUMP-003 attempt does not imply state admissibility.",
+      "target": "claim_qft_gr_state_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "MR-ASSUMP-003 attempt does not imply source admissibility.",
+      "target": "claim_qft_gr_source_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Bianchi compatibility remains downstream and unclaimed.",
+      "target": "claim_qft_gr_bianchi_compatibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The semiclassical Einstein equation is not derived here.",
+      "target": "derive_semiclassical_einstein_equation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No bounded assumption-reduction attempt closes QFT-GR.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Release assembly and public submission remain outside this checkpoint.",
+      "target": "authorize_release_assembly_or_public_submission"
+    }
+  ],
+  "candidate_reduction_route": "pin the regular domain for distributional pairings of the candidate renormalized stress-energy expectation",
+  "captured_at_utc": "2026-06-08T00:00:00Z",
+  "classification_options": [
+    "qft_gr_distributional_pairing_regular_domain_assumption_reduced_pending_result_review",
+    "qft_gr_distributional_pairing_regular_domain_assumption_obstruction_identified_requires_refinement",
+    "qft_gr_distributional_pairing_regular_domain_assumption_inconclusive_requires_assumption_reduction"
+  ],
+  "classification_rows": [
+    {
+      "classification": "qft_gr_distributional_pairing_regular_domain_assumption_reduced_pending_result_review",
+      "meaning": "MR-ASSUMP-003 has been reduced to a bounded repo-local distributional-pairing regular-domain contract pending result review, without proving distributional-pairing regularity or conservation.",
+      "selected": true
+    },
+    {
+      "classification": "qft_gr_distributional_pairing_regular_domain_assumption_obstruction_identified_requires_refinement",
+      "meaning": "The attempt found an obstruction requiring refinement before the distributional-pairing regular-domain assumption could be reduced.",
+      "selected": false
+    },
+    {
+      "classification": "qft_gr_distributional_pairing_regular_domain_assumption_inconclusive_requires_assumption_reduction",
+      "meaning": "The attempt could not determine reduction status without further assumption reduction.",
+      "selected": false
+    }
+  ],
+  "completed_prior_assumption_families": [
+    "operator_domain_assumptions",
+    "renormalization_assumptions",
+    "state_domain_assumptions"
+  ],
+  "completed_prior_assumption_family_count": 3,
+  "conservation_blocker_remains": true,
+  "conservation_proof_object_constructed": false,
+  "conservation_proved": false,
+  "conservation_witness_constructed": false,
+  "consumed_result_review_classification": "qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet_result_review_accepts_packet_and_authorizes_bounded_mr_assump_003_attempt_only",
+  "consumed_result_review_outcome_id": "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_MR_ASSUMP_003_ATTEMPT_ONLY",
+  "consumed_target": "execute_qft_gr_distributional_pairing_regular_domain_assumption_reduction_attempt",
+  "consumes_qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet_result_review": "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0",
+  "consumes_qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet_result_review_pointer": "formal/docs/release/QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_20260609_v0.json",
+  "covariant_conservation_statement_proved": false,
+  "current_family": "mathematical_regularity_assumptions",
+  "distributional_pairing_domain_boundaries": [
+    "distributional_pairing_domain_only_for_candidate_renormalized_expectation",
+    "operator_domain_and_state_domain_assumption_rows_preserved",
+    "weak_strong_scope_assumption_row_preserved_as_prior_reduction",
+    "no_conservation_proof_object_claim",
+    "no_conservation_witness_claim",
+    "no_state_admissibility_claim",
+    "no_source_admissibility_claim",
+    "no_bianchi_compatibility_claim",
+    "no_qft_gr_seam_closure"
+  ],
+  "distributional_pairing_regular_domain": "distributional_pairing_regular_domain_for_candidate_renormalized_stress_energy_expectation",
+  "distributional_pairing_regular_domain_assumption_discharged": false,
+  "distributional_pairing_regular_domain_assumption_discharged_by_attempt": false,
+  "distributional_pairing_regular_domain_assumption_inconclusive": false,
+  "distributional_pairing_regular_domain_assumption_obstruction_identified": false,
+  "distributional_pairing_regular_domain_assumption_reduced_by_attempt": true,
+  "distributional_pairing_regular_domain_assumption_reduced_or_discharged_by_implication": false,
+  "distributional_pairing_regular_domain_assumption_reduced_pending_result_review": true,
+  "distributional_pairing_regular_domain_assumption_reduction_attempt_executed": true,
+  "distributional_pairing_regular_domain_assumption_reduction_attempt_started": true,
+  "distributional_pairing_regular_domain_contract_id": "MR-ASSUMP-003-distributional_pairing_regular_domain_contract_v0",
+  "distributional_pairing_regular_domain_proved": false,
+  "distributional_pairing_regular_domain_proved_by_attempt": false,
+  "distributional_pairing_regular_domain_reduction_contract": {
+    "accepted_prior_mathematical_regularity_assumption_rows": [
+      "MR-ASSUMP-001-derivative_exchange_regular_boundary",
+      "MR-ASSUMP-002-weak_strong_conservation_comparison_scope"
+    ],
+    "assumption_family": "mathematical_regularity_assumptions",
+    "assumption_id": "MR-ASSUMP-003-distributional_pairing_regular_domain",
+    "available_repo_evidence": [
+      "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0",
+      "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+      "qft_gr_distributional_pairing_regular_domain_assumption_reduction_packet_prepared_with_no_conservation_witness_or_seam_closure"
+    ],
+    "candidate_reduction_route": "pin the regular domain for distributional pairings of the candidate renormalized stress-energy expectation",
+    "claim_ceiling": "distributional_pairing_regular_domain_contract_pending_result_review_only_no_distributional_domain_proof_no_conservation_proof_no_conservation_proof_object_no_conservation_witness_no_state_or_source_admissibility_no_bianchi_no_qft_gr_seam_closure",
+    "contract_id": "MR-ASSUMP-003-distributional_pairing_regular_domain_contract_v0",
+    "contract_status": "bounded_repo_local_distributional_pairing_regular_domain_contract_pending_result_review_not_distributional_domain_proof_or_conservation_discharge",
+    "distributional_pairing_domain_boundaries": [
+      "distributional_pairing_domain_only_for_candidate_renormalized_expectation",
+      "operator_domain_and_state_domain_assumption_rows_preserved",
+      "weak_strong_scope_assumption_row_preserved_as_prior_reduction",
+      "no_conservation_proof_object_claim",
+      "no_conservation_witness_claim",
+      "no_state_admissibility_claim",
+      "no_source_admissibility_claim",
+      "no_bianchi_compatibility_claim",
+      "no_qft_gr_seam_closure"
+    ],
+    "distributional_pairing_regular_domain": "distributional_pairing_regular_domain_for_candidate_renormalized_stress_energy_expectation",
+    "failure_mode_if_unresolved": "the source candidate may be meaningful as an expectation but not regular enough for the distributional conservation form",
+    "regularity_condition": "distributional_pairing_regular_domain_for_candidate_renormalized_stress_energy_expectation",
+    "required_future_proof_object": "distributional_pairing_domain_regular_for_candidate_source"
+  },
+  "empirical_validation_claimed": false,
+  "executed": true,
+  "execution_findings": [
+    "The attempt consumes the accepted MR-ASSUMP-003 packet result review and executes only MR-ASSUMP-003.",
+    "The bounded contract pins a repo-local regular-domain obligation for candidate renormalized stress-energy expectation pairings.",
+    "The reduction remains pending result review and does not prove distributional-pairing regularity or conservation.",
+    "The attempt constructs no conservation proof object or conservation witness and leaves insufficient_assumptions_for_conservation active."
+  ],
+  "failure_mode_if_unresolved": "the source candidate may be meaningful as an expectation but not regular enough for the distributional conservation form",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_regularity_assumptions_discharged": false,
+  "mathematical_regularity_assumptions_reduced_or_discharged_by_attempt": false,
+  "next_action_scope": "REVIEW_QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_ONLY_NO_DISTRIBUTIONAL_DOMAIN_PROOF_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This execution reduces only MR-ASSUMP-003 to a bounded repo-local distributional-pairing regular-domain contract pending result review. It does not prove distributional-pairing regularity, prove conservation, claim state admissibility, claim source admissibility, construct a conservation proof object or witness, claim Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, promote the master action, assemble release, or authorize public submission.",
+  "operator_domain_assumptions_completed": true,
+  "outcome_id": "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "primary_assumption_reduction_family": "mathematical_regularity_assumptions",
+  "proof_object_constructed": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "renormalization_assumptions_completed": true,
+  "required_future_proof_object": "distributional_pairing_domain_regular_for_candidate_source",
+  "result_classification": "qft_gr_distributional_pairing_regular_domain_assumption_reduced_pending_result_review",
+  "result_classification_count": 1,
+  "schema_id": "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_20260609_v0",
+  "scientific_validation_claimed": false,
+  "selected_assumption_family": "mathematical_regularity_assumptions",
+  "selected_blocker": "insufficient_assumptions_for_conservation",
+  "selected_bounded_mathematical_regularity_assumption_row": "MR-ASSUMP-003-distributional_pairing_regular_domain",
+  "selected_mathematical_regularity_assumption_row": "MR-ASSUMP-003-distributional_pairing_regular_domain",
+  "selected_next_authorization_token": "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "selected_next_target": "review_qft_gr_distributional_pairing_regular_domain_assumption_reduction_attempt_result",
+  "selected_next_target_count": 1,
+  "selected_next_target_kind": "qft_gr_distributional_pairing_regular_domain_assumption_reduction_attempt_result_review",
+  "selected_route": "qft_gr_distributional_pairing_regular_domain_assumption_reduction_attempt_result_review_after_execution",
+  "selected_row_count": 1,
+  "selected_row_is_repo_authoritative_next_row": true,
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "state_admissibility_claimed": false,
+  "state_admissibility_discharged": false,
+  "state_domain_assumptions_completed": true,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "strong_conservation_proved": false,
+  "weak_conservation_proved": false
+}
