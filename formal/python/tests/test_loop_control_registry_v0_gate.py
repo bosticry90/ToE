@@ -420,6 +420,9 @@ DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET = (
     "review_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_result"
 )
+WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET = (
+    "prepare_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet"
+)
 STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_PACKET_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
     "QFT_GR_StateExpectationCompatibilityAssumptionReductionPacket.lean"
@@ -531,6 +534,9 @@ DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET_KIND = 
 )
 DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET_KIND = (
     "qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review"
+)
+WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET_KIND = (
+    "qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_preparation"
 )
 MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_ID = (
     "QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_v0"
@@ -658,6 +664,30 @@ DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_
 )
 DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_PENDING_CLASSIFICATION = (
     "qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_pending"
+)
+DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE = (
+    "formal/toe_formal/ToeFormal/Bridges/"
+    "QFT_GR_DerivativeExchangeRegularBoundaryAssumptionReductionAttemptResultReview.lean"
+)
+DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT = (
+    "formal/docs/release/"
+    "QFT_GR_DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_"
+    "RESULT_REVIEW_20260608_v0.json"
+)
+DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL = (
+    "formal/python/tools/"
+    "qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_"
+    "result_review_report.py"
+)
+DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN = (
+    "QFT_GR_DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_"
+    "RESULT_REVIEW_ACCEPTS_REDUCED_MR_ASSUMP_001_AND_AUTHORIZES_NEXT_"
+    "MATHEMATICAL_REGULARITY_ROW_SELECTION_ONLY"
+)
+DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION = (
+    "qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_"
+    "result_review_accepts_reduced_mr_assump_001_and_authorizes_next_"
+    "mathematical_regularity_row_selection_only"
 )
 
 EXPECTED_ALLOWED_STATUSES = [
@@ -2223,6 +2253,127 @@ def test_active_result_review_target_is_pending_and_latest_surface_matches_execu
         )
         assert workstream["selected_row_is_first_repo_authoritative_row"] == "yes"
         assert workstream["next_assumption_family"] == "mathematical_regularity_assumptions"
+        assert workstream["state_admissibility_claimed"] == "no"
+        assert workstream["source_admissibility_claimed"] == "no"
+        assert workstream["Bianchi_compatibility_claimed"] == "no"
+        assert workstream["conservation_proof_object_constructed"] == "no"
+        assert workstream["conservation_witness_constructed"] == "no"
+        assert workstream["qft_gr_seam_closed"] == "no"
+
+    if live_target == WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET:
+        assert workstream["consumed_target"] == (
+            DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+        )
+        assert workstream["latest_surface"] == (
+            "qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_v0"
+        )
+        assert workstream["latest_surface_evidence"] == (
+            DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_SURFACE
+        )
+        assert workstream["latest_surface_report"] == (
+            DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_REPORT
+        )
+        assert workstream["latest_surface_token"] == (
+            DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
+        )
+        assert workstream["latest_surface_tool"] == (
+            DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL
+        )
+        assert workstream["result_classification"] == (
+            DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_CLASSIFICATION
+        )
+        assert workstream["result_review_accepted"] == "yes"
+        assert workstream["result_review_completed"] == "yes"
+        assert workstream["result_review_pending"] == "no"
+        assert workstream["result_review_id"] == (
+            "QFT_GR_DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_"
+            "RESULT_REVIEW_v0"
+        )
+        assert workstream["consumed_result_review_id"] == (
+            "QFT_GR_DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_"
+            "RESULT_REVIEW_v0"
+        )
+        assert workstream["consumed_result_review_tool"] == (
+            DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL
+        )
+        assert workstream["review_decision"] == "accept"
+        assert workstream["result_review_target"] == (
+            DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+        )
+        assert workstream["result_tool"] == (
+            DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOOL
+        )
+        assert workstream["selected_next_target"] == live_target
+        assert workstream["selected_next_target_kind"] == (
+            WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET_KIND
+        )
+        assert workstream["selected_next_authorization_token"] == (
+            DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_TOKEN
+        )
+        assert (
+            workstream[
+                "derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_accepted"
+            ]
+            == "yes"
+        )
+        assert (
+            workstream[
+                "derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_completed"
+            ]
+            == "yes"
+        )
+        assert (
+            workstream[
+                "derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_pending"
+            ]
+            == "no"
+        )
+        assert (
+            workstream[
+                "derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_selected_next_target"
+            ]
+            == live_target
+        )
+        assert (
+            workstream[
+                "derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_selected_next_target_kind"
+            ]
+            == WEAK_STRONG_CONSERVATION_COMPARISON_SCOPE_ASSUMPTION_REDUCTION_PACKET_TARGET_KIND
+        )
+        assert workstream["accepted_mathematical_regularity_assumption_row"] == (
+            "MR-ASSUMP-001-derivative_exchange_regular_boundary"
+        )
+        assert workstream["next_mathematical_regularity_assumption_row"] == (
+            "MR-ASSUMP-002-weak_strong_conservation_comparison_scope"
+        )
+        assert workstream["next_mathematical_regularity_assumption_row_object"] == (
+            "weak_strong_conservation_comparison_scope_for_future_conservation_proof_object"
+        )
+        assert (
+            workstream[
+                "next_mathematical_regularity_assumption_row_required_future_proof_object"
+            ]
+            == "weak_strong_conservation_comparison_regular_scope"
+        )
+        assert (
+            workstream[
+                "weak_strong_conservation_comparison_scope_assumption_reduction_packet_authorized"
+            ]
+            == "yes"
+        )
+        assert (
+            workstream[
+                "weak_strong_conservation_comparison_scope_assumption_reduction_packet_prepared"
+            ]
+            == "no"
+        )
+        assert (
+            workstream[
+                "weak_strong_conservation_comparison_scope_assumption_reduction_packet_target"
+            ]
+            == live_target
+        )
+        assert workstream["derivative_exchange_regular_boundary_globally_solved"] == "no"
         assert workstream["state_admissibility_claimed"] == "no"
         assert workstream["source_admissibility_claimed"] == "no"
         assert workstream["Bianchi_compatibility_claimed"] == "no"
