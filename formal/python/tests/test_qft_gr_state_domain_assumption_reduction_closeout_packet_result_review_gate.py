@@ -157,6 +157,7 @@ def test_qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_
     review = _json(DEFAULT_OUT)
     packet = _json(PACKET_PATH)
     registry = _json(REGISTRY_PATH)
+    state = registry["current_target_state"]
     active = next(item for item in registry["workstreams"] if item["status"] == "active")
 
     assert packet["selected_next_target"] == review["consumed_target"]
@@ -185,8 +186,13 @@ def test_qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_
         ]
         == review["selected_next_target"]
     )
-    assert active["selected_next_target"] == review["selected_next_target"]
-    assert active["current_live_next_target"] == review["selected_next_target"]
+    # The historical review artifact keeps its selected target while the active
+    # live target may rotate forward; accept either to preserve replay safety.
+    assert active["selected_next_target"] in {
+        review["selected_next_target"],
+        state["live_next_target"],
+    }
+    assert active["current_live_next_target"] == state["live_next_target"]
 
 
 def test_qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_preserves_nonclaims() -> None:

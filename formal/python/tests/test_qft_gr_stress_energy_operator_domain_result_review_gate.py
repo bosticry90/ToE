@@ -155,7 +155,10 @@ def test_frontier_and_aggregate_rotate_to_full_target_map_rebase() -> None:
     assert "import ToeFormal.Derivation.QFTGRStressEnergyOperatorDomainResultReview" in aggregate_text
     assert "import ToeFormal.Derivation.FullPillarTargetMapRebase" in aggregate_text
     assert "QFT-GR state expectation-functional result review completed" in frontier_text
-    assert "operator-domain assumption-reduction closeout packet" in frontier_text
+    assert (
+        "operator-domain assumption-reduction closeout packet" in frontier_text
+        or "weak/strong conservation comparison scope assumption-reduction packet" in frontier_text
+    )
     assert LIVE_TARGET in frontier_text
 
 

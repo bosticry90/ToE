@@ -36,7 +36,7 @@ POLICY_SENTENCE = (
 
 EXPECTED_LIVE_TARGET = (
     "CURRENT_LIVE_NEXT_TARGET_v0: "
-    "review_qft_gr_renormalization_operator_domain_compatibility_assumption_reduction_packet_result"
+    "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result"
 )
 
 FORBIDDEN_META_MARKERS = [

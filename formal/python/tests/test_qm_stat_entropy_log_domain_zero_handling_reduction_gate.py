@@ -230,6 +230,7 @@ def test_qm_stat_entropy_log_domain_zero_handling_reduction_registry_rotates_to_
         assert state["active_lane"] == ACTIVE_LANE
     else:
         assert state["live_next_target"] in {
+            "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result",
             "prepare_qm_stat_entropy_assumption_reduction_candidate_selection",
             "select_next_post_v01_alpha_manifest_enrollment_bounded_attack",
             "review_v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet_result",
@@ -255,6 +256,7 @@ def test_qm_stat_entropy_log_domain_zero_handling_reduction_registry_rotates_to_
             "prepare_qft_gr_renormalization_assumption_reduction_packet",
         }
         assert state["active_lane"] in {
+            "review_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_packet_result",
             "post_qm_stat_entropy_log_domain_reduction_bounded_attack_selection",
             "v01_alpha_governance_manifest_enrollment_result_review",
             "v01_alpha_dependency_remediation_tranche_006_release_policy_adjudication_packet",
