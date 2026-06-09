@@ -48,6 +48,11 @@ NEXT_TARGET_KIND = (
     "qft_gr_derivative_exchange_regular_boundary_assumption_reduction_"
     "attempt_execution"
 )
+AUTHORIZED_ATTEMPT_RESULT_CLASSIFICATIONS = [
+    "qft_gr_derivative_exchange_regular_boundary_assumption_reduced_pending_result_review",
+    "qft_gr_derivative_exchange_regular_boundary_assumption_obstruction_identified_requires_refinement",
+    "qft_gr_derivative_exchange_regular_boundary_assumption_inconclusive_requires_assumption_reduction",
+]
 
 DEFAULT_OUT = (
     REPO_ROOT
@@ -340,6 +345,15 @@ def build_qft_gr_mathematical_regularity_assumption_reduction_packet_result_revi
         ),
         "derivative_exchange_regular_boundary_assumption_reduction_attempt_executed": (
             False
+        ),
+        "authorized_attempt_result_classifications": (
+            AUTHORIZED_ATTEMPT_RESULT_CLASSIFICATIONS
+        ),
+        "authorized_attempt_result_classification_count": len(
+            AUTHORIZED_ATTEMPT_RESULT_CLASSIFICATIONS
+        ),
+        "derivative_exchange_regular_boundary_authorized_attempt_result_classifications": (
+            AUTHORIZED_ATTEMPT_RESULT_CLASSIFICATIONS
         ),
         "mathematical_regularity_assumptions_discharged": False,
         "mathematical_regularity_assumptions_reduced_or_discharged_by_review": False,

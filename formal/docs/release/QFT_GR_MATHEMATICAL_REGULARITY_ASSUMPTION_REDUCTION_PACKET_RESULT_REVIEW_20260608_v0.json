@@ -30,6 +30,12 @@
   "accepted": true,
   "actual_conservation_claimed": false,
   "assumptions_reduced_or_discharged_by_review": false,
+  "authorized_attempt_result_classification_count": 3,
+  "authorized_attempt_result_classifications": [
+    "qft_gr_derivative_exchange_regular_boundary_assumption_reduced_pending_result_review",
+    "qft_gr_derivative_exchange_regular_boundary_assumption_obstruction_identified_requires_refinement",
+    "qft_gr_derivative_exchange_regular_boundary_assumption_inconclusive_requires_assumption_reduction"
+  ],
   "blocker": "insufficient_assumptions_for_conservation",
   "blocker_remains": "insufficient_assumptions_for_conservation",
   "broader_blocker_resolution_required": true,
@@ -131,6 +137,11 @@
   "derivative_exchange_regular_boundary": "bounded_derivative_exchange_regular_boundary_for_state_expectation_and_covariant_divergence",
   "derivative_exchange_regular_boundary_assumption_reduction_attempt_authorized": true,
   "derivative_exchange_regular_boundary_assumption_reduction_attempt_executed": false,
+  "derivative_exchange_regular_boundary_authorized_attempt_result_classifications": [
+    "qft_gr_derivative_exchange_regular_boundary_assumption_reduced_pending_result_review",
+    "qft_gr_derivative_exchange_regular_boundary_assumption_obstruction_identified_requires_refinement",
+    "qft_gr_derivative_exchange_regular_boundary_assumption_inconclusive_requires_assumption_reduction"
+  ],
   "empirical_validation_claimed": false,
   "master_action_promoted": false,
   "master_action_promotion_authorized": false,

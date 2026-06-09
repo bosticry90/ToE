@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import re
 from pathlib import Path
 from typing import Any
 
@@ -180,7 +181,16 @@ def assert_public_surfaces_match_registry(
 ) -> None:
     live_target = current_target_state()["live_next_target"]
     for path in paths:
-        assert live_target in read_text(path), f"{path} missing live target"
+        text = read_text(path)
+        assert live_target in text, f"{path} missing live target"
+
+        current_citation_targets = re.findall(
+            r"MASTER_ACTION_CURRENT_CITATION_TARGET_v0:\s*([A-Za-z0-9_]+)",
+            text,
+        )
+        assert all(
+            target == live_target for target in current_citation_targets
+        ), f"{path} has stale master-action current citation target"
 
 
 def assert_forbidden_promotions_closed() -> None:
