@@ -1144,7 +1144,7 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result"
+    "execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1312,16 +1312,16 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
     "execute_qft_gr_state_expectation_compatibility_assumption_reduction_attempt"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result"
+    "execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt"
 )
 CONSUMED_TARGET = (
-    "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result"
+    "execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt"
 )
 PREVIOUS_TARGET = (
-    "execute_qft_gr_distributional_pairing_regular_domain_assumption_reduction_attempt"
+    "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result"
 )
 LIVE_TARGET = (
-    "execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt"
+    "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1338,42 +1338,42 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionPacketResultReview.lean"
+    / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttempt.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
-    "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionPacketResultReview.lean"
+    "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttempt.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_REPORT = (
     "formal/docs/release/"
     "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_"
-    "PACKET_RESULT_REVIEW_20260609_v0.json"
+    "ATTEMPT_20260609_v0.json"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_TOKEN = (
     "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_"
-    "PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_MR_ASSUMP_004_"
-    "ATTEMPT_ONLY"
+    "ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_TOOL = (
     "formal/python/tools/"
     "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_"
-    "packet_result_review_report.py"
+    "attempt_report.py"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_CLASSIFICATION = (
-    "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_"
-    "result_review_accepts_packet_and_authorizes_bounded_mr_assump_004_attempt_only"
+    "qft_gr_limit_interchange_regularization_boundary_assumption_reduced_pending_"
+    "result_review"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_REVIEW_CLASSIFICATION = (
-    "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_"
-    "result_review_accepts_packet_and_authorizes_bounded_mr_assump_004_attempt_only"
+    "qft_gr_limit_interchange_regularization_boundary_assumption_reduced_pending_"
+    "result_review"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_REVIEW_ID = (
     "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_"
-    "PACKET_RESULT_REVIEW_v0"
+    "ATTEMPT_v0"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_REVIEW_SCOPE = (
-    "EXECUTE_QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_"
-    "REDUCTION_ATTEMPT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
+    "REVIEW_QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_"
+    "REDUCTION_ATTEMPT_RESULT_ONLY_NO_LIMIT_INTERCHANGE_PROOF_CONSERVATION_"
+    "WITNESS_OR_QFT_GR_SEAM_CLOSURE"
 )
 RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2856,7 +2856,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         current_active_workstream["latest_surface"]
-        == "qft_gr_distributional_pairing_regular_domain_assumption_reduction_attempt_v0"
+        == "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt_v0"
     )
     assert current_active_workstream["latest_surface_evidence"] == (
         DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE
@@ -4203,7 +4203,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert current_active_workstream["selected_next_target"] == LIVE_TARGET
     assert (
         current_active_workstream["selected_next_target_kind"]
-        == "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_preparation"
+        == "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt_result_review"
     )
     assert current_active_workstream["selected_next_action_scope"] == (
         DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_REVIEW_SCOPE
@@ -4245,7 +4245,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "and_covariant_derivative"
     )
     assert current_active_workstream["selected_mathematical_regularity_assumption_row"] == (
-        "MR-ASSUMP-003-distributional_pairing_regular_domain"
+        "MR-ASSUMP-004-limit_interchange_regularization_boundary"
     )
     assert current_active_workstream["selected_row_is_repo_authoritative_next_row"] == "yes"
     assert (

@@ -3582,6 +3582,43 @@ def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionPacketResultRe
   "execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_" ++
     "attempt"
 
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionAttemptLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttempt"
+
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionAttemptOutcomeToken :
+    String :=
+  "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_" ++
+    "ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionAttemptClassification :
+    String :=
+  "qft_gr_limit_interchange_regularization_boundary_assumption_reduced_pending_" ++
+    "result_review"
+
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionAttemptConsumedReview :
+    String :=
+  "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_" ++
+    "RESULT_REVIEW_v0"
+
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionAttemptSelectedRow :
+    String :=
+  "MR-ASSUMP-004-limit_interchange_regularization_boundary"
+
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionAttemptContractId :
+    String :=
+  "MR-ASSUMP-004-limit_interchange_regularization_boundary_contract_v0"
+
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionAttemptContractStatus :
+    String :=
+  "bounded_repo_local_limit_interchange_regularization_boundary_contract_" ++
+    "pending_result_review_not_limit_interchange_proof_or_conservation_discharge"
+
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionAttemptSelectedNextTarget :
+    String :=
+  "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_" ++
+    "attempt_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
