@@ -1,0 +1,225 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "accepted_prior_rows001002003": true,
+    "candidate_reduction_route_recorded": true,
+    "consumes_expected_mr003_result_review": true,
+    "does_not_claim_bianchi_compatibility": true,
+    "does_not_claim_conservation": true,
+    "does_not_claim_state_or_source_admissibility": true,
+    "does_not_close_qft_gr_seam": true,
+    "does_not_construct_conservation_proof_object": true,
+    "does_not_construct_conservation_witness": true,
+    "does_not_derive_semiclassical_einstein_equation": true,
+    "exactly_one_next_target_selected": true,
+    "limit_interchange_boundaries_recorded": true,
+    "mr003_result_review_authorized_this_packet": true,
+    "mr003_result_review_classification_expected": true,
+    "mr003_result_review_outcome_expected": true,
+    "mr003_result_review_schema_expected": true,
+    "no_release_or_public_submission": true,
+    "prepares_reduction_analysis_only": true,
+    "preserves_insufficient_assumptions_blocker": true,
+    "preserves_mathematical_regularity_family": true,
+    "prior_assumption_families_remain_completed": true,
+    "required_future_proof_object_recorded": true,
+    "selected_row_object_expected": true,
+    "selected_row_status_tokens_current": true,
+    "selects_only_mr004": true
+  },
+  "accepted": true,
+  "accepted_prior_mathematical_regularity_assumption_row": "MR-ASSUMP-003-distributional_pairing_regular_domain",
+  "accepted_prior_mathematical_regularity_assumption_row_count": 3,
+  "accepted_prior_mathematical_regularity_assumption_rows": [
+    "MR-ASSUMP-001-derivative_exchange_regular_boundary",
+    "MR-ASSUMP-002-weak_strong_conservation_comparison_scope",
+    "MR-ASSUMP-003-distributional_pairing_regular_domain"
+  ],
+  "actual_conservation_claimed": false,
+  "available_repo_evidence": [
+    "QFT_GR_RENORMALIZATION_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_v0",
+    "QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_v0"
+  ],
+  "blocker": "insufficient_assumptions_for_conservation",
+  "blocker_remains": "insufficient_assumptions_for_conservation",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The prepared MR-ASSUMP-004 packet must be result-reviewed before any bounded reduction attempt is authorized.",
+      "target": "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result"
+    },
+    {
+      "decision": "deferred",
+      "reason": "A bounded MR-ASSUMP-004 attempt requires packet result review first.",
+      "target": "execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Packet preparation does not discharge MR-ASSUMP-004 globally.",
+      "target": "discharge_qft_gr_limit_interchange_regularization_boundary_assumption"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Preparing MR-ASSUMP-004 does not discharge the family.",
+      "target": "discharge_qft_gr_mathematical_regularity_assumptions"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Packet preparation does not construct a conservation proof object.",
+      "target": "construct_qft_gr_conservation_proof_object"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Packet preparation does not construct a conservation witness.",
+      "target": "construct_qft_gr_conservation_witness"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Limit-interchange preparation is not state admissibility.",
+      "target": "claim_qft_gr_state_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Limit-interchange preparation is not source admissibility.",
+      "target": "claim_qft_gr_source_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Bianchi compatibility remains downstream and unclaimed.",
+      "target": "claim_qft_gr_bianchi_compatibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The semiclassical Einstein equation is not derived here.",
+      "target": "derive_semiclassical_einstein_equation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "QFT-GR seam closure remains outside this packet.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Release assembly and public submission remain unauthorized.",
+      "target": "authorize_release_assembly_or_public_submission"
+    }
+  ],
+  "candidate_reduction_route": "separate limit interchange and regularization assumptions from conservation, source admissibility, and Bianchi claims",
+  "captured_at_utc": "2026-06-08T00:00:00Z",
+  "claim_ceiling": "limit_interchange_regularization_boundary_assumption_reduction_packet_preparation_only_no_conservation_proof_no_conservation_witness_no_state_or_source_admissibility_no_bianchi_no_qft_gr_seam_closure",
+  "completed_prior_assumption_families": [
+    "operator_domain_assumptions",
+    "renormalization_assumptions",
+    "state_domain_assumptions"
+  ],
+  "completed_prior_assumption_family_count": 3,
+  "conservation_blocker_remains": true,
+  "conservation_proof_object_constructed": false,
+  "conservation_proved": false,
+  "conservation_witness_constructed": false,
+  "consumed_result_review_classification": "qft_gr_distributional_pairing_regular_domain_assumption_reduction_attempt_result_review_accepts_reduced_mr_assump_003_and_authorizes_next_mathematical_regularity_row_selection_only",
+  "consumed_result_review_outcome_id": "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_MR_ASSUMP_003_AND_AUTHORIZES_NEXT_MATHEMATICAL_REGULARITY_ROW_SELECTION_ONLY",
+  "consumed_result_review_schema_id": "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260609_v0",
+  "consumed_target": "prepare_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet",
+  "consumes_qft_gr_distributional_pairing_regular_domain_assumption_reduction_attempt_result_review": "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_v0",
+  "consumes_qft_gr_distributional_pairing_regular_domain_assumption_reduction_attempt_result_review_pointer": "formal/docs/release/QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260609_v0.json",
+  "covariant_conservation_statement_proved": false,
+  "empirical_validation_claimed": false,
+  "failure_mode_if_unresolved": "renormalized expectation and derivative operations may not commute in the limit needed by the future conservation route",
+  "limit_interchange_boundaries": [
+    "limit_interchange_boundary_only_for_candidate_renormalized_expectation_and_derivative",
+    "operator_domain_renormalization_and_state_domain_assumption_rows_preserved",
+    "distributional_pairing_regular_domain_row_preserved_as_prior_reduction",
+    "no_conservation_proof_object_claim",
+    "no_conservation_witness_claim",
+    "no_state_admissibility_claim",
+    "no_source_admissibility_claim",
+    "no_bianchi_compatibility_claim",
+    "no_qft_gr_seam_closure"
+  ],
+  "limit_interchange_regularization_boundary": "limit_interchange_regularization_boundary_for_renormalized_expectation_and_covariant_derivative",
+  "limit_interchange_regularization_boundary_assumption": {
+    "assumption_family": "mathematical_regularity_assumptions",
+    "assumption_id": "MR-ASSUMP-004-limit_interchange_regularization_boundary",
+    "available_repo_evidence": [
+      "QFT_GR_RENORMALIZATION_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_v0",
+      "QFT_GR_RENORMALIZED_EXPECTATION_FINITENESS_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_v0"
+    ],
+    "candidate_reduction_route": "separate limit interchange and regularization assumptions from conservation, source admissibility, and Bianchi claims",
+    "claim_ceiling": "limit_interchange_regularization_boundary_packet_only_no_conservation_proof_no_conservation_witness_no_state_or_source_admissibility_no_bianchi_no_qft_gr_seam_closure",
+    "current_status": [
+      "required",
+      "missing",
+      "candidate_reducible"
+    ],
+    "failure_mode_if_unresolved": "renormalized expectation and derivative operations may not commute in the limit needed by the future conservation route",
+    "limit_interchange_boundaries": [
+      "limit_interchange_boundary_only_for_candidate_renormalized_expectation_and_derivative",
+      "operator_domain_renormalization_and_state_domain_assumption_rows_preserved",
+      "distributional_pairing_regular_domain_row_preserved_as_prior_reduction",
+      "no_conservation_proof_object_claim",
+      "no_conservation_witness_claim",
+      "no_state_admissibility_claim",
+      "no_source_admissibility_claim",
+      "no_bianchi_compatibility_claim",
+      "no_qft_gr_seam_closure"
+    ],
+    "limit_interchange_regularization_boundary": "limit_interchange_regularization_boundary_for_renormalized_expectation_and_covariant_derivative",
+    "regularity_condition": "limit_interchange_regularization_boundary_for_renormalized_expectation_and_covariant_derivative",
+    "required_future_proof_object": "limit_interchange_boundary_for_renormalized_expectation_and_derivative"
+  },
+  "limit_interchange_regularization_boundary_assumption_discharged": false,
+  "limit_interchange_regularization_boundary_assumption_reduced_or_discharged_by_preparation": false,
+  "limit_interchange_regularization_boundary_assumption_reduction_analysis_prepared": true,
+  "limit_interchange_regularization_boundary_status_tokens": [
+    "required",
+    "missing",
+    "candidate_reducible"
+  ],
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_regularity_assumptions_discharged": false,
+  "mathematical_regularity_assumptions_reduced_or_discharged_by_preparation": false,
+  "next_action_scope": "REVIEW_QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE",
+  "non_claim_boundary": "This packet prepares only MR-ASSUMP-004 limit-interchange regularization-boundary reduction analysis. It preserves insufficient_assumptions_for_conservation and does not prove weak or strong conservation, construct a conservation proof object or witness, claim state/source admissibility or Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, assemble release, or authorize public submission.",
+  "outcome_id": "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "packet_classification": "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_prepared_with_no_conservation_witness_or_seam_closure",
+  "packet_classification_count": 1,
+  "packet_id": "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_v0",
+  "prepared": true,
+  "prepares_reduction_analysis_only": true,
+  "primary_assumption_reduction_family": "mathematical_regularity_assumptions",
+  "proof_object_constructed": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "required_future_proof_object": "limit_interchange_boundary_for_renormalized_expectation_and_derivative",
+  "schema_id": "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_20260609_v0",
+  "scientific_validation_claimed": false,
+  "selected_assumption_family": "mathematical_regularity_assumptions",
+  "selected_blocker": "insufficient_assumptions_for_conservation",
+  "selected_bounded_mathematical_regularity_assumption_row": "MR-ASSUMP-004-limit_interchange_regularization_boundary",
+  "selected_mathematical_regularity_assumption_row": "MR-ASSUMP-004-limit_interchange_regularization_boundary",
+  "selected_next_authorization_token": "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE",
+  "selected_next_target": "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result",
+  "selected_next_target_count": 1,
+  "selected_next_target_kind": "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result_review",
+  "selected_route": "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result_review_after_preparation",
+  "selected_row_count": 1,
+  "selected_row_is_repo_authoritative_next_row": true,
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "source_mathematical_regularity_assumption_reduction_packet": "QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_v0",
+  "source_mathematical_regularity_assumption_reduction_packet_pointer": "formal/docs/release/QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_PACKET_20260608_v0.json",
+  "state_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "strong_conservation_claimed": false,
+  "strong_conservation_proved": false,
+  "weak_conservation_claimed": false,
+  "weak_conservation_proved": false
+}

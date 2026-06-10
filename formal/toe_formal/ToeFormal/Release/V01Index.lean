@@ -3527,6 +3527,34 @@ def qftGRDistributionalPairingRegularDomainAssumptionReductionAttemptResultRevie
   "prepare_qft_gr_limit_interchange_regularization_boundary_assumption_" ++
     "reduction_packet"
 
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionPacketLeanSurface :
+    String :=
+  "ToeFormal.Bridges.QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionPacket"
+
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionPacketOutcomeToken :
+    String :=
+  "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_" ++
+    "PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionPacketClassification :
+    String :=
+  "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_" ++
+    "prepared_with_no_conservation_witness_or_seam_closure"
+
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionPacketConsumedReview :
+    String :=
+  "QFT_GR_DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_" ++
+    "ATTEMPT_RESULT_REVIEW_v0"
+
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionPacketSelectedRow :
+    String :=
+  "MR-ASSUMP-004-limit_interchange_regularization_boundary"
+
+def qftGRLimitInterchangeRegularizationBoundaryAssumptionReductionPacketSelectedNextTarget :
+    String :=
+  "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_" ++
+    "packet_result"
+
 def dependencyRemediationTranche005ExecutionPacketLeanSurface : String :=
   "ToeFormal.Release.V01DependencyRemediationTranche005ExecutionPacket"
 
