@@ -351,13 +351,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR MR-ASSUMP-004 bounded attempt. -/
+/-- Previous live target consumed by the QFT-GR MR-ASSUMP-004 result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt"
-
-/-- Current live target after the QFT-GR MR-ASSUMP-004 bounded attempt. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt_result"
+
+/-- Current live target after the QFT-GR MR-ASSUMP-004 result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "select_next_qft_gr_mathematical_regularity_row_from_repo_authoritative_inventory"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -369,7 +369,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 -/
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
-  next_strict_slice := "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt_result"
+  next_strict_slice := "select_next_qft_gr_mathematical_regularity_row_from_repo_authoritative_inventory"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
