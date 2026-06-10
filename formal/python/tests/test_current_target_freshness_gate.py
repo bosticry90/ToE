@@ -1144,7 +1144,7 @@ AXIOM_AUDIT_RESULT_REVIEW_TARGET = (
     "review_axiom_ledger_audit_refresh_after_samplerep32_result"
 )
 ACTIVE_LANE = (
-    "prepare_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet"
+    "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1312,16 +1312,16 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
     "execute_qft_gr_state_expectation_compatibility_assumption_reduction_attempt"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet"
+    "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result"
 )
 CONSUMED_TARGET = (
-    "prepare_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet"
+    "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result"
 )
 PREVIOUS_TARGET = (
     "execute_qft_gr_distributional_pairing_regular_domain_assumption_reduction_attempt"
 )
 LIVE_TARGET = (
-    "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result"
+    "execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1338,41 +1338,42 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Bridges"
-    / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionPacket.lean"
+    / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
-    "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionPacket.lean"
+    "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_REPORT = (
     "formal/docs/release/"
     "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_"
-    "PACKET_20260609_v0.json"
+    "PACKET_RESULT_REVIEW_20260609_v0.json"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_TOKEN = (
     "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_"
-    "PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
+    "PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_MR_ASSUMP_004_"
+    "ATTEMPT_ONLY"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_TOOL = (
     "formal/python/tools/"
     "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_"
-    "packet_report.py"
+    "packet_result_review_report.py"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_CLASSIFICATION = (
     "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_"
-    "prepared_with_no_conservation_witness_or_seam_closure"
+    "result_review_accepts_packet_and_authorizes_bounded_mr_assump_004_attempt_only"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_REVIEW_CLASSIFICATION = (
     "qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_"
-    "prepared_with_no_conservation_witness_or_seam_closure"
+    "result_review_accepts_packet_and_authorizes_bounded_mr_assump_004_attempt_only"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_REVIEW_ID = (
     "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_"
-    "PACKET_v0"
+    "PACKET_RESULT_REVIEW_v0"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_REVIEW_SCOPE = (
-    "REVIEW_QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_"
-    "REDUCTION_PACKET_RESULT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
+    "EXECUTE_QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_"
+    "REDUCTION_ATTEMPT_ONLY_NO_CONSERVATION_WITNESS_OR_QFT_GR_SEAM_CLOSURE"
 )
 RENORMALIZATION_OPERATOR_DOMAIN_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"

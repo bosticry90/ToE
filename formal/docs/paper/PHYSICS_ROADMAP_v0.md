@@ -22,7 +22,7 @@ Current release-facing status (2026-05-13):
 - `TOE_V01_ALPHA_RELEASE_STANDARD_PREPARED_FULL_PILLAR_SEAM_SCOPE`
 - The v0.1-alpha release-standard track is full-pillar/full-seam scoped and uses canonical JSON ledgers as gate authority.
 - Required coverage domains: GR, QM, EM, SR, Scalar/QFT, STAT, COSMO, QFT-GR, QM-STAT, EM-QFT, SR-COSMO, GR-QM, and MASTER_ACTION.
-- Current strict target mirror: `CURRENT_LIVE_NEXT_TARGET_v0: review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_packet_result` with outcome token `QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_PREPARED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE`.
+- Current strict target mirror: `CURRENT_LIVE_NEXT_TARGET_v0: execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt` with outcome token `QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_MR_ASSUMP_004_ATTEMPT_ONLY`.
 - This roadmap pointer does not mark v0.1-alpha complete and does not authorize master-action promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, or QFT-GR source-map closure.
 
 Release-gate truth policy (R1-A, 2026-03-20):
