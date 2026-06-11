@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_qft_gr_minimal_working_model_demonstration_packet"
+    "review_qft_gr_minimal_working_model_demonstration_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1326,16 +1326,16 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
     "execute_qft_gr_state_expectation_compatibility_assumption_reduction_attempt"
 )
 PREVIOUS_LIVE_TARGET = (
-    "select_next_post_toe_expert_translation_bounded_target"
+    "prepare_qft_gr_minimal_working_model_demonstration_packet"
 )
 CONSUMED_TARGET = (
-    "select_next_post_toe_expert_translation_bounded_target"
+    "prepare_qft_gr_minimal_working_model_demonstration_packet"
 )
 PREVIOUS_TARGET = (
-    "select_next_post_toe_expert_translation_bounded_target"
+    "prepare_qft_gr_minimal_working_model_demonstration_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_minimal_working_model_demonstration_packet"
+    "review_qft_gr_minimal_working_model_demonstration_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1352,7 +1352,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PostTOEExpertTranslationBoundedTargetSelection.lean"
+    / "QFTGRMinimalWorkingModelDemonstrationPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2862,48 +2862,57 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    post_translation_active_workstream = active_workstream(payload)
-    assert post_translation_active_workstream["workstream_id"] == ACTIVE_LANE
-    assert post_translation_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert post_translation_active_workstream["authorized_target"] == LIVE_TARGET
-    assert post_translation_active_workstream["authorization_evidence"] == str(
+    minimal_model_review_active_workstream = active_workstream(payload)
+    assert minimal_model_review_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert minimal_model_review_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
+    assert minimal_model_review_active_workstream["authorized_target"] == LIVE_TARGET
+    assert minimal_model_review_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert post_translation_active_workstream["report"] == (
+    assert minimal_model_review_active_workstream["report"] == (
         "formal/docs/release/"
-        "POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_20260610_v0.json"
+        "QFT_GR_MINIMAL_WORKING_MODEL_DEMONSTRATION_PACKET_20260610_v0.json"
     )
-    assert post_translation_active_workstream["outcome_id"] == (
-        "POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_"
-        "MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION"
+    assert minimal_model_review_active_workstream["outcome_id"] == (
+        "QFT_GR_MINIMAL_WORKING_MODEL_DEMONSTRATION_PACKET_PREPARED_WITH_NO_"
+        "SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
     )
-    assert post_translation_active_workstream["claim_level"] == (
-        "Level 0-3 bounded selector"
+    assert minimal_model_review_active_workstream["claim_level"] == (
+        "Level 3 packet-preparation target"
     )
-    assert post_translation_active_workstream["claim_ceiling"] == (
-        "minimal-model packet preparation only"
+    assert minimal_model_review_active_workstream["claim_ceiling"] == (
+        "minimal working model demonstration packet result review only"
     )
-    assert "No conservation proof object" in post_translation_active_workstream[
+    assert "No conservation proof object" in minimal_model_review_active_workstream[
         "non_claim_boundary"
     ]
     assert (
-        post_translation_active_workstream["consumed_target"]
-        == "select_next_post_toe_expert_translation_bounded_target"
+        minimal_model_review_active_workstream["consumed_target"]
+        == "prepare_qft_gr_minimal_working_model_demonstration_packet"
     )
     assert (
-        post_translation_active_workstream["outcome_category"]
-        == "post_translation_next_target_selected"
+        minimal_model_review_active_workstream["model_execution_authorized"]
+        == "no"
     )
 
     post_maturation_selector_workstream = _workstream(
         payload, "select_next_post_toe_expert_translation_bounded_target"
     )
     assert post_maturation_selector_workstream["status"] == "paused"
-    assert post_maturation_selector_workstream["selected_next_target"] == LIVE_TARGET
+    assert post_maturation_selector_workstream["selected_next_target"] == (
+        "prepare_qft_gr_minimal_working_model_demonstration_packet"
+    )
     assert (
         post_maturation_selector_workstream["outcome_category"]
         == "post_translation_next_target_selected"
     )
+
+    minimal_model_packet_workstream = _workstream(
+        payload, "prepare_qft_gr_minimal_working_model_demonstration_packet"
+    )
+    assert minimal_model_packet_workstream["status"] == "paused"
+    assert minimal_model_packet_workstream["selected_next_target"] == LIVE_TARGET
+    assert minimal_model_packet_workstream["model_execution_authorized"] == "no"
 
     current_active_workstream = _workstream(payload, MR_ROW_SELECTION_TARGET)
     assert current_active_workstream["status"] == "retained"
@@ -7527,7 +7536,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        post_translation_active_workstream["authorized_next_strict_target"],
+        minimal_model_review_active_workstream["authorized_next_strict_target"],
     }
     assert active_targets == {LIVE_TARGET}
 

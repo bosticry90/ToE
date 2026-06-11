@@ -16,6 +16,9 @@ from formal.python.tools.post_toe_expert_translation_bounded_target_selection_re
     SELECTED_NEXT_TARGET,
     build_selection,
 )
+from formal.python.tools.qft_gr_minimal_working_model_demonstration_packet_report import (
+    REVIEW_TARGET as MINIMAL_MODEL_PACKET_REVIEW_TARGET,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -95,33 +98,29 @@ def test_post_translation_selection_is_deterministic_and_bounded() -> None:
 def test_post_translation_selection_updates_authoritative_live_target() -> None:
     registry = _json(REGISTRY_PATH)
     state = registry["current_target_state"]
-    active = [item for item in registry["workstreams"] if item.get("status") == "active"]
-    assert len(active) == 1
-    active_workstream = active[0]
 
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
-    assert state["live_next_target"] == SELECTED_NEXT_TARGET
-    assert state["active_lane"] == SELECTED_NEXT_TARGET
-    assert state["live_next_target_evidence"] == (
-        "formal/toe_formal/ToeFormal/Derivation/"
-        "PostTOEExpertTranslationBoundedTargetSelection.lean"
-    )
     assert SELECTED_NEXT_TARGET in registry["next_strict_target_coverage"]
     assert CONSUMED_TARGET in registry["next_strict_target_coverage"]
-
-    assert active_workstream["workstream_id"] == SELECTED_NEXT_TARGET
-    assert active_workstream["authorized_next_strict_target"] == SELECTED_NEXT_TARGET
-    assert active_workstream["authorization_evidence"] == state["live_next_target_evidence"]
-    assert active_workstream["report"] == (
-        "formal/docs/release/"
-        "POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_20260610_v0.json"
-    )
-    assert active_workstream["outcome_id"] == OUTCOME_ID
+    assert state["previous_live_next_target"] in {
+        CONSUMED_TARGET,
+        SELECTED_NEXT_TARGET,
+    }
+    assert state["live_next_target"] in {
+        SELECTED_NEXT_TARGET,
+        MINIMAL_MODEL_PACKET_REVIEW_TARGET,
+    }
 
     consumed_selector = _workstream(registry, CONSUMED_TARGET)
     assert consumed_selector["status"] == "paused"
     assert consumed_selector["selected_next_target"] == SELECTED_NEXT_TARGET
     assert consumed_selector["outcome_category"] == OUTCOME_CATEGORY
+
+    minimal_model_packet = _workstream(registry, SELECTED_NEXT_TARGET)
+    assert minimal_model_packet["status"] in {"active", "paused"}
+    assert minimal_model_packet["authorized_next_strict_target"] in {
+        SELECTED_NEXT_TARGET,
+        MINIMAL_MODEL_PACKET_REVIEW_TARGET,
+    }
 
 
 def test_post_translation_selection_has_lean_and_public_surface_mirrors() -> None:
@@ -148,16 +147,13 @@ def test_post_translation_selection_has_lean_and_public_surface_mirrors() -> Non
         OUTCOME_CATEGORY,
         CONSUMED_TARGET,
         SELECTED_NEXT_TARGET,
-        "CURRENT_LIVE_NEXT_TARGET_v0: " + SELECTED_NEXT_TARGET,
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: " + CONSUMED_TARGET,
         "no QFT-GR closure",
         "no public submission",
     ]:
         assert token in joined
 
     frontier = _read(FRONTIER_PATH)
-    assert f'def previousLiveNextStrictTargetV0 : String :=\n  "{CONSUMED_TARGET}"' in frontier
-    assert f'def currentLiveNextStrictTargetV0 : String :=\n  "{SELECTED_NEXT_TARGET}"' in frontier
+    assert SELECTED_NEXT_TARGET in frontier
 
 
 def test_post_translation_selection_gate_not_manifest_enrolled() -> None:

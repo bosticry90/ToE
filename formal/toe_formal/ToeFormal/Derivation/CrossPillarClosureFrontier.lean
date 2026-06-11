@@ -129,13 +129,13 @@ Historical QFT-GR frontier checkpoints retained for substring gates:
 
 Historical current-target snippets:
 def previousLiveNextStrictTargetV0 : String :=
-  "select_next_post_toe_expert_translation_bounded_target"
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_minimal_working_model_demonstration_packet"
 def currentLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_minimal_working_model_demonstration_packet"
+  "review_qft_gr_minimal_working_model_demonstration_packet_result"
 def currentLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_minimal_working_model_demonstration_packet"
+  "review_qft_gr_minimal_working_model_demonstration_packet_result"
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_minimal_working_model_demonstration_packet_result"
 -/
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
@@ -260,7 +260,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_minimal_working_model_demonstration_packet"
+        "qm_evolution_post_budget_cross_pillar_review"
       status := .retained }
   , { row := .qmSTAT
       current_strongest_surface :=
@@ -302,13 +302,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR MR-ASSUMP-004 limit-interchange regularization-boundary packet result review accepted as packet-only and authorizes bounded MR-ASSUMP-004 attempt execution only, preserves insufficient_assumptions_for_conservation, and does not prove limit interchange or regularization-boundary assumptions, claim conservation, state admissibility, source admissibility, construct a conservation proof object or witness, claim Bianchi compatibility, derive the semiclassical Einstein equation, validate empirically, promote the master action, assemble release, authorize public submission, or close the QFT-GR seam"
+        "QFT-GR minimal working model demonstration packet prepared after the post-translation target selection, with toy source candidate, simplified field/state setup, background-geometry assumptions, imported row regularities, conservation-test target, failure modes, countermodel and falsifier hooks, claim ceiling, and review-only successor, while preserving no source admissibility, no conservation proof object or witness, no Bianchi compatibility, no semiclassical Einstein equation, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR seam closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt"
+        "review_qft_gr_minimal_working_model_demonstration_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -330,13 +330,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR MR-ASSUMP-004 limit-interchange regularization-boundary packet result review accepted and selected bounded MR-ASSUMP-004 attempt execution only, with no limit-interchange proof, no regularization-boundary proof, no conservation proof, no state admissibility claim, no source admissibility claim, no conservation proof object construction, no conservation witness construction, no Bianchi compatibility, no release readiness marking, no QFT-GR seam closure, no release assembly, no public submission, no scientific validation, and no release promotion"
+        "QFT-GR minimal working model demonstration packet prepared and routed to result review only, with the packet defining a toy source candidate, admissibility-candidate-only criteria, imported regularity assumptions, conservation-test target, failure/countermodel/falsifier hooks, and claim ceiling, while making no source-admissibility claim, conservation proof-object claim, conservation witness claim, Bianchi compatibility claim, QFT-GR seam closure, public-submission claim, scientific-validation claim, or master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt"
+        "review_qft_gr_minimal_working_model_demonstration_packet_result"
       status := .retained }
   ]
 
@@ -354,13 +354,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the QFT-GR MR-ASSUMP-004 result review. -/
+/-- Previous live target consumed by the minimal working model packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "select_next_post_toe_expert_translation_bounded_target"
-
-/-- Current live target after the post-expert-translation target selection. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_minimal_working_model_demonstration_packet"
+
+/-- Current live target after the minimal working model packet preparation. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_minimal_working_model_demonstration_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -373,7 +373,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_qft_gr_minimal_working_model_demonstration_packet"
+    "review_qft_gr_minimal_working_model_demonstration_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

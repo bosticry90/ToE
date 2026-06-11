@@ -1,0 +1,147 @@
+{
+  "acceptance_criteria": {
+    "consumes_post_translation_selection": true,
+    "imports_completed_assumption_families": true,
+    "imports_mathematical_regularity_rows": true,
+    "minimal_model_program_available": true,
+    "no_model_execution": true,
+    "packet_preparation_only": true,
+    "post_translation_selection_selected_packet": true,
+    "preserves_nonclaims": true,
+    "selects_exactly_one_next_target": true
+  },
+  "admissibility_candidate_only": {
+    "admissibility_claimed": false,
+    "candidate_definition": "an object eligible for later source-admissibility review if weak conservation and domain compatibility tests are satisfied",
+    "source_map_closure_claimed": false
+  },
+  "background_geometry_assumptions": {
+    "connection": "background-compatible derivative operator for weak tests",
+    "exclusions": [
+      "no backreaction",
+      "no semiclassical Einstein equation",
+      "no Bianchi compatibility claim"
+    ],
+    "geometry": "fixed smooth or distributionally controlled background"
+  },
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "Packet preparation must be result-reviewed before any model execution.",
+      "target": "review_qft_gr_minimal_working_model_demonstration_packet_result"
+    },
+    {
+      "decision": "not_authorized_until_packet_result_review",
+      "reason": "This artifact prepares the packet only; it does not execute the model.",
+      "target": "execute_qft_gr_minimal_working_model_demonstration"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The packet defines an admissibility candidate only and does not open this family.",
+      "target": "prepare_qft_gr_physical_source_admissibility_assumption_reduction_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Bianchi compatibility remains outside this packet-preparation target.",
+      "target": "prepare_qft_gr_bianchi_compatibility_assumption_reduction_packet"
+    },
+    {
+      "decision": "forbidden",
+      "reason": "The packet does not construct a source-admissibility proof or close QFT-GR.",
+      "target": "claim_qft_gr_source_admissibility_or_seam_closure"
+    }
+  ],
+  "captured_at_utc": "2026-06-08T00:00:00Z",
+  "claim_ceiling": "minimal working model demonstration packet only",
+  "claim_level": "Level 3 packet-preparation target",
+  "conservation_test_target": {
+    "conservation_proved": false,
+    "conservation_witness_constructed": false,
+    "target": "weak tested divergence vanishing or explicit obstruction",
+    "test_form": "evaluate the candidate against compactly supported test fields and record whether the weak conservation target is met"
+  },
+  "consumed_target": "prepare_qft_gr_minimal_working_model_demonstration_packet",
+  "consumes_post_translation_selection": "POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_v0",
+  "consumes_post_translation_selection_pointer": "formal/docs/release/POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_20260610_v0.json",
+  "countermodel_hooks": [
+    "QFT_GR_COUNTERMODEL_001_RESIDUAL_ZERO_NOT_ADMISSIBLE",
+    "QFT_GR_COUNTERMODEL_002_EXPECTATION_NOT_CONSERVED",
+    "QFT_GR_COUNTERMODEL_003_PAIRING_WITHOUT_DERIVATIVE_EXCHANGE"
+  ],
+  "failure_modes": [
+    "field/state setup cannot produce a finite expectation candidate",
+    "regularization or renormalization scope is incompatible with the test domain",
+    "distributional pairing fails",
+    "derivative or limit-interchange assumptions remain insufficient in the model",
+    "weak conservation test fails",
+    "source-like object criteria fail",
+    "the route requires a new exact missing condition family named by review",
+    "countermodel or scope rewrite is required"
+  ],
+  "falsifier_hooks": [
+    "QFT-GR source admissibility falsifier",
+    "QFT-GR weak/strong conservation falsifier",
+    "QFT-GR derivative/limit interchange falsifier"
+  ],
+  "imported_assumption_families": [
+    "operator_domain_assumptions",
+    "renormalization_assumptions",
+    "state_domain_assumptions",
+    "mathematical_regularity_assumptions"
+  ],
+  "imported_regularities": [
+    "MR-ASSUMP-001-derivative_exchange_regular_boundary",
+    "MR-ASSUMP-002-weak_strong_conservation_comparison_scope",
+    "MR-ASSUMP-003-distributional_pairing_regular_domain",
+    "MR-ASSUMP-004-limit_interchange_regularization_boundary"
+  ],
+  "minimal_model_program_pointer": "formal/docs/paper/QFT_GR_MINIMAL_WORKING_MODEL_PROGRAM_v0.md",
+  "minimal_model_scope": {
+    "model_class": "free scalar-field stress-energy-like candidate",
+    "purpose": "prepare a bounded demonstration question that may either produce a source-like candidate or expose a precise obstruction",
+    "scope": "fixed controlled background with no backreaction"
+  },
+  "model_execution_authorized": false,
+  "non_claim_boundary": {
+    "Bianchi_compatibility_claimed": false,
+    "conservation_proof_object_constructed": false,
+    "conservation_proved": false,
+    "conservation_witness_constructed": false,
+    "empirical_validation_claimed": false,
+    "global_mathematical_regularity_discharged": false,
+    "limit_interchange_proved": false,
+    "master_action_promoted": false,
+    "public_submission_authorized": false,
+    "qft_gr_seam_closed": false,
+    "release_assembly_authorized": false,
+    "semiclassical_einstein_equation_derived": false,
+    "source_admissibility_claimed": false,
+    "state_admissibility_claimed": false,
+    "stress_energy_source_admissibility_claimed": false
+  },
+  "outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_DEMONSTRATION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE",
+  "packet_classification": "qft_gr_minimal_working_model_demonstration_packet_prepared_no_execution_source_admissibility_or_seam_closure",
+  "packet_id": "QFT_GR_MINIMAL_WORKING_MODEL_DEMONSTRATION_PACKET_v0",
+  "packet_preparation_only": true,
+  "schema_id": "QFT_GR_MINIMAL_WORKING_MODEL_DEMONSTRATION_PACKET_20260610_v0",
+  "scientific_role": "prepare the first bounded toy-model source test",
+  "selected_next_target": "review_qft_gr_minimal_working_model_demonstration_packet_result",
+  "selection_count": 1,
+  "simplified_field_state_setup": {
+    "expectation_object": "finite expectation candidate under imported domain conditions",
+    "field_object": "real scalar field placeholder on the controlled background",
+    "state_object": "bounded state or expectation functional placeholder"
+  },
+  "source_like_object_criteria": [
+    "pairs with the selected distributional test domain",
+    "is finite under the selected regularization or renormalization scope",
+    "has indexed tensor-like slots suitable for later geometric source tests",
+    "does not by itself imply physical source admissibility"
+  ],
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "toy_source_candidate": {
+    "candidate": "regularized or renormalized expectation of a stress-energy-like tensor for the simplified field/state setup",
+    "source_admissibility_claimed": false,
+    "status": "candidate_only_not_source_admissibility"
+  }
+}
