@@ -1,0 +1,49 @@
+{
+  "acceptance_criteria": {
+    "closeout_selected_witness_packet": true,
+    "completed_four_families_available": true,
+    "consumes_mr_closeout_review": true,
+    "preserves_nonclaims": true
+  },
+  "allowed_outcomes": [
+    "bounded_witness_constructed_pending_review",
+    "bounded_witness_obstruction_identified_requires_next_family",
+    "bounded_witness_inconclusive_requires_model_demonstration",
+    "witness_route_invalid_requires_countermodel_or_scope_rewrite"
+  ],
+  "captured_at_utc": "2026-06-08T00:00:00Z",
+  "completed_assumption_families_available": [
+    "operator_domain_assumptions",
+    "renormalization_assumptions",
+    "state_domain_assumptions",
+    "mathematical_regularity_assumptions"
+  ],
+  "consumed_target": "prepare_qft_gr_post_mathematical_regularity_conserved_source_witness_reattempt_packet",
+  "consumes_mr_closeout_review": "QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_v0",
+  "consumes_mr_closeout_review_pointer": "formal/docs/release/QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_20260610_v0.json",
+  "non_claim_boundary": {
+    "Bianchi_compatibility_claimed": false,
+    "conservation_proof_object_constructed": false,
+    "conservation_proved": false,
+    "conservation_witness_constructed": false,
+    "empirical_validation_claimed": false,
+    "global_mathematical_regularity_discharged": false,
+    "limit_interchange_proved": false,
+    "master_action_promoted": false,
+    "public_submission_authorized": false,
+    "qft_gr_seam_closed": false,
+    "release_assembly_authorized": false,
+    "semiclassical_einstein_equation_derived": false,
+    "source_admissibility_claimed": false,
+    "state_admissibility_claimed": false,
+    "stress_energy_source_admissibility_claimed": false
+  },
+  "outcome_id": "QFT_GR_POST_MR_CONSERVED_SOURCE_WITNESS_REATTEMPT_PACKET_PREPARED_WITH_NO_WITNESS_OR_SEAM_CLOSURE",
+  "packet_classification": "qft_gr_post_mr_conserved_source_witness_reattempt_packet_prepared_no_witness_or_seam_closure",
+  "packet_id": "QFT_GR_POST_MATHEMATICAL_REGULARITY_CONSERVED_SOURCE_WITNESS_REATTEMPT_PACKET_v0",
+  "schema_id": "QFT_GR_POST_MATHEMATICAL_REGULARITY_CONSERVED_SOURCE_WITNESS_REATTEMPT_PACKET_20260610_v0",
+  "selected_next_target": "review_qft_gr_post_mathematical_regularity_conserved_source_witness_reattempt_packet_result",
+  "selection_count": 1,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "witness_question": "Do the completed operator-domain, renormalization, state-domain, and mathematical-regularity reductions now support any bounded conserved/source-admissible QFT-GR source witness?"
+}

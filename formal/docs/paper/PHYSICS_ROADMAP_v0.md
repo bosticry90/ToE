@@ -18,6 +18,22 @@ Non-claim boundary:
 - no comparator-lane authorization by itself.
 - no external truth claim.
 
+POST_MR_MATURATION_EXECUTION_STATUS_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
+CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_toe_expert_translation_bounded_target
+PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_expert_translation_layer_artifact
+ACTIVE_LANE_v0: select_next_post_toe_expert_translation_bounded_target
+CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
+CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/TOEPostWitnessMaturationArtifacts.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/paper/TOE_POST_WITNESS_MATURATION_INDEX_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
+POST_MR_WITNESS_REATTEMPT_RESULT_v0: bounded_witness_inconclusive_requires_model_demonstration
+POST_MR_MATURATION_ARTIFACT_ORDER_v0: TOE_CLAIM_LADDER_v0 -> TOE_CORE_HYPOTHESIS_v0 -> QFT_GR_MINIMAL_WORKING_MODEL_PROGRAM_v0 -> QFT_GR_COUNTERMODEL_REGISTRY_v0 -> TOE_FALSIFIER_AND_PREDICTION_REGISTRY_ADDENDUM_v0 -> TOE_EXPERT_TRANSLATION_LAYER_v0
+POST_MR_NONCLAIM_BOUNDARY_v0: no conservation proof object, no witness claim, no source admissibility, no Bianchi compatibility, no QFT-GR closure, no empirical validation, no master-action promotion.
+
+Historical benchmark-intake live-target pointer:
+- `CURRENT_LIVE_NEXT_TARGET_v0: execute_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt`
+
 Current release-facing status (2026-05-13):
 - `TOE_V01_ALPHA_RELEASE_STANDARD_PREPARED_FULL_PILLAR_SEAM_SCOPE`
 - The v0.1-alpha release-standard track is full-pillar/full-seam scoped and uses canonical JSON ledgers as gate authority.

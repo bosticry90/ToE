@@ -12,6 +12,19 @@ Non-claim boundary:
 - This document does not claim physics completion, canonical master-action promotion, global seam closure, Standard Model recovery, interacting-QFT completion, or empirical validation.
 - This document is a strict physics work map, not a release-governance expansion surface.
 
+POST_MR_MATURATION_EXECUTION_STATUS_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
+CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_toe_expert_translation_bounded_target
+PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_expert_translation_layer_artifact
+ACTIVE_LANE_v0: select_next_post_toe_expert_translation_bounded_target
+CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
+CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/TOEPostWitnessMaturationArtifacts.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/paper/TOE_POST_WITNESS_MATURATION_INDEX_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
+POST_MR_WITNESS_REATTEMPT_RESULT_v0: bounded_witness_inconclusive_requires_model_demonstration
+POST_MR_MATURATION_ARTIFACT_ORDER_v0: TOE_CLAIM_LADDER_v0 -> TOE_CORE_HYPOTHESIS_v0 -> QFT_GR_MINIMAL_WORKING_MODEL_PROGRAM_v0 -> QFT_GR_COUNTERMODEL_REGISTRY_v0 -> TOE_FALSIFIER_AND_PREDICTION_REGISTRY_ADDENDUM_v0 -> TOE_EXPERT_TRANSLATION_LAYER_v0
+POST_MR_NONCLAIM_BOUNDARY_v0: no conservation proof object, no witness claim, no source admissibility, no Bianchi compatibility, no QFT-GR closure, no empirical validation, no master-action promotion.
+
 ## Authority Synchronization
 
 Synchronized authority surfaces:

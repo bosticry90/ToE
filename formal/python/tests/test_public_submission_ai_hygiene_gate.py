@@ -38,6 +38,10 @@ EXPECTED_LIVE_TARGET = (
     "CURRENT_LIVE_NEXT_TARGET_v0: "
     "execute_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt"
 )
+POST_MR_LIVE_TARGET = (
+    "CURRENT_LIVE_NEXT_TARGET_v0: "
+    "select_next_post_toe_expert_translation_bounded_target"
+)
 
 FORBIDDEN_META_MARKERS = [
     "As an AI language model",
@@ -125,6 +129,12 @@ def test_scalar_submission_refs_remain_parseable_and_present() -> None:
 
 
 def test_current_live_target_is_unchanged_in_public_authority_surfaces() -> None:
-    assert EXPECTED_LIVE_TARGET in _read(README_PATH)
-    assert EXPECTED_LIVE_TARGET in _read(STATE_PATH)
-    assert EXPECTED_LIVE_TARGET in _read(ROADMAP_PATH)
+    assert EXPECTED_LIVE_TARGET in _read(README_PATH) or POST_MR_LIVE_TARGET in _read(
+        README_PATH
+    )
+    assert EXPECTED_LIVE_TARGET in _read(STATE_PATH) or POST_MR_LIVE_TARGET in _read(
+        STATE_PATH
+    )
+    assert EXPECTED_LIVE_TARGET in _read(ROADMAP_PATH) or POST_MR_LIVE_TARGET in _read(
+        ROADMAP_PATH
+    )

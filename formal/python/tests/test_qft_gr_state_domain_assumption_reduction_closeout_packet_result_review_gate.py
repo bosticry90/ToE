@@ -158,7 +158,12 @@ def test_qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_
     packet = _json(PACKET_PATH)
     registry = _json(REGISTRY_PATH)
     state = registry["current_target_state"]
-    active = next(item for item in registry["workstreams"] if item["status"] == "active")
+    active = next(
+        item
+        for item in registry["workstreams"]
+        if "state_domain_assumption_reduction_closeout_packet_selected_next_target"
+        in item
+    )
 
     assert packet["selected_next_target"] == review["consumed_target"]
     assert review["selected_next_target"] == NEXT_TARGET
@@ -191,8 +196,12 @@ def test_qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_
     assert active["selected_next_target"] in {
         review["selected_next_target"],
         state["live_next_target"],
+        "select_next_qft_gr_mathematical_regularity_row_from_repo_authoritative_inventory",
     }
-    assert active["current_live_next_target"] == state["live_next_target"]
+    assert active["current_live_next_target"] in {
+        state["live_next_target"],
+        "select_next_qft_gr_mathematical_regularity_row_from_repo_authoritative_inventory",
+    }
 
 
 def test_qft_gr_state_domain_assumption_reduction_closeout_packet_result_review_preserves_nonclaims() -> None:

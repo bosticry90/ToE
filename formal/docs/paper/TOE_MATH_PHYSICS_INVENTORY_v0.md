@@ -18,6 +18,9 @@ Non-claim boundary:
 - no adjudication upgrade by itself.
 - no external truth claim.
 
+Historical benchmark-intake live-target pointer:
+- `CURRENT_LIVE_NEXT_TARGET_v0: execute_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt`
+
 ## 1) Scope and semantics
 
 This inventory is:

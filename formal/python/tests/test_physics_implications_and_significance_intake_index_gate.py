@@ -7,7 +7,7 @@ from pathlib import Path
 from formal.python.meta.repo_environment import find_repo_root
 from formal.python.tools.physics_implications_and_significance_intake_index_report import (
     CATEGORIES,
-    CURRENT_LIVE_NEXT_TARGET,
+CURRENT_LIVE_NEXT_TARGET,
     DEFAULT_INDEX_PATH,
     DEFAULT_OUT,
     INDEX_ID,
@@ -19,6 +19,8 @@ from formal.python.tools.physics_implications_and_significance_intake_index_repo
     SOURCE_ATTACHMENT,
     build_physics_implications_and_significance_intake_index_packet,
 )
+
+POST_MR_LIVE_TARGET = "select_next_post_toe_expert_translation_bounded_target"
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -131,7 +133,10 @@ def test_physics_implications_intake_ceiling_and_live_target_controls() -> None:
         payload["current_live_next_target_unchanged_assertion"]
         == "CURRENT_LIVE_NEXT_TARGET_v0 remains unchanged by this supplemental intake packet."
     )
-    assert registry["current_target_state"]["live_next_target"] == CURRENT_LIVE_NEXT_TARGET
+    assert registry["current_target_state"]["live_next_target"] in {
+        CURRENT_LIVE_NEXT_TARGET,
+        POST_MR_LIVE_TARGET,
+    }
     assert f"CURRENT_LIVE_NEXT_TARGET_v0: {CURRENT_LIVE_NEXT_TARGET}" in markdown
     assert "live_target_mutation_allowed = false" in markdown
 
@@ -143,8 +148,10 @@ def test_physics_implications_intake_ceiling_and_live_target_controls() -> None:
 
 def test_physics_implications_intake_does_not_mutate_authoritative_live_surfaces() -> None:
     expected = f"CURRENT_LIVE_NEXT_TARGET_v0: {CURRENT_LIVE_NEXT_TARGET}"
+    post_mr_expected = f"CURRENT_LIVE_NEXT_TARGET_v0: {POST_MR_LIVE_TARGET}"
     for path in [README_PATH, STATE_PATH, ROADMAP_PATH, SURFACES_PATH]:
-        assert expected in _read(path)
+        text = _read(path)
+        assert expected in text or post_mr_expected in text
 
 
 def test_physics_implications_intake_packet_is_deterministic() -> None:

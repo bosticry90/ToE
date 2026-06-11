@@ -1,0 +1,74 @@
+{
+  "acceptance_criteria": {
+    "all_four_mr_rows_accepted": true,
+    "consumes_closeout_packet": true,
+    "packet_selected_review": true,
+    "preserves_blocker": true,
+    "preserves_nonclaims": true,
+    "remaining_rows_empty": true
+  },
+  "accepted": true,
+  "accepted_mathematical_regularity_assumption_row_count": 4,
+  "accepted_mathematical_regularity_assumption_rows": [
+    "MR-ASSUMP-001-derivative_exchange_regular_boundary",
+    "MR-ASSUMP-002-weak_strong_conservation_comparison_scope",
+    "MR-ASSUMP-003-distributional_pairing_regular_domain",
+    "MR-ASSUMP-004-limit_interchange_regularization_boundary"
+  ],
+  "blocker": "insufficient_assumptions_for_conservation",
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "Family closeout must force witness pressure before any new assumption family.",
+      "target": "prepare_qft_gr_post_mathematical_regularity_conserved_source_witness_reattempt_packet"
+    },
+    {
+      "decision": "not_authorized_before_witness_reattempt",
+      "reason": "Bianchi work remains downstream of witness pressure.",
+      "target": "prepare_qft_gr_bianchi_compatibility_assumption_reduction_packet"
+    },
+    {
+      "decision": "not_authorized_before_witness_reattempt",
+      "reason": "Physical source-admissibility work remains downstream of witness pressure.",
+      "target": "prepare_qft_gr_physical_source_admissibility_assumption_reduction_packet"
+    }
+  ],
+  "captured_at_utc": "2026-06-08T00:00:00Z",
+  "closed_assumption_family": "mathematical_regularity_assumptions",
+  "completed_assumption_families_for_this_lane": [
+    "operator_domain_assumptions",
+    "renormalization_assumptions",
+    "state_domain_assumptions",
+    "mathematical_regularity_assumptions"
+  ],
+  "conservation_blocker_remains": true,
+  "consumed_target": "review_qft_gr_mathematical_regularity_assumption_reduction_closeout_packet_result",
+  "consumes_closeout_packet": "QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_v0",
+  "consumes_closeout_packet_pointer": "formal/docs/release/QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_20260610_v0.json",
+  "non_claim_boundary": {
+    "Bianchi_compatibility_claimed": false,
+    "conservation_proof_object_constructed": false,
+    "conservation_proved": false,
+    "conservation_witness_constructed": false,
+    "empirical_validation_claimed": false,
+    "global_mathematical_regularity_discharged": false,
+    "limit_interchange_proved": false,
+    "master_action_promoted": false,
+    "public_submission_authorized": false,
+    "qft_gr_seam_closed": false,
+    "release_assembly_authorized": false,
+    "semiclassical_einstein_equation_derived": false,
+    "source_admissibility_claimed": false,
+    "state_admissibility_claimed": false,
+    "stress_energy_source_admissibility_claimed": false
+  },
+  "outcome_id": "QFT_GR_MATHEMATICAL_REGULARITY_CLOSEOUT_RESULT_REVIEW_ACCEPTS_FAMILY_CLOSEOUT_AND_AUTHORIZES_POST_MR_WITNESS_REATTEMPT_PACKET_ONLY",
+  "remaining_mathematical_regularity_assumption_rows": [],
+  "result_review_classification": "qft_gr_mathematical_regularity_closeout_result_review_accepts_family_closeout_and_authorizes_post_mr_witness_reattempt_packet_only",
+  "review_decision": "accept",
+  "review_id": "QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_v0",
+  "schema_id": "QFT_GR_MATHEMATICAL_REGULARITY_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_RESULT_REVIEW_20260610_v0",
+  "selected_next_target": "prepare_qft_gr_post_mathematical_regularity_conserved_source_witness_reattempt_packet",
+  "selection_count": 1,
+  "status": "ACTIVE_NONLIVE_NONCLAIM"
+}

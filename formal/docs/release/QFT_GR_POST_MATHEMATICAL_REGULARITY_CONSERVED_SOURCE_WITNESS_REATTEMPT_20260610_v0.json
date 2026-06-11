@@ -1,0 +1,43 @@
+{
+  "acceptance_criteria": {
+    "consumes_packet_review": true,
+    "packet_review_selected_attempt": true,
+    "preserves_nonclaims": true
+  },
+  "attempt_id": "QFT_GR_POST_MATHEMATICAL_REGULARITY_CONSERVED_SOURCE_WITNESS_REATTEMPT_v0",
+  "attempt_question_answered": true,
+  "bounded_witness_constructed": false,
+  "bounded_witness_inconclusive_requires_model_demonstration": true,
+  "bounded_witness_obstruction_identified_requires_next_family": false,
+  "captured_at_utc": "2026-06-08T00:00:00Z",
+  "consumed_target": "execute_qft_gr_post_mathematical_regularity_conserved_source_witness_reattempt",
+  "consumes_packet_review": "QFT_GR_POST_MATHEMATICAL_REGULARITY_CONSERVED_SOURCE_WITNESS_REATTEMPT_PACKET_RESULT_REVIEW_v0",
+  "consumes_packet_review_pointer": "formal/docs/release/QFT_GR_POST_MATHEMATICAL_REGULARITY_CONSERVED_SOURCE_WITNESS_REATTEMPT_PACKET_RESULT_REVIEW_20260610_v0.json",
+  "missing_condition_family_named": null,
+  "next_assumption_family_opened": false,
+  "non_claim_boundary": {
+    "Bianchi_compatibility_claimed": false,
+    "conservation_proof_object_constructed": false,
+    "conservation_proved": false,
+    "conservation_witness_constructed": false,
+    "empirical_validation_claimed": false,
+    "global_mathematical_regularity_discharged": false,
+    "limit_interchange_proved": false,
+    "master_action_promoted": false,
+    "public_submission_authorized": false,
+    "qft_gr_seam_closed": false,
+    "release_assembly_authorized": false,
+    "semiclassical_einstein_equation_derived": false,
+    "source_admissibility_claimed": false,
+    "state_admissibility_claimed": false,
+    "stress_energy_source_admissibility_claimed": false
+  },
+  "outcome_id": "QFT_GR_POST_MR_CONSERVED_SOURCE_WITNESS_REATTEMPT_EXECUTED_INCONCLUSIVE_REQUIRES_MODEL_DEMONSTRATION",
+  "reason": "The row-level reductions now define the witness pressure point, but the repo still lacks a minimal model demonstration showing that the candidate source can be carried across the seam under explicit assumptions.",
+  "result_classification": "bounded_witness_inconclusive_requires_model_demonstration",
+  "schema_id": "QFT_GR_POST_MATHEMATICAL_REGULARITY_CONSERVED_SOURCE_WITNESS_REATTEMPT_20260610_v0",
+  "selected_next_target": "review_qft_gr_post_mathematical_regularity_conserved_source_witness_reattempt_result",
+  "selection_count": 1,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "witness_route_invalid_requires_countermodel_or_scope_rewrite": false
+}

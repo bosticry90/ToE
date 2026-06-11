@@ -1,0 +1,47 @@
+{
+  "countermodels": [
+    {
+      "case_id": "QFT_GR_COUNTERMODEL_001_RESIDUAL_ZERO_NOT_ADMISSIBLE",
+      "false_claim_blocked": "residual_zero_implies_source_admissible",
+      "status": "registered_not_executed",
+      "what_fails": "target-theory source admissibility",
+      "what_succeeds": "residual equality"
+    },
+    {
+      "case_id": "QFT_GR_COUNTERMODEL_002_EXPECTATION_NOT_CONSERVED",
+      "false_claim_blocked": "expectation_exists_implies_conserved_source",
+      "status": "registered_not_executed",
+      "what_fails": "covariant conservation",
+      "what_succeeds": "expectation object exists"
+    },
+    {
+      "case_id": "QFT_GR_COUNTERMODEL_003_PAIRING_WITHOUT_DERIVATIVE_EXCHANGE",
+      "false_claim_blocked": "pairing_domain_implies_conservation_route",
+      "status": "registered_not_executed",
+      "what_fails": "derivative exchange",
+      "what_succeeds": "distributional pairing exists"
+    }
+  ],
+  "metadata": {
+    "claim_ceiling": "countermodel registration only",
+    "claim_level": "Level 2 registry preparing Level 3 discrimination",
+    "countermodel_link": "QFT_GR_COUNTERMODEL_REGISTRY_v0",
+    "expert_legibility_gap": "requires expert translation layer before public posture",
+    "falsifier_link": "TOE_FALSIFIER_AND_PREDICTION_REGISTRY_ADDENDUM_v0",
+    "physical_significance": "shows that local success does not imply seam admissibility",
+    "promotion_blockers": [
+      "no conservation proof object",
+      "no conservation witness",
+      "no source admissibility",
+      "no Bianchi compatibility",
+      "no semiclassical Einstein equation",
+      "no QFT-GR seam closure",
+      "no empirical validation",
+      "no master-action promotion"
+    ],
+    "repo_status": "post-witness maturation artifact",
+    "scientific_role": "discriminate fake, partial, and candidate bridges"
+  },
+  "promotion_allowed": false,
+  "registry_id": "QFT_GR_COUNTERMODEL_REGISTRY_v0"
+}

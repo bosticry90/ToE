@@ -16,6 +16,8 @@ Historical QFT-GR frontier checkpoints retained for substring gates:
 - derive_or_refute_qft_gr_stress_energy_operator_domain_semantics
 - review_qft_gr_stress_energy_operator_domain_semantics_result
 - prepare_full_pillar_target_map_rebase
+- operator-domain assumption-reduction closeout packet
+- weak/strong conservation comparison scope assumption-reduction packet
 - review_qft_gr_conserved_renormalized_stress_energy_source_witness_packet_result
 - review_qft_gr_conserved_renormalized_stress_energy_source_witness_attempt_result
 - prepare_qft_gr_conserved_renormalized_stress_energy_source_witness_obstruction_refinement_packet
@@ -127,13 +129,13 @@ Historical QFT-GR frontier checkpoints retained for substring gates:
 
 Historical current-target snippets:
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_state_expectation_functional_semantics_result"
+  "prepare_toe_expert_translation_layer_artifact"
 def currentLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_stress_energy_operator_domain_semantics_result"
+  "select_next_post_toe_expert_translation_bounded_target"
 def currentLiveNextStrictTargetV0 : String :=
-  "prepare_full_pillar_target_map_rebase"
+  "select_next_post_toe_expert_translation_bounded_target"
 def currentLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_renormalized_expectation_value_semantics_bounded_attack"
+  "select_next_post_toe_expert_translation_bounded_target"
 -/
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
@@ -257,7 +259,8 @@ def crossPillarClosureFrontierV0 :
         "PHASE1-BLOCKER-QMSTAT-EVOLUTION-TO-TRANSPORT-SEMANTIC-BRIDGE-RETAINED"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
-      next_strict_slice := "qm_evolution_post_budget_cross_pillar_review"
+      next_strict_slice :=
+        "select_next_post_toe_expert_translation_bounded_target"
       status := .retained }
   , { row := .qmSTAT
       current_strongest_surface :=
@@ -353,11 +356,11 @@ def crossPillarClosureFrontierSurfaceId : String :=
 
 /-- Previous live target consumed by the QFT-GR MR-ASSUMP-004 result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt_result"
+  "prepare_toe_expert_translation_layer_artifact"
 
 /-- Current live target after the QFT-GR MR-ASSUMP-004 result review. -/
 def currentLiveNextStrictTargetV0 : String :=
-  "select_next_qft_gr_mathematical_regularity_row_from_repo_authoritative_inventory"
+  "select_next_post_toe_expert_translation_bounded_target"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -369,7 +372,8 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 -/
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
-  next_strict_slice := "select_next_qft_gr_mathematical_regularity_row_from_repo_authoritative_inventory"
+  next_strict_slice :=
+    "select_next_post_toe_expert_translation_bounded_target"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

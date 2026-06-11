@@ -297,6 +297,7 @@ def test_post_qm_stat_entropy_assumption_map_selection_registry_rotates_to_candi
             "review_qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result",
             "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt",
             "prepare_qft_gr_renormalization_assumption_reduction_packet",
+            "select_next_post_toe_expert_translation_bounded_target",
         }
         assert state["active_lane"] in {
             "execute_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt",
@@ -324,6 +325,7 @@ def test_post_qm_stat_entropy_assumption_map_selection_registry_rotates_to_candi
             "qft_gr_candidate_source_domain_membership_assumption_reduction_packet_result_review",
             "qft_gr_operator_domain_assumption_reduction_closeout_packet_preparation",
             "qft_gr_operator_domain_assumption_reduction_closeout_packet_result_review",
+            "select_next_post_toe_expert_translation_bounded_target",
         }
     assert ACTIVE_LANE in state["paused_lanes"]
     assert PREVIOUS_LANE in state["paused_lanes"]
