@@ -28,28 +28,31 @@ Authority boundary:
 This summary is time-indexed to audited checkpoint:
 
 ```text
-930e9b14 Review dependency remediation closeout after tranche 004 movement
+c3df4d02 Prepare QFT-GR minimal working model packet
 ```
 
 As of that audited checkpoint, the repo posture was:
 
 ```text
-dependency-remediation queue: closeout accepted at the control layer
-001/002/003/005/006: documented_dependency_nonblocking
-004: documented_source_map_closed_nonblocking
-release readiness: not marked
-release assembly: unauthorized
+QFT-GR minimal working model packet: prepared
+minimal model scope: bounded toy source-candidate demonstration packet only
+toy source candidate: candidate only
+source admissibility: not claimed
+conservation proof object or witness: not claimed
+Bianchi compatibility: not claimed
+semiclassical Einstein equation: not derived
 QFT-GR seam closure: not claimed
-master action: not promoted
+empirical validation or public submission: unauthorized
+aggregate Lean validation caveat: full lake build ToeFormal timed out after repair and rerun attempt; targeted Lean validations passed
 ```
 
-The live target recorded by the current authoritative surfaces at that checkpoint was:
+Current preserved live target at this checkpoint:
 
 ```text
-prepare_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout
+review_qft_gr_minimal_working_model_demonstration_packet_result
 ```
 
-Any newer source-map registration, blocker-movement, release-readiness, or live-target status must be read from the current authoritative surfaces, not inferred from this summary. The required current surfaces are:
+Any newer minimal-model result review, construction attempt, source-map registration, blocker movement, release-readiness, or live-target status must be read from the current authoritative surfaces, not inferred from this summary. The required current surfaces are:
 
 ```text
 formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md
@@ -108,13 +111,19 @@ false-closure prevention
 
 This means the repo is trying to stop a common mistake: treating a local equation match, a zero residual, or a useful analogy as if it were already a complete physical unification.
 
+The project has learned that unification is not mainly "write one big equation." It is "prove the bridges are legal."
+
+It also preserves the anti-overclaim rule that "residual zero" does not automatically mean "the physics bridge is valid."
+
 That is valuable. But it is not the same as a new experimentally confirmed theory of nature.
 
-## Lean And Math Boundary
+## Lean-Backed / Formal Content Boundary
 
-The Lean layer contains real bounded mathematics. Some files prove actual formal statements inside Lean.
+Some Lean files contain substantive conditional theorems.
 
-The Lean layer also contains release/control markers. These markers may typecheck as Lean theorems, but some are intentionally simple status records rather than physics derivations.
+Some Lean files are governance markers. These markers may typecheck as Lean theorems, but some are intentionally simple status records rather than physics derivations.
+
+Both are useful, but only the former are mathematical proof content.
 
 So the safe reading is:
 
@@ -142,6 +151,8 @@ Can the quantum stress-energy side be turned into a valid gravity source with th
 Until those requirements are met at the needed authority level, the safe public statement remains:
 
 ```text
+The repo has not yet shown that a renormalized QFT stress-energy candidate is source-admissible, conserved, Bianchi-compatible, or capable of yielding the semiclassical Einstein equation.
+
 QFT-GR seam closure is not claimed.
 ```
 
