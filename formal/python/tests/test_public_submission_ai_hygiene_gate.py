@@ -40,7 +40,7 @@ EXPECTED_LIVE_TARGET = (
 )
 POST_MR_LIVE_TARGET = (
     "CURRENT_LIVE_NEXT_TARGET_v0: "
-    "select_next_post_toe_expert_translation_bounded_target"
+    "prepare_qft_gr_minimal_working_model_demonstration_packet"
 )
 
 FORBIDDEN_META_MARKERS = [

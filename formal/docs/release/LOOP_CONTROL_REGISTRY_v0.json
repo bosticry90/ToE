@@ -66,7 +66,8 @@
     "prepare_qft_gr_minimal_working_model_program_artifact",
     "prepare_qft_gr_countermodel_registry_artifact",
     "prepare_toe_falsifier_prediction_registry_addendum_artifact",
-    "prepare_toe_expert_translation_layer_artifact"
+    "prepare_toe_expert_translation_layer_artifact",
+    "select_next_post_toe_expert_translation_bounded_target"
   ],
   "controls": [
     {
@@ -428,9 +429,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "select_next_post_toe_expert_translation_bounded_target",
+    "active_lane": "prepare_qft_gr_minimal_working_model_demonstration_packet",
     "candidate_live_next_targets": [
-      "select_next_post_toe_expert_translation_bounded_target"
+      "prepare_qft_gr_minimal_working_model_demonstration_packet"
     ],
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
@@ -538,7 +539,8 @@
       "prepare_qft_gr_minimal_working_model_program_artifact",
       "prepare_qft_gr_countermodel_registry_artifact",
       "prepare_toe_falsifier_prediction_registry_addendum_artifact",
-      "prepare_toe_expert_translation_layer_artifact"
+      "prepare_toe_expert_translation_layer_artifact",
+      "select_next_post_toe_expert_translation_bounded_target"
     ],
     "consumed_targets": [
       {
@@ -548,7 +550,8 @@
         "target": "execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt",
         "token": "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_WITNESS_OR_SEAM_CLOSURE"
       },
-      "prepare_toe_expert_translation_layer_artifact"
+      "prepare_toe_expert_translation_layer_artifact",
+      "select_next_post_toe_expert_translation_bounded_target"
     ],
     "current_target_coverage": [
       {
@@ -760,6 +763,13 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/TOEPostWitnessMaturationArtifacts.lean",
         "target": "select_next_post_toe_expert_translation_bounded_target",
         "token": "TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION"
+      },
+      {
+        "report": "formal/docs/release/POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_20260610_v0.json",
+        "status": "current_live_target_authorized_by_post_translation_selection",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/PostTOEExpertTranslationBoundedTargetSelection.lean",
+        "target": "prepare_qft_gr_minimal_working_model_demonstration_packet",
+        "token": "POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION"
       }
     ],
     "focused_gate": "formal/python/tests/test_current_target_freshness_gate.py",
@@ -770,11 +780,11 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "select_next_post_toe_expert_translation_bounded_target",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/TOEPostWitnessMaturationArtifacts.lean",
+    "live_next_target": "prepare_qft_gr_minimal_working_model_demonstration_packet",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/PostTOEExpertTranslationBoundedTargetSelection.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_outcome": "TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION",
-    "live_next_target_report": "formal/docs/paper/TOE_POST_WITNESS_MATURATION_INDEX_v0.json",
+    "live_next_target_outcome": "POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION",
+    "live_next_target_report": "formal/docs/release/POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_20260610_v0.json",
     "next_strict_target_coverage": {
       "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_CandidateSourceDomainMembershipAssumptionReductionAttempt.lean",
@@ -950,6 +960,12 @@
       "prepare_qft_gr_metric_connection_scope_assumption_reduction_packet": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_MetricConnectionScopeAssumptionReductionPacket.lean",
         "status": "consumed_by_qft_gr_metric_connection_scope_assumption_reduction_packet"
+      },
+      "prepare_qft_gr_minimal_working_model_demonstration_packet": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/PostTOEExpertTranslationBoundedTargetSelection.lean",
+        "report": "formal/docs/release/POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_20260610_v0.json",
+        "status": "current_live_target_authorized_by_post_translation_selection",
+        "token": "POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION"
       },
       "prepare_qft_gr_operator_domain_assumption_reduction_closeout_packet": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_OperatorDomainAssumptionReductionCloseoutPacket.lean",
@@ -1304,7 +1320,7 @@
       "select_next_post_toe_expert_translation_bounded_target": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/TOEPostWitnessMaturationArtifacts.lean",
         "report": "formal/docs/paper/TOE_POST_WITNESS_MATURATION_INDEX_v0.json",
-        "status": "current_live_target_authorized_by_post_witness_maturation_index",
+        "status": "completed_consumed_live_target",
         "token": "TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION"
       },
       "select_next_qft_gr_mathematical_regularity_row_from_repo_authoritative_inventory": {
@@ -1438,10 +1454,11 @@
       "qft_gr_covariant_conservation_statement_with_operator_domain_witness_attempt",
       "qft_gr_selected_operator_action_assumption_reduction_attempt_result_review",
       "qft_gr_candidate_source_domain_membership_assumption_reduction_packet_preparation",
-      "qft_gr_operator_domain_assumption_reduction_closeout_packet_preparation"
+      "qft_gr_operator_domain_assumption_reduction_closeout_packet_preparation",
+      "select_next_post_toe_expert_translation_bounded_target"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "prepare_toe_expert_translation_layer_artifact",
+    "previous_live_next_target": "select_next_post_toe_expert_translation_bounded_target",
     "schema_id": "CURRENT_TARGET_STATE_v0"
   },
   "cycle_waivers": [],
@@ -2191,7 +2208,8 @@
     "prepare_qft_gr_countermodel_registry_artifact",
     "prepare_toe_falsifier_prediction_registry_addendum_artifact",
     "prepare_toe_expert_translation_layer_artifact",
-    "select_next_post_toe_expert_translation_bounded_target"
+    "select_next_post_toe_expert_translation_bounded_target",
+    "prepare_qft_gr_minimal_working_model_demonstration_packet"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -40534,17 +40552,54 @@
     {
       "active_lane": "select_next_post_toe_expert_translation_bounded_target",
       "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/TOEPostWitnessMaturationArtifacts.lean",
-      "authorized_next_strict_target": "select_next_post_toe_expert_translation_bounded_target",
-      "authorized_target": "select_next_post_toe_expert_translation_bounded_target",
+      "authorized_next_strict_target": "prepare_qft_gr_minimal_working_model_demonstration_packet",
+      "authorized_target": "prepare_qft_gr_minimal_working_model_demonstration_packet",
       "blocker": "insufficient_assumptions_for_conservation",
+      "bounded_handoff_requires_review": "yes",
       "claim_ceiling": "selector only no scientific closure",
       "claim_level": "Level 0 bounded selector",
+      "consumed_target": "select_next_post_toe_expert_translation_bounded_target",
+      "next_assumption_family_authorized": "no",
       "non_claim_boundary": "No conservation proof object, witness claim, source admissibility, Bianchi compatibility, QFT-GR closure, empirical validation, release promotion, or master-action promotion.",
+      "outcome_category": "post_translation_next_target_selected",
       "outcome_id": "TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION",
+      "public_theory_readiness_claimed": "no",
+      "release_or_public_submission_authorized": "no",
       "report": "formal/docs/paper/TOE_POST_WITNESS_MATURATION_INDEX_v0.json",
-      "selected_next_strict_target": "select_next_post_toe_expert_translation_bounded_target",
-      "status": "active",
+      "selected_next_strict_target": "prepare_qft_gr_minimal_working_model_demonstration_packet",
+      "selected_next_target": "prepare_qft_gr_minimal_working_model_demonstration_packet",
+      "selection_count": "1",
+      "selection_evidence": "formal/toe_formal/ToeFormal/Derivation/PostTOEExpertTranslationBoundedTargetSelection.lean",
+      "selection_report": "formal/docs/release/POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_20260610_v0.json",
+      "status": "paused",
       "workstream_id": "select_next_post_toe_expert_translation_bounded_target"
+    },
+    {
+      "active_lane": "prepare_qft_gr_minimal_working_model_demonstration_packet",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/PostTOEExpertTranslationBoundedTargetSelection.lean",
+      "authorized_next_strict_target": "prepare_qft_gr_minimal_working_model_demonstration_packet",
+      "authorized_target": "prepare_qft_gr_minimal_working_model_demonstration_packet",
+      "bianchi_compatibility_claimed": "no",
+      "blocker": "insufficient_assumptions_for_conservation",
+      "claim_ceiling": "minimal-model packet preparation only",
+      "claim_level": "Level 0-3 bounded selector",
+      "consumed_target": "select_next_post_toe_expert_translation_bounded_target",
+      "master_action_promotion_authorized": "no",
+      "minimal_model_demonstration_packet_preparation_authorized": "yes",
+      "next_assumption_family_authorized": "no",
+      "non_claim_boundary": "No conservation proof object, witness claim, source admissibility, Bianchi compatibility, semiclassical Einstein equation, QFT-GR closure, empirical validation, public submission, release promotion, or master-action promotion.",
+      "outcome_category": "post_translation_next_target_selected",
+      "outcome_id": "POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION",
+      "public_theory_readiness_claimed": "no",
+      "qft_gr_closure_claimed": "no",
+      "release_or_public_submission_authorized": "no",
+      "report": "formal/docs/release/POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_20260610_v0.json",
+      "selected_next_strict_target": "prepare_qft_gr_minimal_working_model_demonstration_packet",
+      "selected_next_target_role": "bounded Level 3 toy-model demonstration packet preparation",
+      "selection_executes_target": "no",
+      "source_admissibility_claimed": "no",
+      "status": "active",
+      "workstream_id": "prepare_qft_gr_minimal_working_model_demonstration_packet"
     }
   ]
 }

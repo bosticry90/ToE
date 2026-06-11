@@ -129,13 +129,13 @@ Historical QFT-GR frontier checkpoints retained for substring gates:
 
 Historical current-target snippets:
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_toe_expert_translation_layer_artifact"
-def currentLiveNextStrictTargetV0 : String :=
   "select_next_post_toe_expert_translation_bounded_target"
 def currentLiveNextStrictTargetV0 : String :=
-  "select_next_post_toe_expert_translation_bounded_target"
+  "prepare_qft_gr_minimal_working_model_demonstration_packet"
 def currentLiveNextStrictTargetV0 : String :=
-  "select_next_post_toe_expert_translation_bounded_target"
+  "prepare_qft_gr_minimal_working_model_demonstration_packet"
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_minimal_working_model_demonstration_packet"
 -/
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
@@ -260,7 +260,7 @@ def crossPillarClosureFrontierV0 :
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "select_next_post_toe_expert_translation_bounded_target"
+        "prepare_qft_gr_minimal_working_model_demonstration_packet"
       status := .retained }
   , { row := .qmSTAT
       current_strongest_surface :=
@@ -356,11 +356,11 @@ def crossPillarClosureFrontierSurfaceId : String :=
 
 /-- Previous live target consumed by the QFT-GR MR-ASSUMP-004 result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_toe_expert_translation_layer_artifact"
-
-/-- Current live target after the QFT-GR MR-ASSUMP-004 result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "select_next_post_toe_expert_translation_bounded_target"
+
+/-- Current live target after the post-expert-translation target selection. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_minimal_working_model_demonstration_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -373,7 +373,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "select_next_post_toe_expert_translation_bounded_target"
+    "prepare_qft_gr_minimal_working_model_demonstration_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

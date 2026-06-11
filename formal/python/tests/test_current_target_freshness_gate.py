@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "select_next_post_toe_expert_translation_bounded_target"
+    "prepare_qft_gr_minimal_working_model_demonstration_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1326,16 +1326,16 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
     "execute_qft_gr_state_expectation_compatibility_assumption_reduction_attempt"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_toe_expert_translation_layer_artifact"
+    "select_next_post_toe_expert_translation_bounded_target"
 )
 CONSUMED_TARGET = (
-    "prepare_toe_expert_translation_layer_artifact"
+    "select_next_post_toe_expert_translation_bounded_target"
 )
 PREVIOUS_TARGET = (
-    "review_qft_gr_post_mathematical_regularity_conserved_source_witness_reattempt_result"
+    "select_next_post_toe_expert_translation_bounded_target"
 )
 LIVE_TARGET = (
-    "select_next_post_toe_expert_translation_bounded_target"
+    "prepare_qft_gr_minimal_working_model_demonstration_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1352,7 +1352,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "TOEPostWitnessMaturationArtifacts.lean"
+    / "PostTOEExpertTranslationBoundedTargetSelection.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2862,29 +2862,48 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    post_maturation_active_workstream = active_workstream(payload)
-    assert post_maturation_active_workstream["workstream_id"] == ACTIVE_LANE
-    assert post_maturation_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
-    assert post_maturation_active_workstream["authorized_target"] == LIVE_TARGET
-    assert post_maturation_active_workstream["authorization_evidence"] == str(
+    post_translation_active_workstream = active_workstream(payload)
+    assert post_translation_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert post_translation_active_workstream["authorized_next_strict_target"] == LIVE_TARGET
+    assert post_translation_active_workstream["authorized_target"] == LIVE_TARGET
+    assert post_translation_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert post_maturation_active_workstream["report"] == (
-        "formal/docs/paper/TOE_POST_WITNESS_MATURATION_INDEX_v0.json"
+    assert post_translation_active_workstream["report"] == (
+        "formal/docs/release/"
+        "POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_20260610_v0.json"
     )
-    assert post_maturation_active_workstream["outcome_id"] == (
-        "TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_"
-        "WITH_NO_PROMOTION"
+    assert post_translation_active_workstream["outcome_id"] == (
+        "POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_"
+        "MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION"
     )
-    assert post_maturation_active_workstream["claim_level"] == (
-        "Level 0 bounded selector"
+    assert post_translation_active_workstream["claim_level"] == (
+        "Level 0-3 bounded selector"
     )
-    assert post_maturation_active_workstream["claim_ceiling"] == (
-        "selector only no scientific closure"
+    assert post_translation_active_workstream["claim_ceiling"] == (
+        "minimal-model packet preparation only"
     )
-    assert "No conservation proof object" in post_maturation_active_workstream[
+    assert "No conservation proof object" in post_translation_active_workstream[
         "non_claim_boundary"
     ]
+    assert (
+        post_translation_active_workstream["consumed_target"]
+        == "select_next_post_toe_expert_translation_bounded_target"
+    )
+    assert (
+        post_translation_active_workstream["outcome_category"]
+        == "post_translation_next_target_selected"
+    )
+
+    post_maturation_selector_workstream = _workstream(
+        payload, "select_next_post_toe_expert_translation_bounded_target"
+    )
+    assert post_maturation_selector_workstream["status"] == "paused"
+    assert post_maturation_selector_workstream["selected_next_target"] == LIVE_TARGET
+    assert (
+        post_maturation_selector_workstream["outcome_category"]
+        == "post_translation_next_target_selected"
+    )
 
     current_active_workstream = _workstream(payload, MR_ROW_SELECTION_TARGET)
     assert current_active_workstream["status"] == "retained"
@@ -7508,7 +7527,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        post_maturation_active_workstream["authorized_next_strict_target"],
+        post_translation_active_workstream["authorized_next_strict_target"],
     }
     assert active_targets == {LIVE_TARGET}
 

@@ -14,14 +14,16 @@ Release-standard pointers: `formal/docs/release/TOE_V01_ALPHA_RELEASE_STANDARD_2
 Release-standard foundation review: `TOE_V01_ALPHA_RELEASE_STANDARD_FOUNDATION_REVIEW_CONSUMED_PRE_MANIFEST`. Governance enrollment token: `TOE_V01_ALPHA_RELEASE_GATE_ENROLLED`; enrollment result-review token: `TOE_V01_ALPHA_GOVERNANCE_MANIFEST_ENROLLMENT_RESULT_REVIEW_CONSUMED`, which selected the historical post-enrollment target `select_next_post_v01_alpha_manifest_enrollment_bounded_attack` and recommended `prepare_v01_alpha_release_packet_gap_review`. Current release-facing posture remains bounded criticizability and preparation only. The QFT-GR obstruction chain has narrowed to `insufficient_assumptions_for_conservation`; `operator_domain_assumptions`, `renormalization_assumptions`, and `state_domain_assumptions` are completed at row-reduction closeout level for this lane; SD-ASSUMP-001, SD-ASSUMP-002, and SD-ASSUMP-003 are accepted as bounded reductions only; the repo-authoritative state-domain inventory has no row after `SD-ASSUMP-003-state_expectation_compatibility`; the mathematical-regularity assumption-reduction packet result review is accepted; the bounded `MR-ASSUMP-001-derivative_exchange_regular_boundary` attempt result review accepts that row as bounded-reduced only; the bounded `MR-ASSUMP-002-weak_strong_conservation_comparison_scope` attempt result review is accepted; the `MR-ASSUMP-003-distributional_pairing_regular_domain` packet result review is accepted as packet preparation only; and the bounded MR-ASSUMP-003 attempt result review is accepted with live target `execute_qft_gr_limit_interchange_regularization_boundary_assumption_reduction_attempt`. Release readiness remains unmarked, release assembly remains unauthorized, the release gates remain manifest-enrolled governed baseline surfaces, and v0.1-alpha public release is not complete. Stable nonclaim boundary: no master-action promotion, no pillar completion, no seam closure, no QFT-GR seam closure, no QFT-GR source-map closure, no Phase 2 readiness, no empirical adequacy, no canonical ToE status, and no external truth claim from source-map closure registration.
 
 POST_MR_MATURATION_EXECUTION_STATUS_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
-CURRENT_LIVE_NEXT_TARGET_v0: select_next_post_toe_expert_translation_bounded_target
-PREVIOUS_LIVE_NEXT_TARGET_v0: prepare_toe_expert_translation_layer_artifact
-ACTIVE_LANE_v0: select_next_post_toe_expert_translation_bounded_target
+POST_TRANSLATION_SELECTION_OUTCOME_v0: POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION
+POST_TRANSLATION_SELECTION_CATEGORY_v0: post_translation_next_target_selected
+CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_gr_minimal_working_model_demonstration_packet
+PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_post_toe_expert_translation_bounded_target
+ACTIVE_LANE_v0: prepare_qft_gr_minimal_working_model_demonstration_packet
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/TOEPostWitnessMaturationArtifacts.lean
-CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/paper/TOE_POST_WITNESS_MATURATION_INDEX_v0.json
-CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_POST_WITNESS_MATURATION_ARTIFACTS_PREPARED_AFTER_WITNESS_PRESSURE_WITH_NO_PROMOTION
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/PostTOEExpertTranslationBoundedTargetSelection.lean
+CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_20260610_v0.json
+CURRENT_LIVE_TARGET_OUTCOME_v0: POST_TOE_EXPERT_TRANSLATION_BOUNDED_TARGET_SELECTION_SELECTS_QFT_GR_MINIMAL_MODEL_DEMONSTRATION_PACKET_NO_PROMOTION
 POST_MR_WITNESS_REATTEMPT_RESULT_v0: bounded_witness_inconclusive_requires_model_demonstration
 POST_MR_MATURATION_ARTIFACT_ORDER_v0: TOE_CLAIM_LADDER_v0 -> TOE_CORE_HYPOTHESIS_v0 -> QFT_GR_MINIMAL_WORKING_MODEL_PROGRAM_v0 -> QFT_GR_COUNTERMODEL_REGISTRY_v0 -> TOE_FALSIFIER_AND_PREDICTION_REGISTRY_ADDENDUM_v0 -> TOE_EXPERT_TRANSLATION_LAYER_v0
 POST_MR_NONCLAIM_BOUNDARY_v0: no conservation proof object, no witness claim, no source admissibility, no Bianchi compatibility, no QFT-GR closure, no empirical validation, no master-action promotion.

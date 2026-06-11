@@ -85,7 +85,7 @@ STATE_EXPECTATION_RESULT_REVIEW_TARGET = (
     "review_qft_gr_state_expectation_functional_semantics_result"
 )
 LIVE_TARGET = "prepare_qft_gr_renormalized_expectation_value_semantics_bounded_attack"
-POST_MR_LIVE_TARGET = "select_next_post_toe_expert_translation_bounded_target"
+POST_MR_LIVE_TARGET = "prepare_qft_gr_minimal_working_model_demonstration_packet"
 SURFACE_ID = "QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_v0"
 FRESH_DELTA_ID = (
     "QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_PACKAGE_ONLY_COUNTEREXAMPLE_FRESH_DELTA_v0"
@@ -187,7 +187,7 @@ def test_frontier_and_aggregate_rotate_to_operator_domain_result_review() -> Non
         in frontier_text
         or f'def previousLiveNextStrictTargetV0 : String :=\n  "{STATE_EXPECTATION_RESULT_REVIEW_TARGET}"'
         in frontier_text
-        or 'def previousLiveNextStrictTargetV0 : String :=\n  "prepare_toe_expert_translation_layer_artifact"'
+        or 'def previousLiveNextStrictTargetV0 : String :=\n  "select_next_post_toe_expert_translation_bounded_target"'
         in frontier_text
     )
     assert (
