@@ -29,6 +29,10 @@ from formal.python.tools.qft_gr_minimal_working_model_conservation_test_packet_r
     NEXT_TARGET as FINAL_LIVE_TARGET,
     OUTCOME_ID as CONSERVATION_TEST_PACKET_OUTCOME,
 )
+from formal.python.tools.qft_gr_minimal_working_model_conservation_test_packet_result_review_report import (
+    NEXT_TARGET as CONSERVATION_TEST_ATTEMPT_TARGET,
+    OUTCOME_ID as CONSERVATION_TEST_PACKET_RESULT_REVIEW_OUTCOME,
+)
 from formal.python.tools.qft_gr_post_mr_assump004_governed_maturation_reports import (
     CAPTURED_AT_UTC,
 )
@@ -203,9 +207,9 @@ def test_minimal_working_model_packet_result_review_updates_live_target() -> Non
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == CONSERVATION_TEST_PACKET_TARGET
-    assert state["live_next_target"] == FINAL_LIVE_TARGET
-    assert state["active_lane"] == FINAL_LIVE_TARGET
+    assert state["previous_live_next_target"] == FINAL_LIVE_TARGET
+    assert state["live_next_target"] == CONSERVATION_TEST_ATTEMPT_TARGET
+    assert state["active_lane"] == CONSERVATION_TEST_ATTEMPT_TARGET
     assert REVIEW_TARGET in registry["next_strict_target_coverage"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
     assert CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET in registry[
@@ -217,6 +221,7 @@ def test_minimal_working_model_packet_result_review_updates_live_target() -> Non
     ]
     assert CONSERVATION_TEST_PACKET_TARGET in registry["next_strict_target_coverage"]
     assert FINAL_LIVE_TARGET in registry["next_strict_target_coverage"]
+    assert CONSERVATION_TEST_ATTEMPT_TARGET in registry["next_strict_target_coverage"]
 
     review_workstream = _workstream(registry, REVIEW_TARGET)
     assert review_workstream["status"] == "paused"
@@ -274,9 +279,26 @@ def test_minimal_working_model_packet_result_review_updates_live_target() -> Non
     assert conservation_packet_workstream["packet_prepared"] == "yes"
     assert conservation_packet_workstream["conservation_test_executed"] == "no"
 
+    packet_result_review_workstream = _workstream(registry, FINAL_LIVE_TARGET)
+    assert packet_result_review_workstream["status"] == "paused"
+    assert packet_result_review_workstream["selected_next_target"] == (
+        CONSERVATION_TEST_ATTEMPT_TARGET
+    )
+    assert packet_result_review_workstream["packet_result_review_accepted"] == "yes"
+    assert (
+        packet_result_review_workstream[
+            "bounded_conservation_test_attempt_authorized"
+        ]
+        == "yes"
+    )
+
     active_workstream = active[0]
-    assert active_workstream["workstream_id"] == FINAL_LIVE_TARGET
-    assert active_workstream["outcome_id"] == CONSERVATION_TEST_PACKET_OUTCOME
+    assert active_workstream["workstream_id"] == CONSERVATION_TEST_ATTEMPT_TARGET
+    assert active_workstream["outcome_id"] == (
+        CONSERVATION_TEST_PACKET_RESULT_REVIEW_OUTCOME
+    )
+    assert active_workstream["conservation_test_attempt_authorized"] == "yes"
+    assert active_workstream["conservation_test_executed"] == "no"
     assert active_workstream["source_admissibility_claimed"] == "no"
     assert active_workstream["qft_gr_closure_claimed"] == "no"
 

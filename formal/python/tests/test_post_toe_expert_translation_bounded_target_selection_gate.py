@@ -106,10 +106,11 @@ def test_post_translation_selection_updates_authoritative_live_target() -> None:
         SELECTED_NEXT_TARGET,
         "execute_qft_gr_minimal_working_model_construction_attempt",
         "review_qft_gr_minimal_working_model_construction_attempt_result",
-        "analyze_qft_gr_minimal_working_model_candidate_only",
-        "review_qft_gr_minimal_working_model_candidate_analysis_result",
-        "prepare_qft_gr_minimal_working_model_conservation_test_packet",
-    }
+            "analyze_qft_gr_minimal_working_model_candidate_only",
+            "review_qft_gr_minimal_working_model_candidate_analysis_result",
+            "prepare_qft_gr_minimal_working_model_conservation_test_packet",
+            "review_qft_gr_minimal_working_model_conservation_test_packet_result",
+        }
     assert state["live_next_target"] in {
         SELECTED_NEXT_TARGET,
         MINIMAL_MODEL_PACKET_REVIEW_TARGET,
@@ -118,6 +119,7 @@ def test_post_translation_selection_updates_authoritative_live_target() -> None:
         "review_qft_gr_minimal_working_model_candidate_analysis_result",
         "prepare_qft_gr_minimal_working_model_conservation_test_packet",
         "review_qft_gr_minimal_working_model_conservation_test_packet_result",
+        "execute_qft_gr_minimal_working_model_conservation_test_attempt",
     }
 
     consumed_selector = _workstream(registry, CONSUMED_TARGET)

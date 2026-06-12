@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "review_qft_gr_minimal_working_model_conservation_test_packet_result"
+ACTIVE_LANE = "execute_qft_gr_minimal_working_model_conservation_test_attempt"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1324,15 +1324,18 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
     "execute_qft_gr_state_expectation_compatibility_assumption_reduction_attempt"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_minimal_working_model_conservation_test_packet"
+    "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 CONSUMED_TARGET = (
-    "prepare_qft_gr_minimal_working_model_conservation_test_packet"
+    "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_TARGET = (
+    "review_qft_gr_minimal_working_model_conservation_test_packet_result"
+)
+CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "review_qft_gr_minimal_working_model_conservation_test_packet_result"
+LIVE_TARGET = "execute_qft_gr_minimal_working_model_conservation_test_attempt"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1348,7 +1351,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalWorkingModelConservationTestPacket.lean"
+    / "QFTGRMinimalWorkingModelConservationTestPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2858,65 +2861,86 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    packet_result_review_active_workstream = active_workstream(payload)
-    assert packet_result_review_active_workstream["workstream_id"] == ACTIVE_LANE
+    conservation_test_attempt_active_workstream = active_workstream(payload)
+    assert conservation_test_attempt_active_workstream["workstream_id"] == ACTIVE_LANE
     assert (
-        packet_result_review_active_workstream["authorized_next_strict_target"]
+        conservation_test_attempt_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert packet_result_review_active_workstream["authorized_target"] == LIVE_TARGET
-    assert packet_result_review_active_workstream["authorization_evidence"] == str(
+    assert conservation_test_attempt_active_workstream["authorized_target"] == LIVE_TARGET
+    assert conservation_test_attempt_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert packet_result_review_active_workstream["report"] == (
+    assert conservation_test_attempt_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_20260612_v0.json"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_RESULT_REVIEW_20260612_v0.json"
     )
-    assert packet_result_review_active_workstream["outcome_id"] == (
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_PREPARED_WITH_NO_"
-        "CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY"
+    assert conservation_test_attempt_active_workstream["outcome_id"] == (
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_CONSERVATION_TEST_ATTEMPT_ONLY"
     )
-    assert packet_result_review_active_workstream["claim_level"] == (
-        "Level 3 conservation-test packet result-review target"
+    assert conservation_test_attempt_active_workstream["claim_level"] == (
+        "Level 3 bounded conservation-test attempt target"
     )
-    assert packet_result_review_active_workstream["claim_ceiling"] == (
-        "conservation-test packet result review only"
+    assert conservation_test_attempt_active_workstream["claim_ceiling"] == (
+        "bounded conservation-test attempt only"
     )
-    assert "No source admissibility" in packet_result_review_active_workstream[
+    assert "No source admissibility" in conservation_test_attempt_active_workstream[
         "non_claim_boundary"
     ]
     assert (
-        packet_result_review_active_workstream["consumed_target"]
+        conservation_test_attempt_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        packet_result_review_active_workstream[
-            "conservation_test_packet_consumed"
+        conservation_test_attempt_active_workstream[
+            "conservation_test_attempt_authorized"
         ]
         == "yes"
     )
     assert (
-        packet_result_review_active_workstream[
-            "conservation_test_packet_result_review_pending"
+        conservation_test_attempt_active_workstream[
+            "conservation_test_packet_result_review_consumed"
         ]
         == "yes"
     )
     assert (
-        packet_result_review_active_workstream["conservation_test_executed"]
+        conservation_test_attempt_active_workstream["conservation_test_executed"]
         == "no"
     )
     assert (
-        packet_result_review_active_workstream["source_admissibility_claimed"]
+        conservation_test_attempt_active_workstream["source_admissibility_claimed"]
         == "no"
     )
     assert (
-        packet_result_review_active_workstream["conservation_witness_constructed"]
+        conservation_test_attempt_active_workstream["conservation_witness_constructed"]
         == "no"
     )
 
-    conservation_packet_workstream = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    packet_result_review_workstream = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert packet_result_review_workstream["status"] == "paused"
+    assert packet_result_review_workstream["selected_next_target"] == LIVE_TARGET
+    assert packet_result_review_workstream["packet_result_review_accepted"] == "yes"
+    assert (
+        packet_result_review_workstream[
+            "bounded_conservation_test_attempt_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        packet_result_review_workstream[
+            "bounded_conservation_test_attempt_executed_by_review"
+        ]
+        == "no"
+    )
+    assert packet_result_review_workstream["conservation_test_executed"] == "no"
+    assert packet_result_review_workstream["source_admissibility_claimed"] == "no"
+    assert packet_result_review_workstream["conservation_witness_constructed"] == "no"
+    assert packet_result_review_workstream["qft_gr_closure_claimed"] == "no"
+
+    conservation_packet_workstream = _workstream(payload, CONSERVATION_TEST_PACKET_TARGET)
     assert conservation_packet_workstream["status"] == "paused"
-    assert conservation_packet_workstream["selected_next_target"] == LIVE_TARGET
+    assert conservation_packet_workstream["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert conservation_packet_workstream["packet_prepared"] == "yes"
     assert conservation_packet_workstream["packet_preparation_only"] == "yes"
     assert (
@@ -2934,7 +2958,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert candidate_analysis_result_review_workstream["status"] == "paused"
     assert (
         candidate_analysis_result_review_workstream["selected_next_target"]
-        == PREVIOUS_LIVE_TARGET
+        == CONSERVATION_TEST_PACKET_TARGET
     )
     assert (
         candidate_analysis_result_review_workstream["result_review_accepted"]
@@ -7719,7 +7743,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        packet_result_review_active_workstream["authorized_next_strict_target"],
+        conservation_test_attempt_active_workstream["authorized_next_strict_target"],
     }
     assert active_targets == {LIVE_TARGET}
 

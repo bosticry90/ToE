@@ -1,0 +1,185 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "conservation_sense_defined": true,
+    "consumes_expected_conservation_test_packet": true,
+    "exactly_one_next_target_selected": true,
+    "failure_routing_recorded": true,
+    "no_bianchi_or_semiclassical_einstein": true,
+    "no_conservation_claim_proof_or_witness": true,
+    "no_empirical_validation_or_public_submission": true,
+    "no_master_action_promotion": true,
+    "no_qft_gr_closure": true,
+    "no_source_admissibility_claim": true,
+    "packet_classification_expected": true,
+    "packet_outcome_expected": true,
+    "packet_preparation_only_confirmed": true,
+    "packet_selected_this_result_review": true,
+    "pass_fail_inconclusive_defined": true,
+    "passing_not_source_admissibility_recorded": true,
+    "test_object_and_domain_defined": true,
+    "toy_source_remains_candidate_only": true,
+    "weak_scope_only_confirmed": true
+  },
+  "accepted": true,
+  "aggregate_lean_timeout_caveat_preserved": true,
+  "bounded_conservation_test_attempt_authorized": true,
+  "bounded_conservation_test_attempt_executed_by_review": false,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The conservation-test packet is accepted as a protocol, so the next bounded action may execute only that test attempt.",
+      "target": "execute_qft_gr_minimal_working_model_conservation_test_attempt"
+    },
+    {
+      "decision": "completed_consumed_live_target",
+      "reason": "This conservation-test packet result-review target is consumed here.",
+      "target": "review_qft_gr_minimal_working_model_conservation_test_packet_result"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The toy source remains a candidate only.",
+      "target": "claim_qft_gr_source_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The review authorizes a bounded test attempt, not a proof.",
+      "target": "prove_qft_gr_conservation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No conservation witness is constructed or authorized by review.",
+      "target": "construct_qft_gr_conservation_witness"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Bianchi compatibility remains downstream and unclaimed.",
+      "target": "claim_qft_gr_bianchi_compatibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The semiclassical Einstein equation is not derived here.",
+      "target": "derive_semiclassical_einstein_equation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "QFT-GR closure remains outside this result review.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Empirical validation and public submission are not authorized.",
+      "target": "authorize_empirical_validation_or_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-06-12T00:00:00Z",
+  "conservation_claimed": false,
+  "conservation_proof_object_constructed": false,
+  "conservation_proved": false,
+  "conservation_sense_being_tested": {
+    "fixed_background_only": true,
+    "global_conservation_claimed": false,
+    "sense_being_tested": "Weak covariant conservation of the toy stress-energy-like candidate against an admitted test-vector domain on the fixed controlled background.",
+    "sense_id": "weak_distributional_covariant_conservation_for_toy_candidate",
+    "statement_template": "For every admitted compactly supported test vector field X in the test domain, the weak pairing of div_g(T_candidate) with X vanishes; otherwise record the first explicit obstruction.",
+    "strong_pointwise_conservation_claimed": false,
+    "test_executed": false
+  },
+  "conservation_test_attempt_result_classification_count": 3,
+  "conservation_test_attempt_result_classifications": [
+    "qft_gr_minimal_working_model_conservation_test_attempt_executed_pending_result_review",
+    "qft_gr_minimal_working_model_conservation_obstruction_identified_requires_countermodel_or_scope_refinement",
+    "qft_gr_minimal_working_model_conservation_test_inconclusive_requires_model_scope_refinement"
+  ],
+  "conservation_test_executed": false,
+  "conservation_test_result_claimed": false,
+  "conservation_witness_constructed": false,
+  "consumed_packet_classification": "qft_gr_minimal_working_model_conservation_test_packet_prepared_pending_result_review",
+  "consumed_packet_outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_PREPARED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY",
+  "consumed_packet_schema_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_20260612_v0",
+  "consumed_target": "review_qft_gr_minimal_working_model_conservation_test_packet_result",
+  "consumes_qft_gr_minimal_working_model_conservation_test_packet": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_v0",
+  "consumes_qft_gr_minimal_working_model_conservation_test_packet_pointer": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_20260612_v0.json",
+  "empirical_validation_claimed": false,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "EXECUTE_QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_ONLY_NO_SOURCE_ADMISSIBILITY_CONSERVATION_PROOF_WITNESS_BIANCHI_SEMICLASSICAL_EINSTEIN_QFT_GR_CLOSURE_EMPIRICAL_VALIDATION_OR_PUBLIC_SUBMISSION",
+  "non_claim_boundary": "This result review accepts only the prepared conservation-test packet and authorizes one bounded conservation-test attempt. It does not execute the test and preserves no source admissibility, no conservation claim, no conservation proof object, no conservation witness, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion.",
+  "outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_CONSERVATION_TEST_ATTEMPT_ONLY",
+  "packet_preparation_only_confirmed": true,
+  "packet_result_review_accepted": true,
+  "pass_fail_inconclusive_criteria": {
+    "fail": [
+      "a packet-admitted weak divergence pairing is explicitly nonzero",
+      "the required distributional pairing is undefined for the toy candidate",
+      "a required limit/interchange or derivative-exchange step is blocked"
+    ],
+    "inconclusive": [
+      "the test cannot decide zero versus nonzero under supplied assumptions",
+      "the test requires a stronger domain, pairing, or regularity assumption than the packet is allowed to add",
+      "the weak and strong conservation scopes cannot be separated cleanly"
+    ],
+    "pass": [
+      "every packet-admitted weak pairing is defined under the supplied domain and regularity assumptions",
+      "every packet-admitted weak divergence pairing evaluates to zero without adding an unrecorded assumption",
+      "no obstruction row is triggered by the packet's test matrix"
+    ]
+  },
+  "physical_source_claimed": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "result_review_classification": "qft_gr_minimal_working_model_conservation_test_packet_result_review_accepts_packet_and_authorizes_bounded_conservation_test_attempt_only",
+  "result_review_classification_count": 1,
+  "result_review_selected_next_target": "execute_qft_gr_minimal_working_model_conservation_test_attempt",
+  "review_decision": "accepted",
+  "review_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_RESULT_REVIEW_v0",
+  "schema_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_RESULT_REVIEW_20260612_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "execute_qft_gr_minimal_working_model_conservation_test_attempt",
+  "selected_next_target_count": 1,
+  "selected_next_target_kind": "qft_gr_minimal_working_model_conservation_test_attempt_execution_only",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "test_object_and_test_domain": {
+    "background": "fixed controlled background; backreaction excluded",
+    "test_domain": {
+      "admissible_source_domain_established": false,
+      "domain_status": "supplied_imported_domain_conditions_only",
+      "pairing_domain_status": "distributional_pairing_domain_imported_not_validated_for_source",
+      "source_domain_membership_claimed": false,
+      "test_vectors": "admitted compactly supported smooth vector-field test objects or their packet-level formal surrogate"
+    },
+    "test_object_id": "QFT_GR_MINIMAL_WORKING_MODEL_TOY_SOURCE_CANDIDATE_v0",
+    "test_object_role": "stress_energy_like_candidate_only",
+    "test_object_status": "candidate_only_not_source_admissibility"
+  },
+  "toy_source_candidate_remains_candidate_only": true,
+  "toy_source_candidate_status": "candidate_only_not_source_admissibility",
+  "toy_source_promoted_to_admissible_source": false,
+  "validation_caveat": "full lake build ToeFormal timed out after repair and rerun attempt; targeted Lean packet/frontier/historical modules passed",
+  "weak_vs_strong_conservation_scope": {
+    "scope_decision": "weak_scope_only_for_this_packet",
+    "strong_conservation_claimed": false,
+    "strong_conservation_tested": false,
+    "strong_scope": "pointwise classical covariant divergence vanishing for an admissible stress-energy source",
+    "weak_conservation_claimed": false,
+    "weak_scope": "distributional or weak divergence vanishing under the supplied pairing, domain, and regularity assumptions"
+  },
+  "why_failing_routes_to_countermodel_or_scope_refinement": [
+    "An explicit nonzero weak pairing or undefined pairing supplies a countermodel route for the toy candidate.",
+    "A blocked domain, pairing, or regularity step routes to bounded scope refinement rather than source-admissibility promotion.",
+    "Any failure remains local to the bounded toy candidate unless a later reviewed artifact authorizes a broader conclusion."
+  ],
+  "why_passing_does_not_imply_source_admissibility": [
+    "Weak divergence vanishing against the packet test domain is only one source-admissibility component.",
+    "The packet does not establish full source-domain membership, Bianchi compatibility, or coupling to the semiclassical Einstein equation.",
+    "The tested object remains a toy stress-energy-like candidate and is not promoted to an admissible physical source."
+  ]
+}
