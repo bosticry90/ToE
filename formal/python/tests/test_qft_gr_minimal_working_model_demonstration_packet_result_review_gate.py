@@ -25,9 +25,9 @@ from formal.python.tools.qft_gr_minimal_working_model_demonstration_packet_resul
     SCHEMA_ID,
     build_qft_gr_minimal_working_model_demonstration_packet_result_review,
 )
-from formal.python.tools.qft_gr_minimal_working_model_candidate_analysis_result_review_report import (
+from formal.python.tools.qft_gr_minimal_working_model_conservation_test_packet_report import (
     NEXT_TARGET as FINAL_LIVE_TARGET,
-    OUTCOME_ID as CANDIDATE_ANALYSIS_RESULT_REVIEW_OUTCOME,
+    OUTCOME_ID as CONSERVATION_TEST_PACKET_OUTCOME,
 )
 from formal.python.tools.qft_gr_post_mr_assump004_governed_maturation_reports import (
     CAPTURED_AT_UTC,
@@ -40,6 +40,9 @@ CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET = (
 CANDIDATE_ANALYSIS_TARGET = "analyze_qft_gr_minimal_working_model_candidate_only"
 CANDIDATE_ANALYSIS_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_candidate_analysis_result"
+)
+CONSERVATION_TEST_PACKET_TARGET = (
+    "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 
 
@@ -200,7 +203,7 @@ def test_minimal_working_model_packet_result_review_updates_live_target() -> Non
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == CANDIDATE_ANALYSIS_RESULT_REVIEW_TARGET
+    assert state["previous_live_next_target"] == CONSERVATION_TEST_PACKET_TARGET
     assert state["live_next_target"] == FINAL_LIVE_TARGET
     assert state["active_lane"] == FINAL_LIVE_TARGET
     assert REVIEW_TARGET in registry["next_strict_target_coverage"]
@@ -212,6 +215,7 @@ def test_minimal_working_model_packet_result_review_updates_live_target() -> Non
     assert CANDIDATE_ANALYSIS_RESULT_REVIEW_TARGET in registry[
         "next_strict_target_coverage"
     ]
+    assert CONSERVATION_TEST_PACKET_TARGET in registry["next_strict_target_coverage"]
     assert FINAL_LIVE_TARGET in registry["next_strict_target_coverage"]
 
     review_workstream = _workstream(registry, REVIEW_TARGET)
@@ -251,7 +255,7 @@ def test_minimal_working_model_packet_result_review_updates_live_target() -> Non
     assert candidate_analysis_result_review_workstream["status"] == "paused"
     assert (
         candidate_analysis_result_review_workstream["selected_next_target"]
-        == FINAL_LIVE_TARGET
+        == CONSERVATION_TEST_PACKET_TARGET
     )
     assert (
         candidate_analysis_result_review_workstream["result_review_accepted"]
@@ -264,9 +268,15 @@ def test_minimal_working_model_packet_result_review_updates_live_target() -> Non
         == "yes"
     )
 
+    conservation_packet_workstream = _workstream(registry, CONSERVATION_TEST_PACKET_TARGET)
+    assert conservation_packet_workstream["status"] == "paused"
+    assert conservation_packet_workstream["selected_next_target"] == FINAL_LIVE_TARGET
+    assert conservation_packet_workstream["packet_prepared"] == "yes"
+    assert conservation_packet_workstream["conservation_test_executed"] == "no"
+
     active_workstream = active[0]
     assert active_workstream["workstream_id"] == FINAL_LIVE_TARGET
-    assert active_workstream["outcome_id"] == CANDIDATE_ANALYSIS_RESULT_REVIEW_OUTCOME
+    assert active_workstream["outcome_id"] == CONSERVATION_TEST_PACKET_OUTCOME
     assert active_workstream["source_admissibility_claimed"] == "no"
     assert active_workstream["qft_gr_closure_claimed"] == "no"
 

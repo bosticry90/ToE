@@ -34,6 +34,11 @@ from formal.python.tools.qft_gr_minimal_working_model_candidate_analysis_result_
     NEXT_TARGET as RESULT_REVIEW_NEXT_TARGET,
     OUTCOME_ID as RESULT_REVIEW_OUTCOME,
 )
+from formal.python.tools.qft_gr_minimal_working_model_conservation_test_packet_report import (
+    DEFAULT_OUT as CONSERVATION_TEST_PACKET_OUT,
+    NEXT_TARGET as CONSERVATION_TEST_PACKET_NEXT_TARGET,
+    OUTCOME_ID as CONSERVATION_TEST_PACKET_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -236,21 +241,24 @@ def test_minimal_working_model_candidate_analysis_updates_live_target() -> None:
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == NEXT_TARGET
-    assert state["live_next_target"] == RESULT_REVIEW_NEXT_TARGET
-    assert state["active_lane"] == RESULT_REVIEW_NEXT_TARGET
+    assert state["previous_live_next_target"] == RESULT_REVIEW_NEXT_TARGET
+    assert state["live_next_target"] == CONSERVATION_TEST_PACKET_NEXT_TARGET
+    assert state["active_lane"] == CONSERVATION_TEST_PACKET_NEXT_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "QFTGRMinimalWorkingModelCandidateAnalysisResultReview.lean"
+        "QFTGRMinimalWorkingModelConservationTestPacket.lean"
     )
     assert state["live_next_target_report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CANDIDATE_ANALYSIS_RESULT_REVIEW_20260612_v0.json"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_20260612_v0.json"
     )
-    assert state["live_next_target_outcome"] == RESULT_REVIEW_OUTCOME
+    assert state["live_next_target_outcome"] == CONSERVATION_TEST_PACKET_OUTCOME
     assert CONSUMED_TARGET in registry["next_strict_target_coverage"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
     assert RESULT_REVIEW_NEXT_TARGET in registry["next_strict_target_coverage"]
+    assert CONSERVATION_TEST_PACKET_NEXT_TARGET in registry[
+        "next_strict_target_coverage"
+    ]
 
     analysis_workstream = _workstream(registry, CONSUMED_TARGET)
     assert analysis_workstream["status"] == "paused"
@@ -283,11 +291,28 @@ def test_minimal_working_model_candidate_analysis_updates_live_target() -> None:
     assert result_review_workstream["conservation_witness_constructed"] == "no"
     assert result_review_workstream["qft_gr_closure_claimed"] == "no"
 
+    conservation_packet_workstream = _workstream(registry, RESULT_REVIEW_NEXT_TARGET)
+    assert conservation_packet_workstream["status"] == "paused"
+    assert conservation_packet_workstream["report"] == str(
+        CONSERVATION_TEST_PACKET_OUT.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert conservation_packet_workstream["packet_prepared"] == "yes"
+    assert conservation_packet_workstream["selected_next_target"] == (
+        CONSERVATION_TEST_PACKET_NEXT_TARGET
+    )
+    assert conservation_packet_workstream["conservation_test_executed"] == "no"
+    assert conservation_packet_workstream["source_admissibility_claimed"] == "no"
+    assert conservation_packet_workstream["conservation_witness_constructed"] == "no"
+    assert conservation_packet_workstream["qft_gr_closure_claimed"] == "no"
+
     active_workstream = active[0]
-    assert active_workstream["workstream_id"] == RESULT_REVIEW_NEXT_TARGET
-    assert active_workstream["authorized_next_strict_target"] == RESULT_REVIEW_NEXT_TARGET
-    assert active_workstream["consumed_target"] == NEXT_TARGET
-    assert active_workstream["outcome_id"] == RESULT_REVIEW_OUTCOME
+    assert active_workstream["workstream_id"] == CONSERVATION_TEST_PACKET_NEXT_TARGET
+    assert (
+        active_workstream["authorized_next_strict_target"]
+        == CONSERVATION_TEST_PACKET_NEXT_TARGET
+    )
+    assert active_workstream["consumed_target"] == RESULT_REVIEW_NEXT_TARGET
+    assert active_workstream["outcome_id"] == CONSERVATION_TEST_PACKET_OUTCOME
     assert active_workstream["source_admissibility_claimed"] == "no"
     assert active_workstream["conservation_witness_constructed"] == "no"
     assert active_workstream["qft_gr_closure_claimed"] == "no"

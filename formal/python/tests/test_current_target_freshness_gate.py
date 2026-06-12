@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_qft_gr_minimal_working_model_conservation_test_packet"
+ACTIVE_LANE = "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1324,15 +1324,15 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
     "execute_qft_gr_state_expectation_compatibility_assumption_reduction_attempt"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_qft_gr_minimal_working_model_candidate_analysis_result"
+    "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 CONSUMED_TARGET = (
-    "review_qft_gr_minimal_working_model_candidate_analysis_result"
+    "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 PREVIOUS_TARGET = (
-    "review_qft_gr_minimal_working_model_candidate_analysis_result"
+    "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_qft_gr_minimal_working_model_conservation_test_packet"
+LIVE_TARGET = "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1348,7 +1348,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalWorkingModelCandidateAnalysisResultReview.lean"
+    / "QFTGRMinimalWorkingModelConservationTestPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2858,66 +2858,83 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    conservation_packet_active_workstream = active_workstream(payload)
-    assert conservation_packet_active_workstream["workstream_id"] == ACTIVE_LANE
+    packet_result_review_active_workstream = active_workstream(payload)
+    assert packet_result_review_active_workstream["workstream_id"] == ACTIVE_LANE
     assert (
-        conservation_packet_active_workstream["authorized_next_strict_target"]
+        packet_result_review_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert conservation_packet_active_workstream["authorized_target"] == LIVE_TARGET
-    assert conservation_packet_active_workstream["authorization_evidence"] == str(
+    assert packet_result_review_active_workstream["authorized_target"] == LIVE_TARGET
+    assert packet_result_review_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert conservation_packet_active_workstream["report"] == (
+    assert packet_result_review_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CANDIDATE_ANALYSIS_RESULT_REVIEW_20260612_v0.json"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_20260612_v0.json"
     )
-    assert conservation_packet_active_workstream["outcome_id"] == (
-        "QFT_GR_MINIMAL_WORKING_MODEL_CANDIDATE_ANALYSIS_RESULT_REVIEW_"
-        "ACCEPTS_CANDIDATE_ONLY_ANALYSIS_AND_AUTHORIZES_BOUNDED_CONSERVATION_"
-        "TEST_PACKET_ONLY"
+    assert packet_result_review_active_workstream["outcome_id"] == (
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_PREPARED_WITH_NO_"
+        "CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY"
     )
-    assert conservation_packet_active_workstream["claim_level"] == (
-        "Level 3 bounded conservation-test packet preparation target"
+    assert packet_result_review_active_workstream["claim_level"] == (
+        "Level 3 conservation-test packet result-review target"
     )
-    assert conservation_packet_active_workstream["claim_ceiling"] == (
-        "conservation-test packet preparation only"
+    assert packet_result_review_active_workstream["claim_ceiling"] == (
+        "conservation-test packet result review only"
     )
-    assert "No source admissibility" in conservation_packet_active_workstream[
+    assert "No source admissibility" in packet_result_review_active_workstream[
         "non_claim_boundary"
     ]
     assert (
-        conservation_packet_active_workstream["consumed_target"]
+        packet_result_review_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        conservation_packet_active_workstream[
-            "candidate_analysis_result_review_consumed"
+        packet_result_review_active_workstream[
+            "conservation_test_packet_consumed"
         ]
         == "yes"
     )
     assert (
-        conservation_packet_active_workstream[
-            "bounded_conservation_test_packet_preparation_pending"
+        packet_result_review_active_workstream[
+            "conservation_test_packet_result_review_pending"
         ]
         == "yes"
     )
     assert (
-        conservation_packet_active_workstream["source_admissibility_claimed"]
+        packet_result_review_active_workstream["conservation_test_executed"]
         == "no"
     )
     assert (
-        conservation_packet_active_workstream["conservation_witness_constructed"]
+        packet_result_review_active_workstream["source_admissibility_claimed"]
+        == "no"
+    )
+    assert (
+        packet_result_review_active_workstream["conservation_witness_constructed"]
         == "no"
     )
 
+    conservation_packet_workstream = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert conservation_packet_workstream["status"] == "paused"
+    assert conservation_packet_workstream["selected_next_target"] == LIVE_TARGET
+    assert conservation_packet_workstream["packet_prepared"] == "yes"
+    assert conservation_packet_workstream["packet_preparation_only"] == "yes"
+    assert (
+        conservation_packet_workstream["pass_fail_inconclusive_criteria_recorded"]
+        == "yes"
+    )
+    assert conservation_packet_workstream["conservation_test_executed"] == "no"
+    assert conservation_packet_workstream["source_admissibility_claimed"] == "no"
+    assert conservation_packet_workstream["conservation_witness_constructed"] == "no"
+    assert conservation_packet_workstream["qft_gr_closure_claimed"] == "no"
+
     candidate_analysis_result_review_workstream = _workstream(
-        payload, PREVIOUS_LIVE_TARGET
+        payload, "review_qft_gr_minimal_working_model_candidate_analysis_result"
     )
     assert candidate_analysis_result_review_workstream["status"] == "paused"
     assert (
         candidate_analysis_result_review_workstream["selected_next_target"]
-        == LIVE_TARGET
+        == PREVIOUS_LIVE_TARGET
     )
     assert (
         candidate_analysis_result_review_workstream["result_review_accepted"]
@@ -2954,7 +2971,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         payload, "analyze_qft_gr_minimal_working_model_candidate_only"
     )
     assert candidate_analysis_workstream["status"] == "paused"
-    assert candidate_analysis_workstream["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert candidate_analysis_workstream["selected_next_target"] == (
+        "review_qft_gr_minimal_working_model_candidate_analysis_result"
+    )
     assert candidate_analysis_workstream["analysis_completed"] == "yes"
     assert candidate_analysis_workstream["candidate_analysis_only"] == "yes"
     assert (
@@ -7700,7 +7719,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        conservation_packet_active_workstream["authorized_next_strict_target"],
+        packet_result_review_active_workstream["authorized_next_strict_target"],
     }
     assert active_targets == {LIVE_TARGET}
 
