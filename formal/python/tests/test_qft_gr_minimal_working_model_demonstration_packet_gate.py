@@ -27,6 +27,10 @@ from formal.python.tools.qft_gr_minimal_working_model_conservation_test_packet_r
     NEXT_TARGET as CONSERVATION_TEST_ATTEMPT_TARGET,
     OUTCOME_ID as CONSERVATION_TEST_PACKET_RESULT_REVIEW_OUTCOME,
 )
+from formal.python.tools.qft_gr_minimal_working_model_conservation_test_attempt_report import (
+    NEXT_TARGET as CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET,
+    OUTCOME_ID as CONSERVATION_TEST_ATTEMPT_OUTCOME,
+)
 
 
 CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET = (
@@ -150,12 +154,12 @@ def test_minimal_working_model_packet_preserves_historical_live_target() -> None
     assert len(active) == 1
     active_workstream = active[0]
 
-    assert state["previous_live_next_target"] == FINAL_LIVE_TARGET
-    assert state["live_next_target"] == CONSERVATION_TEST_ATTEMPT_TARGET
-    assert state["active_lane"] == CONSERVATION_TEST_ATTEMPT_TARGET
+    assert state["previous_live_next_target"] == CONSERVATION_TEST_ATTEMPT_TARGET
+    assert state["live_next_target"] == CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
+    assert state["active_lane"] == CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "QFTGRMinimalWorkingModelConservationTestPacketResultReview.lean"
+        "QFTGRMinimalWorkingModelConservationTestAttempt.lean"
     )
     assert PACKET_TARGET in registry["next_strict_target_coverage"]
     assert REVIEW_TARGET in registry["next_strict_target_coverage"]
@@ -170,22 +174,27 @@ def test_minimal_working_model_packet_preserves_historical_live_target() -> None
     assert CONSERVATION_TEST_PACKET_TARGET in registry["next_strict_target_coverage"]
     assert FINAL_LIVE_TARGET in registry["next_strict_target_coverage"]
     assert CONSERVATION_TEST_ATTEMPT_TARGET in registry["next_strict_target_coverage"]
+    assert (
+        CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
+        in registry["next_strict_target_coverage"]
+    )
 
-    assert active_workstream["workstream_id"] == CONSERVATION_TEST_ATTEMPT_TARGET
+    assert active_workstream["workstream_id"] == (
+        CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
+    )
     assert (
         active_workstream["authorized_next_strict_target"]
-        == CONSERVATION_TEST_ATTEMPT_TARGET
+        == CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
     )
     assert active_workstream["authorization_evidence"] == state["live_next_target_evidence"]
     assert active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_RESULT_REVIEW_20260612_v0.json"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_20260612_v0.json"
     )
-    assert active_workstream["outcome_id"] == (
-        CONSERVATION_TEST_PACKET_RESULT_REVIEW_OUTCOME
-    )
-    assert active_workstream["conservation_test_attempt_authorized"] == "yes"
-    assert active_workstream["conservation_test_executed"] == "no"
+    assert active_workstream["outcome_id"] == CONSERVATION_TEST_ATTEMPT_OUTCOME
+    assert active_workstream["conservation_test_attempt_consumed"] == "yes"
+    assert active_workstream["conservation_test_executed"] == "yes"
+    assert active_workstream["test_inconclusive"] == "yes"
 
     packet_workstream = _workstream(registry, PACKET_TARGET)
     assert packet_workstream["status"] == "paused"
@@ -203,6 +212,16 @@ def test_minimal_working_model_packet_preserves_historical_live_target() -> None
         CONSERVATION_TEST_ATTEMPT_TARGET
     )
     assert packet_result_review_workstream["packet_result_review_accepted"] == "yes"
+
+    conservation_test_attempt_workstream = _workstream(
+        registry, CONSERVATION_TEST_ATTEMPT_TARGET
+    )
+    assert conservation_test_attempt_workstream["status"] == "paused"
+    assert conservation_test_attempt_workstream["selected_next_target"] == (
+        CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
+    )
+    assert conservation_test_attempt_workstream["conservation_test_executed"] == "yes"
+    assert conservation_test_attempt_workstream["test_inconclusive"] == "yes"
 
 
 def test_minimal_working_model_packet_has_lean_and_public_surface_mirrors() -> None:
@@ -234,8 +253,9 @@ def test_minimal_working_model_packet_has_lean_and_public_surface_mirrors() -> N
         CANDIDATE_ANALYSIS_RESULT_REVIEW_TARGET,
         CONSERVATION_TEST_PACKET_TARGET,
         FINAL_LIVE_TARGET,
-        "CURRENT_LIVE_NEXT_TARGET_v0: " + CONSERVATION_TEST_ATTEMPT_TARGET,
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: " + FINAL_LIVE_TARGET,
+        "CURRENT_LIVE_NEXT_TARGET_v0: "
+        + CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET,
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: " + CONSERVATION_TEST_ATTEMPT_TARGET,
         "no source admissibility",
         "no QFT-GR closure",
         "no public submission",
@@ -250,7 +270,7 @@ def test_minimal_working_model_packet_has_lean_and_public_surface_mirrors() -> N
     assert CONSERVATION_TEST_PACKET_TARGET in frontier
     assert (
         'def currentLiveNextStrictTargetV0 : String :=\n'
-        f'  "{FINAL_LIVE_TARGET}"'
+        f'  "{CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET}"'
         in frontier
     )
 

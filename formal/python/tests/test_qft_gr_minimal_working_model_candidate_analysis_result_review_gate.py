@@ -35,6 +35,10 @@ from formal.python.tools.qft_gr_minimal_working_model_conservation_test_packet_r
     NEXT_TARGET as CONSERVATION_TEST_ATTEMPT_TARGET,
     OUTCOME_ID as CONSERVATION_TEST_PACKET_RESULT_REVIEW_OUTCOME,
 )
+from formal.python.tools.qft_gr_minimal_working_model_conservation_test_attempt_report import (
+    NEXT_TARGET as CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET,
+    OUTCOME_ID as CONSERVATION_TEST_ATTEMPT_OUTCOME,
+)
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -234,26 +238,27 @@ def test_minimal_working_model_candidate_analysis_result_review_updates_live_tar
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == CONSERVATION_TEST_PACKET_NEXT_TARGET
-    assert state["live_next_target"] == CONSERVATION_TEST_ATTEMPT_TARGET
-    assert state["active_lane"] == CONSERVATION_TEST_ATTEMPT_TARGET
+    assert state["previous_live_next_target"] == CONSERVATION_TEST_ATTEMPT_TARGET
+    assert state["live_next_target"] == CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
+    assert state["active_lane"] == CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "QFTGRMinimalWorkingModelConservationTestPacketResultReview.lean"
+        "QFTGRMinimalWorkingModelConservationTestAttempt.lean"
     )
     assert state["live_next_target_report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_RESULT_REVIEW_20260612_v0.json"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_20260612_v0.json"
     )
-    assert state["live_next_target_outcome"] == (
-        CONSERVATION_TEST_PACKET_RESULT_REVIEW_OUTCOME
-    )
+    assert state["live_next_target_outcome"] == CONSERVATION_TEST_ATTEMPT_OUTCOME
     assert CONSUMED_TARGET in registry["next_strict_target_coverage"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
     assert CONSERVATION_TEST_PACKET_NEXT_TARGET in registry[
         "next_strict_target_coverage"
     ]
     assert CONSERVATION_TEST_ATTEMPT_TARGET in registry[
+        "next_strict_target_coverage"
+    ]
+    assert CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET in registry[
         "next_strict_target_coverage"
     ]
 
@@ -301,18 +306,30 @@ def test_minimal_working_model_candidate_analysis_result_review_updates_live_tar
     assert packet_result_review_workstream["conservation_witness_constructed"] == "no"
     assert packet_result_review_workstream["qft_gr_closure_claimed"] == "no"
 
+    attempt_workstream = _workstream(registry, CONSERVATION_TEST_ATTEMPT_TARGET)
+    assert attempt_workstream["status"] == "paused"
+    assert attempt_workstream["selected_next_target"] == (
+        CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
+    )
+    assert attempt_workstream["conservation_test_executed"] == "yes"
+    assert attempt_workstream["test_inconclusive"] == "yes"
+    assert attempt_workstream["source_admissibility_claimed"] == "no"
+    assert attempt_workstream["conservation_witness_constructed"] == "no"
+    assert attempt_workstream["qft_gr_closure_claimed"] == "no"
+
     active_workstream = active[0]
-    assert active_workstream["workstream_id"] == CONSERVATION_TEST_ATTEMPT_TARGET
+    assert active_workstream["workstream_id"] == (
+        CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
+    )
     assert (
         active_workstream["authorized_next_strict_target"]
-        == CONSERVATION_TEST_ATTEMPT_TARGET
+        == CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
     )
-    assert active_workstream["consumed_target"] == CONSERVATION_TEST_PACKET_NEXT_TARGET
-    assert active_workstream["outcome_id"] == (
-        CONSERVATION_TEST_PACKET_RESULT_REVIEW_OUTCOME
-    )
-    assert active_workstream["conservation_test_attempt_authorized"] == "yes"
-    assert active_workstream["conservation_test_executed"] == "no"
+    assert active_workstream["consumed_target"] == CONSERVATION_TEST_ATTEMPT_TARGET
+    assert active_workstream["outcome_id"] == CONSERVATION_TEST_ATTEMPT_OUTCOME
+    assert active_workstream["conservation_test_attempt_consumed"] == "yes"
+    assert active_workstream["conservation_test_executed"] == "yes"
+    assert active_workstream["test_inconclusive"] == "yes"
     assert active_workstream["source_admissibility_claimed"] == "no"
     assert active_workstream["conservation_witness_constructed"] == "no"
     assert active_workstream["qft_gr_closure_claimed"] == "no"

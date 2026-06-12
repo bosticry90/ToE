@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "execute_qft_gr_minimal_working_model_conservation_test_attempt"
+ACTIVE_LANE = "review_qft_gr_minimal_working_model_conservation_test_attempt_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1323,19 +1323,22 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_PACKET_RESULT_REVIEW_TARGET
 STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
     "execute_qft_gr_state_expectation_compatibility_assumption_reduction_attempt"
 )
-PREVIOUS_LIVE_TARGET = (
+CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
+)
+PREVIOUS_LIVE_TARGET = (
+    "execute_qft_gr_minimal_working_model_conservation_test_attempt"
 )
 CONSUMED_TARGET = (
-    "review_qft_gr_minimal_working_model_conservation_test_packet_result"
+    "execute_qft_gr_minimal_working_model_conservation_test_attempt"
 )
 PREVIOUS_TARGET = (
-    "review_qft_gr_minimal_working_model_conservation_test_packet_result"
+    "execute_qft_gr_minimal_working_model_conservation_test_attempt"
 )
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "execute_qft_gr_minimal_working_model_conservation_test_attempt"
+LIVE_TARGET = "review_qft_gr_minimal_working_model_conservation_test_attempt_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1351,7 +1354,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalWorkingModelConservationTestPacketResultReview.lean"
+    / "QFTGRMinimalWorkingModelConservationTestAttempt.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2861,65 +2864,109 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    conservation_test_attempt_active_workstream = active_workstream(payload)
-    assert conservation_test_attempt_active_workstream["workstream_id"] == ACTIVE_LANE
+    conservation_test_attempt_result_review_active_workstream = active_workstream(payload)
     assert (
-        conservation_test_attempt_active_workstream["authorized_next_strict_target"]
+        conservation_test_attempt_result_review_active_workstream["workstream_id"]
+        == ACTIVE_LANE
+    )
+    assert (
+        conservation_test_attempt_result_review_active_workstream[
+            "authorized_next_strict_target"
+        ]
         == LIVE_TARGET
     )
-    assert conservation_test_attempt_active_workstream["authorized_target"] == LIVE_TARGET
-    assert conservation_test_attempt_active_workstream["authorization_evidence"] == str(
-        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
-    assert conservation_test_attempt_active_workstream["report"] == (
-        "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_RESULT_REVIEW_20260612_v0.json"
-    )
-    assert conservation_test_attempt_active_workstream["outcome_id"] == (
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_PACKET_RESULT_REVIEW_"
-        "ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_CONSERVATION_TEST_ATTEMPT_ONLY"
-    )
-    assert conservation_test_attempt_active_workstream["claim_level"] == (
-        "Level 3 bounded conservation-test attempt target"
-    )
-    assert conservation_test_attempt_active_workstream["claim_ceiling"] == (
-        "bounded conservation-test attempt only"
-    )
-    assert "No source admissibility" in conservation_test_attempt_active_workstream[
-        "non_claim_boundary"
-    ]
     assert (
-        conservation_test_attempt_active_workstream["consumed_target"]
+        conservation_test_attempt_result_review_active_workstream["authorized_target"]
+        == LIVE_TARGET
+    )
+    assert (
+        conservation_test_attempt_result_review_active_workstream[
+            "authorization_evidence"
+        ]
+        == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
+    )
+    assert conservation_test_attempt_result_review_active_workstream["report"] == (
+        "formal/docs/release/"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_20260612_v0.json"
+    )
+    assert conservation_test_attempt_result_review_active_workstream["outcome_id"] == (
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_EXECUTED_WITH_NO_"
+        "CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY"
+    )
+    assert conservation_test_attempt_result_review_active_workstream["claim_level"] == (
+        "Level 3 conservation-test attempt result review target"
+    )
+    assert conservation_test_attempt_result_review_active_workstream["claim_ceiling"] == (
+        "bounded conservation-test attempt result review only"
+    )
+    assert (
+        "No source admissibility"
+        in conservation_test_attempt_result_review_active_workstream[
+            "non_claim_boundary"
+        ]
+    )
+    assert (
+        conservation_test_attempt_result_review_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        conservation_test_attempt_active_workstream[
-            "conservation_test_attempt_authorized"
+        conservation_test_attempt_result_review_active_workstream[
+            "conservation_test_attempt_consumed"
         ]
         == "yes"
     )
     assert (
-        conservation_test_attempt_active_workstream[
-            "conservation_test_packet_result_review_consumed"
+        conservation_test_attempt_result_review_active_workstream[
+            "conservation_test_attempt_result_review_executed"
+        ]
+        == "no"
+    )
+    assert (
+        conservation_test_attempt_result_review_active_workstream[
+            "conservation_test_executed"
         ]
         == "yes"
     )
     assert (
-        conservation_test_attempt_active_workstream["conservation_test_executed"]
+        conservation_test_attempt_result_review_active_workstream["test_inconclusive"]
+        == "yes"
+    )
+    assert (
+        conservation_test_attempt_result_review_active_workstream[
+            "source_admissibility_claimed"
+        ]
         == "no"
     )
     assert (
-        conservation_test_attempt_active_workstream["source_admissibility_claimed"]
-        == "no"
-    )
-    assert (
-        conservation_test_attempt_active_workstream["conservation_witness_constructed"]
+        conservation_test_attempt_result_review_active_workstream[
+            "conservation_witness_constructed"
+        ]
         == "no"
     )
 
-    packet_result_review_workstream = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    conservation_test_attempt_workstream = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert conservation_test_attempt_workstream["status"] == "paused"
+    assert conservation_test_attempt_workstream["selected_next_target"] == LIVE_TARGET
+    assert conservation_test_attempt_workstream["conservation_test_executed"] == "yes"
+    assert conservation_test_attempt_workstream["test_inconclusive"] == "yes"
+    assert (
+        conservation_test_attempt_workstream["source_admissibility_claimed"]
+        == "no"
+    )
+    assert (
+        conservation_test_attempt_workstream["conservation_witness_constructed"]
+        == "no"
+    )
+    assert conservation_test_attempt_workstream["qft_gr_closure_claimed"] == "no"
+
+    packet_result_review_workstream = _workstream(
+        payload, CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET
+    )
     assert packet_result_review_workstream["status"] == "paused"
-    assert packet_result_review_workstream["selected_next_target"] == LIVE_TARGET
+    assert (
+        packet_result_review_workstream["selected_next_target"]
+        == PREVIOUS_LIVE_TARGET
+    )
     assert packet_result_review_workstream["packet_result_review_accepted"] == "yes"
     assert (
         packet_result_review_workstream[
@@ -2940,7 +2987,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     conservation_packet_workstream = _workstream(payload, CONSERVATION_TEST_PACKET_TARGET)
     assert conservation_packet_workstream["status"] == "paused"
-    assert conservation_packet_workstream["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert (
+        conservation_packet_workstream["selected_next_target"]
+        == CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET
+    )
     assert conservation_packet_workstream["packet_prepared"] == "yes"
     assert conservation_packet_workstream["packet_preparation_only"] == "yes"
     assert (
@@ -7743,7 +7793,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        conservation_test_attempt_active_workstream["authorized_next_strict_target"],
+        conservation_test_attempt_result_review_active_workstream[
+            "authorized_next_strict_target"
+        ],
     }
     assert active_targets == {LIVE_TARGET}
 
