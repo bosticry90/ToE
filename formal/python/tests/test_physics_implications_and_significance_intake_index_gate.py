@@ -20,7 +20,7 @@ CURRENT_LIVE_NEXT_TARGET,
     build_physics_implications_and_significance_intake_index_packet,
 )
 
-POST_MR_LIVE_TARGET = "analyze_qft_gr_minimal_working_model_candidate_only"
+POST_MR_LIVE_TARGET = "review_qft_gr_minimal_working_model_candidate_analysis_result"
 
 
 REPO_ROOT = find_repo_root(Path(__file__))

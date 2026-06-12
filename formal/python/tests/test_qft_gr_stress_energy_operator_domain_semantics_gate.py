@@ -85,7 +85,7 @@ STATE_EXPECTATION_RESULT_REVIEW_TARGET = (
     "review_qft_gr_state_expectation_functional_semantics_result"
 )
 LIVE_TARGET = "prepare_qft_gr_renormalized_expectation_value_semantics_bounded_attack"
-POST_MR_LIVE_TARGET = "analyze_qft_gr_minimal_working_model_candidate_only"
+POST_MR_LIVE_TARGET = "review_qft_gr_minimal_working_model_candidate_analysis_result"
 SURFACE_ID = "QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_SEMANTICS_v0"
 FRESH_DELTA_ID = (
     "QFT_GR_STRESS_ENERGY_OPERATOR_DOMAIN_PACKAGE_ONLY_COUNTEREXAMPLE_FRESH_DELTA_v0"

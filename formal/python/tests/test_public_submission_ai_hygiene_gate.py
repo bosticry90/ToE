@@ -40,7 +40,7 @@ EXPECTED_LIVE_TARGET = (
 )
 POST_MR_LIVE_TARGET = (
     "CURRENT_LIVE_NEXT_TARGET_v0: "
-    "analyze_qft_gr_minimal_working_model_candidate_only"
+    "review_qft_gr_minimal_working_model_candidate_analysis_result"
 )
 
 FORBIDDEN_META_MARKERS = [

@@ -19,15 +19,16 @@ from formal.python.tools.qft_gr_minimal_working_model_demonstration_packet_resul
     NEXT_TARGET as RESULT_REVIEW_NEXT_TARGET,
     OUTCOME_ID as RESULT_REVIEW_OUTCOME,
 )
-from formal.python.tools.qft_gr_minimal_working_model_construction_attempt_result_review_report import (
+from formal.python.tools.qft_gr_minimal_working_model_candidate_analysis_report import (
     NEXT_TARGET as FINAL_LIVE_TARGET,
-    OUTCOME_ID as CONSTRUCTION_ATTEMPT_RESULT_REVIEW_OUTCOME,
+    OUTCOME_ID as CANDIDATE_ANALYSIS_OUTCOME,
 )
 
 
 CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_construction_attempt_result"
 )
+CANDIDATE_ANALYSIS_TARGET = "analyze_qft_gr_minimal_working_model_candidate_only"
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -139,12 +140,12 @@ def test_minimal_working_model_packet_preserves_historical_live_target() -> None
     assert len(active) == 1
     active_workstream = active[0]
 
-    assert state["previous_live_next_target"] == CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+    assert state["previous_live_next_target"] == CANDIDATE_ANALYSIS_TARGET
     assert state["live_next_target"] == FINAL_LIVE_TARGET
     assert state["active_lane"] == FINAL_LIVE_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "QFTGRMinimalWorkingModelConstructionAttemptResultReview.lean"
+        "QFTGRMinimalWorkingModelCandidateAnalysis.lean"
     )
     assert PACKET_TARGET in registry["next_strict_target_coverage"]
     assert REVIEW_TARGET in registry["next_strict_target_coverage"]
@@ -152,6 +153,7 @@ def test_minimal_working_model_packet_preserves_historical_live_target() -> None
     assert CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET in registry[
         "next_strict_target_coverage"
     ]
+    assert CANDIDATE_ANALYSIS_TARGET in registry["next_strict_target_coverage"]
     assert FINAL_LIVE_TARGET in registry["next_strict_target_coverage"]
 
     assert active_workstream["workstream_id"] == FINAL_LIVE_TARGET
@@ -159,10 +161,9 @@ def test_minimal_working_model_packet_preserves_historical_live_target() -> None
     assert active_workstream["authorization_evidence"] == state["live_next_target_evidence"]
     assert active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_RESULT_REVIEW_"
-        "20260611_v0.json"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CANDIDATE_ANALYSIS_20260612_v0.json"
     )
-    assert active_workstream["outcome_id"] == CONSTRUCTION_ATTEMPT_RESULT_REVIEW_OUTCOME
+    assert active_workstream["outcome_id"] == CANDIDATE_ANALYSIS_OUTCOME
 
     packet_workstream = _workstream(registry, PACKET_TARGET)
     assert packet_workstream["status"] == "paused"
@@ -200,10 +201,11 @@ def test_minimal_working_model_packet_has_lean_and_public_surface_mirrors() -> N
         REVIEW_TARGET,
         RESULT_REVIEW_NEXT_TARGET,
         CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET,
+        CANDIDATE_ANALYSIS_TARGET,
         FINAL_LIVE_TARGET,
         "CURRENT_LIVE_NEXT_TARGET_v0: " + FINAL_LIVE_TARGET,
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        + CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET,
+        + CANDIDATE_ANALYSIS_TARGET,
         "no source admissibility",
         "no QFT-GR closure",
         "no public submission",
@@ -213,6 +215,7 @@ def test_minimal_working_model_packet_has_lean_and_public_surface_mirrors() -> N
     frontier = _read(FRONTIER_PATH)
     assert RESULT_REVIEW_NEXT_TARGET in frontier
     assert CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET in frontier
+    assert CANDIDATE_ANALYSIS_TARGET in frontier
     assert (
         'def currentLiveNextStrictTargetV0 : String :=\n'
         f'  "{FINAL_LIVE_TARGET}"'

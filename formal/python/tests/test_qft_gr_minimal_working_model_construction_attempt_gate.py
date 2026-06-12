@@ -27,6 +27,11 @@ from formal.python.tools.qft_gr_minimal_working_model_construction_attempt_resul
     NEXT_TARGET as RESULT_REVIEW_NEXT_TARGET,
     OUTCOME_ID as RESULT_REVIEW_OUTCOME,
 )
+from formal.python.tools.qft_gr_minimal_working_model_candidate_analysis_report import (
+    DEFAULT_OUT as CANDIDATE_ANALYSIS_OUT,
+    NEXT_TARGET as CANDIDATE_ANALYSIS_NEXT_TARGET,
+    OUTCOME_ID as CANDIDATE_ANALYSIS_OUTCOME,
+)
 from formal.python.tools.qft_gr_minimal_working_model_demonstration_packet_result_review_report import (
     OUTCOME_ID as PACKET_RESULT_REVIEW_OUTCOME,
     RESULT_REVIEW_CLASSIFICATION as PACKET_RESULT_REVIEW_CLASSIFICATION,
@@ -201,22 +206,22 @@ def test_minimal_working_model_construction_attempt_updates_live_target() -> Non
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == NEXT_TARGET
-    assert state["live_next_target"] == RESULT_REVIEW_NEXT_TARGET
-    assert state["active_lane"] == RESULT_REVIEW_NEXT_TARGET
+    assert state["previous_live_next_target"] == RESULT_REVIEW_NEXT_TARGET
+    assert state["live_next_target"] == CANDIDATE_ANALYSIS_NEXT_TARGET
+    assert state["active_lane"] == CANDIDATE_ANALYSIS_NEXT_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "QFTGRMinimalWorkingModelConstructionAttemptResultReview.lean"
+        "QFTGRMinimalWorkingModelCandidateAnalysis.lean"
     )
     assert state["live_next_target_report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_RESULT_REVIEW_"
-        "20260611_v0.json"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CANDIDATE_ANALYSIS_20260612_v0.json"
     )
-    assert state["live_next_target_outcome"] == RESULT_REVIEW_OUTCOME
+    assert state["live_next_target_outcome"] == CANDIDATE_ANALYSIS_OUTCOME
     assert CONSUMED_TARGET in registry["next_strict_target_coverage"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
     assert RESULT_REVIEW_NEXT_TARGET in registry["next_strict_target_coverage"]
+    assert CANDIDATE_ANALYSIS_NEXT_TARGET in registry["next_strict_target_coverage"]
 
     attempt_workstream = _workstream(registry, CONSUMED_TARGET)
     assert attempt_workstream["status"] == "paused"
@@ -239,11 +244,24 @@ def test_minimal_working_model_construction_attempt_updates_live_target() -> Non
     assert review_workstream["conservation_witness_constructed"] == "no"
     assert review_workstream["qft_gr_closure_claimed"] == "no"
 
+    analysis_workstream = _workstream(registry, RESULT_REVIEW_NEXT_TARGET)
+    assert analysis_workstream["status"] == "paused"
+    assert analysis_workstream["report"] == str(
+        CANDIDATE_ANALYSIS_OUT.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert analysis_workstream["analysis_completed"] == "yes"
+    assert analysis_workstream["selected_next_target"] == CANDIDATE_ANALYSIS_NEXT_TARGET
+    assert analysis_workstream["source_admissibility_claimed"] == "no"
+    assert analysis_workstream["conservation_witness_constructed"] == "no"
+    assert analysis_workstream["qft_gr_closure_claimed"] == "no"
+
     active_workstream = active[0]
-    assert active_workstream["workstream_id"] == RESULT_REVIEW_NEXT_TARGET
-    assert active_workstream["authorized_next_strict_target"] == RESULT_REVIEW_NEXT_TARGET
-    assert active_workstream["consumed_target"] == NEXT_TARGET
-    assert active_workstream["outcome_id"] == RESULT_REVIEW_OUTCOME
+    assert active_workstream["workstream_id"] == CANDIDATE_ANALYSIS_NEXT_TARGET
+    assert active_workstream["authorized_next_strict_target"] == (
+        CANDIDATE_ANALYSIS_NEXT_TARGET
+    )
+    assert active_workstream["consumed_target"] == RESULT_REVIEW_NEXT_TARGET
+    assert active_workstream["outcome_id"] == CANDIDATE_ANALYSIS_OUTCOME
     assert active_workstream["source_admissibility_claimed"] == "no"
     assert active_workstream["qft_gr_closure_claimed"] == "no"
 

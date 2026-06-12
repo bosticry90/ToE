@@ -25,9 +25,9 @@ from formal.python.tools.qft_gr_minimal_working_model_demonstration_packet_resul
     SCHEMA_ID,
     build_qft_gr_minimal_working_model_demonstration_packet_result_review,
 )
-from formal.python.tools.qft_gr_minimal_working_model_construction_attempt_result_review_report import (
+from formal.python.tools.qft_gr_minimal_working_model_candidate_analysis_report import (
     NEXT_TARGET as FINAL_LIVE_TARGET,
-    OUTCOME_ID as CONSTRUCTION_ATTEMPT_RESULT_REVIEW_OUTCOME,
+    OUTCOME_ID as CANDIDATE_ANALYSIS_OUTCOME,
 )
 from formal.python.tools.qft_gr_post_mr_assump004_governed_maturation_reports import (
     CAPTURED_AT_UTC,
@@ -37,6 +37,7 @@ from formal.python.tools.qft_gr_post_mr_assump004_governed_maturation_reports im
 CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_construction_attempt_result"
 )
+CANDIDATE_ANALYSIS_TARGET = "analyze_qft_gr_minimal_working_model_candidate_only"
 
 
 REPO_ROOT = find_repo_root(Path(__file__))
@@ -196,7 +197,7 @@ def test_minimal_working_model_packet_result_review_updates_live_target() -> Non
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET
+    assert state["previous_live_next_target"] == CANDIDATE_ANALYSIS_TARGET
     assert state["live_next_target"] == FINAL_LIVE_TARGET
     assert state["active_lane"] == FINAL_LIVE_TARGET
     assert REVIEW_TARGET in registry["next_strict_target_coverage"]
@@ -204,6 +205,7 @@ def test_minimal_working_model_packet_result_review_updates_live_target() -> Non
     assert CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET in registry[
         "next_strict_target_coverage"
     ]
+    assert CANDIDATE_ANALYSIS_TARGET in registry["next_strict_target_coverage"]
     assert FINAL_LIVE_TARGET in registry["next_strict_target_coverage"]
 
     review_workstream = _workstream(registry, REVIEW_TARGET)
@@ -226,13 +228,18 @@ def test_minimal_working_model_packet_result_review_updates_live_target() -> Non
         registry, CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET
     )
     assert result_review_workstream["status"] == "paused"
-    assert result_review_workstream["selected_next_target"] == FINAL_LIVE_TARGET
+    assert result_review_workstream["selected_next_target"] == CANDIDATE_ANALYSIS_TARGET
     assert result_review_workstream["model_analysis_only_authorized"] == "yes"
     assert result_review_workstream["model_analysis_executed_by_review"] == "no"
 
+    analysis_workstream = _workstream(registry, CANDIDATE_ANALYSIS_TARGET)
+    assert analysis_workstream["status"] == "paused"
+    assert analysis_workstream["selected_next_target"] == FINAL_LIVE_TARGET
+    assert analysis_workstream["analysis_completed"] == "yes"
+
     active_workstream = active[0]
     assert active_workstream["workstream_id"] == FINAL_LIVE_TARGET
-    assert active_workstream["outcome_id"] == CONSTRUCTION_ATTEMPT_RESULT_REVIEW_OUTCOME
+    assert active_workstream["outcome_id"] == CANDIDATE_ANALYSIS_OUTCOME
     assert active_workstream["source_admissibility_claimed"] == "no"
     assert active_workstream["qft_gr_closure_claimed"] == "no"
 
