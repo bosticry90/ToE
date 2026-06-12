@@ -1,0 +1,189 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "classification_allowed": true,
+    "construction_attempt_authorized": true,
+    "constructs_bounded_minimal_model_attempt_only": true,
+    "consumes_expected_packet_result_review": true,
+    "exactly_one_classification_selected": true,
+    "exactly_one_next_target_selected": true,
+    "imports_completed_assumption_families": true,
+    "imports_mathematical_regularity_rows": true,
+    "no_bianchi_compatibility": true,
+    "no_conservation_claim": true,
+    "no_conservation_witness": true,
+    "no_empirical_validation_or_public_submission": true,
+    "no_master_action_promotion": true,
+    "no_qft_gr_closure": true,
+    "no_semiclassical_einstein_equation": true,
+    "no_source_admissibility_claim": true,
+    "packet_result_review_classification_expected": true,
+    "packet_result_review_outcome_expected": true,
+    "packet_result_review_selected_this_attempt": true,
+    "review_did_not_execute_attempt": true,
+    "toy_source_candidate_remains_candidate_only": true
+  },
+  "accepted": true,
+  "aggregate_lean_timeout_caveat_preserved": true,
+  "allowed_result_classifications": [
+    "qft_gr_minimal_working_model_construction_attempt_executed_pending_result_review",
+    "qft_gr_minimal_working_model_construction_obstruction_identified_requires_countermodel_or_scope_refinement",
+    "qft_gr_minimal_working_model_construction_inconclusive_requires_model_scope_refinement"
+  ],
+  "attempt_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_v0",
+  "bounded_minimal_model_attempt": {
+    "attempt_model_id": "QFT_GR_MINIMAL_WORKING_MODEL_TOY_SOURCE_CANDIDATE_v0",
+    "background": {
+      "backreaction": "excluded",
+      "connection": "background-compatible derivative operator for weak tests",
+      "geometry": "fixed smooth or distributionally controlled background"
+    },
+    "candidate_only_boundary": {
+      "physical_source_claimed": false,
+      "source_admissibility_claimed": false,
+      "source_map_closure_claimed": false
+    },
+    "construction_chain": [
+      "field object",
+      "state/expectation object",
+      "stress-energy-like object",
+      "regularized or renormalized candidate",
+      "distributional pairing domain",
+      "derivative/interchange conditions",
+      "weak conservation test target",
+      "source-admissibility candidate only"
+    ],
+    "field_state_setup": {
+      "expectation_object": "finite expectation candidate under imported domain conditions",
+      "field_object": "real scalar field placeholder on the controlled background",
+      "state_object": "bounded state or expectation functional placeholder"
+    },
+    "imported_assumption_families": [
+      "operator_domain_assumptions",
+      "renormalization_assumptions",
+      "state_domain_assumptions",
+      "mathematical_regularity_assumptions"
+    ],
+    "imported_regularities": [
+      "MR-ASSUMP-001-derivative_exchange_regular_boundary",
+      "MR-ASSUMP-002-weak_strong_conservation_comparison_scope",
+      "MR-ASSUMP-003-distributional_pairing_regular_domain",
+      "MR-ASSUMP-004-limit_interchange_regularization_boundary"
+    ],
+    "model_class": "free scalar-field stress-energy-like candidate",
+    "stress_energy_like_candidate": {
+      "object": "regularized_or_renormalized_expectation_of_scalar_stress_energy_like_tensor",
+      "source_admissibility_claimed": false,
+      "status": "candidate_only_not_source_admissibility"
+    },
+    "weak_conservation_test_target": {
+      "conservation_claimed": false,
+      "conservation_witness_constructed": false,
+      "status": "test_target_recorded_not_proved",
+      "target": "weak tested divergence vanishing or explicit obstruction"
+    }
+  },
+  "bounded_model_construction_attempt_only": true,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The bounded construction attempt must be result-reviewed before any model interpretation, source-admissibility work, or closure claim.",
+      "target": "review_qft_gr_minimal_working_model_construction_attempt_result"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The constructed object remains a toy source candidate only.",
+      "target": "claim_qft_gr_source_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The construction attempt records a conservation-test target but does not prove conservation.",
+      "target": "prove_qft_gr_conservation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No conservation witness is constructed by this attempt.",
+      "target": "construct_qft_gr_conservation_witness"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Bianchi compatibility remains downstream and unclaimed.",
+      "target": "claim_qft_gr_bianchi_compatibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The semiclassical Einstein equation is not derived here.",
+      "target": "derive_semiclassical_einstein_equation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "QFT-GR closure remains outside this bounded construction attempt.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Empirical validation and public submission are not authorized.",
+      "target": "authorize_empirical_validation_or_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-06-11T00:00:00Z",
+  "classification_rows": [
+    {
+      "classification": "qft_gr_minimal_working_model_construction_attempt_executed_pending_result_review",
+      "meaning": "A bounded toy source-candidate construction attempt was recorded and must be result-reviewed before interpretation.",
+      "selected": true
+    },
+    {
+      "classification": "qft_gr_minimal_working_model_construction_obstruction_identified_requires_countermodel_or_scope_refinement",
+      "meaning": "The construction route exposed an obstruction requiring a countermodel or scope refinement.",
+      "selected": false
+    },
+    {
+      "classification": "qft_gr_minimal_working_model_construction_inconclusive_requires_model_scope_refinement",
+      "meaning": "The construction route remained inconclusive and requires model-scope refinement.",
+      "selected": false
+    }
+  ],
+  "conservation_claimed": false,
+  "conservation_proof_object_constructed": false,
+  "conservation_proved": false,
+  "conservation_witness_constructed": false,
+  "construction_attempt_executed": true,
+  "construction_attempt_pending_result_review": true,
+  "construction_status": "bounded_minimal_model_attempt_constructed_pending_result_review",
+  "consumed_packet_result_review_classification": "qft_gr_minimal_working_model_demonstration_packet_result_review_accepts_packet_and_authorizes_bounded_model_construction_attempt_only",
+  "consumed_packet_result_review_outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_DEMONSTRATION_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_MODEL_CONSTRUCTION_ATTEMPT_ONLY",
+  "consumed_target": "execute_qft_gr_minimal_working_model_construction_attempt",
+  "consumes_qft_gr_minimal_working_model_demonstration_packet_result_review": "QFT_GR_MINIMAL_WORKING_MODEL_DEMONSTRATION_PACKET_RESULT_REVIEW_v0",
+  "consumes_qft_gr_minimal_working_model_demonstration_packet_result_review_pointer": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_DEMONSTRATION_PACKET_RESULT_REVIEW_20260610_v0.json",
+  "empirical_validation_claimed": false,
+  "executed": true,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "model_execution_beyond_construction_attempt": false,
+  "next_action_scope": "REVIEW_QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_RESULT_ONLY_NO_SOURCE_ADMISSIBILITY_CONSERVATION_BIANCHI_SEMICLASSICAL_EINSTEIN_QFT_GR_CLOSURE_EMPIRICAL_VALIDATION_OR_PUBLIC_SUBMISSION",
+  "non_claim_boundary": "This construction attempt records only a bounded toy stress-energy-like source candidate on a fixed controlled background. It preserves no source admissibility, no conservation claim, no conservation witness, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no master-action promotion, no release assembly, and no public submission.",
+  "outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE",
+  "physical_source_claimed": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "result_classification": "qft_gr_minimal_working_model_construction_attempt_executed_pending_result_review",
+  "result_classification_count": 1,
+  "schema_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_20260611_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "review_qft_gr_minimal_working_model_construction_attempt_result",
+  "selected_next_target_count": 1,
+  "selected_next_target_kind": "qft_gr_minimal_working_model_construction_attempt_result_review",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "toy_source_candidate_remains_candidate_only": true,
+  "toy_source_candidate_status": "candidate_only_not_source_admissibility",
+  "validation_caveat": "full lake build ToeFormal timed out after repair and rerun attempt; targeted Lean packet/frontier/historical modules passed"
+}

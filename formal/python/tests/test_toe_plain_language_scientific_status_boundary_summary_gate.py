@@ -48,11 +48,18 @@ def test_plain_language_status_boundary_is_time_indexed_not_live_control() -> No
     text = _load_doc()
     packet = _load_packet()
 
-    assert "930e9b14 Review dependency remediation closeout after tranche 004 movement" in text
-    assert "Any newer source-map registration" in text
+    assert "c3df4d02 Prepare QFT-GR minimal working model packet" in text
+    assert "Any newer minimal-model result review, construction attempt" in text
     assert "must be read from the current authoritative surfaces" in text
 
     policy = packet["current_status_reuse_policy"]
+    assert packet["audited_checkpoint"]["commit"] == "c3df4d02"
+    assert packet["audited_checkpoint"]["commit_subject"] == (
+        "Prepare QFT-GR minimal working model packet"
+    )
+    assert packet["audited_checkpoint"]["live_target_at_checkpoint"] == (
+        "review_qft_gr_minimal_working_model_demonstration_packet_result"
+    )
     assert policy["not_live_control_plane"] is True
     assert policy["does_not_change_current_live_target"] is True
     assert policy["newer_status_must_be_read_from_current_authoritative_surfaces"] is True

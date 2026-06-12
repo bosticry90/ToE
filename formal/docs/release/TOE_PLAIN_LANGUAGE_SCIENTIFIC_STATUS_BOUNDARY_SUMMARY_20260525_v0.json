@@ -7,10 +7,10 @@
   "artifact_path": "formal/docs/release/TOE_PLAIN_LANGUAGE_SCIENTIFIC_STATUS_BOUNDARY_SUMMARY_v0.md",
   "purpose": "Preserve a public-facing nonclaim explanation separating known physics, formal/governance novelty, release posture, and unresolved scientific closure.",
   "audited_checkpoint": {
-    "commit": "930e9b14",
-    "commit_subject": "Review dependency remediation closeout after tranche 004 movement",
+    "commit": "c3df4d02",
+    "commit_subject": "Prepare QFT-GR minimal working model packet",
     "status_is_time_indexed": true,
-    "live_target_at_checkpoint": "prepare_v01_alpha_release_readiness_adjudication_after_dependency_remediation_closeout"
+    "live_target_at_checkpoint": "review_qft_gr_minimal_working_model_demonstration_packet_result"
   },
   "current_status_reuse_policy": {
     "not_live_control_plane": true,

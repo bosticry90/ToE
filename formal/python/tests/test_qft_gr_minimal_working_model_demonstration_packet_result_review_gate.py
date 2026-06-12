@@ -187,19 +187,15 @@ def test_minimal_working_model_packet_result_review_updates_live_target() -> Non
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == REVIEW_TARGET
-    assert state["live_next_target"] == NEXT_TARGET
-    assert state["active_lane"] == NEXT_TARGET
-    assert state["live_next_target_evidence"] == (
-        "formal/toe_formal/ToeFormal/Derivation/"
-        "QFTGRMinimalWorkingModelDemonstrationPacketResultReview.lean"
+    assert state["previous_live_next_target"] == NEXT_TARGET
+    assert (
+        state["live_next_target"]
+        == "review_qft_gr_minimal_working_model_construction_attempt_result"
     )
-    assert state["live_next_target_report"] == (
-        "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_DEMONSTRATION_PACKET_RESULT_REVIEW_"
-        "20260610_v0.json"
+    assert (
+        state["active_lane"]
+        == "review_qft_gr_minimal_working_model_construction_attempt_result"
     )
-    assert state["live_next_target_outcome"] == OUTCOME_ID
     assert REVIEW_TARGET in registry["next_strict_target_coverage"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
 
@@ -210,13 +206,14 @@ def test_minimal_working_model_packet_result_review_updates_live_target() -> Non
     assert review_workstream["bounded_model_construction_attempt_authorized"] == "yes"
     assert review_workstream["bounded_model_construction_attempt_executed"] == "no"
 
-    active_workstream = active[0]
-    assert active_workstream["workstream_id"] == NEXT_TARGET
-    assert active_workstream["authorized_next_strict_target"] == NEXT_TARGET
-    assert active_workstream["consumed_target"] == REVIEW_TARGET
-    assert active_workstream["outcome_id"] == OUTCOME_ID
-    assert active_workstream["source_admissibility_claimed"] == "no"
-    assert active_workstream["qft_gr_closure_claimed"] == "no"
+    construction_workstream = _workstream(registry, NEXT_TARGET)
+    assert construction_workstream["status"] == "paused"
+    assert construction_workstream["selected_next_target"] == (
+        "review_qft_gr_minimal_working_model_construction_attempt_result"
+    )
+    assert construction_workstream["bounded_model_construction_attempt_executed"] == "yes"
+    assert construction_workstream["source_admissibility_claimed"] == "no"
+    assert construction_workstream["qft_gr_closure_claimed"] == "no"
 
 
 def test_minimal_working_model_packet_result_review_deterministic_and_pinned() -> None:

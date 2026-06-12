@@ -303,6 +303,7 @@ def test_post_qm_stat_entropy_log_domain_reduction_selection_registry_rotates_to
             "select_next_post_toe_expert_translation_bounded_target",
             "prepare_qft_gr_minimal_working_model_demonstration_packet",
             "review_qft_gr_minimal_working_model_demonstration_packet_result",
+            "review_qft_gr_minimal_working_model_construction_attempt_result",
         }
     assert PREVIOUS_LANE in state["paused_lanes"]
     assert REDUCTION_LANE in state["paused_lanes"]
