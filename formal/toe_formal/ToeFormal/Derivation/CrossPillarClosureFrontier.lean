@@ -140,6 +140,8 @@ def currentLiveNextStrictTargetV0 : String :=
   "analyze_qft_gr_minimal_working_model_candidate_only"
 def currentLiveNextStrictTargetV0 : String :=
   "review_qft_gr_minimal_working_model_candidate_analysis_result"
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 -/
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
@@ -306,13 +308,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR minimal working model candidate-only analysis consumed the construction-attempt result review, identified what the toy candidate demonstrates, what remains supplied, and what remains untested, mapped domain, regularity, pairing, weak conservation, source admissibility, and Bianchi compatibility status, selected result review, preserved the aggregate Lean timeout caveat, and preserved no source admissibility, no conservation claim or witness, no Bianchi compatibility, no semiclassical Einstein equation, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR seam closure"
+        "QFT-GR minimal working model candidate-analysis result review accepted the candidate-only analysis, confirmed what the toy candidate demonstrates, what remains supplied, and what remains untested or failed, confirmed the domain, regularity, pairing, weak conservation, source admissibility, and Bianchi compatibility status map, authorized bounded conservation-test packet preparation only, preserved the aggregate Lean timeout caveat, and preserved no source admissibility, no conservation claim or witness, no Bianchi compatibility, no semiclassical Einstein equation, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR seam closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_qft_gr_minimal_working_model_candidate_analysis_result"
+        "prepare_qft_gr_minimal_working_model_conservation_test_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -334,13 +336,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR minimal working model candidate-only analysis completed without promoting the toy candidate, recorded supplied and untested obligations, selected result review only, and made no source-admissibility claim, conservation proof-object claim, conservation witness claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR seam closure, public-submission claim, scientific-validation claim, or master-action promotion"
+        "QFT-GR minimal working model candidate-analysis result review accepted candidate-only analysis without promoting the toy candidate, authorized bounded conservation-test packet preparation only, and made no source-admissibility claim, conservation proof-object claim, conservation witness claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR seam closure, public-submission claim, scientific-validation claim, or master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_qft_gr_minimal_working_model_candidate_analysis_result"
+        "prepare_qft_gr_minimal_working_model_conservation_test_packet"
       status := .retained }
   ]
 
@@ -358,13 +360,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the minimal working model candidate analysis. -/
+/-- Previous live target consumed by the candidate-analysis result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "analyze_qft_gr_minimal_working_model_candidate_only"
-
-/-- Current live target after the minimal working model candidate analysis. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_qft_gr_minimal_working_model_candidate_analysis_result"
+
+/-- Current live target after the candidate-analysis result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -377,7 +379,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_qft_gr_minimal_working_model_candidate_analysis_result"
+    "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

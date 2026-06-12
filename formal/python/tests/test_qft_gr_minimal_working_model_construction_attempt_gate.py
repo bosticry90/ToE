@@ -30,7 +30,10 @@ from formal.python.tools.qft_gr_minimal_working_model_construction_attempt_resul
 from formal.python.tools.qft_gr_minimal_working_model_candidate_analysis_report import (
     DEFAULT_OUT as CANDIDATE_ANALYSIS_OUT,
     NEXT_TARGET as CANDIDATE_ANALYSIS_NEXT_TARGET,
-    OUTCOME_ID as CANDIDATE_ANALYSIS_OUTCOME,
+)
+from formal.python.tools.qft_gr_minimal_working_model_candidate_analysis_result_review_report import (
+    NEXT_TARGET as FINAL_LIVE_TARGET,
+    OUTCOME_ID as CANDIDATE_ANALYSIS_RESULT_REVIEW_OUTCOME,
 )
 from formal.python.tools.qft_gr_minimal_working_model_demonstration_packet_result_review_report import (
     OUTCOME_ID as PACKET_RESULT_REVIEW_OUTCOME,
@@ -206,22 +209,26 @@ def test_minimal_working_model_construction_attempt_updates_live_target() -> Non
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == RESULT_REVIEW_NEXT_TARGET
-    assert state["live_next_target"] == CANDIDATE_ANALYSIS_NEXT_TARGET
-    assert state["active_lane"] == CANDIDATE_ANALYSIS_NEXT_TARGET
+    assert state["previous_live_next_target"] == CANDIDATE_ANALYSIS_NEXT_TARGET
+    assert state["live_next_target"] == FINAL_LIVE_TARGET
+    assert state["active_lane"] == FINAL_LIVE_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "QFTGRMinimalWorkingModelCandidateAnalysis.lean"
+        "QFTGRMinimalWorkingModelCandidateAnalysisResultReview.lean"
     )
     assert state["live_next_target_report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CANDIDATE_ANALYSIS_20260612_v0.json"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CANDIDATE_ANALYSIS_RESULT_REVIEW_20260612_v0.json"
     )
-    assert state["live_next_target_outcome"] == CANDIDATE_ANALYSIS_OUTCOME
+    assert (
+        state["live_next_target_outcome"]
+        == CANDIDATE_ANALYSIS_RESULT_REVIEW_OUTCOME
+    )
     assert CONSUMED_TARGET in registry["next_strict_target_coverage"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
     assert RESULT_REVIEW_NEXT_TARGET in registry["next_strict_target_coverage"]
     assert CANDIDATE_ANALYSIS_NEXT_TARGET in registry["next_strict_target_coverage"]
+    assert FINAL_LIVE_TARGET in registry["next_strict_target_coverage"]
 
     attempt_workstream = _workstream(registry, CONSUMED_TARGET)
     assert attempt_workstream["status"] == "paused"
@@ -255,13 +262,30 @@ def test_minimal_working_model_construction_attempt_updates_live_target() -> Non
     assert analysis_workstream["conservation_witness_constructed"] == "no"
     assert analysis_workstream["qft_gr_closure_claimed"] == "no"
 
-    active_workstream = active[0]
-    assert active_workstream["workstream_id"] == CANDIDATE_ANALYSIS_NEXT_TARGET
-    assert active_workstream["authorized_next_strict_target"] == (
-        CANDIDATE_ANALYSIS_NEXT_TARGET
+    candidate_analysis_result_review_workstream = _workstream(
+        registry, CANDIDATE_ANALYSIS_NEXT_TARGET
     )
-    assert active_workstream["consumed_target"] == RESULT_REVIEW_NEXT_TARGET
-    assert active_workstream["outcome_id"] == CANDIDATE_ANALYSIS_OUTCOME
+    assert candidate_analysis_result_review_workstream["status"] == "paused"
+    assert (
+        candidate_analysis_result_review_workstream["selected_next_target"]
+        == FINAL_LIVE_TARGET
+    )
+    assert (
+        candidate_analysis_result_review_workstream["result_review_accepted"]
+        == "yes"
+    )
+    assert (
+        candidate_analysis_result_review_workstream[
+            "bounded_conservation_test_packet_authorized"
+        ]
+        == "yes"
+    )
+
+    active_workstream = active[0]
+    assert active_workstream["workstream_id"] == FINAL_LIVE_TARGET
+    assert active_workstream["authorized_next_strict_target"] == FINAL_LIVE_TARGET
+    assert active_workstream["consumed_target"] == CANDIDATE_ANALYSIS_NEXT_TARGET
+    assert active_workstream["outcome_id"] == CANDIDATE_ANALYSIS_RESULT_REVIEW_OUTCOME
     assert active_workstream["source_admissibility_claimed"] == "no"
     assert active_workstream["qft_gr_closure_claimed"] == "no"
 
