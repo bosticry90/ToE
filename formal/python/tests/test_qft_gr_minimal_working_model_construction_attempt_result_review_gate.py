@@ -7,15 +7,14 @@ from formal.python.meta.repo_environment import find_repo_root
 from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
 )
-from formal.python.tools.qft_gr_minimal_working_model_demonstration_packet_report import (
-    DEFAULT_OUT as PACKET_PATH,
-    OUTCOME_ID as PACKET_OUTCOME,
-    PACKET_CLASSIFICATION,
-    PACKET_ID,
-    REVIEW_TARGET,
+from formal.python.tools.qft_gr_minimal_working_model_construction_attempt_report import (
+    DEFAULT_OUT as CONSTRUCTION_ATTEMPT_PATH,
+    OUTCOME_ID as CONSTRUCTION_ATTEMPT_OUTCOME,
+    RESULT_CLASSIFICATION as CONSTRUCTION_ATTEMPT_CLASSIFICATION,
+    SCHEMA_ID as CONSTRUCTION_ATTEMPT_SCHEMA_ID,
 )
-from formal.python.tools.qft_gr_minimal_working_model_demonstration_packet_result_review_report import (
-    AGGREGATE_LEAN_TIMEOUT_CAVEAT,
+from formal.python.tools.qft_gr_minimal_working_model_construction_attempt_result_review_report import (
+    CONSUMED_TARGET,
     DEFAULT_OUT,
     NEXT_TARGET,
     NEXT_TARGET_KIND,
@@ -23,19 +22,8 @@ from formal.python.tools.qft_gr_minimal_working_model_demonstration_packet_resul
     RESULT_REVIEW_CLASSIFICATION,
     REVIEW_ID,
     SCHEMA_ID,
-    build_qft_gr_minimal_working_model_demonstration_packet_result_review,
-)
-from formal.python.tools.qft_gr_minimal_working_model_construction_attempt_result_review_report import (
-    NEXT_TARGET as FINAL_LIVE_TARGET,
-    OUTCOME_ID as CONSTRUCTION_ATTEMPT_RESULT_REVIEW_OUTCOME,
-)
-from formal.python.tools.qft_gr_post_mr_assump004_governed_maturation_reports import (
-    CAPTURED_AT_UTC,
-)
-
-
-CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET = (
-    "review_qft_gr_minimal_working_model_construction_attempt_result"
+    TOY_SOURCE_STATUS,
+    build_qft_gr_minimal_working_model_construction_attempt_result_review,
 )
 
 
@@ -45,7 +33,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "qft_gr_minimal_working_model_demonstration_packet_result_review_report.py"
+    / "qft_gr_minimal_working_model_construction_attempt_result_review_report.py"
 )
 LEAN_REVIEW_PATH = (
     REPO_ROOT
@@ -53,7 +41,7 @@ LEAN_REVIEW_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalWorkingModelDemonstrationPacketResultReview.lean"
+    / "QFTGRMinimalWorkingModelConstructionAttemptResultReview.lean"
 )
 TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
 V01_INDEX_PATH = (
@@ -101,52 +89,49 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_minimal_working_model_packet_result_review_files_exist() -> None:
-    assert PACKET_PATH.exists()
+def test_minimal_working_model_construction_attempt_result_review_files_exist() -> None:
+    assert CONSTRUCTION_ATTEMPT_PATH.exists()
     assert DEFAULT_OUT.exists()
     assert TOOL_PATH.exists()
     assert LEAN_REVIEW_PATH.exists()
 
 
-def test_minimal_working_model_packet_result_review_consumes_packet() -> None:
+def test_minimal_working_model_construction_attempt_result_review_consumes_attempt() -> None:
     review = _json(DEFAULT_OUT)
-    packet = _json(PACKET_PATH)
+    attempt = _json(CONSTRUCTION_ATTEMPT_PATH)
     assert review["schema_id"] == SCHEMA_ID
     assert review["review_id"] == REVIEW_ID
-    assert review["captured_at_utc"] == CAPTURED_AT_UTC
     assert review["accepted"] is True
     assert review["review_decision"] == "accepted"
     assert review["outcome_id"] == OUTCOME_ID
     assert review["result_review_classification"] == RESULT_REVIEW_CLASSIFICATION
+    assert review["consumed_target"] == CONSUMED_TARGET
     assert (
-        review["consumes_qft_gr_minimal_working_model_demonstration_packet"]
-        == PACKET_ID
+        review["consumes_qft_gr_minimal_working_model_construction_attempt"]
+        == "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_v0"
     )
-    assert review["consumed_packet_outcome_id"] == PACKET_OUTCOME
-    assert review["consumed_packet_classification"] == PACKET_CLASSIFICATION
-    assert packet["selected_next_target"] == REVIEW_TARGET
-    assert review["consumed_target"] == REVIEW_TARGET
+    assert attempt["schema_id"] == CONSTRUCTION_ATTEMPT_SCHEMA_ID
+    assert attempt["outcome_id"] == CONSTRUCTION_ATTEMPT_OUTCOME
+    assert attempt["result_classification"] == CONSTRUCTION_ATTEMPT_CLASSIFICATION
+    assert attempt["selected_next_target"] == CONSUMED_TARGET
 
 
-def test_minimal_working_model_packet_result_review_confirms_scope_only() -> None:
+def test_minimal_working_model_construction_attempt_result_review_confirms_boundary() -> None:
     review = _json(DEFAULT_OUT)
-    assert review["packet_preparation_only_confirmed_by_review"] is True
-    assert review["minimal_model_scope_bounded"] is True
-    assert review["toy_source_candidate_status"] == (
-        "candidate_only_not_source_admissibility"
-    )
+    assert review["bounded_model_construction_accepted"] is True
+    assert review["model_analysis_only_authorized"] is True
+    assert review["model_analysis_executed_by_review"] is False
+    assert review["toy_source_candidate_status"] == TOY_SOURCE_STATUS
     assert review["toy_source_candidate_remains_candidate_only"] is True
-    assert review["bounded_model_construction_attempt_authorized"] is True
-    assert review["bounded_model_construction_attempt_executed_by_review"] is False
-    assert review["minimal_model_demonstration_executed_by_review"] is False
-    assert review["model_execution_authorized_by_review"] is False
 
 
-def test_minimal_working_model_packet_result_review_preserves_nonclaims() -> None:
+def test_minimal_working_model_construction_attempt_result_review_preserves_nonclaims() -> None:
     review = _json(DEFAULT_OUT)
     for key in [
         "source_admissibility_claimed",
         "stress_energy_source_admissibility_claimed",
+        "physical_source_claimed",
+        "conservation_claimed",
         "conservation_proved",
         "conservation_proof_object_constructed",
         "conservation_witness_constructed",
@@ -165,24 +150,21 @@ def test_minimal_working_model_packet_result_review_preserves_nonclaims() -> Non
     ]:
         assert review[key] is False, key
     assert review["aggregate_lean_timeout_caveat_preserved"] is True
-    assert review["validation_caveat"] == AGGREGATE_LEAN_TIMEOUT_CAVEAT
+    assert "full lake build ToeFormal timed out" in review["validation_caveat"]
 
 
-def test_minimal_working_model_packet_result_review_selects_one_next_target() -> None:
+def test_minimal_working_model_construction_attempt_result_review_selects_one_next_target() -> None:
     review = _json(DEFAULT_OUT)
     assert review["selected_next_target"] == NEXT_TARGET
     assert review["result_review_selected_next_target"] == NEXT_TARGET
     assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert review["selected_next_target_count"] == 1
     assert review["selection_count"] == 1
-    assert review["packet_result_review_selected_target_split_preserved"] is True
     assert {row["target"]: row["decision"] for row in review["candidate_next_targets"]} == {
         NEXT_TARGET: "selected",
-        REVIEW_TARGET: "completed_consumed_live_target",
-        "execute_qft_gr_minimal_working_model_demonstration": (
-            "not_authorized_without_construction_attempt"
-        ),
+        CONSUMED_TARGET: "completed_consumed_live_target",
         "claim_qft_gr_source_admissibility": "not_authorized",
-        "construct_qft_gr_conservation_proof_object": "not_authorized",
+        "prove_qft_gr_conservation": "not_authorized",
         "construct_qft_gr_conservation_witness": "not_authorized",
         "claim_qft_gr_bianchi_compatibility": "not_authorized",
         "derive_semiclassical_einstein_equation": "not_authorized",
@@ -191,57 +173,51 @@ def test_minimal_working_model_packet_result_review_selects_one_next_target() ->
     }
 
 
-def test_minimal_working_model_packet_result_review_updates_live_target() -> None:
+def test_minimal_working_model_construction_attempt_result_review_updates_live_target() -> None:
     registry = _json(REGISTRY_PATH)
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET
-    assert state["live_next_target"] == FINAL_LIVE_TARGET
-    assert state["active_lane"] == FINAL_LIVE_TARGET
-    assert REVIEW_TARGET in registry["next_strict_target_coverage"]
+    assert state["previous_live_next_target"] == CONSUMED_TARGET
+    assert state["live_next_target"] == NEXT_TARGET
+    assert state["active_lane"] == NEXT_TARGET
+    assert state["live_next_target_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "QFTGRMinimalWorkingModelConstructionAttemptResultReview.lean"
+    )
+    assert state["live_next_target_report"] == (
+        "formal/docs/release/"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_RESULT_REVIEW_"
+        "20260611_v0.json"
+    )
+    assert state["live_next_target_outcome"] == OUTCOME_ID
+    assert CONSUMED_TARGET in registry["next_strict_target_coverage"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET in registry[
-        "next_strict_target_coverage"
-    ]
-    assert FINAL_LIVE_TARGET in registry["next_strict_target_coverage"]
 
-    review_workstream = _workstream(registry, REVIEW_TARGET)
+    review_workstream = _workstream(registry, CONSUMED_TARGET)
     assert review_workstream["status"] == "paused"
-    assert review_workstream["packet_result_review_accepted"] == "yes"
+    assert review_workstream["result_review_accepted"] == "yes"
     assert review_workstream["selected_next_target"] == NEXT_TARGET
-    assert review_workstream["bounded_model_construction_attempt_authorized"] == "yes"
-    assert review_workstream["bounded_model_construction_attempt_executed"] == "no"
-
-    construction_workstream = _workstream(registry, NEXT_TARGET)
-    assert construction_workstream["status"] == "paused"
-    assert construction_workstream["selected_next_target"] == (
-        CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET
-    )
-    assert construction_workstream["bounded_model_construction_attempt_executed"] == "yes"
-    assert construction_workstream["source_admissibility_claimed"] == "no"
-    assert construction_workstream["qft_gr_closure_claimed"] == "no"
-
-    result_review_workstream = _workstream(
-        registry, CONSTRUCTION_ATTEMPT_RESULT_REVIEW_TARGET
-    )
-    assert result_review_workstream["status"] == "paused"
-    assert result_review_workstream["selected_next_target"] == FINAL_LIVE_TARGET
-    assert result_review_workstream["model_analysis_only_authorized"] == "yes"
-    assert result_review_workstream["model_analysis_executed_by_review"] == "no"
+    assert review_workstream["model_analysis_only_authorized"] == "yes"
+    assert review_workstream["model_analysis_executed_by_review"] == "no"
+    assert review_workstream["source_admissibility_claimed"] == "no"
+    assert review_workstream["conservation_witness_constructed"] == "no"
+    assert review_workstream["qft_gr_closure_claimed"] == "no"
 
     active_workstream = active[0]
-    assert active_workstream["workstream_id"] == FINAL_LIVE_TARGET
-    assert active_workstream["outcome_id"] == CONSTRUCTION_ATTEMPT_RESULT_REVIEW_OUTCOME
+    assert active_workstream["workstream_id"] == NEXT_TARGET
+    assert active_workstream["authorized_next_strict_target"] == NEXT_TARGET
+    assert active_workstream["consumed_target"] == CONSUMED_TARGET
+    assert active_workstream["outcome_id"] == OUTCOME_ID
     assert active_workstream["source_admissibility_claimed"] == "no"
     assert active_workstream["qft_gr_closure_claimed"] == "no"
 
 
-def test_minimal_working_model_packet_result_review_deterministic_and_pinned() -> None:
+def test_minimal_working_model_construction_attempt_result_review_deterministic_and_pinned() -> None:
     review = _json(DEFAULT_OUT)
-    generated = build_qft_gr_minimal_working_model_demonstration_packet_result_review(
-        packet_path=PACKET_PATH,
-        captured_at_utc=CAPTURED_AT_UTC,
+    generated = build_qft_gr_minimal_working_model_construction_attempt_result_review(
+        construction_attempt_path=CONSTRUCTION_ATTEMPT_PATH,
+        captured_at_utc="2026-06-11T00:00:00Z",
     )
     assert review == generated
     for key, value in review["acceptance_criteria"].items():
@@ -269,8 +245,9 @@ def test_minimal_working_model_packet_result_review_deterministic_and_pinned() -
         REVIEW_ID,
         OUTCOME_ID,
         RESULT_REVIEW_CLASSIFICATION,
-        REVIEW_TARGET,
+        CONSUMED_TARGET,
         NEXT_TARGET,
+        "candidate_only_not_source_admissibility",
         "no source admissibility",
         "no conservation witness",
         "no Bianchi compatibility",
@@ -282,7 +259,7 @@ def test_minimal_working_model_packet_result_review_deterministic_and_pinned() -
         assert token in joined
 
 
-def test_minimal_working_model_packet_result_review_gate_not_manifest_enrolled() -> None:
+def test_minimal_working_model_construction_attempt_result_review_gate_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_qft_gr_minimal_working_model_demonstration_packet_result_review_gate.py"
+        "test_qft_gr_minimal_working_model_construction_attempt_result_review_gate.py"
     )

@@ -22,6 +22,11 @@ from formal.python.tools.qft_gr_minimal_working_model_construction_attempt_repor
     TOY_SOURCE_STATUS,
     build_qft_gr_minimal_working_model_construction_attempt,
 )
+from formal.python.tools.qft_gr_minimal_working_model_construction_attempt_result_review_report import (
+    DEFAULT_OUT as RESULT_REVIEW_OUT,
+    NEXT_TARGET as RESULT_REVIEW_NEXT_TARGET,
+    OUTCOME_ID as RESULT_REVIEW_OUTCOME,
+)
 from formal.python.tools.qft_gr_minimal_working_model_demonstration_packet_result_review_report import (
     OUTCOME_ID as PACKET_RESULT_REVIEW_OUTCOME,
     RESULT_REVIEW_CLASSIFICATION as PACKET_RESULT_REVIEW_CLASSIFICATION,
@@ -196,20 +201,22 @@ def test_minimal_working_model_construction_attempt_updates_live_target() -> Non
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == CONSUMED_TARGET
-    assert state["live_next_target"] == NEXT_TARGET
-    assert state["active_lane"] == NEXT_TARGET
+    assert state["previous_live_next_target"] == NEXT_TARGET
+    assert state["live_next_target"] == RESULT_REVIEW_NEXT_TARGET
+    assert state["active_lane"] == RESULT_REVIEW_NEXT_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "QFTGRMinimalWorkingModelConstructionAttempt.lean"
+        "QFTGRMinimalWorkingModelConstructionAttemptResultReview.lean"
     )
     assert state["live_next_target_report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_20260611_v0.json"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_RESULT_REVIEW_"
+        "20260611_v0.json"
     )
-    assert state["live_next_target_outcome"] == OUTCOME_ID
+    assert state["live_next_target_outcome"] == RESULT_REVIEW_OUTCOME
     assert CONSUMED_TARGET in registry["next_strict_target_coverage"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
+    assert RESULT_REVIEW_NEXT_TARGET in registry["next_strict_target_coverage"]
 
     attempt_workstream = _workstream(registry, CONSUMED_TARGET)
     assert attempt_workstream["status"] == "paused"
@@ -220,11 +227,23 @@ def test_minimal_working_model_construction_attempt_updates_live_target() -> Non
     assert attempt_workstream["conservation_witness_constructed"] == "no"
     assert attempt_workstream["qft_gr_closure_claimed"] == "no"
 
+    review_workstream = _workstream(registry, NEXT_TARGET)
+    assert review_workstream["status"] == "paused"
+    assert review_workstream["report"] == str(
+        RESULT_REVIEW_OUT.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert review_workstream["selected_next_target"] == RESULT_REVIEW_NEXT_TARGET
+    assert review_workstream["model_analysis_only_authorized"] == "yes"
+    assert review_workstream["model_analysis_executed_by_review"] == "no"
+    assert review_workstream["source_admissibility_claimed"] == "no"
+    assert review_workstream["conservation_witness_constructed"] == "no"
+    assert review_workstream["qft_gr_closure_claimed"] == "no"
+
     active_workstream = active[0]
-    assert active_workstream["workstream_id"] == NEXT_TARGET
-    assert active_workstream["authorized_next_strict_target"] == NEXT_TARGET
-    assert active_workstream["consumed_target"] == CONSUMED_TARGET
-    assert active_workstream["outcome_id"] == OUTCOME_ID
+    assert active_workstream["workstream_id"] == RESULT_REVIEW_NEXT_TARGET
+    assert active_workstream["authorized_next_strict_target"] == RESULT_REVIEW_NEXT_TARGET
+    assert active_workstream["consumed_target"] == NEXT_TARGET
+    assert active_workstream["outcome_id"] == RESULT_REVIEW_OUTCOME
     assert active_workstream["source_admissibility_claimed"] == "no"
     assert active_workstream["qft_gr_closure_claimed"] == "no"
 

@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "review_qft_gr_minimal_working_model_construction_attempt_result"
+ACTIVE_LANE = "analyze_qft_gr_minimal_working_model_candidate_only"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1324,17 +1324,15 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
     "execute_qft_gr_state_expectation_compatibility_assumption_reduction_attempt"
 )
 PREVIOUS_LIVE_TARGET = (
-    "execute_qft_gr_minimal_working_model_construction_attempt"
-)
-CONSUMED_TARGET = (
-    "execute_qft_gr_minimal_working_model_construction_attempt"
-)
-PREVIOUS_TARGET = (
-    "execute_qft_gr_minimal_working_model_construction_attempt"
-)
-LIVE_TARGET = (
     "review_qft_gr_minimal_working_model_construction_attempt_result"
 )
+CONSUMED_TARGET = (
+    "review_qft_gr_minimal_working_model_construction_attempt_result"
+)
+PREVIOUS_TARGET = (
+    "review_qft_gr_minimal_working_model_construction_attempt_result"
+)
+LIVE_TARGET = "analyze_qft_gr_minimal_working_model_candidate_only"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1350,7 +1348,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalWorkingModelConstructionAttempt.lean"
+    / "QFTGRMinimalWorkingModelConstructionAttemptResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2860,61 +2858,62 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    minimal_model_construction_active_workstream = active_workstream(payload)
-    assert minimal_model_construction_active_workstream["workstream_id"] == ACTIVE_LANE
+    candidate_model_analysis_active_workstream = active_workstream(payload)
+    assert candidate_model_analysis_active_workstream["workstream_id"] == ACTIVE_LANE
     assert (
-        minimal_model_construction_active_workstream["authorized_next_strict_target"]
+        candidate_model_analysis_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert minimal_model_construction_active_workstream["authorized_target"] == LIVE_TARGET
-    assert minimal_model_construction_active_workstream["authorization_evidence"] == str(
+    assert candidate_model_analysis_active_workstream["authorized_target"] == LIVE_TARGET
+    assert candidate_model_analysis_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert minimal_model_construction_active_workstream["report"] == (
+    assert candidate_model_analysis_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_20260611_v0.json"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_RESULT_REVIEW_"
+        "20260611_v0.json"
     )
-    assert minimal_model_construction_active_workstream["outcome_id"] == (
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_EXECUTED_WITH_NO_"
-        "SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
+    assert candidate_model_analysis_active_workstream["outcome_id"] == (
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSTRUCTION_ATTEMPT_RESULT_REVIEW_"
+        "ACCEPTS_BOUNDED_MODEL_CONSTRUCTION_AND_AUTHORIZES_MODEL_ANALYSIS_ONLY"
     )
-    assert minimal_model_construction_active_workstream["claim_level"] == (
-        "Level 3 construction-attempt result-review target"
+    assert candidate_model_analysis_active_workstream["claim_level"] == (
+        "Level 3 candidate-only model-analysis target"
     )
-    assert minimal_model_construction_active_workstream["claim_ceiling"] == (
-        "construction attempt result review only"
+    assert candidate_model_analysis_active_workstream["claim_ceiling"] == (
+        "candidate-only minimal working model analysis"
     )
-    assert "No source admissibility" in minimal_model_construction_active_workstream[
+    assert "No source admissibility" in candidate_model_analysis_active_workstream[
         "non_claim_boundary"
     ]
     assert (
-        minimal_model_construction_active_workstream["consumed_target"]
+        candidate_model_analysis_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        minimal_model_construction_active_workstream[
-            "construction_attempt_result_review_pending"
+        candidate_model_analysis_active_workstream["model_analysis_only_authorized"]
+        == "yes"
+    )
+    assert (
+        candidate_model_analysis_active_workstream[
+            "candidate_only_model_analysis_pending"
         ]
         == "yes"
     )
     assert (
-        minimal_model_construction_active_workstream[
-            "bounded_minimal_model_attempt_constructed"
-        ]
-        == "yes"
-    )
-    assert (
-        minimal_model_construction_active_workstream["source_admissibility_claimed"]
+        candidate_model_analysis_active_workstream["source_admissibility_claimed"]
         == "no"
     )
     assert (
-        minimal_model_construction_active_workstream["conservation_witness_constructed"]
+        candidate_model_analysis_active_workstream["conservation_witness_constructed"]
         == "no"
     )
 
-    construction_attempt_workstream = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    construction_attempt_workstream = _workstream(
+        payload, "execute_qft_gr_minimal_working_model_construction_attempt"
+    )
     assert construction_attempt_workstream["status"] == "paused"
-    assert construction_attempt_workstream["selected_next_target"] == LIVE_TARGET
+    assert construction_attempt_workstream["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert (
         construction_attempt_workstream["bounded_model_construction_attempt_executed"]
         == "yes"
@@ -2926,6 +2925,45 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert construction_attempt_workstream["source_admissibility_claimed"] == "no"
     assert construction_attempt_workstream["conservation_witness_constructed"] == "no"
     assert construction_attempt_workstream["qft_gr_closure_claimed"] == "no"
+
+    construction_attempt_result_review_workstream = _workstream(
+        payload, PREVIOUS_LIVE_TARGET
+    )
+    assert construction_attempt_result_review_workstream["status"] == "paused"
+    assert (
+        construction_attempt_result_review_workstream["selected_next_target"]
+        == LIVE_TARGET
+    )
+    assert (
+        construction_attempt_result_review_workstream["result_review_accepted"]
+        == "yes"
+    )
+    assert (
+        construction_attempt_result_review_workstream[
+            "model_analysis_only_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        construction_attempt_result_review_workstream[
+            "model_analysis_executed_by_review"
+        ]
+        == "no"
+    )
+    assert (
+        construction_attempt_result_review_workstream["source_admissibility_claimed"]
+        == "no"
+    )
+    assert (
+        construction_attempt_result_review_workstream[
+            "conservation_witness_constructed"
+        ]
+        == "no"
+    )
+    assert (
+        construction_attempt_result_review_workstream["qft_gr_closure_claimed"]
+        == "no"
+    )
 
     post_maturation_selector_workstream = _workstream(
         payload, "select_next_post_toe_expert_translation_bounded_target"
@@ -2953,7 +2991,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert minimal_model_packet_review_workstream["status"] == "paused"
     assert minimal_model_packet_review_workstream["selected_next_target"] == (
-        PREVIOUS_LIVE_TARGET
+        "execute_qft_gr_minimal_working_model_construction_attempt"
     )
     assert (
         minimal_model_packet_review_workstream["packet_result_review_accepted"]
@@ -7588,7 +7626,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        minimal_model_construction_active_workstream["authorized_next_strict_target"],
+        candidate_model_analysis_active_workstream["authorized_next_strict_target"],
     }
     assert active_targets == {LIVE_TARGET}
 

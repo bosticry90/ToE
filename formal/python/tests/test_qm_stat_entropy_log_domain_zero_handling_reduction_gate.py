@@ -258,6 +258,7 @@ def test_qm_stat_entropy_log_domain_zero_handling_reduction_registry_rotates_to_
             "prepare_qft_gr_minimal_working_model_demonstration_packet",
             "review_qft_gr_minimal_working_model_demonstration_packet_result",
             "review_qft_gr_minimal_working_model_construction_attempt_result",
+            "analyze_qft_gr_minimal_working_model_candidate_only",
         }
         assert state["active_lane"] in {
             "execute_qft_gr_weak_strong_conservation_comparison_scope_assumption_reduction_attempt",
@@ -289,6 +290,7 @@ def test_qm_stat_entropy_log_domain_zero_handling_reduction_registry_rotates_to_
             "prepare_qft_gr_minimal_working_model_demonstration_packet",
             "review_qft_gr_minimal_working_model_demonstration_packet_result",
             "review_qft_gr_minimal_working_model_construction_attempt_result",
+            "analyze_qft_gr_minimal_working_model_candidate_only",
         }
     assert PREVIOUS_LANE in state["paused_lanes"]
     assert ACTIVE_LANE in state["paused_lanes"]

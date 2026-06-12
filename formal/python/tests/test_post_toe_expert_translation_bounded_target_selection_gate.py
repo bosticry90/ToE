@@ -105,11 +105,13 @@ def test_post_translation_selection_updates_authoritative_live_target() -> None:
         CONSUMED_TARGET,
         SELECTED_NEXT_TARGET,
         "execute_qft_gr_minimal_working_model_construction_attempt",
+        "review_qft_gr_minimal_working_model_construction_attempt_result",
     }
     assert state["live_next_target"] in {
         SELECTED_NEXT_TARGET,
         MINIMAL_MODEL_PACKET_REVIEW_TARGET,
         "review_qft_gr_minimal_working_model_construction_attempt_result",
+        "analyze_qft_gr_minimal_working_model_candidate_only",
     }
 
     consumed_selector = _workstream(registry, CONSUMED_TARGET)
