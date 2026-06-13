@@ -256,9 +256,9 @@ def test_minimal_working_model_packet_has_lean_and_public_surface_mirrors() -> N
         CONSERVATION_TEST_PACKET_TARGET,
         FINAL_LIVE_TARGET,
             "CURRENT_LIVE_NEXT_TARGET_v0: "
-            "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement",
+            "review_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_result",
             "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-            "review_qft_gr_minimal_working_model_refinement_attempt_after_conservation_retest_result",
+            "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement",
         "no source admissibility",
         "no QFT-GR closure",
         "no public submission",
