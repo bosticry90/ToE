@@ -1,0 +1,470 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "candidate_only_status_preserved": true,
+    "consumes_expected_result_review": true,
+    "exactly_one_next_target_selected": true,
+    "newest_refinement_delta_defined": true,
+    "no_bianchi_or_semiclassical_einstein": true,
+    "no_conservation_claim_proof_or_witness": true,
+    "no_empirical_validation_or_public_submission": true,
+    "no_master_action_promotion": true,
+    "no_qft_gr_closure": true,
+    "no_retest_execution": true,
+    "no_source_admissibility_claim": true,
+    "packet_preparation_authorized_only": true,
+    "pass_boundary_records_no_source_or_closure": true,
+    "pass_fail_inconclusive_defined": true,
+    "refined_candidate_components_available": true,
+    "result_review_classification_expected": true,
+    "result_review_outcome_expected": true,
+    "result_review_selected_this_packet": true,
+    "retest_condition_defined": true,
+    "routine_validation_policy_preserves_non_escalation": true,
+    "standing_validation_caveats_preserved": true
+  },
+  "accepted": true,
+  "aggregate_lean_health_claimed": false,
+  "aggregate_lean_not_run": true,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The v3 post-retest-refinement conservation-retest packet must be reviewed before any retest execution or conservation result claim is authorized.",
+      "target": "review_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_result"
+    },
+    {
+      "decision": "completed_consumed_live_target",
+      "reason": "This conservation-retest packet preparation target is consumed here.",
+      "target": "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement"
+    },
+    {
+      "decision": "not_authorized_before_packet_result_review",
+      "reason": "This packet defines the retest only; it does not execute it.",
+      "target": "execute_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement"
+    },
+    {
+      "decision": "not_authorized_before_packet_result_review",
+      "reason": "Any retest remains downstream of a prepared packet result review.",
+      "target": "retry_qft_gr_minimal_working_model_conservation_retest_after_post_retest_refinement_conservation_retest_refinement"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The v3 toy source remains candidate-only.",
+      "target": "claim_qft_gr_source_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Packet preparation is not a conservation proof.",
+      "target": "prove_qft_gr_conservation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No conservation witness is constructed by packet preparation.",
+      "target": "construct_qft_gr_conservation_witness"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Bianchi compatibility remains downstream and unclaimed.",
+      "target": "claim_qft_gr_bianchi_compatibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The semiclassical Einstein equation is not derived here.",
+      "target": "derive_semiclassical_einstein_equation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "QFT-GR closure remains outside this packet.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Empirical validation and public submission are not authorized.",
+      "target": "authorize_empirical_validation_or_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-06-13T00:00:00Z",
+  "conservation_claimed": false,
+  "conservation_proof_object_constructed": false,
+  "conservation_proved": false,
+  "conservation_retest_executed": false,
+  "conservation_retest_failure_claimed": false,
+  "conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_prepared": true,
+  "conservation_retest_packet_result_reviewed": false,
+  "conservation_retest_pass_claimed": false,
+  "conservation_retest_result_claimed": false,
+  "conservation_test_retried_as_proof": false,
+  "conservation_witness_constructed": false,
+  "consumed_result_review_classification": "qft_gr_minimal_working_model_refinement_attempt_after_post_retest_refinement_conservation_retest_result_review_accepts_refined_candidate_and_authorizes_bounded_conservation_retest_packet_only",
+  "consumed_result_review_outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_RESULT_REVIEW_ACCEPTS_REFINED_CANDIDATE_AND_AUTHORIZES_BOUNDED_CONSERVATION_RETEST_PACKET_ONLY",
+  "consumed_result_review_schema_id": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_RESULT_REVIEW_20260613_v0",
+  "consumed_target": "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
+  "consumes_qft_gr_minimal_working_model_refinement_attempt_after_post_retest_refinement_conservation_retest_result_review": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_RESULT_REVIEW_v0",
+  "consumes_qft_gr_minimal_working_model_refinement_attempt_after_post_retest_refinement_conservation_retest_result_review_pointer": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_RESULT_REVIEW_20260613_v0.json",
+  "empirical_validation_claimed": false,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "newest_refinement_delta": {
+    "changed_after_repeated_inconclusive_retests": [
+      {
+        "component": "weak_pairing_domain",
+        "component_id": "toy_weak_pairing_domain_v3_candidate",
+        "conservation_claimed": false,
+        "effect_on_retest": "Retest only weak covariant-divergence pairings admitted by the v3 candidate weak-pairing domain.",
+        "source_admissibility_claimed": false
+      },
+      {
+        "component": "regularity_assumptions",
+        "component_id": "toy_regular_context_v3_candidate",
+        "conservation_claimed": false,
+        "effect_on_retest": "Retest derivative-exchange, regularization, boundary-term, and limit/interchange clauses only where the v3 regularity context admits them.",
+        "regularity_discharge_claimed": false,
+        "source_admissibility_claimed": false
+      },
+      {
+        "component": "test_function_class",
+        "component_id": "toy_conservation_test_function_class_v2_candidate",
+        "conservation_claimed": false,
+        "effect_on_retest": "Use the v2 toy compact-support or admissible test-vector class for the future weak-divergence matrix.",
+        "source_admissibility_claimed": false
+      },
+      {
+        "component": "candidate_source_definition",
+        "component_id": "toy_source_candidate_definition_v3_candidate",
+        "conservation_claimed": false,
+        "effect_on_retest": "Retest the v3 candidate source definition only, without promoting it to an admissible stress-energy source.",
+        "source_admissibility_claimed": false
+      },
+      {
+        "component": "scope_restriction",
+        "component_id": "bounded_toy_weak_pairing_scope_v3",
+        "effect_on_retest": "Restrict interpretation to the bounded v3 toy weak-pairing scope.",
+        "qft_gr_closure_claimed": false
+      },
+      {
+        "component": "obstruction_accounting",
+        "component_id": "repeated_inconclusive_obstruction_account_v2",
+        "conservation_claimed": false,
+        "effect_on_retest": "Carry repeated inconclusive retests as obstruction accounting and an anti-loop signal, not as a pass or failure."
+      },
+      {
+        "component": "validation_boundary",
+        "component_id": "bounded_validation_boundary_v2",
+        "conservation_retest_executed": false,
+        "effect_on_retest": "Preserve bounded validation and standing Lean caveats without converting timeout caveats into retest retry instructions."
+      }
+    ],
+    "delta_id": "post_retest_refinement_conservation_retest_refined_toy_candidate_delta_v3",
+    "obstruction_class": "repeated_weak_divergence_undecided_under_candidate_pairing_domain",
+    "refinement_objective": "refine_post_retest_refined_weak_pairing_domain_or_scope_after_second_inconclusive_retest_without_source_admissibility",
+    "unchanged_boundaries": [
+      "toy_source_candidate_status_remains_candidate_only",
+      "fixed_background_only",
+      "no_backreaction_or_semiclassical_einstein_equation",
+      "no_Bianchi_compatibility",
+      "no_source_admissibility",
+      "no_QFT_GR_closure",
+      "no_conservation_claim_before_retest_execution_and_review"
+    ]
+  },
+  "next_action_scope": "REVIEW_QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_ONLY_NO_RETEST_EXECUTION_SOURCE_ADMISSIBILITY_CONSERVATION_PROOF_WITNESS_BIANCHI_SEMICLASSICAL_EINSTEIN_QFT_GR_CLOSURE_EMPIRICAL_VALIDATION_PUBLIC_SUBMISSION_OR_MASTER_ACTION_PROMOTION",
+  "non_claim_boundary": "This packet prepares only a bounded conservation-retest protocol for the v3 post-retest-refinement toy source candidate. It defines the newest refinement delta, exact retest condition, pass/fail/inconclusive criteria, and why even a future pass would not imply source admissibility or QFT-GR closure. It does not execute a retest and preserves no source admissibility, no conservation claim, no conservation proof object, no conservation witness, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion.",
+  "obstruction_class": "repeated_weak_divergence_undecided_under_candidate_pairing_domain",
+  "outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY",
+  "packet_classification": "qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_prepared_pending_result_review",
+  "packet_classification_count": 1,
+  "packet_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_v0",
+  "packet_preparation_only": true,
+  "packet_prepared": true,
+  "pass_fail_inconclusive_criteria": {
+    "fail": [
+      "a v3 admitted weak divergence pairing is explicitly nonzero under the packet's test-function class",
+      "a required pairing remains undefined inside toy_weak_pairing_domain_v3_candidate",
+      "a required derivative, divergence, regularization, boundary, or limit/interchange step remains blocked inside toy_regular_context_v3_candidate"
+    ],
+    "inconclusive": [
+      "the retest cannot decide zero versus nonzero under only the v3 packet assumptions",
+      "the retest requires stronger pairing-domain, regularity, source-domain membership, or Bianchi compatibility assumptions than this packet may add",
+      "the weak retest remains separable from strong pointwise conservation only by preserving candidate-only status"
+    ],
+    "pass": [
+      "every retest-admitted weak pairing is defined under toy_weak_pairing_domain_v3_candidate",
+      "every derivative, divergence, regularization, boundary-term, and limit/interchange step used by the weak pairing is admitted by toy_regular_context_v3_candidate",
+      "every compact-support or admissible test-vector pairing in toy_conservation_test_function_class_v2_candidate evaluates the weak divergence to zero without adding an unrecorded assumption",
+      "no v3 post-refinement retest obstruction row is triggered"
+    ]
+  },
+  "physical_source_claimed": false,
+  "post_retest_refinement_conservation_retest_refinement_retest_packet_prepared": true,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "refined_candidate_accepted": true,
+  "refinement_objective": "refine_post_retest_refined_weak_pairing_domain_or_scope_after_second_inconclusive_retest_without_source_admissibility",
+  "release_assembly_authorized": false,
+  "release_index_path_not_freshly_lean_validated": true,
+  "release_packet_assembled": false,
+  "retest_conservation_condition": {
+    "candidate_source_definition_id": "toy_source_candidate_definition_v3_candidate",
+    "condition_being_retested": "Weak distributional covariant conservation of the v3 post-retest-refinement toy stress-energy-like candidate under the v3 weak pairing domain, v3 regularity context, and v2 test-function class.",
+    "condition_id": "weak_distributional_covariant_conservation_for_post_retest_refinement_conservation_retest_refined_toy_candidate",
+    "fixed_background_only": true,
+    "global_conservation_claimed": false,
+    "refined_artifact_status": "post_retest_refinement_conservation_retest_refined_toy_candidate_pending_result_review",
+    "regularity_structure_id": "toy_regular_context_v3_candidate",
+    "retest_executed": false,
+    "statement_template": "For every retest-admitted compactly supported test vector field X, with pairings admitted by toy_weak_pairing_domain_v3_candidate and derivative, regularization, boundary-term, or limit operations admitted by toy_regular_context_v3_candidate, the weak pairing <div_g(T_post_retest_refinement_conservation_retest_refined_v3), X> must vanish; otherwise record the first explicit obstruction.",
+    "strong_pointwise_conservation_claimed": false,
+    "test_function_class_id": "toy_conservation_test_function_class_v2_candidate",
+    "weak_pairing_domain_id": "toy_weak_pairing_domain_v3_candidate"
+  },
+  "retest_packet_prepared": true,
+  "schema_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260613_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "review_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_result",
+  "selected_next_target_count": 1,
+  "selected_next_target_kind": "qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_result_review",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "toy_source_candidate_remains_candidate_only": true,
+  "toy_source_candidate_status": "candidate_only_not_source_admissibility",
+  "toy_source_promoted_to_admissible_source": false,
+  "validation_caveat": "Full pytest, full governance suite, full aggregate Lean, release-index Lean validation, CI parity, and security scans are not required for this routine bounded packet-preparation checkpoint. The release-index path remains not freshly Lean-validated, aggregate Lean is not run, and no aggregate Lean health claim is made. Timeouts remain validation caveats, not rerun instructions.",
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "checkpoint_type": "routine_conservation_retest_packet_preparation",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "full_suite_required_only_for_target_types": [
+      "release_candidate",
+      "integration_closeout",
+      "aggregate_validation_diagnostic",
+      "public_submission_readiness",
+      "master_action_promotion_review",
+      "governance_manifest_enrollment",
+      "shared_test_infrastructure_change",
+      "broad_dependency_or_tooling_change"
+    ],
+    "inherited_result_review_validation_policy": {
+      "aggregate_lean_health_claimed": false,
+      "aggregate_lean_not_run": true,
+      "checkpoint_type": "routine_refinement_attempt_result_review",
+      "full_aggregate_lean_required": false,
+      "full_ci_parity_required": false,
+      "full_governance_suite_required": false,
+      "full_pytest_required": false,
+      "full_security_scan_required": false,
+      "full_suite_required_only_for_target_types": [
+        "release_candidate",
+        "integration_closeout",
+        "aggregate_validation_diagnostic",
+        "public_submission_readiness",
+        "master_action_promotion_review",
+        "governance_manifest_enrollment",
+        "shared_test_infrastructure_change",
+        "broad_dependency_or_tooling_change"
+      ],
+      "inherited_attempt_validation_policy": {
+        "aggregate_lean_health_claimed": false,
+        "aggregate_lean_not_run": true,
+        "checkpoint_type": "routine_refinement_attempt_execution",
+        "full_aggregate_lean_required": false,
+        "full_ci_parity_required": false,
+        "full_governance_suite_required": false,
+        "full_pytest_required": false,
+        "full_security_scan_required": false,
+        "full_suite_required_only_for_target_types": [
+          "release_candidate",
+          "integration_closeout",
+          "aggregate_validation_diagnostic",
+          "public_submission_readiness",
+          "master_action_promotion_review",
+          "governance_manifest_enrollment",
+          "shared_test_infrastructure_change",
+          "broad_dependency_or_tooling_change"
+        ],
+        "inherited_packet_result_review_validation_policy": {
+          "aggregate_lean_health_claimed": false,
+          "aggregate_lean_not_run": true,
+          "checkpoint_type": "routine_packet_result_review",
+          "full_aggregate_lean_required": false,
+          "full_ci_parity_required": false,
+          "full_governance_suite_required": false,
+          "full_pytest_required": false,
+          "full_security_scan_required": false,
+          "full_suite_required_only_for_target_types": [
+            "release_candidate",
+            "integration_closeout",
+            "aggregate_validation_diagnostic",
+            "public_submission_readiness",
+            "master_action_promotion_review",
+            "governance_manifest_enrollment",
+            "shared_test_infrastructure_change",
+            "broad_dependency_or_tooling_change"
+          ],
+          "inherited_packet_validation_policy": {
+            "aggregate_lean_health_claimed": false,
+            "aggregate_lean_not_run": true,
+            "bounded_lean_substitute_from_prior_checkpoint_preserved": true,
+            "checkpoint_type": "routine_refinement_packet_preparation",
+            "full_aggregate_lean_required": false,
+            "full_ci_parity_required": false,
+            "full_governance_suite_required": false,
+            "full_pytest_required": false,
+            "full_security_scan_required": false,
+            "full_suite_required_only_for_target_types": [
+              "release_candidate",
+              "integration_closeout",
+              "aggregate_validation_diagnostic",
+              "public_submission_readiness",
+              "master_action_promotion_review",
+              "governance_manifest_enrollment",
+              "shared_test_infrastructure_change",
+              "broad_dependency_or_tooling_change"
+            ],
+            "inherited_review_validation_policy": {
+              "checkpoint_type": "routine_conservation_retest_attempt_result_review",
+              "full_aggregate_lean_required": false,
+              "full_ci_parity_required": false,
+              "full_governance_suite_required": false,
+              "full_pytest_required": false,
+              "full_security_scan_required": false,
+              "full_suite_required_only_for_target_types": [
+                "release_candidate",
+                "integration_closeout",
+                "aggregate_validation_diagnostic",
+                "public_submission_readiness",
+                "master_action_promotion_review",
+                "governance_manifest_enrollment",
+                "shared_test_infrastructure_change",
+                "broad_dependency_or_tooling_change"
+              ],
+              "inherited_attempt_validation_policy": {
+                "checkpoint_type": "routine_conservation_retest_attempt_execution",
+                "full_aggregate_lean_required": false,
+                "full_ci_parity_required": false,
+                "full_governance_suite_required": false,
+                "full_pytest_required": false,
+                "full_security_scan_required": false,
+                "full_suite_required_only_for_target_types": [
+                  "release_candidate",
+                  "integration_closeout",
+                  "aggregate_validation_diagnostic",
+                  "public_submission_readiness",
+                  "master_action_promotion_review",
+                  "governance_manifest_enrollment",
+                  "shared_test_infrastructure_change",
+                  "broad_dependency_or_tooling_change"
+                ],
+                "inherited_result_review_validation_policy": {
+                  "checkpoint_type": "routine_conservation_retest_packet_result_review",
+                  "full_aggregate_lean_required": false,
+                  "full_ci_parity_required": false,
+                  "full_governance_suite_required": false,
+                  "full_pytest_required": false,
+                  "full_security_scan_required": false,
+                  "full_suite_required_only_for_target_types": [
+                    "release_candidate",
+                    "integration_closeout",
+                    "aggregate_validation_diagnostic",
+                    "public_submission_readiness",
+                    "master_action_promotion_review",
+                    "governance_manifest_enrollment",
+                    "shared_test_infrastructure_change",
+                    "broad_dependency_or_tooling_change"
+                  ],
+                  "inherited_packet_validation_policy": {
+                    "checkpoint_type": "routine_conservation_retest_packet_preparation",
+                    "full_aggregate_lean_required": false,
+                    "full_ci_parity_required": false,
+                    "full_governance_suite_required": false,
+                    "full_pytest_required": false,
+                    "full_security_scan_required": false,
+                    "full_suite_required_only_for_target_types": [
+                      "release_candidate",
+                      "integration_closeout",
+                      "aggregate_validation_diagnostic",
+                      "public_submission_readiness",
+                      "master_action_promotion_review",
+                      "governance_manifest_enrollment",
+                      "shared_test_infrastructure_change",
+                      "broad_dependency_or_tooling_change"
+                    ],
+                    "long_running_validation_escalation_authorized": false,
+                    "routine_packet_uses_bounded_target_relevant_validation_only": true,
+                    "timeout_recorded_as_caveat_not_rerun_instruction": true,
+                    "timeout_rerun_loop_authorized": false
+                  },
+                  "long_running_validation_escalation_authorized": false,
+                  "routine_packet_uses_bounded_target_relevant_validation_only": true,
+                  "timeout_recorded_as_caveat_not_rerun_instruction": true,
+                  "timeout_rerun_loop_authorized": false
+                },
+                "long_running_validation_escalation_authorized": false,
+                "routine_packet_uses_bounded_target_relevant_validation_only": true,
+                "timeout_recorded_as_caveat_not_rerun_instruction": true,
+                "timeout_rerun_loop_authorized": false
+              },
+              "long_running_validation_escalation_authorized": false,
+              "routine_packet_uses_bounded_target_relevant_validation_only": true,
+              "timeout_recorded_as_caveat_not_rerun_instruction": true,
+              "timeout_rerun_loop_authorized": false
+            },
+            "long_running_validation_escalation_authorized": false,
+            "release_index_path_not_freshly_lean_validated": true,
+            "routine_packet_uses_bounded_target_relevant_validation_only": true,
+            "targeted_review_frontier_index_timeout_preserved": true,
+            "timeout_recorded_as_caveat_not_rerun_instruction": true,
+            "timeout_rerun_loop_authorized": false
+          },
+          "long_running_validation_escalation_authorized": false,
+          "release_index_path_not_freshly_lean_validated": true,
+          "routine_packet_review_uses_bounded_target_relevant_validation_only": true,
+          "timeout_recorded_as_caveat_not_rerun_instruction": true,
+          "timeout_rerun_loop_authorized": false
+        },
+        "long_running_validation_escalation_authorized": false,
+        "release_index_path_not_freshly_lean_validated": true,
+        "routine_checkpoint_uses_bounded_target_relevant_validation_only": true,
+        "timeout_recorded_as_caveat_not_rerun_instruction": true,
+        "timeout_rerun_loop_authorized": false
+      },
+      "long_running_validation_escalation_authorized": false,
+      "release_index_path_not_freshly_lean_validated": true,
+      "routine_attempt_review_uses_bounded_target_relevant_validation_only": true,
+      "timeout_recorded_as_caveat_not_rerun_instruction": true,
+      "timeout_rerun_loop_authorized": false
+    },
+    "long_running_validation_escalation_authorized": false,
+    "release_index_path_not_freshly_lean_validated": true,
+    "routine_packet_uses_bounded_target_relevant_validation_only": true,
+    "timeout_recorded_as_caveat_not_rerun_instruction": true,
+    "timeout_rerun_loop_authorized": false
+  },
+  "validation_posture": {
+    "adjacent_minimal_model_nonclaim_gates": "required_bounded_subset",
+    "bounded_lean_substitute_packet_frontier": "required_for_checkpoint",
+    "focused_packet_current_target_registry_gates": "required_for_checkpoint",
+    "full_aggregate_lean": "not_required_for_checkpoint_preserved_caveat",
+    "full_ci_parity": "not_required_for_checkpoint",
+    "full_governance_suite": "not_required_for_checkpoint",
+    "full_pytest": "not_required_for_checkpoint",
+    "git_diff_check": "required_for_checkpoint",
+    "release_index_lean_path": "not_freshly_validated_preserved_caveat",
+    "security_scan": "not_required_for_checkpoint"
+  },
+  "why_even_a_future_pass_does_not_imply_source_admissibility_or_qft_gr_closure": [
+    "A future pass would establish only that the v3 toy candidate passes this packet's weak distributional retest on the fixed background.",
+    "A future pass would not establish full source-domain membership, stress-energy source admissibility, or physical-source status.",
+    "A future pass would not establish Bianchi compatibility or derive a semiclassical Einstein equation.",
+    "A future pass would not close QFT-GR, authorize empirical validation, authorize public submission, or promote the master action."
+  ]
+}
