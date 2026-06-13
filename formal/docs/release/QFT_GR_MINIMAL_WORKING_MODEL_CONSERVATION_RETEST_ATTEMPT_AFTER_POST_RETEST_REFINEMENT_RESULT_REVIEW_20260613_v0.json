@@ -1,0 +1,269 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "attempt_classification_expected": true,
+    "attempt_executed_inconclusive": true,
+    "attempt_outcome_expected": true,
+    "attempt_selected_this_result_review": true,
+    "consumes_expected_post_retest_refinement_attempt": true,
+    "does_not_convert_inconclusive_to_failure": true,
+    "does_not_convert_inconclusive_to_pass": true,
+    "exactly_one_next_target_selected": true,
+    "exactly_one_refinement_or_countermodel_route_selected": true,
+    "exactly_one_refinement_target_selected": true,
+    "no_bianchi_or_semiclassical_einstein": true,
+    "no_conservation_claim_proof_or_witness": true,
+    "no_empirical_validation_or_public_submission": true,
+    "no_master_action_promotion": true,
+    "no_qft_gr_closure": true,
+    "no_source_admissibility_claim": true,
+    "routine_validation_policy_preserves_non_escalation": true,
+    "standing_validation_caveats_preserved": true,
+    "why_inconclusive_recorded": true
+  },
+  "accepted": true,
+  "accepted_inconclusive_result": true,
+  "aggregate_lean_timeout_caveat_preserved": true,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The accepted retest result is inconclusive, so the single bounded next action is a model-refinement packet.",
+      "target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest"
+    },
+    {
+      "decision": "completed_consumed_live_target",
+      "reason": "This post-retest-refinement conservation-retest attempt result-review target is consumed here.",
+      "target": "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_result"
+    },
+    {
+      "decision": "not_selected_no_failure_obstruction",
+      "reason": "The retest did not record an explicit failed-conservation obstruction requiring a countermodel packet.",
+      "target": "prepare_qft_gr_minimal_working_model_countermodel_packet_after_post_retest_refinement_conservation_retest"
+    },
+    {
+      "decision": "not_authorized_without_new_packet",
+      "reason": "A new retest is not authorized without a new packet.",
+      "target": "execute_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The toy source remains a candidate only.",
+      "target": "claim_qft_gr_source_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The accepted result is inconclusive, not a proof.",
+      "target": "prove_qft_gr_conservation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No conservation witness is constructed or authorized.",
+      "target": "construct_qft_gr_conservation_witness"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Bianchi compatibility remains downstream and unclaimed.",
+      "target": "claim_qft_gr_bianchi_compatibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The semiclassical Einstein equation is not derived here.",
+      "target": "derive_semiclassical_einstein_equation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "QFT-GR closure remains outside this result review.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Empirical validation and public submission are not authorized.",
+      "target": "authorize_empirical_validation_or_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-06-13T00:00:00Z",
+  "classification_confirmed": true,
+  "conservation_claimed": false,
+  "conservation_proof_object_constructed": false,
+  "conservation_proved": false,
+  "conservation_retest_attempt_after_post_retest_refinement_consumed": true,
+  "conservation_retest_attempt_after_post_retest_refinement_executed": true,
+  "conservation_retest_attempt_after_post_retest_refinement_result_review_accepted": true,
+  "conservation_retest_failed": false,
+  "conservation_retest_inconclusive": true,
+  "conservation_retest_passed": false,
+  "conservation_retest_rerun_authorized": false,
+  "conservation_witness_constructed": false,
+  "consumed_attempt_classification": "qft_gr_minimal_working_model_conservation_retest_after_post_retest_refinement_inconclusive_requires_model_refinement",
+  "consumed_attempt_outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_EXECUTED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY",
+  "consumed_attempt_schema_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_20260613_v0",
+  "consumed_target": "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_result",
+  "consumes_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_v0",
+  "consumes_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_pointer": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_20260613_v0.json",
+  "countermodel_packet_authorized": false,
+  "countermodel_packet_prepared_by_review": false,
+  "empirical_validation_claimed": false,
+  "inconclusive_not_converted_to_failure": true,
+  "inconclusive_not_converted_to_pass": true,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "model_refinement_executed_by_review": false,
+  "model_refinement_packet_authorized": true,
+  "model_refinement_packet_prepared_by_review": false,
+  "next_action_scope": "PREPARE_QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_ONLY_NO_RETEST_RERUN_NO_CONSERVATION_PROOF_WITNESS_SOURCE_ADMISSIBILITY_BIANCHI_SEMICLASSICAL_EINSTEIN_QFT_GR_CLOSURE_EMPIRICAL_VALIDATION_OR_PUBLIC_SUBMISSION",
+  "non_claim_boundary": "This result review accepts the bounded post-retest-refinement conservation-retest attempt as inconclusive and authorizes exactly one next bounded target: a model-refinement packet. It does not convert the inconclusive result into a pass or failure, does not rerun conservation, does not claim conservation, does not construct a conservation proof object, constructs no conservation witness, does not claim source admissibility, does not claim Bianchi compatibility, does not derive the semiclassical Einstein equation, does not close QFT-GR, does not validate empirically, does not authorize public submission, and does not promote the master action.",
+  "outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_RETEST_AND_AUTHORIZES_MODEL_REFINEMENT_OR_COUNTERMODEL_PACKET_ONLY",
+  "physical_source_claimed": false,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "refinement_target_rows": [
+    {
+      "reason": "The v2 weak pairing domain and regular context still do not decide zero versus nonzero weak divergence.",
+      "refinement_target": "refine_post_retest_refined_weak_pairing_domain_or_scope_after_second_inconclusive_retest_without_source_admissibility",
+      "selected": true
+    },
+    {
+      "reason": "No explicit failed conservation-retest obstruction was recorded.",
+      "refinement_target": "construct_countermodel_for_failed_retest",
+      "selected": false
+    },
+    {
+      "reason": "Source admissibility is not claimed or authorized.",
+      "refinement_target": "promote_toy_candidate_to_admissible_source",
+      "selected": false
+    },
+    {
+      "reason": "Bianchi compatibility and the semiclassical Einstein equation remain outside this review.",
+      "refinement_target": "derive_bianchi_compatible_semiclassical_coupling",
+      "selected": false
+    }
+  ],
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "result_review_classification": "qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_result_review_accepts_inconclusive_retest_and_authorizes_model_refinement_or_countermodel_packet_only",
+  "result_review_classification_count": 1,
+  "result_review_selected_next_target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest",
+  "retest_failed": false,
+  "retest_inconclusive": true,
+  "retest_passed": false,
+  "retest_result": "inconclusive",
+  "review_decision": "accepted",
+  "review_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_RESULT_REVIEW_v0",
+  "route_rows": [
+    {
+      "reason": "The second bounded retest is inconclusive and points to weak pairing-domain, regularity, source-definition, or scope refinement.",
+      "route": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest",
+      "selected": true
+    },
+    {
+      "reason": "Countermodel preparation is not selected because the retest did not fail or expose an explicit obstruction.",
+      "route": "prepare_qft_gr_minimal_working_model_countermodel_packet_after_post_retest_refinement_conservation_retest",
+      "selected": false
+    }
+  ],
+  "schema_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_RESULT_REVIEW_20260613_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest",
+  "selected_next_target_count": 1,
+  "selected_next_target_kind": "qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_preparation_only",
+  "selected_refinement_or_countermodel_route": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest",
+  "selected_refinement_or_countermodel_route_count": 1,
+  "selected_refinement_target": "refine_post_retest_refined_weak_pairing_domain_or_scope_after_second_inconclusive_retest_without_source_admissibility",
+  "selected_refinement_target_count": 1,
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "validation_caveat": "Full pytest, full governance suite, full aggregate Lean, CI parity, and security scans are not required for this routine bounded result-review checkpoint; inherited caveat: Full pytest, full governance suite, full aggregate Lean, CI parity, and security scans are not required for this routine bounded retest-attempt checkpoint; inherited caveat: Full pytest, full governance suite, full aggregate Lean, CI parity, and security scans are not required for this routine bounded packet-result-review checkpoint; inherited caveat: Full pytest, full governance suite, full aggregate Lean, CI parity, and security scans are not required for this routine bounded packet-preparation checkpoint; inherited caveat: Full pytest, full governance suite, full aggregate Lean, CI parity, and security scans are not required for this routine bounded attempt-result-review checkpoint; inherited caveat: Full pytest, full governance suite, full aggregate Lean, CI parity, and security scans are not required for this routine bounded attempt-execution checkpoint; inherited caveat: full lake build ToeFormal timed out after repair and rerun attempt; targeted Lean packet/frontier/historical modules passed",
+  "validation_policy": {
+    "checkpoint_type": "routine_conservation_retest_attempt_result_review",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "full_suite_required_only_for_target_types": [
+      "release_candidate",
+      "integration_closeout",
+      "aggregate_validation_diagnostic",
+      "public_submission_readiness",
+      "master_action_promotion_review",
+      "governance_manifest_enrollment",
+      "shared_test_infrastructure_change",
+      "broad_dependency_or_tooling_change"
+    ],
+    "inherited_attempt_validation_policy": {
+      "checkpoint_type": "routine_conservation_retest_attempt_execution",
+      "full_aggregate_lean_required": false,
+      "full_ci_parity_required": false,
+      "full_governance_suite_required": false,
+      "full_pytest_required": false,
+      "full_security_scan_required": false,
+      "full_suite_required_only_for_target_types": [
+        "release_candidate",
+        "integration_closeout",
+        "aggregate_validation_diagnostic",
+        "public_submission_readiness",
+        "master_action_promotion_review",
+        "governance_manifest_enrollment",
+        "shared_test_infrastructure_change",
+        "broad_dependency_or_tooling_change"
+      ],
+      "inherited_result_review_validation_policy": {
+        "checkpoint_type": "routine_conservation_retest_packet_result_review",
+        "full_aggregate_lean_required": false,
+        "full_ci_parity_required": false,
+        "full_governance_suite_required": false,
+        "full_pytest_required": false,
+        "full_security_scan_required": false,
+        "full_suite_required_only_for_target_types": [
+          "release_candidate",
+          "integration_closeout",
+          "aggregate_validation_diagnostic",
+          "public_submission_readiness",
+          "master_action_promotion_review",
+          "governance_manifest_enrollment",
+          "shared_test_infrastructure_change",
+          "broad_dependency_or_tooling_change"
+        ],
+        "inherited_packet_validation_policy": {
+          "checkpoint_type": "routine_conservation_retest_packet_preparation",
+          "full_aggregate_lean_required": false,
+          "full_ci_parity_required": false,
+          "full_governance_suite_required": false,
+          "full_pytest_required": false,
+          "full_security_scan_required": false,
+          "full_suite_required_only_for_target_types": [
+            "release_candidate",
+            "integration_closeout",
+            "aggregate_validation_diagnostic",
+            "public_submission_readiness",
+            "master_action_promotion_review",
+            "governance_manifest_enrollment",
+            "shared_test_infrastructure_change",
+            "broad_dependency_or_tooling_change"
+          ],
+          "long_running_validation_escalation_authorized": false,
+          "routine_packet_uses_bounded_target_relevant_validation_only": true,
+          "timeout_recorded_as_caveat_not_rerun_instruction": true,
+          "timeout_rerun_loop_authorized": false
+        },
+        "long_running_validation_escalation_authorized": false,
+        "routine_packet_uses_bounded_target_relevant_validation_only": true,
+        "timeout_recorded_as_caveat_not_rerun_instruction": true,
+        "timeout_rerun_loop_authorized": false
+      },
+      "long_running_validation_escalation_authorized": false,
+      "routine_packet_uses_bounded_target_relevant_validation_only": true,
+      "timeout_recorded_as_caveat_not_rerun_instruction": true,
+      "timeout_rerun_loop_authorized": false
+    },
+    "long_running_validation_escalation_authorized": false,
+    "routine_packet_uses_bounded_target_relevant_validation_only": true,
+    "timeout_recorded_as_caveat_not_rerun_instruction": true,
+    "timeout_rerun_loop_authorized": false
+  }
+}
