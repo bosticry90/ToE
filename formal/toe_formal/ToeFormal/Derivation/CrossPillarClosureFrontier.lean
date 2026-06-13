@@ -162,6 +162,8 @@ def currentLiveNextStrictTargetV0 : String :=
   "review_qft_gr_minimal_working_model_conservation_retest_packet_result"
 def currentLiveNextStrictTargetV0 : String :=
   "execute_qft_gr_minimal_working_model_conservation_retest_attempt"
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_minimal_working_model_conservation_retest_attempt_result"
 -/
 
 import ToeFormal.Derivation.CrossPillarDerivationProtocol
@@ -328,13 +330,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR minimal working model conservation-retest packet result review consumed the prepared retest packet, accepted only the bounded retest protocol for the refined toy weak pairing-domain and regularity context, authorized only a bounded conservation-retest attempt, preserved candidate-only status, preserved the aggregate Lean timeout caveat, and preserved no conservation retest execution by review, no conservation retry as proof, no source admissibility, no conservation claim, no conservation proof object or witness, no Bianchi compatibility, no semiclassical Einstein equation, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR seam closure"
+        "QFT-GR minimal working model conservation-retest attempt consumed the packet result review, executed only the bounded weak distributional conservation retest for the refined toy pairing-domain and regularity context, recorded an inconclusive result requiring result review, preserved candidate-only status, preserved the aggregate Lean timeout caveat, and preserved no conservation claim, no conservation proof object or witness, no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR seam closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "execute_qft_gr_minimal_working_model_conservation_retest_attempt"
+        "review_qft_gr_minimal_working_model_conservation_retest_attempt_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -356,13 +358,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR minimal working model conservation-retest packet result review accepted only the bounded retest protocol and authorized only a bounded retest attempt, preserved candidate-only status, and made no source-admissibility claim, conservation-retest execution claim, conservation claim, conservation proof-object claim, conservation witness claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR seam closure, public-submission claim, scientific-validation claim, or master-action promotion"
+        "QFT-GR minimal working model conservation-retest attempt executed only the bounded retest protocol, recorded the retest as inconclusive pending result review, preserved candidate-only status, and made no source-admissibility claim, conservation pass claim, conservation claim, conservation proof-object claim, conservation witness claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR seam closure, public-submission claim, scientific-validation claim, or master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "execute_qft_gr_minimal_working_model_conservation_retest_attempt"
+        "review_qft_gr_minimal_working_model_conservation_retest_attempt_result"
       status := .retained }
   ]
 
@@ -380,13 +382,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the conservation-retest packet result review. -/
+/-- Previous live target consumed by the conservation-retest attempt. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_minimal_working_model_conservation_retest_packet_result"
-
-/-- Current live target after the conservation-retest packet result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "execute_qft_gr_minimal_working_model_conservation_retest_attempt"
+
+/-- Current live target after the conservation-retest attempt. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_minimal_working_model_conservation_retest_attempt_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -399,7 +401,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
     ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "execute_qft_gr_minimal_working_model_conservation_retest_attempt"
+    "review_qft_gr_minimal_working_model_conservation_retest_attempt_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
