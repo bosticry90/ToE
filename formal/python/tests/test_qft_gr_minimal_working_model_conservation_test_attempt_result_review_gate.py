@@ -6,17 +6,16 @@ from pathlib import Path
 from formal.python.meta.repo_environment import find_repo_root
 from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
-    skip_if_not_current_target,
 )
-from formal.python.tools.qft_gr_minimal_working_model_conservation_test_packet_report import (
-    DEFAULT_OUT as CONSERVATION_TEST_PACKET_PATH,
-    NEXT_TARGET as CONSUMED_TARGET,
-    OUTCOME_ID as CONSERVATION_TEST_PACKET_OUTCOME,
-    PACKET_CLASSIFICATION as CONSERVATION_TEST_PACKET_CLASSIFICATION,
-    PACKET_ID as CONSERVATION_TEST_PACKET_ID,
-    SCHEMA_ID as CONSERVATION_TEST_PACKET_SCHEMA_ID,
+from formal.python.tools.qft_gr_minimal_working_model_conservation_test_attempt_report import (
+    ATTEMPT_ID as CONSERVATION_TEST_ATTEMPT_ID,
+    DEFAULT_OUT as CONSERVATION_TEST_ATTEMPT_PATH,
+    OUTCOME_ID as CONSERVATION_TEST_ATTEMPT_OUTCOME,
+    RESULT_CLASSIFICATION as CONSERVATION_TEST_ATTEMPT_CLASSIFICATION,
+    SCHEMA_ID as CONSERVATION_TEST_ATTEMPT_SCHEMA_ID,
 )
-from formal.python.tools.qft_gr_minimal_working_model_conservation_test_packet_result_review_report import (
+from formal.python.tools.qft_gr_minimal_working_model_conservation_test_attempt_result_review_report import (
+    CONSUMED_TARGET,
     DEFAULT_OUT,
     NEXT_TARGET,
     NEXT_TARGET_KIND,
@@ -24,13 +23,8 @@ from formal.python.tools.qft_gr_minimal_working_model_conservation_test_packet_r
     RESULT_REVIEW_CLASSIFICATION,
     REVIEW_ID,
     SCHEMA_ID,
-    TOY_SOURCE_STATUS,
-    build_qft_gr_minimal_working_model_conservation_test_packet_result_review,
-)
-from formal.python.tools.qft_gr_minimal_working_model_conservation_test_attempt_report import (
-    DEFAULT_OUT as CONSERVATION_TEST_ATTEMPT_PATH,
-    NEXT_TARGET as CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET,
-    OUTCOME_ID as CONSERVATION_TEST_ATTEMPT_OUTCOME,
+    SELECTED_REFINEMENT_TARGET,
+    build_qft_gr_minimal_working_model_conservation_test_attempt_result_review,
 )
 
 
@@ -40,7 +34,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "qft_gr_minimal_working_model_conservation_test_packet_result_review_report.py"
+    / "qft_gr_minimal_working_model_conservation_test_attempt_result_review_report.py"
 )
 LEAN_REVIEW_PATH = (
     REPO_ROOT
@@ -48,7 +42,7 @@ LEAN_REVIEW_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalWorkingModelConservationTestPacketResultReview.lean"
+    / "QFTGRMinimalWorkingModelConservationTestAttemptResultReview.lean"
 )
 TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
 V01_INDEX_PATH = (
@@ -96,16 +90,16 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_minimal_working_model_conservation_test_packet_result_review_files_exist() -> None:
-    assert CONSERVATION_TEST_PACKET_PATH.exists()
+def test_minimal_working_model_conservation_test_attempt_result_review_files_exist() -> None:
+    assert CONSERVATION_TEST_ATTEMPT_PATH.exists()
     assert DEFAULT_OUT.exists()
     assert TOOL_PATH.exists()
     assert LEAN_REVIEW_PATH.exists()
 
 
-def test_minimal_working_model_conservation_test_packet_result_review_consumes_packet() -> None:
+def test_minimal_working_model_conservation_test_attempt_result_review_consumes_attempt() -> None:
     review = _json(DEFAULT_OUT)
-    packet = _json(CONSERVATION_TEST_PACKET_PATH)
+    attempt = _json(CONSERVATION_TEST_ATTEMPT_PATH)
     assert review["schema_id"] == SCHEMA_ID
     assert review["review_id"] == REVIEW_ID
     assert review["accepted"] is True
@@ -114,53 +108,34 @@ def test_minimal_working_model_conservation_test_packet_result_review_consumes_p
     assert review["result_review_classification"] == RESULT_REVIEW_CLASSIFICATION
     assert review["consumed_target"] == CONSUMED_TARGET
     assert (
-        review["consumes_qft_gr_minimal_working_model_conservation_test_packet"]
-        == CONSERVATION_TEST_PACKET_ID
+        review["consumes_qft_gr_minimal_working_model_conservation_test_attempt"]
+        == CONSERVATION_TEST_ATTEMPT_ID
     )
-    assert packet["schema_id"] == CONSERVATION_TEST_PACKET_SCHEMA_ID
-    assert packet["packet_id"] == CONSERVATION_TEST_PACKET_ID
-    assert packet["outcome_id"] == CONSERVATION_TEST_PACKET_OUTCOME
-    assert packet["packet_classification"] == CONSERVATION_TEST_PACKET_CLASSIFICATION
-    assert packet["selected_next_target"] == CONSUMED_TARGET
+    assert attempt["schema_id"] == CONSERVATION_TEST_ATTEMPT_SCHEMA_ID
+    assert attempt["attempt_id"] == CONSERVATION_TEST_ATTEMPT_ID
+    assert attempt["outcome_id"] == CONSERVATION_TEST_ATTEMPT_OUTCOME
+    assert attempt["result_classification"] == CONSERVATION_TEST_ATTEMPT_CLASSIFICATION
+    assert attempt["selected_next_target"] == CONSUMED_TARGET
 
 
-def test_minimal_working_model_conservation_test_packet_result_review_confirms_protocol() -> None:
+def test_minimal_working_model_conservation_test_attempt_result_review_accepts_inconclusive_only() -> None:
     review = _json(DEFAULT_OUT)
-    assert review["packet_result_review_accepted"] is True
-    assert review["packet_preparation_only_confirmed"] is True
-    assert review["bounded_conservation_test_attempt_authorized"] is True
-    assert review["bounded_conservation_test_attempt_executed_by_review"] is False
-    assert review["conservation_test_executed"] is False
-    assert review["toy_source_candidate_status"] == TOY_SOURCE_STATUS
-    assert review["toy_source_candidate_remains_candidate_only"] is True
-    assert (
-        review["conservation_sense_being_tested"]["sense_id"]
-        == "weak_distributional_covariant_conservation_for_toy_candidate"
-    )
-    assert (
-        review["weak_vs_strong_conservation_scope"]["scope_decision"]
-        == "weak_scope_only_for_this_packet"
-    )
-    assert (
-        review["test_object_and_test_domain"]["test_object_status"]
-        == TOY_SOURCE_STATUS
-    )
-    assert set(review["pass_fail_inconclusive_criteria"]) == {
-        "pass",
-        "fail",
-        "inconclusive",
-    }
-    assert len(review["why_passing_does_not_imply_source_admissibility"]) >= 3
-    assert (
-        len(review["why_failing_routes_to_countermodel_or_scope_refinement"]) >= 3
-    )
+    assert review["conservation_test_attempt_result_review_accepted"] is True
+    assert review["classification_confirmed"] is True
+    assert review["accepted_inconclusive_result"] is True
+    assert review["inconclusive_not_converted_to_pass"] is True
+    assert review["test_result"] == "inconclusive"
+    assert review["test_passed"] is False
+    assert review["test_failed"] is False
+    assert review["test_inconclusive"] is True
+    assert review["conservation_test_passed"] is False
+    assert review["conservation_test_failed"] is False
+    assert review["conservation_test_inconclusive"] is True
 
 
-def test_minimal_working_model_conservation_test_packet_result_review_preserves_nonclaims() -> None:
+def test_minimal_working_model_conservation_test_attempt_result_review_preserves_nonclaims() -> None:
     review = _json(DEFAULT_OUT)
     for key in [
-        "conservation_test_executed",
-        "conservation_test_result_claimed",
         "source_admissibility_claimed",
         "stress_energy_source_admissibility_claimed",
         "physical_source_claimed",
@@ -186,16 +161,28 @@ def test_minimal_working_model_conservation_test_packet_result_review_preserves_
     assert "full lake build ToeFormal timed out" in review["validation_caveat"]
 
 
-def test_minimal_working_model_conservation_test_packet_result_review_selects_test_attempt_only() -> None:
+def test_minimal_working_model_conservation_test_attempt_result_review_selects_refinement_packet_only() -> None:
     review = _json(DEFAULT_OUT)
     assert review["selected_next_target"] == NEXT_TARGET
     assert review["result_review_selected_next_target"] == NEXT_TARGET
     assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
     assert review["selected_next_target_count"] == 1
     assert review["selection_count"] == 1
+    assert review["model_refinement_packet_authorized"] is True
+    assert review["model_refinement_packet_prepared_by_review"] is False
+    assert review["model_refinement_executed_by_review"] is False
+    assert review["selected_refinement_target"] == SELECTED_REFINEMENT_TARGET
+    assert review["selected_refinement_target_count"] == 1
+    assert sum(1 for row in review["refinement_target_rows"] if row["selected"]) == 1
     assert {row["target"]: row["decision"] for row in review["candidate_next_targets"]} == {
         NEXT_TARGET: "selected",
         CONSUMED_TARGET: "completed_consumed_live_target",
+        "prepare_qft_gr_minimal_working_model_countermodel_packet": (
+            "not_selected_no_failure_obstruction"
+        ),
+        "prepare_qft_gr_minimal_working_model_scope_refinement_packet": (
+            "not_selected_model_refinement_packet_selected"
+        ),
         "claim_qft_gr_source_admissibility": "not_authorized",
         "prove_qft_gr_conservation": "not_authorized",
         "construct_qft_gr_conservation_witness": "not_authorized",
@@ -206,77 +193,57 @@ def test_minimal_working_model_conservation_test_packet_result_review_selects_te
     }
 
 
-def test_minimal_working_model_conservation_test_packet_result_review_updates_live_target() -> None:
+def test_minimal_working_model_conservation_test_attempt_result_review_updates_live_target() -> None:
     registry = _json(REGISTRY_PATH)
-    skip_if_not_current_target(registry, CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET)
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
-    assert state["previous_live_next_target"] == NEXT_TARGET
-    assert state["live_next_target"] == CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
-    assert state["active_lane"] == CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
+    assert state["previous_live_next_target"] == CONSUMED_TARGET
+    assert state["live_next_target"] == NEXT_TARGET
+    assert state["active_lane"] == NEXT_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "QFTGRMinimalWorkingModelConservationTestAttempt.lean"
+        "QFTGRMinimalWorkingModelConservationTestAttemptResultReview.lean"
     )
     assert state["live_next_target_report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_20260612_v0.json"
+        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_"
+        "20260612_v0.json"
     )
-    assert state["live_next_target_outcome"] == CONSERVATION_TEST_ATTEMPT_OUTCOME
+    assert state["live_next_target_outcome"] == OUTCOME_ID
     assert CONSUMED_TARGET in registry["next_strict_target_coverage"]
     assert NEXT_TARGET in registry["next_strict_target_coverage"]
-    assert (
-        CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
-        in registry["next_strict_target_coverage"]
-    )
+    assert CONSUMED_TARGET in state["completed_targets"]
+    assert CONSUMED_TARGET in state["paused_lanes"]
 
     review_workstream = _workstream(registry, CONSUMED_TARGET)
     assert review_workstream["status"] == "paused"
-    assert review_workstream["packet_result_review_accepted"] == "yes"
-    assert review_workstream["bounded_conservation_test_attempt_authorized"] == "yes"
-    assert review_workstream["bounded_conservation_test_attempt_executed_by_review"] == "no"
-    assert review_workstream["conservation_test_executed"] == "no"
+    assert review_workstream["result_review_accepted"] == "yes"
     assert review_workstream["selected_next_target"] == NEXT_TARGET
+    assert review_workstream["conservation_test_attempt_result_review_executed"] == "yes"
+    assert review_workstream["test_inconclusive"] == "yes"
     assert review_workstream["source_admissibility_claimed"] == "no"
     assert review_workstream["conservation_witness_constructed"] == "no"
     assert review_workstream["qft_gr_closure_claimed"] == "no"
 
-    attempt_workstream = _workstream(registry, NEXT_TARGET)
-    assert attempt_workstream["status"] == "paused"
-    assert attempt_workstream["report"] == str(
-        CONSERVATION_TEST_ATTEMPT_PATH.relative_to(REPO_ROOT)
-    ).replace("\\", "/")
-    assert attempt_workstream["selected_next_target"] == (
-        CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
-    )
-    assert attempt_workstream["conservation_test_executed"] == "yes"
-    assert attempt_workstream["test_inconclusive"] == "yes"
-    assert attempt_workstream["source_admissibility_claimed"] == "no"
-    assert attempt_workstream["conservation_witness_constructed"] == "no"
-    assert attempt_workstream["qft_gr_closure_claimed"] == "no"
-
     active_workstream = active[0]
-    assert active_workstream["workstream_id"] == (
-        CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
-    )
-    assert active_workstream["authorized_next_strict_target"] == (
-        CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET
-    )
-    assert active_workstream["consumed_target"] == NEXT_TARGET
-    assert active_workstream["outcome_id"] == CONSERVATION_TEST_ATTEMPT_OUTCOME
-    assert active_workstream["conservation_test_attempt_consumed"] == "yes"
-    assert active_workstream["conservation_test_executed"] == "yes"
-    assert active_workstream["test_inconclusive"] == "yes"
+    assert active_workstream["workstream_id"] == NEXT_TARGET
+    assert active_workstream["authorized_next_strict_target"] == NEXT_TARGET
+    assert active_workstream["consumed_target"] == CONSUMED_TARGET
+    assert active_workstream["outcome_id"] == OUTCOME_ID
+    assert active_workstream["conservation_test_attempt_result_review_consumed"] == "yes"
+    assert active_workstream["model_refinement_packet_authorized"] == "yes"
+    assert active_workstream["model_refinement_packet_prepared"] == "no"
+    assert active_workstream["selected_refinement_target"] == SELECTED_REFINEMENT_TARGET
     assert active_workstream["source_admissibility_claimed"] == "no"
     assert active_workstream["conservation_witness_constructed"] == "no"
     assert active_workstream["qft_gr_closure_claimed"] == "no"
 
 
-def test_minimal_working_model_conservation_test_packet_result_review_deterministic() -> None:
+def test_minimal_working_model_conservation_test_attempt_result_review_deterministic() -> None:
     review = _json(DEFAULT_OUT)
-    generated = build_qft_gr_minimal_working_model_conservation_test_packet_result_review(
-        packet_path=CONSERVATION_TEST_PACKET_PATH,
+    generated = build_qft_gr_minimal_working_model_conservation_test_attempt_result_review(
+        attempt_path=CONSERVATION_TEST_ATTEMPT_PATH,
         captured_at_utc="2026-06-12T00:00:00Z",
     )
     assert review == generated
@@ -308,9 +275,8 @@ def test_minimal_working_model_conservation_test_packet_result_review_determinis
         RESULT_REVIEW_CLASSIFICATION,
         CONSUMED_TARGET,
         NEXT_TARGET,
-        "weak_distributional_covariant_conservation_for_toy_candidate",
-        "weak_scope_only_for_this_packet",
-        "candidate_only_not_source_admissibility",
+        SELECTED_REFINEMENT_TARGET,
+        "qft_gr_minimal_working_model_conservation_test_inconclusive_requires_model_refinement",
         "no source admissibility",
         "no conservation witness",
         "no Bianchi compatibility",
@@ -321,7 +287,7 @@ def test_minimal_working_model_conservation_test_packet_result_review_determinis
         assert token in joined
 
 
-def test_minimal_working_model_conservation_test_packet_result_review_not_manifest_enrolled() -> None:
+def test_minimal_working_model_conservation_test_attempt_result_review_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_qft_gr_minimal_working_model_conservation_test_packet_result_review_gate.py"
+        "test_qft_gr_minimal_working_model_conservation_test_attempt_result_review_gate.py"
     )

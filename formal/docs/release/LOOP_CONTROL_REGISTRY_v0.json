@@ -76,7 +76,8 @@
     "review_qft_gr_minimal_working_model_candidate_analysis_result",
     "prepare_qft_gr_minimal_working_model_conservation_test_packet",
     "review_qft_gr_minimal_working_model_conservation_test_packet_result",
-    "execute_qft_gr_minimal_working_model_conservation_test_attempt"
+    "execute_qft_gr_minimal_working_model_conservation_test_attempt",
+    "review_qft_gr_minimal_working_model_conservation_test_attempt_result"
   ],
   "controls": [
     {
@@ -438,9 +439,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "review_qft_gr_minimal_working_model_conservation_test_attempt_result",
+    "active_lane": "prepare_qft_gr_minimal_working_model_refinement_packet",
     "candidate_live_next_targets": [
-      "review_qft_gr_minimal_working_model_conservation_test_attempt_result"
+      "prepare_qft_gr_minimal_working_model_refinement_packet"
     ],
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
@@ -558,7 +559,8 @@
       "review_qft_gr_minimal_working_model_candidate_analysis_result",
       "prepare_qft_gr_minimal_working_model_conservation_test_packet",
       "review_qft_gr_minimal_working_model_conservation_test_packet_result",
-      "execute_qft_gr_minimal_working_model_conservation_test_attempt"
+      "execute_qft_gr_minimal_working_model_conservation_test_attempt",
+      "review_qft_gr_minimal_working_model_conservation_test_attempt_result"
     ],
     "consumed_targets": [
       {
@@ -626,6 +628,20 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttempt.lean",
         "target": "execute_qft_gr_minimal_working_model_conservation_test_attempt",
         "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY"
+      },
+      {
+        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_20260612_v0.json",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttemptResultReview.lean",
+        "target": "review_qft_gr_minimal_working_model_conservation_test_attempt_result",
+        "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_TEST_AND_AUTHORIZES_MODEL_REFINEMENT_PACKET_ONLY"
+      },
+      {
+        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_20260612_v0.json",
+        "status": "current_live_target_authorized_by_minimal_working_model_conservation_test_attempt_result_review",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttemptResultReview.lean",
+        "target": "prepare_qft_gr_minimal_working_model_refinement_packet",
+        "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_TEST_AND_AUTHORIZES_MODEL_REFINEMENT_PACKET_ONLY"
       }
     ],
     "current_target_coverage": [
@@ -903,11 +919,18 @@
         "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY"
       },
       {
-        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_20260612_v0.json",
-        "status": "current_live_target_authorized_by_minimal_working_model_conservation_test_attempt",
-        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttempt.lean",
+        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_20260612_v0.json",
+        "status": "completed",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttemptResultReview.lean",
         "target": "review_qft_gr_minimal_working_model_conservation_test_attempt_result",
-        "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY"
+        "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_TEST_AND_AUTHORIZES_MODEL_REFINEMENT_PACKET_ONLY"
+      },
+      {
+        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_20260612_v0.json",
+        "status": "current_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttemptResultReview.lean",
+        "target": "prepare_qft_gr_minimal_working_model_refinement_packet",
+        "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_TEST_AND_AUTHORIZES_MODEL_REFINEMENT_PACKET_ONLY"
       }
     ],
     "focused_gate": "formal/python/tests/test_current_target_freshness_gate.py",
@@ -918,11 +941,11 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "review_qft_gr_minimal_working_model_conservation_test_attempt_result",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttempt.lean",
+    "live_next_target": "prepare_qft_gr_minimal_working_model_refinement_packet",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttemptResultReview.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_outcome": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY",
-    "live_next_target_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_20260612_v0.json",
+    "live_next_target_outcome": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_TEST_AND_AUTHORIZES_MODEL_REFINEMENT_PACKET_ONLY",
+    "live_next_target_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_20260612_v0.json",
     "next_strict_target_coverage": {
       "analyze_qft_gr_minimal_working_model_candidate_only": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelCandidateAnalysis.lean",
@@ -1129,6 +1152,12 @@
         "status": "completed_consumed_live_target",
         "token": "QFT_GR_MINIMAL_WORKING_MODEL_DEMONSTRATION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_SEAM_CLOSURE"
       },
+      "prepare_qft_gr_minimal_working_model_refinement_packet": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttemptResultReview.lean",
+        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_20260612_v0.json",
+        "status": "current_live_target_authorized_by_minimal_working_model_conservation_test_attempt_result_review",
+        "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_TEST_AND_AUTHORIZES_MODEL_REFINEMENT_PACKET_ONLY"
+      },
       "prepare_qft_gr_operator_domain_assumption_reduction_closeout_packet": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_OperatorDomainAssumptionReductionCloseoutPacket.lean",
         "status": "consumed_by_qft_gr_operator_domain_assumption_reduction_closeout_packet"
@@ -1332,10 +1361,10 @@
         "token": "QFT_GR_MINIMAL_WORKING_MODEL_CANDIDATE_ANALYSIS_RESULT_REVIEW_ACCEPTS_CANDIDATE_ONLY_ANALYSIS_AND_AUTHORIZES_BOUNDED_CONSERVATION_TEST_PACKET_ONLY"
       },
       "review_qft_gr_minimal_working_model_conservation_test_attempt_result": {
-        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttempt.lean",
-        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_20260612_v0.json",
-        "status": "current_live_target_authorized_by_minimal_working_model_conservation_test_attempt",
-        "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY"
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttemptResultReview.lean",
+        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_20260612_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_TEST_AND_AUTHORIZES_MODEL_REFINEMENT_PACKET_ONLY"
       },
       "review_qft_gr_minimal_working_model_conservation_test_packet_result": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestPacketResultReview.lean",
@@ -1656,10 +1685,11 @@
       "review_qft_gr_minimal_working_model_candidate_analysis_result",
       "prepare_qft_gr_minimal_working_model_conservation_test_packet",
       "review_qft_gr_minimal_working_model_conservation_test_packet_result",
-      "execute_qft_gr_minimal_working_model_conservation_test_attempt"
+      "execute_qft_gr_minimal_working_model_conservation_test_attempt",
+      "review_qft_gr_minimal_working_model_conservation_test_attempt_result"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "execute_qft_gr_minimal_working_model_conservation_test_attempt",
+    "previous_live_next_target": "review_qft_gr_minimal_working_model_conservation_test_attempt_result",
     "schema_id": "CURRENT_TARGET_STATE_v0"
   },
   "cycle_waivers": [],
@@ -2419,7 +2449,8 @@
     "prepare_qft_gr_minimal_working_model_conservation_test_packet",
     "review_qft_gr_minimal_working_model_conservation_test_packet_result",
     "execute_qft_gr_minimal_working_model_conservation_test_attempt",
-    "review_qft_gr_minimal_working_model_conservation_test_attempt_result"
+    "review_qft_gr_minimal_working_model_conservation_test_attempt_result",
+    "prepare_qft_gr_minimal_working_model_refinement_packet"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -3019,7 +3050,9 @@
     "review_qft_gr_state_expectation_compatibility_assumption_reduction_attempt_result",
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet",
     "prepare_qft_gr_mathematical_regularity_assumption_reduction_packet",
-    "review_qft_gr_mathematical_regularity_assumption_reduction_packet_result"
+    "review_qft_gr_mathematical_regularity_assumption_reduction_packet_result",
+    "review_qft_gr_minimal_working_model_conservation_test_attempt_result",
+    "prepare_qft_gr_minimal_working_model_refinement_packet"
   ],
   "token_family_coverage": [
     {
@@ -3077,7 +3110,11 @@
     "formal/docs/release/QFT_GR_DERIVATIVE_EXCHANGE_REGULAR_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260608_v0.json",
     "formal/toe_formal/ToeFormal/Bridges/QFT_GR_DerivativeExchangeRegularBoundaryAssumptionReductionAttemptResultReview.lean",
     "formal/python/tools/qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_report.py",
-    "formal/python/tests/test_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_gate.py"
+    "formal/python/tests/test_qft_gr_derivative_exchange_regular_boundary_assumption_reduction_attempt_result_review_gate.py",
+    "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_20260612_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttemptResultReview.lean",
+    "formal/python/tools/qft_gr_minimal_working_model_conservation_test_attempt_result_review_report.py",
+    "formal/python/tests/test_qft_gr_minimal_working_model_conservation_test_attempt_result_review_gate.py"
   ],
   "workstreams": [
     {
@@ -41265,22 +41302,26 @@
     },
     {
       "active_lane": "review_qft_gr_minimal_working_model_conservation_test_attempt_result",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttempt.lean",
-      "authorized_next_strict_target": "review_qft_gr_minimal_working_model_conservation_test_attempt_result",
-      "authorized_target": "review_qft_gr_minimal_working_model_conservation_test_attempt_result",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttemptResultReview.lean",
+      "authorized_next_strict_target": "prepare_qft_gr_minimal_working_model_refinement_packet",
+      "authorized_target": "prepare_qft_gr_minimal_working_model_refinement_packet",
       "bianchi_compatibility_claimed": "no",
       "bounded_conservation_test_attempt_consumed": "yes",
       "bounded_conservation_test_attempt_result_review_authorized": "yes",
-      "claim_ceiling": "bounded conservation-test attempt result review only",
-      "claim_level": "Level 3 conservation-test attempt result review target",
+      "claim_ceiling": "model-refinement packet preparation only",
+      "claim_level": "Level 3 conservation-test attempt result review accepted inconclusive",
+      "classification_confirmed": "yes",
       "conservation_claimed": "no",
       "conservation_proof_object_claimed": "no",
       "conservation_proof_object_constructed": "no",
       "conservation_proved": "no",
       "conservation_test_attempt_consumed": "yes",
       "conservation_test_attempt_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_20260612_v0.json",
-      "conservation_test_attempt_result_review_executed": "no",
+      "conservation_test_attempt_result_review_accepted": "yes",
+      "conservation_test_attempt_result_review_executed": "yes",
+      "conservation_test_attempt_result_review_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_20260612_v0.json",
       "conservation_test_executed": "yes",
+      "conservation_test_inconclusive": "yes",
       "conservation_test_inconclusive_recorded": "yes",
       "conservation_test_result": "inconclusive",
       "conservation_test_result_claimed": "no",
@@ -41290,10 +41331,15 @@
       "consumed_target": "execute_qft_gr_minimal_working_model_conservation_test_attempt",
       "countermodel_packet_prepared": "no",
       "empirical_validation_claimed": "no",
+      "inconclusive_not_converted_to_pass": "yes",
       "master_action_promoted": "no",
       "master_action_promotion_authorized": "no",
+      "model_refinement_executed_by_review": "no",
+      "model_refinement_packet_authorized": "yes",
+      "model_refinement_packet_prepared": "no",
+      "model_refinement_packet_prepared_by_review": "no",
       "non_claim_boundary": "No source admissibility, conservation claim, conservation proof object, conservation witness, Bianchi compatibility, semiclassical Einstein equation, QFT-GR closure, empirical validation, public submission, release promotion, or master-action promotion.",
-      "outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY",
+      "outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_TEST_AND_AUTHORIZES_MODEL_REFINEMENT_PACKET_ONLY",
       "physical_source_claimed": "no",
       "public_submission_authorized": "no",
       "publication_authorized": "no",
@@ -41301,12 +41347,19 @@
       "qft_gr_source_map_closure_claimed": "no",
       "release_assembly_authorized": "no",
       "release_packet_assembled": "no",
-      "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_20260612_v0.json",
-      "result_classification": "qft_gr_minimal_working_model_conservation_test_inconclusive_requires_model_refinement",
+      "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_20260612_v0.json",
+      "result_classification": "qft_gr_minimal_working_model_conservation_test_attempt_result_review_accepts_inconclusive_test_and_authorizes_model_refinement_packet_only",
+      "result_review_accepted": "yes",
+      "result_review_classification": "qft_gr_minimal_working_model_conservation_test_attempt_result_review_accepts_inconclusive_test_and_authorizes_model_refinement_packet_only",
       "scientific_validation_claimed": "no",
+      "selected_next_strict_target": "prepare_qft_gr_minimal_working_model_refinement_packet",
+      "selected_next_target": "prepare_qft_gr_minimal_working_model_refinement_packet",
+      "selected_refinement_target": "refine_weak_pairing_domain_and_regularity_for_toy_candidate_without_source_admissibility",
+      "selected_refinement_target_count": "1",
+      "selection_count": "1",
       "semiclassical_einstein_equation_derived": "no",
       "source_admissibility_claimed": "no",
-      "status": "active",
+      "status": "paused",
       "stress_energy_source_admissibility_claimed": "no",
       "test_execution_status": "bounded_conservation_test_attempt_executed_inconclusive_pending_result_review",
       "test_failed": "no",
@@ -41315,6 +41368,64 @@
       "toy_source_candidate_status": "candidate_only_not_source_admissibility",
       "validation_caveat": "full lake build ToeFormal timed out after repair and rerun attempt; targeted Lean packet/frontier/historical modules passed",
       "workstream_id": "review_qft_gr_minimal_working_model_conservation_test_attempt_result"
+    },
+    {
+      "active_lane": "prepare_qft_gr_minimal_working_model_refinement_packet",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationTestAttemptResultReview.lean",
+      "authorized_next_strict_target": "prepare_qft_gr_minimal_working_model_refinement_packet",
+      "authorized_target": "prepare_qft_gr_minimal_working_model_refinement_packet",
+      "bianchi_compatibility_claimed": "no",
+      "claim_ceiling": "minimal working model refinement packet preparation only",
+      "claim_level": "Level 3 minimal working model refinement packet target",
+      "conservation_claimed": "no",
+      "conservation_proof_object_claimed": "no",
+      "conservation_proof_object_constructed": "no",
+      "conservation_proved": "no",
+      "conservation_test_attempt_consumed": "yes",
+      "conservation_test_attempt_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_20260612_v0.json",
+      "conservation_test_attempt_result_review_consumed": "yes",
+      "conservation_test_attempt_result_review_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_20260612_v0.json",
+      "conservation_test_executed": "yes",
+      "conservation_test_inconclusive": "yes",
+      "conservation_test_result": "inconclusive",
+      "conservation_test_result_claimed": "no",
+      "conservation_witness_claimed": "no",
+      "conservation_witness_constructed": "no",
+      "consumed_attempt_classification": "qft_gr_minimal_working_model_conservation_test_inconclusive_requires_model_refinement",
+      "consumed_attempt_outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_EXECUTED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY",
+      "consumed_target": "review_qft_gr_minimal_working_model_conservation_test_attempt_result",
+      "empirical_validation_claimed": "no",
+      "inconclusive_not_converted_to_pass": "yes",
+      "master_action_promoted": "no",
+      "master_action_promotion_authorized": "no",
+      "model_refinement_packet_authorized": "yes",
+      "model_refinement_packet_prepared": "no",
+      "model_refinement_packet_prepared_by_review": "no",
+      "non_claim_boundary": "No source admissibility, conservation claim, conservation proof object, conservation witness, Bianchi compatibility, semiclassical Einstein equation, QFT-GR closure, empirical validation, public submission, release promotion, or master-action promotion.",
+      "outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_TEST_AND_AUTHORIZES_MODEL_REFINEMENT_PACKET_ONLY",
+      "physical_source_claimed": "no",
+      "public_submission_authorized": "no",
+      "publication_authorized": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_source_map_closure_claimed": "no",
+      "release_assembly_authorized": "no",
+      "release_packet_assembled": "no",
+      "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_20260612_v0.json",
+      "result_classification": "qft_gr_minimal_working_model_conservation_test_attempt_result_review_accepts_inconclusive_test_and_authorizes_model_refinement_packet_only",
+      "scientific_validation_claimed": "no",
+      "selected_refinement_target": "refine_weak_pairing_domain_and_regularity_for_toy_candidate_without_source_admissibility",
+      "selected_refinement_target_count": "1",
+      "selection_count": "1",
+      "semiclassical_einstein_equation_derived": "no",
+      "source_admissibility_claimed": "no",
+      "status": "active",
+      "stress_energy_source_admissibility_claimed": "no",
+      "test_failed": "no",
+      "test_inconclusive": "yes",
+      "test_passed": "no",
+      "toy_source_candidate_status": "candidate_only_not_source_admissibility",
+      "validation_caveat": "full lake build ToeFormal timed out after repair and rerun attempt; targeted Lean packet/frontier/historical modules passed",
+      "workstream_id": "prepare_qft_gr_minimal_working_model_refinement_packet"
     }
   ]
 }

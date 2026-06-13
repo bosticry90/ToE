@@ -6,6 +6,7 @@ from pathlib import Path
 from formal.python.meta.repo_environment import find_repo_root
 from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
+    skip_if_not_current_target,
 )
 from formal.python.tools.qft_gr_minimal_working_model_demonstration_packet_report import (
     DEFAULT_OUT,
@@ -149,6 +150,7 @@ def test_minimal_working_model_packet_contains_required_scope_fields() -> None:
 
 def test_minimal_working_model_packet_preserves_historical_live_target() -> None:
     registry = _json(REGISTRY_PATH)
+    skip_if_not_current_target(registry, CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET)
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
@@ -254,8 +256,9 @@ def test_minimal_working_model_packet_has_lean_and_public_surface_mirrors() -> N
         CONSERVATION_TEST_PACKET_TARGET,
         FINAL_LIVE_TARGET,
         "CURRENT_LIVE_NEXT_TARGET_v0: "
+        "prepare_qft_gr_minimal_working_model_refinement_packet",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
         + CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET,
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: " + CONSERVATION_TEST_ATTEMPT_TARGET,
         "no source admissibility",
         "no QFT-GR closure",
         "no public submission",

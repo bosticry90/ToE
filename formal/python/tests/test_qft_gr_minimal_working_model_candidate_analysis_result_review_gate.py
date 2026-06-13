@@ -6,6 +6,7 @@ from pathlib import Path
 from formal.python.meta.repo_environment import find_repo_root
 from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
+    skip_if_not_current_target,
 )
 from formal.python.tools.qft_gr_minimal_working_model_candidate_analysis_report import (
     ANALYSIS_CLASSIFICATION,
@@ -235,6 +236,7 @@ def test_minimal_working_model_candidate_analysis_result_review_selects_one_targ
 
 def test_minimal_working_model_candidate_analysis_result_review_updates_live_target() -> None:
     registry = _json(REGISTRY_PATH)
+    skip_if_not_current_target(registry, CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET)
     state = registry["current_target_state"]
     active = [item for item in registry["workstreams"] if item.get("status") == "active"]
     assert len(active) == 1
