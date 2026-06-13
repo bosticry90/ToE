@@ -21,7 +21,7 @@ CURRENT_LIVE_NEXT_TARGET,
 )
 
 POST_MR_LIVE_TARGET = (
-    "prepare_qft_gr_minimal_working_model_refinement_packet"
+    "review_qft_gr_minimal_working_model_refinement_packet_result"
 )
 
 
