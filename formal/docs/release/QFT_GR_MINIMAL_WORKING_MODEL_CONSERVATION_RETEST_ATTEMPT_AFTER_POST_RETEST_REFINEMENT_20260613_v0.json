@@ -1,0 +1,516 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "bounded_retest_attempt_authorized": true,
+    "bounded_v2_retest_executed_only": true,
+    "classification_allowed": true,
+    "consumed_packet_classification_expected": true,
+    "consumed_packet_expected": true,
+    "consumed_packet_outcome_expected": true,
+    "consumes_expected_packet_result_review": true,
+    "exactly_one_classification_selected": true,
+    "exactly_one_next_target_selected": true,
+    "fail_not_triggered": true,
+    "no_bianchi_or_semiclassical_einstein": true,
+    "no_conservation_claim_proof_or_witness": true,
+    "no_empirical_validation_or_public_submission": true,
+    "no_master_action_promotion": true,
+    "no_qft_gr_closure": true,
+    "no_source_admissibility_claim": true,
+    "packet_result_review_classification_expected": true,
+    "packet_result_review_outcome_expected": true,
+    "packet_result_review_selected_this_attempt": true,
+    "pass_not_established": true,
+    "post_retest_refinement_delta_consumed": true,
+    "retest_result_inconclusive": true,
+    "review_did_not_execute_retest": true,
+    "routine_validation_policy_preserves_non_escalation": true,
+    "standing_validation_caveats_preserved": true,
+    "toy_source_candidate_remains_candidate_only": true,
+    "why_inconclusive_recorded": true
+  },
+  "accepted": true,
+  "aggregate_lean_timeout_caveat_preserved": true,
+  "allowed_result_classifications": [
+    "qft_gr_minimal_working_model_conservation_retest_after_post_retest_refinement_passed_pending_result_review",
+    "qft_gr_minimal_working_model_conservation_retest_after_post_retest_refinement_failed_requires_countermodel_or_scope_refinement",
+    "qft_gr_minimal_working_model_conservation_retest_after_post_retest_refinement_inconclusive_requires_model_refinement"
+  ],
+  "attempt_executed": true,
+  "attempt_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_v0",
+  "bounded_conservation_retest_attempt_after_post_retest_refinement_executed": true,
+  "bounded_conservation_retest_attempt_executed": true,
+  "bounded_conservation_retest_attempt_only": true,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The executed post-retest-refinement conservation retest must be result-reviewed before any pass, fail, model-refinement, or countermodel route is selected.",
+      "target": "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_result"
+    },
+    {
+      "decision": "completed_consumed_live_target",
+      "reason": "This bounded retest execution target is consumed here.",
+      "target": "execute_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement"
+    },
+    {
+      "decision": "not_selected_pending_result_review",
+      "reason": "The inconclusive branch may authorize refinement only after result review accepts the attempt result.",
+      "target": "prepare_qft_gr_minimal_working_model_model_refinement_packet"
+    },
+    {
+      "decision": "not_selected_pending_result_review",
+      "reason": "No explicit failing obstruction is promoted before review.",
+      "target": "prepare_qft_gr_minimal_working_model_countermodel_packet"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The toy source remains a candidate only.",
+      "target": "claim_qft_gr_source_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The retest records an inconclusive result, not a proof.",
+      "target": "prove_qft_gr_conservation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No conservation witness is constructed.",
+      "target": "construct_qft_gr_conservation_witness"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Bianchi compatibility remains downstream and unclaimed.",
+      "target": "claim_qft_gr_bianchi_compatibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The semiclassical Einstein equation is not derived here.",
+      "target": "derive_semiclassical_einstein_equation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "QFT-GR closure remains outside this bounded retest.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Empirical validation and public submission are not authorized.",
+      "target": "authorize_empirical_validation_or_public_submission"
+    }
+  ],
+  "captured_at_utc": "2026-06-13T00:00:00Z",
+  "classification_rows": [
+    {
+      "classification": "qft_gr_minimal_working_model_conservation_retest_after_post_retest_refinement_passed_pending_result_review",
+      "meaning": "The post-retest-refinement conservation retest passed, still pending result review and still candidate-only.",
+      "selected": false
+    },
+    {
+      "classification": "qft_gr_minimal_working_model_conservation_retest_after_post_retest_refinement_failed_requires_countermodel_or_scope_refinement",
+      "meaning": "The post-retest-refinement conservation retest exposed an explicit obstruction requiring a countermodel or scope refinement.",
+      "selected": false
+    },
+    {
+      "classification": "qft_gr_minimal_working_model_conservation_retest_after_post_retest_refinement_inconclusive_requires_model_refinement",
+      "meaning": "The bounded retest was executed, but the packet assumptions still do not decide zero versus nonzero weak divergence.",
+      "selected": true
+    }
+  ],
+  "conservation_claimed": false,
+  "conservation_proof_object_constructed": false,
+  "conservation_proved": false,
+  "conservation_retest_attempt_result_review_pending": true,
+  "conservation_retest_executed": true,
+  "conservation_retest_failure_claimed": false,
+  "conservation_retest_inconclusive_recorded": true,
+  "conservation_retest_pass_claimed": false,
+  "conservation_retest_result_claimed": false,
+  "conservation_retest_result_recorded": true,
+  "conservation_test_retried_as_proof": false,
+  "conservation_witness_constructed": false,
+  "consumed_packet_classification": "qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_prepared_pending_result_review",
+  "consumed_packet_outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_PACKET_AFTER_POST_RETEST_REFINEMENT_PREPARED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY",
+  "consumed_packet_result_review_classification": "qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_result_review_accepts_packet_and_authorizes_bounded_conservation_retest_attempt_only",
+  "consumed_packet_result_review_outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_PACKET_AFTER_POST_RETEST_REFINEMENT_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_CONSERVATION_RETEST_ATTEMPT_ONLY",
+  "consumed_target": "execute_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement",
+  "consumes_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_PACKET_AFTER_POST_RETEST_REFINEMENT_v0",
+  "consumes_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_pointer": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_PACKET_AFTER_POST_RETEST_REFINEMENT_20260613_v0.json",
+  "consumes_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_result_review": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_PACKET_AFTER_POST_RETEST_REFINEMENT_RESULT_REVIEW_v0",
+  "consumes_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_result_review_pointer": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_PACKET_AFTER_POST_RETEST_REFINEMENT_RESULT_REVIEW_20260613_v0.json",
+  "empirical_validation_claimed": false,
+  "executed": true,
+  "future_pass_implies_qft_gr_closure": false,
+  "future_pass_implies_source_admissibility": false,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "next_action_scope": "REVIEW_QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_RESULT_ONLY_NO_CONSERVATION_PROOF_WITNESS_SOURCE_ADMISSIBILITY_BIANCHI_SEMICLASSICAL_EINSTEIN_QFT_GR_CLOSURE_EMPIRICAL_VALIDATION_OR_PUBLIC_SUBMISSION",
+  "non_claim_boundary": "This bounded post-retest-refinement conservation-retest attempt records an inconclusive weak-conservation retest result pending review. It preserves no conservation claim, no conservation proof object, no conservation witness, no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion.",
+  "outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_EXECUTED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY",
+  "pass_fail_inconclusive_criteria": {
+    "fail": [
+      "a post-retest-refinement admitted weak divergence pairing is explicitly nonzero",
+      "a required pairing remains undefined inside toy_weak_pairing_domain_v2_candidate",
+      "a required derivative, divergence, regularization, or limit/interchange step remains blocked inside toy_regular_context_v2_candidate"
+    ],
+    "inconclusive": [
+      "the retest cannot decide zero versus nonzero under only the post-retest refined packet assumptions",
+      "the retest requires stronger pairing-domain, regularity, source-domain membership, or Bianchi compatibility assumptions than this packet may add",
+      "the weak retest remains separable from strong pointwise conservation only by preserving candidate-only status"
+    ],
+    "pass": [
+      "every retest-admitted weak pairing is defined under toy_weak_pairing_domain_v2_candidate",
+      "every derivative, divergence, and limit/interchange step used by the weak pairing is admitted by toy_regular_context_v2_candidate",
+      "every compact-support test-vector pairing in the named test class evaluates the weak divergence to zero without adding an unrecorded assumption",
+      "no post-retest-refinement retest obstruction row is triggered"
+    ]
+  },
+  "physical_source_claimed": false,
+  "post_retest_refinement_delta": {
+    "changed_after_inconclusive_retest": [
+      {
+        "component": "weak_pairing_domain",
+        "component_id": "toy_weak_pairing_domain_v2_candidate",
+        "conservation_claimed": false,
+        "effect_on_retest": "Retest only weak covariant-divergence pairings admitted by the post-retest refined weak pairing domain.",
+        "source_admissibility_claimed": false
+      },
+      {
+        "component": "regularity_assumptions",
+        "component_id": "toy_regular_context_v2_candidate",
+        "conservation_claimed": false,
+        "effect_on_retest": "Retest derivative-exchange and limit-interchange steps only where the refined regularity context admits them.",
+        "regularity_discharge_claimed": false,
+        "source_admissibility_claimed": false
+      },
+      {
+        "component": "test_function_class",
+        "component_id": "toy_conservation_test_function_class_v1_candidate",
+        "conservation_claimed": false,
+        "effect_on_retest": "Use the named compact-support test-vector class for the future weak-pairing matrix.",
+        "source_admissibility_claimed": false
+      },
+      {
+        "component": "candidate_source_definition",
+        "component_id": "toy_source_candidate_definition_v2_candidate",
+        "conservation_claimed": false,
+        "effect_on_retest": "Retest the clarified candidate source expression only, without promoting it to an admissible source.",
+        "source_admissibility_claimed": false
+      },
+      {
+        "component": "scope_restriction",
+        "component_id": "bounded_toy_weak_pairing_scope_v2",
+        "effect_on_retest": "Restrict interpretation to the bounded toy weak-pairing setting.",
+        "qft_gr_closure_claimed": false
+      },
+      {
+        "component": "obstruction_accounting",
+        "component_id": "post_retest_inconclusive_obstruction_account_v1",
+        "conservation_claimed": false,
+        "effect_on_retest": "Carry the inconclusive prior retest as obstruction accounting, not as a pass or failure."
+      },
+      {
+        "component": "governance_boundary",
+        "component_id": "post_retest_nonpromotion_gate_v1",
+        "conservation_retest_executed": false,
+        "effect_on_retest": "Preserve review-before-rerun and review-before-promotion routing."
+      }
+    ],
+    "delta_id": "post_retest_refined_toy_candidate_delta_v2",
+    "refinement_objective": "refine_weak_pairing_domain_and_regular_context_after_inconclusive_retest_without_source_admissibility",
+    "unchanged_boundaries": [
+      "toy_source_candidate_status_remains_candidate_only",
+      "fixed_background_only",
+      "no_backreaction_or_semiclassical_einstein_equation",
+      "no_Bianchi_compatibility",
+      "no_source_admissibility",
+      "no_QFT_GR_closure",
+      "no_conservation_claim_before_retest_execution_and_review"
+    ]
+  },
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "release_assembly_authorized": false,
+  "release_packet_assembled": false,
+  "result_classification": "qft_gr_minimal_working_model_conservation_retest_after_post_retest_refinement_inconclusive_requires_model_refinement",
+  "result_classification_count": 1,
+  "retest_conservation_condition": {
+    "candidate_source_definition_id": "toy_source_candidate_definition_v2_candidate",
+    "condition_being_retested": "Weak distributional covariant conservation of the post-retest refined toy stress-energy-like candidate under the refined weak pairing domain, regularity context, and compact-support test-function class.",
+    "condition_id": "weak_distributional_covariant_conservation_for_post_retest_refined_toy_candidate",
+    "fixed_background_only": true,
+    "global_conservation_claimed": false,
+    "refined_artifact_status": "post_retest_refined_toy_candidate_accepted_pending_conservation_retest_packet",
+    "regularity_structure_id": "toy_regular_context_v2_candidate",
+    "retest_executed": false,
+    "statement_template": "For every retest-admitted compactly supported test vector field X, with pairings admitted by toy_weak_pairing_domain_v2_candidate and derivative or limit operations admitted by toy_regular_context_v2_candidate, the weak pairing <div_g(T_post_retest_refined), X> must vanish; otherwise record the first explicit obstruction.",
+    "strong_pointwise_conservation_claimed": false,
+    "test_function_class_id": "toy_conservation_test_function_class_v1_candidate",
+    "weak_pairing_domain_id": "toy_weak_pairing_domain_v2_candidate"
+  },
+  "retest_execution_matrix": {
+    "fail_criteria_evaluation": [
+      {
+        "criterion": "a post-retest-refinement admitted weak divergence pairing is explicitly nonzero",
+        "evaluation": "not_triggered_by_available_artifacts",
+        "reason": "The available artifacts do not exhibit an explicit nonzero weak divergence pairing or an undefined or blocked required pairing, derivative, divergence, regularization, or limit/interchange step inside the v2 scope.",
+        "satisfied": false
+      },
+      {
+        "criterion": "a required pairing remains undefined inside toy_weak_pairing_domain_v2_candidate",
+        "evaluation": "not_triggered_by_available_artifacts",
+        "reason": "The available artifacts do not exhibit an explicit nonzero weak divergence pairing or an undefined or blocked required pairing, derivative, divergence, regularization, or limit/interchange step inside the v2 scope.",
+        "satisfied": false
+      },
+      {
+        "criterion": "a required derivative, divergence, regularization, or limit/interchange step remains blocked inside toy_regular_context_v2_candidate",
+        "evaluation": "not_triggered_by_available_artifacts",
+        "reason": "The available artifacts do not exhibit an explicit nonzero weak divergence pairing or an undefined or blocked required pairing, derivative, divergence, regularization, or limit/interchange step inside the v2 scope.",
+        "satisfied": false
+      }
+    ],
+    "inconclusive_criteria_evaluation": [
+      {
+        "criterion": "the retest cannot decide zero versus nonzero under only the post-retest refined packet assumptions",
+        "evaluation": "triggered",
+        "reason": "Zero versus nonzero remains undecided without stronger pairing-domain, regularity, source-domain membership, or Bianchi-compatibility assumptions.",
+        "satisfied": true
+      },
+      {
+        "criterion": "the retest requires stronger pairing-domain, regularity, source-domain membership, or Bianchi compatibility assumptions than this packet may add",
+        "evaluation": "triggered",
+        "reason": "Zero versus nonzero remains undecided without stronger pairing-domain, regularity, source-domain membership, or Bianchi-compatibility assumptions.",
+        "satisfied": true
+      },
+      {
+        "criterion": "the weak retest remains separable from strong pointwise conservation only by preserving candidate-only status",
+        "evaluation": "triggered",
+        "reason": "Zero versus nonzero remains undecided without stronger pairing-domain, regularity, source-domain membership, or Bianchi-compatibility assumptions.",
+        "satisfied": true
+      }
+    ],
+    "pass_criteria_evaluation": [
+      {
+        "criterion": "every retest-admitted weak pairing is defined under toy_weak_pairing_domain_v2_candidate",
+        "evaluation": "not_established_under_packet_assumptions",
+        "reason": "The packet defines the v2 weak pairing domain, regularity context, and compact-support test class, but it supplies no zero weak-divergence derivation for every admitted pairing.",
+        "satisfied": false
+      },
+      {
+        "criterion": "every derivative, divergence, and limit/interchange step used by the weak pairing is admitted by toy_regular_context_v2_candidate",
+        "evaluation": "not_established_under_packet_assumptions",
+        "reason": "The packet defines the v2 weak pairing domain, regularity context, and compact-support test class, but it supplies no zero weak-divergence derivation for every admitted pairing.",
+        "satisfied": false
+      },
+      {
+        "criterion": "every compact-support test-vector pairing in the named test class evaluates the weak divergence to zero without adding an unrecorded assumption",
+        "evaluation": "not_established_under_packet_assumptions",
+        "reason": "The packet defines the v2 weak pairing domain, regularity context, and compact-support test class, but it supplies no zero weak-divergence derivation for every admitted pairing.",
+        "satisfied": false
+      },
+      {
+        "criterion": "no post-retest-refinement retest obstruction row is triggered",
+        "evaluation": "not_established_under_packet_assumptions",
+        "reason": "The packet defines the v2 weak pairing domain, regularity context, and compact-support test class, but it supplies no zero weak-divergence derivation for every admitted pairing.",
+        "satisfied": false
+      }
+    ],
+    "post_retest_refinement_delta": {
+      "changed_after_inconclusive_retest": [
+        {
+          "component": "weak_pairing_domain",
+          "component_id": "toy_weak_pairing_domain_v2_candidate",
+          "conservation_claimed": false,
+          "effect_on_retest": "Retest only weak covariant-divergence pairings admitted by the post-retest refined weak pairing domain.",
+          "source_admissibility_claimed": false
+        },
+        {
+          "component": "regularity_assumptions",
+          "component_id": "toy_regular_context_v2_candidate",
+          "conservation_claimed": false,
+          "effect_on_retest": "Retest derivative-exchange and limit-interchange steps only where the refined regularity context admits them.",
+          "regularity_discharge_claimed": false,
+          "source_admissibility_claimed": false
+        },
+        {
+          "component": "test_function_class",
+          "component_id": "toy_conservation_test_function_class_v1_candidate",
+          "conservation_claimed": false,
+          "effect_on_retest": "Use the named compact-support test-vector class for the future weak-pairing matrix.",
+          "source_admissibility_claimed": false
+        },
+        {
+          "component": "candidate_source_definition",
+          "component_id": "toy_source_candidate_definition_v2_candidate",
+          "conservation_claimed": false,
+          "effect_on_retest": "Retest the clarified candidate source expression only, without promoting it to an admissible source.",
+          "source_admissibility_claimed": false
+        },
+        {
+          "component": "scope_restriction",
+          "component_id": "bounded_toy_weak_pairing_scope_v2",
+          "effect_on_retest": "Restrict interpretation to the bounded toy weak-pairing setting.",
+          "qft_gr_closure_claimed": false
+        },
+        {
+          "component": "obstruction_accounting",
+          "component_id": "post_retest_inconclusive_obstruction_account_v1",
+          "conservation_claimed": false,
+          "effect_on_retest": "Carry the inconclusive prior retest as obstruction accounting, not as a pass or failure."
+        },
+        {
+          "component": "governance_boundary",
+          "component_id": "post_retest_nonpromotion_gate_v1",
+          "conservation_retest_executed": false,
+          "effect_on_retest": "Preserve review-before-rerun and review-before-promotion routing."
+        }
+      ],
+      "delta_id": "post_retest_refined_toy_candidate_delta_v2",
+      "refinement_objective": "refine_weak_pairing_domain_and_regular_context_after_inconclusive_retest_without_source_admissibility",
+      "unchanged_boundaries": [
+        "toy_source_candidate_status_remains_candidate_only",
+        "fixed_background_only",
+        "no_backreaction_or_semiclassical_einstein_equation",
+        "no_Bianchi_compatibility",
+        "no_source_admissibility",
+        "no_QFT_GR_closure",
+        "no_conservation_claim_before_retest_execution_and_review"
+      ]
+    },
+    "retest_conservation_condition": {
+      "candidate_source_definition_id": "toy_source_candidate_definition_v2_candidate",
+      "condition_being_retested": "Weak distributional covariant conservation of the post-retest refined toy stress-energy-like candidate under the refined weak pairing domain, regularity context, and compact-support test-function class.",
+      "condition_id": "weak_distributional_covariant_conservation_for_post_retest_refined_toy_candidate",
+      "fixed_background_only": true,
+      "global_conservation_claimed": false,
+      "refined_artifact_status": "post_retest_refined_toy_candidate_accepted_pending_conservation_retest_packet",
+      "regularity_structure_id": "toy_regular_context_v2_candidate",
+      "retest_executed": false,
+      "statement_template": "For every retest-admitted compactly supported test vector field X, with pairings admitted by toy_weak_pairing_domain_v2_candidate and derivative or limit operations admitted by toy_regular_context_v2_candidate, the weak pairing <div_g(T_post_retest_refined), X> must vanish; otherwise record the first explicit obstruction.",
+      "strong_pointwise_conservation_claimed": false,
+      "test_function_class_id": "toy_conservation_test_function_class_v1_candidate",
+      "weak_pairing_domain_id": "toy_weak_pairing_domain_v2_candidate"
+    },
+    "retest_result": "inconclusive"
+  },
+  "retest_execution_status": "bounded_conservation_retest_attempt_after_post_retest_refinement_executed_inconclusive_pending_result_review",
+  "retest_failed": false,
+  "retest_inconclusive": true,
+  "retest_passed": false,
+  "retest_result": "inconclusive",
+  "schema_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_20260613_v0",
+  "scientific_validation_claimed": false,
+  "selected_next_target": "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_result",
+  "selected_next_target_count": 1,
+  "selected_next_target_kind": "qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_result_review",
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "toy_source_candidate_remains_candidate_only": true,
+  "toy_source_candidate_status": "candidate_only_not_source_admissibility",
+  "toy_source_promoted_to_admissible_source": false,
+  "validation_caveat": "Full pytest, full governance suite, full aggregate Lean, CI parity, and security scans are not required for this routine bounded retest-attempt checkpoint; inherited caveat: Full pytest, full governance suite, full aggregate Lean, CI parity, and security scans are not required for this routine bounded packet-result-review checkpoint; inherited caveat: Full pytest, full governance suite, full aggregate Lean, CI parity, and security scans are not required for this routine bounded packet-preparation checkpoint; inherited caveat: Full pytest, full governance suite, full aggregate Lean, CI parity, and security scans are not required for this routine bounded attempt-result-review checkpoint; inherited caveat: Full pytest, full governance suite, full aggregate Lean, CI parity, and security scans are not required for this routine bounded attempt-execution checkpoint; inherited caveat: full lake build ToeFormal timed out after repair and rerun attempt; targeted Lean packet/frontier/historical modules passed",
+  "validation_policy": {
+    "checkpoint_type": "routine_conservation_retest_attempt_execution",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "full_suite_required_only_for_target_types": [
+      "release_candidate",
+      "integration_closeout",
+      "aggregate_validation_diagnostic",
+      "public_submission_readiness",
+      "master_action_promotion_review",
+      "governance_manifest_enrollment",
+      "shared_test_infrastructure_change",
+      "broad_dependency_or_tooling_change"
+    ],
+    "inherited_result_review_validation_policy": {
+      "checkpoint_type": "routine_conservation_retest_packet_result_review",
+      "full_aggregate_lean_required": false,
+      "full_ci_parity_required": false,
+      "full_governance_suite_required": false,
+      "full_pytest_required": false,
+      "full_security_scan_required": false,
+      "full_suite_required_only_for_target_types": [
+        "release_candidate",
+        "integration_closeout",
+        "aggregate_validation_diagnostic",
+        "public_submission_readiness",
+        "master_action_promotion_review",
+        "governance_manifest_enrollment",
+        "shared_test_infrastructure_change",
+        "broad_dependency_or_tooling_change"
+      ],
+      "inherited_packet_validation_policy": {
+        "checkpoint_type": "routine_conservation_retest_packet_preparation",
+        "full_aggregate_lean_required": false,
+        "full_ci_parity_required": false,
+        "full_governance_suite_required": false,
+        "full_pytest_required": false,
+        "full_security_scan_required": false,
+        "full_suite_required_only_for_target_types": [
+          "release_candidate",
+          "integration_closeout",
+          "aggregate_validation_diagnostic",
+          "public_submission_readiness",
+          "master_action_promotion_review",
+          "governance_manifest_enrollment",
+          "shared_test_infrastructure_change",
+          "broad_dependency_or_tooling_change"
+        ],
+        "long_running_validation_escalation_authorized": false,
+        "routine_packet_uses_bounded_target_relevant_validation_only": true,
+        "timeout_recorded_as_caveat_not_rerun_instruction": true,
+        "timeout_rerun_loop_authorized": false
+      },
+      "long_running_validation_escalation_authorized": false,
+      "routine_packet_uses_bounded_target_relevant_validation_only": true,
+      "timeout_recorded_as_caveat_not_rerun_instruction": true,
+      "timeout_rerun_loop_authorized": false
+    },
+    "long_running_validation_escalation_authorized": false,
+    "routine_packet_uses_bounded_target_relevant_validation_only": true,
+    "timeout_recorded_as_caveat_not_rerun_instruction": true,
+    "timeout_rerun_loop_authorized": false
+  },
+  "validation_posture": {
+    "adjacent_minimal_model_nonclaim_gates": "required_bounded_subset",
+    "focused_attempt_current_target_registry_gates": "required_for_checkpoint",
+    "full_aggregate_lean": "not_required_for_checkpoint_preserved_caveat",
+    "full_ci_parity": "not_required_for_checkpoint",
+    "full_governance_suite": "not_required_for_checkpoint",
+    "full_pytest": "not_required_for_checkpoint",
+    "git_diff_check": "required_for_checkpoint",
+    "security_scan": "not_required_for_checkpoint",
+    "targeted_lean_attempt_frontier_index": "required_for_checkpoint"
+  },
+  "what_was_not_tested": [
+    "strong pointwise covariant conservation",
+    "source admissibility",
+    "Bianchi compatibility",
+    "the semiclassical Einstein equation",
+    "QFT-GR source-map or seam closure",
+    "empirical validation or public submission readiness"
+  ],
+  "what_was_tested": [
+    "Weak distributional covariant conservation of the post-retest refined toy stress-energy-like candidate under the refined weak pairing domain, regularity context, and compact-support test-function class.",
+    "defined weak pairings under toy_weak_pairing_domain_v2_candidate",
+    "derivative, divergence, regularization, and limit/interchange admission under toy_regular_context_v2_candidate",
+    "compact-support test-vector weak-divergence pairings in toy_conservation_test_function_class_v1_candidate",
+    "explicit pass, fail, and inconclusive criteria from the packet"
+  ],
+  "why_inconclusive": [
+    "The retest condition remains weak_distributional_covariant_conservation_for_post_retest_refined_toy_candidate, evaluated only in the bounded post-retest-refined toy setting.",
+    "toy_weak_pairing_domain_v2_candidate narrows admitted pairings, but does not establish full source-domain membership.",
+    "toy_regular_context_v2_candidate narrows derivative and limit/interchange use, but does not prove vanishing weak divergence for every admitted test vector.",
+    "toy_source_candidate_definition_v2_candidate remains a candidate definition only, not a source-admissibility witness.",
+    "No explicit nonzero weak divergence pairing, undefined required pairing, or blocked exchange step is produced, so failure is not claimed.",
+    "No conservation proof object, conservation witness, source admissibility witness, Bianchi-compatibility witness, or QFT-GR closure object is constructed."
+  ]
+}
