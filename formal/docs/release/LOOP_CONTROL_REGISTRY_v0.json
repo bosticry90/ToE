@@ -100,7 +100,8 @@
     "review_qft_gr_minimal_working_model_refinement_attempt_after_post_retest_refinement_conservation_retest_result",
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
     "review_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_result",
-    "execute_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement"
+    "execute_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement",
+    "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement"
   ],
   "controls": [
     {
@@ -462,9 +463,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
+    "active_lane": "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
     "candidate_live_next_targets": [
-      "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement"
+      "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result"
     ],
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
@@ -606,7 +607,8 @@
       "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
       "review_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_result",
       "execute_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement",
-      "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result"
+      "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result",
+      "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement"
     ],
     "consumed_targets": [
       {
@@ -810,7 +812,14 @@
         "target": "execute_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement",
         "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_EXECUTED_WITH_NO_CONSERVATION_PROOF_OR_SOURCE_ADMISSIBILITY"
       },
-      "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result"
+      "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result",
+      {
+        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0.json",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinement.lean",
+        "target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
+        "token": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF"
+      }
     ],
     "current_target_coverage": [
       {
@@ -1268,9 +1277,16 @@
         "status": "active",
         "target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
         "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_RETEST_AND_AUTHORIZES_MODEL_REFINEMENT_OR_COUNTERMODEL_PACKET_ONLY"
+      },
+      {
+        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0.json",
+        "status": "active",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinement.lean",
+        "target": "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
+        "token": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF"
       }
     ],
-    "focused_gate": "formal/python/tests/test_current_target_freshness_gate.py",
+    "focused_gate": "formal/python/tests/test_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_gate.py",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -1278,11 +1294,11 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationRetestAttemptAfterPostRetestRefinementConservationRetestRefinementResultReview.lean",
+    "live_next_target": "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinement.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_outcome": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_RETEST_AND_AUTHORIZES_MODEL_REFINEMENT_OR_COUNTERMODEL_PACKET_ONLY",
-    "live_next_target_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_20260614_v0.json",
+    "live_next_target_outcome": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF",
+    "live_next_target_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0.json",
     "next_strict_target_coverage": {
       "analyze_qft_gr_minimal_working_model_candidate_only": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelCandidateAnalysis.lean",
@@ -1551,10 +1567,10 @@
         "token": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF"
       },
       "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement": {
-        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationRetestAttemptAfterPostRetestRefinementConservationRetestRefinementResultReview.lean",
-        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_20260614_v0.json",
-        "status": "active_live_next_target",
-        "token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_RETEST_AND_AUTHORIZES_MODEL_REFINEMENT_OR_COUNTERMODEL_PACKET_ONLY"
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinement.lean",
+        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF"
       },
       "prepare_qft_gr_operator_domain_assumption_reduction_closeout_packet": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_OperatorDomainAssumptionReductionCloseoutPacket.lean",
@@ -1837,6 +1853,12 @@
         "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_AFTER_CONSERVATION_RETEST_PACKET_RESULT_REVIEW_20260613_v0.json",
         "status": "completed_consumed_live_target",
         "token": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_AFTER_CONSERVATION_RETEST_PACKET_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_REFINEMENT_ATTEMPT_ONLY"
+      },
+      "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinement.lean",
+        "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0.json",
+        "status": "active_live_next_target",
+        "token": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF"
       },
       "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_result": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestResultReview.lean",
@@ -2170,10 +2192,11 @@
       "review_qft_gr_minimal_working_model_conservation_test_packet_result",
       "review_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_result",
       "execute_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement",
-      "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result"
+      "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result",
+      "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result",
+    "previous_live_next_target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
@@ -2965,7 +2988,8 @@
     "review_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_result",
     "execute_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement",
     "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result",
-    "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement"
+    "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
+    "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -3178,6 +3202,17 @@
       "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_ATTEMPT_20260613_v0.json",
       "selected_next_target": "review_qft_gr_minimal_working_model_refinement_attempt_result",
       "status": "executed_pending_result_review"
+    },
+    "qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_v0": {
+      "classification": "qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_prepared_pending_result_review",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinement.lean",
+      "obstruction_class": "repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3",
+      "outcome": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF",
+      "packet_id": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_v0",
+      "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0.json",
+      "selected_next_target": "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
+      "selected_refinement_target": "refine_post_retest_refined_weak_pairing_domain_or_scope_after_v3_inconclusive_retest_without_source_admissibility",
+      "status": "prepared_pending_result_review"
     },
     "qft_gr_operator_domain_assumption_reduction_closeout_packet_v0": {
       "accepted_operator_domain_assumption_rows": [
@@ -3661,7 +3696,8 @@
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
     "review_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_result",
     "execute_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement",
-    "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result"
+    "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result",
+    "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement"
   ],
   "token_family_coverage": [
     {
@@ -3753,7 +3789,10 @@
     "formal/python/tests/test_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_result_review_gate.py",
     "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationRetestAttemptAfterPostRetestRefinementConservationRetestRefinement.lean",
     "formal/python/tools/qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_report.py",
-    "formal/python/tests/test_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_gate.py"
+    "formal/python/tests/test_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_gate.py",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinement.lean",
+    "formal/python/tools/qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_report.py",
+    "formal/python/tests/test_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_gate.py"
   ],
   "workstreams": [
     {
@@ -44363,29 +44402,36 @@
       "aggregate_lean_health_claimed": "no",
       "aggregate_lean_not_run": "yes",
       "aggregate_lean_timeout_caveat_preserved": "yes",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationRetestAttemptAfterPostRetestRefinementConservationRetestRefinementResultReview.lean",
-      "authorization_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_20260614_v0.json",
-      "authorization_tool": "formal/python/tools/qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result_review_report.py",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinement.lean",
+      "authorization_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0.json",
+      "authorization_tool": "formal/python/tools/qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_report.py",
       "authorized_next_strict_target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
       "authorized_target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
-      "claim_ceiling": "bounded model-refinement packet preparation only",
-      "claim_level": "Level 3 minimal working model v3 conservation retest result review accepted inconclusive",
+      "claim_ceiling": "bounded refinement packet result review only",
+      "claim_level": "Level 3 minimal working model v3 conservation retest refinement packet prepared",
       "classification_confirmed": "yes",
       "conservation_claimed": "no",
       "conservation_proof_object_constructed": "no",
       "conservation_proved": "no",
+      "conservation_retest_executed_by_packet": "no",
       "conservation_retest_failed": "no",
       "conservation_retest_failure_claimed": "no",
       "conservation_retest_inconclusive": "yes",
       "conservation_retest_pass_claimed": "no",
       "conservation_retest_passed": "no",
       "conservation_retest_rerun_authorized": "no",
+      "conservation_retest_result_claimed": "no",
+      "conservation_retest_retried": "no",
       "conservation_witness_constructed": "no",
-      "consumed_target": "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result",
+      "consumed_target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
       "countermodel_packet_authorized": "no",
       "countermodel_packet_prepared": "no",
       "countermodel_packet_prepared_by_review": "no",
       "countermodel_target": "prepare_qft_gr_minimal_working_model_countermodel_packet_after_post_retest_refinement_conservation_retest_refinement",
+      "current_candidate_source_definition_id": "toy_source_candidate_definition_v3_candidate",
+      "current_regular_context_id": "toy_regular_context_v3_candidate",
+      "current_test_function_class_id": "toy_conservation_test_function_class_v2_candidate",
+      "current_weak_pairing_domain_id": "toy_weak_pairing_domain_v3_candidate",
       "empirical_validation_claimed": "no",
       "full_aggregate_lean_required": "no",
       "full_ci_parity_required": "no",
@@ -44394,43 +44440,149 @@
       "full_security_scan_required": "no",
       "inconclusive_not_converted_to_failure": "yes",
       "inconclusive_not_converted_to_pass": "yes",
-      "latest_surface": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_v0",
-      "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelConservationRetestAttemptAfterPostRetestRefinementConservationRetestRefinementResultReview.lean",
-      "latest_surface_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_20260614_v0.json",
-      "latest_surface_token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_RETEST_AND_AUTHORIZES_MODEL_REFINEMENT_OR_COUNTERMODEL_PACKET_ONLY",
-      "latest_surface_tool": "formal/python/tools/qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result_review_report.py",
+      "latest_surface": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_v0",
+      "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinement.lean",
+      "latest_surface_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0.json",
+      "latest_surface_token": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF",
+      "latest_surface_tool": "formal/python/tools/qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_report.py",
       "long_running_validation_escalation_authorized": "no",
       "master_action_promoted": "no",
       "master_action_promotion_authorized": "no",
+      "model_refinement_executed": "no",
       "model_refinement_executed_by_review": "no",
       "model_refinement_packet_authorized": "yes",
-      "model_refinement_packet_prepared": "no",
+      "model_refinement_packet_preparation_only": "yes",
+      "model_refinement_packet_prepared": "yes",
       "model_refinement_packet_prepared_by_review": "no",
-      "non_claim_boundary": "This result review accepts the bounded v3 conservation-retest-refinement attempt as inconclusive and authorizes exactly one next bounded target: a model-refinement packet. It does not convert the inconclusive result into a pass or failure, does not rerun conservation, does not claim conservation, does not construct a conservation proof object, constructs no conservation witness, preserves no source admissibility, does not claim Bianchi compatibility, does not derive the semiclassical Einstein equation, does not close QFT-GR, does not validate empirically, does not authorize public submission, and does not promote the master action.",
-      "outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_RETEST_AND_AUTHORIZES_MODEL_REFINEMENT_OR_COUNTERMODEL_PACKET_ONLY",
+      "non_claim_boundary": "This packet prepares only a bounded model-refinement plan after the v3 conservation retest remained inconclusive. It records the remaining obstruction class repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3 and explains why the selected response is model refinement rather than immediate retesting, countermodel preparation, or promotion. It does not execute refinement, rerun conservation, claim conservation, construct a conservation proof object, construct a conservation witness, claim source admissibility, claim Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, authorize public submission, or promote the master action. Boundary shorthand: no source admissibility, no conservation proof object, no conservation witness, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, and no public submission.",
+      "obstruction_class": "repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3",
+      "outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF",
+      "packet_classification": "qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_prepared_pending_result_review",
+      "packet_preparation_only": "yes",
+      "packet_prepared": "yes",
       "physical_source_claimed": "no",
+      "proposed_candidate_source_definition_revision": "toy_source_candidate_definition_v4_candidate",
+      "proposed_regular_context_revision": "toy_regular_context_v4_candidate",
+      "proposed_test_function_class_revision": "toy_conservation_test_function_class_v3_candidate",
+      "proposed_weak_pairing_domain_revision": "toy_weak_pairing_domain_v4_candidate",
       "public_submission_authorized": "no",
       "publication_authorized": "no",
       "qft_gr_closure_claimed": "no",
       "qft_gr_seam_closed": "no",
       "qft_gr_source_map_closure_claimed": "no",
+      "refinement_attempt_executed": "no",
+      "refinement_packet_result_review_pending": "yes",
       "release_assembly_authorized": "no",
       "release_index_path_not_freshly_lean_validated": "yes",
       "release_packet_assembled": "no",
-      "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_20260614_v0.json",
+      "repeated_inconclusive_signal_count": "3",
+      "repeated_inconclusive_signal_recorded": "yes",
+      "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0.json",
       "result_review_accepted": "yes",
       "result_review_classification": "qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result_review_accepts_inconclusive_retest_and_authorizes_model_refinement_or_countermodel_packet_only",
-      "result_surface": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_v0",
-      "result_token": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_RETEST_AND_AUTHORIZES_MODEL_REFINEMENT_OR_COUNTERMODEL_PACKET_ONLY",
-      "result_tool": "formal/python/tools/qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_result_review_report.py",
+      "result_surface": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_v0",
+      "result_token": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF",
+      "result_tool": "formal/python/tools/qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_report.py",
       "retest_inconclusive": "yes",
       "retest_result": "inconclusive",
-      "schema_id": "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_20260614_v0",
+      "schema_id": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0",
       "scientific_validation_claimed": "no",
-      "selected_next_strict_target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
-      "selected_next_target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
-      "selected_next_target_kind": "qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_preparation_only",
+      "selected_next_strict_target": "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
+      "selected_next_target": "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
+      "selected_next_target_kind": "qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result_review",
       "selected_refinement_or_countermodel_route": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
+      "selected_refinement_target": "refine_post_retest_refined_weak_pairing_domain_or_scope_after_v3_inconclusive_retest_without_source_admissibility",
+      "selection_count": "1",
+      "semiclassical_einstein_equation_derived": "no",
+      "source_admissibility_claimed": "no",
+      "status": "paused",
+      "stress_energy_source_admissibility_claimed": "no",
+      "timeout_rerun_loop_authorized": "no",
+      "toy_source_candidate_remains_candidate_only": "yes",
+      "toy_source_promoted_to_admissible_source": "no",
+      "validation_caveat": "Bounded routine validation applies. Full pytest, full governance suite, full aggregate Lean, release-index Lean validation, CI parity, and security scans are not required or run for this routine packet checkpoint. No aggregate Lean health claim is made.",
+      "workstream_id": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement"
+    },
+    {
+      "Bianchi_compatibility_claimed": "no",
+      "active_lane": "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
+      "aggregate_lean_health_claimed": "no",
+      "aggregate_lean_not_run": "yes",
+      "aggregate_lean_timeout_caveat_preserved": "yes",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinement.lean",
+      "authorization_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0.json",
+      "authorization_tool": "formal/python/tools/qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_report.py",
+      "authorized_next_strict_target": "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
+      "authorized_target": "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
+      "claim_ceiling": "bounded refinement packet result review only",
+      "claim_level": "Level 3 minimal working model v3 conservation retest refinement packet prepared",
+      "conservation_claimed": "no",
+      "conservation_proof_object_constructed": "no",
+      "conservation_proved": "no",
+      "conservation_retest_executed_by_packet": "no",
+      "conservation_retest_failure_claimed": "no",
+      "conservation_retest_pass_claimed": "no",
+      "conservation_retest_result_claimed": "no",
+      "conservation_retest_retried": "no",
+      "conservation_witness_constructed": "no",
+      "consumed_target": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
+      "countermodel_packet_authorized": "no",
+      "countermodel_packet_prepared": "no",
+      "current_candidate_source_definition_id": "toy_source_candidate_definition_v3_candidate",
+      "current_regular_context_id": "toy_regular_context_v3_candidate",
+      "current_test_function_class_id": "toy_conservation_test_function_class_v2_candidate",
+      "current_weak_pairing_domain_id": "toy_weak_pairing_domain_v3_candidate",
+      "empirical_validation_claimed": "no",
+      "full_aggregate_lean_required": "no",
+      "full_ci_parity_required": "no",
+      "full_governance_suite_required": "no",
+      "full_pytest_required": "no",
+      "full_security_scan_required": "no",
+      "latest_surface": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_v0",
+      "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinement.lean",
+      "latest_surface_report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0.json",
+      "latest_surface_token": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF",
+      "latest_surface_tool": "formal/python/tools/qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_report.py",
+      "long_running_validation_escalation_authorized": "no",
+      "master_action_promoted": "no",
+      "master_action_promotion_authorized": "no",
+      "model_refinement_executed": "no",
+      "model_refinement_packet_authorized": "yes",
+      "model_refinement_packet_preparation_only": "yes",
+      "model_refinement_packet_prepared": "yes",
+      "non_claim_boundary": "This packet prepares only a bounded model-refinement plan after the v3 conservation retest remained inconclusive. It records the remaining obstruction class repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3 and explains why the selected response is model refinement rather than immediate retesting, countermodel preparation, or promotion. It does not execute refinement, rerun conservation, claim conservation, construct a conservation proof object, construct a conservation witness, claim source admissibility, claim Bianchi compatibility, derive the semiclassical Einstein equation, close QFT-GR, validate empirically, authorize public submission, or promote the master action. Boundary shorthand: no source admissibility, no conservation proof object, no conservation witness, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, and no public submission.",
+      "obstruction_class": "repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3",
+      "outcome_id": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF",
+      "packet_classification": "qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_prepared_pending_result_review",
+      "packet_preparation_only": "yes",
+      "packet_prepared": "yes",
+      "physical_source_claimed": "no",
+      "proposed_candidate_source_definition_revision": "toy_source_candidate_definition_v4_candidate",
+      "proposed_regular_context_revision": "toy_regular_context_v4_candidate",
+      "proposed_test_function_class_revision": "toy_conservation_test_function_class_v3_candidate",
+      "proposed_weak_pairing_domain_revision": "toy_weak_pairing_domain_v4_candidate",
+      "public_submission_authorized": "no",
+      "publication_authorized": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "qft_gr_source_map_closure_claimed": "no",
+      "refinement_attempt_executed": "no",
+      "refinement_packet_consumed": "yes",
+      "refinement_packet_result_review_pending": "yes",
+      "release_assembly_authorized": "no",
+      "release_index_path_not_freshly_lean_validated": "yes",
+      "release_packet_assembled": "no",
+      "repeated_inconclusive_signal_count": "3",
+      "repeated_inconclusive_signal_recorded": "yes",
+      "report": "formal/docs/release/QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0.json",
+      "result_surface": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_v0",
+      "result_token": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF",
+      "result_tool": "formal/python/tools/qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_report.py",
+      "schema_id": "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_20260614_v0",
+      "scientific_validation_claimed": "no",
+      "selected_next_strict_target": "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
+      "selected_next_target": "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
+      "selected_next_target_kind": "qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result_review",
       "selected_refinement_target": "refine_post_retest_refined_weak_pairing_domain_or_scope_after_v3_inconclusive_retest_without_source_admissibility",
       "selection_count": "1",
       "semiclassical_einstein_equation_derived": "no",
@@ -44438,8 +44590,10 @@
       "status": "active",
       "stress_energy_source_admissibility_claimed": "no",
       "timeout_rerun_loop_authorized": "no",
-      "validation_caveat": "Full pytest, full governance suite, full aggregate Lean, release-index Lean validation, CI parity, and security scans are not required for this routine bounded result-review checkpoint.",
-      "workstream_id": "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement"
+      "toy_source_candidate_remains_candidate_only": "yes",
+      "toy_source_promoted_to_admissible_source": "no",
+      "validation_caveat": "Bounded routine validation applies. Full pytest, full governance suite, full aggregate Lean, release-index Lean validation, CI parity, and security scans are not required or run for this routine packet checkpoint. No aggregate Lean health claim is made.",
+      "workstream_id": "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result"
     }
   ]
 }
