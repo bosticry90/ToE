@@ -255,10 +255,10 @@ def test_minimal_working_model_packet_has_lean_and_public_surface_mirrors() -> N
         CANDIDATE_ANALYSIS_RESULT_REVIEW_TARGET,
         CONSERVATION_TEST_PACKET_TARGET,
         FINAL_LIVE_TARGET,
-            "CURRENT_LIVE_NEXT_TARGET_v0: "
-            "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
-            "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-            "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement",
+        "CURRENT_LIVE_NEXT_TARGET_v0: "
+        "execute_qft_gr_minimal_working_model_refinement_attempt_after_post_retest_refinement_conservation_retest_refinement",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
+        "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result",
         "no source admissibility",
         "no QFT-GR closure",
         "no public submission",
@@ -276,7 +276,7 @@ def test_minimal_working_model_packet_has_lean_and_public_surface_mirrors() -> N
         f'  "{CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET}"'
         in frontier
         or 'def currentLiveNextStrictTargetV0 : String :=\n'
-        '  "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result"'
+        '  "execute_qft_gr_minimal_working_model_refinement_attempt_after_post_retest_refinement_conservation_retest_refinement"'
         in frontier
     )
 

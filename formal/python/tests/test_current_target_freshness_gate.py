@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result"
+    "execute_qft_gr_minimal_working_model_refinement_attempt_after_post_retest_refinement_conservation_retest_refinement"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,6 +1329,9 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
+    "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result"
+)
+POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PACKET_TARGET = (
@@ -1404,7 +1407,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_qft_gr_minimal_working_model_refinement_packet_after_post_retest_refinement_conservation_retest_refinement_result"
+    "execute_qft_gr_minimal_working_model_refinement_attempt_after_post_retest_refinement_conservation_retest_refinement"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1421,7 +1424,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinement.lean"
+    / "QFTGRMinimalWorkingModelRefinementPacketAfterPostRetestRefinementConservationRetestRefinementResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2959,22 +2962,22 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert conservation_retest_attempt_result_review_active_workstream["report"] == (
         "formal/docs/release/"
         "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_"
-        "REFINEMENT_CONSERVATION_RETEST_REFINEMENT_"
+        "REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_"
         "20260614_v0.json"
     )
     assert (
         conservation_retest_attempt_result_review_active_workstream["outcome_id"]
         == "QFT_GR_MINIMAL_WORKING_MODEL_REFINEMENT_PACKET_AFTER_POST_RETEST_"
-        "REFINEMENT_CONSERVATION_RETEST_REFINEMENT_PREPARED_WITH_NO_SOURCE_"
-        "ADMISSIBILITY_OR_CONSERVATION_PROOF"
+        "REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_ACCEPTS_"
+        "PACKET_AND_AUTHORIZES_BOUNDED_REFINEMENT_ATTEMPT_ONLY"
     )
     assert (
         conservation_retest_attempt_result_review_active_workstream["claim_level"]
-        == "Level 3 minimal working model v3 conservation retest refinement packet prepared"
+        == "Level 3 minimal working model v3 refinement packet result review accepted"
     )
     assert (
         conservation_retest_attempt_result_review_active_workstream["claim_ceiling"]
-        == "bounded refinement packet result review only"
+        == "bounded refinement attempt execution only"
     )
     assert (
         "no source admissibility"
@@ -2990,43 +2993,37 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         conservation_retest_attempt_result_review_active_workstream[
-            "packet_prepared"
+            "result_review_accepted"
         ]
         == "yes"
     )
     assert (
         conservation_retest_attempt_result_review_active_workstream[
-            "packet_preparation_only"
+            "packet_preparation_only_confirmed"
         ]
         == "yes"
     )
     assert (
         conservation_retest_attempt_result_review_active_workstream[
-            "refinement_packet_result_review_pending"
+            "refinement_packet_result_review_consumed"
         ]
         == "yes"
     )
     assert (
         conservation_retest_attempt_result_review_active_workstream[
-            "model_refinement_packet_authorized"
+            "bounded_refinement_attempt_authorized"
         ]
         == "yes"
     )
     assert (
         conservation_retest_attempt_result_review_active_workstream[
-            "model_refinement_packet_prepared"
-        ]
-        == "yes"
-    )
-    assert (
-        conservation_retest_attempt_result_review_active_workstream[
-            "countermodel_packet_authorized"
+            "bounded_refinement_attempt_executed"
         ]
         == "no"
     )
     assert (
         conservation_retest_attempt_result_review_active_workstream[
-            "conservation_retest_retried"
+            "countermodel_packet_authorized"
         ]
         == "no"
     )
@@ -3073,15 +3070,27 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         post_retest_refinement_conservation_retest_refinement_packet_workstream[
-            "packet_prepared"
+            "result_review_accepted"
         ]
         == "yes"
     )
     assert (
         post_retest_refinement_conservation_retest_refinement_packet_workstream[
-            "packet_preparation_only"
+            "packet_preparation_only_confirmed"
         ]
         == "yes"
+    )
+    assert (
+        post_retest_refinement_conservation_retest_refinement_packet_workstream[
+            "bounded_refinement_attempt_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        post_retest_refinement_conservation_retest_refinement_packet_workstream[
+            "bounded_refinement_attempt_executed_by_review"
+        ]
+        == "no"
     )
     assert (
         post_retest_refinement_conservation_retest_refinement_packet_workstream[
@@ -3100,6 +3109,30 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
             "countermodel_packet_authorized"
         ]
         == "no"
+    )
+    post_retest_refinement_conservation_retest_refinement_packet_preparation_workstream = (
+        _workstream(
+            payload,
+            POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_RESULT_REVIEW_PACKET_TARGET,
+        )
+    )
+    assert (
+        post_retest_refinement_conservation_retest_refinement_packet_preparation_workstream[
+            "status"
+        ]
+        == "paused"
+    )
+    assert (
+        post_retest_refinement_conservation_retest_refinement_packet_preparation_workstream[
+            "packet_prepared"
+        ]
+        == "yes"
+    )
+    assert (
+        post_retest_refinement_conservation_retest_refinement_packet_preparation_workstream[
+            "selected_next_target"
+        ]
+        == PREVIOUS_LIVE_TARGET
     )
 
     post_retest_refinement_conservation_retest_refinement_attempt_workstream = _workstream(
