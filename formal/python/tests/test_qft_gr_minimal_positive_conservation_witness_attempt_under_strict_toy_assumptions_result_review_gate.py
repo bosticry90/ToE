@@ -8,28 +8,29 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
     skip_if_not_current_target,
 )
-from formal.python.tools.qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_report import (
-    ATTEMPT_TARGET,
-    DEFAULT_OUT as PACKET_PATH,
-    OUTCOME_ID as PACKET_OUTCOME,
-    PACKET_CLASSIFICATION,
-    PACKET_ID,
-    POSITIVE_WITNESS_BRIDGE_LAW,
-    SCHEMA_ID as PACKET_SCHEMA_ID,
+from formal.python.tools.qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_report import (
+    DEFAULT_OUT as ATTEMPT_PATH,
+    OUTCOME_ID as ATTEMPT_OUTCOME,
+    RESULT_CLASSIFICATION as ATTEMPT_CLASSIFICATION,
 )
-from formal.python.tools.qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result_review_report import (
+from formal.python.tools.qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result_review_report import (
+    ASSUMPTION_STABILIZATION_TARGET,
     CANONICAL_OBSTRUCTION_ID,
     CONSUMED_TARGET,
+    COUNTERMODEL_TARGET,
     DEFAULT_OUT,
     DOMINANT_OBSTRUCTION_CANDIDATE,
+    LEAN_REVIEW_PATH,
     NEXT_TARGET,
     NEXT_TARGET_KIND,
     OBSTRUCTION_STATUS,
     OUTCOME_ID,
+    POSITIVE_WITNESS_BRIDGE_LAW,
     RESULT_REVIEW_CLASSIFICATION,
     REVIEW_ID,
     SCHEMA_ID,
-    build_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result_review,
+    SOURCE_MAP_LADDER_TARGET,
+    build_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result_review,
 )
 
 
@@ -39,15 +40,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result_review_report.py"
-)
-LEAN_REVIEW_PATH = (
-    REPO_ROOT
-    / "formal"
-    / "toe_formal"
-    / "ToeFormal"
-    / "Derivation"
-    / "QFTGRMinimalPositiveConservationWitnessPacketUnderStrictToyAssumptionsResultReview.lean"
+    / "qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result_review_report.py"
 )
 TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
@@ -92,16 +85,16 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_positive_conservation_witness_packet_result_review_files_exist() -> None:
-    assert PACKET_PATH.exists()
+def test_strict_toy_witness_attempt_result_review_files_exist() -> None:
+    assert ATTEMPT_PATH.exists()
     assert DEFAULT_OUT.exists()
     assert TOOL_PATH.exists()
     assert LEAN_REVIEW_PATH.exists()
 
 
-def test_positive_conservation_witness_packet_result_review_consumes_packet() -> None:
+def test_strict_toy_witness_attempt_result_review_consumes_attempt() -> None:
     review = _json(DEFAULT_OUT)
-    packet = _json(PACKET_PATH)
+    attempt = _json(ATTEMPT_PATH)
     assert review["schema_id"] == SCHEMA_ID
     assert review["review_id"] == REVIEW_ID
     assert review["accepted"] is True
@@ -109,82 +102,88 @@ def test_positive_conservation_witness_packet_result_review_consumes_packet() ->
     assert review["outcome_id"] == OUTCOME_ID
     assert review["result_review_classification"] == RESULT_REVIEW_CLASSIFICATION
     assert review["consumed_target"] == CONSUMED_TARGET
-    assert (
-        review["consumes_qft_gr_minimal_positive_conservation_witness_packet"]
-        == PACKET_ID
-    )
-    assert packet["schema_id"] == PACKET_SCHEMA_ID
-    assert packet["packet_id"] == PACKET_ID
-    assert packet["outcome_id"] == PACKET_OUTCOME
-    assert packet["packet_classification"] == PACKET_CLASSIFICATION
-    assert packet["selected_next_target"] == CONSUMED_TARGET
+    assert review["consumed_attempt_outcome_id"] == ATTEMPT_OUTCOME
+    assert review["consumed_attempt_classification"] == ATTEMPT_CLASSIFICATION
+    assert attempt["selected_next_target"] == CONSUMED_TARGET
 
 
-def test_positive_conservation_witness_packet_result_review_accepts_packet_scope() -> None:
+def test_strict_toy_witness_attempt_result_review_accepts_local_witness() -> None:
     review = _json(DEFAULT_OUT)
-    assert review["packet_result_review_accepted"] is True
-    assert review["positive_witness_packet_result_review_accepted"] is True
-    assert review["positive_witness_packet_consumed"] is True
-    assert review["positive_witness_packet_prepared"] is True
+    assert review["strict_toy_witness_attempt_result_review_accepted"] is True
+    assert review["strict_toy_witness_accepted"] is True
+    assert review["local_conservation_bridge_witness_accepted"] is True
+    assert review["local_conservation_bridge_witness_constructed"] is True
+    assert review["strict_toy_weak_conservation_witness_achieved"] is True
+    assert review["strict_toy_weak_conservation_theorem_constructed"] is True
+    assert review["weak_conservation_against_allowed_tests_proved"] is True
+    assert review["theorem_bearing_attempt"] is True
+    assert review["theorem_bearing_result_review"] is True
     assert review["strict_toy_assumptions_only"] is True
+    assert review["local_witness_scope"] == (
+        "strict_toy_local_weak_conservation_bridge_witness_only"
+    )
     assert review["positive_witness_bridge_law_scope"] == POSITIVE_WITNESS_BRIDGE_LAW
-    assert review["allowed_weak_test_class_id"] == (
-        "strict_toy_compact_support_smooth_test_vector_class_v0"
-    )
-    assert review["weak_pairing_id"] == "strict_toy_source_test_pairing_v0"
-    assert review["source_object_id"] == "strict_toy_stress_energy_like_source_object_v0"
-    assert review["divergence_pairing_id"] == "strict_toy_weak_divergence_pairing_v0"
-    assert review["field_equation_residual_id"] == (
-        "strict_toy_field_equation_residual_zero_v0"
-    )
-    assert review["divergence_identity_id"] == (
-        "strict_toy_divergence_identity_assumption_v0"
-    )
-    assert review["no_boundary_condition_id"] == (
-        "strict_toy_compact_support_no_boundary_condition_v0"
-    )
-    assert set(review["pass_fail_inconclusive_criteria"]) == {
-        "pass",
-        "fail",
-        "inconclusive",
-    }
 
 
-def test_positive_conservation_witness_packet_result_review_authorizes_attempt_only() -> None:
+def test_strict_toy_witness_attempt_result_review_lean_confirms_theorem() -> None:
     review = _json(DEFAULT_OUT)
-    assert review["positive_witness_attempt_authorized"] is True
-    assert review["bounded_witness_attempt_authorized_only"] is True
-    assert review["positive_witness_attempt_executed"] is False
-    assert review["positive_witness_attempt_result_reviewed"] is False
-    assert review["positive_witness_packet_prepared_by_review"] is False
+    lean_text = _read(LEAN_REVIEW_PATH)
+    for marker in [
+        "import ToeFormal.Derivation.QFTGRMinimalPositiveConservationWitnessAttemptUnderStrictToyAssumptions",
+        "theorem strict_toy_witness_result_review_accepts_bridge_theorem",
+        "strict_toy_weak_conservation_witness",
+        "weakConservationAgainstAllowedTests",
+        "selectedMinimalPositiveConservationWitnessMaturationPacketTarget",
+    ]:
+        assert marker in lean_text
+    for theorem_name in review["lean_result_review_theorem_names"]:
+        assert f"theorem {theorem_name}" in lean_text
+    assert review["lean_result_review_file"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "QFTGRMinimalPositiveConservationWitnessAttemptUnderStrictToyAssumptionsResultReview.lean"
+    )
+
+
+def test_strict_toy_witness_attempt_result_review_authorizes_maturation_only() -> None:
+    review = _json(DEFAULT_OUT)
+    assert review["maturation_packet_authorized"] is True
+    assert review["witness_maturation_packet_authorized_only"] is True
+    assert review["maturation_packet_prepared"] is False
     assert review["selected_next_target"] == NEXT_TARGET
     assert review["result_review_selected_next_target"] == NEXT_TARGET
     assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
     assert review["selection_count"] == 1
     assert review["selected_next_target_count"] == 1
-    assert NEXT_TARGET == ATTEMPT_TARGET
     decisions = {row["target"]: row["decision"] for row in review["candidate_next_targets"]}
     assert decisions[NEXT_TARGET] == "selected"
-    assert decisions[
-        "claim_qft_gr_conservation_witness_constructed"
-    ] == "not_authorized_by_review"
+    assert decisions[COUNTERMODEL_TARGET] == (
+        "retained_follow_on_not_authorized_by_this_review"
+    )
+    assert decisions[ASSUMPTION_STABILIZATION_TARGET] == (
+        "subsumed_by_witness_maturation_packet_not_selected"
+    )
+    assert decisions[SOURCE_MAP_LADDER_TARGET] == (
+        "retained_follow_on_after_maturation_or_countermodel_pressure"
+    )
+    assert decisions["claim_qft_gr_source_admissibility"] == "not_authorized"
+    assert decisions["close_qft_gr_seam"] == "not_authorized"
+    assert decisions["promote_master_action"] == "not_authorized"
 
 
-def test_positive_conservation_witness_packet_result_review_preserves_nonclaims() -> None:
+def test_strict_toy_witness_attempt_result_review_preserves_boundaries() -> None:
     review = _json(DEFAULT_OUT)
     assert review["dominant_obstruction_candidate"] == DOMINANT_OBSTRUCTION_CANDIDATE
     assert review["canonical_obstruction_id"] == CANONICAL_OBSTRUCTION_ID
     assert review["obstruction_status"] == OBSTRUCTION_STATUS
     assert review["dominant_obstruction_resolved"] is False
     assert review["mathematical_resolution_claimed"] is False
-    assert review["immediate_retest_authorized"] is False
-    assert review["conservation_retest_rerun_authorized"] is False
-    assert review["ordinary_model_refinement_authorized"] is False
-    assert review["countermodel_lane_retained_as_follow_on"] is True
-    assert review["countermodel_packet_authorized"] is False
-    assert review["source_map_ladder_lane_retained_as_follow_on"] is True
-    assert review["source_map_ladder_packet_authorized"] is False
     for key in [
+        "countermodel_packet_authorized",
+        "assumption_stabilization_packet_authorized",
+        "source_map_ladder_packet_authorized",
+        "immediate_retest_authorized",
+        "conservation_retest_rerun_authorized",
+        "ordinary_model_refinement_authorized",
         "source_admissibility_claimed",
         "stress_energy_source_admissibility_claimed",
         "physical_source_claimed",
@@ -192,6 +191,8 @@ def test_positive_conservation_witness_packet_result_review_preserves_nonclaims(
         "conservation_proved",
         "conservation_proof_object_constructed",
         "conservation_witness_constructed",
+        "full_qft_gr_conservation_claimed",
+        "unbounded_conservation_proved",
         "Bianchi_compatibility_claimed",
         "semiclassical_einstein_equation_derived",
         "qft_gr_seam_closed",
@@ -208,7 +209,7 @@ def test_positive_conservation_witness_packet_result_review_preserves_nonclaims(
         assert review[key] is False, key
 
 
-def test_positive_conservation_witness_packet_result_review_validation_policy() -> None:
+def test_strict_toy_witness_attempt_result_review_validation_policy() -> None:
     review = _json(DEFAULT_OUT)
     policy = review["validation_policy"]
     for key in [
@@ -230,7 +231,7 @@ def test_positive_conservation_witness_packet_result_review_validation_policy() 
         assert value is True, f"Acceptance criterion failed: {key}"
 
 
-def test_positive_conservation_witness_packet_result_review_updates_live_target() -> None:
+def test_strict_toy_witness_attempt_result_review_updates_live_target() -> None:
     registry = _json(REGISTRY_PATH)
     skip_if_not_current_target(registry, NEXT_TARGET)
     state = registry["current_target_state"]
@@ -241,11 +242,11 @@ def test_positive_conservation_witness_packet_result_review_updates_live_target(
     assert state["active_lane"] == NEXT_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "QFTGRMinimalPositiveConservationWitnessPacketUnderStrictToyAssumptionsResultReview.lean"
+        "QFTGRMinimalPositiveConservationWitnessAttemptUnderStrictToyAssumptionsResultReview.lean"
     )
     assert state["live_next_target_report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_POSITIVE_CONSERVATION_WITNESS_PACKET_UNDER_STRICT_"
+        "QFT_GR_MINIMAL_POSITIVE_CONSERVATION_WITNESS_ATTEMPT_UNDER_STRICT_"
         "TOY_ASSUMPTIONS_RESULT_REVIEW_20260614_v0.json"
     )
     assert state["live_next_target_outcome"] == OUTCOME_ID
@@ -253,35 +254,39 @@ def test_positive_conservation_witness_packet_result_review_updates_live_target(
     review_workstream = _workstream(registry, CONSUMED_TARGET)
     assert review_workstream["status"] == "paused"
     assert review_workstream["result_review_accepted"] == "yes"
+    assert review_workstream["strict_toy_witness_accepted"] == "yes"
+    assert review_workstream["local_conservation_bridge_witness_accepted"] == "yes"
+    assert review_workstream["maturation_packet_authorized"] == "yes"
     assert review_workstream["selected_next_target"] == NEXT_TARGET
-    assert review_workstream["positive_witness_attempt_authorized"] == "yes"
-    assert review_workstream["positive_witness_attempt_executed"] == "no"
-    assert review_workstream["conservation_witness_constructed"] == "no"
     assert review_workstream["source_admissibility_claimed"] == "no"
+    assert review_workstream["conservation_witness_constructed"] == "no"
+    assert review_workstream["qft_gr_closure_claimed"] == "no"
 
     active_workstream = active[0]
     assert active_workstream["workstream_id"] == NEXT_TARGET
     assert active_workstream["authorized_next_strict_target"] == NEXT_TARGET
     assert active_workstream["consumed_target"] == CONSUMED_TARGET
     assert active_workstream["outcome_id"] == OUTCOME_ID
-    assert active_workstream["witness_attempt_pending"] == "yes"
-    assert active_workstream["positive_witness_attempt_authorized"] == "yes"
-    assert active_workstream["positive_witness_attempt_executed"] == "no"
+    assert active_workstream["packet_preparation_pending"] == "yes"
+    assert active_workstream["maturation_packet_authorized"] == "yes"
+    assert active_workstream["strict_toy_witness_accepted"] == "yes"
+    assert active_workstream["local_conservation_bridge_witness_accepted"] == "yes"
     assert active_workstream["source_admissibility_claimed"] == "no"
     assert active_workstream["conservation_witness_constructed"] == "no"
     assert active_workstream["qft_gr_closure_claimed"] == "no"
 
 
-def test_positive_conservation_witness_packet_result_review_deterministic() -> None:
+def test_strict_toy_witness_attempt_result_review_deterministic() -> None:
     review = _json(DEFAULT_OUT)
-    generated = build_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result_review(
-        packet_path=PACKET_PATH,
+    generated = build_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result_review(
+        attempt_path=ATTEMPT_PATH,
+        lean_review_path=LEAN_REVIEW_PATH,
         captured_at_utc="2026-06-14T00:00:00Z",
     )
     assert generated == review
 
 
-def test_positive_conservation_witness_packet_result_review_lean_and_surface_mirrors() -> None:
+def test_strict_toy_witness_attempt_result_review_lean_and_surface_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -307,18 +312,16 @@ def test_positive_conservation_witness_packet_result_review_lean_and_surface_mir
         "prepare_qft_gr_minimal_positive_conservation_witness_maturation_packet",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
         "review_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result",
-        "strict_toy_compact_support_smooth_test_vector_class_v0",
-        "strict_toy_source_test_pairing_v0",
-        "strict_toy_weak_divergence_pairing_v0",
+        "strict_toy_witness_result_review_accepts_bridge_theorem",
+        "strict_toy_local_weak_conservation_bridge_witness_only",
         "no source admissibility",
-        "no conservation witness",
         "no QFT-GR closure",
         "no public submission",
     ]:
         assert token in joined
 
 
-def test_positive_conservation_witness_packet_result_review_gate_not_manifest_enrolled() -> None:
+def test_strict_toy_witness_attempt_result_review_gate_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result_review_gate.py"
+        "test_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result_review_gate.py"
     )
