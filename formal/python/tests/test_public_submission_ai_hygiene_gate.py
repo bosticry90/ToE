@@ -40,7 +40,7 @@ EXPECTED_LIVE_TARGET = (
 )
 POST_MR_LIVE_TARGET = (
     "CURRENT_LIVE_NEXT_TARGET_v0: "
-    "review_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result"
+    "execute_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions"
 )
 
 FORBIDDEN_META_MARKERS = [
