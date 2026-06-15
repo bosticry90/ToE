@@ -118,7 +118,8 @@
     "prepare_qft_gr_minimal_positive_conservation_witness_maturation_packet",
     "review_qft_gr_minimal_positive_conservation_witness_maturation_packet_result",
     "prepare_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction",
-    "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result"
+    "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
+    "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction"
   ],
   "consumed_targets": [
     {
@@ -197,6 +198,13 @@
       "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelPacketForWeakConservationObstructionResultReview.lean",
       "target": "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
       "token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_COUNTERMODEL_ATTEMPT_ONLY"
+    },
+    {
+      "report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json",
+      "status": "completed_consumed_live_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelAttemptForWeakConservationObstruction.lean",
+      "target": "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
+      "token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
     }
   ],
   "controls": [
@@ -559,9 +567,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
+    "active_lane": "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result",
     "candidate_live_next_targets": [
-      "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction"
+      "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result"
     ],
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
@@ -721,7 +729,8 @@
       "prepare_qft_gr_minimal_positive_conservation_witness_maturation_packet",
       "review_qft_gr_minimal_positive_conservation_witness_maturation_packet_result",
       "prepare_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction",
-      "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result"
+      "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
+      "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction"
     ],
     "consumed_targets": [
       {
@@ -1021,6 +1030,13 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelPacketForWeakConservationObstructionResultReview.lean",
         "target": "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
         "token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_COUNTERMODEL_ATTEMPT_ONLY"
+      },
+      {
+        "report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelAttemptForWeakConservationObstruction.lean",
+        "target": "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
+        "token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
       }
     ],
     "current_target_coverage": [
@@ -1587,7 +1603,7 @@
         "token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
       }
     ],
-    "focused_gate": "formal/python/tests/test_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_gate.py",
+    "focused_gate": "formal/python/tests/test_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_gate.py",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -1595,11 +1611,11 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelPacketForWeakConservationObstructionResultReview.lean",
+    "live_next_target": "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelAttemptForWeakConservationObstruction.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_outcome": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_COUNTERMODEL_ATTEMPT_ONLY",
-    "live_next_target_report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260615_v0.json",
+    "live_next_target_outcome": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+    "live_next_target_report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json",
     "next_strict_target_coverage": {
       "analyze_qft_gr_minimal_working_model_candidate_only": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelCandidateAnalysis.lean",
@@ -1652,6 +1668,13 @@
       "execute_qft_gr_metric_connection_scope_assumption_reduction_attempt": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_MetricConnectionScopeAssumptionReductionAttempt.lean",
         "status": "consumed_by_qft_gr_metric_connection_scope_assumption_reduction_attempt"
+      },
+      "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelAttemptForWeakConservationObstruction.lean",
+        "kind": "qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_execution",
+        "report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
       },
       "execute_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalPositiveConservationWitnessAttemptUnderStrictToyAssumptions.lean",
@@ -2121,6 +2144,13 @@
       "review_qft_gr_metric_connection_scope_assumption_reduction_packet_result": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_MetricConnectionScopeAssumptionReductionPacketResultReview.lean",
         "status": "consumed_by_qft_gr_metric_connection_scope_assumption_reduction_packet_result_review"
+      },
+      "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelAttemptForWeakConservationObstruction.lean",
+        "kind": "qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result_review",
+        "report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json",
+        "status": "active_live_next_target",
+        "token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
       },
       "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelPacketForWeakConservationObstruction.lean",
@@ -2618,10 +2648,11 @@
       "prepare_qft_gr_minimal_positive_conservation_witness_maturation_packet",
       "review_qft_gr_minimal_positive_conservation_witness_maturation_packet_result",
       "prepare_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction",
-      "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result"
+      "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
+      "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
+    "previous_live_next_target": "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
@@ -2645,7 +2676,8 @@
       "prepare_qft_gr_minimal_positive_conservation_witness_maturation_packet",
       "review_qft_gr_minimal_positive_conservation_witness_maturation_packet_result",
       "prepare_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction",
-      "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result"
+      "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
+      "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction"
     ]
   },
   "cycle_waivers": [],
@@ -3448,7 +3480,8 @@
     "review_qft_gr_minimal_positive_conservation_witness_maturation_packet_result",
     "prepare_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction",
     "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
-    "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction"
+    "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
+    "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -3588,6 +3621,14 @@
       "selected_next_target": "review_qft_gr_metric_connection_scope_assumption_reduction_packet_result",
       "selected_operator_domain_assumption_row": "OD-ASSUMP-006-metric_connection_scope",
       "status": "prepared_result_reviewed"
+    },
+    "qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_v0": {
+      "classification": "qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_inconclusive_requires_countermodel_scope_refinement",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelAttemptForWeakConservationObstruction.lean",
+      "report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json",
+      "selected_next_target": "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result",
+      "status": "executed_pending_result_review",
+      "token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
     },
     "qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_v0": {
       "classification": "qft_gr_minimal_working_model_conservation_retest_after_post_retest_refinement_conservation_retest_refinement_inconclusive_requires_model_refinement",
@@ -4215,7 +4256,8 @@
     "prepare_qft_gr_minimal_positive_conservation_witness_maturation_packet",
     "review_qft_gr_minimal_positive_conservation_witness_maturation_packet_result",
     "prepare_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction",
-    "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result"
+    "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
+    "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction"
   ],
   "token_family_coverage": [
     {
@@ -4357,7 +4399,11 @@
     "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelPacketForWeakConservationObstructionResultReview.lean",
     "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260615_v0.json",
     "formal/python/tools/qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review_report.py",
-    "formal/python/tests/test_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review_gate.py"
+    "formal/python/tests/test_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review_gate.py",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelAttemptForWeakConservationObstruction.lean",
+    "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json",
+    "formal/python/tools/qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_report.py",
+    "formal/python/tests/test_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_gate.py"
   ],
   "workstreams": [
     {
@@ -46704,15 +46750,17 @@
       "aggregate_lean_not_run": "yes",
       "allowed_weak_test_class_id": "strict_toy_compact_support_smooth_test_vector_class_v0",
       "attempt_classification_count": "3",
+      "attempt_decision": "executed",
+      "attempt_id": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_v0",
       "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelPacketForWeakConservationObstructionResultReview.lean",
       "authorization_report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260615_v0.json",
       "authorization_tool": "formal/python/tools/qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review_report.py",
-      "authorized_next_strict_target": "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
-      "authorized_target": "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
+      "authorized_next_strict_target": "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result",
+      "authorized_target": "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result",
       "bounded_countermodel_attempt_authorized_only": "yes",
       "canonical_obstruction_id": "repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3",
-      "claim_ceiling": "bounded countermodel attempt execution only no countermodel result source admissibility or qft_gr closure",
-      "claim_level": "Level 3 bounded countermodel attempt authorized pending execution",
+      "claim_ceiling": "inconclusive countermodel attempt pending result review only no countermodel result no no-go result no source admissibility or qft_gr closure",
+      "claim_level": "Level 3 bounded countermodel attempt executed pending result review",
       "conservation_claimed": "no",
       "conservation_proof_object_constructed": "no",
       "conservation_proved": "no",
@@ -46721,10 +46769,15 @@
       "consumed_target": "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
       "countermodel_achieved": "no",
       "countermodel_attempt_authorized": "yes",
-      "countermodel_attempt_executed": "no",
-      "countermodel_attempt_pending": "yes",
+      "countermodel_attempt_classified_inconclusive_pending_result_review": "yes",
+      "countermodel_attempt_executed": "yes",
+      "countermodel_attempt_pending": "no",
+      "countermodel_attempt_result_review_pending": "yes",
+      "countermodel_attempt_result_reviewed": "no",
       "countermodel_exists_claimed": "no",
+      "countermodel_found_pending_result_review": "no",
       "countermodel_lane_retained_as_follow_on": "yes",
+      "countermodel_not_found_requires_source_map_ladder": "no",
       "countermodel_or_no_go_criteria_accepted": "yes",
       "countermodel_or_no_go_criteria_count": "7",
       "countermodel_or_no_go_criteria_defined": "yes",
@@ -46741,20 +46794,24 @@
       "countermodel_packet_prepared": "yes",
       "countermodel_packet_result_review_accepted": "yes",
       "countermodel_result_claimed": "no",
+      "countermodel_scope_refinement_lane_retained_as_follow_on": "yes",
+      "countermodel_scope_refinement_packet_authorized": "no",
+      "countermodel_scope_refinement_required_pending_result_review": "yes",
       "divergence_identity_id": "strict_toy_divergence_identity_assumption_v0",
       "divergence_pairing_id": "strict_toy_weak_divergence_pairing_v0",
       "dominant_obstruction_candidate": "weak_pairing_domain_obstruction",
       "dominant_obstruction_resolved": "no",
       "empirical_validation_claimed": "no",
       "field_equation_residual_id": "strict_toy_field_equation_residual_zero_v0",
+      "found_classification_not_selected": "yes",
       "full_qft_gr_conservation_claimed": "no",
       "immediate_retest_authorized": "no",
       "inconclusive_result_claimed": "no",
-      "latest_surface": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_v0",
-      "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelPacketForWeakConservationObstructionResultReview.lean",
-      "latest_surface_report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260615_v0.json",
-      "latest_surface_token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_COUNTERMODEL_ATTEMPT_ONLY",
-      "latest_surface_tool": "formal/python/tools/qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review_report.py",
+      "latest_surface": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_v0",
+      "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelAttemptForWeakConservationObstruction.lean",
+      "latest_surface_report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json",
+      "latest_surface_token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+      "latest_surface_tool": "formal/python/tools/qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_report.py",
       "local_conservation_bridge_witness_accepted": "yes",
       "local_conservation_bridge_witness_constructed": "yes",
       "local_witness_scope": "strict_toy_local_weak_conservation_bridge_witness_only",
@@ -46769,10 +46826,12 @@
       "maturation_packet_result_reviewed": "yes",
       "no_boundary_condition_id": "strict_toy_compact_support_no_boundary_condition_v0",
       "no_go_result_claimed": "no",
-      "non_claim_boundary": "The current lane may execute only the bounded countermodel attempt authorized by the packet result review. It preserves no countermodel result claim, no no-go result claim, no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no broad QFT-GR conservation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion.",
+      "non_claim_boundary": "This bounded countermodel attempt executes only the authorized criteria check against the broader weak-pairing/source-candidate family and records an inconclusive classification pending result review because the current scope lacks a concrete broader source/test instantiation and pinned weak-pairing semantics. It does not claim a countermodel result, does not claim a no-go result, does not refute the accepted strict toy witness, preserves no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no broad QFT-GR conservation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion.",
+      "not_found_classification_not_selected": "yes",
+      "not_found_result_claimed": "no",
       "obstruction_status": "stabilized_for_next_target_selection_not_resolved",
       "ordinary_model_refinement_authorized": "no",
-      "outcome_id": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_COUNTERMODEL_ATTEMPT_ONLY",
+      "outcome_id": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
       "packet_classification": "qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_prepared_with_no_source_admissibility_or_qft_gr_closure",
       "packet_id": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_v0",
       "packet_preparation_pending": "no",
@@ -46790,13 +46849,19 @@
       "qft_gr_source_map_closure_claimed": "no",
       "release_index_path_not_freshly_lean_validated": "yes",
       "release_packet_assembled": "no",
-      "report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260615_v0.json",
+      "report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json",
+      "result_classification": "qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_inconclusive_requires_countermodel_scope_refinement",
+      "result_classification_count": "1",
       "result_review_accepted": "yes",
       "result_review_classification": "qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review_accepts_packet_and_authorizes_bounded_countermodel_attempt_only",
       "result_review_pending": "no",
       "review_id": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_v0",
       "scientific_validation_claimed": "no",
-      "selected_next_target": "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
+      "selected_classification": "qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_inconclusive_requires_countermodel_scope_refinement",
+      "selected_classification_count": "1",
+      "selected_countermodel_criterion_count": "0",
+      "selected_next_target": "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result",
+      "selected_no_go_criterion_count": "0",
       "semiclassical_einstein_equation_derived": "no",
       "source_admissibility_can_be_considered": "no",
       "source_admissibility_claimed": "no",
@@ -46806,7 +46871,7 @@
       "source_map_ladder_lane_retained_as_follow_on": "yes",
       "source_map_ladder_packet_authorized": "no",
       "source_object_id": "strict_toy_stress_energy_like_source_object_v0",
-      "status": "active",
+      "status": "paused",
       "stress_energy_source_admissibility_claimed": "no",
       "strict_toy_assumption_count": "7",
       "strict_toy_assumptions_only": "yes",
@@ -46826,6 +46891,101 @@
       "weak_pairing_id": "strict_toy_source_test_pairing_v0",
       "witness_maturation_packet_authorized_only": "yes",
       "workstream_id": "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction"
+    },
+    {
+      "Bianchi_compatibility_claimed": "no",
+      "accepted_bridge_is_local_only": "yes",
+      "active_lane": "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result",
+      "aggregate_lean_health_claimed": "no",
+      "aggregate_lean_not_run": "yes",
+      "attempt_authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelPacketForWeakConservationObstructionResultReview.lean",
+      "attempt_authorization_report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260615_v0.json",
+      "attempt_authorization_token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_COUNTERMODEL_ATTEMPT_ONLY",
+      "attempt_id": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_v0",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelAttemptForWeakConservationObstruction.lean",
+      "authorization_report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json",
+      "authorization_tool": "formal/python/tools/qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_report.py",
+      "authorized_next_strict_target": "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result",
+      "authorized_target": "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result",
+      "bounded_countermodel_attempt_authorized_only": "yes",
+      "canonical_obstruction_id": "repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3",
+      "claim_ceiling": "countermodel attempt result review only no accepted countermodel result no no-go result no source admissibility or qft_gr closure",
+      "claim_level": "Level 3 bounded countermodel attempt result review pending",
+      "conservation_claimed": "no",
+      "conservation_proof_object_constructed": "no",
+      "conservation_proved": "no",
+      "conservation_retest_rerun_authorized": "no",
+      "conservation_witness_constructed": "no",
+      "consumed_target": "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
+      "countermodel_achieved": "no",
+      "countermodel_attempt_authorized": "yes",
+      "countermodel_attempt_classified_inconclusive_pending_result_review": "yes",
+      "countermodel_attempt_executed": "yes",
+      "countermodel_attempt_pending": "no",
+      "countermodel_attempt_result_review_pending": "yes",
+      "countermodel_attempt_result_reviewed": "no",
+      "countermodel_exists_claimed": "no",
+      "countermodel_found_pending_result_review": "no",
+      "countermodel_not_found_requires_source_map_ladder": "no",
+      "countermodel_or_no_go_criteria_count": "7",
+      "countermodel_packet_result_review_accepted": "yes",
+      "countermodel_result_claimed": "no",
+      "countermodel_scope_refinement_lane_retained_as_follow_on": "yes",
+      "countermodel_scope_refinement_packet_authorized": "no",
+      "countermodel_scope_refinement_required_pending_result_review": "yes",
+      "dominant_obstruction_candidate": "weak_pairing_domain_obstruction",
+      "dominant_obstruction_resolved": "no",
+      "empirical_validation_claimed": "no",
+      "found_classification_not_selected": "yes",
+      "full_qft_gr_conservation_claimed": "no",
+      "immediate_retest_authorized": "no",
+      "inconclusive_result_claimed": "no",
+      "latest_surface": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_v0",
+      "latest_surface_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelAttemptForWeakConservationObstruction.lean",
+      "latest_surface_report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json",
+      "latest_surface_token": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+      "latest_surface_tool": "formal/python/tools/qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_report.py",
+      "master_action_promoted": "no",
+      "master_action_promotion_authorized": "no",
+      "mathematical_resolution_claimed": "no",
+      "no_go_result_claimed": "no",
+      "non_claim_boundary": "The current lane may review only the bounded countermodel attempt result. It does not execute another countermodel attempt, does not accept a countermodel result, does not accept a no-go result, preserves no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no broad QFT-GR conservation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion.",
+      "not_found_classification_not_selected": "yes",
+      "not_found_result_claimed": "no",
+      "obstruction_status": "stabilized_for_next_target_selection_not_resolved",
+      "ordinary_model_refinement_authorized": "no",
+      "outcome_id": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+      "physical_source_claimed": "no",
+      "positive_witness_bridge_law_scope": "field_equation_residual_zero_plus_divergence_identity_plus_allowed_weak_pairing_plus_no_boundary_compact_support_implies_weak_conservation_against_allowed_tests",
+      "previous_live_next_target": "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
+      "public_submission_authorized": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "qft_gr_source_map_closure_claimed": "no",
+      "release_index_path_not_freshly_lean_validated": "yes",
+      "release_packet_assembled": "no",
+      "report": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json",
+      "result_classification": "qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_inconclusive_requires_countermodel_scope_refinement",
+      "result_classification_count": "1",
+      "result_review_pending": "yes",
+      "scientific_validation_claimed": "no",
+      "selected_classification": "qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_inconclusive_requires_countermodel_scope_refinement",
+      "selected_classification_count": "1",
+      "selected_countermodel_criterion_count": "0",
+      "selected_next_target": "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result",
+      "selected_no_go_criterion_count": "0",
+      "semiclassical_einstein_equation_derived": "no",
+      "source_admissibility_can_be_considered": "no",
+      "source_admissibility_claimed": "no",
+      "source_map_ladder_lane_retained_as_follow_on": "yes",
+      "source_map_ladder_packet_authorized": "no",
+      "status": "active",
+      "stress_energy_source_admissibility_claimed": "no",
+      "strict_toy_assumptions_only": "yes",
+      "strict_toy_witness_accepted": "yes",
+      "strict_toy_witness_preserved": "yes",
+      "unbounded_conservation_proved": "no",
+      "workstream_id": "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result"
     }
   ]
 }
