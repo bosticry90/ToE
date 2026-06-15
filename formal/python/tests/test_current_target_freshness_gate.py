@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "execute_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions"
+    "review_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,7 +1329,7 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result"
+    "execute_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1422,7 +1422,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "execute_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions"
+    "review_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1439,7 +1439,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalPositiveConservationWitnessPacketUnderStrictToyAssumptionsResultReview.lean"
+    / "QFTGRMinimalPositiveConservationWitnessAttemptUnderStrictToyAssumptions.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2969,22 +2969,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert positive_witness_attempt_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_POSITIVE_CONSERVATION_WITNESS_PACKET_UNDER_STRICT_"
-        "TOY_ASSUMPTIONS_RESULT_REVIEW_20260614_v0.json"
+        "QFT_GR_MINIMAL_POSITIVE_CONSERVATION_WITNESS_ATTEMPT_UNDER_STRICT_"
+        "TOY_ASSUMPTIONS_20260614_v0.json"
     )
     assert (
         positive_witness_attempt_active_workstream["outcome_id"]
-        == "QFT_GR_MINIMAL_POSITIVE_CONSERVATION_WITNESS_PACKET_UNDER_STRICT_"
-        "TOY_ASSUMPTIONS_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_"
-        "WITNESS_ATTEMPT_ONLY"
+        == "QFT_GR_MINIMAL_POSITIVE_CONSERVATION_WITNESS_ATTEMPT_UNDER_STRICT_"
+        "TOY_ASSUMPTIONS_EXECUTED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
     )
     assert (
         positive_witness_attempt_active_workstream["claim_level"]
-        == "Level 3 minimal positive conservation witness attempt authorized under strict toy assumptions"
+        == "Level 3 strict toy weak-conservation witness achieved pending result review"
     )
     assert (
         positive_witness_attempt_active_workstream["claim_ceiling"]
-        == "bounded strict toy witness attempt execution only"
+        == "strict toy weak conservation attempt result review only"
     )
     assert (
         "no source admissibility"
@@ -2995,7 +2994,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        positive_witness_attempt_active_workstream["witness_attempt_pending"]
+        positive_witness_attempt_active_workstream["result_review_pending"]
         == "yes"
     )
     assert (
@@ -3016,7 +3015,25 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         positive_witness_attempt_active_workstream["positive_witness_attempt_executed"]
-        == "no"
+        == "yes"
+    )
+    assert (
+        positive_witness_attempt_active_workstream[
+            "strict_toy_weak_conservation_witness_achieved"
+        ]
+        == "yes"
+    )
+    assert (
+        positive_witness_attempt_active_workstream[
+            "strict_toy_weak_conservation_theorem_constructed"
+        ]
+        == "yes"
+    )
+    assert (
+        positive_witness_attempt_active_workstream[
+            "weak_conservation_against_allowed_tests_proved"
+        ]
+        == "yes"
     )
     assert (
         positive_witness_attempt_active_workstream[

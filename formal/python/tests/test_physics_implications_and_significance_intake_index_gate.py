@@ -21,7 +21,7 @@ CURRENT_LIVE_NEXT_TARGET,
 )
 
 POST_MR_LIVE_TARGET = (
-    "execute_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions"
+    "review_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result"
 )
 
 

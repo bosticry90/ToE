@@ -256,9 +256,9 @@ def test_minimal_working_model_packet_has_lean_and_public_surface_mirrors() -> N
         CONSERVATION_TEST_PACKET_TARGET,
         FINAL_LIVE_TARGET,
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "execute_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions",
+        "review_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "review_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result",
+        "execute_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions",
         "no source admissibility",
         "no QFT-GR closure",
         "no public submission",
@@ -276,7 +276,7 @@ def test_minimal_working_model_packet_has_lean_and_public_surface_mirrors() -> N
         f'  "{CONSERVATION_TEST_ATTEMPT_RESULT_REVIEW_TARGET}"'
         in frontier
         or 'def currentLiveNextStrictTargetV0 : String :=\n'
-        '  "execute_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions"'
+        '  "review_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result"'
         in frontier
     )
 
