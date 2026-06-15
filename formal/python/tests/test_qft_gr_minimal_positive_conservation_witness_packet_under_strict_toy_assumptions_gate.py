@@ -303,9 +303,9 @@ def test_qft_gr_minimal_positive_conservation_witness_packet_lean_and_surface_mi
         CONSUMED_TARGET,
         NEXT_TARGET,
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "prepare_qft_gr_minimal_positive_conservation_witness_maturation_packet",
+        "review_qft_gr_minimal_positive_conservation_witness_maturation_packet_result",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "review_qft_gr_minimal_positive_conservation_witness_attempt_under_strict_toy_assumptions_result",
+        "prepare_qft_gr_minimal_positive_conservation_witness_maturation_packet",
         "strict_toy_compact_support_smooth_test_vector_class_v0",
         "strict_toy_source_test_pairing_v0",
         "strict_toy_weak_divergence_pairing_v0",
