@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_qft_gr_minimal_positive_conservation_witness_maturation_packet_result"
+    "prepare_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,7 +1329,7 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_minimal_positive_conservation_witness_maturation_packet"
+    "review_qft_gr_minimal_positive_conservation_witness_maturation_packet_result"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1422,7 +1422,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_qft_gr_minimal_positive_conservation_witness_maturation_packet_result"
+    "prepare_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1439,7 +1439,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalPositiveConservationWitnessMaturation.lean"
+    / "QFTGRMinimalPositiveConservationWitnessMaturationResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2969,20 +2969,20 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert positive_witness_attempt_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_POSITIVE_CONSERVATION_WITNESS_MATURATION_20260614_v0.json"
+        "QFT_GR_MINIMAL_POSITIVE_CONSERVATION_WITNESS_MATURATION_RESULT_REVIEW_20260614_v0.json"
     )
     assert (
         positive_witness_attempt_active_workstream["outcome_id"]
-        == "QFT_GR_MINIMAL_POSITIVE_CONSERVATION_WITNESS_MATURATION_PACKET_PREPARED_"
-        "WITH_STRICT_TOY_SCOPE_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+        == "QFT_GR_MINIMAL_POSITIVE_CONSERVATION_WITNESS_MATURATION_PACKET_RESULT_REVIEW_"
+        "ACCEPTS_STRICT_TOY_SCOPE_AND_AUTHORIZES_COUNTERMODEL_PACKET_ONLY"
     )
     assert (
         positive_witness_attempt_active_workstream["claim_level"]
-        == "Level 3 strict toy weak-conservation witness maturation packet prepared pending result review"
+        == "Level 3 strict toy weak-conservation witness maturation scope accepted pending countermodel packet"
     )
     assert (
         positive_witness_attempt_active_workstream["claim_ceiling"]
-        == "strict toy witness maturation packet result review only"
+        == "countermodel packet preparation only no source admissibility or qft_gr closure"
     )
     assert (
         "no source admissibility"
@@ -2994,11 +2994,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         positive_witness_attempt_active_workstream["packet_preparation_pending"]
-        == "no"
+        == "yes"
     )
     assert (
         positive_witness_attempt_active_workstream["packet_result_review_pending"]
-        == "yes"
+        == "no"
     )
     assert (
         positive_witness_attempt_active_workstream["maturation_packet_prepared"]
@@ -3008,7 +3008,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         positive_witness_attempt_active_workstream[
             "maturation_packet_result_reviewed"
         ]
-        == "no"
+        == "yes"
     )
     assert (
         positive_witness_attempt_active_workstream[
@@ -3025,6 +3025,46 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert (
         positive_witness_attempt_active_workstream[
             "maturation_packet_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        positive_witness_attempt_active_workstream[
+            "maturation_packet_accepted_as_scope_control_artifact"
+        ]
+        == "yes"
+    )
+    assert (
+        positive_witness_attempt_active_workstream[
+            "countermodel_packet_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        positive_witness_attempt_active_workstream[
+            "countermodel_packet_authorized_only"
+        ]
+        == "yes"
+    )
+    assert (
+        positive_witness_attempt_active_workstream[
+            "countermodel_packet_preparation_pending"
+        ]
+        == "yes"
+    )
+    assert (
+        positive_witness_attempt_active_workstream["countermodel_packet_prepared"]
+        == "no"
+    )
+    assert (
+        positive_witness_attempt_active_workstream[
+            "source_map_ladder_packet_authorized"
+        ]
+        == "no"
+    )
+    assert (
+        positive_witness_attempt_active_workstream[
+            "source_map_ladder_lane_retained_as_follow_on"
         ]
         == "yes"
     )
