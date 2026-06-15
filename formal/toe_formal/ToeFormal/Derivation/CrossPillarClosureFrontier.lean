@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR minimal-model countermodel attempt for the retained weak-conservation obstruction executed only the bounded criteria check authorized by the packet result review. The attempt preserves the accepted strict toy witness under its strict assumptions, evaluates the broader-candidate-family countermodel/no-go criteria including undefined weak pairing, nonzero weak divergence against allowed broader tests, unjustified derivative exchange, surviving boundary terms, non-derivable divergence identity, test-vector-class mismatch, and uncancelled curvature-coupling terms, records the selected bounded classification qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_inconclusive_requires_countermodel_scope_refinement pending result review, carries weak_pairing_domain_obstruction as an unresolved dominant obstruction candidate with canonical id repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3, blocks found-countermodel and not-found/source-map-ladder classifications before result review, preserves bounded validation-only discipline including standing aggregate Lean and release-index caveats, and preserves no countermodel result claim, no no-go result claim, no broad QFT-GR conservation claim, no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR closure"
+        "QFT-GR minimal-model countermodel-attempt result review for the retained weak-conservation obstruction accepts only the executed bounded attempt as inconclusive, preserves the classification qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_inconclusive_requires_countermodel_scope_refinement, confirms that neither the found-countermodel nor not-found/source-map-ladder branch was selected, records that no countermodel/no-go result was found while also not establishing that no countermodel exists, identifies the sharper missing-specificity obstruction as concrete broader source/test instantiation plus pinned weak-pairing totality or partiality semantics plus broader divergence or boundary evaluation scope, authorizes only prepare_qft_gr_minimal_model_countermodel_scope_refinement_packet_for_weak_conservation_obstruction, preserves the accepted strict toy witness under strict assumptions, carries weak_pairing_domain_obstruction as unresolved with canonical id repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3, preserves bounded validation-only discipline including standing aggregate Lean and release-index caveats, and preserves no countermodel result claim, no no-go result claim, no not-found result claim, no broad QFT-GR conservation claim, no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result"
+        "prepare_qft_gr_minimal_model_countermodel_scope_refinement_packet_for_weak_conservation_obstruction"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR minimal-model countermodel attempt for the retained weak-conservation obstruction executed as bounded and selected only the inconclusive countermodel-scope-refinement classification pending result review; it preserves the strict toy witness under its assumptions, retains broader-candidate-family countermodel/no-go criteria as pressure points, keeps source-map ladder as later follow-on, preserves the unresolved dominant weak-pairing obstruction candidate and bounded validation-only discipline, and makes no countermodel-result claim, no-go-result claim, source-admissibility claim, broad conservation pass claim, broad conservation proof-object claim, broad conservation witness claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
+        "QFT-GR minimal-model countermodel-attempt result review accepts the bounded attempt as inconclusive and authorizes only countermodel scope-refinement packet preparation; it preserves the strict toy witness under its assumptions, confirms no found-countermodel, no no-go, and no not-found/source-map-ladder result, retains the broader source/test and weak-pairing semantics specificity obstruction as the next bounded preparation target, preserves the unresolved dominant weak-pairing obstruction candidate and bounded validation-only discipline, and makes no countermodel-result claim, no-go-result claim, not-found claim, source-admissibility claim, broad conservation pass claim, broad conservation proof-object claim, broad conservation witness claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result"
+        "prepare_qft_gr_minimal_model_countermodel_scope_refinement_packet_for_weak_conservation_obstruction"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the weak-conservation countermodel attempt. -/
+/-- Previous live target consumed by the weak-conservation countermodel-attempt result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction"
-
-/-- Current live target after the weak-conservation countermodel attempt. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result"
+
+/-- Current live target after the weak-conservation countermodel-attempt result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_minimal_model_countermodel_scope_refinement_packet_for_weak_conservation_obstruction"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction_result"
+    "prepare_qft_gr_minimal_model_countermodel_scope_refinement_packet_for_weak_conservation_obstruction"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
