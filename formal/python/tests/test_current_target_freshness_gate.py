@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_qft_gr_minimal_model_obstruction_class_stabilization_packet"
+    "review_qft_gr_minimal_model_obstruction_class_stabilization_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,7 +1329,7 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_refinement_result"
+    "prepare_qft_gr_minimal_model_obstruction_class_stabilization_packet"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1422,7 +1422,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_minimal_model_obstruction_class_stabilization_packet"
+    "review_qft_gr_minimal_model_obstruction_class_stabilization_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1439,7 +1439,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalWorkingModelConservationRetestAttemptAfterPostRetestRefinementConservationRetestRefinementRefinementResultReview.lean"
+    / "QFTGRMinimalModelObstructionClassStabilization.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2949,126 +2949,138 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    obstruction_stabilization_active_workstream = active_workstream(payload)
+    obstruction_stabilization_review_active_workstream = active_workstream(payload)
     assert (
-        obstruction_stabilization_active_workstream["workstream_id"] == ACTIVE_LANE
+        obstruction_stabilization_review_active_workstream["workstream_id"] == ACTIVE_LANE
     )
     assert (
-        obstruction_stabilization_active_workstream[
+        obstruction_stabilization_review_active_workstream[
             "authorized_next_strict_target"
         ]
         == LIVE_TARGET
     )
     assert (
-        obstruction_stabilization_active_workstream["authorized_target"]
+        obstruction_stabilization_review_active_workstream["authorized_target"]
         == LIVE_TARGET
     )
     assert (
-        obstruction_stabilization_active_workstream[
+        obstruction_stabilization_review_active_workstream[
             "authorization_evidence"
         ]
         == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     )
-    assert obstruction_stabilization_active_workstream["report"] == (
+    assert obstruction_stabilization_review_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_ATTEMPT_AFTER_POST_"
-        "RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_RESULT_REVIEW_"
-        "20260614_v0.json"
+        "QFT_GR_MINIMAL_MODEL_OBSTRUCTION_CLASS_STABILIZATION_20260614_v0.json"
     )
     assert (
-        obstruction_stabilization_active_workstream["outcome_id"]
-        == "QFT_GR_MINIMAL_WORKING_MODEL_CONSERVATION_RETEST_RESULT_REVIEW_"
-        "ACCEPTS_REPEATED_INCONCLUSIVE_PATTERN_AND_AUTHORIZES_OBSTRUCTION_CLASS_"
-        "STABILIZATION_ONLY"
+        obstruction_stabilization_review_active_workstream["outcome_id"]
+        == "QFT_GR_MINIMAL_MODEL_OBSTRUCTION_CLASS_STABILIZATION_PACKET_"
+        "PREPARED_WITH_DOMINANT_WEAK_PAIRING_OBSTRUCTION_CANDIDATE_AND_NO_"
+        "SOURCE_ADMISSIBILITY_OR_CONSERVATION_PROOF"
     )
     assert (
-        obstruction_stabilization_active_workstream["claim_level"]
-        == "Level 3 minimal working model repeated inconclusive conservation retest result review accepted"
+        obstruction_stabilization_review_active_workstream["claim_level"]
+        == "Level 3 minimal model obstruction-class stabilization packet prepared"
     )
     assert (
-        obstruction_stabilization_active_workstream["claim_ceiling"]
-        == "obstruction-class stabilization packet preparation only"
+        obstruction_stabilization_review_active_workstream["claim_ceiling"]
+        == "obstruction-class stabilization packet result review only"
     )
     assert (
         "no source admissibility"
-        in obstruction_stabilization_active_workstream[
+        in obstruction_stabilization_review_active_workstream[
             "non_claim_boundary"
         ]
     )
     assert (
-        obstruction_stabilization_active_workstream["consumed_target"]
+        obstruction_stabilization_review_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        obstruction_stabilization_active_workstream[
-            "obstruction_class_stabilization_packet_authorized"
-        ]
-        == "yes"
-    )
-    assert (
-        obstruction_stabilization_active_workstream[
+        obstruction_stabilization_review_active_workstream[
             "obstruction_class_stabilization_packet_prepared"
         ]
-        == "no"
-    )
-    assert (
-        obstruction_stabilization_active_workstream["packet_preparation_pending"]
         == "yes"
     )
     assert (
-        obstruction_stabilization_active_workstream[
+        obstruction_stabilization_review_active_workstream["packet_prepared"]
+        == "yes"
+    )
+    assert (
+        obstruction_stabilization_review_active_workstream["result_review_pending"]
+        == "yes"
+    )
+    assert (
+        obstruction_stabilization_review_active_workstream[
             "repeated_inconclusive_pattern_recorded"
         ]
         == "yes"
     )
     assert (
-        obstruction_stabilization_active_workstream[
+        obstruction_stabilization_review_active_workstream[
             "dominant_obstruction_candidate"
         ]
         == "weak_pairing_domain_obstruction"
     )
     assert (
-        obstruction_stabilization_active_workstream[
+        obstruction_stabilization_review_active_workstream[
             "canonical_obstruction_id"
         ]
         == "repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3"
     )
     assert (
-        obstruction_stabilization_active_workstream[
+        obstruction_stabilization_review_active_workstream[
             "obstruction_status"
         ]
         == "stabilized_for_next_target_selection_not_resolved"
     )
     assert (
-        obstruction_stabilization_active_workstream[
-            "ordinary_model_refinement_packet_authorized"
+        obstruction_stabilization_review_active_workstream[
+            "dominant_obstruction_resolved"
         ]
         == "no"
     )
     assert (
-        obstruction_stabilization_active_workstream[
-            "immediate_conservation_retest_authorized"
+        obstruction_stabilization_review_active_workstream[
+            "mathematical_resolution_claimed"
         ]
         == "no"
     )
     assert (
-        obstruction_stabilization_active_workstream[
-            "positive_witness_lane_recommended_after_stabilization"
+        obstruction_stabilization_review_active_workstream[
+            "ordinary_model_refinement_authorized"
+        ]
+        == "no"
+    )
+    assert (
+        obstruction_stabilization_review_active_workstream["immediate_retest_authorized"]
+        == "no"
+    )
+    assert (
+        obstruction_stabilization_review_active_workstream[
+            "positive_witness_lane_recommended"
         ]
         == "yes"
     )
     assert (
-        obstruction_stabilization_active_workstream["source_admissibility_claimed"]
+        obstruction_stabilization_review_active_workstream[
+            "recommended_next_lane_after_review"
+        ]
+        == "prepare_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions"
+    )
+    assert (
+        obstruction_stabilization_review_active_workstream["source_admissibility_claimed"]
         == "no"
     )
     assert (
-        obstruction_stabilization_active_workstream[
+        obstruction_stabilization_review_active_workstream[
             "conservation_witness_constructed"
         ]
         == "no"
     )
     assert (
-        obstruction_stabilization_active_workstream["qft_gr_closure_claimed"]
+        obstruction_stabilization_review_active_workstream["qft_gr_closure_claimed"]
         == "no"
     )
 
@@ -8574,7 +8586,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        obstruction_stabilization_active_workstream[
+        obstruction_stabilization_review_active_workstream[
             "authorized_next_strict_target"
         ],
     }

@@ -21,7 +21,7 @@ CURRENT_LIVE_NEXT_TARGET,
 )
 
 POST_MR_LIVE_TARGET = (
-    "prepare_qft_gr_minimal_model_obstruction_class_stabilization_packet"
+    "review_qft_gr_minimal_model_obstruction_class_stabilization_packet_result"
 )
 
 

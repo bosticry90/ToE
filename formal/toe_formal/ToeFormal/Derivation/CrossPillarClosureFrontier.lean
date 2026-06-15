@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR minimal working model latest v4 conservation-retest result review accepted the repeated inconclusive pattern, selected weak_pairing_domain_obstruction only as a dominant obstruction candidate for stabilization rather than a solved theorem, authorized obstruction-class stabilization packet preparation only, blocked immediate retest and ordinary model refinement, preserved candidate-only status and bounded validation-only discipline including standing aggregate Lean and release-index caveats, and preserved no conservation proof object or witness, no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR closure"
+        "QFT-GR minimal-model obstruction-class stabilization packet prepared after the repeated inconclusive v4 conservation-retest pattern; it compresses the five-attempt minimal-model conservation chain, selects weak_pairing_domain_obstruction only as a dominant obstruction candidate with canonical id repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3 and status stabilized_for_next_target_selection_not_resolved, recommends the positive witness lane after packet review, blocks immediate retest and ordinary model refinement, preserves candidate-only status and bounded validation-only discipline including standing aggregate Lean and release-index caveats, and preserves no conservation proof object or witness, no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_minimal_model_obstruction_class_stabilization_packet"
+        "review_qft_gr_minimal_model_obstruction_class_stabilization_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR minimal working model latest v4 conservation-retest result review accepted the repeated inconclusive pattern and authorized obstruction-class stabilization packet preparation only; it treats weak_pairing_domain_obstruction as a dominant obstruction candidate for stabilization, not a solved theorem, blocks immediate retest and ordinary model refinement, preserves candidate-only status and bounded validation-only discipline, and makes no source-admissibility claim, conservation pass claim, conservation proof-object claim, conservation witness claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
+        "QFT-GR minimal-model obstruction-class stabilization packet prepared; it treats weak_pairing_domain_obstruction as the provisional dominant obstruction candidate for next-target selection, not a solved theorem, records the repeated inconclusive pattern as a stabilization signal, recommends positive witness work only after packet review, blocks immediate retest and ordinary model refinement, preserves candidate-only status and bounded validation-only discipline, and makes no source-admissibility claim, conservation pass claim, conservation proof-object claim, conservation witness claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_minimal_model_obstruction_class_stabilization_packet"
+        "review_qft_gr_minimal_model_obstruction_class_stabilization_packet_result"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the latest v4 conservation-retest result review. -/
+/-- Previous live target consumed by the obstruction-class stabilization packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_minimal_working_model_conservation_retest_attempt_after_post_retest_refinement_conservation_retest_refinement_refinement_result"
-
-/-- Current live target after the latest v4 conservation-retest result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_minimal_model_obstruction_class_stabilization_packet"
+
+/-- Current live target after the obstruction-class stabilization packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_minimal_model_obstruction_class_stabilization_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_qft_gr_minimal_model_obstruction_class_stabilization_packet"
+    "review_qft_gr_minimal_model_obstruction_class_stabilization_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
