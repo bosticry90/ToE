@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR minimal-model obstruction-class stabilization packet result review accepted weak_pairing_domain_obstruction only as an unresolved dominant obstruction candidate with canonical id repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3, accepted the repeated inconclusive pattern as a stabilization signal, authorized only strict toy positive conservation witness packet preparation, blocked immediate retest and ordinary model refinement, preserved candidate-only status and bounded validation-only discipline including standing aggregate Lean and release-index caveats, and preserved no conservation proof object or witness, no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR closure"
+        "QFT-GR minimal positive conservation witness packet under strict toy assumptions prepared after the obstruction-class stabilization packet result review; it carries weak_pairing_domain_obstruction as an unresolved dominant obstruction candidate with canonical id repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3, defines only the strict toy allowed weak test class, weak pairing, source object, divergence pairing, field-equation residual zero, divergence identity, compact-support/no-boundary condition, and future pass/fail/inconclusive criteria for the law-shaped bridge, selects only the packet result review, blocks witness execution before review, immediate retest, and ordinary model refinement, preserves bounded validation-only discipline including standing aggregate Lean and release-index caveats, and preserves no conservation proof object or witness, no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions"
+        "review_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR minimal-model obstruction-class stabilization packet result review accepted the unresolved dominant weak-pairing obstruction candidate as a decision-forcing classification step and authorized only strict toy positive conservation witness packet preparation; it blocks immediate retest and ordinary model refinement, preserves candidate-only status and bounded validation-only discipline, and makes no source-admissibility claim, conservation pass claim, conservation proof-object claim, conservation witness claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
+        "QFT-GR minimal positive conservation witness packet under strict toy assumptions prepared the allowed weak test class, weak pairing, source object, divergence pairing, field-equation residual zero, divergence identity, compact-support/no-boundary condition, and future pass/fail/inconclusive criteria while preserving the unresolved dominant weak-pairing obstruction candidate; it selects only packet result review, blocks witness execution before review, immediate retest, and ordinary model refinement, preserves candidate-only status and bounded validation-only discipline, and makes no source-admissibility claim, conservation pass claim, conservation proof-object claim, conservation witness claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions"
+        "review_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the obstruction-class stabilization packet result review. -/
+/-- Previous live target consumed by the strict toy positive witness packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_minimal_model_obstruction_class_stabilization_packet_result"
-
-/-- Current live target after the obstruction-class stabilization packet result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions"
+
+/-- Current live target after the strict toy positive witness packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions"
+    "review_qft_gr_minimal_positive_conservation_witness_packet_under_strict_toy_assumptions_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
