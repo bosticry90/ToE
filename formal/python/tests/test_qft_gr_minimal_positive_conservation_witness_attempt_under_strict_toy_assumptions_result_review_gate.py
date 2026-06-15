@@ -309,9 +309,9 @@ def test_strict_toy_witness_attempt_result_review_lean_and_surface_mirrors() -> 
         CONSUMED_TARGET,
         NEXT_TARGET,
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
+        "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "prepare_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction",
+        "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
         "strict_toy_witness_result_review_accepts_bridge_theorem",
         "strict_toy_local_weak_conservation_bridge_witness_only",
         "no source admissibility",

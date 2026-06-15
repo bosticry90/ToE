@@ -8,7 +8,8 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
     skip_if_not_current_target,
 )
-from formal.python.tools.qft_gr_minimal_positive_conservation_witness_maturation_report import (
+from formal.python.tools.qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_report import (
+    COUNTERMODEL_ATTEMPT_TARGET,
     DEFAULT_OUT as PACKET_PATH,
     OUTCOME_ID as PACKET_OUTCOME,
     PACKET_CLASSIFICATION,
@@ -16,7 +17,7 @@ from formal.python.tools.qft_gr_minimal_positive_conservation_witness_maturation
     POSITIVE_WITNESS_BRIDGE_LAW,
     SCHEMA_ID as PACKET_SCHEMA_ID,
 )
-from formal.python.tools.qft_gr_minimal_positive_conservation_witness_maturation_result_review_report import (
+from formal.python.tools.qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review_report import (
     CANONICAL_OBSTRUCTION_ID,
     CONSUMED_TARGET,
     DEFAULT_OUT,
@@ -29,8 +30,7 @@ from formal.python.tools.qft_gr_minimal_positive_conservation_witness_maturation
     RESULT_REVIEW_CLASSIFICATION,
     REVIEW_ID,
     SCHEMA_ID,
-    SOURCE_MAP_LADDER_TARGET,
-    build_qft_gr_minimal_positive_conservation_witness_maturation_result_review,
+    build_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review,
 )
 
 
@@ -40,7 +40,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "qft_gr_minimal_positive_conservation_witness_maturation_result_review_report.py"
+    / "qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review_report.py"
 )
 TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
@@ -85,14 +85,14 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_positive_conservation_witness_maturation_result_review_files_exist() -> None:
+def test_countermodel_packet_result_review_files_exist() -> None:
     assert PACKET_PATH.exists()
     assert DEFAULT_OUT.exists()
     assert TOOL_PATH.exists()
     assert LEAN_REVIEW_PATH.exists()
 
 
-def test_positive_conservation_witness_maturation_result_review_consumes_packet() -> None:
+def test_countermodel_packet_result_review_consumes_packet() -> None:
     review = _json(DEFAULT_OUT)
     packet = _json(PACKET_PATH)
     assert review["schema_id"] == SCHEMA_ID
@@ -102,7 +102,7 @@ def test_positive_conservation_witness_maturation_result_review_consumes_packet(
     assert review["outcome_id"] == OUTCOME_ID
     assert review["result_review_classification"] == RESULT_REVIEW_CLASSIFICATION
     assert review["consumed_target"] == CONSUMED_TARGET
-    assert review["consumes_maturation_packet_id"] == PACKET_ID
+    assert review["consumes_countermodel_packet_id"] == PACKET_ID
     assert packet["schema_id"] == PACKET_SCHEMA_ID
     assert packet["packet_id"] == PACKET_ID
     assert packet["outcome_id"] == PACKET_OUTCOME
@@ -110,72 +110,58 @@ def test_positive_conservation_witness_maturation_result_review_consumes_packet(
     assert packet["selected_next_target"] == CONSUMED_TARGET
 
 
-def test_positive_conservation_witness_maturation_result_review_accepts_scope_only() -> None:
+def test_countermodel_packet_result_review_accepts_packet_without_broadening() -> None:
     review = _json(DEFAULT_OUT)
-    assert review["maturation_packet_result_review_accepted"] is True
-    assert review["maturation_packet_consumed"] is True
-    assert review["maturation_packet_accepted_as_scope_control_artifact"] is True
-    assert review["strict_toy_scope_accepted"] is True
-    assert review["strict_toy_assumptions_only"] is True
-    assert review["strict_toy_witness_scope_preserved"] is True
-    assert review["accepted_bridge_is_local_only"] is True
-    assert review["local_witness_scope"] == (
-        "strict_toy_local_weak_conservation_bridge_witness_only"
-    )
-    assert review["positive_witness_bridge_law_scope"] == POSITIVE_WITNESS_BRIDGE_LAW
+    assert review["countermodel_packet_result_review_accepted"] is True
+    assert review["countermodel_packet_consumed"] is True
+    assert review["countermodel_packet_accepted"] is True
+    assert review["countermodel_packet_prepared"] is True
+    assert review["countermodel_or_no_go_criteria_accepted"] is True
+    assert review["countermodel_or_no_go_criteria_count"] == 7
+    assert review["attempt_classification_count"] == 3
+    assert review["strict_toy_witness_preserved"] is True
     assert review["strict_toy_witness_accepted"] is True
-    assert review["local_conservation_bridge_witness_accepted"] is True
-    assert review["strict_toy_weak_conservation_witness_achieved"] is True
-    assert review["weak_conservation_against_allowed_tests_proved"] is True
+    assert review["strict_toy_assumptions_only"] is True
+    assert review["countermodel_packet_is_not_strict_toy_witness_refutation"] is True
+    assert review["positive_witness_bridge_law_scope"] == POSITIVE_WITNESS_BRIDGE_LAW
 
 
-def test_positive_conservation_witness_maturation_result_review_preserves_maturation_burden() -> None:
+def test_countermodel_packet_result_review_authorizes_attempt_only() -> None:
     review = _json(DEFAULT_OUT)
-    assert review["strict_toy_assumption_count"] == 7
-    assert review["supplied_not_derived_count"] == 6
-    assert review["source_admissibility_precondition_count"] == 7
-    assert review["supplied_not_derived_burden_recorded"] is True
-    assert review["source_admissibility_preconditions_recorded"] is True
-    assert review["source_admissibility_preconditions_satisfied"] is False
-    assert review["source_admissibility_can_be_considered"] is False
-    assert review["dominant_obstruction_candidate"] == DOMINANT_OBSTRUCTION_CANDIDATE
-    assert review["canonical_obstruction_id"] == CANONICAL_OBSTRUCTION_ID
-    assert review["obstruction_status"] == OBSTRUCTION_STATUS
-    assert review["dominant_obstruction_resolved"] is False
-    assert review["mathematical_resolution_claimed"] is False
-
-
-def test_positive_conservation_witness_maturation_result_review_authorizes_countermodel_only() -> None:
-    review = _json(DEFAULT_OUT)
-    assert review["countermodel_packet_authorized"] is True
-    assert review["countermodel_packet_authorized_only"] is True
-    assert review["countermodel_packet_prepared"] is False
+    assert review["bounded_countermodel_attempt_authorized_only"] is True
+    assert review["countermodel_attempt_authorized"] is True
+    assert review["countermodel_attempt_executed"] is False
+    assert review["countermodel_result_claimed"] is False
+    assert review["countermodel_achieved"] is False
+    assert review["no_go_result_claimed"] is False
+    assert review["inconclusive_result_claimed"] is False
+    assert review["countermodel_exists_claimed"] is False
     assert review["selected_next_target"] == NEXT_TARGET
     assert review["result_review_selected_next_target"] == NEXT_TARGET
     assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
     assert review["selection_count"] == 1
     assert review["selected_next_target_count"] == 1
+    assert NEXT_TARGET == COUNTERMODEL_ATTEMPT_TARGET
     decisions = {row["target"]: row["decision"] for row in review["candidate_next_targets"]}
     assert decisions[NEXT_TARGET] == "selected"
-    assert decisions[CONSUMED_TARGET] == "completed_consumed_live_target"
-    assert decisions[SOURCE_MAP_LADDER_TARGET] == (
-        "retained_follow_on_after_countermodel_packet"
-    )
-    assert decisions["claim_qft_gr_source_admissibility"] == "not_authorized"
-    assert decisions["claim_broad_qft_gr_conservation"] == "not_authorized"
-    assert decisions["close_qft_gr_seam"] == "not_authorized"
-    assert decisions["promote_master_action"] == "not_authorized"
+    assert decisions["claim_countermodel_exists"] == "not_authorized_by_review"
+    assert decisions["claim_no_go_result"] == "not_authorized_by_review"
 
 
-def test_positive_conservation_witness_maturation_result_review_preserves_nonclaims() -> None:
+def test_countermodel_packet_result_review_preserves_obstruction_and_nonclaims() -> None:
     review = _json(DEFAULT_OUT)
+    assert review["dominant_obstruction_candidate"] == DOMINANT_OBSTRUCTION_CANDIDATE
+    assert review["canonical_obstruction_id"] == CANONICAL_OBSTRUCTION_ID
+    assert review["obstruction_status"] == OBSTRUCTION_STATUS
+    assert review["dominant_obstruction_resolved"] is False
+    assert review["mathematical_resolution_claimed"] is False
     assert review["source_map_ladder_lane_retained_as_follow_on"] is True
     assert review["source_map_ladder_packet_authorized"] is False
     for key in [
-        "maturation_attempt_authorized",
         "immediate_retest_authorized",
         "conservation_retest_rerun_authorized",
         "ordinary_model_refinement_authorized",
+        "source_admissibility_can_be_considered",
         "source_admissibility_claimed",
         "stress_energy_source_admissibility_claimed",
         "physical_source_claimed",
@@ -201,7 +187,7 @@ def test_positive_conservation_witness_maturation_result_review_preserves_noncla
         assert review[key] is False, key
 
 
-def test_positive_conservation_witness_maturation_result_review_validation_policy() -> None:
+def test_countermodel_packet_result_review_validation_policy() -> None:
     review = _json(DEFAULT_OUT)
     policy = review["validation_policy"]
     for key in [
@@ -223,7 +209,7 @@ def test_positive_conservation_witness_maturation_result_review_validation_polic
         assert value is True, f"Acceptance criterion failed: {key}"
 
 
-def test_positive_conservation_witness_maturation_result_review_updates_live_target() -> None:
+def test_countermodel_packet_result_review_updates_live_target() -> None:
     registry = _json(REGISTRY_PATH)
     skip_if_not_current_target(registry, NEXT_TARGET)
     state = registry["current_target_state"]
@@ -234,21 +220,22 @@ def test_positive_conservation_witness_maturation_result_review_updates_live_tar
     assert state["active_lane"] == NEXT_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "QFTGRMinimalPositiveConservationWitnessMaturationResultReview.lean"
+        "QFTGRMinimalModelCountermodelPacketForWeakConservationObstructionResultReview.lean"
     )
     assert state["live_next_target_report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_POSITIVE_CONSERVATION_WITNESS_MATURATION_RESULT_"
-        "REVIEW_20260614_v0.json"
+        "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_"
+        "OBSTRUCTION_RESULT_REVIEW_20260615_v0.json"
     )
     assert state["live_next_target_outcome"] == OUTCOME_ID
 
     review_workstream = _workstream(registry, CONSUMED_TARGET)
     assert review_workstream["status"] == "paused"
-    assert review_workstream["maturation_packet_result_reviewed"] == "yes"
+    assert review_workstream["countermodel_packet_result_review_accepted"] == "yes"
     assert review_workstream["selected_next_target"] == NEXT_TARGET
-    assert review_workstream["countermodel_packet_authorized"] == "yes"
-    assert review_workstream["source_admissibility_can_be_considered"] == "no"
+    assert review_workstream["countermodel_attempt_authorized"] == "yes"
+    assert review_workstream["countermodel_attempt_executed"] == "no"
+    assert review_workstream["countermodel_result_claimed"] == "no"
     assert review_workstream["source_admissibility_claimed"] == "no"
     assert review_workstream["qft_gr_closure_claimed"] == "no"
 
@@ -257,24 +244,24 @@ def test_positive_conservation_witness_maturation_result_review_updates_live_tar
     assert active_workstream["authorized_next_strict_target"] == NEXT_TARGET
     assert active_workstream["consumed_target"] == CONSUMED_TARGET
     assert active_workstream["outcome_id"] == OUTCOME_ID
-    assert active_workstream["countermodel_packet_authorized"] == "yes"
-    assert active_workstream["countermodel_packet_preparation_pending"] == "yes"
-    assert active_workstream["countermodel_packet_prepared"] == "no"
-    assert active_workstream["source_admissibility_can_be_considered"] == "no"
+    assert active_workstream["countermodel_attempt_pending"] == "yes"
+    assert active_workstream["countermodel_attempt_authorized"] == "yes"
+    assert active_workstream["countermodel_attempt_executed"] == "no"
+    assert active_workstream["countermodel_result_claimed"] == "no"
     assert active_workstream["source_admissibility_claimed"] == "no"
     assert active_workstream["qft_gr_closure_claimed"] == "no"
 
 
-def test_positive_conservation_witness_maturation_result_review_deterministic() -> None:
+def test_countermodel_packet_result_review_deterministic() -> None:
     review = _json(DEFAULT_OUT)
-    generated = build_qft_gr_minimal_positive_conservation_witness_maturation_result_review(
+    generated = build_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review(
         packet_path=PACKET_PATH,
-        captured_at_utc="2026-06-14T00:00:00Z",
+        captured_at_utc="2026-06-15T00:00:00Z",
     )
     assert generated == review
 
 
-def test_positive_conservation_witness_maturation_result_review_lean_and_surface_mirrors() -> None:
+def test_countermodel_packet_result_review_lean_and_surface_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -300,16 +287,19 @@ def test_positive_conservation_witness_maturation_result_review_lean_and_surface
         "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_obstruction",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
         "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result",
-        "strictToyScopeControlArtifactAccepted",
-        "suppliedNotDerivedBurdenPreserved",
+        "countermodelAttemptAuthorizedOnly",
+        "countermodelAttemptExecuted",
+        "candidate_pairing_domain_undefined",
+        "allowed_test_exposes_nonzero_weak_divergence",
         "no source admissibility",
+        "no countermodel result",
         "no QFT-GR closure",
         "no public submission",
     ]:
         assert token in joined
 
 
-def test_positive_conservation_witness_maturation_result_review_gate_not_manifest_enrolled() -> None:
+def test_countermodel_packet_result_review_gate_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_qft_gr_minimal_positive_conservation_witness_maturation_result_review_gate.py"
+        "test_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_obstruction_result_review_gate.py"
     )

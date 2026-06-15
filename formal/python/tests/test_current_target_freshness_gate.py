@@ -1158,8 +1158,8 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_"
-    "obstruction_result"
+    "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_"
+    "obstruction"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1330,8 +1330,8 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_"
-    "obstruction"
+    "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_"
+    "obstruction_result"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1424,8 +1424,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_qft_gr_minimal_model_countermodel_packet_for_weak_conservation_"
-    "obstruction_result"
+    "execute_qft_gr_minimal_model_countermodel_attempt_for_weak_conservation_"
+    "obstruction"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1442,7 +1442,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalModelCountermodelPacketForWeakConservationObstruction.lean"
+    / "QFTGRMinimalModelCountermodelPacketForWeakConservationObstructionResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2973,20 +2973,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert positive_witness_attempt_active_workstream["report"] == (
         "formal/docs/release/"
         "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_"
-        "OBSTRUCTION_20260614_v0.json"
+        "OBSTRUCTION_RESULT_REVIEW_20260615_v0.json"
     )
     assert (
         positive_witness_attempt_active_workstream["outcome_id"]
         == "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_PACKET_FOR_WEAK_CONSERVATION_"
-        "OBSTRUCTION_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+        "OBSTRUCTION_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_BOUNDED_"
+        "COUNTERMODEL_ATTEMPT_ONLY"
     )
     assert (
         positive_witness_attempt_active_workstream["claim_level"]
-        == "Level 3 countermodel packet for weak-conservation obstruction prepared pending result review"
+        == "Level 3 bounded countermodel attempt authorized pending execution"
     )
     assert (
         positive_witness_attempt_active_workstream["claim_ceiling"]
-        == "countermodel packet result review only no source admissibility or qft_gr closure"
+        == "bounded countermodel attempt execution only no countermodel result source admissibility or qft_gr closure"
     )
     assert (
         "no source admissibility"
@@ -3002,7 +3003,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         positive_witness_attempt_active_workstream["packet_result_review_pending"]
-        == "yes"
+        == "no"
     )
     assert (
         positive_witness_attempt_active_workstream["maturation_packet_prepared"]
@@ -3082,7 +3083,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         positive_witness_attempt_active_workstream[
             "countermodel_attempt_authorized"
         ]
-        == "no"
+        == "yes"
     )
     assert (
         positive_witness_attempt_active_workstream[
