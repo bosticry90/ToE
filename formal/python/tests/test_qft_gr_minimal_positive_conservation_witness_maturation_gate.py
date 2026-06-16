@@ -308,9 +308,9 @@ def test_positive_conservation_witness_maturation_lean_and_surface_mirrors() -> 
         CONSUMED_TARGET,
         NEXT_TARGET,
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "review_qft_gr_minimal_model_countermodel_scope_refinement_attempt_for_weak_conservation_obstruction_result",
+        "prepare_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_conservation_obstruction",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "execute_qft_gr_minimal_model_countermodel_scope_refinement_attempt_for_weak_conservation_obstruction",
+        "review_qft_gr_minimal_model_countermodel_scope_refinement_attempt_for_weak_conservation_obstruction_result",
         "suppliedRatherThanDerivedCore",
         "sourceAdmissibilityStillForbidden",
         "strict_toy_local_weak_conservation_bridge_witness_only",

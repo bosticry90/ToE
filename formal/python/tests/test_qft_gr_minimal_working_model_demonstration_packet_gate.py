@@ -256,9 +256,9 @@ def test_minimal_working_model_packet_has_lean_and_public_surface_mirrors() -> N
         CONSERVATION_TEST_PACKET_TARGET,
         FINAL_LIVE_TARGET,
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "review_qft_gr_minimal_model_countermodel_scope_refinement_attempt_for_weak_conservation_obstruction_result",
+        "prepare_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_conservation_obstruction",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "execute_qft_gr_minimal_model_countermodel_scope_refinement_attempt_for_weak_conservation_obstruction",
+        "review_qft_gr_minimal_model_countermodel_scope_refinement_attempt_for_weak_conservation_obstruction_result",
         "no source admissibility",
         "no QFT-GR closure",
         "no public submission",
