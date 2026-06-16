@@ -1157,10 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = (
-    "review_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_"
-    "for_weak_conservation_obstruction_result"
-)
+ACTIVE_LANE = "prepare_qft_gr_source_map_or_countermodel_scope_decision_packet"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1330,8 +1327,8 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "execute_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_"
-    "for_weak_conservation_obstruction"
+    "review_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_"
+    "for_weak_conservation_obstruction_result"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1424,8 +1421,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_"
-    "for_weak_conservation_obstruction_result"
+    "prepare_qft_gr_source_map_or_countermodel_scope_decision_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1442,7 +1438,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalModelCountermodelAttemptAfterScopeRefinementForWeakConservationObstruction.lean"
+    / "QFTGRMinimalModelCountermodelAttemptAfterScopeRefinementForWeakConservationObstructionResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2971,21 +2967,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert countermodel_scope_refinement_active_workstream["report"] == (
         "formal/docs/release/"
         "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_AFTER_SCOPE_REFINEMENT_FOR_"
-        "WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json"
+        "WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260616_v0.json"
     )
     assert (
         countermodel_scope_refinement_active_workstream["outcome_id"]
         == "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_AFTER_SCOPE_REFINEMENT_"
-        "FOR_WEAK_CONSERVATION_OBSTRUCTION_EXECUTED_WITH_NO_SOURCE_"
-        "ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+        "FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_"
+        "REATTEMPT_AND_AUTHORIZES_SOURCE_MAP_OR_SCOPE_DECISION_PACKET_ONLY"
     )
     assert (
         countermodel_scope_refinement_active_workstream["claim_level"]
-        == "Level 3 bounded countermodel attempt after scope refinement executed pending result review"
+        == "Level 3 inconclusive countermodel reattempt result review accepted decision packet pending"
     )
     assert (
         countermodel_scope_refinement_active_workstream["claim_ceiling"]
-        == "inconclusive countermodel attempt under pinned scope no countermodel result no no-go result no not-found claim no source admissibility or qft_gr closure"
+        == "decision packet only no source map ladder execution no countermodel scope refinement execution no countermodel result no no-go result no not-found claim no source admissibility or qft_gr closure"
     )
     assert (
         "no source admissibility"
@@ -2996,11 +2992,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        countermodel_scope_refinement_active_workstream["result_classification"]
-        == "qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_inconclusive_requires_source_map_or_scope_decision"
+        countermodel_scope_refinement_active_workstream["result_review_classification"]
+        == "qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction_result_review_accepts_inconclusive_reattempt_and_authorizes_source_map_or_scope_decision_packet_only"
     )
     assert (
-        countermodel_scope_refinement_active_workstream["selected_classification"]
+        countermodel_scope_refinement_active_workstream["accepted_result_classification"]
         == "qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_inconclusive_requires_source_map_or_scope_decision"
     )
     assert (
@@ -3013,13 +3009,45 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         countermodel_scope_refinement_active_workstream[
             "attempt_after_scope_refinement_result_review_pending"
         ]
-        == "yes"
+        == "no"
     )
     assert (
         countermodel_scope_refinement_active_workstream[
             "attempt_after_scope_refinement_result_reviewed"
         ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "source_map_or_scope_decision_packet_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "source_map_or_scope_decision_packet_prepared"
+        ]
         == "no"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream["decision_packet_default_branch"]
+        == "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream["decision_packet_scope_branch"]
+        == "prepare_qft_gr_minimal_model_countermodel_scope_refinement_packet_after_reattempt_for_weak_conservation_obstruction"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "source_map_ladder_default_unless_single_scope_condition"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "only_one_narrow_scope_refinement_cycle_allowed"
+        ]
+        == "yes"
     )
     assert (
         countermodel_scope_refinement_active_workstream[
