@@ -1,0 +1,553 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "allowed_classifications_retained_without_selection": true,
+    "consumes_expected_refined_scope_result_review": true,
+    "does_not_execute_or_authorize_attempt_directly": true,
+    "five_probe_protocol_prepared": true,
+    "no_countermodel_no_go_not_found_or_inconclusive_result_claim": true,
+    "no_source_bianchi_semiclassical_closure_empirical_public_or_promotion": true,
+    "obstruction_candidate_carried_unresolved": true,
+    "packet_selects_result_review_only": true,
+    "refined_scope_is_carried_exactly": true,
+    "result_review_authorized_reattempt_packet_only": true,
+    "routine_validation_policy_preserves_non_escalation": true,
+    "source_test_and_pairing_payloads_available": true,
+    "strict_toy_witness_preserved_not_refuted": true
+  },
+  "accepted": true,
+  "aggregate_lean_health_claimed": false,
+  "aggregate_lean_not_run": true,
+  "aggregate_lean_timeout_caveat_preserved": true,
+  "allowed_reattempt_classification_count": 3,
+  "allowed_reattempt_classifications": [
+    {
+      "classification": "qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_found_pending_result_review",
+      "packet_rule": "May be selected only by a later bounded reattempt if the pinned source/test pair and partial weak-pairing semantics produce a concrete obstruction pressure point.",
+      "selected_now": "no"
+    },
+    {
+      "classification": "qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_not_found_requires_source_map_ladder",
+      "packet_rule": "May be selected only by a later bounded reattempt if all pinned probes are evaluated and no countermodel/no-go pressure point survives under the refined scope.",
+      "selected_now": "no"
+    },
+    {
+      "classification": "qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_inconclusive_requires_countermodel_scope_refinement",
+      "packet_rule": "May be selected only by a later bounded reattempt if the refined scope still lacks enough semantics to decide found or not-found status.",
+      "selected_now": "no"
+    }
+  ],
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The reattempt packet is preparation only, so the next action is bounded packet result review.",
+      "target": "review_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_conservation_obstruction_result"
+    },
+    {
+      "decision": "completed_consumed_live_target",
+      "reason": "The reattempt packet preparation target is consumed here.",
+      "target": "prepare_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_conservation_obstruction"
+    },
+    {
+      "decision": "not_authorized_until_reattempt_packet_result_review",
+      "reason": "A bounded countermodel reattempt remains downstream of packet result review.",
+      "target": "execute_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction"
+    },
+    {
+      "decision": "retained_follow_on_not_selected_by_this_packet",
+      "reason": "Source-map ladder work remains downstream unless a later reattempt result requires it.",
+      "target": "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No countermodel is found or claimed by packet preparation.",
+      "target": "claim_countermodel_exists"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No no-go result is found or claimed by packet preparation.",
+      "target": "claim_no_go_result"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The packet does not evaluate not-found status.",
+      "target": "claim_countermodel_not_found"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The pinned source remains candidate-only.",
+      "target": "claim_qft_gr_source_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The strict toy witness is not broadened by this packet.",
+      "target": "claim_broad_qft_gr_conservation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Bianchi compatibility remains unclaimed.",
+      "target": "claim_qft_gr_bianchi_compatibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No semiclassical Einstein equation is derived.",
+      "target": "derive_semiclassical_einstein_equation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "The packet does not close QFT-GR.",
+      "target": "close_qft_gr_seam"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Empirical validation and public submission are not authorized.",
+      "target": "authorize_empirical_validation_or_public_submission"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No master-action promotion is authorized.",
+      "target": "promote_master_action"
+    }
+  ],
+  "canonical_obstruction_id": "repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3",
+  "captured_at_utc": "2026-06-15T00:00:00Z",
+  "conservation_claimed": false,
+  "conservation_proof_object_constructed": false,
+  "conservation_proved": false,
+  "conservation_retest_rerun_authorized": false,
+  "conservation_witness_constructed": false,
+  "consumed_result_review_classification": "qft_gr_minimal_model_countermodel_scope_refinement_attempt_for_weak_conservation_obstruction_result_review_accepts_refined_countermodel_scope_and_authorizes_bounded_countermodel_reattempt_packet_only",
+  "consumed_result_review_outcome_id": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_SCOPE_REFINEMENT_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_REFINED_COUNTERMODEL_SCOPE_AND_AUTHORIZES_BOUNDED_COUNTERMODEL_REATTEMPT_PACKET_ONLY",
+  "consumed_result_review_schema_id": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_SCOPE_REFINEMENT_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260615_v0",
+  "consumed_target": "prepare_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_conservation_obstruction",
+  "consumes_scope_refinement_attempt_result_review": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_SCOPE_REFINEMENT_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_v0",
+  "consumes_scope_refinement_attempt_result_review_pointer": "formal/docs/release/QFT_GR_MINIMAL_MODEL_COUNTERMODEL_SCOPE_REFINEMENT_ATTEMPT_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260615_v0.json",
+  "countermodel_achieved": false,
+  "countermodel_attempt_after_scope_refinement_authorized": false,
+  "countermodel_attempt_after_scope_refinement_executed": false,
+  "countermodel_attempt_reauthorized": false,
+  "countermodel_attempt_reexecuted": false,
+  "countermodel_exists_claimed": false,
+  "countermodel_lane_decidability_scope_accepted": true,
+  "countermodel_reattempt_authorized_by_packet": false,
+  "countermodel_reattempt_executed": false,
+  "countermodel_reattempt_packet_authorized_by_review": true,
+  "countermodel_reattempt_packet_is_not_strict_toy_witness_refutation": true,
+  "countermodel_reattempt_packet_preparation_only": true,
+  "countermodel_reattempt_packet_prepared": true,
+  "countermodel_reattempt_packet_result_review_pending": true,
+  "countermodel_reattempt_packet_result_reviewed": false,
+  "countermodel_result_claimed": false,
+  "dominant_obstruction_candidate": "weak_pairing_domain_obstruction",
+  "dominant_obstruction_resolved": false,
+  "empirical_validation_claimed": false,
+  "evaluation_scope": {
+    "boundary_semantics": "boundary_terms_are_retained_as_probe_outputs_not_discarded_by_compact_support_unless_the_selected_test_object_supplies_that_condition",
+    "claim_ceiling": "evaluation_protocol_only_no_conservation_proof",
+    "evaluation_scope_id": "broader_weak_divergence_boundary_and_curvature_evaluation_scope_v0",
+    "probe_count": 5,
+    "probes": [
+      {
+        "countermodel_pressure_status": "undefined_required_pairing_may_be_pressure_point_pending_review",
+        "probe_id": "weak_divergence_pairing_definedness",
+        "required_report_field": "defined_or_undefined"
+      },
+      {
+        "countermodel_pressure_status": "defined_nonzero_pairing_may_be_pressure_point_pending_review",
+        "probe_id": "weak_divergence_pairing_value",
+        "required_report_field": "zero_nonzero_or_not_evaluable"
+      },
+      {
+        "countermodel_pressure_status": "surviving_boundary_term_may_be_pressure_point_pending_review",
+        "probe_id": "boundary_term_retention",
+        "required_report_field": "vanishes_survives_or_not_evaluable"
+      },
+      {
+        "countermodel_pressure_status": "unjustified_exchange_may_be_pressure_point_pending_review",
+        "probe_id": "derivative_exchange_legitimacy",
+        "required_report_field": "justified_unjustified_or_not_evaluable"
+      },
+      {
+        "countermodel_pressure_status": "surviving_curvature_coupling_residual_may_be_pressure_point_pending_review",
+        "probe_id": "curvature_coupling_residual",
+        "required_report_field": "vanishes_survives_or_not_evaluable"
+      }
+    ],
+    "selected_evaluation_scope": "weak_divergence_pairing_boundary_term_derivative_exchange_and_curvature_coupling_residual_probes"
+  },
+  "found_classification_not_selected": true,
+  "full_qft_gr_conservation_claimed": false,
+  "immediate_retest_authorized": false,
+  "inconclusive_classification_not_selected": true,
+  "inconclusive_result_claimed": false,
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalModelCountermodelReattemptPacketForWeakConservationObstruction.lean",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_resolution_claimed": false,
+  "next_action_scope": "REVIEW_QFT_GR_MINIMAL_MODEL_COUNTERMODEL_REATTEMPT_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_ONLY_NO_COUNTERMODEL_ATTEMPT_EXECUTION_NO_COUNTERMODEL_RESULT_CLAIM_NO_NO_GO_RESULT_CLAIM_NO_SOURCE_ADMISSIBILITY_NO_QFT_GR_CLOSURE",
+  "no_go_result_claimed": false,
+  "non_claim_boundary": "This packet prepares only a bounded countermodel reattempt under the accepted refined source/test pair, partial weak-pairing contract, and five-probe evaluation protocol. It does not execute a countermodel/no-go attempt, does not claim a countermodel result, does not claim a no-go result, does not claim a not-found result, does not refute the accepted strict toy witness, preserves no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no broad QFT-GR conservation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion.",
+  "not_found_classification_not_selected": true,
+  "not_found_result_claimed": false,
+  "obstruction_status": "stabilized_for_next_target_selection_not_resolved",
+  "ordinary_model_refinement_authorized": false,
+  "outcome_id": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_REATTEMPT_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_PREPARED_WITH_NO_COUNTERMODEL_RESULT_OR_QFT_GR_CLOSURE",
+  "packet_classification": "qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_conservation_obstruction_prepared_with_no_countermodel_result_or_qft_gr_closure",
+  "packet_classification_count": 1,
+  "packet_decision": "prepared",
+  "packet_findings": [
+    "The packet consumes the accepted refined-scope result review and prepares only a bounded countermodel reattempt packet.",
+    "The later reattempt must use the pinned broader source/test pair, partial weak-pairing contract, and five-probe evaluation protocol.",
+    "The packet retains found, not-found, and inconclusive as allowed later classifications without selecting any of them.",
+    "No countermodel/no-go attempt is executed by this packet; result review is required before the downstream reattempt target.",
+    "The strict toy positive witness remains valid only under its strict antecedents and is not refuted by the broader reattempt packet."
+  ],
+  "packet_id": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_REATTEMPT_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_v0",
+  "packet_selected_next_target": "review_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_conservation_obstruction_result",
+  "physical_source_claimed": false,
+  "pinned_evaluation_scope_id": "broader_weak_divergence_boundary_and_curvature_evaluation_scope_v0",
+  "pinned_source_test_pair_id": "broader_candidate_source_allowed_test_pair_for_weak_conservation_countermodel_v0",
+  "pinned_weak_pairing_contract_id": "partial_weak_pairing_contract_for_broader_countermodel_scope_v0",
+  "positive_witness_bridge_law_scope": "field_equation_residual_zero_plus_divergence_identity_plus_allowed_weak_pairing_plus_no_boundary_compact_support_implies_weak_conservation_against_allowed_tests",
+  "prepared": true,
+  "public_submission_authorized": false,
+  "publication_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "reattempt_decision_protocol": {
+    "evaluation_scope_id": "broader_weak_divergence_boundary_and_curvature_evaluation_scope_v0",
+    "found_requires": "at_least_one_concrete_obstruction_pressure_point_under_pinned_source_test_pair_partial_pairing_and_probe_protocol",
+    "inconclusive_requires": "remaining_semantic_gap_prevents_found_or_not_found_decision_despite_refined_scope",
+    "not_found_requires": "all_pinned_probes_evaluated_with_no_surviving_pressure_point_under_refined_scope",
+    "probe_count": 5,
+    "protocol_id": "qft_gr_minimal_model_countermodel_reattempt_decision_protocol_for_refined_weak_conservation_scope_v0",
+    "review_required_before_execution": "yes",
+    "source_test_instantiation_id": "broader_candidate_source_allowed_test_pair_for_weak_conservation_countermodel_v0",
+    "weak_pairing_contract_id": "partial_weak_pairing_contract_for_broader_countermodel_scope_v0"
+  },
+  "reattempt_probe_count": 5,
+  "reattempt_probe_plan": [
+    {
+      "countermodel_pressure_status": "undefined_required_pairing_may_be_pressure_point_pending_review",
+      "packet_instruction": "A later bounded reattempt must instantiate this probe against the pinned source/test pair and partial weak-pairing contract before selecting found, not-found, or inconclusive status.",
+      "probe_id": "weak_divergence_pairing_definedness",
+      "required_report_field": "defined_or_undefined",
+      "selected_now": "no"
+    },
+    {
+      "countermodel_pressure_status": "defined_nonzero_pairing_may_be_pressure_point_pending_review",
+      "packet_instruction": "A later bounded reattempt must instantiate this probe against the pinned source/test pair and partial weak-pairing contract before selecting found, not-found, or inconclusive status.",
+      "probe_id": "weak_divergence_pairing_value",
+      "required_report_field": "zero_nonzero_or_not_evaluable",
+      "selected_now": "no"
+    },
+    {
+      "countermodel_pressure_status": "surviving_boundary_term_may_be_pressure_point_pending_review",
+      "packet_instruction": "A later bounded reattempt must instantiate this probe against the pinned source/test pair and partial weak-pairing contract before selecting found, not-found, or inconclusive status.",
+      "probe_id": "boundary_term_retention",
+      "required_report_field": "vanishes_survives_or_not_evaluable",
+      "selected_now": "no"
+    },
+    {
+      "countermodel_pressure_status": "unjustified_exchange_may_be_pressure_point_pending_review",
+      "packet_instruction": "A later bounded reattempt must instantiate this probe against the pinned source/test pair and partial weak-pairing contract before selecting found, not-found, or inconclusive status.",
+      "probe_id": "derivative_exchange_legitimacy",
+      "required_report_field": "justified_unjustified_or_not_evaluable",
+      "selected_now": "no"
+    },
+    {
+      "countermodel_pressure_status": "surviving_curvature_coupling_residual_may_be_pressure_point_pending_review",
+      "packet_instruction": "A later bounded reattempt must instantiate this probe against the pinned source/test pair and partial weak-pairing contract before selecting found, not-found, or inconclusive status.",
+      "probe_id": "curvature_coupling_residual",
+      "required_report_field": "vanishes_survives_or_not_evaluable",
+      "selected_now": "no"
+    }
+  ],
+  "release_assembly_authorized": false,
+  "release_index_path_not_freshly_lean_validated": true,
+  "release_packet_assembled": false,
+  "schema_id": "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_REATTEMPT_PACKET_FOR_WEAK_CONSERVATION_OBSTRUCTION_20260615_v0",
+  "scientific_validation_claimed": false,
+  "scope_refinement_attempt_result_review_accepted": true,
+  "selected_countermodel_criterion_count": 0,
+  "selected_next_target": "review_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_conservation_obstruction_result",
+  "selected_next_target_count": 1,
+  "selected_next_target_kind": "qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_conservation_obstruction_result_review",
+  "selected_no_go_criterion_count": 0,
+  "selection_count": 1,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_can_be_considered": false,
+  "source_admissibility_claimed": false,
+  "source_map_ladder_lane_retained_as_follow_on": true,
+  "source_map_ladder_packet_authorized": false,
+  "source_test_instantiation": {
+    "claim_ceiling": "broader_source_test_instantiation_only_no_source_admissibility_no_countermodel_result",
+    "instantiation_id": "broader_candidate_source_allowed_test_pair_for_weak_conservation_countermodel_v0",
+    "source_candidate_id": "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0",
+    "source_candidate_status": "candidate_only_not_source_admissible_not_physical_source",
+    "test_object_id": "broader_allowed_weak_test_vector_or_probe_not_bianchi_witness_v0",
+    "test_object_status": "allowed_broader_weak_test_slot_not_bianchi_witness",
+    "usage_scope": "later_countermodel_or_not_found_attempt_may_evaluate_prepared_weak_conservation_obstruction_criteria_against_this_pair_after_result_review_accepts_the_scope_refinement_attempt"
+  },
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "strict_toy_assumptions_only": true,
+  "strict_toy_witness_accepted": true,
+  "strict_toy_witness_preserved": true,
+  "unbounded_conservation_proved": false,
+  "validation_caveat": "Full pytest, full governance suite, full aggregate Lean, release-index Lean validation, CI parity, and security scans are not required for this routine bounded countermodel reattempt packet checkpoint. The release-index path remains not freshly Lean-validated, aggregate Lean is not run, and no aggregate Lean health claim is made.",
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "aggregate_lean_timeout_caveat_preserved": true,
+    "checkpoint_type": "routine_qft_gr_minimal_model_countermodel_reattempt_packet_preparation",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "inherited_scope_refinement_attempt_result_review_validation_policy": {
+      "aggregate_lean_health_claimed": false,
+      "aggregate_lean_not_run": true,
+      "aggregate_lean_timeout_caveat_preserved": true,
+      "checkpoint_type": "routine_qft_gr_minimal_model_countermodel_scope_refinement_attempt_result_review",
+      "full_aggregate_lean_required": false,
+      "full_ci_parity_required": false,
+      "full_governance_suite_required": false,
+      "full_pytest_required": false,
+      "full_security_scan_required": false,
+      "inherited_scope_refinement_attempt_validation_policy": {
+        "aggregate_lean_health_claimed": false,
+        "aggregate_lean_not_run": true,
+        "aggregate_lean_timeout_caveat_preserved": true,
+        "checkpoint_type": "routine_qft_gr_minimal_model_countermodel_scope_refinement_attempt_execution",
+        "full_aggregate_lean_required": false,
+        "full_ci_parity_required": false,
+        "full_governance_suite_required": false,
+        "full_pytest_required": false,
+        "full_security_scan_required": false,
+        "inherited_scope_refinement_packet_result_review_validation_policy": {
+          "aggregate_lean_health_claimed": false,
+          "aggregate_lean_not_run": true,
+          "aggregate_lean_timeout_caveat_preserved": true,
+          "checkpoint_type": "routine_qft_gr_minimal_model_countermodel_scope_refinement_packet_result_review",
+          "full_aggregate_lean_required": false,
+          "full_ci_parity_required": false,
+          "full_governance_suite_required": false,
+          "full_pytest_required": false,
+          "full_security_scan_required": false,
+          "inherited_countermodel_scope_refinement_packet_validation_policy": {
+            "aggregate_lean_health_claimed": false,
+            "aggregate_lean_not_run": true,
+            "aggregate_lean_timeout_caveat_preserved": true,
+            "checkpoint_type": "routine_qft_gr_minimal_model_countermodel_scope_refinement_packet_preparation",
+            "full_aggregate_lean_required": false,
+            "full_ci_parity_required": false,
+            "full_governance_suite_required": false,
+            "full_pytest_required": false,
+            "full_security_scan_required": false,
+            "inherited_countermodel_attempt_result_review_validation_policy": {
+              "aggregate_lean_health_claimed": false,
+              "aggregate_lean_not_run": true,
+              "aggregate_lean_timeout_caveat_preserved": true,
+              "checkpoint_type": "routine_qft_gr_minimal_model_countermodel_attempt_result_review",
+              "full_aggregate_lean_required": false,
+              "full_ci_parity_required": false,
+              "full_governance_suite_required": false,
+              "full_pytest_required": false,
+              "full_security_scan_required": false,
+              "inherited_countermodel_attempt_validation_policy": {
+                "aggregate_lean_health_claimed": false,
+                "aggregate_lean_not_run": true,
+                "aggregate_lean_timeout_caveat_preserved": true,
+                "checkpoint_type": "routine_qft_gr_minimal_model_countermodel_attempt_execution",
+                "full_aggregate_lean_required": false,
+                "full_ci_parity_required": false,
+                "full_governance_suite_required": false,
+                "full_pytest_required": false,
+                "full_security_scan_required": false,
+                "inherited_countermodel_packet_result_review_validation_policy": {
+                  "aggregate_lean_health_claimed": false,
+                  "aggregate_lean_not_run": true,
+                  "aggregate_lean_timeout_caveat_preserved": true,
+                  "checkpoint_type": "routine_qft_gr_minimal_model_countermodel_packet_result_review",
+                  "full_aggregate_lean_required": false,
+                  "full_ci_parity_required": false,
+                  "full_governance_suite_required": false,
+                  "full_pytest_required": false,
+                  "full_security_scan_required": false,
+                  "inherited_countermodel_packet_validation_policy": {
+                    "aggregate_lean_health_claimed": false,
+                    "aggregate_lean_not_run": true,
+                    "aggregate_lean_timeout_caveat_preserved": true,
+                    "checkpoint_type": "routine_qft_gr_minimal_model_countermodel_packet_preparation",
+                    "full_aggregate_lean_required": false,
+                    "full_ci_parity_required": false,
+                    "full_governance_suite_required": false,
+                    "full_pytest_required": false,
+                    "full_security_scan_required": false,
+                    "inherited_maturation_result_review_validation_policy": {
+                      "aggregate_lean_health_claimed": false,
+                      "aggregate_lean_not_run": true,
+                      "aggregate_lean_timeout_caveat_preserved": true,
+                      "checkpoint_type": "routine_positive_conservation_witness_maturation_result_review",
+                      "full_aggregate_lean_required": false,
+                      "full_ci_parity_required": false,
+                      "full_governance_suite_required": false,
+                      "full_pytest_required": false,
+                      "full_security_scan_required": false,
+                      "inherited_maturation_packet_validation_policy": {
+                        "aggregate_lean_health_claimed": false,
+                        "aggregate_lean_not_run": true,
+                        "aggregate_lean_timeout_caveat_preserved": true,
+                        "checkpoint_type": "routine_positive_conservation_witness_maturation_packet_preparation",
+                        "full_aggregate_lean_required": false,
+                        "full_ci_parity_required": false,
+                        "full_governance_suite_required": false,
+                        "full_pytest_required": false,
+                        "full_security_scan_required": false,
+                        "inherited_result_review_validation_policy": {
+                          "aggregate_lean_health_claimed": false,
+                          "aggregate_lean_not_run": true,
+                          "aggregate_lean_timeout_caveat_preserved": true,
+                          "checkpoint_type": "routine_positive_conservation_witness_attempt_result_review",
+                          "full_aggregate_lean_required": false,
+                          "full_ci_parity_required": false,
+                          "full_governance_suite_required": false,
+                          "full_pytest_required": false,
+                          "full_security_scan_required": false,
+                          "inherited_attempt_validation_policy": {
+                            "aggregate_lean_health_claimed": false,
+                            "aggregate_lean_not_run": true,
+                            "aggregate_lean_timeout_caveat_preserved": true,
+                            "checkpoint_type": "routine_positive_conservation_witness_attempt_execution",
+                            "full_aggregate_lean_required": false,
+                            "full_ci_parity_required": false,
+                            "full_governance_suite_required": false,
+                            "full_pytest_required": false,
+                            "full_security_scan_required": false,
+                            "inherited_packet_result_review_validation_policy": {
+                              "aggregate_lean_health_claimed": false,
+                              "aggregate_lean_not_run": true,
+                              "aggregate_lean_timeout_caveat_preserved": true,
+                              "checkpoint_type": "routine_positive_conservation_witness_packet_result_review",
+                              "full_aggregate_lean_required": false,
+                              "full_ci_parity_required": false,
+                              "full_governance_suite_required": false,
+                              "full_pytest_required": false,
+                              "full_security_scan_required": false,
+                              "inherited_packet_validation_policy": {
+                                "aggregate_lean_health_claimed": false,
+                                "checkpoint_type": "routine_positive_conservation_witness_packet_preparation_under_strict_toy_assumptions",
+                                "full_aggregate_lean_required": false,
+                                "full_ci_parity_required": false,
+                                "full_governance_suite_required": false,
+                                "full_pytest_required": false,
+                                "full_security_scan_required": false
+                              },
+                              "long_running_validation_escalation_authorized": false,
+                              "release_index_path_not_freshly_lean_validated": true,
+                              "routine_packet_review_uses_bounded_target_relevant_validation_only": true,
+                              "timeout_recorded_as_caveat_not_rerun_instruction": true,
+                              "timeout_rerun_loop_authorized": false
+                            },
+                            "long_running_validation_escalation_authorized": false,
+                            "release_index_path_not_freshly_lean_validated": true,
+                            "routine_attempt_uses_bounded_target_relevant_validation_only": true,
+                            "timeout_recorded_as_caveat_not_rerun_instruction": true,
+                            "timeout_rerun_loop_authorized": false
+                          },
+                          "long_running_validation_escalation_authorized": false,
+                          "release_index_path_not_freshly_lean_validated": true,
+                          "routine_attempt_review_uses_bounded_target_relevant_validation_only": true,
+                          "timeout_recorded_as_caveat_not_rerun_instruction": true,
+                          "timeout_rerun_loop_authorized": false
+                        },
+                        "long_running_validation_escalation_authorized": false,
+                        "release_index_path_not_freshly_lean_validated": true,
+                        "routine_packet_uses_bounded_target_relevant_validation_only": true,
+                        "timeout_recorded_as_caveat_not_rerun_instruction": true,
+                        "timeout_rerun_loop_authorized": false
+                      },
+                      "long_running_validation_escalation_authorized": false,
+                      "release_index_path_not_freshly_lean_validated": true,
+                      "routine_result_review_uses_bounded_target_relevant_validation_only": true,
+                      "timeout_recorded_as_caveat_not_rerun_instruction": true,
+                      "timeout_rerun_loop_authorized": false
+                    },
+                    "long_running_validation_escalation_authorized": false,
+                    "release_index_path_not_freshly_lean_validated": true,
+                    "routine_packet_uses_bounded_target_relevant_validation_only": true,
+                    "timeout_recorded_as_caveat_not_rerun_instruction": true,
+                    "timeout_rerun_loop_authorized": false
+                  },
+                  "long_running_validation_escalation_authorized": false,
+                  "release_index_path_not_freshly_lean_validated": true,
+                  "routine_result_review_uses_bounded_target_relevant_validation_only": true,
+                  "timeout_recorded_as_caveat_not_rerun_instruction": true,
+                  "timeout_rerun_loop_authorized": false
+                },
+                "long_running_validation_escalation_authorized": false,
+                "release_index_path_not_freshly_lean_validated": true,
+                "routine_attempt_uses_bounded_target_relevant_validation_only": true,
+                "timeout_recorded_as_caveat_not_rerun_instruction": true,
+                "timeout_rerun_loop_authorized": false
+              },
+              "long_running_validation_escalation_authorized": false,
+              "release_index_path_not_freshly_lean_validated": true,
+              "routine_result_review_uses_bounded_target_relevant_validation_only": true,
+              "timeout_recorded_as_caveat_not_rerun_instruction": true,
+              "timeout_rerun_loop_authorized": false
+            },
+            "long_running_validation_escalation_authorized": false,
+            "release_index_path_not_freshly_lean_validated": true,
+            "routine_packet_uses_bounded_target_relevant_validation_only": true,
+            "timeout_recorded_as_caveat_not_rerun_instruction": true,
+            "timeout_rerun_loop_authorized": false
+          },
+          "long_running_validation_escalation_authorized": false,
+          "release_index_path_not_freshly_lean_validated": true,
+          "routine_result_review_uses_bounded_target_relevant_validation_only": true,
+          "timeout_recorded_as_caveat_not_rerun_instruction": true,
+          "timeout_rerun_loop_authorized": false
+        },
+        "long_running_validation_escalation_authorized": false,
+        "release_index_path_not_freshly_lean_validated": true,
+        "routine_attempt_uses_bounded_target_relevant_validation_only": true,
+        "timeout_recorded_as_caveat_not_rerun_instruction": true,
+        "timeout_rerun_loop_authorized": false
+      },
+      "long_running_validation_escalation_authorized": false,
+      "release_index_path_not_freshly_lean_validated": true,
+      "routine_result_review_uses_bounded_target_relevant_validation_only": true,
+      "timeout_recorded_as_caveat_not_rerun_instruction": true,
+      "timeout_rerun_loop_authorized": false
+    },
+    "long_running_validation_escalation_authorized": false,
+    "release_index_path_not_freshly_lean_validated": true,
+    "routine_packet_uses_bounded_target_relevant_validation_only": true,
+    "timeout_recorded_as_caveat_not_rerun_instruction": true,
+    "timeout_rerun_loop_authorized": false
+  },
+  "validation_posture": {
+    "adjacent_qft_gr_nonclaim_gates": "required_bounded_subset",
+    "focused_packet_current_target_registry_gate": "required_for_checkpoint",
+    "full_aggregate_lean": "not_required_for_checkpoint_preserved_caveat",
+    "full_ci_parity": "not_required_for_checkpoint",
+    "full_governance_suite": "not_required_for_checkpoint",
+    "full_pytest": "not_required_for_checkpoint",
+    "git_diff_check": "required_for_checkpoint",
+    "release_index_lean_path": "not_freshly_validated_preserved_caveat",
+    "security_scan": "not_required_for_checkpoint",
+    "targeted_lean_packet_frontier_import_checks": "required_for_checkpoint"
+  },
+  "weak_pairing_semantics": {
+    "contract_id": "partial_weak_pairing_contract_for_broader_countermodel_scope_v0",
+    "defined_case": "pairing_defined_when_source_action_test_action_and_distributional_divergence_pairing_are_all_defined",
+    "pairing_semantics": "partial_weak_pairing_defined_only_when_source_action_test_action_and_distributional_divergence_pairing_are_defined",
+    "partiality_pinned": "yes",
+    "totality_claimed": "no",
+    "undefined_case": "undefined_pairing_is_countermodel_pressure_point_not_source_admissibility_claim",
+    "undefined_case_claim_ceiling": "countermodel_pressure_point_only_no_source_admissibility_no_no_go_result_without_result_review"
+  }
+}

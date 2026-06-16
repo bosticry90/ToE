@@ -1158,8 +1158,8 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_"
-    "conservation_obstruction"
+    "review_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_"
+    "conservation_obstruction_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1330,8 +1330,8 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_qft_gr_minimal_model_countermodel_scope_refinement_attempt_for_"
-    "weak_conservation_obstruction_result"
+    "prepare_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_"
+    "conservation_obstruction"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1424,8 +1424,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_"
-    "conservation_obstruction"
+    "review_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_"
+    "conservation_obstruction_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1442,7 +1442,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalModelCountermodelScopeRefinementAttemptForWeakConservationObstructionResultReview.lean"
+    / "QFTGRMinimalModelCountermodelReattemptPacketForWeakConservationObstruction.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2970,22 +2970,22 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert countermodel_scope_refinement_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_SCOPE_REFINEMENT_ATTEMPT_FOR_WEAK_"
-        "CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260615_v0.json"
+        "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_REATTEMPT_PACKET_FOR_WEAK_"
+        "CONSERVATION_OBSTRUCTION_20260615_v0.json"
     )
     assert (
         countermodel_scope_refinement_active_workstream["outcome_id"]
-        == "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_SCOPE_REFINEMENT_ATTEMPT_FOR_WEAK_"
-        "CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_REFINED_COUNTERMODEL_"
-        "SCOPE_AND_AUTHORIZES_BOUNDED_COUNTERMODEL_REATTEMPT_PACKET_ONLY"
+        == "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_REATTEMPT_PACKET_FOR_WEAK_"
+        "CONSERVATION_OBSTRUCTION_PREPARED_WITH_NO_COUNTERMODEL_RESULT_OR_QFT_GR_"
+        "CLOSURE"
     )
     assert (
         countermodel_scope_refinement_active_workstream["claim_level"]
-        == "Level 3 bounded countermodel reattempt packet authorized pending preparation"
+        == "Level 3 bounded countermodel reattempt packet prepared pending result review"
     )
     assert (
         countermodel_scope_refinement_active_workstream["claim_ceiling"]
-        == "bounded countermodel reattempt packet only no countermodel result no no-go result no source admissibility or qft_gr closure"
+        == "bounded countermodel reattempt packet prepared no countermodel result no no-go result no source admissibility or qft_gr closure"
     )
     assert (
         "no source admissibility"
@@ -3179,6 +3179,30 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         countermodel_scope_refinement_active_workstream[
             "countermodel_reattempt_packet_prepared"
         ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "countermodel_reattempt_packet_preparation_only"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "countermodel_reattempt_packet_result_review_pending"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "countermodel_reattempt_packet_result_reviewed"
+        ]
+        == "no"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "countermodel_reattempt_authorized_by_packet"
+        ]
         == "no"
     )
     assert (
@@ -3186,6 +3210,16 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
             "countermodel_reattempt_executed"
         ]
         == "no"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream["reattempt_probe_count"]
+        == "5"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "allowed_reattempt_classification_count"
+        ]
+        == "3"
     )
     assert (
         countermodel_scope_refinement_active_workstream[

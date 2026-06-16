@@ -21,7 +21,7 @@ CURRENT_LIVE_NEXT_TARGET,
 )
 
 POST_MR_LIVE_TARGET = (
-    "prepare_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_conservation_obstruction"
+    "review_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_conservation_obstruction_result"
 )
 
 
