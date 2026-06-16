@@ -1158,8 +1158,8 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_"
-    "conservation_obstruction_result"
+    "execute_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_"
+    "for_weak_conservation_obstruction"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1330,8 +1330,8 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_"
-    "conservation_obstruction"
+    "review_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_"
+    "conservation_obstruction_result"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1424,8 +1424,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_"
-    "conservation_obstruction_result"
+    "execute_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_"
+    "for_weak_conservation_obstruction"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1442,7 +1442,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalModelCountermodelReattemptPacketForWeakConservationObstruction.lean"
+    / "QFTGRMinimalModelCountermodelReattemptPacketForWeakConservationObstructionResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2971,21 +2971,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert countermodel_scope_refinement_active_workstream["report"] == (
         "formal/docs/release/"
         "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_REATTEMPT_PACKET_FOR_WEAK_"
-        "CONSERVATION_OBSTRUCTION_20260615_v0.json"
+        "CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260615_v0.json"
     )
     assert (
         countermodel_scope_refinement_active_workstream["outcome_id"]
         == "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_REATTEMPT_PACKET_FOR_WEAK_"
-        "CONSERVATION_OBSTRUCTION_PREPARED_WITH_NO_COUNTERMODEL_RESULT_OR_QFT_GR_"
-        "CLOSURE"
+        "CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_"
+        "BOUNDED_COUNTERMODEL_REATTEMPT_ONLY"
     )
     assert (
         countermodel_scope_refinement_active_workstream["claim_level"]
-        == "Level 3 bounded countermodel reattempt packet prepared pending result review"
+        == "Level 3 bounded countermodel reattempt packet result review accepted pending bounded execution"
     )
     assert (
         countermodel_scope_refinement_active_workstream["claim_ceiling"]
-        == "bounded countermodel reattempt packet prepared no countermodel result no no-go result no source admissibility or qft_gr closure"
+        == "bounded countermodel reattempt authorized under pinned scope no countermodel result no no-go result no source admissibility or qft_gr closure"
     )
     assert (
         "no source admissibility"
@@ -3191,17 +3191,51 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         countermodel_scope_refinement_active_workstream[
             "countermodel_reattempt_packet_result_review_pending"
         ]
-        == "yes"
+        == "no"
     )
     assert (
         countermodel_scope_refinement_active_workstream[
             "countermodel_reattempt_packet_result_reviewed"
         ]
-        == "no"
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "countermodel_reattempt_packet_result_review_accepted"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "target_name_drift_prevented"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream["encoded_downstream_target"]
+        == LIVE_TARGET
     )
     assert (
         countermodel_scope_refinement_active_workstream[
             "countermodel_reattempt_authorized_by_packet"
+        ]
+        == "no"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "countermodel_reattempt_authorized_by_packet_review"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "countermodel_attempt_after_scope_refinement_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "countermodel_attempt_after_scope_refinement_executed"
         ]
         == "no"
     )
