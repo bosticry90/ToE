@@ -1158,8 +1158,8 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "execute_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_"
-    "for_weak_conservation_obstruction"
+    "review_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_"
+    "for_weak_conservation_obstruction_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1330,8 +1330,8 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_qft_gr_minimal_model_countermodel_reattempt_packet_for_weak_"
-    "conservation_obstruction_result"
+    "execute_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_"
+    "for_weak_conservation_obstruction"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1424,8 +1424,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "execute_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_"
-    "for_weak_conservation_obstruction"
+    "review_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_"
+    "for_weak_conservation_obstruction_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1442,7 +1442,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalModelCountermodelReattemptPacketForWeakConservationObstructionResultReview.lean"
+    / "QFTGRMinimalModelCountermodelAttemptAfterScopeRefinementForWeakConservationObstruction.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2970,22 +2970,22 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert countermodel_scope_refinement_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_REATTEMPT_PACKET_FOR_WEAK_"
-        "CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260615_v0.json"
+        "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_AFTER_SCOPE_REFINEMENT_FOR_"
+        "WEAK_CONSERVATION_OBSTRUCTION_20260615_v0.json"
     )
     assert (
         countermodel_scope_refinement_active_workstream["outcome_id"]
-        == "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_REATTEMPT_PACKET_FOR_WEAK_"
-        "CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_PACKET_AND_AUTHORIZES_"
-        "BOUNDED_COUNTERMODEL_REATTEMPT_ONLY"
+        == "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_AFTER_SCOPE_REFINEMENT_"
+        "FOR_WEAK_CONSERVATION_OBSTRUCTION_EXECUTED_WITH_NO_SOURCE_"
+        "ADMISSIBILITY_OR_QFT_GR_CLOSURE"
     )
     assert (
         countermodel_scope_refinement_active_workstream["claim_level"]
-        == "Level 3 bounded countermodel reattempt packet result review accepted pending bounded execution"
+        == "Level 3 bounded countermodel attempt after scope refinement executed pending result review"
     )
     assert (
         countermodel_scope_refinement_active_workstream["claim_ceiling"]
-        == "bounded countermodel reattempt authorized under pinned scope no countermodel result no no-go result no source admissibility or qft_gr closure"
+        == "inconclusive countermodel attempt under pinned scope no countermodel result no no-go result no not-found claim no source admissibility or qft_gr closure"
     )
     assert (
         "no source admissibility"
@@ -2996,236 +2996,30 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_attempt_authorized_by_packet"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_attempt_executed_by_packet"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream["countermodel_attempt_pending"]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_attempt_result_review_pending"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_attempt_result_reviewed"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_attempt_result_review_accepted"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "inconclusive_countermodel_attempt_accepted"
-        ]
-        == "yes"
-    )
-    assert (
         countermodel_scope_refinement_active_workstream["result_classification"]
-        == "qft_gr_minimal_model_countermodel_scope_refinement_for_weak_conservation_obstruction_completed_pending_result_review"
+        == "qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_inconclusive_requires_source_map_or_scope_decision"
     )
     assert (
         countermodel_scope_refinement_active_workstream["selected_classification"]
-        == "qft_gr_minimal_model_countermodel_scope_refinement_for_weak_conservation_obstruction_completed_pending_result_review"
+        == "qft_gr_minimal_model_countermodel_for_weak_conservation_obstruction_inconclusive_requires_source_map_or_scope_decision"
     )
     assert (
         countermodel_scope_refinement_active_workstream[
-            "found_classification_not_selected"
+            "attempt_after_scope_refinement_executed"
         ]
         == "yes"
     )
     assert (
         countermodel_scope_refinement_active_workstream[
-            "not_found_classification_not_selected"
+            "attempt_after_scope_refinement_result_review_pending"
         ]
         == "yes"
     )
     assert (
         countermodel_scope_refinement_active_workstream[
-            "countermodel_found_pending_result_review"
+            "attempt_after_scope_refinement_result_reviewed"
         ]
         == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_not_found_requires_source_map_ladder"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_scope_refinement_required_pending_result_review"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_scope_refinement_packet_authorized"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_scope_refinement_packet_authorized_only"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "scope_refinement_packet_preparation_pending"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_scope_refinement_packet_prepared"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_scope_refinement_packet_result_review_pending"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_scope_refinement_packet_result_reviewed"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "scope_refinement_packet_result_review_accepted"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "scope_refinement_attempt_authorized"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "bounded_scope_refinement_attempt_authorized_only"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "scope_refinement_attempt_pending"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "scope_refinement_attempt_executed"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "scope_refinement_attempt_result_review_pending"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "scope_refinement_attempt_result_reviewed"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "scope_refinement_attempt_result_review_accepted"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_lane_decidability_scope_accepted"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_reattempt_packet_authorized"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "bounded_countermodel_reattempt_packet_authorized_only"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_reattempt_packet_prepared"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_reattempt_packet_preparation_only"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_reattempt_packet_result_review_pending"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_reattempt_packet_result_reviewed"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_reattempt_packet_result_review_accepted"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "target_name_drift_prevented"
-        ]
-        == "yes"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream["encoded_downstream_target"]
-        == LIVE_TARGET
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_reattempt_authorized_by_packet"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_reattempt_authorized_by_packet_review"
-        ]
-        == "yes"
     )
     assert (
         countermodel_scope_refinement_active_workstream[
@@ -3237,52 +3031,58 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         countermodel_scope_refinement_active_workstream[
             "countermodel_attempt_after_scope_refinement_executed"
         ]
-        == "no"
+        == "yes"
     )
     assert (
         countermodel_scope_refinement_active_workstream[
-            "countermodel_reattempt_executed"
+            "countermodel_found_pending_result_review"
         ]
         == "no"
     )
     assert (
-        countermodel_scope_refinement_active_workstream["reattempt_probe_count"]
+        countermodel_scope_refinement_active_workstream[
+            "countermodel_not_found_under_pinned_scope_requires_source_map_ladder"
+        ]
+        == "no"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "countermodel_inconclusive_requires_source_map_or_scope_decision"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream["probe_evaluation_count"]
+        == "5"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream["not_decisive_probe_count"]
         == "5"
     )
     assert (
         countermodel_scope_refinement_active_workstream[
-            "allowed_reattempt_classification_count"
+            "decisive_countermodel_pressure_point_count"
         ]
-        == "3"
+        == "0"
     )
     assert (
         countermodel_scope_refinement_active_workstream[
-            "countermodel_lane_decidability_scope_pinned"
+            "not_found_supporting_probe_count"
+        ]
+        == "0"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "result_review_must_choose_source_map_or_single_scope_decision"
         ]
         == "yes"
     )
     assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_attempt_authorized_by_review"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "countermodel_attempt_executed_by_review"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "source_test_instantiation_pinned"
-        ]
+        countermodel_scope_refinement_active_workstream["source_test_instantiation_pinned"]
         == "yes"
     )
     assert (
-        countermodel_scope_refinement_active_workstream[
-            "weak_pairing_semantics_pinned"
-        ]
+        countermodel_scope_refinement_active_workstream["weak_pairing_semantics_pinned"]
         == "yes"
     )
     assert (
@@ -3305,18 +3105,6 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         countermodel_scope_refinement_active_workstream["pinned_evaluation_scope_id"]
         == "broader_weak_divergence_boundary_and_curvature_evaluation_scope_v0"
     )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "selected_countermodel_criterion_count"
-        ]
-        == "0"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "selected_no_go_criterion_count"
-        ]
-        == "0"
-    )
     for key in [
         "countermodel_result_claimed",
         "countermodel_exists_claimed",
@@ -3325,10 +3113,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "not_found_result_claimed",
         "inconclusive_result_claimed",
         "source_map_ladder_packet_authorized",
+        "further_scope_refinement_authorized",
         "source_admissibility_claimed",
         "conservation_witness_constructed",
         "qft_gr_closure_claimed",
-        "countermodel_scope_refinement_packet_executed",
     ]:
         assert countermodel_scope_refinement_active_workstream[key] == "no", key
     assert (
@@ -3338,9 +3126,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "yes"
     )
     assert (
-        countermodel_scope_refinement_active_workstream[
-            "strict_toy_witness_preserved"
-        ]
+        countermodel_scope_refinement_active_workstream["strict_toy_witness_preserved"]
         == "yes"
     )
     assert (
@@ -3367,16 +3153,6 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         countermodel_scope_refinement_active_workstream["mathematical_resolution_claimed"]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream[
-            "ordinary_model_refinement_authorized"
-        ]
-        == "no"
-    )
-    assert (
-        countermodel_scope_refinement_active_workstream["immediate_retest_authorized"]
         == "no"
     )
     assert (
