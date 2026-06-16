@@ -277,9 +277,9 @@ def test_countermodel_attempt_lean_and_surface_mirrors() -> None:
         NEXT_TARGET,
         INCONCLUSIVE_CLASSIFICATION,
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "review_qft_gr_minimal_model_countermodel_scope_refinement_packet_for_weak_conservation_obstruction_result",
+        "execute_qft_gr_minimal_model_countermodel_scope_refinement_attempt_for_weak_conservation_obstruction",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "prepare_qft_gr_minimal_model_countermodel_scope_refinement_packet_for_weak_conservation_obstruction",
+        "review_qft_gr_minimal_model_countermodel_scope_refinement_packet_for_weak_conservation_obstruction_result",
         "countermodelAttemptExecuted",
         "countermodelScopeRefinementRequiredPendingResultReview",
         "no source admissibility",
