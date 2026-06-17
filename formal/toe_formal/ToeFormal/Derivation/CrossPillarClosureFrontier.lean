@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR candidate definition revision/replacement packet prepared with outcome QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_PREPARED_WITH_CURRENT_CANDIDATE_REPLACED_BY_STRICTER_FUNCTIONAL_SOURCE_CANDIDATE_AND_WEAK_PAIRING_RETRY_AUTHORIZED_ONLY. The packet retires broader_stress_energy_like_distribution_candidate_not_source_admissible_v0, selects distributional_symmetric_tensor_candidate_v0 with contract T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear and pairing rule <T, h> := T(h) for h in C_c^infty(M, Sym^2 T*M), authorizes only prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract, and preserves no completed weak pairing, no source admissibility, no action derivability, no conservation proof, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion"
+        "QFT-GR weak-pairing retry for the selected distributional_symmetric_tensor_candidate_v0 prepared with outcome QFT_GR_WEAK_PAIRING_RETRY_FOR_SELECTED_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_PREPARED_WITH_WEAK_PAIRING_CONSTRUCTED_FOR_SELECTED_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_AND_ACTION_DERIVABILITY_NOT_REACHED. The packet uses contract T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear, defines <T, h> := T(h) for h in C_c^infty(M, Sym^2 T*M), records well_defined_pairing true only as well_defined_as_distributional_pairing_under_selected_functional_contract, selects prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate, and preserves no source admissibility, no action derivability claim, no conservation proof, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract"
+        "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The math-first QFT-GR chain now prepares the candidate definition revision/replacement packet and records CURRENT_CANDIDATE_REPLACED_BY_STRICTER_FUNCTIONAL_SOURCE_CANDIDATE. The chain retires the underspecified broader candidate, selects distributional_symmetric_tensor_candidate_v0 only as a functional source candidate for weak-pairing retry, and sets prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract as the only active next target while preserving no source-admissibility claim, conservation claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
+        "The math-first QFT-GR chain now prepares the weak-pairing retry packet and records WEAK_PAIRING_CONSTRUCTED_FOR_SELECTED_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_ACTION_DERIVABILITY_NOT_REACHED. The chain establishes only restricted distributional pairing for distributional_symmetric_tensor_candidate_v0 and sets prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate as the only active next target while preserving no source-admissibility claim, action-derivability claim, conservation claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract"
+        "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the candidate definition revision/replacement packet. -/
+/-- Previous live target consumed by the weak-pairing retry packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_candidate_definition_revision_or_replacement_packet"
-
-/-- Current live target after the candidate definition revision/replacement packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract"
+
+/-- Current live target after the weak-pairing retry packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract"
+    "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

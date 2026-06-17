@@ -285,7 +285,6 @@ def test_candidate_definition_packet_lean_and_surface_mirrors() -> None:
         SELECTED_FUNCTIONAL_CONTRACT,
         SELECTED_PAIRING_RULE,
         "QFTGRCandidateDefinitionRevisionOrReplacementPacket",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
         "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
         "no source admissibility",
         "no QFT-GR closure",

@@ -1,0 +1,139 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptable_result_outcomes": [
+    "WEAK_PAIRING_CONSTRUCTED_FOR_SELECTED_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_ACTION_DERIVABILITY_NOT_REACHED",
+    "WEAK_PAIRING_CONSTRUCTED_NONPROMOTIONALLY_ACTION_DERIVABILITY_NEXT",
+    "WEAK_PAIRING_RETRY_BLOCKED_FOR_SELECTED_FUNCTIONAL_CONTRACT"
+  ],
+  "acceptance_criteria": {
+    "action_derivability_not_reached": true,
+    "all_calculation_steps_pass": true,
+    "consumes_expected_candidate_definition_packet": true,
+    "functional_contract_bound": true,
+    "non_promotion_boundary_preserved": true,
+    "pairing_defined_as_distributional_evaluation": true,
+    "selected_candidate_is_distributional_symmetric_tensor": true,
+    "test_domain_bound": true,
+    "well_defined_pairing_restricted_scope": true
+  },
+  "accepted": true,
+  "action_derivability_claimed": false,
+  "action_derivability_next_target_authorized": true,
+  "action_derivability_status": "not_reached",
+  "artifact_id": "QFT_GR_WEAK_PAIRING_RETRY_FOR_SELECTED_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_20260616_v0",
+  "authorized_by_candidate_definition_artifact_id": "QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_20260616_v0",
+  "authorized_by_candidate_definition_commit": "1957478764ecfa2807f82a0ee335a324d52ab5f6",
+  "calculation_result": "WEAK_PAIRING_CONSTRUCTED_FOR_SELECTED_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_ACTION_DERIVABILITY_NOT_REACHED",
+  "calculation_steps": [
+    {
+      "passed": true,
+      "result": "supplied_by_prior_packet",
+      "statement": "Use the selected replacement candidate distributional_symmetric_tensor_candidate_v0.",
+      "step_id": "bind_selected_candidate"
+    },
+    {
+      "passed": true,
+      "result": "test_domain_supplied",
+      "statement": "D = C_c^infty(M, Sym^2 T*M)",
+      "step_id": "bind_test_domain"
+    },
+    {
+      "passed": true,
+      "result": "continuous_linear_functional_supplied",
+      "statement": "T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear",
+      "step_id": "bind_distributional_contract"
+    },
+    {
+      "passed": true,
+      "result": "definition_supplied",
+      "statement": "<T, h> := T(h) for h in C_c^infty(M, Sym^2 T*M)",
+      "step_id": "define_weak_pairing"
+    },
+    {
+      "passed": true,
+      "result": "well_defined_as_distributional_pairing_under_selected_functional_contract",
+      "statement": "For each h in D, T(h) is a real number by the selected continuous linear functional contract.",
+      "step_id": "well_definedness_check"
+    }
+  ],
+  "candidate_id": "distributional_symmetric_tensor_candidate_v0",
+  "candidate_index_placement": "contravariant T^{mu nu} paired with covariant h_{mu nu}",
+  "candidate_kind": "tensor_valued_distribution",
+  "candidate_regular_type": "D'(M, Sym^2 TM)",
+  "candidate_tensor_type": "symmetric contravariant rank-2 tensor distribution",
+  "captured_at_utc": "2026-06-16T00:00:00Z",
+  "conservation_claimed": false,
+  "consumed_target": "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
+  "downstream_progression": [
+    {
+      "decision": "well_defined_as_distributional_pairing_under_selected_functional_contract",
+      "reason": "The selected candidate is a continuous linear functional on the test domain.",
+      "stage": "weak_pairing_retry",
+      "status": "COMPLETED_RESTRICTED"
+    },
+    {
+      "decision": "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
+      "reason": "Action derivability remains untested and is downstream of weak pairing.",
+      "stage": "action_derivability",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Weak conservation is downstream of action/source semantics.",
+      "stage": "weak_conservation",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Bianchi compatibility is downstream of conservation.",
+      "stage": "bianchi_compatibility",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Semiclassical coupling is downstream of the prior checks.",
+      "stage": "semiclassical_source_admissibility",
+      "status": "NOT_REACHED"
+    }
+  ],
+  "empirical_validation_claimed": false,
+  "functional_contract": "T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear",
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakPairingRetryForSelectedCandidateFunctionalContractPacket.lean",
+  "master_action_promoted": false,
+  "mathematical_statement": "Given T in D'(M, Sym^2 TM) and h in C_c^infty(M, Sym^2 T*M), define <T, h> := T(h). The pairing is well-defined as a real number by the selected continuous linear functional contract.",
+  "non_claim_boundary": "This packet constructs the weak pairing only as distributional evaluation under the selected functional contract. It does not claim source admissibility, action derivability, weak conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
+  "outcome_id": "QFT_GR_WEAK_PAIRING_RETRY_FOR_SELECTED_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_PREPARED_WITH_WEAK_PAIRING_CONSTRUCTED_FOR_SELECTED_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_AND_ACTION_DERIVABILITY_NOT_REACHED",
+  "packet_classification": "qft_gr_weak_pairing_retry_constructs_distributional_pairing_for_selected_functional_contract_without_source_admissibility_or_action_derivability",
+  "packet_id": "QFT_GR_WEAK_PAIRING_RETRY_FOR_SELECTED_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_v0",
+  "pairing_definition": "<T, h> := T(h) for h in C_c^infty(M, Sym^2 T*M)",
+  "prepared": true,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "schema_id": "QFT_GR_WEAK_PAIRING_RETRY_FOR_SELECTED_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_20260616_v0",
+  "selected_next_target": "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
+  "selected_next_target_kind": "qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "test_domain": "C_c^infty(M, Sym^2 T*M)",
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "bounded_focused_validation_only": true,
+    "checkpoint_type": "qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract_packet",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "release_index_path_not_freshly_lean_validated": true
+  },
+  "weak_conservation_claimed": false,
+  "weak_pairing_completed": true,
+  "weak_pairing_completion_scope": "well_defined_as_distributional_pairing_under_selected_functional_contract",
+  "weak_pairing_constructed": true,
+  "weak_pairing_not_physical_source_claim": true,
+  "well_defined_pairing": true,
+  "well_defined_pairing_scope": "well_defined_as_distributional_pairing_under_selected_functional_contract"
+}
