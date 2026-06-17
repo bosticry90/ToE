@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate"
+    "prepare_qft_gr_matter_action_functional_candidate_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,7 +1329,7 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract"
+    "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1422,7 +1422,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate"
+    "prepare_qft_gr_matter_action_functional_candidate_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1439,7 +1439,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRWeakPairingRetryForSelectedCandidateFunctionalContractPacket.lean"
+    / "QFTGRActionDerivabilityTestForDistributionalSymmetricTensorCandidatePacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2949,92 +2949,89 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    action_derivability_active_workstream = active_workstream(payload)
-    assert action_derivability_active_workstream["workstream_id"] == ACTIVE_LANE
+    matter_action_active_workstream = active_workstream(payload)
+    assert matter_action_active_workstream["workstream_id"] == ACTIVE_LANE
     assert (
-        action_derivability_active_workstream["authorized_next_strict_target"]
+        matter_action_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert action_derivability_active_workstream["authorized_target"] == LIVE_TARGET
-    assert action_derivability_active_workstream["authorization_evidence"] == str(
+    assert matter_action_active_workstream["authorized_target"] == LIVE_TARGET
+    assert matter_action_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert action_derivability_active_workstream["report"] == (
+    assert matter_action_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_WEAK_PAIRING_RETRY_FOR_SELECTED_CANDIDATE_FUNCTIONAL_"
-        "CONTRACT_PACKET_20260616_v0.json"
+        "QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_"
+        "TENSOR_CANDIDATE_PACKET_20260616_v0.json"
     )
     assert (
-        action_derivability_active_workstream["outcome_id"]
-        == "QFT_GR_WEAK_PAIRING_RETRY_FOR_SELECTED_CANDIDATE_FUNCTIONAL_"
-        "CONTRACT_PACKET_PREPARED_WITH_WEAK_PAIRING_CONSTRUCTED_FOR_SELECTED_"
-        "DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_AND_ACTION_DERIVABILITY_"
-        "NOT_REACHED"
+        matter_action_active_workstream["outcome_id"]
+        == "QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_"
+        "TENSOR_CANDIDATE_PACKET_PREPARED_WITH_ACTION_DERIVABILITY_BLOCKED_"
+        "BY_MISSING_ACTION_FUNCTIONAL_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_"
+        "CLOSURE"
     )
     assert (
-        action_derivability_active_workstream["claim_level"]
-        == "Level 3 QFT-GR action-derivability test preparation authorized"
+        matter_action_active_workstream["claim_level"]
+        == "Level 3 QFT-GR matter action functional candidate packet preparation authorized"
     )
     assert (
-        action_derivability_active_workstream["claim_ceiling"]
-        == "action-derivability test preparation only no action derivability claim no source admissibility no qft_gr closure"
+        matter_action_active_workstream["claim_ceiling"]
+        == "matter action functional candidate preparation only no action derivability claim no source admissibility no qft_gr closure"
     )
-    assert "restricted weak pairing" in action_derivability_active_workstream[
+    assert "delta S_m[g](h) = -1/2 T(h)" in matter_action_active_workstream[
         "non_claim_boundary"
     ]
     assert (
-        action_derivability_active_workstream["consumed_target"]
+        matter_action_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        action_derivability_active_workstream["calculation_result"]
-        == "WEAK_PAIRING_CONSTRUCTED_FOR_SELECTED_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_ACTION_DERIVABILITY_NOT_REACHED"
+        matter_action_active_workstream["action_derivability_result"]
+        == "ACTION_DERIVABILITY_BLOCKED_BY_MISSING_ACTION_FUNCTIONAL"
     )
     assert (
-        action_derivability_active_workstream["well_defined_pairing"]
+        matter_action_active_workstream["weak_pairing_constructed"]
         == "yes"
     )
     assert (
-        action_derivability_active_workstream["well_defined_pairing_scope"]
+        matter_action_active_workstream["weak_pairing_scope"]
         == "well_defined_as_distributional_pairing_under_selected_functional_contract"
     )
     assert (
-        action_derivability_active_workstream["weak_pairing_completed"]
-        == "yes"
-    )
-    assert (
-        action_derivability_active_workstream["candidate_id"]
+        matter_action_active_workstream["candidate_id"]
         == "distributional_symmetric_tensor_candidate_v0"
     )
     assert (
-        action_derivability_active_workstream["candidate_kind"]
-        == "tensor_valued_distribution"
-    )
-    assert (
-        action_derivability_active_workstream["candidate_regular_type"]
-        == "D'(M, Sym^2 TM)"
-    )
-    assert (
-        action_derivability_active_workstream["test_domain"]
+        matter_action_active_workstream["test_domain"]
         == "C_c^infty(M, Sym^2 T*M)"
     )
     assert (
-        action_derivability_active_workstream["functional_contract"]
+        matter_action_active_workstream["functional_contract"]
         == "T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear"
     )
     assert (
-        action_derivability_active_workstream["pairing_definition"]
-        == "<T, h> := T(h) for h in C_c^infty(M, Sym^2 T*M)"
+        matter_action_active_workstream["weak_variational_obligation"]
+        == "delta S_m[g](h) = -1/2 T(h)"
     )
     assert (
-        action_derivability_active_workstream["action_derivability_status"]
-        == "not_reached"
+        matter_action_active_workstream["matter_action_functional_supplied"]
+        == "no"
     )
     assert (
-        action_derivability_active_workstream[
-            "action_derivability_next_target_authorized"
-        ]
-        == "yes"
+        matter_action_active_workstream["metric_variation_rule_supplied"]
+        == "no"
+    )
+    assert (
+        matter_action_active_workstream["variational_domain_for_action_supplied"]
+        == "no"
+    )
+    assert (
+        matter_action_active_workstream["action_derivability_constructed"]
+        == "no"
+    )
+    assert (
+        matter_action_active_workstream["source_is_action_derived"] == "no"
     )
     for key in [
         "source_admissibility_claimed",
@@ -3049,7 +3046,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "public_submission_authorized",
         "master_action_promoted",
     ]:
-        assert action_derivability_active_workstream[key] == "no", key
+        assert matter_action_active_workstream[key] == "no", key
 
     post_retest_refinement_conservation_retest_refinement_refinement_packet_workstream = _workstream(
         payload,
@@ -8553,7 +8550,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        action_derivability_active_workstream[
+        matter_action_active_workstream[
             "authorized_next_strict_target"
         ],
     }

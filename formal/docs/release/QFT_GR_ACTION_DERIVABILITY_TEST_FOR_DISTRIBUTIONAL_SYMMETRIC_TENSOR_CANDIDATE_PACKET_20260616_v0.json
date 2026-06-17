@@ -1,0 +1,181 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptable_result_outcomes": [
+    "ACTION_DERIVABILITY_CONSTRUCTED_NONPROMOTIONALLY",
+    "ACTION_DERIVABILITY_BLOCKED_BY_MISSING_ACTION_FUNCTIONAL",
+    "ACTION_DERIVABILITY_BLOCKED_BY_VARIATIONAL_DOMAIN_MISMATCH",
+    "ACTION_DERIVABILITY_REJECTED_FOR_ARBITRARY_DISTRIBUTIONAL_CANDIDATE"
+  ],
+  "acceptance_criteria": {
+    "action_derivability_not_constructed": true,
+    "consumes_expected_weak_pairing_packet": true,
+    "metric_variation_rule_missing": true,
+    "missing_action_functional_recorded": true,
+    "next_target_is_matter_action_candidate_packet": true,
+    "non_promotion_boundary_preserved": true,
+    "prior_weak_pairing_constructed": true,
+    "weak_variational_obligation_stated": true
+  },
+  "accepted": true,
+  "action_derivability_blockers": [
+    "matter_action_functional",
+    "metric_variation_rule",
+    "variational_domain",
+    "sign_and_normalization_convention"
+  ],
+  "action_derivability_claimed": false,
+  "action_derivability_constructed": false,
+  "action_derivability_obligations": [
+    {
+      "blocks_action_derivability": true,
+      "obligation_id": "matter_action_functional",
+      "required_form": "S_m[g, fields] or an equivalent licensed matter action functional",
+      "status": "missing"
+    },
+    {
+      "blocks_action_derivability": true,
+      "obligation_id": "metric_variation_rule",
+      "required_form": "delta S_m[g](h) = -1/2 T(h)",
+      "status": "missing"
+    },
+    {
+      "blocks_action_derivability": true,
+      "obligation_id": "variational_domain",
+      "required_form": "h in C_c^infty(M, Sym^2 T*M)",
+      "status": "missing_for_action_functional"
+    },
+    {
+      "blocks_action_derivability": true,
+      "obligation_id": "sign_and_normalization_convention",
+      "required_form": "delta S_m[g](h) = -1/2 T(h)",
+      "status": "stated_as_target_convention_not_derived"
+    },
+    {
+      "blocks_action_derivability": false,
+      "obligation_id": "covariance_or_diffeomorphism_behavior",
+      "required_form": "matter action covariance sufficient for downstream conservation test",
+      "status": "not_reached"
+    },
+    {
+      "blocks_action_derivability": false,
+      "obligation_id": "boundary_support_conditions",
+      "required_form": "compact-support or boundary treatment compatible with the variation",
+      "status": "not_reached"
+    }
+  ],
+  "action_derivability_result": "ACTION_DERIVABILITY_BLOCKED_BY_MISSING_ACTION_FUNCTIONAL",
+  "artifact_id": "QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_20260616_v0",
+  "authorized_by_weak_pairing_artifact_id": "QFT_GR_WEAK_PAIRING_RETRY_FOR_SELECTED_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_20260616_v0",
+  "authorized_by_weak_pairing_commit": "a54cf90a65503defe75cc2838d028e5aa1c2bf1a",
+  "calculation_steps": [
+    {
+      "passed": true,
+      "result": "supplied_by_prior_weak_pairing_packet",
+      "statement": "Use distributional_symmetric_tensor_candidate_v0 with pairing <T, h> := T(h) for h in C_c^infty(M, Sym^2 T*M).",
+      "step_id": "bind_pairable_candidate"
+    },
+    {
+      "passed": true,
+      "result": "obligation_stated",
+      "statement": "delta S_m[g](h) = -1/2 T(h)",
+      "step_id": "state_weak_variational_obligation"
+    },
+    {
+      "passed": false,
+      "result": "no_matter_action_functional_supplied",
+      "statement": "Find a licensed S_m whose metric variation equals -1/2 T(h).",
+      "step_id": "search_for_licensed_action_functional"
+    },
+    {
+      "passed": false,
+      "result": "blocked_by_missing_action_functional",
+      "statement": "Compute delta S_m[g](h) and compare with -1/2 T(h).",
+      "step_id": "derive_action_variation"
+    }
+  ],
+  "candidate_id": "distributional_symmetric_tensor_candidate_v0",
+  "captured_at_utc": "2026-06-16T00:00:00Z",
+  "conservation_claimed": false,
+  "consumed_target": "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
+  "downstream_progression": [
+    {
+      "decision": "well_defined_as_distributional_pairing_under_selected_functional_contract",
+      "reason": "Carried forward from the preserved weak-pairing retry packet.",
+      "stage": "weak_pairing",
+      "status": "COMPLETED_RESTRICTED"
+    },
+    {
+      "decision": "ACTION_DERIVABILITY_BLOCKED_BY_MISSING_ACTION_FUNCTIONAL",
+      "reason": "No licensed matter action functional or metric variation rule is supplied.",
+      "stage": "action_derivability",
+      "status": "BLOCKED"
+    },
+    {
+      "decision": "prepare_qft_gr_matter_action_functional_candidate_packet",
+      "reason": "A matter action functional candidate is required before action derivability can be retried.",
+      "stage": "matter_action_functional_candidate",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Weak conservation is downstream of action derivability or a non-action source route decision.",
+      "stage": "weak_conservation",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Bianchi compatibility is downstream of conservation.",
+      "stage": "bianchi_compatibility",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Semiclassical coupling is downstream of source admissibility checks.",
+      "stage": "semiclassical_source_admissibility",
+      "status": "NOT_REACHED"
+    }
+  ],
+  "empirical_validation_claimed": false,
+  "functional_contract": "T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear",
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityTestForDistributionalSymmetricTensorCandidatePacket.lean",
+  "master_action_promoted": false,
+  "mathematical_statement": "The pairable distributional tensor T would be action-derived only if a licensed matter action S_m supplied the weak variation delta S_m[g](h) = -1/2 T(h). The weak pairing alone does not supply S_m, so action derivability is blocked.",
+  "matter_action_functional_supplied": false,
+  "metric_variation_rule_supplied": false,
+  "non_claim_boundary": "This packet tests action derivability for a pairable distributional symmetric tensor candidate and records that the test is blocked by a missing matter action functional. It does not claim source admissibility, action derivability, weak conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
+  "outcome_id": "QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_PREPARED_WITH_ACTION_DERIVABILITY_BLOCKED_BY_MISSING_ACTION_FUNCTIONAL_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+  "packet_classification": "qft_gr_action_derivability_test_records_missing_matter_action_functional_for_pairable_distributional_symmetric_tensor_candidate",
+  "packet_id": "QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_v0",
+  "prepared": true,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "schema_id": "QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_20260616_v0",
+  "selected_next_target": "prepare_qft_gr_matter_action_functional_candidate_packet",
+  "selected_next_target_kind": "qft_gr_matter_action_functional_candidate_packet_preparation",
+  "semiclassical_einstein_equation_derived": false,
+  "sign_normalization_derived": false,
+  "smooth_reference_form": "T_{mu nu} = -2 / sqrt(-g) * delta S_m / delta g^{mu nu}",
+  "source_admissibility_claimed": false,
+  "source_is_action_derived": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "test_domain": "C_c^infty(M, Sym^2 T*M)",
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "bounded_focused_validation_only": true,
+    "checkpoint_type": "qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate_packet",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "release_index_path_not_freshly_lean_validated": true
+  },
+  "variational_domain_for_action_supplied": false,
+  "weak_conservation_claimed": false,
+  "weak_pairing_constructed": true,
+  "weak_pairing_result": "WEAK_PAIRING_CONSTRUCTED_FOR_SELECTED_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_ACTION_DERIVABILITY_NOT_REACHED",
+  "weak_pairing_scope": "well_defined_as_distributional_pairing_under_selected_functional_contract",
+  "weak_variational_obligation": "delta S_m[g](h) = -1/2 T(h)"
+}

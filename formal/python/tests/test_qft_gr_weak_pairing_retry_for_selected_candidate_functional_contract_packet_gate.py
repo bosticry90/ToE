@@ -256,7 +256,6 @@ def test_weak_pairing_retry_packet_lean_and_surface_mirrors() -> None:
         CALCULATION_RESULT,
         WELL_DEFINED_PAIRING_SCOPE,
         "QFTGRWeakPairingRetryForSelectedCandidateFunctionalContractPacket",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
         "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
         "no source admissibility",
         "no QFT-GR closure",
