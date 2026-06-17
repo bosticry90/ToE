@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
+    "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,7 +1329,7 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector"
+    "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1422,7 +1422,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
+    "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1439,7 +1439,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRActionDerivabilityRetryWithProvisionalMatterSector.lean"
+    / "QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2961,24 +2961,24 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert scalar_conservation_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_20260616_v0.json"
+        "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_"
+        "SOURCE_20260617_v0.json"
     )
     assert (
         scalar_conservation_active_workstream["outcome_id"]
-        == "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_"
-        "PREPARED_WITH_ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_"
-        "SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION_AND_NO_SOURCE_"
-        "ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+        == "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_"
+        "PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_"
+        "SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
     )
     assert (
         scalar_conservation_active_workstream["claim_level"]
-        == "Level 3 QFT-GR weak-conservation test for provisional scalar stress-energy source authorized"
+        == "Level 3 QFT-GR Bianchi-compatibility test for provisional scalar stress-energy source authorized"
     )
     assert (
         scalar_conservation_active_workstream["claim_ceiling"]
-        == "provisional scalar weak-conservation test only no source admissibility no Bianchi compatibility no semiclassical coupling no qft_gr closure"
+        == "Bianchi compatibility test preparation only no source admissibility no semiclassical coupling no qft_gr closure"
     )
-    assert "weak conservation" in scalar_conservation_active_workstream[
+    assert "Bianchi compatibility" in scalar_conservation_active_workstream[
         "non_claim_boundary"
     ]
     assert (
@@ -3034,7 +3034,38 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "yes"
     )
     assert (
-        scalar_conservation_active_workstream["weak_conservation_test_authorized"]
+        scalar_conservation_active_workstream["weak_conservation_result"]
+        == "WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY"
+    )
+    assert (
+        scalar_conservation_active_workstream["weak_conservation_constructed"]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream["weak_conservation_claimed"]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream["weak_conservation_claimed_scope"]
+        == "conditional on scalar equation of motion only"
+    )
+    assert scalar_conservation_active_workstream["on_shell_required"] == "yes"
+    assert (
+        scalar_conservation_active_workstream["scalar_equation_of_motion"]
+        == "box_g phi - V'(phi) = 0"
+    )
+    assert (
+        scalar_conservation_active_workstream["divergence_identity"]
+        == "nabla_mu T^{mu nu} = (box_g phi - V'(phi)) nabla^nu phi"
+    )
+    assert (
+        scalar_conservation_active_workstream["on_shell_conservation_statement"]
+        == "If box_g phi - V'(phi) = 0, then nabla_mu T^{mu nu} = 0"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "Bianchi_compatibility_test_authorized"
+        ]
         == "yes"
     )
     for key in [
@@ -3042,10 +3073,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "source_admissibility_completed",
         "toe_native_matter_derivation_claimed",
         "arbitrary_distributional_source_action_derived_claimed",
+        "arbitrary_distributional_source_conservation_claimed",
         "arbitrary_distributional_source_promoted",
         "conservation_claimed",
-        "weak_conservation_claimed",
+        "off_shell_conservation_claimed",
+        "arbitrary_phi_conserved_claimed",
+        "unconditional_conservation_claimed",
         "Bianchi_compatibility_claimed",
+        "Bianchi_compatibility_completed",
+        "semiclassical_coupling_claimed",
         "semiclassical_einstein_equation_derived",
         "qft_gr_closure_claimed",
         "qft_gr_seam_closed",

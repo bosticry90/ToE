@@ -146,7 +146,8 @@
     "prepare_qft_gr_matter_action_functional_candidate_packet",
     "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
     "prepare_qft_gr_toe_matter_sector_candidate_selection_packet",
-    "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector"
+    "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
+    "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
   ],
   "consumed_targets": [
     {
@@ -329,7 +330,8 @@
     "prepare_qft_gr_matter_action_functional_candidate_packet",
     "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
     "prepare_qft_gr_toe_matter_sector_candidate_selection_packet",
-    "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector"
+    "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
+    "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
   ],
   "controls": [
     {
@@ -691,9 +693,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
+    "active_lane": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
     "candidate_live_next_targets": [
-      "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
+      "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
     ],
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
@@ -881,7 +883,8 @@
       "prepare_qft_gr_matter_action_functional_candidate_packet",
       "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
       "prepare_qft_gr_toe_matter_sector_candidate_selection_packet",
-      "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector"
+      "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
+      "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
     ],
     "consumed_targets": [
       {
@@ -1280,7 +1283,8 @@
       "prepare_qft_gr_matter_action_functional_candidate_packet",
       "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
       "prepare_qft_gr_toe_matter_sector_candidate_selection_packet",
-      "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector"
+      "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
+      "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
     ],
     "current_target_coverage": [
       {
@@ -2040,14 +2044,22 @@
         "token": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_PREPARED_WITH_ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
       },
       {
-        "report": "formal/docs/release/QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_20260616_v0.json",
-        "status": "active_live_next_target",
-        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityRetryWithProvisionalMatterSector.lean",
+        "report": "formal/docs/release/QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0.json",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean",
         "target": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
-        "token": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_PREPARED_WITH_ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+        "token": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+      },
+      {
+        "kind": "qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source_preparation",
+        "report": "formal/docs/release/QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0.json",
+        "status": "active_live_next_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean",
+        "target": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+        "token": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
       }
     ],
-    "focused_gate": "formal/python/tests/test_qft_gr_action_derivability_retry_with_provisional_matter_sector_gate.py",
+    "focused_gate": "formal/python/tests/test_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_gate.py",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -2055,11 +2067,11 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityRetryWithProvisionalMatterSector.lean",
+    "live_next_target": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_outcome": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_PREPARED_WITH_ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
-    "live_next_target_report": "formal/docs/release/QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_20260616_v0.json",
+    "live_next_target_outcome": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+    "live_next_target_report": "formal/docs/release/QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0.json",
     "next_strict_target_coverage": {
       "analyze_qft_gr_minimal_working_model_candidate_only": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelCandidateAnalysis.lean",
@@ -2579,10 +2591,11 @@
         "token": "QFT_GR_TOE_MATTER_SECTOR_CANDIDATE_SELECTION_PACKET_PREPARED_WITH_KNOWN_MATTER_MODEL_IMPORTED_AS_PROVISIONAL_TEST_SECTOR_NO_TOE_DERIVATION_CLAIM_AND_TOE_NATIVE_MATTER_SECTOR_NOT_DEFINED"
       },
       "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source": {
-        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityRetryWithProvisionalMatterSector.lean",
-        "report": "formal/docs/release/QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_20260616_v0.json",
-        "status": "active",
-        "token": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_PREPARED_WITH_ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean",
+        "kind": "qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_preparation",
+        "report": "formal/docs/release/QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
       },
       "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakPairingRetryForSelectedCandidateFunctionalContractPacket.lean",
@@ -3077,6 +3090,13 @@
         "report": "formal/docs/release/QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260609_v0.json",
         "status": "current_live_target_authorized_by_mr_assump_004_attempt_result_review",
         "token": "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_MR_ASSUMP_004_AND_AUTHORIZES_NEXT_MATHEMATICAL_REGULARITY_ROW_SELECTION_ONLY"
+      },
+      "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean",
+        "kind": "qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source_preparation",
+        "report": "formal/docs/release/QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0.json",
+        "status": "active_live_next_target",
+        "token": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
       }
     },
     "paused_lanes": [
@@ -3284,10 +3304,11 @@
       "prepare_qft_gr_matter_action_functional_candidate_packet",
       "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
       "prepare_qft_gr_toe_matter_sector_candidate_selection_packet",
-      "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector"
+      "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
+      "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
+    "previous_live_next_target": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
@@ -3398,7 +3419,8 @@
       "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
       "prepare_qft_gr_toe_matter_sector_candidate_selection_packet",
       "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
-      "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
+      "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
+      "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
     ]
   },
   "cycle_waivers": [],
@@ -3843,7 +3865,7 @@
       "to": "post_v01_alpha_manifest_enrollment_bounded_attack_selection"
     }
   ],
-  "focused_gate": "formal/python/tests/test_qft_gr_action_derivability_retry_with_provisional_matter_sector_gate.py",
+  "focused_gate": "formal/python/tests/test_loop_control_registry_v0_gate.py",
   "fresh_delta_kinds": [
     "new_theorem",
     "counterexample",
@@ -4229,7 +4251,8 @@
     "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
     "prepare_qft_gr_toe_matter_sector_candidate_selection_packet",
     "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
-    "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
+    "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
+    "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -4972,6 +4995,14 @@
       "selected_next_target": "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
       "status": "prepared_action_derivability_retry_with_provisional_matter_sector_authorized",
       "token": "QFT_GR_TOE_MATTER_SECTOR_CANDIDATE_SELECTION_PACKET_PREPARED_WITH_KNOWN_MATTER_MODEL_IMPORTED_AS_PROVISIONAL_TEST_SECTOR_NO_TOE_DERIVATION_CLAIM_AND_TOE_NATIVE_MATTER_SECTOR_NOT_DEFINED"
+    },
+    "qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_v0": {
+      "classification": "qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_constructs_on_shell_conservation_nonpromotionally",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean",
+      "report": "formal/docs/release/QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0.json",
+      "selected_next_target": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+      "status": "prepared_bianchi_compatibility_test_for_provisional_scalar_authorized",
+      "token": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
     }
   },
   "retained_blocker_coverage": [
@@ -5283,11 +5314,19 @@
     },
     {
       "kind": "qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_preparation",
-      "report": "formal/docs/release/QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_20260616_v0.json",
-      "status": "active",
-      "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityRetryWithProvisionalMatterSector.lean",
+      "report": "formal/docs/release/QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0.json",
+      "status": "completed_consumed_live_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean",
       "target": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
-      "token": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_PREPARED_WITH_ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+      "token": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+    },
+    {
+      "kind": "qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source_preparation",
+      "report": "formal/docs/release/QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0.json",
+      "status": "active",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean",
+      "target": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+      "token": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
     }
   ],
   "token_family_coverage": [
@@ -5494,7 +5533,11 @@
     "formal/docs/release/QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_20260616_v0.json",
     "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityRetryWithProvisionalMatterSector.lean",
     "formal/python/tools/qft_gr_action_derivability_retry_with_provisional_matter_sector_report.py",
-    "formal/python/tests/test_qft_gr_action_derivability_retry_with_provisional_matter_sector_gate.py"
+    "formal/python/tests/test_qft_gr_action_derivability_retry_with_provisional_matter_sector_gate.py",
+    "formal/docs/release/QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean",
+    "formal/python/tools/qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_report.py",
+    "formal/python/tests/test_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_gate.py"
   ],
   "workstreams": [
     {
@@ -50956,11 +50999,11 @@
       "active_lane": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
       "arbitrary_distributional_source_action_derived_claimed": "no",
       "arbitrary_distributional_source_promoted": "no",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityRetryWithProvisionalMatterSector.lean",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean",
       "authorized_next_strict_target": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
       "authorized_target": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
-      "claim_ceiling": "provisional scalar weak-conservation test only no source admissibility no Bianchi compatibility no semiclassical coupling no qft_gr closure",
-      "claim_level": "Level 3 QFT-GR weak-conservation test for provisional scalar stress-energy source authorized",
+      "claim_ceiling": "provisional scalar on-shell weak conservation only no source admissibility no Bianchi compatibility no semiclassical coupling no qft_gr closure",
+      "claim_level": "Level 3 QFT-GR weak conservation constructed for provisional scalar source on shell",
       "conservation_claimed": "no",
       "consumed_target": "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
       "covariant_variation_form": "delta S_m[g, phi](k) = -1/2 integral_M T_{mu nu} k^{mu nu} dVol_g",
@@ -50969,33 +51012,121 @@
       "lagrangian_density": "L_m(g, phi, nabla phi) = -1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)",
       "master_action_promoted": "no",
       "metric_variation_convention_stated": "yes",
-      "non_claim_boundary": "The next packet may test weak conservation only for the provisional scalar stress-energy source, likely under the scalar field equation; it cannot claim source admissibility, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
-      "outcome_id": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_PREPARED_WITH_ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
-      "packet_classification": "qft_gr_action_derivability_retry_with_provisional_matter_sector_constructs_scalar_stress_energy_variation_nonpromotionally",
+      "non_claim_boundary": "The packet constructs weak conservation only for the provisional real-scalar source on shell; it does not claim off-shell conservation, arbitrary distributional-source conservation, source admissibility, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, ToE-native matter derivation, or master-action promotion.",
+      "outcome_id": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+      "packet_classification": "qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_constructs_on_shell_conservation_nonpromotionally",
       "prior_contract_pairing_form": "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g",
       "public_submission_authorized": "no",
       "qft_gr_closure_claimed": "no",
       "qft_gr_seam_closed": "no",
-      "report": "formal/docs/release/QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_20260616_v0.json",
+      "report": "formal/docs/release/QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0.json",
       "scalar_action": "S_m[g, phi] = integral_M (-1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)) dVol_g",
       "selected_action_generated_source_subclass_id": "stress_energy_candidate_generated_by_provisional_real_scalar_lagrangian_v0",
-      "selected_next_target": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
-      "selected_next_target_kind": "qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_preparation",
+      "selected_next_target": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+      "selected_next_target_kind": "qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source_preparation",
       "selected_provisional_matter_sector_id": "provisional_real_scalar_field_test_sector_v0",
       "semiclassical_einstein_equation_derived": "no",
       "source_admissibility_claimed": "no",
       "source_admissibility_completed": "no",
       "standard_model_derivation_claimed": "no",
-      "status": "active",
+      "status": "paused",
       "stress_energy_covariant_expression": "T_{mu nu} = partial_mu phi partial_nu phi - 1/2 g_{mu nu} g^{alpha beta} partial_alpha phi partial_beta phi - g_{mu nu} V(phi)",
       "stress_energy_expression_derived": "yes",
       "toe_matter_model_derived": "no",
       "toe_native_matter_derivation_claimed": "no",
       "toe_native_matter_sector_defined": "no",
-      "weak_conservation_claimed": "no",
+      "weak_conservation_claimed": "yes",
       "weak_conservation_test_authorized": "yes",
       "weak_pairing_translation_stated": "yes",
-      "workstream_id": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
+      "workstream_id": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
+      "weak_conservation_result": "WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY",
+      "weak_conservation_constructed": "yes",
+      "weak_conservation_constructed_scope": "provisional real-scalar source on shell only",
+      "weak_conservation_claimed_scope": "conditional on scalar equation of motion only",
+      "on_shell_required": "yes",
+      "scalar_equation_of_motion": "box_g phi - V'(phi) = 0",
+      "divergence_identity": "nabla_mu T^{mu nu} = (box_g phi - V'(phi)) nabla^nu phi",
+      "on_shell_conservation_statement": "If box_g phi - V'(phi) = 0, then nabla_mu T^{mu nu} = 0",
+      "off_shell_boundary": "For arbitrary phi, the divergence is the field-equation residual times nabla^nu phi and is not claimed to vanish.",
+      "off_shell_conservation_claimed": "no",
+      "arbitrary_phi_conserved_claimed": "no",
+      "unconditional_conservation_claimed": "no",
+      "arbitrary_distributional_source_conservation_claimed": "no",
+      "Bianchi_compatibility_completed": "no",
+      "semiclassical_coupling_claimed": "no"
+    },
+    {
+      "workstream_id": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+      "status": "active",
+      "active_lane": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+      "authorized_next_strict_target": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+      "authorized_target": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean",
+      "report": "formal/docs/release/QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0.json",
+      "outcome_id": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+      "packet_classification": "qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_constructs_on_shell_conservation_nonpromotionally",
+      "claim_level": "Level 3 QFT-GR Bianchi-compatibility test for provisional scalar stress-energy source authorized",
+      "claim_ceiling": "Bianchi compatibility test preparation only no source admissibility no semiclassical coupling no qft_gr closure",
+      "consumed_target": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
+      "action_derivability_result": "ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION",
+      "action_derivability_constructed": "yes",
+      "action_derivability_constructed_scope": "provisional real-scalar calculation sandbox only",
+      "selected_provisional_matter_sector_id": "provisional_real_scalar_field_test_sector_v0",
+      "selected_action_generated_source_subclass_id": "stress_energy_candidate_generated_by_provisional_real_scalar_lagrangian_v0",
+      "field_content": "real scalar field phi",
+      "scalar_action": "S_m[g, phi] = integral_M (-1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)) dVol_g",
+      "lagrangian_density": "L_m(g, phi, nabla phi) = -1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)",
+      "metric_variation_convention_stated": "yes",
+      "stress_energy_expression_derived": "yes",
+      "stress_energy_covariant_expression": "T_{mu nu} = partial_mu phi partial_nu phi - 1/2 g_{mu nu} g^{alpha beta} partial_alpha phi partial_beta phi - g_{mu nu} V(phi)",
+      "covariant_variation_form": "delta S_m[g, phi](k) = -1/2 integral_M T_{mu nu} k^{mu nu} dVol_g",
+      "weak_pairing_translation_stated": "yes",
+      "prior_contract_pairing_form": "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g",
+      "weak_conservation_result": "WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY",
+      "weak_conservation_constructed": "yes",
+      "weak_conservation_constructed_scope": "provisional real-scalar source on shell only",
+      "weak_conservation_claimed": "yes",
+      "weak_conservation_claimed_scope": "conditional on scalar equation of motion only",
+      "on_shell_required": "yes",
+      "scalar_equation_of_motion": "box_g phi - V'(phi) = 0",
+      "divergence_identity": "nabla_mu T^{mu nu} = (box_g phi - V'(phi)) nabla^nu phi",
+      "on_shell_conservation_statement": "If box_g phi - V'(phi) = 0, then nabla_mu T^{mu nu} = 0",
+      "off_shell_conservation_claimed": "no",
+      "arbitrary_phi_conserved_claimed": "no",
+      "conservation_claimed": "no",
+      "unconditional_conservation_claimed": "no",
+      "Bianchi_compatibility_test_authorized": "yes",
+      "Bianchi_compatibility_claimed": "no",
+      "Bianchi_compatibility_completed": "no",
+      "source_admissibility_claimed": "no",
+      "source_admissibility_completed": "no",
+      "semiclassical_coupling_claimed": "no",
+      "semiclassical_einstein_equation_derived": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "toe_native_matter_derivation_claimed": "no",
+      "toe_native_matter_sector_defined": "no",
+      "toe_matter_model_derived": "no",
+      "standard_model_derivation_claimed": "no",
+      "arbitrary_distributional_source_action_derived_claimed": "no",
+      "arbitrary_distributional_source_conservation_claimed": "no",
+      "arbitrary_distributional_source_promoted": "no",
+      "empirical_validation_claimed": "no",
+      "public_submission_authorized": "no",
+      "master_action_promoted": "no",
+      "release_packet_assembled": "no",
+      "public_release_completion_authorized": "no",
+      "master_action_promotion_authorized": "no",
+      "pillar_completion_inferred": "no",
+      "seam_closure_claim": "no",
+      "phase2_readiness_claim": "no",
+      "empirical_adequacy_claim": "no",
+      "canonical_toe_claim": "no",
+      "qft_gr_source_map_closure_authorized": "no",
+      "unrelated_gate_enrollment_authorized": "no",
+      "selected_next_target": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+      "selected_next_target_kind": "qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source_preparation",
+      "non_claim_boundary": "The next packet may test Bianchi compatibility only for the provisional scalar stress-energy source after the on-shell weak-conservation result; it cannot claim source admissibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, ToE-native matter derivation, or master-action promotion."
     }
   ]
 }

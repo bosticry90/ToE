@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR action-derivability retry with provisional matter sector prepared with outcome QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_PREPARED_WITH_ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE. The packet derives the provisional scalar stress-energy expression T_{mu nu} = partial_mu phi partial_nu phi - 1/2 g_{mu nu} g^{alpha beta} partial_alpha phi partial_beta phi - g_{mu nu} V(phi), records the inverse-metric variation form delta S_m[g, phi](k) = -1/2 integral_M T_{mu nu} k^{mu nu} dVol_g, translates it to the prior weak-pairing convention by raising indices, authorizes prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source, and preserves no ToE-native matter derivation, no arbitrary-distributional-source action-derivability claim, no source admissibility, no conservation proof, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion"
+        "QFT-GR weak-conservation test for the provisional scalar stress-energy source prepared with outcome QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE. The packet records nabla_mu T^{mu nu} = (box_g phi - V'(phi)) nabla^nu phi and constructs weak conservation only on shell when box_g phi - V'(phi) = 0. It authorizes prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source and preserves no off-shell conservation, no arbitrary-distributional-source conservation, no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, no ToE-native matter derivation, and no master-action promotion"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
+        "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The math-first QFT-GR chain now constructs action derivability for the imported provisional real-scalar sandbox and records the scalar stress-energy variation while preserving that the ToE-native matter sector is not defined. The chain sets prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source as the only active next target while preserving no source-admissibility claim, no conservation claim, no Bianchi compatibility claim, no semiclassical Einstein equation claim, no QFT-GR closure, no public-submission claim, no scientific-validation claim, and no master-action promotion"
+        "The math-first QFT-GR chain now constructs action derivability for the imported provisional real-scalar sandbox and conditional weak conservation for its scalar stress-energy source on shell. The chain sets prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source as the only active next target while preserving no source-admissibility claim, no off-shell or arbitrary-distributional-source conservation claim, no Bianchi compatibility claim, no semiclassical Einstein equation claim, no QFT-GR closure, no public-submission claim, no scientific-validation claim, no ToE-native matter derivation claim, and no master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
+        "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the provisional scalar action-derivability retry. -/
+/-- Previous live target consumed by the provisional scalar weak-conservation packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector"
-
-/-- Current live target after the provisional scalar action-derivability retry. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
+
+/-- Current live target after the provisional scalar weak-conservation packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
+    "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

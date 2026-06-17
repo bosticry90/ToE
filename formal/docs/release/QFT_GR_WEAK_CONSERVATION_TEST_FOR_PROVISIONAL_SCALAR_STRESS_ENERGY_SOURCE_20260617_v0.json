@@ -1,0 +1,172 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "Bianchi_compatibility_completed": false,
+  "acceptance_criteria": {
+    "bianchi_compatibility_not_claimed": true,
+    "consumes_expected_action_derivability_packet": true,
+    "divergence_identity_stated": true,
+    "off_shell_nonclaim_stated": true,
+    "on_shell_conservation_stated": true,
+    "provisional_scalar_stress_energy_reused": true,
+    "qft_gr_closure_not_claimed": true,
+    "regularity_scope_stated": true,
+    "scalar_equation_of_motion_stated": true,
+    "source_admissibility_not_claimed": true
+  },
+  "accepted": true,
+  "accepted_outcomes_considered": [
+    "WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY",
+    "WEAK_CONSERVATION_BLOCKED_BY_MISSING_SCALAR_EQUATION_OF_MOTION_CONVENTION",
+    "WEAK_CONSERVATION_BLOCKED_BY_CONNECTION_OR_REGULARITY_SCOPE"
+  ],
+  "action_derivability_constructed": true,
+  "action_derivability_constructed_scope": "provisional real-scalar calculation sandbox only",
+  "action_derivability_result": "ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION",
+  "arbitrary_distributional_source_action_derived_claimed": false,
+  "arbitrary_distributional_source_conservation_claimed": false,
+  "arbitrary_distributional_source_promoted": false,
+  "arbitrary_phi_conserved_claimed": false,
+  "artifact_id": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0",
+  "authorized_by_action_derivability_artifact_id": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_20260616_v0",
+  "authorized_by_action_derivability_classification": "qft_gr_action_derivability_retry_with_provisional_matter_sector_constructs_scalar_stress_energy_variation_nonpromotionally",
+  "authorized_by_action_derivability_outcome": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_PREPARED_WITH_ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+  "calculation_convention": "Use the scalar action convention from the action-derivability packet, metric compatibility nabla_mu g^{alpha beta} = 0, torsion-free Levi-Civita connection, and scalar second-derivative commutation.",
+  "captured_at_utc": "2026-06-17T00:00:00Z",
+  "conservation_claimed": false,
+  "consumed_target": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
+  "covariant_variation_form": "delta S_m[g, phi](k) = -1/2 integral_M T_{mu nu} k^{mu nu} dVol_g",
+  "critical_gate_fail_conditions": [
+    "source_admissibility",
+    "Bianchi_compatibility",
+    "semiclassical_coupling",
+    "QFT_GR_closure",
+    "ToE_native_matter_derivation",
+    "arbitrary_distributional_source_conservation"
+  ],
+  "derivation_steps": [
+    {
+      "claim": "provisional scalar stress-energy source restated",
+      "mathematical_content": "T_{mu nu} = partial_mu phi partial_nu phi - 1/2 g_{mu nu} g^{alpha beta} partial_alpha phi partial_beta phi - g_{mu nu} V(phi)",
+      "step_id": "restate_scalar_stress_energy"
+    },
+    {
+      "claim": "on-shell condition for the provisional scalar sandbox fixed",
+      "mathematical_content": "box_g phi - V'(phi) = 0",
+      "step_id": "state_scalar_equation_of_motion"
+    },
+    {
+      "claim": "covariant divergence expanded using metric compatibility",
+      "mathematical_content": "nabla_mu T^{mu nu} = nabla_mu(nabla^mu phi nabla^nu phi) - 1/2 nabla^nu(nabla_alpha phi nabla^alpha phi) - nabla^nu V(phi)",
+      "step_id": "compute_divergence"
+    },
+    {
+      "claim": "scalar second-derivative commutation cancels the cross terms",
+      "mathematical_content": "nabla_mu phi nabla^mu nabla^nu phi - nabla_alpha phi nabla^nu nabla^alpha phi = 0 for scalar phi",
+      "step_id": "cancel_symmetric_second_derivative_terms"
+    },
+    {
+      "claim": "divergence reduces to the scalar equation-of-motion residual",
+      "mathematical_content": "nabla_mu T^{mu nu} = (box_g phi - V'(phi)) nabla^nu phi",
+      "step_id": "reduce_to_field_equation_residual"
+    },
+    {
+      "claim": "weak conservation constructed only on shell",
+      "mathematical_content": "If box_g phi - V'(phi) = 0, then nabla_mu T^{mu nu} = 0",
+      "step_id": "conclude_on_shell_weak_conservation"
+    }
+  ],
+  "divergence_identity": "nabla_mu T^{mu nu} = (box_g phi - V'(phi)) nabla^nu phi",
+  "downstream_progression": [
+    {
+      "decision": "WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY",
+      "reason": "The divergence identity reduces to the scalar equation-of-motion residual times nabla^nu phi.",
+      "stage": "weak_conservation",
+      "status": "CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL"
+    },
+    {
+      "decision": "arbitrary_phi_not_conserved_by_this_packet",
+      "reason": "For arbitrary phi, the divergence is the field-equation residual times nabla^nu phi and is not claimed to vanish.",
+      "stage": "off_shell_conservation",
+      "status": "NOT_CLAIMED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "On-shell scalar weak conservation is not source admissibility.",
+      "stage": "source_admissibility",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+      "reason": "Bianchi compatibility remains a separate downstream test.",
+      "stage": "bianchi_compatibility",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Einstein coupling remains downstream of Bianchi compatibility.",
+      "stage": "semiclassical_coupling",
+      "status": "NOT_REACHED"
+    }
+  ],
+  "empirical_validation_claimed": false,
+  "field_content": "real scalar field phi",
+  "index_bridge": "For the prior covariant test convention h_{mu nu}, set T^{mu nu} = g^{mu alpha} g^{nu beta} T_{alpha beta}; equivalently h_{mu nu} = g_{mu alpha} g_{nu beta} k^{alpha beta} maps the inverse-metric variation k^{alpha beta} into the covariant-test pairing.",
+  "lagrangian_density": "L_m(g, phi, nabla phi) = -1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)",
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean",
+  "master_action_promoted": false,
+  "mathematical_statement": "For the provisional scalar stress-energy source T_{mu nu} = partial_mu phi partial_nu phi - 1/2 g_{mu nu} g^{alpha beta} partial_alpha phi partial_beta phi - g_{mu nu} V(phi), with box_g phi - V'(phi) = 0 as the scalar field equation, the calculation gives nabla_mu T^{mu nu} = (box_g phi - V'(phi)) nabla^nu phi. Therefore, on shell, If box_g phi - V'(phi) = 0, then nabla_mu T^{mu nu} = 0. This is a conditional weak-conservation result only inside the imported scalar sandbox.",
+  "metric_variation_convention": "Vary the inverse metric with compactly supported symmetric contravariant test k^{mu nu} = delta g^{mu nu}, hold phi fixed, and use delta(dVol_g) = -1/2 g_{mu nu} k^{mu nu} dVol_g.",
+  "non_claim_boundary": "This packet constructs weak conservation only for the imported provisional real-scalar source on shell. It does not claim off-shell conservation, arbitrary-phi conservation, arbitrary distributional-source conservation, source admissibility, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, ToE-native matter derivation, or master-action promotion.",
+  "off_shell_boundary": "For arbitrary phi, the divergence is the field-equation residual times nabla^nu phi and is not claimed to vanish.",
+  "off_shell_conservation_claimed": false,
+  "on_shell_conservation_statement": "If box_g phi - V'(phi) = 0, then nabla_mu T^{mu nu} = 0",
+  "on_shell_required": true,
+  "outcome_id": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+  "packet_classification": "qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_constructs_on_shell_conservation_nonpromotionally",
+  "packet_id": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_v0",
+  "prepared": true,
+  "prior_contract_pairing_form": "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g",
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "regularity_scope": "smooth scalar field and smooth metric with Levi-Civita connection on the provisional calculation domain; distributional regularity is not promoted",
+  "scalar_action": "S_m[g, phi] = integral_M (-1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)) dVol_g",
+  "scalar_equation_of_motion": "box_g phi - V'(phi) = 0",
+  "schema_id": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0",
+  "selected_action_generated_source_subclass_id": "stress_energy_candidate_generated_by_provisional_real_scalar_lagrangian_v0",
+  "selected_known_matter_model": "real_scalar_field_klein_gordon_type",
+  "selected_next_target": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+  "selected_next_target_kind": "qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source_preparation",
+  "selected_provisional_matter_sector_id": "provisional_real_scalar_field_test_sector_v0",
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_contravariant_expression": "T^{mu nu} = g^{mu alpha} g^{nu beta} T_{alpha beta}",
+  "stress_energy_covariant_expression": "T_{mu nu} = partial_mu phi partial_nu phi - 1/2 g_{mu nu} g^{alpha beta} partial_alpha phi partial_beta phi - g_{mu nu} V(phi)",
+  "toe_matter_model_derived": false,
+  "toe_native_matter_derivation_claimed": false,
+  "toe_native_matter_sector_defined": false,
+  "toe_native_matter_sector_result": "TOE_NATIVE_MATTER_SECTOR_NOT_YET_DEFINED",
+  "unconditional_conservation_claimed": false,
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "bounded_focused_validation_only": true,
+    "checkpoint_type": "qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "release_index_path_not_freshly_lean_validated": true
+  },
+  "weak_conservation_claimed": true,
+  "weak_conservation_claimed_scope": "conditional on scalar equation of motion only",
+  "weak_conservation_constructed": true,
+  "weak_conservation_constructed_scope": "provisional real-scalar source on shell only",
+  "weak_conservation_result": "WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY",
+  "weak_test_pairing_scope": "weak conservation is read only after pairing the divergence identity against compactly supported tests in the provisional scalar sandbox"
+}
