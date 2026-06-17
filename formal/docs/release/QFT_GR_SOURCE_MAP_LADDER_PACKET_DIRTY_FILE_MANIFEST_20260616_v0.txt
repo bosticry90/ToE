@@ -1,0 +1,20 @@
+Generated from: git status --porcelain=v1
+Scope: pre-preservation dirty-file manifest for the QFT-GR source-map ladder packet checkpoint.
+Path policy: relative repository paths only; no machine-specific absolute paths.
+
+ M README.md
+ M State_of_the_Theory.md
+ M formal/docs/lanes/STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md
+ M formal/docs/paper/PHYSICS_ROADMAP_v0.md
+ M formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md
+ M formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md
+ M formal/docs/release/CURRENT_AUTHORITATIVE_SURFACES_v0.md
+ M formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
+ M formal/python/tests/test_current_target_freshness_gate.py
+ M formal/python/tests/test_qft_gr_source_map_or_countermodel_scope_decision_packet_gate.py
+ M formal/toe_formal/ToeFormal.lean
+ M formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
+?? formal/docs/release/QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_20260616_v0.json
+?? formal/python/tests/test_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_gate.py
+?? formal/python/tools/qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_report.py
+?? formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSource.lean

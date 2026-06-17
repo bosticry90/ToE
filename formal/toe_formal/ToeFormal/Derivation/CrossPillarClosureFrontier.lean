@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR source-map-or-countermodel-scope decision packet prepared with outcome QFT_GR_SOURCE_MAP_OR_COUNTERMODEL_SCOPE_DECISION_PACKET_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE. The packet consumes prepare_qft_gr_source_map_or_countermodel_scope_decision_packet, carries the five non-decisive pinned probes against broader_candidate_source_allowed_test_pair_for_weak_conservation_countermodel_v0, partial_weak_pairing_contract_for_broader_countermodel_scope_v0, and broader_weak_divergence_boundary_and_curvature_evaluation_scope_v0, identifies zero exactly-one narrow semantic conditions that directly decide a pinned probe, rejects prepare_qft_gr_minimal_model_countermodel_scope_refinement_packet_after_reattempt_for_weak_conservation_obstruction, selects prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source as the only active next target by the default branch rule, blocks another automatic countermodel-scope loop, preserves the accepted strict toy witness under strict assumptions, carries weak_pairing_domain_obstruction as unresolved with canonical id repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3, and preserves no countermodel result claim, no no-go result claim, no not-found-under-pinned-scope claim, no broad QFT-GR conservation claim, no source admissibility, no Bianchi compatibility, no semiclassical Einstein equation, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR closure"
+        "QFT-GR source-map ladder packet from candidate source to admissible source prepared with outcome QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE. The packet consumes prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source, identifies broader_stress_energy_like_distribution_candidate_not_source_admissible_v0 as candidate-only, enumerates twelve admissibility ladder rows, records the first break at source_action_test_action_and_weak_pairing_domain, records two supplied rows, zero derivable rows, two blocked rows, five absent rows, and three countermodel-sensitive rows, preserves five countermodel hooks without promoting them to a countermodel result or not-found support, denies candidate-source promotion, requires result review only, preserves the strict toy witness under strict assumptions, carries weak_pairing_domain_obstruction as unresolved with canonical id repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3, and preserves no source admissibility, no expectation-value source semantics, no renormalized stress-energy object, no covariance claim, no Bianchi compatibility, no semiclassical Einstein equation, no broad QFT-GR conservation claim, no countermodel result claim, no no-go result claim, no not-found-under-pinned-scope claim, no empirical validation, no master-action promotion, no release claim, no public submission, and no QFT-GR closure"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source"
+        "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "QFT-GR source-map-or-countermodel-scope decision packet selects prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source as the only active next target after identifying zero exactly-one narrow scope conditions that can decide the five pinned non-decisive probes; it rejects another countermodel-scope refinement loop, preserves the refined broader source/test instantiation, partial weak-pairing contract, divergence/boundary/curvature evaluation protocol, and strict toy witness under its assumptions, preserves the unresolved dominant weak-pairing obstruction candidate and bounded validation-only discipline, and makes no countermodel-result claim, no-go-result claim, not-found claim, source-admissibility claim, broad conservation pass claim, broad conservation proof-object claim, broad conservation witness claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
+        "QFT-GR source-map ladder packet prepares the candidate-source-to-admissible-source ladder and selects review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result as the only active next target; it records the candidate object as supplied but candidate-only, places the first admissibility break at source_action_test_action_and_weak_pairing_domain, preserves countermodel hooks where admissibility fails, preserves bounded validation-only discipline, and makes no countermodel-result claim, no-go-result claim, not-found claim, source-admissibility claim, expectation-value source claim, renormalization closure claim, covariance claim, broad conservation pass claim, broad conservation proof-object claim, broad conservation witness claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source"
+        "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the weak-conservation reattempt result review. -/
+/-- Previous live target consumed by the source-map ladder packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_source_map_or_countermodel_scope_decision_packet"
-
-/-- Current live target after the source-map-or-scope decision packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source"
+
+/-- Current live target after the source-map ladder packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source"
+    "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

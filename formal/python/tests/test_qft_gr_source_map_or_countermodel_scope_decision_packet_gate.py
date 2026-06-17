@@ -334,10 +334,8 @@ def test_source_map_or_countermodel_scope_decision_packet_lean_and_surface_mirro
         "decisionPacketPrepared",
         "sourceMapLadderBranchSelected",
         "exactlyOneNarrowScopeConditionIdentified",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "prepare_qft_gr_source_map_or_countermodel_scope_decision_packet",
+        "selectedSourceMapLadderPacketTarget",
+        "consumedSourceMapOrCountermodelScopeDecisionPacketTarget",
         "no source admissibility",
         "no countermodel result",
         "no no-go result",
