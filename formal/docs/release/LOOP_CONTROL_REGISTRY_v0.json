@@ -139,7 +139,8 @@
     "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
     "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
     "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
-    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet"
+    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+    "prepare_qft_gr_candidate_definition_revision_or_replacement_packet"
   ],
   "consumed_targets": [
     {
@@ -315,7 +316,8 @@
     "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
     "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
     "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
-    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet"
+    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+    "prepare_qft_gr_candidate_definition_revision_or_replacement_packet"
   ],
   "controls": [
     {
@@ -677,9 +679,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
+    "active_lane": "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
     "candidate_live_next_targets": [
-      "prepare_qft_gr_candidate_definition_revision_or_replacement_packet"
+      "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract"
     ],
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
@@ -860,7 +862,8 @@
       "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
       "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
       "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
-      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet"
+      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+      "prepare_qft_gr_candidate_definition_revision_or_replacement_packet"
     ],
     "consumed_targets": [
       {
@@ -1252,7 +1255,8 @@
       "review_minimal_global_toe_mathematical_obligation_index_result",
       "select_next_global_toe_work_target_from_mathematical_obligation_index",
       "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
-      "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
+      "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "prepare_qft_gr_candidate_definition_revision_or_replacement_packet"
     ],
     "current_target_coverage": [
       {
@@ -1970,7 +1974,7 @@
         "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY"
       }
     ],
-    "focused_gate": "formal/python/tests/test_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet_gate.py",
+    "focused_gate": "formal/python/tests/test_qft_gr_candidate_definition_revision_or_replacement_packet_gate.py",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -1978,11 +1982,11 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateRegularTypeAndDomainContractPacket.lean",
+    "live_next_target": "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRCandidateDefinitionRevisionOrReplacementPacket.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_outcome": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_DEFINITION_INSUFFICIENT_FOR_REGULARITY_OR_DOMAIN_SELECTION_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY",
-    "live_next_target_report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_20260616_v0.json",
+    "live_next_target_outcome": "QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_PREPARED_WITH_CURRENT_CANDIDATE_REPLACED_BY_STRICTER_FUNCTIONAL_SOURCE_CANDIDATE_AND_WEAK_PAIRING_RETRY_AUTHORIZED_ONLY",
+    "live_next_target_report": "formal/docs/release/QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_20260616_v0.json",
     "next_strict_target_coverage": {
       "analyze_qft_gr_minimal_working_model_candidate_only": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelCandidateAnalysis.lean",
@@ -2954,10 +2958,16 @@
         "token": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_DEFINITION_INSUFFICIENT_FOR_REGULARITY_OR_DOMAIN_SELECTION_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY"
       },
       "prepare_qft_gr_candidate_definition_revision_or_replacement_packet": {
-        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateRegularTypeAndDomainContractPacket.lean",
-        "report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_20260616_v0.json",
-        "status": "active_live_next_target",
-        "token": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_DEFINITION_INSUFFICIENT_FOR_REGULARITY_OR_DOMAIN_SELECTION_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY"
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRCandidateDefinitionRevisionOrReplacementPacket.lean",
+        "report": "formal/docs/release/QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_20260616_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_PREPARED_WITH_CURRENT_CANDIDATE_REPLACED_BY_STRICTER_FUNCTIONAL_SOURCE_CANDIDATE_AND_WEAK_PAIRING_RETRY_AUTHORIZED_ONLY"
+      },
+      "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract": {
+        "status": "active",
+        "token": "QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_PREPARED_WITH_CURRENT_CANDIDATE_REPLACED_BY_STRICTER_FUNCTIONAL_SOURCE_CANDIDATE_AND_WEAK_PAIRING_RETRY_AUTHORIZED_ONLY",
+        "report": "formal/docs/release/QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_20260616_v0.json",
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRCandidateDefinitionRevisionOrReplacementPacket.lean"
       }
     },
     "paused_lanes": [
@@ -3158,10 +3168,11 @@
       "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
       "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
       "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
-      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet"
+      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+      "prepare_qft_gr_candidate_definition_revision_or_replacement_packet"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+    "previous_live_next_target": "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
@@ -3264,7 +3275,9 @@
       "select_next_global_toe_work_target_from_mathematical_obligation_index",
       "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
       "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
-      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
+      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+      "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
+      "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract"
     ]
   },
   "cycle_waivers": [],
@@ -3709,7 +3722,7 @@
       "to": "post_v01_alpha_manifest_enrollment_bounded_attack_selection"
     }
   ],
-  "focused_gate": "formal/python/tests/test_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet_gate.py",
+  "focused_gate": "formal/python/tests/test_qft_gr_candidate_definition_revision_or_replacement_packet_gate.py",
   "fresh_delta_kinds": [
     "new_theorem",
     "counterexample",
@@ -4088,7 +4101,8 @@
     "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
     "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
     "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
-    "prepare_qft_gr_candidate_definition_revision_or_replacement_packet"
+    "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
+    "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -5054,11 +5068,19 @@
     },
     {
       "kind": "qft_gr_candidate_definition_revision_or_replacement_packet_preparation",
-      "report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_20260616_v0.json",
-      "status": "active",
-      "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateRegularTypeAndDomainContractPacket.lean",
+      "report": "formal/docs/release/QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_20260616_v0.json",
+      "status": "completed_consumed_live_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRCandidateDefinitionRevisionOrReplacementPacket.lean",
       "target": "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
-      "token": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_DEFINITION_INSUFFICIENT_FOR_REGULARITY_OR_DOMAIN_SELECTION_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY"
+      "token": "QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_PREPARED_WITH_CURRENT_CANDIDATE_REPLACED_BY_STRICTER_FUNCTIONAL_SOURCE_CANDIDATE_AND_WEAK_PAIRING_RETRY_AUTHORIZED_ONLY"
+    },
+    {
+      "target": "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
+      "status": "active",
+      "kind": "qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
+      "token": "QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_PREPARED_WITH_CURRENT_CANDIDATE_REPLACED_BY_STRICTER_FUNCTIONAL_SOURCE_CANDIDATE_AND_WEAK_PAIRING_RETRY_AUTHORIZED_ONLY",
+      "report": "formal/docs/release/QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_20260616_v0.json",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRCandidateDefinitionRevisionOrReplacementPacket.lean"
     }
   ],
   "token_family_coverage": [
@@ -5237,7 +5259,11 @@
     "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_20260616_v0.json",
     "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateRegularTypeAndDomainContractPacket.lean",
     "formal/python/tools/qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet_report.py",
-    "formal/python/tests/test_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet_gate.py"
+    "formal/python/tests/test_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet_gate.py",
+    "formal/docs/release/QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_20260616_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGRCandidateDefinitionRevisionOrReplacementPacket.lean",
+    "formal/python/tools/qft_gr_candidate_definition_revision_or_replacement_packet_report.py",
+    "formal/python/tests/test_qft_gr_candidate_definition_revision_or_replacement_packet_gate.py"
   ],
   "workstreams": [
     {
@@ -50252,22 +50278,22 @@
     },
     {
       "workstream_id": "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
-      "status": "active",
+      "status": "paused",
       "active_lane": "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
       "authorized_next_strict_target": "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
       "authorized_target": "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
       "consumed_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
-      "outcome_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_DEFINITION_INSUFFICIENT_FOR_REGULARITY_OR_DOMAIN_SELECTION_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY",
-      "report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_20260616_v0.json",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateRegularTypeAndDomainContractPacket.lean",
-      "selected_next_target": "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
-      "selected_next_target_kind": "qft_gr_candidate_definition_revision_or_replacement_packet_preparation",
-      "claim_level": "Level 3 QFT-GR candidate definition revision or replacement packet preparation authorized",
-      "claim_ceiling": "candidate definition revision/replacement packet preparation only no weak-pairing retry no source admissibility no qft_gr closure",
-      "non_claim_boundary": "The candidate definition revision or replacement packet may revise, replace, or reject the underspecified candidate only; it cannot authorize weak-pairing retry unless a regular type/domain contract is supplied later, and it cannot claim source admissibility, action derivability, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
+      "outcome_id": "QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_PREPARED_WITH_CURRENT_CANDIDATE_REPLACED_BY_STRICTER_FUNCTIONAL_SOURCE_CANDIDATE_AND_WEAK_PAIRING_RETRY_AUTHORIZED_ONLY",
+      "report": "formal/docs/release/QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRCandidateDefinitionRevisionOrReplacementPacket.lean",
+      "selected_next_target": "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
+      "selected_next_target_kind": "qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
+      "claim_level": "Level 3 QFT-GR candidate definition revision/replacement packet prepared",
+      "claim_ceiling": "replacement-candidate selection and weak-pairing retry authorization only no source admissibility no qft_gr closure",
+      "non_claim_boundary": "The packet retires the underspecified broader candidate and selects a stricter distributional symmetric tensor candidate only for weak-pairing retry; it does not complete weak pairing, claim source admissibility, action derivability, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
       "candidate_source_id": "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0",
       "regular_type_domain_result": "CANDIDATE_DEFINITION_INSUFFICIENT_FOR_REGULARITY_OR_DOMAIN_SELECTION",
-      "selected_regular_type": "none",
+      "selected_regular_type": "D'(M, Sym^2 TM)",
       "selected_domain_contract": "none",
       "regular_type_selected": "no",
       "domain_contract_selected": "no",
@@ -50278,9 +50304,67 @@
       "distributional_contract": "T in D'(M, Sym^2 TM), equivalently T : D -> R continuous linear",
       "density_contract": "tensor-density T pairs directly with compactly supported test tensors",
       "operator_expectation_contract": "renormalized expectation candidate from an operator-valued distribution",
-      "weak_pairing_retry_authorized": "no",
+      "weak_pairing_retry_authorized": "yes",
       "source_admissibility_claimed": "no",
       "action_derivability_claimed": "no",
+      "conservation_claimed": "no",
+      "Bianchi_compatibility_claimed": "no",
+      "semiclassical_einstein_equation_derived": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "empirical_validation_claimed": "no",
+      "public_submission_authorized": "no",
+      "master_action_promoted": "no",
+      "decision_result": "CURRENT_CANDIDATE_REPLACED_BY_STRICTER_FUNCTIONAL_SOURCE_CANDIDATE",
+      "retired_candidate_id": "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0",
+      "retired_candidate_status": "retired_due_to_insufficient_definition",
+      "selected_replacement_candidate_id": "distributional_symmetric_tensor_candidate_v0",
+      "selected_replacement_candidate_kind": "tensor_valued_distribution",
+      "selected_test_domain": "C_c^infty(M, Sym^2 T*M)",
+      "selected_functional_contract": "T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear",
+      "selected_pairing_rule": "<T, h> := T(h) for h in C_c^infty(M, Sym^2 T*M)",
+      "selected_tensor_type": "symmetric contravariant rank-2 tensor distribution",
+      "selected_index_placement": "contravariant T^{mu nu} paired with covariant h_{mu nu}",
+      "linearity_condition": "linear on C_c^infty(M, Sym^2 T*M)",
+      "continuity_condition": "continuous for the C_c^infty test-space topology",
+      "current_candidate_revised": "no",
+      "current_candidate_replaced": "yes",
+      "weak_pairing_completed": "no"
+    },
+    {
+      "workstream_id": "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
+      "status": "active",
+      "active_lane": "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
+      "authorized_next_strict_target": "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
+      "authorized_target": "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
+      "consumed_target": "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
+      "claim_level": "Level 3 QFT-GR weak-pairing retry for selected functional contract authorized",
+      "claim_ceiling": "weak-pairing retry preparation only no source admissibility no qft_gr closure",
+      "non_claim_boundary": "The selected distributional symmetric tensor candidate may be used only to retry weak pairing against the specified test domain and functional contract; no source admissibility, action derivability, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion is claimed.",
+      "outcome_id": "QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_PREPARED_WITH_CURRENT_CANDIDATE_REPLACED_BY_STRICTER_FUNCTIONAL_SOURCE_CANDIDATE_AND_WEAK_PAIRING_RETRY_AUTHORIZED_ONLY",
+      "report": "formal/docs/release/QFT_GR_CANDIDATE_DEFINITION_REVISION_OR_REPLACEMENT_PACKET_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRCandidateDefinitionRevisionOrReplacementPacket.lean",
+      "selected_next_target": "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
+      "selected_next_target_kind": "qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
+      "decision_result": "CURRENT_CANDIDATE_REPLACED_BY_STRICTER_FUNCTIONAL_SOURCE_CANDIDATE",
+      "retired_candidate_id": "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0",
+      "retired_candidate_status": "retired_due_to_insufficient_definition",
+      "selected_replacement_candidate_id": "distributional_symmetric_tensor_candidate_v0",
+      "selected_replacement_candidate_kind": "tensor_valued_distribution",
+      "selected_regular_type": "D'(M, Sym^2 TM)",
+      "selected_test_domain": "C_c^infty(M, Sym^2 T*M)",
+      "selected_functional_contract": "T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear",
+      "selected_pairing_rule": "<T, h> := T(h) for h in C_c^infty(M, Sym^2 T*M)",
+      "selected_tensor_type": "symmetric contravariant rank-2 tensor distribution",
+      "selected_index_placement": "contravariant T^{mu nu} paired with covariant h_{mu nu}",
+      "linearity_condition": "linear on C_c^infty(M, Sym^2 T*M)",
+      "continuity_condition": "continuous for the C_c^infty test-space topology",
+      "current_candidate_revised": "no",
+      "current_candidate_replaced": "yes",
+      "weak_pairing_retry_authorized": "yes",
+      "weak_pairing_completed": "no",
+      "action_derivability_claimed": "no",
+      "source_admissibility_claimed": "no",
       "conservation_claimed": "no",
       "Bianchi_compatibility_claimed": "no",
       "semiclassical_einstein_equation_derived": "no",

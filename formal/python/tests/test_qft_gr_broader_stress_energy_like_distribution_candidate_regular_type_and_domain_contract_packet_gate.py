@@ -297,7 +297,7 @@ def test_regular_type_domain_packet_lean_and_surface_mirrors() -> None:
         DENSITY_CONTRACT,
         OPERATOR_EXPECTATION_CONTRACT,
         "QFTGRBroaderStressEnergyLikeDistributionCandidateRegularTypeAndDomainContractPacket",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
         "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
         "no weak-pairing retry",
         "no source admissibility",
