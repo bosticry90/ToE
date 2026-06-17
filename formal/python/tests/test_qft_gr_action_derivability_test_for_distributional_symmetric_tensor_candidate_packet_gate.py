@@ -280,7 +280,7 @@ def test_action_derivability_packet_lean_and_surface_mirrors() -> None:
         ACTION_DERIVABILITY_RESULT,
         WEAK_VARIATIONAL_OBLIGATION,
         "QFTGRActionDerivabilityTestForDistributionalSymmetricTensorCandidatePacket",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
         "prepare_qft_gr_matter_action_functional_candidate_packet",
         "no source admissibility",
         "no QFT-GR closure",

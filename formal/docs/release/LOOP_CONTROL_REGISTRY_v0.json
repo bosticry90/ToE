@@ -142,7 +142,8 @@
     "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
     "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
     "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
-    "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate"
+    "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
+    "prepare_qft_gr_matter_action_functional_candidate_packet"
   ],
   "consumed_targets": [
     {
@@ -321,7 +322,8 @@
     "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
     "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
     "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
-    "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate"
+    "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
+    "prepare_qft_gr_matter_action_functional_candidate_packet"
   ],
   "controls": [
     {
@@ -683,9 +685,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "prepare_qft_gr_matter_action_functional_candidate_packet",
+    "active_lane": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
     "candidate_live_next_targets": [
-      "prepare_qft_gr_matter_action_functional_candidate_packet"
+      "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet"
     ],
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
@@ -869,7 +871,8 @@
       "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
       "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
       "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
-      "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate"
+      "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
+      "prepare_qft_gr_matter_action_functional_candidate_packet"
     ],
     "consumed_targets": [
       {
@@ -1264,7 +1267,8 @@
       "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
       "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
       "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
-      "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate"
+      "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
+      "prepare_qft_gr_matter_action_functional_candidate_packet"
     ],
     "current_target_coverage": [
       {
@@ -1980,9 +1984,23 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacketResultReview.lean",
         "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_20260616_v0.json",
         "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY"
+      },
+      {
+        "target": "prepare_qft_gr_matter_action_functional_candidate_packet",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterActionFunctionalCandidatePacket.lean",
+        "report": "formal/docs/release/QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0.json",
+        "token": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY"
+      },
+      {
+        "target": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+        "status": "active_live_next_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterActionFunctionalCandidatePacket.lean",
+        "report": "formal/docs/release/QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0.json",
+        "token": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY"
       }
     ],
-    "focused_gate": "formal/python/tests/test_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate_packet_gate.py",
+    "focused_gate": "formal/python/tests/test_qft_gr_matter_action_functional_candidate_packet_gate.py",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -1990,11 +2008,11 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "prepare_qft_gr_matter_action_functional_candidate_packet",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityTestForDistributionalSymmetricTensorCandidatePacket.lean",
+    "live_next_target": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterActionFunctionalCandidatePacket.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_outcome": "QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_PREPARED_WITH_ACTION_DERIVABILITY_BLOCKED_BY_MISSING_ACTION_FUNCTIONAL_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
-    "live_next_target_report": "formal/docs/release/QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_20260616_v0.json",
+    "live_next_target_outcome": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY",
+    "live_next_target_report": "formal/docs/release/QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0.json",
     "next_strict_target_coverage": {
       "analyze_qft_gr_minimal_working_model_candidate_only": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelCandidateAnalysis.lean",
@@ -2984,10 +3002,16 @@
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityTestForDistributionalSymmetricTensorCandidatePacket.lean"
       },
       "prepare_qft_gr_matter_action_functional_candidate_packet": {
+        "status": "completed_consumed_live_target",
+        "token": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY",
+        "report": "formal/docs/release/QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0.json",
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterActionFunctionalCandidatePacket.lean"
+      },
+      "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet": {
         "status": "active",
-        "token": "QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_PREPARED_WITH_ACTION_DERIVABILITY_BLOCKED_BY_MISSING_ACTION_FUNCTIONAL_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
-        "report": "formal/docs/release/QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_20260616_v0.json",
-        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityTestForDistributionalSymmetricTensorCandidatePacket.lean"
+        "token": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY",
+        "report": "formal/docs/release/QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0.json",
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterActionFunctionalCandidatePacket.lean"
       }
     },
     "paused_lanes": [
@@ -3191,10 +3215,11 @@
       "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
       "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
       "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
-      "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate"
+      "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
+      "prepare_qft_gr_matter_action_functional_candidate_packet"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
+    "previous_live_next_target": "prepare_qft_gr_matter_action_functional_candidate_packet",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
@@ -3301,7 +3326,8 @@
       "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
       "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
       "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
-      "prepare_qft_gr_matter_action_functional_candidate_packet"
+      "prepare_qft_gr_matter_action_functional_candidate_packet",
+      "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet"
     ]
   },
   "cycle_waivers": [],
@@ -3746,7 +3772,7 @@
       "to": "post_v01_alpha_manifest_enrollment_bounded_attack_selection"
     }
   ],
-  "focused_gate": "formal/python/tests/test_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate_packet_gate.py",
+  "focused_gate": "formal/python/tests/test_qft_gr_matter_action_functional_candidate_packet_gate.py",
   "fresh_delta_kinds": [
     "new_theorem",
     "counterexample",
@@ -4128,7 +4154,8 @@
     "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
     "prepare_qft_gr_weak_pairing_retry_for_selected_candidate_functional_contract",
     "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
-    "prepare_qft_gr_matter_action_functional_candidate_packet"
+    "prepare_qft_gr_matter_action_functional_candidate_packet",
+    "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -4839,6 +4866,14 @@
       "report": "formal/docs/release/QFT_GR_STATE_EXPECTATION_DOMAIN_LINK_ASSUMPTION_REDUCTION_ATTEMPT_20260527_v0.json",
       "selected_next_target": "review_qft_gr_state_expectation_domain_link_assumption_reduction_attempt_result",
       "status": "executed_result_reviewed"
+    },
+    "qft_gr_matter_action_functional_candidate_packet_v0": {
+      "classification": "qft_gr_matter_action_functional_candidate_packet_records_missing_field_content_and_lagrangian_for_pairable_distributional_source_candidate",
+      "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterActionFunctionalCandidatePacket.lean",
+      "report": "formal/docs/release/QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0.json",
+      "selected_next_target": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+      "status": "prepared_field_content_lagrangian_packet_authorized",
+      "token": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY"
     }
   },
   "retained_blocker_coverage": [
@@ -5118,11 +5153,19 @@
     },
     {
       "target": "prepare_qft_gr_matter_action_functional_candidate_packet",
-      "status": "active",
+      "status": "completed_consumed_live_target",
       "kind": "qft_gr_matter_action_functional_candidate_packet_preparation",
-      "token": "QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_PREPARED_WITH_ACTION_DERIVABILITY_BLOCKED_BY_MISSING_ACTION_FUNCTIONAL_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
-      "report": "formal/docs/release/QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_20260616_v0.json",
-      "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityTestForDistributionalSymmetricTensorCandidatePacket.lean"
+      "token": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY",
+      "report": "formal/docs/release/QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0.json",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterActionFunctionalCandidatePacket.lean"
+    },
+    {
+      "target": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+      "status": "active",
+      "kind": "qft_gr_matter_field_content_and_lagrangian_candidate_packet_preparation",
+      "token": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY",
+      "report": "formal/docs/release/QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0.json",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterActionFunctionalCandidatePacket.lean"
     }
   ],
   "token_family_coverage": [
@@ -5313,7 +5356,11 @@
     "formal/docs/release/QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_20260616_v0.json",
     "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityTestForDistributionalSymmetricTensorCandidatePacket.lean",
     "formal/python/tools/qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate_packet_report.py",
-    "formal/python/tests/test_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate_packet_gate.py"
+    "formal/python/tests/test_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate_packet_gate.py",
+    "formal/docs/release/QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterActionFunctionalCandidatePacket.lean",
+    "formal/python/tools/qft_gr_matter_action_functional_candidate_packet_report.py",
+    "formal/python/tests/test_qft_gr_matter_action_functional_candidate_packet_gate.py"
   ],
   "workstreams": [
     {
@@ -50499,19 +50546,19 @@
     },
     {
       "workstream_id": "prepare_qft_gr_matter_action_functional_candidate_packet",
-      "status": "active",
+      "status": "paused",
       "active_lane": "prepare_qft_gr_matter_action_functional_candidate_packet",
       "authorized_next_strict_target": "prepare_qft_gr_matter_action_functional_candidate_packet",
       "authorized_target": "prepare_qft_gr_matter_action_functional_candidate_packet",
       "consumed_target": "prepare_qft_gr_action_derivability_test_for_distributional_symmetric_tensor_candidate",
-      "claim_level": "Level 3 QFT-GR matter action functional candidate packet preparation authorized",
-      "claim_ceiling": "matter action functional candidate preparation only no action derivability claim no source admissibility no qft_gr closure",
-      "non_claim_boundary": "The next packet may propose or reject a matter action functional candidate needed for the weak variation delta S_m[g](h) = -1/2 T(h); it cannot claim action derivability, source admissibility, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
-      "outcome_id": "QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_PREPARED_WITH_ACTION_DERIVABILITY_BLOCKED_BY_MISSING_ACTION_FUNCTIONAL_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
-      "report": "formal/docs/release/QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_20260616_v0.json",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityTestForDistributionalSymmetricTensorCandidatePacket.lean",
-      "selected_next_target": "prepare_qft_gr_matter_action_functional_candidate_packet",
-      "selected_next_target_kind": "qft_gr_matter_action_functional_candidate_packet_preparation",
+      "claim_level": "Level 3 QFT-GR matter action functional candidate packet prepared with blocked field-content and Lagrangian result",
+      "claim_ceiling": "matter action functional candidate packet only no action derivability no source admissibility no qft_gr closure",
+      "non_claim_boundary": "The packet evaluates true matter-action, effective/QFT action, and formal variational primitive routes and records that no matter action functional candidate is selected because field content and a Lagrangian are missing; it does not claim action derivability, source admissibility, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
+      "outcome_id": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY",
+      "report": "formal/docs/release/QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterActionFunctionalCandidatePacket.lean",
+      "selected_next_target": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+      "selected_next_target_kind": "qft_gr_matter_field_content_and_lagrangian_candidate_packet_preparation",
       "action_derivability_result": "ACTION_DERIVABILITY_BLOCKED_BY_MISSING_ACTION_FUNCTIONAL",
       "candidate_id": "distributional_symmetric_tensor_candidate_v0",
       "functional_contract": "T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear",
@@ -50527,7 +50574,69 @@
       "metric_variation_rule_supplied": "no",
       "variational_domain_for_action_supplied": "no",
       "sign_normalization_derived": "no",
-      "action_derivability_blockers": "matter_action_functional,metric_variation_rule,variational_domain,sign_and_normalization_convention",
+      "action_derivability_blockers": "matter_field_content,lagrangian_density,metric_variation_rule,variational_domain,sign_and_normalization_convention",
+      "source_admissibility_claimed": "no",
+      "action_derivability_claimed": "no",
+      "weak_conservation_claimed": "no",
+      "conservation_claimed": "no",
+      "Bianchi_compatibility_claimed": "no",
+      "semiclassical_einstein_equation_derived": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "empirical_validation_claimed": "no",
+      "public_submission_authorized": "no",
+      "master_action_promoted": "no",
+      "packet_classification": "qft_gr_matter_action_functional_candidate_packet_records_missing_field_content_and_lagrangian_for_pairable_distributional_source_candidate",
+      "matter_action_result": "MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN",
+      "true_matter_action_route_selected": "no",
+      "effective_qft_action_route_selected": "no",
+      "formal_variational_primitive_selected": "no",
+      "matter_action_functional_candidate_selected": "no",
+      "matter_action_admissibility_claimed": "no",
+      "matter_field_content_supplied": "no",
+      "lagrangian_density_supplied": "no",
+      "field_content_and_lagrangian_packet_required": "yes",
+      "action_derivability_retry_authorized": "no"
+    },
+    {
+      "workstream_id": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+      "status": "active",
+      "active_lane": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+      "authorized_next_strict_target": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+      "authorized_target": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+      "consumed_target": "prepare_qft_gr_matter_action_functional_candidate_packet",
+      "claim_level": "Level 3 QFT-GR matter field content and Lagrangian candidate packet preparation authorized",
+      "claim_ceiling": "matter field content and Lagrangian candidate preparation only no matter action functional no action derivability no source admissibility no qft_gr closure",
+      "non_claim_boundary": "The next packet may identify or reject matter field content psi and a Lagrangian density L_m needed before matter-action construction can be retried; it cannot claim a matter action functional, action derivability, source admissibility, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
+      "outcome_id": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY",
+      "report": "formal/docs/release/QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterActionFunctionalCandidatePacket.lean",
+      "selected_next_target": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+      "selected_next_target_kind": "qft_gr_matter_field_content_and_lagrangian_candidate_packet_preparation",
+      "matter_action_result": "MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN",
+      "packet_classification": "qft_gr_matter_action_functional_candidate_packet_records_missing_field_content_and_lagrangian_for_pairable_distributional_source_candidate",
+      "candidate_id": "distributional_symmetric_tensor_candidate_v0",
+      "functional_contract": "T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear",
+      "test_domain": "C_c^infty(M, Sym^2 T*M)",
+      "weak_pairing_result": "WEAK_PAIRING_CONSTRUCTED_FOR_SELECTED_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_ACTION_DERIVABILITY_NOT_REACHED",
+      "weak_pairing_scope": "well_defined_as_distributional_pairing_under_selected_functional_contract",
+      "weak_pairing_constructed": "yes",
+      "weak_variational_obligation": "delta S_m[g](h) = -1/2 T(h)",
+      "true_matter_action_route_selected": "no",
+      "effective_qft_action_route_selected": "no",
+      "formal_variational_primitive_selected": "no",
+      "matter_action_functional_candidate_selected": "no",
+      "matter_action_admissibility_claimed": "no",
+      "matter_field_content_supplied": "no",
+      "lagrangian_density_supplied": "no",
+      "field_content_and_lagrangian_packet_required": "yes",
+      "action_derivability_retry_authorized": "no",
+      "action_derivability_constructed": "no",
+      "source_is_action_derived": "no",
+      "matter_action_functional_supplied": "no",
+      "metric_variation_rule_supplied": "no",
+      "variational_domain_for_action_supplied": "no",
+      "sign_normalization_derived": "no",
       "source_admissibility_claimed": "no",
       "action_derivability_claimed": "no",
       "weak_conservation_claimed": "no",

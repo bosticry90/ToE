@@ -1,0 +1,210 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptable_result_outcomes": [
+    "MATTER_ACTION_FUNCTIONAL_CANDIDATE_CONSTRUCTED_ACTION_DERIVABILITY_RETRY_AUTHORIZED",
+    "FORMAL_VARIATIONAL_PRIMITIVE_CONSTRUCTED_NO_MATTER_ACTION_ADMISSIBILITY",
+    "MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN",
+    "EFFECTIVE_ACTION_ROUTE_RECORDED_BUT_NOT_LICENSED",
+    "NON_ACTION_SOURCE_ROUTE_DECISION_REQUIRED"
+  ],
+  "acceptance_criteria": {
+    "consumes_expected_action_derivability_packet": true,
+    "effective_action_route_recorded_not_licensed": true,
+    "formal_primitive_not_promoted_to_matter_action": true,
+    "next_target_is_field_content_and_lagrangian_packet": true,
+    "no_action_candidate_selected": true,
+    "non_promotion_boundary_preserved": true,
+    "prior_action_derivability_blocked": true,
+    "required_field_content_and_lagrangian_missing": true,
+    "true_matter_action_route_tested_and_blocked": true
+  },
+  "accepted": true,
+  "action_derivability_claimed": false,
+  "action_derivability_retry_authorized": false,
+  "artifact_id": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0",
+  "authorized_by_action_derivability_artifact_id": "QFT_GR_ACTION_DERIVABILITY_TEST_FOR_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_PACKET_20260616_v0",
+  "authorized_by_action_derivability_commit": "ff26d8ffabdf390efca2a89ec9561bca8f03c235",
+  "candidate_id": "distributional_symmetric_tensor_candidate_v0",
+  "captured_at_utc": "2026-06-16T00:00:00Z",
+  "conservation_claimed": false,
+  "consumed_target": "prepare_qft_gr_matter_action_functional_candidate_packet",
+  "downstream_progression": [
+    {
+      "decision": "MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN",
+      "reason": "Field content and Lagrangian density are not supplied.",
+      "stage": "matter_action_functional_candidate",
+      "status": "BLOCKED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "No matter action functional candidate was selected.",
+      "stage": "action_derivability_retry",
+      "status": "NOT_AUTHORIZED"
+    },
+    {
+      "decision": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+      "reason": "Field content and Lagrangian data are required before matter-action construction can be retried.",
+      "stage": "matter_field_content_and_lagrangian_candidate",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Weak conservation is downstream of action derivability or a non-action route decision.",
+      "stage": "weak_conservation",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Bianchi compatibility is downstream of conservation.",
+      "stage": "bianchi_compatibility",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Semiclassical coupling is downstream of source admissibility checks.",
+      "stage": "semiclassical_source_admissibility",
+      "status": "NOT_REACHED"
+    }
+  ],
+  "effective_action_form": "W[g] with <T_{mu nu}> = -2 / sqrt(-g) * delta W / delta g^{mu nu}",
+  "effective_qft_action_route_selected": false,
+  "empirical_validation_claimed": false,
+  "field_content_and_lagrangian_packet_required": true,
+  "formal_variational_primitive_constructed": false,
+  "formal_variational_primitive_form": "delta S_T[g_0](h) = -1/2 T(h)",
+  "formal_variational_primitive_selected": false,
+  "functional_contract": "T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear",
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterActionFunctionalCandidatePacket.lean",
+  "master_action_promoted": false,
+  "mathematical_statement": "A true matter action route would require S_m[g, psi] with field content psi and Lagrangian density L_m such that delta S_m[g, psi](h) = -1/2 <T, h>. The current pairable distributional tensor supplies T but not psi, L_m, or a licensed metric-variation rule, so no matter action functional candidate is selected.",
+  "matter_action_admissibility_claimed": false,
+  "matter_action_functional_candidate_selected": false,
+  "matter_action_result": "MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN",
+  "missing_action_data": [
+    "matter_field_content",
+    "lagrangian_density",
+    "metric_variation_rule",
+    "variational_domain",
+    "sign_and_normalization_convention"
+  ],
+  "non_claim_boundary": "This packet evaluates true matter-action, effective/QFT action, and formal variational primitive routes. It records that no matter action functional candidate is selected because field content and a Lagrangian are missing. It does not claim action derivability, matter-action admissibility, source admissibility, weak conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
+  "outcome_id": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY",
+  "packet_classification": "qft_gr_matter_action_functional_candidate_packet_records_missing_field_content_and_lagrangian_for_pairable_distributional_source_candidate",
+  "packet_id": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_v0",
+  "prepared": true,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "required_action_data": [
+    {
+      "field_id": "matter_field_content",
+      "required": "fields psi and bundle/domain data",
+      "status": "missing"
+    },
+    {
+      "field_id": "lagrangian_density",
+      "required": "L_m(g, psi, nabla psi, ...)",
+      "status": "missing"
+    },
+    {
+      "field_id": "metric_variation_rule",
+      "required": "delta S_m[g](h) = -1/2 T(h)",
+      "status": "missing"
+    },
+    {
+      "field_id": "variational_domain",
+      "required": "h in C_c^infty(M, Sym^2 T*M) plus field-variation policy",
+      "status": "missing"
+    },
+    {
+      "field_id": "sign_and_normalization_convention",
+      "required": "delta S_m[g, psi](h) = -1/2 <T, h>",
+      "status": "target_convention_stated_not_derived"
+    },
+    {
+      "field_id": "distributional_compatibility",
+      "required": "variation output may be distribution-valued and match T",
+      "status": "not_reached"
+    },
+    {
+      "field_id": "covariance_or_diffeomorphism_behavior",
+      "required": "action covariance sufficient for downstream conservation checks",
+      "status": "not_reached"
+    }
+  ],
+  "route_assessments": [
+    {
+      "blocked_by": [
+        "matter_field_content_not_supplied",
+        "lagrangian_density_not_supplied",
+        "field_variation_policy_not_supplied",
+        "metric_variation_rule_not_supplied",
+        "variational_domain_not_supplied"
+      ],
+      "candidate_form": "S_m[g, psi] = integral_M L_m(g, psi, nabla psi, ...) dVol_g",
+      "matter_action_admissibility_claimed": false,
+      "reason": "The true matter-action route requires fields psi, a Lagrangian density L_m, an off-shell/on-shell or held-fixed field policy, and a metric-variation domain. None is licensed by the prior action-derivability packet.",
+      "required_variation": "delta S_m[g](h) = -1/2 T(h)",
+      "route_id": "true_matter_action_route",
+      "route_kind": "matter_action_functional",
+      "selection_licensed": false,
+      "selection_status": "blocked_not_selected"
+    },
+    {
+      "blocked_by": [
+        "qft_state_data_not_supplied",
+        "renormalization_prescription_not_supplied",
+        "effective_action_domain_not_supplied",
+        "anomaly_handling_not_supplied",
+        "expectation_value_output_contract_not_supplied"
+      ],
+      "candidate_form": "W[g] with <T_{mu nu}> = -2 / sqrt(-g) * delta W / delta g^{mu nu}",
+      "matter_action_admissibility_claimed": false,
+      "reason": "The effective/QFT route is relevant but would import state, renormalization, domain, and anomaly data before those data are licensed.",
+      "required_variation": "delta W / delta g^{mu nu}",
+      "route_id": "effective_qft_action_route",
+      "route_kind": "effective_action_or_generating_functional",
+      "selection_licensed": false,
+      "selection_status": "recorded_not_licensed"
+    },
+    {
+      "blocked_by": [
+        "background_dependence_not_resolved",
+        "non_dynamical_primitive_not_matter_action",
+        "covariance_not_supplied",
+        "field_content_not_supplied"
+      ],
+      "candidate_form": "delta S_T[g_0](h) = -1/2 T(h)",
+      "matter_action_admissibility_claimed": false,
+      "reason": "A formal first-variation primitive could mirror -1/2 T(h), but that would not be a licensed matter action functional and would not authorize source admissibility.",
+      "required_variation": "delta S_m[g](h) = -1/2 T(h)",
+      "route_id": "formal_variational_primitive_route",
+      "route_kind": "formal_background_linear_primitive",
+      "selection_licensed": false,
+      "selection_status": "recorded_not_selected"
+    }
+  ],
+  "schema_id": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0",
+  "selected_next_target": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+  "selected_next_target_kind": "qft_gr_matter_field_content_and_lagrangian_candidate_packet_preparation",
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "true_matter_action_form": "S_m[g, psi] = integral_M L_m(g, psi, nabla psi, ...) dVol_g",
+  "true_matter_action_route_selected": false,
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "bounded_focused_validation_only": true,
+    "checkpoint_type": "qft_gr_matter_action_functional_candidate_packet",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "release_index_path_not_freshly_lean_validated": true
+  },
+  "weak_conservation_claimed": false,
+  "weak_pairing_scope": "well_defined_as_distributional_pairing_under_selected_functional_contract",
+  "weak_variational_obligation": "delta S_m[g](h) = -1/2 T(h)"
+}
