@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR ToE matter-sector candidate selection packet prepared with outcome QFT_GR_TOE_MATTER_SECTOR_CANDIDATE_SELECTION_PACKET_PREPARED_WITH_KNOWN_MATTER_MODEL_IMPORTED_AS_PROVISIONAL_TEST_SECTOR_NO_TOE_DERIVATION_CLAIM_AND_TOE_NATIVE_MATTER_SECTOR_NOT_DEFINED. The packet selects provisional_real_scalar_field_test_sector_v0 as a known-physics calculation sandbox, records TOE_NATIVE_MATTER_SECTOR_NOT_YET_DEFINED and EFFECTIVE_QFT_ACTION_ROUTE_RECORDED_NOT_LICENSED, authorizes prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector, and preserves no ToE-native matter derivation, no Standard Model derivation, no arbitrary-distributional-source action-derivability claim, no source admissibility, no conservation proof, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion"
+        "QFT-GR action-derivability retry with provisional matter sector prepared with outcome QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_PREPARED_WITH_ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE. The packet derives the provisional scalar stress-energy expression T_{mu nu} = partial_mu phi partial_nu phi - 1/2 g_{mu nu} g^{alpha beta} partial_alpha phi partial_beta phi - g_{mu nu} V(phi), records the inverse-metric variation form delta S_m[g, phi](k) = -1/2 integral_M T_{mu nu} k^{mu nu} dVol_g, translates it to the prior weak-pairing convention by raising indices, authorizes prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source, and preserves no ToE-native matter derivation, no arbitrary-distributional-source action-derivability claim, no source admissibility, no conservation proof, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector"
+        "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The math-first QFT-GR chain now selects a provisional known real-scalar matter test sector for action-derivability retry while recording that the ToE-native matter sector is not yet defined. The chain preserves the restricted distributional weak pairing for distributional_symmetric_tensor_candidate_v0 and sets prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector as the only active next target while preserving no ToE-native matter derivation, no source-admissibility claim, no action-derivability claim, no conservation claim, no Bianchi compatibility claim, no semiclassical Einstein equation claim, no QFT-GR closure, no public-submission claim, no scientific-validation claim, and no master-action promotion"
+        "The math-first QFT-GR chain now constructs action derivability for the imported provisional real-scalar sandbox and records the scalar stress-energy variation while preserving that the ToE-native matter sector is not defined. The chain sets prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source as the only active next target while preserving no source-admissibility claim, no conservation claim, no Bianchi compatibility claim, no semiclassical Einstein equation claim, no QFT-GR closure, no public-submission claim, no scientific-validation claim, and no master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector"
+        "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the ToE matter-sector selection packet. -/
+/-- Previous live target consumed by the provisional scalar action-derivability retry. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_toe_matter_sector_candidate_selection_packet"
-
-/-- Current live target after the ToE matter-sector selection packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector"
+
+/-- Current live target after the provisional scalar action-derivability retry. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector"
+    "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

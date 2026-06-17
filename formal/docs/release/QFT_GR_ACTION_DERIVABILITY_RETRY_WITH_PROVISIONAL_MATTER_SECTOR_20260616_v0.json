@@ -1,0 +1,149 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "arbitrary_distributional_source_not_promoted": true,
+    "consumes_expected_toe_matter_selection_packet": true,
+    "field_content_stated": true,
+    "lagrangian_stated": true,
+    "metric_variation_convention_stated": true,
+    "provisional_real_scalar_sector_selected": true,
+    "scalar_action_stated": true,
+    "source_admissibility_not_claimed": true,
+    "stress_energy_expression_recorded": true,
+    "toe_native_matter_derivation_false": true,
+    "weak_pairing_translation_stated": true
+  },
+  "accepted": true,
+  "action_derivability_constructed": true,
+  "action_derivability_constructed_scope": "provisional real-scalar calculation sandbox only",
+  "action_derivability_result": "ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION",
+  "arbitrary_distributional_source_action_derived_claimed": false,
+  "arbitrary_distributional_source_promoted": false,
+  "artifact_id": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_20260616_v0",
+  "authorized_by_toe_matter_selection_artifact_id": "QFT_GR_TOE_MATTER_SECTOR_CANDIDATE_SELECTION_PACKET_20260616_v0",
+  "authorized_by_toe_matter_selection_commit": "80a73e37",
+  "captured_at_utc": "2026-06-16T00:00:00Z",
+  "conservation_claimed": false,
+  "consumed_target": "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
+  "covariant_variation_form": "delta S_m[g, phi](k) = -1/2 integral_M T_{mu nu} k^{mu nu} dVol_g",
+  "derivation_steps": [
+    {
+      "claim": "scalar action stated for provisional calculation sandbox",
+      "mathematical_content": "S_m[g, phi] = integral_M (-1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)) dVol_g",
+      "step_id": "state_action"
+    },
+    {
+      "claim": "inverse-metric variation convention fixed",
+      "mathematical_content": "Vary the inverse metric with compactly supported symmetric contravariant test k^{mu nu} = delta g^{mu nu}, hold phi fixed, and use delta(dVol_g) = -1/2 g_{mu nu} k^{mu nu} dVol_g.",
+      "step_id": "state_variation_convention"
+    },
+    {
+      "claim": "field phi held fixed under metric variation",
+      "mathematical_content": "delta L_m = -1/2 partial_mu phi partial_nu phi k^{mu nu}",
+      "step_id": "vary_lagrangian"
+    },
+    {
+      "claim": "inverse-metric volume variation contribution recorded",
+      "mathematical_content": "delta(dVol_g) = -1/2 g_{mu nu} k^{mu nu} dVol_g",
+      "step_id": "vary_volume"
+    },
+    {
+      "claim": "weak variational action-derivability form constructed",
+      "mathematical_content": "delta S_m[g, phi](k) = -1/2 integral_M T_{mu nu} k^{mu nu} dVol_g",
+      "step_id": "combine_variation"
+    },
+    {
+      "claim": "covariant scalar stress-energy expression recorded",
+      "mathematical_content": "T_{mu nu} = partial_mu phi partial_nu phi - 1/2 g_{mu nu} g^{alpha beta} partial_alpha phi partial_beta phi - g_{mu nu} V(phi)",
+      "step_id": "read_stress_energy"
+    },
+    {
+      "claim": "pairing convention made explicit",
+      "mathematical_content": "delta S_m[g, phi](k) = -1/2 integral_M T_{mu nu} k^{mu nu} dVol_g; <T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g after raising the scalar stress-energy indices.",
+      "step_id": "translate_to_prior_pairing"
+    }
+  ],
+  "downstream_progression": [
+    {
+      "decision": "ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION",
+      "reason": "Metric variation of the provisional scalar action yields the scalar stress-energy expression.",
+      "stage": "action_derivability_retry",
+      "status": "CONSTRUCTED_FOR_PROVISIONAL_SCALAR_TEST_SECTOR"
+    },
+    {
+      "decision": "covariant_variation_and_prior_pairing_conventions_linked",
+      "reason": "The packet distinguishes inverse-metric variation k^{mu nu} from covariant test tensors h_{mu nu}.",
+      "stage": "weak_pairing_translation",
+      "status": "CONSTRUCTED_WITH_INDEX_CONVENTION"
+    },
+    {
+      "decision": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
+      "reason": "Conservation must be tested separately, likely using the scalar field equation.",
+      "stage": "weak_conservation",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Bianchi compatibility remains downstream of weak conservation.",
+      "stage": "bianchi_compatibility",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Semiclassical coupling remains downstream of source-admissibility checks.",
+      "stage": "semiclassical_source_admissibility",
+      "status": "NOT_REACHED"
+    }
+  ],
+  "empirical_validation_claimed": false,
+  "field_content": "real scalar field phi",
+  "field_variation_policy": "phi is held fixed during metric variation",
+  "index_bridge": "For the prior covariant test convention h_{mu nu}, set T^{mu nu} = g^{mu alpha} g^{nu beta} T_{alpha beta}; equivalently h_{mu nu} = g_{mu alpha} g_{nu beta} k^{alpha beta} maps the inverse-metric variation k^{alpha beta} into the covariant-test pairing.",
+  "lagrangian_density": "L_m(g, phi, nabla phi) = -1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)",
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRActionDerivabilityRetryWithProvisionalMatterSector.lean",
+  "master_action_promoted": false,
+  "mathematical_statement": "For the provisional scalar sandbox S_m[g, phi] = integral_M [-1/2 g^{mu nu} partial_mu phi partial_nu phi - V(phi)] dVol_g, inverse-metric variation with phi fixed gives delta S_m[g, phi](k) = -1/2 integral_M T_{mu nu} k^{mu nu} dVol_g where T_{mu nu} = partial_mu phi partial_nu phi - 1/2 g_{mu nu} g^{alpha beta} partial_alpha phi partial_beta phi - g_{mu nu} V(phi). This constructs action derivability only for the provisional scalar stress-energy subclass and does not derive the ToE-native matter sector.",
+  "metric_variation_convention": "Vary the inverse metric with compactly supported symmetric contravariant test k^{mu nu} = delta g^{mu nu}, hold phi fixed, and use delta(dVol_g) = -1/2 g_{mu nu} k^{mu nu} dVol_g.",
+  "non_claim_boundary": "This packet constructs action derivability only for the imported provisional real-scalar calculation sandbox. It does not derive a ToE-native matter sector, does not prove an arbitrary distributional source is action-derived, and does not claim source admissibility, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
+  "outcome_id": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_PREPARED_WITH_ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+  "packet_classification": "qft_gr_action_derivability_retry_with_provisional_matter_sector_constructs_scalar_stress_energy_variation_nonpromotionally",
+  "packet_id": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_v0",
+  "prepared": true,
+  "prior_contract_pairing_form": "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g",
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "scalar_action": "S_m[g, phi] = integral_M (-1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)) dVol_g",
+  "schema_id": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_20260616_v0",
+  "selected_action_generated_source_subclass_id": "stress_energy_candidate_generated_by_provisional_real_scalar_lagrangian_v0",
+  "selected_known_matter_model": "real_scalar_field_klein_gordon_type",
+  "selected_next_target": "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source",
+  "selected_next_target_kind": "qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_preparation",
+  "selected_provisional_matter_sector_id": "provisional_real_scalar_field_test_sector_v0",
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_contravariant_expression": "T^{mu nu} = g^{mu alpha} g^{nu beta} T_{alpha beta}",
+  "stress_energy_covariant_expression": "T_{mu nu} = partial_mu phi partial_nu phi - 1/2 g_{mu nu} g^{alpha beta} partial_alpha phi partial_beta phi - g_{mu nu} V(phi)",
+  "toe_matter_model_derived": false,
+  "toe_native_matter_derivation_claimed": false,
+  "toe_native_matter_sector_defined": false,
+  "toe_native_matter_sector_result": "TOE_NATIVE_MATTER_SECTOR_NOT_YET_DEFINED",
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "bounded_focused_validation_only": true,
+    "checkpoint_type": "qft_gr_action_derivability_retry_with_provisional_matter_sector",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "release_index_path_not_freshly_lean_validated": true
+  },
+  "variation_variable": "k^{mu nu} = delta g^{mu nu}",
+  "weak_conservation_claimed": false,
+  "weak_pairing_translation": "delta S_m[g, phi](k) = -1/2 integral_M T_{mu nu} k^{mu nu} dVol_g; <T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g after raising the scalar stress-energy indices."
+}

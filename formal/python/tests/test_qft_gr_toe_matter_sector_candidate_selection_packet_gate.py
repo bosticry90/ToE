@@ -286,7 +286,7 @@ def test_toe_matter_sector_selection_lean_and_surface_mirrors() -> None:
         MATTER_SECTOR_SELECTION_RESULT,
         TOE_NATIVE_MATTER_SECTOR_RESULT,
         "QFTGRToeMatterSectorCandidateSelectionPacket",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
         "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
         "no source admissibility",
         "no QFT-GR closure",
