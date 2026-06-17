@@ -230,7 +230,6 @@ def test_review_lean_and_surface_mirrors() -> None:
         CALCULATION_RESULT,
         REQUIRED_FUNCTIONAL_CONTRACT,
         "QFTGRSourceActionTestActionWeakPairingDomainCalculationPacketResultReview",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
         "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_"
         "functional_contract_packet",
         "no source admissibility",

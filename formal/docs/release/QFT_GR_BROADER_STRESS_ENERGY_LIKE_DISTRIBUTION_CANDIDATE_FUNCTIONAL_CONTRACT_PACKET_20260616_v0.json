@@ -1,0 +1,273 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "consumes_expected_result_review": true,
+    "contract_selection_blocked_by_unspecified_regularity_and_domain": true,
+    "downstream_stages_not_reached": true,
+    "no_contract_option_selected": true,
+    "non_promotion_boundary_preserved": true,
+    "required_contract_fields_assessed": true,
+    "test_space_and_contract_forms_stated": true,
+    "weak_pairing_retry_not_authorized": true
+  },
+  "accepted": true,
+  "action_derivability_claimed": false,
+  "artifact_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_20260616_v0",
+  "authorized_by_result_review_artifact_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_20260616_v0",
+  "authorized_by_result_review_commit": "1a439525e24fc6052bf11a6b1918c7f61d369e31",
+  "bianchi_compatible_source": "not_reached",
+  "blocked_contract_field_count": 10,
+  "blocked_contract_fields": [
+    "candidate_regularity",
+    "tensor_vs_tensor_density_status",
+    "index_placement",
+    "volume_measure",
+    "metric_dependence",
+    "support_and_locality_assumptions",
+    "linearity",
+    "continuity",
+    "coordinate_or_covariance_behavior",
+    "action_derived_or_merely_source_like_status"
+  ],
+  "candidate_functional_contract_constructed": false,
+  "candidate_functional_contract_rejected": false,
+  "candidate_source_id": "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0",
+  "captured_at_utc": "2026-06-16T00:00:00Z",
+  "conservation_claimed": false,
+  "consumed_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+  "contract_field_assessment": [
+    {
+      "field": "background_spacetime",
+      "note": "M is treated as the working smooth spacetime background with metric g; no Einstein equation or source admissibility is inferred.",
+      "status": "supplied_as_working_background_only",
+      "value": "(M, g)"
+    },
+    {
+      "field": "test_space",
+      "note": "The candidate must act on compactly supported smooth symmetric covariant 2-tensors.",
+      "status": "supplied_for_contract_test",
+      "value": "C_c^infty(M, Sym^2 T*M)"
+    },
+    {
+      "field": "test_space_topology",
+      "note": "Continuity must be checked against this topology; no continuity proof is supplied.",
+      "status": "supplied_as_required_continuity_topology",
+      "value": "standard C_c^infty locally convex test-space topology"
+    },
+    {
+      "field": "candidate_regularity",
+      "note": "The candidate does not license a regularity class that can select an integral representative or a distributional functional.",
+      "status": "blocked_unspecified",
+      "value": "smooth / locally_integrable / distributional / unspecified not selected"
+    },
+    {
+      "field": "tensor_vs_tensor_density_status",
+      "note": "The packet cannot choose dVol_g integration versus a density-based action without this status.",
+      "status": "blocked_unspecified",
+      "value": "tensor_or_density_not_selected"
+    },
+    {
+      "field": "index_placement",
+      "note": "The contraction with h_{mu nu} requires a licensed index-placement convention.",
+      "status": "blocked_unspecified",
+      "value": "contravariant_covariant_or_mixed_not_selected"
+    },
+    {
+      "field": "volume_measure",
+      "note": "The integral form is available only after the representative type and metric dependence are fixed.",
+      "status": "blocked_by_tensor_density_and_metric_dependence",
+      "value": "dVol_g_or_density_based_alternative_not_selected"
+    },
+    {
+      "field": "metric_dependence",
+      "note": "The packet does not decide whether T depends on g, on background structure, or on a metric-independent density.",
+      "status": "blocked_unspecified",
+      "value": "metric_dependence_contract_not_supplied"
+    },
+    {
+      "field": "support_and_locality_assumptions",
+      "note": "Compact support of h is supplied, but locality/support behavior of T is not.",
+      "status": "blocked_unspecified",
+      "value": "support_locality_contract_not_supplied"
+    },
+    {
+      "field": "linearity",
+      "note": "The candidate has no map T : D -> R whose linearity can be checked.",
+      "status": "blocked_not_verified",
+      "value": "linearity_of_T_on_D_not_supplied"
+    },
+    {
+      "field": "continuity",
+      "note": "The candidate has no continuity bound or distribution-order contract.",
+      "status": "blocked_not_verified",
+      "value": "continuity_of_T_on_D_not_supplied"
+    },
+    {
+      "field": "coordinate_or_covariance_behavior",
+      "note": "The packet does not promote a coordinate-dependent representative to a covariant source object.",
+      "status": "blocked_unspecified",
+      "value": "coordinate_covariance_contract_not_supplied"
+    },
+    {
+      "field": "action_derived_or_merely_source_like_status",
+      "note": "Action derivability is downstream of functional-contract selection and remains not reached.",
+      "status": "blocked_downstream_not_selected",
+      "value": "action_derived_status_not_reached"
+    }
+  ],
+  "contract_option_selected": false,
+  "contract_options": [
+    {
+      "blocked_by": [
+        "linearity_of_T_on_D_not_supplied",
+        "continuity_of_T_on_D_not_supplied",
+        "regularity_or_distribution_order_not_supplied"
+      ],
+      "contract_form": "T : C_c^infty(M, Sym^2 T*M) -> R",
+      "option_id": "distributional_continuous_linear_functional",
+      "required_data": [
+        "linear_map_from_D_to_R",
+        "continuity_for_standard_C_c_infty_topology",
+        "tensor_distribution_order_or_equivalent_bound",
+        "coordinate_or_covariance_behavior"
+      ],
+      "selection_status": "not_selected"
+    },
+    {
+      "blocked_by": [
+        "candidate_regularity_not_supplied",
+        "index_placement_not_supplied",
+        "metric_dependence_or_volume_measure_not_supplied"
+      ],
+      "contract_form": "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g",
+      "option_id": "smooth_or_locally_integrable_tensor_representative",
+      "required_data": [
+        "regularity_class_smooth_or_locally_integrable",
+        "contravariant_or_metric_raised_tensor_components",
+        "volume_measure_dVol_g",
+        "local_integrability_on_compact_sets"
+      ],
+      "selection_status": "not_selected"
+    },
+    {
+      "blocked_by": [
+        "tensor_vs_tensor_density_status_not_supplied",
+        "coordinate_or_covariance_behavior_not_supplied",
+        "continuity_of_T_on_D_not_supplied"
+      ],
+      "contract_form": "pair density-valued T with h without separately selecting dVol_g",
+      "option_id": "tensor_density_pairing",
+      "required_data": [
+        "tensor_density_status",
+        "density_weight",
+        "coordinate_transformation_law",
+        "linear_continuous_action_on_D"
+      ],
+      "selection_status": "not_selected"
+    }
+  ],
+  "contract_question": "Can broader_stress_energy_like_distribution_candidate_not_source_admissible_v0 be specified as a mathematical object that acts on D = C_c^infty(M, Sym^2 T*M)?",
+  "contract_result": "CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN",
+  "downstream_progression": [
+    {
+      "decision": "CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN",
+      "reason": "No regularity/domain contract selects a continuous linear functional or integral representative.",
+      "stage": "functional_contract",
+      "status": "blocked"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "The candidate functional contract is blocked.",
+      "stage": "weak_pairing_retry",
+      "status": "NOT_AUTHORIZED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Weak pairing retry is not authorized.",
+      "stage": "action_derivability",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Action derivability is not reached.",
+      "stage": "weak_conservation",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Weak conservation is not reached.",
+      "stage": "bianchi_compatibility",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Bianchi compatibility is not reached.",
+      "stage": "semiclassical_source_admissibility",
+      "status": "NOT_REACHED"
+    }
+  ],
+  "empirical_validation_claimed": false,
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacket.lean",
+  "master_action_promoted": false,
+  "mathematical_acceptance_outputs": {
+    "calculation_blocked_by_missing_formal_input": true,
+    "counterexample_or_obstruction_recorded": true,
+    "definition_supplied": true,
+    "proposition_or_contract_criterion_stated": true,
+    "symbolic_pairing_form_recorded": true,
+    "weak_pairing_completed": false,
+    "well_definedness_precheck_attempted": true
+  },
+  "missing_mathematical_data": [
+    "candidate_regularity_class_not_supplied",
+    "tensor_vs_tensor_density_status_not_supplied",
+    "index_placement_not_supplied",
+    "volume_measure_or_density_pairing_not_selected",
+    "metric_dependence_contract_not_supplied",
+    "support_and_locality_assumptions_not_supplied",
+    "linear_map_T_from_D_to_R_not_supplied",
+    "continuity_bound_or_distribution_order_not_supplied",
+    "coordinate_or_covariance_behavior_not_supplied",
+    "action_derived_or_merely_source_like_status_not_supplied"
+  ],
+  "missing_mathematical_data_count": 10,
+  "multiple_candidate_functional_contract_options_recorded": true,
+  "non_claim_boundary": "This packet defines the functional-contract obligation for the candidate source and records that contract selection is blocked by unspecified regularity and domain data. It does not complete weak pairing, authorize weak-pairing retry, derive an action, prove conservation, establish Bianchi compatibility, derive a semiclassical Einstein equation, close QFT-GR, authorize public submission, or promote the master action.",
+  "outcome_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY",
+  "packet_classification": "qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_blocks_contract_selection_by_unspecified_regularity_and_domain",
+  "packet_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_v0",
+  "prepared": true,
+  "proposition_statement": "A candidate source is eligible for weak-pairing retry only after it supplies either a continuous linear functional T : D -> R for D = C_c^infty(M, Sym^2 T*M), or a smooth/locally integrable representative whose integral pairing with h in D is well-defined.",
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "required_functional_contract": "T : C_c^infty(M, Sym^2 T*M) -> R",
+  "schema_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_20260616_v0",
+  "selected_next_target": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
+  "selected_next_target_kind": "qft_gr_candidate_functional_contract_packet_result_review",
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_source_admissible": "not_reached",
+  "smooth_or_locally_integrable_pairing_formula": "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g",
+  "source_admissibility_claimed": false,
+  "source_is_action_derived": "not_reached",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "test_space": "C_c^infty(M, Sym^2 T*M)",
+  "test_space_id": "D",
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "bounded_focused_validation_only": true,
+    "checkpoint_type": "qft_gr_candidate_functional_contract_packet",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "release_index_path_not_freshly_lean_validated": true
+  },
+  "weak_conservation_verified": "not_reached",
+  "weak_pairing_completed": false,
+  "weak_pairing_retry_authorized": false,
+  "well_defined_pairing": "not_reached",
+  "working_background": "(M, g)"
+}

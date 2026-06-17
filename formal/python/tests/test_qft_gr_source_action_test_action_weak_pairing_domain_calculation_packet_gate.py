@@ -213,7 +213,8 @@ def test_registry_surfaces_and_imports_record_calculation_review_history() -> No
     assert calculation_review["calculation_result"] == CALCULATION_RESULT
 
     joined = "\n".join(
-        _read(path) for path in [SURFACES_PATH, TOE_FORMAL_PATH, FRONTIER_PATH]
+        _read(path)
+        for path in [SURFACES_PATH, TOE_FORMAL_PATH, FRONTIER_PATH, REGISTRY_PATH]
     )
     for token in [
         "QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket",
