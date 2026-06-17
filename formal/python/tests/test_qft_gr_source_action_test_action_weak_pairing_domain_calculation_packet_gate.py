@@ -197,23 +197,20 @@ def test_calculation_packet_has_actual_mathematical_acceptance_content() -> None
     )
 
 
-def test_live_registry_surfaces_and_imports_record_calculation_review_target() -> None:
+def test_registry_surfaces_and_imports_record_calculation_review_history() -> None:
     registry = _json(REGISTRY_PATH)
-    state = registry["current_target_state"]
-    assert state["live_next_target"] == CALCULATION_PACKET_REVIEW_TARGET
-    assert state["previous_live_next_target"] == QFT_GR_CALCULATION_TARGET
-    assert state["live_next_target_report"] == (
+    calculation_packet = _workstream(registry, QFT_GR_CALCULATION_TARGET)
+    assert calculation_packet["status"] == "paused"
+    assert calculation_packet["selected_next_target"] == CALCULATION_PACKET_REVIEW_TARGET
+    assert calculation_packet["report"] == (
         "formal/docs/release/"
         "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0.json"
     )
-    assert state["live_next_target_outcome"] == CALCULATION_PACKET_OUTCOME
-    active = [
-        row for row in registry["workstreams"] if row.get("status") == "active"
-    ]
-    assert len(active) == 1
-    assert active[0]["workstream_id"] == CALCULATION_PACKET_REVIEW_TARGET
-    assert active[0]["authorized_next_strict_target"] == CALCULATION_PACKET_REVIEW_TARGET
-    assert _workstream(registry, QFT_GR_CALCULATION_TARGET)["status"] == "paused"
+    assert calculation_packet["outcome_id"] == CALCULATION_PACKET_OUTCOME
+
+    calculation_review = _workstream(registry, CALCULATION_PACKET_REVIEW_TARGET)
+    assert calculation_review["status"] == "paused"
+    assert calculation_review["calculation_result"] == CALCULATION_RESULT
 
     joined = "\n".join(
         _read(path) for path in [SURFACES_PATH, TOE_FORMAL_PATH, FRONTIER_PATH]

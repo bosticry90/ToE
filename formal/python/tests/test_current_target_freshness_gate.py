@@ -1158,8 +1158,8 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_qft_gr_source_action_test_action_weak_pairing_domain_"
-    "calculation_packet_result"
+    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_"
+    "functional_contract_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1330,8 +1330,8 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_source_action_test_action_weak_pairing_domain_"
-    "calculation_packet"
+    "review_qft_gr_source_action_test_action_weak_pairing_domain_"
+    "calculation_packet_result"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1424,8 +1424,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_qft_gr_source_action_test_action_weak_pairing_domain_"
-    "calculation_packet_result"
+    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_"
+    "functional_contract_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1442,7 +1442,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean"
+    / "QFTGRSourceActionTestActionWeakPairingDomainCalculationPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2952,75 +2952,82 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    calculation_review_active_workstream = active_workstream(payload)
-    assert calculation_review_active_workstream["workstream_id"] == ACTIVE_LANE
+    functional_contract_active_workstream = active_workstream(payload)
+    assert functional_contract_active_workstream["workstream_id"] == ACTIVE_LANE
     assert (
-        calculation_review_active_workstream["authorized_next_strict_target"]
+        functional_contract_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert calculation_review_active_workstream["authorized_target"] == LIVE_TARGET
-    assert calculation_review_active_workstream["authorization_evidence"] == str(
+    assert functional_contract_active_workstream["authorized_target"] == LIVE_TARGET
+    assert functional_contract_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert calculation_review_active_workstream["report"] == (
+    assert functional_contract_active_workstream["report"] == (
         "formal/docs/release/"
         "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_"
-        "PACKET_20260616_v0.json"
+        "PACKET_RESULT_REVIEW_20260616_v0.json"
     )
     assert (
-        calculation_review_active_workstream["outcome_id"]
+        functional_contract_active_workstream["outcome_id"]
         == "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_"
-        "PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_"
-        "OR_QFT_GR_CLOSURE"
+        "RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_"
+        "AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY"
     )
     assert (
-        calculation_review_active_workstream["claim_level"]
-        == "Level 3 QFT-GR weak-pairing calculation packet prepared result review pending"
+        functional_contract_active_workstream["claim_level"]
+        == "Level 3 QFT-GR candidate functional-contract packet preparation authorized"
     )
     assert (
-        calculation_review_active_workstream["claim_ceiling"]
-        == "calculation packet result review only no source admissibility no qft_gr closure"
+        functional_contract_active_workstream["claim_ceiling"]
+        == "candidate functional-contract packet preparation only no weak-pairing retry no source admissibility no qft_gr closure"
     )
-    assert "no source admissibility" in calculation_review_active_workstream[
+    assert "no weak-pairing retry" in functional_contract_active_workstream[
         "non_claim_boundary"
     ]
-    assert calculation_review_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert functional_contract_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert (
-        calculation_review_active_workstream["first_ladder_break_row_id"]
-        == "source_action_test_action_and_weak_pairing_domain"
+        functional_contract_active_workstream["candidate_source_id"]
+        == "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0"
     )
     assert (
-        calculation_review_active_workstream["qft_gr_first_required_calculation"]
-        == "construct_source_action_test_action_weak_pairing_domain"
-    )
-    assert (
-        calculation_review_active_workstream["calculation_result"]
+        functional_contract_active_workstream["calculation_result"]
         == "WEAK_PAIRING_DOMAIN_CALCULATION_BLOCKED_BY_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT"
     )
-    assert calculation_review_active_workstream["well_defined_pairing"] == "blocked"
-    assert calculation_review_active_workstream["source_is_action_derived"] == "not_reached"
-    assert calculation_review_active_workstream["weak_conservation_verified"] == "not_reached"
     assert (
-        calculation_review_active_workstream["Bianchi_compatibility_status"]
-        == "NOT_REACHED"
+        functional_contract_active_workstream["required_functional_contract"]
+        == "T : C_c^infty(M, Sym^2 T*M) -> R"
     )
     assert (
-        calculation_review_active_workstream["semiclassical_source_admissible"]
-        == "not_reached"
-    )
-    assert (
-        calculation_review_active_workstream["downstream_status_when_weak_pairing_blocked"]
-        == "NOT_REACHED"
+        functional_contract_active_workstream["contract_packet_required_obligation_count"]
+        == "11"
     )
     for key in [
+        "background_spacetime_assumptions_required",
+        "test_space_topology_required",
+        "regularity_class_of_T_required",
+        "tensor_vs_tensor_density_status_required",
+        "index_placement_required",
+        "metric_dependence_required",
+        "support_and_locality_assumptions_required",
+        "linearity_required",
+        "continuity_required",
+        "coordinate_or_covariance_behavior_required",
+        "action_derived_or_merely_source_like_status_required",
+    ]:
+        assert functional_contract_active_workstream[key] == "yes", key
+    assert functional_contract_active_workstream["weak_pairing_retry_authorized"] == "no"
+    for key in [
         "source_admissibility_claimed",
+        "conservation_claimed",
+        "Bianchi_compatibility_claimed",
+        "semiclassical_einstein_equation_derived",
         "qft_gr_closure_claimed",
         "qft_gr_seam_closed",
         "empirical_validation_claimed",
         "public_submission_authorized",
         "master_action_promoted",
     ]:
-        assert calculation_review_active_workstream[key] == "no", key
+        assert functional_contract_active_workstream[key] == "no", key
 
     post_retest_refinement_conservation_retest_refinement_refinement_packet_workstream = _workstream(
         payload,
@@ -8524,7 +8531,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        calculation_review_active_workstream[
+        functional_contract_active_workstream[
             "authorized_next_strict_target"
         ],
     }

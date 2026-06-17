@@ -1,0 +1,110 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "blocker_is_missing_candidate_functional_contract": true,
+    "candidate_functional_contract_packet_selected_only": true,
+    "consumes_expected_calculation_packet": true,
+    "downstream_stages_not_reached": true,
+    "non_promotion_boundary_preserved": true,
+    "weak_pairing_attempted_at_definition_proposition_domain_level": true,
+    "weak_pairing_not_marked_false_for_underspecification": true
+  },
+  "accepted": true,
+  "action_derivability_status": "not_reached",
+  "artifact_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_20260616_v0",
+  "bianchi_compatibility_status": "not_reached",
+  "calculation_result": "WEAK_PAIRING_DOMAIN_CALCULATION_BLOCKED_BY_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT",
+  "calculation_result_accepted": true,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The calculation packet correctly blocks weak pairing on the missing candidate functional/domain contract, so the next bounded mathematical packet must supply, block, or refute that contract.",
+      "target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
+    },
+    {
+      "decision": "completed_consumed_live_target",
+      "reason": "The calculation packet result-review target is consumed here.",
+      "target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Retry is blocked until a candidate functional contract is supplied.",
+      "target": "retry_qft_gr_weak_pairing_calculation"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Action derivability is downstream of weak pairing and is not reached.",
+      "target": "derive_qft_gr_source_action"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "No weak-pairing contract or admissible source is constructed.",
+      "target": "claim_qft_gr_source_admissibility"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "QFT-GR closure remains unclaimed.",
+      "target": "close_qft_gr_seam"
+    }
+  ],
+  "candidate_source_id": "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0",
+  "captured_at_utc": "2026-06-16T00:00:00Z",
+  "conservation_claimed": false,
+  "consumed_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+  "contract_packet_required_obligation_count": 11,
+  "contract_packet_required_obligations": [
+    "background_spacetime_assumptions",
+    "test_space_topology",
+    "regularity_class_of_T",
+    "tensor_vs_tensor_density_status",
+    "index_placement",
+    "metric_dependence",
+    "support_and_locality_assumptions",
+    "linearity",
+    "continuity",
+    "coordinate_or_covariance_behavior",
+    "action_derived_or_merely_source_like_status"
+  ],
+  "downstream_status_when_weak_pairing_blocked": "NOT_REACHED",
+  "empirical_validation_claimed": false,
+  "lean_review_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacketResultReview.lean",
+  "master_action_promoted": false,
+  "missing_candidate_functional_contract_confirmed": true,
+  "non_claim_boundary": "This review accepts the weak-pairing calculation packet as a blocked mathematical failure diagnosis: the current candidate lacks the functional/domain contract required to decide weak pairability. It authorizes only a candidate functional-contract packet, not weak-pairing retry, action derivability, source admissibility, Bianchi compatibility, semiclassical coupling, QFT-GR closure, public submission, or master-action promotion.",
+  "outcome_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY",
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "required_functional_contract": "T : C_c^infty(M, Sym^2 T*M) -> R",
+  "result_review_accepted": true,
+  "result_review_classification": "qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result_review_accepts_blocked_missing_candidate_functional_contract_and_authorizes_candidate_functional_contract_packet_only",
+  "review_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_v0",
+  "review_outcome": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY",
+  "reviewed_artifact_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0",
+  "reviewed_commit": "e8aec546c5236ae1421108048326572784703003",
+  "reviewed_live_target_before_review": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+  "reviewed_packet_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_v0",
+  "schema_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_20260616_v0",
+  "selected_next_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+  "selected_next_target_kind": "qft_gr_candidate_source_functional_contract_packet_preparation",
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_source_admissibility_status": "not_reached",
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "bounded_focused_validation_only": true,
+    "checkpoint_type": "qft_gr_weak_pairing_calculation_packet_result_review",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "release_index_path_not_freshly_lean_validated": true
+  },
+  "weak_conservation_status": "not_reached",
+  "weak_pairing_attempted": true,
+  "weak_pairing_decision": "blocked",
+  "weak_pairing_not_false_due_to_underspecification": true
+}

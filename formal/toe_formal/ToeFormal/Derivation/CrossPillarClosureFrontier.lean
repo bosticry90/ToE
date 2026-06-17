@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR source-action/test-action/weak-pairing-domain calculation packet prepared with outcome QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE. The packet follows the preserved source-map ladder review, minimal mathematical obligation index, and selection packet; it states the test space D = C_c^infty(M, Sym^2 T*M), states the continuous-linear-functional criterion T : D -> R or smooth/local-integrability integral template, attempts the weak-pairing well-definedness check, records WEAK_PAIRING_DOMAIN_CALCULATION_BLOCKED_BY_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT, leaves action derivability, weak conservation, Bianchi compatibility, and semiclassical source admissibility as NOT_REACHED, and preserves no source admissibility, no conservation proof, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion"
+        "QFT-GR source-action/test-action/weak-pairing-domain calculation packet result review accepted with outcome QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY. The review accepts WEAK_PAIRING_DOMAIN_CALCULATION_BLOCKED_BY_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT as a blocked mathematical failure diagnosis, confirms weak pairing was attempted at definition/proposition/domain level, confirms weak pairing is blocked rather than false under underspecification, keeps action derivability, weak conservation, Bianchi compatibility, and semiclassical source admissibility as NOT_REACHED, and authorizes only prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet to specify or block T : C_c^infty(M, Sym^2 T*M) -> R for broader_stress_energy_like_distribution_candidate_not_source_admissible_v0. It preserves no source admissibility, no conservation proof, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
+        "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The math-first QFT-GR chain preserves the source-map ladder obstruction, accepts the candidate-only first break, prepares a minimal mathematical obligation index, selects the weak-pairing/source-action calculation packet, and prepares that calculation packet with review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result as the only active next target. It records the weak-pairing criterion and missing candidate functional contract while preserving no source-admissibility claim, conservation claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
+        "The math-first QFT-GR chain now accepts the weak-pairing calculation packet result review as a blocked missing candidate functional contract diagnosis and selects prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet as the only active next target. The chain records that weak pairing cannot be retried until the candidate source functional contract is supplied, blocked, or refuted, while preserving no source-admissibility claim, conservation claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
+        "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the weak-pairing calculation packet. -/
+/-- Previous live target consumed by the weak-pairing calculation result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet"
-
-/-- Current live target after the weak-pairing calculation packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
+
+/-- Current live target after the weak-pairing calculation result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
+    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

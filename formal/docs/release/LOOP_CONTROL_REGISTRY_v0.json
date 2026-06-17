@@ -135,7 +135,8 @@
     "prepare_minimal_global_toe_mathematical_obligation_index",
     "review_minimal_global_toe_mathematical_obligation_index_result",
     "select_next_global_toe_work_target_from_mathematical_obligation_index",
-    "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet"
+    "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+    "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
   ],
   "consumed_targets": [
     {
@@ -307,7 +308,8 @@
     "prepare_minimal_global_toe_mathematical_obligation_index",
     "review_minimal_global_toe_mathematical_obligation_index_result",
     "select_next_global_toe_work_target_from_mathematical_obligation_index",
-    "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet"
+    "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+    "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
   ],
   "controls": [
     {
@@ -669,9 +671,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+    "active_lane": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
     "candidate_live_next_targets": [
-      "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
+      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
     ],
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
@@ -848,7 +850,8 @@
       "prepare_minimal_global_toe_mathematical_obligation_index",
       "review_minimal_global_toe_mathematical_obligation_index_result",
       "select_next_global_toe_work_target_from_mathematical_obligation_index",
-      "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet"
+      "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+      "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
     ],
     "consumed_targets": [
       {
@@ -1239,7 +1242,8 @@
       "prepare_minimal_global_toe_mathematical_obligation_index",
       "review_minimal_global_toe_mathematical_obligation_index_result",
       "select_next_global_toe_work_target_from_mathematical_obligation_index",
-      "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet"
+      "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+      "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
     ],
     "current_target_coverage": [
       {
@@ -1948,9 +1952,16 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean",
         "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0.json",
         "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+      },
+      {
+        "target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+        "status": "active_live_next_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacketResultReview.lean",
+        "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_20260616_v0.json",
+        "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY"
       }
     ],
-    "focused_gate": "formal/python/tests/test_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_gate.py",
+    "focused_gate": "formal/python/tests/test_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result_review_gate.py",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -1958,11 +1969,11 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean",
+    "live_next_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacketResultReview.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_outcome": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
-    "live_next_target_report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0.json",
+    "live_next_target_outcome": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY",
+    "live_next_target_report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_20260616_v0.json",
     "next_strict_target_coverage": {
       "analyze_qft_gr_minimal_working_model_candidate_only": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelCandidateAnalysis.lean",
@@ -2910,10 +2921,16 @@
         "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
       },
       "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result": {
-        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean",
-        "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0.json",
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacketResultReview.lean",
+        "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_20260616_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY"
+      },
+      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacketResultReview.lean",
+        "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_20260616_v0.json",
         "status": "active_live_next_target",
-        "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+        "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY"
       }
     },
     "paused_lanes": [
@@ -3110,10 +3127,11 @@
       "prepare_minimal_global_toe_mathematical_obligation_index",
       "review_minimal_global_toe_mathematical_obligation_index_result",
       "select_next_global_toe_work_target_from_mathematical_obligation_index",
-      "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet"
+      "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+      "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+    "previous_live_next_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
@@ -3215,7 +3233,8 @@
       "review_minimal_global_toe_mathematical_obligation_index_result",
       "select_next_global_toe_work_target_from_mathematical_obligation_index",
       "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
-      "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
+      "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
     ]
   },
   "cycle_waivers": [],
@@ -4035,7 +4054,8 @@
     "review_minimal_global_toe_mathematical_obligation_index_result",
     "select_next_global_toe_work_target_from_mathematical_obligation_index",
     "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
-    "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
+    "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -49964,19 +49984,22 @@
     },
     {
       "workstream_id": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
-      "status": "active",
+      "status": "paused",
       "active_lane": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
       "authorized_next_strict_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
       "authorized_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
       "consumed_target": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
-      "outcome_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
-      "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0.json",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean",
-      "selected_next_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
-      "selected_next_target_kind": "qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result_review",
-      "claim_level": "Level 3 QFT-GR weak-pairing calculation packet prepared result review pending",
-      "claim_ceiling": "calculation packet result review only no source admissibility no qft_gr closure",
-      "non_claim_boundary": "This calculation packet states the weak-pairing criterion and records that the current candidate is blocked by missing functional/domain data; no source admissibility, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion is claimed.",
+      "outcome_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY",
+      "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacketResultReview.lean",
+      "reviewed_artifact_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0",
+      "reviewed_commit": "e8aec546c5236ae1421108048326572784703003",
+      "reviewed_live_target_before_review": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "selected_next_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+      "selected_next_target_kind": "qft_gr_candidate_source_functional_contract_packet_preparation",
+      "claim_level": "Level 3 QFT-GR weak-pairing calculation packet result review accepted",
+      "claim_ceiling": "accepted blocked calculation result review only no weak-pairing retry no source admissibility no qft_gr closure",
+      "non_claim_boundary": "This result review accepts the weak-pairing calculation packet as blocked by missing candidate functional/domain data and authorizes only a candidate functional-contract packet; no weak-pairing retry, source admissibility, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion is claimed.",
       "first_ladder_break_row_id": "source_action_test_action_and_weak_pairing_domain",
       "qft_gr_first_required_calculation": "construct_source_action_test_action_weak_pairing_domain",
       "calculation_result": "WEAK_PAIRING_DOMAIN_CALCULATION_BLOCKED_BY_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT",
@@ -49987,6 +50010,54 @@
       "semiclassical_source_admissible": "not_reached",
       "downstream_status_when_weak_pairing_blocked": "NOT_REACHED",
       "source_admissibility_claimed": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "empirical_validation_claimed": "no",
+      "public_submission_authorized": "no",
+      "master_action_promoted": "no",
+      "result_review_accepted": "yes",
+      "result_review_pending": "no",
+      "required_functional_contract": "T : C_c^infty(M, Sym^2 T*M) -> R",
+      "weak_pairing_retry_authorized": "no"
+    },
+    {
+      "workstream_id": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+      "status": "active",
+      "active_lane": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+      "authorized_next_strict_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+      "authorized_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+      "consumed_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "outcome_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY",
+      "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacketResultReview.lean",
+      "reviewed_artifact_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0",
+      "reviewed_commit": "e8aec546c5236ae1421108048326572784703003",
+      "reviewed_live_target_before_review": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "selected_next_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+      "selected_next_target_kind": "qft_gr_candidate_source_functional_contract_packet_preparation",
+      "claim_level": "Level 3 QFT-GR candidate functional-contract packet preparation authorized",
+      "claim_ceiling": "candidate functional-contract packet preparation only no weak-pairing retry no source admissibility no qft_gr closure",
+      "non_claim_boundary": "The calculation-packet result review accepts a blocked missing candidate functional contract and authorizes only a candidate functional-contract packet; no weak-pairing retry, source admissibility, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion is claimed.",
+      "candidate_source_id": "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0",
+      "calculation_result": "WEAK_PAIRING_DOMAIN_CALCULATION_BLOCKED_BY_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT",
+      "required_functional_contract": "T : C_c^infty(M, Sym^2 T*M) -> R",
+      "contract_packet_required_obligation_count": "11",
+      "background_spacetime_assumptions_required": "yes",
+      "test_space_topology_required": "yes",
+      "regularity_class_of_T_required": "yes",
+      "tensor_vs_tensor_density_status_required": "yes",
+      "index_placement_required": "yes",
+      "metric_dependence_required": "yes",
+      "support_and_locality_assumptions_required": "yes",
+      "linearity_required": "yes",
+      "continuity_required": "yes",
+      "coordinate_or_covariance_behavior_required": "yes",
+      "action_derived_or_merely_source_like_status_required": "yes",
+      "weak_pairing_retry_authorized": "no",
+      "source_admissibility_claimed": "no",
+      "conservation_claimed": "no",
+      "Bianchi_compatibility_claimed": "no",
+      "semiclassical_einstein_equation_derived": "no",
       "qft_gr_closure_claimed": "no",
       "qft_gr_seam_closed": "no",
       "empirical_validation_claimed": "no",
