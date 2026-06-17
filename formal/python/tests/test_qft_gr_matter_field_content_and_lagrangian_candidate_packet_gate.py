@@ -293,7 +293,7 @@ def test_field_content_lagrangian_packet_lean_and_surface_mirrors() -> None:
         FIELD_LAGRANGIAN_RESULT,
         REAL_SCALAR_ACTION_FORM,
         "QFTGRMatterFieldContentAndLagrangianCandidatePacket",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
         "prepare_qft_gr_toe_matter_sector_candidate_selection_packet",
         "no source admissibility",
         "no QFT-GR closure",

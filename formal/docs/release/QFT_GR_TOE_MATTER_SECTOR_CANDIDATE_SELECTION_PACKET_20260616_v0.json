@@ -1,0 +1,221 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptable_result_outcomes": [
+    "ABSTRACT_FIELD_BUNDLE_MATTER_SECTOR_SELECTED_ACTION_RETRY_AUTHORIZED_NONPROMOTIONALLY",
+    "KNOWN_MATTER_MODEL_IMPORTED_AS_PROVISIONAL_TEST_SECTOR_NO_TOE_DERIVATION_CLAIM",
+    "TOE_NATIVE_MATTER_SECTOR_NOT_YET_DEFINED",
+    "EFFECTIVE_QFT_ACTION_ROUTE_RECORDED_NOT_LICENSED",
+    "NO_TOE_MATTER_SECTOR_SELECTED_QFT_GR_ACTION_ROUTE_BLOCKED"
+  ],
+  "acceptance_criteria": {
+    "arbitrary_distributional_source_not_action_derived": true,
+    "consumes_expected_field_lagrangian_packet": true,
+    "effective_qft_route_not_licensed": true,
+    "next_target_is_action_derivability_retry": true,
+    "no_toe_or_standard_model_derivation_claim": true,
+    "non_promotion_boundary_preserved": true,
+    "prior_packet_blocked_by_missing_toe_matter_model": true,
+    "provisional_known_scalar_selected": true,
+    "toe_native_matter_sector_not_defined": true
+  },
+  "accepted": true,
+  "action_derivability_claimed": false,
+  "action_derivability_retry_authorized": true,
+  "action_generated_source_subclass_selected": true,
+  "arbitrary_distributional_source_action_derived_claimed": false,
+  "arbitrary_distributional_source_replaced_for_retry": true,
+  "artifact_id": "QFT_GR_TOE_MATTER_SECTOR_CANDIDATE_SELECTION_PACKET_20260616_v0",
+  "authorized_by_field_lagrangian_artifact_id": "QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0",
+  "authorized_by_field_lagrangian_commit": "7e4b54f2",
+  "candidate_id": "distributional_symmetric_tensor_candidate_v0",
+  "captured_at_utc": "2026-06-16T00:00:00Z",
+  "conservation_claimed": false,
+  "consumed_target": "prepare_qft_gr_toe_matter_sector_candidate_selection_packet",
+  "downstream_progression": [
+    {
+      "decision": "KNOWN_MATTER_MODEL_IMPORTED_AS_PROVISIONAL_TEST_SECTOR_NO_TOE_DERIVATION_CLAIM",
+      "reason": "A known scalar field is selected only for calculation-sandbox use.",
+      "stage": "toe_matter_sector_candidate_selection",
+      "status": "PROVISIONAL_TEST_SECTOR_SELECTED"
+    },
+    {
+      "decision": "TOE_NATIVE_MATTER_SECTOR_NOT_YET_DEFINED",
+      "reason": "No preserved artifact derives ToE-native matter degrees of freedom.",
+      "stage": "toe_native_matter_sector",
+      "status": "NOT_DEFINED"
+    },
+    {
+      "decision": "EFFECTIVE_QFT_ACTION_ROUTE_RECORDED_NOT_LICENSED",
+      "reason": "State, renormalization, domain, and anomaly controls are not supplied.",
+      "stage": "effective_qft_action_route",
+      "status": "NOT_LICENSED"
+    },
+    {
+      "decision": "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
+      "reason": "The provisional scalar matter action can now be used to test action-derivability mechanics nonpromotionally.",
+      "stage": "action_derivability_retry",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Weak conservation remains downstream of action variation and diffeomorphism structure checks.",
+      "stage": "weak_conservation",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Bianchi compatibility is downstream of conservation.",
+      "stage": "bianchi_compatibility",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Semiclassical coupling is downstream of source admissibility checks.",
+      "stage": "semiclassical_source_admissibility",
+      "status": "NOT_REACHED"
+    }
+  ],
+  "effective_qft_action_route_result": "EFFECTIVE_QFT_ACTION_ROUTE_RECORDED_NOT_LICENSED",
+  "empirical_validation_claimed": false,
+  "functional_contract": "T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear",
+  "known_matter_model_imported_as_provisional_test_sector": true,
+  "lagrangian_density_selected": true,
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRToeMatterSectorCandidateSelectionPacket.lean",
+  "master_action_promoted": false,
+  "mathematical_statement": "The packet selects a known real scalar field action only as a provisional calculation sandbox: S_m[g, phi] with L_m(g, phi, nabla phi) = -1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi). This licenses a retry of action-derivability mechanics for the action-generated scalar stress-energy subclass T_phi. It does not derive matter from the ToE, does not derive the Standard Model, and does not prove the original arbitrary distributional source candidate is action-derived.",
+  "matter_action_derivation_claimed": false,
+  "matter_field_content_selected": true,
+  "matter_model_selected": true,
+  "matter_sector_selection_result": "KNOWN_MATTER_MODEL_IMPORTED_AS_PROVISIONAL_TEST_SECTOR_NO_TOE_DERIVATION_CLAIM",
+  "non_claim_boundary": "This packet selects a known real scalar field only as a provisional calculation sandbox. It preserves that the ToE-native matter sector is not defined, does not claim Standard Model derivation, does not claim action derivability, source admissibility, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
+  "outcome_id": "QFT_GR_TOE_MATTER_SECTOR_CANDIDATE_SELECTION_PACKET_PREPARED_WITH_KNOWN_MATTER_MODEL_IMPORTED_AS_PROVISIONAL_TEST_SECTOR_NO_TOE_DERIVATION_CLAIM_AND_TOE_NATIVE_MATTER_SECTOR_NOT_DEFINED",
+  "packet_classification": "qft_gr_toe_matter_sector_candidate_selection_packet_selects_provisional_real_scalar_test_sector_while_preserving_missing_toe_native_matter_sector",
+  "packet_id": "QFT_GR_TOE_MATTER_SECTOR_CANDIDATE_SELECTION_PACKET_v0",
+  "prepared": true,
+  "prior_field_lagrangian_result": "FIELD_CONTENT_AND_LAGRANGIAN_BLOCKED_BY_MISSING_TOE_MATTER_MODEL",
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "route_assessments": [
+    {
+      "action_derivability_claimed": false,
+      "candidate_form": "S_m[g, phi] = integral_M (-1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)) dVol_g",
+      "reason": "A real scalar field is selected only as a known-physics calculation sandbox for testing action-derivability mechanics. It does not derive matter from the ToE and does not prove the arbitrary distributional source candidate is action-derived.",
+      "route_id": "known_real_scalar_provisional_test_sector",
+      "route_kind": "known_matter_model_imported_as_calculation_sandbox",
+      "selected_field_content": "real scalar field phi",
+      "selected_lagrangian_density": "L_m(g, phi, nabla phi) = -1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)",
+      "selected_matter_sector_id": "provisional_real_scalar_field_test_sector_v0",
+      "selected_variational_target": "delta S_m[g, phi](h) = -1/2 <T_phi, h>",
+      "selection_licensed": true,
+      "selection_status": "selected_provisionally",
+      "source_admissibility_claimed": false,
+      "standard_model_derivation_claimed": false,
+      "toe_derivation_claimed": false
+    },
+    {
+      "blocked_by": [
+        "field_bundle_E_not_defined",
+        "lagrangian_class_not_constrained",
+        "specific_calculation_target_not_fixed"
+      ],
+      "candidate_form": "psi in Gamma(E), S_m[g, psi] = integral_M L(g, psi, nabla psi, ...) dVol_g",
+      "reason": "The abstract field-bundle route is mathematically flexible but too underdetermined to drive the next concrete calculation.",
+      "route_id": "abstract_field_bundle_matter_sector",
+      "route_kind": "abstract_matter_sector",
+      "selection_licensed": false,
+      "selection_status": "recorded_not_selected",
+      "toe_derivation_claimed": false
+    },
+    {
+      "blocked_by": [
+        "qft_state_not_selected",
+        "renormalization_scheme_not_selected",
+        "effective_action_domain_not_selected",
+        "anomaly_policy_not_selected"
+      ],
+      "candidate_form": "W[g] with <T_{mu nu}> = -2 / sqrt(-g) * delta W / delta g^{mu nu}",
+      "reason": "The effective QFT action route remains relevant but requires state, renormalization, domain, and anomaly control.",
+      "route_id": "effective_qft_action_route",
+      "route_kind": "effective_action_or_generating_functional",
+      "route_result": "EFFECTIVE_QFT_ACTION_ROUTE_RECORDED_NOT_LICENSED",
+      "selection_licensed": false,
+      "selection_status": "recorded_not_licensed",
+      "toe_derivation_claimed": false
+    },
+    {
+      "blocked_by": [
+        "no_preserved_toe_native_matter_sector_artifact",
+        "candidate_family_to_matter_degrees_of_freedom_map_missing",
+        "native_lagrangian_generation_rule_missing"
+      ],
+      "candidate_form": "matter sector generated from candidate unifying family equations",
+      "reason": "No preserved artifact currently defines a ToE-native matter sector or derives field content from the candidate family.",
+      "route_id": "toe_native_matter_sector",
+      "route_kind": "toe_native_matter_sector",
+      "route_result": "TOE_NATIVE_MATTER_SECTOR_NOT_YET_DEFINED",
+      "selection_licensed": false,
+      "selection_status": "not_yet_defined",
+      "toe_derivation_claimed": false
+    },
+    {
+      "candidate_form": "no matter sector selected",
+      "reason": "The packet does not leave QFT-GR without a calculation path; it selects a provisional scalar sandbox while preserving the ToE-native blocker.",
+      "route_id": "no_matter_sector_selected",
+      "route_kind": "strict_no_selection_route",
+      "selection_licensed": false,
+      "selection_status": "not_selected_because_provisional_test_sector_selected",
+      "toe_derivation_claimed": false
+    }
+  ],
+  "schema_id": "QFT_GR_TOE_MATTER_SECTOR_CANDIDATE_SELECTION_PACKET_20260616_v0",
+  "selected_action_generated_source_subclass_id": "stress_energy_candidate_generated_by_provisional_real_scalar_lagrangian_v0",
+  "selected_field_content": "real scalar field phi",
+  "selected_field_domain": "phi in Gamma(M x R) with regularity deferred to action retry",
+  "selected_known_matter_model": "real_scalar_field_klein_gordon_type",
+  "selected_lagrangian_density": "L_m(g, phi, nabla phi) = -1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)",
+  "selected_matter_action_form": "S_m[g, phi] = integral_M (-1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)) dVol_g",
+  "selected_next_target": "prepare_qft_gr_action_derivability_retry_with_provisional_matter_sector",
+  "selected_next_target_kind": "qft_gr_action_derivability_retry_with_provisional_matter_sector_preparation",
+  "selected_provisional_matter_sector_id": "provisional_real_scalar_field_test_sector_v0",
+  "selected_sector_contract": {
+    "arbitrary_distributional_source_action_derived_claimed": false,
+    "field_content": "real scalar field phi",
+    "field_domain": "phi in Gamma(M x R) with regularity deferred to action retry",
+    "known_model": "real_scalar_field_klein_gordon_type",
+    "known_model_imported": true,
+    "lagrangian_density": "L_m(g, phi, nabla phi) = -1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)",
+    "matter_action_form": "S_m[g, phi] = integral_M (-1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)) dVol_g",
+    "matter_sector_id": "provisional_real_scalar_field_test_sector_v0",
+    "selection_scope": "provisional_calculation_sandbox_only",
+    "source_subclass_id": "stress_energy_candidate_generated_by_provisional_real_scalar_lagrangian_v0",
+    "source_subclass_scope": "action-generated scalar stress-energy candidate only; not the original arbitrary distributional source",
+    "standard_model_derivation_claimed": false,
+    "toe_derivation_claimed": false,
+    "variational_target": "delta S_m[g, phi](h) = -1/2 <T_phi, h>"
+  },
+  "selected_variational_target": "delta S_m[g, phi](h) = -1/2 <T_phi, h>",
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "test_space": "C_c^infty(M, Sym^2 T*M)",
+  "toe_matter_model_derived": false,
+  "toe_matter_sector_selected": false,
+  "toe_native_matter_sector_defined": false,
+  "toe_native_matter_sector_result": "TOE_NATIVE_MATTER_SECTOR_NOT_YET_DEFINED",
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "bounded_focused_validation_only": true,
+    "checkpoint_type": "qft_gr_toe_matter_sector_candidate_selection_packet",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "release_index_path_not_freshly_lean_validated": true
+  },
+  "weak_conservation_claimed": false,
+  "weak_variational_obligation": "delta S_m[g](h) = -1/2 T(h)"
+}
