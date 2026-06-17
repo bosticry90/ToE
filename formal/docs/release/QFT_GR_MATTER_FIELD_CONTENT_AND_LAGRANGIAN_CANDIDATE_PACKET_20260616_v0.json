@@ -1,0 +1,258 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptable_result_outcomes": [
+    "MATTER_FIELD_CONTENT_AND_LAGRANGIAN_SELECTED_ACTION_DERIVABILITY_RETRY_AUTHORIZED",
+    "ACTION_GENERATED_SOURCE_SUBCLASS_SELECTED_ARBITRARY_DISTRIBUTIONAL_SOURCE_RETIRED",
+    "MATTER_FIELD_AND_LAGRANGIAN_OPTIONS_RECORDED_NO_SELECTION_LICENSED",
+    "FIELD_CONTENT_AND_LAGRANGIAN_BLOCKED_BY_MISSING_TOE_MATTER_MODEL"
+  ],
+  "acceptance_criteria": {
+    "arbitrary_distributional_T_not_promoted_to_action_derived": true,
+    "consumes_expected_matter_action_packet": true,
+    "next_target_is_matter_sector_candidate_selection": true,
+    "no_option_selected_without_toe_matter_model": true,
+    "non_promotion_boundary_preserved": true,
+    "prior_matter_action_blocked_by_field_content_and_lagrangian": true,
+    "required_options_enumerated": true,
+    "scalar_route_not_selected_as_shortcut": true,
+    "toe_matter_model_required": true
+  },
+  "accepted": true,
+  "action_derivability_claimed": false,
+  "action_derivability_retry_authorized": false,
+  "action_generated_source_subclass_id": null,
+  "action_generated_source_subclass_selected": false,
+  "arbitrary_distributional_source_action_derived_claimed": false,
+  "arbitrary_distributional_source_retired": false,
+  "artifact_id": "QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0",
+  "authorized_by_matter_action_artifact_id": "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0",
+  "authorized_by_matter_action_commit": "26140cec965d1edf619ddb36a3cd39a7a0648b4b",
+  "candidate_id": "distributional_symmetric_tensor_candidate_v0",
+  "captured_at_utc": "2026-06-16T00:00:00Z",
+  "conservation_claimed": false,
+  "consumed_target": "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+  "dirac_spinor_action_form": "S_m[g, psi] = integral_M psi_bar (i gamma^mu nabla_mu - m) psi dVol_g",
+  "downstream_progression": [
+    {
+      "decision": "FIELD_CONTENT_AND_LAGRANGIAN_BLOCKED_BY_MISSING_TOE_MATTER_MODEL",
+      "reason": "No ToE matter-sector model licenses a field/Lagrangian selection.",
+      "stage": "field_content_and_lagrangian_candidate",
+      "status": "BLOCKED"
+    },
+    {
+      "decision": "not_selected",
+      "reason": "Selecting a scalar/gauge/spinor/effective route would narrow the candidate class and requires matter-sector authorization.",
+      "stage": "action_generated_source_subclass",
+      "status": "NOT_SELECTED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "No field content or Lagrangian has been selected.",
+      "stage": "action_derivability_retry",
+      "status": "NOT_AUTHORIZED"
+    },
+    {
+      "decision": "prepare_qft_gr_toe_matter_sector_candidate_selection_packet",
+      "reason": "A ToE matter-sector candidate is required before matter action construction can be retried.",
+      "stage": "toe_matter_sector_candidate_selection",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Weak conservation remains downstream of an action/diffeomorphism structure.",
+      "stage": "weak_conservation",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Bianchi compatibility is downstream of conservation.",
+      "stage": "bianchi_compatibility",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Semiclassical coupling is downstream of source admissibility checks.",
+      "stage": "semiclassical_source_admissibility",
+      "status": "NOT_REACHED"
+    }
+  ],
+  "effective_qft_action_form": "W[g] with <T_{mu nu}> = -2 / sqrt(-g) * delta W / delta g^{mu nu}",
+  "empirical_validation_claimed": false,
+  "field_content_lagrangian_result": "FIELD_CONTENT_AND_LAGRANGIAN_BLOCKED_BY_MISSING_TOE_MATTER_MODEL",
+  "functional_contract": "T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear",
+  "gauge_field_action_form": "S_m[g, A] = integral_M (-1/4 F_{mu nu} F^{mu nu} + coupling_terms) dVol_g",
+  "generic_matter_action_form": "S_m[g, psi] = integral_M L_m(g, psi, nabla psi, ...) dVol_g",
+  "lagrangian_density_selected": false,
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRMatterFieldContentAndLagrangianCandidatePacket.lean",
+  "master_action_promoted": false,
+  "mathematical_statement": "A pairable distributional tensor T does not determine matter degrees of freedom or a Lagrangian. Any selected scalar, gauge, spinor, generic local, or effective action route would define a narrower action-generated source subclass, not prove that the arbitrary distributional candidate is action-derived. Because no ToE matter-sector candidate is licensed here, no field content or Lagrangian is selected.",
+  "matter_action_admissibility_claimed": false,
+  "matter_action_functional_claimed": false,
+  "matter_field_content_selected": false,
+  "matter_model_options": [
+    {
+      "blocked_by": [
+        "toe_matter_field_bundle_not_selected",
+        "lagrangian_density_not_supplied",
+        "field_variation_policy_not_supplied",
+        "metric_variation_rule_not_instantiated"
+      ],
+      "candidate_form": "S_m[g, psi] = integral_M L_m(g, psi, nabla psi, ...) dVol_g",
+      "option_id": "generic_matter_field_bundle_and_local_lagrangian_density",
+      "reason": "A generic matter action would require a selected field bundle, local Lagrangian density, and field/metric variation policy. Those data are not licensed by the current QFT-GR chain.",
+      "selection_licensed": false,
+      "selection_status": "recorded_not_licensed",
+      "would_define_action_generated_source_subclass": true,
+      "would_prove_arbitrary_distributional_T_action_derived": false
+    },
+    {
+      "blocked_by": [
+        "scalar_field_not_selected_by_toe_matter_sector",
+        "potential_or_mass_term_not_selected",
+        "regularity_and_solution_class_not_selected",
+        "stress_energy_matching_to_distributional_T_not_supplied"
+      ],
+      "candidate_form": "S_m[g, phi] = integral_M (-1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)) dVol_g",
+      "option_id": "real_scalar_klein_gordon_type_route",
+      "reason": "The scalar route is the simplest concrete option, but choosing it would replace the arbitrary pairable distributional source with a narrower action-generated subclass. No ToE matter-sector artifact currently licenses that selection.",
+      "selection_licensed": false,
+      "selection_status": "candidate_option_recorded_not_selected",
+      "would_define_action_generated_source_subclass": true,
+      "would_prove_arbitrary_distributional_T_action_derived": false
+    },
+    {
+      "blocked_by": [
+        "gauge_bundle_not_selected",
+        "field_strength_domain_not_selected",
+        "coupling_current_or_charge_sector_not_selected",
+        "stress_energy_matching_to_distributional_T_not_supplied"
+      ],
+      "candidate_form": "S_m[g, A] = integral_M (-1/4 F_{mu nu} F^{mu nu} + coupling_terms) dVol_g",
+      "option_id": "gauge_field_maxwell_type_route",
+      "reason": "Existing EM/QFT surfaces do not by themselves select a QFT-GR matter sector or prove the current arbitrary distributional candidate is generated by a Maxwell-type action.",
+      "selection_licensed": false,
+      "selection_status": "candidate_option_recorded_not_selected",
+      "would_define_action_generated_source_subclass": true,
+      "would_prove_arbitrary_distributional_T_action_derived": false
+    },
+    {
+      "blocked_by": [
+        "spin_structure_not_selected",
+        "spinor_bundle_not_selected",
+        "gamma_matrix_convention_not_selected",
+        "spin_connection_and_domain_not_selected"
+      ],
+      "candidate_form": "S_m[g, psi] = integral_M psi_bar (i gamma^mu nabla_mu - m) psi dVol_g",
+      "option_id": "dirac_spinor_field_route",
+      "reason": "The spinor route requires additional geometric and field-domain data before it can serve as a QFT-GR matter action candidate.",
+      "selection_licensed": false,
+      "selection_status": "candidate_option_recorded_not_selected",
+      "would_define_action_generated_source_subclass": true,
+      "would_prove_arbitrary_distributional_T_action_derived": false
+    },
+    {
+      "blocked_by": [
+        "qft_state_or_state_family_not_selected",
+        "renormalization_scheme_not_selected",
+        "effective_action_domain_not_selected",
+        "anomaly_and_conservation_policy_not_selected"
+      ],
+      "candidate_form": "W[g] with <T_{mu nu}> = -2 / sqrt(-g) * delta W / delta g^{mu nu}",
+      "option_id": "effective_qft_action_route",
+      "reason": "An effective/QFT action route would require state, renormalization, domain, and anomaly data that remain outside the licensed packet scope.",
+      "selection_licensed": false,
+      "selection_status": "recorded_not_licensed",
+      "would_define_action_generated_source_subclass": true,
+      "would_prove_arbitrary_distributional_T_action_derived": false
+    },
+    {
+      "blocked_by": [
+        "toe_matter_model_missing"
+      ],
+      "candidate_form": "no ToE matter model selected",
+      "option_id": "no_field_content_selected",
+      "reason": "No field content and Lagrangian can be selected without a ToE matter-sector candidate or an explicit authorization to narrow to an action-generated source subclass.",
+      "selection_licensed": false,
+      "selection_status": "blocked_outcome_recorded",
+      "would_define_action_generated_source_subclass": false,
+      "would_prove_arbitrary_distributional_T_action_derived": false
+    }
+  ],
+  "matter_model_selected": false,
+  "missing_matter_model_data": [
+    "toe_matter_sector_candidate",
+    "matter_degrees_of_freedom",
+    "lagrangian_density",
+    "variational_rule",
+    "action_generated_source_subclass_contract"
+  ],
+  "non_claim_boundary": "This packet evaluates generic matter, real scalar, gauge-field, Dirac/spinor, effective QFT action, and no-field-content routes. It records that no matter field content or Lagrangian is selected because no ToE matter-sector model is licensed. It does not claim that arbitrary distributional T is action-derived, does not select an action-generated source subclass, and does not claim action derivability, source admissibility, weak conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
+  "outcome_id": "QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_PREPARED_WITH_FIELD_CONTENT_AND_LAGRANGIAN_BLOCKED_BY_MISSING_TOE_MATTER_MODEL_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY",
+  "packet_classification": "qft_gr_matter_field_content_and_lagrangian_candidate_packet_records_missing_toe_matter_model_for_action_generated_source_subclass",
+  "packet_id": "QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_v0",
+  "prepared": true,
+  "prior_matter_action_result": "MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN",
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "real_scalar_action_form": "S_m[g, phi] = integral_M (-1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)) dVol_g",
+  "required_matter_model_data": [
+    {
+      "field_id": "toe_matter_sector_candidate",
+      "required": "selected matter sector or explicit action-generated subclass route",
+      "status": "missing"
+    },
+    {
+      "field_id": "matter_degrees_of_freedom",
+      "required": "fields psi, phi, A, spinor, or effective QFT state family",
+      "status": "missing"
+    },
+    {
+      "field_id": "lagrangian_density",
+      "required": "L_m(g, psi, nabla psi, ...) or effective action W[g]",
+      "status": "missing"
+    },
+    {
+      "field_id": "variational_rule",
+      "required": "delta S_m[g](h) = -1/2 T(h)",
+      "status": "missing"
+    },
+    {
+      "field_id": "action_generated_source_subclass_contract",
+      "required": "stress_energy_candidate_generated_by_selected_matter_lagrangian_v0",
+      "status": "not_selected"
+    },
+    {
+      "field_id": "stress_energy_matching_obligation",
+      "required": "show selected action variation yields the source tested in weak pairing",
+      "status": "not_reached"
+    },
+    {
+      "field_id": "diffeomorphism_or_covariance_structure",
+      "required": "needed before downstream conservation/Bianchi checks",
+      "status": "not_reached"
+    }
+  ],
+  "schema_id": "QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0",
+  "selected_next_target": "prepare_qft_gr_toe_matter_sector_candidate_selection_packet",
+  "selected_next_target_kind": "qft_gr_toe_matter_sector_candidate_selection_packet_preparation",
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "test_space": "C_c^infty(M, Sym^2 T*M)",
+  "toe_matter_sector_selection_required": true,
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "bounded_focused_validation_only": true,
+    "checkpoint_type": "qft_gr_matter_field_content_and_lagrangian_candidate_packet",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "release_index_path_not_freshly_lean_validated": true
+  },
+  "weak_conservation_claimed": false,
+  "weak_variational_obligation": "delta S_m[g](h) = -1/2 T(h)"
+}

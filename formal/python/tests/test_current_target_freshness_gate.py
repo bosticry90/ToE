@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet"
+    "prepare_qft_gr_toe_matter_sector_candidate_selection_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,7 +1329,7 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_matter_action_functional_candidate_packet"
+    "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1422,7 +1422,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet"
+    "prepare_qft_gr_toe_matter_sector_candidate_selection_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1439,7 +1439,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMatterActionFunctionalCandidatePacket.lean"
+    / "QFTGRMatterFieldContentAndLagrangianCandidatePacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2949,101 +2949,114 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    field_content_active_workstream = active_workstream(payload)
-    assert field_content_active_workstream["workstream_id"] == ACTIVE_LANE
+    matter_sector_active_workstream = active_workstream(payload)
+    assert matter_sector_active_workstream["workstream_id"] == ACTIVE_LANE
     assert (
-        field_content_active_workstream["authorized_next_strict_target"]
+        matter_sector_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert field_content_active_workstream["authorized_target"] == LIVE_TARGET
-    assert field_content_active_workstream["authorization_evidence"] == str(
+    assert matter_sector_active_workstream["authorized_target"] == LIVE_TARGET
+    assert matter_sector_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert field_content_active_workstream["report"] == (
+    assert matter_sector_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_20260616_v0.json"
+        "QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_20260616_v0.json"
     )
     assert (
-        field_content_active_workstream["outcome_id"]
-        == "QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_"
-        "MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_"
-        "LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY"
+        matter_sector_active_workstream["outcome_id"]
+        == "QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_"
+        "PREPARED_WITH_FIELD_CONTENT_AND_LAGRANGIAN_BLOCKED_BY_MISSING_TOE_"
+        "MATTER_MODEL_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY"
     )
     assert (
-        field_content_active_workstream["claim_level"]
-        == "Level 3 QFT-GR matter field content and Lagrangian candidate packet preparation authorized"
+        matter_sector_active_workstream["claim_level"]
+        == "Level 3 QFT-GR ToE matter-sector candidate selection packet preparation authorized"
     )
     assert (
-        field_content_active_workstream["claim_ceiling"]
-        == "matter field content and Lagrangian candidate preparation only no matter action functional no action derivability no source admissibility no qft_gr closure"
+        matter_sector_active_workstream["claim_ceiling"]
+        == "matter-sector candidate selection only no field content selected no Lagrangian selected no action derivability no source admissibility no qft_gr closure"
     )
-    assert "field content psi" in field_content_active_workstream[
+    assert "matter-sector candidate" in matter_sector_active_workstream[
         "non_claim_boundary"
     ]
     assert (
-        field_content_active_workstream["consumed_target"]
+        matter_sector_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        field_content_active_workstream["matter_action_result"]
+        matter_sector_active_workstream["field_content_lagrangian_result"]
+        == "FIELD_CONTENT_AND_LAGRANGIAN_BLOCKED_BY_MISSING_TOE_MATTER_MODEL"
+    )
+    assert (
+        matter_sector_active_workstream["prior_matter_action_result"]
         == "MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN"
     )
     assert (
-        field_content_active_workstream["weak_pairing_constructed"]
-        == "yes"
-    )
-    assert (
-        field_content_active_workstream["weak_pairing_scope"]
-        == "well_defined_as_distributional_pairing_under_selected_functional_contract"
-    )
-    assert (
-        field_content_active_workstream["candidate_id"]
+        matter_sector_active_workstream["candidate_id"]
         == "distributional_symmetric_tensor_candidate_v0"
     )
     assert (
-        field_content_active_workstream["test_domain"]
+        matter_sector_active_workstream["test_domain"]
         == "C_c^infty(M, Sym^2 T*M)"
     )
     assert (
-        field_content_active_workstream["functional_contract"]
+        matter_sector_active_workstream["functional_contract"]
         == "T in D'(M, Sym^2 TM), equivalently T : C_c^infty(M, Sym^2 T*M) -> R continuous linear"
     )
     assert (
-        field_content_active_workstream["weak_variational_obligation"]
+        matter_sector_active_workstream["weak_variational_obligation"]
         == "delta S_m[g](h) = -1/2 T(h)"
     )
     assert (
-        field_content_active_workstream["matter_action_functional_candidate_selected"]
+        matter_sector_active_workstream["matter_model_selected"]
         == "no"
     )
     assert (
-        field_content_active_workstream["matter_field_content_supplied"]
+        matter_sector_active_workstream["matter_field_content_selected"]
         == "no"
     )
     assert (
-        field_content_active_workstream["lagrangian_density_supplied"]
+        matter_sector_active_workstream["lagrangian_density_selected"]
         == "no"
     )
     assert (
-        field_content_active_workstream["action_derivability_retry_authorized"]
+        matter_sector_active_workstream["action_generated_source_subclass_selected"]
         == "no"
     )
     assert (
-        field_content_active_workstream["field_content_and_lagrangian_packet_required"]
+        matter_sector_active_workstream[
+            "arbitrary_distributional_source_action_derived_claimed"
+        ]
+        == "no"
+    )
+    assert (
+        matter_sector_active_workstream["toe_matter_sector_selection_required"]
         == "yes"
     )
     assert (
-        field_content_active_workstream["true_matter_action_route_selected"] == "no"
+        matter_sector_active_workstream["action_derivability_retry_authorized"]
+        == "no"
     )
     assert (
-        field_content_active_workstream["effective_qft_action_route_selected"] == "no"
+        matter_sector_active_workstream["generic_matter_route_selected"] == "no"
     )
     assert (
-        field_content_active_workstream["formal_variational_primitive_selected"] == "no"
+        matter_sector_active_workstream["real_scalar_route_selected"] == "no"
+    )
+    assert (
+        matter_sector_active_workstream["gauge_field_route_selected"] == "no"
+    )
+    assert (
+        matter_sector_active_workstream["dirac_spinor_route_selected"] == "no"
+    )
+    assert (
+        matter_sector_active_workstream["effective_qft_route_selected"] == "no"
     )
     for key in [
         "source_admissibility_claimed",
         "action_derivability_claimed",
+        "matter_action_functional_claimed",
         "matter_action_admissibility_claimed",
         "conservation_claimed",
         "weak_conservation_claimed",
@@ -3055,7 +3068,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "public_submission_authorized",
         "master_action_promoted",
     ]:
-        assert field_content_active_workstream[key] == "no", key
+        assert matter_sector_active_workstream[key] == "no", key
 
     post_retest_refinement_conservation_retest_refinement_refinement_packet_workstream = _workstream(
         payload,
@@ -8559,7 +8572,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        field_content_active_workstream[
+        matter_sector_active_workstream[
             "authorized_next_strict_target"
         ],
     }

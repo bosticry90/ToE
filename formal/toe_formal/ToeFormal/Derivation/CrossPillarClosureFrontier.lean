@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR matter action functional candidate packet prepared with outcome QFT_GR_MATTER_ACTION_FUNCTIONAL_CANDIDATE_PACKET_PREPARED_WITH_MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY. The packet evaluates true matter-action, effective/QFT action, and formal variational primitive routes, records MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN because no field content psi or Lagrangian density L_m is supplied, selects prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet, and preserves no source admissibility, no action derivability claim, no conservation proof, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion"
+        "QFT-GR matter field content and Lagrangian candidate packet prepared with outcome QFT_GR_MATTER_FIELD_CONTENT_AND_LAGRANGIAN_CANDIDATE_PACKET_PREPARED_WITH_FIELD_CONTENT_AND_LAGRANGIAN_BLOCKED_BY_MISSING_TOE_MATTER_MODEL_AND_NO_ACTION_DERIVABILITY_OR_SOURCE_ADMISSIBILITY. The packet evaluates generic matter, real scalar, gauge-field, Dirac/spinor, effective QFT action, and no-field-content routes, records FIELD_CONTENT_AND_LAGRANGIAN_BLOCKED_BY_MISSING_TOE_MATTER_MODEL because no ToE matter-sector model is licensed, selects prepare_qft_gr_toe_matter_sector_candidate_selection_packet, and preserves no arbitrary-distributional-source action-derivability claim, no action-generated source subclass selection, no source admissibility, no conservation proof, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet"
+        "prepare_qft_gr_toe_matter_sector_candidate_selection_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The math-first QFT-GR chain now prepares the matter action functional candidate packet and records MATTER_ACTION_FUNCTIONAL_BLOCKED_BY_MISSING_FIELD_CONTENT_AND_LAGRANGIAN. The chain preserves the restricted distributional weak pairing for distributional_symmetric_tensor_candidate_v0 and sets prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet as the only active next target while preserving no source-admissibility claim, action-derivability claim, conservation claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
+        "The math-first QFT-GR chain now prepares the matter field content and Lagrangian candidate packet and records FIELD_CONTENT_AND_LAGRANGIAN_BLOCKED_BY_MISSING_TOE_MATTER_MODEL. The chain preserves the restricted distributional weak pairing for distributional_symmetric_tensor_candidate_v0 and sets prepare_qft_gr_toe_matter_sector_candidate_selection_packet as the only active next target while preserving no source-admissibility claim, action-derivability claim, conservation claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet"
+        "prepare_qft_gr_toe_matter_sector_candidate_selection_packet"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the matter-action functional packet. -/
+/-- Previous live target consumed by the matter field/Lagrangian packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_matter_action_functional_candidate_packet"
-
-/-- Current live target after the matter-action functional packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet"
+
+/-- Current live target after the matter field/Lagrangian packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_toe_matter_sector_candidate_selection_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_qft_gr_matter_field_content_and_lagrangian_candidate_packet"
+    "prepare_qft_gr_toe_matter_sector_candidate_selection_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
