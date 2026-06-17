@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
+    "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,7 +1329,7 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source"
+    "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1422,7 +1422,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
+    "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1439,7 +1439,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRWeakConservationTestForProvisionalScalarStressEnergySource.lean"
+    / "QFTGRBianchiCompatibilityTestForProvisionalScalarStressEnergySource.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2961,24 +2961,24 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert scalar_conservation_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_"
+        "QFT_GR_BIANCHI_COMPATIBILITY_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_"
         "SOURCE_20260617_v0.json"
     )
     assert (
         scalar_conservation_active_workstream["outcome_id"]
-        == "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_"
-        "PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_"
+        == "QFT_GR_BIANCHI_COMPATIBILITY_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_"
+        "SOURCE_PREPARED_WITH_BIANCHI_COMPATIBILITY_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_"
         "SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
     )
     assert (
         scalar_conservation_active_workstream["claim_level"]
-        == "Level 3 QFT-GR Bianchi-compatibility test for provisional scalar stress-energy source authorized"
+        == "Level 3 QFT-GR source-admissibility review for provisional scalar source authorized"
     )
     assert (
         scalar_conservation_active_workstream["claim_ceiling"]
-        == "Bianchi compatibility test preparation only no source admissibility no semiclassical coupling no qft_gr closure"
+        == "source admissibility review preparation only no arbitrary distributional-source admissibility no semiclassical coupling no qft_gr closure"
     )
-    assert "Bianchi compatibility" in scalar_conservation_active_workstream[
+    assert "source admissibility" in scalar_conservation_active_workstream[
         "non_claim_boundary"
     ]
     assert (
@@ -3063,9 +3063,43 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "If box_g phi - V'(phi) = 0, then nabla_mu T^{mu nu} = 0"
     )
     assert (
+        scalar_conservation_active_workstream["bianchi_compatibility_result"]
+        == "BIANCHI_COMPATIBILITY_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_QFT_GR_CLOSURE"
+    )
+    assert (
+        scalar_conservation_active_workstream["bianchi_compatibility_constructed"]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream["Bianchi_compatibility_claimed"]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream["Bianchi_compatibility_claimed_scope"]
+        == "conditional on scalar EOM, Levi-Civita connection, metric compatibility, constant coupling, and provisional scalar source only"
+    )
+    assert (
+        scalar_conservation_active_workstream["contracted_bianchi_identity"]
+        == "nabla_mu G^{mu nu} = 0"
+    )
+    assert (
+        scalar_conservation_active_workstream["metric_compatibility_identity"]
+        == "nabla_mu g^{mu nu} = 0"
+    )
+    assert (
         scalar_conservation_active_workstream[
-            "Bianchi_compatibility_test_authorized"
+            "einstein_source_equation_with_lambda_form"
         ]
+        == "G^{mu nu} + Lambda g^{mu nu} = 8 pi G_N T^{mu nu}"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "source_side_conservation_requirement"
+        ]
+        == "nabla_mu T^{mu nu} = 0"
+    )
+    assert (
+        scalar_conservation_active_workstream["source_admissibility_review_authorized"]
         == "yes"
     )
     for key in [
@@ -3079,7 +3113,6 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "off_shell_conservation_claimed",
         "arbitrary_phi_conserved_claimed",
         "unconditional_conservation_claimed",
-        "Bianchi_compatibility_claimed",
         "Bianchi_compatibility_completed",
         "semiclassical_coupling_claimed",
         "semiclassical_einstein_equation_derived",

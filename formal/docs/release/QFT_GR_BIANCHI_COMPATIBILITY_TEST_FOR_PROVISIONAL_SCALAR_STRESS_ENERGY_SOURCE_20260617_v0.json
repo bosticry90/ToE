@@ -1,0 +1,173 @@
+{
+  "Bianchi_compatibility_claimed": true,
+  "Bianchi_compatibility_claimed_scope": "conditional on scalar EOM, Levi-Civita connection, metric compatibility, constant coupling, and provisional scalar source only",
+  "acceptance_criteria": {
+    "constant_coupling_scope_stated": true,
+    "consumes_expected_weak_conservation_packet": true,
+    "contracted_bianchi_identity_stated": true,
+    "metric_compatibility_stated": true,
+    "qft_gr_closure_not_claimed": true,
+    "scalar_eom_condition_carried": true,
+    "semiclassical_equation_not_derived": true,
+    "source_admissibility_not_claimed": true,
+    "weak_conservation_available_on_shell": true
+  },
+  "accepted": true,
+  "accepted_outcomes_considered": [
+    "BIANCHI_COMPATIBILITY_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_QFT_GR_CLOSURE",
+    "BIANCHI_COMPATIBILITY_BLOCKED_BY_MISSING_CONNECTION_OR_METRIC_COMPATIBILITY_SCOPE",
+    "BIANCHI_COMPATIBILITY_BLOCKED_BY_NONCONSTANT_COUPLING_OR_LAMBDA_SCOPE",
+    "BIANCHI_COMPATIBILITY_BLOCKED_BY_MISSING_ON_SHELL_SOURCE_CONSERVATION"
+  ],
+  "action_derivability_constructed": true,
+  "action_derivability_result": "ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION",
+  "arbitrary_distributional_source_admissibility_claimed": false,
+  "arbitrary_distributional_source_conservation_claimed": false,
+  "arbitrary_distributional_source_promoted": false,
+  "artifact_id": "QFT_GR_BIANCHI_COMPATIBILITY_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0",
+  "authorized_by_weak_conservation_artifact_id": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0",
+  "authorized_by_weak_conservation_classification": "qft_gr_weak_conservation_test_for_provisional_scalar_stress_energy_source_constructs_on_shell_conservation_nonpromotionally",
+  "authorized_by_weak_conservation_outcome": "QFT_GR_WEAK_CONSERVATION_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+  "bianchi_compatibility_constructed": true,
+  "bianchi_compatibility_constructed_scope": "provisional scalar source on shell under imposed Einstein-form compatibility equation only",
+  "bianchi_compatibility_result": "BIANCHI_COMPATIBILITY_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_QFT_GR_CLOSURE",
+  "bianchi_compatibility_statement": "Under scalar EOM, Levi-Civita metric compatibility, and constant G_N and Lambda, the provisional scalar source is compatible with the contracted Bianchi identity.",
+  "captured_at_utc": "2026-06-17T00:00:00Z",
+  "connection_scope": "Levi-Civita connection only: torsion-free and metric-compatible on the provisional smooth calculation domain.",
+  "constant_gravitational_coupling_required": true,
+  "constant_lambda_required_if_lambda_variant_used": true,
+  "consumed_target": "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+  "contracted_bianchi_identity": "nabla_mu G^{mu nu} = 0",
+  "coupling_constant_scope": "G_N is constant, and Lambda is constant when the cosmological-constant variant is used.",
+  "critical_gate_fail_conditions": [
+    "ToE_native_matter_derivation",
+    "arbitrary_distributional_source_admissibility",
+    "semiclassical_Einstein_equation_derivation",
+    "QFT_GR_seam_closure",
+    "empirical_validation",
+    "public_readiness",
+    "master_action_promotion"
+  ],
+  "derivation_steps": [
+    {
+      "claim": "Einstein-form equation stated only as compatibility test surface",
+      "mathematical_content": "G^{mu nu} = 8 pi G_N T^{mu nu} or G^{mu nu} + Lambda g^{mu nu} = 8 pi G_N T^{mu nu}",
+      "step_id": "state_einstein_source_test_equation"
+    },
+    {
+      "claim": "contracted Bianchi identity fixed",
+      "mathematical_content": "nabla_mu G^{mu nu} = 0",
+      "step_id": "state_bianchi_identity"
+    },
+    {
+      "claim": "cosmological-constant term has zero divergence under metric compatibility",
+      "mathematical_content": "nabla_mu g^{mu nu} = 0",
+      "step_id": "state_metric_compatibility"
+    },
+    {
+      "claim": "constant coupling reduces Bianchi compatibility to source conservation",
+      "mathematical_content": "0 = nabla_mu(G^{mu nu} + Lambda g^{mu nu}) = 8 pi G_N nabla_mu T^{mu nu}",
+      "step_id": "take_divergence_of_source_equation"
+    },
+    {
+      "claim": "prior scalar weak-conservation residual is reused",
+      "mathematical_content": "nabla_mu T^{mu nu} = (box_g phi - V'(phi)) nabla^nu phi",
+      "step_id": "insert_scalar_weak_conservation"
+    },
+    {
+      "claim": "Bianchi compatibility constructed only on shell for the provisional scalar source",
+      "mathematical_content": "Under scalar EOM, Levi-Civita metric compatibility, and constant G_N and Lambda, the provisional scalar source is compatible with the contracted Bianchi identity.",
+      "step_id": "conclude_on_shell_bianchi_compatibility"
+    }
+  ],
+  "divergence_identity": "nabla_mu T^{mu nu} = (box_g phi - V'(phi)) nabla^nu phi",
+  "downstream_progression": [
+    {
+      "decision": "BIANCHI_COMPATIBILITY_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_QFT_GR_CLOSURE",
+      "reason": "The contracted Bianchi identity and metric compatibility require source-side conservation, supplied conditionally by the scalar EOM.",
+      "stage": "bianchi_compatibility",
+      "status": "CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL"
+    },
+    {
+      "decision": "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source",
+      "reason": "Bianchi compatibility is not full source admissibility.",
+      "stage": "source_admissibility",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "The Einstein-form source equation is used only as a compatibility test surface and is not derived as a semiclassical Einstein equation.",
+      "stage": "semiclassical_coupling",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_claimed",
+      "reason": "The result remains inside the provisional scalar sandbox.",
+      "stage": "qft_gr_closure",
+      "status": "NOT_CLAIMED"
+    }
+  ],
+  "einstein_equation_imposed_for_compatibility_test": true,
+  "einstein_source_equation_form": "G^{mu nu} = 8 pi G_N T^{mu nu}",
+  "einstein_source_equation_with_lambda_form": "G^{mu nu} + Lambda g^{mu nu} = 8 pi G_N T^{mu nu}",
+  "empirical_validation_claimed": false,
+  "field_content": "real scalar field phi",
+  "lagrangian_density": "L_m(g, phi, nabla phi) = -1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)",
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRBianchiCompatibilityTestForProvisionalScalarStressEnergySource.lean",
+  "levi_civita_connection_required": true,
+  "master_action_promoted": false,
+  "mathematical_statement": "For the imposed compatibility-test equation G^{mu nu} + Lambda g^{mu nu} = 8 pi G_N T^{mu nu}, nabla_mu G^{mu nu} = 0 and nabla_mu g^{mu nu} = 0 imply nabla_mu T^{mu nu} = 0 when G_N and Lambda are constant. The prior scalar result nabla_mu T^{mu nu} = (box_g phi - V'(phi)) nabla^nu phi makes this condition hold on shell under box_g phi - V'(phi) = 0. This constructs Bianchi compatibility only for the provisional scalar source and does not derive source admissibility or semiclassical coupling.",
+  "metric_compatibility_identity": "nabla_mu g^{mu nu} = 0",
+  "metric_compatibility_required": true,
+  "non_claim_boundary": "This packet constructs Bianchi compatibility only for the imported provisional scalar source on shell under Levi-Civita metric compatibility and constant coupling assumptions. It does not claim ToE-native matter derivation, arbitrary distributional-source admissibility, source admissibility, semiclassical Einstein equation derivation, QFT-GR closure, empirical validation, public readiness, public submission, or master-action promotion.",
+  "on_shell_conservation_statement": "If box_g phi - V'(phi) = 0, then nabla_mu T^{mu nu} = 0",
+  "on_shell_required": true,
+  "outcome_id": "QFT_GR_BIANCHI_COMPATIBILITY_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_BIANCHI_COMPATIBILITY_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+  "packet_classification": "qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source_constructs_on_shell_compatibility_nonpromotionally",
+  "packet_id": "QFT_GR_BIANCHI_COMPATIBILITY_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_v0",
+  "prepared": true,
+  "provisional_source_scope": "provisional real-scalar stress-energy source only; no arbitrary distributional source is admitted",
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "regularity_scope": "smooth scalar field and smooth metric with Levi-Civita connection on the provisional calculation domain; distributional regularity is not promoted",
+  "scalar_action": "S_m[g, phi] = integral_M (-1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)) dVol_g",
+  "scalar_equation_of_motion": "box_g phi - V'(phi) = 0",
+  "schema_id": "QFT_GR_BIANCHI_COMPATIBILITY_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0",
+  "selected_action_generated_source_subclass_id": "stress_energy_candidate_generated_by_provisional_real_scalar_lagrangian_v0",
+  "selected_known_matter_model": "real_scalar_field_klein_gordon_type",
+  "selected_next_target": "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source",
+  "selected_next_target_kind": "qft_gr_source_admissibility_review_for_provisional_scalar_source_preparation",
+  "selected_provisional_matter_sector_id": "provisional_real_scalar_field_test_sector_v0",
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_nonderivation_boundary": "The Einstein-form source equation is used only as a compatibility test surface and is not derived as a semiclassical Einstein equation.",
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "source_side_conservation_requirement": "nabla_mu T^{mu nu} = 0",
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_contravariant_expression": "T^{mu nu} = g^{mu alpha} g^{nu beta} T_{alpha beta}",
+  "stress_energy_covariant_expression": "T_{mu nu} = partial_mu phi partial_nu phi - 1/2 g_{mu nu} g^{alpha beta} partial_alpha phi partial_beta phi - g_{mu nu} V(phi)",
+  "toe_matter_model_derived": false,
+  "toe_native_matter_derivation_claimed": false,
+  "toe_native_matter_sector_defined": false,
+  "toe_native_matter_sector_result": "TOE_NATIVE_MATTER_SECTOR_NOT_YET_DEFINED",
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "bounded_focused_validation_only": true,
+    "checkpoint_type": "qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "release_index_path_not_freshly_lean_validated": true
+  },
+  "weak_conservation_claimed": true,
+  "weak_conservation_claimed_scope": "conditional on scalar equation of motion only",
+  "weak_conservation_constructed": true,
+  "weak_conservation_result": "WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY"
+}
