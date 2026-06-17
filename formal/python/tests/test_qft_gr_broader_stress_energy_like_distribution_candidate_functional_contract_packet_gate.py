@@ -266,7 +266,6 @@ def test_candidate_functional_contract_packet_lean_and_surface_mirrors() -> None
         REQUIRED_FUNCTIONAL_CONTRACT,
         PAIRING_FORMULA,
         "QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacket",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
         "review_qft_gr_broader_stress_energy_like_distribution_candidate_"
         "functional_contract_packet_result",
         "no weak-pairing retry",

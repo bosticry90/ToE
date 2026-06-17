@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR broader stress-energy-like distribution candidate functional-contract packet prepared with outcome QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY. The packet states D = C_c^infty(M, Sym^2 T*M), the required distributional contract T : C_c^infty(M, Sym^2 T*M) -> R, and the smooth/local-integrability pairing <T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g, but records that no contract option is selected because regularity class, tensor-versus-density status, index placement, metric dependence, linearity, continuity, and coordinate/covariance behavior remain unspecified. It authorizes only review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result and preserves no weak-pairing retry, no source admissibility, no action derivability, no conservation proof, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion"
+        "QFT-GR broader stress-energy-like distribution candidate functional-contract packet result review accepted with outcome QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_AUTHORIZES_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_ONLY. The review accepts CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN as a negative mathematical result, confirms D = C_c^infty(M, Sym^2 T*M), T : C_c^infty(M, Sym^2 T*M) -> R, and <T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g are only contract criteria/options, confirms no contract option was selected, and authorizes only prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet to decide the candidate regular type/domain among smooth tensor, locally integrable tensor, tensor-valued distribution, tensor density, operator-valued distribution expectation candidate, or undefined/insufficiently specified. It preserves no weak-pairing retry, no source admissibility, no action derivability, no conservation proof, no Bianchi compatibility, no semiclassical Einstein equation, no QFT-GR closure, no empirical validation, no public submission, and no master-action promotion"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result"
+        "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The math-first QFT-GR chain now prepares the broader stress-energy-like distribution candidate functional-contract packet and records CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN. The chain records multiple unselected contract options and selects review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result as the only active next target, while preserving no weak-pairing retry, source-admissibility claim, conservation claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
+        "The math-first QFT-GR chain now accepts the broader stress-energy-like distribution candidate functional-contract packet result review as a blocked unspecified regularity/domain diagnosis and selects prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet as the only active next target. The chain records that weak pairing cannot be retried until the candidate source regular type and domain contract are selected, blocked, or rejected, while preserving no weak-pairing retry, source-admissibility claim, conservation claim, Bianchi compatibility claim, semiclassical Einstein equation claim, QFT-GR closure, public-submission claim, scientific-validation claim, or master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result"
+        "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the candidate functional-contract packet. -/
+/-- Previous live target consumed by the candidate functional-contract result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
-
-/-- Current live target after the candidate functional-contract packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result"
+
+/-- Current live target after the candidate functional-contract result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result"
+    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

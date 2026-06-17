@@ -1158,8 +1158,8 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_qft_gr_broader_stress_energy_like_distribution_candidate_"
-    "functional_contract_packet_result"
+    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_"
+    "type_and_domain_contract_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1330,8 +1330,8 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_"
-    "functional_contract_packet"
+    "review_qft_gr_broader_stress_energy_like_distribution_candidate_"
+    "functional_contract_packet_result"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1424,8 +1424,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_qft_gr_broader_stress_energy_like_distribution_candidate_"
-    "functional_contract_packet_result"
+    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_"
+    "type_and_domain_contract_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1442,7 +1442,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacket.lean"
+    / "QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2952,76 +2952,74 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    functional_contract_review_active_workstream = active_workstream(payload)
-    assert functional_contract_review_active_workstream["workstream_id"] == ACTIVE_LANE
+    regular_type_domain_active_workstream = active_workstream(payload)
+    assert regular_type_domain_active_workstream["workstream_id"] == ACTIVE_LANE
     assert (
-        functional_contract_review_active_workstream["authorized_next_strict_target"]
+        regular_type_domain_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert functional_contract_review_active_workstream["authorized_target"] == LIVE_TARGET
-    assert functional_contract_review_active_workstream["authorization_evidence"] == str(
+    assert regular_type_domain_active_workstream["authorized_target"] == LIVE_TARGET
+    assert regular_type_domain_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert functional_contract_review_active_workstream["report"] == (
+    assert regular_type_domain_active_workstream["report"] == (
         "formal/docs/release/"
         "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_"
-        "FUNCTIONAL_CONTRACT_PACKET_20260616_v0.json"
+        "FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_20260616_v0.json"
     )
     assert (
-        functional_contract_review_active_workstream["outcome_id"]
+        regular_type_domain_active_workstream["outcome_id"]
         == "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_"
-        "FUNCTIONAL_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_FUNCTIONAL_CONTRACT_"
-        "BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_NO_WEAK_PAIRING_RETRY_"
-        "OR_SOURCE_ADMISSIBILITY"
+        "FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_UNSPECIFIED_"
+        "REGULARITY_AND_DOMAIN_AND_AUTHORIZES_REGULAR_TYPE_AND_DOMAIN_CONTRACT_"
+        "PACKET_ONLY"
     )
     assert (
-        functional_contract_review_active_workstream["claim_level"]
-        == "Level 3 QFT-GR candidate functional-contract packet result review pending"
+        regular_type_domain_active_workstream["claim_level"]
+        == "Level 3 QFT-GR candidate regular type and domain contract packet preparation authorized"
     )
     assert (
-        functional_contract_review_active_workstream["claim_ceiling"]
-        == "candidate functional-contract packet result review only no weak-pairing retry no source admissibility no qft_gr closure"
+        regular_type_domain_active_workstream["claim_ceiling"]
+        == "regular type and domain contract packet preparation only no weak-pairing retry no source admissibility no qft_gr closure"
     )
-    assert "no weak-pairing retry" in functional_contract_review_active_workstream[
+    assert "weak-pairing retry" in regular_type_domain_active_workstream[
         "non_claim_boundary"
     ]
     assert (
-        functional_contract_review_active_workstream["consumed_target"]
+        regular_type_domain_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        functional_contract_review_active_workstream["candidate_source_id"]
+        regular_type_domain_active_workstream["candidate_source_id"]
         == "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0"
     )
     assert (
-        functional_contract_review_active_workstream["contract_result"]
+        regular_type_domain_active_workstream["contract_result"]
         == "CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN"
     )
     assert (
-        functional_contract_review_active_workstream["required_functional_contract"]
+        regular_type_domain_active_workstream["required_functional_contract"]
         == "T : C_c^infty(M, Sym^2 T*M) -> R"
     )
     assert (
-        functional_contract_review_active_workstream[
+        regular_type_domain_active_workstream[
             "smooth_or_locally_integrable_pairing_formula"
         ]
         == "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g"
     )
-    for key in [
-        "candidate_functional_contract_constructed",
-        "candidate_functional_contract_rejected",
-        "contract_option_selected",
-        "weak_pairing_completed",
+    for option in [
+        "smooth_symmetric_tensor_field",
+        "locally_integrable_tensor_field",
+        "tensor_valued_distribution",
+        "tensor_density",
+        "operator_valued_distribution_expectation_candidate",
+        "undefined_or_insufficiently_specified",
     ]:
-        assert functional_contract_review_active_workstream[key] == "no", key
-    assert (
-        functional_contract_review_active_workstream[
-            "multiple_candidate_functional_contract_options_recorded"
+        assert option in regular_type_domain_active_workstream[
+            "regular_type_options_to_assess"
         ]
-        == "yes"
-    )
     assert (
-        functional_contract_review_active_workstream["weak_pairing_retry_authorized"]
+        regular_type_domain_active_workstream["weak_pairing_retry_authorized"]
         == "no"
     )
     for key in [
@@ -3036,7 +3034,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "public_submission_authorized",
         "master_action_promoted",
     ]:
-        assert functional_contract_review_active_workstream[key] == "no", key
+        assert regular_type_domain_active_workstream[key] == "no", key
 
     post_retest_refinement_conservation_retest_refinement_refinement_packet_workstream = _workstream(
         payload,
@@ -8540,7 +8538,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        functional_contract_review_active_workstream[
+        regular_type_domain_active_workstream[
             "authorized_next_strict_target"
         ],
     }

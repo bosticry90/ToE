@@ -137,7 +137,8 @@
     "select_next_global_toe_work_target_from_mathematical_obligation_index",
     "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
     "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
-    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
+    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+    "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result"
   ],
   "consumed_targets": [
     {
@@ -311,7 +312,8 @@
     "select_next_global_toe_work_target_from_mathematical_obligation_index",
     "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
     "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
-    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
+    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+    "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result"
   ],
   "controls": [
     {
@@ -673,9 +675,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
+    "active_lane": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
     "candidate_live_next_targets": [
-      "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result"
+      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet"
     ],
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
@@ -854,7 +856,8 @@
       "select_next_global_toe_work_target_from_mathematical_obligation_index",
       "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
       "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
-      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
+      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+      "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result"
     ],
     "consumed_targets": [
       {
@@ -1964,7 +1967,7 @@
         "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT_AND_AUTHORIZES_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_ONLY"
       }
     ],
-    "focused_gate": "formal/python/tests/test_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_gate.py",
+    "focused_gate": "formal/python/tests/test_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result_review_gate.py",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -1972,11 +1975,11 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacket.lean",
+    "live_next_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacketResultReview.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_outcome": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY",
-    "live_next_target_report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_20260616_v0.json",
+    "live_next_target_outcome": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_AUTHORIZES_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_ONLY",
+    "live_next_target_report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_20260616_v0.json",
     "next_strict_target_coverage": {
       "analyze_qft_gr_minimal_working_model_candidate_only": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelCandidateAnalysis.lean",
@@ -2936,10 +2939,16 @@
         "token": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY"
       },
       "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result": {
-        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacket.lean",
-        "report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_20260616_v0.json",
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacketResultReview.lean",
+        "report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_20260616_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_AUTHORIZES_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_ONLY"
+      },
+      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacketResultReview.lean",
+        "report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_20260616_v0.json",
         "status": "active_live_next_target",
-        "token": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY"
+        "token": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_AUTHORIZES_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_ONLY"
       }
     },
     "paused_lanes": [
@@ -3138,10 +3147,11 @@
       "select_next_global_toe_work_target_from_mathematical_obligation_index",
       "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
       "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
-      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet"
+      "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+      "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
+    "previous_live_next_target": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
@@ -3689,7 +3699,7 @@
       "to": "post_v01_alpha_manifest_enrollment_bounded_attack_selection"
     }
   ],
-  "focused_gate": "formal/python/tests/test_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_gate.py",
+  "focused_gate": "formal/python/tests/test_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result_review_gate.py",
   "fresh_delta_kinds": [
     "new_theorem",
     "counterexample",
@@ -4066,7 +4076,8 @@
     "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
     "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
     "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
-    "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result"
+    "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
+    "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -5005,6 +5016,22 @@
       "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacket.lean",
       "target": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
       "token": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY"
+    },
+    {
+      "kind": "qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result_review",
+      "report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_20260616_v0.json",
+      "status": "completed_consumed_live_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacketResultReview.lean",
+      "target": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
+      "token": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_AUTHORIZES_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_ONLY"
+    },
+    {
+      "kind": "qft_gr_candidate_regular_type_and_domain_contract_packet_preparation",
+      "report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_20260616_v0.json",
+      "status": "active",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacketResultReview.lean",
+      "target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+      "token": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_AUTHORIZES_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_ONLY"
     }
   ],
   "token_family_coverage": [
@@ -5175,7 +5202,11 @@
     "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_20260616_v0.json",
     "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacket.lean",
     "formal/python/tools/qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_report.py",
-    "formal/python/tests/test_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_gate.py"
+    "formal/python/tests/test_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_gate.py",
+    "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_20260616_v0.json",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacketResultReview.lean",
+    "formal/python/tools/qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result_review_report.py",
+    "formal/python/tests/test_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result_review_gate.py"
   ],
   "workstreams": [
     {
@@ -50105,19 +50136,19 @@
     },
     {
       "workstream_id": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
-      "status": "active",
+      "status": "paused",
       "active_lane": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
       "authorized_next_strict_target": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
       "authorized_target": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
       "consumed_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet",
-      "outcome_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY",
-      "report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_20260616_v0.json",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacket.lean",
-      "selected_next_target": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
-      "selected_next_target_kind": "qft_gr_candidate_functional_contract_packet_result_review",
-      "claim_level": "Level 3 QFT-GR candidate functional-contract packet result review pending",
-      "claim_ceiling": "candidate functional-contract packet result review only no weak-pairing retry no source admissibility no qft_gr closure",
-      "non_claim_boundary": "The pending review may accept or reject the blocked functional-contract packet encoding only; it preserves no weak-pairing retry and cannot authorize weak-pairing retry, source admissibility, action derivability, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
+      "outcome_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_AUTHORIZES_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_ONLY",
+      "report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacketResultReview.lean",
+      "selected_next_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+      "selected_next_target_kind": "qft_gr_candidate_regular_type_and_domain_contract_packet_preparation",
+      "claim_level": "Level 3 QFT-GR candidate functional-contract packet result review accepted",
+      "claim_ceiling": "accepted blocked regularity-domain result review only no weak-pairing retry no source admissibility no qft_gr closure",
+      "non_claim_boundary": "This result review accepts the candidate functional-contract packet as blocked by unspecified regularity and domain data and authorizes only a regular type and domain contract packet; no weak-pairing retry, source admissibility, action derivability, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion is claimed.",
       "candidate_source_id": "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0",
       "contract_result": "CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN",
       "required_functional_contract": "T : C_c^infty(M, Sym^2 T*M) -> R",
@@ -50127,6 +50158,44 @@
       "contract_option_selected": "no",
       "multiple_candidate_functional_contract_options_recorded": "yes",
       "weak_pairing_completed": "no",
+      "weak_pairing_retry_authorized": "no",
+      "source_admissibility_claimed": "no",
+      "action_derivability_claimed": "no",
+      "conservation_claimed": "no",
+      "Bianchi_compatibility_claimed": "no",
+      "semiclassical_einstein_equation_derived": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "empirical_validation_claimed": "no",
+      "public_submission_authorized": "no",
+      "master_action_promoted": "no",
+      "reviewed_artifact_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_20260616_v0",
+      "reviewed_commit": "352ffab153c8146ce1e66094631838791e126021",
+      "reviewed_live_target_before_review": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
+      "result_review_accepted": "yes",
+      "result_review_pending": "no",
+      "regular_type_options_to_assess": "smooth_symmetric_tensor_field,locally_integrable_tensor_field,tensor_valued_distribution,tensor_density,operator_valued_distribution_expectation_candidate,undefined_or_insufficiently_specified"
+    },
+    {
+      "workstream_id": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+      "status": "active",
+      "active_lane": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+      "authorized_next_strict_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+      "authorized_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+      "consumed_target": "review_qft_gr_broader_stress_energy_like_distribution_candidate_functional_contract_packet_result",
+      "outcome_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_ACCEPTS_BLOCKED_UNSPECIFIED_REGULARITY_AND_DOMAIN_AND_AUTHORIZES_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_ONLY",
+      "report": "formal/docs/release/QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateFunctionalContractPacketResultReview.lean",
+      "selected_next_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+      "selected_next_target_kind": "qft_gr_candidate_regular_type_and_domain_contract_packet_preparation",
+      "claim_level": "Level 3 QFT-GR candidate regular type and domain contract packet preparation authorized",
+      "claim_ceiling": "regular type and domain contract packet preparation only no weak-pairing retry no source admissibility no qft_gr closure",
+      "non_claim_boundary": "The regular type and domain packet may classify or block the candidate mathematical type only; it cannot authorize weak-pairing retry unless a regularity and domain contract is selected, and it cannot claim source admissibility, action derivability, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
+      "candidate_source_id": "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0",
+      "contract_result": "CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN",
+      "required_functional_contract": "T : C_c^infty(M, Sym^2 T*M) -> R",
+      "smooth_or_locally_integrable_pairing_formula": "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g",
+      "regular_type_options_to_assess": "smooth_symmetric_tensor_field,locally_integrable_tensor_field,tensor_valued_distribution,tensor_density,operator_valued_distribution_expectation_candidate,undefined_or_insufficiently_specified",
       "weak_pairing_retry_authorized": "no",
       "source_admissibility_claimed": "no",
       "action_derivability_claimed": "no",
