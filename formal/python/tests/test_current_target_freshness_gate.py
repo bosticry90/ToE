@@ -1157,7 +1157,10 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_qft_gr_source_map_or_countermodel_scope_decision_packet"
+ACTIVE_LANE = (
+    "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_"
+    "admissible_source"
+)
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1327,8 +1330,7 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_"
-    "for_weak_conservation_obstruction_result"
+    "prepare_qft_gr_source_map_or_countermodel_scope_decision_packet"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1421,7 +1423,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_source_map_or_countermodel_scope_decision_packet"
+    "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_"
+    "admissible_source"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1438,7 +1441,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRMinimalModelCountermodelAttemptAfterScopeRefinementForWeakConservationObstructionResultReview.lean"
+    / "QFTGRSourceMapOrCountermodelScopeDecisionPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2966,22 +2969,20 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert countermodel_scope_refinement_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_AFTER_SCOPE_REFINEMENT_FOR_"
-        "WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_20260616_v0.json"
+        "QFT_GR_SOURCE_MAP_OR_COUNTERMODEL_SCOPE_DECISION_PACKET_20260616_v0.json"
     )
     assert (
         countermodel_scope_refinement_active_workstream["outcome_id"]
-        == "QFT_GR_MINIMAL_MODEL_COUNTERMODEL_ATTEMPT_AFTER_SCOPE_REFINEMENT_"
-        "FOR_WEAK_CONSERVATION_OBSTRUCTION_RESULT_REVIEW_ACCEPTS_INCONCLUSIVE_"
-        "REATTEMPT_AND_AUTHORIZES_SOURCE_MAP_OR_SCOPE_DECISION_PACKET_ONLY"
+        == "QFT_GR_SOURCE_MAP_OR_COUNTERMODEL_SCOPE_DECISION_PACKET_PREPARED_"
+        "WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
     )
     assert (
         countermodel_scope_refinement_active_workstream["claim_level"]
-        == "Level 3 inconclusive countermodel reattempt result review accepted decision packet pending"
+        == "Level 3 source-map-or-scope decision packet prepared source-map ladder packet pending"
     )
     assert (
         countermodel_scope_refinement_active_workstream["claim_ceiling"]
-        == "decision packet only no source map ladder execution no countermodel scope refinement execution no countermodel result no no-go result no not-found claim no source admissibility or qft_gr closure"
+        == "source-map ladder packet preparation only no source admissibility no countermodel scope refinement no countermodel result no no-go result no not-found claim no qft_gr closure"
     )
     assert (
         "no source admissibility"
@@ -3026,6 +3027,42 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert (
         countermodel_scope_refinement_active_workstream[
             "source_map_or_scope_decision_packet_prepared"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "source_map_ladder_branch_selected"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "source_map_ladder_selected_by_default"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "source_map_ladder_packet_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "source_map_ladder_packet_prepared"
+        ]
+        == "no"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "countermodel_scope_refinement_branch_selected"
+        ]
+        == "no"
+    )
+    assert (
+        countermodel_scope_refinement_active_workstream[
+            "exactly_one_narrow_scope_condition_identified"
         ]
         == "no"
     )
@@ -3140,7 +3177,6 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "no_go_result_claimed",
         "not_found_result_claimed",
         "inconclusive_result_claimed",
-        "source_map_ladder_packet_authorized",
         "further_scope_refinement_authorized",
         "source_admissibility_claimed",
         "conservation_witness_constructed",

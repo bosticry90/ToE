@@ -339,10 +339,6 @@ def test_countermodel_attempt_after_scope_refinement_result_review_lean_and_surf
         "sourceMapOrScopeDecisionPacketAuthorized",
         "sourceMapLadderDefaultUnlessSingleScopeCondition",
         "onlyOneNarrowScopeRefinementCycleAllowed",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "prepare_qft_gr_source_map_or_countermodel_scope_decision_packet",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "review_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction_result",
         "no source admissibility",
         "no countermodel result",
         "no no-go result",
