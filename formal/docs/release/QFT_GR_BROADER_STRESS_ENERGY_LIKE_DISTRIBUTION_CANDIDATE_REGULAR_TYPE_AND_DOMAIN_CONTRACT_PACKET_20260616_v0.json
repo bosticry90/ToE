@@ -1,0 +1,279 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptable_result_outcomes": [
+    "CANDIDATE_REGULAR_TYPE_AND_DOMAIN_SELECTED_WEAK_PAIRING_RETRY_AUTHORIZED",
+    "CANDIDATE_REGULARITY_AND_DOMAIN_OPTIONS_RECORDED_NO_SELECTION_LICENSED",
+    "CANDIDATE_DEFINITION_INSUFFICIENT_FOR_REGULARITY_OR_DOMAIN_SELECTION",
+    "CANDIDATE_REQUIRES_REVISION_BEFORE_FUNCTIONAL_CONTRACT_SELECTION"
+  ],
+  "acceptance_criteria": {
+    "candidate_definition_missing_data_recorded": true,
+    "consumes_expected_result_review": true,
+    "density_route_distinguishes_volume_structure": true,
+    "distributional_route_contract_stated": true,
+    "domain_options_enumerated": true,
+    "insufficient_specification_selected_as_diagnostic": true,
+    "no_regular_contract_route_selected": true,
+    "non_promotion_boundary_preserved": true,
+    "regularity_options_enumerated": true,
+    "revision_or_replacement_packet_selected": true,
+    "smooth_and_l1loc_route_contract_stated": true,
+    "weak_pairing_retry_not_authorized": true
+  },
+  "accepted": true,
+  "action_derivability_claimed": false,
+  "artifact_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_20260616_v0",
+  "authorized_by_result_review_artifact_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_RESULT_REVIEW_20260616_v0",
+  "authorized_by_result_review_commit": "86e3fb1f736c1ff86d9d287728a530312c2ed689",
+  "candidate_definition_status": "insufficiently_specified_for_regular_type_or_domain_selection",
+  "candidate_revision_or_replacement_required": true,
+  "candidate_source_id": "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0",
+  "captured_at_utc": "2026-06-16T00:00:00Z",
+  "conservation_claimed": false,
+  "consumed_target": "prepare_qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet",
+  "density_contract": "tensor-density T pairs directly with compactly supported test tensors",
+  "distributional_contract": "T in D'(M, Sym^2 TM), equivalently T : D -> R continuous linear",
+  "domain_contract_selected": false,
+  "domain_option_assessments": [
+    {
+      "blocked_by": [
+        "regular_representative_not_supplied",
+        "index_placement_not_supplied",
+        "metric_volume_contract_not_supplied"
+      ],
+      "contract_form": "T^{mu nu} in L^1_loc(M, Sym^2 TM)",
+      "domain_option_id": "smooth_or_l1loc_tensor_domain",
+      "pairing_formula": "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g",
+      "selection_status": "not_selected",
+      "test_space": "C_c^infty(M, Sym^2 T*M)",
+      "uses_dVol_g": true
+    },
+    {
+      "blocked_by": [
+        "linear_map_not_supplied",
+        "continuity_bound_not_supplied",
+        "distribution_order_not_supplied"
+      ],
+      "contract_form": "T in D'(M, Sym^2 TM), equivalently T : D -> R continuous linear",
+      "domain_option_id": "distributional_tensor_domain",
+      "pairing_formula": "T : C_c^infty(M, Sym^2 T*M) -> R",
+      "selection_status": "not_selected",
+      "test_space": "C_c^infty(M, Sym^2 T*M)",
+      "uses_dVol_g": false
+    },
+    {
+      "blocked_by": [
+        "density_weight_not_supplied",
+        "density_transformation_law_not_supplied",
+        "direct_pairing_contract_not_supplied"
+      ],
+      "contract_form": "tensor-density T pairs directly with compactly supported test tensors",
+      "domain_option_id": "tensor_density_domain",
+      "pairing_formula": "direct tensor-density pairing, not tensor times dVol_g",
+      "selection_status": "not_selected",
+      "test_space": "C_c^infty(M, Sym^2 T*M)",
+      "uses_dVol_g": false
+    },
+    {
+      "blocked_by": [
+        "operator_domain_not_supplied",
+        "state_domain_not_supplied",
+        "renormalized_expectation_map_not_supplied"
+      ],
+      "contract_form": "renormalized expectation candidate from an operator-valued distribution",
+      "domain_option_id": "operator_expectation_domain",
+      "pairing_formula": "not available until a c-number distribution is produced",
+      "selection_status": "not_selected",
+      "test_space": "C_c^infty(M, Sym^2 T*M)",
+      "uses_dVol_g": false
+    }
+  ],
+  "downstream_progression": [
+    {
+      "decision": "CANDIDATE_DEFINITION_INSUFFICIENT_FOR_REGULARITY_OR_DOMAIN_SELECTION",
+      "reason": "No regular type or domain contract is licensed by the candidate definition.",
+      "stage": "regular_type_and_domain_selection",
+      "status": "blocked"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "No regular type or domain contract was selected.",
+      "stage": "weak_pairing_retry",
+      "status": "NOT_AUTHORIZED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Weak-pairing retry is not authorized.",
+      "stage": "action_derivability",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Action derivability is not reached.",
+      "stage": "weak_conservation",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Weak conservation is not reached.",
+      "stage": "bianchi_compatibility",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "reason": "Bianchi compatibility is not reached.",
+      "stage": "semiclassical_source_admissibility",
+      "status": "NOT_REACHED"
+    }
+  ],
+  "empirical_validation_claimed": false,
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRBroaderStressEnergyLikeDistributionCandidateRegularTypeAndDomainContractPacket.lean",
+  "master_action_promoted": false,
+  "missing_candidate_definition_data": [
+    "smooth_regular_representative_not_supplied",
+    "L1_loc_regular_representative_not_supplied",
+    "tensor_valued_distribution_map_not_supplied",
+    "tensor_density_status_not_supplied",
+    "operator_valued_distribution_expectation_contract_not_supplied",
+    "index_placement_not_supplied",
+    "metric_dependence_not_supplied",
+    "dVol_g_or_density_pairing_contract_not_supplied",
+    "linearity_on_test_space_not_supplied",
+    "continuity_for_test_space_topology_not_supplied",
+    "coordinate_or_covariance_behavior_not_supplied"
+  ],
+  "missing_candidate_definition_data_count": 11,
+  "non_claim_boundary": "This packet evaluates smooth tensor, locally integrable tensor, tensor-valued distribution, tensor-density, and operator-expectation candidate routes and records that none is licensed by the current candidate definition. It selects only candidate definition revision or replacement; it does not authorize weak-pairing retry, source admissibility, action derivability, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, public submission, or master-action promotion.",
+  "operator_expectation_contract": "renormalized expectation candidate from an operator-valued distribution",
+  "outcome_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_PREPARED_WITH_CANDIDATE_DEFINITION_INSUFFICIENT_FOR_REGULARITY_OR_DOMAIN_SELECTION_AND_NO_WEAK_PAIRING_RETRY_OR_SOURCE_ADMISSIBILITY",
+  "packet_classification": "qft_gr_broader_stress_energy_like_distribution_candidate_regular_type_and_domain_contract_packet_records_candidate_definition_insufficient_for_regularity_or_domain_selection",
+  "packet_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_v0",
+  "prepared": true,
+  "prior_contract_result": "CANDIDATE_FUNCTIONAL_CONTRACT_BLOCKED_BY_UNSPECIFIED_REGULARITY_AND_DOMAIN",
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "regular_type_domain_result": "CANDIDATE_DEFINITION_INSUFFICIENT_FOR_REGULARITY_OR_DOMAIN_SELECTION",
+  "regular_type_selected": false,
+  "regularity_option_assessments": [
+    {
+      "candidate_type": "smooth symmetric tensor field",
+      "domain_contract": "T in C^infty(M, Sym^2 TM)",
+      "hierarchy_order": 1,
+      "missing_license_fields": [
+        "smooth_regular_representative",
+        "symmetric_contravariant_tensor_type",
+        "index_placement",
+        "metric_dependence"
+      ],
+      "option_id": "smooth_symmetric_tensor_field",
+      "pairing_route": "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g",
+      "selection_licensed": false,
+      "selection_status": "not_selected",
+      "unselected_reason": "The candidate definition does not supply smoothness, a contravariant symmetric tensor type, index placement, or metric dependence."
+    },
+    {
+      "candidate_type": "locally integrable tensor field",
+      "domain_contract": "T^{mu nu} in L^1_loc(M, Sym^2 TM)",
+      "hierarchy_order": 2,
+      "missing_license_fields": [
+        "L1_loc_regular_representative",
+        "tensor_character",
+        "index_placement",
+        "dVol_g_or_measure_contract"
+      ],
+      "option_id": "locally_integrable_tensor_field",
+      "pairing_route": "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g",
+      "selection_licensed": false,
+      "selection_status": "not_selected",
+      "unselected_reason": "The candidate definition does not supply local integrability on compact sets, tensor character, index placement, or a volume-measure contract."
+    },
+    {
+      "candidate_type": "tensor-valued distribution",
+      "domain_contract": "T in D'(M, Sym^2 TM), equivalently T : D -> R continuous linear",
+      "hierarchy_order": 3,
+      "missing_license_fields": [
+        "linear_map_T_from_D_to_R",
+        "continuity_for_C_c_infty_topology",
+        "distribution_order_or_bound",
+        "coordinate_or_covariance_behavior"
+      ],
+      "option_id": "tensor_valued_distribution",
+      "pairing_route": "T : C_c^infty(M, Sym^2 T*M) -> R",
+      "selection_licensed": false,
+      "selection_status": "not_selected",
+      "unselected_reason": "The candidate definition does not supply a continuous linear map on D, a distribution order/bound, or covariance behavior."
+    },
+    {
+      "candidate_type": "tensor density",
+      "domain_contract": "tensor-density T pairs directly with compactly supported test tensors",
+      "hierarchy_order": 4,
+      "missing_license_fields": [
+        "tensor_density_status",
+        "density_weight",
+        "coordinate_transformation_law",
+        "direct_density_pairing_contract"
+      ],
+      "option_id": "tensor_density",
+      "pairing_route": "density pairing without an additional dVol_g factor",
+      "selection_licensed": false,
+      "selection_status": "not_selected",
+      "unselected_reason": "The candidate definition does not supply density weight, density-valued tensor status, or coordinate transformation law."
+    },
+    {
+      "candidate_type": "operator-valued distribution expectation candidate",
+      "domain_contract": "renormalized expectation candidate from an operator-valued distribution",
+      "hierarchy_order": 5,
+      "missing_license_fields": [
+        "operator_domain",
+        "state_domain",
+        "renormalized_expectation_map",
+        "c_number_distribution_output_contract"
+      ],
+      "option_id": "operator_valued_distribution_expectation_candidate",
+      "pairing_route": "state plus renormalization map would have to produce a c-number tensor distribution before weak-pairing retry",
+      "selection_licensed": false,
+      "selection_status": "not_selected",
+      "unselected_reason": "The candidate definition does not supply operator domain, state domain, renormalized expectation map, or a c-number distribution output contract."
+    },
+    {
+      "candidate_type": "undefined / insufficiently specified",
+      "domain_contract": "no regular type or domain contract selected",
+      "hierarchy_order": 6,
+      "missing_license_fields": [],
+      "option_id": "undefined_or_insufficiently_specified",
+      "pairing_route": "weak-pairing retry not licensed",
+      "selection_licensed": true,
+      "selection_status": "diagnostic_result",
+      "unselected_reason": ""
+    }
+  ],
+  "required_functional_contract": "T : C_c^infty(M, Sym^2 T*M) -> R",
+  "schema_id": "QFT_GR_BROADER_STRESS_ENERGY_LIKE_DISTRIBUTION_CANDIDATE_REGULAR_TYPE_AND_DOMAIN_CONTRACT_PACKET_20260616_v0",
+  "selected_contract_route": null,
+  "selected_domain_contract": null,
+  "selected_next_target": "prepare_qft_gr_candidate_definition_revision_or_replacement_packet",
+  "selected_next_target_kind": "qft_gr_candidate_definition_revision_or_replacement_packet_preparation",
+  "selected_regular_type": null,
+  "semiclassical_einstein_equation_derived": false,
+  "smooth_or_locally_integrable_contract": "T^{mu nu} in L^1_loc(M, Sym^2 TM)",
+  "smooth_or_locally_integrable_pairing_formula": "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g",
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "test_space": "C_c^infty(M, Sym^2 T*M)",
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "bounded_focused_validation_only": true,
+    "checkpoint_type": "qft_gr_candidate_regular_type_and_domain_contract_packet",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "release_index_path_not_freshly_lean_validated": true
+  },
+  "weak_pairing_completed": false,
+  "weak_pairing_retry_authorized": false,
+  "weak_pairing_retry_target": null
+}
