@@ -130,7 +130,12 @@
     "execute_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction",
     "review_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction_result",
     "prepare_qft_gr_source_map_or_countermodel_scope_decision_packet",
-    "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source"
+    "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source",
+    "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
+    "prepare_minimal_global_toe_mathematical_obligation_index",
+    "review_minimal_global_toe_mathematical_obligation_index_result",
+    "select_next_global_toe_work_target_from_mathematical_obligation_index",
+    "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet"
   ],
   "consumed_targets": [
     {
@@ -297,7 +302,12 @@
       "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSource.lean",
       "target": "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source",
       "token": "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
-    }
+    },
+    "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
+    "prepare_minimal_global_toe_mathematical_obligation_index",
+    "review_minimal_global_toe_mathematical_obligation_index_result",
+    "select_next_global_toe_work_target_from_mathematical_obligation_index",
+    "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet"
   ],
   "controls": [
     {
@@ -659,9 +669,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
+    "active_lane": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
     "candidate_live_next_targets": [
-      "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result"
+      "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
     ],
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
@@ -833,7 +843,12 @@
       "execute_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction",
       "review_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction_result",
       "prepare_qft_gr_source_map_or_countermodel_scope_decision_packet",
-      "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source"
+      "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source",
+      "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
+      "prepare_minimal_global_toe_mathematical_obligation_index",
+      "review_minimal_global_toe_mathematical_obligation_index_result",
+      "select_next_global_toe_work_target_from_mathematical_obligation_index",
+      "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet"
     ],
     "consumed_targets": [
       {
@@ -1219,7 +1234,12 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSource.lean",
         "target": "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source",
         "token": "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
-      }
+      },
+      "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
+      "prepare_minimal_global_toe_mathematical_obligation_index",
+      "review_minimal_global_toe_mathematical_obligation_index_result",
+      "select_next_global_toe_work_target_from_mathematical_obligation_index",
+      "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet"
     ],
     "current_target_coverage": [
       {
@@ -1893,9 +1913,44 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSource.lean",
         "target": "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
         "token": "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+      },
+      {
+        "target": "prepare_minimal_global_toe_mathematical_obligation_index",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/MinimalGlobalToeMathematicalObligationIndex.lean",
+        "report": "formal/docs/release/MINIMAL_GLOBAL_TOE_MATHEMATICAL_OBLIGATION_INDEX_20260616_v0.json",
+        "token": "MINIMAL_GLOBAL_TOE_MATHEMATICAL_OBLIGATION_INDEX_PREPARED_WITH_NO_DERIVATION_EXECUTION_OR_THEORY_CLOSURE"
+      },
+      {
+        "target": "review_minimal_global_toe_mathematical_obligation_index_result",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/MinimalGlobalToeMathematicalObligationIndexResultReview.lean",
+        "report": "formal/docs/release/MINIMAL_GLOBAL_TOE_MATHEMATICAL_OBLIGATION_INDEX_RESULT_REVIEW_20260616_v0.json",
+        "token": "MINIMAL_GLOBAL_TOE_MATHEMATICAL_OBLIGATION_INDEX_RESULT_REVIEW_ACCEPTS_CALCULATION_FIRST_INDEX_AND_AUTHORIZES_SELECTION_ONLY"
+      },
+      {
+        "target": "select_next_global_toe_work_target_from_mathematical_obligation_index",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/NextGlobalToeWorkTargetFromMathematicalObligationIndex.lean",
+        "report": "formal/docs/release/NEXT_GLOBAL_TOE_WORK_TARGET_FROM_MATHEMATICAL_OBLIGATION_INDEX_SELECTION_20260616_v0.json",
+        "token": "NEXT_GLOBAL_TOE_WORK_TARGET_FROM_MATHEMATICAL_OBLIGATION_INDEX_SELECTS_QFT_GR_WEAK_PAIRING_CALCULATION_PACKET_WITH_NO_REPAIR_EXECUTION_OR_CLOSURE"
+      },
+      {
+        "target": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean",
+        "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0.json",
+        "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+      },
+      {
+        "target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+        "status": "active_live_next_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean",
+        "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0.json",
+        "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
       }
     ],
-    "focused_gate": "formal/python/tests/test_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_gate.py",
+    "focused_gate": "formal/python/tests/test_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_gate.py",
     "forbidden_promotions": [
       "phase2_authorization",
       "seam_closure",
@@ -1903,11 +1958,11 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSource.lean",
+    "live_next_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_outcome": "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
-    "live_next_target_report": "formal/docs/release/QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_20260616_v0.json",
+    "live_next_target_outcome": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+    "live_next_target_report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0.json",
     "next_strict_target_coverage": {
       "analyze_qft_gr_minimal_working_model_candidate_only": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelCandidateAnalysis.lean",
@@ -2747,10 +2802,10 @@
         "status": "consumed_by_qft_gr_selected_operator_action_assumption_reduction_packet_result_review"
       },
       "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result": {
-        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSource.lean",
-        "report": "formal/docs/release/QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_20260616_v0.json",
-        "status": "active",
-        "token": "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSourceResultReview.lean",
+        "report": "formal/docs/release/QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_RESULT_REVIEW_20260616_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "QFT_GR_SOURCE_MAP_LADDER_PACKET_RESULT_REVIEW_ACCEPTS_CANDIDATE_ONLY_FIRST_BREAK_AND_AUTHORIZES_MINIMAL_GLOBAL_MATHEMATICAL_OBLIGATION_INDEX_ONLY"
       },
       "review_qft_gr_state_admissibility_boundary_assumption_reduction_attempt_result": {
         "evidence": "formal/toe_formal/ToeFormal/Bridges/QFT_GR_StateAdmissibilityBoundaryAssumptionReductionAttemptResultReview.lean",
@@ -2829,6 +2884,36 @@
         "report": "formal/docs/release/QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_20260609_v0.json",
         "status": "current_live_target_authorized_by_mr_assump_004_attempt_result_review",
         "token": "QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_MR_ASSUMP_004_AND_AUTHORIZES_NEXT_MATHEMATICAL_REGULARITY_ROW_SELECTION_ONLY"
+      },
+      "prepare_minimal_global_toe_mathematical_obligation_index": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/MinimalGlobalToeMathematicalObligationIndex.lean",
+        "report": "formal/docs/release/MINIMAL_GLOBAL_TOE_MATHEMATICAL_OBLIGATION_INDEX_20260616_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "MINIMAL_GLOBAL_TOE_MATHEMATICAL_OBLIGATION_INDEX_PREPARED_WITH_NO_DERIVATION_EXECUTION_OR_THEORY_CLOSURE"
+      },
+      "review_minimal_global_toe_mathematical_obligation_index_result": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/MinimalGlobalToeMathematicalObligationIndexResultReview.lean",
+        "report": "formal/docs/release/MINIMAL_GLOBAL_TOE_MATHEMATICAL_OBLIGATION_INDEX_RESULT_REVIEW_20260616_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "MINIMAL_GLOBAL_TOE_MATHEMATICAL_OBLIGATION_INDEX_RESULT_REVIEW_ACCEPTS_CALCULATION_FIRST_INDEX_AND_AUTHORIZES_SELECTION_ONLY"
+      },
+      "select_next_global_toe_work_target_from_mathematical_obligation_index": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/NextGlobalToeWorkTargetFromMathematicalObligationIndex.lean",
+        "report": "formal/docs/release/NEXT_GLOBAL_TOE_WORK_TARGET_FROM_MATHEMATICAL_OBLIGATION_INDEX_SELECTION_20260616_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "NEXT_GLOBAL_TOE_WORK_TARGET_FROM_MATHEMATICAL_OBLIGATION_INDEX_SELECTS_QFT_GR_WEAK_PAIRING_CALCULATION_PACKET_WITH_NO_REPAIR_EXECUTION_OR_CLOSURE"
+      },
+      "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean",
+        "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0.json",
+        "status": "completed_consumed_live_target",
+        "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+      },
+      "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result": {
+        "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean",
+        "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0.json",
+        "status": "active_live_next_target",
+        "token": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
       }
     },
     "paused_lanes": [
@@ -3020,10 +3105,15 @@
       "execute_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction",
       "review_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction_result",
       "prepare_qft_gr_source_map_or_countermodel_scope_decision_packet",
-      "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source"
+      "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source",
+      "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
+      "prepare_minimal_global_toe_mathematical_obligation_index",
+      "review_minimal_global_toe_mathematical_obligation_index_result",
+      "select_next_global_toe_work_target_from_mathematical_obligation_index",
+      "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source",
+    "previous_live_next_target": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
@@ -3120,7 +3210,12 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSource.lean",
         "target": "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
         "token": "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
-      }
+      },
+      "prepare_minimal_global_toe_mathematical_obligation_index",
+      "review_minimal_global_toe_mathematical_obligation_index_result",
+      "select_next_global_toe_work_target_from_mathematical_obligation_index",
+      "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+      "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
     ]
   },
   "cycle_waivers": [],
@@ -3935,7 +4030,12 @@
     "review_qft_gr_minimal_model_countermodel_attempt_after_scope_refinement_for_weak_conservation_obstruction_result",
     "prepare_qft_gr_source_map_or_countermodel_scope_decision_packet",
     "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source",
-    "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result"
+    "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
+    "prepare_minimal_global_toe_mathematical_obligation_index",
+    "review_minimal_global_toe_mathematical_obligation_index_result",
+    "select_next_global_toe_work_target_from_mathematical_obligation_index",
+    "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+    "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -49679,7 +49779,7 @@
       "admissible_source_promotion_authorized": "no",
       "aggregate_lean_health_claimed": "no",
       "aggregate_lean_not_run": "yes",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSource.lean",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSourceResultReview.lean",
       "authorization_report": "formal/docs/release/QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_20260616_v0.json",
       "authorization_tool": "formal/python/tools/qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_report.py",
       "authorized_next_strict_target": "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
@@ -49730,7 +49830,7 @@
       "non_promotion_result": "candidate_source_remains_candidate_only_first_break_at_source_action_test_action_and_weak_pairing_domain_no_source_admissibility_or_qft_gr_closure",
       "not_found_result_claimed": "no",
       "not_found_under_pinned_scope_claimed": "no",
-      "outcome_id": "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+      "outcome_id": "QFT_GR_SOURCE_MAP_LADDER_PACKET_RESULT_REVIEW_ACCEPTS_CANDIDATE_ONLY_FIRST_BREAK_AND_AUTHORIZES_MINIMAL_GLOBAL_MATHEMATICAL_OBLIGATION_INDEX_ONLY",
       "packet_classification": "qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_prepared_with_first_ladder_break_and_no_source_admissibility_or_qft_gr_closure",
       "packet_classification_count": "1",
       "packet_id": "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_v0",
@@ -49751,11 +49851,11 @@
       "release_packet_assembled": "no",
       "renormalization_closure_claimed": "no",
       "renormalized_stress_energy_object_claimed": "no",
-      "report": "formal/docs/release/QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_20260616_v0.json",
+      "report": "formal/docs/release/QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_RESULT_REVIEW_20260616_v0.json",
       "scientific_validation_claimed": "no",
-      "selected_next_target": "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
+      "selected_next_target": "prepare_minimal_global_toe_mathematical_obligation_index",
       "selected_next_target_count": "1",
-      "selected_next_target_kind": "qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result_review",
+      "selected_next_target_kind": "minimal_global_toe_mathematical_obligation_index_preparation",
       "selection_count": "1",
       "semiclassical_einstein_equation_derived": "no",
       "source_admissibility_claimed": "no",
@@ -49767,14 +49867,131 @@
       "source_map_ladder_packet_result_review_required": "yes",
       "source_map_ladder_result_review_pending": "yes",
       "source_map_or_scope_decision_packet_prepared": "yes",
-      "status": "active",
+      "status": "paused",
       "stress_energy_source_admissibility_claimed": "no",
       "strict_toy_assumptions_only": "yes",
       "strict_toy_witness_accepted": "yes",
       "strict_toy_witness_preserved": "yes",
       "supplied_condition_count": "2",
       "unbounded_conservation_proved": "no",
-      "workstream_id": "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result"
+      "workstream_id": "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
+      "result_review_accepted": "yes",
+      "result_review_pending": "no"
+    },
+    {
+      "workstream_id": "prepare_minimal_global_toe_mathematical_obligation_index",
+      "status": "paused",
+      "active_lane": "prepare_minimal_global_toe_mathematical_obligation_index",
+      "authorized_next_strict_target": "review_minimal_global_toe_mathematical_obligation_index_result",
+      "authorized_target": "review_minimal_global_toe_mathematical_obligation_index_result",
+      "consumed_target": "prepare_minimal_global_toe_mathematical_obligation_index",
+      "outcome_id": "MINIMAL_GLOBAL_TOE_MATHEMATICAL_OBLIGATION_INDEX_PREPARED_WITH_NO_DERIVATION_EXECUTION_OR_THEORY_CLOSURE",
+      "report": "formal/docs/release/MINIMAL_GLOBAL_TOE_MATHEMATICAL_OBLIGATION_INDEX_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/MinimalGlobalToeMathematicalObligationIndex.lean",
+      "selected_next_target": "review_minimal_global_toe_mathematical_obligation_index_result",
+      "selected_next_target_kind": "minimal_global_toe_mathematical_obligation_index_result_review",
+      "global_maturity_matrix_deferred": "yes",
+      "central_field": "first_required_calculation",
+      "qft_gr_first_required_calculation": "construct_source_action_test_action_weak_pairing_domain",
+      "source_admissibility_claimed": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "empirical_validation_claimed": "no",
+      "public_submission_authorized": "no",
+      "master_action_promoted": "no"
+    },
+    {
+      "workstream_id": "review_minimal_global_toe_mathematical_obligation_index_result",
+      "status": "paused",
+      "active_lane": "review_minimal_global_toe_mathematical_obligation_index_result",
+      "authorized_next_strict_target": "select_next_global_toe_work_target_from_mathematical_obligation_index",
+      "authorized_target": "select_next_global_toe_work_target_from_mathematical_obligation_index",
+      "consumed_target": "review_minimal_global_toe_mathematical_obligation_index_result",
+      "outcome_id": "MINIMAL_GLOBAL_TOE_MATHEMATICAL_OBLIGATION_INDEX_RESULT_REVIEW_ACCEPTS_CALCULATION_FIRST_INDEX_AND_AUTHORIZES_SELECTION_ONLY",
+      "report": "formal/docs/release/MINIMAL_GLOBAL_TOE_MATHEMATICAL_OBLIGATION_INDEX_RESULT_REVIEW_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/MinimalGlobalToeMathematicalObligationIndexResultReview.lean",
+      "selected_next_target": "select_next_global_toe_work_target_from_mathematical_obligation_index",
+      "selected_next_target_kind": "global_toe_calculation_target_selection",
+      "selection_only_authorized": "yes",
+      "source_admissibility_claimed": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "empirical_validation_claimed": "no",
+      "public_submission_authorized": "no",
+      "master_action_promoted": "no"
+    },
+    {
+      "workstream_id": "select_next_global_toe_work_target_from_mathematical_obligation_index",
+      "status": "paused",
+      "active_lane": "select_next_global_toe_work_target_from_mathematical_obligation_index",
+      "authorized_next_strict_target": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+      "authorized_target": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+      "consumed_target": "select_next_global_toe_work_target_from_mathematical_obligation_index",
+      "outcome_id": "NEXT_GLOBAL_TOE_WORK_TARGET_FROM_MATHEMATICAL_OBLIGATION_INDEX_SELECTS_QFT_GR_WEAK_PAIRING_CALCULATION_PACKET_WITH_NO_REPAIR_EXECUTION_OR_CLOSURE",
+      "report": "formal/docs/release/NEXT_GLOBAL_TOE_WORK_TARGET_FROM_MATHEMATICAL_OBLIGATION_INDEX_SELECTION_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/NextGlobalToeWorkTargetFromMathematicalObligationIndex.lean",
+      "selected_next_target": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+      "selected_next_target_kind": "qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_preparation",
+      "selected_target_executes_repair": "no",
+      "source_admissibility_claimed": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "empirical_validation_claimed": "no",
+      "public_submission_authorized": "no",
+      "master_action_promoted": "no"
+    },
+    {
+      "workstream_id": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+      "status": "paused",
+      "active_lane": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+      "authorized_next_strict_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "authorized_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "consumed_target": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+      "outcome_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+      "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean",
+      "selected_next_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "selected_next_target_kind": "qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result_review",
+      "calculation_result": "WEAK_PAIRING_DOMAIN_CALCULATION_BLOCKED_BY_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT",
+      "well_defined_pairing": "blocked",
+      "downstream_status_when_weak_pairing_blocked": "NOT_REACHED",
+      "source_admissibility_claimed": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "empirical_validation_claimed": "no",
+      "public_submission_authorized": "no",
+      "master_action_promoted": "no"
+    },
+    {
+      "workstream_id": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "status": "active",
+      "active_lane": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "authorized_next_strict_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "authorized_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "consumed_target": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+      "outcome_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+      "report": "formal/docs/release/QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0.json",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean",
+      "selected_next_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+      "selected_next_target_kind": "qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result_review",
+      "claim_level": "Level 3 QFT-GR weak-pairing calculation packet prepared result review pending",
+      "claim_ceiling": "calculation packet result review only no source admissibility no qft_gr closure",
+      "non_claim_boundary": "This calculation packet states the weak-pairing criterion and records that the current candidate is blocked by missing functional/domain data; no source admissibility, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion is claimed.",
+      "first_ladder_break_row_id": "source_action_test_action_and_weak_pairing_domain",
+      "qft_gr_first_required_calculation": "construct_source_action_test_action_weak_pairing_domain",
+      "calculation_result": "WEAK_PAIRING_DOMAIN_CALCULATION_BLOCKED_BY_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT",
+      "well_defined_pairing": "blocked",
+      "source_is_action_derived": "not_reached",
+      "weak_conservation_verified": "not_reached",
+      "Bianchi_compatibility_status": "NOT_REACHED",
+      "semiclassical_source_admissible": "not_reached",
+      "downstream_status_when_weak_pairing_blocked": "NOT_REACHED",
+      "source_admissibility_claimed": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "empirical_validation_claimed": "no",
+      "public_submission_authorized": "no",
+      "master_action_promoted": "no"
     }
   ]
 }

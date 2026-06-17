@@ -1,0 +1,86 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "absent_condition_count": 5,
+  "acceptance_criteria": {
+    "candidate_source_remains_candidate_only": true,
+    "first_break_recorded_exactly": true,
+    "minimal_obligation_index_selected_only": true,
+    "no_later_row_reached": true,
+    "non_promotion_boundary_preserved": true,
+    "review_binds_preserved_packet_artifact": true,
+    "reviewed_live_target_before_review_recorded": true
+  },
+  "accepted": true,
+  "admissibility_ladder_row_count": 12,
+  "blocked_condition_count": 2,
+  "candidate_next_targets": [
+    {
+      "decision": "selected",
+      "reason": "The ladder result is accepted as candidate-only with a first mathematical break, so the next step is a small calculation obligation index.",
+      "target": "prepare_minimal_global_toe_mathematical_obligation_index"
+    },
+    {
+      "decision": "completed_consumed_live_target",
+      "reason": "The ladder result-review target is consumed here.",
+      "target": "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result"
+    },
+    {
+      "decision": "deferred_not_selected",
+      "reason": "A broad maturity matrix is intentionally deferred so the project pivots toward calculation obligations.",
+      "target": "prepare_global_toe_pillar_seam_candidate_maturity_matrix"
+    },
+    {
+      "decision": "not_authorized",
+      "reason": "Repair is not authorized until the obligation index and selection packet choose a calculation target.",
+      "target": "repair_qft_gr_source_action_test_action_and_weak_pairing_domain"
+    }
+  ],
+  "candidate_source_object_id": "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0",
+  "candidate_source_status": "candidate_only_not_source_admissible",
+  "captured_at_utc": "2026-06-16T00:00:00Z",
+  "conservation_claimed": false,
+  "consumed_target": "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
+  "countermodel_hook_count": 5,
+  "countermodel_sensitive_condition_count": 3,
+  "derivable_condition_count": 0,
+  "empirical_validation_claimed": false,
+  "first_ladder_break_row_id": "source_action_test_action_and_weak_pairing_domain",
+  "first_ladder_break_status": "blocked",
+  "global_maturity_matrix_deferred": true,
+  "lean_review_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSourceResultReview.lean",
+  "master_action_promoted": false,
+  "minimal_obligation_index_authorized": true,
+  "non_claim_boundary": "This review accepts the preserved QFT-GR source-map ladder as a candidate-only bounded obstruction result. It authorizes only a minimal mathematical obligation index, not source admissibility, countermodel/no-go/not-found claims, Bianchi compatibility, a semiclassical Einstein equation, QFT-GR closure, public release, or master-action promotion.",
+  "outcome_id": "QFT_GR_SOURCE_MAP_LADDER_PACKET_RESULT_REVIEW_ACCEPTS_CANDIDATE_ONLY_FIRST_BREAK_AND_AUTHORIZES_MINIMAL_GLOBAL_MATHEMATICAL_OBLIGATION_INDEX_ONLY",
+  "public_submission_authorized": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_claimed": false,
+  "repair_loop_authorized": false,
+  "result_review_accepted": true,
+  "result_review_classification": "qft_gr_source_map_ladder_packet_result_review_accepts_candidate_only_first_break_and_authorizes_minimal_global_mathematical_obligation_index_only",
+  "review_id": "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_RESULT_REVIEW_v0",
+  "review_outcome": "QFT_GR_SOURCE_MAP_LADDER_PACKET_RESULT_REVIEW_ACCEPTS_CANDIDATE_ONLY_FIRST_BREAK_AND_AUTHORIZES_MINIMAL_GLOBAL_MATHEMATICAL_OBLIGATION_INDEX_ONLY",
+  "reviewed_artifact_id": "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_20260616_v0",
+  "reviewed_commit": "e482398a07bc5eb458af1356ff6d7e1283c00f1c",
+  "reviewed_live_target_before_review": "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_admissible_source_result",
+  "reviewed_packet_id": "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_v0",
+  "schema_id": "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_ADMISSIBLE_SOURCE_RESULT_REVIEW_20260616_v0",
+  "selected_next_target": "prepare_minimal_global_toe_mathematical_obligation_index",
+  "selected_next_target_kind": "minimal_global_toe_mathematical_obligation_index_preparation",
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "supplied_condition_count": 2,
+  "validation_policy": {
+    "aggregate_lean_health_claimed": false,
+    "aggregate_lean_not_run": true,
+    "bounded_focused_validation_only": true,
+    "checkpoint_type": "routine_qft_gr_source_map_ladder_result_review",
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "release_index_path_not_freshly_lean_validated": true
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "acceptance_criteria": {
+    "consumes_expected_index_review": true,
+    "qft_gr_obstruction_is_selection_basis": true,
+    "selection_does_not_execute_repair": true,
+    "selects_one_calculation_target": true
+  },
+  "accepted": true,
+  "candidate_target_count": 3,
+  "candidate_targets": [
+    {
+      "decision": "selected",
+      "first_required_calculation": "construct_source_action_test_action_weak_pairing_domain",
+      "selection_reason": "The minimal obligation index carries forward the QFT-GR first break at source action, test action, and weak-pairing domain as the most specific next calculation.",
+      "target": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet"
+    },
+    {
+      "decision": "deferred",
+      "first_required_calculation": "not_selected",
+      "selection_reason": "The broad maturity matrix remains deferred.",
+      "target": "prepare_global_toe_pillar_seam_candidate_maturity_matrix"
+    },
+    {
+      "decision": "not_authorized",
+      "first_required_calculation": "not_selected",
+      "selection_reason": "Repair execution is not authorized by a selector.",
+      "target": "repair_qft_gr_source_action_test_action_and_weak_pairing_domain"
+    }
+  ],
+  "captured_at_utc": "2026-06-16T00:00:00Z",
+  "consumed_target": "select_next_global_toe_work_target_from_mathematical_obligation_index",
+  "empirical_validation_claimed": false,
+  "lean_selection_file": "formal/toe_formal/ToeFormal/Derivation/NextGlobalToeWorkTargetFromMathematicalObligationIndex.lean",
+  "master_action_promoted": false,
+  "non_claim_boundary": "The selector chooses the next calculation packet from the minimal obligation index. It does not perform repair, construct a source map, claim source admissibility, close QFT-GR, or promote the master action.",
+  "outcome_id": "NEXT_GLOBAL_TOE_WORK_TARGET_FROM_MATHEMATICAL_OBLIGATION_INDEX_SELECTS_QFT_GR_WEAK_PAIRING_CALCULATION_PACKET_WITH_NO_REPAIR_EXECUTION_OR_CLOSURE",
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_first_break_row_id": "source_action_test_action_and_weak_pairing_domain",
+  "qft_gr_first_required_calculation": "construct_source_action_test_action_weak_pairing_domain",
+  "schema_id": "NEXT_GLOBAL_TOE_WORK_TARGET_FROM_MATHEMATICAL_OBLIGATION_INDEX_SELECTION_20260616_v0",
+  "selected": true,
+  "selected_next_target": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+  "selected_next_target_kind": "qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_preparation",
+  "selected_target_executes_repair": false,
+  "selected_target_is_calculation_packet": true,
+  "selection_classification": "next_global_toe_work_target_from_mathematical_obligation_index_selects_qft_gr_weak_pairing_calculation_packet_without_repair_execution_or_closure",
+  "selection_count": 1,
+  "selection_id": "NEXT_GLOBAL_TOE_WORK_TARGET_FROM_MATHEMATICAL_OBLIGATION_INDEX_SELECTION_v0",
+  "source_admissibility_claimed": false,
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "theory_closure_claimed": false,
+  "validation_policy": {
+    "bounded_focused_validation_only": true,
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "Bianchi_compatibility_claimed": false,
+  "acceptance_criteria": {
+    "consumes_expected_selection": true,
+    "downstream_rows_not_reached": true,
+    "mathematical_definition_supplied": true,
+    "non_promotion_boundary_preserved": true,
+    "weak_pairing_decision_is_blocked": true,
+    "well_definedness_attempt_records_blocker": true
+  },
+  "accepted": true,
+  "bianchi_compatible_source": "not_reached",
+  "calculation_progression": [
+    {
+      "decision": "blocked",
+      "decision_field": "well_defined_pairing",
+      "reason": "The current candidate is not accompanied by a continuous linear functional T : D -> R, a continuity/domain contract, or smooth/local-integrability data that would define the integral pairing.",
+      "stage": "weak_pairing",
+      "status": "blocked"
+    },
+    {
+      "decision": "not_reached",
+      "decision_field": "source_is_action_derived",
+      "reason": "Weak pairing is blocked.",
+      "stage": "action_derivability",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "decision_field": "weak_conservation_verified",
+      "reason": "Source action and weak pairing are not licensed.",
+      "stage": "weak_conservation",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "decision_field": "bianchi_compatible_source",
+      "reason": "Weak conservation is not reached.",
+      "stage": "bianchi_compatibility",
+      "status": "NOT_REACHED"
+    },
+    {
+      "decision": "not_reached",
+      "decision_field": "semiclassical_source_admissible",
+      "reason": "Bianchi-compatible source admissibility is not reached.",
+      "stage": "semiclassical_source_admissibility",
+      "status": "NOT_REACHED"
+    }
+  ],
+  "calculation_result": "WEAK_PAIRING_DOMAIN_CALCULATION_BLOCKED_BY_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT",
+  "captured_at_utc": "2026-06-16T00:00:00Z",
+  "conservation_claimed": false,
+  "conservation_proved": false,
+  "consumed_target": "prepare_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet",
+  "downstream_status_when_weak_pairing_blocked": "NOT_REACHED",
+  "empirical_validation_claimed": false,
+  "first_break_row_id": "source_action_test_action_and_weak_pairing_domain",
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean",
+  "master_action_promoted": false,
+  "mathematical_acceptance_output_count": 5,
+  "mathematical_acceptance_outputs": {
+    "calculation_blocked_by_missing_formal_input": true,
+    "counterexample_or_obstruction_recorded": true,
+    "definition_supplied": true,
+    "lemma_or_proposition_stated": true,
+    "symbolic_derivation_performed": false,
+    "well_definedness_proof_attempted": true
+  },
+  "mathematical_context": {
+    "test_object": "h_{mu nu} in C_c^infty(M, Sym^2 T*M)",
+    "test_space": "D = C_c^infty(M, Sym^2 T*M)",
+    "working_spacetime_background": "Let (M, g) be the working spacetime background."
+  },
+  "missing_mathematical_data": [
+    "continuous_linear_functional_T_from_test_space_D_to_R_not_supplied",
+    "continuity_topology_or_distribution_order_contract_not_supplied",
+    "smooth_or_locally_integrable_tensor_density_representative_not_supplied",
+    "source_action_functional_S_m_not_supplied",
+    "metric_variation_delta_S_m_delta_g_contract_not_supplied",
+    "allowed_test_action_or_allowed_metric_variation_class_not_supplied"
+  ],
+  "missing_mathematical_data_count": 6,
+  "non_claim_boundary": "This calculation packet states the weak-pairing criterion and records that the current candidate is blocked by missing functional/domain data. It does not claim source admissibility, action derivability, conservation, Bianchi compatibility, semiclassical coupling, QFT-GR closure, empirical validation, public submission, or master-action promotion.",
+  "outcome_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+  "packet_classification": "qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_records_blocked_weak_pairing_domain_by_missing_candidate_functional_contract",
+  "packet_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_v0",
+  "physical_source_claimed": false,
+  "prepared": true,
+  "proposition_stated": "A QFT-GR source candidate is weakly pairable on D only if it supplies either a continuous linear functional T : D -> R or smooth/local-integrability data that defines the integral pairing.",
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "schema_id": "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_20260616_v0",
+  "selected_next_target": "review_qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result",
+  "selected_next_target_kind": "qft_gr_source_action_test_action_weak_pairing_domain_calculation_packet_result_review",
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_source_admissible": "not_reached",
+  "source_admissibility_claimed": false,
+  "source_is_action_derived": "not_reached",
+  "status": "ACTIVE_NONLIVE_NONCLAIM",
+  "stress_energy_source_admissibility_claimed": false,
+  "validation_policy": {
+    "bounded_focused_validation_only": true,
+    "full_aggregate_lean_required": false,
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false
+  },
+  "weak_conservation_verified": "not_reached",
+  "weak_pairing_definition": {
+    "distributional_requirement": "T must define a continuous linear functional T : D -> R.",
+    "smooth_or_locally_integrable_template": "<T, h> = integral_M T^{mu nu} h_{mu nu} dVol_g",
+    "well_defined_pairing": "blocked"
+  },
+  "well_defined_pairing": "blocked",
+  "well_definedness_proof_attempt": "The criterion can be stated, but it cannot be discharged for the current candidate because the candidate packet does not supply the required functional/domain contract."
+}

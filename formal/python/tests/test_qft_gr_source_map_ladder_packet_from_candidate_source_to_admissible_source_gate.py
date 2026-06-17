@@ -347,15 +347,9 @@ def test_source_map_ladder_packet_lean_and_surface_mirrors() -> None:
         "sourceMapLadderPacketPrepared",
         "candidateSourceObjectIdentified",
         "admissibilityPathExistsUnderCurrentPacket",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_"
-        "admissible_source_result",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_"
-        "admissible_source",
-        "MASTER_ACTION_CURRENT_CITATION_TARGET_v0: "
-        "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_"
-        "admissible_source_result",
+        "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_"
+        "ADMISSIBLE_SOURCE_20260616_v0.json",
+        "QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSource",
         "no source admissibility",
         "no countermodel result",
         "no no-go result",

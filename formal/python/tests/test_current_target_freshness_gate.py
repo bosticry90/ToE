@@ -1158,8 +1158,8 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_"
-    "admissible_source_result"
+    "review_qft_gr_source_action_test_action_weak_pairing_domain_"
+    "calculation_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1330,8 +1330,8 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_source_map_ladder_packet_from_candidate_source_to_"
-    "admissible_source"
+    "prepare_qft_gr_source_action_test_action_weak_pairing_domain_"
+    "calculation_packet"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1424,8 +1424,8 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_qft_gr_source_map_ladder_packet_from_candidate_source_to_"
-    "admissible_source_result"
+    "review_qft_gr_source_action_test_action_weak_pairing_domain_"
+    "calculation_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1442,7 +1442,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRSourceMapLadderPacketFromCandidateSourceToAdmissibleSource.lean"
+    / "QFTGRSourceActionTestActionWeakPairingDomainCalculationPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2952,165 +2952,75 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    source_map_ladder_active_workstream = active_workstream(payload)
-    assert source_map_ladder_active_workstream["workstream_id"] == ACTIVE_LANE
+    calculation_review_active_workstream = active_workstream(payload)
+    assert calculation_review_active_workstream["workstream_id"] == ACTIVE_LANE
     assert (
-        source_map_ladder_active_workstream["authorized_next_strict_target"]
+        calculation_review_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert source_map_ladder_active_workstream["authorized_target"] == LIVE_TARGET
-    assert source_map_ladder_active_workstream["authorization_evidence"] == str(
+    assert calculation_review_active_workstream["authorized_target"] == LIVE_TARGET
+    assert calculation_review_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert source_map_ladder_active_workstream["report"] == (
+    assert calculation_review_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_"
-        "ADMISSIBLE_SOURCE_20260616_v0.json"
+        "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_"
+        "PACKET_20260616_v0.json"
     )
     assert (
-        source_map_ladder_active_workstream["outcome_id"]
-        == "QFT_GR_SOURCE_MAP_LADDER_PACKET_FROM_CANDIDATE_SOURCE_TO_"
-        "ADMISSIBLE_SOURCE_PREPARED_WITH_NO_SOURCE_ADMISSIBILITY_OR_"
-        "QFT_GR_CLOSURE"
+        calculation_review_active_workstream["outcome_id"]
+        == "QFT_GR_SOURCE_ACTION_TEST_ACTION_WEAK_PAIRING_DOMAIN_CALCULATION_PACKET_"
+        "PREPARED_WITH_BLOCKED_WEAK_PAIRING_DOMAIN_AND_NO_SOURCE_ADMISSIBILITY_"
+        "OR_QFT_GR_CLOSURE"
     )
     assert (
-        source_map_ladder_active_workstream["claim_level"]
-        == "Level 3 source-map ladder packet prepared result review pending"
+        calculation_review_active_workstream["claim_level"]
+        == "Level 3 QFT-GR weak-pairing calculation packet prepared result review pending"
     )
     assert (
-        source_map_ladder_active_workstream["claim_ceiling"]
-        == "source-map ladder packet result review only no source admissibility no countermodel result no no-go result no qft_gr closure"
+        calculation_review_active_workstream["claim_ceiling"]
+        == "calculation packet result review only no source admissibility no qft_gr closure"
     )
+    assert "no source admissibility" in calculation_review_active_workstream[
+        "non_claim_boundary"
+    ]
+    assert calculation_review_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert (
-        "no source admissibility"
-        in source_map_ladder_active_workstream["non_claim_boundary"]
-    )
-    assert source_map_ladder_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert (
-        source_map_ladder_active_workstream["source_map_or_scope_decision_packet_prepared"]
-        == "yes"
-    )
-    assert (
-        source_map_ladder_active_workstream["source_map_ladder_packet_authorized"]
-        == "yes"
-    )
-    assert (
-        source_map_ladder_active_workstream["source_map_ladder_packet_prepared"]
-        == "yes"
-    )
-    assert (
-        source_map_ladder_active_workstream[
-            "source_map_ladder_packet_result_review_pending"
-        ]
-        == "yes"
-    )
-    assert (
-        source_map_ladder_active_workstream["source_map_ladder_execution_authorized"]
-        == "no"
-    )
-    assert (
-        source_map_ladder_active_workstream["admissibility_ladder_prepared"]
-        == "yes"
-    )
-    assert (
-        source_map_ladder_active_workstream["admissibility_ladder_row_count"]
-        == "12"
-    )
-    assert (
-        source_map_ladder_active_workstream["candidate_source_object_identified"]
-        == "yes"
-    )
-    assert (
-        source_map_ladder_active_workstream["candidate_source_object_id"]
-        == "broader_stress_energy_like_distribution_candidate_not_source_admissible_v0"
-    )
-    assert (
-        source_map_ladder_active_workstream["candidate_source_is_admissible_source"]
-        == "no"
-    )
-    assert (
-        source_map_ladder_active_workstream[
-            "admissibility_path_exists_under_current_packet"
-        ]
-        == "no"
-    )
-    assert (
-        source_map_ladder_active_workstream["legitimate_admissibility_path_exists"]
-        == "no"
-    )
-    assert source_map_ladder_active_workstream["ladder_break_identified"] == "yes"
-    assert (
-        source_map_ladder_active_workstream["first_ladder_break_row_id"]
+        calculation_review_active_workstream["first_ladder_break_row_id"]
         == "source_action_test_action_and_weak_pairing_domain"
     )
     assert (
-        source_map_ladder_active_workstream["first_ladder_break_status"] == "blocked"
-    )
-    assert source_map_ladder_active_workstream["promotion_gate_satisfied"] == "no"
-    assert source_map_ladder_active_workstream["promotion_authorized"] == "no"
-    assert (
-        source_map_ladder_active_workstream["admissible_source_promotion_authorized"]
-        == "no"
-    )
-    assert source_map_ladder_active_workstream["supplied_condition_count"] == "2"
-    assert source_map_ladder_active_workstream["derivable_condition_count"] == "0"
-    assert source_map_ladder_active_workstream["blocked_condition_count"] == "2"
-    assert source_map_ladder_active_workstream["absent_condition_count"] == "5"
-    assert (
-        source_map_ladder_active_workstream[
-            "countermodel_sensitive_condition_count"
-        ]
-        == "3"
-    )
-    assert source_map_ladder_active_workstream["countermodel_hook_count"] == "5"
-    assert (
-        source_map_ladder_active_workstream["pinned_source_test_pair_id"]
-        == "broader_candidate_source_allowed_test_pair_for_weak_conservation_countermodel_v0"
+        calculation_review_active_workstream["qft_gr_first_required_calculation"]
+        == "construct_source_action_test_action_weak_pairing_domain"
     )
     assert (
-        source_map_ladder_active_workstream["pinned_weak_pairing_contract_id"]
-        == "partial_weak_pairing_contract_for_broader_countermodel_scope_v0"
+        calculation_review_active_workstream["calculation_result"]
+        == "WEAK_PAIRING_DOMAIN_CALCULATION_BLOCKED_BY_MISSING_CANDIDATE_FUNCTIONAL_CONTRACT"
+    )
+    assert calculation_review_active_workstream["well_defined_pairing"] == "blocked"
+    assert calculation_review_active_workstream["source_is_action_derived"] == "not_reached"
+    assert calculation_review_active_workstream["weak_conservation_verified"] == "not_reached"
+    assert (
+        calculation_review_active_workstream["Bianchi_compatibility_status"]
+        == "NOT_REACHED"
     )
     assert (
-        source_map_ladder_active_workstream["pinned_evaluation_scope_id"]
-        == "broader_weak_divergence_boundary_and_curvature_evaluation_scope_v0"
+        calculation_review_active_workstream["semiclassical_source_admissible"]
+        == "not_reached"
+    )
+    assert (
+        calculation_review_active_workstream["downstream_status_when_weak_pairing_blocked"]
+        == "NOT_REACHED"
     )
     for key in [
-        "countermodel_result_claimed",
-        "countermodel_exists_claimed",
-        "countermodel_achieved",
-        "no_go_result_claimed",
-        "not_found_result_claimed",
-        "not_found_under_pinned_scope_claimed",
         "source_admissibility_claimed",
-        "stress_energy_source_admissibility_claimed",
-        "expectation_value_source_claimed",
-        "renormalization_closure_claimed",
-        "conservation_witness_constructed",
-        "Bianchi_compatibility_claimed",
-        "semiclassical_einstein_equation_derived",
-        "qft_gr_source_map_closure_claimed",
+        "qft_gr_closure_claimed",
         "qft_gr_seam_closed",
         "empirical_validation_claimed",
         "public_submission_authorized",
         "master_action_promoted",
     ]:
-        assert source_map_ladder_active_workstream[key] == "no", key
-    assert source_map_ladder_active_workstream["strict_toy_witness_preserved"] == "yes"
-    assert source_map_ladder_active_workstream["strict_toy_witness_accepted"] == "yes"
-    assert (
-        source_map_ladder_active_workstream["dominant_obstruction_candidate"]
-        == "weak_pairing_domain_obstruction"
-    )
-    assert (
-        source_map_ladder_active_workstream["canonical_obstruction_id"]
-        == "repeated_weak_divergence_undecided_under_candidate_pairing_domain_v3"
-    )
-    assert source_map_ladder_active_workstream["dominant_obstruction_resolved"] == "no"
-    assert (
-        source_map_ladder_active_workstream["mathematical_resolution_claimed"]
-        == "no"
-    )
+        assert calculation_review_active_workstream[key] == "no", key
 
     post_retest_refinement_conservation_retest_refinement_refinement_packet_workstream = _workstream(
         payload,
@@ -8614,7 +8524,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        source_map_ladder_active_workstream[
+        calculation_review_active_workstream[
             "authorized_next_strict_target"
         ],
     }
