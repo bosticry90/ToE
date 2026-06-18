@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_toe_native_matter_sector_definition_packet"
+ACTIVE_LANE = "review_toe_native_matter_sector_definition_packet_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,9 +1326,7 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout"
-)
+PREVIOUS_LIVE_TARGET = "prepare_toe_native_matter_sector_definition_packet"
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
 )
@@ -1419,7 +1417,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_toe_native_matter_sector_definition_packet"
+LIVE_TARGET = "review_toe_native_matter_sector_definition_packet_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1435,7 +1433,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRProvisionalScalarClassicalSourceRouteWitnessCloseout.lean"
+    / "ToeNativeMatterSectorDefinitionPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2957,28 +2955,149 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert scalar_conservation_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_PROVISIONAL_SCALAR_CLASSICAL_SOURCE_ROUTE_WITNESS_CLOSEOUT_"
+        "TOE_NATIVE_MATTER_SECTOR_DEFINITION_PACKET_"
         "20260618_v0.json"
     )
     assert (
         scalar_conservation_active_workstream["outcome_id"]
-        == "QFT_GR_PROVISIONAL_SCALAR_CLASSICAL_SOURCE_ROUTE_WITNESS_CLOSED_AS_"
-        "POSITIVE_CLASSICAL_SANDBOX_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE"
+        == "TOE_NATIVE_MATTER_SECTOR_DEFINITION_PACKET_PREPARED_"
+        "MASTER_ACTION_MATTER_SURFACES_INDEXED_AS_NATIVE_CANDIDATES_"
+        "NO_DERIVATION_CLAIM"
     )
     assert (
         scalar_conservation_active_workstream["claim_level"]
-        == "Level 3 ToE-native matter-sector definition packet authorized after scalar classical source witness closeout"
+        == "Level 3 ToE-native matter-sector candidate surface definition packet prepared for result review"
     )
     assert (
         scalar_conservation_active_workstream["claim_ceiling"]
-        == "definition packet preparation only no toe-native matter derivation no qft-gr closure no semiclassical coupling no master-action promotion"
+        == "definition packet review only no toe-native matter derivation no standard model derivation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
     )
-    assert "positive local classical source witness" in scalar_conservation_active_workstream[
+    assert "candidate matter-sector surfaces" in scalar_conservation_active_workstream[
         "non_claim_boundary"
     ]
     assert (
         scalar_conservation_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
+    )
+    assert (
+        scalar_conservation_active_workstream["definition_result"]
+        == "MASTER_ACTION_MATTER_SURFACES_INDEXED_AS_NATIVE_CANDIDATES_"
+        "NO_DERIVATION_CLAIM"
+    )
+    assert scalar_conservation_active_workstream["candidate_surface_count"] == "5"
+    assert (
+        scalar_conservation_active_workstream["candidate_symbols"]
+        == "psi,A,phi,rho,C_k"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "master_action_working_form_noncanonical"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "master_action_matter_surfaces_indexed_as_native_candidates"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "native_candidate_surface_defined_nonpromotionally"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "toe_native_matter_sector_candidate_surface_defined"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "canonical_toe_native_matter_sector_defined"
+        ]
+        == "no"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "post_review_route_selection_target"
+        ]
+        == "select_toe_native_matter_sector_calculation_route"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "next_after_definition_review_suggested"
+        ]
+        == "select_toe_native_matter_sector_calculation_route"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "matter_sector_candidates_listed"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "source_of_each_candidate_identified"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "imported_vs_native_candidate_status_marked"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "variation_route_specified_or_blocked"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "stress_energy_route_specified_or_blocked"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "quantum_operator_route_specified_or_blocked"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "seam_constraint_dependency_recorded"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "next_calculation_target_selected"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream["psi_surface_status_decision"]
+        == "imported_known_physics_term_indexed_as_provisional_toe_native_candidate_surface"
+    )
+    assert (
+        scalar_conservation_active_workstream["a_surface_status_decision"]
+        == "imported_known_physics_gauge_term_indexed_as_provisional_toe_native_candidate_surface"
+    )
+    assert (
+        scalar_conservation_active_workstream["phi_surface_status_decision"]
+        == "scalar_structure_term_indexed_as_provisional_toe_native_candidate_surface_with_imported_scalar_witness_boundary"
+    )
+    assert (
+        scalar_conservation_active_workstream["rho_surface_status_decision"]
+        == "speculative_statistical_state_surface_indexed_as_organizing_placeholder_and_candidate_dependency"
+    )
+    assert (
+        scalar_conservation_active_workstream["ck_surface_status_decision"]
+        == "seam_constraint_surface_indexed_as_required_organizing_dependency_not_matter_derivation"
     )
     assert (
         scalar_conservation_active_workstream["action_derivability_result"]
@@ -3326,10 +3445,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         scalar_conservation_active_workstream["proof_depth_label"]
-        == "SYMBOLIC_CALCULATION_RECORDED_RECORD_VALIDATED"
+        == "RECORD_ONLY_INDEX_VALIDATED"
     )
     assert scalar_conservation_active_workstream["record_validated"] == "yes"
-    assert scalar_conservation_active_workstream["symbolic_calculation_recorded"] == "yes"
+    assert scalar_conservation_active_workstream["symbolic_calculation_recorded"] == "no"
     assert (
         scalar_conservation_active_workstream[
             "formal_differential_geometry_theorem_backed"

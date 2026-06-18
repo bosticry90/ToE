@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRProvisionalScalarClassicalSourceRouteWitnessCloseout
+import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  QFTGRProvisionalScalarClassicalSourceRouteWitnessCloseout.selectedNextTarget
+  ToeNativeMatterSectorDefinitionPacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  QFTGRProvisionalScalarClassicalSourceRouteWitnessCloseout.packetId
+  ToeNativeMatterSectorDefinitionPacket.packetId
 
-theorem current_target_points_to_toe_native_matter_sector_definition_packet :
+theorem current_target_points_to_toe_native_matter_sector_definition_packet_review :
     currentLiveTarget =
-      "prepare_toe_native_matter_sector_definition_packet" := by
+      "review_toe_native_matter_sector_definition_packet_result" := by
   rfl
 
 end CurrentTarget

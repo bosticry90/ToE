@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR provisional scalar classical source route witness closeout recorded outcome QFT_GR_PROVISIONAL_SCALAR_CLASSICAL_SOURCE_ROUTE_WITNESS_CLOSED_AS_POSITIVE_CLASSICAL_SANDBOX_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE. The closeout classifies the imported real-scalar sandbox as a positive local classical source witness: action-derived scalar stress-energy, on-shell weak conservation, on-shell Bianchi compatibility, conditional local source-admissibility review pass, and accepted classical Einstein-scalar coupling route. It closes the scalar sandbox branch as a reusable witness and selects prepare_toe_native_matter_sector_definition_packet while preserving no coupled solution construction, no solution existence or uniqueness claim, no global well-posedness claim, no generic source admissibility, no arbitrary-distributional-source promotion, no quantum stress-energy expectation construction, no renormalization result, no semiclassical Einstein equation derivation, no QFT-GR source-map or seam closure, no empirical validation, no public readiness, no public submission, no ToE-native matter derivation, and no master-action promotion"
+        "ToE-native matter-sector definition packet recorded outcome TOE_NATIVE_MATTER_SECTOR_DEFINITION_PACKET_PREPARED_MASTER_ACTION_MATTER_SURFACES_INDEXED_AS_NATIVE_CANDIDATES_NO_DERIVATION_CLAIM. The packet indexes psi, A, phi, rho, and C_k from the working-form non-canonical candidate master action as provisional native-candidate surfaces or organizing placeholders; records imported/native-candidate status, variation route status, stress-energy route status, quantum/operator route status, and seam-constraint dependencies; preserves the scalar sandbox closeout as a positive local classical source witness; selects review_toe_native_matter_sector_definition_packet_result while preserving no ToE-native matter derivation, no Standard Model derivation, no canonical master-action promotion, no QFT-GR source-map or seam closure, no semiclassical coupling, no empirical validation, and no public readiness"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_toe_native_matter_sector_definition_packet"
+        "review_toe_native_matter_sector_definition_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The math-first QFT-GR chain now constructs action derivability for the imported provisional real-scalar sandbox, conditional weak conservation for its scalar stress-energy source on shell, conditional Bianchi compatibility for an imposed Einstein-form compatibility-test equation, a conditional local source-admissibility review pass, a semiclassical-coupling gate/scope denial for quantum expectation coupling, a bounded classical Einstein-scalar coupling route, a result-review acceptance of that route, and a closeout as a positive local classical source witness. The chain sets prepare_toe_native_matter_sector_definition_packet as the only active next target while preserving no coupled solution construction, no solution existence or uniqueness claim, no global well-posedness claim, no generic source-admissibility claim, no arbitrary-distributional-source promotion, no quantum stress-energy expectation construction, no renormalization result, no semiclassical Einstein equation derivation claim, no QFT-GR source-map or seam closure, no public-readiness claim, no public-submission claim, no scientific-validation claim, no ToE-native matter derivation claim, and no master-action promotion"
+        "The scalar sandbox branch is closed as a positive local classical source witness, and the current master-action-facing packet indexes the candidate master-action matter surfaces psi, A, phi, rho, and C_k as provisional native-candidate surfaces or organizing placeholders. The packet records route statuses for variation, stress-energy, quantum/operator prerequisites, and seam dependencies, and sets review_toe_native_matter_sector_definition_packet_result as the active next target while preserving no ToE-native matter derivation, no Standard Model derivation, no canonical master-action promotion, no QFT-GR source-map or seam closure, no semiclassical coupling, no empirical validation, no public-readiness claim, no public-submission claim, and no scientific-validation claim"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_toe_native_matter_sector_definition_packet"
+        "review_toe_native_matter_sector_definition_packet_result"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the scalar classical source witness closeout. -/
+/-- Previous live target consumed by the native matter-sector definition packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout"
-
-/-- Current live target after the scalar classical source witness closeout. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_toe_native_matter_sector_definition_packet"
+
+/-- Current live target after the native matter-sector definition packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_toe_native_matter_sector_definition_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_toe_native_matter_sector_definition_packet"
+    "review_toe_native_matter_sector_definition_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

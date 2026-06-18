@@ -1,9 +1,10 @@
 import ToeFormal.Derivation.QFTGRScalarSandbox
+import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacket
 
 /-
-Thin QFT-GR lane aggregate for tiered validation. At present it exposes the
-current scalar-sandbox gate/scope chain without importing the full
-repository-level ToeFormal surface.
+Thin QFT-GR lane aggregate for tiered validation. It exposes the current
+scalar-sandbox witness plus the post-witness native matter-sector definition
+packet without importing the full repository-level ToeFormal surface.
 -/
 
 namespace ToeFormal
@@ -16,13 +17,15 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  QFTGRScalarSandbox.currentScopedResult
+  ToeNativeMatterSectorDefinitionPacket.definitionResult
 
-theorem qft_gr_lane_aggregate_exposes_scalar_sandbox :
+def currentPacketId : String :=
+  ToeNativeMatterSectorDefinitionPacket.packetId
+
+theorem qft_gr_lane_aggregate_exposes_native_matter_definition_packet :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "QFT_GR_PROVISIONAL_SCALAR_CLASSICAL_SOURCE_ROUTE_WITNESS_CLOSED_AS_" ++
-          "POSITIVE_CLASSICAL_SANDBOX_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE" := by
+        "MASTER_ACTION_MATTER_SURFACES_INDEXED_AS_NATIVE_CANDIDATES_NO_DERIVATION_CLAIM" := by
   constructor
   · rfl
   · rfl
