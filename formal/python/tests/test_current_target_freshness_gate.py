@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_toe_native_phi_ck_variational_content_packet"
+ACTIVE_LANE = "prepare_master_action_ck_constraint_functional_definition_packet"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,7 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "prepare_toe_native_phi_surface_alignment_witness_closeout"
+PREVIOUS_LIVE_TARGET = "prepare_toe_native_phi_ck_variational_content_packet"
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
 )
@@ -1417,7 +1417,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_toe_native_phi_ck_variational_content_packet"
+LIVE_TARGET = "prepare_master_action_ck_constraint_functional_definition_packet"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1433,7 +1433,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativePhiSurfaceAlignmentWitnessCloseout.lean"
+    / "ToeNativePhiCKVariationalContentPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2943,171 +2943,186 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    phi_ck_content_active_workstream = active_workstream(payload)
-    assert phi_ck_content_active_workstream["workstream_id"] == ACTIVE_LANE
-    assert phi_ck_content_active_workstream["active_lane"] == ACTIVE_LANE
+    ck_definition_active_workstream = active_workstream(payload)
+    assert ck_definition_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert ck_definition_active_workstream["active_lane"] == ACTIVE_LANE
     assert (
-        phi_ck_content_active_workstream["authorized_next_strict_target"]
+        ck_definition_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert phi_ck_content_active_workstream["authorized_target"] == LIVE_TARGET
-    assert phi_ck_content_active_workstream["authorization_evidence"] == str(
+    assert ck_definition_active_workstream["authorized_target"] == LIVE_TARGET
+    assert ck_definition_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert phi_ck_content_active_workstream["report"] == (
+    assert ck_definition_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PHI_SURFACE_ALIGNMENT_WITNESS_CLOSEOUT_20260618_v0.json"
+        "TOE_NATIVE_PHI_CK_VARIATIONAL_CONTENT_PACKET_20260618_v0.json"
     )
-    assert phi_ck_content_active_workstream["consumed_target"] == (
-        PREVIOUS_LIVE_TARGET
-    )
-    assert phi_ck_content_active_workstream["selected_next_target"] == LIVE_TARGET
+    assert ck_definition_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
+    assert ck_definition_active_workstream["selected_next_target"] == LIVE_TARGET
     assert (
-        phi_ck_content_active_workstream["selected_next_target_kind"]
-        == "toe_native_phi_ck_variational_content_packet_preparation"
+        ck_definition_active_workstream["selected_next_target_kind"]
+        == "master_action_ck_constraint_functional_definition_packet_preparation"
     )
     assert (
-        phi_ck_content_active_workstream["outcome_id"]
-        == "TOE_NATIVE_PHI_SURFACE_ALIGNMENT_WITNESS_CLOSED_AS_MASTER_ACTION_"
-        "SCALAR_ROUTE_MATCH_NO_NATIVE_GENERATION_OR_CK_CONTENT"
+        ck_definition_active_workstream["outcome_id"]
+        == "TOE_NATIVE_PHI_CK_VARIATIONAL_CONTENT_PACKET_PREPARED_"
+        "CK_VARIATIONAL_CONTENT_BLOCKED_BY_UNSPECIFIED_CONSTRAINT_FUNCTIONALS"
     )
     assert (
-        phi_ck_content_active_workstream["closeout_result"]
-        == "TOE_NATIVE_PHI_SURFACE_ALIGNMENT_WITNESS_CLOSED_AS_MASTER_ACTION_"
-        "SCALAR_ROUTE_MATCH_NO_NATIVE_GENERATION_OR_CK_CONTENT"
+        ck_definition_active_workstream["packet_result"]
+        == "CK_VARIATIONAL_CONTENT_BLOCKED_BY_UNSPECIFIED_CONSTRAINT_FUNCTIONALS"
     )
     assert (
-        phi_ck_content_active_workstream["claim_level"]
-        == "Level 3 next packet preparation; C_k variational content becomes the native-content frontier after phi alignment closeout"
+        ck_definition_active_workstream["claim_level"]
+        == "Level 3 next packet preparation; define master-action C_k constraint functionals before any C_k phi-variation retry"
     )
     assert (
-        phi_ck_content_active_workstream["claim_ceiling"]
-        == "C_k variational-content packet preparation only no toe-native matter derivation no native-generation theorem no derived potential no source admissibility or conservation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
+        ck_definition_active_workstream["claim_ceiling"]
+        == "constraint-functional definition packet preparation only no constructed C_k variation no toe-native matter derivation no native-generation theorem no derived potential no source admissibility or conservation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
     )
     assert (
-        phi_ck_content_active_workstream["alignment_witness_status"]
+        ck_definition_active_workstream["alignment_witness_status"]
         == "MASTER_ACTION_PHI_SURFACE_ALIGNMENT_WITNESS_ACCEPTED_NO_NATIVE_GENERATION"
     )
     assert (
-        phi_ck_content_active_workstream["alignment_witness_closeout_status"]
+        ck_definition_active_workstream["alignment_witness_closeout_status"]
         == "MASTER_ACTION_PHI_SURFACE_ALIGNMENT_WITNESS_CLOSED_NO_NATIVE_GENERATION_OR_CK_CONTENT"
     )
-    assert "can reproduce the imported scalar sandbox route" in (
-        phi_ck_content_active_workstream["alignment_witness_statement"]
-    )
-    assert (
-        phi_ck_content_active_workstream[
-            "ck_variational_content_frontier_question"
-        ]
-        == "Do the seam constraints C_k actually generate, restrict, or explain the phi route?"
-    )
-    assert phi_ck_content_active_workstream["metric_signature_policy"] == "(+,-,-,-)"
-    assert "finite real scalar multiplet" in phi_ck_content_active_workstream[
+    assert ck_definition_active_workstream["metric_signature_policy"] == "(+,-,-,-)"
+    assert "finite real scalar multiplet" in ck_definition_active_workstream[
         "scalar_field_type_policy"
     ]
-    assert "smooth finite-action" in phi_ck_content_active_workstream[
+    assert "smooth finite-action" in ck_definition_active_workstream[
         "field_domain_policy"
     ]
-    assert "L_phi^MA = +1/2" in phi_ck_content_active_workstream[
+    assert "L_phi^MA = +1/2" in ck_definition_active_workstream[
         "kinetic_convention_policy"
     ]
     assert (
-        phi_ck_content_active_workstream["box_operator_convention"]
+        ck_definition_active_workstream["box_operator_convention"]
         == "Box_g phi_i = g^{mu nu} nabla_mu nabla_nu phi_i"
     )
-    assert "not ToE-derived" in phi_ck_content_active_workstream[
+    assert "not ToE-derived" in ck_definition_active_workstream[
         "potential_policy"
     ]
-    assert "hold lambda_k and C_k inactive" in phi_ck_content_active_workstream[
-        "variation_policy"
-    ]
-    assert "not allowed to modify" in phi_ck_content_active_workstream[
-        "ck_role_policy"
-    ]
     assert (
-        phi_ck_content_active_workstream["selected_phi_action"]
-        == "S_phi^policy[g, phi] = integral_M sqrt(-g) [1/2 sum_i g^{mu nu} nabla_mu phi_i nabla_nu phi_i - V(phi)] d^4x"
-    )
-    assert (
-        phi_ck_content_active_workstream["field_euler_lagrange_equation"]
+        ck_definition_active_workstream["field_euler_lagrange_equation_without_ck"]
         == "Box_g phi_i + partial_i V(phi) = 0"
     )
     assert (
-        phi_ck_content_active_workstream["stress_energy_under_selected_policy"]
+        ck_definition_active_workstream["stress_energy_under_selected_policy"]
         == "T^policy_{mu nu} = sum_i nabla_mu phi_i nabla_nu phi_i - g_{mu nu}[1/2 sum_j nabla_alpha phi_j nabla^alpha phi_j - V(phi)]"
     )
     assert (
-        phi_ck_content_active_workstream["scalar_witness_comparison_decision"]
+        ck_definition_active_workstream["scalar_witness_comparison_decision"]
         == "reproduces_scalar_witness_route_after_selected_policy_normalization_no_native_generation_claim"
     )
-    assert "different written kinetic convention" in phi_ck_content_active_workstream[
-        "written_sandbox_difference"
-    ]
-    assert phi_ck_content_active_workstream["selected_phi_policy_was_used"] == "yes"
-    assert (
-        phi_ck_content_active_workstream[
-            "phi_variation_route_matched_scalar_witness_after_normalization"
-        ]
-        == "yes"
+    assert ck_definition_active_workstream["master_action_ck_surface"] == (
+        "sum_k lambda_k * C_k(g, psi, A, phi, rho)"
+    )
+    assert ck_definition_active_workstream["ck_variation_target"] == (
+        "delta/delta phi_i [sum_k lambda_k C_k(g, psi, A, phi, rho)]"
+    )
+    assert ck_definition_active_workstream["ck_variation_formal_slot"] == (
+        "delta_phi_i S_C(eta_i) = integral_M sqrt(-g) sum_k lambda_k "
+        "(delta C_k/delta phi_i) eta_i d^4x"
+    )
+    assert ck_definition_active_workstream["raw_total_phi_ck_equation"] == (
+        "-(Box_g phi_i + partial_i V(phi)) + sum_k lambda_k "
+        "delta C_k/delta phi_i = 0"
+    )
+    assert ck_definition_active_workstream["normalized_phi_ck_equation"] == (
+        "Box_g phi_i + partial_i V(phi) = sum_k lambda_k "
+        "delta C_k/delta phi_i"
+    )
+    assert ck_definition_active_workstream["source_from_ck_under_selected_policy"] == (
+        "source_from_C_k,i = sum_k lambda_k delta C_k/delta phi_i"
+    )
+    assert ck_definition_active_workstream["left_hand_force_convention"] == (
+        "-sum_k lambda_k delta C_k/delta phi_i when moved to the left-hand side"
+    )
+    assert ck_definition_active_workstream["ck_independence_case"] == (
+        "if delta C_k/delta phi_i = 0 for all k,i, the selected-policy phi "
+        "equation remains Box_g phi_i + partial_i V(phi) = 0 and no native "
+        "generation follows"
     )
     assert (
-        phi_ck_content_active_workstream[
-            "master_action_alignment_not_native_derivation"
-        ]
-        == "yes"
+        ck_definition_active_workstream["blocker_id"]
+        == "CK-FUNCTIONAL-DEFINITION-MISSING-FOR-PHI-VARIATION"
     )
-    assert phi_ck_content_active_workstream["potential_selected_not_derived"] == "yes"
-    assert phi_ck_content_active_workstream["ck_undefined_and_inactive"] == "yes"
     assert (
-        phi_ck_content_active_workstream[
-            "no_source_admissibility_or_conservation_newly_claimed"
-        ]
-        == "yes"
+        ck_definition_active_workstream["proof_depth_label"]
+        == "SYMBOLIC_CK_VARIATION_SLOT_RECORDED_REAL_CK_CONTENT_BLOCKED"
     )
-    assert phi_ck_content_active_workstream["no_qft_gr_closure_claimed"] == "yes"
-    assert phi_ck_content_active_workstream["no_master_action_promotion_claimed"] == "yes"
-    assert phi_ck_content_active_workstream["scalar_witness_route_match_accepted"] == "yes"
     assert (
-        phi_ck_content_active_workstream[
-            "scalar_witness_match_only_after_convention_normalization"
-        ]
-        == "yes"
+        ck_definition_active_workstream["packet_classification"]
+        == "toe_native_phi_ck_variational_content_packet_blocks_real_ck_content_on_unspecified_constraint_functionals"
     )
-    assert phi_ck_content_active_workstream["literal_imported_sandbox_formula_copied"] == "no"
-    assert phi_ck_content_active_workstream["ck_remains_undefined_and_inactive"] == "yes"
-    assert phi_ck_content_active_workstream["ck_allowed_to_modify_phi_equation"] == "no"
-    assert phi_ck_content_active_workstream["ck_variational_content_defined"] == "no"
-    assert (
-        phi_ck_content_active_workstream["ck_variational_content_still_blocked"]
-        == "yes"
+    assert ck_definition_active_workstream["packet_id"] == (
+        "TOE_NATIVE_PHI_CK_VARIATIONAL_CONTENT_PACKET_v0"
     )
-    assert phi_ck_content_active_workstream["potential_smooth_bounded_below"] == "yes"
-    assert phi_ck_content_active_workstream["potential_derived"] == "no"
-    assert phi_ck_content_active_workstream["native_generation_theorem_claimed"] == "no"
-    assert phi_ck_content_active_workstream["native_generation_blocked"] == "yes"
-    assert phi_ck_content_active_workstream["alignment_witness_closeout_prepared"] == "yes"
-    assert phi_ck_content_active_workstream["alignment_witness_closed"] == "yes"
-    assert phi_ck_content_active_workstream["ck_variational_content_packet_authorized"] == "yes"
-    assert phi_ck_content_active_workstream["ck_variational_content_packet_prepared"] == "no"
-    assert phi_ck_content_active_workstream["closeout_criteria_count"] == "8"
-    assert phi_ck_content_active_workstream["closeout_criteria_accepted_count"] == "8"
+    assert ck_definition_active_workstream["packet_criteria_count"] == "9"
+    assert ck_definition_active_workstream["packet_criteria_accepted_count"] == "9"
+    assert ck_definition_active_workstream["ck_effect_test_count"] == "7"
     assert (
-        phi_ck_content_active_workstream["aggregate_lean_validation_status_for_packet"]
+        ck_definition_active_workstream["aggregate_lean_validation_status_for_packet"]
         == "INCOMPLETE_TIMEOUT_STEADY_PROGRESS"
     )
-    assert "alignment witness only" in phi_ck_content_active_workstream[
-        "non_claim_boundary"
-    ]
-    assert "does not supply a native-generation theorem" in phi_ck_content_active_workstream[
+    assert ck_definition_active_workstream["generic_ck_surface_present"] == "yes"
+    assert ck_definition_active_workstream[
+        "concrete_ck_functional_definition_available"
+    ] == "no"
+    assert ck_definition_active_workstream["concrete_ck_functionals_found"] == "[]"
+    assert ck_definition_active_workstream["ck_variational_derivative_defined"] == "no"
+    assert ck_definition_active_workstream[
+        "ck_variational_content_recorded_symbolically"
+    ] == "yes"
+    assert ck_definition_active_workstream[
+        "ck_phi_equation_modification_route_recorded_symbolically"
+    ] == "yes"
+    assert ck_definition_active_workstream["ck_phi_independence_case_recorded"] == "yes"
+    assert (
+        ck_definition_active_workstream["ck_constraint_functional_definition_required"]
+        == "yes"
+    )
+    assert ck_definition_active_workstream[
+        "master_action_ck_definition_packet_authorized"
+    ] == "yes"
+    assert ck_definition_active_workstream[
+        "ck_constraint_functional_definition_packet_prepared"
+    ] == "no"
+    assert ck_definition_active_workstream[
+        "ck_variational_content_packet_prepared"
+    ] == "yes"
+    assert ck_definition_active_workstream["ck_variational_content_constructed"] == "no"
+    assert ck_definition_active_workstream["ck_variational_content_blocked"] == "yes"
+    assert (
+        ck_definition_active_workstream[
+            "ck_variational_content_blocked_by_unspecified_constraint_functionals"
+        ]
+        == "yes"
+    )
+    assert ck_definition_active_workstream["selected_phi_policy_carried_forward"] == "yes"
+    assert ck_definition_active_workstream["phi_alignment_witness_preserved"] == "yes"
+    assert ck_definition_active_workstream["native_generation_blocked"] == "yes"
+    for key in [
+        "ck_phi_equation_generation_constructed",
+        "ck_phi_equation_modification_constructed",
+        "ck_potential_restriction_constructed",
+        "ck_source_conservation_enforced",
+        "ck_cross_pillar_connection_constructed",
+        "ck_new_residual_law_constructed",
+        "ck_possible_falsifier_produced",
+        "ck_phi_independence_selected",
+        "ck_constraint_family_selected",
+    ]:
+        assert ck_definition_active_workstream[key] == "no", key
+    assert "blocks real C_k variational content" in ck_definition_active_workstream[
         "non_claim_boundary"
     ]
     for key in [
         "formal_theorem_backed_matter_derivation",
-        "phi_variation_derived_as_toe_native",
-        "phi_stress_energy_derived_as_toe_native",
-        "toe_native_phi_source_route_constructed",
-        "toe_native_phi_source_admissibility_claimed",
-        "toe_native_phi_source_conservation_claimed",
         "toe_native_matter_derivation_claimed",
         "toe_native_matter_sector_derived",
         "toe_native_matter_sector_defined",
@@ -3137,17 +3152,26 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "phase2_readiness_claim",
         "pillar_completion_inferred",
         "seam_closure_claim",
+        "native_generation_theorem_claimed",
+        "derived_v_phi_claimed",
+        "potential_derived",
     ]:
-        assert phi_ck_content_active_workstream[key] == "no", key
+        assert ck_definition_active_workstream[key] == "no", key
 
-    consumed_phi_alignment_closeout = _workstream(payload, PREVIOUS_LIVE_TARGET)
-    assert consumed_phi_alignment_closeout["status"] == "paused"
-    assert consumed_phi_alignment_closeout["closeout_result"] == (
-        "TOE_NATIVE_PHI_SURFACE_ALIGNMENT_WITNESS_CLOSED_AS_MASTER_ACTION_"
-        "SCALAR_ROUTE_MATCH_NO_NATIVE_GENERATION_OR_CK_CONTENT"
+    consumed_phi_ck_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_phi_ck_packet["status"] == "paused"
+    assert consumed_phi_ck_packet["packet_result"] == (
+        "CK_VARIATIONAL_CONTENT_BLOCKED_BY_UNSPECIFIED_CONSTRAINT_FUNCTIONALS"
     )
-    assert consumed_phi_alignment_closeout["selected_next_target"] == LIVE_TARGET
-    assert consumed_phi_alignment_closeout["alignment_witness_closeout_prepared"] == "yes"
+    assert consumed_phi_ck_packet["selected_next_target"] == LIVE_TARGET
+    assert consumed_phi_ck_packet["ck_variational_content_packet_prepared"] == "yes"
+    assert consumed_phi_ck_packet["ck_variational_content_blocked"] == "yes"
+    assert (
+        consumed_phi_ck_packet[
+            "ck_variational_content_blocked_by_unspecified_constraint_functionals"
+        ]
+        == "yes"
+    )
 
     scalar_conservation_active_workstream = _workstream(
         payload, "prepare_toe_native_phi_surface_variation_and_source_route_packet"
@@ -9373,7 +9397,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        phi_ck_content_active_workstream[
+        ck_definition_active_workstream[
             "authorized_next_strict_target"
         ],
     }

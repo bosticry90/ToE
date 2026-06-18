@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
+import ToeFormal.Derivation.ToeNativePhiCKVariationalContentPacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativePhiSurfaceAlignmentWitnessCloseout.selectedNextTarget
+  ToeNativePhiCKVariationalContentPacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativePhiSurfaceAlignmentWitnessCloseout.packetId
+  ToeNativePhiCKVariationalContentPacket.packetId
 
-theorem current_target_points_to_toe_native_phi_ck_variational_content_packet :
+theorem current_target_points_to_master_action_ck_definition_packet :
     currentLiveTarget =
-      "prepare_toe_native_phi_ck_variational_content_packet" := by
+      "prepare_master_action_ck_constraint_functional_definition_packet" := by
   rfl
 
 end CurrentTarget

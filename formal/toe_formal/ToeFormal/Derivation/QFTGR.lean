@@ -4,6 +4,7 @@ import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacketResultReview
 import ToeFormal.Derivation.ToeNativeMatterSectorCalculationRouteSelection
 import ToeFormal.Derivation.ToeNativePhiSurfaceVariationAndSourceRoutePacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceVariationAndSourceRouteResultReview
+import ToeFormal.Derivation.ToeNativePhiCKVariationalContentPacket
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -25,16 +26,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ToeNativePhiSurfaceAlignmentWitnessCloseout.outcomeId
+  ToeNativePhiCKVariationalContentPacket.outcomeId
 
 def currentPacketId : String :=
-  ToeNativePhiSurfaceAlignmentWitnessCloseout.packetId
+  ToeNativePhiCKVariationalContentPacket.packetId
 
-theorem qft_gr_lane_aggregate_exposes_native_phi_alignment_witness_closeout :
+theorem qft_gr_lane_aggregate_exposes_native_phi_ck_variational_content_packet :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "TOE_NATIVE_PHI_SURFACE_ALIGNMENT_WITNESS_CLOSED_AS_MASTER_ACTION_SCALAR_" ++
-          "ROUTE_MATCH_NO_NATIVE_GENERATION_OR_CK_CONTENT" := by
+        "TOE_NATIVE_PHI_CK_VARIATIONAL_CONTENT_PACKET_PREPARED_" ++
+          "CK_VARIATIONAL_CONTENT_BLOCKED_BY_UNSPECIFIED_CONSTRAINT_FUNCTIONALS" := by
   constructor
   · rfl
   · rfl

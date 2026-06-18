@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "ToE-native phi surface alignment witness closeout recorded outcome TOE_NATIVE_PHI_SURFACE_ALIGNMENT_WITNESS_CLOSED_AS_MASTER_ACTION_SCALAR_ROUTE_MATCH_NO_NATIVE_GENERATION_OR_CK_CONTENT. The closeout preserves the selected-policy field variation Box_g phi_i + partial_i V(phi) = 0 and inverse-metric stress-energy route T^policy_{mu nu} = sum_i nabla_mu phi_i nabla_nu phi_i - g_{mu nu}[1/2 sum_j nabla_alpha phi_j nabla^alpha phi_j - V(phi)] as a master-action alignment witness only: the phi surface reproduces the imported scalar witness route after signature, kinetic, and metric-variation convention normalization. C_k remains inactive and undefined, V(phi) remains smooth bounded-below but not derived, and the closeout preserves no ToE-native matter derivation, no native-generation theorem, no source admissibility or conservation, no Standard Model derivation, no canonical master-action promotion, no QFT-GR source-map or seam closure, no semiclassical coupling, no empirical validation, no public readiness, and no release authorization"
+        "ToE-native phi C_k variational-content packet recorded outcome TOE_NATIVE_PHI_CK_VARIATIONAL_CONTENT_PACKET_PREPARED_CK_VARIATIONAL_CONTENT_BLOCKED_BY_UNSPECIFIED_CONSTRAINT_FUNCTIONALS. The packet preserves the selected-policy phi alignment witness and examines delta/delta phi_i [sum_k lambda_k C_k(g, psi, A, phi, rho)], recording the formal slot delta_phi_i S_C = integral sqrt(-g) sum_k lambda_k (delta C_k/delta phi_i) eta_i and normalized route Box_g phi_i + partial_i V(phi) = sum_k lambda_k delta C_k/delta phi_i. Because no concrete C_k functionals are defined, C_k cannot yet generate phi, modify phi, restrict V(phi), enforce conservation, connect another pillar, produce a residual law, or produce a falsifier. V(phi) remains smooth bounded-below but not derived, and the packet preserves no ToE-native matter derivation, no native-generation theorem, no source admissibility or conservation, no Standard Model derivation, no canonical master-action promotion, no QFT-GR source-map or seam closure, no semiclassical coupling, no empirical validation, no public readiness, and no release authorization"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_toe_native_phi_ck_variational_content_packet"
+        "prepare_master_action_ck_constraint_functional_definition_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch is closed as a positive local classical source witness, the master-action matter surfaces psi, A, phi, rho, and C_k have been indexed as provisional native-candidate surfaces or organizing placeholders, the calculation-route selector chose the phi surface, the phi route result review accepted only raw symbolic formulas, the phi policy packet fixed a nonpromotional calculation convention, the selected-policy phi variation retry result review accepted route-level scalar-witness reproduction after convention normalization, and the phi surface alignment witness closeout now preserves that result as master-action alignment only. C_k variational content remains undefined and inactive, and V(phi) remains selected for calculation rather than ToE-derived. It preserves no ToE-native matter derivation, no native-generation theorem, no source admissibility or conservation, no Standard Model derivation, no canonical master-action promotion, no QFT-GR source-map or seam closure, no semiclassical coupling, no empirical validation, no public-readiness claim, no public-submission claim, and no scientific-validation claim"
+        "The scalar sandbox branch is closed as a positive local classical source witness, the master-action matter surfaces psi, A, phi, rho, and C_k have been indexed as provisional native-candidate surfaces or organizing placeholders, the calculation-route selector chose the phi surface, the phi route result review accepted only raw symbolic formulas, the phi policy packet fixed a nonpromotional calculation convention, the selected-policy phi variation retry result review accepted route-level scalar-witness reproduction after convention normalization, the phi surface alignment witness closeout preserved that result as master-action alignment only, and the C_k variational-content packet now records the formal C_k variation slot while blocking real content on unspecified constraint functionals. C_k cannot yet generate phi, modify phi, restrict V(phi), enforce conservation, connect another pillar, produce a residual law, or produce a falsifier, and V(phi) remains selected for calculation rather than ToE-derived. It preserves no ToE-native matter derivation, no native-generation theorem, no source admissibility or conservation, no Standard Model derivation, no canonical master-action promotion, no QFT-GR source-map or seam closure, no semiclassical coupling, no empirical validation, no public-readiness claim, no public-submission claim, and no scientific-validation claim"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_toe_native_phi_ck_variational_content_packet"
+        "prepare_master_action_ck_constraint_functional_definition_packet"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the native phi alignment closeout. -/
+/-- Previous live target consumed by the native phi C_k content packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_toe_native_phi_surface_alignment_witness_closeout"
-
-/-- Current live target after the native phi alignment closeout. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_toe_native_phi_ck_variational_content_packet"
+
+/-- Current live target after the native phi C_k content packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_master_action_ck_constraint_functional_definition_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_toe_native_phi_ck_variational_content_packet"
+    "prepare_master_action_ck_constraint_functional_definition_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
