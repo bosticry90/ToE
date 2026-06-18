@@ -5,6 +5,7 @@ import ToeFormal.Derivation.ToeNativeMatterSectorCalculationRouteSelection
 import ToeFormal.Derivation.ToeNativePhiSurfaceVariationAndSourceRoutePacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceVariationAndSourceRouteResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
+import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
 
 /-
 Thin QFT-GR lane aggregate for tiered validation. It exposes the scalar-sandbox
@@ -22,16 +23,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ToeNativePhiSignatureDomainAndPotentialPolicyPacket.phiPolicyPacketResult
+  ToeNativePhiVariationRetryUnderSelectedPolicyPacket.phiVariationRetryPacketResult
 
 def currentPacketId : String :=
-  ToeNativePhiSignatureDomainAndPotentialPolicyPacket.packetId
+  ToeNativePhiVariationRetryUnderSelectedPolicyPacket.packetId
 
-theorem qft_gr_lane_aggregate_exposes_native_phi_policy_packet :
+theorem qft_gr_lane_aggregate_exposes_native_phi_variation_retry_packet :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_" ++
-          "PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED" := by
+        "TOE_NATIVE_PHI_VARIATION_RETRY_UNDER_SELECTED_POLICY_PACKET_PREPARED_" ++
+          "PHI_VARIATION_ROUTE_REPRODUCES_SCALAR_WITNESS_UNDER_SELECTED_POLICY_" ++
+          "NO_NATIVE_GENERATION_CLAIM_CK_BLOCKED" := by
   constructor
   · rfl
   · rfl
