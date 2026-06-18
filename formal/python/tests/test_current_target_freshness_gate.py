@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source"
+    "prepare_qft_gr_classical_einstein_scalar_coupling_route_packet_for_provisional_scalar_source"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,7 +1329,7 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source"
+    "prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1422,7 +1422,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source"
+    "prepare_qft_gr_classical_einstein_scalar_coupling_route_packet_for_provisional_scalar_source"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1439,7 +1439,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRSourceAdmissibilityReviewForProvisionalScalarSource.lean"
+    / "QFTGRSemiclassicalCouplingGateScopeReviewForProvisionalScalarSource.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2961,24 +2961,24 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert scalar_conservation_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_SOURCE_ADMISSIBILITY_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_"
-        "20260617_v0.json"
+        "QFT_GR_SEMICLASSICAL_COUPLING_GATE_SCOPE_REVIEW_FOR_PROVISIONAL_"
+        "SCALAR_SOURCE_20260618_v0.json"
     )
     assert (
         scalar_conservation_active_workstream["outcome_id"]
-        == "QFT_GR_SOURCE_ADMISSIBILITY_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_"
-        "PREPARED_WITH_PROVISIONAL_SCALAR_SOURCE_PASSES_LOCAL_SOURCE_ADMISSIBILITY_"
-        "REVIEW_ON_SHELL_NO_SEMICLASSICAL_OR_TOE_NATIVE_CLOSURE"
+        == "QFT_GR_SEMICLASSICAL_COUPLING_GATE_SCOPE_REVIEW_FOR_PROVISIONAL_"
+        "SCALAR_SOURCE_PREPARED_WITH_CLASSICAL_EINSTEIN_SCALAR_COUPLING_"
+        "ROUTE_RECORDED_AND_SEMICLASSICAL_COUPLING_NOT_AUTHORIZED"
     )
     assert (
         scalar_conservation_active_workstream["claim_level"]
-        == "Level 3 QFT-GR semiclassical-coupling gate scope review for provisional scalar source authorized"
+        == "Level 3 QFT-GR classical Einstein-scalar sandbox route packet authorized after semiclassical gate denial"
     )
     assert (
         scalar_conservation_active_workstream["claim_ceiling"]
-        == "scope review preparation only no semiclassical Einstein equation derivation no qft_gr closure no toe-native matter derivation"
+        == "classical sandbox route packet preparation only no semiclassical coupling no qft_gr closure no toe-native matter derivation"
     )
-    assert "conditional local" in scalar_conservation_active_workstream[
+    assert "classical Einstein-scalar sandbox route" in scalar_conservation_active_workstream[
         "non_claim_boundary"
     ]
     assert (
@@ -3137,6 +3137,80 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "yes"
     )
     assert (
+        scalar_conservation_active_workstream[
+            "semiclassical_coupling_gate_scope_review_completed"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream["semiclassical_coupling_gate_result"]
+        == "CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_RECORDED_SEMICLASSICAL_"
+        "COUPLING_NOT_AUTHORIZED"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "semiclassical_coupling_not_authorized_result"
+        ]
+        == "SEMICLASSICAL_COUPLING_NOT_AUTHORIZED_FOR_PROVISIONAL_CLASSICAL_"
+        "SCALAR_SOURCE_REQUIRES_QUANTUM_EXPECTATION_RENORMALIZATION_AND_STATE_DOMAIN"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "classical_einstein_scalar_coupling_route_recorded"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "classical_einstein_scalar_coupling_route_packet_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "classical_einstein_scalar_coupling_constructed"
+        ]
+        == "no"
+    )
+    assert (
+        scalar_conservation_active_workstream["classical_einstein_scalar_equation_form"]
+        == "G_{mu nu} + Lambda g_{mu nu} = 8 pi G_N T^{scalar}_{mu nu}"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "semiclassical_einstein_expectation_form"
+        ]
+        == "G_{mu nu} + Lambda g_{mu nu} = 8 pi G_N <T_hat_{mu nu}>_ren"
+    )
+    assert (
+        scalar_conservation_active_workstream["proof_depth_label"]
+        == "SYMBOLIC_CALCULATION_RECORDED_RECORD_VALIDATED"
+    )
+    assert scalar_conservation_active_workstream["record_validated"] == "yes"
+    assert scalar_conservation_active_workstream["symbolic_calculation_recorded"] == "yes"
+    assert (
+        scalar_conservation_active_workstream[
+            "formal_differential_geometry_theorem_backed"
+        ]
+        == "no"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "aggregate_lean_validation_status_for_packet"
+        ]
+        == "NOT_RUN"
+    )
+    assert (
+        scalar_conservation_active_workstream["auxiliary_hygiene_target_queued"]
+        == "prepare_status_surface_stale_current_token_quarantine_for_public_summary_surfaces"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "auxiliary_hygiene_target_supersedes_qft_gr_live_target"
+        ]
+        == "no"
+    )
+    assert (
         scalar_conservation_active_workstream["lean_validation_tier_policy_formalized"]
         == "yes"
     )
@@ -3152,13 +3226,22 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "state_expectation_functional_link_claimed",
         "renormalization_result_claimed",
         "renormalized_stress_energy_constructed",
+        "renormalized_expectation_value_constructed",
+        "renormalization_scheme_supplied",
+        "quantum_state_supplied",
+        "stress_energy_operator_constructed",
+        "state_domain_supplied",
+        "anomaly_or_regularization_controls_supplied",
         "conservation_claimed",
         "off_shell_conservation_claimed",
         "arbitrary_phi_conserved_claimed",
         "unconditional_conservation_claimed",
         "Bianchi_compatibility_completed",
+        "semiclassical_coupling_authorized",
+        "semiclassical_quantum_expectation_route_authorized",
         "semiclassical_coupling_claimed",
         "semiclassical_einstein_equation_derived",
+        "toe_native_matter_source_route_defined",
         "qft_gr_closure_claimed",
         "qft_gr_seam_closed",
         "empirical_validation_claimed",

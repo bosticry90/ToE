@@ -4,6 +4,7 @@ import ToeFormal.Derivation.QFTGRActionDerivabilityRetryWithProvisionalMatterSec
 import ToeFormal.Derivation.QFTGRWeakConservationTestForProvisionalScalarStressEnergySource
 import ToeFormal.Derivation.QFTGRBianchiCompatibilityTestForProvisionalScalarStressEnergySource
 import ToeFormal.Derivation.QFTGRSourceAdmissibilityReviewForProvisionalScalarSource
+import ToeFormal.Derivation.QFTGRSemiclassicalCouplingGateScopeReviewForProvisionalScalarSource
 
 /-
 Small lane-level Lean aggregate for the imported provisional scalar QFT-GR
@@ -18,21 +19,21 @@ namespace QFTGRScalarSandbox
 def aggregateTargetId : String := "ToeFormal.Derivation.QFTGRScalarSandbox"
 
 def currentPacketId : String :=
-  ToeFormal.Derivation.QFTGRSourceAdmissibilityReviewForProvisionalScalarSource.packetId
+  ToeFormal.Derivation.QFTGRSemiclassicalCouplingGateScopeReviewForProvisionalScalarSource.packetId
 
 def currentOutcomeId : String :=
-  ToeFormal.Derivation.QFTGRSourceAdmissibilityReviewForProvisionalScalarSource.outcomeId
+  ToeFormal.Derivation.QFTGRSemiclassicalCouplingGateScopeReviewForProvisionalScalarSource.outcomeId
 
 def currentScopedResult : String :=
-  ToeFormal.Derivation.QFTGRSourceAdmissibilityReviewForProvisionalScalarSource.provisionalScalarSourceAdmissibilityResult
+  ToeFormal.Derivation.QFTGRSemiclassicalCouplingGateScopeReviewForProvisionalScalarSource.semiclassicalCouplingGateResult
 
 def aggregateRecordsLocalScalarSandboxReview : Bool := true
 
-theorem aggregate_points_to_current_scalar_source_review :
+theorem aggregate_points_to_current_scalar_gate_scope_review :
     aggregateRecordsLocalScalarSandboxReview = true ∧
       currentScopedResult =
-        "PROVISIONAL_SCALAR_SOURCE_PASSES_LOCAL_SOURCE_ADMISSIBILITY_REVIEW_ON_SHELL_" ++
-          "NO_SEMICLASSICAL_OR_TOE_NATIVE_CLOSURE" := by
+        "CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_RECORDED_SEMICLASSICAL_" ++
+          "COUPLING_NOT_AUTHORIZED" := by
   decide
 
 end QFTGRScalarSandbox

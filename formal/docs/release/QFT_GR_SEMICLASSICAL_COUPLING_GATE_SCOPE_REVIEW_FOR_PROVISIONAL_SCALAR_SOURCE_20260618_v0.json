@@ -1,0 +1,194 @@
+{
+  "acceptance_criteria": {
+    "consumes_expected_live_target": true,
+    "local_scalar_source_admissibility_review_passed": true,
+    "proof_depth_labeled": true,
+    "qft_gr_closure_still_denied": true,
+    "route_split_recorded": true,
+    "semiclassical_requirements_absent": true,
+    "source_packet_available": true,
+    "stale_token_quarantine_queued_non_superseding": true
+  },
+  "accepted": true,
+  "accepted_outcomes_considered": [
+    "CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_RECORDED_SEMICLASSICAL_COUPLING_NOT_AUTHORIZED",
+    "SEMICLASSICAL_COUPLING_NOT_AUTHORIZED_FOR_PROVISIONAL_CLASSICAL_SCALAR_SOURCE_REQUIRES_QUANTUM_EXPECTATION_RENORMALIZATION_AND_STATE_DOMAIN",
+    "SEMICLASSICAL_COUPLING_GATE_BLOCKED_BY_ROUTE_STATUS_AMBIGUITY"
+  ],
+  "anomaly_or_regularization_controls_supplied": false,
+  "arbitrary_distributional_source_admissibility_claimed": false,
+  "arbitrary_distributional_source_promoted": false,
+  "artifact_id": "QFT_GR_SEMICLASSICAL_COUPLING_GATE_SCOPE_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_20260618_v0",
+  "authorized_by_source_admissibility_artifact_id": "QFT_GR_SOURCE_ADMISSIBILITY_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_20260617_v0",
+  "authorized_by_source_admissibility_outcome": "QFT_GR_SOURCE_ADMISSIBILITY_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_PREPARED_WITH_PROVISIONAL_SCALAR_SOURCE_PASSES_LOCAL_SOURCE_ADMISSIBILITY_REVIEW_ON_SHELL_NO_SEMICLASSICAL_OR_TOE_NATIVE_CLOSURE",
+  "auxiliary_hygiene_target_queued": "prepare_status_surface_stale_current_token_quarantine_for_public_summary_surfaces",
+  "auxiliary_hygiene_target_supersedes_qft_gr_live_target": false,
+  "captured_at_utc": "2026-06-18T00:00:00Z",
+  "classical_einstein_scalar_coupling_claimed_scope": "classical sandbox route preparation only for the provisional real-scalar stress-energy source",
+  "classical_einstein_scalar_coupling_constructed": false,
+  "classical_einstein_scalar_coupling_route_packet_authorized": true,
+  "classical_einstein_scalar_coupling_route_recorded": true,
+  "classical_einstein_scalar_equation_form": "G_{mu nu} + Lambda g_{mu nu} = 8 pi G_N T^{scalar}_{mu nu}",
+  "consumed_target": "prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source",
+  "critical_gate_fail_conditions": [
+    "semiclassical_coupling_authorized",
+    "semiclassical_Einstein_equation_derivation",
+    "quantum_stress_energy_expectation_construction",
+    "renormalization_result",
+    "state_domain_supplied",
+    "ToE_native_matter_derivation",
+    "QFT_GR_closure",
+    "source_map_closure",
+    "empirical_validation",
+    "public_ToE_claim",
+    "master_action_promotion"
+  ],
+  "downstream_progression": [
+    {
+      "decision": "prepare_qft_gr_classical_einstein_scalar_coupling_route_packet_for_provisional_scalar_source",
+      "reason": "The scalar source may be used for a bounded classical Einstein-scalar route packet, without claiming a semiclassical expectation-value source.",
+      "stage": "classical_einstein_scalar_coupling_route",
+      "status": "CLASSICAL_SANDBOX_ROUTE_PACKET_AUTHORIZED"
+    },
+    {
+      "decision": "SEMICLASSICAL_COUPLING_NOT_AUTHORIZED_FOR_PROVISIONAL_CLASSICAL_SCALAR_SOURCE_REQUIRES_QUANTUM_EXPECTATION_RENORMALIZATION_AND_STATE_DOMAIN",
+      "reason": "No quantum state, stress-energy operator, renormalized expectation value, state domain, renormalization scheme, or anomaly/regularization control is supplied.",
+      "stage": "semiclassical_quantum_expectation_route",
+      "status": "NOT_AUTHORIZED"
+    },
+    {
+      "decision": "TOE_NATIVE_MATTER_SECTOR_NOT_YET_DEFINED",
+      "reason": "The scalar source is imported as a provisional sandbox.",
+      "stage": "toe_native_matter_source_route",
+      "status": "NOT_DEFINED"
+    },
+    {
+      "decision": "prepare_status_surface_stale_current_token_quarantine_for_public_summary_surfaces",
+      "reason": "Stale current-token quarantine remains queued as hygiene and does not replace the active QFT-GR live target.",
+      "stage": "status_surface_hygiene",
+      "status": "QUEUED_NON_SUPERSEDING"
+    }
+  ],
+  "empirical_validation_claimed": false,
+  "formal_differential_geometry_theorem_backed": false,
+  "lane_level_lean_target_files": [
+    "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGRScalarSandbox.lean",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  ],
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.QFTGRScalarSandbox",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRSemiclassicalCouplingGateScopeReviewForProvisionalScalarSource.lean",
+  "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+  "local_source_admissibility_review_passed": true,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "The provisional scalar packet supplies a classical stress-energy source for a bounded Einstein-scalar sandbox route. It does not supply the semiclassical source <T_hat_{mu nu}>_ren required for G_{mu nu} + Lambda g_{mu nu} = 8 pi G_N <T_hat_{mu nu}>_ren. Semiclassical coupling remains unauthorized.",
+  "non_claim_boundary": "This packet records a gate/scope review only. It records a classical Einstein-scalar sandbox route as a possible next packet and denies semiclassical coupling authorization because the repo does not supply a quantum state, stress-energy operator, renormalized expectation value, state domain, renormalization scheme, anomaly controls, ToE-native matter derivation, QFT-GR closure, empirical validation, public readiness, or master-action promotion.",
+  "outcome_id": "QFT_GR_SEMICLASSICAL_COUPLING_GATE_SCOPE_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_PREPARED_WITH_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_RECORDED_AND_SEMICLASSICAL_COUPLING_NOT_AUTHORIZED",
+  "packet_classification": "qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source_records_classical_route_and_blocks_semiclassical_coupling",
+  "packet_id": "QFT_GR_SEMICLASSICAL_COUPLING_GATE_SCOPE_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_v0",
+  "phase2_readiness_claim": false,
+  "pillar_completion_inferred": false,
+  "prepared": true,
+  "proof_depth_label": "SYMBOLIC_CALCULATION_RECORDED_RECORD_VALIDATED",
+  "provisional_scalar_source_passes_local_source_admissibility_review": true,
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_source_map_closure_authorized": false,
+  "quantum_state_supplied": false,
+  "quantum_stress_energy_expectation_constructed": false,
+  "record_validated": true,
+  "renormalization_result_claimed": false,
+  "renormalization_scheme_supplied": false,
+  "renormalized_expectation_value_constructed": false,
+  "renormalized_stress_energy_constructed": false,
+  "route_review_row_count": 3,
+  "route_review_rows": [
+    {
+      "claim_ceiling": "classical sandbox route only; no semiclassical expectation value and no ToE-native matter derivation",
+      "equation_form": "G_{mu nu} + Lambda g_{mu nu} = 8 pi G_N T^{scalar}_{mu nu}",
+      "reason": "The provisional scalar chain supplies a classical scalar stress-energy source that is action-derived, conserved on shell, Bianchi-compatible on shell, and locally reviewed under scalar sandbox assumptions.",
+      "route_id": "classical_einstein_scalar_coupling",
+      "status": "route_recorded_classical_sandbox_packet_authorized"
+    },
+    {
+      "equation_form": "G_{mu nu} + Lambda g_{mu nu} = 8 pi G_N <T_hat_{mu nu}>_ren",
+      "missing_requirements": [
+        "quantum_state",
+        "stress_energy_operator",
+        "renormalized_expectation_value",
+        "state_domain",
+        "renormalization_scheme",
+        "anomaly_or_regularization_controls"
+      ],
+      "reason": "The available source is a classical scalar stress-energy tensor, not a renormalized quantum expectation value.",
+      "route_id": "semiclassical_quantum_expectation_coupling",
+      "status": "not_authorized"
+    },
+    {
+      "claim_ceiling": "no ToE-native matter/source route is supplied",
+      "reason": "TOE_NATIVE_MATTER_SECTOR_NOT_YET_DEFINED",
+      "route_id": "toe_native_matter_source_route",
+      "status": "not_defined"
+    }
+  ],
+  "schema_id": "QFT_GR_SEMICLASSICAL_COUPLING_GATE_SCOPE_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_20260618_v0",
+  "seam_closure_claim": false,
+  "selected_next_target": "prepare_qft_gr_classical_einstein_scalar_coupling_route_packet_for_provisional_scalar_source",
+  "selected_next_target_kind": "qft_gr_classical_einstein_scalar_coupling_route_packet_for_provisional_scalar_source_preparation",
+  "semiclassical_coupling_authorized": false,
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_coupling_gate_result": "CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_RECORDED_SEMICLASSICAL_COUPLING_NOT_AUTHORIZED",
+  "semiclassical_coupling_not_authorized_result": "SEMICLASSICAL_COUPLING_NOT_AUTHORIZED_FOR_PROVISIONAL_CLASSICAL_SCALAR_SOURCE_REQUIRES_QUANTUM_EXPECTATION_RENORMALIZATION_AND_STATE_DOMAIN",
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_einstein_expectation_form": "G_{mu nu} + Lambda g_{mu nu} = 8 pi G_N <T_hat_{mu nu}>_ren",
+  "semiclassical_quantum_expectation_route_authorized": false,
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "source_admissibility_result": "PROVISIONAL_SCALAR_SOURCE_PASSES_LOCAL_SOURCE_ADMISSIBILITY_REVIEW_ON_SHELL_NO_SEMICLASSICAL_OR_TOE_NATIVE_CLOSURE",
+  "standard_model_derivation_claimed": false,
+  "state_domain_supplied": false,
+  "state_expectation_functional_link_claimed": false,
+  "status": "ACTIVE_NONLIVE_GATE_SCOPE_RESULT",
+  "stress_energy_operator_constructed": false,
+  "symbolic_calculation_recorded": true,
+  "toe_matter_model_derived": false,
+  "toe_native_matter_derivation_claimed": false,
+  "toe_native_matter_sector_defined": false,
+  "toe_native_matter_source_route_defined": false,
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_allowed_values": [
+      "PASSED",
+      "INCOMPLETE_TIMEOUT_STEADY_PROGRESS",
+      "FAILED",
+      "NOT_RUN"
+    ],
+    "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+    "aggregate_timeout_with_steady_progress_interpretation": "incomplete_validation_not_mathematical_failure",
+    "checkpoint_type": "qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  }
+}

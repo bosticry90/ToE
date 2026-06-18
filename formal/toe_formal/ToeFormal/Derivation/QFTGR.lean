@@ -2,7 +2,7 @@ import ToeFormal.Derivation.QFTGRScalarSandbox
 
 /-
 Thin QFT-GR lane aggregate for tiered validation. At present it exposes the
-current scalar-sandbox source-admissibility chain without importing the full
+current scalar-sandbox gate/scope chain without importing the full
 repository-level ToeFormal surface.
 -/
 
@@ -21,8 +21,8 @@ def currentScopedResult : String :=
 theorem qft_gr_lane_aggregate_exposes_scalar_sandbox :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "PROVISIONAL_SCALAR_SOURCE_PASSES_LOCAL_SOURCE_ADMISSIBILITY_REVIEW_ON_SHELL_" ++
-          "NO_SEMICLASSICAL_OR_TOE_NATIVE_CLOSURE" := by
+        "CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_RECORDED_SEMICLASSICAL_" ++
+          "COUPLING_NOT_AUTHORIZED" := by
   decide
 
 end QFTGR
