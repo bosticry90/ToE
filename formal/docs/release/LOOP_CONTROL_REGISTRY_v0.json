@@ -1,5 +1,5 @@
 {
-  "active_lane": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
+  "active_lane": "prepare_toe_native_phi_variation_retry_under_selected_policy",
   "allowed_statuses": [
     "active",
     "retained",
@@ -159,7 +159,8 @@
     "review_toe_native_matter_sector_definition_packet_result",
     "select_toe_native_matter_sector_calculation_route",
     "prepare_toe_native_phi_surface_variation_and_source_route_packet",
-    "review_toe_native_phi_surface_variation_and_source_route_result"
+    "review_toe_native_phi_surface_variation_and_source_route_result",
+    "prepare_toe_native_phi_signature_domain_and_potential_policy_packet"
   ],
   "consumed_targets": [
     {
@@ -375,6 +376,14 @@
       "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSurfaceVariationAndSourceRouteResultReview.lean",
       "target": "review_toe_native_phi_surface_variation_and_source_route_result",
       "token": "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_DOMAIN_POTENTIAL_AND_CK_CONTENT"
+    },
+    {
+      "kind": "toe_native_phi_signature_domain_and_potential_policy_packet",
+      "report": "formal/docs/release/TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0.json",
+      "status": "completed_consumed_live_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
+      "target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
+      "token": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED"
     }
   ],
   "controls": [
@@ -737,9 +746,9 @@
     }
   ],
   "current_target_state": {
-    "active_lane": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
+    "active_lane": "prepare_toe_native_phi_variation_retry_under_selected_policy",
     "candidate_live_next_targets": [
-      "prepare_toe_native_phi_signature_domain_and_potential_policy_packet"
+      "prepare_toe_native_phi_variation_retry_under_selected_policy"
     ],
     "completed_targets": [
       "v01_alpha_retained_tranche_004_source_map_closure_adjudication_packet",
@@ -939,7 +948,8 @@
       "review_toe_native_matter_sector_definition_packet_result",
       "select_toe_native_matter_sector_calculation_route",
       "prepare_toe_native_phi_surface_variation_and_source_route_packet",
-      "review_toe_native_phi_surface_variation_and_source_route_result"
+      "review_toe_native_phi_surface_variation_and_source_route_result",
+      "prepare_toe_native_phi_signature_domain_and_potential_policy_packet"
     ],
     "consumed_targets": [
       {
@@ -1355,6 +1365,14 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSurfaceVariationAndSourceRouteResultReview.lean",
         "target": "review_toe_native_phi_surface_variation_and_source_route_result",
         "token": "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_DOMAIN_POTENTIAL_AND_CK_CONTENT"
+      },
+      {
+        "kind": "toe_native_phi_signature_domain_and_potential_policy_packet",
+        "report": "formal/docs/release/TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0.json",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
+        "target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
+        "token": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED"
       }
     ],
     "current_target_coverage": [
@@ -2200,6 +2218,14 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSurfaceVariationAndSourceRouteResultReview.lean",
         "target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
         "token": "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_DOMAIN_POTENTIAL_AND_CK_CONTENT"
+      },
+      {
+        "kind": "toe_native_phi_variation_retry_under_selected_policy_packet_preparation",
+        "report": "formal/docs/release/TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0.json",
+        "status": "active_live_next_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
+        "target": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+        "token": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED"
       }
     ],
     "focused_gate": "formal/python/tests/test_toe_native_matter_sector_definition_packet_result_review_gate.py",
@@ -2210,12 +2236,12 @@
       "master_action_promotion",
       "governance_manifest_enrollment"
     ],
-    "live_next_target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
-    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSurfaceVariationAndSourceRouteResultReview.lean",
+    "live_next_target": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+    "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
     "live_next_target_frontier_source": "formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean",
-    "live_next_target_kind": "toe_native_phi_signature_domain_and_potential_policy_packet_preparation",
-    "live_next_target_outcome": "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_DOMAIN_POTENTIAL_AND_CK_CONTENT",
-    "live_next_target_report": "formal/docs/release/TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_RESULT_REVIEW_20260618_v0.json",
+    "live_next_target_kind": "toe_native_phi_variation_retry_under_selected_policy_packet_preparation",
+    "live_next_target_outcome": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED",
+    "live_next_target_report": "formal/docs/release/TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0.json",
     "next_strict_target_coverage": {
       "analyze_qft_gr_minimal_working_model_candidate_only": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/QFTGRMinimalWorkingModelCandidateAnalysis.lean",
@@ -2796,12 +2822,12 @@
         "token": "TOE_NATIVE_MATTER_SECTOR_DEFINITION_PACKET_PREPARED_MASTER_ACTION_MATTER_SURFACES_INDEXED_AS_NATIVE_CANDIDATES_NO_DERIVATION_CLAIM"
       },
       "prepare_toe_native_phi_signature_domain_and_potential_policy_packet": {
-        "kind": "toe_native_phi_signature_domain_and_potential_policy_packet_preparation",
-        "report": "formal/docs/release/TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_RESULT_REVIEW_20260618_v0.json",
-        "status": "active_live_next_target",
-        "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSurfaceVariationAndSourceRouteResultReview.lean",
+        "kind": "toe_native_phi_signature_domain_and_potential_policy_packet",
+        "report": "formal/docs/release/TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0.json",
+        "status": "completed_consumed_live_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
         "target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
-        "token": "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_DOMAIN_POTENTIAL_AND_CK_CONTENT"
+        "token": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED"
       },
       "prepare_toe_native_phi_surface_variation_and_source_route_packet": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativeMatterSectorCalculationRouteSelection.lean",
@@ -2811,6 +2837,14 @@
         "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativeMatterSectorCalculationRouteSelection.lean",
         "target": "prepare_toe_native_phi_surface_variation_and_source_route_packet",
         "token": "TOE_NATIVE_MATTER_SECTOR_CALCULATION_ROUTE_SELECTION_SELECTS_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_NO_DERIVATION_CLAIM"
+      },
+      "prepare_toe_native_phi_variation_retry_under_selected_policy": {
+        "kind": "toe_native_phi_variation_retry_under_selected_policy_packet_preparation",
+        "report": "formal/docs/release/TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0.json",
+        "status": "active_live_next_target",
+        "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
+        "target": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+        "token": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED"
       },
       "review_minimal_global_toe_mathematical_obligation_index_result": {
         "evidence": "formal/toe_formal/ToeFormal/Derivation/MinimalGlobalToeMathematicalObligationIndexResultReview.lean",
@@ -3541,10 +3575,11 @@
       "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_packet_from_research_candidate_result_review",
       "v01_alpha_retained_tranche_004_source_map_witness_chain_construction_result_review",
       "prepare_toe_native_phi_surface_variation_and_source_route_packet",
-      "review_toe_native_phi_surface_variation_and_source_route_result"
+      "review_toe_native_phi_surface_variation_and_source_route_result",
+      "prepare_toe_native_phi_signature_domain_and_potential_policy_packet"
     ],
     "post_sweep_queue_authority_status": "HISTORICAL_NONLIVE_FIRST_WAVE_QUEUE_v0",
-    "previous_live_next_target": "review_toe_native_phi_surface_variation_and_source_route_result",
+    "previous_live_next_target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
     "schema_id": "CURRENT_TARGET_STATE_v0",
     "target_history": [
       "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement",
@@ -3667,7 +3702,8 @@
       "select_toe_native_matter_sector_calculation_route",
       "prepare_toe_native_phi_surface_variation_and_source_route_packet",
       "review_toe_native_phi_surface_variation_and_source_route_result",
-      "prepare_toe_native_phi_signature_domain_and_potential_policy_packet"
+      "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
+      "prepare_toe_native_phi_variation_retry_under_selected_policy"
     ]
   },
   "cycle_waivers": [],
@@ -4146,10 +4182,10 @@
       "archived"
     ]
   },
-  "live_next_target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
-  "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSurfaceVariationAndSourceRouteResultReview.lean",
-  "live_next_target_outcome": "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_DOMAIN_POTENTIAL_AND_CK_CONTENT",
-  "live_next_target_report": "formal/docs/release/TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_RESULT_REVIEW_20260618_v0.json",
+  "live_next_target": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+  "live_next_target_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
+  "live_next_target_outcome": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED",
+  "live_next_target_report": "formal/docs/release/TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0.json",
   "next_strict_target_coverage": [
     "audit_master_action_citation_language_against_retained_boundaries",
     "cite_only_bounded_retained_assumptions",
@@ -4514,7 +4550,8 @@
     "select_toe_native_matter_sector_calculation_route",
     "prepare_toe_native_phi_surface_variation_and_source_route_packet",
     "review_toe_native_phi_surface_variation_and_source_route_result",
-    "prepare_toe_native_phi_signature_domain_and_potential_policy_packet"
+    "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
+    "prepare_toe_native_phi_variation_retry_under_selected_policy"
   ],
   "non_claim_boundary": "Repository-local loop-control registry only; no Phase 2 authorization, seam closure, empirical validation, master-action promotion, or scientific adequacy claim.",
   "non_promotion_assertions": {
@@ -4524,7 +4561,7 @@
     "phase2_authorized": false,
     "seam_closure_claimed": false
   },
-  "previous_live_next_target": "review_toe_native_phi_surface_variation_and_source_route_result",
+  "previous_live_next_target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
   "promotion_escrow": {
     "current_tranche_governance_manifest_enrollment": "not_authorized",
     "required_steps": [
@@ -5670,6 +5707,14 @@
       "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSurfaceVariationAndSourceRouteResultReview.lean",
       "target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
       "token": "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_DOMAIN_POTENTIAL_AND_CK_CONTENT"
+    },
+    {
+      "kind": "toe_native_phi_variation_retry_under_selected_policy_packet_preparation",
+      "report": "formal/docs/release/TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0.json",
+      "status": "active_live_next_target",
+      "surface": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
+      "target": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+      "token": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED"
     }
   ],
   "token_family_coverage": [
@@ -53275,15 +53320,20 @@
       "workstream_id": "review_toe_native_phi_surface_variation_and_source_route_result"
     },
     {
-      "active_lane": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
-      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSurfaceVariationAndSourceRouteResultReview.lean",
+      "active_lane": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
       "authorized_next_strict_target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
       "authorized_target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
       "bianchi_compatibility_claimed": "no",
       "boundary_assumption_policy_required": "yes",
+      "box_operator_convention": "Box_g phi_i = g^{mu nu} nabla_mu nabla_nu phi_i",
       "calculation_step_count": "8",
       "canonical_master_action_promoted": "no",
+      "ck_allowed_to_modify_phi_equation": "no",
+      "ck_role_policy": "C_k variational content is recorded as undefined and is not allowed to modify the phi equation in this packet",
+      "ck_variational_content_defined": "no",
       "ck_variational_content_packet_deferred": "yes",
+      "ck_variational_content_still_blocked": "yes",
       "ck_variational_content_still_undefined": "yes",
       "claim_ceiling": "raw symbolic phi-route result review only no toe-native matter derivation no source admissibility or conservation no standard model derivation no qft-gr closure no semiclassical coupling no canonical master-action promotion",
       "claim_level": "Level 3 result review; raw phi route accepted, native derivation blocked",
@@ -53292,25 +53342,38 @@
       "empirical_validation_claimed": "no",
       "field_contract_item_count": "7",
       "field_contract_items": "metric signature,scalar field domain,number of phi fields,kinetic sign,potential policy,variation convention,boundary assumptions",
+      "field_domain_policy": "smooth finite-action scalar fields on a smooth Lorentzian four-manifold; variations are compactly supported or boundary terms are fixed; Sobolev and distributional extensions are not selected here",
       "formal_theorem_backed_matter_derivation": "no",
       "imported_scalar_comparison_decision": "matches_imported_scalar_witness_only_after_explicit_signature_and_kinetic_sign_normalization_and_after_setting_C_k_variations_to_zero",
       "imported_scalar_witness_not_promoted": "yes",
+      "kinetic_convention_policy": "L_phi^MA = +1/2 sum_i g^{mu nu} nabla_mu phi_i nabla_nu phi_i - V(phi) under the (+,-,-,-) signature",
       "kinetic_sign_policy_required": "yes",
       "master_action_promoted": "no",
       "master_action_promotion_authorized": "no",
+      "metric_signature_policy": "(+,-,-,-)",
       "metric_signature_policy_required": "yes",
       "native_derivation_blocked": "yes",
-      "non_claim_boundary": "This result review accepts raw symbolic phi-route recording only. It does not promote the imported scalar witness into a native derivation, does not define C_k variational content, does not claim source admissibility or conservation, does not close QFT-GR, does not authorize semiclassical coupling, does not promote the master action, does not claim empirical validation, and does not authorize public readiness or release completion.",
+      "non_claim_boundary": "This policy packet selects calculation conventions only. It does not derive ToE-native matter, does not derive or uniquely select V(phi), does not define C_k variational content, does not claim source admissibility or conservation, does not close QFT-GR, does not authorize semiclassical coupling, does not promote the master action, does not claim empirical validation, and does not authorize public readiness or release completion.",
       "number_of_phi_fields_policy_required": "yes",
-      "outcome_id": "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_DOMAIN_POTENTIAL_AND_CK_CONTENT",
-      "packet_classification": "toe_native_phi_surface_variation_route_result_review_accepts_raw_symbolic_route_and_blocks_native_derivation",
+      "outcome_id": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED",
+      "packet_classification": "toe_native_phi_signature_domain_and_potential_policy_packet_selects_nonpromotional_scalar_conventions_and_blocks_ck_variational_content",
       "phase2_readiness_claim": "no",
+      "phi_policy_decision": "PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED",
+      "phi_policy_packet_result": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED",
       "phi_route_packet_result": "TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_PACKET_PREPARED_RAW_VARIATION_RECORDED_SOURCE_ROUTE_BLOCKED_FOR_NATIVE_DERIVATION",
       "phi_stress_energy_derived_as_toe_native": "no",
       "phi_surface_variation_route_prepared": "yes",
       "phi_variation_derived_as_toe_native": "no",
+      "phi_variation_retry_authorized": "yes",
+      "phi_variation_retry_executed": "no",
       "phi_variation_route_executed": "no",
       "pillar_completion_inferred": "no",
+      "policy_blocked_count": "1",
+      "policy_contract_recorded": "yes",
+      "policy_item_count": "8",
+      "policy_selected_count": "7",
+      "policy_status": "partial_nonpromotional_selection",
+      "potential_policy": "V : R^{|I_phi|} -> R is assumed smooth and bounded below for calculation; its functional form is not ToE-derived, and mass or polynomial specializations are deferred",
       "potential_policy_required": "yes",
       "proof_depth_label": "RESULT_REVIEW_ACCEPTS_RAW_SYMBOLIC_ROUTE_ONLY",
       "public_readiness_claimed": "no",
@@ -53323,16 +53386,18 @@
       "raw_phi_variation_formula_recorded": "yes",
       "raw_symbolic_phi_route_recorded": "yes",
       "record_validated": "yes",
-      "report": "formal/docs/release/TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_RESULT_REVIEW_20260618_v0.json",
+      "report": "formal/docs/release/TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0.json",
       "retained_blocker_count": "6",
       "review_criteria_accepted_count": "10",
       "review_criteria_count": "10",
       "review_result": "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_DOMAIN_POTENTIAL_AND_CK_CONTENT",
       "route_question_count": "9",
       "scalar_field_domain_policy_required": "yes",
+      "scalar_field_type_policy": "finite real scalar multiplet phi_i : M -> R with i in I_phi; single-field specialization allowed for imported scalar comparison; I_phi cardinality is not ToE-derived",
       "seam_closure_claim": "no",
-      "selected_next_target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
-      "selected_next_target_kind": "toe_native_phi_signature_domain_and_potential_policy_packet_preparation",
+      "selected_next_target": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+      "selected_next_target_kind": "toe_native_phi_variation_retry_under_selected_policy_packet_preparation",
+      "selected_phi_equation_no_ck": "Box_g phi_i + partial_i V(phi) = 0",
       "selected_route_id": "toe_native_phi_surface_variation_and_source_route",
       "selected_surface_symbol": "phi",
       "semiclassical_coupling_authorized": "no",
@@ -53340,15 +53405,16 @@
       "semiclassical_einstein_equation_derived": "no",
       "semiclassical_source_established": "no",
       "signature_domain_potential_policy_packet_authorized": "yes",
+      "signature_domain_potential_policy_selected": "yes",
       "source_admissibility_claimed": "no",
       "source_admissibility_completed": "no",
       "source_conservation_claimed": "no",
       "source_map_closed": "no",
       "source_route_status_decision": "raw_stress_energy_candidate_recorded_but_source_route_blocked_for_toe_native_status",
       "standard_model_derivation_claimed": "no",
-      "status": "active",
+      "status": "paused",
       "stress_energy_candidate_formula_recorded": "yes",
-      "symbolic_calculation_recorded": "yes",
+      "symbolic_calculation_recorded": "no",
       "toe_matter_model_derived": "no",
       "toe_matter_sector_derived": "no",
       "toe_native_matter_derivation_claimed": "no",
@@ -53359,8 +53425,95 @@
       "toe_native_phi_source_route_constructed": "no",
       "toe_native_status_decision": "declared_or_imported_master_action_surface_not_constraint_generated",
       "variation_convention_policy_required": "yes",
+      "variation_policy": "vary phi_i and inverse metric g^{mu nu} in separate variations; hold lambda_k and C_k inactive in this packet; compact-support or fixed-boundary conditions remove boundary terms",
+      "variation_retry_under_selected_policy_authorized": "yes",
       "weak_conservation_claimed": "no",
       "workstream_id": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet"
+    },
+    {
+      "active_lane": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+      "authorization_evidence": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
+      "authorized_next_strict_target": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+      "authorized_target": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+      "bianchi_compatibility_claimed": "no",
+      "box_operator_convention": "Box_g phi_i = g^{mu nu} nabla_mu nabla_nu phi_i",
+      "canonical_master_action_promoted": "no",
+      "ck_allowed_to_modify_phi_equation": "no",
+      "ck_role_policy": "C_k variational content is recorded as undefined and is not allowed to modify the phi equation in this packet",
+      "ck_variational_content_defined": "no",
+      "ck_variational_content_still_blocked": "yes",
+      "claim_ceiling": "policy selection only no toe-native matter derivation no source admissibility or conservation no standard model derivation no qft-gr closure no semiclassical coupling no canonical master-action promotion",
+      "claim_level": "Level 3 policy packet; phi scalar calculation convention selected nonpromotionally, C_k blocked",
+      "consumed_target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
+      "deferred_ck_variational_content_target": "prepare_toe_native_phi_ck_variational_content_packet",
+      "empirical_validation_claimed": "no",
+      "field_domain_policy": "smooth finite-action scalar fields on a smooth Lorentzian four-manifold; variations are compactly supported or boundary terms are fixed; Sobolev and distributional extensions are not selected here",
+      "formal_theorem_backed_matter_derivation": "no",
+      "imported_scalar_witness_not_promoted": "yes",
+      "kinetic_convention_policy": "L_phi^MA = +1/2 sum_i g^{mu nu} nabla_mu phi_i nabla_nu phi_i - V(phi) under the (+,-,-,-) signature",
+      "master_action_promoted": "no",
+      "master_action_promotion_authorized": "no",
+      "metric_signature_policy": "(+,-,-,-)",
+      "native_derivation_blocked": "yes",
+      "non_claim_boundary": "This policy packet selects calculation conventions only. It does not derive ToE-native matter, does not derive or uniquely select V(phi), does not define C_k variational content, does not claim source admissibility or conservation, does not close QFT-GR, does not authorize semiclassical coupling, does not promote the master action, does not claim empirical validation, and does not authorize public readiness or release completion.",
+      "outcome_id": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED",
+      "packet_classification": "toe_native_phi_signature_domain_and_potential_policy_packet_selects_nonpromotional_scalar_conventions_and_blocks_ck_variational_content",
+      "phase2_readiness_claim": "no",
+      "phi_policy_decision": "PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED",
+      "phi_policy_packet_result": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED",
+      "phi_stress_energy_derived_as_toe_native": "no",
+      "phi_variation_derived_as_toe_native": "no",
+      "phi_variation_retry_authorized": "yes",
+      "phi_variation_retry_executed": "no",
+      "phi_variation_route_executed": "no",
+      "pillar_completion_inferred": "no",
+      "policy_blocked_count": "1",
+      "policy_contract_recorded": "yes",
+      "policy_item_count": "8",
+      "policy_selected_count": "7",
+      "policy_status": "partial_nonpromotional_selection",
+      "potential_policy": "V : R^{|I_phi|} -> R is assumed smooth and bounded below for calculation; its functional form is not ToE-derived, and mass or polynomial specializations are deferred",
+      "proof_depth_label": "POLICY_SELECTION_RECORDED_NO_NATIVE_DERIVATION",
+      "public_readiness_claimed": "no",
+      "public_submission_authorized": "no",
+      "qft_gr_closure_claimed": "no",
+      "qft_gr_seam_closed": "no",
+      "qft_gr_solved": "no",
+      "qft_gr_source_map_closure_authorized": "no",
+      "record_validated": "yes",
+      "report": "formal/docs/release/TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0.json",
+      "review_criteria_accepted_count": "10",
+      "review_criteria_count": "10",
+      "scalar_field_type_policy": "finite real scalar multiplet phi_i : M -> R with i in I_phi; single-field specialization allowed for imported scalar comparison; I_phi cardinality is not ToE-derived",
+      "seam_closure_claim": "no",
+      "selected_next_target": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+      "selected_next_target_kind": "toe_native_phi_variation_retry_under_selected_policy_packet_preparation",
+      "selected_phi_equation_no_ck": "Box_g phi_i + partial_i V(phi) = 0",
+      "selected_stress_energy_policy": "use the previously recorded raw master-action stress-energy candidate only as a convention-dependent expression; no source-admissibility or conservation claim follows",
+      "semiclassical_coupling_authorized": "no",
+      "semiclassical_coupling_claimed": "no",
+      "semiclassical_einstein_equation_derived": "no",
+      "semiclassical_source_established": "no",
+      "signature_domain_potential_policy_selected": "yes",
+      "source_admissibility_claimed": "no",
+      "source_admissibility_completed": "no",
+      "source_conservation_claimed": "no",
+      "source_map_closed": "no",
+      "standard_model_derivation_claimed": "no",
+      "status": "active",
+      "symbolic_calculation_recorded": "no",
+      "toe_matter_model_derived": "no",
+      "toe_matter_sector_derived": "no",
+      "toe_native_matter_derivation_claimed": "no",
+      "toe_native_matter_sector_defined": "no",
+      "toe_native_matter_sector_derived": "no",
+      "toe_native_phi_source_admissibility_claimed": "no",
+      "toe_native_phi_source_conservation_claimed": "no",
+      "toe_native_phi_source_route_constructed": "no",
+      "variation_policy": "vary phi_i and inverse metric g^{mu nu} in separate variations; hold lambda_k and C_k inactive in this packet; compact-support or fixed-boundary conditions remove boundary terms",
+      "variation_retry_under_selected_policy_authorized": "yes",
+      "weak_conservation_claimed": "no",
+      "workstream_id": "prepare_toe_native_phi_variation_retry_under_selected_policy"
     }
   ]
 }

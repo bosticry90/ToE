@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativePhiSurfaceVariationAndSourceRouteResultReview
+import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativePhiSurfaceVariationAndSourceRouteResultReview.selectedNextTarget
+  ToeNativePhiSignatureDomainAndPotentialPolicyPacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativePhiSurfaceVariationAndSourceRouteResultReview.packetId
+  ToeNativePhiSignatureDomainAndPotentialPolicyPacket.packetId
 
-theorem current_target_points_to_toe_native_phi_signature_domain_policy_packet :
+theorem current_target_points_to_toe_native_phi_variation_retry_under_policy :
     currentLiveTarget =
-      "prepare_toe_native_phi_signature_domain_and_potential_policy_packet" := by
+      "prepare_toe_native_phi_variation_retry_under_selected_policy" := by
   rfl
 
 end CurrentTarget

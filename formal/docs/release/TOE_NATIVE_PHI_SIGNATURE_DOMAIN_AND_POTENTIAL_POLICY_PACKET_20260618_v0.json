@@ -1,0 +1,282 @@
+{
+  "acceptance_criteria": {
+    "box_operator_selected": true,
+    "ck_variational_content_still_blocked": true,
+    "consumes_expected_policy_packet_target": true,
+    "field_domain_selected": true,
+    "imported_scalar_witness_not_promoted": true,
+    "kinetic_convention_selected": true,
+    "metric_signature_selected": true,
+    "next_target_is_variation_retry": true,
+    "no_native_derivation_or_closure_claim": true,
+    "potential_policy_partially_selected": true,
+    "review_criteria_all_accepted": true,
+    "scalar_field_type_selected": true,
+    "variation_policy_selected": true
+  },
+  "accepted": true,
+  "artifact_id": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0",
+  "bianchi_compatibility_claimed": false,
+  "box_operator_convention": "Box_g phi_i = g^{mu nu} nabla_mu nabla_nu phi_i",
+  "canonical_master_action_promoted": false,
+  "captured_at_utc": "2026-06-18T00:00:00Z",
+  "ck_allowed_to_modify_phi_equation": false,
+  "ck_role_policy": "C_k variational content is recorded as undefined and is not allowed to modify the phi equation in this packet",
+  "ck_variational_content_defined": false,
+  "ck_variational_content_still_blocked": true,
+  "consumed_target": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
+  "critical_gate_fail_conditions": [
+    "treat selected convention as a ToE-native derivation",
+    "allow undefined C_k to modify the phi equation",
+    "derive or choose V(phi) as a final ToE law",
+    "claim source admissibility",
+    "claim conservation",
+    "claim QFT-GR closure",
+    "promote the working-form master action",
+    "authorize semiclassical coupling or public release"
+  ],
+  "deferred_ck_variational_content_target": "prepare_toe_native_phi_ck_variational_content_packet",
+  "downstream_progression": [
+    {
+      "decision": "PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED",
+      "reason": "A clean scalar calculation convention is selected, but C_k remains undefined and non-modifying.",
+      "stage": "phi_signature_domain_potential_policy_packet",
+      "status": "PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED"
+    },
+    {
+      "decision": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+      "reason": "The retry can now test the master-action phi surface under the selected signature, domain, potential, and variation policy without treating C_k as solved.",
+      "stage": "phi_variation_retry_under_selected_policy",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    },
+    {
+      "decision": "prepare_toe_native_phi_ck_variational_content_packet",
+      "reason": "C_k content still requires its own packet.",
+      "stage": "ck_variational_content_packet",
+      "status": "RETAINED_DEFERRED"
+    }
+  ],
+  "empirical_validation_claimed": false,
+  "field_domain_policy": "smooth finite-action scalar fields on a smooth Lorentzian four-manifold; variations are compactly supported or boundary terms are fixed; Sobolev and distributional extensions are not selected here",
+  "formal_theorem_backed_matter_derivation": false,
+  "imported_scalar_witness_not_promoted": true,
+  "kinetic_convention_policy": "L_phi^MA = +1/2 sum_i g^{mu nu} nabla_mu phi_i nabla_nu phi_i - V(phi) under the (+,-,-,-) signature",
+  "lane_level_lean_target_files": [
+    "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  ],
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket",
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean",
+  "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "This packet fixes a nonpromotional calculation policy for the working-form master-action phi surface: signature (+,-,-,-), finite real scalar multiplet, smooth finite-action field domain, the written +1/2 kinetic convention, Box_g = g^{mu nu} nabla_mu nabla_nu, smooth bounded-below but not ToE-derived potential, compact-support or fixed-boundary variation policy, and inactive C_k terms. It authorizes a retry under that policy while blocking native derivation and C_k modification claims.",
+  "metric_signature_policy": "(+,-,-,-)",
+  "native_derivation_blocked": true,
+  "non_claim_boundary": "This policy packet selects calculation conventions only. It does not derive ToE-native matter, does not derive or uniquely select V(phi), does not define C_k variational content, does not claim source admissibility or conservation, does not close QFT-GR, does not authorize semiclassical coupling, does not promote the master action, does not claim empirical validation, and does not authorize public readiness or release completion.",
+  "outcome_id": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED",
+  "packet_classification": "toe_native_phi_signature_domain_and_potential_policy_packet_selects_nonpromotional_scalar_conventions_and_blocks_ck_variational_content",
+  "packet_id": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_v0",
+  "phase2_readiness_claim": false,
+  "phi_policy_decision": "PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED",
+  "phi_policy_packet_result": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED",
+  "phi_stress_energy_derived_as_toe_native": false,
+  "phi_variation_derived_as_toe_native": false,
+  "phi_variation_retry_authorized": true,
+  "phi_variation_retry_executed": false,
+  "phi_variation_route_executed": false,
+  "pillar_completion_inferred": false,
+  "policy_blocked_count": 1,
+  "policy_contract_recorded": true,
+  "policy_item_count": 8,
+  "policy_items": [
+    {
+      "decision": "(+,-,-,-)",
+      "policy_id": "metric_signature",
+      "reason": "The master-action phi kinetic sign is kept as written for a bounded calculation convention.",
+      "status": "selected_nonpromotionally"
+    },
+    {
+      "decision": "finite real scalar multiplet phi_i : M -> R with i in I_phi; single-field specialization allowed for imported scalar comparison; I_phi cardinality is not ToE-derived",
+      "policy_id": "scalar_field_type",
+      "reason": "The master action writes a sum over phi_i, so the packet uses a finite real scalar multiplet while retaining the one-field comparison slice.",
+      "status": "selected_nonpromotionally"
+    },
+    {
+      "decision": "smooth finite-action scalar fields on a smooth Lorentzian four-manifold; variations are compactly supported or boundary terms are fixed; Sobolev and distributional extensions are not selected here",
+      "policy_id": "field_domain",
+      "reason": "The raw variation requires enough regularity for integration by parts and boundary-term control.",
+      "status": "selected_for_packet_calculation"
+    },
+    {
+      "decision": "L_phi^MA = +1/2 sum_i g^{mu nu} nabla_mu phi_i nabla_nu phi_i - V(phi) under the (+,-,-,-) signature",
+      "policy_id": "kinetic_convention",
+      "reason": "The convention normalizes the master-action phi surface for retry.",
+      "status": "selected_nonpromotionally"
+    },
+    {
+      "decision": "Box_g phi_i = g^{mu nu} nabla_mu nabla_nu phi_i",
+      "policy_id": "box_operator",
+      "reason": "The retry needs a fixed d'Alembertian convention.",
+      "status": "selected_nonpromotionally"
+    },
+    {
+      "decision": "V : R^{|I_phi|} -> R is assumed smooth and bounded below for calculation; its functional form is not ToE-derived, and mass or polynomial specializations are deferred",
+      "policy_id": "potential_policy",
+      "reason": "Smooth bounded-below V gives a calculation class without claiming that ToE determines V.",
+      "status": "partially_selected_not_derived"
+    },
+    {
+      "decision": "vary phi_i and inverse metric g^{mu nu} in separate variations; hold lambda_k and C_k inactive in this packet; compact-support or fixed-boundary conditions remove boundary terms",
+      "policy_id": "variation_policy",
+      "reason": "The next retry must state what is varied, what is held fixed, and how boundary terms are handled.",
+      "status": "selected_for_packet_calculation"
+    },
+    {
+      "decision": "C_k variational content is recorded as undefined and is not allowed to modify the phi equation in this packet",
+      "policy_id": "ck_role",
+      "reason": "Undefined seam constraints cannot silently modify the scalar equation.",
+      "status": "blocked_pending_ck_variational_content"
+    }
+  ],
+  "policy_selected_count": 7,
+  "policy_status": "partial_nonpromotional_selection",
+  "potential_policy": "V : R^{|I_phi|} -> R is assumed smooth and bounded below for calculation; its functional form is not ToE-derived, and mass or polynomial specializations are deferred",
+  "prepared": true,
+  "proof_depth_label": "POLICY_SELECTION_RECORDED_NO_NATIVE_DERIVATION",
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_solved": false,
+  "qft_gr_source_map_closure_authorized": false,
+  "record_validated": true,
+  "review_criteria": [
+    {
+      "assessment": "The result review authorized this policy packet.",
+      "evidence": "prepare_toe_native_phi_signature_domain_and_potential_policy_packet",
+      "row_id": "consumes_expected_policy_packet_target",
+      "status": "accepted"
+    },
+    {
+      "assessment": "A calculation signature is fixed nonpromotionally.",
+      "evidence": "(+,-,-,-)",
+      "row_id": "metric_signature_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The phi surface is treated as a finite real multiplet.",
+      "evidence": "finite real scalar multiplet phi_i : M -> R with i in I_phi; single-field specialization allowed for imported scalar comparison; I_phi cardinality is not ToE-derived",
+      "row_id": "scalar_field_type_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "A smooth finite-action calculation domain is selected.",
+      "evidence": "smooth finite-action scalar fields on a smooth Lorentzian four-manifold; variations are compactly supported or boundary terms are fixed; Sobolev and distributional extensions are not selected here",
+      "row_id": "field_domain_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The kinetic sign, normalization, and Box_g convention are fixed.",
+      "evidence": [
+        "L_phi^MA = +1/2 sum_i g^{mu nu} nabla_mu phi_i nabla_nu phi_i - V(phi) under the (+,-,-,-) signature",
+        "Box_g phi_i = g^{mu nu} nabla_mu nabla_nu phi_i"
+      ],
+      "row_id": "kinetic_and_box_conventions_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "V is constrained enough for calculation but not derived.",
+      "evidence": "V : R^{|I_phi|} -> R is assumed smooth and bounded below for calculation; its functional form is not ToE-derived, and mass or polynomial specializations are deferred",
+      "row_id": "potential_policy_partially_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Variation and boundary assumptions are fixed for retry.",
+      "evidence": "vary phi_i and inverse metric g^{mu nu} in separate variations; hold lambda_k and C_k inactive in this packet; compact-support or fixed-boundary conditions remove boundary terms",
+      "row_id": "variation_policy_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "C_k remains undefined and cannot modify the phi equation.",
+      "evidence": "C_k variational content is recorded as undefined and is not allowed to modify the phi equation in this packet",
+      "row_id": "ck_variational_content_blocked",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The scalar witness remains comparison evidence only.",
+      "evidence": true,
+      "row_id": "imported_scalar_witness_not_promoted",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The next packet may retry the phi variation under this policy.",
+      "evidence": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+      "row_id": "next_retry_authorized_under_selected_policy",
+      "status": "accepted"
+    }
+  ],
+  "review_criteria_accepted_count": 10,
+  "review_criteria_count": 10,
+  "review_result": "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_DOMAIN_POTENTIAL_AND_CK_CONTENT",
+  "reviewed_phi_route_result_review_artifact_id": "TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_RESULT_REVIEW_20260618_v0",
+  "reviewed_phi_route_result_review_outcome": "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_DOMAIN_POTENTIAL_AND_CK_CONTENT",
+  "scalar_field_type_policy": "finite real scalar multiplet phi_i : M -> R with i in I_phi; single-field specialization allowed for imported scalar comparison; I_phi cardinality is not ToE-derived",
+  "schema_id": "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_20260618_v0",
+  "seam_closure_claim": false,
+  "selected_next_target": "prepare_toe_native_phi_variation_retry_under_selected_policy",
+  "selected_next_target_kind": "toe_native_phi_variation_retry_under_selected_policy_packet_preparation",
+  "selected_phi_equation_no_ck": "Box_g phi_i + partial_i V(phi) = 0",
+  "selected_stress_energy_policy": "use the previously recorded raw master-action stress-energy candidate only as a convention-dependent expression; no source-admissibility or conservation claim follows",
+  "semiclassical_coupling_authorized": false,
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_source_established": false,
+  "signature_domain_potential_policy_selected": true,
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "source_conservation_claimed": false,
+  "source_map_closed": false,
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_PHI_SIGNATURE_DOMAIN_POTENTIAL_POLICY_PACKET",
+  "symbolic_calculation_recorded": false,
+  "toe_matter_model_derived": false,
+  "toe_matter_sector_derived": false,
+  "toe_native_matter_derivation_claimed": false,
+  "toe_native_matter_sector_defined": false,
+  "toe_native_matter_sector_derived": false,
+  "toe_native_phi_source_admissibility_claimed": false,
+  "toe_native_phi_source_conservation_claimed": false,
+  "toe_native_phi_source_route_constructed": false,
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+    "aggregate_timeout_with_steady_progress_interpretation": "incomplete_validation_not_mathematical_failure",
+    "checkpoint_type": "toe_native_phi_signature_domain_and_potential_policy_packet",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  },
+  "variation_policy": "vary phi_i and inverse metric g^{mu nu} in separate variations; hold lambda_k and C_k inactive in this packet; compact-support or fixed-boundary conditions remove boundary terms",
+  "variation_retry_under_selected_policy_authorized": true,
+  "weak_conservation_claimed": false
+}

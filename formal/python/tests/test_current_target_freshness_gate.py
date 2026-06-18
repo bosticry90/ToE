@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_toe_native_phi_signature_domain_and_potential_policy_packet"
+ACTIVE_LANE = "prepare_toe_native_phi_variation_retry_under_selected_policy"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,7 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "review_toe_native_phi_surface_variation_and_source_route_result"
+PREVIOUS_LIVE_TARGET = "prepare_toe_native_phi_signature_domain_and_potential_policy_packet"
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
 )
@@ -1417,7 +1417,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_toe_native_phi_signature_domain_and_potential_policy_packet"
+LIVE_TARGET = "prepare_toe_native_phi_variation_retry_under_selected_policy"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1433,7 +1433,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativePhiSurfaceVariationAndSourceRouteResultReview.lean"
+    / "ToeNativePhiSignatureDomainAndPotentialPolicyPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2956,7 +2956,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert phi_surface_review_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_RESULT_REVIEW_"
+        "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_"
         "20260618_v0.json"
     )
     assert (
@@ -2969,85 +2969,96 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         phi_surface_review_active_workstream["selected_next_target_kind"]
-        == "toe_native_phi_signature_domain_and_potential_policy_packet_preparation"
-    )
-    assert phi_surface_review_active_workstream["selected_surface_symbol"] == "phi"
-    assert (
-        phi_surface_review_active_workstream["selected_route_id"]
-        == "toe_native_phi_surface_variation_and_source_route"
-    )
-    assert (
-        phi_surface_review_active_workstream["phi_route_packet_result"]
-        == "TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_PACKET_PREPARED_"
-        "RAW_VARIATION_RECORDED_SOURCE_ROUTE_BLOCKED_FOR_NATIVE_DERIVATION"
+        == "toe_native_phi_variation_retry_under_selected_policy_packet_preparation"
     )
     assert (
         phi_surface_review_active_workstream["outcome_id"]
-        == "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_"
-        "RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_"
-        "DOMAIN_POTENTIAL_AND_CK_CONTENT"
+        == "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_"
+        "PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED"
     )
     assert (
         phi_surface_review_active_workstream["claim_level"]
-        == "Level 3 result review; raw phi route accepted, native derivation blocked"
+        == "Level 3 policy packet; phi scalar calculation convention selected nonpromotionally, C_k blocked"
     )
     assert (
         phi_surface_review_active_workstream["claim_ceiling"]
-        == "raw symbolic phi-route result review only no toe-native matter derivation no source admissibility or conservation no standard model derivation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
+        == "policy selection only no toe-native matter derivation no source admissibility or conservation no standard model derivation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
     )
-    assert phi_surface_review_active_workstream["raw_symbolic_phi_route_recorded"] == "yes"
+    assert (
+        phi_surface_review_active_workstream["phi_policy_decision"]
+        == "PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED"
+    )
+    assert (
+        phi_surface_review_active_workstream["phi_policy_packet_result"]
+        == "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_"
+        "PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED"
+    )
+    assert phi_surface_review_active_workstream["policy_status"] == (
+        "partial_nonpromotional_selection"
+    )
+    assert phi_surface_review_active_workstream["policy_item_count"] == "8"
+    assert phi_surface_review_active_workstream["policy_selected_count"] == "7"
+    assert phi_surface_review_active_workstream["policy_blocked_count"] == "1"
+    assert phi_surface_review_active_workstream["metric_signature_policy"] == "(+,-,-,-)"
+    assert "finite real scalar multiplet" in phi_surface_review_active_workstream[
+        "scalar_field_type_policy"
+    ]
+    assert "smooth finite-action" in phi_surface_review_active_workstream[
+        "field_domain_policy"
+    ]
+    assert "L_phi^MA = +1/2" in phi_surface_review_active_workstream[
+        "kinetic_convention_policy"
+    ]
+    assert (
+        phi_surface_review_active_workstream["box_operator_convention"]
+        == "Box_g phi_i = g^{mu nu} nabla_mu nabla_nu phi_i"
+    )
+    assert "not ToE-derived" in phi_surface_review_active_workstream[
+        "potential_policy"
+    ]
+    assert "hold lambda_k and C_k inactive" in phi_surface_review_active_workstream[
+        "variation_policy"
+    ]
+    assert "not allowed to modify" in phi_surface_review_active_workstream[
+        "ck_role_policy"
+    ]
+    assert (
+        phi_surface_review_active_workstream["selected_phi_equation_no_ck"]
+        == "Box_g phi_i + partial_i V(phi) = 0"
+    )
+    assert (
+        phi_surface_review_active_workstream["signature_domain_potential_policy_selected"]
+        == "yes"
+    )
+    assert (
+        phi_surface_review_active_workstream[
+            "variation_retry_under_selected_policy_authorized"
+        ]
+        == "yes"
+    )
+    assert phi_surface_review_active_workstream["phi_variation_retry_authorized"] == "yes"
+    assert phi_surface_review_active_workstream["phi_variation_retry_executed"] == "no"
+    assert phi_surface_review_active_workstream["ck_allowed_to_modify_phi_equation"] == "no"
+    assert phi_surface_review_active_workstream["ck_variational_content_defined"] == "no"
+    assert phi_surface_review_active_workstream["policy_contract_recorded"] == "yes"
+    assert phi_surface_review_active_workstream["native_derivation_blocked"] == "yes"
     assert phi_surface_review_active_workstream["native_derivation_blocked"] == "yes"
     assert (
         phi_surface_review_active_workstream["imported_scalar_witness_not_promoted"]
         == "yes"
     )
     assert (
-        phi_surface_review_active_workstream["ck_variational_content_still_undefined"]
-        == "yes"
-    )
-    assert (
-        phi_surface_review_active_workstream[
-            "signature_domain_potential_policy_packet_authorized"
-        ]
+        phi_surface_review_active_workstream["ck_variational_content_still_blocked"]
         == "yes"
     )
     assert (
         phi_surface_review_active_workstream["deferred_ck_variational_content_target"]
         == "prepare_toe_native_phi_ck_variational_content_packet"
     )
-    assert phi_surface_review_active_workstream["field_contract_item_count"] == "7"
-    assert (
-        phi_surface_review_active_workstream["phi_surface_variation_route_prepared"]
-        == "yes"
-    )
-    assert phi_surface_review_active_workstream["raw_phi_variation_formula_recorded"] == "yes"
-    assert (
-        phi_surface_review_active_workstream["raw_metric_variation_formula_recorded"]
-        == "yes"
-    )
-    assert (
-        phi_surface_review_active_workstream[
-            "stress_energy_candidate_formula_recorded"
-        ]
-        == "yes"
-    )
-    assert phi_surface_review_active_workstream["symbolic_calculation_recorded"] == "yes"
-    assert phi_surface_review_active_workstream["route_question_count"] == "9"
-    assert phi_surface_review_active_workstream["calculation_step_count"] == "8"
-    assert phi_surface_review_active_workstream["retained_blocker_count"] == "6"
-    assert (
-        phi_surface_review_active_workstream["source_route_status_decision"]
-        == "raw_stress_energy_candidate_recorded_but_source_route_blocked_for_toe_native_status"
-    )
-    assert (
-        phi_surface_review_active_workstream["imported_scalar_comparison_decision"]
-        == "matches_imported_scalar_witness_only_after_explicit_signature_and_kinetic_sign_normalization_and_after_setting_C_k_variations_to_zero"
-    )
-    assert (
-        phi_surface_review_active_workstream["toe_native_status_decision"]
-        == "declared_or_imported_master_action_surface_not_constraint_generated"
-    )
-    assert "raw symbolic phi-route recording" in phi_surface_review_active_workstream[
+    assert phi_surface_review_active_workstream["symbolic_calculation_recorded"] == "no"
+    assert phi_surface_review_active_workstream["review_criteria_count"] == "10"
+    assert phi_surface_review_active_workstream["review_criteria_accepted_count"] == "10"
+    assert "selects calculation conventions only" in phi_surface_review_active_workstream[
         "non_claim_boundary"
     ]
     assert "C_k variational content" in phi_surface_review_active_workstream[
