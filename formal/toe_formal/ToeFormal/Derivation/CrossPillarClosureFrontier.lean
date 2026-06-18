@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "ToE-native matter-sector calculation route selection recorded outcome TOE_NATIVE_MATTER_SECTOR_CALCULATION_ROUTE_SELECTION_SELECTS_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_NO_DERIVATION_CLAIM. The selector chooses the phi surface variation/source route only for the next preparation packet because it is the shortest bounded comparison route against the imported scalar witness; preserves the scalar sandbox as a reference witness only; defers gauge, fermion, and quantum expectation routes without rejection; selects prepare_toe_native_phi_surface_variation_and_source_route_packet while preserving no phi route execution, no ToE-native matter derivation, no Standard Model derivation, no canonical master-action promotion, no QFT-GR source-map or seam closure, no semiclassical coupling, no empirical validation, no public readiness, and no release authorization"
+        "ToE-native phi surface variation/source route packet recorded outcome TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_PACKET_PREPARED_RAW_VARIATION_RECORDED_SOURCE_ROUTE_BLOCKED_FOR_NATIVE_DERIVATION. The packet records the raw symbolic variation/source route for the master-action phi surface, identifies signature, C_k, and native generation gaps, and selects review_toe_native_phi_surface_variation_and_source_route_result while preserving no ToE-native matter derivation, no source admissibility or conservation, no Standard Model derivation, no canonical master-action promotion, no QFT-GR source-map or seam closure, no semiclassical coupling, no empirical validation, no public readiness, and no release authorization"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_toe_native_phi_surface_variation_and_source_route_packet"
+        "review_toe_native_phi_surface_variation_and_source_route_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch is closed as a positive local classical source witness, the master-action matter surfaces psi, A, phi, rho, and C_k have been indexed as provisional native-candidate surfaces or organizing placeholders, the result review accepts that index without derivation, and the calculation-route selector chooses the phi surface variation/source route for the next preparation packet only. The selector preserves no phi route execution, no ToE-native matter derivation, no Standard Model derivation, no canonical master-action promotion, no QFT-GR source-map or seam closure, no semiclassical coupling, no empirical validation, no public-readiness claim, no public-submission claim, and no scientific-validation claim"
+        "The scalar sandbox branch is closed as a positive local classical source witness, the master-action matter surfaces psi, A, phi, rho, and C_k have been indexed as provisional native-candidate surfaces or organizing placeholders, the calculation-route selector chose the phi surface, and the phi route packet now records raw symbolic variation/source formulas while retaining signature, C_k, and native generation gaps. It preserves no ToE-native matter derivation, no source admissibility or conservation, no Standard Model derivation, no canonical master-action promotion, no QFT-GR source-map or seam closure, no semiclassical coupling, no empirical validation, no public-readiness claim, no public-submission claim, and no scientific-validation claim"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_toe_native_phi_surface_variation_and_source_route_packet"
+        "review_toe_native_phi_surface_variation_and_source_route_result"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the native matter-sector route selector. -/
+/-- Previous live target consumed by the native phi surface packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "select_toe_native_matter_sector_calculation_route"
-
-/-- Current live target after the native matter-sector route selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_toe_native_phi_surface_variation_and_source_route_packet"
+
+/-- Current live target after the native phi surface packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_toe_native_phi_surface_variation_and_source_route_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_toe_native_phi_surface_variation_and_source_route_packet"
+    "review_toe_native_phi_surface_variation_and_source_route_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

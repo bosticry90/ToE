@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_toe_native_phi_surface_variation_and_source_route_packet"
+ACTIVE_LANE = "review_toe_native_phi_surface_variation_and_source_route_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,7 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "select_toe_native_matter_sector_calculation_route"
+PREVIOUS_LIVE_TARGET = "prepare_toe_native_phi_surface_variation_and_source_route_packet"
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
 )
@@ -1417,7 +1417,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_toe_native_phi_surface_variation_and_source_route_packet"
+LIVE_TARGET = "review_toe_native_phi_surface_variation_and_source_route_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1433,7 +1433,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeMatterSectorCalculationRouteSelection.lean"
+    / "ToeNativePhiSurfaceVariationAndSourceRoutePacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2943,19 +2943,142 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    scalar_conservation_active_workstream = active_workstream(payload)
-    assert scalar_conservation_active_workstream["workstream_id"] == ACTIVE_LANE
+    phi_surface_review_active_workstream = active_workstream(payload)
+    assert phi_surface_review_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert phi_surface_review_active_workstream["active_lane"] == ACTIVE_LANE
     assert (
-        scalar_conservation_active_workstream["authorized_next_strict_target"]
+        phi_surface_review_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert scalar_conservation_active_workstream["authorized_target"] == LIVE_TARGET
+    assert phi_surface_review_active_workstream["authorized_target"] == LIVE_TARGET
+    assert phi_surface_review_active_workstream["authorization_evidence"] == str(
+        LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
+    ).replace("\\", "/")
+    assert phi_surface_review_active_workstream["report"] == (
+        "formal/docs/release/"
+        "TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_PACKET_"
+        "20260618_v0.json"
+    )
+    assert (
+        phi_surface_review_active_workstream["consumed_target"]
+        == PREVIOUS_LIVE_TARGET
+    )
+    assert (
+        phi_surface_review_active_workstream["selected_next_target"]
+        == LIVE_TARGET
+    )
+    assert (
+        phi_surface_review_active_workstream["selected_next_target_kind"]
+        == "toe_native_phi_surface_variation_and_source_route_result_review"
+    )
+    assert phi_surface_review_active_workstream["selected_surface_symbol"] == "phi"
+    assert (
+        phi_surface_review_active_workstream["selected_route_id"]
+        == "toe_native_phi_surface_variation_and_source_route"
+    )
+    assert (
+        phi_surface_review_active_workstream["phi_route_packet_result"]
+        == "TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_PACKET_PREPARED_"
+        "RAW_VARIATION_RECORDED_SOURCE_ROUTE_BLOCKED_FOR_NATIVE_DERIVATION"
+    )
+    assert (
+        phi_surface_review_active_workstream["claim_level"]
+        == "Level 3 symbolic packet preparation; raw phi variation recorded, native source route blocked"
+    )
+    assert (
+        phi_surface_review_active_workstream["claim_ceiling"]
+        == "raw symbolic variation/source route packet only no toe-native matter derivation no source admissibility or conservation no standard model derivation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
+    )
+    assert (
+        phi_surface_review_active_workstream["phi_surface_variation_route_prepared"]
+        == "yes"
+    )
+    assert phi_surface_review_active_workstream["raw_phi_variation_formula_recorded"] == "yes"
+    assert (
+        phi_surface_review_active_workstream["raw_metric_variation_formula_recorded"]
+        == "yes"
+    )
+    assert (
+        phi_surface_review_active_workstream[
+            "stress_energy_candidate_formula_recorded"
+        ]
+        == "yes"
+    )
+    assert phi_surface_review_active_workstream["symbolic_calculation_recorded"] == "yes"
+    assert phi_surface_review_active_workstream["route_question_count"] == "9"
+    assert phi_surface_review_active_workstream["calculation_step_count"] == "8"
+    assert phi_surface_review_active_workstream["retained_blocker_count"] == "6"
+    assert (
+        phi_surface_review_active_workstream["source_route_status_decision"]
+        == "raw_stress_energy_candidate_recorded_but_source_route_blocked_for_toe_native_status"
+    )
+    assert (
+        phi_surface_review_active_workstream["imported_scalar_comparison_decision"]
+        == "matches_imported_scalar_witness_only_after_explicit_signature_and_kinetic_sign_normalization_and_after_setting_C_k_variations_to_zero"
+    )
+    assert (
+        phi_surface_review_active_workstream["toe_native_status_decision"]
+        == "declared_or_imported_master_action_surface_not_constraint_generated"
+    )
+    assert "raw symbolic variation/source route" in phi_surface_review_active_workstream[
+        "non_claim_boundary"
+    ]
+    assert "signature, C_k, and native generation gaps" in phi_surface_review_active_workstream[
+        "non_claim_boundary"
+    ]
+    for key in [
+        "formal_theorem_backed_matter_derivation",
+        "phi_variation_route_executed",
+        "phi_variation_derived_as_toe_native",
+        "phi_stress_energy_derived_as_toe_native",
+        "toe_native_phi_source_route_constructed",
+        "toe_native_phi_source_admissibility_claimed",
+        "toe_native_phi_source_conservation_claimed",
+        "toe_native_matter_derivation_claimed",
+        "toe_native_matter_sector_derived",
+        "toe_native_matter_sector_defined",
+        "toe_matter_sector_derived",
+        "toe_matter_model_derived",
+        "standard_model_derivation_claimed",
+        "source_admissibility_claimed",
+        "source_admissibility_completed",
+        "weak_conservation_claimed",
+        "bianchi_compatibility_claimed",
+        "source_map_closed",
+        "qft_gr_solved",
+        "qft_gr_closure_claimed",
+        "qft_gr_seam_closed",
+        "qft_gr_source_map_closure_authorized",
+        "semiclassical_coupling_authorized",
+        "semiclassical_coupling_claimed",
+        "semiclassical_einstein_equation_derived",
+        "semiclassical_source_established",
+        "empirical_validation_claimed",
+        "public_readiness_claimed",
+        "public_submission_authorized",
+        "canonical_master_action_promoted",
+        "master_action_promoted",
+        "master_action_promotion_authorized",
+        "phase2_readiness_claim",
+        "pillar_completion_inferred",
+        "seam_closure_claim",
+    ]:
+        assert phi_surface_review_active_workstream[key] == "no", key
+
+    scalar_conservation_active_workstream = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert scalar_conservation_active_workstream["status"] == "paused"
+    assert scalar_conservation_active_workstream["workstream_id"] == PREVIOUS_LIVE_TARGET
+    assert (
+        scalar_conservation_active_workstream["authorized_next_strict_target"]
+        == PREVIOUS_LIVE_TARGET
+    )
+    assert scalar_conservation_active_workstream["authorized_target"] == PREVIOUS_LIVE_TARGET
     assert scalar_conservation_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
     assert scalar_conservation_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_MATTER_SECTOR_CALCULATION_ROUTE_SELECTION_"
+        "TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_PACKET_"
         "20260618_v0.json"
     )
     assert (
@@ -2971,15 +3094,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         scalar_conservation_active_workstream["claim_ceiling"]
         == "phi route packet preparation only no phi route execution no toe-native matter derivation no standard model derivation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
     )
-    assert "route selector chooses the phi surface" in scalar_conservation_active_workstream[
+    assert "raw symbolic variation/source route" in scalar_conservation_active_workstream[
         "non_claim_boundary"
     ]
-    assert "does not execute the phi route" in scalar_conservation_active_workstream[
+    assert "signature, C_k, and native generation gaps" in scalar_conservation_active_workstream[
         "non_claim_boundary"
     ]
     assert (
         scalar_conservation_active_workstream["consumed_target"]
-        == PREVIOUS_LIVE_TARGET
+        == "select_toe_native_matter_sector_calculation_route"
     )
     assert (
         scalar_conservation_active_workstream["review_result"]
@@ -3065,11 +3188,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert scalar_conservation_active_workstream["route_selection_authorized"] == "yes"
     assert (
         scalar_conservation_active_workstream["selected_next_target"]
-        == "prepare_toe_native_phi_surface_variation_and_source_route_packet"
+        == LIVE_TARGET
     )
     assert (
         scalar_conservation_active_workstream["selected_next_target_kind"]
-        == "toe_native_phi_surface_variation_and_source_route_packet_preparation"
+        == "toe_native_phi_surface_variation_and_source_route_result_review"
     )
     assert scalar_conservation_active_workstream["recommended_first_route_hint"] == "phi"
     assert (
@@ -3556,7 +3679,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "RECORD_ONLY_SELECTOR_VALIDATED"
     )
     assert scalar_conservation_active_workstream["record_validated"] == "yes"
-    assert scalar_conservation_active_workstream["symbolic_calculation_recorded"] == "no"
+    assert scalar_conservation_active_workstream["symbolic_calculation_recorded"] == "yes"
     assert (
         scalar_conservation_active_workstream[
             "formal_differential_geometry_theorem_backed"
@@ -9157,7 +9280,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        scalar_conservation_active_workstream[
+        phi_surface_review_active_workstream[
             "authorized_next_strict_target"
         ],
     }

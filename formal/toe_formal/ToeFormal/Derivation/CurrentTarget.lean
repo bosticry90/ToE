@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeMatterSectorCalculationRouteSelection
+import ToeFormal.Derivation.ToeNativePhiSurfaceVariationAndSourceRoutePacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeMatterSectorCalculationRouteSelection.selectedNextTarget
+  ToeNativePhiSurfaceVariationAndSourceRoutePacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativeMatterSectorCalculationRouteSelection.packetId
+  ToeNativePhiSurfaceVariationAndSourceRoutePacket.packetId
 
-theorem current_target_points_to_toe_native_phi_surface_route_packet :
+theorem current_target_points_to_toe_native_phi_surface_route_review :
     currentLiveTarget =
-      "prepare_toe_native_phi_surface_variation_and_source_route_packet" := by
+      "review_toe_native_phi_surface_variation_and_source_route_result" := by
   rfl
 
 end CurrentTarget
