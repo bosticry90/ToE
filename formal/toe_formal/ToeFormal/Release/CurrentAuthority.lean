@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_toe_native_phi_variation_retry_under_selected_policy_result" := by
+      "prepare_toe_native_phi_surface_alignment_witness_closeout" := by
   rfl
 
 end CurrentAuthority

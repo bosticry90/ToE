@@ -6,6 +6,7 @@ import ToeFormal.Derivation.ToeNativePhiSurfaceVariationAndSourceRoutePacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceVariationAndSourceRouteResultReview
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
+import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyResultReview
 
 /-
 Thin QFT-GR lane aggregate for tiered validation. It exposes the scalar-sandbox
@@ -23,17 +24,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ToeNativePhiVariationRetryUnderSelectedPolicyPacket.phiVariationRetryPacketResult
+  ToeNativePhiVariationRetryUnderSelectedPolicyResultReview.outcomeId
 
 def currentPacketId : String :=
-  ToeNativePhiVariationRetryUnderSelectedPolicyPacket.packetId
+  ToeNativePhiVariationRetryUnderSelectedPolicyResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_native_phi_variation_retry_packet :
+theorem qft_gr_lane_aggregate_exposes_native_phi_variation_retry_result_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "TOE_NATIVE_PHI_VARIATION_RETRY_UNDER_SELECTED_POLICY_PACKET_PREPARED_" ++
-          "PHI_VARIATION_ROUTE_REPRODUCES_SCALAR_WITNESS_UNDER_SELECTED_POLICY_" ++
-          "NO_NATIVE_GENERATION_CLAIM_CK_BLOCKED" := by
+        "TOE_NATIVE_PHI_VARIATION_RETRY_RESULT_REVIEW_ACCEPTS_SCALAR_WITNESS_" ++
+          "ROUTE_MATCH_NO_NATIVE_GENERATION_OR_CK_CONTENT" := by
   constructor
   · rfl
   · rfl

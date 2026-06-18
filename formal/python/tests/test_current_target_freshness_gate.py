@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "review_toe_native_phi_variation_retry_under_selected_policy_result"
+ACTIVE_LANE = "prepare_toe_native_phi_surface_alignment_witness_closeout"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,7 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "prepare_toe_native_phi_variation_retry_under_selected_policy"
+PREVIOUS_LIVE_TARGET = "review_toe_native_phi_variation_retry_under_selected_policy_result"
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
 )
@@ -1417,7 +1417,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "review_toe_native_phi_variation_retry_under_selected_policy_result"
+LIVE_TARGET = "prepare_toe_native_phi_surface_alignment_witness_closeout"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1433,7 +1433,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativePhiVariationRetryUnderSelectedPolicyPacket.lean"
+    / "ToeNativePhiVariationRetryUnderSelectedPolicyResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2943,144 +2943,175 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    phi_surface_review_active_workstream = active_workstream(payload)
-    assert phi_surface_review_active_workstream["workstream_id"] == ACTIVE_LANE
-    assert phi_surface_review_active_workstream["active_lane"] == ACTIVE_LANE
+    phi_alignment_closeout_active_workstream = active_workstream(payload)
+    assert phi_alignment_closeout_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert phi_alignment_closeout_active_workstream["active_lane"] == ACTIVE_LANE
     assert (
-        phi_surface_review_active_workstream["authorized_next_strict_target"]
+        phi_alignment_closeout_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert phi_surface_review_active_workstream["authorized_target"] == LIVE_TARGET
-    assert phi_surface_review_active_workstream["authorization_evidence"] == str(
+    assert phi_alignment_closeout_active_workstream["authorized_target"] == LIVE_TARGET
+    assert phi_alignment_closeout_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert phi_surface_review_active_workstream["report"] == (
+    assert phi_alignment_closeout_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PHI_VARIATION_RETRY_UNDER_SELECTED_POLICY_PACKET_"
+        "TOE_NATIVE_PHI_VARIATION_RETRY_UNDER_SELECTED_POLICY_RESULT_REVIEW_"
         "20260618_v0.json"
     )
     assert (
-        phi_surface_review_active_workstream["consumed_target"]
+        phi_alignment_closeout_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        phi_surface_review_active_workstream["selected_next_target"]
+        phi_alignment_closeout_active_workstream["selected_next_target"]
         == LIVE_TARGET
     )
     assert (
-        phi_surface_review_active_workstream["selected_next_target_kind"]
-        == "toe_native_phi_variation_retry_under_selected_policy_result_review"
+        phi_alignment_closeout_active_workstream["selected_next_target_kind"]
+        == "toe_native_phi_surface_alignment_witness_closeout_preparation"
     )
     assert (
-        phi_surface_review_active_workstream["outcome_id"]
+        phi_alignment_closeout_active_workstream["outcome_id"]
+        == "TOE_NATIVE_PHI_VARIATION_RETRY_RESULT_REVIEW_ACCEPTS_SCALAR_WITNESS_"
+        "ROUTE_MATCH_NO_NATIVE_GENERATION_OR_CK_CONTENT"
+    )
+    assert (
+        phi_alignment_closeout_active_workstream["review_result"]
+        == "TOE_NATIVE_PHI_VARIATION_RETRY_RESULT_REVIEW_ACCEPTS_SCALAR_WITNESS_"
+        "ROUTE_MATCH_NO_NATIVE_GENERATION_OR_CK_CONTENT"
+    )
+    assert (
+        phi_alignment_closeout_active_workstream["claim_level"]
+        == "Level 3 result review; master-action phi surface alignment witness accepted, native generation blocked"
+    )
+    assert (
+        phi_alignment_closeout_active_workstream["claim_ceiling"]
+        == "alignment witness closeout only no toe-native matter derivation no native-generation theorem no C_k variational content no derived potential no source admissibility or conservation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
+    )
+    assert (
+        phi_alignment_closeout_active_workstream["phi_variation_retry_result"]
+        == "PHI_VARIATION_ROUTE_REPRODUCES_SCALAR_WITNESS_UNDER_SELECTED_POLICY_"
+        "NO_NATIVE_GENERATION_CLAIM"
+    )
+    assert (
+        phi_alignment_closeout_active_workstream["phi_variation_retry_packet_outcome"]
         == "TOE_NATIVE_PHI_VARIATION_RETRY_UNDER_SELECTED_POLICY_PACKET_PREPARED_"
         "PHI_VARIATION_ROUTE_REPRODUCES_SCALAR_WITNESS_UNDER_SELECTED_POLICY_"
         "NO_NATIVE_GENERATION_CLAIM_CK_BLOCKED"
     )
     assert (
-        phi_surface_review_active_workstream["claim_level"]
-        == "Level 3 symbolic variation retry; phi route reproduces scalar witness under selected policy, native generation blocked"
+        phi_alignment_closeout_active_workstream["alignment_witness_status"]
+        == "MASTER_ACTION_PHI_SURFACE_ALIGNMENT_WITNESS_ACCEPTED_NO_NATIVE_GENERATION"
     )
-    assert (
-        phi_surface_review_active_workstream["claim_ceiling"]
-        == "selected-policy variation retry only no toe-native matter derivation no native-generation theorem no C_k modification no source admissibility or conservation no standard model derivation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
+    assert "can reproduce the imported scalar sandbox route" in (
+        phi_alignment_closeout_active_workstream["alignment_witness_statement"]
     )
-    assert (
-        phi_surface_review_active_workstream["phi_variation_retry_result"]
-        == "PHI_VARIATION_ROUTE_REPRODUCES_SCALAR_WITNESS_UNDER_SELECTED_POLICY_"
-        "NO_NATIVE_GENERATION_CLAIM"
-    )
-    assert (
-        phi_surface_review_active_workstream["phi_policy_packet_result"]
-        == "TOE_NATIVE_PHI_SIGNATURE_DOMAIN_AND_POTENTIAL_POLICY_PACKET_PREPARED_"
-        "PHI_POLICY_PARTIALLY_SELECTED_CK_VARIATIONAL_CONTENT_STILL_BLOCKED"
-    )
-    assert phi_surface_review_active_workstream["metric_signature_policy"] == "(+,-,-,-)"
-    assert "finite real scalar multiplet" in phi_surface_review_active_workstream[
+    assert phi_alignment_closeout_active_workstream["metric_signature_policy"] == "(+,-,-,-)"
+    assert "finite real scalar multiplet" in phi_alignment_closeout_active_workstream[
         "scalar_field_type_policy"
     ]
-    assert "smooth finite-action" in phi_surface_review_active_workstream[
+    assert "smooth finite-action" in phi_alignment_closeout_active_workstream[
         "field_domain_policy"
     ]
-    assert "L_phi^MA = +1/2" in phi_surface_review_active_workstream[
+    assert "L_phi^MA = +1/2" in phi_alignment_closeout_active_workstream[
         "kinetic_convention_policy"
     ]
     assert (
-        phi_surface_review_active_workstream["box_operator_convention"]
+        phi_alignment_closeout_active_workstream["box_operator_convention"]
         == "Box_g phi_i = g^{mu nu} nabla_mu nabla_nu phi_i"
     )
-    assert "not ToE-derived" in phi_surface_review_active_workstream[
+    assert "not ToE-derived" in phi_alignment_closeout_active_workstream[
         "potential_policy"
     ]
-    assert "hold lambda_k and C_k inactive" in phi_surface_review_active_workstream[
+    assert "hold lambda_k and C_k inactive" in phi_alignment_closeout_active_workstream[
         "variation_policy"
     ]
-    assert "not allowed to modify" in phi_surface_review_active_workstream[
+    assert "not allowed to modify" in phi_alignment_closeout_active_workstream[
         "ck_role_policy"
     ]
     assert (
-        phi_surface_review_active_workstream["selected_phi_action"]
+        phi_alignment_closeout_active_workstream["selected_phi_action"]
         == "S_phi^policy[g, phi] = integral_M sqrt(-g) [1/2 sum_i g^{mu nu} nabla_mu phi_i nabla_nu phi_i - V(phi)] d^4x"
     )
     assert (
-        phi_surface_review_active_workstream["field_variation_form"]
+        phi_alignment_closeout_active_workstream["field_variation_form"]
         == "delta_phi S_phi^policy(eta) = - integral_M sqrt(-g) sum_i (Box_g phi_i + partial_i V(phi)) eta_i d^4x"
     )
     assert (
-        phi_surface_review_active_workstream["field_euler_lagrange_equation"]
+        phi_alignment_closeout_active_workstream["field_euler_lagrange_equation"]
         == "Box_g phi_i + partial_i V(phi) = 0"
     )
-    assert "T^policy_{mu nu} = 2/sqrt(-g)" in phi_surface_review_active_workstream[
+    assert "T^policy_{mu nu} = 2/sqrt(-g)" in phi_alignment_closeout_active_workstream[
         "metric_variation_convention"
     ]
     assert (
-        phi_surface_review_active_workstream["metric_variation_form"]
+        phi_alignment_closeout_active_workstream["metric_variation_form"]
         == "delta_g S_phi^policy(k) = 1/2 integral_M sqrt(-g) T^policy_{mu nu} k^{mu nu} d^4x"
     )
     assert (
-        phi_surface_review_active_workstream["stress_energy_under_selected_policy"]
+        phi_alignment_closeout_active_workstream["stress_energy_under_selected_policy"]
         == "T^policy_{mu nu} = sum_i nabla_mu phi_i nabla_nu phi_i - g_{mu nu}[1/2 sum_j nabla_alpha phi_j nabla^alpha phi_j - V(phi)]"
     )
     assert (
-        phi_surface_review_active_workstream["scalar_witness_comparison_decision"]
+        phi_alignment_closeout_active_workstream["scalar_witness_comparison_decision"]
         == "reproduces_scalar_witness_route_after_selected_policy_normalization_no_native_generation_claim"
     )
-    assert "different written kinetic convention" in phi_surface_review_active_workstream[
+    assert "different written kinetic convention" in phi_alignment_closeout_active_workstream[
         "written_sandbox_difference"
     ]
-    assert phi_surface_review_active_workstream["field_variation_computed"] == "yes"
-    assert phi_surface_review_active_workstream["metric_variation_computed"] == "yes"
-    assert phi_surface_review_active_workstream["stress_energy_route_recorded"] == "yes"
     assert (
-        phi_surface_review_active_workstream[
-            "scalar_witness_route_reproduced_under_selected_policy"
+        phi_alignment_closeout_active_workstream[
+            "selected_phi_policy_carried_forward_exactly"
         ]
         == "yes"
     )
-    assert phi_surface_review_active_workstream["sign_convention_verified_explicitly"] == "yes"
-    assert phi_surface_review_active_workstream["literal_imported_sandbox_formula_copied"] == "no"
-    assert phi_surface_review_active_workstream["phi_variation_retry_executed"] == "yes"
-    assert phi_surface_review_active_workstream["phi_variation_route_executed"] == "yes"
-    assert phi_surface_review_active_workstream["ck_allowed_to_modify_phi_equation"] == "no"
-    assert phi_surface_review_active_workstream["ck_variational_content_defined"] == "no"
     assert (
-        phi_surface_review_active_workstream["ck_variational_content_still_blocked"]
+        phi_alignment_closeout_active_workstream[
+            "field_variation_recorded_under_selected_policy"
+        ]
         == "yes"
     )
-    assert phi_surface_review_active_workstream["native_generation_blocked"] == "yes"
-    assert phi_surface_review_active_workstream["native_derivation_blocked"] == "yes"
-    assert phi_surface_review_active_workstream["symbolic_calculation_recorded"] == "yes"
-    assert phi_surface_review_active_workstream["calculation_step_count"] == "8"
-    assert phi_surface_review_active_workstream["review_criteria_count"] == "10"
-    assert phi_surface_review_active_workstream["review_criteria_accepted_count"] == "10"
     assert (
-        phi_surface_review_active_workstream["aggregate_lean_validation_status_for_packet"]
+        phi_alignment_closeout_active_workstream[
+            "metric_variation_source_route_recorded_under_selected_policy"
+        ]
+        == "yes"
+    )
+    assert phi_alignment_closeout_active_workstream["scalar_witness_route_match_accepted"] == "yes"
+    assert (
+        phi_alignment_closeout_active_workstream[
+            "scalar_witness_match_only_after_convention_normalization"
+        ]
+        == "yes"
+    )
+    assert phi_alignment_closeout_active_workstream["literal_imported_sandbox_formula_copied"] == "no"
+    assert phi_alignment_closeout_active_workstream["ck_remains_undefined_and_inactive"] == "yes"
+    assert phi_alignment_closeout_active_workstream["ck_allowed_to_modify_phi_equation"] == "no"
+    assert phi_alignment_closeout_active_workstream["ck_variational_content_defined"] == "no"
+    assert (
+        phi_alignment_closeout_active_workstream["ck_variational_content_still_blocked"]
+        == "yes"
+    )
+    assert phi_alignment_closeout_active_workstream["potential_smooth_bounded_below"] == "yes"
+    assert phi_alignment_closeout_active_workstream["potential_derived"] == "no"
+    assert phi_alignment_closeout_active_workstream["native_generation_theorem_claimed"] == "no"
+    assert phi_alignment_closeout_active_workstream["native_generation_blocked"] == "yes"
+    assert phi_alignment_closeout_active_workstream["alignment_witness_closeout_authorized"] == "yes"
+    assert phi_alignment_closeout_active_workstream["alignment_witness_closeout_prepared"] == "no"
+    assert phi_alignment_closeout_active_workstream["ck_variational_content_packet_deferred"] == "yes"
+    assert phi_alignment_closeout_active_workstream["phi_variation_retry_executed"] == "yes"
+    assert phi_alignment_closeout_active_workstream["phi_variation_route_executed"] == "yes"
+    assert phi_alignment_closeout_active_workstream["review_criteria_count"] == "10"
+    assert phi_alignment_closeout_active_workstream["review_criteria_accepted_count"] == "10"
+    assert (
+        phi_alignment_closeout_active_workstream["aggregate_lean_validation_status_for_packet"]
         == "INCOMPLETE_TIMEOUT_STEADY_PROGRESS"
     )
-    assert "convention-normalized symbolic calculation only" in phi_surface_review_active_workstream[
+    assert "alignment witness only" in phi_alignment_closeout_active_workstream[
         "non_claim_boundary"
     ]
-    assert "does not supply a native-generation theorem" in phi_surface_review_active_workstream[
+    assert "does not supply a native-generation theorem" in phi_alignment_closeout_active_workstream[
         "non_claim_boundary"
     ]
     for key in [
@@ -3119,7 +3150,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "pillar_completion_inferred",
         "seam_closure_claim",
     ]:
-        assert phi_surface_review_active_workstream[key] == "no", key
+        assert phi_alignment_closeout_active_workstream[key] == "no", key
 
     scalar_conservation_active_workstream = _workstream(
         payload, "prepare_toe_native_phi_surface_variation_and_source_route_packet"
@@ -9345,7 +9376,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        phi_surface_review_active_workstream[
+        phi_alignment_closeout_active_workstream[
             "authorized_next_strict_target"
         ],
     }
