@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_qft_gr_classical_einstein_scalar_coupling_route_packet_result"
+    "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,7 +1329,7 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_classical_einstein_scalar_coupling_route_packet_for_provisional_scalar_source"
+    "review_qft_gr_classical_einstein_scalar_coupling_route_packet_result"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1422,7 +1422,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_qft_gr_classical_einstein_scalar_coupling_route_packet_result"
+    "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1439,7 +1439,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRClassicalEinsteinScalarCouplingRoutePacketForProvisionalScalarSource.lean"
+    / "QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2961,25 +2961,24 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert scalar_conservation_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_FOR_"
-        "PROVISIONAL_SCALAR_SOURCE_20260618_v0.json"
+        "QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_"
+        "20260618_v0.json"
     )
     assert (
         scalar_conservation_active_workstream["outcome_id"]
-        == "QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_FOR_"
-        "PROVISIONAL_SCALAR_SOURCE_PREPARED_WITH_CLASSICAL_EINSTEIN_SCALAR_"
-        "COUPLING_ROUTE_CONSTRUCTED_FOR_PROVISIONAL_ON_SHELL_SCALAR_SOURCE_"
-        "NO_QFT_GR_OR_TOE_NATIVE_CLOSURE"
+        == "QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_"
+        "REVIEW_ACCEPTS_PROVISIONAL_ON_SHELL_CLASSICAL_SOURCE_ROUTE_NO_QFT_GR_"
+        "OR_TOE_NATIVE_CLOSURE"
     )
     assert (
         scalar_conservation_active_workstream["claim_level"]
-        == "Level 3 QFT-GR classical Einstein-scalar coupling route packet result review authorized"
+        == "Level 3 QFT-GR provisional scalar classical source route witness closeout authorized"
     )
     assert (
         scalar_conservation_active_workstream["claim_ceiling"]
-        == "result review only for provisional classical route no solution existence no global well-posedness no semiclassical coupling no qft_gr closure no toe-native matter derivation"
+        == "witness closeout only for positive local classical source witness no qft_gr source-map closure no seam closure no toe-native matter no semiclassical coupling no master-action promotion"
     )
-    assert "provisional classical Einstein-scalar route" in scalar_conservation_active_workstream[
+    assert "positive local classical source witness" in scalar_conservation_active_workstream[
         "non_claim_boundary"
     ]
     assert (
@@ -3223,6 +3222,43 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert (
         scalar_conservation_active_workstream["next_after_result_review_suggested"]
         == "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout"
+    )
+    assert (
+        scalar_conservation_active_workstream["classical_route_result_review_completed"]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream["classical_route_result_review_accepted"]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "classical_einstein_scalar_coupling_route_reviewed"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream["review_result"]
+        == "CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_RESULT_REVIEW_ACCEPTS_"
+        "PROVISIONAL_ON_SHELL_CLASSICAL_SOURCE_ROUTE_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "positive_local_classical_source_witness_classification"
+        ]
+        == "positive local classical source witness"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "positive_local_classical_source_witness_candidate"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "positive_local_classical_source_witness_closeout_authorized"
+        ]
+        == "yes"
     )
     assert (
         scalar_conservation_active_workstream["solution_existence_claimed"]

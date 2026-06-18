@@ -21,9 +21,11 @@ def currentScopedResult : String :=
 theorem qft_gr_lane_aggregate_exposes_scalar_sandbox :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_CONSTRUCTED_FOR_PROVISIONAL_" ++
-          "ON_SHELL_SCALAR_SOURCE_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE" := by
-  decide
+        "CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_RESULT_REVIEW_ACCEPTS_" ++
+          "PROVISIONAL_ON_SHELL_CLASSICAL_SOURCE_ROUTE_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE" := by
+  constructor
+  · rfl
+  · rfl
 
 end QFTGR
 end Derivation

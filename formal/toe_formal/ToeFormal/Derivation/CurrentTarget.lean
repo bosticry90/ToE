@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketForProvisionalScalarSource
+import ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  QFTGRClassicalEinsteinScalarCouplingRoutePacketForProvisionalScalarSource.selectedNextTarget
+  QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  QFTGRClassicalEinsteinScalarCouplingRoutePacketForProvisionalScalarSource.packetId
+  QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview.packetId
 
-theorem current_target_points_to_classical_einstein_scalar_route_result_review :
+theorem current_target_points_to_classical_einstein_scalar_route_witness_closeout :
     currentLiveTarget =
-      "review_qft_gr_classical_einstein_scalar_coupling_route_packet_result" := by
+      "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout" := by
   rfl
 
 end CurrentTarget

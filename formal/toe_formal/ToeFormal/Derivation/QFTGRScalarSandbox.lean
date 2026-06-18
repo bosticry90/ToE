@@ -6,6 +6,7 @@ import ToeFormal.Derivation.QFTGRBianchiCompatibilityTestForProvisionalScalarStr
 import ToeFormal.Derivation.QFTGRSourceAdmissibilityReviewForProvisionalScalarSource
 import ToeFormal.Derivation.QFTGRSemiclassicalCouplingGateScopeReviewForProvisionalScalarSource
 import ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketForProvisionalScalarSource
+import ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview
 
 /-
 Small lane-level Lean aggregate for the imported provisional scalar QFT-GR
@@ -20,22 +21,24 @@ namespace QFTGRScalarSandbox
 def aggregateTargetId : String := "ToeFormal.Derivation.QFTGRScalarSandbox"
 
 def currentPacketId : String :=
-  ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketForProvisionalScalarSource.packetId
+  ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview.packetId
 
 def currentOutcomeId : String :=
-  ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketForProvisionalScalarSource.outcomeId
+  ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview.outcomeId
 
 def currentScopedResult : String :=
-  ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketForProvisionalScalarSource.classicalEinsteinScalarCouplingResult
+  ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview.reviewResult
 
 def aggregateRecordsLocalScalarSandboxReview : Bool := true
 
-theorem aggregate_points_to_current_classical_scalar_coupling_route :
+theorem aggregate_points_to_current_classical_scalar_coupling_route_review :
     aggregateRecordsLocalScalarSandboxReview = true ∧
       currentScopedResult =
-        "CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_CONSTRUCTED_FOR_PROVISIONAL_" ++
-          "ON_SHELL_SCALAR_SOURCE_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE" := by
-  decide
+        "CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_RESULT_REVIEW_ACCEPTS_" ++
+          "PROVISIONAL_ON_SHELL_CLASSICAL_SOURCE_ROUTE_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE" := by
+  constructor
+  · rfl
+  · rfl
 
 end QFTGRScalarSandbox
 end Derivation
