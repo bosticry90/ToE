@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout" := by
+      "prepare_toe_native_matter_sector_definition_packet" := by
   rfl
 
 end CurrentAuthority

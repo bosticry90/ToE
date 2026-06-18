@@ -7,6 +7,7 @@ import ToeFormal.Derivation.QFTGRSourceAdmissibilityReviewForProvisionalScalarSo
 import ToeFormal.Derivation.QFTGRSemiclassicalCouplingGateScopeReviewForProvisionalScalarSource
 import ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketForProvisionalScalarSource
 import ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview
+import ToeFormal.Derivation.QFTGRProvisionalScalarClassicalSourceRouteWitnessCloseout
 
 /-
 Small lane-level Lean aggregate for the imported provisional scalar QFT-GR
@@ -21,21 +22,21 @@ namespace QFTGRScalarSandbox
 def aggregateTargetId : String := "ToeFormal.Derivation.QFTGRScalarSandbox"
 
 def currentPacketId : String :=
-  ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview.packetId
+  ToeFormal.Derivation.QFTGRProvisionalScalarClassicalSourceRouteWitnessCloseout.packetId
 
 def currentOutcomeId : String :=
-  ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview.outcomeId
+  ToeFormal.Derivation.QFTGRProvisionalScalarClassicalSourceRouteWitnessCloseout.outcomeId
 
 def currentScopedResult : String :=
-  ToeFormal.Derivation.QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview.reviewResult
+  ToeFormal.Derivation.QFTGRProvisionalScalarClassicalSourceRouteWitnessCloseout.closeoutResult
 
 def aggregateRecordsLocalScalarSandboxReview : Bool := true
 
-theorem aggregate_points_to_current_classical_scalar_coupling_route_review :
+theorem aggregate_points_to_current_classical_scalar_source_witness_closeout :
     aggregateRecordsLocalScalarSandboxReview = true ∧
       currentScopedResult =
-        "CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_RESULT_REVIEW_ACCEPTS_" ++
-          "PROVISIONAL_ON_SHELL_CLASSICAL_SOURCE_ROUTE_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE" := by
+        "QFT_GR_PROVISIONAL_SCALAR_CLASSICAL_SOURCE_ROUTE_WITNESS_CLOSED_AS_" ++
+          "POSITIVE_CLASSICAL_SANDBOX_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE" := by
   constructor
   · rfl
   · rfl

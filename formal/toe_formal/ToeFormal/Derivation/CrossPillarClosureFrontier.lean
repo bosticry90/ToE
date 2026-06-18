@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR classical Einstein-scalar coupling route packet result review accepted outcome QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_ACCEPTS_PROVISIONAL_ON_SHELL_CLASSICAL_SOURCE_ROUTE_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE. The review accepts only the provisional on-shell classical route G_{mu nu} + Lambda g_{mu nu} = 8 pi G_N T^{scalar}_{mu nu} using the action-derived scalar stress-energy, scalar EOM on-shell condition, Bianchi identity, metric compatibility, and on-shell scalar conservation. It classifies the branch as a positive local classical source witness candidate and selects prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout while preserving no coupled solution construction, no solution existence or uniqueness claim, no global well-posedness claim, no generic source admissibility, no arbitrary-distributional-source promotion, no quantum stress-energy expectation construction, no renormalization result, no semiclassical Einstein equation derivation, no QFT-GR source-map or seam closure, no empirical validation, no public readiness, no public submission, no ToE-native matter derivation, and no master-action promotion"
+        "QFT-GR provisional scalar classical source route witness closeout recorded outcome QFT_GR_PROVISIONAL_SCALAR_CLASSICAL_SOURCE_ROUTE_WITNESS_CLOSED_AS_POSITIVE_CLASSICAL_SANDBOX_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE. The closeout classifies the imported real-scalar sandbox as a positive local classical source witness: action-derived scalar stress-energy, on-shell weak conservation, on-shell Bianchi compatibility, conditional local source-admissibility review pass, and accepted classical Einstein-scalar coupling route. It closes the scalar sandbox branch as a reusable witness and selects prepare_toe_native_matter_sector_definition_packet while preserving no coupled solution construction, no solution existence or uniqueness claim, no global well-posedness claim, no generic source admissibility, no arbitrary-distributional-source promotion, no quantum stress-energy expectation construction, no renormalization result, no semiclassical Einstein equation derivation, no QFT-GR source-map or seam closure, no empirical validation, no public readiness, no public submission, no ToE-native matter derivation, and no master-action promotion"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout"
+        "prepare_toe_native_matter_sector_definition_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The math-first QFT-GR chain now constructs action derivability for the imported provisional real-scalar sandbox, conditional weak conservation for its scalar stress-energy source on shell, conditional Bianchi compatibility for an imposed Einstein-form compatibility-test equation, a conditional local source-admissibility review pass, a semiclassical-coupling gate/scope denial for quantum expectation coupling, a bounded classical Einstein-scalar coupling route, and a result-review acceptance of that route as a positive local classical source witness candidate. The chain sets prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout as the only active QFT-GR next target while preserving no coupled solution construction, no solution existence or uniqueness claim, no global well-posedness claim, no generic source-admissibility claim, no arbitrary-distributional-source promotion, no quantum stress-energy expectation construction, no renormalization result, no semiclassical Einstein equation derivation claim, no QFT-GR source-map or seam closure, no public-readiness claim, no public-submission claim, no scientific-validation claim, no ToE-native matter derivation claim, and no master-action promotion"
+        "The math-first QFT-GR chain now constructs action derivability for the imported provisional real-scalar sandbox, conditional weak conservation for its scalar stress-energy source on shell, conditional Bianchi compatibility for an imposed Einstein-form compatibility-test equation, a conditional local source-admissibility review pass, a semiclassical-coupling gate/scope denial for quantum expectation coupling, a bounded classical Einstein-scalar coupling route, a result-review acceptance of that route, and a closeout as a positive local classical source witness. The chain sets prepare_toe_native_matter_sector_definition_packet as the only active next target while preserving no coupled solution construction, no solution existence or uniqueness claim, no global well-posedness claim, no generic source-admissibility claim, no arbitrary-distributional-source promotion, no quantum stress-energy expectation construction, no renormalization result, no semiclassical Einstein equation derivation claim, no QFT-GR source-map or seam closure, no public-readiness claim, no public-submission claim, no scientific-validation claim, no ToE-native matter derivation claim, and no master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout"
+        "prepare_toe_native_matter_sector_definition_packet"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the classical Einstein-scalar result review. -/
+/-- Previous live target consumed by the scalar classical source witness closeout. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_qft_gr_classical_einstein_scalar_coupling_route_packet_result"
-
-/-- Current live target after the classical Einstein-scalar result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout"
+
+/-- Current live target after the scalar classical source witness closeout. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_toe_native_matter_sector_definition_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout"
+    "prepare_toe_native_matter_sector_definition_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

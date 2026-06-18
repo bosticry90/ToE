@@ -1157,9 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = (
-    "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout"
-)
+ACTIVE_LANE = "prepare_toe_native_matter_sector_definition_packet"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1329,7 +1327,7 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "review_qft_gr_classical_einstein_scalar_coupling_route_packet_result"
+    "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1421,9 +1419,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = (
-    "prepare_qft_gr_provisional_scalar_classical_source_route_witness_closeout"
-)
+LIVE_TARGET = "prepare_toe_native_matter_sector_definition_packet"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1439,7 +1435,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRClassicalEinsteinScalarCouplingRoutePacketResultReview.lean"
+    / "QFTGRProvisionalScalarClassicalSourceRouteWitnessCloseout.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2961,22 +2957,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert scalar_conservation_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_REVIEW_"
+        "QFT_GR_PROVISIONAL_SCALAR_CLASSICAL_SOURCE_ROUTE_WITNESS_CLOSEOUT_"
         "20260618_v0.json"
     )
     assert (
         scalar_conservation_active_workstream["outcome_id"]
-        == "QFT_GR_CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_PACKET_RESULT_"
-        "REVIEW_ACCEPTS_PROVISIONAL_ON_SHELL_CLASSICAL_SOURCE_ROUTE_NO_QFT_GR_"
-        "OR_TOE_NATIVE_CLOSURE"
+        == "QFT_GR_PROVISIONAL_SCALAR_CLASSICAL_SOURCE_ROUTE_WITNESS_CLOSED_AS_"
+        "POSITIVE_CLASSICAL_SANDBOX_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE"
     )
     assert (
         scalar_conservation_active_workstream["claim_level"]
-        == "Level 3 QFT-GR provisional scalar classical source route witness closeout authorized"
+        == "Level 3 ToE-native matter-sector definition packet authorized after scalar classical source witness closeout"
     )
     assert (
         scalar_conservation_active_workstream["claim_ceiling"]
-        == "witness closeout only for positive local classical source witness no qft_gr source-map closure no seam closure no toe-native matter no semiclassical coupling no master-action promotion"
+        == "definition packet preparation only no toe-native matter derivation no qft-gr closure no semiclassical coupling no master-action promotion"
     )
     assert "positive local classical source witness" in scalar_conservation_active_workstream[
         "non_claim_boundary"
@@ -3216,8 +3211,51 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "yes"
     )
     assert (
+        scalar_conservation_active_workstream["closeout_result"]
+        == "QFT_GR_PROVISIONAL_SCALAR_CLASSICAL_SOURCE_ROUTE_WITNESS_CLOSED_AS_"
+        "POSITIVE_CLASSICAL_SANDBOX_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "positive_local_classical_source_witness_closed"
+        ]
+        == "yes"
+    )
+    assert (
         scalar_conservation_active_workstream["witness_closeout_completed"]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream["witness_closeout_scope"]
+        == "positive local classical source witness for imported provisional real-scalar sandbox only"
+    )
+    assert (
+        scalar_conservation_active_workstream["scalar_sandbox_branch_closed"]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "default_scalar_sandbox_extension_authorized"
+        ]
         == "no"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "toe_native_matter_sector_definition_packet_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "imported_provisional_scalar_sector_only"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "provisional_classical_sandbox_route_only"
+        ]
+        == "yes"
     )
     assert (
         scalar_conservation_active_workstream["next_after_result_review_suggested"]
@@ -3360,9 +3398,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "toe_native_matter_sector_defined",
         "toe_matter_model_derived",
         "standard_model_derivation_claimed",
+        "source_map_closed",
+        "qft_gr_solved",
         "qft_gr_closure_claimed",
         "qft_gr_seam_closed",
         "qft_gr_source_map_closure_authorized",
+        "semiclassical_source_established",
+        "toe_matter_sector_derived",
+        "canonical_master_action_promoted",
+        "default_scalar_sandbox_extension_authorized",
         "empirical_validation_claimed",
         "public_readiness_claimed",
         "public_submission_authorized",
