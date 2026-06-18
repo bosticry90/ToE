@@ -3,6 +3,7 @@ import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacket
 import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacketResultReview
 import ToeFormal.Derivation.ToeNativeMatterSectorCalculationRouteSelection
 import ToeFormal.Derivation.ToeNativePhiSurfaceVariationAndSourceRoutePacket
+import ToeFormal.Derivation.ToeNativePhiSurfaceVariationAndSourceRouteResultReview
 
 /-
 Thin QFT-GR lane aggregate for tiered validation. It exposes the scalar-sandbox
@@ -20,16 +21,17 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ToeNativePhiSurfaceVariationAndSourceRoutePacket.phiRoutePacketResult
+  ToeNativePhiSurfaceVariationAndSourceRouteResultReview.reviewResult
 
 def currentPacketId : String :=
-  ToeNativePhiSurfaceVariationAndSourceRoutePacket.packetId
+  ToeNativePhiSurfaceVariationAndSourceRouteResultReview.packetId
 
-theorem qft_gr_lane_aggregate_exposes_native_phi_route_packet :
+theorem qft_gr_lane_aggregate_exposes_native_phi_route_result_review :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "TOE_NATIVE_PHI_SURFACE_VARIATION_AND_SOURCE_ROUTE_PACKET_PREPARED_" ++
-          "RAW_VARIATION_RECORDED_SOURCE_ROUTE_BLOCKED_FOR_NATIVE_DERIVATION" := by
+        "TOE_NATIVE_PHI_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_" ++
+          "RAW_SYMBOLIC_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_SIGNATURE_" ++
+          "DOMAIN_POTENTIAL_AND_CK_CONTENT" := by
   constructor
   · rfl
   · rfl
