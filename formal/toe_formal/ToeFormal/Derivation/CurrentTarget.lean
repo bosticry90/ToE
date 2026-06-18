@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacket
+import ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacketResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeMatterSectorDefinitionPacket.selectedNextTarget
+  ToeNativeMatterSectorDefinitionPacketResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativeMatterSectorDefinitionPacket.packetId
+  ToeNativeMatterSectorDefinitionPacketResultReview.packetId
 
-theorem current_target_points_to_toe_native_matter_sector_definition_packet_review :
+theorem current_target_points_to_toe_native_matter_sector_calculation_route_selection :
     currentLiveTarget =
-      "review_toe_native_matter_sector_definition_packet_result" := by
+      "select_toe_native_matter_sector_calculation_route" := by
   rfl
 
 end CurrentTarget

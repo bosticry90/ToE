@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "review_toe_native_matter_sector_definition_packet_result"
+ACTIVE_LANE = "select_toe_native_matter_sector_calculation_route"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,7 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "prepare_toe_native_matter_sector_definition_packet"
+PREVIOUS_LIVE_TARGET = "review_toe_native_matter_sector_definition_packet_result"
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
 )
@@ -1417,7 +1417,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "review_toe_native_matter_sector_definition_packet_result"
+LIVE_TARGET = "select_toe_native_matter_sector_calculation_route"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1433,7 +1433,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeMatterSectorDefinitionPacket.lean"
+    / "ToeNativeMatterSectorDefinitionPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2955,29 +2955,36 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert scalar_conservation_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_MATTER_SECTOR_DEFINITION_PACKET_"
+        "TOE_NATIVE_MATTER_SECTOR_DEFINITION_PACKET_RESULT_REVIEW_"
         "20260618_v0.json"
     )
     assert (
         scalar_conservation_active_workstream["outcome_id"]
-        == "TOE_NATIVE_MATTER_SECTOR_DEFINITION_PACKET_PREPARED_"
-        "MASTER_ACTION_MATTER_SURFACES_INDEXED_AS_NATIVE_CANDIDATES_"
-        "NO_DERIVATION_CLAIM"
+        == "TOE_NATIVE_MATTER_SECTOR_DEFINITION_RESULT_REVIEW_ACCEPTS_"
+        "MASTER_ACTION_MATTER_SURFACE_INDEX_NO_DERIVATION_CLAIM"
     )
     assert (
         scalar_conservation_active_workstream["claim_level"]
-        == "Level 3 ToE-native matter-sector candidate surface definition packet prepared for result review"
+        == "Level 3 ToE-native matter-sector definition result review accepted; calculation-route selection authorized"
     )
     assert (
         scalar_conservation_active_workstream["claim_ceiling"]
-        == "definition packet review only no toe-native matter derivation no standard model derivation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
+        == "route selection only no direct phi route execution no toe-native matter derivation no standard model derivation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
     )
-    assert "candidate matter-sector surfaces" in scalar_conservation_active_workstream[
+    assert "candidate surface index only" in scalar_conservation_active_workstream[
+        "non_claim_boundary"
+    ]
+    assert "execute the phi route before route selection" in scalar_conservation_active_workstream[
         "non_claim_boundary"
     ]
     assert (
         scalar_conservation_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
+    )
+    assert (
+        scalar_conservation_active_workstream["review_result"]
+        == "TOE_NATIVE_MATTER_SECTOR_DEFINITION_RESULT_REVIEW_ACCEPTS_"
+        "MASTER_ACTION_MATTER_SURFACE_INDEX_NO_DERIVATION_CLAIM"
     )
     assert (
         scalar_conservation_active_workstream["definition_result"]
@@ -3030,6 +3037,42 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
             "next_after_definition_review_suggested"
         ]
         == "select_toe_native_matter_sector_calculation_route"
+    )
+    assert scalar_conservation_active_workstream["route_selection_authorized"] == "yes"
+    assert (
+        scalar_conservation_active_workstream["selected_next_target"]
+        == "select_toe_native_matter_sector_calculation_route"
+    )
+    assert (
+        scalar_conservation_active_workstream["selected_next_target_kind"]
+        == "toe_native_matter_sector_calculation_route_selection"
+    )
+    assert scalar_conservation_active_workstream["recommended_first_route_hint"] == "phi"
+    assert (
+        scalar_conservation_active_workstream["recommended_first_route_status"]
+        == "recorded_as_nonbinding_selector_input"
+    )
+    assert (
+        scalar_conservation_active_workstream["recommended_first_route_target_hint"]
+        == "prepare_toe_native_phi_surface_variation_and_source_route_packet"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "next_after_route_selection_recommended"
+        ]
+        == "prepare_toe_native_phi_surface_variation_and_source_route_packet"
+    )
+    assert (
+        scalar_conservation_active_workstream["direct_phi_route_execution_authorized"]
+        == "no"
+    )
+    assert scalar_conservation_active_workstream["recommended_phi_route_binding"] == "no"
+    assert (
+        scalar_conservation_active_workstream["review_criteria_count"] == "10"
+    )
+    assert (
+        scalar_conservation_active_workstream["review_criteria_accepted_count"]
+        == "10"
     )
     assert (
         scalar_conservation_active_workstream[
@@ -3396,8 +3439,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         scalar_conservation_active_workstream["review_result"]
-        == "CLASSICAL_EINSTEIN_SCALAR_COUPLING_ROUTE_RESULT_REVIEW_ACCEPTS_"
-        "PROVISIONAL_ON_SHELL_CLASSICAL_SOURCE_ROUTE_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE"
+        == "TOE_NATIVE_MATTER_SECTOR_DEFINITION_RESULT_REVIEW_ACCEPTS_"
+        "MASTER_ACTION_MATTER_SURFACE_INDEX_NO_DERIVATION_CLAIM"
     )
     assert (
         scalar_conservation_active_workstream[
@@ -3445,7 +3488,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         scalar_conservation_active_workstream["proof_depth_label"]
-        == "RECORD_ONLY_INDEX_VALIDATED"
+        == "RECORD_ONLY_REVIEW_VALIDATED"
     )
     assert scalar_conservation_active_workstream["record_validated"] == "yes"
     assert scalar_conservation_active_workstream["symbolic_calculation_recorded"] == "no"
@@ -3517,6 +3560,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "toe_native_matter_sector_defined",
         "toe_matter_model_derived",
         "standard_model_derivation_claimed",
+        "direct_phi_route_execution_authorized",
+        "recommended_phi_route_binding",
         "source_map_closed",
         "qft_gr_solved",
         "qft_gr_closure_claimed",

@@ -1,0 +1,421 @@
+{
+  "acceptance_criteria": {
+    "consumes_expected_result_review_target": true,
+    "definition_packet_available_and_accepted": true,
+    "master_action_working_form_status_preserved": true,
+    "next_target_is_route_selection_only": true,
+    "no_canonical_master_action_promotion": true,
+    "no_qft_gr_or_semiclassical_closure": true,
+    "no_standard_model_derivation_claim": true,
+    "no_toe_native_matter_derivation_claim": true,
+    "required_surfaces_indexed": true,
+    "review_criteria_all_accepted": true,
+    "scalar_witness_preserved_only_as_reference": true,
+    "surface_classifications_are_bounded": true,
+    "variation_stress_energy_quantum_and_seam_routes_marked": true
+  },
+  "accepted": true,
+  "artifact_id": "TOE_NATIVE_MATTER_SECTOR_DEFINITION_PACKET_RESULT_REVIEW_20260618_v0",
+  "candidate_status_summary": {
+    "imported_known_physics_terms": [
+      "psi",
+      "A",
+      "phi"
+    ],
+    "insufficiently_defined_surfaces": [
+      "psi",
+      "A",
+      "phi",
+      "rho",
+      "C_k"
+    ],
+    "partially_witnessed_imported_scalar_surface": "phi",
+    "provisional_toe_native_candidate_surfaces": [
+      "psi",
+      "A",
+      "phi",
+      "rho",
+      "C_k"
+    ],
+    "pure_organizing_placeholders": [
+      "rho",
+      "C_k"
+    ]
+  },
+  "candidate_surface_count": 5,
+  "candidate_symbols": [
+    "psi",
+    "A",
+    "phi",
+    "rho",
+    "C_k"
+  ],
+  "canonical_master_action_promoted": false,
+  "captured_at_utc": "2026-06-18T00:00:00Z",
+  "consumed_target": "review_toe_native_matter_sector_definition_packet_result",
+  "critical_gate_fail_conditions": [
+    "ToE-native matter derivation",
+    "Standard Model derivation",
+    "canonical master-action promotion",
+    "QFT-GR closure",
+    "semiclassical coupling",
+    "empirical validation",
+    "public readiness",
+    "direct phi route execution without selector"
+  ],
+  "definition_packet_only_review": true,
+  "definition_result": "MASTER_ACTION_MATTER_SURFACES_INDEXED_AS_NATIVE_CANDIDATES_NO_DERIVATION_CLAIM",
+  "downstream_progression": [
+    {
+      "decision": "TOE_NATIVE_MATTER_SECTOR_DEFINITION_RESULT_REVIEW_ACCEPTS_MASTER_ACTION_MATTER_SURFACE_INDEX_NO_DERIVATION_CLAIM",
+      "reason": "The review accepts only the master-action matter-surface index and associated blocked/specified route statuses.",
+      "stage": "definition_packet_result_review",
+      "status": "ACCEPTED_SURFACE_INDEX_NO_DERIVATION_CLAIM"
+    },
+    {
+      "decision": "select_toe_native_matter_sector_calculation_route",
+      "reason": "The next packet should choose one indexed surface and route, without jumping directly to all-matter derivation.",
+      "stage": "toe_native_matter_sector_calculation_route_selection",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    },
+    {
+      "decision": "prepare_toe_native_phi_surface_variation_and_source_route_packet",
+      "reason": "The recommendation is a selector input only; it does not supersede route selection.",
+      "stage": "recommended_phi_route",
+      "status": "recorded_as_nonbinding_selector_input"
+    }
+  ],
+  "empirical_validation_claimed": false,
+  "formal_theorem_backed_matter_derivation": false,
+  "lane_level_lean_target_files": [
+    "formal/toe_formal/ToeFormal/Derivation/ToeNativeMatterSectorDefinitionPacketResultReview.lean",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  ],
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.ToeNativeMatterSectorDefinitionPacketResultReview",
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativeMatterSectorDefinitionPacketResultReview.lean",
+  "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "master_action_surface_index_accepted": true,
+  "master_action_working_form_noncanonical": true,
+  "mathematical_statement": "The result review accepts the ToE-native matter-sector definition packet as an index of master-action candidate surfaces only: psi, A, phi, rho, and C_k are recorded with status, variation, stress-energy, quantum/operator, and seam-dependency routes. No matter derivation, Standard Model derivation, canonical promotion, QFT-GR closure, or semiclassical coupling is claimed.",
+  "matter_surface_inventory": [
+    {
+      "imported_known_physics_term": true,
+      "insufficiently_defined": true,
+      "label": "fermion_matter_surface",
+      "provisional_toe_native_candidate": true,
+      "pure_organizing_placeholder": false,
+      "quantum_operator_route": "operator/state route blocked pending canonical or path-integral quantization, state domain, renormalization, and anomaly controls",
+      "quantum_operator_route_status": "blocked",
+      "seam_constraint_dependency": [
+        "C_k(g, psi, A, phi, rho)",
+        "fermion-gauge compatibility",
+        "QFT-GR stress-energy source admissibility",
+        "QM/QFT operator-domain semantics"
+      ],
+      "source_document": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+      "source_of_candidate_identified": true,
+      "source_term": "sum_a psi_bar_a * (i*gamma^mu*D_mu - m_a) * psi_a",
+      "status_decision": "imported_known_physics_term_indexed_as_provisional_toe_native_candidate_surface",
+      "stress_energy_route": "metric/tetrad variation route is identified but blocked pending spin structure, tetrad policy, regularity, and source-admissibility review",
+      "stress_energy_route_status": "specified_but_blocked",
+      "surface_id": "MA-MATTER-PSI-FERMION-SURFACE",
+      "symbol": "psi",
+      "variation_route": "candidate variation with respect to psi/psi_bar toward a Dirac-family equation is identified but blocked pending spinor bundle, gamma-matrix, covariant derivative, mass, gauge-coupling, and domain conventions",
+      "variation_route_status": "specified_but_blocked"
+    },
+    {
+      "imported_known_physics_term": true,
+      "insufficiently_defined": true,
+      "label": "gauge_field_surface",
+      "provisional_toe_native_candidate": true,
+      "pure_organizing_placeholder": false,
+      "quantum_operator_route": "quantized gauge/source-current route blocked pending gauge quantization semantics, state domain, renormalization, and anomaly controls",
+      "quantum_operator_route_status": "blocked",
+      "seam_constraint_dependency": [
+        "C_k(g, psi, A, phi, rho)",
+        "EM-QFT gauge/quantization semantics",
+        "source-current interface alignment",
+        "QFT-GR stress-energy source admissibility"
+      ],
+      "source_document": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+      "source_of_candidate_identified": true,
+      "source_term": "-(1/4) * F_{mu nu} * F^{mu nu}",
+      "status_decision": "imported_known_physics_gauge_term_indexed_as_provisional_toe_native_candidate_surface",
+      "stress_energy_route": "gauge stress-energy route is identified but blocked pending gauge group, coupling normalization, regularity, and source admissibility",
+      "stress_energy_route_status": "specified_but_blocked",
+      "surface_id": "MA-MATTER-A-GAUGE-SURFACE",
+      "symbol": "A",
+      "variation_route": "gauge-field variation route toward gauge equations/current coupling is identified but blocked pending gauge group, representation, current map, boundary, and gauge-fixing policy",
+      "variation_route_status": "specified_but_blocked"
+    },
+    {
+      "imported_known_physics_term": true,
+      "insufficiently_defined": true,
+      "label": "scalar_structure_surface",
+      "provisional_toe_native_candidate": true,
+      "pure_organizing_placeholder": false,
+      "quantum_operator_route": "quantum scalar expectation route blocked pending state, operator, renormalization, and domain controls",
+      "quantum_operator_route_status": "blocked",
+      "seam_constraint_dependency": [
+        "C_k(g, psi, A, phi, rho)",
+        "scalar witness boundary",
+        "QFT-GR source route admissibility",
+        "regime and transport alignment"
+      ],
+      "source_document": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+      "source_of_candidate_identified": true,
+      "source_term": "(1/2) * sum_i nabla_mu(phi_i) * nabla^mu(phi_i) - V(phi)",
+      "status_decision": "scalar_structure_term_indexed_as_provisional_toe_native_candidate_surface_with_imported_scalar_witness_boundary",
+      "stress_energy_route": "classical scalar stress-energy route is available as the positive imported sandbox witness, but not as a ToE-native matter derivation",
+      "stress_energy_route_status": "partially_witnessed_for_imported_scalar_blocked_for_toe_native",
+      "surface_id": "MA-MATTER-PHI-SCALAR-STRUCTURE-SURFACE",
+      "symbol": "phi",
+      "variation_route": "real-scalar variation and stress-energy mechanics are witnessed only for the imported scalar sandbox; ToE-native scalar/structure field content, index set, sign convention, and generation rule remain undefined",
+      "variation_route_status": "partially_witnessed_for_imported_scalar_blocked_for_toe_native"
+    },
+    {
+      "imported_known_physics_term": false,
+      "insufficiently_defined": true,
+      "label": "statistical_state_surface",
+      "provisional_toe_native_candidate": true,
+      "pure_organizing_placeholder": true,
+      "quantum_operator_route": "state/operator route blocked pending QM-STAT transport semantics and expectation/source map",
+      "quantum_operator_route_status": "blocked",
+      "seam_constraint_dependency": [
+        "C_k(g, psi, A, phi, rho)",
+        "QM-STAT transport semantics",
+        "state-domain semantics",
+        "renormalized expectation/source prerequisite map"
+      ],
+      "source_document": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+      "source_of_candidate_identified": true,
+      "source_term": "lambda_stat * rho * (ln(rho) - 1)",
+      "status_decision": "speculative_statistical_state_surface_indexed_as_organizing_placeholder_and_candidate_dependency",
+      "stress_energy_route": "stress-energy/source route blocked pending statistical-state coupling to geometry and source-admissibility semantics",
+      "stress_energy_route_status": "blocked",
+      "surface_id": "MA-MATTER-RHO-STATISTICAL-STATE-SURFACE",
+      "symbol": "rho",
+      "variation_route": "variation route blocked pending rho domain, positivity, normalization, measure, entropy functional, and log-domain policy",
+      "variation_route_status": "blocked"
+    },
+    {
+      "imported_known_physics_term": false,
+      "insufficiently_defined": true,
+      "label": "seam_constraint_surface",
+      "provisional_toe_native_candidate": true,
+      "pure_organizing_placeholder": true,
+      "quantum_operator_route": "operator route blocked pending seam-constraint quantization or classical constraint-domain policy",
+      "quantum_operator_route_status": "blocked",
+      "seam_constraint_dependency": [
+        "cross-pillar compatibility",
+        "bridge admissibility",
+        "transport consistency",
+        "canonical promotion prerequisites"
+      ],
+      "source_document": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+      "source_of_candidate_identified": true,
+      "source_term": "sum_k lambda_k * C_k(g, psi, A, phi, rho)",
+      "status_decision": "seam_constraint_surface_indexed_as_required_organizing_dependency_not_matter_derivation",
+      "stress_energy_route": "source contribution from constraints blocked pending whether admitted C_k terms are metric-dependent and source-admissible",
+      "stress_energy_route_status": "blocked",
+      "surface_id": "MA-MATTER-CK-SEAM-CONSTRAINT-SURFACE",
+      "symbol": "C_k",
+      "variation_route": "constraint variation blocked pending admitted C_k classes, multiplier policy, compatibility theorem links, and transport alignment",
+      "variation_route_status": "blocked"
+    }
+  ],
+  "next_sequence": [
+    "select_toe_native_matter_sector_calculation_route",
+    "prepare_toe_native_phi_surface_variation_and_source_route_packet",
+    "review_toe_native_phi_surface_variation_and_source_route_result",
+    "compare_phi_native_candidate_route_against_provisional_scalar_witness"
+  ],
+  "non_claim_boundary": "This review accepts a candidate surface index only. It does not derive ToE-native matter, derive the Standard Model, promote the master action, close QFT-GR, authorize semiclassical coupling, claim empirical validation, claim public readiness, or execute the phi route before route selection.",
+  "outcome_id": "TOE_NATIVE_MATTER_SECTOR_DEFINITION_RESULT_REVIEW_ACCEPTS_MASTER_ACTION_MATTER_SURFACE_INDEX_NO_DERIVATION_CLAIM",
+  "packet_classification": "toe_native_matter_sector_definition_packet_result_review_accepts_surface_index_and_authorizes_route_selection_only",
+  "packet_id": "TOE_NATIVE_MATTER_SECTOR_DEFINITION_PACKET_RESULT_REVIEW_v0",
+  "phase2_readiness_claim": false,
+  "pillar_completion_inferred": false,
+  "prepared": true,
+  "proof_depth_label": "RECORD_ONLY_REVIEW_VALIDATED",
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_solved": false,
+  "qft_gr_source_map_closure_authorized": false,
+  "recommended_first_route_hint": "phi",
+  "recommended_first_route_reason": "phi is the shortest comparison path because the imported scalar sandbox already produced a positive classical source witness; the route selector must still make the formal selection.",
+  "recommended_first_route_status": "recorded_as_nonbinding_selector_input",
+  "recommended_first_route_target_hint": "prepare_toe_native_phi_surface_variation_and_source_route_packet",
+  "record_validated": true,
+  "review_criteria": [
+    {
+      "assessment": "psi, A, phi, rho, and C_k are indexed.",
+      "evidence": [
+        "psi",
+        "A",
+        "phi",
+        "rho",
+        "C_k"
+      ],
+      "row_id": "required_surfaces_indexed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The review accepts imported/provisional/placeholder status labels without treating them as derivations.",
+      "evidence": {
+        "imported_known_physics_terms": [
+          "psi",
+          "A",
+          "phi"
+        ],
+        "insufficiently_defined_surfaces": [
+          "psi",
+          "A",
+          "phi",
+          "rho",
+          "C_k"
+        ],
+        "partially_witnessed_imported_scalar_surface": "phi",
+        "provisional_toe_native_candidate_surfaces": [
+          "psi",
+          "A",
+          "phi",
+          "rho",
+          "C_k"
+        ],
+        "pure_organizing_placeholders": [
+          "rho",
+          "C_k"
+        ]
+      },
+      "row_id": "surface_classifications_are_bounded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Every surface records variation, stress-energy, quantum/operator, and seam-dependency route status as specified or blocked.",
+      "evidence": {
+        "first_actual_calculation_deferred_to_route_selection": true,
+        "quantum_operator_route_specified_or_blocked": true,
+        "seam_constraint_dependency_recorded": true,
+        "stress_energy_route_specified_or_blocked": true,
+        "variation_route_specified_or_blocked": true
+      },
+      "row_id": "variation_stress_energy_quantum_and_seam_routes_marked",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The imported scalar sandbox remains a reference witness and is not promoted to a ToE-native derivation.",
+      "evidence": "QFT_GR_PROVISIONAL_SCALAR_CLASSICAL_SOURCE_ROUTE_WITNESS_CLOSED_AS_POSITIVE_CLASSICAL_SANDBOX_NO_QFT_GR_OR_TOE_NATIVE_CLOSURE",
+      "row_id": "scalar_witness_preserved_only_as_reference",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The candidate master action remains working-form and non-canonical.",
+      "evidence": "BLOCKED_PENDING_CRITERIA",
+      "row_id": "master_action_working_form_status_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet makes no ToE-native matter derivation claim.",
+      "evidence": "toe_native_matter_derivation_claimed=false",
+      "row_id": "no_toe_native_matter_derivation_claim",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet makes no Standard Model derivation claim.",
+      "evidence": "standard_model_derivation_claimed=false",
+      "row_id": "no_standard_model_derivation_claim",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet does not promote the master action.",
+      "evidence": "canonical_master_action_promoted=false",
+      "row_id": "no_canonical_master_action_promotion",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet does not close QFT-GR or authorize semiclassical coupling.",
+      "evidence": "qft_gr_closure_claimed=false; semiclassical_coupling_claimed=false",
+      "row_id": "no_qft_gr_or_semiclassical_closure",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The next live target is calculation-route selection, not an immediate matter derivation.",
+      "evidence": "select_toe_native_matter_sector_calculation_route",
+      "row_id": "route_selection_authorized_only_after_review",
+      "status": "accepted"
+    }
+  ],
+  "review_criteria_accepted_count": 10,
+  "review_criteria_count": 10,
+  "review_result": "TOE_NATIVE_MATTER_SECTOR_DEFINITION_RESULT_REVIEW_ACCEPTS_MASTER_ACTION_MATTER_SURFACE_INDEX_NO_DERIVATION_CLAIM",
+  "reviewed_definition_packet_artifact_id": "TOE_NATIVE_MATTER_SECTOR_DEFINITION_PACKET_20260618_v0",
+  "reviewed_definition_packet_outcome": "TOE_NATIVE_MATTER_SECTOR_DEFINITION_PACKET_PREPARED_MASTER_ACTION_MATTER_SURFACES_INDEXED_AS_NATIVE_CANDIDATES_NO_DERIVATION_CLAIM",
+  "route_selection_authorized": true,
+  "route_selection_candidate_targets": [
+    "derive_stress_energy_from_candidate_scalar_or_field_term",
+    "derive_current_from_candidate_gauge_term",
+    "derive_dirac_or_fermion_stress_energy_route",
+    "define_quantum_expectation_source_prerequisite_map"
+  ],
+  "route_status_summary": {
+    "first_actual_calculation_deferred_to_route_selection": true,
+    "quantum_operator_route_specified_or_blocked": true,
+    "seam_constraint_dependency_recorded": true,
+    "stress_energy_route_specified_or_blocked": true,
+    "variation_route_specified_or_blocked": true
+  },
+  "scalar_sandbox_reopened": false,
+  "scalar_witness_closeout_preserved_as_reference": true,
+  "schema_id": "TOE_NATIVE_MATTER_SECTOR_DEFINITION_PACKET_RESULT_REVIEW_20260618_v0",
+  "seam_closure_claim": false,
+  "selected_next_target": "select_toe_native_matter_sector_calculation_route",
+  "selected_next_target_kind": "toe_native_matter_sector_calculation_route_selection",
+  "semiclassical_coupling_authorized": false,
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_source_established": false,
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "source_map_closed": false,
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_NONLIVE_RESULT_REVIEW",
+  "symbolic_calculation_recorded": false,
+  "toe_matter_model_derived": false,
+  "toe_matter_sector_derived": false,
+  "toe_native_matter_derivation_claimed": false,
+  "toe_native_matter_sector_defined": false,
+  "toe_native_matter_sector_derived": false,
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+    "aggregate_timeout_with_steady_progress_interpretation": "incomplete_validation_not_mathematical_failure",
+    "checkpoint_type": "toe_native_matter_sector_definition_packet_result_review",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  }
+}
