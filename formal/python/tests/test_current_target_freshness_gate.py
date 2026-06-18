@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source"
+    "prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,7 +1329,7 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
-    "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
+    "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source"
 )
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
@@ -1422,7 +1422,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source"
+    "prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1439,7 +1439,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "QFTGRBianchiCompatibilityTestForProvisionalScalarStressEnergySource.lean"
+    / "QFTGRSourceAdmissibilityReviewForProvisionalScalarSource.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2961,24 +2961,24 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert scalar_conservation_active_workstream["report"] == (
         "formal/docs/release/"
-        "QFT_GR_BIANCHI_COMPATIBILITY_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_"
-        "SOURCE_20260617_v0.json"
+        "QFT_GR_SOURCE_ADMISSIBILITY_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_"
+        "20260617_v0.json"
     )
     assert (
         scalar_conservation_active_workstream["outcome_id"]
-        == "QFT_GR_BIANCHI_COMPATIBILITY_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_"
-        "SOURCE_PREPARED_WITH_BIANCHI_COMPATIBILITY_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_"
-        "SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE"
+        == "QFT_GR_SOURCE_ADMISSIBILITY_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_"
+        "PREPARED_WITH_PROVISIONAL_SCALAR_SOURCE_PASSES_LOCAL_SOURCE_ADMISSIBILITY_"
+        "REVIEW_ON_SHELL_NO_SEMICLASSICAL_OR_TOE_NATIVE_CLOSURE"
     )
     assert (
         scalar_conservation_active_workstream["claim_level"]
-        == "Level 3 QFT-GR source-admissibility review for provisional scalar source authorized"
+        == "Level 3 QFT-GR semiclassical-coupling gate scope review for provisional scalar source authorized"
     )
     assert (
         scalar_conservation_active_workstream["claim_ceiling"]
-        == "source admissibility review preparation only no arbitrary distributional-source admissibility no semiclassical coupling no qft_gr closure"
+        == "scope review preparation only no semiclassical Einstein equation derivation no qft_gr closure no toe-native matter derivation"
     )
-    assert "source admissibility" in scalar_conservation_active_workstream[
+    assert "conditional local" in scalar_conservation_active_workstream[
         "non_claim_boundary"
     ]
     assert (
@@ -3102,13 +3102,56 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         scalar_conservation_active_workstream["source_admissibility_review_authorized"]
         == "yes"
     )
+    assert (
+        scalar_conservation_active_workstream[
+            "provisional_scalar_source_admissibility_result"
+        ]
+        == "PROVISIONAL_SCALAR_SOURCE_PASSES_LOCAL_SOURCE_ADMISSIBILITY_REVIEW_ON_SHELL_NO_SEMICLASSICAL_OR_TOE_NATIVE_CLOSURE"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "local_source_admissibility_review_completed"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream["local_source_admissibility_review_passed"]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "provisional_scalar_source_passes_local_source_admissibility_review"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "provisional_scalar_source_admissibility_constructed"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream[
+            "semiclassical_coupling_gate_scope_review_authorized"
+        ]
+        == "yes"
+    )
+    assert (
+        scalar_conservation_active_workstream["lean_validation_tier_policy_formalized"]
+        == "yes"
+    )
     for key in [
         "source_admissibility_claimed",
         "source_admissibility_completed",
         "toe_native_matter_derivation_claimed",
         "arbitrary_distributional_source_action_derived_claimed",
+        "arbitrary_distributional_source_admissibility_claimed",
         "arbitrary_distributional_source_conservation_claimed",
         "arbitrary_distributional_source_promoted",
+        "quantum_stress_energy_expectation_constructed",
+        "state_expectation_functional_link_claimed",
+        "renormalization_result_claimed",
+        "renormalized_stress_energy_constructed",
         "conservation_claimed",
         "off_shell_conservation_claimed",
         "arbitrary_phi_conserved_claimed",

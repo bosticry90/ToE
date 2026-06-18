@@ -1,0 +1,287 @@
+{
+  "Bianchi_compatibility_claimed": true,
+  "Bianchi_compatibility_claimed_scope": "conditional on scalar EOM, Levi-Civita connection, metric compatibility, constant coupling, and provisional scalar source only",
+  "acceptance_criteria": {
+    "action_derivability_packet_available": true,
+    "bianchi_compatibility_constructed_conditionally": true,
+    "consumes_expected_bianchi_packet": true,
+    "field_equation_on_shell_condition_stated": true,
+    "local_review_criteria_all_pass": true,
+    "scalar_stress_energy_selected": true,
+    "scope_restrictions_preserved": true,
+    "tiered_lean_validation_policy_formalized": true,
+    "weak_conservation_constructed_conditionally": true,
+    "weak_pairing_packet_available": true
+  },
+  "accepted": true,
+  "accepted_outcomes_considered": [
+    "PROVISIONAL_SCALAR_SOURCE_PASSES_LOCAL_SOURCE_ADMISSIBILITY_REVIEW_ON_SHELL_NO_SEMICLASSICAL_OR_TOE_NATIVE_CLOSURE",
+    "PROVISIONAL_SCALAR_SOURCE_ADMISSIBILITY_REVIEW_BLOCKED_BY_MISSING_ON_SHELL_CONSERVATION_OR_BIANCHI_COMPATIBILITY",
+    "PROVISIONAL_SCALAR_SOURCE_ADMISSIBILITY_REVIEW_BLOCKED_BY_SCOPE_RESTRICTION_FAILURE"
+  ],
+  "action_derivability_constructed": true,
+  "action_derivability_result": "ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION",
+  "arbitrary_distributional_source_admissibility_claimed": false,
+  "arbitrary_distributional_source_conservation_claimed": false,
+  "arbitrary_distributional_source_promoted": false,
+  "artifact_id": "QFT_GR_SOURCE_ADMISSIBILITY_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_20260617_v0",
+  "authorized_by_bianchi_artifact_id": "QFT_GR_BIANCHI_COMPATIBILITY_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_20260617_v0",
+  "authorized_by_bianchi_outcome": "QFT_GR_BIANCHI_COMPATIBILITY_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_BIANCHI_COMPATIBILITY_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE",
+  "bianchi_compatibility_constructed": true,
+  "bianchi_compatibility_result": "BIANCHI_COMPATIBILITY_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_QFT_GR_CLOSURE",
+  "bianchi_compatibility_statement": "Under scalar EOM, Levi-Civita metric compatibility, and constant G_N and Lambda, the provisional scalar source is compatible with the contracted Bianchi identity.",
+  "broader_nonclaim_row_count": 6,
+  "broader_nonclaim_rows": [
+    {
+      "reason": "TOE_NATIVE_MATTER_SECTOR_NOT_YET_DEFINED",
+      "row_id": "toe_native_matter_sector",
+      "status": "not_derived"
+    },
+    {
+      "reason": "The review does not promote arbitrary distributional sources.",
+      "row_id": "arbitrary_distributional_source_admissibility",
+      "status": "not_claimed"
+    },
+    {
+      "reason": "No QFT state or expectation-value source construction is supplied.",
+      "row_id": "state_expectation_functional_link",
+      "status": "not_supplied"
+    },
+    {
+      "reason": "No renormalization scheme, finite tensor proof, or domain control is supplied.",
+      "row_id": "renormalized_stress_energy_object_and_finiteness",
+      "status": "not_supplied"
+    },
+    {
+      "reason": "The Einstein-form equation has only been used as a compatibility-test surface.",
+      "row_id": "semiclassical_einstein_equation_derivation",
+      "status": "not_reached"
+    },
+    {
+      "reason": "The review closes no QFT-GR seam and authorizes no public ToE claim.",
+      "row_id": "qft_gr_closure",
+      "status": "not_claimed"
+    }
+  ],
+  "candidate_source_object_selected": true,
+  "captured_at_utc": "2026-06-17T00:00:00Z",
+  "constant_gravitational_coupling_required": true,
+  "constant_lambda_required_if_lambda_variant_used": true,
+  "consumed_target": "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source",
+  "contracted_bianchi_identity": "nabla_mu G^{mu nu} = 0",
+  "critical_gate_fail_conditions": [
+    "SOURCE_ADMISSIBILITY_ESTABLISHED",
+    "ToE_native_matter_derivation",
+    "arbitrary_distributional_source_promotion",
+    "Standard_Model_derivation",
+    "semiclassical_Einstein_equation_derivation",
+    "quantum_stress_energy_expectation_construction",
+    "renormalization_result",
+    "full_QFT_GR_seam_closure",
+    "empirical_validation",
+    "public_ToE_claim",
+    "master_action_promotion"
+  ],
+  "divergence_identity": "nabla_mu T^{mu nu} = (box_g phi - V'(phi)) nabla^nu phi",
+  "downstream_progression": [
+    {
+      "decision": "PROVISIONAL_SCALAR_SOURCE_PASSES_LOCAL_SOURCE_ADMISSIBILITY_REVIEW_ON_SHELL_NO_SEMICLASSICAL_OR_TOE_NATIVE_CLOSURE",
+      "reason": "The scalar sandbox has selected source object, test pairing, action derivability, scalar EOM, on-shell weak conservation, and on-shell Bianchi compatibility.",
+      "stage": "local_source_admissibility_review",
+      "status": "PASSES_LOCAL_REVIEW_ON_SHELL"
+    },
+    {
+      "decision": "not_claimed",
+      "reason": "No generic source-admissibility claim is made for arbitrary distributional sources or for the full QFT-GR source map.",
+      "stage": "generic_source_admissibility",
+      "status": "NOT_CLAIMED"
+    },
+    {
+      "decision": "prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source",
+      "reason": "The next target may review the semiclassical coupling gate for the provisional scalar source only; it may not derive a semiclassical Einstein equation.",
+      "stage": "semiclassical_coupling_gate",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    },
+    {
+      "decision": "not_claimed",
+      "reason": "The result remains inside the provisional scalar sandbox.",
+      "stage": "qft_gr_closure",
+      "status": "NOT_CLAIMED"
+    }
+  ],
+  "einstein_source_equation_with_lambda_form": "G^{mu nu} + Lambda g^{mu nu} = 8 pi G_N T^{mu nu}",
+  "empirical_validation_claimed": false,
+  "field_content": "real scalar field phi",
+  "generic_source_admissibility_boundary": "No generic source-admissibility claim is made for arbitrary distributional sources or for the full QFT-GR source map.",
+  "lagrangian_density": "L_m(g, phi, nabla phi) = -1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)",
+  "lane_level_lean_target_files": [
+    "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGRScalarSandbox.lean",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  ],
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.QFTGRScalarSandbox",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/QFTGRSourceAdmissibilityReviewForProvisionalScalarSource.lean",
+  "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+  "levi_civita_connection_required": true,
+  "local_admissibility_scope": "conditional local source-admissibility review for the imported provisional real-scalar sandbox on shell only",
+  "local_review_criteria": [
+    {
+      "assessment": "The review binds to the provisional scalar stress-energy source subclass generated by the real-scalar action.",
+      "evidence": "stress_energy_candidate_generated_by_provisional_real_scalar_lagrangian_v0",
+      "row_id": "candidate_source_object_selected",
+      "status": "passed_conditionally"
+    },
+    {
+      "assessment": "The selected weak-pairing contract and scalar variational pairing convention supply the local test surface.",
+      "evidence": "D = C_c^infty(M, Sym^2 T*M); delta S_m[g, phi](k) = -1/2 integral_M T_{mu nu} k^{mu nu} dVol_g",
+      "row_id": "test_domain_and_pairing_convention_supplied",
+      "status": "passed_conditionally"
+    },
+    {
+      "assessment": "The pairing is constructed as restricted distributional evaluation, without promoting arbitrary sources.",
+      "evidence": "WEAK_PAIRING_CONSTRUCTED_FOR_SELECTED_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_ACTION_DERIVABILITY_NOT_REACHED",
+      "row_id": "weak_pairing_constructed",
+      "status": "passed_conditionally"
+    },
+    {
+      "assessment": "Metric variation of the imported scalar action yields the scalar stress-energy expression.",
+      "evidence": "ACTION_DERIVABILITY_CONSTRUCTED_FOR_PROVISIONAL_REAL_SCALAR_TEST_SECTOR_NO_TOE_NATIVE_MATTER_DERIVATION",
+      "row_id": "action_derivability_constructed",
+      "status": "passed_conditionally"
+    },
+    {
+      "assessment": "The review is on shell only and requires the scalar equation of motion.",
+      "evidence": "box_g phi - V'(phi) = 0",
+      "row_id": "field_equation_on_shell_condition_stated",
+      "status": "passed_conditionally"
+    },
+    {
+      "assessment": "The divergence reduces to the scalar EOM residual times nabla^nu phi and vanishes only on shell.",
+      "evidence": "WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY",
+      "row_id": "weak_conservation_constructed_conditionally",
+      "status": "passed_conditionally"
+    },
+    {
+      "assessment": "The contracted Bianchi identity is compatible with the provisional scalar source under Levi-Civita metric compatibility and constant coupling assumptions.",
+      "evidence": "BIANCHI_COMPATIBILITY_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_QFT_GR_CLOSURE",
+      "row_id": "bianchi_compatibility_constructed_conditionally",
+      "status": "passed_conditionally"
+    },
+    {
+      "assessment": "The result remains local, conditional, on shell, and confined to the imported scalar sandbox.",
+      "evidence": "No generic source-admissibility claim is made for arbitrary distributional sources or for the full QFT-GR source map.",
+      "row_id": "scope_restrictions_preserved",
+      "status": "passed_conditionally"
+    }
+  ],
+  "local_review_criteria_count": 8,
+  "local_review_criteria_passed_count": 8,
+  "local_source_admissibility_review_completed": true,
+  "local_source_admissibility_review_passed": true,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "The imported provisional scalar source passes a local on-shell source-admissibility review because it has a selected source object, a supplied test-pairing convention, constructed weak pairing, scalar-action derivability, the scalar field equation box_g phi - V'(phi) = 0, on-shell weak conservation via nabla_mu T^{mu nu} = (box_g phi - V'(phi)) nabla^nu phi, and on-shell Bianchi compatibility via nabla_mu G^{mu nu} = 0. This is not generic source admissibility, not a ToE-native matter derivation, and not semiclassical or QFT-GR closure.",
+  "metric_compatibility_identity": "nabla_mu g^{mu nu} = 0",
+  "metric_compatibility_required": true,
+  "non_claim_boundary": "This packet records only a conditional local source-admissibility review pass for the imported provisional real-scalar sandbox on shell. It does not claim generic source admissibility, arbitrary distributional-source promotion, ToE-native matter derivation, Standard Model derivation, quantum stress-energy expectation construction, renormalization, semiclassical Einstein equation derivation, QFT-GR closure, empirical validation, public readiness, public submission, or master-action promotion.",
+  "on_shell_conservation_statement": "If box_g phi - V'(phi) = 0, then nabla_mu T^{mu nu} = 0",
+  "on_shell_required": true,
+  "outcome_id": "QFT_GR_SOURCE_ADMISSIBILITY_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_PREPARED_WITH_PROVISIONAL_SCALAR_SOURCE_PASSES_LOCAL_SOURCE_ADMISSIBILITY_REVIEW_ON_SHELL_NO_SEMICLASSICAL_OR_TOE_NATIVE_CLOSURE",
+  "packet_classification": "qft_gr_source_admissibility_review_for_provisional_scalar_source_passes_local_on_shell_sandbox_review_nonpromotionally",
+  "packet_id": "QFT_GR_SOURCE_ADMISSIBILITY_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_v0",
+  "prepared": true,
+  "provisional_scalar_source_admissibility_claimed_scope": "conditional local source-admissibility review for the imported provisional real-scalar sandbox on shell only",
+  "provisional_scalar_source_admissibility_constructed": true,
+  "provisional_scalar_source_admissibility_result": "PROVISIONAL_SCALAR_SOURCE_PASSES_LOCAL_SOURCE_ADMISSIBILITY_REVIEW_ON_SHELL_NO_SEMICLASSICAL_OR_TOE_NATIVE_CLOSURE",
+  "provisional_scalar_source_passes_local_source_admissibility_review": true,
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "quantum_stress_energy_expectation_constructed": false,
+  "renormalization_result_claimed": false,
+  "renormalized_stress_energy_constructed": false,
+  "reviewed_action_derivability_artifact_id": "QFT_GR_ACTION_DERIVABILITY_RETRY_WITH_PROVISIONAL_MATTER_SECTOR_20260616_v0",
+  "reviewed_weak_pairing_artifact_id": "QFT_GR_WEAK_PAIRING_RETRY_FOR_SELECTED_CANDIDATE_FUNCTIONAL_CONTRACT_PACKET_20260616_v0",
+  "scalar_action": "S_m[g, phi] = integral_M (-1/2 g^{mu nu} nabla_mu phi nabla_nu phi - V(phi)) dVol_g",
+  "scalar_equation_of_motion": "box_g phi - V'(phi) = 0",
+  "schema_id": "QFT_GR_SOURCE_ADMISSIBILITY_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_20260617_v0",
+  "selected_action_generated_source_subclass_id": "stress_energy_candidate_generated_by_provisional_real_scalar_lagrangian_v0",
+  "selected_known_matter_model": "real_scalar_field_klein_gordon_type",
+  "selected_next_target": "prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source",
+  "selected_next_target_kind": "qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source_preparation",
+  "selected_provisional_matter_sector_id": "provisional_real_scalar_field_test_sector_v0",
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_coupling_gate_scope": "The next target may review the semiclassical coupling gate for the provisional scalar source only; it may not derive a semiclassical Einstein equation.",
+  "semiclassical_einstein_equation_derived": false,
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "source_side_conservation_requirement": "nabla_mu T^{mu nu} = 0",
+  "standard_model_derivation_claimed": false,
+  "state_expectation_functional_link_claimed": false,
+  "status": "ACTIVE_NONLIVE_SCOPED_LOCAL_RESULT",
+  "stress_energy_contravariant_expression": "T^{mu nu} = g^{mu alpha} g^{nu beta} T_{alpha beta}",
+  "stress_energy_covariant_expression": "T_{mu nu} = partial_mu phi partial_nu phi - 1/2 g_{mu nu} g^{alpha beta} partial_alpha phi partial_beta phi - g_{mu nu} V(phi)",
+  "test_domain_pairing_convention_supplied": true,
+  "toe_matter_model_derived": false,
+  "toe_native_matter_derivation_claimed": false,
+  "toe_native_matter_sector_defined": false,
+  "toe_native_matter_sector_result": "TOE_NATIVE_MATTER_SECTOR_NOT_YET_DEFINED",
+  "validation_policy": {
+    "aggregate_lean_health_claimed_before_execution": false,
+    "aggregate_lean_validation_command": "./run_lean.ps1 -Target ToeFormal -TimeoutSeconds 1800",
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_deferred": false,
+    "aggregate_lean_validation_elapsed_seconds": 1800,
+    "aggregate_lean_validation_exit_code": 124,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_observed_progress": "built_8166_of_8179_modules_before_timeout",
+    "aggregate_lean_validation_required_reason": "ToeFormal.lean import surface updated by this packet",
+    "aggregate_lean_validation_status_for_packet": "incomplete_due_to_timeout_with_steady_progress",
+    "aggregate_timeout_with_steady_progress_interpretation": "incomplete_validation_not_mathematical_failure",
+    "checkpoint_type": "qft_gr_source_admissibility_review_for_provisional_scalar_source",
+    "focused_and_lane_validation_completed": "recorded_by_validation_commands_for_marker_and_lane_targets",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "tiered_lean_validation_policy_formalized": true,
+    "tiers": [
+      {
+        "command_template": "formal/toe_formal/lake.ps1 env lean ToeFormal/Derivation/<TouchedModule>.lean",
+        "name": "touched Lean marker or module",
+        "tier": 1
+      },
+      {
+        "command_template": "./run_lean.ps1 -Target ToeFormal.Derivation.<Module> -TimeoutSeconds 300",
+        "name": "smallest affected Lake target",
+        "tier": 2
+      },
+      {
+        "command_template": "./run_lean.ps1 -Target ToeFormal.Derivation.QFTGRScalarSandbox -TimeoutSeconds 600",
+        "name": "lane-level aggregate when available",
+        "tier": 3
+      },
+      {
+        "command_template": "./run_lean.ps1 -Target ToeFormal -TimeoutSeconds 1800",
+        "name": "full ToeFormal aggregate",
+        "required_for": "release, preservation, or authority-surface synchronization",
+        "tier": 4
+      }
+    ],
+    "toeformal_import_update_requires_preservation_status": true
+  },
+  "weak_conservation_claimed": true,
+  "weak_conservation_claimed_scope": "conditional on scalar equation of motion only",
+  "weak_conservation_constructed": true,
+  "weak_conservation_result": "WEAK_CONSERVATION_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY",
+  "weak_pairing_constructed": true,
+  "weak_pairing_result": "WEAK_PAIRING_CONSTRUCTED_FOR_SELECTED_DISTRIBUTIONAL_SYMMETRIC_TENSOR_CANDIDATE_ACTION_DERIVABILITY_NOT_REACHED"
+}

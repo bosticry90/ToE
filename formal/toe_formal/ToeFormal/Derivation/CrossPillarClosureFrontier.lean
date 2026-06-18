@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "QFT-GR Bianchi-compatibility test for the provisional scalar stress-energy source prepared with outcome QFT_GR_BIANCHI_COMPATIBILITY_TEST_FOR_PROVISIONAL_SCALAR_STRESS_ENERGY_SOURCE_PREPARED_WITH_BIANCHI_COMPATIBILITY_CONSTRUCTED_FOR_PROVISIONAL_SCALAR_SOURCE_ON_SHELL_NO_SOURCE_ADMISSIBILITY_OR_QFT_GR_CLOSURE. The packet records nabla_mu G^{mu nu} = 0, nabla_mu g^{mu nu} = 0, and the imposed compatibility-test equation G^{mu nu} + Lambda g^{mu nu} = 8 pi G_N T^{mu nu}; with constant G_N and Lambda, Bianchi compatibility reduces to nabla_mu T^{mu nu} = 0, supplied on shell by the scalar EOM. It authorizes prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source and preserves no source admissibility, no arbitrary-distributional-source admissibility, no semiclassical Einstein equation derivation, no QFT-GR closure, no empirical validation, no public readiness, no public submission, no ToE-native matter derivation, and no master-action promotion"
+        "QFT-GR source-admissibility review for the provisional scalar source prepared with outcome QFT_GR_SOURCE_ADMISSIBILITY_REVIEW_FOR_PROVISIONAL_SCALAR_SOURCE_PREPARED_WITH_PROVISIONAL_SCALAR_SOURCE_PASSES_LOCAL_SOURCE_ADMISSIBILITY_REVIEW_ON_SHELL_NO_SEMICLASSICAL_OR_TOE_NATIVE_CLOSURE. The review records a selected provisional scalar stress-energy source, supplied test-pairing convention, constructed weak pairing, scalar action derivability, scalar EOM on-shell condition, conditional weak conservation, and conditional Bianchi compatibility. It authorizes prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source and preserves no generic source admissibility, no arbitrary-distributional-source promotion, no quantum stress-energy expectation construction, no renormalization result, no semiclassical Einstein equation derivation, no QFT-GR closure, no empirical validation, no public readiness, no public submission, no ToE-native matter derivation, and no master-action promotion"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source"
+        "prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The math-first QFT-GR chain now constructs action derivability for the imported provisional real-scalar sandbox, conditional weak conservation for its scalar stress-energy source on shell, and conditional Bianchi compatibility for an imposed Einstein-form compatibility-test equation. The chain sets prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source as the only active next target while preserving no source-admissibility claim, no arbitrary-distributional-source admissibility claim, no semiclassical Einstein equation derivation claim, no QFT-GR closure, no public-readiness claim, no public-submission claim, no scientific-validation claim, no ToE-native matter derivation claim, and no master-action promotion"
+        "The math-first QFT-GR chain now constructs action derivability for the imported provisional real-scalar sandbox, conditional weak conservation for its scalar stress-energy source on shell, conditional Bianchi compatibility for an imposed Einstein-form compatibility-test equation, and a conditional local source-admissibility review pass for the provisional scalar source. The chain sets prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source as the only active next target while preserving no generic source-admissibility claim, no arbitrary-distributional-source promotion, no quantum stress-energy expectation construction, no renormalization result, no semiclassical Einstein equation derivation claim, no QFT-GR closure, no public-readiness claim, no public-submission claim, no scientific-validation claim, no ToE-native matter derivation claim, and no master-action promotion"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source"
+        "prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the provisional scalar Bianchi packet. -/
+/-- Previous live target consumed by the provisional scalar source review packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_qft_gr_bianchi_compatibility_test_for_provisional_scalar_stress_energy_source"
-
-/-- Current live target after the provisional scalar Bianchi packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source"
+
+/-- Current live target after the provisional scalar source review packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_qft_gr_source_admissibility_review_for_provisional_scalar_source"
+    "prepare_qft_gr_semiclassical_coupling_gate_scope_review_for_provisional_scalar_source"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
