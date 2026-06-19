@@ -7,6 +7,7 @@ import ToeFormal.Derivation.ToeNativePhiSurfaceVariationAndSourceRouteResultRevi
 import ToeFormal.Derivation.ToeNativePhiCKVariationalContentPacket
 import ToeFormal.Derivation.MasterActionCKConstraintFunctionalDefinitionPacket
 import ToeFormal.Derivation.MasterActionCKConstraintFunctionalDefinitionPacketResultReview
+import ToeFormal.Derivation.MasterActionCKConstraintFamilySelectionForPhiRoute
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -28,16 +29,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  MasterActionCKConstraintFunctionalDefinitionPacketResultReview.outcomeId
+  MasterActionCKConstraintFamilySelectionForPhiRoute.outcomeId
 
 def currentPacketId : String :=
-  MasterActionCKConstraintFunctionalDefinitionPacketResultReview.packetId
+  MasterActionCKConstraintFamilySelectionForPhiRoute.packetId
 
-theorem qft_gr_lane_aggregate_exposes_master_action_ck_definition_result_review :
+theorem qft_gr_lane_aggregate_exposes_master_action_ck_family_selection :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_RESULT_REVIEW_ACCEPTS_" ++
-          "OPTIONS_INDEX_NO_SELECTION_OR_PROMOTION" := by
+        "MASTER_ACTION_CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_PHI_SOURCE_" ++
+          "ADMISSIBILITY_CONSTRAINT_FAMILY_NO_CK_FUNCTIONAL_EXECUTION_OR_PROMOTION" := by
   constructor
   · rfl
   · rfl

@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "select_master_action_ck_constraint_family_for_phi_route"
+ACTIVE_LANE = "prepare_phi_source_admissibility_ck_constraint_candidate_packet"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,7 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "review_master_action_ck_constraint_functional_definition_packet_result"
+PREVIOUS_LIVE_TARGET = "select_master_action_ck_constraint_family_for_phi_route"
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
 )
@@ -1417,7 +1417,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "select_master_action_ck_constraint_family_for_phi_route"
+LIVE_TARGET = "prepare_phi_source_admissibility_ck_constraint_candidate_packet"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1433,7 +1433,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "MasterActionCKConstraintFunctionalDefinitionPacketResultReview.lean"
+    / "MasterActionCKConstraintFamilySelectionForPhiRoute.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2956,120 +2956,97 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert ck_definition_review_active_workstream["report"] == (
         "formal/docs/release/"
-        "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_RESULT_REVIEW_"
-        "20260618_v0.json"
+        "MASTER_ACTION_CK_CONSTRAINT_FAMILY_SELECTION_FOR_PHI_ROUTE_20260618_v0.json"
     )
     assert ck_definition_review_active_workstream["consumed_target"] == (
         PREVIOUS_LIVE_TARGET
     )
-    assert (
-        ck_definition_review_active_workstream["outcome_id"]
-        == "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_RESULT_REVIEW_"
-        "ACCEPTS_OPTIONS_INDEX_NO_SELECTION_OR_PROMOTION"
+    assert ck_definition_review_active_workstream["outcome_id"] == (
+        "MASTER_ACTION_CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_PHI_SOURCE_ADMISSIBILITY_CONSTRAINT_FAMILY_NO_CK_FUNCTIONAL_EXECUTION_OR_PROMOTION"
     )
-    assert (
-        ck_definition_review_active_workstream["review_result"]
-        == "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_RESULT_REVIEW_"
-        "ACCEPTS_OPTIONS_INDEX_NO_SELECTION_OR_PROMOTION"
-    )
-    assert (
-        ck_definition_review_active_workstream["packet_result"]
-        == "CK_CONSTRAINT_FUNCTIONAL_OPTIONS_INDEXED_NO_SELECTION"
-    )
-    assert (
-        ck_definition_review_active_workstream["packet_outcome_id"]
-        == "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_PREPARED_"
-        "CK_CONSTRAINT_FUNCTIONAL_OPTIONS_INDEXED_NO_SELECTION"
+    assert ck_definition_review_active_workstream["selection_result"] == (
+        "MASTER_ACTION_CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_PHI_SOURCE_ADMISSIBILITY_CONSTRAINT_FAMILY_NO_CK_FUNCTIONAL_EXECUTION_OR_PROMOTION"
     )
     assert (
         ck_definition_review_active_workstream["claim_level"]
-        == "Level 3 selector; choose one phi-relevant C_k constraint family for a later concrete candidate packet"
+        == "Level 3 candidate packet preparation; define a phi source-admissibility C_k candidate if licensed without executing variation"
     )
     assert (
         ck_definition_review_active_workstream["claim_ceiling"]
-        == "selector only no concrete C_k functional defined no C_k variation executed no phi generation no derived potential no source admissibility or conservation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
+        == "candidate packet preparation only no concrete C_k variation no phi generation no derived potential no source admissibility proof no qft-gr closure no semiclassical coupling no canonical master-action promotion"
     )
     assert (
         ck_definition_review_active_workstream["selected_next_target"]
-        == "prepare_phi_source_admissibility_ck_constraint_candidate_packet"
+        == "review_phi_source_admissibility_ck_constraint_candidate_packet_result"
     )
     assert (
         ck_definition_review_active_workstream["selected_next_target_kind"]
-        == "phi_source_admissibility_ck_constraint_candidate_packet_preparation_after_selector"
+        == "phi_source_admissibility_ck_constraint_candidate_packet_result_review"
     )
     assert (
-        ck_definition_review_active_workstream["post_selection_recommended_target"]
-        == "prepare_phi_source_admissibility_ck_constraint_candidate_packet"
-    )
-    assert ck_definition_review_active_workstream["review_accepts_options_index"] == "yes"
-    assert ck_definition_review_active_workstream["seven_ck_option_classes_indexed"] == "yes"
-    assert ck_definition_review_active_workstream["option_class_count"] == "7"
-    assert "bridge_admissibility_constraint" in (
-        ck_definition_review_active_workstream["indexed_constraint_ids"]
-    )
-    assert "source_admissibility_constraint" in (
-        ck_definition_review_active_workstream["indexed_constraint_ids"]
-    )
-    assert (
-        ck_definition_review_active_workstream[
-            "source_admissibility_phi_relevant_future_candidate_only"
-        ]
-        == "yes"
-    )
-    assert (
-        ck_definition_review_active_workstream[
-            "bridge_admissibility_phi_relevant_future_candidate_only"
-        ]
-        == "yes"
-    )
-    assert (
-        ck_definition_review_active_workstream[
-            "source_or_bridge_admissibility_recommended_for_future_selection"
-        ]
-        == "yes"
-    )
-    assert ck_definition_review_active_workstream["selector_candidate_set"] == (
-        "source_admissibility_constraint,bridge_admissibility_constraint"
-    )
-    assert (
-        ck_definition_review_active_workstream["recommended_selector_priority"]
+        ck_definition_review_active_workstream["selected_ck_option_class"]
         == "source_admissibility_constraint"
     )
     assert (
-        ck_definition_review_active_workstream["alternate_selector_priority"]
+        ck_definition_review_active_workstream["selected_ck_constraint_family"]
+        == "phi_source_admissibility_constraint_family"
+    )
+    assert (
+        ck_definition_review_active_workstream[
+            "deferred_alternate_ck_option_class"
+        ]
         == "bridge_admissibility_constraint"
     )
-    assert ck_definition_review_active_workstream["selector_authorized"] == "yes"
-    assert ck_definition_review_active_workstream["selector_prepared"] == "no"
-    assert ck_definition_review_active_workstream["derivation_authorized"] == "no"
-    assert ck_definition_review_active_workstream["review_criteria_count"] == "10"
-    assert (
-        ck_definition_review_active_workstream["review_criteria_accepted_count"]
-        == "10"
+    assert "action-derived stress-energy" in (
+        ck_definition_review_active_workstream["source_route_reference_pattern"]
     )
+    assert "Bianchi compatibility" in (
+        ck_definition_review_active_workstream["source_route_reference_pattern"]
+    )
+    assert (
+        ck_definition_review_active_workstream[
+            "ck_constraint_family_selection_executed"
+        ]
+        == "yes"
+    )
+    assert (
+        ck_definition_review_active_workstream[
+            "source_admissibility_constraint_family_selected"
+        ]
+        == "yes"
+    )
+    assert (
+        ck_definition_review_active_workstream[
+            "bridge_admissibility_constraint_family_deferred"
+        ]
+        == "yes"
+    )
+    assert (
+        ck_definition_review_active_workstream[
+            "selected_family_is_abstract_option_class"
+        ]
+        == "yes"
+    )
+    assert ck_definition_review_active_workstream["candidate_packet_authorized"] == "yes"
+    assert ck_definition_review_active_workstream["candidate_packet_prepared"] == "no"
+    assert ck_definition_review_active_workstream["concrete_ck_functional_selected"] == "no"
+    assert ck_definition_review_active_workstream["concrete_ck_functional_defined"] == "no"
+    assert ck_definition_review_active_workstream["ck_functional_formula_selected"] == "no"
+    assert ck_definition_review_active_workstream["ck_variation_executed"] == "no"
+    assert ck_definition_review_active_workstream["ck_variation_authorized"] == "no"
     assert ck_definition_review_active_workstream[
         "aggregate_lean_validation_status_for_packet"
     ] == "INCOMPLETE_TIMEOUT_STEADY_PROGRESS"
-    assert "selector recommendation" in ck_definition_review_active_workstream[
+    assert "source-admissibility C_k family" in ck_definition_review_active_workstream[
         "non_claim_boundary"
     ]
-    assert "C_k remains inactive and undefined" in ck_definition_review_active_workstream[
-        "non_claim_boundary"
-    ]
-    assert "V(phi) remains smooth bounded-below but not derived" in (
+    assert "no concrete functional is already selected" in (
         ck_definition_review_active_workstream["non_claim_boundary"]
     )
-    assert "C_k does not yet generate phi" in ck_definition_review_active_workstream[
+    assert "no ToE-native matter derivation" in ck_definition_review_active_workstream[
         "non_claim_boundary"
     ]
     for key in [
-        "concrete_ck_family_selected",
-        "ck_constraint_functional_family_selected",
-        "ck_phi_relevant_constraint_class_selected",
-        "ck_variation_executed",
-        "ck_variation_authorized",
-        "ck_content_fully_defined_claimed",
-        "phi_generation_theorem_claimed",
         "phi_generated_by_ck_claimed",
         "derived_v_phi_claimed",
         "v_phi_derivation_claimed",
@@ -3104,13 +3081,35 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ]:
         assert ck_definition_review_active_workstream[key] == "no", key
 
-    consumed_ck_definition_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_ck_family_selector = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_ck_family_selector["status"] == "paused"
+    assert consumed_ck_family_selector["selection_result"] == (
+        "MASTER_ACTION_CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_PHI_SOURCE_ADMISSIBILITY_CONSTRAINT_FAMILY_NO_CK_FUNCTIONAL_EXECUTION_OR_PROMOTION"
+    )
+    assert consumed_ck_family_selector["selected_next_target"] == LIVE_TARGET
+    assert consumed_ck_family_selector["selected_ck_option_class"] == (
+        "source_admissibility_constraint"
+    )
+    assert consumed_ck_family_selector["selected_ck_constraint_family"] == (
+        "phi_source_admissibility_constraint_family"
+    )
+    assert consumed_ck_family_selector["concrete_ck_functional_selected"] == "no"
+    assert consumed_ck_family_selector["ck_variation_executed"] == "no"
+    assert consumed_ck_family_selector["phi_generated_by_ck_claimed"] == "no"
+    assert consumed_ck_family_selector["potential_derived"] == "no"
+    assert consumed_ck_family_selector["source_admissibility_claimed"] == "no"
+    assert consumed_ck_family_selector["qft_gr_closure_claimed"] == "no"
+    assert consumed_ck_family_selector["master_action_promoted"] == "no"
+
+    consumed_ck_definition_review = _workstream(
+        payload, "review_master_action_ck_constraint_functional_definition_packet_result"
+    )
     assert consumed_ck_definition_review["status"] == "paused"
     assert consumed_ck_definition_review["review_result"] == (
         "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_RESULT_REVIEW_"
         "ACCEPTS_OPTIONS_INDEX_NO_SELECTION_OR_PROMOTION"
     )
-    assert consumed_ck_definition_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_ck_definition_review["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert consumed_ck_definition_review["review_accepts_options_index"] == "yes"
     assert consumed_ck_definition_review["concrete_ck_family_selected"] == "no"
     assert consumed_ck_definition_review["ck_variation_executed"] == "no"
@@ -3127,7 +3126,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_ck_definition_packet["packet_result"] == (
         "CK_CONSTRAINT_FUNCTIONAL_OPTIONS_INDEXED_NO_SELECTION"
     )
-    assert consumed_ck_definition_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_ck_definition_packet["selected_next_target"] == (
+        "review_master_action_ck_constraint_functional_definition_packet_result"
+    )
     assert (
         consumed_ck_definition_packet[
             "master_action_ck_constraint_functional_definition_packet_prepared"
