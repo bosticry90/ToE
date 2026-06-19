@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_phi_bridge_admissibility_ck_functional_embedding_packet" := by
+      "review_phi_bridge_admissibility_ck_functional_embedding_packet_result" := by
   rfl
 
 end CurrentAuthority
