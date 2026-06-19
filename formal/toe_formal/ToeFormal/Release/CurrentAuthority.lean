@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "select_next_master_action_surface_after_phi_ck_triad" := by
+      "prepare_toe_native_A_surface_variation_and_source_route_packet" := by
   rfl
 
 end CurrentAuthority

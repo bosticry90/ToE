@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PhiCKSourceBridgeTransportRuleFamilyCloseout
+import ToeFormal.Derivation.MasterActionSurfaceSelectionAfterPhiCKTriad
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PhiCKSourceBridgeTransportRuleFamilyCloseout.selectedNextTarget
+  MasterActionSurfaceSelectionAfterPhiCKTriad.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PhiCKSourceBridgeTransportRuleFamilyCloseout.packetId
+  MasterActionSurfaceSelectionAfterPhiCKTriad.packetId
 
-theorem current_target_points_to_next_master_action_surface_selector :
+theorem current_target_points_to_a_surface_route_packet :
     currentLiveTarget =
-      "select_next_master_action_surface_after_phi_ck_triad" := by
+      "prepare_toe_native_A_surface_variation_and_source_route_packet" := by
   rfl
 
 end CurrentTarget

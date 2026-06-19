@@ -31,6 +31,7 @@ import ToeFormal.Derivation.PhiTransportConsistencyCKAdmissibilityRuleCloseout
 import ToeFormal.Derivation.PhiCKSourceBridgeTransportRuleFamilySynthesisPacket
 import ToeFormal.Derivation.PhiCKSourceBridgeTransportRuleFamilySynthesisResultReview
 import ToeFormal.Derivation.PhiCKSourceBridgeTransportRuleFamilyCloseout
+import ToeFormal.Derivation.MasterActionSurfaceSelectionAfterPhiCKTriad
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -52,16 +53,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  PhiCKSourceBridgeTransportRuleFamilyCloseout.outcomeId
+  MasterActionSurfaceSelectionAfterPhiCKTriad.outcomeId
 
 def currentPacketId : String :=
-  PhiCKSourceBridgeTransportRuleFamilyCloseout.packetId
+  MasterActionSurfaceSelectionAfterPhiCKTriad.packetId
 
-theorem qft_gr_lane_aggregate_exposes_phi_ck_source_bridge_transport_closeout :
+theorem qft_gr_lane_aggregate_exposes_master_action_surface_selection_after_phi_ck_triad :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "PHI_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_CLOSED_AS_THREE_RULE_" ++
-          "ADMISSIBILITY_FAMILY_NO_ACTION_VARIATION_OR_PROMOTION" := by
+        "MASTER_ACTION_SURFACE_SELECTION_AFTER_PHI_CK_TRIAD_SELECTS_A_SURFACE_" ++
+          "GAUGE_ROUTE_NO_VARIATION_OR_PROMOTION" := by
   constructor
   · rfl
   · rfl
