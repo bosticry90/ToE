@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "select_next_ck_constraint_family_after_phi_source_and_bridge_admissibility" := by
+      "prepare_phi_transport_consistency_ck_constraint_candidate_packet" := by
   rfl
 
 end CurrentAuthority

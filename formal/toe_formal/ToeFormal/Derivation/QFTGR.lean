@@ -22,6 +22,7 @@ import ToeFormal.Derivation.PhiBridgeAdmissibilityCKAdmissibilityRuleCloseout
 import ToeFormal.Derivation.PhiCKAdmissibilityRuleFamilySynthesisPacket
 import ToeFormal.Derivation.PhiCKAdmissibilityRuleFamilySynthesisResultReview
 import ToeFormal.Derivation.PhiCKAdmissibilityRuleFamilySynthesisCloseout
+import ToeFormal.Derivation.CKConstraintFamilySelectionAfterPhiSourceAndBridgeAdmissibility
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -43,16 +44,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  PhiCKAdmissibilityRuleFamilySynthesisCloseout.outcomeId
+  CKConstraintFamilySelectionAfterPhiSourceAndBridgeAdmissibility.outcomeId
 
 def currentPacketId : String :=
-  PhiCKAdmissibilityRuleFamilySynthesisCloseout.packetId
+  CKConstraintFamilySelectionAfterPhiSourceAndBridgeAdmissibility.packetId
 
-theorem qft_gr_lane_aggregate_exposes_phi_ck_admissibility_family_synthesis_closeout :
+theorem qft_gr_lane_aggregate_exposes_ck_family_selection_after_phi_source_bridge :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_CLOSED_AS_SOURCE_AND_BRIDGE_" ++
-          "ADMISSIBILITY_RULE_FAMILY_NO_ACTION_VARIATION_OR_PROMOTION" := by
+        "CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_TRANSPORT_CONSISTENCY_AFTER_PHI_" ++
+          "SOURCE_AND_BRIDGE_ADMISSIBILITY_NO_CK_VARIATION_OR_PROMOTION" := by
   constructor
   · rfl
   · rfl
