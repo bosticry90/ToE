@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PhiTransportConsistencyCKConstraintCandidatePacketResultReview
+import ToeFormal.Derivation.PhiTransportConsistencyCKFunctionalEmbeddingPacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PhiTransportConsistencyCKConstraintCandidatePacketResultReview.selectedNextTarget
+  PhiTransportConsistencyCKFunctionalEmbeddingPacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PhiTransportConsistencyCKConstraintCandidatePacketResultReview.packetId
+  PhiTransportConsistencyCKFunctionalEmbeddingPacket.packetId
 
-theorem current_target_points_to_phi_transport_consistency_functional_embedding_packet :
+theorem current_target_points_to_phi_transport_consistency_functional_embedding_review :
     currentLiveTarget =
-      "prepare_phi_transport_consistency_ck_functional_embedding_packet" := by
+      "review_phi_transport_consistency_ck_functional_embedding_packet_result" := by
   rfl
 
 end CurrentTarget
