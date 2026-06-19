@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_phi_ck_source_bridge_transport_rule_family_closeout" := by
+      "select_next_master_action_surface_after_phi_ck_triad" := by
   rfl
 
 end CurrentAuthority
