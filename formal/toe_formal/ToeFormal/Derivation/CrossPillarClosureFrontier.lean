@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "C_k family selector after the phi source/bridge admissibility family accepted outcome CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_TRANSPORT_CONSISTENCY_AFTER_PHI_SOURCE_AND_BRIDGE_ADMISSIBILITY_NO_CK_VARIATION_OR_PROMOTION. The selector preserves C_source^nu[g, phi] = 0 as source admissibility and C_bridge^phi = 0 as bridge admissibility as closed admissibility-only rule candidates, then selects transport_consistency_ck_constraint_family as the next C_k family. C_transport^phi = 0 is recorded only as the next packet shape preview across ACTION -> VARIATION -> BRIDGE -> OPERATOR -> TRANSPORT -> RESIDUAL_LAW -> REGIME_LIMIT. No transport proof, C_k variation, action embedding, native phi derivation, V(phi) derivation, new conservation proof, QFT-GR closure, semiclassical coupling, master-action promotion, or empirical validation is claimed. The full ToeFormal aggregate is recorded as NOT_RUN. The next target is prepare_phi_transport_consistency_ck_constraint_candidate_packet"
+        "Phi transport-consistency C_k candidate packet prepared outcome PHI_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_PREPARED_PHI_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RECORDED_AS_DERIVATION_CHAIN_STABILITY_RULE_NO_VARIATION_OR_PROMOTION. The packet records C_transport^phi := (Transport_ACTION_VARIATION^phi, Transport_VARIATION_BRIDGE^phi, Transport_BRIDGE_SOURCE^phi, Transport_SOURCE_RESIDUAL^phi, Transport_RESIDUAL_REGIME^phi) with C_transport^phi = 0 as an admissibility-only derivation-chain stability rule candidate over S_phi -> E_phi -> T_phi -> C_source^phi -> C_bridge^phi -> bounded residual/regime-facing route. It preserves C_source^nu[g, phi] = 0 and C_bridge^phi = 0 as source and bridge admissibility context. No transport proof, full route-alignment proof, C_k variation, action embedding, native phi derivation, V(phi) derivation, new conservation proof, source-admissibility proof, QFT-GR closure, semiclassical coupling, master-action promotion, or empirical validation is claimed. The full ToeFormal aggregate is recorded as NOT_RUN. The next target is review_phi_transport_consistency_ck_constraint_candidate_packet_result"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_phi_transport_consistency_ck_constraint_candidate_packet"
+        "review_phi_transport_consistency_ck_constraint_candidate_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch is closed as a positive local classical source witness, the master-action phi surface has a selected nonpromotional policy and alignment witness, and the phi/C_k source/bridge admissibility-rule family is closed as two admissibility-only rule candidates: C_source^nu[g, phi] = 0 and C_bridge^phi = 0. The current C_k family selector preserves that family and selects transport_consistency_ck_constraint_family as the next bounded C_k family, with C_transport^phi = 0 recorded only as a next-packet shape preview across ACTION -> VARIATION -> BRIDGE -> OPERATOR -> TRANSPORT -> RESIDUAL_LAW -> REGIME_LIMIT. No C_k variation, action embedding, transport proof, source-admissibility proof, bridge-admissibility proof, native phi derivation, V(phi) derivation, new conservation proof, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows. The full ToeFormal aggregate is recorded as NOT_RUN for this selector"
+        "The scalar sandbox branch is closed as a positive local classical source witness, the master-action phi surface has a selected nonpromotional policy and alignment witness, and the phi/C_k source/bridge admissibility-rule family is closed as two admissibility-only rule candidates: C_source^nu[g, phi] = 0 and C_bridge^phi = 0. The transport-consistency packet now records C_transport^phi = 0 as an admissibility-only derivation-chain stability rule candidate with five route components across ACTION -> VARIATION -> BRIDGE -> OPERATOR -> TRANSPORT -> RESIDUAL_LAW -> REGIME_LIMIT, preserving source and bridge context. No C_k variation, action embedding, transport proof, full route-alignment proof, source-admissibility proof, bridge-admissibility proof, native phi derivation, V(phi) derivation, new conservation proof, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows. The full ToeFormal aggregate is recorded as NOT_RUN for this packet"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_phi_transport_consistency_ck_constraint_candidate_packet"
+        "review_phi_transport_consistency_ck_constraint_candidate_packet_result"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the C_k family selector. -/
+/-- Previous live target consumed by the phi transport candidate packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "select_next_ck_constraint_family_after_phi_source_and_bridge_admissibility"
-
-/-- Current live target after the C_k family selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_phi_transport_consistency_ck_constraint_candidate_packet"
+
+/-- Current live target after the phi transport candidate packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_phi_transport_consistency_ck_constraint_candidate_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_phi_transport_consistency_ck_constraint_candidate_packet"
+    "review_phi_transport_consistency_ck_constraint_candidate_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

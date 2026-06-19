@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_phi_transport_consistency_ck_constraint_candidate_packet"
+ACTIVE_LANE = "review_phi_transport_consistency_ck_constraint_candidate_packet_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,8 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = (
+PREVIOUS_LIVE_TARGET = "prepare_phi_transport_consistency_ck_constraint_candidate_packet"
+PHI_TRANSPORT_SELECTOR_TARGET = (
     "select_next_ck_constraint_family_after_phi_source_and_bridge_admissibility"
 )
 PHI_CK_SYNTHESIS_CLOSEOUT_TARGET = (
@@ -1434,7 +1435,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_phi_transport_consistency_ck_constraint_candidate_packet"
+LIVE_TARGET = "review_phi_transport_consistency_ck_constraint_candidate_packet_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1450,7 +1451,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "CKConstraintFamilySelectionAfterPhiSourceAndBridgeAdmissibility.lean"
+    / "PhiTransportConsistencyCKConstraintCandidatePacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2960,160 +2961,159 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    ck_transport_selection_active_workstream = active_workstream(payload)
-    assert ck_transport_selection_active_workstream["workstream_id"] == ACTIVE_LANE
-    assert ck_transport_selection_active_workstream["active_lane"] == ACTIVE_LANE
+    phi_transport_candidate_active_workstream = active_workstream(payload)
+    assert phi_transport_candidate_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert phi_transport_candidate_active_workstream["active_lane"] == ACTIVE_LANE
     assert (
-        ck_transport_selection_active_workstream["authorized_next_strict_target"]
+        phi_transport_candidate_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert ck_transport_selection_active_workstream["authorized_target"] == LIVE_TARGET
-    assert ck_transport_selection_active_workstream["authorization_evidence"] == str(
+    assert phi_transport_candidate_active_workstream["authorized_target"] == LIVE_TARGET
+    assert phi_transport_candidate_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert ck_transport_selection_active_workstream["report"] == (
+    assert phi_transport_candidate_active_workstream["report"] == (
         "formal/docs/release/"
-        "CK_CONSTRAINT_FAMILY_SELECTION_AFTER_PHI_SOURCE_AND_BRIDGE_"
-        "ADMISSIBILITY_20260619_v0.json"
+        "PHI_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_20260619_v0.json"
     )
-    assert ck_transport_selection_active_workstream["consumed_target"] == (
+    assert phi_transport_candidate_active_workstream["consumed_target"] == (
         PREVIOUS_LIVE_TARGET
     )
-    assert ck_transport_selection_active_workstream["outcome_id"] == (
-        "CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_TRANSPORT_CONSISTENCY_AFTER_PHI_"
-        "SOURCE_AND_BRIDGE_ADMISSIBILITY_NO_CK_VARIATION_OR_PROMOTION"
+    assert phi_transport_candidate_active_workstream["outcome_id"] == (
+        "PHI_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_PREPARED_"
+        "PHI_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RECORDED_AS_"
+        "DERIVATION_CHAIN_STABILITY_RULE_NO_VARIATION_OR_PROMOTION"
     )
-    assert ck_transport_selection_active_workstream["selection_result"] == (
-        "CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_TRANSPORT_CONSISTENCY_AFTER_PHI_"
-        "SOURCE_AND_BRIDGE_ADMISSIBILITY_NO_CK_VARIATION_OR_PROMOTION"
+    assert phi_transport_candidate_active_workstream["packet_result"] == (
+        "PHI_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RECORDED_AS_"
+        "DERIVATION_CHAIN_STABILITY_RULE_NO_VARIATION_OR_PROMOTION"
     )
-    assert ck_transport_selection_active_workstream["packet_classification"] == (
-        "ck_constraint_family_selection_selects_transport_consistency_after_phi_"
-        "source_and_bridge_admissibility_no_ck_variation_or_promotion"
+    assert phi_transport_candidate_active_workstream["packet_classification"] == (
+        "phi_transport_consistency_ck_constraint_candidate_packet_records_derivation_"
+        "chain_stability_rule_no_variation_or_promotion"
     )
-    assert ck_transport_selection_active_workstream[
-        "family_classification"
-    ] == "first synthesized phi-relevant C_k admissibility-rule family"
-    assert ck_transport_selection_active_workstream[
-        "family_epistemic_status"
-    ] == "admissibility-only"
-    assert ck_transport_selection_active_workstream[
+    assert phi_transport_candidate_active_workstream[
+        "transport_candidate_id"
+    ] == "phi_transport_derivation_chain_stability_ck_candidate"
+    assert phi_transport_candidate_active_workstream[
+        "transport_candidate_type"
+    ] == "derivation_chain_stability_admissibility_rule"
+    assert phi_transport_candidate_active_workstream[
+        "transport_rule_classification"
+    ] == "admissibility-only transport-stability rule candidate"
+    assert phi_transport_candidate_active_workstream[
+        "transport_constraint_form"
+    ] == (
+        "C_transport^phi := (Transport_ACTION_VARIATION^phi, "
+        "Transport_VARIATION_BRIDGE^phi, Transport_BRIDGE_SOURCE^phi, "
+        "Transport_SOURCE_RESIDUAL^phi, Transport_RESIDUAL_REGIME^phi)"
+    )
+    assert phi_transport_candidate_active_workstream[
+        "transport_constraint_equation"
+    ] == "C_transport^phi = 0"
+    assert phi_transport_candidate_active_workstream[
+        "known_phi_transport_chain_form"
+    ] == (
+        "S_phi -> E_phi -> T_phi -> C_source^phi -> C_bridge^phi -> "
+        "bounded residual/regime-facing route"
+    )
+    assert phi_transport_candidate_active_workstream[
+        "transport_component_count"
+    ] == 5
+    assert phi_transport_candidate_active_workstream[
+        "phi_ck_rule_family_count_after_packet"
+    ] == 3
+    assert "source admissibility" in phi_transport_candidate_active_workstream[
+        "closed_phi_ck_rule_roles"
+    ]
+    assert "bridge admissibility" in phi_transport_candidate_active_workstream[
+        "closed_phi_ck_rule_roles"
+    ]
+    assert "transport consistency" in phi_transport_candidate_active_workstream[
+        "closed_phi_ck_rule_roles"
+    ]
+    assert phi_transport_candidate_active_workstream[
         "source_candidate_constraint_form"
     ] == "C_source^nu[g, phi] := nabla_mu T_phi^{mu nu}"
-    assert ck_transport_selection_active_workstream[
+    assert phi_transport_candidate_active_workstream[
         "source_candidate_constraint_equation"
     ] == "C_source^nu[g, phi] = 0"
-    assert ck_transport_selection_active_workstream[
+    assert phi_transport_candidate_active_workstream[
         "source_admissibility_constraint_form"
     ] == "C_source^nu[g, phi] = 0"
-    assert ck_transport_selection_active_workstream["bridge_constraint_form"] == (
+    assert phi_transport_candidate_active_workstream["bridge_constraint_form"] == (
         "C_bridge^phi := (E_phi^master - E_phi^witness, "
         "T_phi^master - T_phi^witness, "
         "C_source^phi - nabla_mu T_phi^{mu nu})"
     )
-    assert ck_transport_selection_active_workstream[
+    assert phi_transport_candidate_active_workstream[
         "bridge_constraint_equation"
     ] == "C_bridge^phi = 0"
-    assert ck_transport_selection_active_workstream[
+    assert phi_transport_candidate_active_workstream[
         "bridge_admissibility_constraint_form"
     ] == "C_bridge^phi = 0"
-    assert ck_transport_selection_active_workstream[
-        "bridge_route_field_equation_match"
-    ] == "E_phi^master - E_phi^witness = 0"
-    assert ck_transport_selection_active_workstream[
-        "bridge_route_stress_energy_match"
-    ] == "T_phi^master - T_phi^witness = 0"
-    assert ck_transport_selection_active_workstream[
-        "bridge_route_source_residual_match"
-    ] == "C_source^phi - nabla_mu T_phi^{mu nu} = 0"
-    assert ck_transport_selection_active_workstream[
-        "phi_ck_admissibility_rule_family_count"
-    ] == "2"
-    assert "source admissibility" in ck_transport_selection_active_workstream[
-        "closed_phi_ck_rule_roles"
-    ]
-    assert "bridge admissibility" in ck_transport_selection_active_workstream[
-        "closed_phi_ck_rule_roles"
-    ]
-    assert ck_transport_selection_active_workstream[
-        "selected_ck_option_class"
-    ] == "transport_consistency_constraint"
-    assert ck_transport_selection_active_workstream[
-        "selected_ck_constraint_family"
-    ] == "transport_consistency_ck_constraint_family"
-    assert ck_transport_selection_active_workstream[
-        "selected_family_selection_status"
-    ] == "selected_as_next_ck_family_after_phi_source_and_bridge_admissibility"
-    assert ck_transport_selection_active_workstream[
-        "transport_consistency_question"
-    ] == "Does the admitted phi object remain coherent as it moves through the derivation chain?"
-    assert ck_transport_selection_active_workstream[
-        "transport_candidate_shape_preview"
-    ] == "C_transport^phi = 0"
-    assert ck_transport_selection_active_workstream[
-        "transport_chain_form"
-    ] == "ACTION -> VARIATION -> BRIDGE -> OPERATOR -> TRANSPORT -> RESIDUAL_LAW -> REGIME_LIMIT"
-    assert ck_transport_selection_active_workstream[
-        "transport_chain_step_count"
-    ] == "7"
-    assert ck_transport_selection_active_workstream[
-        "candidate_family_option_count"
-    ] == "3"
-    assert ck_transport_selection_active_workstream[
-        "selection_criteria_count"
-    ] == "10"
-    assert ck_transport_selection_active_workstream[
-        "selection_criteria_accepted_count"
-    ] == "10"
     for key in [
-        "selector_target_prepared",
-        "selector_target_accepted",
-        "selection_executed",
+        "transport_candidate_packet_prepared",
+        "transport_candidate_packet_accepted",
+        "transport_candidate_recorded",
+        "transport_candidate_selected_as_derivation_chain_stability_rule",
+        "transport_candidate_recorded_as_admissibility_rule",
+        "transport_candidate_recorded_as_transport_stability_rule",
+        "transport_tuple_recorded",
+        "transport_components_recorded",
+        "known_phi_chain_recorded",
         "transport_consistency_family_selected",
-        "transport_consistency_candidate_packet_authorized",
-        "transport_candidate_shape_preview_recorded",
-        "transport_chain_recorded",
-        "source_and_bridge_family_retained_as_context",
         "source_admissibility_rule_retained_as_context",
         "bridge_admissibility_rule_retained_as_context",
+        "result_review_authorized",
     ]:
-        assert ck_transport_selection_active_workstream[key] == "yes", key
-    assert ck_transport_selection_active_workstream[
-        "transport_consistency_candidate_packet_prepared"
-    ] == "no"
-    assert ck_transport_selection_active_workstream[
+        assert phi_transport_candidate_active_workstream[key] == "yes", key
+    assert phi_transport_candidate_active_workstream["review_prepared"] == "no"
+    assert phi_transport_candidate_active_workstream["review_executed"] == "no"
+    assert phi_transport_candidate_active_workstream[
         "full_toeformal_aggregate_status_for_packet"
     ] == "NOT_RUN"
-    assert ck_transport_selection_active_workstream[
+    assert phi_transport_candidate_active_workstream[
         "full_toeformal_aggregate_passed"
     ] == "no"
-    assert ck_transport_selection_active_workstream[
+    assert phi_transport_candidate_active_workstream[
         "full_toeformal_aggregate_failed"
     ] == "no"
-    assert ck_transport_selection_active_workstream[
+    assert phi_transport_candidate_active_workstream[
         "full_toeformal_aggregate_timed_out"
     ] == "no"
     for phrase in [
-        "only chooses transport_consistency_ck_constraint_family",
-        "does not prepare the transport candidate packet",
-        "does not define C_transport^phi",
-        "does not prove transport consistency",
+        "admissibility-only derivation-chain stability rule",
+        "does not embed C_transport^phi into the action",
         "does not execute C_k variation",
+        "does not prove transport consistency",
+        "does not prove full route alignment",
         "does not close QFT-GR",
         "does not promote the master action",
         "full ToeFormal aggregate is recorded as NOT_RUN",
     ]:
-        assert phrase in ck_transport_selection_active_workstream[
+        assert phrase in phi_transport_candidate_active_workstream[
             "non_claim_boundary"
         ]
     for key in [
-        "source_admissibility_family_reselected",
-        "bridge_admissibility_family_reselected",
+        "transport_candidate_recorded_as_action_term",
+        "transport_candidate_recorded_as_new_dynamical_law",
         "transport_candidate_functional_defined",
         "transport_candidate_functional_selected",
-        "transport_proof_claimed",
+        "transport_candidate_rule_proved",
+        "transport_tuple_proved",
+        "transport_components_proved",
+        "known_phi_chain_proved",
+        "transport_consistency_claimed",
         "transport_consistency_proved",
-        "transport_chain_compatibility_proved",
+        "transport_proof_claimed",
+        "full_route_alignment_proof_claimed",
+        "full_route_alignment_proved",
+        "route_chain_compatibility_proved",
+        "source_admissibility_proved",
+        "bridge_admissibility_proved",
+        "new_conservation_proof_claimed",
+        "new_source_admissibility_proof_claimed",
         "concrete_ck_functional_selected",
         "concrete_ck_functional_defined",
         "fully_concrete_ck_functional_selected",
@@ -3133,11 +3133,6 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "v_phi_derivation_claimed",
         "derived_v_phi_claimed",
         "potential_derived",
-        "new_conservation_proof_claimed",
-        "source_admissibility_proved",
-        "source_conservation_proved",
-        "bridge_admissibility_proved",
-        "bridge_route_alignment_verified",
         "qft_gr_solved",
         "qft_gr_closure_claimed",
         "qft_gr_seam_closed",
@@ -3158,15 +3153,44 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "pillar_completion_inferred",
         "seam_closure_claim",
     ]:
-        assert ck_transport_selection_active_workstream.get(key, "no") == "no", key
+        assert phi_transport_candidate_active_workstream.get(key, "no") == "no", key
 
-    consumed_transport_selector = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_transport_candidate = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_transport_candidate["status"] == "paused"
+    assert consumed_transport_candidate["packet_result"] == (
+        "PHI_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_RECORDED_AS_"
+        "DERIVATION_CHAIN_STABILITY_RULE_NO_VARIATION_OR_PROMOTION"
+    )
+    assert consumed_transport_candidate["selected_next_target"] == LIVE_TARGET
+    assert consumed_transport_candidate[
+        "transport_candidate_id"
+    ] == "phi_transport_derivation_chain_stability_ck_candidate"
+    assert consumed_transport_candidate[
+        "transport_constraint_equation"
+    ] == "C_transport^phi = 0"
+    assert consumed_transport_candidate[
+        "transport_candidate_recorded_as_admissibility_rule"
+    ] == "yes"
+    assert consumed_transport_candidate[
+        "transport_candidate_functional_defined"
+    ] == "no"
+    assert consumed_transport_candidate["transport_consistency_proved"] == "no"
+    assert consumed_transport_candidate["result_review_authorized"] == "yes"
+    assert consumed_transport_candidate["review_prepared"] == "no"
+    assert consumed_transport_candidate["ck_variation_executed"] == "no"
+    assert consumed_transport_candidate["qft_gr_closure_claimed"] == "no"
+    assert consumed_transport_candidate["master_action_promoted"] == "no"
+    assert consumed_transport_candidate[
+        "full_toeformal_aggregate_status_for_packet"
+    ] == "NOT_RUN"
+
+    consumed_transport_selector = _workstream(payload, PHI_TRANSPORT_SELECTOR_TARGET)
     assert consumed_transport_selector["status"] == "paused"
     assert consumed_transport_selector["selection_result"] == (
         "CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_TRANSPORT_CONSISTENCY_AFTER_PHI_"
         "SOURCE_AND_BRIDGE_ADMISSIBILITY_NO_CK_VARIATION_OR_PROMOTION"
     )
-    assert consumed_transport_selector["selected_next_target"] == LIVE_TARGET
+    assert consumed_transport_selector["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert consumed_transport_selector[
         "selected_ck_option_class"
     ] == "transport_consistency_constraint"
@@ -3182,16 +3206,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_transport_selector[
         "transport_consistency_candidate_packet_prepared"
     ] == "no"
-    assert consumed_transport_selector[
-        "transport_candidate_functional_defined"
-    ] == "no"
     assert consumed_transport_selector["transport_consistency_proved"] == "no"
     assert consumed_transport_selector["ck_variation_executed"] == "no"
     assert consumed_transport_selector["qft_gr_closure_claimed"] == "no"
     assert consumed_transport_selector["master_action_promoted"] == "no"
-    assert consumed_transport_selector[
-        "full_toeformal_aggregate_status_for_packet"
-    ] == "NOT_RUN"
 
     consumed_synthesis_closeout = _workstream(payload, PHI_CK_SYNTHESIS_CLOSEOUT_TARGET)
     assert consumed_synthesis_closeout["status"] == "paused"
@@ -3199,7 +3217,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_CLOSED_AS_SOURCE_AND_BRIDGE_"
         "ADMISSIBILITY_RULE_FAMILY_NO_ACTION_VARIATION_OR_PROMOTION"
     )
-    assert consumed_synthesis_closeout["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_synthesis_closeout["selected_next_target"] == (
+        PHI_TRANSPORT_SELECTOR_TARGET
+    )
     assert consumed_synthesis_closeout[
         "closeout_accepted"
     ] == "yes"
@@ -9826,7 +9846,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        ck_transport_selection_active_workstream[
+        phi_transport_candidate_active_workstream[
             "authorized_next_strict_target"
         ],
     }

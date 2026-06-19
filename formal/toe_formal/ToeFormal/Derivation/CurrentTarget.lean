@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.CKConstraintFamilySelectionAfterPhiSourceAndBridgeAdmissibility
+import ToeFormal.Derivation.PhiTransportConsistencyCKConstraintCandidatePacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  CKConstraintFamilySelectionAfterPhiSourceAndBridgeAdmissibility.selectedNextTarget
+  PhiTransportConsistencyCKConstraintCandidatePacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  CKConstraintFamilySelectionAfterPhiSourceAndBridgeAdmissibility.packetId
+  PhiTransportConsistencyCKConstraintCandidatePacket.packetId
 
-theorem current_target_points_to_phi_transport_consistency_candidate_packet :
+theorem current_target_points_to_phi_transport_consistency_candidate_packet_review :
     currentLiveTarget =
-      "prepare_phi_transport_consistency_ck_constraint_candidate_packet" := by
+      "review_phi_transport_consistency_ck_constraint_candidate_packet_result" := by
   rfl
 
 end CurrentTarget
