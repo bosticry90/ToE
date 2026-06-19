@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_phi_ck_admissibility_rule_family_synthesis_closeout"
+ACTIVE_LANE = "select_next_ck_constraint_family_after_phi_source_and_bridge_admissibility"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,10 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "review_phi_ck_admissibility_rule_family_synthesis_packet_result"
+PREVIOUS_LIVE_TARGET = "prepare_phi_ck_admissibility_rule_family_synthesis_closeout"
+PHI_CK_SYNTHESIS_RESULT_REVIEW_TARGET = (
+    "review_phi_ck_admissibility_rule_family_synthesis_packet_result"
+)
 PHI_CK_SYNTHESIS_PACKET_TARGET = (
     "prepare_phi_ck_admissibility_rule_family_synthesis_packet"
 )
@@ -1426,7 +1429,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_phi_ck_admissibility_rule_family_synthesis_closeout"
+LIVE_TARGET = "select_next_ck_constraint_family_after_phi_source_and_bridge_admissibility"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1442,7 +1445,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PhiCKAdmissibilityRuleFamilySynthesisResultReview.lean"
+    / "PhiCKAdmissibilityRuleFamilySynthesisCloseout.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2952,189 +2955,145 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    phi_ck_synthesis_review_active_workstream = active_workstream(payload)
-    assert phi_ck_synthesis_review_active_workstream["workstream_id"] == ACTIVE_LANE
-    assert phi_ck_synthesis_review_active_workstream["active_lane"] == ACTIVE_LANE
+    phi_ck_synthesis_closeout_active_workstream = active_workstream(payload)
+    assert phi_ck_synthesis_closeout_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert phi_ck_synthesis_closeout_active_workstream["active_lane"] == ACTIVE_LANE
     assert (
-        phi_ck_synthesis_review_active_workstream["authorized_next_strict_target"]
+        phi_ck_synthesis_closeout_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert phi_ck_synthesis_review_active_workstream["authorized_target"] == LIVE_TARGET
-    assert phi_ck_synthesis_review_active_workstream["authorization_evidence"] == str(
+    assert phi_ck_synthesis_closeout_active_workstream["authorized_target"] == LIVE_TARGET
+    assert phi_ck_synthesis_closeout_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert phi_ck_synthesis_review_active_workstream["report"] == (
+    assert phi_ck_synthesis_closeout_active_workstream["report"] == (
         "formal/docs/release/"
-        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_20260619_v0.json"
+        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_CLOSEOUT_20260619_v0.json"
     )
     assert (
-        phi_ck_synthesis_review_active_workstream["consumed_target"]
+        phi_ck_synthesis_closeout_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
-    assert phi_ck_synthesis_review_active_workstream["outcome_id"] == (
-        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_ACCEPTS_SOURCE_"
-        "AND_BRIDGE_RULE_SYNTHESIS_NO_ACTION_VARIATION_OR_PROMOTION"
+    assert phi_ck_synthesis_closeout_active_workstream["outcome_id"] == (
+        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_CLOSED_AS_SOURCE_AND_BRIDGE_"
+        "ADMISSIBILITY_RULE_FAMILY_NO_ACTION_VARIATION_OR_PROMOTION"
     )
-    assert phi_ck_synthesis_review_active_workstream["review_result"] == (
-        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_ACCEPTS_SOURCE_"
-        "AND_BRIDGE_RULE_SYNTHESIS_NO_ACTION_VARIATION_OR_PROMOTION"
+    assert phi_ck_synthesis_closeout_active_workstream["closeout_result"] == (
+        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_CLOSED_AS_SOURCE_AND_BRIDGE_"
+        "ADMISSIBILITY_RULE_FAMILY_NO_ACTION_VARIATION_OR_PROMOTION"
     )
-    assert phi_ck_synthesis_review_active_workstream["packet_classification"] == (
-        "phi_ck_admissibility_rule_family_synthesis_result_review_accepts_source_"
-        "and_bridge_rule_synthesis_no_action_variation_or_promotion"
+    assert phi_ck_synthesis_closeout_active_workstream["packet_classification"] == (
+        "phi_ck_admissibility_rule_family_synthesis_closed_as_source_and_bridge_"
+        "admissibility_rule_family_no_action_variation_or_promotion"
     )
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
+        "family_classification"
+    ] == "first synthesized phi-relevant C_k admissibility-rule family"
+    assert phi_ck_synthesis_closeout_active_workstream[
+        "family_epistemic_status"
+    ] == "admissibility-only"
+    assert phi_ck_synthesis_closeout_active_workstream[
         "source_rule_classification"
     ] == "source-admissibility rule candidate"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "bridge_rule_classification"
     ] == "bridge-admissibility rule candidate"
-    assert phi_ck_synthesis_review_active_workstream[
-        "source_rule_epistemic_status"
-    ] == "admissibility-only"
-    assert phi_ck_synthesis_review_active_workstream[
-        "bridge_rule_epistemic_status"
-    ] == "admissibility-only"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "source_candidate_constraint_form"
     ] == "C_source^nu[g, phi] := nabla_mu T_phi^{mu nu}"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "source_candidate_constraint_equation"
     ] == "C_source^nu[g, phi] = 0"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "source_admissibility_constraint_form"
     ] == "C_source^nu[g, phi] = 0"
-    assert phi_ck_synthesis_review_active_workstream["bridge_constraint_form"] == (
+    assert phi_ck_synthesis_closeout_active_workstream["bridge_constraint_form"] == (
         "C_bridge^phi := (E_phi^master - E_phi^witness, "
         "T_phi^master - T_phi^witness, "
         "C_source^phi - nabla_mu T_phi^{mu nu})"
     )
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "bridge_constraint_equation"
     ] == "C_bridge^phi = 0"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "bridge_admissibility_constraint_form"
     ] == "C_bridge^phi = 0"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "bridge_route_field_equation_match"
     ] == "E_phi^master - E_phi^witness = 0"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "bridge_route_stress_energy_match"
     ] == "T_phi^master - T_phi^witness = 0"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "bridge_route_source_residual_match"
     ] == "C_source^phi - nabla_mu T_phi^{mu nu} = 0"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "phi_ck_admissibility_rule_family_count"
     ] == "2"
-    assert "source admissibility" in phi_ck_synthesis_review_active_workstream[
+    assert "source admissibility" in phi_ck_synthesis_closeout_active_workstream[
         "concrete_phi_ck_rule_roles"
     ]
-    assert "bridge admissibility" in phi_ck_synthesis_review_active_workstream[
+    assert "bridge admissibility" in phi_ck_synthesis_closeout_active_workstream[
         "concrete_phi_ck_rule_roles"
     ]
-    assert phi_ck_synthesis_review_active_workstream[
-        "review_criteria_count"
+    assert phi_ck_synthesis_closeout_active_workstream[
+        "closeout_criteria_count"
     ] == "9"
-    assert phi_ck_synthesis_review_active_workstream[
-        "review_criteria_accepted_count"
+    assert phi_ck_synthesis_closeout_active_workstream[
+        "closeout_criteria_accepted_count"
     ] == "9"
-    assert phi_ck_synthesis_review_active_workstream["review_executed"] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "result_review_accepted"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "source_rule_synthesis_accepted"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "bridge_rule_synthesis_accepted"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "source_and_bridge_rule_synthesis_accepted"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "c_k_instantiated_as_admissibility_rules"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "c_k_source_permission_role_accepted"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "c_k_bridge_permission_role_accepted"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "both_rules_admissibility_only"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "both_rules_rule_candidates"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "both_rules_not_action_terms"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "both_rules_not_dynamical_laws"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "neither_rule_derives_phi"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "neither_rule_derives_v_phi"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "synthesis_closeout_authorized"
-    ] == "yes"
-    assert phi_ck_synthesis_review_active_workstream[
-        "synthesis_closeout_prepared"
+    for key in [
+        "closeout_prepared",
+        "closeout_accepted",
+        "first_synthesized_phi_relevant_ck_admissibility_rule_family_closed",
+        "source_and_bridge_admissibility_rule_family_closed",
+        "source_admissibility_rule_closed_in_family",
+        "bridge_admissibility_rule_closed_in_family",
+        "c_k_source_permission_role_closed",
+        "c_k_bridge_permission_role_closed",
+        "both_rules_admissibility_only",
+        "both_rules_rule_candidates",
+        "both_rules_not_action_terms",
+        "both_rules_not_dynamical_laws",
+        "neither_rule_derives_phi",
+        "neither_rule_derives_v_phi",
+        "selector_target_authorized",
+    ]:
+        assert phi_ck_synthesis_closeout_active_workstream[key] == "yes", key
+    assert phi_ck_synthesis_closeout_active_workstream[
+        "selector_target_prepared"
     ] == "no"
-    assert phi_ck_synthesis_review_active_workstream[
-        "post_closeout_selector_target_recommended"
-    ] == "select_next_ck_constraint_family_after_phi_source_and_bridge_admissibility"
-    assert phi_ck_synthesis_review_active_workstream[
-        "post_closeout_candidate_family_recommended"
+    assert phi_ck_synthesis_closeout_active_workstream[
+        "recommended_next_ck_constraint_family"
     ] == "transport_consistency_ck_constraint_family"
-    assert phi_ck_synthesis_review_active_workstream[
-        "selector_after_closeout_authorized"
-    ] == "no"
-    assert phi_ck_synthesis_review_active_workstream[
-        "transport_consistency_family_selected"
-    ] == "no"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
+        "transport_chain_form"
+    ] == "ACTION -> VARIATION -> BRIDGE -> OPERATOR -> TRANSPORT -> RESIDUAL_LAW -> REGIME_LIMIT"
+    assert phi_ck_synthesis_closeout_active_workstream[
         "full_toeformal_aggregate_status_for_packet"
     ] == "NOT_RUN"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "full_toeformal_aggregate_passed"
     ] == "no"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "full_toeformal_aggregate_failed"
     ] == "no"
-    assert phi_ck_synthesis_review_active_workstream[
+    assert phi_ck_synthesis_closeout_active_workstream[
         "full_toeformal_aggregate_timed_out"
     ] == "no"
-    assert "no action term" in phi_ck_synthesis_review_active_workstream[
-        "non_claim_boundary"
-    ]
-    assert "no C_k variation" in phi_ck_synthesis_review_active_workstream[
-        "non_claim_boundary"
-    ]
-    assert "no dynamical-law claim" in phi_ck_synthesis_review_active_workstream[
-        "non_claim_boundary"
-    ]
-    assert "no native phi derivation" in phi_ck_synthesis_review_active_workstream[
-        "non_claim_boundary"
-    ]
-    assert "no V(phi) derivation" in phi_ck_synthesis_review_active_workstream[
-        "non_claim_boundary"
-    ]
-    assert "no QFT-GR closure" in phi_ck_synthesis_review_active_workstream[
-        "non_claim_boundary"
-    ]
-    assert "no master-action promotion" in phi_ck_synthesis_review_active_workstream[
-        "non_claim_boundary"
-    ]
-    assert "full ToeFormal aggregate is recorded as NOT_RUN" in (
-        phi_ck_synthesis_review_active_workstream["non_claim_boundary"]
-    )
+    for phrase in [
+        "not action terms",
+        "not dynamical laws",
+        "not native phi derivation",
+        "not V(phi) derivation",
+        "not QFT-GR closure",
+        "not master-action promotion",
+        "full ToeFormal aggregate is recorded as NOT_RUN",
+    ]:
+        assert phrase in phi_ck_synthesis_closeout_active_workstream[
+            "non_claim_boundary"
+        ]
     for key in [
-        "selector_after_closeout_authorized",
         "transport_consistency_family_selected",
         "another_phi_derivation_selected",
         "constraint_as_action_term_selected",
@@ -3176,15 +3135,46 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "pillar_completion_inferred",
         "seam_closure_claim",
     ]:
-        assert phi_ck_synthesis_review_active_workstream.get(key, "no") == "no", key
+        assert phi_ck_synthesis_closeout_active_workstream.get(key, "no") == "no", key
 
-    consumed_synthesis_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_synthesis_closeout = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_synthesis_closeout["status"] == "paused"
+    assert consumed_synthesis_closeout["closeout_result"] == (
+        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_CLOSED_AS_SOURCE_AND_BRIDGE_"
+        "ADMISSIBILITY_RULE_FAMILY_NO_ACTION_VARIATION_OR_PROMOTION"
+    )
+    assert consumed_synthesis_closeout["selected_next_target"] == LIVE_TARGET
+    assert consumed_synthesis_closeout[
+        "closeout_accepted"
+    ] == "yes"
+    assert consumed_synthesis_closeout[
+        "first_synthesized_phi_relevant_ck_admissibility_rule_family_closed"
+    ] == "yes"
+    assert consumed_synthesis_closeout[
+        "source_and_bridge_admissibility_rule_family_closed"
+    ] == "yes"
+    assert consumed_synthesis_closeout[
+        "selector_target_authorized"
+    ] == "yes"
+    assert consumed_synthesis_closeout[
+        "selector_target_prepared"
+    ] == "no"
+    assert consumed_synthesis_closeout[
+        "full_toeformal_aggregate_status_for_packet"
+    ] == "NOT_RUN"
+    assert consumed_synthesis_closeout["ck_variation_executed"] == "no"
+    assert consumed_synthesis_closeout["qft_gr_closure_claimed"] == "no"
+    assert consumed_synthesis_closeout["master_action_promoted"] == "no"
+
+    consumed_synthesis_review = _workstream(
+        payload, PHI_CK_SYNTHESIS_RESULT_REVIEW_TARGET
+    )
     assert consumed_synthesis_review["status"] == "paused"
     assert consumed_synthesis_review["review_result"] == (
         "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_ACCEPTS_SOURCE_"
         "AND_BRIDGE_RULE_SYNTHESIS_NO_ACTION_VARIATION_OR_PROMOTION"
     )
-    assert consumed_synthesis_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_synthesis_review["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert consumed_synthesis_review[
         "source_rule_synthesis_accepted"
     ] == "yes"
@@ -3195,22 +3185,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "synthesis_closeout_authorized"
     ] == "yes"
     assert consumed_synthesis_review[
-        "synthesis_closeout_prepared"
-    ] == "no"
-    assert consumed_synthesis_review[
         "full_toeformal_aggregate_status_for_packet"
     ] == "NOT_RUN"
     assert consumed_synthesis_review["ck_variation_executed"] == "no"
     assert consumed_synthesis_review["qft_gr_closure_claimed"] == "no"
     assert consumed_synthesis_review["master_action_promoted"] == "no"
-
     consumed_synthesis_packet = _workstream(payload, PHI_CK_SYNTHESIS_PACKET_TARGET)
     assert consumed_synthesis_packet["status"] == "paused"
     assert consumed_synthesis_packet["packet_result"] == (
         "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_SOURCE_AND_"
         "BRIDGE_RULES_SYNTHESIZED_NO_ACTION_VARIATION_OR_PROMOTION"
     )
-    assert consumed_synthesis_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert (
+        consumed_synthesis_packet["selected_next_target"]
+        == PHI_CK_SYNTHESIS_RESULT_REVIEW_TARGET
+    )
     assert consumed_synthesis_packet[
         "source_admissibility_rule_synthesized"
     ] == "yes"
@@ -9779,7 +9768,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        phi_ck_synthesis_review_active_workstream[
+        phi_ck_synthesis_closeout_active_workstream[
             "authorized_next_strict_target"
         ],
     }
@@ -11583,5 +11572,3 @@ def test_forbidden_promotion_boundaries_remain_fail_closed() -> None:
 
 def test_current_target_gate_is_not_governance_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled("test_current_target_freshness_gate.py")
-
-

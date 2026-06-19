@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "Phi/C_k admissibility-rule family synthesis result review accepted outcome PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_ACCEPTS_SOURCE_AND_BRIDGE_RULE_SYNTHESIS_NO_ACTION_VARIATION_OR_PROMOTION. The review accepts the two-rule family: C_source^nu[g, phi] := nabla_mu T_phi^{mu nu} with C_source^nu[g, phi] = 0 as source admissibility, and C_bridge^phi := (E_phi^master - E_phi^witness, T_phi^master - T_phi^witness, C_source^phi - nabla_mu T_phi^{mu nu}) with C_bridge^phi = 0 as bridge admissibility. Both rules remain admissibility-only rule candidates: no action term, no C_k variation, no dynamical-law claim, no native phi derivation, no V(phi) derivation, no QFT-GR closure, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN, not passed, not failed, and not timed out. The next target is prepare_phi_ck_admissibility_rule_family_synthesis_closeout"
+        "Phi/C_k admissibility-rule family synthesis closeout accepted outcome PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_CLOSED_AS_SOURCE_AND_BRIDGE_ADMISSIBILITY_RULE_FAMILY_NO_ACTION_VARIATION_OR_PROMOTION. The closeout preserves the two-rule family: C_source^nu[g, phi] := nabla_mu T_phi^{mu nu} with C_source^nu[g, phi] = 0 as source admissibility, and C_bridge^phi := (E_phi^master - E_phi^witness, T_phi^master - T_phi^witness, C_source^phi - nabla_mu T_phi^{mu nu}) with C_bridge^phi = 0 as bridge admissibility. This is the first synthesized phi-relevant C_k admissibility-rule family. Both rules remain admissibility-only rule candidates: no action term, no C_k variation, no dynamical-law claim, no native phi derivation, no V(phi) derivation, no QFT-GR closure, and no master-action promotion. The full ToeFormal aggregate is recorded as NOT_RUN, not passed, not failed, and not timed out. The next target is select_next_ck_constraint_family_after_phi_source_and_bridge_admissibility"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_phi_ck_admissibility_rule_family_synthesis_closeout"
+        "select_next_ck_constraint_family_after_phi_source_and_bridge_admissibility"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch is closed as a positive local classical source witness, the master-action phi surface has a selected nonpromotional policy and alignment witness, and the phi/C_k admissibility-rule family synthesis result review accepts two closed admissibility-only rule candidates: C_source^nu[g, phi] = 0 for source admissibility and C_bridge^phi = 0 for bridge route consistency. C_k is now recorded as instantiable into source-permission and bridge-permission admissibility roles, but neither rule is an action term, dynamical law, native-generation theorem, QFT-GR closure, master-action promotion, or proof that phi or V(phi) is derived. No C_k variation, source-admissibility proof, bridge-admissibility proof, route-alignment verification, semiclassical coupling, empirical claim, or public-readiness claim follows. The full ToeFormal aggregate is recorded as NOT_RUN for this review. The next bounded question is the synthesis closeout"
+        "The scalar sandbox branch is closed as a positive local classical source witness, the master-action phi surface has a selected nonpromotional policy and alignment witness, and the phi/C_k admissibility-rule family synthesis closeout closes two admissibility-only rule candidates as the first synthesized phi-relevant C_k admissibility-rule family: C_source^nu[g, phi] = 0 for source admissibility and C_bridge^phi = 0 for bridge route consistency. C_k is now recorded as instantiable into source-permission and bridge-permission admissibility roles, but neither rule is an action term, dynamical law, native-generation theorem, QFT-GR closure, master-action promotion, or proof that phi or V(phi) is derived. No C_k variation, source-admissibility proof, bridge-admissibility proof, route-alignment verification, semiclassical coupling, empirical claim, or public-readiness claim follows. The full ToeFormal aggregate is recorded as NOT_RUN for this closeout. The next bounded question is selection of the next C_k constraint family after phi source and bridge admissibility"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_phi_ck_admissibility_rule_family_synthesis_closeout"
+        "select_next_ck_constraint_family_after_phi_source_and_bridge_admissibility"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the phi/C_k synthesis result review. -/
+/-- Previous live target consumed by the phi/C_k synthesis closeout. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_phi_ck_admissibility_rule_family_synthesis_packet_result"
-
-/-- Current live target after the phi/C_k synthesis result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_phi_ck_admissibility_rule_family_synthesis_closeout"
+
+/-- Current live target after the phi/C_k synthesis closeout. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "select_next_ck_constraint_family_after_phi_source_and_bridge_admissibility"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_phi_ck_admissibility_rule_family_synthesis_closeout"
+    "select_next_ck_constraint_family_after_phi_source_and_bridge_admissibility"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
