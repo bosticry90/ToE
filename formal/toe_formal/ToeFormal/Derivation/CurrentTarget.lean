@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.MasterActionCKConstraintFunctionalDefinitionPacket
+import ToeFormal.Derivation.MasterActionCKConstraintFunctionalDefinitionPacketResultReview
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  MasterActionCKConstraintFunctionalDefinitionPacket.selectedNextTarget
+  MasterActionCKConstraintFunctionalDefinitionPacketResultReview.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  MasterActionCKConstraintFunctionalDefinitionPacket.packetId
+  MasterActionCKConstraintFunctionalDefinitionPacketResultReview.packetId
 
-theorem current_target_points_to_master_action_ck_definition_packet_review :
+theorem current_target_points_to_master_action_ck_constraint_family_selector :
     currentLiveTarget =
-      "review_master_action_ck_constraint_functional_definition_packet_result" := by
+      "select_master_action_ck_constraint_family_for_phi_route" := by
   rfl
 
 end CurrentTarget
