@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.PhiSourceAdmissibilityCKFunctionalEmbeddingPacketResultReview
+import ToeFormal.Derivation.PhiSourceAdmissibilityCKAdmissibilityRuleCloseout
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  PhiSourceAdmissibilityCKFunctionalEmbeddingPacketResultReview.selectedNextTarget
+  PhiSourceAdmissibilityCKAdmissibilityRuleCloseout.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  PhiSourceAdmissibilityCKFunctionalEmbeddingPacketResultReview.packetId
+  PhiSourceAdmissibilityCKAdmissibilityRuleCloseout.packetId
 
-theorem current_target_points_to_phi_source_admissibility_ck_admissibility_rule_closeout :
+theorem current_target_points_to_next_phi_relevant_ck_family_selector :
     currentLiveTarget =
-      "prepare_phi_source_admissibility_ck_admissibility_rule_closeout" := by
+      "select_next_phi_relevant_ck_constraint_family_after_source_admissibility" := by
   rfl
 
 end CurrentTarget

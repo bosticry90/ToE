@@ -12,6 +12,7 @@ import ToeFormal.Derivation.PhiSourceAdmissibilityCKConstraintCandidatePacket
 import ToeFormal.Derivation.PhiSourceAdmissibilityCKConstraintCandidatePacketResultReview
 import ToeFormal.Derivation.PhiSourceAdmissibilityCKFunctionalEmbeddingPacket
 import ToeFormal.Derivation.PhiSourceAdmissibilityCKFunctionalEmbeddingPacketResultReview
+import ToeFormal.Derivation.PhiSourceAdmissibilityCKAdmissibilityRuleCloseout
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -33,16 +34,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  PhiSourceAdmissibilityCKFunctionalEmbeddingPacketResultReview.outcomeId
+  PhiSourceAdmissibilityCKAdmissibilityRuleCloseout.outcomeId
 
 def currentPacketId : String :=
-  PhiSourceAdmissibilityCKFunctionalEmbeddingPacketResultReview.packetId
+  PhiSourceAdmissibilityCKAdmissibilityRuleCloseout.packetId
 
-theorem qft_gr_lane_aggregate_exposes_phi_source_admissibility_ck_embedding_review :
+theorem qft_gr_lane_aggregate_exposes_phi_source_admissibility_ck_rule_closeout :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "PHI_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_ACCEPTS_" ++
-          "ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_PROMOTION" := by
+        "PHI_SOURCE_ADMISSIBILITY_CK_ADMISSIBILITY_RULE_CLOSED_AS_FIRST_PHI_" ++
+          "RELEVANT_CK_RULE_CANDIDATE_NO_ACTION_VARIATION_OR_PROMOTION" := by
   constructor
   · rfl
   · rfl
