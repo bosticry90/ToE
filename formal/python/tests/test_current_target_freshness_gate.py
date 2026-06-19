@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "review_phi_bridge_admissibility_ck_functional_embedding_packet_result"
+ACTIVE_LANE = "prepare_phi_bridge_admissibility_ck_admissibility_rule_closeout"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,7 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "prepare_phi_bridge_admissibility_ck_functional_embedding_packet"
+PREVIOUS_LIVE_TARGET = "review_phi_bridge_admissibility_ck_functional_embedding_packet_result"
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
 )
@@ -1417,7 +1417,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "review_phi_bridge_admissibility_ck_functional_embedding_packet_result"
+LIVE_TARGET = "prepare_phi_bridge_admissibility_ck_admissibility_rule_closeout"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1433,7 +1433,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PhiBridgeAdmissibilityCKFunctionalEmbeddingPacket.lean"
+    / "PhiBridgeAdmissibilityCKFunctionalEmbeddingPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2966,31 +2966,30 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ).replace("\\", "/")
     assert bridge_functional_embedding_review_active_workstream["report"] == (
         "formal/docs/release/"
-        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260618_v0.json"
+        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260618_v0.json"
     )
     assert (
         bridge_functional_embedding_review_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
     assert bridge_functional_embedding_review_active_workstream["outcome_id"] == (
-        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_"
-        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_OPTIONS_RECORDED_"
-        "ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
+        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_ACCEPTS_"
+        "ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_PROMOTION"
     )
-    assert bridge_functional_embedding_review_active_workstream["packet_result"] == (
-        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_OPTIONS_RECORDED_"
-        "ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
+    assert bridge_functional_embedding_review_active_workstream["review_result"] == (
+        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_ACCEPTS_"
+        "ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_PROMOTION"
     )
     assert bridge_functional_embedding_review_active_workstream[
-        "candidate_review_result"
+        "embedding_packet_result"
     ] == (
-        "PHI_BRIDGE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_"
-        "ROUTE_CONSISTENCY_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION"
+        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_OPTIONS_RECORDED_"
+        "ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
     )
     assert bridge_functional_embedding_review_active_workstream[
         "packet_classification"
     ] == (
-        "phi_bridge_admissibility_ck_functional_embedding_packet_records_options_and_selects_admissibility_only_no_action_variation"
+        "phi_bridge_admissibility_ck_functional_embedding_result_review_accepts_admissibility_only_route_no_action_variation_or_promotion"
     )
     assert bridge_functional_embedding_review_active_workstream[
         "selected_ck_option_class"
@@ -3067,11 +3066,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "penalty_action_form"
     ] == "S_C^bridge = integral_M dVol_g norm(C_bridge^phi)^2"
     assert bridge_functional_embedding_review_active_workstream[
-        "review_row_count"
-    ] == "10"
+        "review_criteria_count"
+    ] == "12"
     assert bridge_functional_embedding_review_active_workstream[
-        "review_row_accepted_count"
-    ] == "10"
+        "review_criteria_accepted_count"
+    ] == "12"
     assert (
         bridge_functional_embedding_review_active_workstream[
             "functional_embedding_packet_prepared"
@@ -3098,9 +3097,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "yes"
     assert bridge_functional_embedding_review_active_workstream[
         "review_prepared"
-    ] == "no"
+    ] == "yes"
     assert bridge_functional_embedding_review_active_workstream[
-        "review_executed"
+        "admissibility_rule_closeout_authorized"
+    ] == "yes"
+    assert bridge_functional_embedding_review_active_workstream[
+        "admissibility_rule_closeout_prepared"
     ] == "no"
     assert bridge_functional_embedding_review_active_workstream[
         "route_consistency_tuple_carried_forward"
@@ -3122,13 +3124,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == "INCOMPLETE_TIMEOUT_STEADY_PROGRESS"
     assert (
         bridge_functional_embedding_review_active_workstream["claim_level"]
-        == "Level 3 bridge functional-embedding packet prepared as admissibility-only route-consistency rule"
+        == "Level 3 bridge functional-embedding result review accepts admissibility-only route"
     )
     assert (
         bridge_functional_embedding_review_active_workstream["claim_ceiling"]
-        == "functional-embedding options recorded only no action embedding no C_k variation no bridge proof no phi generation no derived potential no QFT-GR closure no master-action promotion"
+        == "result-review acceptance only no action embedding no C_k variation no bridge proof no phi generation no derived potential no QFT-GR closure no master-action promotion"
     )
-    assert "selects the admissibility-only route" in (
+    assert "accepts the admissibility-only route as a bridge" in (
         bridge_functional_embedding_review_active_workstream["non_claim_boundary"]
     )
     assert "does not functionalize C_bridge^phi" in (
@@ -3137,7 +3139,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert "does not select Lambda_bridge" in (
         bridge_functional_embedding_review_active_workstream["non_claim_boundary"]
     )
-    assert "does not license the penalty route" in (
+    assert "keeps the penalty route not licensed" in (
         bridge_functional_embedding_review_active_workstream["non_claim_boundary"]
     )
     assert "does not prove full bridge admissibility" in (
@@ -3216,13 +3218,32 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ]:
         assert bridge_functional_embedding_review_active_workstream[key] == "no", key
 
-    consumed_bridge_embedding_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_bridge_embedding_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_bridge_embedding_review["status"] == "paused"
+    assert consumed_bridge_embedding_review["review_result"] == (
+        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_ACCEPTS_"
+        "ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_PROMOTION"
+    )
+    assert consumed_bridge_embedding_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_bridge_embedding_review["admissibility_rule_closeout_authorized"] == "yes"
+    assert consumed_bridge_embedding_review["admissibility_rule_closeout_prepared"] == "no"
+    assert consumed_bridge_embedding_review["admissibility_only_route_selected"] == "yes"
+    assert consumed_bridge_embedding_review["lagrange_multiplier_route_blocked"] == "yes"
+    assert consumed_bridge_embedding_review["penalty_route_licensed"] == "no"
+    assert consumed_bridge_embedding_review["ck_variation_executed"] == "no"
+    assert consumed_bridge_embedding_review["bridge_admissibility_proved"] == "no"
+    assert consumed_bridge_embedding_review["qft_gr_closure_claimed"] == "no"
+    assert consumed_bridge_embedding_review["master_action_promoted"] == "no"
+
+    consumed_bridge_embedding_packet = _workstream(
+        payload, "prepare_phi_bridge_admissibility_ck_functional_embedding_packet"
+    )
     assert consumed_bridge_embedding_packet["status"] == "paused"
     assert consumed_bridge_embedding_packet["packet_result"] == (
         "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_OPTIONS_RECORDED_"
         "ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
     )
-    assert consumed_bridge_embedding_packet["selected_next_target"] == LIVE_TARGET
+    assert consumed_bridge_embedding_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert consumed_bridge_embedding_packet["bridge_candidate_id"] == (
         "phi_bridge_route_consistency_ck_candidate"
     )
