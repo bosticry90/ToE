@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "review_phi_source_admissibility_ck_constraint_candidate_packet_result"
+ACTIVE_LANE = "prepare_phi_source_admissibility_ck_functional_embedding_packet"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,7 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "prepare_phi_source_admissibility_ck_constraint_candidate_packet"
+PREVIOUS_LIVE_TARGET = "review_phi_source_admissibility_ck_constraint_candidate_packet_result"
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
 )
@@ -1417,7 +1417,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "review_phi_source_admissibility_ck_constraint_candidate_packet_result"
+LIVE_TARGET = "prepare_phi_source_admissibility_ck_functional_embedding_packet"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1433,7 +1433,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PhiSourceAdmissibilityCKConstraintCandidatePacket.lean"
+    / "PhiSourceAdmissibilityCKConstraintCandidatePacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2943,130 +2943,143 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    ck_candidate_review_active_workstream = active_workstream(payload)
-    assert ck_candidate_review_active_workstream["workstream_id"] == ACTIVE_LANE
-    assert ck_candidate_review_active_workstream["active_lane"] == ACTIVE_LANE
+    functional_embedding_active_workstream = active_workstream(payload)
+    assert functional_embedding_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert functional_embedding_active_workstream["active_lane"] == ACTIVE_LANE
     assert (
-        ck_candidate_review_active_workstream["authorized_next_strict_target"]
+        functional_embedding_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert ck_candidate_review_active_workstream["authorized_target"] == LIVE_TARGET
-    assert ck_candidate_review_active_workstream["authorization_evidence"] == str(
+    assert functional_embedding_active_workstream["authorized_target"] == LIVE_TARGET
+    assert functional_embedding_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert ck_candidate_review_active_workstream["report"] == (
+    assert functional_embedding_active_workstream["report"] == (
         "formal/docs/release/"
-        "PHI_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_20260618_v0.json"
+        "PHI_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_RESULT_REVIEW_"
+        "20260618_v0.json"
     )
-    assert ck_candidate_review_active_workstream["consumed_target"] == (
+    assert functional_embedding_active_workstream["consumed_target"] == (
         PREVIOUS_LIVE_TARGET
     )
-    assert ck_candidate_review_active_workstream["outcome_id"] == (
-        "PHI_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_PREPARED_"
-        "PHI_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_RECORDED_AS_"
+    assert functional_embedding_active_workstream["review_result"] == (
+        "PHI_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_"
+        "CONSERVATION_RESIDUAL_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION"
+    )
+    assert functional_embedding_active_workstream["outcome_id"] == (
+        "PHI_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_"
+        "CONSERVATION_RESIDUAL_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION"
+    )
+    assert (
+        functional_embedding_active_workstream["claim_level"]
+        == "Level 3 functional-embedding packet preparation authorized; tests whether the conservation residual can be embedded as a legitimate C_k constraint functional"
+    )
+    assert (
+        functional_embedding_active_workstream["claim_ceiling"]
+        == "functional embedding packet preparation only no embedding executed no multiplier selected no fully concrete C_k functional no C_k variation no phi generation no derived potential no new conservation proof no source admissibility proof no qft-gr closure no semiclassical coupling no canonical master-action promotion"
+    )
+    assert (
+        functional_embedding_active_workstream["candidate_packet_result"]
+        == "PHI_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_RECORDED_AS_"
         "CONSERVATION_RESIDUAL_NO_VARIATION_OR_PROMOTION"
     )
-    assert ck_candidate_review_active_workstream["packet_result"] == (
-        "PHI_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_RECORDED_AS_"
-        "CONSERVATION_RESIDUAL_NO_VARIATION_OR_PROMOTION"
-    )
     assert (
-        ck_candidate_review_active_workstream["claim_level"]
-        == "Level 3 candidate condition packet; records a phi source-admissibility conservation residual without executing variation"
-    )
-    assert (
-        ck_candidate_review_active_workstream["claim_ceiling"]
-        == "candidate condition only no fully concrete C_k functional no C_k variation no phi generation no derived potential no new conservation proof no source admissibility proof no qft-gr closure no semiclassical coupling no canonical master-action promotion"
-    )
-    assert (
-        ck_candidate_review_active_workstream["review_target"]
-        == "review_phi_source_admissibility_ck_constraint_candidate_packet_result"
-    )
-    assert (
-        ck_candidate_review_active_workstream["selected_ck_option_class"]
+        functional_embedding_active_workstream["selected_ck_option_class"]
         == "source_admissibility_constraint"
     )
     assert (
-        ck_candidate_review_active_workstream["selected_ck_constraint_family"]
+        functional_embedding_active_workstream["selected_ck_constraint_family"]
         == "phi_source_admissibility_constraint_family"
     )
     assert (
-        ck_candidate_review_active_workstream["candidate_constraint_id"]
+        functional_embedding_active_workstream["candidate_constraint_id"]
         == "phi_source_conservation_residual_ck_candidate"
     )
     assert (
-        ck_candidate_review_active_workstream["candidate_constraint_form"]
+        functional_embedding_active_workstream["candidate_constraint_form"]
         == "C_source^nu[g, phi] := nabla_mu T_phi^{mu nu}"
     )
     assert (
-        ck_candidate_review_active_workstream["candidate_constraint_equation"]
+        functional_embedding_active_workstream["candidate_constraint_equation"]
         == "C_source^nu[g, phi] = 0"
     )
     assert (
-        ck_candidate_review_active_workstream["on_shell_residual_form"]
+        functional_embedding_active_workstream["on_shell_residual_form"]
         == "R_i^phi := Box_g phi_i + partial_i V(phi)"
     )
     assert (
-        ck_candidate_review_active_workstream["residual_identity_form"]
+        functional_embedding_active_workstream["residual_identity_form"]
         == "C_source^nu = sum_i R_i^phi nabla^nu phi_i"
     )
     assert (
-        ck_candidate_review_active_workstream["on_shell_implication_form"]
+        functional_embedding_active_workstream["on_shell_implication_form"]
         == "R_i^phi = 0 for all i implies C_source^nu = 0"
     )
     assert (
-        ck_candidate_review_active_workstream["candidate_action_insertion_form"]
+        functional_embedding_active_workstream["candidate_action_insertion_form"]
         == "S_Csource[candidate] = integral_M sqrt(-g) lambda_nu C_source^nu d^4x"
     )
-    assert ck_candidate_review_active_workstream["candidate_shape_count"] == "3"
-    assert ck_candidate_review_active_workstream["candidate_shape_selected_count"] == "1"
-    assert ck_candidate_review_active_workstream["candidate_shape_supporting_count"] == "1"
-    assert ck_candidate_review_active_workstream["candidate_shape_deferred_count"] == "1"
-    assert ck_candidate_review_active_workstream["candidate_packet_prepared"] == "yes"
     assert (
-        ck_candidate_review_active_workstream["candidate_constraint_shape_recorded"]
-        == "yes"
-    )
-    assert (
-        ck_candidate_review_active_workstream["conservation_residual_candidate_selected"]
-        == "yes"
-    )
-    assert (
-        ck_candidate_review_active_workstream[
-            "on_shell_source_admissibility_relation_recorded"
+        functional_embedding_active_workstream[
+            "review_accepts_conservation_residual_candidate"
         ]
         == "yes"
     )
+    assert functional_embedding_active_workstream["candidate_recorded_as_candidate_only"] == "yes"
+    assert functional_embedding_active_workstream["candidate_carried_forward_exactly"] == "yes"
     assert (
-        ck_candidate_review_active_workstream[
-            "route_bundle_admissibility_candidate_deferred"
+        functional_embedding_active_workstream[
+            "scalar_residual_carried_forward_under_selected_policy"
         ]
         == "yes"
     )
-    assert ck_candidate_review_active_workstream["review_prepared"] == "no"
-    assert ck_candidate_review_active_workstream["concrete_ck_functional_selected"] == "no"
-    assert ck_candidate_review_active_workstream["concrete_ck_functional_defined"] == "no"
+    assert functional_embedding_active_workstream["route_identity_carried_forward"] == "yes"
     assert (
-        ck_candidate_review_active_workstream["ck_functional_formula_fully_defined"]
+        functional_embedding_active_workstream["admissibility_only_interpretation_retained"]
+        == "yes"
+    )
+    assert (
+        functional_embedding_active_workstream["dynamical_action_embedding_not_assumed"]
+        == "yes"
+    )
+    assert (
+        functional_embedding_active_workstream["functional_embedding_packet_authorized"]
+        == "yes"
+    )
+    assert (
+        functional_embedding_active_workstream["functional_embedding_packet_prepared"]
         == "no"
     )
-    assert ck_candidate_review_active_workstream["ck_functional_formula_selected"] == "no"
-    assert ck_candidate_review_active_workstream["ck_variation_executed"] == "no"
-    assert ck_candidate_review_active_workstream["ck_variation_authorized"] == "no"
-    assert ck_candidate_review_active_workstream["lambda_variation_executed"] == "no"
-    assert ck_candidate_review_active_workstream[
+    assert functional_embedding_active_workstream["constraint_multiplier_type_selected"] == "no"
+    assert functional_embedding_active_workstream["constraint_term_selected"] == "no"
+    assert functional_embedding_active_workstream["ck_variation_executed"] == "no"
+    assert functional_embedding_active_workstream["lambda_variation_executed"] == "no"
+    assert functional_embedding_active_workstream[
         "aggregate_lean_validation_status_for_packet"
     ] == "INCOMPLETE_TIMEOUT_STEADY_PROGRESS"
-    assert "conservation residual" in ck_candidate_review_active_workstream[
+    assert "accepts the conservation-residual candidate only" in functional_embedding_active_workstream[
         "non_claim_boundary"
     ]
-    assert "does not select or define a fully concrete C_k functional" in (
-        ck_candidate_review_active_workstream["non_claim_boundary"]
+    assert "does not functionalize the candidate" in (
+        functional_embedding_active_workstream["non_claim_boundary"]
     )
-    assert "no ToE-native matter derivation" in ck_candidate_review_active_workstream[
+    assert "does not embed it in S_C" in (
+        functional_embedding_active_workstream["non_claim_boundary"]
+    )
+    assert "does not select or define a fully concrete C_k functional" in (
+        functional_embedding_active_workstream["non_claim_boundary"]
+    )
+    assert "no ToE-native matter derivation" in functional_embedding_active_workstream[
         "non_claim_boundary"
     ]
     for key in [
+        "functional_embedding_executed",
+        "constraint_multiplier_type_selected",
+        "constraint_term_selected",
+        "lambda_nu_domain_selected",
+        "higher_derivative_scope_resolved",
+        "boundary_terms_controlled",
+        "fully_concrete_ck_functional_selected",
         "fully_concrete_ck_functional_defined",
         "candidate_action_insertion_executed",
         "lambda_variation_executed",
@@ -3107,15 +3120,37 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "pillar_completion_inferred",
         "seam_closure_claim",
     ]:
-        assert ck_candidate_review_active_workstream[key] == "no", key
+        assert functional_embedding_active_workstream[key] == "no", key
 
-    consumed_phi_source_candidate = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_ck_candidate_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_ck_candidate_review["status"] == "paused"
+    assert consumed_ck_candidate_review["review_result"] == (
+        "PHI_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_ACCEPTS_"
+        "CONSERVATION_RESIDUAL_CANDIDATE_NO_FUNCTIONALIZATION_OR_PROMOTION"
+    )
+    assert consumed_ck_candidate_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_ck_candidate_review["candidate_constraint_id"] == (
+        "phi_source_conservation_residual_ck_candidate"
+    )
+    assert consumed_ck_candidate_review["review_accepts_conservation_residual_candidate"] == "yes"
+    assert consumed_ck_candidate_review["functional_embedding_packet_authorized"] == "yes"
+    assert consumed_ck_candidate_review["functional_embedding_executed"] == "no"
+    assert consumed_ck_candidate_review["ck_variation_executed"] == "no"
+    assert consumed_ck_candidate_review["source_admissibility_claimed"] == "no"
+    assert consumed_ck_candidate_review["qft_gr_closure_claimed"] == "no"
+    assert consumed_ck_candidate_review["master_action_promoted"] == "no"
+
+    consumed_phi_source_candidate = _workstream(
+        payload, "prepare_phi_source_admissibility_ck_constraint_candidate_packet"
+    )
     assert consumed_phi_source_candidate["status"] == "paused"
     assert consumed_phi_source_candidate["packet_result"] == (
         "PHI_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_RECORDED_AS_"
         "CONSERVATION_RESIDUAL_NO_VARIATION_OR_PROMOTION"
     )
-    assert consumed_phi_source_candidate["selected_next_target"] == LIVE_TARGET
+    assert consumed_phi_source_candidate["selected_next_target"] == (
+        PREVIOUS_LIVE_TARGET
+    )
     assert consumed_phi_source_candidate["candidate_constraint_id"] == (
         "phi_source_conservation_residual_ck_candidate"
     )
@@ -3133,7 +3168,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "MASTER_ACTION_CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_PHI_SOURCE_"
         "ADMISSIBILITY_CONSTRAINT_FAMILY_NO_CK_FUNCTIONAL_EXECUTION_OR_PROMOTION"
     )
-    assert consumed_ck_family_selector["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_ck_family_selector["selected_next_target"] == (
+        "prepare_phi_source_admissibility_ck_constraint_candidate_packet"
+    )
     assert consumed_ck_family_selector["selected_ck_option_class"] == (
         "source_admissibility_constraint"
     )
@@ -9418,7 +9455,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        ck_candidate_review_active_workstream[
+        functional_embedding_active_workstream[
             "authorized_next_strict_target"
         ],
     }
