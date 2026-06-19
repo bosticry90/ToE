@@ -1,0 +1,338 @@
+{
+  "acceptance_criteria": {
+    "bridge_selector_family_preserved": true,
+    "candidate_criteria_all_accepted": true,
+    "consumes_expected_bridge_candidate_target": true,
+    "no_selector_shortcut_claims": true,
+    "route_consistency_candidate_selected": true,
+    "source_rule_context_preserved": true
+  },
+  "accepted": true,
+  "aggregate_lean_validation_status_for_packet": "INCOMPLETE_TIMEOUT_STEADY_PROGRESS",
+  "artifact_id": "PHI_BRIDGE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_20260618_v0",
+  "bianchi_compatibility_claimed": false,
+  "boundary_terms_controlled": false,
+  "bridge_admissibility_claimed": false,
+  "bridge_admissibility_family_selected": true,
+  "bridge_admissibility_proved": false,
+  "bridge_admissibility_question": "Does the phi route correctly connect the scalar field, the QFT-GR source ladder, and the master-action structure?",
+  "bridge_candidate_functional_defined": false,
+  "bridge_candidate_functional_selected": false,
+  "bridge_candidate_id": "phi_bridge_route_consistency_ck_candidate",
+  "bridge_candidate_packet_accepted": true,
+  "bridge_candidate_packet_prepared": true,
+  "bridge_candidate_plain_meaning": "The phi route is admitted only if the master-action phi surface, the scalar witness route, and the QFT-GR source route agree under the selected policy.",
+  "bridge_candidate_recorded": true,
+  "bridge_candidate_recorded_as_action_term": false,
+  "bridge_candidate_recorded_as_admissibility_rule": true,
+  "bridge_candidate_recorded_as_new_dynamical_law": false,
+  "bridge_candidate_rule_plain_meaning": "The bridge passes only if the master-action phi route reproduces the scalar witness equation, stress-energy source, and source-admissibility residual under the selected policy.",
+  "bridge_candidate_rule_proved": false,
+  "bridge_candidate_selected_as_route_consistency_rule": true,
+  "bridge_candidate_shape_preview": "C_bridge^phi = 0",
+  "bridge_candidate_type": "route_consistency_admissibility_rule",
+  "bridge_component_count": 3,
+  "bridge_components": [
+    {
+      "component_form": "E_phi^master - E_phi^witness = 0",
+      "component_id": "bridge_field_equation_match",
+      "plain_meaning": "The master-action phi field equation must match the scalar witness equation under the selected policy.",
+      "proved_here": false,
+      "variation_executed_here": false
+    },
+    {
+      "component_form": "T_phi^master - T_phi^witness = 0",
+      "component_id": "bridge_stress_energy_match",
+      "plain_meaning": "The master-action phi stress-energy route must match the scalar witness stress-energy route under convention normalization.",
+      "proved_here": false,
+      "variation_executed_here": false
+    },
+    {
+      "component_form": "C_source^phi - nabla_mu T_phi^{mu nu} = 0",
+      "component_id": "bridge_source_residual_match",
+      "plain_meaning": "The bridge must identify the source-admissibility residual with the stress-energy divergence residual.",
+      "proved_here": false,
+      "variation_executed_here": false
+    }
+  ],
+  "bridge_constraint_equation": "C_bridge^phi = 0",
+  "bridge_constraint_form": "C_bridge^phi := (E_phi^master - E_phi^witness, T_phi^master - T_phi^witness, C_source^phi - nabla_mu T_phi^{mu nu})",
+  "bridge_route_alignment_sequence": [
+    "master-action phi surface",
+    "selected phi policy",
+    "scalar variation",
+    "scalar stress-energy",
+    "conservation residual",
+    "source-admissibility rule",
+    "classical gravity source route"
+  ],
+  "bridge_route_alignment_sequence_count": 7,
+  "bridge_route_alignment_sequence_recorded": true,
+  "bridge_route_alignment_verified": false,
+  "bridge_route_field_equation_match": "E_phi^master - E_phi^witness = 0",
+  "bridge_route_source_residual_match": "C_source^phi - nabla_mu T_phi^{mu nu} = 0",
+  "bridge_route_stress_energy_match": "T_phi^master - T_phi^witness = 0",
+  "bridge_selector_outcome": "PHI_RELEVANT_CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_BRIDGE_ADMISSIBILITY_AFTER_SOURCE_ADMISSIBILITY_NO_CK_VARIATION_OR_PROMOTION",
+  "bridge_selector_result": "PHI_RELEVANT_CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_BRIDGE_ADMISSIBILITY_AFTER_SOURCE_ADMISSIBILITY_NO_CK_VARIATION_OR_PROMOTION",
+  "candidate_action_insertion_executed": false,
+  "candidate_criteria": [
+    {
+      "assessment": "The packet consumes the bridge-admissibility family selector.",
+      "evidence": "PHI_RELEVANT_CK_CONSTRAINT_FAMILY_SELECTION_SELECTS_BRIDGE_ADMISSIBILITY_AFTER_SOURCE_ADMISSIBILITY_NO_CK_VARIATION_OR_PROMOTION",
+      "row_id": "candidate_packet_consumes_bridge_selector",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet stays within the selected phi bridge-admissibility C_k family.",
+      "evidence": [
+        "bridge_admissibility_constraint",
+        "phi_bridge_admissibility_constraint_family"
+      ],
+      "row_id": "selected_bridge_family_carried_forward",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The full phi bridge route is carried forward for checking.",
+      "evidence": [
+        "master-action phi surface",
+        "selected phi policy",
+        "scalar variation",
+        "scalar stress-energy",
+        "conservation residual",
+        "source-admissibility rule",
+        "classical gravity source route"
+      ],
+      "row_id": "route_alignment_sequence_carried_forward",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The bridge candidate is recorded as a route-consistency tuple.",
+      "evidence": "C_bridge^phi := (E_phi^master - E_phi^witness, T_phi^master - T_phi^witness, C_source^phi - nabla_mu T_phi^{mu nu})",
+      "row_id": "route_consistency_tuple_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The admissibility condition C_bridge^phi = 0 is recorded.",
+      "evidence": "C_bridge^phi = 0",
+      "row_id": "bridge_constraint_equation_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The bridge components compare the field equation, stress-energy route, and source residual.",
+      "evidence": [
+        "E_phi^master - E_phi^witness = 0",
+        "T_phi^master - T_phi^witness = 0",
+        "C_source^phi - nabla_mu T_phi^{mu nu} = 0"
+      ],
+      "row_id": "field_equation_stress_energy_source_residual_components_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The prior source-admissibility rule remains context for the bridge candidate.",
+      "evidence": [
+        "C_source^nu[g, phi] := nabla_mu T_phi^{mu nu}",
+        "C_source^nu[g, phi] = 0"
+      ],
+      "row_id": "source_admissibility_rule_retained_as_context",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The route-consistency tuple is recorded as an admissibility rule, not an action term.",
+      "evidence": "bridge_candidate_recorded_as_admissibility_rule=true",
+      "row_id": "admissibility_rule_not_action_term",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No C_k variation or action embedding is executed.",
+      "evidence": [
+        "ck_variation_executed=false",
+        "ck_action_embedding_claimed=false"
+      ],
+      "row_id": "no_variation_or_functional_embedding",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The nonpromotion boundary is preserved.",
+      "evidence": [
+        "phi_generated_by_ck_claimed=false",
+        "qft_gr_closure_claimed=false",
+        "master_action_promoted=false"
+      ],
+      "row_id": "no_generation_closure_or_promotion",
+      "status": "accepted"
+    }
+  ],
+  "candidate_criteria_accepted_count": 10,
+  "candidate_criteria_count": 10,
+  "canonical_master_action_promoted": false,
+  "captured_at_utc": "2026-06-18T00:00:00Z",
+  "ck_action_embedding_claimed": false,
+  "ck_variation_authorized": false,
+  "ck_variation_executed": false,
+  "claim_ceiling": "route-consistency C_k admissibility-rule candidate only no bridge proof no concrete functional no action embedding no C_k variation no phi generation no derived potential no new conservation proof no source admissibility proof no QFT-GR closure no semiclassical coupling no canonical master-action promotion",
+  "claim_level": "Level 3 bridge candidate packet; records C_bridge^phi as a route-consistency admissibility rule without defining an action term, executing C_k variation, proving bridge admissibility, or promoting the master action",
+  "classical_source_route_id": "classical_einstein_scalar_source_route",
+  "concrete_ck_functional_defined": false,
+  "concrete_ck_functional_selected": false,
+  "constraint_multiplier_type_selected": false,
+  "constraint_term_selected": false,
+  "consumed_target": "prepare_phi_bridge_admissibility_ck_constraint_candidate_packet",
+  "critical_gate_fail_conditions": [
+    "claim bridge-admissibility is proved",
+    "claim route alignment is verified",
+    "embed C_bridge^phi into an action",
+    "execute C_k variation",
+    "claim phi generation",
+    "claim V(phi) derivation",
+    "claim new conservation proof",
+    "claim new source-admissibility proof",
+    "claim QFT-GR closure",
+    "claim semiclassical coupling",
+    "promote the master action",
+    "claim empirical validation"
+  ],
+  "derived_v_phi_claimed": false,
+  "empirical_validation_claimed": false,
+  "field_equation_match_proved": false,
+  "field_equation_match_recorded": true,
+  "files": {
+    "bridge_selector_file": "formal/docs/release/PHI_RELEVANT_CK_CONSTRAINT_FAMILY_SELECTION_AFTER_SOURCE_ADMISSIBILITY_20260618_v0.json",
+    "current_target_aggregate_file": "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "json_report": "formal/docs/release/PHI_BRIDGE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_20260618_v0.json",
+    "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/PhiBridgeAdmissibilityCKConstraintCandidatePacket.lean",
+    "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+    "qftgr_aggregate_file": "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "release_current_authority_aggregate_file": "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  },
+  "fully_concrete_ck_functional_defined": false,
+  "fully_concrete_ck_functional_selected": false,
+  "higher_derivative_scope_resolved": false,
+  "lambda_nu_domain_selected": false,
+  "lambda_variation_executed": false,
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.PhiBridgeAdmissibilityCKConstraintCandidatePacket",
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_validation_policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "master_phi_route_id": "master_action_phi_surface_under_selected_policy",
+  "mathematical_statement": "The candidate packet records C_bridge^phi := (E_phi^master - E_phi^witness, T_phi^master - T_phi^witness, C_source^phi - nabla_mu T_phi^{mu nu}) with condition C_bridge^phi = 0. The tuple is a route-consistency admissibility rule candidate, not an action term.",
+  "metric_variation_of_candidate_executed": false,
+  "native_generation_theorem_claimed": false,
+  "new_conservation_proof_claimed": false,
+  "new_source_admissibility_proof_claimed": false,
+  "non_claim_boundary": "This packet records a phi bridge-admissibility C_k candidate as a route-consistency admissibility rule only. It does not define a fully concrete C_k functional, does not embed C_bridge^phi into the action, does not execute C_k variation, does not vary lambda_k, phi, or g, does not prove the field-equation match, does not prove the stress-energy match, does not prove the source-residual match, does not verify the full route alignment, does not claim bridge admissibility, does not generate phi, does not derive V(phi), does not prove new conservation, does not prove source admissibility, does not close QFT-GR, does not authorize semiclassical coupling, does not promote the master action, does not claim empirical validation, and does not authorize public readiness.",
+  "outcome_id": "PHI_BRIDGE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_PREPARED_PHI_BRIDGE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_RECORDED_AS_ROUTE_CONSISTENCY_RULE_NO_VARIATION_OR_PROMOTION",
+  "packet_classification": "phi_bridge_admissibility_ck_constraint_candidate_packet_records_route_consistency_rule_no_variation_or_promotion",
+  "packet_id": "PHI_BRIDGE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_v0",
+  "packet_result": "PHI_BRIDGE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_RECORDED_AS_ROUTE_CONSISTENCY_RULE_NO_VARIATION_OR_PROMOTION",
+  "phase2_readiness_claim": false,
+  "phi_generated_by_ck_claimed": false,
+  "phi_generation_theorem_claimed": false,
+  "phi_variation_of_candidate_executed": false,
+  "pillar_completion_inferred": false,
+  "potential_derived": false,
+  "prepared": true,
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_solved": false,
+  "qft_gr_source_map_closure_authorized": false,
+  "route_alignment_contract": [
+    {
+      "route_step": "master-action phi surface",
+      "status": "recorded_for_bridge_consistency_check",
+      "verified_here": false
+    },
+    {
+      "route_step": "selected phi policy",
+      "status": "recorded_for_bridge_consistency_check",
+      "verified_here": false
+    },
+    {
+      "route_step": "scalar variation",
+      "status": "recorded_for_bridge_consistency_check",
+      "verified_here": false
+    },
+    {
+      "route_step": "scalar stress-energy",
+      "status": "recorded_for_bridge_consistency_check",
+      "verified_here": false
+    },
+    {
+      "route_step": "conservation residual",
+      "status": "recorded_for_bridge_consistency_check",
+      "verified_here": false
+    },
+    {
+      "route_step": "source-admissibility rule",
+      "status": "recorded_for_bridge_consistency_check",
+      "verified_here": false
+    },
+    {
+      "route_step": "classical gravity source route",
+      "status": "recorded_for_bridge_consistency_check",
+      "verified_here": false
+    }
+  ],
+  "route_alignment_contract_count": 7,
+  "route_consistency_tuple_proved": false,
+  "route_consistency_tuple_recorded": true,
+  "scalar_witness_route_id": "imported_scalar_sandbox_witness_route",
+  "schema_id": "PHI_BRIDGE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_20260618_v0",
+  "seam_closure_claim": false,
+  "selected_ck_constraint_family": "phi_bridge_admissibility_constraint_family",
+  "selected_ck_option_class": "bridge_admissibility_constraint",
+  "selected_next_target": "review_phi_bridge_admissibility_ck_constraint_candidate_packet_result",
+  "selected_next_target_kind": "phi_bridge_admissibility_ck_constraint_candidate_packet_result_review",
+  "semiclassical_coupling_authorized": false,
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_source_established": false,
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "source_admissibility_constraint_form": "C_source^nu[g, phi] = 0",
+  "source_admissibility_family_completed": false,
+  "source_admissibility_route_id": "phi_source_conservation_residual_rule",
+  "source_admissibility_rule_retained_as_context": true,
+  "source_candidate_constraint_equation": "C_source^nu[g, phi] = 0",
+  "source_candidate_constraint_form": "C_source^nu[g, phi] := nabla_mu T_phi^{mu nu}",
+  "source_candidate_constraint_id": "phi_source_conservation_residual_ck_candidate",
+  "source_conservation_claimed": false,
+  "source_residual_match_proved": false,
+  "source_residual_match_recorded": true,
+  "source_rule_closeout_outcome": "PHI_SOURCE_ADMISSIBILITY_CK_ADMISSIBILITY_RULE_CLOSED_AS_FIRST_PHI_RELEVANT_CK_RULE_CANDIDATE_NO_ACTION_VARIATION_OR_PROMOTION",
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_PHI_BRIDGE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET",
+  "stress_energy_match_proved": false,
+  "stress_energy_match_recorded": true,
+  "toe_native_matter_derivation_claimed": false,
+  "toe_native_matter_sector_defined": false,
+  "toe_native_matter_sector_derived": false,
+  "v_phi_derivation_claimed": false,
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_for_packet": "INCOMPLETE_TIMEOUT_STEADY_PROGRESS",
+    "aggregate_timeout_with_steady_progress_interpretation": "incomplete_validation_not_mathematical_failure",
+    "checkpoint_type": "phi_bridge_admissibility_ck_constraint_candidate_packet",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  },
+  "weak_conservation_claimed": false
+}
