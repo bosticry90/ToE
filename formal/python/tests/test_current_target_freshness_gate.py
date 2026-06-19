@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_phi_ck_source_bridge_transport_rule_family_synthesis_packet"
+ACTIVE_LANE = "review_phi_ck_source_bridge_transport_rule_family_synthesis_packet_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,10 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "prepare_phi_transport_consistency_ck_admissibility_rule_closeout"
+PREVIOUS_LIVE_TARGET = "prepare_phi_ck_source_bridge_transport_rule_family_synthesis_packet"
+PHI_TRANSPORT_CLOSEOUT_TARGET = (
+    "prepare_phi_transport_consistency_ck_admissibility_rule_closeout"
+)
 PHI_TRANSPORT_FUNCTIONAL_EMBEDDING_REVIEW_TARGET = (
     "review_phi_transport_consistency_ck_functional_embedding_packet_result"
 )
@@ -1447,7 +1450,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_phi_ck_source_bridge_transport_rule_family_synthesis_packet"
+LIVE_TARGET = "review_phi_ck_source_bridge_transport_rule_family_synthesis_packet_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1463,7 +1466,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PhiTransportConsistencyCKAdmissibilityRuleCloseout.lean"
+    / "PhiCKSourceBridgeTransportRuleFamilySynthesisPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2997,78 +3000,38 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert phi_transport_functional_embedding_active_workstream["report"] == (
         "formal/docs/release/"
-        "PHI_TRANSPORT_CONSISTENCY_CK_ADMISSIBILITY_RULE_CLOSEOUT_"
+        "PHI_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_"
         "20260619_v0.json"
     )
     assert phi_transport_functional_embedding_active_workstream["consumed_target"] == (
         PREVIOUS_LIVE_TARGET
     )
     assert phi_transport_functional_embedding_active_workstream["outcome_id"] == (
-        "PHI_TRANSPORT_CONSISTENCY_CK_ADMISSIBILITY_RULE_CLOSED_AS_DERIVATION_"
-        "CHAIN_STABILITY_RULE_NO_ACTION_VARIATION_OR_PROMOTION"
+        "PHI_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_"
+        "THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_ACTION_VARIATION_OR_PROMOTION"
     )
-    assert phi_transport_functional_embedding_active_workstream["closeout_result"] == (
-        "PHI_TRANSPORT_CONSISTENCY_CK_ADMISSIBILITY_RULE_CLOSED_AS_DERIVATION_"
-        "CHAIN_STABILITY_RULE_NO_ACTION_VARIATION_OR_PROMOTION"
+    assert phi_transport_functional_embedding_active_workstream["packet_result"] == (
+        "PHI_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_"
+        "THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_ACTION_VARIATION_OR_PROMOTION"
     )
     assert phi_transport_functional_embedding_active_workstream[
         "packet_classification"
     ] == (
-        "phi_transport_consistency_ck_admissibility_rule_closed_as_derivation_"
-        "chain_stability_rule_no_action_variation_or_promotion"
+        "phi_ck_source_bridge_transport_rule_family_synthesis_packet_prepared_"
+        "three_admissibility_rules_synthesized_no_action_variation_or_promotion"
     )
     assert phi_transport_functional_embedding_active_workstream[
-        "transport_candidate_id"
-    ] == "phi_transport_derivation_chain_stability_ck_candidate"
+        "rule_family_classification"
+    ] == "three phi-relevant C_k admissibility-rule candidates"
     assert phi_transport_functional_embedding_active_workstream[
-        "transport_candidate_type"
-    ] == "derivation_chain_stability_admissibility_rule"
+        "phi_ck_admissibility_rule_family_count"
+    ] == 3
     assert phi_transport_functional_embedding_active_workstream[
-        "transport_rule_classification"
-    ] == "admissibility-only transport-stability rule candidate"
+        "rule_family_display_forms"
+    ] == "C_source^phi = 0 -> C_bridge^phi = 0 -> C_transport^phi = 0"
     assert phi_transport_functional_embedding_active_workstream[
-        "transport_closeout_rule_classification"
-    ] == "transport-consistency rule candidate"
-    assert phi_transport_functional_embedding_active_workstream[
-        "transport_rule_role"
-    ] == "derivation-chain stability rule"
-    assert phi_transport_functional_embedding_active_workstream[
-        "transport_constraint_form"
-    ] == (
-        "C_transport^phi := (Transport_ACTION_VARIATION^phi, "
-        "Transport_VARIATION_BRIDGE^phi, Transport_BRIDGE_SOURCE^phi, "
-        "Transport_SOURCE_RESIDUAL^phi, Transport_RESIDUAL_REGIME^phi)"
-    )
-    assert phi_transport_functional_embedding_active_workstream[
-        "transport_constraint_equation"
-    ] == "C_transport^phi = 0"
-    assert phi_transport_functional_embedding_active_workstream[
-        "transport_admissibility_constraint_form"
-    ] == "C_transport^phi = 0"
-    assert phi_transport_functional_embedding_active_workstream[
-        "transport_action_embedding_chain_form"
-    ] == (
-        "ACTION -> VARIATION -> BRIDGE -> OPERATOR -> TRANSPORT -> "
-        "RESIDUAL_LAW -> REGIME_LIMIT"
-    )
-    assert phi_transport_functional_embedding_active_workstream[
-        "known_phi_transport_chain_form"
-    ] == (
-        "S_phi -> E_phi -> T_phi -> C_source^phi -> C_bridge^phi -> "
-        "bounded residual/regime-facing route"
-    )
-    assert phi_transport_functional_embedding_active_workstream[
-        "transport_component_count"
-    ] == 5
-    assert "phi_source_admissibility_ck_rule" in phi_transport_functional_embedding_active_workstream[
-        "phi_ck_source_bridge_transport_rule_family_summary"
-    ]
-    assert "phi_bridge_admissibility_ck_rule" in phi_transport_functional_embedding_active_workstream[
-        "phi_ck_source_bridge_transport_rule_family_summary"
-    ]
-    assert "C_transport^phi = 0" in phi_transport_functional_embedding_active_workstream[
-        "phi_ck_source_bridge_transport_rule_family_summary"
-    ]
+        "source_rule_display_form"
+    ] == "C_source^phi = 0"
     assert phi_transport_functional_embedding_active_workstream[
         "source_candidate_constraint_form"
     ] == "C_source^nu[g, phi] := nabla_mu T_phi^{mu nu}"
@@ -3092,73 +3055,72 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "bridge_admissibility_constraint_form"
     ] == "C_bridge^phi = 0"
     assert phi_transport_functional_embedding_active_workstream[
-        "selected_embedding_route_id"
-    ] == "phi_transport_ck_admissibility_only_route"
+        "transport_candidate_id"
+    ] == "phi_transport_derivation_chain_stability_ck_candidate"
     assert phi_transport_functional_embedding_active_workstream[
-        "lagrange_multiplier_action_form"
+        "transport_candidate_type"
+    ] == "derivation_chain_stability_admissibility_rule"
+    assert phi_transport_functional_embedding_active_workstream[
+        "transport_rule_classification"
+    ] == "admissibility-only transport-stability rule candidate"
+    assert phi_transport_functional_embedding_active_workstream[
+        "transport_closeout_rule_classification"
+    ] == "transport-consistency rule candidate"
+    assert phi_transport_functional_embedding_active_workstream[
+        "transport_rule_subclassification"
+    ] == "derivation-chain stability rule"
+    assert phi_transport_functional_embedding_active_workstream[
+        "transport_constraint_form"
     ] == (
-        "S_C^transport = integral_M dVol_g Lambda_transport dot "
-        "C_transport^phi"
+        "C_transport^phi := (Transport_ACTION_VARIATION^phi, "
+        "Transport_VARIATION_BRIDGE^phi, Transport_BRIDGE_SOURCE^phi, "
+        "Transport_SOURCE_RESIDUAL^phi, Transport_RESIDUAL_REGIME^phi)"
     )
     assert phi_transport_functional_embedding_active_workstream[
-        "penalty_action_form"
-    ] == "S_C^transport = integral_M dVol_g norm(C_transport^phi)^2"
+        "transport_constraint_equation"
+    ] == "C_transport^phi = 0"
     assert phi_transport_functional_embedding_active_workstream[
-        "direct_dynamical_law_interpretation_id"
-    ] == "phi_transport_ck_direct_dynamical_law_interpretation"
+        "transport_admissibility_constraint_form"
+    ] == "C_transport^phi = 0"
     assert phi_transport_functional_embedding_active_workstream[
-        "closeout_criteria_count"
-    ] == 13
+        "transport_component_count"
+    ] == 5
     assert phi_transport_functional_embedding_active_workstream[
-        "closeout_criteria_accepted_count"
-    ] == 13
+        "synthesis_criteria_count"
+    ] == 12
     assert phi_transport_functional_embedding_active_workstream[
-        "third_phi_relevant_ck_admissibility_rule_candidate_classification"
-    ] == "third_phi_relevant_ck_admissibility_rule_candidate"
+        "synthesis_criteria_accepted_count"
+    ] == 12
     for key in [
-        "admissibility_rule_closeout_prepared",
-        "admissibility_rule_closeout_accepted",
-        "third_phi_relevant_ck_admissibility_rule_candidate_closed",
-        "transport_consistency_rule_candidate_closed",
-        "derivation_chain_stability_rule_closed",
-        "transport_admissibility_rule_closed_as_derivation_chain_stability_rule",
-        "admissibility_only_route_selected",
-        "admissibility_only_interpretation_retained",
-        "constraint_as_admissibility_rule_selected",
-        "candidate_recorded_as_rule_only",
-        "transport_constraint_carried_forward",
-        "transport_tuple_carried_forward",
-        "transport_components_carried_forward",
-        "transport_components_preserved_unproved",
-        "source_and_bridge_context_preserved",
-        "known_phi_chain_preserved",
-        "lagrange_multiplier_route_recorded",
-        "lagrange_multiplier_route_blocked",
-        "penalty_route_recorded",
-        "direct_dynamical_law_interpretation_recorded",
-        "direct_dynamical_law_interpretation_blocked",
-        "three_rule_family_synthesis_packet_authorized",
-        "source_admissibility_rule_synthesis_entry_preserved",
-        "bridge_admissibility_rule_synthesis_entry_preserved",
-        "transport_consistency_rule_synthesis_entry_preserved",
-        "penalty_would_change_dynamics",
+        "synthesis_packet_prepared",
+        "synthesis_packet_accepted",
+        "phi_ck_rule_family_synthesized",
+        "three_rule_family_synthesized",
+        "three_phi_relevant_ck_admissibility_rule_candidates_synthesized",
+        "source_bridge_transport_rules_synthesized",
+        "source_admissibility_rule_synthesized",
+        "bridge_admissibility_rule_synthesized",
+        "transport_consistency_rule_synthesized",
+        "source_admissibility_rule_preserved",
+        "bridge_admissibility_rule_preserved",
+        "transport_consistency_rule_preserved",
+        "c_k_acquired_three_concrete_phi_relevant_rule_roles",
+        "source_rule_decides_phi_source_permission",
+        "bridge_rule_decides_phi_route_consistency",
+        "transport_rule_decides_derivation_chain_coherence",
+        "all_three_rules_admissibility_only",
+        "all_three_rules_rule_candidates",
+        "all_three_rules_not_action_terms",
+        "all_three_rules_not_dynamical_laws",
+        "none_of_three_rules_derives_phi",
+        "none_of_three_rules_derives_v_phi",
+        "rule_family_interprets_ck_as_seam_admissibility_layer",
+        "result_review_authorized",
     ]:
         assert phi_transport_functional_embedding_active_workstream[key] == "yes", key
     assert phi_transport_functional_embedding_active_workstream[
-        "phi_ck_admissibility_rule_family_contains_count"
-    ] == 3
-    assert phi_transport_functional_embedding_active_workstream[
-        "three_rule_family_synthesis_packet_prepared"
+        "review_executed"
     ] == "no"
-    assert phi_transport_functional_embedding_active_workstream[
-        "synthesis_packet_prepared"
-    ] == "no"
-    assert phi_transport_functional_embedding_active_workstream[
-        "three_rule_family_synthesis_outcome_hint"
-    ] == (
-        "PHI_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_"
-        "THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_ACTION_VARIATION_OR_PROMOTION"
-    )
     assert phi_transport_functional_embedding_active_workstream[
         "full_toeformal_aggregate_status_for_packet"
     ] == "NOT_RUN"
@@ -3172,94 +3134,61 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "full_toeformal_aggregate_timed_out"
     ] == "no"
     for phrase in [
-        "third phi-relevant C_k admissibility rule candidate only",
-        "transport-consistency derivation-chain stability admissibility-rule candidate",
-        "not as an action term",
-        "not as a transport proof",
-        "not as a native phi generation theorem",
-        "not as V(phi) derivation",
-        "not as QFT-GR closure",
-        "not as master-action promotion",
+        "source, bridge, and transport",
+        "admissibility-only rule candidates",
+        "not action terms",
+        "not dynamical laws",
+        "not native phi derivations",
+        "not V(phi) derivations",
+        "not QFT-GR closure",
+        "not master-action promotion",
         "does not execute C_k variation",
         "does not prove transport consistency",
         "does not prove full route alignment",
         "full ToeFormal aggregate is recorded as NOT_RUN",
-        "not another immediate phi derivation",
     ]:
         assert phrase in phi_transport_functional_embedding_active_workstream[
             "non_claim_boundary"
         ]
     for key in [
-        "dynamical_action_embedding_selected",
-        "direct_dynamical_law_interpretation_selected",
+        "review_executed",
+        "another_phi_derivation_selected",
         "constraint_as_action_term_selected",
-        "transport_candidate_recorded_as_action_term",
-        "transport_candidate_recorded_as_new_dynamical_law",
-        "transport_functional_selected",
-        "transport_candidate_functional_defined",
-        "transport_candidate_functional_selected",
-        "component_pairing_rule_selected",
-        "transport_map_domains_codomains_selected",
-        "constraint_multiplier_type_selected",
-        "constraint_term_selected",
-        "multiplier_type_selected",
-        "multiplier_domain_selected",
-        "covariance_of_multiplier_pairing_established",
-        "boundary_terms_controlled",
-        "boundary_regime_projection_controlled",
-        "variation_policy_for_embedding_selected",
-        "penalty_route_licensed",
-        "heterogeneous_tuple_norm_defined",
-        "transport_candidate_rule_proved",
-        "transport_components_proved",
-        "transport_consistency_claimed",
-        "transport_consistency_proved",
-        "transport_proof_claimed",
-        "full_route_alignment_proof_claimed",
-        "full_route_alignment_proved",
-        "route_chain_compatibility_proved",
-        "source_admissibility_proved",
-        "bridge_admissibility_proved",
-        "new_conservation_proof_claimed",
-        "new_source_admissibility_proof_claimed",
-        "concrete_ck_functional_selected",
-        "concrete_ck_functional_defined",
-        "fully_concrete_ck_functional_selected",
-        "fully_concrete_ck_functional_defined",
-        "candidate_action_insertion_executed",
+        "dynamical_action_embedding_selected",
+        "dynamical_law_claimed",
+        "candidate_recorded_as_new_physical_law",
+        "candidate_recorded_as_action_term",
         "ck_action_embedding_claimed",
         "ck_variation_executed",
         "ck_variation_authorized",
         "lambda_variation_executed",
-        "metric_variation_of_candidate_executed",
-        "phi_variation_of_candidate_executed",
-        "penalty_variation_executed",
+        "metric_variation_executed",
+        "phi_variation_executed",
+        "bridge_admissibility_proved",
+        "route_alignment_verified",
+        "full_route_alignment_proved",
+        "full_route_alignment_proof_claimed",
+        "source_admissibility_proved",
+        "source_conservation_proved",
+        "transport_consistency_proved",
+        "transport_proof_claimed",
+        "transport_components_proved",
         "native_phi_derivation_claimed",
         "phi_generated_by_ck_claimed",
         "phi_generation_theorem_claimed",
-        "native_generation_theorem_claimed",
         "v_phi_derivation_claimed",
         "derived_v_phi_claimed",
         "potential_derived",
+        "new_conservation_proof_claimed",
         "qft_gr_solved",
         "qft_gr_closure_claimed",
         "qft_gr_seam_closed",
-        "qft_gr_source_map_closure_authorized",
         "semiclassical_coupling_authorized",
         "semiclassical_coupling_claimed",
         "semiclassical_einstein_equation_derived",
-        "semiclassical_source_established",
-        "toe_native_matter_derivation_claimed",
-        "standard_model_derivation_claimed",
         "empirical_validation_claimed",
         "public_readiness_claimed",
         "public_submission_authorized",
-        "another_phi_derivation_selected",
-        "master_action_surface_rotation_selected",
-        "qft_gr_semiclassical_prerequisite_return_selected",
-        "public_explanatory_section_selected",
-        "three_rule_family_synthesis_packet_prepared",
-        "synthesis_packet_prepared",
         "canonical_master_action_promoted",
         "master_action_promoted",
         "master_action_promotion_authorized",
@@ -3272,26 +3201,45 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
             == "no"
         ), key
 
-    consumed_transport_closeout = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_source_bridge_transport_synthesis = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_source_bridge_transport_synthesis["status"] == "paused"
+    assert consumed_source_bridge_transport_synthesis["packet_result"] == (
+        "PHI_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_"
+        "THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_ACTION_VARIATION_OR_PROMOTION"
+    )
+    assert consumed_source_bridge_transport_synthesis["selected_next_target"] == LIVE_TARGET
+    assert consumed_source_bridge_transport_synthesis[
+        "three_rule_family_synthesized"
+    ] == "yes"
+    assert consumed_source_bridge_transport_synthesis[
+        "all_three_rules_admissibility_only"
+    ] == "yes"
+    assert consumed_source_bridge_transport_synthesis[
+        "all_three_rules_not_action_terms"
+    ] == "yes"
+    assert consumed_source_bridge_transport_synthesis[
+        "none_of_three_rules_derives_phi"
+    ] == "yes"
+    assert consumed_source_bridge_transport_synthesis[
+        "none_of_three_rules_derives_v_phi"
+    ] == "yes"
+    assert consumed_source_bridge_transport_synthesis[
+        "full_toeformal_aggregate_status_for_packet"
+    ] == "NOT_RUN"
+    assert consumed_source_bridge_transport_synthesis["ck_variation_executed"] == "no"
+    assert consumed_source_bridge_transport_synthesis["qft_gr_closure_claimed"] == "no"
+    assert consumed_source_bridge_transport_synthesis["master_action_promoted"] == "no"
+
+    consumed_transport_closeout = _workstream(payload, PHI_TRANSPORT_CLOSEOUT_TARGET)
     assert consumed_transport_closeout["status"] == "paused"
     assert consumed_transport_closeout["closeout_result"] == (
         "PHI_TRANSPORT_CONSISTENCY_CK_ADMISSIBILITY_RULE_CLOSED_AS_DERIVATION_"
         "CHAIN_STABILITY_RULE_NO_ACTION_VARIATION_OR_PROMOTION"
     )
-    assert consumed_transport_closeout["selected_next_target"] == LIVE_TARGET
-    assert consumed_transport_closeout[
-        "third_phi_relevant_ck_admissibility_rule_candidate_closed"
-    ] == "yes"
-    assert consumed_transport_closeout[
-        "transport_consistency_rule_candidate_closed"
-    ] == "yes"
+    assert consumed_transport_closeout["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert consumed_transport_closeout[
         "three_rule_family_synthesis_packet_authorized"
     ] == "yes"
-    assert consumed_transport_closeout[
-        "three_rule_family_synthesis_packet_prepared"
-    ] == "no"
-    assert consumed_transport_closeout.get("synthesis_packet_prepared", "no") == "no"
     assert consumed_transport_closeout["ck_variation_executed"] == "no"
     assert consumed_transport_closeout["qft_gr_closure_claimed"] == "no"
     assert consumed_transport_closeout["master_action_promoted"] == "no"
@@ -3305,7 +3253,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_PROMOTION"
     )
     assert consumed_transport_functional_embedding_review["selected_next_target"] == (
-        PREVIOUS_LIVE_TARGET
+        PHI_TRANSPORT_CLOSEOUT_TARGET
     )
     assert consumed_transport_functional_embedding_review[
         "transport_constraint_equation"
