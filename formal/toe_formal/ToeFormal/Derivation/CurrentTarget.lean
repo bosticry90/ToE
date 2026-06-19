@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativePhiCKVariationalContentPacket
+import ToeFormal.Derivation.MasterActionCKConstraintFunctionalDefinitionPacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativePhiCKVariationalContentPacket.selectedNextTarget
+  MasterActionCKConstraintFunctionalDefinitionPacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativePhiCKVariationalContentPacket.packetId
+  MasterActionCKConstraintFunctionalDefinitionPacket.packetId
 
-theorem current_target_points_to_master_action_ck_definition_packet :
+theorem current_target_points_to_master_action_ck_definition_packet_review :
     currentLiveTarget =
-      "prepare_master_action_ck_constraint_functional_definition_packet" := by
+      "review_master_action_ck_constraint_functional_definition_packet_result" := by
   rfl
 
 end CurrentTarget

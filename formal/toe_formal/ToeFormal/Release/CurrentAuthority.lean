@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_master_action_ck_constraint_functional_definition_packet" := by
+      "review_master_action_ck_constraint_functional_definition_packet_result" := by
   rfl
 
 end CurrentAuthority

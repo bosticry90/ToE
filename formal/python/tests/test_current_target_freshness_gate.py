@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_master_action_ck_constraint_functional_definition_packet"
+ACTIVE_LANE = "review_master_action_ck_constraint_functional_definition_packet_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,7 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "prepare_toe_native_phi_ck_variational_content_packet"
+PREVIOUS_LIVE_TARGET = "prepare_master_action_ck_constraint_functional_definition_packet"
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
 )
@@ -1417,7 +1417,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_master_action_ck_constraint_functional_definition_packet"
+LIVE_TARGET = "review_master_action_ck_constraint_functional_definition_packet_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1433,7 +1433,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativePhiCKVariationalContentPacket.lean"
+    / "MasterActionCKConstraintFunctionalDefinitionPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2943,198 +2943,149 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    ck_definition_active_workstream = active_workstream(payload)
-    assert ck_definition_active_workstream["workstream_id"] == ACTIVE_LANE
-    assert ck_definition_active_workstream["active_lane"] == ACTIVE_LANE
+    ck_definition_review_active_workstream = active_workstream(payload)
+    assert ck_definition_review_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert ck_definition_review_active_workstream["active_lane"] == ACTIVE_LANE
     assert (
-        ck_definition_active_workstream["authorized_next_strict_target"]
+        ck_definition_review_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert ck_definition_active_workstream["authorized_target"] == LIVE_TARGET
-    assert ck_definition_active_workstream["authorization_evidence"] == str(
+    assert ck_definition_review_active_workstream["authorized_target"] == LIVE_TARGET
+    assert ck_definition_review_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert ck_definition_active_workstream["report"] == (
+    assert ck_definition_review_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_PHI_CK_VARIATIONAL_CONTENT_PACKET_20260618_v0.json"
+        "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_20260618_v0.json"
     )
-    assert ck_definition_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert ck_definition_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert (
-        ck_definition_active_workstream["selected_next_target_kind"]
-        == "master_action_ck_constraint_functional_definition_packet_preparation"
+    assert ck_definition_review_active_workstream["consumed_target"] == (
+        PREVIOUS_LIVE_TARGET
     )
     assert (
-        ck_definition_active_workstream["outcome_id"]
-        == "TOE_NATIVE_PHI_CK_VARIATIONAL_CONTENT_PACKET_PREPARED_"
-        "CK_VARIATIONAL_CONTENT_BLOCKED_BY_UNSPECIFIED_CONSTRAINT_FUNCTIONALS"
+        ck_definition_review_active_workstream["outcome_id"]
+        == "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_PREPARED_"
+        "CK_CONSTRAINT_FUNCTIONAL_OPTIONS_INDEXED_NO_SELECTION"
     )
     assert (
-        ck_definition_active_workstream["packet_result"]
-        == "CK_VARIATIONAL_CONTENT_BLOCKED_BY_UNSPECIFIED_CONSTRAINT_FUNCTIONALS"
+        ck_definition_review_active_workstream["packet_result"]
+        == "CK_CONSTRAINT_FUNCTIONAL_OPTIONS_INDEXED_NO_SELECTION"
     )
     assert (
-        ck_definition_active_workstream["claim_level"]
-        == "Level 3 next packet preparation; define master-action C_k constraint functionals before any C_k phi-variation retry"
+        ck_definition_review_active_workstream["packet_classification"]
+        == "master_action_ck_constraint_functional_definition_packet_indexes_legal_"
+        "constraint_options_no_selection"
+    )
+    assert ck_definition_review_active_workstream["packet_id"] == (
+        "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_v0"
     )
     assert (
-        ck_definition_active_workstream["claim_ceiling"]
-        == "constraint-functional definition packet preparation only no constructed C_k variation no toe-native matter derivation no native-generation theorem no derived potential no source admissibility or conservation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
+        ck_definition_review_active_workstream["selected_next_target"]
+        == "prepare_ck_constraint_family_selection_for_phi_route"
     )
     assert (
-        ck_definition_active_workstream["alignment_witness_status"]
-        == "MASTER_ACTION_PHI_SURFACE_ALIGNMENT_WITNESS_ACCEPTED_NO_NATIVE_GENERATION"
+        ck_definition_review_active_workstream["selected_next_target_kind"]
+        == "ck_constraint_family_selection_for_phi_route_preparation_after_review"
     )
     assert (
-        ck_definition_active_workstream["alignment_witness_closeout_status"]
-        == "MASTER_ACTION_PHI_SURFACE_ALIGNMENT_WITNESS_CLOSED_NO_NATIVE_GENERATION_OR_CK_CONTENT"
+        ck_definition_review_active_workstream["claim_level"]
+        == "Level 3 result review; review option-indexed C_k constraint-functional packet before any family selection"
     )
-    assert ck_definition_active_workstream["metric_signature_policy"] == "(+,-,-,-)"
-    assert "finite real scalar multiplet" in ck_definition_active_workstream[
-        "scalar_field_type_policy"
+    assert (
+        ck_definition_review_active_workstream["claim_ceiling"]
+        == "result review only no selected C_k family no fully defined C_k content no phi generation no derived potential no source admissibility or conservation no qft-gr closure no semiclassical coupling no canonical master-action promotion"
+    )
+    assert ck_definition_review_active_workstream["constraint_action_form"] == (
+        "S_C = integral_M d^4x sqrt(-g) sum_k lambda_k "
+        "C_k(g, psi, A, phi, rho)"
+    )
+    assert ck_definition_review_active_workstream["lambda_variation_form"] == (
+        "delta S_C/delta lambda_k = C_k(g, psi, A, phi, rho) = 0"
+    )
+    assert ck_definition_review_active_workstream["phi_variation_form"] == (
+        "delta S_C/delta phi_i = sum_k lambda_k delta C_k/delta phi_i"
+    )
+    assert "metric dependence" in ck_definition_review_active_workstream[
+        "metric_variation_form"
     ]
-    assert "smooth finite-action" in ck_definition_active_workstream[
-        "field_domain_policy"
-    ]
-    assert "L_phi^MA = +1/2" in ck_definition_active_workstream[
-        "kinetic_convention_policy"
-    ]
+    assert ck_definition_review_active_workstream["option_class_count"] == "7"
+    assert ck_definition_review_active_workstream["packet_criteria_count"] == "11"
     assert (
-        ck_definition_active_workstream["box_operator_convention"]
-        == "Box_g phi_i = g^{mu nu} nabla_mu nabla_nu phi_i"
+        ck_definition_review_active_workstream["packet_criteria_accepted_count"]
+        == "11"
     )
-    assert "not ToE-derived" in ck_definition_active_workstream[
-        "potential_policy"
-    ]
-    assert (
-        ck_definition_active_workstream["field_euler_lagrange_equation_without_ck"]
-        == "Box_g phi_i + partial_i V(phi) = 0"
+    assert "bridge_admissibility_constraint" in (
+        ck_definition_review_active_workstream["indexed_constraint_ids"]
     )
-    assert (
-        ck_definition_active_workstream["stress_energy_under_selected_policy"]
-        == "T^policy_{mu nu} = sum_i nabla_mu phi_i nabla_nu phi_i - g_{mu nu}[1/2 sum_j nabla_alpha phi_j nabla^alpha phi_j - V(phi)]"
+    assert "source_admissibility_constraint" in (
+        ck_definition_review_active_workstream["indexed_constraint_ids"]
     )
-    assert (
-        ck_definition_active_workstream["scalar_witness_comparison_decision"]
-        == "reproduces_scalar_witness_route_after_selected_policy_normalization_no_native_generation_claim"
+    assert "TOE_CK_CLASS_BRIDGE_ADMISSIBILITY_v0" in (
+        ck_definition_review_active_workstream["existing_registry_class_tokens"]
     )
-    assert ck_definition_active_workstream["master_action_ck_surface"] == (
-        "sum_k lambda_k * C_k(g, psi, A, phi, rho)"
+    assert "TOE_CK_CLASS_TRANSPORT_CONSISTENCY_v0" in (
+        ck_definition_review_active_workstream["existing_registry_class_tokens"]
     )
-    assert ck_definition_active_workstream["ck_variation_target"] == (
-        "delta/delta phi_i [sum_k lambda_k C_k(g, psi, A, phi, rho)]"
+    assert "source_admissibility_constraint" in (
+        ck_definition_review_active_workstream["phi_relevant_recommended_classes"]
     )
-    assert ck_definition_active_workstream["ck_variation_formal_slot"] == (
-        "delta_phi_i S_C(eta_i) = integral_M sqrt(-g) sum_k lambda_k "
-        "(delta C_k/delta phi_i) eta_i d^4x"
-    )
-    assert ck_definition_active_workstream["raw_total_phi_ck_equation"] == (
-        "-(Box_g phi_i + partial_i V(phi)) + sum_k lambda_k "
-        "delta C_k/delta phi_i = 0"
-    )
-    assert ck_definition_active_workstream["normalized_phi_ck_equation"] == (
-        "Box_g phi_i + partial_i V(phi) = sum_k lambda_k "
-        "delta C_k/delta phi_i"
-    )
-    assert ck_definition_active_workstream["source_from_ck_under_selected_policy"] == (
-        "source_from_C_k,i = sum_k lambda_k delta C_k/delta phi_i"
-    )
-    assert ck_definition_active_workstream["left_hand_force_convention"] == (
-        "-sum_k lambda_k delta C_k/delta phi_i when moved to the left-hand side"
-    )
-    assert ck_definition_active_workstream["ck_independence_case"] == (
-        "if delta C_k/delta phi_i = 0 for all k,i, the selected-policy phi "
-        "equation remains Box_g phi_i + partial_i V(phi) = 0 and no native "
-        "generation follows"
+    assert "bridge_admissibility_constraint" in (
+        ck_definition_review_active_workstream["phi_relevant_recommended_classes"]
     )
     assert (
-        ck_definition_active_workstream["blocker_id"]
-        == "CK-FUNCTIONAL-DEFINITION-MISSING-FOR-PHI-VARIATION"
-    )
-    assert (
-        ck_definition_active_workstream["proof_depth_label"]
-        == "SYMBOLIC_CK_VARIATION_SLOT_RECORDED_REAL_CK_CONTENT_BLOCKED"
-    )
-    assert (
-        ck_definition_active_workstream["packet_classification"]
-        == "toe_native_phi_ck_variational_content_packet_blocks_real_ck_content_on_unspecified_constraint_functionals"
-    )
-    assert ck_definition_active_workstream["packet_id"] == (
-        "TOE_NATIVE_PHI_CK_VARIATIONAL_CONTENT_PACKET_v0"
-    )
-    assert ck_definition_active_workstream["packet_criteria_count"] == "9"
-    assert ck_definition_active_workstream["packet_criteria_accepted_count"] == "9"
-    assert ck_definition_active_workstream["ck_effect_test_count"] == "7"
-    assert (
-        ck_definition_active_workstream["aggregate_lean_validation_status_for_packet"]
-        == "INCOMPLETE_TIMEOUT_STEADY_PROGRESS"
-    )
-    assert ck_definition_active_workstream["generic_ck_surface_present"] == "yes"
-    assert ck_definition_active_workstream[
-        "concrete_ck_functional_definition_available"
-    ] == "no"
-    assert ck_definition_active_workstream["concrete_ck_functionals_found"] == "[]"
-    assert ck_definition_active_workstream["ck_variational_derivative_defined"] == "no"
-    assert ck_definition_active_workstream[
-        "ck_variational_content_recorded_symbolically"
-    ] == "yes"
-    assert ck_definition_active_workstream[
-        "ck_phi_equation_modification_route_recorded_symbolically"
-    ] == "yes"
-    assert ck_definition_active_workstream["ck_phi_independence_case_recorded"] == "yes"
-    assert (
-        ck_definition_active_workstream["ck_constraint_functional_definition_required"]
-        == "yes"
-    )
-    assert ck_definition_active_workstream[
-        "master_action_ck_definition_packet_authorized"
-    ] == "yes"
-    assert ck_definition_active_workstream[
-        "ck_constraint_functional_definition_packet_prepared"
-    ] == "no"
-    assert ck_definition_active_workstream[
-        "ck_variational_content_packet_prepared"
-    ] == "yes"
-    assert ck_definition_active_workstream["ck_variational_content_constructed"] == "no"
-    assert ck_definition_active_workstream["ck_variational_content_blocked"] == "yes"
-    assert (
-        ck_definition_active_workstream[
-            "ck_variational_content_blocked_by_unspecified_constraint_functionals"
+        ck_definition_review_active_workstream[
+            "master_action_ck_constraint_functional_definition_packet_prepared"
         ]
         == "yes"
     )
-    assert ck_definition_active_workstream["selected_phi_policy_carried_forward"] == "yes"
-    assert ck_definition_active_workstream["phi_alignment_witness_preserved"] == "yes"
-    assert ck_definition_active_workstream["native_generation_blocked"] == "yes"
-    for key in [
-        "ck_phi_equation_generation_constructed",
-        "ck_phi_equation_modification_constructed",
-        "ck_potential_restriction_constructed",
-        "ck_source_conservation_enforced",
-        "ck_cross_pillar_connection_constructed",
-        "ck_new_residual_law_constructed",
-        "ck_possible_falsifier_produced",
-        "ck_phi_independence_selected",
-        "ck_constraint_family_selected",
-    ]:
-        assert ck_definition_active_workstream[key] == "no", key
-    assert "blocks real C_k variational content" in ck_definition_active_workstream[
+    assert (
+        ck_definition_review_active_workstream[
+            "ck_constraint_functional_definition_packet_review_prepared"
+        ]
+        == "no"
+    )
+    assert (
+        ck_definition_review_active_workstream[
+            "ck_constraint_functional_options_indexed"
+        ]
+        == "yes"
+    )
+    assert (
+        ck_definition_review_active_workstream[
+            "legal_constraint_type_menu_defined"
+        ]
+        == "yes"
+    )
+    assert ck_definition_review_active_workstream["options_indexed_no_selection"] == "yes"
+    assert (
+        ck_definition_review_active_workstream[
+            "source_or_bridge_admissibility_recommended_for_future_selection"
+        ]
+        == "yes"
+    )
+    assert ck_definition_review_active_workstream[
+        "aggregate_lean_validation_status_for_packet"
+    ] == "INCOMPLETE_TIMEOUT_STEADY_PROGRESS"
+    assert "does not fully define C_k content" in ck_definition_review_active_workstream[
+        "non_claim_boundary"
+    ]
+    assert "does not select a C_k family" in ck_definition_review_active_workstream[
         "non_claim_boundary"
     ]
     for key in [
-        "formal_theorem_backed_matter_derivation",
-        "toe_native_matter_derivation_claimed",
-        "toe_native_matter_sector_derived",
-        "toe_native_matter_sector_defined",
-        "toe_matter_sector_derived",
-        "toe_matter_model_derived",
-        "standard_model_derivation_claimed",
+        "ck_constraint_functional_family_defined",
+        "ck_constraint_functional_family_selected",
+        "ck_phi_relevant_constraint_class_selected",
+        "ck_content_fully_defined",
+        "concrete_ck_functional_family_found",
+        "ck_content_fully_defined_claimed",
+        "phi_generated_by_ck_claimed",
+        "derived_v_phi_claimed",
+        "potential_derived",
         "source_admissibility_claimed",
         "source_admissibility_completed",
         "source_conservation_claimed",
         "weak_conservation_claimed",
         "bianchi_compatibility_claimed",
-        "source_map_closed",
         "qft_gr_solved",
         "qft_gr_closure_claimed",
         "qft_gr_seam_closed",
@@ -3143,6 +3094,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "semiclassical_coupling_claimed",
         "semiclassical_einstein_equation_derived",
         "semiclassical_source_established",
+        "toe_native_matter_derivation_claimed",
+        "toe_native_matter_sector_derived",
+        "toe_native_matter_sector_defined",
+        "standard_model_derivation_claimed",
+        "native_generation_theorem_claimed",
         "empirical_validation_claimed",
         "public_readiness_claimed",
         "public_submission_authorized",
@@ -3152,26 +3108,30 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "phase2_readiness_claim",
         "pillar_completion_inferred",
         "seam_closure_claim",
-        "native_generation_theorem_claimed",
-        "derived_v_phi_claimed",
-        "potential_derived",
     ]:
-        assert ck_definition_active_workstream[key] == "no", key
+        assert ck_definition_review_active_workstream[key] == "no", key
 
-    consumed_phi_ck_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
-    assert consumed_phi_ck_packet["status"] == "paused"
-    assert consumed_phi_ck_packet["packet_result"] == (
-        "CK_VARIATIONAL_CONTENT_BLOCKED_BY_UNSPECIFIED_CONSTRAINT_FUNCTIONALS"
+    consumed_ck_definition_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_ck_definition_packet["status"] == "paused"
+    assert consumed_ck_definition_packet["packet_result"] == (
+        "CK_CONSTRAINT_FUNCTIONAL_OPTIONS_INDEXED_NO_SELECTION"
     )
-    assert consumed_phi_ck_packet["selected_next_target"] == LIVE_TARGET
-    assert consumed_phi_ck_packet["ck_variational_content_packet_prepared"] == "yes"
-    assert consumed_phi_ck_packet["ck_variational_content_blocked"] == "yes"
+    assert consumed_ck_definition_packet["selected_next_target"] == LIVE_TARGET
     assert (
-        consumed_phi_ck_packet[
-            "ck_variational_content_blocked_by_unspecified_constraint_functionals"
+        consumed_ck_definition_packet[
+            "master_action_ck_constraint_functional_definition_packet_prepared"
         ]
         == "yes"
     )
+    assert (
+        consumed_ck_definition_packet["ck_constraint_functional_options_indexed"]
+        == "yes"
+    )
+    assert (
+        consumed_ck_definition_packet["ck_constraint_functional_family_selected"]
+        == "no"
+    )
+    assert consumed_ck_definition_packet["ck_content_fully_defined"] == "no"
 
     scalar_conservation_active_workstream = _workstream(
         payload, "prepare_toe_native_phi_surface_variation_and_source_route_packet"
@@ -9397,7 +9357,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        ck_definition_active_workstream[
+        ck_definition_review_active_workstream[
             "authorized_next_strict_target"
         ],
     }

@@ -1,0 +1,421 @@
+{
+  "acceptance_criteria": {
+    "consumes_expected_live_target": true,
+    "criteria_all_accepted": true,
+    "master_action_ck_surface_present": true,
+    "no_candidate_selected": true,
+    "phi_relevant_candidates_identified": true,
+    "required_fields_populated_for_each_option": true,
+    "seam_registry_policy_classes_present": true,
+    "seven_candidate_options_indexed": true
+  },
+  "accepted": true,
+  "aggregate_lean_validation_status_for_packet": "INCOMPLETE_TIMEOUT_STEADY_PROGRESS",
+  "artifact_id": "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_20260618_v0",
+  "bianchi_compatibility_claimed": false,
+  "bridge_admissibility_candidate_indexed": true,
+  "canonical_master_action_promoted": false,
+  "captured_at_utc": "2026-06-18T00:00:00Z",
+  "ck_constraint_functional_family_defined": false,
+  "ck_constraint_functional_family_selected": false,
+  "ck_constraint_functional_options_indexed": true,
+  "ck_content_fully_defined": false,
+  "ck_content_fully_defined_claimed": false,
+  "ck_definition_blocked_by_lack_of_selection_criteria": false,
+  "ck_phi_relevant_constraint_class_selected": false,
+  "class_b_inventory_file": "formal/docs/paper/TOE_MASTER_ACTION_CLASS_B_SEAM_INVENTORY_v0.md",
+  "class_b_inventory_reused": true,
+  "concrete_ck_functional_families_found": [],
+  "concrete_ck_functional_family_found": false,
+  "constraint_action_form": "S_C = integral_M d^4x sqrt(-g) sum_k lambda_k C_k(g, psi, A, phi, rho)",
+  "constraint_functional_options": [
+    {
+      "class_token": "TOE_CK_CLASS_BRIDGE_ADMISSIBILITY_v0",
+      "codomain": "scalar functional constraint or finite family of scalar residuals",
+      "constraint_id": "bridge_admissibility_constraint",
+      "covariance_rule": "must be diffeomorphism-covariant or packaged as a covariant scalar density before insertion in S_C",
+      "depends_on": [
+        "g",
+        "psi",
+        "A",
+        "phi",
+        "rho"
+      ],
+      "equation_role": "can restrict admissibility and may modify equations only after a concrete bridge functional is selected",
+      "local_or_nonlocal_status": "may be local or nonlocal depending on bridge witness route; not selected here",
+      "mathematical_form": "C_bridge_s = B_s[g, psi, A, phi, rho] - B_s^admissible = 0",
+      "phi_relevance": "high",
+      "provenance": "registry_indexed_policy_class_not_selected",
+      "regularity_domain_assumptions": "requires the bridge witness domain, boundary policy, and field regularity to be declared before variation",
+      "selected_for_definition": false,
+      "variation_with_respect_to_g": "may contribute a metric-side constraint stress term when B_s has metric dependence",
+      "variation_with_respect_to_phi": "may contribute sum_k lambda_k delta C_k/delta phi_i if the bridge witness depends on phi"
+    },
+    {
+      "class_token": "TOE_CK_OPTION_CONSERVATION_v0",
+      "codomain": "vector or distributional-vector constraint",
+      "constraint_id": "conservation_constraint",
+      "covariance_rule": "must be tensorial and compatible with the selected connection and weak/strong conservation convention",
+      "depends_on": [
+        "g",
+        "psi",
+        "A",
+        "phi",
+        "rho"
+      ],
+      "equation_role": "would restrict admissibility before it can be treated as a dynamical equation modifier",
+      "local_or_nonlocal_status": "local after a stress-energy candidate and domain are fixed; otherwise blocked",
+      "mathematical_form": "C_cons = nabla_mu T^{mu nu}_candidate = 0",
+      "phi_relevance": "medium",
+      "provenance": "candidate_option_from_qft_gr_conservation_obligation_not_selected",
+      "regularity_domain_assumptions": "requires differentiability or weak-pairing domain for T^{mu nu}_candidate",
+      "selected_for_definition": false,
+      "variation_with_respect_to_g": "not defined until the conservation functional's metric dependence is specified",
+      "variation_with_respect_to_phi": "not defined until the stress-energy candidate and conservation functional are selected"
+    },
+    {
+      "class_token": "TOE_CK_CLASS_TRANSPORT_CONSISTENCY_v0",
+      "codomain": "scalar, vector, tensor, or residual-family constraint",
+      "constraint_id": "regime_transport_constraint",
+      "covariance_rule": "must preserve covariance under the source and target regime maps",
+      "depends_on": [
+        "g",
+        "psi",
+        "A",
+        "phi",
+        "rho"
+      ],
+      "equation_role": "primarily restricts allowed transport/regime routes; equation modification is not licensed",
+      "local_or_nonlocal_status": "often nonlocal or theorem-route dependent; not selected here",
+      "mathematical_form": "C_transport_r = T_r[operator_surface] - R_r[residual_surface] = 0",
+      "phi_relevance": "medium",
+      "provenance": "registry_indexed_policy_class_not_selected",
+      "regularity_domain_assumptions": "requires transport theorem hypotheses and regime-limit domain",
+      "selected_for_definition": false,
+      "variation_with_respect_to_g": "blocked until the regime transport map's metric dependence is declared",
+      "variation_with_respect_to_phi": "blocked until the transport operator's phi dependence is declared"
+    },
+    {
+      "class_token": "TOE_CK_CLASS_COMPATIBILITY_v0",
+      "codomain": "scalar or Lie-algebra-valued compatibility constraint",
+      "constraint_id": "gauge_current_compatibility_constraint",
+      "covariance_rule": "must be gauge-covariant and diffeomorphism-covariant",
+      "depends_on": [
+        "g",
+        "psi",
+        "A",
+        "phi"
+      ],
+      "equation_role": "interface admissibility only until a concrete gauge-current constraint is selected",
+      "local_or_nonlocal_status": "local if current and gauge bundle are fixed; otherwise blocked",
+      "mathematical_form": "C_gauge = D_mu J^mu[A, psi, phi] = 0 or interface-current residual = 0",
+      "phi_relevance": "low",
+      "provenance": "registry_indexed_compatibility_option_not_selected",
+      "regularity_domain_assumptions": "requires current definition, gauge domain, and matter-field regularity",
+      "selected_for_definition": false,
+      "variation_with_respect_to_g": "depends on the current's metric and connection dependence",
+      "variation_with_respect_to_phi": "only present if phi participates in the current or coupling map"
+    },
+    {
+      "class_token": "TOE_CK_OPTION_STATE_PROBABILITY_STATISTICAL_v0",
+      "codomain": "scalar functional or finite expectation constraint family",
+      "constraint_id": "state_probability_statistical_constraint",
+      "covariance_rule": "must specify the measure and covariance of the state/probability pairing",
+      "depends_on": [
+        "g",
+        "psi",
+        "phi",
+        "rho"
+      ],
+      "equation_role": "admissibility or normalization restriction only; no dynamics selected",
+      "local_or_nonlocal_status": "usually nonlocal because normalization and expectations integrate over state space",
+      "mathematical_form": "C_stat = normalization_or_expectation_consistency[rho, psi, phi, g] = 0",
+      "phi_relevance": "medium",
+      "provenance": "candidate_option_from_statistical_information_term_not_selected",
+      "regularity_domain_assumptions": "requires rho domain, integrability, positivity, and expectation pairing rules",
+      "selected_for_definition": false,
+      "variation_with_respect_to_g": "blocked until the measure and metric dependence are specified",
+      "variation_with_respect_to_phi": "blocked until phi-dependence of the state or expectation map is specified"
+    },
+    {
+      "class_token": "TOE_CK_OPTION_INFORMATION_CORRELATION_TIMING_v0",
+      "codomain": "scalar functional or admissibility predicate encoded as a scalar residual",
+      "constraint_id": "information_correlation_timing_constraint",
+      "covariance_rule": "must encode timing windows and correlation consistency in covariant terms",
+      "depends_on": [
+        "g",
+        "psi",
+        "A",
+        "phi",
+        "rho"
+      ],
+      "equation_role": "could restrict operational admissibility; not licensed as a field-equation modifier",
+      "local_or_nonlocal_status": "likely nonlocal or window-dependent; not selected here",
+      "mathematical_form": "C_info = I_phi[g, psi, A, phi, rho] - I_allowed = 0",
+      "phi_relevance": "medium",
+      "provenance": "candidate_option_from_master_action_information_binding_not_selected",
+      "regularity_domain_assumptions": "requires timing-window, correlation, and admissible-state domains",
+      "selected_for_definition": false,
+      "variation_with_respect_to_g": "blocked until causal/timing metric dependence is mathematically defined",
+      "variation_with_respect_to_phi": "blocked until I_phi is mathematically defined"
+    },
+    {
+      "class_token": "TOE_CK_OPTION_SOURCE_ADMISSIBILITY_v0",
+      "codomain": "scalar, vector, tensor, or predicate-to-residual functional",
+      "constraint_id": "source_admissibility_constraint",
+      "covariance_rule": "must be tensorial or invariant under diffeomorphisms and compatible with Bianchi obligations",
+      "depends_on": [
+        "g",
+        "phi"
+      ],
+      "equation_role": "strong phi-route candidate as an admissibility restriction; not selected as a modifier",
+      "local_or_nonlocal_status": "depends on admissibility rule; may be local, weak/distributional, or global finite-action",
+      "mathematical_form": "C_source = admissibility[T_{mu nu}^{phi}, g, domain] = 0",
+      "phi_relevance": "highest",
+      "provenance": "candidate_option_from_qft_gr_scalar_witness_frontier_not_selected",
+      "regularity_domain_assumptions": "requires source domain, conservation convention, and boundary/weak-pairing assumptions",
+      "selected_for_definition": false,
+      "variation_with_respect_to_g": "metric-relevant but blocked until source-admissibility functional is defined",
+      "variation_with_respect_to_phi": "phi-relevant but blocked until admissibility residual is defined"
+    }
+  ],
+  "consumed_target": "prepare_master_action_ck_constraint_functional_definition_packet",
+  "critical_gate_fail_conditions": [
+    "claim C_k content fully defined",
+    "claim phi generated by C_k",
+    "claim V(phi) derived",
+    "claim source admissibility or conservation newly proved",
+    "claim QFT-GR closure",
+    "claim semiclassical coupling",
+    "promote the master action",
+    "claim empirical validation"
+  ],
+  "current_target_aggregate_file": "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+  "derived_v_phi_claimed": false,
+  "empirical_validation_claimed": false,
+  "existing_registry_class_tokens": [
+    "TOE_CK_CLASS_COMPATIBILITY_v0",
+    "TOE_CK_CLASS_BRIDGE_ADMISSIBILITY_v0",
+    "TOE_CK_CLASS_TRANSPORT_CONSISTENCY_v0",
+    "TOE_CK_CLASS_REGIME_INTERFACE_BOUNDEDNESS_v0"
+  ],
+  "indexed_constraint_ids": [
+    "bridge_admissibility_constraint",
+    "conservation_constraint",
+    "regime_transport_constraint",
+    "gauge_current_compatibility_constraint",
+    "state_probability_statistical_constraint",
+    "information_correlation_timing_constraint",
+    "source_admissibility_constraint"
+  ],
+  "lambda_variation_form": "delta S_C/delta lambda_k = C_k(g, psi, A, phi, rho) = 0",
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.MasterActionCKConstraintFunctionalDefinitionPacket",
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/MasterActionCKConstraintFunctionalDefinitionPacket.lean",
+  "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+  "lean_validation_policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+  "legal_constraint_type_menu_defined": true,
+  "master_action_ck_surface": "sum_k lambda_k * C_k(g, psi, A, phi, rho)",
+  "master_action_doc_file": "formal/docs/paper/TOE_CANDIDATE_MASTER_ACTION_v0.md",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "The packet records S_C = integral sqrt(-g) sum_k lambda_k C_k(g, psi, A, phi, rho), the multiplier constraint delta S_C/delta lambda_k = C_k = 0, and the formal phi and metric variation slots. It indexes seven legal C_k option classes but selects no concrete functional family, so no C_k content is fully defined.",
+  "metric_variation_form": "delta S_C/delta g^{mu nu} contributes a constraint stress-energy or gravity-side stationarity term only when C_k has metric dependence and a defined variational derivative",
+  "minimum_required_fields": [
+    "constraint_id",
+    "mathematical_form",
+    "depends_on",
+    "codomain",
+    "local_or_nonlocal_status",
+    "covariance_rule",
+    "regularity_domain_assumptions",
+    "variation_with_respect_to_phi",
+    "variation_with_respect_to_g",
+    "equation_role",
+    "provenance"
+  ],
+  "native_generation_theorem_claimed": false,
+  "non_claim_boundary": "This packet defines a legal option menu for C_k constraint functionals only. It does not fully define C_k content, does not select a C_k family, does not prove phi is generated by C_k, does not derive V(phi), does not prove source admissibility or conservation, does not close QFT-GR, does not authorize semiclassical coupling, does not promote the working-form master action, does not claim empirical validation, and does not authorize public readiness or release completion.",
+  "option_class_count": 7,
+  "options_indexed_no_selection": true,
+  "outcome_id": "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_PREPARED_CK_CONSTRAINT_FUNCTIONAL_OPTIONS_INDEXED_NO_SELECTION",
+  "packet_classification": "master_action_ck_constraint_functional_definition_packet_indexes_legal_constraint_options_no_selection",
+  "packet_criteria": [
+    {
+      "assessment": "The packet consumes the C_k variational-content blocker packet.",
+      "evidence": "TOE_NATIVE_PHI_CK_VARIATIONAL_CONTENT_PACKET_PREPARED_CK_VARIATIONAL_CONTENT_BLOCKED_BY_UNSPECIFIED_CONSTRAINT_FUNCTIONALS",
+      "row_id": "previous_ck_packet_consumed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The generic S_C multiplier action form is recorded.",
+      "evidence": "S_C = integral_M d^4x sqrt(-g) sum_k lambda_k C_k(g, psi, A, phi, rho)",
+      "row_id": "minimum_action_form_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The lambda, phi, and metric variation slots are recorded.",
+      "evidence": [
+        "delta S_C/delta lambda_k = C_k(g, psi, A, phi, rho) = 0",
+        "delta S_C/delta phi_i = sum_k lambda_k delta C_k/delta phi_i",
+        "delta S_C/delta g^{mu nu} contributes a constraint stress-energy or gravity-side stationarity term only when C_k has metric dependence and a defined variational derivative"
+      ],
+      "row_id": "lambda_phi_metric_variation_contract_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Existing seam-registry class tokens are used as policy-level anchors.",
+      "evidence": [
+        "TOE_CK_CLASS_COMPATIBILITY_v0",
+        "TOE_CK_CLASS_BRIDGE_ADMISSIBILITY_v0",
+        "TOE_CK_CLASS_TRANSPORT_CONSISTENCY_v0",
+        "TOE_CK_CLASS_REGIME_INTERFACE_BOUNDEDNESS_v0"
+      ],
+      "row_id": "existing_registry_classes_reused",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The requested seven candidate C_k option classes are indexed.",
+      "evidence": [
+        "bridge_admissibility_constraint",
+        "conservation_constraint",
+        "regime_transport_constraint",
+        "gauge_current_compatibility_constraint",
+        "state_probability_statistical_constraint",
+        "information_correlation_timing_constraint",
+        "source_admissibility_constraint"
+      ],
+      "row_id": "candidate_option_menu_indexed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Each candidate option carries the required functional metadata fields.",
+      "evidence": [
+        "constraint_id",
+        "mathematical_form",
+        "depends_on",
+        "codomain",
+        "local_or_nonlocal_status",
+        "covariance_rule",
+        "regularity_domain_assumptions",
+        "variation_with_respect_to_phi",
+        "variation_with_respect_to_g",
+        "equation_role",
+        "provenance"
+      ],
+      "row_id": "required_fields_populated",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Source- and bridge-admissibility are identified as phi-relevant without selecting either.",
+      "evidence": [
+        "source_admissibility_constraint",
+        "bridge_admissibility_constraint"
+      ],
+      "row_id": "phi_relevant_candidates_identified_without_selection",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The repo supplies constraint classes, not concrete C_k variational functionals.",
+      "evidence": "Class-B inventory contains seam class tokens but no variational C_k functional formulas",
+      "row_id": "concrete_functional_family_not_found",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet indexes options but selects no C_k family and promotes no action.",
+      "evidence": "CK_CONSTRAINT_FUNCTIONAL_OPTIONS_INDEXED_NO_SELECTION",
+      "row_id": "no_selection_or_promotion",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet result should be reviewed before any family-selection packet.",
+      "evidence": "review_master_action_ck_constraint_functional_definition_packet_result",
+      "row_id": "next_target_review_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No derivation, closure, validation, or promotion claim is added.",
+      "evidence": [
+        "ck_content_fully_defined=false",
+        "phi_generated_by_ck=false",
+        "source_conservation_claimed=false",
+        "qft_gr_closure_claimed=false",
+        "master_action_promoted=false"
+      ],
+      "row_id": "nonclaims_preserved",
+      "status": "accepted"
+    }
+  ],
+  "packet_criteria_accepted_count": 11,
+  "packet_criteria_count": 11,
+  "packet_id": "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_v0",
+  "packet_result": "CK_CONSTRAINT_FUNCTIONAL_OPTIONS_INDEXED_NO_SELECTION",
+  "phase2_readiness_claim": false,
+  "phi_generated_by_ck_claimed": false,
+  "phi_relevant_recommended_classes": [
+    "source_admissibility_constraint",
+    "bridge_admissibility_constraint"
+  ],
+  "phi_variation_form": "delta S_C/delta phi_i = sum_k lambda_k delta C_k/delta phi_i",
+  "pillar_completion_inferred": false,
+  "post_review_recommended_target": "prepare_ck_constraint_family_selection_for_phi_route",
+  "potential_derived": false,
+  "prepared": true,
+  "prior_ck_variational_content_outcome": "TOE_NATIVE_PHI_CK_VARIATIONAL_CONTENT_PACKET_PREPARED_CK_VARIATIONAL_CONTENT_BLOCKED_BY_UNSPECIFIED_CONSTRAINT_FUNCTIONALS",
+  "prior_ck_variational_content_result": "CK_VARIATIONAL_CONTENT_BLOCKED_BY_UNSPECIFIED_CONSTRAINT_FUNCTIONALS",
+  "prior_packet_file": "formal/docs/release/TOE_NATIVE_PHI_CK_VARIATIONAL_CONTENT_PACKET_20260618_v0.json",
+  "proof_depth_label": "CK_CONSTRAINT_OPTION_MENU_INDEXED_NO_FUNCTIONAL_SELECTION",
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_solved": false,
+  "qft_gr_source_map_closure_authorized": false,
+  "qftgr_aggregate_file": "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+  "release_current_authority_aggregate_file": "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean",
+  "review_target_selected": true,
+  "schema_id": "MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET_20260618_v0",
+  "seam_closure_claim": false,
+  "seam_registry_file": "formal/docs/paper/TOE_MASTER_ACTION_SEAM_CONSTRAINT_REGISTRY_v0.md",
+  "selected_next_target": "review_master_action_ck_constraint_functional_definition_packet_result",
+  "selected_next_target_kind": "master_action_ck_constraint_functional_definition_packet_result_review",
+  "semiclassical_coupling_authorized": false,
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_source_established": false,
+  "source_admissibility_candidate_indexed": true,
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "source_conservation_claimed": false,
+  "source_or_bridge_admissibility_recommended_for_future_selection": true,
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_MASTER_ACTION_CK_CONSTRAINT_FUNCTIONAL_DEFINITION_PACKET",
+  "toe_native_matter_derivation_claimed": false,
+  "toe_native_matter_sector_defined": false,
+  "toe_native_matter_sector_derived": false,
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_for_packet": "INCOMPLETE_TIMEOUT_STEADY_PROGRESS",
+    "aggregate_timeout_with_steady_progress_interpretation": "incomplete_validation_not_mathematical_failure",
+    "checkpoint_type": "master_action_ck_constraint_functional_definition_packet",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  },
+  "weak_conservation_claimed": false
+}
