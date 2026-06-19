@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "Phi transport-consistency C_k functional-embedding result review accepted outcome PHI_TRANSPORT_CONSISTENCY_CK_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_ACCEPTS_ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_PROMOTION. The review preserves C_transport^phi = 0 as an admissibility-only derivation-chain stability rule, keeps S_C^transport = integral_M dVol_g Lambda_transport dot C_transport^phi blocked as a multiplier/action route, keeps S_C^transport = integral_M dVol_g norm(C_transport^phi)^2 unlicensed as a penalty route, and keeps direct dynamical-law interpretation blocked. C_source^nu[g, phi] = 0 and C_bridge^phi = 0 remain source/bridge context. No functionalization, action embedding, C_k variation, transport proof, full route-alignment proof, native phi derivation, V(phi) derivation, new conservation proof, source-admissibility proof, QFT-GR closure, semiclassical coupling, master-action promotion, or empirical validation is claimed. The full ToeFormal aggregate is recorded as NOT_RUN. The next target is prepare_phi_transport_consistency_ck_admissibility_rule_closeout"
+        "Phi transport-consistency C_k admissibility-rule closeout accepted outcome PHI_TRANSPORT_CONSISTENCY_CK_ADMISSIBILITY_RULE_CLOSED_AS_DERIVATION_CHAIN_STABILITY_RULE_NO_ACTION_VARIATION_OR_PROMOTION. The closeout preserves C_transport^phi = 0 as an admissibility-only transport-consistency derivation-chain stability rule candidate. C_source^nu[g, phi] = 0 and C_bridge^phi = 0 remain source/bridge context. The multiplier/action route, penalty route, and direct dynamical-law interpretation remain blocked from action embedding or dynamics. No C_k variation, transport proof, full route-alignment proof, native phi derivation, V(phi) derivation, new conservation proof, source-admissibility proof, QFT-GR closure, semiclassical coupling, master-action promotion, or empirical validation is claimed. The full ToeFormal aggregate is recorded as NOT_RUN. The next target is prepare_phi_ck_source_bridge_transport_rule_family_synthesis_packet"
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_phi_transport_consistency_ck_admissibility_rule_closeout"
+        "prepare_phi_ck_source_bridge_transport_rule_family_synthesis_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch is closed as a positive local classical source witness, the master-action phi surface has a selected nonpromotional policy and alignment witness, and the phi/C_k source/bridge/transport family now has three admissibility-only candidate roles: C_source^nu[g, phi] = 0, C_bridge^phi = 0, and C_transport^phi = 0. The transport-consistency functional-embedding result review accepts only the admissibility-only route for C_transport^phi and keeps multiplier/action, penalty, and direct dynamical-law interpretations blocked. No C_k variation, action embedding, transport proof, full route-alignment proof, source-admissibility proof, bridge-admissibility proof, native phi derivation, V(phi) derivation, new conservation proof, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows. The full ToeFormal aggregate is recorded as NOT_RUN for this review"
+        "The scalar sandbox branch is closed as a positive local classical source witness, the master-action phi surface has a selected nonpromotional policy and alignment witness, and the phi/C_k source/bridge/transport sequence now has three closed admissibility-only candidate roles: C_source^nu[g, phi] = 0, C_bridge^phi = 0, and C_transport^phi = 0. The transport-consistency closeout closes C_transport^phi = 0 only as a derivation-chain stability rule candidate and keeps multiplier/action, penalty, and direct dynamical-law interpretations blocked. No C_k variation, action embedding, transport proof, full route-alignment proof, source-admissibility proof, bridge-admissibility proof, native phi derivation, V(phi) derivation, new conservation proof, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows. The full ToeFormal aggregate is recorded as NOT_RUN for this closeout"
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_phi_transport_consistency_ck_admissibility_rule_closeout"
+        "prepare_phi_ck_source_bridge_transport_rule_family_synthesis_packet"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the phi transport functional-embedding review. -/
+/-- Previous live target consumed by the phi transport closeout. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_phi_transport_consistency_ck_functional_embedding_packet_result"
-
-/-- Current live target after the phi transport functional-embedding review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_phi_transport_consistency_ck_admissibility_rule_closeout"
+
+/-- Current live target after the phi transport closeout. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_phi_ck_source_bridge_transport_rule_family_synthesis_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_phi_transport_consistency_ck_admissibility_rule_closeout"
+    "prepare_phi_ck_source_bridge_transport_rule_family_synthesis_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
