@@ -1,0 +1,388 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tests.strict_physics_state_helpers import (
+    assert_focused_gate_not_manifest_enrolled,
+    skip_if_not_current_target,
+)
+from formal.python.tools.phi_ck_admissibility_rule_family_synthesis_packet_report import (
+    ARTIFACT_ID,
+    BRIDGE_ADMISSIBILITY_CONSTRAINT_FORM,
+    BRIDGE_CANDIDATE_ID,
+    BRIDGE_CANDIDATE_TYPE,
+    BRIDGE_CLOSEOUT_OUTCOME,
+    BRIDGE_CLOSEOUT_PATH,
+    BRIDGE_CLOSEOUT_PACKET_ID,
+    BRIDGE_CONSTRAINT_EQUATION,
+    BRIDGE_CONSTRAINT_FORM,
+    BRIDGE_ROUTE_FIELD_EQUATION_MATCH,
+    BRIDGE_ROUTE_SOURCE_RESIDUAL_MATCH,
+    BRIDGE_ROUTE_STRESS_ENERGY_MATCH,
+    BRIDGE_RULE_CLASSIFICATION,
+    BRIDGE_RULE_EPISTEMIC_STATUS,
+    CONSUMED_TARGET,
+    CURRENT_TARGET_AGGREGATE_PATH,
+    DEFAULT_OUT,
+    FULL_TOEFORMAL_AGGREGATE_STATUS,
+    LEAN_PACKET_PATH,
+    LEAN_VALIDATION_POLICY_ID,
+    LEAN_VALIDATION_POLICY_PATH,
+    NEXT_TARGET,
+    NEXT_TARGET_KIND,
+    OUTCOME_ID,
+    PACKET_CLASSIFICATION,
+    PACKET_ID,
+    PACKET_RESULT,
+    QFTGR_AGGREGATE_PATH,
+    RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
+    SCHEMA_ID,
+    SOURCE_ADMISSIBILITY_CONSTRAINT_FORM,
+    SOURCE_CANDIDATE_CONSTRAINT_EQUATION,
+    SOURCE_CANDIDATE_CONSTRAINT_FORM,
+    SOURCE_CANDIDATE_CONSTRAINT_ID,
+    SOURCE_CLOSEOUT_OUTCOME,
+    SOURCE_CLOSEOUT_PATH,
+    SOURCE_CLOSEOUT_PACKET_ID,
+    SOURCE_RULE_CLASSIFICATION,
+    SOURCE_RULE_PLAIN_MEANING,
+    build_phi_ck_admissibility_rule_family_synthesis_packet,
+)
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+TOOL_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "python"
+    / "tools"
+    / "phi_ck_admissibility_rule_family_synthesis_packet_report.py"
+)
+REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
+SURFACES_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "CURRENT_AUTHORITATIVE_SURFACES_v0.md"
+)
+TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
+FRONTIER_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "CrossPillarClosureFrontier.lean"
+)
+README_PATH = REPO_ROOT / "README.md"
+STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+STRICT_MAP_PATH = (
+    REPO_ROOT / "formal" / "docs" / "lanes" / "STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
+)
+
+
+def _read(path: Path) -> str:
+    assert path.exists(), f"Missing required file: {path}"
+    return path.read_text(encoding="utf-8")
+
+
+def _json(path: Path) -> dict:
+    return json.loads(_read(path))
+
+
+def _workstream(payload: dict, workstream_id: str) -> dict:
+    for row in payload["workstreams"]:
+        if row["workstream_id"] == workstream_id:
+            return row
+    raise AssertionError(f"Missing workstream: {workstream_id}")
+
+
+def test_phi_ck_admissibility_rule_family_synthesis_packet_files_exist() -> None:
+    for path in [
+        SOURCE_CLOSEOUT_PATH,
+        BRIDGE_CLOSEOUT_PATH,
+        DEFAULT_OUT,
+        TOOL_PATH,
+        LEAN_PACKET_PATH,
+        LEAN_VALIDATION_POLICY_PATH,
+        QFTGR_AGGREGATE_PATH,
+        CURRENT_TARGET_AGGREGATE_PATH,
+        RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
+    ]:
+        assert path.exists(), path
+
+
+def test_phi_ck_admissibility_rule_family_synthesis_packet_accepts_closeouts() -> None:
+    source_closeout = _json(SOURCE_CLOSEOUT_PATH)
+    bridge_closeout = _json(BRIDGE_CLOSEOUT_PATH)
+    packet = _json(DEFAULT_OUT)
+    assert source_closeout["packet_id"] == SOURCE_CLOSEOUT_PACKET_ID
+    assert source_closeout["outcome_id"] == SOURCE_CLOSEOUT_OUTCOME
+    assert bridge_closeout["packet_id"] == BRIDGE_CLOSEOUT_PACKET_ID
+    assert bridge_closeout["outcome_id"] == BRIDGE_CLOSEOUT_OUTCOME
+    assert bridge_closeout["selected_next_target"] == CONSUMED_TARGET
+    assert packet["artifact_id"] == ARTIFACT_ID
+    assert packet["schema_id"] == SCHEMA_ID
+    assert packet["packet_id"] == PACKET_ID
+    assert packet["prepared"] is True
+    assert packet["accepted"] is True
+    assert packet["outcome_id"] == OUTCOME_ID
+    assert packet["packet_result"] == PACKET_RESULT
+    assert packet["packet_classification"] == PACKET_CLASSIFICATION
+    assert packet["consumed_target"] == CONSUMED_TARGET
+    assert packet["selected_next_target"] == NEXT_TARGET
+    assert packet["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert build_phi_ck_admissibility_rule_family_synthesis_packet() == packet
+
+
+def test_phi_ck_admissibility_rule_family_synthesis_packet_preserves_family() -> None:
+    packet = _json(DEFAULT_OUT)
+    assert packet["phi_ck_admissibility_rule_family_count"] == 2
+    assert packet["concrete_phi_ck_rule_roles"] == [
+        "source admissibility",
+        "bridge admissibility",
+    ]
+    assert packet["source_rule_classification"] == SOURCE_RULE_CLASSIFICATION
+    assert packet["source_rule_epistemic_status"] == "admissibility-only"
+    assert packet["source_candidate_constraint_id"] == SOURCE_CANDIDATE_CONSTRAINT_ID
+    assert packet["source_candidate_constraint_form"] == SOURCE_CANDIDATE_CONSTRAINT_FORM
+    assert packet["source_candidate_constraint_equation"] == (
+        SOURCE_CANDIDATE_CONSTRAINT_EQUATION
+    )
+    assert packet["source_admissibility_constraint_form"] == (
+        SOURCE_ADMISSIBILITY_CONSTRAINT_FORM
+    )
+    assert packet["source_rule_plain_meaning"] == SOURCE_RULE_PLAIN_MEANING
+    assert packet["bridge_rule_classification"] == BRIDGE_RULE_CLASSIFICATION
+    assert packet["bridge_rule_epistemic_status"] == BRIDGE_RULE_EPISTEMIC_STATUS
+    assert packet["bridge_candidate_id"] == BRIDGE_CANDIDATE_ID
+    assert packet["bridge_candidate_type"] == BRIDGE_CANDIDATE_TYPE
+    assert packet["bridge_constraint_form"] == BRIDGE_CONSTRAINT_FORM
+    assert packet["bridge_constraint_equation"] == BRIDGE_CONSTRAINT_EQUATION
+    assert packet["bridge_admissibility_constraint_form"] == (
+        BRIDGE_ADMISSIBILITY_CONSTRAINT_FORM
+    )
+    assert packet["bridge_route_field_equation_match"] == (
+        BRIDGE_ROUTE_FIELD_EQUATION_MATCH
+    )
+    assert packet["bridge_route_stress_energy_match"] == (
+        BRIDGE_ROUTE_STRESS_ENERGY_MATCH
+    )
+    assert packet["bridge_route_source_residual_match"] == (
+        BRIDGE_ROUTE_SOURCE_RESIDUAL_MATCH
+    )
+    assert {row["rule_role"] for row in packet["rule_family_entries"]} == {
+        "source admissibility",
+        "bridge admissibility",
+    }
+
+
+def test_phi_ck_admissibility_rule_family_synthesis_packet_blocks_claims() -> None:
+    packet = _json(DEFAULT_OUT)
+    assert packet["synthesis_criteria_count"] == 9
+    assert packet["synthesis_criteria_accepted_count"] == 9
+    for key in [
+        "synthesis_packet_prepared",
+        "synthesis_packet_accepted",
+        "phi_ck_rule_family_synthesized",
+        "source_and_bridge_rules_synthesized",
+        "source_admissibility_rule_synthesized",
+        "bridge_admissibility_rule_synthesized",
+        "source_admissibility_rule_preserved",
+        "bridge_admissibility_rule_preserved",
+        "c_k_acquired_two_concrete_phi_relevant_rule_roles",
+        "source_rule_decides_phi_source_permission",
+        "bridge_rule_decides_phi_route_consistency",
+        "both_rules_admissibility_only",
+        "both_rules_rule_candidates",
+        "both_rules_not_action_terms",
+        "both_rules_not_dynamical_laws",
+        "neither_rule_derives_phi",
+        "neither_rule_derives_v_phi",
+        "both_rules_define_cross_pillar_admissibility",
+        "rule_family_interprets_ck_as_seam_admissibility",
+    ]:
+        assert packet[key] is True, key
+    for key in [
+        "another_phi_derivation_selected",
+        "transport_consistency_family_selected",
+        "master_action_surface_rotation_selected",
+        "qft_gr_semiclassical_prerequisite_return_selected",
+        "public_explanatory_section_selected",
+        "constraint_as_action_term_selected",
+        "dynamical_action_embedding_selected",
+        "dynamical_law_claimed",
+        "candidate_recorded_as_new_physical_law",
+        "candidate_recorded_as_action_term",
+        "ck_action_embedding_claimed",
+        "ck_variation_executed",
+        "ck_variation_authorized",
+        "lambda_variation_executed",
+        "metric_variation_executed",
+        "phi_variation_executed",
+        "bridge_admissibility_proved",
+        "route_alignment_verified",
+        "source_admissibility_proved",
+        "source_conservation_proved",
+        "native_phi_derivation_claimed",
+        "phi_generated_by_ck_claimed",
+        "phi_generation_theorem_claimed",
+        "v_phi_derivation_claimed",
+        "derived_v_phi_claimed",
+        "potential_derived",
+        "qft_gr_closure_claimed",
+        "qft_gr_solved",
+        "qft_gr_seam_closed",
+        "semiclassical_coupling_authorized",
+        "semiclassical_coupling_claimed",
+        "semiclassical_einstein_equation_derived",
+        "master_action_promoted",
+        "master_action_promotion_authorized",
+        "canonical_master_action_promoted",
+        "toe_native_matter_derivation_claimed",
+        "standard_model_derivation_claimed",
+        "native_generation_theorem_claimed",
+        "empirical_validation_claimed",
+        "public_readiness_claimed",
+        "public_submission_authorized",
+        "phase2_readiness_claim",
+        "pillar_completion_inferred",
+        "seam_closure_claim",
+    ]:
+        assert packet[key] is False, key
+    assert "admissibility-rule family only" in packet["non_claim_boundary"]
+    assert "not action terms" in packet["non_claim_boundary"]
+    assert "not dynamical laws" in packet["non_claim_boundary"]
+    assert "not native phi derivations" in packet["non_claim_boundary"]
+    assert "not V(phi) derivations" in packet["non_claim_boundary"]
+    assert "not QFT-GR closure" in packet["non_claim_boundary"]
+    assert "not master-action promotion" in packet["non_claim_boundary"]
+
+
+def test_phi_ck_admissibility_rule_family_synthesis_packet_validation_policy() -> None:
+    packet = _json(DEFAULT_OUT)
+    policy = packet["validation_policy"]
+    assert policy["policy_id"] == LEAN_VALIDATION_POLICY_ID
+    assert policy["aggregate_lean_validation_status_for_packet"] == (
+        FULL_TOEFORMAL_AGGREGATE_STATUS
+    )
+    assert policy["full_toeformal_aggregate_status_for_packet"] == "NOT_RUN"
+    assert policy["full_toeformal_aggregate_passed"] is False
+    assert policy["full_toeformal_aggregate_failed"] is False
+    assert policy["full_toeformal_aggregate_timed_out"] is False
+    assert packet["aggregate_lean_validation_status_for_packet"] == "NOT_RUN"
+    assert packet["full_toeformal_aggregate_status_for_packet"] == "NOT_RUN"
+    assert packet["full_toeformal_aggregate_passed"] is False
+    assert packet["full_toeformal_aggregate_failed"] is False
+    assert packet["full_toeformal_aggregate_timed_out"] is False
+
+
+def test_phi_ck_admissibility_rule_family_synthesis_packet_rotates_to_review() -> None:
+    registry = _json(REGISTRY_PATH)
+    skip_if_not_current_target(registry, NEXT_TARGET)
+    state = registry["current_target_state"]
+    active = [row for row in registry["workstreams"] if row.get("status") == "active"]
+    assert len(active) == 1
+    assert state["previous_live_next_target"] == CONSUMED_TARGET
+    assert state["live_next_target"] == NEXT_TARGET
+    assert state["active_lane"] == NEXT_TARGET
+    assert state["live_next_target_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "PhiCKAdmissibilityRuleFamilySynthesisPacket.lean"
+    )
+    assert state["live_next_target_report"] == (
+        "formal/docs/release/"
+        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_PACKET_20260619_v0.json"
+    )
+    assert state["live_next_target_outcome"] == OUTCOME_ID
+    assert CONSUMED_TARGET in registry["completed_targets"]
+    assert NEXT_TARGET in registry["next_strict_target_coverage"]
+
+    consumed = _workstream(registry, CONSUMED_TARGET)
+    assert consumed["status"] == "paused"
+    assert consumed["packet_result"] == OUTCOME_ID
+    assert consumed["selected_next_target"] == NEXT_TARGET
+    assert consumed["source_admissibility_rule_synthesized"] == "yes"
+    assert consumed["bridge_admissibility_rule_synthesized"] == "yes"
+    assert consumed["both_rules_admissibility_only"] == "yes"
+    assert consumed["both_rules_not_action_terms"] == "yes"
+    assert consumed["neither_rule_derives_phi"] == "yes"
+    assert consumed["neither_rule_derives_v_phi"] == "yes"
+    assert consumed["full_toeformal_aggregate_status_for_packet"] == "NOT_RUN"
+    assert consumed["full_toeformal_aggregate_passed"] == "no"
+    assert consumed["full_toeformal_aggregate_failed"] == "no"
+    assert consumed["full_toeformal_aggregate_timed_out"] == "no"
+    assert consumed["qft_gr_closure_claimed"] == "no"
+    assert consumed["master_action_promoted"] == "no"
+
+    active_row = active[0]
+    assert active_row["workstream_id"] == NEXT_TARGET
+    assert active_row["authorized_next_strict_target"] == NEXT_TARGET
+    assert active_row["authorized_target"] == NEXT_TARGET
+    assert active_row["consumed_target"] == CONSUMED_TARGET
+    assert active_row["outcome_id"] == OUTCOME_ID
+    assert active_row["packet_result"] == OUTCOME_ID
+    assert active_row["review_executed"] == "no"
+    assert active_row["synthesis_packet_prepared"] == "yes"
+    assert active_row["source_admissibility_rule_synthesized"] == "yes"
+    assert active_row["bridge_admissibility_rule_synthesized"] == "yes"
+    assert active_row["full_toeformal_aggregate_status_for_packet"] == "NOT_RUN"
+    assert active_row["full_toeformal_aggregate_timed_out"] == "no"
+    assert active_row["ck_variation_executed"] == "no"
+    assert active_row["qft_gr_closure_claimed"] == "no"
+    assert active_row["master_action_promoted"] == "no"
+
+
+def test_phi_ck_admissibility_rule_family_synthesis_packet_mirrors() -> None:
+    joined = "\n".join(
+        _read(path)
+        for path in [
+            TOOL_PATH,
+            DEFAULT_OUT,
+            LEAN_PACKET_PATH,
+            QFTGR_AGGREGATE_PATH,
+            CURRENT_TARGET_AGGREGATE_PATH,
+            RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
+            TOE_FORMAL_PATH,
+            REGISTRY_PATH,
+            SURFACES_PATH,
+            FRONTIER_PATH,
+            README_PATH,
+            STATE_PATH,
+            ROADMAP_PATH,
+            STRICT_MAP_PATH,
+        ]
+    )
+    for token in [
+        PACKET_ID,
+        OUTCOME_ID,
+        PACKET_RESULT,
+        PACKET_CLASSIFICATION,
+        CONSUMED_TARGET,
+        NEXT_TARGET,
+        "PhiCKAdmissibilityRuleFamilySynthesisPacket",
+        "CURRENT_LIVE_NEXT_TARGET_v0: review_phi_ck_admissibility_rule_family_synthesis_packet_result",
+        SOURCE_CANDIDATE_CONSTRAINT_FORM,
+        SOURCE_CANDIDATE_CONSTRAINT_EQUATION,
+        SOURCE_ADMISSIBILITY_CONSTRAINT_FORM,
+        BRIDGE_CONSTRAINT_FORM,
+        BRIDGE_CONSTRAINT_EQUATION,
+        BRIDGE_ADMISSIBILITY_CONSTRAINT_FORM,
+        "source admissibility",
+        "bridge admissibility",
+        "admissibility-only",
+        "not action terms",
+        "not dynamical laws",
+        "not native phi derivations",
+        "not V(phi) derivations",
+        "not QFT-GR closure",
+        "not master-action promotion",
+        "full ToeFormal aggregate is recorded as NOT_RUN",
+    ]:
+        assert token in joined
+
+
+def test_phi_ck_admissibility_rule_family_synthesis_packet_not_manifest_enrolled() -> None:
+    assert_focused_gate_not_manifest_enrolled(
+        "test_phi_ck_admissibility_rule_family_synthesis_packet_gate.py"
+    )

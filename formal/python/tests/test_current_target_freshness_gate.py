@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_phi_bridge_admissibility_ck_admissibility_rule_closeout"
+ACTIVE_LANE = "prepare_phi_ck_admissibility_rule_family_synthesis_closeout"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,16 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "review_phi_bridge_admissibility_ck_functional_embedding_packet_result"
+PREVIOUS_LIVE_TARGET = "review_phi_ck_admissibility_rule_family_synthesis_packet_result"
+PHI_CK_SYNTHESIS_PACKET_TARGET = (
+    "prepare_phi_ck_admissibility_rule_family_synthesis_packet"
+)
+PHI_BRIDGE_CLOSEOUT_TARGET = (
+    "prepare_phi_bridge_admissibility_ck_admissibility_rule_closeout"
+)
+BRIDGE_FUNCTIONAL_EMBEDDING_REVIEW_TARGET = (
+    "review_phi_bridge_admissibility_ck_functional_embedding_packet_result"
+)
 POST_RETEST_REFINEMENT_CONSERVATION_RETEST_REFINEMENT_REFINEMENT_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_retest_packet_after_post_retest_refinement_conservation_retest_refinement_refinement"
 )
@@ -1417,7 +1426,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_phi_bridge_admissibility_ck_admissibility_rule_closeout"
+LIVE_TARGET = "prepare_phi_ck_admissibility_rule_family_synthesis_closeout"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1433,7 +1442,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "PhiBridgeAdmissibilityCKFunctionalEmbeddingPacketResultReview.lean"
+    / "PhiCKAdmissibilityRuleFamilySynthesisResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2943,268 +2952,219 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
-    bridge_functional_embedding_review_active_workstream = active_workstream(payload)
+    phi_ck_synthesis_review_active_workstream = active_workstream(payload)
+    assert phi_ck_synthesis_review_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert phi_ck_synthesis_review_active_workstream["active_lane"] == ACTIVE_LANE
     assert (
-        bridge_functional_embedding_review_active_workstream["workstream_id"]
-        == ACTIVE_LANE
-    )
-    assert (
-        bridge_functional_embedding_review_active_workstream["active_lane"]
-        == ACTIVE_LANE
-    )
-    assert bridge_functional_embedding_review_active_workstream[
-        "authorized_next_strict_target"
-    ] == LIVE_TARGET
-    assert (
-        bridge_functional_embedding_review_active_workstream["authorized_target"]
+        phi_ck_synthesis_review_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert bridge_functional_embedding_review_active_workstream[
-        "authorization_evidence"
-    ] == str(
+    assert phi_ck_synthesis_review_active_workstream["authorized_target"] == LIVE_TARGET
+    assert phi_ck_synthesis_review_active_workstream["authorization_evidence"] == str(
         LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)
     ).replace("\\", "/")
-    assert bridge_functional_embedding_review_active_workstream["report"] == (
+    assert phi_ck_synthesis_review_active_workstream["report"] == (
         "formal/docs/release/"
-        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_RESULT_REVIEW_20260618_v0.json"
+        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_20260619_v0.json"
     )
     assert (
-        bridge_functional_embedding_review_active_workstream["consumed_target"]
+        phi_ck_synthesis_review_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
-    assert bridge_functional_embedding_review_active_workstream["outcome_id"] == (
-        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_ACCEPTS_"
-        "ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_PROMOTION"
+    assert phi_ck_synthesis_review_active_workstream["outcome_id"] == (
+        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_ACCEPTS_SOURCE_"
+        "AND_BRIDGE_RULE_SYNTHESIS_NO_ACTION_VARIATION_OR_PROMOTION"
     )
-    assert bridge_functional_embedding_review_active_workstream["review_result"] == (
-        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_ACCEPTS_"
-        "ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_PROMOTION"
+    assert phi_ck_synthesis_review_active_workstream["review_result"] == (
+        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_ACCEPTS_SOURCE_"
+        "AND_BRIDGE_RULE_SYNTHESIS_NO_ACTION_VARIATION_OR_PROMOTION"
     )
-    assert bridge_functional_embedding_review_active_workstream[
-        "embedding_packet_result"
-    ] == (
-        "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_OPTIONS_RECORDED_"
-        "ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
+    assert phi_ck_synthesis_review_active_workstream["packet_classification"] == (
+        "phi_ck_admissibility_rule_family_synthesis_result_review_accepts_source_"
+        "and_bridge_rule_synthesis_no_action_variation_or_promotion"
     )
-    assert bridge_functional_embedding_review_active_workstream[
-        "packet_classification"
-    ] == (
-        "phi_bridge_admissibility_ck_functional_embedding_result_review_accepts_admissibility_only_route_no_action_variation_or_promotion"
-    )
-    assert bridge_functional_embedding_review_active_workstream[
-        "selected_ck_option_class"
-    ] == (
-        "bridge_admissibility_constraint"
-    )
-    assert bridge_functional_embedding_review_active_workstream[
-        "selected_ck_constraint_family"
-    ] == "phi_bridge_admissibility_constraint_family"
-    assert bridge_functional_embedding_review_active_workstream[
-        "bridge_candidate_id"
-    ] == (
-        "phi_bridge_route_consistency_ck_candidate"
-    )
-    assert bridge_functional_embedding_review_active_workstream[
-        "bridge_candidate_type"
-    ] == (
-        "route_consistency_admissibility_rule"
-    )
-    assert bridge_functional_embedding_review_active_workstream[
-        "bridge_constraint_form"
-    ] == (
-        "C_bridge^phi := (E_phi^master - E_phi^witness, T_phi^master - T_phi^witness, C_source^phi - nabla_mu T_phi^{mu nu})"
-    )
-    assert bridge_functional_embedding_review_active_workstream[
-        "bridge_constraint_equation"
-    ] == "C_bridge^phi = 0"
-    assert bridge_functional_embedding_review_active_workstream[
-        "bridge_admissibility_constraint_form"
-    ] == "C_bridge^phi = 0"
-    assert bridge_functional_embedding_review_active_workstream[
-        "bridge_route_field_equation_match"
-    ] == "E_phi^master - E_phi^witness = 0"
-    assert bridge_functional_embedding_review_active_workstream[
-        "bridge_route_stress_energy_match"
-    ] == "T_phi^master - T_phi^witness = 0"
-    assert bridge_functional_embedding_review_active_workstream[
-        "bridge_route_source_residual_match"
-    ] == "C_source^phi - nabla_mu T_phi^{mu nu} = 0"
-    assert bridge_functional_embedding_review_active_workstream[
-        "bridge_route_alignment_sequence"
-    ] == (
-        "master-action phi surface -> selected phi policy -> scalar variation -> scalar stress-energy -> conservation residual -> source-admissibility rule -> classical gravity source route"
-    )
-    assert (
-        bridge_functional_embedding_review_active_workstream[
-            "bridge_component_count"
-        ]
-        == "3"
-    )
-    assert bridge_functional_embedding_review_active_workstream[
-        "source_candidate_constraint_id"
-    ] == "phi_source_conservation_residual_ck_candidate"
-    assert bridge_functional_embedding_review_active_workstream[
+    assert phi_ck_synthesis_review_active_workstream[
+        "source_rule_classification"
+    ] == "source-admissibility rule candidate"
+    assert phi_ck_synthesis_review_active_workstream[
+        "bridge_rule_classification"
+    ] == "bridge-admissibility rule candidate"
+    assert phi_ck_synthesis_review_active_workstream[
+        "source_rule_epistemic_status"
+    ] == "admissibility-only"
+    assert phi_ck_synthesis_review_active_workstream[
+        "bridge_rule_epistemic_status"
+    ] == "admissibility-only"
+    assert phi_ck_synthesis_review_active_workstream[
         "source_candidate_constraint_form"
     ] == "C_source^nu[g, phi] := nabla_mu T_phi^{mu nu}"
-    assert bridge_functional_embedding_review_active_workstream[
+    assert phi_ck_synthesis_review_active_workstream[
         "source_candidate_constraint_equation"
     ] == "C_source^nu[g, phi] = 0"
-    assert bridge_functional_embedding_review_active_workstream[
+    assert phi_ck_synthesis_review_active_workstream[
         "source_admissibility_constraint_form"
     ] == "C_source^nu[g, phi] = 0"
-    assert (
-        bridge_functional_embedding_review_active_workstream["embedding_route_count"]
-        == "3"
+    assert phi_ck_synthesis_review_active_workstream["bridge_constraint_form"] == (
+        "C_bridge^phi := (E_phi^master - E_phi^witness, "
+        "T_phi^master - T_phi^witness, "
+        "C_source^phi - nabla_mu T_phi^{mu nu})"
     )
-    assert bridge_functional_embedding_review_active_workstream[
-        "selected_embedding_route_id"
-    ] == "phi_bridge_ck_admissibility_only_route"
-    assert bridge_functional_embedding_review_active_workstream[
-        "lagrange_multiplier_action_form"
-    ] == "S_C^bridge = integral_M dVol_g Lambda_bridge dot C_bridge^phi"
-    assert bridge_functional_embedding_review_active_workstream[
-        "penalty_action_form"
-    ] == "S_C^bridge = integral_M dVol_g norm(C_bridge^phi)^2"
-    assert bridge_functional_embedding_review_active_workstream[
+    assert phi_ck_synthesis_review_active_workstream[
+        "bridge_constraint_equation"
+    ] == "C_bridge^phi = 0"
+    assert phi_ck_synthesis_review_active_workstream[
+        "bridge_admissibility_constraint_form"
+    ] == "C_bridge^phi = 0"
+    assert phi_ck_synthesis_review_active_workstream[
+        "bridge_route_field_equation_match"
+    ] == "E_phi^master - E_phi^witness = 0"
+    assert phi_ck_synthesis_review_active_workstream[
+        "bridge_route_stress_energy_match"
+    ] == "T_phi^master - T_phi^witness = 0"
+    assert phi_ck_synthesis_review_active_workstream[
+        "bridge_route_source_residual_match"
+    ] == "C_source^phi - nabla_mu T_phi^{mu nu} = 0"
+    assert phi_ck_synthesis_review_active_workstream[
+        "phi_ck_admissibility_rule_family_count"
+    ] == "2"
+    assert "source admissibility" in phi_ck_synthesis_review_active_workstream[
+        "concrete_phi_ck_rule_roles"
+    ]
+    assert "bridge admissibility" in phi_ck_synthesis_review_active_workstream[
+        "concrete_phi_ck_rule_roles"
+    ]
+    assert phi_ck_synthesis_review_active_workstream[
         "review_criteria_count"
-    ] == "12"
-    assert bridge_functional_embedding_review_active_workstream[
+    ] == "9"
+    assert phi_ck_synthesis_review_active_workstream[
         "review_criteria_accepted_count"
-    ] == "12"
-    assert (
-        bridge_functional_embedding_review_active_workstream[
-            "functional_embedding_packet_prepared"
-        ]
-        == "yes"
-    )
-    assert (
-        bridge_functional_embedding_review_active_workstream[
-            "functional_embedding_options_recorded"
-        ]
-        == "yes"
-    )
-    assert bridge_functional_embedding_review_active_workstream[
-        "admissibility_only_route_selected"
+    ] == "9"
+    assert phi_ck_synthesis_review_active_workstream["review_executed"] == "yes"
+    assert phi_ck_synthesis_review_active_workstream[
+        "result_review_accepted"
     ] == "yes"
-    assert bridge_functional_embedding_review_active_workstream[
-        "lagrange_multiplier_route_recorded"
+    assert phi_ck_synthesis_review_active_workstream[
+        "source_rule_synthesis_accepted"
     ] == "yes"
-    assert bridge_functional_embedding_review_active_workstream[
-        "lagrange_multiplier_route_blocked"
+    assert phi_ck_synthesis_review_active_workstream[
+        "bridge_rule_synthesis_accepted"
     ] == "yes"
-    assert bridge_functional_embedding_review_active_workstream[
-        "penalty_route_recorded"
+    assert phi_ck_synthesis_review_active_workstream[
+        "source_and_bridge_rule_synthesis_accepted"
     ] == "yes"
-    assert bridge_functional_embedding_review_active_workstream[
-        "review_prepared"
+    assert phi_ck_synthesis_review_active_workstream[
+        "c_k_instantiated_as_admissibility_rules"
     ] == "yes"
-    assert bridge_functional_embedding_review_active_workstream[
-        "admissibility_rule_closeout_authorized"
+    assert phi_ck_synthesis_review_active_workstream[
+        "c_k_source_permission_role_accepted"
     ] == "yes"
-    assert bridge_functional_embedding_review_active_workstream[
-        "admissibility_rule_closeout_prepared"
+    assert phi_ck_synthesis_review_active_workstream[
+        "c_k_bridge_permission_role_accepted"
+    ] == "yes"
+    assert phi_ck_synthesis_review_active_workstream[
+        "both_rules_admissibility_only"
+    ] == "yes"
+    assert phi_ck_synthesis_review_active_workstream[
+        "both_rules_rule_candidates"
+    ] == "yes"
+    assert phi_ck_synthesis_review_active_workstream[
+        "both_rules_not_action_terms"
+    ] == "yes"
+    assert phi_ck_synthesis_review_active_workstream[
+        "both_rules_not_dynamical_laws"
+    ] == "yes"
+    assert phi_ck_synthesis_review_active_workstream[
+        "neither_rule_derives_phi"
+    ] == "yes"
+    assert phi_ck_synthesis_review_active_workstream[
+        "neither_rule_derives_v_phi"
+    ] == "yes"
+    assert phi_ck_synthesis_review_active_workstream[
+        "synthesis_closeout_authorized"
+    ] == "yes"
+    assert phi_ck_synthesis_review_active_workstream[
+        "synthesis_closeout_prepared"
     ] == "no"
-    assert bridge_functional_embedding_review_active_workstream[
-        "route_consistency_tuple_carried_forward"
-    ] == "yes"
-    assert bridge_functional_embedding_review_active_workstream[
-        "field_equation_match_component_preserved"
-    ] == "yes"
-    assert bridge_functional_embedding_review_active_workstream[
-        "stress_energy_match_component_preserved"
-    ] == "yes"
-    assert bridge_functional_embedding_review_active_workstream[
-        "source_residual_match_component_preserved"
-    ] == "yes"
-    assert bridge_functional_embedding_review_active_workstream[
-        "source_admissibility_context_preserved"
-    ] == "yes"
-    assert bridge_functional_embedding_review_active_workstream[
-        "aggregate_lean_validation_status_for_packet"
-    ] == "INCOMPLETE_TIMEOUT_STEADY_PROGRESS"
-    assert (
-        bridge_functional_embedding_review_active_workstream["claim_level"]
-        == "Level 3 bridge functional-embedding result review accepts admissibility-only route"
-    )
-    assert (
-        bridge_functional_embedding_review_active_workstream["claim_ceiling"]
-        == "result-review acceptance only no action embedding no C_k variation no bridge proof no phi generation no derived potential no QFT-GR closure no master-action promotion"
-    )
-    assert "accepts the admissibility-only route as a bridge" in (
-        bridge_functional_embedding_review_active_workstream["non_claim_boundary"]
-    )
-    assert "does not functionalize C_bridge^phi" in (
-        bridge_functional_embedding_review_active_workstream["non_claim_boundary"]
-    )
-    assert "does not select Lambda_bridge" in (
-        bridge_functional_embedding_review_active_workstream["non_claim_boundary"]
-    )
-    assert "keeps the penalty route not licensed" in (
-        bridge_functional_embedding_review_active_workstream["non_claim_boundary"]
-    )
-    assert "does not prove full bridge admissibility" in (
-        bridge_functional_embedding_review_active_workstream["non_claim_boundary"]
+    assert phi_ck_synthesis_review_active_workstream[
+        "post_closeout_selector_target_recommended"
+    ] == "select_next_ck_constraint_family_after_phi_source_and_bridge_admissibility"
+    assert phi_ck_synthesis_review_active_workstream[
+        "post_closeout_candidate_family_recommended"
+    ] == "transport_consistency_ck_constraint_family"
+    assert phi_ck_synthesis_review_active_workstream[
+        "selector_after_closeout_authorized"
+    ] == "no"
+    assert phi_ck_synthesis_review_active_workstream[
+        "transport_consistency_family_selected"
+    ] == "no"
+    assert phi_ck_synthesis_review_active_workstream[
+        "full_toeformal_aggregate_status_for_packet"
+    ] == "NOT_RUN"
+    assert phi_ck_synthesis_review_active_workstream[
+        "full_toeformal_aggregate_passed"
+    ] == "no"
+    assert phi_ck_synthesis_review_active_workstream[
+        "full_toeformal_aggregate_failed"
+    ] == "no"
+    assert phi_ck_synthesis_review_active_workstream[
+        "full_toeformal_aggregate_timed_out"
+    ] == "no"
+    assert "no action term" in phi_ck_synthesis_review_active_workstream[
+        "non_claim_boundary"
+    ]
+    assert "no C_k variation" in phi_ck_synthesis_review_active_workstream[
+        "non_claim_boundary"
+    ]
+    assert "no dynamical-law claim" in phi_ck_synthesis_review_active_workstream[
+        "non_claim_boundary"
+    ]
+    assert "no native phi derivation" in phi_ck_synthesis_review_active_workstream[
+        "non_claim_boundary"
+    ]
+    assert "no V(phi) derivation" in phi_ck_synthesis_review_active_workstream[
+        "non_claim_boundary"
+    ]
+    assert "no QFT-GR closure" in phi_ck_synthesis_review_active_workstream[
+        "non_claim_boundary"
+    ]
+    assert "no master-action promotion" in phi_ck_synthesis_review_active_workstream[
+        "non_claim_boundary"
+    ]
+    assert "full ToeFormal aggregate is recorded as NOT_RUN" in (
+        phi_ck_synthesis_review_active_workstream["non_claim_boundary"]
     )
     for key in [
+        "selector_after_closeout_authorized",
+        "transport_consistency_family_selected",
+        "another_phi_derivation_selected",
         "constraint_as_action_term_selected",
-        "bridge_functional_selected",
-        "bridge_candidate_recorded_as_action_term",
-        "bridge_candidate_recorded_as_new_dynamical_law",
-        "bridge_candidate_functional_defined",
-        "bridge_candidate_functional_selected",
-        "component_pairing_rule_selected",
-        "multiplier_component_domain_selected",
-        "covariance_of_multiplier_pairing_established",
-        "variation_policy_for_embedding_selected",
-        "penalty_route_licensed",
-        "bridge_candidate_rule_proved",
-        "bridge_admissibility_claimed",
-        "bridge_admissibility_proved",
-        "bridge_route_alignment_verified",
-        "route_consistency_tuple_proved",
-        "field_equation_match_proved",
-        "stress_energy_match_proved",
-        "source_residual_match_proved",
-        "concrete_ck_functional_selected",
-        "concrete_ck_functional_defined",
-        "fully_concrete_ck_functional_selected",
-        "fully_concrete_ck_functional_defined",
+        "dynamical_action_embedding_selected",
+        "dynamical_law_claimed",
+        "candidate_recorded_as_new_physical_law",
+        "candidate_recorded_as_action_term",
         "ck_action_embedding_claimed",
-        "candidate_action_insertion_executed",
         "ck_variation_executed",
         "ck_variation_authorized",
         "lambda_variation_executed",
-        "metric_variation_of_candidate_executed",
-        "phi_variation_of_candidate_executed",
-        "constraint_multiplier_type_selected",
-        "constraint_term_selected",
-        "lambda_nu_domain_selected",
-        "higher_derivative_scope_resolved",
-        "boundary_terms_controlled",
+        "metric_variation_executed",
+        "phi_variation_executed",
+        "bridge_admissibility_proved",
+        "route_alignment_verified",
+        "source_admissibility_proved",
+        "source_conservation_proved",
+        "native_phi_derivation_claimed",
         "phi_generated_by_ck_claimed",
         "phi_generation_theorem_claimed",
-        "native_generation_theorem_claimed",
-        "derived_v_phi_claimed",
         "v_phi_derivation_claimed",
+        "derived_v_phi_claimed",
         "potential_derived",
-        "new_conservation_proof_claimed",
-        "new_source_admissibility_proof_claimed",
-        "source_admissibility_claimed",
-        "source_admissibility_completed",
-        "source_conservation_claimed",
-        "weak_conservation_claimed",
-        "bianchi_compatibility_claimed",
         "qft_gr_solved",
         "qft_gr_closure_claimed",
         "qft_gr_seam_closed",
-        "qft_gr_source_map_closure_authorized",
         "semiclassical_coupling_authorized",
         "semiclassical_coupling_claimed",
         "semiclassical_einstein_equation_derived",
-        "semiclassical_source_established",
         "toe_native_matter_derivation_claimed",
-        "toe_native_matter_sector_derived",
-        "toe_native_matter_sector_defined",
         "standard_model_derivation_claimed",
         "empirical_validation_claimed",
         "public_readiness_claimed",
@@ -3216,15 +3176,99 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "pillar_completion_inferred",
         "seam_closure_claim",
     ]:
-        assert bridge_functional_embedding_review_active_workstream[key] == "no", key
+        assert phi_ck_synthesis_review_active_workstream.get(key, "no") == "no", key
 
-    consumed_bridge_embedding_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_synthesis_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_synthesis_review["status"] == "paused"
+    assert consumed_synthesis_review["review_result"] == (
+        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_ACCEPTS_SOURCE_"
+        "AND_BRIDGE_RULE_SYNTHESIS_NO_ACTION_VARIATION_OR_PROMOTION"
+    )
+    assert consumed_synthesis_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_synthesis_review[
+        "source_rule_synthesis_accepted"
+    ] == "yes"
+    assert consumed_synthesis_review[
+        "bridge_rule_synthesis_accepted"
+    ] == "yes"
+    assert consumed_synthesis_review[
+        "synthesis_closeout_authorized"
+    ] == "yes"
+    assert consumed_synthesis_review[
+        "synthesis_closeout_prepared"
+    ] == "no"
+    assert consumed_synthesis_review[
+        "full_toeformal_aggregate_status_for_packet"
+    ] == "NOT_RUN"
+    assert consumed_synthesis_review["ck_variation_executed"] == "no"
+    assert consumed_synthesis_review["qft_gr_closure_claimed"] == "no"
+    assert consumed_synthesis_review["master_action_promoted"] == "no"
+
+    consumed_synthesis_packet = _workstream(payload, PHI_CK_SYNTHESIS_PACKET_TARGET)
+    assert consumed_synthesis_packet["status"] == "paused"
+    assert consumed_synthesis_packet["packet_result"] == (
+        "PHI_CK_ADMISSIBILITY_RULE_FAMILY_SYNTHESIS_PACKET_PREPARED_SOURCE_AND_"
+        "BRIDGE_RULES_SYNTHESIZED_NO_ACTION_VARIATION_OR_PROMOTION"
+    )
+    assert consumed_synthesis_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_synthesis_packet[
+        "source_admissibility_rule_synthesized"
+    ] == "yes"
+    assert consumed_synthesis_packet[
+        "bridge_admissibility_rule_synthesized"
+    ] == "yes"
+    assert consumed_synthesis_packet[
+        "both_rules_admissibility_only"
+    ] == "yes"
+    assert consumed_synthesis_packet[
+        "both_rules_not_action_terms"
+    ] == "yes"
+    assert consumed_synthesis_packet[
+        "full_toeformal_aggregate_status_for_packet"
+    ] == "NOT_RUN"
+    assert consumed_synthesis_packet["ck_variation_executed"] == "no"
+    assert consumed_synthesis_packet["qft_gr_closure_claimed"] == "no"
+    assert consumed_synthesis_packet["master_action_promoted"] == "no"
+
+    consumed_bridge_closeout = _workstream(payload, PHI_BRIDGE_CLOSEOUT_TARGET)
+    assert consumed_bridge_closeout["status"] == "paused"
+    assert consumed_bridge_closeout["closeout_result"] == (
+        "PHI_BRIDGE_ADMISSIBILITY_CK_ADMISSIBILITY_RULE_CLOSED_AS_ROUTE_"
+        "CONSISTENCY_RULE_NO_ACTION_VARIATION_OR_PROMOTION"
+    )
+    assert consumed_bridge_closeout["selected_next_target"] == PHI_CK_SYNTHESIS_PACKET_TARGET
+    assert consumed_bridge_closeout[
+        "admissibility_rule_closeout_prepared"
+    ] == "yes"
+    assert consumed_bridge_closeout[
+        "second_phi_relevant_ck_admissibility_rule_candidate_closed"
+    ] == "yes"
+    assert consumed_bridge_closeout[
+        "bridge_admissibility_rule_candidate_closed"
+    ] == "yes"
+    assert consumed_bridge_closeout[
+        "rule_family_synthesis_packet_authorized"
+    ] == "yes"
+    assert consumed_bridge_closeout[
+        "rule_family_synthesis_packet_prepared"
+    ] == "no"
+    assert consumed_bridge_closeout["ck_variation_executed"] == "no"
+    assert consumed_bridge_closeout["bridge_admissibility_proved"] == "no"
+    assert consumed_bridge_closeout["qft_gr_closure_claimed"] == "no"
+    assert consumed_bridge_closeout["master_action_promoted"] == "no"
+
+    consumed_bridge_embedding_review = _workstream(
+        payload, BRIDGE_FUNCTIONAL_EMBEDDING_REVIEW_TARGET
+    )
     assert consumed_bridge_embedding_review["status"] == "paused"
     assert consumed_bridge_embedding_review["review_result"] == (
         "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_ACCEPTS_"
         "ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_PROMOTION"
     )
-    assert consumed_bridge_embedding_review["selected_next_target"] == LIVE_TARGET
+    assert (
+        consumed_bridge_embedding_review["selected_next_target"]
+        == PHI_BRIDGE_CLOSEOUT_TARGET
+    )
     assert consumed_bridge_embedding_review["admissibility_rule_closeout_authorized"] == "yes"
     assert consumed_bridge_embedding_review["admissibility_rule_closeout_prepared"] == "no"
     assert consumed_bridge_embedding_review["admissibility_only_route_selected"] == "yes"
@@ -3243,7 +3287,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "PHI_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_OPTIONS_RECORDED_"
         "ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
     )
-    assert consumed_bridge_embedding_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_bridge_embedding_packet["selected_next_target"] == (
+        BRIDGE_FUNCTIONAL_EMBEDDING_REVIEW_TARGET
+    )
     assert consumed_bridge_embedding_packet["bridge_candidate_id"] == (
         "phi_bridge_route_consistency_ck_candidate"
     )
@@ -9733,7 +9779,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        bridge_functional_embedding_review_active_workstream[
+        phi_ck_synthesis_review_active_workstream[
             "authorized_next_strict_target"
         ],
     }
