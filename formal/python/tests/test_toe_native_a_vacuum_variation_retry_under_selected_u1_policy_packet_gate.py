@@ -287,7 +287,7 @@ def test_a_vacuum_variation_retry_packet_lean_and_surface_mirrors() -> None:
         "nabla_mu F^{mu nu} = 0",
         "delta F_{mu nu}",
         "compact-support or fixed-boundary variation",
-        "current route nabla_mu F^{mu nu} = J^nu remains route shape only",
+        "nabla_mu F^{mu nu} = J^nu remains route shape only",
         "A-relevant C_k",
         "does not close QFT-GR",
         "master-action promotion remain blocked",
