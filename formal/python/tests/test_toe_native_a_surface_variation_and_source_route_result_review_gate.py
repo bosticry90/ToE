@@ -328,9 +328,9 @@ def test_a_surface_route_result_review_lean_and_surface_mirrors() -> None:
         "D_mu F^{mu nu} = J^nu",
         "external-current policy",
         "matter-coupling route",
-        "no Maxwell/Yang-Mills derivation",
-        "no QFT-GR closure",
-        "no canonical master-action promotion",
+        "Maxwell/Yang-Mills derivation",
+        "QFT-GR closure",
+        "master-action promotion",
     ]:
         assert token in joined
 

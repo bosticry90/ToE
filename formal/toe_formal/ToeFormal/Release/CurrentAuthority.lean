@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_toe_native_A_gauge_group_domain_and_current_policy_packet" := by
+      "prepare_toe_native_A_vacuum_variation_retry_under_selected_u1_policy" := by
   rfl
 
 end CurrentAuthority

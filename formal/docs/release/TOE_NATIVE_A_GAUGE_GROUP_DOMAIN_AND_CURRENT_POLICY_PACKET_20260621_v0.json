@@ -1,0 +1,345 @@
+{
+  "A_as_smooth_real_one_form_selected": true,
+  "A_field_domain_policy": "smooth real 1-form A on the selected spacetime domain",
+  "A_relevant_C_k_rules_constructed": false,
+  "A_source_admissibility_proved": false,
+  "C_k_analogues_constructed": false,
+  "F_definition_policy": "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+  "a_gauge_policy_decision": "U1_ROUTE_SELECTED_CURRENT_DERIVATION_STILL_BLOCKED",
+  "a_gauge_policy_packet_result": "TOE_NATIVE_A_GAUGE_GROUP_DOMAIN_AND_CURRENT_POLICY_PACKET_PREPARED_U1_ROUTE_SELECTED_CURRENT_DERIVATION_STILL_BLOCKED",
+  "a_surface_variation_executed": false,
+  "a_surface_variation_route_executed": false,
+  "abelian_covariant_divergence_selected": true,
+  "acceptance_criteria": {
+    "A_domain_policy_selected": true,
+    "F_definition_selected": true,
+    "abelian_derivative_convention_selected": true,
+    "boundary_variation_policy_selected": true,
+    "consumes_expected_gauge_policy_packet_target": true,
+    "current_derivation_still_blocked": true,
+    "next_target_is_vacuum_variation_retry": true,
+    "no_derivation_or_closure_claim": true,
+    "pure_gauge_vacuum_route_selected": true,
+    "raw_routes_preserved_from_review": true,
+    "review_criteria_all_accepted": true,
+    "u1_abelian_route_selected": true
+  },
+  "accepted": true,
+  "artifact_id": "TOE_NATIVE_A_GAUGE_GROUP_DOMAIN_AND_CURRENT_POLICY_PACKET_20260621_v0",
+  "boundary_terms_controlled": false,
+  "boundary_variation_policy_selected": true,
+  "bundle_domain_for_A_selected": true,
+  "canonical_master_action_promoted": false,
+  "captured_at_utc": "2026-06-21T00:00:00Z",
+  "ck_role_policy": "C_k remains the compatibility, bridge-admissibility, and transport-consistency layer; no A-relevant C_k rules are constructed here",
+  "consumed_target": "prepare_toe_native_A_gauge_group_domain_and_current_policy_packet",
+  "covariant_derivative_D_mu_convention_selected": false,
+  "critical_gate_fail_conditions": [
+    "treat U(1) policy selection as a Maxwell derivation",
+    "derive J^nu without external-current or matter-coupling policy",
+    "claim current conservation",
+    "select gauge fixing as physical structure",
+    "select a non-Abelian gauge route",
+    "derive T_A or A-source admissibility",
+    "construct A-relevant C_k rules",
+    "claim EM or QFT-GR closure",
+    "promote the working-form master action",
+    "claim empirical validation, public readiness, or release completion"
+  ],
+  "current_conservation_proved": false,
+  "current_derivation_blocked": true,
+  "current_policy": "current route shape recorded; current derivation blocked; psi-derived current deferred; external current not selected as native derivation",
+  "current_route_derived": false,
+  "current_route_shape": "nabla_mu F^{mu nu} = J^nu",
+  "current_route_shape_recorded": true,
+  "current_source_route_constructed": false,
+  "deferred_A_ck_rule_target": "prepare_toe_native_A_relevant_ck_rule_family_packet",
+  "deferred_current_policy_target": "prepare_toe_native_A_current_coupling_policy_packet",
+  "definition_of_F_selected": true,
+  "derivative_convention_policy": "Abelian route uses exterior derivative d for F and Levi-Civita divergence nabla_mu F^{mu nu}; non-Abelian gauge-covariant D_mu is not selected",
+  "downstream_progression": [
+    {
+      "decision": "U1_ROUTE_SELECTED_CURRENT_DERIVATION_STILL_BLOCKED",
+      "reason": "The minimal Abelian policy is fixed for the first A route, while current coupling remains unselected.",
+      "stage": "A_gauge_group_domain_current_policy_packet",
+      "status": "U1_ROUTE_SELECTED_CURRENT_DERIVATION_STILL_BLOCKED"
+    },
+    {
+      "decision": "prepare_toe_native_A_vacuum_variation_retry_under_selected_u1_policy",
+      "reason": "The next packet may test the pure gauge vacuum route under the selected U(1), A-domain, F-definition, derivative, and boundary-variation policy.",
+      "stage": "A_vacuum_variation_retry_under_selected_u1_policy",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    },
+    {
+      "decision": "prepare_toe_native_A_current_coupling_policy_packet",
+      "reason": "J^nu requires external-current or psi/A matter-coupling policy.",
+      "stage": "A_current_coupling_policy",
+      "status": "RETAINED_DEFERRED"
+    },
+    {
+      "decision": "prepare_toe_native_A_relevant_ck_rule_family_packet",
+      "reason": "A-specific C_k source/bridge/transport rules are not constructed here.",
+      "stage": "A_relevant_C_k_rule_family",
+      "status": "RETAINED_DEFERRED"
+    }
+  ],
+  "em_closure_claimed": false,
+  "em_qft_closure_claimed": false,
+  "empirical_validation_claimed": false,
+  "external_current_not_selected_as_native_derivation": true,
+  "external_current_policy_selected": false,
+  "field_equations_derived": false,
+  "formal_theorem_backed_gauge_derivation": false,
+  "gauge_covariant_D_mu_route_selected": false,
+  "gauge_current_constraint_proved": false,
+  "gauge_field_derived": false,
+  "gauge_fixing_policy": "no gauge fixing selected as physical structure; gauge equivalence handling is deferred",
+  "gauge_fixing_selected": false,
+  "gauge_fixing_selected_as_physical_structure": false,
+  "gauge_group_policy": "U(1) / Abelian test route",
+  "gauge_surface_derived": false,
+  "lane_level_lean_target_files": [
+    "formal/toe_formal/ToeFormal/Derivation/ToeNativeAGaugeGroupDomainAndCurrentPolicyPacket.lean",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  ],
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.ToeNativeAGaugeGroupDomainAndCurrentPolicyPacket",
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativeAGaugeGroupDomainAndCurrentPolicyPacket.lean",
+  "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "This policy packet fixes the first ToE-native A-route calculation policy as a minimal U(1)/Abelian test route: A is a smooth real 1-form on the selected spacetime domain, F = dA with components F_{mu nu} = partial_mu A_nu - partial_nu A_mu, and the Abelian vacuum route uses nabla_mu F^{mu nu}. Compact-support or fixed-boundary variation is selected for the future vacuum retry. The source-current equation nabla_mu F^{mu nu} = J^nu remains route shape only because no external-current policy or psi/A matter-coupling current is selected.",
+  "matter_current_J_nu_derived": false,
+  "maxwell_equation_derived": false,
+  "maxwell_equations_derived": false,
+  "minimal_abelian_route_selected": true,
+  "native_derivation_blocked": true,
+  "non_claim_boundary": "This policy packet selects the minimal Abelian U(1) test route only. It does not derive Maxwell equations, does not derive J^nu, does not prove current conservation, does not select gauge fixing as physical structure, does not select a non-Abelian route, does not derive stress-energy T_A, does not prove A-source admissibility, does not construct A-relevant C_k rules, does not close EM, does not close QFT-GR, does not authorize semiclassical coupling, does not promote the master action, does not claim empirical validation, and does not authorize public readiness or release completion.",
+  "nonabelian_route_selected": false,
+  "outcome_id": "TOE_NATIVE_A_GAUGE_GROUP_DOMAIN_AND_CURRENT_POLICY_PACKET_PREPARED_U1_ROUTE_SELECTED_CURRENT_DERIVATION_STILL_BLOCKED",
+  "packet_classification": "toe_native_A_gauge_group_domain_and_current_policy_packet_selects_minimal_u1_vacuum_route_and_blocks_current_derivation",
+  "packet_id": "TOE_NATIVE_A_GAUGE_GROUP_DOMAIN_AND_CURRENT_POLICY_PACKET_v0",
+  "phase2_readiness_claim": false,
+  "pillar_completion_inferred": false,
+  "policy_blocked_count": 2,
+  "policy_contract_recorded": true,
+  "policy_item_count": 9,
+  "policy_items": [
+    {
+      "decision": "U(1) / Abelian test route",
+      "policy_id": "gauge_group",
+      "reason": "The first A route uses the minimal Abelian test surface.",
+      "status": "selected_nonpromotionally"
+    },
+    {
+      "decision": "smooth real 1-form A on the selected spacetime domain",
+      "policy_id": "A_field_domain",
+      "reason": "The vacuum route needs a smooth 1-form calculation domain.",
+      "status": "selected_for_packet_calculation"
+    },
+    {
+      "decision": "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+      "policy_id": "F_definition",
+      "reason": "The U(1) route fixes F as dA without non-Abelian curvature terms.",
+      "status": "selected_for_abelian_route"
+    },
+    {
+      "decision": "Abelian route uses exterior derivative d for F and Levi-Civita divergence nabla_mu F^{mu nu}; non-Abelian gauge-covariant D_mu is not selected",
+      "policy_id": "derivative_convention",
+      "reason": "The packet selects nabla_mu F^{mu nu} for the Abelian route only.",
+      "status": "selected_for_abelian_vacuum_route"
+    },
+    {
+      "decision": "compact-support or fixed-boundary variation",
+      "policy_id": "boundary_variation_policy",
+      "reason": "The future variation retry needs boundary terms fixed or removed.",
+      "status": "selected_for_future_variation_retry"
+    },
+    {
+      "decision": "nabla_mu F^{mu nu} = 0",
+      "policy_id": "pure_gauge_equation_route",
+      "reason": "The pure gauge term naturally routes to the vacuum equation shape.",
+      "status": "selected_as_future_vacuum_route_shape_not_derived"
+    },
+    {
+      "decision": "current route shape recorded; current derivation blocked; psi-derived current deferred; external current not selected as native derivation",
+      "policy_id": "current_policy",
+      "reason": "A source equation requires external current or matter coupling.",
+      "status": "blocked_pending_external_or_matter_coupling_policy"
+    },
+    {
+      "decision": "no gauge fixing selected as physical structure; gauge equivalence handling is deferred",
+      "policy_id": "gauge_fixing_status",
+      "reason": "Gauge fixing is not physical structure for this policy packet.",
+      "status": "not_selected_as_physical_structure"
+    },
+    {
+      "decision": "C_k remains the compatibility, bridge-admissibility, and transport-consistency layer; no A-relevant C_k rules are constructed here",
+      "policy_id": "A_relevant_C_k_role",
+      "reason": "C_k content remains a separate compatibility/admissibility task.",
+      "status": "blocked_pending_A_relevant_ck_rule_construction"
+    }
+  ],
+  "policy_selected_count": 7,
+  "policy_status": "minimal_abelian_policy_selected_current_derivation_blocked",
+  "prepared": true,
+  "proof_depth_label": "POLICY_SELECTION_RECORDED_NO_GAUGE_DERIVATION",
+  "psi_derived_current_deferred": true,
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "pure_gauge_equation_route": "nabla_mu F^{mu nu} = 0",
+  "pure_gauge_vacuum_route_selected": true,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_solved": false,
+  "qft_gr_source_map_closure_authorized": false,
+  "record_validated": true,
+  "review_criteria": [
+    {
+      "assessment": "The A route result review authorized this policy packet.",
+      "evidence": "prepare_toe_native_A_gauge_group_domain_and_current_policy_packet",
+      "row_id": "consumes_expected_gauge_policy_packet_target",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet selects the minimal U(1)/Abelian test route.",
+      "evidence": "U(1) / Abelian test route",
+      "row_id": "u1_abelian_route_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "A is treated as a smooth real 1-form on the selected domain.",
+      "evidence": "smooth real 1-form A on the selected spacetime domain",
+      "row_id": "A_smooth_real_one_form_domain_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "F is fixed as dA in component form.",
+      "evidence": "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+      "row_id": "F_definition_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The Abelian divergence route is selected; non-Abelian D_mu is not.",
+      "evidence": "Abelian route uses exterior derivative d for F and Levi-Civita divergence nabla_mu F^{mu nu}; non-Abelian gauge-covariant D_mu is not selected",
+      "row_id": "abelian_derivative_convention_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Compact-support or fixed-boundary variation is selected.",
+      "evidence": "compact-support or fixed-boundary variation",
+      "row_id": "boundary_variation_policy_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The vacuum route shape is recorded for the future retry.",
+      "evidence": "nabla_mu F^{mu nu} = 0",
+      "row_id": "pure_gauge_vacuum_route_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The source-current route remains shape only.",
+      "evidence": "nabla_mu F^{mu nu} = J^nu",
+      "row_id": "current_route_shape_recorded_derivation_blocked",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No external current policy is admitted as native derivation.",
+      "evidence": "external_current_policy_selected=false",
+      "row_id": "external_current_not_selected_as_native_derivation",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Matter-derived current from psi/A coupling is deferred.",
+      "evidence": "psi_derived_current_deferred=true",
+      "row_id": "psi_derived_current_deferred",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet does not select a non-Abelian gauge route.",
+      "evidence": "nonabelian_route_selected=false",
+      "row_id": "nonabelian_route_not_selected",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Gauge fixing is not selected as physical structure.",
+      "evidence": "no gauge fixing selected as physical structure; gauge equivalence handling is deferred",
+      "row_id": "gauge_fixing_not_selected_as_physical_structure",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The packet remains policy-only and nonpromotional.",
+      "evidence": [
+        "maxwell_equation_derived=false",
+        "current_conservation_proved=false",
+        "em_closure_claimed=false",
+        "master_action_promoted=false"
+      ],
+      "row_id": "no_derivation_closure_or_promotion",
+      "status": "accepted"
+    }
+  ],
+  "review_criteria_accepted_count": 13,
+  "review_criteria_count": 13,
+  "review_result": "TOE_NATIVE_A_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_GAUGE_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_GAUGE_GROUP_CURRENT_DOMAIN_AND_CK_CONTENT",
+  "reviewed_a_route_result_review_artifact_id": "TOE_NATIVE_A_SURFACE_VARIATION_AND_SOURCE_ROUTE_RESULT_REVIEW_20260621_v0",
+  "reviewed_a_route_result_review_outcome": "TOE_NATIVE_A_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_GAUGE_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_GAUGE_GROUP_CURRENT_DOMAIN_AND_CK_CONTENT",
+  "schema_id": "TOE_NATIVE_A_GAUGE_GROUP_DOMAIN_AND_CURRENT_POLICY_PACKET_20260621_v0",
+  "seam_closure_claim": false,
+  "selected_gauge_group": "U(1)",
+  "selected_next_target": "prepare_toe_native_A_vacuum_variation_retry_under_selected_u1_policy",
+  "selected_next_target_kind": "toe_native_A_vacuum_variation_retry_under_selected_u1_policy_packet_preparation",
+  "semiclassical_coupling_authorized": false,
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_source_established": false,
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "source_admissibility_proved": false,
+  "source_bridge_transport_ck_analogues_constructed": false,
+  "source_form_route_shape": "nabla_mu F^{mu nu} = J^nu",
+  "source_map_closed": false,
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_A_GAUGE_GROUP_DOMAIN_CURRENT_POLICY_PACKET",
+  "stress_energy_T_A_derived": false,
+  "stress_energy_route_constructed": false,
+  "stress_energy_source_admissibility_proved": false,
+  "symbolic_calculation_recorded": false,
+  "toe_native_A_current_conservation_claimed": false,
+  "toe_native_A_source_admissibility_claimed": false,
+  "toe_native_A_source_route_constructed": false,
+  "toe_native_gauge_derivation_claimed": false,
+  "toe_native_matter_derivation_claimed": false,
+  "u1_route_selected": true,
+  "vacuum_variation_retry_authorized": true,
+  "vacuum_variation_retry_executed": false,
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+    "aggregate_timeout_with_steady_progress_interpretation": "incomplete_validation_not_mathematical_failure",
+    "checkpoint_type": "toe_native_A_gauge_group_domain_and_current_policy_packet",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  },
+  "variation_policy": "compact-support or fixed-boundary variation",
+  "yang_mills_equations_derived": false
+}
