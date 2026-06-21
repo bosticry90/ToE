@@ -1,0 +1,328 @@
+{
+  "A_as_smooth_real_one_form_selected": true,
+  "A_field_domain_policy": "smooth real 1-form A on the selected spacetime domain",
+  "A_relevant_C_k_rules_constructed": false,
+  "A_source_admissibility_proved": false,
+  "C_k_analogues_constructed": false,
+  "F_contraction_variation_route": "delta_g(F_{alpha beta} F^{alpha beta}) = 2 F_{mu alpha} F_{nu}{}^{alpha} k^{mu nu}",
+  "F_contraction_variation_route_recorded": true,
+  "F_definition_policy": "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+  "F_definition_used": true,
+  "J_nu_derived": false,
+  "a_route_selector_outcome": "TOE_NATIVE_A_ROUTE_SELECTION_AFTER_VACUUM_U1_VARIATION_SELECTS_STRESS_ENERGY_ROUTE_NO_CURRENT_DERIVATION_OR_EM_CLOSURE",
+  "a_stress_energy_route_result": "GAUGE_STRESS_ENERGY_ROUTE_RECORDED_NO_SOURCE_ADMISSIBILITY_OR_EM_CLOSURE",
+  "acceptance_criteria": {
+    "consumes_expected_stress_energy_target": true,
+    "convention_scope_retained": true,
+    "current_route_still_blocked": true,
+    "metric_signature_tied": true,
+    "next_target_is_result_review": true,
+    "review_criteria_all_accepted": true,
+    "selected_u1_policy_preserved": true,
+    "selector_authorized_packet_preparation_only": true,
+    "source_admissibility_and_closure_still_blocked": true,
+    "stress_energy_sign_pattern_recorded": true
+  },
+  "accepted": true,
+  "artifact_id": "TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_PACKET_20260621_v0",
+  "calculation_step_count": 9,
+  "calculation_steps": [
+    {
+      "mathematical_content": "S_A[A,g] = integral_M dVol_g [-1/4 F_{alpha beta} F^{alpha beta}]",
+      "status": "recorded",
+      "step_id": "state_selected_u1_gauge_action"
+    },
+    {
+      "mathematical_content": {
+        "A_domain": "smooth real 1-form A on the selected spacetime domain",
+        "F_definition": "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+        "gauge_group": "U(1) / Abelian test route",
+        "metric_signature": "(+,-,-,-)"
+      },
+      "status": "recorded",
+      "step_id": "preserve_selected_u1_policy"
+    },
+    {
+      "mathematical_content": "vary inverse metric k^{mu nu}=delta g^{mu nu}, hold A and F_{alpha beta}=dA fixed as a covariant 2-form, and define T^A_{mu nu}=2/sqrt(-g) delta S_A/delta g^{mu nu}",
+      "status": "recorded",
+      "step_id": "state_metric_variation_convention"
+    },
+    {
+      "mathematical_content": "delta_g dVol_g = -1/2 dVol_g g_{mu nu} k^{mu nu}",
+      "status": "computed_under_selected_convention",
+      "step_id": "vary_volume_form"
+    },
+    {
+      "mathematical_content": "delta_g(F_{alpha beta} F^{alpha beta}) = 2 F_{mu alpha} F_{nu}{}^{alpha} k^{mu nu}",
+      "status": "computed_under_selected_convention",
+      "step_id": "vary_raised_F_contraction"
+    },
+    {
+      "mathematical_content": "delta_g S_A(k) = 1/2 integral_M dVol_g T^A_{mu nu} k^{mu nu}",
+      "status": "computed_under_selected_convention",
+      "step_id": "read_metric_variation_form"
+    },
+    {
+      "mathematical_content": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+      "status": "stress_energy_route_recorded",
+      "step_id": "record_gauge_stress_energy_route"
+    },
+    {
+      "mathematical_content": "convention-sensitive under (+,-,-,-) and T^A_{mu nu}=2/sqrt(-g) delta S_A/delta g^{mu nu}; the sign pattern must be revisited if the metric signature or stress-tensor definition changes",
+      "status": "convention_scope_retained",
+      "step_id": "record_convention_scope"
+    },
+    {
+      "mathematical_content": "J^nu not derived; no current conservation; no source admissibility; no A-relevant C_k; no EM or QFT-GR closure",
+      "status": "retained",
+      "step_id": "retain_current_ck_closure_blockers"
+    }
+  ],
+  "canonical_master_action_promoted": false,
+  "captured_at_utc": "2026-06-21T00:00:00Z",
+  "consumed_target": "prepare_toe_native_A_stress_energy_route_under_selected_u1_policy",
+  "convention_scope": "convention-sensitive under (+,-,-,-) and T^A_{mu nu}=2/sqrt(-g) delta S_A/delta g^{mu nu}; the sign pattern must be revisited if the metric signature or stress-tensor definition changes",
+  "critical_gate_fail_conditions": [
+    "treat T_A as source-admissible without a source-admissibility rule",
+    "derive J^nu or a psi-current",
+    "admit an external current as native derivation",
+    "prove current conservation",
+    "construct A-relevant C_k rules",
+    "claim sourced Maxwell closure",
+    "claim EM closure",
+    "claim QFT-GR closure",
+    "authorize semiclassical coupling",
+    "promote the working-form master action",
+    "claim empirical validation, public readiness, or release completion"
+  ],
+  "current_conservation_proved": false,
+  "current_derivation_blocked": true,
+  "current_route_derived": false,
+  "current_source_route_constructed": false,
+  "delta_F_form": "delta F_{mu nu} = partial_mu delta A_nu - partial_nu delta A_mu",
+  "downstream_progression": [
+    {
+      "decision": "GAUGE_STRESS_ENERGY_ROUTE_RECORDED_NO_SOURCE_ADMISSIBILITY_OR_EM_CLOSURE",
+      "reason": "Metric variation of the pure U(1) gauge action records the convention-dependent T^A route.",
+      "stage": "A_stress_energy_route_under_selected_u1_policy",
+      "status": "GAUGE_STRESS_ENERGY_ROUTE_RECORDED"
+    },
+    {
+      "decision": "review_toe_native_A_stress_energy_route_under_selected_u1_policy_result",
+      "reason": "The route should be reviewed before source admissibility, current coupling, or A-relevant C_k work.",
+      "stage": "result_review",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    }
+  ],
+  "em_closure_claimed": false,
+  "em_qft_closure_claimed": false,
+  "empirical_validation_claimed": false,
+  "external_current_native_derivation_selected": false,
+  "external_current_policy_selected": false,
+  "field_equations_derived": false,
+  "formal_theorem_backed_gauge_derivation": false,
+  "gauge_current_constraint_proved": false,
+  "gauge_field_derived": false,
+  "gauge_fixing_selected": false,
+  "gauge_fixing_selected_as_physical_structure": false,
+  "gauge_group_policy": "U(1) / Abelian test route",
+  "gauge_stress_energy_route": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+  "gauge_stress_energy_route_recorded": true,
+  "gauge_surface_derived": false,
+  "lane_level_lean_target_files": [
+    "formal/toe_formal/ToeFormal/Derivation/ToeNativeAStressEnergyRouteUnderSelectedU1PolicyPacket.lean",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  ],
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.ToeNativeAStressEnergyRouteUnderSelectedU1PolicyPacket",
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativeAStressEnergyRouteUnderSelectedU1PolicyPacket.lean",
+  "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "Under the selected U(1) policy with A a smooth real 1-form, F=dA, and the (+,-,-,-) metric convention, metric variation of S_A = integral dVol_g[-1/4 F_{alpha beta}F^{alpha beta}] with A and covariant F held fixed records T^A_{mu nu} = - F_{mu alpha}F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta}F^{alpha beta}. This is convention-sensitive and does not by itself prove source admissibility or closure.",
+  "matter_current_J_nu_derived": false,
+  "maxwell_equation_derived": false,
+  "maxwell_equations_derived": false,
+  "metric_signature_policy": "(+,-,-,-)",
+  "metric_signature_policy_used": true,
+  "metric_variation_computed": true,
+  "metric_variation_convention": "vary inverse metric k^{mu nu}=delta g^{mu nu}, hold A and F_{alpha beta}=dA fixed as a covariant 2-form, and define T^A_{mu nu}=2/sqrt(-g) delta S_A/delta g^{mu nu}",
+  "metric_variation_convention_recorded": true,
+  "metric_variation_form": "delta_g S_A(k) = 1/2 integral_M dVol_g T^A_{mu nu} k^{mu nu}",
+  "metric_variation_route_recorded": true,
+  "minimal_abelian_route_selected": true,
+  "non_claim_boundary": "This packet records the convention-sensitive U(1) gauge stress-energy route only. It does not derive J^nu, does not derive a psi-current route, does not select an external current as native derivation, does not prove current conservation, does not prove A-source admissibility, does not construct A-relevant C_k rules, does not claim sourced Maxwell closure, does not close EM, does not close QFT-GR, does not authorize semiclassical coupling, does not promote the master action, does not claim empirical validation, and does not authorize public readiness or release completion.",
+  "nonabelian_route_selected": false,
+  "outcome_id": "TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_PACKET_PREPARED_GAUGE_STRESS_ENERGY_ROUTE_RECORDED_NO_SOURCE_ADMISSIBILITY_OR_EM_CLOSURE",
+  "packet_classification": "toe_native_A_stress_energy_route_under_selected_u1_policy_records_gauge_stress_energy_route_no_source_admissibility_or_em_closure",
+  "packet_id": "TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_PACKET_v0",
+  "phase2_readiness_claim": false,
+  "pillar_completion_inferred": false,
+  "positive_energy_density_sign_check": "for the selected (+,-,-,-) convention this sign pattern is the usual positive electromagnetic energy-density route shape",
+  "prepared": true,
+  "proof_depth_label": "SYMBOLIC_U1_GAUGE_STRESS_ENERGY_ROUTE_RECORDED_NO_SOURCE_ADMISSIBILITY",
+  "psi_current_route_constructed": false,
+  "psi_derived_current": false,
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_solved": false,
+  "qft_gr_source_map_closure_authorized": false,
+  "record_validated": true,
+  "review_criteria": [
+    {
+      "assessment": "The A route selector authorized this stress-energy packet.",
+      "evidence": "prepare_toe_native_A_stress_energy_route_under_selected_u1_policy",
+      "row_id": "consumes_expected_stress_energy_target",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The route remains the selected minimal U(1) route.",
+      "evidence": [
+        "U(1) / Abelian test route",
+        "smooth real 1-form A on the selected spacetime domain",
+        "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu"
+      ],
+      "row_id": "selected_u1_policy_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The stress-energy sign convention is tied to (+,-,-,-).",
+      "evidence": "(+,-,-,-)",
+      "row_id": "metric_signature_policy_tied",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The pure gauge metric-variation surface is explicit.",
+      "evidence": "S_A[A,g] = integral_M dVol_g [-1/4 F_{alpha beta} F^{alpha beta}]",
+      "row_id": "gauge_action_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The inverse-metric variation convention is explicit.",
+      "evidence": "vary inverse metric k^{mu nu}=delta g^{mu nu}, hold A and F_{alpha beta}=dA fixed as a covariant 2-form, and define T^A_{mu nu}=2/sqrt(-g) delta S_A/delta g^{mu nu}",
+      "row_id": "metric_variation_convention_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The volume-form variation contribution is recorded.",
+      "evidence": "delta_g dVol_g = -1/2 dVol_g g_{mu nu} k^{mu nu}",
+      "row_id": "volume_variation_route_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The metric variation of raised F indices is recorded.",
+      "evidence": "delta_g(F_{alpha beta} F^{alpha beta}) = 2 F_{mu alpha} F_{nu}{}^{alpha} k^{mu nu}",
+      "row_id": "F_contraction_variation_route_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The convention-dependent gauge stress-energy route is recorded.",
+      "evidence": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+      "row_id": "gauge_stress_energy_route_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The prior vacuum U(1) field-equation route is preserved.",
+      "evidence": "nabla_mu F^{mu nu} = 0",
+      "row_id": "vacuum_field_route_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The sourced-current route remains blocked shape only.",
+      "evidence": "nabla_mu F^{mu nu} = J^nu",
+      "row_id": "current_route_still_blocked",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No source admissibility, C_k, closure, or promotion follows.",
+      "evidence": [
+        "A_source_admissibility_proved=false",
+        "A_relevant_C_k_rules_constructed=false",
+        "em_closure_claimed=false",
+        "qft_gr_closure_claimed=false"
+      ],
+      "row_id": "source_admissibility_ck_and_closure_not_claimed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The stress-energy route is routed to review.",
+      "evidence": "review_toe_native_A_stress_energy_route_under_selected_u1_policy_result",
+      "row_id": "next_review_authorized",
+      "status": "accepted"
+    }
+  ],
+  "review_criteria_accepted_count": 12,
+  "review_criteria_count": 12,
+  "reviewed_a_route_selector_artifact_id": "TOE_NATIVE_A_ROUTE_SELECTION_AFTER_VACUUM_U1_VARIATION_20260621_v0",
+  "reviewed_a_route_selector_outcome": "TOE_NATIVE_A_ROUTE_SELECTION_AFTER_VACUUM_U1_VARIATION_SELECTS_STRESS_ENERGY_ROUTE_NO_CURRENT_DERIVATION_OR_EM_CLOSURE",
+  "schema_id": "TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_PACKET_20260621_v0",
+  "seam_closure_claim": false,
+  "selected_A_stress_energy_action": "S_A[A,g] = integral_M dVol_g [-1/4 F_{alpha beta} F^{alpha beta}]",
+  "selected_next_target": "review_toe_native_A_stress_energy_route_under_selected_u1_policy_result",
+  "selected_next_target_kind": "toe_native_A_stress_energy_route_under_selected_u1_policy_result_review",
+  "semiclassical_coupling_authorized": false,
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_source_established": false,
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "source_admissibility_proved": false,
+  "source_bridge_transport_ck_analogues_constructed": false,
+  "source_current_route_still_blocked": true,
+  "source_map_closed": false,
+  "source_route_still_blocked": "nabla_mu F^{mu nu} = J^nu",
+  "sourced_maxwell_equation_derived": false,
+  "status": "ACTIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_PACKET",
+  "stress_energy_T_A_derived": true,
+  "stress_energy_T_A_recorded": true,
+  "stress_energy_as_gravity_source_authorized": false,
+  "stress_energy_derivation_executed": true,
+  "stress_energy_positive_energy_density_sign_shape_recorded": true,
+  "stress_energy_route_constructed": true,
+  "stress_energy_route_convention_sensitive": true,
+  "stress_energy_route_recorded": true,
+  "stress_energy_route_result": "GAUGE_STRESS_ENERGY_ROUTE_RECORDED_NO_SOURCE_ADMISSIBILITY_OR_EM_CLOSURE",
+  "stress_energy_sign_convention_verified_explicitly": true,
+  "stress_energy_source_admissibility_proved": false,
+  "stress_energy_under_selected_u1_policy": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+  "symbolic_calculation_recorded": true,
+  "toe_native_A_current_conservation_claimed": false,
+  "toe_native_A_source_admissibility_claimed": false,
+  "toe_native_A_source_route_constructed": false,
+  "toe_native_gauge_derivation_claimed": false,
+  "u1_policy_used": true,
+  "vacuum_euler_lagrange_route": "nabla_mu F^{mu nu} = 0",
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+    "aggregate_timeout_with_steady_progress_interpretation": "incomplete_validation_not_mathematical_failure",
+    "checkpoint_type": "toe_native_A_stress_energy_route_under_selected_u1_policy_packet",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  },
+  "variation_policy": "compact-support or fixed-boundary variation",
+  "volume_variation_route": "delta_g dVol_g = -1/2 dVol_g g_{mu nu} k^{mu nu}",
+  "volume_variation_route_recorded": true,
+  "yang_mills_equations_derived": false
+}

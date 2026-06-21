@@ -269,8 +269,10 @@ def test_a_route_selection_after_vacuum_u1_mirrors() -> None:
         NEXT_TARGET,
         SELECTED_ROUTE_ID,
         "ToeNativeARouteSelectionAfterVacuumU1Variation",
-        "CURRENT_LIVE_NEXT_TARGET_v0: prepare_toe_native_A_stress_energy_route_under_selected_u1_policy",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_toe_native_A_route_after_vacuum_u1_variation",
+        "HISTORICAL_TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_PACKET_CURRENT_LIVE_NEXT_TARGET_v0: "
+        "prepare_toe_native_A_stress_energy_route_under_selected_u1_policy",
+        "HISTORICAL_TOE_NATIVE_A_ROUTE_SELECTION_AFTER_VACUUM_U1_VARIATION_CURRENT_LIVE_NEXT_TARGET_v0: "
+        "select_next_toe_native_A_route_after_vacuum_u1_variation",
         "A_current_coupling_route",
         "A_current_conservation_route",
         "A_relevant_C_k_source_bridge_transport_route",

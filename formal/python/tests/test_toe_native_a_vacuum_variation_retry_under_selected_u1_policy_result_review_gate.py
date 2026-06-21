@@ -289,7 +289,8 @@ def test_a_vacuum_variation_retry_result_review_lean_and_surface_mirrors() -> No
         "vacuum U(1) gauge route only",
         "nabla_mu F^{mu nu} = 0",
         "nabla_mu F^{mu nu} = J^nu remains route shape only",
-        "stress-energy route as the next preparation target",
+        "HISTORICAL_TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_PACKET_CURRENT_LIVE_NEXT_TARGET_v0: "
+        "prepare_toe_native_A_stress_energy_route_under_selected_u1_policy",
         "does not close QFT-GR",
         "master-action promotion remain blocked",
     ]:
