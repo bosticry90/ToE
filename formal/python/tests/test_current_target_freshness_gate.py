@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "review_toe_native_A_surface_variation_and_source_route_result"
+ACTIVE_LANE = "prepare_toe_native_A_gauge_group_domain_and_current_policy_packet"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,8 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "prepare_toe_native_A_surface_variation_and_source_route_packet"
+PREVIOUS_LIVE_TARGET = "review_toe_native_A_surface_variation_and_source_route_result"
+A_SURFACE_ROUTE_PACKET_TARGET = "prepare_toe_native_A_surface_variation_and_source_route_packet"
 MASTER_ACTION_SURFACE_SELECTOR_TARGET = (
     "select_next_master_action_surface_after_phi_ck_triad"
 )
@@ -1462,7 +1463,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "review_toe_native_A_surface_variation_and_source_route_result"
+LIVE_TARGET = "prepare_toe_native_A_gauge_group_domain_and_current_policy_packet"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1478,7 +1479,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeASurfaceVariationAndSourceRoutePacket.lean"
+    / "ToeNativeASurfaceVariationAndSourceRouteResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2993,140 +2994,147 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "GAUGE_VARIATION_RECORDED_SOURCE_ROUTE_BLOCKED_PENDING_GAUGE_GROUP_"
         "CURRENT_DOMAIN_AND_CK_CONTENT"
     )
+    a_surface_route_review_result = (
+        "TOE_NATIVE_A_SURFACE_VARIATION_ROUTE_RESULT_REVIEW_ACCEPTS_RAW_"
+        "GAUGE_ROUTE_AND_BLOCKS_NATIVE_DERIVATION_PENDING_GAUGE_GROUP_"
+        "CURRENT_DOMAIN_AND_CK_CONTENT"
+    )
 
-    phi_transport_functional_embedding_active_workstream = active_workstream(payload)
+    a_gauge_policy_active_workstream = active_workstream(payload)
     assert (
-        phi_transport_functional_embedding_active_workstream["workstream_id"]
+        a_gauge_policy_active_workstream["workstream_id"]
         == ACTIVE_LANE
     )
     assert (
-        phi_transport_functional_embedding_active_workstream["active_lane"]
+        a_gauge_policy_active_workstream["active_lane"]
         == ACTIVE_LANE
     )
     assert (
-        phi_transport_functional_embedding_active_workstream[
+        a_gauge_policy_active_workstream[
             "authorized_next_strict_target"
         ]
         == LIVE_TARGET
     )
     assert (
-        phi_transport_functional_embedding_active_workstream["authorized_target"]
+        a_gauge_policy_active_workstream["authorized_target"]
         == LIVE_TARGET
     )
-    assert phi_transport_functional_embedding_active_workstream[
+    assert a_gauge_policy_active_workstream[
         "authorization_evidence"
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
-    assert phi_transport_functional_embedding_active_workstream["report"] == (
+    assert a_gauge_policy_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_A_SURFACE_VARIATION_AND_SOURCE_ROUTE_PACKET_20260621_v0.json"
+        "TOE_NATIVE_A_SURFACE_VARIATION_AND_SOURCE_ROUTE_RESULT_REVIEW_20260621_v0.json"
     )
-    assert phi_transport_functional_embedding_active_workstream["consumed_target"] == (
+    assert a_gauge_policy_active_workstream["consumed_target"] == (
         PREVIOUS_LIVE_TARGET
     )
     assert (
-        phi_transport_functional_embedding_active_workstream["outcome_id"]
-        == a_surface_route_packet_result
+        a_gauge_policy_active_workstream["outcome_id"]
+        == a_surface_route_review_result
     )
     assert (
-        phi_transport_functional_embedding_active_workstream[
+        a_gauge_policy_active_workstream[
             "a_surface_route_packet_result"
         ]
         == a_surface_route_packet_result
     )
     assert (
-        phi_transport_functional_embedding_active_workstream["packet_result"]
-        == a_surface_route_packet_result
+        a_gauge_policy_active_workstream["review_result"]
+        == a_surface_route_review_result
     )
-    assert phi_transport_functional_embedding_active_workstream[
+    assert (
+        a_gauge_policy_active_workstream["a_surface_route_result_review_accepted"]
+        == "yes"
+    )
+    assert a_gauge_policy_active_workstream[
         "packet_classification"
     ] == (
-        "toe_native_A_surface_variation_and_source_route_packet_records_raw_"
-        "gauge_route_and_blocks_source_route_pending_gauge_group_current_domain_"
+        "toe_native_A_surface_variation_route_result_review_accepts_raw_gauge_"
+        "route_and_blocks_native_derivation_pending_gauge_group_current_domain_"
         "and_ck_content"
     )
-    assert phi_transport_functional_embedding_active_workstream[
+    assert a_gauge_policy_active_workstream[
         "selected_next_target"
     ] == LIVE_TARGET
-    assert phi_transport_functional_embedding_active_workstream[
+    assert a_gauge_policy_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_surface_variation_and_source_route_result_review"
-    assert phi_transport_functional_embedding_active_workstream[
-        "selected_master_action_surface"
-    ] == "A_surface_gauge_route"
-    assert phi_transport_functional_embedding_active_workstream[
+    ] == "toe_native_A_gauge_group_domain_and_current_policy_packet_preparation"
+    assert a_gauge_policy_active_workstream[
         "selected_surface_symbol"
     ] == "A"
-    assert phi_transport_functional_embedding_active_workstream[
+    assert a_gauge_policy_active_workstream[
         "selected_route_id"
     ] == "toe_native_A_surface_gauge_variation_and_source_route"
-    assert phi_transport_functional_embedding_active_workstream[
-        "master_A_lagrangian"
-    ] == "L_A^MA = -1/4 F_{mu nu} F^{mu nu}"
-    assert phi_transport_functional_embedding_active_workstream[
+    assert a_gauge_policy_active_workstream[
         "raw_gauge_route"
     ] == "A_mu -> F_{mu nu}"
-    assert phi_transport_functional_embedding_active_workstream[
+    assert a_gauge_policy_active_workstream[
         "raw_variation_route"
     ] == "delta S_A / delta A_nu -> nabla_mu F^{mu nu}"
-    assert phi_transport_functional_embedding_active_workstream[
+    assert a_gauge_policy_active_workstream[
         "source_form_route_shape"
     ] == "nabla_mu F^{mu nu} = J^nu"
-    assert phi_transport_functional_embedding_active_workstream[
+    assert a_gauge_policy_active_workstream[
         "source_form_route_status"
     ] == "route_shape_only_not_derived_pending_gauge_group_current_domain_and_ck_content"
-    assert phi_transport_functional_embedding_active_workstream[
+    assert a_gauge_policy_active_workstream[
         "gauge_route_status_decision"
     ] == "raw_gauge_variation_recorded_but_source_route_blocked_for_native_status"
-    assert phi_transport_functional_embedding_active_workstream[
+    assert a_gauge_policy_active_workstream[
         "toe_native_status_decision"
     ] == (
         "A_surface_has_recognizable_gauge_action_route_but_native_current_source_"
         "route_not_derived"
     )
-    assert phi_transport_functional_embedding_active_workstream[
-        "route_question_count"
-    ] == 7
-    assert phi_transport_functional_embedding_active_workstream[
-        "calculation_step_count"
-    ] == 6
-    assert phi_transport_functional_embedding_active_workstream[
+    assert a_gauge_policy_active_workstream[
+        "vacuum_route_shape_from_pure_gauge_term"
+    ] == "nabla_mu F^{mu nu} = 0"
+    assert a_gauge_policy_active_workstream[
+        "nonabelian_route_shape_requires_gauge_covariant_derivative"
+    ] == "D_mu F^{mu nu} = J^nu"
+    assert a_gauge_policy_active_workstream["review_criteria_count"] == 13
+    assert a_gauge_policy_active_workstream["review_criteria_accepted_count"] == 13
+    assert a_gauge_policy_active_workstream["policy_packet_item_count"] == 9
+    assert a_gauge_policy_active_workstream[
         "retained_blocker_count"
     ] == 15
     for key in [
         "a_surface_variation_route_prepared",
-        "a_surface_indexed",
-        "raw_gauge_variation_formula_recorded",
-        "raw_A_to_F_route_recorded",
-        "raw_variation_shape_recorded",
-        "source_route_shape_recorded",
-        "source_route_shape_only_not_derived",
+        "raw_A_to_F_route_preserved",
+        "raw_variation_route_preserved",
+        "source_form_recorded_as_shape_only",
+        "native_derivation_blocked",
+        "gauge_policy_packet_authorized",
+        "policy_packet_preparation_authorized",
+        "source_route_requires_current_policy_or_matter_coupling",
+        "gauge_policy_is_next_real_blocker",
         "symbolic_calculation_recorded",
     ]:
-        assert phi_transport_functional_embedding_active_workstream[key] == "yes", key
+        assert a_gauge_policy_active_workstream[key] == "yes", key
     for phrase in [
-        "raw gauge variation/source-route shape",
+        "raw A-surface gauge-route recording only",
         "does not select a gauge group",
-        "does not select the A bundle/domain",
+        "does not select an A bundle/domain",
         "does not define F",
-        "does not select a D_mu convention",
+        "does not choose ordinary versus gauge-covariant derivative",
         "does not derive J^nu",
         "does not admit an external current",
         "does not select gauge fixing",
-        "does not control boundary terms",
+        "does not control boundary variation",
         "does not derive T_A",
         "does not prove source admissibility or current conservation",
-        "does not construct C_k analogues",
+        "does not construct A-relevant C_k rules",
         "does not derive Maxwell or Yang-Mills equations",
         "does not close EM, QFT-GR, or EM-QFT",
         "does not authorize semiclassical coupling",
         "does not promote the master action",
     ]:
-        assert phrase in phi_transport_functional_embedding_active_workstream[
+        assert phrase in a_gauge_policy_active_workstream[
             "non_claim_boundary"
         ], phrase
     for key in [
         "formal_theorem_backed_gauge_derivation",
-        "a_surface_gauge_route_execution_authorized",
         "a_surface_variation_executed",
         "a_surface_variation_route_executed",
         "gauge_group_selected",
@@ -3184,17 +3192,40 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "seam_closure_claim",
     ]:
         assert (
-            phi_transport_functional_embedding_active_workstream.get(key, "no")
+            a_gauge_policy_active_workstream.get(key, "no")
             == "no"
         ), key
 
-    consumed_a_surface_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_a_surface_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_a_surface_review["status"] == "paused"
+    assert (
+        consumed_a_surface_review["review_result"]
+        == a_surface_route_review_result
+    )
+    assert (
+        consumed_a_surface_review["a_surface_route_packet_result"]
+        == a_surface_route_packet_result
+    )
+    assert consumed_a_surface_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_surface_review["raw_A_to_F_route_preserved"] == "yes"
+    assert consumed_a_surface_review["raw_variation_route_preserved"] == "yes"
+    assert consumed_a_surface_review["source_form_recorded_as_shape_only"] == "yes"
+    assert consumed_a_surface_review["gauge_policy_packet_authorized"] == "yes"
+    assert consumed_a_surface_review["gauge_group_selected"] == "no"
+    assert consumed_a_surface_review["matter_current_J_nu_derived"] == "no"
+    assert consumed_a_surface_review["current_conservation_proved"] == "no"
+    assert consumed_a_surface_review["C_k_analogues_constructed"] == "no"
+    assert consumed_a_surface_review["em_closure_claimed"] == "no"
+    assert consumed_a_surface_review["qft_gr_closure_claimed"] == "no"
+    assert consumed_a_surface_review["master_action_promoted"] == "no"
+
+    consumed_a_surface_packet = _workstream(payload, A_SURFACE_ROUTE_PACKET_TARGET)
     assert consumed_a_surface_packet["status"] == "paused"
     assert (
         consumed_a_surface_packet["a_surface_route_packet_result"]
         == a_surface_route_packet_result
     )
-    assert consumed_a_surface_packet["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_surface_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert consumed_a_surface_packet["a_surface_variation_route_prepared"] == "yes"
     assert consumed_a_surface_packet["source_route_shape_only_not_derived"] == "yes"
     assert consumed_a_surface_packet["gauge_group_selected"] == "no"
@@ -3214,7 +3245,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "GAUGE_ROUTE_NO_VARIATION_OR_PROMOTION"
     )
     assert consumed_master_action_surface_selector["selected_next_target"] == (
-        PREVIOUS_LIVE_TARGET
+        A_SURFACE_ROUTE_PACKET_TARGET
     )
     assert consumed_master_action_surface_selector[
         "selected_master_action_surface"
@@ -10212,7 +10243,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        phi_transport_functional_embedding_active_workstream[
+        a_gauge_policy_active_workstream[
             "authorized_next_strict_target"
         ],
     }
