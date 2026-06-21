@@ -8,39 +8,38 @@ from formal.python.tests.strict_physics_state_helpers import (
     assert_focused_gate_not_manifest_enrolled,
     skip_if_not_current_target,
 )
-from formal.python.tools.toe_native_a_route_selection_after_vacuum_u1_variation_report import (
-    DEFAULT_OUT as A_ROUTE_SELECTOR_PATH,
-    OUTCOME_ID as A_ROUTE_SELECTOR_OUTCOME,
-)
 from formal.python.tools.toe_native_a_stress_energy_route_under_selected_u1_policy_packet_report import (
+    DEFAULT_OUT as A_STRESS_ENERGY_PACKET_PATH,
+    OUTCOME_ID as A_STRESS_ENERGY_PACKET_OUTCOME,
+)
+from formal.python.tools.toe_native_a_stress_energy_route_under_selected_u1_policy_result_review_report import (
     A_STRESS_ENERGY_ROUTE_RESULT,
+    A_STRESS_ENERGY_ROUTE_REVIEW_RESULT,
     ARTIFACT_ID,
     CONSUMED_TARGET,
     CONVENTION_SCOPE,
+    CURRENT_TARGET_AGGREGATE_PATH,
     DEFAULT_OUT,
-    F_CONTRACTION_VARIATION_ROUTE,
     F_DEFINITION_POLICY,
     GAUGE_GROUP_POLICY,
     LEAN_PACKET_PATH,
     LEAN_VALIDATION_POLICY_ID,
     LEAN_VALIDATION_POLICY_PATH,
     METRIC_SIGNATURE_POLICY,
-    METRIC_VARIATION_CONVENTION,
-    METRIC_VARIATION_FORM,
     NEXT_TARGET,
     NEXT_TARGET_KIND,
     OUTCOME_ID,
     PACKET_CLASSIFICATION,
     PACKET_ID,
     QFTGR_AGGREGATE_PATH,
+    RECOMMENDED_SELECTOR_CANDIDATE,
     RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
     SCHEMA_ID,
-    SELECTED_A_STRESS_ENERGY_ACTION,
+    SELECTOR_ROUTE_OPTIONS,
     SOURCE_ROUTE_STILL_BLOCKED,
     STRESS_ENERGY_UNDER_SELECTED_U1_POLICY,
     VACUUM_EULER_LAGRANGE_ROUTE,
-    VOLUME_VARIATION_ROUTE,
-    build_toe_native_a_stress_energy_route_under_selected_u1_policy_packet,
+    build_toe_native_a_stress_energy_route_under_selected_u1_policy_result_review,
 )
 
 
@@ -50,7 +49,7 @@ TOOL_PATH = (
     / "formal"
     / "python"
     / "tools"
-    / "toe_native_a_stress_energy_route_under_selected_u1_policy_packet_report.py"
+    / "toe_native_a_stress_energy_route_under_selected_u1_policy_result_review_report.py"
 )
 REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
 SURFACES_PATH = (
@@ -71,14 +70,6 @@ ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
 STRICT_MAP_PATH = (
     REPO_ROOT / "formal" / "docs" / "lanes" / "STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
 )
-CURRENT_TARGET_AGGREGATE_PATH = (
-    REPO_ROOT
-    / "formal"
-    / "toe_formal"
-    / "ToeFormal"
-    / "Derivation"
-    / "CurrentTarget.lean"
-)
 
 
 def _read(path: Path) -> str:
@@ -97,9 +88,9 @@ def _workstream(payload: dict, workstream_id: str) -> dict:
     raise AssertionError(f"Missing workstream: {workstream_id}")
 
 
-def test_a_stress_energy_route_packet_files_exist() -> None:
+def test_a_stress_energy_route_result_review_files_exist() -> None:
     for path in [
-        A_ROUTE_SELECTOR_PATH,
+        A_STRESS_ENERGY_PACKET_PATH,
         DEFAULT_OUT,
         TOOL_PATH,
         LEAN_PACKET_PATH,
@@ -111,83 +102,89 @@ def test_a_stress_energy_route_packet_files_exist() -> None:
         assert path.exists(), path
 
 
-def test_a_stress_energy_route_packet_records_expected_route() -> None:
-    selector = _json(A_ROUTE_SELECTOR_PATH)
-    packet = _json(DEFAULT_OUT)
-    assert selector["outcome_id"] == A_ROUTE_SELECTOR_OUTCOME
-    assert selector["selected_next_target"] == CONSUMED_TARGET
-    assert packet["artifact_id"] == ARTIFACT_ID
-    assert packet["schema_id"] == SCHEMA_ID
-    assert packet["packet_id"] == PACKET_ID
-    assert packet["prepared"] is True
-    assert packet["accepted"] is True
-    assert packet["outcome_id"] == OUTCOME_ID
-    assert packet["a_stress_energy_route_result"] == A_STRESS_ENERGY_ROUTE_RESULT
-    assert packet["packet_classification"] == PACKET_CLASSIFICATION
-    assert packet["consumed_target"] == CONSUMED_TARGET
-    assert packet["selected_next_target"] == NEXT_TARGET
-    assert packet["selected_next_target_kind"] == NEXT_TARGET_KIND
-    assert packet["gauge_group_policy"] == GAUGE_GROUP_POLICY
-    assert packet["F_definition_policy"] == F_DEFINITION_POLICY
-    assert packet["metric_signature_policy"] == METRIC_SIGNATURE_POLICY
-    assert packet["selected_A_stress_energy_action"] == SELECTED_A_STRESS_ENERGY_ACTION
-    assert packet["metric_variation_convention"] == METRIC_VARIATION_CONVENTION
-    assert packet["volume_variation_route"] == VOLUME_VARIATION_ROUTE
-    assert packet["F_contraction_variation_route"] == F_CONTRACTION_VARIATION_ROUTE
-    assert packet["metric_variation_form"] == METRIC_VARIATION_FORM
+def test_a_stress_energy_route_result_review_accepts_route_only() -> None:
+    packet = _json(A_STRESS_ENERGY_PACKET_PATH)
+    review = _json(DEFAULT_OUT)
+    assert packet["outcome_id"] == A_STRESS_ENERGY_PACKET_OUTCOME
+    assert review["artifact_id"] == ARTIFACT_ID
+    assert review["schema_id"] == SCHEMA_ID
+    assert review["packet_id"] == PACKET_ID
+    assert review["prepared"] is True
+    assert review["accepted"] is True
+    assert review["outcome_id"] == OUTCOME_ID
+    assert review["review_result"] == A_STRESS_ENERGY_ROUTE_REVIEW_RESULT
+    assert review["a_stress_energy_route_result"] == A_STRESS_ENERGY_ROUTE_RESULT
+    assert review["packet_classification"] == PACKET_CLASSIFICATION
+    assert review["consumed_target"] == CONSUMED_TARGET
+    assert review["selected_next_target"] == NEXT_TARGET
+    assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
     assert (
-        packet["stress_energy_under_selected_u1_policy"]
+        build_toe_native_a_stress_energy_route_under_selected_u1_policy_result_review()
+        == review
+    )
+
+
+def test_a_stress_energy_route_result_review_accepts_required_points() -> None:
+    review = _json(DEFAULT_OUT)
+    assert review["review_criteria_count"] == 14
+    assert review["review_criteria_accepted_count"] == 14
+    assert {row["row_id"] for row in review["review_criteria"]} == {
+        "selected_u1_policy_preserved",
+        "A_smooth_real_one_form_preserved",
+        "F_dA_preserved",
+        "vacuum_route_preserved",
+        "stress_energy_formula_preserved",
+        "convention_sensitivity_preserved",
+        "J_nu_not_derived",
+        "current_conservation_not_proved",
+        "source_admissibility_not_proved",
+        "a_relevant_ck_rules_not_constructed",
+        "sourced_maxwell_closure_not_claimed",
+        "em_qft_gr_closure_not_claimed",
+        "master_action_not_promoted",
+        "next_selector_authorized",
+    }
+    assert review["gauge_group_policy"] == GAUGE_GROUP_POLICY
+    assert review["F_definition_policy"] == F_DEFINITION_POLICY
+    assert review["metric_signature_policy"] == METRIC_SIGNATURE_POLICY
+    assert review["vacuum_euler_lagrange_route"] == VACUUM_EULER_LAGRANGE_ROUTE
+    assert review["source_route_still_blocked"] == SOURCE_ROUTE_STILL_BLOCKED
+    assert (
+        review["stress_energy_under_selected_u1_policy"]
         == STRESS_ENERGY_UNDER_SELECTED_U1_POLICY
     )
-    assert packet["convention_scope"] == CONVENTION_SCOPE
-    assert packet["vacuum_euler_lagrange_route"] == VACUUM_EULER_LAGRANGE_ROUTE
-    assert packet["source_route_still_blocked"] == SOURCE_ROUTE_STILL_BLOCKED
-    assert build_toe_native_a_stress_energy_route_under_selected_u1_policy_packet() == packet
+    assert review["convention_scope"] == CONVENTION_SCOPE
+    assert review["stress_energy_route_accepted"] is True
+    assert review["gauge_stress_energy_route_accepted"] is True
+    assert review["stress_energy_formula_preserved"] is True
+    assert review["convention_scope_retained"] is True
 
 
-def test_a_stress_energy_route_packet_retains_expected_boundaries() -> None:
-    packet = _json(DEFAULT_OUT)
-    assert packet["calculation_step_count"] == 9
-    assert packet["review_criteria_count"] == 12
-    assert packet["review_criteria_accepted_count"] == 12
-    assert [row["step_id"] for row in packet["calculation_steps"]] == [
-        "state_selected_u1_gauge_action",
-        "preserve_selected_u1_policy",
-        "state_metric_variation_convention",
-        "vary_volume_form",
-        "vary_raised_F_contraction",
-        "read_metric_variation_form",
-        "record_gauge_stress_energy_route",
-        "record_convention_scope",
-        "retain_current_ck_closure_blockers",
-    ]
-    for key in [
-        "u1_policy_used",
-        "minimal_abelian_route_selected",
-        "A_as_smooth_real_one_form_selected",
-        "F_definition_used",
-        "metric_signature_policy_used",
-        "metric_variation_convention_recorded",
-        "metric_variation_computed",
-        "metric_variation_route_recorded",
-        "stress_energy_route_recorded",
-        "gauge_stress_energy_route_recorded",
-        "stress_energy_T_A_recorded",
-        "stress_energy_T_A_derived",
-        "stress_energy_derivation_executed",
-        "stress_energy_route_constructed",
-        "stress_energy_route_convention_sensitive",
-        "stress_energy_sign_convention_verified_explicitly",
-        "symbolic_calculation_recorded",
-    ]:
-        assert packet[key] is True, key
+def test_a_stress_energy_route_result_review_selects_selector_not_route() -> None:
+    review = _json(DEFAULT_OUT)
+    assert review["selector_authorized"] is True
+    assert review["recommended_selector_candidate"] == RECOMMENDED_SELECTOR_CANDIDATE
+    assert review["selector_route_options"] == SELECTOR_ROUTE_OPTIONS
+    assert review["selector_route_option_count"] == 4
+    assert review["recommended_selector_candidate_recorded"] is True
+    assert review["source_admissibility_review_recommended_for_selector"] is True
+    assert review["source_admissibility_review_selected_here"] is False
+    assert review["current_coupling_route_selected_here"] is False
+    assert review["current_conservation_route_selected_here"] is False
+    assert review["A_relevant_C_k_route_selected_here"] is False
+
+
+def test_a_stress_energy_route_result_review_retains_expected_nonclaims() -> None:
+    review = _json(DEFAULT_OUT)
     for key in [
         "stress_energy_source_admissibility_proved",
         "stress_energy_as_gravity_source_authorized",
         "current_route_derived",
+        "current_source_route_constructed",
         "matter_current_J_nu_derived",
         "J_nu_derived",
         "psi_current_route_constructed",
+        "psi_derived_current",
         "external_current_policy_selected",
         "external_current_native_derivation_selected",
         "current_conservation_proved",
@@ -201,9 +198,9 @@ def test_a_stress_energy_route_packet_retains_expected_boundaries() -> None:
         "master_action_promoted",
         "empirical_validation_claimed",
     ]:
-        assert packet[key] is False, key
+        assert review[key] is False, key
     for phrase in [
-        "records the convention-sensitive U(1) gauge stress-energy route only",
+        "accepts the convention-sensitive U(1) gauge stress-energy route only",
         "does not derive J^nu",
         "does not derive a psi-current route",
         "does not select an external current as native derivation",
@@ -216,10 +213,10 @@ def test_a_stress_energy_route_packet_retains_expected_boundaries() -> None:
         "does not authorize semiclassical coupling",
         "does not promote the master action",
     ]:
-        assert phrase in packet["non_claim_boundary"], phrase
+        assert phrase in review["non_claim_boundary"], phrase
 
 
-def test_a_stress_energy_route_packet_rotates_live_target_to_result_review() -> None:
+def test_a_stress_energy_route_result_review_rotates_live_target_to_selector() -> None:
     registry = _json(REGISTRY_PATH)
     skip_if_not_current_target(registry, NEXT_TARGET)
     state = registry["current_target_state"]
@@ -230,11 +227,12 @@ def test_a_stress_energy_route_packet_rotates_live_target_to_result_review() -> 
     assert state["active_lane"] == NEXT_TARGET
     assert state["live_next_target_evidence"] == (
         "formal/toe_formal/ToeFormal/Derivation/"
-        "ToeNativeAStressEnergyRouteUnderSelectedU1PolicyPacket.lean"
+        "ToeNativeAStressEnergyRouteUnderSelectedU1PolicyResultReview.lean"
     )
     assert state["live_next_target_report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_PACKET_20260621_v0.json"
+        "TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_RESULT_REVIEW_"
+        "20260621_v0.json"
     )
     assert state["live_next_target_outcome"] == OUTCOME_ID
     assert CONSUMED_TARGET in registry["completed_targets"]
@@ -242,31 +240,36 @@ def test_a_stress_energy_route_packet_rotates_live_target_to_result_review() -> 
 
     consumed = _workstream(registry, CONSUMED_TARGET)
     assert consumed["status"] == "paused"
-    assert consumed["a_stress_energy_route_result"] == A_STRESS_ENERGY_ROUTE_RESULT
+    assert consumed["review_result"] == OUTCOME_ID
     assert consumed["selected_next_target"] == NEXT_TARGET
-    assert consumed["stress_energy_route_recorded"] == "yes"
-    assert consumed["stress_energy_T_A_derived"] == "yes"
+    assert consumed["stress_energy_route_accepted"] == "yes"
+    assert consumed["gauge_stress_energy_route_accepted"] == "yes"
+    assert consumed["stress_energy_formula_preserved"] == "yes"
     assert consumed["A_source_admissibility_proved"] == "no"
     assert consumed["A_relevant_C_k_rules_constructed"] == "no"
-    assert consumed["em_closure_claimed"] == "no"
-    assert consumed["qft_gr_closure_claimed"] == "no"
     assert consumed["master_action_promoted"] == "no"
 
     active_row = active[0]
     assert active_row["workstream_id"] == NEXT_TARGET
     assert active_row["authorized_next_strict_target"] == NEXT_TARGET
+    assert active_row["authorized_target"] == NEXT_TARGET
     assert active_row["consumed_target"] == CONSUMED_TARGET
-    assert active_row["outcome_id"] == OUTCOME_ID
+    assert active_row["review_result"] == OUTCOME_ID
+    assert active_row["selector_prepared"] == "no"
+    assert active_row["selector_executed"] == "no"
     assert active_row["packet_result"] == "PENDING"
-    assert active_row["result_review_pending"] == "yes"
-    assert active_row["stress_energy_route_recorded"] == "yes"
-    assert active_row["stress_energy_T_A_derived"] == "yes"
+    assert active_row["recommended_selector_candidate"] == RECOMMENDED_SELECTOR_CANDIDATE
+    assert active_row["route_option_count"] == "4"
+    assert active_row["source_admissibility_review_selected"] == "no"
+    assert active_row["current_coupling_route_selected"] == "no"
+    assert active_row["current_conservation_route_selected"] == "no"
+    assert active_row["A_relevant_C_k_route_selected"] == "no"
     assert active_row["current_route_derived"] == "no"
     assert active_row["A_source_admissibility_proved"] == "no"
     assert active_row["master_action_promoted"] == "no"
 
 
-def test_a_stress_energy_route_packet_mirrors() -> None:
+def test_a_stress_energy_route_result_review_lean_and_surface_mirrors() -> None:
     joined = "\n".join(
         _read(path)
         for path in [
@@ -289,18 +292,15 @@ def test_a_stress_energy_route_packet_mirrors() -> None:
     for token in [
         PACKET_ID,
         OUTCOME_ID,
+        A_STRESS_ENERGY_ROUTE_REVIEW_RESULT,
         PACKET_CLASSIFICATION,
         CONSUMED_TARGET,
         NEXT_TARGET,
-        "ToeNativeAStressEnergyRouteUnderSelectedU1PolicyPacket",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "select_next_toe_native_A_route_after_stress_energy_route",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "review_toe_native_A_stress_energy_route_under_selected_u1_policy_result",
-        "HISTORICAL_TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_PACKET_CURRENT_LIVE_NEXT_TARGET_v0: "
-        "prepare_toe_native_A_stress_energy_route_under_selected_u1_policy",
+        RECOMMENDED_SELECTOR_CANDIDATE,
+        "ToeNativeAStressEnergyRouteUnderSelectedU1PolicyResultReview",
         "HISTORICAL_TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_RESULT_REVIEW_CURRENT_LIVE_NEXT_TARGET_v0: "
         "review_toe_native_A_stress_energy_route_under_selected_u1_policy_result",
+        "CURRENT_LIVE_NEXT_TARGET_v0: select_next_toe_native_A_route_after_stress_energy_route",
         "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + "
         "1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
         "convention-sensitive",
@@ -308,21 +308,21 @@ def test_a_stress_energy_route_packet_mirrors() -> None:
         "does not prove A-source admissibility",
         "does not construct A-relevant C_k rules",
         "does not close QFT-GR",
-        "master action",
+        "master-action promotion remain blocked",
     ]:
         assert token in joined
 
 
-def test_a_stress_energy_route_packet_validation_policy_is_bounded() -> None:
-    packet = _json(DEFAULT_OUT)
-    policy = packet["validation_policy"]
+def test_a_stress_energy_route_result_review_validation_policy_is_bounded() -> None:
+    review = _json(DEFAULT_OUT)
+    policy = review["validation_policy"]
     assert policy["policy_id"] == LEAN_VALIDATION_POLICY_ID
     assert policy["aggregate_lean_validation_status_for_packet"] == "NOT_RUN"
     assert policy["aggregate_lean_validation_completion_claimed"] is False
     assert policy["aggregate_lean_validation_mathematical_failure_claimed"] is False
 
 
-def test_a_stress_energy_route_packet_not_manifest_enrolled() -> None:
+def test_a_stress_energy_route_result_review_not_manifest_enrolled() -> None:
     assert_focused_gate_not_manifest_enrolled(
-        "test_toe_native_a_stress_energy_route_under_selected_u1_policy_packet_gate.py"
+        "test_toe_native_a_stress_energy_route_under_selected_u1_policy_result_review_gate.py"
     )

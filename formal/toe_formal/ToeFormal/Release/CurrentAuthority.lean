@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_toe_native_A_stress_energy_route_under_selected_u1_policy_result" := by
+      "select_next_toe_native_A_route_after_stress_energy_route" := by
   rfl
 
 end CurrentAuthority
