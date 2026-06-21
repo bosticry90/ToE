@@ -1,0 +1,311 @@
+{
+  "A_field_domain_policy": "smooth real 1-form A on the selected spacetime domain",
+  "A_relevant_C_k_route_selected_here": false,
+  "A_relevant_C_k_rules_constructed": false,
+  "A_smooth_real_one_form_preserved": true,
+  "A_source_admissibility_proved": false,
+  "C_k_analogues_constructed": false,
+  "F_dA_preserved": true,
+  "F_definition_policy": "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+  "J_nu_derived": false,
+  "a_gauge_policy_packet_result": "TOE_NATIVE_A_GAUGE_GROUP_DOMAIN_AND_CURRENT_POLICY_PACKET_PREPARED_U1_ROUTE_SELECTED_CURRENT_DERIVATION_STILL_BLOCKED",
+  "a_surface_variation_executed": true,
+  "a_surface_variation_route_executed": true,
+  "a_vacuum_variation_retry_packet_outcome": "TOE_NATIVE_A_VACUUM_VARIATION_RETRY_UNDER_SELECTED_U1_POLICY_PACKET_PREPARED_VACUUM_GAUGE_VARIATION_ROUTE_CONSTRUCTED_NO_CURRENT_DERIVATION_OR_EM_CLOSURE",
+  "a_vacuum_variation_retry_result": "VACUUM_GAUGE_VARIATION_ROUTE_CONSTRUCTED_NO_CURRENT_DERIVATION_OR_EM_CLOSURE",
+  "acceptance_criteria": {
+    "boundary_policy_preserved": true,
+    "closure_and_promotion_not_claimed": true,
+    "consumes_expected_result_review_target": true,
+    "next_target_is_selector": true,
+    "review_criteria_all_accepted": true,
+    "selected_u1_policy_preserved": true,
+    "source_current_route_still_blocked": true,
+    "stress_energy_and_ck_not_constructed": true,
+    "vacuum_variation_route_recorded": true
+  },
+  "accepted": true,
+  "action_variation_form": "delta S_A^U1 = - integral_M dVol_g F^{mu nu} nabla_mu delta A_nu",
+  "artifact_id": "TOE_NATIVE_A_VACUUM_VARIATION_RETRY_UNDER_SELECTED_U1_POLICY_RESULT_REVIEW_20260621_v0",
+  "boundary_policy_used": "compact-support or fixed-boundary variation removes the boundary term",
+  "canonical_master_action_promoted": false,
+  "captured_at_utc": "2026-06-21T00:00:00Z",
+  "consumed_target": "review_toe_native_A_vacuum_variation_retry_under_selected_u1_policy_result",
+  "critical_gate_fail_conditions": [
+    "treat vacuum route as sourced Maxwell closure",
+    "derive J^nu",
+    "claim a psi-current route",
+    "admit external current as native derivation",
+    "derive stress-energy T_A in the review",
+    "prove current conservation",
+    "prove source admissibility",
+    "construct A-relevant C_k rules",
+    "claim EM or QFT-GR closure",
+    "promote the working-form master action",
+    "silently choose the next A calculation instead of the selector"
+  ],
+  "current_conservation_proved": false,
+  "current_conservation_route_selected_here": false,
+  "current_coupling_route_selected_here": false,
+  "current_policy": "current route shape recorded; current derivation blocked; psi-derived current deferred; external current not selected as native derivation",
+  "current_route_derived": false,
+  "current_source_route_constructed": false,
+  "delta_F_form": "delta F_{mu nu} = partial_mu delta A_nu - partial_nu delta A_mu",
+  "delta_F_recorded": true,
+  "downstream_progression": [
+    {
+      "decision": "TOE_NATIVE_A_VACUUM_VARIATION_RETRY_RESULT_REVIEW_ACCEPTS_VACUUM_U1_GAUGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_CLOSURE",
+      "reason": "The selected U(1) packet records delta F, integration by parts, and nabla_mu F^{mu nu} = 0 as a vacuum route only.",
+      "stage": "A_vacuum_variation_retry_result_review",
+      "status": "ACCEPTED_VACUUM_U1_ROUTE_ONLY"
+    },
+    {
+      "decision": "select_next_toe_native_A_route_after_vacuum_u1_variation",
+      "reason": "A selector should compare stress-energy, current coupling, current conservation, and A-relevant C_k routes before the next calculation is chosen.",
+      "stage": "A_route_selector_after_vacuum_u1_variation",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    }
+  ],
+  "em_closure_claimed": false,
+  "em_qft_closure_claimed": false,
+  "empirical_validation_claimed": false,
+  "external_current_native_derivation_selected": false,
+  "external_current_not_selected_as_native_derivation": true,
+  "external_current_policy_selected": false,
+  "field_equations_derived": false,
+  "fixed_boundary_or_compact_support_variation_preserved": true,
+  "formal_theorem_backed_gauge_derivation": false,
+  "gauge_covariant_D_mu_route_selected": false,
+  "gauge_current_constraint_proved": false,
+  "gauge_field_derived": false,
+  "gauge_fixing_policy": "no gauge fixing selected as physical structure; gauge equivalence handling is deferred",
+  "gauge_fixing_selected": false,
+  "gauge_fixing_selected_as_physical_structure": false,
+  "gauge_group_policy": "U(1) / Abelian test route",
+  "gauge_surface_derived": false,
+  "integration_by_parts_form": "delta S_A^U1 = integral_M dVol_g (nabla_mu F^{mu nu}) delta A_nu",
+  "integration_by_parts_recorded": true,
+  "lane_level_lean_target_files": [
+    "formal/toe_formal/ToeFormal/Derivation/ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyResultReview.lean",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  ],
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyResultReview",
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyResultReview.lean",
+  "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "The review accepts the selected-policy U(1) vacuum gauge route: A is a smooth real 1-form, F=dA, delta F is recorded, integration by parts under compact-support or fixed-boundary variation records nabla_mu F^{mu nu} = 0. The sourced shape nabla_mu F^{mu nu} = J^nu remains blocked pending current policy or matter coupling.",
+  "matter_current_J_nu_derived": false,
+  "maxwell_equation_derived": false,
+  "maxwell_equations_derived": false,
+  "non_claim_boundary": "This result review accepts the vacuum U(1) gauge route only. It does not derive J^nu, does not construct a psi-current route, does not select an external current as native derivation, does not derive stress-energy T_A, does not prove current conservation, does not prove source admissibility, does not construct A-relevant C_k rules, does not close EM, does not close QFT-GR, does not promote the master action, does not claim empirical validation, and does not authorize public readiness or release completion.",
+  "nonabelian_route_selected": false,
+  "outcome_id": "TOE_NATIVE_A_VACUUM_VARIATION_RETRY_RESULT_REVIEW_ACCEPTS_VACUUM_U1_GAUGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_CLOSURE",
+  "packet_classification": "toe_native_A_vacuum_variation_retry_result_review_accepts_vacuum_u1_gauge_route_no_current_derivation_or_em_closure",
+  "packet_id": "TOE_NATIVE_A_VACUUM_VARIATION_RETRY_UNDER_SELECTED_U1_POLICY_RESULT_REVIEW_v0",
+  "phase2_readiness_claim": false,
+  "pillar_completion_inferred": false,
+  "prepared": true,
+  "proof_depth_label": "RESULT_REVIEW_ACCEPTS_VACUUM_U1_GAUGE_ROUTE_NO_CURRENT_OR_CLOSURE",
+  "psi_current_route_constructed": false,
+  "psi_derived_current": false,
+  "psi_derived_current_deferred": true,
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_solved": false,
+  "qft_gr_source_map_closure_authorized": false,
+  "recommended_selector_candidate": "prepare_toe_native_A_stress_energy_route_under_selected_u1_policy",
+  "recommended_selector_candidate_recorded": true,
+  "record_validated": true,
+  "review_criteria": [
+    {
+      "assessment": "The selected U(1) / Abelian test policy is preserved.",
+      "evidence": "U(1) / Abelian test route",
+      "row_id": "selected_u1_policy_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "A remains a smooth real 1-form on the selected domain.",
+      "evidence": "smooth real 1-form A on the selected spacetime domain",
+      "row_id": "A_smooth_real_one_form_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "F = dA and its component formula are preserved.",
+      "evidence": "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+      "row_id": "F_dA_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The U(1) delta F variation is recorded.",
+      "evidence": "delta F_{mu nu} = partial_mu delta A_nu - partial_nu delta A_mu",
+      "row_id": "delta_F_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Integration by parts exposes nabla_mu F^{mu nu}.",
+      "evidence": "delta S_A^U1 = integral_M dVol_g (nabla_mu F^{mu nu}) delta A_nu",
+      "row_id": "integration_by_parts_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "Fixed-boundary or compact-support variation controls the boundary term.",
+      "evidence": "compact-support or fixed-boundary variation removes the boundary term",
+      "row_id": "boundary_policy_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "nabla_mu F^{mu nu} = 0 is recorded as the vacuum route.",
+      "evidence": "nabla_mu F^{mu nu} = 0",
+      "row_id": "vacuum_route_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "nabla_mu F^{mu nu} = J^nu remains route shape only.",
+      "evidence": "nabla_mu F^{mu nu} = J^nu",
+      "row_id": "source_route_shape_only_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No J^nu or current route is derived.",
+      "evidence": "current_route_derived=false",
+      "row_id": "current_derivation_not_claimed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No gauge stress-energy T_A route is derived.",
+      "evidence": "stress_energy_T_A_derived=false",
+      "row_id": "stress_energy_not_derived",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No current conservation proof is supplied.",
+      "evidence": "current_conservation_proved=false",
+      "row_id": "current_conservation_not_proved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No source admissibility proof is supplied.",
+      "evidence": "A_source_admissibility_proved=false",
+      "row_id": "source_admissibility_not_proved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No A-relevant C_k source/bridge/transport rules are constructed.",
+      "evidence": "A_relevant_C_k_rules_constructed=false",
+      "row_id": "a_relevant_ck_rules_not_constructed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "No EM or QFT-GR closure is claimed.",
+      "evidence": [
+        "em_closure_claimed=false",
+        "qft_gr_closure_claimed=false"
+      ],
+      "row_id": "em_qft_gr_closure_not_claimed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The working-form master action is not promoted.",
+      "evidence": "master_action_promoted=false",
+      "row_id": "master_action_not_promoted",
+      "status": "accepted"
+    }
+  ],
+  "review_criteria_accepted_count": 15,
+  "review_criteria_count": 15,
+  "review_result": "TOE_NATIVE_A_VACUUM_VARIATION_RETRY_RESULT_REVIEW_ACCEPTS_VACUUM_U1_GAUGE_ROUTE_NO_CURRENT_DERIVATION_OR_EM_CLOSURE",
+  "schema_id": "TOE_NATIVE_A_VACUUM_VARIATION_RETRY_UNDER_SELECTED_U1_POLICY_RESULT_REVIEW_20260621_v0",
+  "seam_closure_claim": false,
+  "selected_A_action": "S_A^U1[A,g] = -1/4 integral_M dVol_g F_{mu nu} F^{mu nu}",
+  "selected_next_target": "select_next_toe_native_A_route_after_vacuum_u1_variation",
+  "selected_next_target_kind": "toe_native_A_route_selector_after_vacuum_u1_variation",
+  "selected_u1_policy_preserved": true,
+  "selector_authorized": true,
+  "selector_route_option_count": 4,
+  "selector_route_options": [
+    {
+      "candidate_target": "prepare_toe_native_A_stress_energy_route_under_selected_u1_policy",
+      "reason": "The stress-energy route can proceed from the gauge action and metric variation before psi/A current coupling is selected.",
+      "route_id": "A_stress_energy_route",
+      "status": "recommended_for_selector_not_selected_here"
+    },
+    {
+      "candidate_target": "prepare_toe_native_A_current_coupling_policy_packet",
+      "reason": "A current-coupled route requires external-current or matter-coupling policy.",
+      "route_id": "A_current_coupling_route",
+      "status": "deferred_to_selector"
+    },
+    {
+      "candidate_target": "prepare_toe_native_A_current_conservation_route_under_selected_u1_policy",
+      "reason": "Current conservation should not be proved before the current route is selected.",
+      "route_id": "A_current_conservation_route",
+      "status": "deferred_to_selector"
+    },
+    {
+      "candidate_target": "prepare_toe_native_A_relevant_ck_rule_family_packet",
+      "reason": "A-specific C_k source/bridge/transport content is not constructed by this review.",
+      "route_id": "A_relevant_C_k_source_bridge_transport_route",
+      "status": "deferred_to_selector"
+    }
+  ],
+  "semiclassical_coupling_authorized": false,
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_source_established": false,
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "source_admissibility_proved": false,
+  "source_bridge_transport_ck_analogues_constructed": false,
+  "source_map_closed": false,
+  "source_route_shape_only_preserved": true,
+  "source_route_still_blocked": "nabla_mu F^{mu nu} = J^nu",
+  "sourced_maxwell_equation_derived": false,
+  "standard_model_derivation_claimed": false,
+  "status": "ACTIVE_A_VACUUM_VARIATION_RETRY_RESULT_REVIEW",
+  "stress_energy_T_A_derived": false,
+  "stress_energy_route_constructed": false,
+  "stress_energy_route_recommended_for_selector": true,
+  "stress_energy_route_selected_here": false,
+  "stress_energy_source_admissibility_proved": false,
+  "toe_native_A_current_conservation_claimed": false,
+  "toe_native_A_source_admissibility_claimed": false,
+  "toe_native_A_source_route_constructed": false,
+  "toe_native_gauge_derivation_claimed": false,
+  "toe_native_matter_derivation_claimed": false,
+  "vacuum_euler_lagrange_route": "nabla_mu F^{mu nu} = 0",
+  "vacuum_route_accepted": true,
+  "vacuum_u1_gauge_route_accepted": true,
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+    "aggregate_timeout_with_steady_progress_interpretation": "incomplete_validation_not_mathematical_failure",
+    "checkpoint_type": "toe_native_A_vacuum_variation_retry_under_selected_u1_policy_result_review",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "full_security_scan_required": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  },
+  "variation_policy": "compact-support or fixed-boundary variation",
+  "yang_mills_equations_derived": false
+}

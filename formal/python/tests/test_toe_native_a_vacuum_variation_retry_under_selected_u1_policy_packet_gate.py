@@ -280,10 +280,10 @@ def test_a_vacuum_variation_retry_packet_lean_and_surface_mirrors() -> None:
         CONSUMED_TARGET,
         NEXT_TARGET,
         "ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyPacket",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "review_toe_native_A_vacuum_variation_retry_under_selected_u1_policy_result",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
+        "HISTORICAL_TOE_NATIVE_A_VACUUM_VARIATION_RETRY_UNDER_SELECTED_U1_POLICY_PACKET_CURRENT_LIVE_NEXT_TARGET_v0: "
         "prepare_toe_native_A_vacuum_variation_retry_under_selected_u1_policy",
+        "HISTORICAL_TOE_NATIVE_A_VACUUM_VARIATION_RETRY_UNDER_SELECTED_U1_POLICY_RESULT_REVIEW_CURRENT_LIVE_NEXT_TARGET_v0: "
+        "review_toe_native_A_vacuum_variation_retry_under_selected_u1_policy_result",
         "nabla_mu F^{mu nu} = 0",
         "delta F_{mu nu}",
         "compact-support or fixed-boundary variation",

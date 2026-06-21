@@ -1,0 +1,311 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tests.strict_physics_state_helpers import (
+    assert_focused_gate_not_manifest_enrolled,
+    skip_if_not_current_target,
+)
+from formal.python.tools.toe_native_a_vacuum_variation_retry_under_selected_u1_policy_packet_report import (
+    DEFAULT_OUT as A_VACUUM_VARIATION_RETRY_PACKET_PATH,
+    OUTCOME_ID as A_VACUUM_VARIATION_RETRY_PACKET_OUTCOME,
+)
+from formal.python.tools.toe_native_a_vacuum_variation_retry_under_selected_u1_policy_result_review_report import (
+    A_VACUUM_VARIATION_RETRY_REVIEW_RESULT,
+    A_VACUUM_VARIATION_RETRY_RESULT,
+    ARTIFACT_ID,
+    CONSUMED_TARGET,
+    CURRENT_TARGET_AGGREGATE_PATH,
+    DEFAULT_OUT,
+    DELTA_F_FORM,
+    F_DEFINITION_POLICY,
+    GAUGE_GROUP_POLICY,
+    INTEGRATION_BY_PARTS_FORM,
+    LEAN_PACKET_PATH,
+    LEAN_VALIDATION_POLICY_ID,
+    LEAN_VALIDATION_POLICY_PATH,
+    NEXT_TARGET,
+    NEXT_TARGET_KIND,
+    OUTCOME_ID,
+    PACKET_CLASSIFICATION,
+    PACKET_ID,
+    QFTGR_AGGREGATE_PATH,
+    RECOMMENDED_SELECTOR_CANDIDATE,
+    RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
+    SCHEMA_ID,
+    SELECTOR_ROUTE_OPTIONS,
+    SOURCE_ROUTE_STILL_BLOCKED,
+    VACUUM_EULER_LAGRANGE_ROUTE,
+    build_toe_native_a_vacuum_variation_retry_under_selected_u1_policy_result_review,
+)
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+TOOL_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "python"
+    / "tools"
+    / "toe_native_a_vacuum_variation_retry_under_selected_u1_policy_result_review_report.py"
+)
+REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
+SURFACES_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "CURRENT_AUTHORITATIVE_SURFACES_v0.md"
+)
+TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
+FRONTIER_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "CrossPillarClosureFrontier.lean"
+)
+README_PATH = REPO_ROOT / "README.md"
+STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+STRICT_MAP_PATH = (
+    REPO_ROOT / "formal" / "docs" / "lanes" / "STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
+)
+
+
+def _read(path: Path) -> str:
+    assert path.exists(), f"Missing required file: {path}"
+    return path.read_text(encoding="utf-8")
+
+
+def _json(path: Path) -> dict:
+    return json.loads(_read(path))
+
+
+def _workstream(payload: dict, workstream_id: str) -> dict:
+    for row in payload["workstreams"]:
+        if row["workstream_id"] == workstream_id:
+            return row
+    raise AssertionError(f"Missing workstream: {workstream_id}")
+
+
+def test_a_vacuum_variation_retry_result_review_files_exist() -> None:
+    for path in [
+        A_VACUUM_VARIATION_RETRY_PACKET_PATH,
+        DEFAULT_OUT,
+        TOOL_PATH,
+        LEAN_PACKET_PATH,
+        LEAN_VALIDATION_POLICY_PATH,
+        QFTGR_AGGREGATE_PATH,
+        CURRENT_TARGET_AGGREGATE_PATH,
+        RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
+    ]:
+        assert path.exists(), path
+
+
+def test_a_vacuum_variation_retry_result_review_accepts_vacuum_route_only() -> None:
+    packet = _json(A_VACUUM_VARIATION_RETRY_PACKET_PATH)
+    review = _json(DEFAULT_OUT)
+    assert packet["outcome_id"] == A_VACUUM_VARIATION_RETRY_PACKET_OUTCOME
+    assert review["artifact_id"] == ARTIFACT_ID
+    assert review["schema_id"] == SCHEMA_ID
+    assert review["packet_id"] == PACKET_ID
+    assert review["prepared"] is True
+    assert review["accepted"] is True
+    assert review["outcome_id"] == OUTCOME_ID
+    assert review["review_result"] == A_VACUUM_VARIATION_RETRY_REVIEW_RESULT
+    assert review["a_vacuum_variation_retry_result"] == A_VACUUM_VARIATION_RETRY_RESULT
+    assert review["packet_classification"] == PACKET_CLASSIFICATION
+    assert review["consumed_target"] == CONSUMED_TARGET
+    assert review["selected_next_target"] == NEXT_TARGET
+    assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert build_toe_native_a_vacuum_variation_retry_under_selected_u1_policy_result_review() == review
+
+
+def test_a_vacuum_variation_retry_result_review_accepts_required_points() -> None:
+    review = _json(DEFAULT_OUT)
+    assert review["review_criteria_count"] == 15
+    assert review["review_criteria_accepted_count"] == 15
+    assert {row["row_id"] for row in review["review_criteria"]} == {
+        "selected_u1_policy_preserved",
+        "A_smooth_real_one_form_preserved",
+        "F_dA_preserved",
+        "delta_F_recorded",
+        "integration_by_parts_recorded",
+        "boundary_policy_preserved",
+        "vacuum_route_recorded",
+        "source_route_shape_only_preserved",
+        "current_derivation_not_claimed",
+        "stress_energy_not_derived",
+        "current_conservation_not_proved",
+        "source_admissibility_not_proved",
+        "a_relevant_ck_rules_not_constructed",
+        "em_qft_gr_closure_not_claimed",
+        "master_action_not_promoted",
+    }
+    assert review["gauge_group_policy"] == GAUGE_GROUP_POLICY
+    assert review["F_definition_policy"] == F_DEFINITION_POLICY
+    assert review["delta_F_form"] == DELTA_F_FORM
+    assert review["integration_by_parts_form"] == INTEGRATION_BY_PARTS_FORM
+    assert review["vacuum_euler_lagrange_route"] == VACUUM_EULER_LAGRANGE_ROUTE
+    assert review["source_route_still_blocked"] == SOURCE_ROUTE_STILL_BLOCKED
+    assert review["selected_u1_policy_preserved"] is True
+    assert review["A_smooth_real_one_form_preserved"] is True
+    assert review["F_dA_preserved"] is True
+    assert review["vacuum_u1_gauge_route_accepted"] is True
+    assert review["source_route_shape_only_preserved"] is True
+
+
+def test_a_vacuum_variation_retry_result_review_selects_selector_not_route() -> None:
+    review = _json(DEFAULT_OUT)
+    assert review["selector_authorized"] is True
+    assert review["recommended_selector_candidate"] == RECOMMENDED_SELECTOR_CANDIDATE
+    assert review["selector_route_options"] == SELECTOR_ROUTE_OPTIONS
+    assert review["selector_route_option_count"] == 4
+    assert review["recommended_selector_candidate_recorded"] is True
+    assert review["stress_energy_route_recommended_for_selector"] is True
+    assert review["stress_energy_route_selected_here"] is False
+    assert review["current_coupling_route_selected_here"] is False
+    assert review["current_conservation_route_selected_here"] is False
+    assert review["A_relevant_C_k_route_selected_here"] is False
+
+
+def test_a_vacuum_variation_retry_result_review_retains_expected_nonclaims() -> None:
+    review = _json(DEFAULT_OUT)
+    for key in [
+        "current_route_derived",
+        "current_source_route_constructed",
+        "matter_current_J_nu_derived",
+        "J_nu_derived",
+        "psi_current_route_constructed",
+        "psi_derived_current",
+        "external_current_policy_selected",
+        "external_current_native_derivation_selected",
+        "stress_energy_T_A_derived",
+        "stress_energy_route_constructed",
+        "current_conservation_proved",
+        "A_source_admissibility_proved",
+        "A_relevant_C_k_rules_constructed",
+        "em_closure_claimed",
+        "qft_gr_closure_claimed",
+        "canonical_master_action_promoted",
+        "master_action_promoted",
+        "empirical_validation_claimed",
+    ]:
+        assert review[key] is False, key
+    for phrase in [
+        "accepts the vacuum U(1) gauge route only",
+        "does not derive J^nu",
+        "does not construct a psi-current route",
+        "does not select an external current as native derivation",
+        "does not derive stress-energy T_A",
+        "does not prove current conservation",
+        "does not prove source admissibility",
+        "does not construct A-relevant C_k rules",
+        "does not close EM",
+        "does not close QFT-GR",
+        "does not promote the master action",
+    ]:
+        assert phrase in review["non_claim_boundary"], phrase
+
+
+def test_a_vacuum_variation_retry_result_review_rotates_live_target_to_selector() -> None:
+    registry = _json(REGISTRY_PATH)
+    skip_if_not_current_target(registry, NEXT_TARGET)
+    state = registry["current_target_state"]
+    active = [row for row in registry["workstreams"] if row.get("status") == "active"]
+    assert len(active) == 1
+    assert state["previous_live_next_target"] == CONSUMED_TARGET
+    assert state["live_next_target"] == NEXT_TARGET
+    assert state["active_lane"] == NEXT_TARGET
+    assert state["live_next_target_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyResultReview.lean"
+    )
+    assert state["live_next_target_report"] == (
+        "formal/docs/release/"
+        "TOE_NATIVE_A_VACUUM_VARIATION_RETRY_UNDER_SELECTED_U1_POLICY_RESULT_REVIEW_20260621_v0.json"
+    )
+    assert state["live_next_target_outcome"] == OUTCOME_ID
+    assert CONSUMED_TARGET in registry["completed_targets"]
+    assert NEXT_TARGET in registry["next_strict_target_coverage"]
+
+    consumed = _workstream(registry, CONSUMED_TARGET)
+    assert consumed["status"] == "paused"
+    assert consumed["review_result"] == OUTCOME_ID
+    assert consumed["selected_next_target"] == NEXT_TARGET
+    assert consumed["vacuum_u1_gauge_route_accepted"] == "yes"
+    assert consumed["stress_energy_route_selected_here"] == "no"
+    assert consumed["current_route_derived"] == "no"
+    assert consumed["A_relevant_C_k_rules_constructed"] == "no"
+    assert consumed["master_action_promoted"] == "no"
+
+    active_row = active[0]
+    assert active_row["workstream_id"] == NEXT_TARGET
+    assert active_row["authorized_next_strict_target"] == NEXT_TARGET
+    assert active_row["authorized_target"] == NEXT_TARGET
+    assert active_row["consumed_target"] == CONSUMED_TARGET
+    assert active_row["review_result"] == OUTCOME_ID
+    assert active_row["selector_prepared"] == "no"
+    assert active_row["selector_executed"] == "no"
+    assert active_row["recommended_selector_candidate"] == RECOMMENDED_SELECTOR_CANDIDATE
+    assert active_row["stress_energy_route_selected"] == "no"
+    assert active_row["current_coupling_route_selected"] == "no"
+    assert active_row["current_conservation_route_selected"] == "no"
+    assert active_row["A_relevant_C_k_route_selected"] == "no"
+    assert active_row["current_route_derived"] == "no"
+    assert active_row["master_action_promoted"] == "no"
+
+
+def test_a_vacuum_variation_retry_result_review_lean_and_surface_mirrors() -> None:
+    joined = "\n".join(
+        _read(path)
+        for path in [
+            TOOL_PATH,
+            DEFAULT_OUT,
+            LEAN_PACKET_PATH,
+            QFTGR_AGGREGATE_PATH,
+            CURRENT_TARGET_AGGREGATE_PATH,
+            RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
+            TOE_FORMAL_PATH,
+            REGISTRY_PATH,
+            SURFACES_PATH,
+            FRONTIER_PATH,
+            README_PATH,
+            STATE_PATH,
+            ROADMAP_PATH,
+            STRICT_MAP_PATH,
+        ]
+    )
+    for token in [
+        PACKET_ID,
+        OUTCOME_ID,
+        A_VACUUM_VARIATION_RETRY_REVIEW_RESULT,
+        PACKET_CLASSIFICATION,
+        CONSUMED_TARGET,
+        NEXT_TARGET,
+        RECOMMENDED_SELECTOR_CANDIDATE,
+        "ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyResultReview",
+        "CURRENT_LIVE_NEXT_TARGET_v0: select_next_toe_native_A_route_after_vacuum_u1_variation",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: review_toe_native_A_vacuum_variation_retry_under_selected_u1_policy_result",
+        "vacuum U(1) gauge route only",
+        "nabla_mu F^{mu nu} = 0",
+        "nabla_mu F^{mu nu} = J^nu remains route shape only",
+        "Stress-energy is recorded only as a recommended selector candidate",
+        "does not close QFT-GR",
+        "master-action promotion remain blocked",
+    ]:
+        assert token in joined
+
+
+def test_a_vacuum_variation_retry_result_review_validation_policy_is_bounded() -> None:
+    review = _json(DEFAULT_OUT)
+    policy = review["validation_policy"]
+    assert policy["policy_id"] == LEAN_VALIDATION_POLICY_ID
+    assert policy["aggregate_lean_validation_status_for_packet"] == "NOT_RUN"
+    assert policy["aggregate_lean_validation_completion_claimed"] is False
+    assert policy["aggregate_lean_validation_mathematical_failure_claimed"] is False
+
+
+def test_a_vacuum_variation_retry_result_review_not_manifest_enrolled() -> None:
+    assert_focused_gate_not_manifest_enrolled(
+        "test_toe_native_a_vacuum_variation_retry_under_selected_u1_policy_result_review_gate.py"
+    )
