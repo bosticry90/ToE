@@ -35,6 +35,7 @@ import ToeFormal.Derivation.MasterActionSurfaceSelectionAfterPhiCKTriad
 import ToeFormal.Derivation.ToeNativeASurfaceVariationAndSourceRoutePacket
 import ToeFormal.Derivation.ToeNativeASurfaceVariationAndSourceRouteResultReview
 import ToeFormal.Derivation.ToeNativeAGaugeGroupDomainAndCurrentPolicyPacket
+import ToeFormal.Derivation.ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -56,16 +57,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ToeNativeAGaugeGroupDomainAndCurrentPolicyPacket.outcomeId
+  ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyPacket.outcomeId
 
 def currentPacketId : String :=
-  ToeNativeAGaugeGroupDomainAndCurrentPolicyPacket.packetId
+  ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyPacket.packetId
 
-theorem qft_gr_lane_aggregate_exposes_toe_native_a_gauge_policy_packet :
+theorem qft_gr_lane_aggregate_exposes_toe_native_a_vacuum_variation_retry_packet :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "TOE_NATIVE_A_GAUGE_GROUP_DOMAIN_AND_CURRENT_POLICY_PACKET_PREPARED_" ++
-          "U1_ROUTE_SELECTED_CURRENT_DERIVATION_STILL_BLOCKED" := by
+        "TOE_NATIVE_A_VACUUM_VARIATION_RETRY_UNDER_SELECTED_U1_POLICY_PACKET_PREPARED_" ++
+          "VACUUM_GAUGE_VARIATION_ROUTE_CONSTRUCTED_NO_CURRENT_DERIVATION_OR_EM_CLOSURE" := by
   constructor
   · rfl
   · rfl

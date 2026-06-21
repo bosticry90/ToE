@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_toe_native_A_vacuum_variation_retry_under_selected_u1_policy"
+ACTIVE_LANE = "review_toe_native_A_vacuum_variation_retry_under_selected_u1_policy_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,8 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "prepare_toe_native_A_gauge_group_domain_and_current_policy_packet"
+PREVIOUS_LIVE_TARGET = "prepare_toe_native_A_vacuum_variation_retry_under_selected_u1_policy"
+A_GAUGE_POLICY_TARGET = "prepare_toe_native_A_gauge_group_domain_and_current_policy_packet"
 A_SURFACE_ROUTE_REVIEW_TARGET = "review_toe_native_A_surface_variation_and_source_route_result"
 A_SURFACE_ROUTE_PACKET_TARGET = "prepare_toe_native_A_surface_variation_and_source_route_packet"
 MASTER_ACTION_SURFACE_SELECTOR_TARGET = (
@@ -1464,7 +1465,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_toe_native_A_vacuum_variation_retry_under_selected_u1_policy"
+LIVE_TARGET = "review_toe_native_A_vacuum_variation_retry_under_selected_u1_policy_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1480,7 +1481,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeAGaugeGroupDomainAndCurrentPolicyPacket.lean"
+    / "ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3004,151 +3005,148 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "TOE_NATIVE_A_GAUGE_GROUP_DOMAIN_AND_CURRENT_POLICY_PACKET_PREPARED_"
         "U1_ROUTE_SELECTED_CURRENT_DERIVATION_STILL_BLOCKED"
     )
+    a_vacuum_variation_retry_result = (
+        "TOE_NATIVE_A_VACUUM_VARIATION_RETRY_UNDER_SELECTED_U1_POLICY_PACKET_PREPARED_"
+        "VACUUM_GAUGE_VARIATION_ROUTE_CONSTRUCTED_NO_CURRENT_DERIVATION_OR_EM_CLOSURE"
+    )
 
-    a_vacuum_retry_active_workstream = active_workstream(payload)
+    a_vacuum_review_active_workstream = active_workstream(payload)
+    assert a_vacuum_review_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert a_vacuum_review_active_workstream["active_lane"] == ACTIVE_LANE
     assert (
-        a_vacuum_retry_active_workstream["workstream_id"]
-        == ACTIVE_LANE
-    )
-    assert (
-        a_vacuum_retry_active_workstream["active_lane"]
-        == ACTIVE_LANE
-    )
-    assert (
-        a_vacuum_retry_active_workstream[
-            "authorized_next_strict_target"
-        ]
+        a_vacuum_review_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert (
-        a_vacuum_retry_active_workstream["authorized_target"]
-        == LIVE_TARGET
-    )
-    assert a_vacuum_retry_active_workstream[
+    assert a_vacuum_review_active_workstream["authorized_target"] == LIVE_TARGET
+    assert a_vacuum_review_active_workstream[
         "authorization_evidence"
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
-    assert a_vacuum_retry_active_workstream["report"] == (
+    assert a_vacuum_review_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_A_GAUGE_GROUP_DOMAIN_AND_CURRENT_POLICY_PACKET_20260621_v0.json"
+        "TOE_NATIVE_A_VACUUM_VARIATION_RETRY_UNDER_SELECTED_U1_POLICY_PACKET_20260621_v0.json"
     )
-    assert a_vacuum_retry_active_workstream["consumed_target"] == (
+    assert a_vacuum_review_active_workstream["consumed_target"] == (
         PREVIOUS_LIVE_TARGET
     )
+    assert a_vacuum_review_active_workstream["outcome_id"] == (
+        a_vacuum_variation_retry_result
+    )
+    assert a_vacuum_review_active_workstream[
+        "a_vacuum_variation_retry_result"
+    ] == "VACUUM_GAUGE_VARIATION_ROUTE_CONSTRUCTED_NO_CURRENT_DERIVATION_OR_EM_CLOSURE"
     assert (
-        a_vacuum_retry_active_workstream["outcome_id"]
+        a_vacuum_review_active_workstream["a_gauge_policy_packet_result"]
         == a_gauge_policy_packet_result
     )
-    assert (
-        a_vacuum_retry_active_workstream["a_gauge_policy_packet_result"]
-        == a_gauge_policy_packet_result
-    )
-    assert (
-        a_vacuum_retry_active_workstream["review_result"]
-        == a_surface_route_review_result
-    )
-    assert (
-        a_vacuum_retry_active_workstream["a_gauge_policy_decision"]
-        == "U1_ROUTE_SELECTED_CURRENT_DERIVATION_STILL_BLOCKED"
-    )
-    assert a_vacuum_retry_active_workstream[
+    assert a_vacuum_review_active_workstream[
         "packet_classification"
     ] == (
-        "toe_native_A_gauge_group_domain_and_current_policy_packet_selects_"
-        "minimal_u1_vacuum_route_and_blocks_current_derivation"
+        "toe_native_A_vacuum_variation_retry_under_selected_u1_policy_constructs_"
+        "vacuum_gauge_variation_route_no_current_derivation_or_em_closure"
     )
-    assert a_vacuum_retry_active_workstream[
-        "selected_next_target"
-    ] == LIVE_TARGET
-    assert a_vacuum_retry_active_workstream[
+    assert a_vacuum_review_active_workstream["selected_next_target"] == LIVE_TARGET
+    assert a_vacuum_review_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_vacuum_variation_retry_under_selected_u1_policy_packet_preparation"
-    assert a_vacuum_retry_active_workstream["gauge_group_policy"] == (
+    ] == "toe_native_A_vacuum_variation_retry_under_selected_u1_policy_result_review"
+    assert a_vacuum_review_active_workstream["gauge_group_policy"] == (
         "U(1) / Abelian test route"
     )
-    assert a_vacuum_retry_active_workstream["selected_gauge_group"] == "U(1)"
-    assert a_vacuum_retry_active_workstream["A_field_domain_policy"] == (
+    assert a_vacuum_review_active_workstream["A_field_domain_policy"] == (
         "smooth real 1-form A on the selected spacetime domain"
     )
-    assert a_vacuum_retry_active_workstream["F_definition_policy"] == (
+    assert a_vacuum_review_active_workstream["F_definition_policy"] == (
         "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu"
     )
-    assert "nabla_mu F^{mu nu}" in a_vacuum_retry_active_workstream[
-        "derivative_convention_policy"
-    ]
-    assert a_vacuum_retry_active_workstream["variation_policy"] == (
-        "compact-support or fixed-boundary variation"
+    assert a_vacuum_review_active_workstream["selected_A_action"] == (
+        "S_A^U1[A,g] = -1/4 integral_M dVol_g F_{mu nu} F^{mu nu}"
     )
-    assert a_vacuum_retry_active_workstream[
-        "pure_gauge_equation_route"
+    assert a_vacuum_review_active_workstream["delta_F_form"] == (
+        "delta F_{mu nu} = partial_mu delta A_nu - partial_nu delta A_mu"
+    )
+    assert a_vacuum_review_active_workstream["action_variation_form"] == (
+        "delta S_A^U1 = - integral_M dVol_g F^{mu nu} nabla_mu delta A_nu"
+    )
+    assert a_vacuum_review_active_workstream["integration_by_parts_form"] == (
+        "delta S_A^U1 = integral_M dVol_g (nabla_mu F^{mu nu}) delta A_nu"
+    )
+    assert a_vacuum_review_active_workstream["boundary_policy_used"] == (
+        "compact-support or fixed-boundary variation removes the boundary term"
+    )
+    assert a_vacuum_review_active_workstream[
+        "vacuum_euler_lagrange_route"
     ] == "nabla_mu F^{mu nu} = 0"
-    assert a_vacuum_retry_active_workstream[
-        "current_route_shape"
+    assert a_vacuum_review_active_workstream[
+        "source_route_still_blocked"
     ] == "nabla_mu F^{mu nu} = J^nu"
-    assert a_vacuum_retry_active_workstream["review_criteria_count"] == 13
-    assert a_vacuum_retry_active_workstream["review_criteria_accepted_count"] == 13
-    assert a_vacuum_retry_active_workstream["policy_item_count"] == 9
-    assert a_vacuum_retry_active_workstream["policy_selected_count"] == 7
-    assert a_vacuum_retry_active_workstream["policy_blocked_count"] == 2
+    assert a_vacuum_review_active_workstream["calculation_step_count"] == "8"
+    assert a_vacuum_review_active_workstream["review_criteria_count"] == "12"
+    assert a_vacuum_review_active_workstream[
+        "review_criteria_accepted_count"
+    ] == "12"
     for key in [
+        "u1_policy_used",
         "minimal_abelian_route_selected",
-        "u1_route_selected",
         "A_as_smooth_real_one_form_selected",
-        "bundle_domain_for_A_selected",
-        "definition_of_F_selected",
-        "abelian_covariant_divergence_selected",
-        "boundary_variation_policy_selected",
-        "pure_gauge_vacuum_route_selected",
-        "vacuum_variation_retry_authorized",
-        "current_route_shape_recorded",
+        "F_definition_used",
+        "delta_F_recorded",
+        "action_variation_computed",
+        "integration_by_parts_computed",
+        "boundary_policy_used_for_variation",
+        "boundary_terms_vanish_by_selected_policy",
+        "boundary_terms_controlled",
+        "vacuum_gauge_variation_route_constructed",
+        "vacuum_u1_variation_route_constructed",
+        "vacuum_euler_lagrange_route_constructed",
+        "vacuum_route_recorded",
+        "source_current_route_still_blocked",
         "current_derivation_blocked",
-        "external_current_not_selected_as_native_derivation",
         "psi_derived_current_deferred",
-        "native_derivation_blocked",
-        "policy_contract_recorded",
+        "external_current_not_selected_as_native_derivation",
+        "symbolic_calculation_recorded",
+        "a_surface_variation_executed",
+        "a_surface_variation_route_executed",
     ]:
-        assert a_vacuum_retry_active_workstream[key] == "yes", key
+        assert a_vacuum_review_active_workstream[key] == "yes", key
     for phrase in [
-        "minimal Abelian U(1) test route only",
-        "does not derive Maxwell equations",
+        "constructs the vacuum U(1) gauge variation route only",
         "does not derive J^nu",
-        "does not prove current conservation",
-        "does not select gauge fixing as physical structure",
+        "does not derive a psi-current",
+        "does not select an external current as native derivation",
         "does not select a non-Abelian route",
+        "does not select gauge fixing as physical structure",
         "does not derive stress-energy T_A",
-        "does not prove A-source admissibility",
+        "does not prove current conservation",
+        "does not prove source admissibility",
         "does not construct A-relevant C_k rules",
         "does not close EM",
         "does not close QFT-GR",
-        "does not authorize semiclassical coupling",
         "does not promote the master action",
     ]:
-        assert phrase in a_vacuum_retry_active_workstream[
+        assert phrase in a_vacuum_review_active_workstream[
             "non_claim_boundary"
         ], phrase
     for key in [
+        "current_route_derived",
+        "current_source_route_constructed",
+        "matter_current_J_nu_derived",
+        "psi_derived_current",
+        "external_current_policy_selected",
         "nonabelian_route_selected",
         "gauge_covariant_D_mu_route_selected",
         "covariant_derivative_D_mu_convention_selected",
-        "boundary_terms_controlled",
-        "vacuum_variation_retry_executed",
-        "current_route_derived",
-        "external_current_policy_selected",
-        "matter_current_J_nu_derived",
         "gauge_fixing_selected",
         "gauge_fixing_selected_as_physical_structure",
         "C_k_analogues_constructed",
         "A_relevant_C_k_rules_constructed",
         "source_bridge_transport_ck_analogues_constructed",
         "formal_theorem_backed_gauge_derivation",
-        "a_surface_variation_executed",
-        "a_surface_variation_route_executed",
         "maxwell_equation_derived",
         "maxwell_equations_derived",
+        "sourced_maxwell_equation_derived",
         "yang_mills_equations_derived",
         "field_equations_derived",
         "gauge_field_derived",
         "gauge_surface_derived",
-        "current_source_route_constructed",
         "current_conservation_proved",
         "gauge_current_constraint_proved",
         "stress_energy_T_A_derived",
@@ -3163,11 +3161,6 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "source_admissibility_claimed",
         "source_admissibility_completed",
         "source_map_closed",
-        "ck_action_embedding_claimed",
-        "ck_variation_executed",
-        "ck_variation_authorized",
-        "native_phi_derivation_claimed",
-        "v_phi_derivation_claimed",
         "qft_gr_solved",
         "qft_gr_closure_claimed",
         "qft_gr_seam_closed",
@@ -3188,18 +3181,36 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "pillar_completion_inferred",
         "seam_closure_claim",
     ]:
-        assert (
-            a_vacuum_retry_active_workstream.get(key, "no")
-            == "no"
-        ), key
+        assert a_vacuum_review_active_workstream.get(key, "no") == "no", key
 
-    consumed_a_gauge_policy_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_a_vacuum_retry_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_a_vacuum_retry_packet["status"] == "paused"
+    assert consumed_a_vacuum_retry_packet[
+        "a_vacuum_variation_retry_result"
+    ] == "VACUUM_GAUGE_VARIATION_ROUTE_CONSTRUCTED_NO_CURRENT_DERIVATION_OR_EM_CLOSURE"
+    assert consumed_a_vacuum_retry_packet["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_vacuum_retry_packet[
+        "vacuum_gauge_variation_route_constructed"
+    ] == "yes"
+    assert consumed_a_vacuum_retry_packet[
+        "vacuum_euler_lagrange_route"
+    ] == "nabla_mu F^{mu nu} = 0"
+    assert consumed_a_vacuum_retry_packet["source_current_route_still_blocked"] == "yes"
+    assert consumed_a_vacuum_retry_packet["current_route_derived"] == "no"
+    assert consumed_a_vacuum_retry_packet["matter_current_J_nu_derived"] == "no"
+    assert consumed_a_vacuum_retry_packet["stress_energy_T_A_derived"] == "no"
+    assert consumed_a_vacuum_retry_packet["A_relevant_C_k_rules_constructed"] == "no"
+    assert consumed_a_vacuum_retry_packet["em_closure_claimed"] == "no"
+    assert consumed_a_vacuum_retry_packet["qft_gr_closure_claimed"] == "no"
+    assert consumed_a_vacuum_retry_packet["master_action_promoted"] == "no"
+
+    consumed_a_gauge_policy_packet = _workstream(payload, A_GAUGE_POLICY_TARGET)
     assert consumed_a_gauge_policy_packet["status"] == "paused"
     assert (
         consumed_a_gauge_policy_packet["a_gauge_policy_packet_result"]
         == a_gauge_policy_packet_result
     )
-    assert consumed_a_gauge_policy_packet["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_gauge_policy_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert consumed_a_gauge_policy_packet["u1_route_selected"] == "yes"
     assert consumed_a_gauge_policy_packet["definition_of_F_selected"] == "yes"
     assert consumed_a_gauge_policy_packet["current_derivation_blocked"] == "yes"
@@ -3214,15 +3225,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     consumed_a_surface_review = _workstream(payload, A_SURFACE_ROUTE_REVIEW_TARGET)
     assert consumed_a_surface_review["status"] == "paused"
-    assert (
-        consumed_a_surface_review["review_result"]
-        == a_surface_route_review_result
-    )
+    assert consumed_a_surface_review["review_result"] == a_surface_route_review_result
     assert (
         consumed_a_surface_review["a_surface_route_packet_result"]
         == a_surface_route_packet_result
     )
-    assert consumed_a_surface_review["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_a_surface_review["selected_next_target"] == A_GAUGE_POLICY_TARGET
     assert consumed_a_surface_review["raw_A_to_F_route_preserved"] == "yes"
     assert consumed_a_surface_review["raw_variation_route_preserved"] == "yes"
     assert consumed_a_surface_review["source_form_recorded_as_shape_only"] == "yes"
@@ -3241,9 +3249,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         consumed_a_surface_packet["a_surface_route_packet_result"]
         == a_surface_route_packet_result
     )
-    assert (
-        consumed_a_surface_packet["selected_next_target"]
-        == A_SURFACE_ROUTE_REVIEW_TARGET
+    assert consumed_a_surface_packet["selected_next_target"] == (
+        A_SURFACE_ROUTE_REVIEW_TARGET
     )
     assert consumed_a_surface_packet["a_surface_variation_route_prepared"] == "yes"
     assert consumed_a_surface_packet["source_route_shape_only_not_derived"] == "yes"
@@ -10262,7 +10269,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        a_vacuum_retry_active_workstream[
+        a_vacuum_review_active_workstream[
             "authorized_next_strict_target"
         ],
     }

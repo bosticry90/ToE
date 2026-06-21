@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeAGaugeGroupDomainAndCurrentPolicyPacket
+import ToeFormal.Derivation.ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyPacket
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeAGaugeGroupDomainAndCurrentPolicyPacket.selectedNextTarget
+  ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyPacket.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativeAGaugeGroupDomainAndCurrentPolicyPacket.packetId
+  ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyPacket.packetId
 
-theorem current_target_points_to_a_vacuum_u1_variation_retry_packet :
+theorem current_target_points_to_a_vacuum_u1_variation_retry_result_review :
     currentLiveTarget =
-      "prepare_toe_native_A_vacuum_variation_retry_under_selected_u1_policy" := by
+      "review_toe_native_A_vacuum_variation_retry_under_selected_u1_policy_result" := by
   rfl
 
 end CurrentTarget
