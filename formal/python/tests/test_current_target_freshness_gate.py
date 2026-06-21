@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_toe_native_A_surface_variation_and_source_route_packet"
+ACTIVE_LANE = "review_toe_native_A_surface_variation_and_source_route_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1326,10 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "select_next_master_action_surface_after_phi_ck_triad"
+PREVIOUS_LIVE_TARGET = "prepare_toe_native_A_surface_variation_and_source_route_packet"
+MASTER_ACTION_SURFACE_SELECTOR_TARGET = (
+    "select_next_master_action_surface_after_phi_ck_triad"
+)
 PHI_CK_SOURCE_BRIDGE_TRANSPORT_CLOSEOUT_TARGET = (
     "prepare_phi_ck_source_bridge_transport_rule_family_closeout"
 )
@@ -1459,7 +1462,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_toe_native_A_surface_variation_and_source_route_packet"
+LIVE_TARGET = "review_toe_native_A_surface_variation_and_source_route_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1475,7 +1478,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "MasterActionSurfaceSelectionAfterPhiCKTriad.lean"
+    / "ToeNativeASurfaceVariationAndSourceRoutePacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -2985,6 +2988,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == "no"
     )
 
+    a_surface_route_packet_result = (
+        "TOE_NATIVE_A_SURFACE_VARIATION_AND_SOURCE_ROUTE_PACKET_PREPARED_RAW_"
+        "GAUGE_VARIATION_RECORDED_SOURCE_ROUTE_BLOCKED_PENDING_GAUGE_GROUP_"
+        "CURRENT_DOMAIN_AND_CK_CONTENT"
+    )
+
     phi_transport_functional_embedding_active_workstream = active_workstream(payload)
     assert (
         phi_transport_functional_embedding_active_workstream["workstream_id"]
@@ -3009,35 +3018,38 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert phi_transport_functional_embedding_active_workstream["report"] == (
         "formal/docs/release/"
-        "MASTER_ACTION_SURFACE_SELECTION_AFTER_PHI_CK_TRIAD_20260619_v0.json"
+        "TOE_NATIVE_A_SURFACE_VARIATION_AND_SOURCE_ROUTE_PACKET_20260621_v0.json"
     )
     assert phi_transport_functional_embedding_active_workstream["consumed_target"] == (
         PREVIOUS_LIVE_TARGET
     )
-    assert phi_transport_functional_embedding_active_workstream["outcome_id"] == (
-        "MASTER_ACTION_SURFACE_SELECTION_AFTER_PHI_CK_TRIAD_SELECTS_A_SURFACE_"
-        "GAUGE_ROUTE_NO_VARIATION_OR_PROMOTION"
+    assert (
+        phi_transport_functional_embedding_active_workstream["outcome_id"]
+        == a_surface_route_packet_result
     )
-    assert phi_transport_functional_embedding_active_workstream["selection_result"] == (
-        "MASTER_ACTION_SURFACE_SELECTION_AFTER_PHI_CK_TRIAD_SELECTS_A_SURFACE_"
-        "GAUGE_ROUTE_NO_VARIATION_OR_PROMOTION"
+    assert (
+        phi_transport_functional_embedding_active_workstream[
+            "a_surface_route_packet_result"
+        ]
+        == a_surface_route_packet_result
     )
-    assert phi_transport_functional_embedding_active_workstream["route_selection_result"] == (
-        "MASTER_ACTION_SURFACE_SELECTION_AFTER_PHI_CK_TRIAD_SELECTS_A_SURFACE_"
-        "GAUGE_ROUTE_NO_VARIATION_OR_PROMOTION"
+    assert (
+        phi_transport_functional_embedding_active_workstream["packet_result"]
+        == a_surface_route_packet_result
     )
     assert phi_transport_functional_embedding_active_workstream[
         "packet_classification"
     ] == (
-        "master_action_surface_selection_after_phi_ck_triad_selects_a_surface_"
-        "gauge_route_no_variation_or_promotion"
+        "toe_native_A_surface_variation_and_source_route_packet_records_raw_"
+        "gauge_route_and_blocks_source_route_pending_gauge_group_current_domain_"
+        "and_ck_content"
     )
     assert phi_transport_functional_embedding_active_workstream[
         "selected_next_target"
     ] == LIVE_TARGET
     assert phi_transport_functional_embedding_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_surface_variation_and_source_route_packet_preparation"
+    ] == "toe_native_A_surface_variation_and_source_route_result_review"
     assert phi_transport_functional_embedding_active_workstream[
         "selected_master_action_surface"
     ] == "A_surface_gauge_route"
@@ -3048,153 +3060,104 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "selected_route_id"
     ] == "toe_native_A_surface_gauge_variation_and_source_route"
     assert phi_transport_functional_embedding_active_workstream[
-        "selected_route_label"
-    ] == "candidate A gauge variation and source route"
+        "master_A_lagrangian"
+    ] == "L_A^MA = -1/4 F_{mu nu} F^{mu nu}"
     assert phi_transport_functional_embedding_active_workstream[
-        "selected_route_status"
-    ] == "selected_for_packet_preparation"
+        "raw_gauge_route"
+    ] == "A_mu -> F_{mu nu}"
     assert phi_transport_functional_embedding_active_workstream[
-        "selected_route_execution_status"
-    ] == "not_executed"
+        "raw_variation_route"
+    ] == "delta S_A / delta A_nu -> nabla_mu F^{mu nu}"
     assert phi_transport_functional_embedding_active_workstream[
-        "selected_route_target"
-    ] == LIVE_TARGET
+        "source_form_route_shape"
+    ] == "nabla_mu F^{mu nu} = J^nu"
     assert phi_transport_functional_embedding_active_workstream[
-        "alternate_a_target_name"
-    ] == "prepare_A_surface_gauge_variation_and_source_route_packet"
+        "source_form_route_status"
+    ] == "route_shape_only_not_derived_pending_gauge_group_current_domain_and_ck_content"
     assert phi_transport_functional_embedding_active_workstream[
-        "phi_ck_triad_family_classification"
-    ] == "first phi-relevant three-rule C_k family"
+        "gauge_route_status_decision"
+    ] == "raw_gauge_variation_recorded_but_source_route_blocked_for_native_status"
     assert phi_transport_functional_embedding_active_workstream[
-        "phi_ck_triad_rule_family_classification"
-    ] == "three phi-relevant C_k admissibility-rule candidates"
-    assert phi_transport_functional_embedding_active_workstream[
-        "phi_ck_triad_rule_forms"
-    ] == '["C_source^phi = 0", "C_bridge^phi = 0", "C_transport^phi = 0"]'
-    assert phi_transport_functional_embedding_active_workstream[
-        "source_admissibility_constraint_form"
-    ] == "C_source^nu[g, phi] = 0"
-    assert phi_transport_functional_embedding_active_workstream[
-        "bridge_admissibility_constraint_form"
-    ] == "C_bridge^phi = 0"
-    assert phi_transport_functional_embedding_active_workstream[
-        "transport_admissibility_constraint_form"
-    ] == "C_transport^phi = 0"
-    assert phi_transport_functional_embedding_active_workstream[
-        "selection_criteria_count"
-    ] == 10
-    assert phi_transport_functional_embedding_active_workstream[
-        "selection_criteria_accepted_count"
-    ] == 10
-    assert phi_transport_functional_embedding_active_workstream[
-        "surface_selector_candidates"
+        "toe_native_status_decision"
     ] == (
-        '["A_surface_gauge_route", "psi_surface_fermion_matter_route", '
-        '"rho_surface_statistical_entropy_route", '
-        '"ck_further_constraint_family_elaboration"]'
+        "A_surface_has_recognizable_gauge_action_route_but_native_current_source_"
+        "route_not_derived"
     )
     assert phi_transport_functional_embedding_active_workstream[
-        "surface_option_count"
-    ] == 4
+        "route_question_count"
+    ] == 7
     assert phi_transport_functional_embedding_active_workstream[
-        "surface_options_selected_count"
-    ] == 1
-    assert phi_transport_functional_embedding_active_workstream[
-        "surface_options_deferred_count"
-    ] == 3
-    assert phi_transport_functional_embedding_active_workstream[
-        "gauge_route_chain_form"
-    ] == (
-        "A_GAUGE_SURFACE -> VARIATION -> CURRENT_SOURCE_ROUTE -> "
-        "STRESS_ENERGY_ROUTE -> GAUGE_CONSTRAINT_OR_CONSERVATION_CONDITION -> "
-        "SOURCE_BRIDGE_TRANSPORT_CK_ANALOGUES"
-    )
-    assert phi_transport_functional_embedding_active_workstream[
-        "gauge_route_chain_step_count"
+        "calculation_step_count"
     ] == 6
     assert phi_transport_functional_embedding_active_workstream[
-        "packet_result"
-    ] == "PENDING"
+        "retained_blocker_count"
+    ] == 15
     for key in [
-        "selector_target_prepared",
-        "selector_target_accepted",
-        "selection_executed",
-        "master_action_surface_selection_executed",
-        "phi_route_completed_admissibility_template",
-        "a_surface_gauge_route_selected",
-        "a_surface_gauge_route_packet_authorized",
-        "selected_route_packet_authorized",
-        "psi_surface_deferred_as_harder",
-        "rho_surface_deferred_as_more_speculative",
-        "further_phi_ck_elaboration_deferred",
-        "more_ck_elaboration_deferred",
+        "a_surface_variation_route_prepared",
+        "a_surface_indexed",
+        "raw_gauge_variation_formula_recorded",
+        "raw_A_to_F_route_recorded",
+        "raw_variation_shape_recorded",
+        "source_route_shape_recorded",
+        "source_route_shape_only_not_derived",
+        "symbolic_calculation_recorded",
     ]:
         assert phi_transport_functional_embedding_active_workstream[key] == "yes", key
-    assert phi_transport_functional_embedding_active_workstream[
-        "phi_ck_triad_reopened"
-    ] == "no"
-    assert phi_transport_functional_embedding_active_workstream[
-        "selected_route_execution_authorized"
-    ] == "no"
-    assert phi_transport_functional_embedding_active_workstream[
-        "a_surface_gauge_route_packet_prepared"
-    ] == "no"
-    assert phi_transport_functional_embedding_active_workstream[
-        "a_surface_variation_route_prepared"
-    ] == "no"
-    assert phi_transport_functional_embedding_active_workstream[
-        "full_toeformal_aggregate_status_for_packet"
-    ] == "NOT_RUN"
-    assert phi_transport_functional_embedding_active_workstream[
-        "full_toeformal_aggregate_passed"
-    ] == "no"
-    assert phi_transport_functional_embedding_active_workstream[
-        "full_toeformal_aggregate_failed"
-    ] == "no"
-    assert phi_transport_functional_embedding_active_workstream[
-        "full_toeformal_aggregate_timed_out"
-    ] == "no"
     for phrase in [
-        "A_surface_gauge_route as selected",
-        "next preparation packet only",
-        "closed admissibility-rule template",
-        "does not reopen the phi/C_k triad",
-        "does not execute A variation",
-        "does not derive a gauge field",
-        "does not derive Maxwell equations",
-        "does not derive Yang-Mills equations",
-        "does not prove current conservation",
-        "does not prove stress-energy source admissibility",
-        "does not construct new C_k rules",
-        "does not close QFT-GR",
-        "does not close EM",
+        "raw gauge variation/source-route shape",
+        "does not select a gauge group",
+        "does not select the A bundle/domain",
+        "does not define F",
+        "does not select a D_mu convention",
+        "does not derive J^nu",
+        "does not admit an external current",
+        "does not select gauge fixing",
+        "does not control boundary terms",
+        "does not derive T_A",
+        "does not prove source admissibility or current conservation",
+        "does not construct C_k analogues",
+        "does not derive Maxwell or Yang-Mills equations",
+        "does not close EM, QFT-GR, or EM-QFT",
         "does not authorize semiclassical coupling",
-        "does not claim empirical validation",
         "does not promote the master action",
-        "full ToeFormal aggregate is recorded as NOT_RUN",
     ]:
         assert phrase in phi_transport_functional_embedding_active_workstream[
             "non_claim_boundary"
         ], phrase
     for key in [
-        "route_packet_prepared",
-        "a_surface_gauge_route_packet_prepared",
+        "formal_theorem_backed_gauge_derivation",
         "a_surface_gauge_route_execution_authorized",
         "a_surface_variation_executed",
-        "a_surface_variation_route_prepared",
         "a_surface_variation_route_executed",
-        "gauge_field_derived",
-        "gauge_surface_derived",
+        "gauge_group_selected",
+        "bundle_domain_for_A_selected",
+        "definition_of_F_selected",
+        "covariant_derivative_D_mu_convention_selected",
+        "matter_current_J_nu_derived",
+        "external_current_policy_selected",
+        "gauge_fixing_selected",
+        "boundary_terms_controlled",
+        "stress_energy_T_A_derived",
+        "source_admissibility_proved",
+        "current_conservation_proved",
+        "gauge_current_constraint_proved",
+        "C_k_analogues_constructed",
+        "source_bridge_transport_ck_analogues_constructed",
         "maxwell_equations_derived",
         "yang_mills_equations_derived",
         "field_equations_derived",
+        "gauge_field_derived",
+        "gauge_surface_derived",
         "current_source_route_constructed",
-        "current_conservation_proved",
-        "gauge_current_constraint_proved",
         "stress_energy_route_constructed",
         "stress_energy_source_admissibility_proved",
-        "new_ck_rules_constructed",
-        "source_bridge_transport_ck_analogues_constructed",
+        "toe_native_gauge_derivation_claimed",
+        "toe_native_A_source_route_constructed",
+        "toe_native_A_source_admissibility_claimed",
+        "toe_native_A_current_conservation_claimed",
+        "source_admissibility_claimed",
+        "source_admissibility_completed",
+        "source_map_closed",
         "ck_action_embedding_claimed",
         "ck_variation_executed",
         "ck_variation_authorized",
@@ -3225,8 +3188,25 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
             == "no"
         ), key
 
+    consumed_a_surface_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_a_surface_packet["status"] == "paused"
+    assert (
+        consumed_a_surface_packet["a_surface_route_packet_result"]
+        == a_surface_route_packet_result
+    )
+    assert consumed_a_surface_packet["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_surface_packet["a_surface_variation_route_prepared"] == "yes"
+    assert consumed_a_surface_packet["source_route_shape_only_not_derived"] == "yes"
+    assert consumed_a_surface_packet["gauge_group_selected"] == "no"
+    assert consumed_a_surface_packet["matter_current_J_nu_derived"] == "no"
+    assert consumed_a_surface_packet["current_conservation_proved"] == "no"
+    assert consumed_a_surface_packet["C_k_analogues_constructed"] == "no"
+    assert consumed_a_surface_packet["em_closure_claimed"] == "no"
+    assert consumed_a_surface_packet["qft_gr_closure_claimed"] == "no"
+    assert consumed_a_surface_packet["master_action_promoted"] == "no"
+
     consumed_master_action_surface_selector = _workstream(
-        payload, PREVIOUS_LIVE_TARGET
+        payload, MASTER_ACTION_SURFACE_SELECTOR_TARGET
     )
     assert consumed_master_action_surface_selector["status"] == "paused"
     assert consumed_master_action_surface_selector["selection_result"] == (
@@ -3234,7 +3214,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "GAUGE_ROUTE_NO_VARIATION_OR_PROMOTION"
     )
     assert consumed_master_action_surface_selector["selected_next_target"] == (
-        LIVE_TARGET
+        PREVIOUS_LIVE_TARGET
     )
     assert consumed_master_action_surface_selector[
         "selected_master_action_surface"
@@ -3283,7 +3263,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "ADMISSIBILITY_FAMILY_NO_ACTION_VARIATION_OR_PROMOTION"
     )
     assert consumed_source_bridge_transport_closeout["selected_next_target"] == (
-        PREVIOUS_LIVE_TARGET
+        MASTER_ACTION_SURFACE_SELECTOR_TARGET
     )
     assert consumed_source_bridge_transport_closeout[
         "first_phi_relevant_three_rule_ck_family_closed"

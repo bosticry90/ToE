@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "Master-action surface selector after the closed phi/C_k triad accepted outcome MASTER_ACTION_SURFACE_SELECTION_AFTER_PHI_CK_TRIAD_SELECTS_A_SURFACE_GAUGE_ROUTE_NO_VARIATION_OR_PROMOTION. The selector preserves the phi/C_k triad as a closed admissibility-rule template with C_source^phi = 0, C_bridge^phi = 0, and C_transport^phi = 0, then selects A_surface_gauge_route as the next cross-surface pressure test. It authorizes only prepare_toe_native_A_surface_variation_and_source_route_packet. No A variation, gauge-field derivation, Maxwell/Yang-Mills derivation, current-conservation proof, stress-energy source-admissibility proof, new C_k rule construction, QFT-GR closure, EM closure, empirical validation, master-action promotion, or pillar/seam completion is claimed. The full ToeFormal aggregate is recorded as NOT_RUN for the selector"
+        "ToE-native A surface variation/source route packet accepted outcome TOE_NATIVE_A_SURFACE_VARIATION_AND_SOURCE_ROUTE_PACKET_PREPARED_RAW_GAUGE_VARIATION_RECORDED_SOURCE_ROUTE_BLOCKED_PENDING_GAUGE_GROUP_CURRENT_DOMAIN_AND_CK_CONTENT. The packet records the raw A_mu -> F_{mu nu} route, the raw delta S_A / delta A_nu -> nabla_mu F^{mu nu} variation/source-route shape, and nabla_mu F^{mu nu} = J^nu as route shape only. It does not select a gauge group, A bundle/domain, F definition, D_mu convention, matter-current or external-current policy, gauge fixing, boundary controls, stress-energy route, source admissibility, current conservation, C_k analogues, EM closure, QFT-GR closure, or master-action promotion."
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_toe_native_A_surface_variation_and_source_route_packet"
+        "review_toe_native_A_surface_variation_and_source_route_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch is closed as a positive local classical source witness, the master-action phi surface has a selected nonpromotional policy and alignment witness, and the phi/C_k source/bridge/transport sequence is closed as the first phi-relevant three-rule C_k admissibility-only family: C_source^phi = 0, C_bridge^phi = 0, and C_transport^phi = 0. The post-triad selector now selects A_surface_gauge_route as the next master-action surface and authorizes only prepare_toe_native_A_surface_variation_and_source_route_packet. The selector compares A, psi, rho, and further C_k elaboration, deferring psi, rho, and further phi/C_k elaboration without rejection. No A variation, gauge equation derivation, current-conservation proof, stress-energy source route, new C_k rule construction, QFT-GR closure, EM closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows. The full ToeFormal aggregate is recorded as NOT_RUN for this selector"
+        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A surface packet now records a raw gauge route for the master-action gauge term. The A packet records A_mu -> F_{mu nu}, delta S_A / delta A_nu -> nabla_mu F^{mu nu}, and nabla_mu F^{mu nu} = J^nu as route shape only, while blocking native source derivation pending gauge group, current, domain, boundary, stress-energy, and C_k analogue content. No Maxwell/Yang-Mills derivation, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_toe_native_A_surface_variation_and_source_route_packet"
+        "review_toe_native_A_surface_variation_and_source_route_result"
       status := .retained }
   ]
 
@@ -414,11 +414,11 @@ def crossPillarClosureFrontierSurfaceId : String :=
 
 /-- Previous live target consumed by the post-triad master-action surface selector. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "select_next_master_action_surface_after_phi_ck_triad"
-
-/-- Current live target after the post-triad master-action surface selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_toe_native_A_surface_variation_and_source_route_packet"
+
+/-- Current live target after the ToE-native A surface route packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_toe_native_A_surface_variation_and_source_route_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_toe_native_A_surface_variation_and_source_route_packet"
+    "review_toe_native_A_surface_variation_and_source_route_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
