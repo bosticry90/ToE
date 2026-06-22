@@ -1157,7 +1157,9 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_toe_native_A_source_admissibility_review_for_vacuum_stress_energy"
+ACTIVE_LANE = (
+    "review_toe_native_A_source_admissibility_review_for_vacuum_stress_energy_result"
+)
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1326,7 +1328,10 @@ STATE_EXPECTATION_COMPATIBILITY_ASSUMPTION_REDUCTION_ATTEMPT_TARGET = (
 CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
-PREVIOUS_LIVE_TARGET = "select_next_toe_native_A_route_after_stress_energy_route"
+PREVIOUS_LIVE_TARGET = (
+    "prepare_toe_native_A_source_admissibility_review_for_vacuum_stress_energy"
+)
+A_AFTER_STRESS_SELECTOR_TARGET = "select_next_toe_native_A_route_after_stress_energy_route"
 A_STRESS_ENERGY_REVIEW_TARGET = (
     "review_toe_native_A_stress_energy_route_under_selected_u1_policy_result"
 )
@@ -1478,7 +1483,9 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_toe_native_A_source_admissibility_review_for_vacuum_stress_energy"
+LIVE_TARGET = (
+    "review_toe_native_A_source_admissibility_review_for_vacuum_stress_energy_result"
+)
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1494,7 +1501,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeARouteSelectionAfterStressEnergyRoute.lean"
+    / "ToeNativeASourceAdmissibilityReviewForVacuumStressEnergy.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3043,81 +3050,102 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "SOURCE_ADMISSIBILITY_REVIEW_NO_CURRENT_DERIVATION_OR_EM_CLOSURE"
     )
 
-    a_source_review_active_workstream = active_workstream(payload)
-    assert a_source_review_active_workstream["workstream_id"] == ACTIVE_LANE
-    assert a_source_review_active_workstream["active_lane"] == ACTIVE_LANE
+    a_source_review_prep_result = (
+        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_FOR_VACUUM_STRESS_ENERGY_"
+        "PREPARED_VACUUM_GAUGE_SOURCE_ADMISSIBILITY_REVIEW_ON_SHELL_NO_CURRENT_"
+        "OR_EM_CLOSURE"
+    )
+
+    a_source_result_review_active_workstream = active_workstream(payload)
+    assert a_source_result_review_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert a_source_result_review_active_workstream["active_lane"] == ACTIVE_LANE
     assert (
-        a_source_review_active_workstream["authorized_next_strict_target"]
+        a_source_result_review_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert a_source_review_active_workstream["authorized_target"] == LIVE_TARGET
-    assert a_source_review_active_workstream[
+    assert a_source_result_review_active_workstream["authorized_target"] == LIVE_TARGET
+    assert a_source_result_review_active_workstream[
         "authorization_evidence"
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
-    assert a_source_review_active_workstream["report"] == (
+    assert a_source_result_review_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_A_ROUTE_SELECTION_AFTER_STRESS_ENERGY_ROUTE_20260621_v0.json"
+        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_FOR_VACUUM_STRESS_ENERGY_"
+        "20260621_v0.json"
     )
     assert (
-        a_source_review_active_workstream["consumed_target"]
+        a_source_result_review_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        a_source_review_active_workstream["outcome_id"]
-        == a_after_stress_selection_result
+        a_source_result_review_active_workstream["outcome_id"]
+        == a_source_review_prep_result
     )
-    assert a_source_review_active_workstream[
+    assert a_source_result_review_active_workstream[
         "packet_classification"
     ] == (
-        "toe_native_A_route_selection_after_stress_energy_route_selects_vacuum_"
-        "source_admissibility_review_no_current_derivation_or_em_closure"
+        "toe_native_A_source_admissibility_review_for_vacuum_stress_energy_prepares_"
+        "on_shell_vacuum_gauge_source_review_no_current_or_em_closure"
     )
-    assert a_source_review_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert a_source_review_active_workstream[
+    assert a_source_result_review_active_workstream["selected_next_target"] == LIVE_TARGET
+    assert a_source_result_review_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_source_admissibility_review_for_vacuum_stress_energy_preparation"
-    assert a_source_review_active_workstream["packet_result"] == "PENDING"
-    assert a_source_review_active_workstream["selector_prepared"] == "yes"
-    assert a_source_review_active_workstream["selector_executed"] == "yes"
-    assert a_source_review_active_workstream["source_admissibility_review_prepared"] == "no"
-    assert a_source_review_active_workstream["source_admissibility_review_pending"] == "yes"
-    assert a_source_review_active_workstream["route_option_count"] == "5"
-    assert a_source_review_active_workstream["selected_route_id"] == (
-        "A_vacuum_source_admissibility_review"
+    ] == "toe_native_A_source_admissibility_review_for_vacuum_stress_energy_result_review"
+    assert a_source_result_review_active_workstream["packet_result"] == "PENDING"
+    assert a_source_result_review_active_workstream["result_review_pending"] == "yes"
+    assert a_source_result_review_active_workstream["source_admissibility_review_prepared"] == "yes"
+    assert a_source_result_review_active_workstream["source_admissibility_review_executed"] == "no"
+    assert a_source_result_review_active_workstream["review_preparation_criteria_count"] == "12"
+    assert (
+        a_source_result_review_active_workstream["review_preparation_criteria_prepared_count"]
+        == "12"
     )
-    assert a_source_review_active_workstream["gauge_group_policy"] == (
+    assert a_source_result_review_active_workstream["gauge_group_policy"] == (
         "U(1) / Abelian test route"
     )
-    assert a_source_review_active_workstream["A_field_domain_policy"] == (
+    assert a_source_result_review_active_workstream["A_field_domain_policy"] == (
         "smooth real 1-form A on the selected spacetime domain"
     )
-    assert a_source_review_active_workstream["F_definition_policy"] == (
+    assert a_source_result_review_active_workstream["F_definition_policy"] == (
         "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu"
     )
-    assert a_source_review_active_workstream[
+    assert a_source_result_review_active_workstream[
         "vacuum_euler_lagrange_route"
     ] == "nabla_mu F^{mu nu} = 0"
-    assert a_source_review_active_workstream[
+    assert a_source_result_review_active_workstream[
         "source_route_still_blocked"
     ] == "nabla_mu F^{mu nu} = J^nu"
-    assert a_source_review_active_workstream[
+    assert a_source_result_review_active_workstream[
         "stress_energy_under_selected_u1_policy"
     ] == (
         "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + "
         "1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}"
     )
+    assert a_source_result_review_active_workstream[
+        "source_admissibility_condition"
+    ] == "nabla_mu T_A^{mu nu} = 0"
+    assert a_source_result_review_active_workstream[
+        "bianchi_identity_route"
+    ] == "dF = 0 / nabla_[lambda F_{mu nu]} = 0"
+    assert a_source_result_review_active_workstream[
+        "stress_energy_divergence_route"
+    ] == "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha}"
     for key in [
-        "route_selection_executed",
-        "next_a_route_selected",
-        "source_admissibility_review_selected",
-        "vacuum_source_admissibility_review_selected",
-        "source_admissibility_review_packet_authorized",
+        "source_admissibility_review_prepared",
+        "vacuum_gauge_source_admissibility_review_prepared",
+        "local_on_shell_source_review_surface_prepared",
+        "local_on_shell_source_route_candidate_recorded",
+        "candidate_source_object_recorded",
+        "source_admissibility_condition_recorded",
+        "bianchi_identity_route_recorded",
+        "stress_energy_divergence_route_recorded",
+        "on_shell_vacuum_conservation_route_recorded",
+        "current_coupled_exchange_caution_recorded",
+        "result_review_authorized",
     ]:
-        assert a_source_review_active_workstream[key] == "yes", key
+        assert a_source_result_review_active_workstream[key] == "yes", key
     for key in [
         "stress_energy_source_admissibility_proved",
         "stress_energy_as_gravity_source_authorized",
-        "source_admissibility_review_execution_authorized",
         "source_admissibility_review_executed",
         "source_admissibility_review_completed",
         "source_admissibility_executed",
@@ -3132,17 +3160,18 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "external_current_policy_selected",
         "external_current_native_derivation_selected",
         "current_conservation_proved",
+        "current_conservation_theorem_claimed",
         "A_source_admissibility_proved",
         "source_admissibility_proved",
         "A_relevant_C_k_rules_constructed",
-        "C_k_analogues_constructed",
+        "A_relevant_C_k_triads_constructed",
         "source_bridge_transport_ck_analogues_constructed",
         "maxwell_equation_derived",
         "maxwell_equations_derived",
         "sourced_maxwell_equation_derived",
+        "sourced_maxwell_closure_claimed",
         "yang_mills_equations_derived",
         "field_equations_derived",
-        "gauge_surface_derived",
         "qft_gr_closure_claimed",
         "qft_gr_solved",
         "qft_gr_seam_closed",
@@ -3160,31 +3189,45 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "phase2_readiness_claim",
         "pillar_completion_inferred",
         "seam_closure_claim",
-        "current_coupling_route_selected",
-        "current_conservation_route_selected",
-        "A_relevant_C_k_route_selected",
     ]:
-        assert a_source_review_active_workstream.get(key, "no") == "no", key
+        assert a_source_result_review_active_workstream.get(key, "no") == "no", key
     for phrase in [
-        "selects the vacuum A-source admissibility review",
-        "does not execute source admissibility",
+        "prepares the vacuum U(1) gauge stress-energy source-admissibility review only",
+        "does not execute the result review",
         "does not prove A-source admissibility",
         "does not derive J^nu",
-        "does not prove current conservation",
+        "does not prove a current conservation theorem",
         "does not construct A-relevant C_k rules",
         "does not claim sourced Maxwell closure",
         "does not close EM",
         "does not close QFT-GR",
         "does not promote the master action",
     ]:
-        assert phrase in a_source_review_active_workstream[
+        assert phrase in a_source_result_review_active_workstream[
             "non_claim_boundary"
         ], phrase
 
-    consumed_a_after_stress_selector = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_a_source_review_prep = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_a_source_review_prep["status"] == "paused"
+    assert consumed_a_source_review_prep["packet_result"] == "PREPARED"
+    assert consumed_a_source_review_prep["outcome_id"] == a_source_review_prep_result
+    assert consumed_a_source_review_prep["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_source_review_prep["source_admissibility_review_prepared"] == "yes"
+    assert consumed_a_source_review_prep["local_on_shell_source_route_candidate_recorded"] == "yes"
+    assert consumed_a_source_review_prep["source_admissibility_review_executed"] == "no"
+    assert consumed_a_source_review_prep["source_admissibility_proved"] == "no"
+    assert consumed_a_source_review_prep["current_route_derived"] == "no"
+    assert consumed_a_source_review_prep["J_nu_derived"] == "no"
+    assert consumed_a_source_review_prep["current_conservation_proved"] == "no"
+    assert consumed_a_source_review_prep["A_relevant_C_k_rules_constructed"] == "no"
+    assert consumed_a_source_review_prep["em_closure_claimed"] == "no"
+    assert consumed_a_source_review_prep["qft_gr_closure_claimed"] == "no"
+    assert consumed_a_source_review_prep["master_action_promoted"] == "no"
+
+    consumed_a_after_stress_selector = _workstream(payload, A_AFTER_STRESS_SELECTOR_TARGET)
     assert consumed_a_after_stress_selector["status"] == "paused"
     assert consumed_a_after_stress_selector["selection_result"] == a_after_stress_selection_result
-    assert consumed_a_after_stress_selector["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_after_stress_selector["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert consumed_a_after_stress_selector["source_admissibility_review_selected"] == "yes"
     assert consumed_a_after_stress_selector["source_admissibility_review_executed"] == "no"
     assert consumed_a_after_stress_selector["source_admissibility_proved"] == "no"
@@ -3199,7 +3242,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     consumed_a_stress_energy_review = _workstream(payload, A_STRESS_ENERGY_REVIEW_TARGET)
     assert consumed_a_stress_energy_review["status"] == "paused"
     assert consumed_a_stress_energy_review["review_result"] == a_stress_energy_review_result
-    assert consumed_a_stress_energy_review["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert (
+        consumed_a_stress_energy_review["selected_next_target"]
+        == A_AFTER_STRESS_SELECTOR_TARGET
+    )
     assert consumed_a_stress_energy_review["stress_energy_route_accepted"] == "yes"
     assert consumed_a_stress_energy_review["gauge_stress_energy_route_accepted"] == "yes"
     assert consumed_a_stress_energy_review["current_route_derived"] == "no"
@@ -10358,7 +10404,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        a_source_review_active_workstream[
+        a_source_result_review_active_workstream[
             "authorized_next_strict_target"
         ],
     }

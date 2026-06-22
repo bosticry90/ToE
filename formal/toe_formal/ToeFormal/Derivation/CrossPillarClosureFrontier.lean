@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "ToE-native A route selector after stress-energy accepted outcome TOE_NATIVE_A_ROUTE_SELECTION_AFTER_STRESS_ENERGY_ROUTE_SELECTS_VACUUM_SOURCE_ADMISSIBILITY_REVIEW_NO_CURRENT_DERIVATION_OR_EM_CLOSURE. The selector preserves the selected U(1) policy, A as a smooth real 1-form, F = dA, (+,-,-,-) convention scope, nabla_mu F^{mu nu} = 0 as the prior vacuum route, and the convention-sensitive metric-variation route T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}. It selects a vacuum source-admissibility review as the next preparation target only. It does not execute source admissibility, derive J^nu, prove current conservation, prove A-source admissibility, construct A-relevant C_k rules, close EM, close QFT-GR, authorize semiclassical coupling, or promote the master action."
+        "ToE-native A source-admissibility review preparation packet accepted outcome TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_FOR_VACUUM_STRESS_ENERGY_PREPARED_VACUUM_GAUGE_SOURCE_ADMISSIBILITY_REVIEW_ON_SHELL_NO_CURRENT_OR_EM_CLOSURE. The packet preserves the selected U(1) policy, A as a smooth real 1-form, F = dA, (+,-,-,-) convention scope, nabla_mu F^{mu nu} = 0 as the prior vacuum route, and the convention-sensitive metric-variation route T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}. It records the local test surface nabla_mu T_A^{mu nu} = 0, the Bianchi route dF = 0, and the convention-sensitive divergence route nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} for result review. It does not execute the result review, prove A-source admissibility, derive J^nu, prove current conservation, construct A-relevant C_k rules, close EM, close QFT-GR, authorize semiclassical coupling, or promote the master action."
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_toe_native_A_source_admissibility_review_for_vacuum_stress_energy"
+        "review_toe_native_A_source_admissibility_review_for_vacuum_stress_energy_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route plus a reviewed convention-sensitive gauge stress-energy route. The after-stress-energy selector selects a vacuum source-admissibility review as the next preparation target only. It preserves T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta} under (+,-,-,-), while keeping nabla_mu F^{mu nu} = J^nu blocked as sourced-current route shape only. No source admissibility execution, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, current conservation, A-relevant C_k construction, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
+        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route plus a reviewed convention-sensitive gauge stress-energy route. The vacuum A-source-admissibility review packet prepares the local on-shell test surface nabla_mu T_A^{mu nu} = 0 from F=dA, dF=0, nabla_mu F^{mu nu}=0, and T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta} under (+,-,-,-), while keeping nabla_mu F^{mu nu} = J^nu blocked as sourced-current route shape only. No source admissibility result review, source-admissibility proof, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, current conservation theorem, A-relevant C_k construction, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_toe_native_A_source_admissibility_review_for_vacuum_stress_energy"
+        "review_toe_native_A_source_admissibility_review_for_vacuum_stress_energy_result"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the ToE-native A after-stress selector. -/
+/-- Previous live target consumed by the ToE-native A source review packet. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "select_next_toe_native_A_route_after_stress_energy_route"
-
-/-- Current live target after the ToE-native A after-stress selector. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_toe_native_A_source_admissibility_review_for_vacuum_stress_energy"
+
+/-- Current live target after the ToE-native A source review packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_toe_native_A_source_admissibility_review_for_vacuum_stress_energy_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_toe_native_A_source_admissibility_review_for_vacuum_stress_energy"
+    "review_toe_native_A_source_admissibility_review_for_vacuum_stress_energy_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
