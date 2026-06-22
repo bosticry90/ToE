@@ -1,0 +1,355 @@
+{
+  "A_field_domain_policy": "smooth real 1-form A on the selected spacetime domain",
+  "A_relevant_C_k_rules_constructed": false,
+  "A_relevant_C_k_triads_constructed": false,
+  "A_source_admissibility_claimed": false,
+  "A_source_admissibility_proved": false,
+  "F_antisymmetry_recorded": true,
+  "F_antisymmetry_route": "F_{mu nu} = - F_{nu mu}",
+  "F_dA_preserved": true,
+  "F_definition_policy": "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+  "J_nu_derived": false,
+  "acceptance_criteria": {
+    "consumes_current_identity_packet_target": true,
+    "current_ck_closure_still_blocked": true,
+    "identity_criteria_constructed_or_blocked": true,
+    "identity_steps_constructed": true,
+    "selected_u1_context_preserved": true,
+    "stress_energy_and_test_surface_preserved": true
+  },
+  "accepted": true,
+  "accepted_outcomes_considered": [
+    "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_PACKET_PREPARED_ON_SHELL_DIVERGENCE_IDENTITY_CONSTRUCTED_NO_CURRENT_OR_EM_CLOSURE",
+    "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_PACKET_PREPARED_DIVERGENCE_IDENTITY_ROUTE_RECORDED_NO_SOURCE_ADMISSIBILITY_OR_EM_CLOSURE",
+    "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_PACKET_BLOCKED_BY_MISSING_BIANCHI_OR_VACUUM_FIELD_EQUATION",
+    "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_PACKET_BLOCKED_BY_CURRENT_COUPLED_ROUTE_SCOPE_LEAK"
+  ],
+  "artifact_id": "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_PACKET_20260621_v0",
+  "authorized_by_result_review_outcome": "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RESULT_REVIEW_ACCEPTS_PREPARED_ON_SHELL_VACUUM_GAUGE_SOURCE_TEST_NO_SOURCE_ADMISSIBILITY_OR_EM_CLOSURE",
+  "authorized_by_result_review_result": "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RESULT_REVIEW_ACCEPTS_PREPARED_ON_SHELL_VACUUM_GAUGE_SOURCE_TEST_NO_SOURCE_ADMISSIBILITY_OR_EM_CLOSURE",
+  "bianchi_identity_recorded": true,
+  "bianchi_identity_route": "dF = 0 / nabla_[lambda F_{mu nu]} = 0",
+  "candidate_gravity_source_route_recorded": true,
+  "candidate_source_object": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+  "canonical_master_action_promoted": false,
+  "captured_at_utc": "2026-06-21T00:00:00Z",
+  "consumed_target": "prepare_toe_native_A_vacuum_source_admissibility_identity_packet",
+  "critical_gate_fail_conditions": [
+    "claim full source-admissibility review accepted",
+    "derive sourced Maxwell equation",
+    "derive J^nu",
+    "construct psi-current route",
+    "select external current as native derivation",
+    "prove total matter+gauge stress-energy conservation",
+    "prove current conservation theorem",
+    "construct A-relevant C_k rules",
+    "claim EM closure",
+    "claim QFT-GR closure",
+    "authorize semiclassical coupling",
+    "promote the working-form master action"
+  ],
+  "current_conservation_proved": false,
+  "current_conservation_theorem_claimed": false,
+  "current_coupled_exchange_caution": "With a current-coupled route the gauge-field stress-energy divergence would be proportional to -F^{nu}{}_{alpha} J^alpha up to convention and would require a matter/current exchange policy; that route is not selected.",
+  "current_coupled_stress_exchange_route": "current-coupled gauge stress-energy alone is not generally conserved; it exchanges energy-momentum with matter/current through a term proportional to -F^{nu}{}_{alpha} J^alpha up to convention",
+  "current_route_derived": false,
+  "current_source_route_constructed": false,
+  "derivation_step_constructed_count": 7,
+  "derivation_step_count": 8,
+  "derivation_steps": [
+    {
+      "claim": "The identity is scoped to the selected vacuum Abelian route.",
+      "mathematical_content": [
+        "U(1) / Abelian test route",
+        "smooth real 1-form A on the selected spacetime domain",
+        "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+        "F_{mu nu} = - F_{nu mu}",
+        "dF = 0 / nabla_[lambda F_{mu nu]} = 0",
+        "metric-compatible Levi-Civita connection",
+        "nabla_mu g_{alpha beta} = 0",
+        "smooth A and F domain",
+        "(+,-,-,-)"
+      ],
+      "status": "constructed",
+      "step_id": "state_selected_u1_assumptions"
+    },
+    {
+      "claim": "The convention-sensitive gauge stress-energy route is the candidate source object.",
+      "mathematical_content": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+      "status": "constructed",
+      "step_id": "state_candidate_stress_energy"
+    },
+    {
+      "claim": "Metric compatibility lets the derivative pass through raised indices and metric factors.",
+      "mathematical_content": "Apply the covariant product rule to nabla_mu T_A^{mu nu} with nabla g = 0.",
+      "status": "constructed",
+      "step_id": "compute_divergence"
+    },
+    {
+      "claim": "The Abelian Bianchi route is the structural cancellation input.",
+      "mathematical_content": "F_{mu nu} = - F_{nu mu} and dF = 0 / nabla_[lambda F_{mu nu]} = 0 cancel the remaining quadratic derivative terms.",
+      "status": "constructed",
+      "step_id": "use_antisymmetry_and_bianchi"
+    },
+    {
+      "claim": "The divergence reduces to the vacuum gauge equation residual up to the selected convention sign.",
+      "mathematical_content": "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha}",
+      "status": "constructed",
+      "step_id": "reduce_to_vacuum_field_equation_residual"
+    },
+    {
+      "claim": "On shell, the residual vanishes in the selected vacuum U(1) route.",
+      "mathematical_content": "nabla_mu F^{mu nu} = 0",
+      "status": "constructed",
+      "step_id": "insert_vacuum_u1_equation"
+    },
+    {
+      "claim": "The vacuum gauge stress-energy is locally conserved on shell.",
+      "mathematical_content": "nabla_mu T_A^{mu nu} = 0",
+      "status": "constructed",
+      "step_id": "conclude_on_shell_vacuum_identity"
+    },
+    {
+      "claim": "The vacuum identity is not a sourced Maxwell or matter-current exchange theorem.",
+      "mathematical_content": "current-coupled gauge stress-energy alone is not generally conserved; it exchanges energy-momentum with matter/current through a term proportional to -F^{nu}{}_{alpha} J^alpha up to convention",
+      "status": "blocked_from_promotion",
+      "step_id": "preserve_current_coupled_caution"
+    }
+  ],
+  "divergence_identity": "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha}",
+  "divergence_identity_constructed": true,
+  "divergence_identity_proved": true,
+  "divergence_identity_verified": true,
+  "downstream_progression": [
+    {
+      "decision": "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_PACKET_PREPARED_ON_SHELL_DIVERGENCE_IDENTITY_CONSTRUCTED_NO_CURRENT_OR_EM_CLOSURE",
+      "reason": "The packet reduces the divergence of the selected U(1) gauge stress-energy to the vacuum field-equation residual and records its on-shell vanishing.",
+      "stage": "A_vacuum_source_admissibility_identity",
+      "status": "ON_SHELL_DIVERGENCE_IDENTITY_CONSTRUCTED"
+    },
+    {
+      "decision": "current_route_remains_blocked",
+      "reason": "current-coupled gauge stress-energy alone is not generally conserved; it exchanges energy-momentum with matter/current through a term proportional to -F^{nu}{}_{alpha} J^alpha up to convention",
+      "stage": "sourced_current_route",
+      "status": "NOT_SELECTED"
+    },
+    {
+      "decision": "review_toe_native_A_vacuum_source_admissibility_identity_packet_result",
+      "reason": "The identity packet must be reviewed before the vacuum A-source admissibility review can be retried.",
+      "stage": "A_source_admissibility_review",
+      "status": "NEXT_TARGET_AUTHORIZED_FOR_RESULT_REVIEW"
+    }
+  ],
+  "em_closure_claimed": false,
+  "em_qft_closure_claimed": false,
+  "empirical_validation_claimed": false,
+  "external_current_native_derivation_selected": false,
+  "external_current_policy_selected": false,
+  "field_equations_derived": false,
+  "full_source_admissibility_review_accepted": false,
+  "gauge_group_policy": "U(1) / Abelian test route",
+  "identity_criteria": [
+    {
+      "assessment": "The active vacuum A-source identity target is consumed.",
+      "evidence": "prepare_toe_native_A_vacuum_source_admissibility_identity_packet",
+      "row_id": "consumes_identity_packet_target",
+      "status": "constructed"
+    },
+    {
+      "assessment": "The route remains within the selected minimal U(1) policy and smooth domain.",
+      "evidence": [
+        "U(1) / Abelian test route",
+        "smooth real 1-form A on the selected spacetime domain"
+      ],
+      "row_id": "u1_policy_and_domain_preserved",
+      "status": "constructed"
+    },
+    {
+      "assessment": "The Abelian field-strength definition and antisymmetry are explicit.",
+      "evidence": [
+        "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+        "F_{mu nu} = - F_{nu mu}"
+      ],
+      "row_id": "F_dA_and_antisymmetry_recorded",
+      "status": "constructed"
+    },
+    {
+      "assessment": "The dF=0 / Bianchi route is an explicit cancellation input.",
+      "evidence": "dF = 0 / nabla_[lambda F_{mu nu]} = 0",
+      "row_id": "bianchi_identity_recorded",
+      "status": "constructed"
+    },
+    {
+      "assessment": "The on-shell residual is the vacuum U(1) equation.",
+      "evidence": "nabla_mu F^{mu nu} = 0",
+      "row_id": "vacuum_field_equation_recorded",
+      "status": "constructed"
+    },
+    {
+      "assessment": "The covariant derivative route is scoped to Levi-Civita metric compatibility.",
+      "evidence": [
+        "metric-compatible Levi-Civita connection",
+        "nabla_mu g_{alpha beta} = 0"
+      ],
+      "row_id": "connection_and_metric_compatibility_recorded",
+      "status": "constructed"
+    },
+    {
+      "assessment": "The convention-sensitive gauge stress-energy expression is preserved.",
+      "evidence": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+      "row_id": "stress_energy_route_preserved",
+      "status": "constructed"
+    },
+    {
+      "assessment": "The divergence identity is recorded as the packet's constructed route.",
+      "evidence": "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha}",
+      "row_id": "divergence_identity_constructed",
+      "status": "constructed"
+    },
+    {
+      "assessment": "The identity vanishes after inserting the vacuum U(1) equation.",
+      "evidence": "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} and nabla_mu F^{mu nu} = 0 imply nabla_mu T_A^{mu nu} = 0",
+      "row_id": "on_shell_vanishing_constructed",
+      "status": "constructed"
+    },
+    {
+      "assessment": "The packet records a candidate local gravity-source route, not a full source-admissibility review.",
+      "evidence": "nabla_mu T_A^{mu nu} = 0",
+      "row_id": "candidate_source_status_bounded",
+      "status": "constructed"
+    },
+    {
+      "assessment": "The sourced-current route remains outside this vacuum identity packet.",
+      "evidence": [
+        "With a current-coupled route the gauge-field stress-energy divergence would be proportional to -F^{nu}{}_{alpha} J^alpha up to convention and would require a matter/current exchange policy; that route is not selected.",
+        "current-coupled gauge stress-energy alone is not generally conserved; it exchanges energy-momentum with matter/current through a term proportional to -F^{nu}{}_{alpha} J^alpha up to convention"
+      ],
+      "row_id": "current_coupled_scope_blocked",
+      "status": "blocked_from_promotion"
+    },
+    {
+      "assessment": "No C_k construction, closure, semiclassical coupling, or promotion follows.",
+      "evidence": [
+        "A_relevant_C_k_rules_constructed=false",
+        "em_closure_claimed=false",
+        "qft_gr_closure_claimed=false",
+        "master_action_promoted=false"
+      ],
+      "row_id": "ck_closure_and_promotion_blocked",
+      "status": "blocked_from_promotion"
+    }
+  ],
+  "identity_criteria_constructed_count": 10,
+  "identity_criteria_count": 12,
+  "identity_packet_prepared": true,
+  "identity_packet_result": "ON_SHELL_DIVERGENCE_IDENTITY_CONSTRUCTED",
+  "identity_result_review_authorized": true,
+  "lane_level_lean_target_files": [
+    "formal/toe_formal/ToeFormal/Derivation/ToeNativeAVacuumSourceAdmissibilityIdentityPacket.lean",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  ],
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.ToeNativeAVacuumSourceAdmissibilityIdentityPacket",
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativeAVacuumSourceAdmissibilityIdentityPacket.lean",
+  "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+  "levi_civita_connection_policy": "metric-compatible Levi-Civita connection",
+  "levi_civita_connection_required": true,
+  "local_on_shell_vacuum_source_route_accepted": false,
+  "local_on_shell_vacuum_source_route_constructed": true,
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "Under the selected vacuum U(1) policy, with F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu, F_{mu nu} = - F_{nu mu}, dF = 0 / nabla_[lambda F_{mu nu]} = 0, metric-compatible Levi-Civita connection, nabla_mu g_{alpha beta} = 0, smooth A and F domain, and the (+,-,-,-) convention, the gauge stress-energy T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta} satisfies the convention-sensitive identity nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha}. With the vacuum equation nabla_mu F^{mu nu} = 0, this gives nabla_mu T_A^{mu nu} = 0 on shell.",
+  "matter_current_J_nu_derived": false,
+  "maxwell_equation_derived": false,
+  "maxwell_equations_derived": false,
+  "metric_compatibility_required": true,
+  "metric_compatibility_route": "nabla_mu g_{alpha beta} = 0",
+  "metric_signature_policy": "(+,-,-,-)",
+  "metric_signature_preserved": true,
+  "non_claim_boundary": "This packet constructs only the bounded vacuum U(1) divergence identity and its on-shell vanishing route. It does not accept the full source-admissibility review, does not authorize the gauge stress-energy as a gravity source, does not derive a sourced Maxwell equation, does not derive J^nu, does not construct a psi-current route, does not select an external current as native derivation, does not prove total matter+gauge stress-energy conservation, does not prove a current conservation theorem, does not construct A-relevant C_k rules, does not close EM, does not close QFT-GR, does not authorize semiclassical coupling, does not claim empirical validation, and does not promote the master action.",
+  "nonabelian_route_selected": false,
+  "on_shell_vacuum_conservation_identity": "nabla_mu T_A^{mu nu} = 0",
+  "on_shell_vacuum_conservation_identity_constructed": true,
+  "on_shell_vacuum_conservation_route": "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} and nabla_mu F^{mu nu} = 0 imply nabla_mu T_A^{mu nu} = 0",
+  "on_shell_vacuum_conservation_route_constructed": true,
+  "outcome_id": "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_PACKET_PREPARED_ON_SHELL_DIVERGENCE_IDENTITY_CONSTRUCTED_NO_CURRENT_OR_EM_CLOSURE",
+  "packet_classification": "toe_native_A_vacuum_source_admissibility_identity_packet_prepared_on_shell_divergence_identity_constructed_no_current_or_em_closure",
+  "packet_id": "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_PACKET_v0",
+  "packet_result": "PREPARED",
+  "phase2_readiness_claim": false,
+  "pillar_completion_inferred": false,
+  "prepared": true,
+  "psi_current_route_constructed": false,
+  "psi_derived_current": false,
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_solved": false,
+  "result_review_authorization_consumed": true,
+  "review_target_authorized": true,
+  "schema_id": "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_PACKET_20260621_v0",
+  "seam_closure_claim": false,
+  "selected_next_target": "review_toe_native_A_vacuum_source_admissibility_identity_packet_result",
+  "selected_next_target_kind": "toe_native_A_vacuum_source_admissibility_identity_packet_result_review",
+  "selected_u1_policy_preserved": true,
+  "semiclassical_coupling_authorized": false,
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_source_established": false,
+  "smooth_domain_required": true,
+  "smooth_domain_requirement": "smooth A and F domain",
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "source_admissibility_condition": "nabla_mu T_A^{mu nu} = 0",
+  "source_admissibility_condition_preserved": true,
+  "source_admissibility_executed": false,
+  "source_admissibility_identity_constructed": true,
+  "source_admissibility_identity_executed": true,
+  "source_admissibility_identity_proved": true,
+  "source_admissibility_identity_verified": true,
+  "source_admissibility_proved": false,
+  "source_admissibility_review_completed": false,
+  "source_admissibility_review_retry_target": "prepare_toe_native_A_source_admissibility_review_retry_after_vacuum_identity",
+  "source_bridge_transport_ck_analogues_constructed": false,
+  "source_route_still_blocked": "nabla_mu F^{mu nu} = J^nu",
+  "sourced_maxwell_closure_claimed": false,
+  "sourced_maxwell_equation_derived": false,
+  "status": "ACTIVE_TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_PACKET",
+  "stress_energy_as_gravity_source_authorized": false,
+  "stress_energy_divergence_route": "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha}",
+  "stress_energy_route_preserved": true,
+  "stress_energy_source_admissibility_proved": false,
+  "stress_energy_under_selected_u1_policy": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+  "total_matter_gauge_stress_energy_conservation_claimed": false,
+  "total_matter_gauge_stress_energy_conservation_proved": false,
+  "vacuum_equation_preserved": true,
+  "vacuum_euler_lagrange_route": "nabla_mu F^{mu nu} = 0",
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+    "aggregate_timeout_with_steady_progress_interpretation": "incomplete_validation_not_mathematical_failure",
+    "checkpoint_type": "toe_native_A_vacuum_source_admissibility_identity_packet",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  },
+  "yang_mills_equations_derived": false
+}

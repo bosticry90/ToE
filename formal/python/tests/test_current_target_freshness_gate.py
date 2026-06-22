@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_toe_native_A_vacuum_source_admissibility_identity_packet"
+ACTIVE_LANE = "review_toe_native_A_vacuum_source_admissibility_identity_packet_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1327,6 +1327,9 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
+    "prepare_toe_native_A_vacuum_source_admissibility_identity_packet"
+)
+A_SOURCE_RESULT_REVIEW_TARGET = (
     "review_toe_native_A_source_admissibility_review_for_vacuum_stress_energy_result"
 )
 A_SOURCE_REVIEW_PREP_TARGET = (
@@ -1484,7 +1487,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_toe_native_A_vacuum_source_admissibility_identity_packet"
+LIVE_TARGET = "review_toe_native_A_vacuum_source_admissibility_identity_packet_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1500,7 +1503,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeASourceAdmissibilityReviewForVacuumStressEnergyResultReview.lean"
+    / "ToeNativeAVacuumSourceAdmissibilityIdentityPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3058,6 +3061,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RESULT_REVIEW_ACCEPTS_PREPARED_"
         "ON_SHELL_VACUUM_GAUGE_SOURCE_TEST_NO_SOURCE_ADMISSIBILITY_OR_EM_CLOSURE"
     )
+    a_source_identity_result = (
+        "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_PACKET_PREPARED_"
+        "ON_SHELL_DIVERGENCE_IDENTITY_CONSTRUCTED_NO_CURRENT_OR_EM_CLOSURE"
+    )
 
     a_source_identity_active_workstream = active_workstream(payload)
     assert a_source_identity_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3072,8 +3079,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert a_source_identity_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_FOR_VACUUM_STRESS_ENERGY_"
-        "RESULT_REVIEW_20260621_v0.json"
+        "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_PACKET_20260621_v0.json"
     )
     assert (
         a_source_identity_active_workstream["consumed_target"]
@@ -3081,32 +3087,21 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         a_source_identity_active_workstream["outcome_id"]
-        == a_source_result_review_result
+        == a_source_identity_result
     )
     assert a_source_identity_active_workstream[
         "packet_classification"
     ] == (
-        "toe_native_A_source_admissibility_review_result_review_accepts_prepared_"
-        "on_shell_vacuum_gauge_source_test_no_source_admissibility_or_em_closure"
+        "toe_native_A_vacuum_source_admissibility_identity_packet_prepared_"
+        "on_shell_divergence_identity_constructed_no_current_or_em_closure"
     )
     assert a_source_identity_active_workstream["selected_next_target"] == LIVE_TARGET
     assert a_source_identity_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_vacuum_source_admissibility_identity_packet_preparation"
+    ] == "toe_native_A_vacuum_source_admissibility_identity_packet_result_review"
     assert a_source_identity_active_workstream["packet_result"] == "PENDING"
-    assert a_source_identity_active_workstream["result_review_executed"] == "yes"
-    assert a_source_identity_active_workstream["source_admissibility_result_review_executed"] == "yes"
-    assert a_source_identity_active_workstream["identity_packet_authorized"] == "yes"
-    assert (
-        a_source_identity_active_workstream[
-            "vacuum_source_admissibility_identity_packet_authorized"
-        ]
-        == "yes"
-    )
-    assert a_source_identity_active_workstream["review_criteria_count"] == 14
-    assert (
-        a_source_identity_active_workstream["review_criteria_accepted_count"]
-        == 14
+    assert a_source_identity_active_workstream["identity_packet_result"] == (
+        "ON_SHELL_DIVERGENCE_IDENTITY_CONSTRUCTED"
     )
     assert a_source_identity_active_workstream["gauge_group_policy"] == (
         "U(1) / Abelian test route"
@@ -3136,36 +3131,39 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "bianchi_identity_route"
     ] == "dF = 0 / nabla_[lambda F_{mu nu]} = 0"
     assert a_source_identity_active_workstream[
+        "F_antisymmetry_route"
+    ] == "F_{mu nu} = - F_{nu mu}"
+    assert a_source_identity_active_workstream[
         "stress_energy_divergence_route"
     ] == "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha}"
+    assert a_source_identity_active_workstream[
+        "on_shell_vacuum_conservation_identity"
+    ] == "nabla_mu T_A^{mu nu} = 0"
     for key in [
-        "result_review_executed",
-        "source_admissibility_result_review_executed",
-        "prepared_test_surface_accepted",
-        "source_admissibility_test_surface_accepted",
-        "u1_policy_preserved",
         "F_dA_preserved",
-        "bianchi_route_preserved",
-        "vacuum_equation_preserved",
-        "stress_energy_route_preserved",
-        "source_admissibility_condition_recorded",
-        "source_admissibility_condition_reviewed",
-        "divergence_route_recorded",
-        "divergence_route_reviewed_as_pending_identity",
-        "identity_packet_authorized",
-        "vacuum_source_admissibility_identity_packet_authorized",
+        "identity_packet_prepared",
+        "divergence_identity_constructed",
+        "divergence_identity_verified",
+        "divergence_identity_proved",
+        "source_admissibility_identity_constructed",
+        "source_admissibility_identity_executed",
+        "source_admissibility_identity_verified",
+        "source_admissibility_identity_proved",
+        "on_shell_vacuum_conservation_identity_constructed",
+        "on_shell_vacuum_conservation_route_constructed",
+        "local_on_shell_vacuum_source_route_constructed",
+        "candidate_gravity_source_route_recorded",
+        "review_target_authorized",
+        "identity_result_review_authorized",
     ]:
         assert a_source_identity_active_workstream[key] == "yes", key
     for key in [
         "local_on_shell_vacuum_source_route_accepted",
-        "local_on_shell_vacuum_source_route_proved",
-        "source_admissibility_identity_executed",
-        "source_admissibility_identity_verified",
-        "source_admissibility_identity_proved",
-        "divergence_identity_verified",
-        "divergence_identity_proved",
+        "full_source_admissibility_review_accepted",
         "stress_energy_source_admissibility_proved",
         "stress_energy_as_gravity_source_authorized",
+        "total_matter_gauge_stress_energy_conservation_proved",
+        "total_matter_gauge_stress_energy_conservation_claimed",
         "source_admissibility_review_completed",
         "source_admissibility_executed",
         "source_admissibility_claimed",
@@ -3211,13 +3209,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ]:
         assert a_source_identity_active_workstream.get(key, "no") == "no", key
     for phrase in [
-        "accepts only the prepared vacuum U(1)",
-        "does not accept a local on-shell vacuum source route",
-        "does not prove A-source admissibility",
+        "constructs only the bounded vacuum U(1) divergence identity",
+        "does not accept the full source-admissibility review",
+        "does not authorize gauge stress-energy as a gravity source",
         "does not derive J^nu",
+        "does not prove total matter+gauge stress-energy conservation",
         "does not prove a current conservation theorem",
         "does not construct A-relevant C_k rules",
-        "does not claim sourced Maxwell closure",
         "does not close EM",
         "does not close QFT-GR",
         "does not promote the master action",
@@ -3226,11 +3224,29 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
             "non_claim_boundary"
         ], phrase
 
-    consumed_a_source_result_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_a_source_identity_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_a_source_identity_packet["status"] == "paused"
+    assert consumed_a_source_identity_packet["packet_result"] == "PREPARED"
+    assert consumed_a_source_identity_packet["identity_packet_result"] == (
+        "ON_SHELL_DIVERGENCE_IDENTITY_CONSTRUCTED"
+    )
+    assert consumed_a_source_identity_packet["outcome_id"] == a_source_identity_result
+    assert consumed_a_source_identity_packet["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_source_identity_packet["divergence_identity_proved"] == "yes"
+    assert (
+        consumed_a_source_identity_packet["source_admissibility_identity_proved"]
+        == "yes"
+    )
+    assert consumed_a_source_identity_packet["source_admissibility_proved"] == "no"
+    assert consumed_a_source_identity_packet["J_nu_derived"] == "no"
+    assert consumed_a_source_identity_packet["A_relevant_C_k_rules_constructed"] == "no"
+    assert consumed_a_source_identity_packet["master_action_promoted"] == "no"
+
+    consumed_a_source_result_review = _workstream(payload, A_SOURCE_RESULT_REVIEW_TARGET)
     assert consumed_a_source_result_review["status"] == "paused"
     assert consumed_a_source_result_review["packet_result"] == "REVIEW_ACCEPTED"
     assert consumed_a_source_result_review["outcome_id"] == a_source_result_review_result
-    assert consumed_a_source_result_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_source_result_review["selected_next_target"] == PREVIOUS_LIVE_TARGET
     assert consumed_a_source_result_review["identity_packet_authorized"] == "yes"
     assert consumed_a_source_result_review["source_admissibility_identity_proved"] == "no"
     assert consumed_a_source_result_review["source_admissibility_proved"] == "no"
@@ -3246,7 +3262,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_a_source_review_prep["status"] == "paused"
     assert consumed_a_source_review_prep["packet_result"] == "PREPARED"
     assert consumed_a_source_review_prep["outcome_id"] == a_source_review_prep_result
-    assert consumed_a_source_review_prep["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_a_source_review_prep["selected_next_target"] == A_SOURCE_RESULT_REVIEW_TARGET
     assert consumed_a_source_review_prep["source_admissibility_review_prepared"] == "yes"
     assert consumed_a_source_review_prep["local_on_shell_source_route_candidate_recorded"] == "yes"
     assert consumed_a_source_review_prep["source_admissibility_review_executed"] == "no"

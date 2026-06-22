@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "ToE-native A source-admissibility result review accepted the prepared vacuum U(1) gauge source test surface under outcome TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RESULT_REVIEW_ACCEPTS_PREPARED_ON_SHELL_VACUUM_GAUGE_SOURCE_TEST_NO_SOURCE_ADMISSIBILITY_OR_EM_CLOSURE. The review preserves the selected U(1) policy, A as a smooth real 1-form, F = dA, (+,-,-,-) convention scope, nabla_mu F^{mu nu} = 0 as the prior vacuum route, and the convention-sensitive route T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}. It accepts nabla_mu T_A^{mu nu} = 0 only as the prepared test surface and routes next to the bounded identity packet. It does not prove the divergence identity, prove A-source admissibility, accept a local on-shell source route, derive J^nu, prove current conservation, construct A-relevant C_k rules, close EM, close QFT-GR, authorize semiclassical coupling, or promote the master action."
+        "ToE-native A vacuum source-admissibility identity packet constructed the bounded U(1) route nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} and its on-shell vanishing nabla_mu T_A^{mu nu} = 0 under F = dA, F_{mu nu} = -F_{nu mu}, dF = 0/Bianchi, nabla_mu F^{mu nu} = 0, smooth A/F domain, metric-compatible Levi-Civita connection, and (+,-,-,-). The next target is result review for the identity packet. It does not accept the full source-admissibility review, authorize gauge stress-energy as a gravity source, derive J^nu, prove current conservation, construct A-relevant C_k rules, close EM, close QFT-GR, authorize semiclassical coupling, or promote the master action."
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_toe_native_A_vacuum_source_admissibility_identity_packet"
+        "review_toe_native_A_vacuum_source_admissibility_identity_packet_result"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route plus a reviewed convention-sensitive gauge stress-energy route. The vacuum A-source-admissibility result review accepts that the local test surface nabla_mu T_A^{mu nu} = 0 was prepared from F=dA, dF=0, nabla_mu F^{mu nu}=0, and T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta} under (+,-,-,-), while keeping the identity proof and source-admissibility proof pending. The next target is the bounded vacuum identity packet. No Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, current conservation theorem, A-relevant C_k construction, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
+        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, and a constructed vacuum divergence identity route nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} -> nabla_mu T_A^{mu nu} = 0 on shell. The current live target is review of that identity packet. No full A-source admissibility review acceptance, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, A-relevant C_k construction, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_toe_native_A_vacuum_source_admissibility_identity_packet"
+        "review_toe_native_A_vacuum_source_admissibility_identity_packet_result"
       status := .retained }
   ]
 
@@ -414,11 +414,11 @@ def crossPillarClosureFrontierSurfaceId : String :=
 
 /-- Previous live target consumed by the ToE-native A source result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_toe_native_A_source_admissibility_review_for_vacuum_stress_energy_result"
-
-/-- Current live target after the ToE-native A source result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_toe_native_A_vacuum_source_admissibility_identity_packet"
+
+/-- Current live target after the ToE-native A vacuum identity packet. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "review_toe_native_A_vacuum_source_admissibility_identity_packet_result"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_toe_native_A_vacuum_source_admissibility_identity_packet"
+    "review_toe_native_A_vacuum_source_admissibility_identity_packet_result"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
