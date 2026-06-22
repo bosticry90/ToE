@@ -288,7 +288,7 @@ def test_a_route_selection_after_stress_energy_mirrors() -> None:
         "HISTORICAL_TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_FOR_VACUUM_STRESS_ENERGY_CURRENT_LIVE_NEXT_TARGET_v0: "
         "prepare_toe_native_A_source_admissibility_review_for_vacuum_stress_energy",
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "review_toe_native_A_source_admissibility_review_for_vacuum_stress_energy_result",
+        "prepare_toe_native_A_vacuum_source_admissibility_identity_packet",
         "A_current_coupling_policy",
         "A_current_conservation_route",
         "A_relevant_C_k_source_bridge_transport_route",

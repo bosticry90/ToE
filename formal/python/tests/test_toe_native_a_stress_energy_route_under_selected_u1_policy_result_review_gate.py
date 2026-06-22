@@ -303,7 +303,7 @@ def test_a_stress_energy_route_result_review_lean_and_surface_mirrors() -> None:
         "HISTORICAL_TOE_NATIVE_A_ROUTE_SELECTION_AFTER_STRESS_ENERGY_ROUTE_CURRENT_LIVE_NEXT_TARGET_v0: "
         "select_next_toe_native_A_route_after_stress_energy_route",
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "prepare_toe_native_A_source_admissibility_review_for_vacuum_stress_energy",
+        "prepare_toe_native_A_vacuum_source_admissibility_identity_packet",
         "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + "
         "1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
         "convention-sensitive",

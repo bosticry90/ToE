@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_toe_native_A_source_admissibility_review_for_vacuum_stress_energy_result" := by
+      "prepare_toe_native_A_vacuum_source_admissibility_identity_packet" := by
   rfl
 
 end CurrentAuthority
