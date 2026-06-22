@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeAStressEnergyRouteUnderSelectedU1PolicyResultReview
+import ToeFormal.Derivation.ToeNativeARouteSelectionAfterStressEnergyRoute
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeAStressEnergyRouteUnderSelectedU1PolicyResultReview.selectedNextTarget
+  ToeNativeARouteSelectionAfterStressEnergyRoute.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativeAStressEnergyRouteUnderSelectedU1PolicyResultReview.packetId
+  ToeNativeARouteSelectionAfterStressEnergyRoute.packetId
 
-theorem current_target_points_to_a_route_selector_after_stress_energy_review :
+theorem current_target_points_to_a_vacuum_source_admissibility_review :
     currentLiveTarget =
-      "select_next_toe_native_A_route_after_stress_energy_route" := by
+      "prepare_toe_native_A_source_admissibility_review_for_vacuum_stress_energy" := by
   rfl
 
 end CurrentTarget

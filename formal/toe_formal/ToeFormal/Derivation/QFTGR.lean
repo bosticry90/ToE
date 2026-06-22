@@ -40,6 +40,7 @@ import ToeFormal.Derivation.ToeNativeAVacuumVariationRetryUnderSelectedU1PolicyR
 import ToeFormal.Derivation.ToeNativeARouteSelectionAfterVacuumU1Variation
 import ToeFormal.Derivation.ToeNativeAStressEnergyRouteUnderSelectedU1PolicyPacket
 import ToeFormal.Derivation.ToeNativeAStressEnergyRouteUnderSelectedU1PolicyResultReview
+import ToeFormal.Derivation.ToeNativeARouteSelectionAfterStressEnergyRoute
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -61,16 +62,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ToeNativeAStressEnergyRouteUnderSelectedU1PolicyResultReview.outcomeId
+  ToeNativeARouteSelectionAfterStressEnergyRoute.outcomeId
 
 def currentPacketId : String :=
-  ToeNativeAStressEnergyRouteUnderSelectedU1PolicyResultReview.packetId
+  ToeNativeARouteSelectionAfterStressEnergyRoute.packetId
 
-theorem qft_gr_lane_aggregate_exposes_toe_native_a_stress_energy_route_review :
+theorem qft_gr_lane_aggregate_exposes_toe_native_a_after_stress_selector :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "TOE_NATIVE_A_STRESS_ENERGY_ROUTE_RESULT_REVIEW_ACCEPTS_GAUGE_STRESS_" ++
-          "ENERGY_ROUTE_NO_SOURCE_ADMISSIBILITY_OR_EM_CLOSURE" := by
+        "TOE_NATIVE_A_ROUTE_SELECTION_AFTER_STRESS_ENERGY_ROUTE_SELECTS_VACUUM_" ++
+          "SOURCE_ADMISSIBILITY_REVIEW_NO_CURRENT_DERIVATION_OR_EM_CLOSURE" := by
   constructor
   · rfl
   · rfl

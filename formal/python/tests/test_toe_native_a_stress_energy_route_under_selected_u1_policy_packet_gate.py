@@ -294,9 +294,9 @@ def test_a_stress_energy_route_packet_mirrors() -> None:
         NEXT_TARGET,
         "ToeNativeAStressEnergyRouteUnderSelectedU1PolicyPacket",
         "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "select_next_toe_native_A_route_after_stress_energy_route",
+        "prepare_toe_native_A_source_admissibility_review_for_vacuum_stress_energy",
         "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "review_toe_native_A_stress_energy_route_under_selected_u1_policy_result",
+        "select_next_toe_native_A_route_after_stress_energy_route",
         "HISTORICAL_TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_PACKET_CURRENT_LIVE_NEXT_TARGET_v0: "
         "prepare_toe_native_A_stress_energy_route_under_selected_u1_policy",
         "HISTORICAL_TOE_NATIVE_A_STRESS_ENERGY_ROUTE_UNDER_SELECTED_U1_POLICY_RESULT_REVIEW_CURRENT_LIVE_NEXT_TARGET_v0: "
