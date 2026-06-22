@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "ToE-native A vacuum source-admissibility identity packet constructed the bounded U(1) route nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} and its on-shell vanishing nabla_mu T_A^{mu nu} = 0 under F = dA, F_{mu nu} = -F_{nu mu}, dF = 0/Bianchi, nabla_mu F^{mu nu} = 0, smooth A/F domain, metric-compatible Levi-Civita connection, and (+,-,-,-). The next target is result review for the identity packet. It does not accept the full source-admissibility review, authorize gauge stress-energy as a gravity source, derive J^nu, prove current conservation, construct A-relevant C_k rules, close EM, close QFT-GR, authorize semiclassical coupling, or promote the master action."
+        "ToE-native A vacuum source-admissibility identity result review accepts the bounded U(1) route nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} and its on-shell vanishing nabla_mu T_A^{mu nu} = 0 under F = dA, F_{mu nu} = -F_{nu mu}, dF = 0/Bianchi, nabla_mu F^{mu nu} = 0, smooth A/F domain, metric-compatible Levi-Civita connection, and (+,-,-,-). The next target is the bounded source-admissibility retry after the vacuum identity. It does not accept the full source-admissibility review, authorize gauge stress-energy as a gravity source, derive J^nu, prove current conservation, construct A-relevant C_k rules, close EM, close QFT-GR, authorize semiclassical coupling, or promote the master action."
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_toe_native_A_vacuum_source_admissibility_identity_packet_result"
+        "prepare_toe_native_A_source_admissibility_review_retry_after_vacuum_identity"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, and a constructed vacuum divergence identity route nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} -> nabla_mu T_A^{mu nu} = 0 on shell. The current live target is review of that identity packet. No full A-source admissibility review acceptance, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, A-relevant C_k construction, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
+        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, and a reviewed vacuum divergence identity route nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} -> nabla_mu T_A^{mu nu} = 0 on shell. The current live target is the bounded source-admissibility retry after that identity. No full A-source admissibility review acceptance, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, A-relevant C_k construction, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_toe_native_A_vacuum_source_admissibility_identity_packet_result"
+        "prepare_toe_native_A_source_admissibility_review_retry_after_vacuum_identity"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the ToE-native A source result review. -/
+/-- Previous live target consumed by the ToE-native A identity result review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_toe_native_A_vacuum_source_admissibility_identity_packet"
-
-/-- Current live target after the ToE-native A vacuum identity packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_toe_native_A_vacuum_source_admissibility_identity_packet_result"
+
+/-- Current live target after the ToE-native A vacuum identity result review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_toe_native_A_source_admissibility_review_retry_after_vacuum_identity"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_toe_native_A_vacuum_source_admissibility_identity_packet_result"
+    "prepare_toe_native_A_source_admissibility_review_retry_after_vacuum_identity"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
