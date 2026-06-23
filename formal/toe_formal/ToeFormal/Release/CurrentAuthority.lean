@@ -20,8 +20,8 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "prepare_toe_native_A_bridge_admissibility_ck_admissibility_rule_closeout" := by
-  rfl
+      "select_next_toe_native_A_ck_constraint_family_after_source_and_bridge_admissibility" := by
+  native_decide
 
 end CurrentAuthority
 end Release
