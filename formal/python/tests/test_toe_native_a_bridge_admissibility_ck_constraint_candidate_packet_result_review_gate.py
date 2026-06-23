@@ -1,0 +1,377 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+
+from formal.python.meta.repo_environment import find_repo_root
+from formal.python.tests.strict_physics_state_helpers import (
+    assert_focused_gate_not_manifest_enrolled,
+    skip_if_not_current_target,
+)
+from formal.python.tools.toe_native_a_bridge_admissibility_ck_constraint_candidate_packet_report import (
+    DEFAULT_OUT as CANDIDATE_PACKET_PATH,
+    OUTCOME_ID as CANDIDATE_PACKET_OUTCOME,
+    PACKET_RESULT as CANDIDATE_PACKET_RESULT,
+)
+from formal.python.tools.toe_native_a_bridge_admissibility_ck_constraint_candidate_packet_result_review_report import (
+    A_BRIDGE_CANDIDATE_ID,
+    A_BRIDGE_CANDIDATE_TYPE,
+    A_BRIDGE_CONSTRAINT_EQUATION,
+    A_BRIDGE_CONSTRAINT_FORM,
+    A_BRIDGE_FIELD_EQUATION_MATCH,
+    A_BRIDGE_RULE_PLAIN_MEANING,
+    A_BRIDGE_SOURCE_RESIDUAL_MATCH,
+    A_BRIDGE_STRESS_ENERGY_MATCH,
+    ARTIFACT_ID,
+    CONSUMED_TARGET,
+    CURRENT_TARGET_AGGREGATE_PATH,
+    DEFAULT_OUT,
+    FULL_TOEFORMAL_STATUS,
+    LEAN_PACKET_PATH,
+    LEAN_VALIDATION_POLICY_ID,
+    LEAN_VALIDATION_POLICY_PATH,
+    NEXT_TARGET,
+    NEXT_TARGET_KIND,
+    OUTCOME_ID,
+    PACKET_CLASSIFICATION,
+    PACKET_ID,
+    QFTGR_AGGREGATE_PATH,
+    RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
+    REVIEW_RESULT,
+    SCHEMA_ID,
+    SELECTED_A_CK_CONSTRAINT_FAMILY,
+    SELECTED_A_CK_OPTION_CLASS,
+    SOURCE_ADMISSIBILITY_CONSTRAINT_FORM,
+    SOURCE_CANDIDATE_CONSTRAINT_EQUATION,
+    SOURCE_CANDIDATE_CONSTRAINT_FORM,
+    SOURCE_CANDIDATE_CONSTRAINT_ID,
+    build_toe_native_a_bridge_admissibility_ck_constraint_candidate_packet_result_review,
+)
+
+
+REPO_ROOT = find_repo_root(Path(__file__))
+TOOL_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "python"
+    / "tools"
+    / "toe_native_a_bridge_admissibility_ck_constraint_candidate_packet_result_review_report.py"
+)
+REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGISTRY_v0.json"
+SURFACES_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "CURRENT_AUTHORITATIVE_SURFACES_v0.md"
+)
+TOE_FORMAL_PATH = REPO_ROOT / "formal" / "toe_formal" / "ToeFormal.lean"
+FRONTIER_PATH = (
+    REPO_ROOT
+    / "formal"
+    / "toe_formal"
+    / "ToeFormal"
+    / "Derivation"
+    / "CrossPillarClosureFrontier.lean"
+)
+README_PATH = REPO_ROOT / "README.md"
+STATE_PATH = REPO_ROOT / "State_of_the_Theory.md"
+ROADMAP_PATH = REPO_ROOT / "formal" / "docs" / "paper" / "PHYSICS_ROADMAP_v0.md"
+STRICT_MAP_PATH = (
+    REPO_ROOT / "formal" / "docs" / "lanes" / "STRICT_PHYSICS_DERIVATION_OBLIGATION_MAP_v0.md"
+)
+
+
+def _read(path: Path) -> str:
+    assert path.exists(), f"Missing required file: {path}"
+    return path.read_text(encoding="utf-8")
+
+
+def _json(path: Path) -> dict:
+    return json.loads(_read(path))
+
+
+def _workstream(payload: dict, workstream_id: str) -> dict:
+    for row in payload["workstreams"]:
+        if row.get("workstream_id") == workstream_id:
+            return row
+    raise AssertionError(f"Missing workstream: {workstream_id}")
+
+
+def test_a_bridge_ck_candidate_review_files_exist() -> None:
+    for path in [
+        CANDIDATE_PACKET_PATH,
+        DEFAULT_OUT,
+        TOOL_PATH,
+        LEAN_PACKET_PATH,
+        LEAN_VALIDATION_POLICY_PATH,
+        QFTGR_AGGREGATE_PATH,
+        CURRENT_TARGET_AGGREGATE_PATH,
+        RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
+    ]:
+        assert path.exists(), path
+
+
+def test_a_bridge_ck_candidate_review_accepts_candidate() -> None:
+    packet = _json(CANDIDATE_PACKET_PATH)
+    review = _json(DEFAULT_OUT)
+    assert packet["outcome_id"] == CANDIDATE_PACKET_OUTCOME
+    assert packet["packet_result"] == CANDIDATE_PACKET_RESULT
+    assert review["artifact_id"] == ARTIFACT_ID
+    assert review["schema_id"] == SCHEMA_ID
+    assert review["packet_id"] == PACKET_ID
+    assert review["prepared"] is True
+    assert review["accepted"] is True
+    assert review["outcome_id"] == OUTCOME_ID
+    assert review["review_result"] == REVIEW_RESULT
+    assert review["packet_classification"] == PACKET_CLASSIFICATION
+    assert review["consumed_target"] == CONSUMED_TARGET
+    assert review["selected_next_target"] == NEXT_TARGET
+    assert review["selected_next_target_kind"] == NEXT_TARGET_KIND
+    assert review["candidate_packet_outcome"] == CANDIDATE_PACKET_OUTCOME
+    assert review["candidate_packet_result"] == CANDIDATE_PACKET_RESULT
+    assert (
+        build_toe_native_a_bridge_admissibility_ck_constraint_candidate_packet_result_review()
+        == review
+    )
+
+
+def test_a_bridge_ck_candidate_review_carries_tuple_exactly() -> None:
+    review = _json(DEFAULT_OUT)
+    assert review["selected_A_ck_option_class"] == SELECTED_A_CK_OPTION_CLASS
+    assert review["selected_A_ck_constraint_family"] == SELECTED_A_CK_CONSTRAINT_FAMILY
+    assert review["A_bridge_candidate_id"] == A_BRIDGE_CANDIDATE_ID
+    assert review["A_bridge_candidate_type"] == A_BRIDGE_CANDIDATE_TYPE
+    assert review["A_bridge_constraint_form"] == A_BRIDGE_CONSTRAINT_FORM
+    assert review["A_bridge_constraint_equation"] == A_BRIDGE_CONSTRAINT_EQUATION
+    assert review["A_bridge_field_equation_match"] == A_BRIDGE_FIELD_EQUATION_MATCH
+    assert review["A_bridge_stress_energy_match"] == A_BRIDGE_STRESS_ENERGY_MATCH
+    assert review["A_bridge_source_residual_match"] == A_BRIDGE_SOURCE_RESIDUAL_MATCH
+    assert review["A_bridge_rule_plain_meaning"] == A_BRIDGE_RULE_PLAIN_MEANING
+    assert review["bridge_component_count"] == 3
+    assert review["source_candidate_constraint_id"] == SOURCE_CANDIDATE_CONSTRAINT_ID
+    assert review["source_candidate_constraint_form"] == SOURCE_CANDIDATE_CONSTRAINT_FORM
+    assert (
+        review["source_candidate_constraint_equation"]
+        == SOURCE_CANDIDATE_CONSTRAINT_EQUATION
+    )
+    assert (
+        review["source_admissibility_constraint_form"]
+        == SOURCE_ADMISSIBILITY_CONSTRAINT_FORM
+    )
+
+
+def test_a_bridge_ck_candidate_review_accepts_required_points() -> None:
+    review = _json(DEFAULT_OUT)
+    assert review["review_criteria_count"] == 13
+    assert review["review_criteria_accepted_count"] == 13
+    assert {row["row_id"] for row in review["review_criteria"]} == {
+        "candidate_review_target_consumed",
+        "C_bridge_A_tuple_preserved_exactly",
+        "C_bridge_A_equation_preserved_exactly",
+        "E_A_route_match_component_preserved",
+        "T_A_route_match_component_preserved",
+        "C_source_A_residual_match_component_preserved",
+        "vacuum_u1_scope_preserved",
+        "source_rule_context_preserved",
+        "no_bridge_proof_or_route_verification",
+        "no_ck_action_embedding_or_variation",
+        "no_current_sourced_maxwell_or_exchange_route",
+        "no_closure_coupling_validation_or_promotion",
+        "functional_embedding_next_target_selected",
+    }
+    assert review["review_accepts_vacuum_u1_route_consistency_candidate"] is True
+    assert review["vacuum_u1_route_consistency_candidate_accepted"] is True
+    assert review["A_bridge_candidate_recorded_as_candidate_only"] is True
+    assert review["route_consistency_tuple_carried_forward"] is True
+    assert review["field_equation_match_component_preserved"] is True
+    assert review["stress_energy_match_component_preserved"] is True
+    assert review["source_residual_match_component_preserved"] is True
+    assert review["vacuum_u1_scope_preserved"] is True
+    assert review["source_admissibility_context_preserved"] is True
+
+
+def test_a_bridge_ck_candidate_review_blocks_shortcuts() -> None:
+    review = _json(DEFAULT_OUT)
+    assert review["functional_embedding_packet_authorized"] is True
+    assert review["functional_embedding_packet_prepared"] is False
+    for key in [
+        "functional_embedding_executed",
+        "A_bridge_functional_selected",
+        "A_bridge_candidate_functional_defined",
+        "A_bridge_candidate_functional_selected",
+        "A_bridge_candidate_recorded_as_action_term",
+        "A_bridge_candidate_recorded_as_new_dynamical_law",
+        "A_bridge_candidate_rule_proved",
+        "A_bridge_admissibility_claimed",
+        "A_bridge_admissibility_proved",
+        "A_bridge_route_alignment_verified",
+        "route_consistency_tuple_proved",
+        "field_equation_match_proved",
+        "stress_energy_match_proved",
+        "source_residual_match_proved",
+        "fully_concrete_ck_functional_selected",
+        "fully_concrete_ck_functional_defined",
+        "concrete_ck_functional_selected",
+        "concrete_ck_functional_defined",
+        "ck_action_embedding_claimed",
+        "ck_action_embedding_constructed",
+        "C_k_action_embedding_constructed",
+        "candidate_action_insertion_executed",
+        "ck_variation_executed",
+        "C_k_variation_executed",
+        "lambda_variation_executed",
+        "metric_variation_of_candidate_executed",
+        "A_variation_of_candidate_executed",
+        "J_nu_derived",
+        "psi_current_route_constructed",
+        "external_current_native_derivation_selected",
+        "sourced_maxwell_equation_derived",
+        "matter_current_exchange_route_proved",
+        "matter_gauge_energy_exchange_proved",
+        "full_em_closure_claimed",
+        "qft_gr_closure_claimed",
+        "semiclassical_coupling_authorized",
+        "master_action_promoted",
+        "canonical_master_action_promoted",
+        "empirical_validation_claimed",
+        "phase2_readiness_claim",
+        "seam_closure_claim",
+    ]:
+        assert review[key] is False, key
+    for phrase in [
+        "accepts the vacuum U(1) route-consistency candidate only",
+        "does not functionalize C_bridge^A",
+        "does not embed it in S_C",
+        "does not define a C_k action term",
+        "does not verify the full route alignment",
+        "does not claim full bridge admissibility",
+        "does not derive J^nu",
+        "does not derive sourced Maxwell",
+        "does not close EM",
+        "does not close QFT-GR",
+        "does not promote the master action",
+    ]:
+        assert phrase in review["non_claim_boundary"], phrase
+
+
+def test_a_bridge_ck_candidate_review_validation_policy_not_run() -> None:
+    review = _json(DEFAULT_OUT)
+    policy = review["validation_policy"]
+    assert policy["policy_id"] == LEAN_VALIDATION_POLICY_ID
+    assert policy["aggregate_lean_validation_status_for_packet"] == FULL_TOEFORMAL_STATUS
+    assert policy["full_toeformal_aggregate_status_for_packet"] == FULL_TOEFORMAL_STATUS
+    assert policy["aggregate_lean_validation_completion_claimed"] is False
+    assert policy["aggregate_lean_validation_mathematical_failure_claimed"] is False
+
+
+def test_a_bridge_ck_candidate_review_rotates_to_embedding_target() -> None:
+    registry = _json(REGISTRY_PATH)
+    skip_if_not_current_target(registry, NEXT_TARGET)
+    state = registry["current_target_state"]
+    active = [row for row in registry["workstreams"] if row.get("status") == "active"]
+    assert len(active) == 1
+    assert state["previous_live_next_target"] == CONSUMED_TARGET
+    assert state["live_next_target"] == NEXT_TARGET
+    assert state["active_lane"] == NEXT_TARGET
+    assert state["live_next_target_evidence"] == (
+        "formal/toe_formal/ToeFormal/Derivation/"
+        "ToeNativeABridgeAdmissibilityCKConstraintCandidatePacketResultReview.lean"
+    )
+    assert state["live_next_target_report"] == (
+        "formal/docs/release/"
+        "TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_"
+        "RESULT_REVIEW_20260622_v0.json"
+    )
+    assert state["live_next_target_outcome"] == OUTCOME_ID
+    assert CONSUMED_TARGET in registry["completed_targets"]
+    assert NEXT_TARGET in registry["next_strict_target_coverage"]
+
+    consumed = _workstream(registry, CONSUMED_TARGET)
+    assert consumed["status"] == "paused"
+    assert consumed["review_result"] == OUTCOME_ID
+    assert consumed["selected_next_target"] == NEXT_TARGET
+    assert consumed["A_bridge_candidate_id"] == A_BRIDGE_CANDIDATE_ID
+    assert consumed["A_bridge_constraint_equation"] == A_BRIDGE_CONSTRAINT_EQUATION
+    assert consumed["review_accepts_vacuum_u1_route_consistency_candidate"] == "yes"
+    assert consumed["functional_embedding_packet_authorized"] == "yes"
+    assert consumed["functional_embedding_executed"] == "no"
+    assert consumed["A_bridge_candidate_functional_defined"] == "no"
+    assert consumed["C_k_variation_executed"] == "no"
+    assert consumed["J_nu_derived"] == "no"
+    assert consumed["sourced_maxwell_equation_derived"] == "no"
+    assert consumed["full_em_closure_claimed"] == "no"
+    assert consumed["qft_gr_closure_claimed"] == "no"
+    assert consumed["master_action_promoted"] == "no"
+
+    active_row = active[0]
+    assert active_row["workstream_id"] == NEXT_TARGET
+    assert active_row["authorized_next_strict_target"] == NEXT_TARGET
+    assert active_row["authorized_target"] == NEXT_TARGET
+    assert active_row["consumed_target"] == CONSUMED_TARGET
+    assert active_row["review_result"] == OUTCOME_ID
+    assert active_row["functional_embedding_packet_authorized"] == "yes"
+    assert active_row["functional_embedding_packet_prepared"] == "no"
+    assert active_row["vacuum_u1_route_consistency_candidate_accepted"] == "yes"
+    assert active_row["field_equation_match_component_preserved"] == "yes"
+    assert active_row["stress_energy_match_component_preserved"] == "yes"
+    assert active_row["source_residual_match_component_preserved"] == "yes"
+    assert active_row["A_bridge_candidate_functional_defined"] == "no"
+    assert active_row["C_k_action_embedding_constructed"] == "no"
+    assert active_row["C_k_variation_executed"] == "no"
+    assert active_row["J_nu_derived"] == "no"
+    assert active_row["sourced_maxwell_equation_derived"] == "no"
+    assert active_row["full_em_closure_claimed"] == "no"
+    assert active_row["qft_gr_closure_claimed"] == "no"
+    assert active_row["master_action_promoted"] == "no"
+
+
+def test_a_bridge_ck_candidate_review_mirrors() -> None:
+    joined = "\n".join(
+        _read(path)
+        for path in [
+            TOOL_PATH,
+            DEFAULT_OUT,
+            LEAN_PACKET_PATH,
+            QFTGR_AGGREGATE_PATH,
+            CURRENT_TARGET_AGGREGATE_PATH,
+            RELEASE_CURRENT_AUTHORITY_AGGREGATE_PATH,
+            TOE_FORMAL_PATH,
+            REGISTRY_PATH,
+            SURFACES_PATH,
+            FRONTIER_PATH,
+            README_PATH,
+            STATE_PATH,
+            ROADMAP_PATH,
+            STRICT_MAP_PATH,
+        ]
+    )
+    for token in [
+        PACKET_ID,
+        OUTCOME_ID,
+        REVIEW_RESULT,
+        PACKET_CLASSIFICATION,
+        CONSUMED_TARGET,
+        NEXT_TARGET,
+        "ToeNativeABridgeAdmissibilityCKConstraintCandidatePacketResultReview",
+        "CURRENT_LIVE_NEXT_TARGET_v0: "
+        "prepare_toe_native_A_bridge_admissibility_ck_functional_embedding_packet",
+        A_BRIDGE_CANDIDATE_ID,
+        A_BRIDGE_CONSTRAINT_FORM,
+        A_BRIDGE_CONSTRAINT_EQUATION,
+        A_BRIDGE_FIELD_EQUATION_MATCH,
+        A_BRIDGE_STRESS_ENERGY_MATCH,
+        A_BRIDGE_SOURCE_RESIDUAL_MATCH,
+        "accepts the vacuum U(1) route-consistency candidate only",
+        "does not functionalize C_bridge^A",
+        "does not embed it in S_C",
+        "does not define a C_k action term",
+        "does not verify the full route alignment",
+        "does not claim full bridge admissibility",
+        "no QFT-GR closure",
+        "no master-action promotion",
+        "NOT_RUN",
+    ]:
+        assert token in joined
+
+
+def test_a_bridge_ck_candidate_review_not_manifest_enrolled() -> None:
+    assert_focused_gate_not_manifest_enrolled(
+        "test_toe_native_a_bridge_admissibility_ck_constraint_candidate_packet_result_review_gate.py"
+    )

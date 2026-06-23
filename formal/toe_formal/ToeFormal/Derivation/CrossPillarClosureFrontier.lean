@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "ToE-native A bridge-admissibility C_k candidate packet consumes the selected A_bridge_admissibility_constraint_family and records C_bridge^A := (E_A^master - E_A^vacuum_U1_route, T_A^master - T_A^vacuum_U1_route, C_source^A - nabla_mu T_A^{mu nu}) with C_bridge^A = 0 as a vacuum U(1) route-consistency admissibility candidate. It compares the master-action gauge route to the selected vacuum U(1) field-equation route, gauge stress-energy route, and source-admissibility residual. It proves no bridge admissibility, verifies no route alignment, embeds no C_k action term, executes no C_k variation, derives no J^nu or sourced Maxwell route, proves no matter/current exchange, closes no EM or QFT-GR seam, authorizes no semiclassical coupling, claims no empirical validation, and promotes no master action."
+        "ToE-native A bridge-admissibility C_k candidate result review accepts C_bridge^A := (E_A^master - E_A^vacuum_U1_route, T_A^master - T_A^vacuum_U1_route, C_source^A - nabla_mu T_A^{mu nu}) with C_bridge^A = 0 as a vacuum U(1) route-consistency candidate only. It preserves the E_A route match, T_A route match, and C_source^A residual match components and authorizes the functional-embedding packet to decide admissibility-only versus blocked action embedding. It proves no bridge admissibility, verifies no route alignment, embeds no C_k action term, executes no C_k variation, derives no J^nu or sourced Maxwell route, proves no matter/current exchange, closes no EM or QFT-GR seam, authorizes no semiclassical coupling, claims no empirical validation, and promotes no master action."
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_toe_native_A_bridge_admissibility_ck_constraint_candidate_packet_result"
+        "prepare_toe_native_A_bridge_admissibility_ck_functional_embedding_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, a reviewed vacuum divergence identity route, a reviewed bounded local on-shell vacuum gauge source route, a closed admissibility-only source rule C_source^{A,nu}[g,A] = 0, a family selector that chose A_bridge_admissibility_constraint_family, and a bridge-candidate packet that records C_bridge^A := (E_A^master - E_A^vacuum_U1_route, T_A^master - T_A^vacuum_U1_route, C_source^A - nabla_mu T_A^{mu nu}) with C_bridge^A = 0 as a vacuum U(1) route-consistency admissibility candidate. The selected source rule remains a vacuum admissibility residual only and the bridge tuple is only a candidate for review. No bridge admissibility proof, route-alignment verification, full A-source admissibility closure, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, C_k action embedding, C_k variation, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
+        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, a reviewed vacuum divergence identity route, a reviewed bounded local on-shell vacuum gauge source route, a closed admissibility-only source rule C_source^{A,nu}[g,A] = 0, a family selector that chose A_bridge_admissibility_constraint_family, a bridge-candidate packet that records C_bridge^A := (E_A^master - E_A^vacuum_U1_route, T_A^master - T_A^vacuum_U1_route, C_source^A - nabla_mu T_A^{mu nu}) with C_bridge^A = 0, and a result review that accepts that tuple as a vacuum U(1) route-consistency candidate only while authorizing a functional-embedding packet. The selected source rule remains a vacuum admissibility residual only and the bridge tuple remains candidate-only. No bridge admissibility proof, route-alignment verification, full A-source admissibility closure, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, C_k action embedding, C_k variation, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_toe_native_A_bridge_admissibility_ck_constraint_candidate_packet_result"
+        "prepare_toe_native_A_bridge_admissibility_ck_functional_embedding_packet"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the ToE-native A bridge candidate packet. -/
+/-- Previous live target consumed by the ToE-native A bridge candidate review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_toe_native_A_bridge_admissibility_ck_constraint_candidate_packet"
-
-/-- Current live target after the ToE-native A bridge candidate packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_toe_native_A_bridge_admissibility_ck_constraint_candidate_packet_result"
+
+/-- Current live target after the ToE-native A bridge candidate review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_toe_native_A_bridge_admissibility_ck_functional_embedding_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_toe_native_A_bridge_admissibility_ck_constraint_candidate_packet_result"
+    "prepare_toe_native_A_bridge_admissibility_ck_functional_embedding_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

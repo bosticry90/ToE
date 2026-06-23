@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_toe_native_A_bridge_admissibility_ck_constraint_candidate_packet_result" := by
+      "prepare_toe_native_A_bridge_admissibility_ck_functional_embedding_packet" := by
   rfl
 
 end CurrentAuthority
