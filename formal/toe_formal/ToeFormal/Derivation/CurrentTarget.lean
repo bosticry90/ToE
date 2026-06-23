@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeABridgeAdmissibilityCKAdmissibilityRuleCloseout
+import ToeFormal.Derivation.ToeNativeACKConstraintFamilySelectionAfterSourceAndBridgeAdmissibility
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeABridgeAdmissibilityCKAdmissibilityRuleCloseout.selectedNextTarget
+  ToeNativeACKConstraintFamilySelectionAfterSourceAndBridgeAdmissibility.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativeABridgeAdmissibilityCKAdmissibilityRuleCloseout.packetId
+  ToeNativeACKConstraintFamilySelectionAfterSourceAndBridgeAdmissibility.packetId
 
-theorem current_target_points_to_a_source_bridge_a_ck_family_selector :
+theorem current_target_points_to_a_transport_consistency_candidate_packet :
     currentLiveTarget =
-      "select_next_toe_native_A_ck_constraint_family_after_source_and_bridge_admissibility" := by
+      "prepare_toe_native_A_transport_consistency_ck_constraint_candidate_packet" := by
   rfl
 
 end CurrentTarget
