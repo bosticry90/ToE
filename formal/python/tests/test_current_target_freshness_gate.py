@@ -1157,7 +1157,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "Bridges"
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
-ACTIVE_LANE = "prepare_toe_native_A_bridge_admissibility_ck_functional_embedding_packet"
+ACTIVE_LANE = "review_toe_native_A_bridge_admissibility_ck_functional_embedding_packet_result"
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
 )
@@ -1327,6 +1327,9 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
+    "prepare_toe_native_A_bridge_admissibility_ck_functional_embedding_packet"
+)
+A_BRIDGE_CANDIDATE_REVIEW_TARGET = (
     "review_toe_native_A_bridge_admissibility_ck_constraint_candidate_packet_result"
 )
 A_BRIDGE_CANDIDATE_PACKET_TARGET = (
@@ -1523,7 +1526,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = "prepare_toe_native_A_bridge_admissibility_ck_functional_embedding_packet"
+LIVE_TARGET = "review_toe_native_A_bridge_admissibility_ck_functional_embedding_packet_result"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1539,7 +1542,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeABridgeAdmissibilityCKConstraintCandidatePacketResultReview.lean"
+    / "ToeNativeABridgeAdmissibilityCKFunctionalEmbeddingPacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3156,6 +3159,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "ACCEPTS_VACUUM_U1_ROUTE_CONSISTENCY_CANDIDATE_"
         "NO_FUNCTIONALIZATION_OR_PROMOTION"
     )
+    a_bridge_functional_embedding_result = (
+        "TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_"
+        "PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_"
+        "NO_ACTION_VARIATION"
+    )
 
     a_bridge_candidate_active_workstream = active_workstream(payload)
     assert a_bridge_candidate_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3170,29 +3178,29 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert a_bridge_candidate_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_"
-        "RESULT_REVIEW_20260622_v0.json"
+        "TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_"
+        "20260622_v0.json"
     )
     assert a_bridge_candidate_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert a_bridge_candidate_active_workstream["outcome_id"] == (
-        a_bridge_candidate_review_result
+        a_bridge_functional_embedding_result
     )
-    assert a_bridge_candidate_active_workstream["review_result"] == (
-        a_bridge_candidate_review_result
+    assert a_bridge_candidate_active_workstream["packet_result"] == (
+        "OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
     )
+    assert a_bridge_candidate_active_workstream["review_result"] == "PENDING"
     assert a_bridge_candidate_active_workstream[
         "packet_classification"
     ] == (
-        "toe_native_A_bridge_admissibility_ck_constraint_candidate_result_review_"
-        "accepts_vacuum_u1_route_consistency_candidate_"
-        "no_functionalization_or_promotion"
+        "toe_native_A_bridge_admissibility_ck_functional_embedding_packet_records_"
+        "options_and_selects_admissibility_only_no_action_variation"
     )
     assert a_bridge_candidate_active_workstream["selected_next_target"] == LIVE_TARGET
     assert a_bridge_candidate_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_bridge_admissibility_ck_functional_embedding_packet_preparation"
+    ] == "toe_native_A_bridge_admissibility_ck_functional_embedding_packet_result_review"
     assert a_bridge_candidate_active_workstream["result_token"] == (
-        a_bridge_candidate_review_result
+        a_bridge_functional_embedding_result
     )
     assert a_bridge_candidate_active_workstream["selected_A_ck_option_class"] == (
         "bridge_admissibility_constraint"
@@ -3203,15 +3211,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert a_bridge_candidate_active_workstream["A_bridge_candidate_id"] == (
         "A_bridge_vacuum_u1_route_consistency_ck_candidate"
     )
-    assert a_bridge_candidate_active_workstream["A_bridge_candidate_type"] == (
-        "vacuum_U1_route_consistency_admissibility_candidate"
-    )
     assert a_bridge_candidate_active_workstream["A_bridge_constraint_form"] == (
         "C_bridge^A := (E_A^master - E_A^vacuum_U1_route, "
         "T_A^master - T_A^vacuum_U1_route, "
         "C_source^A - nabla_mu T_A^{mu nu})"
     )
     assert a_bridge_candidate_active_workstream["A_bridge_constraint_equation"] == (
+        "C_bridge^A = 0"
+    )
+    assert a_bridge_candidate_active_workstream["bridge_admissibility_constraint_form"] == (
         "C_bridge^A = 0"
     )
     assert a_bridge_candidate_active_workstream["A_bridge_field_equation_match"] == (
@@ -3225,9 +3233,6 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert a_bridge_candidate_active_workstream["source_candidate_constraint_form"] == (
         "C_source^{A,nu}[g,A] := nabla_mu T_A^{mu nu}"
-    )
-    assert a_bridge_candidate_active_workstream["source_candidate_constraint_equation"] == (
-        "C_source^{A,nu}[g,A] = 0"
     )
     assert a_bridge_candidate_active_workstream["source_admissibility_constraint_form"] == (
         "C_source^{A,nu}[g,A] = 0"
@@ -3251,56 +3256,62 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "source_route_still_blocked"
     ] == "nabla_mu F^{mu nu} = J^nu"
     assert a_bridge_candidate_active_workstream["bridge_component_count"] == 3
-    assert a_bridge_candidate_active_workstream["review_criteria_count"] == 13
-    assert a_bridge_candidate_active_workstream["review_criteria_accepted_count"] == 13
+    assert a_bridge_candidate_active_workstream["embedding_route_count"] == 3
+    assert a_bridge_candidate_active_workstream["review_row_count"] == 12
+    assert a_bridge_candidate_active_workstream["review_row_accepted_count"] == 12
+    assert a_bridge_candidate_active_workstream["selected_embedding_route_id"] == (
+        "A_bridge_ck_admissibility_only_route"
+    )
+    assert a_bridge_candidate_active_workstream["lagrange_multiplier_action_form"] == (
+        "S_C^A_bridge = integral_M dVol_g Lambda_bridge dot C_bridge^A"
+    )
+    assert a_bridge_candidate_active_workstream["penalty_action_form"] == (
+        "S_C^A_bridge = integral_M dVol_g norm(C_bridge^A)^2"
+    )
     for key in [
         "accepted",
         "prepared",
-        "candidate_carried_forward_exactly",
+        "functional_embedding_packet_prepared",
+        "functional_embedding_options_recorded",
+        "admissibility_only_route_selected",
+        "admissibility_only_interpretation_retained",
+        "constraint_as_admissibility_rule_selected",
         "route_consistency_tuple_carried_forward",
-        "review_accepts_vacuum_u1_route_consistency_candidate",
-        "vacuum_u1_route_consistency_candidate_accepted",
-        "A_bridge_candidate_recorded_as_admissibility_rule",
-        "A_bridge_candidate_recorded_as_admissibility_candidate",
-        "A_bridge_candidate_recorded_as_candidate_only",
         "field_equation_match_component_preserved",
         "stress_energy_match_component_preserved",
         "source_residual_match_component_preserved",
         "source_admissibility_context_preserved",
         "vacuum_u1_scope_preserved",
-        "functional_embedding_packet_authorized",
-        "A_bridge_functional_embedding_packet_authorized",
+        "lagrange_multiplier_route_recorded",
+        "lagrange_multiplier_route_blocked",
+        "penalty_route_recorded",
+        "penalty_route_unlicensed",
+        "dynamical_action_embedding_not_assumed",
     ]:
         assert a_bridge_candidate_active_workstream[key] == "yes", key
     for key in [
-        "A_bridge_candidate_recorded_as_action_term",
-        "A_bridge_candidate_recorded_as_new_dynamical_law",
-        "A_bridge_candidate_functional_defined",
-        "A_bridge_candidate_functional_selected",
-        "A_bridge_candidate_rule_proved",
-        "A_bridge_admissibility_claimed",
-        "A_bridge_admissibility_proved",
-        "A_bridge_route_alignment_verified",
+        "bridge_proof_claimed",
         "bridge_admissibility_claimed",
         "bridge_admissibility_proved",
+        "A_bridge_admissibility_claimed",
+        "A_bridge_admissibility_proved",
         "bridge_route_alignment_verified",
-        "bridge_admissibility_proof_claimed",
         "route_consistency_tuple_proved",
         "field_equation_match_proved",
         "stress_energy_match_proved",
         "source_residual_match_proved",
-        "source_admissibility_family_completed",
-        "source_admissibility_completed",
-        "source_admissibility_claimed",
-        "source_admissibility_proved",
-        "A_source_admissibility_claimed",
-        "A_source_admissibility_proved",
-        "stress_energy_as_gravity_source_authorized",
-        "stress_energy_source_admissibility_proved",
-        "concrete_ck_functional_selected",
-        "concrete_ck_functional_defined",
-        "fully_concrete_ck_functional_selected",
-        "fully_concrete_ck_functional_defined",
+        "dynamical_action_embedding_selected",
+        "constraint_as_action_term_selected",
+        "component_pairing_rule_selected",
+        "multiplier_domain_selected",
+        "covariance_control_established",
+        "boundary_term_policy_selected",
+        "boundary_terms_controlled",
+        "variation_policy_selected",
+        "gauge_dynamics_preservation_proved",
+        "heterogeneous_tuple_norm_defined",
+        "penalty_route_licensed",
+        "quadratic_penalty_route_licensed",
         "ck_action_embedding_selected",
         "ck_action_embedding_constructed",
         "C_k_action_embedding_selected",
@@ -3355,14 +3366,18 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ]:
         assert a_bridge_candidate_active_workstream.get(key, "no") == "no", key
     for phrase in [
-        "accepts the vacuum U(1) route-consistency candidate only",
+        "selects the admissibility-only route C_bridge^A = 0",
         "does not functionalize C_bridge^A",
         "does not embed it in S_C",
+        "does not select Lambda_bridge or a multiplier domain",
+        "does not select a component pairing rule",
+        "does not prove covariance control",
+        "does not select a boundary-term policy",
+        "does not select a variation policy",
+        "does not prove preservation of the intended gauge dynamics",
+        "does not license the penalty route",
+        "does not define a norm over the heterogeneous route tuple",
         "does not execute C_k variation",
-        "does not prove the E_A route match",
-        "does not prove the T_A route match",
-        "does not prove the C_source^A residual match",
-        "does not claim full bridge admissibility",
         "does not derive J^nu",
         "does not derive sourced Maxwell",
         "does not close EM",
@@ -3373,7 +3388,35 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
             "non_claim_boundary"
         ], phrase
 
-    consumed_a_bridge_candidate_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_a_bridge_embedding_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_a_bridge_embedding_packet["status"] == "paused"
+    assert consumed_a_bridge_embedding_packet["packet_result"] == (
+        "OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
+    )
+    assert consumed_a_bridge_embedding_packet["outcome_id"] == (
+        a_bridge_functional_embedding_result
+    )
+    assert consumed_a_bridge_embedding_packet["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_bridge_embedding_packet[
+        "selected_next_target_kind"
+    ] == "toe_native_A_bridge_admissibility_ck_functional_embedding_packet_result_review"
+    assert consumed_a_bridge_embedding_packet["admissibility_only_route_selected"] == "yes"
+    assert consumed_a_bridge_embedding_packet["lagrange_multiplier_route_blocked"] == "yes"
+    assert consumed_a_bridge_embedding_packet["penalty_route_unlicensed"] == "yes"
+    assert consumed_a_bridge_embedding_packet["heterogeneous_tuple_norm_defined"] == "no"
+    assert consumed_a_bridge_embedding_packet["C_k_action_embedding_constructed"] == "no"
+    assert consumed_a_bridge_embedding_packet["C_k_variation_executed"] == "no"
+    assert consumed_a_bridge_embedding_packet["J_nu_derived"] == "no"
+    assert consumed_a_bridge_embedding_packet[
+        "sourced_maxwell_equation_derived"
+    ] == "no"
+    assert consumed_a_bridge_embedding_packet["full_em_closure_claimed"] == "no"
+    assert consumed_a_bridge_embedding_packet["qft_gr_closure_claimed"] == "no"
+    assert consumed_a_bridge_embedding_packet["master_action_promoted"] == "no"
+
+    consumed_a_bridge_candidate_review = _workstream(
+        payload, A_BRIDGE_CANDIDATE_REVIEW_TARGET
+    )
     assert consumed_a_bridge_candidate_review["status"] == "paused"
     assert consumed_a_bridge_candidate_review["review_result"] == (
         a_bridge_candidate_review_result
@@ -3381,7 +3424,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_a_bridge_candidate_review["outcome_id"] == (
         a_bridge_candidate_review_result
     )
-    assert consumed_a_bridge_candidate_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_bridge_candidate_review[
+        "selected_next_target"
+    ] == PREVIOUS_LIVE_TARGET
     assert consumed_a_bridge_candidate_review[
         "selected_next_target_kind"
     ] == "toe_native_A_bridge_admissibility_ck_functional_embedding_packet_preparation"
@@ -3395,20 +3440,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "review_accepts_vacuum_u1_route_consistency_candidate"
     ] == "yes"
     assert consumed_a_bridge_candidate_review[
-        "field_equation_match_component_preserved"
-    ] == "yes"
-    assert consumed_a_bridge_candidate_review[
-        "stress_energy_match_component_preserved"
-    ] == "yes"
-    assert consumed_a_bridge_candidate_review[
-        "source_residual_match_component_preserved"
-    ] == "yes"
-    assert consumed_a_bridge_candidate_review[
         "functional_embedding_packet_authorized"
     ] == "yes"
-    assert consumed_a_bridge_candidate_review[
-        "functional_embedding_packet_prepared"
-    ] == "no"
     assert consumed_a_bridge_candidate_review["C_k_action_embedding_constructed"] == "no"
     assert consumed_a_bridge_candidate_review["C_k_variation_executed"] == "no"
     assert consumed_a_bridge_candidate_review["J_nu_derived"] == "no"
@@ -3429,7 +3462,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_a_bridge_candidate_packet["outcome_id"] == (
         a_bridge_candidate_packet_result
     )
-    assert consumed_a_bridge_candidate_packet["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_a_bridge_candidate_packet[
+        "selected_next_target"
+    ] == A_BRIDGE_CANDIDATE_REVIEW_TARGET
     assert consumed_a_bridge_candidate_packet[
         "selected_next_target_kind"
     ] == "toe_native_A_bridge_admissibility_ck_constraint_candidate_packet_result_review"
