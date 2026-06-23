@@ -312,7 +312,11 @@ def test_a_source_admissibility_ck_candidate_review_mirrors() -> None:
         CONSUMED_TARGET,
         NEXT_TARGET,
         "ToeNativeASourceAdmissibilityCKConstraintCandidatePacketResultReview",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
+        "HISTORICAL_TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_"
+        "PACKET_RESULT_REVIEW_CURRENT_LIVE_NEXT_TARGET_v0: "
+        "review_toe_native_A_source_admissibility_ck_constraint_candidate_packet_result",
+        "HISTORICAL_TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_"
+        "PACKET_CURRENT_LIVE_NEXT_TARGET_v0: "
         "prepare_toe_native_A_source_admissibility_ck_functional_embedding_packet",
         CANDIDATE_CONSTRAINT_ID,
         CANDIDATE_CONSTRAINT_FORM,
