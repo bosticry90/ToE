@@ -323,12 +323,12 @@ def test_a_route_selection_after_vacuum_source_admissibility_mirrors() -> None:
         SELECTED_A_CK_CONSTRAINT_FAMILY,
         A_SOURCE_CK_RULE_CANDIDATE,
         "ToeNativeARouteSelectionAfterVacuumSourceAdmissibility",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
-        "select_next_toe_native_A_route_after_vacuum_source_admissibility",
         "HISTORICAL_TOE_NATIVE_A_ROUTE_SELECTION_AFTER_VACUUM_SOURCE_ADMISSIBILITY_CURRENT_LIVE_NEXT_TARGET_v0: "
         "select_next_toe_native_A_route_after_vacuum_source_admissibility",
+        "HISTORICAL_TOE_NATIVE_A_ROUTE_SELECTION_AFTER_VACUUM_SOURCE_ADMISSIBILITY_ACTIVE_LANE_v0: "
+        "select_next_toe_native_A_route_after_vacuum_source_admissibility",
+        "HISTORICAL_TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_CURRENT_LIVE_NEXT_TARGET_v0: "
+        "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet",
         "not an action term",
         "not sourced Maxwell theory",
         "does not embed C_k in the action",
