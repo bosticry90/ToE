@@ -47,6 +47,7 @@ import ToeFormal.Derivation.ToeNativeAVacuumSourceAdmissibilityIdentityPacket
 import ToeFormal.Derivation.ToeNativeAVacuumSourceAdmissibilityIdentityResultReview
 import ToeFormal.Derivation.ToeNativeASourceAdmissibilityReviewRetryAfterVacuumIdentity
 import ToeFormal.Derivation.ToeNativeASourceAdmissibilityReviewRetryAfterVacuumIdentityResultReview
+import ToeFormal.Derivation.ToeNativeARouteSelectionAfterVacuumSourceAdmissibility
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -68,16 +69,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ToeNativeASourceAdmissibilityReviewRetryAfterVacuumIdentityResultReview.outcomeId
+  ToeNativeARouteSelectionAfterVacuumSourceAdmissibility.outcomeId
 
 def currentPacketId : String :=
-  ToeNativeASourceAdmissibilityReviewRetryAfterVacuumIdentityResultReview.packetId
+  ToeNativeARouteSelectionAfterVacuumSourceAdmissibility.packetId
 
-theorem qft_gr_lane_aggregate_exposes_toe_native_a_source_admissibility_retry_result_review :
+theorem qft_gr_lane_aggregate_exposes_toe_native_a_route_selection_after_vacuum_source_admissibility :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_RESULT_REVIEW_ACCEPTS_" ++
-          "LOCAL_ON_SHELL_VACUUM_GAUGE_SOURCE_ROUTE_NO_CURRENT_OR_EM_CLOSURE" := by
+        "TOE_NATIVE_A_ROUTE_SELECTION_AFTER_VACUUM_SOURCE_ADMISSIBILITY_SELECTS_" ++
+          "SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_NO_CURRENT_OR_EM_CLOSURE" := by
   constructor
   · rfl
   · rfl

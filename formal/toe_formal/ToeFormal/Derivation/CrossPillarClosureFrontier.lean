@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "ToE-native A source-admissibility retry result review accepts the bounded local classical vacuum U(1) route nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} plus nabla_mu F^{mu nu} = 0 -> nabla_mu T_A^{mu nu} = 0 under F = dA, F_{mu nu} = -F_{nu mu}, dF = 0/Bianchi, smooth A/F domain, metric-compatible Levi-Civita connection, and (+,-,-,-). The next target is the A-route selector after vacuum source admissibility; the likely A/C_k source-rule candidate is recorded only as selector guidance. It does not accept full source admissibility beyond the bounded vacuum route, derive J^nu, derive sourced Maxwell, prove matter-gauge exchange or current conservation, construct A-relevant C_k rules, close EM, close QFT-GR, authorize semiclassical coupling, claim empirical validation, or promote the master action."
+        "ToE-native A route selector after bounded vacuum source admissibility selects prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet as the first A-relevant C_k packet. The selected candidate shape for the next packet is C_source^{A,nu}[g,A] := nabla_mu T_A^{mu nu}; C_source^{A,nu}[g,A] = 0, classified only as a vacuum U(1) admissibility residual. The selector does not prepare the candidate packet, embed C_k in the action, execute C_k variation, derive J^nu, derive sourced Maxwell, prove matter-gauge exchange or current conservation, construct A-relevant C_k rules, close EM, close QFT-GR, authorize semiclassical coupling, claim empirical validation, or promote the master action."
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "select_next_toe_native_A_route_after_vacuum_source_admissibility"
+        "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, a reviewed vacuum divergence identity route, and a reviewed bounded local on-shell vacuum gauge source route accepted under the selected convention. The current live target is the A-route selector after vacuum source admissibility; likely A/C_k source-rule construction remains future work. No full A-source admissibility closure, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, A-relevant C_k construction, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
+        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, a reviewed vacuum divergence identity route, a reviewed bounded local on-shell vacuum gauge source route, and a selector that chooses the A source-admissibility C_k candidate packet as the next live target. The selected source candidate remains a vacuum admissibility residual only; likely A/C_k source-rule construction remains future work. No full A-source admissibility closure, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, A-relevant C_k construction, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "select_next_toe_native_A_route_after_vacuum_source_admissibility"
+        "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the ToE-native A source-admissibility retry result review. -/
+/-- Previous live target consumed by the ToE-native A route selector. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_toe_native_A_source_admissibility_review_retry_after_vacuum_identity_result"
-
-/-- Current live target after the ToE-native A source-admissibility retry result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "select_next_toe_native_A_route_after_vacuum_source_admissibility"
+
+/-- Current live target after the ToE-native A route selector. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "select_next_toe_native_A_route_after_vacuum_source_admissibility"
+    "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where

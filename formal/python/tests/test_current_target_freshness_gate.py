@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "select_next_toe_native_A_route_after_vacuum_source_admissibility"
+    "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,6 +1329,9 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
+    "select_next_toe_native_A_route_after_vacuum_source_admissibility"
+)
+A_SOURCE_RETRY_RESULT_REVIEW_TARGET = (
     "review_toe_native_A_source_admissibility_review_retry_after_vacuum_identity_result"
 )
 A_SOURCE_RETRY_TARGET = (
@@ -1499,7 +1502,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "select_next_toe_native_A_route_after_vacuum_source_admissibility"
+    "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1516,7 +1519,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeASourceAdmissibilityReviewRetryAfterVacuumIdentityResultReview.lean"
+    / "ToeNativeARouteSelectionAfterVacuumSourceAdmissibility.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3090,95 +3093,101 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_RESULT_REVIEW_ACCEPTS_"
         "LOCAL_ON_SHELL_VACUUM_GAUGE_SOURCE_ROUTE_NO_CURRENT_OR_EM_CLOSURE"
     )
+    a_after_vacuum_source_selection_result = (
+        "TOE_NATIVE_A_ROUTE_SELECTION_AFTER_VACUUM_SOURCE_ADMISSIBILITY_SELECTS_"
+        "SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_NO_CURRENT_OR_EM_CLOSURE"
+    )
 
-    a_source_retry_active_workstream = active_workstream(payload)
-    assert a_source_retry_active_workstream["workstream_id"] == ACTIVE_LANE
-    assert a_source_retry_active_workstream["active_lane"] == ACTIVE_LANE
+    a_source_ck_active_workstream = active_workstream(payload)
+    assert a_source_ck_active_workstream["workstream_id"] == ACTIVE_LANE
+    assert a_source_ck_active_workstream["active_lane"] == ACTIVE_LANE
     assert (
-        a_source_retry_active_workstream["authorized_next_strict_target"]
+        a_source_ck_active_workstream["authorized_next_strict_target"]
         == LIVE_TARGET
     )
-    assert a_source_retry_active_workstream["authorized_target"] == LIVE_TARGET
-    assert a_source_retry_active_workstream[
+    assert a_source_ck_active_workstream["authorized_target"] == LIVE_TARGET
+    assert a_source_ck_active_workstream[
         "authorization_evidence"
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
-    assert a_source_retry_active_workstream["report"] == (
+    assert a_source_ck_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_RESULT_REVIEW_20260622_v0.json"
+        "TOE_NATIVE_A_ROUTE_SELECTION_AFTER_VACUUM_SOURCE_ADMISSIBILITY_20260622_v0.json"
     )
     assert (
-        a_source_retry_active_workstream["consumed_target"]
+        a_source_ck_active_workstream["consumed_target"]
         == PREVIOUS_LIVE_TARGET
     )
     assert (
-        a_source_retry_active_workstream["outcome_id"]
-        == a_source_retry_result_review_result
+        a_source_ck_active_workstream["outcome_id"]
+        == a_after_vacuum_source_selection_result
     )
-    assert a_source_retry_active_workstream[
+    assert a_source_ck_active_workstream[
         "packet_classification"
     ] == (
-        "toe_native_A_source_admissibility_review_retry_result_review_accepts_"
-        "local_on_shell_vacuum_gauge_source_route_no_current_or_em_closure"
+        "toe_native_A_route_selection_after_vacuum_source_admissibility_selects_"
+        "source_admissibility_ck_constraint_candidate_no_current_or_em_closure"
     )
-    assert a_source_retry_active_workstream["selected_next_target"] == LIVE_TARGET
-    assert a_source_retry_active_workstream[
+    assert a_source_ck_active_workstream["selected_next_target"] == LIVE_TARGET
+    assert a_source_ck_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_route_selection_after_vacuum_source_admissibility"
-    assert a_source_retry_active_workstream["packet_result"] == "PENDING"
+    ] == "toe_native_A_source_admissibility_ck_constraint_candidate_packet_preparation"
+    assert a_source_ck_active_workstream["packet_result"] == "PENDING"
     assert (
-        a_source_retry_active_workstream["result_token"]
-        == a_source_retry_result_review_result
+        a_source_ck_active_workstream["result_token"]
+        == a_after_vacuum_source_selection_result
     )
     assert (
-        a_source_retry_active_workstream["review_result"]
-        == a_source_retry_result_review_result
+        a_source_ck_active_workstream["selection_result"]
+        == a_after_vacuum_source_selection_result
     )
-    assert a_source_retry_active_workstream["source_review_retry_result"] == (
-        "LOCAL_ON_SHELL_VACUUM_GAUGE_SOURCE_ROUTE_ACCEPTED_NO_CURRENT_OR_EM_CLOSURE"
+    assert a_source_ck_active_workstream["selected_route_id"] == (
+        "A_source_admissibility_C_k_constraint_candidate"
     )
-    assert a_source_retry_active_workstream["review_criteria_count"] == 15
-    assert a_source_retry_active_workstream["review_criteria_accepted_count"] == 15
-    assert a_source_retry_active_workstream["recommended_selector_candidate"] == (
-        "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet"
+    assert a_source_ck_active_workstream["selected_A_ck_constraint_family"] == (
+        "A_source_admissibility_constraint_family"
     )
-    assert a_source_retry_active_workstream[
-        "recommended_ck_source_rule_candidate"
-    ] == "C_source^A := nabla_mu T_A^{mu nu}; C_source^A = 0"
+    assert a_source_ck_active_workstream["source_rule_candidate"] == (
+        "C_source^{A,nu}[g,A] := nabla_mu T_A^{mu nu}; "
+        "C_source^{A,nu}[g,A] = 0"
+    )
+    assert "not sourced Maxwell theory" in a_source_ck_active_workstream[
+        "source_rule_candidate_classification"
+    ]
     assert (
-        "not sourced EM"
-        in a_source_retry_active_workstream["recommended_ck_source_rule_scope"]
+        "not an action term"
+        in a_source_ck_active_workstream["source_rule_candidate_interpretation"]
     )
-    assert a_source_retry_active_workstream["gauge_group_policy"] == (
+    assert a_source_ck_active_workstream["gauge_group_policy"] == (
         "U(1) / Abelian test route"
     )
-    assert a_source_retry_active_workstream["A_field_domain_policy"] == (
+    assert a_source_ck_active_workstream["A_field_domain_policy"] == (
         "smooth real 1-form A on the selected spacetime domain"
     )
-    assert a_source_retry_active_workstream["F_definition_policy"] == (
+    assert a_source_ck_active_workstream["F_definition_policy"] == (
         "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu"
     )
-    assert a_source_retry_active_workstream[
+    assert a_source_ck_active_workstream[
         "vacuum_euler_lagrange_route"
     ] == "nabla_mu F^{mu nu} = 0"
-    assert a_source_retry_active_workstream[
+    assert a_source_ck_active_workstream[
         "stress_energy_under_selected_u1_policy"
     ] == (
         "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + "
         "1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}"
     )
-    assert a_source_retry_active_workstream[
+    assert a_source_ck_active_workstream[
         "source_admissibility_condition"
     ] == "nabla_mu T_A^{mu nu} = 0"
-    assert a_source_retry_active_workstream[
+    assert a_source_ck_active_workstream[
         "bianchi_identity_route"
     ] == "dF = 0 / nabla_[lambda F_{mu nu]} = 0"
-    assert a_source_retry_active_workstream[
+    assert a_source_ck_active_workstream[
         "F_antisymmetry_route"
     ] == "F_{mu nu} = - F_{nu mu}"
-    assert a_source_retry_active_workstream[
+    assert a_source_ck_active_workstream[
         "stress_energy_divergence_route"
     ] == "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha}"
-    assert a_source_retry_active_workstream[
+    assert a_source_ck_active_workstream[
         "on_shell_vacuum_conservation_identity"
     ] == "nabla_mu T_A^{mu nu} = 0"
     for key in [
@@ -3188,23 +3197,33 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "bounded_local_on_shell_vacuum_source_route_accepted",
         "local_on_shell_vacuum_source_route_accepted",
         "local_on_shell_vacuum_source_route_proved",
-        "local_classical_vacuum_source_route_accepted",
-        "convention_scoped_source_route_accepted",
-        "source_admissibility_retry_executed",
-        "source_admissibility_review_retry_completed",
         "source_admissibility_condition_satisfied_on_shell",
-        "candidate_gravity_source_route_recorded",
-        "result_review_executed",
-        "retry_result_review_accepted",
-        "source_admissibility_retry_result_accepted",
-        "selector_authorized",
-        "ck_candidate_guidance_recorded",
+        "selector_prepared",
+        "selector_executed",
+        "route_selection_executed",
+        "next_a_route_selected",
+        "A_relevant_C_k_route_selected",
+        "A_relevant_C_k_candidate_packet_selected",
+        "A_source_admissibility_C_k_candidate_selected",
+        "source_admissibility_ck_constraint_candidate_packet_selected",
+        "source_admissibility_ck_candidate_packet_authorized",
+        "source_rule_candidate_recorded_for_next_packet",
+        "candidate_packet_authorized",
     ]:
-        assert a_source_retry_active_workstream[key] == "yes", key
+        assert a_source_ck_active_workstream[key] == "yes", key
     for key in [
         "source_admissibility_ck_candidate_packet_prepared",
-        "selector_executed",
-        "recommended_candidate_selected",
+        "candidate_packet_prepared",
+        "candidate_packet_executed",
+        "source_rule_candidate_promoted_to_action_term",
+        "source_rule_candidate_promoted_to_dynamical_law",
+        "source_rule_candidate_treated_as_sourced_em",
+        "source_rule_candidate_treated_as_em_closure",
+        "ck_action_embedding_selected",
+        "ck_action_embedding_constructed",
+        "C_k_action_embedding_constructed",
+        "ck_variation_executed",
+        "C_k_variation_executed",
         "full_source_admissibility_review_accepted",
         "source_admissibility_completed",
         "source_admissibility_claimed",
@@ -3229,6 +3248,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "current_conservation_proved",
         "current_conservation_theorem_claimed",
         "A_source_admissibility_proved",
+        "A_source_C_k_rule_constructed",
         "source_admissibility_proved",
         "A_relevant_C_k_rules_constructed",
         "A_relevant_C_k_triads_constructed",
@@ -3237,6 +3257,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "maxwell_equations_derived",
         "sourced_maxwell_equation_derived",
         "sourced_maxwell_closure_claimed",
+        "full_em_closure_claimed",
         "yang_mills_equations_derived",
         "field_equations_derived",
         "qft_gr_closure_claimed",
@@ -3257,31 +3278,70 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "pillar_completion_inferred",
         "seam_closure_claim",
     ]:
-        assert a_source_retry_active_workstream.get(key, "no") == "no", key
+        assert a_source_ck_active_workstream.get(key, "no") == "no", key
     for phrase in [
-        "accepts only the bounded local classical vacuum U(1) on-shell gauge stress-energy source route",
-        "does not accept full source admissibility beyond the bounded vacuum route",
+        "selects only the next A source-admissibility C_k constraint candidate packet",
+        "does not prepare the candidate packet",
+        "does not embed C_k in the action",
+        "does not execute C_k variation",
         "does not derive J^nu",
         "does not derive sourced Maxwell",
         "does not prove matter-current or matter-gauge exchange",
         "does not construct A-relevant C_k rules",
-        "does not execute the next selector",
         "does not close EM",
         "does not close QFT-GR",
         "does not promote the master action",
     ]:
-        assert phrase in a_source_retry_active_workstream[
+        assert phrase in a_source_ck_active_workstream[
             "non_claim_boundary"
         ], phrase
 
-    consumed_a_source_retry_result_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_a_after_vacuum_source_selector = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_a_after_vacuum_source_selector["status"] == "paused"
+    assert consumed_a_after_vacuum_source_selector["packet_result"] == "SELECTED"
+    assert (
+        consumed_a_after_vacuum_source_selector["outcome_id"]
+        == a_after_vacuum_source_selection_result
+    )
+    assert consumed_a_after_vacuum_source_selector["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_after_vacuum_source_selector[
+        "selected_next_target_kind"
+    ] == "toe_native_A_source_admissibility_ck_constraint_candidate_packet_preparation"
+    assert consumed_a_after_vacuum_source_selector["source_rule_candidate"] == (
+        "C_source^{A,nu}[g,A] := nabla_mu T_A^{mu nu}; "
+        "C_source^{A,nu}[g,A] = 0"
+    )
+    assert consumed_a_after_vacuum_source_selector[
+        "source_rule_candidate_recorded_for_next_packet"
+    ] == "yes"
+    assert consumed_a_after_vacuum_source_selector[
+        "source_admissibility_ck_candidate_packet_prepared"
+    ] == "no"
+    assert consumed_a_after_vacuum_source_selector[
+        "A_relevant_C_k_route_selected"
+    ] == "yes"
+    assert consumed_a_after_vacuum_source_selector[
+        "A_relevant_C_k_rules_constructed"
+    ] == "no"
+    assert consumed_a_after_vacuum_source_selector[
+        "ck_action_embedding_constructed"
+    ] == "no"
+    assert consumed_a_after_vacuum_source_selector["J_nu_derived"] == "no"
+    assert consumed_a_after_vacuum_source_selector["master_action_promoted"] == "no"
+
+    consumed_a_source_retry_result_review = _workstream(
+        payload, A_SOURCE_RETRY_RESULT_REVIEW_TARGET
+    )
     assert consumed_a_source_retry_result_review["status"] == "paused"
     assert consumed_a_source_retry_result_review["packet_result"] == "REVIEW_ACCEPTED"
     assert (
         consumed_a_source_retry_result_review["outcome_id"]
         == a_source_retry_result_review_result
     )
-    assert consumed_a_source_retry_result_review["selected_next_target"] == LIVE_TARGET
+    assert (
+        consumed_a_source_retry_result_review["selected_next_target"]
+        == PREVIOUS_LIVE_TARGET
+    )
     assert consumed_a_source_retry_result_review[
         "selected_next_target_kind"
     ] == "toe_native_A_route_selection_after_vacuum_source_admissibility"
@@ -3305,7 +3365,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_a_source_retry["status"] == "paused"
     assert consumed_a_source_retry["packet_result"] == "ACCEPTED"
     assert consumed_a_source_retry["outcome_id"] == a_source_retry_result
-    assert consumed_a_source_retry["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert (
+        consumed_a_source_retry["selected_next_target"]
+        == A_SOURCE_RETRY_RESULT_REVIEW_TARGET
+    )
     assert consumed_a_source_retry[
         "selected_next_target_kind"
     ] == "toe_native_A_source_admissibility_review_retry_after_vacuum_identity_result_review"
@@ -10598,7 +10661,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
 
     active_targets = {
         state["live_next_target"],
-        a_source_retry_active_workstream[
+        a_source_ck_active_workstream[
             "authorized_next_strict_target"
         ],
     }

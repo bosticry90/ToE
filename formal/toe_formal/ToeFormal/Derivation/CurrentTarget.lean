@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeASourceAdmissibilityReviewRetryAfterVacuumIdentityResultReview
+import ToeFormal.Derivation.ToeNativeARouteSelectionAfterVacuumSourceAdmissibility
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeASourceAdmissibilityReviewRetryAfterVacuumIdentityResultReview.selectedNextTarget
+  ToeNativeARouteSelectionAfterVacuumSourceAdmissibility.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativeASourceAdmissibilityReviewRetryAfterVacuumIdentityResultReview.packetId
+  ToeNativeARouteSelectionAfterVacuumSourceAdmissibility.packetId
 
-theorem current_target_points_to_a_route_selector_after_vacuum_source_admissibility :
+theorem current_target_points_to_a_source_admissibility_ck_candidate_packet :
     currentLiveTarget =
-      "select_next_toe_native_A_route_after_vacuum_source_admissibility" := by
+      "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet" := by
   rfl
 
 end CurrentTarget
