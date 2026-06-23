@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "ToE-native A source-admissibility C_k functional-embedding result review accepts only the vacuum U(1) admissibility-only route C_source^{A,nu}[g,A] = 0 as a rule. The multiplier/action route remains blocked and the quadratic penalty route remains unlicensed. It does not embed C_k in the action, select lambda_nu domain, select component pairing, control boundary terms, select variation policy, complete higher-derivative analysis, execute C_k variation, derive J^nu, derive sourced Maxwell, prove matter-gauge exchange or current conservation, accept full source admissibility beyond the bounded vacuum route, close EM, close QFT-GR, authorize semiclassical coupling, claim empirical validation, or promote the master action."
+        "ToE-native A source-admissibility C_k closeout records C_source^{A,nu}[g,A] := nabla_mu T_A^{mu nu} and C_source^{A,nu}[g,A] = 0 as a vacuum U(1) admissibility-only source rule. The multiplier/action route remains blocked and the quadratic penalty route remains unlicensed. It does not embed C_k in the action, select lambda_nu domain, select component pairing, control boundary terms, select variation policy, complete higher-derivative analysis, execute C_k variation, derive J^nu, derive sourced Maxwell, prove matter-gauge exchange or current conservation, accept full source admissibility beyond the bounded vacuum route, close EM, close QFT-GR, authorize semiclassical coupling, claim empirical validation, or promote the master action. It rotates only to the next A-relevant C_k family selector."
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_toe_native_A_source_admissibility_ck_admissibility_rule_closeout"
+        "select_next_toe_native_A_ck_constraint_family_after_source_admissibility"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, a reviewed vacuum divergence identity route, a reviewed bounded local on-shell vacuum gauge source route, a selector that chose the A source-admissibility C_k candidate packet, a candidate packet that records the A source conservation residual, a result review that accepts that residual as candidate-only, a functional-embedding packet that records admissibility-only, multiplier/action, and penalty options while selecting only the admissibility-only route, and a result review that accepts the admissibility-only route as a rule only. The selected source rule remains a vacuum admissibility residual only. No full A-source admissibility closure, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, C_k action embedding, C_k variation, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
+        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, a reviewed vacuum divergence identity route, a reviewed bounded local on-shell vacuum gauge source route, a selector that chose the A source-admissibility C_k candidate packet, a candidate packet that records the A source conservation residual, a result review that accepts that residual as candidate-only, a functional-embedding packet that records admissibility-only, multiplier/action, and penalty options while selecting only the admissibility-only route, a result review that accepts the admissibility-only route as a rule only, and a closeout that records C_source^{A,nu}[g,A] = 0 as a vacuum U(1) admissibility-only source rule. The selected source rule remains a vacuum admissibility residual only. No full A-source admissibility closure, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, C_k action embedding, C_k variation, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_toe_native_A_source_admissibility_ck_admissibility_rule_closeout"
+        "select_next_toe_native_A_ck_constraint_family_after_source_admissibility"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the ToE-native A source C_k functional-embedding result review. -/
+/-- Previous live target consumed by the ToE-native A source C_k closeout. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_toe_native_A_source_admissibility_ck_functional_embedding_packet_result"
-
-/-- Current live target after the ToE-native A source C_k functional-embedding result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_toe_native_A_source_admissibility_ck_admissibility_rule_closeout"
+
+/-- Current live target after the ToE-native A source C_k closeout. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "select_next_toe_native_A_ck_constraint_family_after_source_admissibility"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_toe_native_A_source_admissibility_ck_admissibility_rule_closeout"
+    "select_next_toe_native_A_ck_constraint_family_after_source_admissibility"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
