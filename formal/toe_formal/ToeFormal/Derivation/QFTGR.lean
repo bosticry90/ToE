@@ -54,6 +54,7 @@ import ToeFormal.Derivation.ToeNativeASourceAdmissibilityCKFunctionalEmbeddingPa
 import ToeFormal.Derivation.ToeNativeASourceAdmissibilityCKFunctionalEmbeddingPacketResultReview
 import ToeFormal.Derivation.ToeNativeASourceAdmissibilityCKAdmissibilityRuleCloseout
 import ToeFormal.Derivation.ToeNativeACKConstraintFamilySelectionAfterSourceAdmissibility
+import ToeFormal.Derivation.ToeNativeABridgeAdmissibilityCKConstraintCandidatePacket
 import ToeFormal.Derivation.ToeNativePhiSignatureDomainAndPotentialPolicyPacket
 import ToeFormal.Derivation.ToeNativePhiSurfaceAlignmentWitnessCloseout
 import ToeFormal.Derivation.ToeNativePhiVariationRetryUnderSelectedPolicyPacket
@@ -75,16 +76,16 @@ def scalarSandboxTargetId : String :=
   QFTGRScalarSandbox.aggregateTargetId
 
 def currentScopedResult : String :=
-  ToeNativeACKConstraintFamilySelectionAfterSourceAdmissibility.outcomeId
+  ToeNativeABridgeAdmissibilityCKConstraintCandidatePacket.outcomeId
 
 def currentPacketId : String :=
-  ToeNativeACKConstraintFamilySelectionAfterSourceAdmissibility.packetId
+  ToeNativeABridgeAdmissibilityCKConstraintCandidatePacket.packetId
 
-theorem qft_gr_lane_aggregate_exposes_toe_native_a_ck_family_selector :
+theorem qft_gr_lane_aggregate_exposes_toe_native_a_bridge_candidate_packet :
     scalarSandboxTargetId = "ToeFormal.Derivation.QFTGRScalarSandbox" ∧
       currentScopedResult =
-        "TOE_NATIVE_A_CK_CONSTRAINT_FAMILY_SELECTION_AFTER_SOURCE_ADMISSIBILITY_" ++
-          "SELECTS_BRIDGE_ADMISSIBILITY_NO_CURRENT_OR_EM_CLOSURE" := by
+        "TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_PREPARED_" ++
+          "A_BRIDGE_ROUTE_CONSISTENCY_RULE_RECORDED_NO_CURRENT_OR_EM_CLOSURE" := by
   native_decide
 
 end QFTGR
