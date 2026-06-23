@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_toe_native_A_source_admissibility_ck_functional_embedding_packet_result"
+    "prepare_toe_native_A_source_admissibility_ck_admissibility_rule_closeout"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,6 +1329,9 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
+    "review_toe_native_A_source_admissibility_ck_functional_embedding_packet_result"
+)
+A_SOURCE_CK_FUNCTIONAL_EMBEDDING_PACKET_TARGET = (
     "prepare_toe_native_A_source_admissibility_ck_functional_embedding_packet"
 )
 A_SOURCE_CK_CANDIDATE_REVIEW_TARGET = (
@@ -1510,9 +1513,7 @@ REFINEMENT_ATTEMPT_RESULT_REVIEW_TARGET = (
 CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
-LIVE_TARGET = (
-    "review_toe_native_A_source_admissibility_ck_functional_embedding_packet_result"
-)
+LIVE_TARGET = "prepare_toe_native_A_source_admissibility_ck_admissibility_rule_closeout"
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
 )
@@ -1528,7 +1529,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeASourceAdmissibilityCKFunctionalEmbeddingPacket.lean"
+    / "ToeNativeASourceAdmissibilityCKFunctionalEmbeddingPacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3121,6 +3122,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_"
         "NO_ACTION_VARIATION"
     )
+    a_source_ck_functional_embedding_review_result = (
+        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_RESULT_REVIEW_"
+        "ACCEPTS_ADMISSIBILITY_ONLY_ROUTE_NO_ACTION_VARIATION_OR_PROMOTION"
+    )
 
     a_source_ck_active_workstream = active_workstream(payload)
     assert a_source_ck_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3136,33 +3141,38 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert a_source_ck_active_workstream["report"] == (
         "formal/docs/release/"
         "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_"
-        "20260622_v0.json"
+        "RESULT_REVIEW_20260622_v0.json"
     )
     assert a_source_ck_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert a_source_ck_active_workstream["outcome_id"] == (
-        a_source_ck_functional_embedding_result
+        a_source_ck_functional_embedding_review_result
     )
     assert a_source_ck_active_workstream[
         "packet_classification"
     ] == (
-        "toe_native_A_source_admissibility_ck_functional_embedding_packet_records_"
-        "options_and_selects_admissibility_only_no_action_variation"
+        "toe_native_A_source_admissibility_ck_functional_embedding_result_review_"
+        "accepts_admissibility_only_route_no_action_variation_or_promotion"
     )
     assert a_source_ck_active_workstream["selected_next_target"] == LIVE_TARGET
     assert a_source_ck_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_source_admissibility_ck_functional_embedding_packet_result_review"
+    ] == "toe_native_A_source_admissibility_ck_admissibility_rule_closeout_preparation"
     assert a_source_ck_active_workstream["packet_result"] == (
-        "OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
+        "REVIEW_ACCEPTED"
     )
     assert a_source_ck_active_workstream["result_token"] == (
+        a_source_ck_functional_embedding_review_result
+    )
+    assert a_source_ck_active_workstream["review_prepared"] == "yes"
+    assert a_source_ck_active_workstream["review_executed"] == "yes"
+    assert a_source_ck_active_workstream["review_result"] == (
+        a_source_ck_functional_embedding_review_result
+    )
+    assert a_source_ck_active_workstream["embedding_packet_outcome"] == (
         a_source_ck_functional_embedding_result
     )
-    assert a_source_ck_active_workstream["review_prepared"] == "no"
-    assert a_source_ck_active_workstream["review_executed"] == "no"
-    assert a_source_ck_active_workstream["review_result"] == "PENDING"
-    assert a_source_ck_active_workstream["candidate_review_outcome"] == (
-        a_source_ck_candidate_review_result
+    assert a_source_ck_active_workstream["embedding_packet_result"] == (
+        "OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION"
     )
     assert a_source_ck_active_workstream["candidate_constraint_id"] == (
         "A_source_vacuum_conservation_residual_ck_candidate"
@@ -3231,6 +3241,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     for key in [
         "functional_embedding_packet_prepared",
+        "functional_embedding_result_review_prepared",
+        "functional_embedding_result_review_accepted",
+        "review_accepts_admissibility_only_route",
+        "packet_result_review_accepts_admissibility_only_route",
+        "admissibility_rule_closeout_authorized",
         "functional_embedding_options_recorded",
         "admissibility_only_route_selected",
         "admissibility_only_interpretation_retained",
@@ -3324,7 +3339,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ]:
         assert a_source_ck_active_workstream.get(key, "no") == "no", key
     for phrase in [
-        "selects the admissibility-only route",
+        "accepts the admissibility-only route as a rule only",
         "does not functionalize the candidate",
         "does not embed it in S_C",
         "does not select lambda_nu or its domain",
@@ -3332,8 +3347,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "does not control boundary terms",
         "does not select a variation policy",
         "does not complete higher-derivative analysis",
-        "does not prove preservation of the intended gauge dynamics",
-        "does not license the quadratic penalty route",
+        "unproved preservation of intended gauge dynamics",
+        "keeps the quadratic penalty route unlicensed",
         "does not execute C_k variation",
         "does not derive J^nu",
         "does not derive a psi-current or external-current native route",
@@ -3347,8 +3362,56 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
             "non_claim_boundary"
         ], phrase
 
-    consumed_a_source_ck_functional_embedding_packet = _workstream(
+    consumed_a_source_ck_functional_embedding_review = _workstream(
         payload, PREVIOUS_LIVE_TARGET
+    )
+    assert consumed_a_source_ck_functional_embedding_review["status"] == "paused"
+    assert consumed_a_source_ck_functional_embedding_review["packet_result"] == (
+        "REVIEW_ACCEPTED"
+    )
+    assert consumed_a_source_ck_functional_embedding_review["outcome_id"] == (
+        a_source_ck_functional_embedding_review_result
+    )
+    assert consumed_a_source_ck_functional_embedding_review["review_result"] == (
+        a_source_ck_functional_embedding_review_result
+    )
+    assert consumed_a_source_ck_functional_embedding_review[
+        "selected_next_target"
+    ] == LIVE_TARGET
+    assert consumed_a_source_ck_functional_embedding_review[
+        "selected_next_target_kind"
+    ] == "toe_native_A_source_admissibility_ck_admissibility_rule_closeout_preparation"
+    assert consumed_a_source_ck_functional_embedding_review[
+        "admissibility_rule_closeout_authorized"
+    ] == "yes"
+    assert consumed_a_source_ck_functional_embedding_review[
+        "admissibility_rule_closeout_prepared"
+    ] == "no"
+    assert consumed_a_source_ck_functional_embedding_review[
+        "review_accepts_admissibility_only_route"
+    ] == "yes"
+    assert consumed_a_source_ck_functional_embedding_review[
+        "lagrange_multiplier_route_blocked"
+    ] == "yes"
+    assert consumed_a_source_ck_functional_embedding_review[
+        "quadratic_penalty_route_licensed"
+    ] == "no"
+    assert consumed_a_source_ck_functional_embedding_review[
+        "ck_action_embedding_constructed"
+    ] == "no"
+    assert consumed_a_source_ck_functional_embedding_review[
+        "C_k_variation_executed"
+    ] == "no"
+    assert consumed_a_source_ck_functional_embedding_review["J_nu_derived"] == "no"
+    assert consumed_a_source_ck_functional_embedding_review[
+        "sourced_maxwell_equation_derived"
+    ] == "no"
+    assert consumed_a_source_ck_functional_embedding_review[
+        "master_action_promoted"
+    ] == "no"
+
+    consumed_a_source_ck_functional_embedding_packet = _workstream(
+        payload, A_SOURCE_CK_FUNCTIONAL_EMBEDDING_PACKET_TARGET
     )
     assert consumed_a_source_ck_functional_embedding_packet["status"] == "paused"
     assert consumed_a_source_ck_functional_embedding_packet["packet_result"] == (
@@ -3359,7 +3422,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert consumed_a_source_ck_functional_embedding_packet[
         "selected_next_target"
-    ] == LIVE_TARGET
+    ] == PREVIOUS_LIVE_TARGET
     assert consumed_a_source_ck_functional_embedding_packet[
         "selected_next_target_kind"
     ] == "toe_native_A_source_admissibility_ck_functional_embedding_packet_result_review"
@@ -3404,7 +3467,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         a_source_ck_candidate_review_result
     )
     assert consumed_a_source_ck_candidate_review["selected_next_target"] == (
-        PREVIOUS_LIVE_TARGET
+        A_SOURCE_CK_FUNCTIONAL_EMBEDDING_PACKET_TARGET
     )
     assert consumed_a_source_ck_candidate_review[
         "selected_next_target_kind"
