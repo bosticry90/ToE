@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_toe_native_A_source_admissibility_review_retry_after_vacuum_identity"
+    "select_next_toe_native_A_route_after_vacuum_source_admissibility"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,6 +1329,12 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
+    "review_toe_native_A_source_admissibility_review_retry_after_vacuum_identity_result"
+)
+A_SOURCE_RETRY_TARGET = (
+    "prepare_toe_native_A_source_admissibility_review_retry_after_vacuum_identity"
+)
+A_SOURCE_IDENTITY_RESULT_REVIEW_TARGET = (
     "review_toe_native_A_vacuum_source_admissibility_identity_packet_result"
 )
 A_SOURCE_IDENTITY_PACKET_TARGET = (
@@ -1493,7 +1499,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_toe_native_A_source_admissibility_review_retry_after_vacuum_identity"
+    "select_next_toe_native_A_route_after_vacuum_source_admissibility"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1510,7 +1516,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeAVacuumSourceAdmissibilityIdentityResultReview.lean"
+    / "ToeNativeASourceAdmissibilityReviewRetryAfterVacuumIdentityResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3076,6 +3082,14 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_RESULT_REVIEW_ACCEPTS_"
         "ON_SHELL_DIVERGENCE_IDENTITY_NO_CURRENT_OR_EM_CLOSURE"
     )
+    a_source_retry_result = (
+        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_ACCEPTS_LOCAL_ON_SHELL_"
+        "VACUUM_GAUGE_SOURCE_ROUTE_NO_CURRENT_OR_EM_CLOSURE"
+    )
+    a_source_retry_result_review_result = (
+        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_RESULT_REVIEW_ACCEPTS_"
+        "LOCAL_ON_SHELL_VACUUM_GAUGE_SOURCE_ROUTE_NO_CURRENT_OR_EM_CLOSURE"
+    )
 
     a_source_retry_active_workstream = active_workstream(payload)
     assert a_source_retry_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3090,8 +3104,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert a_source_retry_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_RESULT_REVIEW_"
-        "20260621_v0.json"
+        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_RESULT_REVIEW_20260622_v0.json"
     )
     assert (
         a_source_retry_active_workstream["consumed_target"]
@@ -3099,24 +3112,41 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     )
     assert (
         a_source_retry_active_workstream["outcome_id"]
-        == a_source_identity_result_review_result
+        == a_source_retry_result_review_result
     )
     assert a_source_retry_active_workstream[
         "packet_classification"
     ] == (
-        "toe_native_A_vacuum_source_admissibility_identity_result_review_accepts_"
-        "on_shell_divergence_identity_no_current_or_em_closure"
+        "toe_native_A_source_admissibility_review_retry_result_review_accepts_"
+        "local_on_shell_vacuum_gauge_source_route_no_current_or_em_closure"
     )
     assert a_source_retry_active_workstream["selected_next_target"] == LIVE_TARGET
     assert a_source_retry_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_source_admissibility_review_retry_after_vacuum_identity"
+    ] == "toe_native_A_route_selection_after_vacuum_source_admissibility"
     assert a_source_retry_active_workstream["packet_result"] == "PENDING"
-    assert a_source_retry_active_workstream["review_result"] == (
-        a_source_identity_result_review_result
+    assert (
+        a_source_retry_active_workstream["result_token"]
+        == a_source_retry_result_review_result
     )
-    assert a_source_retry_active_workstream["identity_packet_result"] == (
-        "ON_SHELL_DIVERGENCE_IDENTITY_CONSTRUCTED"
+    assert (
+        a_source_retry_active_workstream["review_result"]
+        == a_source_retry_result_review_result
+    )
+    assert a_source_retry_active_workstream["source_review_retry_result"] == (
+        "LOCAL_ON_SHELL_VACUUM_GAUGE_SOURCE_ROUTE_ACCEPTED_NO_CURRENT_OR_EM_CLOSURE"
+    )
+    assert a_source_retry_active_workstream["review_criteria_count"] == 15
+    assert a_source_retry_active_workstream["review_criteria_accepted_count"] == 15
+    assert a_source_retry_active_workstream["recommended_selector_candidate"] == (
+        "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet"
+    )
+    assert a_source_retry_active_workstream[
+        "recommended_ck_source_rule_candidate"
+    ] == "C_source^A := nabla_mu T_A^{mu nu}; C_source^A = 0"
+    assert (
+        "not sourced EM"
+        in a_source_retry_active_workstream["recommended_ck_source_rule_scope"]
     )
     assert a_source_retry_active_workstream["gauge_group_policy"] == (
         "U(1) / Abelian test route"
@@ -3152,29 +3182,41 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "on_shell_vacuum_conservation_identity"
     ] == "nabla_mu T_A^{mu nu} = 0"
     for key in [
+        "accepted_divergence_identity_consumed",
+        "on_shell_vanishing_route_consumed",
+        "bounded_local_on_shell_source_admissibility_review_passed",
+        "bounded_local_on_shell_vacuum_source_route_accepted",
+        "local_on_shell_vacuum_source_route_accepted",
+        "local_on_shell_vacuum_source_route_proved",
+        "local_classical_vacuum_source_route_accepted",
+        "convention_scoped_source_route_accepted",
+        "source_admissibility_retry_executed",
+        "source_admissibility_review_retry_completed",
+        "source_admissibility_condition_satisfied_on_shell",
+        "candidate_gravity_source_route_recorded",
         "result_review_executed",
-        "identity_result_review_executed",
-        "identity_result_review_accepted",
-        "u1_policy_preserved",
-        "F_dA_preserved",
-        "F_antisymmetry_preserved",
-        "stress_energy_route_preserved",
-        "divergence_identity_preserved",
-        "divergence_identity_accepted",
-        "vacuum_maxwell_route_preserved",
-        "on_shell_vanishing_route_recorded",
-        "on_shell_vanishing_route_accepted",
-        "source_admissibility_review_retry_authorized",
+        "retry_result_review_accepted",
+        "source_admissibility_retry_result_accepted",
+        "selector_authorized",
+        "ck_candidate_guidance_recorded",
     ]:
         assert a_source_retry_active_workstream[key] == "yes", key
     for key in [
-        "local_on_shell_vacuum_source_route_accepted",
+        "source_admissibility_ck_candidate_packet_prepared",
+        "selector_executed",
+        "recommended_candidate_selected",
         "full_source_admissibility_review_accepted",
-        "source_admissibility_review_completed",
-        "source_admissibility_executed",
+        "source_admissibility_completed",
         "source_admissibility_claimed",
+        "source_admissibility_proved",
+        "A_source_admissibility_claimed",
+        "A_source_admissibility_proved",
         "stress_energy_as_gravity_source_authorized",
+        "stress_energy_source_admissibility_proved",
         "total_matter_gauge_stress_energy_conservation_proved",
+        "total_matter_gauge_stress_energy_conservation_claimed",
+        "matter_gauge_energy_exchange_proved",
+        "matter_gauge_energy_exchange_claimed",
         "nonabelian_route_selected",
         "current_route_derived",
         "current_source_route_constructed",
@@ -3217,12 +3259,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ]:
         assert a_source_retry_active_workstream.get(key, "no") == "no", key
     for phrase in [
-        "accepts only the on-shell vacuum U(1) stress-energy divergence identity",
-        "does not accept the full source-admissibility review",
-        "does not authorize the gauge stress-energy as a gravity source",
+        "accepts only the bounded local classical vacuum U(1) on-shell gauge stress-energy source route",
+        "does not accept full source admissibility beyond the bounded vacuum route",
         "does not derive J^nu",
-        "does not prove a current conservation theorem",
+        "does not derive sourced Maxwell",
+        "does not prove matter-current or matter-gauge exchange",
         "does not construct A-relevant C_k rules",
+        "does not execute the next selector",
         "does not close EM",
         "does not close QFT-GR",
         "does not promote the master action",
@@ -3231,14 +3274,78 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
             "non_claim_boundary"
         ], phrase
 
-    consumed_a_source_identity_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_a_source_retry_result_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_a_source_retry_result_review["status"] == "paused"
+    assert consumed_a_source_retry_result_review["packet_result"] == "REVIEW_ACCEPTED"
+    assert (
+        consumed_a_source_retry_result_review["outcome_id"]
+        == a_source_retry_result_review_result
+    )
+    assert consumed_a_source_retry_result_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_source_retry_result_review[
+        "selected_next_target_kind"
+    ] == "toe_native_A_route_selection_after_vacuum_source_admissibility"
+    assert consumed_a_source_retry_result_review["selector_authorized"] == "yes"
+    assert consumed_a_source_retry_result_review[
+        "ck_candidate_guidance_recorded"
+    ] == "yes"
+    assert consumed_a_source_retry_result_review[
+        "source_admissibility_ck_candidate_packet_prepared"
+    ] == "no"
+    assert consumed_a_source_retry_result_review[
+        "recommended_selector_candidate"
+    ] == "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet"
+    assert consumed_a_source_retry_result_review[
+        "A_relevant_C_k_rules_constructed"
+    ] == "no"
+    assert consumed_a_source_retry_result_review["J_nu_derived"] == "no"
+    assert consumed_a_source_retry_result_review["master_action_promoted"] == "no"
+
+    consumed_a_source_retry = _workstream(payload, A_SOURCE_RETRY_TARGET)
+    assert consumed_a_source_retry["status"] == "paused"
+    assert consumed_a_source_retry["packet_result"] == "ACCEPTED"
+    assert consumed_a_source_retry["outcome_id"] == a_source_retry_result
+    assert consumed_a_source_retry["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_a_source_retry[
+        "selected_next_target_kind"
+    ] == "toe_native_A_source_admissibility_review_retry_after_vacuum_identity_result_review"
+    assert consumed_a_source_retry["source_review_retry_result"] == (
+        "LOCAL_ON_SHELL_VACUUM_GAUGE_SOURCE_ROUTE_ACCEPTED_NO_CURRENT_OR_EM_CLOSURE"
+    )
+    assert consumed_a_source_retry["bounded_review_criteria_count"] == 15
+    assert consumed_a_source_retry["bounded_review_criteria_accepted_count"] == 12
+    assert consumed_a_source_retry["bounded_review_criteria_blocked_count"] == 3
+    assert consumed_a_source_retry[
+        "accepted_divergence_identity_consumed"
+    ] == "yes"
+    assert consumed_a_source_retry[
+        "source_admissibility_condition_satisfied_on_shell"
+    ] == "yes"
+    assert consumed_a_source_retry[
+        "local_on_shell_vacuum_source_route_accepted"
+    ] == "yes"
+    assert consumed_a_source_retry["local_on_shell_vacuum_source_route_proved"] == "yes"
+    assert consumed_a_source_retry[
+        "full_source_admissibility_review_accepted"
+    ] == "no"
+    assert consumed_a_source_retry["source_admissibility_completed"] == "no"
+    assert consumed_a_source_retry["source_admissibility_proved"] == "no"
+    assert consumed_a_source_retry["J_nu_derived"] == "no"
+    assert consumed_a_source_retry["A_relevant_C_k_rules_constructed"] == "no"
+    assert consumed_a_source_retry["master_action_promoted"] == "no"
+
+    consumed_a_source_identity_review = _workstream(
+        payload, A_SOURCE_IDENTITY_RESULT_REVIEW_TARGET
+    )
     assert consumed_a_source_identity_review["status"] == "paused"
     assert consumed_a_source_identity_review["packet_result"] == "REVIEW_ACCEPTED"
     assert (
         consumed_a_source_identity_review["outcome_id"]
         == a_source_identity_result_review_result
     )
-    assert consumed_a_source_identity_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_source_identity_review[
+        "selected_next_target"
+    ] == A_SOURCE_RETRY_TARGET
     assert consumed_a_source_identity_review["divergence_identity_accepted"] == "yes"
     assert (
         consumed_a_source_identity_review["on_shell_vanishing_route_accepted"]
@@ -3263,7 +3370,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_a_source_identity_packet["outcome_id"] == a_source_identity_result
     assert (
         consumed_a_source_identity_packet["selected_next_target"]
-        == PREVIOUS_LIVE_TARGET
+        == A_SOURCE_IDENTITY_RESULT_REVIEW_TARGET
     )
     assert consumed_a_source_identity_packet["divergence_identity_proved"] == "yes"
     assert (

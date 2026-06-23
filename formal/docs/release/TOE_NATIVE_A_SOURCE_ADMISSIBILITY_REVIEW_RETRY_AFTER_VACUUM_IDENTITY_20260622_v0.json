@@ -1,0 +1,301 @@
+{
+  "A_field_domain_policy": "smooth real 1-form A on the selected spacetime domain",
+  "A_relevant_C_k_rules_constructed": false,
+  "A_relevant_C_k_triads_constructed": false,
+  "A_source_admissibility_claimed": false,
+  "A_source_admissibility_proved": false,
+  "F_antisymmetry_route": "F_{mu nu} = - F_{nu mu}",
+  "F_definition_policy": "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+  "J_nu_derived": false,
+  "acceptance_criteria": {
+    "accepted_identity_consumed": true,
+    "bounded_local_on_shell_condition_passes": true,
+    "consumes_current_retry_target": true,
+    "criteria_accepted_or_blocked": true,
+    "current_ck_closure_still_blocked": true,
+    "next_target_is_result_review": true,
+    "selected_u1_context_preserved": true
+  },
+  "accepted": true,
+  "accepted_divergence_identity_consumed": true,
+  "accepted_outcomes_considered": [
+    "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_ACCEPTS_LOCAL_ON_SHELL_VACUUM_GAUGE_SOURCE_ROUTE_NO_CURRENT_OR_EM_CLOSURE",
+    "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_RECORDS_LOCAL_ON_SHELL_VACUUM_GAUGE_SOURCE_ROUTE_NO_CURRENT_OR_EM_CLOSURE",
+    "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_BLOCKED_BY_MISSING_ACCEPTED_VACUUM_IDENTITY",
+    "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_BLOCKED_BY_CURRENT_COUPLED_ROUTE_SCOPE_LEAK"
+  ],
+  "artifact_id": "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_AFTER_VACUUM_IDENTITY_20260622_v0",
+  "authorized_by_identity_result_review_outcome": "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_RESULT_REVIEW_ACCEPTS_ON_SHELL_DIVERGENCE_IDENTITY_NO_CURRENT_OR_EM_CLOSURE",
+  "authorized_by_identity_result_review_result": "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_RESULT_REVIEW_ACCEPTS_ON_SHELL_DIVERGENCE_IDENTITY_NO_CURRENT_OR_EM_CLOSURE",
+  "bianchi_identity_route": "dF = 0 / nabla_[lambda F_{mu nu]} = 0",
+  "bounded_local_on_shell_source_admissibility_review_passed": true,
+  "bounded_local_on_shell_vacuum_source_route_accepted": true,
+  "bounded_review_criteria": [
+    {
+      "assessment": "The active retry target is consumed.",
+      "evidence": "prepare_toe_native_A_source_admissibility_review_retry_after_vacuum_identity",
+      "row_id": "consumes_retry_target",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The accepted vacuum divergence identity result review is the input.",
+      "evidence": "TOE_NATIVE_A_VACUUM_SOURCE_ADMISSIBILITY_IDENTITY_RESULT_REVIEW_ACCEPTS_ON_SHELL_DIVERGENCE_IDENTITY_NO_CURRENT_OR_EM_CLOSURE",
+      "row_id": "accepted_vacuum_identity_consumed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The route remains U(1) / Abelian only.",
+      "evidence": "U(1) / Abelian test route",
+      "row_id": "u1_policy_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "A remains a smooth real 1-form on the selected domain.",
+      "evidence": "smooth real 1-form A on the selected spacetime domain",
+      "row_id": "smooth_real_one_form_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "F=dA, antisymmetry, and the Abelian Bianchi route are preserved.",
+      "evidence": [
+        "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu",
+        "F_{mu nu} = - F_{nu mu}",
+        "dF = 0 / nabla_[lambda F_{mu nu]} = 0"
+      ],
+      "row_id": "F_dA_antisymmetry_and_bianchi_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The only on-shell field equation used is the vacuum U(1) route.",
+      "evidence": "nabla_mu F^{mu nu} = 0",
+      "row_id": "vacuum_equation_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The selected convention-sensitive T_A route is preserved.",
+      "evidence": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+      "row_id": "stress_energy_route_preserved",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The retry consumes the accepted divergence identity.",
+      "evidence": "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha}",
+      "row_id": "accepted_divergence_identity_consumed",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The local source-admissibility condition holds on shell.",
+      "evidence": "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} and nabla_mu F^{mu nu} = 0 imply nabla_mu T_A^{mu nu} = 0",
+      "row_id": "on_shell_source_condition_passes",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The accepted route is local, classical, vacuum, and convention-scoped.",
+      "evidence": [
+        "local classical vacuum U(1) route under selected convention",
+        "nabla_mu g_{alpha beta} = 0",
+        "(+,-,-,-)"
+      ],
+      "row_id": "local_classical_vacuum_convention_scope_recorded",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The bounded local on-shell vacuum gauge source route passes review.",
+      "evidence": "nabla_mu T_A^{mu nu} = 0 holds on shell for the selected local vacuum U(1) gauge stress-energy route",
+      "row_id": "bounded_local_source_route_accepted",
+      "status": "accepted"
+    },
+    {
+      "assessment": "The accepted result is not a full source-admissibility closure.",
+      "evidence": "full source admissibility remains unaccepted outside the local classical vacuum U(1) on-shell route",
+      "row_id": "full_source_admissibility_not_promoted",
+      "status": "blocked_from_promotion"
+    },
+    {
+      "assessment": "The sourced/current route remains blocked.",
+      "evidence": [
+        "current-coupled gauge stress-energy alone is not generally conserved; it exchanges energy-momentum with matter/current through a term proportional to -F^{nu}{}_{alpha} J^alpha up to convention",
+        "current-coupled gauge stress-energy alone is not generally conserved and requires matter/current exchange; the sourced route is not selected",
+        "J_nu_derived=false",
+        "sourced_maxwell_equation_derived=false"
+      ],
+      "row_id": "current_and_sourced_maxwell_blocked",
+      "status": "blocked_from_promotion"
+    },
+    {
+      "assessment": "No A-relevant C_k, EM/QFT-GR closure, or master-action promotion follows.",
+      "evidence": [
+        "A_relevant_C_k_rules_constructed=false",
+        "em_closure_claimed=false",
+        "qft_gr_closure_claimed=false",
+        "master_action_promoted=false"
+      ],
+      "row_id": "ck_closure_and_promotion_blocked",
+      "status": "blocked_from_promotion"
+    },
+    {
+      "assessment": "The bounded acceptance must rotate to result review.",
+      "evidence": "review_toe_native_A_source_admissibility_review_retry_after_vacuum_identity_result",
+      "row_id": "result_review_authorized",
+      "status": "accepted"
+    }
+  ],
+  "bounded_review_criteria_accepted_count": 12,
+  "bounded_review_criteria_blocked_count": 3,
+  "bounded_review_criteria_count": 15,
+  "bounded_source_admissibility_result": "nabla_mu T_A^{mu nu} = 0 holds on shell for the selected local vacuum U(1) gauge stress-energy route",
+  "candidate_gravity_source_route_recorded": true,
+  "candidate_source_object": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+  "canonical_master_action_promoted": false,
+  "captured_at_utc": "2026-06-22T00:00:00Z",
+  "consumed_target": "prepare_toe_native_A_source_admissibility_review_retry_after_vacuum_identity",
+  "convention_scoped_source_route_accepted": true,
+  "critical_gate_fail_conditions": [
+    "promote the bounded local result to full source admissibility",
+    "authorize gauge stress-energy as an unrestricted gravity source",
+    "derive J^nu",
+    "construct a psi-current route",
+    "select an external current as native derivation",
+    "derive sourced Maxwell equation",
+    "prove matter-gauge energy exchange",
+    "prove a current conservation theorem",
+    "construct A-relevant C_k rules",
+    "claim EM closure",
+    "claim QFT-GR closure",
+    "authorize semiclassical coupling",
+    "promote the working-form master action"
+  ],
+  "current_conservation_proved": false,
+  "current_conservation_theorem_claimed": false,
+  "current_coupled_scope_boundary": "current-coupled gauge stress-energy alone is not generally conserved and requires matter/current exchange; the sourced route is not selected",
+  "current_coupled_stress_exchange_route": "current-coupled gauge stress-energy alone is not generally conserved; it exchanges energy-momentum with matter/current through a term proportional to -F^{nu}{}_{alpha} J^alpha up to convention",
+  "current_route_derived": false,
+  "current_source_route_constructed": false,
+  "divergence_identity": "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha}",
+  "downstream_progression": [
+    {
+      "decision": "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_ACCEPTS_LOCAL_ON_SHELL_VACUUM_GAUGE_SOURCE_ROUTE_NO_CURRENT_OR_EM_CLOSURE",
+      "reason": "The accepted divergence identity and vacuum equation imply local on-shell conservation for the selected U(1) gauge stress-energy route.",
+      "stage": "A_source_admissibility_review_retry_after_vacuum_identity",
+      "status": "ACCEPTS_LOCAL_ON_SHELL_VACUUM_SOURCE_ROUTE"
+    },
+    {
+      "decision": "current_route_remains_blocked",
+      "reason": "current-coupled gauge stress-energy alone is not generally conserved and requires matter/current exchange; the sourced route is not selected",
+      "stage": "sourced_current_route",
+      "status": "NOT_SELECTED"
+    },
+    {
+      "decision": "review_toe_native_A_source_admissibility_review_retry_after_vacuum_identity_result",
+      "reason": "The bounded local acceptance must be reviewed before any A-relevant C_k candidate or route selector is selected.",
+      "stage": "A_source_admissibility_retry_result_review",
+      "status": "NEXT_TARGET_AUTHORIZED"
+    }
+  ],
+  "em_closure_claimed": false,
+  "em_qft_closure_claimed": false,
+  "empirical_validation_claimed": false,
+  "external_current_native_derivation_selected": false,
+  "external_current_policy_selected": false,
+  "field_equations_derived": false,
+  "full_source_admissibility_boundary": "full source admissibility remains unaccepted outside the local classical vacuum U(1) on-shell route",
+  "full_source_admissibility_review_accepted": false,
+  "gauge_group_policy": "U(1) / Abelian test route",
+  "lane_level_lean_target_files": [
+    "formal/toe_formal/ToeFormal/Derivation/ToeNativeASourceAdmissibilityReviewRetryAfterVacuumIdentity.lean",
+    "formal/toe_formal/ToeFormal/Derivation/QFTGR.lean",
+    "formal/toe_formal/ToeFormal/Derivation/CurrentTarget.lean",
+    "formal/toe_formal/ToeFormal/Release/CurrentAuthority.lean"
+  ],
+  "lane_level_lean_targets": [
+    "ToeFormal.Derivation.ToeNativeASourceAdmissibilityReviewRetryAfterVacuumIdentity",
+    "ToeFormal.Derivation.QFTGR",
+    "ToeFormal.Derivation.CurrentTarget",
+    "ToeFormal.Release.CurrentAuthority"
+  ],
+  "lean_packet_file": "formal/toe_formal/ToeFormal/Derivation/ToeNativeASourceAdmissibilityReviewRetryAfterVacuumIdentity.lean",
+  "lean_validation_policy_file": "formal/docs/release/LEAN_VALIDATION_TIER_POLICY_v0.md",
+  "local_classical_vacuum_source_route_accepted": true,
+  "local_on_shell_vacuum_source_route_accepted": true,
+  "local_on_shell_vacuum_source_route_proved": true,
+  "local_source_route_scope": "local classical vacuum U(1) route under selected convention",
+  "master_action_promoted": false,
+  "master_action_promotion_authorized": false,
+  "mathematical_statement": "Given the accepted vacuum U(1) identity nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} and the on-shell equation nabla_mu F^{mu nu} = 0, the selected gauge stress-energy route T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta} satisfies nabla_mu T_A^{mu nu} = 0 locally on shell. This accepts only the local classical vacuum U(1) route under selected convention.",
+  "matter_current_J_nu_derived": false,
+  "matter_gauge_energy_exchange_claimed": false,
+  "matter_gauge_energy_exchange_proved": false,
+  "maxwell_equation_derived": false,
+  "maxwell_equations_derived": false,
+  "metric_compatibility_route": "nabla_mu g_{alpha beta} = 0",
+  "metric_signature_policy": "(+,-,-,-)",
+  "non_claim_boundary": "This packet accepts only the bounded local classical vacuum U(1) on-shell gauge stress-energy source route. It does not accept full source admissibility, does not authorize gauge stress-energy as an unrestricted gravity source, does not derive J^nu, does not construct a psi-current route, does not select an external current as native derivation, does not derive a sourced Maxwell equation, does not prove matter-gauge energy exchange, does not prove a current conservation theorem, does not construct A-relevant C_k rules, does not close EM, does not close QFT-GR, does not authorize semiclassical coupling, does not claim empirical validation, and does not promote the master action.",
+  "nonabelian_route_selected": false,
+  "on_shell_vacuum_conservation_identity": "nabla_mu T_A^{mu nu} = 0",
+  "on_shell_vacuum_conservation_route": "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha} and nabla_mu F^{mu nu} = 0 imply nabla_mu T_A^{mu nu} = 0",
+  "on_shell_vanishing_route_consumed": true,
+  "outcome_id": "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_ACCEPTS_LOCAL_ON_SHELL_VACUUM_GAUGE_SOURCE_ROUTE_NO_CURRENT_OR_EM_CLOSURE",
+  "packet_classification": "toe_native_A_source_admissibility_review_retry_accepts_local_on_shell_vacuum_gauge_source_route_no_current_or_em_closure",
+  "packet_id": "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_AFTER_VACUUM_IDENTITY_v0",
+  "packet_result": "ACCEPTED",
+  "phase2_readiness_claim": false,
+  "pillar_completion_inferred": false,
+  "prepared": true,
+  "psi_current_route_constructed": false,
+  "psi_derived_current": false,
+  "public_readiness_claimed": false,
+  "public_submission_authorized": false,
+  "qft_gr_closure_claimed": false,
+  "qft_gr_seam_closed": false,
+  "qft_gr_solved": false,
+  "result_review_authorized": true,
+  "schema_id": "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_AFTER_VACUUM_IDENTITY_20260622_v0",
+  "seam_closure_claim": false,
+  "selected_next_target": "review_toe_native_A_source_admissibility_review_retry_after_vacuum_identity_result",
+  "selected_next_target_kind": "toe_native_A_source_admissibility_review_retry_after_vacuum_identity_result_review",
+  "semiclassical_coupling_authorized": false,
+  "semiclassical_coupling_claimed": false,
+  "semiclassical_einstein_equation_derived": false,
+  "semiclassical_source_established": false,
+  "source_admissibility_claimed": false,
+  "source_admissibility_completed": false,
+  "source_admissibility_condition": "nabla_mu T_A^{mu nu} = 0",
+  "source_admissibility_condition_satisfied_on_shell": true,
+  "source_admissibility_proved": false,
+  "source_admissibility_retry_executed": true,
+  "source_admissibility_review_retry_completed": true,
+  "source_bridge_transport_ck_analogues_constructed": false,
+  "source_review_retry_result": "LOCAL_ON_SHELL_VACUUM_GAUGE_SOURCE_ROUTE_ACCEPTED_NO_CURRENT_OR_EM_CLOSURE",
+  "source_route_still_blocked": "nabla_mu F^{mu nu} = J^nu",
+  "sourced_maxwell_closure_claimed": false,
+  "sourced_maxwell_equation_derived": false,
+  "status": "ACTIVE_A_SOURCE_ADMISSIBILITY_REVIEW_RETRY_AFTER_VACUUM_IDENTITY",
+  "stress_energy_as_gravity_source_authorized": false,
+  "stress_energy_divergence_route": "nabla_mu T_A^{mu nu} = - F^{nu}{}_{alpha} nabla_mu F^{mu alpha}",
+  "stress_energy_source_admissibility_proved": false,
+  "stress_energy_under_selected_u1_policy": "T^A_{mu nu} = - F_{mu alpha} F_{nu}{}^{alpha} + 1/4 g_{mu nu} F_{alpha beta} F^{alpha beta}",
+  "total_matter_gauge_stress_energy_conservation_claimed": false,
+  "total_matter_gauge_stress_energy_conservation_proved": false,
+  "vacuum_euler_lagrange_route": "nabla_mu F^{mu nu} = 0",
+  "validation_policy": {
+    "aggregate_lean_validation_completion_claimed": false,
+    "aggregate_lean_validation_mathematical_failure_claimed": false,
+    "aggregate_lean_validation_status_for_packet": "NOT_RUN",
+    "aggregate_timeout_with_steady_progress_interpretation": "incomplete_validation_not_mathematical_failure",
+    "checkpoint_type": "toe_native_A_source_admissibility_review_retry_after_vacuum_identity",
+    "full_ci_parity_required": false,
+    "full_governance_suite_required": false,
+    "full_pytest_required": false,
+    "policy_id": "TIERED_LEAN_VALIDATION_POLICY_FOR_PACKET_WORK_v0",
+    "release_preservation_validation": "full ToeFormal aggregate when feasible",
+    "routine_packet_validation_tiers": [
+      "touched Lean marker",
+      "smallest affected Lake target",
+      "lane aggregate",
+      "current authority target"
+    ],
+    "tiered_lean_validation_policy_formalized": true,
+    "toeformal_import_update_requires_preservation_status": true
+  },
+  "yang_mills_equations_derived": false
+}
