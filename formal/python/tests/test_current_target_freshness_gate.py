@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_toe_native_A_source_admissibility_ck_constraint_candidate_packet_result"
+    "prepare_toe_native_A_source_admissibility_ck_functional_embedding_packet"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,6 +1329,9 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
+    "review_toe_native_A_source_admissibility_ck_constraint_candidate_packet_result"
+)
+A_SOURCE_CK_CANDIDATE_PACKET_TARGET = (
     "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet"
 )
 A_AFTER_VACUUM_SOURCE_SELECTOR_TARGET = (
@@ -1505,7 +1508,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_toe_native_A_source_admissibility_ck_constraint_candidate_packet_result"
+    "prepare_toe_native_A_source_admissibility_ck_functional_embedding_packet"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1522,7 +1525,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeASourceAdmissibilityCKConstraintCandidatePacket.lean"
+    / "ToeNativeASourceAdmissibilityCKConstraintCandidatePacketResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3105,6 +3108,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "A_SOURCE_ADMISSIBILITY_RULE_RECORDED_AS_VACUUM_CONSERVATION_RESIDUAL_"
         "NO_ACTION_VARIATION_OR_PROMOTION"
     )
+    a_source_ck_candidate_review_result = (
+        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_RESULT_REVIEW_"
+        "ACCEPTS_VACUUM_GAUGE_CONSERVATION_RESIDUAL_CANDIDATE_"
+        "NO_FUNCTIONALIZATION_OR_PROMOTION"
+    )
 
     a_source_ck_active_workstream = active_workstream(payload)
     assert a_source_ck_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3119,32 +3127,31 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert a_source_ck_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_20260622_v0.json"
+        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_CONSTRAINT_CANDIDATE_PACKET_"
+        "RESULT_REVIEW_20260622_v0.json"
     )
     assert a_source_ck_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
     assert a_source_ck_active_workstream["outcome_id"] == (
-        a_source_ck_candidate_packet_result
+        a_source_ck_candidate_review_result
     )
     assert a_source_ck_active_workstream[
         "packet_classification"
     ] == (
-        "toe_native_A_source_admissibility_ck_constraint_candidate_packet_records_"
-        "vacuum_conservation_residual_no_action_variation_or_promotion"
+        "toe_native_A_source_admissibility_ck_constraint_candidate_result_review_"
+        "accepts_vacuum_gauge_conservation_residual_candidate_no_functionalization_"
+        "or_promotion"
     )
     assert a_source_ck_active_workstream["selected_next_target"] == LIVE_TARGET
     assert a_source_ck_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_source_admissibility_ck_constraint_candidate_packet_result_review"
-    assert a_source_ck_active_workstream["packet_result"] == (
-        "A_SOURCE_ADMISSIBILITY_RULE_RECORDED_AS_VACUUM_CONSERVATION_RESIDUAL_"
-        "NO_ACTION_VARIATION_OR_PROMOTION"
-    )
+    ] == "toe_native_A_source_admissibility_ck_functional_embedding_packet_preparation"
+    assert a_source_ck_active_workstream["packet_result"] == "REVIEW_ACCEPTED"
     assert a_source_ck_active_workstream["result_token"] == (
-        a_source_ck_candidate_packet_result
+        a_source_ck_candidate_review_result
     )
-    assert a_source_ck_active_workstream["review_prepared"] == "no"
-    assert a_source_ck_active_workstream["review_executed"] == "no"
-    assert a_source_ck_active_workstream["review_result"] == "PENDING"
+    assert a_source_ck_active_workstream["review_result"] == (
+        a_source_ck_candidate_review_result
+    )
     assert a_source_ck_active_workstream["candidate_constraint_id"] == (
         "A_source_vacuum_conservation_residual_ck_candidate"
     )
@@ -3161,11 +3168,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "C_source^{A,nu}[g,A] := nabla_mu T_A^{mu nu}; "
         "C_source^{A,nu}[g,A] = 0"
     )
-    assert "not sourced Maxwell theory" in a_source_ck_active_workstream[
-        "candidate_constraint_classification"
-    ]
     assert (
         "not an action term"
+        in a_source_ck_active_workstream["candidate_constraint_interpretation"]
+    )
+    assert (
+        "not sourced Maxwell theory"
         in a_source_ck_active_workstream["candidate_constraint_interpretation"]
     )
     assert a_source_ck_active_workstream["selected_A_ck_constraint_family"] == (
@@ -3202,16 +3210,15 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "on_shell_vacuum_conservation_identity"
     ] == "nabla_mu T_A^{mu nu} = 0"
     for key in [
-        "candidate_packet_prepared",
-        "candidate_constraint_shape_recorded",
-        "vacuum_conservation_residual_candidate_selected",
-        "source_admissibility_rule_candidate_recorded",
-        "on_shell_vacuum_supporting_identity_recorded",
-        "candidate_constraint_is_admissibility_only",
-        "A_relevant_C_k_rule_candidate_recorded",
-        "candidate_uses_accepted_vacuum_source_route",
-        "candidate_uses_selected_u1_policy",
-        "candidate_packet_authorized",
+        "review_accepts_vacuum_gauge_conservation_residual_candidate",
+        "candidate_recorded_as_candidate_only",
+        "candidate_carried_forward_exactly",
+        "vacuum_u1_scope_preserved",
+        "accepted_vacuum_source_route_retained_as_context",
+        "admissibility_only_interpretation_retained",
+        "dynamical_action_embedding_not_assumed",
+        "functional_embedding_packet_authorized",
+        "A_relevant_C_k_rule_candidate_review_accepted",
     ]:
         assert a_source_ck_active_workstream[key] == "yes", key
     for key in [
@@ -3280,8 +3287,9 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ]:
         assert a_source_ck_active_workstream.get(key, "no") == "no", key
     for phrase in [
-        "records only an A source-admissibility C_k candidate shape",
-        "does not embed C_k in the action",
+        "accepts the vacuum gauge conservation-residual candidate only",
+        "does not functionalize the candidate",
+        "does not embed it in S_C",
         "does not execute C_k variation",
         "does not derive J^nu",
         "does not derive a psi-current or external-current native route",
@@ -3295,7 +3303,41 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
             "non_claim_boundary"
         ], phrase
 
-    consumed_a_source_ck_candidate_packet = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    consumed_a_source_ck_candidate_review = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_a_source_ck_candidate_review["status"] == "paused"
+    assert consumed_a_source_ck_candidate_review["packet_result"] == "REVIEW_ACCEPTED"
+    assert consumed_a_source_ck_candidate_review["outcome_id"] == (
+        a_source_ck_candidate_review_result
+    )
+    assert consumed_a_source_ck_candidate_review["review_result"] == (
+        a_source_ck_candidate_review_result
+    )
+    assert consumed_a_source_ck_candidate_review["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_source_ck_candidate_review[
+        "selected_next_target_kind"
+    ] == "toe_native_A_source_admissibility_ck_functional_embedding_packet_preparation"
+    assert consumed_a_source_ck_candidate_review[
+        "review_accepts_vacuum_gauge_conservation_residual_candidate"
+    ] == "yes"
+    assert consumed_a_source_ck_candidate_review[
+        "candidate_recorded_as_candidate_only"
+    ] == "yes"
+    assert consumed_a_source_ck_candidate_review[
+        "functional_embedding_packet_authorized"
+    ] == "yes"
+    assert consumed_a_source_ck_candidate_review[
+        "functional_embedding_packet_prepared"
+    ] == "no"
+    assert consumed_a_source_ck_candidate_review["C_k_variation_executed"] == "no"
+    assert consumed_a_source_ck_candidate_review["J_nu_derived"] == "no"
+    assert consumed_a_source_ck_candidate_review[
+        "sourced_maxwell_equation_derived"
+    ] == "no"
+    assert consumed_a_source_ck_candidate_review["master_action_promoted"] == "no"
+
+    consumed_a_source_ck_candidate_packet = _workstream(
+        payload, A_SOURCE_CK_CANDIDATE_PACKET_TARGET
+    )
     assert consumed_a_source_ck_candidate_packet["status"] == "paused"
     assert consumed_a_source_ck_candidate_packet["packet_result"] == (
         "A_SOURCE_ADMISSIBILITY_RULE_RECORDED_AS_VACUUM_CONSERVATION_RESIDUAL_"
@@ -3304,7 +3346,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_a_source_ck_candidate_packet["outcome_id"] == (
         a_source_ck_candidate_packet_result
     )
-    assert consumed_a_source_ck_candidate_packet["selected_next_target"] == LIVE_TARGET
+    assert (
+        consumed_a_source_ck_candidate_packet["selected_next_target"]
+        == PREVIOUS_LIVE_TARGET
+    )
     assert consumed_a_source_ck_candidate_packet[
         "selected_next_target_kind"
     ] == "toe_native_A_source_admissibility_ck_constraint_candidate_packet_result_review"
@@ -3343,7 +3388,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         == a_after_vacuum_source_selection_result
     )
     assert consumed_a_after_vacuum_source_selector["selected_next_target"] == (
-        PREVIOUS_LIVE_TARGET
+        A_SOURCE_CK_CANDIDATE_PACKET_TARGET
     )
     assert consumed_a_after_vacuum_source_selector[
         "selected_next_target_kind"

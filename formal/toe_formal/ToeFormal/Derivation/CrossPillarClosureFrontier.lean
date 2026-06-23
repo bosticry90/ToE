@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "ToE-native A source-admissibility C_k constraint candidate packet records C_source^{A,nu}[g,A] := nabla_mu T_A^{mu nu}; C_source^{A,nu}[g,A] = 0 as a vacuum U(1) admissibility-only conservation residual candidate. It preserves the accepted vacuum identity and rotates to result review. It does not embed C_k in the action, execute C_k variation, derive J^nu, derive sourced Maxwell, prove matter-gauge exchange or current conservation, accept full source admissibility beyond the bounded vacuum route, close EM, close QFT-GR, authorize semiclassical coupling, claim empirical validation, or promote the master action."
+        "ToE-native A source-admissibility C_k constraint candidate result review accepts C_source^{A,nu}[g,A] := nabla_mu T_A^{mu nu}; C_source^{A,nu}[g,A] = 0 as a vacuum U(1) admissibility-only conservation residual candidate and rotates to the functional-embedding question. It does not functionalize the candidate, embed C_k in the action, execute C_k variation, derive J^nu, derive sourced Maxwell, prove matter-gauge exchange or current conservation, accept full source admissibility beyond the bounded vacuum route, close EM, close QFT-GR, authorize semiclassical coupling, claim empirical validation, or promote the master action."
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "review_toe_native_A_source_admissibility_ck_constraint_candidate_packet_result"
+        "prepare_toe_native_A_source_admissibility_ck_functional_embedding_packet"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, a reviewed vacuum divergence identity route, a reviewed bounded local on-shell vacuum gauge source route, a selector that chose the A source-admissibility C_k candidate packet, and a candidate packet that records the A source conservation residual. The selected source candidate remains a vacuum admissibility residual only. No full A-source admissibility closure, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, C_k action embedding, C_k variation, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
+        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a bounded U(1) vacuum route, a reviewed convention-sensitive gauge stress-energy route, a reviewed vacuum divergence identity route, a reviewed bounded local on-shell vacuum gauge source route, a selector that chose the A source-admissibility C_k candidate packet, a candidate packet that records the A source conservation residual, and a result review that accepts that residual as candidate-only before the functional-embedding question. The selected source candidate remains a vacuum admissibility residual only. No full A-source admissibility closure, Maxwell/Yang-Mills derivation, J^nu derivation, psi-current route, external-current native derivation, total matter+gauge conservation theorem, C_k action embedding, C_k variation, non-Abelian route, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, public-readiness claim, or master-action promotion follows."
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "review_toe_native_A_source_admissibility_ck_constraint_candidate_packet_result"
+        "prepare_toe_native_A_source_admissibility_ck_functional_embedding_packet"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the ToE-native A source C_k candidate packet. -/
+/-- Previous live target consumed by the ToE-native A source C_k candidate review. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "prepare_toe_native_A_source_admissibility_ck_constraint_candidate_packet"
-
-/-- Current live target after the ToE-native A source C_k candidate packet. -/
-def currentLiveNextStrictTargetV0 : String :=
   "review_toe_native_A_source_admissibility_ck_constraint_candidate_packet_result"
+
+/-- Current live target after the ToE-native A source C_k candidate review. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "prepare_toe_native_A_source_admissibility_ck_functional_embedding_packet"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "review_toe_native_A_source_admissibility_ck_constraint_candidate_packet_result"
+    "prepare_toe_native_A_source_admissibility_ck_functional_embedding_packet"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
