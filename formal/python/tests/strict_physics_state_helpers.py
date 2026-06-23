@@ -30,11 +30,22 @@ REGISTRY_PATH = REPO_ROOT / "formal" / "docs" / "release" / "LOOP_CONTROL_REGIST
 GOVERNANCE_MANIFEST_PATH = (
     REPO_ROOT / "formal" / "docs" / "release" / "GOVERNANCE_TEST_MANIFEST_v1.json"
 )
+CURRENT_AUTHORITATIVE_SURFACES_PATH = (
+    REPO_ROOT / "formal" / "docs" / "release" / "CURRENT_AUTHORITATIVE_SURFACES_v0.md"
+)
 CROSS_PILLAR_FRONTIER_PATH = (
     REPO_ROOT / "formal" / "toe_formal" / "ToeFormal" / "Derivation" / "CrossPillarClosureFrontier.lean"
 )
 
 PUBLIC_CURRENT_TARGET_SURFACES = (
+    README_PATH,
+    STATE_PATH,
+    ROADMAP_PATH,
+    STRICT_MAP_PATH,
+    CURRENT_AUTHORITATIVE_SURFACES_PATH,
+)
+
+STRICT_CURRENT_TOKEN_SURFACES = (
     README_PATH,
     STATE_PATH,
     ROADMAP_PATH,
@@ -179,10 +190,41 @@ def assert_frontier_matches_registry() -> None:
 def assert_public_surfaces_match_registry(
     paths: tuple[Path, ...] = PUBLIC_CURRENT_TARGET_SURFACES,
 ) -> None:
-    live_target = current_target_state()["live_next_target"]
+    state = current_target_state()
+    live_target = state["live_next_target"]
+    expected_tokens = {
+        "CURRENT_LIVE_NEXT_TARGET_v0": live_target,
+        "PREVIOUS_LIVE_NEXT_TARGET_v0": state["previous_live_next_target"],
+        "ACTIVE_LANE_v0": state["active_lane"],
+        "CURRENT_LIVE_TARGET_AUTHORITY_v0": str(
+            REGISTRY_PATH.relative_to(REPO_ROOT)
+        ).replace("\\", "/"),
+        "CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0": state[
+            "live_next_target_frontier_source"
+        ],
+        "CURRENT_LIVE_TARGET_EVIDENCE_v0": state["live_next_target_evidence"],
+        "CURRENT_LIVE_TARGET_REPORT_v0": state["live_next_target_report"],
+        "CURRENT_LIVE_TARGET_OUTCOME_v0": state["live_next_target_outcome"],
+    }
     for path in paths:
         text = read_text(path)
         assert live_target in text, f"{path} missing live target"
+        text_to_check = text
+        if path == CURRENT_AUTHORITATIVE_SURFACES_PATH:
+            marker = "Current live control state:"
+            assert marker in text, f"{path} missing {marker}"
+            text_to_check = text.split(marker, 1)[1].split("\n\n", 1)[0]
+
+        for label, value in expected_tokens.items():
+            pattern = rf"(?m)^(?:- `)?{re.escape(label)}:\s*([^`\r\n]+)`?\s*$"
+            matches = [match.strip() for match in re.findall(pattern, text_to_check)]
+            assert matches, f"{path} missing {label}: {value}"
+            if path in STRICT_CURRENT_TOKEN_SURFACES:
+                assert all(match == value for match in matches), (
+                    f"{path} has stale {label}: {matches}; expected {value}"
+                )
+            else:
+                assert value in matches, f"{path} missing {label}: {value}"
 
         current_citation_targets = re.findall(
             r"MASTER_ACTION_CURRENT_CITATION_TARGET_v0:\s*([A-Za-z0-9_]+)",

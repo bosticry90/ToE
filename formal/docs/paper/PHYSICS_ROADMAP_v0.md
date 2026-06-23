@@ -275,7 +275,7 @@ HISTORICAL_QFT_GR_ACTION_DERIVABILITY_CURRENT_LIVE_NEXT_TARGET_v0: prepare_qft_g
 ACTIVE_LANE_v0: review_toe_native_A_bridge_admissibility_ck_functional_embedding_packet_result
 CURRENT_LIVE_TARGET_AUTHORITY_v0: formal/docs/release/LOOP_CONTROL_REGISTRY_v0.json
 CURRENT_LIVE_TARGET_FRONTIER_MIRROR_v0: formal/toe_formal/ToeFormal/Derivation/CrossPillarClosureFrontier.lean
-CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeACKConstraintFamilySelectionAfterSourceAdmissibility.lean
+CURRENT_LIVE_TARGET_EVIDENCE_v0: formal/toe_formal/ToeFormal/Derivation/ToeNativeABridgeAdmissibilityCKFunctionalEmbeddingPacket.lean
 CURRENT_LIVE_TARGET_REPORT_v0: formal/docs/release/TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_20260622_v0.json
 CURRENT_LIVE_TARGET_OUTCOME_v0: TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION
 CURRENT_AUXILIARY_HYGIENE_TARGET_QUEUED_v0: prepare_status_surface_stale_current_token_quarantine_for_public_summary_surfaces
@@ -285,13 +285,13 @@ POST_MR_MATURATION_ARTIFACT_ORDER_v0: TOE_CLAIM_LADDER_v0 -> TOE_CORE_HYPOTHESIS
 POST_MR_NONCLAIM_BOUNDARY_v0: ToE-native A bridge-admissibility C_k functional-embedding packet records C_bridge^A = 0 as the selected vacuum U(1) admissibility-only route-consistency rule, while preserving the tuple C_bridge^A := (E_A^master - E_A^vacuum_U1_route, T_A^master - T_A^vacuum_U1_route, C_source^A - nabla_mu T_A^{mu nu}). It records the multiplier/action route S_C^A_bridge = integral_M dVol_g Lambda_bridge dot C_bridge^A as blocked by missing component pairing, multiplier domain, covariance control, boundary-term policy, variation policy, and proof that gauge dynamics are not altered. It records the penalty route S_C^A_bridge = integral_M dVol_g norm(C_bridge^A)^2 as unlicensed because no norm over the heterogeneous route tuple is defined and it would become a new dynamical penalty term. No bridge proof, route-alignment verification, C_k action embedding, C_k variation, J^nu derivation, sourced Maxwell route, matter/current exchange, full EM closure, QFT-GR closure, semiclassical coupling, empirical validation, or master-action promotion is claimed or authorized; master-action promotion remains blocked.
 
 Historical benchmark-intake live-target pointer:
-- `CURRENT_LIVE_NEXT_TARGET_v0: review_qft_gr_minimal_model_obstruction_class_stabilization_packet_result`
+- `HISTORICAL_BENCHMARK_INTAKE_CURRENT_LIVE_NEXT_TARGET_v0: review_qft_gr_minimal_model_obstruction_class_stabilization_packet_result`
 
 Current release-facing status (2026-05-13):
 - `TOE_V01_ALPHA_RELEASE_STANDARD_PREPARED_FULL_PILLAR_SEAM_SCOPE`
 - The v0.1-alpha release-standard track is full-pillar/full-seam scoped and uses canonical JSON ledgers as gate authority.
 - Required coverage domains: GR, QM, EM, SR, Scalar/QFT, STAT, COSMO, QFT-GR, QM-STAT, EM-QFT, SR-COSMO, GR-QM, and MASTER_ACTION.
-- Current strict target mirror: `CURRENT_LIVE_NEXT_TARGET_v0: select_next_qft_gr_mathematical_regularity_row_from_repo_authoritative_inventory` with outcome token `QFT_GR_LIMIT_INTERCHANGE_REGULARIZATION_BOUNDARY_ASSUMPTION_REDUCTION_ATTEMPT_RESULT_REVIEW_ACCEPTS_REDUCED_MR_ASSUMP_004_AND_AUTHORIZES_NEXT_MATHEMATICAL_REGULARITY_ROW_SELECTION_ONLY`.
+- Current strict target mirror: `CURRENT_LIVE_NEXT_TARGET_v0: review_toe_native_A_bridge_admissibility_ck_functional_embedding_packet_result` with outcome token `TOE_NATIVE_A_BRIDGE_ADMISSIBILITY_CK_FUNCTIONAL_EMBEDDING_PACKET_PREPARED_OPTIONS_RECORDED_ADMISSIBILITY_ONLY_ROUTE_SELECTED_NO_ACTION_VARIATION`.
 - This roadmap pointer does not mark v0.1-alpha complete and does not authorize master-action promotion, pillar completion, seam closure, Phase 2 readiness, empirical adequacy, canonical ToE status, or QFT-GR source-map closure.
 
 Release-gate truth policy (R1-A, 2026-03-20):
