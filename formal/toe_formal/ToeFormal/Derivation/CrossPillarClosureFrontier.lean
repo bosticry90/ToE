@@ -360,13 +360,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .qftGRSeam
       current_strongest_surface :=
-        "ToE-native A/C_k source-bridge-transport rule-family synthesis result review accepts C_source^A = 0, C_bridge^A = 0, and C_transport^A = 0 as a vacuum U(1) three-rule admissibility family only. It preserves source admissibility, bridge admissibility, and transport consistency as admissibility-only, not action terms, not dynamical laws, not current-coupled rules, not sourced Maxwell, not EM closure, not QFT-GR closure, and not master-action promotion. It proves no source, bridge, transport, route-alignment, matter/current exchange, J^nu, sourced Maxwell, EM, QFT-GR, semiclassical, empirical, Phase 2, or master-action promotion claim."
+        "ToE-native A/C_k source-bridge-transport rule-family closeout closes C_source^A = 0, C_bridge^A = 0, and C_transport^A = 0 as a vacuum U(1) three-rule admissibility family only. It preserves source admissibility, bridge admissibility, and transport consistency as admissibility-only, not action terms, not dynamical laws, not current-coupled rules, not sourced Maxwell, not EM closure, not QFT-GR closure, and not master-action promotion. It proves no source, bridge, transport, route-alignment, matter/current exchange, J^nu, sourced Maxwell, EM, QFT-GR, semiclassical, empirical, Phase 2, or master-action promotion claim. The next target is only the post-A-triad interaction selector."
       retained_blocker :=
         "PHASE1-BLOCKER-QFTGR-STRESS-ENERGY-CONSERVATION-WITNESS-OBSTRUCTION-REQUIRES-REFINEMENT"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_coherence
       next_strict_slice :=
-        "prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout"
+        "select_next_master_action_interaction_after_A_ck_triad"
       status := .retained }
   , { row := .grQMSeam
       current_strongest_surface :=
@@ -388,13 +388,13 @@ def crossPillarClosureFrontierV0 :
       status := .retained }
   , { row := .masterAction
       current_strongest_surface :=
-        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now has a reviewed A/C_k source-bridge-transport family: C_source^A = 0, C_bridge^A = 0, and C_transport^A = 0 as vacuum U(1) admissibility-only source, bridge, and transport rules. This supports only the bounded architecture claim that C_k is behaving like a reusable seam-admissibility layer across phi and A. No current route, J^nu derivation, psi-current route, external-current native derivation, sourced Maxwell route, matter/current exchange, Maxwell/Yang-Mills closure, C_k action embedding, C_k variation, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, Phase 2 authorization, public-readiness claim, or master-action promotion follows."
+        "The scalar sandbox branch remains closed as a positive local classical source witness, the phi/C_k source/bridge/transport sequence remains the first phi-relevant three-rule C_k admissibility-only family, and the A branch now closes its A/C_k source-bridge-transport family: C_source^A = 0, C_bridge^A = 0, and C_transport^A = 0 as vacuum U(1) admissibility-only source, bridge, and transport rules. This supports only the bounded architecture claim that C_k is behaving like a reusable seam-admissibility layer across phi and A. The next live target is only an interaction selector after the A/C_k triad. No current route, J^nu derivation, psi-current route, external-current native derivation, sourced Maxwell route, matter/current exchange, Maxwell/Yang-Mills closure, C_k action embedding, C_k variation, EM closure, QFT-GR closure, semiclassical coupling, empirical claim, Phase 2 authorization, public-readiness claim, or master-action promotion follows."
       retained_blocker :=
         "V01-ALPHA-QFT-GR-WITNESS-ATTEMPT-OBSTRUCTION-SEAM-HELD"
       proof_debt_scope := .fatalToMultipleSeams
       master_action_dependency := .required_for_closure
       next_strict_slice :=
-        "prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout"
+        "select_next_master_action_interaction_after_A_ck_triad"
       status := .retained }
   ]
 
@@ -412,13 +412,13 @@ def crossPillarFrontierEntryByRow? (row : CrossPillarFrontierRow) :
 def crossPillarClosureFrontierSurfaceId : String :=
   "cross_pillar_closure_frontier_v0"
 
-/-- Previous live target consumed by the ToE-native A/C_k rule-family synthesis result review. -/
+/-- Previous live target consumed by the ToE-native A/C_k rule-family closeout. -/
 def previousLiveNextStrictTargetV0 : String :=
-  "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
-
-/-- Current live target after the ToE-native A/C_k rule-family synthesis result review. -/
-def currentLiveNextStrictTargetV0 : String :=
   "prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout"
+
+/-- Current live target after the ToE-native A/C_k rule-family closeout. -/
+def currentLiveNextStrictTargetV0 : String :=
+  "select_next_master_action_interaction_after_A_ck_triad"
 
 /-- Administrative current-target mirror for release-standard control packets. -/
 structure ReleaseTrackAdministrativeTargetMirror where
@@ -431,7 +431,7 @@ does not alter the physics frontier rows or infer pillar/seam closure.
 def releaseTrackAdministrativeTargetMirrorV0 :
   ReleaseTrackAdministrativeTargetMirror where
   next_strict_slice :=
-    "prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout"
+    "select_next_master_action_interaction_after_A_ck_triad"
 
 /-- Status readout for the all-pillar frontier map. -/
 structure CrossPillarClosureFrontierStatus where
