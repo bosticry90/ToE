@@ -20,7 +20,7 @@ def currentEvidencePacketId : String :=
 
 theorem current_authority_tracks_current_target :
     currentTarget =
-      "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result" := by
+      "prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout" := by
   native_decide
 
 end CurrentAuthority

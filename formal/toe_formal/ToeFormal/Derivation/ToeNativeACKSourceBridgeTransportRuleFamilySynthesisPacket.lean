@@ -56,7 +56,7 @@ def sourceRuleEpistemicStatus : String := "admissibility-only"
 def sourceRuleDisplayForm : String := "C_source^A = 0"
 
 def sourceCandidateConstraintId : String :=
-  "A_source_admissibility_ck_constraint_candidate"
+  "A_source_vacuum_conservation_residual_ck_candidate"
 
 def sourceCandidateConstraintForm : String :=
   ToeNativeATransportConsistencyCKAdmissibilityRuleCloseout.sourceCandidateConstraintForm

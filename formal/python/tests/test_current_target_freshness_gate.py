@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
+    "prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1332,6 +1332,9 @@ A_TRANSPORT_CLOSEOUT_TARGET = (
     "prepare_toe_native_A_transport_consistency_ck_admissibility_rule_closeout"
 )
 PREVIOUS_LIVE_TARGET = (
+    "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
+)
+A_CK_SYNTHESIS_PACKET_TARGET = (
     "prepare_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet"
 )
 A_TRANSPORT_FUNCTIONAL_EMBEDDING_REVIEW_TARGET = (
@@ -1556,7 +1559,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "review_toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result"
+    "prepare_toe_native_A_ck_source_bridge_transport_rule_family_closeout"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1573,7 +1576,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeACKSourceBridgeTransportRuleFamilySynthesisPacket.lean"
+    / "ToeNativeACKSourceBridgeTransportRuleFamilySynthesisResultReview.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3240,6 +3243,10 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_"
         "PREPARED_THREE_ADMISSIBILITY_RULES_SYNTHESIZED_NO_CURRENT_OR_EM_CLOSURE"
     )
+    a_ck_synthesis_review_result = (
+        "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_"
+        "ACCEPTS_THREE_RULE_VACUUM_U1_ADMISSIBILITY_FAMILY_NO_CURRENT_OR_EM_CLOSURE"
+    )
 
     a_transport_active_workstream = active_workstream(payload)
     assert a_transport_active_workstream["workstream_id"] == ACTIVE_LANE
@@ -3251,33 +3258,25 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert a_transport_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_PACKET_"
+        "TOE_NATIVE_A_CK_SOURCE_BRIDGE_TRANSPORT_RULE_FAMILY_SYNTHESIS_RESULT_REVIEW_"
         "20260624_v0.json"
     )
     assert a_transport_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert a_transport_active_workstream["outcome_id"] == a_ck_synthesis_result
-    assert a_transport_active_workstream["packet_result"] == a_ck_synthesis_result
+    assert a_transport_active_workstream["outcome_id"] == a_ck_synthesis_review_result
+    assert a_transport_active_workstream["review_result"] == a_ck_synthesis_review_result
     assert a_transport_active_workstream[
         "packet_classification"
     ] == (
-        "toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_prepared_"
-        "three_admissibility_rules_synthesized_no_current_or_em_closure"
+        "toe_native_A_ck_source_bridge_transport_rule_family_synthesis_result_review_"
+        "accepts_three_rule_vacuum_u1_admissibility_family_no_current_or_em_closure"
     )
     assert a_transport_active_workstream["selected_next_target"] == LIVE_TARGET
     assert a_transport_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_result_review"
-    assert a_transport_active_workstream["result_token"] == a_ck_synthesis_result
-    assert a_transport_active_workstream["transport_closeout_outcome"] == (
-        a_transport_closeout_result
-    )
-    assert a_transport_active_workstream["source_rule_closeout_outcome"] == (
-        "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_ADMISSIBILITY_RULE_CLOSED_AS_"
-        "VACUUM_GAUGE_SOURCE_RULE_NO_ACTION_VARIATION_OR_PROMOTION"
-    )
-    assert a_transport_active_workstream["bridge_rule_closeout_outcome"] == (
-        a_bridge_closeout_result
-    )
+    ] == "toe_native_A_ck_source_bridge_transport_rule_family_closeout_preparation"
+    assert a_transport_active_workstream["result_token"] == a_ck_synthesis_review_result
+    assert a_transport_active_workstream["synthesis_packet_result"] == a_ck_synthesis_result
+    assert a_transport_active_workstream["synthesis_packet_outcome"] == a_ck_synthesis_result
     assert a_transport_active_workstream["A_ck_admissibility_rule_family_count"] == 3
     assert a_transport_active_workstream["rule_family_classification"] == (
         "first A-relevant three-rule C_k admissibility family"
@@ -3338,8 +3337,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "S_A^vacuum_U1 -> E_A^vacuum_U1 -> T_A^vacuum_U1 -> "
         "C_source^A -> C_bridge^A -> bounded residual/regime-facing route"
     )
-    assert a_transport_active_workstream["synthesis_criteria_count"] == 12
-    assert a_transport_active_workstream["synthesis_criteria_accepted_count"] == 12
+    assert a_transport_active_workstream["review_criteria_count"] == 10
+    assert a_transport_active_workstream["review_criteria_accepted_count"] == 10
     assert a_transport_active_workstream[
         "transport_closeout_rule_classification"
     ] == "vacuum U(1) transport-consistency rule candidate"
@@ -3349,28 +3348,27 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     for key in [
         "accepted",
         "prepared",
-        "synthesis_packet_prepared",
+        "review_executed",
+        "result_review_prepared",
+        "result_review_accepted",
         "synthesis_packet_accepted",
-        "A_ck_rule_family_synthesized",
-        "three_rule_family_synthesized",
-        "three_A_relevant_ck_admissibility_rules_synthesized",
-        "source_bridge_transport_rules_synthesized",
-        "source_admissibility_rule_synthesized",
-        "bridge_admissibility_rule_synthesized",
-        "transport_consistency_rule_synthesized",
-        "source_admissibility_rule_preserved",
-        "bridge_admissibility_rule_preserved",
-        "transport_consistency_rule_preserved",
-        "c_k_acquired_three_concrete_A_relevant_rule_roles",
-        "source_rule_decides_A_conserved_vacuum_source_permission",
-        "bridge_rule_decides_A_vacuum_route_consistency",
-        "transport_rule_decides_A_derivation_chain_coherence",
+        "source_rule_synthesis_accepted",
+        "bridge_rule_synthesis_accepted",
+        "transport_rule_synthesis_accepted",
+        "source_bridge_transport_rule_synthesis_accepted",
+        "three_rule_family_review_accepted",
+        "c_k_instantiated_as_three_admissibility_rules",
+        "c_k_source_permission_role_accepted",
+        "c_k_bridge_permission_role_accepted",
+        "c_k_transport_stability_role_accepted",
         "all_three_rules_admissibility_only",
+        "all_three_rules_rule_candidates",
         "all_three_rules_not_action_terms",
         "all_three_rules_not_dynamical_laws",
         "all_three_rules_not_current_coupled",
-        "rule_family_interprets_ck_as_seam_admissibility_layer",
-        "result_review_authorized",
+        "no_J_nu_derivation",
+        "no_sourced_maxwell_derivation",
+        "triad_closeout_authorized",
     ]:
         assert a_transport_active_workstream[key] == "yes", key
     for key in [
@@ -3379,7 +3377,8 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "constraint_as_action_term_selected",
         "dynamical_action_embedding_selected",
         "dynamical_law_claimed",
-        "review_executed",
+        "triad_closeout_prepared",
+        "selector_after_closeout_authorized",
         "another_A_route_selected",
         "transport_candidate_functional_defined",
         "transport_consistency_proved",
@@ -3430,18 +3429,13 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         assert a_transport_active_workstream.get(key, "no") == "no", key
     for phrase in [
         "source, bridge, and transport",
-        "vacuum U(1) admissibility-only rules",
-        "not action terms",
-        "not dynamical laws",
-        "not current-coupled rules",
-        "not sourced Maxwell",
-        "not EM closure",
-        "not QFT-GR closure",
-        "not master-action promotion",
-        "does not derive J^nu",
-        "does not prove matter/current exchange",
-        "does not execute C_k variation",
-        "does not prove transport consistency",
+        "no current route",
+        "no J^nu derivation",
+        "no sourced Maxwell derivation",
+        "no matter/current exchange",
+        "no EM closure",
+        "no QFT-GR closure",
+        "no master-action promotion",
         "full ToeFormal aggregate is recorded as NOT_RUN",
     ]:
         assert phrase in a_transport_active_workstream[
@@ -3453,7 +3447,7 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert consumed_a_transport_closeout["packet_result"] == "CLOSEOUT_ACCEPTED"
     assert consumed_a_transport_closeout["outcome_id"] == a_transport_closeout_result
     assert consumed_a_transport_closeout["closeout_result"] == a_transport_closeout_result
-    assert consumed_a_transport_closeout["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_a_transport_closeout["selected_next_target"] == A_CK_SYNTHESIS_PACKET_TARGET
     assert consumed_a_transport_closeout[
         "selected_next_target_kind"
     ] == "toe_native_A_ck_source_bridge_transport_rule_family_synthesis_packet_preparation"
