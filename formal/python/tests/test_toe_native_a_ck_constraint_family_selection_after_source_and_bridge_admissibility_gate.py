@@ -433,10 +433,10 @@ def test_a_source_bridge_selector_mirrors() -> None:
         CONSUMED_TARGET,
         NEXT_TARGET,
         "ToeNativeACKConstraintFamilySelectionAfterSourceAndBridgeAdmissibility",
-        "CURRENT_LIVE_NEXT_TARGET_v0: "
-        "prepare_toe_native_A_transport_consistency_ck_constraint_candidate_packet",
-        "PREVIOUS_LIVE_NEXT_TARGET_v0: "
+        "HISTORICAL_TOE_NATIVE_A_CK_CONSTRAINT_FAMILY_SELECTION_AFTER_SOURCE_AND_BRIDGE_ADMISSIBILITY_CURRENT_LIVE_NEXT_TARGET_v0: "
         "select_next_toe_native_A_ck_constraint_family_after_source_and_bridge_admissibility",
+        "HISTORICAL_TOE_NATIVE_A_CK_CONSTRAINT_FAMILY_SELECTION_AFTER_SOURCE_AND_BRIDGE_ADMISSIBILITY_ACTIVE_LANE_v0: "
+        "prepare_toe_native_A_transport_consistency_ck_constraint_candidate_packet",
         SELECTED_A_CK_OPTION_CLASS,
         SELECTED_A_CK_CONSTRAINT_FAMILY,
         SOURCE_ADMISSIBILITY_CONSTRAINT_FORM,

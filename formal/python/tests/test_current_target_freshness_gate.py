@@ -1158,7 +1158,7 @@ MR_ROW_SELECTION_EVIDENCE_PATH = (
     / "QFT_GR_LimitInterchangeRegularizationBoundaryAssumptionReductionAttemptResultReview.lean"
 )
 ACTIVE_LANE = (
-    "prepare_toe_native_A_transport_consistency_ck_constraint_candidate_packet"
+    "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result"
 )
 ATTEMPT_TARGET = (
     "execute_qft_gr_candidate_source_domain_membership_assumption_reduction_attempt"
@@ -1329,6 +1329,9 @@ CONSERVATION_TEST_PACKET_RESULT_REVIEW_TARGET = (
     "review_qft_gr_minimal_working_model_conservation_test_packet_result"
 )
 PREVIOUS_LIVE_TARGET = (
+    "prepare_toe_native_A_transport_consistency_ck_constraint_candidate_packet"
+)
+A_SOURCE_BRIDGE_SELECTOR_TARGET = (
     "select_next_toe_native_A_ck_constraint_family_after_source_and_bridge_admissibility"
 )
 A_BRIDGE_CLOSEOUT_TARGET = (
@@ -1538,7 +1541,7 @@ CONSERVATION_TEST_PACKET_TARGET = (
     "prepare_qft_gr_minimal_working_model_conservation_test_packet"
 )
 LIVE_TARGET = (
-    "prepare_toe_native_A_transport_consistency_ck_constraint_candidate_packet"
+    "review_toe_native_A_transport_consistency_ck_constraint_candidate_packet_result"
 )
 STATE_DOMAIN_ASSUMPTION_REDUCTION_CLOSEOUT_PACKET_TARGET = (
     "prepare_qft_gr_state_domain_assumption_reduction_closeout_packet"
@@ -1555,7 +1558,7 @@ LIVE_TARGET_EVIDENCE_PATH = (
     / "toe_formal"
     / "ToeFormal"
     / "Derivation"
-    / "ToeNativeACKConstraintFamilySelectionAfterSourceAndBridgeAdmissibility.lean"
+    / "ToeNativeATransportConsistencyCKConstraintCandidatePacket.lean"
 )
 DISTRIBUTIONAL_PAIRING_REGULAR_DOMAIN_ASSUMPTION_REDUCTION_ATTEMPT_SURFACE = (
     "formal/toe_formal/ToeFormal/Bridges/"
@@ -3192,6 +3195,11 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "ADMISSIBILITY_SELECTS_TRANSPORT_CONSISTENCY_NO_CURRENT_OR_EM_CLOSURE"
     )
 
+    a_transport_candidate_packet_result = (
+        "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_"
+        "PREPARED_A_TRANSPORT_STABILITY_RULE_RECORDED_NO_CURRENT_OR_EM_CLOSURE"
+    )
+
     a_transport_active_workstream = active_workstream(payload)
     assert a_transport_active_workstream["workstream_id"] == ACTIVE_LANE
     assert a_transport_active_workstream["active_lane"] == ACTIVE_LANE
@@ -3202,26 +3210,29 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     ] == str(LIVE_TARGET_EVIDENCE_PATH.relative_to(REPO_ROOT)).replace("\\", "/")
     assert a_transport_active_workstream["report"] == (
         "formal/docs/release/"
-        "TOE_NATIVE_A_CK_CONSTRAINT_FAMILY_SELECTION_AFTER_SOURCE_AND_BRIDGE_"
-        "ADMISSIBILITY_20260623_v0.json"
+        "TOE_NATIVE_A_TRANSPORT_CONSISTENCY_CK_CONSTRAINT_CANDIDATE_PACKET_"
+        "20260623_v0.json"
     )
     assert a_transport_active_workstream["consumed_target"] == PREVIOUS_LIVE_TARGET
-    assert a_transport_active_workstream["outcome_id"] == a_source_bridge_selector_result
-    assert a_transport_active_workstream["packet_result"] == "SELECTION_ACCEPTED"
-    assert a_transport_active_workstream["selection_result"] == (
-        a_source_bridge_selector_result
+    assert a_transport_active_workstream["outcome_id"] == a_transport_candidate_packet_result
+    assert a_transport_active_workstream["packet_result"] == (
+        "A_TRANSPORT_STABILITY_RULE_RECORDED_NO_CURRENT_OR_EM_CLOSURE"
     )
     assert a_transport_active_workstream[
         "packet_classification"
     ] == (
-        "toe_native_A_ck_constraint_family_selection_after_source_and_bridge_"
-        "admissibility_selects_transport_consistency_no_current_or_em_closure"
+        "toe_native_A_transport_consistency_ck_constraint_candidate_packet_records_"
+        "vacuum_u1_derivation_chain_stability_rule_no_current_or_em_closure"
     )
     assert a_transport_active_workstream["selected_next_target"] == LIVE_TARGET
     assert a_transport_active_workstream[
         "selected_next_target_kind"
-    ] == "toe_native_A_transport_consistency_ck_constraint_candidate_packet_preparation"
-    assert a_transport_active_workstream["result_token"] == (
+    ] == "toe_native_A_transport_consistency_ck_constraint_candidate_packet_result_review"
+    assert a_transport_active_workstream["result_token"] == a_transport_candidate_packet_result
+    assert a_transport_active_workstream["transport_selector_outcome"] == (
+        a_source_bridge_selector_result
+    )
+    assert a_transport_active_workstream["transport_selector_result"] == (
         a_source_bridge_selector_result
     )
     assert a_transport_active_workstream["selected_A_ck_option_class"] == (
@@ -3230,18 +3241,12 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert a_transport_active_workstream["selected_A_ck_constraint_family"] == (
         "A_transport_consistency_constraint_family"
     )
-    assert a_transport_active_workstream[
-        "selected_family_selection_status"
-    ] == "selected_as_next_A_ck_family_after_source_and_bridge_admissibility"
-    assert a_transport_active_workstream["bridge_closeout_outcome"] == (
-        a_bridge_closeout_result
-    )
-    assert a_transport_active_workstream["bridge_closeout_result"] == (
-        a_bridge_closeout_result
-    )
     assert a_transport_active_workstream["source_rule_closeout_outcome"] == (
         "TOE_NATIVE_A_SOURCE_ADMISSIBILITY_CK_ADMISSIBILITY_RULE_CLOSED_AS_"
         "VACUUM_GAUGE_SOURCE_RULE_NO_ACTION_VARIATION_OR_PROMOTION"
+    )
+    assert a_transport_active_workstream["bridge_closeout_outcome"] == (
+        a_bridge_closeout_result
     )
     assert a_transport_active_workstream["source_candidate_constraint_form"] == (
         "C_source^{A,nu}[g,A] := nabla_mu T_A^{mu nu}"
@@ -3260,45 +3265,28 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
     assert a_transport_active_workstream[
         "bridge_admissibility_constraint_form"
     ] == "C_bridge^A = 0"
-    assert a_transport_active_workstream["A_bridge_field_equation_match"] == (
-        "E_A^master - E_A^vacuum_U1_route = 0"
-    )
-    assert a_transport_active_workstream["A_bridge_stress_energy_match"] == (
-        "T_A^master - T_A^vacuum_U1_route = 0"
-    )
-    assert a_transport_active_workstream["A_bridge_source_residual_match"] == (
-        "C_source^A - nabla_mu T_A^{mu nu} = 0"
-    )
     assert a_transport_active_workstream["gauge_group_policy"] == (
         "U(1) / Abelian test route"
     )
-    assert a_transport_active_workstream["A_field_domain_policy"] == (
-        "smooth real 1-form A on the selected spacetime domain"
+    assert a_transport_active_workstream["vacuum_euler_lagrange_route"] == (
+        "nabla_mu F^{mu nu} = 0"
     )
-    assert a_transport_active_workstream["F_definition_policy"] == (
-        "F = dA; component form F_{mu nu} = partial_mu A_nu - partial_nu A_mu"
-    )
-    assert a_transport_active_workstream[
-        "vacuum_euler_lagrange_route"
-    ] == "nabla_mu F^{mu nu} = 0"
     assert a_transport_active_workstream[
         "on_shell_vacuum_conservation_identity"
     ] == "nabla_mu T_A^{mu nu} = 0"
     assert a_transport_active_workstream[
         "source_route_still_blocked"
     ] == "nabla_mu F^{mu nu} = J^nu"
-    assert a_transport_active_workstream["closed_A_ck_rule_family_count"] == 2
-    assert a_transport_active_workstream["closed_A_ck_rule_roles"] == [
-        "source admissibility",
-        "bridge admissibility",
-    ]
     assert a_transport_active_workstream["transport_consistency_question"] == (
         "Does the vacuum U(1) A route remain coherent through the derivation chain?"
     )
-    assert a_transport_active_workstream["transport_candidate_shape_preview"] == (
+    assert a_transport_active_workstream["transport_constraint_equation"] == (
         "C_transport^A = 0"
     )
-    assert a_transport_active_workstream["transport_candidate_tuple_preview"] == (
+    assert a_transport_active_workstream["transport_admissibility_constraint_form"] == (
+        "C_transport^A = 0"
+    )
+    assert a_transport_active_workstream["transport_constraint_form"] == (
         "C_transport^A := (Transport_ACTION_VARIATION^A, "
         "Transport_VARIATION_STRESS_ENERGY^A, "
         "Transport_STRESS_ENERGY_SOURCE^A, "
@@ -3311,132 +3299,181 @@ def test_single_live_target_is_machine_pinned_after_samplerep32_audit_selector()
         "Transport_SOURCE_BRIDGE^A",
         "Transport_BRIDGE_RESIDUAL^A",
     ]
-    assert a_transport_active_workstream["transport_tuple_component_count"] == 5
+    assert a_transport_active_workstream["transport_component_count"] == 5
     assert a_transport_active_workstream["transport_chain_form"] == (
         "ACTION_VARIATION -> VARIATION_STRESS_ENERGY -> STRESS_ENERGY_SOURCE -> "
         "SOURCE_BRIDGE -> BRIDGE_RESIDUAL"
     )
-    assert a_transport_active_workstream["transport_chain_step_count"] == 5
-    assert a_transport_active_workstream["candidate_family_option_count"] == 4
-    assert a_transport_active_workstream["selection_criteria_count"] == 11
-    assert a_transport_active_workstream["selection_criteria_accepted_count"] == 11
+    assert a_transport_active_workstream["known_A_transport_chain_form"] == (
+        "S_A^vacuum_U1 -> E_A^vacuum_U1 -> T_A^vacuum_U1 -> "
+        "C_source^A -> C_bridge^A -> bounded residual/regime-facing route"
+    )
+    assert a_transport_active_workstream["candidate_criteria_count"] == 11
+    assert a_transport_active_workstream["candidate_criteria_accepted_count"] == 11
+    assert a_transport_active_workstream["closed_A_ck_rule_roles"] == [
+        "source admissibility",
+        "bridge admissibility",
+        "transport consistency",
+    ]
+    assert a_transport_active_workstream["closed_A_ck_rule_family_count_after_packet"] == 3
     for key in [
         "accepted",
         "prepared",
-        "selector_target_prepared",
-        "selector_target_accepted",
-        "selection_executed",
+        "transport_candidate_packet_prepared",
+        "transport_candidate_packet_accepted",
+        "transport_candidate_recorded",
+        "transport_candidate_selected_as_derivation_chain_stability_rule",
+        "transport_candidate_recorded_as_admissibility_rule",
+        "transport_candidate_recorded_as_transport_stability_rule",
+        "transport_tuple_recorded",
+        "transport_components_recorded",
+        "known_A_chain_recorded",
         "transport_consistency_family_selected",
-        "transport_consistency_candidate_packet_authorized",
-        "transport_candidate_shape_preview_recorded",
-        "transport_candidate_tuple_preview_recorded",
-        "transport_chain_recorded",
-        "source_and_bridge_rules_retained_as_context",
         "source_admissibility_rule_retained_as_context",
         "bridge_admissibility_rule_retained_as_context",
+        "result_review_authorized",
     ]:
         assert a_transport_active_workstream[key] == "yes", key
     for key in [
-        "transport_consistency_recommended_only",
-        "transport_consistency_candidate_packet_prepared",
-        "transport_candidate_constructed",
+        "transport_candidate_recorded_as_action_term",
+        "transport_candidate_recorded_as_new_dynamical_law",
         "transport_candidate_functional_defined",
         "transport_candidate_functional_selected",
-        "transport_proof_claimed",
+        "transport_candidate_rule_proved",
+        "transport_tuple_proved",
+        "transport_components_proved",
+        "known_A_chain_proved",
+        "transport_consistency_claimed",
         "transport_consistency_proved",
-        "transport_chain_compatibility_proved",
-        "residual_regime_route_proved",
-        "source_admissibility_family_reselected",
-        "bridge_admissibility_family_reselected",
-        "source_bridge_family_promoted",
-        "concrete_ck_functional_selected",
-        "concrete_ck_functional_defined",
-        "fully_concrete_ck_functional_selected",
-        "fully_concrete_ck_functional_defined",
-        "candidate_action_insertion_executed",
-        "constraint_as_action_term_selected",
-        "constraint_term_selected",
-        "ck_action_embedding_selected",
-        "ck_action_embedding_constructed",
-        "C_k_action_embedding_selected",
-        "C_k_action_embedding_constructed",
-        "ck_variation_executed",
-        "C_k_variation_executed",
-        "lambda_variation_executed",
-        "metric_variation_executed",
-        "A_variation_executed",
-        "new_conservation_proof_claimed",
+        "transport_proof_claimed",
+        "full_route_alignment_proof_claimed",
+        "full_route_alignment_proved",
+        "route_chain_compatibility_proved",
         "source_admissibility_proved",
         "source_conservation_proved",
         "bridge_admissibility_proved",
         "bridge_route_alignment_verified",
         "route_consistency_tuple_proved",
+        "new_conservation_proof_claimed",
+        "new_source_admissibility_proof_claimed",
+        "concrete_ck_functional_selected",
+        "concrete_ck_functional_defined",
+        "fully_concrete_ck_functional_selected",
+        "fully_concrete_ck_functional_defined",
+        "ck_action_embedding_claimed",
+        "C_k_action_embedding_constructed",
+        "candidate_action_insertion_executed",
+        "constraint_as_action_term_selected",
+        "constraint_term_selected",
+        "ck_variation_executed",
+        "C_k_variation_executed",
+        "lambda_variation_executed",
+        "metric_variation_of_candidate_executed",
+        "A_variation_of_candidate_executed",
         "current_route_derived",
         "current_source_route_constructed",
         "matter_current_J_nu_derived",
         "J_nu_derived",
         "psi_current_route_constructed",
-        "psi_derived_current",
-        "external_current_policy_selected",
         "external_current_native_derivation_selected",
-        "current_conservation_proved",
-        "current_conservation_theorem_claimed",
         "matter_current_exchange_route_proved",
         "matter_gauge_energy_exchange_proved",
-        "matter_gauge_energy_exchange_claimed",
-        "maxwell_equation_derived",
-        "maxwell_equations_derived",
         "sourced_maxwell_equation_derived",
         "sourced_maxwell_closure_claimed",
         "sourced_maxwell_route_derived",
-        "nonabelian_route_selected",
-        "yang_mills_equations_derived",
-        "field_equations_derived",
         "full_em_closure_claimed",
         "em_closure_claimed",
-        "em_qft_closure_claimed",
         "qft_gr_closure_claimed",
         "qft_gr_solved",
         "qft_gr_seam_closed",
         "semiclassical_coupling_authorized",
         "semiclassical_coupling_claimed",
         "semiclassical_einstein_equation_derived",
-        "semiclassical_source_established",
+        "master_action_promoted",
+        "master_action_promotion_authorized",
+        "canonical_master_action_promoted",
         "empirical_validation_claimed",
         "public_readiness_claimed",
         "public_submission_authorized",
-        "canonical_master_action_promoted",
-        "master_action_promoted",
-        "master_action_promotion_authorized",
         "phase2_readiness_claim",
         "pillar_completion_inferred",
         "seam_closure_claim",
+        "result_review_prepared",
+        "review_prepared",
+        "review_executed",
     ]:
         assert a_transport_active_workstream.get(key, "no") == "no", key
     for phrase in [
-        "only chooses A_transport_consistency_constraint_family",
-        "only as the next packet preview",
-        "does not prepare the transport candidate packet",
-        "does not define a concrete C_transport^A functional",
-        "does not prove transport consistency",
+        "admissibility-only vacuum U(1) derivation-chain stability rule",
+        "does not define a fully concrete C_transport^A functional",
+        "does not embed C_transport^A into the action",
         "does not execute C_k variation",
+        "does not prove transport consistency",
         "does not derive J^nu",
         "does not derive sourced Maxwell",
         "does not close EM",
         "does not close QFT-GR",
         "does not authorize Phase 2",
         "does not promote the master action",
+        "NOT_RUN",
     ]:
         assert phrase in a_transport_active_workstream[
             "non_claim_boundary"
         ], phrase
 
+    consumed_a_transport_candidate = _workstream(payload, PREVIOUS_LIVE_TARGET)
+    assert consumed_a_transport_candidate["status"] == "paused"
+    assert consumed_a_transport_candidate["packet_result"] == (
+        "A_TRANSPORT_STABILITY_RULE_RECORDED_NO_CURRENT_OR_EM_CLOSURE"
+    )
+    assert consumed_a_transport_candidate["outcome_id"] == a_transport_candidate_packet_result
+    assert consumed_a_transport_candidate["selected_next_target"] == LIVE_TARGET
+    assert consumed_a_transport_candidate[
+        "selected_next_target_kind"
+    ] == "toe_native_A_transport_consistency_ck_constraint_candidate_packet_result_review"
+    assert consumed_a_transport_candidate["result_review_authorized"] == "yes"
+    assert consumed_a_transport_candidate["review_prepared"] == "no"
+    assert consumed_a_transport_candidate["transport_candidate_recorded_as_admissibility_rule"] == "yes"
+    assert consumed_a_transport_candidate["transport_candidate_functional_defined"] == "no"
+    assert consumed_a_transport_candidate["transport_consistency_proved"] == "no"
+    assert consumed_a_transport_candidate["C_k_variation_executed"] == "no"
+    assert consumed_a_transport_candidate["J_nu_derived"] == "no"
+    assert consumed_a_transport_candidate["sourced_maxwell_equation_derived"] == "no"
+    assert consumed_a_transport_candidate["full_em_closure_claimed"] == "no"
+    assert consumed_a_transport_candidate["qft_gr_closure_claimed"] == "no"
+    assert consumed_a_transport_candidate["master_action_promoted"] == "no"
+
+    consumed_a_source_bridge_selector = _workstream(
+        payload, A_SOURCE_BRIDGE_SELECTOR_TARGET
+    )
+    assert consumed_a_source_bridge_selector["status"] == "paused"
+    assert consumed_a_source_bridge_selector["selection_result"] == (
+        a_source_bridge_selector_result
+    )
+    assert consumed_a_source_bridge_selector["selected_next_target"] == (
+        PREVIOUS_LIVE_TARGET
+    )
+    assert consumed_a_source_bridge_selector[
+        "selected_next_target_kind"
+    ] == "toe_native_A_transport_consistency_ck_constraint_candidate_packet_preparation"
+    assert consumed_a_source_bridge_selector[
+        "transport_consistency_candidate_packet_authorized"
+    ] == "yes"
+    assert consumed_a_source_bridge_selector[
+        "transport_consistency_candidate_packet_prepared"
+    ] == "no"
+    assert consumed_a_source_bridge_selector["transport_consistency_proved"] == "no"
+    assert consumed_a_source_bridge_selector["C_k_variation_executed"] == "no"
+    assert consumed_a_source_bridge_selector["J_nu_derived"] == "no"
+    assert consumed_a_source_bridge_selector["full_em_closure_claimed"] == "no"
+    assert consumed_a_source_bridge_selector["qft_gr_closure_claimed"] == "no"
+    assert consumed_a_source_bridge_selector["master_action_promoted"] == "no"
     consumed_a_bridge_closeout = _workstream(payload, A_BRIDGE_CLOSEOUT_TARGET)
     assert consumed_a_bridge_closeout["status"] == "paused"
     assert consumed_a_bridge_closeout["packet_result"] == "CLOSEOUT_ACCEPTED"
     assert consumed_a_bridge_closeout["outcome_id"] == a_bridge_closeout_result
     assert consumed_a_bridge_closeout["closeout_result"] == a_bridge_closeout_result
-    assert consumed_a_bridge_closeout["selected_next_target"] == PREVIOUS_LIVE_TARGET
+    assert consumed_a_bridge_closeout["selected_next_target"] == A_SOURCE_BRIDGE_SELECTOR_TARGET
     assert consumed_a_bridge_closeout[
         "selected_next_target_kind"
     ] == "toe_native_A_ck_constraint_family_after_source_and_bridge_admissibility_selection"
