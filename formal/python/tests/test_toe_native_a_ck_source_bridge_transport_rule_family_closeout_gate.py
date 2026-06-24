@@ -405,7 +405,7 @@ def test_A_ck_source_bridge_transport_rule_family_closeout_mirrors() -> None:
         RECOMMENDED_INTERACTION_ROUTE,
         RECOMMENDED_NEXT_POLICY_PACKET,
         "ToeNativeACKSourceBridgeTransportRuleFamilyCloseout",
-        "CURRENT_LIVE_NEXT_TARGET_v0: select_next_master_action_interaction_after_A_ck_triad",
+        "PREVIOUS_LIVE_NEXT_TARGET_v0: select_next_master_action_interaction_after_A_ck_triad",
         SOURCE_RULE_DISPLAY_FORM,
         SOURCE_CANDIDATE_CONSTRAINT_EQUATION,
         BRIDGE_ADMISSIBILITY_CONSTRAINT_FORM,

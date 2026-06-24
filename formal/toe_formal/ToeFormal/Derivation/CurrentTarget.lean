@@ -1,4 +1,4 @@
-import ToeFormal.Derivation.ToeNativeACKSourceBridgeTransportRuleFamilyCloseout
+import ToeFormal.Derivation.MasterActionInteractionSelectionAfterACKTriad
 
 /-
 Thin current-target aggregate for tiered validation. This target follows the
@@ -13,14 +13,14 @@ namespace CurrentTarget
 def aggregateTargetId : String := "ToeFormal.Derivation.CurrentTarget"
 
 def currentLiveTarget : String :=
-  ToeNativeACKSourceBridgeTransportRuleFamilyCloseout.selectedNextTarget
+  MasterActionInteractionSelectionAfterACKTriad.selectedNextTarget
 
 def currentEvidencePacketId : String :=
-  ToeNativeACKSourceBridgeTransportRuleFamilyCloseout.packetId
+  MasterActionInteractionSelectionAfterACKTriad.packetId
 
-theorem current_target_points_to_post_a_ck_triad_interaction_selector :
+theorem current_target_points_to_psi_a_u1_policy_packet :
     currentLiveTarget =
-      "select_next_master_action_interaction_after_A_ck_triad" := by
+      "prepare_toe_native_psi_A_u1_current_and_exchange_route_policy_packet" := by
   rfl
 
 end CurrentTarget
